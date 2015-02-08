@@ -1,0 +1,2 @@
+# Distributed Cache Static Class
+

@@ -1,0 +1,2 @@
+# ILocalCache Interface
+

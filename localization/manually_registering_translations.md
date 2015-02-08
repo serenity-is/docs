@@ -1,0 +1,2 @@
+# Manually Registering Translations
+

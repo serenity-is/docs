@@ -1,0 +1,2 @@
+# LocalText Class
+

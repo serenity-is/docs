@@ -1,0 +1,2 @@
+# CommonInitialization Static Class
+

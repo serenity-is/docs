@@ -1,0 +1,2 @@
+# IConfigurationRepository Interface
+

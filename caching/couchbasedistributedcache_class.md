@@ -1,0 +1,2 @@
+# CouchbaseDistributedCache Class
+

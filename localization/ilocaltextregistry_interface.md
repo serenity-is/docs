@@ -1,0 +1,2 @@
+# ILocalTextRegistry Interface
+

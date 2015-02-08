@@ -1,0 +1,2 @@
+# IDistributedCache Interface
+

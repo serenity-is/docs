@@ -1,0 +1,2 @@
+# LocalCache Static Class
+

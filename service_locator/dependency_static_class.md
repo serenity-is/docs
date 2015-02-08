@@ -1,0 +1,2 @@
+# Dependency Static Class
+

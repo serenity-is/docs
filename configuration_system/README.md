@@ -1,27 +1,21 @@
-# Defining Configuration Settings
+# Configuration System
 
-In Serenity platform, configuration settings are just simple classes like:
+.NET applications usually stores their configuration in app.config (desktop) or web.config (web) files.
 
-```cs
-[SettingScope("Application"), SettingKey("Logging")]
-private class LogSettings
-{
-    public LoggingLevel Level { get; set; }
-    public string File { get; set; }
-    public int FlushTimeout { get; set; }
-}
-```
+Though, its common practice to store configuration in such files for web applications, sometimes it might be required to store some configuration in a database table to make it available to all servers in a web farm, and set it from one location.
 
-> If required, default settings can be set in the class constructor.
+Just like IsolatedStorage has scopes like Application, Machine, User etc, a configuration setting might have different scopes:
 
-## SettingScope Attribute
+- Application - Shared between all servers that runs a web application
+- Server - Applies to current server only
+- User - Applies to current user only
 
-If specified, this attribute determines the scope of settings.
+Number of samples can be increased.
 
-If not specified, default scope is *Application*.
+If you have just one server, *Application* and *Server* scopes can be stored in web.config file, but in a web farm setup, Application settings should be stored in a location accessible from all servers (database or shared folder).
 
-## SettingKey Attribute
+User settings are usually stored in database along with a User ID.
 
-If specified, this attribute determines a key for settings (e.g. appSettings key for web.config) class.
+Serenity provides an extensible configuration system.
 
-If not specified, class name is used as the key.
+

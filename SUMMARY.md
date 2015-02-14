@@ -5,7 +5,7 @@
    * [Installing Serene From Visual Studio Gallery](getting_started/installing_serene_from_visual_studio_gallery.md)
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
    * [Starting Serene](getting_started/starting_serene.md)
-   * Serene Features
+   * [Serene Features](serene_features.md)
 * [Used Tools & Libraries](used_tools_and_libraries.md)
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)

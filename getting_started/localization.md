@@ -38,4 +38,19 @@ Or set a language as default, whatever visiting users browser language is:
 
 ## Localizing UI Texts
 
-Serene includes ability to translate its text resources 
+Serene includes ability to translate its text resources live.
+
+Click *Administration* then *Translations* link in navigation.
+
+![](translation_navigation_texts.jpg)
+
+Type *navigation* into top left search box to see list of texts related to navigation menu. Choose *English* as source language and *Spanish* as target language.
+
+Type *Welcome Page* into line with *Navigation.Dashboard* local text key.
+
+Click *Save Changes*.
+
+When you switch to Spanish language, Dashboard menu item will be changed to *Welcome Page* instead of *Salpicadero*.
+
+![](translation_navigation_welcome.jpg)
+

@@ -54,3 +54,16 @@ When you switch to Spanish language, Dashboard menu item will be changed to *Wel
 
 ![](translation_navigation_welcome.jpg)
 
+When you saved changes, Serene created a `user.texts.es.json` file in folder `Scripts/site/texts` with content like below:
+
+```json
+{
+    "Navigation.Dashboard": "Welcome Page"
+}
+```
+
+In the same folder, there are also other similar JSON files with default translations for Serene interface:
+
+- site.texts.es.json
+- site.texts.invariant.json
+- site.texts.tr.json

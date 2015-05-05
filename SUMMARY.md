@@ -53,7 +53,7 @@
        * [TwoLevelCache Class](caching/twolevelcache_class.md)
 * [Dynamic SQL](dynamic_sql/README.md)
    * [SqlQuery Object](dynamic_sql/sqlquery_object.md)
-   * [SqlQuery](dynamic_sql/sqlquery.md)
+   * [SqlQuery](sqlquery.md)
 * [Widgets](widgets/README.md)
    * [ScriptContext Class](widgets/scriptcontext_class.md)
    * [Widget Class](widgets/widget_class.md)

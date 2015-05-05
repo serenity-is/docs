@@ -6,6 +6,7 @@
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
    * [Starting Serene](getting_started/starting_serene.md)
    * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
+   * A Tour Of Serene Features
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

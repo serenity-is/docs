@@ -8,6 +8,7 @@
    * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
    * [A Tour Of Serene Features](getting_started/a_tour_of_serene_features.md)
    * [Theming](getting_started/theming.md)
+   * Localization
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

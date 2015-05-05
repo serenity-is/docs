@@ -14,4 +14,4 @@ public interface IDependencyResolver
 }
 ```
 
-All methods are functionally equivalent to corresponding methods in Dependency static class.
+All methods are functionally equal to corresponding methods in Dependency static class.

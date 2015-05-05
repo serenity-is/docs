@@ -2,7 +2,7 @@
 
 Serene initially starts with a dark theme. On top right of the screen, next to *Theme* label, click the light gray circle and theme will change to a light one.
 
-![Serene Dashboard Light](img/serene_dashboard_light.jpg)
+![Serene Dashboard Light](img/serene_dashboard_light.jpg?v2)
 
 This feature is implemented by replacing HREF of a CSS stylesheet resource in the page.
 

@@ -36,6 +36,9 @@ Or set a language as default, whatever visiting users browser language is:
 
 > If you don't want to let users to change UI language, you should remove the language selection dropdown.
 
+> You may add more languages to the language selection dropdown by using Languages page under Administration menu.
+
+
 ## Localizing UI Texts
 
 Serene includes ability to translate its text resources live.

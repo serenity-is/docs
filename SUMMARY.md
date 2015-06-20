@@ -65,5 +65,5 @@
    * [TemplatedDialog Class](widgets/templateddialog_class.md)
 * [A Tour Of Serene Features](serene_tour/README.md)
    * [Theming](serene_tour/theming.md)
-   * Localization
+   * [Localization](serene_tour/localization.md)
 

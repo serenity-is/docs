@@ -20,6 +20,8 @@ Navigate to *Administration / User Management* page to add more users.
 
 Click *admin* user to edit its details.
 
+![Edit Admin User](img/edit_admin_user.jpg)
+
 
 
 

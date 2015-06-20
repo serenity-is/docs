@@ -22,6 +22,14 @@ Click *admin* user to edit its details.
 
 ![Edit Admin User](img/edit_admin_user.jpg)
 
+Here you can change admin details like username, display name, email.
+
+You can also change its password (which is *serenity* by default) by typing into *Password* and *Confirm Password* inputs and clicking *Update*.
+
+> You can also delete it but this would make your site unusable as you wouldn't be able to login.
+
+*admin* is a special user in Serene, as it has all permissions even if none is explicitly granted to him.
+
 
 
 

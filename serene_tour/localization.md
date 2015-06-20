@@ -45,7 +45,7 @@ Serene includes ability to translate its text resources live.
 
 Click *Administration* then *Translations* link in navigation.
 
-![](translation_navigation_texts.jpg)
+![](img/translation_navigation_texts.jpg)
 
 Type *navigation* into top left search box to see list of texts related to navigation menu. Choose *English* as source language and *Spanish* as target language.
 
@@ -55,7 +55,7 @@ Click *Save Changes*.
 
 When you switch to Spanish language, Dashboard menu item will be changed to *Welcome Page* instead of *Salpicadero*.
 
-![](translation_navigation_welcome.jpg)
+![](img/translation_navigation_welcome.jpg)
 
 When you saved changes, Serene created a `user.texts.es.json` file in folder `Scripts/site/texts` with content like below:
 

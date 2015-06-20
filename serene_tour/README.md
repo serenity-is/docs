@@ -11,4 +11,5 @@ There is an accordion navigation menu on left which has a search feature by inpu
 On top navigation, we have a theme selection option, ability to change active language and a dropdown that shows current username.
 
 
-
+* [Theming](Theming.md)
+* [Localization](Theming.md)

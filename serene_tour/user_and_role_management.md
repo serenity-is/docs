@@ -16,6 +16,10 @@ Then click role *Administrators* to open edit form, and click *Edit Permissons* 
 
 Repeat same steps for the *Translations* role but this time grant only the *Administration: Languages and Translations* permission.
 
+Navigate to *Administration / User Management* page to add more users.
+
+Click *admin* user to edit its details.
+
 
 
 

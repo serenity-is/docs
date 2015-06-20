@@ -10,7 +10,9 @@ Repeat it for *Translators*.
 
 ![Create Admin Role](img/create_admin_role.jpg)
 
-Then click role *Administrators* to open edit form, and click *Edit Permissons* button to modify its permissions. Check all boxes to grant all permissons to the role.
+Then click role *Administrators* to open edit form, and click *Edit Permissons* button to modify its permissions. Check all boxes to grant every permisson to this role, then click *OK*.
+
+![Admin Permissions](img/admin_permissions.jpg)
 
 
 

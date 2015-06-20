@@ -66,4 +66,5 @@
 * [A Tour Of Serene Features](serene_tour/README.md)
    * [Theming](serene_tour/theming.md)
    * [Localization](serene_tour/localization.md)
+   * User and Role Management
 

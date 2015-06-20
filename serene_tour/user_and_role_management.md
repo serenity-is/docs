@@ -14,6 +14,8 @@ Then click role *Administrators* to open edit form, and click *Edit Permissons* 
 
 ![Admin Permissions](img/admin_permissions.jpg)
 
+Repeat same steps for the *Translations* role but this time grant only the *Administration: Languages and Translations* permission.
+
 
 
 

@@ -30,6 +30,12 @@ You can also change its password (which is *serenity* by default) by typing into
 
 *admin* is a special user in Serene, as it has all permissions even if none is explicitly granted to him.
 
+Lets create another one and grant roles / permissions to it.
+
+Close this dialog, click new user and type *translator* as username. Fill in other fields as you'd like, then click *Update*.
+
+
+
 
 
 

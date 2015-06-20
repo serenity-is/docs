@@ -1,6 +1,12 @@
 # User and Role Management
 
-Serene has user and role management built in.
+Serene has user, role and rights management built in.
 
-Open Roles page under Administration / Role.
+Open Administration / Roles to create roles *Administrators* and *Translators*. 
+
+Click *New Role* and  and type *Administrators*, then click Save.
+
+Repeat it for *Translators*.
+
+
 

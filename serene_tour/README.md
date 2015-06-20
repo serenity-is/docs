@@ -2,7 +2,7 @@
 
 After logging to Serene, you are greeted by the dashboard page.
 
-![Serene Dashboard](../getting_started/img/serene_dashboard.jpg)
+![Serene Dashboard](img/serene_dashboard.jpg)
 
 There is not much interesting content here yet, but you would choose to customize this page with some news, graphics etc.
 

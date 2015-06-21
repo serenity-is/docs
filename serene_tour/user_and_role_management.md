@@ -2,6 +2,8 @@
 
 Serene has user, role and rights management built in.
 
+> This feature is not embedded in Serenity itself. It is just a sample, so you can always implement and use your user management of choice. We'll take a look at how in following chapters.
+
 Open Administration / Roles to create roles *Administrators* and *Translators*. 
 
 Click *New Role* and  and type *Administrators*, then click Save.
@@ -38,9 +40,11 @@ Close this dialog, click new user and type *translator* as username. Fill in oth
 
 > You may have noticed there is a *Apply Changes* button with a black disk icon without title, next to *Save*. Unlike *Save*, when you use it, the form stays open, so you can see how your record looks like after saving, also you can edit roles and permissions before closing the form.
 
-Now click *Translator* role to open its edit form and click *Edit Roles*.
+Now click *Translator* role to open its edit form and click *Edit Roles*. Grant him *Translators* role and click *OK*.
 
+![Edit Translator Roles](img/edit_translator_roles.jpg)
 
+> When you grant a role to a user, he gets all permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. But you can't revoke a role permission from a user, unless you remove him from the role.
 
 
 

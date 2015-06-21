@@ -36,6 +36,12 @@ Close this dialog, click new user and type *translator* as username. Fill in oth
 
 ![Create Translator User](img/create_translator_user.jpg)
 
+> You may have noticed there is a *Apply Changes* button with a black disk icon without title, next to *Save*. Unlike *Save*, when you use it, the form stays open, so you can see how your record looks like after saving, also you can edit roles and permissions before closing the form.
+
+Now click *Translator* role to open its edit form and click *Edit Roles*.
+
+
+
 
 
 

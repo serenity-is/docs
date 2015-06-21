@@ -46,6 +46,8 @@ Choose *Seafood* as *Category* and it will show only products in that category.
 
 It is also possible to filter by any column by clicking *edit filter* link at bottom right of the grid.
 
+![Products Edit Filter](img/products_edit_filter.jpg)
+
 
 
 

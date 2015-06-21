@@ -52,6 +52,7 @@ Try logging in with *translator* and the password you set.
 
 Translator user will only have access to Dashboard, Languages and Translations pages.
 
+![Translator Logged In](img/translator_logged_in.jpg)
 
 
 

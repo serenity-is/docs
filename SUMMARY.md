@@ -6,7 +6,6 @@
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
    * [Starting Serene](getting_started/starting_serene.md)
    * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
-   * [Theming](getting_started/theming.md)
    * [Localization](getting_started/localization.md)
 * [A Tour Of Serene Features](serene_tour/README.md)
    * [Theming](serene_tour/theming.md)

@@ -34,7 +34,7 @@ Lets create another one and grant roles / permissions to it.
 
 Close this dialog, click new user and type *translator* as username. Fill in other fields as you'd like, then click *Update*.
 
-[!Create Translator User](img/create_translator_user.jpg)
+![Create Translator User](img/create_translator_user.jpg)
 
 
 

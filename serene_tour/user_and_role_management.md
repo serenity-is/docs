@@ -50,6 +50,8 @@ Now close all dialogs and logout by clicking *admin* on top right of site and cl
 
 Try logging in with *translator* and the password you set.
 
+Translator user will only have access to Dashboard, Languages and Translations pages.
+
 
 
 

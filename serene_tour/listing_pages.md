@@ -48,7 +48,7 @@ It is also possible to filter by any column by clicking *edit filter* link at bo
 
 ![Products Edit Filter](img/products_edit_filter.jpg)
 
-Here you can add criteria by any column by clicking *add column* and choosing column name, choosing comparison operator from next dropdown, and setting a value. 
+Here you can add criteria by any column by clicking *add criteria* and choosing column name, choosing comparison operator from next dropdown, and setting a value. 
 
 Some value editors are simple textboxes while some others may have dropdowns and other custom editors depending on column type.
 

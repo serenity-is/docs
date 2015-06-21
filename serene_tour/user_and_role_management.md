@@ -46,6 +46,9 @@ Now click *Translator* role to open its edit form and click *Edit Roles*. Grant 
 
 > When you grant a role to a user, he gets all permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. But you can't revoke a role permission from a user, unless you remove him from the role.
 
+Now close all dialogs and logout by clicking *admin* on top right of site and clicking *Logout*. 
+
+Try logging in with *translator* and the password you set.
 
 
 

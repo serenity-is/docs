@@ -12,3 +12,5 @@ To sort by multiple columns, you can use Shift+Click.
 
 Here is what it looks like after sorting by Category then Supplier columns:
 
+![Products Category Supplier Sort](img/products_category_supplier.jpg)
+

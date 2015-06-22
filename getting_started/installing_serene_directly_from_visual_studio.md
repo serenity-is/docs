@@ -10,13 +10,13 @@ Click the *Online* section and wait a bit while *Retrieving information* message
 
 > Please wait while it is loading results.
 
-![New Project Online](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/getting_started/img/new_project_dialog_online.jpg?v2)
+![New Project Online](img/new_project_dialog_online.jpg)
 
 Type *SERENE* into input box with *Search Online Templates* label and press ENTER.
 
 You will see *Serene (Serenity Application Template)*:
 
-![Serene Search Result](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/getting_started/img/new_project_dialog_serene.jpg?v2)
+![Serene Search Result](img/new_project_dialog_serene.jpg)
 
 
 Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or leave the default *Serene1*.

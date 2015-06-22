@@ -23,7 +23,7 @@ Gets the value corresponding to the specified key in local cache.
 
 If there is no such key in cache, uses the loader function to produce value, and adds it to cache with the specified key.
 
-![LocalCache.Get Flow Diagram](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/img/local_cache_get_en.png?v4)
+![LocalCache.Get Flow Diagram](img/local_cache_get_en.jpg)
 
 * If the value that exists in cache is DBNull.Value, than null is returned. (This way, if for example a user with an ID doesn't exist in database, repeated querying of database for that ID is prevented)
 

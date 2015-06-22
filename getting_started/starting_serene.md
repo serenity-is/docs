@@ -2,7 +2,7 @@
 
 After your first project is created in Visual Studio using Serene template, you will see a solution like this:
 
-![Initial Solution Content](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/getting_started/img/initial_solution_content.jpg?v1)
+![Initial Solution Content](img/initial_solution_content.jpg)
 
 It contains two projects, *Serene1.Script* and *Serene1.Web* (which is common for Serenity applications).
 
@@ -18,7 +18,7 @@ Serene automatically creates its database in SQL local db at first run, so just 
 
 When application launches use `admin` user and `serenity` password to login. You can later change password or create more users from *Administration / User Management* section.
 
-![Login Screen](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/getting_started/img/login_screen.jpg?v1)
+![Login Screen](img/login_screen.jpg)
 
 The sample application includes old and famous Nortwind data along with services and user interface for editing it that is mostly produced by Serenity Code Generator.
 

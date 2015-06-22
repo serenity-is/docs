@@ -20,7 +20,7 @@ If you are using *Serenity Basic Application Sample* you can see this yourself b
 
 Here, UI culture is set to automatic, and if automatic detection fails, en-US is used as a fallback.
 
-![Customer Screen English](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/localization/img/localization_customer_english.png?v1)
+![Customer Screen English](img/localization_customer_english.jpg)
 
 Change this configuration as below, refresh your browser and you will the site in Turkish:
 
@@ -30,6 +30,6 @@ Change this configuration as below, refresh your browser and you will the site i
 </system.web>
 ```
 
-![Customer Screen Turkish](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/localization/img/localization_customer_turkish.png?v1)
+![Customer Screen Turkish](img/localization_customer_turkish.jpg)
 
 > Here, data is not translated but it is also possible to translate user entered data by some methods like culture extension tables.

@@ -2,7 +2,7 @@
 
 ## Widget Class Diagram
 
-![Widget Class Diagram](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/widget_hierarchy.png)
+![Widget Class Diagram](img/widget_hierarchy.jpg)
 
 ## A sample Widget
 

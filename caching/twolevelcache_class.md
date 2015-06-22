@@ -51,7 +51,7 @@ Out of the box, TwoLevelCache provides all functionality that we talked about so
 
 > If this is a problem for your configuration, you should use DistributedCache methods directly instead of depending on TwoLevelCache.
 
-![TwoLevelCache.Get Flow Diagram](https://raw.githubusercontent.com/volkanceylan/SerenityGuide/master/img/two_level_cache_get_en.png?v4)
+![TwoLevelCache.Get Flow Diagram](img/two_level_cache_get_en.jpg)
 
 ```
 CachedProfile GetCachedProfile(int userID)

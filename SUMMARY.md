@@ -11,6 +11,7 @@
    * [Localization](serene_tour/localization.md)
    * [User and Role Management](serene_tour/user_and_role_management.md)
    * [Listing Pages](serene_tour/listing_pages.md)
+   * Edit Dialogs
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

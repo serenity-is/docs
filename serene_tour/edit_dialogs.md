@@ -40,5 +40,6 @@ Every field has a separate "div" of its own with class "field". Inside this div,
 We can look at the class names of these elements to identify their editor types (e.g. *s-StringEditor*, *s-ImageUploadEditor*)
 
 
-In the toolbar we have a button to save current entity and close dialog (*Update*), and next to it a smaller one that keeps dialog open after save.
+In the toolbar we have a button to save current entity and close dialog (*Update*), next to it a smaller one that keeps dialog open after save and another one to delete current entity (obviously).
 
+Most Serenity editing dialogs has this familiar interface, though you can always customize buttons, fields, add tabs, and other interface elements.

@@ -8,4 +8,4 @@ There are two options to install *SERENE* template into your Visual Studio:
 
 * [Installing SERENE directly from Visual Studio](installing_serene_directly_from_visual_studio.md)
 
-
+> You don't have to use this template to work with Serenity. Using NuGet you can add Serenity libraries to any .NET project. It is also possible to add Serenity as a GIT submodule to your project and keep it always up to date. We'll cover these and more in later chapters.

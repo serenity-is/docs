@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Tutorial: Movie Database
 * [Getting Started](getting_started/README.md)
    * [Installing Serene From Visual Studio Gallery](getting_started/installing_serene_from_visual_studio_gallery.md)
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)

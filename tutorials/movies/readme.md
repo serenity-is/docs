@@ -98,6 +98,71 @@ This specifies a unique key for this migration. After a migration is applied to 
 
 
 
+### Running Migrations
+
+By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. The code that runs migrations are in *App_Start/SiteInitialization.cs* file:
+
+```cs
+
+public static partial class SiteInitialization
+{
+    public static void ApplicationStart()
+    {
+        // ...
+        EnsureDatabase();
+    }
+
+    private static void EnsureDatabase()
+    {
+        // ...
+        RunMigrations();
+    }
+
+    private static void RunMigrations()
+    {
+        var defaultConnection = SqlConnections.GetConnectionString("Default");
+
+        // safety check to ensure that we are not modifying another database
+        if (defaultConnection.ConnectionString.IndexOf(
+            typeof(SiteInitialization).Namespace + @"_Default_v1") < 0)
+            return;
+
+        using (var sw = new StringWriter())
+        {
+            //...
+            var runner = new RunnerContext(announcer)
+            {
+                // ...
+                Namespace = "MovieTutorial.Migrations.DefaultDB"
+            };
+
+            new TaskExecutor(runner).Execute();
+        }
+    }
+
+```
+
+> There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change default connection in web.config to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.
+
+Now press F5 to run your application and create Movie table in default database.
+
+
+### Verifying That the Migration is Run
+
+Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\v11.0*.
+
+> (localdb)\v11.0 is a LocalDB instance created by SQL Server 2012 LocalDB. 
+
+> If you didn't install LocalDB yet, download it from https://www.microsoft.com/en-us/download/details.aspx?id=29062.
+
+> If you have SQL Server 2014 LocalDB, your server name would be (localdb)\v12.0, so change connection string in web.config file. 
+
+> You could also use another SQL server instance, just change the connection string to target server and remove the migration safety check.
+
+You should see *[mov].[Movies]* table in SQL object explorer.
+
+Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20150915185137*. This specifies that the migration with that version number (migration key) is already executed on this database.
+
 
 
 

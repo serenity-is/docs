@@ -45,4 +45,3 @@ This doesn't mean that it can't be used for other types of applications. Some fe
 * Dynamic scripts
 * Script side templates
 
-````````````

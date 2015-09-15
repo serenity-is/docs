@@ -96,6 +96,7 @@ This specifies a unique key for this migration. After a migration is applied to 
 
 > Migration key should be in sync with class name (for consistency) but without underscore as migration keys are Int64 numbers.
 
+> Migrations are executed in the key order, so using a sortable datetime pattern like yyyyMMdd for migration keys looks like a good idea.
 
 
 ### Running Migrations

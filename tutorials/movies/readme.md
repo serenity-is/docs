@@ -24,9 +24,13 @@ MovieTutorial.Script looks like an ordinary C# class library but the code it con
 
 
 
-### Create *Movie* Table
+### Creating *Movie* Table
 
+To store list of movies we need a Movie table. We could create this table using old-school techniques like SQL Management Studio but we prefer creating it as a *migration* using *Fluent Migrator*:
 
+> Fluent Migrator is a migration framework for .NET much like Ruby on Rails Migrations. Migrations are a structured way to alter your database schema and are an alternative to creating lots of sql scripts that have to be run manually by every developer involved. Migrations solve the problem of evolving a database schema for multiple databases (for example, the developer’s local database, the test database and the production database). Database schema changes are described in classes written in C# that can be checked into a version control system.
 
+> See https://github.com/schambers/fluentmigrator for more information on FluentMigrator.
 
+Using *Solution Explorer* navigate to *MovieTutorial.Web / Modules / Common / Migrations / DefaultDB*.
 

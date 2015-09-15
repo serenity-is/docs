@@ -164,7 +164,16 @@ You should see *[mov].[Movies]* table in SQL object explorer.
 Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20150915185137*. This specifies that the migration with that version number (migration key) is already executed on this database.
 
 
+### Serenity Code Generator
 
+After making sure that our table exists in the database, we will use Serenity Code Generator (sergen.exe) to generate initial editing interface.
 
+In Visual Studio, open *Package Manager Console* by clicking *View* => *Other Windows* => *Package Manager Console*.
+
+Type *sergen* and press Enter.
+
+> Sometimes package manager console can't set path correctly and you may get an error executing Sergen. Restarting Visual Studio might resolve the issue. 
+
+> Another option is to open Sergen.exe from Windows Explorer. Right click on *MovieTutorial* solution in Solution Explorer, click *Open In File Explorer*. Sergen.exe is under *packages\Serenity.CodeGenerator.X.Y.Z\tools* directory.
 
 

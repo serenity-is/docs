@@ -6,12 +6,6 @@ Serenity is a Javascript / .NET application platform which has been built on ope
 
 It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying best software design practices.
 
----
-
-See [SUMMARY.md](SUMMARY.md) for a list of all chapters and sections in this guide.
-
----
-
 ## What's In The Name
 
 Serenity has dictionary meanings of *peace*, *comfort* and *calmness*.
@@ -51,9 +45,3 @@ This doesn't mean that it can't be used for other types of applications. Some fe
 * Dynamic scripts
 * Script side templates
 
-
----
-
-See [SUMMARY.md](SUMMARY.md) for a list of all chapters and sections in this guide.
-
----

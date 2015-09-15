@@ -34,3 +34,9 @@ To store list of movies we need a Movie table. We could create this table using 
 
 Using *Solution Explorer* navigate to *MovieTutorial.Web / Modules / Common / Migrations / DefaultDB*.
 
+![Initial Migration Folder](img/movies_migration_initial.png)
+
+Here we already have three migrations. A migration is like a DML script that manipulates database structure.
+
+*DefaultDB_20141103_140000_Initial.cs* contains our initial migration that created *Northwind* tables and *Users* table.
+

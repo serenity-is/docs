@@ -86,6 +86,16 @@ We could implement *Down()* method to make it possible to undo this migration (d
 
 > Inability to undo a migration won't hurt much, but deleting a table by mistake could do more damage.
 
+On top of our class we applied a Migration attribute.
+
+```cs
+[Migration(20150915185137)]
+```
+
+This specifies a unique key for this migration. After a migration is applied to a database, its key is inserted into a special table specific to FluentMigrator ([dbo].[VersionInfo]), so same migration won't be applied again.
+
+> Migration key should be in sync with class name (for consistency) but without underscore as migration keys are Int64 numbers.
+
 
 
 

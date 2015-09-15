@@ -6,6 +6,7 @@
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
    * [Starting Serene](getting_started/starting_serene.md)
    * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
+* [Tutorial: Movie Database](tutorials/movies/readme.md)
 * [A Tour Of Serene Features](serene_tour/README.md)
    * [Theming](serene_tour/theming.md)
    * [Localization](serene_tour/localization.md)
@@ -65,5 +66,4 @@
    * [Widget With Options](widgets/widget_with_options.md)
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
-* [Tutorial: Movie Database](tutorials/movies/readme.md)
 

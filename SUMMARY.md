@@ -12,6 +12,7 @@
    * [User and Role Management](serene_tour/user_and_role_management.md)
    * [Listing Pages](serene_tour/listing_pages.md)
    * [Edit Dialogs](serene_tour/edit_dialogs.md)
+* [Tutorials](tutorials/readme.md)
 * [Tutorial: Movie Database](tutorials/movies/readme.md)
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
@@ -66,5 +67,4 @@
    * [Widget With Options](widgets/widget_with_options.md)
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
-* [Tutorials](tutorials/readme.md)
 

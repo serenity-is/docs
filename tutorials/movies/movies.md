@@ -408,7 +408,7 @@ Form field title stayed same, while column title changed.
 > If we wanted to override form field title instead, we would do similar steps in MovieForm.cs
 
 
-### Changing editor type for Description and Storyline
+### Changing Editor Type For Description and Storyline
 
 Description and Storyline fields can be a bit longer compared to Title field, so lets change their editor types to a textarea.
 

@@ -453,3 +453,10 @@ namespace MovieTutorial.MovieDB.Forms
     }
 }
 ```
+
+I left more editing rows for Storyline (8) compared to Description (3) as Storyline should be much longer.
+
+After rebuild and run, we have this:
+
+![Movies TextArea Editors](img/movies_textarea_editors.png)
+

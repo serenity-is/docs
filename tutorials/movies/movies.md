@@ -281,10 +281,8 @@ Sergen generated code for our table, and it just works without writing a single 
 
 > Even if we did copy paste and replace code from some other page, it would be error prone and take about 5-10 mins.
 
-> The code files Sergen generates has minimum code with the absolute basics. This is thanks to the base classes in Serenity that handles the most logic. Once we generate code for some table, we'll probably never use Sergen again (for this table), and modify this generated code to our needs.
+> The code files Sergen generates has minimum code with the absolute basics. This is thanks to the base classes in Serenity that handles the most logic. Once we generate code for some table, we'll probably never use Sergen again (for this table), and modify this generated code to our needs. We'll see how.
 
 
-
-
-
+### Customizing Field Captions
 

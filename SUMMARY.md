@@ -13,7 +13,7 @@
    * [Listing Pages](serene_tour/listing_pages.md)
    * [Edit Dialogs](serene_tour/edit_dialogs.md)
 * [Tutorials](tutorials/readme.md)
-   * Movie Database
+   * [Movie Database](movies/movies.md)
 * [Tutorial: Movie Database](tutorials/movies/readme.md)
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)

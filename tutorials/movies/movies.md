@@ -405,3 +405,51 @@ Let's build and run again, than we get:
 
 Form field title stayed same, while column title changed.
 
+> If we wanted to override form field title instead, we would do similar steps in MovieForm.cs
+
+
+### Changing editor type for Description and Storyline
+
+Description and Storyline fields can be a bit longer compared to Title field, so lets change their editor types to a textarea.
+
+Open *MovieForm.cs* in the same folder with *MovieColumns.cs* and *MovieRow.cs*.
+
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    [FormScript("MovieDB.Movie")]
+    [BasedOnRow(typeof(Entities.MovieRow))]
+    public class MovieForm
+    {
+        public String Title { get; set; }
+        public String Description { get; set; }
+        public String Storyline { get; set; }
+        public Int32 Year { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public Int32 Runtime { get; set; }
+    }
+}
+```
+
+and add TextAreaEditor attributes to both:
+
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    [FormScript("MovieDB.Movie")]
+    [BasedOnRow(typeof(Entities.MovieRow))]
+    public class MovieForm
+    {
+        public String Title { get; set; }
+        [TextAreaEditor(Rows = 3)]
+        public String Description { get; set; }
+        [TextAreaEditor(Rows = 8)]
+        public String Storyline { get; set; }
+        public Int32 Year { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public Int32 Runtime { get; set; }
+    }
+}
+```

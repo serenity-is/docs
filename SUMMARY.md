@@ -66,5 +66,5 @@
    * [Widget With Options](widgets/widget_with_options.md)
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
-* Tutorials
+* [Tutorials](tutorials/readme.md)
 

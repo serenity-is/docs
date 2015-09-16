@@ -286,13 +286,53 @@ Sergen generated code for our table, and it just works without writing a single 
 
 ### Customizing Field Captions
 
-In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in minutes, but in its title there is no sign of this. Let's change its title to Runtime (mins).
+In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in *minutes*, but in its title there is no sign of this. Let's change its title to Runtime (mins).
 
 There are several ways to do this. Our options include server side form definition, server side columns definition, from script grid code etc. But let's make this change in the central location, the entity itself, so its title changes everywhere.
 
 When Sergen generated code for Movie table, it created a entity class named MovieRow. You can find it at  *MovieTutorial.Web/Modules/MovieDB/Movie/MovieRow.cs*.
 
-Here is an excerpt from its source:
+Here is an excerpt from its source with our Runtime property:
 
+```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), TwoLevelCached]
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        // ...
+        [DisplayName("Runtime")]
+        public Int32? Runtime
+        {
+            get { return Fields.Runtime[this]; }
+            set { Fields.Runtime[this] = value; }
+        }
+        //...
+    }
+}
+```
 
+We'll talk about entities (or rows) later, let's now focus on our target and change its DisplayName attribute value to *Runtime (mins)":
+
+```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), TwoLevelCached]
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        // ...
+        [DisplayName("Runtime (mins)")]
+        public Int32? Runtime
+        {
+            get { return Fields.Runtime[this]; }
+            set { Fields.Runtime[this] = value; }
+        }
+        //...
+    }
+}
+```
+
+Now build solution and run application. You'll see that field title is change in both grid and dialog.
 

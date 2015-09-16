@@ -334,5 +334,10 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Now build solution and run application. You'll see that field title is change in both grid and dialog.
+Now build solution and run application. You'll see that field title is changed in both grid and dialog. 
+
+> Column title has "..." in it as column is not wide enough, though its hint shows the full title. We'll see how to handle this soon.
+
+![Movies Runtime (Mins)](img/movies_runtime_mins.png)
+
 

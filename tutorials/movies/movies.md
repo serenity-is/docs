@@ -269,4 +269,22 @@ When you are greeted with Dashboard page, you will notice that there is a new se
 
 Click to expand it and click Movie to open our first generated page.
 
+![Movies First Generation](img/movies_first_generation.png)
+
+Now try adding a new movie, than try updating and deleting it.
+
+Sergen generated code for our table, and it just works without writing a single line of code.
+
+> This doesn't mean i don't like writing code. In contrast, i love it. Actually i'm not a fan of most designers and code generators. The code they produce is usually unmanagable mess. 
+
+> Sergen just helped us here for initial setup which is required for layered architecture and platform standards. We would have to create about 10 files for entity, repository, page, endpoint, grid, form etc. Also we needed to do some setup in a few other places.
+
+> Even if we did copy paste and replace code from some other page, it would be error prone and take about 5-10 mins.
+
+> The code files Sergen generates has minimum code with the absolute basics. This is thanks to the base classes in Serenity that handles the most logic. Once we generate code for some table, we'll probably never use Sergen again, and modify this generated code to our needs.
+
+
+
+
+
 

@@ -14,7 +14,6 @@
    * [Edit Dialogs](serene_tour/edit_dialogs.md)
 * [Tutorials](tutorials/readme.md)
    * [Movie Database](tutorials/movies/movies.md)
-* [Tutorial: Movie Database](tutorials/movies/readme.md)
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

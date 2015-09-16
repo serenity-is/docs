@@ -460,3 +460,8 @@ After rebuild and run, we have this:
 
 ![Movies TextArea Editors](img/movies_textarea_editors.png)
 
+As editors became a bit higher, form height exceeded default Serenity dialog height and now we have a vertical scroll bar. Let's remove it.
+
+### Setting Initial Dialog Size With CSS (Less)
+
+

@@ -340,4 +340,12 @@ Now build solution and run application. You'll see that field title is changed i
 
 ![Movies Runtime (Mins)](img/movies_runtime_mins.png)
 
+So far so good, what if we wanted to show another title in grid (columns) or dialog (form). We can override it corresponding definition file.
 
+Let's do it on columns first. Next to *MovieRow.cs*, you can find a source file named *MovieColumns.cs*:
+
+```cs
+
+```
+
+```

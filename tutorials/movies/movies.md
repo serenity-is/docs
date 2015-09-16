@@ -286,3 +286,13 @@ Sergen generated code for our table, and it just works without writing a single 
 
 ### Customizing Field Captions
 
+In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in minutes, but in its title there is no sign of this. Let's change its title to Runtime (mins).
+
+There are several ways to do this. Our options include server side form definition, server side columns definition, from script grid code etc. But let's make this change in the central location, the entity itself, so its title changes everywhere.
+
+When Sergen generated code for Movie table, it created a entity class named MovieRow. You can find it at  *MovieTutorial.Web/Modules/MovieDB/Movie/MovieRow.cs*.
+
+Here is an excerpt from its source:
+
+
+

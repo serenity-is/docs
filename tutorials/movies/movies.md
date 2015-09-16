@@ -340,12 +340,68 @@ Now build solution and run application. You'll see that field title is changed i
 
 ![Movies Runtime (Mins)](img/movies_runtime_mins.png)
 
+
+### Overriding Column Title and Width 
+
+
 So far so good, what if we wanted to show another title in grid (columns) or dialog (form). We can override it corresponding definition file.
 
 Let's do it on columns first. Next to *MovieRow.cs*, you can find a source file named *MovieColumns.cs*:
 
 ```cs
+namespace MovieTutorial.MovieDB.Columns
+{
+    // ...
 
+    [ColumnsScript("MovieDB.Movie")]
+    [BasedOnRow(typeof(Entities.MovieRow))]
+    public class MovieColumns
+    {
+        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+        public Int32 MovieId { get; set; }
+        //...
+        public Int32 Runtime { get; set; }
+    }
+}
 ```
 
+You may notice that this columns definition is based on the Movie entity (BasedOnRow attribute).
+
+Any attribute written here will override attributes defined in the entity class.
+
+So let's add a DisplayName attribute to the *Runtime* property:
+
+```cs
+namespace MovieTutorial.MovieDB.Columns
+{
+    // ...
+
+    [ColumnsScript("MovieDB.Movie")]
+    [BasedOnRow(typeof(Entities.MovieRow))]
+    public class MovieColumns
+    {
+        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+        public Int32 MovieId { get; set; }
+        //...
+        [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
+        public Int32 Runtime { get; set; }
+    }
+}
 ```
+
+Now we set column caption to "Runtime in Minutes". 
+
+I actually added two more attributes. 
+
+One to override column width to 150px.
+
+> Serenity applies an automatic width to columns based on field type and character length, unless you set the width explicitly.
+
+And another one to align column to right (AlignCenter, AlignLeft is also available).
+
+Let's build and run again, than we get: 
+
+![Movies Runtime Column](img/movies_runtime_column.png)
+
+Form field title stayed same, while column title changed.
+

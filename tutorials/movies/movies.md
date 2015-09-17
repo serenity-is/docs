@@ -490,7 +490,7 @@ In third line, we specify that dialog height should be automatic (@h: auto), fie
 
 We are using several less mixins here (widthAndMin and dialog-styles).
 
-Our form height is controlled by *s-PropertyGrid .categories { height: 260px; }* line. Let's change it to 400px so it won't need a vertical scroll bar.
+Our form height is controlled by *s-PropertyGrid .categories { height: 260px; }* line. Let's change it to 400px so it won't require a vertical scroll bar.
 
 ```css
 .s-MovieDialog {

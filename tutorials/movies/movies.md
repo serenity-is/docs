@@ -464,4 +464,38 @@ As editors became a bit higher, form height exceeded the default Serenity form h
 
 ### Setting Initial Dialog Size With CSS (Less)
 
+Sergen generated some CSS for our movie dialog in *MovieTutorial.Web/Content/site/site.less* file.
 
+If you open it, and scroll to bottom, you will see this:
+
+```cs
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+
+.s-MovieDialog {
+    > .size { .widthAndMin(650px); }
+    .dialog-styles(@h: auto, @l: 150px, @e: 400px);
+    .s-PropertyGrid .categories { height: 260px; }
+}
+```
+
+You can safely remove the 3 comment lines (appended by code generator...). This is just a reminder for you to move them to a better place like a *site.movies.less* file specific to this module (recommended).
+
+These rules are applied to elements with *.s-MovieDialog* class. Our Movie dialog has this class by default. 
+
+In the second line it is specified that this dialog is 650px wide (and also its minimum width is 650px, this will get some meaning after we make this dialog resizable).
+
+In third line, we specify that dialog height should be automatic (@h: auto), field labels should be 150px (@l: 150px) and editors should be 400px in width (@e: 400px).
+
+We are using several less mixins here (widthAndMin and dialog-styles).
+
+Our for width is controlled by *s-PropertyGrid .categories { height: 260px; }* line. Let's change it to 350px so our form won't have a vertical scroll bar.
+
+```cs
+.s-MovieDialog {
+    > .size { .widthAndMin(650px); }
+    .dialog-styles(@h: auto, @l: 150px, @e: 400px);
+    .s-PropertyGrid .categories { height: 350px; }
+}
+```

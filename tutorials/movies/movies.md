@@ -391,7 +391,7 @@ namespace MovieTutorial.MovieDB.Columns
 
 Now we set column caption to "Runtime in Minutes". 
 
-I actually added two more attributes. 
+We actually added two more attributes. 
 
 One to override column width to 150px.
 

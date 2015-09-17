@@ -496,6 +496,6 @@ Our for width is controlled by *s-PropertyGrid .categories { height: 260px; }* l
 .s-MovieDialog {
     > .size { .widthAndMin(650px); }
     .dialog-styles(@h: auto, @l: 150px, @e: 400px);
-    .s-PropertyGrid .categories { height: 350px; }
+    .s-PropertyGrid .categories { height: 400px; }
 }
 ```

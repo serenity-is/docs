@@ -460,6 +460,10 @@ After rebuild and run, we have this:
 
 ![Movies TextArea Editors](img/movies_textarea_editors.png)
 
+Serene has several editor types to choose from. Some are automatically picked based on field data type, while you need to explicitly set others.
+
+> You can also develop your own editor types. You can take existing editor types as base classes, or develop your own from stratch. We'll see how in following chapters.
+
 As editors became a bit higher, form height exceeded the default Serenity form height (which is set by Sergen to 260px) and now we have a vertical scroll bar. Let's remove it.
 
 ### Setting Initial Dialog Size With CSS (Less)
@@ -499,3 +503,86 @@ Our form height is controlled by *s-PropertyGrid .categories { height: 260px; }*
     .s-PropertyGrid .categories { height: 400px; }
 }
 ```
+
+
+### Changing Page Title
+
+Our page has title of *Movie*. Let's change it to Movies. 
+
+Open *MovieRow.cs* again. 
+
+```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), TwoLevelCached]
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        [DisplayName("Movie Id"), Identity]
+        public Int32? MovieId
+```
+
+Change DisplayName attribute value to *Movies*. This is the name that is used when this table is referenced, and it is usually a plural name. This attribute is used for determining default page title. 
+
+> It is also possible to override the page title in *MoviePage.Index.cshtml* file but as before, we prefer to do it from a central location so that this information can be reused in other places.
+
+InstanceName corresponds to singular name and is used in New Record (New Movie) button of the grid and determines the dialog title (e.g. Edit Movie).
+
+```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+    [ConnectionKey("Default"), DisplayName("Movies"), InstanceName("Movie"), TwoLevelCached]
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        [DisplayName("Movie Id"), Identity]
+        public Int32? MovieId
+```
+
+
+### Setting Navigation Item Title and Icon
+
+When Sergen generated code for Movie table, it also created a navigation item entry. In Serene, navigation items are created with special assembly attributes.
+
+Open *MoviePage.cs* in the same folder, on top of it you'll find this line:
+
+```cs
+[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Movie", 
+    typeof(MovieTutorial.MovieDB.Pages.MovieController))]
+
+namespace MovieTutorial.MovieDB.Pages
+{
+    using Serenity;
+    using Serenity.Web;
+
+```
+
+First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
+
+Second parameter is navigation title in "Section Title/Link Title" format. Section and navigation items are seperated with a slash (/).
+
+Lets change it to *Movie Database/Movies*.
+
+```cs
+[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camcorder")]
+
+namespace MovieTutorial.MovieDB.Pages
+{
+    using Serenity;
+    using Serenity.Web;
+
+```
+
+![Navigation Item Title and Icon](img/movies_navigation_links.png)
+
+We also changed navigation item icon to *icon-camcorder*. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from simple line icons set. 
+
+To see list of simple line icons and their css classes, visit link below:
+
+http://thesabbir.github.io/simple-line-icons/
+
+FontAwesome is available here:
+
+https://fortawesome.github.io/Font-Awesome/icons/
+

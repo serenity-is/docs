@@ -612,20 +612,26 @@ using MovieDB = MovieTutorial.MovieDB.Pages;
 [assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "", icon: "icon-speedometer")]
 
 [assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies", typeof(MovieDB.MovieController), icon: "icon-camcorder")]
+[assembly: NavigationLink(2100, "Movie Database/Movies", 
+    typeof(MovieDB.MovieController), icon: "icon-camcorder")]
 
 [assembly: NavigationMenu(8000, "Northwind", icon: "icon-anchor")]
-[assembly: NavigationLink(8200, "Northwind/Customers", typeof(Northwind.CustomerController), icon: "icon-wallet")]
-[assembly: NavigationLink(8300, "Northwind/Products", typeof(Northwind.ProductController), icon: "icon-present")]
+[assembly: NavigationLink(8200, "Northwind/Customers", 
+    typeof(Northwind.CustomerController), icon: "icon-wallet")]
+[assembly: NavigationLink(8300, "Northwind/Products", 
+    typeof(Northwind.ProductController), icon: "icon-present")]
+// ...
 ```
 
 Here we also declared a navigation menu (Movie Database) with *film* icon. When you don't have an explicitly defined navigation menu, Serenity implicitly creates one, but in this case you can't order menu yourself, or set menu icon.
 
 We assigned it a display order of *2000* so this menu will display just after Dashboard link (1000) but before Northwind menu (8000).
 
-We assigned our *Movies* link a display order value of *2100* but it's not used right now, as we have only one navigation item under *Movie Database* menu yet.
+We assigned our *Movies* link a display order value of *2100* but it doesn't matter right now, as we have only one navigation item under *Movie Database* menu yet.
 
-> First level links and navigation menus are sorted according to their display order first, then second level links between their siblings.
+> First level links and navigation menus are sorted according to their display order first, then second level links among their siblings.
 
+Here is how it looks like after this changes:
 
+![Movie Database Moved](img/movies_navigation_moved.png)
 

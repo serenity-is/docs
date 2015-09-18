@@ -15,7 +15,7 @@
 * [Tutorials](tutorials/readme.md)
    * [Movie Database](tutorials/movies/movies.md)
 * [How To Guides](howto/how_to_guides.md)
-   * Removing Northwind From Serene
+   * [Removing Northwind From Serene](howto/removing_northwind.md)
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

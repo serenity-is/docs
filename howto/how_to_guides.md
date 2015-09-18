@@ -2,4 +2,4 @@
 # How To Guides
 
 
-* [Removing Norhtwind From Serene](removenorthwind.md)
+* [Removing Norhtwind From Serene](remove_northwind.md)

@@ -14,6 +14,7 @@
    * [Edit Dialogs](serene_tour/edit_dialogs.md)
 * [Tutorials](tutorials/readme.md)
    * [Movie Database](tutorials/movies/movies.md)
+* How To Guides
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)
@@ -67,5 +68,4 @@
    * [Widget With Options](widgets/widget_with_options.md)
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
-* How To Guides
 

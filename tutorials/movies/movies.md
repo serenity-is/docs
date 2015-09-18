@@ -564,9 +564,6 @@ Second parameter is navigation title in "Section Title/Link Title" format. Secti
 Lets change it to *Movie Database/Movies*.
 
 ```cs
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camcorder")]
-
 namespace MovieTutorial.MovieDB.Pages
 {
     using Serenity;
@@ -585,4 +582,50 @@ http://thesabbir.github.io/simple-line-icons/
 FontAwesome is available here:
 
 https://fortawesome.github.io/Font-Awesome/icons/
+
+
+### Ordering Navigation Sections
+
+As our *Movie Database* section is auto generated last, it is displayed at the bottom of navigation menu.
+
+We'll move it before Northwind menu.
+
+As we saw recently, Sergen created a navigation item in *MoviePage.cs*. If navigation items are scattered through pages like this, it would be hard to see the big picture (list of all navigation items) and order them easily.
+
+So we move it to our central location which is at *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*.
+
+Just cut the below lines from *MoviePage.cs*:
+
+```cs
+[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camcorder")]
+```
+
+Move it into *NavigationItems.cs* and modify it like this:
+
+```
+using Serenity.Navigation;
+using Northwind = MovieTutorial.Northwind.Pages;
+using Administration = MovieTutorial.Administration.Pages;
+using MovieDB = MovieTutorial.MovieDB.Pages;
+
+[assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "", icon: "icon-speedometer")]
+
+[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
+[assembly: NavigationLink(2100, "Movie Database/Movies", typeof(MovieDB.MovieController), icon: "icon-camcorder")]
+
+[assembly: NavigationMenu(8000, "Northwind", icon: "icon-anchor")]
+[assembly: NavigationLink(8200, "Northwind/Customers", typeof(Northwind.CustomerController), icon: "icon-wallet")]
+[assembly: NavigationLink(8300, "Northwind/Products", typeof(Northwind.ProductController), icon: "icon-present")]
+```
+
+Here we also declared a navigation menu (Movie Database) with *film* icon. When you don't have an explicitly defined navigation menu, Serenity implicitly creates one, but in this case you can't order menu yourself, or set menu icon.
+
+We assigned it a display order of *2000* so this menu will display just after Dashboard link (1000) but before Northwind menu (8000).
+
+We assigned our *Movies* link a display order value of *2100* but it's not used right now, as we have only one navigation item under *Movie Database* menu yet.
+
+> First level links and navigation menus are sorted according to their display order first, then second level links between their siblings.
+
+
 

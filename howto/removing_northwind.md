@@ -19,38 +19,7 @@ Perform steps below in Visual Studio:
 
 ### Removing Navigation Items
 
-* Open *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*, remove following lines:
-
-```cs
-using Northwind = MyProject.Northwind.Pages;
-
-[assembly: NavigationMenu(8000, "Northwind", icon: "icon-anchor")]
-[assembly: NavigationLink(8200, "Northwind/Customers", 
-    typeof(Northwind.CustomerController), icon: "icon-wallet")]
-[assembly: NavigationLink(8300, "Northwind/Products", 
-    typeof(Northwind.ProductController), icon: "icon-present")]
-[assembly: NavigationLink(8400, "Northwind/Suppliers", 
-    typeof(Northwind.SupplierController), icon: "icon-magic-wand")]
-[assembly: NavigationLink(8500, "Northwind/Shippers", 
-    typeof(Northwind.ShipperController), icon: "icon-plane")]
-[assembly: NavigationLink(8600, "Northwind/Categories", 
-    typeof(Northwind.CategoryController), icon: "icon-folder-alt")]
-[assembly: NavigationLink(8700, "Northwind/Regions", 
-    typeof(Northwind.RegionController), icon: "icon-map")]
-[assembly: NavigationLink(8800, "Northwind/Territories", 
-    typeof(Northwind.TerritoryController), icon: "icon-puzzle")]
-```
-
-### Removing LESS Entries 
-
-* Open *MyProject.Web/Content/site/site.less* file, remove following line:
-    
-```less
-@import "site.northwind.less";
-```
-
-* Remove *MyProject.Web/Content/site/site.northwind.less* file.
-
+* Open *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*, remove all lines with *Northwind*.
 
 ### Removing Migration Scripts
 
@@ -66,6 +35,17 @@ using Northwind = MyProject.Northwind.Pages;
 * Remove *MyProject.Web/Modules/Common/Migrations/DefaultDB/NorthwindDBScript.sql* file.
 
 
+### Removing LESS Entries 
+
+* Open *MyProject.Web/Content/site/site.less* file, remove following line:
+    
+```less
+@import "site.northwind.less";
+```
+
+* Remove *MyProject.Web/Content/site/site.northwind.less* file.
+
+
 ### Removing Localization Texts
 
 * Open *MyProject.Web/Modules.Texts.cs* and remove following lines:
@@ -75,3 +55,52 @@ using Northwind = MyProject.Northwind.Pages;
             public static LocalText NorthwindPhoneMultiple = "...";
 ```
 
+* Open *MyProject.Web/Scripts/site/site.texts.es.json* and remove all lines with *Northwind*.
+
+* Open *MyProject.Web/Scripts/site/site.texts.tr.json* and remove all lines with *Northwind*.
+
+* Open *MyProject.Web/Scripts/site/site.texts.invariant.json* and remove all lines with *Northwind*.
+
+
+### Building Project and Running T4 (.tt) Templates
+
+* Now rebuild your solution.
+
+* Make sure it is built *successfully* before executing next step.
+
+* Click *Build* menu and click *Transform All Templates*.
+
+* Rebuild your solution again.
+
+* Search for *Northwind* in all solution items. It should find no results.
+
+* Run your project, now Northwind menu is gone.
+
+
+### Removing Northwind Tables
+
+* You would drop your existing database, and let migrations recreate your tables.
+
+* If you have some data that you don't want to lose in other tables, execute the script below to remove Northwind tables:
+
+```sql
+DROP TABLE [dbo].[Order Details]
+DROP TABLE [dbo].[Orders]
+DROP TABLE [dbo].[Products]
+DROP TABLE [dbo].[Suppliers]
+DROP TABLE [dbo].[Shippers]
+DROP TABLE [dbo].[EmployeeTerritories]
+DROP TABLE [dbo].[Employees]
+DROP TABLE [dbo].[CustomerCustomerDemo]
+DROP TABLE [dbo].[Customers]
+DROP TABLE [dbo].[Categories]
+DROP TABLE [dbo].[Territories]
+DROP TABLE [dbo].[Region]
+DROP TABLE [dbo].[CustomerDemographics]
+DELETE FROM [dbo].[VersionInfo] WHERE Version = 20141123155100
+```
+
+> Please make sure the database you are running this script on is a Serene one.
+
+
+* Now Northwind is no more... 

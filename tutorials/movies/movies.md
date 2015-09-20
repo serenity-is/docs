@@ -643,7 +643,7 @@ Here is how it looks like after these changes:
 ![Movie Database Moved](img/movies_navigation_moved.png)
 
 
-### Troubleshooting Some Problems with Visual Studio
+### Troubleshooting Some Issues with Visual Studio
 
 In case you didn't notice already, Visual Studio doesn't let you modify code while your site is running. Also your site stops when you stop debugging, so you can't keep browser window open and refresh after rebuilding.
 

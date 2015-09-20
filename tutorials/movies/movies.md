@@ -569,11 +569,13 @@ Second parameter is navigation title in "Section Title/Link Title" format. Secti
 Lets change it to *Movie Database/Movies*.
 
 ```cs
+[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camcorder")]
+
 namespace MovieTutorial.MovieDB.Pages
 {
-    using Serenity;
-    using Serenity.Web;
 
+//..
 ```
 
 ![Navigation Item Title and Icon](img/movies_navigation_links.png)

@@ -266,7 +266,7 @@ Now you can close Sergen, and return to Visual Studio.
 
 As projects are modified, Visual Studio will ask if you wan't to reload changes, click Reload All.
 
-Rebuild the solution and press F5 to launch application.
+*Rebuild the solution* and press *F5* to launch application.
 
 Use *admin* as username, and *serenity* as password to login.
 
@@ -374,7 +374,7 @@ You may notice that this columns definition is based on the Movie entity (BasedO
 
 Any attribute written here will override attributes defined in the entity class.
 
-So let's add a DisplayName attribute to the *Runtime* property:
+Let's add a DisplayName attribute to the *Runtime* property:
 
 ```cs
 namespace MovieTutorial.MovieDB.Columns

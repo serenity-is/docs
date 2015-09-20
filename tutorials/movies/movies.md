@@ -191,8 +191,8 @@ When you first run Sergen, Web Project and Script Project fields will be empty. 
 
 Another option is to set them to values below:
 
-* ..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
-* ..\\..\\MovieTutorial\\MovieTutorial.Script\\MovieTutorial.Script.csproj
+* ..\\..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
+* ..\\..\\..\\MovieTutorial\\MovieTutorial.Script\\MovieTutorial.Script.csproj
  
 > If you used another project name than *MovieTutorial*, e.g. *MyMovies*, replace *MovieTutorial* with it.
 
@@ -636,7 +636,7 @@ We assigned our *Movies* link a display order value of *2100* but it doesn't mat
 
 > First level links and navigation menus are sorted according to their display order first, then second level links among their siblings.
 
-Here is how it looks like after this changes:
+Here is how it looks like after these changes:
 
 ![Movie Database Moved](img/movies_navigation_moved.png)
 

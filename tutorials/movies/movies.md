@@ -3,6 +3,11 @@
 
 Let's create editing interface for some site similar to IMDB with Serenity.
 
+> You can find source code for this tutorial at: 
+
+> https://github.com/volkanceylan/Serenity-Tutorials/tree/master/MovieTutorial
+
+
 
 ### Create a new project named *MovieTutorial*
 
@@ -186,8 +191,8 @@ When you first run Sergen, Web Project and Script Project fields will be empty. 
 
 Another option is to set them to values below:
 
-* ..\..\MovieTutorial\MovieTutorial.Web\MovieTutorial.Web.csproj
-* ..\..\MovieTutorial\MovieTutorial.Script\MovieTutorial.Script.csproj
+* ..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
+* ..\\..\\MovieTutorial\\MovieTutorial.Script\\MovieTutorial.Script.csproj
  
 > If you used another project name than *MovieTutorial*, e.g. *MyMovies*, replace *MovieTutorial* with it.
 
@@ -634,4 +639,5 @@ We assigned our *Movies* link a display order value of *2100* but it doesn't mat
 Here is how it looks like after this changes:
 
 ![Movie Database Moved](img/movies_navigation_moved.png)
+
 

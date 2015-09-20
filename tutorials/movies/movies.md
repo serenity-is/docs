@@ -643,3 +643,29 @@ Here is how it looks like after these changes:
 ![Movie Database Moved](img/movies_navigation_moved.png)
 
 
+### Troubleshooting Some Problems with Visual Studio
+
+In case you didn't notice already, Visual Studio doesn't let you modify code while your site is running. Also your site stops when you stop debugging, so you can't keep browser window open and refresh after rebuilding.
+
+To solve this issue, we need to disable *Edit And Continue* (have no idea why).
+
+Right Click *MovieTutorial.Web* project, click *Properties*, in the Web tab, uncheck *Enable Edit And Continue* under *Debuggers*.
+
+Also, on your site, top blue progress bar (which is a Pace.js animation), keeps running all the time like it is still loading something. It is thanks to the *Browser Link* feature of Visual Studio. To disable it, locate its button in Visual Studio toolbar that looks like a refresh button (next to play icon with browser name like Chrome), click dropdown and uncheck *Enable Browser Link*.
+
+It's also possible to disable it with a web.config setting 
+
+```xml
+<appsettings>
+    <add key="vs:EnableBrowserLink" value="false" />
+</appsettings>
+```
+
+> Serene 1.5.4 and later will have this by default, so you may not have this issue
+
+
+### Adding Several Movie Entries
+
+For the following sections, we need some sample data. We can copy and paste some from IMDB.
+
+

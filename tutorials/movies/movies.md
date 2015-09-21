@@ -735,7 +735,7 @@ Now, if we search for *Gandalf*, we'll get a *The Lord of the Rings* entry:
 
 ![Movies Search Gandalf](img/movies_search_gandalf.png)
 
-QuickSearch attribute, by default searches with *contains* filter. It has some options to make it search by *starts with* filter or search only for exact values.
+QuickSearch attribute, by default, searches with *contains* filter. It has some options to make it match by *starts with* filter or match only exact values.
 
 If we wanted it to show only rows that *starts with* typed text, we would change attribute to:
 
@@ -748,7 +748,7 @@ public String Title
 }
 ```
 
-> Here this search mode is not useful, but for values like SSN, serial number, identification number, phone number etc, it might be.
+> Here this quick search feature is not very useful, but for values like SSN, serial number, identification number, phone number etc, it might be.
 
 If we wanted to search also in year column, but only exact integer values (1999 matches but not 19):
 
@@ -761,4 +761,42 @@ public Int32? Year
 }
 ```
 
+> You might have noticed that we are not writing any C# or SQL code for these basic features to work. We just specify what we want, rather than how to do it. This is what declarative programming is. 
+
+It is also possible to provide user with ability to determine which field she wants to search on.
+
+Open *MovieTutorial.Script/MovieDB/Movie/MovieGrid.cs* and modify it like:
+
+```
+
+namespace MovieTutorial.MovieDB
+{
+    //...
+    public class MovieGrid : EntityGrid<MovieRow>
+    {
+        public MovieGrid(jQueryObject container)
+            : base(container)
+        {
+        }
+
+        protected override List<QuickSearchField> GetQuickSearchFields()
+        {
+            return new List<QuickSearchField>
+            {
+                new QuickSearchField { Name = "", Title = "all" },
+                new QuickSearchField { Name = "Description", Title = "description" },
+                new QuickSearchField { Name = "Storyline", Title = "storyline" },
+                new QuickSearchField { Name = "Year", Title = "year" }
+            };
+        }
+    }
+    ///...
+}
+```
+
+Now we have a dropdown in quick search input:
+
+![Movies Quick Search Fields](img/movies_quick_fields.png)
+
+> Unlike prior samples where we modified Server side code, this time we did changes in Script side, and actually modified javascript code.
 

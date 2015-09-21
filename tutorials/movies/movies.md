@@ -668,4 +668,97 @@ It's also possible to disable it with a web.config setting
 
 For the following sections, we need some sample data. We can copy and paste some from IMDB.
 
+![7 Movies Entered](img/movies_data_7.png)
+
+If we typed *go* into search box, we would see two movies are filtered: *The Good, the Bad and the Ugly* and *The Godfather*.
+
+If we typed *Gandalf* we wouldn't be able to find anything. 
+
+By default, Sergen determines first textual field of a table as *the name field*. In movies table it is *Title*. This field has a *QuickSearch* attribute on it that specifies that text searches should be performed on it.
+
+> The name field is also determines initial sorting order and shown in edit dialog titles. 
+
+Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it in *MovieRow.cs*:
+
+```cs
+
+namespace MovieTutorial.MovieDB.Entities
+{
+    //...
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        //...
+        StringField INameRow.NameField
+        {
+            get { return Fields.Title; }
+        }
+}
+```
+
+Code generator determined that first textual (string) field in our table is Title. So it added a INameRow interface to our Movies row and implemented it by returning Title field. If wanted to use Description as name field, we would just replace it.
+
+Here, *Title* is actually the name field, so we leave it as is. But we want Serenity to search also in *Description* and *Storyline* fields. To do this, you need to add *QuickSearch* attribute to these fields too, as shown below:
+
+```
+namespace MovieTutorial.MovieDB.Entities
+{
+    //...
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        //...
+        [DisplayName("Title"), Size(200), NotNull, QuickSearch]
+        public String Title
+        {
+            get { return Fields.Title[this]; }
+            set { Fields.Title[this] = value; }
+        }
+
+        [DisplayName("Description"), Size(1000), QuickSearch]
+        public String Description
+        {
+            get { return Fields.Description[this]; }
+            set { Fields.Description[this] = value; }
+        }
+
+        [DisplayName("Storyline"), QuickSearch]
+        public String Storyline
+        {
+            get { return Fields.Storyline[this]; }
+            set { Fields.Storyline[this] = value; }
+        }
+        //...
+    }
+}
+```
+
+Now, if we search for *Gandalf*, we'll get a *The Lord of the Rings* entry:
+
+![Movies Search Gandalf](img/movies_search_gandalf.png)
+
+QuickSearch attribute, by default searches with *contains* filter. It has some options to make it search by *starts with* filter or search only for exact values.
+
+If we wanted it to show only rows that *starts with* typed text, we would change attribute to:
+
+```cs
+[DisplayName("Title"), Size(200), NotNull, QuickSearch(SearchType.StartsWith)]
+public String Title
+{
+    get { return Fields.Title[this]; }
+    set { Fields.Title[this] = value; }
+}
+```
+
+> Here this search mode is not useful, but for values like SSN, serial number, identification number, phone number etc, it might be.
+
+If we wanted to search also in year column, but only exact integer values (1999 matches but not 19):
+
+```
+[DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
+public Int32? Year
+{
+    get { return Fields.Year[this]; }
+    set { Fields.Year[this] = value; }
+}
+```
+
 

@@ -668,6 +668,11 @@ It's also possible to disable it with a web.config setting
 
 For the following sections, we need some sample data. We can copy and paste some from IMDB.
 
+If you don't want to waste your time entering this sample data, it is available as a migration at the link below:
+
+> https://github.com/volkanceylan/Serenity-Tutorials/blob/master/MovieTutorial/MovieTutorial/MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20150923_172700_SampleMovies.cs
+
+
 ![7 Movies Entered](img/movies_data_7.png)
 
 If we typed *go* into search box, we would see two movies are filtered: *The Good, the Bad and the Ugly* and *The Godfather*.

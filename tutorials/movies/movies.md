@@ -1145,3 +1145,59 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
+
+### Mapping GenreId Field in MovieRow
+
+As we did with *Kind* field before, *GenreId* field needs to be mapped in *MovieRow.cs*.
+
+```cs
+
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        [DisplayName("Kind"), NotNull, DefaultValue(1)]
+        public MovieKind? Kind
+        {
+            get { return (MovieKind?)Fields.Kind[this]; }
+            set { Fields.Kind[this] = (Int32?)value; }
+        }
+
+        [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
+        public Int32? GenreId
+        {
+            get { return Fields.GenreId[this]; }
+            set { Fields.GenreId[this] = value; }
+        }
+
+        [DisplayName("Genre"), Expression("g.Name")]
+        public String GenreName
+        {
+            get { return Fields.GenreName[this]; }
+            set { Fields.GenreName[this] = value; }
+        }
+
+        // ...
+
+        public class RowFields : RowFieldsBase
+        {
+            // ...
+            public readonly Int32Field Kind;
+            public readonly Int32Field GenreId;
+            public readonly StringField GenreName;
+
+            public RowFields()
+                : base("[mov].Movie")
+            {
+                LocalTextPrefix = "MovieDB.Movie";
+            }
+        }
+    }
+}
+```
+
+Here we mapped *GenreId* field and also declared that it has a foreign key relation to *GenreId* field in *[mov].Genre* table using *ForeignKey* attribute.
+
+> If we did generate code for Movie table after we added this Genre table, Sergen would understand this relation by checking foreign key definition at database level, and generate similar code for us.
+

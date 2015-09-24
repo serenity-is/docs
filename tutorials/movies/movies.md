@@ -1311,3 +1311,7 @@ Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown
 
 ```
 
+After we build and launch our project, we'll now have a searchable dropdown (Select2.js) on our Genre field.
+
+![Movie Form With Genre Editor](img/movies_form_with_genre_editor.png)
+

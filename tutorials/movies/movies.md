@@ -1220,3 +1220,5 @@ LEFT JOIN Genre g on t0.GenreId = g.GenreId
 
 By adding *Expression("g.Name")* on top of *GenreName* property, we specified that this field has an SQL expression of *g.Name*, thus it is a field from our *g* join.
 
+
+### Adding Genre Selection To Movie Form

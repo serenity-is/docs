@@ -870,4 +870,9 @@ namespace MovieTutorial.MovieDB
 > We are planning to introduce support by code generator to produce code compatible with T4 files, so you might not have to delete these lines in later versions.
 
 
+### Adding a Movie Kind Field
+
+If we wanted to also keep TV series and mini series in our movie table, we would need another field to store it: *MovieKind*.
+
+As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
 

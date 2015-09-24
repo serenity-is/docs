@@ -903,3 +903,20 @@ namespace MovieTutorial.Migrations.DefaultDB
 
 Now as we added *Kind* column to *Movie* table, we need a set of movie kind values. Let's define it as an enumeration at *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*:
 
+```cs
+using System.ComponentModel;
+
+namespace MovieTutorial.MovieDB
+{
+    public enum MovieKind
+    {
+        [Description("Film")]
+        Film = 1,
+        [Description("TV Series")]
+        TvSeries = 2,
+        [Description("Mini Series")]
+        MiniSeries = 3
+    }
+}
+```
+

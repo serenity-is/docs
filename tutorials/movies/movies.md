@@ -1242,3 +1242,22 @@ namespace MovieTutorial.MovieDB.Forms
 
 Now if we build and run application, we'll see that a Genre field is added to our form. Problem is it accepts data entry as an integer. We want it to use a dropdown.
 
+It's clear that we need to change editor type for GenreId field.
+
+
+### Declaring a Lookup Script for Genres
+
+To show an editor for *Genre* field, list of genres in our database should be available at client side.
+
+For enumeration values, it was simple, we just run T4 templates, and they copied enum declaration to script side.
+
+Here we can't do the same. Genre list is a database based dynamic list.
+
+Serenity has notion of *dynamic scripts* to make dynamic data available to script side in the form of runtime generated scripts.
+
+> Dynamic scripts are similar to web services, but their output are dynamic javascript files that can be cached on client side.
+
+To declare a dynamic lookup script for Genre table, open *GenreRow.cs* and modify it like below:
+
+```cs
+```

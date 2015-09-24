@@ -1070,3 +1070,13 @@ Fire sergen.exe using Package Manager Console again and generate code for *Genre
 
 Rebuild solution and run it. We'll get a new page like this:
 
+![Genre Initial Page](img/movies_genre_first.png)
+
+As you see in screenshot, it is generated under a new section *MovieDB* instead of the one we renamed recently: *Movie Database*.
+
+This is because *Sergen* has no idea of what customizations we performed on our *Movie* page. So we need to movie it under *Movie Database* manually.
+
+Open *MovieTutorial.Web/Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
+
+```cs
+````

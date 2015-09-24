@@ -1068,3 +1068,5 @@ Fire sergen.exe using Package Manager Console again and generate code for *Genre
 ![Genre Code Genreation](img/movies_sergen_genre.png)
 
 
+Rebuild solution and run it. We'll get a new page like this:
+

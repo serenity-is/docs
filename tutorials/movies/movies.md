@@ -1201,3 +1201,22 @@ Here we mapped *GenreId* field and also declared that it has a foreign key relat
 
 > If we did generate code for Movie table after we added this Genre table, Sergen would understand this relation by checking foreign key definition at database level, and generate similar code for us.
 
+We also added another field, *GenreName* that is not actually a field in *Movie* table, but in *Genre* table. 
+
+Serenity entities is more like SQL views. You can bring in fields from other tables with joins.
+
+By adding *LeftJoin("g")* attribute to MovieId property, we declared that whenever Genre table needs to be joined to, its alias will be *g*.
+
+So when Serenity needs to select from *Movies* table, it will produce an SQL query like this:
+
+```sql
+SELECT t0.MovieId, t0.Kind, t0.GenreId, g.Name as GenreName 
+FROM Movies t0
+LEFT JOIN Genre g on t0.GenreId = g.GenreId 
+
+```
+
+> This join will only be performed if a field from Genre table requested to be selected, e.g. its column is visible in a data grid.
+
+By adding *Expression("g.Name")* on top of *GenreName* property, we specified that this field has an SQL expression of *g.Name*, thus it is a field from our *g* join.
+

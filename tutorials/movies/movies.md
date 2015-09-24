@@ -901,6 +901,9 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
+
+### Declaring a MovieKind Enumeration
+
 Now as we added *Kind* column to *Movie* table, we need a set of movie kind values. Let's define it as an enumeration at *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*:
 
 ```cs

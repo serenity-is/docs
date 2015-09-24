@@ -1079,4 +1079,18 @@ This is because *Sergen* has no idea of what customizations we performed on our 
 Open *MovieTutorial.Web/Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
 
 ```cs
+[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Genre",
+    typeof(MovieTutorial.MovieDB.Pages.GenreController))]
+
+````
+
+And move it to *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*:
+
+```cs
+//...
+[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
+[assembly: NavigationLink(2100, "Movie Database/Movies", typeof(MovieDB.MovieController), icon: "icon-camcorder")]
+[assembly: NavigationLink(2200, "Movie Database/Genres", typeof(MovieDB.GenreController))]
+//...
+
 ```

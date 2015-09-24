@@ -2,21 +2,22 @@
 
 ## What is Serenity Platform
 
-Serenity is a Javascript / .NET application platform which has been built on open source technologies.
+Serenity is a ASP.NET MVC / Javascript application platform which has been built on open source technologies.
 
 It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying best software design practices.
-
-## What's In The Name
-
-Serenity has dictionary meanings of *peace*, *comfort* and *calmness*.
-
-This is what we are trying to achieve with Serenity. We hope that after installing and using it you will feel this way too...
 
 ## Who/What This Platform Is For
 
 Serenity is best suited to business applications with many data entry forms or administrative interface of public facing web sites.
 
 This doesn't mean that it can't be used for other types of applications. Some features like script versioning/bundling, caching, code generation, fluent sql builders etc. can be helpful for any kind of application.
+
+
+## What's In The Name
+
+Serenity has dictionary meanings of *peace*, *comfort* and *calmness*.
+
+This is what we are trying to achieve with Serenity. We hope that after installing and using it you will feel this way too...
 
 ## What Features Does It Provide
 

@@ -837,3 +837,32 @@ This was just a placeholder for MovieRow from server side and our *ServiceContra
 
 Now you can safely remove these lines from *MovieGrid.cs* as specified on comment line.
 
+We can use intellisense to replace hardcoded field names with compile time checked versions:
+
+```cs
+namespace MovieTutorial.MovieDB
+{
+    // ...
+    public class MovieGrid : EntityGrid<MovieRow>
+    {
+        public MovieGrid(jQueryObject container)
+            : base(container)
+        {
+        }
+
+        protected override List<QuickSearchField> GetQuickSearchFields()
+        {
+            return new List<QuickSearchField>
+            {
+                new QuickSearchField { Name = "", Title = "all" },
+                new QuickSearchField { Name = MovieRow.Fields.Description, 
+                    Title = "description" },
+                new QuickSearchField { Name = MovieRow.Fields.Storyline, 
+                    Title = "storyline" },
+                new QuickSearchField { Name = MovieRow.Fields.Year, 
+                    Title = "year" }
+            };
+        }
+    }
+}
+```

@@ -923,3 +923,41 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
+
+### Adding Kind Field to MovieRow Entity
+
+As we are not using Sergen anymore, we need to add a mapping in our MovieRow.cs for *Kind* column manually. Add following property declaration in MovieRow.cs after *Runtime* property:
+
+```cs
+[DisplayName("Runtime (mins)")]
+public Int32? Runtime
+{
+    get { return Fields.Runtime[this]; }
+    set { Fields.Runtime[this] = value; }
+}
+
+[DisplayName("Kind")]
+public Int32? Kind
+{
+    get { return Fields.Kind[this]; }
+    set { Fields.Kind[this] = value; }
+}
+```
+
+We also need to declare a Int32Field object which is required for Serenity entity system. On the bottom of MovieRow.cs locate *RowFields* class and modify it to add *Kind* field after the *Runtime* field:
+
+```cs
+public class RowFields : RowFieldsBase
+{
+    // ...
+    public readonly Int32Field Runtime;
+    public readonly Int32Field Kind;
+
+    public RowFields()
+        : base("[mov].Movie")
+    {
+        LocalTextPrefix = "MovieDB.Movie";
+    }
+}
+```
+

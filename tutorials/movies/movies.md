@@ -1279,6 +1279,27 @@ We just added line with *[LookupScript("MovieDB.Genre")]*.
 
 Rebuild your project, launch it, after logging in, open developer console by *F12*.
 
+Type *Q.getLookup('MovieDB.Genre')
+
+and you will get something like this:
+
 ![Movies Genre Lookup from Console](img/movies_genre_lookup_console.png)
 
+Here *MovieDB.Genre* is the lookup key we assigned to this lookup script when declaring it with:
+
+> [LookupScript("MovieDB.Genre")]
+
+This step was just to show how to check if a lookup script is available client side.
+
+
+### Using LookupEditor for Genre Field
+
+There are two places to set editor type for GenreId field. One is MovieForm.cs, other is MovieRow.cs.
+
+I usually prefer the latter, as it is the central place, but you may choose to set it on a form, if that editor type is specific to that form only.
+
+Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown below:
+
+```cs
+```
 

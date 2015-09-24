@@ -996,5 +996,27 @@ This error is caused by MoveKind enumeration not available client side. We shoul
 
 Now in Visual Studio, click *Build -> Transform All Templates* again.
 
-Rebuild your solution and execute it.
+Rebuild your solution and execute it. Now we have a nice dropdown in our form to select movie kind.
+
+![Movie Kind Selection](img/movies_kind_selection.png)
+
+
+### Declaring a Default Value for Movie Kind
+
+As *Kind* is a required field, we need to fill it in *Add Movie* dialog, otherwise we'll get a validation error.
+
+But most movies we'll store are feature films, so its default should be this value.
+
+To add a default value for *Kind* property, add a *DefaultValue* attribute like this:
+
+```cs
+[DisplayName("Kind"), NotNull, DefaultValue(1)]
+public MovieKind? Kind
+{
+    get { return (MovieKind?)Fields.Kind[this]; }
+    set { Fields.Kind[this] = (Int32?)value; }
+}
+```
+
+Now, in *Add Movie* dialog, *Kind* field will come prefilled as *Film*.
 

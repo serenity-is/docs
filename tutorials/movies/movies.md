@@ -1079,4 +1079,4 @@ This is because *Sergen* has no idea of what customizations we performed on our 
 Open *MovieTutorial.Web/Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
 
 ```cs
-````
+```

@@ -1260,4 +1260,25 @@ Serenity has notion of *dynamic scripts* to make dynamic data available to scrip
 To declare a dynamic lookup script for Genre table, open *GenreRow.cs* and modify it like below:
 
 ```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+
+    [ConnectionKey("Default"), DisplayName("Genre"), InstanceName("Genre"), TwoLevelCached]
+    [ReadPermission("Administration")]
+    [ModifyPermission("Administration")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("MovieDB.Genre")]
+    public sealed class GenreRow : Row, IIdRow, INameRow
+    {
+        // ...
+    }
 ```
+
+We just added line with *[LookupScript("MovieDB.Genre")]*.
+
+Rebuild your project, launch it, after logging in, open developer console by *F12*.
+
+![Movies Genre Lookup from Console](img/movies_genre_lookup_console.png)
+
+

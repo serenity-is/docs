@@ -866,3 +866,8 @@ namespace MovieTutorial.MovieDB
     }
 }
 ```
+
+> We are planning to introduce support by code generator to produce code compatible with T4 files, so you might not have to delete these lines in later versions.
+
+
+

@@ -907,10 +907,12 @@ namespace MovieTutorial.Migrations.DefaultDB
 Now as we added *Kind* column to *Movie* table, we need a set of movie kind values. Let's define it as an enumeration at *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*:
 
 ```cs
+using Serenity.ComponentModel;
 using System.ComponentModel;
 
 namespace MovieTutorial.MovieDB
 {
+    [EnumKey("MovieDB.MovieKind")]
     public enum MovieKind
     {
         [Description("Film")]
@@ -960,4 +962,39 @@ public class RowFields : RowFieldsBase
     }
 }
 ```
+
+
+### Adding Kind Selection To Our Movie Form
+
+If we build and run our project now, we'll see that there is no change in the Movie form, even if we added *Kind* field mapping to the *MovieRow*. This is because, fields shown/edited in the form are controlled by declerations in *MovieForm.cs*. 
+
+Modify *MovieForm.cs* as below:
+
+```cs
+
+namespace MovieTutorial.MovieDB.Forms
+{
+    // ...
+    [FormScript("MovieDB.Movie")]
+    [BasedOnRow(typeof(Entities.MovieRow))]
+    public class MovieForm
+    {
+        // ...
+        public Int32 Runtime { get; set; }
+        public MovieKind Kind { get; set; }
+    }
+}
+```
+
+Now, build your solution and run it. When you try to edit a movie or add a new one, nothing will happen. This is an expected situation. If you check developer tools console of your browser (F12, inspect element etc.) you'll see such an error:
+
+```txt
+Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
+```
+
+This error is caused by MoveKind enumeration not available client side. We should run our T4 templates before executing our program.
+
+Now in Visual Studio, click *Build -> Transform All Templates* again.
+
+Rebuild your solution and execute it.
 

@@ -1301,5 +1301,13 @@ I usually prefer the latter, as it is the central place, but you may choose to s
 Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown below:
 
 ```cs
+    [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
+    [LookupEditor("MovieDB.Genre")]
+    public Int32? GenreId
+    {
+        get { return Fields.GenreId[this]; }
+        set { Fields.GenreId[this] = value; }
+    }
+
 ```
 

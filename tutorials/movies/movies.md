@@ -876,3 +876,30 @@ If we wanted to also keep TV series and mini series in our movie table, we would
 
 As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
 
+Create another migration file under *MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20150924_142200_MovieKind.cs*:
+
+```cs
+using FluentMigrator;
+using System;
+
+namespace MovieTutorial.Migrations.DefaultDB
+{
+    [Migration(20150924142200)]
+    public class DefaultDB_20150924_142200_MovieKind : Migration
+    {
+        public override void Up()
+        {
+            Alter.Table("Movie").InSchema("mov")
+                .AddColumn("Kind").AsInt32().NotNullable()
+                    .WithDefaultValue(1);
+        }
+
+        public override void Down()
+        {
+        }
+    }
+}
+```
+
+Now as we added *Kind* column to *Movie* table, we need a set of movie kind values. Let's define it as an enumeration at *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*:
+

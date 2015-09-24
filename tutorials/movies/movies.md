@@ -1020,3 +1020,51 @@ public MovieKind? Kind
 
 Now, in *Add Movie* dialog, *Kind* field will come prefilled as *Film*.
 
+
+### Adding Genre Field
+
+To hold Movie genres we need a lookup table. For *Kind* field we used an enumeration but this time genres might not be that *static* to declare them as an enumeration.
+
+As usual, we start with a migration.
+
+*MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20150924_151600_GenreTable.cs*:
+
+```cs
+using FluentMigrator;
+using System;
+
+namespace MovieTutorial.Migrations.DefaultDB
+{
+    [Migration(20150924151600)]
+    public class DefaultDB_20150924_151600_GenreTable : Migration
+    {
+        public override void Up()
+        {
+            Create.Table("Genre").InSchema("mov")
+                .WithColumn("GenreId").AsInt32().NotNullable()
+                    .PrimaryKey().Identity()
+                .WithColumn("Name").AsString(100).NotNullable();
+
+            Alter.Table("Movie").InSchema("mov")
+                .AddColumn("GenreId").AsInt32().Nullable();
+        }
+
+        public override void Down()
+        {
+        }
+    }
+}
+```
+
+We also added a *GenreId* field to *Movie* table.
+
+> Actually a movie can have multiple genres so we should keep it in a separate *MovieGenres* table. But for now, we think it as single. We'll see how to change it to multiple later.
+
+
+### Generating Code For Genre Table
+
+Fire sergen.exe using Package Manager Console again and generate code for *Genre* table with the parameters shown below:
+
+![Genre Code Genreation](img/movies_sergen_genre.png)
+
+

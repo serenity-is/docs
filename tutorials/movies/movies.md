@@ -805,3 +805,35 @@ Now we have a dropdown in quick search input:
 
 > Unlike prior samples where we modified Server side code, this time we did changes in Script side, and actually modified javascript code.
 
+
+
+### Running T4 Templates (.tt files)
+
+In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names at server side.
+
+Serene contains some T4 (.tt) files to transfer such information from server side (rows etc) to client side for intellisense purposes.
+
+Before running these templates, please make sure that your solution builds successfully as templates uses your output DLL files (*MovieTutorial.Web.dll*, *MovieTutorial.Script.dll*) to generate code.
+
+After building your solution, click on *Build* menu, than *Transform All Templates*.
+
+If you try to build your solution now, you will get an error.
+
+```
+Error CS0579 Duplicate 'Imported' attribute MovieTutorial.Script ...\MovieDB.MovieRow.cs	
+```
+
+on file MovieTutorial.Script/MovieDB/Movie/MovieGrid.cs:
+
+```cs
+// Please remove this partial class or the first line below, after you run ScriptContexts.tt
+[Imported, Serializable, PreserveMemberCase] 
+public partial class MovieRow
+{
+}
+```
+
+This was just a placeholder for MovieRow from server side and our *ServiceContracts.tt* file generated its up to date version at *MovieTutorial.Script/Imports/ServiceContracts.tt/MovieDB.cs*.
+
+Now you can safely remove these lines from *MovieGrid.cs* as specified on comment line.
+

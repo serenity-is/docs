@@ -14,6 +14,7 @@
    * [Edit Dialogs](serene_tour/edit_dialogs.md)
 * [Tutorials](tutorials/readme.md)
    * [Movie Database](tutorials/movies/movies.md)
+       * Creating Movie Table
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
 * [Service Locator & Initialization](service_locator/README.md)

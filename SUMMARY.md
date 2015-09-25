@@ -19,6 +19,7 @@
        * [Customizing Movie Interface](tutorials/movies/customizing_movie_interface.md)
        * [Handling Movie Navigation](tutorials/movies/handling_movie_navigation.md)
        * [Customizing Quick Search](tutorials/movies/customizing_quick_search.md)
+       * Adding a Movie Kind Field
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
 * [Service Locator & Initialization](service_locator/README.md)

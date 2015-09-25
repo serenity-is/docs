@@ -296,3 +296,29 @@ After we build and launch our project, we'll now have a searchable dropdown (Sel
 
 ![Movie Form With Genre Editor](img/movies_form_with_genre_editor.png)
 
+
+
+### Display Genre in Movie Grid
+
+Currently, movie genre can be edited in the form but is not displayed in Movie grid. Edit MovieColumns.cs to show GenreName (not GenreId).
+
+
+```cs
+
+namespace MovieTutorial.MovieDB.Forms
+{
+    // ...
+    public class MovieColumns
+    {
+        //...
+        [Width(100)]
+        public String GenreName { get; set; }
+        [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
+        public Int32 Runtime { get; set; }
+    }
+}
+```
+
+Now GenreName is shown in the grid.
+
+![Movie Gid With Genre Column](img/movies_genre_column.png)

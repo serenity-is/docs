@@ -18,6 +18,7 @@
        * [Generating Code For Movie Table](tutorials/movies/generating_code_for_movie_table.md)
        * [Customizing Movie Interface](tutorials/movies/customizing_movie_interface.md)
        * [Handling Movie Navigation](tutorials/movies/handling_movie_navigation.md)
+   * Customize Quick Search for Movies
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
 * [Service Locator & Initialization](service_locator/README.md)

@@ -28,12 +28,6 @@ MovieTutorial.Script looks like an ordinary C# class library but the code it con
 > Its output (MovieTutorial.Script.js) will be copied to folder *Scripts/site/* under *MovieTutorial.Web*. So at runtime, only MovieTutorial.Web project is used.
 
 
-
-
-
-
-
-
 ### Customizing Field Captions
 
 In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in *minutes*, but in its title there is no sign of this. Let's change its title to Runtime (mins).

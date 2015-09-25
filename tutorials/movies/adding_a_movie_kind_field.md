@@ -1,4 +1,4 @@
-### Adding a Movie Kind Field
+# Adding a Movie Kind Field
 
 If we wanted to also keep TV series and mini series in our movie table, we would need another field to store it: *MovieKind*.
 

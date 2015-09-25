@@ -1,4 +1,4 @@
-### Creating *Movie* Table
+# Creating *Movie* Table
 
 To store list of movies we need a Movie table. We could create this table using old-school techniques like SQL Management Studio but we prefer creating it as a *migration* using *Fluent Migrator*:
 

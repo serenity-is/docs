@@ -27,4 +27,4 @@ Update-Package Serenity.CodeGenerator
 Update-Package Serenity.Script
 ```
 
-Updating these three packages will also update others.
+Updating these three packages will also update others (because of dependencies).

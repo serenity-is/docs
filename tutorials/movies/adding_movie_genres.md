@@ -349,7 +349,7 @@ Now we can define a new Genre by clicking star/pen icon next to genre field.
 
 ![Defining Genre Inplace](img/movies_genre_inplace_add.png)
 
-> Here we also see that we can use a dialog from another page (GenreDialog) in the movies page.
+> Here we also see that we can use a dialog from another page (GenreDialog) in the movies page. In Serenity applications, all client side objects (dialogs, grids, editors, formatters etc.) are self-contained reusable components (widgets) that are not bound to any page.
 
 It is also possible to start typing in genre editor, and it will provide you with an option to add a new genre.
 

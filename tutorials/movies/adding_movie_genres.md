@@ -344,3 +344,13 @@ public Int32? GenreId
 }
 
 ```
+
+Now we can define a new Genre by clicking star/pen icon next to genre field.
+
+![Defining Genre Inplace](img/movies_genre_inplace_add.png)
+
+> Here we also see that we can use a dialog from another page (GenreDialog) in the movies page.
+
+It is also possible to start typing in genre editor, and it will provide you with an option to add a new genre.
+
+![Defining Genre By Searching](img/movies_genre_search_add.png)

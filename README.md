@@ -17,6 +17,7 @@ This doesn't mean that it can't be used for other types of applications. Some fe
 ## Where To Look For Information
 
 <dl>
+
   <dt>Github Repository:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity'>https://github.com/volkanceylan/Serenity</a></dd>
 
@@ -26,8 +27,12 @@ This doesn't mean that it can't be used for other types of applications. Some fe
   <dt>Change Log:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md'>https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md</a></dd>
 
-  <dt>Tuturials / Samples:</dt>
+  <dt>Tutorial / Sample Source Codes:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity-Tutorials'>https://github.com/volkanceylan/Serenity-Tutorials</a></dd>
+
+  <dt>Serene Application Template:</dt>
+  <dd><a href='https://visualstudiogallery.msdn.microsoft.com/559ec6fc-feef-4077-b6d5-5a99408a6681'>https://visualstudiogallery.msdn.microsoft.com/559ec6fc-feef-4077-b6d5-5a99408a6681</a></dd>
+
 </dl>
 
 

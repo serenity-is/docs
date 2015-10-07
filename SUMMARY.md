@@ -24,6 +24,7 @@
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)
+   * How To: Use a SlickGrid Formatter
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

@@ -27,7 +27,7 @@ This doesn't mean that it can't be used for other types of applications. Some fe
   <dt>Change Log:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md'>https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md</a></dd>
 
-  <dt>Tutorial / Sample Source Codes:</dt>
+  <dt>Tutorial / Sample Source Code:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity-Tutorials'>https://github.com/volkanceylan/Serenity-Tutorials</a></dd>
 
   <dt>Serene Application Template:</dt>

@@ -16,6 +16,8 @@ This doesn't mean that it can't be used for other types of applications. Some fe
 
 ## Where To Look For Information
 
+After following this guide and its tutorials, try resources below for more information about Serenity.
+
 <dl>
 
   <dt>Github Repository:</dt>

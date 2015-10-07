@@ -6,11 +6,13 @@ Serenity is a ASP.NET MVC / Javascript application platform which has been built
 
 It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying best software design practices.
 
+
 ## Who/What This Platform Is For
 
 Serenity is best suited to business applications with many data entry forms or administrative interface of public facing web sites.
 
 This doesn't mean that it can't be used for other types of applications. Some features like script versioning/bundling, caching, code generation, fluent sql builders etc. can be helpful for any kind of application.
+
 
 ## Where To Look For Information
 
@@ -27,9 +29,6 @@ This doesn't mean that it can't be used for other types of applications. Some fe
   <dt>Tuturials / Samples:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity-Tutorials'>https://github.com/volkanceylan/Serenity-Tutorials</a></dd>
 </dl>
-
-### Serene Template Source:
-
 
 
 ## What's In The Name

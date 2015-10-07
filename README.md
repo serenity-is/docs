@@ -12,6 +12,25 @@ Serenity is best suited to business applications with many data entry forms or a
 
 This doesn't mean that it can't be used for other types of applications. Some features like script versioning/bundling, caching, code generation, fluent sql builders etc. can be helpful for any kind of application.
 
+## Where To Look For Information
+
+<dl>
+  <dt>Github Repository:</dt>
+  <dd><a href='https://github.com/volkanceylan/Serenity'>https://github.com/volkanceylan/Serenity</a></dd>
+
+  <dt>Issues / Questions</dt>
+  <dd><a href='https://github.com/volkanceylan/Serenity/issues'>https://github.com/volkanceylan/Serenity/issues</a></dd>
+  
+  <dt>Change Log:</dt>
+  <dd><a href='https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md'>https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md</a></dd>
+
+  <dt>Tuturials / Samples:</dt>
+  <dd><a href='https://github.com/volkanceylan/Serenity-Tutorials'>https://github.com/volkanceylan/Serenity-Tutorials</a></dd>
+</dl>
+
+### Serene Template Source:
+
+
 
 ## What's In The Name
 

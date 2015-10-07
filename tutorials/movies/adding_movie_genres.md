@@ -322,3 +322,25 @@ namespace MovieTutorial.MovieDB.Forms
 Now GenreName is shown in the grid.
 
 ![Movie Gid With Genre Column](img/movies_genre_column.png)
+
+
+### Making It Possible To Define A New Genre Inplace
+
+While setting genre for our sample movies, we notice that *The Good, the Bad and the Ugly* is *Western* but there is no such genre in *Genre* dropdown yet. 
+
+One option is to open Genres page, add it, and come back to movie form again. Not so pretty...
+
+Fortunately, Serenity has integrated inplace item definition ability for lookup editors.
+
+Open MovieRow.cs and modify *LookupEditor* attribute like this:
+
+```cs
+[DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
+[LookupEditor("MovieDB.Genre", InplaceAdd = true)]
+public Int32? GenreId
+{
+    get { return Fields.GenreId[this]; }
+    set { Fields.GenreId[this] = value; }
+}
+
+```

@@ -93,5 +93,5 @@ If you have another SQL server instance, for example SQL Express, change data so
 ```
 
 
-You can also use another SQL server. Just change the connectionString.
+You can also use another SQL server. Just change the connection string.
 

@@ -32,6 +32,8 @@ Perform steps below in Visual Studio:
 
 * Remove *MyProject.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20141123_155100_ProductImage.cs* file.
 
+* Remove *MyProject.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20151014_030700_OrderDetailID.cs* file.
+
 * Remove *MyProject.Web/Modules/Common/Migrations/DefaultDB/NorthwindDBScript.sql* file.
 
 

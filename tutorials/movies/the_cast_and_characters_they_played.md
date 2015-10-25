@@ -121,7 +121,7 @@ Now after launching your project, you should be able to enter actors:
 
 ### Declaring FullName Field
 
-On the title of edit dialog, first name of the person is shown (*Carrie-Anne*). It would be nice to show full name. And also search in full name in grid.
+On the title of edit dialog, first name of the person is shown (*Carrie-Anne*). It would be nice to show full name. And also search with full name in grid.
 
 So let's edit our PersonRow.cs:
 
@@ -172,3 +172,10 @@ namespace MovieTutorial.MovieDB.Entities
     }
 }
 ```
+
+We specified SQL expression *Expression("(t0.Firstname + ' ' + t0.Lastname)")* on top of Fullname property. Thus, it is a server side calculated field. 
+
+By adding QuickSearch attribute to FullName, instead of Firstname, grid will now search by default on Fullname field.
+
+
+

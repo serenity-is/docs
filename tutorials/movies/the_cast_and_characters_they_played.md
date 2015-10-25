@@ -251,3 +251,4 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 
 > For some types of master/detail records like order/detail, details shouldn't be allowed to be edited independently for consistency reasons.
 
+

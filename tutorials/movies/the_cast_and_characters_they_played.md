@@ -241,7 +241,7 @@ Generate code for MovieCast table using *sergen*:
 
 ### Master/Detail Editing Logic For MovieCast Table
 
-Till now, we created a page for each table, and list and edit its records in this page. This time we are going to use a different strategy.
+Up until now, we created a page for each table, and list and edit its records in this page. This time we are going to use a different strategy.
 
 We'll list the cast for a movie in the Movie dialog and allow them to be edited along with the movie. Also, cast will be saved together with movie entity in one transaction.
 

@@ -68,5 +68,51 @@ namespace MovieTutorial.Migrations.DefaultDB
 
 ### Generating Code For Person Table
 
-First create UI for Person table:
+First generate code for Person table:
+
+![Person Code Generation](img/movies_person_sergen.png)
+
+
+### Changing Gender To Enumeration
+
+Gender column in Person table should be an enumeration. Declare a Gender enumeration in *Gender.cs* next to *PersonRow.cs*:
+
+```cs
+using Serenity.ComponentModel;
+using System.ComponentModel;
+
+namespace MovieTutorial.MovieDB
+{
+    [EnumKey("MovieDB.Gender")]
+    public enum Gender
+    {
+        [Description("Male")]
+        Male = 1,
+        [Description("Female")]
+        Female = 2
+    }
+}
+```
+
+Change Gender property declaration in PersonRow.cs as below:
+
+```cs
+//...
+        [DisplayName("Gender")]
+        public Gender? Gender
+        {
+            get { return (Gender?)Fields.Gender[this]; }
+            set { Fields.Gender[this] = (Int32?)value; }
+        }
+//...
+```
+
+For consistency, change type of Gender property in PersonForm.cs and PersonColumns.cs from Int32 to Gender.
+
+
+### Rebuilding T4 Templates
+
+As we declared a new enumeration and used it, we should rebuild solution, convert T4 templates, and delete partial MovieRow declaration from MovieGrid.cs.
+
+Now after launching your project, you should be able to enter actors:
 

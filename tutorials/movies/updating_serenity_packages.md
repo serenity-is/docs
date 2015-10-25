@@ -77,11 +77,11 @@ So, these and a few more are also updated in MovieApplication.Web.
 
 Updating Serenity packages, updates Serenity assemblies and most static scripts, but not all *Serene* template content is updated.
 
-We are trying to keep updating your application as simple as possible, but Serene is just a project template, not a static package, your application is a customizable copy of it.
+We are trying to keep updating your application as simple as possible, but Serene is just a project template, not a static package. Your application is a customizable copy of Serene.
 
 You might have done modifications to application source, so updating a Serene application created with an older version of Serene template, might not be as easy as it sounds.
 
-So sometimes you might have to create a new Serene application with up-to-date Serene template version, and compare it to your application, and merge features you need manually.
+So sometimes you might have to create a new Serene application with up-to-date Serene template version, and compare it to your application, and merge features you need. This is a manual process.
 
 > We have some plans to make parts of Serene template also a NuGet package, but it is still not trivial how to update your application without overriding your changes, e.g. to shared code like Navigation items. And what if you removed Northwind code, but our update reinstalls it? I'm open to suggestions...
 

@@ -354,3 +354,10 @@ Now we can define a new Genre by clicking star/pen icon next to genre field.
 It is also possible to start typing in genre editor, and it will provide you with an option to add a new genre.
 
 ![Defining Genre By Searching](img/movies_genre_search_add.png)
+
+
+### Re-runing T4 Templates
+
+As we added a new entity to our application, we should run T4 templates after building solution.
+
+It will again complain about duplicate Row declerations, so just delete GenreRow class in GenreGrid.cs.

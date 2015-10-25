@@ -2,7 +2,7 @@
 
 ## What is Serenity Platform
 
-Serenity is a ASP.NET MVC / Javascript application platform which has been built on open source technologies.
+Serenity is an ASP.NET MVC / Javascript application platform which has been built on open source technologies.
 
 It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying best software design practices.
 

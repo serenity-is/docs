@@ -21,6 +21,7 @@
        * [Customizing Quick Search](tutorials/movies/customizing_quick_search.md)
        * [Adding a Movie Kind Field](tutorials/movies/adding_a_movie_kind_field.md)
        * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
+       * Updating Serenity Packages
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)

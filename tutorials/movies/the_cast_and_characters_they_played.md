@@ -42,7 +42,7 @@ namespace MovieTutorial.Migrations.DefaultDB
             Create.Table("Person").InSchema("mov")
                 .WithColumn("PersonId").AsInt32().Identity().PrimaryKey().NotNullable()
                 .WithColumn("Firstname").AsString(50).NotNullable()
-                .WithColumn("Surname").AsString(50).NotNullable()
+                .WithColumn("Lastname").AsString(50).NotNullable()
                 .WithColumn("BirthDate").AsDateTime().Nullable()
                 .WithColumn("BirthPlace").AsString(100).Nullable()
                 .WithColumn("Gender").AsInt32().Nullable()

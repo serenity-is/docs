@@ -22,7 +22,7 @@
        * [Adding a Movie Kind Field](tutorials/movies/adding_a_movie_kind_field.md)
        * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
        * [Updating Serenity Packages](tutorials/movies/updating_serenity_packages.md)
-       * The Cast and Characters They Played
+       * [The Cast and Characters They Played](tutorials/movies/the_cast_and_characters_they_played.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)

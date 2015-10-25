@@ -116,3 +116,59 @@ As we declared a new enumeration and used it, we should rebuild solution, conver
 
 Now after launching your project, you should be able to enter actors:
 
+![Person Editing](img/movies_person_editing.png)
+
+
+### Declaring FullName Field
+
+On the title of edit dialog, first name of the person is shown (*Carrie-Anne*). It would be nice to show full name. And also search in full name in grid.
+
+So let's edit our PersonRow.cs:
+
+```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+    //...
+    public sealed class PersonRow : Row, IIdRow, INameRow
+    {
+        //... remove QuickSearch from FirstName
+        [DisplayName("First Name"), Size(50), NotNull]
+        public String Firstname
+        {
+            get { return Fields.Firstname[this]; }
+            set { Fields.Firstname[this] = value; }
+        }
+
+        [DisplayName("Last Name"), Size(50), NotNull]
+        public String Lastname
+        {
+            get { return Fields.Lastname[this]; }
+            set { Fields.Lastname[this] = value; }
+        }
+
+        [DisplayName("Full Name"), Expression("(t0.Firstname + ' ' + t0.Lastname)"), QuickSearch]
+        public String Fullname
+        {
+            get { return Fields.Fullname[this]; }
+            set { Fields.Fullname[this] = value; }
+        }
+        
+        //... change NameField to Fullname
+        StringField INameRow.NameField
+        {
+            get { return Fields.Fullname; }
+        }
+
+        //...
+
+        public class RowFields : RowFieldsBase
+        {
+            public readonly Int32Field PersonId;
+            public readonly StringField Firstname;
+            public readonly StringField Lastname;
+            public readonly StringField Fullname;
+            //...
+        }
+    }
+}
+```

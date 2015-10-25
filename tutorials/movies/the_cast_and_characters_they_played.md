@@ -232,4 +232,22 @@ namespace MovieTutorial.MovieDB.Entities
 
 We'll use it for editing Movie cast later.
 
+### Generating Code For MovieCast Table
+
+Generate code for MovieCast table using *sergen*:
+
+![Movie Cast Code Generation](img/movies_cast_sergen.png)
+
+
+### Master/Detail Editing Logic For MovieCast Table
+
+Till now, we created a page for each table, and list and edit its records in this page. This time we are going to use a different strategy.
+
+We'll list the cast for a movie in the Movie dialog and allow them to be edited along with the movie. Also, cast will be saved together with movie entity in one transaction.
+
+Thus, cast editing will be in memory, and when user presses save button in Movie dialog, the movie and its cast will be saved to database in one shot.
+
+> It would be possible to edit the cast independently, here we just want to show how it can be done. 
+
+> For some types of master/detail records like order/detail, details shouldn't be allowed to be edited independently for consistency reasons.
 

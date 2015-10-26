@@ -331,3 +331,62 @@ By putting *[MovieCastEditor]* attribute on top of CastList property, we specifi
 
 Now build and launch your application. Open a movie dialog and you'll be greeted by our new editor:
 
+![Movie Cast Editor Initial](img/movies_cast_editor_initial.png)
+
+OK, it looked easy, but i'll be honest, we are not even half the way. 
+
+That *New MovieCast* button doesn't work, need to define a dialog for it, the grid columns are not  what i'd like them to be and the field and button titles are not so user friendly...
+
+Also as this is not an integrated feature (yet), i have to handle a bit more plumbing like loading and saving cast list on server side.
+
+
+### Configuring MovieCastEditor to Use MovieCastEditDialog
+
+Get a copy of MovieCastDialog.cs as MovieCastEditDialog.cs and modify it like below:
+
+```cs
+namespace MovieTutorial.MovieDB
+{
+    using jQueryApi;
+    using Common;
+    using Serenity;
+    using System.Collections.Generic;
+
+    [NameProperty("Character"), FormKey("MovieDB.MovieCast"), LocalTextPrefix("MovieDB.MovieCast")]
+    public class MovieCastEditDialog : GridEditorDialog<MovieCastRow>
+    {
+    }
+}
+
+```
+
+Open MovieCastEditor.cs again and add a DialogType attribute and override GetAddButtonCaption:
+
+```cs
+namespace MovieTutorial.MovieDB
+{
+    //..
+    [DialogType(typeof(MovieCastEditDialog))]
+    public class MovieCastEditor : GridEditorBase<MovieCastRow>
+    {
+        public MovieCastEditor(jQueryObject container)
+            : base(container)
+        {
+        }
+
+        protected override string GetAddButtonCaption()
+        {
+            return "Add";
+        }
+    }
+}
+```
+
+We specified that MovieCastEditor uses a MovieCastEditDialog by default which is also used by *Add* button. 
+
+Now, our *Add* button shows a dialog, instead of doing nothing.
+
+![Movie Cast Dialog Initial](img/movies_cast_dialog_initial.png)
+
+This dialog needs some CSS formatting. Movie title and person name fields accepts integer inputs ( as they are actually MovieId and PersonId fields).
+

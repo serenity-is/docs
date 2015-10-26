@@ -300,5 +300,5 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-To reference this new editor type from server side, rebuild solution, transform all templates and remove that useless MovieCastRow partial from MovieGrid.cs, and rebuild again.
+To reference this new editor type from server side, rebuild solution, transform all templates and remove that useless MovieCastRow partial from MovieGrid.cs, and build again.
 

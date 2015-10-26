@@ -384,9 +384,44 @@ namespace MovieTutorial.MovieDB
 
 We specified that MovieCastEditor uses a MovieCastEditDialog by default which is also used by *Add* button. 
 
-Now, our *Add* button shows a dialog, instead of doing nothing.
+Now, instead of doing nothing, *Add* button shows a dialog.
 
 ![Movie Cast Dialog Initial](img/movies_cast_dialog_initial.png)
 
 This dialog needs some CSS formatting. Movie title and person name fields accepts integer inputs ( as they are actually MovieId and PersonId fields).
+
+### Editing MovieCastForm.cs
+
+We have *FormKey("MovieDB.MovieCast")* on top of our MovieCastEditDialog, so it uses MovieCastForm, which is also shared by MovieCastDialog.
+
+It is possible to have multiple forms for one entity in Serenity. If i wanted to save *MovieCastForm* for *MovieCastDialog*, i would define a new form like *MovieCastEditForm*, but as i am going to eventually delete *MovieCastDialog* and *MovieCastGrid* classes, i don't mind.
+
+Open MovieCastForm.cs and modify it:
+
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    using Serenity.ComponentModel;
+    using System;
+
+    [FormScript("MovieDB.MovieCast")]
+    [BasedOnRow(typeof(Entities.MovieCastRow))]
+    public class MovieCastForm
+    {
+        [LookupEditor(typeof(Entities.PersonRow))]
+        public Int32 PersonId { get; set; }
+        public String Character { get; set; }
+    }
+}
+```
+
+I have removed *MovieId* as this form is gonna be used in MovieDialog, so MovieCast entities will have the MovieId of the movie currently being edited in the MovieDialog automatically. Opening Lord of the Rings movie and adding a cast entry for the Matrix would be non-sense.
+
+I have set editor type for PersonId field to a lookup editor and as i have already added a LookupScript attribute to MovieCastRow, i can reuse that information for setting the lookup key.
+
+> We could have also written *[LookupEditor("MovieDB.Person")]*
+
+Build solution, launch and now MovieCastEditDialog has a better editing experience. But still has a bad look and PersonId field has a title of *Person Firstname*, why?
+
+
 

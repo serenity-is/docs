@@ -249,6 +249,56 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 
 > It would be possible to edit the cast independently, here we just want to show how it can be done. 
 
-> For some types of master/detail records like order/detail, details shouldn't be allowed to be edited independently for consistency reasons.
+> For some types of master/detail records like order/detail, details shouldn't be allowed to be edited independently for consistency reasons. Serene already has a sample for this kind of editing in Northwind/Order dialog.
 
+
+### Getting Required Base Classes From Serene Template 1.5.9
+
+You will probably won't need this step, but as i started this tutorial before Order/Detail editing sample was in Serene, i have to take two classes from a recent template.
+
+> This is just a sample on how to get new features from a more recent Serene template.
+
+So i will create a new Serene application (NewApp), take these two files below from it:
+
+```
+NewApp.Script/Common/Helper/GridEditorBase.cs
+NewApp.Script/Common/Helper/GridEditorDialog.cs
+```
+
+Copy them under 
+
+```
+MovieTutorial.Script/Common/Helper/GridEditorBase.cs
+MovieTutorial.Script/Common/Helper/GridEditorDialog.cs
+```
+
+Include them in my project and replace *NewApp* text with *MovieTutorial*.
+
+> Once these base classes are stable and flexible enough, they will be integrated to Serenity itself.
+
+
+### Creating an Editor For Movie Cast List
+
+Next to MovieCastGrid.cs (at MovieTutorial.Script/MovieDB/MovieCast/), create a file named *MovieCastEditor.cs* with contents below:
+
+```cs
+namespace MovieTutorial.MovieDB
+{
+    using Common;
+    using jQueryApi;
+    using Serenity;
+    using System.Linq;
+
+    [ColumnsKey("MovieDB.MovieCast"), LocalTextPrefix("MovieDB.MovieCast")]
+    public class MovieCastEditor : GridEditorBase<MovieCastRow>
+    {
+        public MovieCastEditor(jQueryObject container)
+            : base(container)
+        {
+        }
+    }
+}
+```
+
+To reference this new editor type from server side, rebuild solution, transform all templates and remove that useless MovieCastRow partial from MovieGrid.cs, and rebuild again.
 

@@ -300,5 +300,34 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-To reference this new editor type from server side, rebuild solution, transform all templates and remove that useless MovieCastRow partial from MovieGrid.cs, and build again.
+To reference this new editor type from server side, rebuild solution, transform all templates and remove that useless MovieCastRow partial from MovieGrid.cs, and build again (i had to re-run templates)
+
+
+### Using MovieCastEditor in Movie Form
+
+Open MovieForm.cs, between *Description* and *Storyline* fields, add a CastList property like:
+
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    public class MovieForm
+    {
+        public String Title { get; set; }
+        [TextAreaEditor(Rows = 3)]
+        public String Description { get; set; }
+        [MovieCastEditor]
+        public List<Entities.MovieCastRow> CastList { get; set; }
+        [TextAreaEditor(Rows = 8)]
+        public String Storyline { get; set; }
+        //...
+    }
+}
+```
+
+By putting *[MovieCastEditor]* attribute on top of CastList property, we specified that this property will be edited by our new MovieCastEditor type which is defined in script code.
+
+> We could also write *[EditorType("MovieDB.MovieCast")]* but who really likes hard-coded strings? Not me...
+
+Now build and launch your application. Open a movie dialog and you'll be greeted by our new editor:
 

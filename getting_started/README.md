@@ -1,6 +1,6 @@
 # Getting Started
 
-The quickest way to get your hands dirty on Serenity is *SERENE*, which is a sample application template.
+The best and fastest way to get your hands dirty on Serenity is *SERENE*, which is a sample application template.
 
 You have two options to install *SERENE* template into your Visual Studio:
 

@@ -2,7 +2,7 @@
 
 Open http://visualstudiogallery.msdn.microsoft.com/ in your browser.
 
-Type `Serene` into the search input with `Search the Visual Studio Gallery` label and press ENTER.
+Type *Serene* into the search input with *Search the Visual Studio Gallery* label and press ENTER.
 
 ![Visual Studio Gallery](img/visual_studio_gallery.jpg)
 

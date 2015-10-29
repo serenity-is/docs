@@ -112,7 +112,9 @@ For consistency, change type of Gender property in PersonForm.cs and PersonColum
 
 ### Rebuilding T4 Templates
 
-As we declared a new enumeration and used it, we should rebuild solution, convert T4 templates, and delete partial MovieRow declaration from MovieGrid.cs.
+As we declared a new enumeration and used it, we should rebuild solution, convert T4 templates
+
+> If you are using a Serene version before 1.6.0, delete partial MovieRow declaration from MovieGrid.cs.
 
 Now after launching your project, you should be able to enter actors:
 

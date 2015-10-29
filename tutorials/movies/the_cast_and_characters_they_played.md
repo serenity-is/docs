@@ -427,5 +427,3 @@ Build solution, launch and now MovieCastEditDialog has a better editing experien
 
 > While writing this, a new Serene version (1.6.0) is out. I'm now updating Serenity packages to keep your tutorial experience up to date!
 
-
-

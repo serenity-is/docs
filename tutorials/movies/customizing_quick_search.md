@@ -154,25 +154,23 @@ Before running these templates, please make sure that your solution builds succe
 
 After building your solution, click on *Build* menu, than *Transform All Templates*.
 
-If you try to build your solution now, you will get an error.
+> If you are using a Serene version before 1.6.0, you might get an error like following:
 
-```
-Error CS0579 Duplicate 'Imported' attribute MovieTutorial.Script ...\MovieDB.MovieRow.cs	
-```
+> ```
+> Error CS0579 Duplicate 'Imported' attribute ...
+> ```
+> 
+> To resolve it, just remove following lines from file *MovieGrid.cs* under *MovieTutorial.Script/MovieDB/Movie*:
 
-on file MovieTutorial.Script/MovieDB/Movie/MovieGrid.cs:
+> ```cs
+> // Please remove this partial class or the first line below, 
+> // after you run ScriptContexts.tt
+> [Imported, Serializable, PreserveMemberCase] 
+> public partial class MovieRow
+> {
+> }
+> ```
 
-```cs
-// Please remove this partial class or the first line below, after you run ScriptContexts.tt
-[Imported, Serializable, PreserveMemberCase] 
-public partial class MovieRow
-{
-}
-```
-
-This was just a placeholder for MovieRow from server side and our *ServiceContracts.tt* file generated its up to date version at *MovieTutorial.Script/Imports/ServiceContracts.tt/MovieDB.cs*.
-
-Now you can safely remove these lines from *MovieGrid.cs* as specified on comment line.
 
 We can use intellisense to replace hardcoded field names with compile time checked versions:
 
@@ -204,4 +202,3 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-> We are planning to introduce support by code generator to produce code compatible with T4 files, so you might not have to delete these lines in later versions.

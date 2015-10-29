@@ -457,4 +457,75 @@ As we are not gonna actually use MovieCastDialog (we'll delete it), let's rename
 }
 ```
 
+### Fixing the Dialog and PersonId Field Titles
+
+Our dialog still has title *MovieCast*, we remember how to change it right?
+
+Open *MovieCastRow.cs* and perform these modifications:
+
+```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+
+    //..
+    [ConnectionKey("Default"), DisplayName("Movie Casts"), InstanceName("Cast"), TwoLevelCached]
+    //..
+    public sealed class MovieCastRow : Row, IIdRow, INameRow
+    {
+        [DisplayName("Person Id"), NotNull, ForeignKey("[mov].Person", "PersonId"),
+            LeftJoin("jPerson"), TextualField("PersonFullname")]
+        public Int32? PersonId
+        {
+            get { return Fields.PersonId[this]; }
+            set { Fields.PersonId[this] = value; }
+        }
+    
+    
+        //...
+        [DisplayName("Person Firstname"), Expression("jPerson.Firstname")]
+        public String PersonFirstname
+        {
+            get { return Fields.PersonFirstname[this]; }
+            set { Fields.PersonFirstname[this] = value; }
+        }
+        
+        [DisplayName("Person Lastname"), Expression("jPerson.Lastname")]
+        public String PersonLastname
+        {
+            get { return Fields.PersonLastname[this]; }
+            set { Fields.PersonLastname[this] = value; }
+        }
+
+        [DisplayName("Actor/Actress"), Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
+        public String PersonFullname
+        {
+            get { return Fields.PersonFullname[this]; }
+            set { Fields.PersonFullname[this] = value; }
+        }
+        
+        //..
+
+        public class RowFields : RowFieldsBase
+        {
+            //..
+            public readonly StringField PersonFirstname;
+            public readonly StringField PersonLastname;
+            public readonly StringField PersonFullname;
+            //..
+        }
+    }
+}
+
+First, we changed DisplayName and InstanceName attributes to set dialog title.
+
+Then, we added a PersonFullName field with title (Actor/Actress).
+
+Also, we add a *TextualField* attribute, to identify the column title to display when this field is edited in a form.
+
+Remember that in MovieCastForm, we have PersonId field being edited. When you don't set a TextualField for a foreign ID field, Serenity determines the first string field originating from that foreign table as the TextualField. That's why, PersonId title was showing as *Person Firstname*.
+
+> Starting with 1.6.0, code generator sets TextualField attributes on foreign ID fields, but as it has a dumb algorithm, it may guess wrong.
+
+
+
 

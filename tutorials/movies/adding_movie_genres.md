@@ -70,8 +70,10 @@ And move it to *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*:
 ```cs
 //...
 [assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies", typeof(MovieDB.MovieController), icon: "icon-camcorder")]
-[assembly: NavigationLink(2200, "Movie Database/Genres", typeof(MovieDB.GenreController), icon: "icon-pin")]
+[assembly: NavigationLink(2100, "Movie Database/Movies", 
+    typeof(MovieDB.MovieController), icon: "icon-camcorder")]
+[assembly: NavigationLink(2200, "Movie Database/Genres", 
+    typeof(MovieDB.GenreController), icon: "icon-pin")]
 //...
 
 ```
@@ -260,7 +262,7 @@ We just added line with *[LookupScript("MovieDB.Genre")]*.
 
 Rebuild your project, launch it, after logging in, open developer console by *F12*.
 
-Type *Q.getLookup('MovieDB.Genre')
+Type *Q.getLookup('MovieDB.Genre')*
 
 and you will get something like this:
 
@@ -360,4 +362,4 @@ It is also possible to start typing in genre editor, and it will provide you wit
 
 As we added a new entity to our application, we should run T4 templates after building solution.
 
-It will again complain about duplicate Row declerations, so just delete GenreRow class in GenreGrid.cs.
+> If you are using a Serene version before 1.6.0, it might complain about duplicate attribute declerations, so just delete GenreRow partial class in GenreGrid.cs.

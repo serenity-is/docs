@@ -427,3 +427,34 @@ Build solution, launch and now MovieCastEditDialog has a better editing experien
 
 > While writing this, a new Serene version (1.6.0) is out. I'm now updating Serenity packages to keep your tutorial experience up to date!
 
+### Fixing the Look Of MovieCastEditDialog
+
+Let's check *site.less* to understand why our MovieCastDialog is not styled.
+
+```css
+.s-MovieCastDialog {
+    > .size { .widthAndMin(650px); }
+    .dialog-styles(@h: auto, @l: 150px, @e: 400px);
+    .s-PropertyGrid .categories { height: 260px; }
+}
+```
+
+The CSS at the bottom of *site.less* is for the *MovieCastDialog*, not *MovieCastEditDialog*, because we defined this class ourselves, not with code generator.
+
+We created a new dialog type, by copying MovieCastDialog and modifying it slightly, so now our new dialog has a CSS class of *s-MovieCastEditDialog*, but code generator only generated CSS rules for *s-MovieCastDialog*.
+
+> Serenity dialogs automatically assigns CSS classes to dialog elements, by prefixing type name with *"s-"*. You can see this by inspecting the dialog in developer tools. MovieCastEditDialog has CSS classes of *s-MovieCastEditDialog* and *s-MovieDB-MovieCastEditDialog*, along with some like *ui-dialog*.
+
+> *s-ModuleName-TypeName* CSS class helps with individual styling when two modules has a type with the same name.
+
+As we are not gonna actually use MovieCastDialog (we'll delete it), let's rename the one in *site.less*:
+
+```css
+.s-MovieCastEditDialog {
+    > .size { .widthAndMin(550px); }
+    .dialog-styles(@h: auto, @l: 150px, @e: 300px);
+    .s-PropertyGrid .categories { height: 160px; }
+}
+```
+
+

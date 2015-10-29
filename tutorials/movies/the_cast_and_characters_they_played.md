@@ -425,5 +425,7 @@ I have set editor type for PersonId field to a lookup editor and as i have alrea
 
 Build solution, launch and now MovieCastEditDialog has a better editing experience. But still has a bad look and PersonId field has a title of *Person Firstname*, why?
 
+> While writing this, a new Serene version (1.6.0) came out and I'm now updating Serenity packages to keep your tutorial experience up to date!
+
 
 

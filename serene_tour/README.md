@@ -1,6 +1,6 @@
 # A Tour Of Serene Features
 
-After logging to Serene, you are greeted by the dashboard page.
+After logging to Serene, you are greeted with the dashboard page.
 
 ![Serene Dashboard](img/serene_dashboard.jpg)
 

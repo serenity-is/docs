@@ -489,9 +489,9 @@ First, we changed DisplayName and InstanceName attributes to set dialog title. A
 ![Movie Cast Dialog Fixed](img/movies_cast_dialog_fixed.png)
 
 
-### Fixing MovieCastEditGrid Columns
+### Fixing MovieCastEditor Columns
 
-MovieCastEditGrid is currently using columns defined in *MovieCastColumns.cs* (because it has [ColumnsKey("MovieDB.MovieCast")] on class declaration).
+MovieCastEditor is currently using columns defined in *MovieCastColumns.cs* (because it has [ColumnsKey("MovieDB.MovieCast")] on class declaration).
 
 We have MovieCastId, MovieId, PersonId (shown as Actor/Actress) and Character columns there. It is better to show only Actor/Actress and Character columns.
 
@@ -596,8 +596,9 @@ public class MovieCastForm
 
 There is no PersonFullname field in this entity, so grid can't display its value.
 
-We need to set PersonFullname ourself. Edit MovieCastEditGrid.cs:
+We need to set PersonFullname ourself. Let's first transform T4 templates to have access to PersonFullname field that we recently added, then edit MovieCastEditor.cs:
 
 ```cs
+
 
 ```

@@ -599,6 +599,35 @@ There is no PersonFullname field in this entity, so grid can't display its value
 We need to set PersonFullname ourself. Let's first transform T4 templates to have access to PersonFullname field that we recently added, then edit MovieCastEditor.cs:
 
 ```cs
+namespace MovieTutorial.MovieDB
+{
+    // ...
+    public class MovieCastEditor : GridEditorBase<MovieCastRow>
+    {
+        // ...
+        protected override bool ValidateEntity(MovieCastRow row, int? id)
+        {
+            if (!base.ValidateEntity(row, id))
+                return false;
 
+            row.PersonFullname = PersonRow.Lookup.ItemById[row.PersonId.Value].Fullname;
+
+            return true;
+        }
+    }
+}
 
 ```
+
+ValidateEntity is a method from our GridEditorBase class in Serene. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
+
+As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person full name.
+
+For this, we need a dictionary that maps PersonId to their Fullname values. Fortunately, lookups has such a dictionary. We can access the lookup for PersonRow through its Lookup property.
+
+> Another way to access that lookup is *Q.GetLookup('MovieDB.Person')*. The one in PersonRow is just a shortcut.
+
+All lookups have a ItemById dictionary, that allows you to access an entity of that type by its ID.
+
+
+

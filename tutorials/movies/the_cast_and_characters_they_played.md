@@ -483,6 +483,8 @@ namespace MovieTutorial.MovieDB.Entities
     }
 }
 
-First, we changed DisplayName and InstanceName attributes to set dialog title. Also change PersonId field title to Actor/Actress.
+First, we changed DisplayName and InstanceName attributes to set dialog title. Also change PersonId field title to Actor/Actress. Now MovieCastEditDialog has a better look:
+
+
 
 

@@ -22,7 +22,7 @@ When you click the lighter circle, it actually changes to this:
 
 This is done in memory so no page reload is required.
 
-Also a cookie, *"ThemePreference"*" with the content *"light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light theme.
+Also cookie, *"ThemePreference"*" with the content *"light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light theme.
 
 These theme files are located under "Content/site/" of the Serene.Web project. If you look there you can see files with names:
 

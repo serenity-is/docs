@@ -254,7 +254,7 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 > For some types of master/detail records like order/detail, details shouldn't be allowed to be edited independently for consistency reasons. Serene already has a sample for this kind of editing in Northwind/Order dialog.
 
 
-### Getting Required Base Classes From Serene Template 1.5.9
+### Getting Required Base Classes From Serene Template 1.5.9+
 
 You will probably won't need this step, but as i started this tutorial before Order/Detail editing sample was in Serene, i have to take two classes from a recent template.
 
@@ -265,6 +265,7 @@ So i will create a new Serene application (NewApp), take these two files below f
 ```
 NewApp.Script/Common/Helper/GridEditorBase.cs
 NewApp.Script/Common/Helper/GridEditorDialog.cs
+NewApp.Web/Modules/Common/Helpers/DetailListSaveHandler.cs
 ```
 
 Copy them under 
@@ -272,6 +273,7 @@ Copy them under
 ```
 MovieTutorial.Script/Common/Helper/GridEditorBase.cs
 MovieTutorial.Script/Common/Helper/GridEditorDialog.cs
+MovieTutorial.Web/Modules/Common/Helpers/DetailListSaveHandler.cs
 ```
 
 Include them in my project and replace *NewApp* text with *MovieTutorial*.
@@ -674,6 +676,47 @@ If you open developer tools with F12, click Network tab, and watch AJAX request 
 Here, CastList property can't be deserialized at server side. So we need to declare it in MovieRow.cs:
 
 ```cs
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+    public sealed class MovieRow : Row, IIdRow, INameRow
+    {
+        [SetFieldFlags(FieldFlags.ClientSide)]
+        public List<MovieCastRow> CastList
+        {
+            get { return Fields.CastList[this]; }
+            set { Fields.CastList[this] = value; }
+        }
+
+        public class RowFields : RowFieldsBase
+        {
+            // ...
+            public readonly RowListField<MovieCastRow> CastList;
+            // ...
+        }
+    }
+}
 ```
 
+We defined a CastList property that will accept a *List* of MovieCastRow objects. The type of *Field* class that is used for such row list properties is *RowListField*
+
+By adding *[SetFieldFlags(FieldFlags.ClientSide)]* attribute, we specified that this field is not available directly in database table, thus can't be selected through simple SQL queries. It is analogous to an unmapped field in other ORM systems.
+
+Now, when you click the Save button, you will not get an error.
+
+But reopen the Matrix entity you just saved. There is no cast entry there. What happened to Neo?
+
+As this is an unmapped field, so movie *Save* service just ignored the CastList property.
+
+
+### Handling Save for CastList
+
+Open *MovieRepository.cs*, find the empty *MySaveHandler* class, and modify it like below:
+
+```cs
+private class MySaveHandler : SaveRequestHandler<MyRow>
+{
+
+}
+```
 

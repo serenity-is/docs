@@ -482,9 +482,19 @@ namespace MovieTutorial.MovieDB.Entities
         }
     }
 }
+```
 
 First, we changed DisplayName and InstanceName attributes to set dialog title. Also change PersonId field title to Actor/Actress. Now MovieCastEditDialog has a bit better look:
 
 ![Movie Cast Dialog Fixed](img/movies_cast_dialog_fixed.png)
+
+
+### Fixing MovieCastEditGrid Columns
+
+MovieCastEditGrid is currently using columns defined in *MovieCastColumns.cs* (because it has [ColumnsKey("MovieDB.MovieCast")] on class declaration).
+
+We have MovieCastId, MovieId, PersonId (shown as Actor/Actress) and Character columns there. It is better to show only Actor/Actress and Character columns.
+
+But we don't want to show PersonId (integer value), but instead their full name, so we'll declare this field in MovieCastRow.cs first:
 
 

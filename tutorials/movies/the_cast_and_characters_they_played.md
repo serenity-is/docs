@@ -574,7 +574,7 @@ Why Actor/Actress column is empty??
 
 Remember that we are editing in-memory. There is no service call involved here. So, grid is displaying whatever entity is sent back to it from the dialog.
 
-When you click the save button, dialog builds an entity like this:
+When you click the save button, dialog builds an entity to save like this:
 
 ```json
 {
@@ -596,4 +596,8 @@ public class MovieCastForm
 
 There is no PersonFullname field in this entity, so grid can't display its value.
 
+We need to set PersonFullname ourself. Edit MovieCastEditGrid.cs:
 
+```cs
+
+```

@@ -561,3 +561,9 @@ namespace MovieTutorial.MovieDB.Columns
 }
 ```cs
 
+Rebuild and cast grid has better columns:
+
+![Movie Cast Dialog Fixed](img/movies_cast_grid_fixed.png)
+
+
+

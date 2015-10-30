@@ -16,7 +16,7 @@ Both projects have references to Serenity NuGet packages, so you can update them
 
 Serene automatically creates its database in SQL local db at first run, so just press F5 and you are ready to go.
 
-When application launches use `admin` user and `serenity` password to login. You can later change password or create more users from *Administration / User Management* section.
+When application launches use `admin` user and `serenity` password to login. You can change password or create more users later, using *Administration / User Management* page.
 
 ![Login Screen](img/login_screen.jpg)
 

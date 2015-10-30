@@ -256,11 +256,11 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 
 ### Getting Required Base Classes From Serene Template 1.5.9+
 
-You will probably won't need this step, but as i started this tutorial before Order/Detail editing sample was in Serene, i have to take two classes from a recent template.
+You will probably won't need this step, but as i started this tutorial before Order/Detail editing sample was in Serene, i have to take three classes from a recent template.
 
 > This is just a sample on how to get new features from a more recent Serene template.
 
-So i will create a new Serene application (NewApp), take these two files below from it:
+So i will create a new Serene application (NewApp), take these three files below from it:
 
 ```
 NewApp.Script/Common/Helper/GridEditorBase.cs
@@ -276,7 +276,7 @@ MovieTutorial.Script/Common/Helper/GridEditorDialog.cs
 MovieTutorial.Web/Modules/Common/Helpers/DetailListSaveHandler.cs
 ```
 
-Include them in my project and replace *NewApp* text with *MovieTutorial*.
+Include them in project and replace *NewApp* text with *MovieTutorial*.
 
 > Once these base classes are stable and flexible enough, they will be integrated to Serenity itself.
 

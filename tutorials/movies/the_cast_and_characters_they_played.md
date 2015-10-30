@@ -735,3 +735,62 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
 }
 ```
 
+MySaveHandler, processes both CREATE (insert), and UPDATE service requests for Movie rows. As most of its logic is handled by base SaveRequestHandler class, its class definition was empty before.
+
+We should first wait for Movie entity to be inserted / updated successfully, before inserting / updating the cast list. Thus, we are including our customized code by overriding the base AfterSave method.
+
+> If this is CREATE (insert) operation, we need the MovieId field value to reuse in MovieCast records. As MovieId is an IDENTITY field, it is only available after inserting the movie record.
+
+As we are editing cast list in memory (client-side), this will be a batch update. 
+
+We need to compare old list of the cast records for this movie to the new list of cast records, and INSERT/UPDATE/DELETE them.
+
+Let's say we had cast records A, B, C, D in database for movie X.
+
+User did some modifications in edit dialogs to cast list, and now we have A, B, D, E, F.
+
+So we need to update A, B, D (in case character / actor changed), delete C, and insert new records E and F.
+
+DetailListSaveHandler handles these comparisons and insert/update/delete operations automatically (by ID values).
+
+To get a list of old records, we need to query database if this is an UPDATE movie operation. If this is a CREATE movie operation there shouldn't be any old cast record.
+
+We are using *Connection.List< Entities.MovieCastRow >* extension method. *Connection* here is a property of SaveRequestHandler that returns the current connection used. *List* selects records that matches the specified criteria (*mc.MovieId == this.Row.MovieId.Value*). 
+
+*this.Row* refers to currently inserted / updated record (movie) with its new field values, so it contains the MovieId value (new or existing).
+
+To update cast records, we are creating a DetailListHandler object, with old cast list, new cast list, and a delegate to set the MovieId field value in a cast record. This is to link new cast records with the current movie.
+
+Then we call DetailListHandler.Process with current unit of work. UnitOfWork is a special object that wraps the current connection/transaction. 
+
+> All Serenity CREATE/UPDATE/DELETE handlers works with implicit transactions (IUnitOfWork).
+
+### Handling Retrieve for CastList
+
+We are not done yet. When a Movie entity is clicked in movie grid, movie dialog loads the movie record by calling the movie *Retrieve* service. As CastList is an unmapped field, even if we saved them properly, they won't be loaded into the dialog.
+
+We need to also edit *MyRetrieveHandler* class in MovieRepository.cs:
+
+```cs
+private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
+{
+    protected override void OnReturn()
+    {
+        base.OnReturn();
+
+        var mc = Entities.MovieCastRow.Fields;
+        Row.CastList = Connection.List<Entities.MovieCastRow>(q => q
+            .SelectTableFields()
+            .Select(mc.PersonFullname));
+    }
+}
+```
+
+Here, we are overriding OnReturn method, to inject CastList into movie row just before returning the it from retrieve service.
+
+I used a different overload of Connection.List extension, which allows me to modify the select query.
+
+By default, List selects all table fields (not foreign fields coming from other tables), but to show actor name, i needed to also select *PersonFullName* field.
+
+Now build the solution, and we can finally list / edit cast list.
+

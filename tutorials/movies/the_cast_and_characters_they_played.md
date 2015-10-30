@@ -564,5 +564,36 @@ Rebuild and cast grid has better columns:
 
 ![Movie Cast Dialog Fixed](img/movies_cast_grid_fixed.png)
 
+Now try adding an actor/actress, for example, Keanu Reeves / Neo:
+
+![Movie Cast Dialog Fixed](img/movies_cast_grid_no_actor_name.png)
+
+Why Actor/Actress column is empty??
+
+### Resolving Empty Actor/Actress Column Problem
+
+Remember that we are editing in-memory. There is no service call involved here. So, grid is displaying whatever entity is sent back to it from the dialog.
+
+When you click the save button, dialog builds an entity like this:
+
+```json
+{
+    PersonId: 7,
+    Character: 'Neo'
+}
+```
+
+These fields corresponds to the form fields you previously set in MovieCastForm.cs:
+
+```
+public class MovieCastForm
+{
+    [LookupEditor(typeof(Entities.PersonRow))]
+    public Int32 PersonId { get; set; }
+    public String Character { get; set; }
+}
+```
+
+There is no PersonFullname field in this entity, so grid can't display its value.
 
 

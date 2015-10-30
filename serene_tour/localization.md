@@ -1,6 +1,6 @@
 # Localization
 
-Serene allows you to change the active language by a dropdown on top right.
+Serene allows you to change the active language with a dropdown on top right.
 
 Try changing active language to Spanish.
 

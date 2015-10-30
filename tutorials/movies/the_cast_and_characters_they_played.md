@@ -498,10 +498,9 @@ We have MovieCastId, MovieId, PersonId (shown as Actor/Actress) and Character co
 But we don't want to show PersonId (integer value), but instead their full name, so we'll declare this field in MovieCastRow.cs first:
 
 ```cs
-
 namespace MovieTutorial.MovieDB.Entities
 {
-    // ...
+    //...
     public sealed class MovieCastRow : Row, IIdRow, INameRow
     {
         // ...

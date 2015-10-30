@@ -20,7 +20,7 @@ When application launches use `admin` user and `serenity` password to login. You
 
 ![Login Screen](img/login_screen.jpg)
 
-The sample application includes old and famous Nortwind data along with services and user interface for editing it that is mostly produced by Serenity Code Generator.
+The sample application includes old and famous Northwind data along with services and user interface for editing it that is mostly produced by Serenity Code Generator.
 
 
 

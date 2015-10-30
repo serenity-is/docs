@@ -6,13 +6,13 @@ After your first project is created in Visual Studio using Serene template, you 
 
 It contains two projects, *Serene1.Script* and *Serene1.Web* (which is common for Serenity applications).
 
-*Serene1.Web* includes the server side code of our application while *Serene1.Script* contains the script code.
+*Serene1.Web* includes the server side code of our application, while *Serene1.Script* contains the script code.
 
-The script project looks like a normal .NET project but it actually generates Javascript code, using *Saltarelle Compiler* (https://github.com/erik-kallen/SaltarelleCompiler).
+The script project looks like an ordinary .NET project but it actually generates Javascript code, using *Saltarelle Compiler* (https://github.com/erik-kallen/SaltarelleCompiler).
 
-Web project is an MVC application.
+Web project is an ASP.NET MVC application.
 
-Both projects have references to Serenity NuGet packages, so you can update them using package manager console anytime needed.
+Both projects have references to Serenity NuGet packages, so you can update them using package manager console anytime necessary.
 
 Serene automatically creates its database in SQL local db at first run, so just press F5 and you are ready to go.
 

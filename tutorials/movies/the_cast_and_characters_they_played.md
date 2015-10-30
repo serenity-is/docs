@@ -497,4 +497,46 @@ We have MovieCastId, MovieId, PersonId (shown as Actor/Actress) and Character co
 
 But we don't want to show PersonId (integer value), but instead their full name, so we'll declare this field in MovieCastRow.cs first:
 
+```cs
 
+namespace MovieTutorial.MovieDB.Entities
+{
+    // ...
+    public sealed class MovieCastRow : Row, IIdRow, INameRow
+    {
+        // ...
+        
+        [DisplayName("Person Firstname"), Expression("jPerson.Firstname")]
+        public String PersonFirstname
+        {
+            get { return Fields.PersonFirstname[this]; }
+            set { Fields.PersonFirstname[this] = value; }
+        }
+
+        [DisplayName("Person Lastname"), Expression("jPerson.Lastname")]
+        public String PersonLastname
+        {
+            get { return Fields.PersonLastname[this]; }
+            set { Fields.PersonLastname[this] = value; }
+        }
+
+        [DisplayName("Actor/Actress"), Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
+        public String PersonFullname
+        {
+            get { return Fields.PersonFullname[this]; }
+            set { Fields.PersonFullname[this] = value; }
+        }
+
+        // ...
+        
+        public class RowFields : RowFieldsBase
+        {
+            // ...
+            public readonly StringField PersonFirstname;
+            public readonly StringField PersonLastname;
+            public readonly StringField PersonFullname;
+            // ...
+        }
+    }
+}
+```

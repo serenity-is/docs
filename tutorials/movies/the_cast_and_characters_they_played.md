@@ -794,3 +794,4 @@ By default, List selects all table fields (not foreign fields coming from other 
 
 Now build the solution, and we can finally list / edit the cast.
 
+> The way we implemented this master/detail handling is not very intuitive and included several manual steps. It is in our todo-list to convert such common operations to simple Mixin attributes.

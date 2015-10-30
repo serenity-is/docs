@@ -13,7 +13,7 @@ If you look at the source, you may spot a stylesheet link like below inside `<he
     rel="stylesheet" type="text/css" />
 ```
 
-When you clicked the lighter circle, it actually changed to this:
+When you click the lighter circle, it actually changes to this:
 
 ```html
 <link id="SiteThemeCss" href="/Content/site/site.theme.light.css"

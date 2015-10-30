@@ -2,7 +2,7 @@
 
 Start Visual Studio and Click *New => Project*.
 
-> Note that this application template requires Visual Studio 2012 or higher. Make you sure you have the latest Visual Studio updates installed.
+> Note that this application template requires Visual Studio 2012 or higher. Make sure you have the latest Visual Studio updates installed.
 
 In the New Project dialog box *Recent*, *Installed* and *Online* sections will be shown on left and *Installed* is the active one.
 

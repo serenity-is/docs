@@ -8,7 +8,7 @@ There is not much interesting content here yet, but you would choose to customiz
 
 There is an accordion navigation menu on left which has a search feature by input above it. We'll talk about how to customize items there in later sections.
 
-On top navigation, we have a theme selection option, ability to change active language and a dropdown that shows current username.
+On top navigation, we have a theme selection option to change active language and a dropdown displays current username.
 
 
 * [Theming](theming.md)

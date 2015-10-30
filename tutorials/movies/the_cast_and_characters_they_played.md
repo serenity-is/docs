@@ -792,5 +792,5 @@ I used a different overload of Connection.List extension, which allows me to mod
 
 By default, List selects all table fields (not foreign fields coming from other tables), but to show actor name, i needed to also select *PersonFullName* field.
 
-Now build the solution, and we can finally list / edit cast list.
+Now build the solution, and we can finally list / edit the cast.
 

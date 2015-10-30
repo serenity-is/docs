@@ -623,11 +623,17 @@ ValidateEntity is a method from our GridEditorBase class in Serene. This method 
 
 As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person full name.
 
-For this, we need a dictionary that maps PersonId to their Fullname values. Fortunately, lookups has such a dictionary. We can access the lookup for PersonRow through its Lookup property.
+For this, we need a dictionary that maps PersonId to their Fullname values. Fortunately, person lookup has such a dictionary. We can access the lookup for PersonRow through its Lookup property.
 
-> Another way to access that lookup is *Q.GetLookup('MovieDB.Person')*. The one in PersonRow is just a shortcut.
+> Another way to access person lookup is by *Q.GetLookup('MovieDB.Person')*. The one in PersonRow is just a shortcut defined by T4 templates.
 
-All lookups have a ItemById dictionary that allows you to access an entity of that type by its ID.
+All lookups has a ItemById dictionary that allows you to access an entity of that type by its ID.
+
+> Lookups are a simple way to share server side data with client side. But they are only suitable for small sets of data. 
+
+> If a table has hundreds of thousands of records, it wouldn't be reasonable to define a lookup for it. In that case, we would use a service request to query a record by its ID.
+
+
 
 
 

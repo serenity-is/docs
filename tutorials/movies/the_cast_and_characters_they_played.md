@@ -627,7 +627,7 @@ For this, we need a dictionary that maps PersonId to their Fullname values. Fort
 
 > Another way to access that lookup is *Q.GetLookup('MovieDB.Person')*. The one in PersonRow is just a shortcut.
 
-All lookups have a ItemById dictionary, that allows you to access an entity of that type by its ID.
+All lookups have a ItemById dictionary that allows you to access an entity of that type by its ID.
 
 
 

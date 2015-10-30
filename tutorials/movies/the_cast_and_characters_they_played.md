@@ -634,6 +634,46 @@ All lookups has a ItemById dictionary that allows you to access an entity of tha
 > If a table has hundreds of thousands of records, it wouldn't be reasonable to define a lookup for it. In that case, we would use a service request to query a record by its ID.
 
 
+### Defining CastList in MovieRow
 
+While having a Movie dialog open, and at least one cast in CastList, click save button, and you'll get such an error:
+
+```txt
+Could not find field 'CastList' on row of type 'MovieRow'.
+```
+
+This error is raised from -> Row deserializer (JsonRowConverter for JSON.NET) at server side.
+
+We defined CastList property in MovieForm, but have no corresponding field declaration in MovieRow. So deserializer can't find where to write *CastList* value that is received from client side.
+
+If you open developer tools with F12, click Network tab, and watch AJAX request after clicking Save button, you'll see that it has such a request payload:
+
+```json
+{
+    "Entity": {
+        "Title": "The Matrix",
+        "Description": "A computer hacker...",
+        "CastList": [
+            {
+                "PersonId":"1",
+                "Character":"Neo",
+                "PersonFullname":"Keanu Reeves"
+            }
+        ],
+        "Storyline":"Thomas A. Anderson is a man living two lives...",
+        "Year":1999,
+        "ReleaseDate":"1999-03-31",
+        "Runtime":136,
+        "GenreId":"",
+        "Kind":"1",
+        "MovieId":1
+    }
+}
+```
+
+Here, CastList property can't be deserialized at server side. So we need to declare it in MovieRow.cs:
+
+```cs
+```
 
 

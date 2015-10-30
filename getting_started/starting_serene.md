@@ -61,7 +61,7 @@ Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance nam
   </connectionStrings>
 ```
 
-If you are still having an error, open an administrative command prompt and type
+If you still have an error, open an administrative command prompt and type
 
 ```bat
 > sqllocaldb info

@@ -423,7 +423,7 @@ I have set editor type for PersonId field to a lookup editor and as i have alrea
 
 > We could have also written *[LookupEditor("MovieDB.Person")]*
 
-Build solution, launch and now MovieCastEditDialog has a better editing experience. But still has a bad look and PersonId field has a title of *Person Firstname*, why?
+Build solution, launch and now MovieCastEditDialog has a better editing experience. But still has a bad look and PersonId field has a title of *Person Id* (or Person Firstname with < 1.6.1), why?
 
 > While writing this, a new Serene version (1.6.0) is out. I'm now updating Serenity packages to keep your tutorial experience up to date!
 
@@ -472,60 +472,17 @@ namespace MovieTutorial.MovieDB.Entities
     //..
     public sealed class MovieCastRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Person Id"), NotNull, ForeignKey("[mov].Person", "PersonId"),
-            LeftJoin("jPerson"), TextualField("PersonFullname")]
+        /...
+        [DisplayName("Actor/Actress"), NotNull, 
+            ForeignKey("[mov].Person", "PersonId"), LeftJoin("jPerson")]
         public Int32? PersonId
         {
             get { return Fields.PersonId[this]; }
             set { Fields.PersonId[this] = value; }
         }
-    
-    
-        //...
-        [DisplayName("Person Firstname"), Expression("jPerson.Firstname")]
-        public String PersonFirstname
-        {
-            get { return Fields.PersonFirstname[this]; }
-            set { Fields.PersonFirstname[this] = value; }
-        }
-        
-        [DisplayName("Person Lastname"), Expression("jPerson.Lastname")]
-        public String PersonLastname
-        {
-            get { return Fields.PersonLastname[this]; }
-            set { Fields.PersonLastname[this] = value; }
-        }
-
-        [DisplayName("Actor/Actress"), Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
-        public String PersonFullname
-        {
-            get { return Fields.PersonFullname[this]; }
-            set { Fields.PersonFullname[this] = value; }
-        }
-        
-        //..
-
-        public class RowFields : RowFieldsBase
-        {
-            //..
-            public readonly StringField PersonFirstname;
-            public readonly StringField PersonLastname;
-            public readonly StringField PersonFullname;
-            //..
-        }
     }
 }
 
-First, we changed DisplayName and InstanceName attributes to set dialog title.
-
-Then, we added a PersonFullName field with title (Actor/Actress).
-
-Also, we add a *TextualField* attribute, to identify the column title to display when this field is edited in a form.
-
-Remember that in MovieCastForm, we have PersonId field being edited. When you don't set a TextualField for a foreign ID field, Serenity determines the first string field originating from that foreign table as the TextualField. That's why, PersonId title was showing as *Person Firstname*.
-
-> Starting with 1.6.0, code generator sets TextualField attributes on foreign ID fields, but as it has a dumb algorithm, it may guess wrong.
-
-
+First, we changed DisplayName and InstanceName attributes to set dialog title. Also change PersonId field title to Actor/Actress.
 
 

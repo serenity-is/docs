@@ -681,7 +681,7 @@ namespace MovieTutorial.MovieDB.Entities
     // ...
     public sealed class MovieRow : Row, IIdRow, INameRow
     {
-        [SetFieldFlags(FieldFlags.ClientSide)]
+        [DisplayName("Cast List"), SetFieldFlags(FieldFlags.ClientSide)]
         public List<MovieCastRow> CastList
         {
             get { return Fields.CastList[this]; }

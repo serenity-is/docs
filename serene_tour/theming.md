@@ -20,7 +20,7 @@ When you click the lighter circle, it actually changes to this:
     rel="stylesheet" type="text/css" />
 ```
 
-This is done in memory so  page reload is not required.
+This is done in memory so no page reload is  required.
 
 Also a cookie, *"ThemePreference"*" with the content *"light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light theme.
 

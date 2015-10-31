@@ -18,7 +18,9 @@ Type *sergen* and press Enter.
 
 ### Setting Project Location
 
-When you first run Sergen, Web Project and Script Project fields will be empty. Browse to your solution directory and locate web and script projects using "..." buttons.
+When you first run Sergen, Web Project and Script Project fields will be prefilled for you. If you are using an older version of Serene than 1.6.2, follow these steps:
+
+Browse to your solution directory and locate web and script projects using "..." buttons.
 
 Another option is to set them to values below:
 
@@ -74,6 +76,8 @@ Connection key is set to the connection key of selected connection string in web
 ### Entity Identifier
 
 This usually corresponds to the table name but sometimes table names might have underscores or other invalid characters, so you decide what to name your entity in generated code (a valid identifier name).
+
+> Starting with Serene 1.6.2+ entity identifier is set automatically to a pascalized version of tablename.
 
 Our table name is *Movie* so it is also a valid and fine C# identifier, so let's use *Movie* as the entity identifier.
 

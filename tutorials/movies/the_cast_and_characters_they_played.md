@@ -794,4 +794,84 @@ By default, List selects all table fields (not foreign fields coming from other 
 
 Now build the solution, and we can finally list / edit the cast.
 
-> The way we implemented this master/detail handling is not very intuitive and included several manual steps. It is in our todo-list to convert such common operations to simple Mixin attributes.
+
+### Handling Delete for CastList
+
+When you try to delete a Movie entity, you'll get foreign key errors. You could use a "CASCADE DELETE" foreign key while creating MovieCast table. But we'll handle this at repository level again:
+
+```cs
+private class MyDeleteHandler : DeleteRequestHandler<MyRow>
+{
+    protected override void OnBeforeDelete()
+    {
+        base.OnBeforeDelete();
+
+        var mc = Entities.MovieCastRow.Fields;
+        foreach (var detailID in Connection.Query<Int32>(
+            new SqlQuery()
+                .From(mc)
+                .Select(mc.MovieCastId)
+                .Where(mc.MovieId == Row.MovieId.Value)))
+        {
+            new DeleteRequestHandler<Entities.MovieCastRow>().Process(this.UnitOfWork,
+                new DeleteRequest
+                {
+                    EntityId = detailID
+                });
+        }
+    }
+}
+```
+
+
+The way we implemented this master/detail handling is not very intuitive and included several manual steps at repository layer. Keep on reading to see how easily it could be done by using an integrated feature (MasterDetailRelationAttribute).
+
+
+### Handling Save / Retrieve / Delete (Serenity 1.6.3+)
+
+Master/detail relations are an integrated feature (at least on server side) with Serenity 1.6.3+, so instead of manually overriding Save / Retrieve and Delete handlers, i'll use a new attribute, *MasterDetailRelation* (but of course i'll have to upgrade to 1.6.3).
+
+Open MovieRow.cs and modify *CastList* property:
+
+```cs
+[DisplayName("Cast List"), MasterDetailRelation(foreignKey: "MovieId"), ClientSide]
+public List<MovieCastRow> CastList
+{
+    get { return Fields.CastList[this]; }
+    set { Fields.CastList[this] = value; }
+}
+```
+
+We specified that this field is a detail list of a master/detail relation and master ID field (foreignKey) of the detail table is *MovieId*.
+
+Now undo all changes we made in MovieRepository.cs:
+
+```cs
+private class MySaveHandler : SaveRequestHandler<MyRow> { }
+private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
+private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
+```
+
+We'll just have to make a little change in MovieCastRow.cs to select PersonFullname on retrieve (just like we did manually in MyRetrieveHandler):
+
+```cs
+[DisplayName("Actor/Actress"), Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
+[MinSelectLevel(SelectLevel.List)]
+public String PersonFullname
+{
+    get { return Fields.PersonFullname[this]; }
+    set { Fields.PersonFullname[this] = value; }
+}
+```
+
+This ensures that *PersonFullname* field is selected on retrieve. Otherwise, it wouldn't be loaded as only table fields are selected by default.
+
+Now build your project and you'll see same functionality works with much less code.
+
+*MasterDetailRelationAttribute* triggers an instrinsic (automatic) behavior, *MasterDetailRelationBehavior* which intercepts Retrieve/Save/Delete handlers and methods we had overriden before and performs similar operations.
+
+So we did the same thing, but this time *declaratively*, not *imperatively* (what should be done, instead of how to do it)
+
+> https://en.wikipedia.org/wiki/Declarative_programming
+
+> We'll see how to write your own request handler behaviors in following chapters. 

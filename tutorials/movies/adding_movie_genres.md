@@ -223,7 +223,7 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Now if we build and run application, we'll see that a Genre field is added to our form. Problem is it accepts data entry as an integer. We want it to use a dropdown.
+Now if we build and run application, we'll see that a Genre field is added to our form. The problem is, it accepts data entry as an integer. We want it to use a dropdown.
 
 It's clear that we need to change editor type for GenreId field.
 

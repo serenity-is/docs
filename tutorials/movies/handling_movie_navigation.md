@@ -71,7 +71,8 @@ using Northwind = MovieTutorial.Northwind.Pages;
 using Administration = MovieTutorial.Administration.Pages;
 using MovieDB = MovieTutorial.MovieDB.Pages;
 
-[assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "", icon: "icon-speedometer")]
+[assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "",
+    icon: "icon-speedometer")]
 
 [assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies", 

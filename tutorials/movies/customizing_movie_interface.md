@@ -253,7 +253,8 @@ InstanceName corresponds to singular name and is used in New Record (New Movie) 
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movies"), InstanceName("Movie"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Movies"), InstanceName("Movie"), 
+     TwoLevelCached]
     public sealed class MovieRow : Row, IIdRow, INameRow
     {
         [DisplayName("Movie Id"), Identity]

@@ -58,7 +58,7 @@ The syntax we used here is specific to jQuery UI tabs widget. It needs an UL ele
 
 When *EntityDialog* finds a div with ID *~_Tabs* in its template, it automatically initializes a tabs widget on it.
 
-Naming of the template file is important. It must end with *.Template.html* extension. All files with this extension is made available at client side through a dynamic script.
+Naming of the template file is important. It must end with *.Template.html* extension. All files with this extension are made available at client side through a dynamic script.
 
 Folder of the template file is ignored, but templates must be under *Modules* or *Views/Template* directories.
 

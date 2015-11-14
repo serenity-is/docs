@@ -150,7 +150,8 @@ namespace MovieTutorial.MovieDB.Entities
             set { Fields.Lastname[this] = value; }
         }
 
-        [DisplayName("Full Name"), Expression("(t0.Firstname + ' ' + t0.Lastname)"), QuickSearch]
+        [DisplayName("Full Name"), 
+         Expression("(t0.Firstname + ' ' + t0.Lastname)"), QuickSearch]
         public String Fullname
         {
             get { return Fields.Fullname[this]; }

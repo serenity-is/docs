@@ -35,7 +35,7 @@ If you are getting a connection error like the following while starting Serene f
 
 This error might mean that you don't have SQL Server Local DB 2012 installed. This server comes preinstalled with Visual Studio 2012 and 2013. 
 
-In Serene.Web/web.config file there is a *Default* connection entry:
+In Serene.Web/web.config file there are *Default* and *Northwind* connection entries:
 
 ```xml
 <connectionStrings>
@@ -51,7 +51,7 @@ If you don't have SQL LocalDB 2012, you can install it from:
 
 http://www.microsoft.com/en-us/download/details.aspx?id=29062
 
-Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance name is renamed to MsSqlLocalDB by default. Thus, if you have VS2015, try changing connection string from `(localdb)\v11.0` to `(localdb)\MsSqlLocalDB`.
+Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance name is renamed to MsSqlLocalDB by default. Thus, if you have VS2015, try changing connection strings from `(localdb)\v11.0` to `(localdb)\MsSqlLocalDB`.
 
 ```xml
 <connectionStrings>
@@ -95,3 +95,4 @@ If you have another SQL server instance, for example SQL Express, change data so
 
 You can also use another SQL server. Just change the connection string.
 
+> Perform these steps for both Default and Northwind databases. Serene 1.6.4.3+ creates two databases.

@@ -247,7 +247,8 @@ namespace MovieTutorial.MovieDB.Entities
 {
     // ...
 
-    [ConnectionKey("Default"), DisplayName("Genre"), InstanceName("Genre"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Genre"), InstanceName("Genre"), 
+        TwoLevelCached]
     [ReadPermission("Administration")]
     [ModifyPermission("Administration")]
     [JsonConverter(typeof(JsonRowConverter))]

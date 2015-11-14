@@ -16,7 +16,8 @@ Here is an excerpt from its source with our Runtime property:
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), 
+     TwoLevelCached]
     public sealed class MovieRow : Row, IIdRow, INameRow
     {
         // ...
@@ -37,7 +38,8 @@ We'll talk about entities (or rows) later, let's now focus on our target and cha
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), 
+     TwoLevelCached]
     public sealed class MovieRow : Row, IIdRow, INameRow
     {
         // ...

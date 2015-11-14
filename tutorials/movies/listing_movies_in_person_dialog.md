@@ -31,8 +31,8 @@ Create a new file, *Modules/MovieDB/Person/PersonDialog.Template.html* with cont
 ```html
 <div id="~_Tabs" class="s-DialogContent">
     <ul>
-        <li><a href="#~_TabInfo"><span>Customer</span></a></li>
-        <li><a href="#~_TabOrders"><span>Orders</span></a></li>
+        <li><a href="#~_TabInfo"><span>Person</span></a></li>
+        <li><a href="#~_TabOrders"><span>Movies</span></a></li>
     </ul>
     <div id="~_TabInfo" class="tab-pane s-TabInfo">
         <div id="~_Toolbar" class="s-DialogToolbar">

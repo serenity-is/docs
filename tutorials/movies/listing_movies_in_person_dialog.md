@@ -60,9 +60,9 @@ When *EntityDialog* finds a div with ID *~_Tabs* in its template, it automatical
 
 Naming of the template file is important. It must end with *.Template.html* extension. All files with this extension is made available at client side through a dynamic script.
 
-Folder of the template file is not important as long as it is under *Modules* or *Views/Template* directories.
+Folder of the template file is ignored, but templates must be under *Modules* or *Views/Template* directories.
 
-By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *PersonDialog.Template.html*. But, as it didn't exist before, a fallback template *EntityDialog.Template.html* was used.
+By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *PersonDialog.Template.html*. But, as it didn't exist before, a fallback template, *EntityDialog.Template.html* was used.
 
 
 

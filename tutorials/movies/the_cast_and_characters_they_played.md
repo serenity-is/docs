@@ -620,7 +620,8 @@ namespace MovieTutorial.MovieDB
             if (!base.ValidateEntity(row, id))
                 return false;
 
-            row.PersonFullname = PersonRow.Lookup.ItemById[row.PersonId.Value].Fullname;
+            row.PersonFullname = PersonRow.Lookup
+                .ItemById[row.PersonId.Value].Fullname;
 
             return true;
         }

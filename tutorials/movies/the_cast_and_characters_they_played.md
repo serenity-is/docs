@@ -194,7 +194,8 @@ namespace MovieTutorial.MovieDB
     using System.Collections.Generic;
 
     [IdProperty("PersonId"), NameProperty(PersonRow.Fields.Fullname)]
-    [FormKey("MovieDB.Person"), LocalTextPrefix("MovieDB.Person"), Service("MovieDB/Person")]
+    [FormKey("MovieDB.Person"), LocalTextPrefix("MovieDB.Person"), 
+        Service("MovieDB/Person")]
     public class PersonDialog : EntityDialog<PersonRow>
     {
     }

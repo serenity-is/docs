@@ -21,7 +21,7 @@ By default all entity dialogs (ones we used so far, which derive from EntityDial
 
 This template contains a toolbar placeholder (*~_Toolbar*), form (*~_Form*) and PropertyGrid (*~_PropertyGrid).
 
-> ~_ is a special prefix that is replaced with a unique dialog ID at runtime. This ensures that objects in two instances of a dialog won't have same ID values.
+> ~_ is a special prefix that is replaced with a unique dialog ID at runtime. This ensures that objects in two instances of a dialog won't have the same ID values.
 
 EntityDialog template is shared by all dialogs, so we are not gonna modify it to add a tab to PersonDialog.
 

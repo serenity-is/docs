@@ -309,7 +309,7 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-To reference this new editor type from server side, rebuild solution, transform all templates and remove that useless MovieCastRow partial from MovieGrid.cs, and build again (i had to re-run templates)
+To reference this new editor type from server side, rebuild solution, transform all templates (if using an old version, remove that useless MovieCastRow partial from MovieGrid.cs, and build again (i had to re-run templates)
 
 
 ### Using MovieCastEditor in Movie Form

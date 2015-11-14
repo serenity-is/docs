@@ -476,7 +476,8 @@ namespace MovieTutorial.MovieDB.Entities
 {
 
     //..
-    [ConnectionKey("Default"), DisplayName("Movie Casts"), InstanceName("Cast"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Movie Casts"), InstanceName("Cast"), 
+        TwoLevelCached]
     //..
     public sealed class MovieCastRow : Row, IIdRow, INameRow
     {

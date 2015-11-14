@@ -361,7 +361,8 @@ namespace MovieTutorial.MovieDB
     using Serenity;
     using System.Collections.Generic;
 
-    [NameProperty("Character"), FormKey("MovieDB.MovieCast"), LocalTextPrefix("MovieDB.MovieCast")]
+    [NameProperty("Character"), FormKey("MovieDB.MovieCast"),
+        LocalTextPrefix("MovieDB.MovieCast")]
     public class MovieCastEditDialog : GridEditorDialog<MovieCastRow>
     {
     }

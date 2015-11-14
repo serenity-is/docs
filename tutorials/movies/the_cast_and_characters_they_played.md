@@ -864,7 +864,8 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
 We'll just have to make a little change in MovieCastRow.cs to select PersonFullname on retrieve (just like we did manually in MyRetrieveHandler):
 
 ```cs
-[DisplayName("Actor/Actress"), Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
+[DisplayName("Actor/Actress"), 
+ Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
 [MinSelectLevel(SelectLevel.List)]
 public String PersonFullname
 {

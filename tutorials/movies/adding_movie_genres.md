@@ -186,7 +186,7 @@ Here we mapped *GenreId* field and also declared that it has a foreign key relat
 
 We also added another field, *GenreName* that is not actually a field in *Movie* table, but in *Genre* table. 
 
-Serenity entities is more like SQL views. You can bring in fields from other tables with joins.
+Serenity entities are more like SQL views. You can bring in fields from other tables with joins.
 
 By adding *LeftJoin("g")* attribute to MovieId property, we declared that whenever Genre table needs to be joined to, its alias will be *g*.
 

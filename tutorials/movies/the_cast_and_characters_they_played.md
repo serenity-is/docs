@@ -252,7 +252,7 @@ Up until now, we created a page for each table, and list and edit its records in
 
 We'll list the cast for a movie in the Movie dialog and allow them to be edited along with the movie. Also, cast will be saved together with movie entity in one transaction.
 
-Thus, cast editing will be in memory, and when user presses save button in Movie dialog, the movie and its cast will be saved to database in one shot.
+Thus, cast editing will be in memory, and when user presses save button in Movie dialog, the movie and its cast will be saved to database in one shot (one transaction).
 
 > It would be possible to edit the cast independently, here we just want to show how it can be done. 
 

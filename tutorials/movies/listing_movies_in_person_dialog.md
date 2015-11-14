@@ -62,7 +62,7 @@ Naming of the template file is important. It must end with *.Template.html* exte
 
 Folder of the template file is ignored, but templates must be under *Modules* or *Views/Template* directories.
 
-By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *PersonDialog.Template.html*. But, as it didn't exist before, a fallback template, *EntityDialog.Template.html* was used.
+By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *PersonDialog.Template.html*. But, as it didn't exist before, search continued to base classes and a fallback template, *EntityDialog.Template.html* was used.
 
 
 

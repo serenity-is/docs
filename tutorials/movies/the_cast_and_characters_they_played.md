@@ -529,7 +529,7 @@ namespace MovieTutorial.MovieDB.Entities
         }
 
         [DisplayName("Actor/Actress"), 
-            Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
+         Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
         public String PersonFullname
         {
             get { return Fields.PersonFullname[this]; }

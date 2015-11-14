@@ -235,7 +235,8 @@ Open *MovieRow.cs* again.
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), 
+     TwoLevelCached]
     public sealed class MovieRow : Row, IIdRow, INameRow
     {
         [DisplayName("Movie Id"), Identity]

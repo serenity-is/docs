@@ -226,7 +226,56 @@ Overriding GetGridCanLoad method allows us to control when grid can call list se
 
 We also did three cosmetic changes, by overriding three methods, first to remove all buttons from toolbar, second to remove title from the grid (as tab title is enough), and third to remove paging functionality (a person can't have a million movies right?). 
 
+> SetEquality method is introduced in Serenity 1.6.5
+
 ### Setting PersonID of PersonMovieGrid in PersonDialog
 
-If nobody sets grid PersonID property, it will always be null, and no records will be loaded. We should set it in Person dialog:
+If nobody sets grids PersonID property, it will always be null, and no records will be loaded. We should set it in Person dialog:
+
+```cs
+namespace MovieTutorial.MovieDB
+{
+    using jQueryApi;
+    using Serenity;
+    using System.Collections.Generic;
+
+    [IdProperty(PersonRow.IdProperty), NameProperty(PersonRow.Fields.Fullname)]
+    [FormKey(PersonForm.FormKey), LocalTextPrefix(PersonRow.LocalTextPrefix), 
+     Service(PersonService.BaseUrl)]
+    public class PersonDialog : EntityDialog<PersonRow>
+    {
+        private PersonMovieGrid moviesGrid;
+
+        public PersonDialog()
+        {
+            moviesGrid = new PersonMovieGrid(this.ById("MoviesGrid"));
+
+            tabs.OnActivate += (e, i) => this.Arrange();
+        }
+
+        protected override void AfterLoadEntity()
+        {
+            base.AfterLoadEntity();
+
+            moviesGrid.PersonID = (int?)this.EntityId;
+        }
+    }
+}
+```
+
+*AfterLoadEntity* is called after an entity or a new entity is loaded into dialog. *this.EntityId* refers to the identity value of the currently loaded entity. In new record mode, it is null.
+
+> AfterLoadEntity and LoadEntity might be called several times during dialog lifetime, so avoid creating some child objects in these events, otherwise you will have multiple instances of created objects. Thats why we created the grid in dialog constructor.
+
+![Person With Movies Unfiltered](img/movies_person_tab_autosize.png)
+
+### Fixing Movies Tab Size
+
+You might have noticed that when you switch to Movies tab, dialog gets a bit less in height. This is because dialog is set to auto height and grids are 200px by default.
+
+Edit *s-PersonDialog* css in site.less:
+
+```cs
+
+```
 

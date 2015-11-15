@@ -160,6 +160,6 @@ OK, now we can see list of movies in Movies tab, but something is strange:
 
 ### Filtering Movies for the Person
 
-No, Carrie-Anne Moss didn't act in three roles. This grid is showing all movie cast records for now, as we didn't tell it which movie cast records we want yet.
+No, Carrie-Anne Moss didn't act in three roles. This grid is showing all movie cast records for now, as we didn't tell what filter it should apply yet.
 
 

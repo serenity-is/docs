@@ -68,6 +68,6 @@ Now, we have a tab in PersonDialog:
 
 ![Person With Tabs Initial](img/movies_person_tab_initial.png)
 
-> By the way, i noticed Person link is still under MovieDB and we forgot to remove MovieCast link. I'm fixing them now...
+> Meanwhile, i noticed Person link is still under MovieDB and we forgot to remove MovieCast link. I'm fixing them now...
 
 

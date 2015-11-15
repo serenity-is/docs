@@ -64,5 +64,10 @@ Folder of the template file is ignored, but templates must be under *Modules* or
 
 By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *PersonDialog.Template.html*. But, as it didn't exist before, search continued to base classes and a fallback template, *EntityDialog.Template.html* was used.
 
+Now, we have a tab in PersonDialog:
+
+![Person With Tabs Initial](img/movies_person_tab_initial.png)
+
+> By the way, i noticed Person link is still under MovieDB and we forgot to remove MovieCast link. I'm fixing them now...
 
 

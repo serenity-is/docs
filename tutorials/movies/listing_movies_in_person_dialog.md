@@ -25,6 +25,8 @@ This template contains a toolbar placeholder (*~_Toolbar*), form (*~_Form*) and 
 
 EntityDialog template is shared by all dialogs, so we are not gonna modify it to add a tab to PersonDialog.
 
+### Defining a Tabbed Template for PersonDialog
+
 Create a new file, *Modules/MovieDB/Person/PersonDialog.Template.html* with contents:
 
 
@@ -69,5 +71,91 @@ Now, we have a tab in PersonDialog:
 ![Person With Tabs Initial](img/movies_person_tab_initial.png)
 
 > Meanwhile, i noticed Person link is still under MovieDB and we forgot to remove MovieCast link. I'm fixing them now...
+
+### Creating PersonMovieGrid
+
+But movie tab is empty for now. We need to define a grid with suitable columns and place it in that tab.
+
+First, declare the columns we'll use with the grid, in file *PersonMovieColumns.cs* next to *PersonColumns.cs*:
+
+```cs
+
+namespace MovieTutorial.MovieDB.Columns
+{
+    using Serenity.ComponentModel;
+    using System;
+
+    [ColumnsScript("MovieDB.PersonMovie")]
+    [BasedOnRow(typeof(Entities.MovieCastRow))]
+    public class PersonMovieColumns
+    {
+        [Width(220)]
+        public String MovieTitle { get; set; }
+        [Width(100)]
+        public Int32 MovieYear { get; set; }
+        [Width(200)]
+        public String Character { get; set; }
+    }
+}
+```
+
+Next define a *PersonMovieGrid* class, in file *PersonMovieGrid.cs* next to *PersonGrid.cs*:
+
+```cs
+namespace MovieTutorial.MovieDB
+{
+    using jQueryApi;
+    using Serenity;
+
+    [ColumnsKey("MovieDB.PersonMovie"), IdProperty(MovieCastRow.IdProperty)]
+    [LocalTextPrefix(MovieCastRow.LocalTextPrefix), Service(MovieCastService.BaseUrl)]
+    public class PersonMovieGrid : EntityGrid<MovieCastRow>
+    {
+        public PersonMovieGrid(jQueryObject container)
+            : base(container)
+        {
+        }
+    }
+}
+```
+
+We'll actually use MovieCast service, to list movies a person acted in.
+
+Last step is to create this grid in PersonDialog.cs:
+
+```cs
+
+namespace MovieTutorial.MovieDB
+{
+    using jQueryApi;
+    using Serenity;
+    using System.Collections.Generic;
+
+    [IdProperty(PersonRow.IdProperty), NameProperty(PersonRow.Fields.Fullname)]
+    [FormKey(PersonForm.FormKey), LocalTextPrefix(PersonRow.LocalTextPrefix),
+     Service(PersonService.BaseUrl)]
+    public class PersonDialog : EntityDialog<PersonRow>
+    {
+        private PersonMovieGrid moviesGrid;
+
+        public PersonDialog()
+        {
+            moviesGrid = new PersonMovieGrid(this.ById("MoviesGrid"));
+
+            tabs.OnActivate += (e, i) => this.Arrange();
+        }
+    }
+}
+```
+
+Remember that in our template we had a div with id *~_MoviesGrid* under movies tab pane. We created PersonMovie grid on that div.
+
+> this.ById("MoviesGrid") is a special method for templated widgets. *$('#MoviesGrid')* wouldn't work here, as that div actually has some ID like *PersonDialog17_MoviesGrid*. `~_` in templates are replaced with a unique container widget ID.
+
+We also attached to OnActivate event of jQuery UI tabs, and called Arrange method of the dialog. This is to solve a problem with SlickGrid, when it is initially created in invisible tab. Arrange triggers relayout for SlickGrid to solve this problem.
+
+OK, now we can see list of movies in Movies tab, but something is strange:
+
+![Person With Movies Unfiltered](img/movies_person_tab_unfiltered.png)
 
 

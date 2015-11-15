@@ -162,4 +162,71 @@ OK, now we can see list of movies in Movies tab, but something is strange:
 
 No, Carrie-Anne Moss didn't act in three roles. This grid is showing all movie cast records for now, as we didn't tell what filter it should apply yet.
 
+PersonMovieGrid should know the person it shows the movie cast records for. So, we add a *PersonID* property to this grid. This *PersonID* should be passed somehow to list service for filtering.
+
+```cs
+namespace MovieTutorial.MovieDB
+{
+    using jQueryApi;
+    using Serenity;
+    using System.Collections.Generic;
+
+    [ColumnsKey("MovieDB.PersonMovie"), IdProperty(MovieCastRow.IdProperty)]
+    [LocalTextPrefix(MovieCastRow.LocalTextPrefix), Service(MovieCastService.BaseUrl)]
+    public class PersonMovieGrid : EntityGrid<MovieCastRow>
+    {
+        public PersonMovieGrid(jQueryObject container)
+            : base(container)
+        {
+        }
+
+        protected override List<ToolButton> GetButtons()
+        {
+            return null;
+        }
+
+        protected override string GetInitialTitle()
+        {
+            return null;
+        }
+
+        protected override bool UsePager()
+        {
+            return false;
+        }
+
+        protected override bool GetGridCanLoad()
+        {
+            return personID != null;
+        }
+
+        private int? personID;
+
+        public int? PersonID
+        {
+            get { return personID; }
+            set
+            {
+                if (personID != value)
+                {
+                    personID = value;
+                    SetEquality(MovieCastRow.Fields.PersonId, value);
+                    Refresh();
+                }
+            }
+        }
+    }
+}
+```
+
+We hold the person ID in a private variable. When it changes, we also set a equality filter for PersonId field using SetEquality method (which will be sent to list service),
+and refresh to see changes.
+
+Overriding GetGridCanLoad method allows us to control when grid can call list service. If we didn't override it, while creating a new Person, grid would load all movie cast records, as there is not a PersonID yet (it is null).
+
+We also did three cosmetic changes, by overriding three methods, first to remove all buttons from toolbar, second to remove title from the grid (as tab title is enough), and third to remove paging functionality (a person can't have a million movies right?). 
+
+### Setting PersonID of PersonMovieGrid in PersonDialog
+
+If nobody sets grid PersonID property, it will always be null, and no records will be loaded. We should set it in Person dialog:
 

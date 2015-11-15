@@ -181,3 +181,6 @@ I also modified Person dialog css a bit to have more space:
 
 This is what we get now:
 
+![Person with Images](img/movies_person_keanu_images.png)
+
+> ImageUploadEditor stores file name directly in a string field, while MultipleImageUpload editor stores file names in a string field with JSON array format.

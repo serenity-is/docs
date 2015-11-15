@@ -271,11 +271,19 @@ namespace MovieTutorial.MovieDB
 
 ### Fixing Movies Tab Size
 
-You might have noticed that when you switch to Movies tab, dialog gets a bit less in height. This is because dialog is set to auto height and grids are 200px by default.
+You might have noticed that when you switch to Movies tab, dialog gets a bit less in height. This is because dialog is set to auto height and grids are 200px by default. When you switch to movies tab, form gets hidden, so dialog adjusts to movies grid height.
 
 Edit *s-PersonDialog* css in site.less:
 
-```cs
-
+```css
+.s-PersonDialog {
+    > .size { .widthAndMin(650px); .heightAndMin(400px); }
+    .dialog-styles(@h: auto, @l: 150px, @e: 400px);
+    .s-PropertyGrid .categories { height: 260px; }
+    .ui-dialog-content { overflow: hidden; }
+    .tab-pane.s-TabMovies { padding: 5px; }
+    .s-PersonMovieGrid > .grid-container { height: 315px; }
+}
 ```
+
 

@@ -123,3 +123,61 @@ Thus, a file we upload for person primary image will be located at a path like t
 
 Next step is to add these fields to forms (MovieForm.cs and PersonForm.cs):
 
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    public class PersonForm
+    {
+        public String Firstname { get; set; }
+        public String Lastname { get; set; }
+        public String PrimaryImage { get; set; }
+        public String GalleryImages { get; set; }
+        public DateTime BirthDate { get; set; }
+        public String BirthPlace { get; set; }
+        public Gender Gender { get; set; }
+        public Int32 Height { get; set; }
+    }
+}
+```
+
+```cs
+
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    public class MovieForm
+    {
+        public String Title { get; set; }
+        [TextAreaEditor(Rows = 3)]
+        public String Description { get; set; }
+        [MovieCastEditor]
+        public List<Entities.MovieCastRow> CastList { get; set; }
+        public String PrimaryImage { get; set; }
+        public String GalleryImages { get; set; }
+        [TextAreaEditor(Rows = 8)]
+        public String Storyline { get; set; }
+        public Int32 Year { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public Int32 Runtime { get; set; }
+        public Int32 GenreId { get; set; }
+        public MovieKind Kind { get; set; }
+    }
+}
+```
+
+I also modified Person dialog css a bit to have more space:
+
+```css
+.s-PersonDialog {
+    > .size { .widthAndMin(700px); .heightAndMin(600px); }
+    .dialog-styles(@h: auto, @l: 150px, @e: 450px);
+    .s-PropertyGrid .categories { height: 460px; }
+    .ui-dialog-content { overflow: hidden; }
+    .tab-pane.s-TabMovies { padding: 5px; }
+    .s-PersonMovieGrid > .grid-container { height: 515px; }
+}
+```
+
+This is what we get now:
+

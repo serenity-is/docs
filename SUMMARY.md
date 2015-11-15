@@ -23,6 +23,7 @@
        * [Updating Serenity Packages](tutorials/movies/updating_serenity_packages.md)
        * [The Cast and Characters They Played](tutorials/movies/the_cast_and_characters_they_played.md)
        * [Listing Movies in Person Dialog](tutorials/movies/listing_movies_in_person_dialog.md)
+       * Adding Primary and Gallery Images
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)
@@ -81,5 +82,5 @@
    * [Widget With Options](widgets/widget_with_options.md)
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
-
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
+

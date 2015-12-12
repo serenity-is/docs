@@ -54,4 +54,6 @@ Next step is to replace connection strings for databases you want to use with Po
 
 > Provider name must be `Npgsql` for Serenity to auto-detect dialect.
 
+Now launch your application, it should automatically create databases, if they are not created manually.
+
 

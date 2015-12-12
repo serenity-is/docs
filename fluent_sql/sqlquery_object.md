@@ -116,61 +116,50 @@ FROM People
 ORDER BY Age
 ```
 
+You may use method like Select, From, OrderBy, GroupBy in any order, and may can also mix them (e.g. call Select, then OrderBy, then Select again...)
 
-##Zincirleme Metod Çağrımı (Method Chaining)
+> Putting FROM at start is recommended, especially when used with Serenity entities, as it helps with auto joins and determining database dialect etc.
 
-Yukarıdaki kod listelerine dikkatli bakınca sorgumuzu düzenlediğimiz her satıra “query.” ile başladığımızı ve bunun göze pek de hoş gelmediğini farkedebilirsiniz. 
 
-SqlQuery’nin, method chaining (zincirleme metod çağrımı) özelliğinden faydalanarak, bu sorguyu daha okunaklı ve kolay bir şekilde yazabiliriz: 
+## Method Chaining
+
+It is a bit verbose and not so readable to start every line `query.`. Almost all *SqlQuery* methods are chainable, and returns the query itself as result. 
+
+We may rewrite the query like this:
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string MethodChaining()
-        {
-            var query = new SqlQuery()
-                .Select("Firstname")
-                .Select("Surname")
-                .From("People")
-                .OrderBy("Age");
-
-            return query.ToString();
-        }
-    }
+    var query = new SqlQuery()
+    	.From("People")
+    	.Select("Firstname")
+    	.Select("Surname")
+    	.OrderBy("Age");
+    
+    Console.WriteLine(query.ToString());
 }
 ```
 
-jQuery yada LINQ kullanıyorsanız bu zincirleme çağırım şekline aşina olmalısınız.
+> This feature is similar to jQuery and LINQ enumerable method chaining.
 
-İstersek “query” yerel değişkenininden de kurtulabiliriz:
+We could even get rid of the query variable:
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
+    Console.WriteLine(
+        new SqlQuery()
+        	.From("People")
+        	.Select("Firstname")
+        	.Select("Surname")
+        	.OrderBy("Age")
+    		.ToString());
+}```
 
-    public partial class SqlQuerySamples
-    {
-        public static string SimpleSelectRemoveVariable()
-        {
-            return new SqlQuery()
-                .Select("Firstname")
-                .Select("Surname")
-                .From("People")
-                .OrderBy("Age")
-                .ToString();
-        }
-    }
-}
-```
 
-##Select Metodu
+> It is strongly recommended to put every method on its own line, and indent properly for readability and consistency reasons.
+
+## Select Method
 
 ```csharp
 public SqlQuery Select(string expression)

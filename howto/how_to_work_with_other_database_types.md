@@ -116,4 +116,36 @@ Default dialect is used when the dialect for a connection / entity etc. couldn't
 
 Now launch your application, it should automatically create databases, if they are not created manually before.
 
+## Configuring Code Generator
 
+Sergen doesn't have reference to PostgreSQL provider, so if you want to use it to generate code, you must also register this provider with it.
+
+Sergen.exe is an exe file, so you can't add a NuGet reference to it. We need to register this provider in application config file.
+
+> It is also possible to register the provider in GAC/machine.config and skip this step completely.
+
+Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator.1.8.6/tools* and create a file named sergen.config next to it with contents below:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <system.data>
+    <DbProviderFactories>
+      <remove invariant="Npgsql"/>
+      <add name="Npgsql Data Provider" 
+           invariant="Npgsql" 
+           description=".Net Data Provider for PostgreSQL"
+           type="Npgsql.NpgsqlFactory, Npgsql, Culture=neutral,
+                 PublicKeyToken=5d8b90d52f46fda7" 
+           support="FF" />
+    </DbProviderFactories>
+  </system.data>
+  <appSettings>
+    <add key="LoadProviderDLLs" value="Npgsql.dll"/>
+  </appSettings>
+</configuration>
+```
+
+Also copy Npgsql.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for you Postgres tables.
+
+> You might want to remove `[public].` prefix for default schema from tablename/expressions if you want to be able to work with multiple databases.

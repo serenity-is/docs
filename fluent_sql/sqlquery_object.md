@@ -46,13 +46,11 @@ void Main()
     query.From("People");
     query.OrderBy("Age");
     
-    query.ToString().Dump();
+    Console.WriteLine(query.ToString());
 }
 ```
 
-> Dump is an extension method of LinqPad, you may replace that line with something like *Console.WriteLine(query.ToString())* in a console application.
-
-Programı çalıştırdığımızda fonksiyon aşağıdaki gibi bir sonuç verir:
+This will result in output:
 
 ```sql
 SELECT 
@@ -62,63 +60,60 @@ FROM People
 ORDER BY Age
 ```
 
-İlk satırda SqlQuery nesnemizi yegane parametresiz constructor’ı ile oluşturduk. Eğer bu noktada ToString() metodunu çağırsaydık aşağıdaki gibi bir sonuç alacaktık:
+In the first line of our program, we called SqlQuery with its sole parameterless constructor. If *ToString()* was called at this point, the output would be:
 
 ```sql
 SELECT FROM
 ```
 
-SqlQuery sorgunuza herhangi bir doğrulama yapmaz. Sadece çağrılarınızla ürettiğiniz sorguyu metne çevirir. SELECT ve FROM deyimleri siz hiçbir alan seçmeseniz de, tablo adı belirtmeseniz de metinsel gösterimde yukarıdaki gibi çıkacaktır. SqlQuery bu deyimleri içermeyen bir sorgu üretemez.
+SqlQuery doesn't perform any syntax validation. It just converts the query you build yourself, by calling its methods. Even if you don't select any fields or call from methods, it will generate this basic *SELECT FROM* statement.
 
-Ardından Select metodunu “Firstname” parametresiyle çağırdık. Sorgumuz aşağıdaki hale geldi:
+> SqlQuery can't generate empty queries.
+
+Next, we called `Select` method with string parameter `"FirstName"`. Our query is now like this:
 
 ```sql
 SELECT Firstname FROM
 ```
 
-Yine Select metodunu, bu sefer “Surname” parametresiyle çağırınca, SqlQuery bir önceki seçilen alan ile “Surname” arasına virgül koyarak sorguyu aşağıdaki gibi üretti:
+When `Select("Surname")` statement is executed, SqlQuery put a comma between previously selected field (*Firstname*) and this one:
 
 ```sql
 SELECT Firstname, Surname FROM
 ```
 
-From ve OrderBy metodlarını da çağırarak sorgumuza nihai halini verdik:
+After executing *From* and *OrderBy* methods, our final output is:
 
 ```sql
 SELECT Firstname, Surname FROM People ORDER BY Age
 ```
 
 
-##Metod Çağırım Sırası ve Etkisi
+## Method Call Order and Its Effects
 
-Örnek koddaki “From”, “OrderBy” ve “Select” içeren satırları hangi sırada yazarsak yazalım sonuç değişmeyecekti. Ancak aşağıdaki gibi Select çağrılarının sırası değişirse yani Surname alanını Firstname’den önce seçseydik...
+In previous sample, output wouldn't change even if we reordered *From*, *OrderBy* and *Select* lines. It would change only if we changed order of *Select* statements...
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string ReorderedQuery()
-        {
-            var query = new SqlQuery();
-            query.OrderBy("Age");
-            query.Select("Surname");
-            query.From("People");
-            query.Select("Firstname");
-
-            return query.ToString();
-        }
-    }
+    var query = new SqlQuery();
+    query.From("People");
+    query.OrderBy("Age");
+    query.Select("Surname");
+	query.Select("Firstname");
+    
+    Console.WriteLine(query.ToString());
 }
 ```
 
-...sonuçta, sadece alanların SELECT ifadesinde görünme sıraları değişecekti:
+...but, only the column ordering inside the SELECT statement would change:
 
 ```sql
-SELECT Surname, Firstname FROM People ORDER BY Age
+SELECT 
+Surname,
+Firstname 
+FROM People 
+ORDER BY Age
 ```
 
 

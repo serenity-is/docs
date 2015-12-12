@@ -165,139 +165,133 @@ void Main()
 public SqlQuery Select(string expression)
 ```
 
-Şu ana kadar verdiğimiz örneklerde, Select metodunun yukarıdaki overload'ını kullandık. Expression (ifade) parametresi, bir alan adı ya da (Adi + Soyadi) gibi bir SQL ifadesi olabilir. Bu metodu her çağırdığınızda sorgunun SELECT listesine, verdiğiniz alan adı ya da ifade eklenir (araya virgül konarak).
+In the samples we had so far, we used the overload of the *Select* method shown above (it has about 11 overloads).
 
-Tek bir çağırımda, birden fazla alan seçmek isterseniz, şu overload'ı kullanabilirsiniz:
+Expression parameter can be a simple field name or an expression like `"FirstName + ' ' + LastName"`
+
+Whenever this method is called, the expression you set is added to the SELECT statement of resulting query with a comma between.
+
+There is also a SelectMany method to select multiple fields in one call:
 
 ```csharp
-public SqlQuery Select(params string[] expressions)
+public SqlQuery SelectMany(params string[] expressions)
 ```
 
-Örneğin:
+For example:
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string SelectMultipleFieldsInOneCall()
-        {
-            return new SqlQuery()
-                .Select("Firstname", "Surname", "Age", "Gender")
-                .From("People")
-                .ToString();
-        }
-    }
+    var query = new SqlQuery()
+        .From("People")
+        .SelectMany("Firstname", "Surname", "Age", "Gender")
+        .ToString();
+    
+    Console.WriteLine(query.ToString());
 }
 ```
 
 ```sql
-SELECT Firstname, Surname, Age, Gender FROM People
+SELECT 
+Firstname,
+Surname,
+Age,
+Gender 
+FROM People
 ```
 
-Seçtiğiniz bir alana kısa ad (column alias) atamak isterseniz SelectAs metodundan faydalanabilirsiniz:
+> I'd personally prefer calling Select method multiple times.
+
+You might be wondering, why multiple selection is not just another *Select* overload. It's because *Select* has a more commonly used overload to select a column with alias:
 
 ```csharp
-public SqlQuery SelectAs(string expression, string alias)
+public SqlQuery Select(string expression, string alias)
 ```
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string SelectAs()
-        {
-            return new SqlQuery()
-                .SelectAs("(Firstname + Surname)", "Fullname")
-                .From("People")
-                .ToString();
-        }
-    }
-}
-```
+    var query = new SqlQuery()
+        .Select("(Firstname + ' ' + Surname)", "Fullname")
+        .From("People")
+        .ToString();
+    
+    Console.WriteLine(query.ToString());
+}```
 
 ```sql
-SELECT (Firstname + Surname) Fullname FROM People
+SELECT 
+(Firstname + ' ' + Surname) AS [Fullname] 
+FROM People
 ```
 
 
-##From Metodu
+## From Method
 
 ```csharp
 public SqlQuery From(string table)
 ```
 
-SqlQuery’nin From metodu, sorgunun FROM ifadesini üretmek için en az (ve genellikle) bir kez çağrılmalıdır. İlk çağırdığınızda sorgunuzun ana tablo ismini belirlemiş olursunuz.
+SqlQuery.From method should be called at least once (and usually once). 
 
-İkinci bir kez çağırırsanız, verdiğiniz tablo ismi, sorgunun FROM kısmına, asıl tablo adıyla aralarına virgül konarak eklenir. Bu durumda da CROSS JOIN yapmış olursunuz.
+> ..and it is recommended to be called first.
 
-```csharp
-namespace Samples
-{
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string CrossJoinWithFrom()
-        {
-            return new SqlQuery()
-                .Select("Firstname")
-                .Select("Surname")
-                .From("People")
-                .From("City")
-                .From("Country")
-                .OrderBy("Age")
-                .ToString();
-        }
-    }
-}
-```
-
-Oluşan sorgu aşağıdaki gibi olacaktır:
-
-```sql
-SELECT Firstname, Surname FROM People, City, Country ORDER BY Age
-```
-
-##Alias Nesnesi ve SqlQuery ile Kullanımı
-
-Sorgularımız uzadıkça ve içindeki JOIN sayısı arttıkça, hem alan adı çakışmalarını engellemek, hem de istenen alanlara daha kolay ulaşmak için, kullandığımız tablolara aşağıdaki gibi kısa adlar (alias) vermeye başlarız. 
+When you call it a second time, table name will be added to FROM statement with a comma between. Thus, it will be a CROSS JOIN:
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string FromWithStringAliases()
-        {
-            return new SqlQuery()
-                .Select("p.Firstname")
-                .Select("p.Surname")
-                .Select("p.CityName")
-                .Select("p.CountryName")
-                .From("Person p")
-                .From("City c")
-                .From("Country o")
-                .OrderBy("p.Age")
-                .ToString();
-        }
-    }
+	var query = new SqlQuery()
+		.From("People")
+		.From("City")
+		.From("Country")
+		.Select("Firstname")
+		.Select("Surname")
+		.OrderBy("Age");
+    
+    Console.WriteLine(query.ToString());
 }
 ```
 
 ```sql
-SELECT p.Firstname, p.Surname, c.CityName, o.CountryName FROM People p, City c, Country o ORDER BY p.Age
+SELECT 
+Firstname,
+Surname 
+FROM People, City, Country 
+ORDER BY Age
+```
+
+## Using Alias Object with SqlQuery
+
+It is common to use table aliases when number of referenced tables increase and our queries become longer:
+
+
+```csharp
+void Main()
+{
+	var query = new SqlQuery()
+		.Select("p.Firstname")
+		.Select("p.Surname")
+		.Select("p.CityName")
+		.Select("p.CountryName")
+		.From("Person p")
+		.From("City c")
+		.From("Country o")
+		.OrderBy("p.Age")
+		.ToString();
+    
+    Console.WriteLine(query.ToString());
+}
+```
+
+```sql
+SELECT 
+p.Firstname,
+p.Surname,
+p.CityName,
+p.CountryName 
+FROM Person p, City c, Country o 
+ORDER BY p.Age
 ```
 
 Görüleceği üzere alanları seçerken de başlarına tablolarına atadığımız kısa adları (p.Surname gibi) getirdik. Bu sayede tablolardaki alan isimleri çakışsa da (aynı alan adı People, City, Country tablolarında olsa da) sorun çıkmasını engellemiş olduk.

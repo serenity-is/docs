@@ -116,7 +116,7 @@ FROM People
 ORDER BY Age
 ```
 
-You may use method like Select, From, OrderBy, GroupBy in any order, and may can also mix them (e.g. call Select, then OrderBy, then Select again...)
+You may use method like Select, From, OrderBy, GroupBy in any order, and can also mix them (e.g. call Select, then OrderBy, then Select again...)
 
 > Putting FROM at start is recommended, especially when used with Serenity entities, as it helps with auto joins and determining database dialect etc.
 
@@ -270,13 +270,13 @@ It is common to use table aliases when number of referenced tables increase and 
 void Main()
 {
 	var query = new SqlQuery()
+		.From("Person p")
+		.From("City c")
+		.From("Country o")
 		.Select("p.Firstname")
 		.Select("p.Surname")
 		.Select("c.Name", "CityName")
 		.Select("o.Name", "CountryName")
-		.From("Person p")
-		.From("City c")
-		.From("Country o")
 		.OrderBy("p.Age")
 		.ToString();
     
@@ -318,85 +318,75 @@ p.Firstname
 
 > Unfortunately C# member access operator (.) can't be overridden, so we had to use (+). A workaround could be possible with dynamic, but it would perform poorly.
 
-Sorgumuzu Alias nesnesinden faydalanarak düzenleyelim:
+Let's modify our query making use of Alias objects:
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string FromUsingAlias()
-        {
-            var p = new Alias("People", "p");
-            var c = new Alias("City", "c");
-            var o = new Alias("Country", "o");
-
-            return new SqlQuery()
-                .Select(p + "Firstname")
-                .Select(p + "Surname")
-                .Select(c + "CityName")
-                .Select(o + "CountryName")
-                .From(p)
-                .From(c)
-                .From(o)
-                .OrderBy(p + "Age")
-                .ToString();
-        }
-    }
+	var p = new Alias("Person", "p");
+	var c = new Alias("City", "c");
+	var o = new Alias("Country", "o");
+	
+	var query = new SqlQuery()
+		.From(p)
+		.From(c)
+		.From(o)
+		.Select(p + "Firstname")
+		.Select(p + "Surname")
+		.Select(c + "Name", "CityName")
+		.Select(o + "Name", "CountryName")
+		.OrderBy(p + "Age")
+		.ToString();
+    
+    Console.WriteLine(query.ToString());
 }
 ```
 
 ```sql
-SELECT p.Firstname, p.Surname, c.CityName, o.CountryName FROM People p, City c, Country o ORDER BY p.Age
+SELECT 
+p.Firstname,
+p.Surname,
+c.Name AS [CityName],
+o.Name AS [CountryName] 
+FROM Person p, City c, Country o 
+ORDER BY p.Age
 ```
 
-Görüldüğü gibi sonuç aynı, ancak yazdığımız kod biraz daha uzadı. Peki Alias nesnesi kullanmak burada bize ne kazandırdı?
+As seen above, result is the same, but the code we wrote is a bit longer. So what is the advantage of using an alias? 
 
-Şu haliyle değerlendirildiğinde avantajı ilk bakışta görülmeyebilir. Ancak aşağıdaki koddaki gibi alan isimlerini tutan sabitlerimiz olsaydı…
+If we had a list of constants with field names…
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
+	const string Firstname = "Firstname";
+	const string Surname = "Surname";
+	const string Name = "Name";
+	const string Age = "Age";
 
-    public partial class SqlQuerySamples
-    {
-        const string Firstname = "Firstname";
-        const string Surname = "Surname";
-        const string Age = "Age";
-        const string CityName = "CityName";
-        const string CountryName = "CountryName";
-
-        public static string UsingFieldNameConsts()
-        {
-            var p = new Alias("People", "p");
-            var c = new Alias("City", "c");
-            var o = new Alias("Country", "o");
-
-            return new SqlQuery()
-                .Select(p + Firstname)
-                .Select(p + Surname)
-                .Select(c + CityName)
-                .Select(o + CountryName)
-                .From(p)
-                .From(c)
-                .From(o)
-                .OrderBy(p + Age)
-                .ToString();
-        }
-    }
+	var p = new Alias("Person", "p");
+	var c = new Alias("City", "c");
+	var o = new Alias("Country", "o");
+	var query = new SqlQuery()
+		.From(p)
+		.From(c)
+		.From(o)
+		.Select(p + Firstname)
+		.Select(p + Surname)
+		.Select(c + Name, "CityName")
+		.Select(o + Name, "CountryName")
+		.OrderBy(p + Age)
+		.ToString();
+    
+    Console.WriteLine(query.ToString());
 }
 ```
 
-…Visual Studio’nun IntelliSense özelliğinden daha çok faydalanmış ve birçok yazım hatasını derleme anında yakalamış olabilirdik.
+…we would take advantage of intellisense feature and have some more compile time checks.
 
-Tabi örnekteki gibi, her sorguyu yazmadan önce, alan isimlerini sabit olarak tanımlamak çok ta mantıklı ve kolay değil. Dolayısıyla bunların merkezi bir yerde tanımlanmış olması lazım (hatta, direk entity tanımımızdan bulunması, ki buna daha sonra değineceğiz)
+Obviously, it is not logical and easy to define field names for every query. This should be in a central location, or our entity declarations.
 
-Tabloya özel alan adı tanımlarınızı, entity yapısı kullanmayacaksanız, aşağıdaki örnekteki gibi de yapabilirsiniz:
+Let's create a poor mans simple ORM using Alias:
 
 ```csharp
 namespace Samples

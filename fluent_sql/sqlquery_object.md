@@ -46,16 +46,20 @@ void Main()
     query.From("People");
     query.OrderBy("Age");
     
-    query.Dump();
+    query.ToString().Dump();
 }
 ```
 
-> Dump is an extension method of LinqPad, replace it with something like Console.WriteLine(query.Dump()) to see results in a console application.
+> Dump is an extension method of LinqPad, you may replace that line with something like *Console.WriteLine(query.ToString())* in a console application.
 
 Programı çalıştırdığımızda fonksiyon aşağıdaki gibi bir sonuç verir:
 
 ```sql
-SELECT Firstname, Surname FROM People ORDER BY Age
+SELECT 
+Firstname,
+Surname 
+FROM People 
+ORDER BY Age
 ```
 
 İlk satırda SqlQuery nesnemizi yegane parametresiz constructor’ı ile oluşturduk. Eğer bu noktada ToString() metodunu çağırsaydık aşağıdaki gibi bir sonuç alacaktık:

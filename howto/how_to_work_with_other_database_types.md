@@ -54,6 +54,27 @@ Next step is to replace connection strings for databases you want to use with Po
 
 > Provider name must be `Npgsql` for Serenity to auto-detect dialect.
 
-Now launch your application, it should automatically create databases, if they are not created manually.
+PostgreSQL is case sensitive for identifiers. FluentMigrator automatically quotes all identifiers, so tables and column names in database will be quoted and case sensitive. This might cause problems when tables/columns are tried to select without quoted identifiers. 
+
+One option is to always use lowercase identifiers in migrations, but such naming scheme won't look so nice for other database types, thus we didn't prefer this way.
+
+To prevent such problems with Postgres, Serenity has an automatic quoting feature, to resolve compability with Postgres/FluentMigrator, which should be enabled in application start method of SiteInitialization.cs:
+
+```cs
+public static void ApplicationStart()
+{
+    try
+    {
+        SqlSettings.AutoQuotedIdentifiers = true;
+        Serenity.Web.CommonInitialization.Run();
+```
+
+> Make sure it is before CommonInitialization.Run line
+
+This setting automatically quotes column names in entities, but not manually written expressions (with Expression attribute for example).
+
+Use brackets `[]` for identifiers in expressions if you want to support multiple database types. Serenity will automatically convert brackets to database specific quote type before running queries. You can also use double quotes in expressions, but it might not be compatible with other databases like MySQL.
+
+Now launch your application, it should automatically create databases, if they are not created manually before.
 
 

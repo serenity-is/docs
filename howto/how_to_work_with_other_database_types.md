@@ -146,6 +146,6 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
 </configuration>
 ```
 
-Also copy Npgsql.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for you Postgres tables.
+Also copy Npgsql.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your Postgres tables.
 
 > You might want to remove `[public].` prefix for default schema from tablename/column expressions in generated rows if you want to be able to work with multiple databases.

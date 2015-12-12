@@ -272,8 +272,8 @@ void Main()
 	var query = new SqlQuery()
 		.Select("p.Firstname")
 		.Select("p.Surname")
-		.Select("p.CityName")
-		.Select("p.CountryName")
+		.Select("c.Name", "CityName")
+		.Select("o.Name", "CountryName")
 		.From("Person p")
 		.From("City c")
 		.From("Country o")
@@ -288,31 +288,35 @@ void Main()
 SELECT 
 p.Firstname,
 p.Surname,
-p.CityName,
-p.CountryName 
+c.Name AS [CityName],
+o.Name AS [CountryName] 
 FROM Person p, City c, Country o 
 ORDER BY p.Age
 ```
 
-Görüleceği üzere alanları seçerken de başlarına tablolarına atadığımız kısa adları (p.Surname gibi) getirdik. Bu sayede tablolardaki alan isimleri çakışsa da (aynı alan adı People, City, Country tablolarında olsa da) sorun çıkmasını engellemiş olduk.
-
-Sorgu içinde kullandığımız bu kısa adları, dilersek SqlQuery ile birlikte kullanabileceğimiz Alias nesnesleri olarak ta tanımlayabiliriz.
+Although it works like this, it is better to define `p`, `c`, and `o` as *Alias* objects.
 
 ```csharp
 var p = new Alias("Person", "p");
 ```
 
-Alias aslında bir string e verdiğiniz ad gibidir. Fakat string ten farklı olarak, SQL ifadelerinde kullanacabileceğimiz “kısa ad”.”alan adı” şeklinde metinleri, "+" operatörü aracılığıyla üretmemize yardımcı olur:
+Alias object is like a short name assigned to a table. It has an indexer and operator overloads to generate SQL member access expressions like `p.Surname`.
 
 ```csharp
-p + "Surname"
+void Main()
+{
+	var p = new Alias("Person", "p");
+	Console.WriteLine(p + "Surname"); // + operator overload
+	Console.WriteLine(p["Firstname"]); // through indexer
+}
 ```
 
->p.Surname
+```
+p.Surname
+p.Firstname
+```
 
-Bu işlem C#'ın "+" operatörünün overload edilmesi sayesinde gerçekleşmektedir. Bir alias'ı bir alan adı ile topladığınızda, alias'ın kısa adı ve alan adı, aralarına "." konarak birleştirilir 
-
-> ne yazık ki C#'ın member access operatorünü (".") overload edemiyoruz, bu yüzden "+" kullanılmak durumunda.
+> Unfortunately C# member access operator (.) can't be overridden, so we had to use (+). A workaround could be possible with dynamic, but it would perform poorly.
 
 Sorgumuzu Alias nesnesinden faydalanarak düzenleyelim:
 

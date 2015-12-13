@@ -113,5 +113,41 @@ Is it not possible for a not null field to have a null value, if you query it th
 
 > Reference types are already nullable, so you can't write `String?`.
 
+```cs
+public static RowFields Fields = new RowFields().Init();
 
+```
+
+We noted that field objects are declared in a nested subclass named *RowFields* (usually). Here we are creating its sole static instance. Thus, there is only one RowFields instance per row type, and one field instance per row property.
+
+`Init` is an extension method that initializes members of *RowFields*. It creates field objects that are not explictly initialized.
+
+```cs
+public SimpleRow()
+	: base(Fields)
+{
+}
+```
+
+Now we define SimpleRow's parameterless constructor. Base *Row* class requires a RowFields instance to work, and we pass our static *Fields* object. So all instances of a row type (SimpleRow) share a single *RowFields* (SimpleRow.RowFields) instance. This means they share all the metadata.
+
+```cs
+public class RowFields : RowFieldsBase
+{
+	public StringField Name;
+	public Int32Field Age;
+}
+```
+
+Here we define our nested class that contains field objects. It should be derived from `Serenity.Data.RowFieldsBase`. *RowFieldsBase* is a special class closely related to *Row* that contains table metadata.
+
+We declared a *StringField* and a *Int32Field*. Their type is based on their property types, and they must match exactly.
+
+Their names must also match the property names, or you'll get an initialization error.
+
+We didn't initialize these field objects, so their values are initially null.
+
+Remember that we wrote `new RowFields().Init()` above. This is where field objects are automatically created.
+
+> It's also possible to initialize them in RowFields constructor manually, but not recommended, except for special customizations.
 

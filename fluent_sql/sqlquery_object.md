@@ -561,24 +561,18 @@ Having can be used with GroupBy (though it doesn't check for GroupBy) and append
 
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string HavingMethod()
-        {
-            new SqlQuery()
-                .From("Person")
-                .Select("Firstname", "Lastname", "Count(*)")
-                .GroupBy("Firstname")
-                .GroupBy("LastName")
-                .Having("Count(*) > 5")
-                .ToString();
-        }
-    }
+	var query = new SqlQuery()
+        .From("Person")
+        .Select("Firstname")
+		.Select("Lastname")
+		.Select("Count(*)")
+        .GroupBy("Firstname")
+        .GroupBy("LastName")
+		.Having("Count(*) > 5");
+		
+    Console.WriteLine(query.ToString());
 }
 ```
 
@@ -593,7 +587,7 @@ HAVING Count(*) > 5
 
 ```
 
-##Sayfalama İşlemleri (SKIP / TAKE / TOP / LIMIT)
+## Paging Operations (SKIP / TAKE / TOP / LIMIT)
 
 ```csharp
 public SqlQuery Skip(int skipRows)
@@ -601,103 +595,103 @@ public SqlQuery Skip(int skipRows)
 public SqlQuery Take(int rowCount)
 ```
 
-SqlQuery, LINQ'de Take ve Skip olarak geçen sayfalama metodlarını destekler. Bunlardan Take, Microsoft SQL Server'da TOP'a karşılık gelirken, SKIP'in direk bir karşılığı olmadığından SqlQuery, ROW_NUMBER() fonksiyonundan faydalanır. Bu nedenle SQL server için SKIP kullanmak istediğinizde, sorgunuzda en az bir ORDER BY ifadesinin de olması gerekir.
+SqlQuery has paging methods similar to LINQ Take and Skip.
+
+These are mapped to SQL keywords depending on database type. 
+
+> As SqlServer versions before 2012 doesn't have a SKIP equivalent, to use SKIP your query should have at least one ORDER BY statement as ROW_NUMBER() will be used. This is not required if you are using SqlServer 2012+ dialect.
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
+	var query = new SqlQuery()
+        .From("Person")
+        .Select("Firstname")
+		.Select("Lastname")
+		.Select("Count(*)")
+        .OrderBy("PersonId")
+		.Skip(100)
+		.Take(50);
+		
+    Console.WriteLine(query.ToString());
+}
+```
 
-    public partial class SqlQuerySamples
-    {
-        public static string SkipTakePaging()
-        {
-            new SqlQuery()
-                .From("Person")
-                .Select("Firstname", "Lastname")
-                .OrderBy("PersonId")
-                .Skip(300)
-                .Take(100)
-                .ToString();
-        }
-    }
+```sql
+SELECT 
+Firstname,
+Lastname,
+Count(*) 
+FROM Person 
+ORDER BY PersonId OFFSET 100 ROWS FETCH NEXT 50 ROWS ONLY
+```
+
+> In this sample we are using the default SQLServer2012 dialect.
+
+## Database Dialect Support
+
+In our paging sample, SqlQuery used a syntax that is compatible with Sql Server 2012.
+
+With Dialect method, we can change the server type that SqlQuery targets:
+
+```csharp
+public SqlQuery Dialect(ISqlDialect dialect)
+```
+
+As of writing, these are the list of dialect types supported:
+
+```csharp
+FirebirdDialect
+PostgresDialect
+SqliteDialect
+SqlServer2000Dialect
+SqlServer2005Dialect
+SqlServer2012Dialect
+```
+
+If we wanted to target our query to Sql Server 2005:
+
+```csharp
+void Main()
+{
+	var query = new SqlQuery()
+		.Dialect(SqlServer2005Dialect.Instance)
+        .From("Person")
+        .Select("Firstname")
+		.Select("Lastname")
+		.Select("Count(*)")
+        .OrderBy("PersonId")
+		.Skip(100)
+		.Take(50);
+		
+    Console.WriteLine(query.ToString());
 }
 ```
 
 ```sql
 SELECT * FROM (
-    SELECT TOP 400 Firstname, Lastname, ROW_NUMBER() OVER (ORDER BY PersonId) AS _row_number_ FROM Person
-) _row_number_results_ WHERE _row_number_ > 300
+SELECT TOP 150 
+Firstname,
+Lastname,
+Count(*), ROW_NUMBER() OVER (ORDER BY PersonId) AS __num__ 
+FROM Person) __results__ WHERE __num__ > 100
 ```
 
-##Farklı Veritabanları Desteği
-
-Sayfalama işlemlerindeki örneğimizde, SqlQuery, Microsoft SQL Server 2008'e uygun bir sayfalama metodu kullandı.
-
-Dialect metodu ile SQL query nin kullandığı DIALECT ya da sunucu tipini değiştirebiliriz:
-
-```csharp
-public SqlQuery Dialect(SqlDialect dialect)
-```
-
-Şu an için aşağıdaki sunucu tipleri desteklenmektedir:
-
-```csharp
-[Flags]
-public enum SqlDialect
-{
-    MsSql = 1,
-    Firebird = 2,
-    UseSkipKeyword = 512,
-    UseRowNumber = 1024,
-    UseOffsetFetch = 2048,
-    MsSql2005 = MsSql | UseRowNumber,
-    MsSql2012 = MsSql | UseOffsetFetch | UseRowNumber
-}
-```
-
-Örneğin SqlDialect.MsSql2012'yi seçip, SQL Server 2012 ile gelen OFFSET FETCH deyimlerinden faydalanmak isteseydik:
-
-```csharp
-namespace Samples
-{
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string SkipTakePaging()
-        {
-            new SqlQuery()
-                .Dialect(SqlDialect.MsSql2012)
-                .From("Person")
-                .Select("Firstname", "Lastname")
-                .OrderBy("PersonId")
-                .Skip(300)
-                .Take(100)
-                .ToString();
-        }
-    }
-}
-```
+With SqliteDialect.Instance, output would be:
 
 ```sql
-SELECT Firstname, Lastname FROM Person ORDER BY PersonId 
-OFFSET 300 ROWS FETCH NEXT 100 ROWS ONLY
+SELECT 
+Firstname,
+Lastname,
+Count(*) 
+FROM Person 
+ORDER BY PersonId LIMIT 50 OFFSET 100
 ```
 
-SqlDialect.Firebird'ü tercih etseydik şu şekilde bir sorgu oluşurdu:
-
-```sql
-SELECT FIRST 100 SKIP 300 Firstname, Lastname FROM Person ORDER BY PersonId
-```
-
-SqlQuery'nin Sunucu/Dialect desteği henüz mükemmel olmasa da, temel işlemlerde sorun çıkarmayacak düzeydedir.
-
-Uygulamanızda tek tipte sunucu kullanıyorsanız, her sorgunuzda, dialect ayarlamak istemeyebilirsiniz. Bunun için SqlSettings.CurrentDialect'i değiştirmelisiniz. Örneğin aşağıdaki kodu program başlangıcında, ya da global.asax dosyanızdan çağırabilirsiniz: 
+If you are using only one type of database server with your application, you may avoid having to choose a dialect every time you start a query by setting the default dialect:
 
 ```csharp
-SqlSettings.CurrentDialect = SqlDialect.MsSql2012;
+SqlSettings.DefaultDialect = SqliteDialect.Instance;
 ```
 
+Write code above in your application start method, e.g. global.asax.cs.

@@ -116,7 +116,7 @@ FROM People
 ORDER BY Age
 ```
 
-You may use method like Select, From, OrderBy, GroupBy in any order, and can also mix them (e.g. call Select, then OrderBy, then Select again...)
+You might use methods like Select, From, OrderBy, GroupBy in any order, and can also mix them (e.g. call Select, then OrderBy, then Select again...)
 
 > Putting FROM at start is recommended, especially when used with Serenity entities, as it helps with auto joins and determining database dialect etc.
 
@@ -441,7 +441,7 @@ void Main()
 
 Now we have a set of table alias classes with field names and they can be reused in all queries.
 
-> This is just a sample to explain aliases. I don't recommend writing such classes.
+> This is just a sample to explain aliases. I don't recommend writing such classes. Entities offers much more.
 
 In sample above, we used *SqlQuery.From* overload that takes an *Alias* parameter:
 
@@ -458,112 +458,96 @@ When this method is called, table name and its aliased name is added to *FROM* s
 public SqlQuery OrderBy(string expression, bool desc = false)
 ```
 
-OrderBy metodu da Select gibi bir alan adı ya da ifadesiyle çağrılabilir. "Desc" opsiyonel parametresine true atarsanız, alan adı ya da ifadenizin sonuna " DESC" getirilir.
+OrderBy can also be called with a field name or expression like Select. 
 
-OrderBy metodu, verdiğiniz ifadeleri ORDER BY deyiminin sonuna ekler. Bazen alanı listenin başına getirmek te isteyebiliriz. Örneğin çeşitli alanlara göre sıralanmış bir sorgu hazırladıktan sonra, kullanıcı arayüzünde tıklanan kolona göre sıralamanın değişmesi (önceki sıralamayı tümüyle kaybetmeden) gerekebilir. Bunun için SqlQuery, OrderByFirst metodunu sağlar:
+If you assign *desc* optional argument as true, ` DESC` keyword is appended to the field name or expression.
 
+By default, OrderBy appends specified expressions to end of the ORDER BY statement. Sometimes, you might want to insert an expression/field to start. 
+
+For example, you might have a query with some predefined order, but if user orders by a column in a grid, name of the column should be inserted at index 0.
 
 ```csharp
 public SqlQuery OrderByFirst(string expression, bool desc = false)
 ```
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string OrderByFirst()
-        {
-            var query = new SqlQuery()
-                .Select("Firstname")
-                .Select("Surname")
-                .From("Person")
-                .OrderBy("PersonID");
-
-            return query.OrderByFirst("Age")
-                .ToString();
-        }
-    }
+	var query = new SqlQuery()
+    	.Select("Firstname")
+    	.Select("Surname")
+        .From("Person")
+        .OrderBy("PersonID");
+		
+	query.OrderByFirst("Age");
+		
+    Console.WriteLine(query.ToString());
 }
 ```
 
 ```sql
-SELECT Firstname, Surname FROM Person ORDER BY Age, PersonID
+SELECT 
+Firstname,
+Surname 
+FROM Person 
+ORDER BY Age, PersonID
 ```
 
-Order by kullanmış olsaydık şunu elde edecektik:
-
-```sql
-SELECT Firstname, Surname FROM Person ORDER BY PersonID, Age
-```
-
-##Distinct Metodu
+## Distinct Method
 
 ```csharp
 public SqlQuery Distinct(bool distinct)
 ```
 
-DISTINCT deyimini içeren bir sorgu üretmek istediğinizde bu metodu kullanabilirsiniz:
+Use this method to prepend a DISTINCT keyword before SELECT statement.
 
 ```csharp
-namespace Samples
+void Main()
 {
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string DistinctMethod()
-        {
-            return new SqlQuery()
-                .From("Person")
-                .Distinct(true)
-                .Select("Firstname")
-                .ToString();
-        }
-    }
+	var query = new SqlQuery()
+    	.Select("Firstname")
+    	.Select("Surname")
+        .From("Person")
+        .OrderBy("PersonID")
+		.Distinct(true);
+		
+    Console.WriteLine(query.ToString());
 }
 ```
 
 ```sql
-SELECT DISTINCT Firstname FROM Person 
+SELECT DISTINCT 
+Firstname,
+Surname 
+FROM Person 
+ORDER BY PersonID 
 ```
 
-##Group By Metodu
+## GroupBy Method
 
 ```csharp
 public SqlQuery GroupBy(string expression)
 ```
 
-GroupBy metodu bir alan adı ya da ifadesiyle çağrılır ve bu ifadeyi sorgunun GROUP BY deyiminin sonuna ekler.
+GroupBy works similar to OrderBy but it doesn't have a GroupByFirst variant.
 
 
 ```csharp
-namespace Samples
-{
-    using Serenity;
-    using Serenity.Data;
-
-    public partial class SqlQuerySamples
-    {
-        public static string GroupByMethod()
-        {
-            new SqlQuery()
-                .From("Person")
-                .Select("Firstname", "Lastname", "Count(*)")
-                .GroupBy("Firstname")
-                .GroupBy("LastName")
-                .ToString();
-        }
-    }
-}
+SELECT 
+Firstname,
+Lastname,
+Count(*) 
+FROM Person 
+GROUP BY Firstname, LastName
 ```
 
 ```sql
-SELECT Firstname, Lastname, Count(*) FROM Person GROUP BY Firstname, LastName
+SELECT 
+Firstname,
+Lastname,
+Count(*) 
+FROM Person 
+GROUP BY Firstname, LastName
 ```
 
 

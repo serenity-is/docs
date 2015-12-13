@@ -1,7 +1,7 @@
 # Entities (Row)
 
 
-Serenity entity system is a micro-orm, which is in love with SQL just like Dapper. 
+Serenity entity system is a micro-orm that is in love with SQL just like Dapper. 
 
 Unlike full blown ORMs like NHibernate / Entity Framework, Serenity provides minimum features required to map and query databases with intellisense, compile time checking and easy refactoring.
 
@@ -46,7 +46,7 @@ public class SimpleRow : Row
 
 > Yes, it looks a bit more complicated than a simple POCO class. This is required to make some features work without using proxy classes like some ORMs use (Entity Framework, NHibernate etc).
 
-> This structure lets us to build queries with zero reflection, do assignment tracking, enable INotifyPropertyChanged when required. It is also possible to work with custom, user defined fields.
+> This structure allows us to build queries with zero reflection, do assignment tracking, enable INotifyPropertyChanged when required. It makes it also possible to work with custom, user defined fields.
 
 > Rows are JSON serializable, so they can be returned from services without any problems. You don't need extra POCO/DTO classes unless you have a good reason to use them.
 

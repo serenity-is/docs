@@ -79,7 +79,7 @@
    * [Two Level Caching](caching/two_level_caching.md)
        * [Using Local Cache and Distributed Cache In Sync](caching/using_local_cache_and_distributed_cache_in_sync.md)
        * [TwoLevelCache Class](caching/twolevelcache_class.md)
-* Entities (Row)
+* [Entities (Row)](entities/entities_row.md)
 * [Fluent SQL](fluent_sql/fluent_sql.md)
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
 * [Widgets](widgets/README.md)

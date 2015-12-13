@@ -389,113 +389,68 @@ Obviously, it is not logical and easy to define field names for every query. Thi
 Let's create a poor mans simple ORM using Alias:
 
 ```csharp
-namespace Samples
+public class PeopleAlias : Alias
 {
-    using Serenity;
-    using Serenity.Data;
+	public PeopleAlias(string alias) 
+        : base("People", alias) { }
 
-    public partial class SqlQuerySamples
-    {
-        public class PeopleAlias : Alias
-        {
-            public PeopleAlias(string alias) 
-                : base(alias) 
-            { 
-            }
-
-            public string ID { get { return this["ID"]; } }
-            public string Firstname { get { return this["Firstname"]; } }
-            public string Surname { get { return this["Surname"]; } }
-            public string Age { get { return this["Age"]; } }
-        }
-
-        public class CityAlias : Alias
-        {
-            public CityAlias(string alias)
-                : base(alias)
-            {
-            }
-
-            public string ID { get { return this["ID"]; } }
-            public string CountryID { get { return this["CountryID"]; } }
-            public string CityName { get { return this["CityName"]; } }
-        }
-
-        public class CountryAlias : Alias
-        {
-            public CountryAlias(string alias)
-                : base(alias)
-            {
-            }
-
-            public string ID { get { return this["ID"]; } }
-            public string CountryName { get { return this["CountryName"]; } }
-        }
-
-        public static string UsingPredefinedClasses()
-        {
-            var p = new PeopleAlias("p");
-            var c = new CityAlias("c");
-            var o = new CountryAlias("o");
-
-            return new SqlQuery()
-                .Select(p.Firstname)
-                .Select(p.Surname)
-                .Select(c.CityName)
-                .Select(o.CountryName)
-                .From(p)
-                .From(c)
-                .From(o)
-                .OrderBy(p.Age)
-                .ToString();
-        }
-    }
+    public string ID { get { return this["ID"]; } }
+    public string Firstname { get { return this["Firstname"]; } }
+    public string Surname { get { return this["Surname"]; } }
+    public string Age { get { return this["Age"]; } }
 }
-```
 
-Bu sayede alan adlarını tutan sınıflarımızı bir kez tanımladık ve tüm sorgularımızda kolaylıkla kullanabileceğiz.
+public class CityAlias : Alias
+{
+  public CityAlias(string alias)
+      : base("City", alias) { }
 
-Yukarıdaki örneklerde ayrıca SqlQuery.From'un aşağıdaki gibi Alias parametresi alan overload'ından faydalandık:
+  public string ID { get { return this["ID"]; } }
+  public string CountryID { get { return this["CountryID"]; } }
+  public new string Name { get { return this["Name"]; } }
+}
+
+public class CountryAlias : Alias
+{
+  public CountryAlias(string alias)
+      : base("Country", alias) { }
+
+  public string ID { get { return this["ID"]; } }
+  public new string Name { get { return this["Name"]; } }
+}
+
+void Main()
+{
+	var p = new PeopleAlias("p");
+	var c = new CityAlias("c");
+	var o = new CountryAlias("o");
+	var query = new SqlQuery()
+		.From(p)
+		.From(c)
+		.From(o)
+		.Select(p.Firstname)
+		.Select(p.Surname)
+		.Select(c.Name, "CityName")
+		.Select(o.Name, "CountryName")
+		.OrderBy(p.Age)
+		.ToString();
+    
+    Console.WriteLine(query.ToString());
+}```
+
+
+Now we have a set of table alias classes with field names and they can be reused in all queries.
+
+> This is just a sample to explain aliases. I don't recommend writing such classes.
+
+In sample above, we used *SqlQuery.From* overload that takes an *Alias* parameter:
 
 ```csharp
 public SqlQuery From(Alias alias)
 ```
 
-Bu fonksiyon çağrıldığında, SQL sorgusunun FROM ifadesine, alias oluşturulurken tanımlanan tablo, kısa adıyla birlikte eklenir.
+When this method is called, table name and its aliased name is added to *FROM* statement of query.
 
-
-Eğer alias'ınızı oluştururken bir tablo adı belirtmediyseniz (new Alias("c") gibi) şu overload'ı kullanabilirsiniz:
-
-```csharp
-public SqlQuery From(string table, Alias alias)
-```
-
-##With Uzantı (Extension) Metodu
-Örneğimizde, kısa adlarımızı (alias) önceden değişken olarak tanımlamamız gerekli oldu. Eğer bunu SQL query'nin zincirleme akışını bozmadan yapmak isteseydik, With extension metodundan faydalanabilirdik:
-
-```csharp
-    public static string UsingWithExtension()
-    {
-        return new SqlQuery().With(
-            new Alias("People", "p"), 
-            new Alias("City", "c"), 
-            new Alias("Country", "o"), 
-            (me, p, c, o) => me
-                .Select(p + Firstname)
-                .Select(p + Surname)
-                .Select(c + CityName)
-                .Select(o + CountryName)
-                .From(p)
-                .From(c)
-                .From(o)
-                .OrderBy(p + Age))
-        .ToString();
-    }
-```
-
-ChainingExtensions altında statik bir uzantı (extension) metodu olarak tanımlanmış olan With metodu, sorgunuzun akışını bozmadan, inline olarak değişkenler tanımlamanıza imkan verir. With metoduna geçirdiğiniz parametreler, son parametre verdiğiniz lambda metoduna, sırasıyla geçirilir. Metoda ilk geçirilen parametre (me) ise sorgunun kendisidir.
-
-Inline değişken tanımlamak, sorgumuzu daha akışkan hale getirse de, bir miktar okunurluluğu azaltmış olabilir. Fonksiyonalite ve akıcılık arasında ne tercih yapacağına siz karar vermelisiniz.
 
 ##OrderBy Metodu
 

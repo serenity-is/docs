@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Rows (Entities)
 * [Getting Started](getting_started/README.md)
    * [Installing Serene From Visual Studio Gallery](getting_started/installing_serene_from_visual_studio_gallery.md)
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)

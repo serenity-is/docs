@@ -58,7 +58,7 @@ T0.[StreetAddress] AS [StreetAddress]
 FROM [Customer] T0
 ```
 
-> This setting defaults to *false* in Serenity, but Serene 1.8.6+ sets it to *true* on application startup.
+> This setting defaults to *false* in Serenity for backwards compability, but Serene 1.8.6+ sets it to *true* on application startup.
 
 
 And if we used Postgress dialect, output would be:

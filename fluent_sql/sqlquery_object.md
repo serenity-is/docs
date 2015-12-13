@@ -557,7 +557,7 @@ GROUP BY Firstname, LastName
 public SqlQuery Having(string expression)
 ```
 
-GroupBy metodu ile birlikte kullanabileceğiniz Having metodu, mantıksal bir ifadeyle çağrılır ve bu ifadeyi sorgunun HAVING deyiminin sonuna ekler.
+Having can be used with GroupBy (though it doesn't check for GroupBy) and appends expression to the end of HAVING statement.
 
 
 ```csharp
@@ -583,7 +583,14 @@ namespace Samples
 ```
 
 ```sql
-SELECT Firstname, Lastname, Count(*) FROM Person GROUP BY Firstname, LastName HAVING Count(*) > 5
+SELECT 
+Firstname,
+Lastname,
+Count(*) 
+FROM Person 
+GROUP BY Firstname, LastName 
+HAVING Count(*) > 5
+
 ```
 
 ##Sayfalama İşlemleri (SKIP / TAKE / TOP / LIMIT)

@@ -79,6 +79,7 @@
    * [Two Level Caching](caching/two_level_caching.md)
        * [Using Local Cache and Distributed Cache In Sync](caching/using_local_cache_and_distributed_cache_in_sync.md)
        * [TwoLevelCache Class](caching/twolevelcache_class.md)
+* Entities (Row)
 * [Fluent SQL](fluent_sql/fluent_sql.md)
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
 * [Widgets](widgets/README.md)
@@ -88,5 +89,4 @@
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
-* Entities (Row)
 

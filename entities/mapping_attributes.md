@@ -36,9 +36,9 @@ FROM Customer T0
 
 As, *StreetAddress* column belongs to main table (*Customer*), it is selected with an expression of `T0.StreetAddress` and with a column alias of `[StreetAddress]`. 
 
-> Property name is used as a column alias.
+> Property name is used as a column alias by default
 
-## SqlSettings.AutoQuotedIdentifiers Flag (Defaults to False)
+## SqlSettings.AutoQuotedIdentifiers Flag
 
 In some database systems, identifiers are case sensitive. 
 
@@ -57,6 +57,9 @@ SELECT
 T0.[StreetAddress] AS [StreetAddress] 
 FROM [Customer] T0
 ```
+
+> This setting defaults to *false* in Serenity, but Serene 1.8.6+ sets it to *true* on application startup.
+
 
 And if we used Postgress dialect, output would be:
 
@@ -115,6 +118,6 @@ FROM Customer T0
 
 > If SqlSettings.AutoQuotedIdentifiers is true, brackets are automatically added.
 
-Use SqlServer specific brackets (`[]`) if you need to work with multiple database types. These brackets are converted to dialect specific quotes before running queries.
+> Use SqlServer specific brackets (`[]`) if you need to work with multiple database types. These brackets are converted to dialect specific quotes (double quote, backtick etc.) before running queries.
 
-But, if you only target one type of database, you may prefer using quotes specific to that database type.
+> But, if you only target one type of database, you may prefer using quotes specific to that database type.

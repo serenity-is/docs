@@ -34,6 +34,7 @@
    * [How To: Setup Cascaded Editors](howto/how_to_setup_cascaded_editors.md)
    * [How To: Use Recaptcha](howto/how_to_use_recaptcha.md)
    * [How To: Work With Other Database Types](howto/how_to_work_with_other_database_types.md)
+   * How To: Set Database Dialect for Connections
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

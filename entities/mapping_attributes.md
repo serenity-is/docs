@@ -121,7 +121,7 @@ FROM Customer T0
 
 > But, if you only target one type of database, you may prefer using quotes specific to that database type.
 
-## TableNameAttribute
+## TableName Attribute
 
 [**namespace**: *Serenity.Data.Mapping*] - [**assembly**: *Serenity.Data*]
 
@@ -168,7 +168,7 @@ FROM [My Customers] T0
 > Again, prefer brackets for database compability
 
 
-## ExpressionAttribute
+## Expression Attribute
 
 [namespace: Serenity.Data.Mapping] - [assembly: Serenity.Data]
 
@@ -208,8 +208,80 @@ public class CustomerRow : Row
 
 Firstname and Lastname are table fields (actual fields in the table), but even if they don't have an expression attribute, they have basic, implicitly defined expressions, `T0.Firstname` and `T0.Lastname` (main table is assigned `T0` alias in Serenity queries).
 
-
 > In this document, when we talk about a *Table Field*, it means a field that actually corresponds to a column in database table.
 
 > *View Field* means a field with a calculated expression or a field that originates from another table, like fields that comes from joins in SQL views.
 
+We wrote Fullname expression using `T0` alias before the fields that we reference.
+
+> It would probably work without that prefix too. But it is better to use it. When you start to add joins, it is possible to have more than one field with same name and experience ambiguous column errors.
+
+
+## ForeignKey Attribute
+
+[namespace: Serenity.Data.Mapping] - [assembly: Serenity.Data]
+
+This attribute is used to specify foreign key columns, and add information about primary table and primary field that they are related to.
+
+```
+public class CustomerRow : Row
+{
+	[ForeignKey("Countries", "Id")]
+	public string CountryId
+	{
+		get { return Fields.Firstname[this]; }
+		set { Fields.Firstname[this] = value; }
+	}
+}
+```
+
+Here we specified that *CountryId* field in *Customer* table has a foreign key to *Id* field in *Countries* table.
+
+> The foreign key doesn't have to exist in database. Serenity doesn't check it.
+
+Serenity can make use of such meta information, even though it doesn't affect generated queries alone.
+
+ForeignKey is more meaningful when used along with the next attribute we'll see.
+
+## LeftJoin Attribute
+
+Where we are querying database, we tend to make many joins because of relations. Most of these joins are LEFT or INNER joins. 
+
+> With Serenity entities, you'll usually be using LEFT JOINs.
+
+Database admins prefers to define views to make it easier to query a combination of multiple tables, and to avoid writing these joins again and again.
+
+Serenity entities can be used just like SQL views, so you can bring in columns from other tables to an entity, and query it as if they are one big combined table.
+
+```cs
+public class CustomerRow : Row
+{
+	[ForeignKey("Cities", "Id"), LeftJoin("city")]
+	public string CityId
+	{
+		get { return Fields.CityId[this]; }
+		set { Fields.CityId[this] = value; }
+	}
+	
+	[Expression("city.Name")]
+	public string CityName
+	{
+		get { return Fields.CityName[this]; }
+		set { Fields.CityName[this] = value; }
+	}
+```
+
+Here we specified that *Cities* table should be assigned alias `city` when joined, and its join type should be `LEFT JOIN`. The join `ON` expression is determined as `city.Id == T0.CountryId` with some help from *ForeignKey* attribute.
+
+> LEFT JOIN is preferred as it allows to retrieve all records from *left* table, *Customers*, even if they don't have a CityId set.
+
+*CityName* is a view field (not actually a column of Customer table), which has an expression *city.Name*. It is clear that CityName originates from *Name* field in *Cities* table.
+
+Now, if we wanted to select city names of all customers, our query text would be:
+
+```sql
+SELECT 
+cty.Name AS [CountryName] 
+FROM Customer T0 
+LEFT JOIN Countries cty ON (cty.Id = T0.CountryId)
+```

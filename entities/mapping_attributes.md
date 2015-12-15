@@ -166,3 +166,18 @@ FROM [My Customers] T0
 ```
 
 > Again, prefer brackets for database compability
+
+
+## ExpressionAttribute
+
+[namespace: Serenity.Data.Mapping] - [assembly: Serenity.Data]
+
+This attribute is used to specify expression of a non-basic field, e.g. one that doesn't actually exist in database.
+
+There can be several types of such fields. 
+
+One example is a Fullname field with a calculated expression like `(T0.Firstname + ' ' + T0.Surname)`.
+
+
+
+

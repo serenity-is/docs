@@ -318,6 +318,7 @@ public class CustomerRow : Row
 		get { return Fields.CountryName[this]; }
 		set { Fields.CountryName[this] = value; }
 	}	
+}
 ```
 
 This time we did a LEFT JOIN on CountryId field in Cities table. We assigned `o` alias to Countries table and bring in the name field from it.
@@ -336,3 +337,37 @@ LEFT JOIN Countries o ON (o.Id = c.CountryId)
 ```
 
 > We'll see how to build such queries in FluentSQL chapter.
+
+So far, we used LeftJoin attribute with properties that has a ForeignKey attribute with them. 
+
+It is also possible to attach LeftJoin attribute to entity classes. This is useful for joins without a corresponding field in main entity.
+
+For example, let's say you have a CustomerDetails extension table that stores some extra details of customers (1 to 1 relation). CustomerDetails table has a primary key, *CustomerId*, which is actually a foreign key to *Id* field in *Customer* table.
+
+```cs
+[LeftJoin("cd", "CustomerDetails", "cd.CustomerId = T0.Id")]
+public class CustomerRow : Row
+{
+	[Identity, PrimaryKey]
+	public Int32? Id
+	{
+		get { return Fields.Id[this]; }
+		set { Fields.Id[this] = value; }
+	}
+
+	[Expression("cd.DeliveryAddress")]
+	public string DeliveryAddress
+	{
+		get { return Fields.DeliveryAddress[this]; }
+		set { Fields.DeliveryAddress[this] = value; }
+	}
+```
+
+And here what it looks like when you select DeliveryAddress:
+
+```sql
+SELECT 
+cd.DeliveryAddress AS [DeliveryAddress] 
+FROM Customer T0 
+LEFT JOIN CustomerDetails cd ON (cd.CustomerId = T0.Id)
+```

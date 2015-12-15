@@ -256,14 +256,14 @@ Serenity entities can be used just like SQL views, so you can bring in columns f
 ```cs
 public class CustomerRow : Row
 {
-	[ForeignKey("Cities", "Id"), LeftJoin("city")]
-	public string CityId
+	[ForeignKey("Cities", "Id"), LeftJoin("c")]
+	public Int32? CityId
 	{
 		get { return Fields.CityId[this]; }
 		set { Fields.CityId[this] = value; }
 	}
 	
-	[Expression("city.Name")]
+	[Expression("c.Name")]
 	public string CityName
 	{
 		get { return Fields.CityName[this]; }
@@ -271,17 +271,68 @@ public class CustomerRow : Row
 	}
 ```
 
-Here we specified that *Cities* table should be assigned alias `city` when joined, and its join type should be `LEFT JOIN`. The join `ON` expression is determined as `city.Id == T0.CountryId` with some help from *ForeignKey* attribute.
+Here we specified that *Cities* table should be assigned alias `c` when joined, and its join type should be `LEFT JOIN`. The join `ON` expression is determined as `c.Id == T0.CountryId` with some help from *ForeignKey* attribute.
 
 > LEFT JOIN is preferred as it allows to retrieve all records from *left* table, *Customers*, even if they don't have a CityId set.
 
-*CityName* is a view field (not actually a column of Customer table), which has an expression *city.Name*. It is clear that CityName originates from *Name* field in *Cities* table.
+*CityName* is a view field (not actually a column of Customer table), which has an expression *c.Name*. It is clear that CityName originates from *Name* field in *Cities* table.
 
 Now, if we wanted to select city names of all customers, our query text would be:
 
 ```sql
 SELECT 
-cty.Name AS [CountryName] 
+c.Name AS [CityName] 
 FROM Customer T0 
-LEFT JOIN Countries cty ON (cty.Id = T0.CountryId)
+LEFT JOIN Cities c ON (c.Id = T0.CityId)
 ```
+
+What if we don't have a CountryId field in Customer table, but we want to bring Country names of cities through CountryId field in city table?
+
+```cs
+public class CustomerRow : Row
+{
+	[ForeignKey("Cities", "Id"), LeftJoin("c")]
+	public Int32? CityId
+	{
+		get { return Fields.CityId[this]; }
+		set { Fields.CityId[this] = value; }
+	}
+	
+	[Expression("c.Name")]
+	public string CityName
+	{
+		get { return Fields.CityName[this]; }
+		set { Fields.CityName[this] = value; }
+	}
+	
+	[Expression("c.CountryId"), ForeignKey("Countries", "Id"), LeftJoin("o")]
+	public Int32? CountryId
+	{
+		get { return Fields.CountryId[this]; }
+		set { Fields.CountryId[this] = value; }	
+	}
+	
+	[Expression("o.Name")]
+	public string CountryName
+	{
+		get { return Fields.CountryName[this]; }
+		set { Fields.CountryName[this] = value; }
+	}	
+```
+
+This time we did a LEFT JOIN on CountryId field in Cities table. We assigned `o` alias to Countries table and bring in the name field from it.
+
+> You can assign any table alias to joins as long as they are not reserved words, and are unique between other joins in the entity. Sergen generates aliases like jCountry, but you may rename them to shorter and more natural ones.
+
+Let's select CityName and CountryName fields of all Customers:
+
+```sql
+SELECT 
+c.Name AS [CityName],
+o.Name AS [CountryName] 
+FROM Customer T0 
+LEFT JOIN Cities c ON (c.Id = T0.CityId) 
+LEFT JOIN Countries o ON (o.Id = c.CountryId)
+```
+
+> We'll see how to build such queries in FluentSQL chapter.

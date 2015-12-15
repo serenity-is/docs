@@ -176,8 +176,40 @@ This attribute is used to specify expression of a non-basic field, e.g. one that
 
 There can be several types of such fields. 
 
-One example is a Fullname field with a calculated expression like `(T0.Firstname + ' ' + T0.Surname)`.
+One example is a Fullname field with a calculated expression like `(T0.Firstname + ' ' + T0.Lastname)`.
+
+```cs
+public class CustomerRow : Row
+{
+	public string Firstname
+	{
+		get { return Fields.Firstname[this]; }
+		set { Fields.Firstname[this] = value; }
+	}
+	
+	public string Lastname
+	{
+		get { return Fields.Lastname[this]; }
+		set { Fields.Lastname[this] = value; }
+	}
+	
+	[Expression("(T0.Firstname + ' ' + T0.Lastname)")]
+	public string Fullname
+	{
+		get { return Fields.Fullname[this]; }
+		set { Fields.Fullname[this] = value; }
+	}
+}
+```
+
+> Be careful with "+" operator here as it is Sql Server specific. If you want to target multiple databases, you should write the expression as:
+
+> `CONCAT(T0.Firstname, CONCAT(' ', T0.Lastname))`
+
+Firstname and Lastname are table fields (actual fields in the table), but even if they don't have an expression attribute, they have basic, implicitly defined expressions, `T0.Firstname` and `T0.Lastname` (main table is assigned `T0` alias in Serenity queries).
 
 
+> In this document, when we talk about a *Table Field*, it means a field that actually corresponds to a column in database table.
 
+> *View Field* means a field with a calculated expression or a field that originates from another table, like fields that comes from joins in SQL views.
 

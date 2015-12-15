@@ -176,7 +176,7 @@ This attribute is used to specify expression of a non-basic field, e.g. one that
 
 There can be several types of such fields. 
 
-One example is a Fullname field with a calculated expression like `(T0.Firstname + ' ' + T0.Lastname)`.
+One example is a Fullname field with a calculated expression like `(T0.[Firstname] + ' ' + T0.[Lastname])`.
 
 ```cs
 public class CustomerRow : Row
@@ -193,7 +193,7 @@ public class CustomerRow : Row
 		set { Fields.Lastname[this] = value; }
 	}
 	
-	[Expression("(T0.Firstname + ' ' + T0.Lastname)")]
+	[Expression("(T0.[Firstname] + ' ' + T0.[Lastname])")]
 	public string Fullname
 	{
 		get { return Fields.Fullname[this]; }
@@ -204,7 +204,7 @@ public class CustomerRow : Row
 
 > Be careful with "+" operator here as it is Sql Server specific. If you want to target multiple databases, you should write the expression as:
 
-> `CONCAT(T0.Firstname, CONCAT(' ', T0.Lastname))`
+> `CONCAT(T0.[Firstname], CONCAT(' ', T0.[Lastname]))`
 
 Firstname and Lastname are table fields (actual fields in the table), but even if they don't have an expression attribute, they have basic, implicitly defined expressions, `T0.Firstname` and `T0.Lastname` (main table is assigned `T0` alias in Serenity queries).
 
@@ -263,7 +263,7 @@ public class CustomerRow : Row
 		set { Fields.CityId[this] = value; }
 	}
 	
-	[Expression("c.Name")]
+	[Expression("c.[Name]")]
 	public string CityName
 	{
 		get { return Fields.CityName[this]; }
@@ -271,7 +271,7 @@ public class CustomerRow : Row
 	}
 ```
 
-Here we specified that *Cities* table should be assigned alias `c` when joined, and its join type should be `LEFT JOIN`. The join `ON` expression is determined as `c.Id == T0.CountryId` with some help from *ForeignKey* attribute.
+Here we specified that *Cities* table should be assigned alias `c` when joined, and its join type should be `LEFT JOIN`. The join `ON` expression is determined as `c.[Id] == T0.[CountryId]` with some help from *ForeignKey* attribute.
 
 > LEFT JOIN is preferred as it allows to retrieve all records from *left* table, *Customers*, even if they don't have a CityId set.
 
@@ -283,7 +283,7 @@ Now, if we wanted to select city names of all customers, our query text would be
 SELECT 
 c.Name AS [CityName] 
 FROM Customer T0 
-LEFT JOIN Cities c ON (c.Id = T0.CityId)
+LEFT JOIN Cities c ON (c.[Id] = T0.CityId)
 ```
 
 What if we don't have a CountryId field in Customer table, but we want to bring Country names of cities through CountryId field in city table?
@@ -298,21 +298,21 @@ public class CustomerRow : Row
 		set { Fields.CityId[this] = value; }
 	}
 	
-	[Expression("c.Name")]
+	[Expression("c.[Name]")]
 	public string CityName
 	{
 		get { return Fields.CityName[this]; }
 		set { Fields.CityName[this] = value; }
 	}
 	
-	[Expression("c.CountryId"), ForeignKey("Countries", "Id"), LeftJoin("o")]
+	[Expression("c.[CountryId]"), ForeignKey("Countries", "Id"), LeftJoin("o")]
 	public Int32? CountryId
 	{
 		get { return Fields.CountryId[this]; }
 		set { Fields.CountryId[this] = value; }	
 	}
 	
-	[Expression("o.Name")]
+	[Expression("o.[Name]")]
 	public string CountryName
 	{
 		get { return Fields.CountryName[this]; }
@@ -329,11 +329,11 @@ Let's select CityName and CountryName fields of all Customers:
 
 ```sql
 SELECT 
-c.Name AS [CityName],
-o.Name AS [CountryName] 
+c.[Name] AS [CityName],
+o.[Name] AS [CountryName] 
 FROM Customer T0 
-LEFT JOIN Cities c ON (c.Id = T0.CityId) 
-LEFT JOIN Countries o ON (o.Id = c.CountryId)
+LEFT JOIN Cities c ON (c.[Id] = T0.CityId) 
+LEFT JOIN Countries o ON (o.[Id] = c.[CountryId])
 ```
 
 > We'll see how to build such queries in FluentSQL chapter.
@@ -345,7 +345,7 @@ It is also possible to attach LeftJoin attribute to entity classes. This is usef
 For example, let's say you have a CustomerDetails extension table that stores some extra details of customers (1 to 1 relation). CustomerDetails table has a primary key, *CustomerId*, which is actually a foreign key to *Id* field in *Customer* table.
 
 ```cs
-[LeftJoin("cd", "CustomerDetails", "cd.CustomerId = T0.Id")]
+[LeftJoin("cd", "CustomerDetails", "cd.[CustomerId] = T0.[Id]")]
 public class CustomerRow : Row
 {
 	[Identity, PrimaryKey]
@@ -355,7 +355,7 @@ public class CustomerRow : Row
 		set { Fields.Id[this] = value; }
 	}
 
-	[Expression("cd.DeliveryAddress")]
+	[Expression("cd.[DeliveryAddress]")]
 	public string DeliveryAddress
 	{
 		get { return Fields.DeliveryAddress[this]; }
@@ -367,7 +367,7 @@ And here what it looks like when you select DeliveryAddress:
 
 ```sql
 SELECT 
-cd.DeliveryAddress AS [DeliveryAddress] 
+cd.[DeliveryAddress] AS [DeliveryAddress] 
 FROM Customer T0 
-LEFT JOIN CustomerDetails cd ON (cd.CustomerId = T0.Id)
+LEFT JOIN CustomerDetails cd ON (cd.[CustomerId] = T0.[Id])
 ```

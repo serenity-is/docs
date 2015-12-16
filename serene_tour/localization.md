@@ -57,7 +57,7 @@ When you switch to Spanish language, Dashboard menu item will be changed to *Wel
 
 ![](img/translation_navigation_welcome.jpg)
 
-When you saved changes, Serene created a `user.texts.es.json` file in folder `Scripts/site/texts` with content like below:
+When you saved changes, Serene created a `user.texts.es.json` file in folder `App_Data/texts` with content like below:
 
 ```json
 {
@@ -65,8 +65,10 @@ When you saved changes, Serene created a `user.texts.es.json` file in folder `Sc
 }
 ```
 
-In the same folder, there are also other similar JSON files with default translations for Serene interface:
+In the `~/scripts/site/texts` folder, there are also other similar JSON files with default translations for Serene interface:
 
 - site.texts.es.json
 - site.texts.invariant.json
 - site.texts.tr.json
+
+> It is recommended to transfer your translations from user.texts.xx.json files and site.texts.xx.json files before publishing. You can also keep them under version control this way, if App_Data folder is ignored.

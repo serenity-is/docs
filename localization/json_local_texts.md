@@ -41,9 +41,9 @@ Files in a folder are parsed and added to registry in their file name order. Thu
 
 *CommonInitialization.Run* and *CommonInitialization.InitializeLocalTexts* calls this method for three predetermined locations under your web site:
 
-- `~/Scripts/serenity/texts` (serenity translations)
-- `~/Scripts/site/texts` (your application specific translations)
-- `~/App_Data/texts` (user translations made through translation interface)
+1. `~/Scripts/serenity/texts` (serenity translations)
+2. `~/Scripts/site/texts` (your application specific translations)
+3. `~/App_Data/texts` (user translations made through translation interface)
 
 Prefer using second one for your own files as first one is for Serenity resources.
 

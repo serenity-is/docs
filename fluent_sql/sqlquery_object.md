@@ -452,7 +452,7 @@ public SqlQuery From(Alias alias)
 When this method is called, table name and its aliased name is added to *FROM* statement of query.
 
 
-##OrderBy Metodu
+##OrderBy Method
 
 ```csharp
 public SqlQuery OrderBy(string expression, bool desc = false)
@@ -551,7 +551,7 @@ GROUP BY Firstname, LastName
 ```
 
 
-##Having Metodu
+## Having Method
 
 ```csharp
 public SqlQuery Having(string expression)

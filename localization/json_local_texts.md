@@ -38,12 +38,15 @@ Files in a folder are parsed and added to registry in their file name order. Thu
 > This order is important as adding a translation in some language with same key overrides prior translation.
 
 ## CommonInitialization and Predetermined Folders
-*CommonInitialization.Run* and *CommonInitialization.InitializeLocalTexts* calls this method for two predetermined locations under your web site:
 
-- `~/Scripts/serenity/texts`
+*CommonInitialization.Run* and *CommonInitialization.InitializeLocalTexts* calls this method for three predetermined locations under your web site:
 
-- `~/Scripts/site/texts`
+- `~/Scripts/serenity/texts` (serenity translations)
+- `~/Scripts/site/texts` (your application specific translations)
+- `~/App_Data/texts` (user translations made through translation interface)
 
 Prefer using second one for your own files as first one is for Serenity resources.
+
+Third one contains user translated texts. It is recommended to transfer texts from these files to application translation files under `~/Scripts/site/texts` before publishing.
 
 

@@ -27,7 +27,7 @@ To enable LDAP authentication (tested with OpenLDAP) you need to add a appSettin
 ```xml
 <add key="LDAP" 
      value="{ 
-        Host: '193.140.143.9', 
+        Host: '123.124.125.126', 
         Port: 389, 
         DistinguishedName: 'dc=yourdomain, dc=com', 
         Username: 'cn=someuserthatcanreadldap,ou=groupofthatuser,

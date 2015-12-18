@@ -234,4 +234,4 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
 </configuration>
 ```
 
-Also copy MySql.Data.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your Postgres tables.
+Also copy MySql.Data.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your MySql tables.

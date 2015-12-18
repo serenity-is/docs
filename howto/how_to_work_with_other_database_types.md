@@ -152,6 +152,8 @@ Also copy Npgsql.dll to same folder where Sergen.exe resides. Now Sergen will be
 
 ## MySql
 
+> MySql support is available for Serene 1.8.13+
+
 ### Registering MySql Provider
 
 MySQL has a .NET provider named MySql.Data. You need to first install it in MyProject.Web:
@@ -168,7 +170,8 @@ If you didn't install this provider in GAC/machine.config before, or don't want 
       <remove invariant="MySql.Data.MySqlClient"/>
       <add name="MySQL Data Provider" 
            invariant="MySql.Data.MySqlClient" 
-           description=".Net Framework Data Provider for MySQL" type="MySql.Data.MySqlClient.MySqlClientFactory, 
+           description=".Net Framework Data Provider for MySQL"
+           type="MySql.Data.MySqlClient.MySqlClientFactory, 
                  MySql.Data, Culture=neutral,
                  PublicKeyToken=c5687fc88969c44d" />
      </DbProviderFactories>
@@ -219,7 +222,8 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
       <remove invariant="MySql.Data.MySqlClient"/>
       <add name="MySQL Data Provider" 
            invariant="MySql.Data.MySqlClient" 
-           description=".Net Framework Data Provider for MySQL" type="MySql.Data.MySqlClient.MySqlClientFactory, 
+           description=".Net Framework Data Provider for MySQL"
+           type="MySql.Data.MySqlClient.MySqlClientFactory, 
                  MySql.Data, Culture=neutral,
                  PublicKeyToken=c5687fc88969c44d" />
      </DbProviderFactories>

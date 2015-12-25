@@ -25,7 +25,7 @@ Lets change it to *Movie Database/Movies*.
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camcorder")]
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
 
 namespace MovieTutorial.MovieDB.Pages
 {

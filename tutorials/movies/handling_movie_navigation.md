@@ -60,7 +60,7 @@ Just cut the below lines from *MoviePage.cs*:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camcorder")]
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
 ```
 
 Move it into *NavigationItems.cs* and modify it like this:

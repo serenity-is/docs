@@ -103,7 +103,7 @@ As projects are modified, Visual Studio will ask if you wan't to reload changes,
 
 *REBUILD the Solution* and then press *F5* to launch application.
 
-> Please make sure you REBUILD SOLUTION, by right clicking solution name and clicking rebuild. Some users reports they got an empty page after generating code. It's due to script project is not built properly. You should specially rebuild MovieTutorial.Script project. It's output is placed under MovieTutorial.Web/Scripts/site folder on rebuild.
+> Please make sure you REBUILD SOLUTION, by right clicking solution name and clicking rebuild. Some users report that they got an empty page after generating code. It's due to script project is not built properly. You should specially rebuild MovieTutorial.Script project. It's output is placed under MovieTutorial.Web/Scripts/site folder on rebuild.
 
 > Another option is to add a project dependency. To make Script project also build when Web project is run, right click MovieTutorial.Web project, click *Build Dependencies -> Project Dependencies* and check *MovieTutorial.Script* under *Dependencies* tab.
 

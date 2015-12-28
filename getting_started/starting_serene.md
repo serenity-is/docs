@@ -22,6 +22,17 @@ When application launches use `admin` user and `serenity` password to login. You
 
 The sample application includes old and famous Northwind data along with services and user interface to edit it, which is mostly produced by Serenity Code Generator.
 
+### Adding Project Dependency
+
+The output of *Serene1.Script* project (Serene1.Script.Site.js) is copied under *Serene1.Web/scripts/site* on build. 
+
+By default, Visual Studio only builds Serene1.Web project when you press F5 to run. 
+
+> This is controlled by a setting under Visual Studio Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run". It is not recommended to change it.
+
+To make Script project also build when Web project is run, right click Serene1.Web project, click *Build Dependencies -> Project Dependencies* and check *Serene1.Script* under *Dependencies* tab.
+
+> Unfortunately, there is no way, we can set this dependency in Serene template.
 
 
 ### Troubleshooting Connection Problems

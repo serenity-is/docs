@@ -194,7 +194,7 @@ Next step is to replace connection strings for databases you want to use with My
         
     <add name="Northwind" connectionString="
             Server=localhost; Port=3306; Database=Serene_Northwind_v1; 
-            Uid=root; Pwd=yumlep23" 
+            Uid=root; Pwd=yourpass" 
         providerName="MySql.Data.MySqlClient" />
 </connectionStrings>    
 

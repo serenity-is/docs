@@ -101,7 +101,7 @@ Now you can close Sergen, and return to Visual Studio.
 
 As projects are modified, Visual Studio will ask if you wan't to reload changes, click Reload All.
 
-*Rebuild the solution* and press *F5* to launch application.
+*REBUILD the Solution* and then press *F5* to launch application.
 
 > Please make sure you REBUILD SOLUTION, by right clicking solution name and clicking rebuild. Some users reports they got an empty page after generating code. It's due to script project is not built properly. You should specially rebuild MovieTutorial.Script project. 
 

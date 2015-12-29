@@ -309,6 +309,8 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
+> Please DON'T use Visual Studio add item menus to create a .cs file, use copy paste to create a new file and modify it. Otherwise, Visual Studio adds a System reference to Script project, which is not compatible with Saltarelle. You need to remove that reference if you did that mistake.
+
 To reference this new editor type from server side, rebuild solution, transform all templates (if using an old version, remove that useless MovieCastRow partial from MovieGrid.cs, and build again (i had to re-run templates)
 
 

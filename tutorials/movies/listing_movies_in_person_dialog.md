@@ -34,7 +34,7 @@ Create a new file, *Modules/MovieDB/Person/PersonDialog.Template.html* with cont
 <div id="~_Tabs" class="s-DialogContent">
     <ul>
         <li><a href="#~_TabInfo"><span>Person</span></a></li>
-        <li><a href="#~_TabOrders"><span>Movies</span></a></li>
+        <li><a href="#~_TabMovies"><span>Movies</span></a></li>
     </ul>
     <div id="~_TabInfo" class="tab-pane s-TabInfo">
         <div id="~_Toolbar" class="s-DialogToolbar">
@@ -48,8 +48,8 @@ Create a new file, *Modules/MovieDB/Person/PersonDialog.Template.html* with cont
             </form>
         </div>
     </div>
-    <div id="~_TabOrders" class="tab-pane s-TabOrders">
-        <div id="~_OrdersGrid">
+    <div id="~_TabMovies" class="tab-pane s-TabMovies">
+        <div id="~_MoviesGrid">
 
         </div>
     </div>

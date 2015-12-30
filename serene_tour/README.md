@@ -2,13 +2,15 @@
 
 After logging to Serene, you are greeted with the dashboard page.
 
-![Serene Dashboard](img/serene_dashboard.jpg)
+![Serene Dashboard](img/serene_dashboard.png)
 
-There is not much interesting content here yet, but you would choose to customize this page with some news, graphics etc.
+> This page is taken as a sample from free AdminLTE (https://almsaeedstudio.com/themes/AdminLTE/index.html) theme.
+
+The page content, except some numbers calculated from Northwind tables, contains random data.
 
 There is an accordion navigation menu on left which has a search feature by input above it. We'll talk about how to customize items there in later sections.
 
-On top navigation, we have a theme selection option to change active language and a dropdown that displays current username.
+On top navigation, there is site name on left, along with a dropdown containing current user name on right, and a settings button through which we change change theme or active language.
 
 
 * [Theming](theming.md)

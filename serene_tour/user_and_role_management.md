@@ -44,7 +44,7 @@ Now click *Translator* role to open its edit form and click *Edit Roles*. Grant 
 
 ![Edit Translator Roles](img/edit_translator_roles.png)
 
-> When you grant a role to a user, he gets all permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. But you can't revoke a role permission from a user, unless you remove him from the role.
+> When you grant a role to a user, he gets all permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. You can also revoke a role permission from a user explicitly.
 
 Now close all dialogs and logout by clicking *admin* on top right of site and clicking *Logout*. 
 

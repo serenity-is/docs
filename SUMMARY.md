@@ -26,6 +26,7 @@
        * [Adding Primary and Gallery Images](tutorials/movies/adding_primary_and_gallery_images.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
+   * How To: Remove AdminLTE Samples From Serene
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)
    * [How To: Use a SlickGrid Formatter](howto/how_to_use_a_slickgrid_formatter.md)
    * [How To: Remove Add Button from a Grid](howto/how_to_remove_add_button_from_a_grid.md)
@@ -36,7 +37,6 @@
    * [How To: Work With Other Database Types](howto/how_to_work_with_other_database_types.md)
    * [How To: Set Database Dialect for Connections](howto/how_to_set_database_dialect_for_connections.md)
    * [How To: Authenticate With Active Directory or LDAP](howto/how_to_authenticate_with_active_directory_or_ldap.md)
-   * How To: Remove AdminLTE Samples From Serene
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

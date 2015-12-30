@@ -36,13 +36,13 @@ Lets create another one and grant roles / permissions to it.
 
 Close this dialog, click new user and type *translator* as username. Fill in other fields as you'd like, then click *Update*.
 
-![Create Translator User](img/create_translator_user.jpg)
+![Create Translator User](img/create_translator_user.png)
 
 > You may have noticed there is a *Apply Changes* button with a black disk icon without title, next to *Save*. Unlike *Save*, when you use it, the form stays open, so you can see how your record looks like after saving, also you can edit roles and permissions before closing the form.
 
 Now click *Translator* role to open its edit form and click *Edit Roles*. Grant him *Translators* role and click *OK*.
 
-![Edit Translator Roles](img/edit_translator_roles.jpg)
+![Edit Translator Roles](img/edit_translator_roles.png)
 
 > When you grant a role to a user, he gets all permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. But you can't revoke a role permission from a user, unless you remove him from the role.
 
@@ -50,9 +50,9 @@ Now close all dialogs and logout by clicking *admin* on top right of site and cl
 
 Try logging in with *translator* and the password you set.
 
-Translator user will only have access to Dashboard, Languages and Translations pages.
+Translator user will only have access to Dashboard, Theme Samples, Languages and Translations pages.
 
-![Translator Logged In](img/translator_logged_in.jpg)
+![Translator Logged In](img/translator_logged_in.png)
 
 
 

@@ -1,6 +1,6 @@
 # Localization
 
-Serene allows you to change the active language with a dropdown on top right.
+Serene allows you to change the active language from top right settings menu <i class="fa fa-gears"></i>.
 
 Try changing active language to Spanish.
 

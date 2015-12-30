@@ -60,14 +60,14 @@ Remove folder *MyProject.Web/Modules/Common/Migrations/NorthwindDB/* with all fi
 
 Open *DashboardPage.cs*, remove these using lines:
 
-```
+```cs
 using Northwind;
 using Northwind.Entities;
 ```
 
 As Dashboard gets numbers from Northwind tables, you should modify *Index()* action like this:
 
-```
+```cs
 [Authorize, HttpGet, Route("~/")]
 public ActionResult Index()
 {

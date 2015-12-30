@@ -12,6 +12,6 @@ You have two options to install *SERENE* template into your Visual Studio:
 
 > You can add Serenity libraries to any .NET project with NuGet. 
 
-> It is also possible to add Serenity as a GIT submodule to your project and keep it always up to date with sources. 
+> It is also possible to add Serenity as a GIT submodule to your project and keep it always up to date with source codes. 
 
 > We'll cover these and more in other chapters.

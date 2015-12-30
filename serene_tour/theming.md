@@ -22,13 +22,13 @@ This is done in memory so no page reload is required.
 
 Also cookie, *"ThemePreference"*" with the content *"yellow-light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light yellow theme.
 
-These theme files are located under "Content/site/" of the Serene.Web project. If you look there you can see files with names:
+These skin files are located under "Content/adminlte/skins/" of the Serene.Web project. If you look there you can see files with names:
 
 ```
-site.theme.default.less
-site.theme.default.css
-site.theme.light.less
-site.theme.light.css
+skin.black-light.less
+site.blue.less
+site.yellow-light.less
+site.yellow.less
 ```
 
 We are using LESS for CSS generation so you should try editing LESS files, not CSS. Next time you build your project, LESS files will be compiled to CSS (using *Less.js* compiler for *Node*).
@@ -42,18 +42,10 @@ This operation is configured with a build step in Serene.Web.csproj file:
         &quot;$(ProjectDir)Content\site\site.less&quot; &gt;
         &quot;$(ProjectDir)Content\site\site.css&quot;">
     </Exec>
-    <Exec Command="&quot;$(ProjectDir)tools\node\lessc.cmd&quot;
-        &quot;$(ProjectDir)Content\site\site.theme.default.less&quot; &gt;
-        &quot;$(ProjectDir)Content\site\site.theme.default.css&quot;">
-    </Exec>
-    <Exec Command="&quot;$(ProjectDir)tools\node\lessc.cmd&quot;
-        &quot;$(ProjectDir)Content\site\site.theme.light.less&quot; &gt;
-        &quot;$(ProjectDir)Content\site\site.theme.light.css&quot;">
-    </Exec>
 </Target>
 ...
 ```
 
-Here *site.less*, *site.theme.default.less* and *site.theme.light.less* files are compiled to their corresponding css files in the same directory.
+Here *site.less* file is compiled to its corresponding css file in the same directory.
 
 > See http://lesscss.org/ for more information on LESS compiler and its syntax.

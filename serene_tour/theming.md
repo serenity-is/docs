@@ -25,6 +25,7 @@ Also cookie, *"ThemePreference"*" with the content *"yellow-light"* is added to 
 These skin files are located under "Content/adminlte/skins/" of the Serene.Web project. If you look there you can see files with names:
 
 ```
+_all-skins.less
 skin.black-light.less
 site.blue.less
 site.yellow-light.less

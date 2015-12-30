@@ -1,6 +1,6 @@
 # Theming
 
-Serene initially starts with a dark theme. On top right of the screen, next to *Theme* label, click the light gray circle and theme will change to a light one.
+Serene initially starts with a dark/blue theme. On top right of the screen, next to username, click the settings button and change theme to another one.
 
 ![Serene Dashboard Light](img/serene_dashboard_light.jpg)
 

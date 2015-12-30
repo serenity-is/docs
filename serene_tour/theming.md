@@ -2,27 +2,25 @@
 
 Serene initially starts with a dark/blue theme. On top right of the screen, next to username, click the settings button and change theme to another one.
 
-![Serene Dashboard Light](img/serene_dashboard_light.jpg)
+![Serene Dashboard Yellow Light](img/serene_dashboard_light.png)
 
-This feature is implemented by replacing HREF of a CSS stylesheet resource in the page.
+This feature is implemented by replacing a body CSS class.
 
-If you look at the source, you may spot a stylesheet link like below inside `<head>` section:
+If you look at the source, you may spot a skin class like below inside `<body>` tag:
 
 ```html
-<link id="SiteThemeCss" href="/Content/site/site.theme.default.css"
-    rel="stylesheet" type="text/css" />
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-blue has-layout-event">
 ```
 
-When you click the lighter circle, it actually changes to this:
+When you select the light yellow skin, it actually changes to this:
 
 ```html
-<link id="SiteThemeCss" href="/Content/site/site.theme.light.css"
-    rel="stylesheet" type="text/css" />
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-yellow-light has-layout-event">
 ```
 
 This is done in memory so no page reload is required.
 
-Also cookie, *"ThemePreference"*" with the content *"light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light theme.
+Also cookie, *"ThemePreference"*" with the content *"yellow-light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light yellow theme.
 
 These theme files are located under "Content/site/" of the Serene.Web project. If you look there you can see files with names:
 

@@ -52,6 +52,36 @@ Remove folder *MyProject.Web/Modules/Common/Migrations/NorthwindDB/* with all fi
 * Open *MyProject.Web/Scripts/site/site.texts.invariant.json* and remove all lines with *Northwind*.
 
 
+### Removing Northwind Script Side Generated Code
+
+* Expand *MyProject.Script/Imports/FormContexts/FormContexts.tt*. Select files starting with *Northwind.* and delete them.
+ 
+### Removing Northwind Numbers From Dashboard 
+
+Open *DashboardPage.cs*, remove these using lines:
+
+```
+using Northwind;
+using Northwind.Entities;
+```
+
+As Dashboard gets numbers from Northwind tables, you should modify *Index()* action like this:
+
+```
+[Authorize, HttpGet, Route("~/")]
+public ActionResult Index()
+{
+    var cachedModel = new DashboardPageModel()
+    {
+    };
+
+    return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
+}
+```
+
+> You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
+
+
 ### Building Project and Running T4 (.tt) Templates
 
 * Now rebuild your solution.

@@ -4,7 +4,7 @@ Serene allows you to change the active language from top right settings menu <i 
 
 Try changing active language to Spanish.
 
-![Serene Dashboard Spanish](img/serene_dashboard_spanish.jpg)
+![Serene Dashboard Spanish](img/serene_customers_spanish.png)
 
 > I don't speak Spanish and used machine translation, so sorry for errors...
 

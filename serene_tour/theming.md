@@ -9,13 +9,15 @@ This feature is implemented by replacing a body CSS class.
 If you look at the source, you may spot a skin class like below inside `<body>` tag:
 
 ```html
-<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-blue has-layout-event">
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition 
+    skin-blue has-layout-event">
 ```
 
 When you select the light yellow skin, it actually changes to this:
 
 ```html
-<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-yellow-light has-layout-event">
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition 
+    skin-yellow-light has-layout-event">
 ```
 
 This is done in memory so no page reload is required.

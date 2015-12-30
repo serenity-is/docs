@@ -45,7 +45,7 @@ Serene includes ability to translate its text resources live.
 
 Click *Administration* then *Translations* link in navigation.
 
-![](img/translation_navigation_texts.jpg)
+![](img/translation_navigation_texts.png)
 
 Type *navigation* into top left search box to see list of texts related to navigation menu. Choose *English* as source language and *Spanish* as target language.
 
@@ -55,7 +55,7 @@ Click *Save Changes*.
 
 When you switch to Spanish language, Dashboard menu item will be changed to *Welcome Page* instead of *Salpicadero*.
 
-![](img/translation_navigation_welcome.jpg)
+![](img/translation_navigation_welcome.png)
 
 When you saved changes, Serene created a `user.texts.es.json` file in folder `App_Data/texts` with content like below:
 
@@ -71,4 +71,4 @@ In the `~/scripts/site/texts` folder, there are also other similar JSON files wi
 - site.texts.invariant.json
 - site.texts.tr.json
 
-> It is recommended to transfer your translations from user.texts.xx.json files and site.texts.xx.json files before publishing. You can also keep them under version control this way, if App_Data folder is ignored.
+> It is recommended to transfer your translations from user.texts.xx.json files to site.texts.xx.json files before publishing. You can also keep them under version control this way, if App_Data folder is ignored.

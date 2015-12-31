@@ -3,7 +3,7 @@
 
 When you click a product name in Products page, an editing dialog for that row is displayed.
 
-![Product Editing](../getting_started/img/product_editing.jpg)
+![Product Editing](img/product_editing.png)
 
 This dialog is shown on client side, there is no post-back happening. Data for the clicked entity is loaded from server side using an AJAX request (only data, not markup). Dialog itself is a customized version of jQuery UI dialog.
 

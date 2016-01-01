@@ -42,7 +42,7 @@ This option is also saved, so next time you won't have to fill it in.
 
 ### Choosing Connection String
 
-Once you set Web project name, Sergen populates connection dropdown with connection strings from your web.config file. We have only one connection string in our web.config yet, so just select *Default*.
+Once you set Web project name, Sergen populates connection dropdown with connection strings from your web.config file. We might have *Default* and *Northwind* in there. Choose *Default* one.
 
 
 ### Selecting Table To Generate Code For

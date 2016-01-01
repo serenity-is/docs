@@ -79,7 +79,7 @@ This usually corresponds to the table name but sometimes table names might have 
 
 > Starting with Serene 1.6.2+ entity identifier is set automatically to a pascalized version of tablename.
 
-Our table name is *Movie* so it is also a valid and fine C# identifier, so let's use *Movie* as the entity identifier.
+Our table name is *Movie* so it is also a valid and fine C# identifier, so let's use *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
 
 This name is also used in other class names. For example our page controller will be named *MovieController*.
 .

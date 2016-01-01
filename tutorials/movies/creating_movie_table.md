@@ -130,7 +130,7 @@ Using Sql Server Management Studio or Visual Studio -> Connection To Database, o
 
 > If you didn't install LocalDB yet, download it from https://www.microsoft.com/en-us/download/details.aspx?id=29062.
 
-> If you have SQL Server 2014 LocalDB, your server name would be (localdb)\v12.0, so change connection string in web.config file. 
+> If you have SQL Server 2014 LocalDB, your server name would be (localdb)\MSSqlLocalDB or (localdb)\v12.0, so change connection string in web.config file. 
 
 > You could also use another SQL server instance, just change the connection string to target server and remove the migration safety check.
 

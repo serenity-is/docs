@@ -1,4 +1,4 @@
-# Multi Tenant
+# Multi Tenancy
 
 In this tutorial we are going to turn Norhwind into a multi-tenant application.
 

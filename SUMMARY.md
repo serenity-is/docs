@@ -25,7 +25,7 @@
        * [Listing Movies in Person Dialog](tutorials/movies/listing_movies_in_person_dialog.md)
        * [Adding Primary and Gallery Images](tutorials/movies/adding_primary_and_gallery_images.md)
    * [Multi Tenant](tutorials/multi_tenant/multi_tenant.md)
-       * # Adding Tenants Table and TenantId Field
+       * [Adding Tenants Table and TenantId Field](tutorials/multi_tenant/adding_tenants_table_and_tenantid_field.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Remove AdminLTE Samples From Serene](howto/how_to_remove_adminlte_samples_from_serene.md)

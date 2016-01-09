@@ -8,10 +8,35 @@ Here is a definition of multi-tenant sofware from Wikipedia:
 
 We'll add a TenantId field to every table, including Users, and let user see and modify only records belonging to her tenant. So, tenants will work in isolation, as if they are working with their own database.
 
-Multi tenant applications has some advantages like reduced cost of management. But they also have some disadvantages. For example, as all tenant data is in a single database, a tenant can't simply take or backup her data. And performance is usually reduced.
+Multi tenant applications has some advantages like reduced cost of management. But they also have some disadvantages. For example, as all tenant data is in a single database, a tenant can't simply take or backup her data alone. Performance is usually reduced as there are more records to handle.
 
 With increasing trend of cloud applications, decreased cost of virtualization, and with features like migration, its now easier to setup multi-instance apps. 
 
 I'd personally avoid multi-tenant applications. It's better to have one database per customer in my opinion. 
 
 But some users asked about how to implement this feature. This tutorial will help us explain some advanced Serenity topics as a bonus, along with multi tenancy.
+
+> You can find source code for this tutorial at: 
+
+> https://github.com/volkanceylan/Serenity-Tutorials/tree/master/MultiTenancy
+
+
+
+### Create a new project named *MultiTenancy*
+
+In Visual Studio click File -> New Project. Make sure you choose *Serene* template. Type *MultiTenancy* as name and click *OK*.
+
+In Solution explorer, you should see two projects with names *MultiTenancy.Web* and *MultiTenancy.Script*.
+
+> Make sure *MultiTenancy.Web* is the startup project (it should be bold), if not right click on project name and click *Set As Startup Project*.
+
+
+### Adding Project Dependency
+
+By default, Visual Studio only builds MultiTenancy.Web project when you press F5 to run. 
+
+> This is controlled by a setting under Visual Studio Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run". It is not recommended to change it.
+
+To make Script project also build when Web project is run, right click *MultiTenancy.Web* project, click *Build Dependencies -> Project Dependencies* and check *MultiTenancy.Script* under *Dependencies* tab.
+
+> Unfortunately, there is no way, we can set this dependency in Serene template.

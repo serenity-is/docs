@@ -30,7 +30,10 @@ namespace Serene.Northwind
                 Format = ctx =>
                 {
                     return "<a class='inline-action delete-row' title='delete' />";
-                }
+                },
+                Width = 24,
+                MinWidth = 24,
+                MaxWidth = 24                
             });
 
             return columns;
@@ -121,7 +124,9 @@ protected override List<SlickColumn> GetColumns()
         {
             return "<a class='inline-action delete-row' title='delete' />";
         },
-        Width = 32
+        Width = 24,
+        MinWidth = 24,
+        MaxWidth = 24
     });
 
     columns.Add(new SlickColumn
@@ -132,12 +137,67 @@ protected override List<SlickColumn> GetColumns()
         {
             return "<a class='inline-action edit-row' title='edit customer' />";
         },
-        Width = 32
+        Width = 24,
+        MinWidth = 24,
+        MaxWidth = 24
     });
 
     return columns;
 }
 ```
+
+Add CSS for it:
+
+```less
+.delete-row {
+    background-image: url(../serenity/images/delete2.png);
+}
+
+.edit-row {
+    background-image: url(../serenity/images/magnifier.png);
+}
+```
+
+And click handler:
+
+```cs
+protected override void OnClick(jQueryEvent e, int row, int cell)
+{
+    base.OnClick(e, row, cell);
+
+    if (e.IsDefaultPrevented())
+        return;
+
+    var item = Items[row];
+
+    if (J(e.Target).HasClass("inline-action"))
+    {
+        e.PreventDefault();
+
+        if (J(e.Target).HasClass("delete-row"))
+        {
+            Q.Confirm("Delete record?", () =>
+            {
+                CustomerService.Delete(new DeleteRequest
+                {
+                    EntityId = item.ID.Value
+                }, onSuccess: response => 
+                {
+                    Refresh();
+                });
+            });
+        }
+        else if (J(e.Target).HasClass("edit-row"))
+        {
+            var dlg = new CustomerDialog();
+            InitEntityDialog(dlg);
+            dlg.LoadByIdAndOpenDialog(item.ID.Value);
+        }
+    }
+}
+```
+
+First we create a new CustomerDialog. InitEntityDialog is a method of CustomerGrid that allows it to attach ondatachange event of dialog, so that when something changes in dialog, it can refresh itself automatically. Next, we call LoadByIdAndOpenDialog to load customer by its ID into dialog, and when its done, show the dialog.
 
 
 

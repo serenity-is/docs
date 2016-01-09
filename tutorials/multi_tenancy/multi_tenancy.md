@@ -14,4 +14,4 @@ With increasing trend of cloud applications, decreased cost of virtualization, a
 
 I'd personally avoid multi-tenant applications. It's better to have one database per customer in my opinion. 
 
-But some users asked about how to implement this feature. This tutorial will help us explaining some advanced Serenity topics as a bonus, along with multi tenancy.
+But some users asked about how to implement this feature. This tutorial will help us explain some advanced Serenity topics as a bonus, along with multi tenancy.

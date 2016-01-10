@@ -232,3 +232,11 @@ You will now get this error:
 Tenant field is read only!
 ```
 
+*GetEditableField* is a method that SaveRequestHandler calls to determine which fields are editable, thus updatable by user. By default, these fields are determined by looking at *Updatable* and *Insertable* attributes of row properties. 
+
+> Unless otherwise specified, all fields are insertable and updatable.
+
+If user doesn't have tenant administration permission, we remove *TenantId* from the list of auto-determined editable fields.
+
+## Letting Tenant2 User Create a New User in His Tenant
+

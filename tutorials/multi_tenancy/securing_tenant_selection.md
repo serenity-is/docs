@@ -70,5 +70,21 @@ private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
 
 Now, it's time to filter listed users by *TenantId*. Open *UserRepository.cs*, locate *MyListHandler* class and modify it like this:
 
+```cs
+private class MyListHandler : ListRequestHandler<MyRow>
+{
+    protected override void ApplyFilters(SqlQuery query)
+    {
+        base.ApplyFilters(query);
 
+        var user = (UserDefinition)Authorization.UserDefinition;
+        if (!Authorization.HasPermission(PermissionKeys.Tenants))
+            query.Where(fld.TenantId == user.TenantId);
+    }
+}
+```
+
+Here, we first get a reference to cached user definition of currently logged user.
+
+We check if he has tenant administration permission, which only *admin* will have in the end. If not, we filter listed records by *TenantId*.
 

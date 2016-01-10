@@ -190,4 +190,25 @@ Q.serviceCall({
 });
 ```
 
+Open *UserRepository.cs*, locate *MySaveHandler* class and modify its *GetEditableFields* method like this:
+
+
+```cs
+protected override void GetEditableFields(HashSet<Field> editable)
+{
+    base.GetEditableFields(editable);
+
+    if (!Authorization.HasPermission(Administration.PermissionKeys.Security))
+    {
+        editable.Remove(fld.Source);
+        editable.Remove(fld.IsActive);
+    }
+
+    if (!Authorization.HasPermission(Administration.PermissionKeys.Tenants))
+    {
+        editable.Remove(fld.TenantId);
+    }
+}
+```
+
 

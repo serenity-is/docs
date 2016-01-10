@@ -1,8 +1,5 @@
 # Removing Tenant Dropdown From User Form
 
-
-## Resolving Tenant Lookup Problem
-
 After you rebuild, and launch, now user page will be like this:
 
 ![Tenant2 Logged In](img/tenant2_filtered.png)

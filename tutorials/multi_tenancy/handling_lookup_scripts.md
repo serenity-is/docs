@@ -148,4 +148,37 @@ We just called *AddTenantFilter* method manually, because we weren't calling bas
 There are several more similar lookup scripts in *CustomerCountryLookup*, *CustomerCityLookup*,
 *OrderShipCityLookup*, *OrderShipCountryLookup*. I'll do similar changes in them. Change base class to *MultiTenantRowLookupScript* and call *AddTenantFilter* in *PrepareQuery* method.
 
+We now have one more problem to solve. If you open *Orders* page, you'll see that *Ship Via* and *Employee* filter dropdowns still lists records from other tenants. It is because we defined their lookup scripts by a [LookupScript] attribute on their rows.
+
+Let's fix employee lookup first. Remove [LookupScript] attribute from *EmployeeRow*.
+
+```cs
+[ConnectionKey("Northwind"), DisplayName("Employees"), InstanceName("Employee"), TwoLevelCached]
+[ReadPermission(Northwind.PermissionKeys.General)]
+[ModifyPermission(Northwind.PermissionKeys.General)]
+public sealed class EmployeeRow : Row, IIdRow, INameRow, IMultiTenantRow
+{
+    //...
+```
+
+And define a new lookup in file *EmployeeLookup* next to *EmployeeRow.cs*:
+
+```cs
+
+namespace MultiTenancy.Northwind.Scripts
+{
+    using Entities;
+    using Serenity.ComponentModel;
+    using Serenity.Web;
+
+    [LookupScript("Northwind.Employee")]
+    public class EmployeeLookup : MultiTenantRowLookupScript<EmployeeRow>
+    {
+    }
+}
+```
+
+We don't have to override anything, as base class will handle everything for us. By default, *LookupScript* attribute on rows, defines a new automatic lookup script class by using *RowLookupScript* as base class. 
+
+As there is no way to override this base class per row, we defined our lookup script class explicitly, and used *MultiTenantRowLookupScript* as base class.
 

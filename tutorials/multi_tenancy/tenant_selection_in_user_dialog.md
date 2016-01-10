@@ -87,3 +87,4 @@ Need to also increase size of user dialog a bit, in *site.administration.less* t
     .categories { height: 300px; }
 }
 ```
+

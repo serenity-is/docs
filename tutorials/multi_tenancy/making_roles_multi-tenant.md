@@ -82,5 +82,5 @@ private class MyListHandler : ListRequestHandler<MyRow>
             query.Where(fld.TenantId == user.TenantId);
     }
 }
-
 ```
+

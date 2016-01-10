@@ -41,6 +41,8 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
+> We couldn't use a simple [LookupScript] attribute on a row class here, because there is actually no country table in Northwind database. We are collecting country names from existing records in Supplier table using distinct.
+
 We should filter its query by current tenant.
 
 But this lookup class derives from *RowLookupScript* base class. Let's create a new base class, to prepare for other lookup scripts that we'll have to handle later.

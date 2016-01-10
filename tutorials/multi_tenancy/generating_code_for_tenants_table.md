@@ -11,7 +11,8 @@ Next we'll define a lookup script in *TenantRow* and set InstanceName property t
 namespace MultiTenancy.Administration.Entities
 {
     //...
-    [ConnectionKey("Default"), DisplayName("Tenants"), InstanceName("Tenant"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Tenants"), 
+     InstanceName("Tenant"), TwoLevelCached]
     [LookupScript("Administration.Tenant")]
     public sealed class TenantRow : Row, IIdRow, INameRow
     {

@@ -237,6 +237,3 @@ Tenant field is read only!
 > Unless otherwise specified, all fields are insertable and updatable.
 
 If user doesn't have tenant administration permission, we remove *TenantId* from the list of auto-determined editable fields.
-
-## Letting Tenant2 User Creating a New User in His Tenant
-

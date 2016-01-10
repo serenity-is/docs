@@ -24,3 +24,47 @@ public ListResponse<string> ListPermissionKeys()
         //...
 ```
 
+Now, this permission won't be listed in *Edit User Permissions* or *Edit Role Permissions* dialog.
+
+But, still, he can grant this permission to himself, by some little hacking through *UserPermissionRepository.Update* or *RolePermissionRepository.Update* methods.
+
+We should add some checks to prevent this:
+
+```cs
+public class UserPermissionRepository
+{
+    public SaveResponse Update(IUnitOfWork uow, 
+        UserPermissionUpdateRequest request)
+    {
+        //...
+        var newList = new Dictionary<string, bool>(
+            StringComparer.OrdinalIgnoreCase);
+        foreach (var p in request.Permissions)
+            newList[p.PermissionKey] = p.Grant ?? false;
+
+        var allowedKeys = ListPermissionKeys()
+            .Entities.ToDictionary(x => x);
+        if (newList.Keys.Any(x => !allowedKeys.ContainsKey(x)))
+            throw new AccessViolationException();
+        //...
+
+```
+
+```cs
+public class RolePermissionRepository
+{
+    public SaveResponse Update(IUnitOfWork uow, 
+        RolePermissionUpdateRequest request)
+    {
+        //...
+        var newList = new HashSet<string>(
+            request.Permissions.ToList(),
+            StringComparer.OrdinalIgnoreCase);
+
+        var allowedKeys = new UserPermissionRepository()
+            .ListPermissionKeys()
+            .Entities.ToDictionary(x => x);
+        if (newList.Any(x => !allowedKeys.ContainsKey(x)))
+            throw new AccessViolationException();
+        //...
+```

@@ -122,4 +122,15 @@ Here, we need to intercept all of these service calls, so we implement all inter
 
 We only fill in methods we are interested in, and leave others empty.
 
-The methods we implement here, corresponds to methods we override in *RoleRepository.cs* in previous chapter. The code they contain is almost same, except here we need to be more generic, as this behavior will work for any row type implementing *IMultiTenantRow*.
+The methods we implement here, corresponds to methods we override in *RoleRepository.cs* in previous section. The code they contain is almost same, except here we need to be more generic, as this behavior will work for any row type implementing *IMultiTenantRow*.
+
+## Reimplementing RoleRepository With Using the Behavior
+
+Now revert every change we made in *RoleRepository.cs*:
+
+```cs
+private class MySaveHandler : SaveRequestHandler<MyRow> { }
+private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
+private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
+private class MyListHandler : ListRequestHandler<MyRow> { }
+```

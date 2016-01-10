@@ -88,3 +88,5 @@ Need to also increase size of user dialog a bit, in *site.administration.less* t
 }
 ```
 
+Now open *User Management* page and create a user *tenant2* that belongs to *Second Tenant*.
+

@@ -8,3 +8,27 @@ Again, a user in one tenant shouldn't see or modify roles in other tenants and w
 
 We start by adding *TenantId* property to *RoleRow.cs*:
 
+```cs
+namespace MultiTenancy.Administration.Entities
+{
+    //...
+    public sealed class RoleRow : Row, IIdRow, INameRow
+    {
+        [Insertable(false), Updatable(false)]
+        public Int32? TenantId
+        {
+            get { return Fields.TenantId[this]; }
+            set { Fields.TenantId[this] = value; }
+        }
+        
+        //...
+        
+        public class RowFields : RowFieldsBase
+        {
+            //...
+            public readonly Int32Field TenantId;
+            //...
+        }
+    }
+}
+```

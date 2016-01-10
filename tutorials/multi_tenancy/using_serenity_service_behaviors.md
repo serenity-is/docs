@@ -10,7 +10,7 @@ Behaviors might be activated for all rows, or based on some rule, like having a 
 
 We'll first define an interface *IMultiTenantRow* that will trigger our new behavior. Place this class in file *IMultiTenantRow.cs*, next to *TenantRow.cs*:
 
-```
+```cs
 using Serenity.Data;
 
 namespace MultiTenancy

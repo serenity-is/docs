@@ -8,10 +8,18 @@ Some operations in these handlers, like capture log, unique constraint validatio
 
 Behaviors might be activated for all rows, or based on some rule, like having a specific attribute or interface. For example, CaptureLogBehavior activates for rows with [CaptureLog] attribute.
 
-We'll first define an interface *IMultiTenantRow* that will trigger our new behavior. Place this class next to *TenantRow.cs*:
+We'll first define an interface *IMultiTenantRow* that will trigger our new behavior. Place this class in file *IMultiTenantRow.cs*, next to *TenantRow.cs*:
 
 ```
+using Serenity.Data;
 
+namespace MultiTenancy
+{
+    public interface IMultiTenantRow
+    {
+        Int32Field TenantIdField { get; }
+    }
+}
 ```
 
 

@@ -10,4 +10,6 @@ This is not what we wanted.
 
 Let's prevent him seeing users of other tenants.
 
+We first need to load and cache user tenant information in UserDefinition.
+
 

@@ -78,3 +78,12 @@ namespace MultiTenancy.Administration.Forms
 }
 ```
 
+Need to also increase size of user dialog a bit, in *site.administration.less* to make space for tenant selection:
+
+```less
+.s-UserDialog {
+    > .size { .widthAndMin(650px); }
+    .dialog-styles(@h: auto, @l: 150px, @e: 400px);
+    .categories { height: 300px; }
+}
+```

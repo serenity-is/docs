@@ -235,3 +235,4 @@ And on top of *ProductID* property of *OrderDetailRow* you'll find another simil
 
 *Supplier*, *Category*, *Region*, *Territory* are next ones we should handle similarly. See commit log of Serenity tutorials github repository.
 
+> There might be some glitches i missed, let me know if any.

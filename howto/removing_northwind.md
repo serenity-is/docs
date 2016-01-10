@@ -25,6 +25,14 @@ Perform steps below in Visual Studio:
 
 Remove folder *MyProject.Web/Modules/Common/Migrations/NorthwindDB/* with all files under it.
 
+Remove "Northwind" from following line in *MyProject.Web/App_Start/ SiteInitialization.Migrations.cs*:
+
+```cs
+private static string[] databaseKeys = new[] { "Default", "Northwind" };
+```
+
+Also remove *Northwind* connection string from *web.config*.
+
 ### Removing LESS Entries 
 
 * Open *MyProject.Web/Content/site/site.less* file, remove following line:
@@ -80,14 +88,6 @@ public ActionResult Index()
 ```
 
 > You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
-
-### Removing Northwind References From SiteInitialization.Migrations
-
-Remove "Northwind" from following line:
-
-```cs
-private static string[] databaseKeys = new[] { "Default", "Northwind" };
-```
 
 Also delete *Northwind* connection string from *web.config*
 

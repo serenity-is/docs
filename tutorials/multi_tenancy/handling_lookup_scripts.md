@@ -212,4 +212,8 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-And on top of *ShipVia* property of *OrderRow* you'll find another similar LookupEditor attribute. Change it to [LookupEditor("Northwind.Shipper")]
+And on top of *ShipVia* property of *OrderRow* you'll find another similar LookupEditor attribute. Change it to [LookupEditor("Northwind.Shipper")].
+
+Repeat same steps for *ProductRow*.
+
+

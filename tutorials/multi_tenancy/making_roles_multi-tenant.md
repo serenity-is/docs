@@ -33,3 +33,5 @@ namespace MultiTenancy.Administration.Entities
 }
 ```
 
+Then we'll do several changes in *RoleRepository.cs*:
+

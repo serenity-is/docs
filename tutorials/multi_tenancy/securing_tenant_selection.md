@@ -67,3 +67,4 @@ private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
 }
 
 ```
+

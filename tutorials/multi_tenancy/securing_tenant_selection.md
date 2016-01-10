@@ -244,7 +244,7 @@ While logged in with Tenant2, try to create a new user, *User2*.
 
 You won't get any error but by suprise, you won't see the newly created user in list. What happened to User2?
 
-As we set, default value for *TenantId* to *1* in migrations, now *User2* has *1* as *TenantId* and is a member of *Primary Tenant*.
+As we set default value for *TenantId* to *1* in migrations, now *User2* has *1* as *TenantId* and is a member of *Primary Tenant*.
 
 We have to set new users *TenantId* to same value with logged in user.
 

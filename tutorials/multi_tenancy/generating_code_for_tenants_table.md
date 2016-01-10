@@ -26,3 +26,28 @@ namespace MultiTenancy.Administration.Entities
 //...
 ```
 
+Let's define a Administration:Tenants permission that only *admin* user will have:
+
+```cs
+namespace MultiTenancy.Administration
+{
+    public class PermissionKeys
+    {
+        public const string Security = "Administration:Security";
+        public const string Translation = "Administration:Translation";
+        public const string Tenants = "Administration:Tenants";
+    }
+}
+```
+
+And set it on TenantRow:
+
+```cs
+[ConnectionKey("Default"), DisplayName("Tenants"), InstanceName("Tenant"), TwoLevelCached]
+[ReadPermission(PermissionKeys.Tenants)]
+[ModifyPermission(PermissionKeys.Tenants)]
+[LookupScript("Administration.Tenant")]
+public sealed class TenantRow : Row, IIdRow, INameRow
+{
+
+```

@@ -134,3 +134,23 @@ private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
 private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
 private class MyListHandler : ListRequestHandler<MyRow> { }
 ```
+
+And add *IMultiTenantRow* interface to *RoleRow*:
+
+```cs
+namespace MultiTenancy.Administration.Entities
+{
+    //...
+    public sealed class RoleRow : Row, IIdRow, INameRow, IMultiTenantRow
+    {
+        //...
+        public Int32Field TenantIdField
+        {
+            get { return Fields.TenantId; }
+        }
+        //...
+    }
+}
+```
+
+You should get same result. Declarative programming is almost always better.

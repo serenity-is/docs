@@ -216,4 +216,19 @@ And on top of *ShipVia* property of *OrderRow* you'll find another similar Looku
 
 Repeat same steps for *ProductRow*.
 
+```cs
 
+namespace MultiTenancy.Northwind.Scripts
+{
+    using Entities;
+    using Serenity.ComponentModel;
+    using Serenity.Web;
+
+    [LookupScript("Northwind.Product")]
+    public class ProductLookup : MultiTenantRowLookupScript<ProductRow>
+    {
+    }
+}
+```
+
+And on top of *ProductID* property of *OrderDetailRow* you'll find another similar LookupEditor attribute. Change it to [LookupEditor("Northwind.Product")].

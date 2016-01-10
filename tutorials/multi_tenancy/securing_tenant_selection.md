@@ -275,3 +275,8 @@ protected override void SetInternalFields()
     }
 }
 ```
+
+Here, we set *TenantId* to the same value with current user, unless he has tenant administration permission.
+
+Now try to create a new user *User2b* and this time you'll see him on the list.
+

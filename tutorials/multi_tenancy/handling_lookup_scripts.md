@@ -54,7 +54,8 @@ namespace MultiTenancy.Northwind.Scripts
     using Serenity.Web;
     using System;
 
-    public abstract class MultiTenantRowLookupScript<TRow> : RowLookupScript<TRow>
+    public abstract class MultiTenantRowLookupScript<TRow> : 
+        RowLookupScript<TRow>
         where TRow : Row, IMultiTenantRow, new()
     {
         public MultiTenantRowLookupScript()
@@ -71,13 +72,16 @@ namespace MultiTenancy.Northwind.Scripts
         protected void AddTenantFilter(SqlQuery query)
         {
             var r = new TRow();
-            query.Where(r.TenantIdField == ((UserDefinition)Authorization.UserDefinition).TenantId);
+            query.Where(r.TenantIdField ==
+                ((UserDefinition)Authorization.UserDefinition).TenantId);
         }
 
         public override string GetScript()
         {
-            return TwoLevelCache.GetLocalStoreOnly("MultiTenantLookup:" + this.ScriptName + ":" +
-                ((UserDefinition)Authorization.UserDefinition).TenantId, TimeSpan.FromHours(1),
+            return TwoLevelCache.GetLocalStoreOnly("MultiTenantLookup:" + 
+                    this.ScriptName + ":" +
+                    ((UserDefinition)Authorization.UserDefinition).TenantId, 
+                    TimeSpan.FromHours(1),
                 new TRow().GetFields().GenerationKey, () =>
                 {
                     return base.GetScript();
@@ -85,3 +89,56 @@ namespace MultiTenancy.Northwind.Scripts
         }
     }
 }
+```
+
+This will be our base class for multi-tenant lookup scripts.
+
+We first set expiration to a negative timespan to disable caching. Why do we have to do this? Because dynamic script manager caches lookup scripts by their keys. But we'll have multiple versions of a lookup script based on TenantId values.
+
+We'll turn off caching at dynamic script manager level and handle caching ourself in GetScript method. In *GetScript* method, we are using *TwoLevelCache.GetLocalStoreOnly* to call base method, that generates our lookup script, and cache its result with a cache key including *TenantId*.
+
+> See relevant section for more info about TwoLevelCache class.
+
+
+By overriding, *PrepareQuery* method, we are adding a filter by current *TenantId*, just like we did in list service handlers.
+
+Now its time to rewrite our *SupplierCountryLookup* using this new base class:
+
+```cs
+namespace MultiTenancy.Northwind.Scripts
+{
+    using Serenity.ComponentModel;
+    using Serenity.Data;
+    using Serenity.Web;
+
+    [LookupScript("Northwind.SupplierCountry")]
+    public class SupplierCountryLookup : 
+        MultiTenantRowLookupScript<Entities.SupplierRow>
+    {
+        public SupplierCountryLookup()
+        {
+            IdField = TextField = "Country";
+        }
+
+        protected override void PrepareQuery(SqlQuery query)
+        {
+            var fld = Entities.SupplierRow.Fields;
+            query.Distinct(true)
+                .Select(fld.Country)
+                .Where(
+                    new Criteria(fld.Country) != "" &
+                    new Criteria(fld.Country).IsNotNull());
+
+            AddTenantFilter(query);
+        }
+
+        protected override void ApplyOrder(SqlQuery query)
+        {
+        }
+    }
+}
+```
+
+We just called *AddTenantFilter* method manually, because we weren't calling base *PrepareQuery* method here (so it won't be called by base class).
+
+

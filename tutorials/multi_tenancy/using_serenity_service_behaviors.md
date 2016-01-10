@@ -103,3 +103,23 @@ namespace MultiTenancy
     }
 }
 ```
+
+Behavior classes with IImplicitBehavior interface decide if they should be activated for a specific row type.
+
+They do this by implementing *ActivateFor* method, which is called by request handlers.
+
+In this method, we check if row type implements *IMultiTenantRow* interface. If not it simply returns false.
+
+Then we get a private reference to *TenantIdField* to reuse it later in other methods.
+
+*ActivateFor* is only called once per every handler type and row. If this method returns true, behavior instance is cached aggresively for performance reasons, and reused for any request for this row and handler type.
+
+Thus, everything you write in other methods must be thread-safe, as one instance is shared by all requests.
+
+A behavior, might intercept one or more of *Retrieve*, *List*, *Save*, *Delete* handlers. It does this by implementing *IRetrieveBehavior*, *IListBehavior*, *ISaveBehavior*, or *IDeleteBehavior* interfaces.
+
+Here, we need to intercept all of these service calls, so we implement all interfaces.
+
+We only fill in methods we are interested in, and leave others empty.
+
+The methods we implement here, corresponds to methods we override in *RoleRepository.cs* in previous chapter. The code they contain is almost same, except here we need to be more generic, as this behavior will work for any row type implementing *IMultiTenantRow*.

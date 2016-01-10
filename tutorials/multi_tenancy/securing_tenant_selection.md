@@ -173,7 +173,7 @@ Q.serviceCall({
 
 Now refresh the user management page, you'll see that *tenant2* can see admin user now!
 
-We called *User Update* service with javascript, and changed *tenant2* user *TenantId* to *1 (Primary Tenant)*.
+We called *User Update* service with javascript, and changed *tenant2* user *TenaNntId* to *1 (Primary Tenant)*.
 
 Let's revert it back to *Second Tenant (2)* first, then we'll fix this security hole:
 
@@ -211,4 +211,24 @@ protected override void GetEditableFields(HashSet<Field> editable)
 }
 ```
 
+Build your project, then try typing this into console again:
+
+```js
+Q.serviceCall({ 
+    service: 'Administration/User/Update', 
+    request: { 
+        EntityId: 2, 
+        Entity: { 
+            UserId: 2, 
+            TenantId: 1 
+        }
+    }
+});
+```
+
+You will now get this error:
+
+```
+Tenant field is read only!
+```
 

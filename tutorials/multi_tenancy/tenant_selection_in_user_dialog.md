@@ -90,3 +90,7 @@ Need to also increase size of user dialog a bit, in *site.administration.less* t
 
 Now open *User Management* page and create a user *tenant2* that belongs to *Second Tenant*.
 
+![Tenant2 User](img/create_tenant2_user.png)
+
+After creating this user, edit its permissions and grant him *User, Role Management and Permissions* permission as this will be our administrative user for *Second Tenant*.
+

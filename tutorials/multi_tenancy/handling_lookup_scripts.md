@@ -182,3 +182,12 @@ We don't have to override anything, as base class will handle everything for us.
 
 As there is no way to override this base class per row, we defined our lookup script class explicitly, and used *MultiTenantRowLookupScript* as base class.
 
+Now if you build and run application, you'll have an error:
+
+```
+'MultiTenancy.Northwind.Entities.EmployeeRow' type doesn't have a 
+[LookupScript] attribute, so it can't be used with a LookupEditor!
+```
+
+This is because we don't have a [LookupScript] attribute on top of our row class, but in some places like forms, we used [LookupEditor(typeof(EmployeeRow))].
+

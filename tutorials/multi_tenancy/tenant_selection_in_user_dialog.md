@@ -94,3 +94,14 @@ Now open *User Management* page and create a user *tenant2* that belongs to *Sec
 
 After creating this user, edit its permissions and grant him *User, Role Management and Permissions* permission as this will be our administrative user for *Second Tenant*.
 
+## Logging In With Tenant2
+
+Signout and login with user *tenant2*.
+
+When you open *User Management* page, you'll see that user can see and edit *admin* user, in addition to his own *tenant2* user. He can even see and edit his tenant in user dialog.
+
+![Tenant2 Logged In](img/tenant2_logged_in.png)
+
+This is not what we wanted.
+
+Let's prevent him seeing users of other tenants.

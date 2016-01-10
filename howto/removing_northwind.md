@@ -81,6 +81,15 @@ public ActionResult Index()
 
 > You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
 
+### Removing Northwind References From SiteInitialization.Migrations
+
+Remove "Northwind" from following line:
+
+```cs
+private static string[] databaseKeys = new[] { "Default", "Northwind" };
+```
+
+Also delete *Northwind* connection string from *web.config*
 
 ### Building Project and Running T4 (.tt) Templates
 

@@ -31,7 +31,7 @@ namespace MultiTenancy.Administration
 
 This is the class that is returned when you ask for current user through *Authorization.UserDefinition*.
 
-We also need to modify the code wher this class is loaded. In the same folder, edit *UserRetrieveService.cs* and change *GetFirst* method like below:
+We also need to modify the code where this class is loaded. In the same folder, edit *UserRetrieveService.cs* and change *GetFirst* method like below:
 
 ```cs
 private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)

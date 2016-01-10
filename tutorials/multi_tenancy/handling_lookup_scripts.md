@@ -191,3 +191,22 @@ Now if you build and run application, you'll have an error:
 
 This is because we don't have a [LookupScript] attribute on top of our row class, but in some places like forms, we used [LookupEditor(typeof(EmployeeRow))].
 
+Open *OrderRow.cs* and you'll see this attribute on top of *EmployeeID* property. Change it to *[LookupEditor("Northwind.Employee")]*.
+
+We'll do similar for *ShipperRow*. Remove *LookupScript* attribute and define class below:
+
+```cs
+
+namespace MultiTenancy.Northwind.Scripts
+{
+    using Entities;
+    using Serenity.ComponentModel;
+    using Serenity.Web;
+
+    [LookupScript("Northwind.Shipper")]
+    public class ShipperLookup : 
+        MultiTenantRowLookupScript<ShipperRow>
+    {
+    }
+}
+```

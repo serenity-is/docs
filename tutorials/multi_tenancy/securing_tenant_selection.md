@@ -10,6 +10,8 @@ This is not what we wanted.
 
 Let's prevent him seeing users of other tenants.
 
+## Loading TenantId to Cached UserDefinition
+
 We first need to load and cache user tenant information in UserDefinition.
 
 Open *UserDefinition.cs* under *Multitenancy.Web/ Modules/ Administration/ User/ Authentication* and add a *TenantId* property.
@@ -68,6 +70,8 @@ private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
 
 ```
 
+## Filtering Users By TenantId
+
 Now, it's time to filter listed users by *TenantId*. Open *UserRepository.cs*, locate *MyListHandler* class and modify it like this:
 
 ```cs
@@ -88,14 +92,15 @@ Here, we first get a reference to cached user definition of currently logged use
 
 We check if he has tenant administration permission, which only *admin* will have in the end. If not, we filter listed records by *TenantId*.
 
+## Resolving Tenant Lookup Problem
+
 After you rebuild, and launch, now user page will be like this:
 
 ![Tenant2 Logged In](img/tenant2_filtered.png)
 
 Yes, he can't see admin user anymore, but something is wrong. When you click *tenant2*, nothing will happen and you'll get an error *"Can't load script data: Lookup.Administration.Tenant*":
 
-This error is not related to our filtering. It can't load this lookup script, because current user has no permission to *Tenants* table. But how did he see it last time? 
-
+This error is not related to our recent filtering at repository level. It can't load this lookup script, because current user has no permission to *Tenants* table. But how did he see it last time? 
 He could see it, because we first logged in as *admin* and when we open edit dialog for user, we loaded this lookup script. Browser cached it, so when we logged in with *tenant2* and open edit dialog, it loaded tenants from browser cache. 
 
 But this time, as we rebuild project, browser tried to load it from server, and we got this error, as *tenant2* doesn't have this permission. It's ok, we don't want him to have this permission, but how to avoid this error?
@@ -104,4 +109,35 @@ We need to remove *Tenant* field from the user form. But we need that field for 
 
 Transform all T4 files, then open *UserDialog.cs* and override *GetPropertyItems* method like below:
 
+```cs
+namespace MultiTenancy.Administration
+{
+    using jQueryApi;
+    using Serenity;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    //...
+    public class UserDialog : EntityDialog<UserRow>
+    {
+        //...
+        protected override List<PropertyItem> GetPropertyItems()
+        {
+            var items = base.GetPropertyItems();
+
+            if (!Authorization.HasPermission("Administration:Tenants"))
+                items = items.Where(x => x.Name != UserRow.Fields.TenantId).ToList();
+
+            return items;
+        }
+    }
+}
+
+*GetPropertyItems* is the method, dialog gets its list of form fields, from server side form definition. Here fields are read from *UserForm* we defined server side.
+
+If user doesn't have tenant administration permission, we remove the *TenantId* field from form definition at client side.
+
+This doesn't modify the actual form definition, it just removes *TenantId* field for this dialog instance.
+
+Now it is possible to edit tenant2 user by himself.
 

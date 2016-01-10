@@ -141,3 +141,5 @@ This doesn't modify the actual form definition, it just removes *TenantId* field
 
 Now it is possible to edit tenant2 user by himself.
 
+## Actually Securing the Tenant Selection
+

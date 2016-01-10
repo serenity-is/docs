@@ -8,6 +8,6 @@ When you open *User Management* page, you'll see that user can see and edit *adm
 
 This is not what we wanted.
 
-Let's first prevent him seeing users of other tenants.
+Let's prevent him seeing users of other tenants.
 
 

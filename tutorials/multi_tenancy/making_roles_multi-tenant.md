@@ -6,3 +6,5 @@ Let's apply similar principles to the Roles table.
 
 Again, a user in one tenant shouldn't see or modify roles in other tenants and work in isolation.
 
+We start by adding *TenantId* property to *RoleRow.cs*:
+

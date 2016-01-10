@@ -68,3 +68,7 @@ private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
 
 ```
 
+Now, it's time to filter listed users by *TenantId*. Open *UserRepository.cs*, locate *MyListHandler* class and modify it like this:
+
+
+

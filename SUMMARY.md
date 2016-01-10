@@ -28,6 +28,7 @@
        * [Adding Tenants Table and TenantId Field](tutorials/multi_tenancy/adding_tenants_table_and_tenantid_field.md)
        * [Generating Code for Tenants Table](tutorials/multi_tenancy/generating_code_for_tenants_table.md)
        * [Tenant Selection in User Dialog](tutorials/multi_tenancy/tenant_selection_in_user_dialog.md)
+       * Securing Tenant Selection
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Remove AdminLTE Samples From Serene](howto/how_to_remove_adminlte_samples_from_serene.md)

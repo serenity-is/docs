@@ -238,3 +238,5 @@ And on top of *ProductID* property of *OrderDetailRow* you'll find another simil
 Now Northwind supports multi-tenancy.
 
 > There might be some glitches i missed, report in Serenity Github repository if any.
+
+> This feature might be integrated into Serenity, if there will be enough interest.

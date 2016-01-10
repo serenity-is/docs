@@ -172,7 +172,8 @@ namespace MultiTenancy.Northwind.Scripts
     using Serenity.Web;
 
     [LookupScript("Northwind.Employee")]
-    public class EmployeeLookup : MultiTenantRowLookupScript<EmployeeRow>
+    public class EmployeeLookup : 
+        MultiTenantRowLookupScript<EmployeeRow>
     {
     }
 }

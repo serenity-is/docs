@@ -6,7 +6,13 @@ Serenity provides service behavior system, which allows you to intercept Create,
 
 Some operations in these handlers, like capture log, unique constraint validation etc. are already implemented as service behaviors.
 
+Behaviors might be activated for all rows, or based on some rule, like having a specific attribute or interface. For example, CaptureLogBehavior activates for rows with [CaptureLog] attribute.
 
+We'll first define an interface *IMultiTenantRow* that will trigger our new behavior. Place this class next to *TenantRow.cs*:
+
+```
+
+```
 
 
 

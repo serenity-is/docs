@@ -89,8 +89,6 @@ public ActionResult Index()
 
 > You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
 
-Also delete *Northwind* connection string from *web.config*
-
 ### Building Project and Running T4 (.tt) Templates
 
 * Now rebuild your solution.

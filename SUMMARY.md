@@ -36,6 +36,7 @@
        * [Hiding the Tenant Administration Permission](tutorials/multi_tenancy/hiding_the_tenant_administration_permission.md)
        * [Making Roles Multi-Tenant](tutorials/multi_tenancy/making_roles_multi-tenant.md)
        * [Using Serenity Service Behaviors](tutorials/multi_tenancy/using_serenity_service_behaviors.md)
+       * Extending Multi-Tenant Behavior To Northwind
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Remove AdminLTE Samples From Serene](howto/how_to_remove_adminlte_samples_from_serene.md)

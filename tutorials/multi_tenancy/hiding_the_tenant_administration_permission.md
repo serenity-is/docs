@@ -68,3 +68,7 @@ public class RolePermissionRepository
             throw new AccessViolationException();
         //...
 ```
+
+Here we check if any of the new permission keys that are tried to be granted, are not listed in permission dialog. If so, this is probably a hack attempt.
+
+> Actually this check should be the default, even without multi-tenant systems, but usually we trust administrative users.

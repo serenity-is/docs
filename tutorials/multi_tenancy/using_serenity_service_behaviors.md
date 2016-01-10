@@ -153,4 +153,4 @@ namespace MultiTenancy.Administration.Entities
 }
 ```
 
-You should get same result. Declarative programming is almost always better.
+You should get the same result with much less code. Declarative programming is almost always better.

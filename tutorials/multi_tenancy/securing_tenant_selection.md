@@ -12,4 +12,6 @@ Let's prevent him seeing users of other tenants.
 
 We first need to load and cache user tenant information in UserDefinition.
 
+Open *UserDefinition.cs* under *Multitenancy.Web/ Modules/ Administration/ User/ Authentication* and add a *TenantId* property.
+
 

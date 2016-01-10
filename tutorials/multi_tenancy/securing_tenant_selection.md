@@ -102,5 +102,5 @@ But this time, as we rebuild project, browser tried to load it from server, and 
 
 We need to remove *Tenant* field from the user form. But we need that field for *admin* user, so we can't simply delete it from *UserForm.cs*. Thus, we need to do it conditionally.
 
-Open *UserDialog.cs* and add *GetPropertyItems* method like below:
+Open *UserDialog.cs* and override *GetPropertyItems* method like below:
 

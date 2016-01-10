@@ -65,6 +65,7 @@ I have created Tenants table in Default database where user tables are. Here we 
 
 We didn't add TenantId column to tables like UserPermissions, UserRoles, RolePermissions etc, as they instrinsicly have TenantId information through their UserId or RoleId.
 
+**NorthwindDB_20160110_093500_MultiTenant.cs:**
 
 ```cs
 using FluentMigrator;

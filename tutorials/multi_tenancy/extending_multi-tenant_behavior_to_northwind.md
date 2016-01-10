@@ -37,3 +37,5 @@ namespace MultiTenancy.Northwind.Entities
 
 When you these changes in *SupplierRow* and build, you'll see that *tenant2* can't see suppliers from other tenants in suppliers page.
 
+Now repeat these for *EmployeeRow*, *CategoryRow*, *CustomerRow*, *ShipperRow*, *OrderRow*, *ProductRow*, *RegionRow* and *TerritoryRow*.
+

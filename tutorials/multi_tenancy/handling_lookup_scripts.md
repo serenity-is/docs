@@ -232,3 +232,6 @@ namespace MultiTenancy.Northwind.Scripts
 ```
 
 And on top of *ProductID* property of *OrderDetailRow* you'll find another similar LookupEditor attribute. Change it to [LookupEditor("Northwind.Product")].
+
+*Supplier*, *Category*, *Region* are next ones we should handle similarly. See commit log of Serenity tutorials github repository.
+

@@ -141,4 +141,4 @@ namespace MultiTenancy.Northwind.Scripts
 
 We just called *AddTenantFilter* method manually, because we weren't calling base *PrepareQuery* method here (so it won't be called by base class).
 
-
+> Please first delete *Northwind.DynamicScripts.cs* file, if you have it.

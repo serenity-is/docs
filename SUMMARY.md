@@ -30,8 +30,8 @@
        * [Tenant Selection in User Dialog](tutorials/multi_tenancy/tenant_selection_in_user_dialog.md)
        * [Filtering Users By TenantId](tutorials/multi_tenancy/filtering_users_by_tenantid.md)
        * [Removing Tenant Dropdown From User Form](tutorials/multi_tenancy/removing_tenant_dropdown_from_user_form.md)
-       * [Setting TenantId For New Users](tutorials/multi_tenancy/setting_tenantid_for_new_users.md)
        * Securing Tenant Selection At Server Side
+       * [Setting TenantId For New Users](tutorials/multi_tenancy/setting_tenantid_for_new_users.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Remove AdminLTE Samples From Serene](howto/how_to_remove_adminlte_samples_from_serene.md)

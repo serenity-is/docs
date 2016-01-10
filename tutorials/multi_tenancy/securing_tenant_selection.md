@@ -175,7 +175,7 @@ Now refresh the user management page, you'll see that *tenant2* can see admin us
 
 We called *User Update* service with javascript, and changed *tenant2* user *TenantId* to *1 (Primary Tenant)*.
 
-Let's revert it back to *Second Tenant (2)* first, then fix this security hole:
+Let's revert it back to *Second Tenant (2)* first, then we'll fix this security hole:
 
 ```js
 Q.serviceCall({ 

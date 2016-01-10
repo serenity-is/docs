@@ -33,7 +33,7 @@
        * [Securing Tenant Selection At Server Side](tutorials/multi_tenancy/securing_tenant_selection_at_server_side.md)
        * [Setting TenantId For New Users](tutorials/multi_tenancy/setting_tenantid_for_new_users.md)
        * [Preventing Edits To Users From Other Tenants](tutorials/multi_tenancy/preventing_edits_to_users_from_other_tenants.md)
-       * Hiding the Tenant Administration Permission
+       * [Hiding the Tenant Administration Permission](tutorials/multi_tenancy/hiding_the_tenant_administration_permission.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
    * [How To: Remove AdminLTE Samples From Serene](howto/how_to_remove_adminlte_samples_from_serene.md)

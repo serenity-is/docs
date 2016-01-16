@@ -9,9 +9,7 @@ It aims to make development easier while reducing maintenance costs by avoiding 
 
 ## Who/What This Platform Is For
 
-Serenity is best suited to business applications with many data entry forms or administrative interface of public facing web sites.
-
-This doesn't mean that it can't be used for other types of applications. Some features, like script versioning/bundling, caching, code generation, fluent sql builders etc. can be helpful for any kind of application.
+Serenity is best suited to business applications with many data entry forms or administrative interface of public facing web sites. It's features can be useful for other kinds of web applications as well.
 
 
 ## Where To Look For Information
@@ -71,4 +69,26 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 * System for data based integration tests
 * Dynamic scripts
 * Script side templates
+
+## Background
+
+> This part was originally written for a CodeProject article as an introduction to Serenity. It was rejected with the reason that it didn't contain enough code. You can safely skip to next chapter, if you don't like reading history :)
+
+We, developers, are all solving the same sets of problems everyday. Just like college students working on their problem books.
+
+Even though we know that they are already solved and have answers somewhere, it doesn't stop us from working on them. Actually, it helps us improve our skills, and hey you can't learn without making some mistakes, can you? But we should learn where to draw a line between training and wasting time.
+
+When you start a new project, you have several decisions to make on platform, architecture and set of libraries. Today you have so many choices for every single topic. Yes, having some options is good, as long as they are limited, as our time is not infinite. 
+
+My first real job in web technologies was in a web agency designing country-specific web sites of some of big names in industry, e.g. automative companies (btw, we are talking about 10+ years past, time flows fast).
+
+As I had a software architect career in desktop applications before I signed there, I was asked to design a ASP.NET WebForms platform for them. They explained that they have many shared modules, like news, galleries, navigation at each site, but as requirements are different, they had to copy/paste then customize code specific to every customer. When they wanted to add a common feature, they had to repeat it for every site.
+
+At that time, there weren't so many CMS systems in market, and I designed one for them, without even knowing it was called a CMS. For me, it wasn't perfect, not even good enough as I just had a few weeks to design it. But they were very pleased with the result, as it took development of new sites down to days/weeks from months. Also resulting code was more manageable than before.
+
+Learning from that experience, and mistakes, that poor-mans CMS became something better. Later, that platform is evolved to be used by different applications, like a help-desk system, a CRM, ERP, personnel management, electronic document management, university student information system and more.
+
+To be compatible with different kinds of applications, systems and even legacy databases, it had to be flexible and went through many architectural changes.
+
+Now it takes us to Serenity. Even though it is an open source project for about 2 years, it has a much older background. But it is also young, energetic, and is not afraid of change. It can adapt to new technologies as they became popular and stable. This might mean breaking changes from time to time, but we strive to keep them to a minimum without being paranoid about backwards compability.
 

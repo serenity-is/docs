@@ -72,7 +72,7 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 
 ## Background
 
-> This part was originally written for a CodeProject article as an introduction to Serenity. It was rejected with the reason that it didn't contain enough code. You can safely skip to next chapter, if you don't like reading history :)
+> This part was originally written for a CodeProject article as an introduction to Serenity. The article was rejected with the reason that it didn't contain enough code. You can safely skip to next chapter, if you don't like reading history :)
 
 We, developers, are all solving the same sets of problems everyday. Just like college students working on their problem books.
 

@@ -90,7 +90,7 @@ As I had a software architect career in desktop applications before I signed the
 
 At that time, there weren't so many CMS systems in market, and I designed one for them, without even knowing it was called a CMS. For me, it wasn't perfect, not even good enough as I just had a few weeks to design it. But they were very pleased with the result, as it took development of new sites down to days/weeks from months. Also resulting code was more manageable than before.
 
-Learning from that experience, and mistakes, that poor-mans CMS became something better. Later, that platform is evolved to be used by different applications, like a help-desk system, a CRM, ERP, personnel management, electronic document management, university student information system and more.
+Learning from that experience, and mistakes, that poor-mans CMS became something better. Later, that platform is evolved to be used by applications in varying domains, like a help-desk system, a CRM, ERP, personnel management, electronic document management, university student information system and more.
 
 To be compatible with different kinds of applications, systems and even legacy databases, it had to be flexible and went through many architectural changes.
 

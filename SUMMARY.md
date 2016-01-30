@@ -102,7 +102,7 @@
    * [FieldFlags Enumeration](entities/fieldflags_enumeration.md)
 * [Fluent SQL](fluent_sql/fluent_sql.md)
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
-   * Criteria Objects
+   * [Criteria Objects](fluent_sql/criteria_objects.md)
 * [Widgets](widgets/README.md)
    * [ScriptContext Class](widgets/scriptcontext_class.md)
    * [Widget Class](widgets/widget_class.md)

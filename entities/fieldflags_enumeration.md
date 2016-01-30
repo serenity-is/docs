@@ -146,13 +146,19 @@ This sets the NotNull atttribute on a field to ON. Remove attribute to turn it o
 
 You may also use [Required(false)] to make field not required in forms, even if it is not nullable in database. This doesn't clear the NotNull flag.
 
-## PrimaryKey Flag
+## PrimaryKey Flag and PrimaryKey Attribute
 
 Set this for primary key fields in table. 
 
 > Primary key fields are selected on Key column selection mode in List and Retrieve request handlers.
 
-## PrimaryKey Attribute
+[PrimaryKey] attribute sets this flag ON.
 
-Sets primary key flag ON.
+## AutoIncrement Flag and AutoIncrement Attribute
+
+Set this for fields that are auto incremented on server side, e.g. identity columns, or columns using a generator.
+
+## Identity Flag and Identity Attribute
+
+This is a combination of PrimaryKey, AutoIncrement and NotNull flags, which is common for identity columns.
 

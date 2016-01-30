@@ -134,3 +134,15 @@ public string MyField
 
 > Insertable and Updatable attributes are subclasses of SetFieldFlags attribute.
 
+## NotNull Flag
+
+Use this flag to set fields as not nullable. By default, this flag is set for fields that are not nullable in database, using NotNull attribute.
+
+When a field is not nullable, its corresponding label in forms has a red asterisk and they are required to be entered.
+
+## NotNullable Attribute
+
+This sets the NotNull atttribute on a field to ON. Remove attribute to turn it off. 
+
+You may also use [Required(false)] to make field not required in forms, even if it is not nullable in database. This doesn't clear the NotNull flag.
+

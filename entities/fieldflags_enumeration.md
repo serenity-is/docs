@@ -200,7 +200,7 @@ This should only be used in rare cases for such unmapped fields.
 
 If set, denies filtering operations on a sensitive field. This can be useful for secret fields like PasswordHash, that shouldn't be allowed to be selected or filtered by client side.
 
-## Unique Flag
+## Unique Flag and Unique Attribute
 
 When a field has this flag, its value is checked against existing values in database to be unique.
 

@@ -58,7 +58,7 @@ public string MyField
 
 Use *Insertable(true)* to turn it on. 
 
-> Non insertable fields are not hidden. They are just readonly. If you want to hide them, write something like *form.MyField.GetGridField().Toggle(IsNew)* by overriding *UpdateInterface* method.
+> Non insertable fields are not hidden. They are just readonly. If you want to hide them, use [HideOnInsert] attribute (Serenity 1.9.8+) or write something like *form.MyField.GetGridField().Toggle(IsNew)* by overriding *UpdateInterface* method of your dialog.
 
 ## Updatable Flag
 
@@ -80,7 +80,9 @@ public string MyField
 
 Use *Updatable(true)* to turn it on. 
 
-> Non updatable fields are not hidden in dialogs. They are just readonly. If you want to hide them, write something like *form.MyField.GetGridField().Toggle(!IsNew)* by overriding *UpdateInterface* method.
+> Non updatable fields are not hidden in dialogs. They are just readonly. 
+
+If you want to hide them, use [HideOnInsert] attribute (Serenity 1.9.8+) or write something like *form.MyField.GetGridField().Toggle(!IsNew)* by overriding *UpdateInterface* method of your dialog.
 
 ## Trim Flag
 

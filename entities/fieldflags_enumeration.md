@@ -204,4 +204,4 @@ If set, denies filtering operations on a sensitive field. This can be useful for
 
 When a field has this flag, its value is checked against existing values in database to be unique.
 
-You can turn on this flag with Unique attribute and determine if this constraint should be checked on service level (in addition to database level).
+You can turn on this flag with Unique attribute and determine if this constraint should be checked on service level (before the check in database level to avoid cryptic constraint errors).

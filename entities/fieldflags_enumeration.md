@@ -1,0 +1,2 @@
+# FieldFlags Enumeration
+

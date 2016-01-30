@@ -146,4 +146,8 @@ You may also use [Required(false)] to make field not required in forms, even if 
 
 ## PrimaryKey Flag
 
-Set this for primary key fields in table.
+Set this for primary key fields in table. 
+
+> Primary key fields are selected on Key column selection mode in List and Retrieve request handlers.
+
+

@@ -80,9 +80,7 @@ public string MyField
 
 Use *Updatable(true)* to turn it on. 
 
-> Non updatable fields are not hidden in dialogs. They are just readonly. 
-
-If you want to hide them, use [HideOnUpdate] attribute (Serenity 1.9.8+) or write something like *form.MyField.GetGridField().Toggle(!IsNew)* by overriding *UpdateInterface* method of your dialog.
+> Non updatable fields are not hidden in dialogs. They are just readonly. If you want to hide them, use [HideOnUpdate] attribute (Serenity 1.9.8+) or write something like *form.MyField.GetGridField().Toggle(!IsNew)* by overriding *UpdateInterface* method of your dialog.
 
 ## Trim Flag
 

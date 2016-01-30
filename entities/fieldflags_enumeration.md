@@ -146,6 +146,12 @@ This sets the NotNull atttribute on a field to ON. Remove attribute to turn it o
 
 You may also use [Required(false)] to make field not required in forms, even if it is not nullable in database. This doesn't clear the NotNull flag.
 
+## Required Flag
+
+This is a combination of Default and NotNullable flags. 
+
+> It has no relation to [Required] attribute which controls validation in forms.
+
 ## PrimaryKey Flag and PrimaryKey Attribute
 
 Set this for primary key fields in table. 
@@ -162,3 +168,38 @@ Set this for fields that are auto incremented on server side, e.g. identity colu
 
 This is a combination of PrimaryKey, AutoIncrement and NotNull flags, which is common for identity columns.
 
+## Foreign Flag
+
+This flag is set for foreign view fields, that are originating from other tables through a join.
+
+It is automatically set for fields with expressions containing table aliases other than T0.
+
+For example, if a field has an attribute like [Expression("jCountry.CountryName")] it will have this flag.
+
+> This has no relation to ForeignKey attribute
+
+## Calculated Flag
+
+If a field has an expression involving more than one field or some mathematical operations, it will have this flag.
+
+This could also be set for fields that are calculated on SQL server side.
+
+## ClientSide Flag and ClientSide Attribute
+
+Corresponds to an unmapped field in Serenity entities. They don't have a corresponding field in database table. 
+
+These kinds of fields can be used for temporary calculation, storage and transfer on client and service layers.
+
+## Reflective Flag
+
+This is used for an advanced form of unmapped fields, where they don't have a storage of their own in row, but reflects value of another field in a different form. For example, a field that displays absolute value of a integer field that can be negative.
+
+This should only be used in rare cases for such unmapped fields.
+
+## DenyFiltering Flag
+
+If set, denies filtering operations on a sensitive field. This can be useful for secret fields like PasswordHash, that shouldn't be allowed to be selected or filtered by client side.
+
+## Unique Flag
+
+When a field has this flag, its value is checked against existing values in database to be unique.

@@ -99,6 +99,7 @@
        * [TwoLevelCache Class](caching/twolevelcache_class.md)
 * [Entities (Row)](entities/entities_row.md)
    * [Mapping Attributes](entities/mapping_attributes.md)
+   * FieldFlags Enumeration
 * [Fluent SQL](fluent_sql/fluent_sql.md)
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
 * [Widgets](widgets/README.md)

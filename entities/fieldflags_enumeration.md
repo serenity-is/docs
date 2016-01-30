@@ -122,7 +122,9 @@ public string MyField
 
 To include TrimToEmpty and Updatable but remove Insertable:
 ```vs
-[SetFieldFlags(FieldFlags.Updatable | FieldFlags.TrimToEmpty, FieldFlags.Insertable)]
+[SetFieldFlags(
+    FieldFlags.Updatable | FieldFlags.TrimToEmpty,
+    FieldFlags.Insertable)]
 public string MyField
 {
     get { return Fields.MyField[this];
@@ -150,4 +152,7 @@ Set this for primary key fields in table.
 
 > Primary key fields are selected on Key column selection mode in List and Retrieve request handlers.
 
+## PrimaryKey Attribute
+
+Sets primary key flag ON.
 

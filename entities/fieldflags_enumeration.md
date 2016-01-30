@@ -27,7 +27,7 @@ public enum FieldFlags
 }
 ```
 
-An ordinary table field has *Insertable*, *Updatable* and *Trim* attributes set by default.
+An ordinary table field has *Insertable*, *Updatable* and *Trim* flags set by default which corresponds to *Default* combination flag.
 
 ## Insertable Flag
 
@@ -144,3 +144,6 @@ This sets the NotNull atttribute on a field to ON. Remove attribute to turn it o
 
 You may also use [Required(false)] to make field not required in forms, even if it is not nullable in database. This doesn't clear the NotNull flag.
 
+## PrimaryKey Flag
+
+Set this for primary key fields in table.

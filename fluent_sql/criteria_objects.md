@@ -447,7 +447,7 @@ NOT (a >= @p1) -- @p1 = 5
 
 ## Usage with Field Objects
 
-We have used Criteria object constructor so far to build criteria. Field objects also has similar overloads to build criteria.
+We have used Criteria object constructor so far to build criteria. Field objects also has similar overloads, so they can be used in place of them.
 
 For example, using Order, Detail and Customer rows from Northwind sample:
 
@@ -485,19 +485,19 @@ FROM
 LEFT JOIN 
     Customers o_c ON (o_c.CustomerID = o.CustomerID) 
 WHERE 
-    o_c.[Country] = @p2 AND 
-        (CASE WHEN 
-            o.[ShippedDate] IS NULL THEN 0
-         ELSE 1 
-         END) = @p3 
+    o_c.[Country] = @p2
+    AND (CASE WHEN 
+        o.[ShippedDate] IS NULL THEN 0
+     ELSE 1 
+     END) = @p3 
     AND o.CustomerID IN (
         SELECT 
             c.CustomerID AS [CustomerID] 
         FROM 
             Customers c 
         WHERE 
-            c.Region = @p1) AND 
-    (SELECT 
+            c.Region = @p1) 
+    AND (SELECT 
         SUM((od.[UnitPrice] * od.[Quantity] - od.[Discount])) 
      FROM
         [Order Details] od 

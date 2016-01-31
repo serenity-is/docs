@@ -147,7 +147,9 @@ But this won't work with criteria objects, as output of above criteria would be:
 Field1 > 5 AND Field2 > 7 OR Field2 < 3
 ```
 
-> Information here applies to Serenity versions before 1.9.8. After this version Serenity puts paranthesis around all binary criteria even if you don't use paranthesis.
+> Information here applies to Serenity versions before 1.9.8. After this version Serenity puts paranthesis around all binary criteria (AND OR etc) even if you don't use paranthesis.
+
+> So only use ~ if you want to put an explicit parenthesis somewhere.
 
 
 What happened to our paranthesis? Let's try putting more paranthesis.

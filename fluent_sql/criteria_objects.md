@@ -433,3 +433,14 @@ WHERE
   )
 ```
 
+## NOT Operator
+
+Use C# ! (not) operator to use NOT:
+
+```cs
+!(new Criteria("a") >= 5)
+```
+
+```sql
+NOT (a >= @p1) -- @p1 = 5
+```

@@ -294,3 +294,27 @@ new SqlQuery()
     .Where(new Criteria("SomeOtherField") == myParam)
     .SetParam(myParam.Name, 5);
 ```
+
+## ConstantCriteria
+
+If you don't want to use parameterized queries, you may put your values as ConstantCriteria objects. They will not be converted to auto parameters.
+
+```
+new SqlQuery()
+    .From("MyTable")
+    .Select("MyField")
+    .Where(
+        new Criteria("Field1") == new ConstantCriteria(1) &
+        new Criteria("Field2") != new ConstantCriteria("ABC")
+    )
+```
+
+```sql
+SELECT 
+  MyField
+FROM
+  MyTable
+WHERE
+  FirstOne >= 1
+  SecondOne >= N'ABC'
+```

@@ -318,3 +318,32 @@ WHERE
   FirstOne >= 1
   SecondOne >= N'ABC'
 ```
+
+## Null Comparison
+
+In SQL, comparing against NULL values using operators like `==`, `!=` returns NULL. You should use IS NULL or IS NOT NULL for such comparisons.
+
+Criteria objects don't overload comparisons against null (or object), so you may get errors if you try to write expressions like below:
+
+```
+new Criteria("a") == null; // what is type of null?
+
+int b? = null;
+new Criteria("c") == b; // no overload for nullable types
+```
+
+These could be written using IsNull and Nullable.Value methods:
+
+```
+new Criteria("a").IsNull();
+new Criteria("a").IsNotNull();
+int? b = 5;
+new Criteria("c") == b.Value;
+```
+
+If you are desperate to write Field = NULL, you could do this:
+
+```
+new Criteria("Field") == new Criteria("NULL")
+```
+

@@ -185,3 +185,86 @@ Field1 > 5 AND (Field2 > 7 OR Field2 < 3)
 >(Field1 > 5) AND (((Field2 > 7) OR (Field2 < 3)))
 >```
 
+## Comparison Operators (>, >=, <, <=, ==, !=)
+
+The most of C# comparison operators are overloaded, so you can use them as is with criteria.
+
+```
+new Criteria("Field1") == new Criteria("1") &
+new Criteria("Field2") != new Criteria("2") &
+new Criteria("Field3") > new Criteria("3") &
+new Criteria("Field4") >= new Criteria("4") &
+new Criteria("Field5") < new Criteria("5") &
+new Criteria("Field6") <= new Criteria("6")
+```
+
+```sql
+Field1 == 1 AND
+Field2 <> 2 AND
+Field3 > 3 AND
+Field4 >= 4 AND
+Field5 < 5 AND
+Field6 <= 6
+```
+
+## Values and Parameters
+
+When one side of a comparison operator is a criteria and other side is an integer, string, date, guid etc. value, it is converted a parameter criteria.
+ 
+```
+new Criteria("Field1") == 1 &
+new Criteria("Field2") != "ABC" &
+new Criteria("Field3") > DateTime.Now &
+new Criteria("Field4") >= Guid.NewGuid() &
+new Criteria("Field5") < 5L
+```
+
+```sql
+Field1 == @p1 AND
+Field2 <> @p2 AND
+Field3 > @p3 AND
+Field4 >= @p4 AND
+Field5 < @p5
+```
+
+These parameters has corresponding values, when a query containing this criteria is sent to SQL.
+
+Automatic parameter numbering starts from 1 by default, but last number is stored in the query the criteria is used with, so it might change.
+
+Let's use this criteria in a query:
+
+```
+new SqlQuery()
+    .From("MyTable")
+    .Select("Field999")
+    .Where(new Criteria("FirstOne") >= 999)
+    .Where(new Criteria("SecondOne") >= 999)
+    .Where(
+        new Criteria("Field1") == 1 &
+        new Criteria("Field2") != "ABC" &
+        new Criteria("Field3") > DateTime.Now &
+        new Criteria("Field4") >= Guid.NewGuid() &
+        new Criteria("Field5") < 5L
+    )
+```
+
+```sql
+SELECT 
+  Field999
+FROM
+  MyTable
+WHERE
+  FirstOne >= @p1 AND
+  SecondOne >= @p2 AND
+  Field1 == @p3 AND
+  Field2 <> @p4 AND
+  Field3 > @p5 AND
+  Field4 >= @p6 AND
+  Field5 < @p7
+```
+
+Here same criteria before used parameter numbers starting from 3, as prior 2 numbers where used for other WHERE statements coming before it.
+
+So parameter numbering uses the query as context. You shouldn't make assumptions about what parameter name will be.
+
+

@@ -444,3 +444,63 @@ Use C# ! (not) operator to use NOT:
 ```sql
 NOT (a >= @p1) -- @p1 = 5
 ```
+
+## Usage with Field Objects
+
+We have used Criteria object constructor so far to build criteria. Field objects also has similar overloads to build criteria.
+
+For example, using Order, Detail and Customer rows from Northwind sample:
+
+```
+	var o = OrderRow.Fields.As("o");
+	var od = OrderDetailRow.Fields.As("od");
+	var c = CustomerRow.Fields.As("c");
+	var query = new SqlQuery()
+		.From(o)
+		.Select(o.CustomerID);
+		
+	query.Where(
+		o.CustomerCountry == "France" &
+		o.ShippingState == 1 &
+		o.CustomerID.In(
+			query.SubQuery()
+				.From(c)
+				.Select(c.CustomerID)
+				.Where(c.Region == "North")) &
+		new Criteria(
+			query.SubQuery()
+				.From(od)
+				.Select(Sql.Sum(od.LineTotal.Expression))
+				.Where(od.OrderID == o.OrderID)) >= 1000);
+				
+```
+
+Its output would be:
+
+```sql
+SELECT 
+    o.CustomerID AS [CustomerID] 
+FROM 
+    Orders o 
+LEFT JOIN 
+    Customers o_c ON (o_c.CustomerID = o.CustomerID) 
+WHERE 
+    o_c.[Country] = @p2 AND 
+        (CASE WHEN 
+            o.[ShippedDate] IS NULL THEN 0
+         ELSE 1 
+         END) = @p3 
+    AND o.CustomerID IN (
+        SELECT 
+            c.CustomerID AS [CustomerID] 
+        FROM 
+            Customers c 
+        WHERE 
+            c.Region = @p1) AND 
+    (SELECT 
+        SUM((od.[UnitPrice] * od.[Quantity] - od.[Discount])) 
+     FROM
+        [Order Details] od 
+     WHERE 
+        od.OrderID = o.OrderID) >= @p4
+```

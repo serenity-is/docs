@@ -179,3 +179,9 @@ Now SQL looks like we hoped before:
 ```sql
 Field1 > 5 AND (Field2 > 7 OR Field2 < 3)
 ```
+
+> As Serenity 1.9.8+ auto paranthesis binary criteria, above expression would actually be:
+>```sql
+>(Field1 > 5) AND (((Field2 > 7) OR (Field2 < 3)))
+>```
+

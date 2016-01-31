@@ -207,7 +207,7 @@ Field5 < 5 AND
 Field6 <= 6
 ```
 
-## Values and Parameters
+## Inline Values
 
 When one side of a comparison operator is a criteria and other side is an integer, string, date, guid etc. value, it is converted a parameter criteria.
  
@@ -229,7 +229,7 @@ Field5 < @p5
 
 These parameters has corresponding values, when a query containing this criteria is sent to SQL.
 
-Automatic parameter numbering starts from 1 by default, but last number is stored in the query the criteria is used with, so it might change.
+Automatic parameter numbering starts from 1 by default, but last number is stored in the query the criteria is used with, so numbers might change.
 
 Let's use this criteria in a query:
 
@@ -263,8 +263,34 @@ WHERE
   Field5 < @p7
 ```
 
-Here same criteria before used parameter numbers starting from 3, as prior 2 numbers where used for other WHERE statements coming before it.
+Here the same criteria that listed before, used parameter numbers starting from 3, instead of 1. Because prior 2 numbers where used for other WHERE statements coming before it.
 
 So parameter numbering uses the query as context. You shouldn't make assumptions about what parameter name will be.
 
+## ParamCriteria and Explicit Param Names
 
+If you want to use some explicitly named parameter, you can make use of ParamCriteria:
+
+```cs
+new SqlQuery()
+    .From("SomeTable")
+    .Select("SomeField")
+    .Where(new Criteria("SomeField") <= new ParamCriteria("@myparam"))
+    .Where(new Criteria("SomeOtherField") == new ParamCriteria("@myparam"))
+    .SetParam("@myparam", 5);
+```
+
+Here we set param value using SetParam extension of SqlQuery.
+
+We could also declare this param beforehand and reuse it:
+
+```cs
+var myParam = new ParamCriteria("@myparam");
+
+new SqlQuery()
+    .From("SomeTable")
+    .Select("SomeField")
+    .Where(new Criteria("SomeField") <= myParam)
+    .Where(new Criteria("SomeOtherField") == myParam)
+    .SetParam(myParam.Name, 5);
+```

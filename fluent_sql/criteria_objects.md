@@ -254,13 +254,13 @@ SELECT
 FROM
   MyTable
 WHERE
-  FirstOne >= @p1 AND
-  SecondOne >= @p2 AND
-  Field1 == @p3 AND
-  Field2 <> @p4 AND
-  Field3 > @p5 AND
-  Field4 >= @p6 AND
-  Field5 < @p7
+  FirstOne >= @p1 AND -- @p1 = 999
+  SecondOne >= @p2 AND -- @p2 = 999
+  Field1 == @p3 AND -- @p3 = 1
+  Field2 <> @p4 AND -- @p4 = N'ABC'
+  Field3 > @p5 AND -- @p5 = '2016-01-31T01:16:23'
+  Field4 >= @p6 AND -- @p6 = '23123-DEFCD-....'
+  Field5 < @p7 -- @p7 = 5
 ```
 
 Here the same criteria that listed before, used parameter numbers starting from 3, instead of 1. Because prior 2 numbers where used for other WHERE statements coming before it.
@@ -345,5 +345,91 @@ If you are desperate to write Field = NULL, you could do this:
 
 ```
 new Criteria("Field") == new Criteria("NULL")
+```
+
+## LIKE Operators
+
+Criteria has methods *Like, NotLike, StartsWith, EndsWith, Contains, NotContains* to help with LIKE operations.
+
+```cs
+new Criteria("a").Like("__C%") &
+new Criteria("b").NotLike("D%") &
+new Criteria("c").StartsWith("S") &
+new Criteria("d").EndsWith("X") &
+new Criteria("e").Contains("This") &
+new Criteria("f").NotContains("That")
+```
+
+```sql
+a LIKE @p1 AND -- @p1 = N'__C%'
+b NOT LIKE @p2 AND -- @p2 = N'D%'
+c LIKE @p3 AND -- @p3 = 'S%'
+d LIKE @p4 AND -- @p4 = N'%X'
+e LIKE @p5 AND -- @p5 = N'%This%'
+f NOT LIKE @p6 -- @p6 = N'%That%'
+```
+
+## IN and NOT IN Operators
+
+Use an inline array to use IN or NOT IN:
+
+```
+new Criteria("A").In(1, 2, 3, 4, 5)
+```
+
+```sql
+A IN (@p1, @p2, @p3, @p4, @p5) 
+-- @p1 = 1, @p2 = 2, @p3 = 3, @p4 = 4, @p5 = 5
+```
+
+```
+new Criteria("A").NotIn(1, 2, 3, 4, 5)
+```
+
+```sql
+A NOT IN (@p1, @p2, @p3, @p4, @p5)
+-- @p1 = 1, @p2 = 2, @p3 = 3, @p4 = 4, @p5 = 5
+```
+
+You may also pass any enumerable to IN method:
+
+```cs
+IEnumerable<int> x = new int[] { 1, 3, 5, 7, 9 };
+new Criteria("A").In(x);
+```
+
+```sql
+A IN (1, 3, 5, 7, 9)
+-- @p1 = 1, @p2 = 3, @p3 = 5, @p4 = 7, @p5 = 9
+```
+
+It is also possible to use a subquery:
+
+```cs
+var query = new SqlQuery()
+    .From("MyTable")
+    .Select("MyField");
+    
+query.Where("SomeID").In(
+    query.SubQuery()
+        .From("SomeTable")
+        .Select("SomeID")
+        .Where(new Criteria("Balance") < 0));
+```
+
+```sql
+SELECT 
+  MyField
+FROM
+  MyTable
+WHERE
+  SomeID IN (
+    SELECT 
+        SomeID 
+    FROM
+        SomeTable
+    WHERE
+        Balance < @p1 -- @p1 = 0
+  )
 ```
 

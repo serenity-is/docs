@@ -41,5 +41,6 @@ In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
 public Decimal MyProperty { get; set; }
 ```
 
+** How to set current date in a date editor: **
 
 

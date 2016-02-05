@@ -46,3 +46,4 @@ Your hosting provider has set your web application pool to medium trust. Ask the
 Serenity initializes field objects with reflection. Under medium trust, it can't do that. You may try replacing all **public  readonly*" field declarations with "*public static"* in *Row.cs, but not sure if this will resolve all problems. 
 
 > ASP.NET has made Medium trust obsolete, and they won't fix any problems related to this anymore. See http://stackoverflow.com/questions/16849801/is-trying-to-develop-for-medium-trust-a-lost-cause
+> It is strongly recommended to change your hosting provider

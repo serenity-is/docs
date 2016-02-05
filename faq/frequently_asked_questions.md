@@ -8,13 +8,13 @@ It's recommended to only generate code once. You should add new fields to row, c
 
 But if you made too many changes, and want to generate code again it is possible. Sergen will launch Kdiff3 to let you merge changes, so that it won't override the changes you might have made to the code generated before.
 
+___
+
 ** I'm having an error in Sergen about KDiff3. Where to set its location: **
 
 Sergen looks for KDiff3 at its default location under Program Files directory. Install it if you didn't yet.
 
 If Kdiff3 is at another location, edit Serenity.CodeGenerator.config in your solution directory. This is a JSON file containing settings and preferences for Sergen.
-
-> Make sure you use same number of digits for min and max value.
 
 ## Publishing and Deployment
 
@@ -40,6 +40,7 @@ In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
 [DecimalEditor(MinValue = "-999999999.99", MaxValue = "999999999.99")]
 public Decimal MyProperty { get; set; }
 ```
+> Make sure you use same number of digits for min and max value.
 
 ** How to set current date in a date editor in new record mode: **
 

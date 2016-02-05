@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-** How To Publish Serenity Applications: **
+** How can i publish Serenity applications: **
 
 Serenity applications are x-copy deployable. You just need to setup connection strings after deployment. You might exclude source files from deployment.
 
@@ -12,7 +12,7 @@ You can also use publish feature in Visual Studio. Make sure build action for al
 
 Serenity uses a NuGet version of ASP.NET MVC, so there is no need to install MVC on server. If you get some DLL missing error, check that its *Copy Local* option of VS project references is set to *True*.
 
-** How To Allow Negative Values in DecimalEditor: **
+** How to allow negative values in DecimalEditor: **
 
 In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
 

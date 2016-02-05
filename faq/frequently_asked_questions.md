@@ -41,6 +41,9 @@ In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
 public Decimal MyProperty { get; set; }
 ```
 
-** How to set current date in a date editor: **
+** How to set current date in a date editor in new record mode: **
 
+Add [DefaultValue("today")] for date, or [DefaultValue("now")] for date time editor in form declaration.
+
+> Don't do this in row. It may cause errors.
 

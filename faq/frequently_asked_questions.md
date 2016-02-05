@@ -21,6 +21,12 @@ In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
 public Decimal MyProperty { get; set; }
 ```
 
+## I'm having an error in Sergen for KDiff3. Where to set its location:
+
+Sergen looks for KDiff3 at its default location under Program Files directory. Install it if you didn't yet.
+
+If Kdiff3 is in another location, edit Serenity.CodeGenerator.config in your solution directory. This is a JSON file containing settings and preferences for Sergen.
+
 > Make sure you use same number of digits for min and max value.
 
 # Troubleshooting

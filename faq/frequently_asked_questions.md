@@ -25,7 +25,13 @@ public Decimal MyProperty { get; set; }
 
 Sergen looks for KDiff3 at its default location under Program Files directory. Install it if you didn't yet.
 
-If Kdiff3 is in another location, edit Serenity.CodeGenerator.config in your solution directory. This is a JSON file containing settings and preferences for Sergen.
+If Kdiff3 is at another location, edit Serenity.CodeGenerator.config in your solution directory. This is a JSON file containing settings and preferences for Sergen.
+
+## Should I regenerate code after adding fields to my table
+
+It's recommended to only generate code once. You should add new fields to row, column and form classes manually, taking existing fields as a sample.
+
+But if you made too many changes, and want to generate code again it is possible. Sergen will launch Kdiff3 to let you merge changes, so that it won't override the changes you might have made to the code generated before.
 
 > Make sure you use same number of digits for min and max value.
 

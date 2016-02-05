@@ -47,3 +47,8 @@ Add [DefaultValue("today")] for date, or [DefaultValue("now")] for date time edi
 
 > Don't do this in row. It may cause errors.
 
+Another option is to do this in dialog, overriding *AfterLoadEntity*:
+
+```cs`
+form.MyDateField.AsDate = JsDate.Today;
+```

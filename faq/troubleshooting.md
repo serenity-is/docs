@@ -43,4 +43,4 @@ Serene has a check to avoid running migrations on an arbitrary database. Find th
 
 Your hosting provider has set your web application pool to medium trust. Ask them to grant high trust, or if possible change provider.
 
-Serenity initializes field objects with reflection. Under medium trust, it can't do that. You may try replacing all **public static readonly*" field declarations with "*public static"*, but not sure if this will resolve all problems. 
+Serenity initializes field objects with reflection. Under medium trust, it can't do that. You may try replacing all **public  readonly*" field declarations with "*public static"* in *Row.cs, but not sure if this will resolve all problems. 

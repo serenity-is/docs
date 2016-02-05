@@ -12,6 +12,17 @@ You can also use publish feature in Visual Studio. Make sure build action for al
 
 Serenity uses a NuGet version of ASP.NET MVC, so there is no need to install MVC on server. If you get some DLL missing error, check that its *Copy Local* option of VS project references is set to *True*.
 
+** How To Allow Negative Values in DecimalEditor: **
+
+In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
+
+```
+[DecimalEditor(MinValue = "-999999999.99", MaxValue = "999999999.99")]
+public Decimal MyProperty { get; set; }
+```
+
+> Make sure you use same number of digits for min and max value.
+
 # Troubleshooting
 
 
@@ -47,3 +58,6 @@ To revert to Select2 3.5.1, type following in package manager console:
 
 > Update-Package Select2.js -Version 3.5.1
 
+___
+
+** I'm trying to use LookupEditor but

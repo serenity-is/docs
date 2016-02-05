@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Troubleshooting
 * [Getting Started](getting_started/README.md)
    * [Installing Serene From Visual Studio Gallery](getting_started/installing_serene_from_visual_studio_gallery.md)
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
@@ -54,6 +53,7 @@
    * [How To: Authenticate With Active Directory or LDAP](howto/how_to_authenticate_with_active_directory_or_ldap.md)
    * [How To: Add Inline Action Buttons To Grid](howto/how_to_add_inline_action_buttons_to_grid.md)
 * [Frequently Asked Questions](faq/frequently_asked_questions.md)
+* Troubleshooting
 * [Service Locator & Initialization](service_locator/README.md)
    * [Dependency Static Class](service_locator/dependency_static_class.md)
    * [IDependencyResolver Interface](service_locator/idependencyresolver_interface.md)

@@ -39,7 +39,7 @@ ___
 
 Serene has a check to avoid running migrations on an arbitrary database. Find this check under *RunMigrations* method of *SiteInitialization.Migrations* file and remove it.
 
-** I'm getting *FieldAccessExceptions* with message "Cannot set a constant field" **
+** *FieldAccessExceptions* with message "Cannot set a constant field" **:
 
 Your hosting provider has set your web application pool to medium trust. Ask them to grant high trust, or if possible change provider.
 

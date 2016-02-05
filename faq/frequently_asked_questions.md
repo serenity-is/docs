@@ -21,7 +21,7 @@ In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
 public Decimal MyProperty { get; set; }
 ```
 
-## I'm having an error in Sergen for KDiff3. Where to set its location:
+** I'm having an error in Sergen for KDiff3. Where to set its location: **
 
 Sergen looks for KDiff3 at its default location under Program Files directory. Install it if you didn't yet.
 
@@ -29,7 +29,7 @@ If Kdiff3 is at another location, edit Serenity.CodeGenerator.config in your sol
 
 > Make sure you use same number of digits for min and max value.
 
-## Should I regenerate code after adding fields to my table
+** Should I regenerate code after adding fields to my table:**
 
 It's recommended to only generate code once. You should add new fields to row, column and form classes manually, taking existing fields as a sample.
 
@@ -69,7 +69,3 @@ Please don't update Select2 to a version later than 3.5.1. Recent versions has s
 To revert to Select2 3.5.1, type following in package manager console:
 
 > Update-Package Select2.js -Version 3.5.1
-
-___
-
-** I'm trying to use LookupEditor but

@@ -12,7 +12,17 @@ Please don't use dot in solution name. You may rename solution after creation if
 
 ## Permissions
 
-** I have 
+** My page is not shown in navigation: **
+
+Page access permissions are read from *PageAuthorize* attribute on *Index* action of *XYZPage.cs* file, which is your MVC page controller. Make sure you set this to a permission user has.
+
+** I have added a permission to PermissionKeys.cs but it doesn't show in user permissions dialog:**
+
+PermissionKeys class is just for intellisense purposes. See [How To: Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md) for information about registering keys.
+
+** Changed permission keys on row, but i'm getting an error when i open the page, and no records displayed:**
+
+Your XYZEndpoint.cs also has a *[ServiceAuthorize("SomePermission")]* on it. This is to provide a secondary level security. Replace permission key with the one on Row. 
 
 ## NuGet Packages and Updates
 

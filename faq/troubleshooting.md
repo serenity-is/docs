@@ -10,6 +10,10 @@ Template system might not be able to locate templates when projects are named th
 
 Please don't use dot in solution name. You may rename solution after creation if required.
 
+## Permissions
+
+** I have 
+
 ## NuGet Packages and Updates
 
 ___

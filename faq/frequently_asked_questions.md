@@ -42,6 +42,10 @@ For DELETE, delete handler looks for these permissions in order on row:
 - 1) DeleteInsertPermission
 - 2) ModifyPermission
 - 3) ReadPermission
+ 
+For LIST, only one permission is checked:
+
+- 1) ReadPermission
 
 
 ## Publishing and Deployment

@@ -40,3 +40,5 @@ For example in site.texts.invariant.json file, there is such keys:
 ```
 
 The keys ending with colon (:), like *Administration:* and *Customer:* corresponds to categories and these are their display texts.
+
+You need to add texts for categories to invariant language at minimum. You may also add to other languages, if you want localization.

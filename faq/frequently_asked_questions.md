@@ -23,6 +23,27 @@ If Kdiff3 is at another location, edit Serenity.CodeGenerator.config in your sol
 
 Instead of [ModifyPermission] attribute use [InsertPermission] and [UpdatePermission] attributes on rows.
 
+By default, for INSERT, save handler looks for these permissions on row in this order on row:
+
+- 1) InsertPermission
+- 2) ModifyPermission 
+- 3) ReadPermission
+
+Only the first one that is found is checked.
+
+Similarly for UPDATE, save handler looks for these permissions in order on row:
+
+- 1) UpdatePermission
+- 2) ModifyPermission
+- 3) ReadPermission
+
+For DELETE, delete handler looks for these permissions in order on row:
+
+- 1) DeleteInsertPermission
+- 2) ModifyPermission
+- 3) ReadPermission
+
+
 ## Publishing and Deployment
 
 ** How can i publish Serenity applications: **

@@ -16,6 +16,13 @@ Sergen looks for KDiff3 at its default location under Program Files directory. I
 
 If Kdiff3 is at another location, edit Serenity.CodeGenerator.config in your solution directory. This is a JSON file containing settings and preferences for Sergen.
 
+
+## Permissions
+
+** I want to separate INSERT permission from UPDATE permission **:
+
+Instead of [ModifyPermission] attribute use [InsertPermission] and [UpdatePermission] attributes on rows.
+
 ## Publishing and Deployment
 
 ** How can i publish Serenity applications: **

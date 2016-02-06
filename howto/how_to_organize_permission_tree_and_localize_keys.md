@@ -20,7 +20,7 @@ If you need a generic permission for such a category, use something like *MyModu
 
 ## Handling Category Display Texts
 
-As categories are automatically determined from permission keys, they don't have a user friendly display text form them.
+As categories are automatically determined from permission keys, they don't have a user friendly display text for them.
 
 You need to add display texts for them using localization system.
 

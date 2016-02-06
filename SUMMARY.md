@@ -52,7 +52,7 @@
    * [How To: Set Database Dialect for Connections](howto/how_to_set_database_dialect_for_connections.md)
    * [How To: Authenticate With Active Directory or LDAP](howto/how_to_authenticate_with_active_directory_or_ldap.md)
    * [How To: Add Inline Action Buttons To Grid](howto/how_to_add_inline_action_buttons_to_grid.md)
-   * How To: Register Permissions in Serene
+   * [How To: Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)
 * [Frequently Asked Questions](faq/frequently_asked_questions.md)
 * [Troubleshooting](faq/troubleshooting.md)
 * [Service Locator & Initialization](service_locator/README.md)

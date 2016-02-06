@@ -26,7 +26,7 @@ You need to add display texts for them using localization system.
 
 > If you don't need localization, just add texts to site.texts.invariant.json
 
-For example in site.texts.invariant.json file, there is such keys:
+For example in site.texts.invariant.json file, there are such keys:
 
 ```json
     "Permission.Administration:": "Administration",

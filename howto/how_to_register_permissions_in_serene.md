@@ -20,7 +20,7 @@ These attributes can be used with and located from one of these types:
 - On top of *XYZPage* and in action methods (PageAuthorize)
 - On top of *XYZEndpoint* and in service actions (ServiceAuthorize)
 
-If you don't use a permission key with any of them but still want to show it in permission dialogs, you can use *RegisterPermission* attribute on assembly (write these anywhere in YourProject.Web):
+If you don't use a permission key with any of them but still want to show it in permission dialogs, you can use *RegisterPermission* attribute on assembly (write this anywhere in YourProject.Web):
 
 ```cs
 [assembly: Serenity.ComponentModel.RegisterPermissionKey("MySpecialPermissionKey")]

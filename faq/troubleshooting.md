@@ -16,17 +16,23 @@ Please don't use dot in solution name. You may rename solution after creation if
 
 Page access permissions are read from *PageAuthorize* attribute on *Index* action of *XYZPage.cs* file, which is your MVC page controller. Make sure you set this to a permission user has.
 
+___
+
+
 ** I have added a permission to PermissionKeys.cs but it doesn't show in user permissions dialog:**
 
 PermissionKeys class is just for intellisense purposes. See [How To: Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md) for information about registering keys.
+
+___
 
 ** Changed permission keys on row, but i'm getting an error when i open the page, and no records displayed:**
 
 Your XYZEndpoint.cs also has a *[ServiceAuthorize("SomePermission")]* on it. This is to provide a secondary level security. Replace permission key with the one on Row. 
 
+___
+
 ## NuGet Packages and Updates
 
-___
 
 ** I have some errors after updating Select2: **
 
@@ -39,8 +45,6 @@ To revert to Select2 3.5.1, type following in package manager console:
 
 ## Deployment and Publishing
 
-___
-
 ** After publishing project some content is not found, or not displayed: **
 
 If you are using Visual Studio publish, make sure that css, image files etc are included in web project and their build action is set to content.
@@ -52,6 +56,8 @@ ___
 ** Table not found (e.g. User) errors after publish: **
 
 Serene has a check to avoid running migrations on an arbitrary database. Find this check under *RunMigrations* method of *SiteInitialization.Migrations* file and remove it.
+
+___
 
 ** *FieldAccessExceptions* with message "Cannot set a constant field" **:
 

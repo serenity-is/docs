@@ -43,7 +43,7 @@ For DELETE, delete handler looks for these permissions in order on row:
 - 2) ModifyPermission
 - 3) ReadPermission
  
-For LIST, only one permission is checked:
+For LIST / RETRIEVE, only one permission is checked:
 
 - 1) ReadPermission
 

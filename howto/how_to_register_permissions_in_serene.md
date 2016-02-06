@@ -22,6 +22,10 @@ These attributes can be used with and located from one of these types:
 
 When you use a permission key with one of such attributes, Serene will automatically discover them using reflection at application start.
 
+> There is a PermissionKeys class in Serene. Some users expected that when they write their permission keys in this class, they will be discovered. 
+
+> But, PermissionKeys class is only there for intellisense purposes, it is ignored by Serene.
+
 If you don't use a permission key with any of them but still want to show it in permission dialogs, you can use *RegisterPermission* attribute on assembly (write this anywhere in YourProject.Web):
 
 ```cs

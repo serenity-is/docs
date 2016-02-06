@@ -46,7 +46,7 @@ These keys will be shown under MyModule / SubModule category. Thus their categor
 
 > Category keys ends with colon. Don't use permission keys that ends with colon.
 
-Please don't use permission keys that clashes with category keys. If you use such keys, for example *MyModule:SubModule* it won't be shown under *MyModule / SubModule* category but next to it at same level.
+Please don't use permission keys that matches category keys. If you use such keys, for example *MyModule:SubModule* it won't be shown under *MyModule / SubModule* category but next to it at same level.
 
 If you need a generic permission for such a category, use something like *MyModule:SubModule:General*.
 

@@ -10,6 +10,14 @@ Template system might not be able to locate templates when projects are named th
 
 Please don't use dot in solution name. You may rename solution after creation if required.
 
+## Editors and Forms
+
+** Tried to setup cascaded dropdowns but my second dropdown is always empty:**
+
+Make sure your CascadeField is correct, matches property name in secondary lookup properly. For example CountryID doesn't match CountryId at script side. You may use nameof() operator.
+
+Another possibility is that CascadeField is not included in lookup data that is sent to script side. For example, if second dropdown is city selection, which is connected to a country dropdown through CountryId, make sure that CountryId property in CityRow has a [LookupInclude] attribute on it.
+
 ## Permissions
 
 ** My page is not shown in navigation: **

@@ -41,6 +41,12 @@ ___
 
 Your XYZEndpoint.cs also has a *[ServiceAuthorize("SomePermission")]* on it. This is to provide a secondary level security. Replace permission key with the one on Row. 
 
+## Localization
+
+** My localizations lost on live site after publishing: **
+
+The translations you made using translation interface are saved to files under ~/App_Data directory. Either copy these files to live server, or move texts in them to relevant files under ~/Scripts/site/texts.
+
 ___
 
 ## NuGet Packages and Updates

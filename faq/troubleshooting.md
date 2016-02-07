@@ -18,7 +18,7 @@ Make sure your CascadeField is correct and it matches property name in secondary
 
 A similar problem might occur if you fail to correctly set CascadeFrom option. This corresponds to first dropdown ID in your form. For example, if there are MyCountryId and CustomerCityId properties in the form, CascadeForm should be *CustomerCountryId*. Again, you can use nameof(MyCountryId) to be certain.
 
-> CascadeFrom is an editor ID while CascadeField is a field property name in row.
+> CascadeFrom is an editor ID in form, while CascadeField is a field property name in row.
 
 Another possibility is that CascadeField is not included in lookup data that is sent to script side. For example, if second dropdown is city selection, which is connected to a country dropdown through CountryId, make sure that CountryId property in CityRow has a [LookupInclude] attribute on it.
 

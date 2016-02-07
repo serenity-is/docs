@@ -10,6 +10,15 @@ Template system might not be able to locate templates when projects are named th
 
 Please don't use dot in solution name. You may rename solution after creation if required.
 
+## Compilation Errors
+
+** I'm getting several *ambiguous reference* errors after adding a file to Script project :**
+
+Remove *System* reference from script project. Visual Studio adds this reference when you use *Add New File* dialog. Saltarelle Compiler doesn't like such references.
+
+Please use copy/paste to create code files in Script project.
+
+
 ## Editors and Forms
 
 ** Tried to setup cascaded dropdowns but my second dropdown is always empty:**

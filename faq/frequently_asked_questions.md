@@ -79,6 +79,13 @@ public Decimal MyProperty { get; set; }
 
 Use *Q.ReloadLookup("MyModule.MyLookupKey")* to reload a lookup by its key.
 
+** How to create filter editor for an Enum: **
+
+```
+AddEqualityFilter<EnumEditor>(SomeRow.Fields.TheEnumField,
+    options: new EnumEditor { EnumKey = "MyModule.MyEnumType" });
+```
+
 ___
 
 ** How to set current date in a date editor in new record mode: **

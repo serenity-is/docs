@@ -74,6 +74,11 @@ public Decimal MyProperty { get; set; }
 ```
 > Make sure you use same number of digits for min and max value.
 
+
+** How can i reload a lookup editor data **
+
+Use *Q.ReloadLookup("MyModule.MyLookupKey")* to reload a lookup by its key.
+
 ___
 
 ** How to set current date in a date editor in new record mode: **

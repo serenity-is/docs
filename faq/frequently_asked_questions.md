@@ -81,7 +81,7 @@ Use *Q.ReloadLookup("MyModule.MyLookupKey")* to reload a lookup by its key.
 
 ** How to create filter editor for an Enum: **
 
-```
+```cs
 AddEqualityFilter<EnumEditor>(SomeRow.Fields.TheEnumField,
     options: new EnumEditor { EnumKey = "MyModule.MyEnumType" });
 ```

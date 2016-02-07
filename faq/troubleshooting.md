@@ -20,7 +20,7 @@ A similar problem might occur if you fail to correctly set CascadeFrom option. T
 
 > CascadeFrom is an editor ID in form, while CascadeField is a field property name in row.
 
-Another possibility is that CascadeField is not included in lookup data that is sent to script side. For example, if second dropdown is city selection, which is connected to a country dropdown through CountryId, make sure that CountryId property in CityRow has a [LookupInclude] attribute on it.
+Another possibility is that CascadeField is not included in lookup data that is sent to script side. For example, if second dropdown is city selection, which is connected to a country dropdown through CountryId, make sure that CountryId property in CityRow has a [LookupInclude] attribute on it. By default, only ID and Name properties are sent to script side for lookups.
 
 ## Permissions
 

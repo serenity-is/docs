@@ -18,6 +18,12 @@ Remove *System.dll* reference from script project. Visual Studio adds this refer
 
 Please use copy/paste to create code files in Script project.
 
+## Runtime Errors
+
+** I'm getting *NotImplementException* when uploading files, or adding notes: **
+
+Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work such keys.
+
 
 ## Editors and Forms
 

@@ -14,7 +14,7 @@ Please don't use dot in solution name. You may rename solution after creation if
 
 ** I'm getting several *ambiguous reference* errors after adding a file to Script project :**
 
-Remove *System.dll* reference from script project. Visual Studio adds this reference when you use *Add New File* dialog. Saltarelle Compiler doesn't work with such references, as it has a different runtime.
+Remove *System.dll* reference from script project. Visual Studio adds this reference when you use *Add New File* dialog. Saltarelle Compiler doesn't work with such references, as it has a completely different runtime.
 
 Please use copy/paste to create code files in Script project.
 

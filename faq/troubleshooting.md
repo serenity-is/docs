@@ -22,6 +22,12 @@ A similar problem might occur if you fail to correctly set CascadeFrom option. T
 
 Another possibility is that CascadeField is not included in lookup data that is sent to script side. For example, if second dropdown is city selection, which is connected to a country dropdown through CountryId, make sure that CountryId property in CityRow has a [LookupInclude] attribute on it. By default, only ID and Name properties are sent to script side for lookups.
 
+___
+
+** Tried to create tabs using a dialog template, but my tab is not shown or empty: **
+
+Make sure you don't put a tab content, inside another one, like DIV inside another tab DIV.
+
 ## Permissions
 
 ** My page is not shown in navigation: **

@@ -54,7 +54,9 @@ ___
 
 ** I have added a permission to PermissionKeys.cs but it doesn't show in user permissions dialog:**
 
-PermissionKeys class is just for intellisense purposes. See [How To Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)  for information about registering keys.
+PermissionKeys class is just for intellisense purposes. See below for information about registering keys.
+
+[How To Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)
 
 ___
 

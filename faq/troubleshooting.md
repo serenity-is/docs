@@ -56,7 +56,7 @@ ___
 
 PermissionKeys class is just for intellisense purposes. See below for information about registering keys.
 
-[How To Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)
+* [How To Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)
 
 ___
 

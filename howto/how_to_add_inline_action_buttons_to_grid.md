@@ -29,7 +29,7 @@ namespace Serene.Northwind
                 Title = "",
                 Format = ctx =>
                 {
-                    return "<a class='inline-action delete-row' title='delete' />";
+                    return "<a class='inline-action delete-row' title='delete'></a>";
                 },
                 Width = 24,
                 MinWidth = 24,
@@ -122,7 +122,7 @@ protected override List<SlickColumn> GetColumns()
         Title = "",
         Format = ctx =>
         {
-            return "<a class='inline-action delete-row' title='delete' />";
+            return "<a class='inline-action delete-row' title='delete'></a>";
         },
         Width = 24,
         MinWidth = 24,
@@ -135,7 +135,7 @@ protected override List<SlickColumn> GetColumns()
         Title = "",
         Format = ctx =>
         {
-            return "<a class='inline-action edit-row' title='edit customer' />";
+            return "<a class='inline-action edit-row' title='edit customer'></a>";
         },
         Width = 24,
         MinWidth = 24,

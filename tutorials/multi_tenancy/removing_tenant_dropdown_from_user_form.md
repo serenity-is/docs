@@ -48,3 +48,14 @@ If user doesn't have tenant administration permission, we remove the *TenantId* 
 This doesn't modify the actual form definition, it just removes *TenantId* field for this dialog instance.
 
 Now it is possible to edit tenant2 user by himself.
+
+> Some users report that this also removes tenant selection for admin user. Make sure your HasPermission method in Authorization.cs of MultiTenancy.Script project is like below:
+
+>```cs
+>public static bool HasPermission(string permissionKey)
+>{
+>return 
+>        UserDefinition.Username == "admin" ||
+>        UserDefinition.Permissions[permissionKey];
+>}
+>```

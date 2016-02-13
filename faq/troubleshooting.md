@@ -74,7 +74,7 @@ ___
 
 **I have added some custom local text keys but can't access them from script side:**
 
-Not all translations are transferred to script side. There is a setting in web.config with *LocalTextPackages* key, that controls these prefixes. If you look there, you can see that only text keys that are starting with *Db.*, *Dialogs.*, *Forms.* etc are used for client side. This is to limit size of texts as not all of them are used in script code.
+Not all translations are transferred to script side. There is a setting in web.config with *LocalTextPackages* key, that controls these prefixes. If you look there, you can see that only text keys that are starting with *Db.*, *Dialogs.*, *Forms.* etc are transferred to client side. This is to limit size of texts as not all of them are used in script code.
 
 Either add your own prefix there, or change your keys to start with one of default prefixes.
 

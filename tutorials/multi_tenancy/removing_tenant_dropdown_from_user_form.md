@@ -54,7 +54,7 @@ Now it is possible to edit tenant2 user by himself.
 >```cs
 >public static bool HasPermission(string permissionKey)
 >{
->return 
+>   return 
 >        UserDefinition.Username == "admin" ||
 >        UserDefinition.Permissions[permissionKey];
 >}

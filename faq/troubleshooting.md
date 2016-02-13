@@ -2,7 +2,7 @@
 
 ## Initial Setup
 
-** After you create a new Serene application and launch it, login screen doesn't show and you see an error message in console that says *Template.LoginPanel is not found*: **
+**After you create a new Serene application and launch it, login screen doesn't show and you see an error message in console that says *Template.LoginPanel is not found*:**
 
 You probably used an invalid solution name, like MyProject.Something that contains dot (.) 
 
@@ -12,7 +12,7 @@ Please don't use dot in solution name. You may rename solution after creation if
 
 ## Compilation Errors
 
-** I'm getting several *ambiguous reference* errors after adding a file to Script project :**
+**I'm getting several *ambiguous reference* errors after adding a file to Script project :**
 
 Remove *System.dll* reference from script project. Visual Studio adds this reference when you use *Add New File* dialog. Saltarelle Compiler doesn't work with such references, as it has a completely different runtime.
 
@@ -20,14 +20,14 @@ Please use copy/paste to create code files in Script project.
 
 ## Runtime Errors
 
-** I'm getting *NotImplementException* when uploading files, or adding notes: **
+**I'm getting *NotImplementException* when uploading files, or adding notes:**
 
 Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work with such keys.
 
 
 ## Editors and Forms
 
-** Tried to setup cascaded dropdowns but my second dropdown is always empty:**
+**Tried to setup cascaded dropdowns but my second dropdown is always empty:**
 
 Make sure your CascadeField is correct and it matches property name in secondary lookup properly. For example CountryID doesn't match CountryId at script side. You may use nameof() operator like CascadeField = nameof(CityRow.CountryId) to be sure.
 
@@ -69,6 +69,14 @@ Your XYZEndpoint.cs also has a *[ServiceAuthorize("SomePermission")]* on it. Thi
 ** My localizations lost on live site after publishing: **
 
 The translations you made using translation interface are saved to files under ~/App_Data directory. Either copy these files to live server, or move texts in them to relevant files under ~/Scripts/site/texts.
+
+___
+
+**I have added some custom local text keys but can't access them from script side:**
+
+Not all translations are transferred to script side. There is a setting in web.config with *LocalTextPackages* key, that controls these prefixes. If you look there, you can see that only text keys that are starting with *Db.*, *Dialogs.*, *Forms.* etc are used for client side. This is to limit size of texts as not all of them are used in script code.
+
+Either add your own prefix there, or change your keys to start with one of default prefixes.
 
 ___
 

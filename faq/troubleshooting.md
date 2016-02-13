@@ -22,7 +22,7 @@ Please use copy/paste to create code files in Script project.
 
 ** I'm getting *NotImplementException* when uploading files, or adding notes: **
 
-Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work such keys.
+Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work with such keys.
 
 
 ## Editors and Forms

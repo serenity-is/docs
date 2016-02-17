@@ -24,6 +24,11 @@ Please use copy/paste to create code files in Script project.
 
 Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work with such keys.
 
+## T4 Template Problems
+
+**My enum is not transferred to script side, after transforming templates:**
+
+If you use an enum type in a row or service request / response it will be transferred, otherwise it won't by default. If you still want to include this enum, add [ScriptInclude] attribute on top of it.
 
 ## Editors and Forms
 

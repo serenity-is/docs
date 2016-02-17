@@ -18,6 +18,10 @@ Remove *System.dll* reference from script project. Visual Studio adds this refer
 
 Please use copy/paste to create code files in Script project.
 
+**Error: System.ComponentModel.DisplayName attribute exists in both ...\Serenity.Script.UI.dll and ...\v2.0...\System.dll** 
+
+Same as above, remove *System.dll* reference from script project.
+
 ## Runtime Errors
 
 **I'm getting *NotImplementException* when uploading files, or adding notes:**

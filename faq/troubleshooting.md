@@ -52,6 +52,23 @@ ___
 
 Make sure you don't put a tab content, inside another one, like DIV inside another tab DIV.
 
+## Master/Detail Editing
+
+**I created a in memory master detail editing similar to one in Movie Tutorial cast editor, but when i update a record, i'm getting duplicate entries:**
+
+Make sure you don't have a [IdProperty] on your EditDialog class. As edit dialogs work in memory with records that doesn't yet have actual IDs, if you use your actual ID property with them, dialog will think that you are adding new records on update (as their actual ID value is always null).
+
+As you see in code below, GridEditorDialog base class uses a fake ID:
+
+```cs
+[IdProperty("__id")]
+public abstract class GridEditorDialog<TEntity> : EntityDialog<TEntity>
+    where TEntity : class, new()
+```
+
+So when you put [IdProperty] to your edit dialog, you're overwriting this fake ID and causing unexpected behavior.
+
+
 ## Permissions
 
 ** My page is not shown in navigation: **

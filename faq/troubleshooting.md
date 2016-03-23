@@ -68,6 +68,10 @@ public abstract class GridEditorDialog<TEntity> : EntityDialog<TEntity>
 
 So when you put [IdProperty] to your edit dialog, you're overwriting this fake ID and causing unexpected behavior.
 
+**I'm succesfully adding details but later when open an existing record, some view fields are empty:**
+
+Please put [MinSelectLevel(SelectLevel.List)] on your view fields in YourDetailRow.cs. By default, List handlers and MasterDetailBehavior only loads table fields (not view fields) of detail rows.
+
 
 ## Permissions
 

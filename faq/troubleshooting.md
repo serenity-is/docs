@@ -61,7 +61,7 @@ Another possibility is that CascadeField is not included in lookup data that is 
 
 ___
 
-** Tried to create tabs using a dialog template, but my tab is not shown or empty: **
+**Tried to create tabs using a dialog template, but my tab is not shown or empty:**
 
 Make sure you don't put a tab content, inside another one, like DIV inside another tab DIV.
 
@@ -90,14 +90,14 @@ Please put [MinSelectLevel(SelectLevel.List)] on your view fields in YourDetailR
 
 ## Permissions
 
-** My page is not shown in navigation: **
+**My page is not shown in navigation:**
 
 Page access permissions are read from *PageAuthorize* attribute on *Index* action of *XYZPage.cs* file, which is your MVC page controller. Make sure you set this to a permission user has.
 
 ___
 
 
-** I have added a permission to PermissionKeys.cs but it doesn't show in user permissions dialog:**
+**I have added a permission to PermissionKeys.cs but it doesn't show in user permissions dialog:**
 
 PermissionKeys class is just for intellisense purposes. See below for information about registering keys.
 
@@ -139,7 +139,7 @@ To revert to Select2 3.5.1, type following in package manager console:
 
 ## Deployment and Publishing
 
-** After publishing project some content is not found, or not displayed: **
+**After publishing project some content is not found, or not displayed:**
 
 If you are using Visual Studio publish, make sure that css, image files etc are included in web project and their build action is set to content.
 
@@ -147,7 +147,7 @@ Another possibility is that IIS_IUSRS user group can't access files. Check that 
 
 ___
 
-** Table not found (e.g. User) errors after publish: **
+**Table not found (e.g. User) errors after publish:**
 
 Serene has a check to avoid running migrations on an arbitrary database. Find this check under *RunMigrations* method of *SiteInitialization.Migrations* file and remove it.
 

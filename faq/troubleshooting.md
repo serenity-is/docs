@@ -28,6 +28,19 @@ Same as above, remove *System.dll* reference from script project.
 
 Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work with such keys.
 
+
+### SQL and Connections
+
+**When i change page in grid, i'm getting error, "Incorrect syntax near 'OFFSET'. Invalid usage of the option NEXT in the FETCH statement:**
+
+Your SQL server version is 2008 or older. By default, SQL Server connections use SQL2012 dialect. Do something like below for your connections in SiteInitialization.cs and your dialect for all to SqlServer2005 or SqlServer2008:
+
+```cs
+  SqlConnections.GetConnectionString("Default").Dialect =
+    SqlServer2008Dialect.Instance;
+```
+
+
 ## T4 Template Problems
 
 **My enum is not transferred to script side, after transforming templates:**
@@ -67,6 +80,8 @@ public abstract class GridEditorDialog<TEntity> : EntityDialog<TEntity>
 ```
 
 So when you put [IdProperty] to your edit dialog, you're overwriting this fake ID and causing unexpected behavior.
+
+___
 
 **I'm succesfully adding details but later when open an existing record, some view fields are empty:**
 

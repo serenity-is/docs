@@ -29,7 +29,7 @@ Same as above, remove *System.dll* reference from script project.
 Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work with such keys.
 
 
-### SQL and Connections
+## SQL and Connections
 
 **When i change page in grid, i'm getting error, "Incorrect syntax near 'OFFSET'. Invalid usage of the option NEXT in the FETCH statement:**
 

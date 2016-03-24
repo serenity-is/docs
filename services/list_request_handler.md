@@ -1,7 +1,7 @@
 # ListRequestHandler
 
 
-This is the base class that handles List requests from client side, e.g. from grids.
+This is the base class that handles List requests originating from client side, e.g. from grids.
 
 Let's first sample when and how this class handles list requests:
 
@@ -13,11 +13,14 @@ Let's first sample when and how this class handles list requests:
     
     c) You might manually call a list service using XYZService.List method.
     
-2. A service request (AJAX) to MVC XYZController (in file XYZEndpoint.cs) arrives at server.
+2. A service request (AJAX) to MVC XYZController (in file XYZEndpoint.cs) arrives at server. Request parameters are deserialized from JSON into a ListRequest object.
 3. XYZEndpoint calls XYZRepository.List method with retrieved ListRequest object.
-4. XYZRepository.List method creates a subclass of ListRequestHandler (MyListHandler) and invokes its Process method with ListRequest.
-5. ListRequestHandler.Process method builds up a dynamic SQL query, based on ListRequest, metadata in its entity type (Row) and other information and executes it.
+4. XYZRepository.List method creates a subclass of ListRequestHandler (XYZRepository.MyListHandler) and invokes its Process method with the ListRequest.
+5. ListRequestHandler.Process method builds up a dynamic SQL query, based on the ListRequest, metadata in its entity type (Row) and other information and executes it.
 6. ListRequestHandler.Process returns a ListResponse with Entities member that contains rows to be returned.
+7. XYZEndpoint receives this ListResponse, returns it from action.
+8. ListResponse is serialized to JSON, sent back to client
+9. Grid receives entities, updates its displayed rows and other parts like paging status.
     
 We'll cover how grids build and submit a list request in another chapter. Let's focus on ListRequestHandler for now.
 
@@ -142,3 +145,4 @@ This is because ListRequest class definition at client side has a bit different 
         // ...
     }
 ```
+

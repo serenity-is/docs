@@ -229,7 +229,7 @@ CustomerService.List(connection, new ListRequest
 }, response => {});
 ```
 
-You could set Criteria parameter of ListRequest in your XYZGrid.cs like below:
+You could set Criteria parameter of generated ListRequest that is about to be submitted in your XYZGrid.cs like below:
 
 ```cs
 protected override bool OnViewSubmit()

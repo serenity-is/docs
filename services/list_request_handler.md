@@ -82,7 +82,40 @@ This parameter takes an array of columns to sort results on. Sorting is performe
 
 SortBy parameter expects a list of *SortBy* objects:
 
+```cs
+[JsonConverter(typeof(JsonSortByConverter))]
+public class SortBy
+{
+    public SortBy()
+    {
+    }
 
+    public SortBy(string field)
+    {
+        Field = field;
+    }
 
+    public SortBy(string field, bool descending)
+    {
+        Field = field;
+        Descending = descending;
+    }
+
+    public string Field { get; set; }
+    public bool Descending { get; set; }
+}
+```
+
+When calling a List method of XYZRepository server side to sort by Country then City descending, you might do it like this:
+
+```cs
+new CustomerRepository().List(connection, new ListRequest
+{
+    SortBy = new[] { 
+        new SortBy("Country"),
+        new SortBy("City", descending: true)
+    }
+});
+```
 
 

@@ -106,6 +106,7 @@
 * [Fluent SQL](fluent_sql/fluent_sql.md)
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
    * [Criteria Objects](fluent_sql/criteria_objects.md)
+* Services
 * [Widgets](widgets/README.md)
    * [ScriptContext Class](widgets/scriptcontext_class.md)
    * [Widget Class](widgets/widget_class.md)
@@ -113,5 +114,4 @@
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
-* Services
 

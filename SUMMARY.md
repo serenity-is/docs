@@ -106,7 +106,7 @@
 * [Fluent SQL](fluent_sql/fluent_sql.md)
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
    * [Criteria Objects](fluent_sql/criteria_objects.md)
-* Services
+* [Services](services.md)
    * List Request Handler
 * [Widgets](widgets/README.md)
    * [ScriptContext Class](widgets/scriptcontext_class.md)

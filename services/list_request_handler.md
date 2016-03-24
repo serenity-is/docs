@@ -239,7 +239,7 @@ protected override bool OnViewSubmit()
         return false;
 
     // view object is the data source for grid (SlickRemoteView)
-    // this is an EntityGrid so its Params object is a ListRequest
+    // this is an EntityGrid so view.Params is a ListRequest
     var request = (ListRequest)view.Params;
 
     // we use " &= " here because otherwise we might clear 

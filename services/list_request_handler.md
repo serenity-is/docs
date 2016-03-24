@@ -266,3 +266,123 @@ If this parameter is True, list handler will return all rows without looking at 
 > Some grids for such rows have a little eraser icon on top right to toggle this flag, thus show deleted records or hide them (default).
 
 
+### ListRequest.ColumnSelection Parameter
+
+Serenity tries hard to load only required columns of your entities from SQL server to limit network traffic to minimum between SQL Server < - > WEB Server and thus keep data size transferred to client as low as possible.
+
+ListRequest has a ColumnSelection parameter for you to control the set of columns loaded from SQL.
+
+ColumnSelection enumeration has following values defined:
+
+```cs    
+public enum ColumnSelection
+{
+    List = 0,
+    KeyOnly = 1,
+    Details = 2,
+}
+```
+
+By default grid requests records from List service in "ColumnSelection.List" mode (can be changed). Thus, its list request looks like this:
+
+```cs
+new ListRequest
+{
+    ColumnSelection = ColumnSelection.List
+}
+```
+
+In *ColumnSelection.List* mode, ListRequestHandler returns *table* fields, thus fields that actually belong to the table, not view fields that are originating from joined tables. 
+
+One exception is *expression* fields that only contains reference to *table* fields, e.g. *(t0.FirstName + ' ' + t0.LastName)*. ListRequestHandler also loads such fields.
+
+### ListRequest.IncludeColumns Parameter
+
+We told that grid requests records in *List* mode, so loads only *table* fields, then how it can show columns that originate from other tables?
+
+Grid sends list of visible columns to List service with *IncludeColumns*, so these columns are *included* in selection even if they are view fields.
+
+If you have a ProductGrid that shows SupplierName column its actual ListRequest looks like this:
+
+```cs
+new ListRequest
+{
+    ColumnSelection = ColumnSelection.List,
+    IncludeColumns = new List<string> {
+        "ProductID",
+        "ProductName",
+        "SupplierName",
+        "..."
+    }
+}
+```
+
+Thus, these extra view fields are also included in *selection*.
+
+### ListRequest.ExcludeColumns Parameter
+
+Opposite of IncludeColumns is ExcludeColumns. Let's say you have a nvarchar(max) *Notes* field on your row that is never shown in the grid. To lower network traffic, you may choose to NOT load this field in product grid:
+
+```cs
+new ListRequest
+{
+    ColumnSelection = ColumnSelection.List,
+    IncludeColumns = new List<string> {
+        "ProductID",
+        "ProductName",
+        "SupplierName",
+        "..."
+    },
+    ExcludeColumns = new List<string> {
+        "Notes"
+    }
+}
+```
+
+OnViewSubmit is a good place to set these parameter:
+
+```cs
+protected override bool OnViewSubmit()
+{
+    if (!base.OnViewSubmit())
+        return false;
+
+    var request = (ListRequest)view.Params;
+    request.ExcludeColumns = new List<string> { "Notes" }
+    return true;
+}
+```
+
+### Controlling Loading At Server Side
+
+
+
+```cs
+[MinSelectLevel(SelectLevel.Details)]
+public String Note
+{
+    get { return Fields.Note[this]; }
+    set { Fields.Note[this] = value; }
+}
+```
+
+There is a SelectLevel enumeration that controls when a field is loaded for different ColumnSelection levels:
+
+```cs
+public enum SelectLevel
+{
+    Default = 0,
+    Always = 1,
+    Lookup = 2,
+    List = 3,
+    Details = 4,
+    Explicit = 5,
+    Never = 6
+}
+```
+
+By default, table fields  have a select level of *SelectLevel.List* while view fields have *SelectLevel.Details*. 
+
+*SelectLevel.Default*, which is the default value, corresponds to *SelectLevel.List* for table fields and *SelectLevel.Details* for view fields.
+
+*SelectLevel.Always* means such a field is selected for any column selection mode, even if it is explicitly 

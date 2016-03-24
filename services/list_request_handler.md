@@ -37,11 +37,11 @@ First we should have a look at what members a ListRequest object have:
       public SortBy[] Sort { get; set; }
       public string ContainsText { get; set; }
       public string ContainsField { get; set; }
+      public Dictionary<string, object> EqualityFilter { get; set; }
       [JsonConverter(typeof(JsonSafeCriteriaConverter))]
       public BaseCriteria Criteria { get; set; }
       public bool IncludeDeleted { get; set; }
       public bool ExcludeTotalCount { get; set; }
-      public Dictionary<string, object> EqualityFilter { get; set; }
       public ColumnSelection ColumnSelection { get; set; }
       [JsonConverter(typeof(JsonStringHashSetConverter))]
       public HashSet<string> IncludeColumns { get; set; }
@@ -145,4 +145,42 @@ This is because ListRequest class definition at client side has a bit different 
         // ...
     }
 ```
+
+Column names used here should be Property names of corresponding fields. Expressions are not accepted. E.g. this won't work!:
+
+```cs
+CustomerService.List(connection, new ListRequest
+{
+    SortBy = new[] { "t0.FirstName + ' ' + t0.LastName" }
+}, response => {});
+```
+
+### ListRequest.ContainsText and ListRequest.ContainsField Parameters
+
+These parameters are used by quick search funtionality which is search input on top left of grids.
+
+When only ContainsText is specified and ContainsField is empty, searching is performed on all fields with [QuickSearch] attribute on them.
+
+It is possible to define some specific field list to perform searches on grid client side, by overriding GetQuickSearchField() methods. So when such a field is selected in quick search input, search is only performed on that column. 
+
+If you set ContainsField to a field name that doesn't have QuickSearch attribute on it, system will raise an exception. This is for security purposes.
+
+As usual, searching is done with dynamic SQL by LIKE statements.
+
+```cs
+CustomerService.List(connection, new ListRequest
+{
+    ContainsText = "the",
+    ContainsField = "CompanyName"
+}, response => {});
+```
+
+```sql
+SELECT ... FROM Customers WHERE CompanyName LIKE '%the%' 
+```
+
+### ListRequest.EqualityFilter Parameter
+
+
+
 

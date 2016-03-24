@@ -256,3 +256,13 @@ protected override bool OnViewSubmit()
 
 > You could also set other parameters of ListRequest in your grids similarly.
 
+
+### ListRequest.IncludeDeleted
+
+This parameter is only useful with rows that implements IIsActiveDeletedRow interface. If row has such an interface, list handler by default only returns rows that are not deleted (IsActive != -1). It is a way to not delete rows actually but mark them as deleted.
+
+If this parameter is True, list handler will return all rows without looking at IsActive column.
+
+> Some grids for such rows have a little eraser icon on top right to toggle this flag, thus show deleted records or hide them (default).
+
+

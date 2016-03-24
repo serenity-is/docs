@@ -254,3 +254,5 @@ protected override bool OnViewSubmit()
 }
 ```
 
+> You could also set other parameters of ListRequest in your grids similarly.
+

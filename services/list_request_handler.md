@@ -198,4 +198,59 @@ CustomerService.List(connection, new ListRequest
 SELECT * FROM Customers t0 WHERE t0.Country = "Germany" 
 ```
 
+> Again, you should use property names as equality field keys, not expressions. Serenity doesn't allow any arbitrary SQL expressions from client side, to prevent SQL injections.
+
+Please note that null and empty string values are simply ignored, similar to ContainsText, so it's not possible to filter for empty or null values with EqualityFilter. Such a request would return all records:
+
+```cs
+CustomerService.List(connection, new ListRequest
+{
+    EqualityFilter = new JsDictionary<string, object> {
+        { "Country", "" }, // won't work, empty string is ignored
+        { "City", null }, // won't work, null is ignored
+    }
+}, response => {});
+```
+
+Use Criteria parameter if you intent to filter customers with empty countries. 
+
+
+### ListRequest.Criteria 
+
+This parameter accepts criteria objects similar to server side Criteria objects we talked about in Fluent SQL chapter. Only difference is, as these criteria objects are sent from client side, they have to be validated and can't contain any arbitrary SQL expressions.
+
+Service request below will only return customers with empty country or null city values
+
+```cs
+CustomerService.List(connection, new ListRequest
+{
+    Criteria = new Criteria("Country") == "" | 
+        new Criteria("City").IsNull()
+}, response => {});
+```
+
+You could set Criteria parameter of ListRequest in your XYZGrid.cs like below:
+
+```cs
+protected override bool OnViewSubmit()
+{
+    // only continue if base class didn't cancel request
+    if (!base.OnViewSubmit())
+        return false;
+
+    // view object is the data source for grid (SlickRemoteView)
+    // this is an EntityGrid so its Params object is a ListRequest
+    var request = (ListRequest)view.Params;
+
+    // we use " &= " here because otherwise we might clear 
+    // filter set by an edit filter dialog if any.
+
+    request.Criteria &=
+        new Criteria(ProductRow.Fields.UnitsInStock) > 10 &
+        new Criteria(ProductRow.Fields.CategoryName) != "Condiments" &
+        new Criteria(ProductRow.Fields.Discontinued) == 0;
+
+    return true;
+}
+```
 

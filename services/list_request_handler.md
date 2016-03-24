@@ -176,11 +176,26 @@ CustomerService.List(connection, new ListRequest
 ```
 
 ```sql
-SELECT ... FROM Customers WHERE CompanyName LIKE '%the%' 
+SELECT ... FROM Customers t0 WHERE t0.CompanyName LIKE '%the%' 
 ```
+
+> If ContainsText is null or empty string it is simply ignored.
 
 ### ListRequest.EqualityFilter Parameter
 
+EqualityFilter is a dictionary that allows quick equality filtering by some fields. It is used by quick filter dropdowns on grids (ones that are defined with AddEqualityFilter helper).
 
+```cs
+CustomerService.List(connection, new ListRequest
+{
+    EqualityFilter = new JsDictionary<string, object> {
+        { "Country", "Germany" }
+    }
+}, response => {});
+```
+
+```sql
+SELECT * FROM Customers t0 WHERE t0.Country = "Germany" 
+```
 
 

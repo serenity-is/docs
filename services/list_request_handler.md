@@ -308,6 +308,8 @@ We told that grid requests records in *List* mode, so loads only *table* fields,
 
 Grid sends list of visible columns to List service with *IncludeColumns*, so these columns are *included* in selection even if they are view fields.
 
+> In memory grids can't do this. As they don't call services directly, you have to put [MinSelectLevel(SelectLevel.List)] to view fields that you wan't to load for in memory detail grids.
+
 If you have a ProductGrid that shows SupplierName column its actual ListRequest looks like this:
 
 ```cs

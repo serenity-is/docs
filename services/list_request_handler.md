@@ -296,6 +296,10 @@ In *ColumnSelection.List* mode, ListRequestHandler returns *table* fields, thus 
 
 One exception is *expression* fields that only contains reference to *table* fields, e.g. *(t0.FirstName + ' ' + t0.LastName)*. ListRequestHandler also loads such fields.
 
+*ColumnSelection.KeyOnly* only includes ID / primary key fields.
+
+*ColumnSelection.Details* includes all fields, including view ones, unless a field is explicitly excluded or marked as "sensitive", e.g. a password field.
+
 > Dialogs loads edited records in Details mode, thus they also include view fields.
 
 ### ListRequest.IncludeColumns Parameter
@@ -321,6 +325,8 @@ new ListRequest
 
 Thus, these extra view fields are also included in *selection*.
 
+> If you have a grid that should only load visible columns for performance reasons, override its ColumnSelection level to KeyOnly. Note that non-visible table fields won't be available in client side row.
+
 ### ListRequest.ExcludeColumns Parameter
 
 Opposite of IncludeColumns is ExcludeColumns. Let's say you have a nvarchar(max) *Notes* field on your row that is never shown in the grid. To lower network traffic, you may choose to NOT load this field in product grid:
@@ -341,7 +347,7 @@ new ListRequest
 }
 ```
 
-OnViewSubmit is a good place to set this parameter:
+OnViewSubmit is a good place to set this parameter (and some others):
 
 ```cs
 protected override bool OnViewSubmit()
@@ -357,7 +363,7 @@ protected override bool OnViewSubmit()
 
 ### Controlling Loading At Server Side
 
-
+You might want to exclude some fields like *Notes* from *ColumnSelection.List*, without excluding it explicitly in grid. This is possible with MinSelectLevel attribute:
 
 ```cs
 [MinSelectLevel(SelectLevel.Details)]
@@ -383,8 +389,19 @@ public enum SelectLevel
 }
 ```
 
-By default, table fields  have a select level of *SelectLevel.List* while view fields have *SelectLevel.Details*. 
-
 *SelectLevel.Default*, which is the default value, corresponds to *SelectLevel.List* for table fields and *SelectLevel.Details* for view fields.
 
-*SelectLevel.Always* means such a field is selected for any column selection mode, even if it is explicitly 
+By default, table fields have a select level of *SelectLevel.List* while view fields have *SelectLevel.Details*. 
+
+*SelectLevel.Always* means such a field is selected for any column selection mode, **even if** it is explicitly excluded using *ExcludeColumns*.
+
+> *SelectLevel.Lookup* is obsolete, avoid using it. Lookup columns are determined with [LookupInclude] attribute.
+
+*SelectLevel.List* means such a field is selected for ColumnSelection.List and ColumnSelection.Details modes or if it is explicitly included with IncludeColumns parameter.
+
+*SelectLevel.Details* means such a field is selected for ColumnSelection.Details mode, or if it is explicitly included with IncludeColumns parameter.
+
+*SelectLevel.Explicit* means such a field shouldn't be selected in any mode, unless it is explicitly included with IncludeColumns parameter. Use this for fields that are not meaningful for grids or edit dialogs.
+
+*SelectLevel.Never* means never load this field! Use it for fields that shouldn't be sent to client side, like a password hash.
+

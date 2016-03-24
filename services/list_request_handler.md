@@ -296,6 +296,8 @@ In *ColumnSelection.List* mode, ListRequestHandler returns *table* fields, thus 
 
 One exception is *expression* fields that only contains reference to *table* fields, e.g. *(t0.FirstName + ' ' + t0.LastName)*. ListRequestHandler also loads such fields.
 
+> Dialogs loads edited records in Details mode, thus they also include view fields.
+
 ### ListRequest.IncludeColumns Parameter
 
 We told that grid requests records in *List* mode, so loads only *table* fields, then how it can show columns that originate from other tables?
@@ -339,7 +341,7 @@ new ListRequest
 }
 ```
 
-OnViewSubmit is a good place to set these parameter:
+OnViewSubmit is a good place to set this parameter:
 
 ```cs
 protected override bool OnViewSubmit()

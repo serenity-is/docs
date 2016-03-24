@@ -130,7 +130,7 @@ SortBy class has a custom JsonConverter so when building a list request client s
 CustomerService.List(connection, new ListRequest
 {
     SortBy = new[] { "Country", "City DESC" }
-});
+}, response => {});
 ```
 
 This is because ListRequest class definition at client side has a bit different structure:

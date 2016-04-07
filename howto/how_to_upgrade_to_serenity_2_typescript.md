@@ -194,6 +194,10 @@ https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Web/M
 
 *Search and Replace **Serene** with **YourProjectName** * in this file if any.
 
+### Generate Code
+
+While they are open save ClientTypes.tt and ServerTypings.tt files, and wait for them to generate codes.
+
 
 
 

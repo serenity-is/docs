@@ -6,7 +6,7 @@ This is a migration guide for users that started with an older Serene template, 
 
 If you don't need TypeScript, just update your Serenity packages and it should work as normal.
 
-> Even if you won't need TypeScript, it's recommended to perform steps listed here to keep your project up to date and avoid future problems.
+> Even if you won't need TypeScript, it's recommended to perform steps listed here to keep your project up to date. This might also help you avoid future problems as there has been many changes in Serene for TypeScript support.
 
 
 ## Should I Switch To TypeScript?
@@ -21,16 +21,32 @@ Anyway, TypeScript is probably the future for Serenity applications, as it has a
 
 We've been using Saltaralle with Serenity since start but its future is a bit blurry. It didn't get any updates since Saltaralle is acquired by Bridge.NET, last June (2015).
 
-Saltaralle support in Serenity is more stable than TypeScript support for now. Saltaralle will be supported as long as possible with Serenity for backward compability. If Bridge.NET v2.0 comes out, we may also try to switch, unless it comes with too many changes to handle.
+Saltaralle with Serenity is more stable than TypeScript for now. Saltaralle will be supported as long as possible with Serenity for backward compability. If Bridge.NET v2.0 comes out, we may also try to switch, unless it comes with too many changes to handle.
 
 ## Migrating Your Serene Application to v2.0
+
+
+### Check that your solution is building properly
+
 
 First make sure your solution is properly building.
 
 > If possible, take a ZIP backup of solution, as some steps we'll perform might be hard to revert.
 
-Update to 2.0 packages as you'd normally do:
 
+### Install TypeScript
+
+
+Install TypeScript 1.8+ from
+
+https://www.typescriptlang.org/#download-links
+
+for your Visual Studio version.
+
+
+### Update NuGet Packages
+
+Update to 2.0 packages as you'd normally do:
 
 ```
 Update-Package Serenity.Web

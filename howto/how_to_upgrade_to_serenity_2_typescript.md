@@ -232,6 +232,19 @@ Save **ServerImports.tt** and wait for it to generate code. It might take some t
 
 Rebuild solution and make sure it builds properly without any error.
 
+**Congratulations! Your project is ready for TypeScript and other features.**
+
+
+### What are These New .tt Files
+
+- **ServerTypings.tt**: generated code for TypeScript, containing Row, Form, Column, Service declarations imported from Server (Web) code. Also contains import classes from YourProject.Script file if any.
+
+- **ServerTypes.tt**: generated code for Saltaralle, containing Row, Form, Column, Service declarations imported from Server (Web) code. There is no import classes from TypeScript yet. So if you want to use some TypeScript class in your Saltaralle code, you need to write import classes manually.
+
+- **ClientTypes.tt**: generated code for Web project, containing Editor and Formatter imports from both TypeScript and Saltaralle. 
+
+
+
 
 
 

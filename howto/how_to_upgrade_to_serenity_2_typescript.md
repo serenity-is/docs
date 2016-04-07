@@ -11,13 +11,15 @@ If you don't need TypeScript, just update your Serenity packages and it should w
 
 ## Should I Use TypeScript?
 
-TypeScript support in Serenity is rather new and you might experience a few issues. TypeScript compiler itself is also still in development and has some glitches like Compile on Save support is only working with VS2015, or having build ordering problems with MSBUILD projects.
+TypeScript support in Serenity is rather new and you might experience a few issues. 
 
-There are also some usability problems. For example there is no intellisense for method overriding.
+TypeScript compiler itself is also still in development and has some glitches like Compile on Save support is only working with VS2015, or having build ordering problems with MSBUILD projects.
 
-Anyway, TypeScript is probably the future for Serenity applications, as it has a stronger backing at the moment (Microsoft and average number of users). Also TypeScript feels like native javascript with proper refactoring and compile time type checking. 
+There are also some usability problems. For example there is no intellisense for method overriding in TypeScript.
 
-We've been using Saltaralle since start but its future is a bit blurry. It didn't get any updates since Saltaralle is acquired by Bridge.NET, last June (2015).
+Anyway, TypeScript is probably the future for Serenity applications, as it has a stronger backing at the moment (Microsoft and average number of users). Also TypeScript feels like native Javascript with proper intellisense, refactoring and compile time type checking. 
+
+We've been using Saltaralle with Serenity since start but its future is a bit blurry. It didn't get any updates since Saltaralle is acquired by Bridge.NET, last June (2015).
 
 Saltaralle support in Serenity is more stable than TypeScript support for now.
 

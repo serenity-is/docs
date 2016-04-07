@@ -85,6 +85,8 @@ Add lines below after TypeScriptToolsVersion line:
   </PropertyGroup>
 ```
 
+*Replace **Serene.Web.js** with your project name.*
+
 Save changes, reload the project and follow to next step.
 
 ### Adding tsconfig.json File
@@ -104,6 +106,10 @@ Add a **tsconfig.json** file to the root of your Web project (where web.config a
     }
 }
 ```
+
+*Replace **Serene.Web.js** with your project name.*
+
+
 
 
 

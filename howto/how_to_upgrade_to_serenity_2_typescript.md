@@ -172,14 +172,27 @@ https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Web/M
 
 > You may also create a new Serene project with latest version of template to get these files.
 
+### ClientTypes.tt
+
 Create folder *YourProject.Web\Modules\Common\Imports\ClientTypes* and move *ScriptEditorTypes.tt* to there, then rename *ScriptEditorTypes.tt* to *ClientTypes.tt*.
+
+Grab latest source of ClientTypes.tt file from address below and copy paste it to *ClientTypes.tt* file you just moved:
+
+https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Web/Modules/Common/Imports/ClientTypes/ClientTypes.tt
+
+*Search and Replace **Serene** with **YourProjectName** * in this file if any.
+
+
+### ServerTypings.tt
 
 Create folder *YourProject.Web\Modules\Common\Imports\ServerTypings* and move *ScriptFormatterTypes.tt* to there, then rename *ScriptFormatterTypes.tt* to *ServerTypings.tt*.
 
+Grab latest source of ServerTypings.tt file from address below and copy paste it to *ServerTypings.tt* file you just moved:
+
+https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Web/Modules/Common/Imports/ServerTypings/ServerTypings.tt
 
 
-
-
+*Search and Replace **Serene** with **YourProjectName** * in this file if any.
 
 
 

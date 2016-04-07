@@ -59,4 +59,9 @@ Update-Package Serenity.Script
 While updating Serenity.Web, VS might show a dialog with text "Your Project has been configured to support TypeScript". Click YES.
 
 
+### Ensuring Package Updates Caused No Problems
+
+Rebuild your solution again and run it. Open some pages, dialogs etc. and make sure that it is working properly with 2.0 packages.
+
+
 

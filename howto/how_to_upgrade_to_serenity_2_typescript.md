@@ -214,7 +214,7 @@ Get latest source of CodeGenerationHelpers.ttinclude from address below (it's di
 
 https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Script/Imports/CodeGenerationHelpers.ttinclude
 
-*Search and Replace **Serene** with **YourProjectName** * in this file. There must be some.
+*Search and Replace **Serene** with **YourProjectName** * in this file. There must be several.
 
 ### ServiceContracts.tt
 

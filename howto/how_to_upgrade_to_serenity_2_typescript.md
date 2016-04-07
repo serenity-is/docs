@@ -230,6 +230,7 @@ Delete folder *FormContexts* with file *FormContext.tt* in it.
 
 Save **ServerImports.tt** and wait for it to generate code. It might take some time because of some slow down due to Saltaralle.
 
+Rebuild solution and make sure it builds properly without any error.
 
 
 

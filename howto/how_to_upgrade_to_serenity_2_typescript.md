@@ -200,7 +200,35 @@ While they are open save ClientTypes.tt and ServerTypings.tt files, and wait for
 
 Save project and rebuild.
 
+### Changing Location for FormContexts and ServiceContracts T4 Templates
 
+These two templates are merged into one.
+
+We'll repeat similar steps like in Web project.
+
+Locate file YourProject.Script\Imports\ MultipleOutputHelper.ttinclude
+
+Make a copy of it in same folder with name *CodeGenerationHelpers.ttinclude*
+
+Get latest source of CodeGenerationHelpers.ttinclude from address below (it's different!) and copy paste it to *CodeGenerationHelpers.ttinclude* file you just created:
+
+https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Script/Imports/CodeGenerationHelpers.ttinclude
+
+*Search and Replace **Serene** with **YourProjectName** * in this file. There must be some.
+
+### ServiceContracts.tt
+
+Rename folder *YourProject.Script\Imports\ServiceContracts* to **ServerImports**. Rename *ServiceContracts.tt* to *ServerImports.tt*.
+
+Grab latest source of ServerImports.tt file from address below and copy paste it to *ServerImports.tt* file you just renamed:
+
+https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Script/Imports/ServerImports/ServerImports.tt
+
+*Search and Replace **Serene** with **YourProjectName** * in this file.
+
+Delete folder *FormContexts* with file *FormContext.tt* in it.
+
+Save **ServerImports.tt** and wait for it to generate code. It might take some time because of some slow down due to Saltaralle.
 
 
 

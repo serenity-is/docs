@@ -198,6 +198,9 @@ https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Web/M
 
 While they are open save ClientTypes.tt and ServerTypings.tt files, and wait for them to generate codes.
 
+Save project and rebuild.
+
+
 
 
 

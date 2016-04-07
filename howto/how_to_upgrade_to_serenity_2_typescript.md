@@ -244,6 +244,11 @@ Rebuild solution and make sure it builds properly without any error.
 - **ClientTypes.tt**: generated code for Web project, containing Editor and Formatter imports from both TypeScript and Saltaralle. 
 
 
+### How Can I Generate TypeScript Grid/Dialog Code
+
+There is such an option in Serenity CodeGenerator (Sergen) now. Just check *Generate Grid/Dialog Code in TypeScript (instead of Saltaralle) and it will generate YourDialog.ts and YourGrid.ts files under YourProject.Web/Modules/YourEntity directory, instead of YourGrid.cs and YourDialog.cs in YourProject.Script project. 
+
+** Please don't generate code for existing Saltaralle dialogs or grids using Sergen. Otherwise you'll have double YourGrid and YourDialog classes and it may lead to unexpected errors. **
 
 
 

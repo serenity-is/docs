@@ -89,7 +89,7 @@ Save changes, reload the project and follow to next step.
 
 ### Adding tsconfig.json File
 
-Add a **tsconfig.json** file to the root of your project (where web.config and Global.asax files are) with content like below:
+Add a **tsconfig.json** file to the root of your Web project (where web.config and Global.asax files are) with content like below:
 
 ```json
 {

@@ -132,6 +132,23 @@ namespace MyProject {
 }
 ```
 
+When you save it, there should be a MyProject.Web.js file there with content below. If you can't see it, click Show All Files and refresh folder.
+
+```js
+var MyProject;
+(function (MyProject) {
+    var Dummy = (function () {
+        function Dummy() {
+        }
+        return Dummy;
+    }());
+    MyProject.Dummy = Dummy;
+})(MyProject || (MyProject = {}));
+//# sourceMappingURL=SereneUpgrading.Web.js.map
+```
+
+Right click and include that file to your project. Now you can delete dummy.ts.
+
 
 
 

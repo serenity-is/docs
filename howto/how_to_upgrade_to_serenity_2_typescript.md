@@ -38,5 +38,7 @@ Update-Package Serenity.CodeGenerator
 Update-Package Serenity.Script
 ```
 
+While updating Serenity.Web, VS might show a dialog with text "Your Project has been configured to support TypeScript". Click YES.
+
 
 

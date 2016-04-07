@@ -154,6 +154,35 @@ Your project is configured for TypeScript.
 > If you are using a version before VS2015 and compile on save is not working, you might try removing TypeScriptCompileBlocked property from Web.csproj file and use compile on build.
 
 
+### Changing Location for T4 Templates
+
+Serene v2.0 has merged some .TT templates and created new one for TypeScript code generation.
+
+Please make sure your project is building successfully and DON'T CLEAN it while performing these steps, otherwise you may end up with a broken project.
+
+Locate file YourProject.Web\Modules\Common\Imports\ MultipleOutputHelper.ttinclude
+
+Make a copy of it in same folder with name *CodeGenerationHelpers.ttinclude*
+
+Get latest source of CodeGenerationHelpers.ttinclude from address below and copy paste it to *CodeGenerationHelpers.ttinclude* file you just created:
+
+https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Web/Modules/Common/Imports/CodeGenerationHelpers.ttinclude
+
+*Search and Replace **Serene** with **YourProjectName** * in this file if any. There shouldn't be any **Serene** word in this file as of writing.
+
+> You may also create a new Serene project with latest version of template to get these files.
+
+Create folder *YourProject.Web\Modules\Common\Imports\ClientTypes* and move *ScriptEditorTypes.tt* to there, then rename *ScriptEditorTypes.tt* to *ClientTypes.tt*.
+
+Create folder *YourProject.Web\Modules\Common\Imports\ServerTypings* and move *ScriptFormatterTypes.tt* to there, then rename *ScriptFormatterTypes.tt* to *ServerTypings.tt*.
+
+
+
+
+
+
+
+
 
 
 

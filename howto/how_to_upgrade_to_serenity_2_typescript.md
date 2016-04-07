@@ -87,6 +87,16 @@ Add lines below after TypeScriptToolsVersion line:
 
 *Replace **Serene.Web.js** with your project name.*
 
+In the end of same file, you'll see lines like below:
+
+```xml
+  <Import Project="...Microsoft.CSharp.targets" />
+  <Import Project="...Microsoft.WebApplication.targets" />
+  <Import Project="...Microsoft.TypeScript.targets" />
+```
+
+Make sure the line with TypeScript.targets with is under all other targets. Move it under WebAplpication.targets if not. VS puts them before Microsoft.WebApplication.targets and somehow it doesn't work that way. 
+
 Save changes, reload the project and follow to next step.
 
 ### Adding tsconfig.json File
@@ -108,6 +118,19 @@ Add a **tsconfig.json** file to the root of your Web project (where web.config a
 ```
 
 *Replace **Serene.Web.js** with your project name.*
+
+
+
+### Add a Test TypeScript File
+
+Add a **dummy.ts** file under YourProject.Web/scripts/site/dummy.ts. Open it and type something like below:
+
+```ts
+namespace MyProject {
+    export class Dummy {
+    }
+}
+```
 
 
 

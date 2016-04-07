@@ -9,7 +9,7 @@ If you don't need TypeScript, just update your Serenity packages and it should w
 > Even if you won't need TypeScript, it's recommended to perform steps listed here to keep your project up to date and avoid future problems.
 
 
-## Should I Use TypeScript?
+## Should I Switch To TypeScript?
 
 TypeScript support in Serenity is rather new and you might experience a few issues. 
 
@@ -21,12 +21,22 @@ Anyway, TypeScript is probably the future for Serenity applications, as it has a
 
 We've been using Saltaralle with Serenity since start but its future is a bit blurry. It didn't get any updates since Saltaralle is acquired by Bridge.NET, last June (2015).
 
-Saltaralle support in Serenity is more stable than TypeScript support for now.
-
-
+Saltaralle support in Serenity is more stable than TypeScript support for now. Saltaralle will be supported as long as possible with Serenity for backward compability. If Bridge.NET v2.0 comes out, we may also try to switch, unless it comes with too many changes to handle.
 
 ## Migrating Your Serene Application to v2.0
 
+First make sure your solution is properly building.
+
+> If possible, take a ZIP backup of solution, as some steps we'll perform might be hard to revert.
+
+Update to 2.0 packages as you'd normally do:
+
+
+```
+Update-Package Serenity.Web
+Update-Package Serenity.CodeGenerator
+Update-Package Serenity.Script
+```
 
 
 

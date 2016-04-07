@@ -64,4 +64,49 @@ While updating Serenity.Web, VS might show a dialog with text "Your Project has 
 Rebuild your solution again and run it. Open some pages, dialogs etc. and make sure that it is working properly with 2.0 packages.
 
 
+### Configuring Web Project for TypeScript
+
+Unload MyProject.Web and edit it.
+
+Add lines below after TypeScriptToolsVersion line:
+
+```xml
+    // ...
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TypeScriptCharset>utf-8</TypeScriptCharset>
+    <TypeScriptEmitBOM>True</TypeScriptEmitBOM>
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
+    <TypeScriptOutFile>Scripts\site\Serene.Web.js</TypeScriptOutFile>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+  </PropertyGroup>
+```
+
+Save changes, reload the project and follow to next step.
+
+### Adding tsconfig.json File
+
+Add a **tsconfig.json** file to the root of your project (where web.config and Global.asax files are) with content like below:
+
+```json
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "preserveConstEnums": true,
+        "experimentalDecorators": true,
+        "declaration": false,
+        "emitBOM": true,
+        "sourceMap": true,
+        "outFile": "Scripts/site/Serene.Web.js"
+    }
+}
+```
+
+
+
+
+
 

@@ -184,7 +184,7 @@ By adding QuickSearch attribute to FullName, instead of Firstname, grid will now
 
 But still dialog will show Firstname. For this, we need to make a change 
 
-First transform templates, and then make change below in PersonDialog.cs:
+First transform templates, and then make change below in PersonDialog.cs (in MovieTutorial.Script project, under MovieDB/Person folder):
 
 ```cs
 namespace MovieTutorial.MovieDB

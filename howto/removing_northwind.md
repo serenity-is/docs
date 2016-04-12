@@ -89,6 +89,14 @@ public ActionResult Index()
 
 > You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
 
+
+### Removing Basic Samples
+
+As some pages under Basic Samples uses Northwind rows and other objects, you should also remove these samples from Web and Script projects.
+
+* Remove MyProject.Script/BasicSamples directory and all files under it.
+* Remove MyProject.Web/Modules/BasicSamples directory and all files under it.
+
 ### Building Project and Running T4 (.tt) Templates
 
 * Now rebuild your solution.

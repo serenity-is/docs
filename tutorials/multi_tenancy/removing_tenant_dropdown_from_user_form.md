@@ -14,32 +14,46 @@ But this time, as we rebuild project, browser tried to load it from server, and 
 
 We need to remove *Tenant* field from the user form. But we need that field for *admin* user, so we can't simply delete it from *UserForm.cs*. Thus, we need to do it conditionally.
 
-Transform all T4 files, then open *UserDialog.cs* and override *GetPropertyItems* method like below:
+Transform all T4 files, then open *MultiTutorial.Web/Modules/Administration/ User/UserDialog.ts* and override *getPropertyItems* method like below:
 
-```cs
-namespace MultiTenancy.Administration
-{
-    using jQueryApi;
-    using Serenity;
-    using System.Collections.Generic;
-    using System.Linq;
-
-    //...
-    public class UserDialog : EntityDialog<UserRow>
-    {
-        //...
-        protected override List<PropertyItem> GetPropertyItems()
-        {
-            var items = base.GetPropertyItems();
-
-            if (!Authorization.HasPermission("Administration:Tenants"))
-                items = items.Where(x => x.Name != UserRow.Fields.TenantId).ToList();
-
-            return items;
-        }
-    }
+```ts
+protected getPropertyItems() {
+    let items = super.getPropertyItems();
+    if (!Authorization.hasPermission("Administration:Tenants"))
+        items = items.filter(x => x.name != UserRow.Fields.TenantId);
+    return items;
 }
 ```
+
+> For Serenity < 2.0:
+> Transform all T4 files, then open *UserDialog.cs* and override *GetPropertyItems* method like below:
+>
+>
+>```cs
+>namespace MultiTenancy.Administration
+>{
+>    using jQueryApi;
+>    using Serenity;
+>    using System.Collections.Generic;
+>    using System.Linq;
+>
+>    //...
+>    public class UserDialog : EntityDialog<UserRow>
+>    {
+>        //...
+>        protected override List<PropertyItem> GetPropertyItems()
+>        {
+>            var items = base.GetPropertyItems();
+>
+>            if (!Authorization.HasPermission("Administration:Tenants"))
+>                items = items.Where(x => 
+>                    x.Name != UserRow.Fields.TenantId).ToList();
+>
+>            return items;
+>        }
+>    }
+>}
+>```
 
 *GetPropertyItems* is the method, dialog gets its list of form fields, from server side form definition. Here fields are read from *UserForm* we defined server side.
 

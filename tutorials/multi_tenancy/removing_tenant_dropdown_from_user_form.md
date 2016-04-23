@@ -17,12 +17,19 @@ We need to remove *Tenant* field from the user form. But we need that field for 
 Transform all T4 files, then open *MultiTutorial.Web/Modules/Administration/ User/UserDialog.ts* and override *getPropertyItems* method like below:
 
 ```ts
-protected getPropertyItems() {
-    let items = super.getPropertyItems();
-    if (!Authorization.hasPermission("Administration:Tenants"))
-        items = items.filter(x => x.name != UserRow.Fields.TenantId);
-    return items;
-}
+namespace Serene.Administration {
+
+    @Serenity.Decorators.registerClass()
+    export class UserDialog extends Serenity.EntityDialog<UserRow, any> {
+        //...
+        
+        protected getPropertyItems() {
+            let items = super.getPropertyItems();
+            if (!Authorization.hasPermission("Administration:Tenants"))
+                items = items.filter(x => x.name != UserRow.Fields.TenantId);
+            return items;
+        }
+    }
 ```
 
 > For Serenity < 2.0:

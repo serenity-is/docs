@@ -23,7 +23,7 @@ We've been using Saltaralle with Serenity since start but its future is a bit bl
 
 Saltaralle with Serenity is more stable than TypeScript for now. Your old code will continue to work. Saltaralle will be supported as long as possible with Serenity for backward compability. 
 
-If Bridge.NET v2.0 (next Saltaralle) comes out, we may also try to switch, unless it involves with too many changes to handle.
+If Bridge.NET v2.0 (next Saltaralle) comes out, we may also try to switch, unless it involves  too many changes to handle.
 
 ## Migrating Your Serene Application to v2.0
 

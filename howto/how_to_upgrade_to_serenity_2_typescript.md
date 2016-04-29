@@ -157,8 +157,8 @@ Edit MyProject.Web/Views/Shared/_LayoutHead.cshtml and include MyProject.Web.js 
 
 ```cshtml
 // ...
-@Html.Script("~/Scripts/Site/Serene.Script.js")
-@Html.Script("~/Scripts/Site/Serene.Web.js")
+@Html.Script("~/Scripts/Site/MyProject.Script.js")
+@Html.Script("~/Scripts/Site/MyProject.Web.js")
 // ...
 ```
 

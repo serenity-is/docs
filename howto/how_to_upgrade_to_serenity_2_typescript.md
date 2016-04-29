@@ -149,9 +149,20 @@ var MyProject;
 
 Right click and include that file to your project. Now you can delete dummy.ts.
 
-Your project is configured for TypeScript.
-
 > If you are using a version before VS2015 and compile on save is not working, you might try removing TypeScriptCompileBlocked property from Web.csproj file and use compile on build.
+
+### Including MyProject.Web.js file in _LayoutHead.cshtml
+
+Edit MyProject.Web/Views/Shared/_LayoutHead.cshtml and include MyProject.Web.js right after MyProject.Script.js file:
+
+```cshtml
+// ...
+@Html.Script("~/Scripts/Site/Serene.Script.js")
+@Html.Script("~/Scripts/Site/Serene.Web.js")
+// ...
+```
+
+Your project is configured for TypeScript.
 
 
 ### Changing Location for T4 Templates

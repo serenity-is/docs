@@ -54,6 +54,7 @@
    * [How To: Add Inline Action Buttons To Grid](howto/how_to_add_inline_action_buttons_to_grid.md)
    * [How To: Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)
    * [How To: Upgrade to Serenity 2.0 and Enable TypeScript](howto/how_to_upgrade_to_serenity_2_typescript.md)
+   * How To: Enable Script Bundling
 * [Frequently Asked Questions](faq/frequently_asked_questions.md)
 * [Troubleshooting](faq/troubleshooting.md)
 * [Service Locator & Initialization](service_locator/README.md)

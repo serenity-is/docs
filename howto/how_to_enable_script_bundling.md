@@ -97,8 +97,9 @@ You should enable bundling (especially minification) only in production. Otherwi
 
 To enable bundling, just change *Enabled* property of *ScriptBundling* application setting in your web.config to true:
 
-```
-<add key="ScriptBundling" value="{ Enabled: true, Minimize: false, UseMinJS: false }" />
+```xml
+<add key="ScriptBundling" value="
+   { Enabled: true, Minimize: false, UseMinJS: false }" />
 ```
 
 When *Enabled* is false (default) system will do nothing, and you'll work as usual with your script includes. And your page source looks like this:
@@ -138,7 +139,8 @@ After enabling bundling, you may also enable minification of scripts with the sa
 
 
 ```xml
-<add key="ScriptBundling" value="{ Enabled: true, Minimize: true, UseMinJS: false }" />
+<add key="ScriptBundling" value="
+   { Enabled: true, Minimize: true, UseMinJS: false }" />
 ```
 
 
@@ -158,7 +160,8 @@ Anyway, if you still need more performance at first request, you may ask Serenit
 Set *UseMinJS* to true:
 
 ```xml
-<add key="ScriptBundling" value="{ Enabled: true, Minimize: true, UseMinJS: true }" />
+<add key="ScriptBundling" value="
+    { Enabled: true, Minimize: true, UseMinJS: true }" />
 ```
 
 When this setting is ON, before minifying a file, let's say *jquery-ui-1.11.4.js*, Serenity will first check to see if a *jquery-ui-1.11.4.min.js* already exists in disk. If so, instead of minifiying with UglifyJS, it will simply use that file. Otherwise, it will run UglifyJS.
@@ -167,3 +170,31 @@ Serene comes with minified versions of almost all libraries, including Serenity 
 
 There is a little risk that you should be careful about. If you manually modify a library script, make sure you minify it manually and modify its .min.js file too, otherwise when bundling is enabled an old version of that script might run.
 
+
+### How Serenity Modifies Your _LayoutHead.cshtml Includes?
+
+If you look at your *_LayoutHead.cshtml* you might spot lines like these:
+
+```
+@Html.Script("~/Scripts/jquery.cropzoom.js")
+@Html.Script("~/Scripts/jquery.fileupload.js")
+@Html.Script("~/Scripts/jquery.iframe-transport.js")
+```
+
+When bundling is disabled, these statements generates such HTML code:
+
+```html
+<script src="/Scripts/jquery.cropzoom.js"></script>
+<script src="/Scripts/jquery.fileupload.js"></script>
+<script src="/Scripts/jquery.iframe-transport.js"></script>
+```
+
+Html.Script is an extension method of Serenity, so when bundling is enabled, instead of generating this HTML code, Serenity will first check to see if this script is included in a bundle.
+
+For the first script that is included in a bundle, let's say Bundle.Lib.js, Serenity will generate code below:
+
+```html
+<script src="/DynJS.axd/Bundle.Libs.js?v=..."></script>
+```
+
+But, for other Html.Script calls that is included in same bundle, Serenity will generate nothing. Thus, even though you call Html.Script 50 times, you'll get one `<script>` output in page code.

@@ -144,7 +144,7 @@ After enabling bundling, you may also enable minification of scripts with the sa
 ```
 
 
-> Please note that *Minimize* property only works when *Enabled* is true, thus bundling is enabled.
+> Please note that *Minimize* property only works when *Enabled* is true, thus when bundling is enabled.
 
 UglifyJS library is used for minification. This will be applied before bundling / gzipping so our bundles will become about %40 smaller, but will be much harder to read, so enable this only in production.
 
@@ -168,7 +168,7 @@ When this setting is ON, before minifying a file, let's say *jquery-ui-1.11.4.js
 
 Serene comes with minified versions of almost all libraries, including Serenity scripts, so this setting will speed up initial start time.
 
-There is a little risk that you should be careful about. If you manually modify a library script, make sure you minify it manually and modify its .min.js file too, otherwise when bundling is enabled an old version of that script might run.
+There is a little risk that you should be careful about. If you manually modify a library script, make sure you minify it manually and modify its .min.js file too, otherwise when bundling is enabled an old version of that script might run at production.
 
 
 ### How Serenity Modifies Your _LayoutHead.cshtml Includes?

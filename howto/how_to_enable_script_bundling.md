@@ -197,4 +197,11 @@ For the first script that is included in a bundle, let's say Bundle.Lib.js, Sere
 <script src="/DynJS.axd/Bundle.Libs.js?v=..."></script>
 ```
 
-But, for other Html.Script calls that is included in same bundle, Serenity will generate nothing. Thus, even though you call Html.Script 50 times, you'll get one `<script>` output in page code.
+But, for other Html.Script calls that is included in same bundle, Serenity will generate nothing. Thus, even though you call Html.Script 50 times, you'll get only one `<script>` output in page code.
+
+
+### What Is v=p53uqJ... In My Script Tags?
+
+This is a version number, or HASH of your script. Whether bundling is enabled or not, when you use Html.Script, it will add these hash to your script includes. This hash allows browser to cache script until it changes. When content of a script changes, its hash will change too, so browser won't cache and use an older version.
+
+This is the reason you'll never have script caching problems with Serenity apps.

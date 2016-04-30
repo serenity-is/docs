@@ -13,7 +13,11 @@ You might prefer to use tools like Webpack, Grunt, Gulp, UglifyJS etc, but in ca
 
 ### ScriptBundles.json
 
-First, you need a *ScriptBundles.json* file under *MyProject.Web/scripts/site* folder. ScriptBundles.json configures which script bundle will contain which files when bundling is turned on. This file is included by default in Serene template 2.0.13+ and looks like this:
+First, you need a *ScriptBundles.json* file under *MyProject.Web/scripts/site* folder. ScriptBundles.json configures which script bundle will contain which files when bundling is turned on. 
+
+This file is included by default in Serene template 2.0.13+ and looks like this:
+
+> Unless you want to add some custom scripts to bundles, you don't need to modify this file.
 
 ```json
 {
@@ -85,4 +89,81 @@ When you will add another custom script, make sure that it is placed after all i
 > For example, if you include a jquery plugin before jquery is loaded itself, you'll have errors.
 
 Also make sure that you don't include same file in two bundles.
+
+
+### Enabling Bundling
+
+You should enable bundling (especially minification) only in production. Otherwise it might become very difficult to debug Javascript.
+
+To enable bundling, just change *Enabled* property of *ScriptBundling* application setting in your web.config to true:
+
+```
+<add key="ScriptBundling" value="{ Enabled: true, Minimize: false, UseMinJS: false }" />
+```
+
+When *Enabled* is false (default) system will do nothing, and you'll work as usual with your script includes. And your page source looks like this:
+
+```xml
+<script src="/Scripts/pace.js?v=..."></script>
+<script src="/Scripts/rsvp.js?v=..."></script>
+<script src="/Scripts/jquery-2.2.3.js?v=..."></script>
+<script src="/Scripts/jquery-ui-1.11.4.js?v=..."></script>
+<script src="/Scripts/jquery-ui-i18n.js?v=..."></script>
+...
+...
+...
+<script src="/Scripts/adminlte/app.js?v=..."></script>
+<script src="/Scripts/Site/Serene.Script.js?v=..."></script>
+<script src="/Scripts/Site/Serene.Web.js?v=..."></script>
+...
+```
+
+When *Enabled* is true, it will become like this one:
+
+```xml
+<script src="/DynJS.axd/Bundle.Libs.js?v=..."></script>
+<script src="/DynJS.axd/Bundle.Site.js?v=..."></script>
+...
+```
+
+
+These two bundles are generated in memory and contains all other script files configured in ScriptBundles.json file.
+
+They are also compressed with GZIP and cached in memory (in gzipped form), so now our scripts will consume much less bandwidth and will cause fewer requests to server.
+
+
+### Enabling Minification
+
+After enabling bundling, you may also enable minification of scripts with the same web.config setting. Set *Minimize* property to true:
+
+
+```xml
+<add key="ScriptBundling" value="{ Enabled: true, Minimize: true, UseMinJS: false }" />
+```
+
+
+> Please note that *Minimize* property only works when *Enabled* is true, thus bundling is enabled.
+
+UglifyJS library is used for minification. This will be applied before bundling / gzipping so our bundles will become about %40 smaller, but will be much harder to read, so enable this only in production.
+
+
+### UseMinJS Setting
+
+Minification might take some time, and first request to your site might take around 5-40 seconds more, depending on speed of your server.
+
+Other requests will not be affected as minification is only performed once at application start.
+
+Anyway, if you still need more performance at first request, you may ask Serenity to reuse already minified files in disk, if they are available.
+
+Set *UseMinJS* to true:
+
+```xml
+<add key="ScriptBundling" value="{ Enabled: true, Minimize: true, UseMinJS: true }" />
+```
+
+When this setting is ON, before minifying a file, let's say *jquery-ui-1.11.4.js*, Serenity will first check to see if a *jquery-ui-1.11.4.min.js* already exists in disk. If so, instead of minifiying with UglifyJS, it will simply use that file. Otherwise, it will run UglifyJS.
+
+Serene comes with minified versions of almost all libraries, including Serenity scripts, so this setting will speed up initial start time.
+
+There is a little risk that you should be careful about. If you manually modify a library script, make sure you minify it manually and modify its .min.js file too, otherwise when bundling is enabled an old version of that script might run.
 

@@ -1,6 +1,6 @@
 # How To: Enable Script Bundling
 
-In Serene template there are about 1MB+ of javascript files which are included by default in _LayoutHead.cshtml.
+In Serene template there are about 3MB+ of javascript files which are included by default in _LayoutHead.cshtml.
 
 This might cause bandwidth and performance problems for some systems, especially when a Serenity based site is accessed from mobile devices.
 
@@ -132,6 +132,8 @@ These two bundles are generated in memory and contains all other script files co
 
 They are also compressed with GZIP and cached in memory (in gzipped form), so now our scripts will consume much less bandwidth and will cause fewer requests to server.
 
+Now our script files will consume 600KB, instead of 3000KB before, a %80 reduction, not bad...
+
 
 ### Enabling Minification
 
@@ -148,6 +150,7 @@ After enabling bundling, you may also enable minification of scripts with the sa
 
 UglifyJS library is used for minification. This will be applied before bundling / gzipping so our bundles will become about %40 smaller, but will be much harder to read, so enable this only in production.
 
+Now our bundled and minified script files will consume 375KB, instead of 3000KB before, a %87 reduction, or 1/8 the initial size.
 
 ### UseMinJS Setting
 

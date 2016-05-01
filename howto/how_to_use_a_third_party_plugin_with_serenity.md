@@ -170,7 +170,7 @@ We enumerate all items in lookup and determine key and text properties of those 
 Now save file, and open Customer dialog again. You'll see that this time options are filled.
 
 
-### Creating Bootstrap Multi Select on Our Editor
+### Bootstrap Multi Select Typings
 
 
 According to documentation we should now call ".multiselect()" jQuery extension on our select element.
@@ -192,3 +192,25 @@ interface BSMultiSelectOptions {
 }
 ```
 
+Here, i have extended JQuery interfaces which belongs to jQuery itself and is defined in jquery.d.ts. In TypeScript you can extend any interface with new methods, properties etc.
+
+I used plugin documentation to define BSMultiSelectOptions. The plugin actually has much more options, but for now i keep it short.
+
+
+### Creating Bootstrap MultiSelect on Our Editor
+
+Now i'll go back to our constructor and initialize a multiselect plugin on it:
+
+```ts
+export class BSMultiSelectEditor {
+    constructor(element: JQuery, opt: BSMultiSelectOptions) {
+        super(element, opt);
+        
+        let lookup = Q.getLookup(this.options.lookupKey) as Q.Lookup<any>;
+        for (let item of lookup.get_items()) {
+            let key = item[lookup.get_idField()];
+            let text = item[lookup.get_textField()] || '';
+            Q.addOption(element, key, text);
+        }        
+    }
+```

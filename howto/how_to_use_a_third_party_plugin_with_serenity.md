@@ -21,11 +21,11 @@ First we should download its script and CSS files and place them in correct plac
 
 This component has a NuGet package but unfortunately it is not in a standard fashion (it doesn't place files into your project folders), so we'll have to download files manually.
 
-Download this file and put it under MyProject.Web/Scripts:
+Download this script file and put it under MyProject.Web/Scripts:
 
 https://raw.githubusercontent.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js
 
-Download this file and put it under MyProject.Web/Content:
+Download this CSS file and put it under MyProject.Web/Content:
 
 https://raw.githubusercontent.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css
 
@@ -53,6 +53,19 @@ Open _LayoutHead.cshtml under MyProject.Web/Views/Shared and include these files
 @Html.Script("~/Scripts/bootstrap-multiselect.js")
 @Html.Script("~/Scripts/Site/Serene.Script.js")
 @Html.Script("~/Scripts/Site/Serene.Web.js")
+```
+
+
+### Creating BSMultiSelect.ts
+
+Now we need a TypeScript source file to hold our component. We should put it under MyProject.Web/Scripts or MyProject.Web/Modules directories.
+
+I'll create it under MyProject.Web/Modules/Common/Widgets (first you need to create folder Widgets)
+
+Create file BSMultiSelect.ts at this location:
+
+```ts
+
 ```
 
 

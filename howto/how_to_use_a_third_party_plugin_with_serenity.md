@@ -92,7 +92,26 @@ namespace MyProject {
 }
 ```
 
-Build your project and transform templates. Open CustomerRow.cs and locate Representatives property:
+Here we defined a new editor type, deriving from Widget. Our widget takes options of type BSMultiSelectOptions, which contains a lookupKey option, similar to a LookupEditor. It also implements IGetEditValue and ISetEditValue TypeScript interfaces (this is different than C# interfaces)
+
+`@Serenity.Decorators.element("<select/>")`
+
+With above line, we specified that our widget works on a SELECT element, as this bootstrap multiselect plugin requires a select element too.
+
+```
+@Serenity.Decorators.registerClass(
+    [Serenity.IGetEditValue, Serenity.ISetEditValue])
+```
+
+Above, we register our TypeScript class, with Saltaralle type system and specify that our widget implements custom value getter and setter methods, corresponding to getEditValue and setEditValue methods.
+
+> Here syntax is a bit terse as we have to handle interop between Saltaralle and TypeScript.
+
+Our constructor and getEditValue, setEditValue methods are yet empty. We'll fill them in soon.
+
+Now, build your project and transform templates. 
+
+Open CustomerRow.cs and locate Representatives property:
 
 ```cs
 [LookupEditor(typeof(EmployeeRow), Multiple = true), ClientSide]
@@ -105,4 +124,16 @@ public List<Int32> Representatives
 }
 ```
 
+Here we see that Representatives uses a LookupEditor with multiple option true. We'll replace it with our brand new editor:
+
+```cs
+[BSMultiSelectEditor(LookupKey = "Northwind.Employee"), ClientSide]
+[LinkingSetRelation(typeof(CustomerRepresentativesRow), 
+    "CustomerId", "EmployeeId")]
+public List<Int32> Representatives
+{
+    get { return Fields.Representatives[this]; }
+    set { Fields.Representatives[this] = value; }
+}
+```
 

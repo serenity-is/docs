@@ -21,7 +21,13 @@ First we should download its script and CSS files and place them in correct plac
 
 This component has a NuGet package but unfortunately it is not in a standard fashion (it doesn't place files into your project folders), so we'll have to download files manually.
 
+Download this file and put it under MyProject.Web/Scripts:
 
+https://raw.githubusercontent.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js
+
+Download this file and put it under MyProject.Web/Content:
+
+https://raw.githubusercontent.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css
 
 ### Including Script/Css Files in _LayoutHead.cshtml
 

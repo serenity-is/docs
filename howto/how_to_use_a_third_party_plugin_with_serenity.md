@@ -137,3 +137,27 @@ public List<Int32> Representatives
 }
 ```
 
+If you now build your project and open a Customer dialog, you'll see an empty SELECT in place of Customer representatives field.
+
+Let's first fill it with data:
+
+```ts
+export class BSMultiSelectEditor {
+    constructor(element: JQuery, opt: BSMultiSelectOptions) {
+        super(element, opt);
+        
+        let lookup = Q.getLookup(this.options.lookupKey) as Q.Lookup<any>;
+        for (let item of lookup.get_items()) {
+            let key = item[lookup.get_idField()];
+            let text = item[lookup.get_textField()] || '';
+            Q.addOption(element, key, text);
+        }        
+    }
+```
+
+We first get a reference to lookup object specified by our *lookupKey* option.
+
+Lookups has idField and textField properties, which usually corresponds to fields determined by IIdRow and INameRow interfaces on your lookup row.
+
+We enumerate all items in lookup and determine key and text properties of those items, using idField and textField properties.
+

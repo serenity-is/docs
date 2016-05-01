@@ -109,6 +109,9 @@ Above, we register our TypeScript class, with Saltaralle type system and specify
 
 Our constructor and getEditValue, setEditValue methods are yet empty. We'll fill them in soon.
 
+
+### Using Our New Editor
+
 Now, build your project and transform templates. 
 
 Open CustomerRow.cs and locate Representatives property:
@@ -136,6 +139,9 @@ public List<Int32> Representatives
     set { Fields.Representatives[this] = value; }
 }
 ```
+
+
+### Populating Editor With Lookup Items
 
 If you now build your project and open a Customer dialog, you'll see an empty SELECT in place of Customer representatives field.
 

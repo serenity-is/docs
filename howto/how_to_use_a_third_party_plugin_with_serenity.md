@@ -169,3 +169,26 @@ We enumerate all items in lookup and determine key and text properties of those 
 
 Now save file, and open Customer dialog again. You'll see that this time options are filled.
 
+
+### Creating Bootstrap Multi Select on Our Editor
+
+
+According to documentation we should now call ".multiselect()" jQuery extension on our select element.
+
+I would cast our SELECT element to `<any>` and call .multiselect on it, but i want to write a TypeScript .d.ts definition file to reuse multiselect with intellisense.
+
+So, under MyProject.Web/Scripts/typings/bsmultiselect folder, create a file,* bsmultiselect.d.ts*
+
+```ts
+interface JQuery {
+    multiselect(options?: BSMultiSelectOptions): JQuery;
+}
+
+interface BSMultiSelectOptions {
+    multiple?: boolean;
+    includeSelectAllOption?: boolean;
+    selectAllText?: string;
+    selectAllValue?: string | number;
+}
+```
+

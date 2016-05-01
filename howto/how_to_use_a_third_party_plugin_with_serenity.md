@@ -56,13 +56,13 @@ Open _LayoutHead.cshtml under MyProject.Web/Views/Shared and include these files
 ```
 
 
-### Creating BSMultiSelect.ts
+### Creating BSMultiSelectEditor.ts
 
 Now we need a TypeScript source file to hold our component. We should put it under MyProject.Web/Scripts or MyProject.Web/Modules directories.
 
 I'll create it under MyProject.Web/Modules/Common/Widgets (first you need to create folder Widgets)
 
-Create file BSMultiSelect.ts at this location:
+Create file BSMultiSelectEditor.ts at this location:
 
 ```ts
 

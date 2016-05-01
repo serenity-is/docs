@@ -92,4 +92,17 @@ namespace MyProject {
 }
 ```
 
-Build your project 
+Build your project and transform templates. Open CustomerRow.cs and locate Representatives property:
+
+```cs
+[LookupEditor(typeof(EmployeeRow), Multiple = true), ClientSide]
+[LinkingSetRelation(typeof(CustomerRepresentativesRow), 
+    "CustomerId", "EmployeeId")]
+public List<Int32> Representatives
+{
+    get { return Fields.Representatives[this]; }
+    set { Fields.Representatives[this] = value; }
+}
+```
+
+

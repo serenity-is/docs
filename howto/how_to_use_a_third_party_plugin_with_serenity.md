@@ -181,7 +181,7 @@ So, under MyProject.Web/Scripts/typings/bsmultiselect folder, create a file,* bs
 
 ```ts
 interface JQuery {
-    multiselect(options?: BSMultiSelectOptions): JQuery;
+    multiselect(options?: BSMultiSelectOptions | string): JQuery;
 }
 
 interface BSMultiSelectOptions {
@@ -192,7 +192,7 @@ interface BSMultiSelectOptions {
 }
 ```
 
-Here, i have extended JQuery interfaces which belongs to jQuery itself and is defined in jquery.d.ts. In TypeScript you can extend any interface with new methods, properties etc.
+Here, i have extended JQuery interface which belongs to jQuery itself and is defined in jquery.d.ts. In TypeScript you can extend any interface with new methods, properties etc.
 
 I used plugin documentation to define BSMultiSelectOptions. The plugin actually has much more options, but for now i keep it short.
 
@@ -212,5 +212,39 @@ export class BSMultiSelectEditor {
             let text = item[lookup.get_textField()] || '';
             Q.addOption(element, key, text);
         }        
+        
+        element.attr('multiple', 'multiple')
+            .attr('name', this.uniqueName + "[]")
+            .multiselect();     
     }
 ```
+
+Open CustomerDialog and you'll see that Representatives has our bootstrap multi select editor.
+
+### Handling GetEditValue and SetEditValue Method
+
+If we don't handle these methods, Serenity won't know how to read or set your editor value, so even if you select some representatives, next time you open the dialog, you'll have empty selections.
+
+
+```ts
+export class BSMultiSelectEditor {
+//...
+
+public setEditValue(source: any, property: Serenity.PropertyItem): void {
+    this.element.val(source[property.name] || []).multiselect('refresh');
+}
+
+public getEditValue(property: Serenity.PropertyItem, target: any): void {
+    target[property.name] = this.element.val() || [];
+}
+```
+
+setEditValue is called when editor value needs to be setted. It takes a *source* object, which is usually your entity being loaded in a dialog.
+
+Property parameter is a PropertyItem object that contains details about the field being handled, e.g. our Representatives property. It's *name* field contains field name, e.g. *Representatives*.
+
+Here we have to call multiselect('refresh') after setting select value, as multiselect plugin can't know when selections are changed.
+
+getEditValue is opposite. It should read edit value and set it in target entity.
+
+Ok, now our custom editor should be working fine.

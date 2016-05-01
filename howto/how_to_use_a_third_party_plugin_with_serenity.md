@@ -66,7 +66,7 @@ Create file BSMultiSelectEditor.ts at this location:
 
 ```ts
 namespace MyProject {
-    @Serenity.Decorators.editor()
+    @Serenity.Decorators.element("<select/>")
     @Serenity.Decorators.registerClass(
         [Serenity.IGetEditValue, Serenity.ISetEditValue])
     export class BSMultiSelectEditor
@@ -92,4 +92,4 @@ namespace MyProject {
 }
 ```
 
-
+Build your project 

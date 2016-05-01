@@ -161,3 +161,5 @@ Lookups has idField and textField properties, which usually corresponds to field
 
 We enumerate all items in lookup and determine key and text properties of those items, using idField and textField properties.
 
+Now save file, and open Customer dialog again. You'll see that this time options are filled.
+

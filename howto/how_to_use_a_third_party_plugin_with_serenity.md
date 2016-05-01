@@ -42,3 +42,17 @@ According to plugin documentation, we should include these files:
       href="css/bootstrap-multiselect.css" />
 ```
 
+Open _LayoutHead.cshtml under MyProject.Web/Views/Shared and include these files:
+
+```html
+// ...
+@Html.Stylesheet("~/Content/bootstrap-multiselect.css")
+@Html.Stylesheet("~/Content/serenity/serenity.css")
+@Html.Stylesheet("~/Content/site/site.css")
+// ...
+@Html.Script("~/Scripts/bootstrap-multiselect.js")
+@Html.Script("~/Scripts/Site/Serene.Script.js")
+@Html.Script("~/Scripts/Site/Serene.Web.js")
+```
+
+

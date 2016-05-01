@@ -65,7 +65,31 @@ I'll create it under MyProject.Web/Modules/Common/Widgets (first you need to cre
 Create file BSMultiSelectEditor.ts at this location:
 
 ```ts
+namespace MyProject {
+    @Serenity.Decorators.editor()
+    @Serenity.Decorators.registerClass(
+        [Serenity.IGetEditValue, Serenity.ISetEditValue])
+    export class BSMultiSelectEditor
+        extends Serenity.Widget<BSMultiSelectOptions>
+        implements Serenity.IGetEditValue, Serenity.ISetEditValue {
 
+        constructor(element: JQuery, opt: BSMultiSelectOptions) {
+            super(element, opt);
+        }
+
+        public setEditValue(source: any, 
+            property: Serenity.PropertyItem): void {
+        }
+
+        public getEditValue(property: Serenity.PropertyItem, 
+            target: any): void {
+        }
+    }
+
+    export interface BSMultiSelectOptions {
+        lookupKey: string;
+    }
+}
 ```
 
 

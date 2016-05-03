@@ -134,8 +134,25 @@ List, Retrieve doesn't modify anything, so they are allowed to be called with GE
 Even though, List, Retrieve can be called by GET, Serenity always calls services using HTTP POST when you use its methods, e.g. Q.CallService, and will turn of caching to avoid unexpected results.
 
 
+### ServiceAuthorize Attribute
 
+Our controller class has ServiceAuthorize attribute:
 
+```
+ServiceAuthorize(Northwind.PermissionKeys.General)
+```
+
+This attribute is similar to ASP.NET MVC [Authorize] attribute but it checks only that user is logged in, and throws an exception otherwise.
+
+If used with no parameters, e.g. [ServiceAuthorize()] this attribute also checks that user is logged in.
+
+When you pass it a permission key string, it will check that user is logged in and also has that permission.
+
+```
+ServiceAuthorize("SomePermission")
+```
+
+If user is not granted "SomePermission", this will prevent him from executing any endpoint method.
 
 
 

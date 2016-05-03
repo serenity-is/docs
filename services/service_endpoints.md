@@ -293,4 +293,4 @@ You may not be able to reuse any code you wrote here, from let's say a desktop a
 
 But if you really don't have such a requirement, you can remove repositories all together and write all your code inside the endpoint.
 
-Some people might think that entities, repositories, business rules, endpoints etc. should all be in their own separated assemblies. In theory, and for some scenarios this might be valid, but some (or most) users don't need so much isolation, and may fall into YAGNI (you aren't gonna need it) category.
+Some people might argue that entities, repositories, business rules, endpoints etc. should all be in their own isolated assemblies. In theory, and for some scenarios this might be valid, but some (or most) users don't need so much isolation, and may fall into YAGNI (you aren't gonna need it) category.

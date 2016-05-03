@@ -84,6 +84,56 @@ Actually this is what ServiceEndpoint does behind the scenes.
 
 Why not use this feature while platform handles this detail automatically? One reason would be when you need to open a custom connection that is not listed in the config file, or open a dynamic one depending on some conditions.
 
+We have another method that takes IUnitOfWork (transaction), instead of IDbConnection parameter:
+
+```cs
+public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
+{
+    return new MyRepository().Create(uow, request);
+}
+```
+
+Here situation is similar. ServiceEndpoint again creates a connection, but this time starts a transaction on it (IUnitOfWork), calls our action method, and when it returns will commit transaction automatically. Again, if it fails, would rollback it.
+
+Here is the manual version of the same thing:
+
+```cs
+public SaveResponse Create(SaveRequest<MyRow> request)
+{
+    using (var connection = SqlConnections.NewByKey("Northwind"))
+    using (var uow = new UnitOfWork(connection))
+    {
+        var result = new MyRepository().Create(uow, request);
+        uow.Commit();
+        return result;
+    }
+}
+```
+
+So, ServiceEndpoint handles something that takes 8 lines in 1 line of code.
+
+
+### When To Use IUnitOfWork / IDbConnection
+
+By convention, Serenity action methods that modify some state (CREATE, UPDATE etc.) should run inside a transaction, thus take an IUnitOfWork parameter, and ones that are read only operations (LIST, RETRIEVE) should use IDbConnection.
+
+If your service method takes a IUnitOfWork parameter, this is a signature that your method might modify some data.
+
+### About [HttpPost] Attribute
+
+You may have noticed that Create, Update, Delete etc methods has this attribute while List, Retrieve etc. not.
+
+This attribute limits Create, Update, Delete actions to HTTP POST only. It doesn't allow them to be called by HTTP GET.
+
+This is because, these methods are ones that modify some state, e.g. insert, update, delete some records from DB, so they shouldn't be allowed to be called unintentionally, and their results shouldn't be allowed to be cached.
+
+> This also has some security implications. Actions with GET method might be subject to some attacks.
+
+List, Retrieve doesn't modify anything, so they are allowed to be called with GET, e.g. typing in a browser address bar.
+
+Even though, List, Retrieve can be called by GET, Serenity always calls services using HTTP POST when you use its methods, e.g. Q.CallService, and will turn of caching to avoid unexpected results.
+
+
 
 
 

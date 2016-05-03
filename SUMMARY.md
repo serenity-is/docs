@@ -109,6 +109,7 @@
 * [Fluent SQL](fluent_sql/fluent_sql.md)
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
    * [Criteria Objects](fluent_sql/criteria_objects.md)
+* Connections and Transactions
 * [Services](services/README.md)
    * [List Request Handler](services/list_request_handler.md)
 * [Widgets](widgets/README.md)
@@ -118,5 +119,4 @@
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
-* Connections and Transactions
 

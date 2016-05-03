@@ -36,6 +36,8 @@ If you don't end your controller class name with this suffix, your actions will 
 
 Namespace of this class (*Serene.Northwind.Endpoints*) is not important at all, though we usually put endpoints under *MyProject.Module.Endpoints* namespace for consistency.
 
+Our OrderController derives from ServiceEndpoint (and should), which provides this MVC controller with not so usual features that we'll see shortly.
+
 
 ### Routing Attributes
 
@@ -47,6 +49,43 @@ Routing attributes above, which belongs to ASP.NET attribute routing, configures
 > Please avoid classic ASP.NET MVC routing, where you configured all routes in ApplicationStart method with *routes.AddRoute* etc. It was really hard to manage.
 
 All Serenity service endpoints uses */Services/Module/Entity* addressing scheme by default. Again even though you'd be able to use another address scheme, this is recommended for consistency and basic conventions.
+
+
+### ConnectionKey Attribute
+
+This attribute specificies which connection key in your application configuration file (e.g. web.config) should be used to create a connection when needed.
+
+Let's see when and how this auto created connection is used:
+
+```cs
+public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
+{
+    return new MyRepository().List(connection, request);
+}
+```
+
+Here we see that this action takes a IDbConnection parameter. You can't send a IDbConnection to an MVC action from client side. So who creates this connection?
+
+Remember that our controller derives from ServiceEndpoint? So ServiceEndpoint understands that our action requires a connection. It checks [ConnectionKey] attribute to determine connection key, creates a connection using *SqlConnections.NewByKey()*, executes our action with this connection, and when action ends executing, closes the connection.
+
+You'd be able to remove this connection parameter from the action and create it manually:
+
+```cs
+public ListResponse<MyRow> List(ListRequest request)
+{
+    using (var connection = SqlConnections.NewByKey("Northwind")) 
+    {
+        return new MyRepository().List(connection, request);
+    }
+}
+```
+
+Actually this is what ServiceEndpoint does. 
+
+Why not use this feature while platform handles this detail automatically? One reason would be when you need to open a custom connection that is not listed in the config file, or open a dynamic one depending on some conditions.
+
+
+
 
 
 

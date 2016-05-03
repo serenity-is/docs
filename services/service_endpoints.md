@@ -154,5 +154,14 @@ ServiceAuthorize("SomePermission")
 
 If user is not granted "SomePermission", this will prevent him from executing any endpoint method.
 
+There is also [PageAuthorize] attribute that works similar, but you should prefer [ServiceAuthorize] with service endpoints, because its error handling is more suitable for services.
 
+While [PageAuthorize] **redirects** user to the Login page, if user doesn't have the permission, ServiceAuthorize returns a more suitable **NotAuthorized service error**.
+
+It's also possible to use [ServiceAuthorize] attribute on actions, instead of controller:
+
+```cs
+[ServiceAuthorize("SomePermissionThatIsRequiredForCreate")]
+public SaveResponse Create(SaveRequest<MyRow> request)
+```
 

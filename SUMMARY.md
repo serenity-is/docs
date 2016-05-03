@@ -118,4 +118,5 @@
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
+* Connections and Transactions
 

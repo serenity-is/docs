@@ -21,7 +21,7 @@ Here is an excerpt from Northwind OrderEndpoint:
         }
 ```
 
-Our class has name *OrderController*, even though its file is named *OrderEndpoint*. This is due to a ASP.NET MVC limitation (which i don't find so logical) that all controllers must end with *Controller* suffix. 
+Our class has name *OrderController*, even though its file is named *OrderEndpoint.cs*. This is due to a ASP.NET MVC limitation (which i don't find so logical) that all controllers must end with *Controller* suffix. 
 
 If you don't end your controller class name with this suffix, your actions will simply won't work. So be very careful with this.
 

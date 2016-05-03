@@ -32,7 +32,7 @@ Our class has name *OrderController*, even though its file is named *OrderEndpoi
 
 If you don't end your controller class name with this suffix, your actions will simply won't work. So be very careful with this.
 
-> I also did this mistake several times and lost hours.
+> I also did this mistake several times and it cost me hours.
 
 Namespace of this class (*Serene.Northwind.Endpoints*) is not important at all, though we usually put endpoints under *MyProject.Module.Endpoints* namespace for consistency.
 

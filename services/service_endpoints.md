@@ -239,7 +239,7 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-Please follow this patter and try not to add more parameters to action methods. Serenity follows message based pattern, with only one request, that can be extended later by adding more parameters to specific request object. 
+Please follow this pattern and try not to add more parameters to action methods. Serenity follows message based pattern, with only one request, that can be extended later by adding more parameters to specific request object. 
 
 Don't do this (which is called RPC - Remote procedure call style):
 

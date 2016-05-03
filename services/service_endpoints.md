@@ -66,7 +66,7 @@ public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
 
 Here we see that this action takes a IDbConnection parameter. You can't send a IDbConnection to an MVC action from client side. So who creates this connection?
 
-Remember that our controller derives from ServiceEndpoint? So ServiceEndpoint understands that our action requires a connection. It checks [ConnectionKey] attribute to determine connection key, creates a connection using *SqlConnections.NewByKey()*, executes our action with this connection, and when action ends executing, closes the connection.
+Remember that our controller derives from ServiceEndpoint? So ServiceEndpoint understands that our action requires a connection. It checks [ConnectionKey] attribute on top of controller class to determine connection key, creates a connection using *SqlConnections.NewByKey()*, executes our action with this connection, and when action ends executing, closes the connection.
 
 You'd be able to remove this connection parameter from the action and create it manually:
 
@@ -80,7 +80,7 @@ public ListResponse<MyRow> List(ListRequest request)
 }
 ```
 
-Actually this is what ServiceEndpoint does. 
+Actually this is what ServiceEndpoint does behind the scenes.
 
 Why not use this feature while platform handles this detail automatically? One reason would be when you need to open a custom connection that is not listed in the config file, or open a dynamic one depending on some conditions.
 

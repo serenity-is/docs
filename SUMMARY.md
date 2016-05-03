@@ -112,6 +112,7 @@
 * [Connections and Transactions](connections/connections_and_transactions.md)
 * [Services](services/README.md)
    * [List Request Handler](services/list_request_handler.md)
+   * Service Endpoints
 * [Widgets](widgets/README.md)
    * [ScriptContext Class](widgets/scriptcontext_class.md)
    * [Widget Class](widgets/widget_class.md)

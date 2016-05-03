@@ -36,6 +36,9 @@ If you don't end your controller class name with this suffix, your actions will 
 
 Namespace of this class (*Serene.Northwind.Endpoints*) is not important at all, though we usually put endpoints under *MyProject.Module.Endpoints* namespace for consistency.
 
+
+### Routing Attributes
+
 ```cs
 [RoutePrefix("Services/Northwind/Order"), Route("{action}")]
 ```

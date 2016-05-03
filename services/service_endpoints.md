@@ -194,6 +194,83 @@ How this is possible? Again ServiceEndpoint handles this detail behind the scene
 
 We don't have to worry about this detail as long as our response object derives from ServiceResponse and is JSON serializable.
 
+Again, our request object is also an ordinary class that derives from a basic ServiceRequest:
 
+```cs
+public class SaveRequest<TEntity> : ServiceRequest, ISaveRequest
+{
+    public object EntityId { get; set; }
+    public TEntity Entity { get; set; }
+}
 
+public class ServiceRequest
+{
+} 
+```
 
+ServiceEndpoint takes the HTTP request content which is usually JSON, deserializes it into our *request* parameter, using a special MVC action filter (JsonFilter).
+
+If you want to use some custom actions, your methods should also follow this philosophy, e.g. take just one request (deriving from ServiceRequest) and return one response (deriving from ServiceResponse).
+
+Let's add a service method that returns count of all orders greater than some amount:
+
+```
+public class MyOrderCountRequest : ServiceRequest
+{
+    public decimal MinAmount { get; set; }
+}
+
+public class MyOrderCountResponse : ServiceResponse
+{
+    public int Count { get; set; }
+}
+
+public class OrderController : ServiceEndpoint
+{
+    public MyOrderCountResponse MyOrderCount(IDbConnection connection, 
+        MyOrderCountRequest request)
+    {
+        var fld = OrderRow.Fields;
+        return new MyOrderCountResponse 
+        {   
+            Count = connection.Count<OrderRow>(fld.TotalAmount >= request.MinAmount);
+        };
+    }
+}
+```
+
+Please follow this patter and try not to add more parameters to action methods. Serenity follows message based pattern, with only one request, that can be extended later by adding more parameters to specific request object. 
+
+Don't do this (which is called RPC - Remote procedure call style):
+
+```cs
+public class OrderController : ServiceEndpoint
+{
+    public decimal MyOrderCount(IDbConnection connection, 
+        decimal minAmount, decimal maxAmount, ....)
+    {
+        // ...
+    }
+}
+```
+
+Prefer this (message based services):
+
+```cs
+public class MyOrderCountRequest : ServiceRequest
+{
+    public decimal MinAmount { get; set; }
+    public decimal MaxAmount { get; set; }
+}
+
+public class OrderController : ServiceEndpoint
+{
+    public MyOrderCountResponse MyOrderCount(IDbConnection connection, 
+        MyOrderCountRequest request)
+    {
+        // ...
+    }
+}
+```
+
+This will avoid having to remember parameter order, will make your request objects extensible, and have many more advantages that you may notice later.

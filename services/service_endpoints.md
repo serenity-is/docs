@@ -165,3 +165,7 @@ It's also possible to use [ServiceAuthorize] attribute on actions, instead of co
 public SaveResponse Create(SaveRequest<MyRow> request)
 ```
 
+
+### About Request and Response Objects
+
+

@@ -278,7 +278,7 @@ This will avoid having to remember parameter order, will make your request objec
 
 ### Why Endpoint Methods Are Almost Empty
 
-We usually delegate actual work to our repository level:
+We usually delegate actual work to our repository layer:
 
 ```cs
 public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)

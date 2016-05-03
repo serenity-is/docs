@@ -31,7 +31,12 @@ If you don't end your controller class name with this suffix, your actions will 
 
 Namespace of this class (*Serene.Northwind.Endpoints*) is not important at all, though we usually put endpoints under *MyProject.Module.Endpoints* namespace for consistency.
 
+```cs
+[RoutePrefix("Services/Northwind/Order"), Route("{action}")]
+```
+Routing attributes above, which belongs to ASP.NET attribute routing, configures base address for our service endpoint. Our actions will be available under "mysite.com/Services/Northwind/Order".
 
+All Serenity service endpoints uses */Services/Module/Entity* addressing scheme by default. Again even though you'd be able to use another address scheme, this is recommended for consistency and conventions.
 
 
 

@@ -110,7 +110,6 @@
    * [SqlQuery Object](fluent_sql/sqlquery_object.md)
    * [Criteria Objects](fluent_sql/criteria_objects.md)
 * [Connections and Transactions](connections/connections_and_transactions.md)
-* Service Endpoints
 * [Services](services/README.md)
    * [List Request Handler](services/list_request_handler.md)
 * [Widgets](widgets/README.md)

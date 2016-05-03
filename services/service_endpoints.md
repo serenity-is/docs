@@ -273,4 +273,4 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-This will avoid having to remember parameter order, will make your request objects extensible, and have many more advantages that you may notice later.
+This will avoid having to remember parameter order, will make your request objects extensible without breaking backwards compability, and have many more advantages that you may notice later.

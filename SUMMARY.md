@@ -111,7 +111,7 @@
    * [Criteria Objects](fluent_sql/criteria_objects.md)
 * [Connections and Transactions](connections/connections_and_transactions.md)
 * [Services](services/README.md)
-   * Service Endpoints
+   * [Service Endpoints](services/service_endpoints.md)
    * [List Request Handler](services/list_request_handler.md)
 * [Widgets](widgets/README.md)
    * [ScriptContext Class](widgets/scriptcontext_class.md)

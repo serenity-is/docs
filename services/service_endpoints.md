@@ -168,4 +168,32 @@ public SaveResponse Create(SaveRequest<MyRow> request)
 
 ### About Request and Response Objects
 
+Except the specially handled IUnitOfWork and IDbConnection parameters, all Serenity service actions takes a single request parameter and returns a single result. 
+
+```
+public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
+```
+
+Let's start with the result. If you have some background on ASP.NET MVC, you'd know that controllers can't return arbitrary objects. They must return objects that derive from *ActionResult*.
+
+But our *SaveResponse* derives from *ServiceResponse* which is just an ordinary object:
+
+```
+public class SaveResponse : ServiceResponse
+{
+    public object EntityId;
+}
+
+public class ServiceResponse
+{
+    public ServiceError Error { get; set; }
+}
+```
+
+How this is possible? Again ServiceEndpoint handles this detail behind the scenes. It transforms our SaveResponse to a special action result that returns JSON data. 
+
+We don't have to worry about this detail as long as our response object derives from ServiceResponse and is JSON serializable.
+
+
+
 

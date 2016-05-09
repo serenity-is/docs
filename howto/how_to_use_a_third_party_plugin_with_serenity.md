@@ -206,6 +206,8 @@ export class BSMultiSelectEditor {
     constructor(element: JQuery, opt: BSMultiSelectOptions) {
         super(element, opt);
         
+        element.attr('multiple', 'multiple')
+        
         let lookup = Q.getLookup(this.options.lookupKey) as Q.Lookup<any>;
         for (let item of lookup.get_items()) {
             let key = item[lookup.get_idField()];
@@ -213,7 +215,7 @@ export class BSMultiSelectEditor {
             Q.addOption(element, key, text);
         }        
         
-        element.attr('multiple', 'multiple')
+        element
             .attr('name', this.uniqueName + "[]")
             .multiselect();     
     }

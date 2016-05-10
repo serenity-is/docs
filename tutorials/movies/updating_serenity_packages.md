@@ -29,11 +29,10 @@ To update Serenity.CodeGenerator (containg *sergen.exe*), type:
 
 Serenity.CodeGenerator is also installed in MovieTutorial.Web project.
 
-Now, let's update script project packages:
+> For versions before Serenity 2.1, you should also update Serenity.Script package
+> > Update-Package Serenity.Script
 
-> Update-Package Serenity.Script
-
-Serenity.Script package contains three assemblies: *Serenity.Script.Imports*, *Serenity.Script.Core* and *Serenity.Script.UI*, so this updates them all.
+> Serenity.Script package contains three assemblies: *Serenity.Script.Imports*, *Serenity.Script.Core* and *Serenity.Script.UI*, so this updates them all.
 
 > During updates, if NuGet asks to override changes in some script files, you can safely say yes unless you did manual modifications to Serenity script files (which i suggest you avoid).
 
@@ -62,8 +61,8 @@ Serenity.Web package also comes with some static script and css resources like t
 Content/serenity/serenity.css
 Scripts/saltarelle/mscorlib.js
 Scripts/saltarelle/linq.js
-Scripts/serenity/Serenity.Core.js
-Scripts/serenity/Serenity.Script.UI
+Scripts/serenity/Serenity.CoreLib.js
+Scripts/serenity/Serenity.Script.UI.js
 Scripts/serenity/Serenity.Externals.js
 Scripts/serenity/Serenity.Externals.Slick.js
 

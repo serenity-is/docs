@@ -18,20 +18,15 @@ Type *sergen* and press Enter.
 
 ### Setting Project Location
 
-When you first run Sergen, Web Project and Script Project fields will be prefilled for you. If you are using an older version of Serene than 1.6.2, follow these steps:
-
-Browse to your solution directory and locate web and script projects using "..." buttons.
-
-Another option is to set them to values below:
+When you first run Sergen, Web Project field will be prefilled for you.
 
 * ..\\..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
-* ..\\..\\..\\MovieTutorial\\MovieTutorial.Script\\MovieTutorial.Script.csproj
- 
-> If you used another project name than *MovieTutorial*, e.g. *MyMovies*, replace *MovieTutorial* with it.
 
-Once you set this values, and generate your first page, you won't have to set them again. This options will be saved in *Serenity.CodeGenerator.config* in your solution directory.
+> Script project field should be empty for v2.1+. Screenshot above belongs to an older version.
 
-This values are required, as Sergen will include generated files to your project.
+Once you set this value, and generate your first page, you won't have to set it again. All these options will be saved in *Serenity.CodeGenerator.config* in your solution directory.
+
+This value is required, as Sergen will automatically include generated files to your WEB project.
 
 ### Root Namespace Option
 

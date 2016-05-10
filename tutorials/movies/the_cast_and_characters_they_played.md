@@ -324,6 +324,8 @@ Also as this is not an integrated feature (yet), i have to handle a bit more plu
 Get a copy of MovieCastDialog.ts as MovieCastEditDialog.ts and modify it like below:
 
 ```ts
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+
 namespace MovieTutorial.MovieDB {
 
     @Serenity.Decorators.registerClass()
@@ -344,24 +346,6 @@ namespace MovieTutorial.MovieDB {
 
 Open MovieCastEditor.ts again and add a getDialogType method and override getAddButtonCaption:
 
-```cs
-namespace MovieTutorial.MovieDB
-{
-    //..
-    [DialogType(typeof(MovieCastEditDialog))]
-    public class MovieCastEditor : GridEditorBase<MovieCastRow>
-    {
-        public MovieCastEditor(jQueryObject container)
-            : base(container)
-        {
-        }
-
-        protected override string GetAddButtonCaption()
-        {
-            return "Add";
-        }
-    }
-}
 ```ts
 /// <reference path="../../Common/Helpers/GridEditorBase.ts" />
 
@@ -422,25 +406,24 @@ I have set editor type for PersonId field to a lookup editor and as i have alrea
 
 > We could have also written *[LookupEditor("MovieDB.Person")]*
 
-Build solution, launch and now MovieCastEditDialog has a better editing experience. But still has a bad look and PersonId field has a title of *Person Id* (or Person Firstname with < 1.6.1), why?
+Build solution, launch and now MovieCastEditDialog has a better editing experience. But still has a bad look and PersonId field has a title of *Person Id*, why?
 
-> While writing this, a new Serene version (1.6.0) is out. I'm now updating Serenity packages to keep your tutorial experience up to date!
 
 ### Fixing the Look Of MovieCastEditDialog
 
 Let's check *site.less* to understand why our MovieCastDialog is not styled.
 
 ```css
-.s-MovieCastDialog {
-    > .size { .widthAndMin(650px); }
-    .dialog-styles(@h: auto, @l: 150px, @e: 400px);
+.s-MovieDB-MovieCastDialog {
+    > .size { width: 650px; }
+    .caption { width: 150px; }
     .s-PropertyGrid .categories { height: 260px; }
 }
 ```
 
 The CSS at the bottom of *site.less* is for the *MovieCastDialog*, not *MovieCastEditDialog*, because we defined this class ourselves, not with code generator.
 
-We created a new dialog type, by copying MovieCastDialog and modifying it slightly, so now our new dialog has a CSS class of *s-MovieCastEditDialog*, but code generator only generated CSS rules for *s-MovieCastDialog*.
+We created a new dialog type, by copying MovieCastDialog and modifying it slightly, so now our new dialog has a CSS class of *s-MovieDB-MovieCastEditDialog*, but code generator only generated CSS rules for *s-MovieDB-MovieCastDialog*.
 
 > Serenity dialogs automatically assigns CSS classes to dialog elements, by prefixing type name with *"s-"*. You can see this by inspecting the dialog in developer tools. MovieCastEditDialog has CSS classes of *s-MovieCastEditDialog* and *s-MovieDB-MovieCastEditDialog*, along with some like *ui-dialog*.
 
@@ -449,10 +432,10 @@ We created a new dialog type, by copying MovieCastDialog and modifying it slight
 As we are not gonna actually use MovieCastDialog (we'll delete it), let's rename the one in *site.less*:
 
 ```css
-.s-MovieCastEditDialog {
-    > .size { .widthAndMin(550px); }
-    .dialog-styles(@h: auto, @l: 150px, @e: 300px);
-    .s-PropertyGrid .categories { height: 160px; }
+.s-MovieDB-MovieCastEditDialog {
+    > .size { width: 650px; }
+    .caption { width: 150px; }
+    .s-PropertyGrid .categories { height: 260px; }
 }
 ```
 
@@ -491,7 +474,7 @@ First, we changed DisplayName and InstanceName attributes to set dialog title. A
 
 ### Fixing MovieCastEditor Columns
 
-MovieCastEditor is currently using columns defined in *MovieCastColumns.cs* (because it has [ColumnsKey("MovieDB.MovieCast")] on class declaration).
+MovieCastEditor is currently using columns defined in *MovieCastColumns.cs* (because it returns "MovieDB.MovieCast" in getColumnsKey() method.
 
 We have MovieCastId, MovieId, PersonId (shown as Actor/Actress) and Character columns there. It is better to show only Actor/Actress and Character columns.
 
@@ -608,8 +591,7 @@ namespace MovieTutorial.MovieDB
         // ...
         protected override bool ValidateEntity(MovieCastRow row, int? id)
         {
-            if (!base.ValidateEntity(row, id))
-                return false;
+
 
             row.PersonFullname = PersonRow.Lookup
                 .ItemById[row.PersonId.Value].Fullname;
@@ -620,16 +602,36 @@ namespace MovieTutorial.MovieDB
 }
 
 ```
+```ts
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+
+namespace MovieTutorial.MovieDB {
+    @Serenity.Decorators.registerEditor()
+    export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
+        //...
+
+        validateEntity(row: MovieCastRow, id: number) {
+            if (!super.validateEntity(row, id))
+                return false;        
+
+            row.PersonFullname = PersonRow.getLookup()
+                .itemById[row.PersonId.Value].Fullname;
+                
+            return true;
+        }        
+    }
+}   
+```
 
 ValidateEntity is a method from our GridEditorBase class in Serene. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
 
 As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person full name.
 
-For this, we need a dictionary that maps PersonId to their Fullname values. Fortunately, person lookup has such a dictionary. We can access the lookup for PersonRow through its Lookup property.
+For this, we need a dictionary that maps PersonId to their Fullname values. Fortunately, person lookup has such a dictionary. We can access the lookup for PersonRow through its *lookup* property.
 
-> Another way to access person lookup is by *Q.GetLookup('MovieDB.Person')*. The one in PersonRow is just a shortcut defined by T4 templates.
+> Another way to access person lookup is by *Q.getLookup('MovieDB.Person')*. The one in PersonRow is just a shortcut defined by T4 templates.
 
-All lookups has a ItemById dictionary that allows you to access an entity of that type by its ID.
+All lookups has a *itemById* dictionary that allows you to access an entity of that type by its ID.
 
 > Lookups are a simple way to share server side data with client side. But they are only suitable for small sets of data. 
 

@@ -1,5 +1,7 @@
 # Adding Primary and Gallery Images
 
+> ...This section needs to be updated for TypeScript
+
 To add a primary image and multiple gallery images to both Movie and Person records, need to start with a migration:
 
 ```cs

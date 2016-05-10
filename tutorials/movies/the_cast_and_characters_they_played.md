@@ -259,59 +259,25 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 > For some types of master/detail records like order/detail, details shouldn't be allowed to be edited independently for consistency reasons. Serene already has a sample for this kind of editing in Northwind/Order dialog.
 
 
-### Getting Required Base Classes From Serene Template 1.5.9+
-
-You will probably won't need this step, but as i started this tutorial before Order/Detail editing sample was in Serene, i have to take three classes from a recent template.
-
-> This is just a sample on how to get new features from a more recent Serene template.
-
-So i will create a new Serene application (NewApp), take these three files below from it:
-
-```
-NewApp.Script/Common/Helper/GridEditorBase.cs
-NewApp.Script/Common/Helper/GridEditorDialog.cs
-NewApp.Web/Modules/Common/Helpers/DetailListSaveHandler.cs
-```
-
-Copy them under 
-
-```
-MovieTutorial.Script/Common/Helper/GridEditorBase.cs
-MovieTutorial.Script/Common/Helper/GridEditorDialog.cs
-MovieTutorial.Web/Modules/Common/Helpers/DetailListSaveHandler.cs
-```
-
-Include them in project and replace *NewApp* text with *MovieTutorial*.
-
-> Once these base classes are stable and flexible enough, they will be integrated to Serenity itself.
-
-
 ### Creating an Editor For Movie Cast List
 
-Next to MovieCastGrid.cs (at MovieTutorial.Script/MovieDB/MovieCast/), create a file named *MovieCastEditor.cs* with contents below:
+Next to MovieCastGrid.ts (at MovieTutorial.Web/Modules/MovieDB/MovieCast/), create a file named *MovieCastEditor.ts* with contents below:
 
-```cs
-namespace MovieTutorial.MovieDB
-{
-    using Common;
-    using jQueryApi;
-    using Serenity;
-    using System.Linq;
+```ts
+namespace MovieTutorial.MovieDB {
+    @Serenity.Decorators.registerClass()
+    export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
+        protected getColumnsKey() { return "MovieDB.MovieCast"; }
+        protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
-    [ColumnsKey("MovieDB.MovieCast"), LocalTextPrefix("MovieDB.MovieCast")]
-    public class MovieCastEditor : GridEditorBase<MovieCastRow>
-    {
-        public MovieCastEditor(jQueryObject container)
-            : base(container)
-        {
+        constructor(container: JQuery) {
+            super(container);
         }
     }
-}
+}   
 ```
 
-> Please DON'T use Visual Studio add item menus to create a .cs file in script project. Use copy paste to create a new file and modify it. Otherwise, Visual Studio adds a System reference to Script project, which is not compatible with Saltarelle. You need to remove System reference if you did that mistake.
-
-To reference this new editor type from server side, rebuild solution, transform all templates (if using an old version, remove that useless MovieCastRow partial from MovieGrid.cs, and build again (i had to re-run templates)
+To reference this new editor type from server side, rebuild solution, transform all templates.
 
 
 ### Using MovieCastEditor in Movie Form
@@ -336,7 +302,7 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-By putting *[MovieCastEditor]* attribute on top of CastList property, we specified that this property will be edited by our new MovieCastEditor type which is defined in script code.
+By putting *[MovieCastEditor]* attribute on top of CastList property, we specified that this property will be edited by our new MovieCastEditor type which is defined in TypeScript code.
 
 > We could also write *[EditorType("MovieDB.MovieCast")]* but who really likes hard-coded strings? Not me...
 

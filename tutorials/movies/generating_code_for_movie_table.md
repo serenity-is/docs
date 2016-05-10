@@ -30,7 +30,7 @@ This value is required, as Sergen will automatically include generated files to 
 
 ### Root Namespace Option
 
-Set root namespace option to the Solution name you used, e.g. *MovieTutorial*. If your project names are MyProject.Web and MyProject.Script, your root namespace is MyProject by default. This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
+Set root namespace option to the Solution name you used, e.g. *MovieTutorial*. If your project names is MyProject.Web, your root namespace is MyProject by default. This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
 
 This option is also saved, so next time you won't have to fill it in.
 
@@ -99,8 +99,6 @@ As projects are modified, Visual Studio will ask if you wan't to reload changes,
 *REBUILD the Solution* and then press *F5* to launch application.
 
 > Please make sure you REBUILD SOLUTION, by right clicking solution name and clicking rebuild. Some users report that they got an empty page after generating code. It's due to script project is not built properly. You should specially rebuild MovieTutorial.Script project. It's output is placed under MovieTutorial.Web/Scripts/site folder on rebuild.
-
-> Another option is to add a project dependency. To make Script project also build when Web project is run, right click MovieTutorial.Web project, click *Build Dependencies -> Project Dependencies* and check *MovieTutorial.Script* under *Dependencies* tab.
 
 Use *admin* as username, and *serenity* as password to login.
 

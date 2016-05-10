@@ -1,6 +1,6 @@
 # Listing Movies in Person Dialog
 
-> This section needs to be updated for TypeScript
+> ...This section needs to be updated for TypeScript
 
 To show list of movies a person acted in, we'll add a tab to PersonDialog.
 

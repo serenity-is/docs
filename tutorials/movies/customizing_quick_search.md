@@ -137,8 +137,7 @@ Once you save that file, we'll have a dropdown in quick search input:
 
 ![Movies Quick Search Fields](img/movies_quick_fields.png)
 
-> Unlike prior samples where we modified Server side code, this time we did changes in Script side, and actually modified javascript code.
-
+> Unlike prior samples where we modified Server side code, this time we did changes in client side, and modified javascript (TypeScript) code.
 
 
 ### Running T4 Templates (.tt files)

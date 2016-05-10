@@ -107,36 +107,34 @@ public Int32? Year
 
 It is also possible to provide user with ability to determine which field she wants to search on.
 
-Open *MovieTutorial.Script/MovieDB/Movie/MovieGrid.cs* and modify it like:
+Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
 
 ```
 
 namespace MovieTutorial.MovieDB
 {
     //...
-    public class MovieGrid : EntityGrid<MovieRow>
+    public class MovieGrid extends EntityGrid<MovieRow, any>
     {
-        public MovieGrid(jQueryObject container)
-            : base(container)
-        {
+        constructor(container: JQuery) {
+            super(container);
         }
 
-        protected override List<QuickSearchField> GetQuickSearchFields()
+        protected getQuickSearchFields(): Serenity.QuickSearchField[]
         {
-            return new List<QuickSearchField>
-            {
-                new QuickSearchField { Name = "", Title = "all" },
-                new QuickSearchField { Name = "Description", Title = "description" },
-                new QuickSearchField { Name = "Storyline", Title = "storyline" },
-                new QuickSearchField { Name = "Year", Title = "year" }
-            };
+            return [
+                { name: "", title: "all" },
+                { name: "Description", title: "description" },
+                { name: "Storyline", title: "storyline" },
+                { name: "Year", title: "year" }
+            ];
         }
     }
     ///...
 }
 ```
 
-Now we have a dropdown in quick search input:
+Once you save that file, we'll have a dropdown in quick search input:
 
 ![Movies Quick Search Fields](img/movies_quick_fields.png)
 

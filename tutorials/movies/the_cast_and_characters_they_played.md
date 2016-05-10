@@ -264,6 +264,8 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 Next to MovieCastGrid.ts (at MovieTutorial.Web/Modules/MovieDB/MovieCast/), create a file named *MovieCastEditor.ts* with contents below:
 
 ```ts
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+
 namespace MovieTutorial.MovieDB {
     @Serenity.Decorators.registerEditor()
     export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
@@ -340,7 +342,7 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-Open MovieCastEditor.cs again and add a DialogType attribute and override GetAddButtonCaption:
+Open MovieCastEditor.ts again and add a getDialogType method and override getAddButtonCaption:
 
 ```cs
 namespace MovieTutorial.MovieDB
@@ -360,6 +362,25 @@ namespace MovieTutorial.MovieDB
         }
     }
 }
+```ts
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+
+namespace MovieTutorial.MovieDB {
+    @Serenity.Decorators.registerEditor()
+    export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
+        protected getColumnsKey() { return "MovieDB.MovieCast"; }
+        protected getDialogType() { return MovieCastEditDialog; }
+        protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
+
+        constructor(container: JQuery) {
+            super(container);
+        }
+        
+        protected getAddButtonCaption() {
+            return "Add";
+        }
+    }
+}   
 ```
 
 We specified that MovieCastEditor uses a MovieCastEditDialog by default which is also used by *Add* button. 

@@ -362,5 +362,3 @@ It is also possible to start typing in genre editor, and it will provide you wit
 ### Re-runing T4 Templates
 
 As we added a new entity to our application, we should run T4 templates after building solution.
-
-> If you are using a Serene version before 1.6.0, it might complain about duplicate attribute declerations, so just delete GenreRow partial class in GenreGrid.cs.

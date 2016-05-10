@@ -109,8 +109,7 @@ It is also possible to provide user with ability to determine which field she wa
 
 Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
 
-```
-
+```ts
 namespace MovieTutorial.MovieDB
 {
     //...
@@ -146,57 +145,36 @@ Once you save that file, we'll have a dropdown in quick search input:
 
 In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names at server side.
 
-Serene contains some T4 (.tt) files to transfer such information from server side (rows etc) to client side for intellisense purposes.
+Serene contains some T4 (.tt) files to transfer such information from server side (rows etc in C#) to client side (TypeScript) for intellisense purposes.
 
-Before running these templates, please make sure that your solution builds successfully as templates uses your output DLL files (*MovieTutorial.Web.dll*, *MovieTutorial.Script.dll*) to generate code.
+Before running these templates, please make sure that your solution builds successfully as templates uses your output DLL file (*MovieTutorial.Web.dll*) to generate code.
 
 After building your solution, click on *Build* menu, than *Transform All Templates*.
 
-> If you are using a Serene version before 1.6.0, you might get an error like following:
-
-> ```
-> Error CS0579 Duplicate 'Imported' attribute ...
-> ```
-> 
-> To resolve it, just remove following lines from file *MovieGrid.cs* under *MovieTutorial.Script/MovieDB/Movie*:
-
-> ```cs
-> // Please remove this partial class or the first line below, 
-> // after you run ScriptContexts.tt
-> [Imported, Serializable, PreserveMemberCase] 
-> public partial class MovieRow
-> {
-> }
-> ```
-
-
 We can use intellisense to replace hardcoded field names with compile time checked versions:
 
-```cs
+```ts
 namespace MovieTutorial.MovieDB
 {
-    // ...
-    public class MovieGrid : EntityGrid<MovieRow>
+    //...
+    public class MovieGrid extends EntityGrid<MovieRow, any>
     {
-        public MovieGrid(jQueryObject container)
-            : base(container)
-        {
+        constructor(container: JQuery) {
+            super(container);
         }
 
-        protected override List<QuickSearchField> GetQuickSearchFields()
+        protected getQuickSearchFields(): Serenity.QuickSearchField[]
         {
-            return new List<QuickSearchField>
-            {
-                new QuickSearchField { Name = "", Title = "all" },
-                new QuickSearchField { Name = MovieRow.Fields.Description, 
-                    Title = "description" },
-                new QuickSearchField { Name = MovieRow.Fields.Storyline, 
-                    Title = "storyline" },
-                new QuickSearchField { Name = MovieRow.Fields.Year, 
-                    Title = "year" }
-            };
+            let fld = MovieRow.Fields;
+            return [
+                { name: "", title: "all" },
+                { name: fld.Description, title: "description" },
+                { name: fld.Storyline, title: "storyline" },
+                { name: fld.Year, title: "year" }
+            ];
         }
     }
+    ///...
 }
 ```
 

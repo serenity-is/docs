@@ -265,7 +265,7 @@ Next to MovieCastGrid.ts (at MovieTutorial.Web/Modules/MovieDB/MovieCast/), crea
 
 ```ts
 namespace MovieTutorial.MovieDB {
-    @Serenity.Decorators.registerClass()
+    @Serenity.Decorators.registerEditor()
     export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
         protected getColumnsKey() { return "MovieDB.MovieCast"; }
         protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
@@ -319,23 +319,25 @@ Also as this is not an integrated feature (yet), i have to handle a bit more plu
 
 ### Configuring MovieCastEditor to Use MovieCastEditDialog
 
-Get a copy of MovieCastDialog.cs as MovieCastEditDialog.cs and modify it like below:
+Get a copy of MovieCastDialog.ts as MovieCastEditDialog.ts and modify it like below:
 
-```cs
-namespace MovieTutorial.MovieDB
-{
-    using jQueryApi;
-    using Common;
-    using Serenity;
-    using System.Collections.Generic;
+```ts
+namespace MovieTutorial.MovieDB {
 
-    [NameProperty("Character"), FormKey("MovieDB.MovieCast"),
-        LocalTextPrefix("MovieDB.MovieCast")]
-    public class MovieCastEditDialog : GridEditorDialog<MovieCastRow>
-    {
+    @Serenity.Decorators.registerClass()
+    export class MovieCastEditDialog extends Common.GridEditorDialog<> {
+        protected getFormKey() { return MovieCastForm.formKey; }
+        protected getNameProperty() { return "Character"; }
+        protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
+        
+        protected form: MovieCastForm;
+
+        constructor() {
+            super();
+            this.form = new MovieCastForm(this.idPrefix);
+        }
     }
 }
-
 ```
 
 Open MovieCastEditor.cs again and add a DialogType attribute and override GetAddButtonCaption:

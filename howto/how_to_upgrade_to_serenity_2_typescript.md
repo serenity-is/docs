@@ -112,6 +112,7 @@ Add a **tsconfig.json** file to the root of your Web project (where web.config a
         "declaration": true,
         "emitBOM": true,
         "sourceMap": true,
+        "target": "ES5",
         "outFile": "Scripts/site/Serene.Web.js"
     },
     "exclude": [

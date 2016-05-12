@@ -227,7 +227,7 @@ Make a copy of it in same folder with name *CodeGenerationHelpers.ttinclude*
 
 Get latest source of CodeGenerationHelpers.ttinclude from address below (it's different!) and copy paste it to *CodeGenerationHelpers.ttinclude* file you just created:
 
-https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Script/Imports/CodeGenerationHelpers.ttinclude
+[https://raw.githubusercontent.com/volkanceylan/Serene/ b900c67b4c820284379b9c613b16379bb8c530f3/Serene/Serene.Script/ Imports/CodeGenerationHelpers.ttinclude](https://raw.githubusercontent.com/volkanceylan/Serene/b900c67b4c820284379b9c613b16379bb8c530f3/Serene/Serene.Script/Imports/CodeGenerationHelpers.ttinclude)
 
 *Search and Replace **Serene** with **YourProjectName** * in this file. There must be several.
 
@@ -237,7 +237,7 @@ Rename folder *YourProject.Script\Imports\ServiceContracts* to **ServerImports**
 
 Grab latest source of ServerImports.tt file from address below and copy paste it to *ServerImports.tt* file you just renamed:
 
-https://raw.githubusercontent.com/volkanceylan/Serene/master/Serene/Serene.Script/Imports/ServerImports/ServerImports.tt
+[https://raw.githubusercontent.com/volkanceylan/Serene/ b900c67b4c820284379b9c613b16379bb8c530f3/Serene/Serene.Script/ Imports/ServerImports/ServerImports.tt](https://raw.githubusercontent.com/volkanceylan/Serene/b900c67b4c820284379b9c613b16379bb8c530f3/Serene/Serene.Script/Imports/ServerImports/ServerImports.tt)
 
 *Search and Replace **Serene** with **YourProjectName** * in this file.
 

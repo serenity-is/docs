@@ -109,15 +109,18 @@ Add a **tsconfig.json** file to the root of your Web project (where web.config a
     "compilerOptions": {
         "preserveConstEnums": true,
         "experimentalDecorators": true,
-        "declaration": false,
+        "declaration": true,
         "emitBOM": true,
         "sourceMap": true,
         "outFile": "Scripts/site/Serene.Web.js"
-    }
+    },
+    "exclude": [
+        "Scripts/site/Serene.Web.d.ts"
+    ]
 }
 ```
 
-*Replace **Serene.Web.js** with your project name.*
+*Replace **Serene.Web** with your project name.*
 
 
 

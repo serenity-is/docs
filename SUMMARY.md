@@ -121,5 +121,6 @@
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
 * Grids
    * [Persisting Settings](grids/persisting_settings.md)
+   * Formatter Types
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
 

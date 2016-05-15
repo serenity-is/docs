@@ -81,7 +81,7 @@ namespace Serene.Northwind {
     export class OrderGrid extends Serenity.EntityGrid<OrderRow, any> {
         //...
         
-        protected getPersistanceStorage() {
+        protected getPersistanceStorage(): Serenity.SettingStorage {
             return window.localStorage;
         }
     }
@@ -92,4 +92,83 @@ namespace Serene.Northwind {
 You may also turn off persistance for a grid class by returning *null* from this method.
 
 
+### Determining Which Setting Types Are Saved
 
+By default, all settings noted at start are saved, like visible columns, widths, filters etc. You may choose to not persist / restore specific settings. This is controlled by *getPersistanceFlags* method:
+
+```ts
+namespace Serene.Northwind {
+    //...
+    export class OrderGrid extends Serenity.EntityGrid<OrderRow, any> {
+        //...
+        
+        protected getPersistanceFlags(): GridPersistanceFlags {
+            return {
+                columnWidths: false // dont persist column widths;
+            }
+        }
+    }
+}
+```
+
+Here is the set of complete flags: 
+
+```ts
+interface GridPersistanceFlags {
+    columnWidths?: boolean;
+    columnVisibility?: boolean;
+    sortColumns?: boolean;
+    filterItems?: boolean;
+    quickFilters?: boolean;
+    includeDeleted?: boolean;
+}
+```
+
+### When Settings Are Saved / Restored
+
+Settings are automatically saved when you change something with a grid like:
+
+* Choosing visible columns with Column Picker dialog
+* Resizing a column manually
+* Editing advanced filter
+* Dragging a column, changing position
+* Changing sorted columns
+
+Settings are restored on first page load, just after grid creation.
+
+
+
+### Persisting Settings to Database (User Preferences Table)
+
+Serene 2.1.5 comes with a *UserPreferences* table that you may use as a persistance storage. To use this storage, you just need to set it as storage similar to other storage types.
+
+```ts
+Serenity.DataGrid.defaultPersistanceStorage = new Common.UserPreferenceStorage();
+```
+
+OR 
+
+```ts
+namespace Serene.Northwind {
+    //...
+    export class OrderGrid extends Serenity.EntityGrid<OrderRow, any> {
+        //...
+        
+        protected getPersistanceStorage(): Serenity.SettingStorage {
+            return new Common.UserPreferenceStorage();
+        }
+    }
+}
+```
+
+
+### Manually Saving / Restoring Settings
+
+If you need to save / restore settings manually, you may use methods below:
+
+```ts
+protected getCurrentSettings(flags?: GridPersistanceFlags): PersistedGridSettings;
+protected restoreSettings(settings?: PersistedGridSettings, flags?: GridPersistanceFlags): void;
+```
+
+These are protected methods of DataGrid, so can only be called from subclasses.

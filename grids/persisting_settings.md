@@ -70,3 +70,26 @@ Serenity.DataGrid.defaultPersistanceStorage = new UserLocalStorage();
 
 > Please note that this doesn't provide any security. It just lets users have separate settings.
 
+
+### Setting Persistance Storage Per Grid Type
+
+To turn on persistance, or change target storage for a particular grid, override getPersistanceStorage method:
+
+```ts
+namespace Serene.Northwind {
+    //...
+    export class OrderGrid extends Serenity.EntityGrid<OrderRow, any> {
+        //...
+        
+        protected getPersistanceStorage() {
+            return window.localStorage;
+        }
+    }
+}
+
+```
+
+You may also turn off persistance for a grid class by returning *null* from this method.
+
+
+

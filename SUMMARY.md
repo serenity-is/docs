@@ -119,7 +119,7 @@
    * [Widget With Options](widgets/widget_with_options.md)
    * [TemplatedWidget Class](widgets/templated_widget_class.md)
    * [TemplatedDialog Class](widgets/templated_dialog_class.md)
-* Grids
+* [Grids](grids/readme.md)
    * [Formatter Types](grids/formatter_types.md)
    * [Persisting Settings](grids/persisting_settings.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)

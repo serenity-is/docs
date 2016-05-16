@@ -56,7 +56,8 @@ You'd be able to remove them manually after code generation too, but using this 
 ```json
 {
   // ...
-  "RemoveForeignFields": ["InsertUserId", "UpdateUserId", "InsertDate", "UpdateDate"]
+  "RemoveForeignFields": ["InsertUserId", "UpdateUserId", 
+      "InsertDate", "UpdateDate"]
 }
 ```
 
@@ -74,7 +75,8 @@ For this to work, list your base classes, and the fields they have.
   // ...
   "BaseRowClasses": [{
       "ClassName": "Serene.Administration.LoggingRow",
-      "Fields": ["InsertUserId", "UpdateUserId", "InsertDate", "UpdateDate"]
+      "Fields": ["InsertUserId", "UpdateUserId", 
+          "InsertDate", "UpdateDate"]
   }]     
 }
 ```

@@ -595,7 +595,7 @@ namespace MovieTutorial.MovieDB {
                 return false;        
 
             row.PersonFullname = PersonRow.getLookup()
-                .itemById[row.PersonId.Value].Fullname;
+                .itemById[row.PersonId].Fullname;
                 
             return true;
         }        

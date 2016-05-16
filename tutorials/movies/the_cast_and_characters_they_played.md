@@ -580,28 +580,8 @@ public class MovieCastForm
 
 There is no PersonFullname field in this entity, so grid can't display its value.
 
-We need to set PersonFullname ourself. Let's first transform T4 templates to have access to PersonFullname field that we recently added, then edit MovieCastEditor.cs:
+We need to set PersonFullname ourself. Let's first transform T4 templates to have access to PersonFullname field that we recently added, then edit MovieCastEditor.ts:
 
-```cs
-namespace MovieTutorial.MovieDB
-{
-    // ...
-    public class MovieCastEditor : GridEditorBase<MovieCastRow>
-    {
-        // ...
-        protected override bool ValidateEntity(MovieCastRow row, int? id)
-        {
-
-
-            row.PersonFullname = PersonRow.Lookup
-                .ItemById[row.PersonId.Value].Fullname;
-
-            return true;
-        }
-    }
-}
-
-```
 ```ts
 /// <reference path="../../Common/Helpers/GridEditorBase.ts" />
 

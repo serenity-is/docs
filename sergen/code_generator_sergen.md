@@ -37,6 +37,14 @@ Sergen looks for KDiff3 at its default location under C:\Program Files\Kdiff3, b
 For users that work with TFS, Sergen provides this options to make it possible to checkout existing files and add new ones to source control. Set TFSIntegration to true, if your project is versioned in TFS, and set TFPath if tf.exe is not under its default location at C:\Program Files\Visual Studio\x.y\Common7\ide\
 
 
+```json
+{
+  // ...
+  "TFSIntegration": true,
+  "TFPath": "C:\Program Files\....\tf.exe"
+}
+```
+
 ### RemoveForeignFields
 
 By default, Sergen examines your table foreign keys, and when generating a row class, it will bring all fields from all referenced foreign tables.

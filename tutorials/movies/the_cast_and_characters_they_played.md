@@ -763,7 +763,8 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
         var mc = Entities.MovieCastRow.Fields;
         Row.CastList = Connection.List<Entities.MovieCastRow>(q => q
             .SelectTableFields()
-            .Select(mc.PersonFullname));
+            .Select(mc.PersonFullname)
+            .Where(mc.MovieId == Row.MovieId.Value));
     }
 }
 ```

@@ -106,13 +106,16 @@ Next define a *PersonMovieGrid* class, in file *PersonMovieGrid.ts* next to *Per
 ```ts
 namespace MovieTutorial.MovieDB
 {
-    [ColumnsKey("MovieDB.PersonMovie"), IdProperty(MovieCastRow.IdProperty)]
-    [LocalTextPrefix(MovieCastRow.LocalTextPrefix), Service(MovieCastService.BaseUrl)]
-    public class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
+    @Serenity.Decorators.registerClass()
+    export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
     {
-        constructor(container: )
-            : base(container)
-        {
+        protected getColumnsKey() { return "MovieDB.PersonMovie"; }
+        protected getIdProperty() { return MovieCastRow.IdProperty; }
+        protected getLocalTextPrefix() { return MovieCastRow.LocalTextPrefix; }
+        protected getService() { return MovieCastService.baseUrl; }
+        
+        constructor(container: JQuery) {
+            super(container);
         }
     }
 }
@@ -120,28 +123,24 @@ namespace MovieTutorial.MovieDB
 
 We'll actually use MovieCast service, to list movies a person acted in.
 
-Last step is to create this grid in PersonDialog.cs:
+Last step is to create this grid in PersonDialog.ts:
 
 ```cs
 
 namespace MovieTutorial.MovieDB
 {
-    using jQueryApi;
-    using Serenity;
-    using System.Collections.Generic;
-
-    [IdProperty(PersonRow.IdProperty), NameProperty(PersonRow.Fields.Fullname)]
-    [FormKey(PersonForm.FormKey), LocalTextPrefix(PersonRow.LocalTextPrefix),
-     Service(PersonService.BaseUrl)]
-    public class PersonDialog : EntityDialog<PersonRow>
+    @Serenity.Decorators.registerClass()
+    export class PersonDialog : EntityDialog<PersonRow>
     {
-        private PersonMovieGrid moviesGrid;
+        private moviesGrid: PersonMovieGrid;
 
-        public PersonDialog()
-        {
-            moviesGrid = new PersonMovieGrid(this.ById("MoviesGrid"));
-
-            tabs.OnActivate += (e, i) => this.Arrange();
+        constructor() {
+            super();
+            
+            this.moviesGrid = new PersonMovieGrid(this.byId("MoviesGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });           
         }
     }
 }
@@ -163,55 +162,48 @@ No, Carrie-Anne Moss didn't act in three roles. This grid is showing all movie c
 
 PersonMovieGrid should know the person it shows the movie cast records for. So, we add a *PersonID* property to this grid. This *PersonID* should be passed somehow to list service for filtering.
 
-```cs
+```ts
 namespace MovieTutorial.MovieDB
 {
-    using jQueryApi;
-    using Serenity;
-    using System.Collections.Generic;
-
-    [ColumnsKey("MovieDB.PersonMovie"), IdProperty(MovieCastRow.IdProperty)]
-    [LocalTextPrefix(MovieCastRow.LocalTextPrefix), Service(MovieCastService.BaseUrl)]
-    public class PersonMovieGrid : EntityGrid<MovieCastRow>
+    @Serenity.Decorators.registerClass()
+    export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
     {
-        public PersonMovieGrid(jQueryObject container)
-            : base(container)
-        {
+        protected getColumnsKey() { return "MovieDB.PersonMovie"; }
+        protected getIdProperty() { return MovieCastRow.IdProperty; }
+        protected getLocalTextPrefix() { return MovieCastRow.LocalTextPrefix; }
+        protected getService() { return MovieCastService.baseUrl; }
+        
+        constructor(container: JQuery) {
+            super(container);
         }
-
-        protected override List<ToolButton> GetButtons()
-        {
+        
+        protected getButtons() {
             return null;
         }
-
-        protected override string GetInitialTitle()
-        {
+        
+        protected getInitialTitle() {
             return null;
         }
-
-        protected override bool UsePager()
-        {
+        
+        protected usePager() {
             return false;
+        }       
+        
+        protected getGridCanLoad() {
+            return this.personID != null;
         }
-
-        protected override bool GetGridCanLoad()
-        {
-            return personID != null;
+       
+        private _personID: number;
+       
+        get personID() {
+            return this._personID;
         }
-
-        private int? personID;
-
-        public int? PersonID
-        {
-            get { return personID; }
-            set
-            {
-                if (personID != value)
-                {
-                    personID = value;
-                    SetEquality(MovieCastRow.Fields.PersonId, value);
-                    Refresh();
-                }
+        
+        set personID(value: number) {
+            if (_personID != value) {
+                _personID = value;
+                this.setEquality(MovieCastRow.Fields.PersonId, value);
+                this.refresh();
             }
         }
     }
@@ -225,38 +217,22 @@ Overriding GetGridCanLoad method allows us to control when grid can call list se
 
 We also did three cosmetic changes, by overriding three methods, first to remove all buttons from toolbar, second to remove title from the grid (as tab title is enough), and third to remove paging functionality (a person can't have a million movies right?). 
 
-> SetEquality method is introduced in Serenity 1.6.5
-
 ### Setting PersonID of PersonMovieGrid in PersonDialog
 
 If nobody sets grids PersonID property, it will always be null, and no records will be loaded. We should set it in Person dialog:
 
-```cs
+```ts
 namespace MovieTutorial.MovieDB
 {
-    using jQueryApi;
-    using Serenity;
-    using System.Collections.Generic;
-
-    [IdProperty(PersonRow.IdProperty), NameProperty(PersonRow.Fields.Fullname)]
-    [FormKey(PersonForm.FormKey), LocalTextPrefix(PersonRow.LocalTextPrefix), 
-     Service(PersonService.BaseUrl)]
-    public class PersonDialog : EntityDialog<PersonRow>
+    // ...
+    export class PersonDialog extends EntityDialog<PersonRow>
     {
-        private PersonMovieGrid moviesGrid;
-
-        public PersonDialog()
+        // ...
+        protected afterLoadEntity()
         {
-            moviesGrid = new PersonMovieGrid(this.ById("MoviesGrid"));
+            base.afterLoadEntity();
 
-            tabs.OnActivate += (e, i) => this.Arrange();
-        }
-
-        protected override void AfterLoadEntity()
-        {
-            base.AfterLoadEntity();
-
-            moviesGrid.PersonID = (int?)this.EntityId;
+            moviesGrid.personID = this.entityId;
         }
     }
 }

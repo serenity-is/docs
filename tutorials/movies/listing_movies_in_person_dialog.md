@@ -101,19 +101,16 @@ namespace MovieTutorial.MovieDB.Columns
 }
 ```
 
-Next define a *PersonMovieGrid* class, in file *PersonMovieGrid.cs* next to *PersonGrid.cs*:
+Next define a *PersonMovieGrid* class, in file *PersonMovieGrid.ts* next to *PersonGrid.ts*:
 
-```cs
+```ts
 namespace MovieTutorial.MovieDB
 {
-    using jQueryApi;
-    using Serenity;
-
     [ColumnsKey("MovieDB.PersonMovie"), IdProperty(MovieCastRow.IdProperty)]
     [LocalTextPrefix(MovieCastRow.LocalTextPrefix), Service(MovieCastService.BaseUrl)]
-    public class PersonMovieGrid : EntityGrid<MovieCastRow>
+    public class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
     {
-        public PersonMovieGrid(jQueryObject container)
+        constructor(container: )
             : base(container)
         {
         }

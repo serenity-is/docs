@@ -4,7 +4,7 @@ If we wanted to also keep TV series and mini series in our movie table, we would
 
 As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
 
-Create another migration file under *MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20150924_142200_MovieKind.cs*:
+Create another migration file under *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
 
 ```cs
 using FluentMigrator;

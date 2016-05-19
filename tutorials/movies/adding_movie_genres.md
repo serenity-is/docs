@@ -235,7 +235,7 @@ Here we can't do the same. Genre list is a database based dynamic list.
 
 Serenity has notion of *dynamic scripts* to make dynamic data available to script side in the form of runtime generated scripts.
 
-> Dynamic scripts are similar to web services, but their output are dynamic javascript files that can be cached on client side.
+> Dynamic scripts are similar to web services, but their outputs are dynamic javascript files that can be cached on client side. The *dynamic* here corresponds to the data they contain, not their behavior. Unlike web services, dynamic scripts can't accept any parameters. You shouldn't try to write a dynamic script (e.g. lookup) that acts like a web service.
 
 To declare a dynamic lookup script for Genre table, open *GenreRow.cs* and modify it like below:
 

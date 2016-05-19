@@ -266,11 +266,9 @@ Rebuild your project, launch it, after logging in, open developer console by *F1
 
 Type *Q.getLookup('MovieDB.Genre')*
 
-> Lookup key, *"MovieDB.Genre"* is case sensitive. Make sure you type exact same case everywhere.
-
 and you will get something like this:
 
-![Movies Genre Lookup from Console](img/movies_genre_lookup_console.png)
+![Movies Genre Lookup from Console](img/mdb_genre_getlookup.png)
 
 Here *MovieDB.Genre* is the lookup key we assigned to this lookup script when declaring it with:
 
@@ -278,6 +276,7 @@ Here *MovieDB.Genre* is the lookup key we assigned to this lookup script when de
 
 This step was just to show how to check if a lookup script is available client side.
 
+> Lookup key, *"MovieDB.Genre"* is case sensitive. Make sure you type exact same case everywhere.
 
 ### Using LookupEditor for Genre Field
 

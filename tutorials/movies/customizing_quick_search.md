@@ -114,13 +114,9 @@ Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
 namespace MovieTutorial.MovieDB {
     
     @Serenity.Decorators.registerClass()
-    export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
-        protected getColumnsKey() { return 'MovieDB.Movie'; }
-        protected getDialogType() { return MovieDialog; }
-        protected getIdProperty() { return MovieRow.idProperty; }
-        protected getLocalTextPrefix() { return MovieRow.localTextPrefix; }
-        protected getService() { return MovieService.baseUrl; }
-
+    export class MovieGrid extends 
+          Serenity.EntityGrid<MovieRow, any> {
+        //...
         constructor(container: JQuery) {
             super(container);
         }

@@ -6,19 +6,21 @@ To store list of movies we need a Movie table. We could create this table using 
 
 > See https://github.com/schambers/fluentmigrator for more information on FluentMigrator.
 
-Using *Solution Explorer* navigate to *MovieTutorial.Web / Modules / Common / Migrations / DefaultDB*.
+Using *Solution Explorer* navigate to *Modules / Common / Migrations / DefaultDB*.
 
-![Initial Migration Folder](img/movies_migration_initial.png)
+![Initial Migration Folder](img/mdb_migration_initial.png)
 
-Here we already have three migrations. A migration is like a DML script that manipulates database structure.
 
-*DefaultDB_20141103_140000_Initial.cs* contains our initial migration that created *Northwind* tables and *Users* table.
 
-Create a new migration file in the same folder with name *DefaultDB_20150915_185137_Movie.cs*. You can copy and change one of the existing migration files, rename it and change contents.
+Here we already have several migrations. A migration is like a DML script that manipulates database structure.
+
+*DefaultDB_20141103_140000_Initial.cs* for example, contains our initial migration that created *Northwind* tables and *Users* table.
+
+Create a new migration file in the same folder with name *DefaultDB_20160519_115100_MovieTable.cs*. You can copy and change one of the existing migration files, rename it and change contents.
 
 > Migration file name / class name is actually not important but recommended for consistency and correct ordering.
 
-*20150915_185137* corresponds to the time we are writing this migration in yyyyMMdd_HHmmss format. It will also act as a unique key for this migration.
+*20160519_115100* corresponds to the time we are writing this migration in yyyyMMdd_HHmmss format. It will also act as a unique key for this migration.
 
 Our migration file should look like below:
 
@@ -63,58 +65,75 @@ We could implement *Down()* method to make it possible to undo this migration (d
 On top of our class we applied a Migration attribute.
 
 ```cs
-[Migration(20150915185137)]
+[Migration(20160519115100)]
 ```
 
 This specifies a unique key for this migration. After a migration is applied to a database, its key is recorded in a special table specific to FluentMigrator ([dbo].[VersionInfo]), so same migration won't be applied again.
 
 > Migration key should be in sync with class name (for consistency) but without underscore as migration keys are Int64 numbers.
 
-> Migrations are executed in the key order, so using a sortable datetime pattern like yyyyMMdd for migration keys looks like a good idea.
+Migrations are executed in the key order, so using a sortable datetime pattern like yyyyMMdd for migration keys looks like a good idea. 
+
+Please make sure you always use same number of characters for migration keys e.g. 14 (20160519115100). Otherwise your migration order will get messed up, and you will have migration errors, due to migrations running in unexpected order.
 
 
 ### Running Migrations
 
-By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. The code that runs migrations are in *App_Start/SiteInitialization.cs* file:
+By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. The code that runs migrations are in *App_Start/SiteInitialization.cs* and *App_Start/SiteInitialization.Migrations.cs* files:
 
+** SiteInitialization.Migrations.cs**:
 ```cs
 
-public static partial class SiteInitialization
+namespace MovieTutorial
 {
-    public static void ApplicationStart()
+    //...
+    
+    public static partial class SiteInitialization
     {
-        // ...
-        EnsureDatabase();
-    }
+        private static string[] databaseKeys = new[] { "Default", "Northwind" };
 
-    private static void EnsureDatabase()
-    {
-        // ...
-        RunMigrations();
-    }
-
-    private static void RunMigrations()
-    {
-        var defaultConnection = SqlConnections.GetConnectionString("Default");
-
-        // safety check to ensure that we are not modifying another database
-        if (defaultConnection.ConnectionString.IndexOf(
-            typeof(SiteInitialization).Namespace + @"_Default_v1") < 0)
-            return;
-
-        using (var sw = new StringWriter())
+        //...
+        private static void EnsureDatabase(string databaseKey)
         {
-            //...
-            var runner = new RunnerContext(announcer)
+           //...
+        }
+
+        public static bool SkippedMigrations { get; private set; }
+
+        private static void RunMigrations(string databaseKey)
+        {
+            // ...
+            // safety check to ensure that we are not modifying an arbitrary database.
+            // remove these two lines if you want MovieTutorial migrations to run on your DB.
+            if (cs.ConnectionString.IndexOf(typeof(SiteInitialization).Namespace +
+                    @"_" + databaseKey + "_v1", StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                SkippedMigrations = true;
+                return;
+            }
+
+            // ...
+
+            using (var sw = new StringWriter())
             {
                 // ...
-                Namespace = "MovieTutorial.Migrations.DefaultDB"
-            };
+                var runner = new RunnerContext(announcer)
+                {
+                    Database = databaseType,
+                    Connection = cs.ConnectionString,
+                    Targets = new string[] { 
+                        typeof(SiteInitialization).Assembly.Location },
+                    Task = "migrate:up",
+                    WorkingDirectory = Path.GetDirectoryName(
+                        typeof(SiteInitialization).Assembly.Location),
+                    Namespace = "MovieTutorial.Migrations." + databaseKey + "DB"
+                };
 
-            new TaskExecutor(runner).Execute();
+                new TaskExecutor(runner).Execute();
+            }
         }
     }
-
+}
 ```
 
 > There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change default connection in web.config to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.

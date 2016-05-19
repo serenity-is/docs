@@ -12,9 +12,7 @@ Open *MoviePage.cs* in the same folder, on top of it you'll find this line:
 
 namespace MovieTutorial.MovieDB.Pages
 {
-    using Serenity;
-    using Serenity.Web;
-
+    //...
 ```
 
 First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
@@ -33,7 +31,7 @@ namespace MovieTutorial.MovieDB.Pages
 //..
 ```
 
-![Navigation Item Title and Icon](img/movies_navigation_links.png)
+![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
 
 We also changed navigation item icon to *icon-camcorder*. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from simple line icons set. 
 
@@ -45,6 +43,7 @@ FontAwesome is available here:
 
 https://fortawesome.github.io/Font-Awesome/icons/
 
+> There is also a page in Serene under *Theme Samples / UI Elements / Icons* containing a list of these icons.
 
 ### Ordering Navigation Sections
 

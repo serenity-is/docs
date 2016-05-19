@@ -52,13 +52,13 @@ Fire sergen.exe using Package Manager Console again and generate code for *Genre
 
 Rebuild solution and run it. We'll get a new page like this:
 
-![Genre Initial Page](img/movies_genre_first.png)
+![Genre Initial Page](img/mdb_genre_initial.png)
 
 As you see in screenshot, it is generated under a new section *MovieDB* instead of the one we renamed recently: *Movie Database*.
 
 This is because *Sergen* has no idea of what customizations we performed on our *Movie* page. So we need to movie it under *Movie Database* manually.
 
-Open *MovieTutorial.Web/Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
+Open *Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Genre",
@@ -66,7 +66,7 @@ Open *MovieTutorial.Web/Modules/Movie/GenrePage.cs*, cut the navigation link sho
 
 ````
 
-And move it to *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*:
+And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 
 ```cs
 //...
@@ -76,7 +76,6 @@ And move it to *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*:
 [assembly: NavigationLink(2200, "Movie Database/Genres", 
     typeof(MovieDB.GenreController), icon: "icon-pin")]
 //...
-
 ```
 
 

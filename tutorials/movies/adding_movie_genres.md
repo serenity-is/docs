@@ -16,8 +16,8 @@ using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20150924151600)]
-    public class DefaultDB_20150924_151600_GenreTable : Migration
+    [Migration(20160519154700)]
+    public class DefaultDB_20160519_154700_GenreTable : Migration
     {
         public override void Up()
         {
@@ -27,7 +27,8 @@ namespace MovieTutorial.Migrations.DefaultDB
                 .WithColumn("Name").AsString(100).NotNullable();
 
             Alter.Table("Movie").InSchema("mov")
-                .AddColumn("GenreId").AsInt32().Nullable();
+                .AddColumn("GenreId").AsInt32().Nullable()
+                    .ForeignKey("FK_Movie_GenreId", "mov", "Genre", "GenreId");
         }
 
         public override void Down()

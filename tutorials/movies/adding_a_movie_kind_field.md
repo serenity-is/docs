@@ -4,6 +4,8 @@ If we wanted to also keep TV series and mini series in our movie table, we would
 
 As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
 
+> Don't modify to existing migrations, they won't run again.
+
 Create another migration file under *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
 
 ```cs

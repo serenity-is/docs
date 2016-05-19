@@ -178,13 +178,13 @@ I left more editing rows for Storyline (8) compared to Description (3) as Storyl
 
 After rebuild and run, we have this:
 
-![Movies TextArea Editors](img/movies_textarea_editors.png)
+![Movies TextArea Editors](img/mdb_movie_textarea.png)
 
 Serene has several editor types to choose from. Some are automatically picked based on field data type, while you need to explicitly set others.
 
 > You can also develop your own editor types. You can take existing editor types as base classes, or develop your own from stratch. We'll see how in following chapters.
 
-As editors became a bit higher, form height exceeded the default Serenity form height (which is set by Sergen to 260px) and now we have a vertical scroll bar. Let's remove it.
+As editors became a bit higher, form height exceeded the default Serenity form height (which is about 260px) and now we have a vertical scroll bar. Let's remove it.
 
 ### Setting Initial Dialog Size With CSS (Less)
 
@@ -198,7 +198,7 @@ If you open it, and scroll to bottom, you will see this:
 /* ------------------------------------------------------------------------- */
 
 .s-MovieDB-MovieDialog {
-    > .size { width: 650px); }
+    > .size { width: 650px; }
     .caption { width: 150px; }
 }
 ```
@@ -211,11 +211,11 @@ In the second line it is specified that this dialog is 650px wide by default.
 
 In third line, we specify that field labels should be 150px (@l: 150px).
 
-Let's change our initial form height to 40px, so it won't require a vertical scroll bar:
+Let's change our initial dialog height to 400px, so it won't require a vertical scroll bar:
 
 ```css
 .s-MovieDialog {
-    > .size { width: 650px); }
+    > .size { width: 650px); height: 400px; }
     .caption { width: 150px; }
     .s-PropertyGrid .categories { height: 400px; }
 }

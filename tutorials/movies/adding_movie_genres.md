@@ -266,7 +266,7 @@ Rebuild your project, launch it, after logging in, open developer console by *F1
 
 Type *Q.getLookup('MovieDB.Genre')*
 
-> Lookup key, *MovieDB.Genre* is case sensitive. Make sure you type exact same case everywhere.
+> Lookup key, *"MovieDB.Genre"* is case sensitive. Make sure you type exact same case everywhere.
 
 and you will get something like this:
 

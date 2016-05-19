@@ -356,7 +356,7 @@ Now GenreName is shown in the grid.
 
 ### Making It Possible To Define A New Genre Inplace
 
-While setting genre for our sample movies, we notice that *The Good, the Bad and the Ugly* is *Western* but there is no such genre in *Genre* dropdown yet. 
+While setting genre for our sample movies, we notice that *The Good, the Bad and the Ugly* is *Western* but there is no such genre in *Genre* dropdown yet (so I had to choose Drama). 
 
 One option is to open Genres page, add it, and come back to movie form again. Not so pretty...
 
@@ -366,7 +366,7 @@ Open MovieRow.cs and modify *LookupEditor* attribute like this:
 
 ```cs
 [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
-[LookupEditor("MovieDB.Genre", InplaceAdd = true)]
+[LookupEditor(typeof(GenreRow), InplaceAdd = true)]
 public Int32? GenreId
 {
     get { return Fields.GenreId[this]; }

@@ -121,7 +121,7 @@ And another one to align column to right (AlignCenter, AlignLeft is also availab
 
 Let's build and run again, than we get: 
 
-![Movies Runtime Column](img/movies_runtime_column.png)
+![Movies Runtime Column](img/mdb_runtime_col.png)
 
 Form field title stayed same, while column title changed.
 

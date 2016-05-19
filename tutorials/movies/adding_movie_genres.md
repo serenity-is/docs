@@ -199,7 +199,7 @@ LEFT JOIN Genre g on t0.GenreId = g.GenreId
 
 > This join will only be performed if a field from Genre table requested to be selected, e.g. its column is visible in a data grid.
 
-By adding *Expression("g.Name")* on top of *GenreName* property, we specified that this field has an SQL expression of *g.Name*, thus it is a field from our *g* join.
+By adding *Expression("g.Name")* on top of *GenreName* property, we specified that this field has an SQL expression of *g.Name*, thus it is a view field originating from our *g* join.
 
 ### Adding Genre Selection To Movie Form
 

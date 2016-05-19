@@ -10,7 +10,7 @@ If you don't want to waste your time entering this sample data, it is available 
 > https://github.com/volkanceylan/Serenity-Tutorials/blob/master/MovieTutorial/MovieTutorial/MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20160519_135200_SampleMovies.cs
 
 
-![7 Movies Entered](img/movies_data_7.png)
+![7 Movies Entered](img/mdb_sample_movies.png)
 
 If we typed *go* into search box, we would see two movies are filtered: *The Good, the Bad and the Ugly* and *The Godfather*.
 

@@ -129,7 +129,7 @@ Now in Visual Studio, click *Build -> Transform All Templates* again.
 
 Rebuild your solution and execute it. Now we have a nice dropdown in our form to select movie kind.
 
-![Movie Kind Selection](img/movies_kind_selection.png)
+![Movie Kind Selection](img/mdb_movie_kindform.png)
 
 
 ### Declaring a Default Value for Movie Kind

@@ -13,20 +13,20 @@ Type *sergen* and press Enter.
 
 > Another option is to open Sergen.exe from Windows Explorer. Right click on *MovieTutorial* solution in Solution Explorer, click *Open In File Explorer*. Sergen.exe is under *packages\Serenity.CodeGenerator.X.Y.Z\tools* directory.
 
-![Movies Code Generator](img/movies_code_generator.png)
+![Movies Code Generator](img/mdb_sergen_movie.png)
 
 
 ### Setting Project Location
 
-When you first run Sergen, Web Project field will be prefilled for you.
+When you first run Sergen, Web Project field will be prefilled for you to:
 
 * ..\\..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
 
-> Script project field should be empty for v2.1+. Screenshot above belongs to an older version.
-
-Once you set this value, and generate your first page, you won't have to set it again. All these options will be saved in *Serenity.CodeGenerator.config* in your solution directory.
+If you change this value and other options, and generate your first page, you won't have to set them again. All these options will be saved in *Serenity.CodeGenerator.config* in your solution directory.
 
 This value is required, as Sergen will automatically include generated files to your WEB project.
+
+> Script project field should be empty for v2.1+. This is for users of older Serene, who might still have code that was written with Saltaralle compiler, instead of TypeScript.
 
 ### Root Namespace Option
 

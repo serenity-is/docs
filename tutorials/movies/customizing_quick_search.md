@@ -75,7 +75,7 @@ namespace MovieTutorial.MovieDB.Entities
 
 Now, if we search for *Gandalf*, we'll get a *The Lord of the Rings* entry:
 
-![Movies Search Gandalf](img/movies_search_gandalf.png)
+![Movies Search Gandalf](img/mdb_movie_gandalf.png)
 
 QuickSearch attribute, by default, searches with *contains* filter. It has some options to make it match by *starts with* filter or match only exact values.
 
@@ -109,18 +109,22 @@ It is also possible to provide user with ability to determine which field she wa
 
 Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
 
-```ts
-namespace MovieTutorial.MovieDB
-{
-    //...
-    public class MovieGrid extends EntityGrid<MovieRow, any>
-    {
+
+namespace MovieTutorial.MovieDB {
+    
+    @Serenity.Decorators.registerClass()
+    export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
+        protected getColumnsKey() { return 'MovieDB.Movie'; }
+        protected getDialogType() { return MovieDialog; }
+        protected getIdProperty() { return MovieRow.idProperty; }
+        protected getLocalTextPrefix() { return MovieRow.localTextPrefix; }
+        protected getService() { return MovieService.baseUrl; }
+
         constructor(container: JQuery) {
             super(container);
         }
 
-        protected getQuickSearchFields(): Serenity.QuickSearchField[]
-        {
+        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
             return [
                 { name: "", title: "all" },
                 { name: "Description", title: "description" },
@@ -129,9 +133,7 @@ namespace MovieTutorial.MovieDB
             ];
         }
     }
-    ///...
 }
-```
 
 Once you save that file, we'll have a dropdown in quick search input:
 

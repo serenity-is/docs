@@ -178,3 +178,31 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
+What about field titles? It is not so critical as field names, but can be useful for localization purposes (if we later decide to translate it):
+
+```ts
+namespace MovieTutorial.MovieDB
+{
+    //...
+    public class MovieGrid extends EntityGrid<MovieRow, any>
+    {
+        constructor(container: JQuery) {
+            super(container);
+        }
+
+        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
+            let fld = MovieRow.Fields;
+            let txt = (s) => Q.text("Db." + 
+                MovieRow.localTextPrefix + "." + s).toLowerCase();
+            return [
+                { name: "", title: "all" },
+                { name: fld.Description, title: txt(fld.Description) },
+                { name: fld.Storyline, title: txt(fld.Storyline) },
+                { name: fld.Year, title: txt(fld.Year) }
+            ];
+        }
+    }
+    ///...
+}
+```
+

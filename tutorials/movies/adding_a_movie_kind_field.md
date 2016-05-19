@@ -4,7 +4,7 @@ If we wanted to also keep TV series and mini series in our movie table, we would
 
 As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
 
-> Don't modify to existing migrations, they won't run again.
+> Don't modify existing migrations, they won't run again.
 
 Create another migration file under *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
 
@@ -109,8 +109,8 @@ namespace MovieTutorial.MovieDB.Forms
     public class MovieForm
     {
         // ...
-        public Int32 Runtime { get; set; }
         public MovieKind Kind { get; set; }
+        public Int32 Runtime { get; set; }
     }
 }
 ```
@@ -120,6 +120,8 @@ Now, build your solution and run it. When you try to edit a movie or add a new o
 ```txt
 Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
 ```
+
+> Whenever such a thing happens, please first check browser console for errors, before reporting it.
 
 This error is caused by MoveKind enumeration not available client side. We should run our T4 templates before executing our program.
 

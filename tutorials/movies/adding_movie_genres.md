@@ -335,7 +335,6 @@ Currently, movie genre can be edited in the form but is not displayed in Movie g
 
 
 ```cs
-
 namespace MovieTutorial.MovieDB.Forms
 {
     // ...

@@ -303,7 +303,18 @@ After we build and launch our project, we'll now have a searchable dropdown (Sel
 
 ![Movie Form With Genre Editor](img/mdb_genre_dropdown.png)
 
+While defining [LookupEditor] we hardcoded the lookup key. It's also possible to reuse information on GenreRow:
 
+```cs
+    [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
+    [LookupEditor(typeof(GenreRow))]
+    public Int32? GenreId
+    {
+        get { return Fields.GenreId[this]; }
+        set { Fields.GenreId[this] = value; }
+    }
+
+```
 
 ### Display Genre in Movie Grid
 

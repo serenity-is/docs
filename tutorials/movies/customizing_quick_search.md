@@ -143,7 +143,7 @@ Once you save that file, we'll have a dropdown in quick search input:
 
 ### Running T4 Templates (.tt files)
 
-In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names at server side.
+In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names or their casing at server side (javascript is case sensitive).
 
 Serene contains some T4 (.tt) files to transfer such information from server side (rows etc in C#) to client side (TypeScript) for intellisense purposes.
 

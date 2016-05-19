@@ -134,7 +134,6 @@ namespace MovieTutorial.Migrations.DefaultDB
 As we did with *Kind* field before, *GenreId* field needs to be mapped in *MovieRow.cs*.
 
 ```cs
-
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...

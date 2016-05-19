@@ -140,9 +140,9 @@ namespace MovieTutorial.MovieDB {
 
 Once you save that file, we'll have a dropdown in quick search input:
 
-![Movies Quick Search Fields](img/movies_quick_fields.png)
+![Movies Quick Search Fields](img/mdb_movie_quicksearchfield.png)
 
-> Unlike prior samples where we modified Server side code, this time we did changes in client side, and modified javascript (TypeScript) code.
+> Unlike prior samples where we modified Server side code, this time we did changes in client side, and modified Javascript (TypeScript) code.
 
 
 ### Running T4 Templates (.tt files)

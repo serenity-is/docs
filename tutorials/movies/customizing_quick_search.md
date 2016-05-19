@@ -206,3 +206,18 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
+We made use of the local text dictionary (translations) available at client side. It's something  like this:
+
+```json
+{
+   // ...
+   "Db.MovieDB.Movie.Description": "Description",
+   "Db.MovieDB.Movie.Storyline": "Storyline",
+   "Db.MovieDB.Movie.Year": "Year"
+   // ...
+}
+```
+
+Local text keys for rows are generated from "Db." + ModuleName + "." + RowClassName + "." + FieldName.
+
+Their values are generated from [DisplayName] attributes on your fields by default but might be something else if they are translated.

@@ -206,7 +206,6 @@ By adding *Expression("g.Name")* on top of *GenreName* property, we specified th
 Let's add GenreId field to our form in *MovieForm.cs*:
 
 ```cs
-
 namespace MovieTutorial.MovieDB.Forms
 {
     //...

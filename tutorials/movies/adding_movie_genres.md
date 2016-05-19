@@ -316,6 +316,8 @@ While defining [LookupEditor] we hardcoded the lookup key. It's also possible to
 
 ```
 
+This is functionally equivalent. I'd prefer latter.
+
 ### Display Genre in Movie Grid
 
 Currently, movie genre can be edited in the form but is not displayed in Movie grid. Edit MovieColumns.cs to show GenreName (not GenreId).

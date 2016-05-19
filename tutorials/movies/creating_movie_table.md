@@ -161,4 +161,4 @@ Also when you view data in *[dbo].[VersionInfo]* table, Version column in the la
 
 ![Initial Migration Folder](img/mdb_migration_check.png)
 
-> Usually, you don't have to do this checks after every migration. Here we show these to explain where to look, in case you'll have any trouble in the future.
+> Usually, you don't have to do these checks after every migration. Here we show these to explain where to look, in case you'll have any trouble in the future.

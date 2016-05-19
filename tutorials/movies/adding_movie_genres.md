@@ -321,9 +321,8 @@ This is functionally equivalent. I'd prefer latter. Here, Serenity will locate t
 ```
 Server Error in '/' Application.
 
-'MovieTutorial.MovieDB.Entities.GenreRow' type 
-doesn't have a [LookupScript] attribute, 
-so it can't be used with a LookupEditor!
+'MovieTutorial.MovieDB.Entities.GenreRow' type doesn't have a 
+[LookupScript] attribute, so it can't be used with a LookupEditor!
 
 Parameter name: lookupType
 ```

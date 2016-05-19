@@ -158,6 +158,6 @@ Using Sql Server Management Studio or Visual Studio -> Connection To Database, o
 
 You should see *[mov].[Movies]* table in SQL object explorer.
 
-Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20150915185137*. This specifies that the migration with that version number (migration key) is already executed on this database.
+Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20160519115100*. This specifies that the migration with that version number (migration key) is already executed on this database.
 
 > Usually, you don't have to do this checks after every migration. Here we show these to explain where to look, in case you'll have any trouble in the future.

@@ -195,7 +195,6 @@ So when Serenity needs to select from *Movies* table, it will produce an SQL que
 SELECT t0.MovieId, t0.Kind, t0.GenreId, g.Name as GenreName 
 FROM Movies t0
 LEFT JOIN Genre g on t0.GenreId = g.GenreId 
-
 ```
 
 > This join will only be performed if a field from Genre table requested to be selected, e.g. its column is visible in a data grid.

@@ -11,7 +11,6 @@ Using *Solution Explorer* navigate to *Modules / Common / Migrations / DefaultDB
 ![Initial Migration Folder](img/mdb_migration_initial.png)
 
 
-
 Here we already have several migrations. A migration is like a DML script that manipulates database structure.
 
 *DefaultDB_20141103_140000_Initial.cs* for example, contains our initial migration that created *Northwind* tables and *Users* table.
@@ -159,5 +158,7 @@ Using Sql Server Management Studio or Visual Studio -> Connection To Database, o
 You should see *[mov].[Movies]* table in SQL object explorer.
 
 Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20160519115100*. This specifies that the migration with that version number (migration key) is already executed on this database.
+
+![Initial Migration Folder](img/mdb_migration_check.png)
 
 > Usually, you don't have to do this checks after every migration. Here we show these to explain where to look, in case you'll have any trouble in the future.

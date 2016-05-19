@@ -206,7 +206,7 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-We made use of the local text dictionary (translations) available at client side. It's something  like this:
+We made use of the local text dictionary (translations) available at client side. It's something like this:
 
 ```json
 {

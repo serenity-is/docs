@@ -47,7 +47,7 @@ We also added a *GenreId* field to *Movie* table.
 
 Fire sergen.exe using Package Manager Console again and generate code for *Genre* table with the parameters shown below:
 
-![Genre Code Generation](img/movies_sergen_genre.png)
+![Genre Code Generation](img/mdb_movie_genretable.png)
 
 
 Rebuild solution and run it. We'll get a new page like this:

@@ -222,11 +222,23 @@ Let's change our initial dialog height to 500px (in desktop mode), so it won't r
 
 For this change to be applied to your dialog, you need to build solution. As this "site.less" file is compiled to a "site.css" file on build. Now build and refresh the page.
 
+![Movie Dialog 500px](img/mdb_movie_500px.png)
+
+What i mean by *desktop mode* above will become clearer soon. Serenity dialogs are responsive by default. Let's resize our browser window to a width about 350px. I'll use mobile mode of my Chrome browser to switch to iPhone 6:
+
+
+![Movie Dialog iPhone6](img/mdb_movie_iphone6.png)
+
+And now an iPad in landscape mode:
+
+![Movie Dialog iPad](img/mdb_movie_ipad.png)
+
+So, the height we set here is only meaningfull for desktop mode. Dialog will turn into a responsive, device size specific mode in mobile, without having to mess with CSS @media queries.
 
 
 ### Changing Page Title
 
-Our page has title of *Movie*. Let's change it to Movies. 
+Our page has title of *Movie*. Let's change it to *Movies*. 
 
 Open *MovieRow.cs* again. 
 

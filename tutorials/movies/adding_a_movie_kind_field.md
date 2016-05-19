@@ -141,7 +141,7 @@ But most movies we'll store are feature films, so its default should be this val
 To add a default value for *Kind* property, add a *DefaultValue* attribute like this:
 
 ```cs
-[DisplayName("Kind"), NotNull, DefaultValue(1)]
+[DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
 public MovieKind? Kind
 {
     get { return (MovieKind?)Fields.Kind[this]; }

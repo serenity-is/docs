@@ -327,7 +327,7 @@ Server Error in '/' Application.
 Parameter name: lookupType
 ```
 
-> Forms are scanned at application startup, so there is no way to skip this error without fixing the issue.
+> Forms are scanned at application startup, so there is no way to handle this error without fixing the issue.
 
 ### Display Genre in Movie Grid
 

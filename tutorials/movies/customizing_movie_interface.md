@@ -215,9 +215,8 @@ Let's change our initial form height to 500px, so it won't require a vertical sc
 
 ```css
 .s-MovieDialog {
-    > .size { width: 650px); height: 400px; }
+    > .size { width: 650px); height: 500px; }
     .caption { width: 150px; }
-    .s-PropertyGrid .categories { height: 400px; }
 }
 ```
 

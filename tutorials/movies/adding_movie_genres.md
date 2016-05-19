@@ -8,7 +8,7 @@ To hold Movie genres we need a lookup table. For *Kind* field we used an enumera
 
 As usual, we start with a migration.
 
-*MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20150924_151600_GenreTable.cs*:
+*Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_154700_GenreTable.cs*:
 
 ```cs
 using FluentMigrator;

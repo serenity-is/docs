@@ -284,6 +284,8 @@ There are two places to set editor type for GenreId field. One is MovieForm.cs, 
 
 I usually prefer the latter, as it is the central place, but you may choose to set it on a form, if that editor type is specific to that form only.
 
+> Information defined on a form can't be reused. For example, grids use information in XYZColumn.cs / XYZRow.cs while dialogs use information in XYZForm.cs / XYZRow.cs. So it's usually better to define things in XYZRow.cs.
+
 Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown below:
 
 ```cs
@@ -299,7 +301,7 @@ Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown
 
 After we build and launch our project, we'll now have a searchable dropdown (Select2.js) on our Genre field.
 
-![Movie Form With Genre Editor](img/movies_form_with_genre_editor.png)
+![Movie Form With Genre Editor](img/mdb_genre_dropdown.png)
 
 
 

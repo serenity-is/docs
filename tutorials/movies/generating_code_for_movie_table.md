@@ -30,15 +30,15 @@ This value is required, as Sergen will automatically include generated files to 
 
 ### Root Namespace Option
 
-Set root namespace option to the Solution name you used, e.g. *MovieTutorial*. If your project names is MyProject.Web, your root namespace is MyProject by default. This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
+Your root namespace option is set to the Solution name you used, e.g. *MovieTutorial*. If your project name is MyProject.Web, your root namespace is MyProject by default. 
+
+This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
 
 This option is also saved, so next time you won't have to fill it in.
-
 
 ### Choosing Connection String
 
 Once you set Web project name, Sergen populates connection dropdown with connection strings from your web.config file. We might have *Default* and *Northwind* in there. Choose *Default* one.
-
 
 ### Selecting Table To Generate Code For
 
@@ -54,7 +54,7 @@ For example, in Serene template, all pages related to *Northwind* sample belongs
 
 Pages that are related to general management of site, like users, roles etc. belongs to *Administration* module. 
 
-A module usually corresponds to a database schema, or a single database but there is nothing that prevents you from using multiple modules in a single database / schema, or opposite, multiple databases in one module.
+A module usually corresponds to a database schema, or a single database but there is nothing that prevents you from using multiple modules in a single database / schema, or the opposite, multiple databases in one module.
 
 For this tutorial, we will use *MovieDB* (analogous to IMDB) for all pages.
 
@@ -72,12 +72,10 @@ Connection key is set to the connection key of selected connection string in web
 
 This usually corresponds to the table name but sometimes table names might have underscores or other invalid characters, so you decide what to name your entity in generated code (a valid identifier name).
 
-> Starting with Serene 1.6.2+ entity identifier is set automatically to a pascalized version of tablename.
-
-Our table name is *Movie* so it is also a valid and fine C# identifier, so let's use *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
+Our table name is *Movie* so it is also a valid and fine C# identifier, so let's leave *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
 
 This name is also used in other class names. For example our page controller will be named *MovieController*.
-.
+
 It also determines the page url, in this sample our editing page will be at URL */MovieDB/Movie*.
 
 
@@ -85,12 +83,14 @@ It also determines the page url, in this sample our editing page will be at URL 
 
 In Serenity, access control to resources (pages, services etc.) are controlled by permission keys which are simple strings. Users or roles are granted these permissions.
 
-Our Movie page will be only used by administrative users (or maybe later content moderators) so let's set it to *Administration* for now. By default, in Serene template, only the *admin* user has this permission.
+Our Movie page will be only used by administrative users (or maybe later content moderators) so let's leave it as *Administration* for now. By default, in Serene template, only the *admin* user has this permission.
 
 
 ### Generating Code for First Page
 
-After setting parameters as shown in the image above, click *Generate Code for Entity* button. Sergen will generate several files and include them in MovieTutorial.Web and MovieTutorial.Script projects.
+After setting parameters as shown in the image above (you only have to set Module Name, others were prefilled), click *Generate Code for Entity* button. 
+
+Sergen will generate several files and include them in MovieTutorial.Web and MovieTutorial.Script projects.
 
 Now you can close Sergen, and return to Visual Studio.
 

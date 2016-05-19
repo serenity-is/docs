@@ -328,6 +328,8 @@ so it can't be used with a LookupEditor!
 Parameter name: lookupType
 ```
 
+> Forms are scanned at application startup, so there is no way to skip this error without fixing the issue.
+
 ### Display Genre in Movie Grid
 
 Currently, movie genre can be edited in the form but is not displayed in Movie grid. Edit MovieColumns.cs to show GenreName (not GenreId).

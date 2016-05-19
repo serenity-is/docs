@@ -8,12 +8,11 @@ Create another migration file under *Modules/Common/Migrations/DefaultDB/ Defaul
 
 ```cs
 using FluentMigrator;
-using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20150924142200)]
-    public class DefaultDB_20150924_142200_MovieKind : Migration
+    [Migration(20160519145500)]
+    public class DefaultDB_20160519_145500_MovieKind : Migration
     {
         public override void Up()
         {

@@ -211,7 +211,7 @@ In the second line it is specified that this dialog is 650px wide by default.
 
 In third line, we specify that field labels should be 150px (@l: 150px).
 
-Let's change our initial dialog height to 400px, so it won't require a vertical scroll bar:
+Let's change our initial form height to 500px, so it won't require a vertical scroll bar:
 
 ```css
 .s-MovieDialog {

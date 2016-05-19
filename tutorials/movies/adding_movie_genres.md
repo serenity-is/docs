@@ -316,7 +316,7 @@ While defining [LookupEditor] we hardcoded the lookup key. It's also possible to
 
 ```
 
-This is functionally equivalent. I'd prefer latter. Here, Serenity will locate the [LookupScript] attribute on GenreRow, and get lookup key information from there. If we had no [LookupScript] attribute on GenreRow, you'd get an error:
+This is functionally equivalent. I'd prefer latter. Here, Serenity will locate the [LookupScript] attribute on GenreRow, and get lookup key information from there. If we had no [LookupScript] attribute on GenreRow, you'd get an error on application startup:
 
 ```
 Server Error in '/' Application.

@@ -316,7 +316,17 @@ While defining [LookupEditor] we hardcoded the lookup key. It's also possible to
 
 ```
 
-This is functionally equivalent. I'd prefer latter. Here, Serenity will locate the [LookupScript] attribute on GenreRow, and get lookup key information from there. If we had no [LookupScript] attribute on GenreRow, you'd get an error.
+This is functionally equivalent. I'd prefer latter. Here, Serenity will locate the [LookupScript] attribute on GenreRow, and get lookup key information from there. If we had no [LookupScript] attribute on GenreRow, you'd get an error:
+
+```
+Server Error in '/' Application.
+
+'MovieTutorial.MovieDB.Entities.GenreRow' type 
+doesn't have a [LookupScript] attribute, 
+so it can't be used with a LookupEditor!
+
+Parameter name: lookupType
+```
 
 ### Display Genre in Movie Grid
 

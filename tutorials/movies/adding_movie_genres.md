@@ -335,7 +335,7 @@ Currently, movie genre can be edited in the form but is not displayed in Movie g
 
 
 ```cs
-namespace MovieTutorial.MovieDB.Forms
+namespace MovieTutorial.MovieDB.Columns
 {
     // ...
     public class MovieColumns
@@ -351,7 +351,7 @@ namespace MovieTutorial.MovieDB.Forms
 
 Now GenreName is shown in the grid.
 
-![Movie Gid With Genre Column](img/movies_genre_column.png)
+![Movie Gid With Genre Column](img/mdb_genre_incolumn.png)
 
 
 ### Making It Possible To Define A New Genre Inplace

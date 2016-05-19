@@ -258,7 +258,7 @@ Change DisplayName attribute value to *Movies*. This is the name that is used wh
 
 > It is also possible to override the page title in *MoviePage.Index.cshtml* file but as before, we prefer to do it from a central location so that this information can be reused in other places.
 
-InstanceName corresponds to singular name and is used in New Record (New Movie) button of the grid and determines the dialog title (e.g. Edit Movie).
+InstanceName corresponds to singular name and is used in New Record (New Movie) button of the grid and also determines the dialog title (e.g. Edit Movie).
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities

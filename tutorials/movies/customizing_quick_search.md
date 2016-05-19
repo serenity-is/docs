@@ -109,6 +109,7 @@ It is also possible to provide user with ability to determine which field she wa
 
 Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
 
+```ts
 
 namespace MovieTutorial.MovieDB {
     
@@ -124,7 +125,8 @@ namespace MovieTutorial.MovieDB {
             super(container);
         }
 
-        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
+        protected getQuickSearchFields():
+              Serenity.QuickSearchField[] {
             return [
                 { name: "", title: "all" },
                 { name: "Description", title: "description" },
@@ -134,6 +136,7 @@ namespace MovieTutorial.MovieDB {
         }
     }
 }
+```
 
 Once you save that file, we'll have a dropdown in quick search input:
 

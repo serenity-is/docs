@@ -118,4 +118,4 @@ It's also possible to disable it with a web.config setting
 </appsettings>
 ```
 
-> Serene 1.5.4 and later will have this by default, so you might not experience this issue
+> Serene 1.5.4 and later has this by default, so you might not experience this issue

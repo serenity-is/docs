@@ -38,7 +38,8 @@ namespace MovieTutorial.Migrations.DefaultDB
             Create.Schema("mov");
 
             Create.Table("Movie").InSchema("mov")
-                .WithColumn("MovieId").AsInt32().Identity().PrimaryKey().NotNullable()
+                .WithColumn("MovieId").AsInt32()
+                    .Identity().PrimaryKey().NotNullable()
                 .WithColumn("Title").AsString(200).NotNullable()
                 .WithColumn("Description").AsString(1000).Nullable()
                 .WithColumn("Storyline").AsString(Int32.MaxValue).Nullable()
@@ -103,10 +104,12 @@ namespace MovieTutorial
         private static void RunMigrations(string databaseKey)
         {
             // ...
-            // safety check to ensure that we are not modifying an arbitrary database.
-            // remove these two lines if you want MovieTutorial migrations to run on your DB.
+            // safety check to ensure that we are not modifying an 
+            // arbitrary database. remove these two lines if you want 
+            // MovieTutorial migrations to run on your DB.
             if (cs.ConnectionString.IndexOf(typeof(SiteInitialization).Namespace +
-                    @"_" + databaseKey + "_v1", StringComparison.OrdinalIgnoreCase) < 0)
+                    @"_" + databaseKey + "_v1", 
+                        StringComparison.OrdinalIgnoreCase) < 0)
             {
                 SkippedMigrations = true;
                 return;

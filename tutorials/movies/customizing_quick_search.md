@@ -18,7 +18,7 @@ If we typed *Gandalf* we wouldn't be able to find anything.
 
 By default, Sergen determines first textual field of a table as *the name field*. In movies table it is *Title*. This field has a *QuickSearch* attribute on it that specifies that text searches should be performed on it.
 
-> The name field is also determines initial sorting order and shown in edit dialog titles. 
+> The name field also determines initial sorting order and shown in edit dialog titles. 
 
 Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it in *MovieRow.cs*:
 

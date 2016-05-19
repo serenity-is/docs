@@ -43,7 +43,7 @@ FontAwesome is available here:
 
 https://fortawesome.github.io/Font-Awesome/icons/
 
-> There is also a page in Serene under *Theme Samples / UI Elements / Icons* containing a list of these icons.
+> There is also a page in Serene under *Theme Samples / UI Elements / Icons* containing a list of these icon sets.
 
 ### Ordering Navigation Sections
 
@@ -95,7 +95,7 @@ We assigned our *Movies* link a display order value of *2100* but it doesn't mat
 
 Here is how it looks like after these changes:
 
-![Movie Database Moved](img/movies_navigation_moved.png)
+![Movie Database Moved](img/mdb_movie_navmoved.png)
 
 
 ### Troubleshooting Some Issues with Visual Studio
@@ -105,6 +105,8 @@ In case you didn't notice already, Visual Studio doesn't let you modify code whi
 To solve this issue, we need to disable *Edit And Continue* (have no idea why).
 
 Right Click *MovieTutorial.Web* project, click *Properties*, in the Web tab, uncheck *Enable Edit And Continue* under *Debuggers*.
+
+> Unfortunately, the solution above stops works in Visual Studio 2015 Update 2. Only workaround so far seems like starting without debugging, e.g. Ctrl+F5 instead of F5.
 
 Also, on your site, top blue progress bar (which is a Pace.js animation), keeps running all the time like it is still loading something. It is thanks to the *Browser Link* feature of Visual Studio. To disable it, locate its button in Visual Studio toolbar that looks like a refresh button (next to play icon with browser name like Chrome), click dropdown and uncheck *Enable Browser Link*.
 

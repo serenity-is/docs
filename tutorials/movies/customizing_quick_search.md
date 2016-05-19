@@ -218,7 +218,7 @@ We made use of the local text dictionary (translations) available at client side
 }
 ```
 
-Local text keys for row fields are generated from "Db." + (LocalTextPrefix for Row) + "." + FieldName.
+Local text keys for row fields are generated from *"Db." + (LocalTextPrefix for Row) + "." + FieldName*.
 
 Their values are generated from [DisplayName] attributes on your fields by default but might be something else in another culture if they are translated.
 

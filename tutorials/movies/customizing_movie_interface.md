@@ -16,8 +16,8 @@ Here is an excerpt from its source with our Runtime property:
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), 
-     TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Movie"), 
+     InstanceName("Movie"), TwoLevelCached]
     public sealed class MovieRow : Row, IIdRow, INameRow
     {
         // ...
@@ -58,7 +58,7 @@ Now build solution and run application. You'll see that field title is changed i
 
 > Column title has "..." in it as column is not wide enough, though its hint shows the full title. We'll see how to handle this soon.
 
-![Movies Runtime (Mins)](img/movies_runtime_mins.png)
+![Movies Runtime (Mins)](img/mdb_runtime_mins.png)
 
 
 ### Overriding Column Title and Width 

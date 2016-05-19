@@ -151,7 +151,7 @@ Before running these templates, please make sure that your solution builds succe
 
 After building your solution, click on *Build* menu, than *Transform All Templates*.
 
-We can use intellisense to replace hardcoded field names with compile time checked versions:
+We can now use intellisense to replace hardcoded field names with compile time checked versions:
 
 ```ts
 namespace MovieTutorial.MovieDB

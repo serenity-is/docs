@@ -94,11 +94,9 @@ Sergen will generate several files and include them in MovieTutorial.Web and Mov
 
 Now you can close Sergen, and return to Visual Studio.
 
-As projects are modified, Visual Studio will ask if you wan't to reload changes, click Reload All.
+As project is modified, Visual Studio will ask if you want to reload changes, click Reload All.
 
 *REBUILD the Solution* and then press *F5* to launch application.
-
-> Please make sure you REBUILD SOLUTION, by right clicking solution name and clicking rebuild. Some users report that they got an empty page after generating code. It's due to script project is not built properly. You should specially rebuild MovieTutorial.Script project. It's output is placed under MovieTutorial.Web/Scripts/site folder on rebuild.
 
 Use *admin* as username, and *serenity* as password to login.
 
@@ -106,7 +104,7 @@ When you are greeted with Dashboard page, you will notice that there is a new se
 
 Click to expand it and click Movie to open our first generated page.
 
-![Movies First Generation](img/movies_first_generation.png)
+![Movies First Generation](img/mdb_movie_initial.png)
 
 Now try adding a new movie, than try updating and deleting it.
 

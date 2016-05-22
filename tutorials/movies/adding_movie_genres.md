@@ -389,3 +389,26 @@ It is also possible to start typing in genre editor, and it will provide you wit
 ### Re-runing T4 Templates
 
 As we added a new entity to our application, we should run T4 templates after building solution.
+
+
+### Adding Quick Filter for Genre To Grid
+
+As our list of movies becomes larger, we might need to filter movies based on values of some fields, besides the quick search functionality.
+
+Serenity has several filtering methods. One of them is Quick Filter, which we'll use on Genre field.
+
+Edit *Modules/MovieDB/Movie/MovieColumns.cs* to add a [QuickFilter] attribute on top of GenreName field:
+
+```cs
+public class MovieColumns
+{
+    //...
+    public DateTime ReleaseDate { get; set; }
+    [Width(100), QuickFilter]
+    public String GenreName { get; set; }
+    [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
+    public Int32 Runtime { get; set; }
+}
+```
+
+

@@ -411,4 +411,10 @@ public class MovieColumns
 }
 ```
 
+Build and navigate to Movies page. You'll a quick filtering dropdown for genre field is available:
+
+![Genre Quick Filter](img/mdb_movie_genrequick.png)
+
+The field that is filtered is actually *GenreId* not *GenreName* that we attached this attribute to. Serenity is clever enough to understand this relation, and determined editor type to use by looking at attributes of *GenreId* property in *GenreRow.cs*.
+
 

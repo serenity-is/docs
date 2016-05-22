@@ -1,12 +1,12 @@
 # Updating Serenity Packages
 
-When i started writing this tutorial, Serenity (NuGet packages containing Serenity assemblies and standard scripts libraries) and Serene (the application template) was at version 1.5.4.
+When i started writing this tutorial, Serenity (NuGet packages containing Serenity assemblies and standard scripts libraries) and Serene (the application template) was at version 2.1.8.
 
-When you read this you are probably using a later version, so you might not have to update serenity yet.
+When you read this you are probably using a later version, so you might not have to update Serenity yet.
 
 But, i want to show how you can update Serenity NuGet packages, in case another version comes out in the future.
 
-I prefer to work with NuGet from *Package Manager Console* instead of using NuGet GUI interface as it performs much faster.
+I prefer to work with NuGet from *Package Manager Console*, instead of using NuGet GUI interface, as it performs much faster.
 
 So, click *View -> Other Windows -> Package Manager Console*.
 
@@ -27,18 +27,15 @@ To update Serenity.CodeGenerator (containg *sergen.exe*), type:
 
 > Update-Package Serenity.CodeGenerator
 
-Serenity.CodeGenerator is also installed in MovieTutorial.Web project.
-
-> For versions before Serenity 2.1, you should also update Serenity.Script package
-> > Update-Package Serenity.Script
-
-> Serenity.Script package contains three assemblies: *Serenity.Script.Imports*, *Serenity.Script.Core* and *Serenity.Script.UI*, so this updates them all.
+Serenity.CodeGenerator is also installed in MovieTutorial.Web project, and it contains *sergen.exe* and some other files that are used by our T4 templates, under *tools* directory.
 
 > During updates, if NuGet asks to override changes in some script files, you can safely say yes unless you did manual modifications to Serenity script files (which i suggest you avoid).
 
 Now rebuild your solution and it should build successfully.
 
-> From time to time, breaking changes might happen in Serenity, but they are kept to minimum, and you might have to do a few manual changes in your application code. 
+> From time to time, breaking changes might happen in Serenity, but they are kept to minimum. 
+> 
+> In some cases you might have to do a few manual changes in your application code. 
 
 > Such changes are documented with a [BREAKING CHANGE] tag in change log at:
 > https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md
@@ -59,17 +56,11 @@ Serenity.Web package also comes with some static script and css resources like t
 
 ```
 Content/serenity/serenity.css
-Scripts/saltarelle/mscorlib.js
-Scripts/saltarelle/linq.js
 Scripts/serenity/Serenity.CoreLib.js
 Scripts/serenity/Serenity.Script.UI.js
-Scripts/serenity/Serenity.Externals.js
-Scripts/serenity/Serenity.Externals.Slick.js
-
 ```
 
 So, these and a few more are also updated in MovieApplication.Web.
-
 
 
 ### What Is Not Updated (OR Can't Be Updated Automatically)
@@ -83,6 +74,3 @@ You might have done modifications to application source, so updating a Serene ap
 So sometimes you might have to create a new Serene application with up-to-date Serene template version, and compare it to your application, and merge features you need. This is a manual process.
 
 > We have some plans to make parts of Serene template also a NuGet package, but it is still not trivial how to update your application without overriding your changes, e.g. to shared code like Navigation items. And what if you removed Northwind code, but our update reinstalls it? I'm open to suggestions...
-
-In the next article i'm going to need some code from 1.5.9 Serene template, and we'll see how to get them into our MovieTutorial application.
-

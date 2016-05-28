@@ -372,7 +372,7 @@ OK, it looked easy, but i'll be honest, we are not even half the way.
 
 That *New MovieCast* button doesn't work, need to define a dialog for it. The grid columns are not what i'd like them to be and the field and button titles are not so user friendly...
 
-Also we'll have to handle a bit more plumbing like loading and saving cast list on server side.
+Also we'll have to handle a bit more plumbing like loading and saving cast list on server side (we'll show the harder - manual way first, then we'll see how easy it can be using a service behavior).
 
 
 ### Configuring MovieCastEditor to Use MovieCastEditDialog

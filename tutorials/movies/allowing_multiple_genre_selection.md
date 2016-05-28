@@ -161,10 +161,8 @@ public class RowFields : RowFieldsBase
 {
     //...
     public Int32Field Kind;
-    public CustomClassField<List<Int32>> GenreList;
+    public ListField<Int32> GenreList;
 ```
-
-For field definition, we have to use `CustomClassField<List<Int32>>` as we don't have a *list of something* field type. *CustomClassField* is a generic field type that accepts any class type as its generic parameter.
 
 Our property has [LookupEditor] attribute just like *GenreId* property had, but with one difference. This one accepts multiple genre selection. We set it with *Multiple = true* argument.
 

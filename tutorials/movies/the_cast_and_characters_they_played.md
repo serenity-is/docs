@@ -687,9 +687,7 @@ All lookups has a *itemById* dictionary that allows you to access an entity of t
 
 While having a Movie dialog open, and at least one cast in CastList, click save button, and you'll get such an error:
 
-```txt
-Could not find field 'CastList' on row of type 'MovieRow'.
-```
+![Cast Save Error](img/mdb_castgrid_saveerror.png)
 
 This error is raised from -> Row deserializer (JsonRowConverter for JSON.NET) at server side.
 
@@ -745,7 +743,7 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-We defined a CastList property that will accept a *List* of MovieCastRow objects. The type of *Field* class that is used for such row list properties is *RowListField*
+We defined a CastList property that will accept a *List* of MovieCastRow objects. The type of *Field* class that is used for such row list properties is *RowListField*.
 
 By adding *[SetFieldFlags(FieldFlags.ClientSide)]* attribute, we specified that this field is not available directly in database table, thus can't be selected through simple SQL queries. It is analogous to an unmapped field in other ORM systems.
 
@@ -754,6 +752,10 @@ Now, when you click the Save button, you will not get an error.
 But reopen the Matrix entity you just saved. There is no cast entry there. What happened to Neo?
 
 As this is an unmapped field, so movie *Save* service just ignored the CastList property.
+
+> If you remember that in prior section, our GenreList also was an unmapped field, but somehow it worked there. Thats because we made use of a behavior, LinkedSetRelationBehavior with that property. 
+> 
+> Here we are sampling what would happen if we had no such service behavior.
 
 
 ### Handling Save for CastList

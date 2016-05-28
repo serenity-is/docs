@@ -786,7 +786,7 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
 
 MySaveHandler, processes both CREATE (insert), and UPDATE service requests for Movie rows. As most of its logic is handled by base SaveRequestHandler class, its class definition was empty before.
 
-We should first wait for Movie entity to be inserted / updated successfully, before inserting / updating the cast list. Thus, we are including our customized code by overriding the base AfterSave method.
+We should first wait for Movie entity to be inserted / updated successfully, before inserting / updating the cast list. Thus, we are including our customized code by overriding the base *AfterSave* method.
 
 > If this is CREATE (insert) operation, we need the MovieId field value to reuse in MovieCast records. As MovieId is an IDENTITY field, it is only available after inserting the movie record.
 
@@ -800,7 +800,7 @@ User did some modifications in edit dialogs to cast list, and now we have A, B, 
 
 So we need to update A, B, D (in case character / actor changed), delete C, and insert new records E and F.
 
-DetailListSaveHandler handles these comparisons and insert/update/delete operations automatically (by ID values).
+Fortunately, DetailListSaveHandler class that is defined in Serene, handles all these comparisons and performs insert/update/delete operations automatically (by ID values). Otherwise we would have to write much more code here.
 
 To get a list of old records, we need to query database if this is an UPDATE movie operation. If this is a CREATE movie operation there shouldn't be any old cast record.
 
@@ -808,7 +808,7 @@ We are using *Connection.List< Entities.MovieCastRow >* extension method. *Conne
 
 *this.Row* refers to currently inserted / updated record (movie) with its new field values, so it contains the MovieId value (new or existing).
 
-To update cast records, we are creating a DetailListHandler object, with old cast list, new cast list, and a delegate to set the MovieId field value in a cast record. This is to link new cast records with the current movie.
+To update cast records, we are creating a *DetailListHandler* object, with old cast list, new cast list, and a delegate to set the MovieId field value in a cast record. This is to link new cast records with the current movie.
 
 Then we call DetailListHandler.Process with current unit of work. UnitOfWork is a special object that wraps the current connection/transaction. 
 

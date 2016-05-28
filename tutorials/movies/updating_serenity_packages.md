@@ -2,11 +2,11 @@
 
 When i started writing this tutorial, Serenity (NuGet packages containing Serenity assemblies and standard scripts libraries) and Serene (the application template) was at version 2.1.8.
 
-When you read this you are probably using a later version, so you might not have to update Serenity yet.
+When you read this you are probably using a later version, so you might not have to update serenity yet.
 
 But, i want to show how you can update Serenity NuGet packages, in case another version comes out in the future.
 
-I prefer to work with NuGet from *Package Manager Console*, instead of using NuGet GUI interface, as it performs much faster.
+I prefer to work with NuGet from *Package Manager Console* instead of using NuGet GUI interface as it performs much faster.
 
 So, click *View -> Other Windows -> Package Manager Console*.
 
@@ -27,15 +27,13 @@ To update Serenity.CodeGenerator (containg *sergen.exe*), type:
 
 > Update-Package Serenity.CodeGenerator
 
-Serenity.CodeGenerator is also installed in MovieTutorial.Web project, and it contains *sergen.exe* and some other files that are used by our T4 templates, under *tools* directory.
+Serenity.CodeGenerator is also installed in MovieTutorial.Web project.
 
 > During updates, if NuGet asks to override changes in some script files, you can safely say yes unless you did manual modifications to Serenity script files (which i suggest you avoid).
 
 Now rebuild your solution and it should build successfully.
 
-> From time to time, breaking changes might happen in Serenity, but they are kept to minimum. 
-> 
-> In some cases you might have to do a few manual changes in your application code. 
+> From time to time, breaking changes might happen in Serenity, but they are kept to minimum, and you might have to do a few manual changes in your application code. 
 
 > Such changes are documented with a [BREAKING CHANGE] tag in change log at:
 > https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md
@@ -56,6 +54,8 @@ Serenity.Web package also comes with some static script and css resources like t
 
 ```
 Content/serenity/serenity.css
+Scripts/saltarelle/mscorlib.js
+Scripts/saltarelle/linq.js
 Scripts/serenity/Serenity.CoreLib.js
 Scripts/serenity/Serenity.Script.UI.js
 ```

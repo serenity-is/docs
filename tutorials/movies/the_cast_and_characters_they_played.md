@@ -325,6 +325,8 @@ namespace MovieTutorial.MovieDB {
 
 This editor derives from *Common.GridEditorBase* class in Serene, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
 
+> The `<reference />` line at top of the file is important. TypeScript has ordering problems with input files. If we didn't put it there, TypeScript would sometimes output GridEditorBase after our MovieCastEditor, and we'd get compile time errors. As a rule of thumb, if you are deriving some class from another in your project (not Serenity classes), you should put a reference to file containing that base class.
+
 To reference this new editor type from server side, build and transform all templates.
 
 > This base class might be integrated to Serenity in later versions. In that case, its namespace will become Serenity, instead of Serene or MovieTutorial.

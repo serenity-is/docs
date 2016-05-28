@@ -246,7 +246,7 @@ namespace MovieTutorial.MovieDB.Entities
 
 We'll use it for editing Movie cast later.
 
-Transform templates again, you'll see that *MovieDB.PersonRow.ts* now has a *getLookup()* method alongside with a new lookupKey property:
+Build and transform templates again, you'll see that *MovieDB.PersonRow.ts* now has a *getLookup()* method alongside with a new lookupKey property:
 
 ```ts
 namespace MovieTutorial.MovieDB {

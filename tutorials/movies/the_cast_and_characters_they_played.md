@@ -467,7 +467,7 @@ I have set editor type for PersonId field to a lookup editor and as i have alrea
 
 > We could have also written *[LookupEditor("MovieDB.Person")]*
 
-Build solution, launch and now MovieCastEditDialog has a better editing experience. But still too wide and PersonId field has a title of *Person*, it should be *Actor/Actress*.
+Build solution, launch and now MovieCastEditDialog has a better editing experience. But still too big in width and height.
 
 
 ### Fixing the Look Of MovieCastEditDialog

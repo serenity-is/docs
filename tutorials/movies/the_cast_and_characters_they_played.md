@@ -27,7 +27,7 @@ It's clear that we also need a Person table as we'll keep actors/actresses by th
 
 Now its time to create a migration with two tables:
 
-MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20151025_170200_PersonAndMovieCast.cs:
+MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/ DefaultDB_20160528_141600_PersonAndMovieCast.cs:
 
 ```cs
 using FluentMigrator;
@@ -36,7 +36,7 @@ using System;
 namespace MovieTutorial.Migrations.DefaultDB
 {
     [Migration(20151025170200)]
-    public class DefaultDB_20151025_170200_PersonAndMovieCast : Migration
+    public class DefaultDB_20160528_141600_PersonAndMovieCast : Migration
     {
         public override void Up()
         {

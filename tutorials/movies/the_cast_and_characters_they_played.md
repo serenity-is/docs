@@ -231,6 +231,8 @@ This metadata (name property of PersonRow) is transferred to TypeScript with a c
 
 Similarly, *idProperty*, *localTextPrefix*, *Enum Types* etc. are also generated under *ServerTypings.tt*. Thus, when you make a change that affects a metadata in these generated files, you should transform T4 templates to transfer that information to TypeScript.
 
+> You should always build before transforming, as T4 files uses output DLL of MovieTutorial.Web project.
+
 Now we have fullname at the title of PersonDialog.
 
 While we are still here, let's declare a LookupScript for Person table in PersonRow.cs:

@@ -59,6 +59,36 @@ Then we should remove GenreId column, by first deleting the foreign key declarat
 
 As soon as you build and open the Movies page, you'll get this error:
 
+![GenreId Error](img/mdb_genreid_error.png)
+
+This is because we still have mapping for GenreId column in our row. Error above is received from AJAX call to *List* service handler for *Movie* table. 
+
+> Repeating of error message originates from SQL server. *MovieId* column name passes several times within the generated dynamic SQL.
+
+Remove GenreId and GenreName properties and their related field objects from *MovieRow.cs*:
+
+```
+// remove this
+public Int32? GenreId
+{
+    get { return Fields.GenreId[this]; }
+    set { Fields.GenreId[this] = value; }
+}
+
+// remove this
+public String GenreName
+{
+    get { return Fields.GenreName[this]; }
+    set { Fields.GenreName[this] = value; }
+}
+
+public class RowFields : RowFieldsBase
+{
+    // and remove these
+    public Int32Field GenreId;
+    public StringField GenreName;
+}
+```
 
 
 

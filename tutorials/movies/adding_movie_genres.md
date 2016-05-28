@@ -385,7 +385,58 @@ It is also possible to start typing in genre editor, and it will provide you wit
 
 ![Defining Genre By Searching](img/movies_genre_search_add.png)
 
+### How Did It Determine Which Dialog Type To Use
+
+You probably didn't notice this detail. Our lookup editor for genre selection, automatically opened a new *GenreDialog* when you wanted to add a new genre inplace. 
+
+Here, our lookup editor made use of a convention. Because its lookup key is *MovieDB.Genre*, it searched for a dialog class with full names below:
+
+```
+MovieDB.GenreDialog
+MovieTutorial.MovieDB.GenreDialog
+...
+...
+```
+
+Luckily, we have a GenreDialog, which is defined in *Modules/Genre/GenreDialog.ts* and its full name is *MovieTutorial.MovieDB.GenreDialog*.
+
+```ts
+namespace MovieTutorial.MovieDB {
+    
+    @Serenity.Decorators.registerClass()
+    @Serenity.Decorators.responsive()
+    export class GenreDialog extends Serenity.EntityDialog<GenreRow, any> {
+        protected getFormKey() { return GenreForm.formKey; }
+        protected getIdProperty() { return GenreRow.idProperty; }
+        protected getLocalTextPrefix() { return GenreRow.localTextPrefix; }
+        protected getNameProperty() { return GenreRow.nameProperty; }
+        protected getService() { return GenreService.baseUrl; }
+
+        protected form = new GenreForm(this.idPrefix);
+    }
+}
+```
+
+If, lookup key for *GenreRow* and its dialog class didn't match, we would get an error in browser console, as soon as we click the inplace add button:
+
+```
+Uncaught MovieDB.GenreDialog dialog class is not found!
+```
+
+But this is not the case as they match. In such a case, either you'd have to use a compatible lookup key like "*ModuleName*.*RowType*", or you'd need to specify dialog type explicitly:
+
+```cs
+[DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
+[LookupEditor(typeof(GenreRow), InplaceAdd = true, DialogType = "MovieDB.Genre")]
+public Int32? GenreId
+{
+    get { return Fields.GenreId[this]; }
+    set { Fields.GenreId[this] = value; }
+}
+```
+
+> You shouldn't specify *Dialog* suffix, nor the full namespace, e.g. *MovieTutorial.MovieDB.Genre*, as Serenity automatically searches for them.
 
 ### Re-runing T4 Templates
 
-As we added a new entity to our application, we should run T4 templates after building solution.
+As we added a new entity to our application, we should run T4 templates after building solution. 

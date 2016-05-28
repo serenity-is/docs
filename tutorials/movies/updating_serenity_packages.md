@@ -1,6 +1,6 @@
 # Updating Serenity Packages
 
-When i started writing this tutorial, Serenity (NuGet packages containing Serenity assemblies and standard scripts libraries) and Serene (the application template) was at version 1.5.4.
+When i started writing this tutorial, Serenity (NuGet packages containing Serenity assemblies and standard scripts libraries) and Serene (the application template) was at version 2.1.8.
 
 When you read this you are probably using a later version, so you might not have to update serenity yet.
 
@@ -28,11 +28,6 @@ To update Serenity.CodeGenerator (containg *sergen.exe*), type:
 > Update-Package Serenity.CodeGenerator
 
 Serenity.CodeGenerator is also installed in MovieTutorial.Web project.
-
-> For versions before Serenity 2.1, you should also update Serenity.Script package
-> > Update-Package Serenity.Script
-
-> Serenity.Script package contains three assemblies: *Serenity.Script.Imports*, *Serenity.Script.Core* and *Serenity.Script.UI*, so this updates them all.
 
 > During updates, if NuGet asks to override changes in some script files, you can safely say yes unless you did manual modifications to Serenity script files (which i suggest you avoid).
 
@@ -63,13 +58,9 @@ Scripts/saltarelle/mscorlib.js
 Scripts/saltarelle/linq.js
 Scripts/serenity/Serenity.CoreLib.js
 Scripts/serenity/Serenity.Script.UI.js
-Scripts/serenity/Serenity.Externals.js
-Scripts/serenity/Serenity.Externals.Slick.js
-
 ```
 
 So, these and a few more are also updated in MovieApplication.Web.
-
 
 
 ### What Is Not Updated (OR Can't Be Updated Automatically)
@@ -81,6 +72,8 @@ We are trying to keep updating your application as simple as possible, but Seren
 You might have done modifications to application source, so updating a Serene application created with an older version of Serene template, might not be as easy as it sounds.
 
 So sometimes you might have to create a new Serene application with up-to-date Serene template version, and compare it to your application, and merge features you need. This is a manual process.
+
+Usually, updating Serenity packages is enough. Updating Serene itself is not required unless you need some recent features from latest Serene version.
 
 > We have some plans to make parts of Serene template also a NuGet package, but it is still not trivial how to update your application without overriding your changes, e.g. to shared code like Navigation items. And what if you removed Northwind code, but our update reinstalls it? I'm open to suggestions...
 

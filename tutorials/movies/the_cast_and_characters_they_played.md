@@ -286,6 +286,8 @@ After generating code, as we don't need a separate page to edit movie cast table
 MovieCastEndpoint.cs
 MovieCastIndex.cshtml
 MovieCastPage.cs
+MovieDialog.ts
+MovieGrid.ts
 ```
 
 Again, build and transform templates.

@@ -238,6 +238,39 @@ We would prefer genre names instead of Genre IDs, so it's clear that we need to 
 
 It's time to write a SlickGrid column formatter. Create file *GenreListFormatter.ts* next to *MovieGrid.ts*:
 
+```ts
+namespace MovieTutorial.MovieDB {
+
+    @Serenity.Decorators.registerFormatter()
+    export class GenreListFormatter implements Slick.Formatter {
+        format(ctx: Slick.FormatterContext) {
+            let idList = ctx.value as number[];
+            if (!idList || !idList.length)
+                return "";
+
+            let byId = GenreRow.getLookup().itemById;
+
+            return idList.map(x => {
+                let g = byId[x];
+                if (!g)
+                    return x.toString();
+
+                return Q.htmlEncode(g.Name);
+            }).join(", ");
+        }
+    }
+}
+```
+
+Here we define a new formatter, *GenreListFormatter* and register it with Serenity type system, using *@Serenity.Decorators.registerFormatter* decorator. Decorators are similar to .NET attributes.
+
+All formatters should implement Slick.Formatter interface, which has a *format* method that takes a *ctx* parameter of type *Slick.FormatterContext*.
+
+*ctx*, which is the formatting context, is an object with several members. One of them is *value* that contains the column value for current grid row/column being formatted.
+
+As we know that we'll use this formatter on column with a `List<Int32>` value, we start by casting value to *number[]*.
+
+> There is no Int32 type in Javascript. Int32, Double, Single etc. corresponds to number type. Also, generic *`List<>`* type in C# corresponds to an Array in Javascript.
 
 
 

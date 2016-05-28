@@ -148,6 +148,7 @@ public MovieKind? Kind
     set { Fields.Kind[this] = (Int32?)value; }
 }
 
+[DisplayName("Genres")]
 [LookupEditor(typeof(GenreRow), Multiple = true), ClientSide]
 [LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
 public List<Int32> GenreList

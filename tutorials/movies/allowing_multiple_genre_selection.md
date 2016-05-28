@@ -67,7 +67,7 @@ This is because we still have mapping for GenreId column in our row. Error above
 
 Remove GenreId and GenreName properties and their related field objects from *MovieRow.cs*:
 
-```
+```cs
 // remove this
 public Int32? GenreId
 {
@@ -90,6 +90,15 @@ public class RowFields : RowFieldsBase
 }
 ```
 
+Remove GenreName property from *MovieForm.cs*:
+
+```cs
+// remove this
+[Width(100), QuickFilter]
+public String GenreName { get; set; }
+```
+
+After building, we at least have a working *Movies* page again.
 
 
 

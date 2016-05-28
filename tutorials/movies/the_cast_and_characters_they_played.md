@@ -307,7 +307,7 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 
 ### Creating an Editor For Movie Cast List
 
-Next to MovieCastGrid.ts (at MovieTutorial.Web/Modules/MovieDB/MovieCast/), create a file named *MovieCastEditor.ts* with contents below:
+Next to MovieCastRow.cs (at MovieTutorial.Web/Modules/MovieDB/MovieCast/), create a file named *MovieCastEditor.ts* with contents below:
 
 ```ts
 /// <reference path="../../Common/Helpers/GridEditorBase.ts" />
@@ -370,9 +370,9 @@ Now build and launch your application. Open a movie dialog and you'll be greeted
 
 OK, it looked easy, but i'll be honest, we are not even half the way. 
 
-That *New MovieCast* button doesn't work, need to define a dialog for it, the grid columns are not  what i'd like them to be and the field and button titles are not so user friendly...
+That *New MovieCast* button doesn't work, need to define a dialog for it. The grid columns are not what i'd like them to be and the field and button titles are not so user friendly...
 
-Also as this is not an integrated feature (yet), i have to handle a bit more plumbing like loading and saving cast list on server side.
+Also we'll have to handle a bit more plumbing like loading and saving cast list on server side.
 
 
 ### Configuring MovieCastEditor to Use MovieCastEditDialog

@@ -210,3 +210,35 @@ Now we can add multiple genres to a Movie:
 
 ![Movie Multiple Genres](img/mdb_multiple_genres.png)
 
+
+### Showing Selected Genres in a Column
+
+Previously, when we had only one Genre per Movie. We could show the selected genre in a column, by adding a view field to MovieRow.cs. It is not going to be so simple this time.
+
+Let's start by adding GenreList property to *MovieColumns.cs*:
+
+```cs
+public class MovieColumns
+{
+    //...
+    [Width(200)]
+    public List<Int32> GenreList { get; set; }
+    [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
+    public Int32 Runtime { get; set; }
+}
+```
+
+This is what we got:
+
+![Movie Multiple Genres](img/mdb_genre_idlist.png)
+
+GenreList column contains a list of Int32 values, which corresponds to an array in Javascript. Luckily, Javascript .toString() method for an array returns items separated by comma, so we got *"1,2"* for *Fight Club* movie.
+
+We would prefer genre names instead of Genre IDs, so it's clear that we need to *format* these values, by converting GenreId to their Genre name equivalents. 
+
+It's time to write a SlickGrid column formatter. Create file *GenreListFormatter.ts* next to *MovieGrid.ts*:
+
+
+
+
+

@@ -118,7 +118,7 @@ As we declared a new enumeration and used it, we should rebuild solution, conver
 
 Now after launching your project, you should be able to enter actors:
 
-![Person Editing](img/movies_person_editing.png)
+![Person Editing](img/mdb_person_carrie.png)
 
 
 ### Declaring FullName Field
@@ -180,9 +180,7 @@ We specified SQL expression *Expression("(t0.Firstname + ' ' + t0.Lastname)")* o
 
 By adding QuickSearch attribute to FullName, instead of Firstname, grid will now search by default on Fullname field.
 
-But still dialog will show Firstname. For this, we need to make a change 
-
-First transform templates, and then make change below in PersonDialog.cs (in MovieTutorial.Script project, under MovieDB/Person folder):
+But dialog will still show Firstname. For this, we need to transform templates.
 
 ```cs
 namespace MovieTutorial.MovieDB

@@ -192,7 +192,7 @@ Third argument is the property name of field in that row (MovieGenresRow) that l
 
 > We'll talk about Serenity service behaviors in following chapters.
 
-### Adding GenreList To Form
+### Adding Genre List To Form
 
 Edit *MovieForm.cs* and add *GenreList* property:
 
@@ -205,3 +205,8 @@ Edit *MovieForm.cs* and add *GenreList* property:
       public Int32 Runtime { get; set; }
   }
 ```
+
+Now we can add multiple genres to a Movie:
+
+![Movie Multiple Genres](img/mdb_multiple_genres.png)
+

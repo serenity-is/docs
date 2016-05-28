@@ -180,7 +180,11 @@ We specified SQL expression *Expression("(t0.Firstname + ' ' + t0.Lastname)")* o
 
 By adding QuickSearch attribute to FullName, instead of Firstname, grid will now search by default on Fullname field.
 
-But dialog will still show Firstname. We need to transform templates. Why is it required will become more clear after looking at *PersonDialog.ts* file:
+But dialog will still show Firstname. We need to build and transform templates to make it show Fullname.
+
+### Why Had to Transform Templates?
+
+This will become more clear after looking at *PersonDialog.ts* file:
 
 ```ts
 namespace MovieTutorial.MovieDB {
@@ -233,8 +237,8 @@ Similarly, *idProperty*, *localTextPrefix*, *Enum Types* etc. are also generated
 
 > You should always build before transforming, as T4 files uses output DLL of MovieTutorial.Web project. Otherwise you'll be generating code for an older version of your Web project.
 
-Now we have fullname at the title of PersonDialog.
-
+### Declaring PersonRow Lookup Script
+ 
 While we are still here, let's declare a LookupScript for Person table in PersonRow.cs:
 
 ```cs

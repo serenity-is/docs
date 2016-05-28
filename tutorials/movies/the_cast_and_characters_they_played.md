@@ -534,7 +534,7 @@ MovieCastEditor is currently using columns defined in *MovieCastColumns.cs* (bec
 
 We have MovieCastId, MovieId, PersonId (shown as Actor/Actress) and Character columns there. It is better to show only Actor/Actress and Character columns.
 
-But we don't want to show PersonId (integer value), but instead their full name, so we'll declare this field in MovieCastRow.cs first:
+We want to show actors fullname instead of PersonId (integer value), so we'll declare this field in MovieCastRow.cs first:
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities

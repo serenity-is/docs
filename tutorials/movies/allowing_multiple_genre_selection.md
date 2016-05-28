@@ -309,6 +309,8 @@ If we could find the genre row, corresponding to this ID, we return its Name val
 return Q.htmlEncode(g.Name);
 ```
 
+> We could also write a generic formatter that works with any type of lookup list, but it's beyond scope of this tutorial. I leave it as an excercise to you.
+
 ### Assigning GenreListFormatter to GenreList Column
 
 As we defined a new formatter class, we should build and transform T4 files, so that we can reference *GenreListFormatter* in server side code.

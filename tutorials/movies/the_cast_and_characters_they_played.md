@@ -329,6 +329,7 @@ To reference this new editor type from server side, build and transform all temp
 
 > This base class might be integrated to Serenity in later versions. In that case, its namespace will become Serenity, instead of Serene or MovieTutorial.
 
+
 ### Using MovieCastEditor in Movie Form
 
 Open MovieForm.cs, between *Description* and *Storyline* fields, add a CastList property like:

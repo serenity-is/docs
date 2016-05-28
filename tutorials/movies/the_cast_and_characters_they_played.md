@@ -670,9 +670,9 @@ namespace MovieTutorial.MovieDB {
 
 ValidateEntity is a method from our GridEditorBase class in Serene. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
 
-As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person full name.
+As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person fullname.
 
-For this, we need a dictionary that maps PersonId to their Fullname values. Fortunately, person lookup has such a dictionary. We can access the lookup for PersonRow through its *lookup* property.
+For this, we need a dictionary that maps PersonId to their Fullname values. Fortunately, person lookup has such a dictionary. We can access the lookup for PersonRow through its *getLookup* method.
 
 > Another way to access person lookup is by *Q.getLookup('MovieDB.Person')*. The one in PersonRow is just a shortcut defined by T4 templates.
 

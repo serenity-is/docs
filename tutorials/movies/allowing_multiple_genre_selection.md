@@ -90,12 +90,19 @@ public class RowFields : RowFieldsBase
 }
 ```
 
-Remove GenreName property from *MovieForm.cs*:
+Remove GenreName property from *MovieColumns.cs*:
 
 ```cs
 // remove this
 [Width(100), QuickFilter]
 public String GenreName { get; set; }
+```
+
+Remove GenreId property from *MovieForm.cs*:
+
+```cs
+// remove this
+public Int32 GenreId { get; set; }
 ```
 
 After building, we at least have a working *Movies* page again.
@@ -167,10 +174,25 @@ We don't have a *GenreList* column in *Movie* table, so we should set it as an u
 In the next line, we use another new attribute, *LinkingSetRelation*:
 
 ```cs
-[LinkingSetRelation(typeof(GenreRow), "MovieId", "GenreId")]
+[LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
 ```
 
 This is an attribute which is specific to M-N releations that links a row in this table to multiple rows from another table.
 
+First argument of it is the type of M-N mapping row, which is *MovieGenresRow* here.
+
+Second argument is the property name of field in that row (MovieGenresRow) that matches this row's ID property, e.g. MovieId.
+
+Third argument is the property name of field in that row (MovieGenresRow) that links multiple Genres by their IDs, e.g. GenreId.
+
+> LinkingSetRelation has a related Serenity service behavior, named *LinkingSetRelationBehavior* that is automatically activated for all fields with a *LinkingSetRelation* attribute. 
+
+> This behavior, will intercept service handlers for *Create*, *Update*, *Delete*, *Retrieve* and *List* and inject code to populate or update our *GenreList* column and its related *MovieGenres* table.
+
+> We'll talk about Serenity service behaviors in following chapters.
+
+### Adding GenreList To Form
+
+Edit *MovieForm.cs* and add *GenreList* property:
 
 

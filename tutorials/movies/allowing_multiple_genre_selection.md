@@ -236,6 +236,9 @@ GenreList column contains a list of Int32 values, which corresponds to an array 
 
 We would prefer genre names instead of Genre IDs, so it's clear that we need to *format* these values, by converting GenreId to their Genre name equivalents. 
 
+
+### Creating GenreListFormatter Class
+
 It's time to write a SlickGrid column formatter. Create file *GenreListFormatter.ts* next to *MovieGrid.ts*:
 
 ```ts
@@ -305,4 +308,25 @@ If we could find the genre row, corresponding to this ID, we return its Name val
 ```ts
 return Q.htmlEncode(g.Name);
 ```
+
+### Assigning GenreListFormatter to GenreList Column
+
+As we defined a new formatter class, we should build and transform T4 files, so that we can reference *GenreListFormatter* in server side code.
+
+After building and transforming, open MovieColumns.cs and attach this formatter to MovieList property:
+
+```cs
+public class MovieColumns
+{
+    //...
+    [Width(200), GenreListFormatter]
+    public List<Int32> GenreList { get; set; }
+    [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
+    public Int32 Runtime { get; set; }
+}
+```
+
+Now we can see Genre names in Genres column:
+
+![Movie Genre Names](img/mdb_genre_names.png)
 

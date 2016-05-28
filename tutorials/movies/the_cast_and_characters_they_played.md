@@ -602,11 +602,11 @@ namespace MovieTutorial.MovieDB.Columns
 
 Rebuild and cast grid has better columns:
 
-![Movie Cast Dialog Fixed](img/movies_cast_grid_fixed.png)
+![Movie Cast Dialog Fixed](img/mdb_castgrid_columns.png)
 
 Now try adding an actor/actress, for example, Keanu Reeves / Neo:
 
-![Movie Cast Dialog Fixed](img/movies_cast_grid_no_actor_name.png)
+![Movie Cast Grid Empty Actor](img/mdb_castgrid_emptyactor.png)
 
 Why Actor/Actress column is empty??
 
@@ -625,11 +625,20 @@ When you click the save button, dialog builds an entity to save like this:
 
 These fields corresponds to the form fields you previously set in MovieCastForm.cs:
 
-```
+```cs
 public class MovieCastForm
 {
-    [LookupEditor(typeof(Entities.PersonRow))]
     public Int32 PersonId { get; set; }
+    public String Character { get; set; }
+}
+```
+
+But in grid, we are showing these columns:
+
+```cs
+public class MovieCastColumns
+{
+    public String PersonFullname { get; set; }
     public String Character { get; set; }
 }
 ```
@@ -646,7 +655,7 @@ namespace MovieTutorial.MovieDB {
     export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
         //...
 
-        validateEntity(row: MovieCastRow, id: number) {
+        protected validateEntity(row: MovieCastRow, id: number) {
             if (!super.validateEntity(row, id))
                 return false;        
 

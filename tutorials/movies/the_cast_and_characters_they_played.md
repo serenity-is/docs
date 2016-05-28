@@ -274,13 +274,21 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-
 ### Generating Code For MovieCast Table
 
 Generate code for MovieCast table using *sergen*:
 
-![Movie Cast Code Generation](img/movies_cast_sergen.png)
+![Movie Cast Code Generation](img/mdb_sergen_moviecast.png)
 
+After generating code, as we don't need a separate page to edit movie cast table, you may delete files listed below:
+
+```
+MovieCastEndpoint.cs
+MovieCastIndex.cshtml
+MovieCastPage.cs
+```
+
+Again, build and transform templates.
 
 ### Master/Detail Editing Logic For MovieCast Table
 

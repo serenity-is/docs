@@ -411,7 +411,8 @@ Open *MovieCastEditor.ts* again, add a getDialogType method and override getAddB
 
 namespace MovieTutorial.MovieDB {
     @Serenity.Decorators.registerEditor()
-    export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
+    export class MovieCastEditor 
+          extends Common.GridEditorBase<MovieCastRow> {
         protected getColumnsKey() { return "MovieDB.MovieCast"; }
         protected getDialogType() { return MovieCastEditDialog; }
         protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
@@ -419,12 +420,12 @@ namespace MovieTutorial.MovieDB {
         constructor(container: JQuery) {
             super(container);
         }
-        
+
         protected getAddButtonCaption() {
             return "Add";
         }
     }
-}   
+}
 ```
 
 We specified that MovieCastEditor uses a MovieCastEditDialog by default which is also used by *Add* button. 

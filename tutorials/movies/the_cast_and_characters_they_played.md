@@ -314,7 +314,8 @@ Next to MovieCastRow.cs (at MovieTutorial.Web/Modules/MovieDB/MovieCast/), creat
 
 namespace MovieTutorial.MovieDB {
     @Serenity.Decorators.registerEditor()
-    export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
+    export class MovieCastEditor 
+          extends Common.GridEditorBase<MovieCastRow> {
         protected getColumnsKey() { return "MovieDB.MovieCast"; }
         protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
@@ -366,7 +367,7 @@ By putting *[MovieCastEditor]* attribute on top of CastList property, we specifi
 
 Now build and launch your application. Open a movie dialog and you'll be greeted by our new editor:
 
-![Movie Cast Editor Initial](img/movies_cast_editor_initial.png)
+![Movie Cast Editor Initial](img/mdb_casteditor_initial.png)
 
 OK, it looked easy, but i'll be honest, we are not even half the way. 
 
@@ -377,7 +378,7 @@ Also we'll have to handle a bit more plumbing like loading and saving cast list 
 
 ### Configuring MovieCastEditor to Use MovieCastEditDialog
 
-Get a copy of MovieCastDialog.ts as MovieCastEditDialog.ts and modify it like below:
+Create a *MovieCastEditDialog.ts* file next to *MovieCastEditor.ts* and modify it like below:
 
 ```ts
 /// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
@@ -385,11 +386,12 @@ Get a copy of MovieCastDialog.ts as MovieCastEditDialog.ts and modify it like be
 namespace MovieTutorial.MovieDB {
 
     @Serenity.Decorators.registerClass()
-    export class MovieCastEditDialog extends Common.GridEditorDialog<> {
+    export class MovieCastEditDialog extends 
+          Common.GridEditorDialog<MovieCastRow> {
         protected getFormKey() { return MovieCastForm.formKey; }
-        protected getNameProperty() { return "Character"; }
+        protected getNameProperty() { return MovieCastRow.nameProperty; }
         protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
-        
+
         protected form: MovieCastForm;
 
         constructor() {
@@ -400,7 +402,9 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-Open MovieCastEditor.ts again and add a getDialogType method and override getAddButtonCaption:
+We are using another base class from Serene, *Common.GridEditorDialog* which is also used by OrderDetailEditDialog.
+
+Open *MovieCastEditor.ts* again, add a getDialogType method and override getAddButtonCaption:
 
 ```ts
 /// <reference path="../../Common/Helpers/GridEditorBase.ts" />

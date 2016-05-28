@@ -73,4 +73,6 @@ You might have done modifications to application source, so updating a Serene ap
 
 So sometimes you might have to create a new Serene application with up-to-date Serene template version, and compare it to your application, and merge features you need. This is a manual process.
 
+Usually, updating Serenity packages is enough. Updating Serene itself is not required unless you need some recent features from latest Serene version.
+
 > We have some plans to make parts of Serene template also a NuGet package, but it is still not trivial how to update your application without overriding your changes, e.g. to shared code like Navigation items. And what if you removed Northwind code, but our update reinstalls it? I'm open to suggestions...

@@ -101,5 +101,43 @@ public String GenreName { get; set; }
 After building, we at least have a working *Movies* page again.
 
 
+### Adding GenreList Field
+
+As one movie might have multiple genres now, instead of a Int32 property, we need a list of Int32 values, e.g. `List<Int32>`. Add the GenreList property to *MovieRow.cs*:
+
+```cs
+
+//...
+[DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
+public MovieKind? Kind
+{
+    get { return (MovieKind?)Fields.Kind[this]; }
+    set { Fields.Kind[this] = (Int32?)value; }
+}
+
+[LookupEditor(typeof(GenreRow), Multiple = true), ClientSide]
+[LinkingSetRelation(typeof(GenreRow), "MovieId", "GenreId")]
+public List<Int32> GenreList
+{
+    get { return Fields.GenreList[this]; }
+    set { Fields.GenreList[this] = value; }
+}
+
+public class RowFields : RowFieldsBase
+{
+    //...
+    public Int32Field Kind;
+    public CustomClassField<List<Int32>> GenreList;
+```
+
+For field definition, we have to use `CustomClassField<List<Int32>>` as we don't have a *list of something* field type. *CustomClassField* is a generic field type that accepts any class type as its generic parameter.
+
+Our property has [LookupEditor] attribute just like *GenreId* property had, but with one difference. This one accepts multiple genre selection. We set it with *Multiple = true* argument.
+
+This property also has *ClientSide* flag, which is something similar to *Unmapped* fields in Serenity. It specifies that this property has no matching database column in database. 
+
+We don't have a *GenreList* column in *Movie* table, so we should set it as an unmapped field. Otherwise, Serenity will try to *SELECT* it, and we'll get SQL errors.
+
+
 
 

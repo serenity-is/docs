@@ -195,4 +195,12 @@ Third argument is the property name of field in that row (MovieGenresRow) that l
 
 Edit *MovieForm.cs* and add *GenreList* property:
 
-
+```cs
+  public class MovieForm
+  {
+      //...
+      public List<Int32> GenreList { get; set; }
+      public MovieKind Kind { get; set; }
+      public Int32 Runtime { get; set; }
+  }
+```

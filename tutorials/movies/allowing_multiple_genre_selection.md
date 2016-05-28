@@ -272,6 +272,37 @@ As we know that we'll use this formatter on column with a `List<Int32>` value, w
 
 > There is no Int32 type in Javascript. Int32, Double, Single etc. corresponds to number type. Also, generic *`List<>`* type in C# corresponds to an Array in Javascript.
 
+If the array is empty or null, we can safely return an empty string:
 
+```ts
+let idList = ctx.value as number[];
+if (!idList || !idList.length)
+    return "";
+```
 
+Then we get a reference to *Genre* lookup, which has a dictionary of *Genre* rows in its *itemById* property:
+
+```ts
+let byId = GenreRow.getLookup().itemById;
+```
+
+Next, we start mapping these ID values in our *idList* to their Genre name equivalents, using *Array.map* function in Javascript, which is pretty similar to LINQ Select statement:
+
+```ts
+return idList.map(x => { 
+```
+
+We lookup an ID in our Genre dictionary. It should be in dictionary, but we play safe here, and return its numeric value, if the genre is not found in dictionary.
+
+```ts
+let g = byId[x];
+if (!g)
+    return x.toString();
+```
+
+If we could find the genre row, corresponding to this ID, we return its Name value. We should HTML encode the genre name, just in case it contains invalid HTML characters, like `<`, `>` or `&`.
+
+```ts
+return Q.htmlEncode(g.Name);
+```
 

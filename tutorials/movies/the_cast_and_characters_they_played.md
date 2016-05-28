@@ -911,7 +911,9 @@ In our *MasterDetailRelation* attribute, we specified an extra property, *Includ
 
 This ensures that *PersonFullname* field on cast list is selected on retrieve. Otherwise, it wouldn't be loaded as only table fields are selected by default. When you open a movie dialog with existing cast list, full name would be empty.
 
-Now build your project and you'll see same functionality works with much less code.
+> Make sure you add any view field you use in grid columns to IncludeColumns. Put comma between names of multiple fields, e.g. IncludeColumns = "FieldA, FieldB, FieldC".
+
+Now build your project and you'll see that same functionality works with much less code.
 
 *MasterDetailRelationAttribute* triggers an instrinsic (automatic) behavior, *MasterDetailRelationBehavior* which intercepts Retrieve/Save/Delete handlers and methods we had overriden before and performs similar operations.
 

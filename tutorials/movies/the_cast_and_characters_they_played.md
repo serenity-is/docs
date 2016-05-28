@@ -325,10 +325,9 @@ namespace MovieTutorial.MovieDB {
 
 This editor derives from *Common.GridEditorBase* class in Serene, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
 
-> It might be integrated to Serenity in later versions. In that case, its namespace will become Serenity, instead of Serene or MovieTutorial.
-
 To reference this new editor type from server side, build and transform all templates.
 
+> This base class might be integrated to Serenity in later versions. In that case, its namespace will become Serenity, instead of Serene or MovieTutorial.
 
 ### Using MovieCastEditor in Movie Form
 

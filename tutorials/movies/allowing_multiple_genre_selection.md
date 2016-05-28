@@ -101,6 +101,28 @@ public String GenreName { get; set; }
 After building, we at least have a working *Movies* page again.
 
 
+### Generating Code For MovieGenres Table
+
+Fire up sergen and generate code for *MovieGenres* table as usual:
+
+![Movie Genres Sergen](img/mdb_sergen_moviegenres.png)
+
+As we're not going to edit movie genres from a separate page, you can safely delete the generated files below:
+
+```
+MovieGenresColumns.cs
+MovieGenresDialog.ts
+MovieGenresEndpoint.cs
+MovieGenresForm.cs
+MovieGenresGrid.cs
+MovieGenresIndex.cshtml
+MovieGenresPage.cs
+```
+
+You can also remove CSS entries for s-MovieDB-MovieGenresDialog from *site.less*.
+
+Only leave last two files, *MovieGenresRow.cs* and *MovieGenresRepository.cs*.
+
 ### Adding GenreList Field
 
 As one movie might have multiple genres now, instead of a Int32 property, we need a list of Int32 values, e.g. `List<Int32>`. Add the GenreList property to *MovieRow.cs*:
@@ -138,6 +160,13 @@ This property also has *ClientSide* flag, which is something similar to *Unmappe
 
 We don't have a *GenreList* column in *Movie* table, so we should set it as an unmapped field. Otherwise, Serenity will try to *SELECT* it, and we'll get SQL errors.
 
+In the next line, we use another new attribute, *LinkingSetRelation*:
+
+```cs
+[LinkingSetRelation(typeof(GenreRow), "MovieId", "GenreId")]
+```
+
+This is an attribute which is specific to M-N releations that links a row in this table to multiple rows from another table.
 
 
 

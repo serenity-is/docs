@@ -455,7 +455,6 @@ namespace MovieTutorial.MovieDB.Forms
     [BasedOnRow(typeof(Entities.MovieCastRow))]
     public class MovieCastForm
     {
-        [LookupEditor(typeof(Entities.PersonRow))]
         public Int32 PersonId { get; set; }
         public String Character { get; set; }
     }
@@ -464,9 +463,33 @@ namespace MovieTutorial.MovieDB.Forms
 
 I have removed *MovieId* as this form is going to be used in *MovieCastEditDialog*, so *MovieCast* entities will have the *MovieId* of the movie currently being edited in the *MovieDialog* automatically. Opening *Lord of the Rings* movie and adding a cast entry for *the Matrix* would be non-sense.
 
-I have set editor type for PersonId field to a lookup editor and as i have already added a LookupScript attribute to *PersonRow*, i can reuse that information for setting the lookup key.
+Next, edit MovieCastRow.cs:
+
+```cs
+    [ConnectionKey("Default"), TwoLevelCached]
+    [DisplayName("Movie Casts"), InstanceName("Cast")]
+    [ReadPermission("Administration")]
+    [ModifyPermission("Administration")]
+    public sealed class MovieCastRow : Row, IIdRow, INameRow
+    {
+        //...
+        [DisplayName("Actor/Actress"), NotNull, ForeignKey("[mov].[Person]", "PersonId")]
+        [LeftJoin("jPerson"), TextualField("PersonFirstname")]
+        [LookupEditor(typeof(PersonRow))]
+        public Int32? PersonId
+        {
+            get { return Fields.PersonId[this]; }
+            set { Fields.PersonId[this] = value; }
+        }
+```
+
+I have set editor type for PersonId field to a lookup editor and as i have already added a LookupScript attribute to *PersonRow*, i can reuse that information for setting the lookup key. 
 
 > We could have also written *[LookupEditor("MovieDB.Person")]*
+
+Changed *PersonId* display name to *Actor/Actress*.
+
+Also changed *DisplayName* and *InstanceName* attributes for row to set dialog title. 
 
 Build solution, launch and now MovieCastEditDialog has a better editing experience. But still too big in width and height.
 
@@ -500,37 +523,9 @@ As we are not gonna actually use MovieCastDialog (we deleted it), let's rename t
 }
 ```
 
-### Fixing the Dialog and PersonId Field Titles
+Now *MovieCastEditDialog* has a better look:
 
-Our dialog still has title *MovieCast*, we remember how to change it right?
-
-Open *MovieCastRow.cs* and perform these modifications:
-
-```cs
-namespace MovieTutorial.MovieDB.Entities
-{
-
-    //..
-    [ConnectionKey("Default"), DisplayName("Movie Casts"), InstanceName("Cast"), 
-        TwoLevelCached]
-    //..
-    public sealed class MovieCastRow : Row, IIdRow, INameRow
-    {
-        //...
-        [DisplayName("Actor/Actress"), NotNull, 
-            ForeignKey("[mov].Person", "PersonId"), LeftJoin("jPerson")]
-        public Int32? PersonId
-        {
-            get { return Fields.PersonId[this]; }
-            set { Fields.PersonId[this] = value; }
-        }
-    }
-}
-```
-
-First, we changed DisplayName and InstanceName attributes to set dialog title. Also change PersonId field title to Actor/Actress. Now MovieCastEditDialog has a bit better look:
-
-![Movie Cast Dialog Fixed](img/movies_cast_dialog_fixed.png)
+![Movie Cast Dialog Fixed](img/mdb_castdialog_final.png)
 
 
 ### Fixing MovieCastEditor Columns

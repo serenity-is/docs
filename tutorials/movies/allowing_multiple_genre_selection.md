@@ -123,11 +123,13 @@ You can also remove CSS entries for s-MovieDB-MovieGenresDialog from *site.less*
 
 Only leave last two files, *MovieGenresRow.cs* and *MovieGenresRepository.cs*.
 
-After building, run T4 templates to be sure, no generated files related to *MovieGenresForm* etc. is left behind.
+After building, run T4 templates to be sure, no T4 generated files related to *MovieGenresForm* etc. is left behind.
 
 ### Adding GenreList Field
 
 As one movie might have multiple genres now, instead of a Int32 property, we need a list of Int32 values, e.g. `List<Int32>`. Add the GenreList property to *MovieRow.cs*:
+
+> You might have to add System.Collections.Generic to usings.
 
 ```cs
 
@@ -140,7 +142,7 @@ public MovieKind? Kind
 }
 
 [LookupEditor(typeof(GenreRow), Multiple = true), ClientSide]
-[LinkingSetRelation(typeof(GenreRow), "MovieId", "GenreId")]
+[LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
 public List<Int32> GenreList
 {
     get { return Fields.GenreList[this]; }

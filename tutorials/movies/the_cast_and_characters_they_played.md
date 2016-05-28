@@ -840,7 +840,7 @@ Here, we are overriding OnReturn method, to inject CastList into movie row just 
 
 I used a different overload of Connection.List extension, which allows me to modify the select query.
 
-By default, List selects all table fields (not foreign fields coming from other tables), but to show actor name, i needed to also select *PersonFullName* field.
+By default, List selects all table fields (not foreign view fields coming from other tables), but to show actor name, i needed to also select *PersonFullName* field.
 
 Now build the solution, and we can finally list / edit the cast.
 
@@ -877,14 +877,15 @@ private class MyDeleteHandler : DeleteRequestHandler<MyRow>
 The way we implemented this master/detail handling is not very intuitive and included several manual steps at repository layer. Keep on reading to see how easily it could be done by using an integrated feature (MasterDetailRelationAttribute).
 
 
-### Handling Save / Retrieve / Delete (Serenity 1.6.3+)
+### Handling Save / Retrieve / Delete With a Behavior
 
-Master/detail relations are an integrated feature (at least on server side) with Serenity 1.6.3+, so instead of manually overriding Save / Retrieve and Delete handlers, i'll use a new attribute, *MasterDetailRelation* (but of course i'll have to upgrade to 1.6.3).
+Master/detail relations are an integrated feature (at least on server side), so instead of manually overriding Save / Retrieve and Delete handlers, i'll use an attribute, *MasterDetailRelation*.
 
 Open MovieRow.cs and modify *CastList* property:
 
 ```cs
-[DisplayName("Cast List"), MasterDetailRelation(foreignKey: "MovieId"), ClientSide]
+[MasterDetailRelation(foreignKey: "MovieId", IncludeColumns = "PersonFullname")]
+[DisplayName("Cast List"), SetFieldFlags(FieldFlags.ClientSide)]
 public List<MovieCastRow> CastList
 {
     get { return Fields.CastList[this]; }
@@ -902,20 +903,13 @@ private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
 private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
 ```
 
-We'll just have to make a little change in MovieCastRow.cs to select PersonFullname on retrieve (just like we did manually in MyRetrieveHandler):
+In our *MasterDetailRelation* attribute, we specified an extra property, *IncludeColumns*:
 
-```cs
-[DisplayName("Actor/Actress"), 
- Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
-[MinSelectLevel(SelectLevel.List)]
-public String PersonFullname
-{
-    get { return Fields.PersonFullname[this]; }
-    set { Fields.PersonFullname[this] = value; }
-}
+```
+[MasterDetailRelation(foreignKey: "MovieId", IncludeColumns = "PersonFullname")]
 ```
 
-This ensures that *PersonFullname* field is selected on retrieve. Otherwise, it wouldn't be loaded as only table fields are selected by default.
+This ensures that *PersonFullname* field on cast list is selected on retrieve. Otherwise, it wouldn't be loaded as only table fields are selected by default. When you open a movie dialog with existing cast list, full name would be empty.
 
 Now build your project and you'll see same functionality works with much less code.
 

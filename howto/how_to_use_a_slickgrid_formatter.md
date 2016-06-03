@@ -1,5 +1,10 @@
 # How To: Use a SlickGrid Formatter
 
+
+** This section is pending update for TypeScript **
+
+
+
 To use a SlickGrid formatter function, like percent complete bar formatter at *%Complete* column of SlickGrid example:
 
 http://mleibman.github.io/SlickGrid/examples/example2-formatters.html

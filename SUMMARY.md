@@ -41,7 +41,6 @@
        * [Handling Lookup Scripts](tutorials/multi_tenancy/handling_lookup_scripts.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind & Other Samples From Serene](howto/removing_northwind.md)
-   * [How To: Remove AdminLTE Samples From Serene](howto/how_to_remove_adminlte_samples_from_serene.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)
    * [How To: Use a SlickGrid Formatter](howto/how_to_use_a_slickgrid_formatter.md)
    * [How To: Remove Add Button from a Grid](howto/how_to_remove_add_button_from_a_grid.md)

@@ -7,7 +7,7 @@ For the following sections, we need some sample data. We can copy and paste some
 
 If you don't want to waste your time entering this sample data, it is available as a migration at the link below:
 
-> https://github.com/volkanceylan/Serenity-Tutorials/blob/master/MovieTutorial/MovieTutorial/MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20160519_135200_SampleMovies.cs
+> https://github.com/volkanceylan/MovieTutorial/blob/master/MovieTutorial/MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20160519_135200_SampleMovies.cs
 
 
 ![7 Movies Entered](img/mdb_sample_movies.png)

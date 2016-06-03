@@ -130,7 +130,7 @@ Last step is to instantiate this grid in PersonDialog.ts:
 namespace MovieTutorial.MovieDB
 {
     @Serenity.Decorators.registerClass()
-    export class PersonDialog : EntityDialog<PersonRow>
+    export class PersonDialog : Serenity.EntityDialog<PersonRow>
     {
         private moviesGrid: PersonMovieGrid;
 
@@ -166,42 +166,42 @@ PersonMovieGrid should know the person it shows the movie cast records for. So, 
 namespace MovieTutorial.MovieDB
 {
     @Serenity.Decorators.registerClass()
-    export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
+    export class PersonMovieGrid extends Serenity.EntityGrid<MovieCastRow, any>
     {
         protected getColumnsKey() { return "MovieDB.PersonMovie"; }
-        protected getIdProperty() { return MovieCastRow.IdProperty; }
-        protected getLocalTextPrefix() { return MovieCastRow.LocalTextPrefix; }
+        protected getIdProperty() { return MovieCastRow.idProperty; }
+        protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
         protected getService() { return MovieCastService.baseUrl; }
-        
+
         constructor(container: JQuery) {
             super(container);
         }
-        
+
         protected getButtons() {
             return null;
         }
-        
+
         protected getInitialTitle() {
             return null;
         }
-        
+
         protected usePager() {
             return false;
-        }       
-        
+        }
+
         protected getGridCanLoad() {
             return this.personID != null;
         }
-       
+
         private _personID: number;
-       
+
         get personID() {
             return this._personID;
         }
-        
+
         set personID(value: number) {
-            if (_personID != value) {
-                _personID = value;
+            if (this._personID != value) {
+                this._personID = value;
                 this.setEquality(MovieCastRow.Fields.PersonId, value);
                 this.refresh();
             }
@@ -219,17 +219,19 @@ and refresh to see changes.
 
 Overriding GetGridCanLoad method allows us to control when grid can call list service. If we didn't override it, while creating a new Person, grid would load all movie cast records, as there is not a PersonID yet (it is null).
 
-We also did three cosmetic changes, by overriding three methods, first to remove all buttons from toolbar, second to remove title from the grid (as tab title is enough), and third to remove paging functionality (a person can't have a million movies right?). 
+> List handler ignores an equality filter parameter if its value is null. Just like when a quick filter dropdown is empty, all records are shown.
+
+We also did three cosmetic changes, by overriding three methods, first to remove all buttons from toolbar (*getButtons*), second to remove title from the grid (*getInitialTitle*) as tab title is enough), and third to remove paging functionality (*usePager*), a person can't have a million movies right?). 
 
 ### Setting PersonID of PersonMovieGrid in PersonDialog
 
-If nobody sets grids PersonID property, it will always be null, and no records will be loaded. We should set it in Person dialog:
+If nobody sets grid's PersonID property, it will always be null, and no records will be loaded. We should set it in Person dialog:
 
 ```ts
 namespace MovieTutorial.MovieDB
 {
     // ...
-    export class PersonDialog extends EntityDialog<PersonRow>
+    export class PersonDialog extends Serenity.EntityDialog<PersonRow>
     {
         // ...
         protected afterLoadEntity()
@@ -242,26 +244,27 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-*AfterLoadEntity* is called after an entity or a new entity is loaded into dialog. *this.EntityId* refers to the identity value of the currently loaded entity. In new record mode, it is null.
+*afterLoadEntity* is called after an entity or a new entity is loaded into dialog.
+
+> Please not that entity is loaded in a later phase, so it won't be available in dialog constructor.
+
+*this.EntityId* refers to the identity value of the currently loaded entity. In new record mode, it is null.
 
 > AfterLoadEntity and LoadEntity might be called several times during dialog lifetime, so avoid creating some child objects in these events, otherwise you will have multiple instances of created objects. Thats why we created the grid in dialog constructor.
 
-![Person With Movies Unfiltered](img/movies_person_tab_autosize.png)
+![Person With Movies Filtered](img/mdb_person_movies.png)
 
 ### Fixing Movies Tab Size
 
 You might have noticed that when you switch to Movies tab, dialog gets a bit less in height. This is because dialog is set to auto height and grids are 200px by default. When you switch to movies tab, form gets hidden, so dialog adjusts to movies grid height.
 
-Edit *s-PersonDialog* css in site.less:
+Edit *s-MovieDB-PersonDialog* css in site.less:
 
 ```css
-.s-PersonDialog {
-    > .size { .widthAndMin(650px); .heightAndMin(400px); }
-    .dialog-styles(@h: auto, @l: 150px, @e: 400px);
-    .s-PropertyGrid .categories { height: 260px; }
-    .ui-dialog-content { overflow: hidden; }
-    .tab-pane.s-TabMovies { padding: 5px; }
-    .s-PersonMovieGrid > .grid-container { height: 315px; }
+.s-MovieDB-PersonDialog {
+    > .size { width: 650px; }
+    .caption { width: 150px; }
+    .s-PersonMovieGrid > .grid-container { height: 287px; }
 }
 ```
 

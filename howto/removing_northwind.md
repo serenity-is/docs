@@ -111,50 +111,9 @@ public ActionResult Index()
 
 * Search for *Northwind* in all solution items. It should find no results.
 
-* Run your project, now Northwind menu is gone.
+* Run your project, now Northwind and Sample menus are gone.
 
 
 ### Removing Northwind Tables
 
-If you are using Serene 1.6.4.3+ Northwind tables are in a separate database, so you can just drop it. Following steps are unnecessary.
-
-
-> ### If using a version below Serene 1.6.3, follow these steps:
-
-> * Open *MyProject.Web/Modules/Common/Migrations/DefaultDB/ DefaultDB_20141103_140000_Initial.cs* file, remove following line:
-
-
->```cs
-> Execute.EmbeddedScript(
->   "MyProject.Modules.Common.Migrations.DefaultDB.NorthwindDBScript.sql");
->```
-
->* Remove *MyProject.Web/Modules/Common/Migrations/DefaultDB/ DefaultDB_20141123_155100_ProductImage.cs* file.
-
->* Remove *MyProject.Web/Modules/Common/Migrations/DefaultDB/ DefaultDB_20151014_030700_OrderDetailID.cs* file.
-
->* Remove *MyProject.Web/Modules/Common/Migrations/DefaultDB/ NorthwindDBScript.sql* file.
-
-
-> * You would drop your existing database, and let migrations recreate your tables.
-
-> * If you have some data that you don't want to lose in other tables, execute the script below to remove Northwind tables:
-
->```sql
->DROP TABLE [dbo].[Order Details]
->DROP TABLE [dbo].[Orders]
->DROP TABLE [dbo].[Products]
->DROP TABLE [dbo].[Suppliers]
->DROP TABLE [dbo].[Shippers]
->DROP TABLE [dbo].[EmployeeTerritories]
->DROP TABLE [dbo].[Employees]
->DROP TABLE [dbo].[CustomerCustomerDemo]
->DROP TABLE [dbo].[Customers]
->DROP TABLE [dbo].[Categories]
->DROP TABLE [dbo].[Territories]
->DROP TABLE [dbo].[Region]
->DROP TABLE [dbo].[CustomerDemographics]
->DELETE FROM [dbo].[VersionInfo] WHERE Version = 20141123155100
->```
-
-> Please make sure the database you are running this script on is a Serene one.
+Northwind tables are in a separate database, so you can just drop it.

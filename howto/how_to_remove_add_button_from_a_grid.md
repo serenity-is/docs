@@ -1,6 +1,8 @@
 # How To: Remove Add Button from a Grid
 
-You can override *GetButtons()* method in *MyGrid.cs* (which is under MyProject.Script).
+** This section is pending update for TypeScript **
+
+You can override *getButtons()* method in *MyGrid.ts*.
 
 This removes all buttons (including *refresh*):
 

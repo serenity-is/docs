@@ -69,9 +69,9 @@ Also remove *Northwind* connection string from *web.config*.
 
 * Open all localization json files under *MyProject.Web/Scripts/site/*, e.g. *site.texts.es.json* and remove all lines with *Northwind*, *Theme Samples* and *Basic Samples*.
 
-### Removing Northwind Script Side Generated Code
+### Removing Northwind / Samples Generated Code
 
-* Expand *MyProject.Script/Imports/FormContexts/FormContexts.tt*. Select files starting with *Northwind.* and delete them.
+* Expand *MyProject.Web/Modules/Common/Imports/ ServerTypings/ServerTypings.tt*. Select files starting with *Northwind.*, *BasicSamples.* and delete them.
  
 ### Removing Northwind Numbers From Dashboard 
 
@@ -98,13 +98,6 @@ public ActionResult Index()
 
 > You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
 
-
-### Removing Basic Samples
-
-As some pages under Basic Samples uses Northwind rows and other objects, you should also remove these samples from Web and Script projects.
-
-* Remove MyProject.Script/BasicSamples directory and all files under it.
-* Remove MyProject.Web/Modules/BasicSamples directory and all files under it.
 
 ### Building Project and Running T4 (.tt) Templates
 

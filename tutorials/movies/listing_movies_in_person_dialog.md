@@ -105,16 +105,16 @@ namespace MovieTutorial.MovieDB.Columns
 Next define a *PersonMovieGrid* class, in file *PersonMovieGrid.ts* next to *PersonGrid.ts*:
 
 ```ts
-namespace MovieTutorial.MovieDB
-{
+namespace MovieTutorial.MovieDB {
+
     @Serenity.Decorators.registerClass()
     export class PersonMovieGrid extends Serenity.EntityGrid<MovieCastRow, any>
     {
         protected getColumnsKey() { return "MovieDB.PersonMovie"; }
-        protected getIdProperty() { return MovieCastRow.IdProperty; }
-        protected getLocalTextPrefix() { return MovieCastRow.LocalTextPrefix; }
+        protected getIdProperty() { return MovieCastRow.idProperty; }
+        protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
         protected getService() { return MovieCastService.baseUrl; }
-        
+
         constructor(container: JQuery) {
             super(container);
         }
@@ -122,14 +122,11 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-> If you get errors about MovieCastService, like i did, build and transform templates.
-
 We'll actually use MovieCast service, to list movies a person acted in.
 
-Last step is to create this grid in PersonDialog.ts:
+Last step is to instantiate this grid in PersonDialog.ts:
 
 ```cs
-
 namespace MovieTutorial.MovieDB
 {
     @Serenity.Decorators.registerClass()
@@ -157,7 +154,7 @@ We also attached to OnActivate event of jQuery UI tabs, and called Arrange metho
 
 OK, now we can see list of movies in Movies tab, but something is strange:
 
-![Person With Movies Unfiltered](img/movies_person_tab_unfiltered.png)
+![Person With Movies Unfiltered](img/mdb_person_cast3.png)
 
 ### Filtering Movies for the Person
 
@@ -213,8 +210,12 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-We hold the person ID in a private variable. When it changes, we also set a equality filter for PersonId field using SetEquality method (which will be sent to list service),
+> We are using ES5 (EcmaScript 5) property (get/set) features. It's pretty similar to C# properties.
+
+We store the person ID in a private variable. When it changes, we also set a equality filter for PersonId field using SetEquality method (which will be sent to list service),
 and refresh to see changes.
+
+> Equality filter is the list request parameter that is also used by quick filter items.
 
 Overriding GetGridCanLoad method allows us to control when grid can call list service. If we didn't override it, while creating a new Person, grid would load all movie cast records, as there is not a PersonID yet (it is null).
 

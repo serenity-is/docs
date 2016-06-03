@@ -98,6 +98,12 @@ public ActionResult Index()
 
 > You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
 
+Open *DashboardIndex.cshtml*, clear *href* attributes containing "Northwind" like:
+
+```html
+<a href="~/Northwind/Order?shippingState=1"></a>
+<a href=""></a>
+```
 
 ### Building Project and Running T4 (.tt) Templates
 
@@ -109,7 +115,7 @@ public ActionResult Index()
 
 * Rebuild your solution again.
 
-* Search for *Northwind* in all solution items. It should find no results.
+* Search for *Northwind*, *Basic Samples* and *Theme Samples* in all solution items. It should find no results.
 
 * Run your project, now Northwind and Sample menus are gone.
 

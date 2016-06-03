@@ -66,7 +66,7 @@ Folder of the template file is ignored, but templates must be under *Modules* or
 
 By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *MovieDB.PersonDialog.Template.html*, followed by *PersonDialog.Template.html*. 
 
-> MovieDB comes from PersonDialog namespace with the root namespace (MovieTutorial) removed. You can think of this as module name dot class name.
+> MovieDB comes from PersonDialog namespace with the root namespace (MovieTutorial) removed. You can also think of it as module name dot class name.
 
 If a template with class name is not found, search continues to base classes and eventually a fallback template, *EntityDialog.Template.html* is used.
 

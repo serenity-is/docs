@@ -40,7 +40,7 @@
        * [Extending Multi-Tenant Behavior To Northwind](tutorials/multi_tenancy/extending_multi-tenant_behavior_to_northwind.md)
        * [Handling Lookup Scripts](tutorials/multi_tenancy/handling_lookup_scripts.md)
 * [How To Guides](howto/how_to_guides.md)
-   * [How To: Remove Northwind From Serene](howto/removing_northwind.md)
+   * [How To: Remove Northwind & Basic Samples From Serene](howto/removing_northwind.md)
    * [How To: Remove AdminLTE Samples From Serene](howto/how_to_remove_adminlte_samples_from_serene.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)
    * [How To: Use a SlickGrid Formatter](howto/how_to_use_a_slickgrid_formatter.md)

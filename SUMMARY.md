@@ -46,7 +46,6 @@
    * [How To: Use a SlickGrid Formatter](howto/how_to_use_a_slickgrid_formatter.md)
    * [How To: Remove Add Button from a Grid](howto/how_to_remove_add_button_from_a_grid.md)
    * [How To: Add a Row Selection Column](howto/how_to_add_a_row_selection_column.md)
-   * [How To: Upgrade to Serenity 1.8+](howto/how_to_upgrade_to_serenity_18.md)
    * [How To: Setup Cascaded Editors](howto/how_to_setup_cascaded_editors.md)
    * [How To: Use Recaptcha](howto/how_to_use_recaptcha.md)
    * [How To: Work With Other Database Types](howto/how_to_work_with_other_database_types.md)

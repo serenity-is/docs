@@ -83,7 +83,6 @@ Movie tab is empty for now. We need to define a grid with suitable columns and p
 First, declare the columns we'll use with the grid, in file *PersonMovieColumns.cs* next to *PersonColumns.cs*:
 
 ```cs
-
 namespace MovieTutorial.MovieDB.Columns
 {
     using Serenity.ComponentModel;
@@ -109,7 +108,7 @@ Next define a *PersonMovieGrid* class, in file *PersonMovieGrid.ts* next to *Per
 namespace MovieTutorial.MovieDB
 {
     @Serenity.Decorators.registerClass()
-    export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
+    export class PersonMovieGrid extends Serenity.EntityGrid<MovieCastRow, any>
     {
         protected getColumnsKey() { return "MovieDB.PersonMovie"; }
         protected getIdProperty() { return MovieCastRow.IdProperty; }
@@ -122,6 +121,8 @@ namespace MovieTutorial.MovieDB
     }
 }
 ```
+
+> If you get errors about MovieCastService, like i did, build and transform templates.
 
 We'll actually use MovieCast service, to list movies a person acted in.
 

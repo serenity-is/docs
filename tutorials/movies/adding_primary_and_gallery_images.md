@@ -1,27 +1,24 @@
 # Adding Primary and Gallery Images
 
-> ...This section needs to be updated for TypeScript
-
 To add a primary image and multiple gallery images to both Movie and Person records, need to start with a migration:
 
 ```cs
 using FluentMigrator;
-using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20151115202100)]
-    public class DefaultDB_20151115_202100_PrimaryGalleryImages : Migration
+    [Migration(20160603205900)]
+    public class DefaultDB_20160603_205900_PersonMovieImages : Migration
     {
         public override void Up()
         {
             Alter.Table("Person").InSchema("mov")
                 .AddColumn("PrimaryImage").AsString(100).Nullable()
-                .AddColumn("GalleryImages").AsString(Int32.MaxValue).Nullable();
+                .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
 
             Alter.Table("Movie").InSchema("mov")
                 .AddColumn("PrimaryImage").AsString(100).Nullable()
-                .AddColumn("GalleryImages").AsString(Int32.MaxValue).Nullable();
+                .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
         }
 
         public override void Down()
@@ -107,13 +104,17 @@ Here we specify that these fields will be handled by *ImageUploadEditor* and *Mu
 
 FilenameFormat specifies the naming of uploaded files. For example, Person primary image will be uploaded to a folder under *App_Data/upload/Person/PrimaryImage/*.
 
+> You may change upload root (*App_Data/upload*) to anything you like by modifying  *UploadSettings* appSettings key in web.config.
+
 `~` at the end of FilenameFormat is a shortcut for the automatic naming scheme `{1:00000}/{0:00000000}_{2}`.
 
 Here, parameter {0} is replaced with identity of the record, e.g. PersonID.
 
-Parameter {1} is identity / 1000. This is useful to limit number of files that stored in one directory.
+Parameter {1} is identity / 1000. This is useful to limit number of files that is stored in one directory.
 
 Parameter {2} is a unique string like *6l55nk6v2tiyi*, which is used to generate a new file name on every upload. This helps to avoid problems caused by caching on client side.
+
+> It also provides some security so file names can't be known without having a link.
 
 Thus, a file we upload for person primary image will be located at a path like this:
 
@@ -171,13 +172,10 @@ namespace MovieTutorial.MovieDB.Forms
 I also modified Person dialog css a bit to have more space:
 
 ```css
-.s-PersonDialog {
-    > .size { .widthAndMin(700px); .heightAndMin(600px); }
-    .dialog-styles(@h: auto, @l: 150px, @e: 450px);
-    .s-PropertyGrid .categories { height: 460px; }
-    .ui-dialog-content { overflow: hidden; }
-    .tab-pane.s-TabMovies { padding: 5px; }
-    .s-PersonMovieGrid > .grid-container { height: 515px; }
+.s-MovieDB-PersonDialog {
+    > .size { width: 700px; height: 600px; }
+    .caption { width: 150px; }
+    .s-PersonMovieGrid > .grid-container { height: 500px; }
 }
 ```
 

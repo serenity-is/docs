@@ -1,5 +1,7 @@
 # How To: Add a Row Selection Column
 
+** This section is pending update for TypeScript **
+
 To add a column to select individual rows or all rows, GridRowSelectionMixin can be used.
 
 > GridRowSelectionMixin is available in Serenity 1.6.8+

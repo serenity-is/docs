@@ -184,3 +184,15 @@ This is what we get now:
 ![Person with Images](img/mdb_person_keanu.png)
 
 > ImageUploadEditor stores file name directly in a string field, while MultipleImageUpload editor stores file names in a string field with JSON array format.
+
+
+### Removing Northwind and Other Samples
+
+As i think our project has reached a good state, i'm now going to remove Northwind and other samples from MovieTutorial project.
+
+See following how-to topic:
+
+[How To: Removing Northwind and Other Samples](../howto/removing_northwind.md)
+
+
+

@@ -72,13 +72,13 @@ If a template with class name is not found, search continues to base classes and
 
 Now, we have a tab in PersonDialog:
 
-![Person With Tabs Initial](img/movies_person_tab_initial.png)
+![Person With Tabs Initial](img/mdb_person_tabs.png)
 
 > Meanwhile, i noticed Person link is still under MovieDB and we forgot to remove MovieCast link. I'm fixing them now...
 
 ### Creating PersonMovieGrid
 
-But movie tab is empty for now. We need to define a grid with suitable columns and place it in that tab.
+Movie tab is empty for now. We need to define a grid with suitable columns and place it in that tab.
 
 First, declare the columns we'll use with the grid, in file *PersonMovieColumns.cs* next to *PersonColumns.cs*:
 

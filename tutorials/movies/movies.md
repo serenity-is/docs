@@ -5,7 +5,7 @@ Let's create editing interface for some site similar to IMDB with Serenity.
 
 > You can find source code for this tutorial at: 
 
-> https://github.com/volkanceylan/Serenity-Tutorials/tree/master/MovieTutorial
+> https://github.com/volkanceylan/MovieTutorial
 
 
 

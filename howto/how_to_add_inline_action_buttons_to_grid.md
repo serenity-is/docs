@@ -1,5 +1,7 @@
 # How To: Add Inline Action Buttons To Grid
 
+** This section is pending update for TypeScript **
+
 You may add some inline action icons to grid columns, to delete current row, open a dialog, call a service etc.
 
 Let's add a new column with delete button to CustomersGrid. 

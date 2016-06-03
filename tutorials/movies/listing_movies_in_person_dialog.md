@@ -1,7 +1,5 @@
 # Listing Movies in Person Dialog
 
-> ...This section needs to be updated for TypeScript
-
 To show list of movies a person acted in, we'll add a tab to PersonDialog.
 
 By default all entity dialogs (ones we used so far, which derive from EntityDialog) uses *EntityDialog* template at *MovieTutorial.Web/Views/Templates/EntityDialog.Template.html*:
@@ -29,7 +27,7 @@ EntityDialog template is shared by all dialogs, so we are not gonna modify it to
 
 ### Defining a Tabbed Template for PersonDialog
 
-Create a new file, *Modules/MovieDB/Person/PersonDialog.Template.html* with contents:
+Create a new file, *MovieDB.PersonDialog.Template.html* under *Modules/MovieDB/Person/* folder with contents:
 
 
 ```html
@@ -66,7 +64,11 @@ Naming of the template file is important. It must end with *.Template.html* exte
 
 Folder of the template file is ignored, but templates must be under *Modules* or *Views/Template* directories.
 
-By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *PersonDialog.Template.html*. But, as it didn't exist before, search continued to base classes and a fallback template, *EntityDialog.Template.html* was used.
+By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *MovieDB.PersonDialog.Template.html*, followed by *PersonDialog.Template.html*. 
+
+> MovieDB comes from PersonDialog namespace with the root namespace (MovieTutorial) removed. You can think of this as module name dot class name.
+
+If a template with class name is not found, search continues to base classes and eventually a fallback template, *EntityDialog.Template.html* is used.
 
 Now, we have a tab in PersonDialog:
 

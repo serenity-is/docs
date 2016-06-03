@@ -283,7 +283,6 @@ Generate code for MovieCast table using *sergen*:
 After generating code, as we don't need a separate page to edit movie cast table, you may delete files listed below:
 
 ```
-MovieCastEndpoint.cs
 MovieCastIndex.cshtml
 MovieCastPage.cs
 MovieDialog.ts

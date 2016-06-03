@@ -1,25 +1,31 @@
 
-# How To: Remove Northwind From Serene
+# How To: Remove Northwind & Other Samples From Serene
 
-After you take Northwind as a sample, and develop your own project, you would want to remove Northwind module artifacts from your project. 
+After you take Northwind as a sample, and develop your own project, you would want to remove Northwind module, and other sample artifacts from your project. 
 
-Here is how to get rid of it.
+Here is how to get rid of them.
 
-We assume your solution name is *MyProject*, so you have *MyProject.Web* and *MyProject.Script* projects in your solution.
+We assume your solution name is *MyProject*, so you have *MyProject.Web* project in your solution.
 
 Perform steps below in Visual Studio:
 
 
 ### Removing Project Folders
 
+* Remove *MyProject.Web/Modules/AdminLTE* folder. This will remove all server side code related to theme samples.
+
+* Remove *MyProject.Web/Modules/BasicSamples* folder. This will remove all server side code related to basic samples.
+
 * Remove *MyProject.Web/Modules/Northwind* folder. This will remove all server side code related to Northwind.
-
-* Remove *MyProject.Script/Northwind* folder to remove all script code related to Northwind.
-
 
 ### Removing Navigation Items
 
-* Open *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*, remove all lines with *Northwind*.
+* Open *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*, remove all lines with *Northwind*, *Basic Samples* and *Theme Samples* and remove these two lines:
+
+```
+using Northwind = MovieTutorial.Northwind.Pages;
+using Basic = MovieTutorial.BasicSamples.Pages;
+```
 
 ### Removing Migration Scripts
 
@@ -33,32 +39,35 @@ private static string[] databaseKeys = new[] { "Default", "Northwind" };
 
 Also remove *Northwind* connection string from *web.config*.
 
+```xml
+<add name="Northwind" connectionString="Data Source=(LocalDb)\v11.0; 
+    Initial Catalog=MovieTutorial_Northwind_v1; 
+    Integrated Security=True" 
+    providerName="System.Data.SqlClient" />
+```
+
 ### Removing LESS Entries 
 
-* Open *MyProject.Web/Content/site/site.less* file, remove following line:
+* Open *MyProject.Web/Content/site/site.less* file, remove following lines:
     
 ```less
+@import "site.basicsamples.less";
 @import "site.northwind.less";
 ```
 
+* Remove *MyProject.Web/Content/site/site.basicsamples.less* file.
 * Remove *MyProject.Web/Content/site/site.northwind.less* file.
-
 
 ### Removing Localization Texts
 
-* Open *MyProject.Web/Modules.Texts.cs* and remove following lines:
+* Open *MyProject.Web/Modules/Texts.cs* and remove following lines:
 
 ```cs
             public static LocalText NorthwindPhone = "...";
             public static LocalText NorthwindPhoneMultiple = "...";
 ```
 
-* Open *MyProject.Web/Scripts/site/site.texts.es.json* and remove all lines with *Northwind*.
-
-* Open *MyProject.Web/Scripts/site/site.texts.tr.json* and remove all lines with *Northwind*.
-
-* Open *MyProject.Web/Scripts/site/site.texts.invariant.json* and remove all lines with *Northwind*.
-
+* Open all localization json files under *MyProject.Web/Scripts/site/*, e.g. *site.texts.es.json* and remove all lines with *Northwind*, *Theme Samples* and *Basic Samples*.
 
 ### Removing Northwind Script Side Generated Code
 

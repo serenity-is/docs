@@ -230,7 +230,7 @@ We also did three cosmetic changes, by overriding three methods, first to remove
 
 ### Setting PersonID of PersonMovieGrid in PersonDialog
 
-If nobody sets grid's PersonID property, it will always be null, and no records will be loaded. We should set it in Person dialog:
+If nobody sets grid's PersonID property, it will always be null, and no records will be loaded. We should set it in afterLoadEntity method of Person dialog:
 
 ```ts
 namespace MovieTutorial.MovieDB
@@ -241,7 +241,7 @@ namespace MovieTutorial.MovieDB
         // ...
         protected afterLoadEntity()
         {
-            base.afterLoadEntity();
+            super.afterLoadEntity();
 
             moviesGrid.personID = this.entityId;
         }

@@ -49,6 +49,9 @@ namespace MovieTutorial.MovieDB
 
 We added a *Genres* property to our list request object, which will hold the optional *Genres* we want movies to be filtered on.
 
+
+### Modifying Repository and Endpoint for New Request Type
+
 For our list handler and service to use our new list request type, need to do changes in a few places.
 
 Start with *MovieRepository.cs*:
@@ -81,5 +84,7 @@ public class MovieController : ServiceEndpoint
     }
 }
 ```
+
+Now its time to build and transform templates, so our MovieListRequest object and related service methods will be available at client side.
 
 

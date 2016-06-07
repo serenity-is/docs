@@ -50,7 +50,7 @@ namespace MovieTutorial.MovieDB
 We added a *Genres* property to our list request object, which will hold the optional *Genres* we want movies to be filtered on.
 
 
-### Modifying Repository and Endpoint for New Request Type
+### Modifying Repository/Endpoint for New Request Type
 
 For our list handler and service to use our new list request type, need to do changes in a few places.
 
@@ -86,5 +86,98 @@ public class MovieController : ServiceEndpoint
 ```
 
 Now its time to build and transform templates, so our MovieListRequest object and related service methods will be available at client side.
+
+
+### Moving Quick Filter to Genres Parameter
+
+We still have the same error as quick filter is not aware of the parameter we just added to list request type and still uses the Criteria parameter.
+
+Need to intercept quick filter item and move the genre list to *Genres* property of our *MovieListRequest*.
+
+Edit *MovieGrid.ts*:
+
+```ts
+export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
+
+    //...
+    protected getQuickFilters() {
+        let items = super.getQuickFilters();
+
+        var castListFilter = Q.first(items, x =>
+            x.field == MovieRow.Fields.GenreList);
+
+        castListFilter.handler = h => {
+            var request = (h.request as MovieListRequest);
+            var values = (h.widget as Serenity.LookupEditor).values;
+            request.Genres = values.map(x => parseInt(x, 10));
+            h.handled = true;
+        };
+
+        return items;
+    }
+}
+```
+
+getQuickFilters is a method that is called to get a list of quick filter objects for this grid type. 
+
+By default grid enumerates properties with [QuickFilter] attributes in MovieColumns.cs and creates suitable quick filter objects for them.
+
+We start by getting list of QuickFilter objects from super class.
+
+```ts
+let items = super.getQuickFilters();
+```
+
+Then locate the quick filter object for *GenreList* property:
+
+```ts
+var castListFilter = Q.first(items, x =>
+    x.field == MovieRow.Fields.GenreList);
+```
+
+Actually there is only one quick filter now, but we want to play safe.
+
+Next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to request's *Criteria* or *EqualityFilter* parameters, just before its submitted to list service.
+
+```ts
+castListFilter.handler = h => {
+```
+
+Then we get a reference to current *ListRequest* being prepared:
+
+```ts
+var request = (h.request as MovieListRequest);
+```
+
+And read the current value in lookup editor:
+
+```ts
+var values = (h.widget as Serenity.LookupEditor).values;
+```
+
+Set it in *request.Genres* property:
+
+```
+request.Genres = values.map(x => parseInt(x, 10));
+```
+
+As values is a list of string, we needed to convert them to integer.
+
+Last step is to set *handled* to true, to disable default behavior of quick filter object, so it won't set *Criteria* (if multiple) or *EqualityFilter* (if single value) itself:
+
+```ts
+h.handled = true;
+```
+
+Now we'll no longer have *Invalid Column Name GenreList* error but Genres filter is not applied server side.
+
+
+### Handling Genre Filtering Server Side
+
+
+
+
+
+
 
 

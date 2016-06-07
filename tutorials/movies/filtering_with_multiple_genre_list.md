@@ -35,7 +35,6 @@ We could process the request *Criteria* object (which is similar to an expressio
 Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieRepository.cs*:
 
 ```
-
 namespace MovieTutorial.MovieDB
 {
     using Serenity.Services;

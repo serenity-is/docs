@@ -137,7 +137,7 @@ var genreListFilter = Q.first(items, x =>
 
 Actually there is only one quick filter now, but we want to play safe.
 
-Next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to request's *Criteria* or *EqualityFilter* parameters, just before its submitted to list service.
+Next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to request's *Criteria* (if multiple)  or *EqualityFilter* (if single value) parameters, just before its submitted to list service.
 
 ```ts
 genreListFilter.handler = h => {
@@ -163,21 +163,142 @@ request.Genres = values.map(x => parseInt(x, 10));
 
 As values is a list of string, we needed to convert them to integer.
 
-Last step is to set *handled* to true, to disable default behavior of quick filter object, so it won't set *Criteria* (if multiple) or *EqualityFilter* (if single value) itself:
+Last step is to set *handled* to true, to disable default behavior of quick filter object, so it won't set *Criteria* or *EqualityFilter* itself:
 
 ```ts
 h.handled = true;
 ```
 
-Now we'll no longer have *Invalid Column Name GenreList* error but Genres filter is not applied server side.
+Now we'll no longer have *Invalid Column Name GenreList* error but Genres filter is not applied server side yet.
 
 
 ### Handling Genre Filtering In Repository
 
+Modify *MyListHandler* in *MovieRepository.cs* like below:
 
+```cs
+private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
+{
+    protected override void ApplyFilters(SqlQuery query)
+    {
+        base.ApplyFilters(query);
 
+        if (!Request.Genres.IsEmptyOrNull())
+        {
+            var mg = Entities.MovieGenresRow.Fields.As("mg");
 
+            query.Where(Criteria.Exists(
+                query.SubQuery()
+                    .From(mg)
+                    .Select("1")
+                    .Where(
+                        mg.MovieId == fld.MovieId &&
+                        mg.GenreId.In(Request.Genres))
+                    .ToString()));
+        }
+    }
+}
+```
 
+*ApplyFilters* is a method that is called to apply filters specified in list request's *Criteria* and *EqualityFilter* parameters. This is a good place to apply our custom filter.
 
+We first check if *Request.Genres* is null or an empty list. If so no filtering needs to be done.
 
+Next, we get a reference to *MovieGenresRow*'s fields with alias *mg*.
 
+```
+var mg = Entities.MovieGenresRow.Fields.As("mg");
+```
+
+Here it needs some explanation, as we didn't cover Serenity entity system yet.
+
+Let's start by not aliasing *MovieGenresRow.Fields*:
+
+```cs
+var x = MovieGenresRow.Fields;
+new SqlQuery()
+  .From(x)
+  .Select(x.MovieId)
+  .Select(x.GenreId);
+```
+
+If we wrote a query like above, its SQL output would be something like this:
+
+```sql
+SELECT t0.MovieId, t0.GenreId FROM MovieGenres t0
+```
+
+Unless told otherwise, Serenity always assigns *t0* to a row's primary table. Even if we named *MovieGenresRow.Fields* as variable *x*, it's alias will still be *t0*.
+
+> Because when compiled, *x* won't be there and Serenity has no way to know its variable name. Serenity entity system doesn't use an expression tree like in LINQ to SQL or Entity Framework. It makes use of very simple string / query builders.
+
+So, if wanted it to use *x* as an alias, we'd have to write it explicitly:
+
+```cs
+var x = MovieGenresRow.Fields.As("x");
+new SqlQuery()
+  .From(x)
+  .Select(x.MovieId)
+  .Select(x.GenreId);
+```
+
+...results at:
+
+```sql
+SELECT x.MovieId, x.GenreId FROM MovieGenres x
+```
+
+In *MyListHandler*, which is for *MovieRow* entities, *t0* is already used for *MovieRow* fields. So, to prevent clashes with *MovieGenresRow* fields (which is named *fld*), i had to assign *MovieGenresRow* an alias, *mg*.
+
+```
+var mg = Entities.MovieGenresRow.Fields.As("mg");
+```
+
+What i'm trying to achieve, is a query like this (just the way we'd do this in bare SQL):
+
+```
+SELECT t0.MovieId, t0.Title, ... FROM Movies t0
+WHERE EXISTS (
+   SELECT 1 
+   FROM MovieGenres mg 
+   WHERE 
+     mg.MovieId = t0.MovieId AND
+     mg.GenreId IN (1, 3, 5, 7)
+)
+```
+
+So i'm adding a WHERE filter to main query with Where method, using an EXISTS criteria:
+
+```cs
+query.Where(Criteria.Exists(
+```
+
+Then starting to write the subquery:
+
+```cs
+query.SubQuery()
+    .From(mg)
+    .Select("1")
+```
+
+And adding the where statement for subquery:
+
+```
+.Where(
+    mg.MovieId == fld.MovieId &&
+    mg.GenreId.In(Request.Genres))
+```
+
+> Here fld actually contains the alias t0 for MovieRow fields.
+
+As *Criteria.Exists* method expects a simple string, i had to use .ToString() at the end, to convert subquery to a string:
+
+> Yes, i should add one overload that accepts a subquery... noted.
+
+```cs
+.ToString()));
+```
+
+> It might look a bit alien at start, but by time you'll understand that Serenity query system matches SQL almost 99%. It can't be the exact SQL as we have to work in a different language, C#.
+
+Now our filtering for *GenreList* property works perfectly...

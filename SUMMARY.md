@@ -22,10 +22,10 @@
        * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
        * [Updating Serenity Packages](tutorials/movies/updating_serenity_packages.md)
        * [Allowing Multiple Genre Selection](tutorials/movies/allowing_multiple_genre_selection.md)
+       * Filtering with Multiple Genre List
        * [The Cast and Characters They Played](tutorials/movies/the_cast_and_characters_they_played.md)
        * [Listing Movies in Person Dialog](tutorials/movies/listing_movies_in_person_dialog.md)
        * [Adding Primary and Gallery Images](tutorials/movies/adding_primary_and_gallery_images.md)
-       * Filtering with Multiple Genre List
    * [Multi Tenancy](tutorials/multi_tenancy/multi_tenancy.md)
        * [Adding Tenants Table and TenantId Field](tutorials/multi_tenancy/adding_tenants_table_and_tenantid_field.md)
        * [Generating Code for Tenants Table](tutorials/multi_tenancy/generating_code_for_tenants_table.md)

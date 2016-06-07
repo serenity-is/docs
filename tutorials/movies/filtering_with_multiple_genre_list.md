@@ -34,7 +34,7 @@ We could process the request *Criteria* object (which is similar to an expressio
 
 Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieRepository.cs*:
 
-```
+```cs
 namespace MovieTutorial.MovieDB
 {
     using Serenity.Services;
@@ -43,6 +43,41 @@ namespace MovieTutorial.MovieDB
     public class MovieListRequest : ListRequest
     {
         public List<int> Genres { get; set; }
+    }
+}
+```
+
+We added a *Genres* property to our list request object, which will hold the optional *Genres* we want movies to be filtered on.
+
+For our list handler and service to use our new list request type, need to do changes in a few places.
+
+Start with *MovieRepository.cs*:
+
+```cs
+public class MovieRepository
+{
+    //...
+    public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request)
+    {
+        return new MyListHandler().Process(connection, request);
+    }
+
+    //...
+    private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest> { }
+}
+```
+
+We changed ListRequest to MovieListRequest in List method and added a generic parameter to MyListHandler, to use our new type instead of ListRequest.
+
+And another little change in *MovieEndpoint.cs*, which is the actual web service:
+
+```cs
+public class MovieController : ServiceEndpoint
+{
+    //...
+    public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request)
+    {
+        return new MyRepository().List(connection, request);
     }
 }
 ```

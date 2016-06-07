@@ -143,8 +143,12 @@ Settings are restored on first page load, just after grid creation.
 Serene 2.1.5 comes with a *UserPreferences* table that you may use as a persistance storage. To use this storage, you just need to set it as storage similar to other storage types.
 
 ```ts
+/// <reference path="../Common/UserPreference/UserPreferenceStorage.ts" />
+
 Serenity.DataGrid.defaultPersistanceStorage = new Common.UserPreferenceStorage();
 ```
+
+> Don't forget to add reference statement, or you'll have runtime errors, as TypeScript has problems with ordering otherwise.
 
 OR 
 

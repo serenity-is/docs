@@ -251,7 +251,7 @@ namespace MovieTutorial.MovieDB
 
 *afterLoadEntity* is called after an entity or a new entity is loaded into dialog.
 
-> Please not that entity is loaded in a later phase, so it won't be available in dialog constructor.
+> Please note that entity is loaded in a later phase, so it won't be available in dialog constructor.
 
 *this.EntityId* refers to the identity value of the currently loaded entity. In new record mode, it is null.
 

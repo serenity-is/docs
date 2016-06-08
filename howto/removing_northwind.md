@@ -67,8 +67,8 @@ Also remove *Northwind* connection string from *web.config*.
             public static LocalText NorthwindPhoneMultiple = "...";
 ```
 
-* Remove *MyProject.Web/Scripts/site/texts/northwind* 
-* Remove *MyProject.Web/Scripts/site/texts/samples*
+* Remove folder *MyProject.Web/Scripts/site/texts/northwind* 
+* Remove folder *MyProject.Web/Scripts/site/texts/samples*
 
 ### Removing Northwind / Samples Generated Code
 

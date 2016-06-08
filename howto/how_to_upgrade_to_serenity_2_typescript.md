@@ -11,7 +11,7 @@ If you don't need TypeScript, just update your Serenity packages and it should w
 
 ## Should I Switch To TypeScript?
 
-TypeScript support in Serenity is stable as of writing and it is strongly recommended. TypeScript is the future for Serenity applications, as it has a stronger backing at the moment (Microsoft and average number of users). 
+TypeScript support in Serenity is stable as of writing and is strongly recommended. TypeScript is the future for Serenity applications, as it has a stronger backing at the moment (Microsoft and average number of users). 
 
 Also TypeScript feels like native Javascript with proper intellisense, refactoring and compile time type checking. 
 
@@ -93,6 +93,20 @@ In the end of same file, you'll see lines like below:
 
 Make sure the line with TypeScript.targets with is under all other targets. Move it under WebAplpication.targets if not. VS puts them before Microsoft.WebApplication.targets and somehow it doesn't work that way. 
 
+Also, at the bottom of file, you'll find *CompileSiteLess* step, add TSC to end of it:
+
+```xml
+  <Target Name="CompileSiteLess" AfterTargets="AfterBuild">
+    <Exec Command="&quot;$(ProjectDir)tools\node\lessc.cmd&quot; 
+        &quot;$(ProjectDir)Content\site\site.less&quot; &gt; 
+        &quot;$(ProjectDir)Content\site\site.css&quot;">
+    </Exec>
+    <Exec Command="&quot;$(TscToolPath)\$(TypeScriptToolsVersion)\
+        $(TscToolExe)&quot; -project &quot;
+        $(ProjectDir)tsconfig.json&quot;" ContinueOnError="true" />
+  </Target>
+```
+
 Save changes, reload the project and follow to next step.
 
 ### Adding tsconfig.json File
@@ -149,7 +163,7 @@ var MyProject;
 
 Right click and include that file to your project. Now you can delete dummy.ts.
 
-> If you are using a version before VS2015 and compile on save is not working, you might try removing TypeScriptCompileBlocked property from Web.csproj file and use compile on build.
+> If you are using a version before VS2015 and compile on save is not working, your TS files will be compiled at project build.
 
 ### Including MyProject.Web.js file in _LayoutHead.cshtml
 

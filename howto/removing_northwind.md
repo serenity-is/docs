@@ -67,7 +67,8 @@ Also remove *Northwind* connection string from *web.config*.
             public static LocalText NorthwindPhoneMultiple = "...";
 ```
 
-* Open all localization json files under *MyProject.Web/Scripts/site/*, e.g. *site.texts.es.json* and remove all lines with *Northwind*, *Theme Samples* and *Basic Samples*.
+* Remove *MyProject.Web/Scripts/site/texts/northwind* 
+* Remove *MyProject.Web/Scripts/site/texts/samples*
 
 ### Removing Northwind / Samples Generated Code
 

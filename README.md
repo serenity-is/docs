@@ -55,7 +55,7 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 * 代码生成器为SQL表生成初始服务/用户界面代码Code generator to produce initial services / user interface code for an SQL table
 * 服务器上的基于T4代码生成智能感知/编译时验证的引用脚本部件T4 based code generation on server to reference script widgets with intellisense / compile time validation
 * 基于T4代码生成从脚本端调用AJAX服务的同时提供编译时类型安全和智能感知 based code generation to provide compile time type safety and intellisense while calling AJAX services from script side.
-* 基于属性的表单定义系统（在服务器端用一个简单的C#类编写用户界面）An attribute based form definition system (prepare UI in server side with a simple C# class)
+* 基于属性（Attribute）的表单定义系统（在服务器端用一个简单的C#类编写用户界面）An attribute based form definition system (prepare UI in server side with a simple C# class)
 * 通过表单定义实现全自动无缝数据绑定（表单 <-> 实体 <-> 服务）Automatic seamless data-binding through form definitions (form <-> entity <-> service).
 * 缓存助手（本地/分布式）Caching Helpers (Local / Distributed)
 * 自动缓存验证Automatic cache validation
@@ -66,7 +66,7 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 * 流式SQL生成器（SELECT/INSERT/UPDATE/DELETE）Fluent SQL Builder (SELECT/INSERT/UPDATE/DELETE)
 * 微型ORM（集成Dapper） Micro ORM (also Dapper is integrated)
 * 可定制的类REST服务，用于实体类的重用信息并做自动验证Customizable handlers for REST like services that work by reusing information in entity classes and do automatic validation.
-* 基于属性的导航菜单Attribute based navigation menu
+* 基于属性（Attribute）的导航菜单Attribute based navigation menu
 * 用户界面本地化（本地化文本可存储在json文件，嵌入的资源文件，数据库，内存等）UI Localization (store localized texts in json files, embedded resource, database, in memory class, anywhere)
 * 数据本地化（使用扩展表机制帮助本地化，甚至支持用户输入，如查找表）Data Localization (using an extension table mechanism helps to localize even data entered by users,  like lookup tables)
 * 脚本插件系统（灵感来自jQueryUI，但更适合C#代码）Script widget system (inspired by jQueryUI but more suitable for C# code)
@@ -76,7 +76,7 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 * 动态脚本Dynamic scripts
 * 脚本端模板Script side templates
 
-## Background
+## 背景Background
 
 > This part was originally written for a CodeProject article as an introduction to Serenity. The article was rejected with the reason that it didn't contain code but was an ad for code. They were right, as i did put a link to Movie tutorial in this guide, instead of copy pasting code. 
 

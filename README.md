@@ -1,7 +1,8 @@
-# Introduction
+# 前言
 
-## What is Serenity Platform
+## 什么是Serenity平台
 
+Serenity 是建立在开源技术上的ASP.NET MVC/Javascript应用程序平台。
 Serenity is an ASP.NET MVC / Javascript application platform which has been built on open source technologies.
 
 It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying the best software design practices.

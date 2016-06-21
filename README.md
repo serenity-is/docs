@@ -5,16 +5,19 @@
 Serenity 是建立在开源技术上的ASP.NET MVC/Javascript应用程序平台。
 Serenity is an ASP.NET MVC / Javascript application platform which has been built on open source technologies.
 
+它旨在使开发变得更简单，同时避免重复代码，减少花在重复任务的时间并提供最佳的软件设计实践，从而降低了维护成本。
 It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying the best software design practices.
 
 
-## Who/What This Platform Is For
+##谁适合使用该平台Who/What This Platform Is For
 
+Serenity 最适合应用于有大量数据输入的表单业务应用程序或者面向公众的网站后台管理，它的功能同样也适用于其他类型的Web应用程序。
 Serenity is best suited to business applications with many data entry forms or administrative interface of public facing web sites. It's features can be useful for other kinds of web applications as well.
 
 
-## Where To Look For Information
+## 在哪里可寻找到相关信息Where To Look For Information
 
+在阅读本指南和其教程以后, 跟随以下资源可获取有关Serenity的详细信息。
 After reading this guide and its tutorials, follow resources below for more information about Serenity.
 
 <dl>
@@ -38,16 +41,18 @@ After reading this guide and its tutorials, follow resources below for more info
 </dl>
 
 
-## What's In The Name
+## 名字有什么含义What's In The Name
 
+Serenity 在字典中解释为 *平和*，*舒适*，*沉着*
 Serenity has dictionary meanings of *peace*, *comfort* and *calmness*.
 
+这正是我们使用Serenity努力实现的目标，我们希望你在安装并使用Serenity之后，你会觉得这太……
 This is what we are trying to achieve with Serenity. We hope that after installing and using it you will feel this way too...
 
-## What Features It Provides
+## 它提供了哪些功能What Features It Provides
 
-* A modular, service based web application model
-* Code generator to produce initial services / user interface code for an SQL table
+* 模块化、 基于服务的 web 应用程序模型 A modular, service based web application model
+* 代码生成器为SQL表生成初始服务/用户界面代码Code generator to produce initial services / user interface code for an SQL table
 * T4 based code generation on server to reference script widgets with intellisense / compile time validation
 * T4 based code generation to provide compile time type safety and intellisense while calling AJAX services from script side.
 * An attribute based form definition system (prepare UI in server side with a simple C# class)

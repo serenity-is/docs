@@ -1,4 +1,4 @@
-# 从Visual Studio 库中安装SERENE
+# 从Visual Studio 库中安装SERENE Installing Serene From Visual Studio Gallery
 
 在浏览器打开链接http://visualstudiogallery.msdn.microsoft.com/ 
 
@@ -24,12 +24,12 @@
 > 请注意，这个应用程序模板需要Visual Studio 2012或更高的版本。请确保你已经安装了最新的Visual Studio更新。
 
 
-启动Visual Studio（如果已经打开，请重新启动）。单击 文件 => 新建项目 。你应该能在 已安装模板 => Visual C# 中看到Serenity模板。
+启动Visual Studio（如果已经打开，请重新启动）。单击 文件 => 新建项目 。你应该能在 模板 => Visual C# 中看到Serenity模板。
 
 ![VSIX New Project](img/vsix_new_project.jpg)
 
 
-在名称中输入新建应用程序名称，如*MyCompany*, *MyProduct*, *HelloWorld*或使用默认名称*Serene1*。
+命名您的应用程序，像*MyCompany*, *MyProduct*, *HelloWorld*或保留默认值*Serene1*。
 
 > 请不要将其命名为*Serenity*，它可能会与其他Serenity程序集冲突。
 

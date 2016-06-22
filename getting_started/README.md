@@ -4,7 +4,7 @@
 
 你有两种方式安装 *SERENE* 模板到你的Visual Studio中：
 
-* [从Visual Studio 的产品和扩展中安装SERENE ](installing_serene_from_visual_studio_gallery.md)
+* [从Visual Studio 库中安装SERENE ](installing_serene_from_visual_studio_gallery.md)
 
 * [直接安装SEREN到Visual Studio](installing_serene_directly_from_visual_studio.md)
 

@@ -91,7 +91,7 @@ This part was originally written for a CodeProject article as an introduction to
 
 下面是关于*Serenity*的简短历史：Serenity旨在处理你业务应用程序中的常见任务，并让你腾出宝贵的时间专注于特定应用程序域的功能。Here is a short history about *Serenity*, which aims to handle common tasks you deal with business applications, and let you spare your precious time focusing on features specific to your application domain.
 
-我的第一份正式的关于Web技术的工作是在设计国家特定Web站点的一些大牌行业，如automative公司（顺便感慨一下，我们在谈论的是十多年以前的往事了，时光流逝的真快）。My first real job in web technologies was in a web agency designing country-specific web sites of some of big names in industry, e.g. automative companies (btw, we are talking about 10+ years past, time flows fast).
+我的第一份正式的关于Web技术的工作是在设计国家特定Web站点的一些大牌行业，如汽车公司（顺便感慨一下，我们在谈论的是十多年以前的往事了，时光流逝的真快）。My first real job in web technologies was in a web agency designing country-specific web sites of some of big names in industry, e.g. automative companies (btw, we are talking about 10+ years past, time flows fast).
 
 As I had a software architect career in desktop applications before I signed there, I was asked to design a ASP.NET WebForms platform for them. They explained that they have many shared modules, like news, galleries, navigation at each site, but as requirements are different, they had to copy/paste then customize code specific to every customer. When they wanted to add a common feature, they had to repeat it for every site.
 

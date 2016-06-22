@@ -11,7 +11,7 @@ It aims to make development easier while reducing maintenance costs by avoiding 
 
 ##谁适合使用该平台Who/What This Platform Is For
 
-Serenity 最适合应用于有大量数据输入的表单业务应用程序或者面向公众的网站后台管理，它的功能同样也适用于其他类型的Web应用程序。
+Serenity 最适合应用于有大量数据输入的表单业务应用程序或者面向公众的后台管理网站，它的功能同样也适用于其他类型的Web应用程序。
 Serenity is best suited to business applications with many data entry forms or administrative interface of public facing web sites. It's features can be useful for other kinds of web applications as well.
 
 

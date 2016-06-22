@@ -1,4 +1,4 @@
-# 直接安装SEREN到Visual Studio Installing Serene Directly From Visual Studio
+# 直接安装SEREN到Visual Studio 
 
 启动Visual Studio并点击 *新建 => 项目*。
 

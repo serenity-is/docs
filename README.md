@@ -52,9 +52,9 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 ## 它提供了哪些功能What Features It Provides
 
 * 模块化、 基于服务的 web 应用程序模型 A modular, service based web application model
-* 代码生成器为SQL表生成初始服务/用户界面代码Code generator to produce initial services / user interface code for an SQL table
-* 服务器上的基于T4代码生成智能感知/编译时验证的引用脚本部件T4 based code generation on server to reference script widgets with intellisense / compile time validation
-* 基于T4代码生成从脚本端调用AJAX服务的同时提供编译时类型安全和智能感知 based code generation to provide compile time type safety and intellisense while calling AJAX services from script side.
+* 为SQL表生成初始服务/用户界面的代码生成器Code generator to produce initial services / user interface code for an SQL table
+* 服务器上的基于T4模板生成智能感知/编译时验证的引用脚本部件T4 based code generation on server to reference script widgets with intellisense / compile time validation
+* 基于T4模板生成从脚本端调用AJAX服务的同时提供编译时类型安全和智能感知 based code generation to provide compile time type safety and intellisense while calling AJAX services from script side.
 * 基于属性（Attribute）的表单定义系统（在服务器端用一个简单的C#类编写用户界面）An attribute based form definition system (prepare UI in server side with a simple C# class)
 * 通过表单定义实现全自动无缝数据绑定（表单 <-> 实体 <-> 服务）Automatic seamless data-binding through form definitions (form <-> entity <-> service).
 * 缓存助手（本地/分布式）Caching Helpers (Local / Distributed)
@@ -78,9 +78,10 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 
 ## 背景Background
 
-> This part was originally written for a CodeProject article as an introduction to Serenity. The article was rejected with the reason that it didn't contain code but was an ad for code. They were right, as i did put a link to Movie tutorial in this guide, instead of copy pasting code. 
+> 这部分原本是写在CodeProject上的一编介绍Serenity的文章，由于这篇文章是一篇宣传代码的广告却没有包含代码而被拒绝。他们没有错，因为我在本指南中做了一个视频教程链接，而不是复制粘贴代码。
+This part was originally written for a CodeProject article as an introduction to Serenity. The article was rejected with the reason that it didn't contain code but was an ad for code. They were right, as i did put a link to Movie tutorial in this guide, instead of copy pasting code. 
 
-> You can safely skip to next chapter, if you don't like reading history :)
+> 如果你不喜欢了解历史，您可以毫无影响地跳到下一章 :) You can safely skip to next chapter, if you don't like reading history :)
 
 We, developers, are all solving the same sets of problems everyday. Just like college students working on their problem books.
 

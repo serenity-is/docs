@@ -1,17 +1,17 @@
-# Getting Started
+# 准备开始
 
-The best and fastest way to get your hands dirty on Serenity is *SERENE*, which is a sample application template.
+让你快速上手的最好、最快的方法是使用示例应用程序模板 *SERENE*。
 
-You have two options to install *SERENE* template into your Visual Studio:
+你有两种方式安装 *SERENE* 模板到你的Visual Studio中：
 
-* [Installing SERENE from Visual Studio Gallery](installing_serene_from_visual_studio_gallery.md)
+* [从Visual Studio 的产品和扩展中安装SERENE ](installing_serene_from_visual_studio_gallery.md)
 
-* [Installing SERENE directly from Visual Studio](installing_serene_directly_from_visual_studio.md)
+* [直接安装SEREN到Visual Studio](installing_serene_directly_from_visual_studio.md)
 
-> You don't have to use this template to work with Serenity. 
+> 你不需要使用该模板也可以使用Serenity进行工作。
 
-> You can add Serenity libraries to any .NET project with NuGet. 
+> 你可以在NuGet中把Serenity库添加到任何.NET项目中。
 
-> It is also possible to add Serenity as a GIT submodule to your project and keep it always up to date with source codes. 
+> 你也可以把Serenity作为GIT子模块添加到你的项目中，并保持其总是最新的源代码。
 
-> We'll cover these and more in other chapters.
+> 我们将在其他章节进行更详细的介绍

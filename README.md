@@ -83,13 +83,13 @@ This part was originally written for a CodeProject article as an introduction to
 
 > 如果你不喜欢了解历史，您可以毫无影响地跳到下一章 :) You can safely skip to next chapter, if you don't like reading history :)
 
-We, developers, are all solving the same sets of problems everyday. Just like college students working on their problem books.
+我们开发人员每天都在解决一系列相同的问题，就像大学生做习题书一样工作。We, developers, are all solving the same sets of problems everyday. Just like college students working on their problem books.
 
-Even though we know that they are already solved and have answers somewhere, it doesn't stop us from working on them. Actually, it helps us improve our skills, and hey you can't learn without making some mistakes, can you? But we should learn where to draw a line between training and wasting time.
+即使我们知道他们已经有合适的解决方案，但依避免不了面对相同的工作。实际上，它可以帮助提高我们的技术，你总不能在不犯错误中学习吧？但我们应该学会如何界定培训和浪费时间。Even though we know that they are already solved and have answers somewhere, it doesn't stop us from working on them. Actually, it helps us improve our skills, and hey you can't learn without making some mistakes, can you? But we should learn where to draw a line between training and wasting time.
 
-When you start a new project, you have several decisions to make on platform, architecture and set of libraries. Today you have so many choices for every single topic. Yes, having some options is good, as long as they are limited, as our time is not infinite. 
+当你开始一个新的项目时，你需要作出几个决定：使用哪个平台，如何组织架构及使用哪些类库。今天，你可以在每一次的话题中有如此多的选择，是的，具有一些选项是好事，只要这些选项是在有限的范围内，因为我们的时间不是无限的。When you start a new project, you have several decisions to make on platform, architecture and set of libraries. Today you have so many choices for every single topic. Yes, having some options is good, as long as they are limited, as our time is not infinite. 
 
-Here is a short history about *Serenity*, which aims to handle common tasks you deal with business applications, and let you spare your precious time focusing on features specific to your application domain.
+下面是关于*Serenity*的简短历史：Serenity旨在处理你业务应用程序中的常见任务，并让你腾出宝贵的时间专注于特定应用程序域的功能。Here is a short history about *Serenity*, which aims to handle common tasks you deal with business applications, and let you spare your precious time focusing on features specific to your application domain.
 
 My first real job in web technologies was in a web agency designing country-specific web sites of some of big names in industry, e.g. automative companies (btw, we are talking about 10+ years past, time flows fast).
 

@@ -97,7 +97,7 @@ This part was originally written for a CodeProject article as an introduction to
 
 当时，在市场中没有那么多的CMS系统，我为他们设计了一个系统，甚至都不知道它被称为CMS。对我来说，它并不完美，甚至还有瑕疵，因为我只用了几周的时间去设计它，但是他们却非常满意这个结果，因为它使开发一个新网站的时间由数月提高到数日/周，同时生成的代码也比以前任何时候都更易于管理。At that time, there weren't so many CMS systems in market, and I designed one for them, without even knowing it was called a CMS. For me, it wasn't perfect, not even good enough as I just had a few weeks to design it. But they were very pleased with the result, as it took development of new sites down to days/weeks from months. Also resulting code was more manageable than before.
 
-Learning from that experience, and mistakes, that poor-mans CMS became something better. Later, that platform is evolved to be used by applications in varying domains, like a help-desk system, a CRM, ERP, personnel management, electronic document management, university student information system and more.
+从错误和经验中学习，那个简陋的CMS逐渐完善成为更好的系统平台，后来，该平台不断地演变并被应用在不同领域，例如帮助台系统、CRM、ERP、人事管理系统、电子文档管理系统，大学学生信息系统等。Learning from that experience, and mistakes, that poor-mans CMS became something better. Later, that platform is evolved to be used by applications in varying domains, like a help-desk system, a CRM, ERP, personnel management, electronic document management, university student information system and more.
 
 To be compatible with different kinds of applications, systems and even legacy databases, it had to be flexible and went through many architectural changes.
 

@@ -99,7 +99,7 @@ This part was originally written for a CodeProject article as an introduction to
 
 从错误和经验中学习，那个简陋的CMS逐渐完善成为更好的系统平台，后来，该平台不断地演变并被应用在不同领域，例如帮助台系统、CRM、ERP、人事管理系统、电子文档管理系统，大学学生信息系统等。Learning from that experience, and mistakes, that poor-mans CMS became something better. Later, that platform is evolved to be used by applications in varying domains, like a help-desk system, a CRM, ERP, personnel management, electronic document management, university student information system and more.
 
-To be compatible with different kinds of applications, systems and even legacy databases, it had to be flexible and went through many architectural changes.
+为了与不同类型的应用程序、系统及老旧的数据库兼容，它必须具有足够的灵活性，并经历了多次的架构调整。To be compatible with different kinds of applications, systems and even legacy databases, it had to be flexible and went through many architectural changes.
 
-Now it takes us to Serenity. Even though it is an open source project for about 2 years, it has a much older background. But it is also young, energetic, and is not afraid of change. It can adapt to new technologies as they became popular and stable. This might mean breaking changes from time to time, but we strive to keep them to a minimum without being paranoid about backwards compability.
+现在我们看到的Serenity，即使它是一个开源了2年左右的项目，它有一个更久远的历史，但它依然年轻，精力充沛，并且不害怕改变。它与时俱进并保持稳定，这可能意味着随着时间的变化会有不继的重大更改，但我们努力将它保持在最低限度且不偏执地向后保持兼容。Now it takes us to Serenity. Even though it is an open source project for about 2 years, it has a much older background. But it is also young, energetic, and is not afraid of change. It can adapt to new technologies as they became popular and stable. This might mean breaking changes from time to time, but we strive to keep them to a minimum without being paranoid about backwards compability.
 

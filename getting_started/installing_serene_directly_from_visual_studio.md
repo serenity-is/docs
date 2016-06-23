@@ -1,28 +1,28 @@
-# Installing Serene Directly From Visual Studio
+# 直接安装SEREN到Visual Studio 
 
-Start Visual Studio and Click *New => Project*.
+启动Visual Studio并点击 *新建 => 项目*。
 
-> Note that this application template requires Visual Studio 2012 or higher. Make sure you have the latest Visual Studio updates installed.
+> 请注意，这个应用程序模板需要Visual Studio 2012或更高的版本。请确保你已经安装了最新的Visual Studio更新。
 
-In the New Project dialog box *Recent*, *Installed* and *Online* sections will be shown on left and *Installed* is the active one.
+在新建项目对话框左侧显示着 *最近的模板* *已安装的模板* 和 *联机模板* ，其中 *已安装的模板* 是我们最常用的部分。
 
-Click the *Online* section and wait a bit while *Retrieving information* message is on screen.
+点击 *联机模板* 
 
-> Please wait while it is loading results.
+> 在加载结果时请耐心等候。
 
 ![New Project Online](img/new_project_dialog_online.jpg)
 
-Type *SERENE* into input box with *Search Online Templates* label and press ENTER.
+在搜索框中输入 *SERENE* 并按 ENTER 键确认。
 
-You will see *Serene (Serenity Application Template)*:
+你将看到模板*Serene (Serenity Application Template)*：
 
 ![Serene Search Result](img/new_project_dialog_serene.jpg)
 
 
-Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or leave the default *Serene1*.
+在名称中输入新建应用程序名称，如*MyCompany*, *MyProduct*, *HelloWorld*或使用默认名称*Serene1*。
 
-> Please don't name it *Serenity*. It may conflict with other Serenity assemblies.
+> 请不要将其命名为*Serenity*，它可能会与其他Serenity程序集冲突。
 
-Click OK and take a break while Visual Studio downloads the template and creates the solution.
+点击OK并稍等片刻，Visual Studio将创建模板解决方案。
 
-> After you create your first project, Serene template is installed into Visual Studio, so you can use the *Installed* section in *New Project* dialog to create another Serenity application.
+> 使用该方式创建第一个项目后，Serene的模板已安装到Visual Studio, 所以你可以使用  *新建项目*对话框中的 *已安装的模板* 中选择Serenity模板创建另一个新的Serenity应用程序。

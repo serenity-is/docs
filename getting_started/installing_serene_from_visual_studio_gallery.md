@@ -1,4 +1,4 @@
-# 从Visual Studio 库中安装SERENE Installing Serene From Visual Studio Gallery
+# 从Visual Studio 库中安装SERENE
 
 在浏览器打开链接http://visualstudiogallery.msdn.microsoft.com/ 
 

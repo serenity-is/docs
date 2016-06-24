@@ -65,10 +65,10 @@ Serene 有自定义资源文本译文的能力。
 }
 ```
 
-在`~/scripts/site/texts`文件夹中，也有类似的 Serene 页面文本的默认翻译的JSON文件： 
+在`~/scripts/site/texts`文件夹中，也有类似的 Serene 页面文本默认翻译的JSON文件： 
 
 - site.texts.es.json
 - site.texts.invariant.json
 - site.texts.tr.json
 
-> 建议你在发布网站之前把 user.texts.xx.json 的内容拷贝到 site.texts.xx.json 文件中。如果 App_Data 已被项目排除,你可以继续使用这样的方式并对他们进行版本化控制。 
+> 建议你在发布网站之前把 user.texts.xx.json 的内容拷贝到 site.texts.xx.json 文件中。如果 App_Data 已被项目排除,你也可以使用这种方式对其进行版本控制。 

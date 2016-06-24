@@ -51,4 +51,4 @@ site.yellow.less
 
 这里 *site.less* 与对应编译后的 css 文件存放在同一目录中。
 
-> 关于 LESS 编译器及其语法的更多信息，请查看 http://lesscss.org/。
+> 关于 LESS 编译方式及其语法的更多信息，请查看 http://lesscss.org/。

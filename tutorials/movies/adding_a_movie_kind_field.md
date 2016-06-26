@@ -1,12 +1,12 @@
-# Adding a Movie Kind Field
+# 添加一个影片类型字段 
 
-If we wanted to also keep TV series and mini series in our movie table, we would need another field to store it: *MovieKind*.
+如果我们还想要在影片表中保存电视剧和微电影，我们就需要另一个字段（MovieKind）来存储它。
 
-As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
+我们在创建影片（Movie）表时并没有添加 MovieKind 字段，现在我们用另一个迁移类把它添加到数据库中。
 
-> Don't modify existing migrations, they won't run again.
+> 不要修改现有的迁移类，现有的迁移类不会再次运行。
 
-Create another migration file under *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
+在 *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs* 下面创建另一个迁移文件：Create another migration file under *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
 
 ```cs
 using FluentMigrator;
@@ -31,9 +31,9 @@ namespace MovieTutorial.Migrations.DefaultDB
 ```
 
 
-### Declaring a MovieKind Enumeration
+### 定义一个影片类型枚举
 
-Now as we added *Kind* column to *Movie* table, we need a set of movie kind values. Let's define it as an enumeration at *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*:
+现在我们把 *Kind* 字段添加到影片（Movie）表中，我们需要一些影片类型作为值。让我们将它定义在枚举中 *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*︰
 
 ```cs
 using Serenity.ComponentModel;
@@ -55,9 +55,9 @@ namespace MovieTutorial.MovieDB
 ```
 
 
-### Adding Kind Field to MovieRow Entity
+### 在 MovieRow 实体中添加 类型（Kind）字段
 
-As we are not using Sergen anymore, we need to add a mapping in our MovieRow.cs for *Kind* column manually. Add following property declaration in MovieRow.cs after *Runtime* property:
+因为我们没有使用 Sergen ，我们需要在 MovieRow.cs 手工添加一个映射类型（*Kind*）属性。在 MovieRow.cs 的 *Runtime* 属性下面添加：
 
 ```cs
 [DisplayName("Runtime (mins)")]
@@ -75,7 +75,7 @@ public MovieKind? Kind
 }
 ```
 
-We also need to declare a Int32Field object which is required for Serenity entity system. On the bottom of MovieRow.cs locate *RowFields* class and modify it to add *Kind* field after the *Runtime* field:
+我们也需要声明一个 Int32Field 的对象，该对象用于 Serenity 实体系统。在 MovieRow.cs 的底部找到 RowFields 类并在 *Runtime* 字段后添加 *Kind* 字段：
 
 ```cs
 public class RowFields : RowFieldsBase
@@ -93,11 +93,11 @@ public class RowFields : RowFieldsBase
 ```
 
 
-### Adding Kind Selection To Our Movie Form
+### 为影片窗体添加影片类型
 
-If we build and run our project now, we'll see that there is no change in the Movie form, even if we added *Kind* field mapping to the *MovieRow*. This is because, fields shown/edited in the form are controlled by declerations in *MovieForm.cs*. 
+如果我们现在生成并运行项目，尽管我们已经在 *MovieRow* 添加了 *Kind* 字段的映射，我们在影片窗体中还是看不到任何的变化。这是由于表单中字段的显示/编辑在 MovieForm.cs 中控制。 
 
-Modify *MovieForm.cs* as below:
+对 *MovieForm.cs* 做如下修改： 
 
 ```cs
 
@@ -115,30 +115,30 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Now, build your solution and run it. When you try to edit a movie or add a new one, nothing will happen. This is an expected situation. If you check developer tools console of your browser (F12, inspect element etc.) you'll see such an error:
+现在，生成并运行你的应用程序。当你尝试编辑或添加影片时，什么也不会发生。这是一个预料之中的情况。如果你打开浏览器的开发者工具（F12），在控制台中将出现一个错误：
 
 ```txt
 Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
 ```
 
-> Whenever such a thing happens, please first check browser console for errors, before reporting it.
+> 每当发生这样的事，请先检查浏览器控制台报告的错误信息。
 
-This error is caused by MoveKind enumeration not available client side. We should run our T4 templates before executing our program.
+这个错误是由于 MoveKind 枚举在客户端是无效的。我们应该在运行程序之前运行我们的 T4 模板。
 
-Now in Visual Studio, click *Build -> Transform All Templates* again.
+现在在 Visual Studio 中再次点击 生成 -> 转换所有模板。
 
-Rebuild your solution and execute it. Now we have a nice dropdown in our form to select movie kind.
+重新生成解决方案并运行它。现在我们可以在窗体中使用下拉列表选择影片类型了。
 
 ![Movie Kind Selection](img/mdb_movie_kindform.png)
 
 
-### Declaring a Default Value for Movie Kind
+### 为影片类型定义一个默认值
 
-As *Kind* is a required field, we need to fill it in *Add Movie* dialog, otherwise we'll get a validation error.
+*Kind* 是一个必填字段，我们必须在 *新增 Movie* 对话框中填写该字段，否则将得到一个验证错误。
 
-But most movies we'll store are feature films, so its default should be this value.
+但是我们大部分影片都是故事片，所以应该默认为值。
 
-To add a default value for *Kind* property, add a *DefaultValue* attribute like this:
+为 *Kind* 属性添加默认值，需要像这样添加 *DefaultValue* 特性：
 
 ```cs
 [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
@@ -149,4 +149,4 @@ public MovieKind? Kind
 }
 ```
 
-Now, in *Add Movie* dialog, *Kind* field will come prefilled as *Film*.
+现在，在*新增 Movie* 对话框中，*Kind* 字段将预设为 *Film*。

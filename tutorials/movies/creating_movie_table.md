@@ -1,27 +1,27 @@
-# Creating *Movie* Table
+# 创建电影（*Movie*）表
 
-To store list of movies we need a Movie table. We could create this table using old-school techniques like SQL Management Studio but we prefer creating it as a *migration* using *Fluent Migrator*:
+要存储影片我们需要一张电影（Movie）表。我们可以使用传统的方式创建该表，如使用 SQL Management Studio，但是我们更喜欢使用 *Fluent Migrator* 创建*迁移类（migration）*的方式创建它。 
 
-> Fluent Migrator is a migration framework for .NET much like Ruby on Rails Migrations. Migrations are a structured way to alter your database schema and are an alternative to creating lots of sql scripts that have to be run manually by every developer involved. Migrations solve the problem of evolving a database schema for multiple databases (for example, the developer’s local database, the test database and the production database). Database schema changes are described in classes written in C# that can be checked into a version control system.
+> Fluent Migrator 是一个 .NET 迁移框架，它与 Ruby 的 Rails 迁移框架类似。迁移（Migrations）用结构化的方式改变你的数据库架构（database schema），替代创建大量必须通过开发人员手工运行的 sql 脚本。迁移解决由一个数据库架构演变为多个数据库的问题(例如，开发人员的本地数据库、测试数据库和生产数据库)。数据库架构的更改用 C# 描述在一个类中，可以签入到版本控制系统中。
 
-> See https://github.com/schambers/fluentmigrator for more information on FluentMigrator.
+> 关于 FluentMigrator 更多信息，见 https://github.com/schambers/fluentmigrator。
 
-Using *Solution Explorer* navigate to *Modules / Common / Migrations / DefaultDB*.
+在 *解决方案资源管理器* 中导航到 *Modules / Common / Migrations / DefaultDB*。
 
 ![Initial Migration Folder](img/mdb_migration_initial.png)
 
 
-Here we already have several migrations. A migration is like a DML script that manipulates database structure.
+我们已经有几个迁移类在这里了。一个迁移类就像一个操纵数据库结构的 DML 脚本。
 
-*DefaultDB_20141103_140000_Initial.cs* for example, contains our initial migration that created *Northwind* tables and *Users* table.
+以 *DefaultDB_20141103_140000_Initial.cs* 为例，它包含创建 *Northwind* 表和 *Users*表的初始迁移内容。
 
-Create a new migration file in the same folder with name *DefaultDB_20160519_115100_MovieTable.cs*. You can copy and change one of the existing migration files, rename it and change contents.
+在同一文件夹中，创建一个名为 DefaultDB_20160519_115100_MovieTable.cs 的文件。你可以拷贝一个现有的迁移类文件，重命名并修改内容。 
 
-> Migration file name / class name is actually not important but recommended for consistency and correct ordering.
+>迁移类文件名称 / 类名其实不重要，但建议你保持一致性和正确排序。 
 
-*20160519_115100* corresponds to the time we are writing this migration in yyyyMMdd_HHmmss format. It will also act as a unique key for this migration.
+*20160519_115100* 对应于我们编写迁移类的时间，使用 yyyyMMdd_HHmmss 格式。它还将作为此迁移的唯一标识。
 
-Our migration file should look like below:
+我们的迁移类文件看起来应该像下面这样：
 
 ```cs
 using FluentMigrator;
@@ -54,32 +54,32 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
-> Make sure you use the namespace *MovieTutorial.Migrations.DefaultDB* as Serene template applies migrations only in this namespace to the default database.
+> 确保你使用的命名空间是 MovieTutorial.Migrations.DefaultDB，因为 Serene 模板仅在此命名空间下对默认数据库应用迁移。
 
-In *Up()* method we specify that this migration, when applied, will create a schema named *mov*. We will use a separate schema for movie tables to avoid clashes with existing tables. It will also create a table named *Movie* with "MovieId, Title, Description..." fields on it.
+在 *Up()* 方法中，当应用指定的迁移时，数据库将创建名为 mov 的 schema 。为避免与现有表发生冲突，我们为电影表使用一个独立的 schema。该方法将创建一个名为 *Movie* 的表，其字段有 "MovieId, Title, Description..."。  
 
-We could implement *Down()* method to make it possible to undo this migration (drop movie table and mov schema etc), but for the scope of this sample, lets leave it empty.
+我们可以实现 *Down()* 方法，以便能够撤消这个迁移(删除电影表和 mov schema等)，但对于这个示例，我们让它空着。
 
-> Inability to undo a migration might not hurt much, but deleting a table by mistake could do more damage.
+> 不能撤消迁移可能并没有太大影响，但误删除表会造成更大的损害。
 
-On top of our class we applied a Migration attribute.
+在类的顶部，我们使用 Migration 特性。 
 
 ```cs
 [Migration(20160519115100)]
 ```
 
-This specifies a unique key for this migration. After a migration is applied to a database, its key is recorded in a special table specific to FluentMigrator ([dbo].[VersionInfo]), so same migration won't be applied again.
+这里指定此迁移的唯一键。迁移应用到数据库后，在一个特定于 FluentMigrator([dbo].[VersionInfo]) 的特殊表中记录该值，因此同一迁移不会被再次应用。
 
-> Migration key should be in sync with class name (for consistency) but without underscore as migration keys are Int64 numbers.
+> 迁移的唯一健应该与类名同步(保持一致)，但没有强调迁移唯一键得是 Int64 编号。
 
-Migrations are executed in the key order, so using a sortable datetime pattern like yyyyMMdd for migration keys looks like a good idea. 
+迁移是按唯一键顺序执行的，所以迁移的唯一键要使用一个可排序的日期时间模式，如把 yyyyMMdd 作为迁移唯一键是个好主意。 
 
-Please make sure you always use same number of characters for migration keys e.g. 14 (20160519115100). Otherwise your migration order will get messed up, and you will have migration errors, due to migrations running in unexpected order.
+请确保你始终使用相同数量的字符作为迁移的唯一键，如 14位 (20160519115100)。否则你的迁移命令会一团糟，由于使用混乱的顺序迁移，你会出现迁移错误。
 
 
-### Running Migrations
+### 执行迁移 
 
-By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. The code that runs migrations are in *App_Start/SiteInitialization.cs* and *App_Start/SiteInitialization.Migrations.cs* files:
+默认情况下，Serene 的模板将运行 *MovieTutorial.Migrations.DefaultDB* 命名空间下的所有迁移，这是在应用程序启动时自动发生。运行迁移代码的是文件 *App_Start/SiteInitialization.cs* 和 *App_Start/SiteInitialization.Migrations.cs*：
 
 ** SiteInitialization.Migrations.cs**:
 ```cs
@@ -138,27 +138,27 @@ namespace MovieTutorial
 }
 ```
 
-> There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change default connection in web.config to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.
+> 这里有对数据库名称进行安全性检查，以避免在 Serene 默认的数据库 (MovieTutorial_Default_v1) 之外的其他数据库上运行迁移。如果你了解其中的风险，可以删除此检查。例如，如果你把 web.config 中的默认连接更改为你自己的生产数据库，迁移将在生产数据库上运行，你将得到 Northwind 等表，即使之前你的生产数据库没有这些表。
 
-Now press F5 to run your application and create Movie table in default database.
+现在按 F5 运行你的应用程序并在默认数据库中创建电影表。
 
 
-### Verifying That the Migration is Run
+### 确认迁移类已经运行 
 
-Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\v11.0*.
+使用 Sql Server Management Studio 或 Visual Studio -> Connection To Database，打开对数据库 *MovieTutorial_Default_v1 database in server (localdb)\v11.0* 的连接。 
 
-> (localdb)\v11.0 is a LocalDB instance created by SQL Server 2012 LocalDB. 
+> (localdb)\v11.0 是 SQL Server 2012 LocalDB 创建的 LocalDB 实例。  
 
-> If you didn't install LocalDB yet, download it from https://www.microsoft.com/en-us/download/details.aspx?id=29062.
+> 如果你还没有安装 LocalDB ，可从 https://www.microsoft.com/en-us/download/details.aspx?id=29062 下载。
 
-> If you have SQL Server 2014 LocalDB, your server name would be (localdb)\MSSqlLocalDB or (localdb)\v12.0, so change connection string in web.config file. 
+> 如果你有 SQL Server 2014 LocalDB，你的服务器名（server name）应该变为 (localdb)\MSSqlLocalDB 或者 (localdb)\v12.0，所以你应该修改 web.config 文件中的连接字符串。 
 
-> You could also use another SQL server instance, just change the connection string to target server and remove the migration safety check.
+> 你也可以使用另外一个 SQL server 实例，只需把连接字符串配置为目标服务器，并删除迁移的安全检查。
 
-You should see *[mov].[Movies]* table in SQL object explorer.
+你应该在SQL对象资源管理器中看到 *[mov].[Movies]* 表。
 
-Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20160519115100*. This specifies that the migration with that version number (migration key) is already executed on this database.
+同样地，当你查看 *[dbo].[VersionInfo]* 表数据时，最后一行的 Version 列应为 20160519115100。它表明已经在此数据库执行该版本(迁移唯一键)的迁移。
 
 ![Initial Migration Folder](img/mdb_migration_check.png)
 
-> Usually, you don't have to do these checks after every migration. Here we show these to explain where to look, in case you'll have any trouble in the future.
+> 通常，您不必在每一个迁移后都做这些检查。在这里，我们演示将来如果你遇到迁移问题，你应该在到哪里去检查。

@@ -1,8 +1,8 @@
-# Filtering with Multiple Genre List
+# 筛选具有多个流派的列表
 
-Remember that when we had only one Genre per Movie, it was easy to quick filter, by adding a [QuickFilter] attribute to GenreId field.
+记得当每部影片只有一个流派时，我们很容易实现快速过滤，在 GenreId 属性加入了 [QuickFilter] 特性即可。
 
-Let's try to do similar in MovieColumns.cs:
+让我们试着在 MovieColumns.cs 做类似修改：
 
 ```
 [ColumnsScript("MovieDB.Movie")]
@@ -15,24 +15,24 @@ public class MovieColumns
 }
 ```
 
-As soon as you type a Genre into Genres you'll have this error:
+只要在 Genres 中输入流派就会得到该错误：
 
 ![Invalid Column GenreList](img/mdb_genrelist_invalid.png)
 
-ListHandler tried to filter by GenreList field, but as there is no such column in database, we got this error.
+ListHandler 尝试使用 GenreList 字段过滤，但是在数据库中并没有这样的字段，所以我们得到这个错误。
 
-> Actually, LinkingSetRelation should be able to intercept this filter and convert it into an EXISTS subquery, but list behaviors can't do that yet. Maybe in a later version...
+> 事实上，LinkingSetRelation 会拦截此过滤器并把它转换为 EXISTS 子查询，但是列行为（list behaviors）还没有实现这样的功能，也许会在以后版本…… 
 
-So, now we have to handle it somehow.
+因此，我们现在就用某种方式来处理它。
 
 
-### Declaring MovieListRequest Type
+### 声明 MovieListRequest 类型 
 
-As we are going to do something non-standard, e.g. filtering by values in a linking set table, we need to prevent ListHandler from filtering itself on GenreList property.
+因为我们打算做一些不规范的事，例如通过关联表（linking set table）的值过滤，我们需要防止 ListHandler 在 GenreList 属性中过滤自身。
 
-We could process the request *Criteria* object (which is similar to an expression tree) using a visitor and handle GenreList ourself, but it would be a bit complex. So i'll take a simpler road for now.
+我们可以使用一个访问者模式处理请求 *条件（Criteria）*对象（它类似于表达式目录树）和处理 GenreList 自身，但这有点复杂。所以现在我会使用一个简单的方式。
 
-Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieRepository.cs*:
+让我们看一个含标准的 *ListRequest* 对象的子类，并在这里添加流派过滤器参数。在 *MovieRepository.cs* 文件旁边添加 *MovieListRequest.cs* 文件：
 
 ```cs
 namespace MovieTutorial.MovieDB
@@ -47,14 +47,14 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-We added a *Genres* property to our list request object, which will hold the optional *Genres* we want movies to be filtered on.
+在列表请求对象中，我们添加一个 *Genres* 属性，它将保存我们想在影片中过滤的 *流派（Genres）* 选项。
 
 
-### Modifying Repository/Endpoint for New Request Type
+### 为新请求类型修改 Repository/Endpoint
 
-For our list handler and service to use our new list request type, need to do changes in a few places.
+为使我们的列表处理器（list handler）和服务使用新的列表请求类型，需要在几个地方做变化。
 
-Start with *MovieRepository.cs*:
+从 *MovieRepository.cs* 开始：
 
 ```cs
 public class MovieRepository
@@ -70,9 +70,9 @@ public class MovieRepository
 }
 ```
 
-We changed ListRequest to MovieListRequest in List method and added a generic parameter to MyListHandler, to use our new type instead of ListRequest.
+使用新类型，而不是 ListRequest。在 List 方法中，我们把 ListRequest 改为 MovieListRequest，并在 MyListHandler 中添加一个泛型参数。
 
-And another little change in *MovieEndpoint.cs*, which is the actual web service:
+在另一文件 *MovieEndpoint.cs* 中做一些小修改，该类实际上是 web 服务：
 
 ```cs
 public class MovieController : ServiceEndpoint
@@ -85,16 +85,16 @@ public class MovieController : ServiceEndpoint
 }
 ```
 
-Now its time to build and transform templates, so our MovieListRequest object and related service methods will be available at client side.
+现在是时候生成和转换模板，因此我们的 MovieListRequest 对象及相关服务方法就能在客户端生效。
 
 
-### Moving Quick Filter to Genres Parameter
+### 将快速过滤器移到流派参数
 
-We still have the same error as quick filter is not aware of the parameter we just added to list request type and still uses the Criteria parameter.
+我们仍然有同样的错误，因为快速过滤器不知道我们刚添加到列表请求的类型并一直使用着 *Criteria* 参数。
 
-Need to intercept quick filter item and move the genre list to *Genres* property of our *MovieListRequest*.
+需要拦截快速过滤项并将流派列表移到 *MovieListRequest* 的*流派（Genres）*属性。
 
-Edit *MovieGrid.ts*:
+编辑 *MovieGrid.ts*：
 
 ```ts
 export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
@@ -118,63 +118,63 @@ export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
 }
 ```
 
-getQuickFilters is a method that is called to get a list of quick filter objects for this grid type. 
+getQuickFilters 是一个获取此网格列表的快速过滤器对象列表的方法。 
 
-By default grid enumerates properties with [QuickFilter] attributes in MovieColumns.cs and creates suitable quick filter objects for them.
+默认情况下，网格列表枚举 MovieColumns.cs 中所有含 [QuickFilter] 特性的属性，并为其创建合适的快速过滤器对象。
 
-We start by getting list of QuickFilter objects from super class.
+我们从基类获取 QuickFilter 对象列表开始。
 
 ```ts
 let items = super.getQuickFilters();
 ```
 
-Then locate the quick filter object for *GenreList* property:
+然后找到 *GenreList* 属性的快速过滤器对象：
 
 ```ts
 var genreListFilter = Q.first(items, x =>
     x.field == MovieRow.Fields.GenreList);
 ```
 
-Actually there is only one quick filter now, but we want to play safe.
+实际上现在只有一个快速过滤器。
 
-Next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to request's *Criteria* (if multiple)  or *EqualityFilter* (if single value) parameters, just before its submitted to list service.
+下一步是设置 *handler* 方法。 在提交到列表服务之前，快速过滤器对象读取编辑器值并将其应用到请求的 *Criteria* （如果有多个） 或 *EqualityFilter* （如果单个值）参数。
 
 ```ts
 genreListFilter.handler = h => {
 ```
 
-Then we get a reference to current *ListRequest* being prepared:
+然后我们获得当前 *ListRequest* 引用：
 
 ```ts
 var request = (h.request as MovieListRequest);
 ```
 
-And read the current value in lookup editor:
+并读取检索编辑器（LookupEditor）中的当前值：
 
 ```ts
 var values = (h.widget as Serenity.LookupEditor).values;
 ```
 
-Set it in *request.Genres* property:
+把该值设置到 *request.Genres* 属性：
 
 ```
 request.Genres = values.map(x => parseInt(x, 10));
 ```
 
-As values is a list of string, we needed to convert them to integer.
+这是一个字符串列表的值，我们需要将它们转换为整数。
 
-Last step is to set *handled* to true, to disable default behavior of quick filter object, so it won't set *Criteria* or *EqualityFilter* itself:
+最后一步是设置 *handled* 为 true，要禁用快速过虑器对象的默认行为，因此它将不会使用自己设置的 *Criteria* 或 *EqualityFilter*：
 
 ```ts
 h.handled = true;
 ```
 
-Now we'll no longer have *Invalid Column Name GenreList* error but Genres filter is not applied server side yet.
+现在，我们将不再有 *无效的列名 GenreList* 的错误，但 Genres 过滤器还没有应用到服务器端。
 
 
-### Handling Genre Filtering In Repository
+### 在仓储（Repository）中处理流派过滤 
 
-Modify *MyListHandler* in *MovieRepository.cs* like below:
+在 *MovieRepository.cs* 文件中对 *MyListHandler* 做如下修改：
 
 ```cs
 private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
@@ -200,19 +200,19 @@ private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
 }
 ```
 
-*ApplyFilters* is a method that is called to apply filters specified in list request's *Criteria* and *EqualityFilter* parameters. This is a good place to apply our custom filter.
+*ApplyFilters* 是一个应用过滤器指定的 *Criteria* 和 *EqualityFilter* 请求参数表的方法。这是应用自定义过滤器的好地方。
 
-We first check if *Request.Genres* is null or an empty list. If so no filtering needs to be done.
+如果需要做任何过滤，我们首先要检查 *Request.Genres* 是否是 null 或空列表。
 
-Next, we get a reference to *MovieGenresRow*'s fields with alias *mg*.
+接下来，我们获得一个别名为 *mg* 的字段 *MovieGenresRow* 的引用。
 
 ```
 var mg = Entities.MovieGenresRow.Fields.As("mg");
 ```
 
-Here it needs some explanation, as we didn't cover Serenity entity system yet.
+这里需要说明一下，我们还没有覆盖 Serenity 实体系统。
 
-Let's start by not aliasing *MovieGenresRow.Fields*:
+我们从还没有别名的 *MovieGenresRow.Fields* 开始：
 
 ```cs
 var x = MovieGenresRow.Fields;
@@ -222,17 +222,17 @@ new SqlQuery()
   .Select(x.GenreId);
 ```
 
-If we wrote a query like above, its SQL output would be something like this:
+如果我们写下类似上述的查询，它输出的 SQL 会是这样的：
 
 ```sql
 SELECT t0.MovieId, t0.GenreId FROM MovieGenres t0
 ```
 
-Unless told otherwise, Serenity always assigns *t0* to a row's primary table. Even if we named *MovieGenresRow.Fields* as variable *x*, it's alias will still be *t0*.
+除非特别指出，Serenity 总是分配 *t0* 到行的主表。即使我们命名 *MovieGenresRow.Fields* 为变量 *x*，它的别名仍将是 *t0* 。
 
-> Because when compiled, *x* won't be there and Serenity has no way to know its variable name. Serenity entity system doesn't use an expression tree like in LINQ to SQL or Entity Framework. It makes use of very simple string / query builders.
+> 因为在编译时，*x* 不会存在并且 Serenity 已没有办法知道其变量的名称。Serenity 实体系统没有使用像 LINQ to SQL 或 Entity Framework 那样的表达式树。它使用非常简单的字符串/查询生成器。
 
-So, if wanted it to use *x* as an alias, we'd have to write it explicitly:
+所以，如果想要使用 *x* 作为别名，我们必须明确地声明：
 
 ```cs
 var x = MovieGenresRow.Fields.As("x");
@@ -242,19 +242,19 @@ new SqlQuery()
   .Select(x.GenreId);
 ```
 
-...results at:
+结果为:
 
 ```sql
 SELECT x.MovieId, x.GenreId FROM MovieGenres x
 ```
 
-In *MyListHandler*, which is for *MovieRow* entities, *t0* is already used for *MovieRow* fields. So, to prevent clashes with *MovieGenresRow* fields (which is named *fld*), i had to assign *MovieGenresRow* an alias, *mg*.
+在 *MovieRow* 实体的 *MyListHandler* 中，*t0* 已经被 *MovieRow* 字段使用。因此，为防止 *MovieGenresRow* 字段（名为 *fld*）的冲突，我需要把 *MovieGenresRow* 别名指定为 *mg*。
 
 ```
 var mg = Entities.MovieGenresRow.Fields.As("mg");
 ```
 
-What i'm trying to achieve, is a query like this (just the way we'd do this in bare SQL):
+我想实现的，是这样的一个查询（就像我们会使用纯SQL）：
 
 ```
 SELECT t0.MovieId, t0.Title, ... FROM Movies t0
@@ -267,13 +267,13 @@ WHERE EXISTS (
 )
 ```
 
-So i'm adding a WHERE filter to main query with Where method, using an EXISTS criteria:
+因此，我向 query 对象的 Where 方法添加 WHERE 过滤器，使用 EXISTS 条件：
 
 ```cs
 query.Where(Criteria.Exists(
 ```
 
-Then starting to write the subquery:
+然后开始写子查询：
 
 ```cs
 query.SubQuery()
@@ -281,7 +281,7 @@ query.SubQuery()
     .Select("1")
 ```
 
-And adding the where statement for subquery:
+给子查询添加 where 声明 
 
 ```
 .Where(
@@ -289,16 +289,16 @@ And adding the where statement for subquery:
     mg.GenreId.In(Request.Genres))
 ```
 
-> Here fld actually contains the alias t0 for MovieRow fields.
+> 其实这里 fld 包含 MovieRow 字段的别名 t0。
 
-As *Criteria.Exists* method expects a simple string, i had to use .ToString() at the end, to convert subquery to a string:
+由于 *Criteria.Exists* 方法需要一个字符串，我需要在末尾使用 .ToString() 方法把子查询转换为字符串。 
 
-> Yes, i should add one overload that accepts a subquery... noted.
+> 是的，我注意到应该添加一个接受子查询的重载…… 
 
 ```cs
 .ToString()));
 ```
 
-> It might look a bit alien at start, but by time you'll understand that Serenity query system matches SQL almost 99%. It can't be the exact SQL as we have to work in a different language, C#.
+> 开始使用时，它看上去可能有点陌生，但花点时间你就会明白，Serenity 查询系统与 SQL 有 99% 的相似。它不能是具体的 SQL，因为我们在不同的语言（C#）工作。
 
-Now our filtering for *GenreList* property works perfectly...
+现在，我们的 *GenreList* 属性过滤器工作的非常好…… 

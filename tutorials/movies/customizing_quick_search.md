@@ -1,26 +1,26 @@
 
-# Customizing Quick Search
+# 自定义快速检索
 
-### Adding Several Movie Entries
+### 添加几条影片记录 
 
-For the following sections, we need some sample data. We can copy and paste some from IMDB.
+在下面的章节中，我们需要一些示例数据，可以从 IMDB 复制一些数据过来。
 
-If you don't want to waste your time entering this sample data, it is available as a migration at the link below:
+如果你不想浪费时间输入这些示例数据，可以从下面的链接中获取迁移类：
 
 > https://github.com/volkanceylan/MovieTutorial/blob/master/MovieTutorial/MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20160519_135200_SampleMovies.cs
 
 
 ![7 Movies Entered](img/mdb_sample_movies.png)
 
-If we typed *go* into search box, we would see two movies are filtered: *The Good, the Bad and the Ugly* and *The Godfather*.
+如果我们在搜索框中输入 *go* ，我们会看到两部影片被筛选出来：*The Good, the Bad and the Ugly* 和 *The Godfather*。
 
-If we typed *Gandalf* we wouldn't be able to find anything. 
+如果我们输入 *Gandalf*，将不会找到任何影片。  
 
-By default, Sergen determines first textual field of a table as *the name field*. In movies table it is *Title*. This field has a *QuickSearch* attribute on it that specifies that text searches should be performed on it.
+默认情况下，Sergen 把表的第一个文本字段作为 *名称* 字段。在电影（movies）表中是标题（*Title*），该字段有一个 *QuickSearch* 特性，它表示应该在此字段中执行文本搜索。
 
-> The name field also determines initial sorting order and shown in edit dialog titles. 
+> 名称字段还决定初始的排序顺序和编辑对话框显示的标题。 
 
-Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it in *MovieRow.cs*:
+有时候，第一个文本列可能不是名称字段。如果你想要改变为搜索另一个字段，你应该在 *MovieRow.cs* 中修改：
 
 ```cs
 
@@ -37,9 +37,9 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Code generator determined that first textual (string) field in our table is Title. So it added a INameRow interface to our Movies row and implemented it by returning Title field. If wanted to use Description as name field, we would just replace it.
+代码生成器决定表的第一个文本（string）字段是标题。所以它添加一个 INameRow 接口到我们的 MovieRow 类并通过返回标题（Title）字段实现该接口。如果想要使用描述（Description）作为名称字段，我们只须做对应的替换。
 
-Here, *Title* is actually the name field, so we leave it as is. But we want Serenity to search also in *Description* and *Storyline* fields. To do this, you need to add *QuickSearch* attribute to these fields too, as shown below:
+在这里，实际上 *Title* 是 name 字段，所以我们让它保持原样。但我们想让 Serenity 对 *Description* 和 *Storyline* 字段搜索。为此，也需要对这些字段添加 *QuickSearch* 特性，如下所示：
 
 ```
 namespace MovieTutorial.MovieDB.Entities
@@ -73,13 +73,13 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Now, if we search for *Gandalf*, we'll get a *The Lord of the Rings* entry:
+现在，如果我们搜索 *Gandalf*，我们将得到 *The Lord of the Rings* 实体：
 
 ![Movies Search Gandalf](img/mdb_movie_gandalf.png)
 
-QuickSearch attribute, by default, searches with *contains* filter. It has some options to make it match by *starts with* filter or match only exact values.
+默认情况下，QuickSearch 特性以 *包含* 的形式过滤。 它有一些选项，设置其匹配 StartsWith 过滤器或只匹配精确值。
 
-If we wanted it to show only rows that *starts with* typed text, we would change attribute to:
+如果我们希望它只显示 *StartsWith* 输入文本的过滤结果行，我们将特性更改为：
 
 ```cs
 [DisplayName("Title"), Size(200), NotNull, QuickSearch(SearchType.StartsWith)]
@@ -90,9 +90,9 @@ public String Title
 }
 ```
 
-> Here this quick search feature is not very useful, but for values like SSN, serial number, identification number, phone number etc, it might be.
+> 在这里，这种快速搜索功能不是非常有用，但对于像 SSN、序列号、身份证号码、电话号码等类型的值将很有效。
 
-If we wanted to search also in year column, but only exact integer values (1999 matches but not 19):
+如果我们还想在 year 列进行搜索，但只限于确切的整数年份值(匹配 1999，不匹配 19)：
 
 ```
 [DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
@@ -103,11 +103,11 @@ public Int32? Year
 }
 ```
 
-> You might have noticed that we are not writing any C# or SQL code for these basic features to work. We just specify what we want, rather than how to do it. This is what declarative programming is. 
+> 你可能已经注意到，我们不用为这些基本特性的工作写任何 C# 或 SQL 代码。我们只需指定我们想要的东西，而不是如何实现。这是就是声明式的编程。 
 
-It is also possible to provide user with ability to determine which field she wants to search on.
+也可以由用户决定搜索字段。
 
-Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
+打开 *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* 并做如下修改：
 
 ```ts
 
@@ -134,24 +134,24 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-Once you save that file, we'll have a dropdown in quick search input:
+一旦你保存该文件，我们的快速搜索将变成以下拉列表的形式输入：
 
 ![Movies Quick Search Fields](img/mdb_movie_quicksearchfield.png)
 
-> Unlike prior samples where we modified Server side code, this time we did changes in client side, and modified Javascript (TypeScript) code.
+> 与之前我们修改服务器端代码的示例不同，这一次我们在客户端修改，仅修改 Javascript（TypeScript）代码。
 
 
-### Running T4 Templates (.tt files)
+### 运行 T4 模板（.tt 文件） 
 
-In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names or their casing at server side (javascript is case sensitive).
+我们在之前的示例中硬编码 *Description*、 *Storyline* 等字段，如果我们忘了属性的名称或属性在服务器端的大小写（javascript 区分大小写），就可能导致输入错误的。
 
-Serene contains some T4 (.tt) files to transfer such information from server side (rows etc in C#) to client side (TypeScript) for intellisense purposes.
+Serene 包含一些 T4(.tt) 文件，将此类信息从服务器端（C# 中的 rows 等）转移到客户端 （TypeScript） 用于智能提示。
 
-Before running these templates, please make sure that your solution builds successfully as templates uses your output DLL file (*MovieTutorial.Web.dll*) to generate code.
+运行这些模板之前，请确保你的解决方案成功生成，使模板可使用项目输出的 DLL 文件（*MovieTutorial.Web.dll*）生成代码。
 
-After building your solution, click on *Build* menu, than *Transform All Templates*.
+在生成解决方案之后，点击 *生成* 菜单，然后选择 *转换所有模板*。
 
-We can now use intellisense to replace hardcoded field names with compile time checked versions:
+我们现在可以使用智能提示的输入方式来替代硬编码字段名称，并在编译时检查版本：
 
 ```ts
 namespace MovieTutorial.MovieDB
@@ -178,7 +178,7 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-What about field titles? It is not so critical as field names, but can be useful for localization purposes (if we later decide to translate it):
+字段标题呢？ 作为字段名称，它并不那么重要，但可用于本地化（如果我们以后决定翻译它）：
 
 ```ts
 namespace MovieTutorial.MovieDB
@@ -206,7 +206,7 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-We made use of the local text dictionary (translations) available at client side. It's something like this:
+我们使用了在客户端可用的本地文本字典（翻译）。如：
 
 ```json
 {
@@ -218,10 +218,10 @@ We made use of the local text dictionary (translations) available at client side
 }
 ```
 
-Local text keys for row fields are generated from *"Db." + (LocalTextPrefix for Row) + "." + FieldName*.
+行字段的本地文本唯一键由 *"Db." + (LocalTextPrefix for Row) + "." + FieldName* 组成。
 
-Their values are generated from [DisplayName] attributes on your fields by but might be something else in another culture if they are translated.
+它们的值从字段的 [DisplayName] 特性生成，但也可能是另一种语言翻译。
 
-LocalTextPrefix corresponds to *ModuleName + "." + RowClassName* by default, but can be changed in Row fields constructor.
+LocalTextPrefix 默认情况下相当于 *ModuleName + "." + RowClassName *，但是可以在 Row 构造函数中修改。
 
 

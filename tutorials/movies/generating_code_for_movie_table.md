@@ -1,119 +1,119 @@
 
-# Generating Code For Movie Table
+# 为影片（Movie）表生成代码
 
-### Serenity Code Generator
+### Serenity 代码生成器
 
-After making sure that our table exists in the database, we will use Serenity Code Generator (sergen.exe) to generate initial editing interface.
+确保表存在于数据库，我们将使用 Serenity 代码生成器（sergen.exe）生成初始的可编辑界面。
 
-In Visual Studio, open *Package Manager Console* by clicking *View* => *Other Windows* => *Package Manager Console*.
+在 Visual Studio 中，通过点击 *视图* => *其它窗体* => *包管理器控制台* 打开 *包管理器控制台*。
 
-Type *sergen* and press Enter.
+输入 *sergen* 并按 Enter 键确认。
 
-> Sometimes package manager console can't set path correctly and you may get an error executing Sergen. Restarting Visual Studio might resolve the issue. 
+> 有时候包管理器控制台不能正确地设置路径，你可能会在执行 Sergen 的时候得到错误，重启 Visual Studio 可能会解决该问题。 
 
-> Another option is to open Sergen.exe from Windows Explorer. Right click on *MovieTutorial* solution in Solution Explorer, click *Open In File Explorer*. Sergen.exe is under *packages\Serenity.CodeGenerator.X.Y.Z\tools* directory.
+> 另一种解决方法是从资源管理器中打开 Sergen.exe，在解决方案资源管理器的 *MovieTutorial* 解决方案中右键，选择 *文件资源管理器中打开*。 Sergen.exe 在 *packages\\Serenity.CodeGenerator.X.Y.Z\\tools* 目录下面。
 
 ![Movies Code Generator](img/mdb_sergen_movie.png)
 
 
-### Setting Project Location
+### 设置项目位置
 
-When you first run Sergen, Web Project field will be prefilled for you to:
+当你第一次运行 Sergen，Web Project 字段默认为：
 
 * ..\\..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
 
-If you change this value and other options, and generate your first page, you won't have to set them again. All these options will be saved in *Serenity.CodeGenerator.config* in your solution directory.
+如果为你把该值修改为其他路径，并且生成你的第一个页面，再次使用时，将不需要再次设置。所有的设置将保存在你的解决方案目录下的 *Serenity.CodeGenerator.config* 。
 
-This value is required, as Sergen will automatically include generated files to your WEB project.
+该值是必填项，因为 Sergen 会借此把生成的文件自动包含到你的 WEB 项目。
 
-> Script project field should be empty for v2.1+. This is for users of older Serene, who might still have code that was written with Saltaralle compiler, instead of TypeScript.
+> 在 v2.1+ 版本，Script project 字段应该为空，该提示是针对仍包含 Saltaralle 编译器代码而不是 TypeScript 的 Serene 旧版本用户。
 
-### Root Namespace Option
+### Root Namespace 选项 
 
-Your root namespace option is set to the Solution name you used, e.g. *MovieTutorial*. If your project name is MyProject.Web, your root namespace is MyProject by default. 
+你的 Root Namespace 选项设置为该解决方案使用的名称，如 *MovieTutorial*。如果你的项目名称为 MyProject.Web，你的 Root Namespace 默认为 MyProject。  
 
-This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
+这是关键，所以确保你不把它设置为其他值，因为默认情况下，Serene 的模板期望所有生成的代码都在这个根命名空间下面。
 
-This option is also saved, so next time you won't have to fill it in.
+该选项也被保存，因此下次使用时你将不用再次填写。
 
-### Choosing Connection String
+### 选择 Connection String
 
-Once you set Web project name, Sergen populates connection dropdown with connection strings from your web.config file. We might have *Default* and *Northwind* in there. Choose *Default* one.
+一旦设置 Web project 名称，Sergen 使用 web.congfig 的连接字符串中填充连接字符串下拉列表。我们这里有 *Default* and *Northwind*，选择 *Default*。  
 
-### Selecting Table To Generate Code For
+### 选择需要生成代码的表（Table Name）
 
-Sergen generates code for one table at a time. Once we choose connection string, table dropdown is populated with table names from that database. 
+Sergen 每次只为一张表生成代码。一旦我们选择了连接字符串，表下拉列表将会被所选数据库的表名填充。 
 
-Select *Movie* table.
+选择 *Movie* 表
 
-### Setting Module Name
+### 设置 Module Name
 
-In Serenity terms, a module is a logical group of pages, sharing a common purpose. 
+在 Serenity 术语中，一个模块（module）是一组逻辑页面（pages），共享同一个目标。 
 
-For example, in Serene template, all pages related to *Northwind* sample belongs to *Northwind* module. 
+例如，在 Serene 模板中，所有与 *Northwind* 示例相关的页面都属于 *Northwind* 模块。 
 
-Pages that are related to general management of site, like users, roles etc. belongs to *Administration* module. 
+页面（Pages）是与网站的综合管理相关，如用户（users），角色（roles）等都属于 Administration 模块。 
 
-A module usually corresponds to a database schema, or a single database but there is nothing that prevents you from using multiple modules in a single database / schema, or the opposite, multiple databases in one module.
+模块通常对应着数据库的 schema，或者单独的数据库，但没有什么可以阻止你在一个单独的数据库/schema 中使用多个模块，相反，多个数据库也可使用一个模块。
 
-For this tutorial, we will use *MovieDB* (analogous to IMDB) for all pages.
+本教程中，我们将为所有页面使用 MovieDB （类似于 IMDB）。
 
-Module name is used in determining namespace and url of generated pages.
+Module name 用于决定命名空间 和 生成页面的 url。 
 
-For example, our new page will be under *MovieTutorial.MovieDB* namespace and will use */MovieDB* relative url.
+例如，我们的新页面会在 *MovieTutorial.MovieDB* 命名空间下，及使用 */MovieDB* 相对路径。  
 
 
 ### ConnectionKey Parameter 
 
-Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
+Connection key 设置为选定 web.config 配置文件中连接字符串的连接键。你通常不需要更改它，让其保持默认值。
 
 
 ### Entity Identifier
 
-This usually corresponds to the table name but sometimes table names might have underscores or other invalid characters, so you decide what to name your entity in generated code (a valid identifier name).
+这通常对应表名，但是有时候表名含有下划线或其他无效字符，所以由你决定如何生成代码中的实体名称（一个有效的标识名称）。
 
-Our table name is *Movie* so it is also a valid and fine C# identifier, so let's leave *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
+我们的表名是 *Movie*，因此它是一个有效且不错的 C# 标识符，所以我们把 *Movie* 作为实体标识符。我们的实体类将被命名为 *MovieRow*。
 
-This name is also used in other class names. For example our page controller will be named *MovieController*.
+该名称也被其他类使用。例如我们的页控制器（page controller）名称为 *MovieController*。  
 
-It also determines the page url, in this sample our editing page will be at URL */MovieDB/Movie*.
+它也决定着页面的 url，在此示例中，我们的编辑页面的 URL 将为 */MovieDB/Movie*。 
 
 
 ### Permission Key 
 
-In Serenity, access control to resources (pages, services etc.) are controlled by permission keys which are simple strings. Users or roles are granted these permissions.
+Serenity 中，对资源（页、服务等）的访问控制都是由简单字符串组成的许可键（permission keys）控制。这些权限授予用户（users）或角色（roles）。
 
-Our Movie page will be only used by administrative users (or maybe later content moderators) so let's leave it as *Administration* for now. By default, in Serene template, only the *admin* user has this permission.
+我们的影片页面只有管理员用户（或者以后的内容编辑）可使用，因此，现在让我们把它作为 *Administration*，默认情况下，在 Serene 模板中只有 *admin* 用户有这个权限。 
 
 
-### Generating Code for First Page
+### 生成第一个页面代码 
 
-After setting parameters as shown in the image above (you only have to set Module Name, others were prefilled), click *Generate Code for Entity* button. 
+在设置如图所示的参数（你只需要设置 Module Name，其他使用默认值）之后，单击 *Generate Code for Entity* 按钮。 
 
-Sergen will generate several files and include them in MovieTutorial.Web and MovieTutorial.Script projects.
+Sergen 将生成几个文件并将它们包含进 MovieTutorial.Web 和 MovieTutorial.Script 项目。 
 
-Now you can close Sergen, and return to Visual Studio.
+现在你可以关闭 Sergen，并返回到 Visual Studio。 
 
-As project is modified, Visual Studio will ask if you want to reload changes, click Reload All.
+修改项目，Visual Studio 将询问你是否要重新加载更改，请单击加载所有。
 
-*REBUILD the Solution* and then press *F5* to launch application.
+*重新生成解决方案* ，然后按 *F5* 启动应用程序。 
 
-Use *admin* as username, and *serenity* as password to login.
+使用 *admin* 作为用户名，并以 *serenity* 作为密码登录系统。
 
-When you are greeted with Dashboard page, you will notice that there is a new section, *MovieDB* on the bottom of left navigation. 
+当你看到控制面板页面时，你会发现左侧导航的底部有一个新的菜单 *MovieDB* 。 
 
-Click to expand it and click Movie to open our first generated page.
+单击以展开它，然后单击 *Movie* ，打开使用 Sergen 生成的第一个页面。
 
 ![Movies First Generation](img/mdb_movie_initial.png)
 
-Now try adding a new movie, than try updating and deleting it.
+现在尝试添加一个新影片，然后更新并删除它。
 
-Sergen generated code for our table, and it just works without writing a single line of code.
+我们不用写一行代码，使用 Sergen 为我们的表生成代码就可以工作。
 
-> This doesn't mean i don't like writing code. In contrast, i love it. Actually i'm not a fan of most designers and code generators. The code they produce is usually unmanagable mess. 
+> 这并不意味着我就不喜欢写代码，相反地我爱写代码。其实我并不是大部分设计师和代码生成器的粉丝。他们生产的代码通常都是混乱难以管理的。 
 
-> Sergen just helped us here for initial setup which is required for layered architecture and platform standards. We would have to create about 10 files for entity, repository, page, endpoint, grid, form etc. Also we needed to do some setup in a few other places.
+> Sergen 在这里仅是帮我们初始设置所需的分层结构和平台标准。我们将创建 10 个左右的文件，如实体（entity）、仓储（repository）、页面（page）、终结点（endpoint）、网格列表（grid）、表单（form）等，同时还需要在其他地方做一些设置。
 
-> Even if we did copy paste and replace code from some other page, it would be error prone and take about 5-10 mins.
+> 即使我们从其他页面复制粘贴并替换代码，它也可能会出错，且至少需要 5-10 分钟。
 
-> The code files Sergen generates has minimum code with the absolute basics. This is thanks to the base classes in Serenity that handles the most logic. Once we generate code for some table, we'll probably never use Sergen again (for this table), and modify this generated code to our needs. We'll see how.
+> Sergen 生成的代码文件中含最基本的少量代码，这得多亏 Serenity 的基类，它处理了大部分逻辑。一旦我们为一些表生成代码，我们可能就不会再对此表使用 Sergen，我们将在后面章节看到如何修改生成的代码，使之变为我们需要的。

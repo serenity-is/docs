@@ -1,6 +1,6 @@
-# Listing Movies in Person Dialog
+# 在人员对话框列出参演影片 Listing Movies in Person Dialog
 
-To show list of movies a person acted in, we'll add a tab to PersonDialog.
+为了显示人员参演的影片，我们将在 PersonDialog 添加一个选项卡To show list of movies a person acted in, we'll add a tab to PersonDialog.
 
 By default all entity dialogs (ones we used so far, which derive from EntityDialog) uses *EntityDialog* template at *MovieTutorial.Web/Views/Templates/EntityDialog.Template.html*:
 

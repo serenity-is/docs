@@ -1,12 +1,12 @@
-# Handling Lookup Scripts
+# 处理检索脚本（Lookup Scripts）
 
-If we open *Suppliers* page now, we'll see that *tenant2* can only see suppliers that belongs to its tenant. But on top right of the grid, in country dropdown, all countries are listed:
+如果我们现在打开 *Suppliers* 页面，我们可以看到 *tenant2* 只能查看属于自己的供应商。但是在网格列表的右上角的 country 下拉列表中，所有的国家选项都被列出来了。
 
 ![Tenant2 All Countries](img/tenant2_all_countries.png)
 
-This data is feed to script side through a dynamic script. It doesn't load this data with *List* services we handled recently.
+这个数据是通过动态脚本提供给脚本端。它不会在我们最近处理的 *服务列表* 中加载该数据。
 
-The lookup script that produces this dropdown is defined in *SupplierCountryLookup.cs*:
+提供给该下拉列表的检索脚本在 *SupplierCountryLookup.cs* 中定义：
 
 ```cs
 namespace MultiTenancy.Northwind.Scripts
@@ -41,11 +41,11 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-> We couldn't use a simple [LookupScript] attribute on a row class here, because there is actually no country table in Northwind database. We are collecting country names from existing records in Supplier table using distinct.
+> 因为实际上 Northwind 数据库并没有 country 表， 所以我们不能在行（row）类上使用简单的 [LookupScript] 特性。我们从供应商表的现有记录中收集不同的国家名称。  
 
-We should filter its query by current tenant.
+我们应该通过当前的租户来筛选查询。
 
-But this lookup class derives from *RowLookupScript* base class. Let's create a new base class, to prepare for other lookup scripts that we'll have to handle later.
+但是这个检索类继承自基类 *RowLookupScript* 。让我们创建一个新的基类，为我们稍后再处理其他检索脚本准备。 
 
 ```cs
 namespace MultiTenancy.Northwind.Scripts
@@ -93,18 +93,18 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-This will be our base class for multi-tenant lookup scripts.
+这将是我们多租户检索脚本的基类。
 
-We first set expiration to a negative timespan to disable caching. Why do we have to do this? Because dynamic script manager caches lookup scripts by their keys. But we'll have multiple versions of a lookup script based on TenantId values.
+我们首先将过期时间设置设为一个负的时间间隔来禁用缓存。为什么要这样做呢？因为动态脚本使用键值（keys）管理检索脚本的缓存。但我们会有多个基于 TenantId 值的检索脚本的版本。
 
-We'll turn off caching at dynamic script manager level and handle caching ourself in GetScript method. In *GetScript* method, we are using *TwoLevelCache.GetLocalStoreOnly* to call base method, that generates our lookup script, and cache its result with a cache key including *TenantId*.
+我们会在动态脚本管理层面关闭缓存并在 GetScript 方法中自己处理缓存。在 *GetScript* 方法中，我们使用 *TwoLevelCache.GetLocalStoreOnly* 调用基方法生成我们的检索脚本，并缓存其包含 *TenantId* 缓存键的结果。  
 
-> See relevant section for more info about TwoLevelCache class.
+> 更多关于 TwoLevelCache 类的信息，请查看相关章节。
 
 
-By overriding, *PrepareQuery* method, we are adding a filter by current *TenantId*, just like we did in list service handlers.
+通过重写 *PrepareQuery* 方法，我们添加一个使用当前 *TenantId* 的过滤器，就像我们在列表服务处理中做的一样。
 
-Now its time to rewrite our *SupplierCountryLookup* using this new base class:
+现在是时候使用新基类重写 *SupplierCountryLookup*： 
 
 ```cs
 namespace MultiTenancy.Northwind.Scripts
@@ -141,16 +141,16 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-We just called *AddTenantFilter* method manually, because we weren't calling base *PrepareQuery* method here (so it won't be called by base class).
+因为我们没有在这里调用基类的 *PrepareQuery* 方法(因此它不会由基类调用)，所以我们就手工调用 *AddTenantFilter* 方法。
 
-> Please first delete *Northwind.DynamicScripts.cs* file, if you have it.
+> 如果有 *Northwind.DynamicScripts.cs* 文件，请先删除它。
 
-There are several more similar lookup scripts in *CustomerCountryLookup*, *CustomerCityLookup*,
-*OrderShipCityLookup*, *OrderShipCountryLookup*. I'll do similar changes in them. Change base class to *MultiTenantRowLookupScript* and call *AddTenantFilter* in *PrepareQuery* method.
+在 *CustomerCountryLookup*, *CustomerCityLookup*,
+*OrderShipCityLookup*, *OrderShipCountryLookup* 有几个非常相似的检索脚本。我将对它们做类似的修改：把基类改为 *MultiTenantRowLookupScript* 并在 *PrepareQuery* 方法中调用 *AddTenantFilter*。 
 
-We now have one more problem to solve. If you open *Orders* page, you'll see that *Ship Via* and *Employee* filter dropdowns still lists records from other tenants. It is because we defined their lookup scripts by a [LookupScript] attribute on their rows.
+我们现在还有一个问题需要解决：如果你打开 *Orders* 页面，你将看到 *Ship Via* 和 *Employee* 过滤下拉列表一直列出其他租户的记录。这是因为我们使用含 [LookupScript] 特性的行定义检索脚本。 
 
-Let's fix employee lookup first. Remove [LookupScript] attribute from *EmployeeRow*.
+让我们首先来修复雇员检索（employee lookup），从 *EmployeeRow* 中删除 [LookupScript] 特性。
 
 ```cs
 [ConnectionKey("Northwind"), DisplayName("Employees"), InstanceName("Employee"), TwoLevelCached]
@@ -161,7 +161,7 @@ public sealed class EmployeeRow : Row, IIdRow, INameRow, IMultiTenantRow
     //...
 ```
 
-And define a new lookup in file *EmployeeLookup* next to *EmployeeRow.cs*:
+并在 *EmployeeRow.cs* 旁边的 *EmployeeLookup* 文件添加一个新的检索：
 
 ```cs
 
@@ -179,22 +179,22 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-We don't have to override anything, as base class will handle everything for us. By default, *LookupScript* attribute on rows, defines a new automatic lookup script class by using *RowLookupScript* as base class. 
+由于基类会帮我们处理所有的事情，我们没有重写任何东西。默认情况下，行的 *LookupScript* 特性使用 *RowLookupScript* 作为基类定义一个新的自动检索脚本类。  
 
-As there is no way to override this base class per row, we defined our lookup script class explicitly, and used *MultiTenantRowLookupScript* as base class.
+由于没有办法重写每行的基类，我们显式定义检索脚本类，并使用 *MultiTenantRowLookupScript* 作为基类。
 
-Now if you build and run application, you'll have an error:
+现在如果你生成并运行应用程序，你将得到一个错误：
 
 ```
 'MultiTenancy.Northwind.Entities.EmployeeRow' type doesn't have a 
 [LookupScript] attribute, so it can't be used with a LookupEditor!
 ```
 
-This is because we don't have a [LookupScript] attribute on top of our row class, but in some places like forms, we used [LookupEditor(typeof(EmployeeRow))].
+这是由于我们的行类前面没有 [LookupScript] 特性，但是在一些像表单的地方，我们需要使用 *[LookupEditor("Northwind.Employee")]*。 
 
-Open *OrderRow.cs* and you'll see this attribute on top of *EmployeeID* property. Change it to *[LookupEditor("Northwind.Employee")]*.
+打开  *OrderRow.cs*，你将看到在 *EmployeeID* 属性上面有这个特性。把它修改为 *[LookupEditor("Northwind.Employee")]*。
 
-We'll do similar for *ShipperRow*. Remove *LookupScript* attribute and define class below:
+我们在 *ShipperRow* 做类似的事情。删除 *LookupScript* 特性并定义下面的类： 
 
 ```cs
 
@@ -212,9 +212,9 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-And on top of *ShipVia* property of *OrderRow* you'll find another similar LookupEditor attribute. Change it to [LookupEditor("Northwind.Shipper")].
+并且在 *OrderRow* 的 *ShipVia* 属性上面你将找到另一个相似的 LookupEditor 特性。把它修改为 [LookupEditor("Northwind.Shipper")]。 
 
-Repeat same steps for *ProductRow*.
+在 *ProductRow* 重复同样的步骤。
 
 ```cs
 
@@ -231,12 +231,12 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-And on top of *ProductID* property of *OrderDetailRow* you'll find another similar LookupEditor attribute. Change it to [LookupEditor("Northwind.Product")].
+在 *OrderDetailRow* 的 *ProductID* 属性上面你将找到另一个相似的 LookupEditor 特性。把它修改为 [LookupEditor("Northwind.Product")]。
 
-*Supplier*, *Category*, *Region*, *Territory* are next ones we should handle similarly. See commit log of Serenity tutorials github repository.
+*Supplier*, *Category*, *Region*, *Territory* 是下一个需要做类似处理的类。请查看 Serenity 教程的 github 仓库提交日志。 
 
-Now Northwind supports multi-tenancy.
+现在 Northwind 支持多租户。
 
-> There might be some glitches i missed, report in Serenity Github repository if any.
+> 可能有一些被我忽略了的小问题，如果发现任何问题，请在 Serenity 的 Github 仓库中的提交报告。
 
-> This feature might be integrated into Serenity, if there will be enough interest.
+> 如果大家对多租户应用程序有足够的兴趣，该功能可能会被集成到 Serenity。

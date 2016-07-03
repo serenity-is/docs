@@ -1,10 +1,10 @@
-# Tenant Selection in User Dialog
+# 在用户对话框中选择租户 
 
-We added a *TenantId* field to *Users* table, but it's not defined in UserRow, and not visible in user dialog.
+我们在 *Users* 表中添加一个 *TenantId* 字段，但是没有在 UserRow 中定义，并且也不能在用户对话框中看到该字段。 
 
-This field, should only be seen and edited by *admin* user. Other users, even if we give them access to users page to manage their tenant users, shouldn't be able to see or change this information.
+该字段只能被 *admin* 用户查看和编辑。即使是授予了访问管理租户权限的其他用户也不能查看或者修改这些信息。 
 
-Let's first add it to *UserRow.cs*:
+首先把 *TenantId* 字段添加到 *UserRow.cs*：
 
 ```cs
 namespace MultiTenancy.Administration.Entities
@@ -49,7 +49,7 @@ namespace MultiTenancy.Administration.Entities
 
 ```
 
-To edit it, we need to add it to *UserForm.cs*:
+要编辑该字段，我们需要在 *UserForm.cs* 添加它：
 
 ```cs
 namespace MultiTenancy.Administration.Forms
@@ -78,7 +78,7 @@ namespace MultiTenancy.Administration.Forms
 }
 ```
 
-Need to also increase size of user dialog a bit, in *site.administration.less* to make space for tenant selection:
+同样需要增加用户对话框的大小，在 *site.administration.less* 中设置： 
 
 ```less
 .s-UserDialog {
@@ -88,20 +88,20 @@ Need to also increase size of user dialog a bit, in *site.administration.less* t
 }
 ```
 
-Now open *User Management* page and create a user *tenant2* that belongs to *Second Tenant*.
+现在，打开 *User Management* 页面并创建一个属于第二个租客的用户 *tenant2*。
 
 ![Tenant2 User](img/create_tenant2_user.png)
 
-After creating this user, edit its permissions and grant him *User, Role Management and Permissions* permission as this will be our administrative user for *Second Tenant*.
+创建此用户之后, 编辑其权限并授予他用户、 角色管理和权限，因为这将是我们的第二个租客的管理用户。
 
-## Logging In With Tenant2
+## 使用 Tenant2 登录 
 
-Signout and login with user *tenant2*.
+退出并使用 *tenant2* 身份登录系统。
 
-When you open *User Management* page, you'll see that user can see and edit *admin* user, in addition to his own *tenant2* user. He can even see and edit his tenant in user dialog.
+当你打开 *User Management* 页面，你将看到该用户除了可以查看和编辑自己的 *tenant2* 用户，还可以查看和编辑 *admin* 用户。 
 
 ![Tenant2 Logged In](img/tenant2_logged_in.png)
 
-This is not what we wanted.
+这并不是我们所希望的。
 
-Let's prevent him seeing users of other tenants.
+让我们阻止他看到其他租户的用户。

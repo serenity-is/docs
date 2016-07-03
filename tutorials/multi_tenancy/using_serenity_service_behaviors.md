@@ -1,14 +1,14 @@
-# Using Serenity Service Behaviors
+# 使用 Serenity 服务行为 
 
-If wanted to extend this multi-tenant system to other tables in Northwind, we would repeat same steps we did with Roles. Though it doesn't look so hard, it's too much of manual work.
+如果想把多租户系统扩展到 Northwind 数据库中的其他表，我们会重复角色所做的相同步骤。虽然看起来没那么难，但是有太多的手工工作。
 
-Serenity provides service behavior system, which allows you to intercept Create, Update, Retrieve, List, Delete handlers and add custom code to them.
+Serenity 提供服务行为系统，它可以允许我们拦截添加、更新、检索、列表、删除的操作处理并向其添加用户自定义代码。
 
-Some operations in these handlers, like capture log, unique constraint validation etc. are already implemented as service behaviors.
+在这些处理中有一些操作（如像获取日志、唯一约束验证等）已经使用服务行为实现了。
 
-Behaviors might be activated for all rows, or based on some rule, like having a specific attribute or interface. For example, CaptureLogBehavior activates for rows with [CaptureLog] attribute.
+行为（Behaviors）可能被所有的行（rows）激活，或被基于某些规则（如特定的特性或接口）的行激活。例如，含 [CaptureLog] 特性的行激活 CaptureLogBehavior。
 
-We'll first define an interface *IMultiTenantRow* that will trigger our new behavior. Place this class in file *IMultiTenantRow.cs*, next to *TenantRow.cs*:
+我们首先定义一个将触发新行为的接口 *IMultiTenantRow*。把此类放在 *TenantRow.cs* 旁边的 *IMultiTenantRow.cs* 中：
 
 ```cs
 using Serenity.Data;
@@ -22,7 +22,7 @@ namespace MultiTenancy
 }
 ```
 
-Than add this behavior in file *MultiTenantBehavior.cs* next to it:
+然后在旁边的 *MultiTenantBehavior.cs* 文件添加行为：
 
 ```cs
 using MultiTenancy.Administration;
@@ -104,29 +104,29 @@ namespace MultiTenancy
 }
 ```
 
-Behavior classes with IImplicitBehavior interface decide if they should be activated for a specific row type.
+行为类实现 IImplicitBehavior 接口来决定是否应该被指定的行类型（row type）激活。 
 
-They do this by implementing *ActivateFor* method, which is called by request handlers.
+它是通过实现 *ActivateFor* 方法做到的，该方法由请求处理（request handlers）调用。
 
-In this method, we check if row type implements *IMultiTenantRow* interface. If not it simply returns false.
+在该方法中，我们检查行类型（row type）是否实现 *IMultiTenantRow* 接口，如果没有，则返回 false。 
 
-Then we get a private reference to *TenantIdField* to reuse it later in other methods.
+然后，我们得到一个 *TenantIdField* 的私有引用，以便之后在其他方法中使用。
 
-*ActivateFor* is only called once per every handler type and row. If this method returns true, behavior instance is cached aggresively for performance reasons, and reused for any request for this row and handler type.
+*ActivateFor* 在每个处理类型（handler type）和行（row）中只被调用一次。如果该方法返回 true，行为实例出于性能考虑而被缓存，并且被该行（row）和处理类型（handler type）重用。
 
-Thus, everything you write in other methods must be thread-safe, as one instance is shared by all requests.
+因此，由于每个实例都被所有的请求共享，所以你在其他方法中所写的代码必须是线程安全的。
 
-A behavior, might intercept one or more of *Retrieve*, *List*, *Save*, *Delete* handlers. It does this by implementing *IRetrieveBehavior*, *IListBehavior*, *ISaveBehavior*, or *IDeleteBehavior* interfaces.
+一个行为通过实现 *IRetrieveBehavior*, *IListBehavior*, *ISaveBehavior*, 或 *IDeleteBehavior* 接口，可以拦截一个或多个*检索*、*列表*、*保存*、*删除* 处理。
 
-Here, we need to intercept all of these service calls, so we implement all interfaces.
+在这里，我们需要拦截所有这些服务调用，因此我们实现所有的接口。
 
-We only fill in methods we are interested in, and leave others empty.
+我们只实现相关的方法，其他的方法保留为空。
 
-The methods we implement here, corresponds to methods we override in *RoleRepository.cs* in previous section. The code they contain is almost same, except here we need to be more generic, as this behavior will work for any row type implementing *IMultiTenantRow*.
+我们这里实现的方法，对应于上一章节在 *RoleRepository.cs* 重写的方法。它们所包含的代码几乎是相同的，但我们这里需要更加通用，因为该行为将为所有实现 *IMultiTenantRow* 接口的行类型工作。 
 
-## Reimplementing RoleRepository With Using the Behavior
+## 使用行为重新实现 RoleRepository  
 
-Now revert every change we made in *RoleRepository.cs*:
+现在还原我们在 *RoleRepository.cs* 做的所有修改：
 
 ```cs
 private class MySaveHandler : SaveRequestHandler<MyRow> { }
@@ -135,7 +135,7 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
 private class MyListHandler : ListRequestHandler<MyRow> { }
 ```
 
-And add *IMultiTenantRow* interface to *RoleRow*:
+并且在 *RoleRow* 添加 *IMultiTenantRow* 接口：
 
 ```cs
 namespace MultiTenancy.Administration.Entities
@@ -153,4 +153,4 @@ namespace MultiTenancy.Administration.Entities
 }
 ```
 
-You should get the same result with much less code. Declarative programming is almost always better.
+使用更少的代码得到相同的结果。声明式编程几乎总是更好的选择。

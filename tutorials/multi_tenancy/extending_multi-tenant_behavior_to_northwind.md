@@ -1,8 +1,8 @@
-# Extending Multi-Tenant Behavior To Northwind
+# 扩展多租户行为到 Northwind 
 
-As now we have a behavior handling repository details, we just need to add *IMultiTenantRow* interface to rows and add *TenantId* property.
+由于我们现在有一个行为处理仓储的详细信息，我们只需在行（rows）实现 *IMultiTenantRow* 接口并添加 *TenantId* 属性。
 
-Start with *SupplierRow.cs*:
+从 *SupplierRow.cs* 开始：
 
 ```cs
 namespace MultiTenancy.Northwind.Entities
@@ -35,7 +35,7 @@ namespace MultiTenancy.Northwind.Entities
 }
 ```
 
-When you these changes in *SupplierRow* and build, you'll see that *tenant2* can't see suppliers from other tenants in suppliers page.
+当你在 *SupplierRow* 做这些更改并生成后，你将看到 *tenant2* 不能在供应商页面看到其他租户的供应商。
 
-Now repeat these for *EmployeeRow*, *CategoryRow*, *CustomerRow*, *ShipperRow*, *OrderRow*, *ProductRow*, *RegionRow* and *TerritoryRow*.
+现在，在 *EmployeeRow*， *CategoryRow*， *CustomerRow*， *ShipperRow*， *OrderRow*， *ProductRow*， *RegionRow* 和 *TerritoryRow* 重复这些修改。
 

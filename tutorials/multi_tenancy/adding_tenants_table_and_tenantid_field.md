@@ -1,12 +1,12 @@
-# Adding Tenants Table and TenantId Field
+# 添加租户（Tenants）表和 TenantId 字段 
 
-We need to add a TenantId field to all tables, to isolate tenants from each other.
+为了租户间相互独立，我们需要把 TenantId 字段添加到所有表中。 
 
-So, we first need a Tenants table. 
+因此，我们先添加一个租户（Tenants）表。 
 
-As Northwind tables already have records, we'll define a primary tenant with ID 1, and set all existing records TenantId to it.
+因为 Northwind 表已经有记录，我们将定义一个 ID 为 1 的主租户，并把所有现有记录的 TenantId 设为该值。
 
-It's time to write a migration, actually two migrations, one for Northwind and one for Default database.
+是时候写迁移类，实际上有两个迁移类：一个是 Northwind ，另一个是 Default 数据库。 
 
 **DefaultDB_20160110_092200_MultiTenant.cs:**
 
@@ -61,9 +61,9 @@ namespace MultiTenancy.Migrations.DefaultDB
 }
 ```
 
-I have created Tenants table in Default database where user tables are. Here we add 3 predefined tenants. We actually only need first one with ID *1*.
+我已经在用户（user）表所在的 Default 数据库创建租户（Tenants）表，并在该表添加 3 个预定义的租户。实际上我们只需要 ID 为 *1* 的第一个租户。
 
-We didn't add TenantId column to tables like UserPermissions, UserRoles, RolePermissions etc, as they instrinsicly have TenantId information through their UserId or RoleId.
+我们没有在一些表（如 UserPermissions、 UserRoles、 RolePermissions 等）添加 TenantId 列，因为他们可以通过 UserId 或 RoleId 获取 TenantId 信息。
 
 **NorthwindDB_20160110_093500_MultiTenant.cs:**
 

@@ -1,23 +1,23 @@
-# How To: Enable Script Bundling
+# 如何启用脚本合并（Script Bundling）
 
-In Serene template there are about 3MB+ of javascript files which are included by default in _LayoutHead.cshtml.
+在 Serene 模板中，_LayoutHead.cshtml 默认包含了 3MB+ 的 javascript 引用文件。
 
-This might cause bandwidth and performance problems for some systems, especially when a Serenity based site is accessed from mobile devices.
+这可能导致一些系统出现带宽和性能问题，特别是使用移动设备访问基于 Serenity 的站点。 
 
-There are several ways to handle these problems, like minification and gzipping to decrease script size, bundling to pack scripts into fewer files, thus reduce number of requests.
+有几种方式可以处理这些问题，如压缩文件以减少脚本大小；合并打包脚本到较少的文件，从而减少请求的数量。
 
-You might prefer to use tools like Webpack, Grunt, Gulp, UglifyJS etc, but in case you want a simpler and effective solution with much less manual steps, Serenity comes with a script bundling and minification / compression system out of the box. 
+你可能更喜欢使用工具，如 Webpack，Grunt，Gulp，UglifyJS 等，但如果你想要更简单有效且更少手工操作的解决方案，Serenity 自带的脚本合并和压缩系统可开箱即用。 
 
-> Please note that this feature requires Serenity 2.0.13+
+> 请注意，该功能要求  Serenity 2.0.13+ 。
 
 
 ### ScriptBundles.json
 
-First, you need a *ScriptBundles.json* file under *MyProject.Web/scripts/site* folder. ScriptBundles.json configures which script bundle will contain which files when bundling is turned on. 
+首先，你需要在 *MyProject.Web/scripts/site* 文件夹下添加一个文件 *ScriptBundles.json*。ScriptBundles.json 配置启用合并时，合并脚本将包含哪些文件。 
 
-This file is included by default in Serene template 2.0.13+ and looks like this:
+在 Serene 模板 2.0.13+ 中默认包含该文件，它看起来像：
 
-> Unless you want to add some custom scripts to bundles, you don't need to modify this file.
+> 除非你想要向包中添加一些自定义的脚本，否则你不需要修改此文件。
 
 ```json
 {
@@ -68,9 +68,9 @@ This file is included by default in Serene template 2.0.13+ and looks like this:
 }
 ```
 
-Here we define two distinct bundles, *Libs* and *Site*, corresponding to *Bundle.Libs.js* and *Bundle.Site.js* dynamic script files.
+在这里我们定义两个不同的合并配置，*Libs* 和 *Site*，对应于动态脚本文件：
 
-*Bundle.Site.js* is configured to contain these three JS files (in the listed order):
+*Bundle.Site.js* 配置为包含这三个 JS 文件（在列出的顺序）：
 
 ````
 "~/Scripts/adminlte/app.js",
@@ -78,31 +78,31 @@ Here we define two distinct bundles, *Libs* and *Site*, corresponding to *Bundle
 "~/Scripts/Site/Serene.Web.js"
 ```
 
-While *Bundle.Libs.js* contains all other javascript files.
+而 *Bundle.Libs.js* 包含所有其他 javascript 文件。
 
-> Here we used 2 bundles by default, but it is possible to use one, three or more in case you need a different configuration. Just be careful about dependencies.
+> 默认情况下，我们这里使用 2 个合并包（bundles），但如果你需要不同的配置，只要注意依赖关系，它也可以使用一个、 三个或更多的合并包。
 
-Here, the ordering inside a bundle (package) is very important. You must include scripts in the order they appear in your *_LayoutHead.cshtml*. 
+在这里，合并包（bundle）内的顺序是非常重要的。必须按在 _LayoutHead.cshtml 出现的顺序包含脚本。 
 
-When you will add another custom script, make sure that it is placed after all its dependencies. 
+在你添加另外的客户脚本时，请确保把它放在所有依赖脚本后面。 
 
-> For example, if you include a jquery plugin before jquery is loaded itself, you'll have errors.
+> 例如，如果在 jquery 前加载 jquery 插件，你将得到错误。 
 
-Also make sure that you don't include same file in two bundles.
+同时，也要确保在两个合并包（bundles）中不能包含同一文件。
 
 
 ### Enabling Bundling
 
-You should enable bundling (especially minification) only in production. Otherwise it might become very difficult to debug Javascript.
+你应该只在生产发布时启用合并（特别是压缩）。否则 Javascript 将会难以调试。
 
-To enable bundling, just change *Enabled* property of *ScriptBundling* application setting in your web.config to true:
+为了启用合并，只需要把 web.config 中 *ScriptBundling* 的 *Enabled* 属性改为 true：
 
 ```xml
 <add key="ScriptBundling" value="
    { Enabled: true, Minimize: false, UseMinJS: false }" />
 ```
 
-When *Enabled* is false (default) system will do nothing, and you'll work as usual with your script includes. And your page source looks like this:
+当 *Enabled* 是 false （默认情况）时，系统不会做任何事，并且你包含的脚本是未经压缩的。你的页面源代码看起来是这样的：
 
 ```xml
 <script src="/Scripts/pace.js?v=..."></script>
@@ -119,7 +119,7 @@ When *Enabled* is false (default) system will do nothing, and you'll work as usu
 ...
 ```
 
-When *Enabled* is true, it will become like this one:
+当 *Enabled* 为 true 时，脚本将被合并成为：
 
 ```xml
 <script src="/DynJS.axd/Bundle.Libs.js?v=..."></script>
@@ -128,16 +128,16 @@ When *Enabled* is true, it will become like this one:
 ```
 
 
-These two bundles are generated in memory and contains all other script files configured in ScriptBundles.json file.
+这两个包在内存中生成，并包含所有在 ScriptBundles.json 文件配置的脚本。
 
-They are also compressed with GZIP and cached in memory (in gzipped form), so now our scripts will consume much less bandwidth and will cause fewer requests to server.
+他们同样使用 GZIP 压缩并在内存中缓存（以压缩的形式），因此我们的脚本将消耗更少的带宽和服务请求。
 
-Now our script files will consume 600KB, instead of 3000KB before, a %80 reduction, not bad...
+现在，我们的脚本文件压缩到 600KB，而不是之前的 3000KB，减少了 80% 的大小。
 
 
 ### Enabling Minification
 
-After enabling bundling, you may also enable minification of scripts with the same web.config setting. Set *Minimize* property to true:
+在启用合并之后，你也可以在  web.config 设置中启用脚本压缩，把 *Minimize* 属性设置为 true:  
 
 
 ```xml
@@ -146,37 +146,37 @@ After enabling bundling, you may also enable minification of scripts with the sa
 ```
 
 
-> Please note that *Minimize* property only works when *Enabled* is true, thus when bundling is enabled.
+> 请注意，*Minimize* 属性只有同时启用合并属性才能工作。
 
-UglifyJS library is used for minification. This will be applied before bundling / gzipping so our bundles will become about %40 smaller, but will be much harder to read, so enable this only in production.
+UglifyJS 库是用来压缩 js 文件的。它被用在 合并/压缩 之前，因此我们的合并将会减少 40%，但是更难以阅读，因此只在生产发布时启用压缩设置。
 
-Now our bundled and minified script files will consume 375KB, instead of 3000KB before, a %87 reduction, or 1/8 the initial size.
+现在我们合并及压缩后的脚本文件将变为 375 KB，而不是之前的 3000 KB，与初始大小相比降低了 87% 或 1/8。
 
 ### UseMinJS Setting
 
-Minification might take some time, and first request to your site might take around 5-40 seconds more, depending on speed of your server.
+压缩操作将花点时间，并且第一次请求站点时，根据服务器的速度，可能需要花费 5-40 秒甚至更长时间。
 
-Other requests will not be affected as minification is only performed once at application start.
+由于压缩只在应用程序启动时执行一次，所以不会影响其他请求。
 
-Anyway, if you still need more performance at first request, you may ask Serenity to reuse already minified files in disk, if they are available.
+无论如何，如果在第一个请求时，你还需要更高的性能，你可以要求 Serenity 重用在磁盘上可用的已压缩文件。
 
-Set *UseMinJS* to true:
+把 *UseMinJS* 设置为 true： Set *UseMinJS* to true:
 
 ```xml
 <add key="ScriptBundling" value="
     { Enabled: true, Minimize: true, UseMinJS: true }" />
 ```
 
-When this setting is ON, before minifying a file, let's say *jquery-ui-1.11.4.js*, Serenity will first check to see if a *jquery-ui-1.11.4.min.js* already exists in disk. If so, instead of minifiying with UglifyJS, it will simply use that file. Otherwise, it will run UglifyJS.
+当该设置为 ON 时，在压缩文件前，例如 *jquery-ui-1.11.4.js*，Serenity 将首先检查 *jquery-ui-1.11.4.min.js* 文件是否存在磁盘上。如果存在，将直接使用该文件，而不再使用 UglifyJS 压缩文件。否则它将运行 UglifyJS 压缩文件。
 
-Serene comes with minified versions of almost all libraries, including Serenity scripts, so this setting will speed up initial start time.
+Serene 包含所有脚本库的压缩版本，也包括 Serenity 的脚本，因此该设置将加速初始启动时间。
 
-There is a little risk that you should be careful about. If you manually modify a library script, make sure you minify it manually and modify its .min.js file too, otherwise when bundling is enabled an old version of that script might run at production.
+还有一个你应该小心避免的风险。如果你手动修改脚本库，请确保你手动压缩并同时修改它的 .min.js 文件，否则启用合并时该脚本的旧版本可能会在生产环境中运行。
 
 
-### How Serenity Modifies Your _LayoutHead.cshtml Includes?
+### Serenity 如何修改 _LayoutHead.cshtml 包含的脚本文件？
 
-If you look at your *_LayoutHead.cshtml* you might spot lines like these:
+如果查看 *_LayoutHead.cshtml*，你可能会注意到文件中的这些代码： 
 
 ```
 @Html.Script("~/Scripts/jquery.cropzoom.js")
@@ -184,7 +184,7 @@ If you look at your *_LayoutHead.cshtml* you might spot lines like these:
 @Html.Script("~/Scripts/jquery.iframe-transport.js")
 ```
 
-When bundling is disabled, these statements generates such HTML code:
+当禁用合并时，这些声明生成如下 HTML 代码：
 
 ```html
 <script src="/Scripts/jquery.cropzoom.js"></script>
@@ -192,19 +192,19 @@ When bundling is disabled, these statements generates such HTML code:
 <script src="/Scripts/jquery.iframe-transport.js"></script>
 ```
 
-Html.Script is an extension method of Serenity, so when bundling is enabled, instead of generating this HTML code, Serenity will first check to see if this script is included in a bundle.
+Html.Script 是 Serenity 的扩展方法，因此当开启合并时，Serenity 将首先检查合并内容是否包含该脚本，而不是生成 HTML 代码。
 
-For the first script that is included in a bundle, let's say Bundle.Lib.js, Serenity will generate code below:
+假设合并包含 Bundle.Lib.js 脚本，Serenity 将生成下面的代码：
 
 ```html
 <script src="/DynJS.axd/Bundle.Libs.js?v=..."></script>
 ```
 
-But, for other Html.Script calls that is included in same bundle, Serenity will generate nothing. Thus, even though you call Html.Script 50 times, you'll get only one `<script>` output in page code.
+但是，对于同一合并中包括其他 Html.Script 调用，Serenity 将不会生成任何东西。因此，即使你调用 Html.Script 50 次，在页代码中只会得到一个 `<script>` 的输出。
 
 
-### What Is v=p53uqJ... In My Script Tags?
+### 脚本标签中的 v=p53uqJ... 是什么？  What Is v=p53uqJ... In My Script Tags?
 
-This is a version number, or HASH of your script. Whether bundling is enabled or not, when you use Html.Script, it will add these hash to your script includes. This hash allows browser to cache script until it changes. When content of a script changes, its hash will change too, so browser won't cache and use an older version.
+这是脚本的版本号或哈希值。不管是否启用合并，当你使用 Html.Script 时，都会在你包含的脚本中添加这些哈希值。该哈希值允许浏览器缓存脚本直到哈希值发生变化。当脚本内容更改时，其哈希值也会变化，所以浏览器不会缓存并使用较旧版本的脚本。
 
-This is the reason you'll never have script caching problems with Serenity apps.
+这就是使用 Serenity 应用程序不会有脚本缓存问题的原因。

@@ -1,28 +1,28 @@
-# How To: Authenticate With Active Directory or LDAP
+# 如何使用 Active Directory 或 LDAP 进行身份验证？
 
-Serene 1.8.12+ has some basic ActiveDirectory / LDAP integration samples.
+Serene 1.8.12+ 有一些基本的 ActiveDirectory / LDAP 集成示例。
 
-To enable them, you have to fill one of web.config settings.
+若要启用它们，你必须在 web.config 配置为两者之一。
 
-For ActiveDirectory add a appSetting key `ActiveDirectory` with contents like below:
+如果要启用 ActiveDirectory，则需要在 appSetting 添加 `ActiveDirectory` 键，内容如下：
 
 ```xml
 <add key="ActiveDirectory" 
      value="{ Domain: 'youractivedirectorydomain' }" />
 ```
 
-> If this doesn't work for your Active Directory server out of the box, you might have to modify *ActiveDirectoryService* class.
+> 如果该配置在你的 Active Directory 服务器中不能工作，你则需要修改 *ActiveDirectoryService* 类。
 
-When a AD user tries to login first time, Serene authenticates user with this domain, retrieves user details and inserts a user with type `directory` into users table.
+当 AD 用户第一次尝试登录，Serene 使用配置的域对用户进行身份认证，检索用户详细信息并把具有类型`目录（directory）`的用户插入到用户（users）表。
 
-AD password hash and user information is cached for one hour, so for one hour user can login with cached credentials, without even hitting AD. 
+AD 密码使用哈希算法加密，并且缓存用户信息一小时，所以用户可以在一小时内不用密码就可使用缓存凭据登录。 
 
-After that, user information is tried to be updated from AD. If an error occurs, user will be allowed to login with cached credentials.
+在那之后，尝试从 AD 更新用户信息。如果发生错误，将允许用户使用缓存凭据登录。
 
-These details can be seen and modified in AuthenticationService class.
+这些细节可以在 AuthenticationService 类中查看并修改。 
 
 
-To enable LDAP authentication (tested with OpenLDAP) you need to add a appSetting key `LDAP` to web.config:
+若要启用 LDAP 身份认证（使用 OpenLDAP 测试），你需要在 web.config 的 appSetting 节点添加 `LDAP` 键：
 
 ```xml
 <add key="LDAP" 
@@ -37,4 +37,4 @@ To enable LDAP authentication (tested with OpenLDAP) you need to add a appSettin
 />
 ```
 
-> Again, there are many different configurations of LDAP servers out there, so if this doesn't work for you, you might have to modify *LdapDirectoryService* class.
+> 再次，有许多不同  LDAP 服务器配置，所以如果你的配置不能正常工作，你可能需要修改 *LdapDirectoryService* 类。

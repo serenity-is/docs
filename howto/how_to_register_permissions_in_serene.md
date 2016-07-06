@@ -1,8 +1,8 @@
-# How To: Register Permissions in Serene
+# 如何在 Serene 中注册权限？
 
-Serene shows a list of permissions in user and role permission dialogs. To show your own permissions there, you need to use these permissions with one of the attributes below:
+Serene 在用户和角色权限对话框中显示权限列表，若要在这里显示你自己的权限，需要在你自己的权限中使用下面的特性：
 
-- Attributes that derive from PermissionAttributeBase:
+- 继承自 PermissionAttributeBase 的特性：
     - *ReadPermission*
     - *ModifyPermission*
     - *InsertPermission* 
@@ -10,57 +10,57 @@ Serene shows a list of permissions in user and role permission dialogs. To show 
     - *DeletePermission*
 
 
-- Page and Endpoint Access Control Attributes:
+- Page 和 Endpoint 访问控制特性：
     - *PageAuthorize*
     - *ServiceAuthorize*
 
-These attributes can be used with and located from one of these types:
+这些特性可以在下面类型中使用：
 
-- On top of *XYZRow* (Read, Write, Insert, Update, Delete permissions)
-- On top of *XYZPage* and in action methods (PageAuthorize)
-- On top of *XYZEndpoint* and in service actions (ServiceAuthorize)
+- *XYZRow*（可设置 Read, Write, Insert, Update, Delete 权限）
+- *XYZPage* 及操作方法（PageAuthorize）
+- *XYZEndpoint* 及服务操作（ServiceAuthorize）
 
-When you use a permission key with one of such attributes, Serene will automatically discover them using reflection at application start.
+当你在这些属性中使用许可键（permission key），Serene 将在应用程序启动时使用反射自动检测它们。
 
-> There is a PermissionKeys class in Serene. Some users expected that when they write their permission keys in this class, they will be discovered. 
+> PermissionKeys 是 Serene 的一个类。一些用户希望在该类中写自己的许可键也会被检测。 
 
-> But, PermissionKeys class is only there for intellisense purposes, it is ignored by Serene.
+> 但是，PermissionKeys 类只是为了智能提示，它被 Serene 忽略。
 
-If you don't use a permission key with any of them but still want to show it in permission dialogs, you can use *RegisterPermission* attribute on assembly (write this anywhere in YourProject.Web):
+如果你不使用其中任何的许可键，但仍然想在权限对话框中显示它，你可以在程序集中使用 RegisterPermission 特性（可在 YourProject.Web 任何地方使用）︰
 
 ```cs
 [assembly: Serenity.ComponentModel.RegisterPermissionKey("MySpecialPermissionKey")]
 ```
 
-## Organizing Permission Tree
+## 组织权限树
 
-To create permissions in tree hierarchy, use colon (:) as a separator in your permission keys:
+若要在树层次结构中创建权限，在你的许可键中使用冒号（:）作为分隔符：
 
 - MyModule:SubModule:General
 - MyModule:SubModule:Permission1
 - MyModule:SubModule:Permission2
 
-These keys will be shown under MyModule / SubModule category. Thus their category keys will be:
+这些键会在  MyModule / SubModule 类别下显示。因此它们的类别是： 
 
 - MyModule:SubModule:
 
-> Category keys ends with colon. Don't use permission keys that ends with colon.
+> 类别键(Category keys) 以冒号结束，不要使用以冒号结尾的许可键。 
 
-Please don't use permission keys that matches category keys. If you use such keys, for example *MyModule:SubModule* it won't be shown under *MyModule / SubModule* category but next to it at same level.
+请不要使用匹配类别键的许可键。如果你使用这样的键，如 *MyModule:SubModule*，它不会在  MyModule / SubModule 类别下显示而会在同一级别中显示。 
 
-If you need a generic permission for such a category, use something like *MyModule:SubModule:General*.
+如果你需要类别使用一个通用权限（generic permission），可以使用 *MyModule:SubModule:General*。
 
-> *General* has no special meaning, you can use Common, Module, View, whatever you like.
+> *General* 没有特殊的含义，若你喜欢，也可以使用 Common， Module， View。 
 
-## Handling Category Display Texts
+## 处理类别的显示文本 
 
-As categories are automatically determined from permission keys, they don't have a user friendly display text for them.
+因为类别由许可键自动决定，可能没有友好的显示文本。
 
-You need to add display texts for them using localization system.
+你需要使用本地化系统为它们添加显示文本。
 
-> If you don't need localization, just add texts to site.texts.invariant.json
+> 如果你不需要本地化，只需要在 site.texts.invariant.json 添加文本。
 
-For example in site.texts.invariant.json file, there are such keys:
+例如，在 site.texts.invariant.json 文件中有这样的键值对：
 
 ```json
     "Permission.Administration:": "Administration",
@@ -73,6 +73,6 @@ For example in site.texts.invariant.json file, there are such keys:
     "Permission.Northwind:General": "[General]"
 ```
 
-The keys ending with colon (:), like *Administration:* and *Customer:* corresponds to categories and these are their display texts.
+以冒号结尾的键，如*Administration:* 和 *Customer:* 对应类别显示的文本。
 
-You need to add texts for categories to invariant language at minimum. You may also add to other languages, if you want localization.
+你需要将类别文本添加到固定的语言。如果你想要本地化，也可以添加其他语言。

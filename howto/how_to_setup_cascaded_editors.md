@@ -1,18 +1,18 @@
-# How To: Setup Cascaded Editors
+# 如何设置级联编辑器（Cascaded Editors）？
 
-You might need multi-level cascaded editors like Country => City, Course => Class Name => Subject.
+你可能需要多级级联的编辑器，如 国家 => 城市， 课程 => 班级 =》 科目。
 
-Starting with Serenity 1.8.2, it's rather simple. Lookup editors have this integrated functionality.
+从 Serenity 1.8.2 开始，级联编辑将变得简单。检索编译器（Lookup editors）已经集成了该功能。
 
-> For versions before 1.8.2, it was also possible, and there was some samples in Serene, but you had to define some editor classes to make it work.
+> 在 1.8.2 之前的版本，也可以实现该功能，并且在 Serene 中也有一些示例，但为使它工作，你需要定义一些编辑器类。
 
-Let's say we have a database with three tables, Country, City, District:
+假设我们的数据库有三张表：Country、 City、District：
 
 * **Country Table**: CountryId, CountryName
 * **City Table**: CityId, CityName, CountryId
 * **District Table**: DistrictId, DistrictName, CityId
 
-First make sure you generate code for all three tables using Sergen, and you have a `[LookupScript]` attribute on all of them:
+首先，确保你已经使用 Sergen 为这三张表生成代码，并且都含有 `[LookupScript]` 特性： 
 
 
 ```cs
@@ -92,9 +92,9 @@ public sealed class DistrictRow : Row...
 }
 ```
 
-Make sure you add `LookupInclude` attribute to CityId field of DistrictRow, and CountryId field of CityRow. We need them to be available at client side, otherwise they are not included by default in lookup scripts.
+请确保在 DistrictRow 的 CityId 字段和 CityRow 的 CountryId 字段添加 `LookupInclude` 特性。我们在客户端需要它们，否则在默认情况下,它们不包含在检索脚本中。
 
-If you wanted to edit these fields as cascaded lookup editors in a form, e.g. CustomerForm, you would set them up like this:
+如果你想在表单（如 CustomerForm）中以级联检索的形式编辑这些字段。你需要把它们设置为：
 
 ```cs
 [FormScript("MyModule.Customer")]
@@ -117,21 +117,21 @@ public class CustomerForm
 }
 ```
 
-> You could also set these attributes in CustomerRow
+> 你应该同样在 CustomerRow 中设置这些特性。
 
-Here, *CascadeFrom* attribute tells city editor, ID of the parent editor that it will bind to (cascade). 
+在这里，*CascadeFrom* 特性告诉市（city）编辑器，它将绑定 （级联） 父编辑器的 ID。 
 
-When this form is generated, *CountryId* field will be handled with an editor with ID *CountryId*, so we set *CascadeFrom* attribute of *CityId* lookup editor to that ID.
+当生成这个表单时，*CountryId* 字段将被 ID 为 *CountryId* 的编辑器处理。所以我们将 *CityId* 检索编辑器的 *CascadeFrom* 特性设置为该 ID。
 
-*CascadeField* determines the field to filter cities on. Thus, when country editor value changes, city editor items will be filtered on their *CountryId* properties like this:
+*CascadeField* 决定城市过滤器所在的字段。因此，当国家编辑器的值改变时，城市编辑器的项目也将被 *CountryId* 过滤，如： 
 
 ```
    this.Items.Where(x => x.CountryId == CountryEditorValue)
 ```
 
-> If *CascadeFrom* and *CascadeField* attributes are same, you only need to specify *CascadeFrom*, but i wanted to be explicit here.
+> 如果 *CascadeFrom* 和 *CascadeField* 特性是一样的，你只需要指定 *CascadeFrom*。 
 
-If you wanted to add these cascaded editors to filter bar of customer grid, in CreateToolbarExtensions method of CustomerGrid.cs, do this:
+如果你想在客户网格列表的筛选栏添加这些级联编辑器，在 CustomerGrid.cs 的 CreateToolbarExtensions 方法中执行此操作：
 
 ```cs
 AddEqualityFilter<LookupEditor>("CountryId",
@@ -158,6 +158,6 @@ AddEqualityFilter<LookupEditor>("DistrictId",
 
 ```
 
-> Here i suppose you have CountryId, CityId and DistrictId fields in CustomerRow.
+> 在这里，我假设在 CustomerRow 有 CountryId、 CityId 和 DistrictId 字段。 
 
-Now you have useful cascaded editors for both editing and filtering.
+现在你的编辑和过滤都有可用的多级编辑器。

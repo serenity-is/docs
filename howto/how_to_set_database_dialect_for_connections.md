@@ -1,16 +1,16 @@
-# How To: Set Database Dialect for Connections
+# 如何设置连接的数据库方言（Database Dialect）
 
-Sometimes, automatic dialect detection using providerName may not work you, or you might want to use SqlServer2000 or SqlServer2005 dialect for some connections.
+有时，使用 providerName 的自动方言检测可能不会正常工作，或对于某些连接，你想要使用 SqlServer2000 或 SqlServer2005 方言。
 
-It is possible to set a default global dialect, but this doesn't override automatic detection:
+可以设置默认的全局方言，但这不会覆盖自动检测：
 
 ```
 SqlSettings.DefaultDialect = SqlServer2005Dialect.Instance;
 ```
 
-As provider name for "Northwind" and "Default" connections is "System.Data.SqlClient", Serenity will automatically set their dialects to SqlServer2012, even if you override global dialect.
+由于 "Northwind" 和 "Default" 连接的提供者名称是 "System.Data.SqlClient"，即使你重写了全局方言，Serenity 也将自动把它们的方言设置为 SqlServer2012。
 
-But it is possible to change dialect on connection key basis:
+但是也可能在基本的连接键（connection key）中修改方言：
 
 ```cs
     public static partial class SiteInitialization
@@ -26,7 +26,7 @@ But it is possible to change dialect on connection key basis:
                     SqlServer2005Dialect.Instance;
 ```
 
-Serenity 1.8.8+ also supports setting this through an application configuration entry:
+Serenity 1.8.8+ 也支持通过应用程序配置条目设置：
 
 ```xml
 <configuration>
@@ -42,9 +42,9 @@ Serenity 1.8.8+ also supports setting this through an application configuration 
 ```
 
 
-### Warning About CONCAT and Other Similar Expressions In Rows
+### 在行（Rows）中提示关于 CONCAT 及其他类似信息的警告
 
-Serene has to support a variety of database engines, including MySQL, Postgress etc. These databases don't have a string plus (+) operator like MsSqlServer. Thus, in Northwind, CONCAT function is used in place of '+' operator:
+Serene 已经支持多种数据库引擎，包括  MySQL，Postgress 等。这些数据库没有像 MsSqlServer 的字符串加号（+）运算符。因此，在 Northwind 中，用 CONCAT 函数来替代 + 运算符：
 
 ```cs
 [Expression("CONCAT(T0.[FirstName], CONCAT(' ', T0.[LastName]))")]
@@ -55,7 +55,7 @@ public String FullName
 }
 ```
 
-CONCAT is available after Sql Server 2012. So if you are going to use an older version of SQL server, e.g. 2005 or 2008, replace these expressions with such:
+CONCAT 在 Sql Server 2012 之后的版本是可用的。所以如果你要使用旧版本的 SQL server，例如 SQL server 2005 或 SQL server 2008 ，这些表达式将被替换成：
 
 ```cs
 [Expression("T0.[FirstName] + ' ' + T0.[LastName]")]

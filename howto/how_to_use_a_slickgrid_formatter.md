@@ -1,18 +1,18 @@
-# How To: Use a SlickGrid Formatter
+# 如何使用 SlickGrid 格式化器（Formatter）
 
 
-** This section is pending update for TypeScript **
+** 本节为 TypeScript 挂起更新  **
 
 
 
-To use a SlickGrid formatter function, like percent complete bar formatter at *%Complete* column of SlickGrid example:
+使用 SlickGrid 格式化器功能，如在 SlickGrid 列中显示完成程度的百分比进度条示例：
 
 http://mleibman.github.io/SlickGrid/examples/example2-formatters.html
 
 
-### Including Required Resources
+### 包含必须的资源
 
-First include javascript file containing these formatters in your *_LayoutHead.cshtml* file (MyProject.Web/Views/Shared/_LayoutHead.cshtml):
+首先在 *_LayoutHead.cshtml* (MyProject.Web/Views/Shared/_LayoutHead.cshtml)文件中包含这些格式化程序引用：
 
 ```cshtml
 //...
@@ -22,7 +22,7 @@ First include javascript file containing these formatters in your *_LayoutHead.c
 //...
 ```
 
-You also need to include following CSS from example.css (can be inserted in site.less):
+同样需要包含下面的 CSS（来自 example.css，可以插入到 site.less）。
 
 ```css
 .percent-complete-bar {
@@ -33,10 +33,10 @@ You also need to include following CSS from example.css (can be inserted in site
 }
 ```
 
-### Declaring a Serenity DataGrid Formatter
+### 定义 Serenity 的 DataGrid 格式化器
 
 
-Let's say we have *StudentCourseGrid* with a *CourseCompletion* column that we wan't to use *Slick.Formatters.PercentCompleteBar* formatter with. 
+假设我们想在 *StudentCourseGrid* 的 *CourseCompletion* 列使用 *Slick.Formatters.PercentCompleteBar* 格式化。 
 
 ```cs
 public class StudentCourseColumns
@@ -47,9 +47,9 @@ public class StudentCourseColumns
 }
 ```
 
-To reference a SlickGrid formatter at server side, you need to declare a formatter type for Serenity grids.
+要在服务器端引用 SlickGrid 格式化器，需要为 Serenity 网格定义一个格式化器类型。
 
-In MyApplication.Script project, next to StudentCourseGrid.cs for example, define a file (PercentCompleteBarFormatter.cs) with contents:
+以在 MyApplication.Script 项目的 StudentCourseGrid.cs 旁定义一个文件（PercentCompleteBarFormatter.cs）为例，该文件内容如下：
 
 ```cs
 using Serenity;
@@ -70,9 +70,9 @@ namespace MyApplication
 }
 ```
 
-> Replace MyApplication with your root namespace (solution name).
+> 使用你的根命名空间（解决方案名称）替换 MyApplication 。
 
-Now you can reference it at server side:
+现在你可以在服务端引用它：
 
 ```cs
 public class StudentCourseColumns
@@ -83,14 +83,14 @@ public class StudentCourseColumns
 }
 ```
 
-Rebuild your project and you will see that CourseCompletion column has a percentage bar just like in SlickGrid example.
+重新生成你的项目，你将看到 CourseCompletion 列有一个像 SlickGrid 示例的百分比栏。 
 
 
-### Getting Intellisense and Compile Time Checking To Work
+### 获得智能感知和编译时检查 
 
-To get intellisense for PercentCompleteBarFormatter server side (so to avoid using magic strings), you should transform T4 templates (make sure solution builds successfully before transforming).
+要在 PercentCompleteBarFormatter 服务端获得智能感知（可避免使用魔术字符串），你应该转换 T4 模板（在转换之前请确保成功生成解决方案）。 
 
-After this you can reference it like this server side:
+在此之后，你可以在服务器端像下面这样引用它：
 
 
 ```cs
@@ -103,10 +103,10 @@ public class StudentCourseColumns
 ```
 
 
-### Alternate Option (Not Recommended)
+### 替代方案（不建议）
 
 
-It is also possible to set SlickGrid column formatter function directly in script side code without defining a Serenity formatter class, e.g. in *StudentCourseGrid.cs* by overriding its *GetColumns* method:
+也可以不用定义 Serenity 格式化器类，例如在 *StudentCourseGrid.cs* 通过重写其 *GetColumns* 方法，直接在脚本代码中设置 SlickGrid 列格式化器功能：
 
         protected override List<SlickColumn> GetColumns()
         {
@@ -116,4 +116,4 @@ It is also possible to set SlickGrid column formatter function directly in scrip
             return columns;
         }
 
-This is not reusable but saves you from defining a formatter class.
+该方式是不可重用的，但可省去定义格式化器类。

@@ -1,4 +1,4 @@
-# 如何设置连接的数据库方言（Database Dialect）
+# 如何设置连接的数据库方言（Database Dialect）?
 
 有时，使用 providerName 的自动方言检测可能不会正常工作，或对于某些连接，你想要使用 SqlServer2000 或 SqlServer2005 方言。
 

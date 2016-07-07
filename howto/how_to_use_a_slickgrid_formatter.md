@@ -1,4 +1,4 @@
-# 如何使用 SlickGrid 格式化器（Formatter）
+# 如何使用 SlickGrid 格式化器（Formatter）？
 
 
 ** 本节为 TypeScript 挂起更新  **

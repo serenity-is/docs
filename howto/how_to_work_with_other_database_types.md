@@ -1,21 +1,21 @@
-# How To: Work With Other Database Types
+# 如何使用其他类型的数据库？
 
-Serenity has a dialect system for working with database types other than Sql Server.
+Serenity 有方言系统（dialect system）以支持在非 Sql Server 的其他数据库中工作。  
 
-> Dialect system is currently an experimental feature that is constantly improved. Although it will probably work, you might have some minor problems that you should report at Serenity GitHub repository.
+> 方言系统（Dialect system）目前还是一项在不断完善的实验性功能。虽然它也能工作，但如果有任何问题，你可能在 Serenity 的 GitHub 向我们反馈。
 
-If you need to support multiple database types, just by changing connection strings in web.config, you should be careful about not using database specific functions in expressions and avoid using reserved words.
+如果你需要支持多种数据库类型，只需在 web.config 修改连接字符串，并在表达式中小心使用数据库特定的功能及避免使用保留的关键字。 
 
 
 ## PostgreSQL
 
-### Registering Npgsql Provider
+### 注册 Npgsql 提供者
 
-PostgreSQL has a .NET provider named Npgsql. You need to first install it in MyProject.Web:
+PostgreSQL 有一个名为 Npgsql 的 .NET 提供者。你首先需要在 MyProject.Web 中安装该提供者：
 
 > Install-Package Npgsql -Project MyProject.Web
 
-If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file:
+如果你之前没有在 GAC/machine.config 安装该提供者，或者不想在此安装，你需要在 web.config 文件配置：
 
 ```xml
 <configuration>
@@ -34,11 +34,11 @@ If you didn't install this provider in GAC/machine.config before, or don't want 
   // ...
 ```
 
-### Setting Connection Strings
+### 设置连接字符串 
 
-Next step is to replace connection strings for databases you want to use with Postgres:
+下一步是把连接字符串修改为 Postgres 数据库的配置：
 
-> Make sure you replace connection string parameters with values for your server
+> 确保你使用自己的服务器信息替换连接字符串的对应参数值。
 
 ```xml
 <connectionStrings>
@@ -55,19 +55,19 @@ Next step is to replace connection strings for databases you want to use with Po
 
 ```
 
-> Please use lowercase database names like `serene_default_v1` as Postgres will always convert it to lowercase.
+> 由于 Postgres 总会将字母转换为小写，所以请使用小写的数据库名称，如 `serene_default_v1` 。 
 
-> Provider name must be `Npgsql` for Serenity to auto-detect dialect.
+> 提供者名称必须是 Npgsql ，以使 Serenity 自动检测方言。
 
-### Notes About Identifier Case Sensitivy
+### 注意标识符的大小写 
 
-PostgreSQL is case sensitive for identifiers. 
+PostgreSQL 的标识符区分大小写。 
 
-FluentMigrator automatically quotes all identifiers, so tables and column names in database will be quoted and case sensitive. This might cause problems when tables/columns are tried to be selected without quoted identifiers. 
+FluentMigrator 自动为所有标识符添加引号，所以数据库中的表和列名称将被添加引号并区分大小写。当试图检索不带引号的表或列标识符时，这可能会导致问题。 
 
-One option is to always use lowercase identifiers in migrations, but such naming scheme won't look so nice for other database types, thus we didn't prefer this way.
+一个选项是在迁移中始终使用小写字母标识符，但这种命名方案在其它数据库类型中不是很好，因此我们不喜欢这种方式。
 
-To prevent such problems with Postgres, Serenity has an automatic quoting feature, to resolve compability with Postgres/FluentMigrator, which should be enabled in application start method of SiteInitialization.cs:
+为了防止 Postgres 的这类问题，Serenity 有自动添加引号功能，以解决 Postgres/FluentMigrator 的兼容问题，但需要在应用程序的 SiteInitialization.cs 启动方法中启用：
 
 ```cs
 public static void ApplicationStart()
@@ -78,25 +78,25 @@ public static void ApplicationStart()
         Serenity.Web.CommonInitialization.Run();
 ```
 
-> Make sure it is before CommonInitialization.Run line
+> 确保在 CommonInitialization.Run 运行之前设置 AutoQuotedIdentifiers 。 
 
-This setting automatically quotes column names in entities, but not manually written expressions (with Expression attribute for example).
+该设置自动为实体的列名称添加引号，但不能应用在手工编写的表达式中（如，表达式特性）。
 
-Use brackets `[]` for identifiers in expressions if you want to support multiple database types. Serenity will automatically convert brackets to database specific quote type before running queries. 
+如果你想支持多数据库类型，在表达式中对标识符使用方括号 `[]` 。 Serenity 在运行查询之前，将自动把方括号转为数据库具体的引用类型（quote type）。
 
-You might also prefer to use double quotes in expressions, but it might not be compatible with other databases like MySQL.
+你可能还希望在表达式中使用双引号，但它不能与 MySQL 数据库兼容。
 
-### Setting Default Dialect
+### 设置默认方言 
 
-This step is optional. 
+这一步骤是可选的。 
 
-Serenity automatically determines which dialect to use, by looking at *providerName* of connection strings. 
+Serenity 通过检索连接字符串的 *providerName* 自动决定使用的方言。 
 
-It can even work with multiple database types at the same time. 
+它甚至可以在同一时间与多个数据库类型工作。 
 
-For example, Northwind might stay in Sql Server, while Default database uses PostgreSQL.
+例如，Northwind 使用 Sql Server，而 Default 使用 PostgreSQL。
 
-But, if you are going to use only one database type per site, you can register which you are going to use by default in SiteInitialization:
+但是，如果你打算每个站点只使用一种数据库类型，你可以在 SiteInitialization 注册默认使用的数据库类型。
 
 ```cs
 public static void ApplicationStart()
@@ -108,23 +108,23 @@ public static void ApplicationStart()
         Serenity.Web.CommonInitialization.Run();
 ```
 
-Default dialect is used when the dialect for a connection / entity etc. couldn't be auto determined. 
+当连接方言/实体等不能自动确定时，使用默认方言。 
 
-> This setting doesn't override automatic detection, it is just used as fallback.
+> 该设置不会覆盖自动检测，它只是被用作回退。
 
-## Launching Application
+## 启动应用程序 
 
-Now launch your application, it should automatically create databases, if they are not created manually before.
+现在启动你的应用程序，如果之前没有手工创建数据库，它将自动创建数据库。
 
-## Configuring Code Generator
+## 配置代码生成器 
 
-Sergen doesn't have reference to PostgreSQL provider, so if you want to use it to generate code, you must also register this provider with it.
+Sergen 没有 PostgreSQL 提供者的引用，因此如果你想使用它生成代码，你必须向其注册该提供者。
 
-Sergen.exe is an exe file, so you can't add a NuGet reference to it. We need to register this provider in application config file.
+Sergen.exe 是一个 exe 文件，因此你不能为它添加 NuGet 引用。我们需要在应用程序配置文件中注册该提供者。
 
-> It is also possible to register the provider in GAC/machine.config and skip this step completely.
+> 也可以在 GAC/machine.config 注册提供者并完全跳过此步骤。
 
-Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator.1.8.6/tools* and create a file named `Sergen.exe.config` next to it with contents below:
+定位到 Sergen.exe，该文件在 *packages/Serenity.CodeGenerator.1.8.6/tools* 目录下，并创建文件 `Sergen.exe.config` ，然后向其添加如下内容：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -146,21 +146,21 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
 </configuration>
 ```
 
-Also copy Npgsql.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your Postgres tables.
+把 Npgsql.dll 拷贝到与 Sergen.exe 同一文件夹。现在 Sergen 将可以为 Postgres 表生成代码。
 
-> You might want to remove `[public].` prefix for default schema from tablename/column expressions in generated rows if you want to be able to work with multiple databases.
+> 如果你想要能够使用多个数据库，你可能想删除 `[public].` 前缀，该前缀是生成的行（rows）中 tablename/column 表达式的默认 schema 。
 
 ## MySql
 
-> MySql support is available for Serene 1.8.13+
+> Serene 1.8.13+ 支持 MySql 
 
-### Registering MySql Provider
+### 注册 MySql 提供者
 
-MySQL has a .NET provider named MySql.Data. You need to first install it in MyProject.Web:
+MySQL 有一个名为 MySql.Data 的 .NET 提供者。你首先需要在 MyProject.Web 中安装该提供者：
 
 > Install-Package MySql.Data -Project MyProject.Web
 
-If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file (MySql.Data NuGet package already does this on install):
+如果你之前没有在 GAC/machine.config 安装该提供者，或者不想在此安装，你需要在 web.config 文件配置（MySql.Data NuGet 程序包在安装时已经为我们添加了该配置）：
 
 ```xml
 <configuration>
@@ -179,11 +179,11 @@ If you didn't install this provider in GAC/machine.config before, or don't want 
   // ...
 ```
 
-### Setting Connection Strings
+### 设置连接字符串
 
-Next step is to replace connection strings for databases you want to use with MySql:
+下一步是把连接字符串修改为 MySql 数据库的配置：
 
-> Make sure you replace connection string parameters with values for your server
+> 确保你使用自己的服务器信息替换连接字符串的对应参数值。
 
 ```xml
 <connectionStrings>
@@ -200,19 +200,19 @@ Next step is to replace connection strings for databases you want to use with My
 
 ```
 
-> Provider name must be `MySql.Data.MySqlClient` for Serenity to auto-detect dialect. Read notes above to override default dialect.
+> 提供者名称必须是 `MySql.Data.MySqlClient` ，以使 Serenity 自动检测方言。注意，上述重写默认方言。
 
-> MySql uses lowercase database (schema) and table names, but doesn't have the case sensitivity problem we talked about Postgres.
+> MySql 使用小写的数据库（schema）和表名称，但没有 Postgres 的区分大小写问题。
 
-### Configuring Code Generator
+### 配置代码生成器 
 
-Sergen doesn't have reference to MySql provider, so if you want to use it to generate code, you must also register this provider with it.
+Sergen 没有 MySql 提供者的引用，因此如果你想使用它生成代码，你必须向其注册该提供者。
 
-Sergen.exe is an exe file, so you can't add a NuGet reference to it. We need to register this provider in application config file.
+Sergen.exe 是一个 exe 文件，因此你不能为它添加 NuGet 引用。我们需要在应用程序配置文件中注册该提供者。
 
-> It is also possible to register the provider in GAC/machine.config and skip this step completely.
+> 也可以在 GAC/machine.config 注册提供者并完全跳过此步骤。
 
-Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator.1.8.6/tools* and create a file named `Sergen.exe.config` next to it with contents below:
+定位到 Sergen.exe，该文件在 *packages/Serenity.CodeGenerator.1.8.6/tools* 目录下，并创建文件 `Sergen.exe.config` ，然后向其添加如下内容：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -234,19 +234,19 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
 </configuration>
 ```
 
-Also copy MySql.Data.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your MySql tables.
+把 MySql.Data.dll 拷贝到与 Sergen.exe 同一文件夹。现在 Sergen 将可以为 Postgres 表生成代码。
 
 ## Oracle
 
-> Oracle support is available for Serene 2.2.2+
+> Serene 2.2.2+ 已支持 Oracle 数据库  
 
-### Registering Oracle Provider
+### 注册 Oracle 提供者 
 
-Oracle has a managed .NET provider named Oracle.ManagedDataAccess. You need to first install it in MyProject.Web:
+Oracle 有一个名为 Oracle.ManagedDataAccess 的托管 .NET 提供者。你首先需要在 MyProject.Web 中安装该提供者：
 
 > Install-Package Oracle.ManagedDataAccess -Project MyProject.Web
 
-If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file (Oracle.ManagedDataAccess NuGet package already does this on install):
+如果你之前没有在 GAC/machine.config 安装该提供者，或者不想在此安装，你需要在 web.config 文件配置（Oracle.ManagedDataAccess NuGet 程序包在安装时已经为我们添加了该配置）：
 
 ```xml
 <configuration>
@@ -265,9 +265,9 @@ If you didn't install this provider in GAC/machine.config before, or don't want 
   // ...
 ```
 
-### Creating Databases
+### 创建数据库
 
-Serene can't autocreate database (tablespace) for Oracle. You might create them yourself, or use a script like below (i used this for XE):
+Serene 不能在 Oracle 自动创建数据库（tablespace）。你需要自己创建它们，或者使用下面的脚本（我在 XE 运行该脚本）：
 
 ```sql
 CREATE TABLESPACE Serene_Default_v1_TABS 
@@ -300,9 +300,9 @@ GRANT CREATE TRIGGER TO Serene_Northwind_v1;
 GRANT UNLIMITED TABLESPACE TO Serene_Northwind_v1;
 ```
 
-### Setting Connection Strings
+### 设置连接字符串
 
-You might want to configure your data sources for ORACLE. I used Express Edition (XE) here:
+你可能想要为 ORACLE 配置你的数据源。我在这里用 Express Edition (XE)：
 
 ```xml
 <configuration>
@@ -320,9 +320,9 @@ You might want to configure your data sources for ORACLE. I used Express Edition
 </configuration>
 ```
 
-Next step is to replace connection strings for databases you want to use with Oracle:
+下一步是把连接字符串修改为 Oracle 数据库的配置：
 
-> Make sure you replace connection string parameters with values for your server
+> 确保你使用自己的服务器信息替换连接字符串的对应参数值。
 
 ```xml
 <connectionStrings>
@@ -336,8 +336,8 @@ Next step is to replace connection strings for databases you want to use with Or
 
 ```
 
-> Provider name must be `Oracle.ManagedDataAccess.Client` for Serenity to auto-detect dialect. Read notes above to override default dialect.
+> 提供者名称必须是 `Oracle.ManagedDataAccess.Client` ，以使 Serenity 自动检测方言。注意，上述重写默认方言。
 
-### Configuring Code Generator
+### 配置代码生成器 
 
-Sergen doesn't have support for Oracle yet, hopefully coming soon...
+Sergen 目前还不支持 Oracle，希望尽快支持…… 

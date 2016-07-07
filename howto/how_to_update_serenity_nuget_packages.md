@@ -1,4 +1,4 @@
-# 如何更新 Serenity NuGet 程序包 
+# 如何更新 Serenity NuGet 程序包？ 
 
 Serene 模板包含下面的 Serenity NuGet 程序包引用：
 

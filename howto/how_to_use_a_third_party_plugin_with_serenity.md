@@ -1,4 +1,4 @@
-# 如何在 Serenity 使用第三方插件？
+# 如何在 Serenity 中使用第三方插件？
 
 在 Serenity 应用程序使用第三方/自定义插件没有涉及特殊的步骤。你可以在 _LayoutHead.cshtml 包括第三方脚本和 CSS 并遵照官方文档的步骤。 
 

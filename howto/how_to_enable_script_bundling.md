@@ -1,4 +1,4 @@
-# 如何启用脚本合并（Script Bundling）
+# 如何启用脚本合并（Script Bundling）？
 
 在 Serene 模板中，_LayoutHead.cshtml 默认包含了 3MB+ 的 javascript 引用文件。
 

@@ -1,10 +1,10 @@
-# Service Locator &amp; Initialization
+# 服务定位器(Service Locator) &amp; 初始化
 
-Serenity uses the service locator pattern to abstract its dependencies and make it possible to work with your chosen libraries and service providers.
+Serenity 使用服务定位模式（service locator pattern）抽象其依赖，以使其可以与你选择的库（libraries）和服务提供者（service providers）一起工作。
 
-For example, Serenity doesn't care about how you store your users, but it can query current user through an abstraction (IAuthorizationService, IUserRetrieveService etc.)
+例如，Serenity 并不关心你是如何存储用户，但是它可以通过抽象（IAuthorizationService、 IUserRetrieveService 等）查询当前用户。
 
-Similarly you may use Redis, Couchbase, Memcached or any other as distributed cache in your application. Serenity doesn't have a direct dependency on any of their client libraries. As soon as you implement IDistributedCache interface and register it with the service locator, Serenity will start working with your NoSQL database.
+与你在应用程序中使用 Redis、Couchbase、Memcached 或其他分布式缓存类似。只要实现 IDistributedCache 接口，并向其注册服务定位器，Serenity 便开始使用 NoSQL 数据库。 
 
-> Some might argue that Service Locator is an anti-pattern that should be avoided. An alternative to it would be the Dependency Injection pattern. But it seems unlogical having to know about every dependency (and dependencies of dependencies...) of an object to just be able to use it (you shouldn't have to know about details of what your mobile operator uses to send a simple SMS). Maybe DI is a sample of over-engineering.
+> 有些人可能认为服务定位器是一种反模式，应该避免使用该模式，并把它替换为依赖注入模式。但没必要了解对象的每个依赖（及依赖的依赖……），就可以使用它（你不必知道移动运营商如何发送短信的细节）。也许 DI 是过度设计（over-engineering）的示例。
 

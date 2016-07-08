@@ -1,8 +1,8 @@
-# Dependency Static Class
+# 静态依赖类 
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-Dependency class is the service locator of Serenity. All dependencies are queried through its methods:
+依赖类是 Serenity 的服务定位器（service locator）。所有依赖都通过其方法进行查询：
 
 ```cs
 public static class Dependency
@@ -18,44 +18,44 @@ public static class Dependency
 }
 ```
 
-In your application's start method (e.g. in global.asax.cs) you should initialize service locator by setting a dependency resolver (IDependencyResolver) implementation (an IoC container) with SetResolver method.
+在你应用程序的启动方法（如：global.asax.cs）中，你应该使用 SetResolver 方法设置依赖解析器（IDependencyResolver）的实现（IoC 容器）来初始化服务定位器。
 
-# Dependency.SetResolver Method
+# Dependency.SetResolver 方法 
 
-Configures the dependency resolver implementation to use.
+配置要使用的依赖解析器的实现。
 
-You can use IoC container of your choice but Serenity already includes one based on Munq:
+你可以使用你喜欢的 IoC 容器，但 Serenity 已经包含了基于 Munq 的 IoC 容器： 
 
 ```cs
 var container = new MunqContainer();
 Dependency.SetResolver(container);
 ```
 
-SetResolver methods return previously configured IDependencyResolver implementation, or null if none is configured before.
+SetResolver 方法返回之前配置的 IDependencyResolver 实现。如果之前没有配置，则返回 null。
 
-# Dependency.Resolver Property
+# Dependency.Resolver 属性 
 
-Returns currently configured IDependencyResolver implementation.
+返回当前配置的 IDependencyResolver 的实现。 
 
-Throws a InvalidProgramException if none is configured yet.
+如果尚未配置，则抛出 InvalidProgramException 异常。
 
-# Depency.HasResolver Property
+# Depency.HasResolver 属性
 
-Returns true if a IDependencyResolver implementation is configured through SetResolver. Returns false, if not.
+如果 IDependencyResolver 的实现已通过 SetResolver 配置，则返回 true。否则，返回 false。
 
-# Dependency.Resolve Method
+# Dependency.Resolve 方法 
 
-Returns the registered implementation for requested type.
+返回请求类型注册的实现。
 
-If no implementation is registered, throws a *KeyNotFoundException*.
+如果被注册的类型尚未实现，则抛出 *KeyNotFoundException* 异常。
 
-If no dependency resolver is configured yet, throw a *InvalidProgramException*
+如果尚未配置依赖解析器，则抛出 *InvalidProgramException* 异常。
 
-Second overload of Resolve method accepts a *name* parameter. This should be used if different providers are registered for an interface depending on scope.
+Resolve 方法的第二个重载接收一个 *name* 参数。如果不同提供者根据域（scope）为接口注册实现，就应使用这个重载方法。
 
-For example, Serenity has a IConfigurationRepository interface that can have different providers based on setting scope. Some settings might be *Application* scoped (shared between all servers for this application), while some might be *Server* scoped (each server might use a different unique identifier).
+例如，Serenity 有一个 IConfigurationRepository 接口，可以根据设置范围有不同的提供者。有些设置可能是 *应用程序* 范围（该应用程序的所有服务之间共享），而有些可能是 *服务* 范围（每个服务可能使用不同的唯一标识符）。
 
-So, to retrieve a IConfigurationRepository provider for each of these scopes, you would call the method like:
+因此，要为这些范围的每个域注册 IConfigurationRepository 提供者，你应该像下面这样调用方法：
 
 ```cs
 var appConfig = Dependency.Resolve<IConfigurationRepository>("Application");
@@ -63,8 +63,8 @@ var appConfig = Dependency.Resolve<IConfigurationRepository>("Application");
 var srvConfig = Dependency.Resolve<IConfigurationRepository>("Server");
 ```
 
-# Dependency.TryResolve Method
+# Dependency.TryResolve 方法
 
-This is functionally equivalent to Resolve method with one difference.
+该方法在功能上与 Resolve 方法相同，只是使用不同的方法实现。
 
-If a provider is not registered for requested type, or no dependency resolver is configured yet, TryResolve doesn't throw an exception, but instead returns null.
+如果请求类型没有注册提供者，或依赖解析器尚未配置，TryResolve 不会引发异常，而是返回 null。

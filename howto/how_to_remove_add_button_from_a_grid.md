@@ -1,6 +1,6 @@
 # How To: Remove Add Button from a Grid
 
-> ** This section was written for Saltaralle. For TypeScript version, see Basic Samples => Grids => Removing Add Button page in Serene**
+** 本节的 TypeScript 版本有待更新 **
 
 You can override *getButtons()* method in *MyGrid.ts*.
 

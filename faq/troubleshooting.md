@@ -1,39 +1,39 @@
-# Troubleshooting
+# 故障排除
 
-## Initial Setup
+## 初始设置
 
-**After you create a new Serene application and launch it, login screen doesn't show and you see an error message in console that says *Template.LoginPanel is not found*:**
+**在创建并启动新的 Serene 应用程序之后，不会显示登录页，而当你打开浏览器控制台，却得到一条错误消息：找不到 Template.LoginPanel：**
 
-You probably used an invalid solution name, like MyProject.Something that contains dot (.) 
+你可能使用了无效的解决方案名称，如 MyProject.Something （包含点'.'）。 
 
-Template system might not be able to locate templates when projects are named this way.
+当项目以这种方式命名时，模板系统将不能定位模板。
 
-Please don't use dot in solution name. You may rename solution after creation if required.
+请不要在解决方案名称中使用点符号（'.'），如果必须使用点符号，可在创建解决方案之后再重命名。
 
-## Compilation Errors
+## 编译错误
 
-**I'm getting several *ambiguous reference* errors after adding a file to Script project :**
+**在 Script 项目添加文件后，得到几个引用不明确的错误：**
 
-Remove *System.dll* reference from script project. Visual Studio adds this reference when you use *Add New File* dialog. Saltarelle Compiler doesn't work with such references, as it has a completely different runtime.
+从 script 项目移除 *System.dll* 引用。Visual Studio 在你使用 *添加新文件* 对话框时添加该引用。Saltarelle 编译器不能与该程序集一起工作，因为它有完全不一样的运行时。 
 
-Please use copy/paste to create code files in Script project.
+在 Script 项目中，请使用复制/粘贴的方式创建代码文件。
 
 **Error: System.ComponentModel.DisplayName attribute exists in both ...\Serenity.Script.UI.dll and ...\v2.0...\System.dll** 
 
-Same as above, remove *System.dll* reference from script project.
+与上面一样，从 Script 项目移除 *System.dll* 引用。 
 
-## Runtime Errors
+## 运行时错误
 
-**I'm getting *NotImplementException* when uploading files, or adding notes:**
+**当上传文件或添加备注（notes）时，得到 *NotImplementException* 的异常：**
 
-Such features requires a table with integer identity column. String/Guid primary key support is added in recent Serenity versions, and some old behaviors doesn't work with such keys.
+该功能需要表的标识列是整数。在最近版本的 Serenity 中，已添加对 String/Guid 主键的支持，但一些旧行为（old behaviors）不能与这种键一起工作。
 
 
-## SQL and Connections
+## SQL 和连接字符串
 
-**When i change page in grid, i'm getting error, "Incorrect syntax near 'OFFSET'. Invalid usage of the option NEXT in the FETCH statement:**
+**当我在网格列表切换页时，得到错误："'OFFSET' 附近语法错误，在 FETCH 声明中使用无效 NEXT 项 "：**
 
-Your SQL server version is 2008 or older. By default, SQL Server connections use SQL2012 dialect. Do something like below for your connections in SiteInitialization.cs and your dialect for all to SqlServer2005 or SqlServer2008:
+你的 SQL server 是 2008 或更旧的版本。默认情况下，SQL Server 连接使用 SQL2012 方言。在 SiteInitialization.cs 中把连接修改为  SqlServer2005 或 SqlServer2008 方言，如：
 
 ```cs
   SqlConnections.GetConnectionString("Default").Dialect =
@@ -41,37 +41,37 @@ Your SQL server version is 2008 or older. By default, SQL Server connections use
 ```
 
 
-## T4 Template Problems
+## T4 模板问题
 
-**My enum is not transferred to script side, after transforming templates:**
+**在转换模板后，发现枚举不能被转换到脚本端：**
 
-If you use an enum type in a row or service request / response it will be transferred, otherwise it won't by default. If you still want to include this enum, add [ScriptInclude] attribute on top of it.
+如果你在行（row）或者请求/响应服务中使用枚举类型，枚举会被转换，否则默认情况下，枚举不会被转换，如果此时你需要包含该枚举，请向其添加 [ScriptInclude] 特性。
 
-## Editors and Forms
+## 编辑器和表单
 
-**Tried to setup cascaded dropdowns but my second dropdown is always empty:**
+**试图设置级联下拉列表，但第二个下拉列表始终为空：**
 
-Make sure your CascadeField is correct and it matches property name in secondary lookup properly. For example CountryID doesn't match CountryId at script side. You may use nameof() operator like CascadeField = nameof(CityRow.CountryId) to be sure.
+确保你正确地设置了 CascadeField，CascadeField 应该匹配第二检索的属性名称。例如，CountryID 在脚本端没有匹配 CountryId 。你可以使用 nameof() 操作确认，如 CascadeField = nameof(CityRow.CountryId) 。 
 
-A similar problem might occur if you fail to correctly set CascadeFrom option. This corresponds to first dropdown ID in your form. For example, if there are MyCountryId and CustomerCityId properties in the form, CascadeForm should be *CustomerCountryId*. Again, you can use nameof(MyCountryId) to be certain.
+如果你错误地设置 CascadeFrom 项，也会发生类似的问题。它对应于你表单的第一个下拉列表 ID。例如，如果在表单中有 MyCountryId 和 CustomerCityId 属性，CascadeForm 应该是 *CustomerCountryId*。同样，你也可以使用 nameof(MyCountryId) 确认。  
 
-> CascadeFrom is an editor ID in form, while CascadeField is a field property name in row.
+> CascadeFrom 是表单的编辑器ID，而 CascadeField 是行中的字段属性名称。
 
-Another possibility is that CascadeField is not included in lookup data that is sent to script side. For example, if second dropdown is city selection, which is connected to a country dropdown through CountryId, make sure that CountryId property in CityRow has a [LookupInclude] attribute on it. By default, only ID and Name properties are sent to script side for lookups.
+另一种可能性是 CascadeField 没有包括在发送到脚本端的检索数据。例如，如果第二个下拉列表是城市，通过 CountryId 与国家下拉列表对应，请确保 CityRow 的 CountryId 属性有 [LookupInclude] 特性。默认情况下，只有 ID 和 Name 属性被发送到脚本端进行检索。
 
 ___
 
-**Tried to create tabs using a dialog template, but my tab is not shown or empty:**
+**试图使用对话框模板创建选项卡，但是选项卡不能显示或是空的:**
 
-Make sure you don't put a tab content, inside another one, like DIV inside another tab DIV.
+确保你没有把选项卡内容放到另一选项卡内容中，如 选项卡 DIV 包含其他选项卡的 DIV。
 
-## Master/Detail Editing
+## 主/从 编辑 
 
-**I created a in memory master detail editing similar to one in Movie Tutorial cast editor, but when i update a record, i'm getting duplicate entries:**
+**在内存中创建类似于 Movie 教程的演员编辑器的主从信息，但是更新记录时，我得到两条重复的实体：**
 
-Make sure you don't have a [IdProperty] on your EditDialog class. As edit dialogs work in memory with records that doesn't yet have actual IDs, if you use your actual ID property with them, dialog will think that you are adding new records on update (as their actual ID value is always null).
+确保 EditDialog 类没有 [IdProperty] 。因为编辑对话框的记录是在内存中操作，此时该记录还没有实际的 ID，如果你对他们使用实际的 ID 属性，对话框会认为你在编辑时要添加新记录（由于它们的实际 ID 总为 null）。
 
-As you see in code below, GridEditorDialog base class uses a fake ID:
+正如你看到下面的代码，GridEditorDialog 基类使用伪造 ID：
 
 ```cs
 [IdProperty("__id")]
@@ -79,85 +79,85 @@ public abstract class GridEditorDialog<TEntity> : EntityDialog<TEntity>
     where TEntity : class, new()
 ```
 
-So when you put [IdProperty] to your edit dialog, you're overwriting this fake ID and causing unexpected behavior.
+因此，当你在编辑对话框中设置 [IdProperty]，你是在重写该伪造 ID 并导致不可预料的行为。
 
 ___
 
-**I'm succesfully adding details but later when open an existing record, some view fields are empty:**
+**在成功地添加详细信息后，打开一个现有记录，发现某些可视字段（view fields）为空：**
 
-Please put [MinSelectLevel(SelectLevel.List)] on your view fields in YourDetailRow.cs. By default, List handlers and MasterDetailBehavior only loads table fields (not view fields) of detail rows.
-
-
-## Permissions
-
-**My page is not shown in navigation:**
-
-Page access permissions are read from *PageAuthorize* attribute on *Index* action of *XYZPage.cs* file, which is your MVC page controller. Make sure you set this to a permission user has.
-
-___
+请在 YourDetailRow.cs 的可视字段添加 [MinSelectLevel(SelectLevel.List)] 特性。默认情况下，List handlers 和 MasterDetailBehavior 只加载详细行的表字段（没有可视字段）。 
 
 
-**I have added a permission to PermissionKeys.cs but it doesn't show in user permissions dialog:**
+## 权限
 
-PermissionKeys class is just for intellisense purposes. See below for information about registering keys.
+**面不会显示在导航中**
 
-* [How To Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)
+Page 的访问权限是读取 XYZPage.cs 文件 *Index* 操作的 *PageAuthorize* 特性，这是一个 MVC 页面控制器。请确保你将此设置为用户权限。
 
 ___
 
-** Changed permission keys on row, but i'm getting an error when i open the page, and no records displayed:**
 
-Your XYZEndpoint.cs also has a *[ServiceAuthorize("SomePermission")]* on it. This is to provide a secondary level security. Replace permission key with the one on Row. 
+**已经在 PermissionKeys.cs 添加了权限，但是不能在权限对话框显示它：**
 
-## Localization
+PermissionKeys 类仅作为智能感智的目的。更多关于注册 keys 的信息请查看下面连接。
 
-** My localizations lost on live site after publishing: **
-
-The translations you made using translation interface are saved to files under ~/App_Data directory. Either copy these files to live server, or move texts in them to relevant files under ~/Scripts/site/texts.
+* [如何在 Serene 中注册权限？](howto/how_to_register_permissions_in_serene.md)
 
 ___
 
-**I have added some custom local text keys but can't access them from script side:**
+**在 row 中修改访问键（permission keys），但是当打开页面时得到错误且没有显示记录：**
 
-Not all translations are transferred to script side. There is a setting in web.config with *LocalTextPackages* key, that controls these prefixes. If you look there, you can see that only text keys that are starting with *Db.*, *Dialogs.*, *Forms.* etc are transferred to client side. This is to limit size of texts as not all of them are used in script code.
+XYZEndpoint.cs 也需要有 *[ServiceAuthorize("SomePermission")]* 特性。这是为了提供中等级别的安全（secondary level security）。在 Row 中替换访问键。  
 
-Either add your own prefix there, or change your keys to start with one of default prefixes.
+## 本地化
+
+**发布网站之后，本地化不能用：**
+
+把翻译的文件保存到 ~/App_Data 目录下。将这些文件复制到服务器，或将相关文本文件移动到 ~/Scripts/site/texts 下。
 
 ___
 
-## NuGet Packages and Updates
+**已经添加了自定义本地文本键，但是不能在脚本端访问它们：**
+
+不是所有的翻译都会转换到脚本端。在 web.config 有一个控制着这些前缀的 *LocalTextPackages* 键设置。如果查看该配置，你可以看到只有以 *Db.*、*Dialogs.*、*Forms.* 等开头的文本键会被转换到客户端。这是为了限制大小的文本，因为不是所有的脚本代码都使用这些文本。 
+
+请在该配置中添加你自己的前缀，或者把你的文本键更改为以其中的默认前缀开头。
+
+___
+
+## NuGet 程序包 和 升级
 
 
-** I have some errors after updating Select2: **
+**更新 Select2 后，得到一些错误：**
 
-Please don't update Select2 to a version later than 3.5.1. Recent versions has some known compability problems.
+请不要把 Select2 更新到  3.5.1+ 的版本，它最近的版本有一些已知的兼容性问题。
 
-To revert to Select2 3.5.1, type following in package manager console:
+把 Select2 还原到 Select2 3.5.1，请在包管理器控制台输入下面指令：
 
 > Update-Package Select2.js -Version 3.5.1
 
 
-## Deployment and Publishing
+## 部署与发布
 
-**After publishing project some content is not found, or not displayed:**
+**发布项目之后，一些内容找不到或不能显示：**
 
-If you are using Visual Studio publish, make sure that css, image files etc are included in web project and their build action is set to content.
+如果你使用 Visual Studio 发布，确保 css、图片文件等被包含在 web 项目，并且把它们的 *生成操作* 属性设置为 *内容*。
 
-Another possibility is that IIS_IUSRS user group can't access files. Check that it has permissions to files in published web folder.
-
-___
-
-**Table not found (e.g. User) errors after publish:**
-
-Serene has a check to avoid running migrations on an arbitrary database. Find this check under *RunMigrations* method of *SiteInitialization.Migrations* file and remove it.
+另一种可能是  IIS_IUSRS 用户组不能访问文件。检查其是否有访问 web 文件夹（发布的文件夹）权限。
 
 ___
 
-** *FieldAccessExceptions* with message "Cannot set a constant field" **:
+**发布之后，找不到表（如 User）：**
 
-Your hosting provider has set your web application pool to medium trust. Ask them to grant high trust, or if possible change provider.
+Serene 有一个避免在任意的数据库上运行迁移的检查。在 *SiteInitialization.Migrations* 文件的 *RunMigrations* 方法中可找到该检查，删除该检查。
 
-It might be possible to change trust level in web.config if your hosting provider didn't lock it:
+___
+
+**得到 “不能设置常量字段” 的 FieldAccessExceptions:**
+
+托管服务提供商已将你的 web 应用程序池设置为中等信任安全等级。要求他们授予高度信任安全等级，或考虑更换供应商。
+
+如果你的托管服务提供商没有锁住 web.config，也可以在 web.config 设置： 
 
 ```
 <configuration> 
@@ -168,7 +168,7 @@ It might be possible to change trust level in web.config if your hosting provide
 
 ```
 
-Serenity initializes field objects with reflection. Under medium trust, it can't do that. You may try replacing all **public  readonly*" field declarations with "*public static"* in *Row.cs, but not sure if this will resolve all problems. 
+Serenity 使用反射初始化字段对象。在中等信任安全等级时，它不能初始化对象。你可以尝试把 *Row.cs* 所有的 *public readonly" 字段定义替换为 *public static*，但是不确定这样能解决所有问题。
 
-> ASP.NET has made Medium trust obsolete, and they won't fix any problems related to this anymore. See http://stackoverflow.com/questions/16849801/is-trying-to-develop-for-medium-trust-a-lost-cause
-> It is strongly recommended to change your hosting provider
+> ASP.NET 的中等信任安全等级已经过时了，并且微软不会解决与此相关的任何问题。详见  http://stackoverflow.com/questions/16849801/is-trying-to-develop-for-medium-trust-a-lost-cause  
+> 强烈建议你更换托管服务提供商。

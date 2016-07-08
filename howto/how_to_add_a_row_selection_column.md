@@ -1,6 +1,6 @@
 # 如何添加一个行选择列? 
 
-** 本节为 TypeScript 挂起更新 
+** 本节的 TypeScript 版本有待更新 **
 
 若要添加列以选择单行或所有行，可以使用 GridRowSelectionMixin。
 

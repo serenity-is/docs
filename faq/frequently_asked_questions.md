@@ -1,85 +1,85 @@
-# Frequently Asked Questions
+# 常见问题
 
-## Code Generator (Sergen)
+## 代码生成器 (Sergen)
 
-** Should I regenerate code after adding fields to my table:**
+** 在表中添加新字段之后，我应该重新生成代码吗？**
 
-It's recommended to only generate code once. You should add new fields to row, column and form classes manually, taking existing fields as a sample.
+建议只生成一次代码，你应该以现有字段为例，在行（row）、 列（column）和表单（form）类手动添加新字段。
 
-But if you made too many changes, and want to generate code again it is possible. Sergen will launch Kdiff3 to let you merge changes, so that it won't override the changes you might have made to the code generated before.
+但是如果你做了太多的更改，并且再次生成代码。Sergen 将启动 Kdiff3 让你合并更改，以便不会覆盖你之前对生成代码所做的更改。
 
 ___
 
-** I'm having an error in Sergen about KDiff3. Where to set its location: **
+** 在 Sergen 中，我有关于 KDiff3 的错误，如何定位该错误呢？ **
 
-Sergen looks for KDiff3 at its default location under Program Files directory. Install it if you didn't yet.
+Sergen 在其默认程序文件目录下查找 KDiff3。如果你还没有该程序，请安装它。
 
-If Kdiff3 is at another location, edit Serenity.CodeGenerator.config in your solution directory. This is a JSON file containing settings and preferences for Sergen.
+如果 Kdiff3 在另一位置，编辑你的解决方案目录下的 Serenity.CodeGenerator.config。这是一个包含 Sergen 设置和首选项的 JSON 文件。 
 
 
 ## Permissions
 
-** I want to separate INSERT permission from UPDATE permission **:
+** 如何从 UPDATE 权限中分离出 INSERT 权限？ **:
 
-Instead of [ModifyPermission] attribute use [InsertPermission] and [UpdatePermission] attributes on rows.
+在行（rows）中使用 [InsertPermission] 和 [UpdatePermission] 替代 [ModifyPermission] 特性。
 
-By default, for INSERT, save handler looks for these permissions on row in this order on row:
+默认情况下，插入、保存处理程序（INSERT, save handler）按如下顺序检索行中的这些权限：
 
 - 1) InsertPermission
 - 2) ModifyPermission 
 - 3) ReadPermission
 
-Only the first one that is found is checked.
+只有第一个被选中的权限才会被找到。
 
-Similarly for UPDATE, save handler looks for these permissions in order on row:
+类似的，更新、保存处理程序（UPDATE, save handler）按如下顺序检索行中的这些权限：
 
 - 1) UpdatePermission
 - 2) ModifyPermission
 - 3) ReadPermission
 
-For DELETE, delete handler looks for these permissions in order on row:
+删除处理程序（delete handler）按如下顺序检索行中的这些权限：
 
 - 1) DeleteInsertPermission
 - 2) ModifyPermission
 - 3) ReadPermission
  
-For LIST / RETRIEVE, only one permission is checked:
+列表/检索处理程序（LIST / RETRIEVE handler）只有一个权限被选中：
 
 - 1) ReadPermission
 
 
-## Publishing and Deployment
+## 发布和部署
 
-** How can i publish Serenity applications: **
+** 怎样发布 Serenity 应用程序？ **
 
-Serenity applications are x-copy deployable. You just need to setup connection strings after deployment. You might exclude source files from deployment.
+Serenity 应用程序使用 x-copy 部署。在部署之后，你只需要设置安装程序的连接字符串。你可以从部署中排除源文件。
 
-Make sure you remove database migration safety check from *RunMigrations* method in *SiteInitialization.Migrations* file.
+确保你在 *SiteInitialization.Migrations* 文件 *RunMigrations* 方法中删除了数据库迁移安全检查。 
 
-You can also use publish feature in Visual Studio. Make sure build action for all content files that you use are set to *Content*, and not *None*.
+你也可以使用 Visual Studio 的发布功能。但需确保所有内容文件（content files）的生成操作设置为 *Content*（而不 *None*）。 
 
-> You have to only publish MyApplication.Web, not script project.
+> 你只需要发布 MyApplication.Web 项目，不需要发布 script 项目。
 
-Serenity uses a NuGet version of ASP.NET MVC, so there is no need to install MVC on server. If you get some DLL missing error, check that its *Copy Local* option of VS project references is set to *True*.
+Serenity 使用 ASP.NET MVC 的 NuGet 版本。因此无需在服务器安装 MVC。如果你得到一些缺少 DLL 的错误，请检查 VS 项目引用的 *复制到本地* 选项是否设置为 *True*。 
 
-## Forms and Editors
+## 表单 和 编辑器（Editors）
 
-** How to allow negative values in DecimalEditor: **
+** 如何在 DecimalEditor 中允许负值？ **
 
-In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
+在 *DecimalEditor* 特性设置 *MinValue* 和 *MaxValue* 属性：
 
 ```cs
 [DecimalEditor(MinValue = "-999999999.99", MaxValue = "999999999.99")]
 public Decimal MyProperty { get; set; }
 ```
-> Make sure you use same number of digits for min and max value.
+> 请确保最大值和最小值使用相同的位数。
 
 
-** How can i reload/refresh a lookup editor data **
+** 如何重新加载/刷新检索编辑器数据？ **
 
-Use *Q.ReloadLookup("MyModule.MyLookupKey")* to reload a lookup by its key.
+使用 *Q.ReloadLookup("MyModule.MyLookupKey")* 重新加载检索其 key 的结果。
 
-** How to create filter editor for an Enum: **
+** 如何为枚举创建过滤编辑器？ **
 
 ```cs
 AddEqualityFilter<EnumEditor>(SomeRow.Fields.TheEnumField,
@@ -88,13 +88,13 @@ AddEqualityFilter<EnumEditor>(SomeRow.Fields.TheEnumField,
 
 ___
 
-** How to set current date in a date editor in new record mode: **
+** 如何在新记录模式下把日期编辑器设置为当前日期？ **
 
-Add [DefaultValue("today")] for date, or [DefaultValue("now")] for date time editor in form declaration.
+在表单定义中为日期时间编辑器的日期添加 [DefaultValue("today")] 或者 [DefaultValue("now")]。
 
-> Don't do this in row. It may cause errors.
+> 请不要在行（row）中添加这些特性，否则将导致错误。
 
-Another option is to do this in dialog, overriding *AfterLoadEntity*:
+另一做法是在对话框中处理，重写 *AfterLoadEntity*：
 
 ```cs`
 form.MyDateField.AsDate = JsDate.Today;

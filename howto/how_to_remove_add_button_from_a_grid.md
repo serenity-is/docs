@@ -1,6 +1,6 @@
 # 如何删除网格中的新增（add）按钮？
 
-** 本节为 TypeScript 挂起更新 **
+** 本节的 TypeScript 版本有待更新 **
 
 你可以在 *MyGrid.ts* 重写 *getButtons()* 方法。
 

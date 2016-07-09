@@ -25,6 +25,8 @@ namespace MeetingManagement.Migrations.DefaultDB
     {
         public override void Up()
         {
+            Create.Schema("met");
+            
             Create.Table("AgendaTypes").InSchema("met")
                 .WithColumn("AgendaTypeId").AsInt32()
                     .Identity().PrimaryKey().NotNullable()

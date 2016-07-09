@@ -40,7 +40,7 @@
        * [Using Serenity Service Behaviors](tutorials/multi_tenancy/using_serenity_service_behaviors.md)
        * [Extending Multi-Tenant Behavior To Northwind](tutorials/multi_tenancy/extending_multi-tenant_behavior_to_northwind.md)
        * [Handling Lookup Scripts](tutorials/multi_tenancy/handling_lookup_scripts.md)
-   * Meeting Management
+   * [Meeting Management](tutorials/meeting/meeting_management.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind & Other Samples From Serene](howto/removing_northwind.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)

@@ -41,7 +41,7 @@
        * [Extending Multi-Tenant Behavior To Northwind](tutorials/multi_tenancy/extending_multi-tenant_behavior_to_northwind.md)
        * [Handling Lookup Scripts](tutorials/multi_tenancy/handling_lookup_scripts.md)
    * [Meeting Management](tutorials/meeting/meeting_management.md)
-       * Creating Lookup Tables
+       * [Creating Lookup Tables](tutorials/meeting/creating_lookup_tables.md)
 * [How To Guides](howto/how_to_guides.md)
    * [How To: Remove Northwind & Other Samples From Serene](howto/removing_northwind.md)
    * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)

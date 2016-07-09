@@ -10,5 +10,16 @@ Application will also let us store decisions taken in the meeting, and will info
 > 
 > https://github.com/volkanceylan/MeetingManagement
 
+
+### Creating Project
+
 Start by creating a new project using Serene template, and name it MeetingManagement.
+
+
+### Removing Northwind
+
+Remove Northwind using how-to guide.
+
+
+
 

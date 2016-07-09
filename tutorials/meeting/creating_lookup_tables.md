@@ -8,5 +8,6 @@ Here is a list of these tables:
 * Locations (where meeting will be held, room numbers, address etc.)
 * Agenda Types (what subject(s) an agenda is about, might be multiple)
 * Units (which unit is organizing the meeting)
+* Contacts (people which would attend meetings, reporters, managers etc.)
 
-We'll use database schema *met* for tables.
+We'll use database schema *meet* for tables.

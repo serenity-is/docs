@@ -9,3 +9,4 @@ Here is a list of these tables:
 * Agenda Types (what subject(s) an agenda is about, might be multiple)
 * Units (which unit is organizing the meeting)
 
+We'll use database schema *met* for tables.

@@ -18,7 +18,7 @@ Start by creating a new project using Serene template, and name it MeetingManage
 
 ### Removing Northwind
 
-Remove Northwind using how-to guide.
+Remove Northwind using the how-to guide.
 
 
 

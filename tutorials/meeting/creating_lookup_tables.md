@@ -75,4 +75,5 @@ Our module name will be *Meetings*. We should use non-plural entity identifiers 
 
 Generate code for these 5 tables using the entity identifiers given above:
 
+![Sergen Lookups](img/met_sergen_lookups.png)
 

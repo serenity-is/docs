@@ -61,3 +61,18 @@ namespace MeetingManagement.Migrations.DefaultDB
     }
 }
 ```
+
+
+### Generating Code for Lookup Tables
+
+Our module name will be *Meetings*. We should use non-plural entity identifiers for generated code:
+
+* AgendaTypes => AgendaType
+* Contacts => Contact
+* Locations => Location
+* MeetingTypes => MeetingType
+* Units => Unit
+
+Generate code for these 5 tables using the entity identifiers given above:
+
+

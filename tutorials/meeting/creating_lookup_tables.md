@@ -77,3 +77,54 @@ Generate code for these 5 tables using the entity identifiers given above:
 
 ![Sergen Lookups](img/met_sergen_lookups.png)
 
+Generated interface for these tables is fine enough. Just need to do a few cosmetic touches.
+
+![Initial Lookups](img/met_initial_lookups.png)
+
+### Moving Navigation Links to NavigationItems.cs
+
+Open *AgendaTypePage.cs*, *ContactPage.cs*, *LocationPage.cs*, *MeetingTypePage.cs* and *UnitPage.cs* files and move navigation links at top of them to *NavigationItems.cs*:
+
+```cs
+using Serenity.Navigation;
+using Administration = MeetingManagement.Administration.Pages;
+using Meeting = MeetingManagement.Meeting.Pages;
+
+[assembly: NavigationLink(1000, "Dashboard", 
+    url: "~/", permission: "", icon: "icon-speedometer")]
+
+[assembly: NavigationMenu(2000, "Meeting")]
+[assembly: NavigationLink(2500, "Meeting/Agenda Types", 
+    typeof(Meeting.AgendaTypeController))]
+[assembly: NavigationLink(2600, "Meeting/Contacts", 
+    typeof(Meeting.ContactController))]
+[assembly: NavigationLink(2700, "Meeting/Locations", 
+    typeof(Meeting.LocationController))]
+[assembly: NavigationLink(2800, "Meeting/Meeting Types", 
+    typeof(Meeting.MeetingTypeController))]
+[assembly: NavigationLink(2900, "Meeting/Units", 
+    typeof(Meeting.UnitController))]
+```
+
+
+### Setting DisplayName and InstanceName Attributes of Lookup Tables
+
+Open *AgendaTypeRow.cs*, *ContactRow.cs*, *LocationRow.cs*, *MeetingTypeRow.cs* and *UnitRow.cs* files and change *DisplayName* and *InstanceName* attributes like below:
+
+* AgendaTypeRow => "Agenda Types", "Agenda Type"
+* ContactRow => "Contacts", "Contact"
+* LocationRow => "Locations", "Location"
+* MeetingTypeRow => "Meeting Types", "Meeting Type"
+* UnitRow => "Units", "Unit"
+
+```cs
+[ConnectionKey("Default"), TwoLevelCached,
+ DisplayName("Agenda Types"), InstanceName("Agenda Type")]
+[ReadPermission("Meeting")]
+[ModifyPermission("Meeting")]
+public sealed class AgendaTypeRow : Row, IIdRow, INameRow
+{
+```
+
+
+ 

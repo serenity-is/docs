@@ -1,16 +1,16 @@
-# Localization
+# 本地化
 
-Most web applications must support a variety of languages. Sites like Youtube, Wikipedia, Facebook works in many languages.
+大多数 web 应用程序必须支持多种语言。例如：Youtube、 Wikipedia、 Facebook 网站都支持多语言。 
 
-First time a user visits such a site, a language for her is automatically chosen depending on the browser language (pre-determined by regional settings).
+当用户第一次访问网站时，根据用户浏览器（预先设置的地区）自动选择显示的语言。
 
-If automatic selection is not what they expect, users can set their preferred language and this selection is stored in a client-side cookie (or server side user profile table).
+如果自动选择的语言不是用户所期望的，用户可以设置他们的首选语言，用户的选择存储在客户端 cookie（或服务器端用户简介表（user profile table））。
 
-Once a language is chosen, all texts are displayed in the selected language.
+一旦选择了语言，所有的文本都将显示为所选的语言。
 
-Serenity platform is designed with localization in mind from the start.
+Serenity 平台从开始设计之初就考虑到本地化功能。
 
-If you are using *Serenity Basic Application Sample* you can see this yourself by setting your browser language or changing a web.config setting:
+如果你在使用 *Serenity 基本应用程序示例*，你可以通过设置浏览器语言或更改 web.config 的设置来查看本地化功能： 
 
 ```xml
 <system.web>
@@ -18,11 +18,11 @@ If you are using *Serenity Basic Application Sample* you can see this yourself b
 </system.web>
 ```
 
-Here, UI culture is set to automatic, and if automatic detection fails, en-US is used as a fallback.
+在这里，*UI 文化（culture）* 设置为 *自动*，如果自动检测失败，则使用 EN-US 。
 
 ![Customer Screen English](img/localization_customer_english.jpg)
 
-Change this configuration as below, refresh your browser and you will the site in Turkish:
+像下面这样修改该配置，并刷新浏览器，你的网站将使用土耳其语。
 
 ```xml
 <system.web>
@@ -32,4 +32,4 @@ Change this configuration as below, refresh your browser and you will the site i
 
 ![Customer Screen Turkish](img/localization_customer_turkish.jpg)
 
-> Here, data is not translated but it is also possible to translate user entered data by some methods like culture extension tables.
+> 在这里，数据没有被翻译，但也可以使用一些像文化扩展表（culture extension tables）的方法来翻译用户输入的数据。

@@ -1,4 +1,4 @@
-# Nested Local Texts
+# 嵌入本地化文本 Nested Local Texts
 
 Serenity allows you to define nested static classes containing LocalText objects to define translations like below:
 

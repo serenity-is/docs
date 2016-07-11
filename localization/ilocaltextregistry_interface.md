@@ -1,8 +1,8 @@
-# ILocalTextRegistry Interface
+# ILocalTextRegistry 接口 
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-LocalText class accesses translations for local text keys through the provider for this interface.
+LocalText 类通过该接口的提供者访问本地化文本键的翻译。
 
 ```cs
 public interface ILocalTextRegistry
@@ -12,21 +12,21 @@ public interface ILocalTextRegistry
 }
 ```
 
-## ILocalTextRegistry.TryGet Method
+## ILocalTextRegistry.TryGet 方法 
 
-Gets translation for the specified key in requested language.
+获得目标语言指定键的翻译。
 
-Current language is determined by *CultureInfo.CurrentUICulture*.
+由 *CultureInfo.CurrentUICulture* 决定当前语言。
 
-It is *providers responsibility* to check language fallbacks for the key, if a translation is not found in requested language.
+如果没有在请求语言中找到翻译，*提供者的职责* 是检查键的语言回退。
 
-This method returns null if no translation is found in the language hierarchy (from requested language down to invariant language).
+如果在语言层级（从请求语言往固定语言搜索）没有找到翻译，该方法返回 null。
 
-## ILocalTextRegistry.Add Method
+## ILocalTextRegistry.Add 方法 
 
-Adds a translation to the local text table which is internally hold by the local text registry.
+向内部由本地化文本注册保存的本地化文本表中添加翻译。
 
-The local text table is an in-memory table (dictionary) like:
+本地化文本表是内存表（字典），如：
 
 Key                   |LanguageID|Text (Translation)
 ----------------------|----------|-------------------
@@ -36,6 +36,6 @@ Dialogs.NoButton      |en        |No
 Dialogs.NoButton      |tr        |Hayır
 
 
-> This method doesn't throw an exception if same key/language ID pair is added twice. It simply overrides existing translation.
+> 如果 Key/LanguageID 对被重复添加，该方法不会抛出异常。它会覆盖已存在的翻译。
 
 

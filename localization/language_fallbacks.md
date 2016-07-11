@@ -1,34 +1,34 @@
-# Language Fallbacks
+# 语言回退（Language Fallbacks）
 
-## Neutral Language Fallback
+## 非特定(Neutral)语言回退
 
-When a translation is not found in `en-US`, it is acceptable to look for a translation in `en` language, as they are closely related.
+当在 `en-US` 中找不到翻译，它可以接受在 en 语言中寻找翻译，因为它们密切相关。 
 
-Two letter language IDs (neutral languages) are implicitly language fallbacks of 4 letter country specific codes.
+两个字母的 languageID（非特定语言）是国家的 4 个特定字母代码的隐式语言回退。 
 
-So `es` is language fallback of `es-AR` and `en` is language fallback of `en-US` and `en-GB`.
+因此，`es` 是 `es-AR` 语言回退，`en` 是 `en-US` 和 `en-GB` 的语言回退。 
 
-## Invariant Language Fallback
+## 固定语言回退
 
-Invariant language with empty code is the final fallback of all languages implicitly.
+空代码的固定语言是的所有语言的最终的隐式回退语言。
 
-## Implementation
+## 实现
 
-Language fallback functionality should be implemented by the ILocalTextRegistry provider (e.g. LocalTextRegistry class).
+语言回退功能应该通过 ILocalTextRegistry 提供者（如，LocalTextRegistry 类）实现。
 
-Providers may also support setting language fallbacks explicitly, so you can set `en-US` as language fallback of `en-UK` if needed.
+提供者也支持显式设置语言回退。因此如果需要，你也可以设置 `en-US` 作为 `en-UK` 的语言回退。 
 
-This is how looking up a translation for a local text key works:
+这是检索本地化文本键翻译的步骤：
 
-- If current language has a translation for the key, return it.
-- Check every explicitly defined language fallback for a translation.
-- If language ID is a 4 letter country specific code, check neutral language for a translation.
-- Check invariant language for a translation.
-- Return the key itself or null for TryGet.
+- 如果当前语言有键的翻译，则返回该翻译。
+- 检查每个显式定义的语言回退翻译。
+- 如果 languageID 是 4 个国家特定字母代码，检查非特定语言的翻译。
+- 检查固定语言的翻译。
+- TryGet 返回键本身或 
 
-Let's say we set `en-US` as language fallback of `en-UK`.
+假设我们设置 `en-US` 作为 `en-UK` 的语言回退。
 
-If we search for a translation in `en-UK`, it is looked up in this order:
+如果要在 `en-UK` 查找翻译，按如下排序检索：
 
 1. en-UK
 2. en-US

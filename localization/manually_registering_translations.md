@@ -1,8 +1,8 @@
-# Manually Registering Translations
+# 手工注册翻译
 
-You can add translations to local text registry from your application start method.
+你可以在应用程序的启动方法中向本地化文本注册表（local text registry）添加翻译。
 
-Sources for these translations might be a database table, xml file, embedded resources etc.
+这些翻译可来源自数据库表、xml 文件、嵌入的资源等。
 
 ```cs
 void Application_Start()

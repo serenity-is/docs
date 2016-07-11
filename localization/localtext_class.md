@@ -1,8 +1,8 @@
-# LocalText Class
+# LocalText 类 
 
-[**namespace**: *Serenity*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
-At the core of string localization is LocalText class.
+字符串本地化的核心是 LocalText 类。
 
 ```cs
     public class LocalText
@@ -21,16 +21,16 @@ At the core of string localization is LocalText class.
     }
 ```
 
-Its constructor takes a key parameter, which defines the local text key that it will contain. Some of sample keys are:
+它的构造函数接受一个 key 参数，它定义将包含的本地化文本键（local text key）。一些键的示例：
 
 - Enums.Month.January
 - Enums.Month.December
 - Db.Northwind.Customer.CustomerName
 - Dialogs.YesButton
 
-> Though it is not a rule, it is a good idea to follow this namespace like *dot* convention for local text keys.
+> 虽然它不是一个规则，但遵循像本地化文本键的 *点* 约定的命名空间是一个好的主意。
 
-At runtime, through ToString() function, the local text key is translated to its representation in the active language (which is *CultureInfo.CurrentUICulture*).
+在运行时，通过 ToString() 函数，本地化文本键被翻译为当前语言（即 *CultureInfo.CurrentUICulture*）的表示形式。
 
 ```cs
 var text = new LocalText("Dialogs.YesButton");
@@ -41,7 +41,7 @@ Console.WriteLine(text.ToString());
 > Yes
 ```
 
-If a translation is not found in local text table (we will talk about this later), the key itself is returned.
+如果本地化文本表（我们将在后面谈论它）中找不到该翻译，则返回 key 自身。
 
 ```cs
 var text = new LocalText("Unknown.Local.Text.Key");
@@ -52,26 +52,26 @@ Console.WriteLine(text.ToString());
 > Unknown.Local.Text.Key
 ```
 
-> This is by design, so that developer can determine which translations are missing.
+> 这是特意设计的，以便开发人员可以查明没有被翻译的文本。
 
 
-## LocalText.Key Property
+## LocalText.Key 属性 
 
-Gets the local text key that LocalText instance contains.
+获取 LocalText 实例包含的本地化文本键。
 
-## Implicit Conversions From String
+## 从字符串中隐式转换
 
-LocalText has implicit conversion from String type.
+LocalText 可以从 String 类型隐式转换。
 
 ```cs
 LocalText someText = "Dialogs.YesButton";
 ```
 
-Here *someText* variable references a new LocalText instance with the key *Dialogs.YesButton*. So it is just a shortcut to LocalText constructor.
+这里的 *someText* 变量得到一个键为 *Dialogs.YesButton* 的新 LocalText 实例引用。所以它是只是一个 LocalText 构造函数的快捷方式。
 
-## Implicit Conversions To String
+## 隐式转换为字符串 
 
-LocalText has implicit conversion to String type too, but it returns translation instead of the key (just like calling *ToString()* method):
+LocalText 也实现了 String 类型的隐式转换，但是它返回翻译而不是键（像调用 *ToString* 方法）。
 
 ```cs
 var lt = new LocalText("Dialogs.NoButton");
@@ -83,9 +83,9 @@ Console.WriteLine(text);
 > No
 ```
 
-## LocalText.Get Static Method
+## LocalText.Get 静态方法
 
-To access the translation for a local text key without creating a LocalText instance, use Get method:
+若要访问本地化文本键翻译而无须创建一个 LocalText 实例，请使用 Get 方法：
 
 ```cs
 Console.WriteLine(LocalText.Get("Dialogs.YesButton"));
@@ -95,11 +95,11 @@ Console.WriteLine(LocalText.Get("Dialogs.YesButton"));
 > Yes
 ```
 
-> *ToString()* method internally calls Get
+> *ToString()* 在 Get 方法内部被调用。
 
-## LocalText.TryGet Static Method
+## LocalText.TryGet 静态方法 
 
-Unlike Get method which returns the local text key if no translation is found, TryGet returns null. Thus, coalesce operator can be used along with TryGet where required:
+不像 Get 方法在找不到翻译时返回本地化文本键，TryGet 返回 null。因此，合并运算符（coalesce operator）必须与 TryGet 一起使用：
 
 ```cs
 var translation = LocalText.TryGet("Looking.For.This.Key") ?? "Default Text";
@@ -110,13 +110,13 @@ Console.WriteLine(translation);
 > Default Text
 ```
 
-## LocalText.Empty Field
+## LocalText.Empty 字段
 
-Similar to String.Empty, LocalText contains an empty local text object with empty key.
+类似于 String.Empty，LocalText 包含一个含空键（empty key）的空本地化文本对象。
 
 
-## LocalText.InvariantLanguageID Constant
+## LocalText.InvariantLanguageID 常量 
 
-This is just an empty string for invariant language ID which is the invariant culture language identifier (default language, usually English).
+这只是固定语言ID (invariant language ID) 的空字符串，它是固定区域语言标识符（通常默认语言为英语）。
 
-We will talk about language identifiers in the following section.
+我们将在后面的章节谈论语言标识符（language identifiers）。

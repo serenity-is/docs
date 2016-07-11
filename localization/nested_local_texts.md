@@ -1,6 +1,6 @@
-# 嵌入本地化文本 Nested Local Texts
+# 嵌入本地化文本
 
-Serenity allows you to define nested static classes containing LocalText objects to define translations like below:
+Serenity 允许你定义包含 LocalText 对象的静态嵌套类来定义翻译，如：
 
 ```cs
 [NestedLocalTexts]
@@ -27,11 +27,11 @@ public static partial class Texts
 }
 ```
 
-This definitions allow you to reference localized texts with intellisense support, without having to memorize string keys.
+此定义允许使用智能感知来引用本地化文本，而不必记住字符串键。
 
-These embedded translation definitions are commonly used to define default translations in invariant language (ultimate fallbacks).
+这些嵌入式的翻译通常用于定义固定语言（最终回退）的默认翻译。
 
-Here is a table of translations that are defined with this *Texts* class:
+这是该 *Texts* 类定义的翻译表：
 
 Key                             |LanguageID|Text (Translation)
 --------------------------------|----------|-------------------------------
@@ -39,13 +39,13 @@ Site.Dashboard.WelcomeMessage   |          |Welcome to Serenity BasicApp...
 Validation.DeleteForeignKeyError|          |Can't delete record...
 Validation.SavePrimaryKeyError  |          |Can't save record...
 
-Local text keys are generated from nested static class names with a dot inserted between. Topmost static class (Texts) name is ignored though it is a good idea to name it something like *Texts* for consistency.
+本地化文本键由静态嵌套类之间使用点连接类名组成。尽管使用 *Texts* 命名以保持一致性是好主意，但是最顶层静态类（Texts）的名称将被忽略。
 
-Unless otherwise stated, language ID for these texts are considered to be the invariant language (empty string).
+除非另有说明，这些文本的 LanguageID 都被认为是固定语言（空字符串）。
 
-## NestedLocalTexts Attribute
+## NestedLocalTexts 特性
 
-Topmost class (e.g. *Texts*) for nested local text registration classes must have this attribute.
+嵌套本地化文本注册类的最顶层类（如 *Texts*）必须有该属性。
 
 ```cs
 [AttributeUsage(AttributeTargets.Class, AllowMultiple=false)]
@@ -60,15 +60,15 @@ public sealed class NestedLocalTextsAttribute : Attribute
 }
 ```
 
-It has two optional attributes, *LanguageID* and *Prefix*.
+它包含两个可选属性：*LanguageID* 和 *Prefix*。
 
-*LanguageID* allows you to define what language translations are in.
+*LanguageID* 允许你定义翻译的目标语言。
 
-> If not specified, translations are considered to be in the invariant language.
+> 如果没有指定该属性，将使用固定语言。
 
-> It is a good idea to register default texts in invariant language, even if texts are not in English, as invariant language is the eventual language fallback for all languages.
+> 在固定语言中注册默认文本是一个好注意，即使注册的文本不是英文。因为它是所有语言的最终回退语言。
 
-If we used it like:
+如果我们这样使用：
 
 ```cs
 [NestedLocalTexts(LanguageID = "en-US")]
@@ -78,14 +78,14 @@ public static partial class Texts
 }
 ```
 
-LanguageID column in translations table would be "en-US":
+在翻译表的 LanguageID 列将是 "en-US"：
 
 Key                             |LanguageID|Text (Translation)
 --------------------------------|----------|-------------------------------
 Site.Dashboard.WelcomeMessage   |en-US     |Welcome to Serenity BasicApp...
 Validation.DeleteForeignKeyError|en-US     |Can't delete record...
 
-Prefix attribute value is used as a prefix for local text keys:
+Prefix 属性值被用来作为本地化文本键（local text keys）前缀：
 
 ```cs
 [NestedLocalTexts(LanguageID = "en-US", Prefix = "APrefix.")]
@@ -101,11 +101,11 @@ APrefix.Site.Dashboard.WelcomeMessage      |en-US     |Welcome to Serenity Basic
 APrefix.Validation.DeleteForeignKeyError   |en-US     |Can't delete record...
 
 
-## NestedLocalTextRegistration Class
+## NestedLocalTextRegistration 类 
 
-[**namespace**: *Serenity.Localization*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
-For nested local text definitions to be registered, you need to call *NestedLocalTextRegistration.Initialize()* method in your application start:
+要注册嵌套本地化文本定义，需要在应用程序启用时调用 *NestedLocalTextRegistration.Initialize()* 方法： 
 
 ```cs
 void Application_Start()
@@ -114,8 +114,8 @@ void Application_Start()
 }
 ```
 
-> CommonInitialization.Run and CommonInitialization.InitializeLocalTexts methods call it by default.
+> 默认调用 CommonInitialization.Run 和 CommonInitialization.InitializeLocalTexts 方法。
 
-Once it is run, all translations with auto generated keys are added to current ILocalTextRegistry provider and LocalText instances in nested static classes are replaced with actual LocalText instances containing generated keys (they are set through reflection).
+一旦运行应用程序，所有自动生成键的翻译都添加到当前的 ILocalTextRegistry 提供者，并且在静态嵌套类中的 LocalText 实例被替换为包含生成键（通过反射设置）的实际 LocalText 实例。
 
 

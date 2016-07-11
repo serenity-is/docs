@@ -1,64 +1,64 @@
-# Using Local Cache and Distributed Cache in Sync
+# 同步本地和分布式缓存
 
-We might enjoy the best of both worlds by following a simple algorithm:
+我们可以通过下面的简单算法实现该目的：
 
-1. Check for key in local cache.
-2. If key exists in local cache return its value.
-3. If key doesn't exist in local cache, try distributed cache.
-4. If key exists in distributed cache return its value and add it to local cache too.
-5. If key doesn't exist in distributed cache, produce it from database, add it to both local cache and distributed cache. Return the produced value.
+1. 检查本地缓存的键(key)；
+2. 如果本地缓存存在该键，则返回它的值；
+3. 如果本地缓存不存在该键，则尝试在分布式缓存中找；
+4. 如果分布式缓存存在该键，则返回它的值并把它添加到本地缓存；
+5. 如果分布式缓存不存在该键，则从数据库中获取，并添加到本地和分布式缓存，最后返回该值。
 
-This way, when a server caches some information in local cache, it also caches it in distributed cache, but this time other servers can re-use information in distributed cache if they don't have a local copy in memory.
+当在本地缓存服务器中缓存一些信息时，使用这种方式，它还将信息缓存到分布式缓存，但这一次，如果其他服务器在内存中没有该数据副本，则可以在分布式缓存中重用信息。
 
-Once all servers have a local copy, none of them will need to access distributed cache again, thus, avoiding serialization and latency overhead.
+一旦所有服务器都有本地副本，就不再需要访问分布式缓存，因此，避免序列化和延迟的开销。
 
-## Validating Local Copies
+## 验证本地副本
 
-All looks fine. But now we have a cache invalidation problem. What if in one of the servers cached data is changed. How do we notify them of this change, so that they can invalidate their *locally cached copy*?
+看起来一切都很好。但现在我们有一个缓存失效的问题：如果其中一台服务器的缓存数据发生改变了，我们如何把变化通知给其他服务器，以使其 *本地缓存的副本* 失效？
 
-We would change the value in distributed cache, but as they don't check distributed cache anymore (shortcut from step 2 in last algorithm), they wouldn't be noticed.
+我们会在分布式缓存中更改值，但是由于它们不再检查分布式缓存（从最后一个算法中的步骤 2 的可知道），他们不会被通知。
 
-One solution to this problem would be to keep local copies for a certain time, e.g. 5 secs. Thus, when a server changes a cached data, other servers would use out-of-date information for 5 seconds mostly.
+对于这个问题，一种解决办法是保持本地副本一段时间，例如 5 秒。因此，当服务器更改缓存数据时，其他服务器都将使用过时的信息（通常是 5 秒）。
 
-This method would help with batch operations that needs same cached information repeatedly. But even if nothing changed in distributed cache, we would have to get a copy from distributed cache to local cache every 5 seconds. If cached data is big, this would increase network bandwidth usage and deserialization cost.
+此方法对于反复请求相同缓存信息的批处理操作非常有用。但即使分布式缓存没有发生任何改变，也必须每隔 5 秒从分布式缓存获取副本到本地缓存中。如果缓存的数据是非常大，这会增加网络带宽和反序列化成本。
 
-We need a way to know if the data in distributed cache is different from the local copy. There are several ways of it that i can imagine:
+我们需要一种方法来获得分布式缓存中的数据是否不同于本地副本的信息。有几种我可以想到的方法：
 
-- Store hash alongside data in local and distributed cache (slight hash calculation cost)
-- Store an incrementing version number of data (how to make sure that two servers doesn't generate same version numbers?)
-- Store last time data is set in distributed cache (time sync problems)
-- Store a random number (generation) alongside data
+- 将哈希与数据一起存储在本地和分布式缓存（有轻微的哈希计算成本）
+- 存储含递增版本的数据 （如何确保两台服务器不会产生相同的版本号？） 
+- 在分布式缓存中存储最后设置数据的时间（时间同步问题）
+- 数据与随机数（代）一起存储
 
-Serenity uses generation numbers (random int) as version.
+Serenity 使用代数（随机的整数）作为版本号。
 
-So when we store a value in distributed cache, let's say *SomeCachedKey*, we also store a random number with key *SomeCachedKey$GENERATION$*.
+所以当我们在分布式缓存存储值时，比方说是 SomeCachedKey，我们还存储含键 *SomeCachedKey$GENERATION$* 的随机数。
 
-Now our prior algorithm becomes this:
+现在，之前的算法变为：
 
-1. Check for key in local cache.
-2. If key exists in local cache
-    - Compare its generation with one in distributed cache
-    - If they are equal, return local cached value
-    - If they don't match, continue to 4
-3. If key doesn't exist in local cache, try distributed cache.
-4. If key exists in distributed cache return its value and add it to local cache too, alongside its generation.
-5. If key doesn't exist in distributed cache, generate it from database, add it to both local cache and distributed cache with some random generation. Return the produced value.
+1. 检查本地缓存的键；
+2. 如果本地缓存存在该键，
+    - 与分布式缓存中的代数比较， 
+    - 如果相等，返回本地缓存值；
+    - 如果不相等，继续步骤 4；
+3. 如果本地缓存不存在该键，则尝试在分布式缓存中找；
+4. 如果分布式缓存存在该键，则返回它的值并把它添加到本地缓存；
+5. 如果分布式缓存不存在该键，则从数据库中获取，并添加到本地和分布式缓存，最后返回该值。
 
-## Validating Multiple Cached Items In One Shot
+## 一次验证多个缓存项目
 
-You might have cached data produced from some table. There might be more than one key in distributed cache for this table.
+你可能已经从一些表中产生了缓存数据。在此表的分布式缓存中可能有多个键。
 
-Lets say you have a profile table and cached profile items by their User ID values.
+假设有一张简介（profile）表，并通过它们的 UserID 值缓存简介项目。
 
-When a user's profile information changes, you may try to remove its cached profile from cache. But what if another server or application you don't know about, cached some information that is generated from same user profile data? You may not know what cached information keys exist in distributed cache that depends on some user ID.
+当用户的简介信息发生变化时，你可以尝试从缓存中删除简介信息。但是如果你不知道的其他服务器或应用程序缓存同一用户的什么简介数据呢？你可能不知道在分布式缓存中缓存什么信息键，它取决于一些 userID。 
 
-Most distributed cache implementations don't provide a way to find all keys that start with some string or it is computationally intensive (as they are dictionary based).
+大多数分布式缓存的实现并没有提供以字符串开头查找所有键的方法，否则其将耗费大量的计算（因为它们是基于字典）。
 
-So when you want to expire all items depending on some set of data, it might not be feasible.
+所以当你想要根据一些数据集的日期让所有的项目过期，它是不可行。
 
-While caching items, Serenity allows you to specify a group key, which is used to expire them, when the data that the group depends on changes.
+当缓存项目时，Serenity 允许你指定组键（group key），用于在组的数据发生变化时使之过期失效。
 
-Let's say one application produced *CachedItem17* from a user with ID 17's profile data and we use this ID as a group key (Group17_Generation):
+比方说一个应用程序从ID 是 17 的用户简介数据生成 *CachedItem17* ，并使用此 ID 作为一个组键 (Group17_Generation)： 
 
 Key                     |Value
 ------------------------|-----
@@ -66,9 +66,9 @@ CachedItem17            |cxyzyxzcasd
 CachedItem17_Generation |13579
 Group17_Generation      |13579
 
-Here, random generation (version) for the group is 13579. Along with cached data (CachedItem17), we stored whatever was the group generation when we produced this data (CachedItem17_Generation).
+在这里，组随机生成（版本）是 13579。随着缓存数据(CachedItem17)，我们存储产生此数据(CachedItem17_Generation)的任何组代。
 
-Suppose that another server, cached AnotherItem17 from User 17's data:
+假设另一台服务器，缓存来自用户17的数据 AnotherItem17：
 
 Key                     |Value
 ------------------------|-----
@@ -78,11 +78,11 @@ AnotherItem17           |uwsdasdas
 AnotherItem17_Generation|13579
 Group17_Generation      |13579
 
-Here, we reused Group17_Generation, as there was already a group version number in distributed cache, otherwise we would have to generate a new one.
+这里，我们重用 Group17_Generation，因为在分布式缓存中已经有一组版本号，否则，我们将必须生成一个新的。
 
-Now, both items in cache (CachedItem17 and AnotherItem17) are valid, because their version numbers matches the group version.
+现在，缓存的两个项目（CachedItem17 和 AnotherItem17）都有效，因为它们的版本号匹配组版本号。
 
-If somebody changed User 17's data and we wanted to expire all cached items related to her, we need to just change the group generation:
+如果有人修改了用户17的数据，我们想让其相关的缓存项目过期失效，只需修改组代。
 
 Key                     |Value
 ------------------------|-----
@@ -92,6 +92,6 @@ AnotherItem17           |uwsdasdas
 AnotherItem17_Generation|13579
 Group17_Generation      |54237
 
-Now all cached items are expired. Even though they exist in cache, we see that their generations don't match the group generation, so they are not considered valid.
+现在，所有的缓存项目都过期失效了。即使它们还存在缓存中，我们可以看到它们的代不匹配组代，因此认为它们是无效的。
 
-> Group keys we use are usually name of the table that data is produced from.
+> 我们使用的组键通常是产生数据的表名称。

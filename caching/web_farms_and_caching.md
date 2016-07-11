@@ -1,4 +1,4 @@
-# WEB Farms and Caching
+# 网站群和缓存 WEB Farms and Caching
 
 Now let's consider we have a social networking site and have millions of user profiles. Profile pages of some famous users might be getting hundreds or thousands of visits per minute.
 

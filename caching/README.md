@@ -1,7 +1,7 @@
-# Caching
+# 缓存
 
-Caching is an important part of modern, heavy-traffic applications. Even if your web application isn't getting so much traffic now, it might later and it is a good idea to design it with caching in mind from the start.
+缓存是现代高并发应用程序的重要组成部分。即使你的 web 应用程序现在还没有那么高的并发量，但在之后的发展中极有可能会遇到高并发的应用场景，因此从一开始就使用缓存设计程序是一个好主意。
 
-* [Local Caching](local_caching.md)
-* [Distributed Caching](distributed_caching.md)
-* [Two Level Cache](two_level_cache.md)
+* [本地缓存](local_caching.md)
+* [分布式缓存](distributed_caching.md)
+* [二级缓存](two_level_cache.md)

@@ -1,15 +1,15 @@
-# Two Level Caching
+# 二级缓存
 
-When you use local (in-memory) caching, one server can cache some information and retrieve it as fast as possible but as other servers can't access that cached data, they have to query for the same information from database.
+当你使用本地（在内存中）缓存时，服务器可以缓存一些信息并快速地检索它，但是其他服务器不能访问这个缓存数据，他们需要到数据库中查询同样的信息。
 
-If you prefer distributed caching to let other servers access cached data as it has some serialization / deserialization and network latency overhead, it may degrade performance in some cases.
+如果你喜欢使用分布式缓存让其他服务器访问缓存的数据，由于它有一些序列化/反序列化和网络延迟开销，则需要注意：在某些情况下，它可能会降低性能。
 
-There is also another problem with caching that needs to be handled: cache invalidation:
+缓存需要处理的另一个问题：缓存失效。
 
 > There are only two hard things in Computer Science: cache invalidation and naming things.
 
 > -- Phil Karlton
 
-When you cache some information, you have to make sure that, when the source data changes, cached information is invalidated (regenerated or removed from cache).
+当你缓存一些信息时，你需要确保当源数据更改后，让缓存信息失效（重新生成或者从缓存中移除）。
 
 

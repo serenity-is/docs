@@ -1,6 +1,6 @@
-# User Profile Caching Sample
+# 用户简介（User Profile）缓存示例
 
-Lets assume we have a profile page in our site that is generated using several queries. We might have a model for this page e.g. UserProfile class that contains all profile data for a user, and a GetProfile method that produces this for a particular user id.
+假设我们网站有一个使用多个查询生成的简介页面。我们有此页的模型，如 UserProfile 类，它包含用户所有简介数据，及一个获取指定用户 id 简介的 GetProfile 方法。
 
 ```cs
 public class UserProfile
@@ -22,7 +22,7 @@ public UserProfile GetProfile(int userID)
 }
 ```
 
-By making use of LocalCache.Get method, we could cache this information for one hour easily and avoid DB calls every time this information is needed.
+通过使用 LocalCache.Get 方法，我们可以轻松地缓存此信息一小时，并避免每次请求该信息时对数据库进行调用。
 
 ```cs
 public UserProfile GetProfile(int userID)

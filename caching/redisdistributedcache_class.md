@@ -1,12 +1,12 @@
-# RedisDistributedCache Class
+# RedisDistributedCache 类
 
-[**namespace**: *Serenity.Caching*, **assembly**: *Serenity.Caching.Couchbase*]
+[**命名空间**: *Serenity.Caching*, **程序集**: *Serenity.Caching.Couchbase*]
 
-Redis is another in memory database that is also used by StackOverflow for its performance and reliability. They use just one Redis database for all their WEB servers.
+Redis 是另一种内存数据库，由于其优秀的性能和可靠性， StackOverflow 也在使用它，他们所有的 WEB 服务只用了一个 Redis 数据库。
 
-You can get Serenity implementation for this server type in Serenity.Caching.Redis NuGet package.
+你可以从 Serenity.Caching.Redis 的 NuGet 程序包获取该服务类型的 Serenity 实现。 
 
-It can be registered just like CouchbaseDistributedCache and configuration is similar (though there is no bucket setting):
+它可以像基于云分布式缓存（CouchbaseDistributedCache）那样注册，并且配置非常类似（虽然没有大量的配置）：
 
 ```xml
 <appSettings>

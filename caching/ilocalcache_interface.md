@@ -1,8 +1,8 @@
-# ILocalCache Interface
+# ILocalCache 接口
 
-[**namespace**: *Serenity.Abstrations*] - [**assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstrations*] - [**程序集**: *Serenity.Core*]
 
-Defines a basic interface to work with the local cache.
+定义一个基本的本地缓存接口。
 
 ```cs
 public interface ILocalCache
@@ -14,43 +14,43 @@ public interface ILocalCache
 }
 ```
 
-> A default implementation of ILocalCache (`Serenity.Caching.HttpRuntimeCache`) that uses `System.Web.Cache` exists in `Serenity.Web` assembly.
+> 使用 `Serenity.Web` 程序集中的 `System.Web.Cache` 默认实现  ILocalCache (`Serenity.Caching.HttpRuntimeCache`)。
 
-### ILocalCache.Add Method
+### ILocalCache.Add 方法 
 
-Adds a value to cache with the specified key. If the key already exists in cache, its value is updated.
+添加指定键的值到缓存。如果在缓存中存在该值，则更新该值。
 
-Items are hold in cache for `expiration` duration. You can specify `TimeSpan.Zero` for items that shouldn't expire automatically.
+项目保存在缓存中直至`到期(expiration)`期限。你可以指定项目的 `TimeSpan.Zero` 为不自动过期。
 
-Values are added to cache with absolute expiration (thus they expire at a certain time, not sliding expiration).
+添加到缓存的值使用绝对过期时间（因此它们在特定时间过期，不会逾期）。
 
 ```cs
 Dependency.Resolve<ILocalCache>.Add("someKey", "someValue", TimeSpan.FromMinutes(5));
 ```
 
-This method, in its default implementation, uses HttpRuntime.Cache.Insert method.
-> Avoid HttpRuntime.Cache.Add method, as it doesn't update value if there is already a key with same key in the cache, and it doesn't even raise an error so you won't notice anything. A mere engineering gem from ASP.NET)
+此方法默认使用 HttpRuntime.Cache.Insert 方法实现。
+> 避免使用 HttpRuntime.Cache.Add 方法，因为它不会更新缓存中相同键的值，甚至不会抛出错误，因此使用该方法你不会得到任何通知。
 
-### ILocalCache.Get`<TItem>` Method
+### ILocalCache.Get`<TItem>` 方法 
 
-Gets the value corresponding to the specified key in local cache.
+获取本地缓存中指定键的值。
 
-If there is no such key in cache, an error may be raised only if TItem is of value type. For reference types returned value is `null`.
+如果缓存中没有该键，只有在值类型是 TItem 时才抛出错误。若 TItem 是引用类型，返回的值为 `null`。
 
-If value is not of type `TItem`, an exception is thrown.
+如果值的类型不是 `TItem`，则抛出一个异常。 
 
-You may use `object` as `TItem` parameter to prevent errors in case a value doesn't exist, or not of requested type.
+你可以使用 `object` 作为 `TItem` 参数阻止不存在值或不是请求类型情况下的错误。
 
-### ILocalCache.Remove Method
+### ILocalCache.Remove 方法 
 
-Removes the item with specified key from local cache and returns its value.
+删除本地缓存中指定键的项目，并返回其值。
 
-No errors thrown if there is no value in cache with the specified key, simply `null` is returned.
+如果缓存中没有指定键的值，不会抛出错误，而是返回 `null`。
 
 ```cs
 Dependency.Resolve<ILocalCache>.Remove("someKey");
 ```
 
-### ILocalCache.RemoveAll Method
+### ILocalCache.RemoveAll 方法 
 
-Removes all items from local cache. Avoid using this except for special situations like unit tests, otherwise performance might suffer.
+删除本地缓存中所有的项目。除了单元测试这种特殊情况，避免使用该方法，否则会影响性能。

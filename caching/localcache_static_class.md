@@ -1,8 +1,8 @@
-# LocalCache Static Class
+# 静态 LocalCache 类 
 
-[**namespace**: *Serenity*] - [**assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity*] - [**程序集**: *Serenity.Core*]
 
-A static class that contains shortcuts to work easier with the registered ILocalCache provider.
+一个包含快捷访问注册 ILocalCache 提供者的静态类。
 
 ```cs
 public static class LocalCache
@@ -15,20 +15,20 @@ public static class LocalCache
 }
 ```
 
-Add, Remove, and RemoveAll methods are simply shortcuts to corresponding methods in ILocalCache interface, but Get method is a bit different than ILocalCache.Get.
+Add、 Remove 和 RemoveAll 方法是对应 ILocalCache 接口的快捷访问方法，但 Get 方法不同于 ILocalCache.Get。
 
-## LocalCache.Get`<TItem>` Method
+## LocalCache.Get`<TItem>` 方法 
 
-Gets the value corresponding to the specified key in local cache.
+获取本地缓存指定键的值。
 
-If there is no such key in cache, uses the loader function to produce value, and adds it to cache with the specified key.
+如果缓存中没有该键，使用加载（loader）函数产生值，并使用指定的键添加到缓存。
 
 ![LocalCache.Get Flow Diagram](img/local_cache_get_en.jpg)
 
-* If the value that exists in cache is DBNull.Value, than null is returned. (This way, if for example a user with an ID doesn't exist in database, repeated querying of database for that ID is prevented)
+* 如果缓存中的值是 DBNull.Value，返回 null（例如，使用这种方式，如果数据库中不存在该 ID 的用户，则阻止在数据库中重复查询该 ID）。
 
-* If the value exists, but of not type TItem an exception is thrown, otherwise value is returned.
+* 如果缓存中存在该值，但不是 TItem 类型，将抛出异常；否则返回该值。 
 
-* If the value didn't exist in cache, loader function is called to produce the value (e.g. from database) and...
-	* If the value produced by loader function is null, it is stored as DBNull.Value in cache.
-	* Otherwise the produced value is added to cache with the specified expiration duration.
+* 如果缓存中不存在该值，调用加载（loader）函数产生该值（如，从数据库加载）并……
+	* 如果加载（loader）函数产生的值为 null，在缓存中存储为 DBNull.Value。  
+	* 否则，对产生的值指定过期时间后添加到缓存。

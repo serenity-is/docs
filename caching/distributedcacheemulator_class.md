@@ -1,13 +1,14 @@
-# DistributedCacheEmulator Class
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+# DistributedCacheEmulator 类 
 
-If you don't need a distributed cache now, but you wanted to write code that will work with a distributed cache in the future, you could use the DistributedCacheEmulator class.
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-DistributedCacheEmulator is also useful for unit tests and development environments (so that developers don't need to access a distributed cache system and work without affecting each other).
+如果你现在不需要分布式缓存，但希望现在编写的代码在将来可以与分布式缓存一起工作，你可以使用 DistributedCacheEmulator 类。
 
-DistributedCacheEmulator emulates the IDistributedCache interface in a thread-safe manner by using a in-memory dictionary.
+DistributedCacheEmulator 也对单元测试和部署环境非常有用（因此，开发人员不需要访问分布式缓存系统而不会影响彼此的工作）。
 
-To use DistributedCacheEmulator, you need to register it with the Serenity Service Locator (IDependencyRegistrar). We do it from some method called on application start (global.asax.cs etc):
+DistributedCacheEmulator 模拟 IDistributedCache 接口以线程安全的方式使用内存中的字典。
+
+要使用 DistributedCacheEmulator，需要使用 Serenity 服务定位器(IDependencyRegistrar)注册它。我们在应用程序启动时(global.asax.cs 等)调用一些方法做此事：
 
 ```cs
 private static void InitializeDependencies()

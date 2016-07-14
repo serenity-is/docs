@@ -1,8 +1,8 @@
-# FieldFlags Enumeration
+# FieldFlags 枚举
 
-[**namespace**: *Serenity.Data.Mapping*] - [**assembly**: *Serenity.Data*]
+[**命名空间**: *Serenity.Data.Mapping*] - [**程序集**: *Serenity.Data*]
 
-Serenity has a set of field flags that controls field behavior. 
+Serenity 有一组字段标识控制字段行为。 
 
 ```cs
 public enum FieldFlags
@@ -27,24 +27,24 @@ public enum FieldFlags
 }
 ```
 
-An ordinary table field has *Insertable*, *Updatable* and *Trim* flags set by default which corresponds to *Default* combination flag.
+普通表字段有 *Insertable*、*Updatable* 和 *Trim* 默认设置，对应于 *Default* 组合标识。
 
-## Insertable Flag
+## Insertable 标识
 
-*Insertable* flag controls if the field is editable in new record mode. By default, all ordinary  fields are considered to be insertable.
+*Insertable* 标识控制字段在新增记录状态下是否可编辑。默认情况下，所有普通字段都被认为是可插入的。
 
-Some fields might not be insertable in database table, e.g. identity columns shouldn't have this flags set. 
+某些字段可能不是在数据库表中插入的，如，标识(identity) 列不应该有该标识设置。 
 
-When a field doesn't have this flag, it won't be editable in forms in new record mode. This is also validated in services at repository level.
+当字段没有该标识，在新增记录状态的表单下不能编辑该字段。在服务端的仓库层同样有效。
 
-Sometimes, there might be internal fields that are perfectly valid in SQL INSERT statements, but shouldn't be edited in forms. One example might be a InsertedByUserId which should be set on service level, and not by end user. If we would let end user to edit it in forms, this would be a security hole. Such fields shouldn't have Insertable flag set too.
+有时候，内部字段可能在 SQL INSERT 声明中完全有效，但不应该在表单中编辑。一个例子是 InsertedByUserId 应在服务层面上设置，而不是由终端用户设置。如果我们让终端用户可以在表单中编辑它，这将是一个安全漏洞。此类字段也不应该具有 Insertable 标识设置。
 
-> This means field flags don't have to match database table settings.
+> 这意味着字段标识不需要与数据库表的设置相匹配。
 
 
-## Insertable Attribute
+## Insertable 特性
 
-To turn off Insertable flag for a field, put a [Insertable(false)] attribute on it:
+要取消字段的 Insertable 标识，可以使用 [Insertable(false)] 特性：
 
 ```vs
 [Insertable(false)]
@@ -56,17 +56,17 @@ public string MyField
 ```
 
 
-Use *Insertable(true)* to turn it on. 
+使用 *Insertable(true)* 启用标识符功能。 
 
-> Non insertable fields are not hidden. They are just readonly. If you want to hide them, use [HideOnInsert] attribute (Serenity 1.9.8+) or write something like *form.MyField.GetGridField().Toggle(IsNew)* by overriding *UpdateInterface* method of your dialog.
+> 非可插入字段在表单中是不隐藏的。它们只是处于只读状态。如果你想隐藏它们，请使用 [HideOnInsert] 特性 (Serenity 1.9.8+) ，或者使用 *form.MyField.GetGridField().Toggle(IsNew)* 重写对话框中 *UpdateInterface* 方法。
 
-## Updatable Flag
+## Updatable 标识
 
-This flag is just like *Insertable* flag, but controls edit record mode in forms and update operations in services. By default, all ordinary fields are considered to be updatable.
+该标识就像 *Insertable* 标识，但是控制表单记录的编辑状态和服务端的更新操作。默认情况下，所有普通字段都被认为是可更新的。
 
-## Updatable Attribute
+## Updatable 特性
 
-To turn off Updatable flag for a field, put a [Updatable(false)] attribute on it:
+要取消字段的 Updatable 标识，可以使用 [Updatable(false)] 特性：
 
 ```vs
 [Updatable(false)]
@@ -78,27 +78,27 @@ public string MyField
 ```
 
 
-Use *Updatable(true)* to turn it on. 
+使用 *Updatable(true)* 启用标识符功能。 
 
-> Non updatable fields are not hidden in dialogs. They are just readonly. If you want to hide them, use [HideOnUpdate] attribute (Serenity 1.9.8+) or write something like *form.MyField.GetGridField().Toggle(!IsNew)* by overriding *UpdateInterface* method of your dialog.
+> 非可插入字段在表单中是不隐藏的。它们只是处于只读状态。如果你想隐藏它们，请使用 [HideOnInsert] 特性 (Serenity 1.9.8+) ，或者使用 *form.MyField.GetGridField().Toggle(IsNew)* 重写对话框中 *UpdateInterface* 方法。
 
-## Trim Flag
+## Trim 标识
 
-This flag is only meaningful for string typed fields and controls whether their value should be trimmed before save. All string fields have this flag on by default.
+该标识只对字符串类型的字段有效，它控制着值在保存之前是否被修剪。所有字符串默认包含该标识。
 
-When a field value is empty string or whitespace only, it is trimmed to null.
+当字段值是空字符串或全是空格，它将被修剪为 null 。
 
-## TrimToEmpty Flag
+## TrimToEmpty 标识
 
-Use this flag if you prefer to trim string fields to empty string instead of null.
+如果你更喜欢把字符串字段修剪为空的字符串，而不是 null，则使用此标识。
 
-When a field value is null or whitespace only, it is trimmed to empty string.
+当字段值是 null 或全是空格，它将被修剪为空字符串。
 
-## SetFieldFlags Attribute
+## SetFieldFlags 特性 
 
-This attribute can be used on fields to include or exclude a set of flags. It takes a first required parameter to include flags, and a second optional parameter to exclude flags.
+此属性可用于在字段中包含或排除一组标识。第一个参数是必需的，表示包含的标识；第二个是可选参数，表示排除的标识。
 
-To turn on TrimToEmpty flag on a field, we use it like this:
+要启用字段中的 TrimToEmpty 标识，我们可以这样使用：
 
 ```vs
 [SetFieldFlags(FieldFlags.TrimToEmpty)]
@@ -109,7 +109,7 @@ public string MyField
 }
 ```
 
-To turn off Trim flag:
+要取消 Trim 标识，则：
 
 ```vs
 [SetFieldFlags(FieldFlags.None, FieldFlags.TrimToEmpty)]
@@ -120,7 +120,7 @@ public string MyField
 }
 ```
 
-To include TrimToEmpty and Updatable but remove Insertable:
+要包含 TrimToEmpty 和 Updatable ，并移除 Insertable，则：
 ```vs
 [SetFieldFlags(
     FieldFlags.Updatable | FieldFlags.TrimToEmpty,
@@ -132,76 +132,76 @@ public string MyField
 }
 ```
 
-> Insertable and Updatable attributes are subclasses of SetFieldFlags attribute.
+> Insertable 和 Updatable 特性是 SetFieldFlags 特性的子类。
 
-## NotNull Flag
+## NotNull 标识 
 
-Use this flag to set fields as not nullable. By default, this flag is set for fields that are not nullable in database, using NotNull attribute.
+使用该标识设置字段为不可空。默认情况下，该标识使用 NotNull 特性设置字段在数据库为不可空字段。
 
-When a field is not nullable, its corresponding label in forms has a red asterisk and they are required to be entered.
+当字段是不可空的，它在表单对应的标签中有一个红色的星号，并要求必须输入值。
 
-## NotNullable Attribute
+## NotNullable 特性 
 
-This sets the NotNull atttribute on a field to ON. Remove attribute to turn it off. 
+在字段中使用 NotNull 特性启用非空限制，移除该特性表示取消该限制。 
 
-You may also use [Required(false)] to make field not required in forms, even if it is not nullable in database. This doesn't clear the NotNull flag.
+即使字段在数据库中不是可空的，也可以使用 [Required(false)] 让字段在表单中变为非必填字段。它不会清除 NotNull 标识。 
 
-## Required Flag
+## Required 标识
 
-This is a combination of Default and NotNullable flags. 
+这是 Default 和 NotNullable 标识的组合。 
 
-> It has no relation to [Required] attribute which controls validation in forms.
+> 它与表单中控制验证的 [Required] 特性没有关系。
 
-## PrimaryKey Flag and PrimaryKey Attribute
+## PrimaryKey 标识和 PrimaryKey 特性
 
-Set this for primary key fields in table. 
+为表中的主键字段设置该标识。 
 
-> Primary key fields are selected on Key column selection mode in List and Retrieve request handlers.
+> 列表和检索请求处理程序的 Key 列选择模式选择主键字段。
 
-[PrimaryKey] attribute sets this flag ON.
+使用 [PrimaryKey] 特性启用该标识。
 
-## AutoIncrement Flag and AutoIncrement Attribute
+## AutoIncrement 标识和 AutoIncrement 特性
 
-Set this for fields that are auto incremented on server side, e.g. identity columns, or columns using a generator.
+设置此字段在服务器端是自动递增，例如，标识列或使用生成器（generator）的列。
 
-## Identity Flag and Identity Attribute
+## Identity 标识和 Identity 特性 
 
-This is a combination of PrimaryKey, AutoIncrement and NotNull flags, which is common for identity columns.
+这是 PrimaryKey、AutoIncrement 和 NotNull 标识的组合，常用于标识列。
 
-## Foreign Flag
+## Foreign 标识 
 
-This flag is set for foreign view fields, that are originating from other tables through a join.
+该标识设置通过联接其他表得到的外来视图字段。
 
-It is automatically set for fields with expressions containing table aliases other than T0.
+它自动为字段设置表达式，该表达式包含 T0 以外的表别名。
 
-For example, if a field has an attribute like [Expression("jCountry.CountryName")] it will have this flag.
+例如，如果一个字段有像 [Expression("jCountry.CountryName")] 这样的特性，它将有此标识。
 
-> This has no relation to ForeignKey attribute
+> 该标识与 ForeignKey 特性没有关系。
 
-## Calculated Flag
+## Calculated 标识 
 
-If a field has an expression involving more than one field or some mathematical operations, it will have this flag.
+如果字段的表达式有涉及多个字段或一些数学运算，它将有此标识。
 
-This could also be set for fields that are calculated on SQL server side.
+也可以为在 SQL 服务器端计算的字段设置此标识。
 
-## ClientSide Flag and ClientSide Attribute
+## ClientSide 标识和 ClientSide 特性 
 
-Corresponds to an unmapped field in Serenity entities. They don't have a corresponding field in database table. 
+对应于 Serenity 实体未映射的字段。它们没有在数据库表中对应的字段。 
 
-These kinds of fields can be used for temporary calculation, storage and transfer on client and service layers.
+这些类型的字段可以用于临时计算、存储及客户端和服务层上的传输。
 
-## Reflective Flag
+## Reflective 标识 
 
-This is used for an advanced form of unmapped fields, where they don't have a storage of their own in row, but reflects value of another field in a different form. For example, a field that displays absolute value of a integer field that can be negative.
+是用于未映射字段的一种高级形式，这些字段没有存储在行中，但反映了另一个不同形式的字段值。例如，绝对值显示为整数的字段也可以是负整数。
 
-This should only be used in rare cases for such unmapped fields.
+应该只在极少数情况下，对这类未映射的字段使用该标识。
 
-## DenyFiltering Flag
+## DenyFiltering 标识
 
-If set, denies filtering operations on a sensitive field. This can be useful for secret fields like PasswordHash, that shouldn't be allowed to be selected or filtered by client side.
+如果设置该标识，则表示拒绝对敏感字段进行过滤操作。对于像 PasswordHash 这样的机密字段很有用，不应该允许由客户端选择或过滤这些机密字段。
 
-## Unique Flag and Unique Attribute
+## Unique 标识和 Unique 特性 
 
-When a field has this flag, its value is checked against existing values in database to be unique.
+当字段有该标识，在数据库中与现有值进行检查以确保其值必须是唯一的。
 
-You can turn on this flag with Unique attribute and determine if this constraint should be checked on service level (before the check in database level to avoid cryptic constraint errors).
+你可以使用 Unique 特性启用该标识，并确定是否应在服务级别检查此约束（在数据库级别检查以避免出现神秘约束的错误）。

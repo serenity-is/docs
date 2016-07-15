@@ -109,7 +109,7 @@
 * [流式 SQL (Fluent SQL)](fluent_sql/fluent_sql.md)
    * [SqlQuery 对象](fluent_sql/sqlquery_object.md)
    * [Criteria 对象](fluent_sql/criteria_objects.md)
-* [Connections and Transactions](connections/connections_and_transactions.md)
+* [连接和事务](connections/connections_and_transactions.md)
 * [Services](services/README.md)
    * [Service Endpoints](services/service_endpoints.md)
    * [List Request Handler](services/list_request_handler.md)

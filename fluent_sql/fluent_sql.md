@@ -1,7 +1,7 @@
-# Fluent SQL
+# 流式 SQL (Fluent SQL)
 
-Serenity contains a set of query builders for SELECT, INSERT, UPDATE and DELETE statements.
+Serenity 包含一系列 SELECT、 INSERT、 UPDATE 和 DELETE 语句的查询生成器。
 
-These builders can be used with simple strings or Serenity entity (row) system.
+这些生成器可以被简单字符串或 Serenity 实体（row）系统使用。
 
-Their output can be executed directly, through a micro-orm like Dapper (which is integrated with Serenity), or Serenity extensions.
+它们的输出可通过像 Dapper（已集成到 Serenity） 这样的微 ORM 或 Serenity 扩展直接执行。

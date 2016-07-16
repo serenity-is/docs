@@ -1,8 +1,8 @@
-# Service Endpoints
+# 服务终结点
 
-In Serenity, Service Endpoints are a subclass of ASP.NET MVC controllers.
+在 Serenity 中，服务终结点是 ASP.NET MVC 控制器的一个子类。
 
-Here is an excerpt from Northwind OrderEndpoint:
+这是 Northwind 的 OrderEndpoint 摘录：
 
 ```cs
 namespace Serene.Northwind.Endpoints
@@ -26,36 +26,36 @@ namespace Serene.Northwind.Endpoints
 ```
 
 
-### Controller Naming and Namespace
+### 控制器的命名和命名空间
 
-Our class has name *OrderController*, even though its file is named *OrderEndpoint.cs*. This is due to a ASP.NET MVC limitation (which i don't find so logical) that all controllers must end with *Controller* suffix. 
+即使文件名为 *OrderEndpoint.cs*，但我们的类名称却是 *OrderController*。这是由于 ASP.NET MVC 的限制（我找不到之所以这样的逻辑）：所有控制器必须以 *Controller* 后缀结尾。
 
-If you don't end your controller class name with this suffix, your actions will simply won't work. So be very careful with this.
+如果控制器类名称不以此后缀结束，行为（action）将根本不能工作。所以要非常小心。
 
-> I also did this mistake several times and it cost me hours.
+> 这个错误我也犯了几次并花了我个小时。
 
-Namespace of this class (*Serene.Northwind.Endpoints*) is not important at all, though we usually put endpoints under *MyProject.Module.Endpoints* namespace for consistency.
+类的命名空间 (*Serene.Northwind.Endpoints*) 就不是那么重要了，但我们通常把终结点放在 *MyProject.Module.Endpoints* 命名空间下，以保持一致性。
 
-Our OrderController derives from ServiceEndpoint (and should), which provides this MVC controller with not so usual features that we'll see shortly.
+OrderController 继承自 ServiceEndpoint（也应该），从而为该 MVC 控制器提供不太常用的功能，我们很快就会介绍这些功能。
 
 
-### Routing Attributes
+### 路由特性
 
 ```cs
 [RoutePrefix("Services/Northwind/Order"), Route("{action}")]
 ```
-Routing attributes above, which belongs to ASP.NET attribute routing, configures base address for our service endpoint. Our actions will be available under "mysite.com/Services/Northwind/Order".
+上面的路由特性属于 ASP.NET 路由特性，为服务终结点配置基本地址。我们的行为将使用 "mysite.com/Services/Northwind/Order" 获得。
 
-> Please avoid classic ASP.NET MVC routing, where you configured all routes in ApplicationStart method with *routes.AddRoute* etc. It was really hard to manage.
+> 请避免经典 ASP.NET MVC 路由，它把所有路由放在 ApplicationStart 方法用 *routes.AddRoute* 等配置。这样真的很难管理。
 
-All Serenity service endpoints uses */Services/Module/Entity* addressing scheme by default. Again even though you'd be able to use another address scheme, this is recommended for consistency and basic conventions.
+Serenity 的所有服务终结点默认使用 */Services/Module/Entity* 寻址方案。即使你依然能够使用另一套寻址方案，但建议保持一致性并遵守基本约定。
 
 
-### ConnectionKey Attribute
+### ConnectionKey 特性
 
-This attribute specificies which connection key in your application configuration file (e.g. web.config) should be used to create a connection when needed.
+该特性指定在创建连接时，应该使用应用程序配置文件 (如 web.config) 中的哪个连接键。
 
-Let's see when and how this auto created connection is used:
+让我们看看如何以及何时使用它来自动创建连接：
 
 ```cs
 public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
@@ -64,11 +64,11 @@ public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
 }
 ```
 
-Here we see that this action takes a IDbConnection parameter. You can't send a IDbConnection to an MVC action from client side. So who creates this connection?
+在这里我们看到该操作需要一个 IDbConnection 参数，但不能从客户端发送 IDbConnection 到 MVC 的行为（action）。所以由谁来创建该连接？
 
-Remember that our controller derives from ServiceEndpoint? So ServiceEndpoint understands that our action requires a connection. It checks [ConnectionKey] attribute on top of controller class to determine connection key, creates a connection using *SqlConnections.NewByKey()*, executes our action with this connection, and when action ends executing, closes the connection.
+还记得我们的控制器是继承 ServiceEndpoint 吗？因此 ServiceEndpoint 可以知道我们的行为需要连接，它会检查控制器类的 [ConnectionKey] 特性来确定连接键，然后使用 *SqlConnections.NewByKey()* 创建一个连接，并用此连接执行我们的行为，当行为执行结束时，关闭连接。
 
-You'd be able to remove this connection parameter from the action and create it manually:
+可以从行为中删除此连接参数并手动创建它：
 
 ```cs
 public ListResponse<MyRow> List(ListRequest request)
@@ -80,11 +80,11 @@ public ListResponse<MyRow> List(ListRequest request)
 }
 ```
 
-Actually this is what ServiceEndpoint does behind the scenes.
+实际上 ServiceEndpoint 在幕后为我们创建连接。
 
-Why not use this feature while platform handles this detail automatically? One reason would be when you need to open a custom connection that is not listed in the config file, or open a dynamic one depending on some conditions.
+为什么不使用此功能，而让平台自动处理这个细节呢？其中一个原因是：你可能需要打开一个未列在配置文件中的自定义连接，或根据某些条件打开一个动态连接。
 
-We have another method that takes IUnitOfWork (transaction), instead of IDbConnection parameter:
+我们有另一种方法，它需要 IUnitOfWork（事务）而不是 IDbConnection 参数：
 
 ```cs
 public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
@@ -93,9 +93,9 @@ public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
 }
 ```
 
-Here situation is similar. ServiceEndpoint again creates a connection, but this time starts a transaction on it (IUnitOfWork), calls our action method, and when it returns will commit transaction automatically. Again, if it fails, would rollback it.
+这里的情况是类似的。ServiceEndpoint 创建另一个连接，但这次它(IUnitOfWork) 在该连接启动一个事务来调用我们的行为方法，并在返回时自动提交事务。如果执行失败，将回滚。
 
-Here is the manual version of the same thing:
+这是同一件事的手动版：
 
 ```cs
 public SaveResponse Create(SaveRequest<MyRow> request)
@@ -110,55 +110,55 @@ public SaveResponse Create(SaveRequest<MyRow> request)
 }
 ```
 
-So, ServiceEndpoint handles something that takes 8 lines in 1 line of code.
+因此，ServiceEndpoint 用 1 行代码处理 8 行代码的逻辑。
 
 
-### When To Use IUnitOfWork / IDbConnection
+### 何时使用 IUnitOfWork / IDbConnection
 
-By convention, Serenity action methods that modify some state (CREATE, UPDATE etc.) should run inside a transaction, thus take an IUnitOfWork parameter, and ones that are read only operations (LIST, RETRIEVE) should use IDbConnection.
+按照惯例，修改一些状态 （创建、 更新等） 的 Serenity 操作方法应该在内部使用事务，因此需要使用 IUnitOfWork 参数，而那些只读操作（列表、检索）应该使用 IDbConnection。
 
-If your service method takes a IUnitOfWork parameter, this is a signature that your method might modify some data.
+如果服务方法含 IUnitOfWork 参数，则表明你的方法将修改一些数据。
 
-### About [HttpPost] Attribute
+### 关于 [HttpPost] 特性
 
-You may have noticed that Create, Update, Delete etc methods has this attribute while List, Retrieve etc. not.
+你可能已经注意到创建(Create)，更新(Update)，删除(Delete)等方法具有此特性，而列表(List)、检索(Retrieve)等方法不包含该特性。
 
-This attribute limits Create, Update, Delete actions to HTTP POST only. It doesn't allow them to be called by HTTP GET.
+此特性限制创建、更新、删除操作只能使用 HTTP POST ，而不允许它们由 HTTP GET 调用。
 
-This is because, these methods are ones that modify some state, e.g. insert, update, delete some records from DB, so they shouldn't be allowed to be called unintentionally, and their results shouldn't be allowed to be cached.
+因为这些方法修改状态，例如从 DB 插入、更新、删除一些记录，所以它们不应该被无意中调用，并且它们的结果不应该被允许缓存。
 
-> This also has some security implications. Actions with GET method might be subject to some attacks.
+> 这也带来一些安全隐患。GET 方法的行为可能会受到一些攻击。
 
-List, Retrieve doesn't modify anything, so they are allowed to be called with GET, e.g. typing in a browser address bar.
+列表、检索不会修改任何状态，因此它们允许使用 GET 调用，如：在浏览器的地址栏调用。
 
-Even though, List, Retrieve can be called by GET, Serenity always calls services using HTTP POST when you use its methods, e.g. Q.CallService, and will turn of caching to avoid unexpected results.
+即使列表、检索可以通过 GET 调用，Serenity 总是使用 HTTP POST 调用服务（如 Q.CallService），并启用缓存，以避免出现意外的结果。
 
 
-### ServiceAuthorize Attribute
+### ServiceAuthorize 特性
 
-Our controller class has ServiceAuthorize attribute:
+我们的控制器类有 ServiceAuthorize 特性：
 
 ```
 ServiceAuthorize(Northwind.PermissionKeys.General)
 ```
 
-This attribute is similar to ASP.NET MVC [Authorize] attribute but it checks only that user is logged in, and throws an exception otherwise.
+该特性类似于  ASP.NET MVC 的 [Authorize] 特性，但它只检查用户是否已登录，若没有登录则抛出异常。
 
-If used with no parameters, e.g. [ServiceAuthorize()] this attribute also checks that user is logged in.
+如果使用时不带参数（如 [ServiceAuthorize()]），此属性也会检查该用户是否已登录。
 
-When you pass it a permission key string, it will check that user is logged in and also has that permission.
+当你把访问许可键(permission key) 字符串传递给它时，它会检查该用户是否已登录且具有该权限。
 
 ```
 ServiceAuthorize("SomePermission")
 ```
 
-If user is not granted "SomePermission", this will prevent him from executing any endpoint method.
+如果用户未被授予 "SomePermission"，则阻止他执行任何终结点的方法。
 
-There is also [PageAuthorize] attribute that works similar, but you should prefer [ServiceAuthorize] with service endpoints, because its error handling is more suitable for services.
+[PageAuthorize] 特性也类似，但你可能更喜欢在服务终结点使用 [ServiceAuthorize] 特性，因为它的错误处理更适合服务。
 
-While [PageAuthorize] **redirects** user to the Login page, if user doesn't have the permission, ServiceAuthorize returns a more suitable **NotAuthorized service error**.
+虽然 [PageAuthorize] 将用户**重定向**到登录页面，但如果用户没有权限，ServiceAuthorize 返回一个更适合的 **未授权的服务错误**。
 
-It's also possible to use [ServiceAuthorize] attribute on actions, instead of controller:
+也可以在行为中使用 [ServiceAuthorize] 特性，而不只在控制器中使用该特性：
 
 ```cs
 [ServiceAuthorize("SomePermissionThatIsRequiredForCreate")]
@@ -166,17 +166,17 @@ public SaveResponse Create(SaveRequest<MyRow> request)
 ```
 
 
-### About Request and Response Objects
+### 关于  Request 和 Response 对象
 
-Except the specially handled IUnitOfWork and IDbConnection parameters, all Serenity service actions takes a single request parameter and returns a single result. 
+除了特殊处理的 IUnitOfWork 和 IDbConnection 参数，所有 Serenity 服务行为都是单个请求参数并返回单个结果。 
 
 ```
 public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
 ```
 
-Let's start with the result. If you have some background on ASP.NET MVC, you'd know that controllers can't return arbitrary objects. They must return objects that derive from *ActionResult*.
+让我们从返回结果开始。如果你有使用 ASP.NET MVC 的背景，你会知道控制器不能返回任意对象。它们必须返回一个派生自 *ActionResult* 的对象。
 
-But our *SaveResponse* derives from *ServiceResponse* which is just an ordinary object:
+但是我们的 *SaveResponse* 派生自 *ServiceResponse*，它只是一个普通的对象：
 
 ```
 public class SaveResponse : ServiceResponse
@@ -190,11 +190,11 @@ public class ServiceResponse
 }
 ```
 
-How this is possible? Again ServiceEndpoint handles this detail behind the scenes. It transforms our SaveResponse to a special action result that returns JSON data. 
+这怎么可能？还是 ServiceEndpoint 在幕后处理这些细节。它把 SaveResponse 转换为指定行为返回 JSON 数据的结果。 
 
-We don't have to worry about this detail as long as our response object derives from ServiceResponse and is JSON serializable.
+只要响应对象是从 ServiceResponse 派生并且是可序列化成 JSON，我们就不必担心这些细节。
 
-Again, our request object is also an ordinary class that derives from a basic ServiceRequest:
+我们的请求对象也是一个普通的类，派生自基本的 ServiceRequest 类：
 
 ```cs
 public class SaveRequest<TEntity> : ServiceRequest, ISaveRequest
@@ -208,11 +208,11 @@ public class ServiceRequest
 } 
 ```
 
-ServiceEndpoint takes the HTTP request content which is usually JSON, deserializes it into our *request* parameter, using a special MVC action filter (JsonFilter).
+ServiceEndpoint 的 HTTP 请求内容通常是 JSON，若要将其反序列化为我们的 *请求* 参数，需要使用特殊的 MVC 操作过滤器(JsonFilter)。
 
-If you want to use some custom actions, your methods should also follow this philosophy, e.g. take just one request (deriving from ServiceRequest) and return one response (deriving from ServiceResponse).
+如果想使用一些自定义的操作，你的方法也应该遵循这一理念，如：只有一个请求（派生自 ServiceRequest）并返回一个响应（派生自 ServiceResponse）。
 
-Let's add a service method that returns count of all orders greater than some amount:
+让我们添加一个服务方法，让其返回所有订单总数大于某一数量的订单：
 
 ```
 public class MyOrderCountRequest : ServiceRequest
@@ -239,9 +239,9 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-Please follow this pattern and try not to add more parameters to action methods. Serenity follows message based pattern, with only one request object, that can be extended later by adding more properties. 
+请遵循这种模式并不要尝试向操作方法添加更多的参数。Serenity 遵循只有一个请求对象的基本消息模式，以便后继的扩展可添加更多的属性。 
 
-Don't do this (which is called RPC - Remote procedure call style):
+不要这样做（被称为 RPC 风格。RPC, Remote procedure call：远程过程调用）：
 
 ```cs
 public class OrderController : ServiceEndpoint
@@ -254,7 +254,7 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-Prefer this (message based services):
+更佳的做法是（基于消息服务）：
 
 ```cs
 public class MyOrderCountRequest : ServiceRequest
@@ -273,12 +273,12 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-This will avoid having to remember parameter order, will make your request objects extensible without breaking backwards compability, and have many more advantages that you may notice later.
+这可以避免记忆参数的顺序，使你的请求对象更具扩展性而又不破坏向后的兼容性，还有更多你可能后来才会注意到的优点。
 
 
-### Why Endpoint Methods Are Almost Empty
+### 为什么 Endpoint 方法几乎都是空的？
 
-We usually delegate actual work to our repository layer:
+我们通常将实际工作委托给仓储层：
 
 ```cs
 public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
@@ -287,10 +287,10 @@ public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
 }
 ```
 
-Remember that ServiceEndpoint has a direct dependency to ASP.NET MVC. This means that any code you write inside a service endpoint will have a dependency to ASP.NET MVC, and thus web environment.
+记住，ServiceEndpoint 直接依赖于 ASP.NET MVC。这意味着你在 ServiceEndpoint 写的任何代码将依赖于 ASP.NET MVC，因此需要 web 环境。
 
-You may not be able to reuse any code you wrote here, from let's say a desktop application, or won't be able to isolate this code into a DLL that doesn't have a reference to WEB libraries.
+你可能不能重用任何写在这里的代码，比如重用一个桌面应用程序的代码。否则就不能将此代码独立为一个 DLL，它并不具有对 WEB 库引用的任何代码。
 
-But if you really don't have such a requirement, you can remove repositories all together and write all your code inside the endpoint.
+但如果你真的没有这样的需求，你可以删除所有的仓储及所有在终结点内部编写的代码。
 
-Some people might argue that entities, repositories, business rules, endpoints etc. should all be in their own isolated assemblies. In theory, and for some scenarios this might be valid, but some (or most) users don't need so much isolation, and may fall into YAGNI (you aren't gonna need it) category.
+有些人可能认为：实体、仓储、 业务规则、终结点等都应该在自己独立的程序集中。从理论上及某些情况下，这可能是有效的，但有些（或大部分）的用户不需要这么多的程序集，且可能落入 YAGNI（YAGNI, you aren't gonna need it ：你不会需要它） 类别。

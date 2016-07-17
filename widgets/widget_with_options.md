@@ -1,8 +1,8 @@
-# Widget < TOptions > Generic Class
+# Widget < TOptions > 泛型类
 
-If a widget requires some additional initialization options, it might be derived from the `Widget< TOptions >` class.
+如果部件需要一些额外的初始化选项，可以从 `Widget< TOptions >` 类派生。
 
-The options passed to the constructor can be accessed in class methods through the protected field `options`.
+在类方法中可以通过受保护的字段 `options` 访问传递给构造函数的选项。
 
 ```cs
 public abstract class Widget< TOptions > : Widget

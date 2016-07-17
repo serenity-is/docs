@@ -1,10 +1,10 @@
-# ScriptContext Class
+# ScriptContext 类
 
-C#, doesn't support global methods, so jQuery's `$` function can't be used as simply in Saltarelle as it is in Javascript.
+C# 不支持全局方法，因此 jQuery 的 `$` 函数在 Saltarelle 中不能像在 Javascript 那样使用。
 
-A simple expression like `$('#SomeElementId)` in Javascript corresponds to Saltarelle C# code `jQuery.Select("#SomeElementId")`.
+在 Javascript 中的表达式 `$('#SomeElementId)` 对应于 Saltarelle 的 C# 代码 `jQuery.Select("#SomeElementId")`。
 
-As a workaround, *ScriptContext* class can be used:
+一种替代方法，可以使用 *ScriptContext* ：
 
 ```cs
 public class ScriptContext
@@ -16,7 +16,7 @@ public class ScriptContext
 }
 ```
 
-As `$` is not a valid method name in C#, `J` is chosen instead. In subclasses of ScriptContext, jQuery.Select() function can be called briefly as `J()`.
+由于 `$` 在 C# 中不是有效的方法名称，可以选择 `J` 代替。在 ScriptContext 子类中，jQuery.Select() 函数可以简单地使用 `J()` 调用。
 
 ```cs
 

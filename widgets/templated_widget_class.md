@@ -1,6 +1,6 @@
-# TemplatedWidget Class
+# TemplatedWidget 类
 
-A widget that generates a complicated HTML markup in its constructor or other methods might lead to a class with much spaghetti code that is hard to maintain. Besides, as markup lies in program code, it might be difficult to customize output.
+部件在其构造函数或其它方法生成复杂的 HTML 标签，因此可能导致类具有很多难以维护的意大利面条式的代码。此外，由于标签就定在程序代码中，可能难以自定义输出。
 
 ```cs
 public class MyComplexWidget : Widget
@@ -26,7 +26,7 @@ public class MyComplexWidget : Widget
 }
 ```
 
-Such problems can be avoided by using HTML templates. For example, lets add the following template into the HTML page:
+通过使用 HTML 模板，可以避免这种问题。例如，我们可以向 HTML 页面添加下列模板：
 
 ```html
 <script id="Template_MyComplexWidget" type="text/html">
@@ -39,9 +39,9 @@ Such problems can be avoided by using HTML templates. For example, lets add the 
 </script>
 ```
 
-Here, a `SCRIPT` tag is used, but by specifying its type as `"text/html"`, browser won't recognize it as a real scriptto execute.
+在这里使用了 `SCRIPT` 标签，但通过指定其类型为 `"text/html"`，浏览器不会把它当成真正的脚本来执行。
 
-By making use of TemplatedWidget, lets rewrite previous spaghetti code block:
+让我们通过使用 TemplatedWidget 重写之前的意大利面条式的代码块：
 
 ```cs
 public class MyComplexWidget : TemplatedWidget
@@ -53,14 +53,14 @@ public class MyComplexWidget : TemplatedWidget
 }
 ```
 
-When this widget is created on an HTML element like following:
+当在一个 HTML 元素上创建该小部件，其内容如下：
 
 ```html
 <div id="SampleElement">
 </div>
 ```
 
-You'll end up with such an HTML markup:
+你最终将得到这样的 HTML 标签：
 
 ```html
 <div id="SampleElement">
@@ -73,23 +73,23 @@ You'll end up with such an HTML markup:
 </div>
 ```
 
-TemplatedWidget automatically locates the template for your class and applies it to the HTML element.
+TemplatedWidget 自动查找类的模板，并将它应用于 HTML 元素。
 
-## TemplatedWidget ID Generation
+## 生成 TemplatedWidget 的 ID
 
-If you watch carefully, in our template we specified ID for descendant elements as `~_MyToolbar` and `~_MyTable`.
+如果你仔细观察，在模板中我们为子元素指定 ID ： `~_MyToolbar` 和 `~_MyTable` 。
 
-But when this template is applied to the HTML element, resulting markup contained ID's of **MySamples_MyComplexWidget1_MyToolbar** and `MySamples_MyComplexWidget1_MyTable` instead.
+但是当该模板应用到 HTML 元素时，结果标签使用的 ID 却是 **MySamples_MyComplexWidget1_MyToolbar** 和 `MySamples_MyComplexWidget1_MyTable`。
 
-TemplatedWidget replaces prefixes like `~_` with the widget's `UniqueName` and underscore ("_") (`this.idPrefix` contains the combined prefix).
+TemplatedWidget 使用部件的 `唯一名称` 和下划线 ("_") (`this.idPrefix` 包含合并的前缀) 替换 `~_` 前缀。
 
-Using this strategy, even if the same widget template is used in a page for more than one HTML element, their ID's won't conflict with each other as they will have unique ID's.
+使用该策略，即使同一部件模板在页面中用于多个 HTML 元素，其 ID 也不会互相冲突，因为它们都有唯一的 ID。
 
-## TemplatedWidget.ByID Method
+## TemplatedWidget.ByID 方法
 
-As TemplateWidget appends a unique name to them, the ID attributes in a widget template can't be used to access elements after widget creation.
+TemplateWidget 向生成的标签追加一个唯一的名称，部件模板中的 ID 属性不能用于访问创建部件后的元素。
 
-Widget's unique name and an underscore should be prepended to the original ID attribute in the template to find an element:
+部件的唯一名称和下划线应该放在查找元素的模板中的原始 ID 属性前面：
 
 ```cs
 public class MyComplexWidget : TemplatedWidget
@@ -102,7 +102,7 @@ public class MyComplexWidget : TemplatedWidget
 }
 ```
 
-TemplatedWidget's ByID method can be used instead:
+也可以使用 TemplatedWidget 的 ByID 方法替代：
 
 ```cs
 public class MyComplexWidget
@@ -115,13 +115,13 @@ public class MyComplexWidget
 }
 ```
 
-## TemplatedWidget.GetTemplateName Method
+## TemplatedWidget.GetTemplateName 方法
 
-In the last sample `MyComplexWidget` located its template automatically.
+在最近的示例中，`MyComplexWidget` 自动查找其模板。
 
-TemplatedWidget makes use of a convention to find its template (convention based programming). It inserts `Template_` prefix before the class name and searches for a `SCRIPT` element with this ID attribute (`Template_MyComplexWidget`) and uses its HTML content as a template.
+TemplatedWidget 根据约定找到其模板（根据编码约定）。它在类名称之前插入 `Template_` 前缀，搜索含此 ID 属性 (`Template_MyComplexWidget`) 的 `SCRIPT` 元素，并使用其 HTML 内容作为模板。
 
-If we wanted to use another ID like following:
+如果我们想使用另一个像下面的 ID ：
 
 ```html
 <script id="TheMyComplexWidgetTemplate" type="text/html">
@@ -129,13 +129,13 @@ If we wanted to use another ID like following:
 </script>
 ```
 
-An error like this would be seen in the browser console:
+在浏览器控制台中将看到下面的错误：
 
 ```text
 Can't locate template for widget 'MyComplexWidget' with name 'Template_MyComplexWidget'!
 ```
 
-We might fix our template ID or ask the widget to use our custom ID:
+我们可以修改模板 ID 或要求部件使用自定义 ID ：
 
 ```cs
 public class MyComplexWidget
@@ -147,9 +147,9 @@ public class MyComplexWidget
 }
 ```
 
-## TemplatedWidget.GetTemplate Method
+## TemplatedWidget.GetTemplate 方法
 
-`GetTemplate` method might be overriden to provide a template from another source or specify it manually:
+`GetTemplate` 方法可以被重写，以从另一个资源提供或手动指定模板：
 
 ```cs
 public class MyCompleWidget
@@ -161,17 +161,17 @@ public class MyCompleWidget
 }
 ```
 
-## Q.GetTemplate Method and Server Side Templates
+## Q.GetTemplate 方法和服务端模板
 
-Default implementation for `TemplatedWidget.GetTemplate` method calls `GetTemplateName` and searches for a `SCRIPT` element with that ID.
+默认调用 `GetTemplateName` 方法并搜索具有该 ID 的 `SCRIPT` 元素来实现 `TemplatedWidget.GetTemplate` 方法。
 
-If no such SCRIPT element is found, `Q.GetTemplate` is called with the same ID.
+如果没有找到这样的 SCRIPT 元素，可使用同一 ID 调用 `Q.GetTemplate` 方法获取模板。
 
-An error is thrown if neither returns a result.
+如果也不返回结果，则会抛出错误。
 
-`Q.GetTemplate` method provides access to templates defined on the server side. These templates are compiled from files with `.template.cshtml` extension in `~/Views/Template` or `~/Modules` folders or their subfolders.
+`Q.GetTemplate` 可访问定义在服务端的模板。这些模板从 `~/Views/Template` 、 `~/Modules` 或它们的子文件夹中含 `.template.cshtml` 扩展的文件编译而来。
 
-For example, we could create a template for MyComplexWidget in a server side file like `~/Views/Template/SomeFolder/MyComplexWidget.template.cshtml` with the following content:
+例如，我们在服务端为 MyComplexWidget 创建一个模板文件 `~/Views/Template/SomeFolder/MyComplexWidget.template.cshtml`，其内容如下：
 
 ```html
 <div id="~_MyToolbar">
@@ -182,8 +182,8 @@ For example, we could create a template for MyComplexWidget in a server side fil
 </table>
 ```
 
-Template file name and extension is important while its folder is simply ignored.
+模板文件名和扩展名是很重要的，而其文件夹会被完全忽略。
 
-By using this strategy there would be no need to insert widget templates into the page markup.
+使用该策略就不需要将部件模板插入到页面标签中。
 
-Also, as such server side templates are loaded on the first use (*lazy loading*) and cached in the browser and the server, page markup doesn't get polluted with templates for widgets that we might never use in a specific page. Thus, server side templates are favored over inline SCRIPT templates.
+此外，由于这种服务端的模板在首次使用时加载（延迟加载），并在浏览器和服务器中缓存，页面标签没有被可能永远不会在特定网页使用的部件模板污染。因此，服务端模板青睐内嵌 SCRIPT 模板。

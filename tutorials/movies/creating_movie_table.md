@@ -161,4 +161,4 @@ namespace MovieTutorial
 
 ![Initial Migration Folder](img/mdb_migration_check.png)
 
-> 通常，您不必在每一个迁移后都做这些检查。在这里，我们演示将来如果你遇到迁移问题，你应该在到哪里去检查。
+> 通常，你不必在每一个迁移后都做这些检查。在这里，我们演示将来如果你遇到迁移问题，你应该在到哪里去检查。

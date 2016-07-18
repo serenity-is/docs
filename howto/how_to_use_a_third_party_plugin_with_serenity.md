@@ -127,7 +127,7 @@ public List<Int32> Representatives
 }
 ```
 
-我们在这里可以看到 Representatives 使用 Multiple 值为 true 的 LookupEditor。我们把它替换成新的编辑器︰ 
+我们在这里可以看到 Representatives 使用 Multiple 值为 true 的 LookupEditor。我们把它替换成新的编辑器： 
 
 ```cs
 [BSMultiSelectEditor(LookupKey = "Northwind.Employee"), ClientSide]

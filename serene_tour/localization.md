@@ -14,7 +14,7 @@ Serene 同样也把 es 作为将作为 *"语言设置"*" 的内容保存在浏�
 
 当你第一次启动 Serene 时，你可能会看到网站内容显示的是英文，但也有可能显示为西班牙、 土耳其语或俄语（这些都是目前可用的示例语言），这与你的操作系统或浏览器的语言设置有关。
 
-可在 web.config 中配置 ︰
+可在 web.config 中配置：
 
 ```xml
 <globalization culture="en-US" uiCulture="auto:en-US" />
@@ -57,7 +57,7 @@ Serene 有自定义资源文本译文的能力。
 
 ![](img/translation_navigation_welcome.png)
 
-当你保存更改时，Serene 在 App_Data/texts 文件夹中创建 user.texts.es.json 文件，其内容如下︰
+当你保存更改时，Serene 在 App_Data/texts 文件夹中创建 user.texts.es.json 文件，其内容如下：
 
 ```json
 {

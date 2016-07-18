@@ -1,6 +1,6 @@
 # 如何删除网格中的新增（add）按钮？
 
-** 本节的 TypeScript 版本有待更新 **
+** 本节是为 Saltaralle 编写。TypeScript 版本，请参阅 Serene 的 Basic Samples => Grids => Removing Add Button 页面 **
 
 你可以在 *MyGrid.ts* 重写 *getButtons()* 方法。
 

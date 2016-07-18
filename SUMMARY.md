@@ -122,6 +122,6 @@
 * [网格列表](grids/readme.md)
    * [格式化器类型](grids/formatter_types.md)
    * [持久化设置](grids/persisting_settings.md)
-* [Code Generator (Sergen)](sergen/code_generator_sergen.md)
-* [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
+* [代码生成器 (Sergen)](sergen/code_generator_sergen.md)
+* [使用的工具和库](getting_started/used_tools_and_libraries.md)
 

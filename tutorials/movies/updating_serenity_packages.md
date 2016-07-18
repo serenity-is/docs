@@ -29,7 +29,7 @@ Serenity.Services
 
 Serenity.CodeGenerator 也安装在 MovieTutorial.Web 项目中。 
 
-> 在更新期间，如果 NuGet 提示要覆盖修改一些脚本文件，您可以放心地同意，除非你想手工修改 Serenity 的脚本文件(我建议你避免这样做)。 
+> 在更新期间，如果 NuGet 提示要覆盖修改一些脚本文件，你可以放心地同意，除非你想手工修改 Serenity 的脚本文件(我建议你避免这样做)。 
 
 现在重新生成你的解决方案，它应该能生成成功。
 

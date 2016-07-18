@@ -1,6 +1,6 @@
 # 演员和角色 
 
-如果我们要这样保存演员和角色记录︰
+如果我们要这样保存演员和角色记录：
 
 *Actor/Actress*|*Character *
 --|--
@@ -116,7 +116,7 @@ namespace MovieTutorial.MovieDB
 
 当我们定义并使用一个新的枚举，我们应该重新生成解决方案，以便 T4 模板重新生成内容：
 
-现在当你启动项目后，你应该可以输入演员信息︰
+现在当你启动项目后，你应该可以输入演员信息：
 
 ![Person Editing](img/mdb_person_carrie.png)
 

@@ -33,7 +33,7 @@ namespace MovieTutorial.Migrations.DefaultDB
 
 ### 定义一个影片类型枚举
 
-现在我们把 *Kind* 字段添加到影片（Movie）表中，我们需要一些影片类型作为值。让我们将它定义在枚举中 *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*︰
+现在我们把 *Kind* 字段添加到影片（Movie）表中，我们需要一些影片类型作为值。让我们将它定义在枚举中 *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*：
 
 ```cs
 using Serenity.ComponentModel;

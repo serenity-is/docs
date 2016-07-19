@@ -1,18 +1,18 @@
-# Creating Lookup Tables
+# 创建检索表
 
-Let's start by creating lookup tables we'll need.
+让我们从创建系统所要用到的检索表开始。
 
-Here is a list of these tables:
+这是所需的表：
 
-* Meeting Types (Board Meeting, Weekly Analytics, SCRUM Meeting, Annual Meeting, so on...)
-* Locations (where meeting will be held, room numbers, address etc.)
-* Agenda Types (what subject(s) an agenda is about, might be multiple)
-* Units (which unit is organizing the meeting)
-* Contacts (people which would attend meetings, reporters, managers etc.)
+* 会议类型表（董事会会议、每周分析、SCRUM 会议、年会等）；
+* 地点表（举行会议的地址、房间号码等）；
+* 议程类型表（会议的主题，一个可能有多个主题）；
+* 单位表（此次会议的组织单位）；
+* 联系人表（参会人员、记者、管理层等）。
 
-We'll use database schema *met* for tables.
+我们使用 *met* 作为数据库表的 schema 。
 
-Create a new migration under, *Modules/Common/Migrations/DefaultDB* with name *DefaultDB_20160709_232400_MeetingLookups*:
+在 *Modules/Common/Migrations/DefaultDB* 创建一个名为 *DefaultDB_20160709_232400_MeetingLookups* 的迁移类：
 
 ```cs
 using FluentMigrator;
@@ -63,9 +63,9 @@ namespace MeetingManagement.Migrations.DefaultDB
 ```
 
 
-### Generating Code for Lookup Tables
+### 为检索表生成代码
 
-Our module name will be *Meetings*. We should use non-plural entity identifiers for generated code:
+我们的模块名称为 *Meetings*。在生成代码时，我们应该使用非复数的实体标识符：
 
 * AgendaTypes => AgendaType
 * Contacts => Contact
@@ -73,17 +73,17 @@ Our module name will be *Meetings*. We should use non-plural entity identifiers 
 * MeetingTypes => MeetingType
 * Units => Unit
 
-Generate code for these 5 tables using the entity identifiers given above:
+为这 5 张表使用上面给出的实体标识符生成代码：
 
 ![Sergen Lookups](img/met_sergen_lookups.png)
 
-Generated interface for these tables is fine enough. Just need to do a few cosmetic touches.
+对这些表生成的界面并不是很美观，需要做一些美化。
 
 ![Initial Lookups](img/met_initial_lookups.png)
 
-### Moving Navigation Links to NavigationItems.cs
+### 把导航连接移到 NavigationItems.cs
 
-Open *AgendaTypePage.cs*, *ContactPage.cs*, *LocationPage.cs*, *MeetingTypePage.cs* and *UnitPage.cs* files and move navigation links at top of them to *NavigationItems.cs*:
+打开 *AgendaTypePage.cs*、*ContactPage.cs*、*LocationPage.cs*、*MeetingTypePage.cs* 和 *UnitPage.cs* 文件，并把文件顶部的导航连接移至 *NavigationItems.cs*：
 
 ```cs
 using Serenity.Navigation;
@@ -107,9 +107,9 @@ using Meeting = MeetingManagement.Meeting.Pages;
 ```
 
 
-### Setting DisplayName and InstanceName Attributes of Lookup Tables
+### 为检索表设置 DisplayName 和 InstanceName 特性
 
-Open *AgendaTypeRow.cs*, *ContactRow.cs*, *LocationRow.cs*, *MeetingTypeRow.cs* and *UnitRow.cs* files and change *DisplayName* and *InstanceName* attributes like below:
+打开 *AgendaTypeRow.cs*、*ContactRow.cs*、*LocationRow.cs*、*MeetingTypeRow.cs* 和 *UnitRow.cs* 文件，并像下面那样修改 *DisplayName* 和 *InstanceName* 特性：
 
 * AgendaTypeRow => "Agenda Types", "Agenda Type"
 * ContactRow => "Contacts", "Contact"

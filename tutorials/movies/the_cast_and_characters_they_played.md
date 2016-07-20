@@ -1,6 +1,6 @@
-# 演员和角色 
+# 演员和角色
 
-如果我们要这样保存演员和角色记录：
+如果我们要像这样保存演员和角色记录：
 
 *Actor/Actress*|*Character *
 --|--
@@ -23,7 +23,7 @@ Carrie-Anne Moss|Trinity
 > 这里用 人员（Person） 表示演员会更好，因为演员后来可能成为导演，编剧等。
 
 
-### 创建 人员（Person） 和 演员（MovieCast） 表 
+### 创建 人员（Person） 和 演员（MovieCast） 表
 
 现在是时候创建这两张表的迁移类（migration）：
 
@@ -68,16 +68,16 @@ namespace MovieTutorial.Migrations.DefaultDB
 ```
 
 
-### 为 人员（Person） 表生成代码 
+### 为 人员（Person） 表生成代码
 
 我们首先为 人员（Person） 表生成代码：
 
 ![Person Code Generation](img/mdb_sergen_person.png)
 
 
-### 把 性别（Gender） 修改为枚举 
+### 把 性别（Gender） 修改为枚举
 
-人员（Person） 表的 性别（Gender） 列应该存放枚举类型的数据，在 PersonRow.cs 所在文件夹创建文件 Gender.cs，并定义一个 Gender 枚举：
+人员（Person）表的 性别（Gender）列应该存放枚举类型的数据，在 PersonRow.cs 所在文件夹创建文件 Gender.cs，并定义一个 Gender 枚举：
 
 ```cs
 using Serenity.ComponentModel;
@@ -96,7 +96,7 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-修改 PersonRow.cs 定义的 Gender 属性，如： 
+修改 PersonRow.cs 定义的 Gender 属性，如：
 
 ```cs
 //...
@@ -112,7 +112,7 @@ namespace MovieTutorial.MovieDB
 为保持一致性，把 PersonForm.cs 和 PersonColumns.cs 的 Gender 属性类型 Int32 改为 Gender 枚举类型。
 
 
-### 重新生成 T4 模板 
+### 重新生成 T4 模板
 
 当我们定义并使用一个新的枚举，我们应该重新生成解决方案，以便 T4 模板重新生成内容：
 
@@ -121,9 +121,9 @@ namespace MovieTutorial.MovieDB
 ![Person Editing](img/mdb_person_carrie.png)
 
 
-### 声明 FullName 字段 
+### 声明 FullName 字段
 
-编辑对话框的标题只显示人员的 姓氏(*Carrie-Anne*)，显示完整名字会更好，并且搜索也应该按列表中的全名进行搜索的。
+编辑对话框的标题只显示人员的 姓氏(*Carrie-Anne*)，显示完整名字会更好，并且搜索也应该按列表中的全名进行搜索。
 
 因此，让我们编辑 PersonRow.cs：
 
@@ -176,15 +176,15 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-我们在 Fullname 属性上面添加 SQL 表达式 *Expression("(t0.Firstname + ' ' + t0.Lastname)")*，因此，这是一个在服务器端计算的字段。 
+我们在 Fullname 属性上面添加 SQL 表达式 *Expression("(t0.Firstname + ' ' + t0.Lastname)")*，因此，这是一个在服务器端计算的字段。
 
 通过给 FullName 属性添加 QuickSearch 特性，列表现在将默认以 Fullname 字段进行搜索，而不再以 Firstname 搜索。
 
-但对话框显示的仍然是 Firstname。要显示 Fullname，我们需要生成项目让 T4模板转换模板。
+但对话框显示的仍然是 Firstname。要显示 Fullname，我们需要生成项目让 T4 模板转换模板。
 
 ### 为什么必须转换模板吗？
 
-查看 *PersonDialog.ts* 文件后会变得更清晰：
+查看 *PersonDialog.ts* 文件后你就会明白：
 
 ```ts
 namespace MovieTutorial.MovieDB {
@@ -231,15 +231,15 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-此元数据 （PersonRow 的 nameProperty 常量） 是由 ServerTypings.tt 生成 TypeScript 文件(MovieDB.PersonRow.ts)的代码。 
+此元数据 （PersonRow 的 nameProperty 常量） 是由 ServerTypings.tt 生成 TypeScript 文件(MovieDB.PersonRow.ts)的代码。
 
-同样，*idProperty*, *localTextPrefix*, *Enum Types* 等也是由 *ServerTypings.tt* 文件生成的。因此，当你的更改对生成文件中的元数据有影响时，你就应该转换 T4 模板以将该修改信息应用到对应的 TypeScript 文件中。
+同样，*idProperty*、*localTextPrefix*、*Enum Types* 等也是由 *ServerTypings.tt* 文件生成的。因此，当你的更改对生成文件中的元数据有影响时，你就应该转换 T4 模板以将该修改信息应用到对应的 TypeScript 文件中。
 
 > 你应该总是在转换模板之前生成项目，因为 T4 模板文件引用了 MovieTutorial.Web 项目输出的 DLL。否则你将会为一个旧版本的 Web 项目生成代码。
 
-### 声明 PersonRow 查找脚本 Declaring PersonRow Lookup Script
+### 声明 PersonRow 检索脚本(Lookup Script)
  
-让我们继续在 PersonRow.cs 文件中为 人员（Person） 表添加一个 LookupScript 特性：
+让我们继续在 PersonRow.cs 文件中为 人员（Person）表添加一个 LookupScript 特性：
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -252,7 +252,7 @@ namespace MovieTutorial.MovieDB.Entities
 
 我们会在稍后的编辑影片中使用它。
 
-再次生成项目，你将看到 *MovieDB.PersonRow.ts* 中有一个返回 lookupKey 类型的 *getLookup()* 方法。  
+再次生成项目，你将看到 *MovieDB.PersonRow.ts* 中有一个返回 lookupKey 类型的 *getLookup()* 方法。
 
 ```ts
 namespace MovieTutorial.MovieDB {
@@ -274,7 +274,7 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-### 为 演员（MovieCast）表生成代码 
+### 为 演员（MovieCast）表生成代码
 
 使用 *sergen* 为 演员（MovieCast）表生成代码：
 
@@ -291,7 +291,7 @@ MovieGrid.ts
 
 再次生成项目。
 
-### 演员（MovieCast）表主从关系的编辑逻辑 
+### 演员（MovieCast）表主从关系的编辑逻辑
 
 到目前为止，我们为每张表创建一个页面，并在该页面显示列表和编辑记录。这一次，我们将使用不同的策略。
 
@@ -299,14 +299,14 @@ MovieGrid.ts
 
 因此，编辑演员的信息将保存在内存中，当用户点击影片对话框中的保存按钮时，影片和其演员会同时（同一事务）保存到数据库。
 
-> 也有可能需要单独编辑演员信息的情况，但我们这里仅演示其中一种实现方式。 
+> 也有可能需要单独编辑演员信息的情况，但我们这里仅演示其中一种实现方式。
 
 > 对于一些主从关系，如订单/订单详细，由于需要保持主从表的一致性，从表不应该允许进行独立编辑。 Serene 已经在 Northwind/Order 的编辑对话框中为该情况提供了示例。
 
 
-### 创建演员（MovieCast）列表的编辑器 
+### 创建演员（MovieCast）列表的编辑器
 
-在 MovieCastRow.cs（位于 MovieTutorial.Web/Modules/MovieDB/MovieCast/)目录下面，创建文件 MovieCastEditor.ts，其内容如下：
+在 MovieCastRow.cs (位于 MovieTutorial.Web/Modules/MovieDB/MovieCast/)目录下面，创建文件 MovieCastEditor.ts，其内容如下：
 
 ```ts
 /// <reference path="../../Common/Helpers/GridEditorBase.ts" />
@@ -325,22 +325,22 @@ namespace MovieTutorial.MovieDB {
 }   
 ```
 
-此编辑器继承自 Serene 的 Common.GridEditorBase 类，这是一种在内存中编辑内容的特殊网格类型。它也是订单对话框中订单详细信息编辑器的基类。 
+此编辑器继承自 Serene 的 Common.GridEditorBase 类，这是一种在内存中编辑内容的特殊网格类型。它也是订单对话框中订单详细信息编辑器的基类。
 
-> 在文件顶部的 `<reference />` 很重要。TypeScript 有输入文件的顺序问题。如果我们不把它放在那里，TypeScript 有时会在输出 MovieCastEditor 之后再输出 GridEditorBase ，导致出现运行时错误。  
+> 在文件顶部的 `<reference />` 很重要。TypeScript 有输入文件的顺序问题。如果我们不把它放在那里，TypeScript 有时会在输出 MovieCastEditor 之后再输出 GridEditorBase ，导致出现运行时错误。
 > 
 > 作为一个经验法则，如果你有一些类继承自另一个项目（不是 Serenity 的类），你应该在文件中包含该基类文件的引用。
 >
-> 这有助于在其他类使用 GridEditorBase 之前， TypeScript 把它转换为 javascript 。
+> 这有助于在其他类使用 GridEditorBase 之前，TypeScript 把它转换为 javascript 。
 
-若要从服务器端引用此新的编辑器类型，生成和转换所有模板。
+若要从服务器端引用此新的编辑器类型，则需要生成并转换所有模板。
 
 > 此基类可能会在以后的版本中集成到 Serenity 。在这种情况下，其命名空间可能会变为 Serenity，代替当前的 Serene 或 MovieTutorial。
 
 
-### 在影片窗体中使用 MovieCastEditor 
+### 在影片窗体中使用 MovieCastEditor
 
-打开 MovieForm.cs，在 *Description* and *Storyline* 属性之间添加 CastList 属性，如： 
+打开 MovieForm.cs，在 *Description* and *Storyline* 属性之间添加 CastList 属性，如：
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
@@ -360,24 +360,24 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-通过将把 *[MovieCastEditor]* 特性放在 CastList 属性上，我们指定该属性将由新的 MovieCastEditor 类型所定义的 TypeScript 代码编辑。
+通过把 *[MovieCastEditor]* 特性放在 CastList 属性上，我们指定该属性将由新的 MovieCastEditor 类型所定义的 TypeScript 代码编辑。
 
-> 我们也可以像这样添加特性 *[EditorType("MovieDB.MovieCast")]*，但谁真的喜欢硬编码的字符串呢？我可不喜欢... 
+> 我们也可以像这样添加特性 *[EditorType("MovieDB.MovieCast")]*，但谁真的喜欢硬编码的字符串呢？我可不喜欢...
 
 现在生成并启动你的应用程序。打开一个影片编辑对话框，你将看到我们的新编辑器：
 
 ![Movie Cast Editor Initial](img/mdb_casteditor_initial.png)
 
-OK，这看起来很容易该功能，但我实话告诉你，我们连功能的一半都还没完成。 
+OK，这看起来很容易完成该功能，但我实话告诉你，我们连功能的一半都还没完成。
 
-*New MovieCast* 按钮不能工作，需要为它定义一个对话框。网格显示的列不是我想要的并且字段和按钮的标题很不友好……
+*New MovieCast* 按钮不能工作，需要为它定义一个对话框；网格显示的列不是我想要的并且字段和按钮的标题很不友好……
 
 此外，我们还有更多的细节需要处理，如在服务器端保存和加载演员列表（我们先用手工方式演示其有多困难，然后再用服务行为（service behavior）来演示其有多简单）
 
 
 ### 配置演员编辑器（MovieCastEditor）使用编辑演员对话框（MovieCastEditDialog）
 
-在 *MovieCastEditor.ts* 所在文件夹中创建文件 *MovieCastEditDialog.ts*，并对其做如下修改： 
+在 *MovieCastEditor.ts* 所在文件夹中创建文件 *MovieCastEditDialog.ts*，并对其做如下修改：
 
 ```ts
 /// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
@@ -401,7 +401,7 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-我们使用另外一个来自 Serene 的基类 *Common.GridEditorDialog*，编辑订单详细对话框（OrderDetailEditDialog）也是使用该基类。 
+我们使用另外一个来自 Serene 的基类 *Common.GridEditorDialog*，编辑订单详细对话框（OrderDetailEditDialog）也是使用该基类。
 
 再次打开 *MovieCastEditor.ts* 文件， 添加一个 getDialogType 方法并重写 getAddButtonCaption 方法：
 
@@ -427,19 +427,19 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-我们指定演员编辑器（MovieCastEditor）默认使用编辑演员对话框（MovieCastEditDialog）， *Add* 按钮也使用该对话框。 
+我们指定演员编辑器（MovieCastEditor）默认使用编辑演员对话框（MovieCastEditDialog）， *Add* 按钮也使用该对话框。
 
-现在，*Add* 按钮将显示一个对话框，而不是什么也没做。
+现在，*Add* 按钮将显示一个对话框，而不再什么也没做。
 
 ![Movie Cast Edit Dialog](img/mdb_casteditor_adddialog.png)
 
-此对话框需要一些 CSS 美化。电影标题和人名字段接受数字输入（因为它们实际上是 MovieId 和 PersonId 字段）。
+此对话框需要一些 CSS 美化、电影标题和人员名字段接受数字输入（因为它们实际上是 MovieId 和 PersonId 字段）。
 
 ### 编辑 MovieCastForm.cs 文件
 
 *MovieCastEditDialog* 的 *getFormKey()* 方法返回 *MovieCastForm.formKey*, 所以它当前使用 Sergen 生成的 MovieCastForm.cs。
 
-在 Serenity 中也有可能一个实体有多个窗体。如果我想要一些其他独立的对话框保存 *MovieCastForm*，例如 演员对话框（MovieCastDialog，我们已经把它删除了），我更愿意定义一个像 *MovieCastEditForm* 新窗体，但在这里我没有这样做。 
+在 Serenity 中也有可能一个实体有多个窗体。如果我想要一些其他独立的对话框保存 *MovieCastForm*，例如 演员对话框（MovieCastDialog，我们已经把它删除了），我更愿意定义一个像 *MovieCastEditForm* 的新窗体，但在这里我没有这样做。
 
 打开并编辑 MovieCastForm.cs：
 
@@ -460,9 +460,9 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-我已经删除了 *MovieId*，因为这个表单在 *编辑演员对话框（MovieCastEditDialog）* 中使用，所以在 *影片对话框（MovieDialog）* 中， *演员（MovieCast）* 实体自动带有当前被编辑电影的 *MovieId*，打开 《魔戒》(*Lord of the Rings*)，并添加《黑客帝国》（*the Matrix*）的演员列表是没有意义的。  
+我已经删除了 *MovieId*，因为这个表单在 *编辑演员对话框（MovieCastEditDialog）* 中使用，所以在 *影片对话框（MovieDialog）* 中， *演员（MovieCast）* 实体自动带有当前被编辑电影的 *MovieId*，打开 《魔戒》(*Lord of the Rings*)，并添加《黑客帝国》（*the Matrix*）的演员列表是没有意义的。
 
-下一步，编辑 MovieCastRow.cs： 
+下一步，编辑 MovieCastRow.cs：
 
 ```cs
     [ConnectionKey("Default"), TwoLevelCached]
@@ -482,13 +482,13 @@ namespace MovieTutorial.MovieDB.Forms
         }
 ```
 
-我为 PersonId 属性设置 LookupEditor 特性，正如我在 *PersonRow* 添加 LookupScript 特性一样，我可以重用这些信息来设置查找键。 
+我为 PersonId 属性设置 LookupEditor 特性，正如我在 *PersonRow* 添加 LookupScript 特性一样，我可以重用这些信息来设置检索键。
 
-> 我们也能写成 <br/>*[LookupEditor("MovieDB.Person")]*  
+> 我们也可以写成 <br/>*[LookupEditor("MovieDB.Person")]*
 
 把 *PersonId* 的显示名称修改为 *Actor/Actress*。
 
-同时修改行的 *DisplayName* 和 *InstanceName*特性来设置对话框标题。  
+同时修改行的 *DisplayName* 和 *InstanceName*特性来设置对话框标题。
 
 生成解决方案，并启动项目，现在 MovieCastEditDialog 有更好的编辑体验。但对话框宽度和高度仍然太大了。
 
@@ -504,13 +504,13 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Site.less 底部 CSS 是 MovieCastDialog，而不是 MovieCastEditDialog，因为该类样式是我们自己定义的，而不是用代码生成器生成。 
+Site.less 底部 CSS 是 MovieCastDialog，而不是 MovieCastEditDialog，因为该类样式是我们自己定义的，而不是用代码生成器生成。
 
 我们创建了一个名为 *MovieCastEditDialog* 新对话框，所以现在我们的新对话框只有一个 s-MovieDB-MovieCastEditDialog 样式类，但是代码生成器只生成样式 *s-MovieDB-MovieCastDialog* 。
 
 > Serenity 将自动为对话框元素分配以"s-"为前缀的 CSS 类名。你可以在开发人员工具中通过该特点检查对话框。MovieCastEditDialog 有 *s-MovieCastEditDialog* 和 *s-MovieDB-MovieCastEditDialog* 及一些其它类似 *ui-dialog* 的 CSS 类。
 
-> *s-ModuleName-TypeName* CSS 类帮助区分两个具有相同名称模块的样式。 
+> *s-ModuleName-TypeName* CSS 类帮助区分两个具有相同名称模块的样式。
 
 由于我们实际上并没有打算使用演员对话框（MovieCastDialog，我们已经把它删除了），让我们在 site.less 重命名一个类：
 
@@ -529,9 +529,9 @@ Site.less 底部 CSS 是 MovieCastDialog，而不是 MovieCastEditDialog，因�
 
 ### 调整演员编辑器（MovieCastEditor）的列
 
-演员编辑器（MovieCastEditor） 目前使用在 MovieCastColumns.cs 定义的列（因为它在 getColumnsKey() 方法中返回"MovieDB.MovieCast"）。
+演员编辑器（MovieCastEditor） 目前使用在 MovieCastColumns.cs 定义的列（因为它在 getColumnsKey() 方法中返回 "MovieDB.MovieCast" ）。
 
-我们这里有MovieCastId, MovieId, PersonId (显示为 Actor/Actress) and Character字段，只显示 Actor/Actress 和 Character 字段会更好。
+我们这里有 MovieCastId、MovieId、PersonId (显示为 Actor/Actress) 和 Character字段，只显示 Actor/Actress 和 Character 字段会更好。
 
 我们想显示演员的全名而不是整数值（PersonId 是整数），所以我们首先在 MovieCastRow.cs 中定义该属性：
 
@@ -579,7 +579,7 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-并且修改 MovieCastColumns.cs：
+并修改 MovieCastColumns.cs：
 
 ```cs
 namespace MovieTutorial.MovieDB.Columns
@@ -613,7 +613,7 @@ namespace MovieTutorial.MovieDB.Columns
 
 请记住，我们的编辑是在内存中进行的。这里有没有涉及服务的调用。因此，网格列表显示从对话框传给它的任何实体。
 
-当你点击保存按钮时，对话框生成这样的实体进行保存：
+当你点击保存按钮时，对话框生成像这样的实体进行保存：
 
 ```json
 {
@@ -642,7 +642,7 @@ public class MovieCastColumns
 }
 ```
 
-在该实体中并没有 PersonFullname 属性，所以网格列表不会显示它的值。 
+在该实体中并没有 PersonFullname 属性，所以网格列表不会显示它的值。
 
 我们需要自己设置 PersonFullname 属性。首先，转换 T4 模板以获得我们最近添加的 PersonFullname 属性，然后编辑 MovieCastEditor.ts：
 
@@ -667,32 +667,32 @@ namespace MovieTutorial.MovieDB {
 }   
 ```
 
-ValidateEntity 是一个 Serene 的 GridEditorBase 类中的方法，点击保存按钮，在实体添加到网格列表之前调用该方法对实体进行验证，但是我们需要重写它，让其设置 PersonFullname 属性的值而不是验证。
+ValidateEntity 是一个 Serene 的 GridEditorBase 类的方法，点击保存按钮，在实体添加到网格列表之前调用该方法对实体进行验证，但是我们需要重写它，让其设置 PersonFullname 属性的值而不是验证。
 
 正如我们之前看到的，我们的实体有 PersonId 和 Character 字段。我们可以使用 PersonId 字段的值来确定角色的全名。
 
 为此，我们需要一个把 PersonId 对应到角色全名的字典。幸运的是，人员检索（lookup）有这样的字典。我们可以通过其 getLookup 方法来访问 PersonRow 的检索（lookup）。
 
-> 另外一种访问 人员检索（lookup）的方法是使用 *Q.getLookup('MovieDB.Person')*。PersonRow 中的这个方法是 T4 模板定义的快捷方式。 
+> 另外一种访问 人员检索（lookup）的方法是使用 *Q.getLookup('MovieDB.Person')*。PersonRow 中的这个方法是 T4 模板定义的快捷方式。
 
 所有的检索（lookups）都有一个 *itemById* 字典，以允许你通过其 ID 访问该实体类。
 
-> 检索（lookups）是一个简单的服务器端与客户端共享数据的方法。但他们只适用于小型数据集。 
+> 检索（lookups）是一个简单的服务器端与客户端共享数据的方法。但他们只适用于小型数据集。
 
-> 如果一个表有成千上万条记录，就没有理由为其定义检索(lookup)。在此情况下，我们会用一个服务器请求并通过其 ID 来查询记录。
+> 如果一个表有成千上万条记录，就没有理由为其定义检索(lookup)。在这情况下，我们会用一个服务器请求并通过其 ID 来查询记录。
 
 
-### 在 MovieRow 中声明 CastList 
+### 在 MovieRow 中声明 CastList
 
 当有一个影片对话框打开时，且演员列表（CastList）中没有演员，这时点击保存按钮，你会得到这样的错误：
 
 ![Cast Save Error](img/mdb_castgrid_saveerror.png)
 
-引发该错误的是在服务器端的行反序列化器 (JsonRowConverter for JSON.NET)。 
+引发该错误的是服务器端的行反序列化器 (JsonRowConverter for JSON.NET)。
 
-我们在 MovieForm 定义 CastList 属性，但是在 MovieRow 没有对应的字段，所以反序列器不知道如何处理从客户端接收的 CastList 值。 
+我们在 MovieForm 定义 CastList 属性，但是在 MovieRow 没有对应的字段，所以反序列器不知道如何处理从客户端接收的 CastList 值。
 
-如果你使用 F12 打开开发者工具，选择网络选项卡，并在点击保存按钮之后查看 AJAX 请求，你将看到有这样的一个请求：
+如果你使用 F12 打开开发者工具，选择网格选项卡，并在点击保存按钮之后查看 AJAX 请求，你将看到有这样的一个请求：
 
 ```json
 {
@@ -742,24 +742,24 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-我们定义一个接受列表中 MovieCastRow 对象的 CastList 属性。用于这种行列属性的*Field*类的类型是 *RowListField*。
+我们定义一个接受列表中 MovieCastRow 对象的 CastList 属性。用于这种行列属性的 *Field* 类的类型是 *RowListField*。
 
 通过添加 *[SetFieldFlags(FieldFlags.ClientSide)]* 特性，我们指定此字段直接在数据库表中不可用，因此不能通过简单的 SQL 查询来选择。它在其他 ORM 系统中，类似于未映射的字段。
 
 现在，当你点击保存按钮，将不会有错误发生。
 
-但是，重新打开刚保存的《黑客帝国》（the Matrix） 实体。这里并没有演员记录，尼欧（Neo）发生什么事？ 
+但是，重新打开刚保存的《黑客帝国》（the Matrix） 实体。这里并没有演员记录，尼欧（Neo）发生了什么事？
 
 因为这是一个未映射的字段，所以电影保存服务忽略了 CastList 属性。
 
-> 如果你还记得在前一节我们的 GenreList 同样也是一个未映射的字段，但不知为何它在那里可以正常工作。这是因为我们在该属性中使用了 LinkedSetRelationBehavior 行为（behavior） 。 
+> 如果你还记得在前一节我们的 GenreList 同样也是一个未映射的字段，但不知为何它在那里可以正常工作。这是因为我们在该属性中使用了 LinkedSetRelationBehavior 行为（behavior） 。
 > 
 > 我们在这里演示若没有该服务器行为（service behavior）将会发生什么。
 
 
 ### 处理演员列表（CastList）的保存
 
-打开 *MovieRepository.cs*， 找到空 *MySaveHandler* 类，并对其做如下修改： 
+打开 *MovieRepository.cs*， 找到空 *MySaveHandler* 类，并对其做如下修改：
 
 ```cs
 private class MySaveHandler : SaveRequestHandler<MyRow>
@@ -783,13 +783,13 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
 }
 ```
 
-MySaveHandler 处理影片行（Movie rows）的添加和修改服务请求。其大部分逻辑由基类 SaveRequestHandler 处理，所以之前该类是空的。 
+MySaveHandler 处理影片行（Movie rows）的添加和修改服务请求。其大部分逻辑由基类 SaveRequestHandler 处理，所以之前该类是空的。
 
 在添加/修改演员列表之前，我们应该先成功添加/修改影片实体。因此，我们通过重写基方法 *AfterSave* 包含自定义的代码。
 
 > 如果是添加操作，我们需要在演员（MovieCast）纪录中重用 MovieId 字段的值。由于 MovieId 是一个标识字段，所以它只在添加影片记录之后生效。
 
-由于我们是在内存（客户端）中编辑演员列表信息，因此这将是一个批处理更新。 
+由于我们是在内存（客户端）中编辑演员列表信息，所以这将是一个批处理更新。
 
 我们需要比较影片的新旧演员列表记录，并对其进行添加/更新/删除操作。
 
@@ -799,17 +799,17 @@ MySaveHandler 处理影片行（Movie rows）的添加和修改服务请求。�
 
 因此我们需要更新 A、 B、 D (角色/演员 发生了改变)，删除 C，并添加新的演员记录 E 和 F。
 
-幸运的是，Serene 中定义的 DetailListSaveHandler 类可处理所有这些比较，并自动执行插入/更新/删除操作(通过ID值)。否则我们需要在这里编写大量的代码。
+幸运的是，Serene 中定义的 DetailListSaveHandler 类可处理所有这些比较，并自动执行插入/更新/删除操作（通过ID值）。否则我们需要在这里编写大量的代码。
 
 如果这是一个更新影片的操作，为了获取演员列表中的旧记录，我们需要查询数据库。而如果是新增操作，我们就不需要任何演员记录。
 
-我们使用 *Connection.List< Entities.MovieCastRow >* 扩展方法获取演员列表，这里的 *Connection* 是 SaveRequestHandler 的属性，该属性返回当前使用的连接。*List* 选择匹配指定条件（*mc.MovieId == this.Row.MovieId.Value*）的记录。 
+我们使用 *Connection.List< Entities.MovieCastRow >* 扩展方法获取演员列表，这里的 *Connection* 是 SaveRequestHandler 的属性，该属性返回当前使用的连接。*List* 选择匹配指定条件（*mc.MovieId == this.Row.MovieId.Value*）的记录。
 
 *this.Row* 是指添加/更新当前含有新的字段值的记录（影片记录），因此它包含 MovieId 值（新的或者现有的 ID）。
 
-为了更新演员记录，我们创建了一个 *DetailListHandler* 对象，该对象含旧的演员列表、新的演员列表及设置演员记录 MovieId 字段值的委托。让对象为新的演员记录与当前电影建立联系。 
+为了更新演员记录，我们创建了一个 *DetailListHandler* 对象，该对象含旧的演员列表、新的演员列表及设置演员记录 MovieId 字段值的委托。让对象为新的演员记录与当前电影建立联系。
 
-然后我们使用当前的工作单元（unit of work）调用 DetailListHandler 方法。UnitOfWork 是一个特殊的对象，它封装了当前 连接/事务。 
+然后我们使用当前的工作单元（unit of work）调用 DetailListHandler 方法。UnitOfWork 是一个特殊的对象，它封装了当前 连接/事务。
 
 > 所有的 Serenity 添加/更新/删除 处理都适用于隐式事务(IUnitOfWork)。
 
@@ -817,7 +817,7 @@ MySaveHandler 处理影片行（Movie rows）的添加和修改服务请求。�
 
 我们还没有完成该功能。当在影片列表中点击影片实体时，对话框调用 *Retrieve* 服务加载影片记录。就像 演员列表（CastList）字段没有映射的情况，即使我们正确保存了演员，演员也不会加载到对话框。
 
-我们同样需要在 MovieRepository.cs 文件中编辑 *MyRetrieveHandler* 类：
+要解决该问题，我们同样需要在 MovieRepository.cs 文件中编辑 *MyRetrieveHandler* 类：
 
 ```cs
 private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
@@ -873,7 +873,7 @@ private class MyDeleteHandler : DeleteRequestHandler<MyRow>
 ```
 
 
-我们实现这个主/从处理的方式不是很直观，并且在存储层包含了几个手工步骤。请继续阅读，看我们如何通过使用一个集成的功能 (MasterDetailRelationAttribute)轻松地实现同一逻辑。
+我们实现这个主/从处理的方式不是很直观，并且在存储层包含了几个手工步骤。请继续阅读，看我们如何通过使用一个集成的功能 (MasterDetailRelationAttribute) 轻松地实现同一逻辑。
 
 
 ### 在行为（Behavior）中处理 保存/检索/删除
@@ -914,10 +914,10 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
 
 现在生成项目，你将看到使用更少的代码完成了同样的工作。
 
-*MasterDetailRelationAttribute* 自动触发一种深层次行为（behavior），*MasterDetailRelationBehavior* 拦截检索/保存/删除处理并执行我们之前已经重写的方法及其他类似的操作方法。
+*MasterDetailRelationAttribute* 自动触发一种深层次行为（behavior），*MasterDetailRelationBehavior* 拦截检索/保存/删除处理并执行我们之前已经重写的方法及其他类似的操作。
 
-所以我们做了同样的事情，但这一次，是以声明的方式，而不是命令式（告诉程序应该做什么，而不是如何去做）
+所以我们做了同样的事情，但这一次，是以声明的方式，而不是命令式（告诉程序应该做什么，而不是如何去做）。
 
 > https://en.wikipedia.org/wiki/Declarative_programming
 
-> 我们将在下面的章节介绍如何编写你自己的请求处理行为（behaviors）。 
+> 我们将在下面的章节介绍如何编写你自己的请求处理行为（behaviors）。

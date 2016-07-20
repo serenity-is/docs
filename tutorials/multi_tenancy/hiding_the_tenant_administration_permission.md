@@ -1,12 +1,12 @@
-# 隐藏租户管理权限 
+# 隐藏租户管理权限
 
-我们现在有点问题：因为用户 *tenant2* 有 *Administration:Security* 权限，所以他可以访问用户和角色权限对话框。因此，他可以使用权限UI给自己授予 *Administration:Tenants* 权限。 
+我们现在有点问题：因为用户 *tenant2* 有 *Administration:Security* 权限，所以他可以访问用户和角色权限对话框。因此，他可以使用权限 UI 给自己授予 *Administration:Tenants* 权限。
 
 ![Tenant2 Granting Himself](img/tenant2_granting_tenants.png)
 
-Serenity 扫描程序集的特性，比如 *ReadPermission*，*WritePermission*，*PageAuthorize*，*ServiceAuthorize*等，并在编辑权限对话框列出这些权限。
+Serenity 扫描程序集的特性，比如 *ReadPermission*、*WritePermission*、*PageAuthorize*、*ServiceAuthorize* 等，并在编辑权限对话框列出这些权限。
 
-我们应该先从默认值列表中删除它。 
+我们应该先从默认值列表中删除它。
 
 在 UserPermissionRepository.cs 找到 *ListPermissionKeys* 方法：
 
@@ -69,6 +69,6 @@ public class RolePermissionRepository
         //...
 ```
 
-在这里，我们认为任何试图授权不在权限对话框列表的新许可键都是一个黑客行为。
+在这里，我们认为任何试图授权不在权限对话框列表的新访问许可键都是一个黑客行为。
 
-> 实际上，即使在非多租户系统中也应该默认这个检查，但是通常我们信任管理的用户。在这里，管理员只能管理他们自己的租户，所以我们当然需要包含该检查。
+> 实际上，即使在非多租户系统中也应该默认做这个检查，但是通常我们信任管理的用户。在这里，管理员只能管理他们自己的租户，所以我们必须包含该检查。

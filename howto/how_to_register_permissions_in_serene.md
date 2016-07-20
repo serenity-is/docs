@@ -20,13 +20,13 @@ Serene 在用户和角色权限对话框中显示权限列表，若要在这里�
 - *XYZPage* 及操作方法（PageAuthorize）
 - *XYZEndpoint* 及服务操作（ServiceAuthorize）
 
-当你在这些属性中使用许可键（permission key），Serene 将在应用程序启动时使用反射自动检测它们。
+当你在这些属性中使用访问许可键（permission key），Serene 将在应用程序启动时使用反射自动检测它们。
 
-> PermissionKeys 是 Serene 的一个类。一些用户希望在该类中写自己的许可键也会被检测。 
+> PermissionKeys 是 Serene 的一个类。一些用户希望在该类中也能检测到自己写的访问许可键。
 
 > 但是，PermissionKeys 类只是为了智能提示，它被 Serene 忽略。
 
-如果你不使用其中任何的许可键，但仍然想在权限对话框中显示它，你可以在程序集中使用 RegisterPermission 特性（可在 YourProject.Web 任何地方使用）：
+如果你不使用其中任何的访问许可键，但仍然想在权限对话框中显示它，你可以在程序集中使用 RegisterPermission 特性（可在 YourProject.Web 任何地方使用）：
 
 ```cs
 [assembly: Serenity.ComponentModel.RegisterPermissionKey("MySpecialPermissionKey")]
@@ -34,27 +34,27 @@ Serene 在用户和角色权限对话框中显示权限列表，若要在这里�
 
 ## 组织权限树
 
-若要在树层次结构中创建权限，在你的许可键中使用冒号（:）作为分隔符：
+若要在树层次结构中创建权限，在你的访问许可键中使用冒号（:）作为分隔符：
 
 - MyModule:SubModule:General
 - MyModule:SubModule:Permission1
 - MyModule:SubModule:Permission2
 
-这些键会在  MyModule / SubModule 类别下显示。因此它们的类别是： 
+这些键会在 MyModule / SubModule 类别下显示。因此它们的类别是：
 
 - MyModule:SubModule:
 
-> 类别键(Category keys) 以冒号结束，不要使用以冒号结尾的许可键。 
+> 类别键(Category keys) 以冒号结束，不要使用以冒号结尾的访问许可键。
 
-请不要使用匹配类别键的许可键。如果你使用这样的键，如 *MyModule:SubModule*，它不会在  MyModule / SubModule 类别下显示而会在同一级别中显示。 
+请不要使用匹配类别键的访问许可键。如果你使用这样的键，如 *MyModule:SubModule*，它不会在 MyModule / SubModule 类别下显示而会在同一级别中显示。
 
-如果你需要类别使用一个通用权限（generic permission），可以使用 *MyModule:SubModule:General*。
+如果你需要在类别中使用一个通用权限（generic permission），可以使用 *MyModule:SubModule:General*。
 
-> *General* 没有特殊的含义，若你喜欢，也可以使用 Common， Module， View。 
+> *General* 没有特殊的含义，若你喜欢，也可以使用 Common， Module， View。
 
-## 处理类别的显示文本 
+## 处理类别的显示文本
 
-因为类别由许可键自动决定，可能没有友好的显示文本。
+因为类别由访问许可键自动决定，可能没有友好的显示文本。
 
 你需要使用本地化系统为它们添加显示文本。
 

@@ -1,10 +1,10 @@
-# 如何添加一个行选择列? 
+# 如何添加一个行选择列？
 
 ** 本节的 TypeScript 版本有待更新 **
 
 若要添加列以选择单行或所有行，可以使用 GridRowSelectionMixin。
 
-> GridRowSelectionMixin 在 Serenity 1.6.8+ 有效。 
+> GridRowSelectionMixin 在 Serenity 1.6.8+ 有效。
 
 示例代码：
 

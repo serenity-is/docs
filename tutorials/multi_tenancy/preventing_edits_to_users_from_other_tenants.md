@@ -4,7 +4,7 @@
 
 与此类似，即使默认情况下，不能看到其他租户的用户，但实际上可以检索和更新他们。
 
-又到了破解的时间。
+又到了黑客时间。
 
 打开 Chrome 的控制台，并输入：
 
@@ -18,11 +18,11 @@ new MultiTenancy.Administration.UserDialog().loadByIdAndOpenDialog(1)
 
 我们创建一个新的对话框实例，并且使用 ID 加载用户实体。Admin 用户的 ID 是 1。
 
-因此，对话框调用 *UserRepository* 的 *Retrieve* 服务加载 ID 为 1 的实体。 
+因此，对话框调用 *UserRepository* 的 *Retrieve* 服务加载 ID 为 1 的实体。
 
 记住，我们在 *UserRepository* 的 *List* 方法做过滤。所以，服务也不知道是否应该返回另一租户的记录。
 
-此时，应该在 UserRepository 对 retrieve 服务做安全检测。 
+此时，应该在 UserRepository 对 retrieve 服务做安全检测。
 
 ```cs
 private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
@@ -64,7 +64,7 @@ protected override void ValidateRequest()
         // ...
 ```
 
-我们在这里检测是否是更新，如果要更新记录的 *TenantId*(Old.TenantId) 与当前登录用户的 *TenantId* 不相等时，我们调用 *Authorization.ValidatePermission* 方法确保该用户有租户的管理权限，如果没有该权限，将抛出错误。 
+我们在这里检测是否是更新，如果要更新记录的 *TenantId*(Old.TenantId) 与当前登录用户的 *TenantId* 不相等时，我们调用 *Authorization.ValidatePermission* 方法确保该用户有租户的管理权限，如果没有该权限，将抛出错误。
 
 ```
 Authorization has been denied for this request!

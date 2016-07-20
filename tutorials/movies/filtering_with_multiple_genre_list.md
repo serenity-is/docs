@@ -1,6 +1,6 @@
 # 筛选具有多个流派的列表
 
-记得当每部影片只有一个流派时，我们很容易实现快速过滤，在 GenreId 属性加入了 [QuickFilter] 特性即可。
+记得当每部影片只有一个流派时，我们可以很容易实现快速过滤：在 GenreId 属性加入了 [QuickFilter] 特性即可。
 
 让我们试着在 MovieColumns.cs 做类似修改：
 
@@ -19,20 +19,20 @@ public class MovieColumns
 
 ![Invalid Column GenreList](img/mdb_genrelist_invalid.png)
 
-ListHandler 尝试使用 GenreList 字段过滤，但是在数据库中并没有这样的字段，所以我们得到这个错误。
+ListHandler 尝试使用 GenreList 字段过滤，但是在数据库中并没有这样的字段，因此我们得到这个错误。
 
 > 事实上，LinkingSetRelation 会拦截此过滤器并把它转换为 EXISTS 子查询，但是列行为（list behaviors）还没有实现这样的功能，也许会在以后版本…… 
 
 因此，我们现在就用某种方式来处理它。
 
 
-### 声明 MovieListRequest 类型 
+### 声明 MovieListRequest 类型
 
-因为我们打算做一些不规范的事，例如通过关联表（linking set table）的值过滤，我们需要防止 ListHandler 在 GenreList 属性中过滤自身。
+因为我们打算做一些不规范的事，例如通过关联表（linking set table）的值来过滤时，我们需要防止 ListHandler 在 GenreList 属性中过滤自身。
 
-我们可以使用一个访问者模式处理请求 *条件（Criteria）*对象（它类似于表达式目录树）和处理 GenreList 自身，但这有点复杂。所以现在我会使用一个简单的方式。
+我们可以使用一个访问者模式处理请求 *条件（Criteria）* 对象（它类似于表达式目录树）和处理 GenreList 自身，但这有点复杂。所以现在我会使用一个简单的方式。
 
-让我们看一个含标准的 *ListRequest* 对象的子类，并在这里添加流派过滤器参数。在 *MovieRepository.cs* 文件旁边添加 *MovieListRequest.cs* 文件：
+让我们看一个含标准的 *ListRequest* 对象的子类，我们将在这里添加流派过滤器参数。在 *MovieRepository.cs* 文件旁边添加 *MovieListRequest.cs* 文件：
 
 ```cs
 namespace MovieTutorial.MovieDB
@@ -52,9 +52,9 @@ namespace MovieTutorial.MovieDB
 
 ### 为新请求类型修改 Repository/Endpoint
 
-为使我们的列表处理器（list handler）和服务使用新的列表请求类型，需要在几个地方做变化。
+为使我们的列表处理程序（list handler）和服务使用新的列表请求类型，需要在几个地方做修改。
 
-从 *MovieRepository.cs* 开始：
+先从 *MovieRepository.cs* 开始：
 
 ```cs
 public class MovieRepository
@@ -70,9 +70,9 @@ public class MovieRepository
 }
 ```
 
-使用新类型，而不是 ListRequest。在 List 方法中，我们把 ListRequest 改为 MovieListRequest，并在 MyListHandler 中添加一个泛型参数。
+若要使用新类型，而不是 ListRequest，在 List 方法中，我们把 ListRequest 改为 MovieListRequest，并在 MyListHandler 中添加一个泛型参数。
 
-在另一文件 *MovieEndpoint.cs* 中做一些小修改，该类实际上是 web 服务：
+在另一文件 *MovieEndpoint.cs* 中也做一些小修改，该类实际上是 web 服务：
 
 ```cs
 public class MovieController : ServiceEndpoint
@@ -85,14 +85,14 @@ public class MovieController : ServiceEndpoint
 }
 ```
 
-现在是时候生成和转换模板，因此我们的 MovieListRequest 对象及相关服务方法就能在客户端生效。
+现在是时候生成和转换模板，以使我们的 MovieListRequest 对象及相关服务方法能在客户端生效。
 
 
 ### 将快速过滤器移到流派参数
 
-我们仍然有同样的错误，因为快速过滤器不知道我们刚添加到列表请求的类型并一直使用着 *Criteria* 参数。
+我们仍然有同样的错误，因为快速过滤器并不知道我们刚添加到列表的请求类型，还一直使用着 *Criteria* 参数。
 
-需要拦截快速过滤项并将流派列表移到 *MovieListRequest* 的*流派（Genres）*属性。
+需要拦截快速过滤项并将流派列表移到 *MovieListRequest* 的 *流派（Genres）* 属性。
 
 编辑 *MovieGrid.ts*：
 
@@ -118,7 +118,7 @@ export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
 }
 ```
 
-getQuickFilters 是一个获取此网格列表的快速过滤器对象列表的方法。 
+getQuickFilters 是一个获取此网格列表的快速过滤器对象列表的方法。
 
 默认情况下，网格列表枚举 MovieColumns.cs 中所有含 [QuickFilter] 特性的属性，并为其创建合适的快速过滤器对象。
 
@@ -172,9 +172,9 @@ h.handled = true;
 现在，我们将不再有 *无效的列名 GenreList* 的错误，但 Genres 过滤器还没有应用到服务器端。
 
 
-### 在仓储（Repository）中处理流派过滤 
+### 在仓储（Repository）中处理流派的过滤
 
-在 *MovieRepository.cs* 文件中对 *MyListHandler* 做如下修改：
+在 *MovieRepository.cs* 文件对 *MyListHandler* 做如下修改：
 
 ```cs
 private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
@@ -200,11 +200,11 @@ private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
 }
 ```
 
-*ApplyFilters* 是一个应用过滤器指定的 *Criteria* 和 *EqualityFilter* 请求参数表的方法。这是应用自定义过滤器的好地方。
+*ApplyFilters* 是一个应用过滤器指定的 *Criteria* 和 *EqualityFilter* 请求参数表的方法。这里是应用自定义过滤器的好地方。
 
 如果需要做任何过滤，我们首先要检查 *Request.Genres* 是否是 null 或空列表。
 
-接下来，我们获得一个别名为 *mg* 的字段 *MovieGenresRow* 的引用。
+接下来，我们获得一个别名为 *mg* 的字段 *MovieGenresRow* 引用。
 
 ```
 var mg = Entities.MovieGenresRow.Fields.As("mg");
@@ -212,7 +212,7 @@ var mg = Entities.MovieGenresRow.Fields.As("mg");
 
 这里需要说明一下，我们还没有覆盖 Serenity 实体系统。
 
-我们从还没有别名的 *MovieGenresRow.Fields* 开始：
+让我们从还没有别名的 *MovieGenresRow.Fields* 开始：
 
 ```cs
 var x = MovieGenresRow.Fields;
@@ -222,7 +222,7 @@ new SqlQuery()
   .Select(x.GenreId);
 ```
 
-如果我们写下类似上述的查询，它输出的 SQL 会是这样的：
+如果我们写类似上述的查询，它输出的 SQL 会是这样的：
 
 ```sql
 SELECT t0.MovieId, t0.GenreId FROM MovieGenres t0
@@ -254,7 +254,7 @@ SELECT x.MovieId, x.GenreId FROM MovieGenres x
 var mg = Entities.MovieGenresRow.Fields.As("mg");
 ```
 
-我想实现的，是这样的一个查询（就像我们会使用纯SQL）：
+我想实现的是这样的一个查询（就像我们会使用纯SQL）：
 
 ```
 SELECT t0.MovieId, t0.Title, ... FROM Movies t0
@@ -281,7 +281,7 @@ query.SubQuery()
     .Select("1")
 ```
 
-给子查询添加 where 声明 
+为子查询添加 where 声明：
 
 ```
 .Where(
@@ -291,14 +291,14 @@ query.SubQuery()
 
 > 其实这里 fld 包含 MovieRow 字段的别名 t0。
 
-由于 *Criteria.Exists* 方法需要一个字符串，我需要在末尾使用 .ToString() 方法把子查询转换为字符串。 
+由于 *Criteria.Exists* 方法需要一个字符串，所以我需要在末尾使用 .ToString() 方法把子查询转换为字符串。
 
-> 是的，我注意到应该添加一个接受子查询的重载…… 
+> 是的，我注意到应该添加一个接受子查询的重载……
 
 ```cs
 .ToString()));
 ```
 
-> 开始使用时，它看上去可能有点陌生，但花点时间你就会明白，Serenity 查询系统与 SQL 有 99% 的相似。它不能是具体的 SQL，因为我们在不同的语言（C#）工作。
+> 开始使用时，这种写法看上去可能有点陌生，但花点时间你就会明白，Serenity 查询系统与 SQL 有 99% 的相似。但它不能是具体的 SQL，因为我们需要在不同的语言（C#）工作。
 
-现在，我们的 *GenreList* 属性过滤器工作的非常好…… 
+现在，我们的 *GenreList* 属性过滤器就可以很好地工作了……

@@ -1,8 +1,8 @@
-# 在用户对话框中选择租户 
+# 在用户对话框中选择租户
 
-我们在 *Users* 表中添加一个 *TenantId* 字段，但是没有在 UserRow 中定义，并且也不能在用户对话框中看到该字段。 
+我们在 *Users* 表中添加一个 *TenantId* 字段，但是没有在 UserRow 中定义，并且也不能在用户对话框中看到该字段。
 
-该字段只能被 *admin* 用户查看和编辑。即使是授予了访问管理租户权限的其他用户也不能查看或者修改这些信息。 
+该字段只能被 *admin* 用户查看和编辑。即使是授予了访问管理租户权限的其他用户也不能查看或者修改这些信息。
 
 首先把 *TenantId* 字段添加到 *UserRow.cs*：
 
@@ -78,7 +78,7 @@ namespace MultiTenancy.Administration.Forms
 }
 ```
 
-同样需要增加用户对话框的大小，在 *site.administration.less* 中设置： 
+同样需要增加用户对话框的大小，在 *site.administration.less* 中设置：
 
 ```less
 .s-UserDialog {
@@ -92,13 +92,13 @@ namespace MultiTenancy.Administration.Forms
 
 ![Tenant2 User](img/create_tenant2_user.png)
 
-创建此用户之后, 编辑其权限并授予他用户、 角色管理和权限，因为这将是我们的第二个租客的管理用户。
+创建此用户之后, 编辑其权限并授予他用户、角色管理和权限，因为这将是我们的第二个租客的管理用户。
 
-## 使用 Tenant2 登录 
+## 使用 Tenant2 登录
 
 退出并使用 *tenant2* 身份登录系统。
 
-当你打开 *User Management* 页面，你将看到该用户除了可以查看和编辑自己的 *tenant2* 用户，还可以查看和编辑 *admin* 用户。 
+当你打开 *User Management* 页面，你将看到该用户除了可以查看和编辑自己的 *tenant2* 用户，还可以查看和编辑 *admin* 用户。
 
 ![Tenant2 Logged In](img/tenant2_logged_in.png)
 

@@ -1,12 +1,12 @@
-# 添加租户（Tenants）表和 TenantId 字段 
+# 添加租户（Tenants）表和 TenantId 字段
 
-为了租户间相互独立，我们需要把 TenantId 字段添加到所有表中。 
+为了租户间相互独立，我们需要把 TenantId 字段添加到所有表中。
 
-因此，我们先添加一个租户（Tenants）表。 
+因此，我们先添加一个租户（Tenants）表。
 
 因为 Northwind 表已经有记录，我们将定义一个 ID 为 1 的主租户，并把所有现有记录的 TenantId 设为该值。
 
-是时候写迁移类，实际上有两个迁移类：一个是 Northwind ，另一个是 Default 数据库。 
+现在是时候写迁移类，实际上有两个迁移类：一个是 Northwind ，另一个是 Default 数据库。
 
 **DefaultDB_20160110_092200_MultiTenant.cs:**
 
@@ -63,7 +63,7 @@ namespace MultiTenancy.Migrations.DefaultDB
 
 我已经在用户（user）表所在的 Default 数据库创建租户（Tenants）表，并在该表添加 3 个预定义的租户。实际上我们只需要 ID 为 *1* 的第一个租户。
 
-我们没有在一些表（如 UserPermissions、 UserRoles、 RolePermissions 等）添加 TenantId 列，因为他们可以通过 UserId 或 RoleId 获取 TenantId 信息。
+我们没有在一些表（如 UserPermissions、UserRoles、RolePermissions 等）添加 TenantId 列，因为他们可以通过 UserId 或 RoleId 获取 TenantId 信息。
 
 **NorthwindDB_20160110_093500_MultiTenant.cs:**
 

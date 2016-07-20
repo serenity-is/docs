@@ -1,4 +1,4 @@
-# 如何设置连接的数据库方言（Database Dialect）?
+# 如何设置连接的数据库方言（Database Dialect）？
 
 有时，使用 providerName 的自动方言检测可能不会正常工作，或对于某些连接，你想要使用 SqlServer2000 或 SqlServer2005 方言。
 
@@ -44,7 +44,7 @@ Serenity 1.8.8+ 也支持通过应用程序配置条目设置：
 
 ### 在行（Rows）中提示关于 CONCAT 及其他类似信息的警告
 
-Serene 已经支持多种数据库引擎，包括  MySQL，Postgress 等。这些数据库没有像 MsSqlServer 的字符串加号（+）运算符。因此，在 Northwind 中，用 CONCAT 函数来替代 + 运算符：
+Serene 已经支持多种数据库引擎，包括 MySQL、Postgress 等。这些数据库没有像 MsSqlServer 的字符串加号（+）运算符。因此，在 Northwind 中，用 CONCAT 函数来替代 + 运算符：
 
 ```cs
 [Expression("CONCAT(T0.[FirstName], CONCAT(' ', T0.[LastName]))")]

@@ -1,6 +1,6 @@
-# 如何更新 Serenity NuGet 程序包？ 
+# 如何更新 Serenity 的 NuGet 程序包？
 
-Serene 模板包含下面的 Serenity NuGet 程序包引用：
+Serene 模板包含下面的 Serenity  NuGet 程序包引用：
 
 ```
 Serenity.Core
@@ -11,7 +11,7 @@ Serenity.Web
 Serenity.CodeGenerator
 ```
 
-要更新到最新版本的 Serenity 程序包，打开程序包管理器控制台（点击 视图 -> 其他窗口 -> 程序包管理器控制台）。 
+要更新到最新版本的 Serenity 程序包，打开程序包管理器控制台（点击 视图 -> 其他窗口 -> 程序包管理器控制台）。
 
 并输入：
 

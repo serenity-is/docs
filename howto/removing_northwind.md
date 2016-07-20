@@ -1,7 +1,7 @@
 
 # 如何删除 Serene 的 Northwind 及其他示例？
 
-当你以 Northwind 为样本开发完自己的项目后，你会想要从项目中移除 Northwind 和其他示例模块。 
+当你以 Northwind 为样本开发完自己的项目后，你会想从项目中移除 Northwind 和其他示例模块。
 
 这里将介绍如何移除它们。
 
@@ -10,17 +10,17 @@
 在 Visual Studio 中执行如下步骤：
 
 
-### 移除项目文件 
+### 移除项目文件
 
-* 移除 *MyProject.Web/Modules/AdminLTE* 文件夹。这将删除所有主题示例相关的服务器端代码。 
+* 移除 *MyProject.Web/Modules/AdminLTE* 文件夹。这将删除所有主题示例相关的服务器端代码。
 
 * 移除 *MyProject.Web/Modules/BasicSamples* 文件夹。这将删除所有基本示例的服务器端代码。
 
 * 移除 *MyProject.Web/Modules/Northwind* 文件夹。这将删除所有 Northwind 相关的服务器端代码。
 
-### 移除导航项目 
+### 移除导航项目
 
-* 打开 *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*，删除所有含 *Northwind*、 *Basic Samples* 和 *Theme Samples* 的行，并删除下面两行代码：
+* 打开 *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*，删除所有含 *Northwind*、*Basic Samples* 和 *Theme Samples* 的行，并删除下面两行代码：
 
 ```
 using Northwind = MovieTutorial.Northwind.Pages;
@@ -46,7 +46,7 @@ private static string[] databaseKeys = new[] { "Default", "Northwind" };
     providerName="System.Data.SqlClient" />
 ```
 
-### 移除 LESS 记录  
+### 移除 LESS 记录
 
 * 打开 *MyProject.Web/Content/site/site.less* 文件，删除下面的代码：
     
@@ -58,7 +58,7 @@ private static string[] databaseKeys = new[] { "Default", "Northwind" };
 * 删除 *MyProject.Web/Content/site/site.basicsamples.less* 文件。
 * 删除 *MyProject.Web/Content/site/site.northwind.less* 文件。
 
-### 移除本地化文本 
+### 移除本地化文本
 
 * 打开 *MyProject.Web/Modules/Texts.cs* 文件，并删除下面的代码：
 
@@ -67,14 +67,14 @@ private static string[] databaseKeys = new[] { "Default", "Northwind" };
             public static LocalText NorthwindPhoneMultiple = "...";
 ```
 
-* 删除文件夹 *MyProject.Web/Scripts/site/texts/northwind*。  
+* 删除文件夹 *MyProject.Web/Scripts/site/texts/northwind*。
 * 删除文件夹 *MyProject.Web/Scripts/site/texts/samples*。
 
-### 移除 Northwind / Samples 生成的代码 
+### 移除 Northwind / Samples 生成的代码
 
 * 展开 *MyProject.Web/Modules/Common/Imports/ ServerTypings/ServerTypings.tt*。删除以 *Northwind* 或 *BasicSamples* 开头的文件。
  
-### 移除控制面板（Dashboard）中的 Northwind 数字  
+### 移除控制面板（Dashboard）中的 Northwind 数字
 
 打开 *DashboardPage.cs*，删除 using 行：
 
@@ -116,11 +116,11 @@ public ActionResult Index()
 
 * 再次重新生成解决方案。
 
-* 在整个解决方案中搜索 *Northwind*、 *Basic Samples* 和 *Theme Samples*，它应该找不到任何结果。  
+* 在整个解决方案中搜索 *Northwind*、*Basic Samples* 和 *Theme Samples*，应该找不到任何结果。
 
-* 运行项目，现在 Northwind 和 Sample 菜单已经没有了。
+* 运行项目，现在已经没有 Northwind 和 Sample 菜单。
 
 
-### 移除 Northwind 表 
+### 移除 Northwind 表
 
 Northwind 的表都在一个单独的数据库中，因此，删除该数据库即可。

@@ -1,4 +1,4 @@
-# 使用 Serenity 服务行为 
+# 使用 Serenity 服务行为
 
 如果想把多租户系统扩展到 Northwind 数据库中的其他表，我们会重复角色所做的相同步骤。虽然看起来没那么难，但是有太多的手工工作。
 
@@ -104,11 +104,11 @@ namespace MultiTenancy
 }
 ```
 
-行为类实现 IImplicitBehavior 接口来决定是否应该被指定的行类型（row type）激活。 
+行为类实现 IImplicitBehavior 接口来决定是否应该被指定的行类型（row type）激活。
 
 它是通过实现 *ActivateFor* 方法做到的，该方法由请求处理（request handlers）调用。
 
-在该方法中，我们检查行类型（row type）是否实现 *IMultiTenantRow* 接口，如果没有，则返回 false。 
+在该方法中，我们检查行类型（row type）是否实现 *IMultiTenantRow* 接口，如果没有，则返回 false。
 
 然后，我们得到一个 *TenantIdField* 的私有引用，以便之后在其他方法中使用。
 
@@ -122,9 +122,9 @@ namespace MultiTenancy
 
 我们只实现相关的方法，其他的方法保留为空。
 
-我们这里实现的方法，对应于上一章节在 *RoleRepository.cs* 重写的方法。它们所包含的代码几乎是相同的，但我们这里需要更加通用，因为该行为将为所有实现 *IMultiTenantRow* 接口的行类型工作。 
+我们这里实现的方法，对应于上一章节在 *RoleRepository.cs* 重写的方法。它们所包含的代码几乎是相同的，但我们这里需要更加通用，因为该行为将为所有实现 *IMultiTenantRow* 接口的行类型工作。
 
-## 使用行为重新实现 RoleRepository  
+## 使用行为重新实现 RoleRepository
 
 现在还原我们在 *RoleRepository.cs* 做的所有修改：
 

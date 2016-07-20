@@ -1,8 +1,8 @@
-# 使用 TenantId 筛选用户 
+# 使用 TenantId 筛选用户
 
 我们首先需要在 UserDefinition 加载并缓存租户用户。
 
-打开 *Multitenancy.Web/ Modules/ Administration/ User/ Authentication* 下的 *UserDefinition.cs*，并添加 *TenantId* 属性。  
+打开 *Multitenancy.Web/ Modules/ Administration/ User/ Authentication* 下的 *UserDefinition.cs*，并添加 *TenantId* 属性。
 
 ```cs
 namespace MultiTenancy.Administration
@@ -29,9 +29,9 @@ namespace MultiTenancy.Administration
 }
 ```
 
-当你通过 *Authorization.UserDefinition* 请求当前用户时，该类被返回。 
+当你通过 *Authorization.UserDefinition* 请求当前用户时，该类被返回。
 
-我们也需要在类被加载的地方修改代码。在同一文件夹编辑 *UserRetrieveService.cs*，并修改 *GetFirst*： 
+我们也需要在类被加载的地方修改代码。在同一文件夹编辑 *UserRetrieveService.cs*，并修改 *GetFirst*：
 
 ```cs
 private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
@@ -58,7 +58,7 @@ private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
 
 ```
 
-现在，是时候使用 *TenantId* 过滤并列出用户。打开 *UserRepository.cs*，定位到 *MyListHandler* 类做如下修改：  
+现在，是时候使用 *TenantId* 过滤并列出用户。打开 *UserRepository.cs*，定位到 *MyListHandler* 类做如下修改：
 
 ```cs
 private class MyListHandler : ListRequestHandler<MyRow>

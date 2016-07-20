@@ -1,4 +1,4 @@
-# 从 Visual Studio 库中安装 SERENE
+# 从 Visual Studio 库中获取安装 SERENE
 
 在浏览器打开链接 http://visualstudiogallery.msdn.microsoft.com/ 
 
@@ -17,7 +17,7 @@
 ![Visual Studio Gallery Download](img/visual_studio_gallery_download.jpg)
 
 
-下载完成后，单击下载的 VSIX 文件，启动 Visual Studio 扩展安装对话框并单击安装。
+下载完成后，单击下载的 VSIX 文件启动 Visual Studio 扩展安装对话框，并单击安装。
 
 ![VSIX Installation](img/vsix_installation.jpg)
 

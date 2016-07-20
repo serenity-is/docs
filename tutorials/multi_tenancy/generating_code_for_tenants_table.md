@@ -1,4 +1,4 @@
-# 为租户（Tenants）生成代码 
+# 为租户（Tenants）生成代码
 
 启动 *Sergen* ，并使用 *Default* 连接为 *租户（Tenants）*表生成代码。
 

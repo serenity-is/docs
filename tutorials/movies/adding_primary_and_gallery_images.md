@@ -1,6 +1,6 @@
 # 添加海报（Primary）和简介（Gallery）图片
 
-分别给人员（Person）和影片（Movie）记录添加一张海报和多张简介图片。从迁移类开始：
+需要分别给人员（Person）和影片（Movie）记录添加一张海报和多张简介图片。让我们从迁移类开始：
 
 ```cs
 using FluentMigrator;
@@ -28,7 +28,7 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
-然后修改 MovieRow.cs 和 PersonRow.cs： 
+然后修改 MovieRow.cs 和 PersonRow.cs：
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -102,15 +102,15 @@ namespace MovieTutorial.MovieDB.Entities
 
 我们指定这些字段将由 *ImageUploadEditor* 和 *MultipleImageUploadEditor* 类型处理。
 
-FilenameFormat 指定上传文件的命名方式。例如，人员海报图片将上传到 App_Data/upload/Person/PrimaryImage/ 目录下面。
+FilenameFormat 指定上传文件的命名方式。例如，人员的海报图片将上传到 App_Data/upload/Person/PrimaryImage/ 目录下面。
 
-> 你可以通过  web.config 文件的 appSettings 节点下 *UploadSettings* 的配置，把保存上传文件的根目录 (*App_Data/upload*)修改为任意文件目录。
+> 你可以通过  web.config 文件的 appSettings 节点下的 *UploadSettings* 配置，把保存上传文件的根目录 (*App_Data/upload*) 修改为任意文件目录。
 
 `~`  FilenameFormat 的末尾是自动命名方案的快捷方式 `{1:00000}/{0:00000000}_{2}`。
 
 在这里，参数 {0} 替换为记录的标识，如，PersonID。
 
-参数 {1} 是 1000 以内的整数标识。 这对保存在一个目录中的文件数进行限制是很有帮助的。
+参数 {1} 是 1000 以内的整数标识。 这对在一个目录中的保存文件数进行限制是很有帮助的。
 
 参数 {2} 是一个唯一的字符串，例如 6l55nk6v2tiyi，它用于为每个上传文件生成一个新的文件名，这有助于避免客户端缓存所造成的问题。
 
@@ -122,7 +122,7 @@ FilenameFormat 指定上传文件的命名方式。例如，人员海报图片�
 > App_Data\upload\Person\PrimaryImage\00000\00000001_6l55nk6v2tiyi.jpg
 ```
 
-> 你不必遵守此命名方案，你可以指定你自己的格式，如 `PersonPrimaryImage_{0}_{2}`。
+> 你不必遵守此命名方案，也可以指定你自己的格式，如 `PersonPrimaryImage_{0}_{2}`。
 
 下一步，把这些字段添加到表单（MovieForm.cs 和 PersonForm.cs）：
 
@@ -169,7 +169,7 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-我也修改了人员对话框的css，让其有更多的空间：
+我还修改了人员对话框的 css，让其有更多的空间：
 
 ```css
 .s-MovieDB-PersonDialog {
@@ -188,7 +188,7 @@ namespace MovieTutorial.MovieDB.Forms
 
 ### 删除 Northwind 和 其他 示例 
 
-我认为我们的项目达到了良好的状态，我现在要从 MovieTutorial 项目中删除 Northwind 和其他示例。
+我认为我们的项目达到了良好的状态，现在我要从 MovieTutorial 项目中删除 Northwind 和其他示例。
 
 请参见如下帮助主题：
 

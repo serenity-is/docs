@@ -1,10 +1,10 @@
 # 如何使用其他类型的数据库？
 
-Serenity 有方言系统（dialect system）以支持在非 Sql Server 的其他数据库中工作。  
+Serenity 有方言系统（dialect system）以支持在非 Sql Server 的其他数据库中工作。
 
-> 方言系统（Dialect system）目前还是一项在不断完善的实验性功能。虽然它也能工作，但如果有任何问题，你可能在 Serenity 的 GitHub 向我们反馈。
+> 方言系统（Dialect system）目前还是一项在不断完善的实验性功能。虽然它也能工作，但如果有任何问题，你可以在 Serenity 的 GitHub 向我们反馈。
 
-如果你需要支持多种数据库类型，只需在 web.config 修改连接字符串，并在表达式中小心使用数据库特定的功能及避免使用保留的关键字。 
+如果你需要支持多种数据库类型，只需在 web.config 修改连接字符串，并在表达式中小心使用数据库特定的功能及避免使用保留的关键字。
 
 
 ## PostgreSQL
@@ -34,7 +34,7 @@ PostgreSQL 有一个名为 Npgsql 的 .NET 提供者。你首先需要在 MyProj
   // ...
 ```
 
-### 设置连接字符串 
+### 设置连接字符串
 
 下一步是把连接字符串修改为 Postgres 数据库的配置：
 
@@ -55,17 +55,17 @@ PostgreSQL 有一个名为 Npgsql 的 .NET 提供者。你首先需要在 MyProj
 
 ```
 
-> 由于 Postgres 总会将字母转换为小写，所以请使用小写的数据库名称，如 `serene_default_v1` 。 
+> 由于 Postgres 总会将字母转换为小写，所以请使用小写的数据库名称，如 `serene_default_v1` 。
 
 > 提供者名称必须是 Npgsql ，以使 Serenity 自动检测方言。
 
-### 注意标识符的大小写 
+### 注意标识符的大小写
 
-PostgreSQL 的标识符区分大小写。 
+PostgreSQL 的标识符区分大小写。
 
-FluentMigrator 自动为所有标识符添加引号，所以数据库中的表和列名称将被添加引号并区分大小写。当试图检索不带引号的表或列标识符时，这可能会导致问题。 
+FluentMigrator 自动为所有标识符添加引号，所以数据库中的表和列名称将被添加引号并区分大小写。当试图检索不带引号的表或列标识符时，可能会导致问题。
 
-一个选项是在迁移中始终使用小写字母标识符，但这种命名方案在其它数据库类型中不是很好，因此我们不喜欢这种方式。
+一种做法是在迁移中始终使用小写字母标识符，但这种命名方案在其它数据库类型中不是很好，因此我们不喜欢这种方式。
 
 为了防止 Postgres 的这类问题，Serenity 有自动添加引号功能，以解决 Postgres/FluentMigrator 的兼容问题，但需要在应用程序的 SiteInitialization.cs 启动方法中启用：
 
@@ -78,7 +78,7 @@ public static void ApplicationStart()
         Serenity.Web.CommonInitialization.Run();
 ```
 
-> 确保在 CommonInitialization.Run 运行之前设置 AutoQuotedIdentifiers 。 
+> 确保在 CommonInitialization.Run 运行之前设置 AutoQuotedIdentifiers 。
 
 该设置自动为实体的列名称添加引号，但不能应用在手工编写的表达式中（如，表达式特性）。
 
@@ -86,17 +86,17 @@ public static void ApplicationStart()
 
 你可能还希望在表达式中使用双引号，但它不能与 MySQL 数据库兼容。
 
-### 设置默认方言 
+### 设置默认方言
 
-这一步骤是可选的。 
+这一步骤是可选的。
 
-Serenity 通过检索连接字符串的 *providerName* 自动决定使用的方言。 
+Serenity 通过检索连接字符串的 *providerName* 自动决定使用的方言。
 
-它甚至可以在同一时间与多个数据库类型工作。 
+它甚至可以在同一时间与多个数据库类型工作。
 
 例如，Northwind 使用 Sql Server，而 Default 使用 PostgreSQL。
 
-但是，如果你打算每个站点只使用一种数据库类型，你可以在 SiteInitialization 注册默认使用的数据库类型。
+但是，如果你打算每个站点只使用一种数据库类型，可以在 SiteInitialization 注册默认使用的数据库类型。
 
 ```cs
 public static void ApplicationStart()
@@ -108,17 +108,17 @@ public static void ApplicationStart()
         Serenity.Web.CommonInitialization.Run();
 ```
 
-当连接方言/实体等不能自动确定时，使用默认方言。 
+当连接方言/实体等不能自动确定时，使用默认方言。
 
 > 该设置不会覆盖自动检测，它只是被用作回退。
 
-## 启动应用程序 
+## 启动应用程序
 
 现在启动你的应用程序，如果之前没有手工创建数据库，它将自动创建数据库。
 
-## 配置代码生成器 
+## 配置代码生成器
 
-Sergen 没有 PostgreSQL 提供者的引用，因此如果你想使用它生成代码，你必须向其注册该提供者。
+Sergen 没有 PostgreSQL 提供者的引用，因此如果若想使用它生成代码，你必须向其注册该提供者。
 
 Sergen.exe 是一个 exe 文件，因此你不能为它添加 NuGet 引用。我们需要在应用程序配置文件中注册该提供者。
 
@@ -148,11 +148,11 @@ Sergen.exe 是一个 exe 文件，因此你不能为它添加 NuGet 引用。我
 
 把 Npgsql.dll 拷贝到与 Sergen.exe 同一文件夹。现在 Sergen 将可以为 Postgres 表生成代码。
 
-> 如果你想要能够使用多个数据库，你可能想删除 `[public].` 前缀，该前缀是生成的行（rows）中 tablename/column 表达式的默认 schema 。
+> 如果想能够使用多个数据库，你可能想删除 `[public].` 前缀，该前缀是生成的行（rows）中 tablename/column 表达式的默认 schema 。
 
 ## MySql
 
-> Serene 1.8.13+ 支持 MySql 
+> Serene 1.8.13+ 支持 MySql
 
 ### 注册 MySql 提供者
 
@@ -204,7 +204,7 @@ MySQL 有一个名为 MySql.Data 的 .NET 提供者。你首先需要在 MyProje
 
 > MySql 使用小写的数据库（schema）和表名称，但没有 Postgres 的区分大小写问题。
 
-### 配置代码生成器 
+### 配置代码生成器
 
 Sergen 没有 MySql 提供者的引用，因此如果你想使用它生成代码，你必须向其注册该提供者。
 
@@ -238,9 +238,9 @@ Sergen.exe 是一个 exe 文件，因此你不能为它添加 NuGet 引用。我
 
 ## Oracle
 
-> Serene 2.2.2+ 已支持 Oracle 数据库  
+> Serene 2.2.2+ 已支持 Oracle 数据库
 
-### 注册 Oracle 提供者 
+### 注册 Oracle 提供者
 
 Oracle 有一个名为 Oracle.ManagedDataAccess 的托管 .NET 提供者。你首先需要在 MyProject.Web 中安装该提供者：
 
@@ -338,6 +338,6 @@ GRANT UNLIMITED TABLESPACE TO Serene_Northwind_v1;
 
 > 提供者名称必须是 `Oracle.ManagedDataAccess.Client` ，以使 Serenity 自动检测方言。注意，上述重写默认方言。
 
-### 配置代码生成器 
+### 配置代码生成器
 
-Sergen 目前还不支持 Oracle，希望尽快支持…… 
+Sergen 目前还不支持 Oracle，希望尽快支持……

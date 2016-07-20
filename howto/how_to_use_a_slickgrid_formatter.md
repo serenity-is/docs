@@ -5,14 +5,14 @@
 
 
 
-使用 SlickGrid 格式化器功能，如在 SlickGrid 列中显示完成程度的百分比进度条示例：
+使用 SlickGrid 格式化器功能，例如在 SlickGrid 列中显示完成程度的百分比进度条示例：
 
 http://mleibman.github.io/SlickGrid/examples/example2-formatters.html
 
 
 ### 包含必须的资源
 
-首先在 *_LayoutHead.cshtml* (MyProject.Web/Views/Shared/_LayoutHead.cshtml)文件中包含这些格式化程序引用：
+首先在 *_LayoutHead.cshtml* (MyProject.Web/Views/Shared/_LayoutHead.cshtml)文件中包含这些格式化程序的引用：
 
 ```cshtml
 //...
@@ -36,7 +36,7 @@ http://mleibman.github.io/SlickGrid/examples/example2-formatters.html
 ### 定义 Serenity 的 DataGrid 格式化器
 
 
-假设我们想在 *StudentCourseGrid* 的 *CourseCompletion* 列使用 *Slick.Formatters.PercentCompleteBar* 格式化。 
+假设我们想在 *StudentCourseGrid* 的 *CourseCompletion* 列使用 *Slick.Formatters.PercentCompleteBar* 格式化。
 
 ```cs
 public class StudentCourseColumns
@@ -83,12 +83,12 @@ public class StudentCourseColumns
 }
 ```
 
-重新生成你的项目，你将看到 CourseCompletion 列有一个像 SlickGrid 示例的百分比栏。 
+重新生成你的项目，你将看到 CourseCompletion 列有一个像 SlickGrid 示例的百分比栏。
 
 
-### 获得智能感知和编译时检查 
+### 获得智能感知和编译时检查
 
-要在 PercentCompleteBarFormatter 服务端获得智能感知（可避免使用魔术字符串），你应该转换 T4 模板（在转换之前请确保成功生成解决方案）。 
+要在 PercentCompleteBarFormatter 服务端获得智能感知（可避免使用魔术字符串），你应该转换 T4 模板（在转换之前请确保成功生成解决方案）。
 
 在此之后，你可以在服务器端像下面这样引用它：
 
@@ -106,7 +106,7 @@ public class StudentCourseColumns
 ### 替代方案（不建议）
 
 
-也可以不用定义 Serenity 格式化器类，例如在 *StudentCourseGrid.cs* 通过重写其 *GetColumns* 方法，直接在脚本代码中设置 SlickGrid 列格式化器功能：
+也可以不用定义 Serenity 格式化器类，例如在 *StudentCourseGrid.cs* 通过重写其 *GetColumns* 方法直接在脚本代码中设置 SlickGrid 列格式化器功能：
 
         protected override List<SlickColumn> GetColumns()
         {

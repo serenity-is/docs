@@ -20,7 +20,7 @@ You need to turn on persistance for all grids, or for individual ones that you w
 
 DataGrid has a static configuration parameter with name *DefaultPersistanceStorage*. This parameter controls where grids save their settings automatically by default. It is initially null.
 
-In SiteInitialization.ts, you might turn on persistance for all grids by default like below:
+In ScriptInitialization.ts, you might turn on persistance for all grids by default like below:
 
 ```ts
 namespace Serene.ScriptInitialization {

@@ -1,6 +1,6 @@
 # 本地化
 
-大多数 web 应用程序必须支持多种语言。例如：Youtube、 Wikipedia、 Facebook 网站都支持多语言。 
+大多数 web 应用程序必须支持多种语言。例如：Youtube、 Wikipedia、 Facebook 网站都支持多语言。
 
 当用户第一次访问网站时，根据用户浏览器（预先设置的地区）自动选择显示的语言。
 
@@ -10,7 +10,7 @@
 
 Serenity 平台从开始设计之初就考虑到本地化功能。
 
-如果你在使用 *Serenity 基本应用程序示例*，你可以通过设置浏览器语言或更改 web.config 的设置来查看本地化功能： 
+如果你在使用 *Serenity 基本应用程序示例*，可以通过设置浏览器语言或更改 web.config 的设置来查看本地化功能：
 
 ```xml
 <system.web>

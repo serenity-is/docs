@@ -1,4 +1,4 @@
-# LocalTextRegistry 类 
+# LocalTextRegistry 类
 
 [**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
@@ -19,9 +19,9 @@ public class LocalTextRegistry : ILocalTextRegistry
 }
 ```
 
-Add 和 TryGet 实现了 ILocalTextRegistry 接口的相应方法。 
+Add 和 TryGet 实现了 ILocalTextRegistry 接口的相应方法。
 
-## LocalTextRegistry.SetLanguageFallback 方法 
+## LocalTextRegistry.SetLanguageFallback 方法
 
 为语言回退（language fallback）设置指定的语言。
 
@@ -32,10 +32,10 @@ registry.SetLanguageFallback('en-UK', 'en-US');
 // it will be looked up in "en-US" language first, followed by "en".
 ```
 
-> 有关语言回退的详细信息可以在有关章节中找到。 
+> 可以在有关章节中找到有关语言回退的详细信息。
 
 
-## 注册 LocalTextRegistry 作为提供者 
+## 注册 LocalTextRegistry 作为提供者
 
 通常在应用程序启动方法中做此操作：
 
@@ -44,4 +44,4 @@ var registrar = Dependency.Resolve<IDependencyRegistrar>();
 registrar.RegisterInstance<ILocalTextRegistry>(new LocalTextRegistry());
 ```
 
-> 如果没有已注册的提供者， *CommonInitialization.Run* 或 *CommonInitialization.InitializeLocalTexts* 方法将注册一个 LocalTextRegistry 实例作为 ILocalTextRegistry 提供者。
+> 如果没有已注册的提供者，*CommonInitialization.Run* 或 *CommonInitialization.InitializeLocalTexts* 方法将注册一个 LocalTextRegistry 实例作为 ILocalTextRegistry 提供者。

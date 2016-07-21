@@ -101,11 +101,11 @@ APrefix.Site.Dashboard.WelcomeMessage      |en-US     |Welcome to Serenity Basic
 APrefix.Validation.DeleteForeignKeyError   |en-US     |Can't delete record...
 
 
-## NestedLocalTextRegistration 类 
+## NestedLocalTextRegistration 类
 
 [**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
-要注册嵌套本地化文本定义，需要在应用程序启用时调用 *NestedLocalTextRegistration.Initialize()* 方法： 
+要注册嵌套本地化文本定义，需要在应用程序启动时调用 *NestedLocalTextRegistration.Initialize()* 方法：
 
 ```cs
 void Application_Start()

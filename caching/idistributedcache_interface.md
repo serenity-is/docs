@@ -36,7 +36,7 @@ IoC.Resolve<IDistributedCache>().Set("someKey", "someValue",
     TimeSpan.FromMinutes(10));
 ```
 
-## IDistributedCache.Increment 方法 
+## IDistributedCache.Increment 方法
 
 分布式缓存系统上的操作通常不是原子性的，并且没有提供任何事务性的系统。
 

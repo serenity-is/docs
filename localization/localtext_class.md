@@ -1,4 +1,4 @@
-# LocalText 类 
+# LocalText 类
 
 [**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
@@ -21,14 +21,14 @@
     }
 ```
 
-它的构造函数接受一个 key 参数，它定义将包含的本地化文本键（local text key）。一些键的示例：
+它的构造函数接受一个 key 参数，它定义将要包含的本地化文本键（local text key）。一些键的示例：
 
 - Enums.Month.January
 - Enums.Month.December
 - Db.Northwind.Customer.CustomerName
 - Dialogs.YesButton
 
-> 虽然它不是一个规则，但遵循像本地化文本键的 *点* 约定的命名空间是一个好的主意。
+> 虽然它不是一个规则，但遵循 *点* 约定（如，本地化文本键）的命名空间是一个好的主意。
 
 在运行时，通过 ToString() 函数，本地化文本键被翻译为当前语言（即 *CultureInfo.CurrentUICulture*）的表示形式。
 
@@ -55,7 +55,7 @@ Console.WriteLine(text.ToString());
 > 这是特意设计的，以便开发人员可以查明没有被翻译的文本。
 
 
-## LocalText.Key 属性 
+## LocalText.Key 属性
 
 获取 LocalText 实例包含的本地化文本键。
 
@@ -69,7 +69,7 @@ LocalText someText = "Dialogs.YesButton";
 
 这里的 *someText* 变量得到一个键为 *Dialogs.YesButton* 的新 LocalText 实例引用。所以它是只是一个 LocalText 构造函数的快捷方式。
 
-## 隐式转换为字符串 
+## 隐式转换为字符串
 
 LocalText 也实现了 String 类型的隐式转换，但是它返回翻译而不是键（像调用 *ToString* 方法）。
 
@@ -97,7 +97,7 @@ Console.WriteLine(LocalText.Get("Dialogs.YesButton"));
 
 > *ToString()* 在 Get 方法内部被调用。
 
-## LocalText.TryGet 静态方法 
+## LocalText.TryGet 静态方法
 
 不像 Get 方法在找不到翻译时返回本地化文本键，TryGet 返回 null。因此，合并运算符（coalesce operator）必须与 TryGet 一起使用：
 
@@ -115,7 +115,7 @@ Console.WriteLine(translation);
 类似于 String.Empty，LocalText 包含一个含空键（empty key）的空本地化文本对象。
 
 
-## LocalText.InvariantLanguageID 常量 
+## LocalText.InvariantLanguageID 常量
 
 这只是固定语言ID (invariant language ID) 的空字符串，它是固定区域语言标识符（通常默认语言为英语）。
 

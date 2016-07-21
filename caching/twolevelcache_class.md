@@ -35,7 +35,7 @@
     }
 ```
 
-## TwoLevelCache.Get 方法 
+## TwoLevelCache.Get 方法
 
 - 试图从本地缓存中读取值。如果在本地缓存中找不到值（或已过期的版本），则尝试从分布式缓存中读取值。
 
@@ -83,7 +83,7 @@ GetWithCustomSerializer  有两个额外的序列化和反序列化委托参数�
 
 > 大多数提供者可有效地处理简单的类型，如 int、 string 或 byte[]，所以对于这种数据类型，你不需要自定义序列化。
 
-## TwoLevelCache.GetLocalStoreOnly 方法 
+## TwoLevelCache.GetLocalStoreOnly 方法
 
 如果你只想在本地缓存中存储数据，可以使用 GetLocalStoreOnly 方法。
 
@@ -104,8 +104,8 @@ TwoLevelCache.ExpireGroupItems("SomeGroupKey");
 
 > 应该在修改数据的方法中调用此方法。
 
-> 如果实体类有 *TwoLevelCached* 特性，*Create, Update, Delete 和 Undelete* 使用 *ConnectionKey.TableName*  作为组键自动做缓存过期处理。
+> 如果实体类有 *TwoLevelCached* 特性，*Create、Update、Delete 和 Undelete* 使用 *ConnectionKey.TableName*  作为组键自动做缓存过期处理。
 
-## TwoLevelCache.Remove 方法 
+## TwoLevelCache.Remove 方法
 
 从本地和分布式缓存中移除项目和其版本。

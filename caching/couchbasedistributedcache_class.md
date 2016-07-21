@@ -1,4 +1,4 @@
-# CouchbaseDistributedCache 类 
+# CouchbaseDistributedCache 类
 
 [**命名空间**: *Serenity.Caching*, **程序集**: *Serenity.Caching.Couchbase*]
 

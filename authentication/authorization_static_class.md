@@ -1,8 +1,8 @@
-# 静态 Authorization 类 
+# 静态 Authorization 类
 
 [**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
-Authorization 类提供一些像 IAuthorizationService、IPermissionService 等服务提供的信息的捷径。
+Authorization 类提供访问一些像 IAuthorizationService、IPermissionService 等服务提供的信息的捷径。
 
 例如，要替换下面的写法
 ```cs
@@ -26,10 +26,10 @@ public static class Authorization
 }
 ```
 
-`IsLoggedIn`、 `UserDefinition`、 `UserId`、 `Username` 和 `HasPermission` 是为了让使用对应服务访问当前用户信息更容易。
+`IsLoggedIn`、 `UserDefinition`、 `UserId`、 `Username` 和 `HasPermission` 是为了让使用对应服务更容易访问当前用户信息。
 
-`ValidateLoggedIn` 检查是否有登录用户，如果没有登录用户，则抛出含错误码 `NotLoggedIn` 的 `ValidationException` 异常。
+`ValidateLoggedIn` 检查是否有登录用户，如果没有登录用户，则抛出含 `NotLoggedIn` 错误码的 `ValidationException` 异常。
 
-`ValidatePermission` 检查登录用户是否有指定的权限，如果没有相应权限，则抛出含错误码 `AccessDenied` 的 `ValidationException` 异常。 
+`ValidatePermission` 检查登录用户是否有指定的权限，如果没有相应权限，则抛出含 `AccessDenied` 错误码的 `ValidationException` 异常。
 
 

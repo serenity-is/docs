@@ -16,7 +16,7 @@
 2. MVC XYZController（在 XYZEndpoint.cs 文件中） 的服务请求 (AJAX) 到达服务器，请求参数从 JSON 反序列化为 ListRequest 对象。
 3. XYZEndpoint 调用 XYZRepository.List 方法，并以检索到的 ListRequest 对象作为其参数。
 4. XYZRepository.List 方法创建一个 ListRequestHandler (XYZRepository.MyListHandler) 的子类并使用 ListRequest 作为参数调用其 Process 方法。
-5. ListRequestHandler.Process 方法根据 ListRequest、实体类型（Row）的元数据及其他信息构建动态 SQL 查询语句，并执行它。 
+5. ListRequestHandler.Process 方法根据 ListRequest、实体类型（Row）的元数据及其他信息构建动态 SQL 查询语句，并执行它。
 6. ListRequestHandler.Process 返回 ListResponse，它包含要返回行的 Entities 成员。
 7. XYZEndpoint 接收该 ListResponse，并从 action 中返回它。
 8. ListResponse 被序列化成 JSON 发送回客户端。
@@ -53,7 +53,7 @@
 
 ### ListRequest.Skip 和 ListRequest.Take 参数
 
-这些参数用于分页，它们类似于 LINQ 中的 Skip 和 Page 扩展。 
+这些参数用于分页，它们类似于 LINQ 中的 Skip 和 Page 扩展。
 
 这里有一个需要指出的小区别。如果你使用 Take(0)，LINQ 无记录返回，而 Serenity 将返回所有的记录。调用 LIST 服务并请求 0 条记录是毫无意义的。
 
@@ -77,7 +77,7 @@ CustomerService.List(new ListRequest
 }, response => {});
 ```
 
-这些参数根据 SQL 方言转换为有关的 SQL 分页语句。 
+这些参数根据 SQL 方言转换为有关的 SQL 分页语句。
 
 ### ListRequest.Sort 参数
 
@@ -161,7 +161,7 @@ CustomerService.List(connection, new ListRequest
 
 当只指定 ContainsText 而 ContainsField 为空时，对所有含 [QuickSearch] 特性的字段执行搜索。
 
-可以定义一些特定的字段列表，以便通过重写 GetQuickSearchField() 方法对客户端网格执行搜索。所以当在快速搜索输入框中选择这些字段，则只执行对所选列的搜索。 
+可以定义一些特定的字段列表，以便通过重写 GetQuickSearchField() 方法对客户端网格执行搜索。所以当在快速搜索输入框中选择这些字段，则只执行对所选列的搜索。
 
 如果将 ContainsField 设置为没有快速搜索特性的字段名称，出于安全目的，系统将引发异常。
 
@@ -212,10 +212,10 @@ CustomerService.List(connection, new ListRequest
 }, response => {});
 ```
 
-如果你试图用空的国家条件筛选客户，请使用的 Criteria 参数。 
+如果你试图用空的国家条件筛选客户，请使用的 Criteria 参数。
 
 
-### ListRequest.Criteria 
+### ListRequest.Criteria
 
 此参数接受条件对象，类似于我们在流式 SQL 章节谈到的服务端 Criteria 对象。唯一不同的是，由于这些条件对象是发送自客户端，因此必须验证其不能包含任何随心所欲的 SQL 表达式。
 
@@ -292,7 +292,7 @@ new ListRequest
 }
 ```
 
-在 *ColumnSelection.List* 模式中，ListRequestHandler 返回 *表* 字段，因此，这些字段是实际属于该表的字段，而不是来自关联表的视图字段。 
+在 *ColumnSelection.List* 模式中，ListRequestHandler 返回 *表* 字段，因此，这些字段是实际属于该表的字段，而不是来自关联表的视图字段。
 
 有一个例外：*表达式* 字段只包含 *表* 字段的引用，如 *(t0.FirstName + ' ' + t0.LastName)* 。 ListRequestHandler 同样加载这些字段。
 
@@ -393,7 +393,7 @@ public enum SelectLevel
 
 *SelectLevel.Default* ：默认值，对应于表字段是 *SelectLevel.List* ，视图字段是 *SelectLevel.Details* 。
 
-默认情况下，表字段的选择级别是 *SelectLevel.List* ，而视图字段是 *SelectLevel.Details*。 
+默认情况下，表字段的选择级别是 *SelectLevel.List* ，而视图字段是 *SelectLevel.Details*。
 
 *SelectLevel.Always* ：表示此字段可被任何列选择模式选择，**包括**使用 *ExcludeColumns* 显式排除的字段。
 

@@ -1,4 +1,4 @@
-# 静态依赖类 
+# 静态依赖类
 
 [**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
@@ -20,11 +20,11 @@ public static class Dependency
 
 在你应用程序的启动方法（如：global.asax.cs）中，你应该使用 SetResolver 方法设置依赖解析器（IDependencyResolver）的实现（IoC 容器）来初始化服务定位器。
 
-# Dependency.SetResolver 方法 
+# Dependency.SetResolver 方法
 
 配置要使用的依赖解析器的实现。
 
-你可以使用你喜欢的 IoC 容器，但 Serenity 已经包含了基于 Munq 的 IoC 容器： 
+你可以使用你喜欢的 IoC 容器，但 Serenity 已经包含了基于 Munq 的 IoC 容器：
 
 ```cs
 var container = new MunqContainer();
@@ -33,9 +33,9 @@ Dependency.SetResolver(container);
 
 SetResolver 方法返回之前配置的 IDependencyResolver 实现。如果之前没有配置，则返回 null。
 
-# Dependency.Resolver 属性 
+# Dependency.Resolver 属性
 
-返回当前配置的 IDependencyResolver 的实现。 
+返回当前配置的 IDependencyResolver 的实现。
 
 如果尚未配置，则抛出 InvalidProgramException 异常。
 
@@ -43,7 +43,7 @@ SetResolver 方法返回之前配置的 IDependencyResolver 实现。如果之�
 
 如果 IDependencyResolver 的实现已通过 SetResolver 配置，则返回 true。否则，返回 false。
 
-# Dependency.Resolve 方法 
+# Dependency.Resolve 方法
 
 返回请求类型注册的实现。
 
@@ -65,6 +65,6 @@ var srvConfig = Dependency.Resolve<IConfigurationRepository>("Server");
 
 # Dependency.TryResolve 方法
 
-该方法在功能上与 Resolve 方法相同，只是使用不同的方法实现。
+该方法在功能上与 Resolve 方法相同，只是使用不同的方式实现。
 
 如果请求类型没有注册提供者，或依赖解析器尚未配置，TryResolve 不会引发异常，而是返回 null。

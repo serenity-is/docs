@@ -1,6 +1,6 @@
-# 认证 &amp; 授权 
+# 认证 &amp; 授权
 
-Serenity 使用一些抽象（abstractions）来与你的应用程序自身的用户身份验证和授权机制一起工作。 
+Serenity 使用一些抽象（abstractions）来与你的应用程序自身的用户身份验证和授权机制一起工作。
 
 ```cs
 Serenity.Abstractions.IAuthenticationService
@@ -29,4 +29,4 @@ registrar.RegisterInstance<IUserRetrieveService>(
 	new Administration.UserRetrieveService());
 ```
 
-在编写你自己的权限之前，你可能会想要看看那些示例的实现。
+在编写你自己的权限之前，你可能需要看看这些示例的实现。

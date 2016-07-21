@@ -6,7 +6,7 @@
 
 使用参数化可以解决 SQL 注入问题，但为了添加参数需要过多的手动工作。
 
-幸运的是，Serenity 有一个条件系统（criteria system），可以帮助你用类似 LINQ 表达式树的方式构建参数化的查询。 
+幸运的是，Serenity 有一个条件系统（criteria system），可以帮助你用类似 LINQ 表达式树的方式构建参数化的查询。
 
 Serenity criterias 是通过 C# 的运算符（utilitizing operator）重载特性来实现的，而不像 LINQ 使用表达式树。
 
@@ -61,7 +61,7 @@ new SqlQuery()
 
 ## BaseCriteria 对象
 
-BaseCriteria 是所有条件（criteria）对象类型的基类。 
+BaseCriteria 是所有条件（criteria）对象类型的基类。
 
 它重载了几个 C# 操作运算符，包括 `>`、 `<`、 `&`、 `|`，它们可以用在 C# 表态式中，以构建复杂的条件。
 
@@ -69,7 +69,7 @@ BaseCriteria 自身没有构造函数，所以你需要创建一个从它派生�
 
 ## Criteria 对象
 
-Criteria 是一个简单对象，包含 SQL 表达式的字符串，通常该字符串是一个字段名称。 
+Criteria 是一个简单对象，包含 SQL 表达式的字符串，通常该字符串是一个字段名称。
 
 ```
 new Criteria("MyField")
@@ -120,7 +120,7 @@ c &= new Criteria("Field2 < 4")
 
 ## OR (|) 操作
 
-类似于 AND 操作，但它使用 OR。 
+类似于 AND 操作，但它使用 OR。
 
 ```
 new Criteria("Field1 > 5") |
@@ -131,7 +131,7 @@ new Criteria("Field2 < 4")
 Field1 > 5 OR Field2 < 4
 ```
 
-## 括号操作 (~) 
+## 括号操作 (~)
 
 当使用多个 AND/OR 子句，你可能想使用括号。
 
@@ -146,9 +146,9 @@ new Criteria("Field1 > 5") &
 Field1 > 5 AND Field2 > 7 OR Field2 < 3
 ```
 
-> 这里的信息适用于 Serenity 1.9.8 之前的版本。在该版本之后，Serenity 在所有二元条件（AND OR 等）周围添加括号，即使你没有使用括号。
+> 这里的信息适用于 Serenity 1.9.8 之前的版本。在该版本之后，Serenity 在所有二元条件（AND 、OR 等）周围添加括号，即使你没有使用括号。
 
-> 所以，如果你想在某些地方显式地使用括号，你只能使用 ~ 。 
+> 所以，如果你想在某些地方显式地使用括号，你只能使用 ~ 。
 
 
 我们的括号被怎么处理？让我们试着添加更多的括号。
@@ -370,7 +370,7 @@ f NOT LIKE @p6 -- @p6 = N'%That%'
 
 ## IN 和 NOT IN 操作
 
-在内联数组中使用 IN 或 NOT IN： 
+在内联数组中使用 IN 或 NOT IN：
 
 ```
 new Criteria("A").In(1, 2, 3, 4, 5)

@@ -11,7 +11,7 @@ Serenity 支持通过 JSON 文件注册包含键/值字典的本地化文本：
 }
 ```
 
-要从某一文件夹中的 JSON 文件注册本地化文本键和翻译，可调用 *JsonLocalTextRegistration.AddFromFilesInFolder*: 
+要从某一文件夹中的 JSON 文件注册本地化文本键和翻译，可调用 *JsonLocalTextRegistration.AddFromFilesInFolder*：
 
 ```cs
 JsonLocalTextRegistration.AddFromFilesInFolder(@"C:\SomeFolder");
@@ -19,7 +19,7 @@ JsonLocalTextRegistration.AddFromFilesInFolder(@"C:\SomeFolder");
 
 文件夹中的文件名称必须遵循如下约定：
 
-`{Some Prefix You Choose}.{LanguageID}.json`
+`{前缀}.{LanguageID}.json`
 
 `{LanguageID}` 是两个或四个字母的语言代码。使用 *invariant* 作为固定语言的语言代码。
 

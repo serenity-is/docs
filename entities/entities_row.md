@@ -1,7 +1,7 @@
 # 实体(Row)
 
 
-Serenity 实体系统是一个微 ORM，它像 Dapper 那样对 SQL 情有独钟。 
+Serenity 实体系统是一个微 ORM，它像 Dapper 那样对 SQL 情有独钟。
 
 不同于完全成熟的ORM，如 NHibernate/Entity Framework，Serenity 提供智能感知地映射和查询数据库所需的最小功能、编译时检查和容易的重构。
 
@@ -58,9 +58,9 @@ public class SimpleRow : Row
 
 我们在这里定义了一个名为 SimpleRow 的实体，它可能映射数据库中名为 `Simple` 的表。
 
-这里的 *Row* 后缀不是必须的，但通常加上该后缀可避免与其他的类名称发生冲突。 
+这里的 *Row* 后缀不是必须的，但通常加上该后缀可避免与其他的类名称发生冲突。
 
-所有的实体类继承自 `Serenity.Data.Row` 基类。 
+所有的实体类继承自 `Serenity.Data.Row` 基类。
 
 ```cs
 public string Name
@@ -87,11 +87,11 @@ public string MyCustom
 }
 ```
 
-我们在这里定义了一个静态依赖属性对象(MyCustomProperty)，它包含属性元数据可以允许我们通过 *GetValue* 和 *SetValue* 方法读取和设置属性的值。依赖属性允许 WPF 提供验证、 数据绑定、 动画及更多的功能。 
+我们在这里定义了一个静态依赖属性对象(MyCustomProperty)，它包含属性元数据可以允许我们通过 *GetValue* 和 *SetValue* 方法读取和设置属性的值。依赖属性允许 WPF 提供验证、 数据绑定、 动画及更多的功能。
 
 类似于依赖属性，Field 对象包含列的元数据和一些如任务跟踪（assignment tracking）、不使用表达式树构建的查询、变更通知等辅助功能。
 
-虽然依赖属性被声明为所使用类的静态成员， Field 对象在一个名为 RowFields 的嵌套类中声明。这样可更容易分组和获取引用，而不用添加 *Field* 或 *Property* 后缀，并从实体中保持清晰的字段声明。 
+虽然依赖属性被声明为所使用类的静态成员， Field 对象在一个名为 RowFields 的嵌套类中声明。这样可更容易分组和获取引用，而不用添加 *Field* 或 *Property* 后缀，并从实体中保持清晰的字段声明。
 
 ```cs
 public Int32? Age
@@ -149,5 +149,5 @@ public class RowFields : RowFieldsBase
 
 记得我们上面写的 `new RowFields().Init()`，这是字段对象自动创建的地方。
 
-> 也可以在 RowFields 构造函数中手动初始化它们，但是除了需要特殊定制，不建议这样做。 
+> 也可以在 RowFields 构造函数中手动初始化它们，但是除了需要特殊定制，不建议这样做。
 

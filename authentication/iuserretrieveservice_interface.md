@@ -2,7 +2,7 @@
 
 [**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-当 Serenity 需要使用给定的用户名或者用户 ID 访问 IUserDefinition 对象时，它需要使用该接口。 
+当 Serenity 需要使用给定的用户名或者用户 ID 访问 IUserDefinition 对象时，它需要使用该接口。
 
 ```cs
 public interface IUserRetrieveService

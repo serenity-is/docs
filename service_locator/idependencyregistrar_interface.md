@@ -15,7 +15,7 @@ public interface IDependencyRegistrar
 }
 ```
 
-MunqContainer 和其他 IoC 容器同样依赖注册（他们都实现 IDependencyRegistrar 接口），所以你只需对它查询：
+MunqContainer 和其他 IoC 容器同样依赖注册（它们都实现 IDependencyRegistrar 接口），所以你只需对它查询：
 
 ```cs
     var registrar = Dependency.Resolve<IDependencyRegistrar>();
@@ -42,7 +42,7 @@ object RegisterInstance<TType>(TType instance) where TType : class;
 
 此重载是注册依赖最常用的方法。
 
-> 确保注册的提供者是线程安全的，因为所有线程将在同一时间使用该实例。
+> 确保注册的提供者是线程安全的，因为所有线程将在同一时间使用这个实例。
 
 RegisterInstance 有一个不太常用的含 *name* 参数的重载：
 
@@ -52,7 +52,7 @@ object RegisterInstance<TType>(string name, TType instance) where TType : class;
 
 使用该重载，你可以为同一接口通过不同的字符串标识（string key）注册不同的提供者。
 
-例如，Serenity 有一个 IConfigurationRepository 接口，可以根据设置范围有不同的提供者。有些设置可能是 *应用程序* 范围（该应用程序的所有服务之间共享），而有些可能是 *服务* 范围（每个服务可能使用不同的唯一标识符）。
+例如，Serenity 有一个 IConfigurationRepository 接口，可以根据设置范围有不同的提供者。有些设置可能是 *应用程序* 范围（该应用程序的所有服务之间共享），而有些则可能是 *服务* 范围（每个服务可能使用不同的唯一标识符）。
 
 因此，要为这些范围的每个域注册 IConfigurationRepository 提供者，你应该像下面这样调用方法：
 
@@ -75,7 +75,7 @@ var srvConfig = Dependency.Resolve<IConfigurationRepository>("Server");
 // ...
 ```
 
-## IDependencyRegistrar.Register 方法 
+## IDependencyRegistrar.Register 方法
 
 不像 *RegisterInstance*，当一个类型使用这种方式注册时，每次请求该类型的提供者都会返回一个新的实例（所以每个请求获得一个唯一的实例）。
 

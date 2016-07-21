@@ -1,14 +1,14 @@
-# 待审状态 
+# 待审状态
 
 LocalTextRegistry 还支持可选的待审状态。
 
-在一些网站，翻译可能需要在发布之前经过一些版主审核。
+在一些网站，翻译可能需要在发布之前经过一些版主的审核。
 
 所以你可能将未经审核的文本添加到本地化注册表（local text registry），但希望在批准时，只有版主可以检查它们将如何在直播网站显示。
 
 LocalTextRegistry 允许你将一些文本标记为待审，并只有批准上下文（例如，当版主已登录）可使用这些翻译文本。
 
-## ILocalTextContext 接口 
+## ILocalTextContext 接口
 
 [**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
@@ -57,7 +57,7 @@ public string TryGet(string languageID, string textKey, bool isApprovalMode);
 
 另外只有当 ILocalTextContext 提供者返回的 IsApprovalMode 属性为 true 时， TryGet 重载才返回未审核文本。
 
-## LocalTextRegistry.GetAllAvailableTextsInLanguage 方法 
+## LocalTextRegistry.GetAllAvailableTextsInLanguage 方法
 
 返回语言中所有当前注册翻译的文本键（text keys）字典。
 

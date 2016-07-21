@@ -2,7 +2,7 @@
 
 [**命名空间**: *Serenity.Data.Mapping*] - [**程序集**: *Serenity.Data*]
 
-Serenity 有一组字段标识控制字段行为。 
+Serenity 有一组字段标识控制字段行为。
 
 ```cs
 public enum FieldFlags
@@ -33,7 +33,7 @@ public enum FieldFlags
 
 *Insertable* 标识控制字段在新增记录状态下是否可编辑。默认情况下，所有普通字段都被认为是可插入的。
 
-某些字段可能不是在数据库表中插入的，如，标识(identity) 列不应该有该标识设置。 
+某些字段可能不是在数据库表中插入的，如，标识(identity) 列不应该有该标识设置。
 
 当字段没有该标识，在新增记录状态的表单下不能编辑该字段。在服务端的仓库层同样有效。
 
@@ -56,7 +56,7 @@ public string MyField
 ```
 
 
-使用 *Insertable(true)* 启用标识符功能。 
+使用 *Insertable(true)* 启用标识符功能。
 
 > 非可插入字段在表单中是不隐藏的。它们只是处于只读状态。如果你想隐藏它们，请使用 [HideOnInsert] 特性 (Serenity 1.9.8+) ，或者使用 *form.MyField.GetGridField().Toggle(IsNew)* 重写对话框中 *UpdateInterface* 方法。
 
@@ -78,7 +78,7 @@ public string MyField
 ```
 
 
-使用 *Updatable(true)* 启用标识符功能。 
+使用 *Updatable(true)* 启用标识符功能。
 
 > 非可插入字段在表单中是不隐藏的。它们只是处于只读状态。如果你想隐藏它们，请使用 [HideOnInsert] 特性 (Serenity 1.9.8+) ，或者使用 *form.MyField.GetGridField().Toggle(IsNew)* 重写对话框中 *UpdateInterface* 方法。
 
@@ -94,7 +94,7 @@ public string MyField
 
 当字段值是 null 或全是空格，它将被修剪为空字符串。
 
-## SetFieldFlags 特性 
+## SetFieldFlags 特性
 
 此属性可用于在字段中包含或排除一组标识。第一个参数是必需的，表示包含的标识；第二个是可选参数，表示排除的标识。
 
@@ -134,27 +134,27 @@ public string MyField
 
 > Insertable 和 Updatable 特性是 SetFieldFlags 特性的子类。
 
-## NotNull 标识 
+## NotNull 标识
 
 使用该标识设置字段为不可空。默认情况下，该标识使用 NotNull 特性设置字段在数据库为不可空字段。
 
 当字段是不可空的，它在表单对应的标签中有一个红色的星号，并要求必须输入值。
 
-## NotNullable 特性 
+## NotNullable 特性
 
-在字段中使用 NotNull 特性启用非空限制，移除该特性表示取消该限制。 
+在字段中使用 NotNull 特性启用非空限制，移除该特性表示取消该限制。
 
 即使字段在数据库中不是可空的，也可以使用 [Required(false)] 让字段在表单中变为非必填字段。它不会清除 NotNull 标识。 
 
 ## Required 标识
 
-这是 Default 和 NotNullable 标识的组合。 
+这是 Default 和 NotNullable 标识的组合。
 
 > 它与表单中控制验证的 [Required] 特性没有关系。
 
 ## PrimaryKey 标识和 PrimaryKey 特性
 
-为表中的主键字段设置该标识。 
+为表中的主键字段设置该标识。
 
 > 列表和检索请求处理程序的 Key 列选择模式选择主键字段。
 
@@ -164,11 +164,11 @@ public string MyField
 
 设置此字段在服务器端是自动递增，例如，标识列或使用生成器（generator）的列。
 
-## Identity 标识和 Identity 特性 
+## Identity 标识和 Identity 特性
 
 这是 PrimaryKey、AutoIncrement 和 NotNull 标识的组合，常用于标识列。
 
-## Foreign 标识 
+## Foreign 标识
 
 该标识设置通过联接其他表得到的外来视图字段。
 
@@ -178,19 +178,19 @@ public string MyField
 
 > 该标识与 ForeignKey 特性没有关系。
 
-## Calculated 标识 
+## Calculated 标识
 
 如果字段的表达式有涉及多个字段或一些数学运算，它将有此标识。
 
 也可以为在 SQL 服务器端计算的字段设置此标识。
 
-## ClientSide 标识和 ClientSide 特性 
+## ClientSide 标识和 ClientSide 特性
 
-对应于 Serenity 实体未映射的字段。它们没有在数据库表中对应的字段。 
+对应于 Serenity 实体未映射的字段。它们没有在数据库表中对应的字段。
 
 这些类型的字段可以用于临时计算、存储及客户端和服务层上的传输。
 
-## Reflective 标识 
+## Reflective 标识
 
 是用于未映射字段的一种高级形式，这些字段没有存储在行中，但反映了另一个不同形式的字段值。例如，绝对值显示为整数的字段也可以是负整数。
 
@@ -200,7 +200,7 @@ public string MyField
 
 如果设置该标识，则表示拒绝对敏感字段进行过滤操作。对于像 PasswordHash 这样的机密字段很有用，不应该允许由客户端选择或过滤这些机密字段。
 
-## Unique 标识和 Unique 特性 
+## Unique 标识和 Unique 特性
 
 当字段有该标识，在数据库中与现有值进行检查以确保其值必须是唯一的。
 

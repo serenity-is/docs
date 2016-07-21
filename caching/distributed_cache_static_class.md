@@ -1,4 +1,4 @@
-# 静态 DistributedCache 类 
+# 静态 DistributedCache 类
 
 [**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 

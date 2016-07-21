@@ -156,7 +156,7 @@ ServiceAuthorize("SomePermission")
 
 [PageAuthorize] 特性也类似，但你可能更喜欢在服务终结点使用 [ServiceAuthorize] 特性，因为它的错误处理更适合服务。
 
-虽然 [PageAuthorize] 将用户**重定向**到登录页面，但如果用户没有权限，ServiceAuthorize 返回一个更适合的 **未授权的服务错误**。
+虽然 [PageAuthorize] 将用户 **重定向** 到登录页面，但如果用户没有权限，ServiceAuthorize 返回一个更适合的 **未授权的服务错误**。
 
 也可以在行为中使用 [ServiceAuthorize] 特性，而不只在控制器中使用该特性：
 
@@ -239,7 +239,7 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-请遵循这种模式并不要尝试向操作方法添加更多的参数。Serenity 遵循只有一个请求对象的基本消息模式，以便后继的扩展可添加更多的属性。 
+请遵循这种模式并不要尝试向操作方法添加更多的参数。Serenity 遵循只有一个请求对象的基本消息模式，以便后继的扩展可添加更多的属性。
 
 不要这样做（被称为 RPC 风格。RPC, Remote procedure call：远程过程调用）：
 

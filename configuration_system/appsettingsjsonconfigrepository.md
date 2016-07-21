@@ -2,7 +2,7 @@
 
 [**命名空间**: *Serenity.Configuration*, **程序集**: *Serenity.Data*]
 
-大多数 Web 应用程序在 web.config 中的 appSettings 部分存储配置设置。 
+大多数 Web 应用程序在 web.config 中的 appSettings 节点存储配置设置。
 
 Serenity 提供一个 IConfigurationRepository 接口的默认实现，可以使用 appSettings 作为配置存储。
 
@@ -28,7 +28,7 @@ public class AppSettingsJsonConfigRepository : IConfigurationRepository
 }
 ```
 
-要手动注册该提供者：
+需要手动注册该提供者：
 
 ```cs
 var registrar = Dependency.Resolve<IDependencyRegistrar>();
@@ -36,7 +36,7 @@ RegisterInstance<IConfigurationRepository>("Application",
     new AppSettingsJsonConfigRepository())
 ```
 
-> 当调用 *Serenity.Web.CommonInitialization.Run()* 时，如果另一个尚未注册，它注册该类作为 IConfigurationRepository 的默认提供者(在 *Application* 作用域)。
+> 当调用 *Serenity.Web.CommonInitialization.Run()* 时，如果你没有注册另一个实现，它将注册该类作为 IConfigurationRepository 的默认提供者(在 *Application* 作用域)。
 
 
 该提供者希望在 web.config / app.config 文件以 JSON 格式定义设置：

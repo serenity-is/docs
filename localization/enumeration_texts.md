@@ -24,7 +24,7 @@ Enums.MyApplication.Sample.Value2|          |Second Value
 
 > 默认情况下，所有的文本都作为固定语言 ID 的翻译。
 
-可以使用这些键访问枚举值的翻译描述，或者使用枚举类型（需引用 Serenity 命名空间） 定义的扩展方法 GetText()。 
+可以使用这些键访问枚举值的翻译描述，或者使用枚举类型（需引用 Serenity 命名空间） 定义的扩展方法 GetText()。
 
 ```cs
 using Serenity;
@@ -36,9 +36,9 @@ Console.WriteLine(MyApplication.Sample.Value1.GetText());
 > First Value
 ```
 
-## EnumKey 特性 
+## EnumKey 特性
 
-枚举翻译使用枚举类型的全名作为生成本地文本键的前缀。该前缀也以被 EnumKeyAttribute 重载： 
+枚举翻译使用枚举类型的全名作为生成本地文本键的前缀。该前缀也以被 EnumKeyAttribute 重载：
 
 ```
 namespace MyApplication
@@ -62,7 +62,7 @@ Enums.Something.Value1|          |First Value
 Enums.Something.Value2|          |Second Value
 
 
-## EnumLocalTextRegistration 类 
+## EnumLocalTextRegistration 类
 
 [**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
@@ -77,6 +77,6 @@ void Application_Start()
 
 它获取程序集列表以检索枚举类型。你可以手工传递程序集列表或使用 *ExtensibilityHelper.SelfAssemblies* （包含 Serenity 程序集的所有引用）。
 
-> 默认情况下， CommonInitialization.Run 和 CommonInitialization.InitializeLocalTexts 方法调用它。 
+> 默认情况下， CommonInitialization.Run 和 CommonInitialization.InitializeLocalTexts 方法会调用它。
 
 

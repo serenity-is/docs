@@ -2,7 +2,7 @@
 
 [**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-这是 Serenity 通过检查当前请求判断用户是否已登录的接口。 
+这是 Serenity 通过检查当前请求判断用户是否已登录的接口。
 
 ```cs
 public interface IAuthorizationService

@@ -1,4 +1,4 @@
-# IUserDefinition 接口 
+# IUserDefinition 接口
 
 [**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
@@ -15,7 +15,7 @@ public interface IUserDefinition
 }
 ```
 
-你的应用程序应该实现该接口，但并不是所有这些信息都是 Serenity 自身必须的。只有 Id、Username 及 IsActive 属性是必需的。 
+你的应用程序应该实现该接口，但并不是所有这些信息都是 Serenity 自身必须的。只有 Id、Username 及 IsActive 属性是必需的。
 
 `Id` 可以是整型、字符串或者 GUID ，用以唯一标识用户。
 

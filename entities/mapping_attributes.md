@@ -34,15 +34,15 @@ FROM Customer T0
 
 `T0` 是一个特殊的别名，由 Serenity 行分配给主表。
 
-由于 *StreetAddress* 列属于主表(*Customer*)，它具有选择表达式 `T0.StreetAddress` ，并且列别名为 `[StreetAddress]`。  
+由于 *StreetAddress* 列属于主表(*Customer*)，它具有选择表达式 `T0.StreetAddress` ，并且列别名为 `[StreetAddress]`。
 
 > 默认情况下使用属性名称作为列别名。
 
 ## SqlSettings.AutoQuotedIdentifiers 标识
 
-在一些数据库系统，标识符是大小写敏感的。 
+在一些数据库系统，标识符是大小写敏感的。
 
-例如在 Postgress 中，如果创建一个带引号的标识符列 `"StreetAddress"`，当查找该列时，你必须使用引号。即使你这样写 `SELECT StreetAddress ...`（相同的大小写），它也不会工作。 
+例如在 Postgress 中，如果创建一个带引号的标识符列 `"StreetAddress"`，当查找该列时，你必须使用引号。即使你这样写 `SELECT StreetAddress ...`（相同的大小写），它也不会工作。
 
 你必须使用这种形式 `SELECT "StreetAddress"`。
 
@@ -117,11 +117,11 @@ FROM Customer T0
 
 > 如果 SqlSettings.AutoQuotedIdentifiers 为 true，将自动添加方括号。
 
-> 如果需要使用多个数据库类型，请使用 SqlServer 特定的方括号(`[]`)。这些方括号在运行查询之前，将转换为方言特定的引号（双引号，引号等）。 
+> 如果需要使用多个数据库类型，请使用 SqlServer 特定的方括号(`[]`)。这些方括号在运行查询之前，将转换为方言特定的引号（双引号，引号等）。
 
 > 但是，如果只针对一种类型的数据库，你可能更喜欢使用特定于该数据库类型的引号。
 
-## TableName 特性 
+## TableName 特性
 
 [**命名空间**: *Serenity.Data.Mapping*] - [**程序集**: *Serenity.Data*]
 
@@ -168,13 +168,13 @@ FROM [My Customers] T0
 > 此外，更喜欢兼容数据库的方括号。
 
 
-## Expression 特性 
+## Expression 特性
 
 [**命名空间**: *Serenity.Data.Mapping*] - [**程序集**: *Serenity.Data*]
 
 此特性用于指定一个非基本（non-basic）字段的表达式，例如，一个实际上不存在于数据库中的字段。
 
-此类字段可以有几种类型。 
+此类字段可以有几种类型。
 
 其中一个例子是：含计算表达式 `(T0.[Firstname] + ' ' + T0.[Lastname])` 的 Fullname 字段。如：
 
@@ -214,7 +214,7 @@ Firstname 和 Lastname 是表字段（表的实际字段），但即使没有 Ex
 
  Fullname 表达式中使用 `T0` 别名引用字段。
 
-> 在没有该前缀的情况下也可能工作。但最好使用前缀。当你开始添加联接时，可能有多个字段具有相同名称而导致列不明确的错误。 
+> 在没有该前缀的情况下也可能工作。但最好使用前缀。当你开始添加联接时，可能有多个字段具有相同名称而导致列不明确的错误。
 
 
 ## ForeignKey 特性
@@ -245,7 +245,7 @@ Serenity 可以利用这样的元信息，即使它不会影响生成单独的�
 
 ## LeftJoin 特性
 
-当查询数据库时，由于关联关系，往往会使用许多联接。大多数联接是 LEFT 或 INNER 连接。 
+当查询数据库时，由于关联关系，往往会使用许多联接。大多数联接是 LEFT 或 INNER 连接。
 
 > 使用 Serenity 实体，通常会使用 LEFT JOIN。
 
@@ -338,7 +338,7 @@ LEFT JOIN Countries o ON (o.[Id] = c.[CountryId])
 
 > 我们将在 FluentSQL 章节看到如何生成这类查询。
 
-到目前为止，我们已经在属性中同时使用 LeftJoin 和 ForeignKey 特性。 
+到目前为止，我们已经在属性中同时使用 LeftJoin 和 ForeignKey 特性。
 
 也可以在实体类中附加 LeftJoin 特性。这在主实体没有相应字段的关联中非常有用。
 

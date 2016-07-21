@@ -8,7 +8,7 @@ SqlQuery 通过一个流式接口编写动态 SQL SELECT 查询。
 
 SqlQuery 比手写 SQL 有如下优势：
 
-* 使用 Visual Studio 的智能感知功能编写 SQL； 
+* 使用 Visual Studio 的智能感知功能编写 SQL；
 
 * 最小开销的流式接口；
 
@@ -27,7 +27,7 @@ SqlQuery 比手写 SQL 有如下优势：
 
 ## 如何使用这里的示例
 
-我推荐使用 LinqPad 执行这里给出的示例。 
+我推荐使用 LinqPad 执行这里给出的示例。
 
 你应该添加 *Serenity.Core*、 *Serenity.Data* 和 *Serenity.Data.Entity* 的 NuGet 程序包引用。
 
@@ -35,7 +35,7 @@ SqlQuery 比手写 SQL 有如下优势：
 
 请确保在查询属性（Query Properties）对话框中的导入额外命名空间（Additional Namespace Imports）中添加 *Serenity* 和 *Serenity.Data* 。
 
-## 一个简单的 Select 查询示例 
+## 一个简单的 Select 查询示例
 
 ```csharp
 void Main()
@@ -123,7 +123,7 @@ ORDER BY Age
 
 ## 方法链
 
-每行使用 `query.` 开头显得冗长且可读性比较差。几乎所有的 *SqlQuery* 方法是链式的，并把查询本身作为结果返回。 
+每行使用 `query.` 开头显得冗长且可读性比较差。几乎所有的 *SqlQuery* 方法是链式的，并把查询本身作为结果返回。
 
 我们可以像下面这样重写该查询：
 
@@ -232,9 +232,9 @@ FROM People
 public SqlQuery From(string table)
 ```
 
-SqlQuery.From 方法至少应被调用一次（通常一次）。 
+SqlQuery.From 方法至少应被调用一次（通常一次）。
 
-> 建议在查询中首先调用该方法。 
+> 建议在查询中首先调用该方法。
 
 当第二次调用该方法，表名称将以逗号间隔添加到 FROM 声明。因此，它将变为 CROSS JOIN：
 
@@ -352,7 +352,7 @@ FROM Person p, City c, Country o
 ORDER BY p.Age
 ```
 
-如上所示，结果是相同的，但代码有点长。那么使用别名有什么优点呢？ 
+如上所示，结果是相同的，但代码有点长。那么使用别名有什么优点呢？
 
 如果我们有一个含字段名称的常量列表：
 
@@ -458,11 +458,11 @@ public SqlQuery From(Alias alias)
 public SqlQuery OrderBy(string expression, bool desc = false)
 ```
 
-OrderBy 也可以在调用时含字段名称或表达式（如，Select）。 
+OrderBy 也可以在调用时含字段名称或表达式（如，Select）。
 
-如果你指定可选参数  *desc* 为 true，将在字段名称或表达式附加关键词 ` DESC`。
+如果你指定可选参数  *desc* 为 true，将在字段名称或表达式附加关键词 `DESC`。
 
-默认情况下，OrderBy 附加指定的表达式到 ORDER BY 语句末尾。但有时你可能想在起始处插入表达式/字段。 
+默认情况下，OrderBy 附加指定的表达式到 ORDER BY 语句末尾。但有时你可能想在起始处插入表达式/字段。
 
 例如，有一些预定义顺序的查询，但如果用户在网格中对列进行排序，列名称应被插入到索引为 0 的位置。
 
@@ -587,7 +587,7 @@ HAVING Count(*) > 5
 
 ```
 
-## 分页操作(SKIP / TAKE / TOP / LIMIT) 
+## 分页操作(SKIP / TAKE / TOP / LIMIT)
 
 ```csharp
 public SqlQuery Skip(int skipRows)
@@ -597,7 +597,7 @@ public SqlQuery Take(int rowCount)
 
 SqlQuery 有类似于 LINQ 的 Take 和 Skip 的分页方法。
 
-数据库类型决定映射的 SQL 关键字。 
+数据库类型决定映射的 SQL 关键字。
 
 > 由于 SqlServer 2012 之前的版本没有等效的 SKIP 方法，若要使用 SKIP 方法，你的查询应该至少有一个 ORDER BY 语句，因为需要使用 ROW_NUMBER() 。如果你使用 SqlServer 2012+ 的方言，就没有该要求。
 
@@ -630,7 +630,7 @@ ORDER BY PersonId OFFSET 100 ROWS FETCH NEXT 50 ROWS ONLY
 
 ## 支持数据库方言
 
-在我们的分页示例中，SqlQuery 使用与 Sql Server 2012 兼容的语法。 
+在我们的分页示例中，SqlQuery 使用与 Sql Server 2012 兼容的语法。
 
 通过 Dialect 方法，可以更改 SqlQuery 的目标服务器类型：
 

@@ -2,7 +2,7 @@
 
 [**命名空间**: *Serenity.Web*, **程序集**: *Serenity.Web*]
 
-如果要在 web 环境中使用默认设置，而不是手动组织服务定位器和其他配置，你只需在应用程序启动方法中调用 *CommonInitialization.Run()*。CommonInitialization 为一些 Serenity 抽象注册的默认实现。  
+如果要在 web 环境中使用默认设置，而不是手动组织服务定位器和其他配置，你只需在应用程序启动方法中调用 *CommonInitialization.Run()*。CommonInitialization 为一些 Serenity 抽象注册默认实现。
 
 ```cs
 CommonInitialization.Run();
@@ -40,5 +40,5 @@ public static class CommonInitialization
 
 > CommonInitialization.InitializeServiceLocator 和其他方法也可以单独地使用，而不需要调用 CommonInitialization.Run。
 
-*InitializeServiceLocator()* 注册一个 MunqContainer 实例作为 IDependencyResolver 的默认实现。 
+*InitializeServiceLocator()* 注册一个 MunqContainer 实例作为 IDependencyResolver 的默认实现。
 

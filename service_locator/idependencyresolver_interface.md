@@ -14,4 +14,4 @@ public interface IDependencyResolver
 }
 ```
 
-所有方法在功能上都等于静态依赖类相应的方法。
+所有方法在功能上都等效于静态依赖类相应的方法。

@@ -1,4 +1,4 @@
-# 列表页 
+# 列表页
 
 Serene 有 Northwind 数据库的列表和编辑页面，让我们来看看 Northwind 菜单下的 Products 页面。
 

@@ -1,4 +1,4 @@
-# ILocalTextRegistry 接口 
+# ILocalTextRegistry 接口
 
 [**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
@@ -12,7 +12,7 @@ public interface ILocalTextRegistry
 }
 ```
 
-## ILocalTextRegistry.TryGet 方法 
+## ILocalTextRegistry.TryGet 方法
 
 获得目标语言指定键的翻译。
 
@@ -22,9 +22,9 @@ public interface ILocalTextRegistry
 
 如果在语言层级（从请求语言往固定语言搜索）没有找到翻译，该方法返回 null。
 
-## ILocalTextRegistry.Add 方法 
+## ILocalTextRegistry.Add 方法
 
-向内部由本地化文本注册保存的本地化文本表中添加翻译。
+向内部由本地化文本注册保存的本地化文本表添加翻译。
 
 本地化文本表是内存表（字典），如：
 

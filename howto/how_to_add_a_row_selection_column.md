@@ -1,12 +1,12 @@
-# How To: Add a Row Selection Column
+# 如何添加一个行选择列？
 
-** This section is pending update for TypeScript **
+** 本节的 TypeScript 版本有待更新 **
 
-To add a column to select individual rows or all rows, GridRowSelectionMixin can be used.
+若要添加列以选择单行或所有行，可以使用 GridRowSelectionMixin。
 
-> GridRowSelectionMixin is available in Serenity 1.6.8+
+> GridRowSelectionMixin 在 Serenity 1.6.8+ 有效。
 
-Sample code:
+示例代码：
 
 ```
 public class MyGrid : EntityGrid<MyRow>

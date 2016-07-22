@@ -1,10 +1,10 @@
-# Handing Movie Navigation
+# 处理 Movie 的导航
 
-### Setting Navigation Item Title and Icon
+### 设置导航项标题和图标
 
-When Sergen generated code for Movie table, it also created a navigation item entry. In Serene, navigation items are created with special assembly attributes.
+当 Sergen 为影片（Movie）表生成代码时，它同时也创建了一个导航项目实体。在 Serene 中，导航项目使用专门的程序集特性创建。
 
-Open *MoviePage.cs* in the same folder, on top of it you'll find this line:
+在同一文件夹中打开 *MoviePage.cs*，在顶部你将找到下面这行代码：
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Movie", 
@@ -15,11 +15,11 @@ namespace MovieTutorial.MovieDB.Pages
     //...
 ```
 
-First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
+该特性的第一个参数是该导航项目的显示次序。因为我们在 Movie 菜单中只有一个导航项目，所以我们不需要次序。
 
-Second parameter is navigation title in "Section Title/Link Title" format. Section and navigation items are seperated with a slash (/).
+第二个参数是 “节（Section）标题/连接（Link）标题” 格式的导航标题。节和导航项目是以斜杠(/)分隔。
 
-Lets change it to *Movie Database/Movies*.
+让我们将其更改为 *Movie Database/Movies* 。
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
@@ -33,36 +33,36 @@ namespace MovieTutorial.MovieDB.Pages
 
 ![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
 
-We also changed navigation item icon to *icon-camcorder*. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from simple line icons set. 
+我们也将导航项的图标修改为 *icon-camcorder*。Serene 模板有两种字体图标的设置：
 
-To see list of simple line icons and their css classes, visit link below:
+更多 simple line icons 和其 css 类，请访问下面的连接：
 
 http://thesabbir.github.io/simple-line-icons/
 
-FontAwesome is available here:
+FontAwesome 可在这里查看：
 
 https://fortawesome.github.io/Font-Awesome/icons/
 
-> There is also a page in Serene under *Theme Samples / UI Elements / Icons* containing a list of these icon sets.
+> Serene 中 *Theme Samples / UI Elements / Icons* 下有一个包含这些图标集的列表页面。
 
-### Ordering Navigation Sections
+### 对导航节（Navigation Sections）排序
 
-As our *Movie Database* section is auto generated last, it is displayed at the bottom of navigation menu.
+由于我们的 *Movie Database* 节是最后自动生成的，所以它显示在导航菜单的底部。
 
-We'll move it before Northwind menu.
+我们将把它移到 Northwind 菜单前面。
 
-As we saw recently, Sergen created a navigation item in *MoviePage.cs*. If navigation items are scattered through pages like this, it would be hard to see the big picture (list of all navigation items) and order them easily.
+正如我们最近看到的，Sergen 在 *MoviePage.cs* 创建了一个导航项目。如果导航项目都分散到像这样的页面，将很难看到大图(所有导航项目的列表)并难以对它们排序。
 
-So we move it to our central location which is at *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*.
+因此我们把它移到一个集中的位置：*MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*。
 
-Just cut the below lines from *MoviePage.cs*:
+我们只须从 *MoviePage.cs* 剪切下面的行：
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
     typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
 ```
 
-Move it into *NavigationItems.cs* and modify it like this:
+把它移到 *NavigationItems.cs* ，并作如下修改：
 
 ```
 using Serenity.Navigation;
@@ -85,32 +85,32 @@ using MovieDB = MovieTutorial.MovieDB.Pages;
 // ...
 ```
 
-Here we also declared a navigation menu (Movie Database) with *film* icon. When you don't have an explicitly defined navigation menu, Serenity implicitly creates one, but in this case you can't order menu yourself, or set menu icon.
+我们在这里还声明导航菜单(Movie Database)和使用 *film* 图标。当你没有明确定义导航菜单，Serenity 将隐式创建一个菜单，但在这种情况下，你不能自己对菜单排序或设置菜单图标。
 
-We assigned it a display order of *2000* so this menu will display just after Dashboard link (1000) but before Northwind menu (8000).
+我们指定它的显示顺序为 *2000*，所以这个菜单将显示在 Dashboard(1000) 连接之后，但在 Northwind(8000) 菜单之前。
 
-We assigned our *Movies* link a display order value of *2100* but it doesn't matter right now, as we have only one navigation item under *Movie Database* menu yet.
+我们指定 *Movies* 连接的显示顺序为 *2100*，但现在也不重要了，因为我们 *Movie Database* 菜单下只有一个导航项目。
 
-> First level links and navigation menus are sorted according to their display order first, then second level links among their siblings.
+> 第一级的连接和导航菜单首先根据它们的显示顺序排序，然后第二级兄弟结点间的连接排序。
 
-Here is how it looks like after these changes:
+这是更改之后的样子：
 
 ![Movie Database Moved](img/mdb_movie_navmoved.png)
 
 
-### Troubleshooting Some Issues with Visual Studio
+### 使用 Visual Studio 解决一些问题
 
-In case you didn't notice already, Visual Studio doesn't let you modify code while your site is running. Also your site stops when you stop debugging, so you can't keep browser window open and refresh after rebuilding.
+你可能已经注意到，Visual Studio 在站点运行时，不允许你修改代码。当你停止调试时，网站也停止了，所以你不能在重新生成之后打开浏览器并刷新页面。
 
-To solve this issue, we need to disable *Edit And Continue* (have no idea why).
+为了解决这个问题，我们需要禁用 *编辑并继续（Edit And Continue）* (不知道为什么)。
 
-Right Click *MovieTutorial.Web* project, click *Properties*, in the Web tab, uncheck *Enable Edit And Continue* under *Debuggers*.
+在 *MovieTutorial.Web* 项目中右键，点击 *属性*，在 *Web 选项卡* 中，取消 *Enable Edit And Continue under Debuggers*。
 
-> Unfortunately, the solution above stops works in Visual Studio 2015 Update 2. Only workaround so far seems like starting without debugging, e.g. Ctrl+F5 instead of F5.
+> 不幸的是，在 visual studio 2015 Update 2 中该方法不能工作。唯一的变通方案是在不调试状态下执行，例如，使用 Ctrl+F5 替换 F5。
 
-Also, on your site, top blue progress bar (which is a Pace.js animation), keeps running all the time like it is still loading something. It is thanks to the *Browser Link* feature of Visual Studio. To disable it, locate its button in Visual Studio toolbar that looks like a refresh button (next to play icon with browser name like Chrome), click dropdown and uncheck *Enable Browser Link*.
+此外，在这种情况下，你的网站顶部的蓝色进度栏（即 Pace.js 动画）总是保持运行就像它仍在加载东西。这是由于 Visual Studio 的 *Browser Link* 功能。要禁用它，需要在 Visual Studio 工具栏找到看上去像刷新的按钮（在含 Chrome 名称的调试图标旁边），单击其下拉列表，并取消勾选 *Enable Browser Link*。
 
-It's also possible to disable it with a web.config setting 
+也可以在 web.config 设置中禁用它。
 
 ```xml
 <appsettings>
@@ -118,4 +118,4 @@ It's also possible to disable it with a web.config setting
 </appsettings>
 ```
 
-> Serene 1.5.4 and later has this in web.config by default, so you might not experience this issue
+> Serene 1.5.4 及后续版本都已经在 web.config 中默认配置了此设置，因此你将不会遇到这样的问题。

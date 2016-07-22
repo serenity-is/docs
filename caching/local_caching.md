@@ -1,8 +1,8 @@
-# Local Caching
+# 本地缓存
 
-Serenity provides some caching abstractions and utility functions to make it easier to work with local cache.
+Serenity 提供一些缓存抽象和实用功能让你更容易地使用本地缓存。
 
-The term *local* means that cached items are hold in local memory (thus there is no serialization involved).
+术语 *本地（local）* 的意思是指在本地内存中缓存项目（因此没有涉及到序列化）。
 
-When your application is deployed on a web farm, local caching might not be enough or sometimes suitable. We will talk about this scenario in [Distributed Caching](distributed_caching.md) section.
+当你的应用程序在网站群(web farm) 中部署时，本地缓存可能还不够或者有时合适。我们将在 [分布式缓存](distributed_caching.md) 章节中讨论该场景。
 

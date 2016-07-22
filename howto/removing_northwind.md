@@ -1,43 +1,43 @@
 
-# How To: Remove Northwind & Other Samples From Serene
+# 如何删除 Serene 的 Northwind 及其他示例？
 
-After you take Northwind as a sample, and develop your own project, you would want to remove Northwind module, and other sample artifacts from your project. 
+当你以 Northwind 为样本开发完自己的项目后，你会想从项目中移除 Northwind 和其他示例模块。
 
-Here is how to get rid of them.
+这里将介绍如何移除它们。
 
-We assume your solution name is *MyProject*, so you have *MyProject.Web* project in your solution.
+假设你的解决方案名称是 *MyProject* ，因此在你的解决方案中有 *MyProject.Web* 项目。
 
-Perform steps below in Visual Studio:
+在 Visual Studio 中执行如下步骤：
 
 
-### Removing Project Folders
+### 移除项目文件
 
-* Remove *MyProject.Web/Modules/AdminLTE* folder. This will remove all server side code related to theme samples.
+* 移除 *MyProject.Web/Modules/AdminLTE* 文件夹。这将删除所有主题示例相关的服务器端代码。
 
-* Remove *MyProject.Web/Modules/BasicSamples* folder. This will remove all server side code related to basic samples.
+* 移除 *MyProject.Web/Modules/BasicSamples* 文件夹。这将删除所有基本示例的服务器端代码。
 
-* Remove *MyProject.Web/Modules/Northwind* folder. This will remove all server side code related to Northwind.
+* 移除 *MyProject.Web/Modules/Northwind* 文件夹。这将删除所有 Northwind 相关的服务器端代码。
 
-### Removing Navigation Items
+### 移除导航项目
 
-* Open *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*, remove all lines with *Northwind*, *Basic Samples* and *Theme Samples* and remove these two lines:
+* 打开 *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*，删除所有含 *Northwind*、*Basic Samples* 和 *Theme Samples* 的行，并删除下面两行代码：
 
 ```
 using Northwind = MovieTutorial.Northwind.Pages;
 using Basic = MovieTutorial.BasicSamples.Pages;
 ```
 
-### Removing Migration Scripts
+### 移除迁移脚本
 
-Remove folder *MyProject.Web/Modules/Common/Migrations/NorthwindDB/* with all files under it.
+删除 *MyProject.Web/Modules/Common/Migrations/NorthwindDB/* 文件夹下的所有文件。
 
-Remove "Northwind" from following line in *MyProject.Web/App_Start/ SiteInitialization.Migrations.cs*:
+从 *MyProject.Web/App_Start/ SiteInitialization.Migrations.cs* 的下面行中删除 "Northwind" 。
 
 ```cs
 private static string[] databaseKeys = new[] { "Default", "Northwind" };
 ```
 
-Also remove *Northwind* connection string from *web.config*.
+同样，从 *web.config* 删除 *Northwind* 连接字符串。
 
 ```xml
 <add name="Northwind" connectionString="Data Source=(LocalDb)\v11.0; 
@@ -46,44 +46,44 @@ Also remove *Northwind* connection string from *web.config*.
     providerName="System.Data.SqlClient" />
 ```
 
-### Removing LESS Entries 
+### 移除 LESS 记录
 
-* Open *MyProject.Web/Content/site/site.less* file, remove following lines:
+* 打开 *MyProject.Web/Content/site/site.less* 文件，删除下面的代码：
     
 ```less
 @import "site.basicsamples.less";
 @import "site.northwind.less";
 ```
 
-* Remove *MyProject.Web/Content/site/site.basicsamples.less* file.
-* Remove *MyProject.Web/Content/site/site.northwind.less* file.
+* 删除 *MyProject.Web/Content/site/site.basicsamples.less* 文件。
+* 删除 *MyProject.Web/Content/site/site.northwind.less* 文件。
 
-### Removing Localization Texts
+### 移除本地化文本
 
-* Open *MyProject.Web/Modules/Texts.cs* and remove following lines:
+* 打开 *MyProject.Web/Modules/Texts.cs* 文件，并删除下面的代码：
 
 ```cs
             public static LocalText NorthwindPhone = "...";
             public static LocalText NorthwindPhoneMultiple = "...";
 ```
 
-* Remove folder *MyProject.Web/Scripts/site/texts/northwind* 
-* Remove folder *MyProject.Web/Scripts/site/texts/samples*
+* 删除文件夹 *MyProject.Web/Scripts/site/texts/northwind*。
+* 删除文件夹 *MyProject.Web/Scripts/site/texts/samples*。
 
-### Removing Northwind / Samples Generated Code
+### 移除 Northwind / Samples 生成的代码
 
-* Expand *MyProject.Web/Modules/Common/Imports/ ServerTypings/ServerTypings.tt*. Select files starting with *Northwind.*, *BasicSamples.* and delete them.
+* 展开 *MyProject.Web/Modules/Common/Imports/ ServerTypings/ServerTypings.tt*。删除以 *Northwind* 或 *BasicSamples* 开头的文件。
  
-### Removing Northwind Numbers From Dashboard 
+### 移除控制面板（Dashboard）中的 Northwind 数字
 
-Open *DashboardPage.cs*, remove these using lines:
+打开 *DashboardPage.cs*，删除 using 行：
 
 ```cs
 using Northwind;
 using Northwind.Entities;
 ```
 
-As Dashboard gets numbers from Northwind tables, you should modify *Index()* action like this:
+由于控制面板从 Northwind 表获取数据，你应该把 *Index()* 操作修改为：
 
 ```cs
 [Authorize, HttpGet, Route("~/")]
@@ -97,30 +97,30 @@ public ActionResult Index()
 }
 ```
 
-> You should replace this model with something specific to your site, and modify DashboardIndex accordingly.
+> 你应该替换该模块为你网站的具体内容，并相应地修改 DashboardIndex。
 
-Open *DashboardIndex.cshtml*, clear *href* attributes containing "Northwind" like:
+打开 *DashboardIndex.cshtml*，清除包含 "Northwind" 的 *href* 属性内容，如：
 
 ```html
 <a href="~/Northwind/Order?shippingState=1"></a>
 <a href=""></a>
 ```
 
-### Building Project and Running T4 (.tt) Templates
+### 生成项目并运行 T4 (.tt) 模板
 
-* Now rebuild your solution.
+* 现在重新生成你的解决方案；
 
-* Make sure it is built *successfully* before executing next step.
+* 在执行下一步骤前，请确保 *成功* 生成；
 
-* Click *Build* menu and click *Transform All Templates*.
+* 点击 *生成* 菜单，然后点击 *转换所有模板*；
 
-* Rebuild your solution again.
+* 再次重新生成解决方案。
 
-* Search for *Northwind*, *Basic Samples* and *Theme Samples* in all solution items. It should find no results.
+* 在整个解决方案中搜索 *Northwind*、*Basic Samples* 和 *Theme Samples*，应该找不到任何结果。
 
-* Run your project, now Northwind and Sample menus are gone.
+* 运行项目，现在已经没有 Northwind 和 Sample 菜单。
 
 
-### Removing Northwind Tables
+### 移除 Northwind 表
 
-Northwind tables are in a separate database, so you can just drop it.
+Northwind 的表都在一个单独的数据库中，因此，删除该数据库即可。

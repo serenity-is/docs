@@ -1,8 +1,8 @@
-# Filtering Users By TenantId
+# 使用 TenantId 筛选用户
 
-We first need to load and cache user tenant information in UserDefinition.
+我们首先需要在 UserDefinition 加载并缓存租户用户。
 
-Open *UserDefinition.cs* under *Multitenancy.Web/ Modules/ Administration/ User/ Authentication* and add a *TenantId* property.
+打开 *Multitenancy.Web/ Modules/ Administration/ User/ Authentication* 下的 *UserDefinition.cs*，并添加 *TenantId* 属性。
 
 ```cs
 namespace MultiTenancy.Administration
@@ -29,9 +29,9 @@ namespace MultiTenancy.Administration
 }
 ```
 
-This is the class that is returned when you ask for current user through *Authorization.UserDefinition*.
+当你通过 *Authorization.UserDefinition* 请求当前用户时，该类被返回。
 
-We also need to modify the code where this class is loaded. In the same folder, edit *UserRetrieveService.cs* and change *GetFirst* method like below:
+我们也需要在类被加载的地方修改代码。在同一文件夹编辑 *UserRetrieveService.cs*，并修改 *GetFirst*：
 
 ```cs
 private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
@@ -58,7 +58,7 @@ private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
 
 ```
 
-Now, it's time to filter listed users by *TenantId*. Open *UserRepository.cs*, locate *MyListHandler* class and modify it like this:
+现在，是时候使用 *TenantId* 过滤并列出用户。打开 *UserRepository.cs*，定位到 *MyListHandler* 类做如下修改：
 
 ```cs
 private class MyListHandler : ListRequestHandler<MyRow>
@@ -74,6 +74,6 @@ private class MyListHandler : ListRequestHandler<MyRow>
 }
 ```
 
-Here, we first get a reference to cached user definition of currently logged user.
+在这里，我们先获得当前登录用户的缓存用户定义。
 
-We check if he has tenant administration permission, which only *admin* will have in the end. If not, we filter listed records by *TenantId*.
+我们检查该用户是否有租户管理权限，该权限只被授予给 *admin* 。如果没有，我们使用 *TenantId* 过滤列表记录。

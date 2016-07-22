@@ -1,6 +1,6 @@
-# Defining Configuration Settings
+# 定义配置设置
 
-In Serenity platform, configuration settings are just simple classes like:
+在 Serenity 平台，配置设置是只是简单的类，如：
 
 ```cs
 [SettingScope("Application"), SettingKey("Logging")]
@@ -12,16 +12,16 @@ private class LogSettings
 }
 ```
 
-> If required, default settings can be set in the class constructor.
+> 如果需要，可以在类构造函数中设置默认设置。
 
-## SettingScope Attribute
+## SettingScope 特性
 
-If specified, this attribute determines the scope of settings.
+如果有指定该特性，由该特性确定作用域的设置。
 
-If not specified, default scope is *Application*.
+如果未指定该特性，默认作用域是 *应用程序（Application）*。
 
-## SettingKey Attribute
+## SettingKey 特性
 
-If specified, this attribute determines a key for settings (e.g. appSettings key for web.config) class.
+如果有指定该特性，此特性确定设置类的键（如 web.config 的 appSettings 键）。
 
-If not specified, class name is used as the key.
+如果未指定该特性，将使用类名作为键（key）。

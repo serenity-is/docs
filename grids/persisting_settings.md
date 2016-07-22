@@ -1,26 +1,26 @@
-# Persisting Settings
+# 持久化设置
 
-Serenity 2.1.5 introduced ability to persist grid settings including these details:
+Serenity 2.1.5 引入保存如下信息的网格列表设置：
 
-- Visible Columns and Display Order
-- Column Widths
-- Sorted Columns
-- Advanced Filters (ones created with Edit Filter link on bottom right)
-- Quick Filters (as of writing, not yet available)
-- State of Include Deleted Toggle
+- 可见列和显示顺序
+- 列宽
+- 排序的列
+- 高级过滤器（由右下角的编辑过滤器链接创建）
+- 快速过滤器（撰写本文档时，尚未提供该功能）
+- 包含已删除的状态切换
 
-By default, grids doesn't automatically persist anything. 
+默认情况下，网格列表不会自动持久化任何东西。
 
-Thus, if you hide some columns and navigate away from Orders page, when you come back, you'll see that those hidden columns became visible again.
+因此，如果你隐藏某些列并离开订单页面，当你再次返回该页面时，你就会看到那些隐藏的列再次成为可见列。
 
-You need to turn on persistance for all grids, or for individual ones that you want them to remember their settings.
+你需要开启所有网格列表的持久化设置，或设置单独记住它们的设置。
 
 
-### Turning On Persistance by Default
+### 默认情况下开启持久性
 
-DataGrid has a static configuration parameter with name *DefaultPersistanceStorage*. This parameter controls where grids save their settings automatically by default. It is initially null.
+DataGrid 有名为 *DefaultPersistanceStorage* 的静态配置参数。此参数控制默认情况下的网格列表设置自动保存的位置。它最初为空。
 
-In ScriptInitialization.ts, you might turn on persistance for all grids by default like below:
+在 ScriptInitialization.ts，你可能像下面这样默认开启所有网格列表的持久化：
 
 ```ts
 namespace Serene.ScriptInitialization {
@@ -31,23 +31,23 @@ namespace Serene.ScriptInitialization {
 }
 ```
 
-This saves settings to browser session storage, which is a key/value dictionary that preserves data while any browser window stays open. When user closes all browser windows, all settings will be lost.
+这将设置保存到浏览器的会话(session)。当任何浏览器窗口保持打开状态时，将数据保存到一个键/值字典。当用户关闭所有浏览器窗口时，所有的设置都会丢失。
 
-Another option is to use browser local storage. Which preserves settings between browser restarts.
+另一种选择是使用浏览器本地存储。在浏览器重新启动之间将保留设置。
 
 ```ts
 Serenity.DataGrid.defaultPersistanceStorage = window.localStorage;
 ```
 
-Using any of the two options, grids will start to remember their settings, between page reloads.
+使用这两个选项的任意一个，在重新加载页面之间，网格列表会开始记住它们的设置。
 
-### Handling a Browser that is Shared by Multiple Users
+### 处理由多个用户共同使用的浏览器
 
-Both sessionStorage and localStorage is browser scoped, so if a browser is shared by multiple users, they'll have same set of settings. 
+SessionStorage 和 localStorage 是浏览器范围，因此，如果浏览器由多个用户共同使用，他们会得到同一组设置。 
 
-If one user changes some settings, and logs out, and other one logs in, second user will start with settings of the first user (unless you clear localStorage on signout)
+如果一个用户更改某些设置并注销，而后另一个用户登录，第二个用户将以第一个用户的设置开始使用系统（除非你在注销时清除 localStorage ）。
 
-If this is a problem for your application, you may try writing a custom provider:
+如果你认为这是应用程序的一个问题，可以尝试编写自定义提供程序：
 
 ```ts
 namespace Serene {
@@ -68,12 +68,12 @@ namespace Serene {
 Serenity.DataGrid.defaultPersistanceStorage = new UserLocalStorage();
 ```
 
-> Please note that this doesn't provide any security. It just lets users have separate settings.
+> 请注意，上述代码不能提供任何的安全保障。它只是让用户有单独的设置。
 
 
-### Setting Persistance Storage Per Grid Type
+### 持久化存储每个网格列表类型的设置
 
-To turn on persistance, or change target storage for a particular grid, override getPersistanceStorage method:
+要开启持久化，或更改某一特定网格列表的存储目标，可重写 getPersistanceStorage 方法：
 
 ```ts
 namespace Serene.Northwind {
@@ -89,12 +89,12 @@ namespace Serene.Northwind {
 
 ```
 
-You may also turn off persistance for a grid class by returning *null* from this method.
+你也以在该方法中通过返回 *null* 关闭网格列表类的持久化。
 
 
-### Determining Which Setting Types Are Saved
+### 确定保存的设置类型
 
-By default, all settings noted at start are saved, like visible columns, widths, filters etc. You may choose to not persist / restore specific settings. This is controlled by *getPersistanceFlags* method:
+默认情况下，在开始时注意到的所有设置（如可见列、宽度、过滤器等）都被保存。你也可以选择不持久化/还原特定的设置。这些都可在 *getPersistanceFlags* 方法控制：
 
 ```ts
 namespace Serene.Northwind {
@@ -111,7 +111,7 @@ namespace Serene.Northwind {
 }
 ```
 
-Here is the set of complete flags: 
+这里是一组完整的标识： 
 
 ```ts
 interface GridPersistanceFlags {
@@ -124,23 +124,23 @@ interface GridPersistanceFlags {
 }
 ```
 
-### When Settings Are Saved / Restored
+### 何时保存/还原设置
 
-Settings are automatically saved when you change something with a grid like:
+当你改变网格列表的如下设置时，会自动保存设置：
 
-* Choosing visible columns with Column Picker dialog
-* Resizing a column manually
-* Editing advanced filter
-* Dragging a column, changing position
-* Changing sorted columns
+* 使用列选取器对话框选择可见的列
+* 手动调整列的大小
+* 编辑高级过滤器
+* 拖动列、改变列位置
+* 更改排序的列
 
-Settings are restored on first page load, just after grid creation.
+只在创建网格列表后，在加载第一页时还原设置。
 
 
 
-### Persisting Settings to Database (User Preferences Table)
+### 持久化设置到数据库（UserPreferences 表）
 
-Serene 2.1.5 comes with a *UserPreferences* table that you may use as a persistance storage. To use this storage, you just need to set it as storage similar to other storage types.
+Serene 2.1.5 带有 *UserPreferences* 表，可以作为持久化存储设置。若要使用该表存储设置，你只需要将网格列表的 *defaultPersistanceStorage* 设置为存储类型（类似于其他存储类型）。
 
 ```ts
 /// <reference path="../Common/UserPreference/UserPreferenceStorage.ts" />
@@ -148,9 +148,9 @@ Serene 2.1.5 comes with a *UserPreferences* table that you may use as a persista
 Serenity.DataGrid.defaultPersistanceStorage = new Common.UserPreferenceStorage();
 ```
 
-> Don't forget to add reference statement, or you'll have runtime errors, as TypeScript has problems with ordering otherwise.
+> 别忘了添加引用语句，否则你会有运行时错误，因为 TypeScript 有加载顺序问题。
 
-OR 
+或者： 
 
 ```ts
 namespace Serene.Northwind {
@@ -166,13 +166,13 @@ namespace Serene.Northwind {
 ```
 
 
-### Manually Saving / Restoring Settings
+### 手动保存/还原设置
 
-If you need to save / restore settings manually, you may use methods below:
+如果需要手动保存/还原设置，可以使用以下方法：
 
 ```ts
 protected getCurrentSettings(flags?: GridPersistanceFlags): PersistedGridSettings;
 protected restoreSettings(settings?: PersistedGridSettings, flags?: GridPersistanceFlags): void;
 ```
 
-These are protected methods of DataGrid, so can only be called from subclasses.
+这些都是 DataGrid 的受保护方法，所以只能从子类调用。

@@ -1,8 +1,8 @@
-# IUserDefinition Interface
+# IUserDefinition 接口
 
-[**namespace**: *Serenity*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
-Most applications store some common information about a user, like ID, display name (nick / fullname), email address etc. Serenity provides a basic interface to access this information in an application independent manner.
+很多应用程序存储用户常见的信息，如 ID、显示名称（别名/全名）、邮箱等。Serenity 提供基础接口以独立应用程序方式访问这些信息。
 
 ```cs
 public interface IUserDefinition
@@ -15,12 +15,12 @@ public interface IUserDefinition
 }
 ```
 
-Your application should provide a class that implements this interface, but not all of this information is required by Serenity itself. Id, Username and IsActive properties are minimum required.
+你的应用程序应该实现该接口，但并不是所有这些信息都是 Serenity 自身必须的。只有 Id、Username 及 IsActive 属性是必需的。
 
-`Id` can be an integer, string or GUID that uniquely identifies a user.
+`Id` 可以是整型、字符串或者 GUID ，用以唯一标识用户。
 
-`Username` should be a unique username, but you can use e-mail addresses as username too.
+`Username` 应该是唯一的用户名，但是你也可以使用邮箱地址作为用户名。
 
-`IsActive` should return 1 for active users, -1 for deleted users (if you don't delete users from database), and 0 for temporarily disabled (account locked) users.
+`IsActive` 活跃状态的用户返回 1；已删除(如果你没有在数据库中删除用户)的用户返回 -1；暂时禁用（锁住账号）的用户返回 0。
 
-`DisplayName` and `Email` are optional and currently not used by Serenity itself, though your application may require them.
+`DisplayName` 和 `Email` 是可选的，且当前并没有被 Serenity 使用，可能你的应用程序需要它们。

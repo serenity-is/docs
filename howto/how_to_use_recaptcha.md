@@ -1,16 +1,16 @@
-# How To: Use Recaptcha
+# 如何使用验证码？
 
-To use Recaptcha in login form, follow these steps:
+要在登录窗体中使用验证码，请按照这些步骤操作：
 
-> Requires Serenity 1.8.5+
+> 要求 Serenity 1.8.5+
 
-> You might also use it for another form, but this is just a sample for login.
+> 你可能在其他窗体也使用验证码功能，但这里以登录为例。
 
-First, you need to register a new site for Recaptcha at:
+首先，你需要到 Recaptcha 注册一个新网站：
 
 > https://www.google.com/recaptcha/admin
 
-Once you have your site key, and secret key, enter them in web.config/appSettings section:
+一旦你有了站点密钥（site key）和 安全密钥（secret key），就可在 web.config/appSettings 中配置：
 
 ```xml
 <add key="Recaptcha" value="{ 
@@ -18,9 +18,9 @@ Once you have your site key, and secret key, enter them in web.config/appSetting
     SecretKey: '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe' }" />
 ```
 
-> The keys listed above are only for testing purposes. Never use them in production.
+> 上面列出的密钥仅供测试，请不要将其应用到实际产品。
 
-Edit LoginForm.cs to add a Recaptcha property:
+编辑 LoginForm.cs，并添加 Recaptcha 属性：
 
 ```cs
 public class LoginForm
@@ -34,7 +34,7 @@ public class LoginForm
 }
 ```
 
-Edit LoginRequest.cs to add a Recaptcha property:
+编辑 LoginRequest.cs，并添加 Recaptcha 属性：
 
 ```
 public class LoginRequest : ServiceRequest
@@ -45,7 +45,7 @@ public class LoginRequest : ServiceRequest
 }
 ```
 
-Edit Login method under AccountPage.cs to validate the captcha server side:
+编辑 AccountPage.cs 的 Login 方法，在此对验证码进行验证：
 
 
 ```cs

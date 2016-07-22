@@ -1,6 +1,6 @@
-# Enumeration Texts
+# 枚举文本
 
-Display text for enumeration values can be specified with Description attribute.
+可以用 Description 特性显示指定枚举值的文本。
 
 ```
 namespace MyApplication
@@ -15,16 +15,16 @@ namespace MyApplication
 }
 ```
 
-This enumeration and its Description attributes defines following local text keys and translations:
+此枚举和它的 Description 特性定义以下的本地化文本键和翻译：
 
 Key                              |LanguageID|Text (Translation)
 ---------------------------------|----------|-------------------------------
 Enums.MyApplication.Sample.Value1|          |First Value
 Enums.MyApplication.Sample.Value2|          |Second Value
 
-> All texts are defined for invariant language ID by default.
+> 默认情况下，所有的文本都作为固定语言 ID 的翻译。
 
-You can use these keys to access translated descriptions for enumeration values, or use extension method GetText() defined for enumeration types (import namespace Serenity to make this extension method available).
+可以使用这些键访问枚举值的翻译描述，或者使用枚举类型（需引用 Serenity 命名空间） 定义的扩展方法 GetText()。
 
 ```cs
 using Serenity;
@@ -36,9 +36,9 @@ Console.WriteLine(MyApplication.Sample.Value1.GetText());
 > First Value
 ```
 
-## EnumKey Attribute
+## EnumKey 特性
 
-Enumeration translations use full name of enumeration type as prefix to generate local text keys. This prefix can be overriden with EnumKeyAttribute:
+枚举翻译使用枚举类型的全名作为生成本地文本键的前缀。该前缀也以被 EnumKeyAttribute 重载：
 
 ```
 namespace MyApplication
@@ -54,7 +54,7 @@ namespace MyApplication
 }
 ```
 
-Now defined keys and translations are:
+现在定义的键和翻译是：
 
 Key                   |LanguageID|Text (Translation)
 ----------------------|----------|-------------------------------
@@ -62,11 +62,11 @@ Enums.Something.Value1|          |First Value
 Enums.Something.Value2|          |Second Value
 
 
-## EnumLocalTextRegistration Class
+## EnumLocalTextRegistration 类
 
-[**namespace**: *Serenity.Localization*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
-For enumeration local text definitions to be registered, you need to call *EnumLocalTextRegistration.Initialize()* method in your application start:
+若要枚举注册的本地化文本定义，你需要在应用程序启动时调用 *EnumLocalTextRegistration.Initialize()* 方法：
 
 ```cs
 void Application_Start()
@@ -75,8 +75,8 @@ void Application_Start()
 }
 ```
 
-It gets list of assemblies to search for enumeration types. You can pass list of assemblies manually or use *ExtensibilityHelper.SelfAssemblies* which contains all assemblies that reference a Serenity assembly.
+它获取程序集列表以检索枚举类型。你可以手工传递程序集列表或使用 *ExtensibilityHelper.SelfAssemblies* （包含 Serenity 程序集的所有引用）。
 
-> CommonInitialization.Run and CommonInitialization.InitializeLocalTexts methods call it by default.
+> 默认情况下， CommonInitialization.Run 和 CommonInitialization.InitializeLocalTexts 方法会调用它。
 
 

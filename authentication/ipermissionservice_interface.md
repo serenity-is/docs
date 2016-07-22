@@ -1,12 +1,12 @@
-# IPermissionService Interface
+# IPermissionService 接口
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-A permission is some grant to do some action (entering a page, calling a certain service). In Serenity permissions are some string keys that are assigned to individual users (similar to ASP.NET roles).
+权限（permission）是授权做一些操作（访问页面、调用指定服务）。在 Serenity 中，权限是一些分配给单个用户的字符串 keys（类似于 ASP.NET 角色）。
 
-For example, if we say some user has `Administration` permission, this user can see navigation links that requires this permission or call services that require the same.
+例如，如果一些用户有 `Administration` 权限，该用户可以看到该权限所能访问的导航连接或调用该权限所允许的服务。
 
-> You can also use composite permission keys like `ApplicationID:PermissionID` (for example `Orders:Create`), but Serenity doesn't care about application ID, nor permission ID, it only uses the composite permission key as a whole.
+> 你也可以使用像 `ApplicationID:PermissionID` （例如：`Orders:Create`）的复合访问许可键（permission keys），但是 Serenity 并不关心 ApplicationID 和 PermissionID，它只使用作为一个整体的复合访问许可键。
 
 
 ```cs
@@ -16,7 +16,7 @@ public interface IPermissionService
 }
 ```
 
-You might have a table like...
+你可能有一个表……
 
 ```sql
 CREATE TABLE UserPermissions (
@@ -25,9 +25,9 @@ CREATE TABLE UserPermissions (
 }
 ```
 
-and query on this table to implement this interface.
+然后查询该表以实现这个接口。
 
-A simpler sample for applications where there is a `admin` user who is the only one that has the permission `Administration` could be:
+对于应用程序的简单示例，有一个唯一有 `Administration` 权限的 `admin` 用户：
 
 ```cs
 using Serenity;

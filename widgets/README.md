@@ -1,15 +1,15 @@
-# Widgets
+# 部件(Widgets)
 
-Serenity Script UI layer's component classes (control) are based on a system that is similar to *jQuery UI*'s *Widget Factory*, but redesigned for C#.
+Serenity 脚本 UI 层的组件类（控制）基于类似于 *jQuery UI 的部件工厂* 系统，但使用 C# 重新设计。
 
-> You can find more information about jQuery UI widget system here:
+> 你可以在这里找到有关 jQuery UI 部件系统的更多详细信息：
 >
 > http://learn.jquery.com/jquery-ui/widget-factory/
 >
 > http://msdn.microsoft.com/en-us/library/hh404085.aspx
 
-Widget, is an object that is attached to an HTML element and extends it with some behaviour.
+部件(Widget)，是附加到 HTML 元素并扩展其行为的对象。
 
-For example, IntegerEditor widget, when attached to an INPUT element, makes it easier to enter numbers in the input and validates that the entered number is a correct integer.
+例如，当 IntegerEditor 部件附加到 INPUT 元素时，IntegerEditor 部件让该元素输入数字更加容易并验证输入的数字是否是正确的整数。
 
-Similarly, a Toolbar widget, when attached to a DIV element, turns it into a toolbar with tool buttons (in this case, DIV acts as a placeholder).
+类似地，当一个工具栏部件附加到 DIV 元素时，该 DIV 元素便变成了一个带有工具按钮的工具栏（在本例中，DIV 仅作为占位符）。

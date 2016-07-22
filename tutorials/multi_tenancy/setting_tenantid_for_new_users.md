@@ -1,14 +1,14 @@
-# Setting TenantId For New Users
+# 为新用户设置 TenantId
 
-While logged in with Tenant2, try to create a new user, *User2*.
+当我们使用 Tenant2 登录系统，并尝试创建一个新用户 *User2*。
 
-You won't get any error but by suprise, you won't see the newly created user in list. What happened to User2?
+你不会收到任何错误，但令人惊讶的是，你不能在列表中看到新创建的用户， User2 发生了什么？
 
-As we set default value for *TenantId* to *1* in migrations, now *User2* has *1* as *TenantId* and is a member of *Primary Tenant*.
+由于我们在迁移类中，把 *TenantId* 的值设置为 *1*，现在 *User2* 的 *TenantId* 也是 *1*，并且它也是 *主租客*。
 
-We have to set new users *TenantId* to same value with logged in user.
+我们需要在已登录的用户中把新用户的 *TenantId* 设置为同样的值。
 
-Modify *SetInternalFields* method of *UserRepository* like below:
+修改 *UserRepository* 的 *SetInternalFields* 方法：
 
 ```cs
 protected override void SetInternalFields()
@@ -36,7 +36,7 @@ protected override void SetInternalFields()
 }
 ```
 
-Here, we set *TenantId* to the same value with current user, unless he has tenant administration permission.
+除非有租户管理权限，否则我们在这里把该 *TenantId* 设置为与当前用户相同的值。
 
-Now try to create a new user *User2b* and this time you'll see him on the list.
+现在尝试创建一个新用户 *User2b*，这次你将在列表中看到新建的用户。
 

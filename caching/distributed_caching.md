@@ -1,24 +1,24 @@
-# Distributed Caching
+# 分布式缓存
 
-Web applications might require to serve hundreds, thousands or even more users simultaneously. If you didn't take required measures, under such a load, your site might crash or become unresponsive.
+Web 应用程序可能需要为成百上千甚至更多的用户同时提供服务。如果你没有采取必要的措施，在这种负载下，你的网站可能会崩溃或变得没有响应。
 
-Let's say you are showing the last 10 news in your home page and in a minute, in average of a thousand users are visiting this page. For every page view you might be querying your database to display this information:
+假设在主页显示最后 10 条新闻，并且平均每分钟有上千名用户访问此页面。你可能为每个用户通过查询数据库来显示页面视图信息：
 
 ```sql
 SELECT TOP 10 Title, NewsDate, Subject, Body FROM News ORDER BY NewsDate DESC
 ```
 
-Even if we think that our home page contains only this information, a site, that gets 10000 visits a minute would run 150 SQL queries per second.
+即使我们认为主页只包含这些信息，但网站每分钟有 10000 个访客，每秒运行 150 次 SQL 查询。
 
-These queries, as their result doesn't differ from user to user (always the last 10 news), might be cached in SQL server side automatically.
+如果这些查询的结果在用户间没有太大的不同（总是最后 10 条新闻），可以自动缓存在 SQL 服务器端。
 
-But query results consumes some valuable network bandwidth while being transferred from SQL server to your WEB server. As this transfer takes some time (data size / bandwidth) and your connection is kept open during this time, even if your SQL server responded instantly, getting the results wouldn't be so fast. The time to transfer might vary with the size of the news content.
+但查询结果从 SQL 服务器传输到 WEB 服务器会消耗一些宝贵的网络带宽。由于数据传输需要一些时间（数据大小/带宽），并且在此期间内保持连接处于打开状态，即使 SQL 服务器响应及时，得到的结果也不会太快。传输的时间与新闻内容的大小可能不同。
 
-Also as SQL connections which can be kept open simultaneously has a upper limit (connection pool limit) and when you reach that number, the connections start to wait in the queue and block each other.
+ 况且 SQL 连接保持开启的数目也有上限（连接池限制），当达到这一上限，连接便开始在队列中等待并相互阻塞。
 
-By taking into account that news don't change every second, we could cache them in our WEB server memory for 5 minutes.
+考虑到新闻不是每一秒都在改变，我们可以把它们缓存在 WEB 服务器内存 5 分钟。
 
-Thus as soon as we transfer news list from SQL database, store them in local cache. For the next 5 minutes, for every user that visits the home page, news list is read from local cache instantly, without even hitting SQL:
+因此，从 SQL 数据库传输得到新闻列表就立即将它们存储在本地缓存中。在接下来的 5 分钟内，每个用户访问的主页，其新闻列表都是从本地缓存中即时获取的，甚至不用使用 SQL：
 
 ```cs
 public List<News> GetNews()
@@ -43,12 +43,12 @@ public List<News> GetNews()
 }
 ```
 
-This takes us from 150 queries per second down to 1/300 queries per second (a query per 300 sec).
+这使我们从每秒 150 次查询下降到每秒 1/300 次查询（每 300 秒查询一次）。
 
-> Also these news items should be converted to HTML for every visitor. By moving one step further, we could also cache the HTML converted state of the news.
+> 此外，这些新闻项目应为每一位访客转换为 HTML。更进一步，我们还可以缓存转换为 HTML 状态的新闻。
 
-All these cached information is stored in WEB server memory which is the fastest location to access them.
+所有这些缓存信息都存储在 WEB 服务器内存中，内存是访问这些信息的最快位置。
 
-> Note that caching something doesn't always mean that your application will work faster. How effectively you use cache is more important than caching alone. It is even possible to slow down your application with caching, if not used properly.
+> 请注意，缓存信息并不总是意味着你的应用程序将工作得更快。如何有效地使用缓存比单独缓存更重要。如果没有正确使用缓存，它甚至有可能拖慢你的应用程序。
 
 

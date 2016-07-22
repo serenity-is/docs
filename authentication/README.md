@@ -1,6 +1,6 @@
-# Authentication &amp; Authorization
+# 认证 &amp; 授权
 
-Serenity uses some abstractions to work with your application's own user authentication and authorization mechanism.
+Serenity 使用一些抽象（abstractions）来与你的应用程序自身的用户身份验证和授权机制一起工作。
 
 ```cs
 Serenity.Abstractions.IAuthenticationService
@@ -9,9 +9,9 @@ Serenity.Abstractions.IPermissionService
 Serenity.Abstractions.IUserRetrieveService
 ```
 
-As Serenity doesn't have default implementation for these abstractions, you should provide some implementation for them, using dependency registration system.
+由于 Serenity 没有为这三个抽象提供默认实现，你应该使用依赖注册系统为它们提供一些实现。
 
-For example, Serenity Basic Application sample registers them in its SiteInitialization.ApplicationStart method like below:
+例如，Serenity 基本应用程序示例在其 SiteInitialization.ApplicationStart 方法注册权限，如：
 
 ```cs
 var registrar = Dependency.Resolve<IDependencyRegistrar>();
@@ -29,4 +29,4 @@ registrar.RegisterInstance<IUserRetrieveService>(
 	new Administration.UserRetrieveService());
 ```
 
-You might want to have a look at those sample implementations before writing your own.
+在编写你自己的权限之前，你可能需要看看这些示例的实现。

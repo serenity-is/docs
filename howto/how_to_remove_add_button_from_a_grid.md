@@ -1,10 +1,10 @@
-# How To: Remove Add Button from a Grid
+# 如何删除网格中的新增（add）按钮？
 
-> ** This section was written for Saltaralle. For TypeScript version, see Basic Samples => Grids => Removing Add Button page in Serene**
+** 本节是为 Saltaralle 编写。若是 TypeScript 版本，请参阅 Serene 的 Basic Samples => Grids => Removing Add Button 页面 **
 
-You can override *getButtons()* method in *MyGrid.ts*.
+你可以在 *MyGrid.ts* 重写 *getButtons()* 方法。
 
-This removes all buttons (including *refresh*):
+下面的代码会删除所有按钮（包括 *刷新*）：
 
 ```cs
 public class MyGrid : EntityGrid<MyRow>
@@ -18,7 +18,7 @@ public class MyGrid : EntityGrid<MyRow>
 }
 ```
 
-To remove add button with its index (0 - first button):
+使用索引（0 - 第一个按钮）删除新增（add）按钮：
 
 ```cs
 public class MyGrid : EntityGrid<MyRow>
@@ -34,9 +34,9 @@ public class MyGrid : EntityGrid<MyRow>
 }
 ```
 
-> Working with hard coded indexes is a bad code smell
+> 使用硬编码索引有一种糟糕代码的气味
 
-Or return a new list with your button list:
+或者，返回一个新的按钮列表：
 
 ```cs
 public class MyGrid : EntityGrid<MyRow>

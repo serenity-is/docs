@@ -1,12 +1,12 @@
-# Used Tools and Libraries
+# 使用的工具和库
 
-Serenity platform makes use of some valuable open source tools and libraries that are listed below (in alphabetic order)
+Serenity 平台使用了一些很有用的开源工具和库，列出如下（按字母顺序排列）：
 
->This list might seem a bit long, but not all of them are direct dependencies for a Serenity Application.
+>此列表可能看起来有点长，但一个 Serenity 的应用程序并没有依赖所有的库。
 
->Some of them are only used during development of Serenity platform itself, while some are dependencies for optional features.
+>其中一些库只在 Serenity 平台自身的发展过程中才用到，而有一些是可选功能的依赖项。
 
->We tried to reuse open source libraries, where there is a quality one available to avoid reinventing the wheel.
+>我们尽量使用开源库，因为它们的优质可以避免重新造轮子。
 
 ### Autonumeric (https://github.com/BobKnothe/autoNumeric)
 

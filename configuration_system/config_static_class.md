@@ -1,8 +1,8 @@
-# Config Static Class
+# 静态 Config 类
 
-[**namespace**: *Serenity*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
-This is the central location to access your configuration settings. It contains shortcut methods to registered IConfigurationRepository provider.
+这是访问配置设置的主要位置。它包含注册 IConfigurationRepository 提供者的快捷方法。
 
 ```cs
 public static class Config
@@ -14,15 +14,15 @@ public static class Config
 }
 ```
 
-## Config.Get Method
+## Config.Get 方法 Config.Get Method
 
-Used to read configuration settings for specified type.
+用于读取指定类型的配置设置。
 
-If no provider is registered for setting type's scope, a *KeyNotFoundException* is raised.
+如果没有为设置类型的作用域注册提供者，将抛出 KeyNotFoundException 异常。
 
-If setting is not found, providers usually return a default instance.
+如果没有找到设置，提供者通常返回一个默认实例。
 
-Prefer generic overload to avoid having to cast the returned object.
+我更喜欢使用泛型重载，因为可以避免强制转换返回对象。
 
 ```cs
 if (Config.Get<LogSettings>().LoggingLevel != LogginLevel.Off)
@@ -31,11 +31,11 @@ if (Config.Get<LogSettings>().LoggingLevel != LogginLevel.Off)
 }
 ```
 
-## Config.TryGet Method
+## Config.TryGet 方法
 
-Used to read configuration settings for specified type.
+用于读取指定类型的配置设置。
 
-Functionally equivalent to Get, but while it throws an exception if no configuration provider is registered for the setting scope, TryGet returns *null*.
+在功能上等效于 Get，但是如果没有为设置作用域注册配置提供者，Get 将引发异常，TryGet 则返回 *null*。
 
 ```cs
 if ((Config.TryGet<LogSettings>() ?? new LogSettings()).LoggingLevel != LogginLevel.Off)
@@ -44,6 +44,6 @@ if ((Config.TryGet<LogSettings>() ?? new LogSettings()).LoggingLevel != LogginLe
 }
 ```
 
-Prefer this method over Get only to avoid exceptions when configuration system is not initialized yet.
+我更喜欢使用该方法，而不是 Get，因为当配置系统还没有被初始化时，该方法可以避免异常。
 
-> Get works on safe-side, and is the recommended method to use.
+> 从安全角度看，更推荐使用 Get 方法。

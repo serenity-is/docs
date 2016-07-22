@@ -1,12 +1,12 @@
-# Making Roles Multi-Tenant
+# 多租户角色
 
-So far, we have made users page work in multi-tenant style. Seems like we did too many changes to make it work. But remember that we are trying to turn a system that is not designed to be multi-tenant into such one.
+目前为止，我们已经让用户页面在多租户风格下工作。为使它工作，我们看起来并没有做太多的变化。但请记住，我们正在对一个原来不是多租户的系统作修改。
 
-Let's apply similar principles to the Roles table.
+让我们在 Roles 表应用类似的原则。
 
-Again, a user in one tenant shouldn't see or modify roles in other tenants and work in isolation.
+再一次，一个租户的用户在不能查看或修改其他租户的角色，每个租户的用户是相互独立工作的。
 
-We start by adding *TenantId* property to *RoleRow.cs*:
+我们先在 *RoleRow.cs* 添加 *TenantId* 属性：
 
 ```cs
 namespace MultiTenancy.Administration.Entities
@@ -33,7 +33,7 @@ namespace MultiTenancy.Administration.Entities
 }
 ```
 
-Then we'll do several changes in *RoleRepository.cs*:
+然后，我们在 *RoleRepository.cs* 做几处修改：
 
 ```cs
 private class MySaveHandler : SaveRequestHandler<MyRow>

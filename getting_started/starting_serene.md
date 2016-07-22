@@ -1,36 +1,36 @@
-# Starting Serene
+# 开始使用 Serene
 
-After your first project is created in Visual Studio using Serene template, you will see a solution like this:
+在 Visual Studio 中使用 Serene 模板创建第一个项目后，你将看到这样的解决方案：
 
 ![Initial Solution Content](img/initial_solution_content.jpg)
 
-Your solution contains Serene1.Web project, which is an ASP.NET MVC application. 
+你的解决方案包含一个名为 Serene1.Web 的 ASP.NET MVC 应用程序。
 
-It includes server side code written in C# (.cs) and client side code that is written in TypeScript (.ts).
+Serene1.Web 项目包含 C# (.cs) 编写的服务端代码和 TypeScript (.ts) 编写的客户端代码。
 
-Serene.Web has references to Serenity NuGet packages, so you can update it using package manager console anytime necessary.
+Serene.Web 拥有 Serenity 的 NuGet 程序包引用，这样你就可以根据需要使用包管理控制台随时更新它。
 
-> The screenshot above, belongs to a version < 2.1, which had a Serene1.Script project that was using *Saltarelle Compiler* for client side code. Since 2.1 we switched to TypeScript, and client side code (.ts files) also resides in Web project.
+> 上面是 < 2.1 版的截图，其中有一个使用 *Saltarelle 编译器* 生成客户端代码 的 Serene1.Script 项目。从 2.1 之后我们更换为 TypeScript 编写客户端代码，并且客户端代码（.ts 文件） 也全部集成到 Web 项目。
 
-Serene automatically creates its database in SQL local db at first run, so just press F5 and you are ready to go.
+Serene 在首次运行时将自动在 SQL local db 中创建数据库，所以只须按 F5 就可运行使用示例。
 
-When application launches use `admin` user and `serenity` password to login. You can change password or create more users later, using *Administration / User Management* page.
+当应用程序启动时使用 `admin` 用户名和 `serenity` 密码登录。然后你可以使用 *管理/用户管理* 页面更改密码或创建更多的用户。
 
 ![Login Screen](img/login_screen.jpg)
 
-The sample application includes old and famous Northwind data along with services and user interface to edit it, which is mostly produced by Serenity Code Generator.
+示例应用程序包含由 Serenity 代码生成器为 Northwind 数据库生成的服务和可编辑的用户界面。
 
-### Troubleshooting Connection Problems
+### 数据库连接问题 
 
-If you are getting a connection error like the following while starting Serene for first time:
+如果你在第一次启动 Serene 时遇到类似于下面的数据库连接错误：
 
 > A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred. The specified LocalDB instance does not exist.
 )
 
 
-This error might mean that you don't have SQL Server Local DB 2012 installed. This server comes preinstalled with Visual Studio 2012 and 2013. 
+此错误意味着你可能没有安装 SQL Server Local DB 2012。SQL Server Local DB 2012 预装在 Visual Studio 2012 / Visual Studio 2013 。
 
-In Serene.Web/web.config file there are *Default* and *Northwind* connection entries:
+在 Serene.Web/web.config 文件中有 *Default* 和 *Northwind* 连接配置：
 
 ```xml
 <connectionStrings>
@@ -40,13 +40,13 @@ In Serene.Web/web.config file there are *Default* and *Northwind* connection ent
   </connectionStrings>
 ```
 
-`(localdb)\v11.0` corresponds to default SQL Server 2012 LocalDB instance.
+`(localdb)\v11.0` 默认使用 SQL Server 2012 LocalDB 实例。
 
-If you don't have SQL LocalDB 2012, you can install it from:
+如果你没有 SQL LocalDB 2012，可以从下面的连接中获取安装：
 
 http://www.microsoft.com/en-us/download/details.aspx?id=29062
 
-Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance name is renamed to MsSqlLocalDB by default. Thus, if you have VS2015, try changing connection strings from `(localdb)\v11.0` to `(localdb)\MsSqlLocalDB`.
+Visual Studio 2015 内置 SQL Server 2014 LocalDB，它的默认实例名为 MsSqlLocalDB。因此，如果你使用的是 VS2015，请把连接字符串`(localdb)\v11.0` 修改为 `(localdb)\MsSqlLocalDB`。
 
 ```xml
 <connectionStrings>
@@ -56,27 +56,27 @@ Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance nam
   </connectionStrings>
 ```
 
-If you still have an error, open an administrative command prompt and type
+如果你仍然有错误，请使用管理员身份打开 cmd 命令提示符,并输入：
 
 ```bat
 > sqllocaldb info
 ```
 
-This will list localdb instances like:
+这会列出类似下面的 localdb 实例：
 
 ```
 MSSqlLocalDB
 test
 ```
 
-If you don't have MsSqlLocalDB listed, you can create it:
+如果你的结果中没有列出 MsSqlLocalDB，可以创建它：
 
 ```bat
 > sqllocaldb create MsSqlLocalDB
 ```
 
 
-If you have another SQL server instance, for example SQL Express, change data source to `.\SqlExpress`:
+如果你有另一个 SQL server 实例，例如 SQL Express，请把数据源更改为`.\SqlExpress`：
 
 
 ```xml
@@ -88,6 +88,6 @@ If you have another SQL server instance, for example SQL Express, change data so
 ```
 
 
-You can also use another SQL server. Just change the connection string.
+你还可以使用另一个 SQL 服务器，只需更改连接字符串即可。
 
-> Perform these steps for both Default and Northwind databases. Serene 1.6.4.3+ creates two databases.
+> 请分别为 Default 和 Northwind 数据库执行这些步骤，因为 Serene 1.6.4.3+ 默认创建这两个数据库。

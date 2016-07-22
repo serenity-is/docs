@@ -1,14 +1,14 @@
-# Hiding the Tenant Administration Permission
+# 隐藏租户管理权限
 
-We now have one little problem. User *tenant2* has permission *Administration:Security* so he can access user and role permission dialogs. Thus, he can grant himself *Administration:Tenants* permission using the permission UI.
+我们现在有点问题：因为用户 *tenant2* 有 *Administration:Security* 权限，所以他可以访问用户和角色权限对话框。因此，他可以使用权限 UI 给自己授予 *Administration:Tenants* 权限。
 
 ![Tenant2 Granting Himself](img/tenant2_granting_tenants.png)
 
-Serenity scans your assemblies for attributes like *ReadPermission*, *WritePermission*, *PageAuthorize*, *ServiceAuthorize* etc. and lists these permissions in edit permissions dialog.
+Serenity 扫描程序集的特性，比如 *ReadPermission*、*WritePermission*、*PageAuthorize*、*ServiceAuthorize* 等，并在编辑权限对话框列出这些权限。
 
-We should first remove it from this pre-populated list.
+我们应该先从默认值列表中删除它。
 
-Find method, *ListPermissionKeys* in *UserPermissionRepository.cs*:
+在 UserPermissionRepository.cs 找到 *ListPermissionKeys* 方法：
 
 ```
 public ListResponse<string> ListPermissionKeys()
@@ -24,11 +24,11 @@ public ListResponse<string> ListPermissionKeys()
         //...
 ```
 
-Now, this permission won't be listed in *Edit User Permissions* or *Edit Role Permissions* dialog.
+现在，该权限不会在 *编辑用户权限* 或 *编辑角色权限* 对话框中被列出来。
 
-But, still, he can grant this permission to himself, by some little hacking through *UserPermissionRepository.Update* or *RolePermissionRepository.Update* methods.
+但是，黑客仍然可以通过 *UserPermissionRepository.Update* 或 *RolePermissionRepository.Update* 方法给自己授权。
 
-We should add some checks to prevent this:
+我们应该添加一些检查来阻止该行为：
 
 ```cs
 public class UserPermissionRepository
@@ -69,6 +69,6 @@ public class RolePermissionRepository
         //...
 ```
 
-Here we check if any of the new permission keys that are tried to be granted, are not listed in permission dialog. If so, this is probably a hack attempt.
+在这里，我们认为任何试图授权不在权限对话框列表的新访问许可键都是一个黑客行为。
 
-> Actually this check should be the default, even without multi-tenant systems, but usually we trust administrative users. Here, administrators will be only managing their own tenants, so we certainly need this check.
+> 实际上，即使在非多租户系统中也应该默认做这个检查，但是通常我们信任管理的用户。在这里，管理员只能管理他们自己的租户，所以我们必须包含该检查。

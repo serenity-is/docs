@@ -1,33 +1,33 @@
-# ListRequestHandler
+# 列表请求处理程序 (ListRequestHandler)
 
 
-This is the base class that handles List requests originating from client side, e.g. from grids.
+这是处理来自客户端列表请求的基类，如，从网格列表的请求。
 
-Let's first sample when and how this class handles list requests:
+让我们首先介绍该类是在何时及如何处理列表请求的：
 
-1. First a list request must be triggered from client side. Possible options are:
+1. 首先必须从客户端触发列表请求。可能的情形有：
     
-    a) You open a list page that contains a grid. Right after your grid object is created it builds up a ListRequest object, based on currently visible columns, initial sort order, filters etc. and submits it to server side.
+    a) 打开含网格的列表页面。在创建网格对象之后，基于当前的可见列、初始排序、过滤器等建立了一个 ListRequest 对象，并将其提交到服务器端。
     
-    b) User clicks on a column header to sort, clicks paging buttons or refresh button to trigger same events in option A.
+    b) 用户点击列头排序、点击分页按钮或者刷新按钮时触发与情形 A 同样的事件。
     
-    c) You might manually call a list service using XYZService.List method.
+    c) 手动使用 XYZService.List 方法调用列表服务。
     
-2. A service request (AJAX) to MVC XYZController (in file XYZEndpoint.cs) arrives at server. Request parameters are deserialized from JSON into a ListRequest object.
-3. XYZEndpoint calls XYZRepository.List method with retrieved ListRequest object.
-4. XYZRepository.List method creates a subclass of ListRequestHandler (XYZRepository.MyListHandler) and invokes its Process method with the ListRequest.
-5. ListRequestHandler.Process method builds up a dynamic SQL query, based on the ListRequest, metadata in its entity type (Row) and other information and executes it.
-6. ListRequestHandler.Process returns a ListResponse with Entities member that contains rows to be returned.
-7. XYZEndpoint receives this ListResponse, returns it from action.
-8. ListResponse is serialized to JSON, sent back to client
-9. Grid receives entities, updates its displayed rows and other parts like paging status.
+2. MVC XYZController（在 XYZEndpoint.cs 文件中） 的服务请求 (AJAX) 到达服务器，请求参数从 JSON 反序列化为 ListRequest 对象。
+3. XYZEndpoint 调用 XYZRepository.List 方法，并以检索到的 ListRequest 对象作为其参数。
+4. XYZRepository.List 方法创建一个 ListRequestHandler (XYZRepository.MyListHandler) 的子类并使用 ListRequest 作为参数调用其 Process 方法。
+5. ListRequestHandler.Process 方法根据 ListRequest、实体类型（Row）的元数据及其他信息构建动态 SQL 查询语句，并执行它。
+6. ListRequestHandler.Process 返回 ListResponse，它包含要返回行的 Entities 成员。
+7. XYZEndpoint 接收该 ListResponse，并从 action 中返回它。
+8. ListResponse 被序列化成 JSON 发送回客户端。
+9. Grid 接收实体，更新其显示的行及其他像分页状态的部件。
     
-We'll cover how grids build and submit a list request in another chapter. Let's focus on ListRequestHandler for now.
+我们将在另一章中介绍如何生成网格和提交列表请求。现在，让我们集中于 ListRequestHandler。
 
 
-## List Request Object
+## 列表请求对象
 
-First we should have a look at what members a ListRequest object have:
+我们应该先看看 ListRequest 对象有哪些成员：
 
 ```cs
   public class ListRequest : ServiceRequest, IIncludeExcludeColumns
@@ -51,13 +51,13 @@ First we should have a look at what members a ListRequest object have:
 ```
 
 
-### ListRequest.Skip and ListRequest.Take Parameters
+### ListRequest.Skip 和 ListRequest.Take 参数
 
-These options are used for paging and similar to Skip and Page extensions in LINQ. 
+这些参数用于分页，它们类似于 LINQ 中的 Skip 和 Page 扩展。
 
-There is one little difference about Take. If you Take(0), LINQ will return you zero records, while Serenity will return ALL records. There is no point in calling a LIST service and requesting 0 records.
+这里有一个需要指出的小区别。如果你使用 Take(0)，LINQ 无记录返回，而 Serenity 将返回所有的记录。调用 LIST 服务并请求 0 条记录是毫无意义的。
 
-So, SKIP and TAKE has default values of 0, and they are simply ignored when 0 / undefined.
+所以，SKIP 和 TAKE 的默认值为 0，并且它们将忽略  0 / undefined。
 
 ```cs
 // returns all customers as Skip and Take are 0 by default 
@@ -66,7 +66,7 @@ CustomerService.List(new ListRequest
 }, response => {});
 ```
 
-If you have a grid that has page size 50 and switch to page number 4, SKIP will be 200 while TAKE is 50.
+如果你有页面大小为 50 的网格列表，切换到第 4 页，将跳过前 200 条记录，并选取 50 条记录。
 
 ```cs
 // returns customers between row numbers 201 and 250 (in some default order)
@@ -77,13 +77,13 @@ CustomerService.List(new ListRequest
 }, response => {});
 ```
 
-These parameters are converted to relevant SQL paging statements based on SQL dialect. 
+这些参数根据 SQL 方言转换为有关的 SQL 分页语句。
 
-### ListRequest.Sort Parameter
+### ListRequest.Sort 参数
 
-This parameter takes an array to sort results on. Sorting is performed by generating SQL.
+此参数接受数组并返回排序后的结果。排序是由生成的 SQL 执行。
 
-SortBy parameter expects a list of *SortBy* objects:
+SortBy 参数希望接收一个 *SortBy* 对象的列表：
 
 ```cs
 [JsonConverter(typeof(JsonSortByConverter))]
@@ -109,7 +109,7 @@ public class SortBy
 }
 ```
 
-When calling a List method of XYZRepository server side to sort by Country then City descending, you might do it like this:
+当需要调用服务端 XYZRepository 的 List 方法先对国家排序，然后按城市倒序，你可能会这样做：
 
 ```cs
 new CustomerRepository().List(connection, new ListRequest
@@ -121,7 +121,7 @@ new CustomerRepository().List(connection, new ListRequest
 });
 ```
 
-SortBy class has a custom JsonConverter so when building a list request client side, you should use a simple string array:
+SortBy 类有一个自定义的 JsonConverter，因此当在客户端构建一个列表请求，你应该使用一个简单的字符串数组：
 
 ```cs
 // CustomerEndpoint and thus CustomerRepository is accessed from 
@@ -133,7 +133,7 @@ CustomerService.List(connection, new ListRequest
 }, response => {});
 ```
 
-This is because ListRequest class definition at client side has a bit different structure:
+这是由于 ListRequest 类定义在客户端，具有略微不同的结构：
 
 ```cs
     [Imported, Serializable, PreserveMemberCase]
@@ -146,7 +146,7 @@ This is because ListRequest class definition at client side has a bit different 
     }
 ```
 
-Column names used here should be Property names of corresponding fields. Expressions are not accepted. E.g. this won't work!:
+这里使用的列名称应与字段的属性名称对应。不允许使用表达式。下面的做法是不可行的！
 
 ```cs
 CustomerService.List(connection, new ListRequest
@@ -155,17 +155,17 @@ CustomerService.List(connection, new ListRequest
 }, response => {});
 ```
 
-### ListRequest.ContainsText and ListRequest.ContainsField Parameters
+### ListRequest.ContainsText 和 ListRequest.ContainsField 参数
 
-These parameters are used by quick search funtionality which is search input on top left of grids.
+这是网格左上角搜索输入框的快速搜索功能所使用的参数。
 
-When only ContainsText is specified and ContainsField is empty, searching is performed on all fields with [QuickSearch] attribute on them.
+当只指定 ContainsText 而 ContainsField 为空时，对所有含 [QuickSearch] 特性的字段执行搜索。
 
-It is possible to define some specific field list to perform searches on grid client side, by overriding GetQuickSearchField() methods. So when such a field is selected in quick search input, search is only performed on that column. 
+可以定义一些特定的字段列表，以便通过重写 GetQuickSearchField() 方法对客户端网格执行搜索。所以当在快速搜索输入框中选择这些字段，则只执行对所选列的搜索。
 
-If you set ContainsField to a field name that doesn't have QuickSearch attribute on it, system will raise an exception. This is for security purposes.
+如果将 ContainsField 设置为没有快速搜索特性的字段名称，出于安全目的，系统将引发异常。
 
-As usual, searching is done with dynamic SQL by LIKE statements.
+像往常一样，搜索使用动态 SQL 的 LIKE 语句完成。
 
 ```cs
 CustomerService.List(connection, new ListRequest
@@ -179,11 +179,11 @@ CustomerService.List(connection, new ListRequest
 SELECT ... FROM Customers t0 WHERE t0.CompanyName LIKE '%the%' 
 ```
 
-> If ContainsText is null or empty string it is simply ignored.
+> 如果 ContainsText 为 null 或空字符串，将忽略该值。
 
-### ListRequest.EqualityFilter Parameter
+### ListRequest.EqualityFilter 参数
 
-EqualityFilter is a dictionary that allows quick equality filtering by some fields. It is used by quick filter dropdowns on grids (ones that are defined with AddEqualityFilter helper).
+EqualityFilter 是一个字典，允许按某些字段进行快速相等筛选，用于网格上面的下拉列表快速过滤器（用 AddEqualityFilter 帮助类定义）。
 
 ```cs
 CustomerService.List(connection, new ListRequest
@@ -198,9 +198,9 @@ CustomerService.List(connection, new ListRequest
 SELECT * FROM Customers t0 WHERE t0.Country = "Germany" 
 ```
 
-> Again, you should use property names as equality field keys, not expressions. Serenity doesn't allow any arbitrary SQL expressions from client side, to prevent SQL injections.
+> 再次提醒：你应该使用属性名称作为相等字段键（equality field keys），而不能使用表达式。Serenity 不允许客户端有任何随心所欲的 SQL 表达式，以防止 SQL 注入。
 
-Please note that null and empty string values are simply ignored, similar to ContainsText, so it's not possible to filter for empty or null values with EqualityFilter. Such a request would return all records:
+请注意，类似于 ContainsText，它将忽略 null 值和空字符串值，因此不能在  EqualityFilter 使用空值或 null 值进行筛选，这样的请求将返回的所有记录：
 
 ```cs
 CustomerService.List(connection, new ListRequest
@@ -212,14 +212,14 @@ CustomerService.List(connection, new ListRequest
 }, response => {});
 ```
 
-Use Criteria parameter if you intent to filter customers with empty countries. 
+如果你试图用空的国家条件筛选客户，请使用的 Criteria 参数。
 
 
-### ListRequest.Criteria 
+### ListRequest.Criteria
 
-This parameter accepts criteria objects similar to server side Criteria objects we talked about in Fluent SQL chapter. Only difference is, as these criteria objects are sent from client side, they have to be validated and can't contain any arbitrary SQL expressions.
+此参数接受条件对象，类似于我们在流式 SQL 章节谈到的服务端 Criteria 对象。唯一不同的是，由于这些条件对象是发送自客户端，因此必须验证其不能包含任何随心所欲的 SQL 表达式。
 
-Service request below will only return customers with empty country or null city values
+下面的服务请求将返回国家和城市都为空的客户：
 
 ```cs
 CustomerService.List(connection, new ListRequest
@@ -229,7 +229,7 @@ CustomerService.List(connection, new ListRequest
 }, response => {});
 ```
 
-You could set Criteria parameter of generated ListRequest that is about to be submitted in your XYZGrid.cs like below:
+你可以设置生成 ListRequest 的 Criteria 参数，它将在 XYZGrid.cs 像下面这样提交：
 
 ```cs
 protected override bool OnViewSubmit()
@@ -254,25 +254,25 @@ protected override bool OnViewSubmit()
 }
 ```
 
-> You could also set other parameters of ListRequest in your grids similarly.
+> 还可以在网格上类似地设置 ListRequest 的其他参数。
 
 
 ### ListRequest.IncludeDeleted
 
-This parameter is only useful with rows that implements IIsActiveDeletedRow interface. If row has such an interface, list handler by default only returns rows that are not deleted (IsActive != -1). It is a way to not delete rows actually but mark them as deleted.
+此参数只对实现了 IIsActiveDeletedRow 接口的行才有用。如果有这样接口的行，列表处理程序默认只返回没有被删除的行 (IsActive != -1)。这些行并没有被实际删除，而是被标记为已删除。
 
-If this parameter is True, list handler will return all rows without looking at IsActive column.
+如果此参数为 True，列表处理程序将不检索 IsActive 列而返回所有的行。
 
-> Some grids for such rows have a little eraser icon on top right to toggle this flag, thus show deleted records or hide them (default).
+> 一些网格对这样的行在右上角有一个小橡皮擦图标来切换该标识，从而可显示或隐藏已删除的记录（默认）。
 
 
-### ListRequest.ColumnSelection Parameter
+### ListRequest.ColumnSelection 参数
 
-Serenity tries hard to load only required columns of your entities from SQL server to limit network traffic to minimum between SQL Server < - > WEB Server and thus keep data size transferred to client as low as possible.
+Serenity 力图只从 SQL 服务器为实体加载必需的列，以使 SQL Server <-> WEB 服务器之间保持尽可能低的网络通信量。
 
-ListRequest has a ColumnSelection parameter for you to control the set of columns loaded from SQL.
+ListRequest 有一个 ColumnSelection 参数使你可以控制从 SQL 加载的列集合。
 
-ColumnSelection enumeration has following values defined:
+ColumnSelection 枚举有如下的值定义：
 
 ```cs    
 public enum ColumnSelection
@@ -283,7 +283,7 @@ public enum ColumnSelection
 }
 ```
 
-By default grid requests records from List service in "ColumnSelection.List" mode (can be changed). Thus, its list request looks like this:
+默认情况下，网格列表从 "ColumnSelection.List" 模式（可以更改）的列表服务中请求记录。因此，其列表请求看起来像这样：
 
 ```cs
 new ListRequest
@@ -292,25 +292,25 @@ new ListRequest
 }
 ```
 
-In *ColumnSelection.List* mode, ListRequestHandler returns *table* fields, thus fields that actually belong to the table, not view fields that are originating from joined tables. 
+在 *ColumnSelection.List* 模式中，ListRequestHandler 返回 *表* 字段，因此，这些字段是实际属于该表的字段，而不是来自关联表的视图字段。
 
-One exception is *expression* fields that only contains reference to *table* fields, e.g. *(t0.FirstName + ' ' + t0.LastName)*. ListRequestHandler also loads such fields.
+有一个例外：*表达式* 字段只包含 *表* 字段的引用，如 *(t0.FirstName + ' ' + t0.LastName)* 。 ListRequestHandler 同样加载这些字段。
 
-*ColumnSelection.KeyOnly* only includes ID / primary key fields.
+*ColumnSelection.KeyOnly* 只包含  ID / 主键 字段。
 
-*ColumnSelection.Details* includes all fields, including view ones, unless a field is explicitly excluded or marked as "sensitive", e.g. a password field.
+*ColumnSelection.Details* 包含所有字段，包括视图字段，除非该字段被显式排除或被标记为 "sensitive"（如，密码字段）。
 
-> Dialogs loads edited records in Details mode, thus they also include view fields.
+> 对话框在 Details 模式加载编辑记录，因此它们也包含视图字段。
 
-### ListRequest.IncludeColumns Parameter
+### ListRequest.IncludeColumns 参数
 
-We told that grid requests records in *List* mode, so loads only *table* fields, then how it can show columns that originate from other tables?
+我们告诉网格在 *List* 模式下请求记录，因此加载只 *表* 字段，那么它如何显示来自其它表的列呢？
 
-Grid sends list of visible columns to List service with *IncludeColumns*, so these columns are *included* in selection even if they are view fields.
+网格将可见列的列表发送到列表服务的 *IncludeColumns*，所以即使它们是视图字段，也在选择（selection）中 *包含* 这些列。
 
-> In memory grids can't do this. As they don't call services directly, you have to put [MinSelectLevel(SelectLevel.List)] to view fields that you wan't to load for in memory detail grids.
+> 在内存网格（memory grids）中不能这样做。因为它们不会直接调用服务，你必须在视图字段添加 [MinSelectLevel(SelectLevel.List)] 特性，这样才能在内存详细网格（memory detail grids）加载。
 
-If you have a ProductGrid that shows SupplierName column its actual ListRequest looks like this:
+如果你有显示供应商名称（SupplierName）的产品网格列表，它实际的 ListRequest 看起来像这样：
 
 ```cs
 new ListRequest
@@ -325,13 +325,13 @@ new ListRequest
 }
 ```
 
-Thus, these extra view fields are also included in *selection*.
+因此，这些额外的视图字段也包含在 *选择（selection）*。
 
-> If you have a grid that should only load visible columns for performance reasons, override its ColumnSelection level to KeyOnly. Note that non-visible table fields won't be available in client side row.
+> 如果你有一个网格列表，出于性能考虑你应该只能加载可见的列，且它的 ColumnSelection 级别重写为 KeyOnly 。请注意，非可见表字段不会出现在客户端行（row）中。
 
-### ListRequest.ExcludeColumns Parameter
+### ListRequest.ExcludeColumns 参数
 
-Opposite of IncludeColumns is ExcludeColumns. Let's say you have a nvarchar(max) *Notes* field on your row that is never shown in the grid. To lower network traffic, you may choose to NOT load this field in product grid:
+ IncludeColumns 的相反功能是 ExcludeColumns。比方说在网格列表的行中有一个永远也不会显示的类型为 nvarchar(max) 的 *Notes* 字段。为了降低网络流量，可以选择不在产品网格中加载此字段：
 
 ```cs
 new ListRequest
@@ -349,7 +349,7 @@ new ListRequest
 }
 ```
 
-OnViewSubmit is a good place to set this parameter (and some others):
+OnViewSubmit 是设置此参数（及一些其他参数）的最佳场所：
 
 ```cs
 protected override bool OnViewSubmit()
@@ -363,9 +363,9 @@ protected override bool OnViewSubmit()
 }
 ```
 
-### Controlling Loading At Server Side
+### 在服务端控制加载
 
-You might want to exclude some fields like *Notes* from *ColumnSelection.List*, without excluding it explicitly in grid. This is possible with MinSelectLevel attribute:
+你可能想要从 *ColumnSelection.List* 排除一些像 *Notes* 这样的字段，而不是显式地在网格中排除它们。使用 MinSelectLevel 特性可以实现此目的：
 
 ```cs
 [MinSelectLevel(SelectLevel.Details)]
@@ -376,7 +376,7 @@ public String Note
 }
 ```
 
-There is a SelectLevel enumeration that controls when a field is loaded for different ColumnSelection levels:
+这是加载字段时控制不同 ColumnSelection 级别的 SelectLevel 枚举：
 
 ```cs
 public enum SelectLevel
@@ -391,19 +391,19 @@ public enum SelectLevel
 }
 ```
 
-*SelectLevel.Default*, which is the default value, corresponds to *SelectLevel.List* for table fields and *SelectLevel.Details* for view fields.
+*SelectLevel.Default* ：默认值，对应于表字段是 *SelectLevel.List* ，视图字段是 *SelectLevel.Details* 。
 
-By default, table fields have a select level of *SelectLevel.List* while view fields have *SelectLevel.Details*. 
+默认情况下，表字段的选择级别是 *SelectLevel.List* ，而视图字段是 *SelectLevel.Details*。
 
-*SelectLevel.Always* means such a field is selected for any column selection mode, **even if** it is explicitly excluded using *ExcludeColumns*.
+*SelectLevel.Always* ：表示此字段可被任何列选择模式选择，**包括**使用 *ExcludeColumns* 显式排除的字段。
 
-> *SelectLevel.Lookup* is obsolete, avoid using it. Lookup columns are determined with [LookupInclude] attribute.
+> *SelectLevel.Lookup* 已经被废弃，请避免使用。检索列由  [LookupInclude] 特性决定。
 
-*SelectLevel.List* means such a field is selected for ColumnSelection.List and ColumnSelection.Details modes or if it is explicitly included with IncludeColumns parameter.
+*SelectLevel.List* ：表示在 ColumnSelection.List 和 ColumnSelection.Details 模式或被 IncludeColumns 参数显式包含时选择此字段。
 
-*SelectLevel.Details* means such a field is selected for ColumnSelection.Details mode, or if it is explicitly included with IncludeColumns parameter.
+*SelectLevel.Details* ：表示在 ColumnSelection.Details 模式或被 IncludeColumns 参数显式包含时选择此字段。
 
-*SelectLevel.Explicit* means such a field shouldn't be selected in any mode, unless it is explicitly included with IncludeColumns parameter. Use this for fields that are not meaningful for grids or edit dialogs.
+*SelectLevel.Explicit* ：表示此字段不应该在任何模式下被选择，除非它显式包含在 IncludeColumns 参数。在网格或编辑对话框使用此字段，是没有意义的。
 
-*SelectLevel.Never* means never load this field! Use it for fields that shouldn't be sent to client side, like a password hash.
+*SelectLevel.Never* ：表示永远不会加载此字段！用于不应该发送到客户端的字段（如，密码哈希值）。
 

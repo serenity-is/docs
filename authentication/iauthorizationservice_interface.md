@@ -1,8 +1,8 @@
-# IAuthorizationService Interface
+# IAuthorizationService 接口
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-This is the interface that Serenity checks through to see if there is a logged user in current request.
+这是 Serenity 通过检查当前请求判断用户是否已登录的接口。
 
 ```cs
 public interface IAuthorizationService
@@ -12,7 +12,7 @@ public interface IAuthorizationService
 }
 ```
 
-Some basic implementation for web applications could be:
+对于 web 应用程序的一些基本实现可能是：
 
 ```cs
 using Serenity;

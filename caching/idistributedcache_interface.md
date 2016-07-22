@@ -1,10 +1,10 @@
-# IDistributedCache Interface
+# IDistributedCache 接口
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-All NoSQL server types provide a similar interface like "store this value for this key", "give me value corresponding to this key" etc.
+所有 NoSQL 服务器类型提供了一个类似的接口，像"使用该键存储此值"、"给我该键对应的值"等。
 
-Serenity provides its distributed cache support through a common interface to not depend on a specific kind of NoSQL database:
+Serenity 通过一个没有依赖特定 NoSQL 数据库类型的通用接口提供分布式缓存的支持：
 
 ```cs
 public interface IDistributedCache
@@ -17,32 +17,32 @@ public interface IDistributedCache
 ```
 
 
-First overload of Set method that takes key and value arguments is used to store a key/value pair in distributed cache.
+Set 方法的第一个重载使用参数 key 和 value 在分布式缓存中存储键/值对。
 
 ```cs
 IoC.Resolve<IDistributedCache>().Set("someKey", "someValue");
 ```
 
-Later we could read back this value using Get method:
+然后我们可以通过 Get 方法读取该值：
 
 ```cs
 var value = IoC.Resolve<IDistrubutedCache().Get<string>("someKey") // someValue
 ```
 
-If we wanted to keep some value for a predetermined duration, we could use the second overload of Get method:
+如果想要值保存预定的时间，可以使用 Get 方法的第二个重载：
 
 ```cs
 IoC.Resolve<IDistributedCache>().Set("someKey", "someValue",
     TimeSpan.FromMinutes(10));
 ```
 
-## IDistributedCache.Increment Method
+## IDistributedCache.Increment 方法
 
-Operation on distributed cache systems are usually not atomic and they provide no transactional systems at all.
+分布式缓存系统上的操作通常不是原子性的，并且没有提供任何事务性的系统。
 
-Same key value can be changed by multiple servers at same time and override each others value in random order.
+相同的键值可以由多个服务器同时修改，并且按随机顺序重写各自的值。
 
-Let's say we needed a unique counter (to generate an ID for example) and synchronize it through distributed cache (to prevent using same ID twice):
+假设我们需要一个独特的计数器（生成 ID） 并通过分布式缓存同步它（以防止使用相同的 ID）：
 
 ```cs
 int GetTheNextIDValue()
@@ -53,9 +53,9 @@ int GetTheNextIDValue()
 }
 ```
 
-Such a code block won't function as expected. Inside the duration between reading `LastID` value (get) and setting it to increment `LastID` value (set), another server might have read the same LastID value. Thus two servers could use same ID value.
+这个代码块不会像预期那样运行。在读取 `LastID` 值 (get) 和设置自增 LastID 值(set)的期间，另一台服务器可能读过相同的 LastID 值。因此两个服务器可能使用相同的 ID 值。
 
-For this purpose, you can use Increment method:
+为了该目的，可以使用 Increment 方法：
 
 ```cs
 int GetTheNextIDValue()
@@ -64,4 +64,4 @@ int GetTheNextIDValue()
 }
 ```
 
-Increment function acts just like Interlocked.Increment method that is used in thread synchronization. It increases an identity value but blocks other requests while doing it, and returns the incremented value. So even if two WEB servers incremented same key in exact same moment, they end up with different ID values.
+ Increment 方法的行为就像在线程同步中使用的 Interlocked.Increment 方法。它增加标识值，但在增加的过程中会阻止其他请求，然后返回递增的值。所以即使两个 WEB 服务器在同一时刻递增相同的键，他们最终得到不同的 ID 值。

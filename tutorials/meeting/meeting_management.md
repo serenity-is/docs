@@ -1,24 +1,24 @@
-# Meeting Management (In Progress...)
+# 会议管理（进行中……）
 
-In this tutorial we are going to develop a meeting management system that will help us keep a track of corporate meetings. 
+在这个教程中，我们打算开发一个会议管理系统，来帮助跟踪公司会议。
 
-We'll first plan a meeting, with its location, time, agenda and attendees, then send an invitation to those attendees with an e-mail.
+要招开公司会议首先得计划会议地点、时间、议程和参会人员，然后向这些参会人员发送电子邮件邀请。
 
-Application will also let us store decisions taken in the meeting, and will inform attendees with a meeting report e-mail containing these decisions.
+应用程序也会存储会议决定，并以电子邮件的方式向参会人员发送包含这些决定的会议报告。
 
-> Code for this tutorial will be available at:
+> 可在如下链接找到该教程的源代码：
 > 
 > https://github.com/volkanceylan/MeetingManagement
 
 
-### Creating Project
+### 创建项目
 
-Start by creating a new project using Serene template, and name it MeetingManagement.
+首先利用 Serene 模板创建一个新项目，并命名为 MeetingManagement。
 
 
-### Removing Northwind
+### 删除 Northwind
 
-Remove Northwind using the how-to guide.
+使用疑难解惑指南中的方法删除 Northwind。
 
 
 

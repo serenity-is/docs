@@ -1,8 +1,8 @@
-# IDependencyResolver Interface
+# IDependencyResolver 接口
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-This interface defines the contract for dependency resolvers which are usually IoC containers that handles mapping between services and providers.
+此接口通常定义依赖解析器（dependency resolvers）的契约，以使 IoC 容器处理服务（services）与提供者（providers）之间的映射。
 
 ```cs
 public interface IDependencyResolver
@@ -14,4 +14,4 @@ public interface IDependencyResolver
 }
 ```
 
-All methods are functionally equal to corresponding methods in Dependency static class.
+所有方法在功能上都等效于静态依赖类相应的方法。

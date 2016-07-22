@@ -1,14 +1,14 @@
-# Authorization Static Class
+# 静态 Authorization 类
 
-[**namespace**: *Serenity*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
-Authorization class provides some shortcuts to information which is provided by services like IAuthorizationService, IPermissionService etc.
+Authorization 类提供访问一些像 IAuthorizationService、IPermissionService 等服务提供的信息的捷径。
 
-For example, instead of writing
+例如，要替换下面的写法
 ```cs
 Dependency.Resolve<IAuthorizationService>().HasPermission("SomePermission")
 ```
-you could use
+你可以使用 
 ```cs
 Authorization.HasPermission("SomePermission")
 ```
@@ -26,10 +26,10 @@ public static class Authorization
 }
 ```
 
-`IsLoggedIn`, `UserDefinition`, `UserId`, `Username` and `HasPermission` make use of corresponding service for you to access information easier about current user.
+`IsLoggedIn`、 `UserDefinition`、 `UserId`、 `Username` 和 `HasPermission` 是为了让使用对应服务更容易访问当前用户信息。
 
-`ValidateLoggedIn` checks if there is a logged user and if not, throws a `ValidationException` with error code `NotLoggedIn`.
+`ValidateLoggedIn` 检查是否有登录用户，如果没有登录用户，则抛出含 `NotLoggedIn` 错误码的 `ValidationException` 异常。
 
-`ValidatePermission` checks if logged user has specified permission and throws a `ValidationException` with error code `AccessDenied` otherwise.
+`ValidatePermission` 检查登录用户是否有指定的权限，如果没有相应权限，则抛出含 `AccessDenied` 错误码的 `ValidationException` 异常。
 
 

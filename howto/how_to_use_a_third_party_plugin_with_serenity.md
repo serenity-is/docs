@@ -1,37 +1,37 @@
-# How To: Use a Third Party Plugin With Serenity
+# 如何在 Serenity 中使用第三方插件？
 
-To use a third party / custom plugin with a Serenity application involves no special steps. You may include their scripts and CSS in _LayoutHead.cshtml, and follow their documentation. 
+在 Serenity 应用程序使用第三方/自定义插件没有涉及特别的步骤。你可以在 _LayoutHead.cshtml 包括第三方脚本和 CSS 并遵照官方文档的步骤。
 
-Especially if you are using TypeScript, there are no special steps involved. 
+尤其是如果你使用 TypeScript，更没有涉及特别的步骤。
 
-In case of Saltaralle (which is being deprecated), you might have to write some import classes or use dynamic otherwise.
+如果使用 Saltaralle（已经被弃用），则可能必须编写一些导入类（import classes）或动态使用这些类。
 
-But, if you want that component to work well among other Serenity editors in dialogs, you may try wrapping it into a Serenity widget.
+但是，如果你希望该组件与 Serenity 编辑对话框更好地工作，你可以尝试把它封装成 Serenity 部件。
 
-Here we'll take Bootstrap MultiSelect plugin as a sample, and integrate it as an editor into Serenity, similar to LookupEditor.
+在这里，我们将以 Bootstrap 的多选插件作为示例，将其集成到 Serenity，使其类似于 LookupEditor。
 
-Here is the documentation and samples for this component:
+这是 Bootstrap 多选组件的文档和示例：
 
 http://davidstutz.github.io/bootstrap-multiselect/
 
 
-### Getting Script and CSS Files
+### 获取脚本和 CSS 文件
 
-First we should download its script and CSS files and place them in correct places under MyProject.Web/scripts/ and MyProject.Web/content folders.
+首先，我们应该下载组件的脚本和 CSS 文件，并把它们分别放在 MyProject.Web/scripts/ 和 MyProject.Web/content 文件夹下。
 
-This component has a NuGet package but unfortunately it is not in a standard fashion (it doesn't place files into your project folders), so we'll have to download files manually.
+该组件有 NuGet 程序包，但是不幸的是它并不是按我们项目标准的形式安装（它不会将文件放到项目文件夹），所以我们要手动下载文件。
 
-Download this script file and put it under MyProject.Web/Scripts:
+下载脚本文件，并把它放到 MyProject.Web/Scripts 下:
 
 https://raw.githubusercontent.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js
 
-Download this CSS file and put it under MyProject.Web/Content:
+下载 CSS 文件，并把它放到 MyProject.Web/Content 下：
 
 https://raw.githubusercontent.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css
 
-### Including Script/Css Files in _LayoutHead.cshtml
+### 在 _LayoutHead.cshtml 包含脚本/样式文件
 
-According to plugin documentation, we should include these files:
+根据该插件的文档，我们应该包含这些文件：
 
 ```html
 <!-- Include the plugin's CSS and JS: -->
@@ -42,7 +42,7 @@ According to plugin documentation, we should include these files:
       href="css/bootstrap-multiselect.css" />
 ```
 
-Open _LayoutHead.cshtml under MyProject.Web/Views/Shared and include these files:
+打开 MyProject.Web/Views/Shared 下的 _LayoutHead.cshtml，并包含这些文件：
 
 ```html
 // ...
@@ -56,13 +56,13 @@ Open _LayoutHead.cshtml under MyProject.Web/Views/Shared and include these files
 ```
 
 
-### Creating BSMultiSelectEditor.ts
+### 创建 BSMultiSelectEditor.ts
 
-Now we need a TypeScript source file to hold our component. We should put it under MyProject.Web/Scripts or MyProject.Web/Modules directories.
+现在，我们需要一个 TypeScript 源文件来放置组件。我们可以把它放在  MyProject.Web/Scripts 或者 MyProject.Web/Modules 目录下面。
 
-I'll create it under MyProject.Web/Modules/Common/Widgets (first you need to create folder Widgets)
+我将在 MyProject.Web/Modules/Common/Widgets（你需要先创建 Widgets 文件夹）下创建该文件。
 
-Create file BSMultiSelectEditor.ts at this location:
+创建 BSMultiSelectEditor.ts 文件：
 
 ```ts
 namespace MyProject {
@@ -92,29 +92,29 @@ namespace MyProject {
 }
 ```
 
-Here we defined a new editor type, deriving from Widget. Our widget takes options of type BSMultiSelectOptions, which contains a lookupKey option, similar to a LookupEditor. It also implements IGetEditValue and ISetEditValue TypeScript interfaces (this is different than C# interfaces)
+这里，我们定义了一个新的继承自 Widget 的编辑器类型。我们的小部件使用 BSMultiSelectOptions 类型选项，且类似于 LookupEditor ，包含 lookupKey 选项。它还实现了 IGetEditValue 和 ISetEditValue 的 TypeScript 接口 （这不同于 C# 接口）。
 
 `@Serenity.Decorators.element("<select/>")`
 
-With above line, we specified that our widget works on a SELECT element, as this bootstrap multiselect plugin requires a select element too.
+在上面这行代码，我们指定小部件与 SELECT 元素一起工作，因为该 bootstrap 多选插件也要求一个 select 元素。
 
 ```
 @Serenity.Decorators.registerClass(
     [Serenity.IGetEditValue, Serenity.ISetEditValue])
 ```
 
-Above, we register our TypeScript class, with Saltaralle type system and specify that our widget implements custom value getter and setter methods, corresponding to getEditValue and setEditValue methods.
+上面，我们采用 Saltaralle 类型系统注册 TypeScript 类，并指定小部件实现自定义值的 getter 和 setter 方法，这些方法对应于 getEditValue 和 setEditValue 。
 
-> Here syntax is a bit terse as we have to handle interop between Saltaralle and TypeScript.
+> 这里的语法有点简洁，因为我们必须处理 Saltaralle 和 TypeScript 之间的互操作。
 
-Our constructor and getEditValue, setEditValue methods are yet empty. We'll fill them in soon.
+我们的 constructor、getEditValue 和 setEditValue 方法还是空的，我们待会将填充它们。
 
 
-### Using Our New Editor
+### 使用我们的新编辑器
 
-Now, build your project and transform templates. 
+现在，生成你的项目并转换模板。
 
-Open CustomerRow.cs and locate Representatives property:
+打开 CustomerRow.cs 并定位到 Representatives 属性：
 
 ```cs
 [LookupEditor(typeof(EmployeeRow), Multiple = true), ClientSide]
@@ -127,7 +127,7 @@ public List<Int32> Representatives
 }
 ```
 
-Here we see that Representatives uses a LookupEditor with multiple option true. We'll replace it with our brand new editor:
+我们在这里可以看到 Representatives 使用 Multiple 值为 true 的 LookupEditor。我们把它替换成新的编辑器：
 
 ```cs
 [BSMultiSelectEditor(LookupKey = "Northwind.Employee"), ClientSide]
@@ -141,11 +141,11 @@ public List<Int32> Representatives
 ```
 
 
-### Populating Editor With Lookup Items
+### 使用检索项目填充编辑器
 
-If you now build your project and open a Customer dialog, you'll see an empty SELECT in place of Customer representatives field.
+如果你现在生成项目，并打开客户对话框，你将看到 Customer representatives 字段的选项为为空。
 
-Let's first fill it with data:
+让我们先用数据填充它：
 
 ```ts
 export class BSMultiSelectEditor {
@@ -161,23 +161,23 @@ export class BSMultiSelectEditor {
     }
 ```
 
-We first get a reference to lookup object specified by our *lookupKey* option.
+我们首先获得由 *lookupKey* 选项指定检索的对象。
 
-Lookups has idField and textField properties, which usually corresponds to fields determined by IIdRow and INameRow interfaces on your lookup row.
+检索（Lookups）有 idField 和 textField 属性，通常对应的字段由检索行（lookup row）上的 IIdRow 和 INameRow 接口决定。
 
-We enumerate all items in lookup and determine key and text properties of those items, using idField and textField properties.
+我们在 lookup 枚举所有的项目并使用 idField 和 textField 属性确定这些项的 key 和 text 属性。
 
-Now save file, and open Customer dialog again. You'll see that this time options are filled.
+现在保存文件，并再次打开客户对话框，这次你将看到选项被填充了。
 
 
 ### Bootstrap Multi Select Typings
 
 
-According to documentation we should now call ".multiselect()" jQuery extension on our select element.
+根据文档，现在应该在我们的元素中调用 jQuery 的扩展方法 ".multiselect()" 。
 
-I would cast our SELECT element to `<any>` and call .multiselect on it, but i want to write a TypeScript .d.ts definition file to reuse multiselect with intellisense.
+我会把 SELECT 元素转换为 `<any>` 并在其上调用 .multiselect。但是我想使用 TypeScript 写一个定义文件 .d.ts 以重用含智能感知的多选。
 
-So, under MyProject.Web/Scripts/typings/bsmultiselect folder, create a file,* bsmultiselect.d.ts*
+因此，在 MyProject.Web/Scripts/typings/bsmultiselect 文件夹下，创建文件 *bsmultiselect.d.ts*：
 
 ```ts
 interface JQuery {
@@ -192,14 +192,14 @@ interface BSMultiSelectOptions {
 }
 ```
 
-Here, i have extended JQuery interface which belongs to jQuery itself and is defined in jquery.d.ts. In TypeScript you can extend any interface with new methods, properties etc.
+在这里，我扩展了原属于 jQuery 自身且被定义在 jquery.d.ts 的 jQuery 接口。在 TypeScript 中，你可以用新的方法扩展任何接口、属性等。
 
-I used plugin documentation to define BSMultiSelectOptions. The plugin actually has much more options, but for now i keep it short.
+我使用插件文档的方法定义 BSMultiSelectOptions。该插件其实有更多的选项，但为了演示，我尽量保持简单。
 
 
-### Creating Bootstrap MultiSelect on Our Editor
+### 在我们的编辑器中创建 Bootstrap 多选
 
-Now i'll go back to our constructor and initialize a multiselect plugin on it:
+现在，我将回到我们的构造函数并使用多选插件初始化它：
 
 ```ts
 export class BSMultiSelectEditor {
@@ -221,11 +221,11 @@ export class BSMultiSelectEditor {
     }
 ```
 
-Open CustomerDialog and you'll see that Representatives has our bootstrap multi select editor.
+打开客户对话框，你将看到 Representatives 已经有 Bootstrap 多选编辑器。
 
-### Handling GetEditValue and SetEditValue Method
+### 处理 GetEditValue 和 SetEditValue 方法
 
-If we don't handle these methods, Serenity won't know how to read or set your editor value, so even if you select some representatives, next time you open the dialog, you'll have empty selections.
+如果我们没有处理这些方法，Serenity 不会知道如何读取或设置编辑器的值，因此即使你选择了一些代表（representatives），下一次你再打开对话框，也会得到空的选项。
 
 
 ```ts
@@ -241,12 +241,12 @@ public getEditValue(property: Serenity.PropertyItem, target: any): void {
 }
 ```
 
-setEditValue is called when editor value needs to be setted. It takes a *source* object, which is usually your entity being loaded in a dialog.
+setEditValue 在编辑器值需要被设置时调用。它接受一个 *源（source）* 对象，该对象通常是对话框中加载的实体。
 
-Property parameter is a PropertyItem object that contains details about the field being handled, e.g. our Representatives property. It's *name* field contains field name, e.g. *Representatives*.
+Property 参数是包含有关正在处理字段详细信息的属性项目对象，如 Representatives 属性。它的 *name* 字段包含字段名称，如 *Representatives*。
 
-Here we have to call multiselect('refresh') after setting select value, as multiselect plugin can't know when selections are changed.
+这里，我们在设置所选值后调用 multiselect('refresh')，因为多选插件不知道选项什么时候会被更改。
 
-getEditValue is opposite. It should read edit value and set it in target entity.
+getEditValue 正好相反。它会读取编辑值并将其设置到目标实体。
 
-Ok, now our custom editor should be working fine.
+Ok，现在我们的客户编辑器可以很好地工作了。

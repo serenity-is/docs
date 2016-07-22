@@ -1,41 +1,41 @@
-# SqlQuery Object
+# SqlQuery 对象
 
-[**namespace**: *Serenity.Data*] - [**assembly**: *Serenity.Data*]
+[**命名空间**: *Serenity.Data*] - [**程序集**: *Serenity.Data*]
 
-SqlQuery is an object to compose dynamic SQL SELECT queries through a fluent interface.
+SqlQuery 通过一个流式接口编写动态 SQL SELECT 查询。
 
-# Advantages
+# 优点
 
-SqlQuery offers some advantages over hand crafted SQL:
+SqlQuery 比手写 SQL 有如下优势：
 
-* Using IntelliSense feature of Visual Studio while composing SQL
+* 使用 Visual Studio 的智能感知功能编写 SQL；
 
-* Fluent interface with minimal overhead
+* 最小开销的流式接口；
 
-* Reduced syntax errors as the query is checked compile time, not execution time.
+* 由于在编译时而不是运行时检查查询语法，所以可减少语法错误；
 
-* Clauses like Select, Where, Order By can be used in any order. They are placed at correct positions when converting the query to string. Similary, such clauses can be used more than once and they are merged during string conversion. So you can conditionally build SQL depending on input parameters.
+* 像 Select、 Where、 Order By 这样的子句可以按任何顺序使用。当查询转换为字符串时，它们被放到正确的位置。类似地，这些子句可以使用多次并且在转换为字符串时被合并。因此你可以根据输入参数有条件地构建 SQL。
 
-* No need to mess up with parameters and parameter names. All values used are converted to auto named parameters. You can also use manually named parameters if required.
+* 不再搞砸参数和参数名称。所有使用的值转换为自动命名参数。如果需要，你也可以使用手动命名的参数；
 
-* It can generate a special query to perform paging on server types that doesn't support it natively (e.g. SQL Server 2000)
+* 可以生成一个特殊的查询，可以在非原生支持分页的服务器类型 （如 SQL Server 2000）中执行分页；
 
-* With the dialect system, query can be targeted at specific server type and version.
+* 通过方言系统，可以针对特定的服务器类型和版本进行查询；
 
-* If it is used along with Serenity entities (it can also be used with micro ORMs like Dapper), helps to load query results from a data reader with zero reflection. Also it does left/right joins automatically.
+* 如果与 Serenity 实体（可以像 Dapper 那样使用的微型 ORM）一起使用，有助于从 DataReader 零反射加载查询结果。它也支持自动左/右联接。
 
 
-## How To Try Samples Here
+## 如何使用这里的示例
 
-I recommend using LinqPad to try samples given here. 
+我推荐使用 LinqPad 执行这里给出的示例。
 
-You should add reference to *Serenity.Core*, *Serenity.Data* and *Serenity.Data.Entity* NuGet packages.
+你应该添加 *Serenity.Core*、 *Serenity.Data* 和 *Serenity.Data.Entity* 的 NuGet 程序包引用。
 
-Another option is to locate and reference these DLLs directly from a Serene application's *bin* or packages directory.
+另一种做法是从一个 Serene 的应用程序的 *bin* 或程序包目录中找到并直接引用这些 DLL。
 
-Make sure you add *Serenity* and *Serenity.Data* to Additional Namespace Imports in Query Properties dialog.
+请确保在查询属性（Query Properties）对话框中的导入额外命名空间（Additional Namespace Imports）中添加 *Serenity* 和 *Serenity.Data* 。
 
-## A Simple Select Query
+## 一个简单的 Select 查询示例
 
 ```csharp
 void Main()
@@ -50,7 +50,7 @@ void Main()
 }
 ```
 
-This will result in output:
+这将输出结果：
 
 ```sql
 SELECT 
@@ -60,38 +60,38 @@ FROM People
 ORDER BY Age
 ```
 
-In the first line of our program, we called SqlQuery with its sole parameterless constructor. If *ToString()* was called at this point, the output would be:
+在程序的第一行，我们调用 SqlQuery 的唯一无参构造函数。如果此时调用 *ToString()*，将输出：
 
 ```sql
 SELECT FROM
 ```
 
-SqlQuery doesn't perform any syntax validation. It just converts the query you build yourself, by calling its methods. Even if you don't select any fields or call from methods, it will generate this basic *SELECT FROM* statement.
+SqlQuery 不会进行任何语法验证。它只是通过调用其方法转换成你自己构建的查询。即使你没有选择任何字段或调用 From 方法，它也将生成基本的 SELECT FROM 语句。
 
-> SqlQuery can't generate empty queries.
+> SqlQuery 不能生成空查询。
 
-Next, we called `Select` method with string parameter `"FirstName"`. Our query is now like this:
+然后，我们调用 `Select` 方法，并向其传递 `"FirstName"` 字符串参数。现在我们的查询将变为：
 
 ```sql
 SELECT Firstname FROM
 ```
 
-When `Select("Surname")` statement is executed, SqlQuery put a comma between previously selected field (*Firstname*) and this one:
+当执行 `Select("Surname")` 声明时，SqlQuery 在上一检索字段（*Firstname*）和当前检索字段之间添加逗号：
 
 ```sql
 SELECT Firstname, Surname FROM
 ```
 
-After executing *From* and *OrderBy* methods, our final output is:
+在执行 *From* 和 *OrderBy* 方法之后，最终输出：
 
 ```sql
 SELECT Firstname, Surname FROM People ORDER BY Age
 ```
 
 
-## Method Call Order and Its Effects
+## 方法调用顺序和它的影响
 
-In previous sample, output wouldn't change even if we reordered *From*, *OrderBy* and *Select* lines. It would change only if we changed order of *Select* statements...
+在前面的示例，即使我们重新调整 *From*、 *OrderBy* 和 *Select* 行的顺序，输出的结果也不会发生变化。只有修改 *Select* 声明的顺序才会改变输出结果。
 
 ```csharp
 void Main()
@@ -106,7 +106,7 @@ void Main()
 }
 ```
 
-...but, only the column ordering inside the SELECT statement would change:
+但是，只有 SELECT 语句内部的列顺序会发生改变：
 
 ```sql
 SELECT 
@@ -116,16 +116,16 @@ FROM People
 ORDER BY Age
 ```
 
-You might use methods like Select, From, OrderBy, GroupBy in any order, and can also mix them (e.g. call Select, then OrderBy, then Select again...)
+你可以按任意顺序使用 Select、 From、 OrderBy、 GroupBy 方法，并且可混合使用（如：先调用 Select，然后调用 OrderBy，之后再次调用 Select …… ）。
 
-> Putting FROM at start is recommended, especially when used with Serenity entities, as it helps with auto joins and determining database dialect etc.
+> 建议把 FROM 放在查询的开头，特别是与 Serenity 实体一起使用时，因为这样做有助于自动联接、决定数据库方言等。
 
 
-## Method Chaining
+## 方法链
 
-It is a bit verbose and not so readable to start every line `query.`. Almost all *SqlQuery* methods are chainable, and returns the query itself as result. 
+每行使用 `query.` 开头显得冗长且可读性比较差。几乎所有的 *SqlQuery* 方法是链式的，并把查询本身作为结果返回。
 
-We may rewrite the query like this:
+我们可以像下面这样重写该查询：
 
 ```csharp
 void Main()
@@ -140,9 +140,9 @@ void Main()
 }
 ```
 
-> This feature is similar to jQuery and LINQ enumerable method chaining.
+> 该功能类似于 jQuery 和 LINQ 可枚举方法链。
 
-We could even get rid of the query variable:
+我们甚至可以去掉查询变量：
 
 ```csharp
 void Main()
@@ -157,7 +157,7 @@ void Main()
 }```
 
 
-> It is strongly recommended to put every method on its own line, and indent properly for readability and consistency reasons.
+> 强烈建议把每个方法放在它自己的行中，且为了可读性和一致性，请使用合适的缩进。
 
 ## Select Method
 
@@ -165,19 +165,19 @@ void Main()
 public SqlQuery Select(string expression)
 ```
 
-In the samples we had so far, we used the overload of the *Select* method shown above (it has about 11 overloads).
+在前面的示例中，我们使用上述的 *Select* 重载方法（它大约有 11 个重载方法）。
 
-Expression parameter can be a simple field name or an expression like `"FirstName + ' ' + LastName"`
+Expression 参数可以是简单的字段名称或像 `"FirstName + ' ' + LastName"` 这样的表达式。
 
-Whenever this method is called, the expression you set is added to the SELECT statement of resulting query with a comma between.
+每当调用此方法，设置的表达式以逗号间隔添加到 SELECT 语句的查询结果。
 
-There is also a SelectMany method to select multiple fields in one call:
+还有一个 SelectMany 方法，可以在一个调用中选择多个字段：
 
 ```csharp
 public SqlQuery SelectMany(params string[] expressions)
 ```
 
-For example:
+例如：
 
 ```csharp
 void Main()
@@ -200,9 +200,9 @@ Gender
 FROM People
 ```
 
-> I'd personally prefer calling Select method multiple times.
+> 我个人更喜欢通过多次调用 Select 方法来实现该目的。
 
-You might be wondering, why multiple selection is not just another *Select* overload. It's because *Select* has a more commonly used overload to select a column with alias:
+你可能会想：为什么 *SelectMany* 并不是 *Select* 的另一重载？这是因为 *Select* 有一个更为常用的重载，可以选择含别名的列：
 
 ```csharp
 public SqlQuery Select(string expression, string alias)
@@ -226,17 +226,17 @@ FROM People
 ```
 
 
-## From Method
+## From 方法
 
 ```csharp
 public SqlQuery From(string table)
 ```
 
-SqlQuery.From method should be called at least once (and usually once). 
+SqlQuery.From 方法至少应被调用一次（通常一次）。
 
-> ..and it is recommended to be called first.
+> 建议在查询中首先调用该方法。
 
-When you call it a second time, table name will be added to FROM statement with a comma between. Thus, it will be a CROSS JOIN:
+当第二次调用该方法，表名称将以逗号间隔添加到 FROM 声明。因此，它将变为 CROSS JOIN：
 
 ```csharp
 void Main()
@@ -261,9 +261,9 @@ FROM People, City, Country
 ORDER BY Age
 ```
 
-## Using Alias Object with SqlQuery
+## 在 SqlQuery 中使用别名对象
 
-It is common to use table aliases when number of referenced tables increase and our queries become longer:
+当引用表的数量增加时，通常使用表别名，此时我们的查询变得更长：
 
 
 ```csharp
@@ -294,13 +294,13 @@ FROM Person p, City c, Country o
 ORDER BY p.Age
 ```
 
-Although it works like this, it is better to define `p`, `c`, and `o` as *Alias* objects.
+虽然它可以这样工作，但可以更好地把 `p`、 `c` 和 `o` 定义为 *Alias* 对象。
 
 ```csharp
 var p = new Alias("Person", "p");
 ```
 
-Alias object is like a short name assigned to a table. It has an indexer and operator overloads to generate SQL member access expressions like `p.Surname`.
+Alias 对象为表指定简称。它有索引和操作运算符的重载来生成访问 SQL 成员的表达式，如 `p.Surname` 。
 
 ```csharp
 void Main()
@@ -316,9 +316,9 @@ p.Surname
 p.Firstname
 ```
 
-> Unfortunately C# member access operator (.) can't be overridden, so we had to use (+). A workaround could be possible with dynamic, but it would perform poorly.
+> 不幸的是，不能重载 C# 的成员访问运算符 (.)，因此，我们不得不使用 (+) 。一种替代方法是使用 dynamic，但是它的表现并不佳。
 
-Let's modify our query making use of Alias objects:
+让我们使用 Alias 对象修改查询：
 
 ```csharp
 void Main()
@@ -352,9 +352,9 @@ FROM Person p, City c, Country o
 ORDER BY p.Age
 ```
 
-As seen above, result is the same, but the code we wrote is a bit longer. So what is the advantage of using an alias? 
+如上所示，结果是相同的，但代码有点长。那么使用别名有什么优点呢？
 
-If we had a list of constants with field names…
+如果我们有一个含字段名称的常量列表：
 
 ```csharp
 void Main()
@@ -382,11 +382,11 @@ void Main()
 }
 ```
 
-…we would take advantage of intellisense feature and have some more compile time checks.
+我们就可以利用智能感知功能和编译时检查。
 
-Obviously, it is not logical and easy to define field names for every query. This should be in a central location, or our entity declarations.
+显然，它不是很符合逻辑并且难以定义每个查询的字段名称。应该在一个集中的位置或实体声明中定义别名。
 
-Let's create a poor mans simple ORM using Alias:
+让我们使用 Alias 创建一个人员的简单 ORM：
 
 ```csharp
 public class PeopleAlias : Alias
@@ -439,32 +439,32 @@ void Main()
 }```
 
 
-Now we have a set of table alias classes with field names and they can be reused in all queries.
+现在我们有一组含字段名称和可以在所有查询中重用的表别名类。
 
-> This is just a sample to explain aliases. I don't recommend writing such classes. Entities offers much more.
+> 这只是一个解释别名的示例，我并不推荐写这样的类。实体(Entities) 提供了更多的功能。
 
-In sample above, we used *SqlQuery.From* overload that takes an *Alias* parameter:
+在上面的示例，我们使用包含 *Alias* 参数的 *SqlQuery.From* 重载：
 
 ```csharp
 public SqlQuery From(Alias alias)
 ```
 
-When this method is called, table name and its aliased name is added to *FROM* statement of query.
+当调用此方法时，表名称和它的别名被添加到查询的 *FROM* 子句。
 
 
-##OrderBy Method
+## OrderBy 方法
 
 ```csharp
 public SqlQuery OrderBy(string expression, bool desc = false)
 ```
 
-OrderBy can also be called with a field name or expression like Select. 
+OrderBy 也可以在调用时含字段名称或表达式（如，Select）。
 
-If you assign *desc* optional argument as true, ` DESC` keyword is appended to the field name or expression.
+如果你指定可选参数  *desc* 为 true，将在字段名称或表达式附加关键词 `DESC`。
 
-By default, OrderBy appends specified expressions to end of the ORDER BY statement. Sometimes, you might want to insert an expression/field to start. 
+默认情况下，OrderBy 附加指定的表达式到 ORDER BY 语句末尾。但有时你可能想在起始处插入表达式/字段。
 
-For example, you might have a query with some predefined order, but if user orders by a column in a grid, name of the column should be inserted at index 0.
+例如，有一些预定义顺序的查询，但如果用户在网格中对列进行排序，列名称应被插入到索引为 0 的位置。
 
 ```csharp
 public SqlQuery OrderByFirst(string expression, bool desc = false)
@@ -493,13 +493,13 @@ FROM Person
 ORDER BY Age, PersonID
 ```
 
-## Distinct Method
+## Distinct 方法
 
 ```csharp
 public SqlQuery Distinct(bool distinct)
 ```
 
-Use this method to prepend a DISTINCT keyword before SELECT statement.
+使用此方法在 SELECT 语句预置 DISTINCT 关键字。
 
 ```csharp
 void Main()
@@ -523,13 +523,13 @@ FROM Person
 ORDER BY PersonID 
 ```
 
-## GroupBy Method
+## GroupBy 方法
 
 ```csharp
 public SqlQuery GroupBy(string expression)
 ```
 
-GroupBy works similar to OrderBy but it doesn't have a GroupByFirst variant.
+GroupBy  的行为类似于 OrderBy，但没有 GroupByFirst 变体。
 
 
 ```csharp
@@ -551,13 +551,13 @@ GROUP BY Firstname, LastName
 ```
 
 
-## Having Method
+## Having 方法
 
 ```csharp
 public SqlQuery Having(string expression)
 ```
 
-Having can be used with GroupBy (though it doesn't check for GroupBy) and appends expression to the end of HAVING statement.
+Having 可以和 GroupBy （尽管它并不检查 GroupBy）一起使用，并且在表达式末尾追加 HAVING 语句。
 
 
 ```csharp
@@ -587,7 +587,7 @@ HAVING Count(*) > 5
 
 ```
 
-## Paging Operations (SKIP / TAKE / TOP / LIMIT)
+## 分页操作(SKIP / TAKE / TOP / LIMIT)
 
 ```csharp
 public SqlQuery Skip(int skipRows)
@@ -595,11 +595,11 @@ public SqlQuery Skip(int skipRows)
 public SqlQuery Take(int rowCount)
 ```
 
-SqlQuery has paging methods similar to LINQ Take and Skip.
+SqlQuery 有类似于 LINQ 的 Take 和 Skip 的分页方法。
 
-These are mapped to SQL keywords depending on database type. 
+数据库类型决定映射的 SQL 关键字。
 
-> As SqlServer versions before 2012 doesn't have a SKIP equivalent, to use SKIP your query should have at least one ORDER BY statement as ROW_NUMBER() will be used. This is not required if you are using SqlServer 2012+ dialect.
+> 由于 SqlServer 2012 之前的版本没有等效的 SKIP 方法，若要使用 SKIP 方法，你的查询应该至少有一个 ORDER BY 语句，因为需要使用 ROW_NUMBER() 。如果你使用 SqlServer 2012+ 的方言，就没有该要求。
 
 ```csharp
 void Main()
@@ -626,19 +626,19 @@ FROM Person
 ORDER BY PersonId OFFSET 100 ROWS FETCH NEXT 50 ROWS ONLY
 ```
 
-> In this sample we are using the default SQLServer2012 dialect.
+> 在该示例中，默认使用 SQLServer2012 方言。
 
-## Database Dialect Support
+## 支持数据库方言
 
-In our paging sample, SqlQuery used a syntax that is compatible with Sql Server 2012.
+在我们的分页示例中，SqlQuery 使用与 Sql Server 2012 兼容的语法。
 
-With Dialect method, we can change the server type that SqlQuery targets:
+通过 Dialect 方法，可以更改 SqlQuery 的目标服务器类型：
 
 ```csharp
 public SqlQuery Dialect(ISqlDialect dialect)
 ```
 
-As of writing, these are the list of dialect types supported:
+这些是支持的方言类型列表：
 
 ```csharp
 FirebirdDialect
@@ -649,7 +649,7 @@ SqlServer2005Dialect
 SqlServer2012Dialect
 ```
 
-If we wanted to target our query to Sql Server 2005:
+如果我们想在 Sql Server 2005 中查询：
 
 ```csharp
 void Main()
@@ -677,7 +677,7 @@ Count(*), ROW_NUMBER() OVER (ORDER BY PersonId) AS __num__
 FROM Person) __results__ WHERE __num__ > 100
 ```
 
-With SqliteDialect.Instance, output would be:
+若使用 SqliteDialect.Instance，将输出：
 
 ```sql
 SELECT 
@@ -688,10 +688,10 @@ FROM Person
 ORDER BY PersonId LIMIT 50 OFFSET 100
 ```
 
-If you are using only one type of database server with your application, you may avoid having to choose a dialect every time you start a query by setting the default dialect:
+如果在应用程序中只使用一种类型的数据库，你可以通过设置默认方言以避免每次开始查询时都要选择方言：
 
 ```csharp
 SqlSettings.DefaultDialect = SqliteDialect.Instance;
 ```
 
-Write code above in your application start method, e.g. global.asax.cs.
+在应用程序的启动方法（如 global.asax.cs）中添加上述代码。

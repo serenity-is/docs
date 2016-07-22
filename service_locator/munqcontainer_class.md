@@ -1,24 +1,24 @@
-# MunqContainer Class
+# MunqContainer 类
 
-[**namespace**: *Serenity*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity*, **程序集**: *Serenity.Core*]
 
-Serenity includes a slightly modified version of Munq IoC container (http://munq.codeplex.com/).
+Serenity 包含稍加修改的 Munq IoC 容器（http://munq.codeplex.com/）。
 
-MunqContainer class implements both IDependencyResolver and IDependencyRegistrar interfaces (all containers should).
+MunqContainer 类实现 IDependencyResolver 和 IDependencyRegistrar 接口（所有容器都应该实现这两个接口）。
 
-Once you set a MunqContainer instance as dependency resolver like:
+一旦你像下面这样设置 MunqContainer 实例作为依赖解析器（dependency resolver）：
 
 ```cs
 var container = new MunqContainer();
 Dependency.SetResolver(container);
 ```
 
-You can access its registration interface by querying for IDependencyRegistrar interface:
+你就可以通过查询 IDependencyRegistrar 接口访问其注册接口：
 
 ```cs
 var registrar = Dependency.Resolve<IDependencyRegistrar>();
 ```
 
-Here, *registrar* is the same MunqContainer instance (*container*) that we created in prior sample.
+在这里，*registrar* 是我们在先前示例中创建的相同 MunqContainer 实例（*容器*）。
 
-> If you would like to use another IoC container, you just have to create a class that implements IDependencyResolver and IDependencyRegistrar interfaces using your favorite IoC container.
+> 如果你想使用其他的 IoC 容器，你只需创建一个类并使用你最喜欢的 IoC 容器实现 IDependencyResolver 和 IDependencyRegistrar 接口。

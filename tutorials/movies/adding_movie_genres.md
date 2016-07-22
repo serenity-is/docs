@@ -1,12 +1,12 @@
 
-# Adding Movie Genres
+# 添加影片流派（Movie Genres）
 
 
-### Adding Genre Field
+### 添加流派（Genre）字段
 
-To hold Movie genres we need a lookup table. For *Kind* field we used an enumeration but this time genres might not be that *static* to declare them as an enumeration.
+我们需要一个检索表来保存影片流派（Movie genres）。在影片类型中我们使用一个枚举，但这次流派可能不是 *静态* 的，不能再把它定义成枚举。
 
-As usual, we start with a migration.
+像往常一样，我们从迁移类开始：
 
 *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_154700_GenreTable.cs*:
 
@@ -38,27 +38,27 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
-We also added a *GenreId* field to *Movie* table.
+我们也要在电影（*Movie*）表中添加 *GenreId* 字段。
 
-> Actually a movie can have multiple genres so we should keep it in a separate *MovieGenres* table. But for now, we think it as single. We'll see how to change it to multiple later.
+> 实际上，一部电影可以属于多个流派，因此我们应该把它保存在一张单独的影片流派（*MovieGenres*）表中。但是现在，我们假设一部电影只属于一个流派。我们将在后面演示如何将它改为可属于多个少流派。
 
 
-### Generating Code For Genre Table
+### 为影片流派表生成代码
 
-Fire sergen.exe using Package Manager Console again and generate code for *Genre* table with the parameters shown below:
+再次使用程序包管理器控制台打开 sergen.exe，并为 *Genre* 表设置生成代码的参数，如下所示：
 
 ![Genre Code Generation](img/mdb_movie_genretable.png)
 
 
-Rebuild solution and run it. We'll get a new page like this:
+重新生成解决方案并运行项目，我们将得到这样的新页面：
 
 ![Genre Initial Page](img/mdb_genre_initial.png)
 
-As you see in screenshot, it is generated under a new section *MovieDB* instead of the one we renamed recently: *Movie Database*.
+正如你在截图中看到，它在左侧导航菜单中重新生成 *MovieDB* 菜单，而不是生成到我们最近重命名的 Movie Database 菜单下。
 
-This is because *Sergen* has no idea of what customizations we performed on our *Movie* page. So we need to movie it under *Movie Database* manually.
+这是由于 *Sergen* 不知道我们对 *Movie* 页面的定制化修改，所以我们需要手工把它移到 *Movie Database* 下面。
 
-Open *Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
+打开 *Modules/Movie/GenrePage.cs*，剪切下面的导航连接：
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Genre",
@@ -66,7 +66,7 @@ Open *Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
 
 ````
 
-And move it to *Modules/Common/Navigation/NavigationItems.cs*:
+并把它移到 *Modules/Common/Navigation/NavigationItems.cs*：
 
 ```cs
 //...
@@ -79,9 +79,9 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 ```
 
 
-### Adding Several Genre Definitions 
+### 添加多个流派的定义
 
-Now let's add some sample genres. I'll do it through migration, to not to repeat it in another PC, but you might want to add them manually through Genre page.
+现在，让我们添加一些流派示例。我将通过迁移类来完成，而不是在不同计算机中重复该操作，但是你可以通过影片流派页面手工添加。
 
 ```cs
 using FluentMigrator;
@@ -129,9 +129,9 @@ namespace MovieTutorial.Migrations.DefaultDB
 ```
 
 
-### Mapping GenreId Field in MovieRow
+### 在 MovieRow 映射 GenreId 字段
 
-As we did with *Kind* field before, *GenreId* field needs to be mapped in *MovieRow.cs*.
+像我们之前在添加 *Kind* 字段一样，*GenreId* 字段也需要在 *MovieRow.cs* 中映射。
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -179,17 +179,17 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Here we mapped *GenreId* field and also declared that it has a foreign key relation to *GenreId* field in *[mov].Genre* table using *ForeignKey* attribute.
+在这里，我们映射 *GenreId* 字段并使用 *ForeignKey* 特性定义它与 *[mov].Genre* 表中的 *GenreId* 有外键关系。
 
-> If we did generate code for Movie table after we added this Genre table, Sergen would understand this relation by checking foreign key definition at database level, and generate similar code for us.
+> 如果我们在添加流派表之后为电影表生成代码，Sergen 通过在数据库中检查外键定义来理解这种关系，并为我们生成类似的代码。
 
-We also added another field, *GenreName* that is not actually a field in *Movie* table, but in *Genre* table. 
+我们还添加了另一个字段，实际上，*GenreName* 并不是电影表（*Movie*）中的字段，而是流派（*Genre*）表中字段的。
 
-Serenity entities are more like SQL views. You can bring in fields from other tables with joins.
+Serenity 实体更像是 SQL 视图。你可以使用关联（joins）获取其他表的字段。
 
-By adding *LeftJoin("g")* attribute to MovieId property, we declared that whenever Genre table needs to be joined to, its alias will be *g*.
+可在 MovieId 属性中添加 *LeftJoin("g")* 特性。每当流派（Genre）表需要被关联时，我们定义它的别名为 *g*。
 
-So when Serenity needs to select from *Movies* table, it will produce an SQL query like this:
+因此，当 Serenity 需要从电影（*Movies*）表查询时，它生成这样的 SQL 查询：
 
 ```sql
 SELECT t0.MovieId, t0.Kind, t0.GenreId, g.Name as GenreName 
@@ -197,13 +197,13 @@ FROM Movies t0
 LEFT JOIN Genre g on t0.GenreId = g.GenreId 
 ```
 
-> This join will only be performed if a field from Genre table requested to be selected, e.g. its column is visible in a data grid.
+> 该关联（join）操作只在需要流派（Genre）表字段时才执行，如在网格列表需要显示流派信息时。
 
-By adding *Expression("g.Name")* on top of *GenreName* property, we specified that this field has an SQL expression of *g.Name*, thus it is a view field originating from our *g* join.
+通过在 *GenreName* 属性上面添加 *Expression("g.Name")*，指定该字段有一个 *g.Name* 的 SQL 表达式，表明这是一个来自 g 的关联字段。
 
-### Adding Genre Selection To Movie Form
+### 为影片窗体添加流派选择
 
-Let's add GenreId field to our form in *MovieForm.cs*:
+让我们把 GenreId 字段添加到 MovieForm.cs：
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
@@ -220,28 +220,28 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Now if we build and run application, we'll see that a Genre field is added to our form. The problem is, it accepts data entry as an integer. We want it to use a dropdown.
+现在，如果我们生成并运行应用程序，我们将在表单中看到一个 Genre 字段。现在的问题是 Genre 允许输入整型数值，而我们想使用下拉列表。
 
-It's clear that we need to change editor type for GenreId field.
+很显然，我们需要为 GenreId 字段修改编辑器类型。
 
 
-### Declaring a Lookup Script for Genres
+### 为流派（Genres）声明一个检索脚本（Lookup Script）
 
-To show an editor for *Genre* field, list of genres in our database should be available at client side.
+若要为流派（Genre）字段显示一个编辑器，在客户端列出数据库中的流派列表应该是可行的做法。
 
-For enumeration values, it was simple, we just run T4 templates, and they copied enum declaration to script side.
+如果是枚举值，我们只需简单地运行 T4 模板就可以把枚举定义复制到客户端脚本。
 
-Here we can't do the same. Genre list is a database based dynamic list.
+但我们不能在这里用同样的方法。流派列表是基于数据库的动态列表。
 
-Serenity has notion of *dynamic scripts* to make dynamic data available to script side in the form of runtime generated scripts.
+Serenity 有 *动态脚本（Dynamic scripts）* 的概念，将动态数据在运行时以生成脚本的形式提供给脚本端。
 
-> Dynamic scripts are similar to web services, but their outputs are dynamic javascript files that can be cached on client side. 
+> 动态脚本类似于 Web 服务，但是它们产出的是可以在客户端缓存的动态 javascript 脚本。
 > 
-> The *dynamic* here corresponds to the data they contain, not their behavior. Unlike web services, dynamic scripts can't accept any parameters. And their data is shared among all users of your site. They are like singletons or static variables. 
+> 这里的 *动态* 对应于它们包含的数据，而不是它们的行为。不像 Web 服务，动态脚本不能授受任何参数，并且网站的所有用户都共享动态脚本产生的数据，动态脚本更像是单例或静态变量。
 > 
-> You shouldn't try to write a dynamic script (e.g. lookup) that acts like a web service.
+> 你不应该试图写像 Web 服务行为(例如，检索)那样的动态脚本。
 
-To declare a dynamic lookup script for Genre table, open *GenreRow.cs* and modify it like below:
+为流派（Genre）表声明一个动态检索脚本（dynamic lookup script），打开 *GenreRow.cs* 并作做下修改：
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -260,33 +260,33 @@ namespace MovieTutorial.MovieDB.Entities
     }
 ```
 
-We just added line with *[LookupScript("MovieDB.Genre")]*.
+我们只添加了一行代码：*[LookupScript("MovieDB.Genre")]*。
 
-Rebuild your project, launch it, after logging in, open developer console by *F12*.
+重新生成并启动项目，在登录系统之后，使用 *F12* 打开开发者工具的控制台标签：
 
-Type *Q.getLookup('MovieDB.Genre')*
+输入 *Q.getLookup('MovieDB.Genre')*：
 
-and you will get something like this:
+你会得到一些像这样的信息：
 
 ![Movies Genre Lookup from Console](img/mdb_genre_getlookup.png)
 
-Here *MovieDB.Genre* is the lookup key we assigned to this lookup script when declaring it with:
+这里，我们在声明 LookupScript 特性时为其指定 *MovieDB.Genre* 参数：
 
 > [LookupScript("MovieDB.Genre")]
 
-This step was just to show how to check if a lookup script is available client side.
+这一步骤只是为了演示如何检查一个检索脚本在客户端是否可用。
 
-> Lookup key, *"MovieDB.Genre"* is case sensitive. Make sure you type exact same case everywhere.
+> "*MovieDB.Genre*" 的检索键（Lookup key）是区分大小写的，所以请确保你输入大小写一致的参数。
 
-### Using LookupEditor for Genre Field
+### 对流派表字段使用 LookupEditor
 
-There are two places to set editor type for GenreId field. One is MovieForm.cs, other is MovieRow.cs.
+这里有两个地方为 GenreId 字段设置编辑器类型：一是在 MovieForm.cs，另一个是 MovieRow.cs。
 
-I usually prefer the latter, as it is the central place, but you may choose to set it on a form, if that editor type is specific to that form only.
+我更喜欢后者，因为它是核心组件类。但如果编辑器类型仅应用于表单，你可以选择在表单类上设置它。
 
-> Information defined on a form can't be reused. For example, grids use information in XYZColumn.cs / XYZRow.cs while dialogs use information in XYZForm.cs / XYZRow.cs. So it's usually better to define things in XYZRow.cs.
+>定义在表单中的信息不能被重用。例如，网格列表使用 XYZColumn.cs / XYZRow.cs，而对话框使用 XYZForm.cs / XYZRow.cs。由此可见，把可重用信息定义在 XYZRow.cs 更好。
 
-Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown below:
+打开 MovieRow.cs 并为 *GenreId* 属性添加 *LookupEditor* 特性：
 
 ```cs
     [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
@@ -299,11 +299,11 @@ Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown
 
 ```
 
-After we build and launch our project, we'll now have a searchable dropdown (Select2.js) on our Genre field.
+在我们生成和启动项目之后，在 Genre 字段中，我们现在有一个可搜索的（Select2.js）下拉列表。
 
 ![Movie Form With Genre Editor](img/mdb_genre_dropdown.png)
 
-While defining [LookupEditor] we hardcoded the lookup key. It's also possible to reuse information on GenreRow:
+在定义 [LookupEditor] 时，我们硬编码检索键。我们还可以使用 GenreRow 进行信息重用：
 
 ```cs
     [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
@@ -316,7 +316,7 @@ While defining [LookupEditor] we hardcoded the lookup key. It's also possible to
 
 ```
 
-This is functionally equivalent. I'd prefer latter. Here, Serenity will locate the [LookupScript] attribute on GenreRow, and get lookup key information from there. If we had no [LookupScript] attribute on GenreRow, you'd get an error on application startup:
+它们在功能上是等效的，但我更喜欢后者。后面这种方式，Serenity 将在 GenreRow 中找到 [LookupScript] 特性，并从中获取检索键信息。如果我们的 GenreRow 没有 [LookupScript] 特性，在应用程序启动时，你会得到错误：
 
 ```
 Server Error in '/' Application.
@@ -327,11 +327,11 @@ Server Error in '/' Application.
 Parameter name: lookupType
 ```
 
-> Forms are scanned at application startup, so there is no way to handle this error without fixing the issue.
+> 在应用程序启动时扫描表单，因此没有修复该问题时，是没有办法处理这个错误的。
 
-### Display Genre in Movie Grid
+### 在影片表格中显示流派
 
-Currently, movie genre can be edited in the form but is not displayed in Movie grid. Edit MovieColumns.cs to show GenreName (not GenreId).
+目前，影片流派可以在表单中编辑，但没有显示在影片列表。我们可以通过编辑 MovieColumns.cs 来显示 GenreName（而不是 GenreId）。
 
 
 ```cs
@@ -349,20 +349,20 @@ namespace MovieTutorial.MovieDB.Columns
 }
 ```
 
-Now GenreName is shown in the grid.
+现在 GenreName 可以在网格列表中显示了。
 
 ![Movie Gid With Genre Column](img/mdb_genre_incolumn.png)
 
 
-### Making It Possible To Define A New Genre Inplace
+### 让就地定义新的流派成为可能
 
-While setting genre for our sample movies, we notice that *The Good, the Bad and the Ugly* is *Western* but there is no such genre in *Genre* dropdown yet (so I had to choose Drama). 
+当为我们为示例影片设置流派时，我们注意到 影片《黄金三镖客》（*The Good, the Bad and the Ugly*）是属于西部片（*Western*），但在流派下拉列表中还没有该选项（所以我不得不把流派选为 剧情）。
 
-One option is to open Genres page, add it, and come back to movie form again. Not so pretty...
+要为该影片添加正确的流派，其中一个做法是打开流派页面，添加该当流派，并再次回到影片表单……然而这并不是很好的操作体验。
 
-Fortunately, Serenity has integrated inplace item definition ability for lookup editors.
+幸运的是，Serenity 集成了就地为编辑器声明新内容的能力。
 
-Open MovieRow.cs and modify *LookupEditor* attribute like this:
+打开 MovieRow.cs，并对 *LookupEditor* 特性做如下修改：
 
 ```cs
 [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
@@ -375,21 +375,21 @@ public Int32? GenreId
 
 ```
 
-Now we can define a new Genre by clicking star/pen icon next to genre field.
+现在，我们可以点击流派（Genre）字段旁边的图标添加新的流派。
 
 ![Defining Genre Inplace](img/mdb_genre_inplace.png)
 
-> Here we also see that we can use a dialog from another page (GenreDialog) in the movies page. In Serenity applications, all client side objects (dialogs, grids, editors, formatters etc.) are self-contained reusable components (widgets) that are not bound to any page.
+> 在这里，我们可看到，可以在电影页面打开一个对话框，并在对话框中打开另一个页面（GenreDialog）。在 Serenity 应用程序中，所有的客户端对象（对话框、网格列表、编辑器、格式化器等）都是自包含的可重用组件（部件），它们并没有绑定到任何页面。
 
-It is also possible to start typing in genre editor, and it will provide you with an option to add a new genre.
+还可以在流派编辑器中输入内容，它将为你提供一个选项来添加一个新的流派。
 
 ![Defining Genre By Searching](img/movies_genre_search_add.png)
 
-### How Did It Determine Which Dialog Type To Use
+### 它是如何确定要使用的对话框类型
 
-You probably didn't notice this detail. Our lookup editor for genre selection, automatically opened a new *GenreDialog* when you wanted to add a new genre inplace. 
+你可能还没有注意到这个细节：在我们想就地添加一个新的流派时，我们的流派检索编辑器（lookup editor）为选择流派而自动打开一个新的 *流派对话框（GenreDialog）*。
 
-Here, our lookup editor made use of a convention. Because its lookup key is *MovieDB.Genre*, it searched for a dialog class with full names below:
+在这里，我们的检索编辑器使用了一项约定。因为它的检索键是 *MovieDB.Genre*，所以它使用下面的完整名称搜索对话框类：
 
 ```
 MovieDB.GenreDialog
@@ -398,7 +398,7 @@ MovieTutorial.MovieDB.GenreDialog
 ...
 ```
 
-Luckily, we have a GenreDialog, which is defined in *Modules/Genre/GenreDialog.ts* and its full name is *MovieTutorial.MovieDB.GenreDialog*.
+幸运的是，我们有一个流派对话框（GenreDialog），它定义在 *Modules/Genre/GenreDialog.ts* ，并且它的完整名称是 *MovieTutorial.MovieDB.GenreDialog*。
 
 ```ts
 namespace MovieTutorial.MovieDB {
@@ -417,13 +417,13 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-If, lookup key for *GenreRow* and its dialog class didn't match, we would get an error in browser console, as soon as we click the inplace add button:
+如果 *GenreRow* 的检索键和其对话框类不匹配，当我们单击就地添加按钮时，我们会在浏览器控制台得到一个错误：
 
 ```
 Uncaught MovieDB.GenreDialog dialog class is not found!
 ```
 
-But this is not the case as they match. In such a case, either you'd have to use a compatible lookup key like "*ModuleName*.*RowType*", or you'd need to specify dialog type explicitly:
+在名称不匹配的情况下，你可使用一个兼容的检索键，如 "*ModuleName.RowType*"，或者显式指定对话框类型：
 
 ```cs
 [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
@@ -435,16 +435,16 @@ public Int32? GenreId
 }
 ```
 
-> You shouldn't specify *Dialog* suffix, nor the full namespace, e.g. *MovieTutorial.MovieDB.Genre*, as Serenity automatically searches for them.
+> 你不应该把 *Dialog* 作为对话框的后缀，也不能有完整的命名空间，如 *MovieTutorial.MovieDB.Genre*，因为 Serenity 会自动搜索它们。
 
 
-### Adding Quick Filter for Genre To Grid
+### 为网格列表添加流派的快速过滤
 
-As our list of movies becomes larger, we might need to filter movies based on values of some fields, besides the quick search functionality.
+随着我们影片列表数据变得越来越多，除了快速搜索功能，我们可能还需要基于某字段值来筛选影片。
 
-Serenity has several filtering methods. One of them is Quick Filter, which we'll use on Genre field.
+Serenity 有几个过滤方法，快速过滤器（Quick Filter）就是其中之一。我们将其应用到流派（Genre）字段。
 
-Edit *Modules/MovieDB/Movie/MovieColumns.cs* to add a [QuickFilter] attribute on top of GenreName field:
+编辑 *Modules/MovieDB/Movie/MovieColumns.cs* 文件，在 GenreName 属性上面添加一个 [QuickFilter] 特性：
 
 ```cs
 public class MovieColumns
@@ -458,13 +458,13 @@ public class MovieColumns
 }
 ```
 
-Build and navigate to Movies page. You'll a quick filtering dropdown for genre field is available:
+生成并导航到影片页面。你可以通过流派（Genre）字段的下拉列表快速过滤：
 
 ![Genre Quick Filter](img/mdb_movie_genrequick.png)
 
-The field that is filtered is actually *GenreId* not *GenreName* that we attached this attribute to. Serenity is clever enough to understand this relation, and determined editor type to use by looking at attributes of *GenreId* property in *GenreRow.cs*.
+被过滤的字段实际上是 *GenreId* ，而不是我们附加 QuickFilter 特性的 *GenreName*。Serenity 足够聪明能理解这种关系，并通过查看 GenreRow.cs 的 GenreId 属性确定使用编辑器的类型。
 
 
-### Re-runing T4 Templates
+### 重新运行 T4 模板
 
-As we added a new entity to our application, we should run T4 templates after building solution.
+由于我们在应用程序中添加了一个新实体，我们应该在生成解决方案之后运行 T4 模板。

@@ -1,16 +1,16 @@
-# Pending Approval Mode
+# 待审状态
 
-LocalTextRegistry also supports an optional pending approval mode.
+LocalTextRegistry 还支持可选的待审状态。
 
-In some sites, translations might be needed to be approved by some moderators before they are published.
+在一些网站，翻译可能需要在发布之前经过一些版主的审核。
 
-So you may add these unapproved texts to your local text registry but want them to be shown only to moderators for them to check how they will look in live site when approved.
+所以你可能将未经审核的文本添加到本地化注册表（local text registry），但希望在批准时，只有版主可以检查它们将如何在直播网站显示。
 
-LocalTextRegistry allows you to mark some texts as pending approval, and use these translations for only approval contexts (e.g. when a moderator is logged in).
+LocalTextRegistry 允许你将一些文本标记为待审，并只有批准上下文（例如，当版主已登录）可使用这些翻译文本。
 
-## ILocalTextContext Interface
+## ILocalTextContext 接口
 
-[**namespace**: *Serenity.Localization*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
 ```cs
 public interface ILocalTextContext
@@ -19,9 +19,9 @@ public interface ILocalTextContext
 }
 ```
 
-Implement this interface and register it through the service locator (Dependency class).
+实现该接口并通过服务定位器（依赖类）注册它。
 
-IsApprovalMode property is used to determine if current context is in approval mode (e.g. used by a moderator).
+IsApprovalMode 属性用来决定当前上下文是否处于审核状态（如，被版主使用）。
 
 ```cs
 public class MyLocalTextContext : ILocalTextContext
@@ -43,25 +43,25 @@ void ApplicationStart()
 }
 ```
 
-## LocalTextRegistry.AddPending Method
+## LocalTextRegistry.AddPending 方法
 
-Adds a translation to local text table for pending approval texts. These texts are only used when current context is in pending approval mode.
+在本地化表（local text table）添加待审文本。只有当前处于待审状态的上下文可使用这些文本。
 
-## LocalTextRegistry.TryGet Overload With Language and Pending Arguments
+## 含语言和待审状态的 LocalTextRegistry.TryGet 重载
 
 ```cs
 public string TryGet(string languageID, string textKey, bool isApprovalMode);
 ```
 
-This overload lets you to get a translation in specified language and optionally using unapproved texts (isApprovalMode = true).
+该重载获得指定语言的翻译并可以选择使用未审核的文本 (isApprovalMode = true)。
 
-Other TryGet overload returns unapproved texts only when ILocalTextContext provider returns true for IsApprovalMode property.
+另外只有当 ILocalTextContext 提供者返回的 IsApprovalMode 属性为 true 时， TryGet 重载才返回未审核文本。
 
-## LocalTextRegistry.GetAllAvailableTextsInLanguage Method
+## LocalTextRegistry.GetAllAvailableTextsInLanguage 方法
 
-Returns a dictionary of all currently registered translations for all text keys in a language.
+返回语言中所有当前注册翻译的文本键（text keys）字典。
 
-Dictionary keys are local text keys, while values are translations.
+当字典的值（value）被翻译时，key 为本地化文本键（local text keys）。
 
-It also contains texts found from language fallbacks for if a translation is not available in requested language.
+它也包含回退文本，当文本不能被翻译成目标的语言时，则使用该文本。
 

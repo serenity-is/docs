@@ -1,21 +1,21 @@
-# Configuration System
+# 配置系统
 
-.NET applications usually stores their configuration in app.config (desktop) or web.config (web) files.
+.NET 应用程序通常在 app.config（桌面应用程序）或 web.config（web应用程序）文件保存配置。
 
-Though, its common practice to store configuration in such files for web applications, sometimes it might be required to store some configuration in a database table to make it available to all servers in a web farm, and set it from one location.
+虽然，在 Web 应用程序用文件存储配置很普遍，但有时也需要在数据库表中存储一些配置，使其可用于网站群中的所有服务器，且只须在一个位置设置。
 
-Just like IsolatedStorage has scopes like Application, Machine, User etc, a configuration setting might have different scopes:
+就像 IsolatedStorage 有应用程序（Application）、机器（Machine）、用户（User）等作用域，配置设置可能有不同的作用域：
 
-- Application - Shared between all servers that runs a web application
-- Server - Applies to current server only
-- User - Applies to current user only
+- Application - 运行 Web 应用程序的所有服务器之间共享
+- Server - 只应用于当前服务器
+- User - 只应用于当前用户
 
-Number of samples can be increased.
+还有举出更多的例子。
 
-If you have just one server, *Application* and *Server* scopes can be stored in web.config file, but in a web farm setup, Application settings should be stored in a location accessible from all servers (database or shared folder).
+如果你只有一台服务器，*Application* 和 *Server* 可以存储在 web.confg 文件，但是在网站群的结构下，Application 设置应存储在所有服务器可访问的位置（数据库或共享的文件夹）。
 
-User settings are usually stored in database along with a User ID.
+用户设置通常与用户 ID 一道存储在数据库中。
 
-Serenity provides an extensible configuration system.
+Serenity 提供了一个可扩展的配置系统。
 
 

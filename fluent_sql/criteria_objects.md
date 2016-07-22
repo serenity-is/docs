@@ -1,16 +1,16 @@
-# Criteria Objects
+# Criteria 对象
 
-When you are creating dynamic SQL for SELECT, UPDATE or DELETE, you might have to write complex WHERE statements.
+当为 SELECT、 UPDATE 或 DELETE 创建动态 SQL 时，可能需要编写复杂的 WHERE 子句。
 
-Building these statements using string concentanation is possible but it is tedious to avoid syntax errors and opens your code to SQL injection attacks.
+也可以使用拼接字符串构建这些语句，但避免语法错误是很繁琐的事且容易遭到 SQL 注入攻击。
 
-Using parameters might solve SQL injection problems but it involves too much manual work to add parameters.
+使用参数化可以解决 SQL 注入问题，但为了添加参数需要过多的手动工作。
 
-Luckily, Serenity has a criteria system that helps you build parameterized queries with a syntax similar LINQ expression trees. 
+幸运的是，Serenity 有一个条件系统（criteria system），可以帮助你用类似 LINQ 表达式树的方式构建参数化的查询。
 
-Serenity criterias are implemented by utilitizing operator overloading features of C#, unlike LINQ which uses expression trees.
+Serenity criterias 是通过 C# 的运算符（utilitizing operator）重载特性来实现的，而不像 LINQ 使用表达式树。
 
-Let's write a basic SQL where statement as string first:
+让我们首先在 where 子句写一个基本的 SQL 字符串：
 
 ```cs
 new SqlQuery()
@@ -19,7 +19,7 @@ new SqlQuery()
     .Where("Month > 5 AND Year < 2015 AND Name LIKE N'%a%'")
 ```
 
-and same statement using criteria objects:
+使用 criteria 对象实现相同的声明：
 
 ```
 new SqlQuery()
@@ -31,7 +31,7 @@ new SqlQuery()
         new Criteria("Name").Contains("a")
 ```
 
-It looks a bit longer, but it uses parameters
+这看起来有点长，但它使用了参数：
 
 ```sql
 SELECT 
@@ -44,7 +44,7 @@ WHERE
     Name LIKE N'%a%'
 ```
 
-and you could write it with intellisense if you had an entity:
+如果你有一个实体，你可以在智能提示的帮助下写该语句：
 
 ```
 var m = MyTableRow.Fields;
@@ -57,71 +57,70 @@ new SqlQuery()
         m.Name.Contains("a")
 ```
 
-> Here we didn't have to use *new Criteria()* because field objects also has operator overloads that builds criteria.
+> 我们这里没有使用 *new Criteria()*，因为 Field 对象已经有构建条件的重载操作。
 
-## BaseCriteria Object
+## BaseCriteria 对象
 
-BaseCriteria is the base class for all types of criteria objects. 
+BaseCriteria 是所有条件（criteria）对象类型的基类。
 
-It has overloads for several C# operators, including `>`, `<`, `&`, `|` that can be used to build complex criteria using C# expressions.
+它重载了几个 C# 操作运算符，包括 `>`、 `<`、 `&`、 `|`，它们可以用在 C# 表态式中，以构建复杂的条件。
 
-BaseCriteria doesn't have a constructor of itself
-so you need to create one of the objects that derive from it. *Criteria* is the most common one that you might use.
+BaseCriteria 自身没有构造函数，所以你需要创建一个从它派生的对象。*Criteria* 可能是最常使用的一个子类。
 
-## Criteria Object
+## Criteria 对象
 
-Criteria is a simple object that contains an SQL expression as a string, which is usually a field name. 
+Criteria 是一个简单对象，包含 SQL 表达式的字符串，通常该字符串是一个字段名称。
 
 ```
 new Criteria("MyField")
 ```
 
-It can also contain an SQL expression (though not recommended this way)
+它也可以包含一个 SQL 表达式（尽管不建议使用这种方式）：
 
 ```
 new Criteria("a + b")
 ```
 
-This parameter is not syntax checked, so it is possible to build a criteria with invalid expression:
+系统不会检查该参数的语法，因此构建的条件中可能含有无效的表达式。
 
 ```
 new Criteria("Some invalid expression()///''^')
 ```
 
 
-## AND (&) Operator
+## AND (&) 操作
 
-It is possible to AND two criteria objects with C# `&` operator:
+可以使用 C# 的 `&` 运算符对两个条件对象进行 与（AND） 运算：
 
 ```
 new Criteria("Field1 > 5") &
 new Criteria("Field2 < 4")
 ````
 
-> Please notice that we are not using shortcircuit && operator here.
+> 请注意，我们这里不是使用短路运算符 && 。
 
-This creates a new criteria object (BinaryCriteria) with operator (AND) and reference to these two criterias. It doesn't modify original criteria objects.
+它使用运算符 (AND) 创建新的条件对象（BinaryCriteria），并引用这两个条件对象。它并不修改原始的条件对象。
 
-> BinaryCriteria is similar to BinaryExpression in expression trees
+> BinaryCriteria 类似于表达式树的二元表达式（BinaryExpression）。
 
-It's SQL output would be:
+它的 SQL 输出将是：
 
 ```sql
 Field1 > 5 AND Field2 < 4
 ```
 
-It is also possible to use C# &= operator:
+也可以使用 C# 的 &= 运算符：
 
 ```
 BaseCriteria c = new Criteria("Field1 > 5)";
 c &= new Criteria("Field2 < 4")
 ```
 
-> BaseCriteria is the base class for all criteria object types. If we used *Criteria c = ...* in the first line, we would have a compile time error on second line as & operator returns a BinaryCriteria object, which is not assignable to a Criteria object.
+> BaseCriteria 是所有条件对象类型的基类。如果在第一行使用 *Criteria c = ...*，第二行将得到编译时错误，因为 & 运算符返回 BinaryCriteria 对象，而不是返回 Criteria 对象。
 
-## OR (|) Operator
+## OR (|) 操作
 
-This is similar to AND operator, though it uses OR.
+类似于 AND 操作，但它使用 OR。
 
 ```
 new Criteria("Field1 > 5") |
@@ -132,62 +131,62 @@ new Criteria("Field2 < 4")
 Field1 > 5 OR Field2 < 4
 ```
 
-## Parenthesis Operator (~)
+## 括号操作 (~)
 
-When you are using several AND/OR statements, you might want to put paranthesis.
+当使用多个 AND/OR 子句，你可能想使用括号。
 
 ```
 new Criteria("Field1 > 5") &
 (new Criteria("Field2 > 7") | new Criteria("Field2 < 3"))
 ```
 
-But this won't work with criteria objects, as output of above criteria would be:
+但是这不可以与条件对象一起工作，因为上述的条件将输出：
 
 ```sql
 Field1 > 5 AND Field2 > 7 OR Field2 < 3
 ```
 
-> Information here applies to Serenity versions before 1.9.8. After this version Serenity puts paranthesis around all binary criteria (AND OR etc) even if you don't use paranthesis.
+> 这里的信息适用于 Serenity 1.9.8 之前的版本。在该版本之后，Serenity 在所有二元条件（AND 、OR 等）周围添加括号，即使你没有使用括号。
 
-> So only use ~ if you want to put an explicit parenthesis somewhere.
+> 所以，如果你想在某些地方显式地使用括号，你只能使用 ~ 。
 
 
-What happened to our paranthesis? Let's try putting more paranthesis.
+我们的括号被怎么处理？让我们试着添加更多的括号。
 
 ```
 new Criteria("Field1 > 5") &
 ((((new Criteria("Field2 > 7") | new Criteria("Field2 < 3")))))
 ```
 
-Still:
+一直还是输出：
 
 ```sql
 Field1 > 5 AND Field2 > 7 OR Field2 < 3
 ```
 
-C# doesn't provide a way to overload paranthesis, it just uses them to determine calculation order, so Serenity criteria has no idea if you used them with paranthesis or not.
+C# 没有提供重载括号的方法，它只被用来决定运算的顺序，因此，Serenity criteria 不能确定你是否在使用括号。
 
-We have to use a special operator, `~` (which is actually two's complement in C#):
+我们必须使用特殊的运算符：`~`（实际上它是 C# 的补码）。
 
 ```
 new Criteria("Field1 > 5") &
 ~(new Criteria("Field2 > 7") | new Criteria("Field2 < 3"))
 ```
 
-Now SQL looks like we hoped before:
+现在 SQL 看起来像我们之前所希望的：
 
 ```sql
 Field1 > 5 AND (Field2 > 7 OR Field2 < 3)
 ```
 
-> As Serenity 1.9.8+ auto paranthesis binary criteria, above expression would actually be:
+> 由于 Serenity 1.9.8+ 自动向二元条件添加括号，上面的表达式事实上将变为：
 >```sql
 >(Field1 > 5) AND (((Field2 > 7) OR (Field2 < 3)))
 >```
 
-## Comparison Operators (>, >=, <, <=, ==, !=)
+## 比较运算符 (>, >=, <, <=, ==, !=)
 
-The most of C# comparison operators are overloaded, so you can use them as is with criteria.
+我们重载了大多数 C# 比较运算符，所以你可以在条件中使用它们。
 
 ```
 new Criteria("Field1") == new Criteria("1") &
@@ -207,9 +206,9 @@ Field5 < 5 AND
 Field6 <= 6
 ```
 
-## Inline Values
+## 内联值（Inline Values）
 
-When one side of a comparison operator is a criteria and other side is an integer, string, date, guid etc. value, it is converted a parameter criteria.
+当比较运算符的一侧是条件对象，而另一侧是整数、字符串、日期、guid 等值，这些值将被转换为条件参数。
  
 ```
 new Criteria("Field1") == 1 &
@@ -227,11 +226,11 @@ Field4 >= @p4 AND
 Field5 < @p5
 ```
 
-These parameters has corresponding values, when a query containing this criteria is sent to SQL.
+当含有该条件的查询发送到 SQL，这些参数将具有相应的值。
 
-Automatic parameter numbering starts from 1 by default, but last number is stored in the query the criteria is used with, so numbers might change.
+自动参数编号默认从 1 开始，但最后一个编号存储在查询中，被条件使用，所以编号可能会变化。
 
-Let's use this criteria in a query:
+让我们在查询中使用该条件：
 
 ```
 new SqlQuery()
@@ -263,13 +262,13 @@ WHERE
   Field5 < @p7 -- @p7 = 5
 ```
 
-Here the same criteria that listed before, used parameter numbers starting from 3, instead of 1. Because prior 2 numbers where used for other WHERE statements coming before it.
+这里是与之前列出表达式有相同的条件，参数编号从 3 而不是 1 开始。因为 2 之前的编号被用于其他 WHERE 子句。
 
-So parameter numbering uses the query as context. You shouldn't make assumptions about what parameter name will be.
+所以参数编号使用查询作为上下文。你不应该做出参数名称将是什么的假设。
 
-## ParamCriteria and Explicit Param Names
+## ParamCriteria 和显式参数名
 
-If you want to use some explicitly named parameter, you can make use of ParamCriteria:
+如果想要使用一些显式命名的参数，你可以使用 ParamCriteria：
 
 ```cs
 new SqlQuery()
@@ -280,9 +279,9 @@ new SqlQuery()
     .SetParam("@myparam", 5);
 ```
 
-Here we set param value using SetParam extension of SqlQuery.
+我们这里使用 SqlQuery 的 SetParam 扩展方法设置参数的值。
 
-We could also declare this param beforehand and reuse it:
+也可以事先声明此参数，然后重用它：
 
 ```cs
 var myParam = new ParamCriteria("@myparam");
@@ -297,7 +296,7 @@ new SqlQuery()
 
 ## ConstantCriteria
 
-If you don't want to use parameterized queries, you may put your values as ConstantCriteria objects. They will not be converted to auto parameters.
+如果你不想使用参数化的查询，可以使用 ConstantCriteria 对象存储值。它们将不会转换为自动参数。
 
 ```
 new SqlQuery()
@@ -319,11 +318,11 @@ WHERE
   SecondOne >= N'ABC'
 ```
 
-## Null Comparison
+## Null 比较
 
-In SQL, comparing against NULL values using operators like `==`, `!=` returns NULL. You should use IS NULL or IS NOT NULL for such comparisons.
+在 SQL 中，使用像 ==，!= 的运算符比较 NULL 值，将返回 NULL。对于这样的比较，应使用 IS NULL 或 IS NOT NULL。
 
-Criteria objects don't overload comparisons against null (or object), so you may get errors if you try to write expressions like below:
+Criteria 对象没有重载防止 null（或 object）的比较，所以如果你尝试写下面的表达式，可能会得到错误：
 
 ```
 new Criteria("a") == null; // what is type of null?
@@ -332,7 +331,7 @@ int b? = null;
 new Criteria("c") == b; // no overload for nullable types
 ```
 
-These could be written using IsNull and Nullable.Value methods:
+这些表达式都可以使用 IsNull 和 Nullable.Value 方法编写：
 
 ```
 new Criteria("a").IsNull();
@@ -341,15 +340,15 @@ int? b = 5;
 new Criteria("c") == b.Value;
 ```
 
-If you are desperate to write Field = NULL, you could do this:
+如果你迫切希望这样写：Field = NULL，可以这样做：
 
 ```
 new Criteria("Field") == new Criteria("NULL")
 ```
 
-## LIKE Operators
+## LIKE 操作
 
-Criteria has methods *Like, NotLike, StartsWith, EndsWith, Contains, NotContains* to help with LIKE operations.
+Criteria 有 *Like, NotLike, StartsWith, EndsWith, Contains, NotContains* 方法，以帮助使用 LIKE 操作。
 
 ```cs
 new Criteria("a").Like("__C%") &
@@ -369,9 +368,9 @@ e LIKE @p5 AND -- @p5 = N'%This%'
 f NOT LIKE @p6 -- @p6 = N'%That%'
 ```
 
-## IN and NOT IN Operators
+## IN 和 NOT IN 操作
 
-Use an inline array to use IN or NOT IN:
+在内联数组中使用 IN 或 NOT IN：
 
 ```
 new Criteria("A").In(1, 2, 3, 4, 5)
@@ -391,7 +390,7 @@ A NOT IN (@p1, @p2, @p3, @p4, @p5)
 -- @p1 = 1, @p2 = 2, @p3 = 3, @p4 = 4, @p5 = 5
 ```
 
-You may also pass any enumerable to IN method:
+也可以向 IN 方法传递任何可枚举的参数：
 
 ```cs
 IEnumerable<int> x = new int[] { 1, 3, 5, 7, 9 };
@@ -403,7 +402,7 @@ A IN (1, 3, 5, 7, 9)
 -- @p1 = 1, @p2 = 3, @p3 = 5, @p4 = 7, @p5 = 9
 ```
 
-It is also possible to use a subquery:
+也可以使用子查询：
 
 ```cs
 var query = new SqlQuery()
@@ -433,9 +432,9 @@ WHERE
   )
 ```
 
-## NOT Operator
+## NOT 操作
 
-Use C# ! (not) operator to use NOT:
+使用 C# 的 ! (not) 运算符表示 NOT 运算操作：
 
 ```cs
 !(new Criteria("a") >= 5)
@@ -445,11 +444,11 @@ Use C# ! (not) operator to use NOT:
 NOT (a >= @p1) -- @p1 = 5
 ```
 
-## Usage with Field Objects
+## Field 对象的用法
 
-We have used Criteria object constructor so far to build criteria. Field objects also has similar overloads, so they can be used in place of them.
+到目前为止，我们已经使用 Criteria 对象构造函数来构建条件。Field 对象也有类似的重载，所以它们可以相互替代。
 
-For example, using Order, Detail and Customer rows from Northwind sample:
+例如，以 Northwind 的 Order、 Detail 和 Customer 行（row）为例：
 
 ```
 	var o = OrderRow.Fields.As("o");
@@ -475,7 +474,7 @@ For example, using Order, Detail and Customer rows from Northwind sample:
 				
 ```
 
-Its output would be:
+它将输出：
 
 ```sql
 SELECT 

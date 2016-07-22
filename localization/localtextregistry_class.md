@@ -1,8 +1,8 @@
-# LocalTextRegistry Class
+# LocalTextRegistry 类
 
-[**namespace**: *Serenity.Localization*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Localization*, **程序集**: *Serenity.Core*]
 
-This class is the embedded, default implementation of ILocalTextRegistry interface.
+此类是 ILocalTextRegistry 接口可嵌入的默认实现。
 
 ```cs
 public class LocalTextRegistry : ILocalTextRegistry
@@ -19,11 +19,11 @@ public class LocalTextRegistry : ILocalTextRegistry
 }
 ```
 
-Add and TryGet implements corresponding methods in ILocalTextRegistry interface.
+Add 和 TryGet 实现了 ILocalTextRegistry 接口的相应方法。
 
-## LocalTextRegistry.SetLanguageFallback Method
+## LocalTextRegistry.SetLanguageFallback 方法
 
-Sets language fallback for specified language.
+为语言回退（language fallback）设置指定的语言。
 
 ```cs
 var registry = (LocalTextRegistry)(Dependency.Resolve<ILocalTextRegistry>());
@@ -32,16 +32,16 @@ registry.SetLanguageFallback('en-UK', 'en-US');
 // it will be looked up in "en-US" language first, followed by "en".
 ```
 
-> More information about language fallbacks can be found in relevant section.
+> 可以在有关章节中找到有关语言回退的详细信息。
 
 
-## Registering LocalTextRegistry as Provider
+## 注册 LocalTextRegistry 作为提供者
 
-This is usually done in your application start method:
+通常在应用程序启动方法中做此操作：
 
 ```cs
 var registrar = Dependency.Resolve<IDependencyRegistrar>();
 registrar.RegisterInstance<ILocalTextRegistry>(new LocalTextRegistry());
 ```
 
-> *CommonInitialization.Run* or *CommonInitialization.InitializeLocalTexts* methods also register a LocalTextRegistry instance as the ILocalTextRegistry provider, if none is already registered.
+> 如果没有已注册的提供者，*CommonInitialization.Run* 或 *CommonInitialization.InitializeLocalTexts* 方法将注册一个 LocalTextRegistry 实例作为 ILocalTextRegistry 提供者。

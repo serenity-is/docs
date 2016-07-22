@@ -1,8 +1,8 @@
-# IConfigurationRepository Interface
+# IConfigurationRepository 接口
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-All applications have some kind of configuration. Scope, storage medium and format for these settings are different from application to application, so Serenity provides IConfigurationRepository interface to abstract access to this configuration.
+所有应用程序都有一些类型的配置。作用域（scope）、存储介质和格式化器的设置在不同应用程序间都是不相同的，因此，Serenity 提供 IConfigurationRepository 接口对此配置进行访问。
 
 ```cs
 public interface IConfigurationRepository
@@ -12,20 +12,20 @@ public interface IConfigurationRepository
 }
 ```
 
-## IConfigurationRepository.Load Method
+## IConfigurationRepository.Load 方法
 
-This method returns an instance of settingType. Provider should check SettingKey attribute to determine key for the setting type.
+此方法返回一个设置类型（settingType）实例。提供者会检查 SettingKey 特性来决定设置类型的键（key）。
 
-If same provider is registered for multiple scopes, provider should also check for SettingScope attribute.
+如果一些提供者被注册了多个作用域（scopes），提供者还应检查 SettingScope 特性。
 
-Provider should return an object instance, even if setting is not found (an object created with settingType's default constructor).
+即使没有找到设置（设置类型的默认构造函数会创建一个对象），提供者应返回一个对象实例。
 
-## IConfigurationRepository.Save Method
+## IConfigurationRepository.Save 方法
 
-Saves an instance of settingType. Provider should check SettingKey attribute to determine key for the setting type.
+保存设置类型（settingType）实例。提供者会检查 SettingKey 特性来决定设置类型的键（key）。
 
-If same provider is registered for multiple scopes, provider should also check for SettingScope attribute.
+如果一些提供者被注册了多个作用域（scopes），提供者还应检查 SettingScope 特性。
 
-This method is optional to implement, as you may not want settings to be changed. In this case, just throw a *NotImplementedException*.
+当你不想设置被改变时，此方法的实现是可选的。在这种情况下，只需抛出 *NotImplementedException* 异常。
 
 

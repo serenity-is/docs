@@ -1,6 +1,6 @@
-# JSON Local Texts
+# JSON 本地化文本
 
-Serenity supports local text registration through JSON files containing a simple key/value dictionary:
+Serenity 支持通过 JSON 文件注册包含键/值字典的本地化文本：
 
 ```json
 {
@@ -11,42 +11,42 @@ Serenity supports local text registration through JSON files containing a simple
 }
 ```
 
-To register all local text keys and translations from JSON files in a folder , call *JsonLocalTextRegistration.AddFromFilesInFolder* with the path:
+要从某一文件夹中的 JSON 文件注册本地化文本键和翻译，可调用 *JsonLocalTextRegistration.AddFromFilesInFolder*：
 
 ```cs
 JsonLocalTextRegistration.AddFromFilesInFolder(@"C:\SomeFolder");
 ```
 
-File names in the folder must follow a convention:
+文件夹中的文件名称必须遵循如下约定：
 
-`{Some Prefix You Choose}.{LanguageID}.json`
+`{前缀}.{LanguageID}.json`
 
-where `{LanguageID}` is two or four letter language code. Use *invariant* as language code for invariant language.
+`{LanguageID}` 是两个或四个字母的语言代码。使用 *invariant* 作为固定语言的语言代码。
 
-Some sample file names are:
+一些文件名称示例：
 
 - `site.texts.en-US.json`
 - `MyCoolTexts.es.json`
 - `user.texts.invariant.json`
 
-Files in a folder are parsed and added to registry in their file name order. Thus for sample file names above, order would be:
+文件夹的文件被解析并按文件名称的顺序注册。因此，以上面的文件名称为例，注册顺序应为：
 
 1. `MyCoolTexts.es.json`
 2. `site.texts.en-US.json`
 3. `user.texts.invariant.json`
 
-> This order is important as adding a translation in some language with same key overrides prior translation.
+> 因为添加具有相同健的翻译会覆盖先前的翻译，所以该顺序是很重要的。
 
-## CommonInitialization and Predetermined Folders
+## CommonInitialization 和 Predetermined 文件夹
 
-*CommonInitialization.Run* and *CommonInitialization.InitializeLocalTexts* calls this method for three predetermined locations under your web site:
+*CommonInitialization.Run* 和 *CommonInitialization.InitializeLocalTexts* 方法将在 web 站点下的三个预定位置获得翻译文本：
 
-1. `~/Scripts/serenity/texts` (serenity translations)
-2. `~/Scripts/site/texts` (your application specific translations)
-3. `~/App_Data/texts` (user translations made through translation interface)
+1. `~/Scripts/serenity/texts` (serenity 翻译)
+2. `~/Scripts/site/texts` (应用程序特定翻译)
+3. `~/App_Data/texts` (用户通过翻译窗体的翻译)
 
-Prefer using second one for your own files as first one is for Serenity resources.
+开发者自己的翻译文件请放在第二个路径下，因为第一个路径下的文件是 Serenity 资源。
 
-Third one contains user translated texts. It is recommended to transfer texts from these files to application translation files under `~/Scripts/site/texts` before publishing.
+第三个路径包含用户的翻译文本。在发布之前，建议把这些文本转移到应用程序 ~/Scripts/site/texts 下的翻译文件。
 
 

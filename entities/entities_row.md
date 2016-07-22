@@ -1,13 +1,13 @@
-# Entities (Row)
+# 实体(Row)
 
 
-Serenity entity system is a micro-orm that is in love with SQL just like Dapper. 
+Serenity 实体系统是一个微 ORM，它像 Dapper 那样对 SQL 情有独钟。
 
-Unlike full blown ORMs like NHibernate / Entity Framework, Serenity provides minimum features required to map and query databases with intellisense, compile time checking and easy refactoring.
+不同于完全成熟的ORM，如 NHibernate/Entity Framework，Serenity 提供智能感知地映射和查询数据库所需的最小功能、编译时检查和容易的重构。
 
-Serenity entities are usually named like *XYZRow*. They are subclasses of *Serenity.Data.Row*.
+Serenity 的实体通常像 *XYZRow* 这样命名。它们是 *Serenity.Data.Row* 子类。
 
-Let's define a simple row class:
+让我们来定义一个简单的行类：
 
 
 ```cs
@@ -44,23 +44,23 @@ public class SimpleRow : Row
 }
 ```
 
-> Yes, it looks a bit more complicated than a simple POCO class. This is required to make some features work without using proxy classes like some ORMs use (Entity Framework, NHibernate etc).
+> 是的，与一个简单的 POCO 类相比，它看起来有点复杂。它不需要像一些 Orm （实体框架，NHibernate 等）那样使用代理类来让一些功能工作。
 
-> This structure allows us to build queries with zero reflection, do assignment tracking, enable INotifyPropertyChanged when required. It makes it also possible to work with custom, user defined fields.
+> 这种结构使我们能够用零反射构建查询，在需要时启用 INotifyPropertyChanged 跟踪作业。它也可以与用户自定义的字段一起工作。
 
-> Rows are JSON serializable, so they can be returned from services without any problems. You don't need extra POCO/DTO classes unless you have a good reason to use them.
+> 行(Row)被序列化为 JSON ，这样就可以从服务器返回。你不需要额外的 POCO/DTO 类，除非你有使用它们的好理由。
 
-Let's study parts of a row declaration.
+让我们先学习行的声明部分。
 
 ```cs
 public class SimpleRow : Row
 ```
 
-Here we define an entity named SimpleRow, which probably maps to a table named `Simple` in database.
+我们在这里定义了一个名为 SimpleRow 的实体，它可能映射数据库中名为 `Simple` 的表。
 
-*Row* suffix here is not required, but common practice, and it prevents clashes with other class names.
+这里的 *Row* 后缀不是必须的，但通常加上该后缀可避免与其他的类名称发生冲突。
 
-All entity classes derive from `Serenity.Data.Row` base class.
+所有的实体类继承自 `Serenity.Data.Row` 基类。
 
 ```cs
 public string Name
@@ -70,11 +70,11 @@ public string Name
 }
 ```
 
-Now we declare our first property. This property maps to a database column named `Name` in the `Simple` table.
+我们现在声明第一个属性。此属性映射到数据库的 `Simple` 表 `Name` 列。
 
-It is not possible to use an auto property here (like `get; set;`). Field values must be read and set through a special object called *Field*.
+这里不能使用自动属性（如 `get; set;`）。必须通过称为 *Field* 的特定对象来读取和设置字段的值。
 
-Field objects are very similar to WPF dependency properties. Here is a dependency property declaration sample:
+Field 对象非常类似于 WPF 的依赖属性。下面是依赖属性的声明示例：
 
 ```cs
 public static readonly DependencyProperty MyCustomProperty = 
@@ -87,11 +87,11 @@ public string MyCustom
 }
 ```
 
-Here we define a static dependency property object (MyCustomProperty), that contains property metadata and allows us to set and get property value through its *GetValue* and *SetValue* methods. Dependency properties allows WPF to offer features like validation, data binding, animation, and more.
+我们在这里定义了一个静态依赖属性对象(MyCustomProperty)，它包含属性元数据可以允许我们通过 *GetValue* 和 *SetValue* 方法读取和设置属性的值。依赖属性允许 WPF 提供验证、 数据绑定、 动画及更多的功能。
 
-Similar to dependency properties, Field objects contains column metadata and clears way for some features like assignment tracking, building queries without expression trees, change notification etc.
+类似于依赖属性，Field 对象包含列的元数据和一些如任务跟踪（assignment tracking）、不使用表达式树构建的查询、变更通知等辅助功能。
 
-While dependency properties are declared as static members in class they are used, Field objects are declared in a nested class named RowFields. This allows to group and reference them easier, without having to add *Field* or *Property* suffix, and keeps our entity clear from field declarations.
+虽然依赖属性被声明为所使用类的静态成员， Field 对象在一个名为 RowFields 的嵌套类中声明。这样可更容易分组和获取引用，而不用添加 *Field* 或 *Property* 后缀，并从实体中保持清晰的字段声明。
 
 ```cs
 public Int32? Age
@@ -101,26 +101,26 @@ public Int32? Age
 }
 ```
 
-Here is our second property, named `Age`, with type `Int32?`.
+这是我们的第二个属性： `Int32?` 类型的 `Age`。
 
-Serenity entity properties are always nullable, even if database column is not nullable.
+Serenity 实体属性始终是可空的，即使数据库中的列类型不是可空类型。
 
-> Serenity never use zero in place of null.
+> Serenity 从不会在 null 的位置使用 0。
 
-This might seem unlogical, if you have a background of other ORMs, but consider this:
+如果你有使用其他 ORM 的经验，会发现这似乎不合逻辑，但请考虑这种情况：
 
-Is it not possible for a not null field to have a null value, if you query it through a left/right join? How can you say, if its retrieved value is null or zero in that case?
+一个非空字段不可能有 null 值，但如果通过 left/right 联接查询呢？在这种情况下，如果检索到的值是 null 或 0 ，你要怎么处理呢？
 
-> Reference types are already nullable, so you can't write `String?`.
+> 引用类型已经是可空类型，所以你不能使用 `String?`。
 
 ```cs
 public static RowFields Fields = new RowFields().Init();
 
 ```
 
-We noted that field objects are declared in a nested subclass named *RowFields* (usually). Here we are creating its sole static instance. Thus, there is only one RowFields instance per row type, and one field instance per row property.
+我们注意到，Field 对象在名为 *RowFields*（通常）嵌套子类中声明。在这里，我们创建它的唯一静态实例。因此，每个行类型(row type)只有一个 RowFields 实例，并且每个行属性(row property)只有一个 Field 实例 。
 
-`Init` is an extension method that initializes members of *RowFields*. It creates field objects that are not explictly initialized.
+`Init` 是初始化 *RowFields* 成员的扩展方法，它将创建没有显式初始化的 Field 对象。
 
 ```cs
 public SimpleRow()
@@ -129,7 +129,7 @@ public SimpleRow()
 }
 ```
 
-Now we define SimpleRow's parameterless constructor. Base *Row* class requires a RowFields instance to work, and we pass our static *Fields* object. So all instances of a row type (SimpleRow) share a single *RowFields* (SimpleRow.RowFields) instance. This means they share all the metadata.
+现在我们定义 SimpleRow 带参数的构造函数。基类 *Row* 需要一个 RowFields 实例，我们为其传递静态对象 *Fields* 。因此，行类型(SimpleRow)的所有实例共享单个 *RowFields* (SimpleRow.RowFields) 实例。这意味着它们共享所有元数据。
 
 ```cs
 public class RowFields : RowFieldsBase
@@ -139,15 +139,15 @@ public class RowFields : RowFieldsBase
 }
 ```
 
-Here we define our nested class that contains field objects. It should be derived from `Serenity.Data.RowFieldsBase`. *RowFieldsBase* is a special class closely related to *Row* that contains table metadata.
+我们在这里定义包含字段对象的嵌套类。它继承自 `Serenity.Data.RowFieldsBase`。*RowFieldsBase* 是一个与 *Row* 相关的特殊类，包含表的元数据。
 
-We declared a *StringField* and a *Int32Field*. Their type is based on their property types, and they must match exactly.
+我们分别声明一个 *StringField* 和 *Int32Field* 类型的字段。它们的类型基于其属性的类型，并且必须完全匹配。
 
-Their names must also match the property names, or you'll get an initialization error.
+它们的名称必须与属性名称匹配，否则你将得到一个初始化错误。
 
-We didn't initialize these field objects, so their values are initially null.
+我们没有初始化这些字段对象，因此它们的初始值为 null。
 
-Remember that we wrote `new RowFields().Init()` above. This is where field objects are automatically created.
+记得我们上面写的 `new RowFields().Init()`，这是字段对象自动创建的地方。
 
-> It's also possible to initialize them in RowFields constructor manually, but not recommended, except for special customizations.
+> 也可以在 RowFields 构造函数中手动初始化它们，但是除了需要特殊定制，不建议这样做。
 

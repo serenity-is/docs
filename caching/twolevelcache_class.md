@@ -1,8 +1,8 @@
-# TwoLevelCache Class
+# TwoLevelCache 类
 
-[**namespace**: *Serenity*] - [**assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity*] - [**程序集**: *Serenity.Core*]
 
-Out of the box, TwoLevelCache provides all functionality that we talked about so far and some more.
+开箱即用，TwoLevelCache 提供了我们讨论的所有甚至更多的功能。
 
 ```cs
     public static class TwoLevelCache
@@ -35,21 +35,21 @@ Out of the box, TwoLevelCache provides all functionality that we talked about so
     }
 ```
 
-## TwoLevelCache.Get Method
+## TwoLevelCache.Get 方法
 
-- Tries to read a value from local cache. If it is not found in there (or has an expired version), tries the distributed cache.
+- 试图从本地缓存中读取值。如果在本地缓存中找不到值（或已过期的版本），则尝试从分布式缓存中读取值。
 
-- If neither contains the specified key, produces value by calling a loader function and adds the value to local and distributed cache for a given expiration time.
+- 如果都不包含指定的键，通过调用加载函数生成值，并指定过期时间且将值添加到本地和分布式缓存。
 
-- There are two overloads of the Get method. One that takes expiration time for local and distributed caches separately, and another that has only one expiration parameter for both.
+- 这里有两个 Get 方法的重载：一个分别使用本地和分布式缓存过期时间；另一个让两种缓存方式都使用一个过期参数。
 
-- By using a group key, all items on both cache types that are members of this group can be expired at once (this is generation based expiration, not time).
+- 通过使用一个组键（group key），可以一次性让该组上的两种缓存类型的所有成员都过期 （这一组缓存信息都过期了）。
 
-> To avoid checking group generation every time an item that belongs to group is requested, group generation itself is also cached in local cache. Thus, when a generation number changes, local cached items might expire after 5 seconds.
+> 为了避免组代（group generation）每次都检查是否包含该项目，组代本身也缓存在本地缓存中。因此，当组成员改变时，本地缓存的项目会在 5 秒后过期。
 
-> This means that, if you use this strategy in a web farm setup, when a change occurs in one server, other servers might continue to use old local cached data for 5 seconds more.
+> 这意味着，如果你在组织网站群中使用这种策略，当其中一台服务器的缓存发生更改时，其他服务器可能会继续使用旧的本地缓存的数据（有 5 秒的延迟）。
 
-> If this is a problem for your configuration, you should use DistributedCache methods directly instead of depending on TwoLevelCache.
+> 如果这是配置问题，应该直接使用 DistributedCache 方法而不是依赖于 TwoLevelCache。
 
 ![TwoLevelCache.Get Flow Diagram](img/two_level_cache_get_en.jpg)
 
@@ -73,39 +73,39 @@ CachedProfile LoadProfileFromDB(IDbConnection connection, int userID)
 }
 ```
 
-## TwoLevelCache.GetWithCustomSerializer Method
+## TwoLevelCache.GetWithCustomSerializer 方法
 
-TwoLevelCache.Get stores cached data in both local cache and distributed cache. While storing cached items in local cache, serialization is not required (in-memory). But before items are sent to distributed cache, some kind of serialization (binary, json etc.) must be performed (depends on provider and data type).
+TwoLevelCache.Get 将缓存的数据存储在本地和分布式缓存。当在本地缓存存储缓存项目时，不需要序列化（在内存）。但是在项目发送到分布式缓存之前，必须执行（取决于提供者和数据类型）一些序列化（二进制、json 等）。 
 
-Sometimes this serialization / deserialization operation can be costly, so you might want to provide your own implementation of these functions for your data type.
+有时该序列化/反序列化操作是昂贵的，所以你可能想自己实现数据类型序列化的功能。
 
-GetWithCustomSerializer takes two extra delegate arguments to serialize and deserialize values. You might return a string or byte array from serialization function, and in deserialization take this string or byte array and turn it back into your original data type.
+GetWithCustomSerializer  有两个额外的序列化和反序列化委托参数。可以从序列化函数返回一个字符串或字节数组，并且在反序列化过程中使用此字符串或字节数组将其转换回原来的数据类型。
 
-> Most providers handle simple types like int, string or byte[] effectively, so for such data types you don't need custom serialization.
+> 大多数提供者可有效地处理简单的类型，如 int、 string 或 byte[]，所以对于这种数据类型，你不需要自定义序列化。
 
-## TwoLevelCache.GetLocalStoreOnly Method
+## TwoLevelCache.GetLocalStoreOnly 方法
 
-If you only want to store items in local cache and not distributed cache, GetLocalStoreOnly can be useful.
+如果你只想在本地缓存中存储数据，可以使用 GetLocalStoreOnly 方法。
 
-When cached data by one server is not helpful for others (changes from server to server), so big or slow to serialize / deserialize, storing such data in distributed cache is not meaningful.
+当缓存的数据由一台服务器存储时，该数据对其他服务器没有帮助（从服务器到服务器的更改），因此，在分布式缓存中存储大的或者慢的序列化/反序列化数据是没有意义的。
 
-So, why shouldn't you use LocalCache directly in this case?
+因此，在这种情况下，为什么不直接使用本地缓存呢？
 
-You could but not if you want to specify a group key, and expire local cached items easily when source data of that group changes (as if they are stored in distributed cache).
+可以这么做。但是如果想指定一组键（group key），而且当该组的源数据改变时，本地缓存项目可以很容易过期（就好像它们存储在分布式缓存），就不应该这么做。
 
 
-## TwoLevelCache.ExpireGroupItems Method
+## TwoLevelCache.ExpireGroupItems 方法
 
-This method allows you to expire all items that are members of one group key. It simply removes group key from local cache and distributed cache, so another version will be generated next time it is queried.
+此方法允许使一个组键（group key）的所有成员的都过期。它只是从本地和分布式缓存中删除组键，因此在下一次查询时将会生成另一个版本的缓存数据。
 
 ```cs
 TwoLevelCache.ExpireGroupItems("SomeGroupKey");
 ```
 
-> You should call this from methods that change data.
+> 应该在修改数据的方法中调用此方法。
 
-> If your entity class has *TwoLevelCached* attribute on it, *Create, Update, Delete and Undelete* handlers do this automatically with *ConnectionKey.TableName* as group key.
+> 如果实体类有 *TwoLevelCached* 特性，*Create、Update、Delete 和 Undelete* 使用 *ConnectionKey.TableName*  作为组键自动做缓存过期处理。
 
-## TwoLevelCache.Remove Method
+## TwoLevelCache.Remove 方法
 
-Removes an item and its version from local and distributed cache.
+从本地和分布式缓存中移除项目和其版本。

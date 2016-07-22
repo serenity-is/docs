@@ -1,8 +1,8 @@
-# IUserRetrieveService Interface
+# IUserRetrieveService 接口
 
-[**namespace**: *Serenity.Abstractions*, **assembly**: *Serenity.Core*]
+[**命名空间**: *Serenity.Abstractions*, **程序集**: *Serenity.Core*]
 
-When Serenity needs to access IUserDefinition object for a given user name or user ID, it uses this interface.
+当 Serenity 需要使用给定的用户名或者用户 ID 访问 IUserDefinition 对象时，它需要使用该接口。
 
 ```cs
 public interface IUserRetrieveService
@@ -12,9 +12,9 @@ public interface IUserRetrieveService
 }
 ```
 
-In your implementation, it is a good idea to cache user definition objects, as a common WEB application might use this interface repeatedly for same user.
+在你的实现中，缓存用户定义对象是一个好主意，因为通常 WEB 应用程序的同一用户可能重复使用此接口。
 
-Serenity Basic Application sample has an implementation like below:
+Serenity 基本应用程序示例已经有该接口的实现，如：
 
 ```cs
 public class UserRetrieveService : IUserRetrieveService

@@ -1,16 +1,16 @@
-# CommonInitialization Static Class
+# CommonInitialization 静态类
 
-[**namespace**: *Serenity.Web*, **assembly**: *Serenity.Web*]
+[**命名空间**: *Serenity.Web*, **程序集**: *Serenity.Web*]
 
-If you are going to use defaults in a web environment, instead of doing the service locator setup and some other configuration manually, you may just call *CommonInitialization.Run()* in your application start method. CommonInitialization registers default implementations for some of Serenity abstractions.
+如果要在 web 环境中使用默认设置，而不是手动组织服务定位器和其他配置，你只需在应用程序启动方法中调用 *CommonInitialization.Run()*。CommonInitialization 为一些 Serenity 抽象注册默认实现。
 
 ```cs
 CommonInitialization.Run();
 ```
 
-> If there is already a provider registered for some abstraction, CommonInitialization doesn't override them.
+> 如果已经为一些抽象注册了提供者，CommonInitialization 不会覆盖它们。
 
-This method contains calls to some other methods to initialize Serenity platform defaults:
+此方法包含调用一些其他的方法来初始化 Serenity 平台的默认值：
 
 ```
 public static class CommonInitialization
@@ -38,7 +38,7 @@ public static class CommonInitialization
 }
 ```
 
-> CommonInitialization.InitializeServiceLocator and other methods may also be used individually instead of calling CommonInitialization.Run.
+> CommonInitialization.InitializeServiceLocator 和其他方法也可以单独地使用，而不需要调用 CommonInitialization.Run。
 
-*InitializeServiceLocator()*, registers a MunqContainer instance as the default IDependencyResolver implementation.
+*InitializeServiceLocator()* 注册一个 MunqContainer 实例作为 IDependencyResolver 的默认实现。
 

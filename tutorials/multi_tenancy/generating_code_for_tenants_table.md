@@ -1,10 +1,10 @@
-# Generating Code for Tenants Table
+# 为租户（Tenants）生成代码
 
-Launch *Sergen* and generate code for *Tenants* table in *Default* connection:
+启动 *Sergen* ，并使用 *Default* 连接为 *租户（Tenants）*表生成代码。
 
 ![Tenants Table](img/sergen_tenant.png)
 
-Next we'll define a lookup script in *TenantRow* and set InstanceName property to *Tenant*:
+然后，我们在 *TenantRow* 定义检索脚本，并把 InstanceName 属性设置为 *Tenant*：
 
 ```cs
 
@@ -26,7 +26,7 @@ namespace MultiTenancy.Administration.Entities
 //...
 ```
 
-Let's define a Administration:Tenants permission that only *admin* user will have:
+让我们定义一个只有 *admin* 用户有的 Administration:Tenants 权限：
 
 ```cs
 namespace MultiTenancy.Administration
@@ -40,7 +40,7 @@ namespace MultiTenancy.Administration
 }
 ```
 
-And set it on TenantRow:
+并把它设置到 TenantRow：
 
 ```cs
 [ConnectionKey("Default"), DisplayName("Tenants"), InstanceName("Tenant"), TwoLevelCached]

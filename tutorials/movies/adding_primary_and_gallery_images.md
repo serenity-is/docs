@@ -1,6 +1,6 @@
-# Adding Primary and Gallery Images
+# 添加海报（Primary）和简介（Gallery）图片
 
-To add a primary image and multiple gallery images to both Movie and Person records, need to start with a migration:
+需要分别给人员（Person）和影片（Movie）记录添加一张海报和多张简介图片。让我们从迁移类开始：
 
 ```cs
 using FluentMigrator;
@@ -28,7 +28,7 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
-Then modify MovieRow.cs and PersonRow.cs:
+然后修改 MovieRow.cs 和 PersonRow.cs：
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -100,31 +100,31 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Here we specify that these fields will be handled by *ImageUploadEditor* and *MultipleImageUploadEditor* types.
+我们指定这些字段将由 *ImageUploadEditor* 和 *MultipleImageUploadEditor* 类型处理。
 
-FilenameFormat specifies the naming of uploaded files. For example, Person primary image will be uploaded to a folder under *App_Data/upload/Person/PrimaryImage/*.
+FilenameFormat 指定上传文件的命名方式。例如，人员的海报图片将上传到 App_Data/upload/Person/PrimaryImage/ 目录下面。
 
-> You may change upload root (*App_Data/upload*) to anything you like by modifying  *UploadSettings* appSettings key in web.config.
+> 你可以通过  web.config 文件的 appSettings 节点下的 *UploadSettings* 配置，把保存上传文件的根目录 (*App_Data/upload*) 修改为任意文件目录。
 
-`~` at the end of FilenameFormat is a shortcut for the automatic naming scheme `{1:00000}/{0:00000000}_{2}`.
+`~`  FilenameFormat 的末尾是自动命名方案的快捷方式 `{1:00000}/{0:00000000}_{2}`。
 
-Here, parameter {0} is replaced with identity of the record, e.g. PersonID.
+在这里，参数 {0} 替换为记录的标识，如，PersonID。
 
-Parameter {1} is identity / 1000. This is useful to limit number of files that is stored in one directory.
+参数 {1} 是 1000 以内的整数标识。 这对在一个目录中的保存文件数进行限制是很有帮助的。
 
-Parameter {2} is a unique string like *6l55nk6v2tiyi*, which is used to generate a new file name on every upload. This helps to avoid problems caused by caching on client side.
+参数 {2} 是一个唯一的字符串，例如 6l55nk6v2tiyi，它用于为每个上传文件生成一个新的文件名，这有助于避免客户端缓存所造成的问题。
 
-> It also provides some security so file names can't be known without having a link.
+> 它还提供了一些安全措施，因此在没有链接的情况下不能知道文件名称。
 
-Thus, a file we upload for person primary image will be located at a path like this:
+因此，我们把上传的人员海报图片文件存放在如下路径：
 
 ```
 > App_Data\upload\Person\PrimaryImage\00000\00000001_6l55nk6v2tiyi.jpg
 ```
 
-> You don't have to follow this naming scheme. You can specify your own format like `PersonPrimaryImage_{0}_{2}`.
+> 你不必遵守此命名方案，也可以指定你自己的格式，如 `PersonPrimaryImage_{0}_{2}`。
 
-Next step is to add these fields to forms (MovieForm.cs and PersonForm.cs):
+下一步，把这些字段添加到表单（MovieForm.cs 和 PersonForm.cs）：
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
@@ -169,7 +169,7 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-I also modified Person dialog css a bit to have more space:
+我还修改了人员对话框的 css，让其有更多的空间：
 
 ```css
 .s-MovieDB-PersonDialog {
@@ -179,20 +179,20 @@ I also modified Person dialog css a bit to have more space:
 }
 ```
 
-This is what we get now:
+这就是我们现在的窗体：
 
 ![Person with Images](img/mdb_person_keanu.png)
 
-> ImageUploadEditor stores file name directly in a string field, while MultipleImageUpload editor stores file names in a string field with JSON array format.
+> ImageUploadEditor 直接在一个字符串字段中存储文件名，而 MultipleImageUpload 编辑器将文件名使用 JSON 数组格式存储在字符串字段中。
 
 
-### Removing Northwind and Other Samples
+### 删除 Northwind 和 其他 示例 
 
-As i think our project has reached a good state, i'm now going to remove Northwind and other samples from MovieTutorial project.
+我认为我们的项目达到了良好的状态，现在我要从 MovieTutorial 项目中删除 Northwind 和其他示例。
 
-See following how-to topic:
+请参见如下帮助主题：
 
-[How To: Removing Northwind and Other Samples](../../howto/removing_northwind.md)
+[如何删除 Northwind 和 其他 示例](../../howto/removing_northwind.md)
 
 
 

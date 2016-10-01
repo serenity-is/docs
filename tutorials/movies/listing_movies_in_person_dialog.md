@@ -243,7 +243,7 @@ namespace MovieTutorial.MovieDB
         {
             super.afterLoadEntity();
 
-            moviesGrid.personID = this.entityId;
+            this.moviesGrid.personID = this.entityId;
         }
     }
 }

@@ -35,7 +35,7 @@ using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20151025170200)]
+    [Migration(20160528141600)]
     public class DefaultDB_20160528_141600_PersonAndMovieCast : Migration
     {
         public override void Up()

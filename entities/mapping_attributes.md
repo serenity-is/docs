@@ -271,7 +271,7 @@ public class CustomerRow : Row
 	}
 ```
 
-Here we specified that *Cities* table should be assigned alias `c` when joined, and its join type should be `LEFT JOIN`. The join `ON` expression is determined as `c.[Id] == T0.[CountryId]` with some help from *ForeignKey* attribute.
+Here we specified that *Cities* table should be assigned alias `c` when joined, and its join type should be `LEFT JOIN`. The join `ON` expression is determined as `c.[Id] == T0.[CityId]` with some help from *ForeignKey* attribute.
 
 > LEFT JOIN is preferred as it allows to retrieve all records from *left* table, *Customers*, even if they don't have a CityId set.
 

@@ -1,6 +1,6 @@
 # How To: Add Inline Action Buttons To Grid
 
-** This section is pending update for TypeScript **
+** This section was written for Saltaralle. For TypeScript version, see Serene => Basic Samples => Grids => Inline Action Buttons **
 
 You may add some inline action icons to grid columns, to delete current row, open a dialog, call a service etc.
 

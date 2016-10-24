@@ -20,6 +20,8 @@ Perform steps below in Visual Studio:
 
 ### Removing Navigation Items
 
+Navigation items for these modules are moved under relevant modules folder in v2.5.3. If you are using an older version,
+
 * Open *MyProject.Web/Modules/Common/Navigation/NavigationItems.cs*, remove all lines with *Northwind*, *Basic Samples* and *Theme Samples* and remove these two lines:
 
 ```
@@ -57,6 +59,8 @@ Also remove *Northwind* connection string from *web.config*.
 
 * Remove *MyProject.Web/Content/site/site.basicsamples.less* file.
 * Remove *MyProject.Web/Content/site/site.northwind.less* file.
+
+* Open *MyProject.Web/Content/site/rtl.css* file, remove sections with Northwind.
 
 ### Removing Localization Texts
 

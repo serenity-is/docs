@@ -20,4 +20,4 @@ Update-Package Serenity.Web
 Update-Package Serenity.CodeGenerator
 ```
 
-Updating these three packages will also update others (because of dependencies).
+Updating these two packages will also update others (because of dependencies).

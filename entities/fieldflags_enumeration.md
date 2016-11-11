@@ -16,7 +16,7 @@ public enum FieldFlags
     Foreign = 32,
     Calculated = 64,
     Reflective = 128,
-    ClientSide = 256,
+    NotMapped = 256,
     Trim = 512,
     TrimToEmpty = 512 + 1024,
     DenyFiltering = 2048,
@@ -184,7 +184,7 @@ If a field has an expression involving more than one field or some mathematical 
 
 This could also be set for fields that are calculated on SQL server side.
 
-## ClientSide Flag and ClientSide Attribute
+## NotMapped Flag and NotMapped Attribute
 
 Corresponds to an unmapped field in Serenity entities. They don't have a corresponding field in database table. 
 

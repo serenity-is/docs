@@ -117,7 +117,7 @@ Now, build your project and transform templates.
 Open CustomerRow.cs and locate Representatives property:
 
 ```cs
-[LookupEditor(typeof(EmployeeRow), Multiple = true), ClientSide]
+[LookupEditor(typeof(EmployeeRow), Multiple = true), NotMapped]
 [LinkingSetRelation(typeof(CustomerRepresentativesRow), 
     "CustomerId", "EmployeeId")]
 public List<Int32> Representatives
@@ -130,7 +130,7 @@ public List<Int32> Representatives
 Here we see that Representatives uses a LookupEditor with multiple option true. We'll replace it with our brand new editor:
 
 ```cs
-[BSMultiSelectEditor(LookupKey = "Northwind.Employee"), ClientSide]
+[BSMultiSelectEditor(LookupKey = "Northwind.Employee"), NotMapped]
 [LinkingSetRelation(typeof(CustomerRepresentativesRow), 
     "CustomerId", "EmployeeId")]
 public List<Int32> Representatives

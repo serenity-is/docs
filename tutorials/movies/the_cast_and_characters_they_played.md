@@ -725,7 +725,7 @@ namespace MovieTutorial.MovieDB.Entities
     // ...
     public sealed class MovieRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Cast List"), SetFieldFlags(FieldFlags.ClientSide)]
+        [DisplayName("Cast List"), NotMapped]
         public List<MovieCastRow> CastList
         {
             get { return Fields.CastList[this]; }
@@ -744,7 +744,7 @@ namespace MovieTutorial.MovieDB.Entities
 
 We defined a CastList property that will accept a *List* of MovieCastRow objects. The type of *Field* class that is used for such row list properties is *RowListField*.
 
-By adding *[SetFieldFlags(FieldFlags.ClientSide)]* attribute, we specified that this field is not available directly in database table, thus can't be selected through simple SQL queries. It is analogous to an unmapped field in other ORM systems.
+By adding *[NotMapped]* attribute, we specified that this field is not available directly in database table, thus can't be selected through simple SQL queries. It is analogous to an unmapped field in other ORM systems.
 
 Now, when you click the Save button, you will not get an error.
 
@@ -884,7 +884,7 @@ Open MovieRow.cs and modify *CastList* property:
 
 ```cs
 [MasterDetailRelation(foreignKey: "MovieId", IncludeColumns = "PersonFullname")]
-[DisplayName("Cast List"), SetFieldFlags(FieldFlags.ClientSide)]
+[DisplayName("Cast List"), NotMapped]
 public List<MovieCastRow> CastList
 {
     get { return Fields.CastList[this]; }

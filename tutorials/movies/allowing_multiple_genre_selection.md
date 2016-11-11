@@ -149,7 +149,7 @@ public MovieKind? Kind
 }
 
 [DisplayName("Genres")]
-[LookupEditor(typeof(GenreRow), Multiple = true), ClientSide]
+[LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]
 [LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
 public List<Int32> GenreList
 {
@@ -166,7 +166,7 @@ public class RowFields : RowFieldsBase
 
 Our property has [LookupEditor] attribute just like *GenreId* property had, but with one difference. This one accepts multiple genre selection. We set it with *Multiple = true* argument.
 
-This property also has *ClientSide* flag, which is something similar to *Unmapped* fields in Serenity. It specifies that this property has no matching database column in database. 
+This property also has *NotMapped* flag, which is something similar to *Unmapped* fields in Serenity. It specifies that this property has no matching database column in database. 
 
 We don't have a *GenreList* column in *Movie* table, so we should set it as an unmapped field. Otherwise, Serenity will try to *SELECT* it, and we'll get SQL errors.
 

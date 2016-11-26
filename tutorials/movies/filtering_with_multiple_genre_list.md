@@ -18,7 +18,8 @@ As soon as you type a Genre into Genres you'll have this error:
 
 ![Invalid Column GenreList](img/mdb_genrelist_invalid.png)
 
-> As of Serenity 2.6.3, LinkingSetRelation will automatically handle equality filter for its field, so you won't get this error and it will just work. Anyway, it's recommended to follow steps below as it is a good sample for defining custom list requests when required.
+> As of Serenity 2.6.3, LinkingSetRelation will automatically handle equality filter for its field, so you won't get this error and it will just work. 
+> Anyway, it's recommended to follow steps below as it is a good sample for defining custom list requests and handling them when required.
 
 ListHandler tried to filter by GenreList field, but as there is no such column in database, we got this error.
 

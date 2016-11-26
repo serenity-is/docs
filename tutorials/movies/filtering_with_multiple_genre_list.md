@@ -14,14 +14,13 @@ public class MovieColumns
     public List<Int32> GenreList { get; set; }
 }
 ```
-
 As soon as you type a Genre into Genres you'll have this error:
 
 ![Invalid Column GenreList](img/mdb_genrelist_invalid.png)
 
-ListHandler tried to filter by GenreList field, but as there is no such column in database, we got this error.
+> As of Serenity 2.6.3, LinkingSetRelation will automatically handle equality filter for its field, so you won't get this error, it will just work. Anyway, it's recommended to follow steps below as it is a good sample for defining custom list requests when required.
 
-> Actually, LinkingSetRelation should be able to intercept this filter and convert it into an EXISTS subquery, but list behaviors can't do that yet. Maybe in a later version...
+ListHandler tried to filter by GenreList field, but as there is no such column in database, we got this error.
 
 So, now we have to handle it somehow.
 

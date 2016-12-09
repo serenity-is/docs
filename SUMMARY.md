@@ -50,7 +50,6 @@
    * [How To: Authenticate With Active Directory or LDAP](howto/how_to_authenticate_with_active_directory_or_ldap.md)
    * [How To: Set Database Dialect for Connections](howto/how_to_set_database_dialect_for_connections.md)
    * [How To: Use a SlickGrid Formatter](howto/how_to_use_a_slickgrid_formatter.md)
-   * [How To: Add Inline Action Buttons To Grid](howto/how_to_add_inline_action_buttons_to_grid.md)
    * [How To: Add a Row Selection Column](howto/how_to_add_a_row_selection_column.md)
    * [How To: Setup Cascaded Editors](howto/how_to_setup_cascaded_editors.md)
    * [How To: Use Recaptcha](howto/how_to_use_recaptcha.md)

@@ -56,7 +56,7 @@
    * [How To: Register Permissions in Serene](howto/how_to_register_permissions_in_serene.md)
    * [How To: Use a Third Party Plugin With Serenity](howto/how_to_use_a_third_party_plugin_with_serenity.md)
    * [How To: Enable Script Bundling](howto/how_to_enable_script_bundling.md)
-   * Debugging with Serenity Sources
+   * How To: Debugging with Serenity Sources
 * [Frequently Asked Questions](faq/frequently_asked_questions.md)
 * [Troubleshooting](faq/troubleshooting.md)
 * [Service Locator & Initialization](service_locator/README.md)

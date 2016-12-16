@@ -1,6 +1,6 @@
 # Attributes
 
-## AlignCenterAttribute
+## AlignCenter Attribute
 
 [**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
 
@@ -10,7 +10,7 @@ Centers text horizontally.
 
 * Note that it has no effect on editors or forms.
 
-## AlignRightAttribute
+## AlignRight Attribute
 
 [**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
 
@@ -20,7 +20,7 @@ Right aligns text horizontally.
 
 * Note that it has no effect on editors or forms.
 
-## VisibleAttribute
+## Visible Attribute
 
 [**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
 
@@ -39,7 +39,7 @@ public class SomeColumns
 }
 ```
 
-## HiddenAttribute
+## Hidden Attribute
 
 [**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
 

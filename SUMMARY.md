@@ -120,7 +120,7 @@
     * [Widget With Options](widgets/widget_with_options.md)
     * [TemplatedWidget Class](widgets/templated_widget_class.md)
     * [TemplatedDialog Class](widgets/templated_dialog_class.md)
-* [Attributes](attributes.md)
+* [Attributes](attributes/readme.md)
 * [Grids](grids/readme.md)
     * [Formatter Types](grids/formatter_types.md)
     * [Persisting Settings](grids/persisting_settings.md)

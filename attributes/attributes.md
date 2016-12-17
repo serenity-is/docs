@@ -202,6 +202,16 @@ public class SomeForm
 }
 ```
 
+## Hint Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Sets a hint for a form field.
+
+* Hint is shown when field label is hovered.
+
+* This has no effect on columns.
+
 ## Ignore Attribute
 
 > **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*

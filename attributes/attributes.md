@@ -1,5 +1,4 @@
-#
-Attributes
+# Attributes
 
 ## AlignCenter Attribute
 
@@ -90,8 +89,3 @@ public class SomeForm
 public string ReadOnlyOnUpdate { get; set; }
 }
 ```
-
-
-
-
-

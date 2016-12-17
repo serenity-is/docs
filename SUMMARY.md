@@ -126,4 +126,3 @@
     * [Persisting Settings](grids/persisting_settings.md)
 * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
-

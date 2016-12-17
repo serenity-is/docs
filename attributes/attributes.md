@@ -31,10 +31,10 @@ It is also possible to hide a field by passing *false* as its value.
 ```cs
 public class SomeColumns
 {
-[Visible]
-public string ExplicitlyVisible { get; set; }
-[Visible(false)]
-public string ExplicitlyHidden { get; set; }
+    [Visible]
+    public string ExplicitlyVisible { get; set; }
+    [Visible(false)]
+    public string ExplicitlyHidden { get; set; }
 }
 ```
 
@@ -49,8 +49,8 @@ This is just a subclass of *VisibleAttribute* with *false* value.
 ```cs
 public class SomeColumns
 {
-[Hidden]
-public string HiddenColumn { get; set; }
+    [Hidden]
+    public string HiddenColumn { get; set; }
 }
 ```
 
@@ -67,8 +67,8 @@ Controls if a property is editable in new record mode.
 ```cs
 public class SomeForm
 {
-[Insertable(false)]
-public string ReadOnlyOnNew { get; set; }
+    [Insertable(false)]
+    public string ReadOnlyOnNew { get; set; }
 }
 ```
 
@@ -85,7 +85,7 @@ Controls if a property is editable in edit record mode.
 ```cs
 public class SomeForm
 {
-[Updatable(false)]
-public string ReadOnlyOnUpdate { get; set; }
+    [Updatable(false)]
+    public string ReadOnlyOnUpdate { get; set; }
 }
 ```

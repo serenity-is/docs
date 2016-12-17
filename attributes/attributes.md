@@ -26,7 +26,7 @@ Right aligns text horizontally.
 
 Controls visibility of a column or form field.
 
-It is also possible to hide a field by passing *false* as its value.
+It is also possible to hide a field by passing *false* as its value, but [Hidden] attribute is recommended.
 
 ```cs
 public class SomeColumns
@@ -57,6 +57,42 @@ public class SomeColumns
 ```
 
 * User might still show the column by using the column picker if any.
+
+## HideOnInsert Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Controls whether a field is visible on new record mode.
+
+* This only works with forms, not columns.
+
+```cs
+public class SomeColumns
+{
+    [HideOnInsert]
+    public string HideMeOnInsert { get; set; }
+    [HideOnInsert(false)]
+    public string DontHideMeOnInsert { get; set; }
+}
+```
+
+## HideOnUpdate Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Controls whether a field is visible on edit record mode.
+
+* This only works with forms, not columns.
+
+```cs
+public class SomeColumns
+{
+    [HideOnUpdate]
+    public string HideMeOnUpdate { get; set; }
+    [HideOnUpdate(false)]
+    public string DontHideMeOnUpdate { get; set; }
+}
+```
 
 ## Insertable Attribute
 

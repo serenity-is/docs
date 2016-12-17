@@ -38,6 +38,8 @@ public class SomeColumns
 }
 ```
 
+* User might still show the column by using the column picker if any.
+
 ## Hidden Attribute
 
 > **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
@@ -53,6 +55,8 @@ public class SomeColumns
     public string HiddenColumn { get; set; }
 }
 ```
+
+* User might still show the column by using the column picker if any.
 
 ## Insertable Attribute
 
@@ -148,5 +152,21 @@ public class SomeColumns
 {
     [Ignore]
     public string DontGenerateAColumnForMe { get; set; }
+}
+```
+
+## Placeholder Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Sets a placeholder for a form field.
+
+* Placeholder is shown inside the editor with gray color when editor value is empty.
+
+```cs
+public class SomeForm
+{
+    [Placeholder("Show this inside the editor when it is empty")]
+    public string FieldWithPlaceHolder { get; set; }
 }
 ```

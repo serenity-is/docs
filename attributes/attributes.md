@@ -142,7 +142,7 @@ public class SomeEnum
 
 Sets the display format for a column.
 
-* This has no effect on editors! It is only for Display, **NOT Editing**. For editing, you have to change UI culture.
+* This has no effect on editors! It is only for Display, **NOT Editing**. For editing, you have to change UI culture in web.config.
 
 * Display format strings are specific to column data and formatter type.
 

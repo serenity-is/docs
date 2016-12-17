@@ -1,25 +1,5 @@
 # Attributes
 
-## AlignCenter Attribute
-
-> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
-
-Centers text horizontally.
-
-* Used to control text alignment in grids by adding `align-center` CSS class to corresponding SlickGrid column.
-
-* Note that it has no effect on editors or forms.
-
-## AlignRight Attribute
-
-> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
-
-Right aligns text horizontally.
-
-* Used to control text alignment in grids by adding `align-right` CSS class to corresponding SlickGrid column.
-
-* Note that it has no effect on editors or forms.
-
 ## Visible Attribute
 
 > **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
@@ -247,6 +227,82 @@ Sets a hint for a form field.
 * Hint is shown when field label is hovered.
 
 * This has no effect on columns.
+
+```cs
+public class SomeForm
+{
+    [Placeholder("Show this when my caption is hovered")]
+    public string FieldWithHint { get; set; }
+}
+```
+
+## CssClass Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Sets CSS class for grid columns and form fields.
+
+* In forms, class is added to container div with .field class that contains both label and editor.
+
+* For columns, it sets cssClass property of SlickColumn, which adds this class to slick cells for all rows.
+
+* Slick column headers are not affected by this attribute, use `[HeaderCssClass]` for that.
+
+```cs
+public class SomeForm
+{
+    [CssClass("extra-class")]
+    public string FieldWithExtraClass { get; set; }
+}
+
+public class SomeColumn
+{
+    [CssClass("extra-class")]
+    public string CellWithExtraClass { get; set; }
+}
+```
+
+## HeaderCssClass Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Sets CSS class for grid column headers.
+
+* This has no effect for forms.
+
+* It sets headerCss property of SlickColumn, which adds this class to slick header for that column.
+
+```cs
+public class SomeColumn
+{
+    [HeaderCssClass("extra-class")]
+    public string FieldWithExtraHeaderClass { get; set; }
+}
+```
+
+## AlignCenter Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Centers text horizontally.
+
+* Used to control text alignment in grids by adding `align-center` CSS class to corresponding SlickGrid column.
+
+* Column headers are not affected by this attribute. You may use `[HeaderCssClass("align-center")]` for that.
+
+* Note that it has no effect on editors or forms.
+
+## AlignRight Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Right aligns text horizontally.
+
+* Used to control text alignment in grids by adding `align-right` CSS class to corresponding SlickGrid column.
+
+* Column headers are not affected by this attribute. You may use `[HeaderCssClass("align-right")]` for that.
+
+* Note that it has no effect on editors or forms.
 
 ## Ignore Attribute
 

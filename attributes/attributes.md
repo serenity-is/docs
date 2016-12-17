@@ -68,7 +68,7 @@ Controls if a property is editable in new record mode.
 public class SomeForm
 {
     [Insertable(false)]
-    public string ReadOnlyOnNew { get; set; }
+    public string ReadOnlyOnInsert { get; set; }
 }
 ```
 

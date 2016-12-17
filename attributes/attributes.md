@@ -130,3 +130,23 @@ public class SomeEnum
 * Titles set with this attribute is considered to be in *invariant* language.
 
 > This is not a Serenity attribute, it resides in .NET System assembly.
+
+## Ignore Attribute
+
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
+
+Skips a property while generating grid column or form field list.
+
+* Use this to ignore a property for UI, but still use it for other purposes like
+JSON serialization.
+
+* This might be useful when a type is used as a Service Request and Form
+Declaration at the same time.
+
+```cs
+public class SomeColumns
+{
+    [Ignore]
+    public string DontGenerateAColumnForMe { get; set; }
+}
+```

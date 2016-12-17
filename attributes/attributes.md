@@ -2,7 +2,7 @@
 
 ## AlignCenter Attribute
 
-[**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Centers text horizontally.
 
@@ -12,7 +12,7 @@ Centers text horizontally.
 
 ## AlignRight Attribute
 
-[**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Right aligns text horizontally.
 
@@ -22,7 +22,7 @@ Right aligns text horizontally.
 
 ## Visible Attribute
 
-[**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Controls visibility of a column or form field.
 
@@ -40,7 +40,7 @@ public class SomeColumns
 
 ## Hidden Attribute
 
-[**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Hides a column or form field.
 
@@ -56,7 +56,7 @@ public class SomeColumns
 
 ## Insertable Attribute
 
-[**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Controls if a property is editable in new record mode.
 
@@ -74,7 +74,7 @@ public class SomeForm
 
 ## Updatable Attribute
 
-[**namespace**: *Serenity.ComponentModel*] - [**assembly**: *Serenity.Core*]
+> **namespace**: *Serenity.ComponentModel*, **assembly**: *Serenity.Core*
 
 Controls if a property is editable in edit record mode.
 
@@ -89,3 +89,44 @@ public class SomeForm
     public string ReadOnlyOnUpdate { get; set; }
 }
 ```
+
+## DisplayName Attribute
+
+> **namespace**: *System.ComponentModel*, **assembly**: *System*
+
+Determines default title for grid columns or form fields.
+
+```cs
+public class SomeForm
+{
+    [DisplayName("Title for Some Field")]
+    public string SomeField { get; set; }
+}
+```
+
+* DisplayName attribute cannot be used on Enum members, so you have to use
+Description attribute
+
+* Titles set with this attribute is considered to be in *invariant* language.
+
+> This is not a Serenity attribute, it resides in .NET System assembly.
+
+## Description Attribute
+
+> **namespace**: *System.ComponentModel*, **assembly**: *System*
+
+Determines default title for enum members.
+
+```cs
+public class SomeEnum
+{
+    [Description("Title for Value 1")]
+    Value1 = 1,
+    [Description("Value 2")]
+    Value2 = 2
+}
+```
+
+* Titles set with this attribute is considered to be in *invariant* language.
+
+> This is not a Serenity attribute, it resides in .NET System assembly.

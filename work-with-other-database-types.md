@@ -1,4 +1,4 @@
-# How To: Work With Other Database Types
+# Working With Other Database Types
 
 Serenity has a dialect system for working with database types other than Sql Server.
 

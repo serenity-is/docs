@@ -116,6 +116,7 @@
     * [List Request Handler](services/list_request_handler.md)
 * SQL Database Types
     * [Working with Other Databases](work-with-other-database-types.md)
+    * [Setting Connection Dialect](setting-connection-dialect.md)
 * [Widgets](widgets/README.md)
     * [ScriptContext Class](widgets/scriptcontext_class.md)
     * [Widget Class](widgets/widget_class.md)

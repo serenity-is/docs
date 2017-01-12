@@ -46,7 +46,6 @@
     * [How To: Remove Northwind & Other Samples From Serene](howto/removing_northwind.md)
     * [How To: Update Serenity NuGet Packages](howto/how_to_update_serenity_nuget_packages.md)
     * [How To: Upgrade to Serenity 2.0 and Enable TypeScript](howto/how_to_upgrade_to_serenity_2_typescript.md)
-    * [How To: Work With Other Database Types](howto/how_to_work_with_other_database_types.md)
     * [How To: Authenticate With Active Directory or LDAP](howto/how_to_authenticate_with_active_directory_or_ldap.md)
     * [How To: Use a SlickGrid Formatter](howto/how_to_use_a_slickgrid_formatter.md)
     * [How To: Add a Row Selection Column](howto/how_to_add_a_row_selection_column.md)
@@ -118,7 +117,7 @@
     * [Setting Connection Dialect](setting-connection-dialect.md)
     * [PostgreSQL](postgresql.md)
     * [MySQL](mysql.md)
-    * Sqlite
+    * [Sqlite](sqlite.md)
     * [Oracle](oracle.md)
     * [Dialect Based Expressions](dialect-based-expressions.md)
 * [Widgets](widgets/README.md)

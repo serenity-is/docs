@@ -1,7 +1,5 @@
 ## MySql
 
-> MySql support is available for Serene 1.8.13+
-
 ### Registering MySql Provider
 
 MySQL has a .NET provider named MySql.Data. You need to first install it in MyProject.Web:

@@ -43,29 +43,6 @@ It is also possible to set this through an application configuration entry (reco
     "/>
 ```
 
-### Warning About CONCAT and Other Similar Expressions In Rows
-
-Serene has to support a variety of database engines, including MySQL, Postgress etc. These databases don't have a string plus \(+\) operator like MsSqlServer. Thus, in Northwind, CONCAT function is used in place of '+' operator:
-
-```cs
-[Expression("CONCAT(T0.[FirstName], CONCAT(' ', T0.[LastName]))")]
-public String FullName
-{
-    get { return Fields.FullName[this]; }
-    set { Fields.FullName[this] = value; }
-}
-```
-
-CONCAT is available after Sql Server 2012. So if you are going to use an older version of SQL server, e.g. 2005 or 2008, replace these expressions with such:
-
-```cs
-[Expression("T0.[FirstName] + ' ' + T0.[LastName]")]
-public String FullName
-{
-    get { return Fields.FullName[this]; }
-    set { Fields.FullName[this] = value; }
-}
-```
 
 
 

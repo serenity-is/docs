@@ -117,6 +117,7 @@
     * [Working with Other Databases](work-with-other-database-types.md)
     * [Setting Connection Dialect](setting-connection-dialect.md)
     * [PostgreSQL](postgresql.md)
+    * [MySQL](mysql.md)
 * [Widgets](widgets/README.md)
     * [ScriptContext Class](widgets/scriptcontext_class.md)
     * [Widget Class](widgets/widget_class.md)

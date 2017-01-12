@@ -1,11 +1,4 @@
-# How To: Work With Other Database Types
-
-Serenity has a dialect system for working with database types other than Sql Server.
-
-> Dialect system is currently an experimental feature that is constantly improved. Although it will probably work, you might have some minor problems that you should report at Serenity GitHub repository.
-
-If you need to support multiple database types, just by changing connection strings in web.config, you should be careful about not using database specific functions in expressions and avoid using reserved words.
-
+# 
 
 ## PostgreSQL
 
@@ -51,19 +44,18 @@ Next step is to replace connection strings for databases you want to use with Po
             Server=127.0.0.1;Database=serene_northwind_v1;
             User Id=postgres;Password=yourpassword;" 
         providerName="Npgsql" />
-</connectionStrings>    
-
+</connectionStrings>
 ```
 
 > Please use lowercase database names like `serene_default_v1` as Postgres will always convert it to lowercase.
-
+>
 > Provider name must be `Npgsql` for Serenity to auto-detect dialect.
 
 ### Notes About Identifier Case Sensitivy
 
-PostgreSQL is case sensitive for identifiers. 
+PostgreSQL is case sensitive for identifiers.
 
-FluentMigrator automatically quotes all identifiers, so tables and column names in database will be quoted and case sensitive. This might cause problems when tables/columns are tried to be selected without quoted identifiers. 
+FluentMigrator automatically quotes all identifiers, so tables and column names in database will be quoted and case sensitive. This might cause problems when tables/columns are tried to be selected without quoted identifiers.
 
 One option is to always use lowercase identifiers in migrations, but such naming scheme won't look so nice for other database types, thus we didn't prefer this way.
 
@@ -80,19 +72,19 @@ public static void ApplicationStart()
 
 > Make sure it is before CommonInitialization.Run line
 
-This setting automatically quotes column names in entities, but not manually written expressions (with Expression attribute for example).
+This setting automatically quotes column names in entities, but not manually written expressions \(with Expression attribute for example\).
 
-Use brackets `[]` for identifiers in expressions if you want to support multiple database types. Serenity will automatically convert brackets to database specific quote type before running queries. 
+Use brackets `[]` for identifiers in expressions if you want to support multiple database types. Serenity will automatically convert brackets to database specific quote type before running queries.
 
 You might also prefer to use double quotes in expressions, but it might not be compatible with other databases like MySQL.
 
 ### Setting Default Dialect
 
-This step is optional. 
+This step is optional.
 
-Serenity automatically determines which dialect to use, by looking at *providerName* of connection strings. 
+Serenity automatically determines which dialect to use, by looking at _providerName_ of connection strings.
 
-It can even work with multiple database types at the same time. 
+It can even work with multiple database types at the same time.
 
 For example, Northwind might stay in Sql Server, while Default database uses PostgreSQL.
 
@@ -108,7 +100,7 @@ public static void ApplicationStart()
         Serenity.Web.CommonInitialization.Run();
 ```
 
-Default dialect is used when the dialect for a connection / entity etc. couldn't be auto determined. 
+Default dialect is used when the dialect for a connection / entity etc. couldn't be auto determined.
 
 > This setting doesn't override automatic detection, it is just used as fallback.
 
@@ -124,7 +116,7 @@ Sergen.exe is an exe file, so you can't add a NuGet reference to it. We need to 
 
 > It is also possible to register the provider in GAC/machine.config and skip this step completely.
 
-Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator.1.8.6/tools* and create a file named `Sergen.exe.config` next to it with contents below:
+Locate Sergen.exe, which is under a folder like _packages/Serenity.CodeGenerator.1.8.6/tools_ and create a file named `Sergen.exe.config` next to it with contents below:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -160,7 +152,7 @@ MySQL has a .NET provider named MySql.Data. You need to first install it in MyPr
 
 > Install-Package MySql.Data -Project MyProject.Web
 
-If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file (MySql.Data NuGet package already does this on install):
+If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file \(MySql.Data NuGet package already does this on install\):
 
 ```xml
 <configuration>
@@ -191,18 +183,17 @@ Next step is to replace connection strings for databases you want to use with My
             Server=localhost; Port=3306; Database=Serene_Default_v1; 
             Uid=root; Pwd=yourpass"
         providerName="MySql.Data.MySqlClient" />
-        
+
     <add name="Northwind" connectionString="
             Server=localhost; Port=3306; Database=Serene_Northwind_v1; 
             Uid=root; Pwd=yourpass" 
         providerName="MySql.Data.MySqlClient" />
-</connectionStrings>    
-
+</connectionStrings>
 ```
 
 > Provider name must be `MySql.Data.MySqlClient` for Serenity to auto-detect dialect. Read notes above to override default dialect.
-
-> MySql uses lowercase database (schema) and table names, but doesn't have the case sensitivity problem we talked about Postgres.
+>
+> MySql uses lowercase database \(schema\) and table names, but doesn't have the case sensitivity problem we talked about Postgres.
 
 ### Configuring Code Generator
 
@@ -212,7 +203,7 @@ Sergen.exe is an exe file, so you can't add a NuGet reference to it. We need to 
 
 > It is also possible to register the provider in GAC/machine.config and skip this step completely.
 
-Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator.1.8.6/tools* and create a file named `Sergen.exe.config` next to it with contents below:
+Locate Sergen.exe, which is under a folder like _packages/Serenity.CodeGenerator.1.8.6/tools_ and create a file named `Sergen.exe.config` next to it with contents below:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -246,7 +237,7 @@ Oracle has a managed .NET provider named Oracle.ManagedDataAccess. You need to f
 
 > Install-Package Oracle.ManagedDataAccess -Project MyProject.Web
 
-If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file (Oracle.ManagedDataAccess NuGet package already does this on install):
+If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file \(Oracle.ManagedDataAccess NuGet package already does this on install\):
 
 ```xml
 <configuration>
@@ -267,7 +258,7 @@ If you didn't install this provider in GAC/machine.config before, or don't want 
 
 ### Creating Databases
 
-Serene can't autocreate database (tablespace) for Oracle. You might create them yourself, or use a script like below (i used this for XE):
+Serene can't autocreate database \(tablespace\) for Oracle. You might create them yourself, or use a script like below \(i used this for XE\):
 
 ```sql
 CREATE TABLESPACE Serene_Default_v1_TABS 
@@ -292,7 +283,7 @@ CREATE USER Serene_Northwind_v1
     IDENTIFIED BY somepassword 
     DEFAULT TABLESPACE Serene_Northwind_v1_TABS 
     TEMPORARY TABLESPACE Serene_Northwind_v1_TEMP;
-    
+
 GRANT CREATE SESSION TO Serene_Northwind_v1;
 GRANT CREATE TABLE TO Serene_Northwind_v1;
 GRANT CREATE SEQUENCE TO Serene_Northwind_v1;
@@ -302,7 +293,7 @@ GRANT UNLIMITED TABLESPACE TO Serene_Northwind_v1;
 
 ### Setting Connection Strings
 
-You might want to configure your data sources for ORACLE. I used Express Edition (XE) here:
+You might want to configure your data sources for ORACLE. I used Express Edition \(XE\) here:
 
 ```xml
 <configuration>
@@ -332,8 +323,7 @@ Next step is to replace connection strings for databases you want to use with Or
     <add name="Northwind" connectionString="
         Data Source=XE;User Id=Serene_Northwind_v1;Password=somepassword;" 
         providerName="Oracle.ManagedDataAccess.Client"/>
-</connectionStrings>    
-
+</connectionStrings>
 ```
 
 > Provider name must be `Oracle.ManagedDataAccess.Client` for Serenity to auto-detect dialect. Read notes above to override default dialect.
@@ -341,3 +331,4 @@ Next step is to replace connection strings for databases you want to use with Or
 ### Configuring Code Generator
 
 Sergen doesn't have support for Oracle yet, hopefully coming soon...
+

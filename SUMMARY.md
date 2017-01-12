@@ -114,6 +114,8 @@
 * [Services](services/README.md)
     * [Service Endpoints](services/service_endpoints.md)
     * [List Request Handler](services/list_request_handler.md)
+* SQL Database Types
+    * [Working with Other Databases](work-with-other-database-types.md)
 * [Widgets](widgets/README.md)
     * [ScriptContext Class](widgets/scriptcontext_class.md)
     * [Widget Class](widgets/widget_class.md)
@@ -126,3 +128,4 @@
     * [Persisting Settings](grids/persisting_settings.md)
 * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)
+

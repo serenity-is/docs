@@ -41,9 +41,9 @@ public String FullName
 
 ### Dialect Matching
 
-ISqlDialect interface has a *ServerType* property. It is *Postgres* for PostgresDialect, *SqlServer* for *SqlServer2012* dialect and so on.
+ISqlDialect interface has a *ServerType* property. It is *Postgres* for PostgresDialect, *SqlServer* for *SqlServer2012*, *SqlServer2008*, *SqlServer2005* dialects and so on.
 
-For an expression dialect to match connection dialect, it should start with the *ServerType* and or the class name of the dialect (e.g. SqlServer2012Dialect).
+For an expression dialect to match connection dialect, it should start with the *ServerType* and/or the class name of the dialect (e.g. SqlServer2012Dialect).
 
 If multiple dialect types match a targeted expression, the one with the longest name matches.
 

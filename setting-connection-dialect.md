@@ -1,8 +1,10 @@
 # Set Database Dialect for Connections
 
+Serenity auto detects dialect for a connection by using the providerName in web.config.
+
 Sometimes, automatic dialect detection using providerName may not work you, or you might want to use SqlServer2000 or SqlServer2005 dialect for some connections.
 
-It is possible to set a default global dialect, but this doesn't override automatic detection:
+Even though it is possible to set a default global dialect, this doesn't override automatic detection):
 
 ```
 SqlSettings.DefaultDialect = SqlServer2005Dialect.Instance;
@@ -26,7 +28,7 @@ public static partial class SiteInitialization
                     SqlServer2005Dialect.Instance;
 ```
 
-Serenity 1.8.8+ also supports setting this through an application configuration entry:
+It is also possible to set this through an application configuration entry (recommended):
 
 ```xml
 <configuration>

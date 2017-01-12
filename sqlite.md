@@ -39,6 +39,10 @@ Next step is to replace connection strings for databases you want to use with My
 
 ```
 
+### Applying Sqlite Changes to Serene
+
+Sqlite provider has been added recently, so if you already have an application, you'll need to get latest version of *SiteInitialization.Migrations.cs* from latest template / github repository to get Sqlite support.
+
 > Provider name must be `System.Data.Sqlite` for Serenity to auto-detect dialect. Read notes above to override default dialect.
 
 

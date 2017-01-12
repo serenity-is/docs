@@ -120,7 +120,7 @@
     * [MySQL](mysql.md)
     * Sqlite
     * [Oracle](oracle.md)
-    * Dialect Based Expressions
+    * [Dialect Based Expressions](dialect-based-expressions.md)
 * [Widgets](widgets/README.md)
     * [ScriptContext Class](widgets/scriptcontext_class.md)
     * [Widget Class](widgets/widget_class.md)

@@ -2,9 +2,9 @@
 
 ### Registering Sqlite Provider
 
-MySQL has a .NET provider named MySql.Data. You need to first install it in MyProject.Web:
+MySQL has a .NET provider named System.Data.Sqlite. You need to first install it in MyProject.Web:
 
-> Install-Package MySql.Data -Project MyProject.Web
+> Install-Package System.Data.SQLite.Core -Project MyProject.Web
 
 If you didn't install this provider in GAC/machine.config before, or don't want to install it there, you need to register it in web.config file:
 
@@ -27,30 +27,26 @@ If you didn't install this provider in GAC/machine.config before, or don't want 
 
 Next step is to replace connection strings for databases you want to use with MySql:
 
-> Make sure you replace connection string parameters with values for your server
-
 ```xml
-<connectionStrings>
-    <add name="Default" connectionString="
-            Server=localhost; Port=3306; Database=Serene_Default_v1; 
-            Uid=root; Pwd=yourpass"
-        providerName="MySql.Data.MySqlClient" />
-        
-    <add name="Northwind" connectionString="
-            Server=localhost; Port=3306; Database=Serene_Northwind_v1; 
-            Uid=root; Pwd=yourpass" 
-        providerName="MySql.Data.MySqlClient" />
-</connectionStrings>    
+  <connectionStrings>
+    <add name="Default" connectionString=
+         "Data Source=|DataDirectory|Serene_Default_v1.sqlite;" 
+      providerName="System.Data.Sqlite" />
+    <add name="Northwind" connectionString=
+        "Data Source=|DataDirectory|Serene_Northwind_v1.sqlite;" 
+      providerName="System.Data.Sqlite" />
+  </connectionStrings> 
 
 ```
 
-> Provider name must be `MySql.Data.MySqlClient` for Serenity to auto-detect dialect. Read notes above to override default dialect.
+> Provider name must be `System.Data.Sqlite` for Serenity to auto-detect dialect. Read notes above to override default dialect.
 
-> MySql uses lowercase database (schema) and table names, but doesn't have the case sensitivity problem we talked about Postgres.
+
+> I'm not sure why, but while FluentMigrator creates Northwind database for Sqlite first time, it takes some time.
 
 ### Configuring Code Generator
 
-Sergen doesn't have reference to MySql provider, so if you want to use it to generate code, you must also register this provider with it.
+Sergen doesn't have reference to Sqlite provider, so if you want to use it to generate code, you must also register this provider with it.
 
 Sergen.exe is an exe file, so you can't add a NuGet reference to it. We need to register this provider in application config file.
 
@@ -76,4 +72,4 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
 </configuration>
 ```
 
-Also copy MySql.Data.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your MySql tables.
+Also copy System.Data.Sqlite.dll and its x86 and x64 folders under bin directory to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your MySql tables.

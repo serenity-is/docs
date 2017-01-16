@@ -115,3 +115,6 @@ DbProviderFactories.RegisterFactory(
 ```
 
 
+### Configuring Code Generator
+
+As of writing *dotnet-sergen* doesn't yet support any databases other than Sql Server.

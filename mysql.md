@@ -1,5 +1,7 @@
 ## MySql
 
+## .NET Framework
+
 ### Registering MySql Provider
 
 MySQL has a .NET provider named MySql.Data. You need to first install it in MyProject.Web:
@@ -81,3 +83,35 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
 ```
 
 Also copy MySql.Data.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your MySql tables.
+
+## .NET Core
+
+### Registering MySql Provider
+
+MySQL has a .NET provider named MySql.Data. You need to first install it in MyProject.AspNetCore:
+
+Open project.json and add package as follows:
+
+```json
+{
+  "dependencies": {
+    // ...
+    "Serenity.FluentMigrator.Runner": "1.6.902",
+    "MySql.Data": "7.0.6-IR31"
+  },
+```
+
+> Make sure you have Serenity.FluentMigrator.Runner 1.6.902+
+
+Open Initialization/Startup.cs file, register this factory in Serenity:
+
+```cs
+DbProviderFactories.RegisterFactory(
+  "System.Data.SqlClient", SqlClientFactory.Instance);
+  
+DbProviderFactories.RegisterFactory(
+  "MySql.Data.MySqlClient",
+   MySql.Data.MySqlClient.MySqlClientFactory.Instance);
+```
+
+

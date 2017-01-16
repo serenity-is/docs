@@ -96,12 +96,12 @@ Open project.json and add package as follows:
 {
   "dependencies": {
     // ...
-    "Serenity.FluentMigrator.Runner": "1.6.902",
+    "Serenity.FluentMigrator.Runner": "1.6.903",
     "MySql.Data": "7.0.6-IR31"
   },
 ```
 
-> Make sure you have Serenity.FluentMigrator.Runner 1.6.902+
+> Make sure you have Serenity.FluentMigrator.Runner 1.6.903+
 
 Open Initialization/Startup.cs file, register this factory in Serenity:
 

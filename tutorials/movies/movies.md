@@ -19,6 +19,7 @@ MovieTutorial.Web project is an ASP.NET MVC application that contains server sid
 
 MovieTutorial.Web also has a tsconfig.json file at root, which specifies that it is also a TypeScript project. All *.ts* files under *Modules/* and *Scripts/* directories are compiled on save, and their outputs are combined into a script file under *scripts/site/* folder with name *MovieTutorial.Web.js*.
 
-> Please make sure that you have TypeScript 1.8.6+ installed. 
+> Please make sure that you have TypeScript 2.1.5+ installed. Check your version from Visual Studio Extensions dialog.
+> To install TypeScript 2.1.5+ in Visual Studio, you'll need to install Visual Studio Update 3.
 > 
 > Download its latest version from http://www.typescriptlang.org/#download-links for your Visual Studio.

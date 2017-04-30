@@ -98,10 +98,16 @@ After creating this user, edit its permissions and grant him *User, Role Managem
 
 Signout and login with user *tenant2*.
 
-When you open *User Management* page, you'll see that user can see and edit *admin* user, in addition to his own *tenant2* user. He can even see and edit his tenant in user dialog.
+When you open *User Management* page, you'll see that *tenant2* can't open User dialog.
 
-![Tenant2 Logged In](img/tenant2_logged_in.png)
+If you check browser console (whenever such a thing occurs, you should first check browser console for errors), you'll see an error like this:
+
+![Tenant2 Logged In](img/tenant_lookup_error.png)
+
+This is because, our TenantRow has _Administration:Tenants_ read permission which is inherited by lookup script. 
+
+We could change read permission for tenant lookup script to something else to resolve this error, but in that case _Tenant2_ would be able to see and change tenant of himself and any other user including _admin_.
 
 This is not what we wanted.
 
-Let's prevent him seeing users of other tenants.
+Let's first prevent him seeing users of other tenants.

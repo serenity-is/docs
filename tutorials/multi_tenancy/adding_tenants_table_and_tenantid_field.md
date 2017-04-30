@@ -63,7 +63,7 @@ namespace MultiTenancy.Migrations.DefaultDB
 
 I have created Tenants table in Default database where user tables are. Here we add 3 predefined tenants. We actually only need first one with ID *1*.
 
-We didn't add TenantId column to tables like UserPermissions, UserRoles, RolePermissions etc, as they instrinsicly have TenantId information through their UserId or RoleId.
+We didn't add TenantId column to tables like UserPermissions, UserRoles, RolePermissions etc, as they instrinsicly have TenantId information through their UserId or RoleId (as these tables already have TenantId value)
 
 **NorthwindDB_20160110_093500_MultiTenant.cs:**
 

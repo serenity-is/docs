@@ -62,6 +62,8 @@ public Int32? TenantId
 
 Now only *admin* can see and update *tenant* field for users.
 
+> We didn't have to also set *ModifyPermission* as if a user doesn't have the read permission, he doesn't have the write permission by default.
+
 Build your project, then try typing this into console again:
 
 ```js

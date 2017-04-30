@@ -10,7 +10,7 @@ It's time to write a migration, actually two migrations, one for Northwind and o
 
 **DefaultDB_20170430_134800_MultiTenant.cs:**
 
-```cs
+```csharp
 using FluentMigrator;
 
 namespace MultiTenancy.Migrations.DefaultDB

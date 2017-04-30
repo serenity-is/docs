@@ -25,3 +25,5 @@ public Int32? TenantId
     set { Fields.TenantId[this] = value; }
 }
 ```
+
+Now only *admin* can see and update *tenant* field for users.

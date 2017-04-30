@@ -48,26 +48,19 @@ Q.serviceCall({
 });
 ```
 
-Open *UserRepository.cs*, locate *MySaveHandler* class and modify its *GetEditableFields* method like this:
+Luckily, Serenity provides field level permissions. Edit *UserRow.cs* to let only users with *Administration:Tenants* permission to see and edit tenant information.
 
-
-```cs
-protected override void GetEditableFields(HashSet<Field> editable)
+```csharp
+[LookupEditor(typeof(TenantRow))]
+[ReadPermission(PermissionKeys.Tenants)]
+public Int32? TenantId
 {
-    base.GetEditableFields(editable);
-
-    if (!Authorization.HasPermission(Administration.PermissionKeys.Security))
-    {
-        editable.Remove(fld.Source);
-        editable.Remove(fld.IsActive);
-    }
-
-    if (!Authorization.HasPermission(Administration.PermissionKeys.Tenants))
-    {
-        editable.Remove(fld.TenantId);
-    }
+    get { return Fields.TenantId[this]; }
+    set { Fields.TenantId[this] = value; }
 }
 ```
+
+Now only *admin* can see and update *tenant* field for users.
 
 Build your project, then try typing this into console again:
 
@@ -89,9 +82,3 @@ You will now get this error:
 ```
 Tenant field is read only!
 ```
-
-*GetEditableField* is a method that SaveRequestHandler calls to determine which fields are editable, thus updatable by user. By default, these fields are determined by looking at *Updatable* and *Insertable* attributes of row properties. 
-
-> Unless otherwise specified, all fields are insertable and updatable.
-
-If user doesn't have tenant administration permission, we remove *TenantId* from the list of auto-determined editable fields.

@@ -98,7 +98,11 @@ After creating this user, edit its permissions and grant him *User, Role Managem
 
 Signout and login with user *tenant2*.
 
-When you open *User Management* page, you'll see that *tenant2* can't open User dialog.
+When you open *User Management* page, there may be two different cases you may experience.
+
+First, *tenant2* might be able to open user dialog and change his and any users tenant. This happens if your browser cached the *tenant* lookup.
+
+In the second case, you'll see that *tenant2* can't open User dialog. When you click a user nothing happens.
 
 If you check browser console (whenever such a thing occurs, you should first check browser console for errors), you'll see an error like this:
 

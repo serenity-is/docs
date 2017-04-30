@@ -31,3 +31,4 @@ Now only *admin* can see and update *tenant* field for users.
 But still, *tenant2* can't open the user dialog, why?
 
 Even though *TenantId* field is hidden in user form, it's editor is still there (invisible) and it tries to load *tenant* lookup (this is something we might try to handle in later versions).
+

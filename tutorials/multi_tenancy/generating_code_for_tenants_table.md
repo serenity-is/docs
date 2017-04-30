@@ -2,7 +2,7 @@
 
 Launch *Sergen* and generate code for *Tenants* table in *Default* connection:
 
-![Tenants Table](img/sergen_tenant.png)
+![Tenants Table](img/sergen_tenants.png)
 
 Next we'll define a lookup script in *TenantRow* and set InstanceName property to *Tenant*:
 

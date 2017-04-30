@@ -8,15 +8,15 @@ As Northwind tables already have records, we'll define a primary tenant with ID 
 
 It's time to write a migration, actually two migrations, one for Northwind and one for Default database.
 
-**DefaultDB_20160110_092200_MultiTenant.cs:**
+**DefaultDB_20170430_134800_MultiTenant.cs:**
 
 ```cs
 using FluentMigrator;
 
 namespace MultiTenancy.Migrations.DefaultDB
 {
-    [Migration(20160110092200)]
-    public class DefaultDB_20160110_092200_MultiTenant 
+    [Migration(20170430134800)]
+    public class DefaultDB_20170430_134800_MultiTenant
         : AutoReversingMigration
     {
         public override void Up()

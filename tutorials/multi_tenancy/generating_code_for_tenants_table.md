@@ -25,7 +25,7 @@ namespace MultiTenancy.Administration.Entities
 //...
 ```
 
-Let's define a Administration:Tenants permission that only *admin* user will have (in AdministrationPermissionKeys.cs):
+Let's define a Administration:Tenants permission that only *admin* user will have (in _AdministrationPermissionKeys.cs_):
 
 ```csharp
 namespace MultiTenancy.Administration

@@ -16,7 +16,7 @@ We need to remove *Tenant* field from the user form. But we need that field for 
 
 Luckily, Serenity provides field level permissions. Edit *UserRow.cs* to let only users with *Administration:Tenants* permission to see and edit tenant information.
 
-```cs
+```csharp
 [LookupEditor(typeof(TenantRow))]
 [ReadPermission(PermissionKeys.Tenants)]
 public Int32? TenantId
@@ -30,5 +30,15 @@ Now only *admin* can see and update *tenant* field for users.
 
 But still, *tenant2* can't open the user dialog, why?
 
-Even though *TenantId* field is hidden in user form, it's editor is still there (invisible) and it tries to load *tenant* lookup (this is something we might try to handle in later versions).
+Even though *TenantId* field is hidden in user form, it's editor is still there (invisible) and it tries to load *tenant* lookup (this is something we might try to handle in later versions), even though it will not make any use of it.
 
+Build the project, transform all templates and add method below to UserDialog.ts:
+
+```ts
+protected getPropertyItems() {
+    var items = super.getPropertyItems();
+    if (!Q.Authorization.hasPermission("Administration:Tenants"))
+        items = items.filter(x => x.name != UserRow.Fields.TenantId);
+    return items;
+}
+```

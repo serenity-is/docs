@@ -49,4 +49,4 @@ Here we exclude TenantId field, if current user doesn't have the tenants permiss
 
 This doesn't modify the original user form, it just changes list for this dialog instance.
 
-User _tenant2_ can now open the user form.
+User _tenant2_ can now open the user dialog.

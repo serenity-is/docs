@@ -14,6 +14,9 @@ But this time, as we rebuild project, browser tried to load it from server, and 
 
 We need to remove *Tenant* field from the user form. But we need that field for *admin* user, so we can't simply delete it from *UserForm.cs*. Thus, we need to do it conditionally.
 
+Luckily, Serenity provides field level permissions:
+
+
 Transform all T4 files, then open *MultiTutorial.Web/Modules/Administration/ User/UserDialog.ts* and override *getPropertyItems* method like below:
 
 ```ts

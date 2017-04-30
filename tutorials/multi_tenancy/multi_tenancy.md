@@ -18,7 +18,7 @@ But some users asked about how to implement this feature. This tutorial will hel
 
 > You can find source code for this tutorial at: 
 
-> https://github.com/volkanceylan/Serenity-Tutorials/tree/master/MultiTenancy
+> https://github.com/volkanceylan/MultiTenancy
 
 
 

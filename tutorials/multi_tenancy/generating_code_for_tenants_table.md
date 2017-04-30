@@ -42,7 +42,8 @@ namespace MultiTenancy.Administration
 And use it on TenantRow:
 
 ```csharp
-[ConnectionKey("Default"), DisplayNahme("Tenants"), InstanceName("Tenant"), TwoLevelCached]
+[ConnectionKey("Default"), DisplayNahme("Tenants"), 
+ InstanceName("Tenant"), TwoLevelCached]
 [ReadPermission(PermissionKeys.Tenants)]
 [ModifyPermission(PermissionKeys.Tenants)]
 [LookupScript("Administration.Tenant")]

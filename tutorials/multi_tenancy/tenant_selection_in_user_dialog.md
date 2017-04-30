@@ -100,7 +100,7 @@ Signout and login with user *tenant2*.
 
 When you open *User Management* page, there may be two different cases you may experience.
 
-In first case, *tenant2* might be able to open user dialog and change his and any users tenant. This happens if your browser cached the *tenant* lookup.
+In first case, *tenant2* might be able to open user dialog and change his and any other users tenant. This happens if your browser cached the *tenant* lookup.
 
 In the second case, you'll see that *tenant2* can't open User dialog. When you click a user nothing happens.
 

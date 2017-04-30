@@ -26,17 +26,4 @@ But some users asked about how to implement this feature. This tutorial will hel
 
 In Visual Studio click File -> New Project. Make sure you choose *Serene* template. Type *MultiTenancy* as name and click *OK*.
 
-In Solution explorer, you should see two projects with names *MultiTenancy.Web* and *MultiTenancy.Script*.
-
-> Make sure *MultiTenancy.Web* is the startup project (it should be bold), if not right click on project name and click *Set As Startup Project*.
-
-
-### Adding Project Dependency
-
-By default, Visual Studio only builds MultiTenancy.Web project when you press F5 to run. 
-
-> This is controlled by a setting under Visual Studio Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run". It is not recommended to change it.
-
-To make Script project also build when Web project is run, right click *MultiTenancy.Web* project, click *Build Dependencies -> Project Dependencies* and check *MultiTenancy.Script* under *Dependencies* tab.
-
-> Unfortunately, there is no way, we can set this dependency in Serene template.
+In Solution explorer, you should see a project with name *MultiTenancy.Web*.

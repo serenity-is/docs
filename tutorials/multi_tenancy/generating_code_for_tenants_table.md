@@ -6,8 +6,7 @@ Launch *Sergen* and generate code for *Tenants* table in *Default* connection:
 
 Next we'll define a lookup script in *TenantRow* and set DisplayName property to *Tenants*:
 
-```cs
-
+```csharp
 namespace MultiTenancy.Administration.Entities
 {
     //...
@@ -28,7 +27,7 @@ namespace MultiTenancy.Administration.Entities
 
 Let's define a Administration:Tenants permission that only *admin* user will have (in AdministrationPermissionKeys.cs):
 
-```cs
+```csharp
 namespace MultiTenancy.Administration
 {
     public class PermissionKeys
@@ -42,8 +41,8 @@ namespace MultiTenancy.Administration
 
 And use it on TenantRow:
 
-```cs
-[ConnectionKey("Default"), DisplayName("Tenants"), InstanceName("Tenant"), TwoLevelCached]
+```csharp
+[ConnectionKey("Default"), DisplayNahme("Tenants"), InstanceName("Tenant"), TwoLevelCached]
 [ReadPermission(PermissionKeys.Tenants)]
 [ModifyPermission(PermissionKeys.Tenants)]
 [LookupScript("Administration.Tenant")]

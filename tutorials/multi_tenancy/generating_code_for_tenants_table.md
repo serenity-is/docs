@@ -26,7 +26,7 @@ namespace MultiTenancy.Administration.Entities
 //...
 ```
 
-Let's define a Administration:Tenants permission that only *admin* user will have:
+Let's define a Administration:Tenants permission that only *admin* user will have (in AdministrationPermissionKeys.cs):
 
 ```cs
 namespace MultiTenancy.Administration
@@ -40,7 +40,7 @@ namespace MultiTenancy.Administration
 }
 ```
 
-And set it on TenantRow:
+And use it on TenantRow:
 
 ```cs
 [ConnectionKey("Default"), DisplayName("Tenants"), InstanceName("Tenant"), TwoLevelCached]

@@ -74,8 +74,8 @@ using FluentMigrator;
 
 namespace MultiTenancy.Migrations.NorthwindDB
 {
-    [Migration(20160110093500)]
-    public class NorthwindDB_20160110_093500_MultiTenant 
+    [Migration(20170430194100)]
+    public class NorthwindDB_20170430_194100_MultiTenant
         : AutoReversingMigration
     {
         public override void Up()

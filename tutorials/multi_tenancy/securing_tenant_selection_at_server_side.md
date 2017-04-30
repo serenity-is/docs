@@ -1,7 +1,5 @@
 # Securing Tenant Selection At Server Side
 
-> This section was written before Serenity had *field level permissions*. Problems listed below no longer applies to our sample but you might read it for some insights into *web security*. You can safely skip to next topic if not interested.
-
 When you log in with *tenant2* user and open its edit form, *Tenant* selection dropdown is not displayed, so he can't change his *tenant* right? 
 
 Wrong!

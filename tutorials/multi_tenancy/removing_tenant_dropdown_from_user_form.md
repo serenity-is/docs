@@ -42,3 +42,11 @@ protected getPropertyItems() {
     return items;
 }
 ```
+
+Dialogs gets list of fields it will show in its form by getPropertyItems method, which in turn loads them from server side form definition.
+
+Here we exclude TenantId field, if current user doesn't have the tenants permission.
+
+This doesn't modify the original user form, it just changes list for this dialog instance.
+
+User _tenant2_ can now open the user form.

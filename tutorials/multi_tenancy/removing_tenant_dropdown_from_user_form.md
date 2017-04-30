@@ -16,70 +16,12 @@ We need to remove *Tenant* field from the user form. But we need that field for 
 
 Luckily, Serenity provides field level permissions. Edit *UserRow.cs* to let only users with *Administration:Tenants* permission to see and edit tenant information.
 
-
-Transform all T4 files, then open *MultiTutorial.Web/Modules/Administration/ User/UserDialog.ts* and override *getPropertyItems* method like below:
-
-```ts
-namespace Serene.Administration {
-
-    @Serenity.Decorators.registerClass()
-    export class UserDialog extends Serenity.EntityDialog<UserRow, any> {
-        //...
-        
-        protected getPropertyItems() {
-            let items = super.getPropertyItems();
-            if (!Authorization.hasPermission("Administration:Tenants"))
-                items = items.filter(x => x.name != UserRow.Fields.TenantId);
-            return items;
-        }
-    }
+```cs
+[LookupEditor(typeof(TenantRow))]
+[ReadPermission(PermissionKeys.Tenants)]
+public Int32? TenantId
+{
+    get { return Fields.TenantId[this]; }
+    set { Fields.TenantId[this] = value; }
+}
 ```
-
-> For Serenity < 2.0:
-> Transform all T4 files, then open *UserDialog.cs* and override *GetPropertyItems* method like below:
->
->
->```cs
->namespace MultiTenancy.Administration
->{
->    using jQueryApi;
->    using Serenity;
->    using System.Collections.Generic;
->    using System.Linq;
->
->    //...
->    public class UserDialog : EntityDialog<UserRow>
->    {
->        //...
->        protected override List<PropertyItem> GetPropertyItems()
->        {
->            var items = base.GetPropertyItems();
->
->            if (!Authorization.HasPermission("Administration:Tenants"))
->                items = items.Where(x => 
->                    x.Name != UserRow.Fields.TenantId).ToList();
->
->            return items;
->        }
->    }
->}
->```
-
-*GetPropertyItems* is the method, dialog gets its list of form fields, from server side form definition. Here fields are read from *UserForm* we defined server side.
-
-If user doesn't have tenant administration permission, we remove the *TenantId* field from form definition at client side.
-
-This doesn't modify the actual form definition, it just removes *TenantId* field for this dialog instance.
-
-Now it is possible to edit tenant2 user by himself.
-
-> Some users report that this also removes tenant selection for admin user. Make sure your HasPermission method in Authorization.cs of MultiTenancy.Script project is like below:
-
->```cs
->public static bool HasPermission(string permissionKey)
->{
->   return 
->        UserDefinition.Username == "admin" ||
->        UserDefinition.Permissions[permissionKey];
->}
->```

@@ -26,7 +26,7 @@ namespace MultiTenancy.Administration.Entities
         public class RowFields : RowFieldsBase
         {
             //...
-            public readonly Int32Field TenantId;
+            public Int32Field TenantId;
             //...
         }
     }

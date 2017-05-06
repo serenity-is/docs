@@ -8,7 +8,7 @@ Again, a user in one tenant shouldn't see or modify roles in other tenants and w
 
 We start by adding *TenantId* property to *RoleRow.cs*:
 
-```cs
+```csharp
 namespace MultiTenancy.Administration.Entities
 {
     //...
@@ -35,7 +35,7 @@ namespace MultiTenancy.Administration.Entities
 
 Then we'll do several changes in *RoleRepository.cs*:
 
-```cs
+```csharp
 private class MySaveHandler : SaveRequestHandler<MyRow>
 {
     protected override void SetInternalFields()
@@ -45,6 +45,18 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
         if (IsCreate)
             Row.TenantId = ((UserDefinition)Authorization.UserDefinition).TenantId;
     }
+
+     protected override void ValidateRequest()
+     {
+         base.ValidateRequest();
+
+         if (IsUpdate)
+         {
+             var user = (UserDefinition)Authorization.UserDefinition;
+             if (Old.TenantId != user.TenantId)
+                 Authorization.ValidatePermission(PermissionKeys.Tenants);
+         }
+     }
 }
 
 private class MyDeleteHandler : DeleteRequestHandler<MyRow>

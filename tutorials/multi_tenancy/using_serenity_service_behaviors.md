@@ -72,6 +72,16 @@ namespace MultiTenancy
                         .UserDefinition).TenantId;
         }
 
+        public void OnValidateRequest(ISaveRequestHandler handler)
+        {
+            if (handler.IsUpdate)
+            {
+                var user = (UserDefinition)Authorization.UserDefinition;
+                if (fldTenantId[handler.Old] != fldTenantId[handler.Row])
+                    Authorization.ValidatePermission(PermissionKeys.Tenants);
+            }
+        }
+
         public void OnValidateRequest(IDeleteRequestHandler handler)
         {
             var user = (UserDefinition)Authorization.UserDefinition;
@@ -99,7 +109,6 @@ namespace MultiTenancy
         public void OnReturn(ISaveRequestHandler handler) { }
         public void OnValidateRequest(IRetrieveRequestHandler handler) { }
         public void OnValidateRequest(IListRequestHandler handler) { }
-        public void OnValidateRequest(ISaveRequestHandler handler) { }
     }
 }
 ```

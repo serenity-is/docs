@@ -151,89 +151,19 @@ _OrderShipCityLookup_, _OrderShipCountryLookup_. I'll do similar changes in them
 
 We now have one more problem to solve. If you open _Orders_ page, you'll see that _Ship Via_ and _Employee_ filter dropdowns still lists records from other tenants. It is because we defined their lookup scripts by a \[LookupScript\] attribute on their rows.
 
-Let's fix employee lookup first. Remove \[LookupScript\] attribute from _EmployeeRow_.
+By default, LookupScript generates a lookup instance based on `RowLookupScript<>` type. We need to change it to `MultiTenantRowLookupScript<>` for these multi-tenant rows.
 
-```cs
-[ConnectionKey("Northwind"), DisplayName("Employees"), InstanceName("Employee"), TwoLevelCached]
-[ReadPermission(Northwind.PermissionKeys.General)]
-[ModifyPermission(Northwind.PermissionKeys.General)]
+Let's fix employee lookup first. Replace \[LookupScript\] attribute like below in _EmployeeRow_.
+
+```csharp
+[LookupScript("Northwind.Employee", 
+ LookupType = typeof(MultiTenantRowLookupScript<>))]
 public sealed class EmployeeRow : Row, IIdRow, INameRow, IMultiTenantRow
 {
     //...
 ```
 
-And define a new lookup in file _EmployeeLookup_ next to _EmployeeRow.cs_:
-
-```cs
-namespace MultiTenancy.Northwind.Scripts
-{
-    using Entities;
-    using Serenity.ComponentModel;
-    using Serenity.Web;
-
-    [LookupScript("Northwind.Employee")]
-    public class EmployeeLookup : 
-        MultiTenantRowLookupScript<EmployeeRow>
-    {
-    }
-}
-```
-
-We don't have to override anything, as base class will handle all for us. 
-
-By default, _LookupScript_ attribute on rows, defines a new automatic lookup script class by using _RowLookupScript_ as base class.
-
-As there is no way to override this base class per row, we defined our lookup script class explicitly, and used _MultiTenantRowLookupScript_ as base class.
-
-Now if you build and run application, you'll have an error:
-
-```
-'MultiTenancy.Northwind.Entities.EmployeeRow' type doesn't have a 
-[LookupScript] attribute, so it can't be used with a LookupEditor!
-```
-
-This is because we don't have a \[LookupScript\] attribute on top of our row class, but in some places like forms, we used \[LookupEditor\(typeof\(EmployeeRow\)\)\].
-
-Open _OrderRow.cs_ and you'll see this attribute on top of _EmployeeID_ property. Change it to _\[LookupEditor\("Northwind.Employee"\)\]_.
-
-We'll do similar for _ShipperRow_. Remove _LookupScript_ attribute and define class below:
-
-```csharp
-namespace MultiTenancy.Northwind.Scripts
-{
-    using Entities;
-    using Serenity.ComponentModel;
-    using Serenity.Web;
-
-    [LookupScript("Northwind.Shipper")]
-    public class ShipperLookup : 
-        MultiTenantRowLookupScript<ShipperRow>
-    {
-    }
-}
-```
-
-And on top of _ShipVia_ property of _OrderRow_ you'll find another similar LookupEditor attribute. Change it to \[LookupEditor\("Northwind.Shipper"\)\].
-
-Repeat same steps for _ProductRow_.
-
-```csharp
-namespace MultiTenancy.Northwind.Scripts
-{
-    using Entities;
-    using Serenity.ComponentModel;
-    using Serenity.Web;
-
-    [LookupScript("Northwind.Product")]
-    public class ProductLookup : MultiTenantRowLookupScript<ProductRow>
-    {
-    }
-}
-```
-
-And on top of _ProductID_ property of _OrderDetailRow_ you'll find another similar LookupEditor attribute. Change it to \[LookupEditor\("Northwind.Product"\)\].
-
-_Supplier_, _Category_, _Region_, _Territory_ are next ones we should handle similarly. See commit log of Serenity tutorials github repository.
+Do similar (add LookupType) for _Shipper_, _Product_, _Supplier_, _Category_, _Region_ and _Territory_ rows.
 
 Now Northwind supports multi-tenancy.
 

@@ -179,7 +179,7 @@ namespace MultiTenancy.Northwind.Scripts
 }
 ```
 
-We don't have to override anything, as base class will handle everything for us. By default, _LookupScript_ attribute on rows, defines a new automatic lookup script class by using _RowLookupScript_ as base class.
+We don't have to override anything, as base class will handle all for us. By default, _LookupScript_ attribute on rows, defines a new automatic lookup script class by using _RowLookupScript_ as base class.
 
 As there is no way to override this base class per row, we defined our lookup script class explicitly, and used _MultiTenantRowLookupScript_ as base class.
 

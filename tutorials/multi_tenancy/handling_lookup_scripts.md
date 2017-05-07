@@ -147,6 +147,8 @@ We just called _AddTenantFilter_ method manually, because we weren't calling bas
 There are several more similar lookup scripts in _CustomerCountryLookup_, _CustomerCityLookup_,  
 _OrderShipCityLookup_, _OrderShipCountryLookup_. I'll do similar changes in them. Change base class to _MultiTenantRowLookupScript_ and call _AddTenantFilter_ in _PrepareQuery_ method.
 
+## Lookup Script Declarations On Rows
+
 We now have one more problem to solve. If you open _Orders_ page, you'll see that _Ship Via_ and _Employee_ filter dropdowns still lists records from other tenants. It is because we defined their lookup scripts by a \[LookupScript\] attribute on their rows.
 
 Let's fix employee lookup first. Remove \[LookupScript\] attribute from _EmployeeRow_.

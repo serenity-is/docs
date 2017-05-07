@@ -47,7 +47,7 @@ We should filter its query by current tenant.
 
 But this lookup class derives from _RowLookupScript_ base class. Let's create a new base class, to prepare for other lookup scripts that we'll have to handle later.
 
-```cs
+```csharp
 namespace MultiTenancy.Northwind.Scripts
 {
     using Administration;
@@ -105,7 +105,7 @@ By overriding, _PrepareQuery_ method, we are adding a filter by current _TenantI
 
 Now its time to rewrite our _SupplierCountryLookup_ using this new base class:
 
-```cs
+```csharp
 namespace MultiTenancy.Northwind.Scripts
 {
     using Serenity.ComponentModel;
@@ -194,7 +194,7 @@ Open _OrderRow.cs_ and you'll see this attribute on top of _EmployeeID_ property
 
 We'll do similar for _ShipperRow_. Remove _LookupScript_ attribute and define class below:
 
-```cs
+```csharp
 namespace MultiTenancy.Northwind.Scripts
 {
     using Entities;
@@ -213,7 +213,7 @@ And on top of _ShipVia_ property of _OrderRow_ you'll find another similar Looku
 
 Repeat same steps for _ProductRow_.
 
-```cs
+```csharp
 namespace MultiTenancy.Northwind.Scripts
 {
     using Entities;

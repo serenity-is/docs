@@ -56,7 +56,7 @@ namespace MultiTenancy.Northwind.Scripts
     using Serenity.Web;
     using System;
 
-    public abstract class MultiTenantRowLookupScript<TRow> : 
+    public class MultiTenantRowLookupScript<TRow> : 
         RowLookupScript<TRow>
         where TRow : Row, IMultiTenantRow, new()
     {
@@ -162,6 +162,8 @@ public sealed class EmployeeRow : Row, IIdRow, INameRow, IMultiTenantRow
 {
     //...
 ```
+
+> Note that this requires Serenity 2.9.22+
 
 Do similar (add LookupType) for _Shipper_, _Product_, _Supplier_, _Category_, _Region_ and _Territory_ rows.
 

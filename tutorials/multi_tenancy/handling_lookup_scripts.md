@@ -158,7 +158,8 @@ Let's fix employee lookup first. Replace \[LookupScript\] attribute like below i
 ```csharp
 [LookupScript("Northwind.Employee", 
  LookupType = typeof(MultiTenantRowLookupScript<>))]
-public sealed class EmployeeRow : Row, IIdRow, INameRow, IMultiTenantRow
+public sealed class EmployeeRow : Row, IIdRow, 
+   INameRow, IMultiTenantRow
 {
     //...
 ```

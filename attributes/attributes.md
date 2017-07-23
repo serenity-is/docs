@@ -231,7 +231,7 @@ Sets a hint for a form field.
 ```cs
 public class SomeForm
 {
-    [Placeholder("Show this when my caption is hovered")]
+    [Hint("Show this when my caption is hovered")]
     public string FieldWithHint { get; set; }
 }
 ```

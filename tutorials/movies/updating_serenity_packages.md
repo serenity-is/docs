@@ -1,4 +1,4 @@
-# Updating Serenity Packages
+# Updating Serenity Packages (ASP.NET MVC Version)
 
 When i started writing this tutorial, Serenity (NuGet packages containing Serenity assemblies and standard scripts libraries) and Serene (the application template) was at version 2.1.8.
 

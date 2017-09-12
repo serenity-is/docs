@@ -159,9 +159,9 @@ Now press F5 to run your application and create Movie table in default database.
 
 ### Verifying That the Migration is Run
 
-Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\v11.0*.
+Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\MsSqlLocalDB* or *(localdb)\v11.0* depending on version you use.
 
-> (localdb)\v11.0 is a LocalDB instance created by SQL Server 2012 LocalDB. 
+> (localdb)\v11.0 is a LocalDB instance created by SQL Server 2012 LocalDB. (localdb)\MsSqlLocalDB is an instance created by SQL 2014+ LocalDB.
 
 > If you didn't install LocalDB yet, download it from https://www.microsoft.com/en-us/download/details.aspx?id=29062.
 

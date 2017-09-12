@@ -31,6 +31,14 @@ Serenity.CodeGenerator is also installed in MovieTutorial.Web project.
 
 > During updates, if NuGet asks to override changes in some script files, you can safely say yes unless you did manual modifications to Serenity script files (which i suggest you avoid).
 
+# Updating Serenity Packages (ASP.NET Core Version)
+
+Theorically, you should be able to update Serenity just like ASP.NET MVC version using NuGet package manager console, but it might not work, probably due to some conditionals in CSPROJ file confusing NuGet.
+ 
+These conditionals are there to support switching easily to full .NET Framework if you have to.
+
+### Building Project
+
 Now rebuild your solution and it should build successfully.
 
 > From time to time, breaking changes might happen in Serenity, but they are kept to minimum, and you might have to do a few manual changes in your application code. 

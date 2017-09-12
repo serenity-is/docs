@@ -48,6 +48,8 @@ Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or l
 
 > Please don't name it *Serenity*. It may conflict with other Serenity assemblies.
 
+Please use Pascal casing, e.g. a name that starts with a Capital Letter. Don't name your project something like `myProject`.
+
 Click OK.
 
 ## Feature Selection

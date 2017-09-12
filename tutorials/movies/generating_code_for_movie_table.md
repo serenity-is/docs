@@ -115,7 +115,15 @@ Connection key is set to the connection key of selected connection string in web
 
 As ASP.NET Core has cross-platform support, .NET Core version of Sergen also needs to run in OSX / Linux / Windows. Thus, its UI is currently console based.
 
+We first need to open a command prompt at project folder. Right click *MovieTutorial.Web* project and click *Open Folder in File Explorer*.
 
+Click *File* menu in file explorer, and click *Open Windows Powershell* or *Open Command Prompt*.
+
+> You may also install this extension (https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine) to easily open a command line next time. I can't understand why there is still not such an option in Visual Studio itself.
+
+Type `dotnet sergen g` to open Sergen code generation UI (console).
+
+![Dotnet Sergen G](img/dotnetsergeng.png)
 
 ### Generating Code for First Page
 

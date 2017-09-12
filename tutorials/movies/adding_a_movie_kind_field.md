@@ -123,7 +123,11 @@ Now, build your solution and run it. When you try to edit a movie or add a new o
 Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
 ```
 
-> Whenever such a thing happens, please first check browser console for errors, before reporting it.
+### Please Note!
+
+Whenever such a thing happens, e.g. some button not working, you got an empty page, grid etc, please first check browser console for errors, before reporting it. 
+
+### Why We Had This Error?
 
 This error is caused by MoveKind enumeration not available client side. We should run our T4 templates before executing our program.
 
@@ -132,6 +136,8 @@ Now in Visual Studio, click *Build -> Transform All Templates* again.
 Rebuild your solution and execute it. Now we have a nice dropdown in our form to select movie kind.
 
 ![Movie Kind Selection](img/mdb_movie_kindform.png)
+
+> Just build project for ASP.NET Core version, as there is no T4 template
 
 
 ### Declaring a Default Value for Movie Kind

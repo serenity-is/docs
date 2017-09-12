@@ -144,6 +144,7 @@ Once you save that file, we'll have a dropdown in quick search input:
 ### Running T4 Templates (.tt files)
 
 > You don't have to transform templates in ASP.NET Core version. Serene does it automatically on build. Actually, there is no T4 file in ASP.NET Core version. So when we say transform templates, just build your project if you use ASP.NET Core version.
+> It is also possible to open a command prompt in project directory and type `dotnet sergen t` to transform templates manually.
 
 In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names or their casing at server side (javascript is case sensitive).
 

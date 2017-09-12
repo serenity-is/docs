@@ -2,7 +2,7 @@
 
 After your first project is created in Visual Studio using Serene template, you will see a solution like this:
 
-> Asp.Net Core users don't have to use Visual Studio, but we'll use Visual Studio in this guide as most of our users will.
+> Asp.Net Core users don't have to use Visual Studio, but we'll use Visual Studio in this guide as we think most of our users will.
 
 ![Initial Solution Content](img/serenemvc.png)
 

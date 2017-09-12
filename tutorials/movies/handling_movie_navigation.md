@@ -121,5 +121,5 @@ It's also possible to disable it with a web.config setting
 
 > Serene 1.5.4 and later has this in web.config by default, so you might not experience this issue
 
-
+> I'm not sure if there is a corresponding setting in appsettings.json file of ASP.NET Core version
 

@@ -109,6 +109,11 @@ Our Movie page will be only used by administrative users (or maybe later content
 
 Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
 
+## Serenity Code Generator (ASP.NET Core)
+
+As ASP.NET Core has cross-platform support, .NET Core version of Sergen also needs to run in OSX / Linux / Windows. Thus, its UI is currently console based.
+
+
 
 ### Generating Code for First Page
 

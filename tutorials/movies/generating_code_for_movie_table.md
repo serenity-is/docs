@@ -125,6 +125,18 @@ Type `dotnet sergen g` to open Sergen code generation UI (console).
 
 ![Dotnet Sergen G](img/dotnetsergeng.png)
 
+Sergen will list connections in appsettings.json file.
+
+You can use TAB completion, e.g. type *D* and press *TAB* to complete *Default*.
+
+After pressing Enter you'll get a list of tables in that database:
+
+![Dotnet Sergen G](img/dotnetsergencon.png)
+
+Clear `dbo.` using backspace, and type `mov.Movie` or type `m` and use TAB completion to select `mov.Movie`.
+
+
+
 ### Generating Code for First Page
 
 After setting parameters as shown in the image above (you only have to set Module Name, others were prefilled), click *Generate Code for Entity* button. 

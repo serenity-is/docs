@@ -117,6 +117,8 @@ namespace MovieTutorial.MovieDB.Forms
 
 Now, build your solution and run it. When you try to edit a movie or add a new one, nothing will happen. This is an expected situation. If you check developer tools console of your browser (F12, inspect element etc.) you'll see such an error:
 
+> You might not have this error with ASP.NET Core version as it auto transforms T4
+
 ```txt
 Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
 ```

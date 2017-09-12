@@ -8,7 +8,7 @@ You have three options to install _SERENE_ template:
 
 * [Installing SERENE directly from Visual Studio (Windows)](installing_serene_directly_from_visual_studio.md)
 
-* [Installing SERENE for Asp.Net Corewith SERIN (Linux, OSX, Windows)](instaling-serene-aspnet-core-version-with-serin.md)
+* [Installing SERENE for Asp.Net Core with SERIN (Linux, OSX, Windows)](instaling-serene-aspnet-core-version-with-serin.md)
 
 
 > Serene is just an application template that is designed to give you a quick start.

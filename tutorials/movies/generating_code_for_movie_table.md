@@ -1,7 +1,9 @@
 
 # Generating Code For Movie Table
 
-### Serenity Code Generator
+## Serenity Code Generator (ASP.NET MVC)
+
+> These steps applies only to ASP.NET MVC version, not ASP.NET Core version. Keep reading to see how to run Sergen in ASP.NET Core version.
 
 After making sure that our table exists in the database, we will use Serenity Code Generator (sergen.exe) to generate initial editing interface.
 
@@ -9,9 +11,20 @@ In Visual Studio, open *Package Manager Console* by clicking *View* => *Other Wi
 
 Type *sergen* and press Enter.
 
-> Sometimes package manager console can't set path correctly and you may get an error executing Sergen. Restarting Visual Studio might resolve the issue. 
+#### Resolving Sergen is not Recognized Issue
 
-> Another option is to open Sergen.exe from Windows Explorer. Right click on *MovieTutorial* solution in Solution Explorer, click *Open In File Explorer*. Sergen.exe is under *packages\Serenity.CodeGenerator.X.Y.Z\tools* directory.
+Sometimes NuGet package manager can't set PATH correctly and you may get an error like below while trying to execute Sergen. 
+
+![Movies Code Generator](img/sergennotfound.jpg)
+
+Unfortunately, this is a bug of Visual Studio / NuGet and is not related to Serenity itself.
+
+Most of the times, restarting Visual Studio might resolve the issue. 
+
+If it doesn't, you may open Sergen.exe from Windows Explorer. Right click on *MovieTutorial* solution in Solution Explorer, click *Open In File Explorer*. Sergen.exe is under *packages\Serenity.CodeGenerator.X.Y.Z\tools* directory.
+
+
+### Sergen UI
 
 ![Movies Code Generator](img/mdb_sergen_movie.png)
 
@@ -93,6 +106,8 @@ After setting parameters as shown in the image above (you only have to set Modul
 Sergen will generate several files and include them in MovieTutorial.Web and MovieTutorial.Script projects.
 
 Now you can close Sergen, and return to Visual Studio.
+
+## After Generating Code
 
 As project is modified, Visual Studio will ask if you want to reload changes, click Reload All.
 

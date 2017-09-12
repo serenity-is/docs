@@ -47,8 +47,11 @@ We also added a *GenreId* field to *Movie* table.
 
 Fire sergen.exe using Package Manager Console again and generate code for *Genre* table with the parameters shown below:
 
+> Use parameters shown with `dotnet sergen g` if you are using ASP.NET Core version.
+
 ![Genre Code Generation](img/mdb_movie_genretable.png)
 
+> This screenshot belongs to an older version of Sergen, just use parameters shown in new version
 
 Rebuild solution and run it. We'll get a new page like this:
 

@@ -17,7 +17,7 @@ Sometimes NuGet package manager can't set PATH correctly and you may get an erro
 
 ![Movies Code Generator](img/sergennotfound.jpg)
 
-Unfortunately, this is a bug of Visual Studio / NuGet and is not related to Serenity itself.
+Unfortunately, this is a bug of Visual Studio / NuGet and is not related to Serenity or Sergen itself.
 
 Most of the times, restarting Visual Studio might resolve the issue. 
 
@@ -28,7 +28,7 @@ If it doesn't, you may open Sergen.exe from Windows Explorer. Right click on *Mo
 
 ### Sergen UI
 
-![Movies Code Generator](img/mdb_sergen_movie.png)
+![Movies Code Generator](img/sergenmovie.png)
 
 
 ### Setting Project Location
@@ -48,6 +48,8 @@ This value is required, as Sergen will automatically include generated files to 
 Your root namespace option is set to the Solution name you used, e.g. *MovieTutorial*. If your project name is MyProject.Web, your root namespace is MyProject by default. 
 
 This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
+
+It is also very important to understand that Root Namespace is case sensitive and must exactly match your project name, e.g. not *movietutorial* or *movieTutorial* but *MovieTutorial*.
 
 This option is also saved, so next time you won't have to fill it in.
 

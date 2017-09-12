@@ -95,7 +95,7 @@ The code that runs migrations are in *App_Start/SiteInitialization.cs* and *App_
 
 > In Asp.Net Core version, they are under *Initialization/Startup.cs* and *Initialization/DataMigrations.cs* files as there is no App_Start folder in ASP.NET Core.
 
-** SiteInitialization.Migrations.cs**:
+** SiteInitialization.Migrations.cs (or DataMigrations.cs)**:
 ```cs
 
 namespace MovieTutorial

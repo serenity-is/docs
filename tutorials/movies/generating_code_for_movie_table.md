@@ -63,6 +63,22 @@ Sergen can generate code for multiple tables, but we'll generate for only one no
 
 Mark checkbox next to *Movie* table.
 
+### Identifier
+
+This usually corresponds to the table name but sometimes table names might have underscores or other invalid characters, so you decide what to name your entity in generated code (a valid identifier name).
+
+Our table name is *Movie* so it is also a valid and fine C# identifier, so let's leave *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
+
+This name is also used in other class names. For example our page controller will be named *MovieController*.
+
+It also determines the page url, in this sample our editing page will be at URL */MovieDB/Movie*.
+
+#### Please Note!
+
+Identifier must always be in Pascal case, e.g. something that starts with a CAPITAL letter. `myTable`, `mycoolTable`, `aTable` are invalid module names. `MyCoolTable` is fine.
+
+> We'll add a validation to Sergen for this soon.
+
 ### Setting Module Name
 
 In Serenity terms, a module is a logical group of pages, sharing a common purpose. 
@@ -81,29 +97,12 @@ For example, our new page will be under *MovieTutorial.MovieDB* namespace and wi
 
 #### Please Note!
 
-Module names must always be in Pascal case, e.g. something that starts with a CAPITAL letter. `myModule`, `mycoolmodule`, `aModule` are invalid module names. `MyCoolModule` is fine.
-
-> We'll add a validation to Sergen for this soon.
+Module names must also be in Pascal case, e.g. something that starts with a CAPITAL letter. `myModule`, `mycoolmodule`, `aModule` are invalid module names. `MyCoolModule` is fine.
 
 ### ConnectionKey Parameter 
 
 Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
 
-### Identifier
-
-This usually corresponds to the table name but sometimes table names might have underscores or other invalid characters, so you decide what to name your entity in generated code (a valid identifier name).
-
-Our table name is *Movie* so it is also a valid and fine C# identifier, so let's leave *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
-
-This name is also used in other class names. For example our page controller will be named *MovieController*.
-
-It also determines the page url, in this sample our editing page will be at URL */MovieDB/Movie*.
-
-#### Please Note!
-
-Identifier must always be in Pascal case, e.g. something that starts with a CAPITAL letter. `myTable`, `mycoolTable`, `aTable` are invalid module names. `MyCoolTable` is fine.
-
-> We'll add a validation to Sergen for this soon.
 
 ### Permission Key 
 

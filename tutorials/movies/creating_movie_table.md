@@ -152,7 +152,7 @@ namespace MovieTutorial
 }
 ```
 
-> There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change default connection in web.config to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.
+> There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change Northwind connection in web.config to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.
 
 Now press F5 to run your application and create Movie table in default database.
 

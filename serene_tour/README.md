@@ -2,7 +2,7 @@
 
 After logging to Serene, you are greeted with the dashboard page.
 
-![Serene Dashboard](img/serene_dashboard.png)
+![Serene Dashboard](img/serenedash.jpg)
 
 > This page is taken as a sample from free AdminLTE (https://almsaeedstudio.com/themes/AdminLTE/index.html) theme.
 

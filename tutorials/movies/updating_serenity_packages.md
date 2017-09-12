@@ -37,6 +37,14 @@ Theorically, you should be able to update Serenity just like ASP.NET MVC version
  
 These conditionals are there to support switching easily to full .NET Framework if you have to.
 
+Right click your project file, click *Edit MySerene.csproj*:
+
+```xml
+<PackageReference Include="Serenity.Web" Version="3.0.5" />
+<PackageReference Include="Serenity.Web.AspNetCore" Version="3.0.5" />
+<DotNetCliToolReference Include="Serenity.CodeGenerator" Version="3.0.5" >
+```
+
 ### Building Project
 
 Now rebuild your solution and it should build successfully.

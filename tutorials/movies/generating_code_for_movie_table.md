@@ -111,6 +111,8 @@ Connection key is set to the connection key of selected connection string in web
 
 ## Serenity Code Generator (ASP.NET Core)
 
+> These steps applies only to ASP.NET Core version, not ASP.NET MVC version.
+
 As ASP.NET Core has cross-platform support, .NET Core version of Sergen also needs to run in OSX / Linux / Windows. Thus, its UI is currently console based.
 
 

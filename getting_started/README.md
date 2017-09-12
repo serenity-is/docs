@@ -2,7 +2,7 @@
 
 The best and fastest way to get your hands dirty on Serenity is _SERENE_, which is a sample application template.
 
-You have three options to install _SERENE_ template into your Visual Studio:
+You have three options to install _SERENE_ template:
 
 * [Installing SERENE from Visual Studio Marketplace (Windows)](installing_serene_from_visual_studio_gallery.md)
 

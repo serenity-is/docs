@@ -171,7 +171,9 @@ Using Sql Server Management Studio or Visual Studio -> Connection To Database, o
 
 You should see *[mov].[Movies]* table in SQL object explorer.
 
-Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20160519115100*. This specifies that the migration with that version number (migration key) is already executed on this database. So, even if you change migration source code, that migration won't ever run again in this database.
+Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20160519115100*. This specifies that the migration with that version number (migration key) is already executed on this database. 
+
+> So, even if you change migration source code, that migration won't ever run again in this database. Try to avoid modifying migrations after they run on your DB. Create a new migration if possible.
 
 ![Initial Migration Folder](img/mdb_migration_check.png)
 

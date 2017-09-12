@@ -2,7 +2,7 @@
 
 ## What is Serenity Platform
 
-Serenity is an ASP.NET MVC / Javascript application platform which has been built on open source technologies.
+Serenity is an ASP.NET Core / MVC / TypeScript application platform which has been built on open source technologies.
 
 It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying the best software design practices.
 
@@ -17,23 +17,26 @@ Serenity is best suited to business applications with many data entry forms or a
 After reading this guide and its tutorials, follow resources below for more information about Serenity.
 
 <dl>
+  <dt>Home Page:</dt>
+  <dd><a href='http://serenity.is' target='_blank'>http://serenity.is</a></dd>
+
+  <dt>Blog:</dt>
+  <dd><a href='http://serenity.is/blog' target='_blank'>http://serenity.is/blog</a></dd>
 
   <dt>Github Repository:</dt>
-  <dd><a href='https://github.com/volkanceylan/Serenity'>https://github.com/volkanceylan/Serenity</a></dd>
+  <dd><a href='https://github.com/volkanceylan/Serenity' target='_blank'>https://github.com/volkanceylan/Serenity</a></dd>
 
   <dt>Issues / Questions</dt>
-  <dd><a href='https://github.com/volkanceylan/Serenity/issues'>https://github.com/volkanceylan/Serenity/issues</a></dd>
+  <dd><a href='https://github.com/volkanceylan/Serenity/issues' target='_blank'>https://github.com/volkanceylan/Serenity/issues</a></dd>
+
+  <dt>Wiki (FAQ, Troubleshooting and Other Community Content)</dt>
+<dd><a href='https://github.com/volkanceylan/Serenity/wiki' target='_blank'>https://github.com/volkanceylan/Serenity/wiki</a></dd>
   
   <dt>Change Log:</dt>
-  <dd><a href='https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md'>https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md</a></dd>
+  <dd><a href='https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md' target='_blank'>https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md</a></dd>
 
   <dt>Serene Application Template:</dt>
-  <dd><a href='https://visualstudiogallery.msdn.microsoft.com/559ec6fc-feef-4077-b6d5-5a99408a6681'>https://visualstudiogallery.msdn.microsoft.com/559ec6fc-feef-4077-b6d5-5a99408a6681</a></dd>
-
-  <dt>Tutorial / Sample Source Code:</dt>
-  <dd><a href='https://github.com/volkanceylan/Serenity-Tutorials'>https://github.com/volkanceylan/Serenity-Tutorials</a></dd>
-
-
+  <dd><a href='https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityApplicationTemplate'>https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityApplicationTemplate</a></dd>
 </dl>
 
 

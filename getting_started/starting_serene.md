@@ -35,7 +35,9 @@ If you are getting a connection error like the following while starting Serene f
 
 This error might mean that you don't have SQL Server Local DB 2012 installed. This server comes preinstalled with Visual Studio 2012 and 2013. 
 
-In Serene.Web/web.config file there are *Default* and *Northwind* connection entries:
+#### ASP.NET MVC 
+
+In `web.config` file there are *Default* and *Northwind* connection entries:
 
 ```xml
 <connectionStrings>
@@ -45,7 +47,26 @@ In Serene.Web/web.config file there are *Default* and *Northwind* connection ent
   </connectionStrings>
 ```
 
-`(localdb)\v11.0` corresponds to default SQL Server 2012 LocalDB instance.
+#### ASP.NET Core
+
+In `appsettings.json` file you'll find *Default* and *Northwind* connection entries:
+
+```json
+  "Data": {
+    "Default": {
+      "ConnectionString": "Server=(localdb)\\MsSqlLocalDB;Database=Serene2_Default_v1;Integrated Security=true",
+      "ProviderName": "System.Data.SqlClient"
+    },
+    "Northwind": {
+      "ConnectionString": "Server=(localdb)\\MsSqlLocalDB;Database=Serene2_Northwind_v1;Integrated Security=true",
+      "ProviderName": "System.Data.SqlClient"
+    }
+  }
+```
+
+#### Fixing Connection Strings
+
+`(localdb)\v11.0` corresponds to default SQL Server 2012 LocalDB instance, while `(localdb)\MsSqlLocalDB` is an instance of SQL 2014+ LocalDB.
 
 If you don't have SQL LocalDB 2012, you can install it from:
 
@@ -95,4 +116,4 @@ If you have another SQL server instance, for example SQL Express, change data so
 
 You can also use another SQL server. Just change the connection string.
 
-> Perform these steps for both Default and Northwind databases. Serene 1.6.4.3+ creates two databases.
+> Perform these steps for both Default and Northwind databases.

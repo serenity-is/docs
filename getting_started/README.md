@@ -11,11 +11,11 @@ You have three options to install _SERENE_ template:
 * [Installing SERENE ASP.NET CORE version with SERIN (Linux, OSX, Windows)](instaling-serene-aspnet-core-version-with-serin.md)
 
 
-> You don't have to use this template to work with Serenity.
+> Serene is just an application template that is designed to give you a quick start.
+> 
+> For advanced developers, it is possible to add Serenity NuGet packages to an existing .NET project, configure some services and have a working Serenity application. 
 >
-> You can add Serenity libraries to any .NET project with NuGet.
->
-> It is also possible to add Serenity as a GIT submodule to your project and keep it always up to date with source codes.
+> You might also choose to add Serenity sources as a GIT submodule to your project and keep it always up to date, instead of depending on Serenity NuGet packages.
 >
 > We'll cover these and more in other chapters.
 

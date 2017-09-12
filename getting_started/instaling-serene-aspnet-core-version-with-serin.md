@@ -14,7 +14,7 @@ https://www.microsoft.com/net/download/core
 
 ## Install NodeJS
 
-As our Serene project initializer, Serin, is a NodeJS based application (hopefully for a limited time :) you need to install Node/NPM from:
+As TypeScript and our Serene project initializer (Serin) runs on NodeJS you need to install Node/NPM from:
 
 https://nodejs.org/en/download/
 

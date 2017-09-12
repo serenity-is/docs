@@ -75,7 +75,7 @@ It also determines the page url, in this sample our editing page will be at URL 
 
 #### Please Note!
 
-Identifier must always be in Pascal case, e.g. something that starts with a CAPITAL letter. `myTable`, `mycoolTable`, `aTable` are invalid module names. `MyCoolTable` is fine.
+Identifier must always be in Pascal case, e.g. something that starts with a CAPITAL letter. `myTable`, `mycoolTable`, `aTable` are invalid module names. `MyCoolTable` is OK.
 
 > We'll add a validation to Sergen for this soon.
 

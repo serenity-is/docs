@@ -4,21 +4,21 @@ After your first project is created in Visual Studio using Serene template, you 
 
 > Asp.Net Core users don't have to use Visual Studio, but we'll use Visual Studio in this guide as most of our users will.
 
-![Initial Solution Content](img/initial_solution_content.jpg)
+![Initial Solution Content](img/serenemvc.png)
 
-Your solution contains Serene1.Web project, which is an ASP.NET MVC application. 
+Your solution contains Serene1.Web project, which is an ASP.NET MVC (or ASP.NET Core) application. 
 
 It includes server side code written in C# (.cs) and client side code that is written in TypeScript (.ts).
 
 Serene.Web has references to Serenity NuGet packages, so you can update it using package manager console anytime necessary.
 
-> The screenshot above, belongs to a version < 2.1, which had a Serene1.Script project that was using *Saltarelle Compiler* for client side code. Since 2.1 we switched to TypeScript, and client side code (.ts files) also resides in Web project.
+> Asp.Net Core version can also be updated by hand editing .CSPROJ file.
 
 Serene automatically creates its database in SQL local db at first run, so just press F5 and you are ready to go.
 
 When application launches use `admin` user and `serenity` password to login. You can change password or create more users later, using *Administration / User Management* page.
 
-![Login Screen](img/login_screen.jpg)
+![Login Screen](img/serenelogin.png)
 
 The sample application includes old and famous Northwind data along with services and user interface to edit it, which is mostly produced by Serenity Code Generator.
 
@@ -26,9 +26,10 @@ The sample application includes old and famous Northwind data along with service
 
 If you are getting a connection error like the following while starting Serene for first time:
 
-> A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred. The specified LocalDB instance does not exist.
+```txt
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred. The specified LocalDB instance does not exist.
 )
-
+```
 
 This error might mean that you don't have SQL Server Local DB 2012 installed. This server comes preinstalled with Visual Studio 2012 and 2013. 
 

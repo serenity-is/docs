@@ -26,3 +26,5 @@ MovieTutorial.Web also has a tsconfig.json file at root, which specifies that it
 > To install TypeScript 2.5.2+ in Visual Studio, you'll need to install Visual Studio 2015 Update 3.
 > 
 > Download its latest version from http://www.typescriptlang.org/#download-links for your Visual Studio.
+> 
+> Also check prerequisites in Getting Started section.

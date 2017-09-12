@@ -45,6 +45,15 @@ Right click your project file, click *Edit MySerene.csproj*:
 <DotNetCliToolReference Include="Serenity.CodeGenerator" Version="3.0.5" >
 ```
 
+Find three lines that include *Serenity.Web*, *Serenity.Web.AspNetCore* and *Serenity.CodeGenerator* like shown above and change their versions to latest *Serenity* version.
+
+Open a command prompt in your project directory and type these two lines:
+
+```cmd
+dotnet restore
+dotnet sergen restore
+```
+
 ### Building Project
 
 Now rebuild your solution and it should build successfully.

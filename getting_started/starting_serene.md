@@ -18,7 +18,7 @@ Serene automatically creates its database in SQL local db at first run, so just 
 
 When application launches use `admin` user and `serenity` password to login. You can change password or create more users later, using *Administration / User Management* page.
 
-![Login Screen](img/serenelogin.png)
+![Login Screen](img/serenelogin.jpg)
 
 The sample application includes old and famous Northwind data along with services and user interface to edit it, which is mostly produced by Serenity Code Generator.
 

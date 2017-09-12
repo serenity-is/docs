@@ -59,9 +59,9 @@ Once you set Web project name, Sergen populates connection dropdown with connect
 
 ### Selecting Table To Generate Code For
 
-Sergen generates code for one table at a time. Once we choose connection string, table dropdown is populated with table names from that database. 
+Sergen can generate code for multiple tables, but we'll generate for only one now. Once we choose connection string, table grid is populated with table names from that database. 
 
-Select *Movie* table.
+Mark checkbox next to *Movie* table.
 
 ### Setting Module Name
 
@@ -79,13 +79,17 @@ Module name is used in determining namespace and url of generated pages.
 
 For example, our new page will be under *MovieTutorial.MovieDB* namespace and will use */MovieDB* relative url.
 
+#### Please Note!
+
+Module names must always be in Pascal case, e.g. something that starts with a CAPITAL letter. `myModule`, `mycoolmodule`, `aModule` are invalid module names. `MyCoolModule` is fine.
+
+> We'll add a validation to Sergen for this soon.
 
 ### ConnectionKey Parameter 
 
 Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
 
-
-### Entity Identifier
+### Identifier
 
 This usually corresponds to the table name but sometimes table names might have underscores or other invalid characters, so you decide what to name your entity in generated code (a valid identifier name).
 
@@ -95,6 +99,11 @@ This name is also used in other class names. For example our page controller wil
 
 It also determines the page url, in this sample our editing page will be at URL */MovieDB/Movie*.
 
+#### Please Note!
+
+Identifier must always be in Pascal case, e.g. something that starts with a CAPITAL letter. `myTable`, `mycoolTable`, `aTable` are invalid module names. `MyCoolTable` is fine.
+
+> We'll add a validation to Sergen for this soon.
 
 ### Permission Key 
 

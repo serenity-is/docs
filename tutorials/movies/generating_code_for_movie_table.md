@@ -109,6 +109,14 @@ Our Movie page will be only used by administrative users (or maybe later content
 
 Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
 
+### Generating Code for First Page
+
+After setting parameters as shown in the image above (you only have to set Module Name, others were prefilled), click *Generate Code for Entity* button. 
+
+Sergen will generate several files and include them in MovieTutorial.Web and MovieTutorial.Script projects.
+
+Now you can close Sergen, and return to Visual Studio.
+
 ## Serenity Code Generator (ASP.NET Core)
 
 > These steps applies only to ASP.NET Core version, not ASP.NET MVC version.
@@ -121,9 +129,13 @@ Click *File* menu in file explorer, and click *Open Windows Powershell* or *Open
 
 > You may also install this extension (https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine) to easily open a command line next time. I can't understand why there is still not such an option in Visual Studio itself.
 
+Make sure you are at `MovieTutorial.Web` directory.
+
 Type `dotnet sergen g` to open Sergen code generation UI (console).
 
 ![Dotnet Sergen G](img/dotnetsergeng.png)
+
+> If you receive an error, type `dotnet restore` before running sergen.
 
 Sergen will list connections in appsettings.json file.
 
@@ -133,21 +145,23 @@ After pressing Enter you'll get a list of tables in that database:
 
 ![Dotnet Sergen G](img/dotnetsergencon.png)
 
-Clear `dbo.` using backspace, and type `mov.Movie` or type `m` and use TAB completion to select `mov.Movie`.
+Clear `dbo.` using backspace, and type `mov.Movie` or type `m` and use TAB completion to select `mov.Movie`, then press *ENTER*.
 
+Next, Sergen will ask for a module name, enter *MovieDB*.
 
+When prompted, enter *Movie* as identifier.
 
-### Generating Code for First Page
+Leave permission as *Administration:General* and press enter again.
 
-After setting parameters as shown in the image above (you only have to set Module Name, others were prefilled), click *Generate Code for Entity* button. 
+![Dotnet Sergen G](img/dotnetsergenprm.png)
 
-Sergen will generate several files and include them in MovieTutorial.Web and MovieTutorial.Script projects.
+Sergen will ask you which files to generate, leave default *RSU* option (e.g. Row, Service and User Interface) and press ENTER last time.
 
-Now you can close Sergen, and return to Visual Studio.
+Now you can quit command prompt, and return back to Visual Studio (or Notepad :)
 
 ## After Generating Code
 
-As project is modified, Visual Studio will ask if you want to reload changes, click Reload All.
+As project is modified, Visual Studio may ask if you want to reload changes, click Reload All.
 
 *REBUILD the Solution* and then press *F5* to launch application.
 

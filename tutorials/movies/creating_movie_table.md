@@ -89,7 +89,11 @@ Please make sure you always use same number of characters for migration keys e.g
 
 ### Running Migrations
 
-By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. The code that runs migrations are in *App_Start/SiteInitialization.cs* and *App_Start/SiteInitialization.Migrations.cs* files:
+By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. 
+
+The code that runs migrations are in *App_Start/SiteInitialization.cs* and *App_Start/SiteInitialization.Migrations.cs* files:
+
+> In Asp.Net Core version, they are under *Initialization/Startup.cs* and *Initialization/DataMigrations.cs* files as there is no App_Start folder in ASP.NET Core.
 
 ** SiteInitialization.Migrations.cs**:
 ```cs

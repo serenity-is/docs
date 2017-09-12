@@ -4,7 +4,7 @@ This section is for users who doesn't or can't use Visual Studio (in Linux / OSX
 
 Serene Asp.Net Core version supports Linux and OSX in addition to Windows.
 
-> We recommend Visual Studio Code for all platforms, but it is also possible to work with a basic text editor like Notepad / VIM. There are also other nice options like Atom.
+> We recommend Visual Studio Code for all platforms, but it is also possible to work with a basic text editor like Notepad / VIM. There are also other nice options e.g. Atom.
 
 ## Install .NET Core 2.0 SDK 
 

@@ -26,9 +26,11 @@ The sample application includes old and famous Northwind data along with service
 
 If you are getting a connection error like the following while starting Serene for first time:
 
-```txt
-A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred. The specified LocalDB instance does not exist.
-)
+```
+> A network-related or instance-specific error occurred 
+> while establishing a connection to SQL Server. 
+> The server was not found or was not accessible. 
+> Verify that the instance name is correct...
 ```
 
 This error might mean that you don't have SQL Server Local DB 2012 installed. This server comes preinstalled with Visual Studio 2012 and 2013. 

@@ -23,6 +23,8 @@ Most of the times, restarting Visual Studio might resolve the issue.
 
 If it doesn't, you may open Sergen.exe from Windows Explorer. Right click on *MovieTutorial* solution in Solution Explorer, click *Open In File Explorer*. Sergen.exe is under *packages\Serenity.CodeGenerator.X.Y.Z\tools* directory.
 
+![Sergen Explorer](img/sergenexplorer.jpg)
+
 
 ### Sergen UI
 

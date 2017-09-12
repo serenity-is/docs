@@ -6,9 +6,19 @@ To store list of movies we need a Movie table. We could create this table using 
 
 > See https://github.com/schambers/fluentmigrator for more information on FluentMigrator.
 
-Using *Solution Explorer* navigate to *Modules / Common / Migrations / DefaultDB*.
+### Please Note
 
-![Initial Migration Folder](img/mdb_migration_initial.png)
+As we are using FluentMigrator in our samples, some users assume Serenity doesn't work without it. That's not correct. You don't have to use migrations. Serenity has no direct dependency on migrations.
+
+If you like, instead of using these migrations you may manually create tables in SQL Management Studio.
+
+You could also work with an existing database.
+
+## Locating Migration Folder
+
+Using *Solution Explorer* navigate to *Migrations / DefaultDB*.
+
+![Initial Migration Folder](img/migrationsfolder.png)
 
 
 Here we already have several migrations. A migration is like a DML script that manipulates database structure.

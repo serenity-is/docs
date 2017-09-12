@@ -1,6 +1,6 @@
 # Installing Serene Asp.Net Core Version with SERIN
 
-This section is for users who doesn't or can't use Visual Studio. 
+This section is for users who doesn't or can't use Visual Studio (in Linux / OSX). 
 
 Serene Asp.Net Core version supports Linux and OSX in addition to Windows.
 

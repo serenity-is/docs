@@ -1,4 +1,4 @@
-# Installing Serene Asp.Net Core Version with Serin
+# Installing Serene Asp.Net Core Version with SERIN
 
 This section is for users who doesn't or can't use Visual Studio. 
 

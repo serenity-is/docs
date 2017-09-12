@@ -99,16 +99,15 @@ For example, our new page will be under *MovieTutorial.MovieDB* namespace and wi
 
 Module names must also be in Pascal case, e.g. something that starts with a CAPITAL letter. `myModule`, `mycoolmodule`, `aModule` are invalid module names. `MyCoolModule` is fine.
 
-### ConnectionKey Parameter 
-
-Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
-
-
 ### Permission Key 
 
 In Serenity, access control to resources (pages, services etc.) are controlled by permission keys which are simple strings. Users or roles are granted these permissions.
 
-Our Movie page will be only used by administrative users (or maybe later content moderators) so let's leave it as *Administration* for now. By default, in Serene template, only the *admin* user has this permission.
+Our Movie page will be only used by administrative users (or maybe later content moderators) so let's leave it as *Administration:General* for now. By default, in Serene template, only the *admin* user has this permission.
+
+### ConnectionKey Parameter 
+
+Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
 
 
 ### Generating Code for First Page

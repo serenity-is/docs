@@ -5,7 +5,6 @@
   * [Installing Serene From Visual Studio Marketplace](getting_started/installing_serene_from_visual_studio_gallery.md)
   * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
   * [Instaling Serene Asp.Net Core Version with Serin](getting_started/instaling-serene-aspnet-core-version-with-serin.md)
-  * [Creating a New Project in Visual Studio](getting_started/creating-a-new-project-in-visual-studio.md)
   * [Starting Serene](getting_started/starting_serene.md)
 * [A Tour Of Serene Features](serene_tour/README.md)
   * [Theming](serene_tour/theming.md)

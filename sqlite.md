@@ -2,7 +2,7 @@
 
 ### Registering Sqlite Provider
 
-MySQL has a .NET provider named System.Data.Sqlite. You need to first install it in MyProject.Web:
+Sqlite has a .NET provider named System.Data.Sqlite. You need to first install it in MyProject.Web:
 
 > Install-Package System.Data.SQLite.Core -Project MyProject.Web
 
@@ -25,7 +25,7 @@ If you didn't install this provider in GAC/machine.config before, or don't want 
 
 ### Setting Connection Strings
 
-Next step is to replace connection strings for databases you want to use with MySql:
+Next step is to replace connection strings for databases you want to use with Sqlite:
 
 ```xml
   <connectionStrings>
@@ -71,9 +71,9 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
     </DbProviderFactories>
   </system.data>
   <appSettings>
-    <add key="LoadProviderDLLs" value="MySql.Data.dll"/>
+    <add key="LoadProviderDLLs" value="Sqlite.Data.dll"/>
   </appSettings>
 </configuration>
 ```
 
-Also copy System.Data.Sqlite.dll and its x86 and x64 folders under bin directory to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your MySql tables.
+Also copy System.Data.Sqlite.dll and its x86 and x64 folders under bin directory to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your Sqlite tables.

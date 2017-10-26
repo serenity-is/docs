@@ -45,6 +45,21 @@ Next step is to replace connection strings for databases you want to use with Po
 </connectionStrings>    
 
 ```
+### Setting Connection Strings - .Net Core appsettings.json
+
+```json
+  "Data": {
+    "Default": {
+      "ConnectionString": "Server=127.0.0.1;Database=serene_default_v1;User Id=postgres;Password=yourpassword;",
+      "ProviderName": "Npgsql"
+    },
+    "Northwind": {
+      "ConnectionString": "Server=127.0.0.1;Database=serene_northwind_v1;User Id=postgres;Password=yourpassword;",
+      "ProviderName": "Npgsql"
+    }
+  },  
+
+```
 
 > Please use lowercase database names like `serene_default_v1` as Postgres will always convert it to lowercase.
 
@@ -76,6 +91,28 @@ This setting automatically quotes column names in entities, but not manually wri
 Use brackets `[]` for identifiers in expressions if you want to support multiple database types. Serenity will automatically convert brackets to database specific quote type before running queries. 
 
 You might also prefer to use double quotes in expressions, but it might not be compatible with other databases like MySQL.
+
+### Registering PostgreSQL DbProviderFactory
+
+Open the `Startup.cs` file under *{SerenityProject}/Initialization/* and uncomment the last line, as shown below.
+
+```c#
+public static void RegisterDataProviders()
+{
+   // DbProviderFactories.RegisterFactory("System.Data.SqlClient",
+   //   SqlClientFactory.Instance);
+   // DbProviderFactories.RegisterFactory("Microsoft.Data.Sqlite",
+   //   Microsoft.Data.Sqlite.SqliteFactory.Instance);
+   // to enable FIREBIRD: add FirebirdSql.Data.FirebirdClient reference, set connections, and uncomment line below
+   // DbProviderFactories.RegisterFactory("FirebirdSql.Data.FirebirdClient", 
+   //   FirebirdSql.Data.FirebirdClient.FirebirdClientFactory.Instance);
+   // to enable MYSQL: add MySql.Data reference, set connections, and uncomment line below
+   // DbProviderFactories.RegisterFactory("MySql.Data.MySqlClient",
+   //   MySql.Data.MySqlClient.MySqlClientFactory.Instance);
+   // to enable POSTGRES: add Npgsql reference, set connections, and uncomment line below
+   DbProviderFactories.RegisterFactory("Npgsql", Npgsql.NpgsqlFactory.Instance);
+}
+```
 
 ### Setting Default Dialect
 

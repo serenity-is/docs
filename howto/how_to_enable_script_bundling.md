@@ -72,7 +72,7 @@ Here we define two distinct bundles, *Libs* and *Site*, corresponding to *Bundle
 
 *Bundle.Site.js* is configured to contain these three JS files (in the listed order):
 
-````
+```
 "~/Scripts/adminlte/app.js",
 "~/Scripts/Site/Serene.Script.js",
 "~/Scripts/Site/Serene.Web.js"

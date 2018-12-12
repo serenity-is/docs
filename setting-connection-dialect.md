@@ -40,7 +40,7 @@ It is also possible to set this through an application configuration entry (reco
         Northwind: { 
             Dialect: 'Postgres' 
         }
-    "/>
+    }"/>
 ```
 
 

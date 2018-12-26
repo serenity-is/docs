@@ -22,15 +22,41 @@ These attributes can be used with and located from one of these types:
 
 When you use a permission key with one of such attributes, Serene will automatically discover them using reflection at application start.
 
-> There is a PermissionKeys class in Serene. Some users expected that when they write their permission keys in this class, they will be discovered. 
-
-> But, PermissionKeys class is only there for intellisense purposes, it is ignored by Serene.
-
 If you don't use a permission key with any of them but still want to show it in permission dialogs, you can use *RegisterPermission* attribute on assembly (write this anywhere in YourProject.Web):
 
 ```cs
 [assembly: Serenity.ComponentModel.RegisterPermissionKey("MySpecialPermissionKey")]
 ```
+
+## PermissionKeys Class
+
+There are PermissionKeys classes for every module in Serene in files like AdministrationPermissionKeys.cs, NorthwindPermissionKeys.cs etc:
+
+```cs
+[NestedPermissionKeys]
+[DisplayName("Northwind")]
+public class PermissionKeys
+{
+    [DisplayName("Customers")]
+    public class Customer
+    {
+        [ImplicitPermission(General), ImplicitPermission(View)]
+        public const string Delete = "Northwind:Customer:Delete";
+        [Description("Create/Update"), ImplicitPermission(General), ImplicitPermission(View)]
+        public const string Modify = "Northwind:Customer:Modify";
+        public const string View = "Northwind:Customer:View";
+    }
+
+    [Description("[General]")]
+    public const string General = "Northwind:General";
+}
+```
+
+The [NestedPermissionKeys] attribute ensures that permission keys defined here are also registered and shown in permission dialog.
+
+> [ImplicitPermission] in this sample currently only works in Start# and controls what permissions a user will automatically have a user has that permission. 
+
+> For example, if a user has "Northwind:Customer:Delete" permission checked, he is also considered to have "Northwind:Customer:View" and "Northwind:General" permissions, even when he is not explictly granted those permissions.
 
 ## Organizing Permission Tree
 

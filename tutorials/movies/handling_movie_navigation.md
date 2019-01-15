@@ -4,15 +4,11 @@
 
 When Sergen generated code for Movie table, it also created a navigation item entry. In Serene, navigation items are created with special assembly attributes.
 
-Open _MoviePage.cs_ in the same folder, on top of it you'll find this line:
+Open _MovieDBNavigation.cs_ in the module folder.  In it you'll find this line:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Movie", 
     typeof(MovieTutorial.MovieDB.Pages.MovieController))]
-
-namespace MovieTutorial.MovieDB.Pages
-{
-    //...
 ```
 
 First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
@@ -24,11 +20,6 @@ Lets change it to _Movie Database/Movies_.
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
     typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
-
-namespace MovieTutorial.MovieDB.Pages
-{
-
-//..
 ```
 
 ![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
@@ -51,11 +42,11 @@ As our _Movie Database_ section is auto generated last, it is displayed at the b
 
 We'll move it before Northwind menu.
 
-As we saw recently, Sergen created a navigation item in _MoviePage.cs_. If navigation items are scattered through pages like this, it would be hard to see the big picture \(list of all navigation items\) and order them easily.
+As we saw recently, Sergen created a navigation item in _MovieDBNavigation.cs_. If navigation items are scattered through pages like this, it would be hard to see the big picture \(list of all navigation items\) and order them easily.
 
 So we move it to our central location which is at _MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs_.
 
-Just cut the below lines from _MoviePage.cs_:
+Just cut the below lines from _MovieDBNavigation.cs_:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 

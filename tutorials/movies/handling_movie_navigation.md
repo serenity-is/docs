@@ -4,15 +4,11 @@
 
 When Sergen generated code for Movie table, it also created a navigation item entry. In Serene, navigation items are created with special assembly attributes.
 
-Open _MoviePage.cs_ in the same folder, on top of it you'll find this line:
+Open _MovieDBNavigation.cs_ in the module folder.  In it you'll find this line:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Movie", 
     typeof(MovieTutorial.MovieDB.Pages.MovieController))]
-
-namespace MovieTutorial.MovieDB.Pages
-{
-    //...
 ```
 
 First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
@@ -23,17 +19,12 @@ Lets change it to _Movie Database/Movies_.
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
-
-namespace MovieTutorial.MovieDB.Pages
-{
-
-//..
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "fa-video-camera")]
 ```
 
 ![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
 
-We also changed navigation item icon to _icon-camcorder_. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from simple line icons set.
+We also changed navigation item icon to _fa-video-camera_. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from Font Awesome icon set.
 
 To see list of simple line icons and their css classes, visit link below:
 
@@ -41,7 +32,7 @@ To see list of simple line icons and their css classes, visit link below:
 
 FontAwesome is available here:
 
-[https://fortawesome.github.io/Font-Awesome/icons/](https://fortawesome.github.io/Font-Awesome/icons/)
+[https://fontawesome.com/v4.7.0/icons/](https://fontawesome.com/v4.7.0/icons/)
 
 > There is also a page in Serene under _Theme Samples / UI Elements / Icons_ containing a list of these icon sets.
 
@@ -51,15 +42,15 @@ As our _Movie Database_ section is auto generated last, it is displayed at the b
 
 We'll move it before Northwind menu.
 
-As we saw recently, Sergen created a navigation item in _MoviePage.cs_. If navigation items are scattered through pages like this, it would be hard to see the big picture \(list of all navigation items\) and order them easily.
+As we saw recently, Sergen created a navigation item in _MovieDBNavigation.cs_. If navigation items are scattered through pages like this, it would be hard to see the big picture \(list of all navigation items\) and order them easily.
 
 So we move it to our central location which is at _MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs_.
 
-Just cut the below lines from _MoviePage.cs_:
+Just cut the below lines from _MovieDBNavigation.cs_:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "fa-video-camera")]
 ```
 
 Move it into _NavigationItems.cs_ and modify it like this:
@@ -71,17 +62,17 @@ using Administration = MovieTutorial.Administration.Pages;
 using MovieDB = MovieTutorial.MovieDB.Pages;
 
 [assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "",
-    icon: "icon-speedometer")]
+    icon: "fa-tachometer")]
 
-[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
+[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies", 
-    typeof(MovieDB.MovieController), icon: "icon-camrecorder")]
+    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
 
-[assembly: NavigationMenu(8000, "Northwind", icon: "icon-anchor")]
+[assembly: NavigationMenu(8000, "Northwind", icon: "fa-anchor")]
 [assembly: NavigationLink(8200, "Northwind/Customers", 
-    typeof(Northwind.CustomerController), icon: "icon-wallet")]
+    typeof(Northwind.CustomerController), icon: "fa-credit-card")]
 [assembly: NavigationLink(8300, "Northwind/Products", 
-    typeof(Northwind.ProductController), icon: "icon-present")]
+    typeof(Northwind.ProductController), icon: "fa-cube")]
 // ...
 ```
 

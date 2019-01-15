@@ -215,7 +215,7 @@ Let's change our initial dialog height to 500px (in desktop mode), so it won't r
 
 ```css
 .s-MovieDialog {
-    > .size { width: 650px); height: 500px; }
+    > .size { width: 650px; height: 500px; }
     .caption { width: 150px; }
 }
 ```

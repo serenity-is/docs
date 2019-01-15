@@ -62,17 +62,17 @@ using Administration = MovieTutorial.Administration.Pages;
 using MovieDB = MovieTutorial.MovieDB.Pages;
 
 [assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "",
-    icon: "icon-speedometer")]
+    icon: "fa-tachometer")]
 
 [assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies", 
     typeof(MovieDB.MovieController), icon: "fa-video-camera")]
 
-[assembly: NavigationMenu(8000, "Northwind", icon: "icon-anchor")]
+[assembly: NavigationMenu(8000, "Northwind", icon: "fa-anchor")]
 [assembly: NavigationLink(8200, "Northwind/Customers", 
-    typeof(Northwind.CustomerController), icon: "icon-wallet")]
+    typeof(Northwind.CustomerController), icon: "fa-credit-card")]
 [assembly: NavigationLink(8300, "Northwind/Products", 
-    typeof(Northwind.ProductController), icon: "icon-present")]
+    typeof(Northwind.ProductController), icon: "fa-cube")]
 // ...
 ```
 

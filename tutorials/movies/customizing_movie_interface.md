@@ -218,7 +218,7 @@ Let's change our initial dialog height to 500px (in desktop mode), so it won't r
 }
 ```
 
-For this change to be applied to your dialog, you need to build solution. As this "site.less" file is compiled to a "site.css" file on build. Now build and refresh the page.
+For this change to be applied to your dialog, you need to build solution. As the "site.\*.less" files are compiled to a "site.css" file on build. Now build and refresh the page.
 
 ![Movie Dialog 500px](img/mdb_movie_500px.png)
 

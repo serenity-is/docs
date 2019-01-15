@@ -19,12 +19,12 @@ Lets change it to _Movie Database/Movies_.
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "fa-video-camera")]
 ```
 
 ![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
 
-We also changed navigation item icon to _icon-camcorder_. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from simple line icons set.
+We also changed navigation item icon to _fa-video-camera_. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from Font Awesome icon set.
 
 To see list of simple line icons and their css classes, visit link below:
 
@@ -32,7 +32,7 @@ To see list of simple line icons and their css classes, visit link below:
 
 FontAwesome is available here:
 
-[https://fortawesome.github.io/Font-Awesome/icons/](https://fortawesome.github.io/Font-Awesome/icons/)
+[https://fontawesome.com/v4.7.0/icons/](https://fontawesome.com/v4.7.0/icons/)
 
 > There is also a page in Serene under _Theme Samples / UI Elements / Icons_ containing a list of these icon sets.
 
@@ -50,7 +50,7 @@ Just cut the below lines from _MovieDBNavigation.cs_:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
+    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "fa-video-camera")]
 ```
 
 Move it into _NavigationItems.cs_ and modify it like this:
@@ -64,9 +64,9 @@ using MovieDB = MovieTutorial.MovieDB.Pages;
 [assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "",
     icon: "icon-speedometer")]
 
-[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
+[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies", 
-    typeof(MovieDB.MovieController), icon: "icon-camrecorder")]
+    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
 
 [assembly: NavigationMenu(8000, "Northwind", icon: "icon-anchor")]
 [assembly: NavigationLink(8200, "Northwind/Customers", 

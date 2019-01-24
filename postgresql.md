@@ -174,6 +174,20 @@ Locate Sergen.exe, which is under a folder like *packages/Serenity.CodeGenerator
 </configuration>
 ```
 
-Also copy Npgsql.dll to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your Postgres tables.
+Also copy Npgsql.dll and the following dependencies to same folder where Sergen.exe resides. Now Sergen will be able to generate code for your Postgres tables.
+
+Npgsql Dependencies
+.NETFramework 4.5
+  System.Runtime.CompilerServices.Unsafe (>= 4.5.0)
+  System.Threading.Tasks.Extensions (>= 4.5.1)
+  System.ValueTuple (>= 4.5.0)
+.NETFramework 4.5.1
+  System.Runtime.CompilerServices.Unsafe (>= 4.5.0)
+  System.Threading.Tasks.Extensions (>= 4.5.1)
+  System.ValueTuple (>= 4.5.0)
+.NETStandard 2.0
+  System.Runtime.CompilerServices.Unsafe (>= 4.5.0)
+  System.Threading.Tasks.Extensions (>= 4.5.1)
+  System.ValueTuple (>= 4.5.0)
 
 > You might want to remove `[public].` prefix for default schema from tablename/column expressions in generated rows if you want to be able to work with multiple databases.

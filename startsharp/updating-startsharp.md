@@ -376,3 +376,54 @@ namespace StartSharp.Northwind {
 ```
 
 Restart Visual Studio, rebuild and run your project to ensure that there are no script errors.
+
+### StartSharp v3.8.3.2
+
+In this version an idle timeout sample is added. To enable it for your site, add these lines to your ScriptInitialization.ts:
+
+```ts
+    $(() => {
+        // let demo page use its own settings for idle timeout
+        if (window.location.pathname.indexOf('Samples/IdleTimeout') > 0)
+            return;
+
+        var meta = $('meta[name=username]');
+        if ((meta.length && meta.attr('content')) ||
+            (!meta.length && Q.Authorization.isLoggedIn)) {
+
+            new Serenity.IdleTimeout({
+                activityTimeout: 15 * 60,
+                warningDuration: 2 * 60
+            });
+        }
+    });
+```
+
+> Make sure you update Serenity and Serenity.Pro.Scripts packages first, and don't forget to run `dotnet sergen restore` if using .NET Core.
+
+### StartSharp v3.8.6.0
+
+This version comes with some modern flat design improvements for grids, forms and toolbars. To apply these changes into your project, after updating Serenity and Serenity.Pro.Scripts packages (and don't forget to run `dotnet sergen restore` if using .NET Core), edit your ScriptInitialization.ts add add this line inside namespace braces:
+
+```ts
+Serenity.setupUIOverrides();
+```
+
+Also please take changes from site.premium.less, minimum between these two lines:
+
+```css
+// --- Start of UI Overrides ---
+
+... copy paste everything between
+
+// --- End of UI Overrides ---
+```
+
+You may get these lines by creating a new StartSharp project, or using the following link:
+
+https://github.com/volkanceylan/StartSharp/blob/master/StartSharp/StartSharp.Web/Content/site/site.premium.less
+
+There are some minor changes in skins.azure.less file so it is a good idea to update that too:
+
+https://github.com/volkanceylan/StartSharp/blob/master/StartSharp/StartSharp.Web/Content/skins/azure.less
+

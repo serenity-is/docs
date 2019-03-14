@@ -192,9 +192,11 @@ During testing we found out that handlers defined in your web.config files also 
 <add name="SkipStaticFileForUploadFolder" verb="GET" path="upload/*"   
   type="System.Web.Handlers.TransferRequestHandler"/>    
 </handlers>
+```
 
 Replace them with
 
+```xml
 <handlers>
   <add name="ErrorLog" path="/errorlog.axd" verb="POST,GET,HEAD"   
     type="StackExchange.Exceptional.HandlerFactory, StackExchange.Exceptional" preCondition="integratedMode" />
@@ -203,6 +205,7 @@ Replace them with
   <add name="SkipStaticFileForUploadFolder" verb="GET" path="/upload/*"    
     type="System.Web.Handlers.TransferRequestHandler"/>    
 </handlers>
+```
 
 So that these handlers only apply to web root folder.
 

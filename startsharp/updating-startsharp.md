@@ -225,6 +225,16 @@ Make sure you have following DynamicScriptHandler entry in your web.config:
 </handlers>
 ```
 
+## Serenity 3.8.5
+
+This is not actually an issue about Serenity itself, but you might have this problem if you choose to update Microsoft.TypeScript.MsBuild in your Serene/StartSharp project.
+
+TypeScript no longer has a tsc.exe file and it uses NodeJS instead of Chakra (Edge) so you need to update your .CSPROJ file, find CompileTSC section in your project file and replace it like below:
+
+```xml
+<Exec Command="&quot;$(NodePath)\node&quot; &quot;$(TSJavaScriptFile.Replace('build\\..\tools\', 'tools\'))&quot; -p ./tsconfig.json" ContinueOnError="true" />
+```
+
 ## StartSharp v3.6.0.2
 
 Starting with StartSharp 3.6.0.2, we have a new *Serenity.Pro.Scripts* NuGet package which contains some features which is only available for StartSharp customers.

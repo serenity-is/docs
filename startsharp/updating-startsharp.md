@@ -48,6 +48,8 @@ Using package manager console, update following packages:
 
 ```
 Update-Package Serenity.Web
+Update-Package Serenity.Web.Assets
+Update-Package Serenity.Scripts
 Update-Package Serenity.CodeGenerator
 Update-Package Serenity.Web.Tooling
 ```
@@ -60,6 +62,8 @@ Using package manager console, update following package:
 
 ```
 Update-Package Serenity.Web
+Update-Package Serenity.Scripts
+Update-Package Serenity.Web.Assets
 ```
 
 Edit *YourProject.Web.csproj* by right clicking on project name in VS, and choosing edit.
@@ -237,6 +241,28 @@ TypeScript no longer has a tsc.exe file and it uses NodeJS instead of Chakra (Ed
 ```xml
 <Exec Command="&quot;$(NodePath)\node&quot; &quot;$(TSJavaScriptFile.Replace('build\\..\tools\', 'tools\'))&quot; -p ./tsconfig.json" ContinueOnError="true" />
 ```
+
+## Serenity 3.9.0
+
+Serenity.Web NuGet package no longer contains / has reference to Serenity script, css and image files, so you need to install Serenity.Scripts package after updating to 3.9.0. Serenity.Web.Assets package now contains some static files so also need to update/install this package.
+
+If using ASP.NET MVC, run following in the package manager console:
+
+```ps
+Install-Package Serenity.Scripts
+Update-Package Serenity.Web.Assets
+```
+
+If using ASP.NET Core, add following two lines in your CSPROJ next to line containing reference to **Serenity.Web**:
+
+```xml
+<PackageReference Include="Serenity.Web" Version="3.8.6"
+    Condition="!Exists('..\..\Serenity\Serenity.Core\Serenity.Core.csproj')" />
+<PackageReference Include="Serenity.Web.Assets" Version="3.9.0" />
+<PackageReference Include="Serenity.Scripts" Version="3.9.0" />
+```
+
+Make sure you write latest versions of Serenity.Web.Assets and Serenity.Scripts in Version attribute.
 
 ## StartSharp v3.6.0.2
 
@@ -490,3 +516,14 @@ There are some minor changes in skins.azure.less file so it is a good idea to up
 
 https://github.com/volkanceylan/StartSharp/blob/master/StartSharp/StartSharp.Web/Content/skins/azure.less
 
+### StartSharp v3.9.0.0
+
+An issue related to ASP.NET Antiforgery protection in ASP.NET Core and StackExchange.Exceptional is found that causes errors when you try to delete / protect errors. To ignore anti forgery for Exceptional, edit UserPage.cs and add following [IgnoreAntiforgeryToken] attribute:
+
+```
+[Route("Administration/ExceptionLog/{*pathInfo}"), IgnoreAntiforgeryToken]
+public async Task ExceptionLog()
+{
+    await ExceptionalMiddleware.HandleRequestAsync(HttpContext).ConfigureAwait(false);
+}
+```

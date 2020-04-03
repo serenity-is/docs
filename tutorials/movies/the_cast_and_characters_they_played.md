@@ -2,7 +2,7 @@
 
 If we wanted to keep a record of actors and the roles they played like this:
 
-*Actor/Actress*|*Character *
+*Actor/Actress*|*Character*
 --|--
 Keanu Reeves|Neo       
 Laurence Fishburne|Morpheus
@@ -11,7 +11,7 @@ Carrie-Anne Moss|Trinity
 We need a table MovieCast with columns like:
 
 *MovieCastId*|*MovieId*|*PersonId*|*Character*
---|--|--
+--|--|--|--
 ...|...|...|...
 11|2 (Matrix)|77 (Keanu Reeves)|Neo
 12|2 (Matrix)|99 (Laurence Fisburne)|Morpheus

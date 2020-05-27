@@ -80,4 +80,34 @@ You'll be keeping your StartSharp licence and continue using versions of StartSh
 
 Your existing projects will continue to work, and you can still create new projects using your version of StartSharp.
 
+## StartSharp Features
 
+The features listed below are only available in StartSharp:
+
+> You may access this feature list in order also from the left navigation under **StartSharp/Features**, or by clicking **Next Page** button on bottom right of this page.
+
+* [Premium Themes](features/premium-themes.md)
+* [Step by Step Wizard](features/step-by-step-wizard.md)
+* [Card View & React](features/card-view-react.md)
+* [Favorite Views](features/favorite-views.md)
+* [Excel Style Filtering](features/excel-style-filtering.md)
+* [Drag & Drop Grouping](features/drag-drop-grouping.md)
+* [Customizable Summaries](features/customizable-summaries.md)
+* [Email Client (React Based)](features/email-client.md)
+* [Dynamic Data Explorer](features/data-explorer.md)
+* [Data Audit Log](features/data-audit-log.md)
+* [Product Picker Dialog](features/product-picker-dialog.md)
+* [Split Master Detail](features/split-master-detail.md)
+* [Background Task System](features/background-task-system.md)
+* [Batch Mail Queue](features/batch-mail-queue.md)
+* [Background PDF Reports](features/background-pdf-reports.md)
+* [Meeting Module](features/meeting-module.md)
+* [Organization & Contacts Module](features/organization-contacts-module.md)
+* [Login As User](features/login-as-user.md)
+* [Two Factor Authentication](features/two-factor-auth.md)
+* [Role Based Access Control](features/role-based-access-control.md)
+* [Implicitly Granted Permissions](features/implicitly-granted-permissions.md)
+* [Editors with Inline Buttons](features/editors-with-inline-buttons.md)
+* [Data Tables Integration](features/data-tables-integration.md)
+* [Bootstrap Table & Form](features/bootstrap-table-form.md)
+* [Long Running Action with Progress](features/long-running-action-progress.md)

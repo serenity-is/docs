@@ -2,7 +2,11 @@
 
 Launch *Sergen* and generate code for *Tenants* table in *Default* connection:
 
-![Tenants Table](img/sergen_tenants.png)
+- Connection: **Default**
+- Table Name: **dbo.Tenants**
+- Module Name: **Administration**
+- Identifier: **Tenant**
+- Permission Key: **Administration:Tenants**
 
 Next we'll define a lookup script in *TenantRow* and set DisplayName property to *Tenants*:
 

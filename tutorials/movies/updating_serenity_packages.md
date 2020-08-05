@@ -1,6 +1,6 @@
 # Updating Serenity Packages (ASP.NET MVC Version)
 
-When i started writing this tutorial, Serenity (NuGet packages containing Serenity assemblies and standard scripts libraries) and Serene (the application template) was at version 2.1.8.
+When i started writing this tutorial, Serenity was at version 2.1.8.
 
 When you read this you are probably using a later version, so you might not have to update serenity yet.
 
@@ -13,6 +13,8 @@ So, click *View -> Other Windows -> Package Manager Console*.
 Type:
 
 > Update-Package Serenity.Web
+> Update-Package Serenity.Scripts
+> Update-Package Serenity.Web.Assets
 
 This will also update following NuGet packages in *MovieTutorial.Web* because of dependencies:
 
@@ -23,33 +25,36 @@ Serenity.Data.Entity
 Serenity.Services
 ```
 
-To update Serenity.CodeGenerator (containg *sergen.exe*), type:
+To update Serenity.CodeGenerator (e.g. *dotnet sergen* tool), open a console window in project directory and type:
 
-> Update-Package Serenity.CodeGenerator
-
-Serenity.CodeGenerator is also installed in MovieTutorial.Web project.
+> dotnet tool update sergen
 
 > During updates, if NuGet asks to override changes in some script files, you can safely say yes unless you did manual modifications to Serenity script files (which i suggest you avoid).
 
-# Updating Serenity Packages (ASP.NET Core Version)
+To update Serenity.CodeGenerator (e.g. *dotnet sergen* tool) and script files that comes with Serenity, open a console window in project directory and type:
 
-Theorically, you should be able to update Serenity just like ASP.NET MVC version using NuGet package manager console, but it might not work, probably due to some conditionals in CSPROJ file confusing NuGet.
+> dotnet tool update sergen
+> dotnet restore
+> dotnet sergen restore
+
+# Updating Serenity Packages (alternative approach by editing CSPROJ file)
+
+Theorically, you should be able to update Serenity by using NuGet package manager console, but it might not work, probably due to some conditionals in CSPROJ file confusing NuGet.
  
-These conditionals are there to support switching easily to full .NET Framework if you have to.
-
 Right click your project file, click *Edit MySerene.csproj*:
 
 ```xml
 <PackageReference Include="Serenity.Web" Version="3.0.5" />
-<PackageReference Include="Serenity.Web.AspNetCore" Version="3.0.5" />
-<DotNetCliToolReference Include="Serenity.CodeGenerator" Version="3.0.5" >
+<PackageReference Include="Serenity.Web.Assets" Version="3.0.5" />
+<PackageReference Include="Serenity.Scripts" Version="3.0.5" />
 ```
 
-Find three lines that include *Serenity.Web*, *Serenity.Web.AspNetCore* and *Serenity.CodeGenerator* like shown above and change their versions to latest *Serenity* version.
+Find three lines that include *Serenity.Web*, *Serenity.Web.Assets* and *Serenity.Scripts* like shown above and change their versions to latest *Serenity* version.
 
 Open a command prompt in your project directory and type these two lines:
 
 ```cmd
+dotnet tool update sergen
 dotnet restore
 dotnet sergen restore
 ```
@@ -71,19 +76,18 @@ Now rebuild your solution and it should build successfully.
 
 Updating Serenity NuGet packages, takes Serenity assemblies up to the latest version.
 
-It might also update some other third-party packages like ASP.NET MVC, FluentMigrator, Select2.js, SlickGrid etc.
+It might also update some other third-party packages like ASP.NET Core, FluentMigrator, Select2.js, SlickGrid etc.
 
-> Please don't update Select2.js to a version after 3.5.1 yet as it has some compability problems with jQuery validation.
+> Please don't update Select2.js to a version after 3.5.1 yet as it has some compability problems.
 
-Serenity.Web package also comes with some static script and css resources like the following:
+Serenity.Scripts and Serenity.Web.Assets packages also comes with some static script and css resources like the following:
 
 ```
 Content/serenity/serenity.css
-Scripts/saltarelle/mscorlib.js
-Scripts/saltarelle/linq.js
 Scripts/serenity/Serenity.CoreLib.js
-Scripts/serenity/Serenity.Script.UI.js
 ```
+
+> These files are updated using `dotnet sergen restore`. NuGet itself does not support static files in NuGet packages to be installed / updated on application itself.
 
 So, these and a few more are also updated in MovieApplication.Web.
 
@@ -100,4 +104,4 @@ So sometimes you might have to create a new Serene application with up-to-date S
 
 Usually, updating Serenity packages is enough. Updating Serene itself is not required unless you need some recent features from latest Serene version.
 
-> We have some plans to make parts of Serene template also a NuGet package, but it is still not trivial how to update your application without overriding your changes, e.g. to shared code like Navigation items. And what if you removed Northwind code, but our update reinstalls it? I'm open to suggestions...
+> We have some plans to make parts of Serene template also a NuGet package, but it is still not trivial how to update your application without overriding your changes, e.g. to shared code like Navigation items. And what if you removed Northwind code, but our update reinstalls it? Open to discussion...

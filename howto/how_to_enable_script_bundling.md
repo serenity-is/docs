@@ -13,7 +13,7 @@ You might prefer to use tools like Webpack, Grunt, Gulp, UglifyJS etc, but in ca
 
 ### ScriptBundles.json
 
-First, you need a *ScriptBundles.json* file under *MyProject.Web/scripts/site* folder. ScriptBundles.json configures which script bundle will contain which files when bundling is turned on. 
+First, you need a *ScriptBundles.json* file under *MyProject.Web/wwwroot/scripts/site* folder. ScriptBundles.json configures which script bundle will contain which files when bundling is turned on. 
 
 This file is included by default in Serene template 2.0.13+ and looks like this:
 

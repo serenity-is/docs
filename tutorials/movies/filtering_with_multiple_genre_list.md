@@ -293,7 +293,7 @@ And adding the where statement for subquery:
 
 As *Criteria.Exists* method expects a simple string, i had to use .ToString() at the end, to convert subquery to a string:
 
-> Yes, i should add one overload that accepts a subquery... noted.
+> Yes, we should add one overload that accepts a subquery... noted.
 
 ```cs
 .ToString()));

@@ -6,7 +6,7 @@ As we didn't add it while creating the Movie table, now we'll write another migr
 
 > Don't modify existing migrations, they won't run again.
 
-Create another migration file under *Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
+Create another migration file under *Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
 
 ```cs
 using FluentMigrator;
@@ -115,29 +115,27 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Now, build your solution and run it. When you try to edit a movie or add a new one, nothing will happen. This is an expected situation. If you check developer tools console of your browser (F12, inspect element etc.) you'll see such an error:
+Now, build your solution and run it.
 
-> You might not have this error with ASP.NET Core version as it auto transforms T4
+In some cases when you try to edit a movie or add a new one, nothing will happen. This is an expected situation. If you check developer tools console of your browser (F12, inspect element etc.) you'll see such an error:
 
 ```txt
 Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
 ```
 
-### Please Note!
+> You might not have this error with ASP.NET Core version as it auto transforms T4 on build.
 
-Whenever such a thing happens, e.g. some button not working, you got an empty page, grid etc, please first check browser console for errors, before reporting it. 
+ ### Please Note!
+
+Whenever such a thing happens, e.g. some button not working, you got an empty page, grid etc, please first check > browser console for errors, before reporting it. 
 
 ### Why We Had This Error?
 
 This error is caused by MoveKind enumeration not available client side. We should run our T4 templates before executing our program.
 
-Now in Visual Studio, click *Build -> Transform All Templates* again.
-
-Rebuild your solution and execute it. Now we have a nice dropdown in our form to select movie kind.
+Rebuild your solution, make sure there are no build errors and execute it. Now we have a nice dropdown in our form to select movie kind.
 
 ![Movie Kind Selection](img/mdb_movie_kindform.png)
-
-> Just build project for ASP.NET Core version, as there is no T4 template
 
 
 ### Declaring a Default Value for Movie Kind

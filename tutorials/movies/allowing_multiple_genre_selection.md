@@ -9,9 +9,9 @@ For this, we need a M-N mapping table that will let us link any movie to multipl
 
 As usual, we start with a migration:
 
-**Modules/Common/Migrations/DefaultDB/ DefaultDB_20160528_115400_MovieGenres.cs:**
+**Migrations/DefaultDB/ DefaultDB_20160528_115400_MovieGenres.cs:**
 
-```
+```cs
 using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
@@ -112,7 +112,11 @@ After building, we at least have a working *Movies* page again.
 
 Fire up sergen and generate code for *MovieGenres* table as usual:
 
-![Movie Genres Sergen](img/mdb_sergen_moviegenres.png)
+- Connection Key: **Default**
+- Table Name: **mov.MovieGenres**
+- Module Name: **MovieDB**
+- Entity Identifier: **Movie Genres**
+- Permission Key: **Administration:General**
 
 As we're not going to edit movie genres from a separate page, you can safely delete the generated files below:
 

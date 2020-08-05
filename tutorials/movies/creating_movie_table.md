@@ -91,11 +91,9 @@ Please make sure you always use same number of characters for migration keys e.g
 
 By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. 
 
-The code that runs migrations are in *App_Start/SiteInitialization.cs* and *App_Start/SiteInitialization.Migrations.cs* files:
+The code that runs migrations are in *Initialization/Startup.cs* and *Initialization/DataMigrations.cs* files:
 
-> In Asp.Net Core version, they are under *Initialization/Startup.cs* and *Initialization/DataMigrations.cs* files as there is no App_Start folder in ASP.NET Core.
-
-** SiteInitialization.Migrations.cs (or DataMigrations.cs)**:
+** DataMigrations.cs**:
 ```cs
 
 namespace MovieTutorial
@@ -135,14 +133,7 @@ namespace MovieTutorial
                 // ...
                 var runner = new RunnerContext(announcer)
                 {
-                    Database = databaseType,
-                    Connection = cs.ConnectionString,
-                    Targets = new string[] { 
-                        typeof(SiteInitialization).Assembly.Location },
-                    Task = "migrate:up",
-                    WorkingDirectory = Path.GetDirectoryName(
-                        typeof(SiteInitialization).Assembly.Location),
-                    Namespace = "MovieTutorial.Migrations." + databaseKey + "DB"
+                    // ...
                 };
 
                 new TaskExecutor(runner).Execute();
@@ -159,13 +150,9 @@ Now press F5 to run your application and create Movie table in default database.
 
 ### Verifying That the Migration is Run
 
-Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\MsSqlLocalDB* or *(localdb)\v11.0* depending on version you use.
-
-> (localdb)\v11.0 is a LocalDB instance created by SQL Server 2012 LocalDB. (localdb)\MsSqlLocalDB is an instance created by SQL 2014+ LocalDB.
+Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\MsSqlLocalDB*.
 
 > If you didn't install LocalDB yet, download it from https://www.microsoft.com/en-us/download/details.aspx?id=29062.
-
-> If you have SQL Server 2014 LocalDB, your server name would be (localdb)\MSSqlLocalDB or (localdb)\v12.0, so change connection string in web.config file. 
 
 > You could also use another SQL server instance, just change the connection string to target server and remove the migration safety check.
 

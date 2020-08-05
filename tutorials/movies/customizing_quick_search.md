@@ -141,25 +141,15 @@ Once you save that file, we'll have a dropdown in quick search input:
 > Unlike prior samples where we modified Server side code, this time we did changes in client side, and modified Javascript (TypeScript) code.
 
 
-### Running T4 Templates (.tt files, ASP.NET MVC Version)
+### Running Code Transformations with Sergen
 
 In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names or their casing at server side (javascript is case sensitive).
 
-Serene contains some T4 (.tt) files to transfer such information from server side (rows etc in C#) to client side (TypeScript) for intellisense purposes.
-
-Before running these templates, please make sure that your solution builds successfully as templates uses your output DLL file (*MovieTutorial.Web.dll*) to generate code.
-
-After building your solution, click on *Build* menu, than *Transform All Templates*.
-
-### Running T4 Templates (ASP.NET Core Version)
-
-You don't have to transform templates in ASP.NET Core version. Serene does it automatically on build. 
-
-Actually, there isn't any T4 file in ASP.NET Core version. 
-
-So from now on, when we say transform templates, just build your project (if you use ASP.NET Core version).
+Sergen generates some code to transfer such information from server side (rows etc in C#) to client side (TypeScript) for intellisense purposes on every build.
 
 It is also possible to open a command prompt in project directory and type `dotnet sergen t` to transform templates manually.
+
+From now on, when we say transform templates, it means either rebuilding the application or running `dotnet sergen t` in rare cases.
 
 ### Intellisense on TypeScript Code (After transforming templates)
 

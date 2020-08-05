@@ -8,7 +8,7 @@ To hold Movie genres we need a lookup table. For *Kind* field we used an enumera
 
 As usual, we start with a migration.
 
-*Modules/Common/Migrations/DefaultDB/ DefaultDB_20160519_154700_GenreTable.cs*:
+*Migrations/DefaultDB/ DefaultDB_20160519_154700_GenreTable.cs*:
 
 ```cs
 using FluentMigrator;
@@ -45,13 +45,15 @@ We also added a *GenreId* field to *Movie* table.
 
 ### Generating Code For Genre Table
 
-Fire sergen.exe using Package Manager Console again and generate code for *Genre* table with the parameters shown below:
+Run `dotnet sergen g` again in project directory.
 
-> Use parameters shown with `dotnet sergen g` if you are using ASP.NET Core version.
+Use following parameters:
 
-![Genre Code Generation](img/mdb_movie_genretable.png)
-
-> This screenshot belongs to an older version of Sergen, just use parameters shown in new version
+- Connection Key: **Default**
+- Table Name: **mov.Genre**
+- Module Name: **MovieDB**
+- Entity Identifier: **Genre**
+- Permission Key: **Administration:General**
 
 Rebuild solution and run it. We'll get a new page like this:
 
@@ -470,4 +472,4 @@ The field that is filtered is actually *GenreId* not *GenreName* that we attache
 
 ### Re-runing T4 Templates
 
-As we added a new entity to our application, we should run T4 templates after building solution.
+As we added a new entity to our application, we should rebuild solution.

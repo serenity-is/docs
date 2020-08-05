@@ -11,7 +11,7 @@ Carrie-Anne Moss|Trinity
 We need a table MovieCast with columns like:
 
 *MovieCastId*|*MovieId*|*PersonId*|*Character*
---|--|--|--
+---|---|---|---
 ...|...|...|...
 11|2 (Matrix)|77 (Keanu Reeves)|Neo
 12|2 (Matrix)|99 (Laurence Fisburne)|Morpheus
@@ -27,7 +27,7 @@ It's clear that we also need a Person table as we'll keep actors/actresses by th
 
 Now its time to create a migration with two tables:
 
-MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/ DefaultDB_20160528_141600_PersonAndMovieCast.cs:
+Migrations/DefaultDB/ DefaultDB_20160528_141600_PersonAndMovieCast.cs:
 
 ```cs
 using FluentMigrator;
@@ -278,7 +278,11 @@ namespace MovieTutorial.MovieDB {
 
 Generate code for MovieCast table using *sergen*:
 
-![Movie Cast Code Generation](img/mdb_sergen_moviecast.png)
+- Connection String: **Default**
+- Tablename: **mov.MovieCast**
+- Module Name: **MovieDB**
+- Entity Identifier: **MovieCast**
+- Permission Key: **Administration:General**
 
 After generating code, as we don't need a separate page to edit movie cast table, you may delete files listed below:
 

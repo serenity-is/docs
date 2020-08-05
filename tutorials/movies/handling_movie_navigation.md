@@ -92,25 +92,8 @@ Here is how it looks like after these changes:
 
 In case you didn't notice already, Visual Studio doesn't let you modify code while your site is running. Also your site stops when you stop debugging, so you can't keep browser window open and refresh after rebuilding.
 
-To solve this issue, we need to disable _Edit And Continue_ \(have no idea why\).
+You may start without debugging by using Ctrl+F5. This lets you modify TypeScript code while your application is running and refresh.
 
-Right Click _MovieTutorial.Web_ project, click _Properties_, in the Web tab, uncheck _Enable Edit And Continue_ under _Debuggers_.
-
-> Unfortunately, the solution above stops works in Visual Studio 2015 Update 2. Only workaround so far seems like starting without debugging, e.g. Ctrl+F5 instead of F5.
-
-> Solution above only applies to ASP.NET MVC version, not ASP.NET CORE version.
+If you modify CSHTML / CS files, you'll need to rerun application with Ctrl+F5.
 
 Also, on your site, top blue progress bar \(which is a Pace.js animation\), keeps running all the time like it is still loading something. It is thanks to the _Browser Link_ feature of Visual Studio. To disable it, locate its button in Visual Studio toolbar that looks like a refresh button \(next to play icon with browser name like Chrome\), click dropdown and uncheck _Enable Browser Link_.
-
-It's also possible to disable it with a web.config setting
-
-```xml
-<appsettings>
-    <add key="vs:EnableBrowserLink" value="false" />
-</appsettings>
-```
-
-> Serene 1.5.4 and later has this in web.config by default, so you might not experience this issue
-
-> I'm not sure if there is a corresponding setting in appsettings.json file of ASP.NET Core version
-

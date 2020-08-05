@@ -6,13 +6,11 @@ After your first project is created in Visual Studio using Serene template, you 
 
 ![Initial Solution Content](img/serenemvc.png)
 
-Your solution contains Serene1.Web project, which is an ASP.NET MVC (or ASP.NET Core) application. 
+Your solution contains Serene1.Web project, which is an ASP.NET Core application. 
 
 It includes server side code written in C# (.cs) and client side code that is written in TypeScript (.ts).
 
 Serene.Web has references to Serenity NuGet packages, so you can update it using package manager console anytime necessary.
-
-> Asp.Net Core version can also be updated by hand editing .CSPROJ file.
 
 Serene automatically creates its database in SQL local db at first run, so just press F5 and you are ready to go.
 
@@ -33,19 +31,8 @@ If you are getting a connection error like the following while starting Serene f
 > Verify that the instance name is correct...
 ```
 
-This error might mean that you don't have SQL Server Local DB 2012 installed. This server comes preinstalled with Visual Studio 2012 and 2013. 
+This error might mean that you don't have SQL Server Local DB installed. This server comes preinstalled with Visual Studio. 
 
-#### ASP.NET MVC 
-
-In `web.config` file there are *Default* and *Northwind* connection entries:
-
-```xml
-<connectionStrings>
-    <add name="Default" connectionString="Data Source=(LocalDb)\v11.0; 
-        Initial Catalog=Serene_Default_v1; Integrated Security=True" 
-        providerName="System.Data.SqlClient" />
-  </connectionStrings>
-```
 
 #### ASP.NET Core
 
@@ -66,23 +53,9 @@ In `appsettings.json` file you'll find *Default* and *Northwind* connection entr
 
 #### Fixing Connection Strings
 
-`(localdb)\v11.0` corresponds to default SQL Server 2012 LocalDB instance, while `(localdb)\MsSqlLocalDB` is an instance of SQL 2014+ LocalDB.
+Visual Studio 2015+ comes with SQL Server 2014+ LocalDB. It's default instance name is MsSqlLocalDB by default. 
 
-If you don't have SQL LocalDB 2012, you can install it from:
-
-http://www.microsoft.com/en-us/download/details.aspx?id=29062
-
-Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance name is renamed to MsSqlLocalDB by default. Thus, if you have VS2015, try changing connection strings from `(localdb)\v11.0` to `(localdb)\MsSqlLocalDB`.
-
-```xml
-<connectionStrings>
-    <add name="Default" connectionString="Data Source=(LocalDb)\MsSqlLocalDB; 
-        Initial Catalog=Serene_Default_v1; Integrated Security=True" 
-        providerName="System.Data.SqlClient" />
-  </connectionStrings>
-```
-
-If you still have an error, open an administrative command prompt and type
+If you have an error, open an administrative command prompt and type
 
 ```bat
 > sqllocaldb info
@@ -112,7 +85,6 @@ If you have another SQL server instance, for example SQL Express, change data so
         providerName="System.Data.SqlClient" />
   </connectionStrings>
 ```
-
 
 You can also use another SQL server. Just change the connection string.
 

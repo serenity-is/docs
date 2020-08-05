@@ -3,7 +3,6 @@
 * [Introduction](README.md)
   * [Getting Started](getting_started/README.md)
     * [Installing Serene From Visual Studio Marketplace](getting_started/installing_serene_from_visual_studio_gallery.md)
-    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
     * [Instaling Serene Asp.Net Core Version with Serin](getting_started/instaling-serene-aspnet-core-version-with-serin.md)
     * [Starting Serene](getting_started/starting_serene.md)
   * [A Tour Of Serene Features](serene_tour/README.md)

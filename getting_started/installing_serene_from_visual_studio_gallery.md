@@ -10,20 +10,21 @@ https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityA
 
 Click *Download* to transfer VSIX file to your computer.
 
+**You need Visual Studio 2019 to run Serene as ASP.NET Core 3.1 SDK only supports Visual Studio 2019 with latest updates.**
+
+> There is also an ASP.NET MVC version that could run in Visual Studio 2017 but it is obsolete, not supported and not updated anymore. 
+> https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneMvc
+
 ## Install Template into Visual Studio
 
 After download is finished, double click the downloaded VSIX file to start Visual Studio extension installation dialog 
-
-> If you have both Visual Studio 2017 and 2015 installed, sometimes Visual Studio 2015 installer might pick up VSIX file so it only installs in Visual Studio 2015. If you experience this issue, right click the file, click *Open With* and choose *Visual Studio Version Selector*.
-
 > ![VSIX Installation](img/vsixopenwith.png)
-
 
 Click Install when prompted.
 
 ![VSIX Installation](img/vsixinstall.png)
 
-> Note that this application template requires Visual Studio 2012 or higher. Make you sure you have the latest Visual Studio updates installed. ASP.NET MVC Core version requires Visual Studio 2017 with Update 3
+> Note that this application template requires Visual Studio 2019 or higher. Make you sure you have the latest Visual Studio updates installed.
 
 ## Creating a New Project in Visual Studio
 
@@ -31,18 +32,7 @@ Start Visual Studio (if it was already open, restart it). Click File => New Proj
 
 ![VSIX New Project](img/newproject.png)
 
-
-We have two versions of Serene template. One that uses classic ASP.NET MVC 4 (SERENE) and another one that works on ASP.NET CORE MVC 2.0 / .NET CORE 2.0.
-
-ASP.NET Core is a recent technology and is platform independent (as long as you target .NET Core it also runs on Linux / OSX). 
-
-ASP.NET MVC only runs on Windows and .NET framework but more mature (latest version is dated 2/9/2015).
-
-We can say both versions of Serene is pretty stable.
-
-Here is a document from Microsoft that might help you choose between two frameworks:
-
-https://docs.microsoft.com/en-us/aspnet/core/choose-aspnet-framework
+> Please use one named SERENE if you have both SERENE and SERENE (ASP.NET MVC - Obsolete). SERENE is the ASP.NET CORE version, and is the recommended one.
 
 Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or leave the default *Serene1*.
 

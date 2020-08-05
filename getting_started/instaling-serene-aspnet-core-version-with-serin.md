@@ -6,11 +6,13 @@ Serene Asp.Net Core version supports Linux and OSX in addition to Windows.
 
 > We recommend Visual Studio Code for all platforms, but it is also possible to work with a basic text editor like Notepad / VIM. There are also other nice options e.g. Atom.
 
-## Install .NET Core 2.0 SDK 
+## Install .NET Core 3.1 SDK 
 
 Please go to address below and follow instructions for your specific platform:
 
 https://www.microsoft.com/net/download/core
+
+> Serenity usually depends on latest stable version of .NET CORE SDK, if you get an error on project creation about .NET SDK, please check the error message, and install appropriate version of .NET CORE SDK as this document might be updated yet.
 
 ## Install NodeJS
 

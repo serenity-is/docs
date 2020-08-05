@@ -16,51 +16,21 @@ You have three options to install _SERENE_ template:
 
 ### Visual Studio Version
 
-Serene .NET Framework version (ASP.NET MVC 4) requires _Visual Studio 2017_ or _Visual Studio 2015_ with **Update 3** installed. 
+Serene requires _Visual Studio 2019+_ with most recent updates installed. .NET CORE 3.1 SDK is also only supported in Visual Studio 2019+. 
 
-If you have Visual Studio 2015, please make sure that you have **Update 3** installed by looking at Help => About
-
-![VS2015 Update 3](img/vs2015-update-3.png)
-
-> It might be possible to work with Visual Studio 2013 as well but you'll have many intellisense errors as TypeScript 2.5.2 can't be installed in VS2013.
-
-Serene ASP.NET Core 2.0 version only works in Visual Studio 2017, or using command line.
-
-> Microsoft recently obsoleted *project.json* based projects and replaced them with a lighter version of *MsBuild* based *CSPROJ* projects. This new project system only works in Visual Studio 2017, so if you want to work with .NET Core version of Serene, either you need to use Visual Studio 2017 or go lighter with Visual Studio Code / Command Line.
+An alternative option is to use command line to create projects and use Visual Studio Code if you don't have access to Visual Studio 2019+.
 
 ### .NET Core SDK
 
-If you are going to use ASP.NET Core version of Serene, please install .NET Core 2.0 SDK from:
+If you are going to use ASP.NET Core version of Serene, please install .NET Core 3.1 SDK from:
 
-https://www.microsoft.com/net/download/core
+https://dotnet.microsoft.com/download
 
 ### Visual Studio TypeScript Extension
 
-As of writing, the recommended version of TypeScript is 2.5.2. 
-
-Even though Serene uses NodeJS based TypeScript compiler (tsc) on build, Visual Studio still uses its own version of TypeScript for intellisense and refactoring etc. If you have an older version of that extension, you'll be greeted with many errors as soon as you open a Serene project.
-
-To check what version of TypeScript Visual Studio Extension you have, again see Help => About:
-
-![VS2015 TypeScript Extension](img/vs2015-typescript-version.png)
-
-Visual Studio 2017 comes with TypeScript 2.1.5 by default, but Visual Studio 2015 might include older versions.
-
-If you have something lower than 2.3.4 there, you might need to install TypeScript for Visual Studio extension.
-
-> TypeScript version you see in Control Panel / Add Remove Programs doesn't matter at all. What matters is the one  that is enabled in Visual Studio.
-
-TypeScript versions after 1.8.6 requires Visual Studio 2015 Update 3 to be installed first, so even if you try to install the extension it will raise an error, so please first install Update 3.
+As of writing, the recommended version of TypeScript is 3.9.5. Serene comes with a reference to a recent version of Microsoft.TypeScript.MsBuild package and it is supposed to be used by Visual Studio 2019+ automatically.
 
 You can get TypeScript extension for your Visual Studio version from http://www.typescriptlang.org/#download-links.
-
-Here is the link for Visual Studio 2015:
-
-[https://www.microsoft.com/en-us/download/details.aspx?id=48593](https://www.microsoft.com/en-us/download/details.aspx?id=48593)
-
-But **don't click the download button** right away. Expand **Details** section, and select the exact version you need (e.g. 2.5.2):
-
-![TypeScript Version Selection](img/typescript-download-detail.png)
 
 Latest version of TypeScript might probably work but keeping in sync with the version we currently use, can help you avoid compatibility problems that could come with them.
 
@@ -71,7 +41,6 @@ Serene uses NodeJS / NPM for these:
 - TypeScript typings (.d.ts) for libraries like jQuery, Bootstrap etc. 
 - TypeScript compiler itself (tsc)
 - Less compilation (lessjs)
-- T4 Code generation by parsing TypeScript sources
 
 It requires NodeJS v6.9+ and NPM 3.10+
 

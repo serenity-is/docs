@@ -2,21 +2,19 @@
 
 If we wanted to keep a record of actors and the roles they played like this:
 
-*Actor/Actress*|*Character*
---|--
-Keanu Reeves|Neo       
-Laurence Fishburne|Morpheus
-Carrie-Anne Moss|Trinity
+|Actor/Actress     |Character    |
+|:-----------------|:------------|
+|Keanu Reeves      |Neo          |
+|Laurence Fishburne|Morpheus     |
+|Carrie-Anne Moss  |Trinity      |
 
 We need a table MovieCast with columns like:
 
-*MovieCastId*|*MovieId*|*PersonId*|*Character*
----|---|---|---
-...|...|...|...
-11|2 (Matrix)|77 (Keanu Reeves)|Neo
-12|2 (Matrix)|99 (Laurence Fisburne)|Morpheus
-13|2 (Matrix)|30 (Carrie-Anne Moss)|Trinitity
-...|...|...|...
+|MovieCastId  |MovieId               |PersonId              |Character |
+|:------------|:---------------------|:---------------------|:---------|
+|11           |2 (Matrix)            |77 (Keanu Reeves)     |Neo       |
+|12           |2 (Matrix)            |99 (Laurence Fisburne)|Morpheus  |
+|13           |2 (Matrix)            |30 (Carrie-Anne Moss) |Trinitity |
 
 It's clear that we also need a Person table as we'll keep actors/actresses by their ID.
 
@@ -72,7 +70,11 @@ namespace MovieTutorial.Migrations.DefaultDB
 
 First generate code for Person table:
 
-![Person Code Generation](img/mdb_sergen_person.png)
+- Connection Key: **Default**
+- Table Name: **dbo.Person**
+- Module Name: **MovieDB**
+- Identifier: **Person**
+- Permission: **Administration:General**
 
 
 ### Changing Gender To Enumeration

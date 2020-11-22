@@ -1,0 +1,220 @@
+# Upgrading to .NET 5
+
+This document outlines steps required to upgrade an existing Serenity .NET Core 3.1 based project to Serenity.NET 5.0 
+
+## Editing Project file
+
+Edit `YourProject.csproj` and change target framework:
+
+From:
+
+```xml
+<TargetFramework>netcoreapp3.1</TargetFramework>`
+```
+
+To:
+
+```xml
+<TargetFramework>net5.0</TargetFramework>
+```
+
+
+> If you are using GIT it is recommended to stage your changes on every step to be able to undo your changes if you make a mistake during following steps as we'll do many bulk operations.
+
+## Changing References to Row with IRow interface
+
+Serenity base Row class is replaced with a generic row class which implements new IRow interface so any references in your project to old Row class should be replaced with IRow.
+
+It might be hard to replace all such references manually, so we'll use a trick to make Visual Studio do it for us automatically.
+
+Create an empty .CS file in your project like `RowTrick.cs`:
+
+```cs
+namespace Serenity.Data
+{
+    public class Row 
+    {
+    }
+}
+```
+
+Now put your editing cursor. onto `Row` word and press Ctrl+R+R or Ctrl+F2 (based on your editor shortcuts) or right click `Row` and click `Rename...` and type `IRow` then press `Enter` to apply changes.
+
+Now you may delete `RowTrick.cs` file.
+
+## Changing base class of rows to `Row<TRowFields>`
+
+As noted in previous section, base `Row` class is replaced with a generic row class `Row<TRowFields>` which provides a direct reference to a rows fields type.
+
+So if you used to had:
+
+```cs
+public class MyRow : Row
+{
+    public class RowFields
+    {
+    }
+}
+```
+
+You will need to replace it with:
+
+```cs
+public class MyRow : Row<MyRow.RowFields>
+{
+    public class RowFields
+    {
+    }
+}
+```
+
+Again this might take too much time for a manual process, so let's use a Regex replace:
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `class ([A-Za-z]*)Row\s*:\s*IRow` in `Find` input
+
+* Type `class $1Row : Row<$1Row.RowFields>` in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any
+
+## Removing Static RowFields Instance from Rows
+
+We used to have a static RowFields instance named `Fields` in row classes which is no longer required as the base generic row class already have a correctly typed `Fields` property with the same name.
+
+> This new design will open way to having different sets of fields for multi tenant row customization scenarios in the future.
+
+* Open `Replace in Fields` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `[\r]?[\n]?[ \t]*public\s+static\s+readonly\s+RowFields\s+Fields\s*=\s*new\s+RowFields\(\)\.Init\(\);\r?\n` in `Find` input
+
+* Clear `Replace` input value (empty string)
+
+* Click `Replace All`
+
+## Changing Row Constructors to Accept a RowFields Instance
+
+Row constructors used to pass the static RowFields instance to base Row constructor like this:
+
+```csharp
+public CustomerRow()
+    : base(Fields)
+{
+}
+```
+
+As there is no longer a static Fields instance, we'll keep the default constructor removing the base call and also add a new constructor that accepts a RowFields instance.
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `([ \t]*public[ \t]* )([A-Za-z]*)Row\(\)([\s\r\n]*:[\s]*base\()Fields\)(\s*\{\s*\})([\r]?[\n]?)` in `Find` input
+
+* Type `$1$2Row()$4$5$5$1$2Row(RowFields fields)$3fields)$4$5` in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any
+
+
+
+## Replacing IIdRow.IdField with [IdProperty] Attribute
+
+In your rows you might you have `IIdRow` interface implemented like below:
+
+```csharp
+// we will delete this
+IIdField IIdRow.IdField
+{
+    get { return Fields.CustomerId; }
+}
+```
+
+This interface is still there, but it does not have `IdField` property now.
+
+We replaced it with `[IdProperty]` attribute as old explicit style made determining that field using reflection (without creating a row instance first) difficult.
+
+You need to find all such rows by searching for `IIdRow.IdField`. Then take a note of `IdField`, delete the block and put a `[IdProperty]` attribute on corresponding property if required (read following paragraph).
+
+> Unfortunately we could not find a way to do it with search replace like prior steps, so you have to manually do it
+
+Please note that if you only have one property with [Identity] attribute in your row class and it matches the ID property you don't need to put [IdProperty] explicitly. Same applies to [PrimaryKey] as long as it is just one.
+
+> Tip: Fields with `[Identity]` attribute implicitly has the `PrimaryKey` flag as it is a combination of AutoIncrement and PrimaryKey. If you have an auto increment field that is not a primary key, it should be marked with `[AutoIncrement]` not `[Identity]`.
+
+The order for precedence to determine the ID property is [IdProperty] => Single [Identity] => Single [PrimaryKey].
+
+So if your ID property can't be determined by [Identity] or [PrimaryKey] attributes, or if you prefer to be explicit, add [IdProperty] like this:
+
+```csharp
+[..., IdProperty] 
+public Guid? CustomerId
+{
+    get { return Fields.CustomerId[this]; }
+    set { Fields.CustomerId[this] = value; }
+}
+```
+
+If you prefer to do it with search / replace again, here is the way (warning might be slow due to complexity of the regex):
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(\[[^\{\}]*)(\][\r\n\s]*public [A-Za-z0-9]+\?? )([A-Za-z]+)(\s*\r?\n+[\s\S\n]+)(\r?\n\s*IIdField\s*IIdRow.IdField[\s\r\n]*(\{[\r\n\s]*get[r\n\s]*\{[\r\n\s]*return|=>\s*) Fields.)(\3)([\s]*;([\r\n\s]*\}[\r\n\s]*\}|))\r?\n?\r?\n?` in `Find` input
+
+* Type `$1, IdProperty$2$3$4` in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any
+
+## Replacing INameRow.NameField with [NameProperty] Attribute
+
+Just like IIdRow, you may also you have `INameRow` interface implemented like below:
+
+```csharp
+// we will delete this
+StringField INameRow.NameField
+{
+    get { return Fields.CustomerName; }
+}
+```
+
+Again, this interface is still there, but it does not have `NameField` property now.
+
+We replaced it with `[NameProperty]` attribute as old explicit style made determining that field without creating a row instance first difficult, and it had to be a string field before.
+
+You need to find all such rows by searching for `INameRow.NameField`. Then take a note of `NameField`, delete the block, and put a `[NameProperty]` attribute on corresponding property. 
+
+For the example above, CustomerName property will be like this:
+
+```csharp
+[..., NameProperty] 
+public String CustomerName
+{
+    get { return Fields.CustomerName[this]; }
+    set { Fields.CustomerName[this] = value; }
+}
+```
+
+If you prefer to do it with search / replace again, here is the way (warning might be slow due to complexity of the regex):
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(\[[^\{\}]*)(\][\r\n\s]*public [A-Za-z0-9]+\?? )([A-Za-z]+)(\s*\r?\n+[\s\S\n]+)(\r?\n\s*StringField\s*INameRow.NameField[\s\r\n]*(\{[\r\n\s]*get[r\n\s]*\{[\r\n\s]*return|=>\s*) Fields.)(\3)([\s]*;([\r\n\s]*\}[\r\n\s]*\}|))\r?\n?\r?\n?` in `Find` input
+
+* Type `$1, NameProperty$2$3$4` in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any

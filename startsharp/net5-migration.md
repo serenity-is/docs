@@ -84,7 +84,7 @@ Again this might take too much time for a manual process, so let's use a Regex r
 
 ## Removing Static RowFields Instance from Rows
 
-We used to have a static RowFields instance named `Fields` in row classes which is no longer required as the base generic row class already have a correctly typed `Fields` property with the same name.
+We used to have a static RowFields instance named `Fields` in row classes which is no longer required as the base generic row class already have a correctly typed static `Fields` property with the same name.
 
 > This new design will open way to having different sets of fields for multi tenant row customization scenarios in the future.
 
@@ -98,7 +98,7 @@ We used to have a static RowFields instance named `Fields` in row classes which 
 
 * Click `Replace All`
 
-## Changing Row Constructors to Accept a RowFields Instance
+## Adding Row Constructors to Accept a RowFields Instance
 
 Row constructors used to pass the static RowFields instance to base Row constructor like this:
 
@@ -122,7 +122,6 @@ As there is no longer a static Fields instance, we'll keep the default construct
 * Click `Replace All`
 
 * Save all open files if any
-
 
 
 ## Replacing IIdRow.IdField with [IdProperty] Attribute
@@ -214,6 +213,101 @@ If you prefer to do it with search / replace again, here is the way (warning mig
 * Type `(\[[^\{\}]*)(\][\r\n\s]*public [A-Za-z0-9]+\?? )([A-Za-z]+)(\s*\r?\n+[\s\S\n]+)(\r?\n\s*StringField\s*INameRow.NameField[\s\r\n]*(\{[\r\n\s]*get[r\n\s]*\{[\r\n\s]*return|=>\s*) Fields.)(\3)([\s]*;([\r\n\s]*\}[\r\n\s]*\}|))\r?\n?\r?\n?` in `Find` input
 
 * Type `$1, NameProperty$2$3$4` in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any
+
+## Using `fields` instead of `Fields` in Row Properties
+
+The new static `Fields` instance in base Row class is resolved from a `RowFieldsProvider` for current thread context everytime it is accessed.
+
+We used to have such properties in Row.cs:
+
+```csharp
+public int? CountryID
+{
+    get { return Fields.CountryID[this]; }
+    set { Fields.CountryID[this] = value; }
+}
+```
+
+We need to replace `Fields` with `fields` as they might be different in rare cases (multi-tenant scenarios). Also it is much slower to access `Fields` than `fields`.
+
+We'll replace them like below (also using new property syntax):
+
+```csharp
+public int? CountryID
+{
+    get => fields.CountryID[this];
+    set => fields.CountryID[this] = value;
+}
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(^[\t ]*)(get|set)[ \t]*(\=\>|\{)[\t ]*(return|)[\t ]*F(ields\.[^\^;}]*)\;[\t ]*\}?[\t ]*\r?$` in `Find` input
+
+* Type `$1$2 => f$5;` in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any
+
+## Replacing Check.NotNull Calls
+
+We used to have a helper class to check for nulls and empty strings etc. but Visual Studio analyzer still raised warnings even if you check for null using those helpers.
+
+So, we decided to remove that class completely.
+
+If you had a check like below:
+
+```csharp
+Check.NotNull(request.Something, nameof(request.Something));
+```
+
+Replace it with:
+
+```csharp
+if (request.Something == null)
+    throw new ArgumentNullException(nameof(request.Something));
+```
+
+Here is the search replace method that can do it:
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `([\t ]*)Check.NotNull\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
+
+* Type `$1if ($2 is null)$4$1    throw new ArgumentNullException($3);$4` in `Replace` input
+
+* Click `Replace All`
+
+## Replacing Check.NotNullOrEmpty Calls
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `([\t ]*)Check.NotNullOrEmpty\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
+
+* Type `$1if (string.IsNullOrEmpty($2))$4$1    throw new ArgumentNullException($3);$4` in `Replace` input
+
+* Click `Replace All`
+
+## Replacing Check.NotNullOrWhiteSpace Calls
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `([\t ]*)Check.NotNullOrWhiteSpace\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
+
+* Type `$1if (string.IsNullOrWhiteSpace($2))$4$1    throw new ArgumentNullException($3);$4` in `Replace` input
 
 * Click `Replace All`
 

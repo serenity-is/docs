@@ -1,8 +1,8 @@
-# Upgrading to .NET 5
+# Upgrading to Serenity.NET 5
 
 This document outlines steps required to upgrade an existing Serenity .NET Core 3.1 based project to Serenity.NET 5.0 
 
-## Editing Project file
+## Editing Project File
 
 Edit `YourProject.csproj` and change target framework:
 
@@ -17,7 +17,6 @@ To:
 ```xml
 <TargetFramework>net5.0</TargetFramework>
 ```
-
 
 > If you are using GIT it is recommended to stage your changes on every step to be able to undo your changes if you make a mistake during following steps as we'll do many bulk operations.
 
@@ -218,6 +217,51 @@ If you prefer to do it with search / replace again, here is the way (warning mig
 
 * Save all open files if any
 
+## Replacing `IIdField` References with `Field`
+
+The IIdField interface is removed, and interfaces like IInsertLogRow and IUpdateLogRow uses `Field` instead of `IIdField`.
+
+So if you had these (for example in LoggingRow.cs):
+
+```csharp
+IIdField IInsertLogRow.InsertUserIdField
+{
+    get { return loggingFields.InsertUserId; }
+}
+
+IIdField IUpdateLogRow.UpdateUserIdField
+{
+    get { return loggingFields.UpdateUserId; }
+}
+```
+
+Need to replace them with these:
+
+```csharp
+Field IInsertLogRow.InsertUserIdField
+{
+    get { return loggingFields.InsertUserId; }
+}
+
+Field IUpdateLogRow.UpdateUserIdField
+{
+    get { return loggingFields.UpdateUserId; }
+}
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `` in `Find` input
+
+* Type `$1, NameProperty$2$3$4` in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any
+
+
 ## Using `fields` instead of `Fields` in Row Properties
 
 The new static `Fields` instance in base Row class is resolved from a `RowFieldsProvider` for current thread context everytime it is accessed.
@@ -312,3 +356,162 @@ Here is the search replace method that can do it:
 * Click `Replace All`
 
 * Save all open files if any
+
+## Replacing `SettingScope` and `SettingKey`
+
+Serenity applications used to have settings like following which are read through a special `Config` class when required:
+
+```csharp
+[SettingScope("Application"), SettingKey("MyCustomKey")]
+public class MyCustomSettings
+{
+}
+```
+
+We removed the `Config` class and will be using .NET Core configuration / options instead.
+
+
+> See following documents on how it works:
+> https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-5.0
+> https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-5.0
+
+Previous class will be replaced with following:
+
+```csharp
+[SettingScope("Application"), SettingKey("MyCustomKey")]
+public class MyCustomSettings
+{
+    public const string ConfigurationPath = "AppSettings:MyCustomKey";
+}
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `[\t ]*\[[\t ]*(SettingScope\(.*\)\,|)[\t ]*SettingKey\("(.*)"\)\][\t ]*\r?\n[\s\r\n]*public class[\t ]*([A-Za-z0-9]*)[\t ]*(\r?\n)[\r\n]*([\t ]*)\{` in `Find` input
+
+* Type `$5// services.Configure<$3>(Configuration.GetSection($3.SectionKey));$4$5public class $3$4$5{$4$5    public const string SectionKey = "AppSettings:$2";$4` in `Replace` input
+
+* Click `Replace All`
+
+Now your setting class will turn into this:
+
+```csharp
+// services.Configure<InstalledModuleSettings>(Configuration.GetSection(MyCustomSettings.SectionKey));
+public class MyCustomSettings
+{
+    public const string SectionKey = "AppSettings:MyCustomKey";
+}
+```
+
+Please copy the commented like (except //) and paste it inside `Startup.cs` -> `ConfigureServices` method:
+
+```cs
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.Configure<MyCustomSettings>(Configuration.GetSection(MyCustomSettings.SectionKey));
+    //...
+}
+```
+
+You may need to add the namespace for MyCustomSettings to usings in Startup.cs.
+
+After that delete the commented line above MyCustomSettings. 
+
+Repeat this for all settings classes you have.
+
+> Serenity used to keep its own settings under `AppSettings:` thats why we used that prefix in `SectionKey` so that your existing config in `appsettings.json` will be properly matched. This prefix is no longer required. If you choose to move your custom settings up a level in `appsettings.json` just remove `AppSettings:` prefix in `SectionKey` (after moving the setting to the root).
+
+## Replacing `Config.Get<TSettings>` Calls
+
+As noted in previous section, `Config` class is removed and we'll be using .NET options pattern instead.
+
+Unfortunately this is not something we can do simply with Search/Replace.
+
+If you were reading configuration in a Controller:
+
+```csharp
+public class MyController : Controller
+{
+    public ActionResult SomeAction(...)
+    {
+        var config = Config.Get<MyCustomSettings>();
+    }
+}
+```
+
+You may replace it like this:
+
+```csharp
+using Microsoft.Extensions.Options;
+
+public class MyController : Controller
+{
+    public ActionResult SomeAction([FromServices] IOptions<MyCustomSettings> myCustomSettings...)
+    {
+        var config = myCustomSettings.Value;
+    }
+}
+```
+
+Or if you prefer constructor injection:
+
+```csharp
+using Microsoft.Extensions.Options;
+
+public class MyController : Controller
+{
+    MyCustomSettings myCustomSettings;
+
+    public MyController(IOptions<MyCustomSettings> myCustomSettings)
+    {
+        this.myCustomSettings = myCustomSettings.Value;
+    }
+
+    public ActionResult SomeAction(...)
+    {
+        var config = myCustomSettings;
+    }
+}
+```
+
+If you are accessing the setting from a repository method you need to inject the configuration to the service endpoint (controller) using one of the methods shown above, and pass the setting to the constructor / method of your repository:
+
+```csharp
+public class MyController : ServiceEndpoint
+{
+    public ServiceResponse SomeServiceCall(MyRequest serviceRequest, 
+        [FromServices] IOptions<MyCustomSettings> myCustomSettings)
+    {
+        return new MyRepository().SomeServiceCall(serviceRequest, myCustomSettings)
+    }
+}
+
+public class MyRepository
+{
+    public ServiceResponse SomeServiceCall(MyRequest serviceRequest, 
+        IOptions<MyCustomSettings> myCustomSettings)
+    {
+        // use myCustomSettings here
+    }
+}
+```
+
+If you are accessing the setting from a view, and it is not possible to pass it from controller (layout page?), inject it like:
+
+```html
+@model MyModel
+@using Microsoft.Extensions.Options
+@inject IOptions<MyCustomSettings> myCustomSettings
+<div>
+    @if (myCustomSettings?.Value.SomeFlag == true) 
+    {
+
+    }
+  ...
+</div>
+```
+
+

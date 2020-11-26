@@ -327,7 +327,7 @@ Here is the search replace method that can do it:
 
 * Type `([\t ]*)Check.NotNull\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
 
-* Type `$1if ($2 is null)$4$1    throw new ArgumentNullException($3);$4` in `Replace` input
+* Type <pre>`$1if ($2 is null)$4$1    throw new ArgumentNullException($3);$4`</pre> in `Replace` input
 
 * Click `Replace All`
 
@@ -339,7 +339,7 @@ Here is the search replace method that can do it:
 
 * Type `([\t ]*)Check.NotNullOrEmpty\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
 
-* Type `$1if (string.IsNullOrEmpty($2))$4$1    throw new ArgumentNullException($3);$4` in `Replace` input
+* Type <pre>`$1if (string.IsNullOrEmpty($2))$4$1    throw new ArgumentNullException($3);$4`</pre> in `Replace` input
 
 * Click `Replace All`
 
@@ -351,7 +351,7 @@ Here is the search replace method that can do it:
 
 * Type `([\t ]*)Check.NotNullOrWhiteSpace\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
 
-* Type `$1if (string.IsNullOrWhiteSpace($2))$4$1    throw new ArgumentNullException($3);$4` in `Replace` input
+* Type <pre>`$1if (string.IsNullOrWhiteSpace($2))$4$1    throw new ArgumentNullException($3);$4`</pre> in `Replace` input
 
 * Click `Replace All`
 
@@ -515,3 +515,104 @@ If you are accessing the setting from a view, and it is not possible to pass it 
 ```
 
 
+## Removing `Serenity.Configuration` Namespace
+
+No such namespace exists anymore, so we need to delete any references to it:
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `using Serenity\.Configuration\;[\t ]*\r?\n` in `Find` input
+
+* Clear value in `Replace` input
+
+* Click `Replace All`
+
+## Using `BaseRepository` and `IRequestContext` in Repositories
+
+We have a new `IRequestContext` class declared like below which you can inject into your repositories, handlers, controllers and other kinds of classes.
+
+```csharp
+public interface IRequestContext
+{
+    IBehaviorProvider Behaviors { get; }
+    ITwoLevelCache Cache { get; }
+    ITextLocalizer Localizer { get; }
+    IPermissionService Permissions { get; }
+    ClaimsPrincipal User { get; }
+}
+```
+
+This interface simply contains references to minimum set of services that repositories, request handlers and endpoints might need in a Serenity application:
+- *Behaviors*: Provides access to service behaviors, mostly used by request handlers
+- *Cache*: ITwoLevelCache instance which also provides access to MemoryCache and DistributedCache services
+- *Localizer*: Text localizer (required for LocalText to string conversion)
+- *Permissions*: Access to permission service
+- *User*: Provides access to current user (HttpContext.User in web contexts)
+
+> We could inject these services into your repositories / handlers separately but this design allows us to add new services to this interface in the future if required without breaking your code. As .NET dependency injection only supports Constructor Injection by default, if we had to add these as separate constructor injection arguments, you would have to change all your derived constructors if we decide to add a new required interface to our base constructors.
+
+We also created a base repository class that accepts a IRequestContext parameter and provides access to these services as properties of itself.
+
+```csharp
+public class BaseRepository
+{
+    public BaseRepository(IRequestContext context)
+    {
+        Context = context ?? throw new ArgumentNullException(nameof(context));
+    }
+
+    protected IRequestContext Context { get; }
+    protected ITextLocalizer Localizer => Context.Localizer;
+    protected IPermissionService Permissions => Context.Permissions;
+    protected ClaimsPrincipal User => Context.User;
+}
+```
+
+We are now going to set this as base class for all your existing repositories:
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `([\t ]*)public[\t ]+class[\t ]+([A-Za-z0-9_]*)Repository[\t ]*(\r?\n|)[\t ]*\{` in `Find` input
+
+* Type `$1public class $2Repository : BaseRepository$3$1{$3$1$1public $2Repository(IRequestContext context)$3$1$1$1 : base(context)$3$1$1{$3$1$1}$3` in `Replace` input
+
+* Click `Replace All`
+
+## Adding a constructor that accepts `IRequestContext` to Request Handlers
+
+Just like we added a constructor that accepts IRequestContext for repositories, we need to do it for RequestHandlers.
+
+You should have classes like below in your repositories:
+
+```csharp
+private class MySaveHandler : SaveRequestHandler<MyRow> 
+{ 
+
+}
+```
+
+They now need a constructor with IRequestContext parameter as all base request handlers have one.
+
+```csharp
+private class MySaveHandler : SaveRequestHandler<MyRow> 
+{ 
+    public MySaveHandler(IRequestContext context)
+        : base(context)
+    {
+    }
+}
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `([\t ]*)(private|public)[\t ]+class[\t ]+My(Save|Retrieve|List|Delete)Handler[\t ]*\:[\t ]*(\3)RequestHandler(\<[A-Za-z\.\, \t]+\>)[\t ]*\{?[\t ]*\}[\t ]*(\r?\n)([\t\r\s]*\n)?` in `Find` input
+
+* Type <pre>`$1$2 class My$3Handler : $3RequestHandler$5$6$1{$6$1    public My$3Handler(IRequestContext context)$6$1$1 : base(context)$6$1    {$6$1    }$6$1}$6$6`</pre> in `Replace` input
+
+* Click `Replace All`

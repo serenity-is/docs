@@ -71,11 +71,11 @@ Again this might take too much time for a manual process, so let's use a Regex r
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
-* Type `class ([A-Za-z]*)Row\s*:\s*IRow` in `Find` input
+* Type `class\s*([A-Za-z]*)Row\s*:\s*I?Row(\s*[^<]{1})` in `Find` input
 
-* Type `class $1Row : Row<$1Row.RowFields>` in `Replace` input
+* Type `class $1Row : Row<$1Row.RowFields>$2` in `Replace` input
 
 * Click `Replace All`
 
@@ -89,7 +89,7 @@ We used to have a static RowFields instance named `Fields` in row classes which 
 
 * Open `Replace in Fields` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `[\r]?[\n]?[ \t]*public\s+static\s+readonly\s+RowFields\s+Fields\s*=\s*new\s+RowFields\(\)\.Init\(\);\r?\n` in `Find` input
 
@@ -112,7 +112,7 @@ As there is no longer a static Fields instance, we'll keep the default construct
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `([ \t]*public[ \t]* )([A-Za-z]*)Row\(\)([\s\r\n]*:[\s]*base\()Fields\)(\s*\{\s*\})([\r]?[\n]?)` in `Find` input
 
@@ -164,7 +164,7 @@ If you prefer to do it with search / replace again, here is the way (warning mig
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `(\[[^\{\}]*)(\][\r\n\s]*public [A-Za-z0-9]+\?? )([A-Za-z]+)(\s*\r?\n+[\s\S\n]+)(\r?\n\s*IIdField\s*IIdRow.IdField[\s\r\n]*(\{[\r\n\s]*get[r\n\s]*\{[\r\n\s]*return|=>\s*) Fields.)(\3)([\s]*;([\r\n\s]*\}[\r\n\s]*\}|))\r?\n?\r?\n?` in `Find` input
 
@@ -207,9 +207,9 @@ If you prefer to do it with search / replace again, here is the way (warning mig
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
-* Type `(\[[^\{\}]*)(\][\r\n\s]*public [A-Za-z0-9]+\?? )([A-Za-z]+)(\s*\r?\n+[\s\S\n]+)(\r?\n\s*StringField\s*INameRow.NameField[\s\r\n]*(\{[\r\n\s]*get[r\n\s]*\{[\r\n\s]*return|=>\s*) Fields.)(\3)([\s]*;([\r\n\s]*\}[\r\n\s]*\}|))\r?\n?\r?\n?` in `Find` input
+* Type `(\[[^\{\}]*)(\][\r\n\s]*public [A-Za-z0-9]+\?? )([A-Za-z]+)(\s*\r?\n+[\s\S\n]+)(\r?\n\s*StringField\s*INameRow.NameField[\s\r\n]*(\{[\r\n\s]*get[r\n\s]*\{[\r\n\s]*return|=>\s*) Fields.)(\3)([\s]*;([\r\n\s]*\}[\r\n\s]*\}|))\r?\n?` in `Find` input
 
 * Type `$1, NameProperty$2$3$4` in `Replace` input
 
@@ -251,11 +251,11 @@ Field IUpdateLogRow.UpdateUserIdField
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
-* Type `` in `Find` input
+* Type `(\s?)IIdField(\s+)` in `Find` input
 
-* Type `$1, NameProperty$2$3$4` in `Replace` input
+* Type `$1Field$2` in `Replace` input
 
 * Click `Replace All`
 
@@ -290,7 +290,7 @@ public int? CountryID
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `(^[\t ]*)(get|set)[ \t]*(\=\>|\{)[\t ]*(return|)[\t ]*F(ields\.[^\^;}]*)\;[\t ]*\}?[\t ]*\r?$` in `Find` input
 
@@ -323,7 +323,7 @@ Here is the search replace method that can do it:
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `([\t ]*)Check.NotNull\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
 
@@ -335,7 +335,7 @@ Here is the search replace method that can do it:
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `([\t ]*)Check.NotNullOrEmpty\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
 
@@ -347,11 +347,38 @@ Here is the search replace method that can do it:
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `([\t ]*)Check.NotNullOrWhiteSpace\(([A-Za-z0-9\.]+),\s*([^\n\r]*)\);([\r]?\n)` in `Find` input
 
 * Type <pre>`$1if (string.IsNullOrWhiteSpace($2))$4$1    throw new ArgumentNullException($3);$4`</pre> in `Replace` input
+
+* Click `Replace All`
+
+* Save all open files if any
+
+## Replacing request.CheckNotNull Calls
+
+If you had a check like below:
+
+```csharp
+request.CheckNotNull();
+```
+
+Replace it with:
+
+```csharp
+if (request is null)
+    throw new ArgumentNullException(nameof(request));
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `([\t ]*)request.CheckNotNull\(\);([\r]?\n)` in `Find` input
+
+* Type <pre>`$1if (request is null)$2$1    throw new ArgumentNullException(nameof(request));$2`</pre> in `Replace` input
 
 * Click `Replace All`
 
@@ -387,11 +414,11 @@ public class MyCustomSettings
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `[\t ]*\[[\t ]*(SettingScope\(.*\)\,|)[\t ]*SettingKey\("(.*)"\)\][\t ]*\r?\n[\s\r\n]*public class[\t ]*([A-Za-z0-9]*)[\t ]*(\r?\n)[\r\n]*([\t ]*)\{` in `Find` input
 
-* Type `$5// services.Configure<$3>(Configuration.GetSection($3.SectionKey));$4$5public class $3$4$5{$4$5    public const string SectionKey = "AppSettings:$2";$4` in `Replace` input
+* Type `$5// services.Configure<$3>(Configuration.GetSection($3.SectionKey));$4$5public class $3$4$5{$4$5    public const string SectionKey = "$2";$4` in `Replace` input
 
 * Click `Replace All`
 
@@ -401,7 +428,7 @@ Now your setting class will turn into this:
 // services.Configure<InstalledModuleSettings>(Configuration.GetSection(MyCustomSettings.SectionKey));
 public class MyCustomSettings
 {
-    public const string SectionKey = "AppSettings:MyCustomKey";
+    public const string SectionKey = "MyCustomKey";
 }
 ```
 
@@ -420,9 +447,99 @@ You may need to add the namespace for MyCustomSettings to usings in Startup.cs.
 
 After that delete the commented line above MyCustomSettings. 
 
-Repeat this for all settings classes you have.
+And finally open `appsettings.json` file and move the setting inside `AppSettings` subsection to root:
 
-> Serenity used to keep its own settings under `AppSettings:` thats why we used that prefix in `SectionKey` so that your existing config in `appsettings.json` will be properly matched. This prefix is no longer required. If you choose to move your custom settings up a level in `appsettings.json` just remove `AppSettings:` prefix in `SectionKey` (after moving the setting to the root).
+```json
+{
+    "AppSettings": {
+        // ...before lines
+        "MyCustomKey": {
+
+        }
+        // ...after lines
+    }
+}
+```
+
+should be replaced with:
+
+```json
+{
+    "AppSettings": {
+        // ...before lines
+        // ...after lines
+    },
+    "MyCustomKey": {
+
+    }
+}
+```
+
+> Serenity used to keep its own settings under `AppSettings:` for historical reasons. This prefix is no longer used.
+
+Repeat steps above for all settings classes you have.
+
+## Configuring Serenity Options
+
+Just like we configured your custom settings with .NET options system in the last section, we also need to configure Serenity options.
+
+Open `Startup.cs` file and add following under `ConfigureServices` method:
+
+```cs
+using Serenity.Data;
+using Serenity.Web;
+
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.Configure<ConnectionStringOptions>(Configuration.GetSection(ConnectionStringOptions.SectionKey));
+    services.Configure<CssBundlingOptions>(Configuration.GetSection(CssBundlingOptions.SectionKey));
+    services.Configure<LocalTextPackages>(Configuration.GetSection(LocalTextPackages.SectionKey));
+    services.Configure<ScriptBundlingOptions>(Configuration.GetSection(ScriptBundlingOptions.SectionKey));
+    services.Configure<UploadSettings>(Configuration.GetSection(UploadSettings.SectionKey));    
+    //...
+}
+```
+
+Edit `appsettings.json` and move following out from `AppSettings`:
+
+```json
+{
+    "AppSettings": {
+        // ...before lines
+        "CssBundling": {
+        },
+        "ScriptBundling": {
+        },
+        "UploadSettings": {
+        },
+        "LocalTextPackages": {
+        }
+        // ...after lines
+    }
+}
+```
+
+should be replaced with:
+
+```json
+{
+    "AppSettings": {
+        // ...before lines
+        // ...after lines
+    },
+    "CssBundling": {
+    },
+    "ScriptBundling": {
+    },
+    "UploadSettings": {
+    },
+    "LocalTextPackages": {
+    }
+}
+```
+
+You may delete `AppSettings` key if nothing left under it after doing this.
 
 ## Replacing `Config.Get<TSettings>` Calls
 
@@ -521,7 +638,7 @@ No such namespace exists anymore, so we need to delete any references to it:
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `using Serenity\.Configuration\;[\t ]*\r?\n` in `Find` input
 
@@ -574,7 +691,7 @@ We are now going to set this as base class for all your existing repositories:
 
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `([\t ]*)public[\t ]+class[\t ]+([A-Za-z0-9_]*)Repository[\t ]*(\r?\n|)[\t ]*\{` in `Find` input
 
@@ -607,12 +724,309 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
 }
 ```
 
+First do it for handlers that are not empty:
+
 * Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
 
-* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `([\t ]*)(private|public)[\t ]+class[\t ]+My(Save|Retrieve|List|Delete)Handler[\t ]*\:[\t ]*(\3)RequestHandler(\<[A-Za-z\.\, \t]+\>)[\t ]*\{?[\t ]*(\r?\n)[\t\r\s]*\{` in `Find` input
+
+* Type <pre>`$1$2 class My$3Handler : $3RequestHandler$5$6$1{$6$1    public My$3Handler(IRequestContext context)$6$1$1 : base(context)$6$1    {$6$1    }$6`</pre> in `Replace` input
+
+* Click `Replace All`
+
+Now will repeat it for empty handlers:
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
 * Type `([\t ]*)(private|public)[\t ]+class[\t ]+My(Save|Retrieve|List|Delete)Handler[\t ]*\:[\t ]*(\3)RequestHandler(\<[A-Za-z\.\, \t]+\>)[\t ]*\{?[\t ]*\}[\t ]*(\r?\n)([\t\r\s]*\n)?` in `Find` input
 
 * Type <pre>`$1$2 class My$3Handler : $3RequestHandler$5$6$1{$6$1    public My$3Handler(IRequestContext context)$6$1$1 : base(context)$6$1    {$6$1    }$6$1}$6$6`</pre> in `Replace` input
 
 * Click `Replace All`
+
+## Pass `Context` to Handler Constructors
+
+As all handlers now requires a `context` parameter, need to pass it to them, so all calls like this:
+
+```csharp
+new MySaveHandler().Process(uow, request, SaveRequestType.Create);
+```
+
+will be replaced with:
+
+```csharp
+new MySaveHandler(Context).Process(uow, request, SaveRequestType.Create);
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `new[\t ]*My(Save|Retrieve|List|Delete)Handler[\t ]*\([\t ]*\)`
+
+* Type <pre>`new My$1Handler(Context)`</pre> in `Replace` input
+
+* Click `Replace All`
+
+## Passing `Context` to Repository Constructors
+
+As all repositories now requires a `context` parameter, need to pass it to them, so all calls like this:
+
+```csharp
+new MyRepository().Create(uow, request);
+```
+
+will be replaced with:
+
+```csharp
+new MyRepository(Context).Create(uow, request);
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `new[\t ]*([A-Za-z0-9_]*)Repository[\t ]*\([\t ]*\)`
+
+* Type <pre>`new $1Repository(Context)`</pre> in `Replace` input
+
+* Click `Replace All`
+
+## Getting `IRequestContext` Instance in Ordinary Pages
+
+Service endpoints deriving from `ServiceEndpoint` base class (XyzEndpoint.cs) automatically has a reference to `Context` so the previous change we made for repository constructors will work with them, but ordinary controllers don't have that property.
+
+So you'll need to use constructor injection / [FromServices] attribute like we did for options if you are creating a repository in any of Page.cs files:
+
+```csharp
+public ActionResult MyAction([FromServices] IRequestContext context)
+{
+    // ...
+    var result = new MyRepository(context).Something();
+    // ...
+}
+```
+
+## Fixing LoggingRow and Derived Rows
+
+If you are using `LoggingRow` sample:
+
+```csharp
+public abstract class LoggingRow : Row<LoggingRow.RowFields>, ILoggingRow
+{
+    protected LoggingRow(RowFieldsBase fields)
+        : base(fields)
+    {
+```
+
+Modify it like below:
+
+```csharp
+public abstract class LoggingRow<TFields> : Row<TFields>, ILoggingRow
+        where TFields : LoggingRowFields
+{
+    protected LoggingRow(TFields fields) : base(fields) { }
+
+    [NotNull, Insertable(false), Updatable(false)]
+    public Int32? InsertUserId 
+    { 
+        get => fields.InsertUserId[this]; 
+        set => fields.InsertUserId[this] = value; 
+    }
+
+    [NotNull, Insertable(false), Updatable(false)]
+    public DateTime? InsertDate
+    { 
+        get => fields.InsertDate[this]; 
+        set => fields.InsertDate[this] = value; 
+    }
+
+    [Insertable(false), Updatable(false)]
+    public Int32? UpdateUserId 
+    { 
+        get => fields.UpdateUserId[this]; 
+        set => fields.UpdateUserId[this] = value; 
+    }
+
+    [Insertable(false), Updatable(false)]
+    public DateTime? UpdateDate 
+    { 
+        get => fields.UpdateDate[this]; 
+        set => fields.UpdateDate[this] = value; 
+    }
+
+    Field IInsertLogRow.InsertUserIdField => fields.InsertUserId;
+    Field IUpdateLogRow.UpdateUserIdField => fields.UpdateUserId;
+    DateTimeField IInsertLogRow.InsertDateField => fields.InsertDate;
+    DateTimeField IUpdateLogRow.UpdateDateField => fields.UpdateDate;
+}
+
+public class LoggingRowFields : RowFieldsBase
+{
+    public Int32Field InsertUserId;
+    public DateTimeField InsertDate;
+    public Int32Field UpdateUserId;
+    public DateTimeField UpdateDate;
+
+    public LoggingRowFields(string tableName = null, string fieldPrefix = null)
+        : base(tableName, fieldPrefix)
+    {
+    }
+}
+```
+
+And if you have a row that derives from `LoggingRow`:
+
+```csharp
+public class SomeRow : LoggingRow, IIdRow
+{
+    public class SomeFields : LoggingRow.LoggingRowFields 
+    {
+    }
+}
+```
+
+It should become:
+
+```csharp
+public class SomeRow : LoggingRow<SomeRow.RowFields>, IIdRow
+{
+    public class RowFields : LoggingRowFields 
+    {
+    }
+}
+```
+
+## Replacing IAuthorizationService with IUserAccessor
+
+`IAuthorizationService` interface which was used to access current user is removed and needs to be replaced with `IUserAccessor` interface which does a similar work but more compatible with ASP.NET Core authentication system.
+
+```csharp
+services.AddSingleton<IAuthorizationService, AuthorizationService>();
+```
+
+AuthorizationService class in under Initialization folder should be removed and you can use `Serenity.Web.HttpContextUserAccessor` instead:
+
+```csharp
+services.AddSingleton<IAuthorizationService, Serenity.Web.HttpContextUserAccessor>();
+```
+
+If you also need impersonation support, you should use following class instead:
+
+```csharp
+public class UserAccessor : IUserAccessor, IImpersonator
+{
+    private ImpersonatingUserAccessor impersonator;
+
+    public UserAccessor(IHttpContextAccessor httpContextAccessor)
+    {
+        impersonator = new ImpersonatingUserAccessor(new HttpContextUserAccessor(httpContextAccessor), 
+            new HttpContextItemsAccessor(httpContextAccessor));
+    }
+
+    public ClaimsPrincipal User => impersonator.User;
+
+    public void Impersonate(ClaimsPrincipal user)
+    {
+        impersonator.Impersonate(user);
+    }
+
+    public void UndoImpersonate()
+    {
+        impersonator.UndoImpersonate();
+    }
+}
+
+services.AddSingleton<IAuthorizationService, UserAccessor>();
+```
+
+## Remove References to Dependency
+
+We use .NET dependency injection and there is no longer a `Dependency` class, so remove this line in `Startup.cs`:
+
+```csharp
+Dependency.SetResolver(new DependencyResolver(app.ApplicationServices));
+```
+
+And remove `DependencyResolver` class under `Initialization` folder.
+
+Also if you use `Dependency.Resolve` anywhere, replace those calls with constructor injection, or [FromServices] attribute.
+
+## Removing Reference to Serenity.ExtensibilityHelper
+
+This class is basically used to hold a `SelfAssemblies` array, which was used to find types used by Serenity like forms, lookup scripts etc. but it is now removed.
+
+So the code below in Startup.cs:
+
+```csharp
+Serenity.Extensibility.ExtensibilityHelper.SelfAssemblies = new System.Reflection.Assembly[]
+{
+    typeof(LocalTextRegistry).Assembly,
+    typeof(SqlConnections).Assembly,
+    typeof(Row).Assembly,
+    typeof(SaveRequestHandler<>).Assembly,
+    typeof(WebSecurityHelper).Assembly,
+    typeof(Startup).Assembly
+};
+```
+
+Should be simply replaced with a private field and all references to `Serenity.Extensibility.ExtensibilityHelper` should be replaced with that variable.
+
+```csharp
+private readonly Assembly[] SelfAssemblies = 
+    new Assembly[] 
+    {
+        typeof(LocalTextRegistry).Assembly,
+        typeof(SqlConnections).Assembly,
+        typeof(IRow).Assembly,
+        typeof(SaveRequestHandler<>).Assembly,
+        typeof(HttpContextUserAccessor).Assembly,
+        typeof(Startup).Assembly
+    };
+
+// use this.SelfAssemblies anywhere it is needed
+```
+
+## Pass SelfAssemblies to Text Registration Methods in Startup Configure Method
+
+Text registration block in Startup.cs:
+
+```csharp
+var textRegistry = app.ApplicationServices.GetRequiredService<ILocalTextRegistry>();
+textRegistry.AddNestedTexts();
+textRegistry.AddEnumTexts();
+textRegistry.AddRowTexts();
+textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "serenity", "texts"));
+textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "site", "texts"));
+textRegistry.AddJsonTexts(System.IO.Path.Combine(env.ContentRootPath, "App_Data", "texts"));
+```
+
+should be replaced with this:
+
+```csharp
+var textRegistry = app.ApplicationServices.GetRequiredService<ILocalTextRegistry>();
+textRegistry.AddNestedTexts(SelfAssemblies);
+textRegistry.AddEnumTexts(SelfAssemblies);
+var rowInstances = RowRegistry.EnumerateRowInstances(SelfAssemblies).ToArray();
+textRegistry.AddRowTexts(rowInstances);
+textRegistry.AddRowPermissionTexts(rowInstances);
+textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "serenity", "texts"));
+textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "site", "texts"));
+textRegistry.AddJsonTexts(Path.Combine(env.ContentRootPath, "App_Data", "texts"));
+```
+
+## Replacing Old IRequestContext Registration
+
+Replace this line 
+
+```csharp
+services.AddSingleton<IRequestContext, Serenity.Web.RequestContext>();
+```
+// TODO
+
+
+

@@ -1030,3 +1030,75 @@ services.AddSingleton<IRequestContext, Serenity.Web.RequestContext>();
 
 
 
+
+## Replacing Authorization.HasPermission Calls
+
+Static Authorization class is removed and calls like below:
+
+```csharp
+Authorization.HasPermission("SomePermission")
+```
+
+with:
+
+```csharp
+Permissions.HasPermission("SomePermission")
+```
+
+where Permissions is a reference to `IPermissionService`. 
+
+Handlers, repositories and service endpoints already has this property, but if you need it somewhere else (e.g. ordinary Controller), you need to use constructor injection / [FromServices] attribute.
+
+```csharp
+public ActionResult MyAction(...
+    [FromServices] IPermissionService permissions) 
+{
+    permissions.HasPermission("SomePermission");
+}
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `Authorization\.HasPermission\(([A-Za-z\."]*)\)` in `Find` input
+
+* Type `Permissions.HasPermission($1)` in `Replace` input
+
+* Click `Replace All`
+
+## Replacing Authorization.ValidatePermission Calls
+
+Static Authorization class is removed and calls like below:
+
+```csharp
+Authorization.ValidatePermission("SomePermission")
+```
+
+with:
+
+```csharp
+Permissions.ValidatePermission("SomePermission")
+```
+
+where Permissions is a reference to `IPermissionService` while Localizer is a reference to `ITextLocalizer`. 
+
+Handlers, repositories and service endpoints already has these properties, but if you need it somewhere else (e.g. ordinary Controller), you need to use constructor injection / [FromServices] attribute like this:
+
+```csharp
+public ActionResult MyAction(...
+    [FromServices] IPermissionService permissions, [FromServices] ITextLocalizer localizer) 
+{
+    permissions.ValidatePermission("SomePermission", localizer);
+}
+```
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `Authorization\.ValidatePermission\(([^\r\n]+)\);` in `Find` input
+
+* Type `Permissions.ValidatePermission($1, Localizer);` in `Replace` input
+
+* Click `Replace All`

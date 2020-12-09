@@ -24,16 +24,19 @@ After reading this guide and its tutorials, follow resources below for more info
   <dd><a href='http://serenity.is/blog' target='_blank'>http://serenity.is/blog</a></dd>
 
   <dt>Github Repository:</dt>
-  <dd><a href='https://github.com/volkanceylan/Serenity' target='_blank'>https://github.com/volkanceylan/Serenity</a></dd>
+  <dd><a href='https://github.com/serenity-is/Serenity' target='_blank'>https://github.com/serenity-is/Serenity</a></dd>
 
-  <dt>Issues / Questions</dt>
-  <dd><a href='https://github.com/volkanceylan/Serenity/issues' target='_blank'>https://github.com/volkanceylan/Serenity/issues</a></dd>
+  <dt>Issues</dt>
+  <dd><a href='https://github.com/serenity-is/Serenity/issues' target='_blank'>https://github.com/serenity-is/Serenity/issues</a></dd>
+
+  <dt>Discussions / Questions</dt>
+  <dd><a href='https://github.com/serenity-is/Serenity/discussions' target='_blank'>https://github.com/serenity-is/Serenity/discussions</a></dd>
 
   <dt>Wiki (FAQ, Troubleshooting and Other Community Content)</dt>
-<dd><a href='https://github.com/volkanceylan/Serenity/wiki' target='_blank'>https://github.com/volkanceylan/Serenity/wiki</a></dd>
+<dd><a href='https://github.com/serenity-is/Serenity/wiki' target='_blank'>https://github.com/serenity-is/Serenity/wiki</a></dd>
   
   <dt>Change Log:</dt>
-  <dd><a href='https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md' target='_blank'>https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md</a></dd>
+  <dd><a href='https://github.com/serenity-is/Serenity/blob/master/CHANGELOG.md' target='_blank'>https://github.com/serenity-is/Serenity/blob/master/CHANGELOG.md</a></dd>
 
   <dt>Serene Application Template:</dt>
   <dd><a href='https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityApplicationTemplate'>https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityApplicationTemplate</a></dd>

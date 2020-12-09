@@ -66,10 +66,10 @@ Now rebuild your solution and it should build successfully.
 > From time to time, breaking changes might happen in Serenity, but they are kept to minimum, and you might have to do a few manual changes in your application code. 
 
 > Such changes are documented with a [BREAKING CHANGE] tag in change log at:
-> https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md
+> https://github.com/serenity-is/Serenity/blob/master/CHANGELOG.md
 
 > If you still have a problem after upgrade, feel free to open an issue at:
-> https://github.com/volkanceylan/Serenity/issues
+> https://github.com/serenity-is/Serenity/issues
 
 
 ### What Is Updated

@@ -42,7 +42,7 @@ In GitExtensions, enter Repository -> SubModules -> Add submodule:
 
 Under Path to submodule enter:
 
-https://github.com/volkanceylan/Serenity.git
+https://github.com/serenity-is/Serenity.git
 
 Enter *Serenity* as Local path.
 

@@ -2,7 +2,7 @@
 
 This page outlines common questions we receive from users (who are considering buying a StartSharp licence), and their relevant answers.
 
-https://github.com/volkanceylan/Serenity/projects/1
+https://github.com/serenity-is/Serenity/projects/1
 
 ## Why Should I Buy StartSharp?
 
@@ -55,7 +55,7 @@ Serenity as an open source project is about 5 years old, but it has a 10+ year b
 
 You may have a look at our change log (we didn't keep a change log before October 2014):
 
-https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md
+https://github.com/serenity-is/Serenity/blob/master/CHANGELOG.md
 
 We tried to keep breaking changes at minimum, and documented any such change that we couldn't avoid.
 
@@ -134,4 +134,4 @@ But we can't make any promises that your request will make it into Serenity.
 
 We are regularly adding extra content into *StartSharp*. If you would like to see what we are cooking next in our software kitchen, you may take a look at our roadmap:
 
-https://github.com/volkanceylan/Serenity/projects/1
+https://github.com/serenity-is/Serenity/projects/1

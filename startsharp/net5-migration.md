@@ -1418,80 +1418,145 @@ And remove `DependencyResolver` class under `Initialization` folder.
 
 Also if you use `Dependency.Resolve` anywhere, replace those calls with constructor injection, or [FromServices] attribute.
 
-## Removing Reference to Serenity.ExtensibilityHelper
+## Replacing SelfAssemblies with ITypeSource
 
-This class is basically used to hold a `SelfAssemblies` array, which was used to find types used by Serenity like forms, lookup scripts etc. but it is now removed.
+Serenity apps used to hold a `ExtensibilityHelper.SelfAssemblies` array, which was used to find types used by Serenity like forms, lookup scripts etc. but it is now removed and will be replaced with an `ITypeSource` abstraction.
 
-So the code below in Startup.cs:
+So given the code below in Startup.cs:
 
 ```csharp
-Serenity.Extensibility.ExtensibilityHelper.SelfAssemblies = new System.Reflection.Assembly[]
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env, 
+    ILoggerFactory loggerFactory, IAntiforgery antiforgery)
 {
-    typeof(LocalTextRegistry).Assembly,
-    typeof(SqlConnections).Assembly,
-    typeof(Row).Assembly,
-    typeof(SaveRequestHandler<>).Assembly,
-    typeof(WebSecurityHelper).Assembly,
-    typeof(Startup).Assembly
-};
-```
-
-Should be simply replaced with a private field and all references to `Serenity.Extensibility.ExtensibilityHelper` should be replaced with that variable.
-
-```csharp
-private readonly Assembly[] SelfAssemblies = 
-    new Assembly[] 
+    Serenity.Extensibility.ExtensibilityHelper.SelfAssemblies = 
+        new System.Reflection.Assembly[]
     {
         typeof(LocalTextRegistry).Assembly,
         typeof(SqlConnections).Assembly,
-        typeof(IRow).Assembly,
+        typeof(Row).Assembly,
         typeof(SaveRequestHandler<>).Assembly,
-        typeof(HttpContextUserAccessor).Assembly,
+        typeof(WebSecurityHelper).Assembly,
         typeof(Startup).Assembly
     };
-
-// use this.SelfAssemblies anywhere it is needed
+    //...
+}
 ```
 
-## Pass SelfAssemblies to Text Registration Methods in Startup Configure Method
+It should be moved to start of ConfigureServices method and replaced with a ITypeSource service registration.
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddSingleton<ITypeSource>(new DefaultTypeSource(new[] 
+    {
+        typeof(LocalTextRegistry).Assembly,
+        typeof(ISqlConnections).Assembly,
+        typeof(IRow).Assembly,
+        typeof(SaveRequestHandler<>).Assembly,
+        typeof(IDynamicScriptManager).Assembly,
+        typeof(Startup).Assembly
+    }));
+```
+
+## Fixing Local Text Initialization
 
 Text registration block in Startup.cs:
 
 ```csharp
-var textRegistry = app.ApplicationServices.GetRequiredService<ILocalTextRegistry>();
-textRegistry.AddNestedTexts();
-textRegistry.AddEnumTexts();
-textRegistry.AddRowTexts();
-textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "serenity", "texts"));
-textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "site", "texts"));
-textRegistry.AddJsonTexts(System.IO.Path.Combine(env.ContentRootPath, "App_Data", "texts"));
+public static void InitializeLocalTexts(ILocalTextRegistry textRegistry,       
+    IWebHostEnvironment env)
+{
+    textRegistry.AddNestedTexts();
+    textRegistry.AddNestedPermissions();
+    textRegistry.AddEnumTexts();
+    textRegistry.AddRowTexts();
+    textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, 
+        "Scripts/serenity/texts".Replace('/', Path.DirectorySeparatorChar)));
+    textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, 
+        "Scripts/site/texts".Replace('/', Path.DirectorySeparatorChar)));
+    textRegistry.AddJsonTexts(Path.Combine(env.ContentRootPath, 
+        "App_Data/texts".Replace('/', Path.DirectorySeparatorChar)));
+}
+
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env, 
+    ILoggerFactory loggerFactory, IAntiforgery antiforgery)
+{
+    var textRegistry = app.ApplicationServices.GetRequiredService<ILocalTextRegistry>();
+    InitializeLocalTexts(textRegistry, env);
+    //...
 ```
 
 should be replaced with this:
 
 ```csharp
-var textRegistry = app.ApplicationServices.GetRequiredService<ILocalTextRegistry>();
-textRegistry.AddNestedTexts(SelfAssemblies);
-textRegistry.AddEnumTexts(SelfAssemblies);
-var rowInstances = RowRegistry.EnumerateRowInstances(SelfAssemblies).ToArray();
-textRegistry.AddRowTexts(rowInstances);
-textRegistry.AddRowPermissionTexts(rowInstances);
-textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "serenity", "texts"));
-textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts", "site", "texts"));
-textRegistry.AddJsonTexts(Path.Combine(env.ContentRootPath, "App_Data", "texts"));
+public static void InitializeLocalTexts(IServiceProvider services)
+{
+    var env = services.GetRequiredService<IWebHostEnvironment>();
+
+    services.AddAllTexts(new[]
+    {
+        Path.Combine(env.WebRootPath, "Scripts", "serenity", "texts"),
+        Path.Combine(env.WebRootPath, "Scripts", "site", "texts"),
+        Path.Combine(env.ContentRootPath, "App_Data", "texts")
+    });
+}
+
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env, 
+    ILoggerFactory loggerFactory, IAntiforgery antiforgery)
+{
+    InitializeLocalTexts(app.ApplicationServices);
+    // ...
+```
+
+And if you have this line in `TranslationRepository.cs`:
+
+```cs
+public SaveResponse Update(TranslationUpdateRequest request)
+{
+    // ...
+    Startup.InitializeLocalTexts(localTextRegistry, 
+        Dependency.Resolve<IWebHostEnvironment>());
+```
+
+Replace it with:
+
+```cs
+public SaveResponse Update(TranslationUpdateRequest request, IServiceProvider services)
+{
+    // ...
+    Startup.InitializeLocalTexts(services);
+```
+
+And in `TranslationEndpoint.cs`:
+
+```cs
+[HttpPost]
+public SaveResponse Update(TranslationUpdateRequest request)
+{
+    return new MyRepository(Context).Update(request, HttpContext.RequestServices);
+}
 ```
 
 ## Replacing Old IRequestContext Registration
 
-Replace this line 
+If you have this line in Startup.cs:
 
 ```csharp
 services.AddSingleton<IRequestContext, Serenity.Web.RequestContext>();
 ```
-// TODO
 
+Replace it with:
 
+```csharp
+services.AddSingleton<IHttpContextItemsAccessor, HttpContextItemsAccessor>();
+```
 
+If you don't have that line but used a UserAccessor with impersonation support you still need to add it before registering the user accessor:
+
+```csharp
+services.AddSingleton<IHttpContextItemsAccessor, HttpContextItemsAccessor>();
+services.AddSingleton<IUserAccessor, Administration.UserAccessor>();
+```
 
 ## Replacing Authorization.HasPermission Calls
 

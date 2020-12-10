@@ -1450,8 +1450,7 @@ services.AddSingleton<IAuthorizationService, UserAccessor>();
 We use .NET dependency injection and there is no longer a `Dependency` class, so remove this line in `Startup.cs`:
 
 ```csharp
-Dependency.SetRe
-solver(new DependencyResolver(app.ApplicationServices));
+Dependency.SetResolver(new DependencyResolver(app.ApplicationServices));
 ```
 
 And remove `DependencyResolver` class under `Initialization` folder.

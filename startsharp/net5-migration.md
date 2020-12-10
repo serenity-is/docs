@@ -1153,6 +1153,26 @@ We are now going to set this as base class for all your existing repositories:
 
 * Click `Replace All`
 
+## Handling UserRepository
+
+If your UserRepository is a partial class it will not be handled by previous regex, so need to manually add the constructor:
+
+> Partial repositories might have multiple files and including them in previous regex would create multiple constructors, which would be invalid.
+
+Open `UserRepository.cs` and modify it like below:
+
+```csharp
+public partial class UserRepository : BaseRepository
+{
+    public UserRepository(IRequestContext context)
+        : base(context)
+    {
+    } 
+
+    // ...
+}
+```
+
 ## Adding a constructor that accepts `IRequestContext` to Request Handlers
 
 Just like we added a constructor that accepts IRequestContext for repositories, we need to do it for RequestHandlers.
@@ -1655,5 +1675,35 @@ public ActionResult MyAction(...
 * Type `Authorization\.ValidatePermission\(([^\r\n]+)\);` in `Find` input
 
 * Type `Permissions.ValidatePermission($1, Localizer);` in `Replace` input
+
+* Click `Replace All`
+
+* Type `Serenity\.Permissions` in `Find` input
+
+* Type `Permissions.ValidatePermission($1, Localizer);` in `Replace` input
+
+* Click `Replace All`
+
+## Replacing TwoLevelCache.ExpireGroupItems Calls
+
+* Type `TwoLevelCache\.ExpireGroupItems` in `Find` input
+
+* Type `Cache.ExpireGroupItems` in `Replace` input
+
+* Click `Replace All`
+
+## Replacing TwoLevelCache.Get and TwoLevelCache.GetLocalStoreOnly Calls
+
+* Type `TwoLevelCache\.Get` in `Find` input
+
+* Type `Cache.Get` in `Replace` input
+
+* Click `Replace All`
+
+## Replacing TwoLevelCache.Remove Calls
+
+* Type `TwoLevelCache\.Remove` in `Find` input
+
+* Type `Cache.Remove` in `Replace` input
 
 * Click `Replace All`

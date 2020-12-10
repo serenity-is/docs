@@ -384,6 +384,50 @@ if (request is null)
 
 * Save all open files if any
 
+## Moving BackgroundJobManager.Settings Class Outside
+
+If you have a project created from a recent StartSharp template, you may have a `BackgroundJobManager.cs` file like below:
+
+```cs
+        //...
+            isDisabled = !Config.Get<Settings>().Enabled;
+        //...
+
+        public static void Register(IBackgroundJob task)
+        {
+            Process();
+        }
+
+        [SettingScope("Application"), SettingKey("BackgroundJobs")]
+        public class Settings
+        {
+            public bool Enabled { get; set; }
+        }
+    }
+}
+```
+
+The Settings class is a nested one, and we need to move it outside the BackgroundJobManager class, and rename it to `BackgroundJobSettings`:
+
+```cs
+        //...
+            isDisabled = !Config.Get<BackgroundJobSettings>().Enabled;
+        //...
+
+        public static void Register(IBackgroundJob task)
+        {
+            Process();
+        }
+    }
+
+    [SettingScope("Application"), SettingKey("BackgroundJobs")]
+    public class BackgroundJobSettings
+    {
+        public bool Enabled { get; set; }
+    }
+}
+```
+
 ## Replacing `SettingScope` and `SettingKey`
 
 Serenity applications used to have settings like following which are read through a special `Config` class when required:
@@ -479,6 +523,19 @@ should be replaced with:
 
 Repeat steps above for all settings classes you have.
 
+## Migrating EnvironmentSettings
+
+As EnvironmentSettings class under `Modules/Membership/Account/EnvironmentSettings.cs` does not have `SettingKey` attribute, modify the class like below and repeat changes in `appsettings.json` and `Startup.cs` for it.
+
+```cs
+public class EnvironmentSettings
+{
+    public const string SectionKey = "EnvironmentSettings";
+
+    public string SiteExternalUrl { get; set; }
+}
+```
+
 ## Configuring Serenity Options
 
 Just like we configured your custom settings with .NET options system in the last section, we also need to configure Serenity options.
@@ -541,11 +598,122 @@ should be replaced with:
 
 You may delete `AppSettings` key if nothing left under it after doing this.
 
+## Migrating LocalTextPackages Setting
+
+LocalTextPackages determines the list of text bundles that are allowed to be sent to the browser. They used to be a list of prefixes:
+
+```json
+"LocalTextPackages": {
+    "Site": [
+        "Controls.",
+        "Db.",
+        "Dialogs.",
+        "Enums.",
+        "Forms.",
+        "Permission.",
+        "Site.",
+        "Validation."
+    ],
+    "Login": [
+        "Forms.Membership.Login.",
+        "Db.Administration.User.",
+        "Validation.Required",
+        "Dialogs."
+    ]
+}
+```
+
+In the new version, packages are defined as a simple regular expression instead of an array of prefixes, so the previous setting in `appsettings.json` should be replaced with following:
+
+```json
+"LocalTextPackages": {
+    "Site": "^(Controls|Db|Dialogs|Enums|Forms|Permission|Site|Validation)\\.",
+    "Login": "^(Forms\\.Membership\\.Login|Db\\.Administration\\.User|Validation\\.Required|Dialogs)\\."
+}
+```
+> Simply put a `^(` followed by previous prefixes separated by `|` then `)\\.`, while `.` inside the prefixes should be replaced with `\\.`. If you haven't modified anything there, then just use our sample.
+
+## Migrating CssBundles.json and ScriptBundles.json to Options System
+
+We used to have `wwwroot/Scripts/site/ScriptBundles.json` and `wwwroot/Content/site/CssBundles.json` files. These bundles are still there but needs to be migrated to .NET options. Their contents should be moved to relevant sections inside a `appsettings.bundles.json` file.
+
+So if you have `CssBundles.json` file like this:
+
+```json
+{
+  "Libs": [
+    "~/Content/font-open-sans.css",
+  // ...
+  ],
+  "Site": [
+    "~/Content/site/site.css"
+  // ...
+  ]
+}
+```
+
+and a `ScriptBundles.json` file like this:
+
+```json
+{
+    "Libs": [
+    "~/Scripts/pace.js",
+    // ...
+    ],
+    "Site": [
+    "~/Scripts/adminlte/app.js",
+    // ...
+    ]
+}
+```
+
+Create a `appsettings.bundles.json` file next to `appsettings.json` file and copy existing content under `ScriptBundles.json` and `CssBundles.json` like this:
+
+```json
+{
+  "CssBundling": {
+    "Bundles": { // this part is from CssBundles.json
+      "Libs": [
+        "~/Content/font-open-sans.css",
+        // ...
+      ],
+      "Site": [
+        "~/Content/site/site.css"
+        // ...
+      ]
+    }
+  },
+  "ScriptBundling": {
+    "Bundles": { // this part is from ScriptBundles.json
+      "Libs": [
+        "~/Scripts/pace.js",
+        // ...
+      ],
+      "Site": [
+        "~/Scripts/adminlte/app.js",
+        // ...
+      ]
+    }
+  }
+}
+```
+
+Next we need to set this file as a JSON config source. Open `Program.cs` and add following line before `appsettings.machine.json`:
+
+```cs
+config.AddJsonFile("appsettings.bundles.json");
+config.AddJsonFile("appsettings.machine.json", optional: true);
+```
+
+You may delete `CssBundles.json` and `ScriptBundles.json` afterwards.
+
 ## Replacing `Config.Get<TSettings>` Calls
 
-As noted in previous section, `Config` class is removed and we'll be using .NET options pattern instead.
+As noted in previous sections, `Config` class is removed and we'll be using .NET options pattern instead.
 
 Unfortunately this is not something we can do simply with Search/Replace.
+
+> We'll list some samples below for your custom cases, and will show steps for DataExplorer, BackgroundJobManager in the following sections
 
 If you were reading configuration in a Controller:
 
@@ -631,6 +799,275 @@ If you are accessing the setting from a view, and it is not possible to pass it 
 </div>
 ```
 
+## Fixing `Config.Get` in DataExplorerEndpoint.cs
+
+If you have DataExplorer sample in your StartSharp based project, do following steps in
+`DataExplorerEndpoint.cs`:
+
+> You may also get latest DataExplorerEndpoint.cs from StartSharp repository.
+
+> All replaces is given as regex as before, but should be applied only to the specified file.
+
+* Add `using Microsoft.Extensions.Options` after `using Microsoft.AspNetCore.Mvc;`
+* Replace `Request request\)` with `Request request, [FromServices] IOptions<DataExplorerConfig> options`
+* Replace `Config\.Get<DataExplorerConfig>\(\)` with `options.Value`
+* Replace `ListConnections\(new ListRequest\(\)\)` with `ListConnections(new ListRequest(), options)`
+* Replace `ConnectionKey \}\)` with `ConnectionKey }, options)`
+
+## Fixing `Config.Get` in BackgroundJobManager.cs
+
+If you have `BackgroundJobManager` in your project, do following in `BackgroundJobManager.cs`:
+
+> You may also get latest BackgroundJobManager.cs from StartSharp repository.
+
+* Add `using Microsoft.Extensions.Options;` and `using Serenity.Abstractions;`
+* Replace `static ` with empty string.
+* Replace `public class BackgroundJobManager` with `public class BackgroundJobManager : IBackgroundJobManager`
+* Add `private IExceptionLogger logger;` after `private bool isDisabled;`
+* Replace `BackgroundJobManager\(\)` with `public BackgroundJobManager(IOptions<BackgroundJobSettings> options, IExceptionLogger logger = null)`
+* Replace `Config.Get\<BackgroundJobSettings\>\(\)\.Enabled;` with `options.Value.Enabled;` and add `this.logger = logger;` line after that.
+* Replace `ex.Log\(\)` with `ex.Log(logger)`
+
+Add a `IBackgroundJobManager.cs` file with following content next to `BackgroundJobManager.cs`, replacing the namespace with yours:
+
+```cs
+namespace YourNamespace.Common.Services
+{
+    public interface IBackgroundJobManager
+    {
+        void Initialize();
+        void Register(IBackgroundJob task);
+        void Reset();
+    }
+}
+```
+
+Edit `Startup.cs` and do following steps:
+
+* Add `services.AddSingleton<IBackgroundJobManager, BackgroundJobManager>();` after `services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();` line.
+
+* Add `var backgroundJobManager = app.ApplicationServices.GetRequiredService<IBackgroundJobManager>();` before the first `BackgroundManager.Register(...)` line.
+
+* Replace `BackgroundJobManager\.` with `backgroundJobManager.`
+
+
+## Replacing EmailHelper with a IEmailSender Interface
+
+We used to have an EmailHelper static class which makes testing difficult, so it will be replaced with an abstraction.
+
+Delete `Modules/Common/EmailHelper.cs` file and create a `Modules/Common/EmailSender` folder with following files in it (replace namespace with your project namespace):
+
+> Warning! If you made any modifications to EmailHelper.cs, you need to apply your changes to new style manually
+
+* IEmailSender.cs:
+
+```cs
+using MimeKit;
+
+namespace YourProject.Common
+{
+    public interface IEmailSender
+    {
+        void Send(MimeMessage message, bool skipQueue = false);
+    }
+}
+```
+
+* SmtpSettings.cs:
+
+```cs
+namespace YourProject.Common
+{
+    public class SmtpSettings
+    {
+        public const string SectionKey = "SmtpSettings";
+
+        public string Host { get; set; }
+        public int Port { get; set; }
+        public bool UseSsl { get; set; }
+        public string From { get; set; }
+        public string PickupPath { get; set; }
+    }
+}
+```
+
+* EmailSender.cs:
+
+```cs
+using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Options;
+using MimeKit;
+using Serenity.Data;
+using YourProject.Common.Entities;
+using YourProject.Common.Services;
+using System;
+using System.IO;
+
+namespace YourProject.Common
+{
+    public class EmailSender : IEmailSender
+    {
+        private IWebHostEnvironment host;
+        private SmtpSettings smtp;
+        // these three lines below are only for StartSharp with mail queue
+        private MailingServiceSettings mailing; 
+        private ISqlConnections connections;
+        private IUserAccessor userAccessor;
+
+        public EmailSender(IWebHostEnvironment host, IOptions<SmtpSettings> smtp,
+            // below line is only for StartSharp with mail queue
+            IOptions<MailingServiceSettings> mailing, ISqlConnections connections, IUserAccessor userAccessor) 
+        {
+            this.host = (host ?? throw new ArgumentNullException(nameof(host)));
+            this.smtp = (smtp ?? throw new ArgumentNullException(nameof(smtp))).Value;
+            // three lines below only for StartSharp with mail queue
+            this.mailing = (mailing ?? throw new ArgumentNullException(nameof(mailing))).Value;
+            this.connections = connections ?? throw new ArgumentNullException(nameof(connections));
+            this.userAccessor = userAccessor ?? throw new ArgumentNullException(nameof(userAccessor));
+        }
+
+        public void Send(MimeMessage message, bool skipQueue)
+        {
+            if (message == null)
+                throw new ArgumentNullException(nameof(message));
+
+            if (message.From.Count == 0 && !string.IsNullOrEmpty(smtp.From))
+                message.From.Add(MailboxAddress.Parse(smtp.From));
+
+            // this first if block is only for StartSharp with mail queue
+            if (!skipQueue && mailing.AutoUse)
+            {
+                using (var connection = connections.NewFor<MailRow>())
+                    new MailingService().Enqueue(connection, message, userAccessor);
+            }
+            else if (!string.IsNullOrEmpty(smtp.Host))
+            {
+                using var client = new SmtpClient();
+                client.Connect(smtp.Host, smtp.Port, smtp.UseSsl);
+                client.Send(message);
+                client.Disconnect(true);
+            }
+            else
+            {
+                var pickupPath = string.IsNullOrEmpty(smtp.PickupPath) ?
+                    Path.Combine(host.ContentRootPath, "App_Data", "Mail") : 
+                    Path.Combine(host.ContentRootPath, smtp.PickupPath);
+                if (!Directory.Exists(pickupPath))
+                    Directory.CreateDirectory(pickupPath);
+                message.WriteTo(Path.Combine(pickupPath, DateTime.Now.ToString("yyyyMMdd_HHmmss_fff") + ".eml"));
+            }
+        }
+    }
+}
+```
+
+* EmailSenderExtensions.cs:
+
+```cs
+using MimeKit;
+using System;
+
+namespace YourProject.Common
+{
+    public static class EmailSenderExtensions
+    {
+        public static void Send(this IEmailSender emailSender, string subject, string body, string mailTo)
+        {
+            var message = new MimeMessage();
+            if (mailTo == null)
+                throw new ArgumentNullException(nameof(mailTo));
+            message.To.Add(MailboxAddress.Parse(mailTo));
+            message.Subject = subject;
+            var bodyBuilder = new BodyBuilder
+            {
+                HtmlBody = body
+            };
+            message.Body = bodyBuilder.ToMessageBody();
+            emailSender.Send(message);
+        }
+    }
+}
+```
+
+* Register IEmailSender as Singleton Service in Startup.cs:
+
+```cs
+services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+services.AddSingleton<Common.IEmailSender, Common.EmailSender>();
+```
+
+## Fixing MailingService
+
+If you have StartSharp mail queue feature, do following changes:
+
+* Add `using Serenity.Abstractions;`
+* Add a `IUserAccessor` parameter to `Enqueue` method:
+
+```cs
+public void Enqueue(IDbConnection connection, MimeMessage message, IUserAccessor userAccessor, Guid? uid = null)
+{
+    //...
+    mail.InsertUserId = userAccessor?.User.GetIdentifier() == null ? (int?)null : 
+        Convert.ToInt32(userAccessor?.User.GetIdentifier());
+    //...
+}
+```
+
+* Add two parameters to `SendById` method:
+
+```cs
+public bool SendById(IDbConnection connection, long mailId, IEmailSender emailSender, int retryLimit)
+```
+
+* Change the try catch block inside `SendById` method like this:
+
+```cs
+    try
+    {
+        var message = BuildMessage(mail);
+        emailSender.Send(message);
+    }
+    catch (Exception ex)
+    {
+        errorMessage = ex.Message;
+        status = retryCount < retryLimit ? MailStatus.InQueue : MailStatus.Failed;
+    }
+```
+
+## Fixing MailingBackgroundJob
+
+If you have StartSharp mailing background job, do following changes in `MailingBackgroundJob.cs`:
+
+* Add `using Serenity.Abstractions;` and `using Microsoft.Extensions.Options;`
+* Add following fields and constructor:
+
+```cs
+public class MailingBackgroundJob : PeriodicBackgroundJob
+{
+    private readonly ISqlConnections connections;
+    private readonly IEmailSender emailSender;
+    private readonly MailingServiceSettings config;
+    private readonly IExceptionLogger logger;
+
+    public MailingBackgroundJob(ISqlConnections connections, IEmailSender emailSender, 
+        IOptions<MailingServiceSettings> options, IExceptionLogger logger = null)
+    {
+        this.connections = connections ?? throw new ArgumentNullException(nameof(connections));
+        this.emailSender = emailSender ?? throw new ArgumentNullException(nameof(emailSender));
+        config = (options ?? throw new ArgumentNullException(nameof(options))).Value;
+        this.logger = logger;
+    }
+```
+
+* Remove two `var config = Config.Get<MailingServiceSettings>();` lines
+* Replace `SqlConnections.NewFor` with `connections.NewFor`
+* Replace `ex.Log()` with `ex.Log(logger)`
+* Replace `new MailingService().SendById(connection, mail.MailId.Value);` with `new MailingService().SendById(connection, mail.MailId.Value, emailSender, config.RetryLimit);`
+
+Edit `Startup.cs`:
+
+* Replace `new MailingBackgroundJob()` with `ActivatorUtilities.CreateInstance<MailingBackgroundJob>(app.ApplicationServices)`
 
 ## Removing `Serenity.Configuration` Namespace
 
@@ -645,6 +1082,23 @@ No such namespace exists anymore, so we need to delete any references to it:
 * Clear value in `Replace` input
 
 * Click `Replace All`
+
+## Replace `Serenity.Extensibility` Namespace with `Serenity.ComponentModel`
+
+`NestedPermissions` and `NestedLocalTexts` in `Serenity.Extensibility` namespace are moved to `Serenity.ComponentModel` namespace.
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `using Serenity\.Extensibility\;(\t ]*\r?\n)` in `Find` input
+
+* Type `using Serenity.ComponentModel$1` in `Replace` input
+
+* Click `Replace All`
+
+There might be double usings for Serenity.ComponentModel after this in some files like `Startup.cs`, please remove one.
+
 
 ## Using `BaseRepository` and `IRequestContext` in Repositories
 
@@ -830,6 +1284,7 @@ public abstract class LoggingRow<TFields> : Row<TFields>, ILoggingRow
         where TFields : LoggingRowFields
 {
     protected LoggingRow(TFields fields) : base(fields) { }
+    protected LoggingRow() : base() { }
 
     [NotNull, Insertable(false), Updatable(false)]
     public Int32? InsertUserId 
@@ -918,6 +1373,11 @@ services.AddSingleton<IAuthorizationService, Serenity.Web.HttpContextUserAccesso
 If you also need impersonation support, you should use following class instead:
 
 ```csharp
+using Microsoft.AspNetCore.Http;
+using Serenity.Abstractions;
+using Serenity.Web;
+using System.Security.Claims;
+
 public class UserAccessor : IUserAccessor, IImpersonator
 {
     private ImpersonatingUserAccessor impersonator;
@@ -941,6 +1401,7 @@ public class UserAccessor : IUserAccessor, IImpersonator
     }
 }
 
+// Startup.cs
 services.AddSingleton<IAuthorizationService, UserAccessor>();
 ```
 
@@ -949,7 +1410,8 @@ services.AddSingleton<IAuthorizationService, UserAccessor>();
 We use .NET dependency injection and there is no longer a `Dependency` class, so remove this line in `Startup.cs`:
 
 ```csharp
-Dependency.SetResolver(new DependencyResolver(app.ApplicationServices));
+Dependency.SetRe
+solver(new DependencyResolver(app.ApplicationServices));
 ```
 
 And remove `DependencyResolver` class under `Initialization` folder.

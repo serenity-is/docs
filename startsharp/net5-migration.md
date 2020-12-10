@@ -1356,6 +1356,22 @@ public class SomeRow : LoggingRow<SomeRow.RowFields>, IIdRow
 }
 ```
 
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `class\s*([A-Za-z0-9_]*)Row\s*:\s*([A-Za-z0-9_.]*)LoggingRow\s*[^<]`
+
+* Type <pre>`class $1Row : $2LoggingRow<$1Row.RowFields>,`</pre> in `Replace` input
+
+* Click `Replace All`
+
+* Type `class\s*RowFields\s*:\s*([a-zA-Z0-9_.]*)LoggingRow\.LoggingRowFields` in `Find` input
+
+* Type <pre>`class RowFields : $1LoggingRowFields`</pre> in `Replace` input
+
+* Click `Replace All`
+
 ## Replacing IAuthorizationService with IUserAccessor
 
 `IAuthorizationService` interface which was used to access current user is removed and needs to be replaced with `IUserAccessor` interface which does a similar work but more compatible with ASP.NET Core authentication system.

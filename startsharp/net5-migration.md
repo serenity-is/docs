@@ -1558,6 +1558,18 @@ services.AddSingleton<IHttpContextItemsAccessor, HttpContextItemsAccessor>();
 services.AddSingleton<IUserAccessor, Administration.UserAccessor>();
 ```
 
+## Fixing BatchGenerationUpdater Calls
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
+
+* Type `BatchGenerationUpdater\.OnCommit\((uow|this\.UnitOfWork|UnitOfWork),\s*(.*).GenerationKey\)`
+
+* Type `Cache.InvalidateOnCommit($1, $2)` in `Replace` input
+
+* Click `Replace All`
+
 ## Replacing Authorization.HasPermission Calls
 
 Static Authorization class is removed and calls like below:

@@ -141,8 +141,6 @@ We replaced it with `[IdProperty]` attribute as old explicit style made determin
 
 You need to find all such rows by searching for `IIdRow.IdField`. Then take a note of `IdField`, delete the block and put a `[IdProperty]` attribute on corresponding property if required (read following paragraph).
 
-> Unfortunately we could not find a way to do it with search replace like prior steps, so you have to manually do it
-
 Please note that if you only have one property with [Identity] attribute in your row class and it matches the ID property you don't need to put [IdProperty] explicitly. Same applies to [PrimaryKey] as long as it is just one.
 
 > Tip: Fields with `[Identity]` attribute implicitly has the `PrimaryKey` flag as it is a combination of AutoIncrement and PrimaryKey. If you have an auto increment field that is not a primary key, it should be marked with `[AutoIncrement]` not `[Identity]`.
@@ -1918,3 +1916,120 @@ public AccountController(ITextLocalizer localizer)
     Localizer = localizer ?? throw new ArgumentNullException(nameof(localizer));
 }
 ```
+
+## Fixing TranslationRepository and TranslationEndpoint
+
+Get them from latest StartSharp / Serene repo or do following changes:
+
+* Modify TranslationEndpoint like below:
+
+```csharp
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Serenity.Abstractions;
+using Serenity.Services;
+using System;
+using MyRepository = StartSharp.Administration.Repositories.TranslationRepository;
+
+namespace StartSharp.Administration.Endpoints
+{
+    [Route("Services/Administration/Translation/[action]")]
+    [ServiceAuthorize(PermissionKeys.Translation)]
+    public class TranslationController : ServiceEndpoint
+    {
+        protected IWebHostEnvironment HostEnvironment { get; }
+        protected ILocalTextRegistry LocalTextRegistry { get; }
+        protected ITypeSource TypeSource { get; }
+
+        public TranslationController(IWebHostEnvironment hostEnvironment,
+            ILocalTextRegistry localTextRegistry, ITypeSource typeSource)
+        {
+            HostEnvironment = hostEnvironment ?? throw new ArgumentNullException(nameof(hostEnvironment));
+            LocalTextRegistry = localTextRegistry ?? throw new ArgumentNullException(nameof(localTextRegistry));
+            TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
+        }
+
+        private MyRepository NewRepository()
+        {
+            return new MyRepository(Context, HostEnvironment, LocalTextRegistry, TypeSource);
+        }
+
+        public ListResponse<TranslationItem> List(TranslationListRequest request)
+        {
+            return NewRepository().List(request);
+        }
+
+        [HttpPost]
+        public SaveResponse Update(TranslationUpdateRequest request)
+        {
+            return NewRepository().Update(request, HttpContext.RequestServices);
+        }
+    }
+}
+```
+
+* Modify TranslationRepository constructor and GetUserTextsFilePath:
+
+```csharp
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Linq;
+//...
+protected IWebHostEnvironment HostEnvironment { get; }
+protected ILocalTextRegistry LocalTextRegistry { get; }
+protected ITypeSource TypeSource { get; }
+
+public TranslationRepository(IRequestContext context, IWebHostEnvironment hostEnvironment, 
+    ILocalTextRegistry localTextRegistry, ITypeSource typeSource)
+        : base(context)
+{
+    HostEnvironment = hostEnvironment;
+    LocalTextRegistry = localTextRegistry;
+    TypeSource = typeSource;
+}
+
+public static string GetUserTextsFilePath(IWebHostEnvironment hostEnvironment, string languageID)
+{
+    return Path.Combine(hostEnvironment.ContentRootPath, "App_Data", "texts", 
+        "user.texts." + (languageID.TrimToNull() ?? "invariant") + ".json");
+}
+```
+
+* Replace `GetUserTextsFilePath\(targetLanguageID\)` with `GetUserTextsFilePath(HostEnvironment, targetLanguageID)`
+* Replace `JsonConfigHelper\.LoadConfig\<Dictionary\<string, JToken\>\>\(textsFilePath\)` with `JSON.Parse<Dictionary<string, JToken>>(File.ReadAllText(textsFilePath))`
+* Remove `var registry = Dependency.Resolve<ILocalTextRegistry>();`
+* Replace `GetAllAvailableLocalTextKeys` like following:
+
+```csharp
+public HashSet<string> GetAllAvailableLocalTextKeys()
+{
+    var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+    foreach (NavigationItemAttribute attr in TypeSource.GetAssemblyAttributes<NavigationItemAttribute>())
+        result.Add("Navigation." + (attr.Category.IsEmptyOrNull() ? "" : attr.Category + "/") + attr.Title);
+
+    foreach (var type in TypeSource.GetTypesWithAttribute(typeof(FormScriptAttribute)))
+    {
+        var attr = type.GetAttribute<FormScriptAttribute>();
+        foreach (var member in type.GetMembers(BindingFlags.Instance | BindingFlags.Public))
+        {
+            var category = member.GetCustomAttribute<CategoryAttribute>();
+            if (category != null && !category.Category.IsEmptyOrNull())
+                result.Add("Forms." + attr.Key + ".Categories." + category.Category);
+        }
+    }
+
+    var repository = LocalTextRegistry as LocalTextRegistry;
+    if (repository != null)
+        result.AddRange(repository.GetAllTextKeys(false));
+
+    return result;
+}
+```
+
+* Replace `Dependency\.Resolve\<ILocalTextRegistry\>\(\) as LocalTextRegistry` with `LocalTextRegistry as LocalTextRegistry`
+* Replace `\(localTextRegistry as IRemoveAll\)\?\.RemoveAll\(\)` with `(LocalTextRegistry as IRemoveAll)?.RemoveAll()`
+* Replace `DynamicScriptManager\.Reset\(\)` with `services.GetService<IDynamicScriptManager>()?.Reset()`
+
+
+

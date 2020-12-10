@@ -384,6 +384,10 @@ if (request is null)
 
 * Save all open files if any
 
+## Add System Namespace to Files with Errors
+
+You might get `The type or namespace name 'ArgumentNullException'...` after doing prior changes, so please add `using System;` to any file that you get that error in, for example `SergenEndpoint.cs` and `UserPreferenceRepository.cs`
+
 ## Moving BackgroundJobManager.Settings Class Outside
 
 If you have a project created from a recent StartSharp template, you may have a `BackgroundJobManager.cs` file like below:
@@ -1707,3 +1711,40 @@ public ActionResult MyAction(...
 * Type `Cache.Remove` in `Replace` input
 
 * Click `Replace All`
+
+## Remove DetailListSaveHandler
+
+There was a `DetailListSaveHandler` class that was used before MasterDetailRelation behavior was written, so you should delete `Modules/Common/Helpers/DetailListSaveHandler.cs`
+
+## Replacing IdField Indexers and NotesBehavior.cs
+
+As ID fields can now be any field, and there is no IIdField interface anymore, you should replace idField[row] calls with idField.AsObject.
+
+Such an access is available in NotesBehavior (note that Notes behavior still expects integer ID fields).
+
+Edit `Modules/Northwind/Note/NotesBehavior.cs`:
+
+* Add following constructor and properties to `NotesBehavior`:
+
+```csharp
+public IRequestContext Context { get; }
+public ISqlConnections SqlConnections { get; }
+
+public NotesBehavior(IRequestContext context, ISqlConnections sqlConnections)
+{
+    Context = context ?? 
+        throw new ArgumentNullException(nameof(context));
+    SqlConnections = sqlConnections ?? 
+        throw new ArgumentNullException(nameof(sqlConnections));
+}
+```
+
+* Replace `idField\[handler\.Row\](\s)` with `idField.AsObject(handler.Row)$1`
+
+* Replace `([A-Za-z]*dField)\[([A-Za-z\.]*)]\.Value` with `Convert.ToInt64($1.AsObject($2))`
+
+* Replace `rowIdField\[item\]` with `rowIdField.AsObject(item)`
+
+* Replace `id\.Value` with `Convert.ToInt64(id)`
+
+

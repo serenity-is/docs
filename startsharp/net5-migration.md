@@ -1690,6 +1690,10 @@ public ActionResult MyAction(...
 
 ## Replacing TwoLevelCache.ExpireGroupItems Calls
 
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
 * Type `TwoLevelCache\.ExpireGroupItems` in `Find` input
 
 * Type `Cache.ExpireGroupItems` in `Replace` input
@@ -1697,6 +1701,10 @@ public ActionResult MyAction(...
 * Click `Replace All`
 
 ## Replacing TwoLevelCache.Get and TwoLevelCache.GetLocalStoreOnly Calls
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
 
 * Type `TwoLevelCache\.Get` in `Find` input
 
@@ -1748,3 +1756,166 @@ public NotesBehavior(IRequestContext context, ISqlConnections sqlConnections)
 * Replace `id\.Value` with `Convert.ToInt64(id)`
 
 
+## Fixing UserPermissionService
+
+Take latest version of PermissionService.cs from StartSharp / Serene repository, or do following changes:
+
+* Add following constructor and properties:
+
+```csharp
+protected ITwoLevelCache Cache { get; }
+protected ISqlConnections SqlConnections { get; }
+public ITypeSource TypeSource { get; }
+protected IUserAccessor UserAccessor { get; }
+
+public PermissionService(ITwoLevelCache cache, ISqlConnections sqlConnections, 
+    ITypeSource typeSource, IUserAccessor userAccessor)
+{
+    Cache = cache ?? throw new ArgumentNullException(nameof(cache));
+    SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+    TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
+    UserAccessor = userAccessor ?? throw new ArgumentNullException(nameof(userAccessor));
+}
+```
+
+* Change start of HasPermission method like this:
+
+```csharp
+public bool HasPermission(string permission)
+{
+    if (Authorization.Username == "admin")
+    if (permission == null)
+        return false;
+
+    if (permission == "*")
+        return true;
+
+    var user = (UserDefinition)Authorization.UserDefinition;
+    if (user == null)
+    var isLoggedIn = UserAccessor.IsLoggedIn();
+
+    if (permission == "?")
+        return isLoggedIn;
+
+    if (!isLoggedIn)
+        return false;
+
+    var username = UserAccessor.User?.Identity?.Name;
+    if (username == "admin")
+        return true;
+
+    var userId = Convert.ToInt32(UserAccessor.User.GetIdentifier());
+    //...
+    // only admin has Impersonation...
+```
+
+* Replace `user\.UserId` with `userId`
+
+* If have implicit permissions feature (StartSharp) replace `new Repositories\.UserPermissionRepository\(\)\.ImplicitPermissions` with `UserPermissionRepository.GetImplicitPermissions(Cache.Memory, TypeSource);` and change the code for ImplicitPermissions property in `UserPermissionRepository`:
+
+```cs
+public static Dictionary<string, HashSet<string>> GetImplicitPermissions(
+    IMemoryCache memoryCache, ITypeSource typeSource)
+{
+    // ...
+
+
+}
+```
+
+* Replace `LocalCache\.Get` with `memoryCache.Get` in GetImplicitPermissions
+* Replace the code block that enumerates ExtensibilityHelper.SelfAssemblies like
+
+```csharp
+foreach (var type in typeSource.GetTypesWithAttribute(
+                    typeof(NestedPermissionKeysAttribute)))
+{
+    addFrom(type);
+}
+```
+
+> You may also get latest code from StartSharp
+
+## Handling LocalText to String Conversion
+
+We were able to simply pass a LocalText object to any method that requires a string, and it was automatically translated:
+
+```cs
+String.Format(Texts.Validation.MinRequiredPasswordLength, 5)
+```
+
+Unfortunately that is no longer possible as translation requires a localization context:
+
+```cs
+String.Format(Texts.Validation.MinRequiredPasswordLength.ToString(Localizer), 5);
+```
+
+Localizer is an ITextLocalizer object which is available in repositories, and service endpoints but should be injected in other contexts.
+
+* Open `Replace in Files` dialog in Visual Studio `Ctrl+Shift+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `Texts\.([A-Za-z_.]*)([\s,;\<\r\n)])` in `Find` input
+
+* Type `Texts.$1.ToString(Localizer)$2` in `Replace` input
+
+* Make sure `File Types` is `*.cshtml; *.cs`
+
+* Click `Replace All`
+
+* Type `Texts\.([A-Za-z_.]*)\.ToString\(\)` in `Find` input
+
+* Type `Texts.$1.ToString(Localizer)` in `Replace` input
+
+* Click `Replace All`
+
+## Handling LocalText.Get Calls
+
+All calls like following:
+
+```cs
+LocalText.Get("SomeKey") 
+LocalText.TryGet("SomeKey")
+```
+
+should be replaced with
+
+```
+Localizer.Get("SomeKey")
+Localizer.TryGet("SomeKey")
+```
+
+* Type `(Serenity\.)?LocalText\.(Get|TryGet)\((["A-Za-z_\.]+)\)` in `Find` input
+
+* Type `Localizer.$2($3)` in `Replace` input
+
+* Make sure `File Types` is `*.cshtml; *.cs`
+
+* Click `Replace All`
+
+## Injecting Localizer to CSHTML Files
+
+Find all .CSHTML files which needs `Localizer` service to get injected with searching following regex in *.cshtml files:
+
+`.*(?Localizer\.(Try|Get))`
+
+Add this line after `@model` directive if exists, or as the first line:
+
+```cs
+@model XYZ
+@inject Serenity.ITextLocalizer Localizer
+```
+
+## Inject Localizer to AccountPage
+
+Add this property and constructor to `AccountController.cs` as Localizer is required in many files:
+
+```csharp
+protected ITextLocalizer Localizer { get; }
+
+public AccountController(ITextLocalizer localizer)
+{
+    Localizer = localizer ?? throw new ArgumentNullException(nameof(localizer));
+}
+```

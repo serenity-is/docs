@@ -1206,7 +1206,7 @@ First do it for handlers that are not empty:
 
 * Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
-* Type `([\t ]*)(private|public)[\t ]+class[\t ]+My(Save|Retrieve|List|Delete)Handler[\t ]*\:[\t ]*(\3)RequestHandler(\<[A-Za-z\.\, \t]+\>)[\t ]*\{?[\t ]*(\r?\n)[\t\r\s]*\{` in `Find` input
+* Type `([\t ]*)(private|public)[\t ]+class[\t ]+My(Save|Retrieve|List|Delete|Undelete)Handler[\t ]*\:[\t ]*(\3)RequestHandler(\<[A-Za-z\.\, \t]+\>)[\t ]*\{?[\t ]*(\r?\n)[\t\r\s]*\{` in `Find` input
 
 * Type <pre>`$1$2 class My$3Handler : $3RequestHandler$5$6$1{$6$1    public My$3Handler(IRequestContext context)$6$1$1 : base(context)$6$1    {$6$1    }$6`</pre> in `Replace` input
 
@@ -1218,7 +1218,7 @@ Now will repeat it for empty handlers:
 
 * Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
-* Type `([\t ]*)(private|public)[\t ]+class[\t ]+My(Save|Retrieve|List|Delete)Handler[\t ]*\:[\t ]*(\3)RequestHandler(\<[A-Za-z\.\, \t]+\>)[\t ]*\{?[\t ]*\}[\t ]*(\r?\n)([\t\r\s]*\n)?` in `Find` input
+* Type `([\t ]*)(private|public)[\t ]+class[\t ]+My(Save|Retrieve|List|Delete|Undelete)Handler[\t ]*\:[\t ]*(\3)RequestHandler(\<[A-Za-z\.\, \t]+\>)[\t ]*\{?[\t ]*\}[\t ]*(\r?\n)([\t\r\s]*\n)?` in `Find` input
 
 * Type <pre>`$1$2 class My$3Handler : $3RequestHandler$5$6$1{$6$1    public My$3Handler(IRequestContext context)$6$1$1 : base(context)$6$1    {$6$1    }$6$1}$6$6`</pre> in `Replace` input
 
@@ -1242,7 +1242,7 @@ new MySaveHandler(Context).Process(uow, request, SaveRequestType.Create);
 
 * Make sure `Look in` is Current project, `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is checked.
 
-* Type `new[\t ]*My(Save|Retrieve|List|Delete)Handler[\t ]*\([\t ]*\)`
+* Type `new[\t ]*My(Save|Retrieve|List|Delete|Undelete)Handler[\t ]*\([\t ]*\)`
 
 * Type <pre>`new My$1Handler(Context)`</pre> in `Replace` input
 

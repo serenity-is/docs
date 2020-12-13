@@ -2042,20 +2042,19 @@ services.AddSingleton<IAuthenticationService, Administration.AuthenticationServi
 
 and replace with
 
-```
+```cs
 services.AddSingleton<Administration.IUserPasswordValidator, Administration.UserPasswordValidator>();
 ```
 
 
 Find and delete in the following file:
-```
-Modules/Administration/User/Authentication/AuthenticationService.cs
-```
+
+* Modules/Administration/User/Authentication/AuthenticationService.cs
 
 Add new 3 files:
-```
-Modules/Administration/User/Authentication/AuthenticationService.cs
-```
+
+* Modules/Administration/User/Authentication/UserPasswordValidator.cs
+
 ```csharp
 namespace StartSharp.Administration
 {
@@ -2065,9 +2064,9 @@ namespace StartSharp.Administration
     }
 }
 ```
-```
-Modules/Administration/User/Authentication/PasswordValidationResult.cs
-```
+
+* Modules/Administration/User/Authentication/PasswordValidationResult.cs
+
 ```csharp
 namespace StartSharp.Administration
 {
@@ -2084,9 +2083,9 @@ namespace StartSharp.Administration
     }
 }
 ```
-```
-Modules/Administration/User/Authentication/UserPasswordValidator.cs
-```
+
+* Modules/Administration/User/Authentication/UserPasswordValidator.cs
+
 ```csharp
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
@@ -2101,8 +2100,10 @@ namespace StartSharp.Administration
 {
     public class UserPasswordValidator : IUserPasswordValidator
     {
-        public UserPasswordValidator(ITwoLevelCache cache, ISqlConnections sqlConnections, IUserRetrieveService userRetriever, 
-            ILogger<UserPasswordValidator> log = null, IDirectoryService directoryService = null)
+        public UserPasswordValidator(ITwoLevelCache cache, ISqlConnections sqlConnections, 
+            IUserRetrieveService userRetriever, 
+            ILogger<UserPasswordValidator> log = null, 
+            IDirectoryService directoryService = null)
         {
             Cache = cache ?? throw new ArgumentNullException(nameof(cache));
             SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
@@ -2305,32 +2306,259 @@ namespace StartSharp.Administration
     }
 }
 ```
-Apply the following file changes:
-```
-https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs
+
+* Apply the following file changes in StartSharp:
+
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs
+
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs
+
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ChangePassword/AccountPage.ChangePassword.cs
+
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ForgotPassword/AccountPage.ForgotPassword.cs
+
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ResetPassword/AccountPage.ResetPassword.cs
+
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/SignUp/AccountPage.SignUp.cs
+
+* or following file changes in Serene:
+
+* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs
+
+* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs
+
+* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/ChangePassword/AccountPage.ChangePassword.cs
+
+* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/ForgotPassword/AccountPage.ForgotPassword.cs
+
+* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/ResetPassword/AccountPage.ResetPassword.cs
+
+* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/SignUp/AccountPage.SignUp.cs
+
+## Sergen Tool Update
+
+Open command line in your project directory and run following:
+
+```ps
+dotnet tool update sergen
 ```
 
-Apply the following file changes:
-```
-https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs
+## Fix SmtpSettings
+
+.NET options does not like converting nulls to default values when the target is not nullable so fix the SmtpSettings in appsettings.json file (port and usessl, and pickuppath parts) like following (or apply your valid settings):
+
+```json
+"SmtpSettings": {
+    "Host": null,
+    "Port": null,
+    "UseSsl": null,
+    "From": null
+    "Port": 25,
+    "UseSsl": false,
+    "From": null,
+    "PickupPath": "App_Data/Mail"
+  }
+  ```
+  
+## Handling DataMigrations.cs
+
+We are going to use FluentMigrator's latest version and making DataMigrations dependency injectable.
+
+* Add following usings:
+
+```cs
+using FluentMigrator.Runner;
+using FluentMigrator.Runner.Conventions;
+using FluentMigrator.Runner.Processors;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.DependencyInjection;
+using System.Data.Common;
 ```
 
-Apply the following file changes:
-```
-https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ChangePassword/AccountPage.ChangePassword.cs
+* Remove `using System.Data.SqlClient;`
+
+* Replace `public static class DataMigrations` with `public class DataMigrations : IDataMigrations`
+* Replace `SqlConnections\.GetConnectionString\(databaseKey\)\;` with
+```cs
+SqlConnections.TryGetConnectionString(databaseKey);
+if (cs == null)
+    throw new ArgumentOutOfRangeException(nameof(databaseKey));
 ```
 
-Apply the following file changes:
-```
-https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ForgotPassword/AccountPage.ForgotPassword.cs
+* Replace `Serenity\.Dependency\.Resolve\<IWebHostEnvironment\>\(\)\.ContentRootPath` with `HostEnvironment.ContentRootPath`
+* Replace `cs\.ProviderFactory\.CreateConnectionStringBuilder\(\)\;` with `DbProviderFactories.GetFactory(cs.ProviderName).CreateConnectionStringBuilder();`
+* Replace `, cs.ProviderName)` with `, cs.ProviderName, cs.Dialect)`
+* Replace `var hostingEnvironment \= Serenity\.Dependency\.TryResolve\<IWebHostEnvironment\>\(\)\;` with `var hostingEnvironment = HostEnvironment;`
+* Remove `var connection = cs.ConnectionString;` line
+* Remove `bool isSqlServer = serverType.StartsWith(""SqlServer"", StringComparison.OrdinalIgnoreCase);` line
+* Find the line starting with `using (var sw = new StringWriter` and modify remaining lines like below:
+
+```cs
+var conventionSet = new DefaultConventionSet(defaultSchemaName: null,
+                Path.GetDirectoryName(typeof(DataMigrations).Assembly.Location));
+
+var serviceProvider = new ServiceCollection()
+    .AddLogging(lb => lb.AddFluentMigratorConsole())
+    .AddFluentMigratorCore()
+    .AddSingleton<IConventionSet>(conventionSet)
+    .Configure<TypeFilterOptions>(options =>
+    {
+        options.Namespace = "!!!YourProjectNamespace!!!.Migrations." + databaseKey + "DB";
+    })
+    .Configure<ProcessorOptions>(options =>
+    {
+        options.Timeout = TimeSpan.FromSeconds(90);
+    })
+    .ConfigureRunner(builder =>
+    {
+        if (databaseType == OracleDialect.Instance.ServerType)
+            builder.AddOracleManaged();
+        else if (databaseType == SqliteDialect.Instance.ServerType)
+            builder.AddSQLite();
+        else if (databaseType == FirebirdDialect.Instance.ServerType)
+            builder.AddFirebird();
+        else if (databaseType == MySqlDialect.Instance.ServerType)
+            builder.AddMySql5();
+        else if (databaseType == PostgresDialect.Instance.ServerType)
+            builder.AddPostgres();
+        else
+            builder.AddSqlServer();
+
+        builder.WithGlobalConnectionString(cs.ConnectionString);
+        builder.WithMigrationsIn(typeof(DataMigrations).Assembly);
+    })
+    .BuildServiceProvider();
+
+var culture = CultureInfo.CurrentCulture;
+try
+{
+    if (isFirebird)
+        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+    using var scope = serviceProvider.CreateScope();
+    var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
+    runner.MigrateUp();
+}
+catch (Exception ex)
+{
+    throw new InvalidOperationException("Error executing migration!", ex);
+}
+finally
+{
+    if (isFirebird)
+        Thread.CurrentThread.CurrentCulture = culture;
+}
 ```
 
-Apply the following file changes:
-```
-https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ResetPassword/AccountPage.ResetPassword.cs
+* Edit Your .CSPROJ file and replace following line:
+
+```xml
+<PackageReference Include="Serenity.FluentMigrator.Runner" Version="1.6.904" />
 ```
 
-Apply the following file changes:
+with
+
+```xml
+<PackageReference Include="FluentMigrator.Runner" Version="3.2.9" />
 ```
-https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/SignUp/AccountPage.SignUp.cs
+
+* Edit Startup.cs and following lines in ConfigureServices:
+
+```cs
+services.AddSingleton<IDataMigrations, DataMigrations>();
+services.AddSingleton<IReportRegistry, ReportRegistry>();
 ```
+
+* Replace following lines:
+
+```cs
+services.AddConfig(Configuration);
+services.AddCaching();
+services.AddAnnotationTypes();
+services.AddTextRegistry();
+services.AddFileLogging();
+services.AddSingleton<IAuthenticationService, Administration.AuthenticationService>();
+```
+
+with
+
+```cs
+services.AddServiceHandlers();
+services.AddDynamicScripts();
+services.AddCssBundling();
+services.AddScriptBundling();
+services.AddUploadStorage();
+services.AddSingleton<Administration.IUserPasswordValidator, Administration.UserPasswordValidator>();
+```
+
+* Edit Startup.cs and replace following line
+
+```cs
+DataMigrations.Initialize();
+```
+
+with 
+
+```cs
+app.ApplicationServices.GetRequiredService<IDataMigrations>().Initialize();
+```
+
+add these usings to start:
+
+```cs
+using Microsoft.Data.SqlClient;
+using Serenity.Reporting;
+using System.Data.Common;
+```
+
+remove this usings:
+
+```cs
+using System.Data.SqlClient;
+using Serenity.Web.Middleware;
+```
+
+and add following to RegisterDataProviders:
+
+```cs
+DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", SqlClientFactory.Instance);
+```
+
+## Fix SqlErrorStore
+
+* Add `using System.Data.Common;`
+
+* Remove these lines:
+
+```cs
+private readonly string connectionString;
+private readonly bool isSqlServer;
+```
+
+* Modify constructor like this:
+
+```cs
+public SqlErrorStore(ErrorStoreSettings settings, string providerName)
+    : base(settings)
+{
+    if (settings == null)
+        throw new ArgumentNullException(nameof(settings));
+
+    displayCount = Math.Min(displayCount, MaximumDisplayCount);
+    this.providerName = providerName ?? throw new ArgumentNullException(nameof(providerName));
+}
+```
+
+* Replace `if (isSqlServer)` with `if (providerName.IndexOf("SqlClient") >= 0)`
+
+* Modify GetConnection:
+
+```csharp
+private IDbConnection GetConnection()
+{
+    var connection = DbProviderFactories.GetFactory(providerName).CreateConnection();
+    connection.ConnectionString = Settings.ConnectionString;
+    return connection;
+}
+```
+

@@ -2562,3 +2562,195 @@ private IDbConnection GetConnection()
 }
 ```
 
+## Fixing Startup.ExceptionLog
+
+Modify Log method like this:
+
+```cs
+public void Log(Exception exception, string category = null)
+{
+    exception.Log(httpContextAccessor.HttpContext, category);
+}
+```
+
+## Removing Web Based Sergen UI
+
+Sergen will soon have its own web based UI, and the sample in the StartSharp/Serene is obsolete.
+
+* Edit `AdministrationNavigation.cs` and remove this line:
+
+`[assembly: NavigationLink(9000, "Administration/Sergen", typeof(Administration.SergenController), icon: "fa-magic")]`
+
+* Delete `Modules/Administration/Sergen` folder and files under it.
+
+## Replacing isPublicDemo References
+
+This is only used for Serenity Demo at http://serenity.is, you may delete any line that looks like following:
+
+```cs
+UserRepository.isPublicDemo
+```
+
+or replace it with
+
+```cs
+UserRepository.IsPublicDemo
+```
+
+## Fixing DataAuditLog
+
+If you have StartSharp data audit log feature, delete `DataAuditLogHandler.cs` and get latest versions of following files from StartSharp repository:
+
+* [DataAuditLogBehavior.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogBehavior.cs)
+* [DataAuditLogPage.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogPage.cs)
+
+## Fixing Row Lookup Scripts
+
+If you have external lookup scripts defined like this:
+
+```cs
+public LanguageLookup()
+```
+
+You need to add a sqlConnections argument to the constructor (or add the constructor if none exists).
+
+```cs
+public LanguageLookup(ISqlConnections sqlConnections)
+    : base(sqlConnections)
+```
+
+## Replacing RoleRepository.RoleById by RoleRepository.GetRoleById
+
+Modify static RoleById property like this:
+
+```cs
+public static Dictionary<int, MyRow> GetRoleById(ITwoLevelCache cache, ISqlConnections sqlConnections)
+{
+    if (cache is null)
+        throw new ArgumentNullException(nameof(cache));
+
+    return cache.GetLocalStoreOnly("RoleById", TimeSpan.Zero, 
+        fld.GenerationKey, () =>
+        {
+            if (sqlConnections is null)
+                throw new ArgumentNullException(nameof(sqlConnections));
+
+            using var connection = sqlConnections.NewFor<MyRow>();
+            return connection.List<MyRow>().ToDictionary(x => x.RoleId.Value);
+        });
+}
+```
+
+## Modify TranslationEndpoint.cs
+
+Modify this file like below:
+
+```cs
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Serenity.Abstractions;
+using Serenity.Services;
+using System;
+using MyRepository = StartSharp.Administration.Repositories.TranslationRepository;
+
+namespace StartSharp.Administration.Endpoints
+{
+    [Route("Services/Administration/Translation/[action]")]
+    [ServiceAuthorize(PermissionKeys.Translation)]
+    public class TranslationController : ServiceEndpoint
+    {
+        protected IWebHostEnvironment HostEnvironment { get; }
+        protected ILocalTextRegistry LocalTextRegistry { get; }
+        protected ITypeSource TypeSource { get; }
+
+        public TranslationController(IWebHostEnvironment hostEnvironment,
+            ILocalTextRegistry localTextRegistry, ITypeSource typeSource)
+        {
+            HostEnvironment = hostEnvironment ?? throw new ArgumentNullException(nameof(hostEnvironment));
+            LocalTextRegistry = localTextRegistry ?? throw new ArgumentNullException(nameof(localTextRegistry));
+            TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
+        }
+
+        private MyRepository NewRepository()
+        {
+            return new MyRepository(Context, HostEnvironment, LocalTextRegistry, TypeSource);
+        }
+
+        public ListResponse<TranslationItem> List(TranslationListRequest request)
+        {
+            return NewRepository().List(request);
+        }
+
+        [HttpPost]
+        public SaveResponse Update(TranslationUpdateRequest request)
+        {
+            return NewRepository().Update(request, HttpContext.RequestServices);
+        }
+    }
+}
+```
+
+## Fix TranslationRepository.cs
+
+* Add `using Microsoft.Extensions.DependencyInjection;`
+* Remove `using System.Web.Hosting;`
+* Modify constructor and GetUserTextsFilePath as below:
+
+```csharp
+protected IWebHostEnvironment HostEnvironment { get; }
+protected ILocalTextRegistry LocalTextRegistry { get; }
+protected ITypeSource TypeSource { get; }
+
+public TranslationRepository(IRequestContext context, IWebHostEnvironment hostEnvironment, 
+    ILocalTextRegistry localTextRegistry, ITypeSource typeSource)
+        : base(context)
+{
+    HostEnvironment = hostEnvironment;
+    LocalTextRegistry = localTextRegistry;
+    TypeSource = typeSource;
+}
+
+public static string GetUserTextsFilePath(IWebHostEnvironment hostEnvironment, string languageID)
+{
+    return Path.Combine(hostEnvironment.ContentRootPath, "App_Data", "texts", 
+        "user.texts." + (languageID.TrimToNull() ?? "invariant") + ".json");
+}
+```
+
+* Replace `GetUserTextsFilePath\(targetLanguageID\)\;` with `GetUserTextsFilePath(HostEnvironment, targetLanguageID);`
+* Replace `GetUserTextsFilePath\(request.TargetLanguageID\)\;` with `GetUserTextsFilePath(HostEnvironment, request.TargetLanguageID);`
+* Replace `var json \= JsonConfigHelper\.LoadConfig\<Dictionary\<string\, JToken\>\>\(textsFilePath\)\;` with `var json = JSON.Parse<Dictionary<string, JToken>>(File.ReadAllText(textsFilePath));`
+* Remove `var registry = Dependency.Resolve<ILocalTextRegistry>();` line
+* Replace `registry\.TryGet\((source|target)LanguageID\, key\)` with `LocalTextRegistry.TryGet($1LanguageID, key, false)`
+* Modify GetAllAvailableLocalTexts like this:
+
+```csharp
+public HashSet<string> GetAllAvailableLocalTextKeys()
+{
+    var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+    foreach (NavigationItemAttribute attr in TypeSource.GetAssemblyAttributes<NavigationItemAttribute>())
+        result.Add("Navigation." + (attr.Category.IsEmptyOrNull() ? "" : attr.Category + "/") + attr.Title);
+
+    foreach (var type in TypeSource.GetTypesWithAttribute(typeof(FormScriptAttribute)))
+    {
+        var attr = type.GetAttribute<FormScriptAttribute>();
+        foreach (var member in type.GetMembers(BindingFlags.Instance | BindingFlags.Public))
+        {
+            var category = member.GetCustomAttribute<CategoryAttribute>();
+            if (category != null && !category.Category.IsEmptyOrNull())
+                result.Add("Forms." + attr.Key + ".Categories." + category.Category);
+        }
+    }
+
+    var repository = LocalTextRegistry as LocalTextRegistry;
+    if (repository != null)
+        result.AddRange(repository.GetAllTextKeys(false));
+
+    return result;
+}
+```
+
+* Add `(LocalTextRegistry as IRemoveAll)?.RemoveAll();` before `Startup.InitializeLocalTexts(services);``
+* Replace `DynamicScriptManager\.Reset\(\)\;` with `services.GetService<IDynamicScriptManager>()?.Reset();`
+

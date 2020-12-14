@@ -2785,3 +2785,9 @@ public HashSet<string> GetAllAvailableLocalTextKeys()
 * Replace `@Texts.Forms.Membership.Login.ForgotPassword` with `@Texts.Forms.Membership.Login.ForgotPassword.ToString(Localizer)`
 
 * Replace `@Texts.Forms.Membership.Login.SignUpButton` with `@Texts.Forms.Membership.Login.SignUpButton.ToString(Localizer)`
+
+## Fix AccountLogin.cshtml
+
+* Add `@inject IDataMigrations DataMigrations` after `@inject Serenity.ITextLocalizer Localizer`
+
+* Replace `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage` with `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage.ToString(Localizer)`

@@ -2776,3 +2776,14 @@ and change with this line:
 ```csharp
 if (request != null && Permissions.HasPermission("ImpersonateAs"))
 ```
+
+## Modify UserRepository.cs
+
+Apply the following file changes in StartSharp:
+
+* [UserRepository.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserRepository.cs)
+
+ or following file changes in Serene:
+* [UserRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/UserRepository.cs)
+
+

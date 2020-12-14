@@ -2764,3 +2764,15 @@ Apply the following file changes in StartSharp:
 * or following file changes in Serene:
 * [UserRetrieveService.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs)
 
+
+## Modify UserEndpoint.cs
+
+Find this line:
+
+```csharp
+if (request != null && Serenity.Permissions.HasPermission("ImpersonateAs"))
+```
+and change with this line:
+```csharp
+if (request != null && Permissions.HasPermission("ImpersonateAs"))
+```

@@ -2754,3 +2754,13 @@ public HashSet<string> GetAllAvailableLocalTextKeys()
 * Add `(LocalTextRegistry as IRemoveAll)?.RemoveAll();` before `Startup.InitializeLocalTexts(services);``
 * Replace `DynamicScriptManager\.Reset\(\)\;` with `services.GetService<IDynamicScriptManager>()?.Reset();`
 
+## Modify UserRetrieve.cs
+
+Apply the following file changes in StartSharp:
+
+* [UserRetrieveService.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogPage.cs)
+
+
+* or following file changes in Serene:
+* [UserRetrieveService.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs)
+

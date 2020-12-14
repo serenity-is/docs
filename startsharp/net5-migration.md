@@ -2323,17 +2323,17 @@ namespace StartSharp.Administration
 
 * or following file changes in Serene:
 
-* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs
+* https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs
 
-* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs
+* https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/AccountPage.cs
 
-* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/ChangePassword/AccountPage.ChangePassword.cs
+* https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/ChangePassword/AccountPage.ChangePassword.cs
 
-* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/ForgotPassword/AccountPage.ForgotPassword.cs
+* https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/ForgotPassword/AccountPage.ForgotPassword.cs
 
-* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/ResetPassword/AccountPage.ResetPassword.cs
+* https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/ResetPassword/AccountPage.ResetPassword.cs
 
-* https://github.com/serenity-is/Serene/blob/master/StartSharp/StartSharp.Core/Modules/Membership/Account/SignUp/AccountPage.SignUp.cs
+* https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/SignUp/AccountPage.SignUp.cs
 
 ## Sergen Tool Update
 

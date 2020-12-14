@@ -2754,3 +2754,8 @@ public HashSet<string> GetAllAvailableLocalTextKeys()
 * Add `(LocalTextRegistry as IRemoveAll)?.RemoveAll();` before `Startup.InitializeLocalTexts(services);``
 * Replace `DynamicScriptManager\.Reset\(\)\;` with `services.GetService<IDynamicScriptManager>()?.Reset();`
 
+## Fix MeetingIndex.cshtml
+
+* Add `@inject Serenity.Web.IContentHashCache ContentHashCache` after `@inject Serenity.ITextLocalizer Localizer`
+
+* Replace `@ContentHashCache.ResolvePath("~/Scripts/ckeditor/")` with `@ContentHashCache.ResolvePath(Context.Request.PathBase, "~/Scripts/ckeditor/")`

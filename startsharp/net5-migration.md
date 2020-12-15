@@ -2786,4 +2786,47 @@ Apply the following file changes in StartSharp:
  or following file changes in Serene:
 * [UserRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/UserRepository.cs)
 
+## Modify UserPermissionEndpoint.cs
 
+Apply the following file changes:
+
+* Add `using Serenity.Abstractions;`
+
+Find this method:
+
+```csharp
+public ListResponse<string> ListPermissionKeys()
+{
+    return new MyRepository(Context).ListPermissionKeys(includeRoles: false);
+}
+```
+
+and change with: 
+
+```csharp
+public ListResponse<string> ListPermissionKeys(
+    [FromServices] ISqlConnections sqlConnections,
+    [FromServices] ITypeSource typeSource)
+{
+    return new MyRepository(Context).ListPermissionKeys(sqlConnections, typeSource, includeRoles: false);
+}
+```
+
+Find this method:
+
+```csharp
+public Dictionary<string, HashSet<string>> ListImplicitPermissions()
+{
+    return new MyRepository(Context).ImplicitPermissions;
+}
+```
+
+and change with: 
+
+```csharp
+public IDictionary<string, HashSet<string>> ListImplicitPermissions(
+    [FromServices] ITypeSource typeSource)
+{
+    return MyRepository.GetImplicitPermissions(Cache.Memory, typeSource);
+}
+```

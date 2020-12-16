@@ -2830,3 +2830,13 @@ public IDictionary<string, HashSet<string>> ListImplicitPermissions(
     return MyRepository.GetImplicitPermissions(Cache.Memory, typeSource);
 }
 ```
+
+## Modify UserPermissionRepository.cs
+
+Apply the following file changes in StartSharp:
+
+* [UserPermissionRepository.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
+
+ or following file changes in Serene:
+* [UserPermissionRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
+

@@ -2884,3 +2884,46 @@ Apply the following file changes:
 <th>@fld.CustomerID.GetTitle(Localizer)</th>
 ...
 ```` 
+
+## Modify DataExplorerEndpoint.cs
+
+Apply the following file changes:
+
+Add the following code lines above `ListResponse` method
+
+```csharp
+protected ISqlConnections SqlConnections { get; }
+
+public DataExplorerController(ISqlConnections sqlConnections)
+{
+    SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+}
+````
+
+Find the following line and 
+```cs
+throw new ArgumentOutOfRangeException("serverType", (object)serverType, "Unknown server type");
+```
+with 
+```cs
+throw new ArgumentOutOfRangeException(nameof(serverType), serverType, "Unknown server type");
+```
+
+Find the following line and 
+```cs
+private string[] NumericTypes = new string[] { "Int32", "Int64", "Int16", "Decimal", "Double", "Single" };
+```
+with 
+```cs
+private readonly string[] NumericTypes = new string[] { "Int32", "Int64", "Int16", "Decimal", "Double", "Single" };
+```
+
+Find the following line and 
+```cs
+private static Dictionary<string, string> SqlTypeToFieldTypeMap =
+```
+with 
+```cs
+private static readonly Dictionary<string, string> SqlTypeToFieldTypeMap =
+```
+

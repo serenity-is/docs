@@ -2872,3 +2872,15 @@ public partial class AdvancedSamplesController : Controller
     protected ISqlConnections SqlConnections { get; }
 }
 ```
+
+## Modify ServerSide.cshtml
+
+Apply the following file changes:
+
+* Add `@inject Serenity.ITextLocalizer Localizer` <br/>under `@model IEnumerable<StartSharp.Northwind.Entities.CustomerRow>`
+
+* Change `Title` with `GetTitle(Localizer)` in `<th>` lines like in the following:
+```html
+<th>@fld.CustomerID.GetTitle(Localizer)</th>
+...
+```` 

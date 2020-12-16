@@ -2927,3 +2927,49 @@ with
 private static readonly Dictionary<string, string> SqlTypeToFieldTypeMap =
 ```
 
+## Fix MeetingIndex.cshtml
+
+* Add `@inject Serenity.Web.IContentHashCache ContentHashCache` after `@inject Serenity.ITextLocalizer Localizer`
+
+* Replace `@ContentHashCache.ResolvePath("~/Scripts/ckeditor/")` with `@ContentHashCache.ResolvePath(Context.Request.PathBase, "~/Scripts/ckeditor/")`
+
+## Fix AccountLogin.AdminLTE.cshtml
+
+* Add `@inject IDataMigrations DataMigrations` after `@inject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.Login.FormTitle;` with `Texts.Forms.Membership.Login.FormTitle.ToString(Localizer);`
+
+* Replace `@Texts.Forms.Membership.Login.RememberMe` with `@Texts.Forms.Membership.Login.RememberMe.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.Login.SignInButton` with `@Texts.Forms.Membership.Login.SignInButton.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage` with `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage.ToString(Localizer)`
+
+* Replace `@Texts.Navigation.SiteTitle` with `@Texts.Navigation.SiteTitle.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.Login.FormTitle` with `@Texts.Forms.Membership.Login.FormTitle.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.Login.OR` with `@Texts.Forms.Membership.Login.OR.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.Login.FacebookButton` with `@Texts.Forms.Membership.Login.FacebookButton.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.Login.GoogleButton` with `@Texts.Forms.Membership.Login.GoogleButton.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.Login.ForgotPassword` with `@Texts.Forms.Membership.Login.ForgotPassword.ToString(Localizer)`
+
+* Replace `@Texts.Forms.Membership.Login.SignUpButton` with `@Texts.Forms.Membership.Login.SignUpButton.ToString(Localizer)`
+
+## Fix AccountLogin.cshtml
+
+* Add `@inject IDataMigrations DataMigrations` after `@inject Serenity.ITextLocalizer Localizer`
+
+* Replace `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage` with `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage.ToString(Localizer)`
+
+## Modify AccountPage.cs
+
+Apply the following file changes in StartSharp:
+* [AccountPage.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs)
+
+or following file changes in Serene:
+
+* [AccountPage.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/AccountPage.cs)

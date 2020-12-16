@@ -2791,3 +2791,12 @@ public HashSet<string> GetAllAvailableLocalTextKeys()
 * Add `@inject IDataMigrations DataMigrations` after `@inject Serenity.ITextLocalizer Localizer`
 
 * Replace `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage` with `@Texts.Forms.Membership.SignUp.ActivationCompleteMessage.ToString(Localizer)`
+
+## Modify AccountPage.cs
+
+Apply the following file changes in StartSharp:
+* [AccountPage.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs)
+
+or following file changes in Serene:
+
+* [AccountPage.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/AccountPage.cs)

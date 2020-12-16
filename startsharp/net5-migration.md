@@ -2840,3 +2840,35 @@ Apply the following file changes in StartSharp:
  or following file changes in Serene:
 * [UserPermissionRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
 
+
+## Modify AdvanceSamplesPage.cs
+
+Apply the following file changes:
+
+* Add `using Serenity.Data;`
+* Add `using System;`
+
+Find the controller `AdvancedSamplesController`
+and change inside of like in the following:
+
+```csharp
+public AdvancedSamplesController(ISqlConnections sqlConnections)
+{
+    SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+}
+
+protected ISqlConnections SqlConnections { get; }
+```
+at the end your `AdvancedSamplesController` will be like:
+```csharp
+[PageAuthorize, Route("AdvancedSamples/[action]")]
+public partial class AdvancedSamplesController : Controller
+{
+    public AdvancedSamplesController(ISqlConnections sqlConnections)
+    {
+        SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+    }
+
+    protected ISqlConnections SqlConnections { get; }
+}
+```

@@ -2985,6 +2985,37 @@ public ActionResult DragDropInTreeGrid([FromServices] ISqlConnections sqlConnect
     return View(Views.DragDropInTreeGrid.Index);
 }
 ```
+
+## Modify DragDropSampleRepository.cs
+
+* Add `using System;`
+* Find `PopulateInitialItems()` method and add the parameter inside `ISqlConnections sqlConnections`
+```cs
+public static void PopulateInitialItems(ISqlConnections sqlConnections){ ... }
+```
+* Find this line: 
+```cs
+using (var connection = SqlConnections.NewFor<MyRow>())
+```
+and change `SqlConnections` with `sqlConnections` (pay attention to uppercase and lowercase letters)
+
+* Add these code lines above the `using (var connection = sqlConnections.NewFor<MyRow>())`
+```csharp
+if (sqlConnections is null)
+    throw new ArgumentNullException(nameof(sqlConnections));
+```
+
+at the end your method will be like: 
+```csharp
+public static void PopulateInitialItems(ISqlConnections sqlConnections)
+{
+    if (sqlConnections is null)
+        throw new ArgumentNullException(nameof(sqlConnections));
+
+    using (var connection = sqlConnections.NewFor<MyRow>())
+    {
+        ....
+```
 ## Fix AccountChangePassword.cshtml
 
 * Add `@injeinject Serenity.ITextLocalizer Localizer`

@@ -2754,6 +2754,179 @@ public HashSet<string> GetAllAvailableLocalTextKeys()
 * Add `(LocalTextRegistry as IRemoveAll)?.RemoveAll();` before `Startup.InitializeLocalTexts(services);``
 * Replace `DynamicScriptManager\.Reset\(\)\;` with `services.GetService<IDynamicScriptManager>()?.Reset();`
 
+## Modify UserRetrieve.cs
+
+Apply the following file changes in StartSharp:
+
+* [UserRetrieveService.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogPage.cs)
+
+
+* or following file changes in Serene:
+* [UserRetrieveService.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs)
+
+
+## Modify UserEndpoint.cs
+
+Find this line:
+
+```csharp
+if (request != null && Serenity.Permissions.HasPermission("ImpersonateAs"))
+```
+and change with this line:
+```csharp
+if (request != null && Permissions.HasPermission("ImpersonateAs"))
+```
+
+## Modify UserRepository.cs
+
+Apply the following file changes in StartSharp:
+
+* [UserRepository.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserRepository.cs)
+
+ or following file changes in Serene:
+* [UserRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/UserRepository.cs)
+
+## Modify UserPermissionEndpoint.cs
+
+Apply the following file changes:
+
+* Add `using Serenity.Abstractions;`
+
+Find this method:
+
+```csharp
+public ListResponse<string> ListPermissionKeys()
+{
+    return new MyRepository(Context).ListPermissionKeys(includeRoles: false);
+}
+```
+
+and change with: 
+
+```csharp
+public ListResponse<string> ListPermissionKeys(
+    [FromServices] ISqlConnections sqlConnections,
+    [FromServices] ITypeSource typeSource)
+{
+    return new MyRepository(Context).ListPermissionKeys(sqlConnections, typeSource, includeRoles: false);
+}
+```
+
+Find this method:
+
+```csharp
+public Dictionary<string, HashSet<string>> ListImplicitPermissions()
+{
+    return new MyRepository(Context).ImplicitPermissions;
+}
+```
+
+and change with: 
+
+```csharp
+public IDictionary<string, HashSet<string>> ListImplicitPermissions(
+    [FromServices] ITypeSource typeSource)
+{
+    return MyRepository.GetImplicitPermissions(Cache.Memory, typeSource);
+}
+```
+
+## Modify UserPermissionRepository.cs
+
+Apply the following file changes in StartSharp:
+
+* [UserPermissionRepository.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
+
+ or following file changes in Serene:
+* [UserPermissionRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
+
+
+## Modify AdvanceSamplesPage.cs
+
+Apply the following file changes:
+
+* Add `using Serenity.Data;`
+* Add `using System;`
+
+Find the controller `AdvancedSamplesController`
+and change inside of like in the following:
+
+```csharp
+public AdvancedSamplesController(ISqlConnections sqlConnections)
+{
+    SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+}
+
+protected ISqlConnections SqlConnections { get; }
+```
+at the end your `AdvancedSamplesController` will be like:
+```csharp
+[PageAuthorize, Route("AdvancedSamples/[action]")]
+public partial class AdvancedSamplesController : Controller
+{
+    public AdvancedSamplesController(ISqlConnections sqlConnections)
+    {
+        SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+    }
+
+    protected ISqlConnections SqlConnections { get; }
+}
+```
+
+## Modify ServerSide.cshtml
+
+Apply the following file changes:
+
+* Add `@inject Serenity.ITextLocalizer Localizer` <br/>under `@model IEnumerable<StartSharp.Northwind.Entities.CustomerRow>`
+
+* Change `Title` with `GetTitle(Localizer)` in `<th>` lines like in the following:
+```html
+<th>@fld.CustomerID.GetTitle(Localizer)</th>
+...
+```` 
+
+## Modify DataExplorerEndpoint.cs
+
+Apply the following file changes:
+
+Add the following code lines above `ListResponse` method
+
+```csharp
+protected ISqlConnections SqlConnections { get; }
+
+public DataExplorerController(ISqlConnections sqlConnections)
+{
+    SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+}
+````
+
+Find the following line and 
+```cs
+throw new ArgumentOutOfRangeException("serverType", (object)serverType, "Unknown server type");
+```
+with 
+```cs
+throw new ArgumentOutOfRangeException(nameof(serverType), serverType, "Unknown server type");
+```
+
+Find the following line and 
+```cs
+private string[] NumericTypes = new string[] { "Int32", "Int64", "Int16", "Decimal", "Double", "Single" };
+```
+with 
+```cs
+private readonly string[] NumericTypes = new string[] { "Int32", "Int64", "Int16", "Decimal", "Double", "Single" };
+```
+
+Find the following line and 
+```cs
+private static Dictionary<string, string> SqlTypeToFieldTypeMap =
+```
+with 
+```cs
+private static readonly Dictionary<string, string> SqlTypeToFieldTypeMap =
+```
+
 ## Fix MeetingIndex.cshtml
 
 * Add `@inject Serenity.Web.IContentHashCache ContentHashCache` after `@inject Serenity.ITextLocalizer Localizer`
@@ -2801,6 +2974,17 @@ or following file changes in Serene:
 
 * [AccountPage.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/AccountPage.cs)
 
+## Modify BasicSamplesPage.Grids.cs
+
+* Add `using Serenity.Data;`
+* Find `DragDropInTreeGrid()` method and its inside like in the following:
+```csharp
+public ActionResult DragDropInTreeGrid([FromServices] ISqlConnections sqlConnections)
+{
+    Repositories.DragDropSampleRepository.PopulateInitialItems(sqlConnections);
+    return View(Views.DragDropInTreeGrid.Index);
+}
+```
 ## Fix AccountChangePassword.cshtml
 
 * Add `@injeinject Serenity.ITextLocalizer Localizer`

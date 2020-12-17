@@ -2992,3 +2992,33 @@ public ActionResult DragDropInTreeGrid([FromServices] ISqlConnections sqlConnect
 * Replace `Texts.Forms.Membership.ChangePassword.FormTitle` with `Texts.Forms.Membership.ChangePassword.FormTitle.ToString(Localizer)`
 
 * Replace `Texts.Forms.Membership.ChangePassword.SubmitButton` with `Texts.Forms.Membership.ChangePassword.SubmitButton.ToString(Localizer)`
+
+## Fix AccountPage.ChangePassword.cs
+
+* Replace `public Result<ServiceResponse> ChangePassword(ChangePasswordRequest request)` with `public Result<ServiceResponse> ChangePassword(ChangePasswordRequest request, [FromServices] IUserPasswordValidator passwordValidator)`
+
+* Replace `Texts.Forms.Membership.ChangePassword.SubmitButton` with `Texts.Forms.Membership.ChangePassword.SubmitButton.ToString(Localizer)`
+
+* Add the following code lines inside the ` ChangePassword(ChangePasswordRequest request, [FromServices] IUserPasswordValidator passwordValidator)` method
+
+```csharp
+if (passwordValidator is null)
+    throw new ArgumentNullException(nameof(passwordValidator));
+````
+
+* Replace `Authorization.Username` with `User.Identity?.Name`
+
+Find the following line and
+```cs
+if (!Dependency.Resolve<IAuthenticationService>().Validate(ref username, request.OldPassword))
+    throw new ValidationError("CurrentPasswordMismatch", Texts.Validation.CurrentPasswordMismatch);
+```
+replace with 
+```cs
+if (passwordValidator.Validate(ref username, request.OldPassword) != PasswordValidationResult.Valid)
+    throw new ValidationError("CurrentPasswordMismatch", Texts.Validation.CurrentPasswordMismatch.ToString(Localizer));
+```
+
+* Replace `UserRepository.ValidatePassword(username, request.NewPassword, false)` with `UserRepository.ValidatePassword(request.NewPassword, Localizer)`
+
+* Replace `Authorization.UserId` with `User.GetIdentifier()`

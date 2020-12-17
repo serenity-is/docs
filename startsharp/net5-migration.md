@@ -3034,3 +3034,14 @@ if (passwordValidator.Validate(ref username, request.OldPassword) != PasswordVal
 * Replace `Texts.Forms.Membership.ForgotPassword.FormTitle` with `Texts.Forms.Membership.ForgotPassword.FormTitle.ToString(Localizer)`
 
 * Replace `Texts.Forms.Membership.ForgotPassword.BackToLogin` with `Texts.Forms.Membership.ForgotPassword.BackToLogin.ToString(Localizer)`
+
+## Fix AccountForgotPassword.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.ForgotPassword.FormTitle` with `Texts.Forms.Membership.ForgotPassword.FormTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.ForgotPassword.FormInfo` with `Texts.Forms.Membership.ForgotPassword.FormInfo.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.ForgotPassword.SubmitButton` with `Texts.Forms.Membership.ForgotPassword.SubmitButton.ToString(Localizer)`
+

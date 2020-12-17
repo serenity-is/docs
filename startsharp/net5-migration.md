@@ -3045,3 +3045,41 @@ if (passwordValidator.Validate(ref username, request.OldPassword) != PasswordVal
 
 * Replace `Texts.Forms.Membership.ForgotPassword.SubmitButton` with `Texts.Forms.Membership.ForgotPassword.SubmitButton.ToString(Localizer)`
 
+
+## Fix AccountPage.ForgotPassword.cs
+
+* Add `using Microsoft.Extensions.Options;` and `using StartSharp.Common;`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(public\s*Result<ServiceResponse>\s*ForgotPassword\s*\(\s*ForgotPasswordRequest\s*([A-Za-z0-9_]*))\)(\r\n\s*)` in `Find` input
+
+* Type `$1,$3[FromServices] IEmailSender emailSender,$3[FromServices] IOptions<EnvironmentSettings> options = null)$3` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*Texts.Validation.CantFindUserWithEmail)(\s*)` in `Find` input
+
+* Type `$1.ToString(Localizer)$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `Config.Get<EnvironmentSettings>\s*\(\).SiteExternalUrl` in `Find` input
+
+* Type `options?.Value.SiteExternalUrl` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*Texts.Forms.Membership.ResetPassword.EmailSubject).ToString\(\)(\s*)` in `Find` input
+
+* Type `$1.ToString(Localizer)$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)Common.EmailHelper.Send\(([a-zA-Z0-9_]*)\s*,\s*([a-zA-Z0-9_]*)\s*,\s*(user.Email)\s*\)\s*;(\r\n\s*)` in `Find` input
+
+* Type `$1if (emailSender is null)\n$1\tthrow new ArgumentNullException(nameof(emailSender));$5emailSender.Send(subject: $2, body: $3, mailTo: $4);$5` in `Replace` input
+
+* Click `Replace All`

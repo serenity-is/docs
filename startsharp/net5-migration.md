@@ -2800,3 +2800,11 @@ Apply the following file changes in StartSharp:
 or following file changes in Serene:
 
 * [AccountPage.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/AccountPage.cs)
+
+## Fix AccountChangePassword.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.ChangePassword.FormTitle` with `Texts.Forms.Membership.ChangePassword.FormTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.ChangePassword.SubmitButton` with `Texts.Forms.Membership.ChangePassword.SubmitButton.ToString(Localizer)`

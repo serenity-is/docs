@@ -2973,3 +2973,15 @@ Apply the following file changes in StartSharp:
 or following file changes in Serene:
 
 * [AccountPage.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Membership/Account/AccountPage.cs)
+
+## Modify BasicSamplesPage.Grids.cs
+
+* Add `using Serenity.Data;`
+* Find `DragDropInTreeGrid()` method and its inside like in the following:
+```csharp
+public ActionResult DragDropInTreeGrid([FromServices] ISqlConnections sqlConnections)
+{
+    Repositories.DragDropSampleRepository.PopulateInitialItems(sqlConnections);
+    return View(Views.DragDropInTreeGrid.Index);
+}
+```

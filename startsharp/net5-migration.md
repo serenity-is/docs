@@ -3483,3 +3483,45 @@ public MySaveHandler(IRequestContext context)
 * Type `$1public EmployeeListDecorator(ITwoLevelCache cache, ISqlConnections sqlConnections)$2{$2\tCache = cache ?? throw new ArgumentNullException(nameof(cache));$2\tSqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));$2}\n$2public ITwoLevelCache Cache { get; }$2public ISqlConnections SqlConnections { get; }\n$2` in `Replace` input
 
 * Click `Replace All`
+
+## Fix NotesBehavior.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*public\s*class\s*NotesBehavior\s*:\s*.*\r\n\s*{(\r\n\s*))` in `Find` input
+
+* Type `$1public IRequestContext Context { get; }$2public ISqlConnections SqlConnections { get; }\n$2public NotesBehavior(IRequestContext context, ISqlConnections sqlConnections)$2{$2\tContext = context ?? throw new ArgumentNullException(nameof(context));$2\tSqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));$2}\n$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*idField)\[\s*(handler.Row)\s*\]\s+` in `Find` input
+
+* Type `$1.AsObject($2)` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(rowIdField)\[\s*([a-zA-Z0-9_]*)\s*\].Value` in `Find` input
+
+* Type `$1Convert.ToInt64($2.AsObject($3))` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(rowIdField)\[\s*([a-zA-Z0-9_]*)\s*\];` in `Find` input
+
+* Type `$1$2.AsObject($3);` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(idField)\[\s*([a-zA-Z0-9_.]*)\s*\].Value(.*)` in `Find` input
+
+* Type `$1Convert.ToInt64($2.AsObject($3))$4` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(id).Value` in `Find` input
+
+* Type `$1Convert.ToInt64($2)` in `Replace` input
+
+* Click `Replace All`

@@ -3140,7 +3140,7 @@ ArgumentOutOfRangeException(nameof(request.FileName));
 ```cs
 using (var fs = new FileStream(UploadHelper.DbFilePath(request.FileName), FileMode.Open, FileAccess.Read))
 ```
-and change with with:
+and change with:
 ```cs
 using (var fs = uploadStorage.OpenFile(request.FileName))
 ```
@@ -3207,3 +3207,21 @@ using (var fs = uploadStorage.OpenFile(request.FileName))
 * Replace `Texts.Forms.Membership.ResetPassword.FormTitle` with `Texts.Forms.Membership.ResetPassword.FormTitle.ToString(Localizer)`
 
 * Replace `Texts.Forms.Membership.ResetPassword.SubmitButton` with `Texts.Forms.Membership.ResetPassword.SubmitButton.ToString(Localizer)`
+
+## Modify CustomerGrossSalesEndpoint.cs
+
+* Add `using Serenity.PropertyGrid;`
+
+* Find `DynamicDataReport()` method and add 3rd parameter `HttpContext.RequestServices`. Your method should be like:
+```cs
+var report = new DynamicDataReport(data, request.IncludeColumns, 
+    typeof(Columns.CustomerGrossSalesColumns), HttpContext.RequestServices);
+```
+* Find this line 
+```cs
+var bytes = new ReportRepository(Context).Render(report);
+```
+and change with 
+```cs 
+var bytes = ReportRepository.Render(report);
+```

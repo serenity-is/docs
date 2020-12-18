@@ -3445,3 +3445,15 @@ public MySaveHandler(IRequestContext context)
 ## Fix CustomerLookup.cs
 
 * Add `using Serenity.Data;`
+
+## Fix CustomerRepository.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*SqlExceptionHelper.HandleDeleteForeignKeyException\(\s*[a-zA-Z0-9_]*\s*)(\);)` in `Find` input
+
+* Type `$1, Localizer$2` in `Replace` input
+
+* Click `Replace All`

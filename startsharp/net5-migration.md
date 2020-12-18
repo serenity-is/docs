@@ -3115,6 +3115,37 @@ if (passwordValidator.Validate(ref username, request.OldPassword) != PasswordVal
 
 * Click `Replace All`
 
+
+## Fix ProductExcelImportEndpoint.cs
+
+* Remove `using System.IO;`
+* Find `ExcelImport()` method and add 3rd parameter `[FromServices] IUploadStorage uploadStorage`. Your method should be like:
+```cs
+public ExcelImportResponse ExcelImport(IUnitOfWork uow, ExcelImportRequest request,
+    [FromServices] IUploadStorage uploadStorage)
+{
+    ...
+```
+* Find exceptions contains `"filename"` parameters
+```cs
+ArgumentNullException("filename");
+ArgumentOutOfRangeException("filename");
+```
+and change with `nameof(request.FileName)` like in the following:
+```cs
+ArgumentNullException(nameof(request.FileName));
+ArgumentOutOfRangeException(nameof(request.FileName));
+```
+* Find this line:
+```cs
+using (var fs = new FileStream(UploadHelper.DbFilePath(request.FileName), FileMode.Open, FileAccess.Read))
+```
+and change with with:
+```cs
+using (var fs = uploadStorage.OpenFile(request.FileName))
+```
+* (optional) You can change `ProductRow` with `MyRow` except using line `using MyRow = StartSharp.Northwind.Entities.ProductRow;`
+
 ## Fix AccountPage.ResetPassword.cs
 
 * Open `Replace` dialog in Visual Studio `Ctrl+H`

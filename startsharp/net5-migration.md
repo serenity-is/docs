@@ -3225,3 +3225,15 @@ and change with
 ```cs 
 var bytes = ReportRepository.Render(report);
 ```
+
+## Modify BackgroundJobManager.cs
+
+* Find this line 
+```cs
+isDisabled = !Config.Get<Settings>().Enabled;
+```
+and change with 
+```cs 
+isDisabled = !options.Value.Enabled;
+this.logger = logger;
+```

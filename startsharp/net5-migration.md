@@ -3343,3 +3343,21 @@ public MySaveHandler(IRequestContext context)
 {
 }
 ```
+
+## Fix CategoryRow.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(\[DisplayName\(""Category Name""\).*NameProperty)]` in `Find` input
+
+* Type `$1, Localizable(true)]` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(\[DisplayName\(""Description""\).*QuickSearch)]` in `Find` input
+
+* Type `$1, Localizable(true)]` in `Replace` input
+
+* Click `Replace All`

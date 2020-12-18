@@ -3290,3 +3290,19 @@ this.logger = logger;
 * Type `$1.ToString(Localizer)$2` in `Replace` input
 
 * Click `Replace All`
+
+## Fix AccountSignUp.AdminLTE.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.SignUp.FormTitle` with `Texts.Forms.Membership.SignUp.FormTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.SubmitButton` with `Texts.Forms.Membership.SignUp.SubmitButton.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.AcceptTerms` with `Texts.Forms.Membership.SignUp.AcceptTerms.ToString(Localizer)`
+
+* Replace `Texts.Navigation.SiteTitle` with `Texts.Navigation.SiteTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.FormInfo` with `Texts.Forms.Membership.SignUp.FormInfo.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.BackToLogin` with `Texts.Forms.Membership.SignUp.BackToLogin.ToString(Localizer)`

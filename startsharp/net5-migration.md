@@ -3158,12 +3158,6 @@ using (var fs = uploadStorage.OpenFile(request.FileName))
 
 * Click `Replace All`
 
-* Type `` in `Find` input
-
-* Type `` in `Replace` input
-
-* Click `Replace All`
-
 * Type `(.*Texts.Validation.InvalidResetToken)(\s*)` in `Find` input
 
 * Type `$1.ToString(Localizer)$2` in `Replace` input
@@ -3283,5 +3277,153 @@ this.logger = logger;
 * Type `((.*)(.Log\()(\);))` in `Find` input
 
 * Type `$2$3ExceptionLog$4` in `Replace` input
+
+* Click `Replace All`
+## Fix AccountPage.SignUp.cs
+
+* Add `using StartSharp.Common;`
+
+* Add `using Microsoft.Extensions.Options;`
+
+* Remove `using MailKit.Net.Smtp;`
+
+* Remove `using using MimeKit;`
+
+* Remove `using MailKit.Security;`
+
+* Remove `usinusing System.Web.Hosting;`
+
+* Replace `throw new ArgumentNullException(""email"");` with `throw new ArgumentNullException(nameof(request.Email));`
+
+* Replace `throw new ArgumentNullException(""password"");` with `throw new ArgumentNullException(nameof(request.Password));`
+
+* Replace `throw new ArgumentNullException(""displayName"");` with `throw new ArgumentNullException(nameof(request.DisplayName));`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(public\s*Result<ServiceResponse>\s*SignUp\s*\(\s*SignUpRequest\s*([A-Za-z0-9_]*))\)(\r\n\s*)` in `Find` input
+
+* Type `$1,$3\t[FromServices] IEmailSender emailSender,$3\t[FromServices] IOptions<EnvironmentSettings> options = null)$3` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*Texts.Validation.EmailInUse)(\s*)` in `Find` input
+
+* Type `$1.ToString(Localizer)$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `Config.Get<EnvironmentSettings>\s*\(\).SiteExternalUrl` in `Find` input
+
+* Type `options?.Value.SiteExternalUrl` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)Common.EmailHelper.Send\(([a-zA-Z0-9_]*)\s*,\s*([a-zA-Z0-9_]*)\s*,\s*([a-zA-Z0-9_]*)\s*\)\s*;(\r\n\s*)` in `Find` input
+
+* Type `$1if (emailSender is null)\n$1\tthrow new ArgumentNullException(nameof(emailSender));$5emailSender.Send(subject: $2, body: $3, mailTo: $4);$5` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*UserRetrieveService.RemoveCachedUser\s*\()\s*([a-zA-Z0-9_]*)\s*,\s*([a-zA-Z0-9_]*)(\s*\);)` in `Find` input
+
+* Type `$1Cache, $2, $3$4` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*Texts.Validation.InvalidActivateToken)(\s*)` in `Find` input
+
+* Type `$1.ToString(Localizer)$2` in `Replace` input
+
+* Click `Replace All`
+
+## Fix AccountSignUp.AdminLTE.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.SignUp.FormTitle` with `Texts.Forms.Membership.SignUp.FormTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.SubmitButton` with `Texts.Forms.Membership.SignUp.SubmitButton.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.AcceptTerms` with `Texts.Forms.Membership.SignUp.AcceptTerms.ToString(Localizer)`
+
+* Replace `Texts.Navigation.SiteTitle` with `Texts.Navigation.SiteTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.FormInfo` with `Texts.Forms.Membership.SignUp.FormInfo.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.BackToLogin` with `Texts.Forms.Membership.SignUp.BackToLogin.ToString(Localizer)`
+
+## Fix AccountSignUp.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.SignUp.FormTitle` with `Texts.Forms.Membership.SignUp.FormTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.FormInfo` with `Texts.Forms.Membership.SignUp.FormInfo.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.SubmitButton` with `Texts.Forms.Membership.SignUp.SubmitButton.ToString(Localizer)`
+
+## Modify CategoryRepository.cs
+
+* Find the following method and remove 
+
+```csharp
+protected override void AfterSave()
+{
+    base.AfterSave();
+
+    if (Request.Localizations != null)
+        foreach (var pair in Request.Localizations)
+        {
+            pair.Value.CategoryID = Row.CategoryID.Value;
+            new LocalizationRowHandler<MyRow>().Update<Entities.CategoryLangRow>(this.UnitOfWork, pair.Value, Convert.ToInt32(pair.Key));
+        }
+}
+```
+
+* Add following method to inside the `private class MySaveHandler..` code block
+
+```csharp
+public MySaveHandler(IRequestContext context)
+    : base(context)
+{
+}
+```
+
+## Fix CategoryRow.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(\[DisplayName\(""Category Name""\).*NameProperty)]` in `Find` input
+
+* Type `$1, Localizable(true)]` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(\[DisplayName\(""Description""\).*QuickSearch)]` in `Find` input
+
+* Type `$1, Localizable(true)]` in `Replace` input
+
+* Click `Replace All`
+
+## Fix CustomerEndpoint.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `((.*)var\s*[a-zA-Z0-9_]*\s*=\s*new\s*DynamicDataReport\s*\(([a-zA-Z0-9_]*)\s*,\s*([a-zA-Z0-9_.]*)\s*,\s*typeof\(([a-zA-Z0-9_.]*)\s*\))\);` in `Find` input
+
+* Type `$1,\n$2\tHttpContext.RequestServices);` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*var\s*[a-zA-Z0-9_]*\s*=\s*)new\s*(ReportRepository)\(Context\)(.Render\(\s*([a-zA-Z0-9_]*)\);)` in `Find` input
+
+* Type `$1$2$3` in `Replace` input
 
 * Click `Replace All`

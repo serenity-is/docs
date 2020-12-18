@@ -3114,3 +3114,45 @@ if (passwordValidator.Validate(ref username, request.OldPassword) != PasswordVal
 * Type `$1if (emailSender is null)\n$1\tthrow new ArgumentNullException(nameof(emailSender));$5emailSender.Send(subject: $2, body: $3, mailTo: $4);$5` in `Replace` input
 
 * Click `Replace All`
+
+## Fix AccountPage.ResetPassword.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*public\s*ActionResult\s*ResetPassword\s*\(\s*string\s*[a-zA-Z0-9_]*\s*)(\))` in `Find` input
+
+* Type `$1, [FromServices] ISqlConnections sqlConnections$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `` in `Find` input
+
+* Type `` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*Texts.Validation.InvalidResetToken)(\s*)` in `Find` input
+
+* Type `$1.ToString(Localizer)$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `((.*)using\s*\(\s*var\s*([a-zA-Z0-9]*)\s*=\s*)SqlConnections(.NewFor<UserRow>\(\)\))` in `Find` input
+
+* Type `$2if (sqlConnections is null)\n$2\tthrow new ArgumentNullException(nameof(sqlConnections));\n\n$1sqlConnections$4` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*public\s*Result<ServiceResponse>\s*ResetPassword\s*\(\s*ResetPasswordRequest\s*[a-zA-Z0-9_]*\s*)(\))` in `Find` input
+
+* Type `$1, [FromServices] ISqlConnections sqlConnections$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(UserRepository.ValidatePassword\s*\()\s*[a-zA-Z0-9_.]*\s*,\s*(request.NewPassword)\s*,\s*false(.*)` in `Find` input
+
+* Type `$1$2, Localizer$3` in `Replace` input
+
+* Click `Replace All`

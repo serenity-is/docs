@@ -3457,3 +3457,15 @@ public MySaveHandler(IRequestContext context)
 * Type `$1, Localizer$2` in `Replace` input
 
 * Click `Replace All`
+
+## Fix CustomerRow.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*\[\s*)(LookupEditor\(\s*typeof\(\s*EmployeeRow\s*\)\s*,\s*Multiple\s*=\s*true\s*\)\s*,\s*NotMapped\])` in `Find` input
+
+* Type `$1DisplayName(""Representatives""), $2` in `Replace` input
+
+* Click `Replace All`

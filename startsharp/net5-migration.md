@@ -3484,6 +3484,47 @@ public MySaveHandler(IRequestContext context)
 
 * Click `Replace All`
 
+## Modify PeriodicBackgroundJob.cs
+
+* Find `Initialize()` method and copy and paste in the following lines above that method
+```cs
+    protected ILogger Log { get; }
+    protected IExceptionLogger ExceptionLog { get; }
+
+    protected DailyBackgroundJob(ILogger log, IExceptionLogger exceptionLog)
+    {
+        Log = log;
+        ExceptionLog = exceptionLog;
+    }
+```
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(using\s*Serenity;)` in `Find` input
+
+* Type `$1\nusing Microsoft.Extensions.Logging;\nusing Serenity.Abstractions;` in `Replace` input
+
+* Click `Replace All`
+
+* Type `((.*)(protected\s*.*InternalRun\(\);)())` in `Find` input
+
+* Type `$1\n\n$2protected ILogger Log { get; }\n$2protected IExceptionLogger ExceptionLog { get; }\n\n$2protected DailyBackgroundJob(ILogger log, IExceptionLogger exceptionLog)\n$2{\n$2\tLog = log;\n$2\tExceptionLog = exceptionLog;\n$2}` input
+
+* Click `Replace All`
+
+* Type `(.*Log).Info(\s*\([a-zA-Z0-9_:\s""]*\+\s*)this.(GetType\(\).Name\s*\+\s*[a-zA-Z0-9_\s""]*\+\s*\w*\s*),\s*this.GetType\(\)\);` in `Find` input
+
+* Type `$1?.LogInformation$2$3);` input
+
+* Click `Replace All`
+
+* Type `(.*Log).Info(\s*\([a-zA-Z0-9_:\s""]*\+\s*)this.(GetType\(\).Name\s*\+\s*[a-zA-Z0-9_\s""]*.*."")(,\s*this.GetType\(\)\);)` in `Find` input
+
+* Type `$1?.LogInformation$2$3);` input
+
+* Click `Replace All`
 ## Fix NotesBehavior.cs
 
 * Open `Replace` dialog in Visual Studio `Ctrl+H`
@@ -3523,5 +3564,17 @@ public MySaveHandler(IRequestContext context)
 * Type `(.*)(id).Value` in `Find` input
 
 * Type `$1Convert.ToInt64($2)` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*Log\?.LogInformation)(\s*\([a-zA-Z0-9_:\s""]*\+\s*)(GetType\(\).Name)(\s*\+\s*""."")(\));` in `Find` input
+
+* Type `$1$2$3);` input
+
+* Click `Replace All`
+
+* Type `((.*)(.Log\()(\);))` in `Find` input
+
+* Type `$2$3ExceptionLog$4` input
 
 * Click `Replace All`

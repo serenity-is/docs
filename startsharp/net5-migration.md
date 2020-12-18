@@ -3469,3 +3469,17 @@ public MySaveHandler(IRequestContext context)
 * Type `$1DisplayName(""Representatives""), $2` in `Replace` input
 
 * Click `Replace All`
+
+## Fix EmployeeListDecorator.cs
+
+* Add `using Serenity.Abstractions;`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*public\s*class\s*EmployeeListDecorator\s*:\s*BaseCellDecorator\r\n\s*{(\r\n\s*))` in `Find` input
+
+* Type `$1public EmployeeListDecorator(ITwoLevelCache cache, ISqlConnections sqlConnections)$2{$2\tCache = cache ?? throw new ArgumentNullException(nameof(cache));$2\tSqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));$2}\n$2public ITwoLevelCache Cache { get; }$2public ISqlConnections SqlConnections { get; }\n$2` in `Replace` input
+
+* Click `Replace All`

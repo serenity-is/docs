@@ -3306,3 +3306,13 @@ this.logger = logger;
 * Replace `Texts.Forms.Membership.SignUp.FormInfo` with `Texts.Forms.Membership.SignUp.FormInfo.ToString(Localizer)`
 
 * Replace `Texts.Forms.Membership.SignUp.BackToLogin` with `Texts.Forms.Membership.SignUp.BackToLogin.ToString(Localizer)`
+
+## Fix AccountSignUp.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.SignUp.FormTitle` with `Texts.Forms.Membership.SignUp.FormTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.FormInfo` with `Texts.Forms.Membership.SignUp.FormInfo.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.SignUp.SubmitButton` with `Texts.Forms.Membership.SignUp.SubmitButton.ToString(Localizer)`

@@ -3187,3 +3187,15 @@ using (var fs = uploadStorage.OpenFile(request.FileName))
 * Type `$1$2, Localizer$3` in `Replace` input
 
 * Click `Replace All`
+
+## Fix AccountResetPassword.AdminLTE.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Forms.Membership.ResetPassword.FormTitle` with `Texts.Forms.Membership.ResetPassword.FormTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.ResetPassword.SubmitButton` with `Texts.Forms.Membership.ResetPassword.SubmitButton.ToString(Localizer)`
+
+* Replace `@Texts.Navigation.SiteTitle` with `@Texts.Navigation.SiteTitle.ToString(Localizer)`
+
+* Replace `Texts.Forms.Membership.ResetPassword.BackToLogin` with `Texts.Forms.Membership.ResetPassword.BackToLogin.ToString(Localizer)`

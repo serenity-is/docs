@@ -3379,3 +3379,17 @@ public MySaveHandler(IRequestContext context)
 * Type `$1$2$3` in `Replace` input
 
 * Click `Replace All`
+
+## Fix CustomerIndex.cshtml
+
+* Add `@inject IContentHashCache ContentHashCache`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*@ContentHashCache.ResolvePath\(\s*)(\"".*)` in `Find` input
+
+* Type `$1Context.Request.PathBase, $2` in `Replace` input
+
+* Click `Replace All`

@@ -3316,3 +3316,30 @@ this.logger = logger;
 * Replace `Texts.Forms.Membership.SignUp.FormInfo` with `Texts.Forms.Membership.SignUp.FormInfo.ToString(Localizer)`
 
 * Replace `Texts.Forms.Membership.SignUp.SubmitButton` with `Texts.Forms.Membership.SignUp.SubmitButton.ToString(Localizer)`
+
+## Modify CategoryRepository.cs
+
+* Find the following method and remove 
+
+```csharp
+protected override void AfterSave()
+{
+    base.AfterSave();
+
+    if (Request.Localizations != null)
+        foreach (var pair in Request.Localizations)
+        {
+            pair.Value.CategoryID = Row.CategoryID.Value;
+            new LocalizationRowHandler<MyRow>().Update<Entities.CategoryLangRow>(this.UnitOfWork, pair.Value, Convert.ToInt32(pair.Key));
+        }
+}
+```
+
+* Add following method to inside the `private class MySaveHandler..` code block
+
+```csharp
+public MySaveHandler(IRequestContext context)
+    : base(context)
+{
+}
+```

@@ -3361,3 +3361,21 @@ public MySaveHandler(IRequestContext context)
 * Type `$1, Localizable(true)]` in `Replace` input
 
 * Click `Replace All`
+
+## Fix CustomerEndpoint.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H`
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `((.*)var\s*[a-zA-Z0-9_]*\s*=\s*new\s*DynamicDataReport\s*\(([a-zA-Z0-9_]*)\s*,\s*([a-zA-Z0-9_.]*)\s*,\s*typeof\(([a-zA-Z0-9_.]*)\s*\))\);` in `Find` input
+
+* Type `$1,\n$2\tHttpContext.RequestServices);` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*var\s*[a-zA-Z0-9_]*\s*=\s*)new\s*(ReportRepository)\(Context\)(.Render\(\s*([a-zA-Z0-9_]*)\);)` in `Find` input
+
+* Type `$1$2$3` in `Replace` input
+
+* Click `Replace All`

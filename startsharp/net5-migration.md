@@ -3578,3 +3578,7 @@ public MySaveHandler(IRequestContext context)
 * Type `$2$3ExceptionLog$4` input
 
 * Click `Replace All`
+
+## Fix DashboardIndex.cshtml
+
+* Replace `Texts.Site.Dashboard.ContentDescription` with `Texts.Site.Dashboard.ContentDescription.ToString(Localizer)`

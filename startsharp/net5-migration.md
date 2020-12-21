@@ -3608,3 +3608,9 @@ public MySaveHandler(IRequestContext context)
 * Type `$1sqlConnections$2` in `Replace` input
 
 * Click `Replace All`
+
+## Fix EmailIndex.cshtml
+
+* Add `@injeinject Serenity.ITextLocalizer Localizer`
+
+* Replace `Texts.Site.EmailClient.PageTitle` with `Texts.Site.EmailClient.PageTitle.ToString(Localizer)`

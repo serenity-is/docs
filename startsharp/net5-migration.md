@@ -3582,3 +3582,29 @@ public MySaveHandler(IRequestContext context)
 ## Fix DashboardIndex.cshtml
 
 * Replace `Texts.Site.Dashboard.ContentDescription` with `Texts.Site.Dashboard.ContentDescription.ToString(Localizer)`
+
+## Fix DashboardPage.cs
+
+* Add `using Serenity.Abstractions;`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `((.*)public\s*ActionResult\s*Index\()(\).*)` in `Find` input
+
+* Type `$1\n$2\t//<if:Northwind>\n$2\t[FromServices] ITwoLevelCache cache,\n$2\t[FromServices] ISqlConnections sqlConnections\n$2\t//</if:Northwind>\n$2\t)` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(((.*)var\s*[a-zA-Z0-9_]*\s*=\s*)Cache(.GetLocalStoreOnly\s*\([a-zA-Z0-9_""]*\s*,\s*TimeSpan.FromMinutes\(5\),))` in `Find` input
+
+* Type `$3if (cache is null)\n$3\tthrow new ArgumentNullException(nameof(cache));\n\n$3if (sqlConnections is null)\n$3\tthrow new ArgumentNullException(nameof(sqlConnections));\n\n$2cache$4` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)SqlConnections(.NewFor.*)` in `Find` input
+
+* Type `$1sqlConnections$2` in `Replace` input
+
+* Click `Replace All`

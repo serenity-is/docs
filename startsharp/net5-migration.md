@@ -3614,3 +3614,29 @@ public MySaveHandler(IRequestContext context)
 * Add `@injeinject Serenity.ITextLocalizer Localizer`
 
 * Replace `Texts.Site.EmailClient.PageTitle` with `Texts.Site.EmailClient.PageTitle.ToString(Localizer)`
+
+## Fix EmailPage.cs
+
+* Add `using Microsoft.Extensions.Caching.Memory;`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*public\s*ActionResult\s*Index\()(\).*)` in `Find` input
+
+* Type `$1[FromServices] IMemoryCache memoryCache$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)LocalCache(.*)Authorization.UserId(.*)` in `Find` input
+
+* Type `$1memoryCache?$2User.GetIdentifier()$3` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(var.*.GetAttachmentList.*)(\);)` in `Find` input
+
+* Type `$1$2,\n$1\tRequest.PathBase$3` in `Replace` input
+
+* Click `Replace All`

@@ -3641,7 +3641,7 @@ public MySaveHandler(IRequestContext context)
 
 * Click `Replace All`
 
-## Fix EmailPage.cs
+## Fix SqlExceptionHelper.cs
 
 * Add `using Microsoft.Data.SqlClient;`
 
@@ -3676,3 +3676,23 @@ public MySaveHandler(IRequestContext context)
 * Type `$1.ToString(localizer)$2` in `Replace` input
 
 * Click `Replace All`
+
+## Fix MailingBackgroundJob.cs
+
+* Add `using Microsoft.Extensions.Logging;`
+
+* Remove `private readonly IExceptionLogger logger;`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*)(public\s*MailingBackgroundJob\s*\(\s*ISqlConnections\s*[a-zA-Z0-9_]*,)\s*(IEmailSender\s*[a-zA-Z0-9_]*),\s*(IOptions<MailingServiceSettings>\s*[a-zA-Z0-9_]*),\s*IExceptionLogger.*` in `Find` input
+
+* Type `$1$2\n$1\t$3, $4,\n$1\tILogger<MailingBackgroundJob> log = null, IExceptionLogger exceptionLog = null)\n$1\t: base(log, exceptionLog)` in `Replace` input
+
+* Click `Replace All`
+
+* Remove `this.logger = logger;`
+
+* Replace `ex.Log(logger)` with `ex.Log(ExceptionLog)`

@@ -3640,3 +3640,39 @@ public MySaveHandler(IRequestContext context)
 * Type `$1$2,\n$1\tRequest.PathBase$3` in `Replace` input
 
 * Click `Replace All`
+
+## Fix EmailPage.cs
+
+* Add `using Microsoft.Data.SqlClient;`
+
+* Add `using Serenity;`
+
+* Remove `using System.Data.SqlClient;`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*HandleDeleteForeignKeyException\s*\(\s*Exception e)(\))` in `Find` input
+
+* Type `$1, ITextLocalizer localizer$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*ValidationError.*DeleteForeignKeyError)(,.*)` in `Find` input
+
+* Type `$1.ToString(localizer)$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*HandleSavePrimaryKeyException\s*\(\s*Exception e)\s*,(\s*string\s*[a-zA-Z0-9_]*.*)` in `Find` input
+
+* Type `$1, ITextLocalizer localizer,$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*ValidationError.*SavePrimaryKeyError)(,.*)` in `Find` input
+
+* Type `$1.ToString(localizer)$2` in `Replace` input
+
+* Click `Replace All`

@@ -20,6 +20,50 @@ To:
 
 > If you are using GIT it is recommended to stage your changes on every step to be able to undo your changes if you make a mistake during following steps as we'll do many bulk operations.
 
+
+## Changes in Usage of Serenity as Submodule Case
+
+If you use serenity as submodule instead nuget packages, you need update package reference, their condition paths paths and project reference paths.
+
+From:
+```xml
+<PackageReference Include="Serenity.Scripts" Version="3.14.5" />
+<PackageReference Include="Serenity.Web" Version="3.14.5" Condition="!Exists('..\..\Serenity\Serenity.Core\Serenity.Core.csproj')" />
+```
+To:
+```xml 
+<PackageReference Include="Serenity.Scripts" Version="5.0.0" />
+<PackageReference Include="Serenity.Web" Version="5.0.6" Condition="!Exists('..\..\Serenity\src\Serenity.Net.Core\Serenity.Net.Core.csproj')" />
+```
+
+From:
+```xml
+<ItemGroup Condition="Exists('..\..\Serenity\Serenity.Core\Serenity.Core.csproj')">
+  <ProjectReference Include="..\..\Serenity\Serenity.Core\Serenity.Core.csproj" />
+  <ProjectReference Include="..\..\Serenity\Serenity.Data.Entity\Serenity.Data.Entity.csproj" />
+  <ProjectReference Include="..\..\Serenity\Serenity.Data\Serenity.Data.csproj" />
+  <ProjectReference Include="..\..\Serenity\Serenity.Services\Serenity.Services.csproj" />
+  <ProjectReference Include="..\..\Serenity\Serenity.Web\Serenity.Web.csproj" />
+```
+To:
+```xml  
+<ItemGroup Condition="Exists('..\..\Serenity\src\Serenity.Net.Core\Serenity.Net.Core.csproj')">
+  <ProjectReference Include="..\..\Serenity\src\Serenity.Net.Core\Serenity.Net.Core.csproj" />
+  <ProjectReference Include="..\..\Serenity\src\Serenity.Net.Entity\Serenity.Net.Entity.csproj" />
+  <ProjectReference Include="..\..\Serenity\src\Serenity.Net.Data\Serenity.Net.Data.csproj" />
+  <ProjectReference Include="..\..\Serenity\src\Serenity.Net.Services\Serenity.Net.Services.csproj" />
+  <ProjectReference Include="..\..\Serenity\src\Serenity.Net.Web\Serenity.Net.Web.csproj" />
+```
+
+From:
+```xml
+<Import Project="$(SolutionDir)Serenity\tools\Submodule\Serenity.Submodule.AspNetCore.targets" Condition="Exists('$(SolutionDir)Serenity\tools\Submodule\Serenity.Submodule.AspNetCore.targets')" />
+```
+To:
+```xml
+<Import Project="$(SolutionDir)Serenity\build\submodule.targets" Condition="Exists('$(SolutionDir)Serenity\build\submodule.targets')" />
+```
+
 ## Changing References to Row with IRow interface
 
 Serenity base Row class is replaced with a generic row class which implements new IRow interface so any references in your project to old Row class should be replaced with IRow.
@@ -4104,3 +4148,220 @@ If you have a project created from a recent StartSharp template than make some c
 * Type `$1var $2 = processor.TemporaryFile;$3UploadStorage.SetOriginalName($2, file.FileName);` input
 
 * Click `Replace All`
+
+ 
+## Changes About SqlConnections Static Class for Dependency Injection
+
+For example `OrderDetailReport.cs` uses `SqlConnection` static class from `.Net3.1`. In `.Net5` we changed `SqlConnection` to instance class and it's can be injected via `DI`. For `OrderDetailReport.cs` we need to add a constructor what has property of `ISqlConnections` then if we assign this to `SqlConnection` property what type of `ISqlConnection`, then we didn't need any change in rest of document. You need to do this on all of your files what uses `SqlConnections` static class.
+
+From
+```cs
+[RequiredPermission(PermissionKeys.General)]
+public class OrderDetailReport : IReport, ICustomizeHtmlToPdf
+{
+    public Int32 OrderID { get; set; }
+ 
+    public object GetData()
+    {
+        var data = new OrderDetailReportData();
+        
+        //Gives error for SqlConnections
+        using (var connection = SqlConnections.NewFor<OrderRow>()) 
+        {
+            var o = OrderRow.Fields;
+```
+
+To
+```cs
+[RequiredPermission(PermissionKeys.General)]
+public class OrderDetailReport : IReport, ICustomizeHtmlToPdf
+{
+    public OrderDetailReport(ISqlConnections sqlConnections)
+    {
+        SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+    }
+
+    protected ISqlConnections SqlConnections { get; }
+    public int OrderID { get; set; }
+ 
+    public object GetData()
+    {
+        var data = new OrderDetailReportData();
+        //Works fine
+        using (var connection = SqlConnections.NewFor<OrderRow>())
+        {
+            var o = OrderRow.Fields;
+ 
+```
+
+## Changes in ReportsPage
+
+Reports page has a few changes too. You need to add constructor with dependencies
+
+Constructor
+```cs
+public IReportRegistry ReportRegistry { get; }
+protected ITextLocalizer Localizer { get; }
+
+public ReportRepository(IRequestContext context, IReportRegistry reportRegistry, ITextLocalizer localizer)
+        : base(context)
+{
+    ReportRegistry = reportRegistry ?? 
+        throw new ArgumentNullException(nameof(reportRegistry));
+    Localizer = localizer ?? throw new ArgumentNullException(nameof(localizer));
+}
+```
+
+Render method needs to be static
+
+From
+```cs
+public byte[] Render(IDataOnlyReport report) 
+{
+    ...
+}
+```
+
+To
+```cs
+public static byte[] Render(IDataOnlyReport report)
+{
+    ...
+}
+```
+
+`ReportTree.FromList` needs `localizer` as new parameter. Find this lines and add `localizer` parameter on it. 
+
+From
+```cs
+return ReportTree.FromList(reports, category);
+```
+To
+```cs
+return ReportTree.FromList(reports, Localizer, category);
+```
+
+`Retrieve` also changed. It's needs ekstra provider params. 
+
+From
+```cs
+public ReportRetrieveResult Retrieve(ReportRetrieveRequest request)
+{
+    request.CheckNotNull();
+
+    if (request.ReportKey.IsEmptyOrNull())
+        throw new ArgumentNullException("reportKey");
+
+    var reportInfo = ReportRegistry.GetReport(request.ReportKey);
+    if (reportInfo == null)
+        throw new ArgumentOutOfRangeException("reportKey");
+
+    if (reportInfo.Permission != null)
+        Authorization.ValidatePermission(reportInfo.Permission);
+
+    var response = new ReportRetrieveResult();
+
+    response.Properties = PropertyItemHelper.GetPropertyItemsFor(reportInfo.Type);
+    response.ReportKey = reportInfo.Key;
+    response.Title = reportInfo.Title;
+    var reportInstance = Activator.CreateInstance(reportInfo.Type);
+    response.InitialSettings = reportInstance;
+    response.IsDataOnlyReport = reportInstance is IDataOnlyReport;
+    response.IsExternalReport = reportInstance is IExternalReport;
+
+    return response;
+}
+```
+To
+```cs
+public ReportRetrieveResult Retrieve(ReportRetrieveRequest request,
+            IServiceProvider serviceProvider, IPropertyItemProvider propertyItemProvider)
+{
+    if (request is null)
+        throw new ArgumentNullException(nameof(request));
+
+    if (request.ReportKey.IsEmptyOrNull())
+        throw new ArgumentNullException(nameof(request.ReportKey));
+
+    if (propertyItemProvider is null)
+        throw new ArgumentNullException(nameof(propertyItemProvider));
+
+    var reportInfo = ReportRegistry.GetReport(request.ReportKey);
+    if (reportInfo == null)
+        throw new ArgumentOutOfRangeException(nameof(request.ReportKey));
+
+    if (reportInfo.Permission != null)
+        Permissions.ValidatePermission(reportInfo.Permission, Localizer);
+
+    var response = new ReportRetrieveResult
+    {
+        Properties = propertyItemProvider.GetPropertyItemsFor(reportInfo.Type).ToList(),
+        ReportKey = reportInfo.Key,
+        Title = reportInfo.Title
+    };
+    var reportInstance = ActivatorUtilities.CreateInstance(serviceProvider, reportInfo.Type);
+    response.InitialSettings = reportInstance;
+    response.IsDataOnlyReport = reportInstance is IDataOnlyReport;
+    response.IsExternalReport = reportInstance is IExternalReport;
+
+    return response;
+}
+```
+
+## ReportColumnConverter changes
+
+`ReportColumnConverter.ObjectTypeToList` needs 2 ekstra parameter for work. It's `ServiceProvider` and `Localizer`. You need add this parameters where it's used in class constructor. Then pass to this method. 
+
+Example constructor
+```cs
+protected ITextLocalizer Localizer { get; }
+protected IServiceProvider ServiceProvider { get; }
+
+public ExampleClass(ITextLocalizer localizer, IServiceProvider serviceProvider)
+{
+    Localizer = localizer ?? throw new ArgumentNullException(nameof(localizer));
+    ServiceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
+}
+```
+
+From
+```cs
+ReportColumnConverter.ObjectTypeToList(typeof(Item));
+```
+
+To
+```cs
+ReportColumnConverter.ObjectTypeToList(typeof(Item), ServiceProvider, Localizer);
+```
+
+## Fixing CustomerGrossSalesReport and SalesByDetailReport like classes
+
+Add constructor first like this.
+
+```cs
+protected ISqlConnections SqlConnections { get; }
+protected ITextLocalizer Localizer { get; }
+protected IServiceProvider ServiceProvider { get; }
+
+public CustomerGrossSalesReport(ISqlConnections sqlConnections, ITextLocalizer localizer, IServiceProvider serviceProvider)
+{
+    SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+    Localizer = localizer ?? throw new ArgumentNullException(nameof(localizer));
+    ServiceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
+}
+```
+
+Update `ReportColumnConverter` usages
+
+From
+```cs
+ReportColumnConverter.ObjectTypeToList(typeof(Item));
+```
+
+To
+```cs
+ReportColumnConverter.ObjectTypeToList(typeof(Item), ServiceProvider, Localizer);
+```
+
+Then add missing using `using Serenity;`
+

@@ -4030,6 +4030,11 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 
 * Click `Replace All`
 
+## Modify UserDataScript.cs
+
+If you have a project created from a recent StartSharp template than make some changes in the following:
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserDataScript.cs
+
 ## Fix FilePage.cs
 
 * Add `using Microsoft.AspNetCore.Http;`

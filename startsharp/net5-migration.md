@@ -3891,13 +3891,13 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 
 * Type `(.*)(result.Decorator\s*=\s*new\s*EnumDecorator\([a-zA-Z_]*.EnumType)(\);)` in `Find` input
 
-* Type `$1$2, localizer$3` input
+* Type `$1$2, localizer$3` in `Replace` input
 
 * Click `Replace All`
 
 * Type `(.*)([a-zA-Z_]*result.Title\s*=\s*[a-zA-Z_]*.)(Title)(;)` in `Find` input
 
-* Type `$1$2GetTitle(localizer)$4` input
+* Type `$1$2GetTitle(localizer)$4` in `Replace` input
 
 * Click `Replace All`
 
@@ -3909,4 +3909,15 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 * Replace `var row = obj as Row;` with `var row = obj as IRow;`
 * Replace `!Object.Equals(decorator.Value, value)` with `!Equals(decorator.Value, value)`
 
+## Modify UserPreferenceRepository.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*)(var\s*[a-zA-Z_]*\s*=\s*)(\(.*.*)(\;)` in `Find` input
+
+* Type `$1$2Convert.ToInt32(Context.User.GetIdentifier())$4` in `Replace` input
+
+* Click `Replace All`
 

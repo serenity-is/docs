@@ -3696,3 +3696,93 @@ public MySaveHandler(IRequestContext context)
 * Remove `this.logger = logger;`
 
 * Replace `ex.Log(logger)` with `ex.Log(ExceptionLog)`
+
+## Fix NavigationModel.cs
+
+* Add `using Microsoft.Extensions.DependencyInjection;`
+
+* Add `using Serenity.Abstractions;`
+
+* Add `using Serenity.Web;`
+
+* Add `using StartSharp.Administration.Entities;`
+
+* Remove `using System.Security.Claims;`
+
+* Remove `using System.Web;`
+
+* Remove `using System.Web.Hosting;`
+
+* Remove `var requestUrl = httpContext.Request.GetDisplayUrl();`
+
+* Add the following method
+```cs
+    public NavigationModel(HttpContext httpContext)
+          : this(
+              httpContext?.RequestServices?.GetRequiredService<ITwoLevelCache>(),
+              httpContext?.RequestServices?.GetRequiredService<IPermissionService>(),
+              httpContext?.RequestServices?.GetRequiredService<ITypeSource>(),
+              httpContext?.RequestServices,
+              httpContext?.User,
+              httpContext?.Request?.Path + httpContext?.Request?.QueryString,
+              httpContext?.Request?.PathBase ?? "")
+    {
+    }
+```
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*public\s*)partial\s*(class\s*NavigationModel\r\n\s*{\r\n(\s*))` in `Find` input
+
+* Type `$1$2public IPermissionService Permissions { get; }\n$3public HttpContext HttpContext { get; }\n$3public string RequestUrl { get; }\n$3public PathString PathBase { get; }\n$3` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(public\s*NavigationModel\()(\))(\r\n\s*{)(\r\n\s*)` in `Find` input
+
+* Type `$1$2ITwoLevelCache cache, IPermissionService permissions,$5ITypeSource typeSource, IServiceProvider services, ClaimsPrincipal user,$5string requestUrl, PathString pathBase)$4$5if (cache is null)$5\tthrow new ArgumentNullException(nameof(cache));$5$5` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(Items\s*=\s*)Cache(.*)\(Authorization.UserId\s*\?\?\s*""-1""\)(,\s*TimeSpan.Zero,)` in `Find` input
+
+* Type `$1$2cache$3\n\t$1\t(user?.GetIdentifier() ?? "-1")$4` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(NavigationHelper.GetNavigationItems\s*\()\s*(x\s*=>\s*)\r\n\s*(x\s*\!=\s*.*StartsWith.*\?)\s*(VirtualPathUtility.ToAbsolute.*)` in `Find` input
+
+* Type `$1$2permissions, typeSource,\n$1\tservices, $3$4\n$1\t\t$5` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(SetActivePath\s*\(\s*\);)` in `Find` input
+
+* Type `$1RequestUrl = requestUrl;\n$1PathBase = pathBase;\n$1$2` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)var\s*.*.HttpContext;\r\n\s*if\s*\(\s*httpContext\s*\!=\s*null\s*\)` in `Find` input
+
+* Type `$1if (RequestUrl != null)` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*currentUrl\s*=\s*)requestUrl.ToString\(\);` in `Find` input
+
+* Type `$1RequestUrl;` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(if\s*\(\s*\!)requestUrl.ToString\(\)(.EndsWith\(""/""\)\s*&&\r\n\s*)String(.Compare\()httpContext.Request.Path,\s*\r\n\s*.*.ApplicationVirtualPath(,.*OrdinalIgnoreCase\s*\)\s*==\s*0\))` in `Find` input
+
+* Type `$1$2currentUrl$3string$4currentUrl.Split('?')[0], PathBase$5` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*VirtualPathUtility.ToAbsolute\s*\()([a-zA-Z0-9_]*\))` in `Find` input
+
+* Type `$1PathBase, $2` in `Replace` input
+
+* Click `Replace All`

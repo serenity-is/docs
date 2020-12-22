@@ -3696,3 +3696,207 @@ public MySaveHandler(IRequestContext context)
 * Remove `this.logger = logger;`
 
 * Replace `ex.Log(logger)` with `ex.Log(ExceptionLog)`
+
+
+## Modify DynamicDataReport.cs
+
+* Add `using Microsoft.Extensions.DependencyInjection;`
+* Add `using Serenity.Abstractions;`
+* Add `using Serenity.ComponentModel;`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `((.*)(protected\s*Type\s*.*{\s*)get;\s*private\s*.*})` in `Find` input
+
+* Type `$1\n$2protected IServiceProvider serviceProvider;` input
+
+* Click `Replace All`
+
+* Find this method `DynamicDataReport()` line 
+```cs
+public DynamicDataReport(IEnumerable data, IEnumerable<string> columnList, Type columnsType)
+```
+and add this line above method `DynamicDataReport()`
+```cs
+const string CacheGroupKey = "DynamicDataReportColumns";
+```
+
+* Add a parameter as (4th parameter) `IServiceProvider serviceProvider` into the same method `DynamicDataReport()` and replace inside of that method line in the following:
+```cs
+public DynamicDataReport(IEnumerable data, IEnumerable<string> columnList, Type columnsType, IServiceProvider serviceProvider)
+{ 
+    Data = data ?? throw new ArgumentNullException(nameof(data));
+    ColumnList = columnList ?? new List<string>();
+    ColumnsType = columnsType;
+    this.serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
+} 
+```
+
+* Type `(.*)(var\s*[a-zA-Z|]*\s=\s*new\s*List.*;)` in `Find` input
+
+* Type `$1return GetColumnListFor(ColumnsType, ColumnList, serviceProvider);\n\t\t}\n\n\t\tpublic static List<ReportColumn> GetColumnListFor(Type columnsType,\n$1IEnumerable<string> columnOrder, IServiceProvider serviceProvider)\n\t\t{\n$1if (columnsType == null)\n$1\tthrow new ArgumentNullException(nameof(columnsType));` input
+
+* Click `Replace All`
+
+* Type `(.*)(if\s*\(!ColumnList.Any\(*.*\))` in `Find` input
+
+* Type `$1var list = new List<ReportColumn>();\n$1if (columnOrder != null && !columnOrder.Any())` input
+
+* Click `Replace All`
+
+* Type `(.*)(IDictionary<string,\s*)(.*Items\s*=\s*null;)` in `Find` input
+
+* Type `$1List<$3\n$1IDictionary<string, PropertyItem> propertyItemByName = null;` input
+
+* Click `Replace All`
+
+* Find this line `IRow basedOnRow = null;` and under that line find the if block
+```cs
+if (columnsType != null)
+``` 
+and customize that if block like in the following (customize your codes if variables or etc. need some changes):
+```cs
+if (columnsType != null)
+{
+    var cache = serviceProvider.GetRequiredService<ITwoLevelCache>();
+    propertyItems = cache.GetLocalStoreOnly("DynamicDataReport:Columns:" + columnsType.FullName,
+        TimeSpan.Zero, CacheGroupKey, () =>
+        {
+            var propertyItemProvider = serviceProvider.GetRequiredService<IPropertyItemProvider>();
+            var items = propertyItemProvider.GetPropertyItemsFor(columnsType).ToList();
+
+            if (typeof(ICustomizedFormScript).IsAssignableFrom(columnsType))
+            {
+                var instance = ActivatorUtilities.CreateInstance(serviceProvider, columnsType) as ICustomizedFormScript;
+                instance.Customize(items);
+            }
+
+            return items;
+        });
+
+    propertyItemByName = propertyItems.ToDictionary(x => x.Name);
+    propertyInfos = columnsType.GetProperties().ToDictionary(x => x.Name);
+
+    var basedOnAttr = columnsType.GetCustomAttribute<BasedOnRowAttribute>();
+    if (basedOnAttr != null &&
+        basedOnAttr.RowType != null &&
+        !basedOnAttr.RowType.IsInterface &&
+        !basedOnAttr.RowType.IsAbstract &&
+        typeof(IRow).IsAssignableFrom(basedOnAttr.RowType))
+    {
+        basedOnRow = (IRow)Activator.CreateInstance(basedOnAttr.RowType);
+    }
+}
+``` 
+
+* Type `(.*)(foreach\s*\(var\s*columnName\s*in\s*ColumnList\))` in `Find` input
+
+* Type `$1if (columnOrder == null)\n$1\tcolumnOrder = propertyItems.Select(x => x.Name).ToList();\n\n$1foreach (var columnName in columnOrder)` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(PropertyItem\s*item;\r\n\s*.*.*\))` in `Find` input
+
+* Type `$1if (!propertyItemByName.TryGetValue(columnName, out PropertyItem item))` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(var\s*basedOnField\s*=\s*.*\?\s*)(\(Field\))(null\s*:)` in `Find` input
+
+* Type `$1$2$4` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(PropertyInfo\s*p;)\r\n\s*.*\)` in `Find` input
+
+* Type `$1if (propertyInfos == null || !propertyInfos.TryGetValue(columnName, out PropertyInfo p))` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(list.Add\(.*.*\sp)(\)\);)` in `Find` input
+
+* Type `$1$2, serviceProvider, serviceProvider.GetRequiredService<ITextLocalizer>()$3` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(private\s*ReportColumn\s*.*\))` in `Find` input
+
+* Type `$1public static ReportColumn FromPropertyItem(PropertyItem item, Field field, PropertyInfo property,\n$1\tIServiceProvider provider, ITextLocalizer localizer)\n$1{\n$1\tif (item is null)\n$1\t\tthrow new ArgumentNullException(nameof(item));\n\n$1\tif (localizer is null)\n$1\t\tthrow new ArgumentNullException(nameof(localizer));\n\n$1\tvar result = new ReportColumn` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(var\s*result\s*=\s*new\s*ReportColumn)(\r\n\s*{)(\r\n\s*var.*\r\n\s*.*\r\n\s*.*.*;)` in `Find` input
+
+* Type `$1$2\n$1{\n$1\tName = item.Name,\n$1\tTitle = item.Title ?? item.Name\n$1};\n` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(result.Title\s*=\s*)(L)(.*.*;)` in `Find` input
+
+* Type `$1$2l$4` in `Replace` input
+
+* Click `Replace All`
+
+* Find this if block and
+```cs
+if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
+{
+    result.Format = item.DisplayFormat;
+}
+```
+replace like in the following lines:
+```cs
+if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
+{
+    if (item.FormatterType == "Date" || item.FormatterType == "DateTime")
+    {
+        result.Format = item.DisplayFormat switch
+        {
+            "d" => DateHelper.CurrentDateFormat,
+            "g" => DateHelper.CurrentDateTimeFormat.Replace(":ss", ""),
+            "G" => DateHelper.CurrentDateTimeFormat,
+            "s" => "yyyy-MM-ddTHH:mm:ss",
+            "u" => "yyyy-MM-ddTHH:mm:ss.fffZ",
+            _ => item.DisplayFormat,
+        };
+    }
+    else
+        result.Format = item.DisplayFormat;
+}
+```
+
+* Type `(!ReferenceEquals\(null,\s*[a-zA-Z|]*\)\s*&&)` in `Find` input
+
+* Type `dtf is object &&` in `Replace` input
+
+* Click `Replace All`
+
+* Replace `else if (!ReferenceEquals(null, dtf))` with `else if (dtf is object)`
+
+* Replace `if (!ReferenceEquals(null, field))` with `if (field is object)`
+
+* Replace `result.DataType = !ReferenceEquals(null, field) ? field.ValueType : null;` with `result.DataType = field?.ValueType;`
+
+* Type `(.*)(result.Format\s=\s*)("")(.*.*;)` in `Find` input
+
+* Type `$1$2DateHelper.CurrentDateTimeFormat;` in `Replace` input
+
+* Click `Replace All`
+
+* Type `(.*)(var\s*[a-zA-Z_]*\s*=\s*[a-zA-Z_]*\s*as\s*.*.\r\n\s*.*[a-zA-Z_]*.*.*[a-zA-Z_]*.*EnumType.*\))` in `Find` input
+
+* Type `$1if (field is IEnumTypeField enumField && enumField.EnumType != null)` in `Replace` input
+
+* Type `(.*)(result.Decorator\s*=\s*new\s*EnumDecorator\([a-zA-Z_]*.EnumType)(\);)` in `Find` input
+
+* Type `$1$2, localizer$3` input
+
+* Click `Replace All`
+
+* Type `(.*)([a-zA-Z_]*result.Title\s*=\s*[a-zA-Z_]*.)(Title)(;)` in `Find` input
+
+* Type `$1$2GetTitle(localizer)$4` input
+
+* Click `Replace All`

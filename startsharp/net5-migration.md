@@ -4029,3 +4029,73 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 * Type `$1$2, localizer$3` input
 
 * Click `Replace All`
+
+## Fix FilePage.cs
+
+* Add `using Microsoft.AspNetCore.Http;`
+
+* Remove `using System.Web;`
+
+* Remove `using HttpContextBase = Microsoft.AspNetCore.Http.HttpContext;`
+
+* Add the following code block
+```cs
+    public FileController(IUploadStorage uploadStorage, ITextLocalizer localizer)
+    {
+        UploadStorage = uploadStorage ??
+            throw new ArgumentNullException(nameof(uploadStorage));
+        Localizer = localizer ??
+            throw new ArgumentNullException(nameof(localizer));
+    }
+
+    protected IUploadStorage UploadStorage { get; }
+    protected ITextLocalizer Localizer { get; }
+```
+
+* Replace `this.HttpContext` with `HttpContext`
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `UploadHelper(.CheckFileNameSecurity.*)` in `Find` input
+
+* Type `UploadPathHelper$1` input
+
+* Click `Replace All`
+
+* Type `(.*)var\s*[a-zA-Z0-9_]*\s*=\s*UploadHelper.DbFilePath\((.*)\);(\r\n\s*)(var\s*[a-zA-Z0-9_]*\s*=\s*KnownMimeTypes.Get\().*(\);)\r\n\s*return\s*new\s*PhysicalFileResult.*` in `Find` input
+
+* Type `$1if (!UploadStorage.FileExists($2))$3\treturn new NotFoundResult();\n$3$4$2$5$3var stream = UploadStorage.OpenFile($2);$3return new FileStreamResult(stream, mimeType);` input
+
+* Click `Replace All`
+
+* Type `(.*VirtualPathUtility.ToAbsolute).*(\r\n\s*).*UploadHelper.ImageFileUrl(.*TemporaryFile).*` in `Find` input
+
+* Type `$1(HttpContext,$2UploadStorage.GetFileUrl$3))` input
+
+* Click `Replace All`
+
+* Type `(.*HandleUploadRequest\s*\(\s*)HttpContextBase` in `Find` input
+
+* Type `$1HttpContext` input
+
+* Click `Replace All`
+
+* Type `(.*new\s*UploadProcessor)(\r\n\s*{)` in `Find` input
+
+* Type `$1(UploadStorage)$2` input
+
+* Click `Replace All`
+
+* Type `(.*)(if\s*\(.*ProcessStream.*OpenReadStream.*)(Path.GetExtension\s*\(\s*.*FileName\)).*` in `Find` input
+
+* Type `$1$2\n$1\t$3, Localizer))` input
+
+* Click `Replace All`
+
+* Type `(.*)var\s*([a-zA-Z0-9_]*)\s*=.*Path.GetFileName.*(\r\n\s*)using.*StreamWriter.*OpenWrite.*DbFilePath.*\r\n\s*.*WriteLine.*FileName.*` in `Find` input
+
+* Type `$1var $2 = processor.TemporaryFile;$3UploadStorage.SetOriginalName($2, file.FileName);` input
+
+* Click `Replace All`

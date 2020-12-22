@@ -4011,3 +4011,21 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 * Type `$1PathBase, $2` in `Replace` input
 
 * Click `Replace All`
+
+## Modify ReportTree.cs
+
+* Open `Replace` dialog in Visual Studio `Ctrl+H` (be sure that `Current Document` is selected)
+
+* Make sure `Match case` is Checked, `Match whole word` is NOT checked and `Use regular expressions` is Checked.
+
+* Type `(.*public\s*static\s*ReportTree.*Report\>\s*reports,\s*)(\r\n\s*)` in `Find` input
+
+* Type `$1ITextLocalizer localizer,$2` input
+
+* Click `Replace All`
+
+* Type `(.*.GetReportCategoryTitle\s*\()([a-zA-Z0-9_]*\s*)(\);)` in `Find` input
+
+* Type `$1$2, localizer$3` input
+
+* Click `Replace All`

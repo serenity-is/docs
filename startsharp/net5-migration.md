@@ -4029,3 +4029,8 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 * Type `$1$2, localizer$3` input
 
 * Click `Replace All`
+
+## Modify UserDataScript.cs
+
+If you have a project created from a recent StartSharp template than make some changes in the following:
+* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserDataScript.cs

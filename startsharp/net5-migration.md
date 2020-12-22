@@ -3900,3 +3900,13 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 * Type `$1$2GetTitle(localizer)$4` input
 
 * Click `Replace All`
+
+## Modify ExcelReportGenerator.cs
+
+* Remove `using Serenity.Reflection;`
+* Remove `using System.Runtime.InteropServices;`
+* Replace `var worksheet = package.Workbook.Worksheets.Add(sheetName);` with `var worksheet = workbook.Worksheets.Add(sheetName);`
+* Replace `var row = obj as Row;` with `var row = obj as IRow;`
+* Replace `!Object.Equals(decorator.Value, value)` with `!Equals(decorator.Value, value)`
+
+

@@ -29,11 +29,14 @@ From:
 ```xml
 <PackageReference Include="Serenity.Scripts" Version="3.14.5" />
 <PackageReference Include="Serenity.Web" Version="3.14.5" Condition="!Exists('..\..\Serenity\Serenity.Core\Serenity.Core.csproj')" />
+<PackageReference Include="Serenity.Web.Assets" Version="3.14.4" />
 ```
 To:
 ```xml 
 <PackageReference Include="Serenity.Scripts" Version="5.0.0" />
 <PackageReference Include="Serenity.Web" Version="5.0.6" Condition="!Exists('..\..\Serenity\src\Serenity.Net.Core\Serenity.Net.Core.csproj')" />
+<PackageReference Include="Serenity.Web.Assets" Version="3.14.4" />
+<PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.1" />
 ```
 
 From:
@@ -4365,3 +4368,111 @@ ReportColumnConverter.ObjectTypeToList(typeof(Item), ServiceProvider, Localizer)
 
 Then add missing using `using Serenity;`
 
+## EmailEndpoint.cs fixes
+
+add extra usings
+
+```cs 
+using Microsoft.Extensions.DependencyInjection; 
+using Serenity.Abstractions;
+```
+
+`Serenity.Authorization` changed to `User.Identity` so you need to change it everywhere where you use `Serenity.Authorization`. 
+
+For `Serenity.Authorization.Username` you need to use `User?.Identity?.Name`
+For `Serenity.Authorization.UserId` you need to use `User?.GetIdentifier()`
+
+`LocalCache.Get<object>(...)` changed to `Context.Cache.Memory.Get<object>(...)` you need change every old usage to new one. 
+
+### Exception logging has new parameter
+
+From
+```cs 
+...
+catch (Exception ex)
+{
+    ex.Log();
+}
+```
+
+To
+```cs 
+...
+catch (Exception ex)
+{
+    ex.Log(HttpContext?.RequestServices?.GetService<IExceptionLogger>());
+}
+```
+
+
+### `ParseMulti` method changed to static
+
+From
+```cs
+private IEnumerable<InternetAddress> ParseMulti(string s, bool ignore = false)
+```
+To
+```cs
+private static IEnumerable<InternetAddress> ParseMulti(string s, bool ignore = false)
+```
+
+### `AttachEmbeddedImages` changed to static and new parameters added
+
+From
+```cs 
+private string AttachEmbeddedImages(BodyBuilder builder, string body)
+```
+To
+```cs
+private static string AttachEmbeddedImages(BodyBuilder builder, string body, IUploadStorage uploadStorage, PathString pathBase)
+```
+
+You need to change everywhere where `VirtualPathUtility.ToAbsolute` used without `basePath` like this example
+
+From
+```cs
+string search = src + VirtualPathUtility.ToAbsolute("~/upload/");
+```
+
+To
+```cs
+string search = src + VirtualPathUtility.ToAbsolute(pathBase, "~/upload/");
+```
+
+`UploadHelper` changed to `UploadPathHelper`.
+
+### `Reply` and `Compose` method has new parameters
+
+From
+```cs
+public EmailReplyResponse Reply(EmailReplyRequest request)
+```
+
+To
+```cs
+public EmailReplyResponse Reply(EmailReplyRequest request, [FromServices] IUploadStorage uploadStorage, [FromServices] IUserRetrieveService userRetriever)
+```
+
+From
+```cs
+public ServiceResponse Compose(EmailComposeRequest request)
+```
+
+To
+```cs
+public ServiceResponse Compose(EmailComposeRequest request, [FromServices] IUploadStorage uploadStorage, [FromServices] IUserRetrieveService userRetriever)
+```
+
+### `GetAttachmentList` has new parameter `pathBase`
+
+From
+```cs
+public static AttachmentList GetAttachmentList(MimeMessage message, string folderName, uint uniqueId, bool forReply)
+```
+
+To
+```cs
+public static AttachmentList GetAttachmentList(MimeMessage message, string folderName, uint uniqueId, bool forReply, PathString pathBase)
+```
+
+There is some more changes you can find in [EmailEndpoint.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Common/EmailClient/EmailEndpoint.cs) File in StartSharp template

@@ -168,4 +168,5 @@
     * [Migrating from Serene to StartSharp](startsharp/serene-upgrade-migrate.md)
     * [Inplace Upgrading Serene to StartSharp](startsharp/serene-upgrade-inplace.md)
     * [Updating StartSharp](startsharp/updating-startsharp.md)
+	* [Migrating to Serenity 5 / .NET 5](startsharp/net5-migration.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)

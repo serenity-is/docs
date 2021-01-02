@@ -1,6 +1,16 @@
 # Upgrading to Serenity.NET 5
 
-This document outlines steps required to upgrade an existing Serenity .NET Core 3.1 based project to Serenity.NET 5.0 
+This document outlines steps required to upgrade an existing Serenity .NET Core 3.1 based project (3.14.x) to Serenity.NET 5.0 (5.0.12)
+
+> If you have to not migrated from ASP.NET MVC to ASP.NET Core yet, please follow this document first:
+>
+> [ASP.NET MVC to Core Migration](mvc-to-core.md)
+
+## Using Stargen
+
+StartSharp customers may follow instructions in this document to use *Stargen*:
+
+* [Upgrading using Stargen](stargen.md)
 
 ## Editing Project File
 

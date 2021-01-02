@@ -135,6 +135,11 @@
       * [TemplatedWidget Class](widgets/templated_widget_class.md)
       * [TemplatedDialog Class](widgets/templated_dialog_class.md)
   * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
+* Migration
+  * [Introduction](migration/README.md)
+  * [Stargen](migration/stargen.md)
+  * [3.14.x to 5.0.12](migration/v3-to-v5.md)
+  * [Asp.Net MVC to Core](migration/mvc-to-core.md)
 * StartSharp
   * [Introduction](startsharp/README.md)
   * Features
@@ -168,5 +173,4 @@
     * [Migrating from Serene to StartSharp](startsharp/serene-upgrade-migrate.md)
     * [Inplace Upgrading Serene to StartSharp](startsharp/serene-upgrade-inplace.md)
     * [Updating StartSharp](startsharp/updating-startsharp.md)
-	* [Migrating to Serenity 5 / .NET 5](startsharp/net5-migration.md)
 * [Used Tools & Libraries](getting_started/used_tools_and_libraries.md)

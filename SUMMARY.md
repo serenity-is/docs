@@ -138,6 +138,7 @@
 * Migration
   * [Introduction](migration/README.md)
   * [Stargen](migration/stargen.md)
+  * [5.0.12 to 5.0.20](migration/v5-0-12-to-v5-0-20.md)
   * [3.14.x to 5.0.12](migration/v3-to-v5.md)
   * [Asp.Net MVC to Core](migration/mvc-to-core.md)
 * StartSharp

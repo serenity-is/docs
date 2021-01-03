@@ -1,6 +1,8 @@
 # Stargen
 
-Stargen is a tool we provide for StartSharp customers, which automates updates / migrations listed under Migrations section (starting from 3.14.x to 5.0.12 migration).
+Stargen is a tool we provide for StartSharp customers, which automates updates / upgrades (migrations) listed under Migrations section (starting from 3.14.x to 5.0.12 migration).
+
+> When it runs, Stargen automatically updates *Serenity* packages and *dotnet sergen* tool to their latest versions. This works even when there are no pending upgrades.
 
 Please note that **Stargen** is a *simple regex based* search / replace tool, not an intelligent system. Even though we try to handle many edge cases and the tool has an extensive suit of tests, there is still a possibility for the tool to break your code and result in losing some of your customizations. The risk increases with the amount of customizations made to the StartSharp code, and how old a template your project was initially created from.
 
@@ -59,13 +61,11 @@ Overwritten files can be restored from: C:\Users\yourusername\Documents\stargen\
 
 If everything went good, you may now open your project and try clean / rebuild.
 
-There may be some errors left if you have customizations in your code, in that case, please follow the notes in *Migration* section on Serenity docs:
+There may be some errors left if you have customizations in your code, in that case, please follow the upgrade notes in *Migration* section on left navigation.
 
-https://serenity/docs/migration
+## Checking Applied Upgrades
 
-## Checking Applied Migrations
-
-Stargen display the applied migrations during execution and it also records them in *sergen.json* file:
+Stargen display the applied upgrades during execution and it also records them in *sergen.json* file:
 
 ```json
 {
@@ -78,4 +78,4 @@ Stargen display the applied migrations during execution and it also records them
 }
 ```
 
-Using this information, stargen avoids running a migration when it runs a second time if it was already applied to the project.
+Using this information, stargen avoids running an upgrade when it runs a second time if it was already applied to the project.

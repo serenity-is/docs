@@ -59,12 +59,37 @@ dotnet add package Serenity.Pro.Scripts
 
 ### Updating Feature Packages
 
-If you have common / premium feature packages like `Serenity.Demo.ThemeSamples` etc in your project, you need to also update them (otherwise you shouldn't):
+If you have common / premium feature packages like `Serenity.Demo.ThemeSamples` etc in your project, you'll need to also update them (otherwise you shouldn't):
 
 ```cmd
 dotnet add package Serenity.Demo.ThemeSamples
 ```
 
+### Updating Sergen (Serenity Code Generator)
+
+`Sergen` is a `dotnet tool` which is used to generate new entities / services / pages, and also integrated with the build process to perform some transformations and share types between `TypeScript` and `C#` code.
+
+Run the following command to update `sergen`:
+
+```cmd
+dotnet tool update sergen
+```
+
+## Copying Content to wwwroot with `dotnet sergen restore`
+
+This part is `critical` and is usually ignored or forgotten by some users leading to `runtime script errors`. 
+
+Normally .NET Core NuGet packages can no longer have content like scripts, css and have them copied to project itself e.g. to `wwwroot` folder in ASP.NET Core projects. 
+
+We implemented a workaround for that limitation by using `sergen`. Everytime you update `Serenity` packages you should run the following command:
+
+```cmd
+dotnet sergen restore
+```
+
+Otherwise you'll still be using old versions of Serenity and other third party scripts / css files.
+
+> We are migrating from `Content` files to `Razor Library Static Web Assets` feature and this will not be necessary in the future.
 
 ## Applying Upgrades (Migration)
 

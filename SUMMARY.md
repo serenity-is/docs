@@ -135,6 +135,10 @@
       * [TemplatedWidget Class](widgets/templated_widget_class.md)
       * [TemplatedDialog Class](widgets/templated_dialog_class.md)
   * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
+* .NET API Documentation
+  * [Serenity.Net.Core](api/dotnet/Serenity.Net.Core.md)
+  * [Serenity.Net.Data](api/dotnet/Serenity.Net.Data.md)
+  * [Serenity.Net.Entity](api/dotnet/Serenity.Net.Entity.md)
 * Migration
   * [Introduction](migration/README.md)
   * [Stargen](migration/stargen.md)

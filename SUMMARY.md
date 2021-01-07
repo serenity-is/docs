@@ -136,9 +136,9 @@
       * [TemplatedDialog Class](widgets/templated_dialog_class.md)
   * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
 * .NET API Documentation
-  * [Serenity.Net.Core](api/dotnet/Serenity.Net.Core.md)
-  * [Serenity.Net.Data](api/dotnet/Serenity.Net.Data.md)
-  * [Serenity.Net.Entity](api/dotnet/Serenity.Net.Entity.md)
+  * [Serenity.Net.Core](api/dotnet/Serenity.Net.Core/)
+  * [Serenity.Net.Data](api/dotnet/Serenity.Net.Data/)
+  * [Serenity.Net.Entity](api/dotnet/Serenity.Net.Entity/)
 * Migration
   * [Introduction](migration/README.md)
   * [Stargen](migration/stargen.md)

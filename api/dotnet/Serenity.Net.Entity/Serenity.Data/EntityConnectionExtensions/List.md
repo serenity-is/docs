@@ -1,0 +1,47 @@
+# EntityConnectionExtensions.List&lt;TRow&gt; method (1 of 3)
+**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
+
+```csharp
+public static List<TRow> List<TRow>(this IDbConnection connection)
+    where TRow : class, IRow, new()
+```
+
+## See Also
+
+* class [TRow](../Serenity.Net.Entity/../EntityConnectionExtensions.TRow.md)
+* interface [IRow](../IRow.md)
+* class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
+
+---
+
+# EntityConnectionExtensions.List&lt;TRow&gt; method (2 of 3)
+**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
+
+```csharp
+public static List<TRow> List<TRow>(this IDbConnection connection, Action<SqlQuery> editQuery)
+    where TRow : class, IRow, new()
+```
+
+## See Also
+
+* class [TRow](../Serenity.Net.Entity/../EntityConnectionExtensions.TRow.md)
+* class [SqlQuery](../Serenity.Net.Data/../SqlQuery.md)
+* interface [IRow](../IRow.md)
+* class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
+
+---
+
+# EntityConnectionExtensions.List&lt;TRow&gt; method (3 of 3)
+**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
+
+```csharp
+public static List<TRow> List<TRow>(this IDbConnection connection, ICriteria where)
+    where TRow : class, IRow, new()
+```
+
+## See Also
+
+* class [TRow](../Serenity.Net.Entity/../EntityConnectionExtensions.TRow.md)
+* interface [ICriteria](../Serenity.Net.Data/../../Serenity/ICriteria.md)
+* interface [IRow](../IRow.md)
+* class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

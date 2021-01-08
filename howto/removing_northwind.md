@@ -1,6 +1,8 @@
 
 # How To: Remove Northwind & Other Samples From Serene
 
+> This section will be updated for Serenity v5
+
 After you take Northwind as a sample, and develop your own project, you would want to remove Northwind module, and other sample artifacts from your project. 
 
 Here is how to get rid of them.

@@ -10,7 +10,7 @@ https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityA
 
 Click *Download* to transfer VSIX file to your computer.
 
-**You need Visual Studio 2019 to run Serene as ASP.NET Core 3.1 SDK only supports Visual Studio 2019 with latest updates.**
+**You need Visual Studio 2019 to run Serene as ASP.NET Core 5 SDK only supports Visual Studio 2019 with latest updates.**
 
 > There is also an ASP.NET MVC version that could run in Visual Studio 2017 but it is obsolete, not supported and not updated anymore. 
 > https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneMvc

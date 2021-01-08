@@ -1,5 +1,7 @@
 # Code Generator (Sergen)
 
+> This section will be updated for Serenity v5
+
 Sergen has some extra options that you may set through its configuration file (Serenity.CodeGenerator.config) in your solution directory.
 
 Here is the full set of options:

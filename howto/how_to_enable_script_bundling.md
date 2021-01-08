@@ -1,5 +1,7 @@
 # How To: Enable Script Bundling
 
+> This section will be updated for Serenity v5
+
 In Serene template there are about 3MB+ of javascript files which are included by default in _LayoutHead.cshtml.
 
 This might cause bandwidth and performance problems for some systems, especially when a Serenity based site is accessed from mobile devices.

@@ -2,7 +2,7 @@
 
 ## Code Generator (Sergen)
 
-** Should I regenerate code after adding fields to my table:**
+**Should I regenerate code after adding fields to my table:**
 
 It's recommended to only generate code once. You should add new fields to row, column and form classes manually, taking existing fields as a sample.
 
@@ -10,7 +10,7 @@ But if you made too many changes, and want to generate code again it is possible
 
 ___
 
-** I'm having an error in Sergen about KDiff3. Where to set its location: **
+**I'm having an error in Sergen about KDiff3. Where to set its location:**
 
 Sergen looks for KDiff3 at its default location under Program Files directory. Install it if you didn't yet.
 
@@ -19,7 +19,7 @@ If Kdiff3 is at another location, edit Serenity.CodeGenerator.config in your sol
 
 ## Permissions
 
-** I want to separate INSERT permission from UPDATE permission **:
+**I want to separate INSERT permission from UPDATE permission**:
 
 Instead of [ModifyPermission] attribute use [InsertPermission] and [UpdatePermission] attributes on rows.
 
@@ -50,7 +50,7 @@ For LIST / RETRIEVE, only one permission is checked:
 
 ## Publishing and Deployment
 
-** How can i publish Serenity applications: **
+**How can i publish Serenity applications:**
 
 Serenity applications are x-copy deployable. You just need to setup connection strings after deployment. You might exclude source files from deployment.
 
@@ -64,7 +64,7 @@ Serenity uses a NuGet version of ASP.NET MVC, so there is no need to install MVC
 
 ## Forms and Editors
 
-** How to allow negative values in DecimalEditor: **
+**How to allow negative values in DecimalEditor:**
 
 In *DecimalEditor* attribute set *MinValue* and *MaxValue* properties:
 
@@ -75,11 +75,11 @@ public Decimal MyProperty { get; set; }
 > Make sure you use same number of digits for min and max value.
 
 
-** How can i reload/refresh a lookup editor data **
+**How can i reload/refresh a lookup editor data**
 
 Use *Q.ReloadLookup("MyModule.MyLookupKey")* to reload a lookup by its key.
 
-** How to create filter editor for an Enum: **
+**How to create filter editor for an Enum:**
 
 ```cs
 AddEqualityFilter<EnumEditor>(SomeRow.Fields.TheEnumField,
@@ -88,7 +88,7 @@ AddEqualityFilter<EnumEditor>(SomeRow.Fields.TheEnumField,
 
 ___
 
-** How to set current date in a date editor in new record mode: **
+**How to set current date in a date editor in new record mode:**
 
 Add [DefaultValue("today")] for date, or [DefaultValue("now")] for date time editor in form declaration.
 

@@ -1,7 +1,7 @@
 # How To: Use a SlickGrid Formatter
 
 
-** This section is pending update for TypeScript **
+**This section is pending update for TypeScript**
 
 
 

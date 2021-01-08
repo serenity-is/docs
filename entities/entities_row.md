@@ -1,5 +1,6 @@
 # Entities (Row)
 
+> This section will be updated for Serenity v5
 
 Serenity entity system is a micro-orm that is in love with SQL just like Dapper. 
 

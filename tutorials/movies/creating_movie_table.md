@@ -93,7 +93,7 @@ By default, Serene template runs all migrations in *MovieTutorial.Migrations.Def
 
 The code that runs migrations are in *Initialization/Startup.cs* and *Initialization/DataMigrations.cs* files:
 
-** DataMigrations.cs**:
+**DataMigrations.cs**:
 ```cs
 
 namespace MovieTutorial

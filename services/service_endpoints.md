@@ -1,5 +1,7 @@
 # Service Endpoints
 
+> This section will be updated for Serenity v5
+
 In Serenity, Service Endpoints are a subclass of ASP.NET MVC controllers.
 
 Here is an excerpt from Northwind OrderEndpoint:

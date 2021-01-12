@@ -1462,7 +1462,7 @@ services.AddSingleton<IAuthorizationService, AuthorizationService>();
 AuthorizationService class in under Initialization folder should be removed and you can use `Serenity.Web.HttpContextUserAccessor` instead:
 
 ```csharp
-services.AddSingleton<IAuthorizationService, Serenity.Web.HttpContextUserAccessor>();
+services.AddSingleton<IUserAccessor, Serenity.Web.HttpContextUserAccessor>();
 ```
 
 If you also need impersonation support, you should use following class instead:
@@ -1497,7 +1497,7 @@ public class UserAccessor : IUserAccessor, IImpersonator
 }
 
 // Startup.cs
-services.AddSingleton<IAuthorizationService, UserAccessor>();
+services.AddSingleton<IUserAccessor, UserAccessor>();
 ```
 
 ## Remove References to Dependency

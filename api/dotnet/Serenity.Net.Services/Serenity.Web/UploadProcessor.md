@@ -26,6 +26,12 @@ public class UploadProcessor
 | [ThumbWidth](UploadProcessor/ThumbWidth.md) { get; set; } |  |
 | [ProcessStream](UploadProcessor/ProcessStream.md)(…) |  |
 
+## Protected Members
+
+| name | description |
+| --- | --- |
+| [Logger](UploadProcessor/Logger.md) { get; } |  |
+
 ## See Also
 
 * **Source:** *[UploadProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/UploadProcessor.cs)*

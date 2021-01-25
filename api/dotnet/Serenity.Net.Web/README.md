@@ -124,12 +124,6 @@
 | --: | --- | --- |
 | class  | [DynamicScriptMiddleware](Serenity.Web.Middleware/DynamicScriptMiddleware.md) |  |
 
-## Serenity.Web.PropertyEditor namespace
-
-| signature | name | description |
-| --: | --- | --- |
-| interface  | [ICustomizedFormScript](Serenity.Web.PropertyEditor/ICustomizedFormScript.md) |  |
-
 ## Serenity.Web.Providers namespace
 
 | signature | name | description |

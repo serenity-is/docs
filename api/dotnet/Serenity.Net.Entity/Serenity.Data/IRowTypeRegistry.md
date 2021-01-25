@@ -1,6 +1,8 @@
 # IRowTypeRegistry interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Abstraction for row type registry.
+
 ```csharp
 public interface IRowTypeRegistry
 ```
@@ -9,8 +11,8 @@ public interface IRowTypeRegistry
 
 | name | description |
 | --- | --- |
-| [AllRowTypes](IRowTypeRegistry/AllRowTypes.md) { get; } |  |
-| [ByConnectionKey](IRowTypeRegistry/ByConnectionKey.md)(…) |  |
+| [AllRowTypes](IRowTypeRegistry/AllRowTypes.md) { get; } | Gets all row types. |
+| [ByConnectionKey](IRowTypeRegistry/ByConnectionKey.md)(…) | Bies the connection key. |
 
 ## See Also
 

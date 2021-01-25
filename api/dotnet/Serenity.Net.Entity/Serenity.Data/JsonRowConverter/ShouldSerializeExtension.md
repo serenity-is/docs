@@ -1,6 +1,8 @@
 # JsonRowConverter.ShouldSerializeExtension field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+The should serialize extension
+
 ```csharp
 public static Func<IRow, string, bool> ShouldSerializeExtension;
 ```

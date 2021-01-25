@@ -47,6 +47,7 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 | virtual [HandleDisplayOrder](SaveRequestHandler-3/HandleDisplayOrder.md)(…) |  |
 | virtual [HandleNonEditable](SaveRequestHandler-3/HandleNonEditable.md)(…) |  |
 | virtual [InvalidateCacheOnCommit](SaveRequestHandler-3/InvalidateCacheOnCommit.md)() |  |
+| virtual [InvokeSaveAction](SaveRequestHandler-3/InvokeSaveAction.md)(…) |  |
 | virtual [LoadOldEntity](SaveRequestHandler-3/LoadOldEntity.md)() |  |
 | virtual [OnReturn](SaveRequestHandler-3/OnReturn.md)() |  |
 | virtual [PerformAuditing](SaveRequestHandler-3/PerformAuditing.md)() |  |

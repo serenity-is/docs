@@ -1,6 +1,8 @@
 # PropertyInfoSource class
 **namespace:** *[Serenity.PropertyGrid](../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Property info source for a reflection PropertyInfo object
+
 ```csharp
 public class PropertyInfoSource : IPropertySource
 ```
@@ -9,14 +11,14 @@ public class PropertyInfoSource : IPropertySource
 
 | name | description |
 | --- | --- |
-| [PropertyInfoSource](PropertyInfoSource/PropertyInfoSource.md)(…) |  |
-| [BasedOnField](PropertyInfoSource/BasedOnField.md) { get; } |  |
-| [BasedOnRow](PropertyInfoSource/BasedOnRow.md) { get; } |  |
-| [EnumType](PropertyInfoSource/EnumType.md) { get; } |  |
-| [Property](PropertyInfoSource/Property.md) { get; } |  |
-| [ValueType](PropertyInfoSource/ValueType.md) { get; } |  |
-| [GetAttribute&lt;TAttribute&gt;](PropertyInfoSource/GetAttribute.md)() |  |
-| [GetAttributes&lt;TAttribute&gt;](PropertyInfoSource/GetAttributes.md)() |  |
+| [PropertyInfoSource](PropertyInfoSource/PropertyInfoSource.md)(…) | Initializes a new instance of the [`PropertyInfoSource`](PropertyInfoSource.md) class. |
+| [BasedOnField](PropertyInfoSource/BasedOnField.md) { get; } | Gets the based on field. |
+| [BasedOnRow](PropertyInfoSource/BasedOnRow.md) { get; } | Gets the based on row. |
+| [EnumType](PropertyInfoSource/EnumType.md) { get; } | Gets the type of the enum. |
+| [Property](PropertyInfoSource/Property.md) { get; } | Gets the property. |
+| [ValueType](PropertyInfoSource/ValueType.md) { get; } | Gets the type of the value. |
+| [GetAttribute&lt;TAttribute&gt;](PropertyInfoSource/GetAttribute.md)() | Gets the attribute. |
+| [GetAttributes&lt;TAttribute&gt;](PropertyInfoSource/GetAttributes.md)() | Gets the attributes. |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # GenericValueField&lt;TValue&gt;._enumType field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+The enum type
+
 ```csharp
 protected internal Type _enumType;
 ```

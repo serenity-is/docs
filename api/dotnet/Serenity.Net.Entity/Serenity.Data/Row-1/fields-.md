@@ -1,6 +1,8 @@
 # Row&lt;TFields&gt;.fields- field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+The fields
+
 ```csharp
 protected readonly TFields fields-;
 ```

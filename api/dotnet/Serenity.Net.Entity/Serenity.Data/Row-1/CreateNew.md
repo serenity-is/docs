@@ -1,9 +1,17 @@
 # Row&lt;TFields&gt;.CreateNew method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+Creates the new.
+
 ```csharp
 public virtual Row CreateNew()
 ```
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| NotImplementedException |  |
 
 ## See Also
 

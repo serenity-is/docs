@@ -1,6 +1,8 @@
 # IRowFieldsProvider interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Abstraction for row fields instance providers
+
 ```csharp
 public interface IRowFieldsProvider
 ```
@@ -9,8 +11,8 @@ public interface IRowFieldsProvider
 
 | name | description |
 | --- | --- |
-| [Resolve](IRowFieldsProvider/Resolve.md)(…) |  |
-| [ResolveWithAlias](IRowFieldsProvider/ResolveWithAlias.md)(…) |  |
+| [Resolve](IRowFieldsProvider/Resolve.md)(…) | Resolves the specified fields type. |
+| [ResolveWithAlias](IRowFieldsProvider/ResolveWithAlias.md)(…) | Resolves the with alias. |
 
 ## See Also
 

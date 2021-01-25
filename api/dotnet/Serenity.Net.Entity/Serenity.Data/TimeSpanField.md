@@ -1,6 +1,8 @@
 # TimeSpanField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Field with a TimeSpan value
+
 ```csharp
 public sealed class TimeSpanField : GenericValueField<TimeSpan>
 ```
@@ -9,13 +11,13 @@ public sealed class TimeSpanField : GenericValueField<TimeSpan>
 
 | name | description |
 | --- | --- |
-| [TimeSpanField](TimeSpanField/TimeSpanField.md)(…) |  |
-| static [Factory](TimeSpanField/Factory.md)(…) |  |
-| [Item](TimeSpanField/Item.md) { get; set; } |  |
-| override [AsObject](TimeSpanField/AsObject.md)(…) |  (2 methods) |
-| override [GetFromReader](TimeSpanField/GetFromReader.md)(…) |  |
-| override [ValueFromJson](TimeSpanField/ValueFromJson.md)(…) |  |
-| override [ValueToJson](TimeSpanField/ValueToJson.md)(…) |  |
+| [TimeSpanField](TimeSpanField/TimeSpanField.md)(…) | Initializes a new instance of the [`TimeSpanField`](TimeSpanField.md) class. |
+| static [Factory](TimeSpanField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
+| [Item](TimeSpanField/Item.md) { get; set; } | Gets or sets the Nullable with the specified row. |
+| override [AsObject](TimeSpanField/AsObject.md)(…) | Gets the value of this field in specified row as object. (2 methods) |
+| override [GetFromReader](TimeSpanField/GetFromReader.md)(…) | Gets field value from a data reader. |
+| override [ValueFromJson](TimeSpanField/ValueFromJson.md)(…) | Deserializes this fields value from JSON |
+| override [ValueToJson](TimeSpanField/ValueToJson.md)(…) | Serializes this fields value to JSON |
 
 ## See Also
 

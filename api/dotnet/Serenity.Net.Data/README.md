@@ -30,6 +30,7 @@
 | class  | [Criteria](Serenity.Data/Criteria.md) | An object that is used to create criterias by employing operator overloading features of C# language, instead of using string based criterias. |
 | enum  | [CriteriaOperator](Serenity.Data/CriteriaOperator.md) | Set of criteria operator types |
 | class  | [CrossApply](Serenity.Data/CrossApply.md) | CROSS APPLY type of join |
+| class  | [DataAuditLogAttribute](Serenity.Data/DataAuditLogAttribute.md) | Indicates that the entity should be audit logged. This feature is only available in premium app. |
 | class  | [DatabaseAliasAttribute](Serenity.Data/DatabaseAliasAttribute.md) | Determines database alias, used for unit test database contexts. |
 | class  | [DatabaseCaretReferences](Serenity.Data/DatabaseCaretReferences.md) | Helper class for replacing database caret references in format [^ConnectionKey] in SQL expressions. |
 | static class  | [DataReaderExtensions](Serenity.Data/DataReaderExtensions.md) | Extension methods for IDataReader objects. |

@@ -1,9 +1,23 @@
 # ByteArrayField.GetFromReader method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+Gets field value from a reader.
+
 ```csharp
 public override void GetFromReader(IDataReader reader, int index, IRow row)
 ```
+
+| parameter | description |
+| --- | --- |
+| reader | The reader. |
+| index | The index. |
+| row | The row. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | reader |
 
 ## See Also
 

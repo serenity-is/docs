@@ -9,7 +9,7 @@ public static class EndpointExtensions
 
 | name | description |
 | --- | --- |
-| static [ConvertToResponse&lt;TResponse&gt;](EndpointExtensions/ConvertToResponse.md)(…) |  |
+| static [ConvertToResponse&lt;TResponse&gt;](EndpointExtensions/ConvertToResponse.md)(…) |  (2 methods) |
 | static [ExecuteMethod&lt;TResponse&gt;](EndpointExtensions/ExecuteMethod.md)(…) |  |
 | static [InTransaction&lt;TResponse&gt;](EndpointExtensions/InTransaction.md)(…) |  |
 | static [UseConnection&lt;TResponse&gt;](EndpointExtensions/UseConnection.md)(…) |  |

@@ -1,6 +1,8 @@
 # DefaultPropertyItemProvider class
 **namespace:** *[Serenity.PropertyGrid](../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Default property item provider
+
 ```csharp
 public class DefaultPropertyItemProvider : IPropertyItemProvider
 ```
@@ -9,8 +11,8 @@ public class DefaultPropertyItemProvider : IPropertyItemProvider
 
 | name | description |
 | --- | --- |
-| [DefaultPropertyItemProvider](DefaultPropertyItemProvider/DefaultPropertyItemProvider.md)(…) |  |
-| [GetPropertyItemsFor](DefaultPropertyItemProvider/GetPropertyItemsFor.md)(…) |  |
+| [DefaultPropertyItemProvider](DefaultPropertyItemProvider/DefaultPropertyItemProvider.md)(…) | Initializes a new instance of the [`DefaultPropertyItemProvider`](DefaultPropertyItemProvider.md) class. |
+| [GetPropertyItemsFor](DefaultPropertyItemProvider/GetPropertyItemsFor.md)(…) | Gets the property items for specified type. |
 
 ## See Also
 

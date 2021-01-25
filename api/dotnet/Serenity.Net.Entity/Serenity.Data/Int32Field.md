@@ -1,6 +1,8 @@
 # Int32Field class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Field with Int32 value
+
 ```csharp
 public class Int32Field : GenericValueField<int>
 ```
@@ -9,11 +11,11 @@ public class Int32Field : GenericValueField<int>
 
 | name | description |
 | --- | --- |
-| [Int32Field](Int32Field/Int32Field.md)(…) |  |
-| static [Factory](Int32Field/Factory.md)(…) |  |
-| override [GetFromReader](Int32Field/GetFromReader.md)(…) |  |
-| override [ValueFromJson](Int32Field/ValueFromJson.md)(…) |  |
-| override [ValueToJson](Int32Field/ValueToJson.md)(…) |  |
+| [Int32Field](Int32Field/Int32Field.md)(…) | Initializes a new instance of the [`Int32Field`](Int32Field.md) class. |
+| static [Factory](Int32Field/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
+| override [GetFromReader](Int32Field/GetFromReader.md)(…) | Gets field value from a data reader. |
+| override [ValueFromJson](Int32Field/ValueFromJson.md)(…) | Deserializes this fields value from JSON |
+| override [ValueToJson](Int32Field/ValueToJson.md)(…) | Serializes this fields value to JSON |
 
 ## See Also
 

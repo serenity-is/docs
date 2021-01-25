@@ -1,6 +1,8 @@
 # GenericValueField&lt;TValue&gt;._setValue field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+The set value
+
 ```csharp
 protected internal Action<IRow, TValue?> _setValue;
 ```

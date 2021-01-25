@@ -58,6 +58,9 @@
 | interface  | [ICustomFileName](Serenity.Reporting/ICustomFileName.md) |  |
 | interface  | [ICustomizeHtmlToPdf](Serenity.Reporting/ICustomizeHtmlToPdf.md) |  |
 | interface  | [IDataOnlyReport](Serenity.Reporting/IDataOnlyReport.md) |  |
+| interface  | [IDataReportExcelRenderer](Serenity.Reporting/IDataReportExcelRenderer.md) |  |
+| interface  | [IExcelExporter](Serenity.Reporting/IExcelExporter.md) |  |
+| interface  | [IExternalReport](Serenity.Reporting/IExternalReport.md) |  |
 | interface  | [IHtmlToPdfOptions](Serenity.Reporting/IHtmlToPdfOptions.md) |  |
 | interface  | [IReport](Serenity.Reporting/IReport.md) |  |
 | interface  | [IReportRegistry](Serenity.Reporting/IReportRegistry.md) |  |
@@ -69,6 +72,7 @@
 | class  | [ReportRegistry](Serenity.Reporting/ReportRegistry.md) |  |
 | class  | [ReportRetrieveRequest](Serenity.Reporting/ReportRetrieveRequest.md) |  |
 | class  | [ReportRetrieveResponse](Serenity.Reporting/ReportRetrieveResponse.md) |  |
+| class  | [TabularDataReport](Serenity.Reporting/TabularDataReport.md) |  |
 | class  | [UseChromeHtmlToPdfAttribute](Serenity.Reporting/UseChromeHtmlToPdfAttribute.md) |  |
 
 ## Serenity.Services namespace
@@ -105,6 +109,7 @@
 | interface  | [IDefaultHandlerFactory](Serenity.Services/IDefaultHandlerFactory.md) |  |
 | interface  | [IDefaultHandlerRegistry](Serenity.Services/IDefaultHandlerRegistry.md) |  |
 | interface  | [IDeleteBehavior](Serenity.Services/IDeleteBehavior.md) |  |
+| interface  | [IDeleteExceptionBehavior](Serenity.Services/IDeleteExceptionBehavior.md) |  |
 | interface  | [IDeleteRequestHandler](Serenity.Services/IDeleteRequestHandler.md) |  |
 | interface  | [IDeleteRequestProcessor](Serenity.Services/IDeleteRequestProcessor.md) |  |
 | interface  | [IFieldBehavior](Serenity.Services/IFieldBehavior.md) |  |
@@ -127,6 +132,7 @@
 | interface  | [IRetrieveRequestProcessor](Serenity.Services/IRetrieveRequestProcessor.md) |  |
 | interface  | [IRetrieveResponse](Serenity.Services/IRetrieveResponse.md) |  |
 | interface  | [ISaveBehavior](Serenity.Services/ISaveBehavior.md) |  |
+| interface  | [ISaveExceptionBehavior](Serenity.Services/ISaveExceptionBehavior.md) |  |
 | interface  | [ISaveRequest](Serenity.Services/ISaveRequest.md) |  |
 | interface  | [ISaveRequestHandler](Serenity.Services/ISaveRequestHandler.md) |  |
 | interface  | [ISaveRequestProcessor](Serenity.Services/ISaveRequestProcessor.md) |  |

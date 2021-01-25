@@ -37,6 +37,7 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> : IDele
 | virtual [GetBehaviors](DeleteRequestHandler-3/GetBehaviors.md)() |  |
 | virtual [GetDisplayOrderFilter](DeleteRequestHandler-3/GetDisplayOrderFilter.md)() |  |
 | virtual [InvalidateCacheOnCommit](DeleteRequestHandler-3/InvalidateCacheOnCommit.md)() |  |
+| virtual [InvokeDeleteAction](DeleteRequestHandler-3/InvokeDeleteAction.md)(…) |  |
 | virtual [LoadEntity](DeleteRequestHandler-3/LoadEntity.md)() |  |
 | virtual [OnAfterDelete](DeleteRequestHandler-3/OnAfterDelete.md)() |  |
 | virtual [OnBeforeDelete](DeleteRequestHandler-3/OnBeforeDelete.md)() |  |

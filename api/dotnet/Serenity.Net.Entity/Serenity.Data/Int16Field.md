@@ -1,6 +1,8 @@
 # Int16Field class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Field with Int16 value
+
 ```csharp
 public sealed class Int16Field : GenericValueField<short>
 ```
@@ -9,11 +11,11 @@ public sealed class Int16Field : GenericValueField<short>
 
 | name | description |
 | --- | --- |
-| [Int16Field](Int16Field/Int16Field.md)(…) |  |
-| static [Factory](Int16Field/Factory.md)(…) |  |
-| override [GetFromReader](Int16Field/GetFromReader.md)(…) |  |
-| override [ValueFromJson](Int16Field/ValueFromJson.md)(…) |  |
-| override [ValueToJson](Int16Field/ValueToJson.md)(…) |  |
+| [Int16Field](Int16Field/Int16Field.md)(…) | Initializes a new instance of the [`Int16Field`](Int16Field.md) class. |
+| static [Factory](Int16Field/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
+| override [GetFromReader](Int16Field/GetFromReader.md)(…) | Gets field value from a data reader. |
+| override [ValueFromJson](Int16Field/ValueFromJson.md)(…) | Deserializes this fields value from JSON |
+| override [ValueToJson](Int16Field/ValueToJson.md)(…) | Serializes this fields value to JSON |
 
 ## See Also
 

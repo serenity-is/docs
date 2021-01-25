@@ -1,6 +1,8 @@
 # IEntityWithJoins interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Interface for an entity with join information
+
 ```csharp
 public interface IEntityWithJoins : IEntity, IHaveJoins
 ```

@@ -1,6 +1,8 @@
 # RowValidationContext.Localizer property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+Localizer
+
 ```csharp
 public ITextLocalizer Localizer { get; }
 ```

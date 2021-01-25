@@ -1,6 +1,8 @@
 # IEnumTypeField interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Interface for fields with an enum type property
+
 ```csharp
 public interface IEnumTypeField
 ```
@@ -9,7 +11,7 @@ public interface IEnumTypeField
 
 | name | description |
 | --- | --- |
-| [EnumType](IEnumTypeField/EnumType.md) { get; set; } |  |
+| [EnumType](IEnumTypeField/EnumType.md) { get; set; } | Gets or sets the type of the enum. |
 
 ## See Also
 

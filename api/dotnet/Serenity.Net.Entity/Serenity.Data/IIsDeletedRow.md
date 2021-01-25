@@ -1,6 +1,8 @@
 # IIsDeletedRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Determines that this row uses soft delete and the field that holds this flag
+
 ```csharp
 public interface IIsDeletedRow
 ```
@@ -9,7 +11,7 @@ public interface IIsDeletedRow
 
 | name | description |
 | --- | --- |
-| [IsDeletedField](IIsDeletedRow/IsDeletedField.md) { get; } |  |
+| [IsDeletedField](IIsDeletedRow/IsDeletedField.md) { get; } | Gets the is deleted field. |
 
 ## See Also
 

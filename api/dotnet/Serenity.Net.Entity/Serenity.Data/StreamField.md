@@ -1,6 +1,8 @@
 # StreamField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Field with a Stream value
+
 ```csharp
 public class StreamField : GenericClassField<Stream>
 ```
@@ -9,13 +11,13 @@ public class StreamField : GenericClassField<Stream>
 
 | name | description |
 | --- | --- |
-| [StreamField](StreamField/StreamField.md)(…) |  |
-| static [Factory](StreamField/Factory.md)(…) |  |
-| override [GetFromReader](StreamField/GetFromReader.md)(…) |  |
-| override [IndexCompare](StreamField/IndexCompare.md)(…) |  |
-| override [ValueFromJson](StreamField/ValueFromJson.md)(…) |  |
-| override [ValueToJson](StreamField/ValueToJson.md)(…) |  |
-| static [CopyStream](StreamField/CopyStream.md)(…) |  |
+| [StreamField](StreamField/StreamField.md)(…) | Initializes a new instance of the [`StreamField`](StreamField.md) class. |
+| static [Factory](StreamField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
+| override [GetFromReader](StreamField/GetFromReader.md)(…) | Gets field value from a data reader. |
+| override [IndexCompare](StreamField/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort |
+| override [ValueFromJson](StreamField/ValueFromJson.md)(…) | Deserializes this fields value from JSON |
+| override [ValueToJson](StreamField/ValueToJson.md)(…) | Serializes this fields value to JSON |
+| static [CopyStream](StreamField/CopyStream.md)(…) | Copies the stream. |
 
 ## See Also
 

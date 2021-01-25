@@ -2,12 +2,13 @@
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public ImageCheckResult CheckStream(Stream inputStream)
+public ImageCheckResult CheckStream(Stream inputStream, IExceptionLogger exLogger = null)
 ```
 
 ## See Also
 
 * enum [ImageCheckResult](../ImageCheckResult.md)
+* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
 * class [ImageChecker](../ImageChecker.md)
 
 ---
@@ -16,10 +17,12 @@ public ImageCheckResult CheckStream(Stream inputStream)
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public ImageCheckResult CheckStream(Stream inputStream, bool returnImage, out Image image)
+public ImageCheckResult CheckStream(Stream inputStream, bool returnImage, out Image image, 
+    IExceptionLogger exLogger = null)
 ```
 
 ## See Also
 
 * enum [ImageCheckResult](../ImageCheckResult.md)
+* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
 * class [ImageChecker](../ImageChecker.md)

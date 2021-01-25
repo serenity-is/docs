@@ -1,6 +1,8 @@
 # IUpdateLogRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Interface for rows that has a UpdateUserId and UpdateDate fields
+
 ```csharp
 public interface IUpdateLogRow
 ```
@@ -9,9 +11,9 @@ public interface IUpdateLogRow
 
 | name | description |
 | --- | --- |
-| [UpdateDateField](IUpdateLogRow/UpdateDateField.md) { get; } |  |
-| [UpdateUserIdField](IUpdateLogRow/UpdateUserIdField.md) { get; } |  |
+| [UpdateDateField](IUpdateLogRow/UpdateDateField.md) { get; } | Gets the update date field. |
+| [UpdateUserIdField](IUpdateLogRow/UpdateUserIdField.md) { get; } | Gets the update user identifier field. |
 
 ## See Also
 
-* **Source:** *[ILoggingRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Entity/Contracts/ILoggingRow.cs)*
+* **Source:** *[IUpdateLogRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Entity/Contracts/IUpdateLogRow.cs)*

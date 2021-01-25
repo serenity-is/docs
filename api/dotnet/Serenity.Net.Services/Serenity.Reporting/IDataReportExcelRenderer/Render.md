@@ -1,0 +1,11 @@
+# IDataReportExcelRenderer.Render method
+**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+
+```csharp
+public byte[] Render(IDataOnlyReport report)
+```
+
+## See Also
+
+* interface [IDataOnlyReport](../IDataOnlyReport.md)
+* interface [IDataReportExcelRenderer](../IDataReportExcelRenderer.md)

@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
 ```csharp
-public abstract class BaseSaveBehavior : ISaveBehavior
+public abstract class BaseSaveBehavior : ISaveBehavior, ISaveExceptionBehavior
 ```
 
 ## Public Members
@@ -12,6 +12,7 @@ public abstract class BaseSaveBehavior : ISaveBehavior
 | virtual [OnAfterSave](BaseSaveBehavior/OnAfterSave.md)(…) |  |
 | virtual [OnAudit](BaseSaveBehavior/OnAudit.md)(…) |  |
 | virtual [OnBeforeSave](BaseSaveBehavior/OnBeforeSave.md)(…) |  |
+| virtual [OnException](BaseSaveBehavior/OnException.md)(…) |  |
 | virtual [OnPrepareQuery](BaseSaveBehavior/OnPrepareQuery.md)(…) |  |
 | virtual [OnReturn](BaseSaveBehavior/OnReturn.md)(…) |  |
 | virtual [OnSetInternalFields](BaseSaveBehavior/OnSetInternalFields.md)(…) |  |
@@ -26,4 +27,5 @@ public abstract class BaseSaveBehavior : ISaveBehavior
 ## See Also
 
 * interface [ISaveBehavior](ISaveBehavior.md)
+* interface [ISaveExceptionBehavior](ISaveExceptionBehavior.md)
 * **Source:** *[BaseSaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/BaseSaveBehavior.cs)*

@@ -1,6 +1,8 @@
 # DefaultRowTypeRegistry class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Default row type registry
+
 ```csharp
 public class DefaultRowTypeRegistry : IRowTypeRegistry
 ```
@@ -9,9 +11,9 @@ public class DefaultRowTypeRegistry : IRowTypeRegistry
 
 | name | description |
 | --- | --- |
-| [DefaultRowTypeRegistry](DefaultRowTypeRegistry/DefaultRowTypeRegistry.md)(…) |  |
-| [AllRowTypes](DefaultRowTypeRegistry/AllRowTypes.md) { get; } |  |
-| [ByConnectionKey](DefaultRowTypeRegistry/ByConnectionKey.md)(…) |  |
+| [DefaultRowTypeRegistry](DefaultRowTypeRegistry/DefaultRowTypeRegistry.md)(…) | Initializes a new instance of the [`DefaultRowTypeRegistry`](DefaultRowTypeRegistry.md) class. |
+| [AllRowTypes](DefaultRowTypeRegistry/AllRowTypes.md) { get; } | Gets all row types. |
+| [ByConnectionKey](DefaultRowTypeRegistry/ByConnectionKey.md)(…) | Bies the connection key. |
 
 ## See Also
 

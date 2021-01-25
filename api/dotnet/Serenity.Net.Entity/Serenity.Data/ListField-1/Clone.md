@@ -1,9 +1,15 @@
 # ListField&lt;TItem&gt;.Clone method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
+Clones the specified value.
+
 ```csharp
 protected override List<TItem> Clone(List<TItem> value)
 ```
+
+| parameter | description |
+| --- | --- |
+| value | The value. |
 
 ## See Also
 

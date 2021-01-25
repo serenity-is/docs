@@ -12,6 +12,7 @@ public sealed class FormScriptAttribute : Attribute
 
 | name | description |
 | --- | --- |
+| [FormScriptAttribute](FormScriptAttribute/FormScriptAttribute.md)() | Initializes a new instance of the [`FormScriptAttribute`](FormScriptAttribute.md) class. The key of the form script will be the full name of the type this is placed on. |
 | [FormScriptAttribute](FormScriptAttribute/FormScriptAttribute.md)(…) | Initializes a new instance of the [`FormScriptAttribute`](FormScriptAttribute.md) class. |
 | [Key](FormScriptAttribute/Key.md) { get; } | Gets the key. |
 

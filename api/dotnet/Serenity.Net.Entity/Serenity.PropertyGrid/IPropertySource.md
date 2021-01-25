@@ -1,6 +1,8 @@
 # IPropertySource interface
 **namespace:** *[Serenity.PropertyGrid](../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+Abstracts the property source that returns PropertyInfo and some other info
+
 ```csharp
 public interface IPropertySource
 ```
@@ -9,12 +11,12 @@ public interface IPropertySource
 
 | name | description |
 | --- | --- |
-| [BasedOnField](IPropertySource/BasedOnField.md) { get; } |  |
-| [EnumType](IPropertySource/EnumType.md) { get; } |  |
-| [Property](IPropertySource/Property.md) { get; } |  |
-| [ValueType](IPropertySource/ValueType.md) { get; } |  |
-| [GetAttribute&lt;TAttr&gt;](IPropertySource/GetAttribute.md)() |  |
-| [GetAttributes&lt;TAttr&gt;](IPropertySource/GetAttributes.md)() |  |
+| [BasedOnField](IPropertySource/BasedOnField.md) { get; } | Gets the based on field. |
+| [EnumType](IPropertySource/EnumType.md) { get; } | Gets the type of the enum. |
+| [Property](IPropertySource/Property.md) { get; } | Gets the property. |
+| [ValueType](IPropertySource/ValueType.md) { get; } | Gets the type of the value. |
+| [GetAttribute&lt;TAttr&gt;](IPropertySource/GetAttribute.md)() | Gets the attribute. |
+| [GetAttributes&lt;TAttr&gt;](IPropertySource/GetAttributes.md)() | Gets the attributes. |
 
 ## See Also
 

@@ -115,9 +115,11 @@
 | class  | [HtmlContentEditorAttribute](Serenity.ComponentModel/HtmlContentEditorAttribute.md) | Indicates that the target property should use a "HtmlContent" editor. This is generally a CK editor that contains more functionalities compared to other ones. |
 | class  | [HtmlNoteContentEditorAttribute](Serenity.ComponentModel/HtmlNoteContentEditorAttribute.md) | Indicates that the target property should use a "HtmlNoteContent" editor. This is generally a CK editor with only basic functionality for notes enabled. |
 | class  | [HtmlReportContentEditorAttribute](Serenity.ComponentModel/HtmlReportContentEditorAttribute.md) | Indicates that the target property should use a "HtmlReportContent" editor. This is generally a CK editor with only functionality compatible with common reporting tools like SSRS, Telerik, DevExpress etc. enabled. |
+| interface  | [ICustomizePropertyItems](Serenity.ComponentModel/ICustomizePropertyItems.md) | Represents a customized column / form script |
 | class  | [IgnoreAttribute](Serenity.ComponentModel/IgnoreAttribute.md) | Skips a property while generating grid column or form field list. Use this to ignore a property for UI, but still use it for other purposes like JSON serialization. This might be useful when a type is used as a Service Request and Form Declaration at the same time. |
 | class  | [IgnoreNameAttribute](Serenity.ComponentModel/IgnoreNameAttribute.md) | Skips checking a property name. This is usually used along with BasedOnRow attribute CheckNames = true to skip checking property name if it matches a field property name in the row. |
 | class  | [ImageUploadEditorAttribute](Serenity.ComponentModel/ImageUploadEditorAttribute.md) | Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in row, otherwise your files will stay in temporary directory. |
+| class  | [ImplicitPermissionAttribute](Serenity.ComponentModel/ImplicitPermissionAttribute.md) | Placed on permission keys to define an implicitly assigned permissions when a user / role has the permission. Currently only implemented in premium app. |
 | class  | [InsertableAttribute](Serenity.ComponentModel/InsertableAttribute.md) | Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag. |
 | class  | [IntegerEditorAttribute](Serenity.ComponentModel/IntegerEditorAttribute.md) | Indicates that the target property should use a "Integer" editor. |
 | class  | [IntegerFilteringAttribute](Serenity.ComponentModel/IntegerFilteringAttribute.md) | Indicates that property should use integer type of filtering |
@@ -255,6 +257,7 @@
 | signature | name | description |
 | --: | --- | --- |
 | enum  | [ColumnSelection](Serenity.Services/ColumnSelection.md) | Column selection types for List services |
+| interface  | [IIsSensitiveMessage](Serenity.Services/IIsSensitiveMessage.md) | An interface to determine if the message of an exception might contain sensitive information that should not be shown to the end user. Currently only ValidationError implements this and returns false by default unless set explicitly. |
 | class  | [JsonStringHashSetConverter](Serenity.Services/JsonStringHashSetConverter.md) | Serialize/deserialize a IdentifierSet object as string |
 | static class  | [PermissionExpressionParser](Serenity.Services/PermissionExpressionParser.md) | A simple parser / evaluator for logic permission expressions |
 | class  | [ValidationError](Serenity.Services/ValidationError.md) | Generic validation error mostly used by services. |

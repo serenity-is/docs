@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
 ```csharp
-public abstract class BaseDeleteBehavior : IDeleteBehavior
+public abstract class BaseDeleteBehavior : IDeleteBehavior, IDeleteExceptionBehavior
 ```
 
 ## Public Members
@@ -12,6 +12,7 @@ public abstract class BaseDeleteBehavior : IDeleteBehavior
 | virtual [OnAfterDelete](BaseDeleteBehavior/OnAfterDelete.md)(…) |  |
 | virtual [OnAudit](BaseDeleteBehavior/OnAudit.md)(…) |  |
 | virtual [OnBeforeDelete](BaseDeleteBehavior/OnBeforeDelete.md)(…) |  |
+| virtual [OnException](BaseDeleteBehavior/OnException.md)(…) |  |
 | virtual [OnPrepareQuery](BaseDeleteBehavior/OnPrepareQuery.md)(…) |  |
 | virtual [OnReturn](BaseDeleteBehavior/OnReturn.md)(…) |  |
 | virtual [OnValidateRequest](BaseDeleteBehavior/OnValidateRequest.md)(…) |  |
@@ -25,4 +26,5 @@ public abstract class BaseDeleteBehavior : IDeleteBehavior
 ## See Also
 
 * interface [IDeleteBehavior](IDeleteBehavior.md)
+* interface [IDeleteExceptionBehavior](IDeleteExceptionBehavior.md)
 * **Source:** *[BaseDeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Delete/BaseDeleteBehavior.cs)*

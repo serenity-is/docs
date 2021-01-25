@@ -1,6 +1,8 @@
 # IEntity interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../README.md)*
 
+An interface for entities with Table property
+
 ```csharp
 public interface IEntity
 ```
@@ -9,7 +11,7 @@ public interface IEntity
 
 | name | description |
 | --- | --- |
-| [Table](IEntity/Table.md) { get; } |  |
+| [Table](IEntity/Table.md) { get; } | Table name |
 
 ## See Also
 

@@ -171,5 +171,5 @@ Custom widget classes might need to override Destroy method to undo changes on H
 
 Destroy method is called automatically when the HTML element is detached from the DOM. It can also be called manually.
 
-If destory operation is not performed correctly, memory leaks may occur in some browsers.
+If destroy operation is not performed correctly, memory leaks may occur in some browsers.
 

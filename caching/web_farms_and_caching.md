@@ -4,9 +4,9 @@ Now let's consider we have a social networking site and have millions of user pr
 
 To generate a users profile, we would need more than one SQL query (friends, album names and picture counts, profile information, last status etc.).
 
-As long as a user didn't update her profile, the information that is shown on her page would be almost stastic. Thus, a snapshot of profile pages could be cached for 5 minutes or 1 hour etc.
+As long as a user didn't update her profile, the information that is shown on her page would be almost static. Thus, a snapshot of profile pages could be cached for 5 minutes or 1 hour etc.
 
-But this might not be enough. We are talking about hundres of millions of profiles and users. Users would be doing much more than just looking at some profile pages. We would need more than one server that are distributed in several geographical locations on earth (a WEB Farm).
+But this might not be enough. We are talking about hundreds of millions of profiles and users. Users would be doing much more than just looking at some profile pages. We would need more than one server that are distributed in several geographical locations on earth (a WEB Farm).
 
 At a certain time, all these servers might have cached a very important persons (VIP) profile in local cache. When the VIP makes a change in her profile, all these servers should renew their local cached profile, and this would happen in a few seconds. We now have a problem of load per server instead of load per user.
 

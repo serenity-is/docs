@@ -14,7 +14,7 @@ public class BooleanFormatterAttribute : CustomFormatterAttribute
 | --- | --- |
 | [BooleanFormatterAttribute](BooleanFormatterAttribute/BooleanFormatterAttribute.md)() | Initializes a new instance of the [`BooleanFormatterAttribute`](BooleanFormatterAttribute.md) class. |
 | [FalseText](BooleanFormatterAttribute/FalseText.md) { get; set; } | Gets or sets the text corresponding to falsey value. |
-| [TrueText](BooleanFormatterAttribute/TrueText.md) { get; set; } | Gets or sets the text corresponding to trueish value. |
+| [TrueText](BooleanFormatterAttribute/TrueText.md) { get; set; } | Gets or sets the text corresponding to truthy value. |
 
 ## See Also
 

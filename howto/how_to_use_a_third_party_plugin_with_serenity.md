@@ -241,7 +241,7 @@ public getEditValue(property: Serenity.PropertyItem, target: any): void {
 }
 ```
 
-setEditValue is called when editor value needs to be setted. It takes a *source* object, which is usually your entity being loaded in a dialog.
+setEditValue is called when editor value needs to be set. It takes a *source* object, which is usually your entity being loaded in a dialog.
 
 Property parameter is a PropertyItem object that contains details about the field being handled, e.g. our Representatives property. It's *name* field contains field name, e.g. *Representatives*.
 

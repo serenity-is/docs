@@ -15,7 +15,7 @@ protected virtual BaseCriteria Visit(BaseCriteria criteria)
 
 | exception | condition |
 | --- | --- |
-| Exception | Criteria type is unkown. |
+| Exception | Criteria type is unknown. |
 
 ## See Also
 

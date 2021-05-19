@@ -18,8 +18,8 @@ public static class DateHelper
 | static [ISODateTimeFormatUTC](DateHelper/ISODateTimeFormatUTC.md) | ISO Date and Time Format (up to milliseconds). |
 | static [DateElementOrderFor](DateHelper/DateElementOrderFor.md)(…) | Gets the date element order for specified short date time format. |
 | static [DateOrderString](DateHelper/DateOrderString.md)(…) | Gets date order string (one of "dmy", "ymd", "mdy") for a specified order. |
-| static [DefaultDateFormat](DateHelper/DefaultDateFormat.md)(…) | Gets defalt date format for specified order. |
-| static [DefaultDateTimeFormat](DateHelper/DefaultDateTimeFormat.md)(…) | Gets defalt date time format for specified order. |
+| static [DefaultDateFormat](DateHelper/DefaultDateFormat.md)(…) | Gets default date format for specified order. |
+| static [DefaultDateTimeFormat](DateHelper/DefaultDateTimeFormat.md)(…) | Gets default date time format for specified order. |
 | static [TryParseISO8601DateTime](DateHelper/TryParseISO8601DateTime.md)(…) | Tries to parse an ISO 8601 date-time string. |
 
 ## See Also

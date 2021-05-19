@@ -44,5 +44,5 @@ To make it easy to validate permissions we provide some attributes in addition t
 
 They have overloads that accepts a *permission* parameter which automatically validates that permission.
 
-Difference between the two lies in the way they handle unauthenticated access attemps. While `[PageAuthorize]` attribute
+Difference between the two lies in the way they handle unauthenticated access attempts. While `[PageAuthorize]` attribute
 throws an exception, `[ServiceAuthorize]` provides an AJAX call friendly service error.

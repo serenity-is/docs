@@ -1,7 +1,7 @@
 # DateHelper.DefaultDateFormat method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets defalt date format for specified order.
+Gets default date format for specified order.
 
 ```csharp
 public static string DefaultDateFormat(DateElementOrder order)

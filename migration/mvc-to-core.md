@@ -120,7 +120,7 @@ Take a full backup of your solution (ZIP etc) just in case something goes wrong.
 
 * Copy all files and folders under **wwwroot/fonts/** of **template project** to **wwwroot/fonts/** folder of **existing project** overwriting any files there. 
 
-* If you did modify any other font file in your project under **fonts/** directory or had a newer version of afont file in **existing project**, you may again restore them from **Old.fonts**.
+* If you did modify any other font file in your project under **fonts/** directory or had a newer version of a font file in **existing project**, you may again restore them from **Old.fonts**.
 
 * Copy all files and folders under **Old.Scripts/typings/** to **typings/**
 
@@ -698,7 +698,7 @@ with\
 with\
 `@System.Globalization.CultureInfo.CurrentUICulture.Name`
 
-## Changes in Modules/Membership/Account/AccountLogin.chtml
+## Changes in Modules/Membership/Account/AccountLogin.cshtml
 
 * Replace\
 `@if (SiteInitialization.SkippedMigrations)`\

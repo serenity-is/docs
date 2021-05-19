@@ -35,7 +35,7 @@ public static T ParseTolerant<T>(string input, bool includeNulls = false)
 | parameter | description |
 | --- | --- |
 | T | Type to deserialize |
-| input | JSON strng |
+| input | JSON string |
 | includeNulls | If true, if a value is null and target property is not nullable, raises error. |
 
 ## Return Value

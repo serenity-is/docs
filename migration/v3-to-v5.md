@@ -4254,7 +4254,7 @@ To
 return ReportTree.FromList(reports, Localizer, category);
 ```
 
-`Retrieve` also changed. It's needs ekstra provider params. 
+`Retrieve` also changed. It's needs extra provider params. 
 
 From
 ```cs
@@ -4323,7 +4323,7 @@ public ReportRetrieveResult Retrieve(ReportRetrieveRequest request,
 
 ## ReportColumnConverter changes
 
-`ReportColumnConverter.ObjectTypeToList` needs 2 ekstra parameter for work. It's `ServiceProvider` and `Localizer`. You need add this parameters where it's used in class constructor. Then pass to this method. 
+`ReportColumnConverter.ObjectTypeToList` needs 2 extra parameter for work. It's `ServiceProvider` and `Localizer`. You need add this parameters where it's used in class constructor. Then pass to this method. 
 
 Example constructor
 ```cs

@@ -38,7 +38,7 @@ public static void GetFromReader(this SqlQuery query, IDataReader reader, IList<
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | An exception occured during conversion |
+| InvalidOperationException | An exception occurred during conversion |
 
 ## See Also
 

@@ -182,7 +182,7 @@ After rebuild and run, we have this:
 
 Serene has several editor types to choose from. Some are automatically picked based on field data type, while you need to explicitly set others.
 
-> You can also develop your own editor types. You can take existing editor types as base classes, or develop your own from stratch. We'll see how in following chapters.
+> You can also develop your own editor types. You can take existing editor types as base classes, or develop your own from scratch. We'll see how in following chapters.
 
 As editors became a bit higher, form height exceeded the default Serenity form height (which is about 260px) and now we have a vertical scroll bar. Let's remove it.
 

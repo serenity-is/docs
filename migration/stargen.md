@@ -18,7 +18,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Downloading Stargen
 
-Start by downloading *Stargen* from the relases section in StartSharp repository:
+Start by downloading *Stargen* from the releases section in StartSharp repository:
 
 https://github.com/volkanceylan/StartSharp/releases/
 

@@ -83,11 +83,11 @@ Movie tab is empty for now. We need to define a grid with suitable columns and p
 First, declare the columns we'll use with the grid, in file *PersonMovieColumns.cs* next to *PersonColumns.cs*:
 
 ```cs
+using Serenity.ComponentModel;
+using System;
+
 namespace MovieTutorial.MovieDB.Columns
 {
-    using Serenity.ComponentModel;
-    using System;
-
     [ColumnsScript("MovieDB.PersonMovie")]
     [BasedOnRow(typeof(Entities.MovieCastRow))]
     public class PersonMovieColumns

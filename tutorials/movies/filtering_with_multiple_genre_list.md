@@ -4,7 +4,7 @@ Remember that when we had only one Genre per Movie, it was easy to quick filter,
 
 Let's try to do similar in MovieColumns.cs:
 
-```
+```cs
 [ColumnsScript("MovieDB.Movie")]
 [BasedOnRow(typeof(Entities.MovieRow))]
 public class MovieColumns
@@ -62,11 +62,17 @@ public class MovieRepository
     //...
     public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request)
     {
-        return new MyListHandler().Process(connection, request);
+        return new MyListHandler(Context).Process(connection, request);
     }
 
     //...
-    private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest> { }
+    private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest> 
+    {
+        public MyListHandler(IRequestContext context)
+            : base(context)
+        {
+        }
+    }
 }
 ```
 
@@ -80,7 +86,7 @@ public class MovieController : ServiceEndpoint
     //...
     public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request)
     {
-        return new MyRepository().List(connection, request);
+        return new MyRepository(Context).List(connection, request);
     }
 }
 ```
@@ -179,6 +185,11 @@ Modify *MyListHandler* in *MovieRepository.cs* like below:
 ```cs
 private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
 {
+    public MyListHandler(IRequestContext context)
+    : base(context)
+    {
+    }
+
     protected override void ApplyFilters(SqlQuery query)
     {
         base.ApplyFilters(query);
@@ -250,13 +261,13 @@ SELECT x.MovieId, x.GenreId FROM MovieGenres x
 
 In *MyListHandler*, which is for *MovieRow* entities, *t0* is already used for *MovieRow* fields. So, to prevent clashes with *MovieGenresRow* fields (which is named *fld*), i had to assign *MovieGenresRow* an alias, *mg*.
 
-```
+```cs
 var mg = Entities.MovieGenresRow.Fields.As("mg");
 ```
 
 What i'm trying to achieve, is a query like this (just the way we'd do this in bare SQL):
 
-```
+```sql
 SELECT t0.MovieId, t0.Title, ... FROM Movies t0
 WHERE EXISTS (
    SELECT 1 
@@ -283,7 +294,7 @@ query.SubQuery()
 
 And adding the where statement for subquery:
 
-```
+```cs
 .Where(
     mg.MovieId == fld.MovieId &&
     mg.GenreId.In(Request.Genres))

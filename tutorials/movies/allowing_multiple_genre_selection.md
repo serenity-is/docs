@@ -71,15 +71,15 @@ Remove GenreId and GenreName properties and their related field objects from *Mo
 // remove this
 public Int32? GenreId
 {
-    get { return Fields.GenreId[this]; }
-    set { Fields.GenreId[this] = value; }
+    get => fields.GenreId[this];
+    set => Fields.GenreId[this] = value;
 }
 
 // remove this
 public String GenreName
 {
-    get { return Fields.GenreName[this]; }
-    set { Fields.GenreName[this] = value; }
+    get => Fields.GenreName[this];
+    set => Fields.GenreName[this] = value;
 }
 
 public class RowFields : RowFieldsBase
@@ -157,8 +157,8 @@ public MovieKind? Kind
 [LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
 public List<Int32> GenreList
 {
-    get { return Fields.GenreList[this]; }
-    set { Fields.GenreList[this] = value; }
+    get => fields.GenreList[this];
+    set => fields.GenreList[this] = value;
 }
 
 public class RowFields : RowFieldsBase

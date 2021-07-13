@@ -34,22 +34,21 @@ Then modify MovieRow.cs and PersonRow.cs:
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    public sealed class PersonRow : Row, IIdRow, INameRow
+    public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
     {
-
-        [DisplayName("Primary Image"), Size(100), 
+        [DisplayName("Primary Image"), Size(100),
          ImageUploadEditor(FilenameFormat = "Person/PrimaryImage/~")]
         public string PrimaryImage
         {
-            get { return Fields.PrimaryImage[this]; }
-            set { Fields.PrimaryImage[this] = value; }
+            get => Fields.PrimaryImage[this];
+            set => Fields.PrimaryImage[this] = value;
         }
 
-        [DisplayName("Gallery Images"), 
+        [DisplayName("Gallery Images"),
          MultipleImageUploadEditor(FilenameFormat = "Person/GalleryImages/~")]
         public string GalleryImages
         {
-            get { return Fields.GalleryImages[this]; }
+            get => Fields.GalleryImages[this];
             set { Fields.GalleryImages[this] = value; }
         }
 
@@ -58,8 +57,8 @@ namespace MovieTutorial.MovieDB.Entities
         public class RowFields : RowFieldsBase
         {
             // ...
-            public readonly StringField PrimaryImage;
-            public readonly StringField GalleryImages;
+            public StringField PrimaryImage;
+            public StringField GalleryImages;
             // ...
         }
     }
@@ -70,21 +69,21 @@ namespace MovieTutorial.MovieDB.Entities
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    public sealed class MovieRow : Row<MoviesRow.RowFields>, IIdRow, INameRow
     {
-        [DisplayName("Primary Image"), Size(100), 
+        [DisplayName("Primary Image"), Size(100),
          ImageUploadEditor(FilenameFormat = "Movie/PrimaryImage/~")]
         public string PrimaryImage
         {
-            get { return Fields.PrimaryImage[this]; }
-            set { Fields.PrimaryImage[this] = value; }
+            get => Fields.PrimaryImage[this];
+            set => Fields.PrimaryImage[this] = value;
         }
 
-        [DisplayName("Gallery Images"), 
+        [DisplayName("Gallery Images"),
          MultipleImageUploadEditor(FilenameFormat = "Movie/GalleryImages/~")]
         public string GalleryImages
         {
-            get { return Fields.GalleryImages[this]; }
+            get => Fields.GalleryImages[this];
             set { Fields.GalleryImages[this] = value; }
         }
 
@@ -92,8 +91,8 @@ namespace MovieTutorial.MovieDB.Entities
         public class RowFields : RowFieldsBase
         {
             // ...
-            public readonly StringField PrimaryImage;
-            public readonly StringField GalleryImages;
+            public StringField PrimaryImage;
+            public StringField GalleryImages;
             // ...
         }
     }

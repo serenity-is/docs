@@ -63,15 +63,15 @@ As we are not using Sergen anymore, we need to add a mapping in our MovieRow.cs 
 [DisplayName("Runtime (mins)")]
 public Int32? Runtime
 {
-    get { return Fields.Runtime[this]; }
-    set { Fields.Runtime[this] = value; }
+    get => fields.Runtime[this];
+    set => fields.Runtime[this] = value;
 }
 
 [DisplayName("Kind"), NotNull]
 public MovieKind? Kind
 {
-    get { return (MovieKind?)Fields.Kind[this]; }
-    set { Fields.Kind[this] = (Int32?)value; }
+    get => (MovieKind?)fields.Kind[this];
+    set => fields.Kind[this] = (Int32?)value;
 }
 ```
 
@@ -81,14 +81,8 @@ We also need to declare a Int32Field object which is required for Serenity entit
 public class RowFields : RowFieldsBase
 {
     // ...
-    public readonly Int32Field Runtime;
-    public readonly Int32Field Kind;
-
-    public RowFields()
-        : base("[mov].Movie")
-    {
-        LocalTextPrefix = "MovieDB.Movie";
-    }
+    public Int32Field Runtime;
+    public Int32Field Kind;
 }
 ```
 
@@ -100,17 +94,16 @@ If we build and run our project now, we'll see that there is no change in the Mo
 Modify *MovieForm.cs* as below:
 
 ```cs
-
 namespace MovieTutorial.MovieDB.Forms
 {
     // ...
     [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow))]
+    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieForm
     {
         // ...
-        public MovieKind Kind { get; set; }
         public Int32 Runtime { get; set; }
+        public MovieKind Kind { get; set; }
     }
 }
 ```
@@ -144,14 +137,14 @@ As *Kind* is a required field, we need to fill it in *Add Movie* dialog, otherwi
 
 But most movies we'll store are feature films, so its default should be this value.
 
-To add a default value for *Kind* property, add a *DefaultValue* attribute like this:
+To add a default value for *Kind* property, add a *DefaultValue* attribute on _MoviesRow.cs_ like this:
 
 ```cs
 [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
 public MovieKind? Kind
 {
-    get { return (MovieKind?)Fields.Kind[this]; }
-    set { Fields.Kind[this] = (Int32?)value; }
+    get => (MovieKind?)fields.Kind[this];
+    set => fields.Kind[this] = (Int32?)value;
 }
 ```
 

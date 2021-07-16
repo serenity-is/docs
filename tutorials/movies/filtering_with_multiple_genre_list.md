@@ -186,7 +186,7 @@ Modify *MyListHandler* in *MovieRepository.cs* like below:
 private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
 {
     public MyListHandler(IRequestContext context)
-    : base(context)
+        : base(context)
     {
     }
 

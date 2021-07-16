@@ -49,7 +49,7 @@ namespace MovieTutorial.MovieDB.Entities
         public string GalleryImages
         {
             get => Fields.GalleryImages[this];
-            set { Fields.GalleryImages[this] = value; }
+            set => Fields.GalleryImages[this] = value;
         }
 
         // ...
@@ -84,7 +84,7 @@ namespace MovieTutorial.MovieDB.Entities
         public string GalleryImages
         {
             get => Fields.GalleryImages[this];
-            set { Fields.GalleryImages[this] = value; }
+            set => Fields.GalleryImages[this] = value;
         }
 
         // ...

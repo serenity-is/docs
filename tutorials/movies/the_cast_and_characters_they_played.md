@@ -41,7 +41,7 @@ namespace MovieTutorial.Migrations.DefaultDB
             Create.Table("Person").InSchema("mov")
                 .WithColumn("PersonId").AsInt32().Identity()
                     .PrimaryKey().NotNullable()
-                .WithColumn("Firstname").AsString(50).NotNullable()
+                .WithColumn("FirstName").AsString(50).NotNullable()
                 .WithColumn("Lastname").AsString(50).NotNullable()
                 .WithColumn("BirthDate").AsDateTime().Nullable()
                 .WithColumn("BirthPlace").AsString(100).Nullable()
@@ -136,11 +136,11 @@ namespace MovieTutorial.MovieDB.Entities
     public sealed class PersonRow : Row, IIdRow, INameRow
     {
         //... remove QuickSearch and NameProperty from FirstName
-        [DisplayName("Firstname"), Size(50), NotNull]
-        public String Firstname
+        [DisplayName("First Name"), Size(50), NotNull]
+        public String FirstName
         {
-            get => fields.Firstname[this];
-            set => fields.Firstname[this] = value;
+            get => fields.FirstName[this];
+            set => fields.FirstName[this] = value;
         }
 
         [DisplayName("Lastname"), Size(50), NotNull]
@@ -152,7 +152,7 @@ namespace MovieTutorial.MovieDB.Entities
 
         //change NameField to Fullname
         [DisplayName("Full Name"),
-        Expression("(t0.Firstname + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
+        Expression("(t0.FirstName + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
         public String Fullname
         {
             get => Fields.Fullname[this];
@@ -164,7 +164,7 @@ namespace MovieTutorial.MovieDB.Entities
         public class RowFields : RowFieldsBase
         {
             public Int32Field PersonId;
-            public StringField Firstname;
+            public StringField FirstName;
             public StringField Lastname;
             public StringField Fullname;
             //...
@@ -173,11 +173,11 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-We specified SQL expression *Expression("(t0.Firstname + ' ' + t0.Lastname)")* on top of Fullname property. Thus, it is a server side calculated field. 
+We specified SQL expression *Expression("(t0.FirstName + ' ' + t0.Lastname)")* on top of Fullname property. Thus, it is a server side calculated field. 
 
-By adding QuickSearch attribute to FullName, instead of Firstname, grid will now search by default on Fullname field.
+By adding QuickSearch attribute to FullName, instead of FirstName, grid will now search by default on Fullname field.
 
-But dialog will still show Firstname. We need to build and transform templates to make it show Fullname.
+But dialog will still show FirstName. We need to build and transform templates to make it show Fullname.
 
 ### Why Had to Transform Templates?
 
@@ -208,7 +208,7 @@ Thus, unless we transform T4 templates, the name property change we did in *Pers
 namespace MovieTutorial.MovieDB {
     export interface PersonRow {
         PersonId?: number;
-        Firstname?: string;
+        FirstName?: string;
         Lastname?: string;
         Fullname?: string;
         //...
@@ -473,7 +473,7 @@ Next, edit MovieCastRow.cs:
     {
         //...
         [DisplayName("Actor/Actress"), NotNull, ForeignKey("[mov].[Person]", "PersonId")]
-        [LeftJoin("jPerson"), TextualField("PersonFirstname")]
+        [LeftJoin("jPerson"), TextualField("PersonFirstName")]
         [LookupEditor(typeof(PersonRow))]
         public Int32? PersonId
         {
@@ -544,11 +544,11 @@ namespace MovieTutorial.MovieDB.Entities
     {
         // ...
         
-        [DisplayName("Person Firstname"), Expression("jPerson.[Firstname]")]
-        public String PersonFirstname
+        [DisplayName("Person First Name"), Expression("jPerson.[FirstName]")]
+        public String PersonFirstName
         {
-            get => fields.PersonFirstname[this];
-            set => fields.PersonFirstname[this] = value;
+            get => fields.PersonFirstName[this];
+            set => fields.PersonFirstName[this] = value;
         }
 
         [DisplayName("Person Lastname"), Expression("jPerson.[Lastname]")]
@@ -570,7 +570,7 @@ namespace MovieTutorial.MovieDB.Entities
         public class RowFields : RowFieldsBase
         {
             // ...
-            public StringField PersonFirstname;
+            public StringField PersonFirstName;
             public StringField PersonLastname;
             public StringField PersonFullname;
             // ...

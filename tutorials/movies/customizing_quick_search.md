@@ -43,7 +43,7 @@ Code generator determined that first textual (string) field in our table is Titl
 
 Here, *Title* is actually the name field, so we leave it as is. But we want Serenity to search also in *Description* and *Storyline* fields. To do this, you need to add *QuickSearch* attribute to these fields too, as shown below:
 
-```
+```cs
 namespace MovieTutorial.MovieDB.Entities
 {
     //...
@@ -161,7 +161,8 @@ We can now use intellisense to replace hardcoded field names with compile time c
 namespace MovieTutorial.MovieDB
 {
     //...
-    import fld = MoviesRow.Fields
+    import fld = MoviesRow.Fields;
+
     public class MovieGrid extends EntityGrid<MovieRow, any>
     {
         constructor(container: JQuery) {
@@ -188,7 +189,8 @@ What about field titles? It is not so critical as field names, but can be useful
 namespace MovieTutorial.MovieDB
 {
     //...
-    import fld = MoviesRow.Fields
+    import fld = MoviesRow.Fields;
+
     public class MovieGrid extends EntityGrid<MovieRow, any>
     {
         constructor(container: JQuery) {

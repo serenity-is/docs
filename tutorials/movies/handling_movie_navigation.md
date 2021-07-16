@@ -7,8 +7,8 @@ When Sergen generated code for Movie table, it also created a navigation item en
 Open _MovieDBNavigation.cs_ in the module folder.  In it you'll find this line:
 
 ```cs
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Movie", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController))]
+[assembly: NavigationLink(int.MaxValue, "MovieDB/Movie", 
+    typeof(MyPages.MovieController), icon: null)]
 ```
 
 First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
@@ -18,8 +18,8 @@ Second parameter is navigation title in "Section Title/Link Title" format. Secti
 Lets change it to _Movie Database/Movies_.
 
 ```cs
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "fa-video-camera")]
+[assembly: NavigationLink(int.MaxValue, "MovieDB/Movie", 
+    typeof(MyPages.MovieController), icon: "fa-video-camera")]
 ```
 
 ![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
@@ -49,16 +49,14 @@ So we move it to our central location which is at _MovieTutorial.Web/Modules/Com
 Just cut the below lines from _MovieDBNavigation.cs_:
 
 ```cs
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "fa-video-camera")]
+[assembly: NavigationLink(int.MaxValue, "Movie Database/Movies", 
+    typeof(MyPages.MovieController), icon: "fa-video-camera")]
 ```
 
 Move it into _NavigationItems.cs_ and modify it like this:
 
 ```
 using Serenity.Navigation;
-using Northwind = MovieTutorial.Northwind.Pages;
-using Administration = MovieTutorial.Administration.Pages;
 using MovieDB = MovieTutorial.MovieDB.Pages;
 
 [assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "",
@@ -67,13 +65,6 @@ using MovieDB = MovieTutorial.MovieDB.Pages;
 [assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies", 
     typeof(MovieDB.MovieController), icon: "fa-video-camera")]
-
-[assembly: NavigationMenu(8000, "Northwind", icon: "fa-anchor")]
-[assembly: NavigationLink(8200, "Northwind/Customers", 
-    typeof(Northwind.CustomerController), icon: "fa-credit-card")]
-[assembly: NavigationLink(8300, "Northwind/Products", 
-    typeof(Northwind.ProductController), icon: "fa-cube")]
-// ...
 ```
 
 Here we also declared a navigation menu \(Movie Database\) with _film_ icon. When you don't have an explicitly defined navigation menu, Serenity implicitly creates one, but in this case you can't order menu yourself, or set menu icon.

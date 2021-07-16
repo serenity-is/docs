@@ -8,11 +8,10 @@ To hold Movie genres we need a lookup table. For *Kind* field we used an enumera
 
 As usual, we start with a migration.
 
-*Migrations/DefaultDB/ DefaultDB_20160519_154700_GenreTable.cs*:
+*Migrations/DefaultDB/DefaultDB_20160519_154700_GenreTable.cs*:
 
 ```cs
 using FluentMigrator;
-using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
@@ -66,9 +65,8 @@ This is because *Sergen* has no idea of what customizations we performed on our 
 Open *Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
 
 ```cs
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Genre",
-    typeof(MovieTutorial.MovieDB.Pages.GenreController))]
-
+[assembly: NavigationLink(int.MaxValue, "MovieDB/Genre",
+    typeof(MyPages.GenresController), icon: null)]
 ````
 
 And move it to *Modules/Common/Navigation/NavigationItems.cs*:
@@ -79,7 +77,7 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 [assembly: NavigationLink(2100, "Movie Database/Movies", 
     typeof(MovieDB.MovieController), icon: "icon-camcorder")]
 [assembly: NavigationLink(2200, "Movie Database/Genres", 
-    typeof(MovieDB.GenreController), icon: "icon-pin")]
+    typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
 //...
 ```
 
@@ -90,7 +88,6 @@ Now let's add some sample genres. I'll do it through migration, to not to repeat
 
 ```cs
 using FluentMigrator;
-using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
@@ -142,27 +139,28 @@ As we did with *Kind* field before, *GenreId* field needs to be mapped in *Movie
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
+        // ...
         [DisplayName("Kind"), NotNull, DefaultValue(1)]
         public MovieKind? Kind
         {
-            get { return (MovieKind?)Fields.Kind[this]; }
-            set { Fields.Kind[this] = (Int32?)value; }
+            get => (MovieKind?)fields.Kind[this];
+            set => fields.Kind[this] = (Int32?)value;
         }
 
         [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
         public Int32? GenreId
         {
-            get { return Fields.GenreId[this]; }
-            set { Fields.GenreId[this] = value; }
+            get => fields.GenreId[this];
+            set => fields.GenreId[this] = value;
         }
 
         [DisplayName("Genre"), Expression("g.Name")]
         public String GenreName
         {
-            get { return Fields.GenreName[this]; }
-            set { Fields.GenreName[this] = value; }
+            get => fields.GenreName[this];
+            set => fields.GenreName[this] = value;
         }
 
         // ...
@@ -170,15 +168,9 @@ namespace MovieTutorial.MovieDB.Entities
         public class RowFields : RowFieldsBase
         {
             // ...
-            public readonly Int32Field Kind;
-            public readonly Int32Field GenreId;
-            public readonly StringField GenreName;
-
-            public RowFields()
-                : base("[mov].Movie")
-            {
-                LocalTextPrefix = "MovieDB.Movie";
-            }
+            public Int32Field Kind;
+            public Int32Field GenreId;
+            public StringField GenreName;
         }
     }
 }
@@ -215,7 +207,7 @@ namespace MovieTutorial.MovieDB.Forms
 {
     //...
     [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow))]
+    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieForm
     {
         //...
@@ -253,13 +245,12 @@ namespace MovieTutorial.MovieDB.Entities
 {
     // ...
 
-    [ConnectionKey("Default"), DisplayName("Genre"), InstanceName("Genre"), 
-        TwoLevelCached]
-    [ReadPermission("Administration")]
-    [ModifyPermission("Administration")]
-    [JsonConverter(typeof(JsonRowConverter))]
+    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Genre]")]
+    [DisplayName("Genres"), InstanceName("Genres")]
+    [ReadPermission("Administration:General")]
+    [ModifyPermission("Administration:General")]
     [LookupScript("MovieDB.Genre")]
-    public sealed class GenreRow : Row, IIdRow, INameRow
+    public sealed class GenreRow : Row<GenreRow.RowFields>, IIdRow, INameRow
     {
         // ...
     }
@@ -298,8 +289,8 @@ Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown
     [LookupEditor("MovieDB.Genre")]
     public Int32? GenreId
     {
-        get { return Fields.GenreId[this]; }
-        set { Fields.GenreId[this] = value; }
+        get => fields.GenreId[this];
+        set => fields.GenreId[this] = value;
     }
 
 ```
@@ -315,8 +306,8 @@ While defining [LookupEditor] we hardcoded the lookup key. It's also possible to
     [LookupEditor(typeof(GenreRow))]
     public Int32? GenreId
     {
-        get { return Fields.GenreId[this]; }
-        set { Fields.GenreId[this] = value; }
+        get => fields.GenreId[this];
+        set => fields.GenreId[this] = value;
     }
 
 ```
@@ -374,8 +365,8 @@ Open MovieRow.cs and modify *LookupEditor* attribute like this:
 [LookupEditor(typeof(GenreRow), InplaceAdd = true)]
 public Int32? GenreId
 {
-    get { return Fields.GenreId[this]; }
-    set { Fields.GenreId[this] = value; }
+    get => fields.GenreId[this];
+    set => fields.GenreId[this] = value;
 }
 
 ```
@@ -435,8 +426,8 @@ But this is not the case as they match. In such a case, either you'd have to use
 [LookupEditor(typeof(GenreRow), InplaceAdd = true, DialogType = "MovieDB.Genre")]
 public Int32? GenreId
 {
-    get { return Fields.GenreId[this]; }
-    set { Fields.GenreId[this] = value; }
+    get => fields.GenreId[this];
+    set => fields.GenreId[this] = value;
 }
 ```
 

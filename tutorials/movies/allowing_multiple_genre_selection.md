@@ -71,15 +71,15 @@ Remove GenreId and GenreName properties and their related field objects from *Mo
 // remove this
 public Int32? GenreId
 {
-    get { return Fields.GenreId[this]; }
-    set { Fields.GenreId[this] = value; }
+    get => fields.GenreId[this];
+    set => fields.GenreId[this] = value;
 }
 
 // remove this
 public String GenreName
 {
-    get { return Fields.GenreName[this]; }
-    set { Fields.GenreName[this] = value; }
+    get => fields.GenreName[this];
+    set => fields.GenreName[this] = value;
 }
 
 public class RowFields : RowFieldsBase
@@ -148,8 +148,8 @@ As one movie might have multiple genres now, instead of a Int32 property, we nee
 [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
 public MovieKind? Kind
 {
-    get { return (MovieKind?)Fields.Kind[this]; }
-    set { Fields.Kind[this] = (Int32?)value; }
+    get => (MovieKind?)fields.Kind[this];
+    set => fields.Kind[this] = (Int32?)value;
 }
 
 [DisplayName("Genres")]
@@ -157,8 +157,8 @@ public MovieKind? Kind
 [LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
 public List<Int32> GenreList
 {
-    get { return Fields.GenreList[this]; }
-    set { Fields.GenreList[this] = value; }
+    get => fields.GenreList[this];
+    set => fields.GenreList[this] = value;
 }
 
 public class RowFields : RowFieldsBase

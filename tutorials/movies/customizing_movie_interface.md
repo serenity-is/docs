@@ -16,16 +16,18 @@ Here is an excerpt from its source with our Runtime property:
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movie"), 
-     InstanceName("Movie"), TwoLevelCached]
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
+    [DisplayName("Movie"), InstanceName("Movie")]
+    [ReadPermission("Administration:General")]
+    [ModifyPermission("Administration:General")]
+    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         // ...
         [DisplayName("Runtime")]
         public Int32? Runtime
         {
-            get { return Fields.Runtime[this]; }
-            set { Fields.Runtime[this] = value; }
+            get => fields.Runtime[this];
+            set => fields.Runtime[this] = value;
         }
         //...
     }
@@ -38,16 +40,18 @@ We'll talk about entities (or rows) later, let's now focus on our target and cha
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), 
-     TwoLevelCached]
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
+    [DisplayName("Movie"), InstanceName("Movie")]
+    [ReadPermission("Administration:General")]
+    [ModifyPermission("Administration:General")]
+    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         // ...
         [DisplayName("Runtime (mins)")]
         public Int32? Runtime
         {
-            get { return Fields.Runtime[this]; }
-            set { Fields.Runtime[this] = value; }
+            get => fields.Runtime[this];
+            set => fields.Runtime[this] = value;
         }
         //...
     }
@@ -74,7 +78,7 @@ namespace MovieTutorial.MovieDB.Columns
     // ...
 
     [ColumnsScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow))]
+    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
@@ -97,7 +101,7 @@ namespace MovieTutorial.MovieDB.Columns
     // ...
 
     [ColumnsScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow))]
+    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
@@ -139,7 +143,7 @@ namespace MovieTutorial.MovieDB.Forms
 {
     //...
     [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow))]
+    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieForm
     {
         public String Title { get; set; }
@@ -159,7 +163,7 @@ namespace MovieTutorial.MovieDB.Forms
 {
     //...
     [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow))]
+    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieForm
     {
         public String Title { get; set; }
@@ -188,7 +192,7 @@ As editors became a bit higher, form height exceeded the default Serenity form h
 
 ### Setting Initial Dialog Size With CSS (Less)
 
-Sergen generated some CSS for our movie dialog in *MovieTutorial.Web/Content/site/site.moviedb.less* file (in Visual Studio it may appear as a child of *site.less* if you have file nesting enabled).
+Sergen generated some CSS for our movie dialog in *MovieTutorial.Web/wwwroot/Content/site/site.moviedb.less* file (in Visual Studio it may appear as a child of *site.less* if you have file nesting enabled).
 
 If you open it, you will see this:
 
@@ -244,9 +248,11 @@ Open *MovieRow.cs* again.
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movie"), InstanceName("Movie"), 
-     TwoLevelCached]
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
+    [DisplayName("Movie"), InstanceName("Movie")]
+    [ReadPermission("Administration:General")]
+    [ModifyPermission("Administration:General")]
+    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Movie Id"), Identity]
         public Int32? MovieId
@@ -262,9 +268,11 @@ InstanceName corresponds to singular name and is used in New Record (New Movie) 
 namespace MovieTutorial.MovieDB.Entities
 {
     // ...
-    [ConnectionKey("Default"), DisplayName("Movies"), InstanceName("Movie"), 
-     TwoLevelCached]
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
+    [DisplayName("Movies"), InstanceName("Movie")]
+    [ReadPermission("Administration:General")]
+    [ModifyPermission("Administration:General")]
+    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Movie Id"), Identity]
         public Int32? MovieId

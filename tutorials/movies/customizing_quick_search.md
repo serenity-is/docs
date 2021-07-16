@@ -20,19 +20,21 @@ By default, Sergen determines first textual field of a table as *the name field*
 
 > The name field also determines initial sorting order and shown in edit dialog titles. 
 
-Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it in *MovieRow.cs*:
+Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it by switching the _NameProperty_ attribute on *MovieRow.cs*:
 
 ```cs
 
 namespace MovieTutorial.MovieDB.Entities
 {
     //...
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         //...
-        StringField INameRow.NameField
+        [DisplayName("Description"), Size(1000), QuickSearch, NameProperty]
+        public String Description
         {
-            get { return Fields.Title; }
+            get => fields.Description[this];
+            set => fields.Description[this] = value;
         }
 }
 ```
@@ -41,32 +43,32 @@ Code generator determined that first textual (string) field in our table is Titl
 
 Here, *Title* is actually the name field, so we leave it as is. But we want Serenity to search also in *Description* and *Storyline* fields. To do this, you need to add *QuickSearch* attribute to these fields too, as shown below:
 
-```
+```cs
 namespace MovieTutorial.MovieDB.Entities
 {
     //...
-    public sealed class MovieRow : Row, IIdRow, INameRow
+    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         //...
         [DisplayName("Title"), Size(200), NotNull, QuickSearch]
         public String Title
         {
-            get { return Fields.Title[this]; }
-            set { Fields.Title[this] = value; }
+            get => fields.Title[this];
+            set => fields.Title[this] = value;
         }
 
         [DisplayName("Description"), Size(1000), QuickSearch]
         public String Description
         {
-            get { return Fields.Description[this]; }
-            set { Fields.Description[this] = value; }
+            get => fields.Description[this];
+            set => fields.Description[this] = value;
         }
 
         [DisplayName("Storyline"), QuickSearch]
         public String Storyline
         {
-            get { return Fields.Storyline[this]; }
-            set { Fields.Storyline[this] = value; }
+            get => fields.Storyline[this];
+            set => fields.Storyline[this] = value;
         }
         //...
     }
@@ -85,8 +87,8 @@ If we wanted it to show only rows that *starts with* typed text, we would change
 [DisplayName("Title"), Size(200), NotNull, QuickSearch(SearchType.StartsWith)]
 public String Title
 {
-    get { return Fields.Title[this]; }
-    set { Fields.Title[this] = value; }
+    get => fields.Title[this];
+    set => fields.Title[this] = value;
 }
 ```
 
@@ -94,12 +96,12 @@ public String Title
 
 If we wanted to search also in year column, but only exact integer values (1999 matches but not 19):
 
-```
+```cs
 [DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
 public Int32? Year
 {
-    get { return Fields.Year[this]; }
-    set { Fields.Year[this] = value; }
+    get => fields.Year[this];
+    set => fields.Year[this] = value;
 }
 ```
 
@@ -159,6 +161,8 @@ We can now use intellisense to replace hardcoded field names with compile time c
 namespace MovieTutorial.MovieDB
 {
     //...
+    import fld = MoviesRow.Fields;
+
     public class MovieGrid extends EntityGrid<MovieRow, any>
     {
         constructor(container: JQuery) {
@@ -167,7 +171,6 @@ namespace MovieTutorial.MovieDB
 
         protected getQuickSearchFields(): Serenity.QuickSearchField[]
         {
-            let fld = MovieRow.Fields;
             return [
                 { name: "", title: "all" },
                 { name: fld.Description, title: "description" },
@@ -186,6 +189,8 @@ What about field titles? It is not so critical as field names, but can be useful
 namespace MovieTutorial.MovieDB
 {
     //...
+    import fld = MoviesRow.Fields;
+
     public class MovieGrid extends EntityGrid<MovieRow, any>
     {
         constructor(container: JQuery) {
@@ -193,7 +198,6 @@ namespace MovieTutorial.MovieDB
         }
 
         protected getQuickSearchFields(): Serenity.QuickSearchField[] {
-            let fld = MovieRow.Fields;
             let txt = (s) => Q.text("Db." + 
                 MovieRow.localTextPrefix + "." + s).toLowerCase();
             return [

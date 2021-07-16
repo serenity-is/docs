@@ -40,16 +40,16 @@ namespace MovieTutorial.MovieDB.Entities
          ImageUploadEditor(FilenameFormat = "Person/PrimaryImage/~")]
         public string PrimaryImage
         {
-            get => Fields.PrimaryImage[this];
-            set => Fields.PrimaryImage[this] = value;
+            get => fields.PrimaryImage[this];
+            set => fields.PrimaryImage[this] = value;
         }
 
         [DisplayName("Gallery Images"),
          MultipleImageUploadEditor(FilenameFormat = "Person/GalleryImages/~")]
         public string GalleryImages
         {
-            get => Fields.GalleryImages[this];
-            set => Fields.GalleryImages[this] = value;
+            get => fields.GalleryImages[this];
+            set => fields.GalleryImages[this] = value;
         }
 
         // ...
@@ -75,16 +75,16 @@ namespace MovieTutorial.MovieDB.Entities
          ImageUploadEditor(FilenameFormat = "Movie/PrimaryImage/~")]
         public string PrimaryImage
         {
-            get => Fields.PrimaryImage[this];
-            set => Fields.PrimaryImage[this] = value;
+            get => fields.PrimaryImage[this];
+            set => fields.PrimaryImage[this] = value;
         }
 
         [DisplayName("Gallery Images"),
          MultipleImageUploadEditor(FilenameFormat = "Movie/GalleryImages/~")]
         public string GalleryImages
         {
-            get => Fields.GalleryImages[this];
-            set => Fields.GalleryImages[this] = value;
+            get => fields.GalleryImages[this];
+            set => fields.GalleryImages[this] = value;
         }
 
         // ...

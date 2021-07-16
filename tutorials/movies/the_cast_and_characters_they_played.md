@@ -155,8 +155,8 @@ namespace MovieTutorial.MovieDB.Entities
         Expression("(t0.FirstName + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
         public String Fullname
         {
-            get => Fields.Fullname[this];
-            set => Fields.Fullname[this] = value;
+            get => fields.Fullname[this];
+            set => fields.Fullname[this] = value;
         }
 
         //...
@@ -728,8 +728,8 @@ namespace MovieTutorial.MovieDB.Entities
         [DisplayName("Cast List"), NotMapped]
         public List<MovieCastRow> CastList
         {
-            get => Fields.CastList[this];
-            set => Fields.CastList[this] = value;
+            get => fields.CastList[this];
+            set => fields.CastList[this] = value;
         }
 
         public class RowFields : RowFieldsBase
@@ -920,8 +920,8 @@ Open MovieRow.cs and modify *CastList* property:
 [DisplayName("Cast List"), NotMapped]
 public List<MovieCastRow> CastList
 {
-    get => Fields.CastList[this];
-    set => Fields.CastList[this] = value;
+    get => fields.CastList[this];
+    set => fields.CastList[this] = value;
 }
 ```
 

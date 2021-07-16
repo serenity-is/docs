@@ -145,22 +145,22 @@ namespace MovieTutorial.MovieDB.Entities
         [DisplayName("Kind"), NotNull, DefaultValue(1)]
         public MovieKind? Kind
         {
-            get { return (MovieKind?)Fields.Kind[this]; }
-            set { Fields.Kind[this] = (Int32?)value; }
+            get => (MovieKind?)fields.Kind[this];
+            set => fields.Kind[this] = (Int32?)value;
         }
 
         [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
         public Int32? GenreId
         {
             get => fields.GenreId[this];
-            set => Fields.GenreId[this] = value;
+            set => fields.GenreId[this] = value;
         }
 
         [DisplayName("Genre"), Expression("g.Name")]
         public String GenreName
         {
-            get => Fields.GenreName[this];
-            set => Fields.GenreName[this] = value;
+            get => fields.GenreName[this];
+            set => fields.GenreName[this] = value;
         }
 
         // ...
@@ -289,8 +289,8 @@ Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown
     [LookupEditor("MovieDB.Genre")]
     public Int32? GenreId
     {
-        get { return Fields.GenreId[this]; }
-        set { Fields.GenreId[this] = value; }
+        get => fields.GenreId[this];
+        set => fields.GenreId[this] = value;
     }
 
 ```
@@ -306,8 +306,8 @@ While defining [LookupEditor] we hardcoded the lookup key. It's also possible to
     [LookupEditor(typeof(GenreRow))]
     public Int32? GenreId
     {
-        get { return Fields.GenreId[this]; }
-        set { Fields.GenreId[this] = value; }
+        get => fields.GenreId[this];
+        set => fields.GenreId[this] = value;
     }
 
 ```
@@ -365,8 +365,8 @@ Open MovieRow.cs and modify *LookupEditor* attribute like this:
 [LookupEditor(typeof(GenreRow), InplaceAdd = true)]
 public Int32? GenreId
 {
-    get { return Fields.GenreId[this]; }
-    set { Fields.GenreId[this] = value; }
+    get => fields.GenreId[this];
+    set => fields.GenreId[this] = value;
 }
 
 ```
@@ -426,8 +426,8 @@ But this is not the case as they match. In such a case, either you'd have to use
 [LookupEditor(typeof(GenreRow), InplaceAdd = true, DialogType = "MovieDB.Genre")]
 public Int32? GenreId
 {
-    get { return Fields.GenreId[this]; }
-    set { Fields.GenreId[this] = value; }
+    get => fields.GenreId[this];
+    set => fields.GenreId[this] = value;
 }
 ```
 

@@ -115,7 +115,7 @@ Fire up sergen and generate code for *MovieGenres* table as usual:
 - Connection Key: **Default**
 - Table Name: **mov.MovieGenres**
 - Module Name: **MovieDB**
-- Entity Identifier: **Movie Genres**
+- Entity Identifier: **MovieGenres**
 - Permission Key: **Administration:General**
 
 As we're not going to edit movie genres from a separate page, you can safely delete the generated files below:

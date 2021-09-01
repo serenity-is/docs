@@ -13,6 +13,7 @@ public class ServiceError
 | [Arguments](ServiceError/Arguments.md) { get; set; } |  |
 | [Code](ServiceError/Code.md) { get; set; } |  |
 | [Details](ServiceError/Details.md) { get; set; } |  |
+| [ErrorId](ServiceError/ErrorId.md) { get; set; } |  |
 | [Message](ServiceError/Message.md) { get; set; } |  |
 
 ## See Also

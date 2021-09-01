@@ -3,7 +3,7 @@
 
 ```csharp
 public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> : 
-    IRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse>, IRetrieveRequestProcessor
+    IRetrieveHandler<TRow, TRetrieveRequest, TRetrieveResponse>, IRetrieveRequestProcessor
     where TRow : class, IRow, new()
     where TRetrieveRequest : RetrieveRequest
     where TRetrieveResponse : RetrieveResponse<TRow>, new()
@@ -23,6 +23,7 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 | [StateBag](RetrieveRequestHandler-3/StateBag.md) { get; } |  |
 | [User](RetrieveRequestHandler-3/User.md) { get; } |  |
 | [Process](RetrieveRequestHandler-3/Process.md)(…) |  |
+| [Retrieve](RetrieveRequestHandler-3/Retrieve.md)(…) |  |
 
 ## Protected Members
 
@@ -48,7 +49,7 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 
 ## See Also
 
-* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](IRequestHandler-3.md)
+* interface [IRetrieveHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](IRetrieveHandler-3.md)
 * class [TRow](../Serenity.Net.Services/RetrieveRequestHandler-3.TRow.md)
 * class [TRetrieveRequest](../Serenity.Net.Services/RetrieveRequestHandler-3.TRetrieveRequest.md)
 * class [TRetrieveResponse](../Serenity.Net.Services/RetrieveRequestHandler-3.TRetrieveResponse.md)

@@ -82,6 +82,7 @@
 | abstract class  | [BaseDeleteBehavior](Serenity.Services/BaseDeleteBehavior.md) |  |
 | abstract class  | [BaseListBehavior](Serenity.Services/BaseListBehavior.md) |  |
 | class  | [BaseRepository](Serenity.Services/BaseRepository.md) |  |
+| abstract class  | [BaseRequestHandler](Serenity.Services/BaseRequestHandler.md) |  |
 | abstract class  | [BaseRetrieveBehavior](Serenity.Services/BaseRetrieveBehavior.md) |  |
 | abstract class  | [BaseSaveBehavior](Serenity.Services/BaseSaveBehavior.md) |  |
 | abstract class  | [BaseSaveDeleteBehavior](Serenity.Services/BaseSaveDeleteBehavior.md) |  |
@@ -106,10 +107,14 @@
 | class  | [GenericHandlerTypeAttribute](Serenity.Services/GenericHandlerTypeAttribute.md) |  |
 | interface  | [IBehaviorFactory](Serenity.Services/IBehaviorFactory.md) |  |
 | interface  | [IBehaviorProvider](Serenity.Services/IBehaviorProvider.md) |  |
+| interface  | [ICreateHandler&lt;TRow&gt;](Serenity.Services/ICreateHandler-1.md) |  |
+| interface  | [ICreateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/ICreateHandler-3.md) |  |
 | interface  | [IDefaultHandlerFactory](Serenity.Services/IDefaultHandlerFactory.md) |  |
 | interface  | [IDefaultHandlerRegistry](Serenity.Services/IDefaultHandlerRegistry.md) |  |
 | interface  | [IDeleteBehavior](Serenity.Services/IDeleteBehavior.md) |  |
 | interface  | [IDeleteExceptionBehavior](Serenity.Services/IDeleteExceptionBehavior.md) |  |
+| interface  | [IDeleteHandler&lt;TRow&gt;](Serenity.Services/IDeleteHandler-1.md) |  |
+| interface  | [IDeleteHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](Serenity.Services/IDeleteHandler-3.md) |  |
 | interface  | [IDeleteRequestHandler](Serenity.Services/IDeleteRequestHandler.md) |  |
 | interface  | [IDeleteRequestProcessor](Serenity.Services/IDeleteRequestProcessor.md) |  |
 | interface  | [IFieldBehavior](Serenity.Services/IFieldBehavior.md) |  |
@@ -118,6 +123,9 @@
 | interface  | [IImplicitBehaviorRegistry](Serenity.Services/IImplicitBehaviorRegistry.md) |  |
 | interface  | [IIncludeExcludeColumns](Serenity.Services/IIncludeExcludeColumns.md) |  |
 | interface  | [IListBehavior](Serenity.Services/IListBehavior.md) |  |
+| interface  | [IListHandler&lt;TRow&gt;](Serenity.Services/IListHandler-1.md) |  |
+| interface  | [IListHandler&lt;TRow,TListRequest&gt;](Serenity.Services/IListHandler-2.md) |  |
+| interface  | [IListHandler&lt;TRow,TListRequest,TListResponse&gt;](Serenity.Services/IListHandler-3.md) |  |
 | interface  | [IListRequestHandler](Serenity.Services/IListRequestHandler.md) |  |
 | interface  | [IListRequestProcessor](Serenity.Services/IListRequestProcessor.md) |  |
 | interface  | [IListResponse](Serenity.Services/IListResponse.md) |  |
@@ -128,14 +136,20 @@
 | interface  | [IRequestType&lt;TRequestType&gt;](Serenity.Services/IRequestType-1.md) |  |
 | interface  | [IResponseType&lt;TResponseType&gt;](Serenity.Services/IResponseType-1.md) |  |
 | interface  | [IRetrieveBehavior](Serenity.Services/IRetrieveBehavior.md) |  |
+| interface  | [IRetrieveHandler&lt;TRow&gt;](Serenity.Services/IRetrieveHandler-1.md) |  |
+| interface  | [IRetrieveHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](Serenity.Services/IRetrieveHandler-3.md) |  |
 | interface  | [IRetrieveRequestHandler](Serenity.Services/IRetrieveRequestHandler.md) |  |
 | interface  | [IRetrieveRequestProcessor](Serenity.Services/IRetrieveRequestProcessor.md) |  |
 | interface  | [IRetrieveResponse](Serenity.Services/IRetrieveResponse.md) |  |
 | interface  | [ISaveBehavior](Serenity.Services/ISaveBehavior.md) |  |
 | interface  | [ISaveExceptionBehavior](Serenity.Services/ISaveExceptionBehavior.md) |  |
+| interface  | [ISaveHandler&lt;TRow&gt;](Serenity.Services/ISaveHandler-1.md) |  |
+| interface  | [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/ISaveHandler-3.md) |  |
 | interface  | [ISaveRequest](Serenity.Services/ISaveRequest.md) |  |
 | interface  | [ISaveRequestHandler](Serenity.Services/ISaveRequestHandler.md) |  |
 | interface  | [ISaveRequestProcessor](Serenity.Services/ISaveRequestProcessor.md) |  |
+| interface  | [IUpdateHandler&lt;TRow&gt;](Serenity.Services/IUpdateHandler-1.md) |  |
+| interface  | [IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/IUpdateHandler-3.md) |  |
 | class  | [JsonServiceClient](Serenity.Services/JsonServiceClient.md) |  |
 | class  | [JsonSortByConverter](Serenity.Services/JsonSortByConverter.md) |  |
 | class  | [LinkingSetRelationBehavior](Serenity.Services/LinkingSetRelationBehavior.md) |  |

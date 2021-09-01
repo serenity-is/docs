@@ -1,10 +1,9 @@
-# ServiceCollectionExtensions.AddServiceHandlers method
+# ServiceCollectionExtensions.AddCustomRequestHandlers method
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public static IServiceCollection AddServiceHandlers(this IServiceCollection collection, 
-    ITypeSource customHandlerTypeSource = null, 
-    Func<Type, Type, bool> customHandlerPredicate = null)
+public static IServiceCollection AddCustomRequestHandlers(this IServiceCollection collection, 
+    ITypeSource typeSource = null, Func<Type, Type, bool> predicate = null)
 ```
 
 ## See Also

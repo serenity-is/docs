@@ -2,7 +2,8 @@
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
 ```csharp
-public class DeleteRequestHandler<TRow> : DeleteRequestHandler<TRow, DeleteRequest, DeleteResponse>
+public class DeleteRequestHandler<TRow> : 
+    DeleteRequestHandler<TRow, DeleteRequest, DeleteResponse>, IDeleteHandler<TRow>
     where TRow : class, IRow, IIdRow, new()
 ```
 
@@ -18,6 +19,7 @@ public class DeleteRequestHandler<TRow> : DeleteRequestHandler<TRow, DeleteReque
 * class [TRow](../Serenity.Net.Services/DeleteRequestHandler-1.TRow.md)
 * class [DeleteRequest](DeleteRequest.md)
 * class [DeleteResponse](DeleteResponse.md)
+* interface [IDeleteHandler&lt;TRow&gt;](IDeleteHandler-1.md)
 * interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
 * **Source:** *[DeleteRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Delete/DeleteRequestHandlerT.cs)*

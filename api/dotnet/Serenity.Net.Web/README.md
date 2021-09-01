@@ -52,7 +52,7 @@
 | static class  | [EndpointExtensions](Serenity.Services/EndpointExtensions.md) |  |
 | class  | [HandleServiceExceptionAttribute](Serenity.Services/HandleServiceExceptionAttribute.md) |  |
 | class  | [ImageUploadBehavior](Serenity.Services/ImageUploadBehavior.md) |  |
-| class  | [JsonFilter](Serenity.Services/JsonFilter.md) |  |
+| class  | [JsonRequestAttribute](Serenity.Services/JsonRequestAttribute.md) |  |
 | class  | [MultipleImageUploadBehavior](Serenity.Services/MultipleImageUploadBehavior.md) |  |
 | class  | [Result&lt;TResponse&gt;](Serenity.Services/Result-1.md) |  |
 | class  | [ResultWithStatus&lt;TResponse&gt;](Serenity.Services/ResultWithStatus-1.md) |  |

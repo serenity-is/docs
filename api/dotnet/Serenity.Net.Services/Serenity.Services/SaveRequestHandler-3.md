@@ -3,7 +3,7 @@
 
 ```csharp
 public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> : 
-    IRequestHandler<TRow, TSaveRequest, TSaveResponse>, ISaveRequestProcessor
+    ISaveHandler<TRow, TSaveRequest, TSaveResponse>, ISaveRequestProcessor
     where TRow : class, IRow, IIdRow, new()
     where TSaveRequest : SaveRequest<TRow>, new()
     where TSaveResponse : SaveResponse, new()
@@ -28,7 +28,9 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 | [StateBag](SaveRequestHandler-3/StateBag.md) { get; } |  |
 | [UnitOfWork](SaveRequestHandler-3/UnitOfWork.md) { get; protected set; } |  |
 | [User](SaveRequestHandler-3/User.md) { get; } |  |
+| [Create](SaveRequestHandler-3/Create.md)(…) |  |
 | [Process](SaveRequestHandler-3/Process.md)(…) |  |
+| [Update](SaveRequestHandler-3/Update.md)(…) |  |
 
 ## Protected Members
 
@@ -67,7 +69,7 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 
 ## See Also
 
-* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](IRequestHandler-3.md)
+* interface [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](ISaveHandler-3.md)
 * class [TRow](../Serenity.Net.Services/SaveRequestHandler-3.TRow.md)
 * class [TSaveRequest](../Serenity.Net.Services/SaveRequestHandler-3.TSaveRequest.md)
 * class [TSaveResponse](../Serenity.Net.Services/SaveRequestHandler-3.TSaveResponse.md)

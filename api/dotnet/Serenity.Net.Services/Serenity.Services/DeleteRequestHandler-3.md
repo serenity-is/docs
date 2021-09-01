@@ -2,8 +2,8 @@
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
 ```csharp
-public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> : IDeleteRequestProcessor, 
-    IRequestHandler<TRow, TDeleteRequest, TDeleteResponse>
+public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> : 
+    IDeleteHandler<TRow, TDeleteRequest, TDeleteResponse>, IDeleteRequestProcessor
     where TRow : class, IRow, IIdRow, new()
     where TDeleteRequest : DeleteRequest
     where TDeleteResponse : DeleteResponse, new()
@@ -22,6 +22,7 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> : IDele
 | [StateBag](DeleteRequestHandler-3/StateBag.md) { get; } |  |
 | [UnitOfWork](DeleteRequestHandler-3/UnitOfWork.md) { get; protected set; } |  |
 | [User](DeleteRequestHandler-3/User.md) { get; } |  |
+| [Delete](DeleteRequestHandler-3/Delete.md)(…) |  |
 | [Process](DeleteRequestHandler-3/Process.md)(…) |  |
 
 ## Protected Members
@@ -48,11 +49,11 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> : IDele
 
 ## See Also
 
-* interface [IDeleteRequestProcessor](IDeleteRequestProcessor.md)
-* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](IRequestHandler-3.md)
+* interface [IDeleteHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](IDeleteHandler-3.md)
 * class [TRow](../Serenity.Net.Services/DeleteRequestHandler-3.TRow.md)
 * class [TDeleteRequest](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteRequest.md)
 * class [TDeleteResponse](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteResponse.md)
+* interface [IDeleteRequestProcessor](IDeleteRequestProcessor.md)
 * interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
 * class [DeleteRequest](DeleteRequest.md)

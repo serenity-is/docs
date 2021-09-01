@@ -2,8 +2,8 @@
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
 ```csharp
-public class ListRequestHandler<TRow, TListRequest, TListResponse> : IListRequestProcessor, 
-    IRequestHandler<TRow>, IRequestType<TListRequest>, IResponseType<TListResponse>
+public class ListRequestHandler<TRow, TListRequest, TListResponse> : 
+    IListHandler<TRow, TListRequest, TListResponse>, IListRequestProcessor
     where TRow : class, IRow, new()
     where TListRequest : ListRequest
     where TListResponse : ListResponse<TRow>, new()
@@ -25,6 +25,7 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> : IListReques
 | [User](ListRequestHandler-3/User.md) { get; } |  |
 | [GetDistinctFields](ListRequestHandler-3/GetDistinctFields.md)() |  |
 | [IgnoreEqualityFilter](ListRequestHandler-3/IgnoreEqualityFilter.md)(…) |  |
+| [List](ListRequestHandler-3/List.md)(…) |  |
 | [Process](ListRequestHandler-3/Process.md)(…) |  |
 
 ## Protected Members
@@ -68,13 +69,11 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> : IListReques
 
 ## See Also
 
-* interface [IListRequestProcessor](IListRequestProcessor.md)
-* interface [IRequestHandler&lt;TRow&gt;](IRequestHandler-1.md)
+* interface [IListHandler&lt;TRow,TListRequest,TListResponse&gt;](IListHandler-3.md)
 * class [TRow](../Serenity.Net.Services/ListRequestHandler-3.TRow.md)
-* interface [IRequestType&lt;TRequestType&gt;](IRequestType-1.md)
 * class [TListRequest](../Serenity.Net.Services/ListRequestHandler-3.TListRequest.md)
-* interface [IResponseType&lt;TResponseType&gt;](IResponseType-1.md)
 * class [TListResponse](../Serenity.Net.Services/ListRequestHandler-3.TListResponse.md)
+* interface [IListRequestProcessor](IListRequestProcessor.md)
 * interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
 * class [ListRequest](ListRequest.md)
 * class [ListResponse&lt;T&gt;](ListResponse-1.md)

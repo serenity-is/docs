@@ -231,6 +231,8 @@
 | signature | name | description |
 | --: | --- | --- |
 | class  | [CssFile](Serenity.Plugins/CssFile.md) | CSS file dependency for plugins |
+| interface  | [IBackgroundJobs](Serenity.Plugins/IBackgroundJobs.md) | Interface for plugins that has a list of background jobs |
+| interface  | [IConfigureServices](Serenity.Plugins/IConfigureServices.md) | Interface for plugins that requires to configure their own services / options |
 | interface  | [ICssFiles](Serenity.Plugins/ICssFiles.md) | CSS file dependencies for plugins. |
 | interface  | [INavigationItems](Serenity.Plugins/INavigationItems.md) | Abstraction for plugins with navigation entries |
 | interface  | [IPlugin](Serenity.Plugins/IPlugin.md) | Abstraction for plugins |

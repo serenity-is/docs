@@ -9,14 +9,14 @@ For this, we need a M-N mapping table that will let us link any movie to multipl
 
 As usual, we start with a migration:
 
-**Migrations/DefaultDB/ DefaultDB_20160528_115400_MovieGenres.cs:**
+*Migrations/DefaultDB/ DefaultDB_20160528_115400_MovieGenres.cs:*
 
 ```cs
 using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160528115400)]
+    [Migration(20160528_115400)]
     public class DefaultDB_20160528_115400_MovieGenres : Migration
     {
         public override void Up()
@@ -130,9 +130,10 @@ MovieGenresIndex.cshtml
 MovieGenresPage.cs
 ```
 
+You also should delete newly generated line for navigation from _MovieDBNavigation.cs_.
 You can also remove CSS entries for s-MovieDB-MovieGenresDialog from *site.less*.
 
-Only leave last two files, *MovieGenresRow.cs* and *MovieGenresRepository.cs*.
+Only leave last five files, *MovieGenresRow.cs* and files in *RequestHandlers* folder.
 
 After building, run T4 templates to be sure, no T4 generated files related to *MovieGenresForm* etc. is left behind.
 
@@ -280,7 +281,7 @@ As we know that we'll use this formatter on column with a `List<Int32>` value, w
 If the array is empty or null, we can safely return an empty string:
 
 ```ts
-let idList = ctx.value as number[];
+const idList = ctx.value as number[];
 if (!idList || !idList.length)
     return "";
 ```
@@ -288,7 +289,7 @@ if (!idList || !idList.length)
 Then we get a reference to *Genre* lookup, which has a dictionary of *Genre* rows in its *itemById* property:
 
 ```ts
-let byId = GenreRow.getLookup().itemById;
+const byId = GenreRow.getLookup().itemById;
 ```
 
 Next, we start mapping these ID values in our *idList* to their Genre name equivalents, using *Array.map* function in Javascript, which is pretty similar to LINQ Select statement:
@@ -300,7 +301,7 @@ return idList.map(x => {
 We lookup an ID in our Genre dictionary. It should be in dictionary, but we play safe here, and return its numeric value, if the genre is not found in dictionary.
 
 ```ts
-let g = byId[x];
+const g = byId[x];
 if (!g)
     return x.toString();
 ```

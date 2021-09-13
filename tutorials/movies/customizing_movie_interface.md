@@ -13,7 +13,7 @@ When Sergen generated code for Movie table, it created a entity class named Movi
 Here is an excerpt from its source with our Runtime property:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
@@ -37,7 +37,7 @@ namespace MovieTutorial.MovieDB.Entities
 We'll talk about entities (or rows) later, let's now focus on our target and change its DisplayName attribute value to *Runtime (mins)":
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
@@ -245,7 +245,7 @@ Our page has title of *Movie*. Let's change it to *Movies*.
 Open *MovieRow.cs* again. 
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
@@ -265,7 +265,7 @@ Change DisplayName attribute value to *Movies*. This is the name that is used wh
 InstanceName corresponds to singular name and is used in New Record (New Movie) button of the grid and also determines the dialog title (e.g. Edit Movie).
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]

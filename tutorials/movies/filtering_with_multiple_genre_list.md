@@ -32,7 +32,7 @@ As we are going to do something non-standard, e.g. filtering by values in a link
 
 We could process the request *Criteria* object (which is similar to an expression tree) using a visitor and handle GenreList ourself, but it would be a bit complex. So i'll take a simpler road for now.
 
-Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieRepository.cs*:
+Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieEndpoint.cs*:
 
 ```cs
 namespace MovieTutorial.MovieDB
@@ -50,33 +50,33 @@ namespace MovieTutorial.MovieDB
 We added a *Genres* property to our list request object, which will hold the optional *Genres* we want movies to be filtered on.
 
 
-### Modifying Repository/Endpoint for New Request Type
+### Modifying Request Handlers/Endpoint for New Request Type
 
 For our list handler and service to use our new list request type, need to do changes in a few places.
 
-Start with *MovieRepository.cs*:
+Start with *MovieDB/Movie/RequestHandlers/MovieListHandler.cs*:
 
 ```cs
-public class MovieRepository
-{
-    //...
-    public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request)
-    {
-        return new MyListHandler(Context).Process(connection, request);
-    }
+using Serenity.Services;
+using MyRequest = MovieTutorial.MovieDB.MovieListRequest;
+using MyResponse = Serenity.Services.ListResponse<MovieTutorial.MovieDB.MovieRow>;
+using MyRow = MovieTutorial.MovieDB.MovieRow;
 
-    //...
-    private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest> 
+namespace MovieTutorial.MovieDB
+{
+    public interface IMovieListHandler : IListHandler<MyRow, MyRequest, MyResponse> {}
+
+    public class MovieListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IMovieListHandler
     {
-        public MyListHandler(IRequestContext context)
-            : base(context)
+        public MovieListHandler(IRequestContext context)
+             : base(context)
         {
         }
     }
 }
 ```
 
-We changed ListRequest to MovieListRequest in List method and added a generic parameter to MyListHandler, to use our new type instead of ListRequest.
+We changed MyRequest from *Serenity.Services.ListRequest* to *MovieTutorial.MovieDB.MovieListRequest* to use our new type instead of ListRequest.
 
 And another little change in *MovieEndpoint.cs*, which is the actual web service:
 
@@ -84,10 +84,17 @@ And another little change in *MovieEndpoint.cs*, which is the actual web service
 public class MovieController : ServiceEndpoint
 {
     //...
-    public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request)
+    public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request,
+        [FromServices] IMovieListHandler handler)
     {
-        return new MyRepository(Context).List(connection, request);
+        return handler.List(connection, request);
     }
+
+    public FileContentResult ListExcel(IDbConnection connection, MovieListRequest request,
+    [FromServices] IMovieListHandler handler,
+    [FromServices] IExcelExporter exporter)
+    {
+    //...
 }
 ```
 
@@ -109,12 +116,12 @@ export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
     protected getQuickFilters() {
         let items = super.getQuickFilters();
 
-        var genreListFilter = Q.first(items, x =>
+        const genreListFilter = Q.first(items, x =>
             x.field == MovieRow.Fields.GenreList);
 
         genreListFilter.handler = h => {
-            var request = (h.request as MovieListRequest);
-            var values = (h.widget as Serenity.LookupEditor).values;
+            const request = (h.request as MovieListRequest);
+            const values = (h.widget as Serenity.LookupEditor).values;
             request.Genres = values.map(x => parseInt(x, 10));
             h.handled = true;
         };
@@ -137,7 +144,7 @@ let items = super.getQuickFilters();
 Then locate the quick filter object for *GenreList* property:
 
 ```ts
-var genreListFilter = Q.first(items, x =>
+const genreListFilter = Q.first(items, x =>
     x.field == MovieRow.Fields.GenreList);
 ```
 
@@ -152,18 +159,18 @@ genreListFilter.handler = h => {
 Then we get a reference to current *ListRequest* being prepared:
 
 ```ts
-var request = (h.request as MovieListRequest);
+const request = (h.request as MovieListRequest);
 ```
 
 And read the current value in lookup editor:
 
 ```ts
-var values = (h.widget as Serenity.LookupEditor).values;
+const values = (h.widget as Serenity.LookupEditor).values;
 ```
 
 Set it in *request.Genres* property:
 
-```
+```ts
 request.Genres = values.map(x => parseInt(x, 10));
 ```
 
@@ -178,34 +185,48 @@ h.handled = true;
 Now we'll no longer have *Invalid Column Name GenreList* error but Genres filter is not applied server side yet.
 
 
-### Handling Genre Filtering In Repository
+### Handling Genre Filtering In Movie List Handler
 
-Modify *MyListHandler* in *MovieRepository.cs* like below:
+Modify *MovieDB/Movie/RequestHandlers/MovieListHandler.cs* like below:
 
 ```cs
-private class MyListHandler : ListRequestHandler<MyRow, MovieListRequest>
+using Serenity;
+using Serenity.Data;
+using Serenity.Services;
+using MyRequest = MovieTutorial.MovieDB.MovieListRequest;
+using MyResponse = Serenity.Services.ListResponse<MovieTutorial.MovieDB.MovieRow>;
+using MyRow = MovieTutorial.MovieDB.MovieRow;
+
+namespace MovieTutorial.MovieDB
 {
-    public MyListHandler(IRequestContext context)
-        : base(context)
-    {
-    }
+    public interface IMovieListHandler : IListHandler<MyRow, MyRequest, MyResponse> {}
 
-    protected override void ApplyFilters(SqlQuery query)
+    public class MovieListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IMovieListHandler
     {
-        base.ApplyFilters(query);
+        private static MyRow.RowFields fld => MyRow.Fields;
 
-        if (!Request.Genres.IsEmptyOrNull())
+        public MovieListHandler(IRequestContext context)
+             : base(context)
         {
-            var mg = Entities.MovieGenresRow.Fields.As("mg");
+        }
 
-            query.Where(Criteria.Exists(
-                query.SubQuery()
-                    .From(mg)
-                    .Select("1")
-                    .Where(
-                        mg.MovieId == fld.MovieId &&
-                        mg.GenreId.In(Request.Genres))
-                    .ToString()));
+        protected override void ApplyFilters(SqlQuery query)
+        {
+            base.ApplyFilters(query);
+
+            if (!Request.Genres.IsEmptyOrNull())
+            {
+                var mg = MovieGenresRow.Fields.As("mg");
+
+                query.Where(Criteria.Exists(
+                    query.SubQuery()
+                        .From(mg)
+                        .Select("1")
+                        .Where(
+                            mg.MovieId == fld.MovieId &&
+                            mg.GenreId.In(Request.Genres))
+                        .ToString()));
+            }
         }
     }
 }
@@ -218,7 +239,7 @@ We first check if *Request.Genres* is null or an empty list. If so no filtering 
 Next, we get a reference to *MovieGenresRow*'s fields with alias *mg*.
 
 ```
-var mg = Entities.MovieGenresRow.Fields.As("mg");
+var mg = MovieGenresRow.Fields.As("mg");
 ```
 
 Here it needs some explanation, as we didn't cover Serenity entity system yet.
@@ -259,10 +280,10 @@ new SqlQuery()
 SELECT x.MovieId, x.GenreId FROM MovieGenres x
 ```
 
-In *MyListHandler*, which is for *MovieRow* entities, *t0* is already used for *MovieRow* fields. So, to prevent clashes with *MovieGenresRow* fields (which is named *fld*), i had to assign *MovieGenresRow* an alias, *mg*.
+In *MovieListHandler*, which is for *MovieRow* entities, *t0* is already used for *MovieRow* fields. So, to prevent clashes with *MovieGenresRow* fields (which is named *fld*), i had to assign *MovieGenresRow* an alias, *mg*.
 
 ```cs
-var mg = Entities.MovieGenresRow.Fields.As("mg");
+var mg = MovieGenresRow.Fields.As("mg");
 ```
 
 What i'm trying to achieve, is a query like this (just the way we'd do this in bare SQL):

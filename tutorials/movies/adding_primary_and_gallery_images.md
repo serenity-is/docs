@@ -7,7 +7,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160603205900)]
+    [Migration(20160603_205900)]
     public class DefaultDB_20160603_205900_PersonMovieImages : Migration
     {
         public override void Up()
@@ -31,11 +31,13 @@ namespace MovieTutorial.Migrations.DefaultDB
 Then modify MovieRow.cs and PersonRow.cs:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
     {
+        // ...
+
         [DisplayName("Primary Image"), Size(100),
          ImageUploadEditor(FilenameFormat = "Person/PrimaryImage/~")]
         public string PrimaryImage
@@ -52,25 +54,23 @@ namespace MovieTutorial.MovieDB.Entities
             set => fields.GalleryImages[this] = value;
         }
 
-        // ...
-        
         public class RowFields : RowFieldsBase
         {
             // ...
             public StringField PrimaryImage;
             public StringField GalleryImages;
-            // ...
         }
     }
 }
 ```
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     public sealed class MovieRow : Row<MoviesRow.RowFields>, IIdRow, INameRow
     {
+        // ...
         [DisplayName("Primary Image"), Size(100),
          ImageUploadEditor(FilenameFormat = "Movie/PrimaryImage/~")]
         public string PrimaryImage
@@ -87,13 +87,11 @@ namespace MovieTutorial.MovieDB.Entities
             set => fields.GalleryImages[this] = value;
         }
 
-        // ...
         public class RowFields : RowFieldsBase
         {
             // ...
             public StringField PrimaryImage;
             public StringField GalleryImages;
-            // ...
         }
     }
 }
@@ -154,7 +152,7 @@ namespace MovieTutorial.MovieDB.Forms
         [TextAreaEditor(Rows = 3)]
         public String Description { get; set; }
         [MovieCastEditor]
-        public List<Entities.MovieCastRow> CastList { get; set; }
+        public List<MovieCastRow> CastList { get; set; }
         public String PrimaryImage { get; set; }
         public String GalleryImages { get; set; }
         [TextAreaEditor(Rows = 8)]
@@ -162,7 +160,7 @@ namespace MovieTutorial.MovieDB.Forms
         public Int32 Year { get; set; }
         public DateTime ReleaseDate { get; set; }
         public Int32 Runtime { get; set; }
-        public Int32 GenreId { get; set; }
+        public List<Int32> GenreList { get; set; }
         public MovieKind Kind { get; set; }
     }
 }

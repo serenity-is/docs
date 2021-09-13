@@ -24,13 +24,13 @@ Sometimes, first textual column might not be the name field. If you wanted to ch
 
 ```cs
 
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     //...
     public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         //...
-        [DisplayName("Description"), Size(1000), QuickSearch, NameProperty]
+        [DisplayName("Description"), Size(1000), NameProperty]
         public String Description
         {
             get => fields.Description[this];
@@ -44,7 +44,7 @@ Code generator determined that first textual (string) field in our table is Titl
 Here, *Title* is actually the name field, so we leave it as is. But we want Serenity to search also in *Description* and *Storyline* fields. To do this, you need to add *QuickSearch* attribute to these fields too, as shown below:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     //...
     public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
@@ -123,8 +123,7 @@ namespace MovieTutorial.MovieDB {
             super(container);
         }
 
-        protected getQuickSearchFields():
-              Serenity.QuickSearchField[] {
+        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
             return [
                 { name: "", title: "all" },
                 { name: "Description", title: "description" },
@@ -161,7 +160,7 @@ We can now use intellisense to replace hardcoded field names with compile time c
 namespace MovieTutorial.MovieDB
 {
     //...
-    import fld = MoviesRow.Fields;
+    import fld = MovieRow.Fields;
 
     public class MovieGrid extends EntityGrid<MovieRow, any>
     {
@@ -169,8 +168,7 @@ namespace MovieTutorial.MovieDB
             super(container);
         }
 
-        protected getQuickSearchFields(): Serenity.QuickSearchField[]
-        {
+        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
             return [
                 { name: "", title: "all" },
                 { name: fld.Description, title: "description" },
@@ -189,7 +187,7 @@ What about field titles? It is not so critical as field names, but can be useful
 namespace MovieTutorial.MovieDB
 {
     //...
-    import fld = MoviesRow.Fields;
+    import fld = MovieRow.Fields;
 
     public class MovieGrid extends EntityGrid<MovieRow, any>
     {
@@ -198,8 +196,9 @@ namespace MovieTutorial.MovieDB
         }
 
         protected getQuickSearchFields(): Serenity.QuickSearchField[] {
-            let txt = (s) => Q.text("Db." + 
-                MovieRow.localTextPrefix + "." + s).toLowerCase();
+            const txt = (s) => 
+                Q.text(`Db.${MovieRow.localTextPrefix}.${s}`).toLowerCase();
+
             return [
                 { name: "", title: "all" },
                 { name: fld.Description, title: txt(fld.Description) },

@@ -13,7 +13,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519145500)]
+    [Migration(20160519_145500)]
     public class DefaultDB_20160519_145500_MovieKind : Migration
     {
         public override void Up()
@@ -98,7 +98,7 @@ namespace MovieTutorial.MovieDB.Forms
 {
     // ...
     [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
+    [BasedOnRow(typeof(MovieRow), CheckNames = true)]
     public class MovieForm
     {
         // ...

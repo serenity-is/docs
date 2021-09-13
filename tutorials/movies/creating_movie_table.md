@@ -39,7 +39,7 @@ using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519115100)]
+    [Migration(20160519_115100)]
     public class DefaultDB_20160519_115100_MovieTable : Migration
     {
         public override void Up()
@@ -75,16 +75,16 @@ We could implement *Down()* method to make it possible to undo this migration (d
 On top of our class we applied a Migration attribute.
 
 ```cs
-[Migration(20160519115100)]
+[Migration(20160519_115100)]
 ```
 
 This specifies a unique key for this migration. After a migration is applied to a database, its key is recorded in a special table specific to FluentMigrator ([dbo].[VersionInfo]), so same migration won't be applied again.
 
-> Migration key should be in sync with class name (for consistency) but without underscore as migration keys are Int64 numbers.
+> Migration key should be in sync with class name (for consistency). Migration keys are Int64 numbers but you can put underscores on it which is a [feature of C# 7.0](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-7.0/digit-separators).
 
 Migrations are executed in the key order, so using a sortable datetime pattern like yyyyMMdd for migration keys looks like a good idea. 
 
-Please make sure you always use same number of characters for migration keys e.g. 14 (20160519115100). Otherwise your migration order will get messed up, and you will have migration errors, due to migrations running in unexpected order.
+Please make sure you always use same number of characters (underscores are ignored) for migration keys e.g. 14 (20160519_115100). Otherwise your migration order will get messed up, and you will have migration errors, due to migrations running in unexpected order.
 
 
 ### Running Migrations

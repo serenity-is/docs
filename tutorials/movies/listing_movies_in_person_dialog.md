@@ -2,7 +2,7 @@
 
 To show list of movies a person acted in, we'll add a tab to PersonDialog.
 
-By default all entity dialogs (ones we used so far, which derive from EntityDialog) uses *EntityDialog* template at *MovieTutorial.Web/Views/Templates/EntityDialog.Template.html*:
+Unless you override getTemplate function on your class, all entity dialogs (ones we used so far, which derive from EntityDialog) uses *EntityDialog*'s fallback template at *EntityDialog.ts* by default:
 
 ```html
 <div class="s-DialogContent">
@@ -10,7 +10,7 @@ By default all entity dialogs (ones we used so far, which derive from EntityDial
     </div>
     <div class="s-Form">
         <form id="~_Form" action="">
-            <div class="fieldset ui-widget ui-widget-content ui-corner-all">
+            <div class="fieldset">
                 <div id="~_PropertyGrid"></div>
                 <div class="clear"></div>
             </div>
@@ -27,11 +27,14 @@ EntityDialog template is shared by all dialogs, so we are not gonna modify it to
 
 ### Defining a Tabbed Template for PersonDialog
 
-Create a new file, *MovieDB.PersonDialog.Template.html* under *Modules/MovieDB/Person/* folder with contents:
+Modify *PersonDialog.ts*, override getTemplate function:
+```ts
+@Serenity.Decorators.registerClass()
+export class PersonDialog extends Serenity.EntityDialog<PersonRow, any> {
+    // ...
 
-
-```html
-<div id="~_Tabs" class="s-DialogContent">
+    protected getTemplate() {
+        return `<div id="~_Tabs" class="s-DialogContent">
     <ul>
         <li><a href="#~_TabInfo"><span>Person</span></a></li>
         <li><a href="#~_TabMovies"><span>Movies</span></a></li>
@@ -41,7 +44,7 @@ Create a new file, *MovieDB.PersonDialog.Template.html* under *Modules/MovieDB/P
         </div>
         <div class="s-Form">
             <form id="~_Form" action="">
-                <div class="fieldset ui-widget ui-widget-content ui-corner-all">
+                <div class="fieldset">
                     <div id="~_PropertyGrid"></div>
                     <div class="clear"></div>
                 </div>
@@ -53,7 +56,9 @@ Create a new file, *MovieDB.PersonDialog.Template.html* under *Modules/MovieDB/P
 
         </div>
     </div>
-</div>
+</div>`;
+    }
+}
 ```
 
 The syntax we used here is specific to jQuery UI tabs widget. It needs an UL element with list of tab links pointing to tab pane divs (*.tab-pane*).
@@ -64,17 +69,13 @@ Naming of the template file is important. It must end with *.Template.html* exte
 
 Folder of the template file is ignored, but templates must be under *Modules* or *Views/Template* directories.
 
-By default, all templated widgets (EntityDialog also derives from TemplatedWidget class), looks for a template with their own classname. Thus, PersonDialog looks for a template with the name *MovieDB.PersonDialog.Template.html*, followed by *PersonDialog.Template.html*. 
-
 > MovieDB comes from PersonDialog namespace with the root namespace (MovieTutorial) removed. You can also think of it as module name dot class name.
 
-If a template with class name is not found, search continues to base classes and eventually a fallback template, *EntityDialog.Template.html* is used.
+If a template within class is not found, fallback template of the *EntityDialog* would be used.
 
 Now, we have a tab in PersonDialog:
 
 ![Person With Tabs Initial](img/mdb_person_tabs.png)
-
-> Meanwhile, i noticed Person link is still under MovieDB and we forgot to remove MovieCast link. I'm fixing them now...
 
 ### Creating PersonMovieGrid
 
@@ -89,7 +90,7 @@ using System;
 namespace MovieTutorial.MovieDB.Columns
 {
     [ColumnsScript("MovieDB.PersonMovie")]
-    [BasedOnRow(typeof(Entities.MovieCastRow))]
+    [BasedOnRow(typeof(MovieCastRow))]
     public class PersonMovieColumns
     {
         [Width(220)]
@@ -148,6 +149,8 @@ export class PersonDialog extends Serenity.EntityDialog<PersonRow, any> {
             this.arrange();
         });
     }
+
+    // ...
 }
 ```
 
@@ -155,7 +158,7 @@ Remember that in our template we had a div with id *~_MoviesGrid* under movies t
 
 > this.ById("MoviesGrid") is a special method for templated widgets. *$('#MoviesGrid')* wouldn't work here, as that div actually has some ID like *PersonDialog17_MoviesGrid*. `~_` in templates are replaced with a unique container widget ID.
 
-We also attached to OnActivate event of jQuery UI tabs, and called Arrange method of the dialog. This is to solve a problem with SlickGrid, when it is initially created in invisible tab. Arrange triggers relayout for SlickGrid to solve this problem.
+We also attached to OnActivate event of jQuery UI tabs, and called Arrange method of the dialog. This is to solve a problem with SlickGrid, when it is initially created in invisible tab. Arrange function triggers relayout and SlickGrid solves this problem.
 
 OK, now we can see list of movies in Movies tab, but something is strange:
 
@@ -263,13 +266,13 @@ namespace MovieTutorial.MovieDB
 
 You might have noticed that when you switch to Movies tab, dialog gets a bit less in height. This is because dialog is set to auto height and grids are 200px by default. When you switch to movies tab, form gets hidden, so dialog adjusts to movies grid height.
 
-Edit *s-MovieDB-PersonDialog* css in site.less:
+Edit *s-MovieDB-PersonDialog* css in site.moviedb.less:
 
 ```css
 .s-MovieDB-PersonDialog {
     > .size { width: 650px; }
     .caption { width: 150px; }
-    .s-PersonMovieGrid > .grid-container { height: 287px; }
+    .s-PersonMovieGrid > .grid-container { height: 251px; }
 }
 ```
 

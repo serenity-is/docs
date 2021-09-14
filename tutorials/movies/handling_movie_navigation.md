@@ -55,7 +55,7 @@ Just cut the below lines from _MovieDBNavigation.cs_:
 
 Move it into _NavigationItems.cs_ and modify it like this:
 
-```
+```cs
 using Serenity.Navigation;
 using MovieDB = MovieTutorial.MovieDB.Pages;
 

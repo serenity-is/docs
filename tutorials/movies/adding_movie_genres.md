@@ -15,7 +15,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519154700)]
+    [Migration(20160519_154700)]
     public class DefaultDB_20160519_154700_GenreTable : Migration
     {
         public override void Up()
@@ -62,7 +62,7 @@ As you see in screenshot, it is generated under a new section *MovieDB* instead 
 
 This is because *Sergen* has no idea of what customizations we performed on our *Movie* page. So we need to movie it under *Movie Database* manually.
 
-Open *Modules/Movie/GenrePage.cs*, cut the navigation link shown below:
+Open *Modules/Movie/MovieDBNavigation.cs*, cut the navigation link shown below:
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "MovieDB/Genre",
@@ -91,7 +91,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519181800)]
+    [Migration(20160519_181800)]
     public class DefaultDB_20160519_181800_SampleGenres : Migration
     {
         public override void Up()
@@ -136,7 +136,7 @@ namespace MovieTutorial.Migrations.DefaultDB
 As we did with *Kind* field before, *GenreId* field needs to be mapped in *MovieRow.cs*.
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
@@ -241,7 +241,7 @@ Serenity has notion of *dynamic scripts* to make dynamic data available to scrip
 To declare a dynamic lookup script for Genre table, open *GenreRow.cs* and modify it like below:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
 
@@ -317,7 +317,7 @@ This is functionally equivalent. I'd prefer latter. Here, Serenity will locate t
 ```
 Server Error in '/' Application.
 
-'MovieTutorial.MovieDB.Entities.GenreRow' type doesn't have a 
+'MovieTutorial.MovieDB.GenreRow' type doesn't have a 
 [LookupScript] attribute, so it can't be used with a LookupEditor!
 
 Parameter name: lookupType
@@ -398,17 +398,20 @@ Luckily, we have a GenreDialog, which is defined in *Modules/Genre/GenreDialog.t
 
 ```ts
 namespace MovieTutorial.MovieDB {
-    
+
     @Serenity.Decorators.registerClass()
-    @Serenity.Decorators.responsive()
     export class GenreDialog extends Serenity.EntityDialog<GenreRow, any> {
         protected getFormKey() { return GenreForm.formKey; }
         protected getIdProperty() { return GenreRow.idProperty; }
         protected getLocalTextPrefix() { return GenreRow.localTextPrefix; }
         protected getNameProperty() { return GenreRow.nameProperty; }
         protected getService() { return GenreService.baseUrl; }
+        protected getDeletePermission() { return GenreRow.deletePermission; }
+        protected getInsertPermission() { return GenreRow.insertPermission; }
+        protected getUpdatePermission() { return GenreRow.updatePermission; }
 
         protected form = new GenreForm(this.idPrefix);
+
     }
 }
 ```

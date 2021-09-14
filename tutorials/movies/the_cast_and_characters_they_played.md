@@ -33,7 +33,7 @@ using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160528141600)]
+    [Migration(20160528_141600)]
     public class DefaultDB_20160528_141600_PersonAndMovieCast : Migration
     {
         public override void Up()
@@ -76,6 +76,27 @@ First generate code for Person table:
 - Identifier: **Person**
 - Permission: **Administration:General**
 
+
+Open *Modules/Movie/MovieDBNavigation.cs*, cut the navigation link shown below:
+
+```cs
+[assembly: NavigationLink(int.MaxValue, "MovieDB/Person",
+    typeof(MyPages.PersonController), icon: null)]
+````
+
+And move it to *Modules/Common/Navigation/NavigationItems.cs*:
+
+```cs
+//...
+[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
+[assembly: NavigationLink(2100, "Movie Database/Movies", 
+    typeof(MovieDB.MovieController), icon: "icon-camcorder")]
+[assembly: NavigationLink(2200, "Movie Database/Genres", 
+    typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
+[assembly: NavigationLink(2300, "Movie Database/Person",
+    typeof(MovieDB.PersonController), icon: "fa-person")]
+//...
+```
 
 ### Changing Gender To Enumeration
 
@@ -130,7 +151,7 @@ On the title of edit dialog, first name of the person is shown (*Carrie-Anne*). 
 So let's edit our PersonRow.cs:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     //...
     public sealed class PersonRow : Row, IIdRow, INameRow
@@ -152,7 +173,7 @@ namespace MovieTutorial.MovieDB.Entities
 
         //change NameField to Fullname
         [DisplayName("Full Name"),
-        Expression("(t0.FirstName + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
+            Expression("(t0.FirstName + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
         public String Fullname
         {
             get => fields.Fullname[this];
@@ -185,17 +206,20 @@ This will become more clear after looking at *PersonDialog.ts* file:
 
 ```ts
 namespace MovieTutorial.MovieDB {
-    
+
     @Serenity.Decorators.registerClass()
-    @Serenity.Decorators.responsive()
     export class PersonDialog extends Serenity.EntityDialog<PersonRow, any> {
         protected getFormKey() { return PersonForm.formKey; }
         protected getIdProperty() { return PersonRow.idProperty; }
         protected getLocalTextPrefix() { return PersonRow.localTextPrefix; }
         protected getNameProperty() { return PersonRow.nameProperty; }
         protected getService() { return PersonService.baseUrl; }
+        protected getDeletePermission() { return PersonRow.deletePermission; }
+        protected getInsertPermission() { return PersonRow.insertPermission; }
+        protected getUpdatePermission() { return PersonRow.updatePermission; }
 
         protected form = new PersonForm(this.idPrefix);
+
     }
 }
 ```
@@ -218,6 +242,7 @@ namespace MovieTutorial.MovieDB {
         export const idProperty = 'PersonId';
         export const nameProperty = 'Fullname';
         export const localTextPrefix = 'MovieDB.Person';
+        //...
 
         export namespace Fields {
             export declare const PersonId: string;
@@ -239,7 +264,7 @@ Similarly, *idProperty*, *localTextPrefix*, *Enum Types* etc. are also generated
 While we are still here, let's declare a LookupScript for Person table in PersonRow.cs:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     //...
     [LookupScript("MovieDB.Person")]
@@ -262,6 +287,7 @@ namespace MovieTutorial.MovieDB {
         export const nameProperty = 'Fullname';
         export const localTextPrefix = 'MovieDB.Person';
         export const lookupKey = 'MovieDB.Person';
+        //...
 
         export function getLookup(): Q.Lookup<PersonRow> {
             return Q.getLookup<PersonRow>('MovieDB.Person');
@@ -290,6 +316,8 @@ MovieDialog.ts
 MovieGrid.ts
 ```
 
+You also should delete newly generated line for navigation from _MovieDBNavigation.cs_.
+
 Again, build and transform templates.
 
 ### Master/Detail Editing Logic For MovieCast Table
@@ -307,15 +335,19 @@ Thus, cast editing will be in memory, and when user presses save button in Movie
 
 ### Creating an Editor For Movie Cast List
 
-Next to MovieCastRow.cs (at MovieTutorial.Web/Modules/MovieDB/MovieCast/), create a file named *MovieCastEditor.ts* with contents below:
+Now we need to use GridEditorBase editor and this is inside Serenity.Extensions nuget package, so we have to install it first.
+
+- Click *View -> Other Windows -> Package Manager Console* (or press CTRL + `).
+- Type:
+- > Install-Package Serenity.Extensions
+
+After installation of Serenity.Extensions finishes, create a file named *MovieCastEditor.ts* next to MovieCastRow.cs (at MovieTutorial.Web/Modules/MovieDB/MovieCast/) with contents below:
 
 ```ts
-/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
-
 namespace MovieTutorial.MovieDB {
     @Serenity.Decorators.registerEditor()
-    export class MovieCastEditor 
-          extends Common.GridEditorBase<MovieCastRow> {
+    export class MovieCastEditor
+        extends Serenity.Extensions.GridEditorBase<MovieCastRow> {
         protected getColumnsKey() { return "MovieDB.MovieCast"; }
         protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
@@ -323,16 +355,14 @@ namespace MovieTutorial.MovieDB {
             super(container);
         }
     }
-}   
+} 
 ```
 
-This editor derives from *Common.GridEditorBase* class in Serene, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
+This editor derives from *Extensions.GridEditorBase* class in Serenity.Extensions, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
 
-> The `<reference />` line at top of the file is important. TypeScript has ordering problems with input files. If we didn't put it there, TypeScript would sometimes output GridEditorBase after our MovieCastEditor, and we'd get runtime errors. 
-> 
-> As a rule of thumb, if you are deriving some class from another in your project (not Serenity classes), you should put a reference to file containing that base class.
+> As a rule of thumb, if you are deriving some class from another in your project (not Serenity classes), you should put a reference to file containing that base class on the first line like `/// <reference path="path/to/file.ts" />`.
 >
-> This helps TypeScript to convert GridEditorBase to javascript before other classes that might need it.
+> This helps TypeScript to convert referenced class to javascript before other classes that might need it.
 
 To reference this new editor type from server side, build and transform all templates.
 
@@ -352,8 +382,8 @@ namespace MovieTutorial.MovieDB.Forms
         public String Title { get; set; }
         [TextAreaEditor(Rows = 3)]
         public String Description { get; set; }
-        [MovieCastEditor]
-        public List<Entities.MovieCastRow> CastList { get; set; }
+        [MovieCastEditor, IgnoreName]
+        public List<MovieCastRow> CastList { get; set; }
         [TextAreaEditor(Rows = 8)]
         public String Storyline { get; set; }
         //...
@@ -362,6 +392,8 @@ namespace MovieTutorial.MovieDB.Forms
 ```
 
 By putting *[MovieCastEditor]* attribute on top of CastList property, we specified that this property will be edited by our new MovieCastEditor type which is defined in TypeScript code.
+
+With *[IgnoreName]* attribute it makes *CheckNames* attribute skip checking if CastList is on the MovieRow.
 
 > We could also write *[EditorType("MovieDB.MovieCast")]* but who really likes hard-coded strings? Not me...
 
@@ -381,13 +413,11 @@ Also we'll have to handle a bit more plumbing like loading and saving cast list 
 Create a *MovieCastEditDialog.ts* file next to *MovieCastEditor.ts* and modify it like below:
 
 ```ts
-/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
-
 namespace MovieTutorial.MovieDB {
 
     @Serenity.Decorators.registerClass()
-    export class MovieCastEditDialog extends 
-          Common.GridEditorDialog<MovieCastRow> {
+    export class MovieCastEditDialog extends
+        Serenity.Extensions.GridEditorDialog<MovieCastRow> {
         protected getFormKey() { return MovieCastForm.formKey; }
         protected getNameProperty() { return MovieCastRow.nameProperty; }
         protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
@@ -402,17 +432,15 @@ namespace MovieTutorial.MovieDB {
 }
 ```
 
-We are using another base class from Serene, *Common.GridEditorDialog* which is also used by OrderDetailEditDialog.
+We are using another base class from Serenity.Extensions, *Extensions.GridEditorDialog* which is also used by OrderDetailEditDialog.
 
 Open *MovieCastEditor.ts* again, add a getDialogType method and override getAddButtonCaption:
 
 ```ts
-/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
-
 namespace MovieTutorial.MovieDB {
     @Serenity.Decorators.registerEditor()
-    export class MovieCastEditor 
-          extends Common.GridEditorBase<MovieCastRow> {
+    export class MovieCastEditor
+        extends Serenity.Extensions.GridEditorBase<MovieCastRow> {
         protected getColumnsKey() { return "MovieDB.MovieCast"; }
         protected getDialogType() { return MovieCastEditDialog; }
         protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
@@ -430,7 +458,7 @@ namespace MovieTutorial.MovieDB {
 
 We specified that MovieCastEditor uses a MovieCastEditDialog by default which is also used by *Add* button. 
 
-Now, instead of doing nothing, *Add* button shows a dialog.
+Now, instead of an error, *Add* button shows a dialog.
 
 ![Movie Cast Edit Dialog](img/mdb_casteditor_adddialog.png)
 
@@ -465,22 +493,21 @@ I have removed *MovieId* as this form is going to be used in *MovieCastEditDialo
 Next, edit MovieCastRow.cs:
 
 ```cs
-    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[MovieCast]")]
-    [DisplayName("Movie Cast"), InstanceName("Movie Cast")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
-    public sealed class MovieCastRow : Row<MovieCastRow.RowFields>, IIdRow, INameRow
+[ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[MovieCast]")]
+[DisplayName("Movie Cast"), InstanceName("Movie Cast")]
+[ReadPermission("Administration:General")]
+[ModifyPermission("Administration:General")]
+public sealed class MovieCastRow : Row<MovieCastRow.RowFields>, IIdRow, INameRow
+{
+    //...
+    [DisplayName("Actor/Actress"), NotNull, ForeignKey("[mov].[Person]", "PersonId")]
+    [LeftJoin("jPerson"), TextualField("PersonFirstName")]
+    [LookupEditor(typeof(PersonRow))]
+    public Int32? PersonId
     {
-        //...
-        [DisplayName("Actor/Actress"), NotNull, ForeignKey("[mov].[Person]", "PersonId")]
-        [LeftJoin("jPerson"), TextualField("PersonFirstName")]
-        [LookupEditor(typeof(PersonRow))]
-        public Int32? PersonId
-        {
-            get => fields.PersonId[this];
-            set => fields.PersonId[this] = value;
-        }
-
+        get => fields.PersonId[this];
+        set => fields.PersonId[this] = value;
+    }
 ```
 
 I have set editor type for PersonId field to a lookup editor and as i have already added a LookupScript attribute to *PersonRow*, i can reuse that information for setting the lookup key. 
@@ -519,14 +546,14 @@ As we are not gonna actually use MovieCastDialog (we deleted it), let's rename t
 .s-MovieDB-MovieCastEditDialog {
     > .size { width: 450px; }
     .caption { width: 120px; }
-    .s-PropertyGrid .categories { height: 120px; }
+    .s-PropertyGrid .categories { height: 85px; }
 }
 ```
 
 Now *MovieCastEditDialog* has a better look:
 
 ![Movie Cast Dialog Fixed](img/mdb_castdialog_final.png)
-
+> If you can't see the changes on styles rebuild the project.
 
 ### Fixing MovieCastEditor Columns
 
@@ -537,7 +564,7 @@ We have MovieCastId, MovieId, PersonId (shown as Actor/Actress) and Character co
 We want to show actors fullname instead of PersonId (integer value), so we'll declare this field in MovieCastRow.cs first:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     //...
     public sealed class MovieCastRow : Row<MovieCastRow.RowFields>, IIdRow, INameRow
@@ -558,7 +585,8 @@ namespace MovieTutorial.MovieDB.Entities
             set => fields.PersonLastname[this] = value;
         }
 
-        [DisplayName("Actor/Actress"), Expression("jPerson.[Lastname]")]
+        [DisplayName("Actor/Actress"), 
+         Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
         public String PersonFullname
         {
             get => fields.PersonFullname[this];
@@ -647,11 +675,10 @@ There is no PersonFullname field in this entity, so grid can't display its value
 We need to set PersonFullname ourself. Let's first transform T4 templates to have access to PersonFullname field that we recently added, then edit MovieCastEditor.ts:
 
 ```ts
-/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
-
 namespace MovieTutorial.MovieDB {
     @Serenity.Decorators.registerEditor()
-    export class MovieCastEditor extends Common.GridEditorBase<MovieCastRow> {
+    export class MovieCastEditor
+        extends Serenity.Extensions.GridEditorBase<MovieCastRow> {
         //...
 
         protected validateEntity(row: MovieCastRow, id: number) {
@@ -660,14 +687,14 @@ namespace MovieTutorial.MovieDB {
 
             row.PersonFullname = PersonRow.getLookup()
                 .itemById[row.PersonId].Fullname;
-                
+
             return true;
-        }        
+        }
     }
-}   
+}
 ```
 
-ValidateEntity is a method from our GridEditorBase class in Serene. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
+ValidateEntity is a method from our GridEditorBase class in Serenity.Extensions. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
 
 As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person fullname.
 
@@ -720,7 +747,7 @@ If you open developer tools with F12, click Network tab, and watch AJAX request 
 Here, CastList property can't be deserialized at server side. So we need to declare it in MovieRow.cs:
 
 ```cs
-namespace MovieTutorial.MovieDB.Entities
+namespace MovieTutorial.MovieDB
 {
     // ...
     public sealed class MovieRow : Row, IIdRow, INameRow
@@ -759,19 +786,36 @@ As this is an unmapped field, so movie *Save* service just ignored the CastList 
 
 ### Handling Save for CastList
 
-Open *MovieRepository.cs*, find the empty *MySaveHandler* class, and modify it like below:
+Open */Movie/RequestHandlers/MovieSaveHandler.cs*, find the empty *MovieSaveHandler* class, and modify it like below:
 
 ```cs
-private class MySaveHandler : SaveRequestHandler<MyRow>
+public class MovieSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieSaveHandler
 {
-    public MySaveHandler(IRequestContext context)
-        : base(context)
+    private IMovieCastDeleteHandler MovieCastDeleteHandler { get; }
+    private IMovieCastSaveHandler MovieCastSaveHandler { get; }
+
+    public MovieSaveHandler(IRequestContext context,
+        [FromServices] IMovieCastDeleteHandler movieCastDeleteHandler,
+        [FromServices] IMovieCastSaveHandler movieCastSaveHandler)
+            : base(context)
+    {
+        MovieCastDeleteHandler = movieCastDeleteHandler;
+        MovieCastSaveHandler = movieCastSaveHandler;
+    }
+
+    protected override void AfterSave()
+    {
+        base.AfterSave();
+        SetMovieCastRelation();
+    }
+
+    private void SetMovieCastRelation()
     {
         if (Row.CastList != null)
         {
-            var mc = Entities.MovieCastRow.Fields;
+            var mc = MovieCastRow.Fields;
             var oldList = IsCreate ? null :
-                Connection.List<Entities.MovieCastRow>(
+                Connection.List<MovieCastRow>(
                     mc.MovieId == this.Row.MovieId.Value);
 
             var oldById = oldList.ToDictionary(x => x.MovieCastId.Value);
@@ -780,7 +824,7 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
             // delete it if the old object is not in the new list 
             foreach (var row in oldList.Where(x => !newById.Contains(x.MovieCastId)))
             {
-                new MovieCastRepository(Context).Delete(UnitOfWork, new() { EntityId = row.MovieCastId });
+                MovieCastDeleteHandler.Delete(UnitOfWork, new() { EntityId = row.MovieCastId });
             }
 
             foreach (var row in Row.CastList)
@@ -792,14 +836,14 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
                 if (row.MovieCastId == null || !oldById.ContainsKey(row.MovieCastId.Value))
                 {
                     entity.MovieCastId = null;
-                    new MovieCastRepository(Context).Create(UnitOfWork, new()
+                    MovieCastSaveHandler.Create(UnitOfWork, new()
                     {
                         Entity = entity
                     });
                 }
                 else
                 {
-                    new MovieCastRepository(Context).Update(UnitOfWork, new()
+                    MovieCastSaveHandler.Update(UnitOfWork, new()
                     {
                         Entity = entity
                     });
@@ -810,9 +854,11 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
 }
 ```
 
-MySaveHandler, processes CREATE (insert), and UPDATE, and DELETE service requests for Movie rows. As most of its logic is handled by base SaveRequestHandler class, its class definition was empty before.
+You have to add `System.Linq` and `Microsoft.AspNetCore.Mvc` using directives to the file because we use *ToDictonary*, *ToLookup* functions, and *FromServices* attribute.
 
-> If this is CREATE (insert) operation, we need the MovieId field value to reuse in MovieCast records. As MovieId is an IDENTITY field, it is only available after inserting the movie record.
+MovieSaveHandler, processes CREATE (insert), and UPDATE service requests for Movie rows. As most of its logic is handled by base SaveRequestHandler class, its class definition was empty before.
+
+> If this is CREATE (insert) operation, we need the MovieId field value to reuse in MovieCast records. As MovieId is an IDENTITY field, it is only available after inserting the movie record, because of this we run our newly written *SetMovieCastRelation* function after row finishes saving.
 
 As we are editing cast list in memory (client-side), this will be a batch update. 
 
@@ -826,7 +872,7 @@ So we need to update A, B, D (in case character / actor changed), delete C, and 
 
 To get a list of old records, we need to query database if this is an UPDATE movie operation. If this is a CREATE movie operation there shouldn't be any old cast record.
 
-We are using *Connection.List< Entities.MovieCastRow >* extension method. *Connection* here is a property of SaveRequestHandler that returns the current connection used. *List* selects records that matches the specified criteria (*mc.MovieId == this.Row.MovieId.Value*). 
+We are using *Connection.List<MovieCastRow>* extension method. *Connection* here is a property of SaveRequestHandler that returns the current connection used. *List* selects records that matches the specified criteria (*mc.MovieId == this.Row.MovieId.Value*). 
 
 *this.Row* refers to currently inserted / updated record (movie) with its new field values, so it contains the MovieId value (new or existing).
 
@@ -840,13 +886,13 @@ UnitOfWork is a special object that wraps the current connection/transaction.
 
 We are not done yet. When a Movie entity is clicked in movie grid, movie dialog loads the movie record by calling the movie *Retrieve* service. As CastList is an unmapped field, even if we saved them properly, they won't be loaded into the dialog.
 
-We need to also edit *MyRetrieveHandler* class in MovieRepository.cs:
+We need to also edit *MovieRetrieveHandler* class in */Movie/RequestHandlers/MovieRetrieveHandler.cs*:
 
 ```cs
-private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
+public class MovieRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieRetrieveHandler
 {
-    public MyRetrieveHandler(IRequestContext context)
-        : base(context)
+    public MovieRetrieveHandler(IRequestContext context)
+            : base(context)
     {
     }
 
@@ -854,8 +900,8 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
     {
         base.OnReturn();
 
-        var mc = Entities.MovieCastRow.Fields;
-        Row.CastList = Connection.List<Entities.MovieCastRow>(q => q
+        var mc = MovieCastRow.Fields;
+        Row.CastList = Connection.List<MovieCastRow>(q => q
             .SelectTableFields()
             .Select(mc.PersonFullname)
             .Where(mc.MovieId == Row.MovieId.Value));
@@ -863,50 +909,55 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
 }
 ```
 
+You have to add `Microsoft.AspNetCore.Mvc` using directive to the file because we use *FromServices* attribute.
+
 Here, we are overriding OnReturn method, to inject CastList into movie row just before returning the it from retrieve service.
 
 I used a different overload of Connection.List extension, which allows me to modify the select query.
 
-By default, List selects all table fields (not foreign view fields coming from other tables), but to show actor name, i needed to also select *PersonFullName* field.
+By default, List selects all table fields (not foreign view fields coming from other tables), but to show actor name, I also needed to select *PersonFullName* field because it's an expression field and not in the table fields.
 
 Now build the solution, and we can finally list / edit the cast.
 
 
 ### Handling Delete for CastList
 
-When you try to delete a Movie entity, you'll get foreign key errors. You could use a "CASCADE DELETE" foreign key while creating MovieCast table. But we'll handle this at repository level again:
+When you try to delete a Movie entity, you'll get foreign key errors. You could use a "CASCADE DELETE" foreign key while creating MovieCast table. But we'll handle this at request handler level again:
 
 ```cs
-private class MyDeleteHandler : DeleteRequestHandler<MyRow>
+public class MovieDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IMovieDeleteHandler
 {
-    public MyRetrieveHandler(IRequestContext context)
-        : base(context)
+    public IMovieCastDeleteHandler MovieCastDeleteHandler { get; }
+
+    public MovieDeleteHandler(IRequestContext context,
+        [FromServices] IMovieCastDeleteHandler movieCastDeleteHandler)
+            : base(context)
     {
+        MovieCastDeleteHandler = movieCastDeleteHandler;
     }
 
     protected override void OnBeforeDelete()
     {
         base.OnBeforeDelete();
 
-        var mc = Entities.MovieCastRow.Fields;
+        var mc = MovieCastRow.Fields;
         foreach (var detailID in Connection.Query<Int32>(
             new SqlQuery()
                 .From(mc)
                 .Select(mc.MovieCastId)
                 .Where(mc.MovieId == Row.MovieId.Value)))
         {
-            new DeleteRequestHandler<Entities.MovieCastRow>().Process(this.UnitOfWork,
-                new DeleteRequest
-                {
-                    EntityId = detailID
-                });
+            MovieCastDeleteHandler.Delete(this.UnitOfWork, new()
+            {
+                EntityId = detailID
+            });
         }
     }
 }
 ```
+You have to add `Microsoft.AspNetCore.Mvc` using directive to the file because we use *FromServices* attribute.
 
-
-The way we implemented this master/detail handling is not very intuitive and included several manual steps at repository layer. Keep on reading to see how easily it could be done by using an integrated feature (MasterDetailRelationAttribute).
+The way we implemented this master/detail handling is not very intuitive and included several manual steps at request handler layer. Keep on reading to see how easily it could be done by using an integrated feature (MasterDetailRelationAttribute).
 
 
 ### Handling Save / Retrieve / Delete With a Behavior
@@ -927,33 +978,41 @@ public List<MovieCastRow> CastList
 
 We specified that this field is a detail list of a master/detail relation and master ID field (foreignKey) of the detail table is *MovieId*.
 
-Now undo all changes we made in MovieRepository.cs:
+Now undo all changes we made in */MovieDB/Movie/RequestHandlers* folder:
 
+MovieSaveHandler.cs
 ```cs
-private class MySaveHandler : SaveRequestHandler<MyRow> 
+public class MovieSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieSaveHandler
 {
-    public MySaveHandler(IRequestContext context)
-        : base(context)
-    {
-    }
-}
-
-private class MyDeleteHandler : DeleteRequestHandler<MyRow> 
-{
-    public MyDeleteHandler(IRequestContext context)
-        : base(context)
-    {
-    }
-}
-
-private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> 
-{
-    public MyRetrieveHandler(IRequestContext context)
-        : base(context)
+    public MovieSaveHandler(IRequestContext context)
+            : base(context)
     {
     }
 }
 ```
+
+MovieRetrieveHandler.cs
+```cs
+public class MovieRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieRetrieveHandler
+{
+    public MovieRetrieveHandler(IRequestContext context)
+            : base(context)
+    {
+    }
+}
+```
+
+MovieDeleteHandler.cs
+```cs
+public class MovieDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IMovieDeleteHandler
+{
+    public MovieDeleteHandler(IRequestContext context)
+            : base(context)
+    {
+    }
+}
+```
+
 
 In our *MasterDetailRelation* attribute, we specified an extra property, *IncludeColumns*:
 

@@ -72,11 +72,11 @@ Leave permission as *Administration:General* and press enter again.
 >
 >Our Movie page will be only used by administrative users (or maybe later content moderators) so let's leave it as *Administration:General* for now. By default, in Serene template, only the *admin* user has this permission
 
-Next, Sergen will ask you which files to generate, leave default **RSU** option (e.g. Row, Service and User Interface) and press ENTER last time.
+Next, Sergen will ask you which files to generate, leave default **RSUC** option (e.g. Row, Service, User Interface and Custom) and press ENTER last time.
 
 > If you don't need UI for some entity, just type **RS**. 
 >
-> If you just want an entity class, and not a repository / service access, type only **R**.
+> If you just want an entity class, and not request handlers / service access, type only **R**.
 
 Now you can quit command prompt, and return back to Visual Studio (or Notepad :)
 
@@ -100,7 +100,7 @@ Sergen generated code for our table, and it just works without writing a single 
 
 > This doesn't mean i don't like writing code. In contrast, i love it. Actually i'm not a fan of most designers and code generators. The code they produce is usually unmanagable mess. 
 
-> Sergen just helped us here for initial setup which is required for layered architecture and platform standards. We would have to create about 10 files for entity, repository, page, endpoint, grid, form etc. Also we needed to do some setup in a few other places.
+> Sergen just helped us here for initial setup which is required for layered architecture and platform standards. We would have to create about 13 files for entity, request handlers, page, endpoint, grid, form etc. Also we needed to do some setup in a few other places.
 
 > Even if we did copy paste and replace code from some other page, it would be error prone and take about 5-10 mins.
 

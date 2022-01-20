@@ -94,7 +94,7 @@ You may also turn off persistance for a grid class by returning *null* from this
 
 ### Determining Which Setting Types Are Saved
 
-By default, all settings noted at start are saved, like visible columns, widths, filters etc. You may choose to not persist / restore specific settings. This is controlled by *getPersistanceFlags* method:
+By default, all settings noted at start are saved, like visible columns, widths, filters etc. You may choose to not persist / restore specific settings. This is controlled by *gridPersistanceFlags* method:
 
 ```ts
 namespace Serene.Northwind {
@@ -102,7 +102,7 @@ namespace Serene.Northwind {
     export class OrderGrid extends Serenity.EntityGrid<OrderRow, any> {
         //...
         
-        protected getPersistanceFlags(): GridPersistanceFlags {
+        protected gridPersistanceFlags(): GridPersistanceFlags {
             return {
                 columnWidths: false // dont persist column widths;
             }

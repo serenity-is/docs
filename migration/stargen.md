@@ -27,7 +27,8 @@ https://serenity.is/Dashboard
 The command you should find there is something like following:
 
 ```cmd
-dotnet nuget add source -n serenity.is https://packages.serenity.is/your-customer-identifier/your-api-key/v3/index.json
+dotnet nuget add source -n serenity.is 
+       https://packages.serenity.is/your-customerid/your-apikey/v3/index.json
 ```
 
 or this one below if you prefer not to have your access token in the URL (e.g. to keep it safe from prying eyes):

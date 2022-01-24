@@ -47,15 +47,20 @@ dotnet add package Serenity.Scripts
 
 > If you use `Package Manager Console` in Visual Studio you may also try `Update-Package` command instead of `dotnet add package`.
 
-### Pro Package Updates
+### Pro (Premium) Package Updates
 
-If you are a StartSharp customer, download latest version of `pro-packages.zip` from StartSharp repository, extract it to `pro-packages` folder under your solution folder and execute following:
+If you are a StartSharp customer, please make sure you have **serenity.is** package source configured and execute following for **only the packages** you actually use:
 
-```cmd
-dotnet add package Serenity.Pro.Scripts
+> Please follow directions at https://serenity.is/Dashboard if you don't have serenity.is premium package source configured.
+
+```bat
+# these are fundamental packages thare usually referenced
+dotnet add package Serenity.Pro.Extensions
+dotnet add package Serenity.Pro.Theme
+dotnet add package Serenity.Pro.UI
 ```
 
-> This is the only pro package as of writing. It contains all pro feature scripts. We'll be splitting them into separate packages and introducing new ones, so please prefer [`stargen`](stargen.md) to automate all updates
+Not all pro packages might be listed above. Please check your project file for references starting with **Serenity.Pro**.
 
 ### Updating Feature Packages
 
@@ -63,6 +68,18 @@ If you have common / premium feature packages like `Serenity.Demo.ThemeSamples` 
 
 ```cmd
 dotnet add package Serenity.Demo.ThemeSamples
+dotnet add package Serenity.Demo.Northwind
+dotnet add package Serenity.Demo.BasicSamples
+
+# the ones below are premium ones
+dotnet add package Serenity.Demo.AdvancedSamples
+dotnet add package Serenity.Pro.DataAuditLog
+dotnet add package Serenity.Pro.DataExplorer
+dotnet add package Serenity.Pro.EmailClient
+dotnet add package Serenity.Pro.EmailQueue
+dotnet add package Serenity.Pro.Meeting
+dotnet add package Serenity.Pro.Organization
+dotnet add package Serenity.Pro.WorkLog
 ```
 
 ### Updating Sergen (Serenity Code Generator)
@@ -91,10 +108,11 @@ We implemented a workaround for that limitation by using `sergen`. Everytime you
 dotnet sergen restore
 ```
 
-Otherwise you'll still be using old versions of Serenity and other third party scripts / css files.
+Otherwise you might still be using old versions of Serenity and other third party scripts / css files. 
 
-> We are migrating from `Content` files to `Razor Library Static Web Assets` feature and this will not be necessary in the future.
+> Most of our premium packages uses Razor class library  / static web assets feature now, and the situation explained above should not apply to them.
 
+This also restores (or updates) TypeScript `.d.ts` to your `typings` directory from Serenity packages.
 
 ## Applying Upgrades (Migration)
 

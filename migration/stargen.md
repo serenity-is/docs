@@ -16,30 +16,38 @@ The tool takes a backup of files it overrides under **%USERPROFILE%\Documents\st
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 
-## Downloading Stargen
-
-Start by downloading *Stargen* from the releases section in StartSharp repository:
-
-https://github.com/volkanceylan/StartSharp/releases/
-
-Save it to an empty folder anywhere, open a command prompt, CD to that directory containing the nuget package you downloaded:
-
-```ps
-C:\>cd C:\NewDir
-C:\NewDir>
-```
-
 ## Installing / Updating Stargen
 
-Run following to update/install *stargen* as a global tool:
+If you haven't already, you should start by registering **serenity.is** package source.
+
+Please open following Serenity.is members page which contains information about the premium package source, your private access token, and how to register it:
+
+https://serenity.is/Dashboard
+
+The command you should find there is something like following:
+
+```cmd
+dotnet nuget add source -n serenity.is https://packages.serenity.is/your-customer-identifier/your-api-key/v3/index.json
+```
+
+or this one below if you prefer not to have your access token in the URL (e.g. to keep it safe from prying eyes):
+
+```cmd
+dotnet nuget add source -n serenity.is https://packages.serenity.is/v3/index.json 
+       -u "your-username" -p "your-customer-identifier/your-api-key"
+```
+
+> You may also use Nuget Package Sources option under Visual Studio settings dialog.
+
+Once you configured the premium package source, run following to update/install *stargen* as a global tool:
 
 ```
-C:\NewDir> dotnet tool update stargen --global --add-source .\
+dotnet tool update -g stargen
 ```
 
 > `tool update` command should be able to install it first time as well, but if you get an error try following:
 >
-> dotnet tool install stargen --global --add-source .\
+> dotnet tool install -g stargen
 
 ## Running Stargen Upgrade
 
@@ -47,9 +55,10 @@ C:\NewDir> dotnet tool update stargen --global --add-source .\
 
 * Make sure Visual Studio is closed and IIS express is not running, so that your project files are not locked
 
-* Open a command prompt in your project directory where your sergen.json and appsettings.json resides and execute following command:
+* Open a command prompt in your project directory where your sergen.json and appsettings.json resides and execute following commands:
 
 ```ps
+C:\MyProject\MyProject\MyProject.Web> dotnet tool update -g stargen
 C:\MyProject\MyProject\MyProject.Web> stargen upgrade
 ```
 You'll get an output like following:

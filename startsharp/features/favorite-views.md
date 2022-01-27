@@ -18,4 +18,8 @@ protected createToolbarExtensions() {
         grid: this
     });
 }
+
+protected getPersistanceStorage(): Serenity.SettingStorage {
+    return new Serenity.Extensions.UserPreferenceStorage();
+}
 ```

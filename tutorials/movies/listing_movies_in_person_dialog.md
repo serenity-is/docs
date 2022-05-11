@@ -156,9 +156,9 @@ export class PersonDialog extends Serenity.EntityDialog<PersonRow, any> {
 
 Remember that in our template we had a div with id *~_MoviesGrid* under movies tab pane. We created PersonMovie grid on that div.
 
-> this.ById("MoviesGrid") is a special method for templated widgets. *$('#MoviesGrid')* wouldn't work here, as that div actually has some ID like *PersonDialog17_MoviesGrid*. `~_` in templates are replaced with a unique container widget ID.
+> this.ById("MoviesGrid") is a special method for templated widgets. *$('#MoviesGrid')* wouldn't work here, as that div actually has some ID like *PersonDialog17_MoviesGrid*. `~_` prefix in templates are replaced with a unique container widget ID.
 
-We also attached to OnActivate event of jQuery UI tabs, and called Arrange method of the dialog. This is to solve a problem with SlickGrid, when it is initially created in invisible tab. Arrange function triggers relayout and SlickGrid solves this problem.
+We also attached to tabsactivate event of jQuery UI tabs, and called Arrange method of the dialog. This is to solve a problem with SlickGrid, when its initially created in invisible tab. Arrange function triggers relayout and SlickGrid solves this problem.
 
 OK, now we can see list of movies in Movies tab, but something is strange:
 
@@ -168,7 +168,7 @@ OK, now we can see list of movies in Movies tab, but something is strange:
 
 No, Carrie-Anne Moss didn't act in three roles. This grid is showing all movie cast records for now, as we didn't tell what filter it should apply yet.
 
-PersonMovieGrid should know the person it shows the movie cast records for. So, we add a *PersonID* property to this grid. This *PersonID* should be passed somehow to list service for filtering.
+PersonMovieGrid should know the person it shows the movie cast records for. We need to add a *PersonID* property to this grid. This *PersonID* should be passed somehow to list service for filtering.
 
 ```ts
 namespace MovieTutorial.MovieDB
@@ -269,10 +269,8 @@ You might have noticed that when you switch to Movies tab, dialog gets a bit les
 Edit *s-MovieDB-PersonDialog* css in site.moviedb.less:
 
 ```css
-.s-MovieDB-PersonDialog {
-    > .size { width: 650px; }
-    .caption { width: 150px; }
-    .s-PersonMovieGrid > .grid-container { height: 251px; }
+.s-MovieDB-PersonDialog .s-PersonMovieGrid > .grid-container {
+    height: 251px;
 }
 ```
 

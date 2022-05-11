@@ -60,7 +60,7 @@ Rebuild solution and run it. We'll get a new page like this:
 
 As you see in screenshot, it is generated under a new section *MovieDB* instead of the one we renamed recently: *Movie Database*.
 
-This is because *Sergen* has no idea of what customizations we performed on our *Movie* page. So we need to movie it under *Movie Database* manually.
+This is because *Sergen* has no idea of what customizations we performed on our *Movie* page. We need to move it under *Movie Database* manually.
 
 Open *Modules/Movie/MovieDBNavigation.cs*, cut the navigation link shown below:
 
@@ -464,6 +464,6 @@ Build and navigate to Movies page. You'll a quick filtering dropdown for genre f
 The field that is filtered is actually *GenreId* not *GenreName* that we attached this attribute to. Serenity is clever enough to understand this relation, and determined editor type to use by looking at attributes of *GenreId* property in *GenreRow.cs*.
 
 
-### Re-runing T4 Templates
+### Re-runing auto transformation
 
 As we added a new entity to our application, we should rebuild solution.

@@ -169,10 +169,8 @@ namespace MovieTutorial.MovieDB.Forms
 I also modified Person dialog css a bit to have more space:
 
 ```css
-.s-MovieDB-PersonDialog {
-    > .size { width: 700px; height: 600px; }
-    .caption { width: 150px; }
-    .s-PersonMovieGrid > .grid-container { height: 500px; }
+.s-MovieDB-PersonDialog .s-PersonMovieGrid > .grid-container {
+    height: 500px;
 }
 ```
 

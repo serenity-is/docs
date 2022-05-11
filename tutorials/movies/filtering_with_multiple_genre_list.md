@@ -1,6 +1,6 @@
 # Filtering with Multiple Genre List
 
-Remember that when we had only one Genre per Movie, it was easy to quick filter, by adding a [QuickFilter] attribute to GenreId field.
+Remember that when we had just one Genre per Movie, it was easy to quick filter, by adding a [QuickFilter] attribute to GenreId field.
 
 Let's try to do similar in MovieColumns.cs:
 
@@ -18,19 +18,20 @@ As soon as you type a Genre into Genres you'll have this error:
 
 ![Invalid Column GenreList](img/mdb_genrelist_invalid.png)
 
-> As of Serenity 2.6.3, LinkingSetRelation will automatically handle equality filter for its field, so you won't get this error and it will just work. 
-> Anyway, it's still recommended to follow steps below as it is a good sample for defining custom list requests and handling them when required.
+> As of Serenity 2.6.3, LinkingSetRelation will automatically handle equality filter for its field, so you won't get this error, and it will just work. And with the Serenity 5.0.46 you also don't need to create handlers and add business into them to use equality filter.
+
+> Anyway, it's still recommended to follow steps below as it's a good sample for defining custom list requests and handling them when required.
 
 ListHandler tried to filter by GenreList field, but as there is no such column in database, we got this error.
 
-So, now we have to handle it somehow.
+Now we need to have to handle it somehow.
 
 
 ### Declaring MovieListRequest Type
 
 As we are going to do something non-standard, e.g. filtering by values in a linking set table, we need to prevent ListHandler from filtering itself on GenreList property.
 
-We could process the request *Criteria* object (which is similar to an expression tree) using a visitor and handle GenreList ourself, but it would be a bit complex. So i'll take a simpler road for now.
+We could process the request *Criteria* object (which is similar to an expression tree) using a visitor and handle GenreList ourselves, but it would be a bit complex. So I'll take a simpler road for now.
 
 Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieEndpoint.cs*:
 
@@ -133,7 +134,7 @@ export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
 
 getQuickFilters is a method that is called to get a list of quick filter objects for this grid type. 
 
-By default grid enumerates properties with [QuickFilter] attributes in MovieColumns.cs and creates suitable quick filter objects for them.
+By default, grid enumerates properties with [QuickFilter] attributes in MovieColumns.cs and creates suitable quick filter objects for them.
 
 We start by getting list of QuickFilter objects from super class.
 
@@ -150,7 +151,7 @@ const genreListFilter = Q.first(items, x =>
 
 Actually there is only one quick filter now, but we want to play safe.
 
-Next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to request's *Criteria* (if multiple)  or *EqualityFilter* (if single value) parameters, just before its submitted to list service.
+Next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to request's *Criteria* (if multiple) or *EqualityFilter* (if single value) parameters, just before its submitted to list service.
 
 ```ts
 genreListFilter.handler = h => {
@@ -264,7 +265,7 @@ Unless told otherwise, Serenity always assigns *t0* to a row's primary table. Ev
 
 > Because when compiled, *x* won't be there and Serenity has no way to know its variable name. Serenity entity system doesn't use an expression tree like in LINQ to SQL or Entity Framework. It makes use of very simple string / query builders.
 
-So, if wanted it to use *x* as an alias, we'd have to write it explicitly:
+If we want to use *x* as an alias, we'd have to write it explicitly:
 
 ```cs
 var x = MovieGenresRow.Fields.As("x");
@@ -286,7 +287,7 @@ In *MovieListHandler*, which is for *MovieRow* entities, *t0* is already used fo
 var mg = MovieGenresRow.Fields.As("mg");
 ```
 
-What i'm trying to achieve, is a query like this (just the way we'd do this in bare SQL):
+What I'm trying to achieve, is a query like this (just the way we'd do this in bare SQL):
 
 ```sql
 SELECT t0.MovieId, t0.Title, ... FROM Movies t0
@@ -299,7 +300,7 @@ WHERE EXISTS (
 )
 ```
 
-So i'm adding a WHERE filter to main query with Where method, using an EXISTS criteria:
+So I'm adding a WHERE filter to main query with Where method, using an EXISTS criteria:
 
 ```cs
 query.Where(Criteria.Exists(

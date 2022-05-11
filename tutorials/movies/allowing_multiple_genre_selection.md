@@ -118,24 +118,7 @@ Fire up sergen and generate code for *MovieGenres* table as usual:
 - Entity Identifier: **MovieGenres**
 - Permission Key: **Administration:General**
 
-As we're not going to edit movie genres from a separate page, you can safely delete the generated files below:
-
-```
-MovieGenresColumns.cs
-MovieGenresDialog.ts
-MovieGenresEndpoint.cs
-MovieGenresForm.cs
-MovieGenresGrid.cs
-MovieGenresIndex.cshtml
-MovieGenresPage.cs
-```
-
-You also should delete newly generated line for navigation from _MovieDBNavigation.cs_.
-You can also remove CSS entries for s-MovieDB-MovieGenresDialog from *site.less*.
-
-Only leave last five files, *MovieGenresRow.cs* and files in *RequestHandlers* folder.
-
-After building, run T4 templates to be sure, no T4 generated files related to *MovieGenresForm* etc. is left behind.
+As we're not going to edit movie genres from a separate page, you can create row and handlers only. You can safely remove endpoints after generating code. 
 
 ### Adding GenreList Field
 
@@ -192,6 +175,8 @@ Third argument is the property name of field in that row (MovieGenresRow) that l
 > LinkingSetRelation has a related Serenity service behavior, named *LinkingSetRelationBehavior* that is automatically activated for all fields with a *LinkingSetRelation* attribute. 
 
 > This behavior, will intercept service handlers for *Create*, *Update*, *Delete*, *Retrieve* and *List* and inject code to populate or update our *GenreList* column and its related *MovieGenres* table.
+
+> When the handlers doesn't exist, it's uses a default generic implementation. If you need to customize the handlers, you need to create them. 
 
 > We'll talk about Serenity service behaviors in following chapters.
 

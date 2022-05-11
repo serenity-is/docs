@@ -8,7 +8,7 @@ But, i want to show how you can update Serenity NuGet packages, in case another 
 
 I prefer to work with NuGet from *Package Manager Console* instead of using NuGet GUI interface as it performs much faster.
 
-So, click *View -> Other Windows -> Package Manager Console*.
+Click *View -> Other Windows -> Package Manager Console*.
 
 Type:
 
@@ -33,8 +33,8 @@ To update Serenity.CodeGenerator (e.g. *dotnet sergen* tool), open a console win
 
 To update Serenity.CodeGenerator (e.g. *dotnet sergen* tool) and script files that comes with Serenity, open a console window in project directory and type:
 
-> dotnet tool update sergen
-> dotnet restore
+> dotnet tool update sergen\
+> dotnet restore\
 > dotnet sergen restore
 
 # Updating Serenity Packages (alternative approach by editing CSPROJ file)
@@ -65,11 +65,11 @@ Now rebuild your solution and it should build successfully.
 
 > From time to time, breaking changes might happen in Serenity, but they are kept to minimum, and you might have to do a few manual changes in your application code. 
 
-> Such changes are documented with a [BREAKING CHANGE] tag in change log at:
+> Such changes are documented with a [BREAKING CHANGE] tag in change log at:\
 > https://github.com/serenity-is/Serenity/blob/master/CHANGELOG.md
 
-> If you still have a problem after upgrade, feel free to open an issue at:
-> https://github.com/serenity-is/Serenity/issues
+> If you still have a problem after upgrade, feel free to ask in discussions at:\
+> https://github.com/serenity-is/Serenity/discussions
 
 
 ### What Is Updated
@@ -100,7 +100,7 @@ We are trying to keep updating your application as simple as possible, but Seren
 
 You might have done modifications to application source, so updating a Serene application created with an older version of Serene template, might not be as easy as it sounds.
 
-So sometimes you might have to create a new Serene application with up-to-date Serene template version, and compare it to your application, and merge features you need. This is a manual process.
+Sometimes you might have to create a new Serene application with up-to-date Serene template version, and compare it to your application, and merge features you need. This is a manual process.
 
 Usually, updating Serenity packages is enough. Updating Serene itself is not required unless you need some recent features from latest Serene version.
 

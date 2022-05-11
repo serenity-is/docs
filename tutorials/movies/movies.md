@@ -3,12 +3,6 @@
 
 Let's create editing interface for some site similar to IMDB with Serenity.
 
-> You can find source code for this tutorial at: 
-
-> https://github.com/volkanceylan/MovieTutorial
-
-
-
 ### Create a new project named *MovieTutorial*
 
 In Visual Studio click File -> New Project. Make sure you choose *Serene* template. Type *MovieTutorial* as name and click *OK*.

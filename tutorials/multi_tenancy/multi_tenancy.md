@@ -16,14 +16,10 @@ I'd personally avoid multi-tenant applications. It's better to have one database
 
 But some users asked about how to implement this feature. This tutorial will help us explain some advanced Serenity topics as a bonus, along with multi tenancy.
 
-> You can find source code for this tutorial at: 
-
-> https://github.com/volkanceylan/MultiTenancy
-
-
-
 ### Create a new project named *MultiTenancy*
 
 In Visual Studio click File -> New Project. Make sure you choose *Serene* template. Type *MultiTenancy* as name and click *OK*.
 
 In Solution explorer, you should see a project with name *MultiTenancy.Web*.
+
+We will continue with the Movie Tutorial project.

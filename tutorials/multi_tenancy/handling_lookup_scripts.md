@@ -1,68 +1,57 @@
 # Handling Lookup Scripts
 
-If we open _Suppliers_ page now, we'll see that _tenant2_ can only see suppliers that belongs to its tenant. But on top right of the grid, in country dropdown, all countries are listed:
+If we open _Movie_ page now, we'll see that _tenant2_ can only see movies that belongs to its tenant. But when you try to add a cast to a movie, all persons are shown.:
 
-![Tenant2 All Countries](img/tenant2_all_countries.png)
+![Tenant2 All Countries](img/tenant2_all_peoples.png)
 
 This data is feed to script side through a dynamic script. It doesn't load this data with _List_ services we handled recently.
 
-The lookup script that produces this dropdown is defined in _SupplierCountryLookup.cs_:
+The lookup script that produces this dropdown is defined on _PersonRow.cs_:
 
 ```csharp
-namespace MultiTenancy.Northwind.Scripts
+namespace MultiTenancy.MovieDB
 {
-    using Serenity.ComponentModel;
-    using Serenity.Data;
-    using Serenity.Web;
-
-    [LookupScript("Northwind.SupplierCountry")]
-    public class SupplierCountryLookup : 
-        RowLookupScript<Entities.SupplierRow>
+    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Person]")]
+    [DisplayName("Person"), InstanceName("Person")]
+    [ReadPermission("Administration:General")]
+    [ModifyPermission("Administration:General")]
+    [LookupScript("MovieDB.Person")] // <-- This is the definition
+    public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow, IMultiTenantRow
     {
-        public SupplierCountryLookup()
+        [DisplayName("Person Id"), Identity, IdProperty]
+        public int? PersonId
         {
-            IdField = TextField = "Country";
+            get => fields.PersonId[this];
+            set => fields.PersonId[this] = value;
         }
 
-        protected override void PrepareQuery(SqlQuery query)
-        {
-            var fld = Entities.SupplierRow.Fields;
-            query.Distinct(true)
-                .Select(fld.Country)
-                .Where(
-                    new Criteria(fld.Country) != "" &
-                    new Criteria(fld.Country).IsNotNull());
-        }
-
-        protected override void ApplyOrder(SqlQuery query)
-        {
-        }
-    }
-}
 ```
 
-> We couldn't use a simple \[LookupScript\] attribute on a row class here, because there is actually no country table in Northwind database. We are collecting country names from existing records in Supplier table using distinct.
+> Sometimes we need to use custom lookup scripts to customize data. For example the northwind sample *SupplierCountryLookup*. This lookup class derives from the _RowLookupScript_ base class. In that case we also need to handle this type of lookups.
 
-We should filter its query by current tenant.
-
-But this lookup class derives from _RowLookupScript_ base class. Let's create a new base class, to prepare for other lookup scripts that we'll have to handle later.
+We should filter the lookup query by current tenant. Let's create a new base class, to prepare for other lookup scripts that we'll have to handle later.
 
 ```csharp
-namespace MultiTenancy.Northwind.Scripts
-{
-    using Administration;
-    using Serenity;
-    using Serenity.Data;
-    using Serenity.Web;
-    using System;
+using Serenity;
+using Serenity.Abstractions;
+using Serenity.Data;
+using Serenity.Web;
+using System;
 
-    public class MultiTenantRowLookupScript<TRow> : 
-        RowLookupScript<TRow>
-        where TRow : Row, IMultiTenantRow, new()
+namespace MultiTenancy
+{
+    public class MultiTenantRowLookupScript<TRow> :
+            RowLookupScript<TRow>
+            where TRow : class, IRow, IMultiTenantRow, new()
     {
-        public MultiTenantRowLookupScript()
+        public ITwoLevelCache TwoLevelCache { get; }
+        public IUserAccessor UserAccessor { get; }
+
+        public MultiTenantRowLookupScript(ISqlConnections sqlConnections, ITwoLevelCache twoLevelCache, IUserAccessor userAccessor) : base(sqlConnections)
         {
             Expiration = TimeSpan.FromDays(-1);
+            TwoLevelCache = twoLevelCache ?? throw new ArgumentNullException(nameof(twoLevelCache));
+            UserAccessor = userAccessor ?? throw new ArgumentNullException(nameof(userAccessor));
         }
 
         protected override void PrepareQuery(SqlQuery query)
@@ -74,15 +63,14 @@ namespace MultiTenancy.Northwind.Scripts
         protected void AddTenantFilter(SqlQuery query)
         {
             var r = new TRow();
-            query.Where(r.TenantIdField ==
-                ((UserDefinition)Authorization.UserDefinition).TenantId);
+            query.Where(r.TenantIdField == UserAccessor.User.GetTenantId());
         }
 
         public override string GetScript()
         {
-            return TwoLevelCache.GetLocalStoreOnly("MultiTenantLookup:" + 
+            return TwoLevelCache.GetLocalStoreOnly("MultiTenantLookup:" +
                     this.ScriptName + ":" +
-                    ((UserDefinition)Authorization.UserDefinition).TenantId, 
+                    UserAccessor.User.GetTenantId(),
                     TimeSpan.FromHours(1),
                 new TRow().GetFields().GenerationKey, () =>
                 {
@@ -103,7 +91,7 @@ We'll turn off caching at dynamic script manager level and handle caching oursel
 
 By overriding, _PrepareQuery_ method, we are adding a filter by current _TenantId_, just like we did in list service handlers.
 
-Now its time to rewrite our _SupplierCountryLookup_ using this new base class:
+Now, lets see how we will implement the northwind sample lookup named _SupplierCountryLookup_ using this new base class:
 
 ```csharp
 namespace MultiTenancy.Northwind.Scripts
@@ -113,17 +101,17 @@ namespace MultiTenancy.Northwind.Scripts
     using Serenity.Web;
 
     [LookupScript("Northwind.SupplierCountry")]
-    public class SupplierCountryLookup : 
-        MultiTenantRowLookupScript<Entities.SupplierRow>
+    public class SupplierCountryLookup :
+        MultiTenantRowLookupScript<SupplierRow>
     {
-        public SupplierCountryLookup()
+        public SupplierCountryLookup(ISqlConnections sqlConnections, ITwoLevelCache twoLevelCache, IUserAccessor userAccessor) : base(sqlConnections)
         {
             IdField = TextField = "Country";
         }
 
         protected override void PrepareQuery(SqlQuery query)
         {
-            var fld = Entities.SupplierRow.Fields;
+            var fld = SupplierRow.Fields;
             query.Distinct(true)
                 .Select(fld.Country)
                 .Where(
@@ -142,33 +130,30 @@ namespace MultiTenancy.Northwind.Scripts
 
 We just called _AddTenantFilter_ method manually, because we weren't calling base _PrepareQuery_ method here \(so it won't be called by base class\).
 
-> Please first delete _Northwind.DynamicScripts.cs_ file, if you have it.
-
-There are several more similar lookup scripts in _CustomerCountryLookup_, _CustomerCityLookup_,  
-_OrderShipCityLookup_, _OrderShipCountryLookup_. I'll do similar changes in them. Change base class to _MultiTenantRowLookupScript_ and call _AddTenantFilter_ in _PrepareQuery_ method.
-
 ## Lookup Script Declarations On Rows
 
-We now have one more problem to solve. If you open _Orders_ page, you'll see that _Ship Via_ and _Employee_ filter dropdowns still lists records from other tenants. It is because we defined their lookup scripts by a \[LookupScript\] attribute on their rows.
+We now have one more problem to solve. The \[LookupScript\] attribute on the rows.
 
 By default, LookupScript generates a lookup instance based on `RowLookupScript<>` type. We need to change it to `MultiTenantRowLookupScript<>` for these multi-tenant rows.
 
-Let's fix employee lookup first. Replace \[LookupScript\] attribute like below in _EmployeeRow_.
+Let's fix person lookup. Replace \[LookupScript\] attribute like below in _PersonRow_.
 
 ```csharp
-[LookupScript("Northwind.Employee", 
- LookupType = typeof(MultiTenantRowLookupScript<>))]
-public sealed class EmployeeRow : Row, IIdRow, 
-   INameRow, IMultiTenantRow
+[ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Person]")]
+[DisplayName("Person"), InstanceName("Person")]
+[ReadPermission("Administration:General")]
+[ModifyPermission("Administration:General")]
+[LookupScript("MovieDB.Person", LookupType = typeof(MultiTenantRowLookupScript<>))]
+public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow, IMultiTenantRow
 {
     //...
 ```
 
 > Note that this requires Serenity 2.9.22+
 
-Do similar (add LookupType) for _Shipper_, _Product_, _Supplier_, _Category_, _Region_ and _Territory_ rows.
+Do similar (add LookupType) for _GenreRow_ row.
 
-Now Northwind supports multi-tenancy.
+Now the MovieDB supports multi-tenancy.
 
 > There might be some glitches i missed, report in Serenity Github repository if any.
 

@@ -19,11 +19,10 @@ protected override void SetInternalFields()
     {
         Row.Source = "site";
         Row.IsActive = Row.IsActive ?? 1;
-        if (!Authorization.HasPermission(Administration.PermissionKeys.Tenants) ||
+        if (!Permissions.HasPermission(PermissionKeys.Tenants) ||
             Row.TenantId == null)
         {
-            Row.TenantId = ((UserDefinition)Authorization.UserDefinition)
-                .TenantId;
+            Row.TenantId = User.GetTenantId();
         }
     }
 

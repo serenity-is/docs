@@ -39,9 +39,9 @@ namespace MultiTenancy.Administration.Entities
         public class RowFields : LoggingRowFields
         {
             //...
-            public readonly DateTimeField LastDirectoryUpdate;
-            public readonly Int32Field TenantId;
-            public readonly StringField TenantName;
+            public DateTimeField LastDirectoryUpdate;
+            public Int32Field TenantId;
+            public StringField TenantName;
             //...
         }
     }
@@ -78,13 +78,17 @@ namespace MultiTenancy.Administration.Forms
 }
 ```
 
-Need to also increase size of user dialog a bit, in *site.administration.less* to make space for tenant selection:
+Need to also increase size of user dialog a bit, in *site.css* to make space for tenant selection:
 
-```less
-.s-Administration-UserDialog {
-    > .size { width: 650px; }
-    .caption { width: 150px; }
-    .s-PropertyGrid .categories { height: 470px; }
+```css
+.s-Administration-UserDialog > .size { 
+    width: 650px; 
+}
+.s-Administration-UserDialog .caption { 
+    width: 150px; 
+}
+.s-Administration-UserDialog .s-PropertyGrid .categories { 
+    height: 470px;
 }
 ```
 

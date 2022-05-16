@@ -38,56 +38,48 @@ namespace MultiTenancy
     {
         private Int32Field fldTenantId;
 
-        public bool ActivateFor(Row row)
+        public bool ActivateFor(IRow row)
         {
-            var mt = row as IMultiTenantRow;
-            if (mt == null)
+            if (row is not IMultiTenantRow mt)
                 return false;
 
             fldTenantId = mt.TenantIdField;
             return true;
         }
 
-        public void OnPrepareQuery(IRetrieveRequestHandler handler, 
+        public void OnPrepareQuery(IRetrieveRequestHandler handler,
             SqlQuery query)
         {
-            var user = (UserDefinition)Authorization.UserDefinition;
-            if (!Authorization.HasPermission(PermissionKeys.Tenants))
-                query.Where(fldTenantId == user.TenantId);
+            if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
+                query.Where(fldTenantId == handler.Context.User.GetTenantId());
         }
 
-        public void OnPrepareQuery(IListRequestHandler handler, 
+        public void OnPrepareQuery(IListRequestHandler handler,
             SqlQuery query)
         {
-            var user = (UserDefinition)Authorization.UserDefinition;
-            if (!Authorization.HasPermission(PermissionKeys.Tenants))
-                query.Where(fldTenantId == user.TenantId);
+            if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
+                query.Where(fldTenantId == handler.Context.User.GetTenantId());
         }
 
         public void OnSetInternalFields(ISaveRequestHandler handler)
         {
             if (handler.IsCreate)
-                fldTenantId[handler.Row] =
-                    ((UserDefinition)Authorization
-                        .UserDefinition).TenantId;
+                fldTenantId[handler.Row] = handler.Context.User.GetTenantId();
         }
 
         public void OnValidateRequest(ISaveRequestHandler handler)
         {
             if (handler.IsUpdate)
             {
-                var user = (UserDefinition)Authorization.UserDefinition;
                 if (fldTenantId[handler.Old] != fldTenantId[handler.Row])
-                    Authorization.ValidatePermission(PermissionKeys.Tenants);
+                    handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
             }
         }
 
         public void OnValidateRequest(IDeleteRequestHandler handler)
         {
-            var user = (UserDefinition)Authorization.UserDefinition;
-            if (fldTenantId[handler.Row] != user.TenantId)
-                Authorization.ValidatePermission(
-                    PermissionKeys.Tenants);
+            if (fldTenantId[handler.Row] != handler.Context.User.GetTenantId())
+                handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
         }
 
         public void OnAfterDelete(IDeleteRequestHandler handler) { }
@@ -100,7 +92,7 @@ namespace MultiTenancy
         public void OnBeforeDelete(IDeleteRequestHandler handler) { }
         public void OnBeforeExecuteQuery(IRetrieveRequestHandler handler) { }
         public void OnBeforeExecuteQuery(IListRequestHandler handler) { }
-        public void OnBeforeSave(ISaveRequestHandler handler) { }       
+        public void OnBeforeSave(ISaveRequestHandler handler) { }
         public void OnPrepareQuery(IDeleteRequestHandler handler, SqlQuery query) { }
         public void OnPrepareQuery(ISaveRequestHandler handler, SqlQuery query) { }
         public void OnReturn(IDeleteRequestHandler handler) { }
@@ -138,10 +130,37 @@ The methods we implement here, corresponds to methods we override in *RoleReposi
 Now revert every change we made in *RoleRepository.cs*:
 
 ```cs
-private class MySaveHandler : SaveRequestHandler<MyRow> { }
-private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
-private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
-private class MyListHandler : ListRequestHandler<MyRow> { }
+private class MySaveHandler : SaveRequestHandler<MyRow>
+{
+    public MySaveHandler(IRequestContext context)
+            : base(context)
+    {
+    }
+}
+
+private class MyDeleteHandler : DeleteRequestHandler<MyRow>
+{
+    public MyDeleteHandler(IRequestContext context)
+            : base(context)
+    {
+    }
+}
+
+private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
+{
+    public MyRetrieveHandler(IRequestContext context)
+            : base(context)
+    {
+    }
+}
+
+private class MyListHandler : ListRequestHandler<MyRow>
+{
+    public MyListHandler(IRequestContext context)
+            : base(context)
+    {
+    }
+}
 ```
 
 And add *IMultiTenantRow* interface to *RoleRow*:

@@ -14,7 +14,7 @@ But this time, as we rebuild project, browser tried to load it from server, and 
 
 We need to remove *Tenant* field from the user form. But we need that field for *admin* user, so we can't simply delete it from *UserForm.cs*. Thus, we need to do it conditionally.
 
-Build the project, transform all templates and add method below to UserDialog.ts:
+Build the project, auto transform all and add method below to *UserDialog.ts*:
 
 ```ts
 protected getPropertyItems() {
@@ -25,7 +25,7 @@ protected getPropertyItems() {
 }
 ```
 
-Dialogs gets list of fields it will show in its form by getPropertyItems method, which in turn loads them from server side form definition.
+Dialogs gets list of fields it will show in its form by _getPropertyItems_ method, which in turn loads them from server side form definition.
 
 Here we exclude TenantId field, if current user doesn't have the tenants permission.
 

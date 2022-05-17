@@ -12,13 +12,13 @@ Open Chrome console and type this:
 new MultiTenancy.Administration.UserDialog().loadByIdAndOpenDialog(1)
 ```
 
-What? He could open user dialog for *admin* and update it!
+As you see, anyone could open user dialog for *admin* and update it.
 
 *MultiTenancy.Administration.UserDialog* is the dialog class that is opened when you click a username in user administration page.
 
 We created a new instance of it, and asked to load a user entity by its ID. Admin user has an ID of *1*.
 
-So, to load the entity with ID 1, dialog called *Retrieve* service of *UserRepository*.
+To load the entity with ID 1, dialog called *Retrieve* service of *UserRepository*.
 
 Remember that we did filtering in *List* method of *UserRepository*, not *Retrieve*. So, service has no idea, if it should return this record from another tenant, or not.
 
@@ -31,9 +31,8 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
     {
         base.PrepareQuery(query);
 
-        var user = (UserDefinition)Authorization.UserDefinition;
-        if (!Authorization.HasPermission(PermissionKeys.Tenants))
-            query.Where(fld.TenantId == user.TenantId);
+        if (!Permissions.HasPermission(PermissionKeys.Tenants))
+            query.Where(fld.TenantId == User.GetTenantId());
     }
 }
 ```
@@ -42,24 +41,23 @@ We did same changes in MyListHandler before.
 
 If you try same Javascript code now, you'll get an error:
 
-```
+```txt
 Record not found. It might be deleted or you don't have required permissions!
 ```
 
-But, we could still update record calling `Update` service manually. So, need to secure *MySaveHandler* too.
+But, we could still update record calling `Update` service manually. So, we need to secure *MySaveHandler* too.
 
 Change its *ValidateRequest* method like this:
 
-```
+```cs
 protected override void ValidateRequest()
 {
     base.ValidateRequest();
 
     if (IsUpdate)
     {
-        var user = (UserDefinition)Authorization.UserDefinition;
-        if (Old.TenantId != user.TenantId)
-            Authorization.ValidatePermission(PermissionKeys.Tenants);
+        if (Old.TenantId != User.GetTenantId())
+            Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
             
         // ...
 ```
@@ -83,9 +81,8 @@ private class MyDeleteHandler : DeleteRequestHandler<MyRow>
     {
         base.ValidateRequest();
 
-        var user = (UserDefinition)Authorization.UserDefinition;
-        if (Row.TenantId != user.TenantId)
-            Authorization.ValidatePermission(PermissionKeys.Tenants);
+        if (Row.TenantId != User.GetTenantId())
+            Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
     }
 }
 
@@ -95,9 +92,8 @@ private class MyUndeleteHandler : UndeleteRequestHandler<MyRow>
     {
         base.ValidateRequest();
 
-        var user = (UserDefinition)Authorization.UserDefinition;
-        if (Row.TenantId != user.TenantId)
-            Authorization.ValidatePermission(PermissionKeys.Tenants);
+        if (Row.TenantId != User.GetTenantId())
+            Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
     }
 }
 ```

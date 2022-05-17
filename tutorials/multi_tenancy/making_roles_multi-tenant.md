@@ -17,8 +17,8 @@ namespace MultiTenancy.Administration.Entities
         [Insertable(false), Updatable(false)]
         public Int32? TenantId
         {
-            get { return Fields.TenantId[this]; }
-            set { Fields.TenantId[this] = value; }
+            get => Fields.TenantId[this];
+            set => Fields.TenantId[this] = value;
         }
         
         //...
@@ -38,60 +38,64 @@ Then we'll do several changes in *RoleRepository.cs*:
 ```csharp
 private class MySaveHandler : SaveRequestHandler<MyRow>
 {
+    //...
+    
     protected override void SetInternalFields()
     {
         base.SetInternalFields();
 
         if (IsCreate)
-            Row.TenantId = ((UserDefinition)Authorization.UserDefinition).TenantId;
+            Row.TenantId = User.GetTenantId();
     }
 
-     protected override void ValidateRequest()
-     {
-         base.ValidateRequest();
-
-         if (IsUpdate)
-         {
-             var user = (UserDefinition)Authorization.UserDefinition;
-             if (Old.TenantId != user.TenantId)
-                 Authorization.ValidatePermission(PermissionKeys.Tenants);
-         }
-     }
-}
-
-private class MyDeleteHandler : DeleteRequestHandler<MyRow>
-{
     protected override void ValidateRequest()
     {
         base.ValidateRequest();
 
-        var user = (UserDefinition)Authorization.UserDefinition;
-        if (Row.TenantId != user.TenantId)
-            Authorization.ValidatePermission(PermissionKeys.Tenants);
+        if (IsUpdate)
+        {
+            if (Old.TenantId != User.GetTenantId())
+                Permissions.ValidatePermission(PermissionKeys.Tenants, Localizer);
+        }
+    }
+}
+
+private class MyDeleteHandler : DeleteRequestHandler<MyRow>
+{
+    //...
+    
+    protected override void ValidateRequest()
+    {
+        base.ValidateRequest();
+
+        if (Row.TenantId != User.GetTenantId())
+            Permissions.ValidatePermission(PermissionKeys.Tenants, Localizer);
     }
 }
 
 private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
 {
+    //...
+
     protected override void PrepareQuery(SqlQuery query)
     {
         base.PrepareQuery(query);
 
-        var user = (UserDefinition)Authorization.UserDefinition;
-        if (!Authorization.HasPermission(PermissionKeys.Tenants))
-            query.Where(fld.TenantId == user.TenantId);
+        if (!Permissions.HasPermission(PermissionKeys.Tenants))
+            query.Where(fld.TenantId == User.GetTenantId());
     }
 }
 
 private class MyListHandler : ListRequestHandler<MyRow>
 {
+    //...
+
     protected override void ApplyFilters(SqlQuery query)
     {
         base.ApplyFilters(query);
 
-        var user = (UserDefinition)Authorization.UserDefinition;
-        if (!Authorization.HasPermission(PermissionKeys.Tenants))
-            query.Where(fld.TenantId == user.TenantId);
+        if (!Permissions.HasPermission(PermissionKeys.Tenants))
+            query.Where(fld.TenantId == User.GetTenantId());
     }
 }
 ```

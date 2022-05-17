@@ -22,8 +22,8 @@ namespace MultiTenancy.Administration.Entities
         [DisplayName("Tenant Id"), Identity]
         public Int32? TenantId
         {
-            get { return Fields.TenantId[this]; }
-            set { Fields.TenantId[this] = value; }
+            get => Fields.TenantId[this];
+            set => Fields.TenantId[this] = value;
         }
 
 //...

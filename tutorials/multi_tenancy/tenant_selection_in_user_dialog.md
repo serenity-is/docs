@@ -16,32 +16,32 @@ namespace MultiTenancy.Administration.Entities
         [DisplayName("Last Directory Update"), Insertable(false), Updatable(false)]
         public DateTime? LastDirectoryUpdate
         {
-            get { return Fields.LastDirectoryUpdate[this]; }
-            set { Fields.LastDirectoryUpdate[this] = value; }
+            get => Fields.LastDirectoryUpdate[this];
+            set => Fields.LastDirectoryUpdate[this] = value;
         }
 
         [DisplayName("Tenant"), ForeignKey("Tenants", "TenantId"), LeftJoin("tnt")]
         [LookupEditor(typeof(TenantRow))]
         public Int32? TenantId
         {
-            get { return Fields.TenantId[this]; }
-            set { Fields.TenantId[this] = value; }
+            get => Fields.TenantId[this];
+            set => Fields.TenantId[this] = value;
         }
 
         [DisplayName("Tenant"), Expression("tnt.TenantName")]
         public String TenantName
         {
-            get { return Fields.TenantName[this]; }
-            set { Fields.TenantName[this] = value; }
+            get => Fields.TenantName[this];
+            set => Fields.TenantName[this] = value;
         }
 
         //...
         public class RowFields : LoggingRowFields
         {
             //...
-            public readonly DateTimeField LastDirectoryUpdate;
-            public readonly Int32Field TenantId;
-            public readonly StringField TenantName;
+            public DateTimeField LastDirectoryUpdate;
+            public Int32Field TenantId;
+            public StringField TenantName;
             //...
         }
     }
@@ -78,13 +78,17 @@ namespace MultiTenancy.Administration.Forms
 }
 ```
 
-Need to also increase size of user dialog a bit, in *site.administration.less* to make space for tenant selection:
+Need to also increase size of user dialog a bit, in *site.css* to make space for tenant selection:
 
-```less
-.s-Administration-UserDialog {
-    > .size { width: 650px; }
-    .caption { width: 150px; }
-    .s-PropertyGrid .categories { height: 470px; }
+```css
+.s-Administration-UserDialog > .size { 
+    width: 650px; 
+}
+.s-Administration-UserDialog .caption { 
+    width: 150px; 
+}
+.s-Administration-UserDialog .s-PropertyGrid .categories { 
+    height: 470px;
 }
 ```
 

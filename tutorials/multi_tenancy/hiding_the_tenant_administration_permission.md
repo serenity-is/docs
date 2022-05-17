@@ -33,6 +33,13 @@ We should add some checks to prevent this:
 ```cs
 public class UserPermissionRepository
 {
+    public ITypeSource TypeSource { get; }
+    public UserPermissionRepository(IRequestContext context, ITypeSource typeSource)
+            : base(context)
+    {
+        TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
+    }
+    
     public SaveResponse Update(IUnitOfWork uow, 
         UserPermissionUpdateRequest request)
     {
@@ -42,15 +49,18 @@ public class UserPermissionRepository
         foreach (var p in request.Permissions)
             newList[p.PermissionKey] = p.Grant ?? false;
 
-        var allowedKeys = ListPermissionKeys()
-            .Entities.ToDictionary(x => x);
-        if (newList.Keys.Any(x => !allowedKeys.ContainsKey(x)))
+        var allowedKeys = ListPermissionKeys(this.Cache.Memory, this.TypeSource);
+        if (newList.Keys.Any(x => !allowedKeys.Contains(x)))
             throw new AccessViolationException();
         //...
 
 ```
 
 ```cs
+//...
+using Serenity.Abstractions;
+//...
+
 public class RolePermissionRepository
 {
     public SaveResponse Update(IUnitOfWork uow, 
@@ -61,10 +71,9 @@ public class RolePermissionRepository
             request.Permissions.ToList(),
             StringComparer.OrdinalIgnoreCase);
 
-        var allowedKeys = new UserPermissionRepository()
-            .ListPermissionKeys()
-            .Entities.ToDictionary(x => x);
-        if (newList.Any(x => !allowedKeys.ContainsKey(x)))
+        var allowedKeys = UserPermissionRepository
+            .ListPermissionKeys(this.Cache.Memory, this.TypeSource);
+        if (newList.Any(x => !allowedKeys.Contains(x)))
             throw new AccessViolationException();
         //...
 ```
@@ -72,3 +81,53 @@ public class RolePermissionRepository
 Here we check if any of the new permission keys that are tried to be granted, are not listed in permission dialog. If so, this is probably a hack attempt.
 
 > Actually this check should be the default, even without multi-tenant systems, but usually we trust administrative users. Here, administrators will be only managing their own tenants, so we certainly need this check.
+
+After add this new `ITypeSource` interface to the constructor, we need to update the endpoints as well for the inject `ITypeSource` to the related repositories.
+
+*RolePermissionController.cs*
+
+```cs
+//...
+using Serenity.Abstractions;
+//...
+
+[HttpPost, AuthorizeUpdate(typeof(MyRow))]
+public SaveResponse Update(IUnitOfWork uow, RolePermissionUpdateRequest request,
+    [FromServices] ITypeSource typeSource)
+{
+    return new MyRepository(Context, typeSource).Update(uow, request);
+}
+
+public RolePermissionListResponse List(IDbConnection connection, RolePermissionListRequest request,
+    [FromServices] ITypeSource typeSource)
+{
+    return new MyRepository(Context, typeSource).List(connection, request);
+}
+```
+
+*UserPermissionController.cs*
+
+```cs
+//...
+using Serenity.Abstractions;
+//...
+
+[HttpPost, AuthorizeUpdate(typeof(MyRow))]
+public SaveResponse Update(IUnitOfWork uow, UserPermissionUpdateRequest request,
+    [FromServices] ITypeSource typeSource)
+{
+    return new MyRepository(Context, typeSource).Update(uow, request);
+}
+
+public ListResponse<MyRow> List(IDbConnection connection, UserPermissionListRequest request,
+    [FromServices] ITypeSource typeSource)
+{
+    return new MyRepository(Context, typeSource).List(connection, request);
+}
+
+public ListResponse<string> ListRolePermissions(IDbConnection connection, UserPermissionListRequest request,
+    [FromServices] ITypeSource typeSource)
+{
+    return new MyRepository(Context, typeSource).ListRolePermissions(connection, request);
+}
+```

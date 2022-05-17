@@ -2,7 +2,7 @@
 
 We need to add a TenantId field to all tables, to isolate tenants from each other.
 
-So, we first need a Tenants table. 
+We first need a Tenants table. 
 
 As Northwind tables already have records, we'll define a primary tenant with ID 1, and set all existing records TenantId to it.
 
@@ -63,54 +63,30 @@ I have created Tenants table in Default database where user tables are. Here we 
 
 We didn't add TenantId column to tables like UserPermissions, UserRoles, RolePermissions etc, as they instrinsicly have TenantId information through their UserId or RoleId (as these tables already have TenantId value)
 
-Let's write another migration for Nortwhind database to add TenantId column to required tables:
+Let's write another migration for Movie Tutorial tables to add TenantId column:
 
-**NorthwindDB_20160110_093500_MultiTenant.cs:**
+**DefaultDB_20170430_194100_MovieDB_MultiTenant.cs:**
 
 ```csharp
 using FluentMigrator;
 
-namespace MultiTenancy.Migrations.NorthwindDB
+namespace MultiTenancy.Migrations.DefaultDB
 {
     [Migration(20170430194100)]
-    public class NorthwindDB_20170430_194100_MultiTenant
+    public class DefaultDB_20170430_194100_MovieDB_MultiTenant
         : AutoReversingMigration
     {
         public override void Up()
         {
-            Alter.Table("Employees")
+            Alter.Table("Person").InSchema("mov")
                 .AddColumn("TenantId").AsInt32()
                     .NotNullable().WithDefaultValue(1);
 
-            Alter.Table("Categories")
+            Alter.Table("Genre").InSchema("mov")
                 .AddColumn("TenantId").AsInt32()
                     .NotNullable().WithDefaultValue(1);
 
-            Alter.Table("Customers")
-                .AddColumn("TenantId").AsInt32()
-                    .NotNullable().WithDefaultValue(1);
-
-            Alter.Table("Shippers")
-                .AddColumn("TenantId").AsInt32()
-                    .NotNullable().WithDefaultValue(1);
-
-            Alter.Table("Suppliers")
-                .AddColumn("TenantId").AsInt32()
-                    .NotNullable().WithDefaultValue(1);
-
-            Alter.Table("Orders")
-                .AddColumn("TenantId").AsInt32()
-                    .NotNullable().WithDefaultValue(1);
-
-            Alter.Table("Products")
-                .AddColumn("TenantId").AsInt32()
-                    .NotNullable().WithDefaultValue(1);
-
-            Alter.Table("Region")
-                .AddColumn("TenantId").AsInt32()
-                    .NotNullable().WithDefaultValue(1);
-
-            Alter.Table("Territories")
+            Alter.Table("Movie").InSchema("mov")
                 .AddColumn("TenantId").AsInt32()
                     .NotNullable().WithDefaultValue(1);
         }

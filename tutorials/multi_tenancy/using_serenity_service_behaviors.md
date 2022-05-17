@@ -174,7 +174,7 @@ namespace MultiTenancy.Administration.Entities
         //...
         public Int32Field TenantIdField
         {
-            get { return Fields.TenantId; }
+            get => Fields.TenantId;
         }
         //...
     }

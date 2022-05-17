@@ -47,8 +47,8 @@ Serenity provides field level permissions. Edit *UserRow.cs* to let the users wi
 [ReadPermission(PermissionKeys.Tenants)]
 public Int32? TenantId
 {
-    get { return Fields.TenantId[this]; }
-    set { Fields.TenantId[this] = value; }
+    get => Fields.TenantId[this];
+    set => Fields.TenantId[this] = value;
 }
 ```
 

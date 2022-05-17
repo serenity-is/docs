@@ -15,13 +15,13 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow, IMulti
     [Insertable(false), Updatable(false)]
     public Int32? TenantId
     {
-        get { return Fields.TenantId[this]; }
-        set { Fields.TenantId[this] = value; }
+        get => Fields.TenantId[this];
+        set => Fields.TenantId[this] = value;
     }
 
     public Int32Field TenantIdField
     {
-        get { return Fields.TenantId; }
+        get => Fields.TenantId;
     }
 
     //...

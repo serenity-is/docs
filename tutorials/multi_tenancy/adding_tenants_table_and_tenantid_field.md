@@ -65,7 +65,7 @@ We didn't add TenantId column to tables like UserPermissions, UserRoles, RolePer
 
 Let's write another migration for Movie Tutorial tables to add TenantId column:
 
-**NorthwindDB_20160110_093500_MultiTenant.cs:**
+**DefaultDB_20170430_194100_MovieDB_MultiTenant.cs:**
 
 ```csharp
 using FluentMigrator;

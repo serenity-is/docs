@@ -4,7 +4,7 @@ We need to add a TenantId field to all tables, to isolate tenants from each othe
 
 We first need a Tenants table. 
 
-As Northwind tables already have records, we'll define a primary tenant with ID 1, and set all existing records TenantId to it.
+As MovieDB already have records, we'll define a primary tenant with ID 1, and set all existing records TenantId to it.
 
 It's time to write a migration, actually two migrations, one for Northwind and one for Default database.
 
@@ -63,7 +63,7 @@ I have created Tenants table in Default database where user tables are. Here we 
 
 We didn't add TenantId column to tables like UserPermissions, UserRoles, RolePermissions etc, as they instrinsicly have TenantId information through their UserId or RoleId (as these tables already have TenantId value)
 
-Let's write another migration for Movie Tutorial tables to add TenantId column:
+Let's write another migration for MovieDB tables to add TenantId column:
 
 **DefaultDB_20170430_194100_MovieDB_MultiTenant.cs:**
 

@@ -142,7 +142,7 @@
 * Migration
   * [Introduction](migration/README.md)
   * [Stargen](migration/stargen.md)
-  * [6.0.0 to 6.1.6](migration/v6-1-0-to-v6-1-6.md)
+  * [6.0.0 to 6.1.6](migration/v6-0-0-to-v6-1-6.md)
   * [5.2.3 to 6.0.0](migration/v5-2-3-to-v6-0-0.md)
   * [5.0.41 to 5.2.3](migration/v5-0-41-to-v5-2-3.md)
   * [5.0.26 to 5.0.41](migration/v5-0-26-to-v5-0-41.md)

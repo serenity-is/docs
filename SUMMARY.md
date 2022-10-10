@@ -153,6 +153,10 @@
   * [Serene to StartSharp (Migrate)](startsharp/serene-upgrade-migrate.md)
   * [Serene to StartSharp (Inplace)](startsharp/serene-upgrade-inplace.md)
 
+* Release Notes
+  * [6.1.9 - 2022/10/02](release-notes/6.1.9.md)
+  * [6.1.8 - 2022/09/29](release-notes/6.1.8.md)
+
 * Knowledge Base
   * How To Guides
     * [Remove Northwind & Other Samples From Serene](howto/removing_northwind.md)

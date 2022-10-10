@@ -154,6 +154,7 @@
   * [Serene to StartSharp (Inplace)](startsharp/serene-upgrade-inplace.md)
 
 * Release Notes
+  * [6.2.0 - 2022/10/10](release-notes/6.2.0.md)
   * [6.1.9 - 2022/10/02](release-notes/6.1.9.md)
   * [6.1.8 - 2022/09/29](release-notes/6.1.8.md)
 

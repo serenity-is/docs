@@ -14,6 +14,7 @@ public class EnumFilteringAttribute : CustomFilteringAttribute
 | --- | --- |
 | [EnumFilteringAttribute](EnumFilteringAttribute/EnumFilteringAttribute.md)() | Initializes a new instance of the [`EnumFilteringAttribute`](EnumFilteringAttribute.md) class. |
 | [EnumKey](EnumFilteringAttribute/EnumKey.md) { get; set; } | Gets or sets the enum key. |
+| const [Key](EnumFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 

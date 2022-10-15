@@ -17,6 +17,7 @@ public class TimeEditorAttribute : CustomEditorAttribute
 | [IntervalMinutes](TimeEditorAttribute/IntervalMinutes.md) { get; set; } | Gets or sets the interval minutes. |
 | [NoEmptyOption](TimeEditorAttribute/NoEmptyOption.md) { get; set; } | Gets or sets a value indicating whether empty option should be shown. |
 | [StartHour](TimeEditorAttribute/StartHour.md) { get; set; } | Gets or sets the start hour between 0 and 23. |
+| const [Key](TimeEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

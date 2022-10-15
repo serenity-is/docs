@@ -14,6 +14,7 @@ public class DateFormatterAttribute : CustomFormatterAttribute
 | --- | --- |
 | [DateFormatterAttribute](DateFormatterAttribute/DateFormatterAttribute.md)() | Initializes a new instance of the [`DateFormatterAttribute`](DateFormatterAttribute.md) class. |
 | [DisplayFormat](DateFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
+| const [Key](DateFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

@@ -17,6 +17,7 @@ public class EditorFilteringAttribute : CustomFilteringAttribute
 | [EditorType](EditorFilteringAttribute/EditorType.md) { get; set; } | Gets or sets the type of the editor. |
 | [UseLike](EditorFilteringAttribute/UseLike.md) { get; set; } | Gets or sets a value indicating whether to use LIKE kind of operators including starts with, ends with etc. |
 | [UseRelative](EditorFilteringAttribute/UseRelative.md) { get; set; } | Gets or sets a value indicating whether to use relative comparisons, like GT/LT. |
+| const [Key](EditorFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 

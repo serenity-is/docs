@@ -10,7 +10,7 @@ public class NavigationMenuAttribute : NavigationItemAttribute
 
 | name | description |
 | --- | --- |
-| [NavigationMenuAttribute](NavigationMenuAttribute/NavigationMenuAttribute.md)(…) |  |
+| [NavigationMenuAttribute](NavigationMenuAttribute/NavigationMenuAttribute.md)(…) |  (2 constructors) |
 
 ## See Also
 

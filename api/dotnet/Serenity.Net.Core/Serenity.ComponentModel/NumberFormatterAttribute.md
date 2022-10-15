@@ -14,6 +14,7 @@ public class NumberFormatterAttribute : CustomFormatterAttribute
 | --- | --- |
 | [NumberFormatterAttribute](NumberFormatterAttribute/NumberFormatterAttribute.md)() | Initializes a new instance of the [`NumberFormatterAttribute`](NumberFormatterAttribute.md) class. |
 | [DisplayFormat](NumberFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
+| const [Key](NumberFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

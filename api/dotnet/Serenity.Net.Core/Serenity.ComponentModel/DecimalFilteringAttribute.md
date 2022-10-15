@@ -13,6 +13,7 @@ public class DecimalFilteringAttribute : CustomFilteringAttribute
 | name | description |
 | --- | --- |
 | [DecimalFilteringAttribute](DecimalFilteringAttribute/DecimalFilteringAttribute.md)() | Initializes a new instance of the [`DecimalFilteringAttribute`](DecimalFilteringAttribute.md) class. |
+| const [Key](DecimalFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 

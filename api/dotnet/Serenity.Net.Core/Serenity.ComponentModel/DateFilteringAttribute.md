@@ -14,6 +14,7 @@ public class DateFilteringAttribute : CustomFilteringAttribute
 | --- | --- |
 | [DateFilteringAttribute](DateFilteringAttribute/DateFilteringAttribute.md)() | Initializes a new instance of the [`DateFilteringAttribute`](DateFilteringAttribute.md) class. |
 | [DisplayFormat](DateFilteringAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
+| const [Key](DateFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 

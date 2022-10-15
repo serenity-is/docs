@@ -12,8 +12,10 @@ public class LeftJoinAttribute : Attribute, ISqlJoin
 
 | name | description |
 | --- | --- |
-| [LeftJoinAttribute](LeftJoinAttribute/LeftJoinAttribute.md)(…) | Adds a left join on foreign key. Use this version only on properties with ForeignKey attribute. (2 constructors) |
+| [LeftJoinAttribute](LeftJoinAttribute/LeftJoinAttribute.md)(…) | Adds a left join on foreign key. Use this version only on properties with ForeignKey attribute. (4 constructors) |
 | [Alias](LeftJoinAttribute/Alias.md) { get; } | Gets the alias. |
+| [Dialect](LeftJoinAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
+| [NegateDialect](LeftJoinAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |
 | [OnCriteria](LeftJoinAttribute/OnCriteria.md) { get; } | Gets the ON criteria. |
 | [PropertyPrefix](LeftJoinAttribute/PropertyPrefix.md) { get; set; } | Gets the property prefix. |
 | [RowType](LeftJoinAttribute/RowType.md) { get; set; } | Gets or sets the type of the row. |

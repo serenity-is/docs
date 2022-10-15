@@ -14,6 +14,7 @@ public class LookupFilteringAttribute : CustomFilteringAttribute
 | --- | --- |
 | [LookupFilteringAttribute](LookupFilteringAttribute/LookupFilteringAttribute.md)(…) | Initializes a new instance of the [`LookupFilteringAttribute`](LookupFilteringAttribute.md) class. (2 constructors) |
 | [IdField](LookupFilteringAttribute/IdField.md) { get; set; } | Gets or sets the ID field editor should filter on. |
+| const [Key](LookupFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 

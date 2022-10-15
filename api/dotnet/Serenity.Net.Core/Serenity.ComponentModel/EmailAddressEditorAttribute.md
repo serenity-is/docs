@@ -13,6 +13,7 @@ public class EmailAddressEditorAttribute : CustomEditorAttribute
 | name | description |
 | --- | --- |
 | [EmailAddressEditorAttribute](EmailAddressEditorAttribute/EmailAddressEditorAttribute.md)() | Initializes a new instance of the [`EmailAddressEditorAttribute`](EmailAddressEditorAttribute.md) class. |
+| const [Key](EmailAddressEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

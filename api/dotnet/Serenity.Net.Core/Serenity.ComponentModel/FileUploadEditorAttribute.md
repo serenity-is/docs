@@ -13,6 +13,7 @@ public class FileUploadEditorAttribute : ImageUploadEditorAttribute
 | name | description |
 | --- | --- |
 | [FileUploadEditorAttribute](FileUploadEditorAttribute/FileUploadEditorAttribute.md)() | Initializes a new instance of the [`FileUploadEditorAttribute`](FileUploadEditorAttribute.md) class. |
+| const [Key](FileUploadEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

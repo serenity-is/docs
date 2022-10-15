@@ -14,6 +14,7 @@ public class EnumFormatterAttribute : CustomFormatterAttribute
 | --- | --- |
 | [EnumFormatterAttribute](EnumFormatterAttribute/EnumFormatterAttribute.md)() | Initializes a new instance of the [`EnumFormatterAttribute`](EnumFormatterAttribute.md) class. |
 | [EnumKey](EnumFormatterAttribute/EnumKey.md) { get; set; } | Gets or sets the enum key which is full namespace and class name of the enum or it should match the value set with [EnumKey] attribute on the enum type. |
+| const [Key](EnumFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

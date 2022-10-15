@@ -12,8 +12,10 @@ public class InnerJoinAttribute : Attribute, ISqlJoin
 
 | name | description |
 | --- | --- |
-| [InnerJoinAttribute](InnerJoinAttribute/InnerJoinAttribute.md)(…) | Adds a inner join on foreign key. Use this version only on properties with ForeignKey attribute. (2 constructors) |
+| [InnerJoinAttribute](InnerJoinAttribute/InnerJoinAttribute.md)(…) | Adds a inner join on foreign key. Use this version only on properties with ForeignKey attribute. (4 constructors) |
 | [Alias](InnerJoinAttribute/Alias.md) { get; } | Gets the alias. |
+| [Dialect](InnerJoinAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
+| [NegateDialect](InnerJoinAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |
 | [OnCriteria](InnerJoinAttribute/OnCriteria.md) { get; } | Gets the ON criteria. |
 | [PropertyPrefix](InnerJoinAttribute/PropertyPrefix.md) { get; set; } | Gets the property prefix. |
 | [RowType](InnerJoinAttribute/RowType.md) { get; set; } | Gets or sets the type of the row. |

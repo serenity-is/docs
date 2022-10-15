@@ -12,7 +12,7 @@ public class DatabaseCaretReferences
 | name | description |
 | --- | --- |
 | [DatabaseCaretReferences](DatabaseCaretReferences/DatabaseCaretReferences.md)() | The default constructor. |
-| static [GetDatabaseName](DatabaseCaretReferences/GetDatabaseName.md)(…) | Exracts database name from connection string |
+| static [GetDatabaseName](DatabaseCaretReferences/GetDatabaseName.md) { get; set; } | Temporary workaround as this class has no reference to SQL connection strings |
 | static [Replace](DatabaseCaretReferences/Replace.md)(…) | Replaces caret references like [^ConnectionKey] in the specified expression with actual database names. |
 
 ## See Also

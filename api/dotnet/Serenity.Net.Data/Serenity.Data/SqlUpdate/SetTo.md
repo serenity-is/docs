@@ -14,7 +14,7 @@ public SqlUpdate SetTo(IField field, string value)
 
 ## Return Value
 
-SqlInsert object itself.
+SqlUpdate object itself.
 
 ## See Also
 

@@ -13,6 +13,7 @@ public class RecaptchaAttribute : CustomEditorAttribute
 | name | description |
 | --- | --- |
 | [RecaptchaAttribute](RecaptchaAttribute/RecaptchaAttribute.md)() | Initializes a new instance of the [`RecaptchaAttribute`](RecaptchaAttribute.md) class. |
+| const [Key](RecaptchaAttribute/Key.md) | Editor type key |
 
 ## See Also
 

@@ -15,6 +15,7 @@ public class TextAreaEditorAttribute : CustomEditorAttribute
 | [TextAreaEditorAttribute](TextAreaEditorAttribute/TextAreaEditorAttribute.md)() | Initializes a new instance of the [`TextAreaEditorAttribute`](TextAreaEditorAttribute.md) class. |
 | [Cols](TextAreaEditorAttribute/Cols.md) { get; set; } | Gets or sets the cols for textarea. |
 | [Rows](TextAreaEditorAttribute/Rows.md) { get; set; } | Gets or sets the rows for textarea. |
+| const [Key](TextAreaEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

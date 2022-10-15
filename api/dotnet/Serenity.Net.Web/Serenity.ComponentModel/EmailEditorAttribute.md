@@ -15,6 +15,7 @@ public class EmailEditorAttribute : CustomEditorAttribute, ICustomValidator
 | [ReadOnlyDomain](EmailEditorAttribute/ReadOnlyDomain.md) { get; set; } |  |
 | [Validate](EmailEditorAttribute/Validate.md)(…) |  |
 | static readonly [EmailPattern](EmailEditorAttribute/EmailPattern.md) |  |
+| const [Key](EmailEditorAttribute/Key.md) |  |
 
 ## See Also
 

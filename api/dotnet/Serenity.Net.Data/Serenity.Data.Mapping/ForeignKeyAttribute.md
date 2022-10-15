@@ -12,9 +12,11 @@ public class ForeignKeyAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [ForeignKeyAttribute](ForeignKeyAttribute/ForeignKeyAttribute.md)(…) | Specifies that this property is a foreign key to another field in a primary key table. (2 constructors) |
+| [ForeignKeyAttribute](ForeignKeyAttribute/ForeignKeyAttribute.md)(…) | Specifies that this property is a foreign key to another field in a primary key table. (4 constructors) |
+| [Dialect](ForeignKeyAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
 | [Field](ForeignKeyAttribute/Field.md) { get; } | Gets the field. |
-| [RowType](ForeignKeyAttribute/RowType.md) { get; set; } | Gets or sets the type of the row. |
+| [NegateDialect](ForeignKeyAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |
+| [RowType](ForeignKeyAttribute/RowType.md) { get; } | Gets or sets the type of the row. |
 | [Table](ForeignKeyAttribute/Table.md) { get; } | Gets the table. |
 
 ## See Also

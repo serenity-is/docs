@@ -19,6 +19,7 @@ public class DecimalEditorAttribute : CustomEditorAttribute
 | [MinValue](DecimalEditorAttribute/MinValue.md) { get; set; } | Gets or sets the minimum value. |
 | [PadDecimals](DecimalEditorAttribute/PadDecimals.md) { get; set; } | Gets or sets a value indicating whether to pad decimals with zero. |
 | static [AllowNegativesByDefault](DecimalEditorAttribute/AllowNegativesByDefault.md) { get; set; } | Gets or sets a value indicating whether to allow negatives by default. This is a global setting that controls if decimal editors should allow negative values unless specified otherwise. |
+| const [Key](DecimalEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

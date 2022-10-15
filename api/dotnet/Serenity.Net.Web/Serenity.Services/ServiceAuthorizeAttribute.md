@@ -12,6 +12,7 @@ public class ServiceAuthorizeAttribute : Attribute, IResourceFilter
 | --- | --- |
 | [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)() | The default constructor. |
 | [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)(…) |  (4 constructors) |
+| [Override](ServiceAuthorizeAttribute/Override.md) { get; set; } |  |
 | [Permission](ServiceAuthorizeAttribute/Permission.md) { get; } |  |
 | [OnResourceExecuted](ServiceAuthorizeAttribute/OnResourceExecuted.md)(…) |  |
 | [OnResourceExecuting](ServiceAuthorizeAttribute/OnResourceExecuting.md)(…) |  |
@@ -21,6 +22,7 @@ public class ServiceAuthorizeAttribute : Attribute, IResourceFilter
 | name | description |
 | --- | --- |
 | [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)(…) |  |
+| [OrPermission](ServiceAuthorizeAttribute/OrPermission.md) { get; set; } |  |
 
 ## See Also
 

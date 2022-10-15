@@ -13,7 +13,9 @@ public class NavigationItem
 | [Children](NavigationItem/Children.md) { get; } |  |
 | [FullPath](NavigationItem/FullPath.md) { get; set; } |  |
 | [IconClass](NavigationItem/IconClass.md) { get; set; } |  |
+| [IsSection](NavigationItem/IsSection.md) { get; set; } |  |
 | [ItemClass](NavigationItem/ItemClass.md) { get; set; } |  |
+| [Parent](NavigationItem/Parent.md) { get; set; } |  |
 | [Target](NavigationItem/Target.md) { get; set; } |  |
 | [Title](NavigationItem/Title.md) { get; set; } |  |
 | [Url](NavigationItem/Url.md) { get; set; } |  |

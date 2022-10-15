@@ -13,6 +13,7 @@ public class MultipleImageUploadEditorAttribute : ImageUploadEditorAttribute
 | name | description |
 | --- | --- |
 | [MultipleImageUploadEditorAttribute](MultipleImageUploadEditorAttribute/MultipleImageUploadEditorAttribute.md)() | Initializes a new instance of the [`MultipleImageUploadEditorAttribute`](MultipleImageUploadEditorAttribute.md) class. |
+| const [Key](MultipleImageUploadEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

@@ -20,6 +20,7 @@ public class DateTimeEditorAttribute : CustomEditorAttribute
 | [SqlMinMax](DateTimeEditorAttribute/SqlMinMax.md) { get; set; } | Gets or sets a value indicating whether SQL server min max dates should be used. |
 | [StartHour](DateTimeEditorAttribute/StartHour.md) { get; set; } | Gets or sets the start hour between 0 and 23. |
 | [UseUtc](DateTimeEditorAttribute/UseUtc.md) { get; set; } | Gets or sets a value indicating whether the editor should use UTC format. |
+| const [Key](DateTimeEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

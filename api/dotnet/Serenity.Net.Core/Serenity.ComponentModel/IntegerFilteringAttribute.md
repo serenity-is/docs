@@ -13,6 +13,7 @@ public class IntegerFilteringAttribute : CustomFilteringAttribute
 | name | description |
 | --- | --- |
 | [IntegerFilteringAttribute](IntegerFilteringAttribute/IntegerFilteringAttribute.md)() | Initializes a new instance of the [`IntegerFilteringAttribute`](IntegerFilteringAttribute.md) class. |
+| const [Key](IntegerFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 

@@ -16,7 +16,7 @@ public class ScriptCulture
 | [DateSeparator](ScriptCulture/DateSeparator.md) { get; set; } |  |
 | [DateTimeFormat](ScriptCulture/DateTimeFormat.md) { get; set; } |  |
 | [DecimalSeparator](ScriptCulture/DecimalSeparator.md) { get; set; } |  |
-| [GroupSepearator](ScriptCulture/GroupSepearator.md) { get; set; } |  |
+| [GroupSeparator](ScriptCulture/GroupSeparator.md) { get; set; } |  |
 
 ## See Also
 

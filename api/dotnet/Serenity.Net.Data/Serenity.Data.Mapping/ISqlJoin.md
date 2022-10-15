@@ -12,6 +12,7 @@ public interface ISqlJoin
 | name | description |
 | --- | --- |
 | [Alias](ISqlJoin/Alias.md) { get; } | Gets the alias. |
+| [Dialect](ISqlJoin/Dialect.md) { get; } | Gets the dialect. |
 | [OnCriteria](ISqlJoin/OnCriteria.md) { get; } | Gets the ON criteria. |
 | [PropertyPrefix](ISqlJoin/PropertyPrefix.md) { get; } | Gets the property prefix. |
 | [RowType](ISqlJoin/RowType.md) { get; set; } | Gets or sets the type of the row. |

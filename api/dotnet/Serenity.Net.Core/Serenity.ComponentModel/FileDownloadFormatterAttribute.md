@@ -15,6 +15,7 @@ public class FileDownloadFormatterAttribute : CustomFormatterAttribute
 | [FileDownloadFormatterAttribute](FileDownloadFormatterAttribute/FileDownloadFormatterAttribute.md)() | Initializes a new instance of the [`FileDownloadFormatterAttribute`](FileDownloadFormatterAttribute.md) class. |
 | [DisplayFormat](FileDownloadFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
 | [OriginalNameProperty](FileDownloadFormatterAttribute/OriginalNameProperty.md) { get; set; } | Gets or sets the original name property which indicates the property to read original file name from (if any). |
+| const [Key](FileDownloadFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

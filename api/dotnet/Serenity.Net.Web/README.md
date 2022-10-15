@@ -29,11 +29,15 @@
 | signature | name | description |
 | --: | --- | --- |
 | interface  | [INavigationItemSource](Serenity.Navigation/INavigationItemSource.md) |  |
+| interface  | [INavigationModel](Serenity.Navigation/INavigationModel.md) |  |
+| interface  | [INavigationModelFactory](Serenity.Navigation/INavigationModelFactory.md) |  |
+| class  | [NavigationGroupAttribute](Serenity.Navigation/NavigationGroupAttribute.md) |  |
 | class  | [NavigationHelper](Serenity.Navigation/NavigationHelper.md) |  |
 | class  | [NavigationItem](Serenity.Navigation/NavigationItem.md) |  |
 | abstract class  | [NavigationItemAttribute](Serenity.Navigation/NavigationItemAttribute.md) |  |
 | class  | [NavigationLinkAttribute](Serenity.Navigation/NavigationLinkAttribute.md) |  |
 | class  | [NavigationMenuAttribute](Serenity.Navigation/NavigationMenuAttribute.md) |  |
+| class  | [NavigationSectionAttribute](Serenity.Navigation/NavigationSectionAttribute.md) |  |
 
 ## Serenity.Reporting namespace
 
@@ -48,6 +52,7 @@
 | class  | [AntiforgeryCookieResultFilterAttribute](Serenity.Services/AntiforgeryCookieResultFilterAttribute.md) |  |
 | class  | [AuthorizeCreateAttribute](Serenity.Services/AuthorizeCreateAttribute.md) |  |
 | class  | [AuthorizeDeleteAttribute](Serenity.Services/AuthorizeDeleteAttribute.md) |  |
+| class  | [AuthorizeListAttribute](Serenity.Services/AuthorizeListAttribute.md) |  |
 | class  | [AuthorizeUpdateAttribute](Serenity.Services/AuthorizeUpdateAttribute.md) |  |
 | static class  | [EndpointExtensions](Serenity.Services/EndpointExtensions.md) |  |
 | class  | [HandleServiceExceptionAttribute](Serenity.Services/HandleServiceExceptionAttribute.md) |  |

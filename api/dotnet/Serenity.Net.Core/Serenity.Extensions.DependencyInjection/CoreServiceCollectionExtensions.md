@@ -13,6 +13,7 @@ public static class CoreServiceCollectionExtensions
 | --- | --- |
 | static [AddAnnotationTypes](CoreServiceCollectionExtensions/AddAnnotationTypes.md)(…) | Adds the annotation type registry. |
 | static [AddCaching](CoreServiceCollectionExtensions/AddCaching.md)(…) | Adds memory caching as ILocalCache implementation and a distributed cache emulator as IDistributed cache implementation. |
+| static [AddServiceResolver](CoreServiceCollectionExtensions/AddServiceResolver.md)(…) | Adds on demand service resolver to the registry. |
 | static [AddTextRegistry](CoreServiceCollectionExtensions/AddTextRegistry.md)(…) | Adds the local text registry. |
 | static [AddTypeSource](CoreServiceCollectionExtensions/AddTypeSource.md)(…) | Adds a type source to the registry. |
 

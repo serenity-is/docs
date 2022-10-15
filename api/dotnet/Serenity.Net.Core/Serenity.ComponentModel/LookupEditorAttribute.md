@@ -13,6 +13,7 @@ public class LookupEditorAttribute : LookupEditorBaseAttribute
 | name | description |
 | --- | --- |
 | [LookupEditorAttribute](LookupEditorAttribute/LookupEditorAttribute.md)(…) | Initializes a new instance of the [`LookupEditorAttribute`](LookupEditorAttribute.md) class. (2 constructors) |
+| const [Key](LookupEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

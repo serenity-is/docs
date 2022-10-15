@@ -18,6 +18,7 @@ public class UrlFormatterAttribute : CustomFormatterAttribute
 | [Target](UrlFormatterAttribute/Target.md) { get; set; } | Gets or sets the target window, e.g. "_blank". |
 | [UrlFormat](UrlFormatterAttribute/UrlFormat.md) { get; set; } | Gets or sets the URL format. |
 | [UrlProperty](UrlFormatterAttribute/UrlProperty.md) { get; set; } | Gets or sets the URL property. |
+| const [Key](UrlFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

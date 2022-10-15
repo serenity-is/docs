@@ -17,6 +17,7 @@ public class IntegerEditorAttribute : CustomEditorAttribute
 | [MaxValue](IntegerEditorAttribute/MaxValue.md) { get; set; } | Gets or sets the maximum value. |
 | [MinValue](IntegerEditorAttribute/MinValue.md) { get; set; } | Gets or sets the minimum value. |
 | static [AllowNegativesByDefault](IntegerEditorAttribute/AllowNegativesByDefault.md) { get; set; } | Gets or sets a value indicating whether editors should allow negatives by default. This is a global setting that controls default of AllowNegatives property in this attribute. |
+| const [Key](IntegerEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

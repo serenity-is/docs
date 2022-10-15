@@ -42,6 +42,7 @@ public class SqlQuery : QueryWithParams, IFilterableQuery, IGetExpressionByName,
 | override [ToString](SqlQuery/ToString.md)() | Formats SQL Query as string. If paging is used and skip requested, multiple queries might be created one after each other. |
 | [Union](SqlQuery/Union.md)(…) | Adds a union to query with the specified union type. |
 | [Where](SqlQuery/Where.md)(…) | Adds an expression to WHERE clause. If query already has a WHERE clause, inserts AND between existing one and new one. (2 methods) |
+| static [ToString](SqlQuery/ToString.md)(…) | Formats SQL Query as string. If paging is used and skip requested, multiple queries might be created one after each other. |
 | class [Column](SqlQuery.Column.md) | Holds information about a column in SELECT clause. |
 
 ## See Also

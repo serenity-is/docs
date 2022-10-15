@@ -4,8 +4,8 @@
 Adds the parameter with value to the target command.
 
 ```csharp
-public static DbParameter AddParamWithValue(this DbCommand command, string name, object value, 
-    ISqlDialect dialect)
+public static IDbDataParameter AddParamWithValue(this IDbCommand command, string name, 
+    object value, ISqlDialect dialect)
 ```
 
 | parameter | description |

@@ -28,10 +28,13 @@ public class ImageUploadEditorAttribute : CustomEditorAttribute
 | [OriginalNameProperty](ImageUploadEditorAttribute/OriginalNameProperty.md) { get; set; } | If you want to store original name of the file uploaded, set this to the name of another string field. Only used for single image uploads. |
 | [ScaleHeight](ImageUploadEditorAttribute/ScaleHeight.md) { get; set; } | What height image should be scaled to. Default value of 0 disables it. |
 | [ScaleMode](ImageUploadEditorAttribute/ScaleMode.md) { get; set; } | What kind of image scaling should be used to generate image. |
+| [ScaleQuality](ImageUploadEditorAttribute/ScaleQuality.md) { get; set; } | Quality of scaled image (not thumb), default is 80. |
 | [ScaleSmaller](ImageUploadEditorAttribute/ScaleSmaller.md) { get; set; } | Should image be scaled up to requested size when its smaller |
 | [ScaleWidth](ImageUploadEditorAttribute/ScaleWidth.md) { get; set; } | What width image should be scaled to. Default value of 0 disables it. |
 | [ThumbMode](ImageUploadEditorAttribute/ThumbMode.md) { get; set; } | What kind of image scaling should be used to generate thumbnails. |
+| [ThumbQuality](ImageUploadEditorAttribute/ThumbQuality.md) { get; set; } | Quality of thumbnails, default is 80. |
 | [ThumbSizes](ImageUploadEditorAttribute/ThumbSizes.md) { get; set; } | List of thumbnail sizes requested. Something like "96x96;128x128;200x200" |
+| const [Key](ImageUploadEditorAttribute/Key.md) | Editor type key |
 
 ## Protected Members
 

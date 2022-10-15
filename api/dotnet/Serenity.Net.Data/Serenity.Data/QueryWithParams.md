@@ -28,6 +28,7 @@ public class QueryWithParams : IQueryWithParams
 | --- | --- |
 | [dialect-](QueryWithParams/dialect-.md) | The dialect |
 | [dialectOverridden-](QueryWithParams/dialectOverridden-.md) | Is the dialect overridden |
+| [nextAutoParam-](QueryWithParams/nextAutoParam-.md) | The next auto param counter |
 | [parameters-](QueryWithParams/parameters-.md) | The parameters |
 | [parent-](QueryWithParams/parent-.md) | The parent query with param storage |
 | [CloneParams](QueryWithParams/CloneParams.md)(…) | Clones the parameters into a target query. |

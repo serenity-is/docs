@@ -15,6 +15,7 @@ public class HtmlReportContentEditorAttribute : CustomEditorAttribute
 | [HtmlReportContentEditorAttribute](HtmlReportContentEditorAttribute/HtmlReportContentEditorAttribute.md)() | Initializes a new instance of the [`HtmlReportContentEditorAttribute`](HtmlReportContentEditorAttribute.md) class. |
 | [Cols](HtmlReportContentEditorAttribute/Cols.md) { get; set; } | Gets or sets the cols for underlying textarea. |
 | [Rows](HtmlReportContentEditorAttribute/Rows.md) { get; set; } | Gets or sets the rows for underlying textarea. |
+| const [Key](HtmlReportContentEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

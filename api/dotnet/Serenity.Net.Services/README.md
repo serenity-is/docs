@@ -186,6 +186,8 @@
 | class  | [UndeleteRequestHandler&lt;TRow&gt;](Serenity.Services/UndeleteRequestHandler-1.md) |  |
 | class  | [UndeleteRequestHandler&lt;TRow,TUndeleteResponse&gt;](Serenity.Services/UndeleteRequestHandler-2.md) |  |
 | class  | [UndeleteResponse](Serenity.Services/UndeleteResponse.md) |  |
+| class  | [UniqueConstraintSaveBehavior](Serenity.Services/UniqueConstraintSaveBehavior.md) |  |
+| class  | [UniqueFieldSaveBehavior](Serenity.Services/UniqueFieldSaveBehavior.md) |  |
 | class  | [UpdatableExtensionBehavior](Serenity.Services/UpdatableExtensionBehavior.md) |  |
 | class  | [UpdateInsertLogBehavior](Serenity.Services/UpdateInsertLogBehavior.md) |  |
 | class  | [UploadedFile](Serenity.Services/UploadedFile.md) |  |

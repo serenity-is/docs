@@ -10,6 +10,7 @@ public class ServiceResponse
 | name | description |
 | --- | --- |
 | [ServiceResponse](ServiceResponse/ServiceResponse.md)() | The default constructor. |
+| [CustomData](ServiceResponse/CustomData.md) { get; set; } |  |
 | [Error](ServiceResponse/Error.md) { get; set; } |  |
 
 ## See Also

@@ -37,8 +37,10 @@
 | class  | [DateTimeKindAttribute](Serenity.Data/DateTimeKindAttribute.md) | Determines Time kind for a DateTime field. |
 | class  | [DefaultConnectionStrings](Serenity.Data/DefaultConnectionStrings.md) | Default connection string source |
 | class  | [DefaultSqlConnections](Serenity.Data/DefaultSqlConnections.md) | Default connection factory |
+| class  | [DefaultSqlDialectMapper](Serenity.Data/DefaultSqlDialectMapper.md) | Sql Dialect mapper |
 | class  | [DeltaLister&lt;TItem&gt;](Serenity.Data/DeltaLister-1.md) | Helper class to find differences between to lists for updating |
 | [Flags] enum  | [DeltaOptions](Serenity.Data/DeltaOptions.md) | Delta options flags |
+| class  | [EmitFieldTypeAttribute](Serenity.Data/EmitFieldTypeAttribute.md) | Declares that the field generated for this template property should be of type specified. |
 | enum  | [ExpectedRows](Serenity.Data/ExpectedRows.md) | Expected number of rows enumeration for SQL Update / Delete operation. This enumeration is used to avoid updating/deleting multiple records by mistake when forgot to add a WHERE statement. |
 | [Flags] enum  | [FieldFlags](Serenity.Data/FieldFlags.md) | Flags that determine basic properties of a field |
 | static class  | [FilterableQueryExtensions](Serenity.Data/FilterableQueryExtensions.md) | Extensions for objects implementing IDbWhere interface. |
@@ -65,8 +67,10 @@
 | interface  | [ISetFieldByStatement](Serenity.Data/ISetFieldByStatement.md) | Interface for objects setting values by SetTo method (like SqlInsert, SqlUpdate...) |
 | interface  | [ISqlConnections](Serenity.Data/ISqlConnections.md) | An interface used to abstract sql connections |
 | interface  | [ISqlDialect](Serenity.Data/ISqlDialect.md) | Abstraction for SQL dialect, e.g. syntax for different SQL server types and connection settings. |
+| interface  | [ISqlDialectMapper](Serenity.Data/ISqlDialectMapper.md) | The sql dialect mapper |
 | interface  | [ISqlQuery](Serenity.Data/ISqlQuery.md) | SqlQuery interface. |
 | interface  | [ISqlQueryExtensible](Serenity.Data/ISqlQueryExtensible.md) | Extensible SQL query interface. Used to abstract Serenity.Data.Row dependency from SqlQuery. |
+| interface  | [ISqlQueryToString](Serenity.Data/ISqlQueryToString.md) | SqlQuery interface. |
 | interface  | [IUnitOfWork](Serenity.Data/IUnitOfWork.md) | An interface to implement unit of work pattern, e.g. a transaction. |
 | abstract class  | [Join](Serenity.Data/Join.md) | Corresponds to an SQL JOIN (INNER, OUTER, CROSS etc.) |
 | class  | [JoinAliasLocator](Serenity.Data/JoinAliasLocator.md) | Locates alias references in an SQL expression |
@@ -76,6 +80,7 @@
 | class  | [MySqlDialect](Serenity.Data/MySqlDialect.md) | MySql dialect. |
 | class  | [NamePropertyAttribute](Serenity.Data/NamePropertyAttribute.md) | Determines that the attached property is the name field of the table. |
 | struct  | [OldNewPair&lt;TItem&gt;](Serenity.Data/OldNewPair-1.md) | A pair of old new values |
+| class  | [Oracle12cDialect](Serenity.Data/Oracle12cDialect.md) | Oracle12cDialect which uses OFFSET FETCH instead of ROWNUM |
 | class  | [OracleDialect](Serenity.Data/OracleDialect.md) | Oracle dialect |
 | class  | [OuterApply](Serenity.Data/OuterApply.md) | OUTER APPLY join type |
 | class  | [ParamCriteria](Serenity.Data/ParamCriteria.md) | A criteria object containing a parameter name |
@@ -88,6 +93,7 @@
 | class  | [RightJoin](Serenity.Data/RightJoin.md) | RIGHT JOIN type |
 | class  | [SafeCriteriaValidator](Serenity.Data/SafeCriteriaValidator.md) | Validates a criteria for allowed field names, operators and SQL injection safety |
 | enum  | [SelectLevel](Serenity.Data/SelectLevel.md) | Select level enumeration |
+| enum  | [ServerType](Serenity.Data/ServerType.md) | Contains server type names for common dialects |
 | static class  | [SetFieldByStatementExtensions](Serenity.Data/SetFieldByStatementExtensions.md) | Extension methods for classes implementing IDbSet interface |
 | static class  | [Sql](Serenity.Data/Sql.md) | Contains SQL expression generation helpers |
 | class  | [SqlCommandDumper](Serenity.Data/SqlCommandDumper.md) | http://stackoverflow.com/questions/265192/get-the-generated-sql-statement-from-a-sqlcommand-object (answer by Mitch) |

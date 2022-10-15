@@ -14,6 +14,7 @@ public class DateTimeFilteringAttribute : CustomFilteringAttribute
 | --- | --- |
 | [DateTimeFilteringAttribute](DateTimeFilteringAttribute/DateTimeFilteringAttribute.md)() | Creates a new DateTimeFilteringAttribute |
 | [DisplayFormat](DateTimeFilteringAttribute/DisplayFormat.md) { get; set; } | Gets/sets optional display format to use for display of filter |
+| const [Key](DateTimeFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 

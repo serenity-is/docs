@@ -3,7 +3,7 @@
 
 ```csharp
 public static Image Generate(Image image, int thumbWidth, int thumbHeight, ImageScaleMode mode, 
-    Color backgroundColor, float xDPI = 0, float yDPI = 0)
+    Color? backgroundColor = default(Color?), bool inplace = false)
 ```
 
 ## See Also

@@ -3,7 +3,7 @@
 
 ```csharp
 public string CopyFrom(IUploadStorage sourceStorage, string sourcePath, string targetPath, 
-    bool autoRename)
+    bool? autoRename)
 ```
 
 ## See Also

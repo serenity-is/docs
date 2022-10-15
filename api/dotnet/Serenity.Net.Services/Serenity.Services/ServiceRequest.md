@@ -10,6 +10,7 @@ public class ServiceRequest
 | name | description |
 | --- | --- |
 | [ServiceRequest](ServiceRequest/ServiceRequest.md)() | The default constructor. |
+| [CustomData](ServiceRequest/CustomData.md) { get; set; } |  |
 
 ## See Also
 

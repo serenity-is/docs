@@ -10,7 +10,7 @@ public class NavigationLinkAttribute : NavigationItemAttribute
 
 | name | description |
 | --- | --- |
-| [NavigationLinkAttribute](NavigationLinkAttribute/NavigationLinkAttribute.md)(…) |  (2 constructors) |
+| [NavigationLinkAttribute](NavigationLinkAttribute/NavigationLinkAttribute.md)(…) |  (4 constructors) |
 
 ## See Also
 

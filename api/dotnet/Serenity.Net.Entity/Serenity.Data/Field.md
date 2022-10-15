@@ -25,6 +25,7 @@ public abstract class Field : IFieldWithJoinInfo
 | [ForeignTable](Field/ForeignTable.md) { get; set; } | Gets or sets the foreign table. |
 | [Index](Field/Index.md) { get; } | Gets the index. |
 | [InsertPermission](Field/InsertPermission.md) { get; set; } | Gets or sets the insert permission. |
+| [IsLookup](Field/IsLookup.md) { get; } | Gets if this field is one with a LookupInclude attribute or ID or Name field |
 | [Join](Field/Join.md) { get; } | Gets the join. |
 | [JoinAlias](Field/JoinAlias.md) { get; } | Gets the join alias. |
 | [MinSelectLevel](Field/MinSelectLevel.md) { get; set; } | Gets or sets the minimum select level. |

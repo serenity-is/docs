@@ -13,6 +13,7 @@ public class URLEditorAttribute : CustomEditorAttribute
 | name | description |
 | --- | --- |
 | [URLEditorAttribute](URLEditorAttribute/URLEditorAttribute.md)() | Initializes a new instance of the [`URLEditorAttribute`](URLEditorAttribute.md) class. |
+| const [Key](URLEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

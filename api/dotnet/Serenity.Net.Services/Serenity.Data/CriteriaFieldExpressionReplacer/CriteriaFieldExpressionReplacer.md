@@ -2,7 +2,8 @@
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public CriteriaFieldExpressionReplacer(IRow row, IPermissionService permissions)
+public CriteriaFieldExpressionReplacer(IRow row, IPermissionService permissions, 
+    bool lookupAccessMode = false)
 ```
 
 ## See Also

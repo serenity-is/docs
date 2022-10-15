@@ -13,6 +13,7 @@
 | static class  | [ExceptionExtensions](Serenity/ExceptionExtensions.md) | Exception data extensions |
 | interface  | [INotLoggedException](Serenity/INotLoggedException.md) | An exception that should not be logged. |
 | static class  | [Invariants](Serenity/Invariants.md) | Invariant culture related constants and formats. |
+| interface  | [IServiceResolver&lt;TService&gt;](Serenity/IServiceResolver-1.md) | A generic version of IServiceProvider which resolves a service on demand. |
 | interface  | [ITextLocalizer](Serenity/ITextLocalizer.md) | Text localizer for current context language / pending state. |
 | interface  | [IUserDefinition](Serenity/IUserDefinition.md) | User definition abstraction. |
 | static class  | [JSON](Serenity/JSON.md) | Contains shortcuts to Newtonsoft.Json serialization / deserialization methods, and default Serenity settings. |
@@ -197,6 +198,7 @@
 | class  | [NavigationPermissionAttribute](Serenity.Data/NavigationPermissionAttribute.md) | Sets navigation permission for the row, which if exists takes precedence over ReadPermissionAttribute to determine permission for row's page and navigation item. |
 | abstract class  | [PermissionAttributeBase](Serenity.Data/PermissionAttributeBase.md) | An abstract base attribute that all permission related attributes derive from. |
 | class  | [ReadPermissionAttribute](Serenity.Data/ReadPermissionAttribute.md) | Sets read permission for the row. |
+| class  | [ServiceLookupPermissionAttribute](Serenity.Data/ServiceLookupPermissionAttribute.md) | Sets a permission to read only lookup fields in a row via List service Lookup field means ID, Name, and [LookupInclude] properties in a row. You must use [AuthorizeList(typeof(XRow))] instead of ServiceAuthorize in service endpoint. |
 | class  | [UpdatePermissionAttribute](Serenity.Data/UpdatePermissionAttribute.md) | Sets update permission for the row. |
 
 ## Serenity.Extensions.DependencyInjection namespace
@@ -204,6 +206,7 @@
 | signature | name | description |
 | --: | --- | --- |
 | static class  | [CoreServiceCollectionExtensions](Serenity.Extensions.DependencyInjection/CoreServiceCollectionExtensions.md) | Contains extensions to register core services |
+| class  | [ServiceResolver&lt;TService&gt;](Serenity.Extensions.DependencyInjection/ServiceResolver-1.md) | A generic version of IServiceProvider which resolves a service on demand. |
 
 ## Serenity.IO namespace
 

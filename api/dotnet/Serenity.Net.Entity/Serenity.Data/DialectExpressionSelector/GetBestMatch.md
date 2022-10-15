@@ -4,14 +4,15 @@
 Gets the best match.
 
 ```csharp
-public TAttribute GetBestMatch<TAttribute>(IEnumerable<TAttribute> expressions, 
+public TAttribute GetBestMatch<TAttribute>(IEnumerable<TAttribute> attributes, 
     Func<TAttribute, string> getDialect)
+    where TAttribute : class
 ```
 
 | parameter | description |
 | --- | --- |
 | TAttribute | The type of the attribute. |
-| expressions | The expressions. |
+| attributes | The expressions. |
 | getDialect | The get dialect. |
 
 ## See Also

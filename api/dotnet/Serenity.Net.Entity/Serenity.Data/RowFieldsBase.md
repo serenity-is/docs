@@ -43,6 +43,7 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
 | --- | --- |
 | [RowFieldsBase](RowFieldsBase/RowFieldsBase.md)(…) | Initializes a new instance of the [`RowFieldsBase`](RowFieldsBase.md) class. |
 | virtual [AfterInitialize](RowFieldsBase/AfterInitialize.md)() | Afters the initialize. |
+| virtual [CreateGeneratedFields](RowFieldsBase/CreateGeneratedFields.md)() | Should be only used by row source generator to create field objects it generated |
 | override [InsertItem](RowFieldsBase/InsertItem.md)(…) | Inserts an element into the Collection at the specified index. |
 | override [RemoveItem](RowFieldsBase/RemoveItem.md)(…) | Removes the element at the specified index of the Collection. |
 | override [SetItem](RowFieldsBase/SetItem.md)(…) | Replaces the element at the specified index. |

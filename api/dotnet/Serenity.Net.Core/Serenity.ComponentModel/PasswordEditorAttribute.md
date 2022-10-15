@@ -13,6 +13,7 @@ public class PasswordEditorAttribute : CustomEditorAttribute
 | name | description |
 | --- | --- |
 | [PasswordEditorAttribute](PasswordEditorAttribute/PasswordEditorAttribute.md)() | Initializes a new instance of the [`PasswordEditorAttribute`](PasswordEditorAttribute.md) class. |
+| const [Key](PasswordEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

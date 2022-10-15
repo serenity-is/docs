@@ -34,6 +34,7 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> :
 | --- | --- |
 | [behaviors-](ListRequestHandler-3/behaviors-.md) |  |
 | [ignoredEqualityFilters-](ListRequestHandler-3/ignoredEqualityFilters-.md) |  |
+| [lookupAccessMode-](ListRequestHandler-3/lookupAccessMode-.md) |  |
 | [Request](ListRequestHandler-3/Request.md) |  |
 | [Response](ListRequestHandler-3/Response.md) |  |
 | [Row](ListRequestHandler-3/Row.md) |  |

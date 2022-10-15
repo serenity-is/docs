@@ -15,6 +15,7 @@ public class MaskedEditorAttribute : CustomEditorAttribute
 | [MaskedEditorAttribute](MaskedEditorAttribute/MaskedEditorAttribute.md)() | Initializes a new instance of the [`MaskedEditorAttribute`](MaskedEditorAttribute.md) class. |
 | [Mask](MaskedEditorAttribute/Mask.md) { get; set; } | Gets or sets the mask. a = letter, 9 = numeric, * = alphanumeric. |
 | [Placeholder](MaskedEditorAttribute/Placeholder.md) { get; set; } | Gets or sets the placeholder. |
+| const [Key](MaskedEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

@@ -12,8 +12,9 @@ public class ExpressionAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [ExpressionAttribute](ExpressionAttribute/ExpressionAttribute.md)(…) | Specifies SQL expression this property corresponds to. |
+| [ExpressionAttribute](ExpressionAttribute/ExpressionAttribute.md)(…) | Specifies SQL expression this property corresponds to. (2 constructors) |
 | [Dialect](ExpressionAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
+| [NegateDialect](ExpressionAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |
 | [Value](ExpressionAttribute/Value.md) { get; } | Gets the value. |
 
 ## See Also

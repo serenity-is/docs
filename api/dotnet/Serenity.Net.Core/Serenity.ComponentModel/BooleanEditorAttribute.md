@@ -13,6 +13,7 @@ public class BooleanEditorAttribute : CustomEditorAttribute
 | name | description |
 | --- | --- |
 | [BooleanEditorAttribute](BooleanEditorAttribute/BooleanEditorAttribute.md)() | Initializes a new instance of the [`BooleanEditorAttribute`](BooleanEditorAttribute.md) class. |
+| const [Key](BooleanEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

@@ -23,6 +23,7 @@ public class CheckLookupEditorAttribute : CustomEditorAttribute
 | [HideSearch](CheckLookupEditorAttribute/HideSearch.md) { get; set; } | Hide quick search input |
 | [LookupKey](CheckLookupEditorAttribute/LookupKey.md) { get; set; } | Lookup key, e.g. Northwind.CustomerCity |
 | [ShowSelectAll](CheckLookupEditorAttribute/ShowSelectAll.md) { get; set; } | Show select all button |
+| const [Key](CheckLookupEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

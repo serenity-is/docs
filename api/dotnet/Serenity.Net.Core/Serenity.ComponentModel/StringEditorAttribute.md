@@ -13,6 +13,7 @@ public class StringEditorAttribute : CustomEditorAttribute
 | name | description |
 | --- | --- |
 | [StringEditorAttribute](StringEditorAttribute/StringEditorAttribute.md)() | Initializes a new instance of the [`StringEditorAttribute`](StringEditorAttribute.md) class. |
+| const [Key](StringEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

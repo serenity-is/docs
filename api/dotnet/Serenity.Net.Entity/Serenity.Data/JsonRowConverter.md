@@ -17,7 +17,8 @@ public class JsonRowConverter : JsonConverter
 | override [CanConvert](JsonRowConverter/CanConvert.md)(…) | Determines whether this instance can convert the specified object type. |
 | override [ReadJson](JsonRowConverter/ReadJson.md)(…) | Reads the JSON representation of the object. |
 | override [WriteJson](JsonRowConverter/WriteJson.md)(…) | Writes the JSON representation of the object. |
-| static [ShouldSerializeExtension](JsonRowConverter/ShouldSerializeExtension.md) | The should serialize extension |
+| static [ShouldDeserializeExtension](JsonRowConverter/ShouldDeserializeExtension.md) | Should deserialize extension |
+| static [ShouldSerializeExtension](JsonRowConverter/ShouldSerializeExtension.md) | Should serialize extension |
 
 ## See Also
 

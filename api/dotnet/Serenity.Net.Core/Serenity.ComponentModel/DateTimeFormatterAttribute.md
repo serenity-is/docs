@@ -14,6 +14,7 @@ public class DateTimeFormatterAttribute : CustomFormatterAttribute
 | --- | --- |
 | [DateTimeFormatterAttribute](DateTimeFormatterAttribute/DateTimeFormatterAttribute.md)() | Initializes a new instance of the [`DateTimeFormatterAttribute`](DateTimeFormatterAttribute.md) class. |
 | [DisplayFormat](DateTimeFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
+| const [Key](DateTimeFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

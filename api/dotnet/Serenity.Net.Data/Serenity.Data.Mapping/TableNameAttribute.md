@@ -12,8 +12,10 @@ public class TableNameAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [TableNameAttribute](TableNameAttribute/TableNameAttribute.md)(…) | Initializes a new instance of the [`TableNameAttribute`](TableNameAttribute.md) class. |
+| [TableNameAttribute](TableNameAttribute/TableNameAttribute.md)(…) | Initializes a new instance of the [`TableNameAttribute`](TableNameAttribute.md) class. (2 constructors) |
+| [Dialect](TableNameAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
 | [Name](TableNameAttribute/Name.md) { get; } | Gets the name. |
+| [NegateDialect](TableNameAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |
 
 ## See Also
 

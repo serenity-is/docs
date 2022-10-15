@@ -16,6 +16,7 @@ public class RadioButtonEditorAttribute : CustomEditorAttribute
 | [RadioButtonEditorAttribute](RadioButtonEditorAttribute/RadioButtonEditorAttribute.md)(…) | Initializes a new instance of the [`RadioButtonEditorAttribute`](RadioButtonEditorAttribute.md) class. |
 | [EnumKey](RadioButtonEditorAttribute/EnumKey.md) { get; set; } | Gets or sets the enum key. |
 | [LookupKey](RadioButtonEditorAttribute/LookupKey.md) { get; set; } | Gets or sets the lookup key. |
+| const [Key](RadioButtonEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

@@ -15,6 +15,7 @@ public class HtmlNoteContentEditorAttribute : CustomEditorAttribute
 | [HtmlNoteContentEditorAttribute](HtmlNoteContentEditorAttribute/HtmlNoteContentEditorAttribute.md)() | Initializes a new instance of the [`HtmlNoteContentEditorAttribute`](HtmlNoteContentEditorAttribute.md) class. |
 | [Cols](HtmlNoteContentEditorAttribute/Cols.md) { get; set; } | Gets or sets the cols of underlying textarea. |
 | [Rows](HtmlNoteContentEditorAttribute/Rows.md) { get; set; } | Gets or sets the rows of underlying textarea. |
+| const [Key](HtmlNoteContentEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

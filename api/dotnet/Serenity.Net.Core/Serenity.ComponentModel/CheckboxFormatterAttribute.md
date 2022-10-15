@@ -13,6 +13,7 @@ public class CheckboxFormatterAttribute : CustomFormatterAttribute
 | name | description |
 | --- | --- |
 | [CheckboxFormatterAttribute](CheckboxFormatterAttribute/CheckboxFormatterAttribute.md)() | Initializes a new instance of the [`CheckboxFormatterAttribute`](CheckboxFormatterAttribute.md) class. |
+| const [Key](CheckboxFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

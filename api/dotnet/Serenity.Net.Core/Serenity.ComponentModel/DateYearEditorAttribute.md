@@ -16,6 +16,7 @@ public class DateYearEditorAttribute : CustomEditorAttribute
 | [Descending](DateYearEditorAttribute/Descending.md) { get; set; } | Gets or sets a value indicating whether the years should be listed in descending order. |
 | [MaxYear](DateYearEditorAttribute/MaxYear.md) { get; set; } | Gets or sets the maximum year. It can be written as an integer value, or +50, -20 etc. corresponding to current year plus or minus years. |
 | [MinYear](DateYearEditorAttribute/MinYear.md) { get; set; } | Gets or sets the minimum year. It can be written as an integer value, or +50, -20 etc. corresponding to current year plus or minus years. |
+| const [Key](DateYearEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

@@ -14,6 +14,7 @@ public class MinuteFormatterAttribute : CustomFormatterAttribute
 | --- | --- |
 | [MinuteFormatterAttribute](MinuteFormatterAttribute/MinuteFormatterAttribute.md)() | Initializes a new instance of the [`MinuteFormatterAttribute`](MinuteFormatterAttribute.md) class. |
 | [DisplayFormat](MinuteFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
+| const [Key](MinuteFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 

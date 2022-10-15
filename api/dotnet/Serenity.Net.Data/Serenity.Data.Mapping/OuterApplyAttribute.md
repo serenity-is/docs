@@ -12,9 +12,11 @@ public class OuterApplyAttribute : Attribute, ISqlJoin
 
 | name | description |
 | --- | --- |
-| [OuterApplyAttribute](OuterApplyAttribute/OuterApplyAttribute.md)(…) | Initializes a new instance of the [`OuterApplyAttribute`](OuterApplyAttribute.md) class. |
+| [OuterApplyAttribute](OuterApplyAttribute/OuterApplyAttribute.md)(…) | Initializes a new instance of the [`OuterApplyAttribute`](OuterApplyAttribute.md) class. (2 constructors) |
 | [Alias](OuterApplyAttribute/Alias.md) { get; } | Gets the alias. |
+| [Dialect](OuterApplyAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
 | [InnerQuery](OuterApplyAttribute/InnerQuery.md) { get; } | Gets the inner query. |
+| [NegateDialect](OuterApplyAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |
 | [PropertyPrefix](OuterApplyAttribute/PropertyPrefix.md) { get; set; } | Gets the property prefix. |
 | [RowType](OuterApplyAttribute/RowType.md) { get; set; } | Gets or sets the type of the row. |
 | [TitlePrefix](OuterApplyAttribute/TitlePrefix.md) { get; set; } | Gets or sets the title prefix. |

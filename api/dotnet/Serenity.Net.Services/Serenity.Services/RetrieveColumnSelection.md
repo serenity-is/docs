@@ -12,6 +12,9 @@ public enum RetrieveColumnSelection
 | Details | `0` |  |
 | KeyOnly | `1` |  |
 | List | `2` |  |
+| None | `3` |  |
+| IdOnly | `4` |  |
+| Lookup | `5` |  |
 
 ## See Also
 

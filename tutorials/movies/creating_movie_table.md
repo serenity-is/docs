@@ -40,7 +40,7 @@ using System;
 namespace MovieTutorial.Migrations.DefaultDB
 {
     [Migration(20160519_115100)]
-    public class DefaultDB_20160519_115100_MovieTable : Migration
+    public class DefaultDB_20160519_115100_MovieTable : AutoReversingMigration
     {
         public override void Up()
         {
@@ -54,11 +54,7 @@ namespace MovieTutorial.Migrations.DefaultDB
                 .WithColumn("Storyline").AsString(Int32.MaxValue).Nullable()
                 .WithColumn("Year").AsInt32().Nullable()
                 .WithColumn("ReleaseDate").AsDateTime().Nullable()
-                .WithColumn("Runtime").AsInt32().Nullable();    
-        }
-
-        public override void Down()
-        {
+                .WithColumn("Runtime").AsInt32().Nullable();
         }
     }
 }
@@ -67,8 +63,6 @@ namespace MovieTutorial.Migrations.DefaultDB
 > Make sure you use the namespace *MovieTutorial.Migrations.DefaultDB* as Serene template applies migrations only in this namespace to the default database.
 
 In *Up()* method we specify that this migration, when applied, will create a schema named *mov*. We will use a separate schema for movie tables to avoid clashes with existing tables. It will also create a table named *Movie* with "MovieId, Title, Description..." fields on it.
-
-We could implement *Down()* method to make it possible to undo this migration (drop movie table and mov schema etc), but for the scope of this sample, lets leave it empty.
 
 > Inability to undo a migration might not hurt much, but deleting a table by mistake could do more damage.
 

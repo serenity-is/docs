@@ -2,17 +2,17 @@
 
 This section is for users who doesn't or can't use Visual Studio (in Linux / OSX). 
 
-Serene Asp.Net Core version supports Linux and OSX in addition to Windows.
+Serene Asp.Net Core version supports Linux and Mac OSX in addition to Windows.
 
 > We recommend Visual Studio Code for all platforms, but it is also possible to work with a basic text editor like Notepad / VIM. There are also other nice options e.g. Atom.
 
-## Install .NET Core 5 SDK 
+## Install .NET SDK 
 
-Please go to address below and follow instructions for your specific platform:
+Please go to the address below and follow the instructions for your specific platform:
 
 https://www.microsoft.com/net/download/core
 
-> Serenity usually depends on latest stable version of .NET CORE SDK, if you get an error on project creation about .NET SDK, please check the error message, and install appropriate version of .NET CORE SDK as this document might be updated yet.
+> Serenity usually depends on latest stable version of .NET SDK, if you get an error on project creation about .NET SDK, please check the error message, and install appropriate version of .NET SDK as this document might be updated yet.
 
 ## Install NodeJS
 
@@ -43,7 +43,7 @@ Install our project initializer, *SERIN* as a global tool using NPM:
 
 > Thanks to Victor (@vctor) for Linux screenshots
 
-### Create Folder for New Project
+### Create a Folder for New Project
 
 Create an empty *MySerene* (or a name you like) folder.
 
@@ -75,10 +75,10 @@ While inside an empty directory, run *serin*:
 
 ![Windows Serin MyApp](img/linux-serin-myserene.png)
 
-Type an application name, e.g. *MySerene* and press enter. Take a break while Serin creates 
-your project, initializes static content and restores packages etc.
+Type an application name, e.g. `MySerene`, and press `ENTER`. Take a break while Serin creates 
+your project, initializes static content, and restores packages.
 
-After Serin creates your project, you will have a *MySerene.Web* folder under current directory. 
+After Serin creates your project, you will have a *MySerene.Web* folder under the current directory. 
 Enter that directory:
 
 ```cmd
@@ -87,7 +87,7 @@ Enter that directory:
 
 ## Running Serene
 
-For OSX / Linux, first restore packages:
+For OSX / Linux, first, restore packages:
 
 ```cmd
 > dotnet restore

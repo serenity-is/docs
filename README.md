@@ -10,27 +10,26 @@ It aims to make development easier while reducing maintenance costs by avoiding 
 
 [StartSharp](https://serenity.is) is the premium application template we offer to our paid customers. It contains everything in Serene, in addition to a more polished theme, and some [extra features](startsharp/README.md). They are both based on the Serenity platform.
 
-## Who/What This Platform Is For
-
-Serenity is best suited to line-of-business (LOB) applications which can be described as programs that contain integrated capabilities and tie into databases, generally with many forms and listing/reporting pages. 
-
-It is also a good fit for administrative interfaces of public-facing websites. 
-
-Serenity handles most of the internal plumbing for cross-cutting concerns of such applications, including data manipulation, filtering, services, caching, localization, navigation, validation, user access control, and declarative UI.
-
 ## What's In The Name
 
 Serenity has dictionary meanings of *peace*, *comfort*, and *calmness*.
 
 This is what we are trying to achieve with Serenity. We hope that after installing and using it you will feel this way too...
 
+## Who/What This Platform Is For
+
+Serenity is best suited to line-of-business (LOB) applications which can be described as programs that contain integrated capabilities and tie into databases, generally with many forms and listing/reporting pages. 
+
+It is also a good fit for administrative interfaces of public-facing websites. 
+
+Serenity handles most of the internal plumbing for cross-cutting concerns of such applications, including data manipulation, querying, filtering, services, caching, localization, navigation, validation, user access control, and declarative UI.
 
 ## Some of the Out-of-the-Box Features
 
 * A modular, service-based web application model
 * A code generator (Sergen) to produce initial services/user interface code for an SQL table
 * Two-way transformations between C#/TypeScript code that provides build-time error checking and intelli-sense support
-* Attribute-based declarative user interfaces
+* Attribute-based declarative user interfaces implemented via a widget system
 * Seamless data-binding through form definitions (form <-> entity <-> service).
 * Local/distributed caching and invalidation
 * Simple, data-driven reporting, Excel export
@@ -40,7 +39,6 @@ This is what we are trying to achieve with Serenity. We hope that after installi
 * Customizable handlers for REST-like services that work by reusing information in entity classes and do automatic validation.
 * Attribute-based navigation menu
 * UI / Data Localization
-* Widget system
 * Audit logging
 
 ## Where To Look For Information

@@ -23,13 +23,13 @@ Using *Solution Explorer* navigate to *Migrations / DefaultDB*.
 
 Here we already have several migrations. A migration is like a DML script that manipulates database structure.
 
-*DefaultDB_20141103_140000_Initial.cs* for example, contains our initial migration that created *Northwind* tables and *Users* table.
+*DefaultDB_20141103_140000_Initial.cs* for example, contains our initial migration that created Language table and *Users* table.
 
-Create a new migration file in the same folder with name *DefaultDB_20160519_115100_MovieTable.cs*. You can copy and change one of the existing migration files, rename it and change contents.
+Create a new migr   ation file in the same folder with name *DefaultDB_20221114_150500_MovieTable.cs*. You can copy and change one of the existing migration files, rename it and change contents.
 
 > Migration file name / class name is actually not important but recommended for consistency and correct ordering.
 
-*20160519_115100* corresponds to the time we are writing this migration in yyyyMMdd_HHmmss format. It will also act as a unique key for this migration.
+*20221114_150500* corresponds to the time we are writing this migration in yyyyMMdd_HHmmss format. It will also act as a unique key for this migration.
 
 Our migration file should look like below:
 
@@ -39,8 +39,8 @@ using System;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519_115100)]
-    public class DefaultDB_20160519_115100_MovieTable : AutoReversingMigration
+    [Migration(20221114_150500)]
+    public class DefaultDB_20221114_150500_MovieTable : AutoReversingMigration
     {
         public override void Up()
         {
@@ -69,7 +69,7 @@ In *Up()* method we specify that this migration, when applied, will create a sch
 On top of our class we applied a Migration attribute.
 
 ```cs
-[Migration(20160519_115100)]
+[Migration(20221114_150500)]
 ```
 
 This specifies a unique key for this migration. After a migration is applied to a database, its key is recorded in a special table specific to FluentMigrator ([dbo].[VersionInfo]), so same migration won't be applied again.
@@ -78,7 +78,7 @@ This specifies a unique key for this migration. After a migration is applied to 
 
 Migrations are executed in the key order, so using a sortable datetime pattern like yyyyMMdd for migration keys looks like a good idea. 
 
-Please make sure you always use same number of characters (underscores are ignored) for migration keys e.g. 14 (20160519_115100). Otherwise your migration order will get messed up, and you will have migration errors, due to migrations running in unexpected order.
+Please make sure you always use same number of characters (underscores are ignored) for migration keys e.g. 14 (20221114_150500). Otherwise your migration order will get messed up, and you will have migration errors, due to migrations running in unexpected order.
 
 
 ### Running Migrations
@@ -137,7 +137,7 @@ namespace MovieTutorial
 }
 ```
 
-> There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change Northwind connection in web.config to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.
+> There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change Northwind connection in appsettings.json to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.
 
 Now press F5 to run your application and create Movie table in default database.
 
@@ -146,13 +146,13 @@ Now press F5 to run your application and create Movie table in default database.
 
 Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\MsSqlLocalDB*.
 
-> If you didn't install LocalDB yet, download it from https://www.microsoft.com/en-us/download/details.aspx?id=29062.
+> If you didn't install LocalDB yet, download it from [here](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16).
 
 > You could also use another SQL server instance, just change the connection string to target server and remove the migration safety check.
 
 You should see *[mov].[Movie]* table in SQL object explorer.
 
-Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20160519115100*. This specifies that the migration with that version number (migration key) is already executed on this database. 
+Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20221114150500*. This specifies that the migration with that version number (migration key) is already executed on this database. 
 
 > So, even if you change migration source code, that migration won't ever run again in this database. Try to avoid modifying migrations after they run on your DB. Create a new migration if possible.
 

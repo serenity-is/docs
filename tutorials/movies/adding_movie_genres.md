@@ -8,15 +8,15 @@ To hold Movie genres we need a lookup table. For *Kind* field we used an enumera
 
 As usual, we start with a migration.
 
-*Migrations/DefaultDB/DefaultDB_20160519_154700_GenreTable.cs*:
+*Migrations/DefaultDB/DefaultDB_20221114_183600_GenreTable.cs*:
 
 ```cs
 using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519_154700)]
-    public class DefaultDB_20160519_154700_GenreTable : Migration
+    [Migration(20221114_183600)]
+    public class DefaultDB_20221114_183600_GenreTable : AutoReversingMigration
     {
         public override void Up()
         {
@@ -29,10 +29,6 @@ namespace MovieTutorial.Migrations.DefaultDB
                 .AddColumn("GenreId").AsInt32().Nullable()
                     .ForeignKey("FK_Movie_GenreId", "mov", "Genre", "GenreId");
         }
-
-        public override void Down()
-        {
-        }
     }
 }
 ```
@@ -44,6 +40,8 @@ We also added a *GenreId* field to *Movie* table.
 
 ### Generating Code For Genre Table
 
+> Don't forget to run project so migration can execute
+
 Run `dotnet sergen g` again in project directory.
 
 Use following parameters:
@@ -53,6 +51,7 @@ Use following parameters:
 - Module Name: **MovieDB**
 - Entity Identifier: **Genre**
 - Permission Key: **Administration:General**
+- What to Generate: **All**
 
 Rebuild solution and run it. We'll get a new page like this:
 
@@ -91,8 +90,8 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519_181800)]
-    public class DefaultDB_20160519_181800_SampleGenres : Migration
+    [Migration(20221114_184400)]
+    public class DefaultDB_20221114_184400_SampleGenres : AutoReversingMigration
     {
         public override void Up()
         {
@@ -122,10 +121,6 @@ namespace MovieTutorial.Migrations.DefaultDB
                     Name = "Documentary"
                 });
         }
-
-        public override void Down()
-        {
-        }
     }
 }
 ```
@@ -142,11 +137,11 @@ namespace MovieTutorial.MovieDB
     public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         // ...
-        [DisplayName("Kind"), NotNull, DefaultValue(1)]
+        [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
         public MovieKind? Kind
         {
-            get => (MovieKind?)fields.Kind[this];
-            set => fields.Kind[this] = (Int32?)value;
+            get => fields.Kind[this];
+            set => fields.Kind[this] = value;
         }
 
         [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
@@ -168,7 +163,7 @@ namespace MovieTutorial.MovieDB
         public class RowFields : RowFieldsBase
         {
             // ...
-            public Int32Field Kind;
+            public EnumField<MovieKind> Kind;
             public Int32Field GenreId;
             public StringField GenreName;
         }
@@ -192,6 +187,19 @@ So when Serenity needs to select from *Movies* table, it will produce an SQL que
 SELECT t0.MovieId, t0.Kind, t0.GenreId, g.Name as GenreName 
 FROM Movies t0
 LEFT JOIN Genre g on t0.GenreId = g.GenreId 
+```
+
+> Serene template enables SQL query logging by default. So you can see all the queries that are executing in output console. Check out appsettings.Development.json
+```json
+{
+    // ...
+    "Logging": {
+        "LogLevel": {
+            "Serenity.Data": "Debug"
+        }
+    }
+    // ...
+}
 ```
 
 > This join will only be performed if a field from Genre table requested to be selected, e.g. its column is visible in a data grid.
@@ -232,7 +240,7 @@ Here we can't do the same. Genre list is a database based dynamic list.
 
 Serenity has notion of *dynamic scripts* to make dynamic data available to script side in the form of runtime generated scripts.
 
-> Dynamic scripts are similar to web services, but their outputs are dynamic javascript files that can be cached on client side. 
+> Dynamic scripts are similar to web services, but their outputs are dynamic JSON's or javascript files that can be cached on client side. 
 > 
 > The *dynamic* here corresponds to the data they contain, not their behavior. Unlike web services, dynamic scripts can't accept any parameters. And their data is shared among all users of your site. They are like singletons or static variables. 
 > 

@@ -381,7 +381,7 @@ public Int32? GenreId
 
 Now we can define a new Genre by clicking star/pen icon next to genre field.
 
-![Defining Genre Inplace](img/mdb_genre_inplace.png)
+![Defining Genre Inplace](img/  .png)
 
 > Here we also see that we can use a dialog from another page (GenreDialog) in the movies page. In Serenity applications, all client side objects (dialogs, grids, editors, formatters etc.) are self-contained reusable components (widgets) that are not bound to any page.
 
@@ -405,22 +405,21 @@ MovieTutorial.MovieDB.GenreDialog
 Luckily, we have a GenreDialog, which is defined in *Modules/Genre/GenreDialog.ts* and its full name is *MovieTutorial.MovieDB.GenreDialog*.
 
 ```ts
-namespace MovieTutorial.MovieDB {
+import { Decorators, EntityDialog } from '@serenity-is/corelib';
+import { GenreForm, GenreRow, GenreService } from '../../ServerTypes/MovieDB';
 
-    @Serenity.Decorators.registerClass()
-    export class GenreDialog extends Serenity.EntityDialog<GenreRow, any> {
-        protected getFormKey() { return GenreForm.formKey; }
-        protected getIdProperty() { return GenreRow.idProperty; }
-        protected getLocalTextPrefix() { return GenreRow.localTextPrefix; }
-        protected getNameProperty() { return GenreRow.nameProperty; }
-        protected getService() { return GenreService.baseUrl; }
-        protected getDeletePermission() { return GenreRow.deletePermission; }
-        protected getInsertPermission() { return GenreRow.insertPermission; }
-        protected getUpdatePermission() { return GenreRow.updatePermission; }
+@Decorators.registerClass('MovieTutorial.MovieDB.GenreDialog')
+export class GenreDialog extends EntityDialog<GenreRow, any> {
+    protected getFormKey() { return GenreForm.formKey; }
+    protected getIdProperty() { return GenreRow.idProperty; }
+    protected getLocalTextPrefix() { return GenreRow.localTextPrefix; }
+    protected getNameProperty() { return GenreRow.nameProperty; }
+    protected getService() { return GenreService.baseUrl; }
+    protected getDeletePermission() { return GenreRow.deletePermission; }
+    protected getInsertPermission() { return GenreRow.insertPermission; }
+    protected getUpdatePermission() { return GenreRow.updatePermission; }
 
-        protected form = new GenreForm(this.idPrefix);
-
-    }
+    protected form = new GenreForm(this.idPrefix);
 }
 ```
 

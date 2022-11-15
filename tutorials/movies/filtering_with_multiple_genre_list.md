@@ -111,18 +111,24 @@ Need to intercept quick filter item and move the genre list to *Genres* property
 Edit *MovieGrid.ts*:
 
 ```ts
-export class MovieGrid extends Serenity.EntityGrid<MovieRow, any> {
+import { Decorators, EntityGrid, LookupEditor, QuickSearchField } from '@serenity-is/corelib';
+import { text, first } from '@serenity-is/corelib/q';
+import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
+import { MovieListRequest } from '../../ServerTypes/MovieDB/MovieListRequest';
+import { MovieDialog } from './MovieDialog';
 
-    //...
+@Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
+export class MovieGrid extends EntityGrid<MovieRow, any> {
+   // ...
     protected getQuickFilters() {
         let items = super.getQuickFilters();
 
-        const genreListFilter = Q.first(items, x =>
+        const genreListFilter = first(items, x =>
             x.field == MovieRow.Fields.GenreList);
 
         genreListFilter.handler = h => {
             const request = (h.request as MovieListRequest);
-            const values = (h.widget as Serenity.LookupEditor).values;
+            const values = (h.widget as LookupEditor).values;
             request.Genres = values.map(x => parseInt(x, 10));
             h.handled = true;
         };
@@ -145,7 +151,7 @@ let items = super.getQuickFilters();
 Then locate the quick filter object for *GenreList* property:
 
 ```ts
-const genreListFilter = Q.first(items, x =>
+const genreListFilter = first(items, x =>
     x.field == MovieRow.Fields.GenreList);
 ```
 
@@ -166,7 +172,7 @@ const request = (h.request as MovieListRequest);
 And read the current value in lookup editor:
 
 ```ts
-const values = (h.widget as Serenity.LookupEditor).values;
+const values = (h.widget as LookupEditor).values;
 ```
 
 Set it in *request.Genres* property:

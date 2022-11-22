@@ -10,7 +10,6 @@ public static class TwoLevelCacheInvalidationExtensions
 | name | description |
 | --- | --- |
 | static [InvalidateOnCommit](TwoLevelCacheInvalidationExtensions/InvalidateOnCommit.md)(…) |  (3 methods) |
-| class [GenerationUpdater](TwoLevelCacheInvalidationExtensions.GenerationUpdater.md) |  |
 
 ## See Also
 

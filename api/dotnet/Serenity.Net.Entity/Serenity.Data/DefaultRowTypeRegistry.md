@@ -13,7 +13,7 @@ public class DefaultRowTypeRegistry : IRowTypeRegistry
 | --- | --- |
 | [DefaultRowTypeRegistry](DefaultRowTypeRegistry/DefaultRowTypeRegistry.md)(…) | Initializes a new instance of the [`DefaultRowTypeRegistry`](DefaultRowTypeRegistry.md) class. |
 | [AllRowTypes](DefaultRowTypeRegistry/AllRowTypes.md) { get; } | Gets all row types. |
-| [ByConnectionKey](DefaultRowTypeRegistry/ByConnectionKey.md)(…) | Bies the connection key. |
+| [ByConnectionKey](DefaultRowTypeRegistry/ByConnectionKey.md)(…) | Returns row types by the connection key. |
 
 ## See Also
 

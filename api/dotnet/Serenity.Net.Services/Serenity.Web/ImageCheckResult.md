@@ -9,22 +9,18 @@ public enum ImageCheckResult
 
 | name | value | description |
 | --- | --- | --- |
-| GIFImage | `0` |  |
-| JPEGImage | `1` |  |
-| PNGImage | `2` |  |
-| FlashMovie | `3` |  |
-| UnsupportedFormat | `4` |  |
-| StreamReadError | `5` |  |
-| DataSizeTooHigh | `6` |  |
-| InvalidImage | `7` |  |
-| ImageIsEmpty | `8` |  |
-| SizeMismatch | `9` |  |
-| WidthMismatch | `10` |  |
-| WidthTooHigh | `11` |  |
-| WidthTooLow | `12` |  |
-| HeightMismatch | `13` |  |
-| HeightTooHigh | `14` |  |
-| HeightTooLow | `15` |  |
+| Valid | `0` |  |
+| StreamReadError | `1` |  |
+| DataSizeTooHigh | `2` |  |
+| InvalidImage | `3` |  |
+| ImageIsEmpty | `4` |  |
+| SizeMismatch | `5` |  |
+| WidthMismatch | `6` |  |
+| WidthTooHigh | `7` |  |
+| WidthTooLow | `8` |  |
+| HeightMismatch | `9` |  |
+| HeightTooHigh | `10` |  |
+| HeightTooLow | `11` |  |
 
 ## See Also
 

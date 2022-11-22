@@ -1,11 +1,15 @@
 # CodeWriter.IndentedMultiLine method
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Appends current indent for all lines of the specified string by splitting it by end of line characters, and a new line.
+Appends each of the text's lines with current indent, and a new line.
 
 ```csharp
-public void IndentedMultiLine(string s)
+public void IndentedMultiLine(string code)
 ```
+
+| parameter | description |
+| --- | --- |
+| code | The code |
 
 ## See Also
 

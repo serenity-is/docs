@@ -41,15 +41,14 @@ public abstract class Field : IFieldWithJoinInfo
 | [Type](Field/Type.md) { get; } | Gets the type. |
 | [UpdatePermission](Field/UpdatePermission.md) { get; set; } | Gets or sets the update permission. |
 | abstract [ValueType](Field/ValueType.md) { get; } | Gets the type of the value. |
-| abstract [AsObject](Field/AsObject.md)(…) | Ases the object. (2 methods) |
-| virtual [AsSqlValue](Field/AsSqlValue.md)(…) | Ases the SQL value. |
+| abstract [AsObject](Field/AsObject.md)(…) | Gets the value of this row as an object. (2 methods) |
+| virtual [AsSqlValue](Field/AsSqlValue.md)(…) | Gets the value of this row as an SQL value. |
 | [Contains](Field/Contains.md)(…) | Creates a new "the Field CONTAINS mask" criteria |
 | abstract [ConvertValue](Field/ConvertValue.md)(…) | Converts the value. |
 | abstract [Copy](Field/Copy.md)(…) | Copies the specified source. |
 | [CopyNoAssignment](Field/CopyNoAssignment.md)(…) | Copies the no assignment. |
 | [EndsWith](Field/EndsWith.md)(…) | Creates a new "the Field ENDS WITH mask" criteria |
 | override [Equals](Field/Equals.md)(…) | Determines whether the specified Object, is equal to this instance. |
-| [ForeignJoin](Field/ForeignJoin.md)(…) | Foreigns the join. |
 | abstract [GetFromReader](Field/GetFromReader.md)(…) | Gets field value from a data reader. |
 | override [GetHashCode](Field/GetHashCode.md)() | Returns a hash code for this instance. |
 | [GetTitle](Field/GetTitle.md)(…) | Gets the title. |

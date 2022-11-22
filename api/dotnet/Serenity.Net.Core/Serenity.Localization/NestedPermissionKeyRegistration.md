@@ -1,7 +1,7 @@
 # NestedPermissionKeyRegistration class
 **namespace:** *[Serenity.Localization](../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains helper methods for registration of permission keys in nested static classes. These classes contains string contants containing permission keys. Display name for permission keys can be set by [DisplayName] attribute. Display name for groups can be set by [Description] attribute on classes themselves. For group display name to work, all constants in a class must start with same group prefix.
+Contains helper methods for registration of permission keys in nested static classes. These classes contains string constants containing permission keys. Display name for permission keys can be set by [DisplayName] attribute. Display name for groups can be set by [Description] attribute on classes themselves. For group display name to work, all constants in a class must start with same group prefix.
 
 ```csharp
 public static class NestedPermissionKeyRegistration

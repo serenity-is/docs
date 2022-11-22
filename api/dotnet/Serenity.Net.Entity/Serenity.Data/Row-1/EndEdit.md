@@ -11,7 +11,7 @@ public void EndEdit()
 
 | exception | condition |
 | --- | --- |
-| Exception | Lütfen satırdaki işaretli alanları düzeltiniz. |
+| Exception | Please fix the marked fields on the row. |
 
 ## See Also
 

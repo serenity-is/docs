@@ -13,7 +13,7 @@ public static class JsonLocalTextRegistration
 | --- | --- |
 | static [AddFromNestedDictionary](JsonLocalTextRegistration/AddFromNestedDictionary.md)(…) | Adds translation from a hierarchical local text dictionary parsed from JSON file. |
 | static [AddJsonTexts](JsonLocalTextRegistration/AddJsonTexts.md)(…) | Adds translations from JSON files at specified path. File names in this directory should be in format {anyprefix}.{languageID}.json where {languageID} is a language code like 'en', 'en-GB' etc. |
-| static [ProcessNestedDictionary](JsonLocalTextRegistration/ProcessNestedDictionary.md)(…) | Converts translation from a hierarchical local text dictionary to a simple dictionary. |
+| static [ProcessNestedDictionary&lt;TValue&gt;](JsonLocalTextRegistration/ProcessNestedDictionary.md)(…) | Converts translation from a hierarchical local text dictionary to a simple dictionary. |
 
 ## See Also
 

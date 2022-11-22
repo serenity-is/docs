@@ -4,13 +4,14 @@
 Initializes a new instance of the [`WrappedConnection`](../WrappedConnection.md) class.
 
 ```csharp
-public WrappedConnection(IDbConnection actualConnection, ISqlDialect dialect)
+public WrappedConnection(IDbConnection actualConnection, ISqlDialect dialect, ILogger logger = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | actualConnection | The actual connection. |
 | dialect | The dialect. |
+| logger | Optional logger for this connection (generally to be used by static SqlHelper methods) |
 
 ## See Also
 

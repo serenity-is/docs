@@ -20,7 +20,7 @@ public class ImageChecker
 | [MinWidth](ImageChecker/MinWidth.md) { get; set; } |  |
 | [Width](ImageChecker/Width.md) { get; } |  |
 | [CheckSizeConstraints](ImageChecker/CheckSizeConstraints.md)(…) |  |
-| [CheckStream](ImageChecker/CheckStream.md)(…) |  (2 methods) |
+| [CheckStream](ImageChecker/CheckStream.md)(…) |  |
 | [FormatErrorMessage](ImageChecker/FormatErrorMessage.md)(…) |  |
 
 ## See Also

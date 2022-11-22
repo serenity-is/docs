@@ -4,7 +4,7 @@
 Decreases indent and closes the brace
 
 ```csharp
-public void EndBrace()
+public void EndBrace(bool endLine = true)
 ```
 
 ## See Also

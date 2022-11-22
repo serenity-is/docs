@@ -12,6 +12,7 @@ public static class HtmlScriptExtensions
 | static [GetLocalTextContent](HtmlScriptExtensions/GetLocalTextContent.md)(…) |  |
 | static [GetLocalTextInclude](HtmlScriptExtensions/GetLocalTextInclude.md)(…) |  |
 | static [LocalTextScript](HtmlScriptExtensions/LocalTextScript.md)(…) |  |
+| static [ResolveWithHash](HtmlScriptExtensions/ResolveWithHash.md)(…) |  |
 | static [Script](HtmlScriptExtensions/Script.md)(…) |  |
 | static [ScriptBundle](HtmlScriptExtensions/ScriptBundle.md)(…) |  |
 | static [StyleBundle](HtmlScriptExtensions/StyleBundle.md)(…) |  |

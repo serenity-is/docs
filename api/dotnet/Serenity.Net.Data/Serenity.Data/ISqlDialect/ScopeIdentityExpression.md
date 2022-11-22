@@ -9,7 +9,7 @@ public string ScopeIdentityExpression { get; }
 
 ## Property Value
 
-The SCOPE INDENTITY expression.
+The SCOPE IDENTITY expression.
 
 ## See Also
 

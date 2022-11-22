@@ -13,7 +13,7 @@ public class BooleanFormatterAttribute : CustomFormatterAttribute
 | name | description |
 | --- | --- |
 | [BooleanFormatterAttribute](BooleanFormatterAttribute/BooleanFormatterAttribute.md)() | Initializes a new instance of the [`BooleanFormatterAttribute`](BooleanFormatterAttribute.md) class. |
-| [FalseText](BooleanFormatterAttribute/FalseText.md) { get; set; } | Gets or sets the text corresponding to falsey value. |
+| [FalseText](BooleanFormatterAttribute/FalseText.md) { get; set; } | Gets or sets the text corresponding to falsy value. |
 | [TrueText](BooleanFormatterAttribute/TrueText.md) { get; set; } | Gets or sets the text corresponding to truthy value. |
 | const [Key](BooleanFormatterAttribute/Key.md) | Formatter type key |
 

@@ -1,7 +1,7 @@
 # SqlQuery.FullTextSearchJoin method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Data](../../README.md)*
 
-MSSQL'de full text araması için gerekli join'i oluşturur.
+Creates the required join for full text search in MSSQL.
 
 ```csharp
 public SqlQuery FullTextSearchJoin(string searchTable, string searchFields, string searchQuery, 
@@ -10,16 +10,16 @@ public SqlQuery FullTextSearchJoin(string searchTable, string searchFields, stri
 
 | parameter | description |
 | --- | --- |
-| searchTable | Arama yapılacak alanları içeren tablo adı (zorunlu). |
-| searchFields | Arama yapılacak alanlar (zorunlu). |
-| searchQuery | Aranan kelime, ya da kelime grubu (zorunlu). Kelimeler virgülle ayrılmalı. |
-| searchTableAlias | Arama yapılacak tabloya, sorgunun FROM kısmında atanmış olan alias (zorunlu, ör. T0). |
-| searchTableKey | Arama yapılacak tablonun anahtar (ID) sahası (zorunlu). |
-| containsAlias | Bağlama yapılan contains table'a atanacak alias (zorunlu, ör. CT). |
+| searchTable | Table name containing the fields to be searched (required). |
+| searchFields | Fields to be searched (required). |
+| searchQuery | Searched word or phrase (required). Words must be separated by comma. |
+| searchTableAlias | Alias assigned to the table to be searched in the FROM part of the query (required, e.g. T0). |
+| searchTableKey | Key (ID) field of the table to be searched (required). |
+| containsAlias | Alias to be assigned to the joined contains table (required, e.g. CT). |
 
 ## Return Value
 
-SqlSelect nesnesinin kendisi.
+The SqlSelect object itself.
 
 ## See Also
 

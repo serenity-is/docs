@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
 ```csharp
-public abstract class PropertyItemsScript : INamedDynamicScript
+public abstract class PropertyItemsScript : IGetScriptData, INamedDynamicScript
 ```
 
 ## Public Members
@@ -16,7 +16,7 @@ public abstract class PropertyItemsScript : INamedDynamicScript
 | [Changed](PropertyItemsScript/Changed.md)() |  |
 | [CheckRights](PropertyItemsScript/CheckRights.md)(…) |  |
 | [GetScript](PropertyItemsScript/GetScript.md)() |  |
-| class [Data](PropertyItemsScript.Data.md) |  |
+| [GetScriptData](PropertyItemsScript/GetScriptData.md)() |  |
 
 ## Protected Members
 
@@ -27,5 +27,6 @@ public abstract class PropertyItemsScript : INamedDynamicScript
 
 ## See Also
 
+* interface [IGetScriptData](IGetScriptData.md)
 * interface [INamedDynamicScript](INamedDynamicScript.md)
 * **Source:** *[PropertyItemsScript.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/PropertyEditor/PropertyItemsScript.cs)*

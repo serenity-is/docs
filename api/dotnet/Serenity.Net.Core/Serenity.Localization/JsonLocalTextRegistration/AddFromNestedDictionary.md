@@ -4,8 +4,8 @@
 Adds translation from a hierarchical local text dictionary parsed from JSON file.
 
 ```csharp
-public static void AddFromNestedDictionary(IDictionary<string, JToken> nested, string prefix, 
-    string languageID, ILocalTextRegistry registry = null)
+public static void AddFromNestedDictionary(IDictionary<string, object> nested, string prefix, 
+    string languageID, ILocalTextRegistry registry)
 ```
 
 | parameter | description |

@@ -23,6 +23,7 @@
 | signature | name | description |
 | --: | --- | --- |
 | static class  | [DynamicScriptServiceCollectionExtensions](Serenity.Extensions.DependencyInjection/DynamicScriptServiceCollectionExtensions.md) |  |
+| static class  | [NodeScriptRunnerExtensions](Serenity.Extensions.DependencyInjection/NodeScriptRunnerExtensions.md) |  |
 
 ## Serenity.Navigation namespace
 
@@ -55,10 +56,10 @@
 | class  | [AuthorizeListAttribute](Serenity.Services/AuthorizeListAttribute.md) |  |
 | class  | [AuthorizeUpdateAttribute](Serenity.Services/AuthorizeUpdateAttribute.md) |  |
 | static class  | [EndpointExtensions](Serenity.Services/EndpointExtensions.md) |  |
+| class  | [FileUploadBehavior](Serenity.Services/FileUploadBehavior.md) |  |
 | class  | [HandleServiceExceptionAttribute](Serenity.Services/HandleServiceExceptionAttribute.md) |  |
-| class  | [ImageUploadBehavior](Serenity.Services/ImageUploadBehavior.md) |  |
 | class  | [JsonRequestAttribute](Serenity.Services/JsonRequestAttribute.md) |  |
-| class  | [MultipleImageUploadBehavior](Serenity.Services/MultipleImageUploadBehavior.md) |  |
+| class  | [MultipleFileUploadBehavior](Serenity.Services/MultipleFileUploadBehavior.md) |  |
 | class  | [Result&lt;TResponse&gt;](Serenity.Services/Result-1.md) |  |
 | class  | [ResultWithStatus&lt;TResponse&gt;](Serenity.Services/ResultWithStatus-1.md) |  |
 | class  | [ServiceAuthorizeAttribute](Serenity.Services/ServiceAuthorizeAttribute.md) |  |
@@ -101,6 +102,7 @@
 | interface  | [IDynamicScriptManager](Serenity.Web/IDynamicScriptManager.md) |  |
 | interface  | [IFileWatcher](Serenity.Web/IFileWatcher.md) |  |
 | interface  | [IFileWatcherFactory](Serenity.Web/IFileWatcherFactory.md) |  |
+| interface  | [IGetScriptData](Serenity.Web/IGetScriptData.md) |  |
 | interface  | [INamedDynamicScript](Serenity.Web/INamedDynamicScript.md) |  |
 | interface  | [IScriptBundleManager](Serenity.Web/IScriptBundleManager.md) |  |
 | interface  | [IScriptContent](Serenity.Web/IScriptContent.md) |  |
@@ -109,6 +111,7 @@
 | class  | [LocalTextScript](Serenity.Web/LocalTextScript.md) |  |
 | abstract class  | [LookupScript](Serenity.Web/LookupScript.md) |  |
 | class  | [LookupScriptRegistration](Serenity.Web/LookupScriptRegistration.md) |  |
+| class  | [NodeScriptRunner](Serenity.Web/NodeScriptRunner.md) |  |
 | class  | [PageAuthorizeAttribute](Serenity.Web/PageAuthorizeAttribute.md) |  |
 | abstract class  | [PropertyItemsScript](Serenity.Web/PropertyItemsScript.md) |  |
 | static class  | [RecaptchaValidation](Serenity.Web/RecaptchaValidation.md) |  |

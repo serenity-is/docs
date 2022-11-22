@@ -5,13 +5,14 @@ Creates a new instance
 
 ```csharp
 public DefaultSqlConnections(IConnectionStrings connectionStrings, 
-    IConnectionProfiler profiler = null)
+    IConnectionProfiler profiler = null, ILoggerFactory loggerFactory = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | connectionStrings | Named connection strings |
 | profiler | Profiler if any |
+| loggerFactory | Optional logger factory (to be used by static SqlHelper methods) |
 
 ## See Also
 

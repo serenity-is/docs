@@ -13,7 +13,6 @@ public class GlobFilter
 | --- | --- |
 | [GlobFilter](GlobFilter/GlobFilter.md)(…) | Creates a new GlobFilter, containing both include and exclude patterns. When "include" is null / empty, all files are included by default, unless they match a pattern in "exclude" list. When "exclude" is null, it is ignored. (2 constructors) |
 | [IsMatch](GlobFilter/IsMatch.md)(…) | Determines whether the specified path is matching this filter. |
-| static [NormalizeGlob](GlobFilter/NormalizeGlob.md)(…) | Normalizes the glob by replacing back slashes etc. |
 | static [WildcardToRegex](GlobFilter/WildcardToRegex.md)(…) | Wildcards to regex conversion. Inspired from NuGet source code. |
 
 ## See Also

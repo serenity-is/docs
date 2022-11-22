@@ -22,4 +22,3 @@ public class MultipleImageUploadBehavior : BaseSaveDeleteBehavior, IFieldBehavio
 * class [BaseSaveDeleteBehavior](../Serenity.Net.Services/BaseSaveDeleteBehavior.md)
 * interface [IFieldBehavior](../Serenity.Net.Services/IFieldBehavior.md)
 * interface [IImplicitBehavior](../Serenity.Net.Services/IImplicitBehavior.md)
-* **Source:** *[MultipleImageUploadBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Upload/MultipleImageUploadBehavior.cs)*

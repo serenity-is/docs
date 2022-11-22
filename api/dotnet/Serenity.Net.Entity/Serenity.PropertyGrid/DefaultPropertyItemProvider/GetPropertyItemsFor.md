@@ -1,15 +1,14 @@
 # DefaultPropertyItemProvider.GetPropertyItemsFor method
 **namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
-Gets the property items for specified type.
-
 ```csharp
-public IEnumerable<PropertyItem> GetPropertyItemsFor(Type type)
+public IEnumerable<PropertyItem> GetPropertyItemsFor(Type type, Func<PropertyInfo, bool> predicate)
 ```
 
 | parameter | description |
 | --- | --- |
 | type | The type. |
+| predicate |  |
 
 ## Exceptions
 

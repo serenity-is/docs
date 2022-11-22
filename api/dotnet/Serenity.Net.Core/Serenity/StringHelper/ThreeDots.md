@@ -10,7 +10,7 @@ public static string ThreeDots(this string str, int maxLength)
 | parameter | description |
 | --- | --- |
 | str | String. |
-| maxLength | Maksimum length for the resulting string. If given as 0, or *str* is shorter than this value, string returns as is. Otherwise *str* it is trimmed to be under this limit in length including "the three dots". |
+| maxLength | Maximum length for the resulting string. If given as 0, or *str* is shorter than this value, string returns as is. Otherwise *str* it is trimmed to be under this limit in length including "the three dots". |
 
 ## Return Value
 

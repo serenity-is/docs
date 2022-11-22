@@ -12,7 +12,7 @@ public interface IRowTypeRegistry
 | name | description |
 | --- | --- |
 | [AllRowTypes](IRowTypeRegistry/AllRowTypes.md) { get; } | Gets all row types. |
-| [ByConnectionKey](IRowTypeRegistry/ByConnectionKey.md)(…) | Bies the connection key. |
+| [ByConnectionKey](IRowTypeRegistry/ByConnectionKey.md)(…) | Returns row types by the connection key. |
 
 ## See Also
 

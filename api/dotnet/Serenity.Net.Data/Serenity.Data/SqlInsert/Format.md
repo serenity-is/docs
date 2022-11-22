@@ -9,7 +9,7 @@ public static string Format(string tableName, List<string> nameValuePairs)
 
 | parameter | description |
 | --- | --- |
-| tableName | Tablename (required). |
+| tableName | Table name (required). |
 | nameValuePairs | Field names and values. Must be passed in the order of `[field1, value1, field2, value2, ...., fieldN, valueN]`. It must have even number of elements. |
 
 ## Return Value

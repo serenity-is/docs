@@ -4,12 +4,12 @@
 Logs the command.
 
 ```csharp
-public static void LogCommand(string type, IDbCommand command, ILogger logger)
+public static void LogCommand(string method, IDbCommand command, ILogger logger)
 ```
 
 | parameter | description |
 | --- | --- |
-| type | The type. |
+| method | The type. |
 | command | The command. |
 | logger | Logger |
 

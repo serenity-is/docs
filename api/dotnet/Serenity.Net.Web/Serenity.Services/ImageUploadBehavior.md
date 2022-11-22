@@ -23,4 +23,3 @@ public class ImageUploadBehavior : BaseSaveDeleteBehavior, IFieldBehavior, IImpl
 * class [BaseSaveDeleteBehavior](../Serenity.Net.Services/BaseSaveDeleteBehavior.md)
 * interface [IFieldBehavior](../Serenity.Net.Services/IFieldBehavior.md)
 * interface [IImplicitBehavior](../Serenity.Net.Services/IImplicitBehavior.md)
-* **Source:** *[ImageUploadBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Upload/ImageUploadBehavior.cs)*

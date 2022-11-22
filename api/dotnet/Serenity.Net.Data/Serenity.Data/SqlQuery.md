@@ -23,7 +23,7 @@ public class SqlQuery : QueryWithParams, IFilterableQuery, IGetExpressionByName,
 | [ForJson](SqlQuery/ForJson.md)(…) | Adds a FOR JSON statement to the query. |
 | [ForXml](SqlQuery/ForXml.md)(…) | Adds a FOR XML statement to the query. |
 | [From](SqlQuery/From.md)(…) | Adds a table to the FROM statement. When it is called more than once, puts a comma between table names (cross join) (4 methods) |
-| [FullTextSearchJoin](SqlQuery/FullTextSearchJoin.md)(…) | MSSQL'de full text araması için gerekli join'i oluşturur. |
+| [FullTextSearchJoin](SqlQuery/FullTextSearchJoin.md)(…) | Creates the required join for full text search in MSSQL. |
 | [GroupBy](SqlQuery/GroupBy.md)(…) | Adds a field name or an SQL expression to the GROUP BY clause. (2 methods) |
 | [Having](SqlQuery/Having.md)(…) | Adds an SQL expression to the GROUP BY clause. |
 | [InnerJoin](SqlQuery/InnerJoin.md)(…) | Adds an inner join to the query. |

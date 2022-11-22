@@ -1,5 +1,11 @@
 # Serenity.Net.Services assembly
 
+## global namespace
+
+| signature | name | description |
+| --: | --- | --- |
+| interface  | [IImageProcessor](global/IImageProcessor.md) |  |
+
 ## Serenity namespace
 
 | signature | name | description |
@@ -200,21 +206,30 @@
 | class  | [CombinedUploadStorage](Serenity.Web/CombinedUploadStorage.md) |  |
 | class  | [CopyTemporaryFileOptions](Serenity.Web/CopyTemporaryFileOptions.md) |  |
 | class  | [CopyTemporaryFileResult](Serenity.Web/CopyTemporaryFileResult.md) |  |
+| class  | [DefaultImageProcessor](Serenity.Web/DefaultImageProcessor.md) |  |
+| class  | [DefaultUploadProcessor](Serenity.Web/DefaultUploadProcessor.md) |  |
+| class  | [DefaultUploadValidator](Serenity.Web/DefaultUploadValidator.md) |  |
 | class  | [DiskUploadStorage](Serenity.Web/DiskUploadStorage.md) |  |
 | class  | [DiskUploadStorageOptions](Serenity.Web/DiskUploadStorageOptions.md) |  |
 | static class  | [FileMetadataKeys](Serenity.Web/FileMetadataKeys.md) |  |
 | class  | [FilesToDelete](Serenity.Web/FilesToDelete.md) |  |
 | static class  | [FilesToDeleteExtensions](Serenity.Web/FilesToDeleteExtensions.md) |  |
 | class  | [FormatFilenameOptions](Serenity.Web/FormatFilenameOptions.md) |  |
+| interface  | [IDiskUploadFileSystem](Serenity.Web/IDiskUploadFileSystem.md) |  |
 | interface  | [IFilesToDelete](Serenity.Web/IFilesToDelete.md) |  |
 | class  | [ImageChecker](Serenity.Web/ImageChecker.md) |  |
 | enum  | [ImageCheckResult](Serenity.Web/ImageCheckResult.md) |  |
+| class  | [ImageEncoderParams](Serenity.Web/ImageEncoderParams.md) |  |
+| class  | [ImageFormatInfo](Serenity.Web/ImageFormatInfo.md) |  |
+| interface  | [IUploadProcessor](Serenity.Web/IUploadProcessor.md) |  |
 | interface  | [IUploadStorage](Serenity.Web/IUploadStorage.md) |  |
+| interface  | [IUploadValidator](Serenity.Web/IUploadValidator.md) |  |
 | static class  | [KnownMimeTypes](Serenity.Web/KnownMimeTypes.md) |  |
+| class  | [PhysicalDiskUploadFileSystem](Serenity.Web/PhysicalDiskUploadFileSystem.md) |  |
+| class  | [ProcessedUploadInfo](Serenity.Web/ProcessedUploadInfo.md) |  |
 | class  | [TempUploadStorage](Serenity.Web/TempUploadStorage.md) |  |
 | static class  | [ThumbnailGenerator](Serenity.Web/ThumbnailGenerator.md) |  |
 | static class  | [UploadFormatting](Serenity.Web/UploadFormatting.md) |  |
 | static class  | [UploadPathHelper](Serenity.Web/UploadPathHelper.md) |  |
-| class  | [UploadProcessor](Serenity.Web/UploadProcessor.md) |  |
 | class  | [UploadSettings](Serenity.Web/UploadSettings.md) |  |
 | static class  | [UploadStorageExtensions](Serenity.Web/UploadStorageExtensions.md) |  |

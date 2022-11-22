@@ -9,6 +9,7 @@ public interface IScriptContent
 
 | name | description |
 | --- | --- |
+| [BrotliContent](IScriptContent/BrotliContent.md) { get; } |  |
 | [CanCompress](IScriptContent/CanCompress.md) { get; } |  |
 | [CompressedContent](IScriptContent/CompressedContent.md) { get; } |  |
 | [Content](IScriptContent/Content.md) { get; } |  |

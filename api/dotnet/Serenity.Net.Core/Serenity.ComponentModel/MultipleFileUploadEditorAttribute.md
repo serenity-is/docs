@@ -5,7 +5,7 @@ Sets editor type to "MultipleImageUpload" while allowing non-image files.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
-public class MultipleFileUploadEditorAttribute : ImageUploadEditorAttribute
+public class MultipleFileUploadEditorAttribute : BaseUploadEditorAttribute
 ```
 
 ## Public Members
@@ -13,9 +13,11 @@ public class MultipleFileUploadEditorAttribute : ImageUploadEditorAttribute
 | name | description |
 | --- | --- |
 | [MultipleFileUploadEditorAttribute](MultipleFileUploadEditorAttribute/MultipleFileUploadEditorAttribute.md)() | Initializes a new instance of the [`MultipleFileUploadEditorAttribute`](MultipleFileUploadEditorAttribute.md) class. |
+| override [IsMultiple](MultipleFileUploadEditorAttribute/IsMultiple.md) { get; } |  |
 | const [Key](MultipleFileUploadEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
 * class [ImageUploadEditorAttribute](ImageUploadEditorAttribute.md)
+* class [BaseUploadEditorAttribute](BaseUploadEditorAttribute.md)
 * **Source:** *[MultipleFileUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/MultipleFileUploadEditorAttribute.cs)*

@@ -29,6 +29,7 @@ public class DiskUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
+| readonly [fileSystem-](DiskUploadStorage/fileSystem-.md) |  |
 | [FilePath](DiskUploadStorage/FilePath.md)(…) |  |
 
 ## See Also

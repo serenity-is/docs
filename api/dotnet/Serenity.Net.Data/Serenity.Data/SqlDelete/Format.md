@@ -9,7 +9,7 @@ public static string Format(string tableName, string where)
 
 | parameter | description |
 | --- | --- |
-| tableName | Tablename. |
+| tableName | Table name. |
 | where | Where part of the query. |
 
 ## Return Value

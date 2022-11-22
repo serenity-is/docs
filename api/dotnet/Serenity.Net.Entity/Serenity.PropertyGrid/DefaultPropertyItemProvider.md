@@ -12,7 +12,7 @@ public class DefaultPropertyItemProvider : IPropertyItemProvider
 | name | description |
 | --- | --- |
 | [DefaultPropertyItemProvider](DefaultPropertyItemProvider/DefaultPropertyItemProvider.md)(…) | Initializes a new instance of the [`DefaultPropertyItemProvider`](DefaultPropertyItemProvider.md) class. |
-| [GetPropertyItemsFor](DefaultPropertyItemProvider/GetPropertyItemsFor.md)(…) | Gets the property items for specified type. |
+| [GetPropertyItemsFor](DefaultPropertyItemProvider/GetPropertyItemsFor.md)(…) |  |
 
 ## See Also
 

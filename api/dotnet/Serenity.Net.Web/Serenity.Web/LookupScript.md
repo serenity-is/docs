@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
 ```csharp
-public abstract class LookupScript : DynamicScript, INamedDynamicScript
+public abstract class LookupScript : DynamicScript, IGetScriptData, INamedDynamicScript
 ```
 
 ## Public Members
@@ -16,6 +16,8 @@ public abstract class LookupScript : DynamicScript, INamedDynamicScript
 | [ScriptName](LookupScript/ScriptName.md) { get; } |  |
 | [TextField](LookupScript/TextField.md) { get; set; } |  |
 | override [GetScript](LookupScript/GetScript.md)() |  |
+| [GetScriptData](LookupScript/GetScriptData.md)() |  |
+| class [Data](LookupScript.Data.md) |  |
 
 ## Protected Members
 
@@ -27,5 +29,6 @@ public abstract class LookupScript : DynamicScript, INamedDynamicScript
 ## See Also
 
 * class [DynamicScript](DynamicScript.md)
+* interface [IGetScriptData](IGetScriptData.md)
 * interface [INamedDynamicScript](INamedDynamicScript.md)
 * **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*

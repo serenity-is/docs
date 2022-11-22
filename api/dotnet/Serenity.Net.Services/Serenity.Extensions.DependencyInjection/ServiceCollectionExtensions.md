@@ -9,8 +9,9 @@ public static class ServiceCollectionExtensions
 
 | name | description |
 | --- | --- |
-| static [AddAllTexts](ServiceCollectionExtensions/AddAllTexts.md)(…) |  |
+| static [AddBaseTexts](ServiceCollectionExtensions/AddBaseTexts.md)(…) |  |
 | static [AddCustomRequestHandlers](ServiceCollectionExtensions/AddCustomRequestHandlers.md)(…) |  |
+| static [AddJsonTexts](ServiceCollectionExtensions/AddJsonTexts.md)(…) |  |
 | static [AddProxyRequestHandlers](ServiceCollectionExtensions/AddProxyRequestHandlers.md)(…) |  |
 | static [AddServiceBehaviors](ServiceCollectionExtensions/AddServiceBehaviors.md)(…) |  |
 | static [AddServiceHandlerFactory](ServiceCollectionExtensions/AddServiceHandlerFactory.md)(…) |  |

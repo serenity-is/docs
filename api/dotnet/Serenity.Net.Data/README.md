@@ -58,6 +58,7 @@
 | interface  | [IHasCommandTimeout](Serenity.Data/IHasCommandTimeout.md) | Interfaces for types that has an CommandTimeout property that determines the default command timeout for that connection |
 | interface  | [IHasCurrentTransaction](Serenity.Data/IHasCurrentTransaction.md) | Interfaces for types that has a CurrentTransaction property of type IDbTransaction |
 | interface  | [IHasDialect](Serenity.Data/IHasDialect.md) | Interfaces for types that has a Dialect property of type ISqlDialect |
+| interface  | [IHasLogger](Serenity.Data/IHasLogger.md) | Interfaces for types that has an Logger |
 | interface  | [IHasOpenedOnce](Serenity.Data/IHasOpenedOnce.md) | Interfaces for types that has an OpenedOnce property that determines if the connection has opened at least once |
 | interface  | [IHaveJoins](Serenity.Data/IHaveJoins.md) | Interface for row type that provides a list of its joins |
 | interface  | [IMustRemoveT0](Serenity.Data/IMustRemoveT0.md) | Obsolete interface |
@@ -148,7 +149,7 @@
 | class  | [SetFieldFlagsAttribute](Serenity.Data.Mapping/SetFieldFlagsAttribute.md) | Used to turn on (include) or turn off (exclude) field flags. |
 | class  | [SizeAttribute](Serenity.Data.Mapping/SizeAttribute.md) | Determines size (max length or numeric precision for) for the field. |
 | class  | [TableNameAttribute](Serenity.Data.Mapping/TableNameAttribute.md) | Determines table name for the row. |
-| class  | [TextualFieldAttribute](Serenity.Data.Mapping/TextualFieldAttribute.md) | Determines textual field for this field. This is placed on FK's and specifies which field in joined table (view fields in this row that originates from foreign table) should be used for display / filtering. |
+| class  | [TextualFieldAttribute](Serenity.Data.Mapping/TextualFieldAttribute.md) | Determines textual field for this field. This is placed on foreign keys and specifies which field in joined table (view fields in this row that originates from foreign table) should be used for display / filtering. |
 | class  | [UniqueAttribute](Serenity.Data.Mapping/UniqueAttribute.md) | Defines a unique constraint on the field |
 | class  | [UniqueConstraintAttribute](Serenity.Data.Mapping/UniqueConstraintAttribute.md) | Adds a unique constraint check to the row. |
 | class  | [UpdatableExtensionAttribute](Serenity.Data.Mapping/UpdatableExtensionAttribute.md) | Marks the JOIN as an updatable extension. |

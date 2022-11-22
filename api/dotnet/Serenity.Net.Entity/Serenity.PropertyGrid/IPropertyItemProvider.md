@@ -11,7 +11,7 @@ public interface IPropertyItemProvider
 
 | name | description |
 | --- | --- |
-| [GetPropertyItemsFor](IPropertyItemProvider/GetPropertyItemsFor.md)(…) | Gets the property items for. |
+| [GetPropertyItemsFor](IPropertyItemProvider/GetPropertyItemsFor.md)(…) | Gets the property items for specified type |
 
 ## See Also
 

@@ -9,7 +9,7 @@ public SqlQuery RightJoin(IAlias alias, ICriteria onCriteria)
 
 | parameter | description |
 | --- | --- |
-| alias | The alias with tablename/alias name. |
+| alias | The alias with table name/alias name. |
 | onCriteria | The ON criteria. |
 
 ## Exceptions

@@ -1,7 +1,7 @@
 # IUserAccessor interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction to access current user
+Abstraction to access the current user
 
 ```csharp
 public interface IUserAccessor

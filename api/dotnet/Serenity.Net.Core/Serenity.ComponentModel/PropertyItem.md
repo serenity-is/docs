@@ -14,7 +14,7 @@ public class PropertyItem
 | [PropertyItem](PropertyItem/PropertyItem.md)() | Initializes a new instance of the [`PropertyItem`](PropertyItem.md) class. |
 | [Alignment](PropertyItem/Alignment.md) { get; set; } | Gets or sets the alignment of the column. Only applies to column, not editors. |
 | [AllowHide](PropertyItem/AllowHide.md) { get; set; } | Gets or sets the allow hide flag for columns. |
-| [Category](PropertyItem/Category.md) { get; set; } | Gets or sets the category of the property in form. Only meaningfull for forms. |
+| [Category](PropertyItem/Category.md) { get; set; } | Gets or sets the category of the property in form. Only meaningful for forms. |
 | [Collapsed](PropertyItem/Collapsed.md) { get; set; } | Gets or sets the initial collapsed status of the category this property is in. |
 | [Collapsible](PropertyItem/Collapsible.md) { get; set; } | Gets or sets the collapsible flag for the category this property is in. Should only be set for the first field in the category. |
 | [CssClass](PropertyItem/CssClass.md) { get; set; } | Gets or sets the CSS class that should be applied to the grid column, e.g. data cells for this property. Only used in grids. |

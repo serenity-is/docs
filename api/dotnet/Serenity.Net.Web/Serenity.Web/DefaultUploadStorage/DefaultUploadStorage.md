@@ -3,10 +3,11 @@
 
 ```csharp
 public DefaultUploadStorage(IOptions<UploadSettings> options, 
-    IWebHostEnvironment hostEnvironment = null)
+    IWebHostEnvironment hostEnvironment = null, IDiskUploadFileSystem fileSystem = null)
 ```
 
 ## See Also
 
 * class [UploadSettings](../Serenity.Net.Services/../UploadSettings.md)
+* interface [IDiskUploadFileSystem](../Serenity.Net.Services/../IDiskUploadFileSystem.md)
 * class [DefaultUploadStorage](../DefaultUploadStorage.md)

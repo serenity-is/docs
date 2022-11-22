@@ -9,7 +9,7 @@ public SqlUpdate(string tableName)
 
 | parameter | description |
 | --- | --- |
-| tableName | Tablename (required). |
+| tableName | Table name (required). |
 
 ## See Also
 

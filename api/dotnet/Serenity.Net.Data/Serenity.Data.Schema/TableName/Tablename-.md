@@ -1,7 +1,7 @@
 # TableName.Tablename- property
 **namespace:** *[Serenity.Data.Schema](../../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Data](../../README.md)*
 
-Gets the tablename containg schema name dot table.
+Gets the table name containing schema name dot table.
 
 ```csharp
 public string Tablename- { get; }
@@ -9,7 +9,7 @@ public string Tablename- { get; }
 
 ## Property Value
 
-The tablename.
+The table name.
 
 ## See Also
 

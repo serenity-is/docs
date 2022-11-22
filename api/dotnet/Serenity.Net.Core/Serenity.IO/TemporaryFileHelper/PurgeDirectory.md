@@ -17,7 +17,7 @@ public static void PurgeDirectory(string directoryToClean, TimeSpan autoExpireTi
 
 ## Remarks
 
-If any errors occur during cleanup, this doesn't raise an exception and ignored. Other errors might raise an exception. As errors are ignored, method can't gurantee that less than specified number of files will be in the folder after it ends.
+If any errors occur during cleanup, this doesn't raise an exception and ignored. Other errors might raise an exception. As errors are ignored, method can't guarantee that less than specified number of files will be in the folder after it ends.
 
 ## See Also
 

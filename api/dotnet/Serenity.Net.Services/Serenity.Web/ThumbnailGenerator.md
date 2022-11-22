@@ -9,7 +9,6 @@ public static class ThumbnailGenerator
 
 | name | description |
 | --- | --- |
-| static [Generate](ThumbnailGenerator/Generate.md)(…) |  |
 | static [GenerateEmptyBitmap](ThumbnailGenerator/GenerateEmptyBitmap.md)(…) |  |
 
 ## See Also

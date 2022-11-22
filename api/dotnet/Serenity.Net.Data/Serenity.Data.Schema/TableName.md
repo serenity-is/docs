@@ -15,7 +15,7 @@ public class TableName
 | [IsView](TableName/IsView.md) { get; set; } | Gets or sets a value indicating whether this instance is view. |
 | [Schema](TableName/Schema.md) { get; set; } | Gets or sets the schema. |
 | [Table](TableName/Table.md) { get; set; } | Gets or sets the table. |
-| [Tablename-](TableName/Tablename-.md) { get; } | Gets the tablename containg schema name dot table. |
+| [Tablename-](TableName/Tablename-.md) { get; } | Gets the table name containing schema name dot table. |
 
 ## See Also
 

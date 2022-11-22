@@ -5,7 +5,7 @@ Wraps a connection to add current transaction and dialect support.
 
 ```csharp
 public class WrappedConnection : IDbConnection, IHasActualConnection, IHasCommandTimeout, 
-    IHasCurrentTransaction, IHasDialect, IHasOpenedOnce
+    IHasCurrentTransaction, IHasDialect, IHasLogger, IHasOpenedOnce
 ```
 
 ## Public Members
@@ -20,6 +20,7 @@ public class WrappedConnection : IDbConnection, IHasActualConnection, IHasComman
 | [CurrentTransaction](WrappedConnection/CurrentTransaction.md) { get; } | Gets the current transaction. |
 | [Database](WrappedConnection/Database.md) { get; } | Gets the name of the current database or the database to be used after a connection is opened. |
 | [Dialect](WrappedConnection/Dialect.md) { get; set; } | Gets or sets the SQL dialect. |
+| [Logger](WrappedConnection/Logger.md) { get; } | Gets the logger instance for this connection if any |
 | [OpenedOnce](WrappedConnection/OpenedOnce.md) { get; } | Gets a value indicating whether the connection was opened once. |
 | [State](WrappedConnection/State.md) { get; } | Gets the current state of the connection. |
 | [BeginTransaction](WrappedConnection/BeginTransaction.md)() | Begins a database transaction. |
@@ -36,5 +37,6 @@ public class WrappedConnection : IDbConnection, IHasActualConnection, IHasComman
 * interface [IHasCommandTimeout](IHasCommandTimeout.md)
 * interface [IHasCurrentTransaction](IHasCurrentTransaction.md)
 * interface [IHasDialect](IHasDialect.md)
+* interface [IHasLogger](IHasLogger.md)
 * interface [IHasOpenedOnce](IHasOpenedOnce.md)
 * **Source:** *[WrappedConnection.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Data/Connections/WrappedConnection.cs)*

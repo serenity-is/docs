@@ -10,6 +10,7 @@ public class ScriptContent : IScriptContent
 | name | description |
 | --- | --- |
 | [ScriptContent](ScriptContent/ScriptContent.md)(…) |  |
+| [BrotliContent](ScriptContent/BrotliContent.md) { get; } |  |
 | [CanCompress](ScriptContent/CanCompress.md) { get; } |  |
 | [CompressedContent](ScriptContent/CompressedContent.md) { get; } |  |
 | [Content](ScriptContent/Content.md) { get; } |  |

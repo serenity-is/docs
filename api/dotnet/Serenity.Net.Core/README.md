@@ -11,6 +11,8 @@
 | static class  | [DistributedCacheExtensions](Serenity/DistributedCacheExtensions.md) | Contains extensions methods to work with IDistributedCache provider. |
 | static class  | [EnumMapper](Serenity/EnumMapper.md) | Contains Enum mapping and other helper functions |
 | static class  | [ExceptionExtensions](Serenity/ExceptionExtensions.md) | Exception data extensions |
+| static class  | [FileSystemExtensions](Serenity/FileSystemExtensions.md) | IFileSystem extensions to reduce dependency on System.IO, in case these methods are also added to IFileSystem in the future |
+| interface  | [IFileSystem](Serenity/IFileSystem.md) | Base file system for abstracting physical disk access |
 | interface  | [INotLoggedException](Serenity/INotLoggedException.md) | An exception that should not be logged. |
 | static class  | [Invariants](Serenity/Invariants.md) | Invariant culture related constants and formats. |
 | interface  | [IServiceResolver&lt;TService&gt;](Serenity/IServiceResolver-1.md) | A generic version of IServiceProvider which resolves a service on demand. |
@@ -23,6 +25,7 @@
 | class  | [NullExceptionLogger](Serenity/NullExceptionLogger.md) | Null exception logger that logs nothing |
 | class  | [NullTextLocalizer](Serenity/NullTextLocalizer.md) | Null text localizer which returns null for all keys |
 | static class  | [PathHelper](Serenity/PathHelper.md) | Contains Path related helper functions. |
+| class  | [PhysicalFileSystem](Serenity/PhysicalFileSystem.md) | Physical file sytem |
 | static class  | [ReflectionExtensions](Serenity/ReflectionExtensions.md) | Reflection extensions |
 | static class  | [StringHelper](Serenity/StringHelper.md) | This static class contains some helper functions that operate on String objects. |
 | enum  | [SummaryType](Serenity/SummaryType.md) | Enumeration of aggregate function types for a column |
@@ -31,6 +34,7 @@
 | class  | [TwoLevelCache](Serenity/TwoLevelCache.md) | Contains helper functions to use local and distributed cache in sync with optional cache invalidation. |
 | static class  | [TwoLevelCacheExtensions](Serenity/TwoLevelCacheExtensions.md) | Contains extension functions to use local and distributed cache in sync with optional cache invalidation. |
 | static class  | [UriHelper](Serenity/UriHelper.md) | Contains URI related helper functions. |
+| struct  | [ValueStopwatch](Serenity/ValueStopwatch.md) | A value stopwatch |
 
 ## Serenity.Abstractions namespace
 
@@ -46,7 +50,7 @@
 | interface  | [ITransientGrantor](Serenity.Abstractions/ITransientGrantor.md) | Interface for permission services that supports granting permissions temporarily |
 | interface  | [ITwoLevelCache](Serenity.Abstractions/ITwoLevelCache.md) | An abstraction for a combination of in memory and distributed cache. |
 | interface  | [ITypeSource](Serenity.Abstractions/ITypeSource.md) | Abstraction for type source which is used as an extensibility point for Serenity applications |
-| interface  | [IUserAccessor](Serenity.Abstractions/IUserAccessor.md) | Abstraction to access current user |
+| interface  | [IUserAccessor](Serenity.Abstractions/IUserAccessor.md) | Abstraction to access the current user |
 | interface  | [IUserRetrieveService](Serenity.Abstractions/IUserRetrieveService.md) | User definition retrieve service abstraction |
 | static class  | [TypeSourceExtensions](Serenity.Abstractions/TypeSourceExtensions.md) | Type source extension methods |
 
@@ -61,6 +65,7 @@
 | class  | [AnnotationTypeAttribute](Serenity.ComponentModel/AnnotationTypeAttribute.md) | Declares that the type with this attribute is an annotation type for another type, e.g. it contains attributes for the other type and its properties. This is mainly used to separate dependencies between rows and UI related properties like editor types etc. |
 | class  | [AsyncLookupEditorAttribute](Serenity.ComponentModel/AsyncLookupEditorAttribute.md) | Indicates that the target property should use a "Lookup" editor with "async" set to true. |
 | class  | [BasedOnRowAttribute](Serenity.ComponentModel/BasedOnRowAttribute.md) | An attribute that indicates this type is based on another row type. Used with form, columns etc. types to map their properties to corresponding property in a row, so that they inherit attributes. |
+| abstract class  | [BaseUploadEditorAttribute](Serenity.ComponentModel/BaseUploadEditorAttribute.md) | Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in row, otherwise your files will stay in temporary directory. |
 | class  | [BooleanEditorAttribute](Serenity.ComponentModel/BooleanEditorAttribute.md) | Indicates that the target property should use a "Boolean" editor. |
 | class  | [BooleanFilteringAttribute](Serenity.ComponentModel/BooleanFilteringAttribute.md) | Sets filtering type to "Boolean" |
 | class  | [BooleanFormatterAttribute](Serenity.ComponentModel/BooleanFormatterAttribute.md) | Sets formatting type to "Boolean" |
@@ -124,6 +129,13 @@
 | class  | [InsertableAttribute](Serenity.ComponentModel/InsertableAttribute.md) | Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag. |
 | class  | [IntegerEditorAttribute](Serenity.ComponentModel/IntegerEditorAttribute.md) | Indicates that the target property should use a "Integer" editor. |
 | class  | [IntegerFilteringAttribute](Serenity.ComponentModel/IntegerFilteringAttribute.md) | Indicates that property should use integer type of filtering |
+| interface  | [IUploadEditor](Serenity.ComponentModel/IUploadEditor.md) | Runs FileUploadBehavior or MultipleFileUploadBehavior behaviors. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in row, otherwise your files will stay in temporary directory. |
+| interface  | [IUploadFileConstraints](Serenity.ComponentModel/IUploadFileConstraints.md) | Constraints of the uploaded file size. |
+| interface  | [IUploadFileOptions](Serenity.ComponentModel/IUploadFileOptions.md) | Upload options related to the file name and encoding |
+| interface  | [IUploadImageContrains](Serenity.ComponentModel/IUploadImageContrains.md) | Contstraints for the uploaded image. |
+| interface  | [IUploadImageOptions](Serenity.ComponentModel/IUploadImageOptions.md) | Options for the uploaded image and thumbnails |
+| interface  | [IUploadOptions](Serenity.ComponentModel/IUploadOptions.md) | Marker interface for all upload options |
+| class  | [JsonLocalTextAssetsAttribute](Serenity.ComponentModel/JsonLocalTextAssetsAttribute.md) | Registers a folder with json local text files packed as static web assets for the assembly |
 | class  | [LabelWidthAttribute](Serenity.ComponentModel/LabelWidthAttribute.md) | Determines label with of target property, and optionally the properties following it until another of this attribute is used. |
 | class  | [LocalTextPrefixAttribute](Serenity.ComponentModel/LocalTextPrefixAttribute.md) | Sets local text prefix for the row. |
 | class  | [LookupEditorAttribute](Serenity.ComponentModel/LookupEditorAttribute.md) | Indicates that the target property should use a "Lookup" editor. |
@@ -150,6 +162,7 @@
 | class  | [PasswordEditorAttribute](Serenity.ComponentModel/PasswordEditorAttribute.md) | Indicates that the target property should use a "Password" editor. |
 | class  | [PlaceholderAttribute](Serenity.ComponentModel/PlaceholderAttribute.md) | Sets a placeholder for a form field. Placeholder text is shown inside the editor when its value is empty. Only editors using basic inputs and Select2 editor supports this. |
 | class  | [PropertyItem](Serenity.ComponentModel/PropertyItem.md) | Corresponds to a property item (e.g. a field in property grid with a label and editor, or a column specification in a grid) |
+| class  | [PropertyItemsData](Serenity.ComponentModel/PropertyItemsData.md) | The data format of a property items script (form or columns) |
 | class  | [QuarterWidthAttribute](Serenity.ComponentModel/QuarterWidthAttribute.md) | Marks form field with "col-lg-3 col-sm-6" css class, which makes it allocate half of form row on device widths &gt;= 768 (e.g. ipad), and quarter on device widths &gt;= 1200px (desktop) |
 | class  | [QuickFilterAttribute](Serenity.ComponentModel/QuickFilterAttribute.md) | Indicates that this property should have a quick filter on grid. |
 | class  | [QuickFilterOptionAttribute](Serenity.ComponentModel/QuickFilterOptionAttribute.md) | Add an option to the quick filtering. |
@@ -176,6 +189,7 @@
 | class  | [TimeEditorAttribute](Serenity.ComponentModel/TimeEditorAttribute.md) | Indicates that the target property should use a "Time" editor. |
 | class  | [TwoThirdWidthAttribute](Serenity.ComponentModel/TwoThirdWidthAttribute.md) | Marks form field with "col-md-8" css class, which makes it allocate two third of form row on device widths &gt;= 992px (e.g. medium desktop) |
 | class  | [UpdatableAttribute](Serenity.ComponentModel/UpdatableAttribute.md) | Controls if this field is editable in update record mode. When used with fields, turns on or off the updatable flag. |
+| class  | [UploadOptions](Serenity.ComponentModel/UploadOptions.md) | Set of default upload options |
 | class  | [URLEditorAttribute](Serenity.ComponentModel/URLEditorAttribute.md) | Indicates that the target property should use a "Url" editor. |
 | class  | [UrlFormatterAttribute](Serenity.ComponentModel/UrlFormatterAttribute.md) | Sets formatting type to "Url" |
 | class  | [VisibleAttribute](Serenity.ComponentModel/VisibleAttribute.md) | Controls initial visibility of a column / form field. |
@@ -227,7 +241,7 @@
 | static class  | [JsonLocalTextRegistration](Serenity.Localization/JsonLocalTextRegistration.md) | Contains helper methods for registration of local texts in hierarchical/dictionary formatted JSON files. |
 | class  | [LocalTextRegistry](Serenity.Localization/LocalTextRegistry.md) | Default ILocalTextRegistry implementation. |
 | static class  | [NestedLocalTextRegistration](Serenity.Localization/NestedLocalTextRegistration.md) | Contains helper methods for registration of local texts in nested static classes. Nested static contains LocalText objects with actual translations as keys. This class locates them (with NestedLocalTextsAttribute at outermost class), determines keys by path from outermost to nested class name, replaces existing LocalText instance with a InitializedLocalText instance containing this generated key and initial translation, and registers this translation in ILocalTextRegistry provider. |
-| static class  | [NestedPermissionKeyRegistration](Serenity.Localization/NestedPermissionKeyRegistration.md) | Contains helper methods for registration of permission keys in nested static classes. These classes contains string contants containing permission keys. Display name for permission keys can be set by [DisplayName] attribute. Display name for groups can be set by [Description] attribute on classes themselves. For group display name to work, all constants in a class must start with same group prefix. |
+| static class  | [NestedPermissionKeyRegistration](Serenity.Localization/NestedPermissionKeyRegistration.md) | Contains helper methods for registration of permission keys in nested static classes. These classes contains string constants containing permission keys. Display name for permission keys can be set by [DisplayName] attribute. Display name for groups can be set by [Description] attribute on classes themselves. For group display name to work, all constants in a class must start with same group prefix. |
 
 ## Serenity.Plugins namespace
 

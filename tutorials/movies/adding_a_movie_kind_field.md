@@ -6,25 +6,21 @@ As we didn't add it while creating the Movie table, now we'll write another migr
 
 > Don't modify existing migrations, they won't run again.
 
-Create another migration file under *Migrations/DefaultDB/ DefaultDB_20160519_145500_MovieKind.cs*:
+Create another migration file under *Migrations/DefaultDB/ DefaultDB_20221114_182500_MovieKind.cs*:
 
 ```cs
 using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160519_145500)]
-    public class DefaultDB_20160519_145500_MovieKind : Migration
+    [Migration(20221114_182500)]
+    public class DefaultDB_20221114_182500_MovieKind : AutoReversingMigration
     {
         public override void Up()
         {
             Alter.Table("Movie").InSchema("mov")
                 .AddColumn("Kind").AsInt32().NotNullable()
                     .WithDefaultValue(1);
-        }
-
-        public override void Down()
-        {
         }
     }
 }
@@ -70,19 +66,19 @@ public Int32? Runtime
 [DisplayName("Kind"), NotNull]
 public MovieKind? Kind
 {
-    get => (MovieKind?)fields.Kind[this];
-    set => fields.Kind[this] = (Int32?)value;
+    get => fields.Kind[this];
+    set => fields.Kind[this] = value;
 }
 ```
 
-We also need to declare a Int32Field object which is required for Serenity entity system. On the bottom of MovieRow.cs locate *RowFields* class and modify it to add *Kind* field after the *Runtime* field:
+We also need to declare a EnumField<MovieKind> object which is required for Serenity entity system. On the bottom of MovieRow.cs locate *RowFields* class and modify it to add *Kind* field after the *Runtime* field:
 
 ```cs
 public class RowFields : RowFieldsBase
 {
     // ...
     public Int32Field Runtime;
-    public Int32Field Kind;
+    public EnumField<MovieKind> Kind;
 }
 ```
 
@@ -143,8 +139,8 @@ To add a default value for *Kind* property, add a *DefaultValue* attribute on _M
 [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
 public MovieKind? Kind
 {
-    get => (MovieKind?)fields.Kind[this];
-    set => fields.Kind[this] = (Int32?)value;
+    get => fields.Kind[this];
+    set => fields.Kind[this] = value;
 }
 ```
 

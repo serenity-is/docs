@@ -9,15 +9,15 @@ For this, we need a M-N mapping table that will let us link any movie to multipl
 
 As usual, we start with a migration:
 
-*Migrations/DefaultDB/ DefaultDB_20160528_115400_MovieGenres.cs:*
+*Migrations/DefaultDB/DefaultDB_20221115_140500_MovieGenres.cs:*
 
 ```cs
 using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160528_115400)]
-    public class DefaultDB_20160528_115400_MovieGenres : Migration
+    [Migration(20221115_140500)]
+    public class DefaultDB_20221115_140500_MovieGenres : Migration
     {
         public override void Up()
         {
@@ -25,10 +25,10 @@ namespace MovieTutorial.Migrations.DefaultDB
                 .WithColumn("MovieGenreId").AsInt32()
                     .Identity().PrimaryKey().NotNullable()
                 .WithColumn("MovieId").AsInt32().NotNullable()
-                    .ForeignKey("FK_MovieGenres_MovieId", 
+                    .ForeignKey("FK_MovieGenres_MovieId",
                         "mov", "Movie", "MovieId")
                 .WithColumn("GenreId").AsInt32().NotNullable()
-                    .ForeignKey("FK_MovieGenres_GenreId", 
+                    .ForeignKey("FK_MovieGenres_GenreId",
                         "mov", "Genre", "GenreId");
 
             Execute.Sql(
@@ -132,8 +132,8 @@ As one movie might have multiple genres now, instead of a Int32 property, we nee
 [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
 public MovieKind? Kind
 {
-    get => (MovieKind?)fields.Kind[this];
-    set => fields.Kind[this] = (Int32?)value;
+    get => fields.Kind[this];
+    set => fields.Kind[this] = value;
 }
 
 [DisplayName("Genres")]
@@ -148,7 +148,7 @@ public List<Int32> GenreList
 public class RowFields : RowFieldsBase
 {
     //...
-    public Int32Field Kind;
+    public EnumField<MovieKind> Kind;
     public ListField<Int32> GenreList;
 ```
 
@@ -230,32 +230,35 @@ We would prefer genre names instead of Genre IDs, so it's clear that we need to 
 It's time to write a SlickGrid column formatter. Create file *GenreListFormatter.ts* next to *MovieGrid.ts*:
 
 ```ts
-namespace MovieTutorial.MovieDB {
+import { Decorators, Formatter } from "@serenity-is/corelib";
+import { htmlEncode } from "@serenity-is/corelib/q";
+import { FormatterContext } from "@serenity-is/sleekgrid";
+import { GenreRow } from "../../ServerTypes/MovieDB";
 
-    @Serenity.Decorators.registerFormatter()
-    export class GenreListFormatter implements Slick.Formatter {
-        format(ctx: Slick.FormatterContext) {
-            let idList = ctx.value as number[];
-            if (!idList || !idList.length)
-                return "";
+@Decorators.registerFormatter("MovieTutorial.MovieDB.GenreListFormatter")
+export class GenreListFormatter implements Formatter {
+    format(ctx: FormatterContext) {
+        let idList = ctx.value as number[];
+        if (!idList || !idList.length)
+            return "";
 
-            let byId = GenreRow.getLookup().itemById;
+        let byId = GenreRow.getLookup().itemById;
 
-            return idList.map(x => {
-                let g = byId[x];
-                if (!g)
-                    return x.toString();
+        return idList.map(x => {
+            let g = byId[x];
+            if (!g)
+                return x.toString();
 
-                return Q.htmlEncode(g.Name);
-            }).join(", ");
-        }
+            return htmlEncode(g.Name);
+        }).join(", ");
     }
 }
+
 ```
 
-Here we define a new formatter, *GenreListFormatter* and register it with Serenity type system, using *@Serenity.Decorators.registerFormatter* decorator. Decorators are similar to .NET attributes.
+Here we define a new formatter, *GenreListFormatter* and register it with Serenity type system, using *@Decorators.registerFormatter* decorator. Decorators are similar to .NET attributes.
 
-All formatters should implement Slick.Formatter interface, which has a *format* method that takes a *ctx* parameter of type *Slick.FormatterContext*.
+All formatters should implement Formatter interface, which has a *format* method that takes a *ctx* parameter of type *FormatterContext*.
 
 *ctx*, which is the formatting context, is an object with several members. One of them is *value* that contains the column value for current grid row/column being formatted.
 
@@ -294,7 +297,7 @@ if (!g)
 If we could find the genre row, corresponding to this ID, we return its Name value. We should HTML encode the genre name, just in case it contains invalid HTML characters, like `<`, `>` or `&`.
 
 ```ts
-return Q.htmlEncode(g.Name);
+return htmlEncode(g.Name);
 ```
 
 > We could also write a generic formatter that works with any type of lookup list, but it's beyond scope of this tutorial.

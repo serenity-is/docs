@@ -11,7 +11,7 @@ We first need to open a command prompt at project folder. Right click *MovieTuto
 
 Click *File* menu in file explorer, and click *Open Windows Powershell* or *Open Command Prompt*.
 
-> You may also install this extension (https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine) to easily open a command line next time. I can't understand why there is still not such an option in Visual Studio itself.
+> If you are using Visual Studio 2022, right click on project and select "Open in Terminal".
 
 Make sure you are at `MovieTutorial.Web` directory.
 
@@ -23,13 +23,13 @@ Type `dotnet sergen g` to open Sergen code generation UI (console).
 
 Sergen will list connections in appsettings.json file.
 
-You can use TAB completion, e.g. type *D* and press *TAB* to complete *Default*.
+You can use up-down arrow keys to navigate. Select *Default* connection and press Enter.
 
 After pressing Enter you'll get a list of tables in that database:
 
 ![Dotnet Sergen G](img/dotnetsergencon.png)
 
-Clear `dbo.` using backspace, and type `mov.Movie` or type `m` and use TAB completion to select `mov.Movie`, then press *ENTER*.
+Navigate using arrow keys and select *mov.Movie* table by pressing Space then press Enter to accept.
 
 Next, Sergen will ask for a module name, enter *MovieDB*.
 
@@ -72,11 +72,11 @@ Leave permission as *Administration:General* and press enter again.
 >
 >Our Movie page will be only used by administrative users (or maybe later content moderators) so let's leave it as *Administration:General* for now. By default, in Serene template, only the *admin* user has this permission
 
-Next, Sergen will ask you which files to generate, leave default **RSUC** option (e.g. Row, Service, User Interface and Custom) and press ENTER last time.
+Next, Sergen will ask you which files to generate, select **All** option (e.g. Row, Repository & Service, User Interface and Custom) and press ENTER last time.
 
-> If you don't need UI for some entity, just type **RS**. 
+> If you don't need UI for some entity, just select **Row** and **Repository & Service**. 
 >
-> If you just want an entity class, and not request handlers / service access, type only **R**.
+> If you just want an entity class, and not request handlers / service access, select only **Row**.
 
 Now you can quit command prompt, and return back to Visual Studio (or Notepad :)
 

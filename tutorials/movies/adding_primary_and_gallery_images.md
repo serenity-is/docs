@@ -7,8 +7,8 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20160603_205900)]
-    public class DefaultDB_20160603_205900_PersonMovieImages : Migration
+    [Migration(20221122_115100)]
+    public class DefaultDB_20221122_115100_PersonMovieImages : AutoReversingMigration
     {
         public override void Up()
         {
@@ -19,10 +19,6 @@ namespace MovieTutorial.Migrations.DefaultDB
             Alter.Table("Movie").InSchema("mov")
                 .AddColumn("PrimaryImage").AsString(100).Nullable()
                 .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
-        }
-
-        public override void Down()
-        {
         }
     }
 }
@@ -101,7 +97,7 @@ Here we specify that these fields will be handled by *ImageUploadEditor* and *Mu
 
 FilenameFormat specifies the naming of uploaded files. For example, Person primary image will be uploaded to a folder under *App_Data/upload/Person/PrimaryImage/*.
 
-> You may change upload root (*App_Data/upload*) to anything you like by modifying  *UploadSettings* appSettings key in web.config.
+> You may change upload root (*App_Data/upload*) to anything you like by modifying  *UploadSettings* appSettings key in appsetttings.json.
 
 `~` at the end of FilenameFormat is a shortcut for the automatic naming scheme `{1:00000}/{0:00000000}_{2}`.
 
@@ -129,14 +125,17 @@ namespace MovieTutorial.MovieDB.Forms
     //...
     public class PersonForm
     {
-        public String Firstname { get; set; }
-        public String Lastname { get; set; }
+        [Tab("Person")]
+        public string FirstName { get; set; }
+        public string Lastname { get; set; }
         public String PrimaryImage { get; set; }
         public String GalleryImages { get; set; }
         public DateTime BirthDate { get; set; }
-        public String BirthPlace { get; set; }
+        public string BirthPlace { get; set; }
         public Gender Gender { get; set; }
-        public Int32 Height { get; set; }
+        public int Height { get; set; }
+        [Tab("Movies"), IgnoreName, PersonMovieGrid, LabelWidth("0")]
+        public string MoviesGrid { get; set; }
     }
 }
 ```
@@ -180,6 +179,23 @@ This is what we get now:
 
 > ImageUploadEditor stores file name directly in a string field, while MultipleImageUpload editor stores file names in a string field with JSON array format.
 
+### Use form as a panel
+
+As you can see in previous picture we have too much properties now. Lets turn this form to a panel.
+
+Add *panel* decorator to PersonDialog.ts:
+
+```ts
+//...
+
+@Decorators.registerClass("MovieTutorial.MovieDB.PersonDialog")
+@Decorators.panel()
+export class PersonDialog extends EntityDialog<PersonRow, any> {
+    //...
+}
+```
+
+![Person dialog as panel](img/mdb_person_panel.png)
 
 ### Removing Northwind and Other Samples
 

@@ -144,7 +144,7 @@ Now press F5 to run your application and create Movie table in default database.
 
 Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\MsSqlLocalDB*.
 
-> If you didn't install LocalDB yet, download it from [here](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16).
+> If you didn't install LocalDB yet, download it from [here](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb).
 
 > You could also use another SQL server instance, just change the connection string to target server and remove the migration safety check.
 

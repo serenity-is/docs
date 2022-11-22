@@ -135,7 +135,7 @@ public class RowFields : RowFieldsBase
 }
 ```
 
-For consistency, change type of Gender property in PersonForm.cs and PersonColumns.cs from Int32 to Gender.
+For consistency, change type of Gender property in PersonForm.cs and PersonColumns.cs from int to Gender.
 
 
 ### Rebuilding and auto transformation
@@ -161,14 +161,14 @@ namespace MovieTutorial.MovieDB
     {
         //... remove QuickSearch and NameProperty from FirstName
         [DisplayName("First Name"), Size(50), NotNull]
-        public String FirstName
+        public string FirstName
         {
             get => fields.FirstName[this];
             set => fields.FirstName[this] = value;
         }
 
         [DisplayName("Lastname"), Size(50), NotNull]
-        public String Lastname
+        public string Lastname
         {
             get => fields.Lastname[this];
             set => fields.Lastname[this] = value;
@@ -177,7 +177,7 @@ namespace MovieTutorial.MovieDB
         //change NameField to Fullname
         [DisplayName("Full Name"),
             Expression("(t0.FirstName + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
-        public String Fullname
+        public string Fullname
         {
             get => fields.Fullname[this];
             set => fields.Fullname[this] = value;
@@ -379,13 +379,13 @@ namespace MovieTutorial.MovieDB.Forms
     //...
     public class MovieForm
     {
-        public String Title { get; set; }
+        public string Title { get; set; }
         [TextAreaEditor(Rows = 3)]
-        public String Description { get; set; }
+        public string Description { get; set; }
         [MovieCastEditor, IgnoreName]
         public List<MovieCastRow> CastList { get; set; }
         [TextAreaEditor(Rows = 8)]
-        public String Storyline { get; set; }
+        public string Storyline { get; set; }
         //...
     }
 }
@@ -484,8 +484,8 @@ namespace MovieTutorial.MovieDB.Forms
     [BasedOnRow(typeof(Entities.MovieCastRow), CheckNames = true)]
     public class MovieCastForm
     {
-        public Int32 PersonId { get; set; }
-        public String Character { get; set; }
+        public int PersonId { get; set; }
+        public string Character { get; set; }
     }
 }
 ```
@@ -505,7 +505,7 @@ public sealed class MovieCastRow : Row<MovieCastRow.RowFields>, IIdRow, INameRow
     [DisplayName("Actor/Actress"), NotNull, ForeignKey("[mov].[Person]", "PersonId")]
     [LeftJoin("jPerson"), TextualField("PersonFirstName")]
     [LookupEditor(typeof(PersonRow))]
-    public Int32? PersonId
+    public int? PersonId
     {
         get => fields.PersonId[this];
         set => fields.PersonId[this] = value;
@@ -570,14 +570,14 @@ namespace MovieTutorial.MovieDB
         // ...
         
         [DisplayName("Person First Name"), Expression("jPerson.[FirstName]")]
-        public String PersonFirstName
+        public string PersonFirstName
         {
             get => fields.PersonFirstName[this];
             set => fields.PersonFirstName[this] = value;
         }
 
         [DisplayName("Person Lastname"), Expression("jPerson.[Lastname]")]
-        public String PersonLastname
+        public string PersonLastname
         {
             get => fields.PersonLastname[this];
             set => fields.PersonLastname[this] = value;
@@ -585,7 +585,7 @@ namespace MovieTutorial.MovieDB
 
         [DisplayName("Actor/Actress"), 
          Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
-        public String PersonFullname
+        public string PersonFullname
         {
             get => fields.PersonFullname[this];
             set => fields.PersonFullname[this] = value;
@@ -618,9 +618,9 @@ namespace MovieTutorial.MovieDB.Columns
     public class MovieCastColumns
     {
         [EditLink, Width(220)]
-        public String PersonFullname { get; set; }
+        public string PersonFullname { get; set; }
         [EditLink, Width(150)]
-        public String Character { get; set; }
+        public string Character { get; set; }
     }
 }
 ```
@@ -653,8 +653,8 @@ These fields corresponds to the form fields you previously set in MovieCastForm.
 ```cs
 public class MovieCastForm
 {
-    public Int32 PersonId { get; set; }
-    public String Character { get; set; }
+    public int PersonId { get; set; }
+    public string Character { get; set; }
 }
 ```
 
@@ -663,8 +663,8 @@ But in grid, we are showing these columns:
 ```cs
 public class MovieCastColumns
 {
-    public String PersonFullname { get; set; }
-    public String Character { get; set; }
+    public string PersonFullname { get; set; }
+    public string Character { get; set; }
 }
 ```
 

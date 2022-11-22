@@ -11,7 +11,7 @@ public class MovieColumns
 {
     //...
     [Width(200), GenreListFormatter, QuickFilter]
-    public List<Int32> GenreList { get; set; }
+    public List<int>  GenreList { get; set; }
 }
 ```
 As soon as you type a Genre into Genres you'll have this error:

@@ -31,7 +31,7 @@ namespace MovieTutorial.MovieDB
     {
         //...
         [DisplayName("Description"), Size(1000), NameProperty]
-        public String Description
+        public string Description
         {
             get => fields.Description[this];
             set => fields.Description[this] = value;
@@ -51,21 +51,21 @@ namespace MovieTutorial.MovieDB
     {
         //...
         [DisplayName("Title"), Size(200), NotNull, QuickSearch, NameProperty]
-        public String Title
+        public string Title
         {
             get => fields.Title[this];
             set => fields.Title[this] = value;
         }
 
         [DisplayName("Description"), Size(1000), QuickSearch]
-        public String Description
+        public string Description
         {
             get => fields.Description[this];
             set => fields.Description[this] = value;
         }
 
         [DisplayName("Storyline"), QuickSearch]
-        public String Storyline
+        public string Storyline
         {
             get => fields.Storyline[this];
             set => fields.Storyline[this] = value;
@@ -85,7 +85,7 @@ If we wanted it to show only rows that *starts with* typed text, we would change
 
 ```cs
 [DisplayName("Title"), Size(200), NotNull, QuickSearch(SearchType.StartsWith)]
-public String Title
+public string Title
 {
     get => fields.Title[this];
     set => fields.Title[this] = value;
@@ -98,7 +98,7 @@ If we wanted to search also in year column, but only exact integer values (1999 
 
 ```cs
 [DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
-public Int32? Year
+public int? Year
 {
     get => fields.Year[this];
     set => fields.Year[this] = value;
@@ -164,7 +164,7 @@ import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB'
 
 export class MovieGrid extends EntityGrid<MovieRow, any> {
     //...
-    
+
     constructor(container: JQuery) {
         super(container);
     }

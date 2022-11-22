@@ -84,7 +84,6 @@ Serenity.Scripts and Serenity.Web.Assets packages also comes with some static sc
 
 ```
 Content/serenity/serenity.css
-Scripts/serenity/Serenity.CoreLib.js
 ```
 
 > These files are updated using `dotnet sergen restore`. NuGet itself does not support static files in NuGet packages to be installed / updated on application itself.

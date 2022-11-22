@@ -7,7 +7,7 @@ For the following sections, we need some sample data. We can copy and paste some
 
 If you don't want to waste your time entering this sample data, it is available as a migration at the link below:
 
-> https://github.com/volkanceylan/MovieTutorial/blob/master/MovieTutorial/MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20160519_135200_SampleMovies.cs
+> https://gist.github.com/volkanceylan/0b3e71de6247ad9963e33889f85003bc
 
 
 ![7 Movies Entered](img/mdb_sample_movies.png)
@@ -107,30 +107,29 @@ public Int32? Year
 
 > You might have noticed that we are not writing any C# or SQL code for these basic features to work. We just specify what we want, rather than how to do it. This is what declarative programming is. 
 
-It is also possible to provide user with ability to determine which field she wants to search on.
+It is also possible to provide user with ability to determine which field (s)he wants to search on.
 
 Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
 
 ```ts
+import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
+import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
+import { MovieDialog } from './MovieDialog';
 
-namespace MovieTutorial.MovieDB {
-    
-    @Serenity.Decorators.registerClass()
-    export class MovieGrid extends 
-          Serenity.EntityGrid<MovieRow, any> {
-        //...
-        constructor(container: JQuery) {
-            super(container);
-        }
+@Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
+export class MovieGrid extends EntityGrid<MovieRow, any> {
+    // ...
+    constructor(container: JQuery) {
+        super(container);
+    }
 
-        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
-            return [
-                { name: "", title: "all" },
-                { name: "Description", title: "description" },
-                { name: "Storyline", title: "storyline" },
-                { name: "Year", title: "year" }
-            ];
-        }
+    protected getQuickSearchFields(): QuickSearchField[] {
+        return [
+            { name: "", title: "all" },
+            { name: "Description", title: "description" },
+            { name: "Storyline", title: "storyline" },
+            { name: "Year", title: "year" }
+        ];
     }
 }
 ```
@@ -151,6 +150,8 @@ Sergen generates some code to transfer such information from server side (rows e
 It is also possible to open a command prompt in project directory and type `dotnet sergen t` to transform templates manually.
 
 From now on, when we say transform templates, it means either rebuilding the application or running `dotnet sergen t` in rare cases.
+
+> If you are using Premium StartSharp template then your code will be generated in development time with source generators.
 
 ### Intellisense on TypeScript Code (After transforming templates)
 
@@ -184,30 +185,31 @@ namespace MovieTutorial.MovieDB
 What about field titles? It is not so critical as field names, but can be useful for localization purposes (if we later decide to translate it):
 
 ```ts
-namespace MovieTutorial.MovieDB
-{
-    //...
-    import fld = MovieRow.Fields;
+import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
+import { text } from '@serenity-is/corelib/q';
+import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
+import { MovieDialog } from './MovieDialog';
 
-    public class MovieGrid extends EntityGrid<MovieRow, any>
-    {
-        constructor(container: JQuery) {
-            super(container);
-        }
+@Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
+export class MovieGrid extends EntityGrid<MovieRow, any> {
+   // ...
 
-        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
-            const txt = (s) => 
-                Q.text(`Db.${MovieRow.localTextPrefix}.${s}`).toLowerCase();
-
-            return [
-                { name: "", title: "all" },
-                { name: fld.Description, title: txt(fld.Description) },
-                { name: fld.Storyline, title: txt(fld.Storyline) },
-                { name: fld.Year, title: txt(fld.Year) }
-            ];
-        }
+    constructor(container: JQuery) {
+        super(container);
     }
-    ///...
+
+    protected getQuickSearchFields(): QuickSearchField[] {
+        const txt = (s) =>
+            text(`Db.${MovieRow.localTextPrefix}.${s}`).toLowerCase();
+        const fld = MovieRow.Fields;
+
+        return [
+            { name: "", title: "all" },
+            { name: fld.Description, title: txt(fld.Description) },
+            { name: fld.Storyline, title: txt(fld.Storyline) },
+            { name: fld.Year, title: txt(fld.Year) }
+        ];
+    }
 }
 ```
 

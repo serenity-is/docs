@@ -1,6 +1,8 @@
 # AddBehaviorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Attaches an explicit behavior
+
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property, AllowMultiple = true)]
 public class AddBehaviorAttribute : Attribute

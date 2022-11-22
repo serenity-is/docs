@@ -9,9 +9,9 @@ public static class ServiceCollectionExtensions
 
 | name | description |
 | --- | --- |
-| static [AddBaseTexts](ServiceCollectionExtensions/AddBaseTexts.md)(…) |  |
+| static [AddBaseTexts](ServiceCollectionExtensions/AddBaseTexts.md)(…) | Adds nested texts, enum texts, permission texts, row texts and json local text assets |
 | static [AddCustomRequestHandlers](ServiceCollectionExtensions/AddCustomRequestHandlers.md)(…) |  |
-| static [AddJsonTexts](ServiceCollectionExtensions/AddJsonTexts.md)(…) |  |
+| static [AddJsonTexts](ServiceCollectionExtensions/AddJsonTexts.md)(…) | Adds json texts from file provider and sub path |
 | static [AddProxyRequestHandlers](ServiceCollectionExtensions/AddProxyRequestHandlers.md)(…) |  |
 | static [AddServiceBehaviors](ServiceCollectionExtensions/AddServiceBehaviors.md)(…) |  |
 | static [AddServiceHandlerFactory](ServiceCollectionExtensions/AddServiceHandlerFactory.md)(…) |  |

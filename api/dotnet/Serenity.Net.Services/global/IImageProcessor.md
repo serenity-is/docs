@@ -10,9 +10,9 @@ public interface IImageProcessor
 | name | description |
 | --- | --- |
 | [GetImageSize](IImageProcessor/GetImageSize.md)(…) |  |
-| [Load](IImageProcessor/Load.md)(…) |  |
+| [Load](IImageProcessor/Load.md)(…) | Loads the image from the source stream |
 | [Save](IImageProcessor/Save.md)(…) |  |
-| [Scale](IImageProcessor/Scale.md)(…) |  |
+| [Scale](IImageProcessor/Scale.md)(…) | Generates a thumbnail of the source image based on parameters. |
 
 ## See Also
 

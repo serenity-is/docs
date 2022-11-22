@@ -9,7 +9,7 @@ public static class RecaptchaValidation
 
 | name | description |
 | --- | --- |
-| static [Validate](RecaptchaValidation/Validate.md)(…) |  |
+| static [Validate](RecaptchaValidation/Validate.md)(…) | Validates a recaptcha token |
 
 ## See Also
 

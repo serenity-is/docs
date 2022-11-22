@@ -1,6 +1,8 @@
 # ImageChecker class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+checks stream data if valid image file and validate required conditions.
+
 ```csharp
 public class ImageChecker
 ```
@@ -10,17 +12,17 @@ public class ImageChecker
 | name | description |
 | --- | --- |
 | [ImageChecker](ImageChecker/ImageChecker.md)() | The default constructor. |
-| [DataSize](ImageChecker/DataSize.md) { get; } |  |
-| [Height](ImageChecker/Height.md) { get; } |  |
-| [MaxDataSize](ImageChecker/MaxDataSize.md) { get; set; } |  |
-| [MaxHeight](ImageChecker/MaxHeight.md) { get; set; } |  |
-| [MaxWidth](ImageChecker/MaxWidth.md) { get; set; } |  |
-| [Milliseconds](ImageChecker/Milliseconds.md) { get; } |  |
-| [MinHeight](ImageChecker/MinHeight.md) { get; set; } |  |
-| [MinWidth](ImageChecker/MinWidth.md) { get; set; } |  |
-| [Width](ImageChecker/Width.md) { get; } |  |
-| [CheckSizeConstraints](ImageChecker/CheckSizeConstraints.md)(…) |  |
-| [CheckStream](ImageChecker/CheckStream.md)(…) |  |
+| [DataSize](ImageChecker/DataSize.md) { get; } | Gets data size of the validated image |
+| [Height](ImageChecker/Height.md) { get; } | Gets height of the validate image |
+| [MaxDataSize](ImageChecker/MaxDataSize.md) { get; set; } | Gets/sets maximum file size allowed |
+| [MaxHeight](ImageChecker/MaxHeight.md) { get; set; } | Gets/sets maximum height allowed. 0 means any height. |
+| [MaxWidth](ImageChecker/MaxWidth.md) { get; set; } | Gets/sets maximum width allowed. 0 means any width. |
+| [Milliseconds](ImageChecker/Milliseconds.md) { get; } | Gets the time passed during validating the image |
+| [MinHeight](ImageChecker/MinHeight.md) { get; set; } | Gets/sets minimum height allowed. 0 means any height. |
+| [MinWidth](ImageChecker/MinWidth.md) { get; set; } | Gets/sets minimum width allowed. 0 means any width. |
+| [Width](ImageChecker/Width.md) { get; } | Gets width of the validated image |
+| [CheckSizeConstraints](ImageChecker/CheckSizeConstraints.md)(…) | Checks an image width and height against size constraints |
+| [CheckStream](ImageChecker/CheckStream.md)(…) | Checks if the given image if it is a valid or not. If so, controls its compliance to constraints |
 | [FormatErrorMessage](ImageChecker/FormatErrorMessage.md)(…) |  |
 
 ## See Also

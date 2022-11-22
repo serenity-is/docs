@@ -1,6 +1,8 @@
 # IImplicitBehaviorRegistry interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+An interface to query list of implicit behaviors registered through the dependency resolver
+
 ```csharp
 public interface IImplicitBehaviorRegistry
 ```

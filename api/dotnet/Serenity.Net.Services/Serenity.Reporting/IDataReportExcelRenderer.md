@@ -9,7 +9,7 @@ public interface IDataReportExcelRenderer
 
 | name | description |
 | --- | --- |
-| [Render](IDataReportExcelRenderer/Render.md)(…) |  |
+| [Render](IDataReportExcelRenderer/Render.md)(…) | Renders the specified report to Excel format. |
 
 ## See Also
 

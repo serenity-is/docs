@@ -1,6 +1,8 @@
 # ISaveRequestHandler.Old property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Old row, if any, otherwise null
+
 ```csharp
 public IRow Old { get; }
 ```

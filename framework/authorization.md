@@ -30,7 +30,7 @@ You may have a look at these sample implementations before writing your own.
 
 ## Authorization Attributes
 
-In Serenity applications permissions control access to resources like navigation, pages and service calls.
+In Serenity applications permissions control access to resources like navigation, pages, and service calls.
 
 Permissions can be assigned directly to users or indirectly through assigned roles which can also have a set of permissions.
 

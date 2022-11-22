@@ -14,8 +14,8 @@ public class ScriptContent : IScriptContent
 | [CanCompress](ScriptContent/CanCompress.md) { get; } |  |
 | [CompressedContent](ScriptContent/CompressedContent.md) { get; } |  |
 | [Content](ScriptContent/Content.md) { get; } |  |
-| [Hash](ScriptContent/Hash.md) { get; } |  |
-| [Time](ScriptContent/Time.md) { get; } |  |
+| [Hash](ScriptContent/Hash.md) { get; } | Gets script hash |
+| [Time](ScriptContent/Time.md) { get; } | Gets script generated time |
 
 ## See Also
 

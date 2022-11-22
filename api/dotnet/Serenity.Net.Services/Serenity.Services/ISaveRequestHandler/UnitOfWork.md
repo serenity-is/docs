@@ -1,6 +1,8 @@
 # ISaveRequestHandler.UnitOfWork property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Current transaction
+
 ```csharp
 public IUnitOfWork UnitOfWork { get; }
 ```

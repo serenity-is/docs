@@ -1,6 +1,8 @@
 # IFieldBehavior interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Represents a request handler behavior that is targeted to a field.
+
 ```csharp
 public interface IFieldBehavior
 ```

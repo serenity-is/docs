@@ -10,7 +10,7 @@ public class CommandLineTools
 | name | description |
 | --- | --- |
 | [CommandLineTools](CommandLineTools/CommandLineTools.md)() | The default constructor. |
-| static [EscapeArguments](CommandLineTools/EscapeArguments.md)(…) |  |
+| static [EscapeArguments](CommandLineTools/EscapeArguments.md)(…) | Quotes all arguments that contain whitespace, or begin with a quote and returns a single argument string for use with Process.Start(). |
 
 ## See Also
 

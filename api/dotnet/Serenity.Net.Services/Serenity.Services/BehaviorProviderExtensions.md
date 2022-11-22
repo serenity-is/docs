@@ -1,6 +1,8 @@
 # BehaviorProviderExtensions class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Extension methods for behavior provider
+
 ```csharp
 public static class BehaviorProviderExtensions
 ```
@@ -9,7 +11,7 @@ public static class BehaviorProviderExtensions
 
 | name | description |
 | --- | --- |
-| static [Resolve&lt;TRow,TBehavior&gt;](BehaviorProviderExtensions/Resolve.md)(…) |  |
+| static [Resolve&lt;TRow,TBehavior&gt;](BehaviorProviderExtensions/Resolve.md)(…) | Resolves behaviors for handler, row and behavior type |
 
 ## See Also
 

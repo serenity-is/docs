@@ -1,6 +1,8 @@
 # DisplayOrderHelper.OrderRecord class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+An internal class that is used FixRecordOrdering to store old and new display orders for records to be sorted.
+
 ```csharp
 public class OrderRecord
 ```

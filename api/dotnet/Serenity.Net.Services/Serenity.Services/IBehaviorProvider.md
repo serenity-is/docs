@@ -1,6 +1,8 @@
 # IBehaviorProvider interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface abstraction for behavior provider
+
 ```csharp
 public interface IBehaviorProvider
 ```

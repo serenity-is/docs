@@ -9,8 +9,8 @@ public static class KnownMimeTypes
 
 | name | description |
 | --- | --- |
-| static [Get](KnownMimeTypes/Get.md)(…) |  |
-| static [TryGet](KnownMimeTypes/TryGet.md)(…) |  |
+| static [Get](KnownMimeTypes/Get.md)(…) | Gets MIME type for a given file using information in Win32 HKEY_CLASSES_ROOT registry key. |
+| static [TryGet](KnownMimeTypes/TryGet.md)(…) | Gets MIME type for a given file using information in Win32 HKEY_CLASSES_ROOT registry key. |
 
 ## See Also
 

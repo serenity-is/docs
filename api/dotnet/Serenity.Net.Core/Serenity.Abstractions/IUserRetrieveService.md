@@ -1,7 +1,7 @@
 # IUserRetrieveService interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-User definition retrieve service abstraction
+Abstraction to retrieve a user definition by its id or username
 
 ```csharp
 public interface IUserRetrieveService

@@ -53,7 +53,7 @@
 | class  | [AntiforgeryCookieResultFilterAttribute](Serenity.Services/AntiforgeryCookieResultFilterAttribute.md) |  |
 | class  | [AuthorizeCreateAttribute](Serenity.Services/AuthorizeCreateAttribute.md) |  |
 | class  | [AuthorizeDeleteAttribute](Serenity.Services/AuthorizeDeleteAttribute.md) |  |
-| class  | [AuthorizeListAttribute](Serenity.Services/AuthorizeListAttribute.md) |  |
+| class  | [AuthorizeListAttribute](Serenity.Services/AuthorizeListAttribute.md) | Authorizes a service by target type's ReadPermission or ServiceLookupPermission attributes. |
 | class  | [AuthorizeUpdateAttribute](Serenity.Services/AuthorizeUpdateAttribute.md) |  |
 | static class  | [EndpointExtensions](Serenity.Services/EndpointExtensions.md) |  |
 | class  | [FileUploadBehavior](Serenity.Services/FileUploadBehavior.md) |  |
@@ -62,7 +62,7 @@
 | class  | [MultipleFileUploadBehavior](Serenity.Services/MultipleFileUploadBehavior.md) |  |
 | class  | [Result&lt;TResponse&gt;](Serenity.Services/Result-1.md) |  |
 | class  | [ResultWithStatus&lt;TResponse&gt;](Serenity.Services/ResultWithStatus-1.md) |  |
-| class  | [ServiceAuthorizeAttribute](Serenity.Services/ServiceAuthorizeAttribute.md) |  |
+| class  | [ServiceAuthorizeAttribute](Serenity.Services/ServiceAuthorizeAttribute.md) | Authorizes access to a service action. Optionally checks the permission provided as the first argument. Use special permission key "?" to check for logged-in users, and "*" to allow anyone including anonymous access. This returns a service error instead of raising an exception like PageAuthorize attribute. |
 | abstract class  | [ServiceEndpoint](Serenity.Services/ServiceEndpoint.md) |  |
 | class  | [ServiceEndpointActionModelConvention](Serenity.Services/ServiceEndpointActionModelConvention.md) |  |
 | class  | [ServiceEndpointModelBinderProvider](Serenity.Services/ServiceEndpointModelBinderProvider.md) |  |
@@ -111,8 +111,8 @@
 | class  | [LocalTextScript](Serenity.Web/LocalTextScript.md) |  |
 | abstract class  | [LookupScript](Serenity.Web/LookupScript.md) |  |
 | class  | [LookupScriptRegistration](Serenity.Web/LookupScriptRegistration.md) |  |
-| class  | [NodeScriptRunner](Serenity.Web/NodeScriptRunner.md) |  |
-| class  | [PageAuthorizeAttribute](Serenity.Web/PageAuthorizeAttribute.md) |  |
+| class  | [NodeScriptRunner](Serenity.Web/NodeScriptRunner.md) | Executes the `script` entries defined in a `package.json` file, capturing any output written to stdio. |
+| class  | [PageAuthorizeAttribute](Serenity.Web/PageAuthorizeAttribute.md) | Authorizes access to a controller action. Optionally checks the permission provided as the first argument. Use special permission key "?" to check for logged-in users, and "*" to allow anyone including anonymous access. |
 | abstract class  | [PropertyItemsScript](Serenity.Web/PropertyItemsScript.md) |  |
 | static class  | [RecaptchaValidation](Serenity.Web/RecaptchaValidation.md) |  |
 | class  | [RegisteredScripts](Serenity.Web/RegisteredScripts.md) |  |

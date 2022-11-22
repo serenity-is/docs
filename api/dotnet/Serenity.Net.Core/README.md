@@ -51,7 +51,7 @@
 | interface  | [ITwoLevelCache](Serenity.Abstractions/ITwoLevelCache.md) | An abstraction for a combination of in memory and distributed cache. |
 | interface  | [ITypeSource](Serenity.Abstractions/ITypeSource.md) | Abstraction for type source which is used as an extensibility point for Serenity applications |
 | interface  | [IUserAccessor](Serenity.Abstractions/IUserAccessor.md) | Abstraction to access the current user |
-| interface  | [IUserRetrieveService](Serenity.Abstractions/IUserRetrieveService.md) | User definition retrieve service abstraction |
+| interface  | [IUserRetrieveService](Serenity.Abstractions/IUserRetrieveService.md) | Abstraction to retrieve a user definition by its id or username |
 | static class  | [TypeSourceExtensions](Serenity.Abstractions/TypeSourceExtensions.md) | Type source extension methods |
 
 ## Serenity.ComponentModel namespace

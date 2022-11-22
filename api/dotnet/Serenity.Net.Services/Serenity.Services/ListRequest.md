@@ -18,7 +18,7 @@ public class ListRequest : ServiceRequest, IIncludeExcludeColumns
 | [EqualityFilter](ListRequest/EqualityFilter.md) { get; set; } |  |
 | [ExcludeColumns](ListRequest/ExcludeColumns.md) { get; set; } |  |
 | [ExcludeTotalCount](ListRequest/ExcludeTotalCount.md) { get; set; } |  |
-| [ExportColumns](ListRequest/ExportColumns.md) { get; set; } |  |
+| [ExportColumns](ListRequest/ExportColumns.md) { get; set; } | Gets or sets the set of columns to export. This should only be used to specify list of columns for contexts like Excel export etc. |
 | [IncludeColumns](ListRequest/IncludeColumns.md) { get; set; } |  |
 | [IncludeDeleted](ListRequest/IncludeDeleted.md) { get; set; } |  |
 | [Skip](ListRequest/Skip.md) { get; set; } |  |

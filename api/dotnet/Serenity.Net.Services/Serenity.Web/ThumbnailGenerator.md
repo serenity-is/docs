@@ -1,6 +1,8 @@
 # ThumbnailGenerator class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Static class that contains thumbnail generator methods
+
 ```csharp
 public static class ThumbnailGenerator
 ```

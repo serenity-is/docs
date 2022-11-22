@@ -1,9 +1,15 @@
 # IListBehavior.OnPrepareQuery method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Called when query to is built
+
 ```csharp
 public void OnPrepareQuery(IListRequestHandler handler, SqlQuery query)
 ```
+
+| parameter | description |
+| --- | --- |
+| handler | Calling list request handler |
 
 ## See Also
 

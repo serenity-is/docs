@@ -18,7 +18,7 @@ Second parameter is navigation title in "Section Title/Link Title" format. Secti
 Lets change it to _Movie Database/Movies_.
 
 ```cs
-[assembly: NavigationLink(int.MaxValue, "MovieDB/Movie", 
+[assembly: NavigationLink(int.MaxValue, "Movie Database/Movie", 
     typeof(MyPages.MovieController), icon: "fa-video-camera")]
 ```
 

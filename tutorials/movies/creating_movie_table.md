@@ -25,7 +25,7 @@ Here we already have several migrations. A migration is like a DML script that m
 
 *DefaultDB_20141103_140000_Initial.cs* for example, contains our initial migration that created Language table and *Users* table.
 
-Create a new migr   ation file in the same folder with name *DefaultDB_20221114_150500_MovieTable.cs*. You can copy and change one of the existing migration files, rename it and change contents.
+Create a new migration file in the same folder with name *DefaultDB_20221114_150500_MovieTable.cs*. You can copy and change one of the existing migration files, rename it and change contents.
 
 > Migration file name / class name is actually not important but recommended for consistency and correct ordering.
 
@@ -63,8 +63,6 @@ namespace MovieTutorial.Migrations.DefaultDB
 > Make sure you use the namespace *MovieTutorial.Migrations.DefaultDB* as Serene template applies migrations only in this namespace to the default database.
 
 In *Up()* method we specify that this migration, when applied, will create a schema named *mov*. We will use a separate schema for movie tables to avoid clashes with existing tables. It will also create a table named *Movie* with "MovieId, Title, Description..." fields on it.
-
-> Inability to undo a migration might not hurt much, but deleting a table by mistake could do more damage.
 
 On top of our class we applied a Migration attribute.
 

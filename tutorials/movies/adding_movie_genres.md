@@ -72,10 +72,10 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 
 ```cs
 //...
-[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies", 
-    typeof(MovieDB.MovieController), icon: "icon-camcorder")]
-[assembly: NavigationLink(2200, "Movie Database/Genres", 
+[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
+[assembly: NavigationLink(2100, "Movie Database/Movies",
+    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
+[assembly: NavigationLink(2200, "Movie Database/Genres",
     typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
 //...
 ```
@@ -381,7 +381,7 @@ public Int32? GenreId
 
 Now we can define a new Genre by clicking star/pen icon next to genre field.
 
-![Defining Genre Inplace](img/  .png)
+![Defining Genre Inplace](img/mdb_genre_inplace.png)
 
 > Here we also see that we can use a dialog from another page (GenreDialog) in the movies page. In Serenity applications, all client side objects (dialogs, grids, editors, formatters etc.) are self-contained reusable components (widgets) that are not bound to any page.
 

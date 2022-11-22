@@ -253,7 +253,6 @@ export class GenreListFormatter implements Formatter {
         }).join(", ");
     }
 }
-
 ```
 
 Here we define a new formatter, *GenreListFormatter* and register it with Serenity type system, using *@Decorators.registerFormatter* decorator. Decorators are similar to .NET attributes.

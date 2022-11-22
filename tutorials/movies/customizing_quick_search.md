@@ -50,7 +50,7 @@ namespace MovieTutorial.MovieDB
     public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         //...
-        [DisplayName("Title"), Size(200), NotNull, QuickSearch]
+        [DisplayName("Title"), Size(200), NotNull, QuickSearch, NameProperty]
         public String Title
         {
             get => fields.Title[this];
@@ -158,27 +158,26 @@ From now on, when we say transform templates, it means either rebuilding the app
 We can now use intellisense to replace hardcoded field names with compile time checked versions:
 
 ```ts
-namespace MovieTutorial.MovieDB
-{
+//...
+import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
+import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
+
+export class MovieGrid extends EntityGrid<MovieRow, any> {
     //...
-    import fld = MovieRow.Fields;
-
-    public class MovieGrid extends EntityGrid<MovieRow, any>
-    {
-        constructor(container: JQuery) {
-            super(container);
-        }
-
-        protected getQuickSearchFields(): Serenity.QuickSearchField[] {
-            return [
-                { name: "", title: "all" },
-                { name: fld.Description, title: "description" },
-                { name: fld.Storyline, title: "storyline" },
-                { name: fld.Year, title: "year" }
-            ];
-        }
+    
+    constructor(container: JQuery) {
+        super(container);
     }
-    ///...
+
+    protected getQuickSearchFields(): QuickSearchField[] {
+        const fld = MovieRow.Fields;
+        return [
+            { name: "", title: "all" },
+            { name: fld.Description, title: "description" },
+            { name: fld.Storyline, title: "storyline" },
+            { name: fld.Year, title: "year" }
+        ];
+    }
 }
 ```
 

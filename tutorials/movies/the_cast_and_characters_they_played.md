@@ -83,10 +83,10 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 
 ```cs
 //...
-[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies", 
-    typeof(MovieDB.MovieController), icon: "icon-camcorder")]
-[assembly: NavigationLink(2200, "Movie Database/Genres", 
+[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
+[assembly: NavigationLink(2100, "Movie Database/Movies",
+    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
+[assembly: NavigationLink(2200, "Movie Database/Genres",
     typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
 [assembly: NavigationLink(2300, "Movie Database/Person",
     typeof(MovieDB.PersonController), icon: "fa-users")]

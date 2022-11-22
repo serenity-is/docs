@@ -128,8 +128,8 @@ namespace MovieTutorial.MovieDB.Forms
         [Tab("Person")]
         public string FirstName { get; set; }
         public string Lastname { get; set; }
-        public String PrimaryImage { get; set; }
-        public String GalleryImages { get; set; }
+        public string PrimaryImage { get; set; }
+        public string GalleryImages { get; set; }
         public DateTime BirthDate { get; set; }
         public string BirthPlace { get; set; }
         public Gender Gender { get; set; }

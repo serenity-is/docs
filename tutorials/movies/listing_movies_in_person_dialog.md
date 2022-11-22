@@ -32,7 +32,7 @@ Now, we have a tab in PersonDialog:
 
 ### Creating PersonMovieGrid
 
-Movie tab has an StringEditor for now. We need to define a grid with suitable columns and place it in that tab.
+MovieGrid has an StringEditor for now. We need to define a grid with suitable columns and place it in that tab.
 
 First, declare the columns we'll use with the grid, in file *PersonMovieColumns.cs* next to *PersonColumns.cs*:
 
@@ -76,9 +76,11 @@ export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
 }
 ```
 
-After creating editor build the project so sergen can create an attribute for this editor.
+We are registering this grid as an editor. So sergen will generate an attribute for this grid.
 
 Open *MovieFrom.cs* and add editor for MovieGrid field:
+
+> Dont forget to build yor project.
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
@@ -96,9 +98,37 @@ namespace MovieTutorial.MovieDB.Forms
 
 We'll actually use MovieCast service, to list movies a person acted in.
 
-OK, now we can see list of movies in Movies tab, but something is strange:
+OK, now we can see list of movies in Movies tab, but we need to fix some things:
 
 ![Person With Movies Unfiltered](img/mdb_person_cast3.png)
+
+### Removing Label from MoviesGrid
+
+We need the get rid of that label movie grid has. Serenity has a LabelWidth attribute to adjust label width of properties. 
+
+Edit PersonFrom.cs:
+
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    public class PersonForm
+    {
+        //...
+        [Tab("Movies"), IgnoreName, PersonMovieGrid, LabelWidth("0")]
+        public string MoviesGrid { get; set; }
+    }
+}
+
+```
+
+As you can see we put "0" as a string. Serenity hides caption if it sees "0" as a string. 
+
+> Check out [this](../../attributes/attributes.md) for more attributes you can use.
+
+We hide the label so now we only have the grid on this tab. But grid still not filtered by the current user.
+
+![MoviePersonGrid Without Label](img/mdb_person_grid_without_label.png)
 
 ### Filtering Movies for the Person
 
@@ -107,48 +137,48 @@ No, Carrie-Anne Moss didn't act in three roles. This grid is showing all movie c
 PersonMovieGrid should know the person it shows the movie cast records for. We need to add a *PersonID* property to this grid. This *PersonID* should be passed somehow to list service for filtering.
 
 ```ts
-namespace MovieTutorial.MovieDB
+import { Decorators, EntityGrid } from "@serenity-is/corelib";
+import { MovieCastRow, MovieCastService } from "../../ServerTypes/MovieDB";
+
+@Decorators.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid")
+export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
 {
-    @Serenity.Decorators.registerClass()
-    export class PersonMovieGrid extends Serenity.EntityGrid<MovieCastRow, any>
-    {
-        protected getColumnsKey() { return "MovieDB.PersonMovie"; }
-        protected getIdProperty() { return MovieCastRow.idProperty; }
-        protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
-        protected getService() { return MovieCastService.baseUrl; }
+    protected getColumnsKey() { return "MovieDB.PersonMovie"; }
+    protected getIdProperty() { return MovieCastRow.idProperty; }
+    protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
+    protected getService() { return MovieCastService.baseUrl; }
 
-        constructor(container: JQuery) {
-            super(container);
-        }
+    constructor(container: JQuery) {
+        super(container);
+    }
 
-        protected getButtons() {
-            return null;
-        }
+    protected getButtons() {
+        return null;
+    }
 
-        protected getInitialTitle() {
-            return null;
-        }
+    protected getInitialTitle() {
+        return null;
+    }
 
-        protected usePager() {
-            return false;
-        }
+    protected usePager() {
+        return false;
+    }
 
-        protected getGridCanLoad() {
-            return this.personID != null;
-        }
+    protected getGridCanLoad() {
+        return this.personID != null;
+    }
 
-        private _personID: number;
+    private _personID: number;
 
-        get personID() {
-            return this._personID;
-        }
+    get personID() {
+        return this._personID;
+    }
 
-        set personID(value: number) {
-            if (this._personID != value) {
-                this._personID = value;
-                this.setEquality(MovieCastRow.Fields.PersonId, value);
-                this.refresh();
-            }
+    set personID(value: number) {
+        if (this._personID != value) {
+            this._personID = value;
+            this.setEquality(MovieCastRow.Fields.PersonId, value);
+            this.refresh();
         }
     }
 }
@@ -172,18 +202,16 @@ We also did three cosmetic changes, by overriding three methods, first to remove
 If nobody sets grid's PersonID property, it will always be null, and no records will be loaded. We should set it in afterLoadEntity method of Person dialog:
 
 ```ts
-namespace MovieTutorial.MovieDB
-{
-    // ...
-    export class PersonDialog extends Serenity.EntityDialog<PersonRow>
-    {
-        // ...
-        protected afterLoadEntity()
-        {
-            super.afterLoadEntity();
+//...
 
-            this.moviesGrid.personID = this.entityId;
-        }
+@Decorators.registerClass("MovieTutorial.MovieDB.PersonDialog")
+export class PersonDialog extends EntityDialog<PersonRow, any> {
+    //...
+
+    protected afterLoadEntity() {
+        super.afterLoadEntity();
+
+        this.form.MoviesGrid.personID = this.entityId;
     }
 }
 ```
@@ -202,11 +230,11 @@ namespace MovieTutorial.MovieDB
 
 You might have noticed that when you switch to Movies tab, dialog gets a bit less in height. This is because dialog is set to auto height and grids are 200px by default. When you switch to movies tab, form gets hidden, so dialog adjusts to movies grid height.
 
-Edit *s-MovieDB-PersonDialog* css in site.moviedb.less:
+Edit site.css:
 
 ```css
 .s-MovieDB-PersonDialog .s-PersonMovieGrid > .grid-container {
-    height: 251px;
+    height: 186px;
 }
 ```
 

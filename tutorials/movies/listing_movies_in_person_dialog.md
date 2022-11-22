@@ -24,7 +24,7 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Serenity will open a tab named *Person* and adds the properties until it sees another tab or reaches end of the properties. It will create the tabs in order. So watch where you put properties and tabs. Don't forget to put *IgnoreName* attribute since MoviesGrid is not a property in PersonRow.
+Serenity will open a tab named *Person* and adds the properties until it sees another tab or the end of the properties. It will create the tabs in order. So watch where you put properties and tabs. Don't forget to put *IgnoreName* attribute since MoviesGrid is not a property in PersonRow.
 
 Now, we have a tabs in PersonDialog:
 

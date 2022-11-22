@@ -309,7 +309,8 @@ Generate code for MovieCast table using *sergen*:
 After generating code, as we don't need a separate page to edit movie cast table, you may delete files listed below:
 
 ```
-MovieCastIndex.cshtml or MovieCastPage.ts
+MovieCastIndex.cshtml (if exists)
+MovieCastPage.ts
 MovieCastPage.cs
 MovieCastDialog.ts
 MovieCastGrid.ts
@@ -361,11 +362,7 @@ export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
 }
 ```
 
-This editor derives from *Extensions.GridEditorBase* class in Serenity.Extensions, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
-
-> If you are using typescript with namespaces as a rule of thumb, if you are deriving some class from another in your project (not Serenity classes), you should put a reference to file containing that base class on the first line like `/// <reference path="path/to/file.ts" />`.
->
-> This helps TypeScript to convert referenced class to javascript before other classes that might need it.
+This editor derives from *GridEditorBase* class in Extensions, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
 
 To reference this new editor type from server side, build and ensure auto transform is successfull.
 
@@ -432,7 +429,7 @@ export class MovieCastEditDialog extends GridEditorDialog<MovieCastRow> {
 
 ```
 
-We are using another base class from Serenity.Extensions, *GridEditorDialog* which is also used by OrderDetailEditDialog.
+We are using another base class from Extensions, *GridEditorDialog* which is also used by OrderDetailEditDialog.
 
 Open *MovieCastEditor.ts* again, add a getDialogType method and override getAddButtonCaption:
 
@@ -693,7 +690,7 @@ export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
 }
 ```
 
-ValidateEntity is a method from our GridEditorBase class in Serenity.Extensions. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
+ValidateEntity is a method from our GridEditorBase class in @serenity-is/extensions. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
 
 As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person fullname.
 

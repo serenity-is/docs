@@ -2,76 +2,29 @@
 
 To show list of movies a person acted in, we'll add a tab to PersonDialog.
 
-Unless you override getTemplate function on your class, all entity dialogs (ones we used so far, which derive from EntityDialog) uses *EntityDialog*'s fallback template at *EntityDialog.ts* by default:
+Serenity supports making tabs from form script. 
 
-```html
-<div class="s-DialogContent">
-    <div id="~_Toolbar" class="s-DialogToolbar">
-    </div>
-    <div class="s-Form">
-        <form id="~_Form" action="">
-            <div class="fieldset">
-                <div id="~_PropertyGrid"></div>
-                <div class="clear"></div>
-            </div>
-        </form> 
-    </div>
-</div>
-```
-
-This template contains a toolbar placeholder (*~_Toolbar*), form (*~_Form*) and PropertyGrid (*~_PropertyGrid).
-
-> ~_ is a special prefix that is replaced with a unique dialog ID at runtime. This ensures that objects in two instances of a dialog won't have the same ID values.
-
-EntityDialog template is shared by all dialogs, so we are not gonna modify it to add a tab to PersonDialog.
-
-### Defining a Tabbed Template for PersonDialog
-
-Modify *PersonDialog.ts*, override getTemplate function:
-```ts
-@Serenity.Decorators.registerClass()
-export class PersonDialog extends Serenity.EntityDialog<PersonRow, any> {
-    // ...
-
-    protected getTemplate() {
-        return `<div id="~_Tabs" class="s-DialogContent">
-    <ul>
-        <li><a href="#~_TabInfo"><span>Person</span></a></li>
-        <li><a href="#~_TabMovies"><span>Movies</span></a></li>
-    </ul>
-    <div id="~_TabInfo" class="tab-pane s-TabInfo">
-        <div id="~_Toolbar" class="s-DialogToolbar">
-        </div>
-        <div class="s-Form">
-            <form id="~_Form" action="">
-                <div class="fieldset">
-                    <div id="~_PropertyGrid"></div>
-                    <div class="clear"></div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div id="~_TabMovies" class="tab-pane s-TabMovies">
-        <div id="~_MoviesGrid">
-
-        </div>
-    </div>
-</div>`;
+Make fallowing changes to *PersonForm.cs*:
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    public class PersonForm
+    {
+        [Tab("Person")]
+        public string FirstName { get; set; }
+        public string Lastname { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string BirthPlace { get; set; }
+        public Gender Gender { get; set; }
+        public int Height { get; set; }
+        [Tab("Movies"), IgnoreName]
+        public string MoviesGrid { get; set; }
     }
 }
 ```
 
-The syntax we used here is specific to jQuery UI tabs widget. It needs an UL element with list of tab links pointing to tab pane divs (*.tab-pane*).
-
-When *EntityDialog* finds a div with ID *~_Tabs* in its template, it automatically initializes a tabs widget on it.
-
-Naming of the template file is important. It must end with *.Template.html* extension. All files with this extension are made available at client side through a dynamic script.
-
-Folder of the template file is ignored, but templates must be under *Modules* or *Views/Template* directories.
-
-> MovieDB comes from PersonDialog namespace with the root namespace (MovieTutorial) removed. You can also think of it as module name dot class name.
-
-If a template within class is not found, fallback template of the *EntityDialog* would be used.
+Serenity will open a tab named *Person* and adds the properties until it sees another tab or reaches end of the properties. It will create the tabs in order. So watch where you put properties and tabs. Don't forget to put *IgnoreName* attribute since MoviesGrid is not a property in PersonsRow.
 
 Now, we have a tab in PersonDialog:
 
@@ -79,7 +32,7 @@ Now, we have a tab in PersonDialog:
 
 ### Creating PersonMovieGrid
 
-Movie tab is empty for now. We need to define a grid with suitable columns and place it in that tab.
+Movie tab has an StringEditor for now. We need to define a grid with suitable columns and place it in that tab.
 
 First, declare the columns we'll use with the grid, in file *PersonMovieColumns.cs* next to *PersonColumns.cs*:
 
@@ -106,59 +59,42 @@ namespace MovieTutorial.MovieDB.Columns
 Next define a *PersonMovieGrid* class, in file *PersonMovieGrid.ts* next to *PersonGrid.ts*:
 
 ```ts
-namespace MovieTutorial.MovieDB {
+import { Decorators, EntityGrid } from "@serenity-is/corelib";
+import { MovieCastRow, MovieCastService } from "../../ServerTypes/MovieDB";
 
-    @Serenity.Decorators.registerClass()
-    export class PersonMovieGrid extends Serenity.EntityGrid<MovieCastRow, any>
-    {
-        protected getColumnsKey() { return "MovieDB.PersonMovie"; }
-        protected getIdProperty() { return MovieCastRow.idProperty; }
-        protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
-        protected getService() { return MovieCastService.baseUrl; }
+@Decorators.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid")
+export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
+{
+    protected getColumnsKey() { return "MovieDB.PersonMovie"; }
+    protected getIdProperty() { return MovieCastRow.idProperty; }
+    protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
+    protected getService() { return MovieCastService.baseUrl; }
 
-        constructor(container: JQuery) {
-            super(container);
-        }
+    constructor(container: JQuery) {
+        super(container);
     }
 }
 ```
+
+After creating editor build the project so sergen can create an attribute for this editor.
+
+Open *MovieFrom.cs* and add editor for MovieGrid field:
+
+```cs
+namespace MovieTutorial.MovieDB.Forms
+{
+    //...
+    public class PersonForm
+    {
+        //...
+        [Tab("Movies"), IgnoreName, PersonMovieGrid]
+        public string MoviesGrid { get; set; }
+    }
+}
+```
+
 
 We'll actually use MovieCast service, to list movies a person acted in.
-
-Last step is to instantiate this grid in PersonDialog.ts:
-
-```ts
-@Serenity.Decorators.registerClass()
-@Serenity.Decorators.responsive()
-export class PersonDialog extends Serenity.EntityDialog<PersonRow, any> {
-    protected getFormKey() { return PersonForm.formKey; }
-    protected getIdProperty() { return PersonRow.idProperty; }
-    protected getLocalTextPrefix() { return PersonRow.localTextPrefix; }
-    protected getNameProperty() { return PersonRow.nameProperty; }
-    protected getService() { return PersonService.baseUrl; }
-
-    protected form = new PersonForm(this.idPrefix);
-
-    private moviesGrid: PersonMovieGrid;
-
-    constructor() {
-        super();
-
-        this.moviesGrid = new PersonMovieGrid(this.byId("MoviesGrid"));
-        this.tabs.on('tabsactivate', (e, i) => {
-            this.arrange();
-        });
-    }
-
-    // ...
-}
-```
-
-Remember that in our template we had a div with id *~_MoviesGrid* under movies tab pane. We created PersonMovie grid on that div.
-
-> this.ById("MoviesGrid") is a special method for templated widgets. *$('#MoviesGrid')* wouldn't work here, as that div actually has some ID like *PersonDialog17_MoviesGrid*. `~_` prefix in templates are replaced with a unique container widget ID.
-
-We also attached to tabsactivate event of jQuery UI tabs, and called Arrange method of the dialog. This is to solve a problem with SlickGrid, when its initially created in invisible tab. Arrange function triggers relayout and SlickGrid solves this problem.
 
 OK, now we can see list of movies in Movies tab, but something is strange:
 

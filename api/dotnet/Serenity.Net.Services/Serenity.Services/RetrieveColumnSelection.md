@@ -1,6 +1,8 @@
 # RetrieveColumnSelection enumeration
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+The group of columns to retrieve
+
 ```csharp
 public enum RetrieveColumnSelection
 ```
@@ -18,4 +20,4 @@ public enum RetrieveColumnSelection
 
 ## See Also
 
-* **Source:** *[RetrieveRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/RetrieveRequest.cs)*
+* **Source:** *[RetrieveColumnSelection.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/RetrieveColumnSelection.cs)*

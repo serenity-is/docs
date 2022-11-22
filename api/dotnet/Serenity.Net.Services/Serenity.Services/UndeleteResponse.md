@@ -1,6 +1,8 @@
 # UndeleteResponse class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+The response model for an undelete service
+
 ```csharp
 public class UndeleteResponse : ServiceResponse
 ```
@@ -10,7 +12,7 @@ public class UndeleteResponse : ServiceResponse
 | name | description |
 | --- | --- |
 | [UndeleteResponse](UndeleteResponse/UndeleteResponse.md)() | The default constructor. |
-| [WasNotDeleted](UndeleteResponse/WasNotDeleted.md) |  |
+| [WasNotDeleted](UndeleteResponse/WasNotDeleted.md) { get; set; } | True if the entity was not deleted |
 
 ## See Also
 

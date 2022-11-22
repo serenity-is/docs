@@ -1,6 +1,8 @@
 # RetrieveLocalizationRequest class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+A retrieve request with localization. Don't use. Provided only for compatibility.
+
 ```csharp
 public class RetrieveLocalizationRequest : RetrieveRequest
 ```

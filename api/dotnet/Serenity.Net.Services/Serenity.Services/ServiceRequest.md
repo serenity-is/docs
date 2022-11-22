@@ -1,6 +1,8 @@
 # ServiceRequest class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+The base request object model for all service requests. Your custom request objects should all derive from this type.
+
 ```csharp
 public class ServiceRequest
 ```

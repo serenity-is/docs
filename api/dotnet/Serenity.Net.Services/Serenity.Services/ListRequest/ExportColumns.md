@@ -7,10 +7,6 @@ Gets or sets the set of columns to export. This should only be used to specify l
 public List<string> ExportColumns { get; set; }
 ```
 
-## Property Value
-
-The columns to export.
-
 ## See Also
 
 * class [ListRequest](../ListRequest.md)

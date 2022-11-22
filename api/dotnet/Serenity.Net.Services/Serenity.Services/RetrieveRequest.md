@@ -1,6 +1,8 @@
 # RetrieveRequest class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+The request model for a Retrieve service
+
 ```csharp
 public class RetrieveRequest : ServiceRequest, IIncludeExcludeColumns
 ```
@@ -10,8 +12,8 @@ public class RetrieveRequest : ServiceRequest, IIncludeExcludeColumns
 | name | description |
 | --- | --- |
 | [RetrieveRequest](RetrieveRequest/RetrieveRequest.md)() | The default constructor. |
-| [ColumnSelection](RetrieveRequest/ColumnSelection.md) { get; set; } |  |
-| [EntityId](RetrieveRequest/EntityId.md) { get; set; } |  |
+| [ColumnSelection](RetrieveRequest/ColumnSelection.md) { get; set; } | The group of columns to select. This is RetrieveColumnSelection.Details by default, e.g. all the table / view columns, but not unmapped or complex object style (list etc.) columns. |
+| [EntityId](RetrieveRequest/EntityId.md) { get; set; } | The entity ID to retrieve |
 | [ExcludeColumns](RetrieveRequest/ExcludeColumns.md) { get; set; } |  |
 | [IncludeColumns](RetrieveRequest/IncludeColumns.md) { get; set; } |  |
 

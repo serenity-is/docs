@@ -1,6 +1,8 @@
 # DeleteRequest class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Service object for delete requests
+
 ```csharp
 public class DeleteRequest : ServiceRequest
 ```
@@ -10,7 +12,7 @@ public class DeleteRequest : ServiceRequest
 | name | description |
 | --- | --- |
 | [DeleteRequest](DeleteRequest/DeleteRequest.md)() | The default constructor. |
-| [EntityId](DeleteRequest/EntityId.md) |  |
+| [EntityId](DeleteRequest/EntityId.md) | The ID of the entity to delete. |
 
 ## See Also
 

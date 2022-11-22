@@ -1,9 +1,15 @@
 # SaveWithLocalizationRequest&lt;TEntity&gt; class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+A save request with localization. Don't use. Provided only for compatibility.
+
 ```csharp
 public class SaveWithLocalizationRequest<TEntity> : SaveRequest<TEntity>
 ```
+
+| parameter | description |
+| --- | --- |
+| TEntity | Type of entity. |
 
 ## Public Members
 

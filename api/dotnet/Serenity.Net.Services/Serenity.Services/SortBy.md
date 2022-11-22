@@ -1,6 +1,8 @@
 # SortBy class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+A sort column. In JSON this is deserialized from strings in the format "field" or "field desc"
+
 ```csharp
 public class SortBy
 ```
@@ -9,10 +11,10 @@ public class SortBy
 
 | name | description |
 | --- | --- |
-| [SortBy](SortBy/SortBy.md)() | The default constructor. |
-| [SortBy](SortBy/SortBy.md)(…) |  (2 constructors) |
-| [Descending](SortBy/Descending.md) { get; set; } |  |
-| [Field](SortBy/Field.md) { get; set; } |  |
+| [SortBy](SortBy/SortBy.md)() | Creates an empty SortBy object |
+| [SortBy](SortBy/SortBy.md)(…) | Creates a SortBy object for specified field name. (2 constructors) |
+| [Descending](SortBy/Descending.md) { get; set; } | Gets/sets the descending flag |
+| [Field](SortBy/Field.md) { get; set; } | Gets/sets the field name |
 
 ## See Also
 

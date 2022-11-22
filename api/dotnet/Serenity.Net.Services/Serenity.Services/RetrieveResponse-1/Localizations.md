@@ -1,6 +1,8 @@
 # RetrieveResponse&lt;T&gt;.Localizations property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Dictionary containing localizations if requested.
+
 ```csharp
 public Dictionary<string, T> Localizations { get; set; }
 ```

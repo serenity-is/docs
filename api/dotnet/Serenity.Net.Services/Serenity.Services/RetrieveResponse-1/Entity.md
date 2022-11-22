@@ -1,6 +1,8 @@
 # RetrieveResponse&lt;T&gt;.Entity property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+The returned entity
+
 ```csharp
 public T Entity { get; set; }
 ```

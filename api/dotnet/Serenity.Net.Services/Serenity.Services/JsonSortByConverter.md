@@ -7,10 +7,6 @@ Serialize/deserialize a SortBy object as string
 public class JsonSortByConverter : JsonConverter
 ```
 
-| parameter | description |
-| --- | --- |
-| T | Type |
-
 ## Public Members
 
 | name | description |

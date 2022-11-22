@@ -105,10 +105,10 @@
 | class  | [DefaultHandlerRegistry](Serenity.Services/DefaultHandlerRegistry.md) |  |
 | class  | [DefaultImplicitBehaviorRegistry](Serenity.Services/DefaultImplicitBehaviorRegistry.md) |  |
 | class  | [DefaultRequestContext](Serenity.Services/DefaultRequestContext.md) |  |
-| class  | [DeleteRequest](Serenity.Services/DeleteRequest.md) |  |
+| class  | [DeleteRequest](Serenity.Services/DeleteRequest.md) | Service object for delete requests |
 | class  | [DeleteRequestHandler&lt;TRow&gt;](Serenity.Services/DeleteRequestHandler-1.md) |  |
 | class  | [DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](Serenity.Services/DeleteRequestHandler-3.md) |  |
-| class  | [DeleteResponse](Serenity.Services/DeleteResponse.md) |  |
+| class  | [DeleteResponse](Serenity.Services/DeleteResponse.md) | The response object returned from a delete service |
 | class  | [DisplayOrderFilterHelper](Serenity.Services/DisplayOrderFilterHelper.md) |  |
 | class  | [GenericHandlerTypeAttribute](Serenity.Services/GenericHandlerTypeAttribute.md) |  |
 | interface  | [IBehaviorFactory](Serenity.Services/IBehaviorFactory.md) |  |
@@ -127,14 +127,14 @@
 | interface  | [IHandlerActivator](Serenity.Services/IHandlerActivator.md) |  |
 | interface  | [IImplicitBehavior](Serenity.Services/IImplicitBehavior.md) | An implicit behavior is a request handler behavior (save/list/retrieve/delete etc.) which can be implicitly activated for a row type without explicitly attached to that row type. |
 | interface  | [IImplicitBehaviorRegistry](Serenity.Services/IImplicitBehaviorRegistry.md) | An interface to query list of implicit behaviors registered through the dependency resolver |
-| interface  | [IIncludeExcludeColumns](Serenity.Services/IIncludeExcludeColumns.md) |  |
+| interface  | [IIncludeExcludeColumns](Serenity.Services/IIncludeExcludeColumns.md) | Abstraction for service objects containing include / exclude column sets. See [`ListRequest`](Serenity.Services/ListRequest.md) and [`RetrieveRequest`](Serenity.Services/RetrieveRequest.md). |
 | interface  | [IListBehavior](Serenity.Services/IListBehavior.md) | A list behavior that can be used as a mixin within a ListRequestHandler lifecycle |
 | interface  | [IListHandler&lt;TRow&gt;](Serenity.Services/IListHandler-1.md) |  |
 | interface  | [IListHandler&lt;TRow,TListRequest&gt;](Serenity.Services/IListHandler-2.md) |  |
 | interface  | [IListHandler&lt;TRow,TListRequest,TListResponse&gt;](Serenity.Services/IListHandler-3.md) |  |
 | interface  | [IListRequestHandler](Serenity.Services/IListRequestHandler.md) | Represents a ListRequestHandler. Is used with ListBehavior objects. |
 | interface  | [IListRequestProcessor](Serenity.Services/IListRequestProcessor.md) |  |
-| interface  | [IListResponse](Serenity.Services/IListResponse.md) |  |
+| interface  | [IListResponse](Serenity.Services/IListResponse.md) | The interface for list response. This is used to easily access list response members as the [`ListResponse`](Serenity.Services/ListResponse-1.md) class itself is generic. |
 | interface  | [IRequestContext](Serenity.Services/IRequestContext.md) |  |
 | interface  | [IRequestHandler&lt;TRow&gt;](Serenity.Services/IRequestHandler-1.md) |  |
 | interface  | [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](Serenity.Services/IRequestHandler-3.md) |  |
@@ -146,52 +146,52 @@
 | interface  | [IRetrieveHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](Serenity.Services/IRetrieveHandler-3.md) |  |
 | interface  | [IRetrieveRequestHandler](Serenity.Services/IRetrieveRequestHandler.md) | Represents a RetrieveRequestHandler. Is used with RetrieveBehavior objects. |
 | interface  | [IRetrieveRequestProcessor](Serenity.Services/IRetrieveRequestProcessor.md) |  |
-| interface  | [IRetrieveResponse](Serenity.Services/IRetrieveResponse.md) |  |
+| interface  | [IRetrieveResponse](Serenity.Services/IRetrieveResponse.md) | Interface for a [`RetrieveResponse`](Serenity.Services/RetrieveResponse-1.md). As the RetrieveResponse itself is generic, this allows easier access to its members. |
 | interface  | [ISaveBehavior](Serenity.Services/ISaveBehavior.md) | A save behavior that can be used as a mixin within a SaveRequestHandler lifecycle |
 | interface  | [ISaveExceptionBehavior](Serenity.Services/ISaveExceptionBehavior.md) | This is an extension for save behaviors that should be called for exceptions that occur during save. It could be useful to preview the exception and raise another exception for FK / PK database errors etc. |
 | interface  | [ISaveHandler&lt;TRow&gt;](Serenity.Services/ISaveHandler-1.md) |  |
 | interface  | [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/ISaveHandler-3.md) |  |
-| interface  | [ISaveRequest](Serenity.Services/ISaveRequest.md) |  |
+| interface  | [ISaveRequest](Serenity.Services/ISaveRequest.md) | Interface for a [`SaveRequest`](Serenity.Services/SaveRequest-1.md). As the SaveRequest itself is generic, this allows easier access to its members. |
 | interface  | [ISaveRequestHandler](Serenity.Services/ISaveRequestHandler.md) | Represents a SaveRequestHandler. Is used with SaveBehavior objects. |
 | interface  | [ISaveRequestProcessor](Serenity.Services/ISaveRequestProcessor.md) |  |
 | interface  | [IUpdateHandler&lt;TRow&gt;](Serenity.Services/IUpdateHandler-1.md) |  |
 | interface  | [IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/IUpdateHandler-3.md) |  |
-| class  | [JsonServiceClient](Serenity.Services/JsonServiceClient.md) |  |
+| class  | [JsonServiceClient](Serenity.Services/JsonServiceClient.md) | A JSON service client implementation |
 | class  | [JsonSortByConverter](Serenity.Services/JsonSortByConverter.md) | Serialize/deserialize a SortBy object as string |
 | class  | [LinkingSetRelationBehavior](Serenity.Services/LinkingSetRelationBehavior.md) |  |
-| class  | [ListRequest](Serenity.Services/ListRequest.md) |  |
+| class  | [ListRequest](Serenity.Services/ListRequest.md) | The request model for a List service. |
 | class  | [ListRequestHandler&lt;TRow&gt;](Serenity.Services/ListRequestHandler-1.md) |  |
 | class  | [ListRequestHandler&lt;TRow,TListRequest&gt;](Serenity.Services/ListRequestHandler-2.md) |  |
 | class  | [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](Serenity.Services/ListRequestHandler-3.md) |  |
-| class  | [ListResponse&lt;T&gt;](Serenity.Services/ListResponse-1.md) |  |
+| class  | [ListResponse&lt;T&gt;](Serenity.Services/ListResponse-1.md) | The response model for a list service. |
 | class  | [LocalizationBehavior](Serenity.Services/LocalizationBehavior.md) |  |
 | class  | [MasterDetailRelationBehavior](Serenity.Services/MasterDetailRelationBehavior.md) |  |
 | static class  | [RequestHandlerExtensions](Serenity.Services/RequestHandlerExtensions.md) |  |
-| enum  | [RetrieveColumnSelection](Serenity.Services/RetrieveColumnSelection.md) |  |
-| class  | [RetrieveLocalizationRequest](Serenity.Services/RetrieveLocalizationRequest.md) |  |
-| class  | [RetrieveLocalizationResponse&lt;TEntity&gt;](Serenity.Services/RetrieveLocalizationResponse-1.md) |  |
-| class  | [RetrieveRequest](Serenity.Services/RetrieveRequest.md) |  |
+| enum  | [RetrieveColumnSelection](Serenity.Services/RetrieveColumnSelection.md) | The group of columns to retrieve |
+| class  | [RetrieveLocalizationRequest](Serenity.Services/RetrieveLocalizationRequest.md) | A retrieve request with localization. Don't use. Provided only for compatibility. |
+| class  | [RetrieveLocalizationResponse&lt;TEntity&gt;](Serenity.Services/RetrieveLocalizationResponse-1.md) | The service model for a localization retrieve response |
+| class  | [RetrieveRequest](Serenity.Services/RetrieveRequest.md) | The request model for a Retrieve service |
 | class  | [RetrieveRequestHandler&lt;TRow&gt;](Serenity.Services/RetrieveRequestHandler-1.md) |  |
 | class  | [RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](Serenity.Services/RetrieveRequestHandler-3.md) |  |
-| class  | [RetrieveResponse&lt;T&gt;](Serenity.Services/RetrieveResponse-1.md) |  |
-| class  | [SaveRequest&lt;TEntity&gt;](Serenity.Services/SaveRequest-1.md) |  |
+| class  | [RetrieveResponse&lt;T&gt;](Serenity.Services/RetrieveResponse-1.md) | The service response model for a Retrieve service |
+| class  | [SaveRequest&lt;TEntity&gt;](Serenity.Services/SaveRequest-1.md) | The service model for a Save (Create / Update) service. |
 | class  | [SaveRequestHandler&lt;TRow&gt;](Serenity.Services/SaveRequestHandler-1.md) |  |
 | class  | [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/SaveRequestHandler-3.md) |  |
 | enum  | [SaveRequestType](Serenity.Services/SaveRequestType.md) |  |
-| class  | [SaveResponse](Serenity.Services/SaveResponse.md) |  |
-| class  | [SaveWithLocalizationRequest&lt;TEntity&gt;](Serenity.Services/SaveWithLocalizationRequest-1.md) |  |
-| class  | [ServiceError](Serenity.Services/ServiceError.md) |  |
+| class  | [SaveResponse](Serenity.Services/SaveResponse.md) | The response model for a Save service |
+| class  | [SaveWithLocalizationRequest&lt;TEntity&gt;](Serenity.Services/SaveWithLocalizationRequest-1.md) | A save request with localization. Don't use. Provided only for compatibility. |
+| class  | [ServiceError](Serenity.Services/ServiceError.md) | The error object model returned from a service |
 | static class  | [ServiceHelper](Serenity.Services/ServiceHelper.md) |  |
 | static class  | [ServiceQueryHelper](Serenity.Services/ServiceQueryHelper.md) |  |
-| class  | [ServiceRequest](Serenity.Services/ServiceRequest.md) |  |
-| class  | [ServiceResponse](Serenity.Services/ServiceResponse.md) |  |
-| class  | [SortBy](Serenity.Services/SortBy.md) |  |
+| class  | [ServiceRequest](Serenity.Services/ServiceRequest.md) | The base request object model for all service requests. Your custom request objects should all derive from this type. |
+| class  | [ServiceResponse](Serenity.Services/ServiceResponse.md) | The base service response object model for all service response types. Your custom response objects should derive from this class. |
+| class  | [SortBy](Serenity.Services/SortBy.md) | A sort column. In JSON this is deserialized from strings in the format "field" or "field desc" |
 | static class  | [TreeOrdering](Serenity.Services/TreeOrdering.md) |  |
 | static class  | [TwoLevelCacheInvalidationExtensions](Serenity.Services/TwoLevelCacheInvalidationExtensions.md) |  |
-| class  | [UndeleteRequest](Serenity.Services/UndeleteRequest.md) |  |
+| class  | [UndeleteRequest](Serenity.Services/UndeleteRequest.md) | The request model for an undelete service |
 | class  | [UndeleteRequestHandler&lt;TRow&gt;](Serenity.Services/UndeleteRequestHandler-1.md) |  |
 | class  | [UndeleteRequestHandler&lt;TRow,TUndeleteResponse&gt;](Serenity.Services/UndeleteRequestHandler-2.md) |  |
-| class  | [UndeleteResponse](Serenity.Services/UndeleteResponse.md) |  |
+| class  | [UndeleteResponse](Serenity.Services/UndeleteResponse.md) | The response model for an undelete service |
 | class  | [UniqueConstraintSaveBehavior](Serenity.Services/UniqueConstraintSaveBehavior.md) |  |
 | class  | [UniqueFieldSaveBehavior](Serenity.Services/UniqueFieldSaveBehavior.md) |  |
 | class  | [UpdatableExtensionBehavior](Serenity.Services/UpdatableExtensionBehavior.md) |  |

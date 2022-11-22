@@ -1,6 +1,8 @@
 # SaveResponse class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+The response model for a Save service
+
 ```csharp
 public class SaveResponse : ServiceResponse
 ```
@@ -10,7 +12,7 @@ public class SaveResponse : ServiceResponse
 | name | description |
 | --- | --- |
 | [SaveResponse](SaveResponse/SaveResponse.md)() | The default constructor. |
-| [EntityId](SaveResponse/EntityId.md) |  |
+| [EntityId](SaveResponse/EntityId.md) | The entity ID of the created / updated entity. |
 
 ## See Also
 

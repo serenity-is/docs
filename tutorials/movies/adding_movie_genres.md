@@ -72,10 +72,10 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 
 ```cs
 //...
-[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies", 
-    typeof(MovieDB.MovieController), icon: "icon-camcorder")]
-[assembly: NavigationLink(2200, "Movie Database/Genres", 
+[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
+[assembly: NavigationLink(2100, "Movie Database/Movies",
+    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
+[assembly: NavigationLink(2200, "Movie Database/Genres",
     typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
 //...
 ```
@@ -145,14 +145,14 @@ namespace MovieTutorial.MovieDB
         }
 
         [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
-        public Int32? GenreId
+        public int? GenreId
         {
             get => fields.GenreId[this];
             set => fields.GenreId[this] = value;
         }
 
         [DisplayName("Genre"), Expression("g.Name")]
-        public String GenreName
+        public string GenreName
         {
             get => fields.GenreName[this];
             set => fields.GenreName[this] = value;
@@ -219,7 +219,7 @@ namespace MovieTutorial.MovieDB.Forms
     public class MovieForm
     {
         //...
-        public Int32 GenreId { get; set; }
+        public int GenreId { get; set; }
         public MovieKind Kind { get; set; }
     }
 }
@@ -295,7 +295,7 @@ Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown
 ```cs
     [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
     [LookupEditor("MovieDB.Genre")]
-    public Int32? GenreId
+    public int? GenreId
     {
         get => fields.GenreId[this];
         set => fields.GenreId[this] = value;
@@ -312,7 +312,7 @@ While defining [LookupEditor] we hardcoded the lookup key. It's also possible to
 ```cs
     [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
     [LookupEditor(typeof(GenreRow))]
-    public Int32? GenreId
+    public int? GenreId
     {
         get => fields.GenreId[this];
         set => fields.GenreId[this] = value;
@@ -346,9 +346,9 @@ namespace MovieTutorial.MovieDB.Columns
     {
         //...
         [Width(100)]
-        public String GenreName { get; set; }
+        public string GenreName { get; set; }
         [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-        public Int32 Runtime { get; set; }
+        public int Runtime { get; set; }
     }
 }
 ```
@@ -371,7 +371,7 @@ Open MovieRow.cs and modify *LookupEditor* attribute like this:
 ```cs
 [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
 [LookupEditor(typeof(GenreRow), InplaceAdd = true)]
-public Int32? GenreId
+public int? GenreId
 {
     get => fields.GenreId[this];
     set => fields.GenreId[this] = value;
@@ -381,7 +381,7 @@ public Int32? GenreId
 
 Now we can define a new Genre by clicking star/pen icon next to genre field.
 
-![Defining Genre Inplace](img/  .png)
+![Defining Genre Inplace](img/mdb_genre_inplace.png)
 
 > Here we also see that we can use a dialog from another page (GenreDialog) in the movies page. In Serenity applications, all client side objects (dialogs, grids, editors, formatters etc.) are self-contained reusable components (widgets) that are not bound to any page.
 
@@ -434,7 +434,7 @@ But this is not the case as they match. In such a case, either you'd have to use
 ```cs
 [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
 [LookupEditor(typeof(GenreRow), InplaceAdd = true, DialogType = "MovieDB.Genre")]
-public Int32? GenreId
+public int? GenreId
 {
     get => fields.GenreId[this];
     set => fields.GenreId[this] = value;
@@ -458,9 +458,9 @@ public class MovieColumns
     //...
     public DateTime ReleaseDate { get; set; }
     [Width(100), QuickFilter]
-    public String GenreName { get; set; }
+    public string GenreName { get; set; }
     [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-    public Int32 Runtime { get; set; }
+    public int Runtime { get; set; }
 }
 ```
 

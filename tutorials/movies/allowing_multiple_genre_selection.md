@@ -69,14 +69,14 @@ Remove GenreId and GenreName properties and their related field objects from *Mo
 
 ```cs
 // remove this
-public Int32? GenreId
+public int? GenreId
 {
     get => fields.GenreId[this];
     set => fields.GenreId[this] = value;
 }
 
 // remove this
-public String GenreName
+public string GenreName
 {
     get => fields.GenreName[this];
     set => fields.GenreName[this] = value;
@@ -95,14 +95,14 @@ Remove GenreName property from *MovieColumns.cs*:
 ```cs
 // remove this
 [Width(100), QuickFilter]
-public String GenreName { get; set; }
+public string GenreName { get; set; }
 ```
 
 Remove GenreId property from *MovieForm.cs*:
 
 ```cs
 // remove this
-public Int32 GenreId { get; set; }
+public int GenreId { get; set; }
 ```
 
 After building, we at least have a working *Movies* page again.
@@ -122,7 +122,7 @@ As we're not going to edit movie genres from a separate page, you can create row
 
 ### Adding GenreList Field
 
-As one movie might have multiple genres now, instead of a Int32 property, we need a list of Int32 values, e.g. `List<Int32>`. Add the GenreList property to *MovieRow.cs*:
+As one movie might have multiple genres now, instead of a int property, we need a list of int values, e.g. `List<int> `. Add the GenreList property to *MovieRow.cs*:
 
 > You might have to add System.Collections.Generic to usings.
 
@@ -139,7 +139,7 @@ public MovieKind? Kind
 [DisplayName("Genres")]
 [LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]
 [LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
-public List<Int32> GenreList
+public List<int>  GenreList
 {
     get => fields.GenreList[this];
     set => fields.GenreList[this] = value;
@@ -188,9 +188,9 @@ Edit *MovieForm.cs* and add *GenreList* property:
   public class MovieForm
   {
       //...
-      public List<Int32> GenreList { get; set; }
+      public List<int>  GenreList { get; set; }
       public MovieKind Kind { get; set; }
-      public Int32 Runtime { get; set; }
+      public int Runtime { get; set; }
   }
 ```
 
@@ -210,9 +210,9 @@ public class MovieColumns
 {
     //...
     [Width(200)]
-    public List<Int32> GenreList { get; set; }
+    public List<int>  GenreList { get; set; }
     [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-    public Int32 Runtime { get; set; }
+    public int Runtime { get; set; }
 }
 ```
 
@@ -220,7 +220,7 @@ This is what we got:
 
 ![Movie Multiple Genres](img/mdb_genre_idlist.png)
 
-GenreList column contains a list of Int32 values, which corresponds to an array in Javascript. Luckily, Javascript .toString() method for an array returns items separated by comma, so we got *"1,2"* for *Fight Club* movie.
+GenreList column contains a list of int values, which corresponds to an array in Javascript. Luckily, Javascript .toString() method for an array returns items separated by comma, so we got *"1,2"* for *Fight Club* movie.
 
 We would prefer genre names instead of Genre IDs, so it's clear that we need to *format* these values, by converting GenreId to their Genre name equivalents. 
 
@@ -253,7 +253,6 @@ export class GenreListFormatter implements Formatter {
         }).join(", ");
     }
 }
-
 ```
 
 Here we define a new formatter, *GenreListFormatter* and register it with Serenity type system, using *@Decorators.registerFormatter* decorator. Decorators are similar to .NET attributes.
@@ -262,7 +261,7 @@ All formatters should implement Formatter interface, which has a *format* method
 
 *ctx*, which is the formatting context, is an object with several members. One of them is *value* that contains the column value for current grid row/column being formatted.
 
-As we know that we'll use this formatter on column with a `List<Int32>` value, we start by casting value to *number[]*.
+As we know that we'll use this formatter on column with a `List<int> ` value, we start by casting value to *number[]*.
 
 > There is no Int32 type in Javascript. Int32, Double, Single etc. corresponds to number type. Also, generic *`List<>`* type in C# corresponds to an Array in Javascript.
 
@@ -313,9 +312,9 @@ public class MovieColumns
 {
     //...
     [Width(200), GenreListFormatter]
-    public List<Int32> GenreList { get; set; }
+    public List<int>  GenreList { get; set; }
     [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-    public Int32 Runtime { get; set; }
+    public int Runtime { get; set; }
 }
 ```
 

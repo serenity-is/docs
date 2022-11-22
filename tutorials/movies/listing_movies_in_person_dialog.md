@@ -24,9 +24,9 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Serenity will open a tab named *Person* and adds the properties until it sees another tab or reaches end of the properties. It will create the tabs in order. So watch where you put properties and tabs. Don't forget to put *IgnoreName* attribute since MoviesGrid is not a property in PersonsRow.
+Serenity will open a tab named *Person* and adds the properties until it sees another tab or the end of the properties. It will create the tabs in order. So watch where you put properties and tabs. Don't forget to put *IgnoreName* attribute since MoviesGrid is not a property in PersonRow.
 
-Now, we have a tab in PersonDialog:
+Now, we have a tabs in PersonDialog:
 
 ![Person With Tabs Initial](img/mdb_person_tabs.png)
 
@@ -47,11 +47,11 @@ namespace MovieTutorial.MovieDB.Columns
     public class PersonMovieColumns
     {
         [Width(220)]
-        public String MovieTitle { get; set; }
+        public string MovieTitle { get; set; }
         [Width(100)]
-        public Int32 MovieYear { get; set; }
+        public int MovieYear { get; set; }
         [Width(200)]
-        public String Character { get; set; }
+        public string Character { get; set; }
     }
 }
 ```
@@ -80,7 +80,7 @@ We are registering this grid as an editor. So sergen will generate an attribute 
 
 Open *MovieFrom.cs* and add editor for MovieGrid field:
 
-> Dont forget to build yor project.
+> Don't forget to run your project.
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
@@ -126,7 +126,7 @@ As you can see we put "0" as a string. Serenity hides caption if it sees "0" as 
 
 > Check out [this](../../attributes/attributes.md) for more attributes you can use.
 
-We hide the label so now we only have the grid on this tab. But grid still not filtered by the current user.
+We hide the label so now we only have the grid on this tab. But grid still have some problems.
 
 ![MoviePersonGrid Without Label](img/mdb_person_grid_without_label.png)
 

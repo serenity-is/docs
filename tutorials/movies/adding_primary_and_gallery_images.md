@@ -128,8 +128,8 @@ namespace MovieTutorial.MovieDB.Forms
         [Tab("Person")]
         public string FirstName { get; set; }
         public string Lastname { get; set; }
-        public String PrimaryImage { get; set; }
-        public String GalleryImages { get; set; }
+        public string PrimaryImage { get; set; }
+        public string GalleryImages { get; set; }
         public DateTime BirthDate { get; set; }
         public string BirthPlace { get; set; }
         public Gender Gender { get; set; }
@@ -147,19 +147,19 @@ namespace MovieTutorial.MovieDB.Forms
     //...
     public class MovieForm
     {
-        public String Title { get; set; }
+        public string Title { get; set; }
         [TextAreaEditor(Rows = 3)]
-        public String Description { get; set; }
+        public string Description { get; set; }
         [MovieCastEditor]
         public List<MovieCastRow> CastList { get; set; }
-        public String PrimaryImage { get; set; }
-        public String GalleryImages { get; set; }
+        public string PrimaryImage { get; set; }
+        public string GalleryImages { get; set; }
         [TextAreaEditor(Rows = 8)]
-        public String Storyline { get; set; }
-        public Int32 Year { get; set; }
+        public string Storyline { get; set; }
+        public int Year { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public Int32 Runtime { get; set; }
-        public List<Int32> GenreList { get; set; }
+        public int Runtime { get; set; }
+        public List<int>  GenreList { get; set; }
         public MovieKind Kind { get; set; }
     }
 }

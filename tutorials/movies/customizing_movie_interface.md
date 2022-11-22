@@ -24,7 +24,7 @@ namespace MovieTutorial.MovieDB
     {
         // ...
         [DisplayName("Runtime")]
-        public Int32? Runtime
+        public int? Runtime
         {
             get => fields.Runtime[this];
             set => fields.Runtime[this] = value;
@@ -48,7 +48,7 @@ namespace MovieTutorial.MovieDB
     {
         // ...
         [DisplayName("Runtime (mins)")]
-        public Int32? Runtime
+        public int? Runtime
         {
             get => fields.Runtime[this];
             set => fields.Runtime[this] = value;
@@ -70,7 +70,7 @@ Now build solution and run application. You'll see that field title is changed i
 
 So far so good, what if we wanted to show another title in grid (columns) or dialog (form). We can override it corresponding definition file.
 
-> Chekout [this](./../../attributes/attributes.md) page to see attributes that can be used on a Column or Form.
+> Check out [this](./../../attributes/attributes.md) page to see attributes that can be used on a Column or Form.
 
 Let's do it on columns first. Next to *MovieRow.cs*, you can find a source file named *MovieColumns.cs*:
 
@@ -84,9 +84,9 @@ namespace MovieTutorial.MovieDB.Columns
     public class MovieColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Int32 MovieId { get; set; }
+        public int MovieId { get; set; }
         //...
-        public Int32 Runtime { get; set; }
+        public int Runtime { get; set; }
     }
 }
 ```
@@ -107,10 +107,10 @@ namespace MovieTutorial.MovieDB.Columns
     public class MovieColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Int32 MovieId { get; set; }
+        public int MovieId { get; set; }
         //...
         [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-        public Int32 Runtime { get; set; }
+        public int Runtime { get; set; }
     }
 }
 ```
@@ -148,12 +148,12 @@ namespace MovieTutorial.MovieDB.Forms
     [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieForm
     {
-        public String Title { get; set; }
-        public String Description { get; set; }
-        public String Storyline { get; set; }
-        public Int32 Year { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Storyline { get; set; }
+        public int Year { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public Int32 Runtime { get; set; }
+        public int Runtime { get; set; }
     }
 }
 ```
@@ -168,14 +168,14 @@ namespace MovieTutorial.MovieDB.Forms
     [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieForm
     {
-        public String Title { get; set; }
+        public string Title { get; set; }
         [TextAreaEditor(Rows = 3)]
-        public String Description { get; set; }
+        public string Description { get; set; }
         [TextAreaEditor(Rows = 8)]
-        public String Storyline { get; set; }
-        public Int32 Year { get; set; }
+        public string Storyline { get; set; }
+        public int Year { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public Int32 Runtime { get; set; }
+        public int Runtime { get; set; }
     }
 }
 ```
@@ -250,7 +250,7 @@ namespace MovieTutorial.MovieDB
     public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Movie Id"), Identity]
-        public Int32? MovieId
+        public int? MovieId
 ```
 
 Change DisplayName attribute value to *Movies*. This is the name that is used when this table is referenced, and it is usually a plural name. This attribute is used for determining default page title. 
@@ -270,5 +270,5 @@ namespace MovieTutorial.MovieDB
     public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Movie Id"), Identity]
-        public Int32? MovieId
+        public int? MovieId
 ```

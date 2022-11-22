@@ -57,7 +57,7 @@ As we are not using Sergen anymore, we need to add a mapping in our MovieRow.cs 
 
 ```cs
 [DisplayName("Runtime (mins)")]
-public Int32? Runtime
+public int? Runtime
 {
     get => fields.Runtime[this];
     set => fields.Runtime[this] = value;
@@ -98,7 +98,7 @@ namespace MovieTutorial.MovieDB.Forms
     public class MovieForm
     {
         // ...
-        public Int32 Runtime { get; set; }
+        public int Runtime { get; set; }
         public MovieKind Kind { get; set; }
     }
 }

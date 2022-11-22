@@ -83,10 +83,10 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 
 ```cs
 //...
-[assembly: NavigationMenu(2000, "Movie Database", icon: "icon-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies", 
-    typeof(MovieDB.MovieController), icon: "icon-camcorder")]
-[assembly: NavigationLink(2200, "Movie Database/Genres", 
+[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
+[assembly: NavigationLink(2100, "Movie Database/Movies",
+    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
+[assembly: NavigationLink(2200, "Movie Database/Genres",
     typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
 [assembly: NavigationLink(2300, "Movie Database/Person",
     typeof(MovieDB.PersonController), icon: "fa-users")]
@@ -135,7 +135,7 @@ public class RowFields : RowFieldsBase
 }
 ```
 
-For consistency, change type of Gender property in PersonForm.cs and PersonColumns.cs from Int32 to Gender.
+For consistency, change type of Gender property in PersonForm.cs and PersonColumns.cs from int to Gender.
 
 
 ### Rebuilding and auto transformation
@@ -161,14 +161,14 @@ namespace MovieTutorial.MovieDB
     {
         //... remove QuickSearch and NameProperty from FirstName
         [DisplayName("First Name"), Size(50), NotNull]
-        public String FirstName
+        public string FirstName
         {
             get => fields.FirstName[this];
             set => fields.FirstName[this] = value;
         }
 
         [DisplayName("Lastname"), Size(50), NotNull]
-        public String Lastname
+        public string Lastname
         {
             get => fields.Lastname[this];
             set => fields.Lastname[this] = value;
@@ -177,7 +177,7 @@ namespace MovieTutorial.MovieDB
         //change NameField to Fullname
         [DisplayName("Full Name"),
             Expression("(t0.FirstName + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
-        public String Fullname
+        public string Fullname
         {
             get => fields.Fullname[this];
             set => fields.Fullname[this] = value;
@@ -309,7 +309,8 @@ Generate code for MovieCast table using *sergen*:
 After generating code, as we don't need a separate page to edit movie cast table, you may delete files listed below:
 
 ```
-MovieCastIndex.cshtml or MovieCastPage.ts
+MovieCastIndex.cshtml (if exists)
+MovieCastPage.ts
 MovieCastPage.cs
 MovieCastDialog.ts
 MovieCastGrid.ts
@@ -361,11 +362,7 @@ export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
 }
 ```
 
-This editor derives from *Extensions.GridEditorBase* class in Serenity.Extensions, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
-
-> If you are using typescript with namespaces as a rule of thumb, if you are deriving some class from another in your project (not Serenity classes), you should put a reference to file containing that base class on the first line like `/// <reference path="path/to/file.ts" />`.
->
-> This helps TypeScript to convert referenced class to javascript before other classes that might need it.
+This editor derives from *GridEditorBase* class in Extensions, which is a special grid type that is designed for in-memory editing. It is also the base class for Order Details editor used in Order dialog.
 
 To reference this new editor type from server side, build and ensure auto transform is successfull.
 
@@ -379,13 +376,13 @@ namespace MovieTutorial.MovieDB.Forms
     //...
     public class MovieForm
     {
-        public String Title { get; set; }
+        public string Title { get; set; }
         [TextAreaEditor(Rows = 3)]
-        public String Description { get; set; }
+        public string Description { get; set; }
         [MovieCastEditor, IgnoreName]
         public List<MovieCastRow> CastList { get; set; }
         [TextAreaEditor(Rows = 8)]
-        public String Storyline { get; set; }
+        public string Storyline { get; set; }
         //...
     }
 }
@@ -432,7 +429,7 @@ export class MovieCastEditDialog extends GridEditorDialog<MovieCastRow> {
 
 ```
 
-We are using another base class from Serenity.Extensions, *GridEditorDialog* which is also used by OrderDetailEditDialog.
+We are using another base class from Extensions, *GridEditorDialog* which is also used by OrderDetailEditDialog.
 
 Open *MovieCastEditor.ts* again, add a getDialogType method and override getAddButtonCaption:
 
@@ -484,8 +481,8 @@ namespace MovieTutorial.MovieDB.Forms
     [BasedOnRow(typeof(Entities.MovieCastRow), CheckNames = true)]
     public class MovieCastForm
     {
-        public Int32 PersonId { get; set; }
-        public String Character { get; set; }
+        public int PersonId { get; set; }
+        public string Character { get; set; }
     }
 }
 ```
@@ -505,7 +502,7 @@ public sealed class MovieCastRow : Row<MovieCastRow.RowFields>, IIdRow, INameRow
     [DisplayName("Actor/Actress"), NotNull, ForeignKey("[mov].[Person]", "PersonId")]
     [LeftJoin("jPerson"), TextualField("PersonFirstName")]
     [LookupEditor(typeof(PersonRow))]
-    public Int32? PersonId
+    public int? PersonId
     {
         get => fields.PersonId[this];
         set => fields.PersonId[this] = value;
@@ -570,14 +567,14 @@ namespace MovieTutorial.MovieDB
         // ...
         
         [DisplayName("Person First Name"), Expression("jPerson.[FirstName]")]
-        public String PersonFirstName
+        public string PersonFirstName
         {
             get => fields.PersonFirstName[this];
             set => fields.PersonFirstName[this] = value;
         }
 
         [DisplayName("Person Lastname"), Expression("jPerson.[Lastname]")]
-        public String PersonLastname
+        public string PersonLastname
         {
             get => fields.PersonLastname[this];
             set => fields.PersonLastname[this] = value;
@@ -585,7 +582,7 @@ namespace MovieTutorial.MovieDB
 
         [DisplayName("Actor/Actress"), 
          Expression("(jPerson.Firstname + ' ' + jPerson.Lastname)")]
-        public String PersonFullname
+        public string PersonFullname
         {
             get => fields.PersonFullname[this];
             set => fields.PersonFullname[this] = value;
@@ -618,9 +615,9 @@ namespace MovieTutorial.MovieDB.Columns
     public class MovieCastColumns
     {
         [EditLink, Width(220)]
-        public String PersonFullname { get; set; }
+        public string PersonFullname { get; set; }
         [EditLink, Width(150)]
-        public String Character { get; set; }
+        public string Character { get; set; }
     }
 }
 ```
@@ -653,8 +650,8 @@ These fields corresponds to the form fields you previously set in MovieCastForm.
 ```cs
 public class MovieCastForm
 {
-    public Int32 PersonId { get; set; }
-    public String Character { get; set; }
+    public int PersonId { get; set; }
+    public string Character { get; set; }
 }
 ```
 
@@ -663,8 +660,8 @@ But in grid, we are showing these columns:
 ```cs
 public class MovieCastColumns
 {
-    public String PersonFullname { get; set; }
-    public String Character { get; set; }
+    public string PersonFullname { get; set; }
+    public string Character { get; set; }
 }
 ```
 
@@ -693,7 +690,7 @@ export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
 }
 ```
 
-ValidateEntity is a method from our GridEditorBase class in Serenity.Extensions. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
+ValidateEntity is a method from our GridEditorBase class in @serenity-is/extensions. This method is called when Save button is clicked to validate the entity, just before it is going to be added to the grid. But we are overriding it here for another purpose (to set PersonFullname field value) rather than validation.
 
 As we saw before, our entity has PersonId and Character fields filled in. We can use the value of PersonId field to determine the person fullname.
 

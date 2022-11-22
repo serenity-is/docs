@@ -11,7 +11,7 @@ public class MovieColumns
 {
     //...
     [Width(200), GenreListFormatter, QuickFilter]
-    public List<Int32> GenreList { get; set; }
+    public List<int>  GenreList { get; set; }
 }
 ```
 As soon as you type a Genre into Genres you'll have this error:
@@ -36,11 +36,11 @@ We could process the request *Criteria* object (which is similar to an expressio
 Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieEndpoint.cs*:
 
 ```cs
+using Serenity.Services;
+using System.Collections.Generic;
+
 namespace MovieTutorial.MovieDB
 {
-    using Serenity.Services;
-    using System.Collections.Generic;
-
     public class MovieListRequest : ListRequest
     {
         public List<int> Genres { get; set; }

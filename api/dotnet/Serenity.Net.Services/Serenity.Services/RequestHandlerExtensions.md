@@ -9,7 +9,7 @@ public static class RequestHandlerExtensions
 
 | name | description |
 | --- | --- |
-| static [CreateRequest](RequestHandlerExtensions/CreateRequest.md)(…) |  (4 methods) |
+| static [CreateRequest](RequestHandlerExtensions/CreateRequest.md)(…) |  (5 methods) |
 | static [CreateRequest&lt;TRow&gt;](RequestHandlerExtensions/CreateRequest.md)(…) |  |
 | static [GetRequestType](RequestHandlerExtensions/GetRequestType.md)(…) |  |
 | static [GetResponseType](RequestHandlerExtensions/GetResponseType.md)(…) |  |

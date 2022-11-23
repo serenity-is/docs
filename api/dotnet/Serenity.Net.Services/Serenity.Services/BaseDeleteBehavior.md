@@ -1,6 +1,8 @@
 # BaseDeleteBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base class for types implementing [`IDeleteBehavior`](IDeleteBehavior.md)
+
 ```csharp
 public abstract class BaseDeleteBehavior : IDeleteBehavior, IDeleteExceptionBehavior
 ```

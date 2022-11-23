@@ -1,6 +1,8 @@
 # ReportRegistry class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default report registry implementation
+
 ```csharp
 public class ReportRegistry : IReportRegistry
 ```
@@ -9,14 +11,14 @@ public class ReportRegistry : IReportRegistry
 
 | name | description |
 | --- | --- |
-| [ReportRegistry](ReportRegistry/ReportRegistry.md)(…) |  |
+| [ReportRegistry](ReportRegistry/ReportRegistry.md)(…) | Creates an instance of the class. |
 | [GetAvailableReportsInCategory](ReportRegistry/GetAvailableReportsInCategory.md)(…) |  |
 | [GetReport](ReportRegistry/GetReport.md)(…) |  |
 | [HasAvailableReportsInCategory](ReportRegistry/HasAvailableReportsInCategory.md)(…) |  |
-| static [GetReportCategoryTitle](ReportRegistry/GetReportCategoryTitle.md)(…) |  |
-| static [GetReportKey](ReportRegistry/GetReportKey.md)(…) |  |
-| class [Category](ReportRegistry.Category.md) |  |
-| class [Report](ReportRegistry.Report.md) |  |
+| static [GetReportCategoryTitle](ReportRegistry/GetReportCategoryTitle.md)(…) | Gets category title for a category key |
+| static [GetReportKey](ReportRegistry/GetReportKey.md)(…) | Gets report key for the report type by looking at its ReportAttribute, returning type full name if it does not have a report key or the attribute. |
+| class [Category](ReportRegistry.Category.md) | Model for a report category |
+| class [Report](ReportRegistry.Report.md) | Metadata for a registered report |
 
 ## See Also
 

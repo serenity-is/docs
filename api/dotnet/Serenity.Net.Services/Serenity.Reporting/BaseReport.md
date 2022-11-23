@@ -1,6 +1,8 @@
 # BaseReport class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base class for reports that implement [`IReport`](IReport.md) and optionally [`IReportWithAdditionalData`](IReportWithAdditionalData.md)
+
 ```csharp
 public abstract class BaseReport : IReport, IReportWithAdditionalData
 ```

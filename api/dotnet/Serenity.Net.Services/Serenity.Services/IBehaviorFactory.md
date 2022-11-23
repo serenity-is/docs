@@ -1,6 +1,8 @@
 # IBehaviorFactory interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Behavior factory abstraction
+
 ```csharp
 public interface IBehaviorFactory
 ```
@@ -9,7 +11,7 @@ public interface IBehaviorFactory
 
 | name | description |
 | --- | --- |
-| [CreateInstance](IBehaviorFactory/CreateInstance.md)(…) |  |
+| [CreateInstance](IBehaviorFactory/CreateInstance.md)(…) | Creates an instance of the behavior type |
 
 ## See Also
 

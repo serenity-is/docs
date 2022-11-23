@@ -9,7 +9,7 @@ public DefaultImplicitBehaviorRegistry(ITypeSource typeSource)
 
 | parameter | description |
 | --- | --- |
-| behaviorTypes | Types with IImplicitBehavior interface |
+| typeSource | The type source to extract [`IImplicitBehavior`](../IImplicitBehavior.md) types from |
 
 ## See Also
 

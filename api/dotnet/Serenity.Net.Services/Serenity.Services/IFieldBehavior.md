@@ -11,7 +11,7 @@ public interface IFieldBehavior
 
 | name | description |
 | --- | --- |
-| [Target](IFieldBehavior/Target.md) { get; set; } |  |
+| [Target](IFieldBehavior/Target.md) { get; set; } | Gets / sets the target field that current behavior should operate on |
 
 ## See Also
 

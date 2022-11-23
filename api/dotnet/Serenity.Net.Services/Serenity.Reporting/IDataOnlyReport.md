@@ -1,6 +1,8 @@
 # IDataOnlyReport interface
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for reports that only contain data, e.g. no design. These are usually Excel/CSV etc. export type of reports.
+
 ```csharp
 public interface IDataOnlyReport : IReport
 ```
@@ -9,7 +11,7 @@ public interface IDataOnlyReport : IReport
 
 | name | description |
 | --- | --- |
-| [GetColumnList](IDataOnlyReport/GetColumnList.md)() |  |
+| [GetColumnList](IDataOnlyReport/GetColumnList.md)() | Gets the list of columns to export. |
 
 ## See Also
 

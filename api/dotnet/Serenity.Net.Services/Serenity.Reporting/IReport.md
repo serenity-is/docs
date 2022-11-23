@@ -1,6 +1,8 @@
 # IReport interface
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+The basic interface for all reports
+
 ```csharp
 public interface IReport
 ```
@@ -9,7 +11,7 @@ public interface IReport
 
 | name | description |
 | --- | --- |
-| [GetData](IReport/GetData.md)() |  |
+| [GetData](IReport/GetData.md)() | Returns the data for the report |
 
 ## See Also
 

@@ -11,7 +11,7 @@ public interface IImplicitBehavior
 
 | name | description |
 | --- | --- |
-| [ActivateFor](IImplicitBehavior/ActivateFor.md)(…) |  |
+| [ActivateFor](IImplicitBehavior/ActivateFor.md)(…) | Returns true if this behavior should be used for the target row type. |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # UseChromeHtmlToPdfAttribute class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Marks a report so that it should use Chrome instead of WKHTML
+
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
 public class UseChromeHtmlToPdfAttribute : Attribute

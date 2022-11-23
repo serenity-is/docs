@@ -1,9 +1,16 @@
 # ReportColumnConverter.FromField method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Extracts a report column from a Field object.
+
 ```csharp
 public static ReportColumn FromField(Field field, ITextLocalizer localizer)
 ```
+
+| parameter | description |
+| --- | --- |
+| field | The field object |
+| localizer | Text localizer |
 
 ## See Also
 

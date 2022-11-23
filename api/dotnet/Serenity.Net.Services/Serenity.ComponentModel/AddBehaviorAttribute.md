@@ -12,8 +12,8 @@ public class AddBehaviorAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [AddBehaviorAttribute](AddBehaviorAttribute/AddBehaviorAttribute.md)(…) |  |
-| [Value](AddBehaviorAttribute/Value.md) { get; } |  |
+| [AddBehaviorAttribute](AddBehaviorAttribute/AddBehaviorAttribute.md)(…) | Creates an instance of the attribute |
+| [Value](AddBehaviorAttribute/Value.md) { get; } | Gets the behavior type |
 
 ## See Also
 

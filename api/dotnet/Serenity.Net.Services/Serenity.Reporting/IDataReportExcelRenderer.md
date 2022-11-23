@@ -1,6 +1,8 @@
 # IDataReportExcelRenderer interface
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Excel exporter interface for data only reports. This is usually implemented by EPPlus based exporter. The interface abstracts that dependency.
+
 ```csharp
 public interface IDataReportExcelRenderer
 ```

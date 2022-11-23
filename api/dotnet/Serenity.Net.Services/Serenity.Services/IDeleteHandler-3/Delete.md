@@ -1,9 +1,16 @@
 # IDeleteHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Delete method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Processes a delete request
+
 ```csharp
 public TDeleteResponse Delete(IUnitOfWork uow, TDeleteRequest request)
 ```
+
+| parameter | description |
+| --- | --- |
+| uow | Unit of work |
+| request | The delete request |
 
 ## See Also
 

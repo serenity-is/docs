@@ -9,7 +9,7 @@ public interface IExcelExporter
 
 | name | description |
 | --- | --- |
-| [Export](IExcelExporter/Export.md)(…) |  (3 methods) |
+| [Export](IExcelExporter/Export.md)(…) | Exports the specified data to Excel format (3 methods) |
 
 ## See Also
 

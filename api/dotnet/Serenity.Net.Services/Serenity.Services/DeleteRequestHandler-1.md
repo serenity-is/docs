@@ -1,17 +1,23 @@
 # DeleteRequestHandler&lt;TRow&gt; class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base generic class for delete request handlers that use [`DeleteRequest`](DeleteRequest.md) as the request type, and [`DeleteResponse`](DeleteResponse.md) as the response type.
+
 ```csharp
 public class DeleteRequestHandler<TRow> : 
     DeleteRequestHandler<TRow, DeleteRequest, DeleteResponse>, IDeleteHandler<TRow>
     where TRow : class, IRow, IIdRow, new()
 ```
 
+| parameter | description |
+| --- | --- |
+| TRow | The entity type |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DeleteRequestHandler](DeleteRequestHandler-1/DeleteRequestHandler.md)(…) |  |
+| [DeleteRequestHandler](DeleteRequestHandler-1/DeleteRequestHandler.md)(…) | Creates an instance of the class |
 
 ## See Also
 

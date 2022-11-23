@@ -1,6 +1,8 @@
 # BaseCellDecorator class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base class for cell decorators, implementing all [`ICellDecorator`](ICellDecorator.md) members.
+
 ```csharp
 public abstract class BaseCellDecorator : ICellDecorator
 ```

@@ -1,6 +1,8 @@
 # IHtmlToPdfOptions interface
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Set of options for HTML to PDF converter (WKHTMLToPdf)
+
 ```csharp
 public interface IHtmlToPdfOptions
 ```

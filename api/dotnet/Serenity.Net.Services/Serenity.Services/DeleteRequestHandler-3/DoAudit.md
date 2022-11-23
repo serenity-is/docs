@@ -1,6 +1,8 @@
 # DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.DoAudit method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Performs auditing
+
 ```csharp
 protected virtual void DoAudit()
 ```

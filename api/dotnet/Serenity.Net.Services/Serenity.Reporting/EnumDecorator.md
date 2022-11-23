@@ -1,6 +1,8 @@
 # EnumDecorator class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+A decorator used to export enum name instead of the enum integer value.
+
 ```csharp
 public class EnumDecorator : BaseCellDecorator
 ```
@@ -9,7 +11,7 @@ public class EnumDecorator : BaseCellDecorator
 
 | name | description |
 | --- | --- |
-| [EnumDecorator](EnumDecorator/EnumDecorator.md)(…) |  |
+| [EnumDecorator](EnumDecorator/EnumDecorator.md)(…) | Creates an instance of the class. |
 | override [Decorate](EnumDecorator/Decorate.md)() |  |
 
 ## See Also

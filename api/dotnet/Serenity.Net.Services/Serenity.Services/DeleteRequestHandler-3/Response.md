@@ -1,6 +1,8 @@
 # DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Response field
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Response object
+
 ```csharp
 protected TDeleteResponse Response;
 ```

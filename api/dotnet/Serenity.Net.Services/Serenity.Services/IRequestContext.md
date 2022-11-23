@@ -1,6 +1,8 @@
 # IRequestContext interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+A service request context abstraction containing services that are mostly used by all service handler types. This is a type similar to the HttpContext but is specialized for service handlers.
+
 ```csharp
 public interface IRequestContext
 ```
@@ -9,11 +11,11 @@ public interface IRequestContext
 
 | name | description |
 | --- | --- |
-| [Behaviors](IRequestContext/Behaviors.md) { get; } |  |
-| [Cache](IRequestContext/Cache.md) { get; } |  |
-| [Localizer](IRequestContext/Localizer.md) { get; } |  |
-| [Permissions](IRequestContext/Permissions.md) { get; } |  |
-| [User](IRequestContext/User.md) { get; } |  |
+| [Behaviors](IRequestContext/Behaviors.md) { get; } | Gets the behavior provider |
+| [Cache](IRequestContext/Cache.md) { get; } | Get the two level cache |
+| [Localizer](IRequestContext/Localizer.md) { get; } | Gets the text localizer |
+| [Permissions](IRequestContext/Permissions.md) { get; } | Gets the permission service |
+| [User](IRequestContext/User.md) { get; } | Gets current user |
 
 ## See Also
 

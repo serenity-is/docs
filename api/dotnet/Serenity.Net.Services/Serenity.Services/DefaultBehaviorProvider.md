@@ -1,6 +1,8 @@
 # DefaultBehaviorProvider class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default implementation for [`IBehaviorProvider`](IBehaviorProvider.md)
+
 ```csharp
 public class DefaultBehaviorProvider : IBehaviorProvider
 ```
@@ -9,7 +11,7 @@ public class DefaultBehaviorProvider : IBehaviorProvider
 
 | name | description |
 | --- | --- |
-| [DefaultBehaviorProvider](DefaultBehaviorProvider/DefaultBehaviorProvider.md)(…) |  |
+| [DefaultBehaviorProvider](DefaultBehaviorProvider/DefaultBehaviorProvider.md)(…) | Creates an instance of the class. |
 | [Resolve](DefaultBehaviorProvider/Resolve.md)(…) |  |
 
 ## See Also

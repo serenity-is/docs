@@ -1,6 +1,8 @@
 # DefaultImplicitBehaviorRegistry class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default implementation for the [`IImplicitBehaviorRegistry`](IImplicitBehaviorRegistry.md)
+
 ```csharp
 public class DefaultImplicitBehaviorRegistry : IImplicitBehaviorRegistry
 ```

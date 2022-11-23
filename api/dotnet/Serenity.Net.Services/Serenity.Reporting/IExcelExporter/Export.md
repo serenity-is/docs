@@ -1,9 +1,16 @@
 # IExcelExporter.Export method (1 of 3)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Exports the specified data to Excel format
+
 ```csharp
 public byte[] Export(IEnumerable data, IEnumerable<ReportColumn> columns)
 ```
+
+| parameter | description |
+| --- | --- |
+| data | The data. |
+| columns | The columns to export. |
 
 ## See Also
 

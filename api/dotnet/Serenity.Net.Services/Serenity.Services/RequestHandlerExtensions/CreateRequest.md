@@ -1,4 +1,4 @@
-# RequestHandlerExtensions.CreateRequest method (1 of 5)
+# RequestHandlerExtensions.CreateRequest method (1 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
@@ -13,7 +13,7 @@ public static DeleteRequest CreateRequest(this IDeleteRequestHandler handler)
 
 ---
 
-# RequestHandlerExtensions.CreateRequest method (2 of 5)
+# RequestHandlerExtensions.CreateRequest method (2 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
@@ -28,7 +28,7 @@ public static ListRequest CreateRequest(this IListRequestHandler handler)
 
 ---
 
-# RequestHandlerExtensions.CreateRequest method (3 of 5)
+# RequestHandlerExtensions.CreateRequest method (3 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
@@ -43,7 +43,7 @@ public static RetrieveRequest CreateRequest(this IRetrieveRequestHandler handler
 
 ---
 
-# RequestHandlerExtensions.CreateRequest method (4 of 5)
+# RequestHandlerExtensions.CreateRequest method (4 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
@@ -58,7 +58,22 @@ public static ISaveRequest CreateRequest(this ISaveRequestHandler handler)
 
 ---
 
-# RequestHandlerExtensions.CreateRequest&lt;TRow&gt; method (5 of 5)
+# RequestHandlerExtensions.CreateRequest method (5 of 6)
+**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+
+```csharp
+public static UndeleteRequest CreateRequest(this IUndeleteRequestHandler handler)
+```
+
+## See Also
+
+* class [UndeleteRequest](../UndeleteRequest.md)
+* interface [IUndeleteRequestHandler](../IUndeleteRequestHandler.md)
+* class [RequestHandlerExtensions](../RequestHandlerExtensions.md)
+
+---
+
+# RequestHandlerExtensions.CreateRequest&lt;TRow&gt; method (6 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp

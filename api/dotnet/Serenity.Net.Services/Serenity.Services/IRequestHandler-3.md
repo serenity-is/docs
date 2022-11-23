@@ -1,10 +1,18 @@
 # IRequestHandler&lt;TRow,TRequest,TResponse&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Marker interface for request handlers that operate on a specific entity type, request type and a response type.
+
 ```csharp
 public interface IRequestHandler<TRow, TRequest, TResponse> : IRequestHandler<TRow>, 
     IRequestType<TRequest>, IResponseType<TResponse>
 ```
+
+| parameter | description |
+| --- | --- |
+| TRow | The entity type |
+| TRequest | Request type |
+| TResponse | Response type |
 
 ## See Also
 

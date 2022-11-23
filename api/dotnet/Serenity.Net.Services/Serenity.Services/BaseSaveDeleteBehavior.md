@@ -1,6 +1,8 @@
 # BaseSaveDeleteBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base class for behaviors implementing save and delete behavior interfaces
+
 ```csharp
 public abstract class BaseSaveDeleteBehavior : BaseSaveBehavior, IDeleteBehavior, 
     IDeleteExceptionBehavior

@@ -1,10 +1,16 @@
 # IDeleteHandler&lt;TRow&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for delete request handlers that use [`DeleteRequest`](DeleteRequest.md) as request, and [`DeleteResponse`](DeleteResponse.md) as response types.
+
 ```csharp
 public interface IDeleteHandler<TRow> : IDeleteHandler<TRow, DeleteRequest, DeleteResponse>
     where TRow : class, IRow, new()
 ```
+
+| parameter | description |
+| --- | --- |
+| TRow | Row type |
 
 ## See Also
 

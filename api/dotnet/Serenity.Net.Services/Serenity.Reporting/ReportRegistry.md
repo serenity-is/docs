@@ -13,7 +13,7 @@ public class ReportRegistry : IReportRegistry
 | --- | --- |
 | [ReportRegistry](ReportRegistry/ReportRegistry.md)(…) | Creates an instance of the class. |
 | [GetAvailableReportsInCategory](ReportRegistry/GetAvailableReportsInCategory.md)(…) |  |
-| [GetReport](ReportRegistry/GetReport.md)(…) |  |
+| [GetReport](ReportRegistry/GetReport.md)(…) | Returns report with the report key, optionally validating its permissions. |
 | [HasAvailableReportsInCategory](ReportRegistry/HasAvailableReportsInCategory.md)(…) |  |
 | static [GetReportCategoryTitle](ReportRegistry/GetReportCategoryTitle.md)(…) | Gets category title for a category key |
 | static [GetReportKey](ReportRegistry/GetReportKey.md)(…) | Gets report key for the report type by looking at its ReportAttribute, returning type full name if it does not have a report key or the attribute. |

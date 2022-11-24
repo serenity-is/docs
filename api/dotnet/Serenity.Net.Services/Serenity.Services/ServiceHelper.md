@@ -1,6 +1,8 @@
 # ServiceHelper class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Contains some helper methods for service handlers
+
 ```csharp
 public static class ServiceHelper
 ```
@@ -9,9 +11,9 @@ public static class ServiceHelper
 
 | name | description |
 | --- | --- |
-| static [CheckParentNotDeleted](ServiceHelper/CheckParentNotDeleted.md)(…) |  |
-| static [IsUniqueIndexException](ServiceHelper/IsUniqueIndexException.md)(…) |  |
-| static [SetSkipTakeTotal&lt;T&gt;](ServiceHelper/SetSkipTakeTotal.md)(…) |  |
+| static [CheckParentNotDeleted](ServiceHelper/CheckParentNotDeleted.md)(…) | Checks that parent record is not soft deleted |
+| static [IsUniqueIndexException](ServiceHelper/IsUniqueIndexException.md)(…) | Checks if an exception seems to be an unique index exception |
+| static [SetSkipTakeTotal&lt;T&gt;](ServiceHelper/SetSkipTakeTotal.md)(…) | Sets the Skip, Take and Total parameters in the response |
 
 ## See Also
 

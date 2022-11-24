@@ -1,6 +1,8 @@
 # IDefaultHandlerRegistry interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Abstaction for the registry that cobtains default handler types.
+
 ```csharp
 public interface IDefaultHandlerRegistry
 ```
@@ -9,7 +11,7 @@ public interface IDefaultHandlerRegistry
 
 | name | description |
 | --- | --- |
-| [GetTypes](IDefaultHandlerRegistry/GetTypes.md)(…) |  |
+| [GetTypes](IDefaultHandlerRegistry/GetTypes.md)(…) | Gets a list of registered handler classes for the requested handler interface type. |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.Request field
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Response object
+
 ```csharp
 protected TListRequest Request;
 ```

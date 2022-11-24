@@ -1,6 +1,8 @@
 # ILocalizationRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for rows with a CultureId field
+
 ```csharp
 public interface ILocalizationRow : IIdRow
 ```
@@ -9,7 +11,7 @@ public interface ILocalizationRow : IIdRow
 
 | name | description |
 | --- | --- |
-| [CultureIdField](ILocalizationRow/CultureIdField.md) { get; } |  |
+| [CultureIdField](ILocalizationRow/CultureIdField.md) { get; } | Culture ID field, e.g. LanguageID / LanguageKey |
 
 ## See Also
 

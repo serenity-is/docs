@@ -1,6 +1,8 @@
 # CaptureOperationType enumeration
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Contains capture logging operation types
+
 ```csharp
 public enum CaptureOperationType
 ```
@@ -9,10 +11,10 @@ public enum CaptureOperationType
 
 | name | value | description |
 | --- | --- | --- |
-| Before | `0` |  |
-| Delete | `1` |  |
-| Insert | `2` |  |
-| Update | `3` |  |
+| Before | `0` | The before record, only available for updates |
+| Delete | `1` | Delete |
+| Insert | `2` | Insert |
+| Update | `3` | Update (update records have both Before and Update records) |
 
 ## See Also
 

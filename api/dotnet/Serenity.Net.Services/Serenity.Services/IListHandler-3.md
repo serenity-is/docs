@@ -1,6 +1,8 @@
 # IListHandler&lt;TRow,TListRequest,TListResponse&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for list request handlers with custom list request / response types.
+
 ```csharp
 public interface IListHandler<TRow, TListRequest, TListResponse> : 
     IRequestHandler<TRow, TListRequest, TListResponse>
@@ -9,11 +11,17 @@ public interface IListHandler<TRow, TListRequest, TListResponse> :
     where TListResponse : ListResponse<TRow>, new()
 ```
 
+| parameter | description |
+| --- | --- |
+| TRow | Row type |
+| TListRequest | List request type |
+| TListResponse | List response type |
+
 ## Members
 
 | name | description |
 | --- | --- |
-| [List](IListHandler-3/List.md)(…) |  |
+| [List](IListHandler-3/List.md)(…) | Processes a List request |
 
 ## See Also
 

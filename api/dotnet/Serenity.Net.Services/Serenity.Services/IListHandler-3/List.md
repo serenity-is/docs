@@ -1,9 +1,16 @@
 # IListHandler&lt;TRow,TListRequest,TListResponse&gt;.List method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Processes a List request
+
 ```csharp
 public TListResponse List(IDbConnection connection, TListRequest request)
 ```
+
+| parameter | description |
+| --- | --- |
+| connection | Connection |
+| request | List request |
 
 ## See Also
 

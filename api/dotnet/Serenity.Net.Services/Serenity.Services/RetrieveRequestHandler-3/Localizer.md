@@ -1,6 +1,8 @@
 # RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.Localizer property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Gets localizer from the request context
+
 ```csharp
 public ITextLocalizer Localizer { get; }
 ```

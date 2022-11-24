@@ -1,6 +1,8 @@
 # CaptureLogConsts class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Contains constants related to the capture logging
+
 ```csharp
 public class CaptureLogConsts
 ```
@@ -10,7 +12,7 @@ public class CaptureLogConsts
 | name | description |
 | --- | --- |
 | [CaptureLogConsts](CaptureLogConsts/CaptureLogConsts.md)() | The default constructor. |
-| static readonly [UntilMax](CaptureLogConsts/UntilMax.md) |  |
+| static readonly [UntilMax](CaptureLogConsts/UntilMax.md) | The maximum value for ValidUntil column |
 
 ## See Also
 

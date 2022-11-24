@@ -16,7 +16,7 @@ public TDeleteResponse Process(IUnitOfWork unitOfWork, TDeleteRequest request)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | unitofWork is null |
+| ArgumentNullException | unitofWork or request is null |
 
 ## See Also
 

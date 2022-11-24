@@ -11,13 +11,13 @@ public abstract class PropertyProcessor : IPropertyProcessor
 
 | name | description |
 | --- | --- |
-| [BasedOnRow](PropertyProcessor/BasedOnRow.md) { get; set; } | Gets or sets the based on row. |
-| [Items](PropertyProcessor/Items.md) { get; set; } | Gets or sets the items. |
-| virtual [Priority](PropertyProcessor/Priority.md) { get; } | Gets the priority. |
-| [Type](PropertyProcessor/Type.md) { get; set; } | Gets or sets the type. |
-| virtual [Initialize](PropertyProcessor/Initialize.md)() | Initializes this instance. |
-| virtual [PostProcess](PropertyProcessor/PostProcess.md)() | Posts the process. |
-| virtual [Process](PropertyProcessor/Process.md)(…) | Processes the specified source. |
+| [BasedOnRow](PropertyProcessor/BasedOnRow.md) { get; set; } |  |
+| [Items](PropertyProcessor/Items.md) { get; set; } |  |
+| virtual [Priority](PropertyProcessor/Priority.md) { get; } |  |
+| [Type](PropertyProcessor/Type.md) { get; set; } |  |
+| virtual [Initialize](PropertyProcessor/Initialize.md)() |  |
+| virtual [PostProcess](PropertyProcessor/PostProcess.md)() |  |
+| virtual [Process](PropertyProcessor/Process.md)(…) |  |
 
 ## Protected Members
 

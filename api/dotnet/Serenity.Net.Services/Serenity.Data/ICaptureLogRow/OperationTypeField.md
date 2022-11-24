@@ -1,6 +1,8 @@
 # ICaptureLogRow.OperationTypeField property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Field containing the operation type
+
 ```csharp
 public EnumField<CaptureOperationType> OperationTypeField { get; }
 ```

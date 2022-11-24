@@ -1,6 +1,8 @@
 # LocalizablePropertyProcessor class
 **namespace:** *[Serenity.PropertyGrid](../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Property processor for handling localizable properties
+
 ```csharp
 public class LocalizablePropertyProcessor : PropertyProcessor
 ```
@@ -12,7 +14,7 @@ public class LocalizablePropertyProcessor : PropertyProcessor
 | [LocalizablePropertyProcessor](LocalizablePropertyProcessor/LocalizablePropertyProcessor.md)() | The default constructor. |
 | override [Priority](LocalizablePropertyProcessor/Priority.md) { get; } |  |
 | override [Initialize](LocalizablePropertyProcessor/Initialize.md)() |  |
-| [IsLocalized](LocalizablePropertyProcessor/IsLocalized.md)(…) |  |
+| [IsLocalized](LocalizablePropertyProcessor/IsLocalized.md)(…) | Returns if the field is localizable |
 | override [Process](LocalizablePropertyProcessor/Process.md)(…) |  |
 
 ## See Also

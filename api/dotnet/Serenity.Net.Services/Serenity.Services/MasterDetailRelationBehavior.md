@@ -1,6 +1,8 @@
 # MasterDetailRelationBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Behavior class that handles MasterDetailRelationAttribute
+
 ```csharp
 public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior, 
     IImplicitBehavior, IListBehavior, IRetrieveBehavior
@@ -10,7 +12,7 @@ public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavi
 
 | name | description |
 | --- | --- |
-| [MasterDetailRelationBehavior](MasterDetailRelationBehavior/MasterDetailRelationBehavior.md)(…) |  |
+| [MasterDetailRelationBehavior](MasterDetailRelationBehavior/MasterDetailRelationBehavior.md)(…) | Creates an instance of the class |
 | [Target](MasterDetailRelationBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](MasterDetailRelationBehavior/ActivateFor.md)(…) |  |
 | [OnAfterExecuteQuery](MasterDetailRelationBehavior/OnAfterExecuteQuery.md)(…) |  (2 methods) |

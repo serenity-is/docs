@@ -1,6 +1,8 @@
 # UpdatableExtensionBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Behavior that handles UpdatableExtensionAttribute
+
 ```csharp
 public class UpdatableExtensionBehavior : BaseSaveDeleteBehavior, IImplicitBehavior
 ```
@@ -9,7 +11,7 @@ public class UpdatableExtensionBehavior : BaseSaveDeleteBehavior, IImplicitBehav
 
 | name | description |
 | --- | --- |
-| [UpdatableExtensionBehavior](UpdatableExtensionBehavior/UpdatableExtensionBehavior.md)(…) |  |
+| [UpdatableExtensionBehavior](UpdatableExtensionBehavior/UpdatableExtensionBehavior.md)(…) | Creates a new instance of the class |
 | [ActivateFor](UpdatableExtensionBehavior/ActivateFor.md)(…) |  |
 | override [OnAfterSave](UpdatableExtensionBehavior/OnAfterSave.md)(…) |  |
 | override [OnBeforeDelete](UpdatableExtensionBehavior/OnBeforeDelete.md)(…) |  |

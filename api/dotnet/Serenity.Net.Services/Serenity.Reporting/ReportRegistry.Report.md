@@ -11,7 +11,7 @@ public class Report
 
 | name | description |
 | --- | --- |
-| [Report](ReportRegistry.Report/Report.md)(…) |  |
+| [Report](ReportRegistry.Report/Report.md)(…) | Creates a new instance of the class |
 | [Category](ReportRegistry.Report/Category.md) { get; } | The category |
 | [Key](ReportRegistry.Report/Key.md) { get; } | Report key |
 | [Permission](ReportRegistry.Report/Permission.md) { get; } | Report permission |

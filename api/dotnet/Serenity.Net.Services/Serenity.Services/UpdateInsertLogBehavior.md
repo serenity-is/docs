@@ -1,6 +1,8 @@
 # UpdateInsertLogBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Behavior class that handles assignment of relevant fields for rows with IInsertLogRow and IUpdateLogRow interfaces
+
 ```csharp
 public class UpdateInsertLogBehavior : BaseSaveBehavior, IImplicitBehavior
 ```

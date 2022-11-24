@@ -1,6 +1,8 @@
 # DefaultHandlerActivator class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default implementation of the [`IHandlerActivator`](IHandlerActivator.md)
+
 ```csharp
 public class DefaultHandlerActivator : IHandlerActivator
 ```
@@ -9,7 +11,7 @@ public class DefaultHandlerActivator : IHandlerActivator
 
 | name | description |
 | --- | --- |
-| [DefaultHandlerActivator](DefaultHandlerActivator/DefaultHandlerActivator.md)(…) |  |
+| [DefaultHandlerActivator](DefaultHandlerActivator/DefaultHandlerActivator.md)(…) | Creates an instance of the class |
 | [CreateInstance](DefaultHandlerActivator/CreateInstance.md)(…) |  |
 
 ## See Also

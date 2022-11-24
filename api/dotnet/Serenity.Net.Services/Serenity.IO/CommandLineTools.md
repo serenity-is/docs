@@ -1,6 +1,8 @@
 # CommandLineTools class
 **namespace:** *[Serenity.IO](../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Contains functions related to command line
+
 ```csharp
 public class CommandLineTools
 ```

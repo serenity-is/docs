@@ -1,9 +1,15 @@
 # DataValidation.UnexpectedError method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Returns an unexpected error
+
 ```csharp
 public static ValidationError UnexpectedError(ITextLocalizer localizer)
 ```
+
+| parameter | description |
+| --- | --- |
+| localizer | Text localizer |
 
 ## See Also
 

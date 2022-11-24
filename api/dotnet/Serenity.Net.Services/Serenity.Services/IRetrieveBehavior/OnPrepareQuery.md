@@ -10,6 +10,7 @@ public void OnPrepareQuery(IRetrieveRequestHandler handler, SqlQuery query)
 | parameter | description |
 | --- | --- |
 | handler | Calling retrieve request handler |
+| query | Query |
 
 ## See Also
 

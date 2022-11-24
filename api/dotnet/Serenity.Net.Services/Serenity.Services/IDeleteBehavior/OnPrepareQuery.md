@@ -10,6 +10,7 @@ public void OnPrepareQuery(IDeleteRequestHandler handler, SqlQuery query)
 | parameter | description |
 | --- | --- |
 | handler | Calling save request handler |
+| query | The query |
 
 ## See Also
 

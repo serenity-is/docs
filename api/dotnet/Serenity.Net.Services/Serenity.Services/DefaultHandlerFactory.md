@@ -1,6 +1,8 @@
 # DefaultHandlerFactory class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default implementation for the [`IDefaultHandlerFactory`](IDefaultHandlerFactory.md)
+
 ```csharp
 public class DefaultHandlerFactory : IDefaultHandlerFactory
 ```
@@ -9,7 +11,7 @@ public class DefaultHandlerFactory : IDefaultHandlerFactory
 
 | name | description |
 | --- | --- |
-| [DefaultHandlerFactory](DefaultHandlerFactory/DefaultHandlerFactory.md)(…) |  |
+| [DefaultHandlerFactory](DefaultHandlerFactory/DefaultHandlerFactory.md)(…) | Creates an instance of the class. |
 | [CreateHandler](DefaultHandlerFactory/CreateHandler.md)(…) |  |
 
 ## See Also

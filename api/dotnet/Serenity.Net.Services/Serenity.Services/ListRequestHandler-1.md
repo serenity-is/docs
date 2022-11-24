@@ -1,17 +1,23 @@
 # ListRequestHandler&lt;TRow&gt; class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base generic class for list request handlers that use [`ListRequest`](ListRequest.md) as the request type, and [`ListResponse`](ListResponse-1.md) as the response type.
+
 ```csharp
 public class ListRequestHandler<TRow> : ListRequestHandler<TRow, ListRequest, ListResponse<TRow>>, 
     IListHandler<TRow>, IListHandler<TRow, ListRequest>
     where TRow : class, IRow, new()
 ```
 
+| parameter | description |
+| --- | --- |
+| TRow | The entity type |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ListRequestHandler](ListRequestHandler-1/ListRequestHandler.md)(…) |  |
+| [ListRequestHandler](ListRequestHandler-1/ListRequestHandler.md)(…) | Creates an instance of the class |
 
 ## See Also
 

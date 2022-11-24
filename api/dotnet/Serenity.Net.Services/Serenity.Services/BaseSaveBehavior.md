@@ -1,6 +1,8 @@
 # BaseSaveBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base class for behaviors implementing [`ISaveBehavior`](ISaveBehavior.md)
+
 ```csharp
 public abstract class BaseSaveBehavior : ISaveBehavior, ISaveExceptionBehavior
 ```

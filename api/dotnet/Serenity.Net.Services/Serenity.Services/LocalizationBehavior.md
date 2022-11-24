@@ -1,6 +1,8 @@
 # LocalizationBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Behavior for handling localizable rows / properties
+
 ```csharp
 public class LocalizationBehavior : BaseSaveDeleteBehavior, IImplicitBehavior, IRetrieveBehavior
 ```
@@ -9,7 +11,7 @@ public class LocalizationBehavior : BaseSaveDeleteBehavior, IImplicitBehavior, I
 
 | name | description |
 | --- | --- |
-| [LocalizationBehavior](LocalizationBehavior/LocalizationBehavior.md)(…) |  |
+| [LocalizationBehavior](LocalizationBehavior/LocalizationBehavior.md)(…) | Creates an instance of the class |
 | [ActivateFor](LocalizationBehavior/ActivateFor.md)(…) |  |
 | [OnAfterExecuteQuery](LocalizationBehavior/OnAfterExecuteQuery.md)(…) |  |
 | override [OnAfterSave](LocalizationBehavior/OnAfterSave.md)(…) |  |

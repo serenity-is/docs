@@ -1,6 +1,8 @@
 # BaseListBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base class for behaviors implementing [`IListBehavior`](IListBehavior.md)
+
 ```csharp
 public abstract class BaseListBehavior : IListBehavior
 ```

@@ -10,6 +10,7 @@ public void OnApplyFilters(IListRequestHandler handler, SqlQuery query)
 | parameter | description |
 | --- | --- |
 | handler | Calling list request handler |
+| query | Query |
 
 ## See Also
 

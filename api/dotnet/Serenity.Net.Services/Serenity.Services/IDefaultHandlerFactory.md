@@ -1,6 +1,8 @@
 # IDefaultHandlerFactory interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface to get a new instace of a default request handler, given its row type and the handler interface
+
 ```csharp
 public interface IDefaultHandlerFactory
 ```
@@ -9,7 +11,7 @@ public interface IDefaultHandlerFactory
 
 | name | description |
 | --- | --- |
-| [CreateHandler](IDefaultHandlerFactory/CreateHandler.md)(…) |  |
+| [CreateHandler](IDefaultHandlerFactory/CreateHandler.md)(…) | Creates a new instance of a default request handler for the specified row type and the handler interface |
 
 ## See Also
 

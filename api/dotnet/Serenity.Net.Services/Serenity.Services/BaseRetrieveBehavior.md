@@ -1,6 +1,8 @@
 # BaseRetrieveBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base class for behaviors implementing [`IRetrieveBehavior`](IRetrieveBehavior.md)
+
 ```csharp
 public abstract class BaseRetrieveBehavior : IRetrieveBehavior
 ```

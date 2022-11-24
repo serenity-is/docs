@@ -1,6 +1,8 @@
 # ICaptureLogRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for capture logging row types
+
 ```csharp
 public interface ICaptureLogRow : IIdRow
 ```
@@ -9,10 +11,10 @@ public interface ICaptureLogRow : IIdRow
 
 | name | description |
 | --- | --- |
-| [ChangingUserIdField](ICaptureLogRow/ChangingUserIdField.md) { get; } |  |
-| [OperationTypeField](ICaptureLogRow/OperationTypeField.md) { get; } |  |
-| [ValidFromField](ICaptureLogRow/ValidFromField.md) { get; } |  |
-| [ValidUntilField](ICaptureLogRow/ValidUntilField.md) { get; } |  |
+| [ChangingUserIdField](ICaptureLogRow/ChangingUserIdField.md) { get; } | Field containing the user ID |
+| [OperationTypeField](ICaptureLogRow/OperationTypeField.md) { get; } | Field containing the operation type |
+| [ValidFromField](ICaptureLogRow/ValidFromField.md) { get; } | Field containing ValidFrom date |
+| [ValidUntilField](ICaptureLogRow/ValidUntilField.md) { get; } | Field containing ValidUntil date |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # LinkingSetRelationBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Behavior class that handles LinkingSetRelationAttribute
+
 ```csharp
 public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior, 
     IImplicitBehavior, IListBehavior, IRetrieveBehavior
@@ -10,7 +12,7 @@ public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior
 
 | name | description |
 | --- | --- |
-| [LinkingSetRelationBehavior](LinkingSetRelationBehavior/LinkingSetRelationBehavior.md)(…) |  |
+| [LinkingSetRelationBehavior](LinkingSetRelationBehavior/LinkingSetRelationBehavior.md)(…) | Creates an instance of the class |
 | [Target](LinkingSetRelationBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](LinkingSetRelationBehavior/ActivateFor.md)(…) |  |
 | [OnAfterExecuteQuery](LinkingSetRelationBehavior/OnAfterExecuteQuery.md)(…) |  (2 methods) |

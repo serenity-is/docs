@@ -1,7 +1,7 @@
 # BaseRequestHandler constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the calss.
+Creates an instance of the class.
 
 ```csharp
 public BaseRequestHandler(IRequestContext context)

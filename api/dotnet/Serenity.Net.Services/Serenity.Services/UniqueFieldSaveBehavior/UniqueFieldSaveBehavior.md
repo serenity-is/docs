@@ -1,9 +1,15 @@
 # UniqueFieldSaveBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Creates a new instance of the class
+
 ```csharp
 public UniqueFieldSaveBehavior(ITextLocalizer localizer)
 ```
+
+| parameter | description |
+| --- | --- |
+| localizer | Text localizer |
 
 ## See Also
 

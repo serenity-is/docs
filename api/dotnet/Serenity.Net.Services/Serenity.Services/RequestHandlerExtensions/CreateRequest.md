@@ -1,9 +1,15 @@
 # RequestHandlerExtensions.CreateRequest method (1 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Creates a request object for the delete handler instance
+
 ```csharp
 public static DeleteRequest CreateRequest(this IDeleteRequestHandler handler)
 ```
+
+| parameter | description |
+| --- | --- |
+| handler | Delete handler instance |
 
 ## See Also
 
@@ -16,9 +22,15 @@ public static DeleteRequest CreateRequest(this IDeleteRequestHandler handler)
 # RequestHandlerExtensions.CreateRequest method (2 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Creates a request object for the list handler instance
+
 ```csharp
 public static ListRequest CreateRequest(this IListRequestHandler handler)
 ```
+
+| parameter | description |
+| --- | --- |
+| handler | List handler instance |
 
 ## See Also
 
@@ -31,9 +43,15 @@ public static ListRequest CreateRequest(this IListRequestHandler handler)
 # RequestHandlerExtensions.CreateRequest method (3 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Creates a request object for the retrieve handler instance
+
 ```csharp
 public static RetrieveRequest CreateRequest(this IRetrieveRequestHandler handler)
 ```
+
+| parameter | description |
+| --- | --- |
+| handler | Retrieve handler instance |
 
 ## See Also
 
@@ -46,9 +64,15 @@ public static RetrieveRequest CreateRequest(this IRetrieveRequestHandler handler
 # RequestHandlerExtensions.CreateRequest method (4 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Creates a request object for the save handler instance
+
 ```csharp
 public static ISaveRequest CreateRequest(this ISaveRequestHandler handler)
 ```
+
+| parameter | description |
+| --- | --- |
+| handler | Save handler instance |
 
 ## See Also
 
@@ -61,9 +85,15 @@ public static ISaveRequest CreateRequest(this ISaveRequestHandler handler)
 # RequestHandlerExtensions.CreateRequest method (5 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Creates a request object for the undelete handler instance
+
 ```csharp
 public static UndeleteRequest CreateRequest(this IUndeleteRequestHandler handler)
 ```
+
+| parameter | description |
+| --- | --- |
+| handler | Undelete handler instance |
 
 ## See Also
 
@@ -76,9 +106,15 @@ public static UndeleteRequest CreateRequest(this IUndeleteRequestHandler handler
 # RequestHandlerExtensions.CreateRequest&lt;TRow&gt; method (6 of 6)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Creates a request object for the save handler instance
+
 ```csharp
 public static SaveRequest<TRow> CreateRequest<TRow>(this ISaveRequestHandler handler)
 ```
+
+| parameter | description |
+| --- | --- |
+| handler | Save handler instance |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # LocalizationRowAttribute class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Maps a row to its localization row
+
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
 public class LocalizationRowAttribute : Attribute
@@ -10,9 +12,9 @@ public class LocalizationRowAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [LocalizationRowAttribute](LocalizationRowAttribute/LocalizationRowAttribute.md)(…) |  |
-| [LocalizationRow](LocalizationRowAttribute/LocalizationRow.md) { get; } |  |
-| [MappedIdField](LocalizationRowAttribute/MappedIdField.md) { get; set; } |  |
+| [LocalizationRowAttribute](LocalizationRowAttribute/LocalizationRowAttribute.md)(…) | Creates a new instance of the attribute |
+| [LocalizationRow](LocalizationRowAttribute/LocalizationRow.md) { get; } | Localization row type |
+| [MappedIdField](LocalizationRowAttribute/MappedIdField.md) { get; set; } | ID field corresponding to this tables ID field. Can be automatically determined if not specified. |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # ILocalizationRow.CultureIdField property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Culture ID field, e.g. LanguageID / LanguageKey
+
 ```csharp
 public Field CultureIdField { get; }
 ```

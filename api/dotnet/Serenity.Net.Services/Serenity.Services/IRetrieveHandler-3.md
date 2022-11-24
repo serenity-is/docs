@@ -1,6 +1,8 @@
 # IRetrieveHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for retrieve request handlers with custom retrieve request / response types.
+
 ```csharp
 public interface IRetrieveHandler<TRow, TRetrieveRequest, TRetrieveResponse> : 
     IRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse>
@@ -9,11 +11,17 @@ public interface IRetrieveHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
     where TRetrieveResponse : RetrieveResponse<TRow>, new()
 ```
 
+| parameter | description |
+| --- | --- |
+| TRow | Row type |
+| TRetrieveRequest | Retrieve request type |
+| TRetrieveResponse | Retrieve response type |
+
 ## Members
 
 | name | description |
 | --- | --- |
-| [Retrieve](IRetrieveHandler-3/Retrieve.md)(…) |  |
+| [Retrieve](IRetrieveHandler-3/Retrieve.md)(…) | Processes a Retrieve request |
 
 ## See Also
 

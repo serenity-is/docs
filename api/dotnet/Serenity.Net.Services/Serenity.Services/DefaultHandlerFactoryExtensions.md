@@ -1,6 +1,8 @@
 # DefaultHandlerFactoryExtensions class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Extension methods for [`IDefaultHandlerFactory`](IDefaultHandlerFactory.md)
+
 ```csharp
 public static class DefaultHandlerFactoryExtensions
 ```
@@ -9,7 +11,7 @@ public static class DefaultHandlerFactoryExtensions
 
 | name | description |
 | --- | --- |
-| static [CreateHandler&lt;THandler&gt;](DefaultHandlerFactoryExtensions/CreateHandler.md)(…) |  |
+| static [CreateHandler&lt;THandler&gt;](DefaultHandlerFactoryExtensions/CreateHandler.md)(…) | Creates an instance of the default handler for the requested handler interface type. |
 
 ## See Also
 

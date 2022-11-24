@@ -12,8 +12,8 @@ public class DefaultHandlerAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [DefaultHandlerAttribute](DefaultHandlerAttribute/DefaultHandlerAttribute.md)(…) |  |
-| [Value](DefaultHandlerAttribute/Value.md) { get; } |  |
+| [DefaultHandlerAttribute](DefaultHandlerAttribute/DefaultHandlerAttribute.md)(…) | Creates an instance of the attribute |
+| [Value](DefaultHandlerAttribute/Value.md) { get; } | Gets if the handler marked as default. |
 
 ## See Also
 

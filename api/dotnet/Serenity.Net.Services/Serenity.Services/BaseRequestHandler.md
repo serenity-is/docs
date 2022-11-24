@@ -11,7 +11,7 @@ public abstract class BaseRequestHandler : IRequestHandler
 
 | name | description |
 | --- | --- |
-| [BaseRequestHandler](BaseRequestHandler/BaseRequestHandler.md)(…) | Creates an instance of the calss. |
+| [BaseRequestHandler](BaseRequestHandler/BaseRequestHandler.md)(…) | Creates an instance of the class. |
 
 ## Protected Members
 

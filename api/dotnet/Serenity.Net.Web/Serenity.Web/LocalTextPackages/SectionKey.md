@@ -1,6 +1,8 @@
 # LocalTextPackages.SectionKey field
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
+Default section key
+
 ```csharp
 public const string SectionKey;
 ```

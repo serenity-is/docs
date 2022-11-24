@@ -1,6 +1,8 @@
 # NavigationMenuAttribute class
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Navigation menu without a link
+
 ```csharp
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public class NavigationMenuAttribute : NavigationItemAttribute
@@ -10,7 +12,7 @@ public class NavigationMenuAttribute : NavigationItemAttribute
 
 | name | description |
 | --- | --- |
-| [NavigationMenuAttribute](NavigationMenuAttribute/NavigationMenuAttribute.md)(…) |  (2 constructors) |
+| [NavigationMenuAttribute](NavigationMenuAttribute/NavigationMenuAttribute.md)(…) | Creates a new instance of the attribute (2 constructors) |
 
 ## See Also
 

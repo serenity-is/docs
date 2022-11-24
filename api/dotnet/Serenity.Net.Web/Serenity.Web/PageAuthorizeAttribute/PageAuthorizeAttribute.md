@@ -74,9 +74,23 @@ public PageAuthorizeAttribute(object module, object permission)
 # PageAuthorizeAttribute constructor (5 of 6)
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
+Creates a new instance of the class
+
 ```csharp
 protected PageAuthorizeAttribute(Type sourceType, params Type[] attributeTypes)
 ```
+
+| parameter | description |
+| --- | --- |
+| sourceType | Source type |
+| attributeTypes | Attribute types |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | Source type or attribute types is null |
+| ArgumentOutOfRangeException | One of the attribute types is not a subclass of PermissionAttributeBase. |
 
 ## See Also
 

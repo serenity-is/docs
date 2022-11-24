@@ -1,6 +1,8 @@
 # ScriptCulture class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Culture options that are passed to the client side
+
 ```csharp
 public class ScriptCulture
 ```
@@ -9,14 +11,14 @@ public class ScriptCulture
 
 | name | description |
 | --- | --- |
-| [ScriptCulture](ScriptCulture/ScriptCulture.md)() | The default constructor. |
-| [ScriptCulture](ScriptCulture/ScriptCulture.md)(…) |  |
-| [DateFormat](ScriptCulture/DateFormat.md) { get; set; } |  |
-| [DateOrder](ScriptCulture/DateOrder.md) { get; set; } |  |
-| [DateSeparator](ScriptCulture/DateSeparator.md) { get; set; } |  |
-| [DateTimeFormat](ScriptCulture/DateTimeFormat.md) { get; set; } |  |
-| [DecimalSeparator](ScriptCulture/DecimalSeparator.md) { get; set; } |  |
-| [GroupSeparator](ScriptCulture/GroupSeparator.md) { get; set; } |  |
+| [ScriptCulture](ScriptCulture/ScriptCulture.md)() | Creates a new instance of the class using CurrentCulture |
+| [ScriptCulture](ScriptCulture/ScriptCulture.md)(…) | Creates a new instance of the class |
+| [DateFormat](ScriptCulture/DateFormat.md) { get; set; } | Date format |
+| [DateOrder](ScriptCulture/DateOrder.md) { get; set; } | Date year month day ordering like d/M/y etc. |
+| [DateSeparator](ScriptCulture/DateSeparator.md) { get; set; } | Date separator |
+| [DateTimeFormat](ScriptCulture/DateTimeFormat.md) { get; set; } | Date/time format |
+| [DecimalSeparator](ScriptCulture/DecimalSeparator.md) { get; set; } | Decimal separator |
+| [GroupSeparator](ScriptCulture/GroupSeparator.md) { get; set; } | Group separator |
 
 ## See Also
 

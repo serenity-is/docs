@@ -1,6 +1,8 @@
 # DataScript&lt;TData&gt;.GetData method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
+Gets the data object
+
 ```csharp
 protected abstract TData GetData()
 ```

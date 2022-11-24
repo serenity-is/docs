@@ -1,7 +1,7 @@
 # AuthorizeListAttribute class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Authorizes a service by target type's ReadPermission or ServiceLookupPermission attributes.
+Authorizes access to a service method by reading ReadPermissionAttribute. It also allows lookup mode access (as OrPermission) if the source type has ServiceLookupPermissionAttribute
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
@@ -12,7 +12,7 @@ public class AuthorizeListAttribute : ServiceAuthorizeAttribute
 
 | name | description |
 | --- | --- |
-| [AuthorizeListAttribute](AuthorizeListAttribute/AuthorizeListAttribute.md)(…) |  |
+| [AuthorizeListAttribute](AuthorizeListAttribute/AuthorizeListAttribute.md)(…) | Creates a new instance of the attribute |
 
 ## See Also
 

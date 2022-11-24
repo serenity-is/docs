@@ -1,6 +1,8 @@
 # NavigationItemAttribute class
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Navigation item attribute
+
 ```csharp
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public abstract class NavigationItemAttribute : Attribute
@@ -19,14 +21,14 @@ public abstract class NavigationItemAttribute : Attribute
 | [Target](NavigationItemAttribute/Target.md) { get; set; } | Window target to open this link, e.g. _blank etc. |
 | [Title](NavigationItemAttribute/Title.md) { get; set; } | Title of the navigation item. It is the part after last slash, e.g. C for A/B/C |
 | [Url](NavigationItemAttribute/Url.md) { get; set; } | Url of this navigation item, should be null for menu |
-| static [GetPermissionFromController](NavigationItemAttribute/GetPermissionFromController.md)(…) |  |
-| static [GetUrlFromController](NavigationItemAttribute/GetUrlFromController.md)(…) |  |
+| static [GetPermissionFromController](NavigationItemAttribute/GetPermissionFromController.md)(…) | Tries to extract permission from a controller action |
+| static [GetUrlFromController](NavigationItemAttribute/GetUrlFromController.md)(…) | Tries to extract URL from a controller action |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
-| [NavigationItemAttribute](NavigationItemAttribute/NavigationItemAttribute.md)(…) |  (2 constructors) |
+| [NavigationItemAttribute](NavigationItemAttribute/NavigationItemAttribute.md)(…) | Creates a new instance of the attribute (2 constructors) |
 
 ## See Also
 

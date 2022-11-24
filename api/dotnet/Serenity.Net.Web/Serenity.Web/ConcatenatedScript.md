@@ -1,6 +1,8 @@
 # ConcatenatedScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+A dynamic script that is formed from concentanation of other scripts
+
 ```csharp
 public class ConcatenatedScript : DynamicScript
 ```
@@ -9,7 +11,7 @@ public class ConcatenatedScript : DynamicScript
 
 | name | description |
 | --- | --- |
-| [ConcatenatedScript](ConcatenatedScript/ConcatenatedScript.md)(…) |  |
+| [ConcatenatedScript](ConcatenatedScript/ConcatenatedScript.md)(…) | Creates a new instance of the class |
 | override [CheckRights](ConcatenatedScript/CheckRights.md)(…) |  |
 | override [GetScript](ConcatenatedScript/GetScript.md)() |  |
 

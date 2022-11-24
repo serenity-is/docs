@@ -1,6 +1,8 @@
 # NavigationItem class
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+A node in a navigation tree model
+
 ```csharp
 public class NavigationItem
 ```
@@ -9,16 +11,16 @@ public class NavigationItem
 
 | name | description |
 | --- | --- |
-| [NavigationItem](NavigationItem/NavigationItem.md)() | The default constructor. |
-| [Children](NavigationItem/Children.md) { get; } |  |
-| [FullPath](NavigationItem/FullPath.md) { get; set; } |  |
-| [IconClass](NavigationItem/IconClass.md) { get; set; } |  |
-| [IsSection](NavigationItem/IsSection.md) { get; set; } |  |
-| [ItemClass](NavigationItem/ItemClass.md) { get; set; } |  |
-| [Parent](NavigationItem/Parent.md) { get; set; } |  |
-| [Target](NavigationItem/Target.md) { get; set; } |  |
-| [Title](NavigationItem/Title.md) { get; set; } |  |
-| [Url](NavigationItem/Url.md) { get; set; } |  |
+| [NavigationItem](NavigationItem/NavigationItem.md)() | Creates a new navigation item |
+| [Children](NavigationItem/Children.md) { get; } | List of children |
+| [FullPath](NavigationItem/FullPath.md) { get; set; } | Full path of the item |
+| [IconClass](NavigationItem/IconClass.md) { get; set; } | Icon class |
+| [IsSection](NavigationItem/IsSection.md) { get; set; } | True if this is a navigation section |
+| [ItemClass](NavigationItem/ItemClass.md) { get; set; } | Item class |
+| [Parent](NavigationItem/Parent.md) { get; set; } | Parent navigation item |
+| [Target](NavigationItem/Target.md) { get; set; } | Target window to open the link, e.g. "_blank" |
+| [Title](NavigationItem/Title.md) { get; set; } | Title |
+| [Url](NavigationItem/Url.md) { get; set; } | URL |
 
 ## See Also
 

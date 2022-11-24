@@ -1,6 +1,8 @@
 # HandleServiceExceptionAttribute class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+An exception filter attribute to handle service exceptions and return them to ServiceResponse objects
+
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
 public class HandleServiceExceptionAttribute : ExceptionFilterAttribute

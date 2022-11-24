@@ -1,6 +1,8 @@
 # MultipleFileUploadBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Behavior class that handles MultipleFileUploadEditorAttribute and MultipleImageUploadEditorAttribute.
+
 ```csharp
 public class MultipleFileUploadBehavior : BaseSaveDeleteBehavior, IFieldBehavior, IImplicitBehavior
 ```
@@ -9,7 +11,7 @@ public class MultipleFileUploadBehavior : BaseSaveDeleteBehavior, IFieldBehavior
 
 | name | description |
 | --- | --- |
-| [MultipleFileUploadBehavior](MultipleFileUploadBehavior/MultipleFileUploadBehavior.md)(…) |  |
+| [MultipleFileUploadBehavior](MultipleFileUploadBehavior/MultipleFileUploadBehavior.md)(…) | Creates a new instance of the class |
 | [Target](MultipleFileUploadBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](MultipleFileUploadBehavior/ActivateFor.md)(…) |  |
 | override [OnAfterDelete](MultipleFileUploadBehavior/OnAfterDelete.md)(…) |  |

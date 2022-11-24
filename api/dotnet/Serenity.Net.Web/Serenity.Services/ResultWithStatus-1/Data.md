@@ -1,6 +1,8 @@
 # ResultWithStatus&lt;TResponse&gt;.Data property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
+The data
+
 ```csharp
 public TResponse Data { get; set; }
 ```

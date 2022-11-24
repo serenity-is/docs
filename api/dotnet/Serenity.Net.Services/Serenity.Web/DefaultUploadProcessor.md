@@ -1,6 +1,8 @@
 # DefaultUploadProcessor class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default implementation for [`IUploadProcessor`](IUploadProcessor.md)
+
 ```csharp
 public class DefaultUploadProcessor : IUploadProcessor
 ```
@@ -9,7 +11,7 @@ public class DefaultUploadProcessor : IUploadProcessor
 
 | name | description |
 | --- | --- |
-| [DefaultUploadProcessor](DefaultUploadProcessor/DefaultUploadProcessor.md)(…) |  |
+| [DefaultUploadProcessor](DefaultUploadProcessor/DefaultUploadProcessor.md)(…) | Creates a new instance of the class |
 | [Process](DefaultUploadProcessor/Process.md)(…) |  |
 
 ## See Also

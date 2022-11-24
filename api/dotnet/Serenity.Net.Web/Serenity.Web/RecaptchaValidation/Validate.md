@@ -9,7 +9,9 @@ public static void Validate(string secretKey, string token, ITextLocalizer local
 
 | parameter | description |
 | --- | --- |
-| token |  |
+| secretKey | Secret key |
+| token | Token |
+| localizer | Text localizer |
 
 ## Remarks
 

@@ -1,6 +1,8 @@
 # ICssBundleManager interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Abstraction for css bundling manager
+
 ```csharp
 public interface ICssBundleManager
 ```
@@ -9,11 +11,11 @@ public interface ICssBundleManager
 
 | name | description |
 | --- | --- |
-| [IsEnabled](ICssBundleManager/IsEnabled.md) { get; } |  |
-| [CssChanged](ICssBundleManager/CssChanged.md)() |  |
-| [GetBundleIncludes](ICssBundleManager/GetBundleIncludes.md)(…) |  |
-| [GetCssBundle](ICssBundleManager/GetCssBundle.md)(…) |  |
-| [Reset](ICssBundleManager/Reset.md)() |  |
+| [IsEnabled](ICssBundleManager/IsEnabled.md) { get; } | Returns true if bundling is enabled |
+| [CssChanged](ICssBundleManager/CssChanged.md)() | A method that can be called to clear css file cache |
+| [GetBundleIncludes](ICssBundleManager/GetBundleIncludes.md)(…) | Gets the list of bundle includes |
+| [GetCssBundle](ICssBundleManager/GetCssBundle.md)(…) | Gets the CSS bundle containing a css url |
+| [Reset](ICssBundleManager/Reset.md)() | Resets the css bundle manager |
 
 ## See Also
 

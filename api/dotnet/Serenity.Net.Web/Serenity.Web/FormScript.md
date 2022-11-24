@@ -1,6 +1,8 @@
 # FormScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Dynamic script type for forms (FormScriptAttribute)
+
 ```csharp
 public class FormScript : PropertyItemsScript
 ```
@@ -9,7 +11,7 @@ public class FormScript : PropertyItemsScript
 
 | name | description |
 | --- | --- |
-| [FormScript](FormScript/FormScript.md)(…) |  |
+| [FormScript](FormScript/FormScript.md)(…) | Creates a new instance of the class |
 
 ## See Also
 

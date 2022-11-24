@@ -1,6 +1,8 @@
 # PropertyItemsScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Abstract base class for [`ColumnsScript`](ColumnsScript.md) and [`FormScript`](FormScript.md)
+
 ```csharp
 public abstract class PropertyItemsScript : IGetScriptData, INamedDynamicScript
 ```
@@ -22,8 +24,8 @@ public abstract class PropertyItemsScript : IGetScriptData, INamedDynamicScript
 
 | name | description |
 | --- | --- |
-| [PropertyItemsScript](PropertyItemsScript/PropertyItemsScript.md)(…) |  |
-| static [CheckName](PropertyItemsScript/CheckName.md)(…) |  |
+| [PropertyItemsScript](PropertyItemsScript/PropertyItemsScript.md)(…) | Creates a new instance of the class |
+| static [CheckName](PropertyItemsScript/CheckName.md)(…) | Checks the name if its empty or null |
 
 ## See Also
 

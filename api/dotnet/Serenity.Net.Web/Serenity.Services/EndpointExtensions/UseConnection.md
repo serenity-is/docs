@@ -1,11 +1,20 @@
 # EndpointExtensions.UseConnection&lt;TResponse&gt; method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
+Executes a callback by passing a connection object and converts any exception raised inside to a service response.
+
 ```csharp
 public static Result<TResponse> UseConnection<TResponse>(this Controller controller, 
     string connectionKey, Func<IDbConnection, TResponse> handler)
     where TResponse : ServiceResponse, new()
 ```
+
+| parameter | description |
+| --- | --- |
+| TResponse | Response type |
+| controller | Controller |
+| connectionKey | Connection key |
+| handler | Handler callback |
 
 ## See Also
 

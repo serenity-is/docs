@@ -1,6 +1,8 @@
 # HtmlToPdfConverter class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+HTML to PDF converter class using WKHTMLToPdf
+
 ```csharp
 public class HtmlToPdfConverter : IHtmlToPdfOptions
 ```
@@ -9,7 +11,7 @@ public class HtmlToPdfConverter : IHtmlToPdfOptions
 
 | name | description |
 | --- | --- |
-| [HtmlToPdfConverter](HtmlToPdfConverter/HtmlToPdfConverter.md)() | The default constructor. |
+| [HtmlToPdfConverter](HtmlToPdfConverter/HtmlToPdfConverter.md)() | Creates a new instance of the class |
 | [AdditionalUrls](HtmlToPdfConverter/AdditionalUrls.md) { get; set; } |  |
 | [Cookies](HtmlToPdfConverter/Cookies.md) { get; set; } |  |
 | [CustomArgs](HtmlToPdfConverter/CustomArgs.md) { get; } |  |
@@ -33,7 +35,7 @@ public class HtmlToPdfConverter : IHtmlToPdfOptions
 | [UsePrintMediaType](HtmlToPdfConverter/UsePrintMediaType.md) { get; set; } |  |
 | [UtilityExePath](HtmlToPdfConverter/UtilityExePath.md) { get; set; } |  |
 | [Zoom](HtmlToPdfConverter/Zoom.md) { get; set; } |  |
-| [Execute](HtmlToPdfConverter/Execute.md)() |  |
+| [Execute](HtmlToPdfConverter/Execute.md)() | Executes the converter process and returns the PDF bytes |
 
 ## See Also
 

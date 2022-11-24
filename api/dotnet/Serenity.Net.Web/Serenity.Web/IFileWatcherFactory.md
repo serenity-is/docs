@@ -1,6 +1,8 @@
 # IFileWatcherFactory interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+An abstract factory to create file system watchers
+
 ```csharp
 public interface IFileWatcherFactory
 ```
@@ -9,9 +11,9 @@ public interface IFileWatcherFactory
 
 | name | description |
 | --- | --- |
-| [Watchers](IFileWatcherFactory/Watchers.md) { get; } |  |
-| [Create](IFileWatcherFactory/Create.md)(…) |  |
-| [KeepAlive](IFileWatcherFactory/KeepAlive.md)(…) |  |
+| [Watchers](IFileWatcherFactory/Watchers.md) { get; } | Gets list of stored file watchers |
+| [Create](IFileWatcherFactory/Create.md)(…) | Creates a new file system watcher for path and filter |
+| [KeepAlive](IFileWatcherFactory/KeepAlive.md)(…) | Keeps the file watcher alive, usually keeping its instance reference in the watcher factory |
 
 ## See Also
 

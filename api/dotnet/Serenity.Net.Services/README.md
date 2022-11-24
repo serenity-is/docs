@@ -214,7 +214,7 @@
 | class  | [CopyTemporaryFileOptions](Serenity.Web/CopyTemporaryFileOptions.md) | Options for copying a temporary file to its target |
 | class  | [CopyTemporaryFileResult](Serenity.Web/CopyTemporaryFileResult.md) | Result of the copying of a temporary file to its target |
 | class  | [DefaultImageProcessor](Serenity.Web/DefaultImageProcessor.md) | Default implementation for the [`IImageProcessor`](global/IImageProcessor.md) |
-| class  | [DefaultUploadProcessor](Serenity.Web/DefaultUploadProcessor.md) |  |
+| class  | [DefaultUploadProcessor](Serenity.Web/DefaultUploadProcessor.md) | Default implementation for [`IUploadProcessor`](Serenity.Web/IUploadProcessor.md) |
 | class  | [DefaultUploadValidator](Serenity.Web/DefaultUploadValidator.md) | Default implementation for [`IUploadValidator`](Serenity.Web/IUploadValidator.md) |
 | class  | [DiskUploadStorage](Serenity.Web/DiskUploadStorage.md) | A file system based upload storage implementation |
 | class  | [DiskUploadStorageOptions](Serenity.Web/DiskUploadStorageOptions.md) | Options for [`DiskUploadStorage`](Serenity.Web/DiskUploadStorage.md) |

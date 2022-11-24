@@ -18,7 +18,7 @@ public static class UploadStorageExtensions
 | static [GetThumbnailUrl](UploadStorageExtensions/GetThumbnailUrl.md)(…) | Gets thumbnail URL for the file path |
 | static [ReadAllFileBytes](UploadStorageExtensions/ReadAllFileBytes.md)(…) | Reads all file bytes |
 | static [ScaleImage](UploadStorageExtensions/ScaleImage.md)(…) | Scales the temporary image with provided upload image options if required based on the options and saves the result to the target upload storage file |
-| static [ScaleImageAndCreateAllThumbs](UploadStorageExtensions/ScaleImageAndCreateAllThumbs.md)(…) |  |
+| static [ScaleImageAndCreateAllThumbs](UploadStorageExtensions/ScaleImageAndCreateAllThumbs.md)(…) | Depending on the image upload options, scales image, creates default and additional thumbs and saves them to the upload storage files. |
 | static [ScaleImageAs](UploadStorageExtensions/ScaleImageAs.md)(…) | Scales an image and saves it to an upload storage file |
 | static [SetOriginalName](UploadStorageExtensions/SetOriginalName.md)(…) | Sets original name for a file |
 

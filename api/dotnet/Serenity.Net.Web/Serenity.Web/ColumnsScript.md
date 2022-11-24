@@ -1,6 +1,8 @@
 # ColumnsScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Dynamic script type for columns (ColumnsScriptAttribute)
+
 ```csharp
 public class ColumnsScript : PropertyItemsScript
 ```
@@ -9,7 +11,7 @@ public class ColumnsScript : PropertyItemsScript
 
 | name | description |
 | --- | --- |
-| [ColumnsScript](ColumnsScript/ColumnsScript.md)(…) |  |
+| [ColumnsScript](ColumnsScript/ColumnsScript.md)(…) | Creates a new instance of the class |
 
 ## See Also
 

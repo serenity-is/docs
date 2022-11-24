@@ -1,6 +1,8 @@
 # FileWatcher class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Default file watcher implementation for physical file system
+
 ```csharp
 public class FileWatcher : IDisposable, IFileWatcher
 ```
@@ -9,7 +11,7 @@ public class FileWatcher : IDisposable, IFileWatcher
 
 | name | description |
 | --- | --- |
-| [FileWatcher](FileWatcher/FileWatcher.md)(…) |  |
+| [FileWatcher](FileWatcher/FileWatcher.md)(…) | Creates a new instance of the class |
 | [Filter](FileWatcher/Filter.md) { get; } |  |
 | [Path](FileWatcher/Path.md) { get; } |  |
 | event [Changed](FileWatcher/Changed.md) |  |

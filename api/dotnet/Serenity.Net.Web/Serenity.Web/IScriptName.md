@@ -1,6 +1,8 @@
 # IScriptName interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Provides access to the registration name for a dynamic script
+
 ```csharp
 public interface IScriptName
 ```
@@ -9,7 +11,7 @@ public interface IScriptName
 
 | name | description |
 | --- | --- |
-| [ScriptName](IScriptName/ScriptName.md) { get; } |  |
+| [ScriptName](IScriptName/ScriptName.md) { get; } | Gets the script name |
 
 ## See Also
 

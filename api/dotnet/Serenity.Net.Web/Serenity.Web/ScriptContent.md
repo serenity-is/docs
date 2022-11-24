@@ -1,6 +1,8 @@
 # ScriptContent class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Default implementation for [`IScriptContent`](IScriptContent.md)
+
 ```csharp
 public class ScriptContent : IScriptContent
 ```
@@ -9,7 +11,7 @@ public class ScriptContent : IScriptContent
 
 | name | description |
 | --- | --- |
-| [ScriptContent](ScriptContent/ScriptContent.md)(…) |  |
+| [ScriptContent](ScriptContent/ScriptContent.md)(…) | Creates a new instance of the class |
 | [BrotliContent](ScriptContent/BrotliContent.md) { get; } |  |
 | [CanCompress](ScriptContent/CanCompress.md) { get; } |  |
 | [CompressedContent](ScriptContent/CompressedContent.md) { get; } |  |

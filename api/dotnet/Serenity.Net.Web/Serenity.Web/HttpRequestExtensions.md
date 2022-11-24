@@ -1,6 +1,8 @@
 # HttpRequestExtensions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Contains HTTP request related extensions
+
 ```csharp
 public static class HttpRequestExtensions
 ```
@@ -9,7 +11,7 @@ public static class HttpRequestExtensions
 
 | name | description |
 | --- | --- |
-| static [GetBaseUri](HttpRequestExtensions/GetBaseUri.md)(…) |  |
+| static [GetBaseUri](HttpRequestExtensions/GetBaseUri.md)(…) | Gets the base uri for the current request |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # HtmlToPdfConverter constructor
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-The default constructor.
+Creates a new instance of the class
 
 ```csharp
 public HtmlToPdfConverter()

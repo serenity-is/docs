@@ -1,6 +1,8 @@
 # ExcelContentResult class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Excel content result helper methods
+
 ```csharp
 public static class ExcelContentResult
 ```
@@ -9,7 +11,7 @@ public static class ExcelContentResult
 
 | name | description |
 | --- | --- |
-| static [Create](ExcelContentResult/Create.md)(…) |  (2 methods) |
+| static [Create](ExcelContentResult/Create.md)(…) | Creates a FileContentResult containing passed data (2 methods) |
 
 ## See Also
 

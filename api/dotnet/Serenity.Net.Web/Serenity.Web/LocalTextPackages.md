@@ -1,6 +1,8 @@
 # LocalTextPackages class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Corresponds to LocalTextPackages section of the appsettings.json file
+
 ```csharp
 public class LocalTextPackages : Dictionary<string, string>
 ```
@@ -9,8 +11,8 @@ public class LocalTextPackages : Dictionary<string, string>
 
 | name | description |
 | --- | --- |
-| [LocalTextPackages](LocalTextPackages/LocalTextPackages.md)() | The default constructor. |
-| const [SectionKey](LocalTextPackages/SectionKey.md) |  |
+| [LocalTextPackages](LocalTextPackages/LocalTextPackages.md)() | Creates a new instance of the class |
+| const [SectionKey](LocalTextPackages/SectionKey.md) | Default section key |
 
 ## See Also
 

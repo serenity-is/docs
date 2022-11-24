@@ -1,6 +1,8 @@
 # DefaultUploadStorage class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Default IUploadStorage implementation which uses a combined upload storage of two DiskUploadStorage instances.
+
 ```csharp
 public class DefaultUploadStorage : IUploadStorage
 ```
@@ -9,7 +11,7 @@ public class DefaultUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| [DefaultUploadStorage](DefaultUploadStorage/DefaultUploadStorage.md)(…) |  |
+| [DefaultUploadStorage](DefaultUploadStorage/DefaultUploadStorage.md)(…) | Creates a new instance of the object |
 | [ArchiveFile](DefaultUploadStorage/ArchiveFile.md)(…) |  |
 | [CopyFrom](DefaultUploadStorage/CopyFrom.md)(…) |  |
 | [DeleteFile](DefaultUploadStorage/DeleteFile.md)(…) |  |

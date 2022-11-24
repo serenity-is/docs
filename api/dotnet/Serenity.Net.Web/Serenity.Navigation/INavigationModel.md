@@ -1,6 +1,8 @@
 # INavigationModel interface
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Navigation model abstraction
+
 ```csharp
 public interface INavigationModel
 ```
@@ -9,9 +11,9 @@ public interface INavigationModel
 
 | name | description |
 | --- | --- |
-| [ActiveItem](INavigationModel/ActiveItem.md) { get; } |  |
-| [ActivePath](INavigationModel/ActivePath.md) { get; } |  |
-| [Items](INavigationModel/Items.md) { get; } |  |
+| [ActiveItem](INavigationModel/ActiveItem.md) { get; } | Active navigation item |
+| [ActivePath](INavigationModel/ActivePath.md) { get; } | Navigation items in the active path |
+| [Items](INavigationModel/Items.md) { get; } | Navigation items tree |
 
 ## See Also
 

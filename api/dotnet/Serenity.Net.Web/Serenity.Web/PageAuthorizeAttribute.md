@@ -20,7 +20,7 @@ public class PageAuthorizeAttribute : TypeFilterAttribute
 
 | name | description |
 | --- | --- |
-| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)(…) |  |
+| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)(…) | Creates a new instance of the class |
 
 ## See Also
 

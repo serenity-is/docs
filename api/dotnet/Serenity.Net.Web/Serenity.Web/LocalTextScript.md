@@ -1,6 +1,8 @@
 # LocalTextScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Local text dynamic script
+
 ```csharp
 public class LocalTextScript : DynamicScript, INamedDynamicScript
 ```
@@ -9,11 +11,11 @@ public class LocalTextScript : DynamicScript, INamedDynamicScript
 
 | name | description |
 | --- | --- |
-| [LocalTextScript](LocalTextScript/LocalTextScript.md)(…) |  |
+| [LocalTextScript](LocalTextScript/LocalTextScript.md)(…) | Creates a new instance of the class |
 | [ScriptName](LocalTextScript/ScriptName.md) { get; } |  |
 | override [GetScript](LocalTextScript/GetScript.md)() |  |
-| static [GetLocalTextPackageScript](LocalTextScript/GetLocalTextPackageScript.md)(…) |  (2 methods) |
-| static [GetScriptName](LocalTextScript/GetScriptName.md)(…) |  |
+| static [GetLocalTextPackageScript](LocalTextScript/GetLocalTextPackageScript.md)(…) | Gets local text package script content (2 methods) |
+| static [GetScriptName](LocalTextScript/GetScriptName.md)(…) | Gets script registration name for a local text package |
 
 ## See Also
 

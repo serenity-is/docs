@@ -1,6 +1,8 @@
 # ServiceEndpointNullModelBinder class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Null model binder for interface arguments
+
 ```csharp
 public class ServiceEndpointNullModelBinder : IModelBinder
 ```
@@ -10,7 +12,7 @@ public class ServiceEndpointNullModelBinder : IModelBinder
 | name | description |
 | --- | --- |
 | [ServiceEndpointNullModelBinder](ServiceEndpointNullModelBinder/ServiceEndpointNullModelBinder.md)() | The default constructor. |
-| static readonly [Instance](ServiceEndpointNullModelBinder/Instance.md) |  |
+| static readonly [Instance](ServiceEndpointNullModelBinder/Instance.md) | Default instance |
 | [BindModelAsync](ServiceEndpointNullModelBinder/BindModelAsync.md)(…) |  |
 
 ## See Also

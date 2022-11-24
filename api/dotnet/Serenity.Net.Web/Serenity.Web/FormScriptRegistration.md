@@ -1,6 +1,8 @@
 # FormScriptRegistration class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Contains registration methods for [`FormScript`](FormScript.md) types
+
 ```csharp
 public class FormScriptRegistration
 ```
@@ -10,7 +12,7 @@ public class FormScriptRegistration
 | name | description |
 | --- | --- |
 | [FormScriptRegistration](FormScriptRegistration/FormScriptRegistration.md)() | The default constructor. |
-| static [RegisterFormScripts](FormScriptRegistration/RegisterFormScripts.md)(…) |  |
+| static [RegisterFormScripts](FormScriptRegistration/RegisterFormScripts.md)(…) | Creates and form scripts |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # INavigationItemSource.GetItems method
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
+Gets list of navigation item attributes ([`NavigationItemAttribute`](../NavigationItemAttribute.md))
+
 ```csharp
 public List<NavigationItemAttribute> GetItems()
 ```

@@ -1,6 +1,8 @@
 # UploadServiceCollectionExtensions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+DI extension methods related to upload services
+
 ```csharp
 public static class UploadServiceCollectionExtensions
 ```
@@ -9,7 +11,7 @@ public static class UploadServiceCollectionExtensions
 
 | name | description |
 | --- | --- |
-| static [AddUploadStorage](UploadServiceCollectionExtensions/AddUploadStorage.md)(…) |  (2 methods) |
+| static [AddUploadStorage](UploadServiceCollectionExtensions/AddUploadStorage.md)(…) | Registers the default implementations of IUploadStorage, IUploadValidator, IImageProcessor and IUploadProcessor interfaces. (2 methods) |
 
 ## See Also
 

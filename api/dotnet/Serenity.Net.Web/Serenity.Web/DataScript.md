@@ -1,6 +1,8 @@
 # DataScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Dynamic script that contains remote data
+
 ```csharp
 public class DataScript : DynamicScript, IGetScriptData, INamedDynamicScript
 ```
@@ -9,7 +11,7 @@ public class DataScript : DynamicScript, IGetScriptData, INamedDynamicScript
 
 | name | description |
 | --- | --- |
-| [DataScript](DataScript/DataScript.md)(…) |  |
+| [DataScript](DataScript/DataScript.md)(…) | Creates a new instance of the class |
 | [ScriptName](DataScript/ScriptName.md) { get; } |  |
 | override [GetScript](DataScript/GetScript.md)() |  |
 | [GetScriptData](DataScript/GetScriptData.md)() |  |
@@ -18,9 +20,9 @@ public class DataScript : DynamicScript, IGetScriptData, INamedDynamicScript
 
 | name | description |
 | --- | --- |
-| [DataScript](DataScript/DataScript.md)() | The default constructor. |
-| [getData-](DataScript/getData-.md) |  |
-| [key-](DataScript/key-.md) |  |
+| [DataScript](DataScript/DataScript.md)() | Creates a new instance of the class |
+| [getData-](DataScript/getData-.md) | Callback to get data |
+| [key-](DataScript/key-.md) | Key for the data script |
 
 ## See Also
 

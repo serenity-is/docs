@@ -1,6 +1,8 @@
 # AuthorizeUpdateAttribute class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Authorizes access to a service method by reading one of UpdatePermissionAttribute, ModifyPermissionAttribute or ReadPermissionAttribute from the target type, which is usually a Row class.
+
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
 public class AuthorizeUpdateAttribute : ServiceAuthorizeAttribute
@@ -10,7 +12,7 @@ public class AuthorizeUpdateAttribute : ServiceAuthorizeAttribute
 
 | name | description |
 | --- | --- |
-| [AuthorizeUpdateAttribute](AuthorizeUpdateAttribute/AuthorizeUpdateAttribute.md)(…) |  |
+| [AuthorizeUpdateAttribute](AuthorizeUpdateAttribute/AuthorizeUpdateAttribute.md)(…) | Creates a new instance of the attribute |
 
 ## See Also
 

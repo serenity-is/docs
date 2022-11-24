@@ -1,6 +1,8 @@
 # NavigationSectionAttribute class
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+Navigation section attribute
+
 ```csharp
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public class NavigationSectionAttribute : NavigationGroupAttribute
@@ -10,7 +12,7 @@ public class NavigationSectionAttribute : NavigationGroupAttribute
 
 | name | description |
 | --- | --- |
-| [NavigationSectionAttribute](NavigationSectionAttribute/NavigationSectionAttribute.md)(…) |  (2 constructors) |
+| [NavigationSectionAttribute](NavigationSectionAttribute/NavigationSectionAttribute.md)(…) | Creates a new instance of the class (2 constructors) |
 
 ## See Also
 

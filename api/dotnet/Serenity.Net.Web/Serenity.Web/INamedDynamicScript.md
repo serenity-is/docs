@@ -1,6 +1,8 @@
 # INamedDynamicScript interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
+A dynamic script with default registration name
+
 ```csharp
 public interface INamedDynamicScript : IDynamicScript, IScriptName
 ```

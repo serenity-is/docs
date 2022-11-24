@@ -1,9 +1,15 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.ValidateRequired method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Validates required fields
+
 ```csharp
 protected virtual void ValidateRequired(HashSet<Field> editableFields)
 ```
+
+| parameter | description |
+| --- | --- |
+| editableFields | List of editable fields |
 
 ## See Also
 

@@ -17,6 +17,7 @@ public static bool ReorderValues(IDbConnection connection, IDisplayOrderRow row,
 | recordID | ID value of the record. |
 | newDisplayOrder | New display order of the record. |
 | descendingKeyOrder | Will records with same display order values be sorted in ascending or descending ID order? For example, if records with ID's 1, 2, 3 has display order value of "0", their actual display orders are 1, 2 and 3. If this parameter is set to true (descending), their display orders will become 3, 2, 1. This parameter controls if records that are added recently and has no display order value assigned (or 0) be shown at start or at the end. |
+| hasUniqueConstraint | True if the display order field has a unique index |
 
 ## Return Value
 

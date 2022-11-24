@@ -1,10 +1,16 @@
 # IUpdateHandler&lt;TRow&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for update request handlers
+
 ```csharp
 public interface IUpdateHandler<TRow> : IUpdateHandler<TRow, SaveRequest<TRow>, SaveResponse>
     where TRow : class, IRow, IIdRow, new()
 ```
+
+| parameter | description |
+| --- | --- |
+| TRow | Row type |
 
 ## See Also
 
@@ -14,4 +20,4 @@ public interface IUpdateHandler<TRow> : IUpdateHandler<TRow, SaveRequest<TRow>, 
 * class [SaveResponse](SaveResponse.md)
 * interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
-* **Source:** *[IUpdateHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/IUpdateHandler.cs)*
+* **Source:** *[IUpdateHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/IUpdateHandlerT.cs)*

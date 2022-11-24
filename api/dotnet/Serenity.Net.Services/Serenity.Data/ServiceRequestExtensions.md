@@ -11,7 +11,7 @@ public static class ServiceRequestExtensions
 
 | name | description |
 | --- | --- |
-| static [IncludeField&lt;TRequest&gt;](ServiceRequestExtensions/IncludeField.md)(…) |  |
+| static [IncludeField&lt;TRequest&gt;](ServiceRequestExtensions/IncludeField.md)(…) | Adds the field to the request.IncludeColumns |
 
 ## See Also
 

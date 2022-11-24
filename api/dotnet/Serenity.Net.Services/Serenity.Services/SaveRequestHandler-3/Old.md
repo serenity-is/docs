@@ -1,6 +1,8 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.Old property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+The old entity for update
+
 ```csharp
 public TRow Old { get; protected set; }
 ```

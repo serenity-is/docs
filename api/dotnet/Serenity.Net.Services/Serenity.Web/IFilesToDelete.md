@@ -1,6 +1,8 @@
 # IFilesToDelete interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for a files to delete container ([`FilesToDelete`](FilesToDelete.md))
+
 ```csharp
 public interface IFilesToDelete
 ```
@@ -9,9 +11,9 @@ public interface IFilesToDelete
 
 | name | description |
 | --- | --- |
-| [KeepNewFiles](IFilesToDelete/KeepNewFiles.md)() |  |
-| [RegisterNewFile](IFilesToDelete/RegisterNewFile.md)(…) |  |
-| [RegisterOldFile](IFilesToDelete/RegisterOldFile.md)(…) |  |
+| [KeepNewFiles](IFilesToDelete/KeepNewFiles.md)() | Keeps new files, while removing old files |
+| [RegisterNewFile](IFilesToDelete/RegisterNewFile.md)(…) | Registers a new file |
+| [RegisterOldFile](IFilesToDelete/RegisterOldFile.md)(…) | Registers an old file |
 
 ## See Also
 

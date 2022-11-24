@@ -1,6 +1,8 @@
 # DefaultImageProcessor class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default implementation for the [`IImageProcessor`](../global/IImageProcessor.md)
+
 ```csharp
 public class DefaultImageProcessor : IImageProcessor
 ```

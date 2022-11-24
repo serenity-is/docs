@@ -15,6 +15,7 @@ public object Scale(object image, int width, int height, ImageScaleMode mode,
 | height | Thumbnail height. If 0, height is calculated by source aspect ratio. Only one of width or height can be zero. |
 | mode | Thumbnail generation mode. It is only important when both dimensions are specified and source aspect ratio is different than thumbnail (see ImageScaleMode). |
 | backgroundColor | Specifies fill color for PreserveRatioWithFill mode. |
+| inplace | True if the original image should be modified inplace |
 
 ## Return Value
 

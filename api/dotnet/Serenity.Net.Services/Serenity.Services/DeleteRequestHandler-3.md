@@ -27,6 +27,9 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 | [Context](DeleteRequestHandler-3/Context.md) { get; } | Gets the request context |
 | [Localizer](DeleteRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
 | [Permissions](DeleteRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
+| [Request](DeleteRequestHandler-3/Request.md) { get; protected set; } | Request object |
+| [Response](DeleteRequestHandler-3/Response.md) { get; protected set; } | Response object |
+| [Row](DeleteRequestHandler-3/Row.md) { get; protected set; } | The entity |
 | [StateBag](DeleteRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
 | [UnitOfWork](DeleteRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets current unit of work |
 | [User](DeleteRequestHandler-3/User.md) { get; } | Gets current user from the request context |
@@ -38,9 +41,6 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 | name | description |
 | --- | --- |
 | [behaviors-](DeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
-| [Request](DeleteRequestHandler-3/Request.md) | Request object |
-| [Response](DeleteRequestHandler-3/Response.md) | Response object |
-| [Row](DeleteRequestHandler-3/Row.md) | The entity |
 | virtual [DoAudit](DeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteDelete](DeleteRequestHandler-3/ExecuteDelete.md)() | Executes the actual SQL delete operation |
 | virtual [GetBehaviors](DeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of delete behaviors |

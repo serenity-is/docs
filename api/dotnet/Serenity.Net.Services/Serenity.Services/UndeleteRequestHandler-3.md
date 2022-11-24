@@ -27,6 +27,9 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 | [Context](UndeleteRequestHandler-3/Context.md) { get; } | Gets the request context |
 | [Localizer](UndeleteRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
 | [Permissions](UndeleteRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
+| [Request](UndeleteRequestHandler-3/Request.md) { get; protected set; } | Request object |
+| [Response](UndeleteRequestHandler-3/Response.md) { get; protected set; } | Response object |
+| [Row](UndeleteRequestHandler-3/Row.md) { get; protected set; } | The entity |
 | [StateBag](UndeleteRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
 | [UnitOfWork](UndeleteRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets current unit of work |
 | [User](UndeleteRequestHandler-3/User.md) { get; } | Gets current user from the request context |
@@ -38,9 +41,6 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 | name | description |
 | --- | --- |
 | [behaviors-](UndeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
-| [Request](UndeleteRequestHandler-3/Request.md) | Request object |
-| [Response](UndeleteRequestHandler-3/Response.md) | Response object |
-| [Row](UndeleteRequestHandler-3/Row.md) | The entity |
 | virtual [DoAudit](UndeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteUndelete](UndeleteRequestHandler-3/ExecuteUndelete.md)() | Executes the actual SQL undelete/update operation |
 | virtual [GetBehaviors](UndeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of undelete behaviors |

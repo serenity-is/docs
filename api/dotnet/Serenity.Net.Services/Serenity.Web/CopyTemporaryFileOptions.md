@@ -1,6 +1,8 @@
 # CopyTemporaryFileOptions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Options for copying a temporary file to its target
+
 ```csharp
 public class CopyTemporaryFileOptions : FormatFilenameOptions
 ```
@@ -10,8 +12,8 @@ public class CopyTemporaryFileOptions : FormatFilenameOptions
 | name | description |
 | --- | --- |
 | [CopyTemporaryFileOptions](CopyTemporaryFileOptions/CopyTemporaryFileOptions.md)() | The default constructor. |
-| [FilesToDelete](CopyTemporaryFileOptions/FilesToDelete.md) { get; set; } |  |
-| [TemporaryFile](CopyTemporaryFileOptions/TemporaryFile.md) { get; set; } |  |
+| [FilesToDelete](CopyTemporaryFileOptions/FilesToDelete.md) { get; set; } | Files to delete container |
+| [TemporaryFile](CopyTemporaryFileOptions/TemporaryFile.md) { get; set; } | Temporary file |
 
 ## See Also
 

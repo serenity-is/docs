@@ -1,10 +1,10 @@
-# ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.Response field
+# ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.Response property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Request object
+Response object
 
 ```csharp
-protected TListResponse Response;
+public TListResponse Response { get; protected set; }
 ```
 
 ## See Also

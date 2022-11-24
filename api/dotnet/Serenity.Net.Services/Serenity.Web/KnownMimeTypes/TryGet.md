@@ -1,7 +1,7 @@
 # KnownMimeTypes.TryGet method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets MIME type for a given file using information in Win32 HKEY_CLASSES_ROOT registry key.
+Gets MIME type for a given file
 
 ```csharp
 public static string TryGet(string path)

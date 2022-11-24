@@ -1,6 +1,8 @@
 # FileMetadataKeys class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Contains file metadata key constants
+
 ```csharp
 public static class FileMetadataKeys
 ```
@@ -9,7 +11,7 @@ public static class FileMetadataKeys
 
 | name | description |
 | --- | --- |
-| const [OriginalName](FileMetadataKeys/OriginalName.md) |  |
+| const [OriginalName](FileMetadataKeys/OriginalName.md) | Original name of the file |
 
 ## See Also
 

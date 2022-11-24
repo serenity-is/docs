@@ -1,6 +1,8 @@
 # DefaultUploadValidator class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Default implementation for [`IUploadValidator`](IUploadValidator.md)
+
 ```csharp
 public class DefaultUploadValidator : IUploadValidator
 ```
@@ -9,7 +11,7 @@ public class DefaultUploadValidator : IUploadValidator
 
 | name | description |
 | --- | --- |
-| [DefaultUploadValidator](DefaultUploadValidator/DefaultUploadValidator.md)(…) |  |
+| [DefaultUploadValidator](DefaultUploadValidator/DefaultUploadValidator.md)(…) | Creates a new instance of the class |
 | [ValidateFile](DefaultUploadValidator/ValidateFile.md)(…) |  |
 | [ValidateImage](DefaultUploadValidator/ValidateImage.md)(…) |  |
 

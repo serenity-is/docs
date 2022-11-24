@@ -1,6 +1,8 @@
 # IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for update request handlers with custom request / response types.
+
 ```csharp
 public interface IUpdateHandler<TRow, TSaveRequest, TSaveResponse> : 
     IRequestHandler<TRow, TSaveRequest, TSaveResponse>
@@ -9,11 +11,17 @@ public interface IUpdateHandler<TRow, TSaveRequest, TSaveResponse> :
     where TSaveResponse : SaveResponse, new()
 ```
 
+| parameter | description |
+| --- | --- |
+| TRow | Row type |
+| TSaveRequest | Save request type |
+| TSaveResponse | Save response type |
+
 ## Members
 
 | name | description |
 | --- | --- |
-| [Update](IUpdateHandler-3/Update.md)(…) |  |
+| [Update](IUpdateHandler-3/Update.md)(…) | Processes an Update request |
 
 ## See Also
 

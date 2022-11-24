@@ -1,10 +1,10 @@
-# DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Response field
+# DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Response property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Response object
 
 ```csharp
-protected TDeleteResponse Response;
+public TDeleteResponse Response { get; protected set; }
 ```
 
 ## See Also

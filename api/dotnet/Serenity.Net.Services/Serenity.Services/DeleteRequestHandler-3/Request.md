@@ -1,10 +1,10 @@
-# DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Request field
+# DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Request property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Request object
 
 ```csharp
-protected TDeleteRequest Request;
+public TDeleteRequest Request { get; protected set; }
 ```
 
 ## See Also

@@ -4,7 +4,7 @@
 ```csharp
 public static string ScaleImageAndCreateAllThumbs(object image, IImageProcessor imageProcessor, 
     IUploadImageOptions options, IUploadStorage uploadStorage, string temporaryFile, 
-    bool? autoRename = null)
+    OverwriteOption overwrite)
 ```
 
 ## See Also
@@ -12,4 +12,5 @@ public static string ScaleImageAndCreateAllThumbs(object image, IImageProcessor 
 * interface [IImageProcessor](../../global/IImageProcessor.md)
 * interface [IUploadImageOptions](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadImageOptions.md)
 * interface [IUploadStorage](../IUploadStorage.md)
+* enum [OverwriteOption](../OverwriteOption.md)
 * class [UploadStorageExtensions](../UploadStorageExtensions.md)

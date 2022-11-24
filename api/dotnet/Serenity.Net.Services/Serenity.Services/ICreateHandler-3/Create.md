@@ -1,9 +1,16 @@
 # ICreateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.Create method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Processes a Create request
+
 ```csharp
 public TSaveResponse Create(IUnitOfWork uow, TSaveRequest request)
 ```
+
+| parameter | description |
+| --- | --- |
+| uow | Unit of work |
+| request | Save request |
 
 ## See Also
 

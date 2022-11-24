@@ -1,6 +1,8 @@
 # PhysicalDiskUploadFileSystem class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Implementation of the [`IDiskUploadFileSystem`](IDiskUploadFileSystem.md)
+
 ```csharp
 public class PhysicalDiskUploadFileSystem : PhysicalFileSystem, IDiskUploadFileSystem
 ```

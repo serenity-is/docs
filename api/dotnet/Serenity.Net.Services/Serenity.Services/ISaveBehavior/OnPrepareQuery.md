@@ -10,6 +10,7 @@ public void OnPrepareQuery(ISaveRequestHandler handler, SqlQuery query)
 | parameter | description |
 | --- | --- |
 | handler | Calling save request handler |
+| query | Query |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.Row property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+The inserted entity for Create and new entity for Update
+
 ```csharp
 public TRow Row { get; protected set; }
 ```

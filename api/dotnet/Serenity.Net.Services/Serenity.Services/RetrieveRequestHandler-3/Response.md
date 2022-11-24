@@ -1,10 +1,10 @@
-# RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.Response field
+# RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.Response property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Response object
 
 ```csharp
-protected TRetrieveResponse Response;
+public TRetrieveResponse Response { get; protected set; }
 ```
 
 ## See Also

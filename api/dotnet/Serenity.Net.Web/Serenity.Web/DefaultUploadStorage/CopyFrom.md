@@ -3,10 +3,11 @@
 
 ```csharp
 public string CopyFrom(IUploadStorage sourceStorage, string sourcePath, string targetPath, 
-    bool? autoRename)
+    OverwriteOption overwrite)
 ```
 
 ## See Also
 
 * interface [IUploadStorage](../Serenity.Net.Services/../IUploadStorage.md)
+* enum [OverwriteOption](../Serenity.Net.Services/../OverwriteOption.md)
 * class [DefaultUploadStorage](../DefaultUploadStorage.md)

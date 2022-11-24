@@ -1,6 +1,8 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.ValidateEditable method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Validates editable fields
+
 ```csharp
 protected virtual HashSet<Field> ValidateEditable()
 ```

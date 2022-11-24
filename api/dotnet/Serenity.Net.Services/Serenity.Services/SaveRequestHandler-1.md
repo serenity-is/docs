@@ -1,17 +1,23 @@
 # SaveRequestHandler&lt;TRow&gt; class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Base generic class for save request handlers that use [`SaveRequest`](SaveRequest-1.md) as the request type, and [`SaveResponse`](SaveResponse.md) as the response type.
+
 ```csharp
 public class SaveRequestHandler<TRow> : SaveRequestHandler<TRow, SaveRequest<TRow>, SaveResponse>, 
     ISaveHandler<TRow>
     where TRow : class, IRow, IIdRow, new()
 ```
 
+| parameter | description |
+| --- | --- |
+| TRow | The entity type |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [SaveRequestHandler](SaveRequestHandler-1/SaveRequestHandler.md)(…) |  |
+| [SaveRequestHandler](SaveRequestHandler-1/SaveRequestHandler.md)(…) | Creates a new instance of the class |
 
 ## See Also
 

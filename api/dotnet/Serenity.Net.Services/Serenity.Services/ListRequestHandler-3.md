@@ -29,6 +29,9 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> :
 | [Localizer](ListRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
 | [Permissions](ListRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
 | [Query](ListRequestHandler-3/Query.md) { get; } | Gets the select query |
+| [Request](ListRequestHandler-3/Request.md) { get; protected set; } | Response object |
+| [Response](ListRequestHandler-3/Response.md) { get; protected set; } | Response object |
+| [Row](ListRequestHandler-3/Row.md) { get; protected set; } | The entity used for querying / metadata lookup |
 | [StateBag](ListRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
 | [User](ListRequestHandler-3/User.md) { get; } | Gets current user from the request context |
 | [GetDistinctFields](ListRequestHandler-3/GetDistinctFields.md)() | Gets an array of distinct fields by checking Request.DistinctFields. It might be different than the passed list, if the list contains an invalid field or a field that is not allowed to be selected, like NotMapped and Never etc. |
@@ -43,9 +46,6 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> :
 | [behaviors-](ListRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
 | [ignoredEqualityFilters-](ListRequestHandler-3/ignoredEqualityFilters-.md) | Set of ignored equality filter entries |
 | [lookupAccessMode-](ListRequestHandler-3/lookupAccessMode-.md) | True if the list handler is in lookup access mode, e.g. it only allows access to lookup fields |
-| [Request](ListRequestHandler-3/Request.md) | Response object |
-| [Response](ListRequestHandler-3/Response.md) | Request object |
-| [Row](ListRequestHandler-3/Row.md) | The entity used for querying / metadata lookup |
 | virtual [AddFieldContainsCriteria](ListRequestHandler-3/AddFieldContainsCriteria.md)(…) | Applies a contains criteria based on containsText, id (if the contains text can be parsed to an integer ID), searchType and numericOnly parameters. |
 | virtual [AllowSelectField](ListRequestHandler-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on is read permission, selectlevel.never flag, and lookup access mode |
 | virtual [ApplyContainsText](ListRequestHandler-3/ApplyContainsText.md)(…) | Applies contains text filter to the query |

@@ -1,9 +1,16 @@
 # IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.Update method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Processes an Update request
+
 ```csharp
 public TSaveResponse Update(IUnitOfWork uow, TSaveRequest request)
 ```
+
+| parameter | description |
+| --- | --- |
+| uow | Unit of work |
+| request | Save request |
 
 ## See Also
 

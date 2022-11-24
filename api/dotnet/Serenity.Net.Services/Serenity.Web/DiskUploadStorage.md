@@ -1,6 +1,8 @@
 # DiskUploadStorage class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+A file system based upload storage implementation
+
 ```csharp
 public class DiskUploadStorage : IUploadStorage
 ```
@@ -9,9 +11,9 @@ public class DiskUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| [DiskUploadStorage](DiskUploadStorage/DiskUploadStorage.md)(…) |  |
-| [RootPath](DiskUploadStorage/RootPath.md) { get; } |  |
-| [RootUrl](DiskUploadStorage/RootUrl.md) { get; } |  |
+| [DiskUploadStorage](DiskUploadStorage/DiskUploadStorage.md)(…) | Creates a new instance of the class |
+| [RootPath](DiskUploadStorage/RootPath.md) { get; } | Root path for the uploads |
+| [RootUrl](DiskUploadStorage/RootUrl.md) { get; } | Root URL for the uploads |
 | [ArchiveFile](DiskUploadStorage/ArchiveFile.md)(…) |  |
 | [CopyFrom](DiskUploadStorage/CopyFrom.md)(…) |  |
 | [DeleteFile](DiskUploadStorage/DeleteFile.md)(…) |  |
@@ -29,8 +31,8 @@ public class DiskUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| readonly [fileSystem-](DiskUploadStorage/fileSystem-.md) |  |
-| [FilePath](DiskUploadStorage/FilePath.md)(…) |  |
+| readonly [fileSystem-](DiskUploadStorage/fileSystem-.md) | File system |
+| [FilePath](DiskUploadStorage/FilePath.md)(…) | Gets the full path for the file |
 
 ## See Also
 

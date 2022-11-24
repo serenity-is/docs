@@ -1,10 +1,16 @@
 # ICreateHandler&lt;TRow&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Interface for create request handlers
+
 ```csharp
 public interface ICreateHandler<TRow> : ICreateHandler<TRow, SaveRequest<TRow>, SaveResponse>
     where TRow : class, IRow, IIdRow, new()
 ```
+
+| parameter | description |
+| --- | --- |
+| TRow | Row type |
 
 ## See Also
 
@@ -14,4 +20,4 @@ public interface ICreateHandler<TRow> : ICreateHandler<TRow, SaveRequest<TRow>, 
 * class [SaveResponse](SaveResponse.md)
 * interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
-* **Source:** *[ICreateHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/ICreateHandler.cs)*
+* **Source:** *[ICreateHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/ICreateHandlerT.cs)*

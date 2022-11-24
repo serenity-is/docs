@@ -1,6 +1,8 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.SetInternalFields method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
+Sets values for internal fields
+
 ```csharp
 protected virtual void SetInternalFields()
 ```

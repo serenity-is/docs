@@ -1,6 +1,8 @@
 # SaveRequestType enumeration
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+Save request type for save request processors
+
 ```csharp
 public enum SaveRequestType
 ```
@@ -9,9 +11,9 @@ public enum SaveRequestType
 
 | name | value | description |
 | --- | --- | --- |
-| Create | `0` |  |
-| Update | `1` |  |
-| Auto | `2` |  |
+| Create | `0` | Create |
+| Update | `1` | Update |
+| Auto | `2` | Auto determine from the request.EntityId parameter |
 
 ## See Also
 

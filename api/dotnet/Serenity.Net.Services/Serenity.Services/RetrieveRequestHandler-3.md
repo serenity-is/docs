@@ -28,6 +28,9 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 | [Localizer](RetrieveRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
 | [Permissions](RetrieveRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
 | [Query](RetrieveRequestHandler-3/Query.md) { get; } | Gets the select query |
+| [Request](RetrieveRequestHandler-3/Request.md) { get; protected set; } | Response object |
+| [Response](RetrieveRequestHandler-3/Response.md) { get; protected set; } | Response object |
+| [Row](RetrieveRequestHandler-3/Row.md) { get; protected set; } | The entity used for querying / metadata lookup |
 | [StateBag](RetrieveRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
 | [User](RetrieveRequestHandler-3/User.md) { get; } | Gets current user from the request context |
 | [Process](RetrieveRequestHandler-3/Process.md)(…) | Processes the retrieve request. This is the entry point for the handler. |
@@ -38,9 +41,6 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 | name | description |
 | --- | --- |
 | [behaviors-](RetrieveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
-| [Request](RetrieveRequestHandler-3/Request.md) | Request object |
-| [Response](RetrieveRequestHandler-3/Response.md) | Response object |
-| [Row](RetrieveRequestHandler-3/Row.md) | The entity |
 | virtual [AllowSelectField](RetrieveRequestHandler-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on is read permission, selectlevel.never flag, and lookup access mode |
 | virtual [CreateQuery](RetrieveRequestHandler-3/CreateQuery.md)() | Creates a query instance with the dialect for current connection. |
 | virtual [GetBehaviors](RetrieveRequestHandler-3/GetBehaviors.md)() | Gets the list of retrieve behaviors |

@@ -1,6 +1,8 @@
 # CombinedUploadStorage class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
+A combined upload storage implementation that uses two upload storage instances, while serving one of them from a sub path like "/temporary/"
+
 ```csharp
 public class CombinedUploadStorage : IUploadStorage
 ```
@@ -9,7 +11,7 @@ public class CombinedUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| [CombinedUploadStorage](CombinedUploadStorage/CombinedUploadStorage.md)(…) |  |
+| [CombinedUploadStorage](CombinedUploadStorage/CombinedUploadStorage.md)(…) | Creates a new instance of the class |
 | [ArchiveFile](CombinedUploadStorage/ArchiveFile.md)(…) |  |
 | [CopyFrom](CombinedUploadStorage/CopyFrom.md)(…) |  |
 | [DeleteFile](CombinedUploadStorage/DeleteFile.md)(…) |  |
@@ -18,12 +20,17 @@ public class CombinedUploadStorage : IUploadStorage
 | [GetFiles](CombinedUploadStorage/GetFiles.md)(…) |  |
 | [GetFileSize](CombinedUploadStorage/GetFileSize.md)(…) |  |
 | [GetFileUrl](CombinedUploadStorage/GetFileUrl.md)(…) |  |
-| [IsSubPath](CombinedUploadStorage/IsSubPath.md)(…) |  |
 | [OpenFile](CombinedUploadStorage/OpenFile.md)(…) |  |
 | [PurgeTemporaryFiles](CombinedUploadStorage/PurgeTemporaryFiles.md)() |  |
 | [SetFileMetadata](CombinedUploadStorage/SetFileMetadata.md)(…) |  |
-| [UnderSubPath](CombinedUploadStorage/UnderSubPath.md)(…) |  |
 | [WriteFile](CombinedUploadStorage/WriteFile.md)(…) |  |
+
+## Protected Members
+
+| name | description |
+| --- | --- |
+| [IsSubPath](CombinedUploadStorage/IsSubPath.md)(…) | Returns true if the path is the subpath |
+| [UnderSubPath](CombinedUploadStorage/UnderSubPath.md)(…) | Returns if the path is under sub path |
 
 ## See Also
 

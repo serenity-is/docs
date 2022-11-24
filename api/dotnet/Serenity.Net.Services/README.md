@@ -4,7 +4,7 @@
 
 | signature | name | description |
 | --: | --- | --- |
-| interface  | [IImageProcessor](global/IImageProcessor.md) |  |
+| interface  | [IImageProcessor](global/IImageProcessor.md) | Image processor abstraction |
 
 ## Serenity namespace
 
@@ -114,8 +114,8 @@
 | class  | [GenericHandlerTypeAttribute](Serenity.Services/GenericHandlerTypeAttribute.md) | Assigns the generic handler type (e.g. [`SaveRequestHandler`](Serenity.Services/SaveRequestHandler-1.md) for a handler interface (like [`ISaveRequestHandler`](Serenity.Services/ISaveRequestHandler.md)) |
 | interface  | [IBehaviorFactory](Serenity.Services/IBehaviorFactory.md) | Behavior factory abstraction |
 | interface  | [IBehaviorProvider](Serenity.Services/IBehaviorProvider.md) | Interface abstraction for behavior provider which resolves list of behavior instances of a specified type, like [`ISaveBehavior`](Serenity.Services/ISaveBehavior.md) etc. |
-| interface  | [ICreateHandler&lt;TRow&gt;](Serenity.Services/ICreateHandler-1.md) |  |
-| interface  | [ICreateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/ICreateHandler-3.md) |  |
+| interface  | [ICreateHandler&lt;TRow&gt;](Serenity.Services/ICreateHandler-1.md) | Interface for create request handlers |
+| interface  | [ICreateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/ICreateHandler-3.md) | Interface for create request handlers with custom request / response types. |
 | interface  | [IDefaultHandlerFactory](Serenity.Services/IDefaultHandlerFactory.md) | Interface to get a new instace of a default request handler, given its row type and the handler interface |
 | interface  | [IDefaultHandlerRegistry](Serenity.Services/IDefaultHandlerRegistry.md) | Abstaction for the registry that cobtains default handler types. |
 | interface  | [IDeleteBehavior](Serenity.Services/IDeleteBehavior.md) | A delete behavior that can be used as a mixin within a DeleteRequestHandler lifecycle |
@@ -150,25 +150,25 @@
 | interface  | [IRetrieveResponse](Serenity.Services/IRetrieveResponse.md) | Interface for a [`RetrieveResponse`](Serenity.Services/RetrieveResponse-1.md). As the RetrieveResponse itself is generic, this allows easier access to its members. |
 | interface  | [ISaveBehavior](Serenity.Services/ISaveBehavior.md) | A save behavior that can be used as a mixin within a SaveRequestHandler lifecycle |
 | interface  | [ISaveExceptionBehavior](Serenity.Services/ISaveExceptionBehavior.md) | This is an extension for save behaviors that should be called for exceptions that occur during save. It could be useful to preview the exception and raise another exception for FK / PK database errors etc. |
-| interface  | [ISaveHandler&lt;TRow&gt;](Serenity.Services/ISaveHandler-1.md) |  |
-| interface  | [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/ISaveHandler-3.md) |  |
+| interface  | [ISaveHandler&lt;TRow&gt;](Serenity.Services/ISaveHandler-1.md) | Interface for save request handlers |
+| interface  | [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/ISaveHandler-3.md) | Interface for save request handlers with custom request / response types. |
 | interface  | [ISaveRequest](Serenity.Services/ISaveRequest.md) | Interface for a [`SaveRequest`](Serenity.Services/SaveRequest-1.md). As the SaveRequest itself is generic, this allows easier access to its members. |
 | interface  | [ISaveRequestHandler](Serenity.Services/ISaveRequestHandler.md) | Represents a SaveRequestHandler. Is used with SaveBehavior objects. |
-| interface  | [ISaveRequestProcessor](Serenity.Services/ISaveRequestProcessor.md) |  |
+| interface  | [ISaveRequestProcessor](Serenity.Services/ISaveRequestProcessor.md) | Abstraction for save request handlers with a Process method. |
 | interface  | [IUndeleteBehavior](Serenity.Services/IUndeleteBehavior.md) | A undelete behavior that can be used as a mixin within a UndeleteRequestHandler lifecycle |
 | interface  | [IUndeleteExceptionBehavior](Serenity.Services/IUndeleteExceptionBehavior.md) | This is an extension for undelete behaviors that should be called for exceptions that occur during delete. It could be useful to preview the exception and raise another exception for FK / PK database errors etc. |
 | interface  | [IUndeleteHandler&lt;TRow&gt;](Serenity.Services/IUndeleteHandler-1.md) | Interface for undelete request handlers that use [`UndeleteRequest`](Serenity.Services/UndeleteRequest.md) as request, and [`UndeleteResponse`](Serenity.Services/UndeleteResponse.md) as response types. |
 | interface  | [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](Serenity.Services/IUndeleteHandler-3.md) | Interface for undelete request handlers with custom undelete request / response types. |
 | interface  | [IUndeleteRequestHandler](Serenity.Services/IUndeleteRequestHandler.md) | Represents a UndeleteRequestHandler. Is used with UndeleteBehavior objects. |
 | interface  | [IUndeleteRequestProcessor](Serenity.Services/IUndeleteRequestProcessor.md) | Abstraction for undelete request handlers with a Process method. |
-| interface  | [IUpdateHandler&lt;TRow&gt;](Serenity.Services/IUpdateHandler-1.md) |  |
-| interface  | [IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/IUpdateHandler-3.md) |  |
+| interface  | [IUpdateHandler&lt;TRow&gt;](Serenity.Services/IUpdateHandler-1.md) | Interface for update request handlers |
+| interface  | [IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/IUpdateHandler-3.md) | Interface for update request handlers with custom request / response types. |
 | class  | [JsonServiceClient](Serenity.Services/JsonServiceClient.md) | A JSON service client implementation |
 | class  | [JsonSortByConverter](Serenity.Services/JsonSortByConverter.md) | Serialize/deserialize a SortBy object as string |
 | class  | [LinkingSetRelationBehavior](Serenity.Services/LinkingSetRelationBehavior.md) | Behavior class that handles LinkingSetRelationAttribute |
 | class  | [ListRequest](Serenity.Services/ListRequest.md) | The request model for a List service. |
 | class  | [ListRequestHandler&lt;TRow&gt;](Serenity.Services/ListRequestHandler-1.md) | Base generic class for list request handlers that use [`ListRequest`](Serenity.Services/ListRequest.md) as the request type, and [`ListResponse`](Serenity.Services/ListResponse-1.md) as the response type. |
-| class  | [ListRequestHandler&lt;TRow,TListRequest&gt;](Serenity.Services/ListRequestHandler-2.md) |  |
+| class  | [ListRequestHandler&lt;TRow,TListRequest&gt;](Serenity.Services/ListRequestHandler-2.md) | Base generic class for list request handlers that use a custom list request as the request type, and [`ListResponse`](Serenity.Services/ListResponse-1.md) as the response type. |
 | class  | [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](Serenity.Services/ListRequestHandler-3.md) | Generic base class for list request handlers |
 | class  | [ListResponse&lt;T&gt;](Serenity.Services/ListResponse-1.md) | The response model for a list service. |
 | class  | [LocalizationBehavior](Serenity.Services/LocalizationBehavior.md) | Behavior for handling localizable rows / properties |
@@ -182,9 +182,9 @@
 | class  | [RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](Serenity.Services/RetrieveRequestHandler-3.md) | Generic base class for retrieve request handlers |
 | class  | [RetrieveResponse&lt;T&gt;](Serenity.Services/RetrieveResponse-1.md) | The service response model for a Retrieve service |
 | class  | [SaveRequest&lt;TEntity&gt;](Serenity.Services/SaveRequest-1.md) | The service model for a Save (Create / Update) service. |
-| class  | [SaveRequestHandler&lt;TRow&gt;](Serenity.Services/SaveRequestHandler-1.md) |  |
-| class  | [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/SaveRequestHandler-3.md) |  |
-| enum  | [SaveRequestType](Serenity.Services/SaveRequestType.md) |  |
+| class  | [SaveRequestHandler&lt;TRow&gt;](Serenity.Services/SaveRequestHandler-1.md) | Base generic class for save request handlers that use [`SaveRequest`](Serenity.Services/SaveRequest-1.md) as the request type, and [`SaveResponse`](Serenity.Services/SaveResponse.md) as the response type. |
+| class  | [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](Serenity.Services/SaveRequestHandler-3.md) | Generic base class for save request handlers |
+| enum  | [SaveRequestType](Serenity.Services/SaveRequestType.md) | Save request type for save request processors |
 | class  | [SaveResponse](Serenity.Services/SaveResponse.md) | The response model for a Save service |
 | class  | [SaveWithLocalizationRequest&lt;TEntity&gt;](Serenity.Services/SaveWithLocalizationRequest-1.md) | A save request with localization. Don't use. Provided only for compatibility. |
 | class  | [ServiceError](Serenity.Services/ServiceError.md) | The error object model returned from a service |
@@ -203,40 +203,41 @@
 | class  | [UniqueFieldSaveBehavior](Serenity.Services/UniqueFieldSaveBehavior.md) | Interface that handles UniqueConstraintAttribute on fields |
 | class  | [UpdatableExtensionBehavior](Serenity.Services/UpdatableExtensionBehavior.md) | Behavior that handles UpdatableExtensionAttribute |
 | class  | [UpdateInsertLogBehavior](Serenity.Services/UpdateInsertLogBehavior.md) | Behavior class that handles assignment of relevant fields for rows with IInsertLogRow and IUpdateLogRow interfaces |
-| class  | [UploadedFile](Serenity.Services/UploadedFile.md) |  |
+| class  | [UploadedFile](Serenity.Services/UploadedFile.md) | Uploaded file item which is used by multiple upload editors to store file information in a string field as JSON array. |
 | class  | [ValidateParentBehavior](Serenity.Services/ValidateParentBehavior.md) | Validation behavior for rows that have a parent record via IParentIdRow interface |
 
 ## Serenity.Web namespace
 
 | signature | name | description |
 | --: | --- | --- |
-| class  | [CombinedUploadStorage](Serenity.Web/CombinedUploadStorage.md) |  |
-| class  | [CopyTemporaryFileOptions](Serenity.Web/CopyTemporaryFileOptions.md) |  |
-| class  | [CopyTemporaryFileResult](Serenity.Web/CopyTemporaryFileResult.md) |  |
-| class  | [DefaultImageProcessor](Serenity.Web/DefaultImageProcessor.md) |  |
+| class  | [CombinedUploadStorage](Serenity.Web/CombinedUploadStorage.md) | A combined upload storage implementation that uses two upload storage instances, while serving one of them from a sub path like "/temporary/" |
+| class  | [CopyTemporaryFileOptions](Serenity.Web/CopyTemporaryFileOptions.md) | Options for copying a temporary file to its target |
+| class  | [CopyTemporaryFileResult](Serenity.Web/CopyTemporaryFileResult.md) | Result of the copying of a temporary file to its target |
+| class  | [DefaultImageProcessor](Serenity.Web/DefaultImageProcessor.md) | Default implementation for the [`IImageProcessor`](global/IImageProcessor.md) |
 | class  | [DefaultUploadProcessor](Serenity.Web/DefaultUploadProcessor.md) |  |
-| class  | [DefaultUploadValidator](Serenity.Web/DefaultUploadValidator.md) |  |
-| class  | [DiskUploadStorage](Serenity.Web/DiskUploadStorage.md) |  |
-| class  | [DiskUploadStorageOptions](Serenity.Web/DiskUploadStorageOptions.md) |  |
-| static class  | [FileMetadataKeys](Serenity.Web/FileMetadataKeys.md) |  |
-| class  | [FilesToDelete](Serenity.Web/FilesToDelete.md) |  |
-| static class  | [FilesToDeleteExtensions](Serenity.Web/FilesToDeleteExtensions.md) |  |
-| class  | [FormatFilenameOptions](Serenity.Web/FormatFilenameOptions.md) |  |
-| interface  | [IDiskUploadFileSystem](Serenity.Web/IDiskUploadFileSystem.md) |  |
-| interface  | [IFilesToDelete](Serenity.Web/IFilesToDelete.md) |  |
-| class  | [ImageChecker](Serenity.Web/ImageChecker.md) | checks stream data if valid image file and validate required conditions. |
+| class  | [DefaultUploadValidator](Serenity.Web/DefaultUploadValidator.md) | Default implementation for [`IUploadValidator`](Serenity.Web/IUploadValidator.md) |
+| class  | [DiskUploadStorage](Serenity.Web/DiskUploadStorage.md) | A file system based upload storage implementation |
+| class  | [DiskUploadStorageOptions](Serenity.Web/DiskUploadStorageOptions.md) | Options for [`DiskUploadStorage`](Serenity.Web/DiskUploadStorage.md) |
+| static class  | [FileMetadataKeys](Serenity.Web/FileMetadataKeys.md) | Contains file metadata key constants |
+| class  | [FilesToDelete](Serenity.Web/FilesToDelete.md) | A container that stores list of file paths to delete (old files) if the upload related operation is successful. If it is not, the old files will be kept while the new files will be deleted. |
+| static class  | [FilesToDeleteExtensions](Serenity.Web/FilesToDeleteExtensions.md) | Extension methods for [`FilesToDelete`](Serenity.Web/FilesToDelete.md) |
+| class  | [FormatFilenameOptions](Serenity.Web/FormatFilenameOptions.md) | Options for formatting a file name |
+| interface  | [IDiskUploadFileSystem](Serenity.Web/IDiskUploadFileSystem.md) | Extension for IFileSystem with disk upload storage specific methods. |
+| interface  | [IFilesToDelete](Serenity.Web/IFilesToDelete.md) | Interface for a files to delete container ([`FilesToDelete`](Serenity.Web/FilesToDelete.md)) |
+| class  | [ImageChecker](Serenity.Web/ImageChecker.md) | Checks stream data if valid image file and validate required conditions. |
 | enum  | [ImageCheckResult](Serenity.Web/ImageCheckResult.md) | [`ImageChecker`](Serenity.Web/ImageChecker.md)'s result codes. |
-| class  | [ImageEncoderParams](Serenity.Web/ImageEncoderParams.md) |  |
-| class  | [ImageFormatInfo](Serenity.Web/ImageFormatInfo.md) |  |
-| interface  | [IUploadProcessor](Serenity.Web/IUploadProcessor.md) |  |
-| interface  | [IUploadStorage](Serenity.Web/IUploadStorage.md) |  |
-| interface  | [IUploadValidator](Serenity.Web/IUploadValidator.md) |  |
-| static class  | [KnownMimeTypes](Serenity.Web/KnownMimeTypes.md) |  |
-| class  | [PhysicalDiskUploadFileSystem](Serenity.Web/PhysicalDiskUploadFileSystem.md) |  |
-| class  | [ProcessedUploadInfo](Serenity.Web/ProcessedUploadInfo.md) |  |
-| class  | [TempUploadStorage](Serenity.Web/TempUploadStorage.md) |  |
+| class  | [ImageEncoderParams](Serenity.Web/ImageEncoderParams.md) | Parameters for image encoding. Currently only contains a JPEG quality parameter. |
+| class  | [ImageFormatInfo](Serenity.Web/ImageFormatInfo.md) | Information about an image format |
+| interface  | [IUploadProcessor](Serenity.Web/IUploadProcessor.md) | Abstraction for an upload processor, which handles temporary uploads |
+| interface  | [IUploadStorage](Serenity.Web/IUploadStorage.md) | Abstraction for an upload storage |
+| interface  | [IUploadValidator](Serenity.Web/IUploadValidator.md) | An upload validator abstraction for checking IUploadFileConstraints and IUploadImageContrains |
+| static class  | [KnownMimeTypes](Serenity.Web/KnownMimeTypes.md) | Contains set of known popular mime types |
+| enum  | [OverwriteOption](Serenity.Web/OverwriteOption.md) | Enum that contains what to do when a file at desired path exists |
+| class  | [PhysicalDiskUploadFileSystem](Serenity.Web/PhysicalDiskUploadFileSystem.md) | Implementation of the [`IDiskUploadFileSystem`](Serenity.Web/IDiskUploadFileSystem.md) |
+| class  | [ProcessedUploadInfo](Serenity.Web/ProcessedUploadInfo.md) | Information about a processed temporary upload |
+| class  | [TempUploadStorage](Serenity.Web/TempUploadStorage.md) | A subclass of [`DiskUploadStorage`](Serenity.Web/DiskUploadStorage.md) specialized for the temporary upload folder, allowing to purge temporary files |
 | static class  | [ThumbnailGenerator](Serenity.Web/ThumbnailGenerator.md) | Static class that contains thumbnail generator methods |
-| static class  | [UploadFormatting](Serenity.Web/UploadFormatting.md) |  |
-| static class  | [UploadPathHelper](Serenity.Web/UploadPathHelper.md) |  |
-| class  | [UploadSettings](Serenity.Web/UploadSettings.md) |  |
-| static class  | [UploadStorageExtensions](Serenity.Web/UploadStorageExtensions.md) |  |
+| static class  | [UploadFormatting](Serenity.Web/UploadFormatting.md) | Contains helper methods for upload file name formatting |
+| static class  | [UploadPathHelper](Serenity.Web/UploadPathHelper.md) | Contains helper functions for upload paths |
+| class  | [UploadSettings](Serenity.Web/UploadSettings.md) | Upload settings |
+| static class  | [UploadStorageExtensions](Serenity.Web/UploadStorageExtensions.md) | Extension methods for [`IUploadStorage`](Serenity.Web/IUploadStorage.md) and related classes |

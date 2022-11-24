@@ -1,10 +1,10 @@
-# ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.Row field
+# ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.Row property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 The entity used for querying / metadata lookup
 
 ```csharp
-protected TRow Row;
+public TRow Row { get; protected set; }
 ```
 
 ## See Also

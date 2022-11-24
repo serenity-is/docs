@@ -1,7 +1,7 @@
 # ImageChecker class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-checks stream data if valid image file and validate required conditions.
+Checks stream data if valid image file and validate required conditions.
 
 ```csharp
 public class ImageChecker
@@ -23,7 +23,7 @@ public class ImageChecker
 | [Width](ImageChecker/Width.md) { get; } | Gets width of the validated image |
 | [CheckSizeConstraints](ImageChecker/CheckSizeConstraints.md)(…) | Checks an image width and height against size constraints |
 | [CheckStream](ImageChecker/CheckStream.md)(…) | Checks if the given image if it is a valid or not. If so, controls its compliance to constraints |
-| [FormatErrorMessage](ImageChecker/FormatErrorMessage.md)(…) |  |
+| [FormatErrorMessage](ImageChecker/FormatErrorMessage.md)(…) | Formats an [`ImageCheckResult`](ImageCheckResult.md) error message |
 
 ## See Also
 

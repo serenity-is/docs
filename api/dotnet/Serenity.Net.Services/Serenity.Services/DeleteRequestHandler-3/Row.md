@@ -1,10 +1,10 @@
-# DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Row field
+# DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.Row property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 The entity
 
 ```csharp
-protected TRow Row;
+public TRow Row { get; protected set; }
 ```
 
 ## See Also

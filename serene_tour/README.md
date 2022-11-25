@@ -1,17 +1,18 @@
 # A Tour Of Serene Features
 
-After logging to Serene, you are greeted with the dashboard page.
+After logging in to Serene, you are greeted with the dashboard page.
 
-![Serene Dashboard](img/serenedash.jpg)
+![Serene Dashboard](img/serene-dash.png)
 
-> This page is taken as a sample from free AdminLTE (https://almsaeedstudio.com/themes/AdminLTE/index.html) theme.
+The page content, except for numbers calculated from Northwind tables, contains random data.
 
-The page content, except some numbers calculated from Northwind tables, contains random data.
+There is an accordion navigation menu on the left side which has a search feature by input above it. We'll talk about how to customize items there in later sections.
 
-There is an accordion navigation menu on left which has a search feature by input above it. We'll talk about how to customize items there in later sections.
+On the top navigation, there is a dropdown menu with a user icon with which we can change our password or log out in addition to a language button to change the active language.
 
-On top navigation, there is site name on left, along with a dropdown containing current user name on right, and a settings button through which we change change theme or active language.
+We'll talk about the following features of Serene:
 
-
-* [Theming](theming.md)
+* [Northwind Module](northwind.md)
+* [Basic Samples Module](basic-samples.md)
 * [Localization](localization.md)
+* [User and Role Management](user-management.md)

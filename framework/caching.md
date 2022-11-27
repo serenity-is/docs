@@ -263,7 +263,7 @@ public interface ITwoLevelCache
 
 ## TwoLevelCacheExtensions Class
 
-The static [TwoLevelCacheExtensions] class contains extension methods that operate on `ITwoLevelCache` instances and implement what we talked about so far, e.g. synchronization between them and cache invalidation.
+The static [TwoLevelCacheExtensions](../api/dotnet/Serenity.Net.Core/Serenity/TwoLevelCacheExtensions.md) class contains extension methods that operate on `ITwoLevelCache` instances and implement what we talked about so far, e.g. synchronization between them and cache invalidation.
 
 ### TwoLevelCacheExtenison.Get Method
 

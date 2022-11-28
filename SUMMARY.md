@@ -47,11 +47,10 @@
   * [Caching](framework/caching.md)
   * Data Access
     * [Entities \(Rows\)](framework/data-access/entities.md)
-      * [Mapping Attributes](framework/data-access/mapping.md)
-      * [FieldFlags Enumeration](framework/data-access/field-flags.md)
-    * [Fluent SQL](fluent_sql/fluent_sql.md)
-      * [SqlQuery Object](fluent_sql/sqlquery_object.md)
-      * [Criteria Objects](fluent_sql/criteria_objects.md)
+    * [Mapping](framework/data-access/mapping.md)
+    * [Field Flags](framework/data-access/field-flags.md)
+    * [Fluent SQL](framework/data-access/fluent-sql.md)
+    * [Criteria Objects](framework/data-access/criteria.md)
     * [Connections and Transactions](connections/connections_and_transactions.md)
     * SQL Database Types
     * [Working with Other Databases](work-with-other-database-types.md)

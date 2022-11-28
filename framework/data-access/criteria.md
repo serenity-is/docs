@@ -1,16 +1,16 @@
 # Criteria Objects
 
-When you are creating dynamic SQL for SELECT, UPDATE or DELETE, you might have to write complex WHERE statements.
+When you are creating dynamic SQL for SELECT, UPDATE, or DELETE, you might have to write complex where-statements.
 
-Building these statements using string concentanation is possible but it is tedious to avoid syntax errors and opens your code to SQL injection attacks.
+Building these statements using string concatenation is possible but it is tedious to avoid syntax errors and opens your code to SQL injection attacks.
 
 Using parameters might solve SQL injection problems but it involves too much manual work to add parameters.
 
-Luckily, Serenity has a criteria system that helps you build parameterized queries with a syntax similar LINQ expression trees. 
+Luckily, Serenity has a criteria system that helps you build parameterized queries with a syntax similar to the `LINQ` expression trees. 
 
-Serenity criterias are implemented by utilitizing operator overloading features of C#, unlike LINQ which uses expression trees.
+Serenity criteria are implemented by utilizing operator overloading features of C#, unlike LINQ which uses expression trees.
 
-Let's write a basic SQL where statement as string first:
+Let's write a basic SQL WHERE statement as a string first:
 
 ```cs
 new SqlQuery()
@@ -19,9 +19,9 @@ new SqlQuery()
     .Where("Month > 5 AND Year < 2015 AND Name LIKE N'%a%'")
 ```
 
-and same statement using criteria objects:
+and the same statement using criteria objects:
 
-```
+```cs
 new SqlQuery()
     .From("MyTable")
     .Select("Name")
@@ -44,9 +44,9 @@ WHERE
     Name LIKE N'%a%'
 ```
 
-and you could write it with intellisense if you had an entity:
+and you could write it with the intelli-sense support if you had an entity:
 
-```
+```cs
 var m = MyTableRow.Fields;
 new SqlQuery()
     .From(m)
@@ -57,7 +57,7 @@ new SqlQuery()
         m.Name.Contains("a")
 ```
 
-> Here we didn't have to use *new Criteria()* because field objects also has operator overloads that builds criteria.
+Here we didn't have to use *new Criteria()* because field objects also have the operator overloads that build criteria.
 
 ## BaseCriteria Object
 
@@ -66,28 +66,35 @@ BaseCriteria is the base class for all types of criteria objects.
 It has overloads for several C# operators, including `>`, `<`, `&`, `|` that can be used to build complex criteria using C# expressions.
 
 BaseCriteria doesn't have a constructor of itself
-so you need to create one of the objects that derive from it. *Criteria* is the most common one that you might use.
+so you need to create one of the objects that derive from it. The `Criteria` class is the most common one that you might use.
 
-## Criteria Object
+## Criteria Class
 
-Criteria is a simple object that contains an SQL expression as a string, which is usually a field name. 
+The `Criteria` is a simple object that contains an SQL expression as a string, which is usually a field name. 
 
-```
+```cs
 new Criteria("MyField")
 ```
 
 It can also contain an SQL expression (though not recommended this way)
 
-```
+```cs
 new Criteria("a + b")
 ```
 
-This parameter is not syntax checked, so it is possible to build a criteria with invalid expression:
+This parameter is not syntax checked, so it is possible to build a criterion with an invalid or dangerous expression:
 
-```
+```cs
 new Criteria("Some invalid expression()///''^')
 ```
 
+## IMPORTANT WARNING!
+
+Never pass a user-provided string to one of the Criteria constructors. It is VERY DANGEROUS as it would open your code to SQL-Injection attacks! This includes using the user-provided string in a string concatenation operation and passing it.
+
+The `user-provided string` here includes anything entered on a client-side form, in addition to any parameters that are sent to one of your API/actions/services via JSON, XML, query-string, form, request-body, etc.
+
+https://en.wikipedia.org/wiki/SQL_injection
 
 ## AND (&) Operator
 
@@ -98,13 +105,13 @@ new Criteria("Field1 > 5") &
 new Criteria("Field2 < 4")
 ````
 
-> Please notice that we are not using shortcircuit && operator here.
+It is also possible to use the short-circuit `&&` operator here.
 
-This creates a new criteria object (BinaryCriteria) with operator (AND) and reference to these two criterias. It doesn't modify original criteria objects.
+This creates a new criteria object (BinaryCriteria) with the operator (`AND`) and a reference to these two criteria. It doesn't modify the original criteria objects.
 
 > BinaryCriteria is similar to BinaryExpression in expression trees
 
-It's SQL output would be:
+Its SQL output would be:
 
 ```sql
 Field1 > 5 AND Field2 < 4
@@ -112,12 +119,12 @@ Field1 > 5 AND Field2 < 4
 
 It is also possible to use C# &= operator:
 
-```
+```cs
 BaseCriteria c = new Criteria("Field1 > 5)";
 c &= new Criteria("Field2 < 4")
 ```
 
-> BaseCriteria is the base class for all criteria object types. If we used *Criteria c = ...* in the first line, we would have a compile time error on second line as & operator returns a BinaryCriteria object, which is not assignable to a Criteria object.
+BaseCriteria is the base class for all criteria object types. If we used *Criteria c = ...* in the first line, we would have a compile-time error on the second line as the `&` operator returns a BinaryCriteria object, which is not assignable to a Criteria object.
 
 ## OR (|) Operator
 
@@ -132,64 +139,11 @@ new Criteria("Field2 < 4")
 Field1 > 5 OR Field2 < 4
 ```
 
-## Parenthesis Operator (~)
-
-When you are using several AND/OR statements, you might want to put paranthesis.
-
-```
-new Criteria("Field1 > 5") &
-(new Criteria("Field2 > 7") | new Criteria("Field2 < 3"))
-```
-
-But this won't work with criteria objects, as output of above criteria would be:
-
-```sql
-Field1 > 5 AND Field2 > 7 OR Field2 < 3
-```
-
-> Information here applies to Serenity versions before 1.9.8. After this version Serenity puts paranthesis around all binary criteria (AND OR etc) even if you don't use paranthesis.
-
-> So only use ~ if you want to put an explicit parenthesis somewhere.
-
-
-What happened to our paranthesis? Let's try putting more paranthesis.
-
-```
-new Criteria("Field1 > 5") &
-((((new Criteria("Field2 > 7") | new Criteria("Field2 < 3")))))
-```
-
-Still:
-
-```sql
-Field1 > 5 AND Field2 > 7 OR Field2 < 3
-```
-
-C# doesn't provide a way to overload paranthesis, it just uses them to determine calculation order, so Serenity criteria has no idea if you used them with paranthesis or not.
-
-We have to use a special operator, `~` (which is actually two's complement in C#):
-
-```
-new Criteria("Field1 > 5") &
-~(new Criteria("Field2 > 7") | new Criteria("Field2 < 3"))
-```
-
-Now SQL looks like we hoped before:
-
-```sql
-Field1 > 5 AND (Field2 > 7 OR Field2 < 3)
-```
-
-> As Serenity 1.9.8+ auto paranthesis binary criteria, above expression would actually be:
->```sql
->(Field1 > 5) AND (((Field2 > 7) OR (Field2 < 3)))
->```
-
 ## Comparison Operators (>, >=, <, <=, ==, !=)
 
 The most of C# comparison operators are overloaded, so you can use them as is with criteria.
 
-```
+```cs
 new Criteria("Field1") == new Criteria("1") &
 new Criteria("Field2") != new Criteria("2") &
 new Criteria("Field3") > new Criteria("3") &
@@ -209,9 +163,9 @@ Field6 <= 6
 
 ## Inline Values
 
-When one side of a comparison operator is a criteria and other side is an integer, string, date, guid etc. value, it is converted a parameter criteria.
+When one side of a comparison operator is criteria and the other side is an integer, string, date, guid, etc. value, it is converted to a parameter criteria.
  
-```
+```cs
 new Criteria("Field1") == 1 &
 new Criteria("Field2") != "ABC" &
 new Criteria("Field3") > DateTime.Now &
@@ -227,11 +181,11 @@ Field4 >= @p4 AND
 Field5 < @p5
 ```
 
-These parameters has corresponding values, when a query containing this criteria is sent to SQL.
+These parameters have corresponding values when a query containing the criteria is sent to SQL.
 
-Automatic parameter numbering starts from 1 by default, but last number is stored in the query the criteria is used with, so numbers might change.
+Automatic parameter numbering starts from 1 by default, but the last number is stored in the query the criteria is used with, so numbers might change.
 
-Let's use this criteria in a query:
+Let's use the criteria in a query:
 
 ```
 new SqlQuery()
@@ -263,9 +217,9 @@ WHERE
   Field5 < @p7 -- @p7 = 5
 ```
 
-Here the same criteria that listed before, used parameter numbers starting from 3, instead of 1. Because prior 2 numbers where used for other WHERE statements coming before it.
+Here the same criteria that is listed before, used parameter numbers starting from 3, instead of 1. Because the prior 2 numbers were used for the other `WHERE` statements coming before it.
 
-So parameter numbering uses the query as context. You shouldn't make assumptions about what parameter name will be.
+So parameter numbering uses the query as context. You shouldn't make assumptions about what the parameter name will be.
 
 ## ParamCriteria and Explicit Param Names
 
@@ -280,7 +234,7 @@ new SqlQuery()
     .SetParam("@myparam", 5);
 ```
 
-Here we set param value using SetParam extension of SqlQuery.
+Here we set the param value using the `SetParam` extension of SqlQuery.
 
 We could also declare this param beforehand and reuse it:
 
@@ -297,7 +251,7 @@ new SqlQuery()
 
 ## ConstantCriteria
 
-If you don't want to use parameterized queries, you may put your values as ConstantCriteria objects. They will not be converted to auto parameters.
+If you don't want to use parameterized queries for some reason, you may put your values as ConstantCriteria objects. They will not be converted to auto parameters.
 
 ```
 new SqlQuery()
@@ -323,18 +277,18 @@ WHERE
 
 In SQL, comparing against NULL values using operators like `==`, `!=` returns NULL. You should use IS NULL or IS NOT NULL for such comparisons.
 
-Criteria objects don't overload comparisons against null (or object), so you may get errors if you try to write expressions like below:
+Criteria objects don't overload comparisons against null (or object), so you may get errors if you try to write expressions like the below:
 
-```
+```cs
 new Criteria("a") == null; // what is type of null?
 
 int b? = null;
 new Criteria("c") == b; // no overload for nullable types
 ```
 
-These could be written using IsNull and Nullable.Value methods:
+These could be written using `IsNull` and the `Nullable Value` methods:
 
-```
+```cs
 new Criteria("a").IsNull();
 new Criteria("a").IsNotNull();
 int? b = 5;
@@ -343,13 +297,13 @@ new Criteria("c") == b.Value;
 
 If you are desperate to write Field = NULL, you could do this:
 
-```
+```cs
 new Criteria("Field") == new Criteria("NULL")
 ```
 
 ## LIKE Operators
 
-Criteria has methods *Like, NotLike, StartsWith, EndsWith, Contains, NotContains* to help with LIKE operations.
+The `Criteria` object has methods `Like`, `NotLike`, `StartsWith`, `EndsWith`, `Contains`, and `NotContains` to help with `LIKE` operations.
 
 ```cs
 new Criteria("a").Like("__C%") &
@@ -373,7 +327,7 @@ f NOT LIKE @p6 -- @p6 = N'%That%'
 
 Use an inline array to use IN or NOT IN:
 
-```
+```cs
 new Criteria("A").In(1, 2, 3, 4, 5)
 ```
 
@@ -382,7 +336,7 @@ A IN (@p1, @p2, @p3, @p4, @p5)
 -- @p1 = 1, @p2 = 2, @p3 = 3, @p4 = 4, @p5 = 5
 ```
 
-```
+```cs
 new Criteria("A").NotIn(1, 2, 3, 4, 5)
 ```
 
@@ -435,7 +389,7 @@ WHERE
 
 ## NOT Operator
 
-Use C# ! (not) operator to use NOT:
+Use C# `!` (not) operator to use NOT:
 
 ```cs
 !(new Criteria("a") >= 5)
@@ -447,32 +401,31 @@ NOT (a >= @p1) -- @p1 = 5
 
 ## Usage with Field Objects
 
-We have used Criteria object constructor so far to build criteria. Field objects also has similar overloads, so they can be used in place of them.
+We have used the Criteria object constructor so far to build criteria. Field objects also have similar overloads, so they can be used in place of them and it is recommended.
 
-For example, using Order, Detail and Customer rows from Northwind sample:
+For example, using Order, Detail, and Customer rows from the Northwind sample:
 
-```
-	var o = OrderRow.Fields.As("o");
-	var od = OrderDetailRow.Fields.As("od");
-	var c = CustomerRow.Fields.As("c");
-	var query = new SqlQuery()
-		.From(o)
-		.Select(o.CustomerID);
-		
-	query.Where(
-		o.CustomerCountry == "France" &
-		o.ShippingState == 1 &
-		o.CustomerID.In(
-			query.SubQuery()
-				.From(c)
-				.Select(c.CustomerID)
-				.Where(c.Region == "North")) &
-		new Criteria(
-			query.SubQuery()
-				.From(od)
-				.Select(Sql.Sum(od.LineTotal.Expression))
-				.Where(od.OrderID == o.OrderID)) >= 1000);
-				
+```cs
+var o = OrderRow.Fields.As("o");
+var od = OrderDetailRow.Fields.As("od");
+var c = CustomerRow.Fields.As("c");
+var query = new SqlQuery()
+    .From(o)
+    .Select(o.CustomerID);
+    
+query.Where(
+    o.CustomerCountry == "France" &
+    o.ShippingState == 1 &
+    o.CustomerID.In(
+        query.SubQuery()
+            .From(c)
+            .Select(c.CustomerID)
+            .Where(c.Region == "North")) &
+    new Criteria(
+        query.SubQuery()
+            .From(od)
+            .Select(Sql.Sum(od.LineTotal.Expression))
+            .Where(od.OrderID == o.OrderID)) >= 1000);
 ```
 
 Its output would be:

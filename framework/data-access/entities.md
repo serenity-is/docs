@@ -190,5 +190,3 @@ partial class SimpleRow : Row<SimpleRow.RowFields>
     }
 }
 ```
-
-We'll talk more about `Serenity.Pro.Coder` and its source generators in the following sections.

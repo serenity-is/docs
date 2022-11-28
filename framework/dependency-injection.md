@@ -27,7 +27,7 @@ services.AddUploadStorage();
 
 All these extensions use try `TryAddSingleton` variant of registration calls, so if you register another provider for a particular service before calling them, they won't override your registration:
 
-```
+```cs
 // here we register the MyCustomScriptBundleManager as the custom
 // implementation of the IScriptBundleManager service
 collection.AddSingleton<IScriptBundleManager, MyCustomScriptBundleManager>();

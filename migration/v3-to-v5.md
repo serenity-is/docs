@@ -2366,17 +2366,17 @@ namespace StartSharp.Administration
 
 * Apply the following file changes in StartSharp:
 
-* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs
+* https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/Authentication/UserRetrieveService.cs
 
-* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs
+* https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs
 
-* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ChangePassword/AccountPage.ChangePassword.cs
+* https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ChangePassword/AccountPage.ChangePassword.cs
 
-* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ForgotPassword/AccountPage.ForgotPassword.cs
+* https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ForgotPassword/AccountPage.ForgotPassword.cs
 
-* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ResetPassword/AccountPage.ResetPassword.cs
+* https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/ResetPassword/AccountPage.ResetPassword.cs
 
-* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/SignUp/AccountPage.SignUp.cs
+* https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/SignUp/AccountPage.SignUp.cs
 
 * or following file changes in Serene:
 
@@ -2658,8 +2658,8 @@ UserRepository.IsPublicDemo
 
 If you have StartSharp data audit log feature, delete `DataAuditLogHandler.cs` and get latest versions of following files from StartSharp repository:
 
-* [DataAuditLogBehavior.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogBehavior.cs)
-* [DataAuditLogPage.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogPage.cs)
+* [DataAuditLogBehavior.cs](https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogBehavior.cs)
+* [DataAuditLogPage.cs](https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogPage.cs)
 
 ## Fixing Row Lookup Scripts
 
@@ -2815,7 +2815,7 @@ public HashSet<string> GetAllAvailableLocalTextKeys()
 
 Apply the following file changes in StartSharp:
 
-* [UserRetrieveService.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogPage.cs)
+* [UserRetrieveService.cs](https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/DataAuditLog/DataAuditLogPage.cs)
 
 
 * or following file changes in Serene:
@@ -2838,7 +2838,7 @@ if (request != null && Permissions.HasPermission("ImpersonateAs"))
 
 Apply the following file changes in StartSharp:
 
-* [UserRepository.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserRepository.cs)
+* [UserRepository.cs](https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserRepository.cs)
 
  or following file changes in Serene:
 * [UserRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/User/UserRepository.cs)
@@ -2892,7 +2892,7 @@ public IDictionary<string, HashSet<string>> ListImplicitPermissions(
 
 Apply the following file changes in StartSharp:
 
-* [UserPermissionRepository.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
+* [UserPermissionRepository.cs](https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
 
  or following file changes in Serene:
 * [UserPermissionRepository.cs](https://github.com/serenity-is/Serene/blob/master/Serene/Serene.Core/Modules/Administration/UserPermission/UserPermissionRepository.cs)
@@ -3025,7 +3025,7 @@ private static readonly Dictionary<string, string> SqlTypeToFieldTypeMap =
 ## Modify AccountPage.cs
 
 Apply the following file changes in StartSharp:
-* [AccountPage.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs)
+* [AccountPage.cs](https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Membership/Account/AccountPage.cs)
 
 or following file changes in Serene:
 
@@ -4090,7 +4090,7 @@ if (!string.IsNullOrWhiteSpace(item.DisplayFormat))
 ## Modify UserDataScript.cs
 
 If you have a project created from a recent StartSharp template than make some changes in the following:
-* https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserDataScript.cs
+* https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Administration/User/UserDataScript.cs
 
 ## Fix FilePage.cs
 
@@ -4485,4 +4485,4 @@ To
 public static AttachmentList GetAttachmentList(MimeMessage message, string folderName, uint uniqueId, bool forReply, PathString pathBase)
 ```
 
-There is some more changes you can find in [EmailEndpoint.cs](https://github.com/volkanceylan/StartSharp/blob/net5/StartSharp/StartSharp.Core/Modules/Common/EmailClient/EmailEndpoint.cs) File in StartSharp template
+There is some more changes you can find in [EmailEndpoint.cs](https://github.com/serenity-premium/startsharp/blob/net5/StartSharp/StartSharp.Core/Modules/Common/EmailClient/EmailEndpoint.cs) File in StartSharp template

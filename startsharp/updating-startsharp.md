@@ -89,7 +89,7 @@ We distribute a **pro-packages.zip** file in StartSharp GitHub repository Releas
 
 > It's next to StartSharp.Template.vsix file.
 
-[https://github.com/volkanceylan/StartSharp/releases](https://github.com/volkanceylan/StartSharp/releases)
+[https://github.com/serenity-premium/startsharp/releases](https://github.com/serenity-premium/startsharp/releases)
 
 > You may also extract it from the VSIX file, just download latest *StartSharp.Template.vsix*, rename it to *StartSharp.Template.vsix.zip* using file explorer, double click to open, copy the *pro-packages.zip* from *Assets* folder inside VSIX, and paste it to your solution folder.
 
@@ -274,7 +274,7 @@ We distribute a **pro-packages.zip** file in StartSharp GitHub repository Releas
 
 > It's next to StartSharp.Template.vsix file.
 
-[https://github.com/volkanceylan/StartSharp/releases](https://github.com/volkanceylan/StartSharp/releases)
+[https://github.com/serenity-premium/startsharp/releases](https://github.com/serenity-premium/startsharp/releases)
 
 > You may also extract it from the VSIX file, just download latest *StartSharp.Template.vsix*, rename it to *StartSharp.Template.vsix.zip* using file explorer, double click to open, copy the *pro-packages.zip* from *Assets* folder inside VSIX, and paste it to your solution folder.
 
@@ -510,11 +510,11 @@ Also please take changes from site.premium.less, minimum between these two lines
 
 You may get these lines by creating a new StartSharp project, or using the following link:
 
-https://github.com/volkanceylan/StartSharp/blob/master/StartSharp/StartSharp.Web/Content/site/site.premium.less
+https://github.com/serenity-premium/startsharp/blob/master/StartSharp/StartSharp.Web/Content/site/site.premium.less
 
 There are some minor changes in skins.azure.less file so it is a good idea to update that too:
 
-https://github.com/volkanceylan/StartSharp/blob/master/StartSharp/StartSharp.Web/Content/skins/azure.less
+https://github.com/serenity-premium/startsharp/blob/master/StartSharp/StartSharp.Web/Content/skins/azure.less
 
 ### StartSharp v3.9.0.0
 

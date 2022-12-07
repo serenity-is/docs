@@ -6,7 +6,7 @@ It includes everything that Serene has, in addition to extra samples, features, 
 
 ## Premium Packages
 
-Our premium packages that include *StartSharp* template are available at [http://serenity.is](http://serenity.is). 
+Our premium packages that include *StartSharp* template are available at [https://serenity.is](https://serenity.is). 
 
 Currently, four levels are offered: _Basic_, _Personal_, _Professional_ and _Enterprise_.
 

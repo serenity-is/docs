@@ -2642,7 +2642,7 @@ Sergen will soon have its own web based UI, and the sample in the StartSharp/Ser
 
 ## Replacing isPublicDemo References
 
-This is only used for Serenity Demo at http://serenity.is, you may delete any line that looks like following:
+This is only used for Serenity Demo at https://serenity.is, you may delete any line that looks like following:
 
 ```cs
 UserRepository.isPublicDemo

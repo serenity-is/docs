@@ -10,7 +10,7 @@ Once a language is chosen, all texts are displayed in the selected language.
 
 The Serenity platform is designed with localization in mind from the start.
 
-You may see this yourself by setting your browser language or changing the language under the language dropdown of the Serenity demo (https://serenity.is/demo).
+You may see this yourself by setting your browser language or changing the language under the language dropdown of the Serenity demo (https://demo.serenity.is).
 
 If you change to Turkish for example; and refresh your browser, you would see the demo in Turkish:
 

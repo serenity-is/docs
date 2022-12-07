@@ -23,7 +23,7 @@ Update-Package Serenity.Web.Tooling
 
 ## Step 3 - Download StartSharp and Install
 
-Download latest StartSharp.vsix from GitHub StartSharp repository (https://github.com/serenity-premium/startsharp) or Serenity members dashboard (http://serenity.is/Dashboard) and install.
+Download latest StartSharp.vsix from GitHub StartSharp repository (https://github.com/serenity-premium/startsharp) or Serenity members dashboard (https://serenity.is/Dashboard) and install.
 
 ## Step 4 - Create a new StartSharp Project with the Same Name
 

@@ -9,7 +9,7 @@ StartSharp contains 6 premium themes:
 * Glassy
 * Glassy Light
 
-You might have a look at our new themes in our demo at http://serenity.is/demo
+You might have a look at our new themes in our demo at https://demo.serenity.is
 
 Here are some screenshots
 

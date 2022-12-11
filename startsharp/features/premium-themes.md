@@ -1,40 +1,50 @@
 ﻿# Premium Themes
 
-StartSharp contains 6 premium themes:
+StartSharp contains 3 premium themes:
 
-* Azure
-* Azure Light
-* Cosmos
-* Cosmos Light
-* Glassy
-* Glassy Light
+* Azure (Light)
+* Cosmos (Dark)
+* Glassy (Light)
 
-You might have a look at our new themes in our demo at https://demo.serenity.is
+You might have a look at our premium themes in our demo at https://demo.serenity.is
 
 Here are some screenshots
 
 ## Azure Light (default theme for StartSharp)
 
-![Azure Light](img/azure-light.png)
+![Azure Light Dashboard](img/bs5-azure-light-dashboard.png)
 
-![Azure Light Panel](img/azure-light-panel.png)
+![Azure Light Grid](img/bs5-azure-light-grid.png)
 
-## Azure (dark sidebar)
+![Azure Light Form](img/bs5-azure-light-form.png)
 
-![Azure Dark](img/azure-dark.png)
+## Cosmos Dark
 
-## Cosmos
+![Cosmos Dark Dashboard](img/bs5-cosmos-dark-dashboard.png)
 
-![Cosmos](img/cosmos-dark.png)
+![Cosmos Dark Grid](img/bs5-cosmos-dark-grid.png)
 
-## Cosmos Light
+![Cosmos Dark Form](img/bs5-cosmos-dark-form.png)
 
-![Cosmos Light](img/cosmos-light.png)
+## Glassy Light (translucent theme)
 
-## Glassy (translucent theme with background)
+![Glassy Light Dashboard](img/bs5-glassy-light-dashboard.png)
+![Glassy Light Grid](img/bs5-glassy-light-grid.png)
+![Glassy Light Form](img/bs5-glassy-light-form.png)
 
-![Glassy](img/glassy-dark.png)
+## Creating A New Theme
 
-## Glassy Light
+All themes are based on Bootstrap, and creating a new custom theme or modifying an existing one is possible by just defining or overriding a few CSS variables:
 
-![Glassy Light](img/glassy-light.png)
+```cs
+:root.theme-mycustomred { 
+    --s-card-title: #aa2519;
+    --s-category-title: #c18e85;
+    --s-sidebar-band-bg: #63032f;
+    --s-sidebar-band-link: #ffc3b0;
+    --s-sidebar-link-active: #d30a0a;
+    //...other variables copied from azure light theme
+}
+```
+
+![Custom Red Theme](img/bs5-custom-red-theme.png)

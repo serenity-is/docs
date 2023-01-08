@@ -271,16 +271,6 @@ typeof(Serenity.Pro.EmailClient.MailboxController).Assembly,
 //</if:EmailClient>
 ```
 
-Delete the following lines from `AdministrationNavigation.cs` file:
-
-```cs
-//<if:DataExplorer>
-[assembly: NavigationLink(9200, "Administration/Data Explorer", 
-    typeof(Serenity.Pro.DataExplorer.DataExplorerController), 
-    icon: "fa-database premium-feature")]
-//</if:DataExplorer>
-```
-
 Remove the following package reference from the project file:
 
 ```xml

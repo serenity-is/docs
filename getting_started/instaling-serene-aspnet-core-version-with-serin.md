@@ -73,6 +73,9 @@ While inside an empty directory, run *serin*:
 > serin
 ```
 
+> If you are trying to create a StartSharp project, or directly from an existing Serene VSIX file downloaded from the marketplace, you may type the full path to the VSIX file:
+> `serin /path/to/StartSharp.Template.vsix
+
 ![Windows Serin MyApp](img/linux-serin-myserene.png)
 
 Type an application name, e.g. `MySerene`, and press `ENTER`. Take a break while Serin creates 

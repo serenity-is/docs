@@ -50,7 +50,9 @@ And when there is an actual bug, we try to solve it shortest time possible. Agai
 
 ## How old is Serenity, will it be alive in X years?
 
-Serenity as an open source project is about 5 years old, but it has a 10+ year background and underwent lots of changes/technologies.
+Serenity as an open source project since 2013 at GitHub, but as you may see from its [first commit](https://github.com/serenity-is/Serenity/commit/354be3d3e39f9cbbbb7e6d798a53012692d40e20) which is too big for an initial one, it even has a much older background and underwent lots of changes/technologies.
+
+> There not many open source projects that are still alive since those times.
 
 You may have a look at our change log (we didn't keep a change log before October 2014):
 
@@ -66,7 +68,7 @@ Anyway, as Serenity is an open-source project and all premium customers have acc
 
 ## Does Serenity have a reporting tool?
 
-Yes, Serenity relies on WKHTMLTOPDF for reporting, which converts HTML to PDF using the WebKit engine. It is the natural choice for a web application. It is also possible to use Chrome/Puppeteer.
+Yes, Serenity relies on WKHTMLTOPDF (and Chrome/Puppeteer) for reporting, which converts HTML to PDF using the WebKit engine. It is the natural choice for a web application. It is also possible to use Chrome/Puppeteer.
 
 You can use HTML/CSS and any kind of javascript component to render charts, tables, barcodes, QR, and other kinds of content in reports.
 

@@ -130,7 +130,7 @@
 
 * Knowledge Base
   * How To Guides
-    * [Removing Sample Modules like Northwind](howto/removing_sample_modules.md)
+    * [Removing Sample Modules like Northwind](howto/how_to_remove_sample_modules.md)
     * [Authenticate With Active Directory or LDAP](howto/how_to_authenticate_with_active_directory_or_ldap.md)
     * [Enable Script Bundling](howto/how_to_enable_script_bundling.md)
     * [Debugging with Serenity Sources](howto/how_to_debugging_with_serenity_sources.md)

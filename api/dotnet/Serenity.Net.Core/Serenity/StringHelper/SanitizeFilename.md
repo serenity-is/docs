@@ -1,15 +1,18 @@
 # StringHelper.SanitizeFilename method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Sanitizes the filename by replacing /, :, &amp;, ı characters.
+Sanitizes the filename by removing diacritics, ı with i and replacing any invalid filename characters with underscore.
 
 ```csharp
-public static string SanitizeFilename(string s)
+public static string SanitizeFilename(string filename, string replacement = "_", 
+    bool removeDiacritics = true)
 ```
 
 | parameter | description |
 | --- | --- |
-| s | The string. |
+| filename | The string. |
+| replacement | Replacement string for invalid characters |
+| removeDiacritics | True to remove diacritics |
 
 ## Exceptions
 

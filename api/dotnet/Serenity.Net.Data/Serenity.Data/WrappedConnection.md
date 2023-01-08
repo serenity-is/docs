@@ -5,7 +5,7 @@ Wraps a connection to add current transaction and dialect support.
 
 ```csharp
 public class WrappedConnection : IDbConnection, IHasActualConnection, IHasCommandTimeout, 
-    IHasCurrentTransaction, IHasDialect, IHasLogger, IHasOpenedOnce
+    IHasConnectionStateChange, IHasCurrentTransaction, IHasDialect, IHasLogger, IHasOpenedOnce
 ```
 
 ## Public Members
@@ -23,6 +23,7 @@ public class WrappedConnection : IDbConnection, IHasActualConnection, IHasComman
 | [Logger](WrappedConnection/Logger.md) { get; } | Gets the logger instance for this connection if any |
 | [OpenedOnce](WrappedConnection/OpenedOnce.md) { get; } | Gets a value indicating whether the connection was opened once. |
 | [State](WrappedConnection/State.md) { get; } | Gets the current state of the connection. |
+| event [StateChange](WrappedConnection/StateChange.md) | Implements state change event by proxying it to the actual connection |
 | [BeginTransaction](WrappedConnection/BeginTransaction.md)() | Begins a database transaction. |
 | [BeginTransaction](WrappedConnection/BeginTransaction.md)(…) | Begins a database transaction with the specified IsolationLevel value. |
 | [ChangeDatabase](WrappedConnection/ChangeDatabase.md)(…) | Changes the current database for an open Connection object. |
@@ -35,6 +36,7 @@ public class WrappedConnection : IDbConnection, IHasActualConnection, IHasComman
 
 * interface [IHasActualConnection](IHasActualConnection.md)
 * interface [IHasCommandTimeout](IHasCommandTimeout.md)
+* interface [IHasConnectionStateChange](IHasConnectionStateChange.md)
 * interface [IHasCurrentTransaction](IHasCurrentTransaction.md)
 * interface [IHasDialect](IHasDialect.md)
 * interface [IHasLogger](IHasLogger.md)

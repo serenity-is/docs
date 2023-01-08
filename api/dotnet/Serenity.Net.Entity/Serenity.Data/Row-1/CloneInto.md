@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
 ```csharp
-public void CloneInto(Row clone, bool cloneHandlers)
+protected virtual void CloneInto(Row clone, bool cloneHandlers)
 ```
 
 ## See Also

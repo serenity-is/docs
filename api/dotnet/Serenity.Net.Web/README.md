@@ -64,7 +64,7 @@
 | class  | [ResultWithStatus&lt;TResponse&gt;](Serenity.Services/ResultWithStatus-1.md) | An action result type containing a object with status code |
 | class  | [ServiceAuthorizeAttribute](Serenity.Services/ServiceAuthorizeAttribute.md) | Authorizes access to a service action. Optionally checks the permission provided as the first argument. Use special permission key "?" to check for logged-in users, and "*" to allow anyone including anonymous access. This returns a service error instead of raising an exception like PageAuthorize attribute. |
 | abstract class  | [ServiceEndpoint](Serenity.Services/ServiceEndpoint.md) | Subclass of controller for service endpoints |
-| class  | [ServiceEndpointActionModelConvention](Serenity.Services/ServiceEndpointActionModelConvention.md) | Action model convention for service endpoints |
+| class  | [ServiceEndpointActionModelConvention](Serenity.Services/ServiceEndpointActionModelConvention.md) | Action model convention for [`ServiceEndpoint`](Serenity.Services/ServiceEndpoint.md) actions |
 | class  | [ServiceEndpointModelBinderProvider](Serenity.Services/ServiceEndpointModelBinderProvider.md) | Provides model binding for service endpoints |
 | class  | [ServiceEndpointNullModelBinder](Serenity.Services/ServiceEndpointNullModelBinder.md) | Null model binder for interface arguments |
 
@@ -72,6 +72,7 @@
 
 | signature | name | description |
 | --: | --- | --- |
+| class  | [AutoValidateAntiforgeryIgnoreBearerAttribute](Serenity.Web/AutoValidateAntiforgeryIgnoreBearerAttribute.md) | An attribute that causes validation of antiforgery tokens for all unsafe HTTP methods. An antiforgery token is required for HTTP methods other than GET, HEAD, OPTIONS, and TRACE, and when there is no cookie header and authorization is Bearer, e.g. JWT etc. |
 | class  | [ColumnsScript](Serenity.Web/ColumnsScript.md) | Dynamic script type for columns (ColumnsScriptAttribute) |
 | class  | [ColumnsScriptRegistration](Serenity.Web/ColumnsScriptRegistration.md) | Contains registration methods for [`ColumnsScript`](Serenity.Web/ColumnsScript.md) types |
 | class  | [ConcatenatedScript](Serenity.Web/ConcatenatedScript.md) | A dynamic script that is formed from concentanation of other scripts |
@@ -137,3 +138,9 @@
 | signature | name | description |
 | --: | --- | --- |
 | static class  | [SiteMembershipProvider](Serenity.Web.Providers/SiteMembershipProvider.md) | Used to be a membership provider but now only contains a SHA512 helper |
+
+## SerenityIs.Administration namespace
+
+| signature | name | description |
+| --: | --- | --- |
+| class  | [LocalTextDataScript](SerenityIs.Administration/LocalTextDataScript.md) | Local text data script to access local texts from an external app like mobile |

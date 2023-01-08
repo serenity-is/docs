@@ -17,4 +17,4 @@ public class ServiceEndpointNullModelBinder : IModelBinder
 
 ## See Also
 
-* **Source:** *[ServiceEndpointModelBinder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ServiceEndpointModelBinder.cs)*
+* **Source:** *[ServiceEndpointNullModelBinder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ServiceEndpointNullModelBinder.cs)*

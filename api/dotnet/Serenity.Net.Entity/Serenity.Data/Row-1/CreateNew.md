@@ -4,7 +4,7 @@
 Creates the new.
 
 ```csharp
-public virtual Row CreateNew()
+protected virtual Row CreateNew()
 ```
 
 ## Exceptions

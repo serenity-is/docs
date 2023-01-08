@@ -5,7 +5,7 @@ Creates a new instance of the class.
 
 ```csharp
 public FileUploadBehavior(IUploadValidator uploadValidator, IImageProcessor imageProcessor, 
-    IUploadStorage storage)
+    IUploadStorage storage, IFilenameFormatSanitizer formatSanitizer = null)
 ```
 
 | parameter | description |
@@ -13,6 +13,7 @@ public FileUploadBehavior(IUploadValidator uploadValidator, IImageProcessor imag
 | uploadValidator | Upload validator |
 | imageProcessor | Image processor |
 | storage | Upload storage |
+| formatSanitizer | Filename format sanitizer |
 
 ## Exceptions
 
@@ -25,4 +26,5 @@ public FileUploadBehavior(IUploadValidator uploadValidator, IImageProcessor imag
 * interface [IUploadValidator](../Serenity.Net.Services/../../Serenity.Web/IUploadValidator.md)
 * interface [IImageProcessor](../Serenity.Net.Services/../../global/IImageProcessor.md)
 * interface [IUploadStorage](../Serenity.Net.Services/../../Serenity.Web/IUploadStorage.md)
+* interface [IFilenameFormatSanitizer](../Serenity.Net.Core/../../Serenity.ComponentModel/IFilenameFormatSanitizer.md)
 * class [FileUploadBehavior](../FileUploadBehavior.md)

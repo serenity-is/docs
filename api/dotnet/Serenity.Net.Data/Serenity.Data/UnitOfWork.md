@@ -11,12 +11,13 @@ public class UnitOfWork : IDisposable, IUnitOfWork
 
 | name | description |
 | --- | --- |
-| [UnitOfWork](UnitOfWork/UnitOfWork.md)(…) | Initializes a new instance of the [`UnitOfWork`](UnitOfWork.md) class. |
+| [UnitOfWork](UnitOfWork/UnitOfWork.md)(…) | Initializes a new instance of the [`UnitOfWork`](UnitOfWork.md) class. (3 constructors) |
 | [Connection](UnitOfWork/Connection.md) { get; } | Gets the connection. |
+| [Initialized](UnitOfWork/Initialized.md) { get; } | Returns true if the transaction is tried to be started at least once. This always returns true if deferStart is not true. |
 | event [OnCommit](UnitOfWork/OnCommit.md) | Occurs when transaction is committed. |
 | event [OnRollback](UnitOfWork/OnRollback.md) | Occurs when transaction is rolled back. |
 | [Commit](UnitOfWork/Commit.md)() | Commits this transaction. |
-| [Dispose](UnitOfWork/Dispose.md)() | Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. Rollbacks the transaction if any. |
+| [Dispose](UnitOfWork/Dispose.md)() | Rollbacks the transaction if any and calls onRollback event. |
 
 ## See Also
 

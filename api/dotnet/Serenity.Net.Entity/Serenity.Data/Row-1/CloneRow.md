@@ -4,7 +4,7 @@
 Clones the row.
 
 ```csharp
-public virtual Row CloneRow()
+protected virtual Row CloneRow()
 ```
 
 ## See Also

@@ -4,7 +4,7 @@
 Converts the field value to universal time
 
 ```csharp
-public static void EnsureUniversalTime(this IRow row, DateTimeField field)
+public static void EnsureUniversalTime(IRow row, DateTimeField field)
 ```
 
 | parameter | description |

@@ -30,6 +30,7 @@
 | class  | [GuidField](Serenity.Data/GuidField.md) | Field with a Guid value |
 | interface  | [IDeleteLogRow](Serenity.Data/IDeleteLogRow.md) | Interface for rows that have DeleteUserId and DeleteDate fields. |
 | interface  | [IDisplayOrderRow](Serenity.Data/IDisplayOrderRow.md) | Basic interface for rows that has a display order field and provides a default sorting order. |
+| interface  | [IEditableRow](Serenity.Data/IEditableRow.md) | Methods and properties of a row to support desktop app grid etc. editing |
 | interface  | [IEntity](Serenity.Data/IEntity.md) | An interface for entities with Table property |
 | interface  | [IEntityWithJoins](Serenity.Data/IEntityWithJoins.md) | Interface for an entity with join information |
 | interface  | [IEnumTypeField](Serenity.Data/IEnumTypeField.md) | Interface for fields with an enum type property |

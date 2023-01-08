@@ -4,7 +4,7 @@
 Validates date range is valid, e.g. start date is before end date etc.
 
 ```csharp
-public static void ValidateDateRange(this IRow row, DateTimeField start, DateTimeField finish, 
+public static void ValidateDateRange(IRow row, DateTimeField start, DateTimeField finish, 
     ITextLocalizer localizer)
 ```
 

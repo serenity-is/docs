@@ -13,8 +13,8 @@ public interface IRow : IEntityWithJoins
 | --- | --- |
 | [Fields](IRow/Fields.md) { get; } | Gets the fields. |
 | [IdField](IRow/IdField.md) { get; } | Gets the identifier field. |
+| [IgnoreConstraints](IRow/IgnoreConstraints.md) { get; set; } | Gets or sets a value indicating whether [ignore constraints]. |
 | [IsAnyFieldAssigned](IRow/IsAnyFieldAssigned.md) { get; } | Gets a value indicating whether this row instance has any field assigned. |
-| [IsAnyFieldChanged](IRow/IsAnyFieldChanged.md) { get; } | Gets a value indicating whether this instance is any field changed. |
 | [Item](IRow/Item.md) { get; set; } | Gets or sets a field value with specified name |
 | [NameField](IRow/NameField.md) { get; } | Gets the name field. |
 | [TrackAssignments](IRow/TrackAssignments.md) { get; set; } | Gets or sets a value indicating whether to track assignments to field values. |

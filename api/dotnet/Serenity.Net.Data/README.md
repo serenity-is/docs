@@ -4,11 +4,11 @@
 
 | signature | name | description |
 | --: | --- | --- |
+| static class  | [ChainableExtensions](Serenity/ChainableExtensions.md) | Contains method chaining extensions for objects like SQL queries that implement [`IChainable`](Serenity/IChainable.md) |
 | interface  | [IChainable](Serenity/IChainable.md) | Interface for chainable objects, e.g. with functions returning themselves. |
 | interface  | [ICriteria](Serenity/ICriteria.md) | Shared criteria interface |
 | interface  | [ICustomValidator](Serenity/ICustomValidator.md) | Custom validator abstraction |
 | interface  | [IValidationContext](Serenity/IValidationContext.md) | Validation context abstraction |
-| static class  | [MethodChainingExtensions](Serenity/MethodChainingExtensions.md) | Contains method chaining extensions |
 
 ## Serenity.Data namespace
 
@@ -56,6 +56,7 @@
 | interface  | [IHasActualConnection](Serenity.Data/IHasActualConnection.md) | Interfaces for types that has an ActualConnection property of type IDbConnection |
 | interface  | [IHasActualTransaction](Serenity.Data/IHasActualTransaction.md) | Interfaces for types that has an ActualTransaction property of type IDbTransaction |
 | interface  | [IHasCommandTimeout](Serenity.Data/IHasCommandTimeout.md) | Interfaces for types that has an CommandTimeout property that determines the default command timeout for that connection |
+| interface  | [IHasConnectionStateChange](Serenity.Data/IHasConnectionStateChange.md) | Interfaces for types that has a connection StateChange event (e.g. connection) |
 | interface  | [IHasCurrentTransaction](Serenity.Data/IHasCurrentTransaction.md) | Interfaces for types that has a CurrentTransaction property of type IDbTransaction |
 | interface  | [IHasDialect](Serenity.Data/IHasDialect.md) | Interfaces for types that has a Dialect property of type ISqlDialect |
 | interface  | [IHasLogger](Serenity.Data/IHasLogger.md) | Interfaces for types that has an Logger |
@@ -115,6 +116,9 @@
 | enum  | [SqlUnionType](Serenity.Data/SqlUnionType.md) | Type of SQL UNIONs. |
 | class  | [SqlUpdate](Serenity.Data/SqlUpdate.md) | Generates queries of the form `UPDATE tablename SET field1 = value1, field2 = value2 ... fieldN = valueN WHERE [filter]`. |
 | static class  | [T0ReferenceRemover](Serenity.Data/T0ReferenceRemover.md) | Removes T0. references in SQL expression |
+| class  | [TransactionlessUnitOfWork](Serenity.Data/TransactionlessUnitOfWork.md) | Unit of work implementation without an underlying actual transaction. Use with care only to pass a IUnitOfWork instance to some methods that you don't want to actually start a transaction. |
+| class  | [TransactionSettings](Serenity.Data/TransactionSettings.md) | Determines the transaction isolation level and defer start flag used for service endpoint action use when creating the UnitOfWork class |
+| class  | [TransactionSettingsAttribute](Serenity.Data/TransactionSettingsAttribute.md) | Determines the transaction isolation level and defer start flag used for a service endpoint action use when creating the UnitOfWork class |
 | class  | [TwoLevelCachedAttribute](Serenity.Data/TwoLevelCachedAttribute.md) | This attribute marks a row so that when it is Inserted/Updated/Deleted through repository, its related cache, if any should be cleared. It doesn't turn on/off caching. A sample of related cached item to a row, might be its lookup if any. |
 | class  | [UnaryCriteria](Serenity.Data/UnaryCriteria.md) | Unary criteria with one operand and operator |
 | class  | [UnitOfWork](Serenity.Data/UnitOfWork.md) | Unit of work implementation. |

@@ -11,6 +11,8 @@ public static class StringHelper
 
 | name | description |
 | --- | --- |
+| static readonly [InvalidFilenameCharsRegex](StringHelper/InvalidFilenameCharsRegex.md) | A regex to remove invalid file name characters |
+| static readonly [InvalidPathCharsRegex](StringHelper/InvalidPathCharsRegex.md) | A regex to remove invalid file path characters |
 | static [IsEmptyOrNull](StringHelper/IsEmptyOrNull.md)(…) | Returns true if String is `null` or empty (zero length) (2 methods) |
 | static [IsNullOrEmpty](StringHelper/IsNullOrEmpty.md)(…) | Returns true if String is `null` or empty (zero length) |
 | static [IsTrimmedEmpty](StringHelper/IsTrimmedEmpty.md)(…) | Checks if a string String is `null`, empty or just contains whitespace characters. |
@@ -20,7 +22,8 @@ public static class StringHelper
 | static [QuoteString](StringHelper/QuoteString.md)(…) | Quotes a string |
 | static [RemoveDiacritics](StringHelper/RemoveDiacritics.md)(…) | Removes the diacritic characters from string by replacing them with ASCII versions. |
 | static [SafeSubstring](StringHelper/SafeSubstring.md)(…) | A substring function that doesn't raise out of bound errors or null reference exception. |
-| static [SanitizeFilename](StringHelper/SanitizeFilename.md)(…) | Sanitizes the filename by replacing /, :, &amp;, ı characters. |
+| static [SanitizeFilename](StringHelper/SanitizeFilename.md)(…) | Sanitizes the filename by removing diacritics, ı with i and replacing any invalid filename characters with underscore. |
+| static [SanitizeFilePath](StringHelper/SanitizeFilePath.md)(…) | Sanitizes the path by removing diacritics, ı with i and replacing any invalid file path characters with underscore. |
 | static [ThreeDots](StringHelper/ThreeDots.md)(…) | If the string's length is over a specified limit, trims its right and adds three points ("..."). |
 | static [ToDoubleQuoted](StringHelper/ToDoubleQuoted.md)(…) | Converts the string to its double quoted representation. |
 | static [ToSingleLine](StringHelper/ToSingleLine.md)(…) | Converts the string to single line by replacing line endings with space. |

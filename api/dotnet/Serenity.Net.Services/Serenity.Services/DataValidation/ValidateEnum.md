@@ -4,7 +4,7 @@
 Validates enum is within allowed values, e.g. one its members
 
 ```csharp
-public static void ValidateEnum(this IRow row, Field field, Type enumType, ITextLocalizer localizer)
+public static void ValidateEnum(IRow row, Field field, Type enumType, ITextLocalizer localizer)
 ```
 
 | parameter | description |
@@ -52,8 +52,7 @@ public static void ValidateEnum<T>(T value, ITextLocalizer localizer)
 Validates enum is within allowed values, e.g. one of its members
 
 ```csharp
-public static void ValidateEnum<T>(this IRow row, GenericValueField<T> field, 
-    ITextLocalizer localizer)
+public static void ValidateEnum<T>(IRow row, GenericValueField<T> field, ITextLocalizer localizer)
     where T : struct, IComparable<T>
 ```
 

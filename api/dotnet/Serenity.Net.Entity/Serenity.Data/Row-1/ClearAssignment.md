@@ -1,7 +1,7 @@
 # Row&lt;TFields&gt;.ClearAssignment method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Entity](../../README.md)*
 
-Clears the assignment.
+Clears the assignment flag of the field.
 
 ```csharp
 public void ClearAssignment(Field field)

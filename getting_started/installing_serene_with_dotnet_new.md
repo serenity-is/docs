@@ -1,4 +1,4 @@
-# Installing Serene Asp.Net Core Version with `dotnet new`
+# Installing Serene with `dotnet new`
 
 This section is for users who doesn't or can't use Visual Studio (in Linux / OSX). 
 
@@ -49,7 +49,7 @@ Create an empty folder, for instance, `MySerene` and cd into that folder:
 ~/> cd MySerene
 ```
 
-To create a new project with the name current folder name type:
+To create a new project with the name of the current folder name type:
 
 ```bash
 ~/MySerene> dotnet new serene

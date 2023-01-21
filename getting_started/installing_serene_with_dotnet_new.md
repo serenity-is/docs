@@ -43,7 +43,7 @@ If you don't have the .NET 7 SDK, you may have to type `dotnet new --install Ser
 
 The command above should install latest version of Serene.Templates (or Serenity.Pro.Templates), or update it to latest version if it is already installed.
 
-> If you want to install another version, specify it like: `dotnet new install Serene.Templates:6.4.4`
+> If you want to install an older version, specify it like: `dotnet new install Serene.Templates:6.4.4`
 
 See `dotnet new` documentation for more information:
 
@@ -72,16 +72,18 @@ To create a new project with the name of the current folder name type:
 
 > Use `dotnet new startsharp` to create a StartSharp based project
 
-Run `npm install` to install packages, followed by `dotnet build` and `dotnet run` to try the project:
+Change directory to `MyProject.Web` folder, run `npm install` to install packages, followed by `dotnet build` and `dotnet run` to try the project:
 
 ```bash
-~/MyProject> npm i
-~/MyProject> dotnet build
-~/MyProject> dotnet run
+~/MyProject/MyProject.Web> npm i
+~/MyProject/MyProject.Web> dotnet build
+~/MyProject/MyProject.Web> dotnet run
 
 info: Microsoft.Hosting.Lifetime[14]
       Now listening on: http://localhost:5000
 ```
+
+> Note that dotnet new won't create a solution file. If you open this project in Visual Studio we recommend naming the solution `MyProject` and saving the solution file in the root folder as `MyProject/MyProject.sln`, not `MyProject.Web/MyProject.Web.sln`.
 
 Now open a browser and navigate to `http://localhost:5000`.
 

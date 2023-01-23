@@ -85,7 +85,7 @@ public class RowFields : RowFieldsBase
 
 ### Adding Kind Selection To Our Movie Form
 
-If we build and run our project now, we'll see that there is no change in the Movie form, even if we added *Kind* field mapping to the *MovieRow*. This is because, fields shown/edited in the form are controlled by declerations in *MovieForm.cs*. 
+If we build and run our project now, we'll see that there is no change in the Movie form, even if we added *Kind* field mapping to the *MovieRow*. This is because, fields shown/edited in the form are controlled by declarations in *MovieForm.cs*. 
 
 Modify *MovieForm.cs* as below:
 

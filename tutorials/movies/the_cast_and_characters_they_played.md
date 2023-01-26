@@ -478,7 +478,7 @@ using System;
 namespace MovieTutorial.MovieDB.Forms
 {
     [FormScript("MovieDB.MovieCast")]
-    [BasedOnRow(typeof(Entities.MovieCastRow), CheckNames = true)]
+    [BasedOnRow(typeof(MovieCastRow), CheckNames = true)]
     public class MovieCastForm
     {
         public int PersonId { get; set; }

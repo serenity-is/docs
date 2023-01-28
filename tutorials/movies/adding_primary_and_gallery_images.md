@@ -203,7 +203,8 @@ As i think our project has reached a good state, i'm now going to remove Northwi
 
 See following how-to topic:
 
-[How To: Removing Northwind and Other Samples](../../howto/removing_northwind.md)
+[How To: Removing Northwind and Other Samples](../../howto/how_to_remove_sample_modules)
+
 
 
 

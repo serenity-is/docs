@@ -106,7 +106,7 @@ OK, now we can see list of movies in Movies tab, but we need to fix some things:
 
 We need the get rid of that label movie grid has. Serenity has a LabelWidth attribute to adjust label width of properties. 
 
-Edit PersonFrom.cs:
+Edit PersonForm.cs:
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms

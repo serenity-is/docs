@@ -78,7 +78,7 @@ export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
 
 We are registering this grid as an editor. So sergen will generate an attribute for this grid.
 
-Open *MovieFrom.cs* and add editor for MovieGrid field:
+Open *PersonForm.cs* and add editor for MovieGrid field:
 
 > Don't forget to run your project.
 

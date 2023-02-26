@@ -13,6 +13,7 @@ public class FirebirdDialect : ISqlDialect
 | --- | --- |
 | [FirebirdDialect](FirebirdDialect/FirebirdDialect.md)() | The default constructor. |
 | static readonly [Instance](FirebirdDialect/Instance.md) | The shared instance of FirebirdDialect. |
+| virtual [CanUseConcat](FirebirdDialect/CanUseConcat.md) { get; } |  |
 | virtual [CanUseOffsetFetch](FirebirdDialect/CanUseOffsetFetch.md) { get; } | Gets a value indicating whether the server supports OFFSET FETCH. |
 | virtual [CanUseRowNumber](FirebirdDialect/CanUseRowNumber.md) { get; } | Gets a value indicating whether the server supports ROWNUMBER. |
 | virtual [CanUseSkipKeyword](FirebirdDialect/CanUseSkipKeyword.md) { get; } | Gets a value indicating whether the server supports SKIP keyword (or a variation of it). |

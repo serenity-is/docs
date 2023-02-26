@@ -12,6 +12,7 @@ public class DialectExpressionSelector
 | name | description |
 | --- | --- |
 | [DialectExpressionSelector](DialectExpressionSelector/DialectExpressionSelector.md)(…) | Initializes a new instance of the [`DialectExpressionSelector`](DialectExpressionSelector.md) class. |
+| [Dialect](DialectExpressionSelector/Dialect.md) { get; } | Gets the dialect used for this expression selector |
 | [GetBestMatch&lt;TAttribute&gt;](DialectExpressionSelector/GetBestMatch.md)(…) | Gets the best match. |
 
 ## See Also

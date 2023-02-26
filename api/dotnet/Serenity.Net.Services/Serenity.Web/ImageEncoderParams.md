@@ -15,3 +15,5 @@ public class ImageEncoderParams
 | [Quality](ImageEncoderParams/Quality.md) { get; set; } | JPEG quality |
 
 ## See Also
+
+* **Source:** *[ImageEncoderParams.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/ImageEncoderParams.cs)*

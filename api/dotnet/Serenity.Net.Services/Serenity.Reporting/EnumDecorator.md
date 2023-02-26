@@ -17,4 +17,4 @@ public class EnumDecorator : BaseCellDecorator
 ## See Also
 
 * class [BaseCellDecorator](BaseCellDecorator.md)
-* **Source:** *[EnumDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Worksheet/EnumDecorator.cs)*
+* **Source:** *[EnumDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Decorators/EnumDecorator.cs)*

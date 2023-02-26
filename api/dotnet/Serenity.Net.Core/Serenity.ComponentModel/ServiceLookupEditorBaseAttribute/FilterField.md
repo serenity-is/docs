@@ -4,7 +4,7 @@
 Optional filtering field (items will be filtered on this key, e.g. GroupID)
 
 ```csharp
-public object FilterField { get; set; }
+public string FilterField { get; set; }
 ```
 
 ## See Also

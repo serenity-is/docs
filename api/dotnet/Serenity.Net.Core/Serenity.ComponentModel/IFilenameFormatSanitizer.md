@@ -15,3 +15,5 @@ public interface IFilenameFormatSanitizer
 | [SanitizeResult](IFilenameFormatSanitizer/SanitizeResult.md)(…) | Sanitizes the formatting result, usually by replacing double slashes resulting from an empty replacement value with /_/ to keep expected directory structure. |
 
 ## See Also
+
+* **Source:** *[IFilenameFormatSanitizer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IFilenameFormatSanitizer.cs)*

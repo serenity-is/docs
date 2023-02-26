@@ -21,3 +21,4 @@ public interface IUploadFileConstraints : IUploadOptions
 ## See Also
 
 * interface [IUploadOptions](IUploadOptions.md)
+* **Source:** *[IUploadFileConstraints.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IUploadFileConstraints.cs)*

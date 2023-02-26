@@ -36,7 +36,7 @@ public abstract class Field : IFieldWithJoinInfo
 | [ReadPermission](Field/ReadPermission.md) { get; set; } | Gets or sets the read permission. |
 | [ReferencedAliases](Field/ReferencedAliases.md) { get; set; } | Gets or sets the referenced aliases. |
 | [Scale](Field/Scale.md) { get; set; } | Gets or sets the scale. |
-| [Size](Field/Size.md) { get; } | Gets the size. |
+| [Size](Field/Size.md) { get; set; } | Gets the size. |
 | [TextualField](Field/TextualField.md) { get; set; } | Gets or sets the textual field. |
 | [Type](Field/Type.md) { get; } | Gets the type. |
 | [UpdatePermission](Field/UpdatePermission.md) { get; set; } | Gets or sets the update permission. |

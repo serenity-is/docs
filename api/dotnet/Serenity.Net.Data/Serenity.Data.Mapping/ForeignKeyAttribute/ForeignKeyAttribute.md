@@ -1,4 +1,23 @@
-# ForeignKeyAttribute constructor (1 of 4)
+# ForeignKeyAttribute constructor (1 of 5)
+**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Data](../../README.md)*
+
+Specifies that this property is a foreign key to another field in a primary key table.
+
+```csharp
+public ForeignKeyAttribute(Type rowType)
+```
+
+| parameter | description |
+| --- | --- |
+| rowType | Entity for primary key table. |
+
+## See Also
+
+* class [ForeignKeyAttribute](../ForeignKeyAttribute.md)
+
+---
+
+# ForeignKeyAttribute constructor (2 of 5)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Data](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
@@ -18,13 +37,13 @@ public ForeignKeyAttribute(string table, string field)
 
 ---
 
-# ForeignKeyAttribute constructor (2 of 4)
+# ForeignKeyAttribute constructor (3 of 5)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Data](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
 
 ```csharp
-public ForeignKeyAttribute(Type rowType, string field = null)
+public ForeignKeyAttribute(Type rowType, string field)
 ```
 
 | parameter | description |
@@ -38,7 +57,7 @@ public ForeignKeyAttribute(Type rowType, string field = null)
 
 ---
 
-# ForeignKeyAttribute constructor (3 of 4)
+# ForeignKeyAttribute constructor (4 of 5)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Data](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
@@ -60,7 +79,7 @@ public ForeignKeyAttribute(string table, string field, params ServerType[] serve
 
 ---
 
-# ForeignKeyAttribute constructor (4 of 4)
+# ForeignKeyAttribute constructor (5 of 5)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Data](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.

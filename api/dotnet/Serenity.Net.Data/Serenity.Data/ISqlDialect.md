@@ -11,6 +11,7 @@ public interface ISqlDialect
 
 | name | description |
 | --- | --- |
+| [CanUseConcat](ISqlDialect/CanUseConcat.md) { get; } | Gets a value indicating whether the server supports CONCAT. |
 | [CanUseOffsetFetch](ISqlDialect/CanUseOffsetFetch.md) { get; } | Gets a value indicating whether the server supports OFFSET FETCH. |
 | [CanUseRowNumber](ISqlDialect/CanUseRowNumber.md) { get; } | Gets a value indicating whether the server supports ROWNUMBER. |
 | [CanUseSkipKeyword](ISqlDialect/CanUseSkipKeyword.md) { get; } | Gets a value indicating whether the server supports SKIP keyword (or a variation of it). |

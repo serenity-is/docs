@@ -5,7 +5,7 @@ Specifies SQL expression this property corresponds to. You may use brackets ([])
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
-public class ExpressionAttribute : Attribute
+public class ExpressionAttribute : BaseExpressionAttribute
 ```
 
 ## Public Members
@@ -15,8 +15,10 @@ public class ExpressionAttribute : Attribute
 | [ExpressionAttribute](ExpressionAttribute/ExpressionAttribute.md)(…) | Specifies SQL expression this property corresponds to. (2 constructors) |
 | [Dialect](ExpressionAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
 | [NegateDialect](ExpressionAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |
-| [Value](ExpressionAttribute/Value.md) { get; } | Gets the value. |
+| [Value](ExpressionAttribute/Value.md) { get; } | Gets the expression |
+| override [Translate](ExpressionAttribute/Translate.md)(…) |  |
 
 ## See Also
 
+* class [BaseExpressionAttribute](BaseExpressionAttribute.md)
 * **Source:** *[ExpressionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Data/Mapping/ExpressionAttribute.cs)*

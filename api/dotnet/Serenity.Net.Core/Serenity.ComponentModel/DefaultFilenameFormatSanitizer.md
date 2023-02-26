@@ -19,3 +19,4 @@ public class DefaultFilenameFormatSanitizer : IFilenameFormatSanitizer
 ## See Also
 
 * interface [IFilenameFormatSanitizer](IFilenameFormatSanitizer.md)
+* **Source:** *[DefaultFilenameFormatSanitizer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/DefaultFilenameFormatSanitizer.cs)*

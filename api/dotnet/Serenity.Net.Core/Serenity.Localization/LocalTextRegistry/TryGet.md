@@ -10,7 +10,7 @@ public string TryGet(string languageID, string textKey, bool pending)
 | parameter | description |
 | --- | --- |
 | languageID | Language ID. |
-| textKey | Local text key (can be null). |
+| textKey | Local text key |
 | pending | If pending approval texts to be used, true. |
 
 ## See Also

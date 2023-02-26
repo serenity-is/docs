@@ -34,6 +34,7 @@
 | class  | [DatabaseAliasAttribute](Serenity.Data/DatabaseAliasAttribute.md) | Determines database alias, used for unit test database contexts. |
 | class  | [DatabaseCaretReferences](Serenity.Data/DatabaseCaretReferences.md) | Helper class for replacing database caret references in format [^ConnectionKey] in SQL expressions. |
 | static class  | [DataReaderExtensions](Serenity.Data/DataReaderExtensions.md) | Extension methods for IDataReader objects. |
+| enum  | [DateParts](Serenity.Data/DateParts.md) | DateParts type |
 | class  | [DateTimeKindAttribute](Serenity.Data/DateTimeKindAttribute.md) | Determines Time kind for a DateTime field. |
 | class  | [DefaultConnectionStrings](Serenity.Data/DefaultConnectionStrings.md) | Default connection string source |
 | class  | [DefaultSqlConnections](Serenity.Data/DefaultSqlConnections.md) | Default connection factory |
@@ -41,6 +42,7 @@
 | class  | [DeltaLister&lt;TItem&gt;](Serenity.Data/DeltaLister-1.md) | Helper class to find differences between to lists for updating |
 | [Flags] enum  | [DeltaOptions](Serenity.Data/DeltaOptions.md) | Delta options flags |
 | class  | [EmitFieldTypeAttribute](Serenity.Data/EmitFieldTypeAttribute.md) | Declares that the field generated for this template property should be of type specified. |
+| class  | [EmitNameAttribute](Serenity.Data/EmitNameAttribute.md) | Declares that the property generated for this template property should have the specified name, instead of the auto generated one. |
 | enum  | [ExpectedRows](Serenity.Data/ExpectedRows.md) | Expected number of rows enumeration for SQL Update / Delete operation. This enumeration is used to avoid updating/deleting multiple records by mistake when forgot to add a WHERE statement. |
 | [Flags] enum  | [FieldFlags](Serenity.Data/FieldFlags.md) | Flags that determine basic properties of a field |
 | static class  | [FilterableQueryExtensions](Serenity.Data/FilterableQueryExtensions.md) | Extensions for objects implementing IDbWhere interface. |
@@ -70,6 +72,7 @@
 | interface  | [ISqlConnections](Serenity.Data/ISqlConnections.md) | An interface used to abstract sql connections |
 | interface  | [ISqlDialect](Serenity.Data/ISqlDialect.md) | Abstraction for SQL dialect, e.g. syntax for different SQL server types and connection settings. |
 | interface  | [ISqlDialectMapper](Serenity.Data/ISqlDialectMapper.md) | The sql dialect mapper |
+| interface  | [ISqlExpressionTranslator](Serenity.Data/ISqlExpressionTranslator.md) | An interface custom ISqlDialect types can implement to change generated expressions for dynamic expression like ConcatExpressionAttribute. They should return NULL if it can't handle this expression type |
 | interface  | [ISqlQuery](Serenity.Data/ISqlQuery.md) | SqlQuery interface. |
 | interface  | [ISqlQueryExtensible](Serenity.Data/ISqlQueryExtensible.md) | Extensible SQL query interface. Used to abstract Serenity.Data.Row dependency from SqlQuery. |
 | interface  | [ISqlQueryToString](Serenity.Data/ISqlQueryToString.md) | SqlQuery interface. |
@@ -131,7 +134,13 @@
 | signature | name | description |
 | --: | --- | --- |
 | class  | [AutoIncrementAttribute](Serenity.Data.Mapping/AutoIncrementAttribute.md) | Marks the field as auto increment, e.g. generated on insert in SQL side |
+| abstract class  | [BaseExpressionAttribute](Serenity.Data.Mapping/BaseExpressionAttribute.md) | Specifies SQL expression this property corresponds to. You may use brackets ([]) to escape identifiers. Brackets will be converted to database specific quotes. |
+| class  | [CaseAttribute](Serenity.Data.Mapping/CaseAttribute.md) | Concat expression attribute |
+| class  | [CaseSwitchAttribute](Serenity.Data.Mapping/CaseSwitchAttribute.md) | Case expression with simple switch value |
 | class  | [ColumnAttribute](Serenity.Data.Mapping/ColumnAttribute.md) | Explicitly specifies the database column name for property. Use this attribute if matching column name in database is different than the property name. |
+| class  | [ConcatAttribute](Serenity.Data.Mapping/ConcatAttribute.md) | Concat expression attribute |
+| class  | [DateDiffAttribute](Serenity.Data.Mapping/DateDiffAttribute.md) | DateDiff expression attribute |
+| class  | [DatePartAttribute](Serenity.Data.Mapping/DatePartAttribute.md) | DatePart expression attribute |
 | class  | [ExpressionAttribute](Serenity.Data.Mapping/ExpressionAttribute.md) | Specifies SQL expression this property corresponds to. You may use brackets ([]) to escape identifiers. Brackets will be converted to database specific quotes. |
 | class  | [ForeignKeyAttribute](Serenity.Data.Mapping/ForeignKeyAttribute.md) | Specifies that this property is a foreign key to another field in a primary key table. There is no need for foreign key to exist in database actually. It is not checked. This is mostly used for joins. |
 | class  | [IdentityAttribute](Serenity.Data.Mapping/IdentityAttribute.md) | Marks the field as Identity, a combination of PrimaryKey, AutoIncrement and NotNull flags. |
@@ -152,6 +161,9 @@
 | enum  | [SearchType](Serenity.Data.Mapping/SearchType.md) | Quick search type enumeration |
 | class  | [SetFieldFlagsAttribute](Serenity.Data.Mapping/SetFieldFlagsAttribute.md) | Used to turn on (include) or turn off (exclude) field flags. |
 | class  | [SizeAttribute](Serenity.Data.Mapping/SizeAttribute.md) | Determines size (max length or numeric precision for) for the field. |
+| class  | [SqlDateTimeOffsetAttribute](Serenity.Data.Mapping/SqlDateTimeOffsetAttribute.md) | Dialect specific SQL expression for current date/time with timezone |
+| class  | [SqlNowAttribute](Serenity.Data.Mapping/SqlNowAttribute.md) | Dialect specific SQL expression for current date/time in server's timezone |
+| class  | [SqlUtcNowAttribute](Serenity.Data.Mapping/SqlUtcNowAttribute.md) | Dialect specific SQL expression for UTC date/time |
 | class  | [TableNameAttribute](Serenity.Data.Mapping/TableNameAttribute.md) | Determines table name for the row. |
 | class  | [TextualFieldAttribute](Serenity.Data.Mapping/TextualFieldAttribute.md) | Determines textual field for this field. This is placed on foreign keys and specifies which field in joined table (view fields in this row that originates from foreign table) should be used for display / filtering. |
 | class  | [UniqueAttribute](Serenity.Data.Mapping/UniqueAttribute.md) | Defines a unique constraint on the field |

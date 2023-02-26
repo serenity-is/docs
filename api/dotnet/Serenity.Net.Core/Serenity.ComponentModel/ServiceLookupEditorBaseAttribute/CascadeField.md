@@ -4,7 +4,7 @@
 Cascade filtering field (items will be filtered on this key, e.g. CountryID)
 
 ```csharp
-public object CascadeField { get; set; }
+public string CascadeField { get; set; }
 ```
 
 ## See Also

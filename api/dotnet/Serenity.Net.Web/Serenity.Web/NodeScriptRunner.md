@@ -15,3 +15,5 @@ public sealed class NodeScriptRunner : IDisposable
 | [AttachToLogger](NodeScriptRunner/AttachToLogger.md)(…) | Attaches to the logger |
 
 ## See Also
+
+* **Source:** *[NodeScriptRunner.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/NodeScriptRunner/NodeScriptRunner.cs)*

@@ -21,4 +21,4 @@ public interface ICellDecorator
 
 ## See Also
 
-* **Source:** *[ICellDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/ICellDecorator.cs)*
+* **Source:** *[ICellDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Decorators/ICellDecorator.cs)*

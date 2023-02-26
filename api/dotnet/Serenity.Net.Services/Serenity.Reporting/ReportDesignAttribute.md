@@ -17,4 +17,4 @@ public class ReportDesignAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[ReportDesignAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/ReportDesignAttribute.cs)*
+* **Source:** *[ReportDesignAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/ReportDesignAttribute.cs)*

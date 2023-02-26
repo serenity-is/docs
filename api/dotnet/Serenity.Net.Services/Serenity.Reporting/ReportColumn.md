@@ -22,4 +22,4 @@ public class ReportColumn
 
 ## See Also
 
-* **Source:** *[ReportColumn.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/ReportColumn.cs)*
+* **Source:** *[ReportColumn.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/DataReport/ReportColumn.cs)*

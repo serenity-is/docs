@@ -17,4 +17,4 @@ public interface IReportRegistry
 
 ## See Also
 
-* **Source:** *[IReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IReportRegistry.cs)*
+* **Source:** *[IReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Registry/IReportRegistry.cs)*

@@ -4,7 +4,7 @@
 Gets the size.
 
 ```csharp
-public int Size { get; }
+public int Size { get; set; }
 ```
 
 ## Property Value

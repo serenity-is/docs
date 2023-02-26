@@ -29,6 +29,7 @@ public class SqlQuery : QueryWithParams, IFilterableQuery, IGetExpressionByName,
 | [InnerJoin](SqlQuery/InnerJoin.md)(…) | Adds an inner join to the query. |
 | [Join](SqlQuery/Join.md)(…) | Joins the specified join. |
 | [LeftJoin](SqlQuery/LeftJoin.md)(…) | Adds a LEFT JOIN to the query. (2 methods) |
+| [OmitParens](SqlQuery/OmitParens.md)(…) | Sets the omit parens flag, e.g. to exclude parens. Parens are normally only included for sub queries. |
 | [OrderBy](SqlQuery/OrderBy.md)(…) | Adds a field name or an SQL expression to the ORDER BY clause. (2 methods) |
 | [OrderByFirst](SqlQuery/OrderByFirst.md)(…) | Inserts a field name or an SQL expression to the start of ORDER BY clause. |
 | [RightJoin](SqlQuery/RightJoin.md)(…) | Adds a right join to the query. (2 methods) |

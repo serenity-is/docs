@@ -60,26 +60,39 @@
 | class  | [EnumDecorator](Serenity.Reporting/EnumDecorator.md) | A decorator used to export enum name instead of the enum integer value. |
 | class  | [GenerateCsvRequest](Serenity.Reporting/GenerateCsvRequest.md) | Request model for a CSV exporter. |
 | class  | [GenerateExcelFileRequest](Serenity.Reporting/GenerateExcelFileRequest.md) | Request model for an Excel exporter. |
+| class  | [HtmlReportRenderUrl](Serenity.Reporting/HtmlReportRenderUrl.md) | Response type for IHtmlReportRenderUrlBuilder.GetRenderUrl method |
+| class  | [HtmlToPdfOptions](Serenity.Reporting/HtmlToPdfOptions.md) | HTML to PDF options |
 | interface  | [ICellDecorator](Serenity.Reporting/ICellDecorator.md) | Cell decorator interface mainly used for Excel export styling. |
 | interface  | [ICustomFileName](Serenity.Reporting/ICustomFileName.md) | Interface to customize the output file name, e.g. name of the XLSX or PDF file outputted by reports. By default, reports has output file name of format "{ReportKey}_yyyyMMdd_HHmmss.ext". |
 | interface  | [ICustomizeHtmlToPdf](Serenity.Reporting/ICustomizeHtmlToPdf.md) | An interface reports can implement to customize HTML to PDF converter settings. |
+| interface  | [ICustomTitle](Serenity.Reporting/ICustomTitle.md) | Interface to customize the report title. |
 | interface  | [IDataOnlyReport](Serenity.Reporting/IDataOnlyReport.md) | Interface for reports that only contain data, e.g. no design. These are usually Excel/CSV etc. export type of reports. |
 | interface  | [IDataReportExcelRenderer](Serenity.Reporting/IDataReportExcelRenderer.md) | Excel exporter interface for data only reports. This is usually implemented by EPPlus based exporter. The interface abstracts that dependency. |
 | interface  | [IExcelExporter](Serenity.Reporting/IExcelExporter.md) | Interface for Excel exporters |
 | interface  | [IExternalReport](Serenity.Reporting/IExternalReport.md) | This interface marks a report class as a report that should open an external URL, e.g. an SSRS report url, or any arbitrary site The URL should be returned from GetData() method of report class. |
+| interface  | [IHtmlReportCallbackUrlBuilder](Serenity.Reporting/IHtmlReportCallbackUrlBuilder.md) | Abstraction for HTML report callback url builder |
+| interface  | [IHtmlReportPdfRenderer](Serenity.Reporting/IHtmlReportPdfRenderer.md) | PDF exporter interface for HTML reports. |
+| interface  | [IHtmlReportRenderUrlBuilder](Serenity.Reporting/IHtmlReportRenderUrlBuilder.md) | Interface abstraction to get HTML report render URL |
+| interface  | [IHtmlToPdfConverter](Serenity.Reporting/IHtmlToPdfConverter.md) | Abstraction for service that converts HTML to PDF |
 | interface  | [IHtmlToPdfOptions](Serenity.Reporting/IHtmlToPdfOptions.md) | Set of options for HTML to PDF converter (WKHTMLToPdf) |
 | interface  | [IReport](Serenity.Reporting/IReport.md) | The basic interface for all reports |
+| interface  | [IReportFactory](Serenity.Reporting/IReportFactory.md) | Abstraction for the a report factory that creates a report by its key and populates it with the JSON options passed |
 | interface  | [IReportRegistry](Serenity.Reporting/IReportRegistry.md) | Abstraction for the registry which holds and allows querying list of available reports by their keys and categories. |
+| interface  | [IReportRenderer](Serenity.Reporting/IReportRenderer.md) | Abstraction for the a report render that renders a report |
+| interface  | [IReportRetrieveHandler](Serenity.Reporting/IReportRetrieveHandler.md) | Abstraction for report info retriever |
 | interface  | [IReportWithAdditionalData](Serenity.Reporting/IReportWithAdditionalData.md) | The interface for reports that return some type of additional data. For example, the system settings. This can be considered as additional datasets. |
+| interface  | [IWKHtmlToPdfConverter](Serenity.Reporting/IWKHtmlToPdfConverter.md) | WKHTMLToPdf converter interface |
 | class  | [ReportAttribute](Serenity.Reporting/ReportAttribute.md) | Marks a class as Report |
 | class  | [ReportColumn](Serenity.Reporting/ReportColumn.md) | Information about a report column |
 | static class  | [ReportColumnConverter](Serenity.Reporting/ReportColumnConverter.md) | Contains methods to extract ReportColumns from other types. |
 | class  | [ReportDesignAttribute](Serenity.Reporting/ReportDesignAttribute.md) | The attribute used to determine the location of the report design which is usually a CSHTML file. |
 | class  | [ReportRegistry](Serenity.Reporting/ReportRegistry.md) | Default report registry implementation |
+| class  | [ReportRenderOptions](Serenity.Reporting/ReportRenderOptions.md) | Render request a report |
+| class  | [ReportRenderResult](Serenity.Reporting/ReportRenderResult.md) | Render result for a report |
 | class  | [ReportRetrieveRequest](Serenity.Reporting/ReportRetrieveRequest.md) | Request model to retrieve a report by its key. This only returns the metadata, e.g. parameters of report etc. |
 | class  | [ReportRetrieveResponse](Serenity.Reporting/ReportRetrieveResponse.md) | Response model for a report retrieve request. |
 | class  | [TabularDataReport](Serenity.Reporting/TabularDataReport.md) | An implementation of a data only report which is used mainly for Excel export. |
-| class  | [UseChromeHtmlToPdfAttribute](Serenity.Reporting/UseChromeHtmlToPdfAttribute.md) | Marks a report so that it should use Chrome instead of WKHTML |
+| class  | [UseWKHtmlToPdfAttribute](Serenity.Reporting/UseWKHtmlToPdfAttribute.md) | Marks a report to determine if it should use WKHTML instead of another converter, e.g. Puppeeteer etc. (only if configured in service provider). |
 
 ## Serenity.Services namespace
 

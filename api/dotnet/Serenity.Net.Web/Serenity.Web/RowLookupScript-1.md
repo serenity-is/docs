@@ -22,6 +22,7 @@ public class RowLookupScript<TRow> : LookupScript
 
 | name | description |
 | --- | --- |
+| readonly [sqlConnections-](RowLookupScript-1/sqlConnections-.md) | Sql connections |
 | virtual [ApplyOrder](RowLookupScript-1/ApplyOrder.md)(…) | Applies the sort order to the query |
 | override [GetItems](RowLookupScript-1/GetItems.md)() |  |
 | virtual [PrepareQuery](RowLookupScript-1/PrepareQuery.md)(…) | Prepares the sql query to select fields |

@@ -15,4 +15,4 @@ public interface ICustomizeHtmlToPdf
 
 ## See Also
 
-* **Source:** *[ICustomizeHtmlToPdf.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/ICustomizeHtmlToPdf.cs)*
+* **Source:** *[ICustomizeHtmlToPdf.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/ICustomizeHtmlToPdf.cs)*

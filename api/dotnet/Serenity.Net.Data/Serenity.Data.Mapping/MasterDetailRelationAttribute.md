@@ -22,7 +22,7 @@ public sealed class MasterDetailRelationAttribute : Attribute
 | [ForeignKey](MasterDetailRelationAttribute/ForeignKey.md) { get; } | Gets the foreign key. |
 | [IncludeColumnNames](MasterDetailRelationAttribute/IncludeColumnNames.md) { get; set; } | Gets or sets the list of include column names as array. |
 | [IncludeColumns](MasterDetailRelationAttribute/IncludeColumns.md) { get; set; } | Gets or sets the comma separated list of include columns. Obsolete, please prefer IncludeColumnNames or ColumnsType |
-| [MasterKeyField](MasterDetailRelationAttribute/MasterKeyField.md) { get; set; } | Optional: override the default behaviour and use a different id field (i.e. from a unique constraint) |
+| [MasterKeyField](MasterDetailRelationAttribute/MasterKeyField.md) { get; set; } | Optional: override the default behaviour and use a different master id (PK) field (i.e. from a unique constraint) |
 
 ## See Also
 

@@ -12,6 +12,7 @@ public class SqliteDialect : ISqlDialect
 | name | description |
 | --- | --- |
 | [SqliteDialect](SqliteDialect/SqliteDialect.md)() | The default constructor. |
+| virtual [CanUseConcat](SqliteDialect/CanUseConcat.md) { get; } |  |
 | virtual [CanUseOffsetFetch](SqliteDialect/CanUseOffsetFetch.md) { get; } | Gets a value indicating whether the server supports OFFSET FETCH. |
 | virtual [CanUseRowNumber](SqliteDialect/CanUseRowNumber.md) { get; } | Gets a value indicating whether the server supports ROWNUMBER. |
 | virtual [CanUseSkipKeyword](SqliteDialect/CanUseSkipKeyword.md) { get; } | Gets a value indicating whether the server supports SKIP keyword (or a variation of it). |

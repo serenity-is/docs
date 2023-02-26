@@ -16,3 +16,5 @@ public class ImageFormatInfo
 | [MimeType](ImageFormatInfo/MimeType.md) { get; set; } | Default mime type |
 
 ## See Also
+
+* **Source:** *[ImageFormatInfo.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/ImageFormatInfo.cs)*

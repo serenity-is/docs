@@ -12,6 +12,7 @@ public class SqlServer2000Dialect : ISqlDialect
 | name | description |
 | --- | --- |
 | [SqlServer2000Dialect](SqlServer2000Dialect/SqlServer2000Dialect.md)() | The default constructor. |
+| virtual [CanUseConcat](SqlServer2000Dialect/CanUseConcat.md) { get; } |  |
 | virtual [CanUseOffsetFetch](SqlServer2000Dialect/CanUseOffsetFetch.md) { get; } | Gets a value indicating whether the server supports OFFSET FETCH. |
 | virtual [CanUseRowNumber](SqlServer2000Dialect/CanUseRowNumber.md) { get; } | Gets a value indicating whether the server supports ROWNUMBER. |
 | virtual [CanUseSkipKeyword](SqlServer2000Dialect/CanUseSkipKeyword.md) { get; } | Gets a value indicating whether the server supports SKIP keyword (or a variation of it). |

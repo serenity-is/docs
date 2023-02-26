@@ -4,12 +4,13 @@
 Gets the base uri for the current request
 
 ```csharp
-public static Uri GetBaseUri(this HttpRequest request)
+public static Uri GetBaseUri(this HttpRequest request, bool pathBase = true)
 ```
 
 | parameter | description |
 | --- | --- |
 | request | HTTP request |
+| pathBase | Include path base |
 
 ## Exceptions
 

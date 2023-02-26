@@ -15,4 +15,4 @@ public interface IDataReportExcelRenderer
 
 ## See Also
 
-* **Source:** *[IDataReportExcelRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IDataReportExcelRenderer.cs)*
+* **Source:** *[IDataReportExcelRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/DataReport/IDataReportExcelRenderer.cs)*

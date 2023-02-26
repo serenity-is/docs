@@ -16,3 +16,5 @@ public interface IUploadEditor
 | [UploadIntent](IUploadEditor/UploadIntent.md) { get; } | This is a property used to match uploaded files with their origins. If not specified, will be calculated as: "FullTypeName,AssemblyName:PropertyName" from the attribute this property is placed on. This way the temporary upload processor can locate the original attribute by its type name and validate its settings or generate the expected thumbnail types. |
 
 ## See Also
+
+* **Source:** *[IUploadEditor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IUploadEditor.cs)*

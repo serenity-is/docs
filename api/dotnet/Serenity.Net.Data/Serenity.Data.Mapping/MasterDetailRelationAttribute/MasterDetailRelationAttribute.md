@@ -9,7 +9,7 @@ public MasterDetailRelationAttribute(string foreignKey)
 
 | parameter | description |
 | --- | --- |
-| foreignKey | The foreign key. |
+| foreignKey | The property name of the FK field in the detail table which matches the PK (id) of the master table. For example, if the two tables are 'Order(Id, Date, ...)' and 'OrderDetail(DetailId, OrderId, Qty, ...)' it should be 'OrderId'. |
 
 ## See Also
 

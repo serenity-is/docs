@@ -15,4 +15,4 @@ public interface IExcelExporter
 
 ## See Also
 
-* **Source:** *[IExcelExporter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IExcelExporter.cs)*
+* **Source:** *[IExcelExporter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/DataReport/IExcelExporter.cs)*

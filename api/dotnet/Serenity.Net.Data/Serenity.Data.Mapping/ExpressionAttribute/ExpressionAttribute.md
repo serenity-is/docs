@@ -23,12 +23,12 @@ public ExpressionAttribute(string value)
 Specifies SQL expression and dialects this property corresponds to.
 
 ```csharp
-public ExpressionAttribute(string value, params ServerType[] serverTypes)
+public ExpressionAttribute(string expression, params ServerType[] serverTypes)
 ```
 
 | parameter | description |
 | --- | --- |
-| value | An SQL expression like (T0.Firstname + ' ' + T0.LastName) |
+| expression | An SQL expression like (T0.Firstname + ' ' + T0.LastName) |
 | serverTypes | Dialects like MySql, Sqlite. |
 
 ## See Also

@@ -17,4 +17,4 @@ public class CellDecoratorAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[CellDecoratorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Worksheet/CellDecoratorAttribute.cs)*
+* **Source:** *[CellDecoratorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Decorators/CellDecoratorAttribute.cs)*

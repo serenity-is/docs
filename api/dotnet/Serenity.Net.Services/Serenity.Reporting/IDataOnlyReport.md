@@ -16,4 +16,4 @@ public interface IDataOnlyReport : IReport
 ## See Also
 
 * interface [IReport](IReport.md)
-* **Source:** *[IDataOnlyReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IDataOnlyReport.cs)*
+* **Source:** *[IDataOnlyReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/DataReport/IDataOnlyReport.cs)*

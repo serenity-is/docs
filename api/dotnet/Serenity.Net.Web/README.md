@@ -44,7 +44,11 @@
 
 | signature | name | description |
 | --: | --- | --- |
-| class  | [HtmlToPdfConverter](Serenity.Reporting/HtmlToPdfConverter.md) | HTML to PDF converter class using WKHTMLToPdf |
+| class  | [DefaultReportFactory](Serenity.Reporting/DefaultReportFactory.md) | Default implementation for IReportFactory |
+| class  | [DefaultReportRenderer](Serenity.Reporting/DefaultReportRenderer.md) | Default implementation for IReportRenderer |
+| class  | [WKHtmlToPdf](Serenity.Reporting/WKHtmlToPdf.md) | HTML to PDF converter class using WKHTMLToPdf |
+| class  | [WKHtmlToPdfConverter](Serenity.Reporting/WKHtmlToPdfConverter.md) | Implementation for IWKHtmlToPdfConverter |
+| class  | [WKHtmlToPdfSettings](Serenity.Reporting/WKHtmlToPdfSettings.md) | Set of WKHTMLToPdf settings |
 
 ## Serenity.Services namespace
 

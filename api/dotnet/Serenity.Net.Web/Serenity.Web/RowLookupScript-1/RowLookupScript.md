@@ -4,12 +4,12 @@
 Creates a new instance of the class
 
 ```csharp
-public RowLookupScript(ISqlConnections connections)
+public RowLookupScript(ISqlConnections sqlConnections)
 ```
 
 | parameter | description |
 | --- | --- |
-| connections | Sql connections |
+| sqlConnections | Sql connections |
 
 ## Exceptions
 

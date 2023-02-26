@@ -47,6 +47,7 @@
 | interface  | [ILocalTextRegistry](Serenity.Abstractions/ILocalTextRegistry.md) | Abstraction for local text registry which stores translations for local text keys. |
 | interface  | [IPermissionService](Serenity.Abstractions/IPermissionService.md) | Permission service abstraction |
 | interface  | [IRemoveAll](Serenity.Abstractions/IRemoveAll.md) | Abstraction for objects that supports clearing all items, like a cache or local text registry. |
+| interface  | [ISiteAbsoluteUrl](Serenity.Abstractions/ISiteAbsoluteUrl.md) | Interface to access absolute base URL for current site, including the PathBase. Useful for reporting callbacks, or e-mails etc. |
 | interface  | [ITransientGrantor](Serenity.Abstractions/ITransientGrantor.md) | Interface for permission services that supports granting permissions temporarily |
 | interface  | [ITwoLevelCache](Serenity.Abstractions/ITwoLevelCache.md) | An abstraction for a combination of in memory and distributed cache. |
 | interface  | [ITypeSource](Serenity.Abstractions/ITypeSource.md) | Abstraction for type source which is used as an extensibility point for Serenity applications |

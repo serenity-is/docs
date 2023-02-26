@@ -8,3 +8,5 @@ public interface IUploadOptions
 ```
 
 ## See Also
+
+* **Source:** *[IUploadOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IUploadOptions.cs)*

@@ -23,4 +23,4 @@ public class ReportRegistry : IReportRegistry
 ## See Also
 
 * interface [IReportRegistry](IReportRegistry.md)
-* **Source:** *[ReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/ReportRegistry.cs)*
+* **Source:** *[ReportRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Registry/ReportRegistry.cs)*

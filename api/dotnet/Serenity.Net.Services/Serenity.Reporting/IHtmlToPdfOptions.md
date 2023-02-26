@@ -12,8 +12,10 @@ public interface IHtmlToPdfOptions
 | name | description |
 | --- | --- |
 | [AdditionalUrls](IHtmlToPdfOptions/AdditionalUrls.md) { get; } | Optional list of URLs that should be converted and appended to the document |
+| [AllowedLocalPaths](IHtmlToPdfOptions/AllowedLocalPaths.md) { get; } | List of allowed local folder (or file) paths |
 | [Cookies](IHtmlToPdfOptions/Cookies.md) { get; } | Contains cookies that will be sent to target URL |
 | [CustomArgs](IHtmlToPdfOptions/CustomArgs.md) { get; } | A list of custom arguments to pass to HTML to PDF converter |
+| [DisableLocalFileAccess](IHtmlToPdfOptions/DisableLocalFileAccess.md) { get; set; } | Disables local file access, default is true |
 | [Dpi](IHtmlToPdfOptions/Dpi.md) { get; set; } | Document DPI. Default is unspecified. |
 | [FooterHeaderReplace](IHtmlToPdfOptions/FooterHeaderReplace.md) { get; } | A set of key value pairs that should be search replaced in footer and header |
 | [FooterHtmlUrl](IHtmlToPdfOptions/FooterHtmlUrl.md) { get; set; } | Url of footer HTML page |
@@ -32,9 +34,8 @@ public interface IHtmlToPdfOptions
 | [TimeoutSeconds](IHtmlToPdfOptions/TimeoutSeconds.md) { get; set; } | Timeout for converter in seconds (default 300 seconds / 5 min) |
 | [Url](IHtmlToPdfOptions/Url.md) { get; set; } | The URL that is being converted |
 | [UsePrintMediaType](IHtmlToPdfOptions/UsePrintMediaType.md) { get; set; } | Use Print media type to render document (default true) |
-| [UtilityExePath](IHtmlToPdfOptions/UtilityExePath.md) { get; set; } | Path of wkhtmltopdf.exe, ~/App_Data/Reporting/wkhtmltopdf.exe if not specified |
 | [Zoom](IHtmlToPdfOptions/Zoom.md) { get; set; } | Zoom value like "0.33". Default is unspecified. |
 
 ## See Also
 
-* **Source:** *[IHtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IHtmlToPdfOptions.cs)*
+* **Source:** *[IHtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/IHtmlToPdfOptions.cs)*

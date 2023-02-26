@@ -12,7 +12,7 @@ public class ForeignKeyAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [ForeignKeyAttribute](ForeignKeyAttribute/ForeignKeyAttribute.md)(…) | Specifies that this property is a foreign key to another field in a primary key table. (4 constructors) |
+| [ForeignKeyAttribute](ForeignKeyAttribute/ForeignKeyAttribute.md)(…) | Specifies that this property is a foreign key to another field in a primary key table. (5 constructors) |
 | [Dialect](ForeignKeyAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
 | [Field](ForeignKeyAttribute/Field.md) { get; } | Gets the field. |
 | [NegateDialect](ForeignKeyAttribute/NegateDialect.md) { get; set; } | Gets or sets the negating of the dialect. |

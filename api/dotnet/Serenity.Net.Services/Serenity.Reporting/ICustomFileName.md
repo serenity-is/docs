@@ -15,4 +15,4 @@ public interface ICustomFileName
 
 ## See Also
 
-* **Source:** *[ICustomFileName.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/ICustomFileName.cs)*
+* **Source:** *[ICustomFileName.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/ICustomFileName.cs)*

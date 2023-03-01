@@ -70,7 +70,7 @@ so you need to create one of the objects that derive from it. The `Criteria` cla
 
 ## Criteria Class
 
-The `Criteria` is a simple object that contains an SQL expression as a string, which is usually a field name. 
+The `Criteria` class is a simple object that contains an SQL expression as a string, which is usually a field name. 
 
 ```cs
 new Criteria("MyField")
@@ -128,9 +128,9 @@ BaseCriteria is the base class for all criteria object types. If we used *Criter
 
 ## OR (|) Operator
 
-This is similar to AND operator, though it uses OR.
+This is similar to the `AND` operator, though it uses `OR`.
 
-```
+```cs
 new Criteria("Field1 > 5") |
 new Criteria("Field2 < 4")
 ````
@@ -187,7 +187,7 @@ Automatic parameter numbering starts from 1 by default, but the last number is s
 
 Let's use the criteria in a query:
 
-```
+```cs
 new SqlQuery()
     .From("MyTable")
     .Select("Field999")
@@ -253,7 +253,7 @@ new SqlQuery()
 
 If you don't want to use parameterized queries for some reason, you may put your values as ConstantCriteria objects. They will not be converted to auto parameters.
 
-```
+```cs
 new SqlQuery()
     .From("MyTable")
     .Select("MyField")

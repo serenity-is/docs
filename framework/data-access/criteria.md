@@ -163,7 +163,7 @@ Field6 <= 6
 
 ## Inline Values
 
-When one side of a comparison operator is criteria and the other side is an integer, string, date, guid, etc. value, it is converted to a parameter criteria.
+When one side of a comparison operator is criteria and the other side is an integer, string, date, Guid, etc. value, it is converted to a parameter criteria.
  
 ```cs
 new Criteria("Field1") == 1 &
@@ -389,7 +389,7 @@ WHERE
 
 ## NOT Operator
 
-Use C# `!` (not) operator to use NOT:
+Use the `C#` `NOT` (`!`) operator to use NOT:
 
 ```cs
 !(new Criteria("a") >= 5)

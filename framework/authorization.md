@@ -50,13 +50,13 @@ These permissions can be granted to users directly, or indirectly via their role
 
 ![Permission screen](img/permission-screen.png)
 
-In the screen above we see the textual representations of the permission keys we talk about, but internally they correspond to following free-form strings:
+In the screen above we see the textual representations of the permission keys we talk about, but internally they correspond to the following free-form strings:
 
-- `Administration:DataAuditLog`
-- `Administration:DataExplorer`
-- `Administration:EmailQueue`
-- `Administration:Translation`
-- `Administration:Security`
+- `"Administration:DataAuditLog"`
+- `"Administration:DataExplorer"`
+- `"Administration:EmailQueue"`
+- `"Administration:Translation"`
+- `"Administration:Security"`
 
 ## Declarative Permission Attributes
 
@@ -81,9 +81,9 @@ These permission attributes are assigned to various resource types like entities
     }
 ```
 
-In the example above, the read, modify and lookup permissions for `User` entity is assigned as `Administration:Security`.
+In the example above, the read, modify, and lookup permissions for the `User` entity are assigned as "`Administration:Security`".
 
-If, for example we wanted to assign different permissions for creating, updating and deleting a user:
+If, for example, we wanted to assign different permissions for creating, updating, and deleting a user:
 
 ```cs
     [ReadPermission("Administration:User:Read")]
@@ -97,13 +97,13 @@ If, for example we wanted to assign different permissions for creating, updating
     }
 ```
 
-Having the ability for fine-grained permissions does not always mean you should use them. We don't recommend defining / assigning different permissions for every type of entity and every type of action as it would make managing and maintaining them very difficult. 
+Having the ability for fine-grained permissions does not always mean you should use them. We don't recommend defining/assigning different permissions for every type of entity and every type of action as it would make managing and maintaining them very difficult. 
 
-The usual rule of thumb is, don't introduce a new permission key unless there is an actual need for such fine grained control.
+The usual rule of thumb is, don't introduce a new permission key unless there is an actual need for such fine-grained control.
 
-For example, in Serene we assigned the `Administration:Security` permission for both the `User` and `Role` entities and a number of other operations. Before assigning them individual permission keys, you should ask yourself if there is an actual business requirement for an administrator to `manage only Roles`, while another administrator to `manage only Users`. If yes, define separate permissions, if not wait until you actually need it.
+For example, in Serene, we assigned the `"Administration:Security"` permission for both the `User` and `Role` entities and several other operations. Before assigning them individual permission keys, you should ask yourself if there is an actual business requirement for an administrator to `manage only Roles`, while another administrator `manages only Users`. If yes, define separate permissions, if not wait until you need it.
 
-This is the same for Insert/Update/Delete permissions. Do you really need an administrator to only create users, while another to only update them, while another admin to only delete them?
+This is the same for Insert/Update/Delete permissions. Do you need an administrator to only create users, another to only update them, and another admin to only delete them?
 
 ## Permission Key Definitions
 
@@ -125,7 +125,7 @@ namespace Serene.Administration
 }
 ```
 
-Even though this is not mandatory, it is common practice and is recommended to make it easier to access them via intellisense, determine their display names, and to avoid typing errors.
+Even though this is not mandatory, it is common practice and is recommended to make it easier to access them via intelli-sense, determine their display names, and avoid typing errors.
 
 ## Authorization Attributes for Actions
 
@@ -147,11 +147,11 @@ There are also specialized versions of the `ServiceAuthorize` attribute that rea
 
 ## Impersonation
 
-[IImpersonator](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IImpersonator.md) interface and its default implementation [ImpersonatingUserAccessor](../api/dotnet/Serenity.Net.Core/Serenity.Web/ImpersonatingUserAccessor.md) class provides an option to execute an action as if another user is currently logged in.
+- The [`IImpersonator`](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IImpersonator.md) interface and its default implementation [ImpersonatingUserAccessor](../api/dotnet/Serenity.Net.Core/Serenity.Web/ImpersonatingUserAccessor.md) class provide an option to execute an action as if another user is currently logged in.
 
 This can be useful to call a service that requires special permissions in the context of an admin or another privileged user, while a user with a more limited set of permissions is logged in.
 
-`ImpersonatingUserAccessor` wraps any class implementing the `IUserAccessor` interface and adds impersonation ability to that. 
+`ImpersonatingUserAccessor` wraps any class implementing the `IUserAccessor` interface and adds an impersonation ability to that. 
 
 It is not registered by default, so to use this feature, you should register it in the Startup.cs:
 
@@ -196,13 +196,13 @@ public class SomeHandler : IRequestHandler
 ```
 
 ## Login As (also called impersonation)
-StartSharp also provides an option to login as (e.g. impersonate) another user in the user administration page:
+StartSharp also provides an option to log in as (e.g. impersonate) another user on the user administration page:
 
 ![Impersonate user](img/impersonate-user.png)
 
 By default, only the super admin (e.g. `admin` user) can perform this action. 
 
-You may right-click the spy icon next to a username, and use the `open in new incognito window` menu item. 
+You may right-click the spy icon next to a username, and use the `open-in new incognito window` menu item. 
 
 ![Impersonated user](img/impersonated-user.png)
 
@@ -210,7 +210,7 @@ We don't allow opening in the same browser window, as this would effectively mea
 
 ## Transiently Granting Permissions
 
-Sometimes it would be better to temporarily (e.g. transiently) grant a user some permissions instead of impersonating as an admin. [ITransientGrantor](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ITransientGrantor.md) interface and its default implementation [TransientGrantingPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Web/TransientGrantingPermissionService.md) can do just that.
+Sometimes it would be better to temporarily (e.g. transiently) grant a user some permissions instead of impersonating an admin. [ITransientGrantor](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ITransientGrantor.md) interface and its default implementation [TransientGrantingPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Web/TransientGrantingPermissionService.md) can do just that.
 
 Again, it is not activated by default and requires registration in `Startup.cs`:
 
@@ -255,4 +255,4 @@ public class SomeHandler : IRequestHandler
 }
 ```
 
-Please note that granting a temporary permission is performed in memory and is not stored anywhere.
+Please note that granting temporary permission is performed in memory and is not stored anywhere.

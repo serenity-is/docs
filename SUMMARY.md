@@ -55,8 +55,8 @@
   * [Services](services/README.md)
     * [Service Endpoints](services/service_endpoints.md)
     * [List Request Handler](services/list_request_handler.md)
-  * [Dynamic Scripts](dynamic-scripts/readme.md)
-    * [Lookups](dynamic-scripts/lookups.md)
+  * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
+    * [Lookups](framework/dynamic-scripts/lookups.md)
   * UI
     * Forms & Grids
       * [Attributes](attributes/attributes.md)

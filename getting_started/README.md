@@ -10,7 +10,7 @@ You have a few options to install the Serene template:
 
 * [Installing SERENE from VS Marketplace (Windows)](installing_serene_from_visual_studio_gallery.md)
 
-* [Installing SERENE via NPM/SERIN (Linux, OSX, Windows)](instaling-serene-aspnet-core-version-with-serin.md)
+* [Installing Serene with DotNet New](installing_serene_with_dotnet_new.md)
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ The application requires _Visual Studio 2022+_ with the most recent updates inst
 
 .NET 6 SDK is also only supported in Visual Studio 2022+. 
 
-An alternative option is to use the command line to create projects and use Visual Studio Code if you don't have access to Visual Studio 2022+.
+An alternative option is to use the command line to create projects and work in Visual Studio Code if you don't have access to Visual Studio 2022+.
 
 Please install .NET SDK from:
 

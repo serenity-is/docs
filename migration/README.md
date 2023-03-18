@@ -4,70 +4,71 @@
 
 To avoid confusion, let's start by defining `Update` and `Upgrade (Migration)` which have completely different meanings. 
 
-When we say `Update` it generally means `Updating Serenity NuGet Packages` to their `latest versions`. This is just about fetching latest versions of binary NuGet packages and most of the time that does not require any manual code modification.
+When we say `Update` it generally means `Updating Serenity NuGet Packages` to their `latest versions`. This is just about fetching the latest versions of binary NuGet packages and most of the time that does not require any manual code modification.
 
-Meanwhile, `upgrade (or migration)` involves breaking changes and there will be some modifications that needs to be applied to your code manually. 
+Meanwhile, an `upgrade (or migration)` involves breaking changes and there will be some modifications that need to be applied to your code manually. 
 
 > Migration is sometimes confused with *Database Migration* so we refer to it as a *upgrade*.
 
-If you *update* Serenity packages and see that something does not work as it should, you should visit *Migrations* section on this site to understand what to do. It is also a good idea to visit this site before *trying a update* to see if there are any breaking changes.
+If you *update* Serenity packages and see that something does not work as it should, you should visit the *Migrations* section on this site to understand what to do. It is also a good idea to visit this site before *trying an update* to see if there are any breaking changes.
 
-Premium StartSharp customers can use [`stargen`](stargen.md) tool to automate *updates* and *upgrades* if any.
+Premium StartSharp customers can use the [`stargen`](stargen.md) tool to automate *updates* and *upgrades* if any.
 
 * [Updating/Upgrading Using Stargen](stargen.md)
 
 ## Identifying Packages to Update
 
-To see which `Serenity` packages you need to update, first have a look at your csproj file:
+To see which `Serenity` packages you need to update, first have a look at your .csproj file:
 
 ```xml
-<PackageReference Include="Serenity.Pro.Scripts" Version="5.0.12" />
-<PackageReference Include="Serenity.Net.Web" Version="5.0.20" />
-<PackageReference Include="Serenity.Assets" Version="5.0.19" />
-<PackageReference Include="Serenity.Scripts" Version="5.0.20" />
-<PackageReference Include="Serenity.Demo.ThemeSamples" Version="5.0.20.1" />
+<PackageReference Include="Serenity.Net.Web" Version="6.5.2" />
+<PackageReference Include="Serenity.Assets" Version="6.5.2" />
+<PackageReference Include="Serenity.Scripts" Version="6.5.2" />
+<PackageReference Include="Serenity.Demo.AdvancedSamples" Version="6.5.2.0" />
+<PackageReference Include="Serenity.Pro.Coder" Version="6.5.2.0" />
+<PackageReference Include="Serenity.Pro.Extensions" Version="6.5.2.0" />
 ```
 
-Take a note of any `PackageReference` include that starts with `Serenity.`
+Take note of any `PackageReference` include that starts with `Serenity.`
 
 ## Updating Serenity Packages
 
 Updating `Serenity` packages only updates `Serenity NuGet Packages` to their `most recent versions`.
 
-Open a command prompt at your project directory and execute following commands in order:
+Open a command prompt in your project directory and execute the following commands in order:
 
 ### Base Package Updates
 
 ```cmd
 dotnet restore
-dotnet add package Serenity.Net.Web
 dotnet add package Serenity.Assets
 dotnet add package Serenity.Scripts
+dotnet add package Serenity.Net.Web
+dotnet add package Serenity.Extensions
 ```
 
 > If you use `Package Manager Console` in Visual Studio you may also try `Update-Package` command instead of `dotnet add package`.
 
 ### Pro (Premium) Package Updates
 
-If you are a StartSharp customer, please make sure you have **serenity.is** package source configured and execute following for **only the packages** you actually use:
+If you are a StartSharp customer, please make sure you have **serenity.is** premium package source configured, and execute the following commands **only for the packages** you use:
 
 > Please follow directions at https://serenity.is/Dashboard if you don't have serenity.is premium package source configured.
 
 ```bat
 # these are fundamental packages thare usually referenced
+dotnet add package Serenity.Pro.Coder
 dotnet add package Serenity.Pro.Extensions
 dotnet add package Serenity.Pro.Theme
-dotnet add package Serenity.Pro.UI
 ```
 
-Not all pro packages might be listed above. Please check your project file for references starting with **Serenity.Pro**.
+Not all pro packages might be listed above. Please check your project file for references starting with a `Serenity.Pro` prefix.
 
 ### Updating Feature Packages
 
-If you have common / premium feature packages like `Serenity.Demo.ThemeSamples` etc in your project, you'll need to also update them (otherwise you shouldn't):
+If you have common/premium feature packages like `Serenity.Demo.Northwind` etc in your project, you'll need to also update them (otherwise you shouldn't):
 
 ```cmd
-dotnet add package Serenity.Demo.ThemeSamples
 dotnet add package Serenity.Demo.Northwind
 dotnet add package Serenity.Demo.BasicSamples
 
@@ -78,25 +79,46 @@ dotnet add package Serenity.Pro.DataExplorer
 dotnet add package Serenity.Pro.EmailClient
 dotnet add package Serenity.Pro.EmailQueue
 dotnet add package Serenity.Pro.Meeting
+dotnet add package Serenity.Pro.OpenIddict
 dotnet add package Serenity.Pro.Organization
+dotnet add package Serenity.Pro.UI
 dotnet add package Serenity.Pro.WorkLog
 ```
 
 ### Updating Sergen (Serenity Code Generator)
 
-`Sergen` is a `dotnet tool` developed for Serenity applications, and is used to generate new entities / services / pages. 
+`Sergen` is a `dotnet tool` developed for Serenity applications and is used to generate new entities/services/pages. 
 
 It is also integrated with the build process to perform some transformations and share types between `TypeScript` and `C#` code (by generating code on build).
 
-You should always keep `sergen` up-to-date with Serenity version (e.g. their versions should match). Otherwise, as the code generated by an older version might not be compatible with a recent Serenity version, it may result in compile / runtime errors.
+You should always keep `sergen` up-to-date with the Serenity version (e.g. their versions should match). Otherwise, as the code generated by an older version might not be compatible with a recent Serenity version, it may result in compile / runtime errors.
 
-Run the following command to update `sergen` tool:
+Run the following command to update the `sergen` tool:
 
 ```cmd
 dotnet tool update sergen
 ```
 
+## Updating the NPM package references
+
+You should generally update the following package references in your package.json to their latest available version:
+
+```json
+{
+    "@serenity-is/corelib": "6.6.0",
+    "@serenity-is/tsbuild": "6.6.0"
+}
+```
+
+This is important especially if you are using ES modules (any project after 6.1.x does by default).
+
+The version numbers don't always match the latest Serenity version. Visual Studio should provide autocomplete support to identify the latest NPM package version. Or you may look at the package.json file in `StartSharp`/`Serene` repository. `Stargen` can also automatically update them during migration.
+
+After changing the versions in `package.json` please run `npm install` in the project directory, and restart Visual Studio so that the TypeScript language service will be aware of the changes.
+
 ## Copying Content to wwwroot with `dotnet sergen restore`
+
+> Most of our premium packages uses Razor class library and static web assets feature now, and the situation explained below should not apply to them.
 
 This part is `critical` and is usually ignored or forgotten by some users leading to `runtime script errors`. 
 
@@ -108,9 +130,7 @@ We implemented a workaround for that limitation by using `sergen`. Everytime you
 dotnet sergen restore
 ```
 
-Otherwise you might still be using old versions of Serenity and other third party scripts / css files. 
-
-> Most of our premium packages uses Razor class library  / static web assets feature now, and the situation explained above should not apply to them.
+Otherwise you might still be using old versions of Serenity and other third-party script/stylesheet files. 
 
 This also restores (or updates) TypeScript `.d.ts` to your `typings` directory from Serenity packages.
 
@@ -126,6 +146,8 @@ For example, if you created your project from a v3.14.x template, and the latest
 
 * 3.14.x to 5.0.12
 * 5.0.12 to 5.0.20
+
+If you don't see an upgrade on the left `Migration` section, there may not be any special upgrade steps required other than updating the packages. Please also check the `Release Notes` section for information about changes, and non-mandatory fixes that you might need to apply.
 
 StartSharp customers should see the following document and use *Stargen* tool to automate the update / upgrade process:
 

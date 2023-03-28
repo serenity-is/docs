@@ -6,15 +6,17 @@ Similar to this, even if he can't see users from other tenants by default, he ca
 
 Time to hack again.
 
-Open Chrome console and type this:
-```js
-new MultiTenancy.Administration.UserDialog().loadByIdAndOpenDialog(1)
-```
-for modular typescript
+Open Users page then open Chrome console and type this:
 ```js
 new (Q.getType('StartSharp.Administration.UserDialog'))().loadByIdAndOpenDialog(1)
 ```
 > Make sure you have `@Decorators.registerClass("StartSharp.Administration.UserDialog")` on top of your UserDialog class
+
+if you are using namespaced typescript, open Chrome console and type this:
+```js
+new MultiTenancy.Administration.UserDialog().loadByIdAndOpenDialog(1)
+```
+
 
 As you see, anyone could open user dialog for *admin* and update it.
 

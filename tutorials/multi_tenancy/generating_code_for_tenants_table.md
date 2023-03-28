@@ -11,7 +11,7 @@ Launch *Sergen* and generate code for *Tenants* table in *Default* connection:
 Next we'll define a lookup script in *TenantRow* and set DisplayName property to *Tenants*:
 
 ```csharp
-namespace MultiTenancy.Administration.Entities
+namespace MultiTenancy.Administration
 {
     //...
     [ConnectionKey("Default"), DisplayName("Tenants"), 
@@ -34,10 +34,17 @@ Let's define a Administration:Tenants permission that only *admin* user will hav
 ```csharp
 namespace MultiTenancy.Administration
 {
+    [NestedPermissionKeys]
+    [DisplayName("Administration")]
     public class PermissionKeys
     {
+        [Description("User, Role Management and Permissions")]
         public const string Security = "Administration:Security";
+
+        [Description("Languages and Translations")]
         public const string Translation = "Administration:Translation";
+
+        [Description("Tenant Management")]
         public const string Tenants = "Administration:Tenants";
     }
 }
@@ -46,7 +53,7 @@ namespace MultiTenancy.Administration
 And use it on TenantRow:
 
 ```csharp
-[ConnectionKey("Default"), DisplayNahme("Tenants"), 
+[ConnectionKey("Default"), DisplayName("Tenants"), 
  InstanceName("Tenant"), TwoLevelCached]
 [ReadPermission(PermissionKeys.Tenants)]
 [ModifyPermission(PermissionKeys.Tenants)]

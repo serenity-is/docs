@@ -8,7 +8,7 @@ As we set default value for *TenantId* to *1* in migrations, now *User2* has *1*
 
 We have to set new users *TenantId* to same value with logged in user.
 
-Modify *SetInternalFields* method of *UserRepository* like below:
+Modify *SetInternalFields* method of *UserSaveHandler* like below:
 
 ```cs
 protected override void SetInternalFields()

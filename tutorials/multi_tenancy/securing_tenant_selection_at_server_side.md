@@ -45,7 +45,7 @@ Serenity provides field level permissions. Edit *UserRow.cs* to let the users wi
 ```csharp
 [LookupEditor(typeof(TenantRow))]
 [ReadPermission(PermissionKeys.Tenants)]
-public Int32? TenantId
+public int? TenantId
 {
     get => Fields.TenantId[this];
     set => Fields.TenantId[this] = value;

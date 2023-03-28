@@ -130,34 +130,38 @@ The methods we implement here, corresponds to methods we override in *RoleReposi
 Now revert every change we made in *RoleRepository.cs*:
 
 ```cs
-private class MySaveHandler : SaveRequestHandler<MyRow>
+public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
 {
-    public MySaveHandler(IRequestContext context)
-            : base(context)
+    public RoleSaveHandler(IRequestContext context)
+         : base(context)
+    {
+    }
+
+    //removed methods we override
+
+    //...
+}
+
+public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
+{
+    public RoleDeleteHandler(IRequestContext context)
+         : base(context)
     {
     }
 }
 
-private class MyDeleteHandler : DeleteRequestHandler<MyRow>
+public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
 {
-    public MyDeleteHandler(IRequestContext context)
-            : base(context)
+    public RoleRetrieveHandler(IRequestContext context)
+         : base(context)
     {
     }
 }
 
-private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
+public class RoleListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IRoleListHandler
 {
-    public MyRetrieveHandler(IRequestContext context)
-            : base(context)
-    {
-    }
-}
-
-private class MyListHandler : ListRequestHandler<MyRow>
-{
-    public MyListHandler(IRequestContext context)
-            : base(context)
+    public RoleListHandler(IRequestContext context)
+         : base(context)
     {
     }
 }
@@ -166,10 +170,10 @@ private class MyListHandler : ListRequestHandler<MyRow>
 And add *IMultiTenantRow* interface to *RoleRow*:
 
 ```cs
-namespace MultiTenancy.Administration.Entities
+namespace MultiTenancy.Administration
 {
     //...
-    public sealed class RoleRow : Row, IIdRow, INameRow, IMultiTenantRow
+    public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow, IMultiTenantRow
     {
         //...
         public Int32Field TenantIdField

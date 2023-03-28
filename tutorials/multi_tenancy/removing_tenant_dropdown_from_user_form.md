@@ -17,9 +17,11 @@ We need to remove *Tenant* field from the user form. But we need that field for 
 Build the project, auto transform all and add method below to *UserDialog.ts*:
 
 ```ts
+import { localText, Authorization } from "@serenity-is/corelib/q";
+//...
 protected getPropertyItems() {
     var items = super.getPropertyItems();
-    if (!Q.Authorization.hasPermission("Administration:Tenants"))
+    if (!Authorization.hasPermission("Administration:Tenants"))
         items = items.filter(x => x.name != UserRow.Fields.TenantId);
     return items;
 }

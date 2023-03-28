@@ -9,13 +9,13 @@ Again, a user in one tenant shouldn't see or modify roles in other tenants and w
 We start by adding *TenantId* property to *RoleRow.cs*:
 
 ```csharp
-namespace MultiTenancy.Administration.Entities
+namespace MultiTenancy.Administration
 {
     //...
-    public sealed class RoleRow : Row, IIdRow, INameRow
+    public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow
     {
         [Insertable(false), Updatable(false)]
-        public Int32? TenantId
+        public int? TenantId
         {
             get => Fields.TenantId[this];
             set => Fields.TenantId[this] = value;
@@ -33,10 +33,10 @@ namespace MultiTenancy.Administration.Entities
 }
 ```
 
-Then we'll do several changes in *RoleRepository.cs*:
+Then we'll do several changes in *RequestsHandlers*:
 
 ```csharp
-private class MySaveHandler : SaveRequestHandler<MyRow>
+public class RoleSaveHandler :  SaveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
 {
     //...
     
@@ -60,7 +60,7 @@ private class MySaveHandler : SaveRequestHandler<MyRow>
     }
 }
 
-private class MyDeleteHandler : DeleteRequestHandler<MyRow>
+public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
 {
     //...
     
@@ -73,7 +73,7 @@ private class MyDeleteHandler : DeleteRequestHandler<MyRow>
     }
 }
 
-private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
+public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
 {
     //...
 
@@ -86,7 +86,7 @@ private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
     }
 }
 
-private class MyListHandler : ListRequestHandler<MyRow>
+public class RoleListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IRoleListHandler
 {
     //...
 

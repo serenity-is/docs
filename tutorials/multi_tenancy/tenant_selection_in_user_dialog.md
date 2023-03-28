@@ -7,10 +7,10 @@ This field, should only be seen and edited by *admin* user. Other users, even if
 Let's first add it to *UserRow.cs*:
 
 ```cs
-namespace MultiTenancy.Administration.Entities
+namespace MultiTenancy.Administration
 {
     //...
-    public sealed class UserRow : LoggingRow, IIdRow, INameRow
+    public sealed class UserRow : LoggingRow<UserRow.RowFields>, IIdRow, INameRow, IIsActiveRow
     {
         //...
         [DisplayName("Last Directory Update"), Insertable(false), Updatable(false)]
@@ -22,14 +22,14 @@ namespace MultiTenancy.Administration.Entities
 
         [DisplayName("Tenant"), ForeignKey("Tenants", "TenantId"), LeftJoin("tnt")]
         [LookupEditor(typeof(TenantRow))]
-        public Int32? TenantId
+        public int? TenantId
         {
             get => Fields.TenantId[this];
             set => Fields.TenantId[this] = value;
         }
 
         [DisplayName("Tenant"), Expression("tnt.TenantName")]
-        public String TenantName
+        public string TenantName
         {
             get => Fields.TenantName[this];
             set => Fields.TenantName[this] = value;
@@ -60,20 +60,20 @@ namespace MultiTenancy.Administration.Forms
     using System.ComponentModel;
 
     [FormScript("Administration.User")]
-    [BasedOnRow(typeof(Entities.UserRow))]
+    [BasedOnRow(typeof(UserRow))]
     public class UserForm
     {
-        public String Username { get; set; }
-        public String DisplayName { get; set; }
+        public string Username { get; set; }
+        public string DisplayName { get; set; }
         [EmailEditor]
-        public String Email { get; set; }
+        public string Email { get; set; }
         [PasswordEditor]
-        public String Password { get; set; }
+        public string Password { get; set; }
         [PasswordEditor, OneWay]
-        public String PasswordConfirm { get; set; }
+        public string PasswordConfirm { get; set; }
         [OneWay]
         public string Source { get; set; }
-        public Int32? TenantId { get; set; }
+        public int? TenantId { get; set; }
     }
 }
 ```

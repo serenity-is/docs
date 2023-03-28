@@ -6,38 +6,49 @@ Similar to this, even if he can't see users from other tenants by default, he ca
 
 Time to hack again.
 
-Open Chrome console and type this:
+Open Users page then open Chrome console and type this:
+```js
+new (Q.getType('StartSharp.Administration.UserDialog'))().loadByIdAndOpenDialog(1)
+```
+> Make sure you have `@Decorators.registerClass("StartSharp.Administration.UserDialog")` on top of your UserDialog class
 
+if you are using namespaced typescript, open Chrome console and type this:
 ```js
 new MultiTenancy.Administration.UserDialog().loadByIdAndOpenDialog(1)
 ```
 
+
 As you see, anyone could open user dialog for *admin* and update it.
 
-*MultiTenancy.Administration.UserDialog* is the dialog class that is opened when you click a username in user administration page.
+*UserDialog* is the dialog class that is opened when you click a username in user administration page.
 
 We created a new instance of it, and asked to load a user entity by its ID. Admin user has an ID of *1*.
 
-To load the entity with ID 1, dialog called *Retrieve* service of *UserRepository*.
+To load the entity with ID 1, dialog called *Retrieve* service of *UserRetrieveHandler*.
 
-Remember that we did filtering in *List* method of *UserRepository*, not *Retrieve*. So, service has no idea, if it should return this record from another tenant, or not.
+Remember that we did filtering in *List* method of *UserListHandler*, not *Retrieve*. So, service has no idea, if it should return this record from another tenant, or not.
 
-It's time to secure retrieve service in UserRepository:
+It's time to secure retrieve service in UserRetrieveHandler:
 
 ```cs
-private class MyRetrieveHandler : RetrieveRequestHandler<MyRow>
-{
-    protected override void PrepareQuery(SqlQuery query)
+ public class UserRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IUserRetrieveHandler
     {
-        base.PrepareQuery(query);
+        public UserRetrieveHandler(IRequestContext context)
+             : base(context)
+        {
+        }
 
-        if (!Permissions.HasPermission(PermissionKeys.Tenants))
-            query.Where(fld.TenantId == User.GetTenantId());
+        protected override void PrepareQuery(SqlQuery query)
+        {
+            base.PrepareQuery(query);
+
+            if (!Permissions.HasPermission(PermissionKeys.Tenants))
+                query.Where(MyRow.Fields.TenantId == User.GetTenantId());
+        }
     }
-}
 ```
 
-We did same changes in MyListHandler before.
+We did same changes in UserListHandler before.
 
 If you try same Javascript code now, you'll get an error:
 
@@ -45,7 +56,7 @@ If you try same Javascript code now, you'll get an error:
 Record not found. It might be deleted or you don't have required permissions!
 ```
 
-But, we could still update record calling `Update` service manually. So, we need to secure *MySaveHandler* too.
+But, we could still update record calling `Update` service manually. So, we need to secure *UserSaveHandler* too.
 
 Change its *ValidateRequest* method like this:
 
@@ -75,25 +86,43 @@ There are delete and undelete handlers in UserRepository, and they suffer from s
 Using similar methods, we need to secure them too:
 
 ```cs
-private class MyDeleteHandler : DeleteRequestHandler<MyRow>
-{
-    protected override void ValidateRequest()
+ public class UserDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IUserDeleteHandler
     {
-        base.ValidateRequest();
+        public UserDeleteHandler(IRequestContext context)
+             : base(context)
+        {
+        }
 
-        if (Row.TenantId != User.GetTenantId())
-            Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
+        protected override void ValidateRequest()
+        {
+            base.ValidateRequest();
+
+            if (Row.TenantId != User.GetTenantId())
+                Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
+        }
+
+       //...
     }
-}
+```
 
-private class MyUndeleteHandler : UndeleteRequestHandler<MyRow>
-{
-    protected override void ValidateRequest()
+If you have undelete handler you should validate on that as well.
+
+```cs
+ public class UserUndeleteHandler : UndeleteRequestHandler<MyRow, MyRequest, MyResponse>, IUserUndeleteHandler
     {
-        base.ValidateRequest();
+        public UserUndeleteHandler(IRequestContext context)
+             : base(context)
+        {
+        }
 
-        if (Row.TenantId != User.GetTenantId())
-            Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
+        protected override void ValidateRequest()
+        {
+            base.ValidateRequest();
+
+            if (Row.TenantId != User.GetTenantId())
+                Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
+        }
+
+       //...
     }
-}
 ```

@@ -6,7 +6,7 @@ We first need a Tenants table.
 
 As MovieDB already have records, we'll define a primary tenant with ID 1, and set all existing records TenantId to it.
 
-It's time to write a migration, actually two migrations, one for Northwind and one for Default database.
+It's time to write a migration for Default database.
 
 **DefaultDB_20170430_134800_MultiTenant.cs:**
 

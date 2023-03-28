@@ -84,7 +84,7 @@ Here we check if any of the new permission keys that are tried to be granted, ar
 
 After add this new `ITypeSource` interface to the constructor, we need to update the endpoints as well for the inject `ITypeSource` to the related repositories.
 
-*RolePermissionController.cs*
+*RolePermissionEndpoint.cs*
 
 ```cs
 //...
@@ -105,7 +105,7 @@ public RolePermissionListResponse List(IDbConnection connection, RolePermissionL
 }
 ```
 
-*UserPermissionController.cs*
+*UserPermissionEndpoint.cs*
 
 ```cs
 //...

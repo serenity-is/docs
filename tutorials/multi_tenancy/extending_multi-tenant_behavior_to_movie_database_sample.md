@@ -13,7 +13,7 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow, IMulti
 {
     //...
     [Insertable(false), Updatable(false)]
-    public Int32? TenantId
+    public int? TenantId
     {
         get => Fields.TenantId[this];
         set => Fields.TenantId[this] = value;

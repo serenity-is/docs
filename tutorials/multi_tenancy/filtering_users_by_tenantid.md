@@ -29,14 +29,14 @@ namespace MultiTenancy.Administration
 }
 ```
 
-This is the class that is returns when you ask for current user through *Authorization.UserDefinition*.
+This is the class that is returns when you ask for current user through *GetUserDefinition*.
 
 We also need to modify the code where this class is loaded. In the same folder, edit *UserRetrieveService.cs* and change *GetFirst* method like below:
 
 ```cs
 private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
 {
-    var user = connection.TrySingle<Entities.UserRow>(criteria);
+    var user = connection.TrySingle<MyRow>(criteria);
     if (user != null)
         return new UserDefinition
         {
@@ -110,26 +110,27 @@ namespace MultiTenancy
 }
 ```
 
-Now, it's time to filter listed users by *TenantId*. Open *UserRepository.cs*, locate *MyListHandler* class and modify it like this:
+Now, it's time to filter listed users by *TenantId*. Open *UserListHandler.cs*, locate *UserListHandler* class and modify it like this:
 
 ```cs
-private class MyListHandler : ListRequestHandler<MyRow>
-{
-    public MyListHandler(IRequestContext context)
-            : base(context)
+ public class UserListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IUserListHandler
     {
-    }
+        public UserListHandler(IRequestContext context)
+             : base(context)
+        {
+        }
 
-    protected override void ApplyFilters(SqlQuery query)
-    {
-        base.ApplyFilters(query);
-        
-        if (Permissions.HasPermission(PermissionKeys.Tenants))
-            return;
-        
-        query.Where(fld.TenantId == User.GetTenantId());
+        protected override void ApplyFilters(SqlQuery query)
+        {
+            base.ApplyFilters(query);
+
+            if (Permissions.HasPermission(PermissionKeys.Tenants))
+                return;
+
+            query.Where(MyRow.Fields.TenantId == User.GetTenantId());
+        }
+        //...
     }
-}
 ```
 
 Here, we first get tenant id from the logged user claims. Then we filter the users by tenant id. In this case, all users must have `TenantId` value, otherwise an exception will throw.

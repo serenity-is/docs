@@ -34,10 +34,13 @@ We should add some checks to prevent this:
 public class UserPermissionRepository
 {
     public ITypeSource TypeSource { get; }
-    public UserPermissionRepository(IRequestContext context, ITypeSource typeSource)
+    public ISqlConnections SqlConnections { get; }
+
+    public UserPermissionRepository(IRequestContext context, ITypeSource typeSource, ISqlConnections sqlConnections)
             : base(context)
     {
         TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
+        SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
     }
     
     public SaveResponse Update(IUnitOfWork uow, 
@@ -49,7 +52,7 @@ public class UserPermissionRepository
         foreach (var p in request.Permissions)
             newList[p.PermissionKey] = p.Grant ?? false;
 
-        var allowedKeys = ListPermissionKeys(this.Cache.Memory, this.TypeSource);
+        var allowedKeys = ListPermissionKeys(this.Cache, this.SqlConnections, this.TypeSource);
         if (newList.Keys.Any(x => !allowedKeys.Contains(x)))
             throw new AccessViolationException();
         //...
@@ -63,6 +66,16 @@ using Serenity.Abstractions;
 
 public class RolePermissionRepository
 {
+    public ITypeSource TypeSource { get; }
+    public ISqlConnections SqlConnections { get; }
+
+    public RolePermissionRepository(IRequestContext context, ITypeSource typeSource, ISqlConnections sqlConnections)
+            : base(context)
+    {
+        TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
+        SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+    }
+    
     public SaveResponse Update(IUnitOfWork uow, 
         RolePermissionUpdateRequest request)
     {
@@ -72,7 +85,7 @@ public class RolePermissionRepository
             StringComparer.OrdinalIgnoreCase);
 
         var allowedKeys = UserPermissionRepository
-            .ListPermissionKeys(this.Cache.Memory, this.TypeSource);
+            .ListPermissionKeys(this.Cache, this.SqlConnections, this.TypeSource);
         if (newList.Any(x => !allowedKeys.Contains(x)))
             throw new AccessViolationException();
         //...
@@ -93,15 +106,17 @@ using Serenity.Abstractions;
 
 [HttpPost, AuthorizeUpdate(typeof(MyRow))]
 public SaveResponse Update(IUnitOfWork uow, RolePermissionUpdateRequest request,
-    [FromServices] ITypeSource typeSource)
+    [FromServices] ITypeSource typeSource,
+    [FromServices] ISqlConnections sqlConnections)
 {
-    return new MyRepository(Context, typeSource).Update(uow, request);
+    return new MyRepository(Context, typeSource, sqlConnections).Update(uow, request);
 }
 
 public RolePermissionListResponse List(IDbConnection connection, RolePermissionListRequest request,
-    [FromServices] ITypeSource typeSource)
+    [FromServices] ITypeSource typeSource,
+    [FromServices] ISqlConnections sqlConnections)
 {
-    return new MyRepository(Context, typeSource).List(connection, request);
+    return new MyRepository(Context, typeSource, sqlConnections).List(connection, request);
 }
 ```
 
@@ -114,20 +129,23 @@ using Serenity.Abstractions;
 
 [HttpPost, AuthorizeUpdate(typeof(MyRow))]
 public SaveResponse Update(IUnitOfWork uow, UserPermissionUpdateRequest request,
-    [FromServices] ITypeSource typeSource)
+    [FromServices] ITypeSource typeSource,
+    [FromServices] ISqlConnections sqlConnections)
 {
-    return new MyRepository(Context, typeSource).Update(uow, request);
+    return new MyRepository(Context, typeSource, sqlConnections).Update(uow, request);
 }
 
 public ListResponse<MyRow> List(IDbConnection connection, UserPermissionListRequest request,
-    [FromServices] ITypeSource typeSource)
+    [FromServices] ITypeSource typeSource,
+    [FromServices] ISqlConnections sqlConnections)
 {
-    return new MyRepository(Context, typeSource).List(connection, request);
+    return new MyRepository(Context, typeSource, sqlConnections).List(connection, request);
 }
 
 public ListResponse<string> ListRolePermissions(IDbConnection connection, UserPermissionListRequest request,
-    [FromServices] ITypeSource typeSource)
+    [FromServices] ITypeSource typeSource,
+    [FromServices] ISqlConnections sqlConnections)
 {
-    return new MyRepository(Context, typeSource).ListRolePermissions(connection, request);
+    return new MyRepository(Context, typeSource, sqlConnections).ListRolePermissions(connection, request);
 }
 ```

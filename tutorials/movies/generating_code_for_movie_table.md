@@ -57,7 +57,7 @@ When prompted, enter *Movie* as class identifier.
 >
 > Our table name is *Movie* so it is also a valid and fine C# identifier, so let's leave *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
 >
-> This name is also used in other class names. For example our page controller will be named *MovieController*.
+> This name is also used in other class names. For example our page controller will be named *MoviePage*.
 > It also determines the page url, in this sample our editing page will be at URL */MovieDB/Movie*.
 >
 > #### Please Note!

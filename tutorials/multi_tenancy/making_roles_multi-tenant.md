@@ -59,7 +59,9 @@ public class RoleSaveHandler :  SaveRequestHandler<MyRow, MyRequest, MyResponse>
         }
     }
 }
+```
 
+```csharp
 public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
 {
     //...
@@ -72,30 +74,36 @@ public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyRespon
             Permissions.ValidatePermission(PermissionKeys.Tenants, Localizer);
     }
 }
+```
 
+```csharp
 public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
 {
     //...
 
+    private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
     protected override void PrepareQuery(SqlQuery query)
     {
         base.PrepareQuery(query);
 
         if (!Permissions.HasPermission(PermissionKeys.Tenants))
-            query.Where(fld.TenantId == User.GetTenantId());
+            query.Where(Fld.TenantId == User.GetTenantId());
     }
 }
+```
 
+```csharp
 public class RoleListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IRoleListHandler
 {
     //...
 
+    private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
     protected override void ApplyFilters(SqlQuery query)
     {
         base.ApplyFilters(query);
 
         if (!Permissions.HasPermission(PermissionKeys.Tenants))
-            query.Where(fld.TenantId == User.GetTenantId());
+            query.Where(Fld.TenantId == User.GetTenantId());
     }
 }
 ```

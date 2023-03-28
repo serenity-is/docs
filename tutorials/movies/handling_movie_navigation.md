@@ -8,7 +8,7 @@ Open _MovieDBNavigation.cs_ in the module folder.  In it you'll find this line:
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "MovieDB/Movie", 
-    typeof(MyPages.MovieController), icon: null)]
+    typeof(MyPages.MoviePage), icon: null)]
 ```
 
 First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
@@ -19,7 +19,7 @@ Lets change it to _Movie Database/Movies_.
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "Movie Database/Movie", 
-    typeof(MyPages.MovieController), icon: "fa-video-camera")]
+    typeof(MyPages.MoviePage), icon: "fa-video-camera")]
 ```
 
 ![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
@@ -50,7 +50,7 @@ Just cut the below lines from _MovieDBNavigation.cs_:
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "Movie Database/Movies", 
-    typeof(MyPages.MovieController), icon: "fa-video-camera")]
+    typeof(MyPages.MoviePage), icon: "fa-video-camera")]
 ```
 
 Move it into _NavigationItems.cs_ and modify it like this:
@@ -64,7 +64,7 @@ using MovieDB = MovieTutorial.MovieDB.Pages;
 
 [assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies", 
-    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
+    typeof(MovieDB.MoviePage), icon: "fa-video-camera")]
 ```
 
 Here we also declared a navigation menu \(Movie Database\) with _film_ icon. When you don't have an explicitly defined navigation menu, Serenity implicitly creates one, but in this case you can't order menu yourself, or set menu icon.

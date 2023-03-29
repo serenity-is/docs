@@ -105,6 +105,8 @@
     * [Data Tables Integration](startsharp/features/data-tables-integration.md)
     * [Bootstrap Table & Form](startsharp/features/bootstrap-table-form.md)
     * [Long Running Action with Progress](startsharp/features/long-running-action-progress.md)
+    * [OpenId Server Integration](startsharp/features/openid-integration.md)
+    * [Example Mobile Application](startsharp/features/mobile-application.md)
   * [FAQ](startsharp/faq.md)
 * Migration
   * [Introduction](migration/README.md)

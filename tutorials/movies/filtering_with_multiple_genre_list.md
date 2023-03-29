@@ -82,7 +82,7 @@ We changed MyRequest from *Serenity.Services.ListRequest* to *MovieTutorial.Movi
 And another little change in *MovieEndpoint.cs*, which is the actual web service:
 
 ```cs
-public class MovieController : ServiceEndpoint
+public class MovieEndpoint : ServiceEndpoint
 {
     //...
     public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request,

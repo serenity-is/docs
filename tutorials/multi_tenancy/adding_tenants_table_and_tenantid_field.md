@@ -8,15 +8,15 @@ As MovieDB already have records, we'll define a primary tenant with ID 1, and se
 
 It's time to write a migration for Default database.
 
-**DefaultDB_20170430_134800_MultiTenant.cs:**
+**DefaultDB_20221230_134800_MultiTenant.cs:**
 
 ```csharp
 using FluentMigrator;
 
 namespace MultiTenancy.Migrations.DefaultDB
 {
-    [Migration(20170430134800)]
-    public class DefaultDB_20170430_134800_MultiTenant
+    [Migration(20221230_134800)]
+    public class DefaultDB_20221230_134800_MultiTenant
         : AutoReversingMigration
     {
         public override void Up()
@@ -72,8 +72,8 @@ using FluentMigrator;
 
 namespace MultiTenancy.Migrations.DefaultDB
 {
-    [Migration(20170430194100)]
-    public class DefaultDB_20170430_194100_MovieDB_MultiTenant
+    [Migration(20221230_194100)]
+    public class DefaultDB_20221230_194100_MovieDB_MultiTenant
         : AutoReversingMigration
     {
         public override void Up()

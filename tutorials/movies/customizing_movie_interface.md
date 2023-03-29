@@ -34,6 +34,8 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
+> Note: In StartSharp, you may see RowTemplate sub class in the generated code. This is a new feature in StartSharp, which allows you to use minimized row classes. You will not see RowFields class in the generated code, but it will be generated in the background. They work the same way.
+
 We'll talk about entities (or rows) later, let's now focus on our target and change its DisplayName attribute value to *Runtime (mins)":
 
 ```cs

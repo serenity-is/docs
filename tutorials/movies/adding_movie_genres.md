@@ -65,7 +65,7 @@ Open *Modules/Movie/MovieDBNavigation.cs*, cut the navigation link shown below:
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "MovieDB/Genre",
-    typeof(MyPages.GenresController), icon: null)]
+    typeof(MyPages.GenresPage), icon: null)]
 ````
 
 And move it to *Modules/Common/Navigation/NavigationItems.cs*:
@@ -74,9 +74,9 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 //...
 [assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies",
-    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
+    typeof(MovieDB.MoviePage), icon: "fa-video-camera")]
 [assembly: NavigationLink(2200, "Movie Database/Genres",
-    typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
+    typeof(MovieDB.GenrePage), icon: "fa-thumb-tack")]
 //...
 ```
 

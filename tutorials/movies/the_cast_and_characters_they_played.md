@@ -76,7 +76,7 @@ Open *Modules/Movie/MovieDBNavigation.cs*, cut the navigation link shown below:
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "MovieDB/Person",
-    typeof(MyPages.PersonController), icon: null)]
+    typeof(MyPages.PersonPage), icon: null)]
 ````
 
 And move it to *Modules/Common/Navigation/NavigationItems.cs*:
@@ -85,11 +85,11 @@ And move it to *Modules/Common/Navigation/NavigationItems.cs*:
 //...
 [assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(2100, "Movie Database/Movies",
-    typeof(MovieDB.MovieController), icon: "fa-video-camera")]
+    typeof(MovieDB.MoviePage), icon: "fa-video-camera")]
 [assembly: NavigationLink(2200, "Movie Database/Genres",
-    typeof(MovieDB.GenreController), icon: "fa-thumb-tack")]
+    typeof(MovieDB.GenrePage), icon: "fa-thumb-tack")]
 [assembly: NavigationLink(2300, "Movie Database/Person",
-    typeof(MovieDB.PersonController), icon: "fa-users")]
+    typeof(MovieDB.PersonPage), icon: "fa-users")]
 //...
 ```
 
@@ -175,8 +175,7 @@ namespace MovieTutorial.MovieDB
         }
 
         //change NameField to Fullname
-        [DisplayName("Full Name"),
-            Expression("(t0.FirstName + ' ' + t0.Lastname)"), QuickSearch, NameProperty]
+        [DisplayName("Full Name"), Concat("t0.FirstName", "' '", "t0.Lastname"), QuickSearch, NameProperty]
         public string Fullname
         {
             get => fields.Fullname[this];
@@ -197,7 +196,8 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-We specified SQL expression *Expression("(t0.FirstName + ' ' + t0.Lastname)")* on top of Fullname property. Thus, it is a server side calculated field. 
+We specified SQL expression *Concat("t0.FirstName", "' '", "t0.Lastname")* on top of Fullname property. Thus, it is a server side calculated field. 
+There is also possible to add custom query with `Expression("(t0.FirstName + ' ' + t0.Lastname)")`. The `ConcatAttribute` is easy way to concat values in sql query.
 
 By adding QuickSearch attribute to FullName, instead of FirstName, grid will now search by default on Fullname field.
 
@@ -527,7 +527,7 @@ The *MovieCastEditDialog* uses default dialog style. This is why our *MovieCastE
 Create a new rule in *wwwroot/Content/site/site.css* file:
 
 ```css
-.s-MovieDB-MovieCastEditDialog > .size {
+.s-MovieDB-MovieCastEditDialog {
     width: 450px;
 }
 
@@ -536,7 +536,7 @@ Create a new rule in *wwwroot/Content/site/site.css* file:
 }
 
 .s-MovieDB-MovieCastEditDialog .s-PropertyGrid .categories { 
-    height: 85px; 
+    height: 95px; 
 }
 ```
 We created a new dialog type *MovieCastEditDialog*, so now our new dialog has a CSS class of *s-MovieDB-MovieCastEditDialog*.
@@ -611,7 +611,7 @@ namespace MovieTutorial.MovieDB.Columns
     using System;
 
     [ColumnsScript("MovieDB.MovieCast")]
-    [BasedOnRow(typeof(Entities.MovieCastRow))]
+    [BasedOnRow(typeof(MovieCastRow))]
     public class MovieCastColumns
     {
         [EditLink, Width(220)]

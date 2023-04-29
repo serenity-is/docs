@@ -88,9 +88,9 @@ notifyInfo(htmlEncode("&'<>"));
 ### Type Aliases
 
 - [Dictionary](corelib_q.md#dictionary)
-- [Group](corelib_q.md#group)
+- [GroupByElement](corelib_q.md#groupbyelement)
+- [GroupByResult](corelib_q.md#groupbyresult)
 - [Grouping](corelib_q.md#grouping)
-- [Groups](corelib_q.md#groups)
 - [NotifyMap](corelib_q.md#notifymap)
 - [ToastContainerOptions](corelib_q.md#toastcontaineroptions)
 - [ToastrOptions](corelib_q.md#toastroptions)
@@ -291,9 +291,38 @@ notifyInfo(htmlEncode("&'<>"));
 
 ___
 
-### Group
+### GroupByElement
 
-Ƭ **Group**<`TItem`\>: `Object`
+Ƭ **GroupByElement**<`TItem`\>: `Object`
+
+A group item returned by `groupBy()`.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `items` | `TItem`[] | the items in the group |
+| `key` | `string` | key of the group |
+| `order` | `number` | index of the item in `inOrder` array |
+| `start` | `number` | index of the first item of this group in the original array |
+
+#### Defined in
+
+[src/q/arrays.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;43)
+
+___
+
+### GroupByResult
+
+Ƭ **GroupByResult**<`TItem`\>: `Object`
+
+Return type of the `groupBy` function.
 
 #### Type parameters
 
@@ -305,14 +334,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `items` | `TItem`[] |
-| `key` | `string` |
-| `order` | `number` |
-| `start` | `number` |
+| `byKey` | { `[key: string]`: [`GroupByElement`](corelib_q.md#groupbyelement)<`TItem`\>;  } |
+| `inOrder` | [`GroupByElement`](corelib_q.md#groupbyelement)<`TItem`\>[] |
 
 #### Defined in
 
-[src/q/arrays.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;33)
+[src/q/arrays.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;57)
 
 ___
 
@@ -332,30 +359,7 @@ ___
 
 #### Defined in
 
-[src/q/arrays.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;127)
-
-___
-
-### Groups
-
-Ƭ **Groups**<`TItem`\>: `Object`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TItem` |
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `byKey` | { `[key: string]`: [`Group`](corelib_q.md#group)<`TItem`\>;  } |
-| `inOrder` | [`Group`](corelib_q.md#group)<`TItem`\>[] |
-
-#### Defined in
-
-[src/q/arrays.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;40)
+[src/q/arrays.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;169)
 
 ___
 
@@ -471,11 +475,13 @@ ___
 
 ▸ **Criteria**(`field`): [`CriteriaBuilder`](../classes/corelib_q.CriteriaBuilder.md)
 
+Creates a new criteria builder containg the passed field name.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `field` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `field` | `string` | The field name. |
 
 #### Returns
 
@@ -483,7 +489,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:659](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;659)
+[src/q/criteria.ts:749](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;749)
 
 ___
 
@@ -643,7 +649,7 @@ ___
 
 ▸ **any**<`TItem`\>(`array`, `predicate`): `boolean`
 
-Tests if any of array elements matches given predicate
+Tests if any of array elements matches given predicate. Prefer Array.some() over this function (e.g. `[1, 2, 3].some(predicate)`).
 
 #### Type parameters
 
@@ -653,18 +659,20 @@ Tests if any of array elements matches given predicate
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `array` | `TItem`[] |
-| `predicate` | (`x`: `TItem`) => `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `TItem`[] | Array to test. |
+| `predicate` | (`x`: `TItem`) => `boolean` | Predicate to test elements. |
 
 #### Returns
 
 `boolean`
 
+True if any element matches.
+
 #### Defined in
 
-[src/q/arrays.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;4)
+[src/q/arrays.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;7)
 
 ___
 
@@ -751,7 +759,7 @@ div is 2000, so a higher z-order shouldn't be used in page.
 
 #### Defined in
 
-[src/q/blockui.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;35)
+[src/q/blockui.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;36)
 
 ___
 
@@ -759,13 +767,15 @@ ___
 
 ▸ **blockUndo**(): `void`
 
+Unblocks the page.
+
 #### Returns
 
 `void`
 
 #### Defined in
 
-[src/q/blockui.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;56)
+[src/q/blockui.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;60)
 
 ___
 
@@ -1019,7 +1029,7 @@ ___
 
 ▸ **count**<`TItem`\>(`array`, `predicate`): `number`
 
-Counts number of array elements that matches a given predicate
+Counts number of array elements that matches a given predicate.
 
 #### Type parameters
 
@@ -1029,10 +1039,10 @@ Counts number of array elements that matches a given predicate
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `array` | `TItem`[] |
-| `predicate` | (`x`: `TItem`) => `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `TItem`[] | Array to test. |
+| `predicate` | (`x`: `TItem`) => `boolean` | Predicate to test elements. |
 
 #### Returns
 
@@ -1040,7 +1050,7 @@ Counts number of array elements that matches a given predicate
 
 #### Defined in
 
-[src/q/arrays.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;11)
+[src/q/arrays.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;16)
 
 ___
 
@@ -1410,7 +1420,7 @@ ___
 
 ▸ **first**<`TItem`\>(`array`, `predicate`): `TItem`
 
-Gets first element in an array that matches given predicate.
+Gets first element in an array that matches given predicate similar to LINQ's First.
 Throws an error if no match is found.
 
 #### Type parameters
@@ -1421,18 +1431,20 @@ Throws an error if no match is found.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `array` | `TItem`[] |
-| `predicate` | (`x`: `TItem`) => `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `TItem`[] | Array to test. |
+| `predicate` | (`x`: `TItem`) => `boolean` | Predicate to test elements. |
 
 #### Returns
 
 `TItem`
 
+First element that matches.
+
 #### Defined in
 
-[src/q/arrays.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;24)
+[src/q/arrays.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;32)
 
 ___
 
@@ -2127,10 +2139,11 @@ ___
 
 ### groupBy
 
-▸ **groupBy**<`TItem`\>(`items`, `getKey`): [`Groups`](corelib_q.md#groups)<`TItem`\>
+▸ **groupBy**<`TItem`\>(`items`, `getKey`): [`GroupByResult`](corelib_q.md#groupbyresult)<`TItem`\>
 
 Groups an array with keys determined by specified getKey() callback.
 Resulting object contains group objects in order and a dictionary to access by key.
+This is similar to LINQ's ToLookup function with some additional details like start index.
 
 #### Type parameters
 
@@ -2140,18 +2153,20 @@ Resulting object contains group objects in order and a dictionary to access by k
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `items` | `TItem`[] |
-| `getKey` | (`x`: `TItem`) => `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `items` | `TItem`[] | Array to group. |
+| `getKey` | (`x`: `TItem`) => `any` | Function that returns key for each item. |
 
 #### Returns
 
-[`Groups`](corelib_q.md#groups)<`TItem`\>
+[`GroupByResult`](corelib_q.md#groupbyresult)<`TItem`\>
+
+GroupByResult object.
 
 #### Defined in
 
-[src/q/arrays.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;49)
+[src/q/arrays.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;70)
 
 ___
 
@@ -2201,7 +2216,7 @@ ___
 
 ▸ **indexOf**<`TItem`\>(`array`, `predicate`): `number`
 
-Gets index of first element in an array that matches given predicate
+Gets index of first element in an array that matches given predicate.
 
 #### Type parameters
 
@@ -2211,10 +2226,10 @@ Gets index of first element in an array that matches given predicate
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `array` | `TItem`[] |
-| `predicate` | (`x`: `TItem`) => `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `TItem`[] | Array to test. |
+| `predicate` | (`x`: `TItem`) => `boolean` | Predicate to test elements. |
 
 #### Returns
 
@@ -2222,7 +2237,7 @@ Gets index of first element in an array that matches given predicate
 
 #### Defined in
 
-[src/q/arrays.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;80)
+[src/q/arrays.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;103)
 
 ___
 
@@ -2343,15 +2358,27 @@ ___
 
 ▸ **insert**(`obj`, `index`, `item`): `void`
 
-Inserts an item to the array at specified index
+Inserts an item to the array at specified index. Prefer Array.splice unless
+you need to support IE.
+
+**`Throws`**
+
+Error if object does not support insert.
+
+**`Example`**
+
+```ts
+insert([1, 2, 3], 1, 4); // [1, 4, 2, 3]
+insert({ insert: (index, item) => { this.splice(index, 0, item); } }
+```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `obj` | `any` |
-| `index` | `number` |
-| `item` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `obj` | `any` | Array or array like object to insert to. |
+| `index` | `number` | Index to insert at. |
+| `item` | `any` | Item to insert. |
 
 #### Returns
 
@@ -2359,7 +2386,7 @@ Inserts an item to the array at specified index
 
 #### Defined in
 
-[src/q/arrays.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;91)
+[src/q/arrays.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;122)
 
 ___
 
@@ -2367,7 +2394,14 @@ ___
 
 ▸ **isArray**(`arg`): arg is any[]
 
-Determines if the object is an array
+Determines if the object is an array. Prefer Array.isArray over this function (e.g. `Array.isArray(obj)`).
+
+**`Example`**
+
+```ts
+isArray([1, 2, 3]); // true
+isArray({}); // false
+```
 
 #### Parameters
 
@@ -2378,6 +2412,8 @@ Determines if the object is an array
 #### Returns
 
 arg is any[]
+
+True if the object is an array.
 
 #### Defined in
 
@@ -2805,12 +2841,26 @@ ___
 
 ▸ **parseCriteria**(`expression`, `params?`): `any`[]
 
+Parses a criteria expression to Serenity Criteria array format.
+The string may optionally contain parameters like `A >= @p1 and B < @p2`.
+
+**`Example`**
+
+```ts
+parseCriteria('A >=
+```
+
+**`P1`**
+
+and B < @p2', { p1: 5, p2: 4 })
+   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `expression` | `string` |
-| `params?` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `expression` | `string` | The criteria expression. |
+| `params?` | `any` | The dictionary containing parameter values like { p1: 10, p2: 20 }. |
 
 #### Returns
 
@@ -2818,16 +2868,28 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;620)
+[src/q/criteria.ts:695](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;695)
 
 ▸ **parseCriteria**(`strings`, `...values`): `any`[]
 
+Parses a criteria expression to Serenity Criteria array format.
+The expression may contain parameter placeholders like `A >= ${p1}`
+where p1 is a variable in the scope.
+
+**`Example`**
+
+```ts
+var a = 5, b = 4;
+parseCriteria`A >= ${a} and B < ${b}` 
+   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `strings` | `TemplateStringsArray` |
-| `...values` | `any`[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `strings` | `TemplateStringsArray` | The string fragments. |
+| `...values` | `any`[] | The tagged template arguments. |
 
 #### Returns
 
@@ -2835,7 +2897,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;621)
+[src/q/criteria.ts:707](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;707)
 
 ___
 
@@ -3484,6 +3546,13 @@ ___
 Gets first element in an array that matches given predicate.
 Throws an error if no matches is found, or there are multiple matches.
 
+**`Example`**
+
+```ts
+first([1, 2, 3], x => x == 2); // 2
+first([1, 2, 3], x => x == 4); // throws error.
+```
+
 #### Type parameters
 
 | Name |
@@ -3492,18 +3561,20 @@ Throws an error if no matches is found, or there are multiple matches.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `array` | `TItem`[] |
-| `predicate` | (`x`: `TItem`) => `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `TItem`[] | Array to test. |
+| `predicate` | (`x`: `TItem`) => `boolean` | Predicate to test elements. |
 
 #### Returns
 
 `TItem`
 
+First element that matches.
+
 #### Defined in
 
-[src/q/arrays.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;109)
+[src/q/arrays.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;151)
 
 ___
 
@@ -3627,6 +3698,12 @@ ___
 Maps an array into a dictionary with keys determined by specified getKey() callback,
 and values that are arrays containing elements for a particular key.
 
+**`Example`**
+
+```ts
+toGrouping([1, 2, 3], x => x % 2 == 0 ? "even" : "odd"); // { odd: [1, 3], even: [2] }
+```
+
 #### Type parameters
 
 | Name |
@@ -3635,18 +3712,20 @@ and values that are arrays containing elements for a particular key.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `items` | `TItem`[] |
-| `getKey` | (`x`: `TItem`) => `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `items` | `TItem`[] | Array to map. |
+| `getKey` | (`x`: `TItem`) => `any` | Function that returns key for each item. |
 
 #### Returns
 
 [`Grouping`](corelib_q.md#grouping)<`TItem`\>
 
+Grouping object.
+
 #### Defined in
 
-[src/q/arrays.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;133)
+[src/q/arrays.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;180)
 
 ___
 
@@ -3848,8 +3927,15 @@ ___
 
 ▸ **tryFirst**<`TItem`\>(`array`, `predicate`): `TItem`
 
-Gets first element in an array that matches given predicate.
+Gets first element in an array that matches given predicate (similar to LINQ's FirstOrDefault).
 Returns null if no match is found.
+
+**`Example`**
+
+```ts
+tryFirst([1, 2, 3], x => x == 2); // 2
+tryFirst([1, 2, 3], x => x == 4); // null
+```
 
 #### Type parameters
 
@@ -3859,18 +3945,20 @@ Returns null if no match is found.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `array` | `TItem`[] |
-| `predicate` | (`x`: `TItem`) => `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `TItem`[] | Array to test. |
+| `predicate` | (`x`: `TItem`) => `boolean` | Predicate to test elements. |
 
 #### Returns
 
 `TItem`
 
+First element that matches.
+
 #### Defined in
 
-[src/q/arrays.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;151)
+[src/q/arrays.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;204)
 
 ___
 

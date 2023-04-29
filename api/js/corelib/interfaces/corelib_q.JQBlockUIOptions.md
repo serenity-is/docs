@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).JQBlockUIOptions
 
+Options for the BlockUI plugin.
+
 ## Table of contents
 
 ### Properties
@@ -18,4 +20,4 @@
 
 #### Defined in
 
-[src/q/blockui.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;4)
+[src/q/blockui.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;5)

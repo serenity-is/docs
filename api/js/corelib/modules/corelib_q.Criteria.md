@@ -26,9 +26,11 @@
 
 • **Operator**: typeof [`CriteriaOperator`](../enums/corelib_q.CriteriaOperator.md)
 
+Provides access to the `CriteriaOperator` enum
+
 #### Defined in
 
-[src/q/criteria.ts:677](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;677)
+[src/q/criteria.ts:774](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;774)
 
 ___
 
@@ -39,6 +41,33 @@ ___
 #### Type declaration
 
 ▸ (`expression`, `params?`): `any`[]
+
+Parses a criteria expression to Serenity Criteria array format.
+The expression string may be a string literal, optionally containining 
+parameters like `A >= @p1 and B < @p2`.
+
+Or, the expression might be a tagged string literal that 
+contain parameter placeholders like `A >= ${p1}`
+where p1 is a variable in the scope.
+
+**`Example`**
+
+```ts
+Criteria.parse("A >=
+```
+
+**`P1`**
+
+and B < @p2", { p1: 5, p2: 4 })
+   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+
+**`Example`**
+
+```ts
+var a = 5; b = 4;
+Criteria.parse`A >= ${a} and B < ${b}`
+   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+```
 
 ##### Parameters
 
@@ -53,6 +82,33 @@ ___
 
 ▸ (`strings`, `...values`): `any`[]
 
+Parses a criteria expression to Serenity Criteria array format.
+The expression string may be a string literal, optionally containining 
+parameters like `A >= @p1 and B < @p2`.
+
+Or, the expression might be a tagged string literal that 
+contain parameter placeholders like `A >= ${p1}`
+where p1 is a variable in the scope.
+
+**`Example`**
+
+```ts
+Criteria.parse("A >=
+```
+
+**`P1`**
+
+and B < @p2", { p1: 5, p2: 4 })
+   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+
+**`Example`**
+
+```ts
+var a = 5; b = 4;
+Criteria.parse`A >= ${a} and B < ${b}`
+   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+```
+
 ##### Parameters
 
 | Name | Type |
@@ -66,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:713](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;713)
+[src/q/criteria.ts:851](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;851)
 
 ## Functions
 
@@ -74,13 +130,15 @@ ___
 
 ▸ **and**(`c1`, `c2`, `...rest`): `any`[]
 
+Ands two or more criteria together.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `c1` | `any`[] |
-| `c2` | `any`[] |
-| `...rest` | `any`[][] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `c1` | `any`[] | First criteria. |
+| `c2` | `any`[] | Second criteria. |
+| `...rest` | `any`[][] | Other criteria. |
 
 #### Returns
 
@@ -88,13 +146,15 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:667](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;667)
+[src/q/criteria.ts:763](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;763)
 
 ___
 
 ### isEmpty
 
 ▸ **isEmpty**(`c`): `boolean`
+
+Determines if a criteria is empty.
 
 #### Parameters
 
@@ -108,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:678](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;678)
+[src/q/criteria.ts:779](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;779)
 
 ___
 
@@ -116,13 +176,15 @@ ___
 
 ▸ **join**(`c1`, `op`, `c2`): `any`[]
 
+Joins two criteria together.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `c1` | `any`[] |
-| `op` | `string` |
-| `c2` | `any`[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `c1` | `any`[] | First criteria. |
+| `op` | `string` | Operator to insert between, e.g. 'or', 'and'. |
+| `c2` | `any`[] | Second criteria |
 
 #### Returns
 
@@ -130,7 +192,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:684](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;684)
+[src/q/criteria.ts:791](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;791)
 
 ___
 
@@ -138,11 +200,13 @@ ___
 
 ▸ **not**(`c`): (`string` \| `any`[])[]
 
+Negates a criteria.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `c` | `any`[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `c` | `any`[] | Criteria to negate. |
 
 #### Returns
 
@@ -150,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;694)
+[src/q/criteria.ts:805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;805)
 
 ___
 
@@ -158,13 +222,15 @@ ___
 
 ▸ **or**(`c1`, `c2`, `...rest`): `any`[]
 
+Ors two or more criteria together.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `c1` | `any`[] |
-| `c2` | `any`[] |
-| `...rest` | `any`[][] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `c1` | `any`[] | First criteria. |
+| `c2` | `any`[] | Second criteria. |
+| `...rest` | `any`[][] | Other criteria. |
 
 #### Returns
 
@@ -172,13 +238,15 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:698](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;698)
+[src/q/criteria.ts:815](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;815)
 
 ___
 
 ### paren
 
 ▸ **paren**(`c`): `any`[]
+
+Puts a criteria in parens. Exists only for compatibility reasons.
 
 #### Parameters
 
@@ -192,4 +260,4 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:709](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;709)
+[src/q/criteria.ts:829](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;829)

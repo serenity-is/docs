@@ -35,9 +35,19 @@ these functions easily in ES modules environment, which is normally hard to do.
 
 • **isLoggedIn**: `boolean`
 
+Checks if the current user is logged in. Prefer `isLoggedInAsync` as this one might block the UI if the `UserData`
+is not already loaded.
+
+**`Example`**
+
+```ts
+if (Authorization.isLoggedIn) {
+    // do something
+}
+
 #### Defined in
 
-[src/q/authorization.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;131)
+[src/q/authorization.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;155)
 
 ___
 
@@ -45,9 +55,18 @@ ___
 
 • **isLoggedInAsync**: `Promise`<`boolean`\>
 
+Checks if the current user is logged in.
+
+**`Example`**
+
+```ts
+if (await Authorization.isLoggedInAsync) {
+    // do something
+}
+
 #### Defined in
 
-[src/q/authorization.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;132)
+[src/q/authorization.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;166)
 
 ___
 
@@ -55,9 +74,19 @@ ___
 
 • **userDefinition**: [`UserDefinition`](../interfaces/corelib_q.UserDefinition.md)
 
+Returns the user data for currently logged user. Prefer `userDefinitionAsync` as this one might block the UI if the `UserData`
+is not already loaded.
+
+**`Example`**
+
+```ts
+if (Authorization.userDefinition.IsAdmin) {
+    // do something
+}
+
 #### Defined in
 
-[src/q/authorization.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;135)
+[src/q/authorization.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;198)
 
 ___
 
@@ -65,9 +94,18 @@ ___
 
 • **userDefinitionAsync**: `Promise`<[`UserDefinition`](../interfaces/corelib_q.UserDefinition.md)\>
 
+Returns the user data for currently logged user.
+
+**`Example`**
+
+```ts
+if ((await Authorization.userDefinitionAsync).IsAdmin) {
+    // do something
+}
+
 #### Defined in
 
-[src/q/authorization.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;136)
+[src/q/authorization.ts:208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;208)
 
 ___
 
@@ -75,9 +113,19 @@ ___
 
 • **username**: `string`
 
+Returns the username for currently logged user. Prefer `usernameAsync` as this one might block the UI if the `UserData`
+is not already loaded.
+
+**`Example`**
+
+```ts
+if (Authorization.username) {
+    // do something
+}
+
 #### Defined in
 
-[src/q/authorization.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;133)
+[src/q/authorization.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;177)
 
 ___
 
@@ -85,9 +133,18 @@ ___
 
 • **usernameAsync**: `Promise`<`string`\>
 
+Returns the username for currently logged user.
+
+**`Example`**
+
+```ts
+if (await Authorization.usernameAsync) {
+    // do something
+}
+
 #### Defined in
 
-[src/q/authorization.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;134)
+[src/q/authorization.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;187)
 
 ## Functions
 
@@ -174,11 +231,15 @@ ___
 
 ▸ **validatePermission**(`permission`): `void`
 
+Throws an error if the current user does not have the specified permission. 
+Prefer `await validatePermissionAsync()` as this one might block the UI if the `UserData`
+is not already loaded.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `permission` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `permission` | `string` | Permission key. It may contain logical operators like A&B\|C. |
 
 #### Returns
 
@@ -186,7 +247,7 @@ ___
 
 #### Defined in
 
-[src/q/authorization.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;115)
+[src/q/authorization.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;121)
 
 ___
 
@@ -194,11 +255,19 @@ ___
 
 ▸ **validatePermissionAsync**(`permission`): `Promise`<`void`\>
 
+Throws an error if the current user does not have the specified permission.
+
+**`Example`**
+
+```ts
+await Authorization.validatePermissionAsync("A&B|C");
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `permission` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `permission` | `string` | Permission key. It may contain logical operators like A&B\|C. |
 
 #### Returns
 
@@ -206,4 +275,4 @@ ___
 
 #### Defined in
 
-[src/q/authorization.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;122)
+[src/q/authorization.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;136)

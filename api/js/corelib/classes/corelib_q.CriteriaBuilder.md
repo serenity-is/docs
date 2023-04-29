@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).CriteriaBuilder
 
+CriteriaBuilder is a class that allows to build unary or binary criteria with completion support.
+
 ## Hierarchy
 
 - `Array`
@@ -180,12 +182,14 @@ ___
 
 ▸ **bw**(`fromInclusive`, `toInclusive`): `any`[]
 
+Creates a between criteria.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fromInclusive` | `any` |
-| `toInclusive` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `fromInclusive` | `any` | from value |
+| `toInclusive` | `any` | to value |
 
 #### Returns
 
@@ -193,7 +197,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;2)
+[src/q/criteria.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;10)
 
 ___
 
@@ -251,11 +255,13 @@ ___
 
 ▸ **contains**(`value`): `any`[]
 
+Creates a contains criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `string` | contains value |
 
 #### Returns
 
@@ -263,7 +269,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;6)
+[src/q/criteria.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;18)
 
 ___
 
@@ -300,11 +306,13 @@ ___
 
 ▸ **endsWith**(`value`): `any`[]
 
+Creates a endsWith criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `string` | endsWith value |
 
 #### Returns
 
@@ -312,7 +320,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;10)
+[src/q/criteria.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;26)
 
 ___
 
@@ -340,11 +348,13 @@ ___
 
 ▸ **eq**(`value`): `any`[]
 
+Creates an equal (=) criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | equal value |
 
 #### Returns
 
@@ -352,7 +362,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;14)
+[src/q/criteria.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;34)
 
 ___
 
@@ -610,11 +620,13 @@ ___
 
 ▸ **ge**(`value`): `any`[]
 
+Creates a greater than or equal criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | greater than or equal value |
 
 #### Returns
 
@@ -622,7 +634,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;22)
+[src/q/criteria.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;50)
 
 ___
 
@@ -630,11 +642,13 @@ ___
 
 ▸ **gt**(`value`): `any`[]
 
+Creates a greater than criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | greater than value |
 
 #### Returns
 
@@ -642,7 +656,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;18)
+[src/q/criteria.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;42)
 
 ___
 
@@ -650,11 +664,13 @@ ___
 
 ▸ **in**(`values`): `any`[]
 
+Creates a in criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `values` | `any`[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `values` | `any`[] | in values |
 
 #### Returns
 
@@ -662,7 +678,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;26)
+[src/q/criteria.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;58)
 
 ___
 
@@ -697,13 +713,15 @@ ___
 
 ▸ **isNotNull**(): `any`[]
 
+Creates a IS NOT NULL criteria
+
 #### Returns
 
 `any`[]
 
 #### Defined in
 
-[src/q/criteria.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;34)
+[src/q/criteria.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;72)
 
 ___
 
@@ -711,13 +729,15 @@ ___
 
 ▸ **isNull**(): `any`[]
 
+Creates a IS NULL criteria
+
 #### Returns
 
 `any`[]
 
 #### Defined in
 
-[src/q/criteria.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;30)
+[src/q/criteria.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;65)
 
 ___
 
@@ -798,11 +818,13 @@ ___
 
 ▸ **le**(`value`): `any`[]
 
+Creates a less than or equal to criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | less than or equal to value |
 
 #### Returns
 
@@ -810,7 +832,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;38)
+[src/q/criteria.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;80)
 
 ___
 
@@ -818,11 +840,13 @@ ___
 
 ▸ **like**(`value`): `any`[]
 
+Creates a LIKE criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | like value |
 
 #### Returns
 
@@ -830,7 +854,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;50)
+[src/q/criteria.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;104)
 
 ___
 
@@ -838,11 +862,13 @@ ___
 
 ▸ **lt**(`value`): `any`[]
 
+Creates a less than criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | less than value |
 
 #### Returns
 
@@ -850,7 +876,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;42)
+[src/q/criteria.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;88)
 
 ___
 
@@ -891,11 +917,13 @@ ___
 
 ▸ **ne**(`value`): `any`[]
 
+Creates a not equal criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | not equal value |
 
 #### Returns
 
@@ -903,7 +931,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;46)
+[src/q/criteria.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;96)
 
 ___
 
@@ -911,11 +939,13 @@ ___
 
 ▸ **notIn**(`values`): `any`[]
 
+Creates a NOT IN criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `values` | `any`[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `values` | `any`[] | array of NOT IN values |
 
 #### Returns
 
@@ -923,7 +953,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;58)
+[src/q/criteria.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;120)
 
 ___
 
@@ -931,11 +961,13 @@ ___
 
 ▸ **notLike**(`value`): `any`[]
 
+Creates a NOT LIKE criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `any` | not like value |
 
 #### Returns
 
@@ -943,7 +975,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;62)
+[src/q/criteria.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;128)
 
 ___
 
@@ -1330,11 +1362,13 @@ ___
 
 ▸ **startsWith**(`value`): `any`[]
 
+Creates a STARTS WITH criteria
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `string` | startsWith value |
 
 #### Returns
 
@@ -1342,7 +1376,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;54)
+[src/q/criteria.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;112)
 
 ___
 

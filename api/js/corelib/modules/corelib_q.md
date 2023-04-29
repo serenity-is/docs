@@ -1,0 +1,4062 @@
+[@serenity-is](../README.md) / [Modules](../modules.md) / corelib/q
+
+# Module: corelib/q
+
+This is the main entry point for `@serenity-is/corelib/q` module. This module mainly contains 
+helper functions.
+
+The types from this module are available by importing from "@serenity-is/corelib/q":
+
+```ts
+import { htmlEncode, notifyInfo } from "serenity-is/corelib/q"
+notifyInfo(htmlEncode("&'<>"));
+```
+  
+> When using classic namespaces instead of the ESM modules, the types and functions in this module are directly available from the global `Q` namespace.
+> e.g. `Q.htmlEncode("&'<>")`
+
+## Table of contents
+
+### Namespaces
+
+- [Authorization](corelib_q.Authorization.md)
+- [Criteria](corelib_q.Criteria.md)
+- [Enum](corelib_q.Enum.md)
+- [ErrorHandling](corelib_q.ErrorHandling.md)
+- [LayoutTimer](corelib_q.LayoutTimer.md)
+- [Router](corelib_q.Router.md)
+- [ScriptData](corelib_q.ScriptData.md)
+
+### Enumerations
+
+- [ColumnSelection](../enums/corelib_q.ColumnSelection.md)
+- [CriteriaOperator](../enums/corelib_q.CriteriaOperator.md)
+- [MemberType](../enums/corelib_q.MemberType.md)
+- [RetrieveColumnSelection](../enums/corelib_q.RetrieveColumnSelection.md)
+- [SummaryType](../enums/corelib_q.SummaryType.md)
+
+### Classes
+
+- [ArgumentNullException](../classes/corelib_q.ArgumentNullException.md)
+- [CriteriaBuilder](../classes/corelib_q.CriteriaBuilder.md)
+- [EditorAttribute](../classes/corelib_q.EditorAttribute.md)
+- [Exception](../classes/corelib_q.Exception.md)
+- [ISlickFormatter](../classes/corelib_q.ISlickFormatter.md)
+- [InvalidCastException](../classes/corelib_q.InvalidCastException.md)
+- [LT](../classes/corelib_q.LT.md)
+- [Lookup](../classes/corelib_q.Lookup.md)
+- [Toastr](../classes/corelib_q.Toastr.md)
+
+### Interfaces
+
+- [AlertOptions](../interfaces/corelib_q.AlertOptions.md)
+- [CommonDialogOptions](../interfaces/corelib_q.CommonDialogOptions.md)
+- [ConfirmOptions](../interfaces/corelib_q.ConfirmOptions.md)
+- [DateFormat](../interfaces/corelib_q.DateFormat.md)
+- [DeleteRequest](../interfaces/corelib_q.DeleteRequest.md)
+- [DeleteResponse](../interfaces/corelib_q.DeleteResponse.md)
+- [DialogButton](../interfaces/corelib_q.DialogButton.md)
+- [HandleRouteEventArgs](../interfaces/corelib_q.HandleRouteEventArgs.md)
+- [IFrameDialogOptions](../interfaces/corelib_q.IFrameDialogOptions.md)
+- [JQBlockUIOptions](../interfaces/corelib_q.JQBlockUIOptions.md)
+- [ListRequest](../interfaces/corelib_q.ListRequest.md)
+- [ListResponse](../interfaces/corelib_q.ListResponse.md)
+- [Locale](../interfaces/corelib_q.Locale.md)
+- [LookupOptions](../interfaces/corelib_q.LookupOptions.md)
+- [NumberFormat](../interfaces/corelib_q.NumberFormat.md)
+- [PostToServiceOptions](../interfaces/corelib_q.PostToServiceOptions.md)
+- [PostToUrlOptions](../interfaces/corelib_q.PostToUrlOptions.md)
+- [PropertyItem](../interfaces/corelib_q.PropertyItem.md)
+- [PropertyItemsData](../interfaces/corelib_q.PropertyItemsData.md)
+- [RetrieveLocalizationRequest](../interfaces/corelib_q.RetrieveLocalizationRequest.md)
+- [RetrieveLocalizationResponse](../interfaces/corelib_q.RetrieveLocalizationResponse.md)
+- [RetrieveRequest](../interfaces/corelib_q.RetrieveRequest.md)
+- [RetrieveResponse](../interfaces/corelib_q.RetrieveResponse.md)
+- [SaveRequest](../interfaces/corelib_q.SaveRequest.md)
+- [SaveRequestWithAttachment](../interfaces/corelib_q.SaveRequestWithAttachment.md)
+- [SaveResponse](../interfaces/corelib_q.SaveResponse.md)
+- [SaveWithLocalizationRequest](../interfaces/corelib_q.SaveWithLocalizationRequest.md)
+- [ServiceError](../interfaces/corelib_q.ServiceError.md)
+- [ServiceOptions](../interfaces/corelib_q.ServiceOptions.md)
+- [ServiceRequest](../interfaces/corelib_q.ServiceRequest.md)
+- [ServiceResponse](../interfaces/corelib_q.ServiceResponse.md)
+- [TypeMember](../interfaces/corelib_q.TypeMember.md)
+- [UndeleteRequest](../interfaces/corelib_q.UndeleteRequest.md)
+- [UndeleteResponse](../interfaces/corelib_q.UndeleteResponse.md)
+- [UserDefinition](../interfaces/corelib_q.UserDefinition.md)
+
+### Type Aliases
+
+- [Dictionary](corelib_q.md#dictionary)
+- [Group](corelib_q.md#group)
+- [Grouping](corelib_q.md#grouping)
+- [Groups](corelib_q.md#groups)
+- [NotifyMap](corelib_q.md#notifymap)
+- [ToastContainerOptions](corelib_q.md#toastcontaineroptions)
+- [ToastrOptions](corelib_q.md#toastroptions)
+- [Type](corelib_q.md#type)
+
+### Variables
+
+- [Config](corelib_q.md#config)
+- [Culture](corelib_q.md#culture)
+- [Invariant](corelib_q.md#invariant)
+- [defaultNotifyOptions](corelib_q.md#defaultnotifyoptions)
+
+### Functions
+
+- [Criteria](corelib_q.md#criteria)
+- [addAttribute](corelib_q.md#addattribute)
+- [addEmptyOption](corelib_q.md#addemptyoption)
+- [addOption](corelib_q.md#addoption)
+- [addTypeMember](corelib_q.md#addtypemember)
+- [addValidationRule](corelib_q.md#addvalidationrule)
+- [alert](corelib_q.md#alert)
+- [alertDialog](corelib_q.md#alertdialog)
+- [any](corelib_q.md#any)
+- [attrEncode](corelib_q.md#attrencode)
+- [autoFullHeight](corelib_q.md#autofullheight)
+- [baseValidateOptions](corelib_q.md#basevalidateoptions)
+- [blockUI](corelib_q.md#blockui)
+- [blockUndo](corelib_q.md#blockundo)
+- [bsModalMarkup](corelib_q.md#bsmodalmarkup)
+- [canLoadScriptData](corelib_q.md#canloadscriptdata)
+- [cast](corelib_q.md#cast)
+- [centerDialog](corelib_q.md#centerdialog)
+- [clearKeys](corelib_q.md#clearkeys)
+- [clearOptions](corelib_q.md#clearoptions)
+- [closePanel](corelib_q.md#closepanel)
+- [coalesce](corelib_q.md#coalesce)
+- [compareStringFactory](corelib_q.md#comparestringfactory)
+- [confirm](corelib_q.md#confirm)
+- [confirmDialog](corelib_q.md#confirmdialog)
+- [count](corelib_q.md#count)
+- [dbText](corelib_q.md#dbtext)
+- [dbTryText](corelib_q.md#dbtrytext)
+- [debounce](corelib_q.md#debounce)
+- [deepClone](corelib_q.md#deepclone)
+- [delegateCombine](corelib_q.md#delegatecombine)
+- [delegateRemove](corelib_q.md#delegateremove)
+- [dialogButtonToBS](corelib_q.md#dialogbuttontobs)
+- [dialogButtonToUI](corelib_q.md#dialogbuttontoui)
+- [endsWith](corelib_q.md#endswith)
+- [executeEverytimeWhenVisible](corelib_q.md#executeeverytimewhenvisible)
+- [executeOnceWhenVisible](corelib_q.md#executeoncewhenvisible)
+- [extend](corelib_q.md#extend)
+- [fieldsProxy](corelib_q.md#fieldsproxy)
+- [findElementWithRelativeId](corelib_q.md#findelementwithrelativeid)
+- [first](corelib_q.md#first)
+- [format](corelib_q.md#format)
+- [formatDate](corelib_q.md#formatdate)
+- [formatDayHourAndMin](corelib_q.md#formatdayhourandmin)
+- [formatISODateTimeUTC](corelib_q.md#formatisodatetimeutc)
+- [formatNumber](corelib_q.md#formatnumber)
+- [getAttributes](corelib_q.md#getattributes)
+- [getBaseType](corelib_q.md#getbasetype)
+- [getColumns](corelib_q.md#getcolumns)
+- [getColumnsAsync](corelib_q.md#getcolumnsasync)
+- [getColumnsData](corelib_q.md#getcolumnsdata)
+- [getColumnsDataAsync](corelib_q.md#getcolumnsdataasync)
+- [getCookie](corelib_q.md#getcookie)
+- [getForm](corelib_q.md#getform)
+- [getFormAsync](corelib_q.md#getformasync)
+- [getFormData](corelib_q.md#getformdata)
+- [getFormDataAsync](corelib_q.md#getformdataasync)
+- [getGlobalThis](corelib_q.md#getglobalthis)
+- [getHighlightTarget](corelib_q.md#gethighlighttarget)
+- [getInstanceType](corelib_q.md#getinstancetype)
+- [getLookup](corelib_q.md#getlookup)
+- [getLookupAsync](corelib_q.md#getlookupasync)
+- [getMembers](corelib_q.md#getmembers)
+- [getNested](corelib_q.md#getnested)
+- [getRemoteData](corelib_q.md#getremotedata)
+- [getRemoteDataAsync](corelib_q.md#getremotedataasync)
+- [getStateStore](corelib_q.md#getstatestore)
+- [getTemplate](corelib_q.md#gettemplate)
+- [getTemplateAsync](corelib_q.md#gettemplateasync)
+- [getType](corelib_q.md#gettype)
+- [getTypeFullName](corelib_q.md#gettypefullname)
+- [getTypeNameProp](corelib_q.md#gettypenameprop)
+- [getTypeShortName](corelib_q.md#gettypeshortname)
+- [getTypes](corelib_q.md#gettypes)
+- [groupBy](corelib_q.md#groupby)
+- [htmlEncode](corelib_q.md#htmlencode)
+- [iframeDialog](corelib_q.md#iframedialog)
+- [indexOf](corelib_q.md#indexof)
+- [information](corelib_q.md#information)
+- [informationDialog](corelib_q.md#informationdialog)
+- [initFormType](corelib_q.md#initformtype)
+- [initFullHeightGridPage](corelib_q.md#initfullheightgridpage)
+- [initializeTypes](corelib_q.md#initializetypes)
+- [insert](corelib_q.md#insert)
+- [isArray](corelib_q.md#isarray)
+- [isAssignableFrom](corelib_q.md#isassignablefrom)
+- [isBS3](corelib_q.md#isbs3)
+- [isBS5Plus](corelib_q.md#isbs5plus)
+- [isEmptyOrNull](corelib_q.md#isemptyornull)
+- [isEnum](corelib_q.md#isenum)
+- [isInstanceOfType](corelib_q.md#isinstanceoftype)
+- [isTrimmedEmpty](corelib_q.md#istrimmedempty)
+- [isValue](corelib_q.md#isvalue)
+- [keyOf](corelib_q.md#keyof)
+- [layoutFillHeight](corelib_q.md#layoutfillheight)
+- [layoutFillHeightValue](corelib_q.md#layoutfillheightvalue)
+- [loadValidationErrorMessages](corelib_q.md#loadvalidationerrormessages)
+- [localText](corelib_q.md#localtext)
+- [localeFormat](corelib_q.md#localeformat)
+- [newBodyDiv](corelib_q.md#newbodydiv)
+- [notifyError](corelib_q.md#notifyerror)
+- [notifyInfo](corelib_q.md#notifyinfo)
+- [notifySuccess](corelib_q.md#notifysuccess)
+- [notifyWarning](corelib_q.md#notifywarning)
+- [outerHtml](corelib_q.md#outerhtml)
+- [padLeft](corelib_q.md#padleft)
+- [parseCriteria](corelib_q.md#parsecriteria)
+- [parseDate](corelib_q.md#parsedate)
+- [parseDayHourAndMin](corelib_q.md#parsedayhourandmin)
+- [parseDecimal](corelib_q.md#parsedecimal)
+- [parseHourAndMin](corelib_q.md#parsehourandmin)
+- [parseISODateTime](corelib_q.md#parseisodatetime)
+- [parseInteger](corelib_q.md#parseinteger)
+- [parseQueryString](corelib_q.md#parsequerystring)
+- [positionToastContainer](corelib_q.md#positiontoastcontainer)
+- [postToService](corelib_q.md#posttoservice)
+- [postToUrl](corelib_q.md#posttourl)
+- [prefixedText](corelib_q.md#prefixedtext)
+- [prop](corelib_q.md#prop)
+- [proxyTexts](corelib_q.md#proxytexts)
+- [registerClass](corelib_q.md#registerclass)
+- [registerEditor](corelib_q.md#registereditor)
+- [registerEnum](corelib_q.md#registerenum)
+- [registerInterface](corelib_q.md#registerinterface)
+- [reloadLookup](corelib_q.md#reloadlookup)
+- [reloadLookupAsync](corelib_q.md#reloadlookupasync)
+- [removeValidationRule](corelib_q.md#removevalidationrule)
+- [replaceAll](corelib_q.md#replaceall)
+- [resolveUrl](corelib_q.md#resolveurl)
+- [round](corelib_q.md#round)
+- [safeCast](corelib_q.md#safecast)
+- [serviceCall](corelib_q.md#servicecall)
+- [serviceRequest](corelib_q.md#servicerequest)
+- [setEquality](corelib_q.md#setequality)
+- [setMobileDeviceMode](corelib_q.md#setmobiledevicemode)
+- [setTypeNameProp](corelib_q.md#settypenameprop)
+- [single](corelib_q.md#single)
+- [splitDateString](corelib_q.md#splitdatestring)
+- [startsWith](corelib_q.md#startswith)
+- [success](corelib_q.md#success)
+- [successDialog](corelib_q.md#successdialog)
+- [text](corelib_q.md#text)
+- [toGrouping](corelib_q.md#togrouping)
+- [toId](corelib_q.md#toid)
+- [toSingleLine](corelib_q.md#tosingleline)
+- [today](corelib_q.md#today)
+- [triggerLayoutOnShow](corelib_q.md#triggerlayoutonshow)
+- [trim](corelib_q.md#trim)
+- [trimEnd](corelib_q.md#trimend)
+- [trimStart](corelib_q.md#trimstart)
+- [trimToEmpty](corelib_q.md#trimtoempty)
+- [trimToNull](corelib_q.md#trimtonull)
+- [trunc](corelib_q.md#trunc)
+- [tryFirst](corelib_q.md#tryfirst)
+- [tryGetText](corelib_q.md#trygettext)
+- [turkishLocaleCompare](corelib_q.md#turkishlocalecompare)
+- [turkishLocaleToUpper](corelib_q.md#turkishlocaletoupper)
+- [validateForm](corelib_q.md#validateform)
+- [validateOptions](corelib_q.md#validateoptions)
+- [validatorAbortHandler](corelib_q.md#validatoraborthandler)
+- [warning](corelib_q.md#warning)
+- [warningDialog](corelib_q.md#warningdialog)
+- [zeroPad](corelib_q.md#zeropad)
+
+## Type Aliases
+
+### Dictionary
+
+Ƭ **Dictionary**<`TItem`\>: `Object`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Index signature
+
+▪ [key: `string`]: `TItem`
+
+#### Defined in
+
+[src/q/system.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;1)
+
+___
+
+### Group
+
+Ƭ **Group**<`TItem`\>: `Object`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `items` | `TItem`[] |
+| `key` | `string` |
+| `order` | `number` |
+| `start` | `number` |
+
+#### Defined in
+
+[src/q/arrays.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;33)
+
+___
+
+### Grouping
+
+Ƭ **Grouping**<`TItem`\>: `Object`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Index signature
+
+▪ [key: `string`]: `TItem`[]
+
+#### Defined in
+
+[src/q/arrays.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;127)
+
+___
+
+### Groups
+
+Ƭ **Groups**<`TItem`\>: `Object`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `byKey` | { `[key: string]`: [`Group`](corelib_q.md#group)<`TItem`\>;  } |
+| `inOrder` | [`Group`](corelib_q.md#group)<`TItem`\>[] |
+
+#### Defined in
+
+[src/q/arrays.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;40)
+
+___
+
+### NotifyMap
+
+Ƭ **NotifyMap**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `iconClass` | `string` |
+| `message?` | `string` |
+| `title?` | `string` |
+| `type` | `string` |
+
+#### Defined in
+
+[src/q/toastr2.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;40)
+
+___
+
+### ToastContainerOptions
+
+Ƭ **ToastContainerOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `containerId?` | `string` |
+| `positionClass?` | `string` |
+| `target?` | `string` |
+
+#### Defined in
+
+[src/q/toastr2.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;5)
+
+___
+
+### ToastrOptions
+
+Ƭ **ToastrOptions**: [`ToastContainerOptions`](corelib_q.md#toastcontaineroptions) & { `closeButton?`: `boolean` ; `closeClass?`: `string` ; `closeDuration?`: `number` \| ``false`` ; `closeEasing?`: `boolean` ; `closeHtml?`: `string` ; `closeMethod?`: `boolean` ; `closeOnHover?`: `boolean` ; `escapeHtml?`: `boolean` ; `extendedTimeOut?`: `number` ; `hideDuration?`: `number` ; `iconClass?`: `string` ; `messageClass?`: `string` ; `newestOnTop?`: `boolean` ; `onCloseClick?`: (`event`: `Event`) => `void` ; `onHidden?`: () => `void` ; `onShown?`: () => `void` ; `onclick?`: (`event`: `MouseEvent`) => `void` ; `positionClass?`: `string` ; `preventDuplicates?`: `boolean` ; `rtl?`: `boolean` ; `showDuration?`: `number` ; `tapToDismiss?`: `boolean` ; `target?`: `string` ; `timeOut?`: `number` ; `titleClass?`: `string` ; `toastClass?`: `string`  }
+
+#### Defined in
+
+[src/q/toastr2.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;11)
+
+___
+
+### Type
+
+Ƭ **Type**: `Function` \| `Object`
+
+#### Defined in
+
+[src/q/system.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;84)
+
+## Variables
+
+### Config
+
+• **Config**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `applicationPath` | `string` | This is the root path of your application. If your application resides under http://localhost/mysite/, your root path is "mysite/". This variable is automatically initialized by reading from a <link> element with ID "ApplicationPath" from current page, which is usually located in your _LayoutHead.cshtml file |
+| `bootstrapMessages` | `boolean` | Set this to true, to prefer bootstrap dialogs over jQuery UI dialogs by default for message dialogs |
+| `emailAllowOnlyAscii` | `boolean` | Email validation by default only allows ASCII characters. Set this to true if you want to allow unicode. |
+| `notLoggedInHandler` | `Function` | This is an optional method for handling when user is not logged in. If a users session is expired and when a NotAuthorized response is received from a service call, Serenity will call this handler, so you may intercept it and notify user about this situation and ask if she wants to login again... |
+| `responsiveDialogs` | `boolean` | **`Obsolete`** defaulted to false before for backward compatibility, now its true by default |
+| `rootNamespaces` | `string`[] | This is the list of root namespaces that may be searched for types. For example, if you specify an editor type of "MyEditor", first a class with name "MyEditor" will be searched, if not found, search will be followed by "Serenity.MyEditor" and "MyApp.MyEditor" if you added "MyApp" to the list of root namespaces. You should usually add your application root namespace to this list in ScriptInitialization.ts file. |
+
+#### Defined in
+
+[src/q/config.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/config.ts#line&#x3D;1)
+
+___
+
+### Culture
+
+• **Culture**: [`Locale`](../interfaces/corelib_q.Locale.md)
+
+#### Defined in
+
+[src/q/formatting.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;89)
+
+___
+
+### Invariant
+
+• **Invariant**: [`Locale`](../interfaces/corelib_q.Locale.md)
+
+#### Defined in
+
+[src/q/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;36)
+
+___
+
+### defaultNotifyOptions
+
+• **defaultNotifyOptions**: [`ToastrOptions`](corelib_q.md#toastroptions)
+
+#### Defined in
+
+[src/q/notify.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;10)
+
+## Functions
+
+### Criteria
+
+▸ **Criteria**(`field`): [`CriteriaBuilder`](../classes/corelib_q.CriteriaBuilder.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `field` | `string` |
+
+#### Returns
+
+[`CriteriaBuilder`](../classes/corelib_q.CriteriaBuilder.md)
+
+#### Defined in
+
+[src/q/criteria.ts:659](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;659)
+
+___
+
+### addAttribute
+
+▸ **addAttribute**(`type`, `attr`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `attr` | `any` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;605)
+
+___
+
+### addEmptyOption
+
+▸ **addEmptyOption**(`select`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `select` | `JQuery` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/html.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;4)
+
+___
+
+### addOption
+
+▸ **addOption**(`select`, `key`, `text`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `select` | `JQuery` \| `HTMLSelectElement` |
+| `key` | `string` |
+| `text` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/html.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;8)
+
+___
+
+### addTypeMember
+
+▸ **addTypeMember**(`type`, `member`): [`TypeMember`](../interfaces/corelib_q.TypeMember.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `member` | [`TypeMember`](../interfaces/corelib_q.TypeMember.md) |
+
+#### Returns
+
+[`TypeMember`](../interfaces/corelib_q.TypeMember.md)
+
+#### Defined in
+
+[src/q/system.ts:279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;279)
+
+___
+
+### addValidationRule
+
+▸ **addValidationRule**(`element`, `eventClass`, `rule`): `JQuery`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+| `eventClass` | `string` |
+| `rule` | (`p1`: `JQuery`) => `string` |
+
+#### Returns
+
+`JQuery`
+
+#### Defined in
+
+[src/q/validation.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;231)
+
+___
+
+### alert
+
+▸ **alert**(`message`, `options?`): `void`
+
+**`Obsolete`**
+
+use alertDialog
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;229)
+
+___
+
+### alertDialog
+
+▸ **alertDialog**(`message`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;229)
+
+___
+
+### any
+
+▸ **any**<`TItem`\>(`array`, `predicate`): `boolean`
+
+Tests if any of array elements matches given predicate
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `array` | `TItem`[] |
+| `predicate` | (`x`: `TItem`) => `boolean` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/arrays.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;4)
+
+___
+
+### attrEncode
+
+▸ **attrEncode**(`s`): `string`
+
+**`Obsolete`**
+
+use htmlEncode as it also encodes quotes
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `any` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/html.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;76)
+
+___
+
+### autoFullHeight
+
+▸ **autoFullHeight**(`element`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layout.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;7)
+
+___
+
+### baseValidateOptions
+
+▸ **baseValidateOptions**(): `JQueryValidation.ValidationOptions`
+
+#### Returns
+
+`JQueryValidation.ValidationOptions`
+
+#### Defined in
+
+[src/q/validation.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;154)
+
+___
+
+### blockUI
+
+▸ **blockUI**(`options`): `void`
+
+Uses jQuery BlockUI plugin to block access to whole page (default) or 
+a part of it, by using a transparent overlay covering the whole area.
+
+**`Remarks`**
+
+If options are not specified, this function blocks 
+whole page with a transparent overlay. Default z-order of the overlay
+div is 2000, so a higher z-order shouldn't be used in page.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | [`JQBlockUIOptions`](../interfaces/corelib_q.JQBlockUIOptions.md) | Parameters for the BlockUI plugin |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/blockui.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;35)
+
+___
+
+### blockUndo
+
+▸ **blockUndo**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/blockui.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;56)
+
+___
+
+### bsModalMarkup
+
+▸ **bsModalMarkup**(`title`, `body`, `modalClass?`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `title` | `string` |
+| `body` | `string` |
+| `modalClass?` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/dialogs.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;120)
+
+___
+
+### canLoadScriptData
+
+▸ **canLoadScriptData**(`name`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/scriptdata.ts:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;270)
+
+___
+
+### cast
+
+▸ **cast**(`instance`, `type`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `instance` | `any` |
+| `type` | [`Type`](corelib_q.md#type) |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;195)
+
+___
+
+### centerDialog
+
+▸ **centerDialog**(`el`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `el` | `JQuery` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layout.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;133)
+
+___
+
+### clearKeys
+
+▸ **clearKeys**(`d`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `d` | `any` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;335)
+
+___
+
+### clearOptions
+
+▸ **clearOptions**(`select`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `select` | `JQuery` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/html.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;15)
+
+___
+
+### closePanel
+
+▸ **closePanel**(`element`, `e?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+| `e?` | `JQueryEventObject` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:438](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;438)
+
+___
+
+### coalesce
+
+▸ **coalesce**(`a`, `b`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `any` |
+| `b` | `any` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;3)
+
+___
+
+### compareStringFactory
+
+▸ **compareStringFactory**(`order`): (`a`: `string`, `b`: `string`) => `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `order` | `string` |
+
+#### Returns
+
+`fn`
+
+▸ (`a`, `b`): `number`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `string` |
+| `b` | `string` |
+
+##### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;60)
+
+___
+
+### confirm
+
+▸ **confirm**(`message`, `onYes`, `options?`): `void`
+
+**`Obsolete`**
+
+use confirmDialog
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `onYes` | () => `void` |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;275)
+
+___
+
+### confirmDialog
+
+▸ **confirmDialog**(`message`, `onYes`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `onYes` | () => `void` |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;275)
+
+___
+
+### count
+
+▸ **count**<`TItem`\>(`array`, `predicate`): `number`
+
+Counts number of array elements that matches a given predicate
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `array` | `TItem`[] |
+| `predicate` | (`x`: `TItem`) => `boolean` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/arrays.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;11)
+
+___
+
+### dbText
+
+▸ **dbText**(`prefix`): (`key`: `string`) => `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `prefix` | `string` |
+
+#### Returns
+
+`fn`
+
+▸ (`key`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+##### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/localtext.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;15)
+
+___
+
+### dbTryText
+
+▸ **dbTryText**(`prefix`): (`key`: `string`) => `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `prefix` | `string` |
+
+#### Returns
+
+`fn`
+
+▸ (`key`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+##### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/localtext.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;57)
+
+___
+
+### debounce
+
+▸ **debounce**<`T`\>(`func`, `wait?`, `immediate?`): `DebouncedFunction`<`T`\>
+
+Returns a function, that, as long as it continues to be invoked, will not
+be triggered. The function also has a property 'clear' that can be used 
+to clear the timer to prevent previously scheduled executions, and flush method
+to invoke scheduled executions now if any.
+
+**`Source`**
+
+underscore.js
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends (...`args`: `any`) => `any` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `func` | `T` | - |
+| `wait?` | `number` | The function will be called after it stops being called for N milliseconds. |
+| `immediate?` | `boolean` | If passed, trigger the function on the leading edge, instead of the trailing. |
+
+#### Returns
+
+`DebouncedFunction`<`T`\>
+
+#### Defined in
+
+[src/q/debounce.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#line&#x3D;39)
+
+___
+
+### deepClone
+
+▸ **deepClone**<`T`\>(`a`, `a2?`, `a3?`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `T` |
+| `a2?` | `any` |
+| `a3?` | `any` |
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[src/q/system.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;23)
+
+___
+
+### delegateCombine
+
+▸ **delegateCombine**(`delegate1`, `delegate2`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `delegate1` | `any` |
+| `delegate2` | `any` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;342)
+
+___
+
+### delegateRemove
+
+▸ **delegateRemove**(`delegate1`, `delegate2`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `delegate1` | `any` |
+| `delegate2` | `any` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:454](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;454)
+
+___
+
+### dialogButtonToBS
+
+▸ **dialogButtonToBS**(`x`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `x` | [`DialogButton`](../interfaces/corelib_q.DialogButton.md) |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/dialogs.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;137)
+
+___
+
+### dialogButtonToUI
+
+▸ **dialogButtonToUI**(`x`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `x` | [`DialogButton`](../interfaces/corelib_q.DialogButton.md) |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/dialogs.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;145)
+
+___
+
+### endsWith
+
+▸ **endsWith**(`s`, `suffix`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+| `suffix` | `string` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/strings.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;1)
+
+___
+
+### executeEverytimeWhenVisible
+
+▸ **executeEverytimeWhenVisible**(`element`, `callback`, `callNowIfVisible`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+| `callback` | `Function` |
+| `callNowIfVisible` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layouttimer.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#line&#x3D;154)
+
+___
+
+### executeOnceWhenVisible
+
+▸ **executeOnceWhenVisible**(`element`, `callback`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+| `callback` | `Function` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layouttimer.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#line&#x3D;138)
+
+___
+
+### extend
+
+▸ **extend**<`T`\>(`a`, `b`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `T` |
+| `b` | `T` |
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[src/q/system.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;16)
+
+___
+
+### fieldsProxy
+
+▸ **fieldsProxy**<`TRow`\>(): `Readonly`<`Record`<keyof `TRow`, `string`\>\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TRow` |
+
+#### Returns
+
+`Readonly`<`Record`<keyof `TRow`, `string`\>\>
+
+#### Defined in
+
+[src/q/system.ts:538](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;538)
+
+___
+
+### findElementWithRelativeId
+
+▸ **findElementWithRelativeId**(`element`, `relativeId`, `context?`): `JQuery`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+| `relativeId` | `string` |
+| `context?` | `HTMLElement` |
+
+#### Returns
+
+`JQuery`
+
+#### Defined in
+
+[src/q/html.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;19)
+
+▸ **findElementWithRelativeId**(`element`, `relativeId`, `context?`): `HTMLElement`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `HTMLElement` |
+| `relativeId` | `string` |
+| `context?` | `HTMLElement` |
+
+#### Returns
+
+`HTMLElement`
+
+#### Defined in
+
+[src/q/html.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;20)
+
+___
+
+### first
+
+▸ **first**<`TItem`\>(`array`, `predicate`): `TItem`
+
+Gets first element in an array that matches given predicate.
+Throws an error if no match is found.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `array` | `TItem`[] |
+| `predicate` | (`x`: `TItem`) => `boolean` |
+
+#### Returns
+
+`TItem`
+
+#### Defined in
+
+[src/q/arrays.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;24)
+
+___
+
+### format
+
+▸ **format**(`format`, `...prm`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `format` | `string` |
+| `...prm` | `any`[] |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;209)
+
+___
+
+### formatDate
+
+▸ **formatDate**(`d`, `format?`, `locale?`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `d` | `string` \| `Date` |
+| `format?` | `string` |
+| `locale?` | [`Locale`](../interfaces/corelib_q.Locale.md) |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;519)
+
+___
+
+### formatDayHourAndMin
+
+▸ **formatDayHourAndMin**(`n`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `n` | `number` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;687)
+
+___
+
+### formatISODateTimeUTC
+
+▸ **formatISODateTimeUTC**(`d`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `d` | `Date` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;706)
+
+___
+
+### formatNumber
+
+▸ **formatNumber**(`num`, `format?`, `decOrLoc?`, `grp?`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `num` | `number` |
+| `format?` | `string` |
+| `decOrLoc?` | `string` \| [`NumberFormat`](../interfaces/corelib_q.NumberFormat.md) |
+| `grp?` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;240)
+
+___
+
+### getAttributes
+
+▸ **getAttributes**(`type`, `attrType`, `inherit?`): `any`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `attrType` | `any` |
+| `inherit?` | `boolean` |
+
+#### Returns
+
+`any`[]
+
+#### Defined in
+
+[src/q/system.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;228)
+
+___
+
+### getBaseType
+
+▸ **getBaseType**(`type`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;203)
+
+___
+
+### getColumns
+
+▸ **getColumns**(`key`): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+
+#### Defined in
+
+[src/q/scriptdata.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;230)
+
+___
+
+### getColumnsAsync
+
+▸ **getColumnsAsync**(`key`): `Promise`<[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;238)
+
+___
+
+### getColumnsData
+
+▸ **getColumnsData**(`key`): [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+
+#### Defined in
+
+[src/q/scriptdata.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;234)
+
+___
+
+### getColumnsDataAsync
+
+▸ **getColumnsDataAsync**(`key`): `Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;242)
+
+___
+
+### getCookie
+
+▸ **getCookie**(`name`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/services.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;8)
+
+___
+
+### getForm
+
+▸ **getForm**(`key`): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+
+#### Defined in
+
+[src/q/scriptdata.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;246)
+
+___
+
+### getFormAsync
+
+▸ **getFormAsync**(`key`): `Promise`<[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;254)
+
+___
+
+### getFormData
+
+▸ **getFormData**(`key`): [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+
+#### Defined in
+
+[src/q/scriptdata.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;250)
+
+___
+
+### getFormDataAsync
+
+▸ **getFormDataAsync**(`key`): `Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;258)
+
+___
+
+### getGlobalThis
+
+▸ **getGlobalThis**(): `any`
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;116)
+
+___
+
+### getHighlightTarget
+
+▸ **getHighlightTarget**(`el`): `HTMLElement`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `el` | `HTMLElement` |
+
+#### Returns
+
+`HTMLElement`
+
+#### Defined in
+
+[src/q/validation.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;146)
+
+___
+
+### getInstanceType
+
+▸ **getInstanceType**(`instance`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `instance` | `any` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;158)
+
+___
+
+### getLookup
+
+▸ **getLookup**<`TItem`\>(`key`): [`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+[`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;214)
+
+___
+
+### getLookupAsync
+
+▸ **getLookupAsync**<`TItem`\>(`key`): `Promise`<[`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<[`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;218)
+
+___
+
+### getMembers
+
+▸ **getMembers**(`type`, `memberTypes`): [`TypeMember`](../interfaces/corelib_q.TypeMember.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `memberTypes` | [`MemberType`](../enums/corelib_q.MemberType.md) |
+
+#### Returns
+
+[`TypeMember`](../interfaces/corelib_q.TypeMember.md)[]
+
+#### Defined in
+
+[src/q/system.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;262)
+
+___
+
+### getNested
+
+▸ **getNested**(`from`, `name`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `from` | `any` |
+| `name` | `string` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;98)
+
+___
+
+### getRemoteData
+
+▸ **getRemoteData**<`TData`\>(`key`): `TData`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`TData`
+
+#### Defined in
+
+[src/q/scriptdata.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;206)
+
+___
+
+### getRemoteDataAsync
+
+▸ **getRemoteDataAsync**<`TData`\>(`key`): `Promise`<`TData`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<`TData`\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;210)
+
+___
+
+### getStateStore
+
+▸ **getStateStore**(`key?`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key?` | `string` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;365)
+
+___
+
+### getTemplate
+
+▸ **getTemplate**(`key`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/scriptdata.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;262)
+
+___
+
+### getTemplateAsync
+
+▸ **getTemplateAsync**(`key`): `Promise`<`string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<`string`\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;266)
+
+___
+
+### getType
+
+▸ **getType**(`name`, `target?`): [`Type`](corelib_q.md#type)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `target?` | `any` |
+
+#### Returns
+
+[`Type`](corelib_q.md#type)
+
+#### Defined in
+
+[src/q/system.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;120)
+
+___
+
+### getTypeFullName
+
+▸ **getTypeFullName**(`type`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | [`Type`](corelib_q.md#type) |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/system.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;146)
+
+___
+
+### getTypeNameProp
+
+▸ **getTypeNameProp**(`type`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | [`Type`](corelib_q.md#type) |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/system.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;138)
+
+___
+
+### getTypeShortName
+
+▸ **getTypeShortName**(`type`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | [`Type`](corelib_q.md#type) |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/system.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;151)
+
+___
+
+### getTypes
+
+▸ **getTypes**(`from?`): `any`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `from?` | `any` |
+
+#### Returns
+
+`any`[]
+
+#### Defined in
+
+[src/q/system.ts:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;310)
+
+___
+
+### groupBy
+
+▸ **groupBy**<`TItem`\>(`items`, `getKey`): [`Groups`](corelib_q.md#groups)<`TItem`\>
+
+Groups an array with keys determined by specified getKey() callback.
+Resulting object contains group objects in order and a dictionary to access by key.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `items` | `TItem`[] |
+| `getKey` | (`x`: `TItem`) => `any` |
+
+#### Returns
+
+[`Groups`](corelib_q.md#groups)<`TItem`\>
+
+#### Defined in
+
+[src/q/arrays.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;49)
+
+___
+
+### htmlEncode
+
+▸ **htmlEncode**(`s`): `string`
+
+Html encodes a string (encodes single and double quotes, & (ampersand), > and < characters)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `any` | String to be HTML encoded |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/html.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;76)
+
+___
+
+### iframeDialog
+
+▸ **iframeDialog**(`options`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | [`IFrameDialogOptions`](../interfaces/corelib_q.IFrameDialogOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;333)
+
+___
+
+### indexOf
+
+▸ **indexOf**<`TItem`\>(`array`, `predicate`): `number`
+
+Gets index of first element in an array that matches given predicate
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `array` | `TItem`[] |
+| `predicate` | (`x`: `TItem`) => `boolean` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/arrays.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;80)
+
+___
+
+### information
+
+▸ **information**(`message`, `onOk`, `options?`): `void`
+
+**`Obsolete`**
+
+use informationDialog
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `onOk` | () => `void` |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;386)
+
+___
+
+### informationDialog
+
+▸ **informationDialog**(`message`, `onOk`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `onOk` | () => `void` |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;386)
+
+___
+
+### initFormType
+
+▸ **initFormType**(`typ`, `nameWidgetPairs`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `typ` | `Function` |
+| `nameWidgetPairs` | `any`[] |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:492](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;492)
+
+___
+
+### initFullHeightGridPage
+
+▸ **initFullHeightGridPage**(`gridDiv`, `opt?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `gridDiv` | `JQuery` |
+| `opt?` | `Object` |
+| `opt.noRoute?` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layout.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;12)
+
+___
+
+### initializeTypes
+
+▸ **initializeTypes**(`root`, `pre`, `limit`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `root` | `any` |
+| `pre` | `string` |
+| `limit` | `number` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;621)
+
+___
+
+### insert
+
+▸ **insert**(`obj`, `index`, `item`): `void`
+
+Inserts an item to the array at specified index
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `obj` | `any` |
+| `index` | `number` |
+| `item` | `any` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/arrays.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;91)
+
+___
+
+### isArray
+
+▸ **isArray**(`arg`): arg is any[]
+
+Determines if the object is an array
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `arg` | `any` |
+
+#### Returns
+
+arg is any[]
+
+#### Defined in
+
+../../../../../Users/volka/AppData/Local/pnpm/global/5/.pnpm/typescript@4.9.3/node_modules/typescript/lib/lib.es5.d.ts:1491
+
+___
+
+### isAssignableFrom
+
+▸ **isAssignableFrom**(`target`, `type`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `target` | `any` |
+| `type` | [`Type`](corelib_q.md#type) |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/system.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;171)
+
+___
+
+### isBS3
+
+▸ **isBS3**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/dialogs.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;90)
+
+___
+
+### isBS5Plus
+
+▸ **isBS5Plus**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/dialogs.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;97)
+
+___
+
+### isEmptyOrNull
+
+▸ **isEmptyOrNull**(`s`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/strings.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;5)
+
+___
+
+### isEnum
+
+▸ **isEnum**(`type`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/system.ts:487](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;487)
+
+___
+
+### isInstanceOfType
+
+▸ **isInstanceOfType**(`instance`, `type`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `instance` | `any` |
+| `type` | [`Type`](corelib_q.md#type) |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/system.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;181)
+
+___
+
+### isTrimmedEmpty
+
+▸ **isTrimmedEmpty**(`s`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/strings.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;9)
+
+___
+
+### isValue
+
+▸ **isValue**(`a`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `any` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/system.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;7)
+
+___
+
+### keyOf
+
+▸ **keyOf**<`T`\>(`prop`): keyof `T`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `prop` | keyof `T` |
+
+#### Returns
+
+keyof `T`
+
+#### Defined in
+
+[src/q/system.ts:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;542)
+
+___
+
+### layoutFillHeight
+
+▸ **layoutFillHeight**(`element`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layout.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;74)
+
+___
+
+### layoutFillHeightValue
+
+▸ **layoutFillHeightValue**(`element`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/layout.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;59)
+
+___
+
+### loadValidationErrorMessages
+
+▸ **loadValidationErrorMessages**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/validation.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;113)
+
+___
+
+### localText
+
+▸ **localText**(`key`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/localtext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;4)
+
+___
+
+### localeFormat
+
+▸ **localeFormat**(`format`, `l`, `...prm`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `format` | `string` |
+| `l` | [`Locale`](../interfaces/corelib_q.Locale.md) |
+| `...prm` | `any`[] |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;213)
+
+___
+
+### newBodyDiv
+
+▸ **newBodyDiv**(): `JQuery`
+
+#### Returns
+
+`JQuery`
+
+#### Defined in
+
+[src/q/html.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;86)
+
+___
+
+### notifyError
+
+▸ **notifyError**(`message`, `title?`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `title?` | `string` |
+| `options?` | [`ToastrOptions`](corelib_q.md#toastroptions) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/notify.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;78)
+
+___
+
+### notifyInfo
+
+▸ **notifyInfo**(`message`, `title?`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `title?` | `string` |
+| `options?` | [`ToastrOptions`](corelib_q.md#toastroptions) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/notify.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;74)
+
+___
+
+### notifySuccess
+
+▸ **notifySuccess**(`message`, `title?`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `title?` | `string` |
+| `options?` | [`ToastrOptions`](corelib_q.md#toastroptions) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/notify.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;70)
+
+___
+
+### notifyWarning
+
+▸ **notifyWarning**(`message`, `title?`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `title?` | `string` |
+| `options?` | [`ToastrOptions`](corelib_q.md#toastroptions) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/notify.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;66)
+
+___
+
+### outerHtml
+
+▸ **outerHtml**(`element`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/html.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;90)
+
+___
+
+### padLeft
+
+▸ **padLeft**(`s`, `len`, `ch?`): `any`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `s` | `string` \| `number` | `undefined` |
+| `len` | `number` | `undefined` |
+| `ch` | `string` | `' '` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/strings.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;13)
+
+___
+
+### parseCriteria
+
+▸ **parseCriteria**(`expression`, `params?`): `any`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `expression` | `string` |
+| `params?` | `any` |
+
+#### Returns
+
+`any`[]
+
+#### Defined in
+
+[src/q/criteria.ts:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;620)
+
+▸ **parseCriteria**(`strings`, `...values`): `any`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `strings` | `TemplateStringsArray` |
+| `...values` | `any`[] |
+
+#### Returns
+
+`any`[]
+
+#### Defined in
+
+[src/q/criteria.ts:621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;621)
+
+___
+
+### parseDate
+
+▸ **parseDate**(`s`, `dateOrder?`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+| `dateOrder?` | `string` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/formatting.ts:782](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;782)
+
+___
+
+### parseDayHourAndMin
+
+▸ **parseDayHourAndMin**(`s`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;759)
+
+___
+
+### parseDecimal
+
+▸ **parseDecimal**(`s`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;460)
+
+___
+
+### parseHourAndMin
+
+▸ **parseHourAndMin**(`value`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;739)
+
+___
+
+### parseISODateTime
+
+▸ **parseISODateTime**(`s`): `Date`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`Date`
+
+#### Defined in
+
+[src/q/formatting.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;724)
+
+___
+
+### parseInteger
+
+▸ **parseInteger**(`s`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:449](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;449)
+
+___
+
+### parseQueryString
+
+▸ **parseQueryString**(`s?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s?` | `string` |
+
+#### Returns
+
+`Object`
+
+#### Defined in
+
+[src/q/services.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;153)
+
+___
+
+### positionToastContainer
+
+▸ **positionToastContainer**(`create`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `create` | `boolean` |
+| `options?` | [`ToastrOptions`](corelib_q.md#toastroptions) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/notify.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;82)
+
+___
+
+### postToService
+
+▸ **postToService**(`options`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | [`PostToServiceOptions`](../interfaces/corelib_q.PostToServiceOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/services.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;169)
+
+___
+
+### postToUrl
+
+▸ **postToUrl**(`options`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | [`PostToUrlOptions`](../interfaces/corelib_q.PostToUrlOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/services.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;191)
+
+___
+
+### prefixedText
+
+▸ **prefixedText**(`prefix`): (`text`: `string`, `key`: `string` \| (`p?`: `string`) => `string`) => `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `prefix` | `string` |
+
+#### Returns
+
+`fn`
+
+▸ (`text`, `key`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `text` | `string` |
+| `key` | `string` \| (`p?`: `string`) => `string` |
+
+##### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/localtext.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;25)
+
+___
+
+### prop
+
+▸ **prop**(`type`, `name`, `getter?`, `setter?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `name` | `string` |
+| `getter?` | `string` |
+| `setter?` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:506](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;506)
+
+___
+
+### proxyTexts
+
+▸ **proxyTexts**(`o`, `p`, `t`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `o` | `Record`<`string`, `any`\> |
+| `p` | `string` |
+| `t` | `Record`<`string`, `any`\> |
+
+#### Returns
+
+`Object`
+
+#### Defined in
+
+[src/q/localtext.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;63)
+
+___
+
+### registerClass
+
+▸ **registerClass**(`type`, `name`, `intf?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `name` | `string` |
+| `intf?` | `any`[] |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:579](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;579)
+
+___
+
+### registerEditor
+
+▸ **registerEditor**(`type`, `name`, `intf?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `name` | `string` |
+| `intf?` | `any`[] |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;584)
+
+___
+
+### registerEnum
+
+▸ **registerEnum**(`type`, `name`, `enumKey?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `name` | `string` |
+| `enumKey?` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;589)
+
+___
+
+### registerInterface
+
+▸ **registerInterface**(`type`, `name`, `intf?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `any` |
+| `name` | `string` |
+| `intf?` | `any`[] |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;599)
+
+___
+
+### reloadLookup
+
+▸ **reloadLookup**<`TItem`\>(`key`): [`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TItem` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+[`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;222)
+
+___
+
+### reloadLookupAsync
+
+▸ **reloadLookupAsync**<`TItem`\>(`key`): `Promise`<[`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TItem` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`Promise`<[`Lookup`](../classes/corelib_q.Lookup.md)<`TItem`\>\>
+
+#### Defined in
+
+[src/q/scriptdata.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;226)
+
+___
+
+### removeValidationRule
+
+▸ **removeValidationRule**(`element`, `eventClass`): `JQuery`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+| `eventClass` | `string` |
+
+#### Returns
+
+`JQuery`
+
+#### Defined in
+
+[src/q/validation.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;240)
+
+___
+
+### replaceAll
+
+▸ **replaceAll**(`str`, `find`, `replace`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `str` | `string` |
+| `find` | `string` |
+| `replace` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/strings.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;53)
+
+___
+
+### resolveUrl
+
+▸ **resolveUrl**(`url`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `url` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/services.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;217)
+
+___
+
+### round
+
+▸ **round**(`n`, `d?`, `rounding?`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `n` | `number` |
+| `d?` | `number` |
+| `rounding?` | `boolean` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;226)
+
+___
+
+### safeCast
+
+▸ **safeCast**(`instance`, `type`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `instance` | `any` |
+| `type` | [`Type`](corelib_q.md#type) |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/system.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;191)
+
+___
+
+### serviceCall
+
+▸ **serviceCall**<`TResponse`\>(`options`): `JQueryXHR`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TResponse` | extends [`ServiceResponse`](../interfaces/corelib_q.ServiceResponse.md) |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<`TResponse`\> |
+
+#### Returns
+
+`JQueryXHR`
+
+#### Defined in
+
+[src/q/services.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;28)
+
+___
+
+### serviceRequest
+
+▸ **serviceRequest**<`TResponse`\>(`service`, `request?`, `onSuccess?`, `options?`): `JQueryXHR`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TResponse` | extends [`ServiceResponse`](../interfaces/corelib_q.ServiceResponse.md) |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `service` | `string` |
+| `request?` | `any` |
+| `onSuccess?` | (`response`: `TResponse`) => `void` |
+| `options?` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<`TResponse`\> |
+
+#### Returns
+
+`JQueryXHR`
+
+#### Defined in
+
+[src/q/services.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;124)
+
+___
+
+### setEquality
+
+▸ **setEquality**(`request`, `field`, `value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `request` | [`ListRequest`](../interfaces/corelib_q.ListRequest.md) |
+| `field` | `string` |
+| `value` | `any` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/services.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;133)
+
+___
+
+### setMobileDeviceMode
+
+▸ **setMobileDeviceMode**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layout.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;82)
+
+___
+
+### setTypeNameProp
+
+▸ **setTypeNameProp**(`type`, `value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `type` | [`Type`](corelib_q.md#type) |
+| `value` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/system.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;142)
+
+___
+
+### single
+
+▸ **single**<`TItem`\>(`array`, `predicate`): `TItem`
+
+Gets first element in an array that matches given predicate.
+Throws an error if no matches is found, or there are multiple matches.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `array` | `TItem`[] |
+| `predicate` | (`x`: `TItem`) => `boolean` |
+
+#### Returns
+
+`TItem`
+
+#### Defined in
+
+[src/q/arrays.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;109)
+
+___
+
+### splitDateString
+
+▸ **splitDateString**(`s`): `string`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`string`[]
+
+#### Defined in
+
+[src/q/formatting.ts:860](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;860)
+
+___
+
+### startsWith
+
+▸ **startsWith**(`s`, `prefix`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+| `prefix` | `string` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/strings.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;22)
+
+___
+
+### success
+
+▸ **success**(`message`, `onOk`, `options?`): `void`
+
+**`Obsolete`**
+
+use successDialog
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `onOk` | () => `void` |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;406)
+
+___
+
+### successDialog
+
+▸ **successDialog**(`message`, `onOk`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `onOk` | () => `void` |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;406)
+
+___
+
+### text
+
+▸ **text**(`key`): `string`
+
+**`Obsolete`**
+
+prefer localText for better discoverability
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/localtext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;4)
+
+___
+
+### toGrouping
+
+▸ **toGrouping**<`TItem`\>(`items`, `getKey`): [`Grouping`](corelib_q.md#grouping)<`TItem`\>
+
+Maps an array into a dictionary with keys determined by specified getKey() callback,
+and values that are arrays containing elements for a particular key.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `items` | `TItem`[] |
+| `getKey` | (`x`: `TItem`) => `any` |
+
+#### Returns
+
+[`Grouping`](corelib_q.md#grouping)<`TItem`\>
+
+#### Defined in
+
+[src/q/arrays.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;133)
+
+___
+
+### toId
+
+▸ **toId**(`id`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `any` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/formatting.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;501)
+
+___
+
+### toSingleLine
+
+▸ **toSingleLine**(`str`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `str` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/strings.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;26)
+
+___
+
+### today
+
+▸ **today**(): `Date`
+
+#### Returns
+
+`Date`
+
+#### Defined in
+
+[src/q/system.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;11)
+
+___
+
+### triggerLayoutOnShow
+
+▸ **triggerLayoutOnShow**(`element`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/layout.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;127)
+
+___
+
+### trim
+
+▸ **trim**(`s`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/strings.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;38)
+
+___
+
+### trimEnd
+
+▸ **trimEnd**(`s`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/strings.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;30)
+
+___
+
+### trimStart
+
+▸ **trimStart**(`s`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/q/strings.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;34)
+
+___
+
+### trimToEmpty
+
+▸ **trimToEmpty**(`s`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/strings.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;42)
+
+___
+
+### trimToNull
+
+▸ **trimToNull**(`s`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/strings.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;46)
+
+___
+
+### trunc
+
+▸ **trunc**(`n`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `n` | `number` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;238)
+
+___
+
+### tryFirst
+
+▸ **tryFirst**<`TItem`\>(`array`, `predicate`): `TItem`
+
+Gets first element in an array that matches given predicate.
+Returns null if no match is found.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TItem` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `array` | `TItem`[] |
+| `predicate` | (`x`: `TItem`) => `boolean` |
+
+#### Returns
+
+`TItem`
+
+#### Defined in
+
+[src/q/arrays.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;151)
+
+___
+
+### tryGetText
+
+▸ **tryGetText**(`key`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/localtext.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;52)
+
+___
+
+### turkishLocaleCompare
+
+▸ **turkishLocaleCompare**(`a`, `b`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `string` |
+| `b` | `string` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;32)
+
+___
+
+### turkishLocaleToUpper
+
+▸ **turkishLocaleToUpper**(`a`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;124)
+
+___
+
+### validateForm
+
+▸ **validateForm**(`form`, `opt`): `JQueryValidation.Validator`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `form` | `JQuery` |
+| `opt` | `ValidationOptions` |
+
+#### Returns
+
+`JQueryValidation.Validator`
+
+#### Defined in
+
+[src/q/validation.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;227)
+
+___
+
+### validateOptions
+
+▸ **validateOptions**(`options?`): `ValidationOptions`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `ValidationOptions` |
+
+#### Returns
+
+`ValidationOptions`
+
+#### Defined in
+
+[src/q/validateoptions.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validateoptions.ts#line&#x3D;61)
+
+___
+
+### validatorAbortHandler
+
+▸ **validatorAbortHandler**(`validator`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `validator` | `any` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/validateoptions.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validateoptions.ts#line&#x3D;54)
+
+___
+
+### warning
+
+▸ **warning**(`message`, `options?`): `void`
+
+**`Obsolete`**
+
+use warningDialog
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;426)
+
+___
+
+### warningDialog
+
+▸ **warningDialog**(`message`, `options?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;426)
+
+___
+
+### zeroPad
+
+▸ **zeroPad**(`n`, `digits`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `n` | `number` |
+| `digits` | `number` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/strings.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;58)

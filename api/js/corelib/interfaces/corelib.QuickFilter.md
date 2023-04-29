@@ -1,0 +1,246 @@
+[@serenity-is](../README.md) / [Modules](../modules.md) / [corelib](../modules/corelib.md) / QuickFilter
+
+# Interface: QuickFilter<TWidget, TOptions\>
+
+[corelib](../modules/corelib.md).QuickFilter
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TWidget` | extends [`Widget`](../classes/corelib.Widget.md)<`TOptions`\> |
+| `TOptions` | `TOptions` |
+
+## Table of contents
+
+### Properties
+
+- [cssClass](corelib.QuickFilter.md#cssclass)
+- [displayText](corelib.QuickFilter.md#displaytext)
+- [element](corelib.QuickFilter.md#element)
+- [field](corelib.QuickFilter.md#field)
+- [handler](corelib.QuickFilter.md#handler)
+- [init](corelib.QuickFilter.md#init)
+- [loadState](corelib.QuickFilter.md#loadstate)
+- [options](corelib.QuickFilter.md#options)
+- [saveState](corelib.QuickFilter.md#savestate)
+- [separator](corelib.QuickFilter.md#separator)
+- [title](corelib.QuickFilter.md#title)
+- [type](corelib.QuickFilter.md#type)
+
+## Properties
+
+### cssClass
+
+• `Optional` **cssClass**: `string`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;23)
+
+___
+
+### displayText
+
+• `Optional` **displayText**: (`w`: `TWidget`, `label`: `string`) => `string`
+
+#### Type declaration
+
+▸ (`w`, `label`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `w` | `TWidget` |
+| `label` | `string` |
+
+##### Returns
+
+`string`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;26)
+
+___
+
+### element
+
+• `Optional` **element**: (`e`: `JQuery`) => `void`
+
+#### Type declaration
+
+▸ (`e`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `e` | `JQuery` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;20)
+
+___
+
+### field
+
+• `Optional` **field**: `string`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;15)
+
+___
+
+### handler
+
+• `Optional` **handler**: (`h`: [`QuickFilterArgs`](corelib.QuickFilterArgs.md)<`TWidget`\>) => `void`
+
+#### Type declaration
+
+▸ (`h`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `h` | [`QuickFilterArgs`](corelib.QuickFilterArgs.md)<`TWidget`\> |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;17)
+
+___
+
+### init
+
+• `Optional` **init**: (`w`: `TWidget`) => `void`
+
+#### Type declaration
+
+▸ (`w`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `w` | `TWidget` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;21)
+
+___
+
+### loadState
+
+• `Optional` **loadState**: (`w`: `TWidget`, `state`: `any`) => `void`
+
+#### Type declaration
+
+▸ (`w`, `state`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `w` | `TWidget` |
+| `state` | `any` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;24)
+
+___
+
+### options
+
+• `Optional` **options**: `TOptions`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;19)
+
+___
+
+### saveState
+
+• `Optional` **saveState**: (`w`: `TWidget`) => `any`
+
+#### Type declaration
+
+▸ (`w`): `any`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `w` | `TWidget` |
+
+##### Returns
+
+`any`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;25)
+
+___
+
+### separator
+
+• `Optional` **separator**: `boolean`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;22)
+
+___
+
+### title
+
+• `Optional` **title**: `string`
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;18)
+
+___
+
+### type
+
+• `Optional` **type**: (`element`: `JQuery`, `options`: `TOptions`) => `TWidget`
+
+#### Type declaration
+
+• **new type**(`element`, `options`)
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `JQuery` |
+| `options` | `TOptions` |
+
+#### Defined in
+
+[src/ui/datagrid/quickfilter.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#line&#x3D;16)

@@ -77,6 +77,9 @@
   * [Serenity.Net.Entity](api/dotnet/Serenity.Net.Entity/README.md)
   * [Serenity.Net.Services](api/dotnet/Serenity.Net.Services/README.md)
   * [Serenity.Net.Web](api/dotnet/Serenity.Net.Web/README.md)
+* API Reference (TypeScript)
+  * [@serenity-is/corelib](api/js/corelib/README.md)
+  * [@serenity-is/sleekgrid](api/js/sleekgrid/README.md)
 * StartSharp
   * [Introduction](startsharp/README.md)
   * Features

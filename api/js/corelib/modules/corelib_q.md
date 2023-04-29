@@ -489,7 +489,7 @@ Creates a new criteria builder containg the passed field name.
 
 #### Defined in
 
-[src/q/criteria.ts:749](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;749)
+[src/q/criteria.ts:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;747)
 
 ___
 
@@ -2852,8 +2852,7 @@ parseCriteria('A >=
 
 **`P1`**
 
-and B < @p2', { p1: 5, p2: 4 })
-   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+and B < @p2', { p1: 5, p2: 4 }) // [[[a], '>=' 5], 'and', [[b], '<', 4]]
 
 #### Parameters
 
@@ -2868,7 +2867,7 @@ and B < @p2', { p1: 5, p2: 4 })
 
 #### Defined in
 
-[src/q/criteria.ts:695](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;695)
+[src/q/criteria.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;694)
 
 ▸ **parseCriteria**(`strings`, `...values`): `any`[]
 
@@ -2880,8 +2879,7 @@ where p1 is a variable in the scope.
 
 ```ts
 var a = 5, b = 4;
-parseCriteria`A >= ${a} and B < ${b}` 
-   => [[[a], '>=' 5], 'and', [[b], '<', 4]]
+parseCriteria`A >= ${a} and B < ${b}` // [[[a], '>=' 5], 'and', [[b], '<', 4]]
 ```
 
 #### Parameters
@@ -2897,7 +2895,7 @@ parseCriteria`A >= ${a} and B < ${b}`
 
 #### Defined in
 
-[src/q/criteria.ts:707](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;707)
+[src/q/criteria.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;705)
 
 ___
 

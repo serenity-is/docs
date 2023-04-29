@@ -44,10 +44,11 @@ is not already loaded.
 if (Authorization.isLoggedIn) {
     // do something
 }
+```
 
 #### Defined in
 
-[src/q/authorization.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;155)
+[src/q/authorization.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;152)
 
 ___
 
@@ -63,10 +64,11 @@ Checks if the current user is logged in.
 if (await Authorization.isLoggedInAsync) {
     // do something
 }
+```
 
 #### Defined in
 
-[src/q/authorization.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;166)
+[src/q/authorization.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;162)
 
 ___
 
@@ -83,10 +85,11 @@ is not already loaded.
 if (Authorization.userDefinition.IsAdmin) {
     // do something
 }
+```
 
 #### Defined in
 
-[src/q/authorization.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;198)
+[src/q/authorization.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;191)
 
 ___
 
@@ -102,10 +105,11 @@ Returns the user data for currently logged user.
 if ((await Authorization.userDefinitionAsync).IsAdmin) {
     // do something
 }
+```
 
 #### Defined in
 
-[src/q/authorization.ts:208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;208)
+[src/q/authorization.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;200)
 
 ___
 
@@ -122,10 +126,11 @@ is not already loaded.
 if (Authorization.username) {
     // do something
 }
+```
 
 #### Defined in
 
-[src/q/authorization.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;177)
+[src/q/authorization.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;172)
 
 ___
 
@@ -141,10 +146,11 @@ Returns the username for currently logged user.
 if (await Authorization.usernameAsync) {
     // do something
 }
+```
 
 #### Defined in
 
-[src/q/authorization.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;187)
+[src/q/authorization.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;181)
 
 ## Functions
 
@@ -275,4 +281,4 @@ await Authorization.validatePermissionAsync("A&B|C");
 
 #### Defined in
 
-[src/q/authorization.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;136)
+[src/q/authorization.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;134)

@@ -59,7 +59,7 @@ BaseEditor.constructor
 
 #### Defined in
 
-[editors/editors.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;8)
+[editors/editors.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L8)
 
 ## Properties
 
@@ -73,7 +73,7 @@ BaseEditor.\_args
 
 #### Defined in
 
-[editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;6)
+[editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L6)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:349](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;349)
+[editors/editors.ts:349](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L349)
 
 ___
 
@@ -97,7 +97,7 @@ BaseEditor.\_defaultValue
 
 #### Defined in
 
-[editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;5)
+[editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L5)
 
 ___
 
@@ -111,7 +111,7 @@ BaseEditor.\_input
 
 #### Defined in
 
-[editors/editors.ts:348](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;348)
+[editors/editors.ts:348](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L348)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:350](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;350)
+[editors/editors.ts:350](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L350)
 
 ## Methods
 
@@ -146,7 +146,7 @@ BaseEditor.applyValue
 
 #### Defined in
 
-[editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;44)
+[editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L44)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:407](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;407)
+[editors/editors.ts:407](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L407)
 
 ___
 
@@ -178,7 +178,7 @@ BaseEditor.destroy
 
 #### Defined in
 
-[editors/editors.ts:425](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;425)
+[editors/editors.ts:425](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L425)
 
 ___
 
@@ -196,7 +196,7 @@ BaseEditor.focus
 
 #### Defined in
 
-[editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;19)
+[editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L19)
 
 ___
 
@@ -214,7 +214,7 @@ BaseEditor.getValue
 
 #### Defined in
 
-[editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;23)
+[editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L23)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:377](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;377)
+[editors/editors.ts:377](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L377)
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:412](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;412)
+[editors/editors.ts:412](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L412)
 
 ___
 
@@ -266,7 +266,7 @@ BaseEditor.init
 
 #### Defined in
 
-[editors/editors.ts:352](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;352)
+[editors/editors.ts:352](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L352)
 
 ___
 
@@ -284,7 +284,7 @@ BaseEditor.isValueChanged
 
 #### Defined in
 
-[editors/editors.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;48)
+[editors/editors.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L48)
 
 ___
 
@@ -308,7 +308,7 @@ BaseEditor.loadValue
 
 #### Defined in
 
-[editors/editors.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;31)
+[editors/editors.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L31)
 
 ___
 
@@ -328,7 +328,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:420](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;420)
+[editors/editors.ts:420](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L420)
 
 ___
 
@@ -342,7 +342,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:403](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;403)
+[editors/editors.ts:403](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L403)
 
 ___
 
@@ -360,7 +360,7 @@ BaseEditor.serializeValue
 
 #### Defined in
 
-[editors/editors.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;40)
+[editors/editors.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L40)
 
 ___
 
@@ -384,7 +384,7 @@ BaseEditor.setValue
 
 #### Defined in
 
-[editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;27)
+[editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L27)
 
 ___
 
@@ -398,7 +398,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:416](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;416)
+[editors/editors.ts:416](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L416)
 
 ___
 
@@ -416,4 +416,4 @@ BaseEditor.validate
 
 #### Defined in
 
-[editors/editors.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;52)
+[editors/editors.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L52)

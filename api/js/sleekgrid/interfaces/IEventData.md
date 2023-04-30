@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[core/event.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;5)
+[core/event.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L5)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;8)
+[core/event.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L8)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;7)
+[core/event.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L7)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;6)
+[core/event.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L6)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;4)
+[core/event.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L4)
 
 ## Methods
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;12)
+[core/event.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L12)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;13)
+[core/event.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L13)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;14)
+[core/event.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L14)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;9)
+[core/event.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L9)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;11)
+[core/event.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L11)
 
 ___
 
@@ -157,4 +157,4 @@ ___
 
 #### Defined in
 
-[core/event.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;10)
+[core/event.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L10)

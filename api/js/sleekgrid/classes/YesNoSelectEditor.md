@@ -51,7 +51,7 @@ BaseEditor.constructor
 
 #### Defined in
 
-[editors/editors.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;8)
+[editors/editors.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L8)
 
 ## Properties
 
@@ -65,7 +65,7 @@ BaseEditor.\_args
 
 #### Defined in
 
-[editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;6)
+[editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L6)
 
 ___
 
@@ -79,7 +79,7 @@ BaseEditor.\_defaultValue
 
 #### Defined in
 
-[editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;5)
+[editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L5)
 
 ___
 
@@ -93,7 +93,7 @@ BaseEditor.\_input
 
 #### Defined in
 
-[editors/editors.ts:218](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;218)
+[editors/editors.ts:218](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L218)
 
 ## Methods
 
@@ -118,7 +118,7 @@ BaseEditor.applyValue
 
 #### Defined in
 
-[editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;44)
+[editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L44)
 
 ___
 
@@ -136,7 +136,7 @@ BaseEditor.destroy
 
 #### Defined in
 
-[editors/editors.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;15)
+[editors/editors.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L15)
 
 ___
 
@@ -154,7 +154,7 @@ BaseEditor.focus
 
 #### Defined in
 
-[editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;19)
+[editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L19)
 
 ___
 
@@ -172,7 +172,7 @@ BaseEditor.getValue
 
 #### Defined in
 
-[editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;23)
+[editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L23)
 
 ___
 
@@ -190,7 +190,7 @@ BaseEditor.init
 
 #### Defined in
 
-[editors/editors.ts:220](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;220)
+[editors/editors.ts:220](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L220)
 
 ___
 
@@ -208,7 +208,7 @@ BaseEditor.isValueChanged
 
 #### Defined in
 
-[editors/editors.ts:238](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;238)
+[editors/editors.ts:238](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L238)
 
 ___
 
@@ -232,7 +232,7 @@ BaseEditor.loadValue
 
 #### Defined in
 
-[editors/editors.ts:230](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;230)
+[editors/editors.ts:230](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L230)
 
 ___
 
@@ -250,7 +250,7 @@ BaseEditor.serializeValue
 
 #### Defined in
 
-[editors/editors.ts:234](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;234)
+[editors/editors.ts:234](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L234)
 
 ___
 
@@ -274,7 +274,7 @@ BaseEditor.setValue
 
 #### Defined in
 
-[editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;27)
+[editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L27)
 
 ___
 
@@ -297,4 +297,4 @@ BaseEditor.validate
 
 #### Defined in
 
-[editors/editors.ts:242](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#line&#x3D;242)
+[editors/editors.ts:242](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L242)

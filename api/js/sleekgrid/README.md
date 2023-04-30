@@ -130,7 +130,7 @@
 
 #### Defined in
 
-[grid/eventargs.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;16)
+[grid/eventargs.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L16)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;35)
+[core/formatting.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L35)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;34)
+[core/formatting.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L34)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;37)
+[core/formatting.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L37)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;19)
+[core/formatting.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L19)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;27)
+[core/formatting.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L27)
 
 ___
 
@@ -307,7 +307,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:1](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;1)
+[core/event.ts:1](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L1)
 
 ## Variables
 
@@ -325,7 +325,7 @@ ___
 
 #### Defined in
 
-[grid/basiclayout.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/basiclayout.ts#line&#x3D;4)
+[grid/basiclayout.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/basiclayout.ts#L4)
 
 ___
 
@@ -343,7 +343,7 @@ ___
 
 #### Defined in
 
-[layouts/frozenlayout.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/layouts/frozenlayout.ts#line&#x3D;4)
+[layouts/frozenlayout.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/layouts/frozenlayout.ts#L4)
 
 ___
 
@@ -357,7 +357,7 @@ A global singleton editor lock.
 
 #### Defined in
 
-[core/editing.ts:176](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;176)
+[core/editing.ts:176](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L176)
 
 ___
 
@@ -367,7 +367,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;41)
+[core/column.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L41)
 
 ___
 
@@ -377,7 +377,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:78](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;78)
+[grid/gridoptions.ts:78](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L78)
 
 ___
 
@@ -408,7 +408,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:159](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;159)
+[core/event.ts:159](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L159)
 
 ___
 
@@ -418,7 +418,7 @@ ___
 
 #### Defined in
 
-[core/base.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#line&#x3D;8)
+[core/base.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L8)
 
 ## Functions
 
@@ -438,7 +438,7 @@ ___
 
 #### Defined in
 
-[formatters/formatters.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#line&#x3D;32)
+[formatters/formatters.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L32)
 
 ___
 
@@ -458,7 +458,7 @@ ___
 
 #### Defined in
 
-[formatters/formatters.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#line&#x3D;36)
+[formatters/formatters.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L36)
 
 ___
 
@@ -487,7 +487,7 @@ ___
 
 #### Defined in
 
-[core/util.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#line&#x3D;60)
+[core/util.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L60)
 
 ___
 
@@ -507,7 +507,7 @@ ___
 
 #### Defined in
 
-[formatters/formatters.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#line&#x3D;12)
+[formatters/formatters.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L12)
 
 ___
 
@@ -527,7 +527,7 @@ ___
 
 #### Defined in
 
-[formatters/formatters.ts:3](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#line&#x3D;3)
+[formatters/formatters.ts:3](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L3)
 
 ___
 
@@ -547,7 +547,7 @@ ___
 
 #### Defined in
 
-[formatters/formatters.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#line&#x3D;27)
+[formatters/formatters.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L27)
 
 ___
 
@@ -568,7 +568,7 @@ ___
 
 #### Defined in
 
-[core/util.ts:1](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#line&#x3D;1)
+[core/util.ts:1](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L1)
 
 ___
 
@@ -590,7 +590,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:58](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;58)
+[core/formatting.ts:58](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L58)
 
 ___
 
@@ -610,7 +610,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;43)
+[core/formatting.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L43)
 
 ___
 
@@ -630,7 +630,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;39)
+[core/formatting.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L39)
 
 ___
 
@@ -650,7 +650,7 @@ ___
 
 #### Defined in
 
-[core/util.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#line&#x3D;39)
+[core/util.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L39)
 
 ___
 
@@ -670,7 +670,7 @@ ___
 
 #### Defined in
 
-[core/util.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#line&#x3D;26)
+[core/util.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L26)
 
 ___
 
@@ -691,7 +691,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:76](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;76)
+[core/column.ts:76](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L76)
 
 ___
 
@@ -711,7 +711,7 @@ ___
 
 #### Defined in
 
-[core/util.ts:88](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#line&#x3D;88)
+[core/util.ts:88](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L88)
 
 ___
 
@@ -731,7 +731,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:185](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;185)
+[core/event.ts:185](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L185)
 
 ___
 
@@ -752,7 +752,7 @@ ___
 
 #### Defined in
 
-[core/util.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#line&#x3D;47)
+[core/util.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L47)
 
 ___
 
@@ -772,7 +772,7 @@ ___
 
 #### Defined in
 
-[core/util.ts:84](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#line&#x3D;84)
+[core/util.ts:84](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L84)
 
 ___
 
@@ -792,4 +792,4 @@ ___
 
 #### Defined in
 
-[core/column.ts:112](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;112)
+[core/column.ts:112](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L112)

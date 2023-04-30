@@ -41,7 +41,7 @@ An event object for passing data to event handlers and letting them control prop
 
 #### Defined in
 
-[core/event.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;23)
+[core/event.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L23)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;22)
+[core/event.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L22)
 
 ## Methods
 
@@ -71,7 +71,7 @@ Returns whether stopImmediatePropagation was called on this event object.\
 
 #### Defined in
 
-[core/event.ts:50](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;50)
+[core/event.ts:50](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L50)
 
 ___
 
@@ -91,7 +91,7 @@ Returns whether stopPropagation was called on this event object.
 
 #### Defined in
 
-[core/event.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;36)
+[core/event.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L36)
 
 ___
 
@@ -111,7 +111,7 @@ Prevents the rest of the handlers from being executed.
 
 #### Defined in
 
-[core/event.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;43)
+[core/event.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L43)
 
 ___
 
@@ -135,4 +135,4 @@ stopPropagation
 
 #### Defined in
 
-[core/event.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;29)
+[core/event.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L29)

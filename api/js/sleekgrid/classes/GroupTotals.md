@@ -60,7 +60,7 @@ formatters during the display.
 
 #### Defined in
 
-[core/group.ts:99](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;99)
+[core/group.ts:99](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L99)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#line&#x3D;5)
+[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L5)
 
 ___
 
@@ -86,7 +86,7 @@ Contains avg
 
 #### Defined in
 
-[core/group.ts:124](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;124)
+[core/group.ts:124](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L124)
 
 ___
 
@@ -100,7 +100,7 @@ Parent Group.
 
 #### Defined in
 
-[core/group.ts:106](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;106)
+[core/group.ts:106](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L106)
 
 ___
 
@@ -115,7 +115,7 @@ Will be set to false for lazy-calculated group totals.
 
 #### Defined in
 
-[core/group.ts:114](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;114)
+[core/group.ts:114](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L114)
 
 ___
 
@@ -127,7 +127,7 @@ Contains max
 
 #### Defined in
 
-[core/group.ts:134](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;134)
+[core/group.ts:134](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L134)
 
 ___
 
@@ -139,7 +139,7 @@ Contains min
 
 #### Defined in
 
-[core/group.ts:129](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;129)
+[core/group.ts:129](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L129)
 
 ___
 
@@ -151,4 +151,4 @@ Contains sum
 
 #### Defined in
 
-[core/group.ts:119](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;119)
+[core/group.ts:119](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L119)

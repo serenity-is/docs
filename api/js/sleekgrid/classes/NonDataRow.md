@@ -36,4 +36,4 @@ A base class that all special / non-data rows (like Group and GroupTotals) deriv
 
 #### Defined in
 
-[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#line&#x3D;5)
+[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L5)

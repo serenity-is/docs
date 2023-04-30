@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[plugins/autotooltips.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#line&#x3D;4)
+[plugins/autotooltips.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L4)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[plugins/autotooltips.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#line&#x3D;5)
+[plugins/autotooltips.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L5)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[plugins/autotooltips.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#line&#x3D;6)
+[plugins/autotooltips.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L6)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[plugins/autotooltips.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#line&#x3D;7)
+[plugins/autotooltips.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L7)

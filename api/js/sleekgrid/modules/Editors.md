@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[editors/index.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;11)
+[editors/index.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L11)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[editors/index.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;9)
+[editors/index.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L9)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[editors/index.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;8)
+[editors/index.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L8)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[editors/index.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;7)
+[editors/index.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L7)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[editors/index.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;13)
+[editors/index.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L13)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[editors/index.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;12)
+[editors/index.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L12)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[editors/index.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;6)
+[editors/index.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L6)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[editors/index.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#line&#x3D;10)
+[editors/index.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/index.ts#L10)

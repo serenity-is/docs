@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[grid/types.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;21)
+[grid/types.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L21)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;16)
+[grid/types.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L16)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;14)
+[grid/types.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L14)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;13)
+[grid/types.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L13)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;15)
+[grid/types.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L15)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;20)
+[grid/types.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L20)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;11)
+[grid/types.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L11)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;22)
+[grid/types.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L22)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;18)
+[grid/types.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L18)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;19)
+[grid/types.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L19)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[grid/types.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;17)
+[grid/types.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L17)
 
 ___
 
@@ -137,4 +137,4 @@ ___
 
 #### Defined in
 
-[grid/types.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#line&#x3D;12)
+[grid/types.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L12)

@@ -49,7 +49,7 @@ A simple publisher-subscriber implementation.
 
 #### Defined in
 
-[core/event.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;60)
+[core/event.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L60)
 
 ## Methods
 
@@ -63,7 +63,7 @@ A simple publisher-subscriber implementation.
 
 #### Defined in
 
-[core/event.ts:110](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;110)
+[core/event.ts:110](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L110)
 
 ___
 
@@ -87,7 +87,7 @@ Fires an event notifying all subscribers.
 
 #### Defined in
 
-[core/event.ts:98](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;98)
+[core/event.ts:98](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L98)
 
 ___
 
@@ -115,7 +115,7 @@ subscribe
 
 #### Defined in
 
-[core/event.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;69)
+[core/event.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L69)
 
 ___
 
@@ -141,4 +141,4 @@ unsubscribe
 
 #### Defined in
 
-[core/event.ts:78](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#line&#x3D;78)
+[core/event.ts:78](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L78)

@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;29)
+[data/groupitemmetadataprovider.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L29)
 
 ## Properties
 
@@ -67,7 +67,7 @@
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:193](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;193)
+[data/groupitemmetadataprovider.ts:193](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L193)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:217](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;217)
+[data/groupitemmetadataprovider.ts:217](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L217)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;26)
+[data/groupitemmetadataprovider.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L26)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;27)
+[data/groupitemmetadataprovider.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L27)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:77](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;77)
+[data/groupitemmetadataprovider.ts:77](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L77)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;37)
+[data/groupitemmetadataprovider.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L37)
 
 ## Methods
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;79)
+[data/groupitemmetadataprovider.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L79)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:86](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;86)
+[data/groupitemmetadataprovider.ts:86](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L86)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:156](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;156)
+[data/groupitemmetadataprovider.ts:156](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L156)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:94](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;94)
+[data/groupitemmetadataprovider.ts:94](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L94)
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:120](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;120)
+[data/groupitemmetadataprovider.ts:120](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L120)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;71)
+[data/groupitemmetadataprovider.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L71)
 
 ___
 
@@ -260,7 +260,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:90](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;90)
+[data/groupitemmetadataprovider.ts:90](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L90)
 
 ___
 
@@ -281,7 +281,7 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;53)
+[data/groupitemmetadataprovider.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L53)
 
 ___
 
@@ -302,4 +302,4 @@ ___
 
 #### Defined in
 
-[data/groupitemmetadataprovider.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#line&#x3D;63)
+[data/groupitemmetadataprovider.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L63)

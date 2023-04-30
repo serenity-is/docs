@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[core/formatting.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;22)
+[core/formatting.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L22)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;23)
+[core/formatting.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L23)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;24)
+[core/formatting.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L24)

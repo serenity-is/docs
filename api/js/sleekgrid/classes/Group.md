@@ -64,7 +64,7 @@ Information about a group of rows.
 
 #### Defined in
 
-[core/group.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;7)
+[core/group.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L7)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#line&#x3D;5)
+[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L5)
 
 ___
 
@@ -90,7 +90,7 @@ Whether a group is collapsed.
 
 #### Defined in
 
-[core/group.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;42)
+[core/group.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L42)
 
 ___
 
@@ -102,7 +102,7 @@ Number of rows in the group.
 
 #### Defined in
 
-[core/group.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;21)
+[core/group.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L21)
 
 ___
 
@@ -115,7 +115,7 @@ collapseGroup() or expandGroup().
 
 #### Defined in
 
-[core/group.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;71)
+[core/group.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L71)
 
 ___
 
@@ -127,7 +127,7 @@ Sub-groups that are part of the group.
 
 #### Defined in
 
-[core/group.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;63)
+[core/group.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L63)
 
 ___
 
@@ -139,7 +139,7 @@ Grouping level, starting with 0.
 
 #### Defined in
 
-[core/group.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;14)
+[core/group.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L14)
 
 ___
 
@@ -151,7 +151,7 @@ Rows that are part of the group.
 
 #### Defined in
 
-[core/group.ts:56](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;56)
+[core/group.ts:56](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L56)
 
 ___
 
@@ -163,7 +163,7 @@ Formatted display value of the group.
 
 #### Defined in
 
-[core/group.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;35)
+[core/group.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L35)
 
 ___
 
@@ -175,7 +175,7 @@ GroupTotals, if any.
 
 #### Defined in
 
-[core/group.ts:49](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;49)
+[core/group.ts:49](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L49)
 
 ___
 
@@ -187,7 +187,7 @@ Grouping value.
 
 #### Defined in
 
-[core/group.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;28)
+[core/group.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L28)
 
 ## Methods
 
@@ -213,4 +213,4 @@ equals
 
 #### Defined in
 
-[core/group.ts:80](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#line&#x3D;80)
+[core/group.ts:80](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L80)

@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[core/range.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;15)
+[core/range.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L15)
 
 ## Properties
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[core/range.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;11)
+[core/range.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L11)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[core/range.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;10)
+[core/range.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L10)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[core/range.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;13)
+[core/range.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L13)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[core/range.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;12)
+[core/range.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L12)
 
 ## Methods
 
@@ -102,7 +102,7 @@ Returns whether a range contains a given cell.
 
 #### Defined in
 
-[core/range.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;44)
+[core/range.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L44)
 
 ___
 
@@ -118,7 +118,7 @@ Returns whether a range represents a single cell.
 
 #### Defined in
 
-[core/range.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;37)
+[core/range.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L37)
 
 ___
 
@@ -134,7 +134,7 @@ Returns whether a range represents a single row.
 
 #### Defined in
 
-[core/range.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;30)
+[core/range.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L30)
 
 ___
 
@@ -150,4 +150,4 @@ Returns a readable representation of a range.
 
 #### Defined in
 
-[core/range.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#line&#x3D;52)
+[core/range.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/core/range.ts#L52)

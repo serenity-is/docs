@@ -91,7 +91,7 @@
 
 #### Defined in
 
-[grid/gridoptions.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;6)
+[grid/gridoptions.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L6)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;7)
+[grid/gridoptions.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L7)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;8)
+[grid/gridoptions.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L8)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;9)
+[grid/gridoptions.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L9)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;10)
+[grid/gridoptions.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L10)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;11)
+[grid/gridoptions.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L11)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;12)
+[grid/gridoptions.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L12)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;13)
+[grid/gridoptions.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L13)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;14)
+[grid/gridoptions.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L14)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;15)
+[grid/gridoptions.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L15)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;16)
+[grid/gridoptions.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L16)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;17)
+[grid/gridoptions.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L17)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;18)
+[grid/gridoptions.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L18)
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;19)
+[grid/gridoptions.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L19)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;20)
+[grid/gridoptions.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L20)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;21)
+[grid/gridoptions.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L21)
 
 ___
 
@@ -266,7 +266,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;22)
+[grid/gridoptions.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L22)
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;24)
+[grid/gridoptions.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L24)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;23)
+[grid/gridoptions.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L23)
 
 ___
 
@@ -312,7 +312,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;25)
+[grid/gridoptions.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L25)
 
 ___
 
@@ -322,7 +322,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;26)
+[grid/gridoptions.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L26)
 
 ___
 
@@ -332,7 +332,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;27)
+[grid/gridoptions.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L27)
 
 ___
 
@@ -342,7 +342,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;28)
+[grid/gridoptions.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L28)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;29)
+[grid/gridoptions.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L29)
 
 ___
 
@@ -362,7 +362,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;30)
+[grid/gridoptions.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L30)
 
 ___
 
@@ -372,7 +372,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;31)
+[grid/gridoptions.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L31)
 
 ___
 
@@ -382,7 +382,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;32)
+[grid/gridoptions.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L32)
 
 ___
 
@@ -392,7 +392,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;33)
+[grid/gridoptions.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L33)
 
 ___
 
@@ -402,7 +402,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;34)
+[grid/gridoptions.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L34)
 
 ___
 
@@ -412,7 +412,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;35)
+[grid/gridoptions.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L35)
 
 ___
 
@@ -422,7 +422,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;36)
+[grid/gridoptions.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L36)
 
 ___
 
@@ -432,7 +432,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;37)
+[grid/gridoptions.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L37)
 
 ___
 
@@ -442,7 +442,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;38)
+[grid/gridoptions.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L38)
 
 ___
 
@@ -452,7 +452,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;39)
+[grid/gridoptions.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L39)
 
 ___
 
@@ -462,7 +462,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;41)
+[grid/gridoptions.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L41)
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;40)
+[grid/gridoptions.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L40)
 
 ___
 
@@ -482,7 +482,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;42)
+[grid/gridoptions.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L42)
 
 ___
 
@@ -492,7 +492,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;43)
+[grid/gridoptions.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L43)
 
 ___
 
@@ -502,7 +502,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;44)
+[grid/gridoptions.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L44)
 
 ___
 
@@ -512,7 +512,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:45](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;45)
+[grid/gridoptions.ts:45](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L45)
 
 ___
 
@@ -522,7 +522,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:46](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;46)
+[grid/gridoptions.ts:46](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L46)
 
 ___
 
@@ -548,7 +548,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:49](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;49)
+[grid/gridoptions.ts:49](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L49)
 
 ___
 
@@ -558,7 +558,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;47)
+[grid/gridoptions.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L47)
 
 ___
 
@@ -568,7 +568,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;48)
+[grid/gridoptions.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L48)
 
 ___
 
@@ -578,7 +578,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:50](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;50)
+[grid/gridoptions.ts:50](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L50)
 
 ___
 
@@ -595,7 +595,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:51](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;51)
+[grid/gridoptions.ts:51](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L51)
 
 ___
 
@@ -605,7 +605,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;53)
+[grid/gridoptions.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L53)
 
 ___
 
@@ -615,7 +615,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;52)
+[grid/gridoptions.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L52)
 
 ___
 
@@ -625,7 +625,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:54](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;54)
+[grid/gridoptions.ts:54](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L54)
 
 ___
 
@@ -635,7 +635,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:55](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;55)
+[grid/gridoptions.ts:55](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L55)
 
 ___
 
@@ -645,7 +645,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:56](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;56)
+[grid/gridoptions.ts:56](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L56)
 
 ___
 
@@ -655,7 +655,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:57](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;57)
+[grid/gridoptions.ts:57](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L57)
 
 ___
 
@@ -665,7 +665,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:58](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;58)
+[grid/gridoptions.ts:58](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L58)
 
 ___
 
@@ -675,7 +675,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:59](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;59)
+[grid/gridoptions.ts:59](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L59)
 
 ___
 
@@ -685,7 +685,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;60)
+[grid/gridoptions.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L60)
 
 ___
 
@@ -695,7 +695,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:61](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;61)
+[grid/gridoptions.ts:61](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L61)
 
 ___
 
@@ -705,7 +705,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:62](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;62)
+[grid/gridoptions.ts:62](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L62)
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;63)
+[grid/gridoptions.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L63)
 
 ___
 
@@ -725,7 +725,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:64](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;64)
+[grid/gridoptions.ts:64](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L64)
 
 ___
 
@@ -735,7 +735,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:65](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;65)
+[grid/gridoptions.ts:65](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L65)
 
 ___
 
@@ -745,7 +745,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:66](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;66)
+[grid/gridoptions.ts:66](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L66)
 
 ___
 
@@ -755,7 +755,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:67](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;67)
+[grid/gridoptions.ts:67](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L67)
 
 ___
 
@@ -765,7 +765,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:68](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;68)
+[grid/gridoptions.ts:68](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L68)
 
 ___
 
@@ -775,7 +775,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;69)
+[grid/gridoptions.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L69)
 
 ___
 
@@ -785,7 +785,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:70](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;70)
+[grid/gridoptions.ts:70](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L70)
 
 ___
 
@@ -795,7 +795,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;71)
+[grid/gridoptions.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L71)
 
 ___
 
@@ -805,7 +805,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:72](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;72)
+[grid/gridoptions.ts:72](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L72)
 
 ___
 
@@ -815,7 +815,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:74](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;74)
+[grid/gridoptions.ts:74](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L74)
 
 ___
 
@@ -825,7 +825,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:73](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;73)
+[grid/gridoptions.ts:73](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L73)
 
 ___
 
@@ -835,4 +835,4 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:75](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#line&#x3D;75)
+[grid/gridoptions.ts:75](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L75)

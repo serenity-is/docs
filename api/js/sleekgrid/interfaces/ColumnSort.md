@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[core/column.ts:62](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;62)
+[core/column.ts:62](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L62)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[core/column.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;63)
+[core/column.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L63)

@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[core/formatting.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;30)
+[core/formatting.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L30)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;31)
+[core/formatting.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L31)

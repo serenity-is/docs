@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[grid/eventargs.ts:64](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;64)
+[grid/eventargs.ts:64](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L64)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;5)
+[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)

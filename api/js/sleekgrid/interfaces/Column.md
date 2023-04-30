@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[core/column.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;6)
+[core/column.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L6)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;7)
+[core/column.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L7)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;8)
+[core/column.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L8)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;9)
+[core/column.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L9)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;10)
+[core/column.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L10)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;11)
+[core/column.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L11)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;12)
+[core/column.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L12)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;13)
+[core/column.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L13)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;14)
+[core/column.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L14)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;16)
+[core/column.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L16)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;17)
+[core/column.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L17)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;18)
+[core/column.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L18)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;20)
+[core/column.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L20)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;15)
+[core/column.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L15)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;21)
+[core/column.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L21)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;22)
+[core/column.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L22)
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;23)
+[core/column.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L23)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;24)
+[core/column.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L24)
 
 ___
 
@@ -251,7 +251,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;25)
+[core/column.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L25)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;26)
+[core/column.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L26)
 
 ___
 
@@ -271,7 +271,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;27)
+[core/column.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L27)
 
 ___
 
@@ -281,7 +281,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;28)
+[core/column.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L28)
 
 ___
 
@@ -291,7 +291,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;29)
+[core/column.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L29)
 
 ___
 
@@ -301,7 +301,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;30)
+[core/column.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L30)
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;31)
+[core/column.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L31)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;32)
+[core/column.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L32)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;34)
+[core/column.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L34)
 
 ___
 
@@ -341,7 +341,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;33)
+[core/column.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L33)
 
 ___
 
@@ -351,7 +351,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;35)
+[core/column.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L35)
 
 ___
 
@@ -376,7 +376,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;36)
+[core/column.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L36)
 
 ___
 
@@ -386,7 +386,7 @@ ___
 
 #### Defined in
 
-[core/column.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;37)
+[core/column.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L37)
 
 ___
 
@@ -396,4 +396,4 @@ ___
 
 #### Defined in
 
-[core/column.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#line&#x3D;38)
+[core/column.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L38)

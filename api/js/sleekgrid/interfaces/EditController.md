@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[core/editing.ts:86](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;86)
+[core/editing.ts:86](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L86)
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-[core/editing.ts:85](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;85)
+[core/editing.ts:85](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L85)

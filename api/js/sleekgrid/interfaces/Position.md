@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[core/editing.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;5)
+[core/editing.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L5)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[core/editing.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;6)
+[core/editing.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L6)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[core/editing.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;7)
+[core/editing.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L7)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[core/editing.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;8)
+[core/editing.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L8)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[core/editing.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;9)
+[core/editing.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L9)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[core/editing.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;10)
+[core/editing.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L10)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[core/editing.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;11)
+[core/editing.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L11)

@@ -39,7 +39,7 @@ and attempt a commit or cancel before proceeding.
 
 #### Defined in
 
-[core/editing.ts:98](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;98)
+[core/editing.ts:98](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L98)
 
 ## Methods
 
@@ -66,7 +66,7 @@ activate
 
 #### Defined in
 
-[core/editing.ts:117](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;117)
+[core/editing.ts:117](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L117)
 
 ___
 
@@ -88,7 +88,7 @@ cancelCurrentEdit
 
 #### Defined in
 
-[core/editing.ts:165](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;165)
+[core/editing.ts:165](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L165)
 
 ___
 
@@ -111,7 +111,7 @@ commitCurrentEdit
 
 #### Defined in
 
-[core/editing.ts:154](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;154)
+[core/editing.ts:154](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L154)
 
 ___
 
@@ -138,7 +138,7 @@ deactivate
 
 #### Defined in
 
-[core/editing.ts:139](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;139)
+[core/editing.ts:139](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L139)
 
 ___
 
@@ -165,4 +165,4 @@ isActive
 
 #### Defined in
 
-[core/editing.ts:107](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#line&#x3D;107)
+[core/editing.ts:107](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L107)

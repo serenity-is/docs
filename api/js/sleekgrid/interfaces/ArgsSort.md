@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;5)
+[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[grid/eventargs.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;22)
+[grid/eventargs.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L22)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[grid/eventargs.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;23)
+[grid/eventargs.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L23)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[grid/eventargs.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;24)
+[grid/eventargs.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L24)
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 #### Defined in
 
-[grid/eventargs.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#line&#x3D;25)
+[grid/eventargs.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L25)

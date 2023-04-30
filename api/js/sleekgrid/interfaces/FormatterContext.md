@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[core/formatting.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;5)
+[core/formatting.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L5)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;6)
+[core/formatting.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L6)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;7)
+[core/formatting.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L7)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;8)
+[core/formatting.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L8)
 
 ___
 
@@ -91,7 +91,7 @@ returns html escaped ctx.value if called without arguments. prefer this over ctx
 
 #### Defined in
 
-[core/formatting.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;10)
+[core/formatting.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L10)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;11)
+[core/formatting.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L11)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;12)
+[core/formatting.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L12)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;13)
+[core/formatting.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L13)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;14)
+[core/formatting.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L14)
 
 ___
 
@@ -143,4 +143,4 @@ when returning a formatter result, prefer ctx.escape() to avoid html injection a
 
 #### Defined in
 
-[core/formatting.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#line&#x3D;16)
+[core/formatting.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L16)

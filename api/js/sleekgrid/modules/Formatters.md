@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[formatters/index.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#line&#x3D;19)
+[formatters/index.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#L19)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[formatters/index.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#line&#x3D;23)
+[formatters/index.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#L23)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[formatters/index.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#line&#x3D;7)
+[formatters/index.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#L7)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[formatters/index.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#line&#x3D;11)
+[formatters/index.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#L11)
 
 ___
 
@@ -120,4 +120,4 @@ ___
 
 #### Defined in
 
-[formatters/index.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#line&#x3D;15)
+[formatters/index.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/index.ts#L15)

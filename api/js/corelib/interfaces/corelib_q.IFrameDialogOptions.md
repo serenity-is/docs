@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).IFrameDialogOptions
 
+Options for `iframeDialog` *
+
 ## Table of contents
 
 ### Properties
@@ -18,4 +20,4 @@
 
 #### Defined in
 
-[src/q/dialogs.ts:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;330)
+[src/q/dialogs.ts:441](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;441)

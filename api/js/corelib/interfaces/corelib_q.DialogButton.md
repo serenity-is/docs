@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).DialogButton
 
+Options for a message dialog button
+
 ## Table of contents
 
 ### Properties
@@ -20,17 +22,19 @@
 
 ### click
 
-• `Optional` **click**: (`e`: `JQueryEventObject`) => `void`
+• `Optional` **click**: (`e`: `MouseEvent`) => `void`
 
 #### Type declaration
 
 ▸ (`e`): `void`
 
+Click handler
+
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQueryEventObject` |
+| `e` | `MouseEvent` |
 
 ##### Returns
 
@@ -38,7 +42,7 @@
 
 #### Defined in
 
-[src/q/dialogs.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;12)
+[src/q/dialogs.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;19)
 
 ___
 
@@ -46,9 +50,11 @@ ___
 
 • `Optional` **cssClass**: `string`
 
+CSS class for button
+
 #### Defined in
 
-[src/q/dialogs.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;13)
+[src/q/dialogs.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;21)
 
 ___
 
@@ -56,35 +62,7 @@ ___
 
 • `Optional` **hint**: `string`
 
-#### Defined in
-
-[src/q/dialogs.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;10)
-
-___
-
-### htmlEncode
-
-• `Optional` **htmlEncode**: `boolean`
-
-#### Defined in
-
-[src/q/dialogs.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;14)
-
-___
-
-### icon
-
-• `Optional` **icon**: `string`
-
-#### Defined in
-
-[src/q/dialogs.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;11)
-
-___
-
-### result
-
-• `Optional` **result**: `string`
+Button hint
 
 #### Defined in
 
@@ -92,10 +70,48 @@ ___
 
 ___
 
+### htmlEncode
+
+• `Optional` **htmlEncode**: `boolean`
+
+HTML encode button text. Default is true.
+
+#### Defined in
+
+[src/q/dialogs.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;23)
+
+___
+
+### icon
+
+• `Optional` **icon**: `string`
+
+Button icon
+
+#### Defined in
+
+[src/q/dialogs.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;17)
+
+___
+
+### result
+
+• `Optional` **result**: `string`
+
+The code that is returned from message dialog function when this button is clicked
+
+#### Defined in
+
+[src/q/dialogs.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;25)
+
+___
+
 ### text
 
 • `Optional` **text**: `string`
 
+Button text
+
 #### Defined in
 
-[src/q/dialogs.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;9)
+[src/q/dialogs.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;13)

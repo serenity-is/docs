@@ -53,6 +53,7 @@ notifyInfo(htmlEncode("&'<>"));
 - [CommonDialogOptions](../interfaces/corelib_q.CommonDialogOptions.md)
 - [ConfirmOptions](../interfaces/corelib_q.ConfirmOptions.md)
 - [DateFormat](../interfaces/corelib_q.DateFormat.md)
+- [DebouncedFunction](../interfaces/corelib_q.DebouncedFunction.md)
 - [DeleteRequest](../interfaces/corelib_q.DeleteRequest.md)
 - [DeleteResponse](../interfaces/corelib_q.DeleteResponse.md)
 - [DialogButton](../interfaces/corelib_q.DialogButton.md)
@@ -251,6 +252,7 @@ notifyInfo(htmlEncode("&'<>"));
 - [toId](corelib_q.md#toid)
 - [toSingleLine](corelib_q.md#tosingleline)
 - [today](corelib_q.md#today)
+- [toggleClass](corelib_q.md#toggleclass)
 - [triggerLayoutOnShow](corelib_q.md#triggerlayoutonshow)
 - [trim](corelib_q.md#trim)
 - [trimEnd](corelib_q.md#trimend)
@@ -518,11 +520,13 @@ ___
 
 ▸ **addEmptyOption**(`select`): `void`
 
+Adds an empty option to the select.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `select` | `JQuery` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `select` | `JQuery` \| `HTMLSelectElement` | the select element |
 
 #### Returns
 
@@ -530,13 +534,15 @@ ___
 
 #### Defined in
 
-[src/q/html.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;4)
+[src/q/html.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;8)
 
 ___
 
 ### addOption
 
 ▸ **addOption**(`select`, `key`, `text`): `void`
+
+Adds an option to the select.
 
 #### Parameters
 
@@ -552,7 +558,7 @@ ___
 
 #### Defined in
 
-[src/q/html.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;8)
+[src/q/html.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;15)
 
 ___
 
@@ -620,7 +626,7 @@ use alertDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;229)
+[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;321)
 
 ___
 
@@ -628,12 +634,24 @@ ___
 
 ▸ **alertDialog**(`message`, `options?`): `void`
 
+Displays an alert dialog
+
+**`See`**
+
+AlertOptions
+
+**`Example`**
+
+```ts
+alertDialog("An error occured!"); }
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `string` |
-| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `message` | `string` | The message to display |
+| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) | Additional options. |
 
 #### Returns
 
@@ -641,7 +659,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;229)
+[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;321)
 
 ___
 
@@ -696,7 +714,7 @@ use htmlEncode as it also encodes quotes
 
 #### Defined in
 
-[src/q/html.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;76)
+[src/q/html.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;100)
 
 ___
 
@@ -781,23 +799,26 @@ ___
 
 ### bsModalMarkup
 
-▸ **bsModalMarkup**(`title`, `body`, `modalClass?`): `string`
+▸ **bsModalMarkup**(`title`, `body`, `modalClass?`, `escapeHtml?`): `HTMLDivElement`
+
+Builds HTML DIV element for a Bootstrap modal dialog
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `title` | `string` |
-| `body` | `string` |
-| `modalClass?` | `string` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `title` | `string` | `undefined` | Modal title |
+| `body` | `string` | `undefined` | Modal body, it will not be HTML encoded, so make sure it is encoded |
+| `modalClass?` | `string` | `undefined` | Optional class to add to the modal element |
+| `escapeHtml` | `boolean` | `true` | True to html encode body, default is true |
 
 #### Returns
 
-`string`
+`HTMLDivElement`
 
 #### Defined in
 
-[src/q/dialogs.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;120)
+[src/q/dialogs.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;147)
 
 ___
 
@@ -886,6 +907,8 @@ ___
 
 ▸ **clearOptions**(`select`): `void`
 
+Clears the options in the select element
+
 #### Parameters
 
 | Name | Type |
@@ -898,7 +921,7 @@ ___
 
 #### Defined in
 
-[src/q/html.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;15)
+[src/q/html.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;23)
 
 ___
 
@@ -906,12 +929,15 @@ ___
 
 ▸ **closePanel**(`element`, `e?`): `void`
 
+Closes a panel, triggering panelbeforeclose and panelclose events.
+If the panelbeforeclose prevents the default, the operation is cancelled.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-| `e?` | `JQueryEventObject` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `element` | `JQuery` | The panel element |
+| `e?` | `JQueryEventObject` | The event triggering the close |
 
 #### Returns
 
@@ -919,7 +945,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:438](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;438)
+[src/q/dialogs.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;589)
 
 ___
 
@@ -999,7 +1025,7 @@ use confirmDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;275)
+[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;385)
 
 ___
 
@@ -1007,13 +1033,27 @@ ___
 
 ▸ **confirmDialog**(`message`, `onYes`, `options?`): `void`
 
+Display a confirmation dialog
+
+**`See`**
+
+ConfirmOptions
+
+**`Example`**
+
+```ts
+confirmDialog("Are you sure you want to delete?", () => { 
+    // do something when yes is clicked
+}
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `string` |
-| `onYes` | () => `void` |
-| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `message` | `string` | The message to display |
+| `onYes` | () => `void` | Callback for Yes button click |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) | Additional options. |
 
 #### Returns
 
@@ -1021,7 +1061,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;275)
+[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;385)
 
 ___
 
@@ -1120,7 +1160,7 @@ ___
 
 ### debounce
 
-▸ **debounce**<`T`\>(`func`, `wait?`, `immediate?`): `DebouncedFunction`<`T`\>
+▸ **debounce**<`T`\>(`func`, `wait?`, `immediate?`): [`DebouncedFunction`](../interfaces/corelib_q.DebouncedFunction.md)<`T`\>
 
 Returns a function, that, as long as it continues to be invoked, will not
 be triggered. The function also has a property 'clear' that can be used 
@@ -1147,7 +1187,7 @@ underscore.js
 
 #### Returns
 
-`DebouncedFunction`<`T`\>
+[`DebouncedFunction`](../interfaces/corelib_q.DebouncedFunction.md)<`T`\>
 
 #### Defined in
 
@@ -1227,7 +1267,7 @@ ___
 
 ### dialogButtonToBS
 
-▸ **dialogButtonToBS**(`x`): `string`
+▸ **dialogButtonToBS**(`x`): `HTMLButtonElement`
 
 #### Parameters
 
@@ -1237,11 +1277,11 @@ ___
 
 #### Returns
 
-`string`
+`HTMLButtonElement`
 
 #### Defined in
 
-[src/q/dialogs.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;137)
+[src/q/dialogs.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;168)
 
 ___
 
@@ -1261,7 +1301,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;145)
+[src/q/dialogs.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;183)
 
 ___
 
@@ -1269,20 +1309,24 @@ ___
 
 ▸ **endsWith**(`s`, `suffix`): `boolean`
 
+Checks if the string ends with the specified substring.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
-| `suffix` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | String to check. |
+| `suffix` | `string` | Suffix to check. |
 
 #### Returns
 
 `boolean`
 
+True if the string ends with the specified substring.
+
 #### Defined in
 
-[src/q/strings.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;1)
+[src/q/strings.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;7)
 
 ___
 
@@ -1380,39 +1424,49 @@ ___
 
 ▸ **findElementWithRelativeId**(`element`, `relativeId`, `context?`): `JQuery`
 
+Finds the first element with the given relative id to the source element.
+It can handle underscores in the source element id.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-| `relativeId` | `string` |
-| `context?` | `HTMLElement` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `element` | `JQuery` | the source element |
+| `relativeId` | `string` | the relative id to the source element |
+| `context?` | `HTMLElement` | the context element (optional) |
 
 #### Returns
 
 `JQuery`
 
+the element with the given relative id to the source element.
+
 #### Defined in
 
-[src/q/html.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;19)
+[src/q/html.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;35)
 
 ▸ **findElementWithRelativeId**(`element`, `relativeId`, `context?`): `HTMLElement`
 
+Finds the first element with the given relative id to the source element.
+It can handle underscores in the source element id.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `element` | `HTMLElement` |
-| `relativeId` | `string` |
-| `context?` | `HTMLElement` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `element` | `HTMLElement` | the source element |
+| `relativeId` | `string` | the relative id to the source element |
+| `context?` | `HTMLElement` | the context element (optional) |
 
 #### Returns
 
 `HTMLElement`
 
+the element with the given relative id to the source element.
+
 #### Defined in
 
-[src/q/html.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;20)
+[src/q/html.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;44)
 
 ___
 
@@ -2180,7 +2234,7 @@ Html encodes a string (encodes single and double quotes, & (ampersand), > and < 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `s` | `any` | String to be HTML encoded |
+| `s` | `any` | String (or number etc.) to be HTML encoded |
 
 #### Returns
 
@@ -2188,7 +2242,7 @@ Html encodes a string (encodes single and double quotes, & (ampersand), > and < 
 
 #### Defined in
 
-[src/q/html.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;76)
+[src/q/html.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;100)
 
 ___
 
@@ -2196,11 +2250,13 @@ ___
 
 ▸ **iframeDialog**(`options`): `void`
 
+Display a dialog that shows an HTML block, which is usually returned from server callbacks in an IFRAME
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`IFrameDialogOptions`](../interfaces/corelib_q.IFrameDialogOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | [`IFrameDialogOptions`](../interfaces/corelib_q.IFrameDialogOptions.md) | The options |
 
 #### Returns
 
@@ -2208,7 +2264,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;333)
+[src/q/dialogs.ts:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;448)
 
 ___
 
@@ -2243,7 +2299,7 @@ ___
 
 ### information
 
-▸ **information**(`message`, `onOk`, `options?`): `void`
+▸ **information**(`message`, `onOk?`, `options?`): `void`
 
 **`Obsolete`**
 
@@ -2254,7 +2310,7 @@ use informationDialog
 | Name | Type |
 | :------ | :------ |
 | `message` | `string` |
-| `onOk` | () => `void` |
+| `onOk?` | () => `void` |
 | `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
 
 #### Returns
@@ -2263,21 +2319,35 @@ use informationDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;386)
+[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;512)
 
 ___
 
 ### informationDialog
 
-▸ **informationDialog**(`message`, `onOk`, `options?`): `void`
+▸ **informationDialog**(`message`, `onOk?`, `options?`): `void`
+
+Display an information dialog
+
+**`See`**
+
+ConfirmOptions
+
+**`Example`**
+
+```ts
+informationDialog("Operation complete", () => { 
+    // do something when OK is clicked
+}
+```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `string` |
-| `onOk` | () => `void` |
-| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `message` | `string` | The message to display |
+| `onOk?` | () => `void` | Callback for OK button click |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) | Additional options. |
 
 #### Returns
 
@@ -2285,7 +2355,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;386)
+[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;512)
 
 ___
 
@@ -2446,13 +2516,15 @@ ___
 
 ▸ **isBS3**(): `boolean`
 
+Returns true if Bootstrap 3 is loaded
+
 #### Returns
 
 `boolean`
 
 #### Defined in
 
-[src/q/dialogs.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;90)
+[src/q/dialogs.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;108)
 
 ___
 
@@ -2460,13 +2532,15 @@ ___
 
 ▸ **isBS5Plus**(): `boolean`
 
+Returns true if Bootstrap 5+ is loaded
+
 #### Returns
 
 `boolean`
 
 #### Defined in
 
-[src/q/dialogs.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;97)
+[src/q/dialogs.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;116)
 
 ___
 
@@ -2474,19 +2548,23 @@ ___
 
 ▸ **isEmptyOrNull**(`s`): `boolean`
 
+Checks if the string is empty or null.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | String to check. |
 
 #### Returns
 
 `boolean`
 
+True if the string is empty or null.
+
 #### Defined in
 
-[src/q/strings.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;5)
+[src/q/strings.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;16)
 
 ___
 
@@ -2535,19 +2613,23 @@ ___
 
 ▸ **isTrimmedEmpty**(`s`): `boolean`
 
+Checks if the string is empty or null or whitespace.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | String to check. |
 
 #### Returns
 
 `boolean`
 
+True if the string is empty or null or whitespace.
+
 #### Defined in
 
-[src/q/strings.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;9)
+[src/q/strings.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;25)
 
 ___
 
@@ -2697,13 +2779,17 @@ ___
 
 ▸ **newBodyDiv**(): `JQuery`
 
+Creates a new DIV and appends it to the body.
+
 #### Returns
 
 `JQuery`
 
+the new DIV element.
+
 #### Defined in
 
-[src/q/html.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;86)
+[src/q/html.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;114)
 
 ___
 
@@ -2799,6 +2885,8 @@ ___
 
 ▸ **outerHtml**(`element`): `string`
 
+Returns the outer HTML of the element.
+
 #### Parameters
 
 | Name | Type |
@@ -2811,7 +2899,7 @@ ___
 
 #### Defined in
 
-[src/q/html.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;90)
+[src/q/html.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;121)
 
 ___
 
@@ -2819,21 +2907,25 @@ ___
 
 ▸ **padLeft**(`s`, `len`, `ch?`): `any`
 
+Pads the string to the left with the specified character.
+
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `s` | `string` \| `number` | `undefined` |
-| `len` | `number` | `undefined` |
-| `ch` | `string` | `' '` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `s` | `string` \| `number` | `undefined` | String to pad. |
+| `len` | `number` | `undefined` | Target length of the string. |
+| `ch` | `string` | `' '` | Character to pad with. |
 
 #### Returns
 
 `any`
 
+Padded string.
+
 #### Defined in
 
-[src/q/strings.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;13)
+[src/q/strings.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;36)
 
 ___
 
@@ -3344,21 +3436,25 @@ ___
 
 ▸ **replaceAll**(`str`, `find`, `replace`): `string`
 
+Replaces all occurrences of the search string with the replacement string.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-| `find` | `string` |
-| `replace` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `str` | `string` | String to replace. |
+| `find` | `string` | String to find. |
+| `replace` | `string` | String to replace with. |
 
 #### Returns
 
 `string`
 
+Replaced string.
+
 #### Defined in
 
-[src/q/strings.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;53)
+[src/q/strings.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;111)
 
 ___
 
@@ -3600,26 +3696,30 @@ ___
 
 ▸ **startsWith**(`s`, `prefix`): `boolean`
 
+Checks if the string starts with the prefix
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
-| `prefix` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | String to check. |
+| `prefix` | `string` | Prefix to check. |
 
 #### Returns
 
 `boolean`
 
+True if the string starts with the prefix.
+
 #### Defined in
 
-[src/q/strings.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;22)
+[src/q/strings.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;51)
 
 ___
 
 ### success
 
-▸ **success**(`message`, `onOk`, `options?`): `void`
+▸ **success**(`message`, `onOk?`, `options?`): `void`
 
 **`Obsolete`**
 
@@ -3630,7 +3730,7 @@ use successDialog
 | Name | Type |
 | :------ | :------ |
 | `message` | `string` |
-| `onOk` | () => `void` |
+| `onOk?` | () => `void` |
 | `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
 
 #### Returns
@@ -3639,21 +3739,35 @@ use successDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;406)
+[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;543)
 
 ___
 
 ### successDialog
 
-▸ **successDialog**(`message`, `onOk`, `options?`): `void`
+▸ **successDialog**(`message`, `onOk?`, `options?`): `void`
+
+Display a success dialog
+
+**`See`**
+
+ConfirmOptions
+
+**`Example`**
+
+```ts
+successDialog("Operation complete", () => { 
+    // do something when OK is clicked
+}
+```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `string` |
-| `onOk` | () => `void` |
-| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `message` | `string` | The message to display |
+| `onOk?` | () => `void` | Callback for OK button click |
+| `options?` | [`ConfirmOptions`](../interfaces/corelib_q.ConfirmOptions.md) | Additional options. |
 
 #### Returns
 
@@ -3661,7 +3775,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;406)
+[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;543)
 
 ___
 
@@ -3751,11 +3865,13 @@ ___
 
 ▸ **toSingleLine**(`str`): `string`
 
+Converts the string to single line by removing line end characters
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `str` | `string` | String to convert. |
 
 #### Returns
 
@@ -3763,7 +3879,7 @@ ___
 
 #### Defined in
 
-[src/q/strings.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;26)
+[src/q/strings.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;59)
 
 ___
 
@@ -3778,6 +3894,30 @@ ___
 #### Defined in
 
 [src/q/system.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;11)
+
+___
+
+### toggleClass
+
+▸ **toggleClass**(`el`, `cls`, `remove?`): `void`
+
+Toggles the class on the element handling spaces like jQuery addClass does.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `el` | `Element` | the element |
+| `cls` | `string` | the class to toggle |
+| `remove?` | `boolean` | if true, the class will be added, if false the class will be removed, otherwise it will be toggled. |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/html.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;132)
 
 ___
 
@@ -3805,6 +3945,9 @@ ___
 
 ▸ **trim**(`s`): `string`
 
+Trims the whitespace characters from the start and end of the string
+This returns empty string even when the string is null or undefined.
+
 #### Parameters
 
 | Name | Type |
@@ -3817,7 +3960,7 @@ ___
 
 #### Defined in
 
-[src/q/strings.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;38)
+[src/q/strings.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;81)
 
 ___
 
@@ -3825,6 +3968,8 @@ ___
 
 ▸ **trimEnd**(`s`): `any`
 
+Trims the whitespace characters from the end of the string
+
 #### Parameters
 
 | Name | Type |
@@ -3837,7 +3982,7 @@ ___
 
 #### Defined in
 
-[src/q/strings.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;30)
+[src/q/strings.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;66)
 
 ___
 
@@ -3845,6 +3990,8 @@ ___
 
 ▸ **trimStart**(`s`): `any`
 
+Trims the whitespace characters from the start of the string
+
 #### Parameters
 
 | Name | Type |
@@ -3857,7 +4004,7 @@ ___
 
 #### Defined in
 
-[src/q/strings.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;34)
+[src/q/strings.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;73)
 
 ___
 
@@ -3865,6 +4012,9 @@ ___
 
 ▸ **trimToEmpty**(`s`): `string`
 
+Trims the whitespace characters from the start and end of the string
+Returns empty string if the string is null or undefined.
+
 #### Parameters
 
 | Name | Type |
@@ -3877,7 +4027,7 @@ ___
 
 #### Defined in
 
-[src/q/strings.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;42)
+[src/q/strings.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;89)
 
 ___
 
@@ -3885,6 +4035,9 @@ ___
 
 ▸ **trimToNull**(`s`): `string`
 
+Trims the whitespace characters from the start and end of the string
+Returns null if the string is null, undefined or whitespace.
+
 #### Parameters
 
 | Name | Type |
@@ -3897,7 +4050,7 @@ ___
 
 #### Defined in
 
-[src/q/strings.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;46)
+[src/q/strings.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;97)
 
 ___
 
@@ -4103,7 +4256,7 @@ use warningDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;426)
+[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;571)
 
 ___
 
@@ -4111,12 +4264,24 @@ ___
 
 ▸ **warningDialog**(`message`, `options?`): `void`
 
+Display a warning dialog
+
+**`See`**
+
+AlertOptions
+
+**`Example`**
+
+```ts
+warningDialog("Something is odd!");
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `string` |
-| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `message` | `string` | The message to display |
+| `options?` | [`AlertOptions`](../interfaces/corelib_q.AlertOptions.md) | Additional options. |
 
 #### Returns
 
@@ -4124,20 +4289,22 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;426)
+[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;571)
 
 ___
 
 ### zeroPad
 
-▸ **zeroPad**(`n`, `digits`): `string`
+▸ **zeroPad**(`n`, `len`): `string`
+
+Pads the start of string to make it the specified length.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
-| `digits` | `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `n` | `number` | - |
+| `len` | `number` | Target length of the string. |
 
 #### Returns
 
@@ -4145,4 +4312,4 @@ ___
 
 #### Defined in
 
-[src/q/strings.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;58)
+[src/q/strings.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;121)

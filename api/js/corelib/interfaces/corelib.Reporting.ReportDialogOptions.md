@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/ui/widgets/reporting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#line&#x3D;10)
+[src/ui/widgets/reporting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#L10)

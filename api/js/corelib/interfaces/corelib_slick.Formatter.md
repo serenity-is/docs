@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[src/slick/slicktypes.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;14)
+[src/slick/slicktypes.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L14)

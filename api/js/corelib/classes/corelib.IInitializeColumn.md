@@ -43,4 +43,4 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#line&#x3D;8)
+[src/ui/formatters/formatters.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L8)

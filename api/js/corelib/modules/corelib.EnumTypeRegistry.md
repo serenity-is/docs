@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/types/enumtyperegistry.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/enumtyperegistry.ts#line&#x3D;12)
+[src/types/enumtyperegistry.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/enumtyperegistry.ts#L12)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/types/enumtyperegistry.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/enumtyperegistry.ts#line&#x3D;36)
+[src/types/enumtyperegistry.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/enumtyperegistry.ts#L36)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[src/types/enumtyperegistry.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/enumtyperegistry.ts#line&#x3D;40)
+[src/types/enumtyperegistry.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/enumtyperegistry.ts#L40)

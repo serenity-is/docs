@@ -51,7 +51,7 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;14)
+[src/ui/datagrid/treegridmixin.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L14)
 
 ## Properties
 
@@ -61,7 +61,7 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;11)
+[src/ui/datagrid/treegridmixin.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L11)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;12)
+[src/ui/datagrid/treegridmixin.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L12)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;14)
+[src/ui/datagrid/treegridmixin.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L14)
 
 ## Methods
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;66)
+[src/ui/datagrid/treegridmixin.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L66)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;71)
+[src/ui/datagrid/treegridmixin.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L71)
 
 ___
 
@@ -139,7 +139,7 @@ Expands / collapses all rows in a grid automatically
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;59)
+[src/ui/datagrid/treegridmixin.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L59)
 
 ___
 
@@ -170,4 +170,4 @@ This method is required for proper tree ordering, as it is not so easy to perfor
 
 #### Defined in
 
-[src/ui/datagrid/treegridmixin.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#line&#x3D;83)
+[src/ui/datagrid/treegridmixin.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L83)

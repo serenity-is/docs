@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;27)
+[src/q/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L27)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;26)
+[src/q/servicetypes.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L26)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;28)
+[src/q/servicetypes.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L28)

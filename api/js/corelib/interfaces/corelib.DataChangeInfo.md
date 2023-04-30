@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/types/datachangeinfo.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/datachangeinfo.ts#line&#x3D;6)
+[src/types/datachangeinfo.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/datachangeinfo.ts#L6)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[src/types/datachangeinfo.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/datachangeinfo.ts#line&#x3D;5)
+[src/types/datachangeinfo.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/datachangeinfo.ts#L5)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[src/types/datachangeinfo.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/datachangeinfo.ts#line&#x3D;4)
+[src/types/datachangeinfo.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/datachangeinfo.ts#L4)

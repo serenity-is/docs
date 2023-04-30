@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#line&#x3D;55)
+[src/ui/formatters/formatters.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L55)

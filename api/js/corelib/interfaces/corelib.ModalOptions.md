@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#line&#x3D;491)
+[src/ui/dialogs/templateddialog.ts:491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L491)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:492](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#line&#x3D;492)
+[src/ui/dialogs/templateddialog.ts:492](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L492)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:494](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#line&#x3D;494)
+[src/ui/dialogs/templateddialog.ts:494](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L494)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#line&#x3D;493)
+[src/ui/dialogs/templateddialog.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L493)

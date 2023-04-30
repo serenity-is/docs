@@ -36,7 +36,7 @@ function was not invoked yet.
 
 #### Defined in
 
-[src/q/debounce.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#line&#x3D;11)
+[src/q/debounce.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#L11)
 
 ## Table of contents
 
@@ -59,7 +59,7 @@ Throw away any pending invocation of the debounced function.
 
 #### Defined in
 
-[src/q/debounce.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#line&#x3D;16)
+[src/q/debounce.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#L16)
 
 ___
 
@@ -79,4 +79,4 @@ was never invoked.
 
 #### Defined in
 
-[src/q/debounce.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#line&#x3D;25)
+[src/q/debounce.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#L25)

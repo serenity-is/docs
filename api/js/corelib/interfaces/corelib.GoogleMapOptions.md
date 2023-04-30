@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/ui/widgets/googlemap.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#line&#x3D;6)
+[src/ui/widgets/googlemap.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#L6)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/googlemap.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#line&#x3D;7)
+[src/ui/widgets/googlemap.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#L7)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/googlemap.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#line&#x3D;9)
+[src/ui/widgets/googlemap.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#L9)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/googlemap.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#line&#x3D;11)
+[src/ui/widgets/googlemap.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#L11)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/googlemap.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#line&#x3D;12)
+[src/ui/widgets/googlemap.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#L12)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/googlemap.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#line&#x3D;10)
+[src/ui/widgets/googlemap.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#L10)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/googlemap.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#line&#x3D;8)
+[src/ui/widgets/googlemap.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/googlemap.ts#L8)

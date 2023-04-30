@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;44)
+[src/q/servicetypes.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L44)

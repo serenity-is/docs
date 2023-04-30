@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/q/router.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#line&#x3D;6)
+[src/q/router.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L6)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/q/router.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#line&#x3D;9)
+[src/q/router.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L9)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/q/router.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#line&#x3D;8)
+[src/q/router.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L8)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/q/router.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#line&#x3D;7)
+[src/q/router.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L7)

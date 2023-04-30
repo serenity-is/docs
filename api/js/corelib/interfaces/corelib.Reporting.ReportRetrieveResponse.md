@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;10)
+[src/q/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L10)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/reporting.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#line&#x3D;192)
+[src/ui/widgets/reporting.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#L192)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/reporting.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#line&#x3D;193)
+[src/ui/widgets/reporting.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#L193)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/reporting.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#line&#x3D;190)
+[src/ui/widgets/reporting.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#L190)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/reporting.ts:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#line&#x3D;189)
+[src/ui/widgets/reporting.ts:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#L189)
 
 ___
 
@@ -83,4 +83,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/reporting.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#line&#x3D;191)
+[src/ui/widgets/reporting.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#L191)

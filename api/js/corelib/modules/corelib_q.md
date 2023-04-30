@@ -289,7 +289,7 @@ notifyInfo(htmlEncode("&'<>"));
 
 #### Defined in
 
-[src/q/system.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;1)
+[src/q/system.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L1)
 
 ___
 
@@ -316,7 +316,7 @@ A group item returned by `groupBy()`.
 
 #### Defined in
 
-[src/q/arrays.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;43)
+[src/q/arrays.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L43)
 
 ___
 
@@ -341,7 +341,7 @@ Return type of the `groupBy` function.
 
 #### Defined in
 
-[src/q/arrays.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;57)
+[src/q/arrays.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L57)
 
 ___
 
@@ -361,7 +361,7 @@ ___
 
 #### Defined in
 
-[src/q/arrays.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;169)
+[src/q/arrays.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L169)
 
 ___
 
@@ -380,7 +380,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;40)
+[src/q/toastr2.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L40)
 
 ___
 
@@ -398,7 +398,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;5)
+[src/q/toastr2.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L5)
 
 ___
 
@@ -408,7 +408,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;11)
+[src/q/toastr2.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L11)
 
 ___
 
@@ -418,7 +418,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;84)
+[src/q/system.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L84)
 
 ## Variables
 
@@ -439,7 +439,7 @@ ___
 
 #### Defined in
 
-[src/q/config.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/config.ts#line&#x3D;1)
+[src/q/config.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/config.ts#L1)
 
 ___
 
@@ -449,7 +449,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;89)
+[src/q/formatting.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L89)
 
 ___
 
@@ -459,7 +459,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;36)
+[src/q/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L36)
 
 ___
 
@@ -469,7 +469,7 @@ ___
 
 #### Defined in
 
-[src/q/notify.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;10)
+[src/q/notify.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#L10)
 
 ## Functions
 
@@ -491,7 +491,7 @@ Creates a new criteria builder containg the passed field name.
 
 #### Defined in
 
-[src/q/criteria.ts:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;747)
+[src/q/criteria.ts:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L747)
 
 ___
 
@@ -512,7 +512,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;605)
+[src/q/system.ts:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L605)
 
 ___
 
@@ -534,7 +534,7 @@ Adds an empty option to the select.
 
 #### Defined in
 
-[src/q/html.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;8)
+[src/q/html.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L8)
 
 ___
 
@@ -558,7 +558,7 @@ Adds an option to the select.
 
 #### Defined in
 
-[src/q/html.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;15)
+[src/q/html.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L15)
 
 ___
 
@@ -579,7 +579,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;279)
+[src/q/system.ts:279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L279)
 
 ___
 
@@ -601,7 +601,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;231)
+[src/q/validation.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L231)
 
 ___
 
@@ -626,7 +626,7 @@ use alertDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;321)
+[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L321)
 
 ___
 
@@ -659,7 +659,7 @@ alertDialog("An error occured!"); }
 
 #### Defined in
 
-[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;321)
+[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L321)
 
 ___
 
@@ -690,7 +690,7 @@ True if any element matches.
 
 #### Defined in
 
-[src/q/arrays.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;7)
+[src/q/arrays.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L7)
 
 ___
 
@@ -714,7 +714,7 @@ use htmlEncode as it also encodes quotes
 
 #### Defined in
 
-[src/q/html.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;100)
+[src/q/html.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L100)
 
 ___
 
@@ -734,7 +734,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;7)
+[src/q/layout.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L7)
 
 ___
 
@@ -748,7 +748,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;154)
+[src/q/validation.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L154)
 
 ___
 
@@ -777,7 +777,7 @@ div is 2000, so a higher z-order shouldn't be used in page.
 
 #### Defined in
 
-[src/q/blockui.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;36)
+[src/q/blockui.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#L36)
 
 ___
 
@@ -793,7 +793,7 @@ Unblocks the page.
 
 #### Defined in
 
-[src/q/blockui.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;60)
+[src/q/blockui.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#L60)
 
 ___
 
@@ -818,7 +818,7 @@ Builds HTML DIV element for a Bootstrap modal dialog
 
 #### Defined in
 
-[src/q/dialogs.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;147)
+[src/q/dialogs.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L147)
 
 ___
 
@@ -838,7 +838,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;270)
+[src/q/scriptdata.ts:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L270)
 
 ___
 
@@ -859,7 +859,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;195)
+[src/q/system.ts:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L195)
 
 ___
 
@@ -879,7 +879,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;133)
+[src/q/layout.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L133)
 
 ___
 
@@ -899,7 +899,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;335)
+[src/q/system.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L335)
 
 ___
 
@@ -921,7 +921,7 @@ Clears the options in the select element
 
 #### Defined in
 
-[src/q/html.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;23)
+[src/q/html.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L23)
 
 ___
 
@@ -945,7 +945,7 @@ If the panelbeforeclose prevents the default, the operation is cancelled.
 
 #### Defined in
 
-[src/q/dialogs.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;589)
+[src/q/dialogs.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L589)
 
 ___
 
@@ -966,7 +966,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;3)
+[src/q/system.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L3)
 
 ___
 
@@ -999,7 +999,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;60)
+[src/q/formatting.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L60)
 
 ___
 
@@ -1025,7 +1025,7 @@ use confirmDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;385)
+[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L385)
 
 ___
 
@@ -1061,7 +1061,7 @@ confirmDialog("Are you sure you want to delete?", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;385)
+[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L385)
 
 ___
 
@@ -1090,7 +1090,7 @@ Counts number of array elements that matches a given predicate.
 
 #### Defined in
 
-[src/q/arrays.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;16)
+[src/q/arrays.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L16)
 
 ___
 
@@ -1122,7 +1122,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;15)
+[src/q/localtext.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L15)
 
 ___
 
@@ -1154,7 +1154,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;57)
+[src/q/localtext.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L57)
 
 ___
 
@@ -1191,7 +1191,7 @@ underscore.js
 
 #### Defined in
 
-[src/q/debounce.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#line&#x3D;39)
+[src/q/debounce.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#L39)
 
 ___
 
@@ -1219,7 +1219,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;23)
+[src/q/system.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L23)
 
 ___
 
@@ -1240,7 +1240,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;342)
+[src/q/system.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L342)
 
 ___
 
@@ -1261,7 +1261,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:454](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;454)
+[src/q/system.ts:454](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L454)
 
 ___
 
@@ -1281,7 +1281,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;168)
+[src/q/dialogs.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L168)
 
 ___
 
@@ -1301,7 +1301,7 @@ ___
 
 #### Defined in
 
-[src/q/dialogs.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;183)
+[src/q/dialogs.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L183)
 
 ___
 
@@ -1326,7 +1326,7 @@ True if the string ends with the specified substring.
 
 #### Defined in
 
-[src/q/strings.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;7)
+[src/q/strings.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L7)
 
 ___
 
@@ -1348,7 +1348,7 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#line&#x3D;154)
+[src/q/layouttimer.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L154)
 
 ___
 
@@ -1369,7 +1369,7 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#line&#x3D;138)
+[src/q/layouttimer.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L138)
 
 ___
 
@@ -1396,7 +1396,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;16)
+[src/q/system.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L16)
 
 ___
 
@@ -1416,7 +1416,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:538](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;538)
+[src/q/system.ts:538](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L538)
 
 ___
 
@@ -1443,7 +1443,7 @@ the element with the given relative id to the source element.
 
 #### Defined in
 
-[src/q/html.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;35)
+[src/q/html.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L35)
 
 ▸ **findElementWithRelativeId**(`element`, `relativeId`, `context?`): `HTMLElement`
 
@@ -1466,7 +1466,7 @@ the element with the given relative id to the source element.
 
 #### Defined in
 
-[src/q/html.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;44)
+[src/q/html.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L44)
 
 ___
 
@@ -1498,7 +1498,7 @@ First element that matches.
 
 #### Defined in
 
-[src/q/arrays.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;32)
+[src/q/arrays.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L32)
 
 ___
 
@@ -1519,7 +1519,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;209)
+[src/q/formatting.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L209)
 
 ___
 
@@ -1541,7 +1541,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;519)
+[src/q/formatting.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L519)
 
 ___
 
@@ -1561,7 +1561,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;687)
+[src/q/formatting.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L687)
 
 ___
 
@@ -1581,7 +1581,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;706)
+[src/q/formatting.ts:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L706)
 
 ___
 
@@ -1604,7 +1604,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;240)
+[src/q/formatting.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L240)
 
 ___
 
@@ -1626,7 +1626,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;228)
+[src/q/system.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L228)
 
 ___
 
@@ -1646,7 +1646,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;203)
+[src/q/system.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L203)
 
 ___
 
@@ -1666,7 +1666,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;230)
+[src/q/scriptdata.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L230)
 
 ___
 
@@ -1686,7 +1686,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;238)
+[src/q/scriptdata.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L238)
 
 ___
 
@@ -1706,7 +1706,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;234)
+[src/q/scriptdata.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L234)
 
 ___
 
@@ -1726,7 +1726,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;242)
+[src/q/scriptdata.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L242)
 
 ___
 
@@ -1746,7 +1746,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;8)
+[src/q/services.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L8)
 
 ___
 
@@ -1766,7 +1766,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;246)
+[src/q/scriptdata.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L246)
 
 ___
 
@@ -1786,7 +1786,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;254)
+[src/q/scriptdata.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L254)
 
 ___
 
@@ -1806,7 +1806,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;250)
+[src/q/scriptdata.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L250)
 
 ___
 
@@ -1826,7 +1826,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;258)
+[src/q/scriptdata.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L258)
 
 ___
 
@@ -1840,7 +1840,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;116)
+[src/q/system.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L116)
 
 ___
 
@@ -1860,7 +1860,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;146)
+[src/q/validation.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L146)
 
 ___
 
@@ -1880,7 +1880,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;158)
+[src/q/system.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L158)
 
 ___
 
@@ -1906,7 +1906,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;214)
+[src/q/scriptdata.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L214)
 
 ___
 
@@ -1932,7 +1932,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;218)
+[src/q/scriptdata.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L218)
 
 ___
 
@@ -1953,7 +1953,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;262)
+[src/q/system.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L262)
 
 ___
 
@@ -1974,7 +1974,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;98)
+[src/q/system.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L98)
 
 ___
 
@@ -2000,7 +2000,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;206)
+[src/q/scriptdata.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L206)
 
 ___
 
@@ -2026,7 +2026,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;210)
+[src/q/scriptdata.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L210)
 
 ___
 
@@ -2046,7 +2046,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;365)
+[src/q/system.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L365)
 
 ___
 
@@ -2066,7 +2066,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;262)
+[src/q/scriptdata.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L262)
 
 ___
 
@@ -2086,7 +2086,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;266)
+[src/q/scriptdata.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L266)
 
 ___
 
@@ -2107,7 +2107,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;120)
+[src/q/system.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L120)
 
 ___
 
@@ -2127,7 +2127,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;146)
+[src/q/system.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L146)
 
 ___
 
@@ -2147,7 +2147,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;138)
+[src/q/system.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L138)
 
 ___
 
@@ -2167,7 +2167,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;151)
+[src/q/system.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L151)
 
 ___
 
@@ -2187,7 +2187,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;310)
+[src/q/system.ts:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L310)
 
 ___
 
@@ -2220,7 +2220,7 @@ GroupByResult object.
 
 #### Defined in
 
-[src/q/arrays.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;70)
+[src/q/arrays.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L70)
 
 ___
 
@@ -2242,7 +2242,7 @@ Html encodes a string (encodes single and double quotes, & (ampersand), > and < 
 
 #### Defined in
 
-[src/q/html.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;100)
+[src/q/html.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L100)
 
 ___
 
@@ -2264,7 +2264,7 @@ Display a dialog that shows an HTML block, which is usually returned from server
 
 #### Defined in
 
-[src/q/dialogs.ts:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;448)
+[src/q/dialogs.ts:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L448)
 
 ___
 
@@ -2293,7 +2293,7 @@ Gets index of first element in an array that matches given predicate.
 
 #### Defined in
 
-[src/q/arrays.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;103)
+[src/q/arrays.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L103)
 
 ___
 
@@ -2319,7 +2319,7 @@ use informationDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;512)
+[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L512)
 
 ___
 
@@ -2355,7 +2355,7 @@ informationDialog("Operation complete", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;512)
+[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L512)
 
 ___
 
@@ -2376,7 +2376,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:492](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;492)
+[src/q/system.ts:492](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L492)
 
 ___
 
@@ -2398,7 +2398,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;12)
+[src/q/layout.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L12)
 
 ___
 
@@ -2420,7 +2420,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;621)
+[src/q/system.ts:621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L621)
 
 ___
 
@@ -2456,7 +2456,7 @@ insert({ insert: (index, item) => { this.splice(index, 0, item); } }
 
 #### Defined in
 
-[src/q/arrays.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;122)
+[src/q/arrays.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L122)
 
 ___
 
@@ -2508,7 +2508,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;171)
+[src/q/system.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L171)
 
 ___
 
@@ -2524,7 +2524,7 @@ Returns true if Bootstrap 3 is loaded
 
 #### Defined in
 
-[src/q/dialogs.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;108)
+[src/q/dialogs.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L108)
 
 ___
 
@@ -2540,7 +2540,7 @@ Returns true if Bootstrap 5+ is loaded
 
 #### Defined in
 
-[src/q/dialogs.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;116)
+[src/q/dialogs.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L116)
 
 ___
 
@@ -2564,7 +2564,7 @@ True if the string is empty or null.
 
 #### Defined in
 
-[src/q/strings.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;16)
+[src/q/strings.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L16)
 
 ___
 
@@ -2584,7 +2584,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:487](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;487)
+[src/q/system.ts:487](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L487)
 
 ___
 
@@ -2605,7 +2605,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;181)
+[src/q/system.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L181)
 
 ___
 
@@ -2629,7 +2629,7 @@ True if the string is empty or null or whitespace.
 
 #### Defined in
 
-[src/q/strings.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;25)
+[src/q/strings.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L25)
 
 ___
 
@@ -2649,7 +2649,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;7)
+[src/q/system.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L7)
 
 ___
 
@@ -2675,7 +2675,7 @@ keyof `T`
 
 #### Defined in
 
-[src/q/system.ts:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;542)
+[src/q/system.ts:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L542)
 
 ___
 
@@ -2695,7 +2695,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;74)
+[src/q/layout.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L74)
 
 ___
 
@@ -2715,7 +2715,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;59)
+[src/q/layout.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L59)
 
 ___
 
@@ -2729,7 +2729,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;113)
+[src/q/validation.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L113)
 
 ___
 
@@ -2749,7 +2749,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;4)
+[src/q/localtext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L4)
 
 ___
 
@@ -2771,7 +2771,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;213)
+[src/q/formatting.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L213)
 
 ___
 
@@ -2789,7 +2789,7 @@ the new DIV element.
 
 #### Defined in
 
-[src/q/html.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;114)
+[src/q/html.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L114)
 
 ___
 
@@ -2811,7 +2811,7 @@ ___
 
 #### Defined in
 
-[src/q/notify.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;78)
+[src/q/notify.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#L78)
 
 ___
 
@@ -2833,7 +2833,7 @@ ___
 
 #### Defined in
 
-[src/q/notify.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;74)
+[src/q/notify.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#L74)
 
 ___
 
@@ -2855,7 +2855,7 @@ ___
 
 #### Defined in
 
-[src/q/notify.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;70)
+[src/q/notify.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#L70)
 
 ___
 
@@ -2877,7 +2877,7 @@ ___
 
 #### Defined in
 
-[src/q/notify.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;66)
+[src/q/notify.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#L66)
 
 ___
 
@@ -2899,7 +2899,7 @@ Returns the outer HTML of the element.
 
 #### Defined in
 
-[src/q/html.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;121)
+[src/q/html.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L121)
 
 ___
 
@@ -2925,7 +2925,7 @@ Padded string.
 
 #### Defined in
 
-[src/q/strings.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;36)
+[src/q/strings.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L36)
 
 ___
 
@@ -2959,7 +2959,7 @@ and B < @p2', { p1: 5, p2: 4 }) // [[[a], '>=' 5], 'and', [[b], '<', 4]]
 
 #### Defined in
 
-[src/q/criteria.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;694)
+[src/q/criteria.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L694)
 
 ▸ **parseCriteria**(`strings`, `...values`): `any`[]
 
@@ -2987,7 +2987,7 @@ parseCriteria`A >= ${a} and B < ${b}` // [[[a], '>=' 5], 'and', [[b], '<', 4]]
 
 #### Defined in
 
-[src/q/criteria.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#line&#x3D;705)
+[src/q/criteria.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L705)
 
 ___
 
@@ -3008,7 +3008,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:782](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;782)
+[src/q/formatting.ts:782](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L782)
 
 ___
 
@@ -3028,7 +3028,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;759)
+[src/q/formatting.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L759)
 
 ___
 
@@ -3048,7 +3048,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;460)
+[src/q/formatting.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L460)
 
 ___
 
@@ -3068,7 +3068,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;739)
+[src/q/formatting.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L739)
 
 ___
 
@@ -3088,7 +3088,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;724)
+[src/q/formatting.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L724)
 
 ___
 
@@ -3108,7 +3108,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:449](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;449)
+[src/q/formatting.ts:449](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L449)
 
 ___
 
@@ -3128,7 +3128,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;153)
+[src/q/services.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L153)
 
 ___
 
@@ -3149,7 +3149,7 @@ ___
 
 #### Defined in
 
-[src/q/notify.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#line&#x3D;82)
+[src/q/notify.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#L82)
 
 ___
 
@@ -3169,7 +3169,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;169)
+[src/q/services.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L169)
 
 ___
 
@@ -3189,7 +3189,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;191)
+[src/q/services.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L191)
 
 ___
 
@@ -3222,7 +3222,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;25)
+[src/q/localtext.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L25)
 
 ___
 
@@ -3245,7 +3245,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:506](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;506)
+[src/q/system.ts:506](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L506)
 
 ___
 
@@ -3267,7 +3267,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;63)
+[src/q/localtext.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L63)
 
 ___
 
@@ -3289,7 +3289,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:579](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;579)
+[src/q/system.ts:579](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L579)
 
 ___
 
@@ -3311,7 +3311,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;584)
+[src/q/system.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L584)
 
 ___
 
@@ -3333,7 +3333,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;589)
+[src/q/system.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L589)
 
 ___
 
@@ -3355,7 +3355,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;599)
+[src/q/system.ts:599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L599)
 
 ___
 
@@ -3381,7 +3381,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;222)
+[src/q/scriptdata.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L222)
 
 ___
 
@@ -3407,7 +3407,7 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#line&#x3D;226)
+[src/q/scriptdata.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L226)
 
 ___
 
@@ -3428,7 +3428,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;240)
+[src/q/validation.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L240)
 
 ___
 
@@ -3454,7 +3454,7 @@ Replaced string.
 
 #### Defined in
 
-[src/q/strings.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;111)
+[src/q/strings.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L111)
 
 ___
 
@@ -3474,7 +3474,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;217)
+[src/q/services.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L217)
 
 ___
 
@@ -3496,7 +3496,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;226)
+[src/q/formatting.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L226)
 
 ___
 
@@ -3517,7 +3517,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;191)
+[src/q/system.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L191)
 
 ___
 
@@ -3543,7 +3543,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;28)
+[src/q/services.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L28)
 
 ___
 
@@ -3572,7 +3572,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;124)
+[src/q/services.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L124)
 
 ___
 
@@ -3594,7 +3594,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#line&#x3D;133)
+[src/q/services.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L133)
 
 ___
 
@@ -3608,7 +3608,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;82)
+[src/q/layout.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L82)
 
 ___
 
@@ -3629,7 +3629,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;142)
+[src/q/system.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L142)
 
 ___
 
@@ -3668,7 +3668,7 @@ First element that matches.
 
 #### Defined in
 
-[src/q/arrays.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;151)
+[src/q/arrays.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L151)
 
 ___
 
@@ -3688,7 +3688,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:860](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;860)
+[src/q/formatting.ts:860](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L860)
 
 ___
 
@@ -3713,7 +3713,7 @@ True if the string starts with the prefix.
 
 #### Defined in
 
-[src/q/strings.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;51)
+[src/q/strings.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L51)
 
 ___
 
@@ -3739,7 +3739,7 @@ use successDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;543)
+[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L543)
 
 ___
 
@@ -3775,7 +3775,7 @@ successDialog("Operation complete", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;543)
+[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L543)
 
 ___
 
@@ -3799,7 +3799,7 @@ prefer localText for better discoverability
 
 #### Defined in
 
-[src/q/localtext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;4)
+[src/q/localtext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L4)
 
 ___
 
@@ -3837,7 +3837,7 @@ Grouping object.
 
 #### Defined in
 
-[src/q/arrays.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;180)
+[src/q/arrays.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L180)
 
 ___
 
@@ -3857,7 +3857,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;501)
+[src/q/formatting.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L501)
 
 ___
 
@@ -3879,7 +3879,7 @@ Converts the string to single line by removing line end characters
 
 #### Defined in
 
-[src/q/strings.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;59)
+[src/q/strings.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L59)
 
 ___
 
@@ -3893,7 +3893,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;11)
+[src/q/system.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L11)
 
 ___
 
@@ -3917,7 +3917,7 @@ Toggles the class on the element handling spaces like jQuery addClass does.
 
 #### Defined in
 
-[src/q/html.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#line&#x3D;132)
+[src/q/html.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html.ts#L132)
 
 ___
 
@@ -3937,7 +3937,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#line&#x3D;127)
+[src/q/layout.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L127)
 
 ___
 
@@ -3960,7 +3960,7 @@ This returns empty string even when the string is null or undefined.
 
 #### Defined in
 
-[src/q/strings.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;81)
+[src/q/strings.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L81)
 
 ___
 
@@ -3982,7 +3982,7 @@ Trims the whitespace characters from the end of the string
 
 #### Defined in
 
-[src/q/strings.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;66)
+[src/q/strings.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L66)
 
 ___
 
@@ -4004,7 +4004,7 @@ Trims the whitespace characters from the start of the string
 
 #### Defined in
 
-[src/q/strings.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;73)
+[src/q/strings.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L73)
 
 ___
 
@@ -4027,7 +4027,7 @@ Returns empty string if the string is null or undefined.
 
 #### Defined in
 
-[src/q/strings.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;89)
+[src/q/strings.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L89)
 
 ___
 
@@ -4050,7 +4050,7 @@ Returns null if the string is null, undefined or whitespace.
 
 #### Defined in
 
-[src/q/strings.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;97)
+[src/q/strings.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L97)
 
 ___
 
@@ -4070,7 +4070,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;238)
+[src/q/formatting.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L238)
 
 ___
 
@@ -4109,7 +4109,7 @@ First element that matches.
 
 #### Defined in
 
-[src/q/arrays.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#line&#x3D;204)
+[src/q/arrays.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays.ts#L204)
 
 ___
 
@@ -4129,7 +4129,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#line&#x3D;52)
+[src/q/localtext.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L52)
 
 ___
 
@@ -4150,7 +4150,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;32)
+[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L32)
 
 ___
 
@@ -4170,7 +4170,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;124)
+[src/q/formatting.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L124)
 
 ___
 
@@ -4191,7 +4191,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#line&#x3D;227)
+[src/q/validation.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L227)
 
 ___
 
@@ -4211,7 +4211,7 @@ ___
 
 #### Defined in
 
-[src/q/validateoptions.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validateoptions.ts#line&#x3D;61)
+[src/q/validateoptions.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validateoptions.ts#L61)
 
 ___
 
@@ -4231,7 +4231,7 @@ ___
 
 #### Defined in
 
-[src/q/validateoptions.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validateoptions.ts#line&#x3D;54)
+[src/q/validateoptions.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validateoptions.ts#L54)
 
 ___
 
@@ -4256,7 +4256,7 @@ use warningDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;571)
+[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L571)
 
 ___
 
@@ -4289,7 +4289,7 @@ warningDialog("Something is odd!");
 
 #### Defined in
 
-[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;571)
+[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L571)
 
 ___
 
@@ -4312,4 +4312,4 @@ Pads the start of string to make it the specified length.
 
 #### Defined in
 
-[src/q/strings.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#line&#x3D;121)
+[src/q/strings.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings.ts#L121)

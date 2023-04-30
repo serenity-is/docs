@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[src/interfaces/igeteditvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#line&#x3D;9)
+[src/interfaces/igeteditvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L9)

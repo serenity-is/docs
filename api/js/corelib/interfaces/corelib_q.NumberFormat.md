@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/q/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;12)
+[src/q/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L12)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;7)
+[src/q/formatting.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L7)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;5)
+[src/q/formatting.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L5)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;6)
+[src/q/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L6)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;10)
+[src/q/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L10)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;9)
+[src/q/formatting.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L9)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;11)
+[src/q/formatting.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L11)
 
 ___
 
@@ -101,4 +101,4 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#line&#x3D;8)
+[src/q/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L8)

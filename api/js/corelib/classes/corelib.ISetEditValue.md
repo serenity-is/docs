@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[src/interfaces/iseteditvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#line&#x3D;9)
+[src/interfaces/iseteditvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L9)

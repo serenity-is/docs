@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#line&#x3D;248)
+[src/ui/formatters/formatters.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L248)
 
 ## Methods
 
@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#line&#x3D;224)
+[src/ui/formatters/formatters.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L224)
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#line&#x3D;228)
+[src/ui/formatters/formatters.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L228)

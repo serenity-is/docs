@@ -44,4 +44,4 @@
 
 #### Defined in
 
-[src/interfaces/ieditdialog.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ieditdialog.ts#line&#x3D;8)
+[src/interfaces/ieditdialog.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ieditdialog.ts#L8)

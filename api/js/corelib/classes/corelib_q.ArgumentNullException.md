@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[src/q/system.ts:681](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;681)
+[src/q/system.ts:681](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L681)
 
 ## Properties
 

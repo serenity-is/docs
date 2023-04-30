@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/q/system.ts:688](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;688)
+[src/q/system.ts:688](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L688)
 
 ## Properties
 

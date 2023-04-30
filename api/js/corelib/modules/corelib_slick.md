@@ -73,7 +73,7 @@ export class MyCustomView extends RemoveView {
 
 #### Defined in
 
-[src/slick/remoteview.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;37)
+[src/slick/remoteview.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L37)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/slick/slicktypes.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;4)
+[src/slick/slicktypes.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L4)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;38)
+[src/slick/remoteview.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L38)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;39)
+[src/slick/remoteview.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L39)
 
 ___
 
@@ -196,4 +196,4 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;40)
+[src/slick/remoteview.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L40)

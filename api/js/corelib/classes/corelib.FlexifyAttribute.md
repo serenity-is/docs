@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/decorators/index.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#line&#x3D;99)
+[src/decorators/index.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L99)
 
 ## Properties
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#line&#x3D;99)
+[src/decorators/index.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L99)

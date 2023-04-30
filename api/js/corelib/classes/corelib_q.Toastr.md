@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/q/toastr2.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;88)
+[src/q/toastr2.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L88)
 
 ## Properties
 
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[src/q/toastr2.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;80)
+[src/q/toastr2.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L80)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;86)
+[src/q/toastr2.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L86)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;84)
+[src/q/toastr2.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L84)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;82)
+[src/q/toastr2.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L82)
 
 ## Methods
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;185)
+[src/q/toastr2.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L185)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;235)
+[src/q/toastr2.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L235)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;247)
+[src/q/toastr2.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L247)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;93)
+[src/q/toastr2.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L93)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;121)
+[src/q/toastr2.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L121)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;109)
+[src/q/toastr2.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L109)
 
 ___
 
@@ -238,7 +238,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;160)
+[src/q/toastr2.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L160)
 
 ___
 
@@ -259,7 +259,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;266)
+[src/q/toastr2.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L266)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;177)
+[src/q/toastr2.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L177)
 
 ___
 
@@ -299,7 +299,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;191)
+[src/q/toastr2.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L191)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;211)
+[src/q/toastr2.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L211)
 
 ___
 
@@ -340,7 +340,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;173)
+[src/q/toastr2.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L173)
 
 ___
 
@@ -362,7 +362,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;147)
+[src/q/toastr2.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L147)
 
 ___
 
@@ -384,4 +384,4 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#line&#x3D;134)
+[src/q/toastr2.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L134)

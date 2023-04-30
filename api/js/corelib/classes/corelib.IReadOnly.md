@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[src/interfaces/ireadonly.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ireadonly.ts#line&#x3D;4)
+[src/interfaces/ireadonly.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ireadonly.ts#L4)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 #### Defined in
 
-[src/interfaces/ireadonly.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ireadonly.ts#line&#x3D;5)
+[src/interfaces/ireadonly.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ireadonly.ts#L5)

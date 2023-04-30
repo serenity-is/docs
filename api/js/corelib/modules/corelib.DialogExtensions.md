@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/ui/dialogs/dialogextensions.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#line&#x3D;34)
+[src/ui/dialogs/dialogextensions.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#L34)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/dialogextensions.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#line&#x3D;23)
+[src/ui/dialogs/dialogextensions.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#L23)
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/dialogextensions.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#line&#x3D;5)
+[src/ui/dialogs/dialogextensions.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#L5)

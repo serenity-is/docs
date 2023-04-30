@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/slick/slicktypes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;41)
+[src/slick/slicktypes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L41)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/slick/slicktypes.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;40)
+[src/slick/slicktypes.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L40)

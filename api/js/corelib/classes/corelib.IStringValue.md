@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[src/interfaces/istringvalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#line&#x3D;8)
+[src/interfaces/istringvalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L8)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/interfaces/istringvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#line&#x3D;9)
+[src/interfaces/istringvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L9)

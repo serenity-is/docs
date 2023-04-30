@@ -20,4 +20,4 @@ Options for the BlockUI plugin.
 
 #### Defined in
 
-[src/q/blockui.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#line&#x3D;5)
+[src/q/blockui.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/blockui.ts#L5)

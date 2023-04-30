@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/ui/datagrid/quickfilterbar.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#line&#x3D;11)
+[src/ui/datagrid/quickfilterbar.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L11)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quickfilterbar.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#line&#x3D;12)
+[src/ui/datagrid/quickfilterbar.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L12)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quickfilterbar.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#line&#x3D;13)
+[src/ui/datagrid/quickfilterbar.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L13)

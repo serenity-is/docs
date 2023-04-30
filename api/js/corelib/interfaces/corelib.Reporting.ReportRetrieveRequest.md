@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/ui/widgets/reporting.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#line&#x3D;185)
+[src/ui/widgets/reporting.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reporting.ts#L185)

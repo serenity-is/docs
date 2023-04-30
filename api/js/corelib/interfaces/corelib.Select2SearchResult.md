@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#line&#x3D;52)
+[src/ui/editors/select2editor.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L52)
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#line&#x3D;53)
+[src/ui/editors/select2editor.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L53)

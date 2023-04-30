@@ -72,7 +72,7 @@
 
 #### Defined in
 
-[src/q/propertyitem.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;35)
+[src/q/propertyitem.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L35)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;31)
+[src/q/propertyitem.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L31)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;10)
+[src/q/propertyitem.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L10)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;12)
+[src/q/propertyitem.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L12)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;11)
+[src/q/propertyitem.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L11)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;14)
+[src/q/propertyitem.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L14)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;28)
+[src/q/propertyitem.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L28)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;34)
+[src/q/propertyitem.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L34)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;46)
+[src/q/propertyitem.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L46)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;49)
+[src/q/propertyitem.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L49)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;48)
+[src/q/propertyitem.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L48)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;47)
+[src/q/propertyitem.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L47)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;9)
+[src/q/propertyitem.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L9)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;8)
+[src/q/propertyitem.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L8)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;54)
+[src/q/propertyitem.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L54)
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;52)
+[src/q/propertyitem.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L52)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;51)
+[src/q/propertyitem.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L51)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;50)
+[src/q/propertyitem.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L50)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;16)
+[src/q/propertyitem.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L16)
 
 ___
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;33)
+[src/q/propertyitem.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L33)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;32)
+[src/q/propertyitem.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L32)
 
 ___
 
@@ -282,7 +282,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;44)
+[src/q/propertyitem.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L44)
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;15)
+[src/q/propertyitem.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L15)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;21)
+[src/q/propertyitem.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L21)
 
 ___
 
@@ -312,7 +312,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;24)
+[src/q/propertyitem.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L24)
 
 ___
 
@@ -322,7 +322,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;6)
+[src/q/propertyitem.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L6)
 
 ___
 
@@ -332,7 +332,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;20)
+[src/q/propertyitem.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L20)
 
 ___
 
@@ -342,7 +342,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;19)
+[src/q/propertyitem.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L19)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;40)
+[src/q/propertyitem.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L40)
 
 ___
 
@@ -362,7 +362,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;29)
+[src/q/propertyitem.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L29)
 
 ___
 
@@ -372,7 +372,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;17)
+[src/q/propertyitem.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L17)
 
 ___
 
@@ -382,7 +382,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;39)
+[src/q/propertyitem.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L39)
 
 ___
 
@@ -392,7 +392,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;38)
+[src/q/propertyitem.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L38)
 
 ___
 
@@ -402,7 +402,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;4)
+[src/q/propertyitem.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L4)
 
 ___
 
@@ -412,7 +412,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;53)
+[src/q/propertyitem.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L53)
 
 ___
 
@@ -422,7 +422,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;27)
+[src/q/propertyitem.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L27)
 
 ___
 
@@ -432,7 +432,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;7)
+[src/q/propertyitem.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L7)
 
 ___
 
@@ -442,7 +442,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;55)
+[src/q/propertyitem.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L55)
 
 ___
 
@@ -452,7 +452,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;58)
+[src/q/propertyitem.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L58)
 
 ___
 
@@ -462,7 +462,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;56)
+[src/q/propertyitem.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L56)
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;57)
+[src/q/propertyitem.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L57)
 
 ___
 
@@ -482,7 +482,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;25)
+[src/q/propertyitem.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L25)
 
 ___
 
@@ -492,7 +492,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;26)
+[src/q/propertyitem.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L26)
 
 ___
 
@@ -502,7 +502,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;18)
+[src/q/propertyitem.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L18)
 
 ___
 
@@ -512,7 +512,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;41)
+[src/q/propertyitem.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L41)
 
 ___
 
@@ -522,7 +522,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;43)
+[src/q/propertyitem.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L43)
 
 ___
 
@@ -532,7 +532,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;42)
+[src/q/propertyitem.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L42)
 
 ___
 
@@ -542,7 +542,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;45)
+[src/q/propertyitem.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L45)
 
 ___
 
@@ -552,7 +552,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;13)
+[src/q/propertyitem.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L13)
 
 ___
 
@@ -562,7 +562,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;5)
+[src/q/propertyitem.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L5)
 
 ___
 
@@ -572,7 +572,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;22)
+[src/q/propertyitem.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L22)
 
 ___
 
@@ -582,7 +582,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;23)
+[src/q/propertyitem.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L23)
 
 ___
 
@@ -592,7 +592,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;30)
+[src/q/propertyitem.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L30)
 
 ___
 
@@ -602,7 +602,7 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;36)
+[src/q/propertyitem.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L36)
 
 ___
 
@@ -612,4 +612,4 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;37)
+[src/q/propertyitem.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L37)

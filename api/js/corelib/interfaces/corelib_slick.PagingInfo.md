@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/slick/remoteview.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;34)
+[src/slick/remoteview.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L34)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;33)
+[src/slick/remoteview.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L33)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;32)
+[src/slick/remoteview.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L32)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;30)
+[src/slick/remoteview.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L30)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;29)
+[src/slick/remoteview.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L29)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#line&#x3D;31)
+[src/slick/remoteview.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L31)

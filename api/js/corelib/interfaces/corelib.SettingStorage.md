@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#line&#x3D;57)
+[src/ui/datagrid/datagrid.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L57)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#line&#x3D;58)
+[src/ui/datagrid/datagrid.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L58)

@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/q/system.ts:412](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;412)
+[src/q/system.ts:412](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L412)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:389](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;389)
+[src/q/system.ts:389](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L389)

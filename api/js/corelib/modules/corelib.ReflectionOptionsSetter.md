@@ -29,4 +29,4 @@
 
 #### Defined in
 
-[src/ui/widgets/reflectionoptionssetter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reflectionoptionssetter.ts#line&#x3D;6)
+[src/ui/widgets/reflectionoptionssetter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reflectionoptionssetter.ts#L6)

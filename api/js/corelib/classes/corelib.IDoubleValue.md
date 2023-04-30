@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/interfaces/idoublevalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#line&#x3D;8)
+[src/interfaces/idoublevalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L8)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[src/interfaces/idoublevalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#line&#x3D;9)
+[src/interfaces/idoublevalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L9)

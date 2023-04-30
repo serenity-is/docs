@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/ui/editors/emaileditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.ts#line&#x3D;7)
+[src/ui/editors/emaileditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.ts#L7)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/emaileditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.ts#line&#x3D;8)
+[src/ui/editors/emaileditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.ts#L8)

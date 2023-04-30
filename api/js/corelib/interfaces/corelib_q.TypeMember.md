@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/q/system.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;89)
+[src/q/system.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L89)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;90)
+[src/q/system.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L90)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;87)
+[src/q/system.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L87)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;91)
+[src/q/system.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L91)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;88)
+[src/q/system.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L88)

@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#line&#x3D;7)
+[src/ui/datagrid/quicksearchinput.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L7)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#line&#x3D;8)
+[src/ui/datagrid/quicksearchinput.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L8)

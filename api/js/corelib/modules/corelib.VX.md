@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[src/ui/helpers/validationhelper.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#line&#x3D;53)
+[src/ui/helpers/validationhelper.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#L53)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/validationhelper.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#line&#x3D;62)
+[src/ui/helpers/validationhelper.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#L62)
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/validationhelper.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#line&#x3D;67)
+[src/ui/helpers/validationhelper.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#L67)

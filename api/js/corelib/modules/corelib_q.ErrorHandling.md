@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/q/errorhandling.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/errorhandling.ts#line&#x3D;23)
+[src/q/errorhandling.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/errorhandling.ts#L23)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[src/q/errorhandling.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/errorhandling.ts#line&#x3D;8)
+[src/q/errorhandling.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/errorhandling.ts#L8)

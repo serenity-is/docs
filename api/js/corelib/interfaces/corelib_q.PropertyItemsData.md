@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/q/propertyitem.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;63)
+[src/q/propertyitem.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L63)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/q/propertyitem.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#line&#x3D;62)
+[src/q/propertyitem.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L62)

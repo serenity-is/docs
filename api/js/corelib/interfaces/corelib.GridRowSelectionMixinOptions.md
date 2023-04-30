@@ -32,4 +32,4 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#line&#x3D;13)
+[src/ui/helpers/slickhelpers.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L13)

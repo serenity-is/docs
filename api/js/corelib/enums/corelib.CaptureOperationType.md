@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/captureoperationtype.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#line&#x3D;6)
+[src/types/captureoperationtype.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L6)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/captureoperationtype.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#line&#x3D;7)
+[src/types/captureoperationtype.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L7)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/captureoperationtype.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#line&#x3D;8)
+[src/types/captureoperationtype.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L8)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/captureoperationtype.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#line&#x3D;9)
+[src/types/captureoperationtype.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L9)

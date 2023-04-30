@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/ui/widgets/flexify.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#line&#x3D;159)
+[src/ui/widgets/flexify.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#L159)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/flexify.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#line&#x3D;158)
+[src/ui/widgets/flexify.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#L158)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/flexify.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#line&#x3D;156)
+[src/ui/widgets/flexify.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#L156)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/flexify.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#line&#x3D;157)
+[src/ui/widgets/flexify.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/flexify.ts#L157)

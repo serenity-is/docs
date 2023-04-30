@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/types/formattertyperegistry.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#line&#x3D;10)
+[src/types/formattertyperegistry.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L10)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/types/formattertyperegistry.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#line&#x3D;34)
+[src/types/formattertyperegistry.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L34)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[src/types/formattertyperegistry.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#line&#x3D;38)
+[src/types/formattertyperegistry.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L38)

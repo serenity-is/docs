@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/slick/aggregators.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#line&#x3D;146)
+[src/slick/aggregators.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L146)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/slick/aggregators.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#line&#x3D;158)
+[src/slick/aggregators.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L158)
 
 ___
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-[src/slick/aggregators.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#line&#x3D;180)
+[src/slick/aggregators.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L180)

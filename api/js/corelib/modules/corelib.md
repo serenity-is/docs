@@ -466,7 +466,7 @@ Re-exports [UndeleteResponse](../interfaces/corelib_q.UndeleteResponse.md)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#line&#x3D;17)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
@@ -492,7 +492,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/index.ts#line&#x3D;107)
+[src/index.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/index.ts#L107)
 
 ## Variables
 
@@ -502,7 +502,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/dateeditor.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#line&#x3D;6)
+[src/ui/editors/dateeditor.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L6)
 
 ## Functions
 
@@ -529,7 +529,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/jsx.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/jsx.ts#line&#x3D;74)
+[src/ui/widgets/jsx.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/jsx.ts#L74)
 
 ___
 
@@ -543,7 +543,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#line&#x3D;19)
+[src/ui/widgets/widget.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L19)
 
 ___
 
@@ -563,4 +563,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#line&#x3D;138)
+[src/ui/widgets/templatedwidget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L138)

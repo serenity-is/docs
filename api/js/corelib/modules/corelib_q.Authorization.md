@@ -48,7 +48,7 @@ if (Authorization.isLoggedIn) {
 
 #### Defined in
 
-[src/q/authorization.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;152)
+[src/q/authorization.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L152)
 
 ___
 
@@ -68,7 +68,7 @@ if (await Authorization.isLoggedInAsync) {
 
 #### Defined in
 
-[src/q/authorization.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;162)
+[src/q/authorization.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L162)
 
 ___
 
@@ -89,7 +89,7 @@ if (Authorization.userDefinition.IsAdmin) {
 
 #### Defined in
 
-[src/q/authorization.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;191)
+[src/q/authorization.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L191)
 
 ___
 
@@ -109,7 +109,7 @@ if ((await Authorization.userDefinitionAsync).IsAdmin) {
 
 #### Defined in
 
-[src/q/authorization.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;200)
+[src/q/authorization.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L200)
 
 ___
 
@@ -130,7 +130,7 @@ if (Authorization.username) {
 
 #### Defined in
 
-[src/q/authorization.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;172)
+[src/q/authorization.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L172)
 
 ___
 
@@ -150,7 +150,7 @@ if (await Authorization.usernameAsync) {
 
 #### Defined in
 
-[src/q/authorization.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;181)
+[src/q/authorization.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L181)
 
 ## Functions
 
@@ -178,7 +178,7 @@ if the user has the permission or if the user has the `IsAdmin` flag (super admi
 
 #### Defined in
 
-[src/q/authorization.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;26)
+[src/q/authorization.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L26)
 
 ___
 
@@ -204,7 +204,7 @@ if the user has the permission or if the user has the `IsAdmin` flag (super admi
 
 #### Defined in
 
-[src/q/authorization.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;57)
+[src/q/authorization.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L57)
 
 ___
 
@@ -229,7 +229,7 @@ true if set contains permission
 
 #### Defined in
 
-[src/q/authorization.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;83)
+[src/q/authorization.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L83)
 
 ___
 
@@ -253,7 +253,7 @@ is not already loaded.
 
 #### Defined in
 
-[src/q/authorization.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;121)
+[src/q/authorization.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L121)
 
 ___
 
@@ -281,4 +281,4 @@ await Authorization.validatePermissionAsync("A&B|C");
 
 #### Defined in
 
-[src/q/authorization.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#line&#x3D;134)
+[src/q/authorization.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/authorization.ts#L134)

@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/interfaces/ivalidaterequired.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#line&#x3D;4)
+[src/interfaces/ivalidaterequired.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L4)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[src/interfaces/ivalidaterequired.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#line&#x3D;5)
+[src/interfaces/ivalidaterequired.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L5)

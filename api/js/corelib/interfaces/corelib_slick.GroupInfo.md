@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/slick/slicktypes.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;22)
+[src/slick/slicktypes.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L22)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/slick/slicktypes.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;21)
+[src/slick/slicktypes.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L21)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/slick/slicktypes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;20)
+[src/slick/slicktypes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L20)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/slick/slicktypes.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;19)
+[src/slick/slicktypes.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L19)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/slick/slicktypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;18)
+[src/slick/slicktypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L18)
 
 ___
 
@@ -108,4 +108,4 @@ ___
 
 #### Defined in
 
-[src/slick/slicktypes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#line&#x3D;23)
+[src/slick/slicktypes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L23)

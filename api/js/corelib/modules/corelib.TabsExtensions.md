@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#line&#x3D;44)
+[src/ui/helpers/tabsextensions.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L44)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#line&#x3D;60)
+[src/ui/helpers/tabsextensions.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L60)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#line&#x3D;79)
+[src/ui/helpers/tabsextensions.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L79)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#line&#x3D;4)
+[src/ui/helpers/tabsextensions.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L4)
 
 ___
 
@@ -117,4 +117,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#line&#x3D;24)
+[src/ui/helpers/tabsextensions.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L24)

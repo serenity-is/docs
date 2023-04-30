@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/ui/editors/decimaleditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#line&#x3D;11)
+[src/ui/editors/decimaleditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#L11)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/decimaleditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#line&#x3D;9)
+[src/ui/editors/decimaleditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#L9)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/decimaleditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#line&#x3D;8)
+[src/ui/editors/decimaleditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#L8)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/decimaleditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#line&#x3D;7)
+[src/ui/editors/decimaleditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#L7)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/decimaleditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#line&#x3D;10)
+[src/ui/editors/decimaleditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.ts#L10)

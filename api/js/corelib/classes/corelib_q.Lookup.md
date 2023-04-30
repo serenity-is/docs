@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[src/q/lookup.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;25)
+[src/q/lookup.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L25)
 
 ## Properties
 
@@ -60,9 +60,9 @@
 
 #### Defined in
 
-[src/q/lookup.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;11)
+[src/q/lookup.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L11)
 
-[src/q/lookup.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;20)
+[src/q/lookup.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L20)
 
 ___
 
@@ -76,9 +76,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;10)
+[src/q/lookup.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L10)
 
-[src/q/lookup.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;19)
+[src/q/lookup.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L19)
 
 ___
 
@@ -88,9 +88,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;9)
+[src/q/lookup.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L9)
 
-[src/q/lookup.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;18)
+[src/q/lookup.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L18)
 
 ___
 
@@ -100,9 +100,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;12)
+[src/q/lookup.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L12)
 
-[src/q/lookup.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;21)
+[src/q/lookup.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L21)
 
 ___
 
@@ -112,9 +112,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;13)
+[src/q/lookup.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L13)
 
-[src/q/lookup.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;22)
+[src/q/lookup.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L22)
 
 ___
 
@@ -138,9 +138,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;14)
+[src/q/lookup.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L14)
 
-[src/q/lookup.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;23)
+[src/q/lookup.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L23)
 
 ## Methods
 
@@ -160,4 +160,4 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#line&#x3D;37)
+[src/q/lookup.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L37)

@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;67)
+[src/q/servicetypes.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L67)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;71)
+[src/q/servicetypes.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L71)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;68)
+[src/q/servicetypes.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L68)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;69)
+[src/q/servicetypes.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L69)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;72)
+[src/q/servicetypes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L72)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#line&#x3D;70)
+[src/q/servicetypes.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L70)

@@ -23,7 +23,7 @@ Display name of the logged user
 
 #### Defined in
 
-[src/q/userdefinition.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#line&#x3D;9)
+[src/q/userdefinition.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#L9)
 
 ___
 
@@ -36,7 +36,7 @@ It does not mean a member of Administrators, who might not have some of the perm
 
 #### Defined in
 
-[src/q/userdefinition.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#line&#x3D;13)
+[src/q/userdefinition.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#L13)
 
 ___
 
@@ -54,7 +54,7 @@ You should not rely on client side permission checks and always re-check permiss
 
 #### Defined in
 
-[src/q/userdefinition.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#line&#x3D;19)
+[src/q/userdefinition.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#L19)
 
 ___
 
@@ -66,4 +66,4 @@ Username of the logged user
 
 #### Defined in
 
-[src/q/userdefinition.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#line&#x3D;5)
+[src/q/userdefinition.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/userdefinition.ts#L5)

@@ -42,7 +42,7 @@ Click handler
 
 #### Defined in
 
-[src/q/dialogs.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;19)
+[src/q/dialogs.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L19)
 
 ___
 
@@ -54,7 +54,7 @@ CSS class for button
 
 #### Defined in
 
-[src/q/dialogs.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;21)
+[src/q/dialogs.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L21)
 
 ___
 
@@ -66,7 +66,7 @@ Button hint
 
 #### Defined in
 
-[src/q/dialogs.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;15)
+[src/q/dialogs.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L15)
 
 ___
 
@@ -78,7 +78,7 @@ HTML encode button text. Default is true.
 
 #### Defined in
 
-[src/q/dialogs.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;23)
+[src/q/dialogs.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L23)
 
 ___
 
@@ -90,7 +90,7 @@ Button icon
 
 #### Defined in
 
-[src/q/dialogs.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;17)
+[src/q/dialogs.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L17)
 
 ___
 
@@ -102,7 +102,7 @@ The code that is returned from message dialog function when this button is click
 
 #### Defined in
 
-[src/q/dialogs.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;25)
+[src/q/dialogs.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L25)
 
 ___
 
@@ -114,4 +114,4 @@ Button text
 
 #### Defined in
 
-[src/q/dialogs.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#line&#x3D;13)
+[src/q/dialogs.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L13)

@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/ui/widgets/wx.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#line&#x3D;14)
+[src/ui/widgets/wx.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#L14)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/wx.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#line&#x3D;18)
+[src/ui/widgets/wx.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#L18)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/wx.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#line&#x3D;22)
+[src/ui/widgets/wx.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#L22)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/wx.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#line&#x3D;4)
+[src/ui/widgets/wx.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#L4)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#line&#x3D;124)
+[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
 
 ___
 
@@ -142,4 +142,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/wx.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#line&#x3D;10)
+[src/ui/widgets/wx.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/wx.ts#L10)

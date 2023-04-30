@@ -44,7 +44,7 @@ Error.constructor
 
 #### Defined in
 
-[src/q/system.ts:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#line&#x3D;674)
+[src/q/system.ts:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L674)
 
 ## Properties
 

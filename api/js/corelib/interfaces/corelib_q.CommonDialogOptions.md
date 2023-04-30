@@ -141,7 +141,7 @@ ___
 
 • `Optional` **preWrap**: `boolean`
 
-Wrap the message in a <pre> element, so that line endings are preserved, default is true
+Wrap the message in a `<pre>` element, so that line endings are preserved, default is true
 
 #### Defined in
 

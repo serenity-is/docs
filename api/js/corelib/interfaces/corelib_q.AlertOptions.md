@@ -43,7 +43,7 @@ True to use Bootstrap dialogs even when jQuery UI  present, default is based on 
 
 #### Defined in
 
-[src/q/dialogs.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L49)
+[src/q/dialogs.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L50)
 
 ___
 
@@ -59,7 +59,7 @@ List of buttons to show on the dialog
 
 #### Defined in
 
-[src/q/dialogs.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L45)
+[src/q/dialogs.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L46)
 
 ___
 
@@ -75,7 +75,7 @@ Dialog css class. Default is based on the message dialog type
 
 #### Defined in
 
-[src/q/dialogs.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L43)
+[src/q/dialogs.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L44)
 
 ___
 
@@ -91,7 +91,7 @@ HTML encode the message, default is true
 
 #### Defined in
 
-[src/q/dialogs.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L39)
+[src/q/dialogs.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L40)
 
 ___
 
@@ -107,7 +107,7 @@ Class to use for the modal element for Bootstrap dialogs
 
 #### Defined in
 
-[src/q/dialogs.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L47)
+[src/q/dialogs.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L48)
 
 ___
 
@@ -119,7 +119,7 @@ The title of OK button, or false to hide the OK button
 
 #### Defined in
 
-[src/q/dialogs.ts:308](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L308)
+[src/q/dialogs.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L307)
 
 ___
 
@@ -131,7 +131,7 @@ CSS class for OK button
 
 #### Defined in
 
-[src/q/dialogs.ts:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L310)
+[src/q/dialogs.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L309)
 
 ___
 
@@ -161,7 +161,7 @@ Event handler that is called when dialog is closed
 
 #### Defined in
 
-[src/q/dialogs.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L35)
+[src/q/dialogs.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L36)
 
 ___
 
@@ -185,7 +185,7 @@ Event handler that is called when dialog is opened
 
 #### Defined in
 
-[src/q/dialogs.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L33)
+[src/q/dialogs.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L34)
 
 ___
 
@@ -201,7 +201,7 @@ Wrap the message in a `<pre>` element, so that line endings are preserved, defau
 
 #### Defined in
 
-[src/q/dialogs.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L41)
+[src/q/dialogs.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L42)
 
 ___
 
@@ -217,7 +217,7 @@ The result code of the button used to close the dialog is returned via this vari
 
 #### Defined in
 
-[src/q/dialogs.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L51)
+[src/q/dialogs.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L52)
 
 ___
 
@@ -233,4 +233,4 @@ Dialog title
 
 #### Defined in
 
-[src/q/dialogs.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L37)
+[src/q/dialogs.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L38)

@@ -626,7 +626,7 @@ use alertDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L321)
+[src/q/dialogs.ts:320](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L320)
 
 ___
 
@@ -659,7 +659,7 @@ alertDialog("An error occured!"); }
 
 #### Defined in
 
-[src/q/dialogs.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L321)
+[src/q/dialogs.ts:320](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L320)
 
 ___
 
@@ -936,8 +936,8 @@ If the panelbeforeclose prevents the default, the operation is cancelled.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `element` | `JQuery` | The panel element |
-| `e?` | `JQueryEventObject` | The event triggering the close |
+| `element` | `HTMLElement` \| `JQuery` | The panel element |
+| `e?` | `Event` | The event triggering the close |
 
 #### Returns
 
@@ -945,7 +945,7 @@ If the panelbeforeclose prevents the default, the operation is cancelled.
 
 #### Defined in
 
-[src/q/dialogs.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L589)
+[src/q/dialogs.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L594)
 
 ___
 
@@ -1025,7 +1025,7 @@ use confirmDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L385)
+[src/q/dialogs.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L388)
 
 ___
 
@@ -1061,7 +1061,7 @@ confirmDialog("Are you sure you want to delete?", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L385)
+[src/q/dialogs.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L388)
 
 ___
 
@@ -2250,7 +2250,7 @@ ___
 
 ▸ **iframeDialog**(`options`): `void`
 
-Display a dialog that shows an HTML block, which is usually returned from server callbacks in an IFRAME
+Display a dialog that shows an HTML block in an IFRAME, which is usually returned from server callbacks
 
 #### Parameters
 
@@ -2264,7 +2264,7 @@ Display a dialog that shows an HTML block, which is usually returned from server
 
 #### Defined in
 
-[src/q/dialogs.ts:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L448)
+[src/q/dialogs.ts:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L457)
 
 ___
 
@@ -2319,7 +2319,7 @@ use informationDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L512)
+[src/q/dialogs.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L517)
 
 ___
 
@@ -2355,7 +2355,7 @@ informationDialog("Operation complete", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L512)
+[src/q/dialogs.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L517)
 
 ___
 
@@ -2524,7 +2524,7 @@ Returns true if Bootstrap 3 is loaded
 
 #### Defined in
 
-[src/q/dialogs.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L108)
+[src/q/dialogs.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L109)
 
 ___
 
@@ -2540,7 +2540,7 @@ Returns true if Bootstrap 5+ is loaded
 
 #### Defined in
 
-[src/q/dialogs.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L116)
+[src/q/dialogs.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L117)
 
 ___
 
@@ -3739,7 +3739,7 @@ use successDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L543)
+[src/q/dialogs.ts:548](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L548)
 
 ___
 
@@ -3775,7 +3775,7 @@ successDialog("Operation complete", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L543)
+[src/q/dialogs.ts:548](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L548)
 
 ___
 
@@ -4256,7 +4256,7 @@ use warningDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L571)
+[src/q/dialogs.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L576)
 
 ___
 
@@ -4289,7 +4289,7 @@ warningDialog("Something is odd!");
 
 #### Defined in
 
-[src/q/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L571)
+[src/q/dialogs.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L576)
 
 ___
 

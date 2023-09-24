@@ -1,7 +1,7 @@
 # DefaultImageProcessor class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Default implementation for the [`IImageProcessor`](../global/IImageProcessor.md)
+Default implementation for the [`IImageProcessor`](IImageProcessor.md)
 
 ```csharp
 public class DefaultImageProcessor : IImageProcessor
@@ -19,5 +19,5 @@ public class DefaultImageProcessor : IImageProcessor
 
 ## See Also
 
-* interface [IImageProcessor](../global/IImageProcessor.md)
+* interface [IImageProcessor](IImageProcessor.md)
 * **Source:** *[DefaultImageProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/DefaultImageProcessor.cs)*

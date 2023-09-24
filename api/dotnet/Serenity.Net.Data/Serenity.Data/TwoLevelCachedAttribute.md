@@ -1,7 +1,7 @@
 # TwoLevelCachedAttribute class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Data](../README.md)*
 
-This attribute marks a row so that when it is Inserted/Updated/Deleted through repository, its related cache, if any should be cleared. It doesn't turn on/off caching. A sample of related cached item to a row, might be its lookup if any.
+This attribute marks a row so that when it is Inserted/Updated/Deleted through handler, its related cache, if any should be cleared. It doesn't turn on/off caching. A sample of related cached item to a row, might be its lookup if any.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

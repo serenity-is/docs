@@ -4,7 +4,7 @@
 Executes a callback by passing a connection object and converts any exception raised inside to a service response.
 
 ```csharp
-public static Result<TResponse> UseConnection<TResponse>(this Controller controller, 
+public static Result<TResponse> UseConnection<TResponse>(this ControllerBase controller, 
     string connectionKey, Func<IDbConnection, TResponse> handler)
     where TResponse : ServiceResponse, new()
 ```

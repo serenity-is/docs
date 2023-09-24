@@ -4,7 +4,7 @@
 Defines a localizable text resource. Contains a local text key and has implicit conversions to and from String.
 
 ```csharp
-public class LocalText
+public class LocalText : ILocalText
 ```
 
 ## Public Members
@@ -20,4 +20,5 @@ public class LocalText
 
 ## See Also
 
+* interface [ILocalText](../Serenity.Localization/ILocalText.md)
 * **Source:** *[LocalText.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/LocalText.cs)*

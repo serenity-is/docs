@@ -15,7 +15,17 @@ public class DefaultSqlConnections : ISqlConnections
 | [ListConnectionStrings](DefaultSqlConnections/ListConnectionStrings.md)() | Lists all known connections strings |
 | virtual [New](DefaultSqlConnections/New.md)(…) | Creates a new IDbConnection for given connection string, provider name and dialect. |
 | virtual [NewByKey](DefaultSqlConnections/NewByKey.md)(…) | Creates a new IDbConnection for given connection key. |
-| [TryGetConnectionString](DefaultSqlConnections/TryGetConnectionString.md)(…) | Gets a connection string by its key |
+| virtual [TryGetConnectionString](DefaultSqlConnections/TryGetConnectionString.md)(…) | Gets a connection string by its key |
+
+## Protected Members
+
+| name | description |
+| --- | --- |
+| readonly [connectionStrings-](DefaultSqlConnections/connectionStrings-.md) | Connection strings |
+| readonly [loggerFactory-](DefaultSqlConnections/loggerFactory-.md) | Logger factory |
+| readonly [profiler-](DefaultSqlConnections/profiler-.md) | Profiler |
+| virtual [CreateConnection](DefaultSqlConnections/CreateConnection.md)(…) | Creates an actual connection based on providerName, this should not return a wrapped connection. |
+| virtual [WrapConnection](DefaultSqlConnections/WrapConnection.md)(…) | Wraps and profiles the actual connection |
 
 ## See Also
 

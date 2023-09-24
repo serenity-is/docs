@@ -29,8 +29,8 @@ public static TResponse ConvertToResponse<TResponse>(this Exception exception,
 Convert the exception to a service response
 
 ```csharp
-public static TResponse ConvertToResponse<TResponse>(this Exception exception, 
-    IExceptionLogger logger, ITextLocalizer localizer, bool showDetails)
+public static TResponse ConvertToResponse<TResponse>(this Exception exception, ILogger logger, 
+    ITextLocalizer localizer, bool showDetails)
     where TResponse : ServiceResponse, new()
 ```
 
@@ -45,7 +45,6 @@ public static TResponse ConvertToResponse<TResponse>(this Exception exception,
 ## See Also
 
 * class [TResponse](../Serenity.Net.Web/../EndpointExtensions.TResponse.md)
-* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [ServiceResponse](../Serenity.Net.Services/../ServiceResponse.md)
 * class [EndpointExtensions](../EndpointExtensions.md)

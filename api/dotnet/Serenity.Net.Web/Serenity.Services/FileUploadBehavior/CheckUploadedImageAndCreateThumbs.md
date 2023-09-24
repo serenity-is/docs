@@ -27,6 +27,6 @@ public static void CheckUploadedImageAndCreateThumbs(IUploadOptions uploadOption
 
 * interface [IUploadOptions](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadOptions.md)
 * interface [IUploadValidator](../Serenity.Net.Services/../../Serenity.Web/IUploadValidator.md)
-* interface [IImageProcessor](../Serenity.Net.Services/../../global/IImageProcessor.md)
+* interface [IImageProcessor](../Serenity.Net.Services/../../Serenity.Web/IImageProcessor.md)
 * interface [IUploadStorage](../Serenity.Net.Services/../../Serenity.Web/IUploadStorage.md)
 * class [FileUploadBehavior](../FileUploadBehavior.md)

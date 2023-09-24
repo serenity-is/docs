@@ -18,7 +18,6 @@ public static class SqlHelper
 | static [ExecuteReader](SqlHelper/ExecuteReader.md)(…) | Executes the command returning a data reader. (6 methods) |
 | static [ExecuteScalar](SqlHelper/ExecuteScalar.md)(…) | Executes the statement returning a scalar value. (4 methods) |
 | static [Exists](SqlHelper/Exists.md)(…) | Executes the query returning true if it has at least one result. |
-| static [FixCommandText](SqlHelper/FixCommandText.md)(…) | Fixes the command text for target dialect by replacing brackets ([]), and parameter prefixes (@). |
 | static [FixParamType](SqlHelper/FixParamType.md)(…) | Fixes the type of the parameter to something suitable as SQL parameter. |
 | static [LogCommand](SqlHelper/LogCommand.md)(…) | Logs the command. |
 | static [NewCommand](SqlHelper/NewCommand.md)(…) | Creates new command. (2 methods) |

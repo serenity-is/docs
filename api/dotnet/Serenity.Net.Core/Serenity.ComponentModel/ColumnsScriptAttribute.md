@@ -15,6 +15,7 @@ public sealed class ColumnsScriptAttribute : Attribute
 | [ColumnsScriptAttribute](ColumnsScriptAttribute/ColumnsScriptAttribute.md)() | Initializes a new instance of the [`FormScriptAttribute`](FormScriptAttribute.md) class. The key of the form script will be the full name of the type this is placed on. |
 | [ColumnsScriptAttribute](ColumnsScriptAttribute/ColumnsScriptAttribute.md)(…) | Initializes a new instance of the [`ColumnsScriptAttribute`](ColumnsScriptAttribute.md) class. |
 | [Key](ColumnsScriptAttribute/Key.md) { get; } | Gets the key. |
+| [LocalTextPrefix](ColumnsScriptAttribute/LocalTextPrefix.md) { get; } | If set, modifies the local text prefix that should be used instead of the automatically calculated one from Key and Namespace |
 
 ## See Also
 

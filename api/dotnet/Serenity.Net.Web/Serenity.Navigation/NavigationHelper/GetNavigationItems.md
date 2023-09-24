@@ -19,8 +19,8 @@ public static List<NavigationItem> GetNavigationItems(IPermissionService permiss
 
 ## See Also
 
-* class [NavigationItem](../NavigationItem.md)
+* class [NavigationItem](../Serenity.Net.Core/../NavigationItem.md)
 * interface [IPermissionService](../Serenity.Net.Core/../../Serenity.Abstractions/IPermissionService.md)
 * interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
-* class [NavigationItemAttribute](../NavigationItemAttribute.md)
+* class [NavigationItemAttribute](../Serenity.Net.Core/../NavigationItemAttribute.md)
 * class [NavigationHelper](../NavigationHelper.md)

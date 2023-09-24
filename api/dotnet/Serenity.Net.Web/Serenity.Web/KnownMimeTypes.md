@@ -1,0 +1,19 @@
+# KnownMimeTypes class
+**namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
+
+Contains set of known popular mime types
+
+```csharp
+public static class KnownMimeTypes
+```
+
+## Public Members
+
+| name | description |
+| --- | --- |
+| static [Get](KnownMimeTypes/Get.md)(…) | Gets MIME type for a given file using information in Win32 HKEY_CLASSES_ROOT registry key. |
+| static [TryGet](KnownMimeTypes/TryGet.md)(…) | Gets MIME type for a given file |
+
+## See Also
+
+* **Source:** *[KnownMimeTypes.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Upload/KnownMimeTypes.cs)*

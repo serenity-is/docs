@@ -5,7 +5,8 @@ Creates a new instance of the class
 
 ```csharp
 public DefaultUploadProcessor(IImageProcessor imageProcessor, IUploadStorage uploadStorage, 
-    IUploadValidator uploadValidator, IExceptionLogger logger = null)
+    IUploadValidator uploadValidator, ILogger<DefaultUploadProcessor> logger = null, 
+    IUploadAVScanner avScanner = null)
 ```
 
 | parameter | description |
@@ -13,7 +14,8 @@ public DefaultUploadProcessor(IImageProcessor imageProcessor, IUploadStorage upl
 | imageProcessor | Image processor |
 | uploadStorage | Upload storage |
 | uploadValidator | Upload validator |
-| logger | Exception logger |
+| logger | Logger |
+| avScanner | Optional antivirus scanner |
 
 ## Exceptions
 
@@ -23,8 +25,8 @@ public DefaultUploadProcessor(IImageProcessor imageProcessor, IUploadStorage upl
 
 ## See Also
 
-* interface [IImageProcessor](../../global/IImageProcessor.md)
+* interface [IImageProcessor](../IImageProcessor.md)
 * interface [IUploadStorage](../IUploadStorage.md)
 * interface [IUploadValidator](../IUploadValidator.md)
-* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
+* interface [IUploadAVScanner](../IUploadAVScanner.md)
 * class [DefaultUploadProcessor](../DefaultUploadProcessor.md)

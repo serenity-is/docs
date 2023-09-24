@@ -4,18 +4,19 @@
 Creates a new instance of the class
 
 ```csharp
-public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, 
+public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, IScriptMinifier scriptMinifier, 
     IDynamicScriptManager scriptManager, IWebHostEnvironment hostEnvironment, 
-    IHttpContextAccessor contextAccessor = null, IExceptionLogger logger = null)
+    IHttpContextAccessor contextAccessor = null, ILogger<ScriptBundleManager> logger = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | options | Options |
 | scriptManager | Dynamic script manager |
+| scriptMinifier | Script minifier |
 | hostEnvironment | Web host environment |
 | contextAccessor | HTTP context accessor |
-| logger | Exception logger |
+| logger | Logger |
 
 ## Exceptions
 
@@ -26,6 +27,6 @@ public ScriptBundleManager(IOptions<ScriptBundlingOptions> options,
 ## See Also
 
 * class [ScriptBundlingOptions](../ScriptBundlingOptions.md)
+* interface [IScriptMinifier](../IScriptMinifier.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
-* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
 * class [ScriptBundleManager](../ScriptBundleManager.md)

@@ -5,13 +5,14 @@ Creates a new instance of the class
 
 ```csharp
 public DefaultUploadValidator(IImageProcessor imageProcessor, ITextLocalizer localizer, 
-    IExceptionLogger logger = null)
+    ILogger<DefaultUploadValidator> logger = null, IOptions<UploadSettings> uploadSettings = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | imageProcessor | Image processor |
 | localizer | Text localizer |
+| uploadSettings | Upload settings |
 | logger | Exception logger |
 
 ## Exceptions
@@ -22,7 +23,7 @@ public DefaultUploadValidator(IImageProcessor imageProcessor, ITextLocalizer loc
 
 ## See Also
 
-* interface [IImageProcessor](../../global/IImageProcessor.md)
+* interface [IImageProcessor](../IImageProcessor.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
-* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
+* class [UploadSettings](../UploadSettings.md)
 * class [DefaultUploadValidator](../DefaultUploadValidator.md)

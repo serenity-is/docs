@@ -4,7 +4,7 @@
 Executes an action method and converts any exception to a service response
 
 ```csharp
-public static Result<TResponse> ExecuteMethod<TResponse>(this Controller controller, 
+public static Result<TResponse> ExecuteMethod<TResponse>(this ControllerBase controller, 
     Func<TResponse> handler)
     where TResponse : ServiceResponse, new()
 ```

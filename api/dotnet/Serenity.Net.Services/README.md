@@ -1,11 +1,5 @@
 # Serenity.Net.Services assembly
 
-## global namespace
-
-| signature | name | description |
-| --: | --- | --- |
-| interface  | [IImageProcessor](global/IImageProcessor.md) | Image processor abstraction |
-
 ## Serenity namespace
 
 | signature | name | description |
@@ -86,6 +80,7 @@
 | class  | [ReportColumn](Serenity.Reporting/ReportColumn.md) | Information about a report column |
 | static class  | [ReportColumnConverter](Serenity.Reporting/ReportColumnConverter.md) | Contains methods to extract ReportColumns from other types. |
 | class  | [ReportDesignAttribute](Serenity.Reporting/ReportDesignAttribute.md) | The attribute used to determine the location of the report design which is usually a CSHTML file. |
+| static class  | [ReportFactoryExtensions](Serenity.Reporting/ReportFactoryExtensions.md) | Contains extension methods for IReportFactory |
 | class  | [ReportRegistry](Serenity.Reporting/ReportRegistry.md) | Default report registry implementation |
 | class  | [ReportRenderOptions](Serenity.Reporting/ReportRenderOptions.md) | Render request a report |
 | class  | [ReportRenderResult](Serenity.Reporting/ReportRenderResult.md) | Render result for a report |
@@ -226,7 +221,7 @@
 | class  | [CombinedUploadStorage](Serenity.Web/CombinedUploadStorage.md) | A combined upload storage implementation that uses two upload storage instances, while serving one of them from a sub path like "/temporary/" |
 | class  | [CopyTemporaryFileOptions](Serenity.Web/CopyTemporaryFileOptions.md) | Options for copying a temporary file to its target |
 | class  | [CopyTemporaryFileResult](Serenity.Web/CopyTemporaryFileResult.md) | Result of the copying of a temporary file to its target |
-| class  | [DefaultImageProcessor](Serenity.Web/DefaultImageProcessor.md) | Default implementation for the [`IImageProcessor`](global/IImageProcessor.md) |
+| class  | [DefaultImageProcessor](Serenity.Web/DefaultImageProcessor.md) | Default implementation for the [`IImageProcessor`](Serenity.Web/IImageProcessor.md) |
 | class  | [DefaultUploadProcessor](Serenity.Web/DefaultUploadProcessor.md) | Default implementation for [`IUploadProcessor`](Serenity.Web/IUploadProcessor.md) |
 | class  | [DefaultUploadValidator](Serenity.Web/DefaultUploadValidator.md) | Default implementation for [`IUploadValidator`](Serenity.Web/IUploadValidator.md) |
 | class  | [DiskUploadStorage](Serenity.Web/DiskUploadStorage.md) | A file system based upload storage implementation |
@@ -237,14 +232,15 @@
 | class  | [FormatFilenameOptions](Serenity.Web/FormatFilenameOptions.md) | Options for formatting a file name |
 | interface  | [IDiskUploadFileSystem](Serenity.Web/IDiskUploadFileSystem.md) | Extension for IFileSystem with disk upload storage specific methods. |
 | interface  | [IFilesToDelete](Serenity.Web/IFilesToDelete.md) | Interface for a files to delete container ([`FilesToDelete`](Serenity.Web/FilesToDelete.md)) |
+| interface  | [IImageProcessor](Serenity.Web/IImageProcessor.md) | Image processor abstraction |
 | class  | [ImageChecker](Serenity.Web/ImageChecker.md) | Checks stream data if valid image file and validate required conditions. |
 | enum  | [ImageCheckResult](Serenity.Web/ImageCheckResult.md) | [`ImageChecker`](Serenity.Web/ImageChecker.md)'s result codes. |
 | class  | [ImageEncoderParams](Serenity.Web/ImageEncoderParams.md) | Parameters for image encoding. Currently only contains a JPEG quality parameter. |
 | class  | [ImageFormatInfo](Serenity.Web/ImageFormatInfo.md) | Information about an image format |
+| interface  | [IUploadAVScanner](Serenity.Web/IUploadAVScanner.md) | Abstraction for an upload antivirus scanner, which scans temporary uploads before getting processed |
 | interface  | [IUploadProcessor](Serenity.Web/IUploadProcessor.md) | Abstraction for an upload processor, which handles temporary uploads |
 | interface  | [IUploadStorage](Serenity.Web/IUploadStorage.md) | Abstraction for an upload storage |
 | interface  | [IUploadValidator](Serenity.Web/IUploadValidator.md) | An upload validator abstraction for checking IUploadFileConstraints and IUploadImageContrains |
-| static class  | [KnownMimeTypes](Serenity.Web/KnownMimeTypes.md) | Contains set of known popular mime types |
 | enum  | [OverwriteOption](Serenity.Web/OverwriteOption.md) | Enum that contains what to do when a file at desired path exists |
 | class  | [PhysicalDiskUploadFileSystem](Serenity.Web/PhysicalDiskUploadFileSystem.md) | Implementation of the [`IDiskUploadFileSystem`](Serenity.Web/IDiskUploadFileSystem.md) |
 | class  | [ProcessedUploadInfo](Serenity.Web/ProcessedUploadInfo.md) | Information about a processed temporary upload |
@@ -254,3 +250,4 @@
 | static class  | [UploadPathHelper](Serenity.Web/UploadPathHelper.md) | Contains helper functions for upload paths |
 | class  | [UploadSettings](Serenity.Web/UploadSettings.md) | Upload settings |
 | static class  | [UploadStorageExtensions](Serenity.Web/UploadStorageExtensions.md) | Extension methods for [`IUploadStorage`](Serenity.Web/IUploadStorage.md) and related classes |
+| static class  | [UploadTexts](Serenity.Web/UploadTexts.md) |  |

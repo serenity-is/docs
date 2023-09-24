@@ -4,14 +4,14 @@
 Creates a new instance of the class
 
 ```csharp
-public ScriptContent(byte[] content, DateTime time, bool canCompress)
+public ScriptContent(byte[] content, DateTime time, CompressionLevel compressionLevel)
 ```
 
 | parameter | description |
 | --- | --- |
 | content | Content |
 | time | Time |
-| canCompress | Allow compression |
+| compressionLevel | Suggested compression level |
 
 ## Exceptions
 

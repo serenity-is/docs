@@ -23,5 +23,5 @@ public LocalTextDataScript(ILocalTextRegistry localTextRegistry,
 ## See Also
 
 * interface [ILocalTextRegistry](../Serenity.Net.Core/../../Serenity.Abstractions/ILocalTextRegistry.md)
-* class [LocalTextPackages](../../Serenity.Web/LocalTextPackages.md)
+* class [LocalTextPackages](../Serenity.Net.Core/../../Serenity.Web/LocalTextPackages.md)
 * class [LocalTextDataScript](../LocalTextDataScript.md)

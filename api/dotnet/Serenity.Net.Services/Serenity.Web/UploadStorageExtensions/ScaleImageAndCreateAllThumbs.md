@@ -24,7 +24,7 @@ Temporary file
 
 ## See Also
 
-* interface [IImageProcessor](../../global/IImageProcessor.md)
+* interface [IImageProcessor](../IImageProcessor.md)
 * interface [IUploadImageOptions](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadImageOptions.md)
 * interface [IUploadStorage](../IUploadStorage.md)
 * enum [OverwriteOption](../OverwriteOption.md)

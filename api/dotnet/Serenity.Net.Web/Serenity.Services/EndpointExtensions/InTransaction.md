@@ -4,7 +4,7 @@
 Executes a callback by passing a unit of work object and converts any exception raised inside to a service response.
 
 ```csharp
-public static Result<TResponse> InTransaction<TResponse>(this Controller controller, 
+public static Result<TResponse> InTransaction<TResponse>(this ControllerBase controller, 
     string connectionKey, Func<IUnitOfWork, TResponse> handler)
     where TResponse : ServiceResponse, new()
 ```

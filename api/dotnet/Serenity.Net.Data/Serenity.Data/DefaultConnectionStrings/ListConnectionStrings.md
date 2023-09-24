@@ -4,7 +4,7 @@
 Lists all known connections strings
 
 ```csharp
-public IEnumerable<IConnectionString> ListConnectionStrings()
+public virtual IEnumerable<IConnectionString> ListConnectionStrings()
 ```
 
 ## Return Value

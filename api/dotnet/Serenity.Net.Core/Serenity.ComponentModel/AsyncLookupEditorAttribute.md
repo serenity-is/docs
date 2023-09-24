@@ -13,6 +13,7 @@ public class AsyncLookupEditorAttribute : LookupEditorAttribute
 | name | description |
 | --- | --- |
 | [AsyncLookupEditorAttribute](AsyncLookupEditorAttribute/AsyncLookupEditorAttribute.md)(…) | Initializes a new instance of the [`AsyncLookupEditorAttribute`](AsyncLookupEditorAttribute.md) class. (2 constructors) |
+| const [Key](AsyncLookupEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 

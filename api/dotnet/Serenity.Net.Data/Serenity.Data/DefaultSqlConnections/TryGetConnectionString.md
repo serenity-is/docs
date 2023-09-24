@@ -4,7 +4,7 @@
 Gets a connection string by its key
 
 ```csharp
-public IConnectionString TryGetConnectionString(string connectionKey)
+public virtual IConnectionString TryGetConnectionString(string connectionKey)
 ```
 
 | parameter | description |

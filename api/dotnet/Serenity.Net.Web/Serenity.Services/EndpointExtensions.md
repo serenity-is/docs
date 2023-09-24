@@ -13,6 +13,7 @@ public static class EndpointExtensions
 | --- | --- |
 | static [ConvertToResponse&lt;TResponse&gt;](EndpointExtensions/ConvertToResponse.md)(…) | Converts the exception object to a service response (2 methods) |
 | static [ExecuteMethod&lt;TResponse&gt;](EndpointExtensions/ExecuteMethod.md)(…) | Executes an action method and converts any exception to a service response |
+| static [ExecuteMethodAsync&lt;TResponse&gt;](EndpointExtensions/ExecuteMethodAsync.md)(…) | Executes an action method and converts any exception to a service response |
 | static [InTransaction&lt;TResponse&gt;](EndpointExtensions/InTransaction.md)(…) | Executes a callback by passing a unit of work object and converts any exception raised inside to a service response. |
 | static [UseConnection&lt;TResponse&gt;](EndpointExtensions/UseConnection.md)(…) | Executes a callback by passing a connection object and converts any exception raised inside to a service response. |
 

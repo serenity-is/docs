@@ -122,7 +122,7 @@
 | class  | [TransactionlessUnitOfWork](Serenity.Data/TransactionlessUnitOfWork.md) | Unit of work implementation without an underlying actual transaction. Use with care only to pass a IUnitOfWork instance to some methods that you don't want to actually start a transaction. |
 | class  | [TransactionSettings](Serenity.Data/TransactionSettings.md) | Determines the transaction isolation level and defer start flag used for service endpoint action use when creating the UnitOfWork class |
 | class  | [TransactionSettingsAttribute](Serenity.Data/TransactionSettingsAttribute.md) | Determines the transaction isolation level and defer start flag used for a service endpoint action use when creating the UnitOfWork class |
-| class  | [TwoLevelCachedAttribute](Serenity.Data/TwoLevelCachedAttribute.md) | This attribute marks a row so that when it is Inserted/Updated/Deleted through repository, its related cache, if any should be cleared. It doesn't turn on/off caching. A sample of related cached item to a row, might be its lookup if any. |
+| class  | [TwoLevelCachedAttribute](Serenity.Data/TwoLevelCachedAttribute.md) | This attribute marks a row so that when it is Inserted/Updated/Deleted through handler, its related cache, if any should be cleared. It doesn't turn on/off caching. A sample of related cached item to a row, might be its lookup if any. |
 | class  | [UnaryCriteria](Serenity.Data/UnaryCriteria.md) | Unary criteria with one operand and operator |
 | class  | [UnitOfWork](Serenity.Data/UnitOfWork.md) | Unit of work implementation. |
 | class  | [ValueCriteria](Serenity.Data/ValueCriteria.md) | Criteria object with one value |

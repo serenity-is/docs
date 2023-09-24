@@ -17,6 +17,7 @@ public class CodeWriter
 | [Builder](CodeWriter/Builder.md) { get; } | Gets internal string builder |
 | [CurrentNamespace](CodeWriter/CurrentNamespace.md) { get; set; } | Gets / sets current namespace |
 | [FileComment](CodeWriter/FileComment.md) { get; set; } | Gets / sets file comment |
+| [FileScopedNamespaces](CodeWriter/FileScopedNamespaces.md) { get; set; } | Use a file scoped namespace instead. Can only be used with one namespace per file. |
 | [GlobalUsings](CodeWriter/GlobalUsings.md) { get; set; } | Gets / sets global usings hash set |
 | [IsCSharp](CodeWriter/IsCSharp.md) { get; set; } | Gets / sets if the code writer is used for generating C# code. |
 | [LocalUsings](CodeWriter/LocalUsings.md) { get; } | Gets / sets local usings hash set |

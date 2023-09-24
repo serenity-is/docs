@@ -12,13 +12,16 @@ public class DefaultConnectionStrings : IConnectionStrings
 | name | description |
 | --- | --- |
 | [DefaultConnectionStrings](DefaultConnectionStrings/DefaultConnectionStrings.md)(…) | Creates a new instance of DefaultConnectionStringSource |
-| [ListConnectionStrings](DefaultConnectionStrings/ListConnectionStrings.md)() | Lists all known connections strings |
-| [TryGetConnectionString](DefaultConnectionStrings/TryGetConnectionString.md)(…) | Gets a connection string by its key |
+| virtual [ListConnectionStrings](DefaultConnectionStrings/ListConnectionStrings.md)() | Lists all known connections strings |
+| virtual [TryGetConnectionString](DefaultConnectionStrings/TryGetConnectionString.md)(…) | Gets a connection string by its key |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
+| readonly [byKey-](DefaultConnectionStrings/byKey-.md) | Cached dictionary of connection string infos |
+| readonly [options-](DefaultConnectionStrings/options-.md) | Options |
+| readonly [sqlDialectMapper-](DefaultConnectionStrings/sqlDialectMapper-.md) | Sql dialect mapper |
 | virtual [DetermineDialect](DefaultConnectionStrings/DetermineDialect.md)(…) | Determines dialect for a connection |
 
 ## See Also

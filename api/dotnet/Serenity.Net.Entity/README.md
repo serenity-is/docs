@@ -29,8 +29,10 @@
 | abstract class  | [GenericValueField&lt;TValue&gt;](Serenity.Data/GenericValueField-1.md) | Base class for fields with a value type value |
 | class  | [GuidField](Serenity.Data/GuidField.md) | Field with a Guid value |
 | interface  | [IDeleteLogRow](Serenity.Data/IDeleteLogRow.md) | Interface for rows that have DeleteUserId and DeleteDate fields. |
+| interface  | [IDisplayNameRow](Serenity.Data/IDisplayNameRow.md) | An interface to provide access to a display name field |
 | interface  | [IDisplayOrderRow](Serenity.Data/IDisplayOrderRow.md) | Basic interface for rows that has a display order field and provides a default sorting order. |
 | interface  | [IEditableRow](Serenity.Data/IEditableRow.md) | Methods and properties of a row to support desktop app grid etc. editing |
+| interface  | [IEmailRow](Serenity.Data/IEmailRow.md) | An interface that provides access to email field |
 | interface  | [IEntity](Serenity.Data/IEntity.md) | An interface for entities with Table property |
 | interface  | [IEntityWithJoins](Serenity.Data/IEntityWithJoins.md) | Interface for an entity with join information |
 | interface  | [IEnumTypeField](Serenity.Data/IEnumTypeField.md) | Interface for fields with an enum type property |
@@ -46,6 +48,7 @@
 | class  | [Int32Field](Serenity.Data/Int32Field.md) | Field with Int32 value |
 | class  | [Int64Field](Serenity.Data/Int64Field.md) | Field with Int64 value |
 | interface  | [IParentIdRow](Serenity.Data/IParentIdRow.md) | Interface for rows that has a ParentId field |
+| interface  | [IPasswordRow](Serenity.Data/IPasswordRow.md) | An interface that provides access to password hash and salt fields |
 | interface  | [IRow&lt;TFields&gt;](Serenity.Data/IRow-1.md) | Base interface for Rows with a known Fields type |
 | interface  | [IRow](Serenity.Data/IRow.md) | Row interface |
 | interface  | [IRowFieldsProvider](Serenity.Data/IRowFieldsProvider.md) | Abstraction for row fields instance providers |

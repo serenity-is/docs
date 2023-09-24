@@ -5,8 +5,7 @@ Checks if the given image if it is a valid or not. If so, controls its complianc
 
 ```csharp
 public ImageCheckResult CheckStream(Stream inputStream, IImageProcessor imageProcessor, 
-    bool returnImage, out object image, out ImageFormatInfo formatInfo, 
-    IExceptionLogger exLogger = null)
+    bool returnImage, out object image, out ImageFormatInfo formatInfo, ILogger logger = null)
 ```
 
 | parameter | description |
@@ -16,7 +15,7 @@ public ImageCheckResult CheckStream(Stream inputStream, IImageProcessor imagePro
 | returnImage | Does image required to be returned? If not requested, it will be disposed at the end of processing |
 | image | When method returns contains the image object. If returnImage false it will contain null |
 | formatInfo | Contains image format info on return |
-| exLogger | Exception logger |
+| logger | Logger |
 
 ## Return Value
 
@@ -25,7 +24,6 @@ Image validation result. One of [`ImageCheckResult`](../ImageCheckResult.md) val
 ## See Also
 
 * enum [ImageCheckResult](../ImageCheckResult.md)
-* interface [IImageProcessor](../../global/IImageProcessor.md)
+* interface [IImageProcessor](../IImageProcessor.md)
 * class [ImageFormatInfo](../ImageFormatInfo.md)
-* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
 * class [ImageChecker](../ImageChecker.md)

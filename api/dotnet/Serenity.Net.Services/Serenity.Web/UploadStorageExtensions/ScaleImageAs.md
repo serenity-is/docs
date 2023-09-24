@@ -33,7 +33,7 @@ public static string ScaleImageAs(object image, IImageProcessor imageProcessor, 
 
 ## See Also
 
-* interface [IImageProcessor](../../global/IImageProcessor.md)
+* interface [IImageProcessor](../IImageProcessor.md)
 * enum [ImageScaleMode](../Serenity.Net.Core/../ImageScaleMode.md)
 * class [ImageEncoderParams](../ImageEncoderParams.md)
 * interface [IUploadStorage](../IUploadStorage.md)

@@ -4,7 +4,7 @@
 Default implementation for a type source
 
 ```csharp
-public class DefaultTypeSource : ITypeSource
+public class DefaultTypeSource : IGetAssemblies, ITypeSource
 ```
 
 ## Public Members
@@ -12,6 +12,7 @@ public class DefaultTypeSource : ITypeSource
 | name | description |
 | --- | --- |
 | [DefaultTypeSource](DefaultTypeSource/DefaultTypeSource.md)(…) | Creates a new instance |
+| [GetAssemblies](DefaultTypeSource/GetAssemblies.md)() |  |
 | [GetAssemblyAttributes](DefaultTypeSource/GetAssemblyAttributes.md)(…) | Gets all attributes for assemblies with given type |
 | [GetTypes](DefaultTypeSource/GetTypes.md)() | Gets all types |
 | [GetTypesWithAttribute](DefaultTypeSource/GetTypesWithAttribute.md)(…) | Gets all types that has an attribute |
@@ -19,5 +20,6 @@ public class DefaultTypeSource : ITypeSource
 
 ## See Also
 
+* interface [IGetAssemblies](IGetAssemblies.md)
 * interface [ITypeSource](ITypeSource.md)
 * **Source:** *[DefaultTypeSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/DefaultTypeSource.cs)*

@@ -11,7 +11,7 @@ public static class ServiceCollectionExtensions
 
 | name | description |
 | --- | --- |
-| static [AddBaseTexts](ServiceCollectionExtensions/AddBaseTexts.md)(…) | Adds nested texts, enum texts, permission texts, row texts and json local text assets |
+| static [AddBaseTexts](ServiceCollectionExtensions/AddBaseTexts.md)(…) | Adds nested texts, enum texts, permission texts, row texts and json local text assets (2 methods) |
 | static [AddCustomRequestHandlers](ServiceCollectionExtensions/AddCustomRequestHandlers.md)(…) | Registers all the custom request handlers implementing IRequestHandler interface, from the type source in the service collection if available, or using the provided typeSource, optionally filtering handler types via a provided predicate. |
 | static [AddJsonTexts](ServiceCollectionExtensions/AddJsonTexts.md)(…) | Adds json texts from file provider and sub path |
 | static [AddProxyRequestHandlers](ServiceCollectionExtensions/AddProxyRequestHandlers.md)(…) | Registers proxy activators for the DI container to resolve generic request handler instances like [`ICreateHandler`](../Serenity.Services/ICreateHandler-1.md), [`IListHandler`](../Serenity.Services/IListHandler-1.md) etc. |

@@ -4,15 +4,18 @@
 Subclass of controller for service endpoints
 
 ```csharp
-public abstract class ServiceEndpoint : Controller
+public abstract class ServiceEndpoint : ControllerBase, IActionFilter, IAsyncActionFilter, 
+    IDisposable
 ```
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| override [OnActionExecuted](ServiceEndpoint/OnActionExecuted.md)(…) |  |
-| override [OnActionExecuting](ServiceEndpoint/OnActionExecuting.md)(…) |  |
+| [Dispose](ServiceEndpoint/Dispose.md)() |  |
+| virtual [OnActionExecuted](ServiceEndpoint/OnActionExecuted.md)(…) | Called after the action method is invoked. |
+| virtual [OnActionExecuting](ServiceEndpoint/OnActionExecuting.md)(…) | Called before the action method is invoked. |
+| virtual [OnActionExecutionAsync](ServiceEndpoint/OnActionExecutionAsync.md)(…) | Called before the action method is invoked. |
 
 ## Protected Members
 
@@ -23,7 +26,7 @@ public abstract class ServiceEndpoint : Controller
 | [Context](ServiceEndpoint/Context.md) { get; set; } | Gets the request context |
 | [Localizer](ServiceEndpoint/Localizer.md) { get; } | Gets the localizer from the request context |
 | [Permissions](ServiceEndpoint/Permissions.md) { get; } | Gets the permission service from the request context |
-| override [Dispose](ServiceEndpoint/Dispose.md)(…) |  |
+| virtual [Dispose](ServiceEndpoint/Dispose.md)(…) | Releases all resources currently used by this Controller instance. |
 
 ## See Also
 

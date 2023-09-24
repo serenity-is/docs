@@ -5,14 +5,15 @@ Creates an instance of the class
 
 ```csharp
 public CssBundleManager(IOptions<CssBundlingOptions> options, IDynamicScriptManager scriptManager, 
-    IWebHostEnvironment hostEnvironment, IHttpContextAccessor contextAccessor = null, 
-    IExceptionLogger logger = null)
+    ICssMinifier cssMinifier, IWebHostEnvironment hostEnvironment, 
+    IHttpContextAccessor contextAccessor = null, ILogger<CssBundleManager> logger = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | options | Options |
 | scriptManager | Dynamic script manager |
+| cssMinifier |  |
 | hostEnvironment | Web host environment |
 | contextAccessor | HTTP context accessor |
 | logger | Exception logger |
@@ -27,5 +28,5 @@ public CssBundleManager(IOptions<CssBundlingOptions> options, IDynamicScriptMana
 
 * class [CssBundlingOptions](../CssBundlingOptions.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
-* interface [IExceptionLogger](../Serenity.Net.Core/../../Serenity.Abstractions/IExceptionLogger.md)
+* interface [ICssMinifier](../ICssMinifier.md)
 * class [CssBundleManager](../CssBundleManager.md)

@@ -18,7 +18,6 @@ public abstract class BaseUploadEditorAttribute : CustomEditorAttribute, IUpload
 | [CopyToHistory](BaseUploadEditorAttribute/CopyToHistory.md) { get; set; } |  |
 | [DisableDefaultBehavior](BaseUploadEditorAttribute/DisableDefaultBehavior.md) { get; set; } |  |
 | [DisplayFileName](BaseUploadEditorAttribute/DisplayFileName.md) { get; set; } |  |
-| [ExtensionBlacklist](BaseUploadEditorAttribute/ExtensionBlacklist.md) { get; set; } |  |
 | [FilenameFormat](BaseUploadEditorAttribute/FilenameFormat.md) { get; set; } |  |
 | [IgnoreEmptyImage](BaseUploadEditorAttribute/IgnoreEmptyImage.md) { get; set; } |  |
 | [IgnoreExtensionMismatch](BaseUploadEditorAttribute/IgnoreExtensionMismatch.md) { get; set; } |  |

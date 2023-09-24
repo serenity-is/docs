@@ -24,7 +24,7 @@ public FileUploadBehavior(IUploadValidator uploadValidator, IImageProcessor imag
 ## See Also
 
 * interface [IUploadValidator](../Serenity.Net.Services/../../Serenity.Web/IUploadValidator.md)
-* interface [IImageProcessor](../Serenity.Net.Services/../../global/IImageProcessor.md)
+* interface [IImageProcessor](../Serenity.Net.Services/../../Serenity.Web/IImageProcessor.md)
 * interface [IUploadStorage](../Serenity.Net.Services/../../Serenity.Web/IUploadStorage.md)
 * interface [IFilenameFormatSanitizer](../Serenity.Net.Core/../../Serenity.ComponentModel/IFilenameFormatSanitizer.md)
 * class [FileUploadBehavior](../FileUploadBehavior.md)

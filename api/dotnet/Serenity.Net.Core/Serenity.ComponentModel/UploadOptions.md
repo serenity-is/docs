@@ -17,7 +17,6 @@ public class UploadOptions : IUploadFileConstraints, IUploadFileOptions, IUpload
 | [AllowNonImage](UploadOptions/AllowNonImage.md) { get; set; } |  |
 | [CopyToHistory](UploadOptions/CopyToHistory.md) { get; set; } |  |
 | [DisplayFileName](UploadOptions/DisplayFileName.md) { get; set; } |  |
-| [ExtensionBlacklist](UploadOptions/ExtensionBlacklist.md) { get; set; } |  |
 | [FilenameFormat](UploadOptions/FilenameFormat.md) { get; set; } |  |
 | [IgnoreEmptyImage](UploadOptions/IgnoreEmptyImage.md) { get; set; } |  |
 | [IgnoreExtensionMismatch](UploadOptions/IgnoreExtensionMismatch.md) { get; set; } |  |
@@ -43,7 +42,6 @@ public class UploadOptions : IUploadFileConstraints, IUploadFileOptions, IUpload
 | [ThumbQuality](UploadOptions/ThumbQuality.md) { get; set; } |  |
 | [ThumbSizes](UploadOptions/ThumbSizes.md) { get; set; } |  |
 | [ThumbWidth](UploadOptions/ThumbWidth.md) { get; set; } |  |
-| const [DefaultExtensionBlacklist](UploadOptions/DefaultExtensionBlacklist.md) | Default list of blacklisted extensions; |
 | static [DefaultImageExtensions](UploadOptions/DefaultImageExtensions.md) |  |
 | const [DefaultScaleMode](UploadOptions/DefaultScaleMode.md) | Default scale mode |
 | const [DefaultThumbMode](UploadOptions/DefaultThumbMode.md) | Default thumb mode |

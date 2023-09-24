@@ -6,13 +6,16 @@
 | --: | --- | --- |
 | static class  | [AuthorizationExtensions](Serenity/AuthorizationExtensions.md) | Authorization extension methods |
 | static class  | [CollectionExtensions](Serenity/CollectionExtensions.md) | Basic collection extensions |
+| static class  | [CoreTexts](Serenity/CoreTexts.md) |  |
 | enum  | [DateElementOrder](Serenity/DateElementOrder.md) | Date element orders |
 | static class  | [DateHelper](Serenity/DateHelper.md) | Static class with common date utilities and constants |
+| class  | [DefaultSectionKeyAttribute](Serenity/DefaultSectionKeyAttribute.md) | Attribute to access the default section key for an option class |
 | static class  | [DistributedCacheExtensions](Serenity/DistributedCacheExtensions.md) | Contains extensions methods to work with IDistributedCache provider. |
 | static class  | [EnumMapper](Serenity/EnumMapper.md) | Contains Enum mapping and other helper functions |
 | static class  | [ExceptionExtensions](Serenity/ExceptionExtensions.md) | Exception data extensions |
 | static class  | [FileSystemExtensions](Serenity/FileSystemExtensions.md) | IFileSystem extensions to reduce dependency on System.IO, in case these methods are also added to IFileSystem in the future |
 | interface  | [IFileSystem](Serenity/IFileSystem.md) | Base file system for abstracting physical disk access |
+| class  | [InformationalException](Serenity/InformationalException.md) | An exception that is created purely for informational purposes, e.g. for logging something to exception log |
 | interface  | [INotLoggedException](Serenity/INotLoggedException.md) | An exception that should not be logged. |
 | static class  | [Invariants](Serenity/Invariants.md) | Invariant culture related constants and formats. |
 | interface  | [IServiceResolver&lt;TService&gt;](Serenity/IServiceResolver-1.md) | A generic version of IServiceProvider which resolves a service on demand. |
@@ -22,7 +25,6 @@
 | static class  | [JsonSettings](Serenity/JsonSettings.md) | Contains default Serenity JSON serialization settings. |
 | class  | [LocalText](Serenity/LocalText.md) | Defines a localizable text resource. Contains a local text key and has implicit conversions to and from String. |
 | static class  | [MemoryCacheExtensions](Serenity/MemoryCacheExtensions.md) | Contains extensions methods to work with IMemoryCache provider. |
-| class  | [NullExceptionLogger](Serenity/NullExceptionLogger.md) | Null exception logger that logs nothing |
 | class  | [NullTextLocalizer](Serenity/NullTextLocalizer.md) | Null text localizer which returns null for all keys |
 | static class  | [PathHelper](Serenity/PathHelper.md) | Contains Path related helper functions. |
 | class  | [PhysicalFileSystem](Serenity/PhysicalFileSystem.md) | Physical file sytem |
@@ -41,9 +43,12 @@
 | signature | name | description |
 | --: | --- | --- |
 | class  | [DefaultTypeSource](Serenity.Abstractions/DefaultTypeSource.md) | Default implementation for a type source |
-| interface  | [IExceptionLogger](Serenity.Abstractions/IExceptionLogger.md) | Exception logger abstraction |
+| interface  | [IGetAllTexts](Serenity.Abstractions/IGetAllTexts.md) | Abstraction for local text registry that can return all registered entries |
+| interface  | [IGetAssemblies](Serenity.Abstractions/IGetAssemblies.md) | Abstraction for type source that can return a list of assemblies |
+| interface  | [IHasPassword](Serenity.Abstractions/IHasPassword.md) | Used to determine if user has a password. If interface not found on user definition it assumes user has a password. |
 | interface  | [IHttpContextItemsAccessor](Serenity.Abstractions/IHttpContextItemsAccessor.md) | Interface for abstraction that should return HttpContext.Current.Items for web requests, and null for normal threads. |
 | interface  | [IImpersonator](Serenity.Abstractions/IImpersonator.md) | Interface for authorization services that supports temporary impersonating |
+| interface  | [ILanguageFallbacks](Serenity.Abstractions/ILanguageFallbacks.md) | Abstraction for local text registry that can return language fallbacks |
 | interface  | [ILocalTextRegistry](Serenity.Abstractions/ILocalTextRegistry.md) | Abstraction for local text registry which stores translations for local text keys. |
 | interface  | [IPermissionService](Serenity.Abstractions/IPermissionService.md) | Permission service abstraction |
 | interface  | [IRemoveAll](Serenity.Abstractions/IRemoveAll.md) | Abstraction for objects that supports clearing all items, like a cache or local text registry. |
@@ -52,6 +57,8 @@
 | interface  | [ITwoLevelCache](Serenity.Abstractions/ITwoLevelCache.md) | An abstraction for a combination of in memory and distributed cache. |
 | interface  | [ITypeSource](Serenity.Abstractions/ITypeSource.md) | Abstraction for type source which is used as an extensibility point for Serenity applications |
 | interface  | [IUserAccessor](Serenity.Abstractions/IUserAccessor.md) | Abstraction to access the current user |
+| interface  | [IUserClaimCreator](Serenity.Abstractions/IUserClaimCreator.md) | Interface for getting user ClaimsPrincipal |
+| interface  | [IUserPasswordValidator](Serenity.Abstractions/IUserPasswordValidator.md) | Abstraction to validate a user password |
 | interface  | [IUserRetrieveService](Serenity.Abstractions/IUserRetrieveService.md) | Abstraction to retrieve a user definition by its id or username |
 | static class  | [TypeSourceExtensions](Serenity.Abstractions/TypeSourceExtensions.md) | Type source extension methods |
 
@@ -113,6 +120,7 @@
 | class  | [FormScriptAttribute](Serenity.ComponentModel/FormScriptAttribute.md) | Indicates that this type should generate a form script, which contains information about properties in this type and is an array of PropertyItem objects. Form scripts can be accessed from client side using Q.getForm("Key") |
 | class  | [FormWidthAttribute](Serenity.ComponentModel/FormWidthAttribute.md) | Sets CSS class for field on forms only. Useful for Bootstrap grid, e.g. col-md-4 etc. |
 | class  | [FullWidthAttribute](Serenity.ComponentModel/FullWidthAttribute.md) | Set form field width class to null, e.g. full width |
+| class  | [GenerateFieldsAttribute](Serenity.ComponentModel/GenerateFieldsAttribute.md) | Marks a row class so that its fields should be generated by Serenity.Pro.Coder RowFieldsGenerator |
 | class  | [GroupOrderAttribute](Serenity.ComponentModel/GroupOrderAttribute.md) | Sets in which order this property should be grouped by. This is only meaningful when a grid has grouping, and it sets the default grouped columns. The properties with this attribute are the default ones grouped by and their groupOrder determines in which order they are grouped by. |
 | class  | [HalfWidthAttribute](Serenity.ComponentModel/HalfWidthAttribute.md) | Marks form field with "col-sm-6" css class, which makes it allocate half of form row on device widths &gt;= 768px (e.g. iPad) |
 | class  | [HeaderCssClassAttribute](Serenity.ComponentModel/HeaderCssClassAttribute.md) | Sets the CSS class for grid column headers. It sets headerCssClass property of SlickColumn. This has no effect for forms. |
@@ -163,6 +171,7 @@
 | class  | [OneThirdWidthAttribute](Serenity.ComponentModel/OneThirdWidthAttribute.md) | Marks form field with "col-md-4" css class, which makes it allocate a third of form row on device widths &gt;= 992px (e.g. medium desktop) |
 | class  | [OneWayAttribute](Serenity.ComponentModel/OneWayAttribute.md) | Indicates that the target property should not get serialized when a property grid is saved. This means, the editor of the property reads the value from the entity, but it doesn't get written back to save entity. |
 | class  | [PasswordEditorAttribute](Serenity.ComponentModel/PasswordEditorAttribute.md) | Indicates that the target property should use a "Password" editor. |
+| enum  | [PasswordValidationResult](Serenity.ComponentModel/PasswordValidationResult.md) | Password validation result |
 | class  | [PlaceholderAttribute](Serenity.ComponentModel/PlaceholderAttribute.md) | Sets a placeholder for a form field. Placeholder text is shown inside the editor when its value is empty. Only editors using basic inputs and Select2 editor supports this. |
 | class  | [PropertyItem](Serenity.ComponentModel/PropertyItem.md) | Corresponds to a property item (e.g. a field in property grid with a label and editor, or a column specification in a grid) |
 | class  | [PropertyItemsData](Serenity.ComponentModel/PropertyItemsData.md) | The data format of a property items script (form or columns) |
@@ -171,7 +180,6 @@
 | class  | [QuickFilterOptionAttribute](Serenity.ComponentModel/QuickFilterOptionAttribute.md) | Add an option to the quick filtering. |
 | class  | [RadioButtonEditorAttribute](Serenity.ComponentModel/RadioButtonEditorAttribute.md) | Indicates that the target property should use a "RadioButton" editor. |
 | class  | [RecaptchaAttribute](Serenity.ComponentModel/RecaptchaAttribute.md) | Indicates that the target property should use a "Recaptcha" (Google). |
-| class  | [RecaptchaSettings](Serenity.ComponentModel/RecaptchaSettings.md) | Settings for Recaptcha integration |
 | class  | [RegisterPermissionKeyAttribute](Serenity.ComponentModel/RegisterPermissionKeyAttribute.md) | Registers a permission key. |
 | class  | [RequiredAttribute](Serenity.ComponentModel/RequiredAttribute.md) | Determines if field is required in form. |
 | class  | [RequiredPermissionAttribute](Serenity.ComponentModel/RequiredPermissionAttribute.md) | Specifies required permission to access an object, e.g. a report |
@@ -240,11 +248,33 @@
 | class  | [DefaultTextLocalizer](Serenity.Localization/DefaultTextLocalizer.md) | Implementation of text localizer for current ui culture name and text registry |
 | static class  | [EnumLocalTextRegistration](Serenity.Localization/EnumLocalTextRegistration.md) | Contains initialization method for adding local text translations defined by Description attributes in enumeration classes. |
 | class  | [FallbackLocalTextSource](Serenity.Localization/FallbackLocalTextSource.md) | Adds key fallback to any ILocalTextSource implementation |
-| class  | [InitializedLocalText](Serenity.Localization/InitializedLocalText.md) | A subclass of LocalText class that contains a initial translation value. Some classes like NestedLocalTextRegistration uses this type to avoid re-registering a initialized local text object, when their Initialization method called more than once. |
+| interface  | [ILocalText](Serenity.Localization/ILocalText.md) | An interface implemented by LocalText class to access initial translation value. Some classes like NestedLocalTextRegistration uses this type to avoid re-registering a initialized local text object, when their Initialization method called more than once. |
 | static class  | [JsonLocalTextRegistration](Serenity.Localization/JsonLocalTextRegistration.md) | Contains helper methods for registration of local texts in hierarchical/dictionary formatted JSON files. |
+| struct  | [LanguageIdKeyPair](Serenity.Localization/LanguageIdKeyPair.md) | A pair of a languageID and text key |
 | class  | [LocalTextRegistry](Serenity.Localization/LocalTextRegistry.md) | Default ILocalTextRegistry implementation. |
+| static class  | [NavigationLocalTextRegistration](Serenity.Localization/NavigationLocalTextRegistration.md) | Contains initialization method for adding navigation item attribute related local texts |
 | static class  | [NestedLocalTextRegistration](Serenity.Localization/NestedLocalTextRegistration.md) | Contains helper methods for registration of local texts in nested static classes. Nested static contains LocalText objects with actual translations as keys. This class locates them (with NestedLocalTextsAttribute at outermost class), determines keys by path from outermost to nested class name, replaces existing LocalText instance with a InitializedLocalText instance containing this generated key and initial translation, and registers this translation in ILocalTextRegistry provider. |
 | static class  | [NestedPermissionKeyRegistration](Serenity.Localization/NestedPermissionKeyRegistration.md) | Contains helper methods for registration of permission keys in nested static classes. These classes contains string constants containing permission keys. Display name for permission keys can be set by [DisplayName] attribute. Display name for groups can be set by [Description] attribute on classes themselves. For group display name to work, all constants in a class must start with same group prefix. |
+| static class  | [PropertyItemsLocalTextRegistration](Serenity.Localization/PropertyItemsLocalTextRegistration.md) | Contains initialization method for adding local text keys implicitly defined by DisplayName, Tab, Placeholder, Hint etc. attributes used in Form definitions |
+
+## Serenity.Navigation namespace
+
+| signature | name | description |
+| --: | --- | --- |
+| interface  | [INavigationItemSource](Serenity.Navigation/INavigationItemSource.md) | Navigation item source abstraction |
+| interface  | [INavigationModel](Serenity.Navigation/INavigationModel.md) | Navigation model abstraction |
+| interface  | [INavigationModelFactory](Serenity.Navigation/INavigationModelFactory.md) | Factory abstraction for navigation models |
+| class  | [NavigationGroupAttribute](Serenity.Navigation/NavigationGroupAttribute.md) | Defines a navigation group, which are usually the icons on the sidebar band |
+| class  | [NavigationItem](Serenity.Navigation/NavigationItem.md) | A node in a navigation tree model |
+| abstract class  | [NavigationItemAttribute](Serenity.Navigation/NavigationItemAttribute.md) | Navigation item attribute |
+| class  | [NavigationMenuAttribute](Serenity.Navigation/NavigationMenuAttribute.md) | Navigation menu without a link |
+| class  | [NavigationSectionAttribute](Serenity.Navigation/NavigationSectionAttribute.md) | Navigation section attribute |
+
+## Serenity.Net.Core.Authorization namespace
+
+| signature | name | description |
+| --: | --- | --- |
+| interface  | [IRolePermissionService](Serenity.Net.Core.Authorization/IRolePermissionService.md) | Role Permission Service abstraction |
 
 ## Serenity.Plugins namespace
 
@@ -279,6 +309,7 @@
 | signature | name | description |
 | --: | --- | --- |
 | enum  | [ColumnSelection](Serenity.Services/ColumnSelection.md) | Column selection types for List services |
+| class  | [DefaultUserClaimCreator](Serenity.Services/DefaultUserClaimCreator.md) | Default implementation for IUserClaimCreator |
 | interface  | [IIsSensitiveMessage](Serenity.Services/IIsSensitiveMessage.md) | An interface to determine if the message of an exception might contain sensitive information that should not be shown to the end user. Currently only ValidationError implements this and returns false by default unless set explicitly. |
 | class  | [JsonStringHashSetConverter](Serenity.Services/JsonStringHashSetConverter.md) | Serialize/deserialize a IdentifierSet object as string |
 | static class  | [PermissionExpressionParser](Serenity.Services/PermissionExpressionParser.md) | A simple parser / evaluator for logic permission expressions |
@@ -290,5 +321,7 @@
 | --: | --- | --- |
 | enum  | [ImageScaleMode](Serenity.Web/ImageScaleMode.md) | Thumbnail scaling modes |
 | class  | [ImpersonatingUserAccessor](Serenity.Web/ImpersonatingUserAccessor.md) | Adds impersonation support to any IUserContext implementation |
+| class  | [LocalTextPackages](Serenity.Web/LocalTextPackages.md) | Corresponds to LocalTextPackages section of the appsettings.json file |
 | class  | [LogicOperatorPermissionService](Serenity.Web/LogicOperatorPermissionService.md) | Adds AND OR operator support to any IPermissionService implementation |
+| class  | [RecaptchaSettings](Serenity.Web/RecaptchaSettings.md) | Settings for Recaptcha integration Get your keys from https://www.google.com/recaptcha/admin/ Generate keys for the V2, not V3 |
 | class  | [TransientGrantingPermissionService](Serenity.Web/TransientGrantingPermissionService.md) | Adds temporary granting support to any IPermissionService implementation |

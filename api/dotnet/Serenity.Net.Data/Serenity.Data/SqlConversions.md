@@ -15,6 +15,7 @@ public static class SqlConversions
 | static [ToSql](SqlConversions/ToSql.md)(…) | Converts the value to sql. (9 methods) |
 | static [ToSqlDate](SqlConversions/ToSqlDate.md)(…) | Converts the value to sql date. (2 methods) |
 | static [ToSqlTime](SqlConversions/ToSqlTime.md)(…) | Converts the value to sql time. (2 methods) |
+| static [Translate](SqlConversions/Translate.md)(…) | Translates the command text to target connection dialect by replacing brackets ([]), and parameter prefixes (@). (3 methods) |
 
 ## See Also
 

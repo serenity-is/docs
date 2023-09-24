@@ -20,5 +20,5 @@ public static ILookup<string, NavigationItemAttribute> ByCategory(
 
 ## See Also
 
-* class [NavigationItemAttribute](../NavigationItemAttribute.md)
+* class [NavigationItemAttribute](../Serenity.Net.Core/../NavigationItemAttribute.md)
 * class [NavigationHelper](../NavigationHelper.md)

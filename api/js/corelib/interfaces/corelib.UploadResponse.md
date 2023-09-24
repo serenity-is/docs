@@ -4,10 +4,17 @@
 
 [corelib](../modules/corelib.md).UploadResponse
 
+## Hierarchy
+
+- [`ServiceResponse`](corelib_q.ServiceResponse.md)
+
+  ↳ **`UploadResponse`**
+
 ## Table of contents
 
 ### Properties
 
+- [Error](corelib.UploadResponse.md#error)
 - [Height](corelib.UploadResponse.md#height)
 - [IsImage](corelib.UploadResponse.md#isimage)
 - [Size](corelib.UploadResponse.md#size)
@@ -15,6 +22,20 @@
 - [Width](corelib.UploadResponse.md#width)
 
 ## Properties
+
+### Error
+
+• `Optional` **Error**: [`ServiceError`](corelib_q.ServiceError.md)
+
+#### Inherited from
+
+[ServiceResponse](corelib_q.ServiceResponse.md).[Error](corelib_q.ServiceResponse.md#error)
+
+#### Defined in
+
+[src/q/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L10)
+
+___
 
 ### Height
 

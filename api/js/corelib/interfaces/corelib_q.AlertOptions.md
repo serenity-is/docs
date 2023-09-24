@@ -119,7 +119,7 @@ The title of OK button, or false to hide the OK button
 
 #### Defined in
 
-[src/q/dialogs.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L307)
+[src/q/dialogs.ts:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L315)
 
 ___
 
@@ -131,7 +131,7 @@ CSS class for OK button
 
 #### Defined in
 
-[src/q/dialogs.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L309)
+[src/q/dialogs.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L317)
 
 ___
 

@@ -15,7 +15,7 @@
 
 ### getItem
 
-▸ **getItem**(`key`): `string`
+▸ **getItem**(`key`): `string` \| `Promise`<`string`\>
 
 #### Parameters
 
@@ -25,7 +25,7 @@
 
 #### Returns
 
-`string`
+`string` \| `Promise`<`string`\>
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### setItem
 
-▸ **setItem**(`key`, `value`): `void`
+▸ **setItem**(`key`, `value`): `void` \| `Promise`<`void`\>
 
 #### Parameters
 
@@ -46,7 +46,7 @@ ___
 
 #### Returns
 
-`void`
+`void` \| `Promise`<`void`\>
 
 #### Defined in
 

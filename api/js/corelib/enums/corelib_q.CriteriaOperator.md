@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).CriteriaOperator
 
+Enumeration of Criteria operator keys.
+
 ## Table of contents
 
 ### Enumeration Members
@@ -35,7 +37,7 @@
 
 #### Defined in
 
-[src/q/criteria.ts:728](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L728)
+[src/q/criteria.ts:731](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L731)
 
 ___
 
@@ -45,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:731](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L731)
+[src/q/criteria.ts:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L734)
 
 ___
 
@@ -55,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L727)
+[src/q/criteria.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L730)
 
 ___
 
@@ -65,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L734)
+[src/q/criteria.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L737)
 
 ___
 
@@ -75,7 +77,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L733)
+[src/q/criteria.ts:736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L736)
 
 ___
 
@@ -85,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L737)
+[src/q/criteria.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L740)
 
 ___
 
@@ -95,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L726)
+[src/q/criteria.ts:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L729)
 
 ___
 
@@ -105,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:725](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L725)
+[src/q/criteria.ts:728](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L728)
 
 ___
 
@@ -115,7 +117,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L736)
+[src/q/criteria.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L739)
 
 ___
 
@@ -125,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L739)
+[src/q/criteria.ts:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L742)
 
 ___
 
@@ -135,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L735)
+[src/q/criteria.ts:738](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L738)
 
 ___
 
@@ -145,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:732](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L732)
+[src/q/criteria.ts:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L735)
 
 ___
 
@@ -155,7 +157,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L724)
+[src/q/criteria.ts:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L727)
 
 ___
 
@@ -165,7 +167,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:738](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L738)
+[src/q/criteria.ts:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L741)
 
 ___
 
@@ -175,7 +177,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L740)
+[src/q/criteria.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L743)
 
 ___
 
@@ -185,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L729)
+[src/q/criteria.ts:732](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L732)
 
 ___
 
@@ -195,7 +197,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:723](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L723)
+[src/q/criteria.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L726)
 
 ___
 
@@ -205,4 +207,4 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L730)
+[src/q/criteria.ts:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L733)

@@ -29,4 +29,4 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:684](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L684)
+[src/ui/helpers/slickhelpers.ts:686](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L686)

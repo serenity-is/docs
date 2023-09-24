@@ -20,6 +20,8 @@
 
   ↳ [`RetrieveLocalizationResponse`](corelib_q.RetrieveLocalizationResponse.md)
 
+  ↳ [`UploadResponse`](corelib.UploadResponse.md)
+
   ↳ [`ReportRetrieveResponse`](corelib.Reporting.ReportRetrieveResponse.md)
 
 ## Table of contents

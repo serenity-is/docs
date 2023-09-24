@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).NumberFormat
 
+Interface for number formatting, similar to .NET's NumberFormatInfo
+
 ## Hierarchy
 
 - **`NumberFormat`**
@@ -29,9 +31,11 @@
 
 • `Optional` **currencySymbol**: `string`
 
+Currency symbol
+
 #### Defined in
 
-[src/q/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L12)
+[src/q/formatting.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L22)
 
 ___
 
@@ -39,9 +43,11 @@ ___
 
 • `Optional` **decimalDigits**: `number`
 
+Number of digits after decimal separator
+
 #### Defined in
 
-[src/q/formatting.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L7)
+[src/q/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L12)
 
 ___
 
@@ -49,9 +55,11 @@ ___
 
 • **decimalSeparator**: `string`
 
+Decimal separator
+
 #### Defined in
 
-[src/q/formatting.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L5)
+[src/q/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L8)
 
 ___
 
@@ -59,15 +67,7 @@ ___
 
 • `Optional` **groupSeparator**: `string`
 
-#### Defined in
-
-[src/q/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L6)
-
-___
-
-### nanSymbol
-
-• `Optional` **nanSymbol**: `string`
+Group separator
 
 #### Defined in
 
@@ -75,13 +75,27 @@ ___
 
 ___
 
+### nanSymbol
+
+• `Optional` **nanSymbol**: `string`
+
+Zero symbol
+
+#### Defined in
+
+[src/q/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L18)
+
+___
+
 ### negativeSign
 
 • `Optional` **negativeSign**: `string`
 
+Negative sign
+
 #### Defined in
 
-[src/q/formatting.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L9)
+[src/q/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L16)
 
 ___
 
@@ -89,9 +103,11 @@ ___
 
 • `Optional` **percentSymbol**: `string`
 
+Percentage symbol
+
 #### Defined in
 
-[src/q/formatting.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L11)
+[src/q/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L20)
 
 ___
 
@@ -99,6 +115,8 @@ ___
 
 • `Optional` **positiveSign**: `string`
 
+Positive sign
+
 #### Defined in
 
-[src/q/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L8)
+[src/q/formatting.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L14)

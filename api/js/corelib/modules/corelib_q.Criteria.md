@@ -26,11 +26,11 @@
 
 • **Operator**: typeof [`CriteriaOperator`](../enums/corelib_q.CriteriaOperator.md)
 
-Provides access to the `CriteriaOperator` enum
+Provides access to the `CriteriaOperator` enum, e.g list of operator keys
 
 #### Defined in
 
-[src/q/criteria.ts:771](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L771)
+[src/q/criteria.ts:774](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L774)
 
 ___
 
@@ -118,7 +118,7 @@ Criteria.parse`A >= ${a} and B < ${b}` // [[[a], '>=' 5], 'and', [[b], '<', 4]]
 
 #### Defined in
 
-[src/q/criteria.ts:846](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L846)
+[src/q/criteria.ts:849](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L849)
 
 ## Functions
 
@@ -142,7 +142,7 @@ Ands two or more criteria together.
 
 #### Defined in
 
-[src/q/criteria.ts:760](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L760)
+[src/q/criteria.ts:763](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L763)
 
 ___
 
@@ -164,7 +164,7 @@ Determines if a criteria is empty.
 
 #### Defined in
 
-[src/q/criteria.ts:776](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L776)
+[src/q/criteria.ts:779](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L779)
 
 ___
 
@@ -188,7 +188,7 @@ Joins two criteria together.
 
 #### Defined in
 
-[src/q/criteria.ts:788](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L788)
+[src/q/criteria.ts:791](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L791)
 
 ___
 
@@ -210,7 +210,7 @@ Negates a criteria.
 
 #### Defined in
 
-[src/q/criteria.ts:802](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L802)
+[src/q/criteria.ts:805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L805)
 
 ___
 
@@ -234,7 +234,7 @@ Ors two or more criteria together.
 
 #### Defined in
 
-[src/q/criteria.ts:812](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L812)
+[src/q/criteria.ts:815](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L815)
 
 ___
 
@@ -256,4 +256,4 @@ Puts a criteria in parens. Exists only for compatibility reasons.
 
 #### Defined in
 
-[src/q/criteria.ts:826](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L826)
+[src/q/criteria.ts:829](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L829)

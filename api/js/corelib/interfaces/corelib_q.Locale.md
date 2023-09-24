@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).Locale
 
+Interface for a locale, similar to .NET's CultureInfo
+
 ## Hierarchy
 
 - [`NumberFormat`](corelib_q.NumberFormat.md)
@@ -46,13 +48,15 @@
 
 • `Optional` **amDesignator**: `string`
 
+AM designator
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[amDesignator](corelib_q.DateFormat.md#amdesignator)
 
 #### Defined in
 
-[src/q/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L20)
+[src/q/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L36)
 
 ___
 
@@ -60,13 +64,15 @@ ___
 
 • `Optional` **currencySymbol**: `string`
 
+Currency symbol
+
 #### Inherited from
 
 [NumberFormat](corelib_q.NumberFormat.md).[currencySymbol](corelib_q.NumberFormat.md#currencysymbol)
 
 #### Defined in
 
-[src/q/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L12)
+[src/q/formatting.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L22)
 
 ___
 
@@ -74,13 +80,15 @@ ___
 
 • `Optional` **dateFormat**: `string`
 
+Default date format string
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[dateFormat](corelib_q.DateFormat.md#dateformat)
 
 #### Defined in
 
-[src/q/formatting.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L17)
+[src/q/formatting.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L30)
 
 ___
 
@@ -88,13 +96,15 @@ ___
 
 • `Optional` **dateOrder**: `string`
 
+Date order, like dmy, or ymd
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[dateOrder](corelib_q.DateFormat.md#dateorder)
 
 #### Defined in
 
-[src/q/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L18)
+[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L32)
 
 ___
 
@@ -102,13 +112,15 @@ ___
 
 • `Optional` **dateSeparator**: `string`
 
+Date separator
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[dateSeparator](corelib_q.DateFormat.md#dateseparator)
 
 #### Defined in
 
-[src/q/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L16)
+[src/q/formatting.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L28)
 
 ___
 
@@ -116,13 +128,15 @@ ___
 
 • `Optional` **dateTimeFormat**: `string`
 
+Default date time format string
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[dateTimeFormat](corelib_q.DateFormat.md#datetimeformat)
 
 #### Defined in
 
-[src/q/formatting.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L19)
+[src/q/formatting.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L34)
 
 ___
 
@@ -130,13 +144,15 @@ ___
 
 • `Optional` **dayNames**: `string`[]
 
+Array of day names
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[dayNames](corelib_q.DateFormat.md#daynames)
 
 #### Defined in
 
-[src/q/formatting.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L24)
+[src/q/formatting.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L44)
 
 ___
 
@@ -144,13 +160,15 @@ ___
 
 • `Optional` **decimalDigits**: `number`
 
+Number of digits after decimal separator
+
 #### Inherited from
 
 [NumberFormat](corelib_q.NumberFormat.md).[decimalDigits](corelib_q.NumberFormat.md#decimaldigits)
 
 #### Defined in
 
-[src/q/formatting.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L7)
+[src/q/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L12)
 
 ___
 
@@ -158,135 +176,11 @@ ___
 
 • **decimalSeparator**: `string`
 
+Decimal separator
+
 #### Inherited from
 
 [NumberFormat](corelib_q.NumberFormat.md).[decimalSeparator](corelib_q.NumberFormat.md#decimalseparator)
-
-#### Defined in
-
-[src/q/formatting.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L5)
-
-___
-
-### firstDayOfWeek
-
-• `Optional` **firstDayOfWeek**: `number`
-
-#### Inherited from
-
-[DateFormat](corelib_q.DateFormat.md).[firstDayOfWeek](corelib_q.DateFormat.md#firstdayofweek)
-
-#### Defined in
-
-[src/q/formatting.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L23)
-
-___
-
-### groupSeparator
-
-• `Optional` **groupSeparator**: `string`
-
-#### Inherited from
-
-[NumberFormat](corelib_q.NumberFormat.md).[groupSeparator](corelib_q.NumberFormat.md#groupseparator)
-
-#### Defined in
-
-[src/q/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L6)
-
-___
-
-### minimizedDayNames
-
-• `Optional` **minimizedDayNames**: `string`[]
-
-#### Inherited from
-
-[DateFormat](corelib_q.DateFormat.md).[minimizedDayNames](corelib_q.DateFormat.md#minimizeddaynames)
-
-#### Defined in
-
-[src/q/formatting.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L26)
-
-___
-
-### monthNames
-
-• `Optional` **monthNames**: `string`[]
-
-#### Inherited from
-
-[DateFormat](corelib_q.DateFormat.md).[monthNames](corelib_q.DateFormat.md#monthnames)
-
-#### Defined in
-
-[src/q/formatting.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L27)
-
-___
-
-### nanSymbol
-
-• `Optional` **nanSymbol**: `string`
-
-#### Inherited from
-
-[NumberFormat](corelib_q.NumberFormat.md).[nanSymbol](corelib_q.NumberFormat.md#nansymbol)
-
-#### Defined in
-
-[src/q/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L10)
-
-___
-
-### negativeSign
-
-• `Optional` **negativeSign**: `string`
-
-#### Inherited from
-
-[NumberFormat](corelib_q.NumberFormat.md).[negativeSign](corelib_q.NumberFormat.md#negativesign)
-
-#### Defined in
-
-[src/q/formatting.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L9)
-
-___
-
-### percentSymbol
-
-• `Optional` **percentSymbol**: `string`
-
-#### Inherited from
-
-[NumberFormat](corelib_q.NumberFormat.md).[percentSymbol](corelib_q.NumberFormat.md#percentsymbol)
-
-#### Defined in
-
-[src/q/formatting.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L11)
-
-___
-
-### pmDesignator
-
-• `Optional` **pmDesignator**: `string`
-
-#### Inherited from
-
-[DateFormat](corelib_q.DateFormat.md).[pmDesignator](corelib_q.DateFormat.md#pmdesignator)
-
-#### Defined in
-
-[src/q/formatting.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L21)
-
-___
-
-### positiveSign
-
-• `Optional` **positiveSign**: `string`
-
-#### Inherited from
-
-[NumberFormat](corelib_q.NumberFormat.md).[positiveSign](corelib_q.NumberFormat.md#positivesign)
 
 #### Defined in
 
@@ -294,9 +188,155 @@ ___
 
 ___
 
+### firstDayOfWeek
+
+• `Optional` **firstDayOfWeek**: `number`
+
+First day of week, 0 = Sunday, 1 = Monday
+
+#### Inherited from
+
+[DateFormat](corelib_q.DateFormat.md).[firstDayOfWeek](corelib_q.DateFormat.md#firstdayofweek)
+
+#### Defined in
+
+[src/q/formatting.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L42)
+
+___
+
+### groupSeparator
+
+• `Optional` **groupSeparator**: `string`
+
+Group separator
+
+#### Inherited from
+
+[NumberFormat](corelib_q.NumberFormat.md).[groupSeparator](corelib_q.NumberFormat.md#groupseparator)
+
+#### Defined in
+
+[src/q/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L10)
+
+___
+
+### minimizedDayNames
+
+• `Optional` **minimizedDayNames**: `string`[]
+
+Array of two letter day names
+
+#### Inherited from
+
+[DateFormat](corelib_q.DateFormat.md).[minimizedDayNames](corelib_q.DateFormat.md#minimizeddaynames)
+
+#### Defined in
+
+[src/q/formatting.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L48)
+
+___
+
+### monthNames
+
+• `Optional` **monthNames**: `string`[]
+
+Array of month names
+
+#### Inherited from
+
+[DateFormat](corelib_q.DateFormat.md).[monthNames](corelib_q.DateFormat.md#monthnames)
+
+#### Defined in
+
+[src/q/formatting.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L50)
+
+___
+
+### nanSymbol
+
+• `Optional` **nanSymbol**: `string`
+
+Zero symbol
+
+#### Inherited from
+
+[NumberFormat](corelib_q.NumberFormat.md).[nanSymbol](corelib_q.NumberFormat.md#nansymbol)
+
+#### Defined in
+
+[src/q/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L18)
+
+___
+
+### negativeSign
+
+• `Optional` **negativeSign**: `string`
+
+Negative sign
+
+#### Inherited from
+
+[NumberFormat](corelib_q.NumberFormat.md).[negativeSign](corelib_q.NumberFormat.md#negativesign)
+
+#### Defined in
+
+[src/q/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L16)
+
+___
+
+### percentSymbol
+
+• `Optional` **percentSymbol**: `string`
+
+Percentage symbol
+
+#### Inherited from
+
+[NumberFormat](corelib_q.NumberFormat.md).[percentSymbol](corelib_q.NumberFormat.md#percentsymbol)
+
+#### Defined in
+
+[src/q/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L20)
+
+___
+
+### pmDesignator
+
+• `Optional` **pmDesignator**: `string`
+
+PM designator
+
+#### Inherited from
+
+[DateFormat](corelib_q.DateFormat.md).[pmDesignator](corelib_q.DateFormat.md#pmdesignator)
+
+#### Defined in
+
+[src/q/formatting.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L38)
+
+___
+
+### positiveSign
+
+• `Optional` **positiveSign**: `string`
+
+Positive sign
+
+#### Inherited from
+
+[NumberFormat](corelib_q.NumberFormat.md).[positiveSign](corelib_q.NumberFormat.md#positivesign)
+
+#### Defined in
+
+[src/q/formatting.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L14)
+
+___
+
 ### shortDayNames
 
 • `Optional` **shortDayNames**: `string`[]
+
+Array of short day names
 
 #### Inherited from
 
@@ -304,7 +344,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L25)
+[src/q/formatting.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L46)
 
 ___
 
@@ -312,13 +352,15 @@ ___
 
 • `Optional` **shortMonthNames**: `string`[]
 
+Array of short month names
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[shortMonthNames](corelib_q.DateFormat.md#shortmonthnames)
 
 #### Defined in
 
-[src/q/formatting.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L28)
+[src/q/formatting.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L52)
 
 ___
 
@@ -329,6 +371,8 @@ ___
 #### Type declaration
 
 ▸ (`a`, `b`): `number`
+
+Locale string comparison function, similar to .NET's StringComparer
 
 ##### Parameters
 
@@ -343,7 +387,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L32)
+[src/q/formatting.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L58)
 
 ___
 
@@ -351,13 +395,15 @@ ___
 
 • `Optional` **timeSeparator**: `string`
 
+Time separator
+
 #### Inherited from
 
 [DateFormat](corelib_q.DateFormat.md).[timeSeparator](corelib_q.DateFormat.md#timeseparator)
 
 #### Defined in
 
-[src/q/formatting.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L22)
+[src/q/formatting.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L40)
 
 ___
 
@@ -368,6 +414,8 @@ ___
 #### Type declaration
 
 ▸ (`a`): `string`
+
+Locale string to upper case function
 
 ##### Parameters
 
@@ -381,4 +429,4 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L33)
+[src/q/formatting.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L60)

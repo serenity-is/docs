@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[src/q/localtext.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L99)
+[src/q/localtext.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L97)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[src/q/localtext.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L99)
+[src/q/localtext.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L97)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L97)
+[src/q/localtext.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L95)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L159)
+[src/q/localtext.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L157)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L144)
+[src/q/localtext.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L142)
 
 ## Methods
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L128)
+[src/q/localtext.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L126)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L136)
+[src/q/localtext.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L134)
 
 ___
 
@@ -156,4 +156,4 @@ ___
 
 #### Defined in
 
-[src/q/localtext.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L102)
+[src/q/localtext.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/localtext.ts#L100)

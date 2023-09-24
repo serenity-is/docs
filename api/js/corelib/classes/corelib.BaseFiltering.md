@@ -137,11 +137,11 @@ ___
 
 ### argumentNull
 
-▸ `Protected` **argumentNull**(): [`ArgumentNullException`](corelib_q.ArgumentNullException.md)
+▸ `Protected` **argumentNull**(): `Error`
 
 #### Returns
 
-[`ArgumentNullException`](corelib_q.ArgumentNullException.md)
+`Error`
 
 #### Defined in
 

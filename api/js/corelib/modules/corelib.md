@@ -244,6 +244,7 @@ export class MyGrid extends EntityGrid<MyRow, any> {
 - [IRowDefinition](../interfaces/corelib.IRowDefinition.md)
 - [ImageUploadEditorOptions](../interfaces/corelib.ImageUploadEditorOptions.md)
 - [IntegerEditorOptions](../interfaces/corelib.IntegerEditorOptions.md)
+- [JsxDomWidget](../interfaces/corelib.JsxDomWidget.md)
 - [LookupEditorOptions](../interfaces/corelib.LookupEditorOptions.md)
 - [MaskedEditorOptions](../interfaces/corelib.MaskedEditorOptions.md)
 - [ModalOptions](../interfaces/corelib.ModalOptions.md)
@@ -508,7 +509,7 @@ ___
 
 ### jsxDomWidget
 
-▸ **jsxDomWidget**<`TWidget`, `TOptions`\>(`type`): `JsxDomWidget`<`TOptions` & { `ref?`: (`r`: `TWidget`) => `void`  }\>
+▸ **jsxDomWidget**<`TWidget`, `TOptions`\>(`type`): [`JsxDomWidget`](../interfaces/corelib.JsxDomWidget.md)<`TOptions` & { `ref?`: (`r`: `TWidget`) => `void`  }\>
 
 #### Type parameters
 
@@ -525,7 +526,7 @@ ___
 
 #### Returns
 
-`JsxDomWidget`<`TOptions` & { `ref?`: (`r`: `TWidget`) => `void`  }\>
+[`JsxDomWidget`](../interfaces/corelib.JsxDomWidget.md)<`TOptions` & { `ref?`: (`r`: `TWidget`) => `void`  }\>
 
 #### Defined in
 

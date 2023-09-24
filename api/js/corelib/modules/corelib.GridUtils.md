@@ -42,7 +42,7 @@ ___
 
 ### addQuickSearchInput
 
-▸ **addQuickSearchInput**(`toolDiv`, `view`, `fields?`, `onChange?`): `void`
+▸ **addQuickSearchInput**(`toolDiv`, `view`, `fields?`, `onChange?`): [`QuickSearchInput`](../classes/corelib.QuickSearchInput.md)
 
 #### Parameters
 
@@ -55,7 +55,7 @@ ___
 
 #### Returns
 
-`void`
+[`QuickSearchInput`](../classes/corelib.QuickSearchInput.md)
 
 #### Defined in
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:425](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L425)
+[src/ui/helpers/slickhelpers.ts:427](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L427)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L442)
+[src/ui/helpers/slickhelpers.ts:444](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L444)
 
 ___
 
@@ -150,4 +150,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L469)
+[src/ui/helpers/slickhelpers.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L471)

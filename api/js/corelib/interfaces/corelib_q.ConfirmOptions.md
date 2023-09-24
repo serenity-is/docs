@@ -75,7 +75,7 @@ Title of the CANCEL button, or false to hide the Cancel button. Default is value
 
 #### Defined in
 
-[src/q/dialogs.ts:370](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L370)
+[src/q/dialogs.ts:378](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L378)
 
 ___
 
@@ -135,7 +135,7 @@ Title of the NO button, or false to hide the No button. Default is value of loca
 
 #### Defined in
 
-[src/q/dialogs.ts:368](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L368)
+[src/q/dialogs.ts:376](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L376)
 
 ___
 
@@ -155,7 +155,7 @@ Event handler for cancel button click
 
 #### Defined in
 
-[src/q/dialogs.ts:372](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L372)
+[src/q/dialogs.ts:380](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L380)
 
 ___
 
@@ -205,7 +205,7 @@ Event handler for no button click
 
 #### Defined in
 
-[src/q/dialogs.ts:374](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L374)
+[src/q/dialogs.ts:382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L382)
 
 ___
 
@@ -289,7 +289,7 @@ Title of the Yes button, or false to hide the Yes button. Default is value of lo
 
 #### Defined in
 
-[src/q/dialogs.ts:364](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L364)
+[src/q/dialogs.ts:372](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L372)
 
 ___
 
@@ -301,4 +301,4 @@ CSS class for the Yes button.
 
 #### Defined in
 
-[src/q/dialogs.ts:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L366)
+[src/q/dialogs.ts:374](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L374)

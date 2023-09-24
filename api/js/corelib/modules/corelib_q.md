@@ -116,7 +116,6 @@ notifyInfo(htmlEncode("&'<>"));
 - [alertDialog](corelib_q.md#alertdialog)
 - [any](corelib_q.md#any)
 - [attrEncode](corelib_q.md#attrencode)
-- [autoFullHeight](corelib_q.md#autofullheight)
 - [baseValidateOptions](corelib_q.md#basevalidateoptions)
 - [blockUI](corelib_q.md#blockui)
 - [blockUndo](corelib_q.md#blockundo)
@@ -197,6 +196,7 @@ notifyInfo(htmlEncode("&'<>"));
 - [isEmptyOrNull](corelib_q.md#isemptyornull)
 - [isEnum](corelib_q.md#isenum)
 - [isInstanceOfType](corelib_q.md#isinstanceoftype)
+- [isMobileView](corelib_q.md#ismobileview)
 - [isTrimmedEmpty](corelib_q.md#istrimmedempty)
 - [isValue](corelib_q.md#isvalue)
 - [keyOf](corelib_q.md#keyof)
@@ -210,6 +210,7 @@ notifyInfo(htmlEncode("&'<>"));
 - [notifyInfo](corelib_q.md#notifyinfo)
 - [notifySuccess](corelib_q.md#notifysuccess)
 - [notifyWarning](corelib_q.md#notifywarning)
+- [openPanel](corelib_q.md#openpanel)
 - [outerHtml](corelib_q.md#outerhtml)
 - [padLeft](corelib_q.md#padleft)
 - [parseCriteria](corelib_q.md#parsecriteria)
@@ -240,7 +241,6 @@ notifyInfo(htmlEncode("&'<>"));
 - [serviceCall](corelib_q.md#servicecall)
 - [serviceRequest](corelib_q.md#servicerequest)
 - [setEquality](corelib_q.md#setequality)
-- [setMobileDeviceMode](corelib_q.md#setmobiledevicemode)
 - [setTypeNameProp](corelib_q.md#settypenameprop)
 - [single](corelib_q.md#single)
 - [splitDateString](corelib_q.md#splitdatestring)
@@ -263,6 +263,7 @@ notifyInfo(htmlEncode("&'<>"));
 - [tryFirst](corelib_q.md#tryfirst)
 - [tryGetText](corelib_q.md#trygettext)
 - [turkishLocaleCompare](corelib_q.md#turkishlocalecompare)
+- [turkishLocaleToLower](corelib_q.md#turkishlocaletolower)
 - [turkishLocaleToUpper](corelib_q.md#turkishlocaletoupper)
 - [validateForm](corelib_q.md#validateform)
 - [validateOptions](corelib_q.md#validateoptions)
@@ -434,8 +435,8 @@ ___
 | `bootstrapMessages` | `boolean` | Set this to true, to prefer bootstrap dialogs over jQuery UI dialogs by default for message dialogs |
 | `emailAllowOnlyAscii` | `boolean` | Email validation by default only allows ASCII characters. Set this to true if you want to allow unicode. |
 | `notLoggedInHandler` | `Function` | This is an optional method for handling when user is not logged in. If a users session is expired and when a NotAuthorized response is received from a service call, Serenity will call this handler, so you may intercept it and notify user about this situation and ask if she wants to login again... |
-| `responsiveDialogs` | `boolean` | **`Obsolete`** defaulted to false before for backward compatibility, now its true by default |
-| `rootNamespaces` | `string`[] | This is the list of root namespaces that may be searched for types. For example, if you specify an editor type of "MyEditor", first a class with name "MyEditor" will be searched, if not found, search will be followed by "Serenity.MyEditor" and "MyApp.MyEditor" if you added "MyApp" to the list of root namespaces. You should usually add your application root namespace to this list in ScriptInitialization.ts file. |
+| `responsiveDialogs` | `boolean` | **`Obsolete`** defaulted to false before for backward compatibility, now it is true by default |
+| `rootNamespaces` | `string`[] | This is the list of root namespaces that may be searched for types. For example, if you specify an editor type of "MyEditor", first a class with name "MyEditor" will be searched, if not found, search will be followed by "Serenity.MyEditor" and "MyApp.MyEditor" if you added "MyApp" to the list of root namespaces. You should usually add your application root namespace to this list in ScriptInit(ialization).ts file. |
 
 #### Defined in
 
@@ -447,9 +448,15 @@ ___
 
 • **Culture**: [`Locale`](../interfaces/corelib_q.Locale.md)
 
+Current culture, e.g. CultureInfo.CurrentCulture. This is overridden by
+settings passed from a `<script>` element in the page with id `ScriptCulture`
+containing a JSON object if available. This element is generally created in 
+the _LayoutHead.cshtml file for Serenity applications, so that the culture
+settings determined server, can be passed to the client.
+
 #### Defined in
 
-[src/q/formatting.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L89)
+[src/q/formatting.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L132)
 
 ___
 
@@ -457,9 +464,11 @@ ___
 
 • **Invariant**: [`Locale`](../interfaces/corelib_q.Locale.md)
 
+Invariant locale (e.g. CultureInfo.InvariantCulture)
+
 #### Defined in
 
-[src/q/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L36)
+[src/q/formatting.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L64)
 
 ___
 
@@ -491,7 +500,7 @@ Creates a new criteria builder containg the passed field name.
 
 #### Defined in
 
-[src/q/criteria.ts:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L747)
+[src/q/criteria.ts:750](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L750)
 
 ___
 
@@ -601,7 +610,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L231)
+[src/q/validation.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L234)
 
 ___
 
@@ -626,7 +635,7 @@ use alertDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:320](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L320)
+[src/q/dialogs.ts:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L328)
 
 ___
 
@@ -659,7 +668,7 @@ alertDialog("An error occured!"); }
 
 #### Defined in
 
-[src/q/dialogs.ts:320](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L320)
+[src/q/dialogs.ts:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L328)
 
 ___
 
@@ -718,26 +727,6 @@ use htmlEncode as it also encodes quotes
 
 ___
 
-### autoFullHeight
-
-▸ **autoFullHeight**(`element`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/layout.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L7)
-
-___
-
 ### baseValidateOptions
 
 ▸ **baseValidateOptions**(): `JQueryValidation.ValidationOptions`
@@ -748,7 +737,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L154)
+[src/q/validation.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L157)
 
 ___
 
@@ -879,7 +868,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L133)
+[src/q/layout.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L99)
 
 ___
 
@@ -929,7 +918,7 @@ ___
 
 ▸ **closePanel**(`element`, `e?`): `void`
 
-Closes a panel, triggering panelbeforeclose and panelclose events.
+Closes a panel, triggering panelbeforeclose and panelclose events on the panel element.
 If the panelbeforeclose prevents the default, the operation is cancelled.
 
 #### Parameters
@@ -945,7 +934,7 @@ If the panelbeforeclose prevents the default, the operation is cancelled.
 
 #### Defined in
 
-[src/q/dialogs.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L594)
+[src/q/dialogs.ts:602](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L602)
 
 ___
 
@@ -974,6 +963,9 @@ ___
 
 ▸ **compareStringFactory**(`order`): (`a`: `string`, `b`: `string`) => `number`
 
+Factory for a function that compares two strings, based on a character order 
+passed in the `order` argument.
+
 #### Parameters
 
 | Name | Type |
@@ -999,7 +991,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L60)
+[src/q/formatting.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L92)
 
 ___
 
@@ -1025,7 +1017,7 @@ use confirmDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L388)
+[src/q/dialogs.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L396)
 
 ___
 
@@ -1061,7 +1053,7 @@ confirmDialog("Are you sure you want to delete?", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L388)
+[src/q/dialogs.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L396)
 
 ___
 
@@ -1269,19 +1261,23 @@ ___
 
 ▸ **dialogButtonToBS**(`x`): `HTMLButtonElement`
 
+Converts a `DialogButton` declaration to Bootstrap button element
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | [`DialogButton`](../interfaces/corelib_q.DialogButton.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `x` | [`DialogButton`](../interfaces/corelib_q.DialogButton.md) | Dialog button declaration |
 
 #### Returns
 
 `HTMLButtonElement`
 
+Bootstrap button element
+
 #### Defined in
 
-[src/q/dialogs.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L168)
+[src/q/dialogs.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L172)
 
 ___
 
@@ -1289,19 +1285,23 @@ ___
 
 ▸ **dialogButtonToUI**(`x`): `any`
 
+Converts a `DialogButton` declaration to jQuery UI button type
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | [`DialogButton`](../interfaces/corelib_q.DialogButton.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `x` | [`DialogButton`](../interfaces/corelib_q.DialogButton.md) | Dialog button declaration |
 
 #### Returns
 
 `any`
 
+jQuery UI button type
+
 #### Defined in
 
-[src/q/dialogs.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L183)
+[src/q/dialogs.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L191)
 
 ___
 
@@ -1506,6 +1506,9 @@ ___
 
 ▸ **format**(`format`, `...prm`): `string`
 
+Formats a string with parameters similar to .NET's String.Format function
+using current `Culture` locale settings.
+
 #### Parameters
 
 | Name | Type |
@@ -1519,7 +1522,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L209)
+[src/q/formatting.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L265)
 
 ___
 
@@ -1527,21 +1530,55 @@ ___
 
 ▸ **formatDate**(`d`, `format?`, `locale?`): `string`
 
+Formats a date using the specified format string and optional culture.
+Supports .NET style format strings including custom formats.
+See .NET documentation for supported formats.
+
+**`Example`**
+
+```ts
+// returns "2019-01-01"
+formatDate(new Date(2019, 0, 1), "yyyy-MM-dd");
+```
+
+**`Example`**
+
+```ts
+// returns "2019-01-01 12:00:00"
+formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss");
+```
+
+**`Example`**
+
+```ts
+// returns "2019-01-01 12:00:00.000"
+formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff");
+```
+
+**`Example`**
+
+```ts
+// returns "2019-01-01 12:00:00.000 AM"
+formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff tt");
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `d` | `string` \| `Date` |
-| `format?` | `string` |
-| `locale?` | [`Locale`](../interfaces/corelib_q.Locale.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `d` | `string` \| `Date` | the date to format. If null, it returns empty string. |
+| `format?` | `string` | the format string to use. If null, it uses the current culture's default format. 'G' uses the culture's datetime format. 'g' uses the culture's datetime format with secs removed. 'd' uses the culture's date format. 't' uses the culture's time format. 'u' uses the sortable ISO format with UTC time. 'U' uses the culture's date format with UTC time. |
+| `locale?` | [`Locale`](../interfaces/corelib_q.Locale.md) | the locale to use |
 
 #### Returns
 
 `string`
 
+the formatted date
+
 #### Defined in
 
-[src/q/formatting.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L519)
+[src/q/formatting.ts:671](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L671)
 
 ___
 
@@ -1549,11 +1586,13 @@ ___
 
 ▸ **formatDayHourAndMin**(`n`): `string`
 
+Formats a number containing number of minutes into a string in the format "d.hh:mm".
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `n` | `number` | The number of minutes. |
 
 #### Returns
 
@@ -1561,13 +1600,15 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L687)
+[src/q/formatting.ts:842](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L842)
 
 ___
 
 ### formatISODateTimeUTC
 
 ▸ **formatISODateTimeUTC**(`d`): `string`
+
+Formats a date as the ISO 8601 UTC date/time format.
 
 #### Parameters
 
@@ -1581,7 +1622,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L706)
+[src/q/formatting.ts:865](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L865)
 
 ___
 
@@ -1589,14 +1630,17 @@ ___
 
 ▸ **formatNumber**(`num`, `format?`, `decOrLoc?`, `grp?`): `string`
 
+Formats a number using the current `Culture` locale (or the passed locale) settings.
+It supports format specifiers similar to .NET numeric formatting strings.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `num` | `number` |
-| `format?` | `string` |
-| `decOrLoc?` | `string` \| [`NumberFormat`](../interfaces/corelib_q.NumberFormat.md) |
-| `grp?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `num` | `number` | the number to format |
+| `format?` | `string` | the format specifier. default is 'g'. See .NET numeric formatting strings documentation for more information. |
+| `decOrLoc?` | `string` \| [`NumberFormat`](../interfaces/corelib_q.NumberFormat.md) | - |
+| `grp?` | `string` | - |
 
 #### Returns
 
@@ -1604,7 +1648,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L240)
+[src/q/formatting.ts:318](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L318)
 
 ___
 
@@ -1860,7 +1904,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L146)
+[src/q/validation.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L149)
 
 ___
 
@@ -2264,7 +2308,7 @@ Display a dialog that shows an HTML block in an IFRAME, which is usually returne
 
 #### Defined in
 
-[src/q/dialogs.ts:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L457)
+[src/q/dialogs.ts:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L465)
 
 ___
 
@@ -2319,7 +2363,7 @@ use informationDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L517)
+[src/q/dialogs.ts:525](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L525)
 
 ___
 
@@ -2355,7 +2399,7 @@ informationDialog("Operation complete", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L517)
+[src/q/dialogs.ts:525](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L525)
 
 ___
 
@@ -2388,9 +2432,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `gridDiv` | `JQuery` |
+| `gridDiv` | `HTMLElement` \| `JQuery` |
 | `opt?` | `Object` |
 | `opt.noRoute?` | `boolean` |
+| `opt.setHeight?` | `boolean` |
 
 #### Returns
 
@@ -2398,7 +2443,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L12)
+[src/q/layout.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L7)
 
 ___
 
@@ -2609,6 +2654,20 @@ ___
 
 ___
 
+### isMobileView
+
+▸ **isMobileView**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/q/layout.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L69)
+
+___
+
 ### isTrimmedEmpty
 
 ▸ **isTrimmedEmpty**(`s`): `boolean`
@@ -2695,7 +2754,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L74)
+[src/q/layout.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L61)
 
 ___
 
@@ -2715,7 +2774,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L59)
+[src/q/layout.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L46)
 
 ___
 
@@ -2729,7 +2788,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L113)
+[src/q/validation.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L116)
 
 ___
 
@@ -2755,14 +2814,17 @@ ___
 
 ### localeFormat
 
-▸ **localeFormat**(`format`, `l`, `...prm`): `string`
+▸ **localeFormat**(`l`, `format`, `...prm`): `string`
+
+Formats a string with parameters similar to .NET's String.Format function
+using the locale passed as the first argument.
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `format` | `string` |
 | `l` | [`Locale`](../interfaces/corelib_q.Locale.md) |
+| `format` | `string` |
 | `...prm` | `any`[] |
 
 #### Returns
@@ -2771,7 +2833,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L213)
+[src/q/formatting.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L273)
 
 ___
 
@@ -2878,6 +2940,31 @@ ___
 #### Defined in
 
 [src/q/notify.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/notify.ts#L66)
+
+___
+
+### openPanel
+
+▸ **openPanel**(`element`, `uniqueName?`): `void`
+
+Opens a panel, triggering panelbeforeopen and panelopen events on the panel element,
+and panelopening and panelopened events on the window.
+If the panelbeforeopen prevents the default, the operation is cancelled.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `element` | `HTMLElement` \| `JQuery` | The panel element |
+| `uniqueName?` | `string` | A unique name for the panel. If not specified, the panel id is used. If the panel has no id, a timestamp is used. |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/dialogs.ts:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L674)
 
 ___
 
@@ -2993,22 +3080,25 @@ ___
 
 ### parseDate
 
-▸ **parseDate**(`s`, `dateOrder?`): `any`
+▸ **parseDate**(`s`, `dateOrder?`): `Date`
+
+Parses a string to a date. If the string is empty or whitespace, returns null.
+Returns a NaN Date if the string is not a valid date.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
-| `dateOrder?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | The string to parse. |
+| `dateOrder?` | `string` | The order of the date parts in the string. Defaults to culture's default date order. |
 
 #### Returns
 
-`any`
+`Date`
 
 #### Defined in
 
-[src/q/formatting.ts:782](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L782)
+[src/q/formatting.ts:964](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L964)
 
 ___
 
@@ -3016,6 +3106,10 @@ ___
 
 ▸ **parseDayHourAndMin**(`s`): `number`
 
+Parses a string in the format "d.hh:mm" into a number containing number of minutes.
+Returns NaN if the hours not in range 0-23 or minutes not in range 0-59.
+Returns NULL if the string is empty or whitespace.
+
 #### Parameters
 
 | Name | Type |
@@ -3028,7 +3122,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L759)
+[src/q/formatting.ts:935](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L935)
 
 ___
 
@@ -3036,11 +3130,16 @@ ___
 
 ▸ **parseDecimal**(`s`): `number`
 
+Converts a string to a decimal. The difference between parseFloat and parseDecimal
+is that parseDecimal will return null if the string is empty or null, whereas
+parseFloat will return NaN and parseDecimal will use the current culture's group
+and decimal separators.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | the string to parse |
 
 #### Returns
 
@@ -3048,13 +3147,16 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L460)
+[src/q/formatting.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L574)
 
 ___
 
 ### parseHourAndMin
 
 ▸ **parseHourAndMin**(`value`): `number`
+
+Parses a time string in the format "hh:mm" into a number containing number of minutes.
+Returns NaN if the hours not in range 0-23 or minutes not in range 0-59.
 
 #### Parameters
 
@@ -3068,7 +3170,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L739)
+[src/q/formatting.ts:908](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L908)
 
 ___
 
@@ -3076,11 +3178,13 @@ ___
 
 ▸ **parseISODateTime**(`s`): `Date`
 
+Parses a string in the ISO 8601 UTC date/time format.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | The string to parse. |
 
 #### Returns
 
@@ -3088,7 +3192,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L724)
+[src/q/formatting.ts:887](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L887)
 
 ___
 
@@ -3096,11 +3200,16 @@ ___
 
 ▸ **parseInteger**(`s`): `number`
 
+Converts a string to an integer. The difference between parseInt and parseInteger 
+is that parseInteger will return null if the string is empty or null, whereas
+parseInt will return NaN and parseInteger will use the current culture's group
+and decimal separators.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | the string to parse |
 
 #### Returns
 
@@ -3108,7 +3217,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:449](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L449)
+[src/q/formatting.ts:552](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L552)
 
 ___
 
@@ -3428,7 +3537,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L240)
+[src/q/validation.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L243)
 
 ___
 
@@ -3482,21 +3591,25 @@ ___
 
 ▸ **round**(`n`, `d?`, `rounding?`): `number`
 
+Rounds a number to specified digits or an integer number if digits are not specified.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
-| `d?` | `number` |
-| `rounding?` | `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `n` | `number` | the number to round |
+| `d?` | `number` | the number of digits to round to. default is zero. |
+| `rounding?` | `boolean` | whether to use banker's rounding |
 
 #### Returns
 
 `number`
 
+the rounded number
+
 #### Defined in
 
-[src/q/formatting.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L226)
+[src/q/formatting.ts:294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L294)
 
 ___
 
@@ -3598,20 +3711,6 @@ ___
 
 ___
 
-### setMobileDeviceMode
-
-▸ **setMobileDeviceMode**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/layout.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L82)
-
-___
-
 ### setTypeNameProp
 
 ▸ **setTypeNameProp**(`type`, `value`): `void`
@@ -3676,11 +3775,14 @@ ___
 
 ▸ **splitDateString**(`s`): `string`[]
 
+Splits a date string into an array of strings, each containing a single date part.
+It can handle separators "/", ".", "-" and "\".
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `s` | `string` | The string to split. |
 
 #### Returns
 
@@ -3688,7 +3790,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:860](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L860)
+[src/q/formatting.ts:1038](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L1038)
 
 ___
 
@@ -3739,7 +3841,7 @@ use successDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:548](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L548)
+[src/q/dialogs.ts:556](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L556)
 
 ___
 
@@ -3775,7 +3877,7 @@ successDialog("Operation complete", () => {
 
 #### Defined in
 
-[src/q/dialogs.ts:548](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L548)
+[src/q/dialogs.ts:556](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L556)
 
 ___
 
@@ -3845,11 +3947,16 @@ ___
 
 ▸ **toId**(`id`): `any`
 
+Converts a string to an ID. If the string is a number, it is returned as-is.
+If the string is empty, null or whitespace, null is returned.
+Otherwise, it is converted to a number if possible. If the string is not a
+valid number or longer than 14 digits, the trimmed string is returned as-is.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `any` | the string to convert to an ID |
 
 #### Returns
 
@@ -3857,7 +3964,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L501)
+[src/q/formatting.ts:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L628)
 
 ___
 
@@ -3937,7 +4044,7 @@ ___
 
 #### Defined in
 
-[src/q/layout.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L127)
+[src/q/layout.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L93)
 
 ___
 
@@ -4058,6 +4165,8 @@ ___
 
 ▸ **trunc**(`n`): `number`
 
+Truncates a number to an integer number.
+
 #### Parameters
 
 | Name | Type |
@@ -4070,7 +4179,7 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L238)
+[src/q/formatting.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L309)
 
 ___
 
@@ -4137,6 +4246,8 @@ ___
 
 ▸ **turkishLocaleCompare**(`a`, `b`): `number`
 
+This is an alias for Culture.stringCompare, left in for compatibility reasons.
+
 #### Parameters
 
 | Name | Type |
@@ -4150,13 +4261,16 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L32)
+[src/q/formatting.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L58)
 
 ___
 
-### turkishLocaleToUpper
+### turkishLocaleToLower
 
-▸ **turkishLocaleToUpper**(`a`): `string`
+▸ **turkishLocaleToLower**(`a`): `string`
+
+A string to lowercase function that handles special Turkish
+characters like 'ı'. Left in for compatibility reasons.
 
 #### Parameters
 
@@ -4170,7 +4284,30 @@ ___
 
 #### Defined in
 
-[src/q/formatting.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L124)
+[src/q/formatting.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L170)
+
+___
+
+### turkishLocaleToUpper
+
+▸ **turkishLocaleToUpper**(`a`): `string`
+
+A string to uppercase function that handles special Turkish
+characters like 'ı'. Left in for compatibility reasons.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/q/formatting.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L180)
 
 ___
 
@@ -4191,7 +4328,7 @@ ___
 
 #### Defined in
 
-[src/q/validation.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L227)
+[src/q/validation.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L230)
 
 ___
 
@@ -4256,7 +4393,7 @@ use warningDialog
 
 #### Defined in
 
-[src/q/dialogs.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L576)
+[src/q/dialogs.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L584)
 
 ___
 
@@ -4289,7 +4426,7 @@ warningDialog("Something is odd!");
 
 #### Defined in
 
-[src/q/dialogs.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L576)
+[src/q/dialogs.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L584)
 
 ___
 

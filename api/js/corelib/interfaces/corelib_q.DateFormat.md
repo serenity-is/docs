@@ -4,6 +4,8 @@
 
 [corelib/q](../modules/corelib_q.md).DateFormat
 
+Interface for date formatting, similar to .NET's DateFormatInfo
+
 ## Hierarchy
 
 - **`DateFormat`**
@@ -34,9 +36,11 @@
 
 • `Optional` **amDesignator**: `string`
 
+AM designator
+
 #### Defined in
 
-[src/q/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L20)
+[src/q/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L36)
 
 ___
 
@@ -44,9 +48,11 @@ ___
 
 • `Optional` **dateFormat**: `string`
 
+Default date format string
+
 #### Defined in
 
-[src/q/formatting.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L17)
+[src/q/formatting.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L30)
 
 ___
 
@@ -54,9 +60,11 @@ ___
 
 • `Optional` **dateOrder**: `string`
 
+Date order, like dmy, or ymd
+
 #### Defined in
 
-[src/q/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L18)
+[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L32)
 
 ___
 
@@ -64,85 +72,7 @@ ___
 
 • `Optional` **dateSeparator**: `string`
 
-#### Defined in
-
-[src/q/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L16)
-
-___
-
-### dateTimeFormat
-
-• `Optional` **dateTimeFormat**: `string`
-
-#### Defined in
-
-[src/q/formatting.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L19)
-
-___
-
-### dayNames
-
-• `Optional` **dayNames**: `string`[]
-
-#### Defined in
-
-[src/q/formatting.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L24)
-
-___
-
-### firstDayOfWeek
-
-• `Optional` **firstDayOfWeek**: `number`
-
-#### Defined in
-
-[src/q/formatting.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L23)
-
-___
-
-### minimizedDayNames
-
-• `Optional` **minimizedDayNames**: `string`[]
-
-#### Defined in
-
-[src/q/formatting.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L26)
-
-___
-
-### monthNames
-
-• `Optional` **monthNames**: `string`[]
-
-#### Defined in
-
-[src/q/formatting.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L27)
-
-___
-
-### pmDesignator
-
-• `Optional` **pmDesignator**: `string`
-
-#### Defined in
-
-[src/q/formatting.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L21)
-
-___
-
-### shortDayNames
-
-• `Optional` **shortDayNames**: `string`[]
-
-#### Defined in
-
-[src/q/formatting.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L25)
-
-___
-
-### shortMonthNames
-
-• `Optional` **shortMonthNames**: `string`[]
+Date separator
 
 #### Defined in
 
@@ -150,10 +80,108 @@ ___
 
 ___
 
+### dateTimeFormat
+
+• `Optional` **dateTimeFormat**: `string`
+
+Default date time format string
+
+#### Defined in
+
+[src/q/formatting.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L34)
+
+___
+
+### dayNames
+
+• `Optional` **dayNames**: `string`[]
+
+Array of day names
+
+#### Defined in
+
+[src/q/formatting.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L44)
+
+___
+
+### firstDayOfWeek
+
+• `Optional` **firstDayOfWeek**: `number`
+
+First day of week, 0 = Sunday, 1 = Monday
+
+#### Defined in
+
+[src/q/formatting.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L42)
+
+___
+
+### minimizedDayNames
+
+• `Optional` **minimizedDayNames**: `string`[]
+
+Array of two letter day names
+
+#### Defined in
+
+[src/q/formatting.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L48)
+
+___
+
+### monthNames
+
+• `Optional` **monthNames**: `string`[]
+
+Array of month names
+
+#### Defined in
+
+[src/q/formatting.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L50)
+
+___
+
+### pmDesignator
+
+• `Optional` **pmDesignator**: `string`
+
+PM designator
+
+#### Defined in
+
+[src/q/formatting.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L38)
+
+___
+
+### shortDayNames
+
+• `Optional` **shortDayNames**: `string`[]
+
+Array of short day names
+
+#### Defined in
+
+[src/q/formatting.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L46)
+
+___
+
+### shortMonthNames
+
+• `Optional` **shortMonthNames**: `string`[]
+
+Array of short month names
+
+#### Defined in
+
+[src/q/formatting.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L52)
+
+___
+
 ### timeSeparator
 
 • `Optional` **timeSeparator**: `string`
 
+Time separator
+
 #### Defined in
 
-[src/q/formatting.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L22)
+[src/q/formatting.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L40)

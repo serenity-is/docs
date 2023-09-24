@@ -20,4 +20,4 @@ Options for `iframeDialog` *
 
 #### Defined in
 
-[src/q/dialogs.ts:450](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L450)
+[src/q/dialogs.ts:458](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L458)

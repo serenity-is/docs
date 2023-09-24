@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/slickpager.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L75)
+[src/ui/datagrid/slickpager.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L83)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/slickpager.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L117)
+[src/ui/datagrid/slickpager.ts:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L125)
 
 ___
 

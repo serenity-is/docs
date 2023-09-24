@@ -871,7 +871,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/dateeditor.ts:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L241)
+[src/ui/editors/dateeditor.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L243)
 
 ___
 
@@ -948,7 +948,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/dateeditor.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L232)
+[src/ui/editors/dateeditor.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L234)
 
 ___
 
@@ -992,4 +992,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/dateeditor.ts:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L409)
+[src/ui/editors/dateeditor.ts:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L411)

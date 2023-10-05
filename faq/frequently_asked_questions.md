@@ -96,6 +96,6 @@ Add [DefaultValue("today")] for date, or [DefaultValue("now")] for date time edi
 
 Another option is to do this in dialog, overriding *AfterLoadEntity*:
 
-```cs`
+```cs
 form.MyDateField.AsDate = JsDate.Today;
 ```

@@ -1,239 +1,187 @@
 
-# Customizing Movie Interface
+# Customizing Movie UI
 
+## Customizing Field Captions
 
-### Customizing Field Captions
+In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in *minutes*, but its title doesn't indicate this. Let's change its title to "Runtime (mins)".
 
-In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in *minutes*, but in its title there is no sign of this. Let's change its title to Runtime (mins).
+There are several ways to make this change. Options include server-side form definition, server-side column definition, script grid code, and more. However, for a central and consistent change, let's update the entity itself so that its title changes everywhere.
 
-There are several ways to do this. Our options include server side form definition, server side columns definition, from script grid code etc. But let's make this change in the central location, the entity itself, so its title changes everywhere.
+When Sergen generated code for the Movie table, it created an entity class named MovieRow. You can find it at *Modules/MovieDB/Movie/MovieRow.cs*.
 
-When Sergen generated code for Movie table, it created a entity class named MovieRow. You can find it at  *Modules/MovieDB/Movie/MovieRow.cs*.
-
-Here is an excerpt from its source with our Runtime property:
-
-```cs
-namespace MovieTutorial.MovieDB
-{
-    // ...
-    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
-    [DisplayName("Movie"), InstanceName("Movie")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
-    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
-    {
-        // ...
-        [DisplayName("Runtime")]
-        public int? Runtime
-        {
-            get => fields.Runtime[this];
-            set => fields.Runtime[this] = value;
-        }
-        //...
-    }
-}
-```
-
-> Note: In StartSharp, you may see RowTemplate sub class in the generated code. This is a new feature in StartSharp, which allows you to use minimized row classes. You will not see RowFields class in the generated code, but it will be generated in the background. They work the same way.
-
-We'll talk about entities (or rows) later, let's now focus on our target and change its DisplayName attribute value to *Runtime (mins)":
+Here's an excerpt from its source code, including our Runtime property:
 
 ```cs
-namespace MovieTutorial.MovieDB
-{
-    // ...
-    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
-    [DisplayName("Movie"), InstanceName("Movie")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
-    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
-    {
-        // ...
-        [DisplayName("Runtime (mins)")]
-        public int? Runtime
-        {
-            get => fields.Runtime[this];
-            set => fields.Runtime[this] = value;
-        }
-        //...
-    }
-}
-```
-
-Now build solution and run application. You'll see that field title is changed in both grid and dialog. 
-
-> Column title has "..." in it as column is not wide enough, though its hint shows the full title. We'll see how to handle this soon.
-
-![Movies Runtime (Mins)](img/mdb_runtime_mins.png)
-
-
-### Overriding Column Title and Width 
-
-
-So far so good, what if we wanted to show another title in grid (columns) or dialog (form). We can override it corresponding definition file.
-
-> Check out [this](./../../attributes/attributes.md) page to see attributes that can be used on a Column or Form.
-
-Let's do it on columns first. Next to *MovieRow.cs*, you can find a source file named *MovieColumns.cs*:
-
-```cs
-namespace MovieTutorial.MovieDB.Columns
-{
-    // ...
-
-    [ColumnsScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
-    public class MovieColumns
-    {
-        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public int MovieId { get; set; }
-        //...
-        public int Runtime { get; set; }
-    }
-}
-```
-
-You may notice that this columns definition is based on the Movie entity (BasedOnRow attribute).
-
-Any attribute written here will override attributes defined in the entity class.
-
-Let's add a DisplayName attribute to the *Runtime* property:
-
-```cs
-namespace MovieTutorial.MovieDB.Columns
-{
-    // ...
-
-    [ColumnsScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
-    public class MovieColumns
-    {
-        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public int MovieId { get; set; }
-        //...
-        [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-        public int Runtime { get; set; }
-    }
-}
-```
-
-Now we set column caption to "Runtime in Minutes". 
-
-We actually added two more attributes. 
-
-One to override column width to 150px.
-
-> Serenity applies an automatic width to columns based on field type and character length, unless you set the width explicitly.
-
-And another one to align column to right (AlignCenter, AlignLeft is also available).
-
-Let's build and run again, than we get: 
-
-![Movies Runtime Column](img/mdb_runtime_col.png)
-
-Form field title stayed same, while column title changed.
-
-> If we wanted to override form field title instead, we would do similar steps in MovieForm.cs
-
-
-### Changing Editor Type For Description and Storyline
-
-Description and Storyline fields can be a bit longer compared to Title field, so lets change their editor types to a textarea.
-
-Open *MovieForm.cs* in the same folder with *MovieColumns.cs* and *MovieRow.cs*.
-
-```cs
-namespace MovieTutorial.MovieDB.Forms
+//...
+public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
     //...
-    [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
-    public class MovieForm
-    {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Storyline { get; set; }
-        public int Year { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        public int Runtime { get; set; }
-    }
+    
+    [DisplayName("Runtime")]
+    public int? Runtime { get => fields.Runtime[this]; set => fields.Runtime[this] = value; }
+    
+    //...
 }
 ```
 
-and add TextAreaEditor attributes to both:
+We'll delve into entities (or rows) in more detail later. For now, let's concentrate on our objective: changing the `DisplayName` attribute value to `Runtime (mins)`:
 
 ```cs
-namespace MovieTutorial.MovieDB.Forms
+//...
+public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
     //...
-    [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
-    public class MovieForm
-    {
-        public string Title { get; set; }
-        [TextAreaEditor(Rows = 3)]
-        public string Description { get; set; }
-        [TextAreaEditor(Rows = 8)]
-        public string Storyline { get; set; }
-        public int Year { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        public int Runtime { get; set; }
-    }
+    
+    [DisplayName("Runtime (mins)")]
+    public int? Runtime { get => fields.Runtime[this]; set => fields.Runtime[this] = value; }
+    
+    //...
 }
 ```
 
-I left more editing rows for Storyline (8) compared to Description (3) as Storyline should be much longer.
+Next, rebuild the solution and run the application. You'll notice that the field title is updated in both the grid and the dialog.
 
-After rebuild and run, we have this:
+> Column title has `...` in it as column is not wide enough, though its hint shows the full title. We'll see how to handle this soon.
 
-![Movies TextArea Editors](img/mdb_movie_textarea.png)
+![Movies Runtime (Mins) with Dots](img/runtime_mins_dots.png)
 
-Serene has several editor types to choose from. Some are automatically picked based on field data type, while you need to explicitly set others.
+## Overriding Column Title and Width
 
-> You can also develop your own editor types. You can take existing editor types as base classes, or develop your own from scratch. We'll see how in following chapters.
+We're doing well so far. But what if we want to display a different title in the grid (columns) or dialog (form)? We can override it in the corresponding definition file.
 
-As editors became a bit higher, form height exceeded the default Serenity form height (which is about 260px) and now we have a vertical scroll bar. Let's remove it.
+> You can refer to [this](./../../attributes/attributes.md) page to see the attributes that can be used on a Column or Form.
 
-### Setting Initial Dialog Size With CSS
+Let's start with modifying columns. Next to `MovieRow.cs`, you can find a source file named `MovieColumns.cs`:
 
-Your CSS is in *MovieTutorial.Web/wwwroot/Content/site/site.css* file (in Visual Studio it may have some child css files like *site.htmlcontent.css* if you have file nesting enabled).
+```cs
+namespace MovieTutorial.MovieDB.Columns;
 
-You can change the dialog size by adding some CSS rules to it.
+[ColumnsScript("MovieDB.Movie")]
+[BasedOnRow(typeof(MovieRow), CheckNames = true)]
+public class MovieColumns
+{
+    //...
+
+    public int Runtime { get; set; }
+}
+```
+
+You may have noticed that this column definition is based on the `MovieRow` entity, thanks to the `BasedOnRow` attribute. 
+
+Any attribute you write on properties here will override attributes defined in the entity class.
+
+Let's add a `DisplayName` attribute to the Runtime property:
+
+```cs
+namespace MovieTutorial.MovieDB.Columns;
+
+[ColumnsScript("MovieDB.Movie")]
+[BasedOnRow(typeof(MovieRow), CheckNames = true)]
+public class MovieColumns
+{
+    //...
+
+    [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
+    public int Runtime { get; set; }
+}
+```
+
+Now, we've set the column caption to `Runtime in Minutes`. In addition, we've added two more attributes:
+
+- One to override the column width to 150px. (Serenity automatically assigns a width to columns based on the field type and character length unless you set it explicitly.)
+- Another one to align the column to the right. (You can also use `AlignCenter` or `AlignLeft` for alignment.)
+
+Let's rebuild and run the application again, and you'll observe the following:
+
+![Movies Runtime Column Fixed](img/movies_runtime_col_fixed.png)
+
+Form field title has remained the same, while the column title has changed.
+
+If we wanted to override the form field title instead, we would follow similar steps in the `MovieForm.cs` file.
+
+## Changing Editor Type for Description and Storyline
+
+The Description and Storyline fields can be a bit longer compared to the Title field, so let's change their editor types to a textarea.
+
+Open the `MovieForm.cs` file located in the same folder as `MovieColumns.cs` and `MovieRow.cs`.
+
+```cs
+//...
+[FormScript("MovieDB.Movie")]
+[BasedOnRow(typeof(MovieRow), CheckNames = true)]
+public class MovieForm
+{
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public string Storyline { get; set; }
+    //...
+}
+```
+
+and add `TextAreaEditor` attributes to both the `Description` and `Storyline` properties:
+
+```cs
+//...
+[FormScript("MovieDB.Movie")]
+[BasedOnRow(typeof(MovieRow), CheckNames = true)]
+public class MovieForm
+{
+    public string Title { get; set; }
+    [TextAreaEditor(Rows = 3)]
+    public string Description { get; set; }
+    [TextAreaEditor(Rows = 8)]
+    public string Storyline { get; set; }
+    //...
+}
+```
+> Please Note: This is just a sample for modifying forms separately. It is recommended to set editor types in the row property instead of the form.
+
+I've set more editing rows for Storyline (8) compared to Description (3) as Storyline should be much longer.
+
+After rebuilding and running the application, we now have this:
+
+![Movies TextArea Editors](img/movie_text_area_editors.png)
+
+Serene offers various editor types to choose from. Some are automatically selected based on the field data type, while you need to set others explicitly.
+
+> You can also develop your own editor types. You can either build them on existing editor types as base classes or create entirely new ones from scratch. We'll explore this in upcoming chapters.
+
+## Setting Initial Dialog Size With CSS
+
+Now, let's make adjustments to the size of the Movie dialog. Your CSS is located in the `MovieTutorial.Web/wwwroot/Content/site/site.css` file.
+
+To change the dialog size, you can add CSS rules to it.
 
 ```css
 .s-MovieTutorial-MovieDB-MovieDialog > .size {
   width: 650px;
-  height: 450px;
+  height: 550px;
 }
 
 .s-MovieTutorial-MovieDB-MovieDialog .caption {
   width: 150px;
 }
-
 ```
 
-These rules are applied to elements with *s-MovieTutorial-MovieDB-MovieDialog* class. Our Movie dialog has this class by default, which is generated by "s-" + ProjectName + "-" + ModuleName + "-" + ClassName. 
+These rules are applied to elements with the class `s-MovieTutorial-MovieDB-MovieDialog`. Our Movie dialog has this class by default, which is generated as "s-" + ProjectName + "-" + ModuleName + "-" + ClassName.
 
-The size rule of this css specifies that this dialog is 650px wide and 450px height by default.
+The CSS rule for size specifies that this dialog is 650px wide and 550px in height by default.
 
 The caption rule line specifies that field labels should be 150px.
 
-If css bundling is disabled in the *appsettings.json*, you can see the changes immediately when you refresh the browser. Otherwise, you need to restart the application.
+If CSS bundling is disabled in the *appsettings.json* file, you can see the changes immediately when you refresh the browser. Otherwise, you need to restart the application.
 
+![Movie Dialog 550px](img/movie-dialog-550px.png)
 
-![Movie Dialog 450px](img/mdb_movie_450px.png)
-
-What i mean by *desktop mode* above will become clearer soon. Serenity dialogs are responsive by default. Let's resize our browser window to a width about 350px. I'll use mobile mode of my Chrome browser to switch to iPhone 12 Pro:
-
+What I meant by 'desktop mode' earlier will become clearer shortly. Serenity dialogs are responsive by default. Let's resize our browser window to a width of about 350px. I'll use the mobile mode of my Chrome browser to switch to an iPhone 12 Pro:
 
 ![Movie Dialog iPhone12pro](img/mdb_movie_iphone12pro.png)
 
-And now an iPad in landscape mode:
+And now, let's switch to an iPad in landscape mode:
 
 ![Movie Dialog iPad](img/mdb_movie_ipad.png)
 
-So, the height we set here is only meaningfull for desktop mode. Dialog will turn into a responsive, device size specific mode in mobile, without having to mess with CSS @media queries.
-
+So, the height we set here is only meaningful for desktop mode. The dialog will transform into a responsive, device-size-specific mode on mobile, without the need to deal with CSS `@media` queries."
 
 ### Changing Page Title
 

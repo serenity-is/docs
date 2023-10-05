@@ -67,9 +67,9 @@ This specifies a unique key for this migration. After a migration is applied to 
 
 > Note: The migration key should be in sync with the class name for consistency. Migration keys are Int64 numbers, but you can use underscores in them, which is a feature of C# 7.0.
 
-Migrations are executed in key order, so using a sortable datetime pattern for migration keys is a good practice, as applied here. Ensure you always use the same number of characters (underscores are ignored) for migration keys, e.g.,`20221114_1505`. This prevents issues with migration order and errors due to migrations running in an unexpected sequence.
+Migrations are executed in key order, and using a sortable datetime pattern for migration keys is a good practice, as demonstrated here.
 
-Please make sure you always use same number of characters (underscores are ignored) for migration keys e.g. 14 (20221114_1505). Otherwise your migration order will get messed up, and you will have migration errors, due to migrations running in an unexpected order.
+Please ensure that you consistently use the same number of digits for migration keys. In this example, we use 12 digits (e.g., 20221114_1505). To achieve this, zero-pad single-digit month, day, hour, and minute values to two digits. Neglecting this consistency can lead to complications in the migration order and may result in migration errors due to migrations running in an unexpected sequence.
 
 The `[DefaultDB]` attribute indicates that this migration applies to the `Default` database. It identifies which migrations should be run against which database, especially if your application uses multiple databases.
 

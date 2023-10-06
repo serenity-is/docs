@@ -1,90 +1,61 @@
 # Handling Movie Navigation
 
-### Setting Navigation Item Title and Icon
+## Setting Navigation Item Title and Icon
 
-When Sergen generated code for Movie table, it also created a navigation item entry. In Serene, navigation items are created with special assembly attributes.
+When Sergen generated code for the Movie table, it also created a navigation item entry. In Serene, navigation items are created using special assembly attributes.
 
-Open _MovieDBNavigation.cs_ in the module folder.  In it you'll find this line:
+Open the `MovieDBNavigation.cs` file in the `MovieDB` module folder. You'll find this line in the file:
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "MovieDB/Movie", 
     typeof(MyPages.MoviePage), icon: null)]
 ```
 
-First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
+The first argument to this attribute is the display order for this navigation item (`int.MaxValue`). Since we currently have only one navigation item in the `Movie` section, we don't need to worry about ordering for now.
 
-Second parameter is navigation title in "Section Title/Link Title" format. Section and navigation items are seperated with a slash \(/\).
+The second parameter is the navigation title in the format `Section Title/Link Title`, with a slash (`/`) separating the section and navigation items.
 
-Lets change it to _Movie Database/Movies_.
-
-```cs
-[assembly: NavigationLink(int.MaxValue, "Movie Database/Movie", 
-    typeof(MyPages.MoviePage), icon: "fa-video-camera")]
-```
-
-![Navigation Item Title and Icon](img/mdb_movie_navtitle.png)
-
-We also changed navigation item icon to _fa-video-camera_. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from Font Awesome icon set.
-
-To see list of simple line icons and their css classes, visit link below:
-
-[http://thesabbir.github.io/simple-line-icons/](http://thesabbir.github.io/simple-line-icons/)
-
-FontAwesome is available here:
-
-[https://fontawesome.com/v4.7.0/icons/](https://fontawesome.com/v4.7.0/icons/)
-
-> There is also a page in Serene under _Theme Samples / UI Elements / Icons_ containing a list of these icon sets.
-
-### Ordering Navigation Sections
-
-As our _Movie Database_ section is auto generated last, it is displayed at the bottom of navigation menu.
-
-We'll move it before Northwind menu.
-
-As we saw recently, Sergen created a navigation item in _MovieDBNavigation.cs_. If navigation items are scattered through pages like this, it would be hard to see the big picture \(list of all navigation items\) and order them easily.
-
-So we move it to our central location which is at _MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs_.
-
-Just cut the below lines from _MovieDBNavigation.cs_:
+Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`:
 
 ```cs
 [assembly: NavigationLink(int.MaxValue, "Movie Database/Movies", 
     typeof(MyPages.MoviePage), icon: "fa-video-camera")]
 ```
 
-Move it into _NavigationItems.cs_ and modify it like this:
+![Movies Nav Title and Icon](img/movies-nav-title-icon.png)
+
+The Serene template includes Font Awesome, while StartSharp utilizes `Line Awesome`, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page].
+
+## Ordering Navigation Sections
+
+By default, the `Movie Database` menu, which is auto-generated, has the lowest order of its children (`int.MaxValue`). This places it at the bottom of the left navigation menu.
+
+To move it above the `Northwind` menu, which has an order value of `7000` (as seen in the Northwind menu definition [here](https://github.com/serenity-is/common-features/blob/master/src/Serenity.Demo.Northwind/Modules/Shared/NorthwindNavigation.cs), we can use an order value lower than `7000`, such as `6000`. This new order value will place our `Movie Database` menu before the `Northwind` menu:
 
 ```cs
-using Serenity.Navigation;
-using MovieDB = MovieTutorial.MovieDB.Pages;
-
-[assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "",
-    icon: "fa-tachometer")]
-
-[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies", 
+[assembly: NavigationMenu(6000, "Movie Database", icon: "fa-film")]
+[assembly: NavigationLink(6100, "Movie Database/Movies", 
     typeof(MovieDB.MoviePage), icon: "fa-video-camera")]
 ```
 
-Here we also declared a navigation menu \(Movie Database\) with _film_ icon. When you don't have an explicitly defined navigation menu, Serenity implicitly creates one, but in this case you can't order menu yourself, or set menu icon.
+In this update, we've defined a navigation menu, `Movie Database`, with the `fa-film` icon. Without an explicitly defined navigation menu, Serenity generates one implicitly, but in such cases, you can't set the menu order or icon yourself.
 
-We assigned it a display order of _2000_ so this menu will display just after Dashboard link \(1000\) but before Northwind menu \(8000\).
+We've set the display order of the `Movie Database/Movies` link to `6100`. However, this value doesn't have an impact right now since there's only one navigation item under the `Movie Database` menu. The display order for sub-items only matters when ordering items among their siblings. Even if we assigned a value of `1` to the `Movies` link, it wouldn't move it above the `Dashboard` link, as the parent menu, `Movie Database`, has an order of `6000`.
 
-We assigned our _Movies_ link a display order value of _2100_ but it doesn't matter right now, as we have only one navigation item under _Movie Database_ menu yet.
+After making these changes, the navigation menu will look like this:
 
-> First level links and navigation menus are sorted according to their display order first, then second level links among their siblings.
+![Movie Database Nav Moved](img/movie_nav_moved.png)
 
-Here is how it looks like after these changes:
+Here's the improved text:
 
-![Movie Database Moved](img/mdb_movie_navmoved.png)
+## Troubleshooting Some Issues with Visual Studio
 
-### Troubleshooting Some Issues with Visual Studio
+You may have noticed that Visual Studio doesn't allow you to modify code while your site is running. When you stop debugging, your site also stops, preventing you from keeping the browser window open and refreshing it after rebuilding your project.
 
-In case you didn't notice already, Visual Studio doesn't let you modify code while your site is running. Also your site stops when you stop debugging, so you can't keep browser window open and refresh after rebuilding.
+While there is a `Hot Reload` feature, it might not always reflect your changes, especially when you modify attributes or other critical parts.
 
-You may start without debugging by using Ctrl+F5. This lets you modify TypeScript code while your application is running and refresh.
+To address these issues, you can start your application without debugging by using `Ctrl+F5`. This enables you to modify TypeScript code while your application is running and see the changes instantly, thanks to the `watch` feature, which is enabled by default for Serenity applications in development mode.
 
-If you modify CSHTML / CS files, you'll need to rerun application with Ctrl+F5.
+However, if you modify CSHTML or CS files, you will need to rerun the application with Ctrl+F5.
 
-Also, on your site, top blue progress bar \(which is a Pace.js animation\), keeps running all the time like it is still loading something. It is thanks to the _Browser Link_ feature of Visual Studio. To disable it, locate its button in Visual Studio toolbar that looks like a refresh button \(next to play icon with browser name like Chrome\), click dropdown and uncheck _Enable Browser Link_.
+Additionally, you might notice a top blue progress bar on your site that appears to keep running as if it's still loading something. This behavior is due to the `Browser Link` feature in Visual Studio. To disable it, locate the button in the Visual Studio toolbar that resembles a refresh icon (next to the play icon with the browser name like Chrome), click the dropdown, and uncheck the "Enable Browser Link" option.

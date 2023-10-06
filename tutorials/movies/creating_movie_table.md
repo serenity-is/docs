@@ -123,6 +123,6 @@ Additionally, if you view the data in the `[dbo].[VersionInfo]` table, the Versi
 
 So, even if you change the migration source code, that migration won't run again in this database. It's a good practice to avoid modifying migrations after they have been applied. If necessary, create a new migration.
 
-![Migration VersionInfo Table](img/img/movie_migration_check.png)
+![Migration VersionInfo Table](img/movie-migration-check.png)
 
 > Typically, you don't need to perform these checks after every migration. This information is provided to help you locate the necessary data in case you encounter issues in the future.

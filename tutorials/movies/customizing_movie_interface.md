@@ -183,42 +183,21 @@ And now, let's switch to an iPad in landscape mode:
 
 So, the height we set here is only meaningful for desktop mode. The dialog will transform into a responsive, device-size-specific mode on mobile, without the need to deal with CSS `@media` queries."
 
-### Changing Page Title
+## Changing Page Title
 
-Our page has title of *Movie*. Let's change it to *Movies*. 
+Our page currently has the title `Movie`. Let's update it to `Movies` which feels more natural.
 
-Open *MovieRow.cs* again. 
-
-```cs
-namespace MovieTutorial.MovieDB
-{
-    // ...
-    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
-    [DisplayName("Movie"), InstanceName("Movie")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
-    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
-    {
-        [DisplayName("Movie Id"), Identity]
-        public int? MovieId
-```
-
-Change DisplayName attribute value to *Movies*. This is the name that is used when this table is referenced, and it is usually a plural name. This attribute is used for determining default page title. 
-
-> It is also possible to override the page title in *MoviePage.cs* file but as before, we prefer to do it from a central location so that this information can be reused in other places.
-
-InstanceName corresponds to singular name and is used in New Record (New Movie) button of the grid and also determines the dialog title (e.g. Edit Movie).
+Open the `MovieRow.cs` file again and change the `DisplayName` attribute value on top of the row class to `"Movies"`.
 
 ```cs
-namespace MovieTutorial.MovieDB
+// ...
+[DisplayName("Movies"), InstanceName("Movie")]
+public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
-    // ...
-    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
-    [DisplayName("Movies"), InstanceName("Movie")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
-    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
-    {
-        [DisplayName("Movie Id"), Identity]
-        public int? MovieId
 ```
+
+This name is used when referencing the table and is typically in plural form. This attribute also determines the default page title.
+
+> While it's possible to override the page title in the `MoviePage.cs` file, we prefer to make such changes from a central location to ensure reusability in other parts of the application.
+
+The `InstanceName` corresponds to the singular name and is used in the `New  Movie` (Add) button on the grid and also determines the dialog title (e.g., `Edit Movie`).

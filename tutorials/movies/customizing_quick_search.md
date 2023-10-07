@@ -59,129 +59,89 @@ By adding the `QuickSearch` attribute to the "Description" and "Storyline" field
 
 ![Movies Search Gandalf](img/search-gandalf.png)
 
-QuickSearch attribute, by default, searches with *contains* filter. It has some options to make it match by *starts with* filter or match only exact values.
-
-If we wanted it to show only rows that *starts with* typed text, we would change attribute to:
+The `QuickSearch` attribute, by default, performs a search using a "contains" filter. However, you can adjust its behavior by using different search types. For example, if you want to show rows that start with the typed text, you can modify the attribute like this:
 
 ```cs
 [DisplayName("Title"), Size(200), NotNull, QuickSearch(SearchType.StartsWith)]
 public string Title
-{
-    get => fields.Title[this];
-    set => fields.Title[this] = value;
-}
 ```
 
-> Here this quick search feature is not very useful, but for values like SSN, serial number, identification number, phone number etc, it might be.
+In this example, the `SearchType.StartsWith` option is used, which filters for values that start with the specified text. This can be useful for matching values like SSN, serial numbers, identification numbers, phone numbers, and more.
 
-If we wanted to search also in year column, but only exact integer values (1999 matches but not 19):
+If you want to search in the "Year" column but only for exact integer values (e.g., "1999" matches, but not "19"), you can configure it like this:
 
 ```cs
 [DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
 public int? Year
-{
-    get => fields.Year[this];
-    set => fields.Year[this] = value;
-}
 ```
 
-> You might have noticed that we are not writing any C# or SQL code for these basic features to work. We just specify what we want, rather than how to do it. This is what declarative programming is. 
+In this case, the `SearchType.Equals` option is used, and we set `numericOnly: 1` to indicate that only exact numeric matches are allowed. This can be useful when you need to search for specific integer values.
 
-It is also possible to provide user with ability to determine which field (s)he wants to search on.
+The beauty of these features is that you don't need to write complex C# or SQL code to make them work. Instead, you simply specify what you want, leaving the "how to do it" part to Serenity. This approach is known as declarative programming, where you describe your intentions rather than the implementation details.
 
-Open *MovieTutorial.Web/Modules/MovieDB/Movie/MovieGrid.ts* and modify it like:
+You can also provide users with the ability to choose which field they want to search on. To do this, open *MovieGrid.ts* and make the following modifications:
 
 ```ts
 import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
-import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
-import { MovieDialog } from './MovieDialog';
-
+//...
 @Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
 export class MovieGrid extends EntityGrid<MovieRow, any> {
     // ...
-    constructor(container: JQuery) {
-        super(container);
-    }
-
     protected getQuickSearchFields(): QuickSearchField[] {
         return [
-            { name: "", title: "all" },
-            { name: "Description", title: "description" },
-            { name: "Storyline", title: "storyline" },
-            { name: "Year", title: "year" }
+            { name: "", title: "All" },
+            { name: "Description", title: "Description" },
+            { name: "Storyline", title: "Storyline" },
+            { name: "Year", title: "Year" }
         ];
     }
 }
 ```
 
-Once you save that file, we'll have a dropdown in quick search input:
+After saving this file, a dropdown will appear in the quick search input, allowing users to select the field they want to search on:
 
-![Movies Quick Search Fields](img/mdb_movie_quicksearchfield.png)
+![Movies Quick Search Fields](img/movies-quick-search-fields.png)
 
-> Unlike prior samples where we modified Server side code, this time we did changes in client side, and modified Javascript (TypeScript) code.
+Unlike previous examples where we modified server-side code, this time we made changes on the client side by modifying JavaScript (TypeScript) code.
 
+### Code Transformations with Sergen
 
-### Running Code Transformations with Sergen
+In the previous example, we hardcoded field names like *Description*, *Storyline*, etc., which can lead to typing errors if the actual property names or their casing on the server-side (JavaScript is case-sensitive) are forgotten.
 
-In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names or their casing at server side (javascript is case sensitive).
+Sergen generates code to transfer this information from the server-side (C# rows) to the client-side (TypeScript) for IntelliSense purposes on every build.
 
-Sergen generates some code to transfer such information from server side (rows etc in C#) to client side (TypeScript) for intellisense purposes on every build.
+You can also manually transform the templates by opening a command prompt in the project directory and typing `dotnet sergen t`.
 
-It is also possible to open a command prompt in project directory and type `dotnet sergen t` to transform templates manually.
+From now on, when we mention "transforming templates," it means either rebuilding the application or running `dotnet sergen t` in rare cases.
 
-From now on, when we say transform templates, it means either rebuilding the application or running `dotnet sergen t` in rare cases.
-
-> If you are using Premium StartSharp template then your code will be generated in development time with source generators.
-
-### Intellisense on TypeScript Code (After transforming templates)
-
-We can now use intellisense to replace hardcoded field names with compile time checked versions:
+After transforming the templates, you can use IntelliSense to replace hardcoded field names with compile-time checked versions:
 
 ```ts
 //...
-import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
-import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
-
 export class MovieGrid extends EntityGrid<MovieRow, any> {
     //...
-
-    constructor(container: JQuery) {
-        super(container);
-    }
-
     protected getQuickSearchFields(): QuickSearchField[] {
         const fld = MovieRow.Fields;
         return [
-            { name: "", title: "all" },
-            { name: fld.Description, title: "description" },
-            { name: fld.Storyline, title: "storyline" },
-            { name: fld.Year, title: "year" }
+            { name: "", title: "All" },
+            { name: fld.Description, title: "Description" },
+            { name: fld.Storyline, title: "Storyline" },
+            { name: fld.Year, title: "Year" }
         ];
     }
 }
 ```
 
-What about field titles? It is not so critical as field names, but can be useful for localization purposes (if we later decide to translate it):
+What about field titles? It is not as critical as field names but can be useful for localization purposes (if you later decide to translate it):
 
 ```ts
-import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
-import { text } from '@serenity-is/corelib/q';
-import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
-import { MovieDialog } from './MovieDialog';
-
-@Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
+import { localText } from '@serenity-is/corelib/q';
+//..
 export class MovieGrid extends EntityGrid<MovieRow, any> {
-   // ...
-
-    constructor(container: JQuery) {
-        super(container);
-    }
-
+    // ...
     protected getQuickSearchFields(): QuickSearchField[] {
-        const txt = (s) =>
-            text(`Db.${MovieRow.localTextPrefix}.${s}`).toLowerCase();
+        const txt = s => localText(`Db.${MovieRow.localTextPrefix}.${s}`);
         const fld = MovieRow.Fields;
-
         return [
             { name: "", title: "all" },
             { name: fld.Description, title: txt(fld.Description) },
@@ -192,7 +152,7 @@ export class MovieGrid extends EntityGrid<MovieRow, any> {
 }
 ```
 
-We made use of the local text dictionary (translations) available at client side. It's something like this:
+We used the local text dictionary (translations) available on the client side. It's something like this:
 
 ```json
 {
@@ -206,8 +166,6 @@ We made use of the local text dictionary (translations) available at client side
 
 Local text keys for row fields are generated from *"Db." + (LocalTextPrefix for Row) + "." + FieldName*.
 
-Their values are generated from [DisplayName] attributes on your fields by but might be something else in another culture if they are translated.
+Their values are generated from [DisplayName] attributes on your fields but might be something else in another culture if they are translated.
 
-LocalTextPrefix corresponds to *ModuleName + "." + RowClassName* by default, but can be changed in Row fields constructor.
-
-
+LocalTextPrefix corresponds to *ModuleName + "." + RowClassName* by default but can be changed in the Row fields constructor.

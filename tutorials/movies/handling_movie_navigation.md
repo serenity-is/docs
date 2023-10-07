@@ -24,13 +24,13 @@ Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`
 
 ![Movies Nav Title and Icon](img/movies-nav-title-icon.png)
 
-The Serene template includes Font Awesome, while StartSharp utilizes `Line Awesome`, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page].
+The Serene template includes Font Awesome, while StartSharp utilizes `Line Awesome`, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page](https://demo.serenity.is/Serenity.Demo.AdvancedSamples/UIElements/Icons).
 
 ## Ordering Navigation Sections
 
 By default, the `Movie Database` menu, which is auto-generated, has the lowest order of its children (`int.MaxValue`). This places it at the bottom of the left navigation menu.
 
-To move it above the `Northwind` menu, which has an order value of `7000` (as seen in the Northwind menu definition [here](https://github.com/serenity-is/common-features/blob/master/src/Serenity.Demo.Northwind/Modules/Shared/NorthwindNavigation.cs), we can use an order value lower than `7000`, such as `6000`. This new order value will place our `Movie Database` menu before the `Northwind` menu:
+To move it above the `Northwind` menu, which has an order value of `7000` (as seen in the Northwind menu definition [here](https://github.com/serenity-is/common-features/blob/master/src/Serenity.Demo.Northwind/Modules/Shared/NorthwindNavigation.cs)), we can use an order value lower than `7000`, such as `6000`. This new order value will place our `Movie Database` menu before the `Northwind` menu:
 
 ```cs
 [assembly: NavigationMenu(6000, "Movie Database", icon: "fa-film")]
@@ -45,8 +45,6 @@ We've set the display order of the `Movie Database/Movies` link to `6100`. Howev
 After making these changes, the navigation menu will look like this:
 
 ![Movie Database Nav Moved](img/movie_nav_moved.png)
-
-Here's the improved text:
 
 ## Troubleshooting Some Issues with Visual Studio
 

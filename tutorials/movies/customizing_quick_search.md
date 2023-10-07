@@ -1,83 +1,63 @@
 
 # Customizing Quick Search
 
-### Adding Several Movie Entries
+## Adding Multiple Movie Entries
 
-For the following sections, we need some sample data. We can copy and paste some from IMDB.
+To proceed with the upcoming sections, we require some sample data. You have the option to manually enter this data, or you can save time by using the sample data available in a migration file, which can be found [here](https://gist.github.com/volkanceylan/0b3e71de6247ad9963e33889f85003bc).
 
-If you don't want to waste your time entering this sample data, it is available as a migration at the link below:
-
-> https://gist.github.com/volkanceylan/0b3e71de6247ad9963e33889f85003bc
-
-
-![7 Movies Entered](img/mdb_sample_movies.png)
-
-If we typed *go* into search box, we would see two movies are filtered: *The Good, the Bad and the Ugly* and *The Godfather*.
-
-If we typed *Gandalf* we wouldn't be able to find anything. 
-
-By default, Sergen determines first textual field of a table as *the name field*. In movies table it is *Title*. This field has a *QuickSearch* attribute on it that specifies that text searches should be performed on it.
-
-> The name field also determines initial sorting order and shown in edit dialog titles. 
-
-Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it by switching the _NameProperty_ attribute on *MovieRow.cs*:
+If you choose to use the migration file, create a new migration with a suitable name, such as `DefaultDB_20221114_1703_MovieData.cs`. In the `Up` method of this migration, paste the code from the provided gist, like this:
 
 ```cs
+namespace MovieTutorial.Migrations.DefaultDB;
 
-namespace MovieTutorial.MovieDB
+[DefaultDB, Migration(20221114_1703)]
+public class DefaultDB_20221114_1703_MovieData : AutoReversingMigration
 {
-    //...
-    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
+    public override void Up()
     {
-        //...
-        [DisplayName("Description"), Size(1000), NameProperty]
-        public string Description
-        {
-            get => fields.Description[this];
-            set => fields.Description[this] = value;
-        }
-}
-```
-
-Code generator determined that first textual (string) field in our table is Title. So it added a INameRow interface to our Movies row and implemented it by returning Title field. If wanted to use Description as name field, we would just replace it.
-
-Here, *Title* is actually the name field, so we leave it as is. But we want Serenity to search also in *Description* and *Storyline* fields. To do this, you need to add *QuickSearch* attribute to these fields too, as shown below:
-
-```cs
-namespace MovieTutorial.MovieDB
-{
-    //...
-    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
-    {
-        //...
-        [DisplayName("Title"), Size(200), NotNull, QuickSearch, NameProperty]
-        public string Title
-        {
-            get => fields.Title[this];
-            set => fields.Title[this] = value;
-        }
-
-        [DisplayName("Description"), Size(1000), QuickSearch]
-        public string Description
-        {
-            get => fields.Description[this];
-            set => fields.Description[this] = value;
-        }
-
-        [DisplayName("Storyline"), QuickSearch]
-        public string Storyline
-        {
-            get => fields.Storyline[this];
-            set => fields.Storyline[this] = value;
-        }
+        Insert.IntoTable("Movie").InSchema("mov")
+            .Row(new
+            {
+                Title = "The Matrix",
         //...
     }
 }
 ```
 
-Now, if we search for *Gandalf*, we'll get a *The Lord of the Rings* entry:
+After creating the migration, restart your application to execute it.
 
-![Movies Search Gandalf](img/mdb_movie_gandalf.png)
+By adding this movie data, you will have a set of sample entries to work with, as shown in the image:
+
+![Movie Data Entered](img/movie-data-entered.png)
+
+If we were to enter "go" into the search box, two movies, "The Good, the Bad and the Ugly" and "The Godfather," would be filtered.
+
+However, if we tried searching for "Gandalf," we wouldn't find any results. This is because, by default, Serenity identifies the first textual field in a table as "the name field", which is used for text searches. In the "Movies" table, the name field is "Title", and this field is marked with the `QuickSearch` attribute to enable text searches.
+
+The name field also determines the initial sorting order and is used in edit dialog titles. Sometimes, the first textual column might not be suitable as the name field. In such cases, you can change it by switching the `[NameProperty]` attribute from the current property, such as "Title", to another property, like "Description". However, in our case, "Title" is indeed the name field, so we leave it as is.
+
+If you want Serenity to search in additional fields, like "Description" and "Storyline", you should add the `QuickSearch` attribute to these fields as well. Here's how it's done:
+
+```cs
+//...
+public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
+{
+    //...
+    [DisplayName("Title"), Size(200), NotNull, QuickSearch, NameProperty]
+    public string Title { get => fields.Title[this]; set => fields.Title[this] = value; }
+
+    [DisplayName("Description"), Size(1000), QuickSearch]
+    public string Description { get => fields.Description[this]; set => fields.Description[this] = value; }
+
+    [DisplayName("Storyline"), QuickSearch]
+    public string Storyline { get => fields.Storyline[this]; set => fields.Storyline[this] = value; }
+    //...
+}
+```
+
+By adding the `QuickSearch` attribute to the "Description" and "Storyline" fields, you enable text searches in these columns. Now, if you search for "Gandalf", you'll get an entry for "The Lord of the Rings":
+
+![Movies Search Gandalf](img/search-gandalf.png)
 
 QuickSearch attribute, by default, searches with *contains* filter. It has some options to make it match by *starts with* filter or match only exact values.
 

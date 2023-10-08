@@ -176,7 +176,7 @@ import { Lookup } from "@serenity-is/corelib/q";
 import { FormatterContext } from "@serenity-is/sleekgrid";
 import { GenreRow } from "@/ServerTypes/MovieDB/GenreRow";
 
-@Decorators.registerFormatter('MovieTutorial.MovieDB.GenreListFormatter')
+@Decorators.registerFormatter('MovieTutorial.MovieDB.GenresFormatter')
 export class GenresFormatter implements Formatter {
 
     static lookup: Lookup<GenreRow>;

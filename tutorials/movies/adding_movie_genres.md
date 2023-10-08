@@ -1,195 +1,148 @@
-
 # Adding Movie Genres
 
+## Adding Genre Field
 
-### Adding Genre Field
+To store movie genres in your database, you'll need a lookup table. While an enumeration is suitable for the "Kind" field, genres might change over time and aren't static. Therefore, it's better to use a table to manage genres. Let's start by creating a migration to generate the Genre table and add a "GenreId" column to the Movie table.
 
-To hold Movie genres we need a lookup table. For *Kind* field we used an enumeration but this time genres might not be that *static* to declare them as an enumeration.
-
-As usual, we start with a migration.
-
-*Migrations/DefaultDB/DefaultDB_20221114_183600_GenreTable.cs*:
+**Migrations/DefaultDB/DefaultDB_20221114_1836_GenreTable.cs**:
 
 ```cs
 using FluentMigrator;
 
-namespace MovieTutorial.Migrations.DefaultDB
-{
-    [Migration(20221114_183600)]
-    public class DefaultDB_20221114_183600_GenreTable : AutoReversingMigration
-    {
-        public override void Up()
-        {
-            Create.Table("Genre").InSchema("mov")
-                .WithColumn("GenreId").AsInt32().NotNullable()
-                    .PrimaryKey().Identity()
-                .WithColumn("Name").AsString(100).NotNullable();
+namespace MovieTutorial.Migrations.DefaultDB;
 
-            Alter.Table("Movie").InSchema("mov")
-                .AddColumn("GenreId").AsInt32().Nullable()
-                    .ForeignKey("FK_Movie_GenreId", "mov", "Genre", "GenreId");
-        }
+[DefaultDB, Migration(20221114_1836)]
+public class DefaultDB_20221114_1836_GenreTable : AutoReversingMigration
+{
+    public override void Up()
+    {
+        Create.Table("Genre").InSchema("mov")
+            .WithColumn("GenreId").AsInt32().NotNullable()
+                .PrimaryKey().Identity()
+            .WithColumn("Name").AsString(100).NotNullable();
+
+        Alter.Table("Movie").InSchema("mov")
+            .AddColumn("GenreId").AsInt32().Nullable()
+                .ForeignKey("FK_Movie_GenreId", "mov", "Genre", "GenreId");
     }
 }
 ```
 
-We also added a *GenreId* field to *Movie* table.
+This migration creates the "Genre" table and adds a "GenreId" column to the "Movie" table.
 
-> Actually a movie can have multiple genres so we should keep it in a separate *MovieGenres* table. But for now, we think it as single. We'll see how to change it to multiple later.
+> Note: In reality, a movie can have multiple genres, and in such cases, you would typically use a separate "MovieGenres" table. However, for simplicity, we'll consider a single genre per movie for now. We'll explore how to handle multiple genres later.
 
+## Generating Code for the Genre Table
 
-### Generating Code For Genre Table
+After running the project to execute the migration, you'll need to generate code for the "Genre" table using Sergen. Run the following command in your project directory:
 
-> Don't forget to run project so migration can execute
-
-Run `dotnet sergen g` again in project directory.
-
-Use following parameters:
-
-- Connection Key: **Default**
-- Table Name: **mov.Genre**
-- Module Name: **MovieDB**
-- Entity Identifier: **Genre**
-- Permission Key: **Administration:General**
-- What to Generate: **All**
-
-Rebuild solution and run it. We'll get a new page like this:
-
-![Genre Initial Page](img/mdb_genre_initial.png)
-
-As you see in screenshot, it is generated under a new section *MovieDB* instead of the one we renamed recently: *Movie Database*.
-
-This is because *Sergen* has no idea of what customizations we performed on our *Movie* page. We need to move it under *Movie Database* manually.
-
-Open *Modules/Movie/MovieDBNavigation.cs*, cut the navigation link shown below:
-
-```cs
-[assembly: NavigationLink(int.MaxValue, "MovieDB/Genre",
-    typeof(MyPages.GenresPage), icon: null)]
-````
-
-And move it to *Modules/Common/Navigation/NavigationItems.cs*:
-
-```cs
-//...
-[assembly: NavigationMenu(2000, "Movie Database", icon: "fa-film")]
-[assembly: NavigationLink(2100, "Movie Database/Movies",
-    typeof(MovieDB.MoviePage), icon: "fa-video-camera")]
-[assembly: NavigationLink(2200, "Movie Database/Genres",
-    typeof(MovieDB.GenrePage), icon: "fa-thumb-tack")]
-//...
+```sh
+dotnet sergen g
 ```
 
+Specify the following parameters:
 
-### Adding Several Genre Definitions 
+- **Connection Key**: Default
+- **Table Name**: mov.Genre
+- **Module Name**: MovieDB
+- **Entity Identifier**: Genre
+- **Permission Key**: Administration:General
+- **What to Generate**: All
 
-Now let's add some sample genres. I'll do it through migration, to not to repeat it in another PC, but you might want to add them manually through Genre page.
+Once you've rebuilt your solution and run it, you'll find a new section in your application named "MovieDB." Within this section, you'll see the "Genres" page, which allows you to manage movie genres.
+
+![Genre Initial Page](img/genre-initial-page.png)
+
+In the screenshot above, you'll notice that the "Genres" page is located under the "MovieDB" section. This organization might differ from the section you recently renamed as "Movie Database." The reason for this distinction is that *Sergen* isn't aware of the customizations made to your existing navigation items. To rectify the section organization, you'll need to manually move the "Genres" page under the "Movie Database" section.
+
+To accomplish this, navigate to the `Modules/Movie/MovieDBNavigation.cs` file and modify the navigation link for "Genre" as follows:
+
+```csharp
+[assembly: NavigationLink(6200, "Movie Database/Genres", typeof(MyPages.GenrePage), icon: "fa-thumb-tack")]
+```
+
+By making this adjustment, you ensure that the "Genres" page is placed under the "Movie Database" section, aligning with your desired organization.
+
+## Adding Several Genre Definitions 
+
+Now, let's add some sample genres to your database. While you can do this manually through the Genre page, I'll demonstrate how to do it via migration to avoid the need for repetition on other machines.
 
 ```cs
 using FluentMigrator;
 
-namespace MovieTutorial.Migrations.DefaultDB
+namespace MovieTutorial.Migrations.DefaultDB;
+    
+[DefaultDB, Migration(20221114_1844)]
+public class DefaultDB_20221114_1844_SampleGenres : AutoReversingMigration
 {
-    [Migration(20221114_184400)]
-    public class DefaultDB_20221114_184400_SampleGenres : AutoReversingMigration
+    public override void Up()
     {
-        public override void Up()
-        {
-            Insert.IntoTable("Genre").InSchema("mov")
-                .Row(new
-                {
-                    Name = "Action"
-                })
-                .Row(new
-                {
-                    Name = "Drama"
-                })
-                .Row(new
-                {
-                    Name = "Comedy"
-                })
-                .Row(new
-                {
-                    Name = "Sci-fi"
-                })
-                .Row(new
-                {
-                    Name = "Fantasy"
-                })
-                .Row(new
-                {
-                    Name = "Documentary"
-                });
-        }
+        Insert.IntoTable("Genre").InSchema("mov")
+            .Row(new { Name = "Action" })
+            .Row(new { Name = "Drama" })
+            .Row(new { Name = "Comedy" })
+            .Row(new { Name = "Sci-fi" })
+            .Row(new { Name = "Fantasy" })
+            .Row(new { Name = "Documentary" });
     }
 }
 ```
 
+This migration inserts sample genre entries into the "Genre" table in your database. It's a convenient way to populate your genre table with initial data.
 
-### Mapping GenreId Field in MovieRow
+By following these steps, you've successfully set up a "Genre" table, generated code for it, and added sample genres to your database.
 
-As we did with *Kind* field before, *GenreId* field needs to be mapped in *MovieRow.cs*.
+## Mapping the GenreId Field in MovieRow
+
+Just like we handled the *Kind* field earlier, it's essential to map the *GenreId* field within the `MovieRow.cs` file to establish the relationship between movies and genres.
+
+Here's the code snippet to accomplish this:
 
 ```cs
-namespace MovieTutorial.MovieDB
+// ...
+public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
+    const string jGenre = nameof(jGenre);
+
     // ...
-    public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
+
+    [DisplayName("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
+    public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
+
+    [DisplayName("Genre"), Expression($"{jGenre}.Name")]
+    public string GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
+
+    public class RowFields : RowFieldsBase
     {
         // ...
-        [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
-        public MovieKind? Kind
-        {
-            get => fields.Kind[this];
-            set => fields.Kind[this] = value;
-        }
-
-        [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
-        public int? GenreId
-        {
-            get => fields.GenreId[this];
-            set => fields.GenreId[this] = value;
-        }
-
-        [DisplayName("Genre"), Expression("g.Name")]
-        public string GenreName
-        {
-            get => fields.GenreName[this];
-            set => fields.GenreName[this] = value;
-        }
-
-        // ...
-
-        public class RowFields : RowFieldsBase
-        {
-            // ...
-            public EnumField<MovieKind> Kind;
-            public Int32Field GenreId;
-            public StringField GenreName;
-        }
+        public Int32Field GenreId;
+        public StringField GenreName;
     }
 }
 ```
 
-Here we mapped *GenreId* field and also declared that it has a foreign key relation to *GenreId* field in *[mov].Genre* table using *ForeignKey* attribute.
+In the provided code:
 
-> If we did generate code for Movie table after we added this Genre table, Sergen would understand this relation by checking foreign key definition at database level, and generate similar code for us.
+- We defined a new `jGenre` constant which will be used as an alias for a Genre table join.
 
-We also added another field, *GenreName* that is not actually a field in *Movie* table, but in *Genre* table. 
+- We've mapped the *GenreId* field using the `[ForeignKey]` attribute. We specified `typeof(GenreRow)` to indicate that this field is related to the `GenreRow` entity. This also informs Serenity to determine the name of the table and its ID property from the `GenreRow` entity. This is a recommended approach as it helps prevent typing errors.
 
-Serenity entities are more like SQL views. You can bring in fields from other tables with joins.
+- The `[LeftJoin(jGenre)]` attribute declares that when the Genre table needs to be joined, its alias should be set to `jGenre`. In SQL terms, this corresponds to generating queries with a LEFT JOIN between the Movies and Genre tables. This join is only performed when fields from the Genre table are requested, for instance, if its columns are visible in a data grid. The internally generated query could look like below:
 
-By adding *LeftJoin("g")* attribute to MovieId property, we declared that whenever Genre table needs to be joined to, its alias will be *g*.
+    ```sql
+    SELECT t0.MovieId, t0.Kind, t0.GenreId, jGenre.Name as GenreName 
+    FROM Movies t0
+    LEFT JOIN Genre jGenre on t0.GenreId = jGenre.GenreId 
+    ```
 
-So when Serenity needs to select from *Movies* table, it will produce an SQL query like this:
+- We've added a new field, *GenreName*, which is not present in the Movie table but is derived from the Genre table. By using the `Expression` attribute and specifying `$"{jGenre}.Name"`, we indicate that this field represents an SQL expression originating from the `jGenre` join.
 
-```sql
-SELECT t0.MovieId, t0.Kind, t0.GenreId, g.Name as GenreName 
-FROM Movies t0
-LEFT JOIN Genre g on t0.GenreId = g.GenreId 
-```
+In essence, these code modifications define the relationship between the Movie and Genre tables and ensure that the correct data is retrieved when needed.
 
-> Serene template enables SQL query logging by default. So you can see all the queries that are executing in output console. Check out appsettings.Development.json
+Please note that Serene's entities function somewhat like SQL views, enabling you to incorporate fields from other tables through joins. This flexibility allows you to structure your data and relationships efficiently in your application.
+
+Additionally, Serene templates enable SQL query logging by default so that you can see the executed queries in the output console. The `appsettings.Development.json` configuration file contains settings for query logging:
+
 ```json
 {
     // ...
@@ -202,20 +155,14 @@ LEFT JOIN Genre g on t0.GenreId = g.GenreId
 }
 ```
 
-> This join will only be performed if a field from Genre table requested to be selected, e.g. its column is visible in a data grid.
+## Adding Genre Selection to the Movie Form
 
-By adding *Expression("g.Name")* on top of *GenreName* property, we specified that this field has an SQL expression of *g.Name*, thus it is a view field originating from our *g* join.
-
-### Adding Genre Selection To Movie Form
-
-Let's add GenreId field to our form in *MovieForm.cs*:
+Now, let's enhance the Movie form by adding a Genre selection field. To do this, we'll make changes to the `MovieForm.cs` file.
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
 {
     //...
-    [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(Entities.MovieRow), CheckNames = true)]
     public class MovieForm
     {
         //...
@@ -225,102 +172,56 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Now if we build and run application, we'll see that a Genre field is added to our form. The problem is, it accepts data entry as an integer. We want it to use a dropdown.
+![Movie Dialog Integer Genre](img/movies-genre-int.png)
 
-It's clear that we need to change editor type for GenreId field.
+With these changes, you've added a `GenreId` field to the Movie form. However, if you build and run your application, you'll notice that this field currently accepts data as an integer input. What we actually want is to provide a dropdown selection for movie genres.
 
+To achieve this, we need to specify the editor type for the `GenreId` field.
 
-### Declaring a Lookup Script for Genres
+## Declaring a Lookup Script for Genres
 
-To show an editor for *Genre* field, list of genres in our database should be available at client side.
+In order to display a dropdown editor for the Genre field, we need to make the list of available genres from our database accessible on the client side. Unlike enumeration values, which can be easily transferred to the client-side by Sergen, a dynamic list like movie genres isn't as straightforward.
 
-For enumeration values, it was simple, we just run T4 templates, and they copied enum declaration to script side.
+Serenity has a feature known as "dynamic scripts," which enables you to make dynamic data, such as lists, available on the client side through runtime-generated scripts. You can learn more about dynamic scripts and lookups in [this topic](../../framework/dynamic-scripts/readme.md).
 
-Here we can't do the same. Genre list is a database based dynamic list.
-
-Serenity has notion of *dynamic scripts* to make dynamic data available to script side in the form of runtime generated scripts.
-
-> Dynamic scripts are similar to web services, but their outputs are dynamic JSON's or javascript files that can be cached on client side. 
-> 
-> The *dynamic* here corresponds to the data they contain, not their behavior. Unlike web services, dynamic scripts can't accept any parameters. And their data is shared among all users of your site. They are like singletons or static variables. 
-> 
-> You shouldn't try to write a dynamic script (e.g. lookup) that acts like a web service.
-
-To declare a dynamic lookup script for Genre table, open *GenreRow.cs* and modify it like below:
+To declare a lookup script for the Genre table, open the `GenreRow.cs` file and modify it as shown below:
 
 ```cs
-namespace MovieTutorial.MovieDB
-{
-    // ...
-
-    [ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Genre]")]
-    [DisplayName("Genres"), InstanceName("Genres")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
-    [LookupScript("MovieDB.Genre")]
-    public sealed class GenreRow : Row<GenreRow.RowFields>, IIdRow, INameRow
-    {
-        // ...
-    }
+[LookupScript]
+public sealed class GenreRow : Row<GenreRow.RowFields>, IIdRow, INameRow
 ```
 
-We just added line with *[LookupScript("MovieDB.Genre")]*.
+By adding the `[LookupScript]` attribute to the `GenreRow` class, you're specifying that a lookup script is associated with the Genre table.
 
-Rebuild your project, launch it, after logging in, open developer console by *F12*.
+After making this change, rebuild your project and launch the application. Once you've logged in, open the developer console by pressing F12 in your browser.
 
-Type *Q.getLookup('MovieDB.Genre')*
-
-and you will get something like this:
+Inside the console, type `Q.getLookup('MovieDB.Genre')`, and you'll receive an output similar to this:
 
 ![Movies Genre Lookup from Console](img/mdb_genre_getlookup.png)
 
-Here *MovieDB.Genre* is the lookup key we assigned to this lookup script when declaring it with:
+The output displays the lookup data. This step demonstrates how to verify the availability of a lookup script on the client side.
 
-> [LookupScript("MovieDB.Genre")]
+The lookup key is automatically determined based on the module name and the entity class name. 
 
-This step was just to show how to check if a lookup script is available client side.
+While you can implicitly specify the lookup key by using `[LookupScript("MovieDB.Genre")]`, it's generally recommended to let Serenity automatically determine the lookup key to prevent potential typing errors.
 
-> Lookup key, *"MovieDB.Genre"* is case sensitive. Make sure you type exact same case everywhere.
+## Using the LookupEditor for the Genre Field
 
-### Using LookupEditor for Genre Field
+You have two options to specify the editor type for the `GenreId` field: one is to define it in the `MovieForm.cs` file, and the other is to do it in the `MovieRow.cs` file. While you can set it on the form level, I generally prefer to define it in the row class because it's a more central location, and the information defined at this level can be reused in various parts of your application.
 
-There are two places to set editor type for GenreId field. One is MovieForm.cs, other is MovieRow.cs.
+Keep in mind that the information defined on a form is specific to that form and cannot be reused elsewhere. For example, grids use information from `XYZColumn.cs` or `XYZRow.cs`, while dialogs rely on information in `XYZForm.cs` or `XYZRow.cs`. So, it's usually better to define such details in the `XYZRow.cs` file.
 
-I usually prefer the latter, as it is the central place, but you may choose to set it on a form, if that editor type is specific to that form only.
-
-> Information defined on a form can't be reused. For example, grids use information in XYZColumn.cs / XYZRow.cs while dialogs use information in XYZForm.cs / XYZRow.cs. So it's usually better to define things in XYZRow.cs.
-
-Open MovieRow.cs and add *LookupEditor* attribute to *GenreId* property as shown below:
+Open the `MovieRow.cs` file and add the `[LookupEditor]` attribute to the `GenreId` property as shown below:
 
 ```cs
-    [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
-    [LookupEditor("MovieDB.Genre")]
-    public int? GenreId
-    {
-        get => fields.GenreId[this];
-        set => fields.GenreId[this] = value;
-    }
-
+[DisplayName("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
+[LookupEditor(typeof(GenreRow))]
+public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
 ```
 
-After we build and launch our project, we'll now have a searchable dropdown (Select2.js) on our Genre field.
+In this code, we specify `typeof(GenreRow)` in the `[LookupEditor]` attribute. This tells Serenity to locate the `LookupScript` attribute on the `GenreRow` class and automatically determine the lookup key.
 
-![Movie Form With Genre Editor](img/mdb_genre_dropdown.png)
-
-While defining [LookupEditor] we hardcoded the lookup key. It's also possible to reuse information on GenreRow:
-
-```cs
-    [DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
-    [LookupEditor(typeof(GenreRow))]
-    public int? GenreId
-    {
-        get => fields.GenreId[this];
-        set => fields.GenreId[this] = value;
-    }
-
-```
-
-This is functionally equivalent. I'd prefer latter. Here, Serenity will locate the [LookupScript] attribute on GenreRow, and get lookup key information from there. If we had no [LookupScript] attribute on GenreRow, you'd get an error on application startup:
+If the `GenreRow` class does not have a `[LookupScript]` attribute, you'll encounter an error when you start the application. The error message will indicate that the `GenreRow` type doesn't have a `[LookupScript]` attribute, which is necessary for using a LookupEditor. Here's an example of the error message you might encounter:
 
 ```
 Server Error in '/' Application.
@@ -331,146 +232,105 @@ Server Error in '/' Application.
 Parameter name: lookupType
 ```
 
-> Forms are scanned at application startup, so there is no way to handle this error without fixing the issue.
+While it is possible to specify the lookup key implicitly like this: `LookupEditor("MovieDB.Genre")`, it's not recommended because it can lead to typing errors. It's best to let Serenity automatically determine the lookup key as shown in the code above.
 
-### Display Genre in Movie Grid
+After building and launching your project, you'll have a searchable dropdown editor (using Select2.js) for the Genre field in your Movie form.
 
-Currently, movie genre can be edited in the form but is not displayed in Movie grid. Edit MovieColumns.cs to show GenreName (not GenreId).
+![Movie Form With Genre Editor](img/movie-form-with-genre-editor.png)
 
+## Displaying Genre in the Movie Grid
 
-```cs
-namespace MovieTutorial.MovieDB.Columns
-{
-    // ...
-    public class MovieColumns
-    {
-        //...
-        [Width(100)]
-        public string GenreName { get; set; }
-        [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
-        public int Runtime { get; set; }
-    }
-}
-```
-
-Now GenreName is shown in the grid.
-
-![Movie Gid With Genre Column](img/mdb_genre_incolumn.png)
-
-
-### Making It Possible To Define A New Genre Inplace
-
-While setting genre for our sample movies, we notice that *The Good, the Bad and the Ugly* is *Western* but there is no such genre in *Genre* dropdown yet (so I had to choose Drama). 
-
-One option is to open Genres page, add it, and come back to movie form again. Not so pretty...
-
-Fortunately, Serenity has integrated inplace item definition ability for lookup editors.
-
-Open MovieRow.cs and modify *LookupEditor* attribute like this:
+To display the movie genre in the Movie grid, you need to modify the `MovieColumns.cs` file. Update the `MovieColumns` class to include the `GenreName` property before the `Runtime` property:
 
 ```cs
-[DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
-[LookupEditor(typeof(GenreRow), InplaceAdd = true)]
-public int? GenreId
-{
-    get => fields.GenreId[this];
-    set => fields.GenreId[this] = value;
-}
-
-```
-
-Now we can define a new Genre by clicking star/pen icon next to genre field.
-
-![Defining Genre Inplace](img/mdb_genre_inplace.png)
-
-> Here we also see that we can use a dialog from another page (GenreDialog) in the movies page. In Serenity applications, all client side objects (dialogs, grids, editors, formatters etc.) are self-contained reusable components (widgets) that are not bound to any page.
-
-It is also possible to start typing in genre editor, and it will provide you with an option to add a new genre.
-
-![Defining Genre By Searching](img/movies_genre_search_add.png)
-
-### How Did It Determine Which Dialog Type To Use
-
-You probably didn't notice this detail. Our lookup editor for genre selection, automatically opened a new *GenreDialog* when you wanted to add a new genre inplace. 
-
-Here, our lookup editor made use of a convention. Because its lookup key is *MovieDB.Genre*, it searched for a dialog class with full names below:
-
-```
-MovieDB.GenreDialog
-MovieTutorial.MovieDB.GenreDialog
-...
-...
-```
-
-Luckily, we have a GenreDialog, which is defined in *Modules/Genre/GenreDialog.ts* and its full name is *MovieTutorial.MovieDB.GenreDialog*.
-
-```ts
-import { Decorators, EntityDialog } from '@serenity-is/corelib';
-import { GenreForm, GenreRow, GenreService } from '../../ServerTypes/MovieDB';
-
-@Decorators.registerClass('MovieTutorial.MovieDB.GenreDialog')
-export class GenreDialog extends EntityDialog<GenreRow, any> {
-    protected getFormKey() { return GenreForm.formKey; }
-    protected getIdProperty() { return GenreRow.idProperty; }
-    protected getLocalTextPrefix() { return GenreRow.localTextPrefix; }
-    protected getNameProperty() { return GenreRow.nameProperty; }
-    protected getService() { return GenreService.baseUrl; }
-    protected getDeletePermission() { return GenreRow.deletePermission; }
-    protected getInsertPermission() { return GenreRow.insertPermission; }
-    protected getUpdatePermission() { return GenreRow.updatePermission; }
-
-    protected form = new GenreForm(this.idPrefix);
-}
-```
-
-If, lookup key for *GenreRow* and its dialog class didn't match, we would get an error in browser console, as soon as we click the inplace add button:
-
-```
-Uncaught MovieDB.GenreDialog dialog class is not found!
-```
-
-But this is not the case as they match. In such a case, either you'd have to use a compatible lookup key like "*ModuleName*.*RowType*", or you'd need to specify dialog type explicitly:
-
-```cs
-[DisplayName("Genre"), ForeignKey("[mov].Genre", "GenreId"), LeftJoin("g")]
-[LookupEditor(typeof(GenreRow), InplaceAdd = true, DialogType = "MovieDB.Genre")]
-public int? GenreId
-{
-    get => fields.GenreId[this];
-    set => fields.GenreId[this] = value;
-}
-```
-
-> You shouldn't specify *Dialog* suffix, nor the full namespace, e.g. *MovieTutorial.MovieDB.Genre*, as Serenity automatically searches for them.
-
-
-### Adding Quick Filter for Genre To Grid
-
-As our list of movies becomes larger, we might need to filter movies based on values of some fields, besides the quick search functionality.
-
-Serenity has several filtering methods. One of them is Quick Filter, which we'll use on Genre field.
-
-Edit *Modules/MovieDB/Movie/MovieColumns.cs* to add a [QuickFilter] attribute on top of GenreName field:
-
-```cs
+// ...
 public class MovieColumns
 {
-    //...
-    public DateTime ReleaseDate { get; set; }
-    [Width(100), QuickFilter]
+    // ...
     public string GenreName { get; set; }
     [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
     public int Runtime { get; set; }
 }
 ```
 
-Build and navigate to Movies page. You'll a quick filtering dropdown for genre field is available:
+This change will make the `GenreName` visible in the grid, ensuring that you see the genre name instead of the genre ID. Now, when you view the Movie grid, you'll see the GenreName column.
 
-![Genre Quick Filter](img/mdb_movie_genrequick.png)
+![Movie Grid with Genre in Columns](img/genre-in-column.png)
 
-The field that is filtered is actually *GenreId* not *GenreName* that we attached this attribute to. Serenity is clever enough to understand this relation, and determined editor type to use by looking at attributes of *GenreId* property in *GenreRow.cs*.
+## Allowing In-Place Definition of a New Genre
 
+While setting the genre for your sample movies, you might have noticed that "The Good, the Bad and the Ugly" is a Western, but there is no such genre available in the Genre dropdown yet. In such cases, you'd typically need to open the Genres page, add the missing genre, and then return to the movie form, which can be cumbersome.
 
-### Re-runing auto transformation
+However, Serenity provides a convenient way to define a new genre in-place directly from the movie form using lookup editors.
 
-As we added a new entity to our application, we should rebuild solution.
+Open the `MovieRow.cs` file and modify the `LookupEditor` attribute for the `GenreId` property as follows:
+
+```cs
+[LookupEditor(typeof(GenreRow), InplaceAdd = true)]
+public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
+```
+
+By adding `InplaceAdd = true` to the `LookupEditor` attribute, you enable the ability to define a new genre directly from the form. Now, you'll see a star/pen icon next to the genre field, which allows you to define a new genre without leaving the movie form.
+
+![Defining Genre In-Place](img/inplace-genre-dialog.png)
+
+You can also start typing in the genre editor, and it will provide you with the option to add a new genre, making the process more user-friendly.
+
+![Defining Genre by Searching](img/genre_inplace_search.png)
+
+This feature is quite powerful, as it demonstrates that Serenity applications are composed of self-contained, reusable components, including dialogs, grids, editors, formatters, and more. These components are not tied to any specific page, providing flexibility and modularity to your application.
+
+## How the Dialog Type is Determined
+
+You may not have noticed, but when you wanted to add a new genre in-place using the lookup editor, a new "GenreDialog" was automatically opened. This happened because the lookup editor followed a convention to determine which dialog type to use. 
+
+The lookup editor's lookup key is "MovieDB.Genre," so it searched for a dialog class with full names like this:
+
+- `MovieDB.GenreDialog`
+- `MovieTutorial.MovieDB.GenreDialog`
+
+Fortunately, there's a "GenreDialog" class defined in the "Modules/Genre/GenreDialog.ts" file, and its registered full name is "MovieTutorial.MovieDB.GenreDialog":
+
+```ts
+// ...
+@Decorators.registerClass('MovieTutorial.MovieDB.GenreDialog')
+export class GenreDialog extends EntityDialog<GenreRow, any> {
+    // ...
+}
+```
+
+If the lookup key for "GenreRow" and its dialog class didn't match, you'd get an error in the browser console as soon as you clicked the inplace add button:
+
+```
+Uncaught MovieDB.GenreDialog dialog class is not found!
+```
+
+To ensure the dialog type matches, either use a compatible lookup key like "*ModuleName*.*RowType*" or specify the dialog type explicitly in the `LookupEditor` attribute:
+
+```cs
+[LookupEditor(typeof(GenreRow), InplaceAdd = true, DialogType = "MovieDB.Genre")]
+public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
+```
+
+You don't have to specify the "Dialog" suffix or the full namespace. Serenity automatically searches for them as long as they match the project root namespace. This convention simplifies the configuration process, making it more intuitive and straightforward.
+
+## Adding Quick Filter for Genre in the Grid
+
+As your list of movies grows, you may find it necessary to filter movies based on various criteria. In addition to the quick search functionality, Serenity offers several filtering methods. Let's use the Quick Filter method to filter movies by genre.
+
+Edit the `MovieColumns.cs` file and add the `[QuickFilter]` attribute on top of the `GenreName` field as shown below:
+
+```cs
+public class MovieColumns
+{
+    //...
+    [Width(100), QuickFilter]
+    public string GenreName { get; set; }
+}
+```
+
+After making this change, build your project and navigate to the Movies page. You'll notice that a quick filtering dropdown for the genre field is now available:
+
+![Genre Quick Filter](img/movies-genre-quick-filter.png)
+
+Keep in mind that the field that is filtered is actually `GenreId`, not `GenreName`, even though we attached the `[QuickFilter]` attribute to the `GenreName` field. Serenity is intelligent enough to understand the relationship and determine the correct editor type to use based on the attributes of the `GenreId` property in the `GenreRow.cs` file. This ensures that filtering movies by genre using the genre name works seamlessly.

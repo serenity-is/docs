@@ -1,42 +1,32 @@
 # Adding a Movie Kind Field
 
-If we wanted to also keep TV series and mini series in our movie table, we would need another field to store it: *MovieKind*.
+If you want to include TV series and mini-series in your movie database, you'll need to add a new field called "MovieKind".Since we didn't add it during the initial table creation, we'll create a new migration to add it to our database. 
 
-As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
+**Note:** Don't modify existing migrations, as they won't run again.
 
-> Don't modify existing migrations, they won't run again.
+1. Create a new migration file under *Migrations/DefaultDB/DefaultDB_20221114_1825_MovieKind.cs*:
 
-Create another migration file under *Migrations/DefaultDB/ DefaultDB_20221114_182500_MovieKind.cs*:
+    ```csharp
+    using FluentMigrator;
 
-```cs
-using FluentMigrator;
-
-namespace MovieTutorial.Migrations.DefaultDB
-{
-    [Migration(20221114_182500)]
-    public class DefaultDB_20221114_182500_MovieKind : AutoReversingMigration
+    namespace MovieTutorial.Migrations.DefaultDB;
+   
+    [DefaultDB, Migration(20221114_1825)]
+    public class DefaultDB_20221114_1825_MovieKind : AutoReversingMigration
     {
         public override void Up()
         {
             Alter.Table("Movie").InSchema("mov")
-                .AddColumn("Kind").AsInt32().NotNullable()
-                    .WithDefaultValue(1);
+                .AddColumn("Kind").AsInt32().NotNullable().WithDefaultValue(1);
         }
     }
-}
-```
+    ```
 
+2. Declare a `MovieKind` enumeration that defines the types of movies. You can create this enumeration in *Modules/MovieDB/Movie/MovieKind.cs*:
 
-### Declaring a MovieKind Enumeration
+    ```csharp
+    namespace MovieTutorial.MovieDB;
 
-Now as we added *Kind* column to *Movie* table, we need a set of movie kind values. Let's define it as an enumeration at *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*:
-
-```cs
-using Serenity.ComponentModel;
-using System.ComponentModel;
-
-namespace MovieTutorial.MovieDB
-{
     [EnumKey("MovieDB.MovieKind")]
     public enum MovieKind
     {
@@ -47,101 +37,54 @@ namespace MovieTutorial.MovieDB
         [Description("Mini Series")]
         MiniSeries = 3
     }
-}
-```
+    ```
 
+3. Add the `Kind` field to the `MovieRow` entity class. Manually add the `Kind` property to your `MovieRow.cs` after the `Runtime` property:
 
-### Adding Kind Field to MovieRow Entity
+   ```csharp
+   [DisplayName("Runtime (mins)")]
+   public int? Runtime { get => fields.Runtime[this]; set => fields.Runtime[this] = value; }
 
-As we are not using Sergen anymore, we need to add a mapping in our MovieRow.cs for *Kind* column manually. Add following property declaration in MovieRow.cs after *Runtime* property:
+   [DisplayName("Kind"), NotNull]
+   public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }
+   ```
 
-```cs
-[DisplayName("Runtime (mins)")]
-public int? Runtime
-{
-    get => fields.Runtime[this];
-    set => fields.Runtime[this] = value;
-}
+4. In the `RowFields` class within the same `MovieRow.cs` file, add the `Kind` field after the `Runtime` field:
 
-[DisplayName("Kind"), NotNull]
-public MovieKind? Kind
-{
-    get => fields.Kind[this];
-    set => fields.Kind[this] = value;
-}
-```
+   ```csharp
+   public class RowFields : RowFieldsBase
+   {
+       // ...
+       public Int32Field Runtime;
+       public EnumField<MovieKind> Kind;
+   }
+   ```
 
-We also need to declare a EnumField<MovieKind> object which is required for Serenity entity system. On the bottom of MovieRow.cs locate *RowFields* class and modify it to add *Kind* field after the *Runtime* field:
+5. To make the `Kind` field available in the movie form, you need to modify the `MovieForm.cs` file:
 
-```cs
-public class RowFields : RowFieldsBase
-{
+    ```csharp
     // ...
-    public Int32Field Runtime;
-    public EnumField<MovieKind> Kind;
-}
-```
-
-
-### Adding Kind Selection To Our Movie Form
-
-If we build and run our project now, we'll see that there is no change in the Movie form, even if we added *Kind* field mapping to the *MovieRow*. This is because, fields shown/edited in the form are controlled by declarations in *MovieForm.cs*. 
-
-Modify *MovieForm.cs* as below:
-
-```cs
-namespace MovieTutorial.MovieDB.Forms
-{
-    // ...
-    [FormScript("MovieDB.Movie")]
-    [BasedOnRow(typeof(MovieRow), CheckNames = true)]
     public class MovieForm
     {
         // ...
         public int Runtime { get; set; }
         public MovieKind Kind { get; set; }
     }
-}
-```
+    ```
 
-Now, build your solution and run it.
+6. Rebuild your solution to ensure there are no build errors and run your application. Now, in the "Add Movie" dialog, you'll have a dropdown to select the movie kind.
 
-In some cases when you try to edit a movie or add a new one, nothing will happen. If you check developer tools console of your browser (F12, inspect element etc.) you'll see such an error:
+![Movie Kind Selection](img/movies-kind-in-form.png)
 
-```txt
-Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
-```
+## Adding a Default Value for Movie Kind
 
-> You might not have this error with ASP.NET Core version as it auto transforms T4 on build.
+Since "Kind" is a required field, you need to provide a default value in the "Add Movie" dialog to avoid validation errors. Most movies will likely be feature films, so let's set "Film" as the default value for the "Kind" property.
 
- ### Please Note!
+7. To add a default value for the "Kind" property, modify the `MovieRow.cs` file by adding a `DefaultValue` attribute like this:
 
-Whenever such a thing happens, e.g. some button not working, you got an empty page, grid etc, please first check > browser console for errors, before reporting it. 
+   ```csharp
+   [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
+   public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }
+   ```
 
-### Why We Had This Error?
-
-This error is caused by MoveKind enumeration not available client side. We should run our T4 templates before executing our program.
-
-Rebuild your solution, make sure there are no build errors and execute it. Now we have a nice dropdown in our form to select movie kind.
-
-![Movie Kind Selection](img/mdb_movie_kindform.png)
-
-
-### Declaring a Default Value for Movie Kind
-
-As *Kind* is a required field, we need to fill it in *Add Movie* dialog, otherwise we'll get a validation error.
-
-But most movies we'll store are feature films, so its default should be this value.
-
-To add a default value for *Kind* property, add a *DefaultValue* attribute on _MoviesRow.cs_ like this:
-
-```cs
-[DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
-public MovieKind? Kind
-{
-    get => fields.Kind[this];
-    set => fields.Kind[this] = value;
-}
-```
-
-Now, in *Add Movie* dialog, *Kind* field will come prefilled as *Film*.
+Now, when you open the "Add Movie" dialog, the "Kind" field will be pre-filled with "Film."

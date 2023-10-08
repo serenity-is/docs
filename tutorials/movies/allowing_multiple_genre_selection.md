@@ -143,8 +143,6 @@ Now, you can add multiple genres to a movie using the modified form:
 
 ![Multiple Genre List Movie Form](img/multiple-genre-list-movie-form.png)
 
-I've improved the grammar and readability of the provided markdown text. Here's the enhanced version:
-
 ## Displaying Selected Genres in a Column
 
 In the past, when we only had one genre per movie, displaying the selected genre in a column was straightforward – we could achieve this by adding a view field to `MovieRow.cs`. However, this time around, it won't be as simple.

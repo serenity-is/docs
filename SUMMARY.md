@@ -19,7 +19,6 @@
     * [Customizing Quick Search](tutorials/movies/customizing_quick_search.md)
     * [Adding a Movie Kind Field](tutorials/movies/adding_a_movie_kind_field.md)
     * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
-    * [Updating Serenity Packages](tutorials/movies/updating_serenity_packages.md)
     * [Allowing Multiple Genre Selection](tutorials/movies/allowing_multiple_genre_selection.md)
     * [Filtering with Multiple Genre List](tutorials/movies/filtering_with_multiple_genre_list.md)
     * [The Cast and Characters They Played](tutorials/movies/the_cast_and_characters_they_played.md)

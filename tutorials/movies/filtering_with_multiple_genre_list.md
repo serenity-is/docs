@@ -64,8 +64,6 @@ public class MovieEndpoint : ServiceEndpoint
 
 Now it's time to rebuild the project so that our MovieListRequest object and related service methods become available on the client side.
 
-I've enhanced the grammar, formatting, and clarity of the provided text. Here's the improved version:
-
 ## Updating Quick Filter for the Genres Parameter
 
 In this section, we'll be intercepting the quick filter item and moving the genre list to the *Genres* property of our *MovieListRequest*. To accomplish this, we'll make edits in the *MovieGrid.ts* file:

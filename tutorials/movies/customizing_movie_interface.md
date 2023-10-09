@@ -153,17 +153,17 @@ Now, let's make adjustments to the size of the Movie dialog. Your CSS is located
 To change the dialog size, you can add CSS rules to it.
 
 ```css
-.s-MovieTutorial-MovieDB-MovieDialog > .size {
+.s-MovieDB-MovieDialog > .size {
   width: 650px;
   height: 550px;
 }
 
-.s-MovieTutorial-MovieDB-MovieDialog .caption {
+.s-MovieDB-MovieDialog .caption {
   width: 150px;
 }
 ```
 
-These rules are applied to elements with the class `s-MovieTutorial-MovieDB-MovieDialog`. Our Movie dialog has this class by default, which is generated as "s-" + ProjectName + "-" + ModuleName + "-" + ClassName.
+These rules are applied to elements with the class `s-MovieDB-MovieDialog`. Our Movie dialog has this class by default, which is generated as "s-" + ModuleName + "-" + ClassName.
 
 The CSS rule for size specifies that this dialog is 650px wide and 550px in height by default.
 

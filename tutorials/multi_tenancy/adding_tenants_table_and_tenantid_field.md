@@ -15,7 +15,7 @@ using FluentMigrator;
 
 namespace MultiTenancy.Migrations.DefaultDB
 {
-    [Migration(20221230_134800)]
+    [DefaultDB, Migration(20221230_134800)]
     public class DefaultDB_20221230_134800_MultiTenant
         : AutoReversingMigration
     {
@@ -72,7 +72,7 @@ using FluentMigrator;
 
 namespace MultiTenancy.Migrations.DefaultDB
 {
-    [Migration(20221230_194100)]
+    [DefaultDB, Migration(20221230_194100)]
     public class DefaultDB_20221230_194100_MovieDB_MultiTenant
         : AutoReversingMigration
     {

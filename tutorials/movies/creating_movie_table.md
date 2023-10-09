@@ -119,7 +119,9 @@ To verify that the migration has been executed, you can use `Sql Server Manageme
 
 In the SQL Object Explorer, you should see the `[mov].[Movie]` table.
 
-Additionally, if you view the data in the `[dbo].[VersionInfo]` table, the Version column in the last row of the table should be `20221114150500`. This indicates that the migration with that version number (migration key) has already been executed on this database.
+Additionally, if you view the data in the `[dbo].[VersionInfo]` table, the Version column in the last row of the table should be `20221114150500`. This indicates that the migration with that version number (migration key) has already been executed on this database. 
+
+> Please note that the version key in the database contains the seconds part, e.g. `00` at the end. We no longer use seconds in the migration key we enter but it is still part of the actual migration key for compatibility reasons.
 
 So, even if you change the migration source code, that migration won't run again in this database. It's a good practice to avoid modifying migrations after they have been applied. If necessary, create a new migration.
 

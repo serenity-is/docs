@@ -7,7 +7,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [Migration(20221122_115100)]
+    [DefaultDB, Migration(20221122_115100)]
     public class DefaultDB_20221122_115100_PersonMovieImages : AutoReversingMigration
     {
         public override void Up()

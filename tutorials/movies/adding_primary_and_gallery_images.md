@@ -1,14 +1,14 @@
-# Adding Primary and Gallery Images
+# Managing Primary and Gallery Images
 
-To add a primary image and multiple gallery images to both Movie and Person records, need to start with a migration:
+To add primary and gallery images to both Movie and Person records, begin with a database migration:
 
-```cs
+```csharp
 using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB
 {
-    [DefaultDB, Migration(20221122_115100)]
-    public class DefaultDB_20221122_115100_PersonMovieImages : AutoReversingMigration
+    [DefaultDB, Migration(20221122_1151)]
+    public class DefaultDB_20221122_1151_PersonMovieImages : AutoReversingMigration
     {
         public override void Up()
         {
@@ -24,187 +24,115 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
-Then modify MovieRow.cs and PersonRow.cs:
+This migration adds the "PrimaryImage" and "GalleryImages" columns to both the "Person" and "Movie" tables in the database.
 
-```cs
-namespace MovieTutorial.MovieDB
+### Updating PersonRow and MovieRow
+
+Next, modify the `PersonRow` and `MovieRow` classes to include properties for primary and gallery images:
+
+```csharp
+public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 {
     // ...
-    public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
+
+    [DisplayName("Primary Image"), Size(100)]
+    [ImageUploadEditor(FilenameFormat = "Person/PrimaryImage/~")]
+    public string PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }
+
+    [DisplayName("Gallery Images")]
+    [MultipleImageUploadEditor(FilenameFormat = "Person/GalleryImages/~")]
+    public string GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }
+
+    public class RowFields : RowFieldsBase
     {
         // ...
-
-        [DisplayName("Primary Image"), Size(100),
-         ImageUploadEditor(FilenameFormat = "Person/PrimaryImage/~")]
-        public string PrimaryImage
-        {
-            get => fields.PrimaryImage[this];
-            set => fields.PrimaryImage[this] = value;
-        }
-
-        [DisplayName("Gallery Images"),
-         MultipleImageUploadEditor(FilenameFormat = "Person/GalleryImages/~")]
-        public string GalleryImages
-        {
-            get => fields.GalleryImages[this];
-            set => fields.GalleryImages[this] = value;
-        }
-
-        public class RowFields : RowFieldsBase
-        {
-            // ...
-            public StringField PrimaryImage;
-            public StringField GalleryImages;
-        }
+        public StringField PrimaryImage;
+        public StringField GalleryImages;
     }
 }
 ```
 
-```cs
-namespace MovieTutorial.MovieDB
+```csharp
+public sealed class MovieRow : Row<MoviesRow.RowFields>, IIdRow, INameRow
 {
     // ...
-    public sealed class MovieRow : Row<MoviesRow.RowFields>, IIdRow, INameRow
+    [DisplayName("Primary Image"), Size(100)]
+    [ImageUploadEditor(FilenameFormat = "Movie/PrimaryImage/~")]
+    public string PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }
+
+    [DisplayName("Gallery Images")]
+    [MultipleImageUploadEditor(FilenameFormat = "Movie/GalleryImages/~")]
+    public string GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }
+
+    public class RowFields : RowFieldsBase
     {
         // ...
-        [DisplayName("Primary Image"), Size(100),
-         ImageUploadEditor(FilenameFormat = "Movie/PrimaryImage/~")]
-        public string PrimaryImage
-        {
-            get => fields.PrimaryImage[this];
-            set => fields.PrimaryImage[this] = value;
-        }
-
-        [DisplayName("Gallery Images"),
-         MultipleImageUploadEditor(FilenameFormat = "Movie/GalleryImages/~")]
-        public string GalleryImages
-        {
-            get => fields.GalleryImages[this];
-            set => fields.GalleryImages[this] = value;
-        }
-
-        public class RowFields : RowFieldsBase
-        {
-            // ...
-            public StringField PrimaryImage;
-            public StringField GalleryImages;
-        }
+        public StringField PrimaryImage;
+        public StringField GalleryImages;
     }
 }
 ```
 
-Here we specify that these fields will be handled by *ImageUploadEditor* and *MultipleImageUploadEditor* types.
+These modifications allow you to manage primary and gallery images for both Person and Movie records. 
 
-FilenameFormat specifies the naming of uploaded files. For example, Person primary image will be uploaded to a folder under *App_Data/upload/Person/PrimaryImage/*.
+The `FilenameFormat` property within the attributes is used to define the format for image filenames. For instance, the primary image for a Person will be uploaded to a folder located under *App_Data/upload/Person/PrimaryImage/*.
 
-> You may change upload root (*App_Data/upload*) to anything you like by modifying  *UploadSettings* appSettings key in appsetttings.json.
+> You have the flexibility to change the upload root (default is *App_Data/upload*) by modifying the *UploadSettings* key in the appsettings.json file.
 
-`~` at the end of FilenameFormat is a shortcut for the automatic naming scheme `{1:00000}/{0:00000000}_{2}`.
+The use of `~` at the end of the `FilenameFormat` serves as a shortcut for the automatic naming scheme, which is defined as `{1:00000}/{0:00000000}_{2}`.
 
-Here, parameter {0} is replaced with identity of the record, e.g. PersonID.
+Here's how this naming scheme works:
 
-Parameter {1} is identity / 1000. This is useful to limit number of files that is stored in one directory.
+- Parameter {0} is replaced with the identity of the record, such as PersonID.
 
-Parameter {2} is a unique string like *6l55nk6v2tiyi*, which is used to generate a new file name on every upload. This helps to avoid problems caused by caching on client side.
+- Parameter {1} represents the identity divided by 1000. This division is helpful for limiting the number of files stored in a single directory.
 
-> It also provides some security so file names can't be known without having a link.
+- Parameter {2} is a unique string, for example, *6l55nk6v2tiyi*. It is used to generate a new file name with every upload. This approach helps prevent caching-related issues on the client side and adds a layer of security since file names cannot be deduced without a specific link.
 
-Thus, a file we upload for person primary image will be located at a path like this:
+As a result, a file uploaded for a Person's primary image will be stored at a path like the following:
 
+```plaintext
+App_Data\upload\Person\PrimaryImage\00000\00000001_6l55nk6v2tiyi.jpg
 ```
-> App_Data\upload\Person\PrimaryImage\00000\00000001_6l55nk6v2tiyi.jpg
-```
 
-> You don't have to follow this naming scheme. You can specify your own format like `PersonPrimaryImage_{0}_{2}`.
+It's important to note that you are not restricted to this naming scheme and can specify your custom format, like `PersonPrimaryImage_{0}_{2}`.
 
-Next step is to add these fields to forms (MovieForm.cs and PersonForm.cs):
+- The `ImageUploadEditor` stores the file name directly in a string field.
 
-```cs
-namespace MovieTutorial.MovieDB.Forms
+- The `MultipleImageUploadEditor` stores file names in a string field using a JSON array format.
+
+The next step involves adding these fields to the forms in MovieForm.cs and PersonForm.cs:
+
+```csharp
+public class PersonForm
 {
     //...
-    public class PersonForm
-    {
-        [Tab("Person")]
-        public string FirstName { get; set; }
-        public string Lastname { get; set; }
-        public string PrimaryImage { get; set; }
-        public string GalleryImages { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string BirthPlace { get; set; }
-        public Gender Gender { get; set; }
-        public int Height { get; set; }
-        [Tab("Movies"), IgnoreName, PersonMovieGrid, LabelWidth("0")]
-        public string MoviesGrid { get; set; }
-    }
+    public string PrimaryImage { get; set; }
+    public string GalleryImages { get; set; }
 }
 ```
 
-```cs
-
-namespace MovieTutorial.MovieDB.Forms
+```csharp
+public class MovieForm
 {
     //...
-    public class MovieForm
-    {
-        public string Title { get; set; }
-        [TextAreaEditor(Rows = 3)]
-        public string Description { get; set; }
-        [MovieCastEditor]
-        public List<MovieCastRow> CastList { get; set; }
-        public string PrimaryImage { get; set; }
-        public string GalleryImages { get; set; }
-        [TextAreaEditor(Rows = 8)]
-        public string Storyline { get; set; }
-        public int Year { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        public int Runtime { get; set; }
-        public List<int>  GenreList { get; set; }
-        public MovieKind Kind { get; set; }
-    }
+    public string PrimaryImage { get; set; }
+    public string GalleryImages { get; set; }
 }
 ```
 
-I also modified Person dialog css a bit to have more space:
+Furthermore, there's a modification in the `PersonDialog` class to make it resemble a panel, similar to the Movie dialog:
 
-```css
-.s-MovieDB-PersonDialog .s-PersonMovieGrid > .grid-container {
-    height: 500px;
-}
-```
-
-This is what we get now:
-
-![Person with Images](img/mdb_person_keanu.png)
-
-> ImageUploadEditor stores file name directly in a string field, while MultipleImageUpload editor stores file names in a string field with JSON array format.
-
-### Use form as a panel
-
-As you can see in previous picture we have too much properties now. Lets turn this form to a panel.
-
-Add *panel* decorator to PersonDialog.ts:
-
-```ts
-//...
-
-@Decorators.registerClass("MovieTutorial.MovieDB.PersonDialog")
+```typescript
 @Decorators.panel()
 export class PersonDialog extends EntityDialog<PersonRow, any> {
-    //...
-}
 ```
 
-![Person dialog as panel](img/mdb_person_panel.png)
+This results in the following user interface:
 
-### Removing Northwind and Other Samples
+![Movie Images](img/movie-images.png)
 
-As i think our project has reached a good state, i'm now going to remove Northwind and other samples from MovieTutorial project.
+## Removing Nortwhind and Other Samples
 
-See following how-to topic:
-
-[How To: Removing Northwind and Other Samples](../../howto/how_to_remove_sample_modules.md)
-
-
-
+As the project has now reached a good state, it's recommended to remove Northwind and other samples from the MovieTutorial project. For detailed instructions, refer to the how-to topic: [How To: Removing Northwind and Other Samples](../../howto/how_to_remove_sample_modules.md).
 

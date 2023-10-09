@@ -1,39 +1,23 @@
-# Filtering with Multiple Genre List
+# Filtering with Multiple Genre Lists
 
-Remember that when we had just one Genre per Movie, it was easy to quick filter, by adding a [QuickFilter] attribute to GenreId field.
+In the past, when we had just one genre per movie, it was simple to apply a quick filter by adding a [QuickFilter] attribute to the GenreId field.
 
-Let's try to do similar in MovieColumns.cs:
+Now, let's attempt something similar in MovieColumns.cs:
 
 ```cs
-[ColumnsScript("MovieDB.Movie")]
-[BasedOnRow(typeof(Entities.MovieRow))]
 public class MovieColumns
 {
     //...
     [Width(200), GenreListFormatter, QuickFilter]
-    public List<int>  GenreList { get; set; }
+    public List<int> GenreList { get set; }
 }
 ```
-As soon as you type a Genre into Genres you'll have this error:
 
-![Invalid Column GenreList](img/mdb_genrelist_invalid.png)
+The LinkingSetRelation will automatically handle equality filtering for its field, making it work seamlessly. We could conclude this topic here, but for the sake of providing a sample for defining custom list requests and handling filtering when there is no LinkingSetRelation behavior available, let's continue with the steps below.
 
-> As of Serenity 2.6.3, LinkingSetRelation will automatically handle equality filter for its field, so you won't get this error, and it will just work. And with the Serenity 5.0.46 you also don't need to create handlers and add business into them to use equality filter.
+## Declaring the MovieListRequest Type
 
-> Anyway, it's still recommended to follow steps below as it's a good sample for defining custom list requests and handling them when required.
-
-ListHandler tried to filter by GenreList field, but as there is no such column in database, we got this error.
-
-Now we need to have to handle it somehow.
-
-
-### Declaring MovieListRequest Type
-
-As we are going to do something non-standard, e.g. filtering by values in a linking set table, we need to prevent ListHandler from filtering itself on GenreList property.
-
-We could process the request *Criteria* object (which is similar to an expression tree) using a visitor and handle GenreList ourselves, but it would be a bit complex. So I'll take a simpler road for now.
-
-Let's take a subclass of standard *ListRequest* object and add our Genres filter parameter there. Add a *MovieListRequest.cs* file next to *MovieEndpoint.cs*:
+As we're about to perform a non-standard action, such as filtering by values in a linking set table, we need to prevent the ListHandler from filtering itself on the GenreList property. To achieve this, let's create a subclass of the standard *ListRequest* object and add our Genres filter parameter to it. Create a *MovieListRequest.cs* file next to *MovieEndpoint.cs*:
 
 ```cs
 using Serenity.Services;
@@ -48,38 +32,17 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-We added a *Genres* property to our list request object, which will hold the optional *Genres* we want movies to be filtered on.
+In this file, we've introduced a *Genres* property within our list request object, which will hold the optional genres by which we want to filter movies.
 
+## Modifying Request Handlers/Endpoint for the New Request Type
 
-### Modifying Request Handlers/Endpoint for New Request Type
-
-For our list handler and service to use our new list request type, need to do changes in a few places.
-
-Start with *MovieDB/Movie/RequestHandlers/MovieListHandler.cs*:
+To ensure that our list handler and service can utilize our new list request type, we need to make changes in a few places. Let's start with *MovieDB/Movie/RequestHandlers/MovieListHandler.cs*, where we'll change the type for the `MyRequest` alias to our new `MovieListRequest` type:
 
 ```cs
-using Serenity.Services;
 using MyRequest = MovieTutorial.MovieDB.MovieListRequest;
-using MyResponse = Serenity.Services.ListResponse<MovieTutorial.MovieDB.MovieRow>;
-using MyRow = MovieTutorial.MovieDB.MovieRow;
-
-namespace MovieTutorial.MovieDB
-{
-    public interface IMovieListHandler : IListHandler<MyRow, MyRequest, MyResponse> {}
-
-    public class MovieListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IMovieListHandler
-    {
-        public MovieListHandler(IRequestContext context)
-             : base(context)
-        {
-        }
-    }
-}
 ```
 
-We changed MyRequest from *Serenity.Services.ListRequest* to *MovieTutorial.MovieDB.MovieListRequest* to use our new type instead of ListRequest.
-
-And another little change in *MovieEndpoint.cs*, which is the actual web service:
+Additionally, we need to make a minor adjustment in *MovieEndpoint.cs*, which represents the actual web service:
 
 ```cs
 public class MovieEndpoint : ServiceEndpoint
@@ -92,34 +55,32 @@ public class MovieEndpoint : ServiceEndpoint
     }
 
     public FileContentResult ListExcel(IDbConnection connection, MovieListRequest request,
-    [FromServices] IMovieListHandler handler,
-    [FromServices] IExcelExporter exporter)
+        [FromServices] IMovieListHandler handler,
+        [FromServices] IExcelExporter exporter)
     {
     //...
 }
 ```
 
-Now its time to build and transform templates, so our MovieListRequest object and related service methods will be available at client side.
+Now it's time to rebuild the project so that our MovieListRequest object and related service methods become available on the client side.
 
+I've enhanced the grammar, formatting, and clarity of the provided text. Here's the improved version:
 
-### Moving Quick Filter to Genres Parameter
+## Updating Quick Filter for the Genres Parameter
 
-We still have the same error as quick filter is not aware of the parameter we just added to list request type and still uses the Criteria parameter.
+In this section, we'll be intercepting the quick filter item and moving the genre list to the *Genres* property of our *MovieListRequest*. To accomplish this, we'll make edits in the *MovieGrid.ts* file:
 
-Need to intercept quick filter item and move the genre list to *Genres* property of our *MovieListRequest*.
-
-Edit *MovieGrid.ts*:
-
-```ts
+```typescript
 import { Decorators, EntityGrid, LookupEditor, QuickSearchField } from '@serenity-is/corelib';
-import { text, first } from '@serenity-is/corelib/q';
+import { first, localText } from '@serenity-is/corelib/q';
 import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
-import { MovieListRequest } from '../../ServerTypes/MovieDB/MovieListRequest';
+import { MovieListRequest } from '@/ServerTypes/MovieDB/MovieListRequest';
 import { MovieDialog } from './MovieDialog';
 
 @Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
 export class MovieGrid extends EntityGrid<MovieRow, any> {
-   // ...
+    // ...
+
     protected getQuickFilters() {
         let items = super.getQuickFilters();
 
@@ -138,122 +99,100 @@ export class MovieGrid extends EntityGrid<MovieRow, any> {
 }
 ```
 
-getQuickFilters is a method that is called to get a list of quick filter objects for this grid type. 
+The `getQuickFilters` method is called to retrieve a list of quick filter objects for this grid type. By default, the grid enumerates properties with [QuickFilter] attributes in MovieColumns.cs and creates appropriate quick filter objects for them.
 
-By default, grid enumerates properties with [QuickFilter] attributes in MovieColumns.cs and creates suitable quick filter objects for them.
+We start by obtaining a list of QuickFilter objects from the superclass:
 
-We start by getting list of QuickFilter objects from super class.
-
-```ts
+```typescript
 let items = super.getQuickFilters();
 ```
 
-Then locate the quick filter object for *GenreList* property:
+Then, we locate the quick filter object for the *GenreList* property:
 
-```ts
+```typescript
 const genreListFilter = first(items, x =>
     x.field == MovieRow.Fields.GenreList);
 ```
 
-Actually there is only one quick filter now, but we want to play safe.
+Although currently, there's only one quick filter, it's a good practice to be cautious.
 
-Next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to request's *Criteria* (if multiple) or *EqualityFilter* (if single value) parameters, just before its submitted to list service.
+The next step is to set the *handler* method. This is where a quick filter object reads the editor value and applies it to the request's *Criteria* (if multiple values) or *EqualityFilter* (if a single value) parameters, just before it's submitted to the list service:
 
-```ts
+```typescript
 genreListFilter.handler = h => {
 ```
 
-Then we get a reference to current *ListRequest* being prepared:
+We then obtain a reference to the current *ListRequest* being prepared:
 
-```ts
+```typescript
 const request = (h.request as MovieListRequest);
 ```
 
-And read the current value in lookup editor:
+Next, we read the current value in the lookup editor:
 
-```ts
+```typescript
 const values = (h.widget as LookupEditor).values;
 ```
 
-Set it in *request.Genres* property:
+We set these values in the *request.Genres* property, converting them to integers as values are in string format:
 
-```ts
+```typescript
 request.Genres = values.map(x => parseInt(x, 10));
 ```
 
-As values is a list of string, we needed to convert them to integer.
+The final step is to set *handled* to true, disabling the default behavior of the quick filter object, ensuring it won't set *Criteria* or *EqualityFilter* itself:
 
-Last step is to set *handled* to true, to disable default behavior of quick filter object, so it won't set *Criteria* or *EqualityFilter* itself:
-
-```ts
+```typescript
 h.handled = true;
 ```
 
-Now we'll no longer have *Invalid Column Name GenreList* error but Genres filter is not applied server side yet.
+With these changes, we've now handled quick filtering for genres in a custom manner. However, please note that the filter is not yet applied server-side.
 
+## Implementing Genre Filtering in the Movie List Handler
 
-### Handling Genre Filtering In Movie List Handler
+In this section, we'll make modifications to the *MovieDB/Movie/RequestHandlers/MovieListHandler.cs* file to override the `ApplyFilters` method. This method is responsible for applying filters specified in the list request's *Criteria* and *EqualityFilter* parameters, making it an ideal place for our custom filter implementation.
 
-Modify *MovieDB/Movie/RequestHandlers/MovieListHandler.cs* like below:
+Let's take a look at the changes in the code:
 
-```cs
-using Serenity;
-using Serenity.Data;
-using Serenity.Services;
-using MyRequest = MovieTutorial.MovieDB.MovieListRequest;
-using MyResponse = Serenity.Services.ListResponse<MovieTutorial.MovieDB.MovieRow>;
-using MyRow = MovieTutorial.MovieDB.MovieRow;
-
-namespace MovieTutorial.MovieDB
+```csharp
+public class MovieListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IMovieListHandler
 {
-    public interface IMovieListHandler : IListHandler<MyRow, MyRequest, MyResponse> {}
+    //...
 
-    public class MovieListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IMovieListHandler
+    protected override void ApplyFilters(SqlQuery query)
     {
-        private static MyRow.RowFields fld => MyRow.Fields;
+        base.ApplyFilters(query);
 
-        public MovieListHandler(IRequestContext context)
-             : base(context)
+        if (!Request.Genres.IsEmptyOrNull())
         {
-        }
+            var fld = MyRow.Fields;
+            var mg = MovieGenresRow.Fields.As("mg");
 
-        protected override void ApplyFilters(SqlQuery query)
-        {
-            base.ApplyFilters(query);
-
-            if (!Request.Genres.IsEmptyOrNull())
-            {
-                var mg = MovieGenresRow.Fields.As("mg");
-
-                query.Where(Criteria.Exists(
-                    query.SubQuery()
-                        .From(mg)
-                        .Select("1")
-                        .Where(
-                            mg.MovieId == fld.MovieId &&
-                            mg.GenreId.In(Request.Genres))
-                        .ToString()));
-            }
+            query.Where(Criteria.Exists(
+                query.SubQuery()
+                    .From(mg)
+                    .Select("1")
+                    .Where(
+                        mg.MovieId == fld.MovieId &&
+                        mg.GenreId.In(Request.Genres))));
         }
     }
 }
 ```
 
-*ApplyFilters* is a method that is called to apply filters specified in list request's *Criteria* and *EqualityFilter* parameters. This is a good place to apply our custom filter.
+The `ApplyFilters` method is called to apply the filters specified in the list request's *Criteria* and *EqualityFilter* parameters. It's an excellent place for us to implement our custom filter.
 
-We first check if *Request.Genres* is null or an empty list. If so no filtering needs to be done.
+We start by checking whether *Request.Genres* is null or an empty list. If this is the case, there's no need for filtering.
 
-Next, we get a reference to *MovieGenresRow*'s fields with alias *mg*.
+Next, we obtain a reference to the fields of *MovieGenresRow* with the alias "mg":
 
-```
+```csharp
 var mg = MovieGenresRow.Fields.As("mg");
 ```
 
-Here it needs some explanation, as we didn't cover Serenity entity system yet.
+This may require some explanation, as we haven't covered the Serenity entity system yet. Let's start without aliasing *MovieGenresRow.Fields*:
 
-Let's start by not aliasing *MovieGenresRow.Fields*:
-
-```cs
+```csharp
 var x = MovieGenresRow.Fields;
 new SqlQuery()
   .From(x)
@@ -261,19 +200,17 @@ new SqlQuery()
   .Select(x.GenreId);
 ```
 
-If we wrote a query like above, its SQL output would be something like this:
+If we were to write a query as shown above, the resulting SQL would be something like this:
 
 ```sql
 SELECT t0.MovieId, t0.GenreId FROM MovieGenres t0
 ```
 
-Unless told otherwise, Serenity always assigns *t0* to a row's primary table. Even if we named *MovieGenresRow.Fields* as variable *x*, it's alias will still be *t0*.
+By default, Serenity assigns "t0" to a row's primary table. Even if we named *MovieGenresRow.Fields* as the variable "x", its alias would still be "t0".
 
-> Because when compiled, *x* won't be there and Serenity has no way to know its variable name. Serenity entity system doesn't use an expression tree like in LINQ to SQL or Entity Framework. It makes use of very simple string / query builders.
+However, when using "x" as an alias, we would need to write it explicitly:
 
-If we want to use *x* as an alias, we'd have to write it explicitly:
-
-```cs
+```csharp
 var x = MovieGenresRow.Fields.As("x");
 new SqlQuery()
   .From(x)
@@ -281,19 +218,19 @@ new SqlQuery()
   .Select(x.GenreId);
 ```
 
-...results at:
+This would result in SQL like this:
 
 ```sql
 SELECT x.MovieId, x.GenreId FROM MovieGenres x
 ```
 
-In *MovieListHandler*, which is for *MovieRow* entities, *t0* is already used for *MovieRow* fields. So, to prevent clashes with *MovieGenresRow* fields (which is named *fld*), i had to assign *MovieGenresRow* an alias, *mg*.
+In the *MovieListHandler*, "t0" is already used for *MovieRow* fields. To prevent clashes with *MovieGenresRow* fields (referred to as "fld"), I've assigned "MovieGenresRow" an alias, "mg":
 
-```cs
+```csharp
 var mg = MovieGenresRow.Fields.As("mg");
 ```
 
-What I'm trying to achieve, is a query like this (just the way we'd do this in bare SQL):
+What we're trying to achieve here is a query similar to what we'd write in plain SQL:
 
 ```sql
 SELECT t0.MovieId, t0.Title, ... FROM Movies t0
@@ -306,38 +243,30 @@ WHERE EXISTS (
 )
 ```
 
-So I'm adding a WHERE filter to main query with Where method, using an EXISTS criteria:
+So, we're adding a WHERE filter to the main query using the `Where` method, which includes an `EXISTS` criteria:
 
-```cs
+```csharp
 query.Where(Criteria.Exists(
 ```
 
-Then starting to write the subquery:
+We then proceed to build the subquery:
 
-```cs
+```csharp
 query.SubQuery()
     .From(mg)
     .Select("1")
 ```
 
-And adding the where statement for subquery:
+And add the WHERE statement for the subquery:
 
-```cs
+```csharp
 .Where(
     mg.MovieId == fld.MovieId &&
     mg.GenreId.In(Request.Genres))
 ```
 
-> Here fld actually contains the alias t0 for MovieRow fields.
+Here, "fld" actually contains the alias "t0" for MovieRow fields.
 
-As *Criteria.Exists* method expects a simple string, i had to use .ToString() at the end, to convert subquery to a string:
+While it may appear a bit unusual at first, over time, you'll discover that the Serenity query system closely resembles SQL, matching it almost 99%. It can't be the exact SQL due to the use of a different language, C#.
 
-> Yes, we should add one overload that accepts a subquery... noted.
-
-```cs
-.ToString()));
-```
-
-> It might look a bit alien at start, but by time you'll understand that Serenity query system matches SQL almost 99%. It can't be the exact SQL as we have to work in a different language, C#.
-
-Now our filtering for *GenreList* property works perfectly...
+With these modifications, filtering for the *GenreList* property now works perfectly. We've also demonstrated how to handle custom requirements when Serenity doesn't provide an out-of-the-box solution.

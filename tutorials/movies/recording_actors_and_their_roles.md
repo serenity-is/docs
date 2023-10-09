@@ -68,7 +68,7 @@ First, generate code for the `Person` table:
 Next, open *Modules/Movie/MovieDBNavigation.cs* and modify the navigation link for the `Person` page as shown below:
 
 ```csharp
-[assembly: NavigationLink(6300, "Movie Database/People", typeof(MovieDB.PersonPage), icon: "fa-users")]
+[assembly: NavigationLink(6300, "Movie Database/People", typeof(MyPages.PersonPage), icon: "fa-users")]
 ```
 
 These changes will help you set up the necessary database tables and generate code for the `Person` table within your application.

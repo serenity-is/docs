@@ -35,7 +35,7 @@ To move it above the `Northwind` menu, which has an order value of `7000` (as se
 ```cs
 [assembly: NavigationMenu(6000, "Movie Database", icon: "fa-film")]
 [assembly: NavigationLink(6100, "Movie Database/Movies", 
-    typeof(MovieDB.MoviePage), icon: "fa-video-camera")]
+    typeof(MyPages.MoviePage), icon: "fa-video-camera")]
 ```
 
 In this update, we've defined a navigation menu, `Movie Database`, with the `fa-film` icon. Without an explicitly defined navigation menu, Serenity generates one implicitly, but in such cases, you can't set the menu order or icon yourself.

@@ -221,7 +221,7 @@ Since we know that this formatter will be applied to a column with a `List<int>`
 If the array is either empty or null, it's safe to return an empty string:
 
 ```typescript
-const idList = ctx.value as number[];
+var idList = ctx.value as number[];
 if (!idList || !idList.length)
     return "";
 ```
@@ -262,7 +262,7 @@ return `<i class="fa fa-spinner"></i>`;
 If the lookup is already loaded, it contains a dictionary of *Genre* rows in its *itemById* property:
 
 ```typescript
-const byId = GenresFormatter.lookup.itemById;
+var byId = GenresFormatter.lookup.itemById;
 ```
 
 We proceed to map the ID values in our *idList* to their corresponding Genre names using the *Array.map* function in JavaScript. This operation is akin to a LINQ Select statement:

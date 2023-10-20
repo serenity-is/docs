@@ -19,7 +19,7 @@ It should be installed by default in your projects created from `Serene` or `Sta
 
 The version number for this package should be equal or as close as possible to Serenity NuGet package versions in your project file.
 
-> When using classic namespaces instead of the ESM modules, the types and functions in this module are directly available from the global `Serenity` abd `Q` namespaces.
+> When using classic namespaces instead of the ESM modules, the types and functions in this module are directly available from the global `Serenity` and `Q` namespaces.
 > e.g. `Serenity.EntityGrid`
 
 ## Table of contents

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IntegerEditor
+[@serenity-is/corelib](../README.md) / IntegerEditor
 
 # Class: IntegerEditor
 

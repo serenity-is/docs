@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / RetrieveColumnSelection
+[@serenity-is/corelib](../README.md) / RetrieveColumnSelection
 
 # Enumeration: RetrieveColumnSelection
 

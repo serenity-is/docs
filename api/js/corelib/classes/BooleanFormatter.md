@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / BooleanFormatter
+[@serenity-is/corelib](../README.md) / BooleanFormatter
 
 # Class: BooleanFormatter
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DataGrid
+[@serenity-is/corelib](../README.md) / DataGrid
 
 # Class: DataGrid<TItem, TOptions\>
 
@@ -2074,7 +2074,7 @@ ___
 
 ### itemLink
 
-▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../modules.md#format)<`TItem`\>
+▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../README.md#format)<`TItem`\>
 
 #### Parameters
 
@@ -2088,7 +2088,7 @@ ___
 
 #### Returns
 
-[`Format`](../modules.md#format)<`TItem`\>
+[`Format`](../README.md#format)<`TItem`\>
 
 #### Defined in
 

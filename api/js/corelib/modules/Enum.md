@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Enum
+[@serenity-is/corelib](../README.md) / Enum
 
 # Namespace: Enum
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / InsertableAttribute
+[@serenity-is/corelib](../README.md) / InsertableAttribute
 
 # Class: InsertableAttribute
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / WidgetComponentProps
+[@serenity-is/corelib](../README.md) / WidgetComponentProps
 
 # Interface: WidgetComponentProps<W\>
 

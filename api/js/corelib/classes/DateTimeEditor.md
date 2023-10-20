@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DateTimeEditor
+[@serenity-is/corelib](../README.md) / DateTimeEditor
 
 # Class: DateTimeEditor
 

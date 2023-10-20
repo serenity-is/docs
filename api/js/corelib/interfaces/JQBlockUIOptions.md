@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / JQBlockUIOptions
+[@serenity-is/corelib](../README.md) / JQBlockUIOptions
 
 # Interface: JQBlockUIOptions
 

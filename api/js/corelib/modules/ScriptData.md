@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ScriptData
+[@serenity-is/corelib](../README.md) / ScriptData
 
 # Namespace: ScriptData
 

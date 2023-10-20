@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / AlertOptions
+[@serenity-is/corelib](../README.md) / AlertOptions
 
 # Interface: AlertOptions
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / SelectEditor
+[@serenity-is/corelib](../README.md) / SelectEditor
 
 # Class: SelectEditor
 

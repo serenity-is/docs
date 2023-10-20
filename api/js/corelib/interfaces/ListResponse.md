@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ListResponse
+[@serenity-is/corelib](../README.md) / ListResponse
 
 # Interface: ListResponse<TEntity\>
 

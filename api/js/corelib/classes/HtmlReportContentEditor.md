@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / HtmlReportContentEditor
+[@serenity-is/corelib](../README.md) / HtmlReportContentEditor
 
 # Class: HtmlReportContentEditor
 

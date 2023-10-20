@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / StringEditor
+[@serenity-is/corelib](../README.md) / StringEditor
 
 # Class: StringEditor
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / UploadHelper
+[@serenity-is/corelib](../README.md) / UploadHelper
 
 # Namespace: UploadHelper
 

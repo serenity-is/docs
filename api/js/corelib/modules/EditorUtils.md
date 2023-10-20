@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EditorUtils
+[@serenity-is/corelib](../README.md) / EditorUtils
 
 # Namespace: EditorUtils
 

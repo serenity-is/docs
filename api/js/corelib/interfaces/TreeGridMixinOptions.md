@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / TreeGridMixinOptions
+[@serenity-is/corelib](../README.md) / TreeGridMixinOptions
 
 # Interface: TreeGridMixinOptions<TItem\>
 

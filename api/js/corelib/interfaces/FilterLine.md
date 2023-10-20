@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FilterLine
+[@serenity-is/corelib](../README.md) / FilterLine
 
 # Interface: FilterLine
 

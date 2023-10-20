@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EntityGrid
+[@serenity-is/corelib](../README.md) / EntityGrid
 
 # Class: EntityGrid<TItem, TOptions\>
 
@@ -2682,7 +2682,7 @@ ___
 
 ### itemLink
 
-▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../modules.md#format)<`TItem`\>
+▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../README.md#format)<`TItem`\>
 
 #### Parameters
 
@@ -2696,7 +2696,7 @@ ___
 
 #### Returns
 
-[`Format`](../modules.md#format)<`TItem`\>
+[`Format`](../README.md#format)<`TItem`\>
 
 #### Inherited from
 

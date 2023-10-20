@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / SaveWithLocalizationRequest
+[@serenity-is/corelib](../README.md) / SaveWithLocalizationRequest
 
 # Interface: SaveWithLocalizationRequest<TEntity\>
 

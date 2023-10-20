@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / GoogleMapOptions
+[@serenity-is/corelib](../README.md) / GoogleMapOptions
 
 # Interface: GoogleMapOptions
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / OneWayAttribute
+[@serenity-is/corelib](../README.md) / OneWayAttribute
 
 # Class: OneWayAttribute
 

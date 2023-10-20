@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FilterOperators
+[@serenity-is/corelib](../README.md) / FilterOperators
 
 # Namespace: FilterOperators
 

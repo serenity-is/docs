@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / SubDialogHelper
+[@serenity-is/corelib](../README.md) / SubDialogHelper
 
 # Namespace: SubDialogHelper
 

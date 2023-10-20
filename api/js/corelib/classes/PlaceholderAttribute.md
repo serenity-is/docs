@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PlaceholderAttribute
+[@serenity-is/corelib](../README.md) / PlaceholderAttribute
 
 # Class: PlaceholderAttribute
 

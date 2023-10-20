@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / GridRowSelectionMixin
+[@serenity-is/corelib](../README.md) / GridRowSelectionMixin
 
 # Class: GridRowSelectionMixin
 

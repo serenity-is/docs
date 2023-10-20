@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / LocalTextPrefixAttribute
+[@serenity-is/corelib](../README.md) / LocalTextPrefixAttribute
 
 # Class: LocalTextPrefixAttribute
 

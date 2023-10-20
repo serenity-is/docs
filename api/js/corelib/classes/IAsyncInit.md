@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IAsyncInit
+[@serenity-is/corelib](../README.md) / IAsyncInit
 
 # Class: IAsyncInit
 

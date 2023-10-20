@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ServiceAttribute
+[@serenity-is/corelib](../README.md) / ServiceAttribute
 
 # Class: ServiceAttribute
 

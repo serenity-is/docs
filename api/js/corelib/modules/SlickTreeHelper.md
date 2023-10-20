@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / SlickTreeHelper
+[@serenity-is/corelib](../README.md) / SlickTreeHelper
 
 # Namespace: SlickTreeHelper
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DisplayNameAttribute
+[@serenity-is/corelib](../README.md) / DisplayNameAttribute
 
 # Class: DisplayNameAttribute
 

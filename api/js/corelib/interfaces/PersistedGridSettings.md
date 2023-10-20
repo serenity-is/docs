@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PersistedGridSettings
+[@serenity-is/corelib](../README.md) / PersistedGridSettings
 
 # Interface: PersistedGridSettings
 

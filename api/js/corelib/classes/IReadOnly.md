@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IReadOnly
+[@serenity-is/corelib](../README.md) / IReadOnly
 
 # Class: IReadOnly
 

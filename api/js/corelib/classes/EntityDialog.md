@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EntityDialog
+[@serenity-is/corelib](../README.md) / EntityDialog
 
 # Class: EntityDialog<TItem, TOptions\>
 

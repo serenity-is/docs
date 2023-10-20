@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / JsxDomWidget
+[@serenity-is/corelib](../README.md) / JsxDomWidget
 
 # Interface: JsxDomWidget<P, TElement\>
 

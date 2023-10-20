@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FlexifyAttribute
+[@serenity-is/corelib](../README.md) / FlexifyAttribute
 
 # Class: FlexifyAttribute
 

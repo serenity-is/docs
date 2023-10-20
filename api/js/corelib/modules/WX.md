@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / WX
+[@serenity-is/corelib](../README.md) / WX
 
 # Namespace: WX
 

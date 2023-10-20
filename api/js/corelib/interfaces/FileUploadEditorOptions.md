@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FileUploadEditorOptions
+[@serenity-is/corelib](../README.md) / FileUploadEditorOptions
 
 # Interface: FileUploadEditorOptions
 

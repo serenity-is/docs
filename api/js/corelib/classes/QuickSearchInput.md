@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / QuickSearchInput
+[@serenity-is/corelib](../README.md) / QuickSearchInput
 
 # Class: QuickSearchInput
 

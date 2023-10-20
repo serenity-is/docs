@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / VX
+[@serenity-is/corelib](../README.md) / VX
 
 # Namespace: VX
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ItemNameAttribute
+[@serenity-is/corelib](../README.md) / ItemNameAttribute
 
 # Class: ItemNameAttribute
 

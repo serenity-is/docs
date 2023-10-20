@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ReflectionOptionsSetter
+[@serenity-is/corelib](../README.md) / ReflectionOptionsSetter
 
 # Namespace: ReflectionOptionsSetter
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PasswordEditor
+[@serenity-is/corelib](../README.md) / PasswordEditor
 
 # Class: PasswordEditor
 

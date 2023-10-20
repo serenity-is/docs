@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ServiceLookupFiltering
+[@serenity-is/corelib](../README.md) / ServiceLookupFiltering
 
 # Class: ServiceLookupFiltering
 

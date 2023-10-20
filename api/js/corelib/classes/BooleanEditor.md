@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / BooleanEditor
+[@serenity-is/corelib](../README.md) / BooleanEditor
 
 # Class: BooleanEditor
 

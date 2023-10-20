@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Select2CommonOptions
+[@serenity-is/corelib](../README.md) / Select2CommonOptions
 
 # Interface: Select2CommonOptions
 

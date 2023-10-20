@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Select2AjaxEditor
+[@serenity-is/corelib](../README.md) / Select2AjaxEditor
 
 # Class: Select2AjaxEditor<TOptions, TItem\>
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DataChangeInfo
+[@serenity-is/corelib](../README.md) / DataChangeInfo
 
 # Interface: DataChangeInfo
 

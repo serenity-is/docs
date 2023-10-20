@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / LazyLoadHelper
+[@serenity-is/corelib](../README.md) / LazyLoadHelper
 
 # Namespace: LazyLoadHelper
 

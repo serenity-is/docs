@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ModalOptions
+[@serenity-is/corelib](../README.md) / ModalOptions
 
 # Interface: ModalOptions
 

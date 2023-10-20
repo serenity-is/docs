@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Toastr
+[@serenity-is/corelib](../README.md) / Toastr
 
 # Class: Toastr
 
@@ -42,7 +42,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [`ToastrOptions`](../modules.md#toastroptions) |
+| `options?` | [`ToastrOptions`](../README.md#toastroptions) |
 
 #### Defined in
 
@@ -62,7 +62,7 @@ ___
 
 ### options
 
-• **options**: [`ToastrOptions`](../modules.md#toastroptions)
+• **options**: [`ToastrOptions`](../README.md#toastroptions)
 
 #### Defined in
 
@@ -120,7 +120,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `Partial`<[`ToastrOptions`](../modules.md#toastroptions)\> |
+| `options` | `Partial`<[`ToastrOptions`](../README.md#toastroptions)\> |
 
 #### Returns
 
@@ -141,7 +141,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `toastElement?` | `HTMLElement` |
-| `options?` | [`ToastContainerOptions`](../modules.md#toastcontaineroptions) |
+| `options?` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) |
 | `clearOptions` | `Object` |
 | `clearOptions.force?` | `boolean` |
 
@@ -163,7 +163,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`ToastContainerOptions`](../modules.md#toastcontaineroptions) |
+| `options` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) |
 
 #### Returns
 
@@ -185,7 +185,7 @@ ___
 | :------ | :------ |
 | `message?` | `string` |
 | `title?` | `string` |
-| `opt?` | [`ToastrOptions`](../modules.md#toastroptions) |
+| `opt?` | [`ToastrOptions`](../README.md#toastroptions) |
 
 #### Returns
 
@@ -205,7 +205,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `options?` | [`ToastContainerOptions`](../modules.md#toastcontaineroptions) | `undefined` |
+| `options?` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) | `undefined` |
 | `create` | `boolean` | `false` |
 
 #### Returns
@@ -228,7 +228,7 @@ ___
 | :------ | :------ |
 | `message?` | `string` |
 | `title?` | `string` |
-| `opt?` | [`ToastrOptions`](../modules.md#toastroptions) |
+| `opt?` | [`ToastrOptions`](../README.md#toastroptions) |
 
 #### Returns
 
@@ -248,8 +248,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `map` | [`NotifyMap`](../modules.md#notifymap) |
-| `opt` | [`ToastrOptions`](../modules.md#toastroptions) |
+| `map` | [`NotifyMap`](../README.md#notifymap) |
+| `opt` | [`ToastrOptions`](../README.md#toastroptions) |
 
 #### Returns
 
@@ -310,7 +310,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `toastElement` | `HTMLElement` |
-| `options` | [`ToastrOptions`](../modules.md#toastroptions) |
+| `options` | [`ToastrOptions`](../README.md#toastroptions) |
 
 #### Returns
 
@@ -352,7 +352,7 @@ ___
 | :------ | :------ |
 | `message?` | `string` |
 | `title?` | `string` |
-| `opt?` | [`ToastrOptions`](../modules.md#toastroptions) |
+| `opt?` | [`ToastrOptions`](../README.md#toastroptions) |
 
 #### Returns
 
@@ -374,7 +374,7 @@ ___
 | :------ | :------ |
 | `message?` | `string` |
 | `title?` | `string` |
-| `opt?` | [`ToastrOptions`](../modules.md#toastroptions) |
+| `opt?` | [`ToastrOptions`](../README.md#toastroptions) |
 
 #### Returns
 

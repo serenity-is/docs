@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / GridRadioSelectionMixin
+[@serenity-is/corelib](../README.md) / GridRadioSelectionMixin
 
 # Class: GridRadioSelectionMixin
 

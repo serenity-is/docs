@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IntegerFiltering
+[@serenity-is/corelib](../README.md) / IntegerFiltering
 
 # Class: IntegerFiltering
 

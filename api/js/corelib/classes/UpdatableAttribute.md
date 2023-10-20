@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / UpdatableAttribute
+[@serenity-is/corelib](../README.md) / UpdatableAttribute
 
 # Class: UpdatableAttribute
 

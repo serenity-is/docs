@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FlexifyOptions
+[@serenity-is/corelib](../README.md) / FlexifyOptions
 
 # Interface: FlexifyOptions
 

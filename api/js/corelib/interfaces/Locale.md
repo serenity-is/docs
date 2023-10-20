@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Locale
+[@serenity-is/corelib](../README.md) / Locale
 
 # Interface: Locale
 

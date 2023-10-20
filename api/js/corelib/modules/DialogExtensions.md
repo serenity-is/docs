@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DialogExtensions
+[@serenity-is/corelib](../README.md) / DialogExtensions
 
 # Namespace: DialogExtensions
 

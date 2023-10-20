@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / GoogleMap
+[@serenity-is/corelib](../README.md) / GoogleMap
 
 # Class: GoogleMap
 

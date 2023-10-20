@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ServiceRequest
+[@serenity-is/corelib](../README.md) / ServiceRequest
 
 # Interface: ServiceRequest
 

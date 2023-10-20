@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EditorTypeAttributeBase
+[@serenity-is/corelib](../README.md) / EditorTypeAttributeBase
 
 # Class: EditorTypeAttributeBase
 

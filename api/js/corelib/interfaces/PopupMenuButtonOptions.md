@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PopupMenuButtonOptions
+[@serenity-is/corelib](../README.md) / PopupMenuButtonOptions
 
 # Interface: PopupMenuButtonOptions
 

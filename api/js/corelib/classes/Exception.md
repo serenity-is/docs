@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Exception
+[@serenity-is/corelib](../README.md) / Exception
 
 # Class: Exception
 

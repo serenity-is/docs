@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / LT
+[@serenity-is/corelib](../README.md) / LT
 
 # Class: LT
 

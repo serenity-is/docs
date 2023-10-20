@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / BooleanFiltering
+[@serenity-is/corelib](../README.md) / BooleanFiltering
 
 # Class: BooleanFiltering
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / RecaptchaOptions
+[@serenity-is/corelib](../README.md) / RecaptchaOptions
 
 # Interface: RecaptchaOptions
 

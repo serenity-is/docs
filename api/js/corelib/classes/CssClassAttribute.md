@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / CssClassAttribute
+[@serenity-is/corelib](../README.md) / CssClassAttribute
 
 # Class: CssClassAttribute
 

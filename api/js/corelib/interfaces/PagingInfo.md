@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PagingInfo
+[@serenity-is/corelib](../README.md) / PagingInfo
 
 # Interface: PagingInfo
 

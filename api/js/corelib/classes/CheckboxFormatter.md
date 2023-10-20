@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / CheckboxFormatter
+[@serenity-is/corelib](../README.md) / CheckboxFormatter
 
 # Class: CheckboxFormatter
 

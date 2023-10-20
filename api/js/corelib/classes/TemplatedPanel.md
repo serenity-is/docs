@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / TemplatedPanel
+[@serenity-is/corelib](../README.md) / TemplatedPanel
 
 # Class: TemplatedPanel<TOptions\>
 

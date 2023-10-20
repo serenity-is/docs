@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / SlickFormatting
+[@serenity-is/corelib](../README.md) / SlickFormatting
 
 # Namespace: SlickFormatting
 
@@ -21,11 +21,11 @@
 
 ### checkBox
 
-▸ **checkBox**(): [`Format`](../modules.md#format)
+▸ **checkBox**(): [`Format`](../README.md#format)
 
 #### Returns
 
-[`Format`](../modules.md#format)
+[`Format`](../README.md#format)
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### date
 
-▸ **date**(`format?`): [`Format`](../modules.md#format)
+▸ **date**(`format?`): [`Format`](../README.md#format)
 
 #### Parameters
 
@@ -45,7 +45,7 @@ ___
 
 #### Returns
 
-[`Format`](../modules.md#format)
+[`Format`](../README.md#format)
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### dateTime
 
-▸ **dateTime**(`format?`): [`Format`](../modules.md#format)
+▸ **dateTime**(`format?`): [`Format`](../README.md#format)
 
 #### Parameters
 
@@ -65,7 +65,7 @@ ___
 
 #### Returns
 
-[`Format`](../modules.md#format)
+[`Format`](../README.md#format)
 
 #### Defined in
 
@@ -136,7 +136,7 @@ ___
 
 ### itemLink
 
-▸ **itemLink**<`TItem`\>(`itemType`, `idField`, `getText`, `cssClass?`, `encode?`): [`Format`](../modules.md#format)<`TItem`\>
+▸ **itemLink**<`TItem`\>(`itemType`, `idField`, `getText`, `cssClass?`, `encode?`): [`Format`](../README.md#format)<`TItem`\>
 
 #### Type parameters
 
@@ -150,13 +150,13 @@ ___
 | :------ | :------ |
 | `itemType` | `string` |
 | `idField` | `string` |
-| `getText` | [`Format`](../modules.md#format)<`TItem`\> |
-| `cssClass?` | [`Format`](../modules.md#format)<`TItem`\> |
+| `getText` | [`Format`](../README.md#format)<`TItem`\> |
+| `cssClass?` | [`Format`](../README.md#format)<`TItem`\> |
 | `encode?` | `boolean` |
 
 #### Returns
 
-[`Format`](../modules.md#format)<`TItem`\>
+[`Format`](../README.md#format)<`TItem`\>
 
 #### Defined in
 
@@ -190,7 +190,7 @@ ___
 
 ### number
 
-▸ **number**(`format`): [`Format`](../modules.md#format)
+▸ **number**(`format`): [`Format`](../README.md#format)
 
 #### Parameters
 
@@ -200,7 +200,7 @@ ___
 
 #### Returns
 
-[`Format`](../modules.md#format)
+[`Format`](../README.md#format)
 
 #### Defined in
 
@@ -210,7 +210,7 @@ ___
 
 ### treeToggle
 
-▸ **treeToggle**(`getView`, `getId`, `formatter`): [`Format`](../modules.md#format)
+▸ **treeToggle**(`getView`, `getId`, `formatter`): [`Format`](../README.md#format)
 
 #### Parameters
 
@@ -218,11 +218,11 @@ ___
 | :------ | :------ |
 | `getView` | () => [`RemoteView`](../classes/RemoteView.md)<`any`\> |
 | `getId` | (`x`: `any`) => `any` |
-| `formatter` | [`Format`](../modules.md#format)<`any`\> |
+| `formatter` | [`Format`](../README.md#format)<`any`\> |
 
 #### Returns
 
-[`Format`](../modules.md#format)
+[`Format`](../README.md#format)
 
 #### Defined in
 

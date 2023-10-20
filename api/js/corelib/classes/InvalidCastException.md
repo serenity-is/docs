@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / InvalidCastException
+[@serenity-is/corelib](../README.md) / InvalidCastException
 
 # Class: InvalidCastException
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / GridUtils
+[@serenity-is/corelib](../README.md) / GridUtils
 
 # Namespace: GridUtils
 

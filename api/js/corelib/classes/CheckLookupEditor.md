@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / CheckLookupEditor
+[@serenity-is/corelib](../README.md) / CheckLookupEditor
 
 # Class: CheckLookupEditor<TItem\>
 
@@ -2998,7 +2998,7 @@ ___
 
 ### itemLink
 
-▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../modules.md#format)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../README.md#format)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
 
 #### Parameters
 
@@ -3012,7 +3012,7 @@ ___
 
 #### Returns
 
-[`Format`](../modules.md#format)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+[`Format`](../README.md#format)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
 
 #### Inherited from
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / MemberType
+[@serenity-is/corelib](../README.md) / MemberType
 
 # Enumeration: MemberType
 

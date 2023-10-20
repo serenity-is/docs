@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DefaultValueAttribute
+[@serenity-is/corelib](../README.md) / DefaultValueAttribute
 
 # Class: DefaultValueAttribute
 

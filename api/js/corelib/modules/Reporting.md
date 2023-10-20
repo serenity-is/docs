@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Reporting
+[@serenity-is/corelib](../README.md) / Reporting
 
 # Namespace: Reporting
 

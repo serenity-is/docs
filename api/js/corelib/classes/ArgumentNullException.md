@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ArgumentNullException
+[@serenity-is/corelib](../README.md) / ArgumentNullException
 
 # Class: ArgumentNullException
 

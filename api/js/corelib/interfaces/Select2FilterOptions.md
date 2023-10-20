@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Select2FilterOptions
+[@serenity-is/corelib](../README.md) / Select2FilterOptions
 
 # Interface: Select2FilterOptions
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PropertyDialog
+[@serenity-is/corelib](../README.md) / PropertyDialog
 
 # Class: PropertyDialog<TItem, TOptions\>
 

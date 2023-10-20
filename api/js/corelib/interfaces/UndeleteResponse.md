@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / UndeleteResponse
+[@serenity-is/corelib](../README.md) / UndeleteResponse
 
 # Interface: UndeleteResponse
 

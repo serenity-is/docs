@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FilteringTypeRegistry
+[@serenity-is/corelib](../README.md) / FilteringTypeRegistry
 
 # Namespace: FilteringTypeRegistry
 

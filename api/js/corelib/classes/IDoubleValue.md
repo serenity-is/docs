@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IDoubleValue
+[@serenity-is/corelib](../README.md) / IDoubleValue
 
 # Class: IDoubleValue
 

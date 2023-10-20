@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Authorization
+[@serenity-is/corelib](../README.md) / Authorization
 
 # Namespace: Authorization
 

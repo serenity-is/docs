@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ValidationHelper
+[@serenity-is/corelib](../README.md) / ValidationHelper
 
 # Namespace: ValidationHelper
 

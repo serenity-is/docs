@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Formatter
+[@serenity-is/corelib](../README.md) / Formatter
 
 # Interface: Formatter
 

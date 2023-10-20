@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / RemoteView
+[@serenity-is/corelib](../README.md) / RemoteView
 
 # Class: RemoteView<TEntity\>
 
@@ -159,7 +159,7 @@ ___
 
 ### onAjaxCall
 
-• **onAjaxCall**: [`RemoteViewAjaxCallback`](../modules.md#remoteviewajaxcallback)<`TEntity`\>
+• **onAjaxCall**: [`RemoteViewAjaxCallback`](../README.md#remoteviewajaxcallback)<`TEntity`\>
 
 #### Defined in
 
@@ -229,7 +229,7 @@ ___
 
 ### onProcessData
 
-• **onProcessData**: [`RemoteViewProcessCallback`](../modules.md#remoteviewprocesscallback)<`TEntity`\>
+• **onProcessData**: [`RemoteViewProcessCallback`](../README.md#remoteviewprocesscallback)<`TEntity`\>
 
 #### Defined in
 
@@ -269,7 +269,7 @@ ___
 
 ### onSubmit
 
-• **onSubmit**: [`CancellableViewCallback`](../modules.md#cancellableviewcallback)<`TEntity`\>
+• **onSubmit**: [`CancellableViewCallback`](../README.md#cancellableviewcallback)<`TEntity`\>
 
 #### Defined in
 
@@ -497,11 +497,11 @@ ___
 
 ### getFilter
 
-▸ **getFilter**(): [`RemoteViewFilter`](../modules.md#remoteviewfilter)<`TEntity`\>
+▸ **getFilter**(): [`RemoteViewFilter`](../README.md#remoteviewfilter)<`TEntity`\>
 
 #### Returns
 
-[`RemoteViewFilter`](../modules.md#remoteviewfilter)<`TEntity`\>
+[`RemoteViewFilter`](../README.md#remoteviewfilter)<`TEntity`\>
 
 #### Defined in
 
@@ -962,7 +962,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `filter` | [`RemoteViewFilter`](../modules.md#remoteviewfilter)<`TEntity`\> |
+| `filter` | [`RemoteViewFilter`](../README.md#remoteviewfilter)<`TEntity`\> |
 
 #### Returns
 

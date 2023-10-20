@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EnumTypeRegistry
+[@serenity-is/corelib](../README.md) / EnumTypeRegistry
 
 # Namespace: EnumTypeRegistry
 

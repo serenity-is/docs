@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ErrorHandling
+[@serenity-is/corelib](../README.md) / ErrorHandling
 
 # Namespace: ErrorHandling
 

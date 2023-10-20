@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PropertyItemSlickConverter
+[@serenity-is/corelib](../README.md) / PropertyItemSlickConverter
 
 # Namespace: PropertyItemSlickConverter
 

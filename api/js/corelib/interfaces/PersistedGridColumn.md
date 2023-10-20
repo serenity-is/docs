@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PersistedGridColumn
+[@serenity-is/corelib](../README.md) / PersistedGridColumn
 
 # Interface: PersistedGridColumn
 

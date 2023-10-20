@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / SlickPager
+[@serenity-is/corelib](../README.md) / SlickPager
 
 # Class: SlickPager
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ReflectionUtils
+[@serenity-is/corelib](../README.md) / ReflectionUtils
 
 # Namespace: ReflectionUtils
 

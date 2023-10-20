@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / NamePropertyAttribute
+[@serenity-is/corelib](../README.md) / NamePropertyAttribute
 
 # Class: NamePropertyAttribute
 

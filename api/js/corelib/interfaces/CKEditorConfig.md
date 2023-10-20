@@ -1,3 +1,3 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / CKEditorConfig
+[@serenity-is/corelib](../README.md) / CKEditorConfig
 
 # Interface: CKEditorConfig

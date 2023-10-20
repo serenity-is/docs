@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DateTimeFiltering
+[@serenity-is/corelib](../README.md) / DateTimeFiltering
 
 # Class: DateTimeFiltering
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IBooleanValue
+[@serenity-is/corelib](../README.md) / IBooleanValue
 
 # Class: IBooleanValue
 

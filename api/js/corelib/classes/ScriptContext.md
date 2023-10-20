@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ScriptContext
+[@serenity-is/corelib](../README.md) / ScriptContext
 
 # Class: ScriptContext
 

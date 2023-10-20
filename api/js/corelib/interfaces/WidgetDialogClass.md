@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / WidgetDialogClass
+[@serenity-is/corelib](../README.md) / WidgetDialogClass
 
 # Interface: WidgetDialogClass<TOptions\>
 

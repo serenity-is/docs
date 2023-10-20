@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FilterStore
+[@serenity-is/corelib](../README.md) / FilterStore
 
 # Class: FilterStore
 

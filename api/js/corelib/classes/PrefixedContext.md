@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PrefixedContext
+[@serenity-is/corelib](../README.md) / PrefixedContext
 
 # Class: PrefixedContext
 

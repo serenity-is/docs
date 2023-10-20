@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EmailAddressEditor
+[@serenity-is/corelib](../README.md) / EmailAddressEditor
 
 # Class: EmailAddressEditor
 

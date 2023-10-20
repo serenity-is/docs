@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ImageUploadEditor
+[@serenity-is/corelib](../README.md) / ImageUploadEditor
 
 # Class: ImageUploadEditor
 

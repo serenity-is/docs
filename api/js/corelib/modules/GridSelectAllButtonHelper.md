@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / GridSelectAllButtonHelper
+[@serenity-is/corelib](../README.md) / GridSelectAllButtonHelper
 
 # Namespace: GridSelectAllButtonHelper
 

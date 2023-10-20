@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IDataGrid
+[@serenity-is/corelib](../README.md) / IDataGrid
 
 # Interface: IDataGrid
 

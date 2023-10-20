@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / TemplatedWidget
+[@serenity-is/corelib](../README.md) / TemplatedWidget
 
 # Class: TemplatedWidget<TOptions\>
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EditorOptionAttribute
+[@serenity-is/corelib](../README.md) / EditorOptionAttribute
 
 # Class: EditorOptionAttribute
 

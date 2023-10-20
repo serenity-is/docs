@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EnumKeyAttribute
+[@serenity-is/corelib](../README.md) / EnumKeyAttribute
 
 # Class: EnumKeyAttribute
 

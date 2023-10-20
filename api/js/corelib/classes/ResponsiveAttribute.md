@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ResponsiveAttribute
+[@serenity-is/corelib](../README.md) / ResponsiveAttribute
 
 # Class: ResponsiveAttribute
 

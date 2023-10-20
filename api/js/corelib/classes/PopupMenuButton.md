@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / PopupMenuButton
+[@serenity-is/corelib](../README.md) / PopupMenuButton
 
 # Class: PopupMenuButton
 

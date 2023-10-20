@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / QuickFilterArgs
+[@serenity-is/corelib](../README.md) / QuickFilterArgs
 
 # Interface: QuickFilterArgs<TWidget\>
 

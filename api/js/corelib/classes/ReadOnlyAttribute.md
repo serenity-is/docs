@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ReadOnlyAttribute
+[@serenity-is/corelib](../README.md) / ReadOnlyAttribute
 
 # Class: ReadOnlyAttribute
 

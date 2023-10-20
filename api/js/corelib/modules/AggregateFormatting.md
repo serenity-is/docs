@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / AggregateFormatting
+[@serenity-is/corelib](../README.md) / AggregateFormatting
 
 # Namespace: AggregateFormatting
 

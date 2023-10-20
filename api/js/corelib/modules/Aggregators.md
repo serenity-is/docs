@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Aggregators
+[@serenity-is/corelib](../README.md) / Aggregators
 
 # Namespace: Aggregators
 

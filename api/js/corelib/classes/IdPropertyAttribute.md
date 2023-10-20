@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IdPropertyAttribute
+[@serenity-is/corelib](../README.md) / IdPropertyAttribute
 
 # Class: IdPropertyAttribute
 

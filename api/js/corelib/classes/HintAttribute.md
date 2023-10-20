@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / HintAttribute
+[@serenity-is/corelib](../README.md) / HintAttribute
 
 # Class: HintAttribute
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / RemoteViewOptions
+[@serenity-is/corelib](../README.md) / RemoteViewOptions
 
 # Interface: RemoteViewOptions
 
@@ -155,7 +155,7 @@ ___
 
 ### onAjaxCall
 
-• `Optional` **onAjaxCall**: [`RemoteViewAjaxCallback`](../modules.md#remoteviewajaxcallback)<`any`\>
+• `Optional` **onAjaxCall**: [`RemoteViewAjaxCallback`](../README.md#remoteviewajaxcallback)<`any`\>
 
 #### Defined in
 
@@ -165,7 +165,7 @@ ___
 
 ### onProcessData
 
-• `Optional` **onProcessData**: [`RemoteViewProcessCallback`](../modules.md#remoteviewprocesscallback)<`any`\>
+• `Optional` **onProcessData**: [`RemoteViewProcessCallback`](../README.md#remoteviewprocesscallback)<`any`\>
 
 #### Defined in
 
@@ -175,7 +175,7 @@ ___
 
 ### onSubmit
 
-• `Optional` **onSubmit**: [`CancellableViewCallback`](../modules.md#cancellableviewcallback)<`any`\>
+• `Optional` **onSubmit**: [`CancellableViewCallback`](../README.md#cancellableviewcallback)<`any`\>
 
 #### Defined in
 

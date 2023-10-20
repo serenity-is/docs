@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IValidateRequired
+[@serenity-is/corelib](../README.md) / IValidateRequired
 
 # Class: IValidateRequired
 

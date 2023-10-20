@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / CategoryAttribute
+[@serenity-is/corelib](../README.md) / CategoryAttribute
 
 # Class: CategoryAttribute
 

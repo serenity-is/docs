@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ColumnPickerDialog
+[@serenity-is/corelib](../README.md) / ColumnPickerDialog
 
 # Class: ColumnPickerDialog
 

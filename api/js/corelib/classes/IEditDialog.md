@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IEditDialog
+[@serenity-is/corelib](../README.md) / IEditDialog
 
 # Class: IEditDialog
 

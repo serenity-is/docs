@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DialogTypeAttribute
+[@serenity-is/corelib](../README.md) / DialogTypeAttribute
 
 # Class: DialogTypeAttribute
 

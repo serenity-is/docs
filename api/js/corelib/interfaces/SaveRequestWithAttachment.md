@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / SaveRequestWithAttachment
+[@serenity-is/corelib](../README.md) / SaveRequestWithAttachment
 
 # Interface: SaveRequestWithAttachment<TEntity\>
 

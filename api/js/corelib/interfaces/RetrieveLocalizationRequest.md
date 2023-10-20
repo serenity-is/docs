@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / RetrieveLocalizationRequest
+[@serenity-is/corelib](../README.md) / RetrieveLocalizationRequest
 
 # Interface: RetrieveLocalizationRequest
 

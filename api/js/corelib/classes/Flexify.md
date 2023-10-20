@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Flexify
+[@serenity-is/corelib](../README.md) / Flexify
 
 # Class: Flexify
 

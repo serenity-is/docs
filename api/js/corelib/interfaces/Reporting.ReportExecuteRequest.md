@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / [Reporting](../modules/Reporting.md) / ReportExecuteRequest
+[@serenity-is/corelib](../README.md) / [Reporting](../modules/Reporting.md) / ReportExecuteRequest
 
 # Interface: ReportExecuteRequest
 

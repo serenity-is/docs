@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / MinuteFormatter
+[@serenity-is/corelib](../README.md) / MinuteFormatter
 
 # Class: MinuteFormatter
 

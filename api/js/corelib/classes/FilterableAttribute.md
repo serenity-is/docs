@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FilterableAttribute
+[@serenity-is/corelib](../README.md) / FilterableAttribute
 
 # Class: FilterableAttribute
 

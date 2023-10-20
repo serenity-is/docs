@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / IsActivePropertyAttribute
+[@serenity-is/corelib](../README.md) / IsActivePropertyAttribute
 
 # Class: IsActivePropertyAttribute
 

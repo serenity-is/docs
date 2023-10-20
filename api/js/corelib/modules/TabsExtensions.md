@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / TabsExtensions
+[@serenity-is/corelib](../README.md) / TabsExtensions
 
 # Namespace: TabsExtensions
 

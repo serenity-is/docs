@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / RequiredAttribute
+[@serenity-is/corelib](../README.md) / RequiredAttribute
 
 # Class: RequiredAttribute
 

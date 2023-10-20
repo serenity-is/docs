@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / MaskedEditorOptions
+[@serenity-is/corelib](../README.md) / MaskedEditorOptions
 
 # Interface: MaskedEditorOptions
 

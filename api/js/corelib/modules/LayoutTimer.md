@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / LayoutTimer
+[@serenity-is/corelib](../README.md) / LayoutTimer
 
 # Namespace: LayoutTimer
 

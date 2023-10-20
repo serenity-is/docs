@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Toolbar
+[@serenity-is/corelib](../README.md) / Toolbar
 
 # Class: Toolbar
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DateYearEditorOptions
+[@serenity-is/corelib](../README.md) / DateYearEditorOptions
 
 # Interface: DateYearEditorOptions
 

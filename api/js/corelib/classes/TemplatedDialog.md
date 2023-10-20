@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / TemplatedDialog
+[@serenity-is/corelib](../README.md) / TemplatedDialog
 
 # Class: TemplatedDialog<TOptions\>
 

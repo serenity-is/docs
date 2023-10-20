@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / CriteriaWithText
+[@serenity-is/corelib](../README.md) / CriteriaWithText
 
 # Interface: CriteriaWithText
 

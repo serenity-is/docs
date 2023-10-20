@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Select2InplaceAddOptions
+[@serenity-is/corelib](../README.md) / Select2InplaceAddOptions
 
 # Interface: Select2InplaceAddOptions
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EditorTypeRegistry
+[@serenity-is/corelib](../README.md) / EditorTypeRegistry
 
 # Namespace: EditorTypeRegistry
 

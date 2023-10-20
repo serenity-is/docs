@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Lookup
+[@serenity-is/corelib](../README.md) / Lookup
 
 # Class: Lookup<TItem\>
 

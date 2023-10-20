@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / MaxLengthAttribute
+[@serenity-is/corelib](../README.md) / MaxLengthAttribute
 
 # Class: MaxLengthAttribute
 

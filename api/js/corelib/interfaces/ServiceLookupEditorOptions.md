@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / ServiceLookupEditorOptions
+[@serenity-is/corelib](../README.md) / ServiceLookupEditorOptions
 
 # Interface: ServiceLookupEditorOptions
 

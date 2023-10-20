@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DateFormat
+[@serenity-is/corelib](../README.md) / DateFormat
 
 # Interface: DateFormat
 

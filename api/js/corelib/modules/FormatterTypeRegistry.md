@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / FormatterTypeRegistry
+[@serenity-is/corelib](../README.md) / FormatterTypeRegistry
 
 # Namespace: FormatterTypeRegistry
 

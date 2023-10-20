@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / CommonDialogOptions
+[@serenity-is/corelib](../README.md) / CommonDialogOptions
 
 # Interface: CommonDialogOptions
 

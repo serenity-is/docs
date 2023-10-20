@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Decorators
+[@serenity-is/corelib](../README.md) / Decorators
 
 # Namespace: Decorators
 

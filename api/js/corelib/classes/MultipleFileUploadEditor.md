@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / MultipleFileUploadEditor
+[@serenity-is/corelib](../README.md) / MultipleFileUploadEditor
 
 # Class: MultipleFileUploadEditor
 

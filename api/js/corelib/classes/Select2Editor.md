@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Select2Editor
+[@serenity-is/corelib](../README.md) / Select2Editor
 
 # Class: Select2Editor<TOptions, TItem\>
 

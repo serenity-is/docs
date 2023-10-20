@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / DialogTypeRegistry
+[@serenity-is/corelib](../README.md) / DialogTypeRegistry
 
 # Namespace: DialogTypeRegistry
 

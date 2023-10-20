@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Select2SearchResult
+[@serenity-is/corelib](../README.md) / Select2SearchResult
 
 # Interface: Select2SearchResult<TItem\>
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / EntityTypeAttribute
+[@serenity-is/corelib](../README.md) / EntityTypeAttribute
 
 # Class: EntityTypeAttribute
 

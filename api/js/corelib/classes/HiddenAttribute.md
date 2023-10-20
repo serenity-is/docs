@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / HiddenAttribute
+[@serenity-is/corelib](../README.md) / HiddenAttribute
 
 # Class: HiddenAttribute
 

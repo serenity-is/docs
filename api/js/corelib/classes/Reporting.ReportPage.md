@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / [Reporting](../modules/Reporting.md) / ReportPage
+[@serenity-is/corelib](../README.md) / [Reporting](../modules/Reporting.md) / ReportPage
 
 # Class: ReportPage
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / BaseFiltering
+[@serenity-is/corelib](../README.md) / BaseFiltering
 
 # Class: BaseFiltering
 

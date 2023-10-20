@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / GroupInfo
+[@serenity-is/corelib](../README.md) / GroupInfo
 
 # Interface: GroupInfo<TItem\>
 

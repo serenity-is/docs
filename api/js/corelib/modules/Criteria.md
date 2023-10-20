@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Criteria
+[@serenity-is/corelib](../README.md) / Criteria
 
 # Namespace: Criteria
 

@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / [Exports](../modules.md) / Router
+[@serenity-is/corelib](../README.md) / Router
 
 # Namespace: Router
 

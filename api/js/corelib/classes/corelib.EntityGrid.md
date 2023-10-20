@@ -386,7 +386,7 @@ ___
 
 ### propertyItemsData
 
-• `Protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+• `Protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Inherited from
 
@@ -512,7 +512,7 @@ ___
 
 ### view
 
-• **view**: [`RemoteView`](corelib_slick.RemoteView.md)<`TItem`\>
+• **view**: [`RemoteView`](slick.RemoteView.md)<`TItem`\>
 
 #### Inherited from
 
@@ -1273,11 +1273,11 @@ ___
 
 ### createView
 
-▸ `Protected` **createView**(): [`RemoteView`](corelib_slick.RemoteView.md)<`TItem`\>
+▸ `Protected` **createView**(): [`RemoteView`](slick.RemoteView.md)<`TItem`\>
 
 #### Returns
 
-[`RemoteView`](corelib_slick.RemoteView.md)<`TItem`\>
+[`RemoteView`](slick.RemoteView.md)<`TItem`\>
 
 #### Inherited from
 
@@ -1571,11 +1571,11 @@ ___
 
 ### getColumns
 
-▸ `Protected` **getColumns**(): `Column`<`any`\>[]
+▸ `Protected` **getColumns**(): `Column`<`TItem`\>[]
 
 #### Returns
 
-`Column`<`any`\>[]
+`Column`<`TItem`\>[]
 
 #### Inherited from
 
@@ -2115,11 +2115,11 @@ ___
 
 ### getPagerOptions
 
-▸ `Protected` **getPagerOptions**(): [`PagerOptions`](../interfaces/corelib_slick.PagerOptions.md)
+▸ `Protected` **getPagerOptions**(): [`PagerOptions`](../interfaces/slick.PagerOptions.md)
 
 #### Returns
 
-[`PagerOptions`](../interfaces/corelib_slick.PagerOptions.md)
+[`PagerOptions`](../interfaces/slick.PagerOptions.md)
 
 #### Inherited from
 
@@ -2187,11 +2187,11 @@ ___
 
 ### getPropertyItems
 
-▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+[`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Inherited from
 
@@ -2205,11 +2205,11 @@ ___
 
 ### getPropertyItemsData
 
-▸ `Protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+▸ `Protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Returns
 
-[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Inherited from
 
@@ -2223,11 +2223,11 @@ ___
 
 ### getPropertyItemsDataAsync
 
-▸ `Protected` **getPropertyItemsDataAsync**(): `Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+▸ `Protected` **getPropertyItemsDataAsync**(): `Promise`<[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)\>
 
 #### Returns
 
-`Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+`Promise`<[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)\>
 
 #### Inherited from
 
@@ -2345,11 +2345,11 @@ ___
 
 ### getView
 
-▸ **getView**(): [`RemoteView`](corelib_slick.RemoteView.md)<`TItem`\>
+▸ **getView**(): [`RemoteView`](slick.RemoteView.md)<`TItem`\>
 
 #### Returns
 
-[`RemoteView`](corelib_slick.RemoteView.md)<`TItem`\>
+[`RemoteView`](slick.RemoteView.md)<`TItem`\>
 
 #### Inherited from
 
@@ -2363,11 +2363,11 @@ ___
 
 ### getViewOptions
 
-▸ `Protected` **getViewOptions**(): [`RemoteViewOptions`](../interfaces/corelib_slick.RemoteViewOptions.md)
+▸ `Protected` **getViewOptions**(): [`RemoteViewOptions`](../interfaces/slick.RemoteViewOptions.md)
 
 #### Returns
 
-[`RemoteViewOptions`](../interfaces/corelib_slick.RemoteViewOptions.md)
+[`RemoteViewOptions`](../interfaces/slick.RemoteViewOptions.md)
 
 #### Overrides
 
@@ -2423,7 +2423,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`HandleRouteEventArgs`](../interfaces/corelib_q.HandleRouteEventArgs.md) |
+| `args` | [`HandleRouteEventArgs`](../interfaces/q.HandleRouteEventArgs.md) |
 
 #### Returns
 
@@ -2684,7 +2684,7 @@ ___
 
 ### itemLink
 
-▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../modules/corelib_slick.md#format)<`TItem`\>
+▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../modules/slick.md#format)<`TItem`\>
 
 #### Parameters
 
@@ -2698,7 +2698,7 @@ ___
 
 #### Returns
 
-[`Format`](../modules/corelib_slick.md#format)<`TItem`\>
+[`Format`](../modules/slick.md#format)<`TItem`\>
 
 #### Inherited from
 
@@ -2818,17 +2818,17 @@ ___
 
 ### onViewProcessData
 
-▸ `Protected` **onViewProcessData**(`response`): [`ListResponse`](../interfaces/corelib_q.ListResponse.md)<`TItem`\>
+▸ `Protected` **onViewProcessData**(`response`): [`ListResponse`](../interfaces/q.ListResponse.md)<`TItem`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `response` | [`ListResponse`](../interfaces/corelib_q.ListResponse.md)<`TItem`\> |
+| `response` | [`ListResponse`](../interfaces/q.ListResponse.md)<`TItem`\> |
 
 #### Returns
 
-[`ListResponse`](../interfaces/corelib_q.ListResponse.md)<`TItem`\>
+[`ListResponse`](../interfaces/q.ListResponse.md)<`TItem`\>
 
 #### Inherited from
 
@@ -2968,7 +2968,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `propertyItems` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[] |
+| `propertyItems` | [`PropertyItem`](../interfaces/q.PropertyItem.md)[] |
 
 #### Returns
 
@@ -3621,7 +3621,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 

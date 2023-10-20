@@ -1297,7 +1297,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `target` | `any` |
 
 #### Returns
@@ -1400,7 +1400,7 @@ ___
 
 ### getListRequest
 
-▸ `Protected` **getListRequest**(`query`): [`ListRequest`](../interfaces/corelib_q.ListRequest.md)
+▸ `Protected` **getListRequest**(`query`): [`ListRequest`](../interfaces/q.ListRequest.md)
 
 #### Parameters
 
@@ -1410,7 +1410,7 @@ ___
 
 #### Returns
 
-[`ListRequest`](../interfaces/corelib_q.ListRequest.md)
+[`ListRequest`](../interfaces/q.ListRequest.md)
 
 #### Defined in
 
@@ -1470,7 +1470,7 @@ ___
 
 ### getServiceCallOptions
 
-▸ `Protected` **getServiceCallOptions**(`query`, `results`): [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`ListResponse`](../interfaces/corelib_q.ListResponse.md)<`TItem`\>\>
+▸ `Protected` **getServiceCallOptions**(`query`, `results`): [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`ListResponse`](../interfaces/q.ListResponse.md)<`TItem`\>\>
 
 #### Parameters
 
@@ -1481,7 +1481,7 @@ ___
 
 #### Returns
 
-[`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`ListResponse`](../interfaces/corelib_q.ListResponse.md)<`TItem`\>\>
+[`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`ListResponse`](../interfaces/q.ListResponse.md)<`TItem`\>\>
 
 #### Defined in
 
@@ -2126,7 +2126,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `source` | `any` |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 

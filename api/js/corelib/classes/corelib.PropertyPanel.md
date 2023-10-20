@@ -554,11 +554,11 @@ ___
 
 ### getPropertyItems
 
-▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+[`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 

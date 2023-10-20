@@ -38,7 +38,7 @@
 | Name | Type |
 | :------ | :------ |
 | `source` | `any` |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 

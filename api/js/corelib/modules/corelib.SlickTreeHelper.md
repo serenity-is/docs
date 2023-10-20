@@ -32,7 +32,7 @@
 | Name | Type |
 | :------ | :------ |
 | `item` | `TItem` |
-| `view` | [`RemoteView`](../classes/corelib_slick.RemoteView.md)<`TItem`\> |
+| `view` | [`RemoteView`](../classes/slick.RemoteView.md)<`TItem`\> |
 | `getParentId` | (`x`: `TItem`) => `any` |
 
 #### Returns
@@ -172,7 +172,7 @@ ___
 | `e` | `JQueryEventObject` |
 | `row` | `number` |
 | `cell` | `number` |
-| `view` | [`RemoteView`](../classes/corelib_slick.RemoteView.md)<`TItem`\> |
+| `view` | [`RemoteView`](../classes/slick.RemoteView.md)<`TItem`\> |
 | `getId` | (`x`: `TItem`) => `any` |
 
 #### Returns

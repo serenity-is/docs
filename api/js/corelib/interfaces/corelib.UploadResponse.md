@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [`ServiceResponse`](corelib_q.ServiceResponse.md)
+- [`ServiceResponse`](q.ServiceResponse.md)
 
   ↳ **`UploadResponse`**
 
@@ -25,11 +25,11 @@
 
 ### Error
 
-• `Optional` **Error**: [`ServiceError`](corelib_q.ServiceError.md)
+• `Optional` **Error**: [`ServiceError`](q.ServiceError.md)
 
 #### Inherited from
 
-[ServiceResponse](corelib_q.ServiceResponse.md).[Error](corelib_q.ServiceResponse.md#error)
+[ServiceResponse](q.ServiceResponse.md).[Error](q.ServiceResponse.md#error)
 
 #### Defined in
 

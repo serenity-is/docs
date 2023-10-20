@@ -63,11 +63,11 @@ ___
 
 ### getView
 
-▸ **getView**(): [`RemoteView`](../classes/corelib_slick.RemoteView.md)<`any`\>
+▸ **getView**(): [`RemoteView`](../classes/slick.RemoteView.md)<`any`\>
 
 #### Returns
 
-[`RemoteView`](../classes/corelib_slick.RemoteView.md)<`any`\>
+[`RemoteView`](../classes/slick.RemoteView.md)<`any`\>
 
 #### Defined in
 

@@ -1238,7 +1238,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `target` | `any` |
 
 #### Returns
@@ -1954,7 +1954,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `source` | `any` |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 

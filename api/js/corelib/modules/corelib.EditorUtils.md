@@ -69,7 +69,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `editor` | [`Widget`](../classes/corelib.Widget.md)<`any`\> |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `source` | `any` |
 
 #### Returns
@@ -91,7 +91,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `editor` | [`Widget`](../classes/corelib.Widget.md)<`any`\> |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `target` | `any` |
 
 #### Returns

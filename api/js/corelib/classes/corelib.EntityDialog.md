@@ -486,7 +486,7 @@ ___
 
 ### propertyItemsData
 
-• `Protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+• `Protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Defined in
 
@@ -975,8 +975,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`DeleteResponse`](../interfaces/corelib_q.DeleteResponse.md)\> |
-| `callback` | (`response`: [`DeleteResponse`](../interfaces/corelib_q.DeleteResponse.md)) => `void` |
+| `options` | [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`DeleteResponse`](../interfaces/q.DeleteResponse.md)\> |
+| `callback` | (`response`: [`DeleteResponse`](../interfaces/q.DeleteResponse.md)) => `void` |
 
 #### Returns
 
@@ -1056,7 +1056,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | (`response`: [`DeleteResponse`](../interfaces/corelib_q.DeleteResponse.md)) => `void` |
+| `callback` | (`response`: [`DeleteResponse`](../interfaces/q.DeleteResponse.md)) => `void` |
 
 #### Returns
 
@@ -1102,17 +1102,17 @@ ___
 
 ### getDeleteOptions
 
-▸ `Protected` **getDeleteOptions**(`callback`): [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`DeleteResponse`](../interfaces/corelib_q.DeleteResponse.md)\>
+▸ `Protected` **getDeleteOptions**(`callback`): [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`DeleteResponse`](../interfaces/q.DeleteResponse.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | (`response`: [`DeleteResponse`](../interfaces/corelib_q.DeleteResponse.md)) => `void` |
+| `callback` | (`response`: [`DeleteResponse`](../interfaces/q.DeleteResponse.md)) => `void` |
 
 #### Returns
 
-[`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`DeleteResponse`](../interfaces/corelib_q.DeleteResponse.md)\>
+[`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`DeleteResponse`](../interfaces/q.DeleteResponse.md)\>
 
 #### Defined in
 
@@ -1136,11 +1136,11 @@ ___
 
 ### getDialogButtons
 
-▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Returns
 
-[`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+[`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Inherited from
 
@@ -1380,18 +1380,18 @@ ___
 
 ### getLoadByIdOptions
 
-▸ `Protected` **getLoadByIdOptions**(`id`, `callback`): [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`TItem`\>\>
+▸ `Protected` **getLoadByIdOptions**(`id`, `callback`): [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`TItem`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `id` | `any` |
-| `callback` | (`response`: [`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`TItem`\>) => `void` |
+| `callback` | (`response`: [`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`TItem`\>) => `void` |
 
 #### Returns
 
-[`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`TItem`\>\>
+[`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`TItem`\>\>
 
 #### Defined in
 
@@ -1401,7 +1401,7 @@ ___
 
 ### getLoadByIdRequest
 
-▸ `Protected` **getLoadByIdRequest**(`id`): [`RetrieveRequest`](../interfaces/corelib_q.RetrieveRequest.md)
+▸ `Protected` **getLoadByIdRequest**(`id`): [`RetrieveRequest`](../interfaces/q.RetrieveRequest.md)
 
 #### Parameters
 
@@ -1411,7 +1411,7 @@ ___
 
 #### Returns
 
-[`RetrieveRequest`](../interfaces/corelib_q.RetrieveRequest.md)
+[`RetrieveRequest`](../interfaces/q.RetrieveRequest.md)
 
 #### Defined in
 
@@ -1523,11 +1523,11 @@ ___
 
 ### getPropertyItems
 
-▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+[`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 
@@ -1537,11 +1537,11 @@ ___
 
 ### getPropertyItemsData
 
-▸ `Protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+▸ `Protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Returns
 
-[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Defined in
 
@@ -1551,11 +1551,11 @@ ___
 
 ### getPropertyItemsDataAsync
 
-▸ `Protected` **getPropertyItemsDataAsync**(): `Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+▸ `Protected` **getPropertyItemsDataAsync**(): `Promise`<[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)\>
 
 #### Returns
 
-`Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+`Promise`<[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)\>
 
 #### Defined in
 
@@ -1593,17 +1593,17 @@ ___
 
 ### getSaveOptions
 
-▸ `Protected` **getSaveOptions**(`callback`): [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`SaveResponse`](../interfaces/corelib_q.SaveResponse.md)\>
+▸ `Protected` **getSaveOptions**(`callback`): [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`SaveResponse`](../interfaces/q.SaveResponse.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | (`response`: [`SaveResponse`](../interfaces/corelib_q.SaveResponse.md)) => `void` |
+| `callback` | (`response`: [`SaveResponse`](../interfaces/q.SaveResponse.md)) => `void` |
 
 #### Returns
 
-[`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`SaveResponse`](../interfaces/corelib_q.SaveResponse.md)\>
+[`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`SaveResponse`](../interfaces/q.SaveResponse.md)\>
 
 #### Defined in
 
@@ -1613,11 +1613,11 @@ ___
 
 ### getSaveRequest
 
-▸ `Protected` **getSaveRequest**(): [`SaveRequest`](../interfaces/corelib_q.SaveRequest.md)<`TItem`\>
+▸ `Protected` **getSaveRequest**(): [`SaveRequest`](../interfaces/q.SaveRequest.md)<`TItem`\>
 
 #### Returns
 
-[`SaveRequest`](../interfaces/corelib_q.SaveRequest.md)<`TItem`\>
+[`SaveRequest`](../interfaces/q.SaveRequest.md)<`TItem`\>
 
 #### Defined in
 
@@ -1695,17 +1695,17 @@ ___
 
 ### getUndeleteOptions
 
-▸ `Protected` **getUndeleteOptions**(`callback?`): [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`UndeleteResponse`](../interfaces/corelib_q.UndeleteResponse.md)\>
+▸ `Protected` **getUndeleteOptions**(`callback?`): [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`UndeleteResponse`](../interfaces/q.UndeleteResponse.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `callback?` | (`response`: [`UndeleteResponse`](../interfaces/corelib_q.UndeleteResponse.md)) => `void` |
+| `callback?` | (`response`: [`UndeleteResponse`](../interfaces/q.UndeleteResponse.md)) => `void` |
 
 #### Returns
 
-[`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`UndeleteResponse`](../interfaces/corelib_q.UndeleteResponse.md)\>
+[`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`UndeleteResponse`](../interfaces/q.UndeleteResponse.md)\>
 
 #### Defined in
 
@@ -2209,7 +2209,7 @@ ___
 | :------ | :------ |
 | `entityOrId` | `any` |
 | `done` | () => `void` |
-| `fail?` | (`ex`: [`Exception`](corelib_q.Exception.md)) => `void` |
+| `fail?` | (`ex`: [`Exception`](q.Exception.md)) => `void` |
 
 #### Returns
 
@@ -2234,7 +2234,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `id` | `any` |
-| `callback?` | (`response`: [`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`TItem`\>) => `void` |
+| `callback?` | (`response`: [`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`TItem`\>) => `void` |
 | `fail?` | () => `void` |
 
 #### Returns
@@ -2276,8 +2276,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`TItem`\>\> |
-| `callback` | (`response`: [`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`TItem`\>) => `void` |
+| `options` | [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`TItem`\>\> |
+| `callback` | (`response`: [`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`TItem`\>) => `void` |
 | `fail` | () => `void` |
 
 #### Returns
@@ -2407,7 +2407,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `response` | [`DeleteResponse`](../interfaces/corelib_q.DeleteResponse.md) |
+| `response` | [`DeleteResponse`](../interfaces/q.DeleteResponse.md) |
 
 #### Returns
 
@@ -2463,7 +2463,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | [`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`TItem`\> |
+| `data` | [`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`TItem`\> |
 
 #### Returns
 
@@ -2483,7 +2483,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `response` | [`SaveResponse`](../interfaces/corelib_q.SaveResponse.md) |
+| `response` | [`SaveResponse`](../interfaces/q.SaveResponse.md) |
 
 #### Returns
 
@@ -2553,7 +2553,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `callback?` | (`response`: [`SaveResponse`](../interfaces/corelib_q.SaveResponse.md)) => `void` |
+| `callback?` | (`response`: [`SaveResponse`](../interfaces/q.SaveResponse.md)) => `void` |
 
 #### Returns
 
@@ -2573,8 +2573,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`SaveResponse`](../interfaces/corelib_q.SaveResponse.md)\> |
-| `callback` | (`response`: [`SaveResponse`](../interfaces/corelib_q.SaveResponse.md)) => `void` |
+| `options` | [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`SaveResponse`](../interfaces/q.SaveResponse.md)\> |
+| `callback` | (`response`: [`SaveResponse`](../interfaces/q.SaveResponse.md)) => `void` |
 
 #### Returns
 
@@ -2594,7 +2594,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | (`response`: [`SaveResponse`](../interfaces/corelib_q.SaveResponse.md)) => `void` |
+| `callback` | (`response`: [`SaveResponse`](../interfaces/q.SaveResponse.md)) => `void` |
 
 #### Returns
 
@@ -2716,7 +2716,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `response` | [`SaveResponse`](../interfaces/corelib_q.SaveResponse.md) |
+| `response` | [`SaveResponse`](../interfaces/q.SaveResponse.md) |
 
 #### Returns
 
@@ -2736,7 +2736,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `callback?` | (`response`: [`UndeleteResponse`](../interfaces/corelib_q.UndeleteResponse.md)) => `void` |
+| `callback?` | (`response`: [`UndeleteResponse`](../interfaces/q.UndeleteResponse.md)) => `void` |
 
 #### Returns
 
@@ -2756,8 +2756,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`UndeleteResponse`](../interfaces/corelib_q.UndeleteResponse.md)\> |
-| `callback` | (`response`: [`UndeleteResponse`](../interfaces/corelib_q.UndeleteResponse.md)) => `void` |
+| `options` | [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`UndeleteResponse`](../interfaces/q.UndeleteResponse.md)\> |
+| `callback` | (`response`: [`UndeleteResponse`](../interfaces/q.UndeleteResponse.md)) => `void` |
 
 #### Returns
 

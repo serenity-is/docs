@@ -114,7 +114,7 @@ ___
 
 ### columnSelection
 
-• `Optional` **columnSelection**: [`ColumnSelection`](../enums/corelib_q.ColumnSelection.md)
+• `Optional` **columnSelection**: [`ColumnSelection`](../enums/q.ColumnSelection.md)
 
 #### Defined in
 

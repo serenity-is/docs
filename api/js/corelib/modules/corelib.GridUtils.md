@@ -26,7 +26,7 @@
 | Name | Type |
 | :------ | :------ |
 | `toolDiv` | `JQuery` |
-| `view` | [`RemoteView`](../classes/corelib_slick.RemoteView.md)<`any`\> |
+| `view` | [`RemoteView`](../classes/slick.RemoteView.md)<`any`\> |
 | `hint?` | `string` |
 | `initial?` | `boolean` |
 
@@ -49,7 +49,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `toolDiv` | `JQuery` |
-| `view` | [`RemoteView`](../classes/corelib_slick.RemoteView.md)<`any`\> |
+| `view` | [`RemoteView`](../classes/slick.RemoteView.md)<`any`\> |
 | `fields?` | [`QuickSearchField`](../interfaces/corelib.QuickSearchField.md)[] |
 | `onChange?` | () => `void` |
 
@@ -142,7 +142,7 @@ ___
 | `getId` | (`p1`: `any`) => `number` |
 | `getDisplayOrder` | (`p1`: `any`) => `any` |
 | `service` | `string` |
-| `getUpdateRequest` | (`p1`: `number`, `p2`: `number`) => [`SaveRequest`](../interfaces/corelib_q.SaveRequest.md)<`any`\> |
+| `getUpdateRequest` | (`p1`: `number`, `p2`: `number`) => [`SaveRequest`](../interfaces/q.SaveRequest.md)<`any`\> |
 
 #### Returns
 

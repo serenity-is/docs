@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [`Widget`](corelib.Widget.md)<[`PagerOptions`](../interfaces/corelib_slick.PagerOptions.md)\>
+- [`Widget`](corelib.Widget.md)<[`PagerOptions`](../interfaces/slick.PagerOptions.md)\>
 
   ↳ **`SlickPager`**
 
@@ -53,7 +53,7 @@
 | Name | Type |
 | :------ | :------ |
 | `div` | `JQuery` |
-| `o` | [`PagerOptions`](../interfaces/corelib_slick.PagerOptions.md) |
+| `o` | [`PagerOptions`](../interfaces/slick.PagerOptions.md) |
 
 #### Overrides
 
@@ -95,7 +95,7 @@ ___
 
 ### options
 
-• `Protected` **options**: [`PagerOptions`](../interfaces/corelib_slick.PagerOptions.md)
+• `Protected` **options**: [`PagerOptions`](../interfaces/slick.PagerOptions.md)
 
 #### Inherited from
 

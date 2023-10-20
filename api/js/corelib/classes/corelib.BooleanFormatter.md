@@ -6,7 +6,7 @@
 
 ## Implements
 
-- [`Formatter`](../interfaces/corelib_slick.Formatter.md)
+- [`Formatter`](../interfaces/slick.Formatter.md)
 
 ## Table of contents
 
@@ -67,7 +67,7 @@ ___
 
 #### Implementation of
 
-[Formatter](../interfaces/corelib_slick.Formatter.md).[format](../interfaces/corelib_slick.Formatter.md#format)
+[Formatter](../interfaces/slick.Formatter.md).[format](../interfaces/slick.Formatter.md#format)
 
 #### Defined in
 

@@ -159,7 +159,7 @@ ___
 
 ### propertyItems
 
-• `Protected` **propertyItems**: [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+• `Protected` **propertyItems**: [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 
@@ -623,11 +623,11 @@ ___
 
 ### getDialogButtons
 
-▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Returns
 
-[`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+[`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Inherited from
 

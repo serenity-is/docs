@@ -21,7 +21,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 
@@ -41,7 +41,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `items` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[] |
+| `items` | [`PropertyItem`](../interfaces/q.PropertyItem.md)[] |
 
 #### Returns
 

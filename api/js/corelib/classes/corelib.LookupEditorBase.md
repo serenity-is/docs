@@ -224,7 +224,7 @@ ___
 
 ### lookup
 
-• `Protected` **lookup**: [`Lookup`](corelib_q.Lookup.md)<`TItem`\>
+• `Protected` **lookup**: [`Lookup`](q.Lookup.md)<`TItem`\>
 
 #### Defined in
 
@@ -1271,7 +1271,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `target` | `any` |
 
 #### Returns
@@ -1333,7 +1333,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `item` | `TItem` |
-| `lookup` | [`Lookup`](corelib_q.Lookup.md)<`TItem`\> |
+| `lookup` | [`Lookup`](q.Lookup.md)<`TItem`\> |
 
 #### Returns
 
@@ -1354,7 +1354,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `item` | `TItem` |
-| `lookup` | [`Lookup`](corelib_q.Lookup.md)<`TItem`\> |
+| `lookup` | [`Lookup`](q.Lookup.md)<`TItem`\> |
 
 #### Returns
 
@@ -1374,7 +1374,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `lookup` | [`Lookup`](corelib_q.Lookup.md)<`TItem`\> |
+| `lookup` | [`Lookup`](q.Lookup.md)<`TItem`\> |
 
 #### Returns
 
@@ -1388,11 +1388,11 @@ ___
 
 ### getLookup
 
-▸ `Protected` **getLookup**(): [`Lookup`](corelib_q.Lookup.md)<`TItem`\>
+▸ `Protected` **getLookup**(): [`Lookup`](q.Lookup.md)<`TItem`\>
 
 #### Returns
 
-[`Lookup`](corelib_q.Lookup.md)<`TItem`\>
+[`Lookup`](q.Lookup.md)<`TItem`\>
 
 #### Defined in
 
@@ -1402,11 +1402,11 @@ ___
 
 ### getLookupAsync
 
-▸ `Protected` **getLookupAsync**(): `PromiseLike`<[`Lookup`](corelib_q.Lookup.md)<`TItem`\>\>
+▸ `Protected` **getLookupAsync**(): `PromiseLike`<[`Lookup`](q.Lookup.md)<`TItem`\>\>
 
 #### Returns
 
-`PromiseLike`<[`Lookup`](corelib_q.Lookup.md)<`TItem`\>\>
+`PromiseLike`<[`Lookup`](q.Lookup.md)<`TItem`\>\>
 
 #### Defined in
 
@@ -2094,7 +2094,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `source` | `any` |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 

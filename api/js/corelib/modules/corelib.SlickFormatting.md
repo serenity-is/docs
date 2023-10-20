@@ -23,11 +23,11 @@
 
 ### checkBox
 
-▸ **checkBox**(): [`Format`](corelib_slick.md#format)
+▸ **checkBox**(): [`Format`](slick.md#format)
 
 #### Returns
 
-[`Format`](corelib_slick.md#format)
+[`Format`](slick.md#format)
 
 #### Defined in
 
@@ -37,7 +37,7 @@ ___
 
 ### date
 
-▸ **date**(`format?`): [`Format`](corelib_slick.md#format)
+▸ **date**(`format?`): [`Format`](slick.md#format)
 
 #### Parameters
 
@@ -47,7 +47,7 @@ ___
 
 #### Returns
 
-[`Format`](corelib_slick.md#format)
+[`Format`](slick.md#format)
 
 #### Defined in
 
@@ -57,7 +57,7 @@ ___
 
 ### dateTime
 
-▸ **dateTime**(`format?`): [`Format`](corelib_slick.md#format)
+▸ **dateTime**(`format?`): [`Format`](slick.md#format)
 
 #### Parameters
 
@@ -67,7 +67,7 @@ ___
 
 #### Returns
 
-[`Format`](corelib_slick.md#format)
+[`Format`](slick.md#format)
 
 #### Defined in
 
@@ -138,7 +138,7 @@ ___
 
 ### itemLink
 
-▸ **itemLink**<`TItem`\>(`itemType`, `idField`, `getText`, `cssClass?`, `encode?`): [`Format`](corelib_slick.md#format)<`TItem`\>
+▸ **itemLink**<`TItem`\>(`itemType`, `idField`, `getText`, `cssClass?`, `encode?`): [`Format`](slick.md#format)<`TItem`\>
 
 #### Type parameters
 
@@ -152,13 +152,13 @@ ___
 | :------ | :------ |
 | `itemType` | `string` |
 | `idField` | `string` |
-| `getText` | [`Format`](corelib_slick.md#format)<`TItem`\> |
-| `cssClass?` | [`Format`](corelib_slick.md#format)<`TItem`\> |
+| `getText` | [`Format`](slick.md#format)<`TItem`\> |
+| `cssClass?` | [`Format`](slick.md#format)<`TItem`\> |
 | `encode?` | `boolean` |
 
 #### Returns
 
-[`Format`](corelib_slick.md#format)<`TItem`\>
+[`Format`](slick.md#format)<`TItem`\>
 
 #### Defined in
 
@@ -192,7 +192,7 @@ ___
 
 ### number
 
-▸ **number**(`format`): [`Format`](corelib_slick.md#format)
+▸ **number**(`format`): [`Format`](slick.md#format)
 
 #### Parameters
 
@@ -202,7 +202,7 @@ ___
 
 #### Returns
 
-[`Format`](corelib_slick.md#format)
+[`Format`](slick.md#format)
 
 #### Defined in
 
@@ -212,19 +212,19 @@ ___
 
 ### treeToggle
 
-▸ **treeToggle**(`getView`, `getId`, `formatter`): [`Format`](corelib_slick.md#format)
+▸ **treeToggle**(`getView`, `getId`, `formatter`): [`Format`](slick.md#format)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `getView` | () => [`RemoteView`](../classes/corelib_slick.RemoteView.md)<`any`\> |
+| `getView` | () => [`RemoteView`](../classes/slick.RemoteView.md)<`any`\> |
 | `getId` | (`x`: `any`) => `any` |
-| `formatter` | [`Format`](corelib_slick.md#format)<`any`\> |
+| `formatter` | [`Format`](slick.md#format)<`any`\> |
 
 #### Returns
 
-[`Format`](corelib_slick.md#format)
+[`Format`](slick.md#format)
 
 #### Defined in
 

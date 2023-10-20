@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [`ServiceRequest`](corelib_q.ServiceRequest.md)
+- [`ServiceRequest`](q.ServiceRequest.md)
 
   ↳ **`ReportExecuteRequest`**
 

@@ -535,7 +535,7 @@ ___
 
 ### getFieldFor
 
-▸ `Protected` **getFieldFor**(`row`): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)
+▸ `Protected` **getFieldFor**(`row`): [`PropertyItem`](../interfaces/q.PropertyItem.md)
 
 #### Parameters
 
@@ -545,7 +545,7 @@ ___
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)
+[`PropertyItem`](../interfaces/q.PropertyItem.md)
 
 #### Defined in
 

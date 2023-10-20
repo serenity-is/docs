@@ -94,11 +94,11 @@ ___
 
 ### get\_field
 
-▸ **get_field**(): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)
+▸ **get_field**(): [`PropertyItem`](../interfaces/q.PropertyItem.md)
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)
+[`PropertyItem`](../interfaces/q.PropertyItem.md)
 
 #### Defined in
 
@@ -182,7 +182,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `value` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `value` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 

@@ -41,7 +41,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `fields` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[] |
+| `fields` | [`PropertyItem`](../interfaces/q.PropertyItem.md)[] |
 
 #### Defined in
 
@@ -75,7 +75,7 @@ ___
 
 #### Index signature
 
-▪ [key: `string`]: [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)
+▪ [key: `string`]: [`PropertyItem`](../interfaces/q.PropertyItem.md)
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 ### fields
 
-• `Private` **fields**: [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+• `Private` **fields**: [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 
@@ -167,11 +167,11 @@ ___
 
 ### get\_fields
 
-▸ **get_fields**(): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+▸ **get_fields**(): [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+[`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 

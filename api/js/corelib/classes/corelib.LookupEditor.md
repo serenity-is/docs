@@ -208,7 +208,7 @@ ___
 
 ### lookup
 
-• `Protected` **lookup**: [`Lookup`](corelib_q.Lookup.md)<`any`\>
+• `Protected` **lookup**: [`Lookup`](q.Lookup.md)<`any`\>
 
 #### Inherited from
 
@@ -1259,7 +1259,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `target` | `any` |
 
 #### Returns
@@ -1321,7 +1321,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `item` | `any` |
-| `lookup` | [`Lookup`](corelib_q.Lookup.md)<`any`\> |
+| `lookup` | [`Lookup`](q.Lookup.md)<`any`\> |
 
 #### Returns
 
@@ -1346,7 +1346,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `item` | `any` |
-| `lookup` | [`Lookup`](corelib_q.Lookup.md)<`any`\> |
+| `lookup` | [`Lookup`](q.Lookup.md)<`any`\> |
 
 #### Returns
 
@@ -1370,7 +1370,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `lookup` | [`Lookup`](corelib_q.Lookup.md)<`any`\> |
+| `lookup` | [`Lookup`](q.Lookup.md)<`any`\> |
 
 #### Returns
 
@@ -1388,11 +1388,11 @@ ___
 
 ### getLookup
 
-▸ `Protected` **getLookup**(): [`Lookup`](corelib_q.Lookup.md)<`any`\>
+▸ `Protected` **getLookup**(): [`Lookup`](q.Lookup.md)<`any`\>
 
 #### Returns
 
-[`Lookup`](corelib_q.Lookup.md)<`any`\>
+[`Lookup`](q.Lookup.md)<`any`\>
 
 #### Inherited from
 
@@ -1406,11 +1406,11 @@ ___
 
 ### getLookupAsync
 
-▸ `Protected` **getLookupAsync**(): `PromiseLike`<[`Lookup`](corelib_q.Lookup.md)<`any`\>\>
+▸ `Protected` **getLookupAsync**(): `PromiseLike`<[`Lookup`](q.Lookup.md)<`any`\>\>
 
 #### Returns
 
-`PromiseLike`<[`Lookup`](corelib_q.Lookup.md)<`any`\>\>
+`PromiseLike`<[`Lookup`](q.Lookup.md)<`any`\>\>
 
 #### Inherited from
 
@@ -2110,7 +2110,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `source` | `any` |
-| `property` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `property` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 

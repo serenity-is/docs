@@ -50,7 +50,7 @@ ___
 
 ### items
 
-• `Optional` **items**: [`PropertyItem`](corelib_q.PropertyItem.md)[]
+• `Optional` **items**: [`PropertyItem`](q.PropertyItem.md)[]
 
 #### Defined in
 

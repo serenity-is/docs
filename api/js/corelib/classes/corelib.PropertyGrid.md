@@ -132,7 +132,7 @@ ___
 
 ### items
 
-• `Private` **items**: [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+• `Private` **items**: [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 
@@ -263,7 +263,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 
@@ -415,7 +415,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `container` | `JQuery` |
-| `items` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[] |
+| `items` | [`PropertyItem`](../interfaces/q.PropertyItem.md)[] |
 
 #### Returns
 
@@ -436,7 +436,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `container` | `JQuery` |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 
 #### Returns
 
@@ -457,7 +457,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `container` | `JQuery` |
-| `items` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[] |
+| `items` | [`PropertyItem`](../interfaces/q.PropertyItem.md)[] |
 
 #### Returns
 
@@ -516,7 +516,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | (`p1`: [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md), `p2`: [`Widget`](corelib.Widget.md)<`any`\>) => `void` |
+| `callback` | (`p1`: [`PropertyItem`](../interfaces/q.PropertyItem.md), `p2`: [`Widget`](corelib.Widget.md)<`any`\>) => `void` |
 
 #### Returns
 
@@ -536,7 +536,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `items` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[] |
+| `items` | [`PropertyItem`](../interfaces/q.PropertyItem.md)[] |
 
 #### Returns
 
@@ -614,11 +614,11 @@ ___
 
 ### get\_items
 
-▸ **get_items**(): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+▸ **get_items**(): [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+[`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 
@@ -868,7 +868,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `editor` | [`Widget`](corelib.Widget.md)<`any`\> |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `source` | `any` |
 
 #### Returns
@@ -890,7 +890,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `editor` | [`Widget`](corelib.Widget.md)<`any`\> |
-| `item` | [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md) |
+| `item` | [`PropertyItem`](../interfaces/q.PropertyItem.md) |
 | `target` | `any` |
 
 #### Returns

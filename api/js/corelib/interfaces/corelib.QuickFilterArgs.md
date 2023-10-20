@@ -66,7 +66,7 @@ ___
 
 ### request
 
-• `Optional` **request**: [`ListRequest`](corelib_q.ListRequest.md)
+• `Optional` **request**: [`ListRequest`](q.ListRequest.md)
 
 #### Defined in
 

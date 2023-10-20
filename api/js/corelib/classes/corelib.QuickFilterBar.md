@@ -340,7 +340,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `action` | (`request`: [`ListRequest`](../interfaces/corelib_q.ListRequest.md)) => `void` |
+| `action` | (`request`: [`ListRequest`](../interfaces/q.ListRequest.md)) => `void` |
 
 #### Returns
 
@@ -585,7 +585,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `request` | [`ListRequest`](../interfaces/corelib_q.ListRequest.md) |
+| `request` | [`ListRequest`](../interfaces/q.ListRequest.md) |
 
 #### Returns
 
@@ -605,7 +605,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `action` | (`request`: [`ListRequest`](../interfaces/corelib_q.ListRequest.md)) => `void` |
+| `action` | (`request`: [`ListRequest`](../interfaces/q.ListRequest.md)) => `void` |
 
 #### Returns
 

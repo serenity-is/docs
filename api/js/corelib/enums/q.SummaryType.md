@@ -1,0 +1,76 @@
+[@serenity-is](../README.md) / [Modules](../modules.md) / [q](../modules/q.md) / SummaryType
+
+# Enumeration: SummaryType
+
+[q](../modules/q.md).SummaryType
+
+## Table of contents
+
+### Enumeration Members
+
+- [Avg](q.SummaryType.md#avg)
+- [Disabled](q.SummaryType.md#disabled)
+- [Max](q.SummaryType.md#max)
+- [Min](q.SummaryType.md#min)
+- [None](q.SummaryType.md#none)
+- [Sum](q.SummaryType.md#sum)
+
+## Enumeration Members
+
+### Avg
+
+• **Avg** = ``2``
+
+#### Defined in
+
+[src/q/propertyitem.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L70)
+
+___
+
+### Disabled
+
+• **Disabled** = ``-1``
+
+#### Defined in
+
+[src/q/propertyitem.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L67)
+
+___
+
+### Max
+
+• **Max** = ``4``
+
+#### Defined in
+
+[src/q/propertyitem.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L72)
+
+___
+
+### Min
+
+• **Min** = ``3``
+
+#### Defined in
+
+[src/q/propertyitem.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L71)
+
+___
+
+### None
+
+• **None** = ``0``
+
+#### Defined in
+
+[src/q/propertyitem.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L68)
+
+___
+
+### Sum
+
+• **Sum** = ``1``
+
+#### Defined in
+
+[src/q/propertyitem.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/propertyitem.ts#L69)

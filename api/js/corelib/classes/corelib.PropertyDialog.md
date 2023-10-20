@@ -213,7 +213,7 @@ ___
 
 ### propertyItemsData
 
-• `Protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+• `Protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Defined in
 
@@ -660,11 +660,11 @@ ___
 
 ### getDialogButtons
 
-▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Returns
 
-[`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+[`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Overrides
 
@@ -796,11 +796,11 @@ ___
 
 ### getPropertyItems
 
-▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Returns
 
-[`PropertyItem`](../interfaces/corelib_q.PropertyItem.md)[]
+[`PropertyItem`](../interfaces/q.PropertyItem.md)[]
 
 #### Defined in
 
@@ -810,11 +810,11 @@ ___
 
 ### getPropertyItemsData
 
-▸ `Protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+▸ `Protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Returns
 
-[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)
+[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)
 
 #### Defined in
 
@@ -824,11 +824,11 @@ ___
 
 ### getPropertyItemsDataAsync
 
-▸ `Protected` **getPropertyItemsDataAsync**(): `Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+▸ `Protected` **getPropertyItemsDataAsync**(): `Promise`<[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)\>
 
 #### Returns
 
-`Promise`<[`PropertyItemsData`](../interfaces/corelib_q.PropertyItemsData.md)\>
+`Promise`<[`PropertyItemsData`](../interfaces/q.PropertyItemsData.md)\>
 
 #### Defined in
 

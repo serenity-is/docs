@@ -534,11 +534,11 @@ ___
 
 ### getDialogButtons
 
-▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Returns
 
-[`DialogButton`](../interfaces/corelib_q.DialogButton.md)[]
+[`DialogButton`](../interfaces/q.DialogButton.md)[]
 
 #### Defined in
 

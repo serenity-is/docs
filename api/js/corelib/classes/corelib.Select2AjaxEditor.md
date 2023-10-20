@@ -402,7 +402,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`ListResponse`](../interfaces/corelib_q.ListResponse.md)<`any`\>\> |
+| `options` | [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`ListResponse`](../interfaces/q.ListResponse.md)<`any`\>\> |
 
 #### Returns
 
@@ -422,7 +422,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`ServiceOptions`](../interfaces/corelib_q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/corelib_q.RetrieveResponse.md)<`any`\>\> |
+| `options` | [`ServiceOptions`](../interfaces/q.ServiceOptions.md)<[`RetrieveResponse`](../interfaces/q.RetrieveResponse.md)<`any`\>\> |
 
 #### Returns
 
@@ -654,8 +654,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `request` | [`ListRequest`](../interfaces/corelib_q.ListRequest.md) |
-| `callback` | (`p1`: [`ListResponse`](../interfaces/corelib_q.ListResponse.md)<`any`\>) => `void` |
+| `request` | [`ListRequest`](../interfaces/q.ListRequest.md) |
+| `callback` | (`p1`: [`ListResponse`](../interfaces/q.ListResponse.md)<`any`\>) => `void` |
 
 #### Returns
 

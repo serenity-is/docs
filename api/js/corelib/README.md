@@ -1,4 +1,4 @@
-@serenity-is / [Modules](modules.md)
+@serenity-is/corelib / [Exports](modules.md)
 
 # Serenity Core Library
 

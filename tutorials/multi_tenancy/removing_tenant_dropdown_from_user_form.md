@@ -17,7 +17,7 @@ We need to remove *Tenant* field from the user form. But we need that field for 
 Build the project, auto transform all and add method below to *UserDialog.ts*:
 
 ```ts
-import { localText, Authorization } from "@serenity-is/corelib/q";
+import { localText, Authorization } from "@serenity-is/corelib";
 //...
 protected getPropertyItems() {
     var items = super.getPropertyItems();

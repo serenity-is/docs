@@ -12,11 +12,11 @@ namespace MovieTutorial.Migrations.DefaultDB
     {
         public override void Up()
         {
-            Alter.Table("Person").InSchema("mov")
+            Alter.Table("Person")
                 .AddColumn("PrimaryImage").AsString(100).Nullable()
                 .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
 
-            Alter.Table("Movie").InSchema("mov")
+            Alter.Table("Movie")
                 .AddColumn("PrimaryImage").AsString(100).Nullable()
                 .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
         }

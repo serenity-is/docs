@@ -69,9 +69,8 @@ Now it's time to rebuild the project so that our MovieListRequest object and rel
 In this section, we'll be intercepting the quick filter item and moving the genre list to the *Genres* property of our *MovieListRequest*. To accomplish this, we'll make edits in the *MovieGrid.ts* file:
 
 ```typescript
-import { Decorators, EntityGrid, LookupEditor, QuickSearchField } from '@serenity-is/corelib';
-import { first, localText } from '@serenity-is/corelib/q';
-import { MovieColumns, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
+import { Decorators, EntityGrid, first, localText, LookupEditor, QuickSearchField } from '@serenity-is/corelib';
+import { MovieColumns, MovieRow, MovieService } from '@/ServerTypes/MovieDB';
 import { MovieListRequest } from '@/ServerTypes/MovieDB/MovieListRequest';
 import { MovieDialog } from './MovieDialog';
 

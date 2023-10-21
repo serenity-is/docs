@@ -16,7 +16,7 @@ If you want to include TV series and mini-series in your movie database, you'll 
     {
         public override void Up()
         {
-            Alter.Table("Movie").InSchema("mov")
+            Alter.Table("Movie")
                 .AddColumn("Kind").AsInt32().NotNullable().WithDefaultValue(1);
         }
     }
@@ -88,3 +88,5 @@ Since "Kind" is a required field, you need to provide a default value in the "Ad
    ```
 
 Now, when you open the "Add Movie" dialog, the "Kind" field will be pre-filled with "Film."
+
+![Movie Kind Prefilled](img/movie-kind-prefilled.png)

@@ -32,7 +32,7 @@ public class DefaultDB_20221115_1612_PersonAndMovieCast : AutoReversingMigration
 {
     public override void Up()
     {
-        Create.Table("Person").InSchema("mov")
+        Create.Table("Person")
             .WithColumn("PersonId").AsInt32().Identity()
                 .PrimaryKey().NotNullable()
             .WithColumn("FirstName").AsString(50).NotNullable()
@@ -42,13 +42,13 @@ public class DefaultDB_20221115_1612_PersonAndMovieCast : AutoReversingMigration
             .WithColumn("Gender").AsInt32().Nullable()
             .WithColumn("Height").AsInt32().Nullable();
 
-        Create.Table("MovieCast").InSchema("mov")
+        Create.Table("MovieCast")
             .WithColumn("MovieCastId").AsInt32().Identity()
                 .PrimaryKey().NotNullable()
             .WithColumn("MovieId").AsInt32().NotNullable()
-                .ForeignKey("FK_MovieCast_MovieId", "mov", "Movie", "MovieId")
+                .ForeignKey("FK_MovieCast_MovieId", "Movie", "MovieId")
             .WithColumn("PersonId").AsInt32().NotNullable()
-                .ForeignKey("FK_MovieCast_PersonId", "mov", "Person", "PersonId")
+                .ForeignKey("FK_MovieCast_PersonId", "Person", "PersonId")
             .WithColumn("Character").AsString(50).Nullable();
     }
 }
@@ -61,7 +61,7 @@ First, generate code for the `Person` table:
 - Connection Key: **Default**
 - Table Name: **dbo.Person**
 - Module Name: **MovieDB**
-- Identifier: **Person**
+- Class Identifier: **Person**
 - Permission: **Administration:General**
 - What to Generate: **All**
 
@@ -236,7 +236,7 @@ It's worth noting that the `getLookup` method blocks the browser UI thread, so i
 Next, you should generate code for the MovieCast table using `sergen` with the following parameters:
 
 - Connection String: **Default**
-- Tablename: **mov.MovieCast**
+- Tablename: **dbo.MovieCast**
 - Module Name: **MovieDB**
 - Entity Identifier: **MovieCast**
 - Permission Key: **Administration:General**

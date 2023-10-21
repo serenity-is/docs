@@ -169,7 +169,7 @@ The CSS rule for size specifies that this dialog is 650px wide and 550px in heig
 
 The caption rule line specifies that field labels should be 150px.
 
-If CSS bundling is disabled in the *appsettings.json* file, you can see the changes immediately when you refresh the browser. Otherwise, you need to restart the application.
+After doing these changes, you can see its effects immediately when you refresh the browser. 
 
 ![Movie Dialog 550px](img/movie-dialog-550px.png)
 

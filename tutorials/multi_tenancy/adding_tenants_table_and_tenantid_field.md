@@ -78,15 +78,15 @@ namespace MultiTenancy.Migrations.DefaultDB
     {
         public override void Up()
         {
-            Alter.Table("Person").InSchema("mov")
+            Alter.Table("Person")
                 .AddColumn("TenantId").AsInt32()
                     .NotNullable().WithDefaultValue(1);
 
-            Alter.Table("Genre").InSchema("mov")
+            Alter.Table("Genre")
                 .AddColumn("TenantId").AsInt32()
                     .NotNullable().WithDefaultValue(1);
 
-            Alter.Table("Movie").InSchema("mov")
+            Alter.Table("Movie")
                 .AddColumn("TenantId").AsInt32()
                     .NotNullable().WithDefaultValue(1);
         }

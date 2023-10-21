@@ -14,26 +14,26 @@ public class DefaultDB_20221115_1405_MovieGenres : Migration
 {
     public override void Up()
     {
-        Create.Table("MovieGenres").InSchema("mov")
+        Create.Table("MovieGenres")
             .WithColumn("MovieGenreId").AsInt32()
                 .Identity().PrimaryKey().NotNullable()
             .WithColumn("MovieId").AsInt32().NotNullable()
                 .ForeignKey("FK_MovieGenres_MovieId",
-                    "mov", "Movie", "MovieId")
+                    "Movie", "MovieId")
             .WithColumn("GenreId").AsInt32().NotNullable()
                 .ForeignKey("FK_MovieGenres_GenreId",
-                    "mov", "Genre", "GenreId");
+                    "Genre", "GenreId");
 
         Execute.Sql(
-            @"INSERT INTO mov.MovieGenres (MovieId, GenreId) 
+            @"INSERT INTO MovieGenres (MovieId, GenreId) 
                 SELECT m.MovieId, m.GenreId 
-                FROM mov.Movie m 
+                FROM Movie m 
                 WHERE m.GenreId IS NOT NULL");
 
         Delete.ForeignKey("FK_Movie_GenreId")
-            .OnTable("Movie").InSchema("mov");
+            .OnTable("Movie");
         Delete.Column("GenreId")
-            .FromTable("Movie").InSchema("mov");
+            .FromTable("Movie");
     }
 
     public override void Down()
@@ -86,9 +86,9 @@ After removing these properties, rebuild your project, and you'll have a working
 To handle the M-N relationship between movies and genres, we need to generate code for the `MovieGenres` table. Run Serene code generation for the `MovieGenres` table using the following parameters:
 
 - Connection Key: **Default**
-- Table Name: **mov.MovieGenres**
+- Table Name: **MovieGenres**
 - Module Name: **MovieDB**
-- Entity Identifier: **MovieGenres**
+- Class Identifier: **MovieGenres**
 - Permission Key: **Administration:General**
 - What to Generate: **Row & Services**
 
@@ -171,39 +171,42 @@ However, we would prefer to have genre names instead of genre IDs, as it would m
 It's time to create a SlickGrid column formatter. To do this, create a file named `GenresFormatter.ts` next to `MovieGrid.ts`:
 
 ```typescript
-import { Decorators, Formatter } from "@serenity-is/corelib";
-import { Lookup } from "@serenity-is/corelib/q";
+import { Decorators, Formatter, Lookup } from "@serenity-is/corelib";
 import { FormatterContext } from "@serenity-is/sleekgrid";
 import { GenreRow } from "@/ServerTypes/MovieDB/GenreRow";
 
-@Decorators.registerFormatter('MovieTutorial.MovieDB.GenresFormatter')
-export class GenresFormatter implements Formatter {
+let lookup: Lookup<GenreRow>;
+let promise: Promise<Lookup<GenreRow>>;
 
-    static lookup: Lookup<GenreRow>;
-    static promise: Promise<any>;
+@Decorators.registerFormatter('Serenity.Demo.Northwind.GenresFormatter')
+export class GenresFormatter implements Formatter {
 
     format(ctx: FormatterContext) {
 
-        var idList = ctx.value as number[];
+        let idList = ctx.value as string[];
         if (!idList || !idList.length)
             return "";
-        
-        if (!GenresFormatter.lookup) {
-            if (!GenresFormatter.promise) {
-                GenresFormatter.promise = GenreRow.getLookupAsync().then(lookup => {
-                    GenresFormatter.lookup = lookup;
-                    ctx.grid?.invalidate();
-                }).catch(() => GenresFormatter.promise = null);
-            }
 
-            return `<i class="fa fa-spinner"></i>`;
+        let byId = lookup?.itemById;
+        if (byId) {
+            return idList.map(x => {
+                var z = byId[x];
+                return ctx.escape(z == null ? x : z.Name);
+            }).join(", ");
         }
 
-        var byId = GenresFormatter.lookup.itemById;
-        return idList.map(x => {
-            var z = byId[x];
-            return ctx.escape(z == null ? x : z.Name);
-        }).join(", ");
+        promise ??= GenreRow.getLookupAsync().then(l => {
+            lookup = l;
+            try {
+                ctx.grid?.invalidate();
+            }
+            finally {
+                lookup = null;
+                promise = null;
+            }
+        }).catch(() => promise = null);
+
+        return `<i class="fa fa-spinner"></i>`;
     }
 }
 ```
@@ -221,49 +224,19 @@ Since we know that this formatter will be applied to a column with a `List<int>`
 If the array is either empty or null, it's safe to return an empty string:
 
 ```typescript
-var idList = ctx.value as number[];
+let idList = ctx.value as number[];
 if (!idList || !idList.length)
     return "";
 ```
 
-Next, we check if we already have a reference to the Genre lookup. For this example, we load the Genre lookup asynchronously to avoid blocking the browser UI thread. Once we load the lookup for the first time, we set it in the `GenresFormatter.lookup` static variable, preventing the need to reload it with each render.
+Next, we check if we already have a reference to the Genre lookup and its `itemById` property. For this example, we load the Genre lookup asynchronously to avoid blocking the browser UI thread. Once we load the lookup for the first time, we set it in the `lookup` variable, preventing the need to reload it with each render.
 
 ```typescript
-if (!GenresFormatter.lookup) {
-```
-
-We then verify if there is an existing asynchronous call in progress to load the lookup:
-
-```typescript
-if (!GenresFormatter.promise) {
-```
-
-If there is no ongoing promise, it means this is the first time, so we attempt to load the Genre lookup asynchronously:
-
-```typescript
-GenresFormatter.promise = GenreRow.getLookupAsync().then(lookup => {
-    //...
-}).catch(() => GenresFormatter.promise = null);
-```
-
-Once the promise completes, we set the static lookup variable and trigger a grid re-render:
-
-```typescript
-GenresFormatter.lookup = lookup;
-ctx.grid?.invalidate();
-```
-
-While loading is in progress, we return a spinner icon from the formatter:
-
-```typescript
-return `<i class="fa fa-spinner"></i>`;
+let byId = lookup?.itemById;
+if (byId) {
 ```
 
 If the lookup is already loaded, it contains a dictionary of *Genre* rows in its *itemById* property:
-
-```typescript
-var byId = GenresFormatter.lookup.itemById;
-```
 
 We proceed to map the ID values in our *idList* to their corresponding Genre names using the *Array.map* function in JavaScript. This operation is akin to a LINQ Select statement:
 
@@ -275,6 +248,39 @@ return idList.map(x => {
 ```
 
 If we can find the genre row corresponding to a specific ID, we return its Name value. We also ensure that the genre name is HTML encoded in case it contains invalid HTML characters like `<`, `>`, or `&`. For this encoding, we make use of the ctx.escape function.
+
+If the lookup is not yet available, we verify if there is an existing asynchronous call in progress to load the lookup and create a promise if not by calling the `getLookupAsync` method:
+
+```typescript
+promise ??= GenreRow.getLookupAsync().then(l => {
+```
+
+This way we avoid multiple successive calls to getLookupAsync as this formatter is called for every cell in the `GenderList` of the grid. 
+
+Once the promise completes, we set the lookup variable and trigger a grid re-render:
+
+```typescript
+lookup = l;
+try {
+    ctx.grid?.invalidate();
+}
+```
+
+After re-rendering is complete we set the promise and lookup variables to null.
+
+```typescript
+finally {
+    lookup = null;
+    promise = null;
+}
+}).catch(() => promise = null);
+```
+
+While loading is in progress, we return a spinner icon from the formatter:
+
+```typescript
+return `<i class="fa fa-spinner"></i>`;
+```
 
 ## Applying GenresFormatter to the GenreList Column
 

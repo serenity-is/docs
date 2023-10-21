@@ -15,7 +15,7 @@ public class DefaultDB_20221114_1703_MovieData : AutoReversingMigration
 {
     public override void Up()
     {
-        Insert.IntoTable("Movie").InSchema("mov")
+        Insert.IntoTable("Movie")
             .Row(new
             {
                 Title = "The Matrix",
@@ -135,7 +135,7 @@ export class MovieGrid extends EntityGrid<MovieRow, any> {
 What about field titles? It is not as critical as field names but can be useful for localization purposes (if you later decide to translate it):
 
 ```ts
-import { localText } from '@serenity-is/corelib/q';
+import { localText } from '@serenity-is/corelib';
 //..
 export class MovieGrid extends EntityGrid<MovieRow, any> {
     // ...
@@ -143,7 +143,7 @@ export class MovieGrid extends EntityGrid<MovieRow, any> {
         const txt = s => localText(`Db.${MovieRow.localTextPrefix}.${s}`);
         const fld = MovieRow.Fields;
         return [
-            { name: "", title: "all" },
+            { name: "", title: "All" },
             { name: fld.Description, title: txt(fld.Description) },
             { name: fld.Storyline, title: txt(fld.Storyline) },
             { name: fld.Year, title: txt(fld.Year) }

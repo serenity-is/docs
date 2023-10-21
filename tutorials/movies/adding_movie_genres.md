@@ -16,14 +16,14 @@ public class DefaultDB_20221114_1836_GenreTable : AutoReversingMigration
 {
     public override void Up()
     {
-        Create.Table("Genre").InSchema("mov")
+        Create.Table("Genre")
             .WithColumn("GenreId").AsInt32().NotNullable()
                 .PrimaryKey().Identity()
             .WithColumn("Name").AsString(100).NotNullable();
 
-        Alter.Table("Movie").InSchema("mov")
+        Alter.Table("Movie")
             .AddColumn("GenreId").AsInt32().Nullable()
-                .ForeignKey("FK_Movie_GenreId", "mov", "Genre", "GenreId");
+                .ForeignKey("FK_Movie_GenreId", "Genre", "GenreId");
     }
 }
 ```
@@ -43,9 +43,9 @@ dotnet sergen g
 Specify the following parameters:
 
 - **Connection Key**: Default
-- **Table Name**: mov.Genre
+- **Table Name**: dbo.Genre
 - **Module Name**: MovieDB
-- **Entity Identifier**: Genre
+- **Class Identifier**: Genre
 - **Permission Key**: Administration:General
 - **What to Generate**: All
 
@@ -77,7 +77,7 @@ public class DefaultDB_20221114_1844_SampleGenres : AutoReversingMigration
 {
     public override void Up()
     {
-        Insert.IntoTable("Genre").InSchema("mov")
+        Insert.IntoTable("Genre")
             .Row(new { Name = "Action" })
             .Row(new { Name = "Drama" })
             .Row(new { Name = "Comedy" })
@@ -135,7 +135,12 @@ In the provided code:
     LEFT JOIN Genre jGenre on t0.GenreId = jGenre.GenreId 
     ```
 
-- We've added a new field, *GenreName*, which is not present in the Movie table but is derived from the Genre table. By using the `Expression` attribute and specifying `$"{jGenre}.Name"`, we indicate that this field represents an SQL expression originating from the `jGenre` join.
+- We've added a new field, *GenreName*, which is not present in the Movie table but is derived from the Genre table. By using the `Expression` attribute and specifying `$"{jGenre}.Name"`, we indicate that this field represents an SQL expression originating from the `jGenre` join. We could also use `Origin` attribute instead of the `Expression` attribute like below which is functionally equivalent but using `Origin` and `nameof` is recommended to avoid typos:
+
+   ```sql
+    [DisplayName("Genre"), Origin(jGenre, nameof(GenreRow.Name))]
+    public string GenreName { get => fields.GenreName[this]; set => fields.GenreName[this] = value; }
+   ```
 
 In essence, these code modifications define the relationship between the Movie and Genre tables and ensure that the correct data is retrieved when needed.
 
@@ -154,6 +159,8 @@ Additionally, Serene templates enable SQL query logging by default so that you c
     // ...
 }
 ```
+
+![SQL logging in debug console](img/sql-logging-debug-console.png)
 
 ## Adding Genre Selection to the Movie Form
 
@@ -192,6 +199,8 @@ public sealed class GenreRow : Row<GenreRow.RowFields>, IIdRow, INameRow
 ```
 
 By adding the `[LookupScript]` attribute to the `GenreRow` class, you're specifying that a lookup script is associated with the Genre table.
+
+> Note that lookups are only recommended for small tables that change rarely. For large or frequently modified ones, don't define a LookupScript and prefer `ServiceLookupEditor` which works via List service calls.
 
 After making this change, rebuild your project and launch the application. Once you've logged in, open the developer console by pressing F12 in your browser.
 

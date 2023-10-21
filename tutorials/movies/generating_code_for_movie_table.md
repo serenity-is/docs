@@ -13,7 +13,7 @@ Since ASP.NET Core has cross-platform support, the .NET Core version of Sergen c
 
 3. Type `dotnet sergen g` to open the Sergen code generation UI.
 
-![Dotnet Sergen G](img/dotnetsergeng.png)
+![Dotnet Sergen G](img/dotnet-sergen-g.png)
 
 > If you encounter an error, type `dotnet restore` and `dotnet tool restore` before running Sergen, and make sure you are inside the `MovieTutorial.Web` directory.
 
@@ -23,11 +23,13 @@ You can navigate through the connections using the up and down arrow keys. Selec
 
 After pressing `Enter`, you'll receive a list of tables in that database:
 
-![Dotnet Sergen G](img/dotnetsergencon.png)
+![Sergen Movie Selected](img/dotnet-sergen-movie.png)
 
-Navigate using the up down arrow keys and select the `mov.Movie` table by pressing Space. Then, press `Enter` to confirm your selection.
+Navigate using the up down arrow keys and select the `dbo.Movie` table by pressing Space. Then, press `Enter` to confirm your selection.
 
 Next, Sergen will prompt you for a module name. Please enter `MovieDB`.
+
+![Sergen Module](img/dotnet-sergen-module.png)
 
 > In Serenity terms, a module is a logical group of pages that share a common purpose. 
 > 
@@ -43,6 +45,8 @@ Next, Sergen will prompt you for a module name. Please enter `MovieDB`.
 
 When prompted, please enter `Movie` as the class identifier.
 
+![Sergen Movie Identifier](img/sergen-movie-identifier.png)
+
 Typically, the class identifier corresponds to the table name. However, in some cases, table names might have underscores or other invalid characters. In such situations, you have the flexibility to choose an appropriate name for your entity in the generated code, as long as it's a valid C# identifier.
 
 Since our table name is *Movie*, which is a valid and appropriate C# identifier, let's use *Movie* as the entity identifier. Our entity class will be named *MovieRow*.
@@ -55,14 +59,15 @@ The identifier must always be in Pascal case, starting with a CAPITAL letter. In
 
 Leave permission as `Administration:General` and press enter again.
 
-![Dotnet Sergen G](img/dotnetsergenprm.png)
 In Serenity, access control to resources (pages, services, etc.) is managed using permission keys, which are simple strings. Users or roles are granted these permissions.
 
 For our Movie page, it will be used exclusively by administrative users (or perhaps content moderators in the future). Therefore, let's set the permission to `Administration:General` for now. In the Serene template, by default, only the `admin` user has this permission.
 
-Next, Sergen will ask you which files to generate. Select the **All** option, which includes Row, Repository & Service, User Interface, and Custom, and press ENTER one last time.
+![Sergen what to generate](img/dotnet-sergen-whattogenerate.png)
 
-> If you don't need a UI for a particular entity, you can choose **Row** and **Repository & Service** only.If you only want an entity class and not request handlers or service access, select only **Row**.
+Next, Sergen will ask you which files to generate. By default the **All** option is preselected, which includes Row, Repository & Service, User Interface, and Custom. Press ENTER one last time.
+
+> If you don't need a UI for a particular entity, you can choose **Row** and **Services** only. If you only want an entity class and not request handlers or service access, select only **Row**.
 
 You can now exit the command prompt and return to Visual Studio to continue your work.
 

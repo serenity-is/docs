@@ -7,9 +7,7 @@ In this tutorial, we will create an editing interface for a site similar to IMDB
 
 ## Create a new project named *MovieTutorial*
 
-To create a new project, start Visual Studio and click `Create a New Project` on the welcome screen under the pane labelled `Get Started`.
-
-![VS Welcome Screen](img/vs_welcome_new.png)
+To create a new project, start Visual Studio and click `Create a New Project` on the welcome screen.
 
 If you are already in the IDE and not the welcome screen, close the current solution by clicking `File -> Close Solution`, then click `File -> New Project`.
 

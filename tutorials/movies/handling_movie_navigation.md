@@ -48,7 +48,7 @@ After making these changes, the navigation menu will look like this:
 
 ## Troubleshooting Some Issues with Visual Studio
 
-You may have noticed that Visual Studio doesn't allow you to modify code while your site is running. When you stop debugging, your site also stops, preventing you from keeping the browser window open and refreshing it after rebuilding your project.
+While your application is running, Visual Studio may not allow you to modify code. If you stop debugging, the browser window may also close.
 
 While there is a `Hot Reload` feature, it might not always reflect your changes, especially when you modify attributes or other critical parts.
 

@@ -36,9 +36,7 @@ public class DefaultDB_20221114_1505_MovieTable : AutoReversingMigration
 {
     public override void Up()
     {
-        Create.Schema("mov");
-
-        Create.Table("Movie").InSchema("mov")
+        Create.Table("Movie")
             .WithColumn("MovieId").AsInt32()
                 .Identity().PrimaryKey().NotNullable()
             .WithColumn("Title").AsString(200).NotNullable()
@@ -51,11 +49,7 @@ public class DefaultDB_20221114_1505_MovieTable : AutoReversingMigration
 }
 ```
 
-In `Up()` method we specify that this migration, when applied, will create a schema named `mov`. We will use a separate schema for movie tables to avoid clashes with existing tables.
-
-> Note: Not all database types support schemas. If you are using a database like Sqlite, omit the Create.Schema and InSchema calls, and instead prefix the table name, like 'mov_Movie'.
-
-This migration will also create a table named `Movie` with fields such as `MovieId`, `Title`, `Description`... within the `mov` schema.
+In `Up()` method we specify that this migration, when applied, will create a table named `Movie` with fields such as `MovieId`, `Title`, `Description`, etc.
 
 On top of our class we applied a Migration attribute.
 
@@ -72,6 +66,20 @@ Migrations are executed in key order, and using a sortable datetime pattern for 
 Please ensure that you consistently use the same number of digits for migration keys. In this example, we use 12 digits (e.g., 20221114_1505). To achieve this, zero-pad single-digit month, day, hour, and minute values to two digits. Neglecting this consistency can lead to complications in the migration order and may result in migration errors due to migrations running in an unexpected sequence.
 
 The `[DefaultDB]` attribute indicates that this migration applies to the `Default` database. It identifies which migrations should be run against which database, especially if your application uses multiple databases.
+
+This attribute is defined in `Migrations/DefaultDB/DefaultDBAttribute.cs` and is a subclass of the FluentMigrator's `[Tags]` attribute:
+
+```cs
+namespace MovieTutorial.Migrations;
+
+public class DefaultDBAttribute : FluentMigrator.TagsAttribute
+{
+    public DefaultDBAttribute()
+        : base("DefaultDB")
+    {
+    }
+}
+```
 
 ## Running Migrations
 
@@ -117,7 +125,7 @@ Now press `F5` to run your application and create the `Movie` table in the defau
 
 To verify that the migration has been executed, you can use `Sql Server Management Studio` or go to `Visual Studio -> Tools -> Connect To Database`. Open a connection to the `MovieTutorial_Default_v1` database on the server `(localdb)\MsSqlLocalDB`.
 
-In the SQL Object Explorer, you should see the `[mov].[Movie]` table.
+In the SQL Object Explorer, you should see the `[dbo].[Movie]` table.
 
 Additionally, if you view the data in the `[dbo].[VersionInfo]` table, the Version column in the last row of the table should be `20221114150500`. This indicates that the migration with that version number (migration key) has already been executed on this database. 
 

@@ -31,7 +31,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB;
 
-[DefaultDB, Migration(20221114_1505)]
+[DefaultDB, MigrationKey(20221114_1505)]
 public class DefaultDB_20221114_1505_MovieTable : AutoReversingMigration
 {
     public override void Up()
@@ -54,7 +54,7 @@ In `Up()` method we specify that this migration, when applied, will create a tab
 On top of our class we applied a Migration attribute.
 
 ```cs
-[Migration(20221114_1505)]
+[MigrationKey(20221114_1505)]
 ```
 
 This specifies a unique key for this migration. After a migration is applied to a database, its key is recorded in a special table specific to FluentMigrator (`[dbo].[VersionInfo]`), preventing the same migration from being applied again.
@@ -67,19 +67,7 @@ Please ensure that you consistently use the same number of digits for migration 
 
 The `[DefaultDB]` attribute indicates that this migration applies to the `Default` database. It identifies which migrations should be run against which database, especially if your application uses multiple databases.
 
-This attribute is defined in `Migrations/DefaultDB/DefaultDBAttribute.cs` and is a subclass of the FluentMigrator's `[Tags]` attribute:
-
-```cs
-namespace MovieTutorial.Migrations;
-
-public class DefaultDBAttribute : FluentMigrator.TagsAttribute
-{
-    public DefaultDBAttribute()
-        : base("DefaultDB")
-    {
-    }
-}
-```
+It is a short version of `[FluentMigrator.Tags("DefaultDB")]` and is defined in Serenity.Extensions namespace.
 
 ## Running Migrations
 

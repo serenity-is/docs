@@ -72,7 +72,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB;
     
-[DefaultDB, Migration(20221114_1844)]
+[DefaultDB, MigrationKey(20221114_1844)]
 public class DefaultDB_20221114_1844_SampleGenres : AutoReversingMigration
 {
     public override void Up()

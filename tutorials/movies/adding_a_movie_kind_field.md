@@ -11,7 +11,7 @@ If you want to include TV series and mini-series in your movie database, you'll 
 
     namespace MovieTutorial.Migrations.DefaultDB;
    
-    [DefaultDB, Migration(20221114_1825)]
+    [DefaultDB, MigrationKey(20221114_1825)]
     public class DefaultDB_20221114_1825_MovieKind : AutoReversingMigration
     {
         public override void Up()

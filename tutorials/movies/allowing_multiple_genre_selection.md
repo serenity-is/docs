@@ -9,7 +9,7 @@ using FluentMigrator;
 
 namespace MovieTutorial.Migrations.DefaultDB;
 
-[DefaultDB, Migration(20221115_1405)]
+[DefaultDB, MigrationKey(20221115_1405)]
 public class DefaultDB_20221115_1405_MovieGenres : Migration
 {
     public override void Up()

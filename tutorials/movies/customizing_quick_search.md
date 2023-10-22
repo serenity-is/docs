@@ -10,7 +10,7 @@ If you choose to use the migration file, create a new migration with a suitable 
 ```cs
 namespace MovieTutorial.Migrations.DefaultDB;
 
-[DefaultDB, Migration(20221114_1703)]
+[DefaultDB, MigrationKey(20221114_1703)]
 public class DefaultDB_20221114_1703_MovieData : AutoReversingMigration
 {
     public override void Up()

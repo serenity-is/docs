@@ -178,7 +178,7 @@ import { GenreRow } from "@/ServerTypes/MovieDB/GenreRow";
 let lookup: Lookup<GenreRow>;
 let promise: Promise<Lookup<GenreRow>>;
 
-@Decorators.registerFormatter('Serenity.Demo.Northwind.GenresFormatter')
+@Decorators.registerFormatter('MovieTutorial.GenresFormatter')
 export class GenresFormatter implements Formatter {
 
     format(ctx: FormatterContext) {
@@ -284,7 +284,7 @@ return `<i class="fa fa-spinner"></i>`;
 
 ## Applying GenresFormatter to the GenreList Column
 
-Now that we've defined a new formatter class, we need to rebuild so that we can reference *GenresFormatter* in server-side code.
+Now that we've defined a new formatter class, we need to rebuild the project so that we can reference *GenresFormatter* in server-side code.
 
 After building and transforming, open the `MovieColumns.cs` file and attach this formatter to the `GenreList` property:
 

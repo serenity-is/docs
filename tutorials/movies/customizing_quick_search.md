@@ -43,7 +43,7 @@ If you want Serenity to search in additional fields, like "Description" and "Sto
 public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
     //...
-    [DisplayName("Title"), Size(200), NotNull, QuickSearch, NameProperty]
+    [DisplayName("Title"), Size(200), NotNull, NameProperty, QuickSearch]
     public string Title { get => fields.Title[this]; set => fields.Title[this] = value; }
 
     [DisplayName("Description"), Size(1000), QuickSearch]
@@ -62,7 +62,7 @@ By adding the `QuickSearch` attribute to the "Description" and "Storyline" field
 The `QuickSearch` attribute, by default, performs a search using a "contains" filter. However, you can adjust its behavior by using different search types. For example, if you want to show rows that start with the typed text, you can modify the attribute like this:
 
 ```cs
-[DisplayName("Title"), Size(200), NotNull, QuickSearch(SearchType.StartsWith)]
+[DisplayName("Title"), Size(200), NotNull, NameProperty, QuickSearch(SearchType.StartsWith)]
 public string Title
 ```
 

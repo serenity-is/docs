@@ -166,9 +166,9 @@ The `GenreList` column now contains a list of integer values, which can be liken
 
 However, we would prefer to have genre names instead of genre IDs, as it would make the information clearer. Therefore, we need to *format* these values by converting the Genre IDs into their corresponding Genre names.
 
-## Creating the `GenresFormatter` Class
+## Creating the `GenreListFormatter` Class
 
-It's time to create a SlickGrid column formatter. To do this, create a file named `GenresFormatter.ts` next to `MovieGrid.ts`:
+It's time to create a SlickGrid column formatter. To do this, create a file named `GenreListFormatter.ts` next to `MovieGrid.ts`:
 
 ```typescript
 import { Decorators, Formatter, Lookup } from "@serenity-is/corelib";
@@ -178,8 +178,8 @@ import { GenreRow } from "@/ServerTypes/MovieDB/GenreRow";
 let lookup: Lookup<GenreRow>;
 let promise: Promise<Lookup<GenreRow>>;
 
-@Decorators.registerFormatter('MovieTutorial.GenresFormatter')
-export class GenresFormatter implements Formatter {
+@Decorators.registerFormatter('MovieTutorial.GenreListFormatter')
+export class GenreListFormatter implements Formatter {
 
     format(ctx: FormatterContext) {
 
@@ -211,7 +211,7 @@ export class GenresFormatter implements Formatter {
 }
 ```
 
-Above, we introduce a new formatter, *GenresFormatter*, and register it with the Serenity type system using the *@Decorators.registerFormatter* decorator. These decorators serve a purpose similar to .NET attributes.
+Above, we introduce a new formatter, *GenreListFormatter*, and register it with the Serenity type system using the *@Decorators.registerFormatter* decorator. These decorators serve a purpose similar to .NET attributes.
 
 All formatters must implement the Formatter interface, which includes a *format* method that accepts a *ctx* parameter of type *FormatterContext*.
 
@@ -282,9 +282,9 @@ While loading is in progress, we return a spinner icon from the formatter:
 return `<i class="fa fa-spinner"></i>`;
 ```
 
-## Applying GenresFormatter to the GenreList Column
+## Applying GenreListFormatter to the GenreList Column
 
-Now that we've defined a new formatter class, we need to rebuild the project so that we can reference *GenresFormatter* in server-side code.
+Now that we've defined a new formatter class, we need to rebuild the project so that we can reference *GenreListFormatter* in server-side code.
 
 After building and transforming, open the `MovieColumns.cs` file and attach this formatter to the `GenreList` property:
 
@@ -292,7 +292,7 @@ After building and transforming, open the `MovieColumns.cs` file and attach this
 public class MovieColumns
 {
     //...
-    [Width(200), GenresFormatter]
+    [Width(200), GenreListFormatter]
     public List<int> GenreList { get; set; }
 }
 ```

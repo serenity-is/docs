@@ -14,7 +14,7 @@
   * [Movie Database](tutorials/movies/00-introduction.md)
     * [Creating Movie Table](tutorials/movies/01-creating-movie-table.md)
     * [Generating Code For Movie Table](tutorials/movies/02-generating-code-for-movie-table.md)
-    * [Customizing Movie UI](tutorials/movies/customizing_movie_interface.md)
+    * [Customizing Movie UI](tutorials/movies/03-customizing-movie-ui.md)
     * [Handling Movie Navigation](tutorials/movies/handling_movie_navigation.md)
     * [Customizing Quick Search](tutorials/movies/customizing_quick_search.md)
     * [Adding a Movie Kind Field](tutorials/movies/adding_a_movie_kind_field.md)

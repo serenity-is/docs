@@ -13,7 +13,7 @@
 * Tutorials
   * [Movie Database](tutorials/movies/00-introduction.md)
     * [Creating Movie Table](tutorials/movies/01-creating-movie-table.md)
-    * [Generating Code For Movie Table](tutorials/movies/generating_code_for_movie_table.md)
+    * [Generating Code For Movie Table](tutorials/movies/02-generating-code-for-movie-table.md)
     * [Customizing Movie UI](tutorials/movies/customizing_movie_interface.md)
     * [Handling Movie Navigation](tutorials/movies/handling_movie_navigation.md)
     * [Customizing Quick Search](tutorials/movies/customizing_quick_search.md)

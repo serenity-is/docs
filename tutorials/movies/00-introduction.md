@@ -2,7 +2,7 @@
 
 This tutorial will guide you through the process of creating an editing interface for a website that resembles IMDB.
 
-![Creating Project Animation](img/mdb-00-introduction.webp)
+![Creating Project Animation](img/00-introduction.webp)
 
 > Before we begin, please ensure that you have the necessary prerequisites. Refer to the [Getting Started](../../getting_started/README.md) section for more information.
 

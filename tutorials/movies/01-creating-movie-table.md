@@ -1,6 +1,6 @@
 # Creating Movie Table
 
-![Creating Movie Table Animation](img/mdb-01-creating-movie-table.webp)
+![Creating Movie Table Animation](img/01-creating-movie-table.webp)
 
 To store a list of movies, we'll need a `Movie` table. While you could create this table using traditional SQL Management Studio methods, we prefer to create it as a *migration* using *Fluent Migrator*. Fluent Migrator is a .NET migration framework, similar to Ruby on Rails Migrations. Migrations provide a structured approach to modifying your database schema, eliminating the need for manual execution of numerous SQL scripts by each developer involved. Migrations effectively address the challenge of evolving a database schema across multiple databases, such as the developer's local database, the test database, and the production database. Database schema changes are described in C# classes that can be version-controlled. For more information, visit [FluentMigrator on GitHub](https://github.com/schambers/fluentmigrator).
 

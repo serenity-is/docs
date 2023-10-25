@@ -3,6 +3,8 @@
 
 In this tutorial, we will create an editing interface for a site similar to IMDB.
 
+![Creating Project Animation](img/mdb-00-introduction.webp)
+
 > Before starting, please ensure that you have the prerequisites. See the [Getting Started](../../getting_started/README.md) section for more information.
 
 ## Create a new project named *MovieTutorial*

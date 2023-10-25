@@ -11,7 +11,7 @@
     * [Localization](serene_tour/localization.md)
     * [User and Role Management](serene_tour/user-management.md)
 * Tutorials
-  * [Movie Database](tutorials/00-introduction.md)
+  * [Movie Database](tutorials/movies/00-introduction.md)
     * [Creating Movie Table](tutorials/movies/01-creating-movie-table.md)
     * [Generating Code For Movie Table](tutorials/movies/generating_code_for_movie_table.md)
     * [Customizing Movie UI](tutorials/movies/customizing_movie_interface.md)

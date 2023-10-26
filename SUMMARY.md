@@ -18,7 +18,7 @@
     * [Handling Movie Navigation](tutorials/movies/04-handling-movie-navigation.md)
     * [Customizing Quick Search](tutorials/movies/05-customizing-quick-search.md)
     * [Adding a Movie Kind Field](tutorials/movies/06-adding-movie-kind-field.md)
-    * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
+    * [Adding Movie Genres](tutorials/movies/07-adding-movie-genres.md)
     * [Allowing Multiple Genre Selection](tutorials/movies/allowing_multiple_genre_selection.md)
     * [Filtering with Multiple Genre List](tutorials/movies/filtering_with_multiple_genre_list.md)
     * [Keeping Record of the Cast](tutorials/movies/keeping-record-of-the-cast.md)

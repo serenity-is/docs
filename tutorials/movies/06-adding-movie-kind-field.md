@@ -90,11 +90,7 @@ To include TV series and mini-series in your movie database, you'll need to add 
 
 ![Movie Kind Selection](img/movies-kind-in-form.png)
 
-## Adding a Default Value for Movie Kind
-
-Since "Kind" is a required field, you need to provide a default value in the "Add Movie" dialog to avoid validation errors. Most movies will likely be feature films, so let's set "Film" as the default value for the "Kind" property.
-
-8. To add a default value for the "Kind" property, modify the `MovieRow.cs` file by adding a `DefaultValue` attribute like this:
+8. Since "Kind" is a required field, you need to provide a default value in the "Add Movie" dialog to avoid validation errors. Most movies will likely be feature films, so let's set "Film" as the default value for the "Kind" property. To add a default value for the "Kind" property, modify the `MovieRow.cs` file by adding a `DefaultValue` attribute like this:
 
    ```csharp
    [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]

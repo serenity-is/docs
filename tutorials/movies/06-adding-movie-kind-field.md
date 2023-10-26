@@ -1,8 +1,10 @@
 # Adding a Movie Kind Field
 
-If you want to include TV series and mini-series in your movie database, you'll need to add a new field called "MovieKind".Since we didn't add it during the initial table creation, we'll create a new migration to add it to our database. 
+To include TV series and mini-series in your movie database, you'll need to add a new field called "MovieKind." Since we didn't include it during the initial table creation, we'll create a new migration to add it to our database.
 
-**Note:** Don't modify existing migrations, as they won't run again.
+![Adding a Movie Kind Field Animation](img/06-adding-movie-kind-field.webp)
+
+**Note:** Do not modify existing migrations, as they will not run again.
 
 1. Create a new migration file under *Migrations/DefaultDB/DefaultDB_20221114_1825_MovieKind.cs*:
 
@@ -72,7 +74,19 @@ If you want to include TV series and mini-series in your movie database, you'll 
     }
     ```
 
-6. Rebuild your solution to ensure there are no build errors and run your application. Now, in the "Add Movie" dialog, you'll have a dropdown to select the movie kind.
+6. To make the `Kind` field available in the movie grid, you need to modify the `MovieColumns.cs` file:
+
+    ```csharp
+    // ...
+    public class MovieColumns
+    {
+        // ...
+        public int Runtime { get; set; }
+        public MovieKind Kind { get; set; }
+    }
+    ```
+
+7. Rebuild your solution to ensure there are no build errors and run your application. Now, in the "Add Movie" dialog, you'll have a dropdown to select the movie kind.
 
 ![Movie Kind Selection](img/movies-kind-in-form.png)
 
@@ -80,13 +94,13 @@ If you want to include TV series and mini-series in your movie database, you'll 
 
 Since "Kind" is a required field, you need to provide a default value in the "Add Movie" dialog to avoid validation errors. Most movies will likely be feature films, so let's set "Film" as the default value for the "Kind" property.
 
-7. To add a default value for the "Kind" property, modify the `MovieRow.cs` file by adding a `DefaultValue` attribute like this:
+8. To add a default value for the "Kind" property, modify the `MovieRow.cs` file by adding a `DefaultValue` attribute like this:
 
    ```csharp
    [DisplayName("Kind"), NotNull, DefaultValue(MovieKind.Film)]
    public MovieKind? Kind { get => fields.Kind[this]; set => fields.Kind[this] = value; }
    ```
 
-Now, when you open the "Add Movie" dialog, the "Kind" field will be pre-filled with "Film."
+Now, when you open the "Add Movie" dialog, the "Kind" field will be pre-filled with "Film".
 
-![Movie Kind Prefilled](img/movie-kind-prefilled.png)
+![Movie Kind Pre-filled](img/movie-kind-pre-filled.png)

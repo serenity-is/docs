@@ -16,7 +16,7 @@
     * [Generating Code For Movie Table](tutorials/movies/02-generating-code-for-movie-table.md)
     * [Customizing Movie UI](tutorials/movies/03-customizing-movie-ui.md)
     * [Handling Movie Navigation](tutorials/movies/04-handling-movie-navigation.md)
-    * [Customizing Quick Search](tutorials/movies/customizing_quick_search.md)
+    * [Customizing Quick Search](tutorials/movies/05-customizing-quick-search.md)
     * [Adding a Movie Kind Field](tutorials/movies/adding_a_movie_kind_field.md)
     * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
     * [Allowing Multiple Genre Selection](tutorials/movies/allowing_multiple_genre_selection.md)

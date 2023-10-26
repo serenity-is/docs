@@ -1,7 +1,5 @@
 # Handling Movie Navigation
 
-## Setting Navigation Item Title and Icon
-
 When Sergen generated code for the Movie table, it also created a navigation item entry. In Serene, navigation items are created using special assembly attributes.
 
 Open the `MovieDBNavigation.cs` file in the `MovieDB` module folder. You'll find this line in the file:
@@ -14,6 +12,8 @@ Open the `MovieDBNavigation.cs` file in the `MovieDB` module folder. You'll find
 The first argument to this attribute is the display order for this navigation item (`int.MaxValue`). Since we currently have only one navigation item in the `Movie` section, we don't need to worry about ordering for now.
 
 The second parameter is the navigation title in the format `Section Title/Link Title`, with a slash (`/`) separating the section and navigation items.
+
+![Handling Movie Navigation Animation](img/04-handling-movie-navigation.webp)
 
 Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`:
 
@@ -28,7 +28,7 @@ The Serene template includes Font Awesome, while StartSharp utilizes `Line Aweso
 
 ## Ordering Navigation Sections
 
-By default, the `Movie Database` menu, which is auto-generated, has the lowest order of its children (`int.MaxValue`). This places it at the bottom of the left navigation menu.
+By default, the `Movie Database` menu, which is auto-generated, has `int.MaxValue` as the order, which is calculated from the lowest order of its children. This places it at the bottom of the left navigation menu.
 
 To move it above the `Northwind` menu, which has an order value of `7000` (as seen in the Northwind menu definition [here](https://github.com/serenity-is/common-features/blob/master/src/Serenity.Demo.Northwind/Modules/Shared/NorthwindNavigation.cs)), we can use an order value lower than `7000`, such as `6000`. This new order value will place our `Movie Database` menu before the `Northwind` menu:
 

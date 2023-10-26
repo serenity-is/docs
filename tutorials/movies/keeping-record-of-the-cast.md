@@ -1,4 +1,4 @@
-# Recording Actors and Their Roles
+# Keeping Record of the Cast
 
 If we want to maintain a record of actors and the characters they portrayed, it might look something like this:
 
@@ -152,7 +152,7 @@ In the title of the edit dialog, only the first name of the person (*Carrie-Anne
 
 ```csharp
 //...
-public sealed class PersonRow : Row, IIdRow, INameRow
+public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 {
     //... Remove QuickSearch and NameProperty from FirstName
     [DisplayName("First Name"), Size(50), NotNull]

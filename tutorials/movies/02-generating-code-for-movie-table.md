@@ -4,7 +4,9 @@
 
 After confirming the existence of the `Movie` table in the database, you can employ the Serenity Code Generator (`dotnet sergen`) to create the initial editing interface.
 
-![Generating Code for Movie Table Animation](img/02-generating-code-for-movie-table.webp)
+<video alt="Generating Code for Movie Table Animation" controls>
+  <source src="img/02-generating-code-for-movie-table.mp4" type="video/mp4">
+</video>
 
 Since ASP.NET Core offers cross-platform support, the .NET Core version of Sergen can run on macOS, Linux, and Windows. Presently, it has a console-based user interface.
 

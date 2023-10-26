@@ -4,7 +4,9 @@
 
 Before we dive into the upcoming sections, it's essential to have some sample data. You have two options: manually entering data or saving time by using the sample data provided in a migration file. You can find the migration file [here](https://gist.github.com/volkanceylan/0b3e71de6247ad9963e33889f85003bc).
 
-![Customizing Quick Search Animation](img/05-customizing-quick-search.webp)
+<video alt="Customizing Quick Search Animation" controls>
+  <source src="img/05-customizing-quick-search.mp4" type="video/mp4">
+</video>
 
 If you opt for the migration file, create a new migration with a suitable name, like `DefaultDB_20221114_1703_MovieData.cs`. In the `Up` method of this migration, paste the code from the provided gist:
 

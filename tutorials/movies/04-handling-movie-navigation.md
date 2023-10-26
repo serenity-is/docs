@@ -2,6 +2,10 @@
 
 When Sergen generated code for the Movie table, it also created a navigation item entry. In Serene, navigation items are created using special assembly attributes.
 
+<video alt="Handling Movie Navigation Animation" controls>
+  <source src="img/04-handling-movie-navigation.mp4" type="video/mp4">
+</video>
+
 Open the `MovieDBNavigation.cs` file in the `MovieDB` module folder. You'll find this line in the file:
 
 ```cs
@@ -12,8 +16,6 @@ Open the `MovieDBNavigation.cs` file in the `MovieDB` module folder. You'll find
 The first argument to this attribute is the display order for this navigation item (`int.MaxValue`). Since we currently have only one navigation item in the `Movie` section, we don't need to worry about ordering for now.
 
 The second parameter is the navigation title in the format `Section Title/Link Title`, with a slash (`/`) separating the section and navigation items.
-
-![Handling Movie Navigation Animation](img/04-handling-movie-navigation.webp)
 
 Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`:
 

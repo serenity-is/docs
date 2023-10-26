@@ -2,11 +2,13 @@
 
 This tutorial will guide you through the process of creating an editing interface for a website that resembles IMDB.
 
-![Creating Project Animation](img/00-introduction.webp)
-
 > Before we begin, please ensure that you have the necessary prerequisites. Refer to the [Getting Started](../../getting_started/README.md) section for more information.
 
 ## Creating a New Project Named "MovieTutorial"
+
+<video alt="Creating Project Animation" controls>
+  <source src="img/00-introduction.mp4" type="video/mp4">
+</video>
 
 To initiate a new project, launch Visual Studio and click on "Create a New Project" from the welcome screen.
 

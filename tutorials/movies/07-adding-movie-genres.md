@@ -2,7 +2,13 @@
 
 ## Adding Genre Field
 
-To store movie genres in your database, you should create a lookup table. While an enumeration is suitable for the "Kind" field, genres might change over time and are not static. Therefore, it's better to use a table to manage genres. Let's start by creating a migration to generate the Genre table and add a "GenreId" column to the Movie table.
+To store movie genres in your database, you should create a lookup table. While an enumeration is suitable for the "Kind" field, genres might change over time and are not static. Therefore, it's better to use a table to manage genres. 
+
+<video alt="Adding Movie Genres Animation" controls>
+  <source src="img/07-adding-movie-genres.mp4" type="video/mp4">
+</video>
+
+Let's start by creating a migration to generate the Genre table and add a "GenreId" column to the Movie table.
 
 **Migrations/DefaultDB/DefaultDB_20221114_1836_GenreTable.cs**:
 
@@ -37,8 +43,6 @@ public class DefaultDB_20221114_1836_GenreTable : AutoReversingMigration
 ```
 
 This migration creates the "Genre" table and adds a "GenreId" column to the "Movie" table. We also add some sample genres.
-
-![Adding Movie Genres Animation](img/07-adding-movie-genres.webp)
 
 > Note: In reality, a movie can have multiple genres, and in such cases, you would typically use a separate "MovieGenres" table. However, for simplicity, we'll consider a single genre per movie for now. We'll explore how to handle multiple genres later.
 

@@ -1,8 +1,12 @@
-# Allowing Multiple Genre Selection
+# Supporting Multiple Genres per Movie
 
-As requirements change, you may now want to allow the selection of multiple genres for a movie. To achieve this, you need a many-to-many (M-N) mapping table that can link movies to multiple genres.
+As your requirements evolve, you might find the need to allow the selection of multiple genres for a single movie. To achieve this, you'll require a many-to-many (M-N) mapping table that can associate movies with multiple genres.
 
-Let's begin by creating a migration to set up the `MovieGenres` table. Create a new migration file, `Migrations/DefaultDB/DefaultDB_20221115_1405_MovieGenres.cs`, with the following content:
+<video alt="Multiple Genres per Movie Animation" controls>
+  <source src="img/08-multiple-genres-per-movie.mp4" type="video/mp4">
+</video>
+
+Let's begin by creating a migration to set up the `MovieGenres` table. Create a new migration file, `Migrations/DefaultDB/DefaultDB_20221115_1405_MovieGenres.cs`, and include the following content:
 
 ```csharp
 using FluentMigrator;
@@ -10,7 +14,7 @@ using FluentMigrator;
 namespace MovieTutorial.Migrations.DefaultDB;
 
 [DefaultDB, MigrationKey(20221115_1405)]
-public class DefaultDB_20221115_1405_MovieGenres : Migration
+public class DefaultDB_20221115_1405_MovieGenres : ForwardOnlyMigration
 {
     public override void Up()
     {
@@ -18,11 +22,9 @@ public class DefaultDB_20221115_1405_MovieGenres : Migration
             .WithColumn("MovieGenreId").AsInt32()
                 .Identity().PrimaryKey().NotNullable()
             .WithColumn("MovieId").AsInt32().NotNullable()
-                .ForeignKey("FK_MovieGenres_MovieId",
-                    "Movie", "MovieId")
+                .ForeignKey("FK_MovieGenres_MovieId", "Movie", "MovieId")
             .WithColumn("GenreId").AsInt32().NotNullable()
-                .ForeignKey("FK_MovieGenres_GenreId",
-                    "Genre", "GenreId");
+                .ForeignKey("FK_MovieGenres_GenreId", "Genre", "GenreId");
 
         Execute.Sql(
             @"INSERT INTO MovieGenres (MovieId, GenreId) 
@@ -35,20 +37,16 @@ public class DefaultDB_20221115_1405_MovieGenres : Migration
         Delete.Column("GenreId")
             .FromTable("Movie");
     }
-
-    public override void Down()
-    {
-    }
 }
 ```
 
 In this migration, we create the `MovieGenres` table with columns `MovieGenreId`, `MovieId`, and `GenreId`. We also insert existing genre information from the `Movie` table into this new table. Finally, we delete the `GenreId` column and its associated foreign key constraint from the `Movie` table.
 
-After running the migration, we need to remove references to the `GenreId` and `GenreName` properties from the codebase.
+## Removing Single Genre-Related Mappings from the Codebase
 
-## Deleting GenreId Mapping in MovieRow
+After executing the migration, you'll need to eliminate references to the `GenreId` and `GenreName` properties from the codebase.
 
-Remove the `GenreId` and `GenreName` properties and their related field objects from `MovieRow.cs`:
+Remove the `GenreId` and `GenreName` properties along with their related field objects from `MovieRow.cs`:
 
 ```csharp
 [DisplayName("Genre"), ForeignKey(typeof(GenreRow)), LeftJoin(jGenre)]
@@ -62,8 +60,6 @@ Int32Field GenreId;
 StringField GenreName;
 ```
 
-## Deleting GenreName from MovieColumns
-
 Remove the `GenreName` property from `MovieColumns.cs`:
 
 ```csharp
@@ -71,19 +67,17 @@ Remove the `GenreName` property from `MovieColumns.cs`:
 public string GenreName { get; set; }
 ```
 
-## Deleting GenreId in MovieForm
-
 Remove the `GenreId` property from `MovieForm.cs`:
 
 ```csharp
 public int GenreId { get; set; }
 ```
 
-After removing these properties, rebuild your project, and you'll have a working "Movies" page.
+After removing these properties, rebuild your project, and you'll have a functional "Movies" page, albeit without the ability to select multiple genres yet.
 
-## Generating Code for MovieGenres Table
+## Generating Code for the MovieGenres Table
 
-To handle the M-N relationship between movies and genres, we need to generate code for the `MovieGenres` table. Run Serene code generation for the `MovieGenres` table using the following parameters:
+To handle the many-to-many relationship between movies and genres, we need to generate code for the `MovieGenres` table. Run the Serene code generation process for the `MovieGenres` table with the following parameters:
 
 - Connection Key: **Default**
 - Table Name: **MovieGenres**
@@ -92,18 +86,14 @@ To handle the M-N relationship between movies and genres, we need to generate co
 - Permission Key: **Administration:General**
 - What to Generate: **Row & Services**
 
-After generating the code, you can delete the `MovieGenresEndpoint.cs` file, or if you choose to keep it, make sure to delete the `ListExcel` method to avoid build errors.
+## Adding the GenreList Field
 
-## Adding GenreList Field
-
-Now that one movie can have multiple genres, we need to change the way we store genre information. Instead of a single integer property, we'll use a list of integers, specifically `List<int>`. Add the `GenreList` property to the `MovieRow.cs` file:
+Now that a movie can have multiple genres, the way genre information is stored needs to change. Instead of a single integer property, we'll use a list of integers, specifically `List<int>`. Add the `GenreList` property to the `MovieRow.cs` file:
 
 ```csharp
-using System.Collections.Generic;
-
 //...
 [DisplayName("Genres"), LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]
-[LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
+[LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId)]
 public List<int> GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }
 
 public class RowFields : RowFieldsBase
@@ -113,17 +103,17 @@ public class RowFields : RowFieldsBase
 }
 ```
 
-The `GenreList` property has a `[LookupEditor]` attribute just like the previous `GenreId` property but with the added argument `Multiple = true` to enable multiple genre selection. We also use the `[NotMapped]` attribute because there's no corresponding `GenreList` column in the database. This informs Serenity that this property should not be mapped to a database column.
+The `GenreList` property has a `[LookupEditor]` attribute similar to the previous `GenreId` property but with the added argument `Multiple = true` to enable multiple genre selection. We also use the `[NotMapped]` attribute because there's no corresponding `GenreList` column in the database. This informs Serenity that this property should not be mapped to a database column.
 
-We also add a `[LinkingSetRelation]` attribute to specify the M-N relationship between movies and genres:
+We also add a `[LinkingSetRelation]` attribute to specify the many-to-many relationship between movies and genres:
 
 ```csharp
-[LinkingSetRelation(typeof(MovieGenresRow), "MovieId", "GenreId")]
+[LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId)]
 ```
 
-- The first argument specifies the type of the M-N mapping row, which is `MovieGenresRow` in this case.
-- The second argument specifies the property name of the field in the M-N mapping row (`MovieGenresRow`) that matches the `MovieId` property in the current row.
-- The third argument specifies the property name of the field in the M-N mapping row (`MovieGenresRow`) that links multiple genres by their IDs, which corresponds to the `GenreId` property.
+- The first argument specifies the type of the many-to-many mapping row, which is `MovieGenresRow` in this case.
+- The second argument specifies the property name of the field in the many-to-many mapping row (`MovieGenresRow`) that matches the `MovieId` property in the current row.
+- The third argument specifies the property name of the field in the many-to-many mapping row (`MovieGenresRow`) that links multiple genres by their IDs, which corresponds to the `GenreId` property.
 
 The `[LinkingSetRelation]` attribute is crucial for managing this many-to-many relationship.
 
@@ -158,13 +148,11 @@ public class MovieColumns
 }
 ```
 
-This addition results in the following:
+With this addition, the `GenreList` column now contains a list of integer values, which can be thought of as an array in JavaScript. Fortunately, in JavaScript, the `.toString()` method for an array returns items separated by commas. So, for example, for the movie *Fight Club*, we would have *"1,2"*.
 
-![Movie Genres ID List](img/movie-genre-idlist.png)
+However, it would be more informative to have genre names instead of genre IDs
 
-The `GenreList` column now contains a list of integer values, which can be likened to an array in JavaScript. Fortunately, in JavaScript, the `.toString()` method for an array returns items separated by commas, so, for example, for the movie *Fight Club*, we would have *"1,2"*.
-
-However, we would prefer to have genre names instead of genre IDs, as it would make the information clearer. Therefore, we need to *format* these values by converting the Genre IDs into their corresponding Genre names.
+. Therefore, we need to format these values by converting the Genre IDs into their corresponding Genre names.
 
 ## Creating the `GenreListFormatter` Class
 
@@ -211,7 +199,7 @@ export class GenreListFormatter implements Formatter {
 }
 ```
 
-Above, we introduce a new formatter, *GenreListFormatter*, and register it with the Serenity type system using the *@Decorators.registerFormatter* decorator. These decorators serve a purpose similar to .NET attributes.
+Here, we introduce a new formatter, *GenreListFormatter*, and register it with the Serenity type system using the *@Decorators.registerFormatter* decorator. These decorators serve a purpose similar to .NET attributes.
 
 All formatters must implement the Formatter interface, which includes a *format* method that accepts a *ctx* parameter of type *FormatterContext*.
 

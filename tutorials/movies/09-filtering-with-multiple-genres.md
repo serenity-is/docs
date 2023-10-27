@@ -1,6 +1,11 @@
-# Filtering with Multiple Genre Lists
+# Filtering with Multiple Genres
 
 In the past, when we had just one genre per movie, it was simple to apply a quick filter by adding a [QuickFilter] attribute to the GenreId field.
+
+<video alt="Filtering with Multiple Genres Animation" controls>
+  <source src="img/09-filtering-with-multiple-genres.mp4" type="video/mp4">
+</video>
+
 
 Now, let's attempt something similar in MovieColumns.cs:
 
@@ -9,7 +14,7 @@ public class MovieColumns
 {
     //...
     [Width(200), GenreListFormatter, QuickFilter]
-    public List<int> GenreList { get set; }
+    public List<int> GenreList { get; set; }
 }
 ```
 
@@ -20,15 +25,11 @@ The LinkingSetRelation will automatically handle equality filtering for its fiel
 As we're about to perform a non-standard action, such as filtering by values in a linking set table, we need to prevent the ListHandler from filtering itself on the GenreList property. To achieve this, let's create a subclass of the standard *ListRequest* object and add our Genres filter parameter to it. Create a *MovieListRequest.cs* file next to *MovieEndpoint.cs*:
 
 ```cs
-using Serenity.Services;
-using System.Collections.Generic;
+namespace MovieTutorial.MovieDB;
 
-namespace MovieTutorial.MovieDB
+public class MovieListRequest : ListRequest
 {
-    public class MovieListRequest : ListRequest
-    {
-        public List<int> Genres { get; set; }
-    }
+    public List<int> Genres { get; set; }
 }
 ```
 
@@ -42,7 +43,7 @@ To ensure that our list handler and service can utilize our new list request typ
 using MyRequest = MovieTutorial.MovieDB.MovieListRequest;
 ```
 
-Additionally, we need to make a minor adjustment in *MovieEndpoint.cs*, which represents the actual web service:
+Additionally, we need to make a minor adjustment in *MovieEndpoint.cs*, which represents the actual web service, by replacing `ListRequest` references in `List` and `ListExcel` methods with `MovieListRequest`:
 
 ```cs
 public class MovieEndpoint : ServiceEndpoint

@@ -20,7 +20,7 @@
     * [Adding a Movie Kind Field](tutorials/movies/06-adding-movie-kind-field.md)
     * [Adding Movie Genres](tutorials/movies/07-adding-movie-genres.md)
     * [Supporting Multiple Genres per Movie](tutorials/movies/08-multiple-genres-per-movie.md)
-    * [Filtering with Multiple Genre List](tutorials/movies/filtering_with_multiple_genre_list.md)
+    * [Filtering with Multiple Genres](tutorials/movies/09-filtering-with-multiple-genres.md)
     * [Keeping Record of the Cast](tutorials/movies/keeping-record-of-the-cast.md)
     * [Listing Movies in Person Dialog](tutorials/movies/listing_movies_in_person_dialog.md)
     * [Adding Primary and Gallery Images](tutorials/movies/adding_primary_and_gallery_images.md)

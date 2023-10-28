@@ -18,6 +18,10 @@ For this purpose, you need a table named `MovieCast` with columns such as:
 
 You'll also require a `Person` table to store actors/actresses, as they may take on different roles in the future. It's advisable to name it "Person" since actors/actresses may transition into roles such as directors or screenwriters in the future.
 
+<video alt="Keeping Record of the Cast Animation" controls>
+  <source src="img/10-keeping-record-of-the-cast.mp4" type="video/mp4">
+</video>
+
 ## Creating the Person and MovieCast Tables
 
 Now, let's create a migration with two tables. Create a migration script named `DefaultDB_20221115_1612_PersonAndMovieCast.cs` in the `Migrations/DefaultDB` directory:

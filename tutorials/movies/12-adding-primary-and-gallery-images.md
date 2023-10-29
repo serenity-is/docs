@@ -1,25 +1,28 @@
 # Managing Primary and Gallery Images
 
-To add primary and gallery images to both Movie and Person records, begin with a database migration:
+To add primary and gallery images to both Movie and Person records, start with a database migration:
+
+<video alt="Adding Primary and Gallery Images Animation" controls>
+  <source src="img/12-adding-primary-and-gallery-images.mp4" type="video/mp4">
+</video>
 
 ```csharp
 using FluentMigrator;
 
-namespace MovieTutorial.Migrations.DefaultDB
-{
-    [DefaultDB, MigrationKey(20221122_1151)]
-    public class DefaultDB_20221122_1151_PersonMovieImages : AutoReversingMigration
-    {
-        public override void Up()
-        {
-            Alter.Table("Person")
-                .AddColumn("PrimaryImage").AsString(100).Nullable()
-                .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
+namespace MovieTutorial.Migrations.DefaultDB;
 
-            Alter.Table("Movie")
-                .AddColumn("PrimaryImage").AsString(100).Nullable()
-                .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
-        }
+[DefaultDB, MigrationKey(20221122_1151)]
+public class DefaultDB_20221122_1151_PersonMovieImages : AutoReversingMigration
+{
+    public override void Up()
+    {
+        Alter.Table("Person")
+            .AddColumn("PrimaryImage").AsString(100).Nullable()
+            .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
+
+        Alter.Table("Movie")
+            .AddColumn("PrimaryImage").AsString(100).Nullable()
+            .AddColumn("GalleryImages").AsString(int.MaxValue).Nullable();
     }
 }
 ```
@@ -73,9 +76,9 @@ public sealed class MovieRow : Row<MoviesRow.RowFields>, IIdRow, INameRow
 }
 ```
 
-These modifications allow you to manage primary and gallery images for both Person and Movie records. 
+These modifications allow you to manage primary and gallery images for both Person and Movie records.
 
-The `FilenameFormat` property within the attributes is used to define the format for image filenames. For instance, the primary image for a Person will be uploaded to a folder located under *App_Data/upload/Person/PrimaryImage/*.
+The `FilenameFormat` property within the attributes is used to define the format for image filenames. For example, the primary image for a Person will be uploaded to a folder located under *App_Data/upload/Person/PrimaryImage/*.
 
 > You have the flexibility to change the upload root (default is *App_Data/upload*) by modifying the *UploadSettings* key in the appsettings.json file.
 
@@ -132,7 +135,6 @@ This results in the following user interface:
 
 ![Movie Images](img/movie-images.png)
 
-## Removing Nortwhind and Other Samples
+## Removing Northwind and Other Samples
 
 As the project has now reached a good state, it's recommended to remove Northwind and other samples from the MovieTutorial project. For detailed instructions, refer to the how-to topic: [How To: Removing Northwind and Other Samples](../../howto/how_to_remove_sample_modules.md).
-

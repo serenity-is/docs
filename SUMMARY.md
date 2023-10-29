@@ -22,7 +22,7 @@
     * [Supporting Multiple Genres per Movie](tutorials/movies/08-multiple-genres-per-movie.md)
     * [Filtering with Multiple Genres](tutorials/movies/09-filtering-with-multiple-genres.md)
     * [Keeping Record of the Cast](tutorials/movies/10-keeping-record-of-the-cast.md)
-    * [Listing Movies in Person Dialog](tutorials/movies/listing_movies_in_person_dialog.md)
+    * [Listing Movies in Person Dialog](tutorials/movies/11-listing-movies-in-person-dialog.md)
     * [Adding Primary and Gallery Images](tutorials/movies/adding_primary_and_gallery_images.md)
   * [Multi-Tenancy](tutorials/multi_tenancy/multi_tenancy.md)
     * [Adding Tenants Table and TenantId Field](tutorials/multi_tenancy/adding_tenants_table_and_tenantid_field.md)

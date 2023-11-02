@@ -111,7 +111,7 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-As you can see, we set "0" as a string. Serenity hides the caption if it sees "0" as a string.
+As you can see, we set "0" as a string. Serenity hides the caption if it sees "0" as a string. Serenity also has a `HideLabel` attribute that is equivalent to `LabelWidth("0")`.
 
 > Check out [this](../../attributes/attributes.md) for more attributes you can use.
 

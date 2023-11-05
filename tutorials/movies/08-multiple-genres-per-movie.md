@@ -80,7 +80,7 @@ After removing these properties, rebuild your project, and you'll have a functio
 To handle the many-to-many relationship between movies and genres, we need to generate code for the `MovieGenres` table. Run the Serene code generation process for the `MovieGenres` table with the following parameters:
 
 - Connection Key: **Default**
-- Table Name: **MovieGenres**
+- Table Name: **dbo.MovieGenres**
 - Module Name: **MovieDB**
 - Class Identifier: **MovieGenres**
 - Permission Key: **Administration:General**
@@ -93,7 +93,7 @@ Now that a movie can have multiple genres, the way genre information is stored n
 ```csharp
 //...
 [DisplayName("Genres"), LookupEditor(typeof(GenreRow), Multiple = true), NotMapped]
-[LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId)]
+[LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId))]
 public List<int> GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }
 
 public class RowFields : RowFieldsBase
@@ -108,7 +108,7 @@ The `GenreList` property has a `[LookupEditor]` attribute similar to the previou
 We also add a `[LinkingSetRelation]` attribute to specify the many-to-many relationship between movies and genres:
 
 ```csharp
-[LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId)]
+[LinkingSetRelation(typeof(MovieGenresRow), nameof(MovieGenresRow.MovieId), nameof(MovieGenresRow.GenreId))]
 ```
 
 - The first argument specifies the type of the many-to-many mapping row, which is `MovieGenresRow` in this case.

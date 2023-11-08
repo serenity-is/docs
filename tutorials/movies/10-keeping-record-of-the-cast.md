@@ -382,7 +382,7 @@ In this code, we're using the `GridEditorDialog` class from the Extensions packa
 ```typescript
 import { Decorators } from "@serenity-is/corelib";
 import { GridEditorBase } from "@serenity-is/extensions";
-import { MovieCastRow } from "../../ServerTypes/MovieDB";
+import { MovieCastColumns, MovieCastRow } from "../../ServerTypes/MovieDB";
 import { MovieCastEditDialog } from "./MovieCastEditDialog";
 
 @Decorators.registerEditor("MovieTutorial.MovieDB.MovieCastEditor")

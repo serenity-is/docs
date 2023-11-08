@@ -513,7 +513,7 @@ To resolve this issue, we need to set `PersonFullName` ourselves. Edit `MovieCas
 ```typescript
 import { Decorators } from "@serenity-is/corelib";
 import { GridEditorBase } from "@serenity-is/extensions";
-import { MovieCastRow, PersonRow } from "@/ServerTypes/MovieDB";
+import { MovieCastColumns, MovieCastRow, PersonRow } from "@/ServerTypes/MovieDB";
 import { MovieCastEditDialog } from "./MovieCastEditDialog";
 
 @Decorators.registerEditor("MovieTutorial.MovieDB.MovieCastEditor")

@@ -171,7 +171,7 @@ export class GenreListFormatter implements Formatter {
 
     format(ctx: FormatterContext) {
 
-        let idList = ctx.value as string[];
+        let idList = ctx.value as number[];
         if (!idList || !idList.length)
             return "";
 

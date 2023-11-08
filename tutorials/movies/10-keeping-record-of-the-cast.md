@@ -271,7 +271,7 @@ To begin, let's generate the code for the `MovieCast` table using the `sergen` t
 - Permission Key: **Administration:General**
 - What to Generate: **All**
 
-After generating the code, you can remove the *MovieCastPage.cs* and *MovieCastPage.ts* files, as well as the navigation entry for *Movie Cast* in *MovieDBNavigation.cs* since there won't be a separate page for editing the cast.
+After generating the code, delete the *MovieCastPage.cs* and *MovieCastPage.ts* files, as well as the navigation entry for *Movie Cast* in *MovieDBNavigation.cs* since there won't be a separate page for editing the cast.
 
 Don't forget to build the project and auto-transform it after making these changes.
 
@@ -311,14 +311,20 @@ To reference this new editor type from the server side, ensure that you build th
 
 ## Using MovieCastEditor in Movie Form
 
-To use the `MovieCastEditor` in the `MovieForm`, open the `MovieForm.cs` file and add a `CastList` property between the `Description` and `Storyline` fields as follows:
+To use the `MovieCastEditor` in the `MovieForm`, open the `MovieForm.cs` file and add a `CastList` property between the `Description` and `Storyline` properties as follows:
 
 ```csharp
 public class MovieForm
 {
     //...
+    [TextAreaEditor(Rows = 3)]
+    public string Description { get; set; }
+
     [DisplayName("Cast"), MovieCastEditor, IgnoreName]
     public List<MovieCastRow> CastList { get; set; }
+
+    [TextAreaEditor(Rows = 8)]
+    public string Storyline { get; set; }
     //...
 }
 ```

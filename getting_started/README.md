@@ -18,7 +18,7 @@ You have a few options to install the Serene template:
 
 The application requires _Visual Studio 2022+_ with the most recent updates installed. 
 
-.NET 8 SDK is also only supported in Visual Studio 2022+. 
+.NET 8 SDK is also only supported in Visual Studio 2022 17.8+. 
 
 An alternative option is to use the command line to create projects and work in Visual Studio Code if you don't have access to Visual Studio 2022+.
 

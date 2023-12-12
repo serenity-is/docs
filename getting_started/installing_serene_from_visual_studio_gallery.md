@@ -10,7 +10,7 @@ https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityA
 
 Click *Download* to transfer the VSIX file to your computer.
 
-**You need Visual Studio 2022 to run Serene as .NET 6 SDK only supports Visual Studio 2022 with the latest updates.**
+**You need Visual Studio 2022 17.8+ to run Serene as .NET 8 SDK only supports VS with the latest updates.**
 
 ## Install Template into Visual Studio
 

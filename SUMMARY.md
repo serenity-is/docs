@@ -125,19 +125,22 @@
   * [Serene to StartSharp (Inplace)](startsharp/serene-upgrade-inplace.md)
 
 * Release Notes
-  * [6.9.5 - 2023/10/26](release-notes/6.9.5.md)
-  * [6.9.3 - 2023/10/22](release-notes/6.9.3.md)
-  * [6.8.0 - 2023/08/14](release-notes/6.8.0.md)
-  * [6.6.0 - 2023/03/15](release-notes/6.6.0.md)
-  * [6.5.2 - 2023/02/21](release-notes/6.5.2.md)
-  * [6.4.3 - 2023/01/07](release-notes/6.4.3.md)
-  * [6.4.2 - 2022/12/09](release-notes/6.4.2.md)
-  * [6.3.0 - 2022/11/08](release-notes/6.3.0.md)
-  * [6.2.6 - 2022/10/18](release-notes/6.2.6.md)
-  * [6.2.4 - 2022/10/13](release-notes/6.2.4.md)
-  * [6.2.0 - 2022/10/10](release-notes/6.2.0.md)
-  * [6.1.9 - 2022/10/02](release-notes/6.1.9.md)
-  * [6.1.8 - 2022/09/29](release-notes/6.1.8.md)
+  * [8.0.7 - 2023/12/07](release-notes/8.0.7.md)
+  * [8.0.0 - 2023/11/16](release-notes/8.0.0.md)
+  * 6.x
+    * [6.9.6 - 2023/10/26](release-notes/6.9.6.md)
+    * [6.9.3 - 2023/10/22](release-notes/6.9.3.md)
+    * [6.8.0 - 2023/08/14](release-notes/6.8.0.md)
+    * [6.6.0 - 2023/03/15](release-notes/6.6.0.md)
+    * [6.5.2 - 2023/02/21](release-notes/6.5.2.md)
+    * [6.4.3 - 2023/01/07](release-notes/6.4.3.md)
+    * [6.4.2 - 2022/12/09](release-notes/6.4.2.md)
+    * [6.3.0 - 2022/11/08](release-notes/6.3.0.md)
+    * [6.2.6 - 2022/10/18](release-notes/6.2.6.md)
+    * [6.2.4 - 2022/10/13](release-notes/6.2.4.md)
+    * [6.2.0 - 2022/10/10](release-notes/6.2.0.md)
+    * [6.1.9 - 2022/10/02](release-notes/6.1.9.md)
+    * [6.1.8 - 2022/09/29](release-notes/6.1.8.md)
 
 * Knowledge Base
   * How To Guides

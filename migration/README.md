@@ -136,7 +136,7 @@ This also restores (or updates) TypeScript `.d.ts` to your `typings` directory f
 
 ## Applying Upgrades (Migration)
 
-If you tried to update and had some issues, you should check the migration notes that are listed on the left navigation. 
+If you tried to update and had some issues, you should check the migration notes and release notes that are listed on the left navigation. 
 
 > It is also a good idea to check them even when no errors occur during the update. There might be some critical security issues etc. that should be handled.
 
@@ -147,7 +147,9 @@ For example, if you created your project from a v3.14.x template, and the latest
 * 3.14.x to 5.0.12
 * 5.0.12 to 5.0.20
 
-If you don't see an upgrade on the left `Migration` section, there may not be any special upgrade steps required other than updating the packages. Please also check the `Release Notes` section for information about changes, and non-mandatory fixes that you might need to apply.
+If you don't see an upgrade on the `Migration` or `Release Notes` sections, there may not be any special upgrade steps required other than updating the packages. 
+
+Since version 6.1.8 we are no longer providing separate migration guides and all the required changes are listed under the `Release Notes` section, which you may also find under the navigation. You should also check the [Serenity Change Log](https://github.com/serenity-is/Serenity/blob/master/CHANGELOG.md) for information about changes, and non-mandatory fixes that you might need to apply.
 
 StartSharp customers should see the following document and use *Stargen* tool to automate the update / upgrade process:
 

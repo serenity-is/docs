@@ -22,8 +22,8 @@ Here's an example of how password rules can be configured within `appsettings.js
 Each of the attributes within `Membership` section controls a different aspect of the password policy:
 
 - `MinPasswordLength` sets the minimum character count for passwords. Default value is 8.
-- `RequireDigit` demands at least one numeral within the password. Default value is `true`.
-- `RequireLowercase` and `RequireUppercase` impose requirements for case-sensitive letters. Default values are `true`.
+- `RequireDigit` requires at least one numeral within the password. Default value is `true`.
+- `RequireLowercase` and `RequireUppercase` requires the inclusion of case-sensitive letters. Default values are `true`.
 - `RequireNonAlphanumeric` requires the inclusion of special characters, such as punctuation marks. Spaces are not considered special characters. Default value is `true`.
 - `SaltSize` determines the size of the cryptographic salt used in password hashing, providing additional security against hash-specific attacks. Default value is 5.
 

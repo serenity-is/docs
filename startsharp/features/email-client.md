@@ -27,7 +27,7 @@ Create a `my-features`, `features` or similar folder for your custom features an
 - tsconfig.base.json
 - sergen.base.json
 
-The `Directory.Build.props` and `Directory.Build.targets` files are special files. Check [this microsoft documentation link](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory) for more details. They customized for features only. Don't place it near your main project or parent directory. This is why we use subfolder for feature projects. 
+The `Directory.Build.props` and `Directory.Build.targets` files are special files. Check [this Microsoft documentation link](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory) for more details. They customized for features only. Don't place it near your main project or parent directory. This is why we use subfolder for feature projects. 
 
 ## The Directory Layout for Features Folder
 
@@ -109,7 +109,7 @@ Replace the `"extends": "@serenity-is/extensions/tsconfig.base.json"` with `"ext
 
 ## Updating The `packages.json` File
 
-We need to do a small addition to our `packages.json` to run `tsbuild` script. Add `@serenity-is/tsbuild` as dev dependency to your `packages.json`.
+We need to do a small addition to our `packages.json` to run the `tsbuild` script. Add `@serenity-is/tsbuild` as dev dependency to your `packages.json`.
 
 ```diff
 {
@@ -134,7 +134,7 @@ We need to do a small addition to our `packages.json` to run `tsbuild` script. A
 
 ## Ensuring The `sergen.json` Points The Right File
 
-The `sergen.json` should points the right directory. We already copied the `.config/sergen.base.json` file in to our `my-features` directory. 
+The `sergen.json` should point the right directory. We already copied the `.config/sergen.base.json` file in to our `my-features` directory. 
 
 ```json
 {

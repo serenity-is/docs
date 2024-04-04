@@ -57,6 +57,8 @@
   * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
     * [Lookups](framework/dynamic-scripts/lookups.md)
   * UI
+    * Core Functions
+      * [Fluent](framework/ui/fluent.md)
     * Forms & Grids
       * [Attributes](attributes/attributes.md)
       * [Grids](grids/readme.md)

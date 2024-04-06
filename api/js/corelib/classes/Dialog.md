@@ -10,11 +10,6 @@
 
 ### Properties
 
-- [createBSButtons](Dialog.md#createbsbuttons)
-- [createPanel](Dialog.md#createpanel)
-- [dialogResult](Dialog.md#dialogresult)
-- [el](Dialog.md#el)
-- [onButtonClick](Dialog.md#onbuttonclick)
 - [defaults](Dialog.md#defaults)
 - [messageDefaults](Dialog.md#messagedefaults)
 
@@ -58,59 +53,9 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:303](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L303)
+[src/base/dialogs.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L83)
 
 ## Properties
-
-### createBSButtons
-
-• `Private` **createBSButtons**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:333](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L333)
-
-___
-
-### createPanel
-
-• `Private` **createPanel**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L335)
-
-___
-
-### dialogResult
-
-• `Private` **dialogResult**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:302](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L302)
-
-___
-
-### el
-
-• `Private` **el**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:301](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L301)
-
-___
-
-### onButtonClick
-
-• `Private` **onButtonClick**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:332](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L332)
-
-___
 
 ### defaults
 
@@ -118,7 +63,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:304](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L304)
+[src/base/dialogs.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L132)
 
 ___
 
@@ -128,7 +73,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:305](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L305)
+[src/base/dialogs.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L145)
 
 ## Accessors
 
@@ -144,7 +89,7 @@ The result code of the button that is clicked. Also attached to the dialog eleme
 
 #### Defined in
 
-[../base/dist/index.d.ts:308](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L308)
+[src/base/dialogs.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L169)
 
 ___
 
@@ -158,7 +103,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L321)
+[src/base/dialogs.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L262)
 
 ## Methods
 
@@ -174,7 +119,7 @@ Closes dialog setting the result to null
 
 #### Defined in
 
-[../base/dist/index.d.ts:310](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L310)
+[src/base/dialogs.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L174)
 
 ▸ **close**(`result`): `this`
 
@@ -192,7 +137,7 @@ Closes dialog with the result set to value
 
 #### Defined in
 
-[../base/dist/index.d.ts:312](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L312)
+[src/base/dialogs.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L176)
 
 ___
 
@@ -212,7 +157,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:334](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L334)
+[src/base/dialogs.ts:326](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L326)
 
 ___
 
@@ -232,7 +177,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:336](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L336)
+[src/base/dialogs.ts:439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L439)
 
 ___
 
@@ -246,7 +191,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:337](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L337)
+[src/base/dialogs.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L468)
 
 ___
 
@@ -262,7 +207,7 @@ Gets the body/content element of the dialog
 
 #### Defined in
 
-[../base/dist/index.d.ts:323](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L323)
+[src/base/dialogs.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L276)
 
 ___
 
@@ -278,7 +223,7 @@ Gets the dialog element of the dialog
 
 #### Defined in
 
-[../base/dist/index.d.ts:325](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L325)
+[src/base/dialogs.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L281)
 
 ___
 
@@ -294,7 +239,7 @@ Gets the node that receives events for the dialog. It's .ui-dialog-content, .mod
 
 #### Defined in
 
-[../base/dist/index.d.ts:327](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L327)
+[src/base/dialogs.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L286)
 
 ___
 
@@ -310,7 +255,7 @@ Gets the footer element of the dialog
 
 #### Defined in
 
-[../base/dist/index.d.ts:329](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L329)
+[src/base/dialogs.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L291)
 
 ___
 
@@ -326,7 +271,7 @@ Gets the header element of the dialog
 
 #### Defined in
 
-[../base/dist/index.d.ts:331](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L331)
+[src/base/dialogs.ts:296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L296)
 
 ___
 
@@ -336,10 +281,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`result?`: `string`, `e?`: `Event`) => `void` |
-| `before?` | `boolean` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `handler` | (`result?`: `string`, `e?`: `Event`) => `void` | `undefined` |
+| `before` | `boolean` | `false` |
 
 #### Returns
 
@@ -347,7 +292,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:313](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L313)
+[src/base/dialogs.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L202)
 
 ___
 
@@ -357,10 +302,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e?`: `Event`) => `void` |
-| `before?` | `boolean` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `handler` | (`e?`: `Event`) => `void` | `undefined` |
+| `before` | `boolean` | `false` |
 
 #### Returns
 
@@ -368,23 +313,23 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:314](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L314)
+[src/base/dialogs.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L214)
 
 ___
 
 ### open
 
-▸ **open**(): `this`
+▸ **open**(): [`Dialog`](Dialog.md)
 
 Closes dialog
 
 #### Returns
 
-`this`
+[`Dialog`](Dialog.md)
 
 #### Defined in
 
-[../base/dist/index.d.ts:316](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L316)
+[src/base/dialogs.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L228)
 
 ___
 
@@ -400,7 +345,7 @@ Gets the title text of the dialog
 
 #### Defined in
 
-[../base/dist/index.d.ts:318](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L318)
+[src/base/dialogs.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L250)
 
 ▸ **title**(`value`): `this`
 
@@ -418,7 +363,7 @@ Sets the title text of the dialog.
 
 #### Defined in
 
-[../base/dist/index.d.ts:320](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L320)
+[src/base/dialogs.ts:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L252)
 
 ___
 
@@ -438,4 +383,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:306](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L306)
+[src/base/dialogs.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L161)

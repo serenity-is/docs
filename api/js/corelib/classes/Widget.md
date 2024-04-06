@@ -42,7 +42,6 @@
 - [idPrefix](Widget.md#idprefix)
 - [options](Widget.md#options)
 - [uniqueName](Widget.md#uniquename)
-- [nextWidgetNumber](Widget.md#nextwidgetnumber)
 - [typeInfo](Widget.md#typeinfo)
 
 ### Accessors
@@ -140,16 +139,6 @@ ___
 
 ___
 
-### nextWidgetNumber
-
-▪ `Static` `Private` **nextWidgetNumber**: `number` = `0`
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
-
-___
-
 ### typeInfo
 
 ▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
@@ -162,13 +151,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -212,7 +201,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -230,7 +219,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -353,11 +342,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 

@@ -78,7 +78,7 @@ ___
 
 ### initialize
 
-▸ **initialize**(`tabs`, `activeChange`): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **initialize**(`tabs`, `activeChange`): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Parameters
 
@@ -89,7 +89,7 @@ ___
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 

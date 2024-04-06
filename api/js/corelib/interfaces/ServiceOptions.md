@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:547](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L547)
+[src/base/servicetypes.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L116)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:548](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L548)
+[src/base/servicetypes.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L117)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:549](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L549)
+[src/base/servicetypes.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L118)
 
 ___
 
@@ -74,7 +74,7 @@ RequestInit.headers
 
 #### Defined in
 
-[../base/dist/index.d.ts:550](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L550)
+[src/base/servicetypes.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L119)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:551](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L551)
+[src/base/servicetypes.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L120)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:552](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L552)
+[src/base/servicetypes.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L121)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:553](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L553)
+[src/base/servicetypes.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L122)
 
 ## Methods
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:554](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L554)
+[src/base/servicetypes.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L123)
 
 ___
 
@@ -141,7 +141,7 @@ Should return true if the error is handled (e.g. notification shown). Otherwise 
 
 #### Defined in
 
-[../base/dist/index.d.ts:556](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L556)
+[src/base/servicetypes.ts:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L125)
 
 ___
 
@@ -161,4 +161,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:557](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L557)
+[src/base/servicetypes.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L126)

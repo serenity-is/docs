@@ -10,30 +10,14 @@
 
 ### Properties
 
-- [cancelSubmit](Validator.md#cancelsubmit)
-- [currentElements](Validator.md#currentelements)
-- [currentForm](Validator.md#currentform)
 - [dependTypes](Validator.md#dependtypes)
-- [errorList](Validator.md#errorlist)
-- [errorMap](Validator.md#errormap)
-- [formSubmitted](Validator.md#formsubmitted)
-- [init](Validator.md#init)
-- [invalid](Validator.md#invalid)
 - [lastActive](Validator.md#lastactive)
-- [pending](Validator.md#pending)
-- [pendingRequest](Validator.md#pendingrequest)
 - [settings](Validator.md#settings)
-- [submitButton](Validator.md#submitbutton)
-- [submitted](Validator.md#submitted)
-- [successList](Validator.md#successlist)
-- [toHide](Validator.md#tohide)
-- [toShow](Validator.md#toshow)
 - [autoCreateRanges](Validator.md#autocreateranges)
 - [classRuleSettings](Validator.md#classrulesettings)
 - [defaults](Validator.md#defaults)
 - [messages](Validator.md#messages)
 - [methods](Validator.md#methods)
-- [objectLength](Validator.md#objectlength)
 
 ### Methods
 
@@ -115,39 +99,9 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:1882](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1882)
+[src/base/validator.ts:528](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L528)
 
 ## Properties
-
-### cancelSubmit
-
-• `Private` **cancelSubmit**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1868](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1868)
-
-___
-
-### currentElements
-
-• `Private` **currentElements**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1869](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1869)
-
-___
-
-### currentForm
-
-• `Private` **currentForm**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1870](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1870)
-
-___
 
 ### dependTypes
 
@@ -163,57 +117,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1938](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1938)
-
-___
-
-### errorList
-
-• `Private` **errorList**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1872](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1872)
-
-___
-
-### errorMap
-
-• `Private` **errorMap**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1871](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1871)
-
-___
-
-### formSubmitted
-
-• `Private` **formSubmitted**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1873](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1873)
-
-___
-
-### init
-
-• `Private` **init**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1884](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1884)
-
-___
-
-### invalid
-
-• `Private` **invalid**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1877](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1877)
+[src/base/validator.ts:1376](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1376)
 
 ___
 
@@ -223,27 +127,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1867](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1867)
-
-___
-
-### pending
-
-• `Private` **pending**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1878](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1878)
-
-___
-
-### pendingRequest
-
-• `Private` **pendingRequest**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1876](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1876)
+[src/base/validator.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L512)
 
 ___
 
@@ -253,77 +137,27 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1866](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1866)
-
-___
-
-### submitButton
-
-• `Private` **submitButton**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1875](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1875)
-
-___
-
-### submitted
-
-• `Private` **submitted**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1874](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1874)
-
-___
-
-### successList
-
-• `Private` **successList**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1879](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1879)
-
-___
-
-### toHide
-
-• `Private` **toHide**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1880](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1880)
-
-___
-
-### toShow
-
-• `Private` **toShow**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1881](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1881)
+[src/base/validator.ts:511](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L511)
 
 ___
 
 ### autoCreateRanges
 
-▪ `Static` **autoCreateRanges**: `boolean`
+▪ `Static` **autoCreateRanges**: `boolean` = `false`
 
 #### Defined in
 
-[../base/dist/index.d.ts:1862](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1862)
+[src/base/validator.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L259)
 
 ___
 
 ### classRuleSettings
 
-▪ `Static` **classRuleSettings**: `Record`\<`string`, `ValidationRules`\>
+▪ `Static` **classRuleSettings**: `Record`\<`string`, [`ValidationRules`](../README.md#validationrules)\>
 
 #### Defined in
 
-[../base/dist/index.d.ts:1949](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1949)
+[src/base/validator.ts:1457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1457)
 
 ___
 
@@ -333,7 +167,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1863](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1863)
+[src/base/validator.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L261)
 
 ___
 
@@ -343,7 +177,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1864](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1864)
+[src/base/validator.ts:341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L341)
 
 ___
 
@@ -353,17 +187,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1865](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1865)
-
-___
-
-### objectLength
-
-▪ `Static` `Private` **objectLength**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1904](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1904)
+[src/base/validator.ts:363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L363)
 
 ## Methods
 
@@ -383,7 +207,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1946](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1946)
+[src/base/validator.ts:1424](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1424)
 
 ___
 
@@ -403,7 +227,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1918](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1918)
+[src/base/validator.ts:1093](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1093)
 
 ___
 
@@ -417,7 +241,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1898](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1898)
+[src/base/validator.ts:865](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L865)
 
 ___
 
@@ -438,7 +262,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1919](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1919)
+[src/base/validator.ts:1174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1174)
 
 ___
 
@@ -459,7 +283,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1920](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1920)
+[src/base/validator.ts:1179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1179)
 
 ___
 
@@ -482,7 +306,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1922](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1922)
+[src/base/validator.ts:1194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1194)
 
 ___
 
@@ -496,7 +320,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1930](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1930)
+[src/base/validator.ts:1229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1229)
 
 ___
 
@@ -517,7 +341,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1943](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1943)
+[src/base/validator.ts:1388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1388)
 
 ___
 
@@ -531,7 +355,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1948](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1948)
+[src/base/validator.ts:1450](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1450)
 
 ___
 
@@ -551,7 +375,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1899](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1899)
+[src/base/validator.ts:873](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L873)
 
 ___
 
@@ -565,7 +389,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1911](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1911)
+[src/base/validator.ts:1016](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1016)
 
 ___
 
@@ -579,7 +403,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1912](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1912)
+[src/base/validator.ts:1061](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1061)
 
 ___
 
@@ -599,7 +423,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1934](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1934)
+[src/base/validator.ts:1341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1341)
 
 ___
 
@@ -619,7 +443,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1937](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1937)
+[src/base/validator.ts:1372](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1372)
 
 ___
 
@@ -639,7 +463,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1921](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1921)
+[src/base/validator.ts:1185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1185)
 
 ___
 
@@ -653,7 +477,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1910](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1910)
+[src/base/validator.ts:1011](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1011)
 
 ___
 
@@ -667,7 +491,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1909](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1909)
+[src/base/validator.ts:993](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L993)
 
 ___
 
@@ -681,7 +505,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1897](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1897)
+[src/base/validator.ts:854](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L854)
 
 ___
 
@@ -704,7 +528,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1926](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1926)
+[src/base/validator.ts:1216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1216)
 
 ___
 
@@ -718,7 +542,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1905](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1905)
+[src/base/validator.ts:974](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L974)
 
 ___
 
@@ -738,7 +562,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1906](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1906)
+[src/base/validator.ts:978](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L978)
 
 ___
 
@@ -758,7 +582,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1935](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1935)
+[src/base/validator.ts:1356](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1356)
 
 ___
 
@@ -772,7 +596,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1932](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1932)
+[src/base/validator.ts:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1261)
 
 ___
 
@@ -786,7 +610,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1903](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1903)
+[src/base/validator.ts:955](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L955)
 
 ___
 
@@ -806,7 +630,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1917](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1917)
+[src/base/validator.ts:1088](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1088)
 
 ___
 
@@ -820,7 +644,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1916](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1916)
+[src/base/validator.ts:1083](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1083)
 
 ___
 
@@ -841,7 +665,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1947](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1947)
+[src/base/validator.ts:1439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1439)
 
 ___
 
@@ -855,7 +679,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1914](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1914)
+[src/base/validator.ts:1074](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1074)
 
 ___
 
@@ -869,7 +693,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1915](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1915)
+[src/base/validator.ts:1079](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1079)
 
 ___
 
@@ -889,7 +713,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1902](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1902)
+[src/base/validator.ts:939](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L939)
 
 ___
 
@@ -903,7 +727,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1901](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1901)
+[src/base/validator.ts:925](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L925)
 
 ___
 
@@ -917,7 +741,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1913](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1913)
+[src/base/validator.ts:1066](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1066)
 
 ___
 
@@ -929,7 +753,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `errors?` | `ValidationErrorMap` |
+| `errors?` | [`ValidationErrorMap`](../interfaces/ValidationErrorMap.md) |
 
 #### Returns
 
@@ -937,7 +761,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1900](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1900)
+[src/base/validator.ts:904](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L904)
 
 ___
 
@@ -958,7 +782,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1933](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1933)
+[src/base/validator.ts:1265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1265)
 
 ___
 
@@ -972,7 +796,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1908](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1908)
+[src/base/validator.ts:989](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L989)
 
 ___
 
@@ -992,7 +816,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1944](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1944)
+[src/base/validator.ts:1392](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1392)
 
 ___
 
@@ -1013,7 +837,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1945](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1945)
+[src/base/validator.ts:1400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1400)
 
 ___
 
@@ -1027,7 +851,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1907](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1907)
+[src/base/validator.ts:985](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L985)
 
 ___
 
@@ -1041,7 +865,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1931](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1931)
+[src/base/validator.ts:1256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1256)
 
 ___
 
@@ -1061,7 +885,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1936](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1936)
+[src/base/validator.ts:1360](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1360)
 
 ___
 
@@ -1074,7 +898,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `className` | `any` |
-| `rules` | `ValidationRules` |
+| `rules` | [`ValidationRules`](../README.md#validationrules) |
 
 #### Returns
 
@@ -1082,7 +906,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1950](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1950)
+[src/base/validator.ts:1469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1469)
 
 ___
 
@@ -1104,13 +928,13 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1957](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1957)
+[src/base/validator.ts:1652](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1652)
 
 ___
 
 ### attributeRules
 
-▸ **attributeRules**(`element`): `ValidationRules`
+▸ **attributeRules**(`element`): [`ValidationRules`](../README.md#validationrules)
 
 #### Parameters
 
@@ -1120,17 +944,17 @@ ___
 
 #### Returns
 
-`ValidationRules`
+[`ValidationRules`](../README.md#validationrules)
 
 #### Defined in
 
-[../base/dist/index.d.ts:1953](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1953)
+[src/base/validator.ts:1514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1514)
 
 ___
 
 ### classRules
 
-▸ **classRules**(`element`): `ValidationRules`
+▸ **classRules**(`element`): [`ValidationRules`](../README.md#validationrules)
 
 #### Parameters
 
@@ -1140,11 +964,11 @@ ___
 
 #### Returns
 
-`ValidationRules`
+[`ValidationRules`](../README.md#validationrules)
 
 #### Defined in
 
-[../base/dist/index.d.ts:1951](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1951)
+[src/base/validator.ts:1477](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1477)
 
 ___
 
@@ -1164,7 +988,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1954](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1954)
+[src/base/validator.ts:1550](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1550)
 
 ___
 
@@ -1184,7 +1008,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1894](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1894)
+[src/base/validator.ts:698](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L698)
 
 ___
 
@@ -1204,7 +1028,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1958](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1958)
+[src/base/validator.ts:1660](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1660)
 
 ___
 
@@ -1216,7 +1040,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `Node` \| `ArrayLike`\<`HTMLElement`\> \| `HTMLFormElement` |
+| `element` | `Node` \| `HTMLFormElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
@@ -1224,7 +1048,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1883](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1883)
+[src/base/validator.ts:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L628)
 
 ___
 
@@ -1245,7 +1069,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1892](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1892)
+[src/base/validator.ts:680](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L680)
 
 ___
 
@@ -1265,7 +1089,7 @@ element is HTMLInputElement
 
 #### Defined in
 
-[../base/dist/index.d.ts:1891](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1891)
+[src/base/validator.ts:676](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L676)
 
 ___
 
@@ -1285,7 +1109,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1893](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1893)
+[src/base/validator.ts:693](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L693)
 
 ___
 
@@ -1309,7 +1133,7 @@ element is ValidatableElement
 
 #### Defined in
 
-[../base/dist/index.d.ts:1890](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1890)
+[src/base/validator.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L672)
 
 ___
 
@@ -1321,7 +1145,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rules` | `ValidationRules` |
+| `rules` | [`ValidationRules`](../README.md#validationrules) |
 | `type` | `string` |
 | `method` | `string` |
 | `value` | [`ValidationValue`](../README.md#validationvalue) |
@@ -1332,28 +1156,28 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1952](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1952)
+[src/base/validator.ts:1491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1491)
 
 ___
 
 ### normalizeRules
 
-▸ **normalizeRules**(`rules`, `element`): `ValidationRules`
+▸ **normalizeRules**(`rules`, `element`): [`ValidationRules`](../README.md#validationrules)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `rules` | `ValidationRules` |
+| `rules` | [`ValidationRules`](../README.md#validationrules) |
 | `element` | [`ValidatableElement`](../interfaces/ValidatableElement.md) |
 
 #### Returns
 
-`ValidationRules`
+[`ValidationRules`](../README.md#validationrules)
 
 #### Defined in
 
-[../base/dist/index.d.ts:1956](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1956)
+[src/base/validator.ts:1579](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1579)
 
 ___
 
@@ -1373,7 +1197,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1861](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1861)
+[src/base/validator.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L254)
 
 ___
 
@@ -1395,13 +1219,13 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1896](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1896)
+[src/base/validator.ts:779](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L779)
 
 ___
 
 ### staticRules
 
-▸ **staticRules**(`element`): `ValidationRules`
+▸ **staticRules**(`element`): [`ValidationRules`](../README.md#validationrules)
 
 #### Parameters
 
@@ -1411,11 +1235,11 @@ ___
 
 #### Returns
 
-`ValidationRules`
+[`ValidationRules`](../README.md#validationrules)
 
 #### Defined in
 
-[../base/dist/index.d.ts:1955](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1955)
+[src/base/validator.ts:1568](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1568)
 
 ___
 
@@ -1435,4 +1259,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1895](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1895)
+[src/base/validator.ts:764](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L764)

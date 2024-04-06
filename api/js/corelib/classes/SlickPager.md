@@ -22,13 +22,9 @@
 
 ### Properties
 
-- [currentPage](SlickPager.md#currentpage)
 - [domNode](SlickPager.md#domnode)
 - [idPrefix](SlickPager.md#idprefix)
 - [options](SlickPager.md#options)
-- [pageSize](SlickPager.md#pagesize)
-- [stat](SlickPager.md#stat)
-- [totalPages](SlickPager.md#totalpages)
 - [uniqueName](SlickPager.md#uniquename)
 - [typeInfo](SlickPager.md#typeinfo)
 
@@ -93,16 +89,6 @@
 
 ## Properties
 
-### currentPage
-
-• `Private` **currentPage**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLInputElement`\>
-
-#### Defined in
-
-[src/ui/datagrid/slickpager.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L9)
-
-___
-
 ### domNode
 
 • `Readonly` **domNode**: `HTMLElement`
@@ -145,36 +131,6 @@ ___
 
 ___
 
-### pageSize
-
-• `Private` **pageSize**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLSelectElement`\>
-
-#### Defined in
-
-[src/ui/datagrid/slickpager.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L11)
-
-___
-
-### stat
-
-• `Private` **stat**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLSpanElement`\>
-
-#### Defined in
-
-[src/ui/datagrid/slickpager.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L12)
-
-___
-
-### totalPages
-
-• `Private` **totalPages**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLSpanElement`\>
-
-#### Defined in
-
-[src/ui/datagrid/slickpager.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L10)
-
-___
-
 ### uniqueName
 
 • `Protected` `Readonly` **uniqueName**: `string`
@@ -205,13 +161,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -301,7 +257,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -323,7 +279,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -474,11 +430,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

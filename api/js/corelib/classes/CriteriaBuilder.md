@@ -80,7 +80,7 @@ Creates a between criteria.
 
 #### Defined in
 
-[../base/dist/index.d.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L49)
+[src/base/criteria.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L10)
 
 ___
 
@@ -102,7 +102,7 @@ Creates a contains criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L54)
+[src/base/criteria.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L18)
 
 ___
 
@@ -124,7 +124,7 @@ Creates a endsWith criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L59)
+[src/base/criteria.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L26)
 
 ___
 
@@ -146,7 +146,7 @@ Creates an equal (=) criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L64)
+[src/base/criteria.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L34)
 
 ___
 
@@ -168,7 +168,7 @@ Creates a greater than or equal criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L74)
+[src/base/criteria.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L50)
 
 ___
 
@@ -190,7 +190,7 @@ Creates a greater than criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L69)
+[src/base/criteria.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L42)
 
 ___
 
@@ -212,7 +212,7 @@ Creates a in criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L79)
+[src/base/criteria.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L58)
 
 ___
 
@@ -228,7 +228,7 @@ Creates a IS NOT NULL criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L87)
+[src/base/criteria.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L72)
 
 ___
 
@@ -244,7 +244,7 @@ Creates a IS NULL criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L83)
+[src/base/criteria.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L65)
 
 ___
 
@@ -266,7 +266,7 @@ Creates a less than or equal to criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L92)
+[src/base/criteria.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L80)
 
 ___
 
@@ -288,7 +288,7 @@ Creates a LIKE criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L107)
+[src/base/criteria.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L104)
 
 ___
 
@@ -310,7 +310,7 @@ Creates a less than criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L97)
+[src/base/criteria.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L88)
 
 ___
 
@@ -332,7 +332,7 @@ Creates a not equal criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L102)
+[src/base/criteria.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L96)
 
 ___
 
@@ -354,7 +354,7 @@ Creates a NOT IN criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L117)
+[src/base/criteria.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L120)
 
 ___
 
@@ -376,7 +376,7 @@ Creates a NOT LIKE criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L122)
+[src/base/criteria.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L128)
 
 ___
 
@@ -398,4 +398,4 @@ Creates a STARTS WITH criteria
 
 #### Defined in
 
-[../base/dist/index.d.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L112)
+[src/base/criteria.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L112)

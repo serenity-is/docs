@@ -27,7 +27,7 @@ An `HTMLElement` that can be validated (`input`, `select`, `textarea`, or [conte
 
 #### Defined in
 
-[../base/dist/index.d.ts:1696](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1696)
+[src/base/validator.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L18)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1697](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1697)
+[src/base/validator.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L19)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1698](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1698)
+[src/base/validator.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L20)
 
 ___
 
@@ -57,4 +57,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1699](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1699)
+[src/base/validator.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L21)

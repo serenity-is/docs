@@ -23,9 +23,7 @@
 ### Properties
 
 - [domNode](PropertyGrid.md#domnode)
-- [editors](PropertyGrid.md#editors)
 - [idPrefix](PropertyGrid.md#idprefix)
-- [items](PropertyGrid.md#items)
 - [options](PropertyGrid.md#options)
 - [uniqueName](PropertyGrid.md#uniquename)
 - [typeInfo](PropertyGrid.md#typeinfo)
@@ -40,18 +38,10 @@
 
 - [addCssClass](PropertyGrid.md#addcssclass)
 - [addValidationRule](PropertyGrid.md#addvalidationrule)
-- [canModifyItem](PropertyGrid.md#canmodifyitem)
-- [categoryLinkClick](PropertyGrid.md#categorylinkclick)
 - [change](PropertyGrid.md#change)
 - [changeSelect2](PropertyGrid.md#changeselect2)
-- [createCategoryDiv](PropertyGrid.md#createcategorydiv)
-- [createCategoryLinks](PropertyGrid.md#createcategorylinks)
-- [createField](PropertyGrid.md#createfield)
-- [createItems](PropertyGrid.md#createitems)
 - [destroy](PropertyGrid.md#destroy)
-- [determineText](PropertyGrid.md#determinetext)
 - [enumerateItems](PropertyGrid.md#enumerateitems)
-- [getCategoryOrder](PropertyGrid.md#getcategoryorder)
 - [getCssClass](PropertyGrid.md#getcssclass)
 - [getCustomAttribute](PropertyGrid.md#getcustomattribute)
 - [getFieldElement](PropertyGrid.md#getfieldelement)
@@ -74,7 +64,6 @@
 - [create](PropertyGrid.md#create)
 - [createDefaultElement](PropertyGrid.md#createdefaultelement)
 - [getWidgetName](PropertyGrid.md#getwidgetname)
-- [setMaxLength](PropertyGrid.md#setmaxlength)
 
 ## Constructors
 
@@ -122,16 +111,6 @@
 
 ___
 
-### editors
-
-• `Private` **editors**: [`Widget`](Widget.md)\<`any`\>[]
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L13)
-
-___
-
 ### idPrefix
 
 • `Readonly` **idPrefix**: `string`
@@ -143,16 +122,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
-
-___
-
-### items
-
-• `Private` **items**: [`PropertyItem`](../interfaces/PropertyItem.md)[]
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L14)
 
 ___
 
@@ -200,13 +169,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -292,7 +261,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -314,7 +283,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -327,46 +296,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
-___
-
-### canModifyItem
-
-▸ **canModifyItem**(`item`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L518)
-
-___
-
-### categoryLinkClick
-
-▸ **categoryLinkClick**(`e`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `e` | `Event` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L182)
 
 ___
 
@@ -418,92 +347,6 @@ ___
 
 ___
 
-### createCategoryDiv
-
-▸ **createCategoryDiv**(`categoriesDiv`, `categoryIndexes`, `category`, `collapsed`): `HTMLElement`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `categoriesDiv` | `HTMLElement` |
-| `categoryIndexes` | `Object` |
-| `category` | `string` |
-| `collapsed` | `boolean` |
-
-#### Returns
-
-`HTMLElement`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L153)
-
-___
-
-### createCategoryLinks
-
-▸ **createCategoryLinks**(`container`, `items`): `Record`\<`string`, `number`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `container` | `HTMLElement` |
-| `items` | [`PropertyItem`](../interfaces/PropertyItem.md)[] |
-
-#### Returns
-
-`Record`\<`string`, `number`\>
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L382)
-
-___
-
-### createField
-
-▸ **createField**(`container`, `item`): [`Widget`](Widget.md)\<[`WidgetProps`](../README.md#widgetprops)\<`P`\>\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `container` | `HTMLElement` |
-| `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
-
-#### Returns
-
-[`Widget`](Widget.md)\<[`WidgetProps`](../README.md#widgetprops)\<`P`\>\>
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L228)
-
-___
-
-### createItems
-
-▸ **createItems**(`container`, `items`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `container` | `HTMLElement` |
-| `items` | [`PropertyItem`](../interfaces/PropertyItem.md)[] |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L99)
-
-___
-
 ### destroy
 
 ▸ **destroy**(): `void`
@@ -519,27 +362,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/propertygrid.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L82)
-
-___
-
-### determineText
-
-▸ **determineText**(`text`, `getKey`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
-| `getKey` | (`s`: `string`) => `string` |
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L206)
 
 ___
 
@@ -560,26 +382,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/propertygrid.ts:566](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L566)
-
-___
-
-### getCategoryOrder
-
-▸ **getCategoryOrder**(`items`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `items` | [`PropertyItem`](../interfaces/PropertyItem.md)[] |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L351)
 
 ___
 
@@ -652,11 +454,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -1012,24 +814,3 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
-
-___
-
-### setMaxLength
-
-▸ **setMaxLength**(`widget`, `maxLength`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `widget` | [`Widget`](Widget.md)\<`any`\> |
-| `maxLength` | `number` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L471)

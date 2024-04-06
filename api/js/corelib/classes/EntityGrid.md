@@ -23,11 +23,6 @@
 
 ### Properties
 
-- [\_dialogType](EntityGrid.md#_dialogtype)
-- [\_displayName](EntityGrid.md#_displayname)
-- [\_entityType](EntityGrid.md#_entitytype)
-- [\_itemName](EntityGrid.md#_itemname)
-- [\_service](EntityGrid.md#_service)
 - [allColumns](EntityGrid.md#allcolumns)
 - [domNode](EntityGrid.md#domnode)
 - [filterBar](EntityGrid.md#filterbar)
@@ -243,56 +238,6 @@
 
 ## Properties
 
-### \_dialogType
-
-• `Private` **\_dialogType**: `any`
-
-#### Defined in
-
-[src/ui/datagrid/entitygrid.ts:358](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L358)
-
-___
-
-### \_displayName
-
-• `Private` **\_displayName**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/entitygrid.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L130)
-
-___
-
-### \_entityType
-
-• `Private` **\_entityType**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/entitygrid.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L100)
-
-___
-
-### \_itemName
-
-• `Private` **\_itemName**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/entitygrid.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L150)
-
-___
-
-### \_service
-
-• `Private` **\_service**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/entitygrid.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/entitygrid.ts#L250)
-
-___
-
 ### allColumns
 
 • `Protected` **allColumns**: `Column`\<`any`\>[]
@@ -421,7 +366,7 @@ ___
 
 ### quickFiltersDiv
 
-• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -449,7 +394,7 @@ ___
 
 ### slickContainer
 
-• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -477,7 +422,7 @@ ___
 
 ### titleDiv
 
-• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -617,13 +562,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -857,7 +802,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -879,7 +824,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -1191,11 +1136,11 @@ ___
 
 ### createSlickContainer
 
-▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -1904,11 +1849,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

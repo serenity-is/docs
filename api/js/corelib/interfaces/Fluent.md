@@ -35,58 +35,63 @@ The index of the element.
 
 ### Constructors
 
-- [constructor](Fluent-1.md#constructor)
+- [constructor](Fluent.md#constructor)
 
 ### Properties
 
-- [[iterator]](Fluent-1.md#[iterator])
-- [length](Fluent-1.md#length)
+- [[iterator]](Fluent.md#[iterator])
+- [length](Fluent.md#length)
 
 ### Methods
 
-- [addClass](Fluent-1.md#addclass)
-- [after](Fluent-1.md#after)
-- [append](Fluent-1.md#append)
-- [appendTo](Fluent-1.md#appendto)
-- [attr](Fluent-1.md#attr)
-- [before](Fluent-1.md#before)
-- [children](Fluent-1.md#children)
-- [class](Fluent-1.md#class)
-- [click](Fluent-1.md#click)
-- [closest](Fluent-1.md#closest)
-- [data](Fluent-1.md#data)
-- [each](Fluent-1.md#each)
-- [empty](Fluent-1.md#empty)
-- [findAll](Fluent-1.md#findall)
-- [findEach](Fluent-1.md#findeach)
-- [findFirst](Fluent-1.md#findfirst)
-- [focus](Fluent-1.md#focus)
-- [getNode](Fluent-1.md#getnode)
-- [getWidget](Fluent-1.md#getwidget)
-- [hasClass](Fluent-1.md#hasclass)
-- [hide](Fluent-1.md#hide)
-- [insertAfter](Fluent-1.md#insertafter)
-- [insertBefore](Fluent-1.md#insertbefore)
-- [matches](Fluent-1.md#matches)
-- [nextSibling](Fluent-1.md#nextsibling)
-- [off](Fluent-1.md#off)
-- [on](Fluent-1.md#on)
-- [one](Fluent-1.md#one)
-- [parent](Fluent-1.md#parent)
-- [prepend](Fluent-1.md#prepend)
-- [prependTo](Fluent-1.md#prependto)
-- [prevSibling](Fluent-1.md#prevsibling)
-- [remove](Fluent-1.md#remove)
-- [removeAttr](Fluent-1.md#removeattr)
-- [removeClass](Fluent-1.md#removeclass)
-- [show](Fluent-1.md#show)
-- [style](Fluent-1.md#style)
-- [text](Fluent-1.md#text)
-- [toggle](Fluent-1.md#toggle)
-- [toggleClass](Fluent-1.md#toggleclass)
-- [trigger](Fluent-1.md#trigger)
-- [tryGetWidget](Fluent-1.md#trygetwidget)
-- [val](Fluent-1.md#val)
+- [addClass](Fluent.md#addclass)
+- [after](Fluent.md#after)
+- [append](Fluent.md#append)
+- [appendTo](Fluent.md#appendto)
+- [attr](Fluent.md#attr)
+- [before](Fluent.md#before)
+- [children](Fluent.md#children)
+- [class](Fluent.md#class)
+- [click](Fluent.md#click)
+- [closest](Fluent.md#closest)
+- [data](Fluent.md#data)
+- [each](Fluent.md#each)
+- [empty](Fluent.md#empty)
+- [findAll](Fluent.md#findall)
+- [findEach](Fluent.md#findeach)
+- [findFirst](Fluent.md#findfirst)
+- [focus](Fluent.md#focus)
+- [getNode](Fluent.md#getnode)
+- [getWidget](Fluent.md#getwidget)
+- [hasClass](Fluent.md#hasclass)
+- [hide](Fluent.md#hide)
+- [insertAfter](Fluent.md#insertafter)
+- [insertBefore](Fluent.md#insertbefore)
+- [matches](Fluent.md#matches)
+- [nextSibling](Fluent.md#nextsibling)
+- [off](Fluent.md#off)
+- [on](Fluent.md#on)
+- [one](Fluent.md#one)
+- [parent](Fluent.md#parent)
+- [prepend](Fluent.md#prepend)
+- [prependTo](Fluent.md#prependto)
+- [prevSibling](Fluent.md#prevsibling)
+- [remove](Fluent.md#remove)
+- [removeAttr](Fluent.md#removeattr)
+- [removeClass](Fluent.md#removeclass)
+- [show](Fluent.md#show)
+- [style](Fluent.md#style)
+- [text](Fluent.md#text)
+- [toggle](Fluent.md#toggle)
+- [toggleClass](Fluent.md#toggleclass)
+- [trigger](Fluent.md#trigger)
+- [tryGetWidget](Fluent.md#trygetwidget)
+- [val](Fluent.md#val)
+- [byId](Fluent.md#byid)
+- [findAll](Fluent.md#findall-1)
+- [findEach](Fluent.md#findeach-1)
+- [findFirst](Fluent.md#findfirst-1)
+- [ready](Fluent.md#ready)
 
 ## Constructors
 
@@ -108,7 +113,7 @@ Gets an iterator for the elements in the Fluent object.
 
 #### Defined in
 
-[../base/dist/index.d.ts:773](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L773)
+[src/base/fluent.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L219)
 
 ___
 
@@ -124,7 +129,7 @@ ArrayLike.length
 
 #### Defined in
 
-[../base/dist/index.d.ts:784](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L784)
+[src/base/fluent.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L232)
 
 ## Methods
 
@@ -148,7 +153,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:606](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L606)
+[src/base/fluent.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L19)
 
 ___
 
@@ -162,7 +167,7 @@ Inserts content after the element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `content` | `string` \| `Node` \| [`Fluent`](Fluent-1.md)\<`any`\> | The content to insert. It can be a string, a Node object, or another Fluent object. |
+| `content` | `string` \| `Node` \| [`Fluent`](Fluent.md)\<`any`\> | The content to insert. It can be a string, a Node object, or another Fluent object. |
 
 #### Returns
 
@@ -172,7 +177,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:620](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L620)
+[src/base/fluent.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L35)
 
 ___
 
@@ -186,7 +191,7 @@ Appends content to the element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `child` | `string` \| `Node` \| [`Fluent`](Fluent-1.md)\<`any`\> | The content to append. It can be a string, a Node object, or another Fluent object. |
+| `child` | `string` \| `Node` \| [`Fluent`](Fluent.md)\<`any`\> | The content to append. It can be a string, a Node object, or another Fluent object. |
 
 #### Returns
 
@@ -196,7 +201,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:613](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L613)
+[src/base/fluent.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L27)
 
 ___
 
@@ -210,7 +215,7 @@ Appends the element to the specified parent element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parent` | `Element` \| [`Fluent`](Fluent-1.md)\<`any`\> | The parent element to append to. It can be an Element object or another Fluent object. |
+| `parent` | `Element` \| [`Fluent`](Fluent.md)\<`any`\> | The parent element to append to. It can be an Element object or another Fluent object. |
 
 #### Returns
 
@@ -220,7 +225,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:627](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L627)
+[src/base/fluent.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L43)
 
 ___
 
@@ -228,7 +233,7 @@ ___
 
 ▸ **attr**(`name`): `string`
 
-Gets or sets the value of the specified attribute.
+Gets the value of the specified attribute.
 
 #### Parameters
 
@@ -240,28 +245,32 @@ Gets or sets the value of the specified attribute.
 
 `string`
 
-The value of the attribute if no value is provided, or the Fluent object itself if a value is provided.
+The value of the attribute.
 
 #### Defined in
 
-[../base/dist/index.d.ts:635](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L635)
+[src/base/fluent.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L51)
 
 ▸ **attr**(`name`, `value`): `this`
 
+Sets the value of the specified attribute.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `value` | `string` \| `number` \| `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | The name of the attribute. |
+| `value` | `string` \| `number` \| `boolean` | The value of the attribute. If the value is falsy the attribute is removed. |
 
 #### Returns
 
 `this`
 
+The Fluent object itself if a value is provided.
+
 #### Defined in
 
-[../base/dist/index.d.ts:636](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L636)
+[src/base/fluent.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L60)
 
 ___
 
@@ -275,7 +284,7 @@ Inserts content before the element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `content` | `string` \| `Node` \| [`Fluent`](Fluent-1.md)\<`any`\> | The content to insert. It can be a string, a Node object, or another Fluent object. |
+| `content` | `string` \| `Node` \| [`Fluent`](Fluent.md)\<`any`\> | The content to insert. It can be a string, a Node object, or another Fluent object. |
 
 #### Returns
 
@@ -285,7 +294,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:643](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L643)
+[src/base/fluent.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L68)
 
 ___
 
@@ -309,7 +318,7 @@ An array of HTMLElement objects representing the children.
 
 #### Defined in
 
-[../base/dist/index.d.ts:650](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L650)
+[src/base/fluent.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L76)
 
 ___
 
@@ -333,7 +342,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:657](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L657)
+[src/base/fluent.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L84)
 
 ___
 
@@ -351,29 +360,33 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:664](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L664)
+[src/base/fluent.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L91)
 
 ▸ **click**(`listener`): `this`
 
+Adds a click event listener on the element.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `listener` | (`e`: `MouseEvent`) => `void` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `listener` | (`e`: `MouseEvent`) => `void` | A callback function to execute when the click event is triggered. |
 
 #### Returns
 
 `this`
 
+The Fluent object itself.
+
 #### Defined in
 
-[../base/dist/index.d.ts:665](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L665)
+[src/base/fluent.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L98)
 
 ___
 
 ### closest
 
-▸ **closest**(`selector`): [`Fluent`](Fluent-1.md)\<`HTMLElement`\>
+▸ **closest**(`selector`): [`Fluent`](Fluent.md)\<`HTMLElement`\>
 
 Gets the closest ancestor of the element that matches the specified selector.
 
@@ -385,13 +398,13 @@ Gets the closest ancestor of the element that matches the specified selector.
 
 #### Returns
 
-[`Fluent`](Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](Fluent.md)\<`HTMLElement`\>
 
 A Fluent object representing the closest ancestor element.
 
 #### Defined in
 
-[../base/dist/index.d.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L672)
+[src/base/fluent.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L106)
 
 ___
 
@@ -415,7 +428,7 @@ The value of the data attribute if no value is provided, or the Fluent object it
 
 #### Defined in
 
-[../base/dist/index.d.ts:679](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L679)
+[src/base/fluent.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L114)
 
 ▸ **data**(`name`, `value`): `this`
 
@@ -432,7 +445,7 @@ The value of the data attribute if no value is provided, or the Fluent object it
 
 #### Defined in
 
-[../base/dist/index.d.ts:680](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L680)
+[src/base/fluent.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L115)
 
 ___
 
@@ -456,7 +469,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:687](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L687)
+[src/base/fluent.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L123)
 
 ___
 
@@ -474,7 +487,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:699](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L699)
+[src/base/fluent.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L137)
 
 ___
 
@@ -508,13 +521,13 @@ TElement The type of the found elements.
 
 #### Defined in
 
-[../base/dist/index.d.ts:707](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L707)
+[src/base/fluent.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L146)
 
 ___
 
 ### findEach
 
-▸ **findEach**\<`TElement`\>(`selector`, `callback`): [`Fluent`](Fluent-1.md)\<`HTMLElement`\>
+▸ **findEach**\<`TElement`\>(`selector`, `callback`): [`Fluent`](Fluent.md)\<`HTMLElement`\>
 
 Finds each element that matches the specified selector within the element and executes a callback function for each found element as a Fluent object.
 
@@ -529,11 +542,11 @@ Finds each element that matches the specified selector within the element and ex
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `selector` | `string` | A CSS selector to match against. |
-| `callback` | (`el`: [`Fluent`](Fluent-1.md)\<`TElement`\>) => `void` | The callback function to execute for each found element. It receives a Fluent object for each element. |
+| `callback` | (`el`: [`Fluent`](Fluent.md)\<`TElement`\>) => `void` | The callback function to execute for each found element. It receives a Fluent object for each element. |
 
 #### Returns
 
-[`Fluent`](Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](Fluent.md)\<`HTMLElement`\>
 
 The Fluent object itself.
 
@@ -543,13 +556,13 @@ TElement The type of the found elements.
 
 #### Defined in
 
-[../base/dist/index.d.ts:716](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L716)
+[src/base/fluent.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L156)
 
 ___
 
 ### findFirst
 
-▸ **findFirst**\<`TElement`\>(`selector`): [`Fluent`](Fluent-1.md)\<`TElement`\>
+▸ **findFirst**\<`TElement`\>(`selector`): [`Fluent`](Fluent.md)\<`TElement`\>
 
 Finds the first element that matches the specified selector within the element.
 
@@ -567,7 +580,7 @@ Finds the first element that matches the specified selector within the element.
 
 #### Returns
 
-[`Fluent`](Fluent-1.md)\<`TElement`\>
+[`Fluent`](Fluent.md)\<`TElement`\>
 
 A Fluent object representing the first element that matches the selector.
 
@@ -577,7 +590,7 @@ TElement The type of the found element.
 
 #### Defined in
 
-[../base/dist/index.d.ts:724](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L724)
+[src/base/fluent.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L165)
 
 ___
 
@@ -595,7 +608,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L730)
+[src/base/fluent.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L172)
 
 ___
 
@@ -613,7 +626,7 @@ The underlying HTML element.
 
 #### Defined in
 
-[../base/dist/index.d.ts:693](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L693)
+[src/base/fluent.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L130)
 
 ___
 
@@ -647,7 +660,7 @@ TWidget The type of the widget.
 
 #### Defined in
 
-[../base/dist/index.d.ts:751](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L751)
+[src/base/fluent.ts:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L196)
 
 ___
 
@@ -671,7 +684,7 @@ Checks if the element has the specified class.
 
 #### Defined in
 
-[../base/dist/index.d.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L737)
+[src/base/fluent.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L180)
 
 ___
 
@@ -689,7 +702,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L743)
+[src/base/fluent.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L187)
 
 ___
 
@@ -703,7 +716,7 @@ Inserts the element after the specified reference element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `referenceNode` | `HTMLElement` \| [`Fluent`](Fluent-1.md)\<`HTMLElement`\> | The reference element to insert after. It can be an HTMLElement object or another Fluent object. |
+| `referenceNode` | `HTMLElement` \| [`Fluent`](Fluent.md)\<`HTMLElement`\> | The reference element to insert after. It can be an HTMLElement object or another Fluent object. |
 
 #### Returns
 
@@ -713,7 +726,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:760](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L760)
+[src/base/fluent.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L204)
 
 ___
 
@@ -727,7 +740,7 @@ Inserts the element before the specified reference element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `referenceNode` | `HTMLElement` \| [`Fluent`](Fluent-1.md)\<`HTMLElement`\> | The reference element to insert before. It can be an HTMLElement object or another Fluent object. |
+| `referenceNode` | `HTMLElement` \| [`Fluent`](Fluent.md)\<`HTMLElement`\> | The reference element to insert before. It can be an HTMLElement object or another Fluent object. |
 
 #### Returns
 
@@ -737,7 +750,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:767](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L767)
+[src/base/fluent.ts:212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L212)
 
 ___
 
@@ -761,13 +774,13 @@ Checks if the element matches the specified selector.
 
 #### Defined in
 
-[../base/dist/index.d.ts:825](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L825)
+[src/base/fluent.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L277)
 
 ___
 
 ### nextSibling
 
-▸ **nextSibling**(`selector?`): [`Fluent`](Fluent-1.md)\<`any`\>
+▸ **nextSibling**(`selector?`): [`Fluent`](Fluent.md)\<`any`\>
 
 Gets the next sibling element that matches the specified selector, or the first sibling if no selector is provided..
 
@@ -779,13 +792,13 @@ Gets the next sibling element that matches the specified selector, or the first 
 
 #### Returns
 
-[`Fluent`](Fluent-1.md)\<`any`\>
+[`Fluent`](Fluent.md)\<`any`\>
 
 A Fluent object representing the next sibling element.
 
 #### Defined in
 
-[../base/dist/index.d.ts:832](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L832)
+[src/base/fluent.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L285)
 
 ___
 
@@ -820,7 +833,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:793](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L793)
+[src/base/fluent.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L242)
 
 ▸ **off**(`type`): `this`
 
@@ -836,7 +849,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:794](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L794)
+[src/base/fluent.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L243)
 
 ▸ **off**(`type`, `listener`): `this`
 
@@ -853,7 +866,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:795](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L795)
+[src/base/fluent.ts:244](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L244)
 
 ▸ **off**(`type`, `selector`, `delegationHandler`): `this`
 
@@ -871,7 +884,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:796](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L796)
+[src/base/fluent.ts:245](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L245)
 
 ___
 
@@ -906,7 +919,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:805](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L805)
+[src/base/fluent.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L255)
 
 ▸ **on**(`type`, `listener`): `this`
 
@@ -923,7 +936,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:806](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L806)
+[src/base/fluent.ts:256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L256)
 
 ▸ **on**(`type`, `selector`, `delegationHandler`): `this`
 
@@ -941,7 +954,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:807](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L807)
+[src/base/fluent.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L257)
 
 ___
 
@@ -976,7 +989,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:816](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L816)
+[src/base/fluent.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L267)
 
 ▸ **one**(`type`, `listener`): `this`
 
@@ -993,7 +1006,7 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:817](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L817)
+[src/base/fluent.ts:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L268)
 
 ▸ **one**(`type`, `selector`, `delegationHandler`): `this`
 
@@ -1011,25 +1024,25 @@ K The type of the event.
 
 #### Defined in
 
-[../base/dist/index.d.ts:818](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L818)
+[src/base/fluent.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L269)
 
 ___
 
 ### parent
 
-▸ **parent**(): [`Fluent`](Fluent-1.md)\<`HTMLElement`\>
+▸ **parent**(): [`Fluent`](Fluent.md)\<`HTMLElement`\>
 
 Gets the parent element of the element.
 
 #### Returns
 
-[`Fluent`](Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](Fluent.md)\<`HTMLElement`\>
 
 A Fluent object representing the parent element.
 
 #### Defined in
 
-[../base/dist/index.d.ts:838](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L838)
+[src/base/fluent.ts:292](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L292)
 
 ___
 
@@ -1043,7 +1056,7 @@ Prepends content to the element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `child` | `string` \| `Node` \| [`Fluent`](Fluent-1.md)\<`any`\> | The content to prepend. It can be a string, a Node object, or another Fluent object. |
+| `child` | `string` \| `Node` \| [`Fluent`](Fluent.md)\<`any`\> | The content to prepend. It can be a string, a Node object, or another Fluent object. |
 
 #### Returns
 
@@ -1053,7 +1066,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:845](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L845)
+[src/base/fluent.ts:300](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L300)
 
 ___
 
@@ -1067,7 +1080,7 @@ Prepends the element to the specified parent element.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parent` | `Element` \| [`Fluent`](Fluent-1.md)\<`any`\> | The parent element to prepend to. It can be an Element object or another Fluent object. |
+| `parent` | `Element` \| [`Fluent`](Fluent.md)\<`any`\> | The parent element to prepend to. It can be an Element object or another Fluent object. |
 
 #### Returns
 
@@ -1077,13 +1090,13 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:852](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L852)
+[src/base/fluent.ts:308](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L308)
 
 ___
 
 ### prevSibling
 
-▸ **prevSibling**(`selector?`): [`Fluent`](Fluent-1.md)\<`any`\>
+▸ **prevSibling**(`selector?`): [`Fluent`](Fluent.md)\<`any`\>
 
 Gets the previous sibling element that matches the specified selector, or the first sibling if no selector is provided.
 
@@ -1095,13 +1108,13 @@ Gets the previous sibling element that matches the specified selector, or the fi
 
 #### Returns
 
-[`Fluent`](Fluent-1.md)\<`any`\>
+[`Fluent`](Fluent.md)\<`any`\>
 
 A Fluent object representing the previous sibling element.
 
 #### Defined in
 
-[../base/dist/index.d.ts:859](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L859)
+[src/base/fluent.ts:316](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L316)
 
 ___
 
@@ -1119,7 +1132,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:865](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L865)
+[src/base/fluent.ts:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L323)
 
 ___
 
@@ -1143,7 +1156,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:872](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L872)
+[src/base/fluent.ts:331](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L331)
 
 ___
 
@@ -1167,7 +1180,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:879](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L879)
+[src/base/fluent.ts:339](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L339)
 
 ___
 
@@ -1185,7 +1198,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:885](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L885)
+[src/base/fluent.ts:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L346)
 
 ___
 
@@ -1209,7 +1222,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:892](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L892)
+[src/base/fluent.ts:354](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L354)
 
 ___
 
@@ -1227,7 +1240,7 @@ The text content of the element if no value is provided, or the Fluent object it
 
 #### Defined in
 
-[../base/dist/index.d.ts:898](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L898)
+[src/base/fluent.ts:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L361)
 
 ▸ **text**(`value`): `this`
 
@@ -1243,7 +1256,7 @@ The text content of the element if no value is provided, or the Fluent object it
 
 #### Defined in
 
-[../base/dist/index.d.ts:899](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L899)
+[src/base/fluent.ts:362](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L362)
 
 ___
 
@@ -1267,7 +1280,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:906](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L906)
+[src/base/fluent.ts:370](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L370)
 
 ___
 
@@ -1292,7 +1305,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:913](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L913)
+[src/base/fluent.ts:378](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L378)
 
 ___
 
@@ -1317,7 +1330,7 @@ The Fluent object itself.
 
 #### Defined in
 
-[../base/dist/index.d.ts:921](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L921)
+[src/base/fluent.ts:387](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L387)
 
 ___
 
@@ -1351,7 +1364,7 @@ TWidget The type of the widget.
 
 #### Defined in
 
-[../base/dist/index.d.ts:929](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L929)
+[src/base/fluent.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L396)
 
 ___
 
@@ -1375,7 +1388,7 @@ The value of the element if no value is provided, or the Fluent object itself if
 
 #### Defined in
 
-[../base/dist/index.d.ts:938](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L938)
+[src/base/fluent.ts:404](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L404)
 
 ▸ **val**(): `string`
 
@@ -1385,4 +1398,143 @@ The value of the element if no value is provided, or the Fluent object itself if
 
 #### Defined in
 
-[../base/dist/index.d.ts:939](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L939)
+[src/base/fluent.ts:405](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L405)
+
+___
+
+### byId
+
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](Fluent.md)\<`TElement`\>
+
+Finds the first element having the specified ID within the document.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `string` | The ID |
+
+#### Returns
+
+[`Fluent`](Fluent.md)\<`TElement`\>
+
+A Fluent instance representing the first matching element, or null if no match is found.
+
+#### Defined in
+
+[src/base/fluent.ts:982](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L982)
+
+___
+
+### findAll
+
+▸ **findAll**\<`TElement`\>(`selector`): `TElement`[]
+
+Finds all elements matching the specified selector within the document.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `selector` | `string` | The CSS selector to search for. |
+
+#### Returns
+
+`TElement`[]
+
+An array of HTML elements matching the selector.
+
+#### Defined in
+
+[src/base/fluent.ts:992](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L992)
+
+___
+
+### findEach
+
+▸ **findEach**\<`TElement`\>(`selector`, `callback`): `void`
+
+Iterates over all elements matching the specified selector within the document.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `selector` | `string` | The CSS selector to search for. |
+| `callback` | (`el`: [`Fluent`](Fluent.md)\<`TElement`\>) => `void` | A function to execute for each matching element. Receives a Fluent object. |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/base/fluent.ts:1002](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L1002)
+
+___
+
+### findFirst
+
+▸ **findFirst**\<`TElement`\>(`selector`): [`Fluent`](Fluent.md)\<`TElement`\>
+
+Finds the first element matching the specified selector within the document.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `selector` | `string` | The CSS selector to search for. |
+
+#### Returns
+
+[`Fluent`](Fluent.md)\<`TElement`\>
+
+A Fluent instance representing the first matching element, or null if no match is found.
+
+#### Defined in
+
+[src/base/fluent.ts:1013](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L1013)
+
+___
+
+### ready
+
+▸ **ready**(`callback`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | () => `void` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/base/fluent.ts:955](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L955)

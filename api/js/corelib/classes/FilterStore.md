@@ -8,14 +8,6 @@
 
 - [constructor](FilterStore.md#constructor)
 
-### Properties
-
-- [changed](FilterStore.md#changed)
-- [displayText](FilterStore.md#displaytext)
-- [fieldByName](FilterStore.md#fieldbyname)
-- [fields](FilterStore.md#fields)
-- [items](FilterStore.md#items)
-
 ### Methods
 
 - [add\_changed](FilterStore.md#add_changed)
@@ -48,60 +40,6 @@
 #### Defined in
 
 [src/ui/filtering/filterstore.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L9)
-
-## Properties
-
-### changed
-
-• `Private` **changed**: `any`
-
-#### Defined in
-
-[src/ui/filtering/filterstore.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L132)
-
-___
-
-### displayText
-
-• `Private` **displayText**: `string`
-
-#### Defined in
-
-[src/ui/filtering/filterstore.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L133)
-
-___
-
-### fieldByName
-
-• `Private` **fieldByName**: `Object`
-
-#### Index signature
-
-▪ [key: `string`]: [`PropertyItem`](../interfaces/PropertyItem.md)
-
-#### Defined in
-
-[src/ui/filtering/filterstore.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L135)
-
-___
-
-### fields
-
-• `Private` **fields**: [`PropertyItem`](../interfaces/PropertyItem.md)[]
-
-#### Defined in
-
-[src/ui/filtering/filterstore.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L134)
-
-___
-
-### items
-
-• `Private` **items**: [`FilterLine`](../interfaces/FilterLine.md)[]
-
-#### Defined in
-
-[src/ui/filtering/filterstore.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L136)
 
 ## Methods
 

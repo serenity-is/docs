@@ -28,15 +28,6 @@
 
 ### Properties
 
-- [\_entitySingular](EntityDialog.md#_entitysingular)
-- [\_entityType](EntityDialog.md#_entitytype)
-- [\_formKey](EntityDialog.md#_formkey)
-- [\_idProperty](EntityDialog.md#_idproperty)
-- [\_isActiveProperty](EntityDialog.md#_isactiveproperty)
-- [\_localTextDbPrefix](EntityDialog.md#_localtextdbprefix)
-- [\_nameProperty](EntityDialog.md#_nameproperty)
-- [\_readonly](EntityDialog.md#_readonly)
-- [\_service](EntityDialog.md#_service)
 - [applyChangesButton](EntityDialog.md#applychangesbutton)
 - [cloneButton](EntityDialog.md#clonebutton)
 - [deleteButton](EntityDialog.md#deletebutton)
@@ -106,7 +97,6 @@
 - [getInsertPermission](EntityDialog.md#getinsertpermission)
 - [getIsActiveProperty](EntityDialog.md#getisactiveproperty)
 - [getIsDeletedProperty](EntityDialog.md#getisdeletedproperty)
-- [getLangs](EntityDialog.md#getlangs)
 - [getLanguages](EntityDialog.md#getlanguages)
 - [getLoadByIdOptions](EntityDialog.md#getloadbyidoptions)
 - [getLoadByIdRequest](EntityDialog.md#getloadbyidrequest)
@@ -232,99 +222,9 @@
 
 ## Properties
 
-### \_entitySingular
-
-• `Private` **\_entitySingular**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L265)
-
-___
-
-### \_entityType
-
-• `Private` **\_entityType**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L200)
-
-___
-
-### \_formKey
-
-• `Private` **\_formKey**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L226)
-
-___
-
-### \_idProperty
-
-• `Private` **\_idProperty**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L294)
-
-___
-
-### \_isActiveProperty
-
-• `Private` **\_isActiveProperty**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:311](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L311)
-
-___
-
-### \_localTextDbPrefix
-
-• `Private` **\_localTextDbPrefix**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L239)
-
-___
-
-### \_nameProperty
-
-• `Private` **\_nameProperty**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L276)
-
-___
-
-### \_readonly
-
-• `Private` **\_readonly**: `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:1095](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L1095)
-
-___
-
-### \_service
-
-• `Private` **\_service**: `string`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L332)
-
-___
-
 ### applyChangesButton
 
-• `Protected` **applyChangesButton**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **applyChangesButton**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -334,7 +234,7 @@ ___
 
 ### cloneButton
 
-• `Protected` **cloneButton**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **cloneButton**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -344,7 +244,7 @@ ___
 
 ### deleteButton
 
-• `Protected` **deleteButton**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **deleteButton**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -382,7 +282,7 @@ ___
 
 ### editButton
 
-• `Protected` **editButton**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **editButton**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -436,7 +336,7 @@ ___
 
 ### localizationButton
 
-• `Protected` **localizationButton**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **localizationButton**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -510,7 +410,7 @@ ___
 
 ### saveAndCloseButton
 
-• `Protected` **saveAndCloseButton**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **saveAndCloseButton**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -520,7 +420,7 @@ ___
 
 ### tabs
 
-• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -548,7 +448,7 @@ ___
 
 ### undeleteButton
 
-• `Protected` **undeleteButton**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **undeleteButton**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -656,13 +556,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -748,7 +648,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -770,7 +670,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -854,7 +754,7 @@ ___
 
 ### byId
 
-▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Type parameters
 
@@ -870,7 +770,7 @@ ___
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Inherited from
 
@@ -1290,11 +1190,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -1377,20 +1277,6 @@ ___
 #### Defined in
 
 [src/ui/dialogs/entitydialog.ts:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L328)
-
-___
-
-### getLangs
-
-▸ **getLangs**(): `any`
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[src/ui/dialogs/entitydialog.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.ts#L584)
 
 ___
 

@@ -19,7 +19,7 @@
 
 Determines if the current environment is development mode.
 The runtimeErrorHandler (window.onerror) shows error notifications only
-when this function returns true. The default implementation considers
+when this function returns true. The default implementation considers 
 the environment as development mode if the host is localhost, 127.0.0.1, ::1,
 or a domain name that ends with .local/.localhost.
 
@@ -31,7 +31,7 @@ true if the current environment is development mode, false otherwise.
 
 #### Defined in
 
-[../base/dist/index.d.ts:582](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L582)
+[src/base/errorhandling.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.ts#L76)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 Runtime error handler that shows a runtime error as a notification
 by default only in development mode (@see isDevelopmentMode)
-This function is assigned as window.onerror handler in
+This function is assigned as window.onerror handler in 
 ScriptInit.ts for Serenity applications so that developers
 can notice an error without having to check the browser console.
 
@@ -61,7 +61,7 @@ can notice an error without having to check the browser console.
 
 #### Defined in
 
-[../base/dist/index.d.ts:573](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L573)
+[src/base/errorhandling.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.ts#L40)
 
 ___
 
@@ -85,7 +85,7 @@ is null, has no message or code, it shows "??ERROR??".
 
 #### Defined in
 
-[../base/dist/index.d.ts:565](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L565)
+[src/base/errorhandling.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.ts#L12)
 
 ___
 
@@ -111,4 +111,4 @@ window.addEventListener("unhandledrejection", ErrorHandling.unhandledRejectionHa
 
 #### Defined in
 
-[../base/dist/index.d.ts:590](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L590)
+[src/base/errorhandling.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.ts#L92)

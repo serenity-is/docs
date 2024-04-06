@@ -10,7 +10,6 @@
 
 ### Properties
 
-- [el](Select2.md#el)
 - [ajaxDefaults](Select2.md#ajaxdefaults)
 - [defaults](Select2.md#defaults)
 
@@ -19,7 +18,6 @@
 - [container](Select2.md#container)
 - [data](Select2.md#data)
 - [dropdown](Select2.md#dropdown)
-- [instance](Select2.md#instance)
 - [isFocused](Select2.md#isfocused)
 - [isMultiple](Select2.md#ismultiple)
 - [opened](Select2.md#opened)
@@ -61,19 +59,9 @@
 
 ## Properties
 
-### el
-
-• `Private` **el**: `Select2Element`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:480](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L480)
-
-___
-
 ### ajaxDefaults
 
-▪ `Static` `Readonly` **ajaxDefaults**: `Select2AjaxOptions`
+▪ `Static` `Readonly` **ajaxDefaults**: [`Select2AjaxOptions`](../interfaces/Select2AjaxOptions.md)
 
 #### Defined in
 
@@ -107,11 +95,11 @@ ___
 
 ### data
 
-• `get` **data**(): `Select2Item` \| `Select2Item`[]
+• `get` **data**(): [`Select2Item`](../interfaces/Select2Item.md) \| [`Select2Item`](../interfaces/Select2Item.md)[]
 
 #### Returns
 
-`Select2Item` \| `Select2Item`[]
+[`Select2Item`](../interfaces/Select2Item.md) \| [`Select2Item`](../interfaces/Select2Item.md)[]
 
 #### Defined in
 
@@ -123,7 +111,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `Select2Item` \| `Select2Item`[] |
+| `value` | [`Select2Item`](../interfaces/Select2Item.md) \| [`Select2Item`](../interfaces/Select2Item.md)[] |
 
 #### Returns
 
@@ -146,20 +134,6 @@ ___
 #### Defined in
 
 [src/ui/editors/select2.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L518)
-
-___
-
-### instance
-
-• `get` **instance**(): `AbstractSelect2`
-
-#### Returns
-
-`AbstractSelect2`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:504](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L504)
 
 ___
 
@@ -381,7 +355,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `el` | `Select2Element` |
+| `el` | [`Select2Element`](../README.md#select2element) |
 
 #### Returns
 

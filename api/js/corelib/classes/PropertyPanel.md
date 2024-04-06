@@ -23,8 +23,6 @@
 
 ### Properties
 
-- [\_entity](PropertyPanel.md#_entity)
-- [\_entityId](PropertyPanel.md#_entityid)
 - [domNode](PropertyPanel.md#domnode)
 - [idPrefix](PropertyPanel.md#idprefix)
 - [isPanel](PropertyPanel.md#ispanel)
@@ -119,26 +117,6 @@
 
 ## Properties
 
-### \_entity
-
-• `Private` **\_entity**: `TItem`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L12)
-
-___
-
-### \_entityId
-
-• `Private` **\_entityId**: `any`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L13)
-
-___
-
 ### domNode
 
 • `Readonly` **domNode**: `HTMLElement`
@@ -221,7 +199,7 @@ ___
 
 ### tabs
 
-• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -291,13 +269,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -353,7 +331,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -375,7 +353,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -411,7 +389,7 @@ ___
 
 ### byId
 
-▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Type parameters
 
@@ -427,7 +405,7 @@ ___
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Inherited from
 
@@ -618,11 +596,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

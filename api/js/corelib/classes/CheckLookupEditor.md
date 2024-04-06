@@ -26,18 +26,15 @@
 - [allColumns](CheckLookupEditor.md#allcolumns)
 - [cascadeLink](CheckLookupEditor.md#cascadelink)
 - [domNode](CheckLookupEditor.md#domnode)
-- [enableUpdateItems](CheckLookupEditor.md#enableupdateitems)
 - [filterBar](CheckLookupEditor.md#filterbar)
 - [idPrefix](CheckLookupEditor.md#idprefix)
 - [initialSettings](CheckLookupEditor.md#initialsettings)
-- [lookupChangeUnbind](CheckLookupEditor.md#lookupchangeunbind)
 - [openDialogsAsPanel](CheckLookupEditor.md#opendialogsaspanel)
 - [options](CheckLookupEditor.md#options)
 - [propertyItemsData](CheckLookupEditor.md#propertyitemsdata)
 - [quickFiltersBar](CheckLookupEditor.md#quickfiltersbar)
 - [quickFiltersDiv](CheckLookupEditor.md#quickfiltersdiv)
 - [restoringSettings](CheckLookupEditor.md#restoringsettings)
-- [searchText](CheckLookupEditor.md#searchtext)
 - [slickContainer](CheckLookupEditor.md#slickcontainer)
 - [slickGrid](CheckLookupEditor.md#slickgrid)
 - [titleDiv](CheckLookupEditor.md#titlediv)
@@ -303,16 +300,6 @@ ___
 
 ___
 
-### enableUpdateItems
-
-• `Private` **enableUpdateItems**: `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L478)
-
-___
-
 ### filterBar
 
 • `Protected` **filterBar**: [`FilterDisplayBar`](FilterDisplayBar.md)\<{}\>
@@ -352,16 +339,6 @@ ___
 #### Defined in
 
 [src/ui/datagrid/datagrid.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L77)
-
-___
-
-### lookupChangeUnbind
-
-• `Private` **lookupChangeUnbind**: `any`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:479](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L479)
 
 ___
 
@@ -423,7 +400,7 @@ ___
 
 ### quickFiltersDiv
 
-• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -449,19 +426,9 @@ ___
 
 ___
 
-### searchText
-
-• `Private` **searchText**: `string`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:477](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L477)
-
-___
-
 ### slickContainer
 
-• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -489,7 +456,7 @@ ___
 
 ### titleDiv
 
-• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -719,13 +686,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -1043,7 +1010,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -1065,7 +1032,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -1442,11 +1409,11 @@ ___
 
 ### createSlickContainer
 
-▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -2142,11 +2109,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

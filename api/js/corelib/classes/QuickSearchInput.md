@@ -23,13 +23,8 @@
 ### Properties
 
 - [domNode](QuickSearchInput.md#domnode)
-- [field](QuickSearchInput.md#field)
-- [fieldChanged](QuickSearchInput.md#fieldchanged)
-- [fieldLink](QuickSearchInput.md#fieldlink)
 - [idPrefix](QuickSearchInput.md#idprefix)
-- [lastValue](QuickSearchInput.md#lastvalue)
 - [options](QuickSearchInput.md#options)
-- [timer](QuickSearchInput.md#timer)
 - [uniqueName](QuickSearchInput.md#uniquename)
 - [typeInfo](QuickSearchInput.md#typeinfo)
 
@@ -113,36 +108,6 @@
 
 ___
 
-### field
-
-• `Private` **field**: [`QuickSearchField`](../interfaces/QuickSearchField.md)
-
-#### Defined in
-
-[src/ui/datagrid/quicksearchinput.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L24)
-
-___
-
-### fieldChanged
-
-• `Private` **fieldChanged**: `boolean`
-
-#### Defined in
-
-[src/ui/datagrid/quicksearchinput.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L26)
-
-___
-
-### fieldLink
-
-• `Private` **fieldLink**: `HTMLElement`
-
-#### Defined in
-
-[src/ui/datagrid/quicksearchinput.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L25)
-
-___
-
 ### idPrefix
 
 • `Readonly` **idPrefix**: `string`
@@ -157,16 +122,6 @@ ___
 
 ___
 
-### lastValue
-
-• `Private` **lastValue**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/quicksearchinput.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L23)
-
-___
-
 ### options
 
 • `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
@@ -178,16 +133,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
-
-___
-
-### timer
-
-• `Private` **timer**: `number`
-
-#### Defined in
-
-[src/ui/datagrid/quicksearchinput.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L27)
 
 ___
 
@@ -221,13 +166,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -283,7 +228,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -305,7 +250,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -470,11 +415,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

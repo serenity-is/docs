@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:347](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L347)
+[src/base/dialogs.ts:590](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L590)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:348](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L348)
+[src/base/dialogs.ts:591](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L591)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:349](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L349)
+[src/base/dialogs.ts:592](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L592)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:350](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L350)
+[src/base/dialogs.ts:593](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L593)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:351](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L351)
+[src/base/dialogs.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L594)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L352)
+[src/base/dialogs.ts:595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L595)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:353](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L353)
+[src/base/dialogs.ts:596](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L596)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:354](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L354)
+[src/base/dialogs.ts:597](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L597)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:355](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L355)
+[src/base/dialogs.ts:598](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L598)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:356](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L356)
+[src/base/dialogs.ts:599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L599)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:357](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L357)
+[src/base/dialogs.ts:600](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L600)
 
 ___
 
@@ -137,4 +137,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:358](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L358)
+[src/base/dialogs.ts:601](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L601)

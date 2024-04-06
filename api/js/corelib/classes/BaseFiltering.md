@@ -23,12 +23,6 @@
 
 - [constructor](BaseFiltering.md#constructor)
 
-### Properties
-
-- [container](BaseFiltering.md#container)
-- [field](BaseFiltering.md#field)
-- [operator](BaseFiltering.md#operator)
-
 ### Methods
 
 - [appendComparisonOperators](BaseFiltering.md#appendcomparisonoperators)
@@ -64,36 +58,6 @@
 #### Returns
 
 [`BaseFiltering`](BaseFiltering.md)
-
-## Properties
-
-### container
-
-• `Private` **container**: `HTMLElement`
-
-#### Defined in
-
-[src/ui/filtering/filtering.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L63)
-
-___
-
-### field
-
-• `Private` **field**: [`PropertyItem`](../interfaces/PropertyItem.md)
-
-#### Defined in
-
-[src/ui/filtering/filtering.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L53)
-
-___
-
-### operator
-
-• `Private` **operator**: [`FilterOperator`](../interfaces/FilterOperator.md)
-
-#### Defined in
-
-[src/ui/filtering/filtering.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L73)
 
 ## Methods
 

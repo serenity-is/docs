@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:1665](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1665)
+[src/base/uploader.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L65)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1666](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1666)
+[src/base/uploader.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L66)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1667](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1667)
+[src/base/uploader.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L67)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1668](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1668)
+[src/base/uploader.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L68)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1669](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1669)
+[src/base/uploader.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L69)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1670](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1670)
+[src/base/uploader.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L70)

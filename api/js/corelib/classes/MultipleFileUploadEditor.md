@@ -32,15 +32,11 @@
 ### Properties
 
 - [domNode](MultipleFileUploadEditor.md#domnode)
-- [entities](MultipleFileUploadEditor.md#entities)
-- [fileSymbols](MultipleFileUploadEditor.md#filesymbols)
 - [hiddenInput](MultipleFileUploadEditor.md#hiddeninput)
 - [idPrefix](MultipleFileUploadEditor.md#idprefix)
 - [options](MultipleFileUploadEditor.md#options)
 - [progress](MultipleFileUploadEditor.md#progress)
-- [toolbar](MultipleFileUploadEditor.md#toolbar)
 - [uniqueName](MultipleFileUploadEditor.md#uniquename)
-- [uploadInput](MultipleFileUploadEditor.md#uploadinput)
 - [typeInfo](MultipleFileUploadEditor.md#typeinfo)
 
 ### Accessors
@@ -131,29 +127,9 @@
 
 ___
 
-### entities
-
-• `Private` **entities**: [`UploadedFile`](../interfaces/UploadedFile.md)[]
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L285)
-
-___
-
-### fileSymbols
-
-• `Private` **fileSymbols**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.ts:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L287)
-
-___
-
 ### hiddenInput
 
-• `Protected` **hiddenInput**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **hiddenInput**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -191,21 +167,11 @@ ___
 
 ### progress
 
-• `Protected` **progress**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **progress**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
 [src/ui/editors/uploadeditors.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L289)
-
-___
-
-### toolbar
-
-• `Private` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L286)
 
 ___
 
@@ -220,16 +186,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
-
-___
-
-### uploadInput
-
-• `Private` **uploadInput**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.ts:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L288)
 
 ___
 
@@ -249,13 +205,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -385,7 +341,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -407,7 +363,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -583,11 +539,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

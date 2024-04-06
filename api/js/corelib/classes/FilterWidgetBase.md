@@ -28,9 +28,7 @@
 
 - [domNode](FilterWidgetBase.md#domnode)
 - [idPrefix](FilterWidgetBase.md#idprefix)
-- [onFilterStoreChanged](FilterWidgetBase.md#onfilterstorechanged)
 - [options](FilterWidgetBase.md#options)
-- [store](FilterWidgetBase.md#store)
 - [uniqueName](FilterWidgetBase.md#uniquename)
 - [typeInfo](FilterWidgetBase.md#typeinfo)
 
@@ -127,24 +125,6 @@ ___
 
 ___
 
-### onFilterStoreChanged
-
-• `Private` **onFilterStoreChanged**: () => `void`
-
-#### Type declaration
-
-▸ (): `void`
-
-##### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/filtering/filterwidgetbase.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterwidgetbase.ts#L10)
-
-___
-
 ### options
 
 • `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
@@ -156,16 +136,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
-
-___
-
-### store
-
-• `Private` **store**: [`FilterStore`](FilterStore.md)
-
-#### Defined in
-
-[src/ui/filtering/filterwidgetbase.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterwidgetbase.ts#L8)
 
 ___
 
@@ -199,13 +169,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -261,7 +231,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -283,7 +253,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -301,7 +271,7 @@ ___
 
 ### byId
 
-▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Type parameters
 
@@ -317,7 +287,7 @@ ___
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Inherited from
 
@@ -508,11 +478,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

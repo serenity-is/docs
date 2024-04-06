@@ -14,13 +14,6 @@
 
 - [constructor](CascadedWidgetLink.md#constructor)
 
-### Properties
-
-- [\_parentID](CascadedWidgetLink.md#_parentid)
-- [parentChange](CascadedWidgetLink.md#parentchange)
-- [parentType](CascadedWidgetLink.md#parenttype)
-- [widget](CascadedWidgetLink.md#widget)
-
 ### Methods
 
 - [bind](CascadedWidgetLink.md#bind)
@@ -55,74 +48,6 @@
 #### Defined in
 
 [src/ui/editors/cascadedwidgetlink.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L10)
-
-## Properties
-
-### \_parentID
-
-• `Private` **\_parentID**: `string`
-
-#### Defined in
-
-[src/ui/editors/cascadedwidgetlink.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L21)
-
-___
-
-### parentChange
-
-• `Private` **parentChange**: (`p1`: `TParent`) => `void`
-
-#### Type declaration
-
-▸ (`p1`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `p1` | `TParent` |
-
-##### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/editors/cascadedwidgetlink.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L12)
-
-___
-
-### parentType
-
-• `Private` **parentType**: (...`args`: `any`[]) => `TParent`
-
-#### Type declaration
-
-• **new parentType**(`...args`): `TParent`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `...args` | `any`[] |
-
-##### Returns
-
-`TParent`
-
-#### Defined in
-
-[src/ui/editors/cascadedwidgetlink.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L10)
-
-___
-
-### widget
-
-• `Private` **widget**: [`Widget`](Widget.md)\<`any`\>
-
-#### Defined in
-
-[src/ui/editors/cascadedwidgetlink.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L11)
 
 ## Methods
 

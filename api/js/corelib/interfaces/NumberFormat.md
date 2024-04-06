@@ -33,7 +33,7 @@ Currency symbol
 
 #### Defined in
 
-[../base/dist/index.d.ts:1099](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1099)
+[src/base/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L20)
 
 ___
 
@@ -45,7 +45,7 @@ Number of digits after decimal separator
 
 #### Defined in
 
-[../base/dist/index.d.ts:1089](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1089)
+[src/base/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L10)
 
 ___
 
@@ -57,7 +57,7 @@ Decimal separator
 
 #### Defined in
 
-[../base/dist/index.d.ts:1085](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1085)
+[src/base/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L6)
 
 ___
 
@@ -69,7 +69,7 @@ Group separator
 
 #### Defined in
 
-[../base/dist/index.d.ts:1087](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1087)
+[src/base/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L8)
 
 ___
 
@@ -81,7 +81,7 @@ Zero symbol
 
 #### Defined in
 
-[../base/dist/index.d.ts:1095](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1095)
+[src/base/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L16)
 
 ___
 
@@ -93,7 +93,7 @@ Negative sign
 
 #### Defined in
 
-[../base/dist/index.d.ts:1093](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1093)
+[src/base/formatting.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L14)
 
 ___
 
@@ -105,7 +105,7 @@ Percentage symbol
 
 #### Defined in
 
-[../base/dist/index.d.ts:1097](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1097)
+[src/base/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L18)
 
 ___
 
@@ -117,4 +117,4 @@ Positive sign
 
 #### Defined in
 
-[../base/dist/index.d.ts:1091](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1091)
+[src/base/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L12)

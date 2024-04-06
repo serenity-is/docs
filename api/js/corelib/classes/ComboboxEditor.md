@@ -38,10 +38,7 @@
 
 ### Properties
 
-- [\_itemById](ComboboxEditor.md#_itembyid)
-- [\_items](ComboboxEditor.md#_items)
 - [cascadeLink](ComboboxEditor.md#cascadelink)
-- [combobox](ComboboxEditor.md#combobox)
 - [domNode](ComboboxEditor.md#domnode)
 - [idPrefix](ComboboxEditor.md#idprefix)
 - [lastCreateTerm](ComboboxEditor.md#lastcreateterm)
@@ -143,7 +140,6 @@
 - [set\_value](ComboboxEditor.md#set_value)
 - [set\_values](ComboboxEditor.md#set_values)
 - [syncOrAsyncThen](ComboboxEditor.md#syncorasyncthen)
-- [updateInplaceReadOnly](ComboboxEditor.md#updateinplacereadonly)
 - [updateItems](ComboboxEditor.md#updateitems)
 - [useIdPrefix](ComboboxEditor.md#useidprefix)
 - [useInplaceAdd](ComboboxEditor.md#useinplaceadd)
@@ -185,30 +181,6 @@
 
 ## Properties
 
-### \_itemById
-
-• `Private` **\_itemById**: `Object`
-
-#### Index signature
-
-▪ [key: `string`]: [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L48)
-
-___
-
-### \_items
-
-• `Private` **\_items**: [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>[]
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L47)
-
-___
-
 ### cascadeLink
 
 • `Protected` **cascadeLink**: [`CascadedWidgetLink`](CascadedWidgetLink.md)\<[`Widget`](Widget.md)\<`any`\>\>
@@ -216,16 +188,6 @@ ___
 #### Defined in
 
 [src/ui/editors/comboboxeditor.ts:572](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L572)
-
-___
-
-### combobox
-
-• `Private` **combobox**: [`Combobox`](Combobox.md)\<`any`\>
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L46)
 
 ___
 
@@ -435,13 +397,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -827,7 +789,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -849,7 +811,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -1260,11 +1222,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -2081,20 +2043,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
-
-___
-
-### updateInplaceReadOnly
-
-▸ **updateInplaceReadOnly**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:546](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L546)
 
 ___
 

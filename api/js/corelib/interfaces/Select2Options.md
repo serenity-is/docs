@@ -112,7 +112,7 @@ ___
 
 ### ajax
 
-• `Optional` **ajax**: `Select2AjaxOptions`
+• `Optional` **ajax**: [`Select2AjaxOptions`](Select2AjaxOptions.md)
 
 #### Defined in
 
@@ -172,11 +172,11 @@ ___
 
 ### createSearchChoice
 
-• `Optional` **createSearchChoice**: (`p1`: `string`) => `Select2Item`
+• `Optional` **createSearchChoice**: (`p1`: `string`) => [`Select2Item`](Select2Item.md)
 
 #### Type declaration
 
-▸ (`p1`): `Select2Item`
+▸ (`p1`): [`Select2Item`](Select2Item.md)
 
 ##### Parameters
 
@@ -186,7 +186,7 @@ ___
 
 ##### Returns
 
-`Select2Item`
+[`Select2Item`](Select2Item.md)
 
 #### Defined in
 
@@ -196,7 +196,7 @@ ___
 
 ### createSearchChoicePosition
 
-• `Optional` **createSearchChoicePosition**: `string` \| (`list`: `Select2Item`[], `item`: `Select2Item`) => `void`
+• `Optional` **createSearchChoicePosition**: `string` \| (`list`: [`Select2Item`](Select2Item.md)[], `item`: [`Select2Item`](Select2Item.md)) => `void`
 
 #### Defined in
 
@@ -270,7 +270,7 @@ ___
 
 ### element
 
-• `Optional` **element**: `Select2Element`
+• `Optional` **element**: [`Select2Element`](../README.md#select2element)
 
 #### Defined in
 
@@ -304,11 +304,11 @@ ___
 
 ### formatAjaxError
 
-• `Optional` **formatAjaxError**: (`p1`: `any`, `p2`: `any`) => `Select2FormatResult`
+• `Optional` **formatAjaxError**: (`p1`: `any`, `p2`: `any`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`p1`, `p2`): `Select2FormatResult`
+▸ (`p1`, `p2`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -319,7 +319,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -329,11 +329,11 @@ ___
 
 ### formatInputTooLong
 
-• `Optional` **formatInputTooLong**: (`input`: `string`, `max`: `number`) => `Select2FormatResult`
+• `Optional` **formatInputTooLong**: (`input`: `string`, `max`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`input`, `max`): `Select2FormatResult`
+▸ (`input`, `max`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -344,7 +344,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -354,11 +354,11 @@ ___
 
 ### formatInputTooShort
 
-• `Optional` **formatInputTooShort**: (`input`: `string`, `min`: `number`) => `Select2FormatResult`
+• `Optional` **formatInputTooShort**: (`input`: `string`, `min`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`input`, `min`): `Select2FormatResult`
+▸ (`input`, `min`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -369,7 +369,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -379,11 +379,11 @@ ___
 
 ### formatLoadMore
 
-• `Optional` **formatLoadMore**: (`pageNumber`: `number`) => `Select2FormatResult`
+• `Optional` **formatLoadMore**: (`pageNumber`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`pageNumber`): `Select2FormatResult`
+▸ (`pageNumber`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -393,7 +393,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -403,11 +403,11 @@ ___
 
 ### formatMatches
 
-• `Optional` **formatMatches**: (`matches`: `number`) => `Select2FormatResult`
+• `Optional` **formatMatches**: (`matches`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`matches`): `Select2FormatResult`
+▸ (`matches`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -417,7 +417,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -427,11 +427,11 @@ ___
 
 ### formatNoMatches
 
-• `Optional` **formatNoMatches**: (`input`: `string`) => `Select2FormatResult`
+• `Optional` **formatNoMatches**: (`input`: `string`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`input`): `Select2FormatResult`
+▸ (`input`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -441,7 +441,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -451,11 +451,11 @@ ___
 
 ### formatResult
 
-• `Optional` **formatResult**: (`p1`: `any`, `p2`: `HTMLElement`, `p3`: `any`, `p4`: (`p1`: `string`) => `string`) => `Select2FormatResult`
+• `Optional` **formatResult**: (`p1`: `any`, `p2`: `HTMLElement`, `p3`: `any`, `p4`: (`p1`: `string`) => `string`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`p1`, `p2`, `p3`, `p4`): `Select2FormatResult`
+▸ (`p1`, `p2`, `p3`, `p4`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -468,7 +468,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -502,15 +502,15 @@ ___
 
 ### formatSearching
 
-• `Optional` **formatSearching**: () => `Select2FormatResult`
+• `Optional` **formatSearching**: () => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (): `Select2FormatResult`
+▸ (): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -520,11 +520,11 @@ ___
 
 ### formatSelection
 
-• `Optional` **formatSelection**: (`p1`: `any`, `p2`: `HTMLElement`, `p3`: (`p1`: `string`) => `string`) => `Select2FormatResult`
+• `Optional` **formatSelection**: (`p1`: `any`, `p2`: `HTMLElement`, `p3`: (`p1`: `string`) => `string`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`p1`, `p2`, `p3`): `Select2FormatResult`
+▸ (`p1`, `p2`, `p3`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -536,7 +536,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -546,7 +546,7 @@ ___
 
 ### formatSelectionCssClass
 
-• `Optional` **formatSelectionCssClass**: (`item`: `Select2Item`, `container`: `HTMLElement`) => `string`
+• `Optional` **formatSelectionCssClass**: (`item`: [`Select2Item`](Select2Item.md), `container`: `HTMLElement`) => `string`
 
 #### Type declaration
 
@@ -556,7 +556,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `item` | `Select2Item` |
+| `item` | [`Select2Item`](Select2Item.md) |
 | `container` | `HTMLElement` |
 
 ##### Returns
@@ -571,11 +571,11 @@ ___
 
 ### formatSelectionTooBig
 
-• `Optional` **formatSelectionTooBig**: (`p1`: `number`) => `Select2FormatResult`
+• `Optional` **formatSelectionTooBig**: (`p1`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Type declaration
 
-▸ (`p1`): `Select2FormatResult`
+▸ (`p1`): [`Select2FormatResult`](../README.md#select2formatresult)
 
 ##### Parameters
 
@@ -585,7 +585,7 @@ ___
 
 ##### Returns
 
-`Select2FormatResult`
+[`Select2FormatResult`](../README.md#select2formatresult)
 
 #### Defined in
 
@@ -785,7 +785,7 @@ ___
 
 ### populateResults
 
-• `Optional` **populateResults**: (`container`: `HTMLElement`, `results`: `Select2Item`[], `query`: `Select2QueryOptions`) => `void`
+• `Optional` **populateResults**: (`container`: `HTMLElement`, `results`: [`Select2Item`](Select2Item.md)[], `query`: [`Select2QueryOptions`](Select2QueryOptions.md)) => `void`
 
 #### Type declaration
 
@@ -796,8 +796,8 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `container` | `HTMLElement` |
-| `results` | `Select2Item`[] |
-| `query` | `Select2QueryOptions` |
+| `results` | [`Select2Item`](Select2Item.md)[] |
+| `query` | [`Select2QueryOptions`](Select2QueryOptions.md) |
 
 ##### Returns
 
@@ -811,7 +811,7 @@ ___
 
 ### query
 
-• `Optional` **query**: (`p1`: `Select2QueryOptions`) => `void`
+• `Optional` **query**: (`p1`: [`Select2QueryOptions`](Select2QueryOptions.md)) => `void`
 
 #### Type declaration
 
@@ -821,7 +821,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `p1` | `Select2QueryOptions` |
+| `p1` | [`Select2QueryOptions`](Select2QueryOptions.md) |
 
 ##### Returns
 
@@ -915,7 +915,7 @@ ___
 
 ### tags
 
-• `Optional` **tags**: (`string` \| `Select2Item`)[] \| () => (`string` \| `Select2Item`)[]
+• `Optional` **tags**: (`string` \| [`Select2Item`](Select2Item.md))[] \| () => (`string` \| [`Select2Item`](Select2Item.md))[]
 
 #### Defined in
 

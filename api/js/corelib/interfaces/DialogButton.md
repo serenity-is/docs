@@ -39,7 +39,7 @@ Click handler
 
 #### Defined in
 
-[../base/dist/index.d.ts:244](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L244)
+[src/base/dialogs.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L19)
 
 ___
 
@@ -51,7 +51,7 @@ CSS class for button
 
 #### Defined in
 
-[../base/dist/index.d.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L246)
+[src/base/dialogs.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L21)
 
 ___
 
@@ -63,7 +63,7 @@ Button hint
 
 #### Defined in
 
-[../base/dist/index.d.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L240)
+[src/base/dialogs.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L15)
 
 ___
 
@@ -75,7 +75,7 @@ Button icon
 
 #### Defined in
 
-[../base/dist/index.d.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L242)
+[src/base/dialogs.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L17)
 
 ___
 
@@ -88,7 +88,7 @@ The code that is returned from message dialog function when this button is click
 
 #### Defined in
 
-[../base/dist/index.d.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L250)
+[src/base/dialogs.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L25)
 
 ___
 
@@ -100,4 +100,4 @@ Button text
 
 #### Defined in
 
-[../base/dist/index.d.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L238)
+[src/base/dialogs.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L13)

@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:477](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L477)
+[src/base/servicetypes.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L35)

@@ -16,11 +16,6 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 - [constructor](TreeGridMixin.md#constructor)
 
-### Properties
-
-- [dataGrid](TreeGridMixin.md#datagrid)
-- [options](TreeGridMixin.md#options)
-
 ### Methods
 
 - [collapseAll](TreeGridMixin.md#collapseall)
@@ -49,26 +44,6 @@ A mixin that can be applied to a DataGrid for tree functionality
 #### Returns
 
 [`TreeGridMixin`](TreeGridMixin.md)\<`TItem`\>
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L14)
-
-## Properties
-
-### dataGrid
-
-• `Private` **dataGrid**: [`DataGrid`](DataGrid.md)\<`TItem`, `any`\>
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L12)
-
-___
-
-### options
-
-• `Private` **options**: [`TreeGridMixinOptions`](../interfaces/TreeGridMixinOptions.md)\<`TItem`\>
 
 #### Defined in
 

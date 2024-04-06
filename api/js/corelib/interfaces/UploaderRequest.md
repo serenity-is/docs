@@ -20,7 +20,7 @@ A function that will return headers to be sent with request, or static set of he
 
 #### Defined in
 
-[../base/dist/index.d.ts:1646](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1646)
+[src/base/uploader.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L43)
 
 ___
 
@@ -32,7 +32,7 @@ Response type expected from the server. Default is json
 
 #### Defined in
 
-[../base/dist/index.d.ts:1648](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1648)
+[src/base/uploader.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L45)
 
 ___
 
@@ -44,4 +44,4 @@ URL to send the request to. Default is ~/File/TemporaryUpload
 
 #### Defined in
 
-[../base/dist/index.d.ts:1650](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1650)
+[src/base/uploader.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L47)

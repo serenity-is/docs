@@ -16,7 +16,6 @@
 
 ### Properties
 
-- [el](Combobox.md#el)
 - [defaults](Combobox.md#defaults)
 
 ### Accessors
@@ -30,7 +29,6 @@
 - [abortInitSelection](Combobox.md#abortinitselection)
 - [abortPendingQuery](Combobox.md#abortpendingquery)
 - [closeDropdown](Combobox.md#closedropdown)
-- [createSelect2](Combobox.md#createselect2)
 - [dispose](Combobox.md#dispose)
 - [getSelectedItem](Combobox.md#getselecteditem)
 - [getSelectedItems](Combobox.md#getselecteditems)
@@ -68,16 +66,6 @@
 [src/ui/editors/combobox.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L57)
 
 ## Properties
-
-### el
-
-• `Private` **el**: `HTMLSelectElement` \| `HTMLInputElement`
-
-#### Defined in
-
-[src/ui/editors/combobox.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L50)
-
-___
 
 ### defaults
 
@@ -170,26 +158,6 @@ ___
 #### Defined in
 
 [src/ui/editors/combobox.ts:377](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L377)
-
-___
-
-### createSelect2
-
-▸ **createSelect2**(`opt`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opt` | [`ComboboxOptions`](../interfaces/ComboboxOptions.md)\<`any`\> |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/editors/combobox.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L71)
 
 ___
 

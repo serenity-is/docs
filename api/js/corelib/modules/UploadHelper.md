@@ -20,7 +20,7 @@
 
 ### addUploadInput
 
-▸ **addUploadInput**(`options`): [`Fluent`](../interfaces/Fluent-1.md)
+▸ **addUploadInput**(`options`): [`Fluent`](../interfaces/Fluent.md)
 
 #### Parameters
 
@@ -30,7 +30,7 @@
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Defined in
 

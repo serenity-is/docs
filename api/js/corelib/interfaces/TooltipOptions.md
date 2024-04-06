@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:1584](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1584)
+[src/base/tooltip.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L5)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1585](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1585)
+[src/base/tooltip.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L6)

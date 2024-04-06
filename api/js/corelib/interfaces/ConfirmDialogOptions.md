@@ -55,7 +55,7 @@ Auto dispose dialog on close, default is true
 
 #### Defined in
 
-[../base/dist/index.d.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L258)
+[src/base/dialogs.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L35)
 
 ___
 
@@ -71,7 +71,7 @@ True to auto open dialog
 
 #### Defined in
 
-[../base/dist/index.d.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L260)
+[src/base/dialogs.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L37)
 
 ___
 
@@ -87,7 +87,7 @@ Backdrop type, static to make it modal, e.g. can't be closed by clicking outside
 
 #### Defined in
 
-[../base/dist/index.d.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L262)
+[src/base/dialogs.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L39)
 
 ___
 
@@ -103,7 +103,7 @@ List of buttons to show on the dialog
 
 #### Defined in
 
-[../base/dist/index.d.ts:264](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L264)
+[src/base/dialogs.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L41)
 
 ___
 
@@ -115,7 +115,7 @@ True to also add a cancel button
 
 #### Defined in
 
-[../base/dist/index.d.ts:381](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L381)
+[src/base/dialogs.ts:822](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L822)
 
 ___
 
@@ -131,7 +131,7 @@ Vertically center modal
 
 #### Defined in
 
-[../base/dist/index.d.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L266)
+[src/base/dialogs.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L43)
 
 ___
 
@@ -147,7 +147,7 @@ Show close button, default is true
 
 #### Defined in
 
-[../base/dist/index.d.ts:268](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L268)
+[src/base/dialogs.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L45)
 
 ___
 
@@ -163,7 +163,7 @@ Close dialog on escape key. Default is true for message dialogs.
 
 #### Defined in
 
-[../base/dist/index.d.ts:270](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L270)
+[src/base/dialogs.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L47)
 
 ___
 
@@ -179,7 +179,7 @@ CSS class to use for all dialog types. Is added to the top ui-dialog, panel or m
 
 #### Defined in
 
-[../base/dist/index.d.ts:272](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L272)
+[src/base/dialogs.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L49)
 
 ___
 
@@ -195,7 +195,7 @@ Dialog content/body element, or callback that will populate the content element
 
 #### Defined in
 
-[../base/dist/index.d.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L274)
+[src/base/dialogs.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L51)
 
 ___
 
@@ -211,7 +211,7 @@ Enable / disable animation. Default is false for message dialogs, true for other
 
 #### Defined in
 
-[../base/dist/index.d.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L276)
+[src/base/dialogs.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L53)
 
 ___
 
@@ -227,7 +227,7 @@ Sets one of modal-fullscreen{-...-down} classes. Only used for bootstrap modals
 
 #### Defined in
 
-[../base/dist/index.d.ts:278](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L278)
+[src/base/dialogs.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L55)
 
 ___
 
@@ -243,7 +243,7 @@ HTML encode the message, default is true
 
 #### Defined in
 
-[../base/dist/index.d.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L365)
+[src/base/dialogs.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L737)
 
 ___
 
@@ -259,7 +259,7 @@ Modal option for jQuery UI dialog compatibility only. Not to be confused with Bo
 
 #### Defined in
 
-[../base/dist/index.d.ts:280](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L280)
+[src/base/dialogs.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L57)
 
 ___
 
@@ -279,7 +279,7 @@ Event handler for cancel button click
 
 #### Defined in
 
-[../base/dist/index.d.ts:383](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L383)
+[src/base/dialogs.ts:824](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L824)
 
 ___
 
@@ -310,7 +310,7 @@ Event handler that is called when dialog is closed
 
 #### Defined in
 
-[../base/dist/index.d.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L284)
+[src/base/dialogs.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L61)
 
 ___
 
@@ -330,7 +330,7 @@ Event handler for no button click
 
 #### Defined in
 
-[../base/dist/index.d.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L385)
+[src/base/dialogs.ts:826](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L826)
 
 ___
 
@@ -360,7 +360,7 @@ Event handler that is called when dialog is opened
 
 #### Defined in
 
-[../base/dist/index.d.ts:282](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L282)
+[src/base/dialogs.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L59)
 
 ___
 
@@ -376,7 +376,7 @@ Wrap the message in a `<pre>` element, so that line endings are preserved, defau
 
 #### Defined in
 
-[../base/dist/index.d.ts:367](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L367)
+[src/base/dialogs.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L739)
 
 ___
 
@@ -392,7 +392,7 @@ Prefer Bootstrap modals to jQuery UI dialogs when both are available
 
 #### Defined in
 
-[../base/dist/index.d.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L286)
+[src/base/dialogs.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L63)
 
 ___
 
@@ -408,7 +408,7 @@ Prefer Panel even when Modal / jQuery UI is available
 
 #### Defined in
 
-[../base/dist/index.d.ts:288](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L288)
+[src/base/dialogs.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L65)
 
 ___
 
@@ -439,7 +439,7 @@ Callback to get options specific to the dialog provider type
 
 #### Defined in
 
-[../base/dist/index.d.ts:290](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L290)
+[src/base/dialogs.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L67)
 
 ___
 
@@ -455,13 +455,13 @@ Scrollable, sets content of the modal to scrollable, only for Bootstrap
 
 #### Defined in
 
-[../base/dist/index.d.ts:292](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L292)
+[src/base/dialogs.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L69)
 
 ___
 
 ### size
 
-• `Optional` **size**: ``"lg"`` \| ``"sm"`` \| ``"md"`` \| ``"xl"``
+• `Optional` **size**: ``"sm"`` \| ``"md"`` \| ``"lg"`` \| ``"xl"``
 
 Size. Default is null for (500px) message dialogs, lg for normal dialogs
 
@@ -471,7 +471,7 @@ Size. Default is null for (500px) message dialogs, lg for normal dialogs
 
 #### Defined in
 
-[../base/dist/index.d.ts:294](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L294)
+[src/base/dialogs.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L71)
 
 ___
 
@@ -487,7 +487,7 @@ Dialog title
 
 #### Defined in
 
-[../base/dist/index.d.ts:296](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L296)
+[src/base/dialogs.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L73)
 
 ___
 
@@ -503,4 +503,4 @@ Only used for jQuery UI dialogs for backwards compatibility
 
 #### Defined in
 
-[../base/dist/index.d.ts:298](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L298)
+[src/base/dialogs.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L75)

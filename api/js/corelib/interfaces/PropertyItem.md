@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:1409](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1409)
+[src/base/propertyitem.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L46)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1405](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1405)
+[src/base/propertyitem.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L42)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1384](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1384)
+[src/base/propertyitem.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L21)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1386](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1386)
+[src/base/propertyitem.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L23)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1385](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1385)
+[src/base/propertyitem.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L22)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1388](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1388)
+[src/base/propertyitem.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L25)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1402](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1402)
+[src/base/propertyitem.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L39)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1408](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1408)
+[src/base/propertyitem.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L45)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1420](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1420)
+[src/base/propertyitem.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L57)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1423](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1423)
+[src/base/propertyitem.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L60)
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1422](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1422)
+[src/base/propertyitem.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L59)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1421](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1421)
+[src/base/propertyitem.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L58)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1383](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1383)
+[src/base/propertyitem.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L20)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1382](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1382)
+[src/base/propertyitem.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L19)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1428](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1428)
+[src/base/propertyitem.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L65)
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1426](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1426)
+[src/base/propertyitem.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L63)
 
 ___
 
@@ -230,7 +230,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1425](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1425)
+[src/base/propertyitem.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L62)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1424](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1424)
+[src/base/propertyitem.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L61)
 
 ___
 
@@ -250,7 +250,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1390](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1390)
+[src/base/propertyitem.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L27)
 
 ___
 
@@ -260,7 +260,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1407](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1407)
+[src/base/propertyitem.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L44)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1406](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1406)
+[src/base/propertyitem.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L43)
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1418](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1418)
+[src/base/propertyitem.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L55)
 
 ___
 
@@ -290,7 +290,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1389](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1389)
+[src/base/propertyitem.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L26)
 
 ___
 
@@ -300,7 +300,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1395](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1395)
+[src/base/propertyitem.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L32)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1398](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1398)
+[src/base/propertyitem.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L35)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1380](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1380)
+[src/base/propertyitem.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L17)
 
 ___
 
@@ -330,7 +330,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1394](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1394)
+[src/base/propertyitem.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L31)
 
 ___
 
@@ -340,7 +340,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1393](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1393)
+[src/base/propertyitem.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L30)
 
 ___
 
@@ -350,7 +350,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1414](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1414)
+[src/base/propertyitem.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L51)
 
 ___
 
@@ -360,7 +360,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1403](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1403)
+[src/base/propertyitem.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L40)
 
 ___
 
@@ -370,7 +370,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1391](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1391)
+[src/base/propertyitem.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L28)
 
 ___
 
@@ -380,7 +380,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1413](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1413)
+[src/base/propertyitem.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L50)
 
 ___
 
@@ -390,7 +390,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1412](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1412)
+[src/base/propertyitem.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L49)
 
 ___
 
@@ -400,7 +400,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1378](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1378)
+[src/base/propertyitem.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L15)
 
 ___
 
@@ -410,7 +410,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1427](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1427)
+[src/base/propertyitem.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L64)
 
 ___
 
@@ -420,7 +420,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1401](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1401)
+[src/base/propertyitem.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L38)
 
 ___
 
@@ -430,7 +430,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1381](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1381)
+[src/base/propertyitem.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L18)
 
 ___
 
@@ -440,7 +440,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1429](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1429)
+[src/base/propertyitem.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L66)
 
 ___
 
@@ -450,7 +450,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1432](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1432)
+[src/base/propertyitem.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L69)
 
 ___
 
@@ -460,7 +460,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1430](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1430)
+[src/base/propertyitem.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L67)
 
 ___
 
@@ -470,7 +470,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1431](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1431)
+[src/base/propertyitem.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L68)
 
 ___
 
@@ -480,7 +480,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1399](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1399)
+[src/base/propertyitem.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L36)
 
 ___
 
@@ -490,7 +490,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1400](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1400)
+[src/base/propertyitem.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L37)
 
 ___
 
@@ -500,7 +500,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1392](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1392)
+[src/base/propertyitem.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L29)
 
 ___
 
@@ -510,7 +510,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1415](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1415)
+[src/base/propertyitem.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L52)
 
 ___
 
@@ -520,7 +520,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1417](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1417)
+[src/base/propertyitem.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L54)
 
 ___
 
@@ -530,7 +530,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1416](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1416)
+[src/base/propertyitem.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L53)
 
 ___
 
@@ -540,7 +540,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1419](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1419)
+[src/base/propertyitem.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L56)
 
 ___
 
@@ -550,7 +550,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1387](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1387)
+[src/base/propertyitem.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L24)
 
 ___
 
@@ -560,7 +560,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1379](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1379)
+[src/base/propertyitem.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L16)
 
 ___
 
@@ -570,7 +570,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1396](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1396)
+[src/base/propertyitem.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L33)
 
 ___
 
@@ -580,7 +580,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1397](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1397)
+[src/base/propertyitem.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L34)
 
 ___
 
@@ -590,7 +590,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1404](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1404)
+[src/base/propertyitem.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L41)
 
 ___
 
@@ -600,7 +600,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1410](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1410)
+[src/base/propertyitem.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L47)
 
 ___
 
@@ -610,4 +610,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1411](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1411)
+[src/base/propertyitem.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L48)

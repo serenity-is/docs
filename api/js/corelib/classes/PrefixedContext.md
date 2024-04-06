@@ -51,7 +51,7 @@
 
 ### byId
 
-▸ **byId**(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **byId**(`id`): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Parameters
 
@@ -61,7 +61,7 @@
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 

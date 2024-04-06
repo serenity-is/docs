@@ -65,7 +65,7 @@ ___
 
 ### element
 
-• `Optional` **element**: (`e`: [`Fluent`](Fluent-1.md)\<`HTMLElement`\>) => `void`
+• `Optional` **element**: (`e`: [`Fluent`](Fluent.md)\<`HTMLElement`\>) => `void`
 
 #### Type declaration
 
@@ -75,7 +75,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `e` | [`Fluent`](Fluent-1.md)\<`HTMLElement`\> |
+| `e` | [`Fluent`](Fluent.md)\<`HTMLElement`\> |
 
 ##### Returns
 

@@ -10,9 +10,7 @@
 
 ### Properties
 
-- [el](Tooltip.md#el)
 - [defaults](Tooltip.md#defaults)
-- [existingInstance](Tooltip.md#existinginstance)
 
 ### Accessors
 
@@ -48,19 +46,9 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:1589](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1589)
+[src/base/tooltip.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L12)
 
 ## Properties
-
-### el
-
-• `Private` **el**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1588](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1588)
-
-___
 
 ### defaults
 
@@ -68,17 +56,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1590](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1590)
-
-___
-
-### existingInstance
-
-▪ `Static` `Private` **existingInstance**: `any`
-
-#### Defined in
-
-[../base/dist/index.d.ts:1594](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1594)
+[src/base/tooltip.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L36)
 
 ## Accessors
 
@@ -92,7 +70,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1596](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1596)
+[src/base/tooltip.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L76)
 
 ## Methods
 
@@ -102,9 +80,9 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `delay?` | `number` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `delay` | `number` | `5000` |
 
 #### Returns
 
@@ -112,7 +90,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1592](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1592)
+[src/base/tooltip.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L47)
 
 ___
 
@@ -122,9 +100,9 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `delay?` | `number` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `delay` | `number` | `5000` |
 
 #### Returns
 
@@ -132,7 +110,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1593](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1593)
+[src/base/tooltip.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L51)
 
 ___
 
@@ -146,7 +124,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1591](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1591)
+[src/base/tooltip.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L40)
 
 ___
 
@@ -160,7 +138,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1599](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1599)
+[src/base/tooltip.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L111)
 
 ___
 
@@ -180,7 +158,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1597](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1597)
+[src/base/tooltip.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L81)
 
 ___
 
@@ -194,7 +172,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1600](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1600)
+[src/base/tooltip.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L115)
 
 ___
 
@@ -214,7 +192,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1598](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1598)
+[src/base/tooltip.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L99)
 
 ___
 
@@ -234,4 +212,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1595](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1595)
+[src/base/tooltip.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L68)

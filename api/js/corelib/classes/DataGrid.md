@@ -32,14 +32,6 @@
 
 ### Properties
 
-- [\_idProperty](DataGrid.md#_idproperty)
-- [\_isActiveProperty](DataGrid.md#_isactiveproperty)
-- [\_isDisabled](DataGrid.md#_isdisabled)
-- [\_layoutTimer](DataGrid.md#_layouttimer)
-- [\_localTextDbPrefix](DataGrid.md#_localtextdbprefix)
-- [\_readonly](DataGrid.md#_readonly)
-- [\_slickGridOnClick](DataGrid.md#_slickgridonclick)
-- [\_slickGridOnSort](DataGrid.md#_slickgridonsort)
 - [allColumns](DataGrid.md#allcolumns)
 - [domNode](DataGrid.md#domnode)
 - [filterBar](DataGrid.md#filterbar)
@@ -237,86 +229,6 @@
 
 ## Properties
 
-### \_idProperty
-
-• `Private` **\_idProperty**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:1025](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1025)
-
-___
-
-### \_isActiveProperty
-
-• `Private` **\_isActiveProperty**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:1046](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1046)
-
-___
-
-### \_isDisabled
-
-• `Private` **\_isDisabled**: `boolean`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L65)
-
-___
-
-### \_layoutTimer
-
-• `Private` **\_layoutTimer**: `number`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L66)
-
-___
-
-### \_localTextDbPrefix
-
-• `Private` **\_localTextDbPrefix**: `string`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:1003](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1003)
-
-___
-
-### \_readonly
-
-• `Private` **\_readonly**: `boolean`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:974](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L974)
-
-___
-
-### \_slickGridOnClick
-
-• `Private` **\_slickGridOnClick**: `any`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L68)
-
-___
-
-### \_slickGridOnSort
-
-• `Private` **\_slickGridOnSort**: `any`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L67)
-
-___
-
 ### allColumns
 
 • `Protected` **allColumns**: `Column`\<`any`\>[]
@@ -421,7 +333,7 @@ ___
 
 ### quickFiltersDiv
 
-• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -441,7 +353,7 @@ ___
 
 ### slickContainer
 
-• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -461,7 +373,7 @@ ___
 
 ### titleDiv
 
-• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -569,13 +481,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -767,7 +679,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -789,7 +701,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -1036,11 +948,11 @@ ___
 
 ### createSlickContainer
 
-▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -1541,11 +1453,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

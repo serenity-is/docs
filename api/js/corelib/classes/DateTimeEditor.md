@@ -29,10 +29,7 @@
 
 - [domNode](DateTimeEditor.md#domnode)
 - [idPrefix](DateTimeEditor.md#idprefix)
-- [lastSetValue](DateTimeEditor.md#lastsetvalue)
-- [lastSetValueGet](DateTimeEditor.md#lastsetvalueget)
 - [options](DateTimeEditor.md#options)
-- [time](DateTimeEditor.md#time)
 - [uniqueName](DateTimeEditor.md#uniquename)
 - [getTimeOptions](DateTimeEditor.md#gettimeoptions)
 - [typeInfo](DateTimeEditor.md#typeinfo)
@@ -54,11 +51,9 @@
 - [destroy](DateTimeEditor.md#destroy)
 - [getCssClass](DateTimeEditor.md#getcssclass)
 - [getCustomAttribute](DateTimeEditor.md#getcustomattribute)
-- [getDisplayFormat](DateTimeEditor.md#getdisplayformat)
 - [getFieldElement](DateTimeEditor.md#getfieldelement)
 - [getFlatpickrOptions](DateTimeEditor.md#getflatpickroptions)
 - [getGridField](DateTimeEditor.md#getgridfield)
-- [getInplaceNowText](DateTimeEditor.md#getinplacenowtext)
 - [get\_maxDate](DateTimeEditor.md#get_maxdate)
 - [get\_maxValue](DateTimeEditor.md#get_maxvalue)
 - [get\_minDate](DateTimeEditor.md#get_mindate)
@@ -66,7 +61,6 @@
 - [get\_readOnly](DateTimeEditor.md#get_readonly)
 - [get\_sqlMinMax](DateTimeEditor.md#get_sqlminmax)
 - [get\_value](DateTimeEditor.md#get_value)
-- [get\_valueAsDate](DateTimeEditor.md#get_valueasdate)
 - [init](DateTimeEditor.md#init)
 - [internalInit](DateTimeEditor.md#internalinit)
 - [internalRenderContents](DateTimeEditor.md#internalrendercontents)
@@ -79,7 +73,6 @@
 - [set\_readOnly](DateTimeEditor.md#set_readonly)
 - [set\_sqlMinMax](DateTimeEditor.md#set_sqlminmax)
 - [set\_value](DateTimeEditor.md#set_value)
-- [set\_valueAsDate](DateTimeEditor.md#set_valueasdate)
 - [syncOrAsyncThen](DateTimeEditor.md#syncorasyncthen)
 - [useIdPrefix](DateTimeEditor.md#useidprefix)
 - [create](DateTimeEditor.md#create)
@@ -147,26 +140,6 @@ ___
 
 ___
 
-### lastSetValue
-
-• `Private` **lastSetValue**: `string`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L17)
-
-___
-
-### lastSetValueGet
-
-• `Private` **lastSetValueGet**: `string`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L18)
-
-___
-
 ### options
 
 • `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<[`EditorProps`](../README.md#editorprops)\<`P`\>\>
@@ -178,16 +151,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
-
-___
-
-### time
-
-• `Private` **time**: `HTMLSelectElement`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L16)
 
 ___
 
@@ -249,13 +212,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -371,7 +334,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -393,7 +356,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -538,20 +501,6 @@ ___
 
 ___
 
-### getDisplayFormat
-
-▸ **getDisplayFormat**(): `string`
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L258)
-
-___
-
 ### getFieldElement
 
 ▸ **getFieldElement**(): `HTMLElement`
@@ -586,11 +535,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -599,20 +548,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
-
-___
-
-### getInplaceNowText
-
-▸ **getInplaceNowText**(): `string`
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L254)
 
 ___
 
@@ -719,20 +654,6 @@ ___
 #### Defined in
 
 [src/ui/editors/datetimeeditor.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L193)
-
-___
-
-### get\_valueAsDate
-
-▸ **get_valueAsDate**(): `Date`
-
-#### Returns
-
-`Date`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L266)
 
 ___
 
@@ -975,26 +896,6 @@ ___
 #### Defined in
 
 [src/ui/editors/datetimeeditor.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L222)
-
-___
-
-### set\_valueAsDate
-
-▸ **set_valueAsDate**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `Date` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L277)
 
 ___
 

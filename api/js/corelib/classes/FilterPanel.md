@@ -25,11 +25,7 @@
 - [domNode](FilterPanel.md#domnode)
 - [idPrefix](FilterPanel.md#idprefix)
 - [options](FilterPanel.md#options)
-- [rowsDiv](FilterPanel.md#rowsdiv)
-- [showInitialLine](FilterPanel.md#showinitialline)
-- [showSearchButton](FilterPanel.md#showsearchbutton)
 - [uniqueName](FilterPanel.md#uniquename)
-- [updateStoreOnReset](FilterPanel.md#updatestoreonreset)
 - [typeInfo](FilterPanel.md#typeinfo)
 
 ### Accessors
@@ -167,36 +163,6 @@ ___
 
 ___
 
-### rowsDiv
-
-• `Private` **rowsDiv**: `HTMLElement`
-
-#### Defined in
-
-[src/ui/filtering/filterpanel.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.ts#L71)
-
-___
-
-### showInitialLine
-
-• `Private` **showInitialLine**: `boolean`
-
-#### Defined in
-
-[src/ui/filtering/filterpanel.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.ts#L82)
-
-___
-
-### showSearchButton
-
-• `Private` **showSearchButton**: `boolean`
-
-#### Defined in
-
-[src/ui/filtering/filterpanel.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.ts#L142)
-
-___
-
 ### uniqueName
 
 • `Protected` `Readonly` **uniqueName**: `string`
@@ -208,16 +174,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
-
-___
-
-### updateStoreOnReset
-
-• `Private` **updateStoreOnReset**: `boolean`
-
-#### Defined in
-
-[src/ui/filtering/filterpanel.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.ts#L155)
 
 ___
 
@@ -237,13 +193,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -339,7 +295,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -361,7 +317,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -399,7 +355,7 @@ ___
 
 ### byId
 
-▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Type parameters
 
@@ -415,7 +371,7 @@ ___
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Inherited from
 
@@ -684,11 +640,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

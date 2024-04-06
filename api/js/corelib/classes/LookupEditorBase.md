@@ -30,7 +30,6 @@
 - [idPrefix](LookupEditorBase.md#idprefix)
 - [lastCreateTerm](LookupEditorBase.md#lastcreateterm)
 - [lookup](LookupEditorBase.md#lookup)
-- [lookupChangeUnbind](LookupEditorBase.md#lookupchangeunbind)
 - [onInitNewEntity](LookupEditorBase.md#oninitnewentity)
 - [openDialogAsPanel](LookupEditorBase.md#opendialogaspanel)
 - [options](LookupEditorBase.md#options)
@@ -243,16 +242,6 @@ ___
 
 ___
 
-### lookupChangeUnbind
-
-• `Private` **lookupChangeUnbind**: `any`
-
-#### Defined in
-
-[src/ui/editors/lookupeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/lookupeditor.ts#L16)
-
-___
-
 ### onInitNewEntity
 
 • **onInitNewEntity**: (`entity`: `TItem`) => `void`
@@ -453,13 +442,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -929,7 +918,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -951,7 +940,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -1414,11 +1403,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 

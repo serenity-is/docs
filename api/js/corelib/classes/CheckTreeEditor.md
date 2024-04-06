@@ -31,9 +31,7 @@
 
 ### Properties
 
-- [\_readOnly](CheckTreeEditor.md#_readonly)
 - [allColumns](CheckTreeEditor.md#allcolumns)
-- [byId](CheckTreeEditor.md#byid)
 - [domNode](CheckTreeEditor.md#domnode)
 - [filterBar](CheckTreeEditor.md#filterbar)
 - [idPrefix](CheckTreeEditor.md#idprefix)
@@ -152,7 +150,6 @@
 - [getView](CheckTreeEditor.md#getview)
 - [getViewOptions](CheckTreeEditor.md#getviewoptions)
 - [get\_readOnly](CheckTreeEditor.md#get_readonly)
-- [get\_value](CheckTreeEditor.md#get_value)
 - [gridPersistanceFlags](CheckTreeEditor.md#gridpersistanceflags)
 - [init](CheckTreeEditor.md#init)
 - [initialPopulate](CheckTreeEditor.md#initialpopulate)
@@ -198,7 +195,6 @@
 - [setItems](CheckTreeEditor.md#setitems)
 - [setTitle](CheckTreeEditor.md#settitle)
 - [set\_readOnly](CheckTreeEditor.md#set_readonly)
-- [set\_value](CheckTreeEditor.md#set_value)
 - [sortItems](CheckTreeEditor.md#sortitems)
 - [subDialogDataChange](CheckTreeEditor.md#subdialogdatachange)
 - [syncOrAsyncThen](CheckTreeEditor.md#syncorasyncthen)
@@ -252,16 +248,6 @@
 
 ## Properties
 
-### \_readOnly
-
-• `Private` **\_readOnly**: `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L393)
-
-___
-
 ### allColumns
 
 • `Protected` **allColumns**: `Column`\<`any`\>[]
@@ -273,20 +259,6 @@ ___
 #### Defined in
 
 [src/ui/datagrid/datagrid.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L75)
-
-___
-
-### byId
-
-• `Private` **byId**: `Object`
-
-#### Index signature
-
-▪ [key: `string`]: `TItem`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L32)
 
 ___
 
@@ -404,7 +376,7 @@ ___
 
 ### quickFiltersDiv
 
-• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -432,7 +404,7 @@ ___
 
 ### slickContainer
 
-• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -460,7 +432,7 @@ ___
 
 ### titleDiv
 
-• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -600,13 +572,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -856,7 +828,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -878,7 +850,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -1223,11 +1195,11 @@ ___
 
 ### createSlickContainer
 
-▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -1875,11 +1847,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -2442,20 +2414,6 @@ ___
 #### Defined in
 
 [src/ui/editors/checktreeeditor.ts:395](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L395)
-
-___
-
-### get\_value
-
-▸ **get_value**(): `string`[]
-
-#### Returns
-
-`string`[]
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L406)
 
 ___
 
@@ -3389,26 +3347,6 @@ ___
 #### Defined in
 
 [src/ui/editors/checktreeeditor.ts:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L399)
-
-___
-
-### set\_value
-
-▸ **set_value**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` \| `string`[] |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:421](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L421)
 
 ___
 

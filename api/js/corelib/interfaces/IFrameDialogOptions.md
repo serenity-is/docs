@@ -18,4 +18,4 @@ Options for `iframeDialog` *
 
 #### Defined in
 
-[../base/dist/index.d.ts:434](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L434)
+[src/base/dialogs.ts:942](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L942)

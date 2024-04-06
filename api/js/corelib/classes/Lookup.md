@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:1300](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1300)
+[src/base/lookup.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L22)
 
 ## Properties
 
@@ -61,9 +61,9 @@
 
 #### Defined in
 
-[../base/dist/index.d.ts:1288](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1288)
+[src/base/lookup.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L10)
 
-[../base/dist/index.d.ts:1297](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1297)
+[src/base/lookup.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L18)
 
 ___
 
@@ -77,9 +77,9 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1285](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1285)
+[src/base/lookup.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L9)
 
-[../base/dist/index.d.ts:1294](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1294)
+[src/base/lookup.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L17)
 
 ___
 
@@ -89,9 +89,9 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1284](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1284)
+[src/base/lookup.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L8)
 
-[../base/dist/index.d.ts:1293](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1293)
+[src/base/lookup.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L16)
 
 ___
 
@@ -101,9 +101,9 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1289](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1289)
+[src/base/lookup.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L11)
 
-[../base/dist/index.d.ts:1298](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1298)
+[src/base/lookup.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L19)
 
 ___
 
@@ -113,9 +113,9 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1290](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1290)
+[src/base/lookup.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L12)
 
-[../base/dist/index.d.ts:1299](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1299)
+[src/base/lookup.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L20)
 
 ## Methods
 
@@ -135,4 +135,4 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1301](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1301)
+[src/base/lookup.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L32)

@@ -62,7 +62,6 @@
 - [get\_readOnly](DateEditor.md#get_readonly)
 - [get\_sqlMinMax](DateEditor.md#get_sqlminmax)
 - [get\_value](DateEditor.md#get_value)
-- [get\_valueAsDate](DateEditor.md#get_valueasdate)
 - [init](DateEditor.md#init)
 - [internalInit](DateEditor.md#internalinit)
 - [internalRenderContents](DateEditor.md#internalrendercontents)
@@ -75,7 +74,6 @@
 - [set\_readOnly](DateEditor.md#set_readonly)
 - [set\_sqlMinMax](DateEditor.md#set_sqlminmax)
 - [set\_value](DateEditor.md#set_value)
-- [set\_valueAsDate](DateEditor.md#set_valueasdate)
 - [syncOrAsyncThen](DateEditor.md#syncorasyncthen)
 - [useIdPrefix](DateEditor.md#useidprefix)
 - [create](DateEditor.md#create)
@@ -222,13 +220,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -344,7 +342,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -366,7 +364,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -551,11 +549,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -670,20 +668,6 @@ ___
 #### Defined in
 
 [src/ui/editors/dateeditor.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L90)
-
-___
-
-### get\_valueAsDate
-
-▸ **get_valueAsDate**(): `Date`
-
-#### Returns
-
-`Date`
-
-#### Defined in
-
-[src/ui/editors/dateeditor.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L119)
 
 ___
 
@@ -926,26 +910,6 @@ ___
 #### Defined in
 
 [src/ui/editors/dateeditor.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L103)
-
-___
-
-### set\_valueAsDate
-
-▸ **set_valueAsDate**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `Date` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/editors/dateeditor.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.ts#L130)
 
 ___
 

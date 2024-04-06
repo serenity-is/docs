@@ -23,7 +23,6 @@
 ### Properties
 
 - [allColumns](ColumnPickerDialog.md#allcolumns)
-- [colById](ColumnPickerDialog.md#colbyid)
 - [defaultColumns](ColumnPickerDialog.md#defaultcolumns)
 - [dialog](ColumnPickerDialog.md#dialog)
 - [domNode](ColumnPickerDialog.md#domnode)
@@ -32,8 +31,6 @@
 - [options](ColumnPickerDialog.md#options)
 - [tabs](ColumnPickerDialog.md#tabs)
 - [toolbar](ColumnPickerDialog.md#toolbar)
-- [ulHidden](ColumnPickerDialog.md#ulhidden)
-- [ulVisible](ColumnPickerDialog.md#ulvisible)
 - [uniqueName](ColumnPickerDialog.md#uniquename)
 - [validator](ColumnPickerDialog.md#validator)
 - [visibleColumns](ColumnPickerDialog.md#visiblecolumns)
@@ -49,12 +46,10 @@
 
 - [addCssClass](ColumnPickerDialog.md#addcssclass)
 - [addValidationRule](ColumnPickerDialog.md#addvalidationrule)
-- [allowHide](ColumnPickerDialog.md#allowhide)
 - [arrange](ColumnPickerDialog.md#arrange)
 - [byId](ColumnPickerDialog.md#byid)
 - [change](ColumnPickerDialog.md#change)
 - [changeSelect2](ColumnPickerDialog.md#changeselect2)
-- [createLI](ColumnPickerDialog.md#createli)
 - [destroy](ColumnPickerDialog.md#destroy)
 - [dialogClose](ColumnPickerDialog.md#dialogclose)
 - [dialogOpen](ColumnPickerDialog.md#dialogopen)
@@ -67,7 +62,6 @@
 - [getGridField](ColumnPickerDialog.md#getgridfield)
 - [getInitialDialogTitle](ColumnPickerDialog.md#getinitialdialogtitle)
 - [getTemplate](ColumnPickerDialog.md#gettemplate)
-- [getTitle](ColumnPickerDialog.md#gettitle)
 - [getToolbarButtons](ColumnPickerDialog.md#gettoolbarbuttons)
 - [getValidatorOptions](ColumnPickerDialog.md#getvalidatoroptions)
 - [handleResponsive](ColumnPickerDialog.md#handleresponsive)
@@ -87,7 +81,6 @@
 - [resetValidation](ColumnPickerDialog.md#resetvalidation)
 - [setupColumns](ColumnPickerDialog.md#setupcolumns)
 - [syncOrAsyncThen](ColumnPickerDialog.md#syncorasyncthen)
-- [updateListStates](ColumnPickerDialog.md#updateliststates)
 - [useIdPrefix](ColumnPickerDialog.md#useidprefix)
 - [validateForm](ColumnPickerDialog.md#validateform)
 - [create](ColumnPickerDialog.md#create)
@@ -134,20 +127,6 @@
 #### Defined in
 
 [src/ui/datagrid/columnpickerdialog.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L18)
-
-___
-
-### colById
-
-• `Private` **colById**: `Object`
-
-#### Index signature
-
-▪ [key: `string`]: `Column`
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L16)
 
 ___
 
@@ -237,7 +216,7 @@ ___
 
 ### tabs
 
-• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -260,26 +239,6 @@ ___
 #### Defined in
 
 [src/ui/dialogs/templateddialog.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L18)
-
-___
-
-### ulHidden
-
-• `Private` **ulHidden**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L15)
-
-___
-
-### ulVisible
-
-• `Private` **ulVisible**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L14)
 
 ___
 
@@ -375,13 +334,13 @@ ___
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -437,7 +396,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 | `uniqueName?` | `string` |
 
 #### Returns
@@ -459,7 +418,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
 
 #### Returns
 
@@ -472,26 +431,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
-___
-
-### allowHide
-
-▸ **allowHide**(`col`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `col` | `Column`\<`any`\> |
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L159)
 
 ___
 
@@ -515,7 +454,7 @@ ___
 
 ### byId
 
-▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Type parameters
 
@@ -531,7 +470,7 @@ ___
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Inherited from
 
@@ -588,26 +527,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
-
-___
-
-### createLI
-
-▸ **createLI**(`col`): `HTMLElement`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `col` | `Column`\<`any`\> |
-
-#### Returns
-
-`HTMLElement`
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L163)
 
 ___
 
@@ -812,11 +731,11 @@ ___
 
 ### getGridField
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -861,26 +780,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/templatedwidget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L16)
-
-___
-
-### getTitle
-
-▸ **getTitle**(`col`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `col` | `Column`\<`any`\> |
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L152)
 
 ___
 
@@ -1166,11 +1065,11 @@ ___
 
 ### renderContents
 
-▸ **renderContents**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLDivElement`\>
+▸ **renderContents**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLDivElement`\>
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLDivElement`\>
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLDivElement`\>
 
 #### Overrides
 
@@ -1243,20 +1142,6 @@ ___
 #### Defined in
 
 [src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
-
-___
-
-### updateListStates
-
-▸ **updateListStates**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L182)
 
 ___
 

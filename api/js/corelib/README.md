@@ -29,7 +29,6 @@ The version number for this package should be equal or as close as possible to S
 - [AggregateFormatting](modules/AggregateFormatting.md)
 - [Aggregators](modules/Aggregators.md)
 - [Authorization](modules/Authorization.md)
-- [Criteria](modules/Criteria.md)
 - [Decorators](modules/Decorators.md)
 - [DialogExtensions](modules/DialogExtensions.md)
 - [DialogTexts](modules/DialogTexts.md)
@@ -41,7 +40,6 @@ The version number for this package should be equal or as close as possible to S
 - [ErrorHandling](modules/ErrorHandling.md)
 - [FilterOperators](modules/FilterOperators.md)
 - [FilteringTypeRegistry](modules/FilteringTypeRegistry.md)
-- [Fluent](modules/Fluent.md)
 - [FormatterTypeRegistry](modules/FormatterTypeRegistry.md)
 - [GridSelectAllButtonHelper](modules/GridSelectAllButtonHelper.md)
 - [GridUtils](modules/GridUtils.md)
@@ -74,6 +72,7 @@ The version number for this package should be equal or as close as possible to S
 ### Classes
 
 - [ArgumentNullException](classes/ArgumentNullException.md)
+- [AutoNumeric](classes/AutoNumeric.md)
 - [BaseEditorFiltering](classes/BaseEditorFiltering.md)
 - [BaseFiltering](classes/BaseFiltering.md)
 - [BooleanEditor](classes/BooleanEditor.md)
@@ -222,6 +221,7 @@ The version number for this package should be equal or as close as possible to S
 
 ### Interfaces
 
+- [AutoNumericOptions](interfaces/AutoNumericOptions.md)
 - [CKEditorConfig](interfaces/CKEditorConfig.md)
 - [CheckLookupEditorOptions](interfaces/CheckLookupEditorOptions.md)
 - [CheckTreeItem](interfaces/CheckTreeItem.md)
@@ -254,7 +254,7 @@ The version number for this package should be equal or as close as possible to S
 - [FilterFieldSelectOptions](interfaces/FilterFieldSelectOptions.md)
 - [FilterLine](interfaces/FilterLine.md)
 - [FilterOperator](interfaces/FilterOperator.md)
-- [Fluent](interfaces/Fluent-1.md)
+- [Fluent](interfaces/Fluent.md)
 - [Formatter](interfaces/Formatter.md)
 - [GridPersistanceFlags](interfaces/GridPersistanceFlags.md)
 - [GridRadioSelectionMixinOptions](interfaces/GridRadioSelectionMixinOptions.md)
@@ -303,7 +303,11 @@ The version number for this package should be equal or as close as possible to S
 - [SaveRequestWithAttachment](interfaces/SaveRequestWithAttachment.md)
 - [SaveResponse](interfaces/SaveResponse.md)
 - [SaveWithLocalizationRequest](interfaces/SaveWithLocalizationRequest.md)
+- [Select2AjaxOptions](interfaces/Select2AjaxOptions.md)
+- [Select2Item](interfaces/Select2Item.md)
 - [Select2Options](interfaces/Select2Options.md)
+- [Select2QueryOptions](interfaces/Select2QueryOptions.md)
+- [Select2Result](interfaces/Select2Result.md)
 - [SelectEditorOptions](interfaces/SelectEditorOptions.md)
 - [ServiceError](interfaces/ServiceError.md)
 - [ServiceLookupEditorOptions](interfaces/ServiceLookupEditorOptions.md)
@@ -332,6 +336,9 @@ The version number for this package should be equal or as close as possible to S
 - [UploaderSuccessData](interfaces/UploaderSuccessData.md)
 - [UserDefinition](interfaces/UserDefinition.md)
 - [ValidatableElement](interfaces/ValidatableElement.md)
+- [ValidationErrorItem](interfaces/ValidationErrorItem.md)
+- [ValidationErrorMap](interfaces/ValidationErrorMap.md)
+- [ValidationRulesMap](interfaces/ValidationRulesMap.md)
 - [ValidatorOptions](interfaces/ValidatorOptions.md)
 
 ### Type Aliases
@@ -360,13 +367,19 @@ The version number for this package should be equal or as close as possible to S
 - [RemoteViewAjaxCallback](README.md#remoteviewajaxcallback)
 - [RemoteViewFilter](README.md#remoteviewfilter)
 - [RemoteViewProcessCallback](README.md#remoteviewprocesscallback)
+- [Select2Element](README.md#select2element)
+- [Select2FormatResult](README.md#select2formatresult)
 - [StringLiteral](README.md#stringliteral)
 - [TextColor](README.md#textcolor)
 - [ToastContainerOptions](README.md#toastcontaineroptions)
 - [ToastrOptions](README.md#toastroptions)
 - [Type](README.md#type)
+- [TypeInfo](README.md#typeinfo)
 - [UtilityColor](README.md#utilitycolor)
+- [ValidateEventDelegate](README.md#validateeventdelegate)
+- [ValidationErrorList](README.md#validationerrorlist)
 - [ValidationProvider](README.md#validationprovider)
+- [ValidationRules](README.md#validationrules)
 - [ValidationValue](README.md#validationvalue)
 - [WidgetProps](README.md#widgetprops)
 - [faIconKey](README.md#faiconkey)
@@ -603,7 +616,7 @@ The version number for this package should be equal or as close as possible to S
 
 #### Defined in
 
-[../base/dist/index.d.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L227)
+[src/base/icons.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L21)
 
 ___
 
@@ -639,7 +652,7 @@ ___
 
 ### ClassTypeInfo
 
-Ƭ **ClassTypeInfo**\<`T`\>: `TypeInfo`\<`T`\>
+Ƭ **ClassTypeInfo**\<`T`\>: [`TypeInfo`](README.md#typeinfo)\<`T`\>
 
 #### Type parameters
 
@@ -649,7 +662,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1570](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1570)
+[src/base/system.ts:279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L279)
 
 ___
 
@@ -699,7 +712,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/index.ts#L97)
+[src/index.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/index.ts#L98)
 
 ___
 
@@ -709,7 +722,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:252](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L252)
+[src/base/dialogs.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L28)
 
 ___
 
@@ -751,7 +764,7 @@ ___
 
 ### EditorTypeInfo
 
-Ƭ **EditorTypeInfo**\<`T`\>: `TypeInfo`\<`T`\>
+Ƭ **EditorTypeInfo**\<`T`\>: [`TypeInfo`](README.md#typeinfo)\<`T`\>
 
 #### Type parameters
 
@@ -761,7 +774,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1571](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1571)
+[src/base/system.ts:280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L280)
 
 ___
 
@@ -797,7 +810,7 @@ ___
 
 ### FormatterTypeInfo
 
-Ƭ **FormatterTypeInfo**\<`T`\>: `TypeInfo`\<`T`\>
+Ƭ **FormatterTypeInfo**\<`T`\>: [`TypeInfo`](README.md#typeinfo)\<`T`\>
 
 #### Type parameters
 
@@ -807,7 +820,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1572](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1572)
+[src/base/system.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L281)
 
 ___
 
@@ -889,7 +902,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L228)
+[src/base/icons.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L22)
 
 ___
 
@@ -918,7 +931,7 @@ ___
 
 ### InterfaceTypeInfo
 
-Ƭ **InterfaceTypeInfo**\<`T`\>: `TypeInfo`\<`T`\>
+Ƭ **InterfaceTypeInfo**\<`T`\>: [`TypeInfo`](README.md#typeinfo)\<`T`\>
 
 #### Type parameters
 
@@ -928,7 +941,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1573](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1573)
+[src/base/system.ts:282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L282)
 
 ___
 
@@ -938,7 +951,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L226)
+[src/base/icons.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L20)
 
 ___
 
@@ -954,7 +967,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1553](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1553)
+[src/base/system.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L211)
 
 ___
 
@@ -973,7 +986,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1337](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1337)
+[src/base/toastr2.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L39)
 
 ___
 
@@ -1070,6 +1083,26 @@ ___
 
 ___
 
+### Select2Element
+
+Ƭ **Select2Element**: `HTMLInputElement` \| `HTMLSelectElement`
+
+#### Defined in
+
+[src/ui/editors/select2.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L7)
+
+___
+
+### Select2FormatResult
+
+Ƭ **Select2FormatResult**: `string` \| `Element` \| `DocumentFragment`
+
+#### Defined in
+
+[src/ui/editors/select2.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L8)
+
+___
+
 ### StringLiteral
 
 Ƭ **StringLiteral**\<`T`\>: `T` extends `string` ? `string` extends `T` ? `never` : `T` : `never`
@@ -1082,7 +1115,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1515](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1515)
+[src/base/system-internal.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L23)
 
 ___
 
@@ -1092,7 +1125,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L221)
+[src/base/icons.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L2)
 
 ___
 
@@ -1110,7 +1143,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1304](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1304)
+[src/base/toastr2.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L4)
 
 ___
 
@@ -1120,7 +1153,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1309](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1309)
+[src/base/toastr2.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L10)
 
 ___
 
@@ -1130,7 +1163,34 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1532](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1532)
+[src/base/system.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L17)
+
+___
+
+### TypeInfo
+
+Ƭ **TypeInfo**\<`T`\>: `Object`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `customAttributes?` | `any`[] |
+| `enumFlags?` | `boolean` |
+| `interfaces?` | `any`[] |
+| `registered?` | `boolean` |
+| `typeKind` | ``"class"`` \| ``"enum"`` \| ``"interface"`` \| ``"editor"`` \| ``"formatter"`` |
+| `typeName` | [`StringLiteral`](README.md#stringliteral)\<`T`\> \| `string` & {} |
+
+#### Defined in
+
+[src/base/system-internal.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L25)
 
 ___
 
@@ -1140,7 +1200,43 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L220)
+[src/base/icons.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L1)
+
+___
+
+### ValidateEventDelegate
+
+Ƭ **ValidateEventDelegate**: (`element`: [`ValidatableElement`](interfaces/ValidatableElement.md), `event`: `Event`, `validator`: [`Validator`](classes/Validator.md)) => `void`
+
+#### Type declaration
+
+▸ (`element`, `event`, `validator`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | [`ValidatableElement`](interfaces/ValidatableElement.md) |
+| `event` | `Event` |
+| `validator` | [`Validator`](classes/Validator.md) |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/base/validator.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L52)
+
+___
+
+### ValidationErrorList
+
+Ƭ **ValidationErrorList**: [`ValidationErrorItem`](interfaces/ValidationErrorItem.md)[]
+
+#### Defined in
+
+[src/base/validator.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L44)
 
 ___
 
@@ -1171,7 +1267,17 @@ Promise return signifies asynchronous plugin behavior, with same behavior as Boo
 
 #### Defined in
 
-[../base/dist/index.d.ts:1708](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1708)
+[src/base/validator.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L32)
+
+___
+
+### ValidationRules
+
+Ƭ **ValidationRules**: `Record`\<`string`, `any`\>
+
+#### Defined in
+
+[src/base/validator.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L46)
 
 ___
 
@@ -1181,7 +1287,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1701](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1701)
+[src/base/validator.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L24)
 
 ___
 
@@ -1207,7 +1313,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L230)
+[src/base/icons.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L41)
 
 ___
 
@@ -1217,7 +1323,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L231)
+[src/base/icons.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L142)
 
 ## Variables
 
@@ -1236,7 +1342,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L13)
+[src/base/config.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L1)
 
 ___
 
@@ -1246,13 +1352,13 @@ ___
 
 Current culture, e.g. CultureInfo.CurrentCulture. This is overridden by
 settings passed from a `<script>` element in the page with id `ScriptCulture`
-containing a JSON object if available. This element is generally created in
+containing a JSON object if available. This element is generally created in 
 the _LayoutHead.cshtml file for Serenity applications, so that the culture
 settings determined server, can be passed to the client.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1151](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1151)
+[src/base/formatting.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L130)
 
 ___
 
@@ -1264,7 +1370,7 @@ Invariant locale (e.g. CultureInfo.InvariantCulture)
 
 #### Defined in
 
-[../base/dist/index.d.ts:1138](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1138)
+[src/base/formatting.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L62)
 
 ___
 
@@ -1274,7 +1380,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1362](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1362)
+[src/base/notify.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L3)
 
 ___
 
@@ -1284,7 +1390,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1514](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1514)
+[src/base/system-internal.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L3)
 
 ## Functions
 
@@ -1306,13 +1412,13 @@ Creates a new criteria builder containg the passed field name.
 
 #### Defined in
 
-[../base/dist/index.d.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L171)
+[src/base/criteria.ts:750](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L750)
 
 ___
 
 ### Fluent
 
-▸ **Fluent**\<`K`\>(`tag`): [`Fluent`](interfaces/Fluent-1.md)\<`HTMLElementTagNameMap`[`K`]\>
+▸ **Fluent**\<`K`\>(`tag`): [`Fluent`](interfaces/Fluent.md)\<`HTMLElementTagNameMap`[`K`]\>
 
 #### Type parameters
 
@@ -1328,13 +1434,13 @@ ___
 
 #### Returns
 
-[`Fluent`](interfaces/Fluent-1.md)\<`HTMLElementTagNameMap`[`K`]\>
+[`Fluent`](interfaces/Fluent.md)\<`HTMLElementTagNameMap`[`K`]\>
 
 #### Defined in
 
-[../base/dist/index.d.ts:941](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L941)
+[src/base/fluent.ts:408](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L408)
 
-▸ **Fluent**\<`TElement`\>(`element`): [`Fluent`](interfaces/Fluent-1.md)\<`TElement`\>
+▸ **Fluent**\<`TElement`\>(`element`): [`Fluent`](interfaces/Fluent.md)\<`TElement`\>
 
 #### Type parameters
 
@@ -1350,13 +1456,13 @@ ___
 
 #### Returns
 
-[`Fluent`](interfaces/Fluent-1.md)\<`TElement`\>
+[`Fluent`](interfaces/Fluent.md)\<`TElement`\>
 
 #### Defined in
 
-[../base/dist/index.d.ts:942](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L942)
+[src/base/fluent.ts:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L409)
 
-▸ **Fluent**(`element`): [`Fluent`](interfaces/Fluent-1.md)\<`HTMLElement`\>
+▸ **Fluent**(`element`): [`Fluent`](interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Parameters
 
@@ -1366,11 +1472,11 @@ ___
 
 #### Returns
 
-[`Fluent`](interfaces/Fluent-1.md)\<`HTMLElement`\>
+[`Fluent`](interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Defined in
 
-[../base/dist/index.d.ts:943](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L943)
+[src/base/fluent.ts:410](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L410)
 
 ___
 
@@ -1471,7 +1577,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1270](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1270)
+[src/base/html.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L48)
 
 ___
 
@@ -1492,7 +1598,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1560](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1560)
+[src/base/system.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L229)
 
 ___
 
@@ -1506,7 +1612,7 @@ Adds an empty option to the select.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `select` | `ArrayLike`\<`HTMLElement`\> \| `HTMLSelectElement` | the select element |
+| `select` | `HTMLSelectElement` \| `ArrayLike`\<`HTMLElement`\> | the select element |
 
 #### Returns
 
@@ -1535,7 +1641,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1273](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1273)
+[src/base/localtext.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L11)
 
 ___
 
@@ -1549,7 +1655,7 @@ Adds an option to the select.
 
 | Name | Type |
 | :------ | :------ |
-| `select` | `ArrayLike`\<`HTMLElement`\> \| `HTMLSelectElement` |
+| `select` | `HTMLSelectElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `key` | `string` |
 | `text` | `string` |
 
@@ -1602,7 +1708,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1960](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1960)
+[src/base/validator.ts:1669](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1669)
 
 ___
 
@@ -1660,7 +1766,7 @@ alertDialog("An error occured!"); }
 
 #### Defined in
 
-[../base/dist/index.d.ts:377](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L377)
+[src/base/dialogs.ts:805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L805)
 
 ___
 
@@ -1780,7 +1886,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L222)
+[src/base/icons.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L4)
 
 ___
 
@@ -1804,7 +1910,7 @@ Tries to block the page
 
 #### Defined in
 
-[../base/dist/index.d.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L4)
+[src/base/blockui.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/blockui.ts#L6)
 
 ___
 
@@ -1820,7 +1926,7 @@ Unblocks the page.
 
 #### Defined in
 
-[../base/dist/index.d.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L11)
+[src/base/blockui.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/blockui.ts#L25)
 
 ___
 
@@ -1865,7 +1971,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:345](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L345)
+[src/base/dialogs.ts:580](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L580)
 
 ___
 
@@ -1933,7 +2039,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1574](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1574)
+[src/base/system.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L284)
 
 ___
 
@@ -2008,7 +2114,7 @@ ___
 
 ▸ **compareStringFactory**(`order`): (`a`: `string`, `b`: `string`) => `number`
 
-Factory for a function that compares two strings, based on a character order
+Factory for a function that compares two strings, based on a character order 
 passed in the `order` argument.
 
 #### Parameters
@@ -2036,7 +2142,7 @@ passed in the `order` argument.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1143](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1143)
+[src/base/formatting.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L90)
 
 ___
 
@@ -2091,14 +2197,14 @@ ConfirmOptions
 **`Example`**
 
 ```ts
-confirmDialog("Are you sure you want to delete?", () => {
+confirmDialog("Are you sure you want to delete?", () => { 
     // do something when yes is clicked
 }
 ```
 
 #### Defined in
 
-[../base/dist/index.d.ts:398](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L398)
+[src/base/dialogs.ts:840](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L840)
 
 ___
 
@@ -2221,7 +2327,7 @@ ___
 ▸ **debounce**\<`T`\>(`func`, `wait?`, `immediate?`): [`DebouncedFunction`](interfaces/DebouncedFunction.md)\<`T`\>
 
 Returns a function, that, as long as it continues to be invoked, will not
-be triggered. The function also has a property 'clear' that can be used
+be triggered. The function also has a property 'clear' that can be used 
 to clear the timer to prevent previously scheduled executions, and flush method
 to invoke scheduled executions now if any.
 
@@ -2249,7 +2355,7 @@ underscore.js
 
 #### Defined in
 
-[../base/dist/index.d.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L218)
+[src/base/debounce.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L39)
 
 ___
 
@@ -2368,7 +2474,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1575](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1575)
+[src/base/system.ts:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L288)
 
 ___
 
@@ -2488,7 +2594,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L224)
+[src/base/icons.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L12)
 
 ___
 
@@ -2509,7 +2615,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:225](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L225)
+[src/base/icons.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L16)
 
 ___
 
@@ -2539,7 +2645,7 @@ A promise that will return data if successfull
 
 #### Defined in
 
-[../base/dist/index.d.ts:1454](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1454)
+[src/base/scriptdata.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L54)
 
 ___
 
@@ -2559,7 +2665,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1550](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1550)
+[src/base/system.ts:199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L199)
 
 ___
 
@@ -2699,7 +2805,7 @@ formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff tt");
 
 #### Defined in
 
-[../base/dist/index.d.ts:1233](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1233)
+[src/base/formatting.ts:644](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L644)
 
 ___
 
@@ -2733,9 +2839,9 @@ Formats a date as the ISO 8601 UTC date/time format.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `d` | `Date` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `d` | `Date` | The date. |
 
 #### Returns
 
@@ -2743,7 +2849,7 @@ Formats a date as the ISO 8601 UTC date/time format.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1238](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1238)
+[src/base/formatting.ts:818](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L818)
 
 ___
 
@@ -2769,7 +2875,7 @@ It supports format specifiers similar to .NET numeric formatting strings.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1181](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1181)
+[src/base/formatting.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L291)
 
 ___
 
@@ -2796,7 +2902,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1576](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1576)
+[src/base/system.ts:292](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L292)
 
 ___
 
@@ -2810,7 +2916,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1510](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1510)
+[src/base/services.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L98)
 
 ___
 
@@ -2830,7 +2936,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1540](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1540)
+[src/base/system.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L91)
 
 ___
 
@@ -2938,7 +3044,7 @@ A property items data object containing items and additionalItems properties
 
 #### Defined in
 
-[../base/dist/index.d.ts:1468](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1468)
+[src/base/scriptdata.ts:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L129)
 
 ___
 
@@ -2958,7 +3064,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1506](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1506)
+[src/base/services.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L33)
 
 ___
 
@@ -2974,11 +3080,11 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `any` |
-| `attrType` | (...`args`: `any`[]) => `TAttr` |
-| `inherit?` | `boolean` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `type` | `any` | `undefined` |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
 
 #### Returns
 
@@ -2986,7 +3092,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1561](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1561)
+[src/base/system.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L237)
 
 ___
 
@@ -3002,11 +3108,11 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `any` |
-| `attrType` | (...`args`: `any`[]) => `TAttr` |
-| `inherit?` | `boolean` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `type` | `any` | `undefined` |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
 
 #### Returns
 
@@ -3014,7 +3120,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1567](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1567)
+[src/base/system.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L258)
 
 ___
 
@@ -3122,7 +3228,7 @@ A property items data object containing items and additionalItems properties
 
 #### Defined in
 
-[../base/dist/index.d.ts:1474](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1474)
+[src/base/scriptdata.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L138)
 
 ___
 
@@ -3136,7 +3242,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1528](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1528)
+[src/base/system.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L5)
 
 ___
 
@@ -3156,7 +3262,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1537](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1537)
+[src/base/system.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L58)
 
 ___
 
@@ -3210,7 +3316,7 @@ Gets or loads a Lookup
 
 #### Defined in
 
-[../base/dist/index.d.ts:1479](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1479)
+[src/base/scriptdata.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L146)
 
 ___
 
@@ -3252,7 +3358,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1533](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1533)
+[src/base/system.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L19)
 
 ___
 
@@ -3306,7 +3412,7 @@ Gets or loads a [RemoteData]
 
 #### Defined in
 
-[../base/dist/index.d.ts:1484](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1484)
+[src/base/scriptdata.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L154)
 
 ___
 
@@ -3336,7 +3442,7 @@ request to ~/DynamicData endpoint
 
 #### Defined in
 
-[../base/dist/index.d.ts:1462](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1462)
+[src/base/scriptdata.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L110)
 
 ___
 
@@ -3363,7 +3469,7 @@ The hash or null if no such known registration
 
 #### Defined in
 
-[../base/dist/index.d.ts:1448](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1448)
+[src/base/scriptdata.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L19)
 
 ___
 
@@ -3404,7 +3510,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1534](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1534)
+[src/base/system.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L29)
 
 ___
 
@@ -3424,7 +3530,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1535](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1535)
+[src/base/system.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L46)
 
 ___
 
@@ -3444,7 +3550,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1525](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1525)
+[src/base/system-internal.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L122)
 
 ___
 
@@ -3458,7 +3564,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1524](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1524)
+[src/base/system-internal.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L34)
 
 ___
 
@@ -3478,7 +3584,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1536](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1536)
+[src/base/system.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L51)
 
 ___
 
@@ -3559,7 +3665,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L442)
+[src/base/environment.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/environment.ts#L1)
 
 ___
 
@@ -3657,12 +3763,12 @@ a dynamic script data.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | Name of the dynamic script |
-| `status?` | `number` | HTTP status returned if available |
-| `statusText?` | `string` | HTTP status text returned if available |
-| `shouldThrow?` | `boolean` | - |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `name` | `string` | `undefined` | Name of the dynamic script |
+| `status?` | `number` | `undefined` | HTTP status returned if available |
+| `statusText?` | `string` | `undefined` | HTTP status text returned if available |
+| `shouldThrow` | `boolean` | `true` | - |
 
 #### Returns
 
@@ -3670,7 +3776,7 @@ a dynamic script data.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1492](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1492)
+[src/base/scriptdata.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L165)
 
 ___
 
@@ -3684,7 +3790,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:339](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L339)
+[src/base/dialogs.ts:505](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L505)
 
 ___
 
@@ -3700,11 +3806,11 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `any` |
-| `attrType` | (...`args`: `any`[]) => `TAttr` |
-| `inherit?` | `boolean` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `type` | `any` | `undefined` |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
 
 #### Returns
 
@@ -3712,7 +3818,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1564](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1564)
+[src/base/system.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L254)
 
 ___
 
@@ -3726,7 +3832,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:340](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L340)
+[src/base/dialogs.ts:509](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L509)
 
 ___
 
@@ -3748,7 +3854,7 @@ Html encodes a string (encodes single and double quotes, & (ampersand), > and < 
 
 #### Defined in
 
-[../base/dist/index.d.ts:1262](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1262)
+[src/base/html.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L18)
 
 ___
 
@@ -3768,7 +3874,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L229)
+[src/base/icons.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L24)
 
 ___
 
@@ -3790,7 +3896,7 @@ Display a dialog that shows an HTML block in an IFRAME, which is usually returne
 
 #### Defined in
 
-[../base/dist/index.d.ts:440](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L440)
+[src/base/dialogs.ts:949](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L949)
 
 ___
 
@@ -3874,14 +3980,14 @@ ConfirmOptions
 **`Example`**
 
 ```ts
-informationDialog("Operation complete", () => {
+informationDialog("Operation complete", () => { 
     // do something when OK is clicked
 }
 ```
 
 #### Defined in
 
-[../base/dist/index.d.ts:410](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L410)
+[src/base/dialogs.ts:877](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L877)
 
 ___
 
@@ -3902,7 +4008,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1549](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1549)
+[src/base/system.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L183)
 
 ___
 
@@ -4010,7 +4116,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1577](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1577)
+[src/base/system.ts:296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L296)
 
 ___
 
@@ -4061,7 +4167,7 @@ obj is ArrayLike\<any\>
 
 #### Defined in
 
-[../base/dist/index.d.ts:1551](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1551)
+[src/base/system.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L203)
 
 ___
 
@@ -4082,7 +4188,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1538](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1538)
+[src/base/system.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L71)
 
 ___
 
@@ -4098,7 +4204,7 @@ Returns true if Bootstrap 3 is loaded
 
 #### Defined in
 
-[../base/dist/index.d.ts:444](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L444)
+[src/base/environment.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/environment.ts#L7)
 
 ___
 
@@ -4114,7 +4220,7 @@ Returns true if Bootstrap 5+ is loaded
 
 #### Defined in
 
-[../base/dist/index.d.ts:446](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L446)
+[src/base/environment.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/environment.ts#L12)
 
 ___
 
@@ -4158,7 +4264,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1548](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1548)
+[src/base/system.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L178)
 
 ___
 
@@ -4179,7 +4285,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1539](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1539)
+[src/base/system.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L81)
 
 ___
 
@@ -4213,7 +4319,7 @@ obj is PromiseLike\<any\>
 
 #### Defined in
 
-[../base/dist/index.d.ts:1552](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1552)
+[src/base/system.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L207)
 
 ___
 
@@ -4233,7 +4339,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1507](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1507)
+[src/base/services.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L44)
 
 ___
 
@@ -4368,7 +4474,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1274](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1274)
+[src/base/localtext.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L35)
 
 ___
 
@@ -4432,7 +4538,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:344](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L344)
+[src/base/dialogs.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L571)
 
 ___
 
@@ -4454,7 +4560,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1364](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1364)
+[src/base/notify.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L47)
 
 ___
 
@@ -4476,7 +4582,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1365](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1365)
+[src/base/notify.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L51)
 
 ___
 
@@ -4498,7 +4604,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1366](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1366)
+[src/base/notify.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L55)
 
 ___
 
@@ -4520,7 +4626,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1367](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1367)
+[src/base/notify.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L59)
 
 ___
 
@@ -4540,7 +4646,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L342)
+[src/base/dialogs.ts:553](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L553)
 
 ___
 
@@ -4560,7 +4666,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1529](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1529)
+[src/base/system.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L9)
 
 ___
 
@@ -4694,7 +4800,7 @@ and B < @p2', { p1: 5, p2: 4 }) // [[[a], '>=' 5], 'and', [[b], '<', 4]]
 
 #### Defined in
 
-[../base/dist/index.d.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L132)
+[src/base/criteria.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L694)
 
 ▸ **parseCriteria**(`strings`, `...values`): `any`[]
 
@@ -4722,7 +4828,7 @@ parseCriteria`A >= ${a} and B < ${b}` // [[[a], '>=' 5], 'and', [[b], '<', 4]]
 
 #### Defined in
 
-[../base/dist/index.d.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L143)
+[src/base/criteria.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L705)
 
 ___
 
@@ -4746,7 +4852,7 @@ Returns a NaN Date if the string is not a valid date.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1250](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1250)
+[src/base/formatting.ts:862](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L862)
 
 ___
 
@@ -4795,7 +4901,7 @@ and decimal separators.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1197](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1197)
+[src/base/formatting.ts:547](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L547)
 
 ___
 
@@ -4808,9 +4914,9 @@ Returns NaN if the hours not in range 0-23 or minutes not in range 0-59.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `string` | The string to parse. |
 
 #### Returns
 
@@ -4840,7 +4946,7 @@ Parses a string in the ISO 8601 UTC date/time format.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1243](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1243)
+[src/base/formatting.ts:840](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L840)
 
 ___
 
@@ -4848,7 +4954,7 @@ ___
 
 ▸ **parseInteger**(`s`): `number`
 
-Converts a string to an integer. The difference between parseInt and parseInteger
+Converts a string to an integer. The difference between parseInt and parseInteger 
 is that parseInteger will return null if the string is empty or null, whereas
 parseInt will return NaN and parseInteger will use the current culture's group
 and decimal separators.
@@ -4865,7 +4971,7 @@ and decimal separators.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1189](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1189)
+[src/base/formatting.ts:525](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L525)
 
 ___
 
@@ -4905,7 +5011,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1493](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1493)
+[src/base/scriptdata.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L213)
 
 ___
 
@@ -4915,10 +5021,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`ToastrOptions`](README.md#toastroptions) |
-| `create?` | `boolean` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `options?` | [`ToastrOptions`](README.md#toastroptions) | `undefined` |
+| `create` | `boolean` | `true` |
 
 #### Returns
 
@@ -4926,7 +5032,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1363](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1363)
+[src/base/notify.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L12)
 
 ___
 
@@ -5021,7 +5127,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1276](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1276)
+[src/base/localtext.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L43)
 
 ___
 
@@ -5043,7 +5149,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1541](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1541)
+[src/base/system.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L111)
 
 ___
 
@@ -5065,7 +5171,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1559](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1559)
+[src/base/system.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L223)
 
 ___
 
@@ -5087,7 +5193,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1542](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1542)
+[src/base/system.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L116)
 
 ___
 
@@ -5109,7 +5215,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1558](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1558)
+[src/base/system.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L219)
 
 ___
 
@@ -5131,7 +5237,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1543](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1543)
+[src/base/system.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L126)
 
 ___
 
@@ -5145,7 +5251,7 @@ ___
 | :------ | :------ |
 | `type` | `Object` |
 | `type.name` | `string` |
-| `type.typeInfo` | `TypeInfo`\<`any`\> |
+| `type.typeInfo` | [`TypeInfo`](README.md#typeinfo)\<`any`\> |
 
 #### Returns
 
@@ -5153,7 +5259,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1578](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1578)
+[src/base/system.ts:300](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L300)
 
 ___
 
@@ -5210,7 +5316,7 @@ Lookup
 
 #### Defined in
 
-[../base/dist/index.d.ts:1500](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1500)
+[src/base/scriptdata.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L223)
 
 ___
 
@@ -5231,7 +5337,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1271](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1271)
+[src/base/html.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L52)
 
 ___
 
@@ -5252,7 +5358,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1961](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1961)
+[src/base/validator.ts:1683](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L1683)
 
 ___
 
@@ -5292,7 +5398,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1509](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1509)
+[src/base/services.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L87)
 
 ___
 
@@ -5306,7 +5412,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1508](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1508)
+[src/base/services.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L76)
 
 ___
 
@@ -5326,7 +5432,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1505](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1505)
+[src/base/services.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L13)
 
 ___
 
@@ -5346,7 +5452,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1504](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1504)
+[src/base/services.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L7)
 
 ___
 
@@ -5372,7 +5478,7 @@ the rounded number
 
 #### Defined in
 
-[../base/dist/index.d.ts:1169](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1169)
+[src/base/formatting.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L267)
 
 ___
 
@@ -5419,7 +5525,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1511](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1511)
+[src/base/services.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L186)
 
 ___
 
@@ -5448,7 +5554,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1512](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1512)
+[src/base/services.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L255)
 
 ___
 
@@ -5490,7 +5596,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1501](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1501)
+[src/base/scriptdata.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L227)
 
 ___
 
@@ -5511,7 +5617,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1502](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1502)
+[src/base/scriptdata.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L237)
 
 ___
 
@@ -5532,7 +5638,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1526](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1526)
+[src/base/system-internal.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system-internal.ts#L126)
 
 ___
 
@@ -5594,7 +5700,7 @@ It can handle separators "/", ".", "-" and "\".
 
 #### Defined in
 
-[../base/dist/index.d.ts:1256](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1256)
+[src/base/formatting.ts:936](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L936)
 
 ___
 
@@ -5647,7 +5753,7 @@ using current `Culture` locale settings.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1156](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1156)
+[src/base/formatting.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L238)
 
 ___
 
@@ -5672,7 +5778,7 @@ using the locale passed as the first argument.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1161](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1161)
+[src/base/formatting.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L246)
 
 ___
 
@@ -5747,14 +5853,14 @@ MessageDialogOptions
 **`Example`**
 
 ```ts
-successDialog("Operation complete", () => {
+successDialog("Operation complete", () => { 
     // do something when OK is clicked
 }
 ```
 
 #### Defined in
 
-[../base/dist/index.d.ts:422](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L422)
+[src/base/dialogs.ts:903](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L903)
 
 ___
 
@@ -5799,7 +5905,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L223)
+[src/base/icons.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L8)
 
 ___
 
@@ -5862,7 +5968,7 @@ valid number or longer than 14 digits, the trimmed string is returned as-is.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1205](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1205)
+[src/base/formatting.ts:601](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L601)
 
 ___
 
@@ -5922,7 +6028,7 @@ Toggles the class on the element handling spaces like addClass does.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1269](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1269)
+[src/base/html.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L34)
 
 ___
 
@@ -6077,7 +6183,7 @@ Truncates a number to an integer number.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1173](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1173)
+[src/base/formatting.ts:282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L282)
 
 ___
 
@@ -6136,7 +6242,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1275](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1275)
+[src/base/localtext.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L39)
 
 ___
 
@@ -6246,7 +6352,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:341](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L341)
+[src/base/dialogs.ts:513](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L513)
 
 ___
 
@@ -6364,7 +6470,7 @@ warningDialog("Something is odd!");
 
 #### Defined in
 
-[../base/dist/index.d.ts:431](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L431)
+[src/base/dialogs.ts:926](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L926)
 
 ___
 
@@ -6384,7 +6490,7 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:343](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L343)
+[src/base/dialogs.ts:562](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L562)
 
 ___
 
@@ -6398,7 +6504,7 @@ Pads the start of string to make it the specified length.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `n` | `number` | - |
+| `n` | `number` | The number to pad. |
 | `len` | `number` | Target length of the string. |
 
 #### Returns

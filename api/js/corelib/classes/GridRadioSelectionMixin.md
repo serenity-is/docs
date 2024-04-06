@@ -8,20 +8,12 @@
 
 - [constructor](GridRadioSelectionMixin.md#constructor)
 
-### Properties
-
-- [grid](GridRadioSelectionMixin.md#grid)
-- [idField](GridRadioSelectionMixin.md#idfield)
-- [include](GridRadioSelectionMixin.md#include)
-- [options](GridRadioSelectionMixin.md#options)
-
 ### Methods
 
 - [clear](GridRadioSelectionMixin.md#clear)
 - [getSelectedAsInt32](GridRadioSelectionMixin.md#getselectedasint32)
 - [getSelectedAsInt64](GridRadioSelectionMixin.md#getselectedasint64)
 - [getSelectedKey](GridRadioSelectionMixin.md#getselectedkey)
-- [isSelectable](GridRadioSelectionMixin.md#isselectable)
 - [resetCheckedAndRefresh](GridRadioSelectionMixin.md#resetcheckedandrefresh)
 - [setSelectedKey](GridRadioSelectionMixin.md#setselectedkey)
 - [createSelectColumn](GridRadioSelectionMixin.md#createselectcolumn)
@@ -46,50 +38,6 @@
 #### Defined in
 
 [src/ui/helpers/slickhelpers.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L178)
-
-## Properties
-
-### grid
-
-• `Private` **grid**: [`IDataGrid`](../interfaces/IDataGrid.md)
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L175)
-
-___
-
-### idField
-
-• `Private` **idField**: `string`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L173)
-
-___
-
-### include
-
-• `Private` **include**: `Object`
-
-#### Index signature
-
-▪ [key: `string`]: `boolean`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L174)
-
-___
-
-### options
-
-• `Private` **options**: [`GridRadioSelectionMixinOptions`](../interfaces/GridRadioSelectionMixinOptions.md)
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L176)
 
 ## Methods
 
@@ -146,26 +94,6 @@ ___
 #### Defined in
 
 [src/ui/helpers/slickhelpers.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L226)
-
-___
-
-### isSelectable
-
-▸ **isSelectable**(`item`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L211)
 
 ___
 

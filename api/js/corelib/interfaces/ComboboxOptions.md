@@ -76,7 +76,7 @@ ___
 
 ### element
 
-• `Optional` **element**: `HTMLSelectElement` \| `HTMLInputElement` \| `Element`[]
+• `Optional` **element**: `HTMLInputElement` \| `HTMLSelectElement` \| `Element`[]
 
 #### Defined in
 

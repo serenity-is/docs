@@ -43,7 +43,7 @@ True for logging debug info
 
 #### Defined in
 
-[../base/dist/index.d.ts:1725](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1725)
+[src/base/validator.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L60)
 
 ___
 
@@ -57,7 +57,7 @@ default: "error"
 
 #### Defined in
 
-[../base/dist/index.d.ts:1731](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1731)
+[src/base/validator.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L67)
 
 ___
 
@@ -72,7 +72,7 @@ default: "label"
 
 #### Defined in
 
-[../base/dist/index.d.ts:1738](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1738)
+[src/base/validator.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L75)
 
 ___
 
@@ -88,7 +88,7 @@ default: true
 
 #### Defined in
 
-[../base/dist/index.d.ts:1752](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1752)
+[src/base/validator.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L91)
 
 ___
 
@@ -101,7 +101,7 @@ accepted by not() can be passed as this option. Inputs of type submit and reset 
 
 #### Defined in
 
-[../base/dist/index.d.ts:1763](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1763)
+[src/base/validator.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L104)
 
 ___
 
@@ -119,7 +119,7 @@ default: the default message for the method used
 
 #### Defined in
 
-[../base/dist/index.d.ts:1778](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1778)
+[src/base/validator.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L120)
 
 ___
 
@@ -144,13 +144,13 @@ ___
 
 #### Defined in
 
-[../base/dist/index.d.ts:1779](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1779)
+[src/base/validator.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L122)
 
 ___
 
 ### onclick
 
-• `Optional` **onclick**: `boolean` \| `ValidateEventDelegate`
+• `Optional` **onclick**: `boolean` \| [`ValidateEventDelegate`](../README.md#validateeventdelegate)
 
 Boolean or Function. Validate checkboxes and radio buttons on click. Set to false to disable.
 
@@ -159,13 +159,13 @@ A boolean true is not a valid value.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1786](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1786)
+[src/base/validator.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L130)
 
 ___
 
 ### onfocusin
 
-• `Optional` **onfocusin**: `ValidateEventDelegate`
+• `Optional` **onfocusin**: [`ValidateEventDelegate`](../README.md#validateeventdelegate)
 
 Function. Validate elements when user focuses in. If omitted hides all other fields marked as invalid.
 
@@ -173,13 +173,13 @@ Set to a custom Function to decide for yourself when to run validation.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1792](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1792)
+[src/base/validator.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L137)
 
 ___
 
 ### onfocusout
 
-• `Optional` **onfocusout**: `ValidateEventDelegate`
+• `Optional` **onfocusout**: [`ValidateEventDelegate`](../README.md#validateeventdelegate)
 
 Boolean or Function. Validate elements (except checkboxes/radio buttons) on blur. If nothing is entered, all rules are skipped, except when the field was already marked as invalid.
 
@@ -188,13 +188,13 @@ A boolean true is not a valid value.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1799](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1799)
+[src/base/validator.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L145)
 
 ___
 
 ### onkeyup
 
-• `Optional` **onkeyup**: `ValidateEventDelegate`
+• `Optional` **onkeyup**: [`ValidateEventDelegate`](../README.md#validateeventdelegate)
 
 Boolean or Function. Validate elements on keyup. As long as the field is not marked as invalid, nothing happens.
 Otherwise, all rules are checked on each key up event. Set to false to disable.
@@ -204,7 +204,7 @@ A boolean true is not a valid value.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1807](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1807)
+[src/base/validator.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L154)
 
 ___
 
@@ -220,7 +220,7 @@ default: true
 
 #### Defined in
 
-[../base/dist/index.d.ts:1815](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1815)
+[src/base/validator.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L163)
 
 ___
 
@@ -233,13 +233,13 @@ default: "pending"
 
 #### Defined in
 
-[../base/dist/index.d.ts:1820](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1820)
+[src/base/validator.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L169)
 
 ___
 
 ### rules
 
-• `Optional` **rules**: `ValidationRulesMap`
+• `Optional` **rules**: [`ValidationRulesMap`](ValidationRulesMap.md)
 
 A custom message display handler. Gets the map of errors as the first argument and an array of errors as the second,
 called in the context of the validator object. The arguments contain only those elements currently validated,
@@ -248,7 +248,7 @@ the default behaviour by calling this.defaultShowErrors().
 
 #### Defined in
 
-[../base/dist/index.d.ts:1827](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1827)
+[src/base/validator.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L177)
 
 ___
 
@@ -262,7 +262,7 @@ The label can be used to add a text like "ok!".
 
 #### Defined in
 
-[../base/dist/index.d.ts:1846](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1846)
+[src/base/validator.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L200)
 
 ___
 
@@ -276,7 +276,7 @@ default: "valid"
 
 #### Defined in
 
-[../base/dist/index.d.ts:1858](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1858)
+[src/base/validator.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L214)
 
 ## Methods
 
@@ -296,7 +296,7 @@ default: "valid"
 
 #### Defined in
 
-[../base/dist/index.d.ts:1835](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1835)
+[src/base/validator.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L187)
 
 ___
 
@@ -322,7 +322,7 @@ default: Places the error label after the invalid element
 
 #### Defined in
 
-[../base/dist/index.d.ts:1744](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1744)
+[src/base/validator.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L82)
 
 ___
 
@@ -348,7 +348,7 @@ default: Adds errorClass (see the option) to the element
 
 #### Defined in
 
-[../base/dist/index.d.ts:1758](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1758)
+[src/base/validator.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L98)
 
 ___
 
@@ -372,7 +372,7 @@ as in the second.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1768](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1768)
+[src/base/validator.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L110)
 
 ___
 
@@ -389,8 +389,8 @@ behaviour by calling this.defaultShowErrors().
 
 | Name | Type |
 | :------ | :------ |
-| `errorMap` | `ValidationErrorMap` |
-| `errorList` | `ValidationErrorList` |
+| `errorMap` | [`ValidationErrorMap`](ValidationErrorMap.md) |
+| `errorList` | [`ValidationErrorList`](../README.md#validationerrorlist) |
 | `validator` | [`Validator`](../classes/Validator.md) |
 
 #### Returns
@@ -399,7 +399,7 @@ behaviour by calling this.defaultShowErrors().
 
 #### Defined in
 
-[../base/dist/index.d.ts:1834](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1834)
+[src/base/validator.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L185)
 
 ___
 
@@ -424,7 +424,7 @@ The right place to submit a form via Ajax after it is validated.
 
 #### Defined in
 
-[../base/dist/index.d.ts:1840](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1840)
+[src/base/validator.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L193)
 
 ___
 
@@ -451,4 +451,4 @@ default: Removes the errorClass
 
 #### Defined in
 
-[../base/dist/index.d.ts:1852](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1852)
+[src/base/validator.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L207)

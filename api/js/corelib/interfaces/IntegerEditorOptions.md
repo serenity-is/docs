@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/ui/editors/integereditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L10)
+[src/ui/editors/integereditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L12)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/integereditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L9)
+[src/ui/editors/integereditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L11)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/integereditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L8)
+[src/ui/editors/integereditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L10)

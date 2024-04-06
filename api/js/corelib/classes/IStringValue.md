@@ -4,12 +4,11 @@
 
 ## Implemented by
 
+- [`ComboboxEditor`](ComboboxEditor.md)
 - [`DateEditor`](DateEditor.md)
 - [`DateTimeEditor`](DateTimeEditor.md)
 - [`HtmlContentEditor`](HtmlContentEditor.md)
 - [`Recaptcha`](Recaptcha.md)
-- [`Select2AjaxEditor`](Select2AjaxEditor.md)
-- [`Select2Editor`](Select2Editor.md)
 
 ## Table of contents
 
@@ -26,7 +25,11 @@
 
 ### constructor
 
-• **new IStringValue**()
+• **new IStringValue**(): [`IStringValue`](IStringValue.md)
+
+#### Returns
+
+[`IStringValue`](IStringValue.md)
 
 ## Methods
 

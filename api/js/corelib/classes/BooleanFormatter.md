@@ -14,6 +14,10 @@
 
 ### Properties
 
+- [props](BooleanFormatter.md#props)
+
+### Accessors
+
 - [falseText](BooleanFormatter.md#falsetext)
 - [trueText](BooleanFormatter.md#truetext)
 
@@ -25,27 +29,100 @@
 
 ### constructor
 
-• **new BooleanFormatter**()
+• **new BooleanFormatter**(`props?`): [`BooleanFormatter`](BooleanFormatter.md)
 
-## Properties
+#### Parameters
 
-### falseText
+| Name | Type |
+| :------ | :------ |
+| `props` | `Object` |
+| `props.falseText?` | `string` |
+| `props.trueText?` | `string` |
 
-• **falseText**: `string`
+#### Returns
+
+[`BooleanFormatter`](BooleanFormatter.md)
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L47)
+[src/ui/formatters/formatters.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L19)
+
+## Properties
+
+### props
+
+• `Readonly` **props**: `Object` = `{}`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `falseText?` | `string` |
+| `trueText?` | `string` |
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L19)
+
+## Accessors
+
+### falseText
+
+• `get` **falseText**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L34)
+
+• `set` **falseText**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L35)
 
 ___
 
 ### trueText
 
-• **trueText**: `string`
+• `get` **trueText**(): `string`
+
+#### Returns
+
+`string`
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L50)
+[src/ui/formatters/formatters.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L37)
+
+• `set` **trueText**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L38)
 
 ## Methods
 
@@ -57,7 +134,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | `FormatterContext`<`any`\> |
+| `ctx` | `FormatterContext`\<`any`\> |
 
 #### Returns
 
@@ -69,4 +146,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L17)
+[src/ui/formatters/formatters.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L23)

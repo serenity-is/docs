@@ -16,6 +16,10 @@
 
 ### Properties
 
+- [props](DateTimeFormatter.md#props)
+
+### Accessors
+
 - [displayFormat](DateTimeFormatter.md#displayformat)
 
 ### Methods
@@ -27,7 +31,11 @@
 
 ### constructor
 
-• **new DateTimeFormatter**()
+• **new DateTimeFormatter**(): [`DateTimeFormatter`](DateTimeFormatter.md)
+
+#### Returns
+
+[`DateTimeFormatter`](DateTimeFormatter.md)
 
 #### Overrides
 
@@ -35,21 +43,65 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L100)
+[src/ui/formatters/formatters.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L91)
 
 ## Properties
 
-### displayFormat
+### props
 
-• **displayFormat**: `string`
+• `Readonly` **props**: `Object` = `{}`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `displayFormat?` | `string` |
 
 #### Inherited from
 
-[DateFormatter](DateFormatter.md).[displayFormat](DateFormatter.md#displayformat)
+[DateFormatter](DateFormatter.md).[props](DateFormatter.md#props)
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L91)
+[src/ui/formatters/formatters.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L52)
+
+## Accessors
+
+### displayFormat
+
+• `get` **displayFormat**(): `string`
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+DateFormatter.displayFormat
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L81)
+
+• `set` **displayFormat**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+DateFormatter.displayFormat
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L82)
 
 ## Methods
 
@@ -61,7 +113,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | `FormatterContext`<`any`\> |
+| `ctx` | `FormatterContext`\<`any`\> |
 
 #### Returns
 
@@ -73,13 +125,13 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L93)
+[src/ui/formatters/formatters.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L84)
 
 ___
 
 ### format
 
-▸ `Static` **format**(`value`, `format?`): `any`
+▸ **format**(`value`, `format?`): `any`
 
 #### Parameters
 
@@ -98,4 +150,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L66)
+[src/ui/formatters/formatters.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L57)

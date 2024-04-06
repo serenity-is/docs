@@ -6,12 +6,16 @@
 
 ### Functions
 
+- [classType](Decorators.md#classtype)
+- [closeButton](Decorators.md#closebutton)
 - [dialogType](Decorators.md#dialogtype)
 - [editor](Decorators.md#editor)
+- [editorType](Decorators.md#editortype)
 - [element](Decorators.md#element)
 - [enumKey](Decorators.md#enumkey)
 - [filterable](Decorators.md#filterable)
-- [flexify](Decorators.md#flexify)
+- [formatterType](Decorators.md#formattertype)
+- [interfaceType](Decorators.md#interfacetype)
 - [itemName](Decorators.md#itemname)
 - [maximizable](Decorators.md#maximizable)
 - [option](Decorators.md#option)
@@ -23,11 +27,72 @@
 - [registerEnumType](Decorators.md#registerenumtype)
 - [registerFormatter](Decorators.md#registerformatter)
 - [registerInterface](Decorators.md#registerinterface)
+- [registerType](Decorators.md#registertype)
 - [resizable](Decorators.md#resizable)
 - [responsive](Decorators.md#responsive)
 - [service](Decorators.md#service)
+- [staticPanel](Decorators.md#staticpanel)
 
 ## Functions
+
+### classType
+
+▸ **classType**\<`T`\>(`typeName`, `interfaces?`): [`ClassTypeInfo`](../README.md#classtypeinfo)\<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `typeName` | [`StringLiteral`](../README.md#stringliteral)\<`T`\> |
+| `interfaces?` | `any`[] |
+
+#### Returns
+
+[`ClassTypeInfo`](../README.md#classtypeinfo)\<`T`\>
+
+#### Defined in
+
+[src/types/decorators.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L6)
+
+___
+
+### closeButton
+
+▸ **closeButton**(`value?`): (`target`: `Function`) => `void`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `value` | `boolean` | `true` |
+
+#### Returns
+
+`fn`
+
+▸ (`target`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `target` | `Function` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/types/decorators.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L86)
+
+___
 
 ### dialogType
 
@@ -57,7 +122,7 @@
 
 #### Defined in
 
-[src/decorators/index.ts:304](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L304)
+[src/types/decorators.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L92)
 
 ___
 
@@ -83,7 +148,34 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L310)
+[src/types/decorators.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L98)
+
+___
+
+### editorType
+
+▸ **editorType**\<`T`\>(`typeName`, `interfaces?`): [`EditorTypeInfo`](../README.md#editortypeinfo)\<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `typeName` | [`StringLiteral`](../README.md#stringliteral)\<`T`\> |
+| `interfaces?` | `any`[] |
+
+#### Returns
+
+[`EditorTypeInfo`](../README.md#editortypeinfo)\<`T`\>
+
+#### Defined in
+
+[src/types/decorators.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L7)
 
 ___
 
@@ -115,7 +207,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L317)
+[src/types/decorators.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L105)
 
 ___
 
@@ -147,7 +239,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L282)
+[src/types/decorators.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L64)
 
 ___
 
@@ -179,39 +271,61 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L323)
+[src/types/decorators.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L111)
 
 ___
 
-### flexify
+### formatterType
 
-▸ **flexify**(`value?`): (`target`: `Function`) => `void`
+▸ **formatterType**\<`T`\>(`typeName`, `interfaces?`): [`FormatterTypeInfo`](../README.md#formattertypeinfo)\<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+| Name | Type |
+| :------ | :------ |
+| `typeName` | [`StringLiteral`](../README.md#stringliteral)\<`T`\> |
+| `interfaces?` | `any`[] |
 
 #### Returns
 
-`fn`
-
-▸ (`target`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `target` | `Function` |
-
-##### Returns
-
-`void`
+[`FormatterTypeInfo`](../README.md#formattertypeinfo)\<`T`\>
 
 #### Defined in
 
-[src/decorators/index.ts:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L329)
+[src/types/decorators.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L9)
+
+___
+
+### interfaceType
+
+▸ **interfaceType**\<`T`\>(`typeName`, `interfaces?`): [`InterfaceTypeInfo`](../README.md#interfacetypeinfo)\<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `typeName` | [`StringLiteral`](../README.md#stringliteral)\<`T`\> |
+| `interfaces?` | `any`[] |
+
+#### Returns
+
+[`InterfaceTypeInfo`](../README.md#interfacetypeinfo)\<`T`\>
+
+#### Defined in
+
+[src/types/decorators.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L8)
 
 ___
 
@@ -243,7 +357,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L335)
+[src/types/decorators.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L117)
 
 ___
 
@@ -275,7 +389,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L341)
+[src/types/decorators.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L123)
 
 ___
 
@@ -302,7 +416,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L288)
+[src/types/decorators.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L70)
 
 ___
 
@@ -334,7 +448,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:347](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L347)
+[src/types/decorators.ts:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L129)
 
 ___
 
@@ -366,7 +480,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L353)
+[src/types/decorators.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L135)
 
 ___
 
@@ -399,7 +513,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L239)
+[src/types/decorators.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L17)
 
 ___
 
@@ -432,7 +546,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L258)
+[src/types/decorators.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L36)
 
 ___
 
@@ -454,7 +568,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L267)
+[src/types/decorators.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L45)
 
 ___
 
@@ -476,7 +590,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L273)
+[src/types/decorators.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L51)
 
 ___
 
@@ -509,7 +623,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L277)
+[src/types/decorators.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L55)
 
 ___
 
@@ -542,7 +656,33 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L248)
+[src/types/decorators.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L26)
+
+___
+
+### registerType
+
+▸ **registerType**(): (`target`: `Function` & \{ `typeInfo`: `any`  }) => `void`
+
+#### Returns
+
+`fn`
+
+▸ (`target`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `target` | `Function` & \{ `typeInfo`: `any`  } |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/types/decorators.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L11)
 
 ___
 
@@ -574,7 +714,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L359)
+[src/types/decorators.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L141)
 
 ___
 
@@ -606,7 +746,7 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L365)
+[src/types/decorators.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L147)
 
 ___
 
@@ -638,4 +778,36 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:371](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L371)
+[src/types/decorators.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L153)
+
+___
+
+### staticPanel
+
+▸ **staticPanel**(`value?`): (`target`: `Function`) => `void`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `value` | `boolean` | `true` |
+
+#### Returns
+
+`fn`
+
+▸ (`target`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `target` | `Function` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/types/decorators.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L159)

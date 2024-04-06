@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:638](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L638)
+[src/ui/helpers/slickhelpers.ts:662](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L662)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:619](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L619)
+[src/ui/helpers/slickhelpers.ts:643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L643)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:629](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L629)
+[src/ui/helpers/slickhelpers.ts:653](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L653)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:590](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L590)
+[src/ui/helpers/slickhelpers.ts:599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L599)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `link` | `JQuery` |
+| `link` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:654](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L654)
+[src/ui/helpers/slickhelpers.ts:678](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L678)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `link` | `JQuery` |
+| `link` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
@@ -130,13 +130,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:650](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L650)
+[src/ui/helpers/slickhelpers.ts:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L674)
 
 ___
 
 ### itemLink
 
-▸ **itemLink**<`TItem`\>(`itemType`, `idField`, `getText`, `cssClass?`, `encode?`): [`Format`](../README.md#format)<`TItem`\>
+▸ **itemLink**\<`TItem`\>(`itemType`, `idField`, `getText`, `cssClass?`, `encode?`): [`Format`](../README.md#format)\<`TItem`\>
 
 #### Type parameters
 
@@ -150,23 +150,23 @@ ___
 | :------ | :------ |
 | `itemType` | `string` |
 | `idField` | `string` |
-| `getText` | [`Format`](../README.md#format)<`TItem`\> |
-| `cssClass?` | [`Format`](../README.md#format)<`TItem`\> |
+| `getText` | [`Format`](../README.md#format)\<`TItem`\> |
+| `cssClass?` | (`ctx`: `FormatterContext`\<`TItem`\>) => `string` |
 | `encode?` | `boolean` |
 
 #### Returns
 
-[`Format`](../README.md#format)<`TItem`\>
+[`Format`](../README.md#format)\<`TItem`\>
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:670](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L670)
+[src/ui/helpers/slickhelpers.ts:707](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L707)
 
 ___
 
 ### itemLinkText
 
-▸ **itemLinkText**(`itemType`, `id`, `text`, `extraClass`, `encode`): `string`
+▸ **itemLinkText**(`itemType`, `id`, `text`, `extraClass`, `encode`): `FormatterResult`
 
 #### Parameters
 
@@ -174,17 +174,17 @@ ___
 | :------ | :------ |
 | `itemType` | `string` |
 | `id` | `any` |
-| `text` | `any` |
+| `text` | `FormatterResult` |
 | `extraClass` | `string` |
 | `encode` | `boolean` |
 
 #### Returns
 
-`string`
+`FormatterResult`
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:659](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L659)
+[src/ui/helpers/slickhelpers.ts:683](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L683)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:644](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L644)
+[src/ui/helpers/slickhelpers.ts:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L668)
 
 ___
 
@@ -216,9 +216,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `getView` | () => [`RemoteView`](../classes/RemoteView.md)<`any`\> |
+| `getView` | () => [`RemoteView`](../classes/RemoteView.md)\<`any`\> |
 | `getId` | (`x`: `any`) => `any` |
-| `formatter` | [`Format`](../README.md#format)<`any`\> |
+| `formatter` | [`Format`](../README.md#format) |
 
 #### Returns
 
@@ -226,4 +226,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L594)
+[src/ui/helpers/slickhelpers.ts:603](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L603)

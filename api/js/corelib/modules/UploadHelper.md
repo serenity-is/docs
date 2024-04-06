@@ -20,7 +20,7 @@
 
 ### addUploadInput
 
-▸ **addUploadInput**(`options`): `JQuery`
+▸ **addUploadInput**(`options`): [`Fluent`](../interfaces/Fluent-1.md)
 
 #### Parameters
 
@@ -30,11 +30,11 @@
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L5)
+[src/ui/helpers/uploadhelper.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L6)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L99)
+[src/ui/helpers/uploadhelper.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L63)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `link` | `JQuery` |
+| `link` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `options` | `any` |
 
 #### Returns
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L183)
+[src/ui/helpers/uploadhelper.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L148)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L178)
+[src/ui/helpers/uploadhelper.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L143)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L138)
+[src/ui/helpers/uploadhelper.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L102)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L142)
+[src/ui/helpers/uploadhelper.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L106)
 
 ___
 
@@ -157,19 +157,19 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L160)
+[src/ui/helpers/uploadhelper.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L124)
 
 ___
 
 ### populateFileSymbols
 
-▸ **populateFileSymbols**(`container`, `items`, `displayOriginalName?`, `urlPrefix?`): `void`
+▸ **populateFileSymbols**(`c`, `items`, `displayOriginalName?`, `urlPrefix?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `container` | `JQuery` |
+| `c` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `items` | [`UploadedFile`](../interfaces/UploadedFile.md)[] |
 | `displayOriginalName?` | `boolean` |
 | `urlPrefix?` | `string` |
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L192)
+[src/ui/helpers/uploadhelper.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L163)
 
 ___
 
@@ -200,4 +200,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L169)
+[src/ui/helpers/uploadhelper.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L134)

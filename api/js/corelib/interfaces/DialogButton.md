@@ -11,7 +11,6 @@ Options for a message dialog button
 - [click](DialogButton.md#click)
 - [cssClass](DialogButton.md#cssclass)
 - [hint](DialogButton.md#hint)
-- [htmlEncode](DialogButton.md#htmlencode)
 - [icon](DialogButton.md#icon)
 - [result](DialogButton.md#result)
 - [text](DialogButton.md#text)
@@ -20,13 +19,13 @@ Options for a message dialog button
 
 ### click
 
-• `Optional` **click**: (`e`: `MouseEvent`) => `void`
+• `Optional` **click**: (`e`: `MouseEvent`) => ``false`` \| `void` \| `Promise`\<``false`` \| `void`\>
+
+Click handler
 
 #### Type declaration
 
-▸ (`e`): `void`
-
-Click handler
+▸ (`e`): ``false`` \| `void` \| `Promise`\<``false`` \| `void`\>
 
 ##### Parameters
 
@@ -36,11 +35,11 @@ Click handler
 
 ##### Returns
 
-`void`
+``false`` \| `void` \| `Promise`\<``false`` \| `void`\>
 
 #### Defined in
 
-[src/q/dialogs.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L20)
+[../base/dist/index.d.ts:244](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L244)
 
 ___
 
@@ -52,7 +51,7 @@ CSS class for button
 
 #### Defined in
 
-[src/q/dialogs.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L22)
+[../base/dist/index.d.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L246)
 
 ___
 
@@ -64,31 +63,19 @@ Button hint
 
 #### Defined in
 
-[src/q/dialogs.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L16)
-
-___
-
-### htmlEncode
-
-• `Optional` **htmlEncode**: `boolean`
-
-HTML encode button text. Default is true.
-
-#### Defined in
-
-[src/q/dialogs.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L24)
+[../base/dist/index.d.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L240)
 
 ___
 
 ### icon
 
-• `Optional` **icon**: `string`
+• `Optional` **icon**: [`IconClassName`](../README.md#iconclassname)
 
 Button icon
 
 #### Defined in
 
-[src/q/dialogs.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L18)
+[../base/dist/index.d.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L242)
 
 ___
 
@@ -96,11 +83,12 @@ ___
 
 • `Optional` **result**: `string`
 
-The code that is returned from message dialog function when this button is clicked
+The code that is returned from message dialog function when this button is clicked.
+ If this is set, and click event will not be defaultPrevented dialog will close.
 
 #### Defined in
 
-[src/q/dialogs.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L26)
+[../base/dist/index.d.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L250)
 
 ___
 
@@ -112,4 +100,4 @@ Button text
 
 #### Defined in
 
-[src/q/dialogs.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/dialogs.ts#L14)
+[../base/dist/index.d.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L238)

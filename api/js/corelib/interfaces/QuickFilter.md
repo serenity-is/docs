@@ -1,13 +1,13 @@
 [@serenity-is/corelib](../README.md) / QuickFilter
 
-# Interface: QuickFilter<TWidget, TOptions\>
+# Interface: QuickFilter\<TWidget, P\>
 
 ## Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](../classes/Widget.md)<`TOptions`\> |
-| `TOptions` | `TOptions` |
+| `TWidget` | extends [`Widget`](../classes/Widget.md)\<`P`\> |
+| `P` | `P` |
 
 ## Table of contents
 
@@ -65,7 +65,7 @@ ___
 
 ### element
 
-• `Optional` **element**: (`e`: `JQuery`) => `void`
+• `Optional` **element**: (`e`: [`Fluent`](Fluent-1.md)\<`HTMLElement`\>) => `void`
 
 #### Type declaration
 
@@ -75,7 +75,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQuery` |
+| `e` | [`Fluent`](Fluent-1.md)\<`HTMLElement`\> |
 
 ##### Returns
 
@@ -99,7 +99,7 @@ ___
 
 ### handler
 
-• `Optional` **handler**: (`h`: [`QuickFilterArgs`](QuickFilterArgs.md)<`TWidget`\>) => `void`
+• `Optional` **handler**: (`h`: [`QuickFilterArgs`](QuickFilterArgs.md)\<`TWidget`\>) => `void`
 
 #### Type declaration
 
@@ -109,7 +109,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `h` | [`QuickFilterArgs`](QuickFilterArgs.md)<`TWidget`\> |
+| `h` | [`QuickFilterArgs`](QuickFilterArgs.md)\<`TWidget`\> |
 
 ##### Returns
 
@@ -172,7 +172,7 @@ ___
 
 ### options
 
-• `Optional` **options**: `TOptions`
+• `Optional` **options**: `P` & \{ `class?`: `string` ; `element?`: `string` \| `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`el`: `HTMLElement`) => `void` ; `id?`: `string`  }
 
 #### Defined in
 
@@ -226,18 +226,27 @@ ___
 
 ### type
 
-• `Optional` **type**: (`element`: `JQuery`, `options`: `TOptions`) => `TWidget`
+• `Optional` **type**: `Object`
 
-#### Type declaration
+#### Call signature
 
-• **new type**(`element`, `options`)
+• **new type**(`options?`): `TWidget`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `JQuery` |
-| `options` | `TOptions` |
+| `options?` | `P` |
+
+##### Returns
+
+`TWidget`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `prototype` | `TWidget` |
 
 #### Defined in
 

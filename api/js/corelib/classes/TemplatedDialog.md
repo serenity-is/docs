@@ -1,16 +1,16 @@
 [@serenity-is/corelib](../README.md) / TemplatedDialog
 
-# Class: TemplatedDialog<TOptions\>
+# Class: TemplatedDialog\<P\>
 
 ## Type parameters
 
 | Name |
 | :------ |
-| `TOptions` |
+| `P` |
 
 ## Hierarchy
 
-- [`TemplatedWidget`](TemplatedWidget.md)<`TOptions`\>
+- [`TemplatedWidget`](TemplatedWidget.md)\<`P`\>
 
   ↳ **`TemplatedDialog`**
 
@@ -22,8 +22,6 @@
 
   ↳↳ [`EntityDialog`](EntityDialog.md)
 
-  ↳↳ [`ReportDialog`](Reporting.ReportDialog.md)
-
 ## Table of contents
 
 ### Constructors
@@ -32,21 +30,21 @@
 
 ### Properties
 
-- [element](TemplatedDialog.md#element)
+- [dialog](TemplatedDialog.md#dialog)
+- [domNode](TemplatedDialog.md#domnode)
 - [idPrefix](TemplatedDialog.md#idprefix)
 - [options](TemplatedDialog.md#options)
 - [tabs](TemplatedDialog.md#tabs)
 - [toolbar](TemplatedDialog.md#toolbar)
 - [uniqueName](TemplatedDialog.md#uniquename)
 - [validator](TemplatedDialog.md#validator)
-- [widgetName](TemplatedDialog.md#widgetname)
-- [bootstrapModal](TemplatedDialog.md#bootstrapmodal)
+- [typeInfo](TemplatedDialog.md#typeinfo)
 
 ### Accessors
 
 - [dialogTitle](TemplatedDialog.md#dialogtitle)
-- [isMarkedAsPanel](TemplatedDialog.md#ismarkedaspanel)
-- [isResponsive](TemplatedDialog.md#isresponsive)
+- [element](TemplatedDialog.md#element)
+- [props](TemplatedDialog.md#props)
 
 ### Methods
 
@@ -59,59 +57,60 @@
 - [destroy](TemplatedDialog.md#destroy)
 - [dialogClose](TemplatedDialog.md#dialogclose)
 - [dialogOpen](TemplatedDialog.md#dialogopen)
+- [findById](TemplatedDialog.md#findbyid)
 - [getCssClass](TemplatedDialog.md#getcssclass)
+- [getCustomAttribute](TemplatedDialog.md#getcustomattribute)
 - [getDialogButtons](TemplatedDialog.md#getdialogbuttons)
 - [getDialogOptions](TemplatedDialog.md#getdialogoptions)
-- [getDialogTitle](TemplatedDialog.md#getdialogtitle)
-- [getFallbackTemplate](TemplatedDialog.md#getfallbacktemplate)
+- [getFieldElement](TemplatedDialog.md#getfieldelement)
 - [getGridField](TemplatedDialog.md#getgridfield)
-- [getModalOptions](TemplatedDialog.md#getmodaloptions)
+- [getInitialDialogTitle](TemplatedDialog.md#getinitialdialogtitle)
 - [getTemplate](TemplatedDialog.md#gettemplate)
-- [getTemplateName](TemplatedDialog.md#gettemplatename)
 - [getToolbarButtons](TemplatedDialog.md#gettoolbarbuttons)
 - [getValidatorOptions](TemplatedDialog.md#getvalidatoroptions)
 - [handleResponsive](TemplatedDialog.md#handleresponsive)
 - [init](TemplatedDialog.md#init)
 - [initDialog](TemplatedDialog.md#initdialog)
-- [initModal](TemplatedDialog.md#initmodal)
 - [initTabs](TemplatedDialog.md#inittabs)
 - [initToolbar](TemplatedDialog.md#inittoolbar)
+- [initUIDialog](TemplatedDialog.md#inituidialog)
 - [initValidator](TemplatedDialog.md#initvalidator)
-- [initialize](TemplatedDialog.md#initialize)
+- [internalInit](TemplatedDialog.md#internalinit)
+- [internalRenderContents](TemplatedDialog.md#internalrendercontents)
+- [isStaticPanel](TemplatedDialog.md#isstaticpanel)
 - [onDialogClose](TemplatedDialog.md#ondialogclose)
 - [onDialogOpen](TemplatedDialog.md#ondialogopen)
+- [render](TemplatedDialog.md#render)
 - [renderContents](TemplatedDialog.md#rendercontents)
 - [resetValidation](TemplatedDialog.md#resetvalidation)
-- [set\_dialogTitle](TemplatedDialog.md#set_dialogtitle)
-- [setupPanelTitle](TemplatedDialog.md#setuppaneltitle)
-- [useBSModal](TemplatedDialog.md#usebsmodal)
+- [syncOrAsyncThen](TemplatedDialog.md#syncorasyncthen)
 - [useIdPrefix](TemplatedDialog.md#useidprefix)
 - [validateForm](TemplatedDialog.md#validateform)
-- [applyCssSizes](TemplatedDialog.md#applycsssizes)
-- [closePanel](TemplatedDialog.md#closepanel)
 - [create](TemplatedDialog.md#create)
-- [elementFor](TemplatedDialog.md#elementfor)
-- [getCssSize](TemplatedDialog.md#getcsssize)
+- [createDefaultElement](TemplatedDialog.md#createdefaultelement)
 - [getWidgetName](TemplatedDialog.md#getwidgetname)
-- [openPanel](TemplatedDialog.md#openpanel)
 
 ## Constructors
 
 ### constructor
 
-• **new TemplatedDialog**<`TOptions`\>(`options?`)
+• **new TemplatedDialog**\<`P`\>(`props?`): [`TemplatedDialog`](TemplatedDialog.md)\<`P`\>
 
 #### Type parameters
 
 | Name |
 | :------ |
-| `TOptions` |
+| `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `TOptions` |
+| `props?` | [`WidgetProps`](../README.md#widgetprops)\<`P`\> |
+
+#### Returns
+
+[`TemplatedDialog`](TemplatedDialog.md)\<`P`\>
 
 #### Overrides
 
@@ -119,21 +118,31 @@
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L16)
+[src/ui/dialogs/templateddialog.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L22)
 
 ## Properties
 
-### element
+### dialog
 
-• **element**: `JQuery`
-
-#### Inherited from
-
-[TemplatedWidget](TemplatedWidget.md).[element](TemplatedWidget.md#element)
+• `Protected` **dialog**: [`Dialog`](Dialog.md)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L61)
+[src/ui/dialogs/templateddialog.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L20)
+
+___
+
+### domNode
+
+• `Readonly` **domNode**: `HTMLElement`
+
+#### Inherited from
+
+[TemplatedWidget](TemplatedWidget.md).[domNode](TemplatedWidget.md#domnode)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
 
 ___
 
@@ -147,13 +156,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L65)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
 ### options
 
-• `Protected` **options**: `TOptions`
+• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Inherited from
 
@@ -161,33 +170,33 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L62)
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ___
 
 ### tabs
 
-• `Protected` **tabs**: `JQuery`
+• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L12)
+[src/ui/dialogs/templateddialog.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L17)
 
 ___
 
 ### toolbar
 
-• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)
+• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L13)
+[src/ui/dialogs/templateddialog.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L18)
 
 ___
 
 ### uniqueName
 
-• `Protected` **uniqueName**: `string`
+• `Protected` `Readonly` **uniqueName**: `string`
 
 #### Inherited from
 
@@ -195,41 +204,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L64)
+[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ___
 
 ### validator
 
-• `Protected` **validator**: `Validator`
+• `Protected` **validator**: `any`
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L14)
+[src/ui/dialogs/templateddialog.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L19)
 
 ___
 
-### widgetName
+### typeInfo
 
-• `Protected` **widgetName**: `string`
+▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
 
 #### Inherited from
 
-[TemplatedWidget](TemplatedWidget.md).[widgetName](TemplatedWidget.md#widgetname)
+[TemplatedWidget](TemplatedWidget.md).[typeInfo](TemplatedWidget.md#typeinfo)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
-
-___
-
-### bootstrapModal
-
-▪ `Static` **bootstrapModal**: `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L274)
+[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
 
 ## Accessors
 
@@ -243,7 +242,7 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:360](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L360)
+[src/ui/dialogs/templateddialog.ts:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L189)
 
 • `set` **dialogTitle**(`value`): `void`
 
@@ -259,41 +258,51 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:395](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L395)
+[src/ui/dialogs/templateddialog.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L193)
 
 ___
 
-### isMarkedAsPanel
+### element
 
-• `Private` `get` **isMarkedAsPanel**(): `boolean`
+• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+Returns a Fluent(this.domNode) object
 
 #### Returns
 
-`boolean`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+TemplatedWidget.element
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L26)
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 ___
 
-### isResponsive
+### props
 
-• `Private` `get` **isResponsive**(): `boolean`
+• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Returns
 
-`boolean`
+[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Inherited from
+
+TemplatedWidget.props
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L32)
+[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
 
 ## Methods
 
 ### addCssClass
 
-▸ `Protected` **addCssClass**(): `void`
+▸ **addCssClass**(): `void`
 
 #### Returns
 
@@ -305,24 +314,24 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L315)
+[src/ui/dialogs/templateddialog.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L46)
 
 ___
 
 ### addValidationRule
 
-▸ **addValidationRule**(`eventClass`, `rule`): `JQuery`
+▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `eventClass` | `string` |
-| `rule` | (`p1`: `JQuery`) => `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `uniqueName?` | `string` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Inherited from
 
@@ -330,7 +339,28 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L134)
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
+
+▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `uniqueName` | `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedWidget](TemplatedWidget.md).[addValidationRule](TemplatedWidget.md#addvalidationrule)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
 ___
 
@@ -344,13 +374,19 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L291)
+[src/ui/dialogs/templateddialog.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L162)
 
 ___
 
 ### byId
 
-▸ `Protected` **byId**(`id`): `JQuery`
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` = `HTMLElement` |
 
 #### Parameters
 
@@ -360,15 +396,15 @@ ___
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
 
 #### Inherited from
 
-[TemplatedWidget](TemplatedWidget.md).[byId](TemplatedWidget.md#byid-1)
+[TemplatedWidget](TemplatedWidget.md).[byId](TemplatedWidget.md#byid)
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L10)
+[src/ui/widgets/templatedwidget.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L8)
 
 ___
 
@@ -380,7 +416,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -392,27 +428,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedWidget](TemplatedWidget.md).[change](TemplatedWidget.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L259)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ___
 
@@ -424,7 +440,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -436,27 +452,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedWidget](TemplatedWidget.md).[changeSelect2](TemplatedWidget.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L260)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 ___
 
@@ -474,13 +470,19 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L81)
+[src/ui/dialogs/templateddialog.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L31)
 
 ___
 
 ### dialogClose
 
-▸ **dialogClose**(): `void`
+▸ **dialogClose**(`result?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `result?` | `string` |
 
 #### Returns
 
@@ -488,7 +490,7 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:350](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L350)
+[src/ui/dialogs/templateddialog.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L185)
 
 ___
 
@@ -508,13 +510,43 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:244](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L244)
+[src/ui/dialogs/templateddialog.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L109)
+
+___
+
+### findById
+
+▸ **findById**\<`TElement`\>(`id`): `TElement`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` = `HTMLElement` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`TElement`
+
+#### Inherited from
+
+[TemplatedWidget](TemplatedWidget.md).[findById](TemplatedWidget.md#findbyid)
+
+#### Defined in
+
+[src/ui/widgets/templatedwidget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L12)
 
 ___
 
 ### getCssClass
 
-▸ `Protected` **getCssClass**(): `string`
+▸ **getCssClass**(): `string`
 
 #### Returns
 
@@ -526,81 +558,34 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L104)
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
 
 ___
 
-### getDialogButtons
+### getCustomAttribute
 
-▸ `Protected` **getDialogButtons**(): [`DialogButton`](../interfaces/DialogButton.md)[]
+▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
 
-#### Returns
+#### Type parameters
 
-[`DialogButton`](../interfaces/DialogButton.md)[]
+| Name |
+| :------ |
+| `TAttr` |
 
-#### Defined in
+#### Parameters
 
-[src/ui/dialogs/templateddialog.ts:324](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L324)
-
-___
-
-### getDialogOptions
-
-▸ `Protected` **getDialogOptions**(): `any`
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L328)
-
-___
-
-### getDialogTitle
-
-▸ `Protected` **getDialogTitle**(): `string`
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
 
 #### Returns
 
-`string`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L346)
-
-___
-
-### getFallbackTemplate
-
-▸ `Protected` **getFallbackTemplate**(): `string`
-
-#### Returns
-
-`string`
+`TAttr`
 
 #### Inherited from
 
-[TemplatedWidget](TemplatedWidget.md).[getFallbackTemplate](TemplatedWidget.md#getfallbacktemplate)
-
-#### Defined in
-
-[src/ui/widgets/templatedwidget.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L79)
-
-___
-
-### getGridField
-
-▸ **getGridField**(): `JQuery`
-
-#### Returns
-
-`JQuery`
-
-#### Inherited from
-
-[TemplatedWidget](TemplatedWidget.md).[getGridField](TemplatedWidget.md#getgridfield)
+[TemplatedWidget](TemplatedWidget.md).[getCustomAttribute](TemplatedWidget.md#getcustomattribute)
 
 #### Defined in
 
@@ -608,23 +593,87 @@ ___
 
 ___
 
-### getModalOptions
+### getDialogButtons
 
-▸ `Protected` **getModalOptions**(): [`ModalOptions`](../interfaces/ModalOptions.md)
+▸ **getDialogButtons**(): [`DialogButton`](../interfaces/DialogButton.md)[]
 
 #### Returns
 
-[`ModalOptions`](../interfaces/ModalOptions.md)
+[`DialogButton`](../interfaces/DialogButton.md)[]
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L153)
+[src/ui/dialogs/templateddialog.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L181)
+
+___
+
+### getDialogOptions
+
+▸ **getDialogOptions**(): [`DialogOptions`](../interfaces/DialogOptions.md)
+
+#### Returns
+
+[`DialogOptions`](../interfaces/DialogOptions.md)
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L58)
+
+___
+
+### getFieldElement
+
+▸ **getFieldElement**(): `HTMLElement`
+
+#### Returns
+
+`HTMLElement`
+
+#### Inherited from
+
+[TemplatedWidget](TemplatedWidget.md).[getFieldElement](TemplatedWidget.md#getfieldelement)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
+___
+
+### getGridField
+
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+[TemplatedWidget](TemplatedWidget.md).[getGridField](TemplatedWidget.md#getgridfield)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+
+___
+
+### getInitialDialogTitle
+
+▸ **getInitialDialogTitle**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L50)
 
 ___
 
 ### getTemplate
 
-▸ `Protected` **getTemplate**(): `string`
+▸ **getTemplate**(): `string`
 
 #### Returns
 
@@ -636,31 +685,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L83)
-
-___
-
-### getTemplateName
-
-▸ `Protected` **getTemplateName**(): `string`
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-[TemplatedWidget](TemplatedWidget.md).[getTemplateName](TemplatedWidget.md#gettemplatename)
-
-#### Defined in
-
-[src/ui/widgets/templatedwidget.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L31)
+[src/ui/widgets/templatedwidget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L16)
 
 ___
 
 ### getToolbarButtons
 
-▸ `Protected` **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+▸ **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
 #### Returns
 
@@ -668,27 +699,27 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L220)
+[src/ui/dialogs/templateddialog.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L127)
 
 ___
 
 ### getValidatorOptions
 
-▸ `Protected` **getValidatorOptions**(): `ValidationOptions`
+▸ **getValidatorOptions**(): `any`
 
 #### Returns
 
-`ValidationOptions`
+`any`
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L224)
+[src/ui/dialogs/templateddialog.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L142)
 
 ___
 
 ### handleResponsive
 
-▸ `Protected` **handleResponsive**(): `void`
+▸ **handleResponsive**(): `void`
 
 #### Returns
 
@@ -696,23 +727,17 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L426)
+[src/ui/dialogs/templateddialog.ts:205](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L205)
 
 ___
 
 ### init
 
-▸ **init**(`action?`): [`TemplatedDialog`](TemplatedDialog.md)<`TOptions`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `action?` | (`widget`: `any`) => `void` |
+▸ **init**(): `this`
 
 #### Returns
 
-[`TemplatedDialog`](TemplatedDialog.md)<`TOptions`\>
+`this`
 
 #### Inherited from
 
@@ -720,13 +745,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
 ___
 
 ### initDialog
 
-▸ `Protected` **initDialog**(): `void`
+▸ **initDialog**(): `void`
 
 #### Returns
 
@@ -734,27 +759,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L104)
-
-___
-
-### initModal
-
-▸ `Protected` **initModal**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L162)
+[src/ui/dialogs/templateddialog.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L86)
 
 ___
 
 ### initTabs
 
-▸ `Protected` **initTabs**(): `void`
+▸ **initTabs**(): `void`
 
 #### Returns
 
@@ -762,13 +773,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L417)
+[src/ui/dialogs/templateddialog.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L198)
 
 ___
 
 ### initToolbar
 
-▸ `Protected` **initToolbar**(): `void`
+▸ **initToolbar**(): `void`
 
 #### Returns
 
@@ -776,13 +787,27 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L203)
+[src/ui/dialogs/templateddialog.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L131)
+
+___
+
+### initUIDialog
+
+▸ **initUIDialog**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L95)
 
 ___
 
 ### initValidator
 
-▸ `Protected` **initValidator**(): `void`
+▸ **initValidator**(): `void`
 
 #### Returns
 
@@ -790,13 +815,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L228)
+[src/ui/dialogs/templateddialog.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L146)
 
 ___
 
-### initialize
+### internalInit
 
-▸ **initialize**(): `void`
+▸ **internalInit**(): `void`
 
 #### Returns
 
@@ -804,17 +829,55 @@ ___
 
 #### Inherited from
 
-[TemplatedWidget](TemplatedWidget.md).[initialize](TemplatedWidget.md#initialize)
+[TemplatedWidget](TemplatedWidget.md).[internalInit](TemplatedWidget.md#internalinit)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L176)
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+___
+
+### internalRenderContents
+
+▸ **internalRenderContents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedWidget](TemplatedWidget.md).[internalRenderContents](TemplatedWidget.md#internalrendercontents)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
+
+___
+
+### isStaticPanel
+
+▸ **isStaticPanel**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L54)
 
 ___
 
 ### onDialogClose
 
-▸ `Protected` **onDialogClose**(): `void`
+▸ **onDialogClose**(`result?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `result?` | `string` |
 
 #### Returns
 
@@ -822,13 +885,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:297](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L297)
+[src/ui/dialogs/templateddialog.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L168)
 
 ___
 
 ### onDialogOpen
 
-▸ `Protected` **onDialogOpen**(): `void`
+▸ **onDialogOpen**(): `void`
 
 #### Returns
 
@@ -836,13 +899,35 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L284)
+[src/ui/dialogs/templateddialog.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L120)
+
+___
+
+### render
+
+▸ **render**(): `any`
+
+Returns the main element for this widget or the document fragment.
+As widgets may get their elements from props unlike regular JSX widgets, 
+this method should not be overridden. Override renderContents() instead.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[TemplatedWidget](TemplatedWidget.md).[render](TemplatedWidget.md#render)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
 
 ___
 
 ### renderContents
 
-▸ `Protected` **renderContents**(): `void`
+▸ **renderContents**(): `void`
 
 #### Returns
 
@@ -854,13 +939,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L110)
+[src/ui/widgets/templatedwidget.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L20)
 
 ___
 
 ### resetValidation
 
-▸ `Protected` **resetValidation**(): `void`
+▸ **resetValidation**(): `void`
 
 #### Returns
 
@@ -868,65 +953,49 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L236)
+[src/ui/dialogs/templateddialog.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L154)
 
 ___
 
-### set\_dialogTitle
+### syncOrAsyncThen
 
-▸ **set_dialogTitle**(`value`): `void`
+▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `string` |
+| `syncMethod` | () => `T` |
+| `asyncMethod` | () => `PromiseLike`\<`T`\> |
+| `then` | (`v`: `T`) => `void` |
 
 #### Returns
 
 `void`
 
-#### Defined in
+#### Inherited from
 
-[src/ui/dialogs/templateddialog.ts:413](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L413)
-
-___
-
-### setupPanelTitle
-
-▸ `Private` **setupPanelTitle**(): `void`
-
-#### Returns
-
-`void`
+[TemplatedWidget](TemplatedWidget.md).[syncOrAsyncThen](TemplatedWidget.md#syncorasyncthen)
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:369](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L369)
-
-___
-
-### useBSModal
-
-▸ `Private` **useBSModal**(): `boolean`
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L270)
+[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
 
 ___
 
 ### useIdPrefix
 
-▸ `Protected` **useIdPrefix**(): `IdPrefixType`
+▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
 
 #### Returns
 
-`IdPrefixType`
+[`IdPrefixType`](../README.md#idprefixtype)
 
 #### Inherited from
 
@@ -934,13 +1003,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L131)
+[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
 
 ___
 
 ### validateForm
 
-▸ `Protected` **validateForm**(): `boolean`
+▸ **validateForm**(): `boolean`
 
 #### Returns
 
@@ -948,68 +1017,26 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L240)
-
-___
-
-### applyCssSizes
-
-▸ `Static` `Private` **applyCssSizes**(`opt`, `dialogClass`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opt` | `any` |
-| `dialogClass` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L55)
-
-___
-
-### closePanel
-
-▸ `Static` **closePanel**(`element`, `e?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-| `e?` | `JQueryEventObject` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L280)
+[src/ui/dialogs/templateddialog.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L158)
 
 ___
 
 ### create
 
-▸ `Static` **create**<`TWidget`, `TOpt`\>(`params`): `TWidget`
+▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`TOpt`, `TWidget`\> |
-| `TOpt` | `TOpt` |
+| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
+| `P` | `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)<`TWidget`, `TOpt`\> |
+| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -1021,64 +1048,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
 
 ___
 
-### elementFor
+### createDefaultElement
 
-▸ `Static` **elementFor**<`TWidget`\>(`editorType`): `JQuery`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TWidget` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editorType` | (...`args`: `any`[]) => `TWidget` |
+▸ **createDefaultElement**(): `HTMLDivElement`
 
 #### Returns
 
-`JQuery`
+`HTMLDivElement`
 
-#### Inherited from
+#### Overrides
 
-[TemplatedWidget](TemplatedWidget.md).[elementFor](TemplatedWidget.md#elementfor)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L128)
-
-___
-
-### getCssSize
-
-▸ `Static` `Private` **getCssSize**(`element`, `name`): `number`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-| `name` | `string` |
-
-#### Returns
-
-`number`
+[TemplatedWidget](TemplatedWidget.md).[createDefaultElement](TemplatedWidget.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L37)
+[src/ui/dialogs/templateddialog.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L15)
 
 ___
 
 ### getWidgetName
 
-▸ `Static` **getWidgetName**(`type`): `string`
+▸ **getWidgetName**(`type`): `string`
 
 #### Parameters
 
@@ -1096,25 +1090,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
-
-___
-
-### openPanel
-
-▸ `Static` **openPanel**(`element`, `uniqueName`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-| `uniqueName` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L276)
+[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)

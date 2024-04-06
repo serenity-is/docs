@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new DisplayNameAttribute**(`displayName`)
+• **new DisplayNameAttribute**(`displayName`): [`DisplayNameAttribute`](DisplayNameAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `displayName` | `string` |
 
+#### Returns
+
+[`DisplayNameAttribute`](DisplayNameAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L22)
+[src/types/attributes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L17)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L22)
+[src/types/attributes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L17)

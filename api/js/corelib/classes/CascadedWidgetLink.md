@@ -1,12 +1,12 @@
 [@serenity-is/corelib](../README.md) / CascadedWidgetLink
 
-# Class: CascadedWidgetLink<TParent\>
+# Class: CascadedWidgetLink\<TParent\>
 
 ## Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TParent` | extends [`Widget`](Widget.md)<`any`\> |
+| `TParent` | extends [`Widget`](Widget.md)\<`any`\> |
 
 ## Table of contents
 
@@ -32,25 +32,29 @@
 
 ### constructor
 
-• **new CascadedWidgetLink**<`TParent`\>(`parentType`, `widget`, `parentChange`)
+• **new CascadedWidgetLink**\<`TParent`\>(`parentType`, `widget`, `parentChange`): [`CascadedWidgetLink`](CascadedWidgetLink.md)\<`TParent`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TParent` | extends [`Widget`](Widget.md)<`any`, `TParent`\> |
+| `TParent` | extends [`Widget`](Widget.md)\<`any`\> |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `parentType` | (...`args`: `any`[]) => `TParent` |
-| `widget` | [`Widget`](Widget.md)<`any`\> |
+| `widget` | [`Widget`](Widget.md)\<`any`\> |
 | `parentChange` | (`p1`: `TParent`) => `void` |
+
+#### Returns
+
+[`CascadedWidgetLink`](CascadedWidgetLink.md)\<`TParent`\>
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L8)
+[src/ui/editors/cascadedwidgetlink.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L10)
 
 ## Properties
 
@@ -60,7 +64,7 @@
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L19)
+[src/ui/editors/cascadedwidgetlink.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L21)
 
 ___
 
@@ -84,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L10)
+[src/ui/editors/cascadedwidgetlink.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L12)
 
 ___
 
@@ -94,7 +98,7 @@ ___
 
 #### Type declaration
 
-• **new parentType**(`...args`)
+• **new parentType**(`...args`): `TParent`
 
 ##### Parameters
 
@@ -102,19 +106,23 @@ ___
 | :------ | :------ |
 | `...args` | `any`[] |
 
+##### Returns
+
+`TParent`
+
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L8)
+[src/ui/editors/cascadedwidgetlink.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L10)
 
 ___
 
 ### widget
 
-• `Private` **widget**: [`Widget`](Widget.md)<`any`\>
+• `Private` **widget**: [`Widget`](Widget.md)\<`any`\>
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L9)
+[src/ui/editors/cascadedwidgetlink.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L11)
 
 ## Methods
 
@@ -128,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L21)
+[src/ui/editors/cascadedwidgetlink.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L23)
 
 ___
 
@@ -142,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L57)
+[src/ui/editors/cascadedwidgetlink.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L58)
 
 ___
 
@@ -162,7 +170,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L61)
+[src/ui/editors/cascadedwidgetlink.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L62)
 
 ___
 
@@ -176,4 +184,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/cascadedwidgetlink.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L42)
+[src/ui/editors/cascadedwidgetlink.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L43)

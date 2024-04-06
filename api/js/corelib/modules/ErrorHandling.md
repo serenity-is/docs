@@ -9,6 +9,7 @@
 - [isDevelopmentMode](ErrorHandling.md#isdevelopmentmode)
 - [runtimeErrorHandler](ErrorHandling.md#runtimeerrorhandler)
 - [showServiceError](ErrorHandling.md#showserviceerror)
+- [unhandledRejectionHandler](ErrorHandling.md#unhandledrejectionhandler)
 
 ## Functions
 
@@ -18,7 +19,7 @@
 
 Determines if the current environment is development mode.
 The runtimeErrorHandler (window.onerror) shows error notifications only
-when this function returns true. The default implementation considers 
+when this function returns true. The default implementation considers
 the environment as development mode if the host is localhost, 127.0.0.1, ::1,
 or a domain name that ends with .local/.localhost.
 
@@ -30,7 +31,7 @@ true if the current environment is development mode, false otherwise.
 
 #### Defined in
 
-[src/q/errorhandling.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/errorhandling.ts#L59)
+[../base/dist/index.d.ts:582](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L582)
 
 ___
 
@@ -40,7 +41,7 @@ ___
 
 Runtime error handler that shows a runtime error as a notification
 by default only in development mode (@see isDevelopmentMode)
-This function is assigned as window.onerror handler in 
+This function is assigned as window.onerror handler in
 ScriptInit.ts for Serenity applications so that developers
 can notice an error without having to check the browser console.
 
@@ -60,13 +61,13 @@ can notice an error without having to check the browser console.
 
 #### Defined in
 
-[src/q/errorhandling.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/errorhandling.ts#L23)
+[../base/dist/index.d.ts:573](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L573)
 
 ___
 
 ### showServiceError
 
-▸ **showServiceError**(`error`): `void`
+▸ **showServiceError**(`error`, `errorInfo?`): `void`
 
 Shows a service error as an alert dialog. If the error
 is null, has no message or code, it shows "??ERROR??".
@@ -76,6 +77,7 @@ is null, has no message or code, it shows "??ERROR??".
 | Name | Type |
 | :------ | :------ |
 | `error` | [`ServiceError`](../interfaces/ServiceError.md) |
+| `errorInfo?` | [`RequestErrorInfo`](../interfaces/RequestErrorInfo.md) |
 
 #### Returns
 
@@ -83,4 +85,30 @@ is null, has no message or code, it shows "??ERROR??".
 
 #### Defined in
 
-[src/q/errorhandling.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/errorhandling.ts#L12)
+[../base/dist/index.d.ts:565](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L565)
+
+___
+
+### unhandledRejectionHandler
+
+▸ **unhandledRejectionHandler**(`err`): `void`
+
+Unhandled promise rejection error handler. It's purpose is to
+ignore logging serviceCall / serviceFetch errors as they have built-in
+error handling but browser logs it in the console, while Node crashes.
+Include below code in script-init/errorhandling.ts to enable:
+window.addEventListener("unhandledrejection", ErrorHandling.unhandledRejectionHandler);
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `err` | `PromiseRejectionEvent` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[../base/dist/index.d.ts:590](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L590)

@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new FlexifyAttribute**(`value?`)
+• **new FlexifyAttribute**(`value?`): [`FlexifyAttribute`](FlexifyAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ | :------ |
 | `value` | `boolean` | `true` |
 
+#### Returns
+
+[`FlexifyAttribute`](FlexifyAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L99)
+[src/types/attributes.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L100)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L99)
+[src/types/attributes.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L100)

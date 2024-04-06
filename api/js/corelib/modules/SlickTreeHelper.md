@@ -17,7 +17,7 @@
 
 ### filterById
 
-▸ **filterById**<`TItem`\>(`item`, `view`, `getParentId`): `boolean`
+▸ **filterById**\<`TItem`\>(`item`, `view`, `getParentId`): `boolean`
 
 #### Type parameters
 
@@ -30,7 +30,7 @@
 | Name | Type |
 | :------ | :------ |
 | `item` | `TItem` |
-| `view` | [`RemoteView`](../classes/RemoteView.md)<`TItem`\> |
+| `view` | [`RemoteView`](../classes/RemoteView.md)\<`TItem`\> |
 | `getParentId` | (`x`: `TItem`) => `any` |
 
 #### Returns
@@ -39,13 +39,13 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:723](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L723)
+[src/ui/helpers/slickhelpers.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L759)
 
 ___
 
 ### filterCustom
 
-▸ **filterCustom**<`TItem`\>(`item`, `getParent`): `boolean`
+▸ **filterCustom**\<`TItem`\>(`item`, `getParent`): `boolean`
 
 #### Type parameters
 
@@ -66,13 +66,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:707](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L707)
+[src/ui/helpers/slickhelpers.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L743)
 
 ___
 
 ### setCollapsed
 
-▸ **setCollapsed**<`TItem`\>(`items`, `collapsed`): `void`
+▸ **setCollapsed**\<`TItem`\>(`items`, `collapsed`): `void`
 
 #### Type parameters
 
@@ -93,13 +93,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L734)
+[src/ui/helpers/slickhelpers.ts:770](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L770)
 
 ___
 
 ### setCollapsedFlag
 
-▸ **setCollapsedFlag**<`TItem`\>(`item`, `collapsed`): `void`
+▸ **setCollapsedFlag**\<`TItem`\>(`item`, `collapsed`): `void`
 
 #### Type parameters
 
@@ -120,13 +120,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L742)
+[src/ui/helpers/slickhelpers.ts:778](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L778)
 
 ___
 
 ### setIndents
 
-▸ **setIndents**<`TItem`\>(`items`, `getId`, `getParentId`, `setCollapsed?`): `void`
+▸ **setIndents**\<`TItem`\>(`items`, `getId`, `getParentId`, `setCollapsed?`): `void`
 
 #### Type parameters
 
@@ -149,13 +149,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:746](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L746)
+[src/ui/helpers/slickhelpers.ts:782](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L782)
 
 ___
 
 ### toggleClick
 
-▸ **toggleClick**<`TItem`\>(`e`, `row`, `cell`, `view`, `getId`): `void`
+▸ **toggleClick**\<`TItem`\>(`e`, `row`, `cell`, `view`, `getId`): `void`
 
 #### Type parameters
 
@@ -167,10 +167,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQueryEventObject` |
+| `e` | `Event` |
 | `row` | `number` |
 | `cell` | `number` |
-| `view` | [`RemoteView`](../classes/RemoteView.md)<`TItem`\> |
+| `view` | [`RemoteView`](../classes/RemoteView.md)\<`TItem`\> |
 | `getId` | (`x`: `TItem`) => `any` |
 
 #### Returns
@@ -179,4 +179,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:777](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L777)
+[src/ui/helpers/slickhelpers.ts:813](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L813)

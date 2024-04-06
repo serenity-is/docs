@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new FilterableAttribute**(`value?`)
+• **new FilterableAttribute**(`value?`): [`FilterableAttribute`](FilterableAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ | :------ |
 | `value` | `boolean` | `true` |
 
+#### Returns
+
+[`FilterableAttribute`](FilterableAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L93)
+[src/types/attributes.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L94)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L93)
+[src/types/attributes.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L94)

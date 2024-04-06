@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new MaxLengthAttribute**(`maxLength`)
+• **new MaxLengthAttribute**(`maxLength`): [`MaxLengthAttribute`](MaxLengthAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `maxLength` | `number` |
 
+#### Returns
+
+[`MaxLengthAttribute`](MaxLengthAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L165)
+[src/types/attributes.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L166)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L165)
+[src/types/attributes.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L166)

@@ -7,7 +7,9 @@
 ### Functions
 
 - [activeTabKey](TabsExtensions.md#activetabkey)
+- [destroy](TabsExtensions.md#destroy)
 - [indexByKey](TabsExtensions.md#indexbykey)
+- [initialize](TabsExtensions.md#initialize)
 - [selectTab](TabsExtensions.md#selecttab)
 - [setDisabled](TabsExtensions.md#setdisabled)
 - [toggle](TabsExtensions.md#toggle)
@@ -22,7 +24,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `tabs` | `JQuery` |
+| `tabs` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
@@ -30,27 +32,68 @@
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L44)
+[src/ui/helpers/tabsextensions.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L80)
 
 ___
 
-### indexByKey
+### destroy
 
-▸ **indexByKey**(`tabs`): `any`
+▸ **destroy**(`tabs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `tabs` | `JQuery` |
+| `tabs` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
-`any`
+`void`
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L60)
+[src/ui/helpers/tabsextensions.ts:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L215)
+
+___
+
+### indexByKey
+
+▸ **indexByKey**(`tabs`): `Record`\<`string`, `number`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tabs` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+
+#### Returns
+
+`Record`\<`string`, `number`\>
+
+#### Defined in
+
+[src/ui/helpers/tabsextensions.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L111)
+
+___
+
+### initialize
+
+▸ **initialize**(`tabs`, `activeChange`): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tabs` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+| `activeChange` | () => `void` |
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Defined in
+
+[src/ui/helpers/tabsextensions.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L154)
 
 ___
 
@@ -62,8 +105,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `tabs` | `JQuery` |
-| `tabKey` | `string` |
+| `tabs` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+| `tabKey` | `string` \| `number` |
 
 #### Returns
 
@@ -71,7 +114,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L79)
+[src/ui/helpers/tabsextensions.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L124)
 
 ___
 
@@ -83,7 +126,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `tabs` | `JQuery` |
+| `tabs` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `tabKey` | `string` |
 | `isDisabled` | `boolean` |
 
@@ -93,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L4)
+[src/ui/helpers/tabsextensions.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L9)
 
 ___
 
@@ -105,7 +148,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `tabs` | `JQuery` |
+| `tabs` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `tabKey` | `string` |
 | `visible` | `boolean` |
 
@@ -115,4 +158,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/tabsextensions.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L24)
+[src/ui/helpers/tabsextensions.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.ts#L45)

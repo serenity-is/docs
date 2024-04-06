@@ -13,13 +13,13 @@
 
 ### executeEverytimeWhenShown
 
-▸ **executeEverytimeWhenShown**(`element`, `callback`, `callNowIfVisible`): `void`
+▸ **executeEverytimeWhenShown**(`el`, `callback`, `callNowIfVisible`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `JQuery` |
+| `el` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `callback` | `Function` |
 | `callNowIfVisible` | `boolean` |
 
@@ -29,19 +29,19 @@
 
 #### Defined in
 
-[src/q/layouttimer.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L154)
+[src/ui/helpers/lazyloadhelper.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/lazyloadhelper.ts#L5)
 
 ___
 
 ### executeOnceWhenShown
 
-▸ **executeOnceWhenShown**(`element`, `callback`): `void`
+▸ **executeOnceWhenShown**(`el`, `callback`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `JQuery` |
+| `el` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `callback` | `Function` |
 
 #### Returns
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L138)
+[src/ui/helpers/lazyloadhelper.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/lazyloadhelper.ts#L4)

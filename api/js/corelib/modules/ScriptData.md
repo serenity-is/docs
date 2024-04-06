@@ -9,35 +9,30 @@
 - [bindToChange](ScriptData.md#bindtochange)
 - [canLoad](ScriptData.md#canload)
 - [ensure](ScriptData.md#ensure)
-- [ensureAsync](ScriptData.md#ensureasync)
 - [reload](ScriptData.md#reload)
 - [reloadAsync](ScriptData.md#reloadasync)
 - [set](ScriptData.md#set)
-- [setRegisteredScripts](ScriptData.md#setregisteredscripts)
-- [triggerChange](ScriptData.md#triggerchange)
-- [unbindFromChange](ScriptData.md#unbindfromchange)
 
 ## Functions
 
 ### bindToChange
 
-▸ **bindToChange**(`name`, `regClass`, `onChange`): `void`
+▸ **bindToChange**(`name`, `onChange`): `void` \| () => `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `name` | `string` |
-| `regClass` | `string` |
 | `onChange` | () => `void` |
 
 #### Returns
 
-`void`
+`void` \| () => `void`
 
 #### Defined in
 
-[src/q/scriptdata.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L50)
+[src/q/scriptdata-compat.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L9)
 
 ___
 
@@ -45,25 +40,30 @@ ___
 
 ▸ **canLoad**(`name`): `boolean`
 
+Check if a dynamic script with provided name is available in the cache
+or it is a registered script name
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | Dynamic script name |
 
 #### Returns
 
 `boolean`
 
+True if already available or registered
+
 #### Defined in
 
-[src/q/scriptdata.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L200)
+[src/q/scriptdata-compat.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L20)
 
 ___
 
 ### ensure
 
-▸ **ensure**<`TData`\>(`name`): `TData`
+▸ **ensure**\<`TData`\>(`name`, `dynJS?`): `TData`
 
 #### Type parameters
 
@@ -76,6 +76,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `name` | `string` |
+| `dynJS?` | `boolean` |
 
 #### Returns
 
@@ -83,39 +84,13 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L162)
-
-___
-
-### ensureAsync
-
-▸ **ensureAsync**<`TData`\>(`name`): `Promise`<`TData`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TData` | `any` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-
-#### Returns
-
-`Promise`<`TData`\>
-
-#### Defined in
-
-[src/q/scriptdata.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L176)
+[src/q/scriptdata-compat.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L22)
 
 ___
 
 ### reload
 
-▸ **reload**<`TData`\>(`name`): `TData`
+▸ **reload**\<`TData`\>(`name`, `dynJS?`): `TData`
 
 #### Type parameters
 
@@ -128,6 +103,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `name` | `string` |
+| `dynJS?` | `boolean` |
 
 #### Returns
 
@@ -135,13 +111,13 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L187)
+[src/q/scriptdata-compat.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L59)
 
 ___
 
 ### reloadAsync
 
-▸ **reloadAsync**<`TData`\>(`name`): `Promise`<`TData`\>
+▸ **reloadAsync**\<`TData`\>(`name`): `Promise`\<`TData`\>
 
 #### Type parameters
 
@@ -157,11 +133,11 @@ ___
 
 #### Returns
 
-`Promise`<`TData`\>
+`Promise`\<`TData`\>
 
 #### Defined in
 
-[src/q/scriptdata.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L194)
+[src/q/scriptdata-compat.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L65)
 
 ___
 
@@ -182,64 +158,4 @@ ___
 
 #### Defined in
 
-[src/q/scriptdata.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L211)
-
-___
-
-### setRegisteredScripts
-
-▸ **setRegisteredScripts**(`scripts`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `scripts` | `any`[] |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/scriptdata.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L204)
-
-___
-
-### triggerChange
-
-▸ **triggerChange**(`name`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/scriptdata.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L58)
-
-___
-
-### unbindFromChange
-
-▸ **unbindFromChange**(`regClass`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `regClass` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/scriptdata.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata.ts#L62)
+[src/q/scriptdata-compat.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L69)

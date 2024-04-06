@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new RequiredAttribute**(`isRequired?`)
+• **new RequiredAttribute**(`isRequired?`): [`RequiredAttribute`](RequiredAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ | :------ |
 | `isRequired` | `boolean` | `true` |
 
+#### Returns
+
+[`RequiredAttribute`](RequiredAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L209)
+[src/types/attributes.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L210)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L209)
+[src/types/attributes.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L210)

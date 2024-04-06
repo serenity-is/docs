@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L239)
+[src/ui/helpers/uploadhelper.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L210)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L240)
+[src/ui/helpers/uploadhelper.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L211)

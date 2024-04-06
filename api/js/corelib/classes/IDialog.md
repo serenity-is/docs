@@ -16,7 +16,11 @@
 
 ### constructor
 
-• **new IDialog**()
+• **new IDialog**(): [`IDialog`](IDialog.md)
+
+#### Returns
+
+[`IDialog`](IDialog.md)
 
 ## Methods
 

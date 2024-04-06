@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / GroupInfo
 
-# Interface: GroupInfo<TItem\>
+# Interface: GroupInfo\<TItem\>
 
 ## Type parameters
 
@@ -43,7 +43,7 @@ ___
 
 ### comparer
 
-• `Optional` **comparer**: (`a`: `Group`<`TItem`\>, `b`: `Group`<`TItem`\>) => `number`
+• `Optional` **comparer**: (`a`: `Group`\<`TItem`\>, `b`: `Group`\<`TItem`\>) => `number`
 
 #### Type declaration
 
@@ -53,8 +53,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `a` | `Group`<`TItem`\> |
-| `b` | `Group`<`TItem`\> |
+| `a` | `Group`\<`TItem`\> |
+| `b` | `Group`\<`TItem`\> |
 
 ##### Returns
 
@@ -68,7 +68,7 @@ ___
 
 ### formatter
 
-• `Optional` **formatter**: (`p1`: `Group`<`TItem`\>) => `string`
+• `Optional` **formatter**: (`p1`: `Group`\<`TItem`\>) => `string`
 
 #### Type declaration
 
@@ -78,7 +78,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `p1` | `Group`<`TItem`\> |
+| `p1` | `Group`\<`TItem`\> |
 
 ##### Returns
 

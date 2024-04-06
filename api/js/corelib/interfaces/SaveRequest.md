@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / SaveRequest
 
-# Interface: SaveRequest<TEntity\>
+# Interface: SaveRequest\<TEntity\>
 
 ## Type parameters
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L27)
+[../base/dist/index.d.ts:462](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L462)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L26)
+[../base/dist/index.d.ts:461](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L461)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L28)
+[../base/dist/index.d.ts:463](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L463)

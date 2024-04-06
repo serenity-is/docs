@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/types/reflectionutils.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/reflectionutils.ts#L5)
+[src/types/reflectionutils.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/reflectionutils.ts#L3)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/types/reflectionutils.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/reflectionutils.ts#L35)
+[src/types/reflectionutils.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/reflectionutils.ts#L33)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[src/types/reflectionutils.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/reflectionutils.ts#L19)
+[src/types/reflectionutils.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/reflectionutils.ts#L17)

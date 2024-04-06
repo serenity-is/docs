@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/ui/editors/radiobuttoneditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.ts#L8)
+[src/ui/editors/radiobuttoneditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.ts#L10)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/radiobuttoneditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.ts#L9)
+[src/ui/editors/radiobuttoneditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.ts#L11)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/radiobuttoneditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.ts#L10)
+[src/ui/editors/radiobuttoneditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.ts#L12)

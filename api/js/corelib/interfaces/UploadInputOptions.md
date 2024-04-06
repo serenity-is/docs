@@ -23,17 +23,17 @@
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L248)
+[src/ui/helpers/uploadhelper.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L219)
 
 ___
 
 ### container
 
-• `Optional` **container**: `JQuery`
+• `Optional` **container**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:244](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L244)
+[src/ui/helpers/uploadhelper.ts:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L215)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L251)
+[src/ui/helpers/uploadhelper.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L222)
 
 ___
 
@@ -69,17 +69,17 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L247)
+[src/ui/helpers/uploadhelper.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L218)
 
 ___
 
 ### progress
 
-• `Optional` **progress**: `JQuery`
+• `Optional` **progress**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L246)
+[src/ui/helpers/uploadhelper.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L217)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L249)
+[src/ui/helpers/uploadhelper.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L220)
 
 ___
 
@@ -99,14 +99,14 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L250)
+[src/ui/helpers/uploadhelper.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L221)
 
 ___
 
 ### zone
 
-• `Optional` **zone**: `JQuery`
+• `Optional` **zone**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:245](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L245)
+[src/ui/helpers/uploadhelper.ts:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L216)

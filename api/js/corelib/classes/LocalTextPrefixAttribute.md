@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new LocalTextPrefixAttribute**(`value`)
+• **new LocalTextPrefixAttribute**(`value`): [`LocalTextPrefixAttribute`](LocalTextPrefixAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`LocalTextPrefixAttribute`](LocalTextPrefixAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L153)
+[src/types/attributes.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L154)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L153)
+[src/types/attributes.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L154)

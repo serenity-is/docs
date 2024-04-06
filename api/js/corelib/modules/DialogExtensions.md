@@ -6,61 +6,40 @@
 
 ### Functions
 
-- [dialogFlexify](DialogExtensions.md#dialogflexify)
 - [dialogMaximizable](DialogExtensions.md#dialogmaximizable)
 - [dialogResizable](DialogExtensions.md#dialogresizable)
 
 ## Functions
 
-### dialogFlexify
-
-▸ **dialogFlexify**(`dialog`): `JQuery`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `dialog` | `JQuery` |
-
-#### Returns
-
-`JQuery`
-
-#### Defined in
-
-[src/ui/dialogs/dialogextensions.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#L34)
-
-___
-
 ### dialogMaximizable
 
-▸ **dialogMaximizable**(`dialog`): `JQuery`
+▸ **dialogMaximizable**(`dialog`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `dialog` | `JQuery` |
+| `dialog` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Defined in
 
-[src/ui/dialogs/dialogextensions.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#L23)
+[src/ui/dialogs/dialogextensions.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/dialogextensions.ts#L27)
 
 ___
 
 ### dialogResizable
 
-▸ **dialogResizable**(`dialog`, `w?`, `h?`, `mw?`, `mh?`): `JQuery`
+▸ **dialogResizable**(`dialog`, `w?`, `h?`, `mw?`, `mh?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `dialog` | `JQuery` |
+| `dialog` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `w?` | `any` |
 | `h?` | `any` |
 | `mw?` | `any` |
@@ -68,7 +47,7 @@ ___
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Defined in
 

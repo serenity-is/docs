@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / LookupOptions
 
-# Interface: LookupOptions<TItem\>
+# Interface: LookupOptions\<TItem\>
 
 ## Type parameters
 
@@ -16,10 +16,6 @@
 - [parentIdField](LookupOptions.md#parentidfield)
 - [textField](LookupOptions.md#textfield)
 
-### Methods
-
-- [textFormatter](LookupOptions.md#textformatter)
-
 ## Properties
 
 ### idField
@@ -28,7 +24,7 @@
 
 #### Defined in
 
-[src/q/lookup.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L2)
+[../base/dist/index.d.ts:1279](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1279)
 
 ___
 
@@ -38,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L3)
+[../base/dist/index.d.ts:1280](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1280)
 
 ___
 
@@ -48,24 +44,4 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L4)
-
-## Methods
-
-### textFormatter
-
-▸ `Optional` **textFormatter**(`item`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `item` | `TItem` |
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/q/lookup.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L5)
+[../base/dist/index.d.ts:1281](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1281)

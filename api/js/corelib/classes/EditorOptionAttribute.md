@@ -17,7 +17,7 @@
 
 ### constructor
 
-• **new EditorOptionAttribute**(`key`, `value`)
+• **new EditorOptionAttribute**(`key`, `value`): [`EditorOptionAttribute`](EditorOptionAttribute.md)
 
 #### Parameters
 
@@ -26,9 +26,13 @@
 | `key` | `string` |
 | `value` | `any` |
 
+#### Returns
+
+[`EditorOptionAttribute`](EditorOptionAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L58)
+[src/types/attributes.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L59)
 
 ## Properties
 
@@ -38,7 +42,7 @@
 
 #### Defined in
 
-[src/decorators/index.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L58)
+[src/types/attributes.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L59)
 
 ___
 
@@ -48,4 +52,4 @@ ___
 
 #### Defined in
 
-[src/decorators/index.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L58)
+[src/types/attributes.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L59)

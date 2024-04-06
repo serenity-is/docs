@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/types/editortyperegistry.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/editortyperegistry.ts#L13)
+[src/types/editortyperegistry.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/editortyperegistry.ts#L12)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/types/editortyperegistry.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/editortyperegistry.ts#L37)
+[src/types/editortyperegistry.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/editortyperegistry.ts#L36)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/types/editortyperegistry.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/editortyperegistry.ts#L41)
+[src/types/editortyperegistry.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/editortyperegistry.ts#L40)

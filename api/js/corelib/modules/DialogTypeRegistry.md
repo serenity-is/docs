@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/types/dialogtyperegistry.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtyperegistry.ts#L11)
+[src/types/dialogtyperegistry.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtyperegistry.ts#L12)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/types/dialogtyperegistry.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtyperegistry.ts#L41)
+[src/types/dialogtyperegistry.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtyperegistry.ts#L42)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/types/dialogtyperegistry.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtyperegistry.ts#L45)
+[src/types/dialogtyperegistry.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtyperegistry.ts#L46)

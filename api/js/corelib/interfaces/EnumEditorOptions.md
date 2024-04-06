@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`Select2CommonOptions`](Select2CommonOptions.md)
+- [`ComboboxCommonOptions`](ComboboxCommonOptions.md)
 
   ↳ **`EnumEditorOptions`**
 
@@ -27,11 +27,11 @@
 
 #### Inherited from
 
-[Select2CommonOptions](Select2CommonOptions.md).[allowClear](Select2CommonOptions.md#allowclear)
+[ComboboxCommonOptions](ComboboxCommonOptions.md).[allowClear](ComboboxCommonOptions.md#allowclear)
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L13)
+[src/ui/editors/comboboxeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L14)
 
 ___
 
@@ -41,11 +41,11 @@ ___
 
 #### Inherited from
 
-[Select2CommonOptions](Select2CommonOptions.md).[delimited](Select2CommonOptions.md#delimited)
+[ComboboxCommonOptions](ComboboxCommonOptions.md).[delimited](ComboboxCommonOptions.md#delimited)
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L14)
+[src/ui/editors/comboboxeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L15)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/enumeditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L7)
+[src/ui/editors/enumeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L10)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/enumeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L8)
+[src/ui/editors/enumeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L11)
 
 ___
 
@@ -75,11 +75,11 @@ ___
 
 #### Inherited from
 
-[Select2CommonOptions](Select2CommonOptions.md).[minimumResultsForSearch](Select2CommonOptions.md#minimumresultsforsearch)
+[ComboboxCommonOptions](ComboboxCommonOptions.md).[minimumResultsForSearch](ComboboxCommonOptions.md#minimumresultsforsearch)
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L15)
+[src/ui/editors/comboboxeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L16)
 
 ___
 
@@ -89,8 +89,8 @@ ___
 
 #### Inherited from
 
-[Select2CommonOptions](Select2CommonOptions.md).[multiple](Select2CommonOptions.md#multiple)
+[ComboboxCommonOptions](ComboboxCommonOptions.md).[multiple](ComboboxCommonOptions.md#multiple)
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L16)
+[src/ui/editors/comboboxeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L17)

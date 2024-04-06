@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L165)
+[src/ui/helpers/slickhelpers.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L167)

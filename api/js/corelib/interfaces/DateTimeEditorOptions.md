@@ -9,6 +9,8 @@
 - [endHour](DateTimeEditorOptions.md#endhour)
 - [inputOnly](DateTimeEditorOptions.md#inputonly)
 - [intervalMinutes](DateTimeEditorOptions.md#intervalminutes)
+- [maxValue](DateTimeEditorOptions.md#maxvalue)
+- [minValue](DateTimeEditorOptions.md#minvalue)
 - [seconds](DateTimeEditorOptions.md#seconds)
 - [startHour](DateTimeEditorOptions.md#starthour)
 - [useUtc](DateTimeEditorOptions.md#useutc)
@@ -22,7 +24,7 @@
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L361)
+[src/ui/editors/datetimeeditor.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L396)
 
 ___
 
@@ -32,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L366)
+[src/ui/editors/datetimeeditor.ts:403](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L403)
 
 ___
 
@@ -42,7 +44,27 @@ ___
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:362](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L362)
+[src/ui/editors/datetimeeditor.ts:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L397)
+
+___
+
+### maxValue
+
+• `Optional` **maxValue**: `string`
+
+#### Defined in
+
+[src/ui/editors/datetimeeditor.ts:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L399)
+
+___
+
+### minValue
+
+• `Optional` **minValue**: `string`
+
+#### Defined in
+
+[src/ui/editors/datetimeeditor.ts:398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L398)
 
 ___
 
@@ -52,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L365)
+[src/ui/editors/datetimeeditor.ts:402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L402)
 
 ___
 
@@ -62,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:360](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L360)
+[src/ui/editors/datetimeeditor.ts:395](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L395)
 
 ___
 
@@ -72,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:364](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L364)
+[src/ui/editors/datetimeeditor.ts:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L401)
 
 ___
 
@@ -82,4 +104,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L363)
+[src/ui/editors/datetimeeditor.ts:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L400)

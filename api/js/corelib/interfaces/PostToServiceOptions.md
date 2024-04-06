@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/q/services.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L144)
+[src/q/services-compat.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L14)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L142)
+[src/q/services-compat.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L12)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L143)
+[src/q/services-compat.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L13)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L141)
+[src/q/services-compat.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L11)

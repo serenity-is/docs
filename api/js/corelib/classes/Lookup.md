@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / Lookup
 
-# Class: Lookup<TItem\>
+# Class: Lookup\<TItem\>
 
 ## Type parameters
 
@@ -21,7 +21,6 @@
 - [items](Lookup.md#items)
 - [parentIdField](Lookup.md#parentidfield)
 - [textField](Lookup.md#textfield)
-- [textFormatter](Lookup.md#textformatter)
 
 ### Methods
 
@@ -31,7 +30,7 @@
 
 ### constructor
 
-• **new Lookup**<`TItem`\>(`options`, `items?`)
+• **new Lookup**\<`TItem`\>(`options`, `items?`): [`Lookup`](Lookup.md)\<`TItem`\>
 
 #### Type parameters
 
@@ -43,12 +42,16 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`LookupOptions`](../interfaces/LookupOptions.md)<`TItem`\> |
+| `options` | [`LookupOptions`](../interfaces/LookupOptions.md)\<`TItem`\> |
 | `items?` | `TItem`[] |
+
+#### Returns
+
+[`Lookup`](Lookup.md)\<`TItem`\>
 
 #### Defined in
 
-[src/q/lookup.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L25)
+[../base/dist/index.d.ts:1300](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1300)
 
 ## Properties
 
@@ -58,9 +61,9 @@
 
 #### Defined in
 
-[src/q/lookup.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L11)
+[../base/dist/index.d.ts:1288](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1288)
 
-[src/q/lookup.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L20)
+[../base/dist/index.d.ts:1297](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1297)
 
 ___
 
@@ -74,9 +77,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L10)
+[../base/dist/index.d.ts:1285](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1285)
 
-[src/q/lookup.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L19)
+[../base/dist/index.d.ts:1294](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1294)
 
 ___
 
@@ -86,9 +89,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L9)
+[../base/dist/index.d.ts:1284](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1284)
 
-[src/q/lookup.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L18)
+[../base/dist/index.d.ts:1293](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1293)
 
 ___
 
@@ -98,9 +101,9 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L12)
+[../base/dist/index.d.ts:1289](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1289)
 
-[src/q/lookup.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L21)
+[../base/dist/index.d.ts:1298](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1298)
 
 ___
 
@@ -110,41 +113,15 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L13)
+[../base/dist/index.d.ts:1290](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1290)
 
-[src/q/lookup.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L22)
-
-___
-
-### textFormatter
-
-• **textFormatter**: (`item`: `TItem`) => `string`
-
-#### Type declaration
-
-▸ (`item`): `string`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `item` | `TItem` |
-
-##### Returns
-
-`string`
-
-#### Defined in
-
-[src/q/lookup.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L14)
-
-[src/q/lookup.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L23)
+[../base/dist/index.d.ts:1299](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1299)
 
 ## Methods
 
 ### update
 
-▸ `Optional` **update**(`value`): `void`
+▸ **update**(`value`): `void`
 
 #### Parameters
 
@@ -158,4 +135,4 @@ ___
 
 #### Defined in
 
-[src/q/lookup.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/lookup.ts#L37)
+[../base/dist/index.d.ts:1301](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1301)

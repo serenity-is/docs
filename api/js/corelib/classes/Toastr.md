@@ -11,22 +11,19 @@
 ### Properties
 
 - [listener](Toastr.md#listener)
+- [notify](Toastr.md#notify)
 - [options](Toastr.md#options)
 - [previousToast](Toastr.md#previoustoast)
+- [removeContainerIfEmpty](Toastr.md#removecontainerifempty)
 - [toastId](Toastr.md#toastid)
 
 ### Methods
 
 - [clear](Toastr.md#clear)
-- [clearContainer](Toastr.md#clearcontainer)
-- [clearToast](Toastr.md#cleartoast)
-- [createContainer](Toastr.md#createcontainer)
 - [error](Toastr.md#error)
 - [getContainer](Toastr.md#getcontainer)
 - [info](Toastr.md#info)
-- [notify](Toastr.md#notify)
 - [publish](Toastr.md#publish)
-- [remove](Toastr.md#remove)
 - [removeToast](Toastr.md#removetoast)
 - [subscribe](Toastr.md#subscribe)
 - [success](Toastr.md#success)
@@ -36,7 +33,7 @@
 
 ### constructor
 
-• **new Toastr**(`options?`)
+• **new Toastr**(`options?`): [`Toastr`](Toastr.md)
 
 #### Parameters
 
@@ -44,9 +41,13 @@
 | :------ | :------ |
 | `options?` | [`ToastrOptions`](../README.md#toastroptions) |
 
+#### Returns
+
+[`Toastr`](Toastr.md)
+
 #### Defined in
 
-[src/q/toastr2.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L88)
+[../base/dist/index.d.ts:1348](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1348)
 
 ## Properties
 
@@ -56,7 +57,17 @@
 
 #### Defined in
 
-[src/q/toastr2.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L80)
+[../base/dist/index.d.ts:1344](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1344)
+
+___
+
+### notify
+
+• `Private` **notify**: `any`
+
+#### Defined in
+
+[../base/dist/index.d.ts:1359](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1359)
 
 ___
 
@@ -66,112 +77,57 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L86)
+[../base/dist/index.d.ts:1347](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1347)
 
 ___
 
 ### previousToast
 
-• `Private` **previousToast**: `string` = `null`
+• `Private` **previousToast**: `any`
 
 #### Defined in
 
-[src/q/toastr2.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L84)
+[../base/dist/index.d.ts:1346](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1346)
+
+___
+
+### removeContainerIfEmpty
+
+• `Private` **removeContainerIfEmpty**: `any`
+
+#### Defined in
+
+[../base/dist/index.d.ts:1356](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1356)
 
 ___
 
 ### toastId
 
-• `Private` **toastId**: `number` = `0`
+• `Private` **toastId**: `any`
 
 #### Defined in
 
-[src/q/toastr2.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L82)
+[../base/dist/index.d.ts:1345](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1345)
 
 ## Methods
 
 ### clear
 
-▸ **clear**(`toastElement?`, `clearOptions?`): `void`
+▸ **clear**(`options?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `toastElement?` | `HTMLElement` |
-| `clearOptions` | `Object` |
-| `clearOptions.force?` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/toastr2.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L185)
-
-___
-
-### clearContainer
-
-▸ `Private` **clearContainer**(`options?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | `Partial`<[`ToastrOptions`](../README.md#toastroptions)\> |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/toastr2.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L235)
-
-___
-
-### clearToast
-
-▸ `Private` **clearToast**(`toastElement?`, `options?`, `clearOptions?`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `toastElement?` | `HTMLElement` |
 | `options?` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) |
-| `clearOptions` | `Object` |
-| `clearOptions.force?` | `boolean` |
 
 #### Returns
 
-`boolean`
+`void`
 
 #### Defined in
 
-[src/q/toastr2.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L247)
-
-___
-
-### createContainer
-
-▸ `Private` **createContainer**(`options?`): `HTMLElement`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) |
-
-#### Returns
-
-`HTMLElement`
-
-#### Defined in
-
-[src/q/toastr2.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L93)
+[../base/dist/index.d.ts:1358](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1358)
 
 ___
 
@@ -193,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L121)
+[../base/dist/index.d.ts:1350](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1350)
 
 ___
 
@@ -203,10 +159,10 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `options?` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) | `undefined` |
-| `create` | `boolean` | `false` |
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) |
+| `create?` | `boolean` |
 
 #### Returns
 
@@ -214,7 +170,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L109)
+[../base/dist/index.d.ts:1349](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1349)
 
 ___
 
@@ -236,28 +192,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L160)
-
-___
-
-### notify
-
-▸ `Private` **notify**(`map`, `opt`): `HTMLElement`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `map` | [`NotifyMap`](../README.md#notifymap) |
-| `opt` | [`ToastrOptions`](../README.md#toastroptions) |
-
-#### Returns
-
-`HTMLElement`
-
-#### Defined in
-
-[src/q/toastr2.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L266)
+[../base/dist/index.d.ts:1353](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1353)
 
 ___
 
@@ -277,27 +212,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L177)
-
-___
-
-### remove
-
-▸ **remove**(`toastElement?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `toastElement?` | `HTMLElement` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/q/toastr2.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L191)
+[../base/dist/index.d.ts:1355](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1355)
 
 ___
 
@@ -310,7 +225,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `toastElement` | `HTMLElement` |
-| `options` | [`ToastrOptions`](../README.md#toastroptions) |
+| `options?` | [`ToastContainerOptions`](../README.md#toastcontaineroptions) |
 
 #### Returns
 
@@ -318,7 +233,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L211)
+[../base/dist/index.d.ts:1357](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1357)
 
 ___
 
@@ -338,7 +253,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L173)
+[../base/dist/index.d.ts:1354](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1354)
 
 ___
 
@@ -360,7 +275,7 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L147)
+[../base/dist/index.d.ts:1352](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1352)
 
 ___
 
@@ -382,4 +297,4 @@ ___
 
 #### Defined in
 
-[src/q/toastr2.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/toastr2.ts#L134)
+[../base/dist/index.d.ts:1351](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1351)

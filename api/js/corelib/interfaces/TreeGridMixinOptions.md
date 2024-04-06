@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / TreeGridMixinOptions
 
-# Interface: TreeGridMixinOptions<TItem\>
+# Interface: TreeGridMixinOptions\<TItem\>
 
 ## Type parameters
 
@@ -45,7 +45,7 @@ ___
 
 ### grid
 
-• **grid**: [`DataGrid`](../classes/DataGrid.md)<`TItem`, `any`\>
+• **grid**: [`DataGrid`](../classes/DataGrid.md)\<`TItem`, `any`\>
 
 #### Defined in
 

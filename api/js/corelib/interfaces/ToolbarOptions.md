@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L83)
+[src/ui/widgets/toolbar.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L82)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L84)
+[src/ui/widgets/toolbar.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L83)

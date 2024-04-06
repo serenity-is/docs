@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new PlaceholderAttribute**(`value`)
+• **new PlaceholderAttribute**(`value`): [`PlaceholderAttribute`](PlaceholderAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`PlaceholderAttribute`](PlaceholderAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L197)
+[src/types/attributes.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L198)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L197)
+[src/types/attributes.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L198)

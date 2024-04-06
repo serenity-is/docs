@@ -19,15 +19,15 @@
 
 ### getElement
 
-▸ **getElement**(): `JQuery`
+▸ **getElement**(): `HTMLElement`
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Defined in
 
-[src/ui/datagrid/idatagrid.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L6)
+[src/ui/datagrid/idatagrid.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L7)
 
 ___
 
@@ -41,32 +41,32 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/idatagrid.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L9)
+[src/ui/datagrid/idatagrid.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L10)
 
 ___
 
 ### getGrid
 
-▸ **getGrid**(): `Grid`<`any`\>
+▸ **getGrid**(): `Grid`\<`any`\>
 
 #### Returns
 
-`Grid`<`any`\>
+`Grid`\<`any`\>
 
 #### Defined in
 
-[src/ui/datagrid/idatagrid.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L7)
+[src/ui/datagrid/idatagrid.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L8)
 
 ___
 
 ### getView
 
-▸ **getView**(): [`RemoteView`](../classes/RemoteView.md)<`any`\>
+▸ **getView**(): [`RemoteView`](../classes/RemoteView.md)\<`any`\>
 
 #### Returns
 
-[`RemoteView`](../classes/RemoteView.md)<`any`\>
+[`RemoteView`](../classes/RemoteView.md)\<`any`\>
 
 #### Defined in
 
-[src/ui/datagrid/idatagrid.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L8)
+[src/ui/datagrid/idatagrid.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/idatagrid.ts#L9)

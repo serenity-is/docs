@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:638](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L638)
+[src/ui/widgets/propertygrid.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L576)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:639](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L639)
+[src/ui/widgets/propertygrid.ts:577](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L577)

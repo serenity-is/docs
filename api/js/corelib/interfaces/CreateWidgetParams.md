@@ -1,13 +1,13 @@
 [@serenity-is/corelib](../README.md) / CreateWidgetParams
 
-# Interface: CreateWidgetParams<TWidget, TOptions\>
+# Interface: CreateWidgetParams\<TWidget, P\>
 
 ## Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](../classes/Widget.md)<`TOptions`\> |
-| `TOptions` | `TOptions` |
+| `TWidget` | extends [`Widget`](../classes/Widget.md)\<`P`\> |
+| `P` | `P` |
 
 ## Table of contents
 
@@ -23,17 +23,17 @@
 
 ### container
 
-• `Optional` **container**: `JQuery`
+• `Optional` **container**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L53)
+[src/ui/widgets/widget.ts:212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L212)
 
 ___
 
 ### element
 
-• `Optional` **element**: (`e`: `JQuery`) => `void`
+• `Optional` **element**: (`e`: [`Fluent`](Fluent-1.md)\<`HTMLElement`\>) => `void`
 
 #### Type declaration
 
@@ -43,7 +43,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQuery` |
+| `e` | [`Fluent`](Fluent-1.md)\<`HTMLElement`\> |
 
 ##### Returns
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L54)
+[src/ui/widgets/widget.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L213)
 
 ___
 
@@ -75,35 +75,44 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L55)
+[src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
 
 ___
 
 ### options
 
-• `Optional` **options**: `TOptions`
+• `Optional` **options**: `P` & \{ `class?`: `string` ; `element?`: `string` \| `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`el`: `HTMLElement`) => `void` ; `id?`: `string`  }
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L52)
+[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
 
 ___
 
 ### type
 
-• `Optional` **type**: (`element`: `JQuery`, `options?`: `TOptions`) => `TWidget`
+• `Optional` **type**: `Object`
 
-#### Type declaration
+#### Call signature
 
-• **new type**(`element`, `options?`)
+• **new type**(`options?`): `TWidget`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `JQuery` |
-| `options?` | `TOptions` |
+| `options?` | `P` |
+
+##### Returns
+
+`TWidget`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `prototype` | `TWidget` |
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L51)
+[src/ui/widgets/widget.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L210)

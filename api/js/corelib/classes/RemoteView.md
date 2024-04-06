@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / RemoteView
 
-# Class: RemoteView<TEntity\>
+# Class: RemoteView\<TEntity\>
 
 ## Type parameters
 
@@ -97,7 +97,7 @@
 
 ### constructor
 
-• **new RemoteView**<`TEntity`\>(`options`)
+• **new RemoteView**\<`TEntity`\>(`options`): [`RemoteView`](RemoteView.md)\<`TEntity`\>
 
 #### Type parameters
 
@@ -111,9 +111,13 @@
 | :------ | :------ |
 | `options` | [`RemoteViewOptions`](../interfaces/RemoteViewOptions.md) |
 
+#### Returns
+
+[`RemoteView`](RemoteView.md)\<`TEntity`\>
+
 #### Defined in
 
-[src/slick/remoteview.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L119)
+[src/slick/remoteview.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L120)
 
 ## Properties
 
@@ -123,7 +127,7 @@
 
 #### Defined in
 
-[src/slick/remoteview.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L105)
+[src/slick/remoteview.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L106)
 
 ___
 
@@ -133,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L66)
+[src/slick/remoteview.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L67)
 
 ___
 
@@ -143,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L114)
+[src/slick/remoteview.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L115)
 
 ___
 
@@ -153,83 +157,13 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L113)
+[src/slick/remoteview.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L114)
 
 ___
 
 ### onAjaxCall
 
-• **onAjaxCall**: [`RemoteViewAjaxCallback`](../README.md#remoteviewajaxcallback)<`TEntity`\>
-
-#### Defined in
-
-[src/slick/remoteview.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L54)
-
-___
-
-### onDataChanged
-
-• **onDataChanged**: `EventEmitter`<`any`, `IEventData`\>
-
-#### Defined in
-
-[src/slick/remoteview.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L44)
-
-___
-
-### onDataLoaded
-
-• **onDataLoaded**: `EventEmitter`<`any`, `IEventData`\>
-
-#### Defined in
-
-[src/slick/remoteview.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L46)
-
-___
-
-### onDataLoading
-
-• **onDataLoading**: `EventEmitter`<`any`, `IEventData`\>
-
-#### Defined in
-
-[src/slick/remoteview.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L45)
-
-___
-
-### onGroupCollapsed
-
-• **onGroupCollapsed**: `EventEmitter`<`any`, `IEventData`\>
-
-#### Defined in
-
-[src/slick/remoteview.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L53)
-
-___
-
-### onGroupExpanded
-
-• **onGroupExpanded**: `EventEmitter`<`any`, `IEventData`\>
-
-#### Defined in
-
-[src/slick/remoteview.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L52)
-
-___
-
-### onPagingInfoChanged
-
-• **onPagingInfoChanged**: `EventEmitter`<`any`, `IEventData`\>
-
-#### Defined in
-
-[src/slick/remoteview.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L47)
-
-___
-
-### onProcessData
-
-• **onProcessData**: [`RemoteViewProcessCallback`](../README.md#remoteviewprocesscallback)<`TEntity`\>
+• **onAjaxCall**: [`RemoteViewAjaxCallback`](../README.md#remoteviewajaxcallback)\<`TEntity`\>
 
 #### Defined in
 
@@ -237,9 +171,59 @@ ___
 
 ___
 
-### onRowCountChanged
+### onDataChanged
 
-• **onRowCountChanged**: `EventEmitter`<`any`, `IEventData`\>
+• **onDataChanged**: `EventEmitter`\<`any`, `IEventData`\>
+
+#### Defined in
+
+[src/slick/remoteview.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L45)
+
+___
+
+### onDataLoaded
+
+• **onDataLoaded**: `EventEmitter`\<`any`, `IEventData`\>
+
+#### Defined in
+
+[src/slick/remoteview.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L47)
+
+___
+
+### onDataLoading
+
+• **onDataLoading**: `EventEmitter`\<`any`, `IEventData`\>
+
+#### Defined in
+
+[src/slick/remoteview.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L46)
+
+___
+
+### onGroupCollapsed
+
+• **onGroupCollapsed**: `EventEmitter`\<`any`, `IEventData`\>
+
+#### Defined in
+
+[src/slick/remoteview.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L54)
+
+___
+
+### onGroupExpanded
+
+• **onGroupExpanded**: `EventEmitter`\<`any`, `IEventData`\>
+
+#### Defined in
+
+[src/slick/remoteview.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L53)
+
+___
+
+### onPagingInfoChanged
+
+• **onPagingInfoChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
@@ -247,9 +231,19 @@ ___
 
 ___
 
-### onRowsChanged
+### onProcessData
 
-• **onRowsChanged**: `EventEmitter`<`any`, `IEventData`\>
+• **onProcessData**: [`RemoteViewProcessCallback`](../README.md#remoteviewprocesscallback)\<`TEntity`\>
+
+#### Defined in
+
+[src/slick/remoteview.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L56)
+
+___
+
+### onRowCountChanged
+
+• **onRowCountChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
@@ -257,9 +251,9 @@ ___
 
 ___
 
-### onRowsOrCountChanged
+### onRowsChanged
 
-• **onRowsOrCountChanged**: `EventEmitter`<`any`, `IEventData`\>
+• **onRowsChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
@@ -267,13 +261,23 @@ ___
 
 ___
 
-### onSubmit
+### onRowsOrCountChanged
 
-• **onSubmit**: [`CancellableViewCallback`](../README.md#cancellableviewcallback)<`TEntity`\>
+• **onRowsOrCountChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
-[src/slick/remoteview.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L43)
+[src/slick/remoteview.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L51)
+
+___
+
+### onSubmit
+
+• **onSubmit**: [`CancellableViewCallback`](../README.md#cancellableviewcallback)\<`TEntity`\>
+
+#### Defined in
+
+[src/slick/remoteview.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L44)
 
 ___
 
@@ -283,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L106)
+[src/slick/remoteview.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L107)
 
 ___
 
@@ -293,7 +297,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L104)
+[src/slick/remoteview.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L105)
 
 ___
 
@@ -303,7 +307,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L115)
+[src/slick/remoteview.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L116)
 
 ___
 
@@ -313,7 +317,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L111)
+[src/slick/remoteview.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L112)
 
 ___
 
@@ -323,7 +327,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L112)
+[src/slick/remoteview.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L113)
 
 ## Methods
 
@@ -335,7 +339,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | [`ListResponse`](../interfaces/ListResponse.md)<`TEntity`\> |
+| `data` | [`ListResponse`](../interfaces/ListResponse.md)\<`TEntity`\> |
 
 #### Returns
 
@@ -343,7 +347,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L56)
+[src/slick/remoteview.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L57)
 
 ___
 
@@ -363,7 +367,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L88)
+[src/slick/remoteview.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L89)
 
 ___
 
@@ -377,7 +381,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L57)
+[src/slick/remoteview.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L58)
 
 ___
 
@@ -397,7 +401,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L92)
+[src/slick/remoteview.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L93)
 
 ___
 
@@ -417,7 +421,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L95)
+[src/slick/remoteview.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L96)
 
 ___
 
@@ -437,7 +441,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L59)
+[src/slick/remoteview.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L60)
 
 ___
 
@@ -451,7 +455,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L58)
+[src/slick/remoteview.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L59)
 
 ___
 
@@ -471,7 +475,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L93)
+[src/slick/remoteview.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L94)
 
 ___
 
@@ -491,21 +495,21 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L94)
+[src/slick/remoteview.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L95)
 
 ___
 
 ### getFilter
 
-▸ **getFilter**(): [`RemoteViewFilter`](../README.md#remoteviewfilter)<`TEntity`\>
+▸ **getFilter**(): [`RemoteViewFilter`](../README.md#remoteviewfilter)\<`TEntity`\>
 
 #### Returns
 
-[`RemoteViewFilter`](../README.md#remoteviewfilter)<`TEntity`\>
+[`RemoteViewFilter`](../README.md#remoteviewfilter)\<`TEntity`\>
 
 #### Defined in
 
-[src/slick/remoteview.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L62)
+[src/slick/remoteview.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L63)
 
 ___
 
@@ -519,7 +523,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L63)
+[src/slick/remoteview.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L64)
 
 ___
 
@@ -533,7 +537,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L70)
+[src/slick/remoteview.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L71)
 
 ___
 
@@ -547,21 +551,21 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L64)
+[src/slick/remoteview.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L65)
 
 ___
 
 ### getGrouping
 
-▸ **getGrouping**(): [`GroupInfo`](../interfaces/GroupInfo.md)<`TEntity`\>[]
+▸ **getGrouping**(): [`GroupInfo`](../interfaces/GroupInfo.md)\<`TEntity`\>[]
 
 #### Returns
 
-[`GroupInfo`](../interfaces/GroupInfo.md)<`TEntity`\>[]
+[`GroupInfo`](../interfaces/GroupInfo.md)\<`TEntity`\>[]
 
 #### Defined in
 
-[src/slick/remoteview.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L71)
+[src/slick/remoteview.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L72)
 
 ___
 
@@ -575,7 +579,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L72)
+[src/slick/remoteview.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L73)
 
 ___
 
@@ -589,7 +593,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L68)
+[src/slick/remoteview.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L69)
 
 ___
 
@@ -609,7 +613,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L89)
+[src/slick/remoteview.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L90)
 
 ___
 
@@ -629,7 +633,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L102)
+[src/slick/remoteview.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L103)
 
 ___
 
@@ -649,7 +653,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L69)
+[src/slick/remoteview.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L70)
 
 ___
 
@@ -669,7 +673,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L90)
+[src/slick/remoteview.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L91)
 
 ___
 
@@ -689,7 +693,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L86)
+[src/slick/remoteview.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L87)
 
 ___
 
@@ -703,7 +707,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L60)
+[src/slick/remoteview.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L61)
 
 ___
 
@@ -717,7 +721,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L103)
+[src/slick/remoteview.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L104)
 
 ___
 
@@ -731,7 +735,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L107)
+[src/slick/remoteview.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L108)
 
 ___
 
@@ -745,7 +749,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L51)
+[src/slick/remoteview.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L52)
 
 ___
 
@@ -765,7 +769,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L73)
+[src/slick/remoteview.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L74)
 
 ___
 
@@ -785,7 +789,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L74)
+[src/slick/remoteview.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L75)
 
 ___
 
@@ -799,7 +803,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L75)
+[src/slick/remoteview.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L76)
 
 ___
 
@@ -820,7 +824,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L81)
+[src/slick/remoteview.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L82)
 
 ___
 
@@ -840,7 +844,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L78)
+[src/slick/remoteview.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L79)
 
 ___
 
@@ -860,7 +864,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L76)
+[src/slick/remoteview.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L77)
 
 ___
 
@@ -880,7 +884,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L77)
+[src/slick/remoteview.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L78)
 
 ___
 
@@ -894,7 +898,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L99)
+[src/slick/remoteview.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L100)
 
 ___
 
@@ -908,7 +912,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L100)
+[src/slick/remoteview.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L101)
 
 ___
 
@@ -922,7 +926,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L101)
+[src/slick/remoteview.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L102)
 
 ___
 
@@ -936,7 +940,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L110)
+[src/slick/remoteview.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L111)
 
 ___
 
@@ -950,7 +954,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L98)
+[src/slick/remoteview.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L99)
 
 ___
 
@@ -962,7 +966,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `filter` | [`RemoteViewFilter`](../README.md#remoteviewfilter)<`TEntity`\> |
+| `filter` | [`RemoteViewFilter`](../README.md#remoteviewfilter)\<`TEntity`\> |
 
 #### Returns
 
@@ -970,7 +974,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L61)
+[src/slick/remoteview.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L62)
 
 ___
 
@@ -990,7 +994,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L79)
+[src/slick/remoteview.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L80)
 
 ___
 
@@ -1010,7 +1014,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L65)
+[src/slick/remoteview.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L66)
 
 ___
 
@@ -1022,7 +1026,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `groupInfo` | [`GroupInfo`](../interfaces/GroupInfo.md)<`TEntity`\>[] |
+| `groupInfo` | [`GroupInfo`](../interfaces/GroupInfo.md)\<`TEntity`\>[] |
 
 #### Returns
 
@@ -1030,7 +1034,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L91)
+[src/slick/remoteview.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L92)
 
 ___
 
@@ -1051,7 +1055,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L67)
+[src/slick/remoteview.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L68)
 
 ___
 
@@ -1071,7 +1075,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L108)
+[src/slick/remoteview.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L109)
 
 ___
 
@@ -1091,7 +1095,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L97)
+[src/slick/remoteview.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L98)
 
 ___
 
@@ -1111,7 +1115,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L80)
+[src/slick/remoteview.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L81)
 
 ___
 
@@ -1131,7 +1135,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L96)
+[src/slick/remoteview.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L97)
 
 ___
 
@@ -1152,7 +1156,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L109)
+[src/slick/remoteview.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L110)
 
 ___
 
@@ -1172,7 +1176,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L82)
+[src/slick/remoteview.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L83)
 
 ___
 
@@ -1193,7 +1197,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L83)
+[src/slick/remoteview.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L84)
 
 ___
 
@@ -1214,7 +1218,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L85)
+[src/slick/remoteview.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L86)
 
 ___
 
@@ -1236,7 +1240,7 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L84)
+[src/slick/remoteview.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L85)
 
 ___
 
@@ -1257,4 +1261,4 @@ ___
 
 #### Defined in
 
-[src/slick/remoteview.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L87)
+[src/slick/remoteview.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L88)

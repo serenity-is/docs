@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / TreeGridMixin
 
-# Class: TreeGridMixin<TItem\>
+# Class: TreeGridMixin\<TItem\>
 
 A mixin that can be applied to a DataGrid for tree functionality
 
@@ -19,7 +19,6 @@ A mixin that can be applied to a DataGrid for tree functionality
 ### Properties
 
 - [dataGrid](TreeGridMixin.md#datagrid)
-- [getId](TreeGridMixin.md#getid)
 - [options](TreeGridMixin.md#options)
 
 ### Methods
@@ -33,7 +32,7 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 ### constructor
 
-• **new TreeGridMixin**<`TItem`\>(`options`)
+• **new TreeGridMixin**\<`TItem`\>(`options`): [`TreeGridMixin`](TreeGridMixin.md)\<`TItem`\>
 
 #### Type parameters
 
@@ -45,7 +44,11 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`TreeGridMixinOptions`](../interfaces/TreeGridMixinOptions.md)<`TItem`\> |
+| `options` | [`TreeGridMixinOptions`](../interfaces/TreeGridMixinOptions.md)\<`TItem`\> |
+
+#### Returns
+
+[`TreeGridMixin`](TreeGridMixin.md)\<`TItem`\>
 
 #### Defined in
 
@@ -55,31 +58,7 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 ### dataGrid
 
-• `Private` **dataGrid**: [`DataGrid`](DataGrid.md)<`TItem`, `any`\>
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L11)
-
-___
-
-### getId
-
-• `Private` **getId**: (`item`: `TItem`) => `any`
-
-#### Type declaration
-
-▸ (`item`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `item` | `TItem` |
-
-##### Returns
-
-`any`
+• `Private` **dataGrid**: [`DataGrid`](DataGrid.md)\<`TItem`, `any`\>
 
 #### Defined in
 
@@ -89,7 +68,7 @@ ___
 
 ### options
 
-• `Private` **options**: [`TreeGridMixinOptions`](../interfaces/TreeGridMixinOptions.md)<`TItem`\>
+• `Private` **options**: [`TreeGridMixinOptions`](../interfaces/TreeGridMixinOptions.md)\<`TItem`\>
 
 #### Defined in
 
@@ -143,7 +122,7 @@ ___
 
 ### applyTreeOrdering
 
-▸ `Static` **applyTreeOrdering**<`TItem`\>(`items`, `getId`, `getParentId`): `TItem`[]
+▸ **applyTreeOrdering**\<`TItem`\>(`items`, `getId`, `getParentId`): `TItem`[]
 
 Reorders a set of items so that parents comes before their children.
 This method is required for proper tree ordering, as it is not so easy to perform with SQL.

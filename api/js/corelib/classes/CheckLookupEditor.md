@@ -1,16 +1,17 @@
 [@serenity-is/corelib](../README.md) / CheckLookupEditor
 
-# Class: CheckLookupEditor<TItem\>
+# Class: CheckLookupEditor\<TItem, P\>
 
 ## Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TItem` | `any` |
+| `TItem` | extends [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> = `any` |
+| `P` | extends [`CheckLookupEditorOptions`](../interfaces/CheckLookupEditorOptions.md) = [`CheckLookupEditorOptions`](../interfaces/CheckLookupEditorOptions.md) |
 
 ## Hierarchy
 
-- [`CheckTreeEditor`](CheckTreeEditor.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>, [`CheckLookupEditorOptions`](../interfaces/CheckLookupEditorOptions.md)\>
+- [`CheckTreeEditor`](CheckTreeEditor.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>, `P`\>
 
   ↳ **`CheckLookupEditor`**
 
@@ -24,11 +25,12 @@
 
 - [allColumns](CheckLookupEditor.md#allcolumns)
 - [cascadeLink](CheckLookupEditor.md#cascadelink)
-- [element](CheckLookupEditor.md#element)
+- [domNode](CheckLookupEditor.md#domnode)
 - [enableUpdateItems](CheckLookupEditor.md#enableupdateitems)
 - [filterBar](CheckLookupEditor.md#filterbar)
 - [idPrefix](CheckLookupEditor.md#idprefix)
 - [initialSettings](CheckLookupEditor.md#initialsettings)
+- [lookupChangeUnbind](CheckLookupEditor.md#lookupchangeunbind)
 - [openDialogsAsPanel](CheckLookupEditor.md#opendialogsaspanel)
 - [options](CheckLookupEditor.md#options)
 - [propertyItemsData](CheckLookupEditor.md#propertyitemsdata)
@@ -42,20 +44,22 @@
 - [toolbar](CheckLookupEditor.md#toolbar)
 - [uniqueName](CheckLookupEditor.md#uniquename)
 - [view](CheckLookupEditor.md#view)
-- [widgetName](CheckLookupEditor.md#widgetname)
 - [defaultColumnWidthDelta](CheckLookupEditor.md#defaultcolumnwidthdelta)
 - [defaultColumnWidthScale](CheckLookupEditor.md#defaultcolumnwidthscale)
 - [defaultHeaderHeight](CheckLookupEditor.md#defaultheaderheight)
 - [defaultPersistanceStorage](CheckLookupEditor.md#defaultpersistancestorage)
 - [defaultRowHeight](CheckLookupEditor.md#defaultrowheight)
+- [typeInfo](CheckLookupEditor.md#typeinfo)
 
 ### Accessors
 
 - [cascadeField](CheckLookupEditor.md#cascadefield)
 - [cascadeFrom](CheckLookupEditor.md#cascadefrom)
 - [cascadeValue](CheckLookupEditor.md#cascadevalue)
+- [element](CheckLookupEditor.md#element)
 - [filterField](CheckLookupEditor.md#filterfield)
 - [filterValue](CheckLookupEditor.md#filtervalue)
+- [props](CheckLookupEditor.md#props)
 - [readOnly](CheckLookupEditor.md#readonly)
 - [value](CheckLookupEditor.md#value)
 
@@ -72,7 +76,6 @@
 - [allDescendantsSelected](CheckLookupEditor.md#alldescendantsselected)
 - [allItemsSelected](CheckLookupEditor.md#allitemsselected)
 - [anyDescendantsSelected](CheckLookupEditor.md#anydescendantsselected)
-- [attrs](CheckLookupEditor.md#attrs)
 - [bindToSlickEvents](CheckLookupEditor.md#bindtoslickevents)
 - [bindToViewEvents](CheckLookupEditor.md#bindtoviewevents)
 - [booleanQuickFilter](CheckLookupEditor.md#booleanquickfilter)
@@ -110,11 +113,13 @@
 - [getColumnsKey](CheckLookupEditor.md#getcolumnskey)
 - [getCssClass](CheckLookupEditor.md#getcssclass)
 - [getCurrentSettings](CheckLookupEditor.md#getcurrentsettings)
+- [getCustomAttribute](CheckLookupEditor.md#getcustomattribute)
 - [getDefaultSortBy](CheckLookupEditor.md#getdefaultsortby)
 - [getDelimited](CheckLookupEditor.md#getdelimited)
 - [getDescendantsSelected](CheckLookupEditor.md#getdescendantsselected)
 - [getEditValue](CheckLookupEditor.md#geteditvalue)
 - [getElement](CheckLookupEditor.md#getelement)
+- [getFieldElement](CheckLookupEditor.md#getfieldelement)
 - [getFilterStore](CheckLookupEditor.md#getfilterstore)
 - [getGrid](CheckLookupEditor.md#getgrid)
 - [getGridCanLoad](CheckLookupEditor.md#getgridcanload)
@@ -158,13 +163,11 @@
 - [get\_readOnly](CheckLookupEditor.md#get_readonly)
 - [gridPersistanceFlags](CheckLookupEditor.md#gridpersistanceflags)
 - [init](CheckLookupEditor.md#init)
-- [initAsync](CheckLookupEditor.md#initasync)
-- [initSync](CheckLookupEditor.md#initsync)
 - [initialPopulate](CheckLookupEditor.md#initialpopulate)
-- [initialize](CheckLookupEditor.md#initialize)
 - [initializeFilterBar](CheckLookupEditor.md#initializefilterbar)
 - [internalInit](CheckLookupEditor.md#internalinit)
 - [internalRefresh](CheckLookupEditor.md#internalrefresh)
+- [internalRenderContents](CheckLookupEditor.md#internalrendercontents)
 - [invokeSubmitHandlers](CheckLookupEditor.md#invokesubmithandlers)
 - [isThreeStateHierarchy](CheckLookupEditor.md#isthreestatehierarchy)
 - [itemAt](CheckLookupEditor.md#itemat)
@@ -182,10 +185,12 @@
 - [populateUnlock](CheckLookupEditor.md#populateunlock)
 - [populateWhenVisible](CheckLookupEditor.md#populatewhenvisible)
 - [postProcessColumns](CheckLookupEditor.md#postprocesscolumns)
+- [propertyItemsReady](CheckLookupEditor.md#propertyitemsready)
 - [propertyItemsToSlickColumns](CheckLookupEditor.md#propertyitemstoslickcolumns)
 - [quickFilterChange](CheckLookupEditor.md#quickfilterchange)
 - [refresh](CheckLookupEditor.md#refresh)
 - [refreshIfNeeded](CheckLookupEditor.md#refreshifneeded)
+- [render](CheckLookupEditor.md#render)
 - [renderContents](CheckLookupEditor.md#rendercontents)
 - [resizeCanvas](CheckLookupEditor.md#resizecanvas)
 - [restoreSettings](CheckLookupEditor.md#restoresettings)
@@ -209,6 +214,7 @@
 - [set\_readOnly](CheckLookupEditor.md#set_readonly)
 - [sortItems](CheckLookupEditor.md#sortitems)
 - [subDialogDataChange](CheckLookupEditor.md#subdialogdatachange)
+- [syncOrAsyncThen](CheckLookupEditor.md#syncorasyncthen)
 - [tryFindQuickFilter](CheckLookupEditor.md#tryfindquickfilter)
 - [updateDisabledState](CheckLookupEditor.md#updatedisabledstate)
 - [updateFlags](CheckLookupEditor.md#updateflags)
@@ -216,11 +222,13 @@
 - [updateItems](CheckLookupEditor.md#updateitems)
 - [updateSelectAll](CheckLookupEditor.md#updateselectall)
 - [useAsync](CheckLookupEditor.md#useasync)
+- [useIdPrefix](CheckLookupEditor.md#useidprefix)
 - [useLayoutTimer](CheckLookupEditor.md#uselayouttimer)
 - [usePager](CheckLookupEditor.md#usepager)
 - [viewDataChanged](CheckLookupEditor.md#viewdatachanged)
+- [wrapFormatterWithEditLink](CheckLookupEditor.md#wrapformatterwitheditlink)
 - [create](CheckLookupEditor.md#create)
-- [elementFor](CheckLookupEditor.md#elementfor)
+- [createDefaultElement](CheckLookupEditor.md#createdefaultelement)
 - [getWidgetName](CheckLookupEditor.md#getwidgetname)
 - [propertyItemToQuickFilter](CheckLookupEditor.md#propertyitemtoquickfilter)
 
@@ -228,20 +236,24 @@
 
 ### constructor
 
-• **new CheckLookupEditor**<`TItem`\>(`div`, `options`)
+• **new CheckLookupEditor**\<`TItem`, `P`\>(`props`): [`CheckLookupEditor`](CheckLookupEditor.md)\<`TItem`, `P`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TItem` | `any` |
+| `TItem` | extends [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> = `any` |
+| `P` | extends [`CheckLookupEditorOptions`](../interfaces/CheckLookupEditorOptions.md) = [`CheckLookupEditorOptions`](../interfaces/CheckLookupEditorOptions.md) |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `div` | `JQuery` |
-| `options` | [`CheckLookupEditorOptions`](../interfaces/CheckLookupEditorOptions.md) |
+| `props` | [`EditorProps`](../README.md#editorprops)\<`P`\> |
+
+#### Returns
+
+[`CheckLookupEditor`](CheckLookupEditor.md)\<`TItem`, `P`\>
 
 #### Overrides
 
@@ -249,13 +261,13 @@
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L478)
+[src/ui/editors/checktreeeditor.ts:481](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L481)
 
 ## Properties
 
 ### allColumns
 
-• `Protected` **allColumns**: `Column`<`any`\>[]
+• `Protected` **allColumns**: `Column`\<`any`\>[]
 
 #### Inherited from
 
@@ -263,31 +275,31 @@
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L103)
+[src/ui/datagrid/datagrid.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L75)
 
 ___
 
 ### cascadeLink
 
-• `Protected` **cascadeLink**: [`CascadedWidgetLink`](CascadedWidgetLink.md)<[`Widget`](Widget.md)<`any`\>\>
+• `Protected` **cascadeLink**: [`CascadedWidgetLink`](CascadedWidgetLink.md)\<[`Widget`](Widget.md)\<`any`\>\>
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:592](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L592)
+[src/ui/editors/checktreeeditor.ts:602](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L602)
 
 ___
 
-### element
+### domNode
 
-• **element**: `JQuery`
+• `Readonly` **domNode**: `HTMLElement`
 
 #### Inherited from
 
-[CheckTreeEditor](CheckTreeEditor.md).[element](CheckTreeEditor.md#element)
+[CheckTreeEditor](CheckTreeEditor.md).[domNode](CheckTreeEditor.md#domnode)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L61)
+[src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
 
 ___
 
@@ -297,13 +309,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:476](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L476)
+[src/ui/editors/checktreeeditor.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L478)
 
 ___
 
 ### filterBar
 
-• `Protected` **filterBar**: [`FilterDisplayBar`](FilterDisplayBar.md)
+• `Protected` **filterBar**: [`FilterDisplayBar`](FilterDisplayBar.md)\<{}\>
 
 #### Inherited from
 
@@ -311,7 +323,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L99)
+[src/ui/datagrid/datagrid.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L71)
 
 ___
 
@@ -325,7 +337,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L65)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
@@ -339,7 +351,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L105)
+[src/ui/datagrid/datagrid.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L77)
+
+___
+
+### lookupChangeUnbind
+
+• `Private` **lookupChangeUnbind**: `any`
+
+#### Defined in
+
+[src/ui/editors/checktreeeditor.ts:479](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L479)
 
 ___
 
@@ -353,13 +375,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L109)
+[src/ui/datagrid/datagrid.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L81)
 
 ___
 
 ### options
 
-• `Protected` **options**: [`CheckLookupEditorOptions`](../interfaces/CheckLookupEditorOptions.md)
+• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Inherited from
 
@@ -367,7 +389,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L62)
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ___
 
@@ -381,13 +403,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L104)
+[src/ui/datagrid/datagrid.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L76)
 
 ___
 
 ### quickFiltersBar
 
-• `Protected` **quickFiltersBar**: [`QuickFilterBar`](QuickFilterBar.md)
+• `Protected` **quickFiltersBar**: [`QuickFilterBar`](QuickFilterBar.md)\<[`QuickFilterBarOptions`](../interfaces/QuickFilterBarOptions.md)\>
 
 #### Inherited from
 
@@ -395,13 +417,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L101)
+[src/ui/datagrid/datagrid.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L73)
 
 ___
 
 ### quickFiltersDiv
 
-• `Protected` **quickFiltersDiv**: `JQuery`
+• `Protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -409,7 +431,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L100)
+[src/ui/datagrid/datagrid.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L72)
 
 ___
 
@@ -423,7 +445,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L106)
+[src/ui/datagrid/datagrid.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L78)
 
 ___
 
@@ -433,13 +455,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L475)
+[src/ui/editors/checktreeeditor.ts:477](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L477)
 
 ___
 
 ### slickContainer
 
-• `Protected` **slickContainer**: `JQuery`
+• `Protected` **slickContainer**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -447,13 +469,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L102)
+[src/ui/datagrid/datagrid.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L74)
 
 ___
 
 ### slickGrid
 
-• **slickGrid**: `Grid`<`any`\>
+• **slickGrid**: `Grid`\<`any`\>
 
 #### Inherited from
 
@@ -461,13 +483,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L108)
+[src/ui/datagrid/datagrid.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L80)
 
 ___
 
 ### titleDiv
 
-• `Protected` **titleDiv**: `JQuery`
+• `Protected` **titleDiv**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -475,13 +497,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L97)
+[src/ui/datagrid/datagrid.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L69)
 
 ___
 
 ### toolbar
 
-• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)
+• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
 
 #### Inherited from
 
@@ -489,13 +511,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L98)
+[src/ui/datagrid/datagrid.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L70)
 
 ___
 
 ### uniqueName
 
-• `Protected` **uniqueName**: `string`
+• `Protected` `Readonly` **uniqueName**: `string`
 
 #### Inherited from
 
@@ -503,13 +525,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L64)
+[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ___
 
 ### view
 
-• **view**: [`RemoteView`](RemoteView.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+• **view**: [`RemoteView`](RemoteView.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Inherited from
 
@@ -517,21 +539,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L107)
-
-___
-
-### widgetName
-
-• `Protected` **widgetName**: `string`
-
-#### Inherited from
-
-[CheckTreeEditor](CheckTreeEditor.md).[widgetName](CheckTreeEditor.md#widgetname)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+[src/ui/datagrid/datagrid.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L79)
 
 ___
 
@@ -545,7 +553,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L115)
+[src/ui/datagrid/datagrid.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L87)
 
 ___
 
@@ -559,7 +567,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L114)
+[src/ui/datagrid/datagrid.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L86)
 
 ___
 
@@ -573,7 +581,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L112)
+[src/ui/datagrid/datagrid.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L84)
 
 ___
 
@@ -587,7 +595,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L113)
+[src/ui/datagrid/datagrid.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L85)
 
 ___
 
@@ -601,7 +609,21 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L111)
+[src/ui/datagrid/datagrid.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L83)
+
+___
+
+### typeInfo
+
+▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[typeInfo](CheckTreeEditor.md#typeinfo)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
 
 ## Accessors
 
@@ -615,7 +637,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L628)
+[src/ui/editors/checktreeeditor.ts:638](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L638)
 
 • `set` **cascadeField**(`value`): `void`
 
@@ -631,7 +653,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:636](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L636)
+[src/ui/editors/checktreeeditor.ts:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L646)
 
 ___
 
@@ -645,7 +667,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L584)
+[src/ui/editors/checktreeeditor.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L594)
 
 • `set` **cascadeFrom**(`value`): `void`
 
@@ -661,7 +683,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L620)
+[src/ui/editors/checktreeeditor.ts:630](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L630)
 
 ___
 
@@ -675,7 +697,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:644](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L644)
+[src/ui/editors/checktreeeditor.ts:654](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L654)
 
 • `set` **cascadeValue**(`value`): `void`
 
@@ -691,7 +713,27 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:656](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L656)
+[src/ui/editors/checktreeeditor.ts:666](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L666)
+
+___
+
+### element
+
+• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+Returns a Fluent(this.domNode) object
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+CheckTreeEditor.element
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 ___
 
@@ -705,7 +747,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:664](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L664)
+[src/ui/editors/checktreeeditor.ts:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L674)
 
 • `set` **filterField**(`value`): `void`
 
@@ -721,7 +763,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L672)
+[src/ui/editors/checktreeeditor.ts:682](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L682)
 
 ___
 
@@ -735,7 +777,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:680](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L680)
+[src/ui/editors/checktreeeditor.ts:690](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L690)
 
 • `set` **filterValue**(`value`): `void`
 
@@ -751,7 +793,25 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:692](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L692)
+[src/ui/editors/checktreeeditor.ts:702](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L702)
+
+___
+
+### props
+
+• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Returns
+
+[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Inherited from
+
+CheckTreeEditor.props
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
 
 ___
 
@@ -769,7 +829,7 @@ CheckTreeEditor.readOnly
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1027](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1027)
+[src/ui/datagrid/datagrid.ts:976](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L976)
 
 • `set` **readOnly**(`value`): `void`
 
@@ -789,7 +849,7 @@ CheckTreeEditor.readOnly
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1031](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1031)
+[src/ui/datagrid/datagrid.ts:980](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L980)
 
 ___
 
@@ -807,7 +867,7 @@ CheckTreeEditor.value
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:415](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L415)
+[src/ui/editors/checktreeeditor.ts:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L417)
 
 • `set` **value**(`v`): `void`
 
@@ -827,13 +887,13 @@ CheckTreeEditor.value
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:454](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L454)
+[src/ui/editors/checktreeeditor.ts:456](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L456)
 
 ## Methods
 
 ### addBooleanFilter
 
-▸ `Protected` **addBooleanFilter**(`field`, `title?`, `yes?`, `no?`): [`SelectEditor`](SelectEditor.md)
+▸ **addBooleanFilter**(`field`, `title?`, `yes?`, `no?`): [`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
 
 #### Parameters
 
@@ -846,7 +906,7 @@ CheckTreeEditor.value
 
 #### Returns
 
-[`SelectEditor`](SelectEditor.md)
+[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
 
 #### Inherited from
 
@@ -854,13 +914,13 @@ CheckTreeEditor.value
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1165)
+[src/ui/datagrid/datagrid.ts:1111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1111)
 
 ___
 
 ### addCssClass
 
-▸ `Protected` **addCssClass**(): `void`
+▸ **addCssClass**(): `void`
 
 #### Returns
 
@@ -872,13 +932,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 ___
 
 ### addDateRangeFilter
 
-▸ `Protected` **addDateRangeFilter**(`field`, `title?`): [`DateEditor`](DateEditor.md)
+▸ **addDateRangeFilter**(`field`, `title?`): [`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>
 
 #### Parameters
 
@@ -889,7 +949,7 @@ ___
 
 #### Returns
 
-[`DateEditor`](DateEditor.md)
+[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>
 
 #### Inherited from
 
@@ -897,13 +957,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1149)
+[src/ui/datagrid/datagrid.ts:1095](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1095)
 
 ___
 
 ### addDateTimeRangeFilter
 
-▸ `Protected` **addDateTimeRangeFilter**(`field`, `title?`): [`DateTimeEditor`](DateTimeEditor.md)
+▸ **addDateTimeRangeFilter**(`field`, `title?`): [`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
 #### Parameters
 
@@ -914,7 +974,7 @@ ___
 
 #### Returns
 
-[`DateTimeEditor`](DateTimeEditor.md)
+[`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
 #### Inherited from
 
@@ -922,13 +982,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1157)
+[src/ui/datagrid/datagrid.ts:1103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1103)
 
 ___
 
 ### addFilterSeparator
 
-▸ `Protected` **addFilterSeparator**(): `void`
+▸ **addFilterSeparator**(): `void`
 
 #### Returns
 
@@ -940,26 +1000,26 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1129)
+[src/ui/datagrid/datagrid.ts:1075](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1075)
 
 ___
 
 ### addQuickFilter
 
-▸ `Protected` **addQuickFilter**<`TWidget`, `TOptions`\>(`opt`): `TWidget`
+▸ **addQuickFilter**\<`TWidget`, `P`\>(`opt`): `TWidget`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`any`, `TWidget`\> |
-| `TOptions` | `TOptions` |
+| `TWidget` | extends [`Widget`](Widget.md)\<`any`\> |
+| `P` | `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opt` | [`QuickFilter`](../interfaces/QuickFilter.md)<`TWidget`, `TOptions`\> |
+| `opt` | [`QuickFilter`](../interfaces/QuickFilter.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -971,24 +1031,24 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1145)
+[src/ui/datagrid/datagrid.ts:1091](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1091)
 
 ___
 
 ### addValidationRule
 
-▸ **addValidationRule**(`eventClass`, `rule`): `JQuery`
+▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `eventClass` | `string` |
-| `rule` | (`p1`: `JQuery`) => `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `uniqueName?` | `string` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Inherited from
 
@@ -996,13 +1056,34 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L134)
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
+
+▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `uniqueName` | `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[addValidationRule](CheckTreeEditor.md#addvalidationrule)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
 ___
 
 ### afterInit
 
-▸ `Protected` **afterInit**(): `void`
+▸ **afterInit**(): `void`
 
 #### Returns
 
@@ -1014,19 +1095,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L194)
+[src/ui/datagrid/datagrid.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L154)
 
 ___
 
 ### allDescendantsSelected
 
-▸ `Protected` **allDescendantsSelected**(`item`): `boolean`
+▸ **allDescendantsSelected**(`item`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 
 #### Returns
 
@@ -1038,13 +1119,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L283)
+[src/ui/editors/checktreeeditor.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L285)
 
 ___
 
 ### allItemsSelected
 
-▸ `Protected` **allItemsSelected**(): `boolean`
+▸ **allItemsSelected**(): `boolean`
 
 #### Returns
 
@@ -1056,19 +1137,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L272)
+[src/ui/editors/checktreeeditor.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L274)
 
 ___
 
 ### anyDescendantsSelected
 
-▸ `Protected` **anyDescendantsSelected**(`item`): `boolean`
+▸ **anyDescendantsSelected**(`item`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 
 #### Returns
 
@@ -1080,43 +1161,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:303](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L303)
-
-___
-
-### attrs
-
-▸ `Protected` **attrs**<`TAttr`\>(`attrType`): `TAttr`[]
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TAttr` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `attrType` | (...`args`: `any`[]) => `TAttr` |
-
-#### Returns
-
-`TAttr`[]
-
-#### Inherited from
-
-[CheckTreeEditor](CheckTreeEditor.md).[attrs](CheckTreeEditor.md#attrs)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:205](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L205)
+[src/ui/editors/checktreeeditor.ts:305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L305)
 
 ___
 
 ### bindToSlickEvents
 
-▸ `Protected` **bindToSlickEvents**(): `void`
+▸ **bindToSlickEvents**(): `void`
 
 #### Returns
 
@@ -1128,13 +1179,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:569](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L569)
+[src/ui/datagrid/datagrid.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L519)
 
 ___
 
 ### bindToViewEvents
 
-▸ `Protected` **bindToViewEvents**(): `void`
+▸ **bindToViewEvents**(): `void`
 
 #### Returns
 
@@ -1146,13 +1197,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:669](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L669)
+[src/ui/datagrid/datagrid.ts:619](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L619)
 
 ___
 
 ### booleanQuickFilter
 
-▸ `Protected` **booleanQuickFilter**(`field`, `title?`, `yes?`, `no?`): [`QuickFilter`](../interfaces/QuickFilter.md)<[`SelectEditor`](SelectEditor.md), [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
+▸ **booleanQuickFilter**(`field`, `title?`, `yes?`, `no?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>, [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
 
 #### Parameters
 
@@ -1165,7 +1216,7 @@ ___
 
 #### Returns
 
-[`QuickFilter`](../interfaces/QuickFilter.md)<[`SelectEditor`](SelectEditor.md), [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
+[`QuickFilter`](../interfaces/QuickFilter.md)\<[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>, [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
 
 #### Inherited from
 
@@ -1173,19 +1224,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1169)
+[src/ui/datagrid/datagrid.ts:1115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1115)
 
 ___
 
 ### canFilterColumn
 
-▸ `Protected` **canFilterColumn**(`column`): `boolean`
+▸ **canFilterColumn**(`column`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `column` | `Column`<`any`\> |
+| `column` | `Column`\<`any`\> |
 
 #### Returns
 
@@ -1197,19 +1248,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:486](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L486)
+[src/ui/datagrid/datagrid.ts:436](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L436)
 
 ___
 
 ### canShowColumn
 
-▸ `Protected` **canShowColumn**(`column`): `boolean`
+▸ **canShowColumn**(`column`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `column` | `Column`<`any`\> |
+| `column` | `Column`\<`any`\> |
 
 #### Returns
 
@@ -1221,13 +1272,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1204)
+[src/ui/datagrid/datagrid.ts:1150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1150)
 
 ___
 
 ### cascadeItems
 
-▸ `Protected` **cascadeItems**(`items`): `TItem`[]
+▸ **cascadeItems**(`items`): `TItem`[]
 
 #### Parameters
 
@@ -1241,7 +1292,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L517)
+[src/ui/editors/checktreeeditor.ts:528](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L528)
 
 ___
 
@@ -1253,7 +1304,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -1265,27 +1316,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[CheckTreeEditor](CheckTreeEditor.md).[change](CheckTreeEditor.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L259)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ___
 
@@ -1297,7 +1328,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -1309,33 +1340,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[CheckTreeEditor](CheckTreeEditor.md).[changeSelect2](CheckTreeEditor.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L260)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 ___
 
 ### createFilterBar
 
-▸ `Protected` **createFilterBar**(): `void`
+▸ **createFilterBar**(): `void`
 
 #### Returns
 
@@ -1347,13 +1358,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:798](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L798)
+[src/ui/datagrid/datagrid.ts:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L747)
 
 ___
 
 ### createIncludeDeletedButton
 
-▸ `Protected` **createIncludeDeletedButton**(): `void`
+▸ **createIncludeDeletedButton**(): `void`
 
 #### Returns
 
@@ -1365,13 +1376,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:350](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L350)
+[src/ui/datagrid/datagrid.ts:303](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L303)
 
 ___
 
 ### createPager
 
-▸ `Protected` **createPager**(): `void`
+▸ **createPager**(): `void`
 
 #### Returns
 
@@ -1383,19 +1394,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:812](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L812)
+[src/ui/datagrid/datagrid.ts:762](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L762)
 
 ___
 
 ### createQuickFilters
 
-▸ `Protected` **createQuickFilters**(`filters?`): `void`
+▸ **createQuickFilters**(`filters?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `filters?` | [`QuickFilter`](../interfaces/QuickFilter.md)<[`Widget`](Widget.md)<`any`\>, `any`\>[] |
+| `filters?` | [`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\>[] |
 
 #### Returns
 
@@ -1407,13 +1418,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L246)
+[src/ui/datagrid/datagrid.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L202)
 
 ___
 
 ### createQuickSearchInput
 
-▸ `Protected` **createQuickSearchInput**(): `void`
+▸ **createQuickSearchInput**(): `void`
 
 #### Returns
 
@@ -1425,17 +1436,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L361)
+[src/ui/datagrid/datagrid.ts:312](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L312)
 
 ___
 
 ### createSlickContainer
 
-▸ `Protected` **createSlickContainer**(): `JQuery`
+▸ **createSlickContainer**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -1443,17 +1454,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:751](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L751)
+[src/ui/datagrid/datagrid.ts:701](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L701)
 
 ___
 
 ### createSlickGrid
 
-▸ `Protected` **createSlickGrid**(): `Grid`<`any`\>
+▸ **createSlickGrid**(): `Grid`\<`any`\>
 
 #### Returns
 
-`Grid`<`any`\>
+`Grid`\<`any`\>
 
 #### Inherited from
 
@@ -1461,13 +1472,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L116)
+[src/ui/editors/checktreeeditor.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L119)
 
 ___
 
 ### createToolbar
 
-▸ `Protected` **createToolbar**(`buttons`): `void`
+▸ **createToolbar**(`buttons`): `void`
 
 #### Parameters
 
@@ -1485,13 +1496,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:839](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L839)
+[src/ui/datagrid/datagrid.ts:788](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L788)
 
 ___
 
 ### createToolbarExtensions
 
-▸ `Protected` **createToolbarExtensions**(): `void`
+▸ **createToolbarExtensions**(): `void`
 
 #### Returns
 
@@ -1503,17 +1514,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:501](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L501)
+[src/ui/editors/checktreeeditor.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L512)
 
 ___
 
 ### createView
 
-▸ `Protected` **createView**(): [`RemoteView`](RemoteView.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+▸ **createView**(): [`RemoteView`](RemoteView.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Returns
 
-[`RemoteView`](RemoteView.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+[`RemoteView`](RemoteView.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Inherited from
 
@@ -1521,13 +1532,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:755](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L755)
+[src/ui/datagrid/datagrid.ts:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L705)
 
 ___
 
 ### dateRangeQuickFilter
 
-▸ `Protected` **dateRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)<[`DateEditor`](DateEditor.md), [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+▸ **dateRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
 #### Parameters
 
@@ -1538,7 +1549,7 @@ ___
 
 #### Returns
 
-[`QuickFilter`](../interfaces/QuickFilter.md)<[`DateEditor`](DateEditor.md), [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+[`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
 #### Inherited from
 
@@ -1546,13 +1557,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1153)
+[src/ui/datagrid/datagrid.ts:1099](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1099)
 
 ___
 
 ### dateTimeRangeQuickFilter
 
-▸ `Protected` **dateTimeRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)<[`DateTimeEditor`](DateTimeEditor.md), [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+▸ **dateTimeRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
 #### Parameters
 
@@ -1563,7 +1574,7 @@ ___
 
 #### Returns
 
-[`QuickFilter`](../interfaces/QuickFilter.md)<[`DateTimeEditor`](DateTimeEditor.md), [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+[`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
 
 #### Inherited from
 
@@ -1571,7 +1582,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1161)
+[src/ui/datagrid/datagrid.ts:1107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1107)
 
 ___
 
@@ -1583,19 +1594,19 @@ ___
 
 `void`
 
-#### Inherited from
+#### Overrides
 
 [CheckTreeEditor](CheckTreeEditor.md).[destroy](CheckTreeEditor.md#destroy)
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L366)
+[src/ui/editors/checktreeeditor.ts:490](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L490)
 
 ___
 
 ### determineText
 
-▸ `Protected` **determineText**(`getKey`): `string`
+▸ **determineText**(`getKey`): `string`
 
 #### Parameters
 
@@ -1613,13 +1624,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1133)
+[src/ui/datagrid/datagrid.ts:1079](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1079)
 
 ___
 
 ### editItem
 
-▸ `Protected` **editItem**(`entityOrId`): `void`
+▸ **editItem**(`entityOrId`): `void`
 
 #### Parameters
 
@@ -1637,13 +1648,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:635](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L635)
+[src/ui/datagrid/datagrid.ts:585](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L585)
 
 ___
 
 ### editItemOfType
 
-▸ `Protected` **editItemOfType**(`itemType`, `entityOrId`): `void`
+▸ **editItemOfType**(`itemType`, `entityOrId`): `void`
 
 #### Parameters
 
@@ -1662,13 +1673,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:639](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L639)
+[src/ui/datagrid/datagrid.ts:589](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L589)
 
 ___
 
 ### enableFiltering
 
-▸ `Protected` **enableFiltering**(): `boolean`
+▸ **enableFiltering**(): `boolean`
 
 #### Returns
 
@@ -1680,17 +1691,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:789](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L789)
+[src/ui/datagrid/datagrid.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L739)
 
 ___
 
 ### ensureQuickFilterBar
 
-▸ `Protected` **ensureQuickFilterBar**(): [`QuickFilterBar`](QuickFilterBar.md)
+▸ **ensureQuickFilterBar**(): [`QuickFilterBar`](QuickFilterBar.md)\<[`QuickFilterBarOptions`](../interfaces/QuickFilterBarOptions.md)\>
 
 #### Returns
 
-[`QuickFilterBar`](QuickFilterBar.md)
+[`QuickFilterBar`](QuickFilterBar.md)\<[`QuickFilterBarOptions`](../interfaces/QuickFilterBarOptions.md)\>
 
 #### Inherited from
 
@@ -1698,13 +1709,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L238)
+[src/ui/datagrid/datagrid.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L194)
 
 ___
 
 ### filterItems
 
-▸ `Protected` **filterItems**(`items`): `TItem`[]
+▸ **filterItems**(`items`): `TItem`[]
 
 #### Parameters
 
@@ -1718,13 +1729,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:539](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L539)
+[src/ui/editors/checktreeeditor.ts:550](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L550)
 
 ___
 
 ### findQuickFilter
 
-▸ `Protected` **findQuickFilter**<`TWidget`\>(`type`, `field`): `TWidget`
+▸ **findQuickFilter**\<`TWidget`\>(`type`, `field`): `TWidget`
 
 #### Type parameters
 
@@ -1749,13 +1760,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L332)
+[src/ui/datagrid/datagrid.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L289)
 
 ___
 
 ### getAddButtonCaption
 
-▸ `Protected` **getAddButtonCaption**(): `string`
+▸ **getAddButtonCaption**(): `string`
 
 #### Returns
 
@@ -1767,13 +1778,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:627](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L627)
+[src/ui/datagrid/datagrid.ts:577](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L577)
 
 ___
 
 ### getButtons
 
-▸ `Protected` **getButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+▸ **getButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
 #### Returns
 
@@ -1785,19 +1796,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:497](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L497)
+[src/ui/editors/checktreeeditor.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L508)
 
 ___
 
 ### getCascadeFromValue
 
-▸ `Protected` **getCascadeFromValue**(`parent`): `any`
+▸ **getCascadeFromValue**(`parent`): `any`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `parent` | [`Widget`](Widget.md)<`any`\> |
+| `parent` | [`Widget`](Widget.md)\<`any`\> |
 
 #### Returns
 
@@ -1805,13 +1816,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:588](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L588)
+[src/ui/editors/checktreeeditor.ts:598](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L598)
 
 ___
 
 ### getColumnWidthDelta
 
-▸ `Protected` **getColumnWidthDelta**(): `number`
+▸ **getColumnWidthDelta**(): `number`
 
 #### Returns
 
@@ -1823,13 +1834,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L463)
+[src/ui/datagrid/datagrid.ts:413](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L413)
 
 ___
 
 ### getColumnWidthScale
 
-▸ `Protected` **getColumnWidthScale**(): `number`
+▸ **getColumnWidthScale**(): `number`
 
 #### Returns
 
@@ -1841,17 +1852,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L467)
+[src/ui/datagrid/datagrid.ts:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L417)
 
 ___
 
 ### getColumns
 
-▸ `Protected` **getColumns**(): `Column`<`any`\>[]
+▸ **getColumns**(): `Column`\<`any`\>[]
 
 #### Returns
 
-`Column`<`any`\>[]
+`Column`\<`any`\>[]
 
 #### Inherited from
 
@@ -1859,13 +1870,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:318](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L318)
+[src/ui/editors/checktreeeditor.ts:320](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L320)
 
 ___
 
 ### getColumnsKey
 
-▸ `Protected` **getColumnsKey**(): `string`
+▸ **getColumnsKey**(): `string`
 
 #### Returns
 
@@ -1877,13 +1888,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:890](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L890)
+[src/ui/datagrid/datagrid.ts:844](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L844)
 
 ___
 
 ### getCssClass
 
-▸ `Protected` **getCssClass**(): `string`
+▸ **getCssClass**(): `string`
 
 #### Returns
 
@@ -1895,13 +1906,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L104)
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
 
 ___
 
 ### getCurrentSettings
 
-▸ `Protected` **getCurrentSettings**(`flags?`): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
+▸ **getCurrentSettings**(`flags?`): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
 
 #### Parameters
 
@@ -1919,13 +1930,44 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1417)
+[src/ui/datagrid/datagrid.ts:1363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1363)
+
+___
+
+### getCustomAttribute
+
+▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TAttr` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
+
+#### Returns
+
+`TAttr`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[getCustomAttribute](CheckTreeEditor.md#getcustomattribute)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
 
 ___
 
 ### getDefaultSortBy
 
-▸ `Protected` **getDefaultSortBy**(): `any`[]
+▸ **getDefaultSortBy**(): `any`[]
 
 #### Returns
 
@@ -1937,13 +1979,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:760](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L760)
+[src/ui/datagrid/datagrid.ts:710](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L710)
 
 ___
 
 ### getDelimited
 
-▸ `Protected` **getDelimited**(): `boolean`
+▸ **getDelimited**(): `boolean`
 
 #### Returns
 
@@ -1955,19 +1997,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:299](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L299)
+[src/ui/editors/checktreeeditor.ts:301](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L301)
 
 ___
 
 ### getDescendantsSelected
 
-▸ `Protected` **getDescendantsSelected**(`item`): `boolean`
+▸ **getDescendantsSelected**(`item`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 
 #### Returns
 
@@ -1979,7 +2021,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L251)
+[src/ui/editors/checktreeeditor.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L253)
 
 ___
 
@@ -2004,17 +2046,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L67)
+[src/ui/editors/checktreeeditor.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L70)
 
 ___
 
 ### getElement
 
-▸ **getElement**(): `JQuery`
+▸ **getElement**(): `HTMLElement`
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Inherited from
 
@@ -2022,7 +2064,25 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1507](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1507)
+[src/ui/datagrid/datagrid.ts:1453](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1453)
+
+___
+
+### getFieldElement
+
+▸ **getFieldElement**(): `HTMLElement`
+
+#### Returns
+
+`HTMLElement`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[getFieldElement](CheckTreeEditor.md#getfieldelement)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
 
 ___
 
@@ -2040,17 +2100,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1519)
+[src/ui/datagrid/datagrid.ts:1465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1465)
 
 ___
 
 ### getGrid
 
-▸ **getGrid**(): `Grid`<`any`\>
+▸ **getGrid**(): `Grid`\<`any`\>
 
 #### Returns
 
-`Grid`<`any`\>
+`Grid`\<`any`\>
 
 #### Inherited from
 
@@ -2058,13 +2118,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1511](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1511)
+[src/ui/datagrid/datagrid.ts:1457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1457)
 
 ___
 
 ### getGridCanLoad
 
-▸ `Protected` **getGridCanLoad**(): `boolean`
+▸ **getGridCanLoad**(): `boolean`
 
 #### Returns
 
@@ -2076,17 +2136,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:986](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L986)
+[src/ui/datagrid/datagrid.ts:935](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L935)
 
 ___
 
 ### getGridField
 
-▸ **getGridField**(): `JQuery`
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -2094,13 +2154,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
 ___
 
 ### getIdProperty
 
-▸ `Protected` **getIdProperty**(): `string`
+▸ **getIdProperty**(): `string`
 
 #### Returns
 
@@ -2112,13 +2172,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L38)
+[src/ui/editors/checktreeeditor.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L41)
 
 ___
 
 ### getIncludeColumns
 
-▸ `Protected` **getIncludeColumns**(`include`): `void`
+▸ **getIncludeColumns**(`include`): `void`
 
 #### Parameters
 
@@ -2136,13 +2196,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:697](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L697)
+[src/ui/datagrid/datagrid.ts:647](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L647)
 
 ___
 
 ### getInitialCollapse
 
-▸ `Protected` **getInitialCollapse**(): `boolean`
+▸ **getInitialCollapse**(): `boolean`
 
 #### Returns
 
@@ -2154,13 +2214,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L150)
+[src/ui/editors/checktreeeditor.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L152)
 
 ___
 
 ### getInitialTitle
 
-▸ `Protected` **getInitialTitle**(): `string`
+▸ **getInitialTitle**(): `string`
 
 #### Returns
 
@@ -2172,13 +2232,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L231)
+[src/ui/datagrid/datagrid.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L187)
 
 ___
 
 ### getIsActiveProperty
 
-▸ `Protected` **getIsActiveProperty**(): `string`
+▸ **getIsActiveProperty**(): `string`
 
 #### Returns
 
@@ -2190,13 +2250,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1102)
+[src/ui/datagrid/datagrid.ts:1048](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1048)
 
 ___
 
 ### getIsDeletedProperty
 
-▸ `Protected` **getIsDeletedProperty**(): `string`
+▸ **getIsDeletedProperty**(): `string`
 
 #### Returns
 
@@ -2208,19 +2268,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1096](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1096)
+[src/ui/datagrid/datagrid.ts:1042](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1042)
 
 ___
 
 ### getItemCssClass
 
-▸ `Protected` **getItemCssClass**(`item`, `index`): `string`
+▸ **getItemCssClass**(`item`, `index`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 | `index` | `number` |
 
 #### Returns
@@ -2233,19 +2293,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L400)
+[src/ui/datagrid/datagrid.ts:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L351)
 
 ___
 
 ### getItemMetadata
 
-▸ `Protected` **getItemMetadata**(`item`, `index`): `any`
+▸ **getItemMetadata**(`item`, `index`): `any`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 | `index` | `number` |
 
 #### Returns
@@ -2258,19 +2318,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:434](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L434)
+[src/ui/datagrid/datagrid.ts:384](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L384)
 
 ___
 
 ### getItemText
 
-▸ `Protected` **getItemText**(`ctx`): `string`
+▸ **getItemText**(`ctx`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | `FormatterContext`<`any`\> |
+| `ctx` | `FormatterContext`\<`any`\> |
 
 #### Returns
 
@@ -2282,13 +2342,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:349](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L349)
+[src/ui/editors/checktreeeditor.ts:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L351)
 
 ___
 
 ### getItemType
 
-▸ `Protected` **getItemType**(): `string`
+▸ **getItemType**(): `string`
 
 #### Returns
 
@@ -2300,17 +2360,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:872](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L872)
+[src/ui/datagrid/datagrid.ts:826](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L826)
 
 ___
 
 ### getItems
 
-▸ **getItems**(): [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>[]
+▸ **getItems**(): [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>[]
 
 #### Returns
 
-[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>[]
+[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>[]
 
 #### Inherited from
 
@@ -2318,13 +2378,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:561](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L561)
+[src/ui/datagrid/datagrid.ts:511](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L511)
 
 ___
 
 ### getLocalTextDbPrefix
 
-▸ `Protected` **getLocalTextDbPrefix**(): `string`
+▸ **getLocalTextDbPrefix**(): `string`
 
 #### Returns
 
@@ -2336,13 +2396,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1056](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1056)
+[src/ui/datagrid/datagrid.ts:1005](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1005)
 
 ___
 
 ### getLocalTextPrefix
 
-▸ `Protected` **getLocalTextPrefix**(): `string`
+▸ **getLocalTextPrefix**(): `string`
 
 #### Returns
 
@@ -2354,19 +2414,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1068](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1068)
+[src/ui/datagrid/datagrid.ts:1017](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1017)
 
 ___
 
 ### getLookupItems
 
-▸ `Protected` **getLookupItems**(`lookup`): `TItem`[]
+▸ **getLookupItems**(`lookup`): `TItem`[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `lookup` | [`Lookup`](Lookup.md)<`TItem`\> |
+| `lookup` | [`Lookup`](Lookup.md)\<`TItem`\> |
 
 #### Returns
 
@@ -2374,13 +2434,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:555](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L555)
+[src/ui/editors/checktreeeditor.ts:566](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L566)
 
 ___
 
 ### getLookupKey
 
-▸ `Protected` **getLookupKey**(): `string`
+▸ **getLookupKey**(): `string`
 
 #### Returns
 
@@ -2388,13 +2448,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L493)
+[src/ui/editors/checktreeeditor.ts:504](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L504)
 
 ___
 
 ### getPagerOptions
 
-▸ `Protected` **getPagerOptions**(): [`PagerOptions`](../interfaces/PagerOptions.md)
+▸ **getPagerOptions**(): [`PagerOptions`](../interfaces/PagerOptions.md)
 
 #### Returns
 
@@ -2406,13 +2466,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:804](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L804)
+[src/ui/datagrid/datagrid.ts:754](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L754)
 
 ___
 
 ### getPersistanceKey
 
-▸ `Protected` **getPersistanceKey**(): `string`
+▸ **getPersistanceKey**(): `string`
 
 #### Returns
 
@@ -2424,13 +2484,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1189)
+[src/ui/datagrid/datagrid.ts:1135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1135)
 
 ___
 
 ### getPersistanceStorage
 
-▸ `Protected` **getPersistanceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
+▸ **getPersistanceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
 
 #### Returns
 
@@ -2442,17 +2502,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1185)
+[src/ui/datagrid/datagrid.ts:1131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1131)
 
 ___
 
 ### getPersistedSettings
 
-▸ `Protected` **getPersistedSettings**(): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md) \| `Promise`<[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)\>
+▸ **getPersistedSettings**(): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md) \| `Promise`\<[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)\>
 
 #### Returns
 
-[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md) \| `Promise`<[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)\>
+[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md) \| `Promise`\<[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)\>
 
 #### Inherited from
 
@@ -2460,13 +2520,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1225](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1225)
+[src/ui/datagrid/datagrid.ts:1171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1171)
 
 ___
 
 ### getPropertyItems
 
-▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
+▸ **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
 #### Returns
 
@@ -2478,13 +2538,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:899](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L899)
+[src/ui/datagrid/datagrid.ts:848](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L848)
 
 ___
 
 ### getPropertyItemsData
 
-▸ `Protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
+▸ **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
 #### Returns
 
@@ -2496,17 +2556,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:903](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L903)
+[src/ui/datagrid/datagrid.ts:852](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L852)
 
 ___
 
 ### getPropertyItemsDataAsync
 
-▸ `Protected` **getPropertyItemsDataAsync**(): `Promise`<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
+▸ **getPropertyItemsDataAsync**(): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
 #### Returns
 
-`Promise`<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
+`Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
 #### Inherited from
 
@@ -2514,17 +2574,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:923](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L923)
+[src/ui/datagrid/datagrid.ts:872](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L872)
 
 ___
 
 ### getQuickFilters
 
-▸ `Protected` **getQuickFilters**(): [`QuickFilter`](../interfaces/QuickFilter.md)<[`Widget`](Widget.md)<`any`\>, `any`\>[]
+▸ **getQuickFilters**(): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\>[]
 
 #### Returns
 
-[`QuickFilter`](../interfaces/QuickFilter.md)<[`Widget`](Widget.md)<`any`\>, `any`\>[]
+[`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\>[]
 
 #### Inherited from
 
@@ -2532,13 +2592,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L268)
+[src/ui/datagrid/datagrid.ts:225](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L225)
 
 ___
 
 ### getQuickSearchFields
 
-▸ `Protected` **getQuickSearchFields**(): [`QuickSearchField`](../interfaces/QuickSearchField.md)[]
+▸ **getQuickSearchFields**(): [`QuickSearchField`](../interfaces/QuickSearchField.md)[]
 
 #### Returns
 
@@ -2550,13 +2610,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:357](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L357)
+[src/ui/datagrid/datagrid.ts:308](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L308)
 
 ___
 
 ### getRowDefinition
 
-▸ `Protected` **getRowDefinition**(): [`IRowDefinition`](../interfaces/IRowDefinition.md)
+▸ **getRowDefinition**(): [`IRowDefinition`](../interfaces/IRowDefinition.md)
 
 #### Returns
 
@@ -2568,13 +2628,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1050](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1050)
+[src/ui/datagrid/datagrid.ts:999](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L999)
 
 ___
 
 ### getSelectAllText
 
-▸ `Protected` **getSelectAllText**(): `string`
+▸ **getSelectAllText**(): `string`
 
 #### Returns
 
@@ -2586,17 +2646,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:510](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L510)
+[src/ui/editors/checktreeeditor.ts:521](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L521)
 
 ___
 
 ### getSlickOptions
 
-▸ `Protected` **getSlickOptions**(): `GridOptions`<`any`\>
+▸ **getSlickOptions**(): `GridOptions`\<`any`\>
 
 #### Returns
 
-`GridOptions`<`any`\>
+`GridOptions`\<`any`\>
 
 #### Inherited from
 
@@ -2604,7 +2664,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L353)
+[src/ui/editors/checktreeeditor.ts:355](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L355)
 
 ___
 
@@ -2622,17 +2682,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:844](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L844)
+[src/ui/datagrid/datagrid.ts:796](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L796)
 
 ___
 
 ### getTreeItems
 
-▸ `Protected` **getTreeItems**(): [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>[]
+▸ **getTreeItems**(): [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>[]
 
 #### Returns
 
-[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>[]
+[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>[]
 
 #### Overrides
 
@@ -2640,17 +2700,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:559](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L559)
+[src/ui/editors/checktreeeditor.ts:570](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L570)
 
 ___
 
 ### getView
 
-▸ **getView**(): [`RemoteView`](RemoteView.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+▸ **getView**(): [`RemoteView`](RemoteView.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Returns
 
-[`RemoteView`](RemoteView.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+[`RemoteView`](RemoteView.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Inherited from
 
@@ -2658,13 +2718,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1515](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1515)
+[src/ui/datagrid/datagrid.ts:1461](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1461)
 
 ___
 
 ### getViewOptions
 
-▸ `Protected` **getViewOptions**(): [`RemoteViewOptions`](../interfaces/RemoteViewOptions.md)
+▸ **getViewOptions**(): [`RemoteViewOptions`](../interfaces/RemoteViewOptions.md)
 
 #### Returns
 
@@ -2676,13 +2736,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:817](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L817)
+[src/ui/datagrid/datagrid.ts:766](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L766)
 
 ___
 
 ### get\_cascadeField
 
-▸ `Protected` **get_cascadeField**(): `string`
+▸ **get_cascadeField**(): `string`
 
 #### Returns
 
@@ -2690,13 +2750,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:624](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L624)
+[src/ui/editors/checktreeeditor.ts:634](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L634)
 
 ___
 
 ### get\_cascadeFrom
 
-▸ `Protected` **get_cascadeFrom**(): `string`
+▸ **get_cascadeFrom**(): `string`
 
 #### Returns
 
@@ -2704,13 +2764,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:580](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L580)
+[src/ui/editors/checktreeeditor.ts:590](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L590)
 
 ___
 
 ### get\_cascadeValue
 
-▸ `Protected` **get_cascadeValue**(): `any`
+▸ **get_cascadeValue**(): `any`
 
 #### Returns
 
@@ -2718,13 +2778,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:640](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L640)
+[src/ui/editors/checktreeeditor.ts:650](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L650)
 
 ___
 
 ### get\_filterField
 
-▸ `Protected` **get_filterField**(): `string`
+▸ **get_filterField**(): `string`
 
 #### Returns
 
@@ -2732,13 +2792,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:660](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L660)
+[src/ui/editors/checktreeeditor.ts:670](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L670)
 
 ___
 
 ### get\_filterValue
 
-▸ `Protected` **get_filterValue**(): `any`
+▸ **get_filterValue**(): `any`
 
 #### Returns
 
@@ -2746,7 +2806,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:676](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L676)
+[src/ui/editors/checktreeeditor.ts:686](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L686)
 
 ___
 
@@ -2764,13 +2824,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L393)
+[src/ui/editors/checktreeeditor.ts:395](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L395)
 
 ___
 
 ### gridPersistanceFlags
 
-▸ `Protected` **gridPersistanceFlags**(): [`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
+▸ **gridPersistanceFlags**(): [`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
 
 #### Returns
 
@@ -2782,23 +2842,17 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1200)
+[src/ui/datagrid/datagrid.ts:1146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1146)
 
 ___
 
 ### init
 
-▸ **init**(`action?`): [`CheckLookupEditor`](CheckLookupEditor.md)<`TItem`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `action?` | (`widget`: `any`) => `void` |
+▸ **init**(): `this`
 
 #### Returns
 
-[`CheckLookupEditor`](CheckLookupEditor.md)<`TItem`\>
+`this`
 
 #### Inherited from
 
@@ -2806,49 +2860,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
-
-___
-
-### initAsync
-
-▸ `Protected` **initAsync**(): `Promise`<`void`\>
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Inherited from
-
-[CheckTreeEditor](CheckTreeEditor.md).[initAsync](CheckTreeEditor.md#initasync)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L188)
-
-___
-
-### initSync
-
-▸ `Protected` **initSync**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[CheckTreeEditor](CheckTreeEditor.md).[initSync](CheckTreeEditor.md#initsync)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L182)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
 ___
 
 ### initialPopulate
 
-▸ `Protected` **initialPopulate**(): `void`
+▸ **initialPopulate**(): `void`
 
 #### Returns
 
@@ -2860,31 +2878,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L471)
-
-___
-
-### initialize
-
-▸ **initialize**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[CheckTreeEditor](CheckTreeEditor.md).[initialize](CheckTreeEditor.md#initialize)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L176)
+[src/ui/datagrid/datagrid.ts:421](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L421)
 
 ___
 
 ### initializeFilterBar
 
-▸ `Protected` **initializeFilterBar**(): `void`
+▸ **initializeFilterBar**(): `void`
 
 #### Returns
 
@@ -2896,13 +2896,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:493](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L493)
+[src/ui/datagrid/datagrid.ts:443](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L443)
 
 ___
 
 ### internalInit
 
-▸ `Protected` **internalInit**(): `void`
+▸ **internalInit**(): `void`
 
 #### Returns
 
@@ -2914,13 +2914,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L150)
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
 
 ___
 
 ### internalRefresh
 
-▸ `Protected` **internalRefresh**(): `void`
+▸ **internalRefresh**(): `void`
 
 #### Returns
 
@@ -2932,13 +2932,31 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1010](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1010)
+[src/ui/datagrid/datagrid.ts:959](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L959)
+
+___
+
+### internalRenderContents
+
+▸ **internalRenderContents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[internalRenderContents](CheckTreeEditor.md#internalrendercontents)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
 
 ___
 
 ### invokeSubmitHandlers
 
-▸ `Protected` **invokeSubmitHandlers**(): `void`
+▸ **invokeSubmitHandlers**(): `void`
 
 #### Returns
 
@@ -2950,13 +2968,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1173)
+[src/ui/datagrid/datagrid.ts:1119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1119)
 
 ___
 
 ### isThreeStateHierarchy
 
-▸ `Protected` **isThreeStateHierarchy**(): `boolean`
+▸ **isThreeStateHierarchy**(): `boolean`
 
 #### Returns
 
@@ -2968,13 +2986,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L112)
+[src/ui/editors/checktreeeditor.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L115)
 
 ___
 
 ### itemAt
 
-▸ **itemAt**(`row`): [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>
+▸ **itemAt**(`row`): [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>
 
 #### Parameters
 
@@ -2984,7 +3002,7 @@ ___
 
 #### Returns
 
-[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>
+[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>
 
 #### Inherited from
 
@@ -2992,13 +3010,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:553](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L553)
+[src/ui/datagrid/datagrid.ts:503](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L503)
 
 ___
 
 ### itemLink
 
-▸ `Protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../README.md#format)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+▸ **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../README.md#format)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Parameters
 
@@ -3006,13 +3024,13 @@ ___
 | :------ | :------ | :------ |
 | `itemType?` | `string` | `undefined` |
 | `idField?` | `string` | `undefined` |
-| `text?` | (`ctx`: `FormatterContext`<`any`\>) => `string` | `undefined` |
-| `cssClass?` | (`ctx`: `FormatterContext`<`any`\>) => `string` | `undefined` |
+| `text?` | [`Format`](../README.md#format)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\> | `undefined` |
+| `cssClass?` | (`ctx`: `FormatterContext`\<`any`\>) => `string` | `undefined` |
 | `encode` | `boolean` | `true` |
 
 #### Returns
 
-[`Format`](../README.md#format)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+[`Format`](../README.md#format)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Inherited from
 
@@ -3020,19 +3038,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:876](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L876)
+[src/ui/datagrid/datagrid.ts:830](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L830)
 
 ___
 
 ### itemSelectedChanged
 
-▸ `Protected` **itemSelectedChanged**(`item`): `void`
+▸ **itemSelectedChanged**(`item`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 
 #### Returns
 
@@ -3044,13 +3062,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L105)
+[src/ui/editors/checktreeeditor.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L108)
 
 ___
 
 ### layout
 
-▸ `Protected` **layout**(): `void`
+▸ **layout**(): `void`
 
 #### Returns
 
@@ -3062,13 +3080,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L209)
+[src/ui/datagrid/datagrid.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L165)
 
 ___
 
 ### markupReady
 
-▸ `Protected` **markupReady**(): `void`
+▸ **markupReady**(): `void`
 
 #### Returns
 
@@ -3080,13 +3098,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:748](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L748)
+[src/ui/datagrid/datagrid.ts:698](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L698)
 
 ___
 
 ### moveSelectedUp
 
-▸ `Protected` **moveSelectedUp**(): `boolean`
+▸ **moveSelectedUp**(): `boolean`
 
 #### Returns
 
@@ -3098,19 +3116,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L576)
+[src/ui/editors/checktreeeditor.ts:586](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L586)
 
 ___
 
 ### onClick
 
-▸ `Protected` **onClick**(`e`, `row`, `cell`): `void`
+▸ **onClick**(`e`, `row`, `cell`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQueryEventObject` |
+| `e` | `Event` |
 | `row` | `number` |
 | `cell` | `number` |
 
@@ -3124,19 +3142,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L165)
+[src/ui/editors/checktreeeditor.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L167)
 
 ___
 
 ### onViewFilter
 
-▸ `Protected` **onViewFilter**(`item`): `boolean`
+▸ **onViewFilter**(`item`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 
 #### Returns
 
@@ -3148,23 +3166,23 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:569](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L569)
+[src/ui/editors/checktreeeditor.ts:580](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L580)
 
 ___
 
 ### onViewProcessData
 
-▸ `Protected` **onViewProcessData**(`response`): [`ListResponse`](../interfaces/ListResponse.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+▸ **onViewProcessData**(`response`): [`ListResponse`](../interfaces/ListResponse.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `response` | [`ListResponse`](../interfaces/ListResponse.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\> |
+| `response` | [`ListResponse`](../interfaces/ListResponse.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\> |
 
 #### Returns
 
-[`ListResponse`](../interfaces/ListResponse.md)<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>\>
+[`ListResponse`](../interfaces/ListResponse.md)\<[`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>\>
 
 #### Inherited from
 
@@ -3172,13 +3190,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L154)
+[src/ui/editors/checktreeeditor.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L156)
 
 ___
 
 ### onViewSubmit
 
-▸ `Protected` **onViewSubmit**(): `boolean`
+▸ **onViewSubmit**(): `boolean`
 
 #### Returns
 
@@ -3190,13 +3208,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L736)
+[src/ui/datagrid/datagrid.ts:686](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L686)
 
 ___
 
 ### persistSettings
 
-▸ `Protected` **persistSettings**(`flags?`): `void` \| `Promise`<`void`\>
+▸ **persistSettings**(`flags?`): `void` \| `Promise`\<`void`\>
 
 #### Parameters
 
@@ -3206,7 +3224,7 @@ ___
 
 #### Returns
 
-`void` \| `Promise`<`void`\>
+`void` \| `Promise`\<`void`\>
 
 #### Inherited from
 
@@ -3214,13 +3232,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1407](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1407)
+[src/ui/datagrid/datagrid.ts:1353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1353)
 
 ___
 
 ### populateLock
 
-▸ `Protected` **populateLock**(): `void`
+▸ **populateLock**(): `void`
 
 #### Returns
 
@@ -3232,13 +3250,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:978](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L978)
+[src/ui/datagrid/datagrid.ts:927](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L927)
 
 ___
 
 ### populateUnlock
 
-▸ `Protected` **populateUnlock**(): `void`
+▸ **populateUnlock**(): `void`
 
 #### Returns
 
@@ -3250,13 +3268,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:982](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L982)
+[src/ui/datagrid/datagrid.ts:931](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L931)
 
 ___
 
 ### populateWhenVisible
 
-▸ `Protected` **populateWhenVisible**(): `boolean`
+▸ **populateWhenVisible**(): `boolean`
 
 #### Returns
 
@@ -3268,23 +3286,23 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:794](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L794)
+[src/ui/datagrid/datagrid.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L743)
 
 ___
 
 ### postProcessColumns
 
-▸ `Protected` **postProcessColumns**(`columns`): `Column`<`any`\>[]
+▸ **postProcessColumns**(`columns`): `Column`\<`any`\>[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `columns` | `Column`<`any`\>[] |
+| `columns` | `Column`\<`any`\>[] |
 
 #### Returns
 
-`Column`<`any`\>[]
+`Column`\<`any`\>[]
 
 #### Inherited from
 
@@ -3292,13 +3310,37 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L442)
+[src/ui/datagrid/datagrid.ts:392](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L392)
+
+___
+
+### propertyItemsReady
+
+▸ **propertyItemsReady**(`itemsData`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `itemsData` | [`PropertyItemsData`](../interfaces/PropertyItemsData.md) |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[propertyItemsReady](CheckTreeEditor.md#propertyitemsready)
+
+#### Defined in
+
+[src/ui/datagrid/datagrid.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L121)
 
 ___
 
 ### propertyItemsToSlickColumns
 
-▸ `Protected` **propertyItemsToSlickColumns**(`propertyItems`): `Column`<`any`\>[]
+▸ **propertyItemsToSlickColumns**(`propertyItems`): `Column`\<`any`\>[]
 
 #### Parameters
 
@@ -3308,7 +3350,7 @@ ___
 
 #### Returns
 
-`Column`<`any`\>[]
+`Column`\<`any`\>[]
 
 #### Inherited from
 
@@ -3316,19 +3358,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:936](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L936)
+[src/ui/datagrid/datagrid.ts:900](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L900)
 
 ___
 
 ### quickFilterChange
 
-▸ `Protected` **quickFilterChange**(`e`): `void`
+▸ **quickFilterChange**(`e`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQueryEventObject` |
+| `e` | `Event` |
 
 #### Returns
 
@@ -3340,7 +3382,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1179)
+[src/ui/datagrid/datagrid.ts:1125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1125)
 
 ___
 
@@ -3358,13 +3400,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:990](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L990)
+[src/ui/datagrid/datagrid.ts:939](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L939)
 
 ___
 
 ### refreshIfNeeded
 
-▸ `Protected` **refreshIfNeeded**(): `void`
+▸ **refreshIfNeeded**(): `void`
 
 #### Returns
 
@@ -3376,17 +3418,39 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1003](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1003)
+[src/ui/datagrid/datagrid.ts:952](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L952)
+
+___
+
+### render
+
+▸ **render**(): `any`
+
+Returns the main element for this widget or the document fragment.
+As widgets may get their elements from props unlike regular JSX widgets, 
+this method should not be overridden. Override renderContents() instead.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[render](CheckTreeEditor.md#render)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
 
 ___
 
 ### renderContents
 
-▸ `Protected` **renderContents**(): `void`
+▸ **renderContents**(): `any`
 
 #### Returns
 
-`void`
+`any`
 
 #### Inherited from
 
@@ -3394,13 +3458,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
+[src/ui/widgets/widget.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L178)
 
 ___
 
 ### resizeCanvas
 
-▸ `Protected` **resizeCanvas**(): `void`
+▸ **resizeCanvas**(): `void`
 
 #### Returns
 
@@ -3412,13 +3476,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1121)
+[src/ui/datagrid/datagrid.ts:1067](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1067)
 
 ___
 
 ### restoreSettings
 
-▸ `Protected` **restoreSettings**(`settings?`, `flags?`): `void` \| `Promise`<`void`\>
+▸ **restoreSettings**(`settings?`, `flags?`): `void` \| `Promise`\<`void`\>
 
 #### Parameters
 
@@ -3429,7 +3493,7 @@ ___
 
 #### Returns
 
-`void` \| `Promise`<`void`\>
+`void` \| `Promise`\<`void`\>
 
 #### Inherited from
 
@@ -3437,13 +3501,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1244](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1244)
+[src/ui/datagrid/datagrid.ts:1190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1190)
 
 ___
 
 ### restoreSettingsFrom
 
-▸ `Protected` **restoreSettingsFrom**(`settings`, `flags?`): `void`
+▸ **restoreSettingsFrom**(`settings`, `flags?`): `void`
 
 #### Parameters
 
@@ -3462,7 +3526,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1255)
+[src/ui/datagrid/datagrid.ts:1201](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1201)
 
 ___
 
@@ -3480,19 +3544,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:557](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L557)
+[src/ui/datagrid/datagrid.ts:507](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L507)
 
 ___
 
 ### setAllSubTreeSelected
 
-▸ `Protected` **setAllSubTreeSelected**(`item`, `selected`): `boolean`
+▸ **setAllSubTreeSelected**(`item`, `selected`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\> |
+| `item` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\> |
 | `selected` | `boolean` |
 
 #### Returns
@@ -3505,13 +3569,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L255)
+[src/ui/editors/checktreeeditor.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L257)
 
 ___
 
 ### setCascadeFrom
 
-▸ `Protected` **setCascadeFrom**(`value`): `void`
+▸ **setCascadeFrom**(`value`): `void`
 
 #### Parameters
 
@@ -3525,13 +3589,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L594)
+[src/ui/editors/checktreeeditor.ts:604](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L604)
 
 ___
 
 ### setCriteriaParameter
 
-▸ `Protected` **setCriteriaParameter**(): `void`
+▸ **setCriteriaParameter**(): `void`
 
 #### Returns
 
@@ -3543,7 +3607,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:712](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L712)
+[src/ui/datagrid/datagrid.ts:662](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L662)
 
 ___
 
@@ -3568,13 +3632,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L74)
+[src/ui/editors/checktreeeditor.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L77)
 
 ___
 
 ### setEquality
 
-▸ `Protected` **setEquality**(`field`, `value`): `void`
+▸ **setEquality**(`field`, `value`): `void`
 
 #### Parameters
 
@@ -3593,13 +3657,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:722](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L722)
+[src/ui/datagrid/datagrid.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L672)
 
 ___
 
 ### setIncludeColumnsParameter
 
-▸ `Protected` **setIncludeColumnsParameter**(): `void`
+▸ **setIncludeColumnsParameter**(): `void`
 
 #### Returns
 
@@ -3611,13 +3675,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L726)
+[src/ui/datagrid/datagrid.ts:676](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L676)
 
 ___
 
 ### setInitialSortOrder
 
-▸ `Protected` **setInitialSortOrder**(): `void`
+▸ **setInitialSortOrder**(): `void`
 
 #### Returns
 
@@ -3629,7 +3693,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:528](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L528)
+[src/ui/datagrid/datagrid.ts:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L478)
 
 ___
 
@@ -3653,7 +3717,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1014](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1014)
+[src/ui/datagrid/datagrid.ts:963](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L963)
 
 ___
 
@@ -3665,7 +3729,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `value` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>[] |
+| `value` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>[] |
 
 #### Returns
 
@@ -3677,7 +3741,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:565](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L565)
+[src/ui/datagrid/datagrid.ts:515](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L515)
 
 ___
 
@@ -3701,13 +3765,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:852](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L852)
+[src/ui/datagrid/datagrid.ts:804](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L804)
 
 ___
 
 ### set\_cascadeField
 
-▸ `Protected` **set_cascadeField**(`value`): `void`
+▸ **set_cascadeField**(`value`): `void`
 
 #### Parameters
 
@@ -3721,13 +3785,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:632](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L632)
+[src/ui/editors/checktreeeditor.ts:642](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L642)
 
 ___
 
 ### set\_cascadeFrom
 
-▸ `Protected` **set_cascadeFrom**(`value`): `void`
+▸ **set_cascadeFrom**(`value`): `void`
 
 #### Parameters
 
@@ -3741,13 +3805,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:613](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L613)
+[src/ui/editors/checktreeeditor.ts:623](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L623)
 
 ___
 
 ### set\_cascadeValue
 
-▸ `Protected` **set_cascadeValue**(`value`): `void`
+▸ **set_cascadeValue**(`value`): `void`
 
 #### Parameters
 
@@ -3761,13 +3825,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:648](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L648)
+[src/ui/editors/checktreeeditor.ts:658](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L658)
 
 ___
 
 ### set\_filterField
 
-▸ `Protected` **set_filterField**(`value`): `void`
+▸ **set_filterField**(`value`): `void`
 
 #### Parameters
 
@@ -3781,13 +3845,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L668)
+[src/ui/editors/checktreeeditor.ts:678](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L678)
 
 ___
 
 ### set\_filterValue
 
-▸ `Protected` **set_filterValue**(`value`): `void`
+▸ **set_filterValue**(`value`): `void`
 
 #### Parameters
 
@@ -3801,7 +3865,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:684](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L684)
+[src/ui/editors/checktreeeditor.ts:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L694)
 
 ___
 
@@ -3825,13 +3889,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L397)
+[src/ui/editors/checktreeeditor.ts:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L399)
 
 ___
 
 ### sortItems
 
-▸ `Protected` **sortItems**(): `void`
+▸ **sortItems**(): `void`
 
 #### Returns
 
@@ -3843,13 +3907,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L359)
+[src/ui/editors/checktreeeditor.ts:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L361)
 
 ___
 
 ### subDialogDataChange
 
-▸ `Protected` **subDialogDataChange**(): `void`
+▸ **subDialogDataChange**(): `void`
 
 #### Returns
 
@@ -3861,13 +3925,45 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1125)
+[src/ui/datagrid/datagrid.ts:1071](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1071)
+
+___
+
+### syncOrAsyncThen
+
+▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `syncMethod` | () => `T` |
+| `asyncMethod` | () => `PromiseLike`\<`T`\> |
+| `then` | (`v`: `T`) => `void` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[syncOrAsyncThen](CheckTreeEditor.md#syncorasyncthen)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
 
 ___
 
 ### tryFindQuickFilter
 
-▸ `Protected` **tryFindQuickFilter**<`TWidget`\>(`type`, `field`): `TWidget`
+▸ **tryFindQuickFilter**\<`TWidget`\>(`type`, `field`): `TWidget`
 
 #### Type parameters
 
@@ -3892,13 +3988,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:339](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L339)
+[src/ui/datagrid/datagrid.ts:296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L296)
 
 ___
 
 ### updateDisabledState
 
-▸ `Protected` **updateDisabledState**(): `void`
+▸ **updateDisabledState**(): `void`
 
 #### Returns
 
@@ -3910,13 +4006,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1117)
+[src/ui/datagrid/datagrid.ts:1063](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1063)
 
 ___
 
 ### updateFlags
 
-▸ `Protected` **updateFlags**(): `void`
+▸ **updateFlags**(): `void`
 
 #### Returns
 
@@ -3928,7 +4024,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L214)
+[src/ui/editors/checktreeeditor.ts:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L216)
 
 ___
 
@@ -3946,13 +4042,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:1046](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L1046)
+[src/ui/datagrid/datagrid.ts:995](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L995)
 
 ___
 
 ### updateItems
 
-▸ `Protected` **updateItems**(): `void`
+▸ **updateItems**(): `void`
 
 #### Returns
 
@@ -3964,13 +4060,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:488](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L488)
+[src/ui/editors/checktreeeditor.ts:499](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L499)
 
 ___
 
 ### updateSelectAll
 
-▸ `Protected` **updateSelectAll**(): `void`
+▸ **updateSelectAll**(): `void`
 
 #### Returns
 
@@ -3982,13 +4078,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L208)
+[src/ui/editors/checktreeeditor.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L210)
 
 ___
 
 ### useAsync
 
-▸ `Protected` **useAsync**(): `boolean`
+▸ **useAsync**(): `boolean`
 
 #### Returns
 
@@ -4000,13 +4096,31 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L197)
+[src/ui/datagrid/datagrid.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L157)
+
+___
+
+### useIdPrefix
+
+▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
+
+#### Returns
+
+[`IdPrefixType`](../README.md#idprefixtype)
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[useIdPrefix](CheckTreeEditor.md#useidprefix)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
 
 ___
 
 ### useLayoutTimer
 
-▸ `Protected` **useLayoutTimer**(): `boolean`
+▸ **useLayoutTimer**(): `boolean`
 
 #### Returns
 
@@ -4018,13 +4132,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:201](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L201)
+[src/ui/datagrid/datagrid.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L161)
 
 ___
 
 ### usePager
 
-▸ `Protected` **usePager**(): `boolean`
+▸ **usePager**(): `boolean`
 
 #### Returns
 
@@ -4036,20 +4150,20 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:785](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L785)
+[src/ui/datagrid/datagrid.ts:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L735)
 
 ___
 
 ### viewDataChanged
 
-▸ `Protected` **viewDataChanged**(`e`, `rows`): `void`
+▸ **viewDataChanged**(`e`, `rows`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `e` | `any` |
-| `rows` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)<`TItem`\>[] |
+| `rows` | [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>[] |
 
 #### Returns
 
@@ -4061,26 +4175,51 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:664](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L664)
+[src/ui/datagrid/datagrid.ts:614](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L614)
 
 ___
 
-### create
+### wrapFormatterWithEditLink
 
-▸ `Static` **create**<`TWidget`, `TOpt`\>(`params`): `TWidget`
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`TOpt`, `TWidget`\> |
-| `TOpt` | `TOpt` |
+▸ **wrapFormatterWithEditLink**(`column`, `item`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)<`TWidget`, `TOpt`\> |
+| `column` | `Column`\<`any`\> |
+| `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[CheckTreeEditor](CheckTreeEditor.md).[wrapFormatterWithEditLink](CheckTreeEditor.md#wrapformatterwitheditlink)
+
+#### Defined in
+
+[src/ui/datagrid/datagrid.ts:885](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L885)
+
+___
+
+### create
+
+▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
+| `P` | `P` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -4092,43 +4231,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
 
 ___
 
-### elementFor
+### createDefaultElement
 
-▸ `Static` **elementFor**<`TWidget`\>(`editorType`): `JQuery`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TWidget` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editorType` | (...`args`: `any`[]) => `TWidget` |
+▸ **createDefaultElement**(): `HTMLDivElement`
 
 #### Returns
 
-`JQuery`
+`HTMLDivElement`
 
 #### Inherited from
 
-[CheckTreeEditor](CheckTreeEditor.md).[elementFor](CheckTreeEditor.md#elementfor)
+[CheckTreeEditor](CheckTreeEditor.md).[createDefaultElement](CheckTreeEditor.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L128)
+[src/ui/editors/checktreeeditor.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L30)
 
 ___
 
 ### getWidgetName
 
-▸ `Static` **getWidgetName**(`type`): `string`
+▸ **getWidgetName**(`type`): `string`
 
 #### Parameters
 
@@ -4146,13 +4273,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
+[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
 
 ___
 
 ### propertyItemToQuickFilter
 
-▸ `Static` **propertyItemToQuickFilter**(`item`): `any`
+▸ **propertyItemToQuickFilter**(`item`): `any`
 
 #### Parameters
 
@@ -4170,4 +4297,4 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:278](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L278)
+[src/ui/datagrid/datagrid.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L235)

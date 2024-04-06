@@ -22,7 +22,11 @@
 
 ### constructor
 
-• **new IDoubleValue**()
+• **new IDoubleValue**(): [`IDoubleValue`](IDoubleValue.md)
+
+#### Returns
+
+[`IDoubleValue`](IDoubleValue.md)
 
 ## Methods
 

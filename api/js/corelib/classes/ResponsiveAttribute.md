@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new ResponsiveAttribute**(`value?`)
+• **new ResponsiveAttribute**(`value?`): [`ResponsiveAttribute`](ResponsiveAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ | :------ |
 | `value` | `boolean` | `true` |
 
+#### Returns
+
+[`ResponsiveAttribute`](ResponsiveAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L221)
+[src/types/attributes.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L222)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L221)
+[src/types/attributes.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L222)

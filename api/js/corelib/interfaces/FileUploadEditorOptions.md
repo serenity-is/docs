@@ -10,6 +10,8 @@
 
   ↳↳ [`ImageUploadEditorOptions`](ImageUploadEditorOptions.md)
 
+  ↳↳ [`MultipleFileUploadEditorOptions`](MultipleFileUploadEditorOptions.md)
+
 ## Table of contents
 
 ### Properties
@@ -39,7 +41,7 @@
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L269)
+[src/ui/helpers/uploadhelper.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L240)
 
 ___
 
@@ -49,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L9)
+[src/ui/editors/uploadeditors.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L10)
 
 ___
 
@@ -63,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L266)
+[src/ui/helpers/uploadhelper.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L237)
 
 ___
 
@@ -77,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L268)
+[src/ui/helpers/uploadhelper.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L239)
 
 ___
 
@@ -91,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L264)
+[src/ui/helpers/uploadhelper.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L235)
 
 ___
 
@@ -105,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L265)
+[src/ui/helpers/uploadhelper.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L236)
 
 ___
 
@@ -119,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L267)
+[src/ui/helpers/uploadhelper.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L238)
 
 ___
 
@@ -133,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L263)
+[src/ui/helpers/uploadhelper.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L234)
 
 ___
 
@@ -147,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L270)
+[src/ui/helpers/uploadhelper.ts:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L241)
 
 ___
 
@@ -157,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L10)
+[src/ui/editors/uploadeditors.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L11)
 
 ___
 
@@ -167,7 +169,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L11)
+[src/ui/editors/uploadeditors.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L12)
 
 ___
 
@@ -177,4 +179,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L12)
+[src/ui/editors/uploadeditors.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L13)

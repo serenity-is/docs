@@ -2,13 +2,19 @@
 
 # Interface: DataChangeInfo
 
+## Hierarchy
+
+- `Event`
+
+  ↳ **`DataChangeInfo`**
+
 ## Table of contents
 
 ### Properties
 
 - [entity](DataChangeInfo.md#entity)
 - [entityId](DataChangeInfo.md#entityid)
-- [type](DataChangeInfo.md#type)
+- [operationType](DataChangeInfo.md#operationtype)
 
 ## Properties
 
@@ -32,9 +38,9 @@ ___
 
 ___
 
-### type
+### operationType
 
-• **type**: `string`
+• **operationType**: `string`
 
 #### Defined in
 

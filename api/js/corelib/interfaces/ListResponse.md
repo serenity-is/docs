@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / ListResponse
 
-# Interface: ListResponse<TEntity\>
+# Interface: ListResponse\<TEntity\>
 
 ## Type parameters
 
@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L93)
+[../base/dist/index.d.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L519)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L10)
+[../base/dist/index.d.ts:456](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L456)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L96)
+[../base/dist/index.d.ts:522](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L522)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L97)
+[../base/dist/index.d.ts:523](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L523)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L95)
+[../base/dist/index.d.ts:521](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L521)
 
 ___
 
@@ -87,4 +87,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L94)
+[../base/dist/index.d.ts:520](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L520)

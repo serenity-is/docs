@@ -5,9 +5,9 @@
 ## Implemented by
 
 - [`CheckTreeEditor`](CheckTreeEditor.md)
+- [`ComboboxEditor`](ComboboxEditor.md)
 - [`FileUploadEditor`](FileUploadEditor.md)
 - [`MultipleFileUploadEditor`](MultipleFileUploadEditor.md)
-- [`Select2Editor`](Select2Editor.md)
 
 ## Table of contents
 
@@ -23,7 +23,11 @@
 
 ### constructor
 
-• **new ISetEditValue**()
+• **new ISetEditValue**(): [`ISetEditValue`](ISetEditValue.md)
+
+#### Returns
+
+[`ISetEditValue`](ISetEditValue.md)
 
 ## Methods
 

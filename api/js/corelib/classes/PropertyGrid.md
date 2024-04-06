@@ -1,10 +1,16 @@
 [@serenity-is/corelib](../README.md) / PropertyGrid
 
-# Class: PropertyGrid
+# Class: PropertyGrid\<P\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | extends [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md) = [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md) |
 
 ## Hierarchy
 
-- [`Widget`](Widget.md)<[`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)\>
+- [`Widget`](Widget.md)\<`P`\>
 
   ↳ **`PropertyGrid`**
 
@@ -16,16 +22,18 @@
 
 ### Properties
 
+- [domNode](PropertyGrid.md#domnode)
 - [editors](PropertyGrid.md#editors)
-- [element](PropertyGrid.md#element)
 - [idPrefix](PropertyGrid.md#idprefix)
 - [items](PropertyGrid.md#items)
 - [options](PropertyGrid.md#options)
 - [uniqueName](PropertyGrid.md#uniquename)
-- [widgetName](PropertyGrid.md#widgetname)
+- [typeInfo](PropertyGrid.md#typeinfo)
 
 ### Accessors
 
+- [element](PropertyGrid.md#element)
+- [props](PropertyGrid.md#props)
 - [value](PropertyGrid.md#value)
 
 ### Methods
@@ -45,72 +53,82 @@
 - [enumerateItems](PropertyGrid.md#enumerateitems)
 - [getCategoryOrder](PropertyGrid.md#getcategoryorder)
 - [getCssClass](PropertyGrid.md#getcssclass)
+- [getCustomAttribute](PropertyGrid.md#getcustomattribute)
+- [getFieldElement](PropertyGrid.md#getfieldelement)
 - [getGridField](PropertyGrid.md#getgridfield)
 - [get\_editors](PropertyGrid.md#get_editors)
 - [get\_idPrefix](PropertyGrid.md#get_idprefix)
 - [get\_items](PropertyGrid.md#get_items)
 - [get\_mode](PropertyGrid.md#get_mode)
 - [init](PropertyGrid.md#init)
-- [initialize](PropertyGrid.md#initialize)
+- [internalInit](PropertyGrid.md#internalinit)
+- [internalRenderContents](PropertyGrid.md#internalrendercontents)
 - [load](PropertyGrid.md#load)
+- [render](PropertyGrid.md#render)
 - [renderContents](PropertyGrid.md#rendercontents)
 - [save](PropertyGrid.md#save)
 - [set\_mode](PropertyGrid.md#set_mode)
+- [syncOrAsyncThen](PropertyGrid.md#syncorasyncthen)
 - [updateInterface](PropertyGrid.md#updateinterface)
+- [useIdPrefix](PropertyGrid.md#useidprefix)
 - [create](PropertyGrid.md#create)
-- [elementFor](PropertyGrid.md#elementfor)
+- [createDefaultElement](PropertyGrid.md#createdefaultelement)
 - [getWidgetName](PropertyGrid.md#getwidgetname)
-- [loadEditorValue](PropertyGrid.md#loadeditorvalue)
-- [saveEditorValue](PropertyGrid.md#saveeditorvalue)
 - [setMaxLength](PropertyGrid.md#setmaxlength)
-- [setReadOnly](PropertyGrid.md#setreadonly)
-- [setReadonly](PropertyGrid.md#setreadonly-1)
-- [setRequired](PropertyGrid.md#setrequired)
 
 ## Constructors
 
 ### constructor
 
-• **new PropertyGrid**(`div`, `opt`)
+• **new PropertyGrid**\<`P`\>(`props`): [`PropertyGrid`](PropertyGrid.md)\<`P`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | extends [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md) = [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md) |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `div` | `JQuery` |
-| `opt` | [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md) |
+| `props` | [`WidgetProps`](../README.md#widgetprops)\<`P`\> |
 
-#### Overrides
+#### Returns
+
+[`PropertyGrid`](PropertyGrid.md)\<`P`\>
+
+#### Inherited from
 
 [Widget](Widget.md).[constructor](Widget.md#constructor)
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L15)
+[src/ui/widgets/widget.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L20)
 
 ## Properties
 
-### editors
+### domNode
 
-• `Private` **editors**: [`Widget`](Widget.md)<`any`\>[]
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L11)
-
-___
-
-### element
-
-• **element**: `JQuery`
+• `Readonly` **domNode**: `HTMLElement`
 
 #### Inherited from
 
-[Widget](Widget.md).[element](Widget.md#element)
+[Widget](Widget.md).[domNode](Widget.md#domnode)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L61)
+[src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
+
+___
+
+### editors
+
+• `Private` **editors**: [`Widget`](Widget.md)\<`any`\>[]
+
+#### Defined in
+
+[src/ui/widgets/propertygrid.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L13)
 
 ___
 
@@ -118,13 +136,13 @@ ___
 
 • `Readonly` **idPrefix**: `string`
 
-#### Overrides
+#### Inherited from
 
 [Widget](Widget.md).[idPrefix](Widget.md#idprefix)
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L13)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
@@ -134,13 +152,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L12)
+[src/ui/widgets/propertygrid.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L14)
 
 ___
 
 ### options
 
-• `Protected` **options**: [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
+• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Inherited from
 
@@ -148,13 +166,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L62)
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ___
 
 ### uniqueName
 
-• `Protected` **uniqueName**: `string`
+• `Protected` `Readonly` **uniqueName**: `string`
 
 #### Inherited from
 
@@ -162,23 +180,61 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L64)
+[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ___
 
-### widgetName
+### typeInfo
 
-• `Protected` **widgetName**: `string`
+▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
 
 #### Inherited from
 
-[Widget](Widget.md).[widgetName](Widget.md#widgetname)
+[Widget](Widget.md).[typeInfo](Widget.md#typeinfo)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
 
 ## Accessors
+
+### element
+
+• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+Returns a Fluent(this.domNode) object
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+Widget.element
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
+
+___
+
+### props
+
+• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Returns
+
+[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Inherited from
+
+Widget.props
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
+
+___
 
 ### value
 
@@ -190,7 +246,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:570](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L570)
+[src/ui/widgets/propertygrid.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L508)
 
 • `set` **value**(`val`): `void`
 
@@ -206,13 +262,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L574)
+[src/ui/widgets/propertygrid.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L512)
 
 ## Methods
 
 ### addCssClass
 
-▸ `Protected` **addCssClass**(): `void`
+▸ **addCssClass**(): `void`
 
 #### Returns
 
@@ -224,24 +280,24 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 ___
 
 ### addValidationRule
 
-▸ **addValidationRule**(`eventClass`, `rule`): `JQuery`
+▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `eventClass` | `string` |
-| `rule` | (`p1`: `JQuery`) => `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `uniqueName?` | `string` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Inherited from
 
@@ -249,13 +305,34 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L134)
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
+
+▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `uniqueName` | `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[Widget](Widget.md).[addValidationRule](Widget.md#addvalidationrule)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
 ___
 
 ### canModifyItem
 
-▸ `Private` **canModifyItem**(`item`): `boolean`
+▸ **canModifyItem**(`item`): `boolean`
 
 #### Parameters
 
@@ -269,19 +346,19 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:580](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L580)
+[src/ui/widgets/propertygrid.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L518)
 
 ___
 
 ### categoryLinkClick
 
-▸ `Private` **categoryLinkClick**(`e`): `void`
+▸ **categoryLinkClick**(`e`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQueryEventObject` |
+| `e` | `Event` |
 
 #### Returns
 
@@ -289,7 +366,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L198)
+[src/ui/widgets/propertygrid.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L182)
 
 ___
 
@@ -301,7 +378,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -313,27 +390,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[change](Widget.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L259)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ___
 
@@ -345,7 +402,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -357,104 +414,84 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[changeSelect2](Widget.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L260)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 ___
 
 ### createCategoryDiv
 
-▸ `Private` **createCategoryDiv**(`categoriesDiv`, `categoryIndexes`, `category`, `collapsed`): `JQuery`
+▸ **createCategoryDiv**(`categoriesDiv`, `categoryIndexes`, `category`, `collapsed`): `HTMLElement`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `categoriesDiv` | `JQuery` |
+| `categoriesDiv` | `HTMLElement` |
 | `categoryIndexes` | `Object` |
 | `category` | `string` |
 | `collapsed` | `boolean` |
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L167)
+[src/ui/widgets/propertygrid.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L153)
 
 ___
 
 ### createCategoryLinks
 
-▸ `Private` **createCategoryLinks**(`container`, `items`): `Record`<`string`, `number`\>
+▸ **createCategoryLinks**(`container`, `items`): `Record`\<`string`, `number`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `container` | `JQuery` |
+| `container` | `HTMLElement` |
 | `items` | [`PropertyItem`](../interfaces/PropertyItem.md)[] |
 
 #### Returns
 
-`Record`<`string`, `number`\>
+`Record`\<`string`, `number`\>
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:413](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L413)
+[src/ui/widgets/propertygrid.ts:382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L382)
 
 ___
 
 ### createField
 
-▸ `Private` **createField**(`container`, `item`): `any`
+▸ **createField**(`container`, `item`): [`Widget`](Widget.md)\<[`WidgetProps`](../README.md#widgetprops)\<`P`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `container` | `JQuery` |
+| `container` | `HTMLElement` |
 | `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
 
 #### Returns
 
-`any`
+[`Widget`](Widget.md)\<[`WidgetProps`](../README.md#widgetprops)\<`P`\>\>
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L255)
+[src/ui/widgets/propertygrid.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L228)
 
 ___
 
 ### createItems
 
-▸ `Private` **createItems**(`container`, `items`): `void`
+▸ **createItems**(`container`, `items`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `container` | `JQuery` |
+| `container` | `HTMLElement` |
 | `items` | [`PropertyItem`](../interfaces/PropertyItem.md)[] |
 
 #### Returns
@@ -463,7 +500,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L113)
+[src/ui/widgets/propertygrid.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L99)
 
 ___
 
@@ -481,13 +518,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L100)
+[src/ui/widgets/propertygrid.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L82)
 
 ___
 
 ### determineText
 
-▸ `Private` **determineText**(`text`, `getKey`): `string`
+▸ **determineText**(`text`, `getKey`): `string`
 
 #### Parameters
 
@@ -502,7 +539,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L233)
+[src/ui/widgets/propertygrid.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L206)
 
 ___
 
@@ -514,7 +551,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | (`p1`: [`PropertyItem`](../interfaces/PropertyItem.md), `p2`: [`Widget`](Widget.md)<`any`\>) => `void` |
+| `callback` | (`p1`: [`PropertyItem`](../interfaces/PropertyItem.md), `p2`: [`Widget`](Widget.md)\<`any`\>) => `void` |
 
 #### Returns
 
@@ -522,13 +559,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L628)
+[src/ui/widgets/propertygrid.ts:566](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L566)
 
 ___
 
 ### getCategoryOrder
 
-▸ `Private` **getCategoryOrder**(`items`): `any`
+▸ **getCategoryOrder**(`items`): `any`
 
 #### Parameters
 
@@ -542,13 +579,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L382)
+[src/ui/widgets/propertygrid.ts:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L351)
 
 ___
 
 ### getCssClass
 
-▸ `Protected` **getCssClass**(): `string`
+▸ **getCssClass**(): `string`
 
 #### Returns
 
@@ -560,21 +597,34 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L104)
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
 
 ___
 
-### getGridField
+### getCustomAttribute
 
-▸ **getGridField**(): `JQuery`
+▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TAttr` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
 
 #### Returns
 
-`JQuery`
+`TAttr`
 
 #### Inherited from
 
-[Widget](Widget.md).[getGridField](Widget.md#getgridfield)
+[Widget](Widget.md).[getCustomAttribute](Widget.md#getcustomattribute)
 
 #### Defined in
 
@@ -582,17 +632,53 @@ ___
 
 ___
 
-### get\_editors
+### getFieldElement
 
-▸ **get_editors**(): [`Widget`](Widget.md)<`any`\>[]
+▸ **getFieldElement**(): `HTMLElement`
 
 #### Returns
 
-[`Widget`](Widget.md)<`any`\>[]
+`HTMLElement`
+
+#### Inherited from
+
+[Widget](Widget.md).[getFieldElement](Widget.md#getfieldelement)
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:483](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L483)
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
+___
+
+### getGridField
+
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+[Widget](Widget.md).[getGridField](Widget.md#getgridfield)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+
+___
+
+### get\_editors
+
+▸ **get_editors**(): [`Widget`](Widget.md)\<`any`\>[]
+
+#### Returns
+
+[`Widget`](Widget.md)\<`any`\>[]
+
+#### Defined in
+
+[src/ui/widgets/propertygrid.ts:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L448)
 
 ___
 
@@ -606,7 +692,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L491)
+[src/ui/widgets/propertygrid.ts:456](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L456)
 
 ___
 
@@ -620,7 +706,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:487](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L487)
+[src/ui/widgets/propertygrid.ts:452](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L452)
 
 ___
 
@@ -634,23 +720,17 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:495](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L495)
+[src/ui/widgets/propertygrid.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L460)
 
 ___
 
 ### init
 
-▸ **init**(`action?`): [`PropertyGrid`](PropertyGrid.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `action?` | (`widget`: `any`) => `void` |
+▸ **init**(): `this`
 
 #### Returns
 
-[`PropertyGrid`](PropertyGrid.md)
+`this`
 
 #### Inherited from
 
@@ -658,13 +738,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
 ___
 
-### initialize
+### internalInit
 
-▸ **initialize**(): `void`
+▸ **internalInit**(): `void`
 
 #### Returns
 
@@ -672,11 +752,29 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[initialize](Widget.md#initialize)
+[Widget](Widget.md).[internalInit](Widget.md#internalinit)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L176)
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+___
+
+### internalRenderContents
+
+▸ **internalRenderContents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[Widget](Widget.md).[internalRenderContents](Widget.md#internalrendercontents)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
 
 ___
 
@@ -696,25 +794,47 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:544](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L544)
+[src/ui/widgets/propertygrid.ts:482](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L482)
+
+___
+
+### render
+
+▸ **render**(): `any`
+
+Returns the main element for this widget or the document fragment.
+As widgets may get their elements from props unlike regular JSX widgets, 
+this method should not be overridden. Override renderContents() instead.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[Widget](Widget.md).[render](Widget.md#render)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
 
 ___
 
 ### renderContents
 
-▸ `Protected` **renderContents**(): `void`
+▸ **renderContents**(): `void`
 
 #### Returns
 
 `void`
 
-#### Inherited from
+#### Overrides
 
 [Widget](Widget.md).[renderContents](Widget.md#rendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
+[src/ui/widgets/propertygrid.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L16)
 
 ___
 
@@ -734,7 +854,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:557](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L557)
+[src/ui/widgets/propertygrid.ts:495](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L495)
 
 ___
 
@@ -754,7 +874,39 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:499](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L499)
+[src/ui/widgets/propertygrid.ts:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L464)
+
+___
+
+### syncOrAsyncThen
+
+▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `syncMethod` | () => `T` |
+| `asyncMethod` | () => `PromiseLike`\<`T`\> |
+| `then` | (`v`: `T`) => `void` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[Widget](Widget.md).[syncOrAsyncThen](Widget.md#syncorasyncthen)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
 
 ___
 
@@ -768,26 +920,44 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:606](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L606)
+[src/ui/widgets/propertygrid.ts:544](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L544)
+
+___
+
+### useIdPrefix
+
+▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
+
+#### Returns
+
+[`IdPrefixType`](../README.md#idprefixtype)
+
+#### Inherited from
+
+[Widget](Widget.md).[useIdPrefix](Widget.md#useidprefix)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
 
 ___
 
 ### create
 
-▸ `Static` **create**<`TWidget`, `TOpt`\>(`params`): `TWidget`
+▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`TOpt`, `TWidget`\> |
-| `TOpt` | `TOpt` |
+| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
+| `P` | `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)<`TWidget`, `TOpt`\> |
+| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -799,43 +969,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
 
 ___
 
-### elementFor
+### createDefaultElement
 
-▸ `Static` **elementFor**<`TWidget`\>(`editorType`): `JQuery`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TWidget` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editorType` | (...`args`: `any`[]) => `TWidget` |
+▸ **createDefaultElement**(): `HTMLElement`
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Inherited from
 
-[Widget](Widget.md).[elementFor](Widget.md#elementfor)
+[Widget](Widget.md).[createDefaultElement](Widget.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L128)
+[src/ui/widgets/widget.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L60)
 
 ___
 
 ### getWidgetName
 
-▸ `Static` **getWidgetName**(`type`): `string`
+▸ **getWidgetName**(`type`): `string`
 
 #### Parameters
 
@@ -853,63 +1011,19 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
-
-___
-
-### loadEditorValue
-
-▸ `Static` **loadEditorValue**(`editor`, `item`, `source`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editor` | [`Widget`](Widget.md)<`any`\> |
-| `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
-| `source` | `any` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:507](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L507)
-
-___
-
-### saveEditorValue
-
-▸ `Static` **saveEditorValue**(`editor`, `item`, `target`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editor` | [`Widget`](Widget.md)<`any`\> |
-| `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
-| `target` | `any` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L512)
+[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
 
 ___
 
 ### setMaxLength
 
-▸ `Static` `Private` **setMaxLength**(`widget`, `maxLength`): `void`
+▸ **setMaxLength**(`widget`, `maxLength`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `widget` | [`Widget`](Widget.md)<`any`\> |
+| `widget` | [`Widget`](Widget.md)\<`any`\> |
 | `maxLength` | `number` |
 
 #### Returns
@@ -918,67 +1032,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:533](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L533)
-
-___
-
-### setReadOnly
-
-▸ `Static` `Private` **setReadOnly**(`widget`, `isReadOnly`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `widget` | [`Widget`](Widget.md)<`any`\> |
-| `isReadOnly` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L519)
-
-___
-
-### setReadonly
-
-▸ `Static` `Private` **setReadonly**(`elements`, `isReadOnly`): `JQuery`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `elements` | `JQuery` |
-| `isReadOnly` | `boolean` |
-
-#### Returns
-
-`JQuery`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:524](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L524)
-
-___
-
-### setRequired
-
-▸ `Static` `Private` **setRequired**(`widget`, `isRequired`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `widget` | [`Widget`](Widget.md)<`any`\> |
-| `isRequired` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/propertygrid.ts:529](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L529)
+[src/ui/widgets/propertygrid.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L471)

@@ -1,10 +1,16 @@
 [@serenity-is/corelib](../README.md) / ColumnPickerDialog
 
-# Class: ColumnPickerDialog
+# Class: ColumnPickerDialog\<P\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | {} |
 
 ## Hierarchy
 
-- [`TemplatedDialog`](TemplatedDialog.md)<`any`\>
+- [`TemplatedDialog`](TemplatedDialog.md)\<`P`\>
 
   ↳ **`ColumnPickerDialog`**
 
@@ -19,8 +25,9 @@
 - [allColumns](ColumnPickerDialog.md#allcolumns)
 - [colById](ColumnPickerDialog.md#colbyid)
 - [defaultColumns](ColumnPickerDialog.md#defaultcolumns)
+- [dialog](ColumnPickerDialog.md#dialog)
+- [domNode](ColumnPickerDialog.md#domnode)
 - [done](ColumnPickerDialog.md#done)
-- [element](ColumnPickerDialog.md#element)
 - [idPrefix](ColumnPickerDialog.md#idprefix)
 - [options](ColumnPickerDialog.md#options)
 - [tabs](ColumnPickerDialog.md#tabs)
@@ -30,14 +37,13 @@
 - [uniqueName](ColumnPickerDialog.md#uniquename)
 - [validator](ColumnPickerDialog.md#validator)
 - [visibleColumns](ColumnPickerDialog.md#visiblecolumns)
-- [widgetName](ColumnPickerDialog.md#widgetname)
-- [bootstrapModal](ColumnPickerDialog.md#bootstrapmodal)
+- [typeInfo](ColumnPickerDialog.md#typeinfo)
 
 ### Accessors
 
 - [dialogTitle](ColumnPickerDialog.md#dialogtitle)
-- [isMarkedAsPanel](ColumnPickerDialog.md#ismarkedaspanel)
-- [isResponsive](ColumnPickerDialog.md#isresponsive)
+- [element](ColumnPickerDialog.md#element)
+- [props](ColumnPickerDialog.md#props)
 
 ### Methods
 
@@ -52,61 +58,78 @@
 - [destroy](ColumnPickerDialog.md#destroy)
 - [dialogClose](ColumnPickerDialog.md#dialogclose)
 - [dialogOpen](ColumnPickerDialog.md#dialogopen)
+- [findById](ColumnPickerDialog.md#findbyid)
 - [getCssClass](ColumnPickerDialog.md#getcssclass)
+- [getCustomAttribute](ColumnPickerDialog.md#getcustomattribute)
 - [getDialogButtons](ColumnPickerDialog.md#getdialogbuttons)
 - [getDialogOptions](ColumnPickerDialog.md#getdialogoptions)
-- [getDialogTitle](ColumnPickerDialog.md#getdialogtitle)
-- [getFallbackTemplate](ColumnPickerDialog.md#getfallbacktemplate)
+- [getFieldElement](ColumnPickerDialog.md#getfieldelement)
 - [getGridField](ColumnPickerDialog.md#getgridfield)
-- [getModalOptions](ColumnPickerDialog.md#getmodaloptions)
+- [getInitialDialogTitle](ColumnPickerDialog.md#getinitialdialogtitle)
 - [getTemplate](ColumnPickerDialog.md#gettemplate)
-- [getTemplateName](ColumnPickerDialog.md#gettemplatename)
 - [getTitle](ColumnPickerDialog.md#gettitle)
 - [getToolbarButtons](ColumnPickerDialog.md#gettoolbarbuttons)
 - [getValidatorOptions](ColumnPickerDialog.md#getvalidatoroptions)
 - [handleResponsive](ColumnPickerDialog.md#handleresponsive)
 - [init](ColumnPickerDialog.md#init)
 - [initDialog](ColumnPickerDialog.md#initdialog)
-- [initModal](ColumnPickerDialog.md#initmodal)
 - [initTabs](ColumnPickerDialog.md#inittabs)
 - [initToolbar](ColumnPickerDialog.md#inittoolbar)
+- [initUIDialog](ColumnPickerDialog.md#inituidialog)
 - [initValidator](ColumnPickerDialog.md#initvalidator)
-- [initialize](ColumnPickerDialog.md#initialize)
+- [internalInit](ColumnPickerDialog.md#internalinit)
+- [internalRenderContents](ColumnPickerDialog.md#internalrendercontents)
+- [isStaticPanel](ColumnPickerDialog.md#isstaticpanel)
 - [onDialogClose](ColumnPickerDialog.md#ondialogclose)
 - [onDialogOpen](ColumnPickerDialog.md#ondialogopen)
+- [render](ColumnPickerDialog.md#render)
 - [renderContents](ColumnPickerDialog.md#rendercontents)
 - [resetValidation](ColumnPickerDialog.md#resetvalidation)
-- [set\_dialogTitle](ColumnPickerDialog.md#set_dialogtitle)
 - [setupColumns](ColumnPickerDialog.md#setupcolumns)
+- [syncOrAsyncThen](ColumnPickerDialog.md#syncorasyncthen)
 - [updateListStates](ColumnPickerDialog.md#updateliststates)
 - [useIdPrefix](ColumnPickerDialog.md#useidprefix)
 - [validateForm](ColumnPickerDialog.md#validateform)
-- [closePanel](ColumnPickerDialog.md#closepanel)
 - [create](ColumnPickerDialog.md#create)
+- [createDefaultElement](ColumnPickerDialog.md#createdefaultelement)
 - [createToolButton](ColumnPickerDialog.md#createtoolbutton)
-- [elementFor](ColumnPickerDialog.md#elementfor)
 - [getWidgetName](ColumnPickerDialog.md#getwidgetname)
-- [openPanel](ColumnPickerDialog.md#openpanel)
 
 ## Constructors
 
 ### constructor
 
-• **new ColumnPickerDialog**()
+• **new ColumnPickerDialog**\<`P`\>(`props?`): [`ColumnPickerDialog`](ColumnPickerDialog.md)\<`P`\>
 
-#### Overrides
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | {} |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props?` | [`WidgetProps`](../README.md#widgetprops)\<`P`\> |
+
+#### Returns
+
+[`ColumnPickerDialog`](ColumnPickerDialog.md)\<`P`\>
+
+#### Inherited from
 
 [TemplatedDialog](TemplatedDialog.md).[constructor](TemplatedDialog.md#constructor)
 
 #### Defined in
 
-[src/ui/datagrid/columnpickerdialog.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L23)
+[src/ui/dialogs/templateddialog.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L22)
 
 ## Properties
 
 ### allColumns
 
-• **allColumns**: `Column`<`any`\>[]
+• **allColumns**: `Column`\<`any`\>[]
 
 #### Defined in
 
@@ -138,6 +161,34 @@ ___
 
 ___
 
+### dialog
+
+• `Protected` **dialog**: [`Dialog`](Dialog.md)
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[dialog](TemplatedDialog.md#dialog)
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L20)
+
+___
+
+### domNode
+
+• `Readonly` **domNode**: `HTMLElement`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[domNode](TemplatedDialog.md#domnode)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
+
+___
+
 ### done
 
 • **done**: () => `void`
@@ -156,20 +207,6 @@ ___
 
 ___
 
-### element
-
-• **element**: `JQuery`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[element](TemplatedDialog.md#element)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L61)
-
-___
-
 ### idPrefix
 
 • `Readonly` **idPrefix**: `string`
@@ -180,13 +217,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L65)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
 ### options
 
-• `Protected` **options**: `any`
+• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Inherited from
 
@@ -194,13 +231,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L62)
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ___
 
 ### tabs
 
-• `Protected` **tabs**: `JQuery`
+• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -208,13 +245,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L12)
+[src/ui/dialogs/templateddialog.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L17)
 
 ___
 
 ### toolbar
 
-• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)
+• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
 
 #### Inherited from
 
@@ -222,13 +259,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L13)
+[src/ui/dialogs/templateddialog.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L18)
 
 ___
 
 ### ulHidden
 
-• `Private` **ulHidden**: `JQuery`
+• `Private` **ulHidden**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -238,7 +275,7 @@ ___
 
 ### ulVisible
 
-• `Private` **ulVisible**: `JQuery`
+• `Private` **ulVisible**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Defined in
 
@@ -248,7 +285,7 @@ ___
 
 ### uniqueName
 
-• `Protected` **uniqueName**: `string`
+• `Protected` `Readonly` **uniqueName**: `string`
 
 #### Inherited from
 
@@ -256,13 +293,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L64)
+[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ___
 
 ### validator
 
-• `Protected` **validator**: `Validator`
+• `Protected` **validator**: `any`
 
 #### Inherited from
 
@@ -270,7 +307,7 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L14)
+[src/ui/dialogs/templateddialog.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L19)
 
 ___
 
@@ -284,31 +321,17 @@ ___
 
 ___
 
-### widgetName
+### typeInfo
 
-• `Protected` **widgetName**: `string`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[widgetName](TemplatedDialog.md#widgetname)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
-
-___
-
-### bootstrapModal
-
-▪ `Static` **bootstrapModal**: `boolean`
+▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
 
 #### Inherited from
 
-[TemplatedDialog](TemplatedDialog.md).[bootstrapModal](TemplatedDialog.md#bootstrapmodal)
+[TemplatedDialog](TemplatedDialog.md).[typeInfo](TemplatedDialog.md#typeinfo)
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L274)
+[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
 
 ## Accessors
 
@@ -326,7 +349,7 @@ TemplatedDialog.dialogTitle
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:360](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L360)
+[src/ui/dialogs/templateddialog.ts:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L189)
 
 • `set` **dialogTitle**(`value`): `void`
 
@@ -346,49 +369,51 @@ TemplatedDialog.dialogTitle
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:395](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L395)
+[src/ui/dialogs/templateddialog.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L193)
 
 ___
 
-### isMarkedAsPanel
+### element
 
-• `Private` `get` **isMarkedAsPanel**(): `boolean`
+• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+Returns a Fluent(this.domNode) object
 
 #### Returns
 
-`boolean`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
-TemplatedDialog.isMarkedAsPanel
+TemplatedDialog.element
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L26)
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 ___
 
-### isResponsive
+### props
 
-• `Private` `get` **isResponsive**(): `boolean`
+• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Returns
 
-`boolean`
+[`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Inherited from
 
-TemplatedDialog.isResponsive
+TemplatedDialog.props
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L32)
+[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
 
 ## Methods
 
 ### addCssClass
 
-▸ `Protected` **addCssClass**(): `void`
+▸ **addCssClass**(): `void`
 
 #### Returns
 
@@ -400,24 +425,24 @@ TemplatedDialog.isResponsive
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L315)
+[src/ui/dialogs/templateddialog.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L46)
 
 ___
 
 ### addValidationRule
 
-▸ **addValidationRule**(`eventClass`, `rule`): `JQuery`
+▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `eventClass` | `string` |
-| `rule` | (`p1`: `JQuery`) => `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `uniqueName?` | `string` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Inherited from
 
@@ -425,19 +450,40 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L134)
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
 
-___
-
-### allowHide
-
-▸ `Private` **allowHide**(`col`): `boolean`
+▸ **addValidationRule**(`uniqueName`, `rule`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `col` | `Column`<`any`\> |
+| `uniqueName` | `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[addValidationRule](TemplatedDialog.md#addvalidationrule)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
+
+___
+
+### allowHide
+
+▸ **allowHide**(`col`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `col` | `Column`\<`any`\> |
 
 #### Returns
 
@@ -445,7 +491,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/columnpickerdialog.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L162)
+[src/ui/datagrid/columnpickerdialog.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L159)
 
 ___
 
@@ -463,13 +509,19 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L291)
+[src/ui/dialogs/templateddialog.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L162)
 
 ___
 
 ### byId
 
-▸ `Protected` **byId**(`id`): `JQuery`
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` = `HTMLElement` |
 
 #### Parameters
 
@@ -479,7 +531,7 @@ ___
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
 
 #### Inherited from
 
@@ -487,7 +539,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L10)
+[src/ui/widgets/templatedwidget.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L8)
 
 ___
 
@@ -499,7 +551,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -511,27 +563,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[change](TemplatedDialog.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L259)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ___
 
@@ -543,7 +575,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -555,47 +587,27 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[changeSelect2](TemplatedDialog.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L260)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 ___
 
 ### createLI
 
-▸ `Private` **createLI**(`col`): `JQuery`
+▸ **createLI**(`col`): `HTMLElement`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `col` | `Column`<`any`\> |
+| `col` | `Column`\<`any`\> |
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Defined in
 
-[src/ui/datagrid/columnpickerdialog.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L166)
+[src/ui/datagrid/columnpickerdialog.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L163)
 
 ___
 
@@ -613,13 +625,19 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L81)
+[src/ui/dialogs/templateddialog.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L31)
 
 ___
 
 ### dialogClose
 
-▸ **dialogClose**(): `void`
+▸ **dialogClose**(`result?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `result?` | `string` |
 
 #### Returns
 
@@ -631,7 +649,7 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:350](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L350)
+[src/ui/dialogs/templateddialog.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L185)
 
 ___
 
@@ -655,13 +673,43 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:244](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L244)
+[src/ui/dialogs/templateddialog.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L109)
+
+___
+
+### findById
+
+▸ **findById**\<`TElement`\>(`id`): `TElement`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` = `HTMLElement` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`TElement`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[findById](TemplatedDialog.md#findbyid)
+
+#### Defined in
+
+[src/ui/widgets/templatedwidget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L12)
 
 ___
 
 ### getCssClass
 
-▸ `Protected` **getCssClass**(): `string`
+▸ **getCssClass**(): `string`
 
 #### Returns
 
@@ -673,93 +721,34 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L104)
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
 
 ___
 
-### getDialogButtons
+### getCustomAttribute
 
-▸ `Protected` **getDialogButtons**(): { `click`: () => `void` ; `text`: `string`  }[]
+▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
 
-#### Returns
+#### Type parameters
 
-{ `click`: () => `void` ; `text`: `string`  }[]
+| Name |
+| :------ |
+| `TAttr` |
 
-#### Overrides
+#### Parameters
 
-[TemplatedDialog](TemplatedDialog.md).[getDialogButtons](TemplatedDialog.md#getdialogbuttons)
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L81)
-
-___
-
-### getDialogOptions
-
-▸ `Protected` **getDialogOptions**(): `any`
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
 
 #### Returns
 
-`any`
-
-#### Overrides
-
-[TemplatedDialog](TemplatedDialog.md).[getDialogOptions](TemplatedDialog.md#getdialogoptions)
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L149)
-
-___
-
-### getDialogTitle
-
-▸ `Protected` **getDialogTitle**(): `string`
-
-#### Returns
-
-`string`
+`TAttr`
 
 #### Inherited from
 
-[TemplatedDialog](TemplatedDialog.md).[getDialogTitle](TemplatedDialog.md#getdialogtitle)
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L346)
-
-___
-
-### getFallbackTemplate
-
-▸ `Protected` **getFallbackTemplate**(): `string`
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[getFallbackTemplate](TemplatedDialog.md#getfallbacktemplate)
-
-#### Defined in
-
-[src/ui/widgets/templatedwidget.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L79)
-
-___
-
-### getGridField
-
-▸ **getGridField**(): `JQuery`
-
-#### Returns
-
-`JQuery`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[getGridField](TemplatedDialog.md#getgridfield)
+[TemplatedDialog](TemplatedDialog.md).[getCustomAttribute](TemplatedDialog.md#getcustomattribute)
 
 #### Defined in
 
@@ -767,45 +756,99 @@ ___
 
 ___
 
-### getModalOptions
+### getDialogButtons
 
-▸ `Protected` **getModalOptions**(): [`ModalOptions`](../interfaces/ModalOptions.md)
+▸ **getDialogButtons**(): [`DialogButton`](../interfaces/DialogButton.md)[]
 
 #### Returns
 
-[`ModalOptions`](../interfaces/ModalOptions.md)
+[`DialogButton`](../interfaces/DialogButton.md)[]
 
-#### Inherited from
+#### Overrides
 
-[TemplatedDialog](TemplatedDialog.md).[getModalOptions](TemplatedDialog.md#getmodaloptions)
+[TemplatedDialog](TemplatedDialog.md).[getDialogButtons](TemplatedDialog.md#getdialogbuttons)
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L153)
+[src/ui/datagrid/columnpickerdialog.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L84)
+
+___
+
+### getDialogOptions
+
+▸ **getDialogOptions**(): [`DialogOptions`](../interfaces/DialogOptions.md)
+
+#### Returns
+
+[`DialogOptions`](../interfaces/DialogOptions.md)
+
+#### Overrides
+
+[TemplatedDialog](TemplatedDialog.md).[getDialogOptions](TemplatedDialog.md#getdialogoptions)
+
+#### Defined in
+
+[src/ui/datagrid/columnpickerdialog.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L146)
+
+___
+
+### getFieldElement
+
+▸ **getFieldElement**(): `HTMLElement`
+
+#### Returns
+
+`HTMLElement`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[getFieldElement](TemplatedDialog.md#getfieldelement)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
+___
+
+### getGridField
+
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[getGridField](TemplatedDialog.md#getgridfield)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+
+___
+
+### getInitialDialogTitle
+
+▸ **getInitialDialogTitle**(): `string`
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[getInitialDialogTitle](TemplatedDialog.md#getinitialdialogtitle)
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L50)
 
 ___
 
 ### getTemplate
 
-▸ `Protected` **getTemplate**(): `string`
-
-#### Returns
-
-`string`
-
-#### Overrides
-
-[TemplatedDialog](TemplatedDialog.md).[getTemplate](TemplatedDialog.md#gettemplate)
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:271](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L271)
-
-___
-
-### getTemplateName
-
-▸ `Protected` **getTemplateName**(): `string`
+▸ **getTemplate**(): `string`
 
 #### Returns
 
@@ -813,23 +856,23 @@ ___
 
 #### Inherited from
 
-[TemplatedDialog](TemplatedDialog.md).[getTemplateName](TemplatedDialog.md#gettemplatename)
+[TemplatedDialog](TemplatedDialog.md).[getTemplate](TemplatedDialog.md#gettemplate)
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L31)
+[src/ui/widgets/templatedwidget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L16)
 
 ___
 
 ### getTitle
 
-▸ `Private` **getTitle**(`col`): `string`
+▸ **getTitle**(`col`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `col` | `Column`<`any`\> |
+| `col` | `Column`\<`any`\> |
 
 #### Returns
 
@@ -837,13 +880,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/columnpickerdialog.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L155)
+[src/ui/datagrid/columnpickerdialog.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L152)
 
 ___
 
 ### getToolbarButtons
 
-▸ `Protected` **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+▸ **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
 #### Returns
 
@@ -855,17 +898,17 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L220)
+[src/ui/dialogs/templateddialog.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L127)
 
 ___
 
 ### getValidatorOptions
 
-▸ `Protected` **getValidatorOptions**(): `ValidationOptions`
+▸ **getValidatorOptions**(): `any`
 
 #### Returns
 
-`ValidationOptions`
+`any`
 
 #### Inherited from
 
@@ -873,13 +916,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L224)
+[src/ui/dialogs/templateddialog.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L142)
 
 ___
 
 ### handleResponsive
 
-▸ `Protected` **handleResponsive**(): `void`
+▸ **handleResponsive**(): `void`
 
 #### Returns
 
@@ -891,23 +934,17 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L426)
+[src/ui/dialogs/templateddialog.ts:205](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L205)
 
 ___
 
 ### init
 
-▸ **init**(`action?`): [`ColumnPickerDialog`](ColumnPickerDialog.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `action?` | (`widget`: `any`) => `void` |
+▸ **init**(): `this`
 
 #### Returns
 
-[`ColumnPickerDialog`](ColumnPickerDialog.md)
+`this`
 
 #### Inherited from
 
@@ -915,13 +952,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
 ___
 
 ### initDialog
 
-▸ `Protected` **initDialog**(): `void`
+▸ **initDialog**(): `void`
 
 #### Returns
 
@@ -933,31 +970,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L104)
-
-___
-
-### initModal
-
-▸ `Protected` **initModal**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[initModal](TemplatedDialog.md#initmodal)
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L162)
+[src/ui/dialogs/templateddialog.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L86)
 
 ___
 
 ### initTabs
 
-▸ `Protected` **initTabs**(): `void`
+▸ **initTabs**(): `void`
 
 #### Returns
 
@@ -969,13 +988,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L417)
+[src/ui/dialogs/templateddialog.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L198)
 
 ___
 
 ### initToolbar
 
-▸ `Protected` **initToolbar**(): `void`
+▸ **initToolbar**(): `void`
 
 #### Returns
 
@@ -987,13 +1006,31 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L203)
+[src/ui/dialogs/templateddialog.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L131)
+
+___
+
+### initUIDialog
+
+▸ **initUIDialog**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[initUIDialog](TemplatedDialog.md#inituidialog)
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L95)
 
 ___
 
 ### initValidator
 
-▸ `Protected` **initValidator**(): `void`
+▸ **initValidator**(): `void`
 
 #### Returns
 
@@ -1005,13 +1042,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L228)
+[src/ui/dialogs/templateddialog.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L146)
 
 ___
 
-### initialize
+### internalInit
 
-▸ **initialize**(): `void`
+▸ **internalInit**(): `void`
 
 #### Returns
 
@@ -1019,17 +1056,59 @@ ___
 
 #### Inherited from
 
-[TemplatedDialog](TemplatedDialog.md).[initialize](TemplatedDialog.md#initialize)
+[TemplatedDialog](TemplatedDialog.md).[internalInit](TemplatedDialog.md#internalinit)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L176)
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+___
+
+### internalRenderContents
+
+▸ **internalRenderContents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[internalRenderContents](TemplatedDialog.md#internalrendercontents)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
+
+___
+
+### isStaticPanel
+
+▸ **isStaticPanel**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[isStaticPanel](TemplatedDialog.md#isstaticpanel)
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L54)
 
 ___
 
 ### onDialogClose
 
-▸ `Protected` **onDialogClose**(): `void`
+▸ **onDialogClose**(`result?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `result?` | `string` |
 
 #### Returns
 
@@ -1041,13 +1120,13 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:297](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L297)
+[src/ui/dialogs/templateddialog.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L168)
 
 ___
 
 ### onDialogOpen
 
-▸ `Protected` **onDialogOpen**(): `void`
+▸ **onDialogOpen**(): `void`
 
 #### Returns
 
@@ -1059,31 +1138,53 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/columnpickerdialog.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L260)
+[src/ui/datagrid/columnpickerdialog.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L265)
+
+___
+
+### render
+
+▸ **render**(): `any`
+
+Returns the main element for this widget or the document fragment.
+As widgets may get their elements from props unlike regular JSX widgets, 
+this method should not be overridden. Override renderContents() instead.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[render](TemplatedDialog.md#render)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
 
 ___
 
 ### renderContents
 
-▸ `Protected` **renderContents**(): `void`
+▸ **renderContents**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLDivElement`\>
 
 #### Returns
 
-`void`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLDivElement`\>
 
-#### Inherited from
+#### Overrides
 
 [TemplatedDialog](TemplatedDialog.md).[renderContents](TemplatedDialog.md#rendercontents)
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L110)
+[src/ui/datagrid/columnpickerdialog.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L23)
 
 ___
 
 ### resetValidation
 
-▸ `Protected` **resetValidation**(): `void`
+▸ **resetValidation**(): `void`
 
 #### Returns
 
@@ -1095,19 +1196,41 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L236)
+[src/ui/dialogs/templateddialog.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L154)
 
 ___
 
-### set\_dialogTitle
+### setupColumns
 
-▸ **set_dialogTitle**(`value`): `void`
+▸ **setupColumns**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/datagrid/columnpickerdialog.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L187)
+
+___
+
+### syncOrAsyncThen
+
+▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `string` |
+| `syncMethod` | () => `T` |
+| `asyncMethod` | () => `PromiseLike`\<`T`\> |
+| `then` | (`v`: `T`) => `void` |
 
 #### Returns
 
@@ -1115,17 +1238,17 @@ ___
 
 #### Inherited from
 
-[TemplatedDialog](TemplatedDialog.md).[set_dialogTitle](TemplatedDialog.md#set_dialogtitle)
+[TemplatedDialog](TemplatedDialog.md).[syncOrAsyncThen](TemplatedDialog.md#syncorasyncthen)
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:413](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L413)
+[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
 
 ___
 
-### setupColumns
+### updateListStates
 
-▸ `Protected` **setupColumns**(): `void`
+▸ **updateListStates**(): `void`
 
 #### Returns
 
@@ -1137,27 +1260,13 @@ ___
 
 ___
 
-### updateListStates
-
-▸ `Private` **updateListStates**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/datagrid/columnpickerdialog.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L177)
-
-___
-
 ### useIdPrefix
 
-▸ `Protected` **useIdPrefix**(): `IdPrefixType`
+▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
 
 #### Returns
 
-`IdPrefixType`
+[`IdPrefixType`](../README.md#idprefixtype)
 
 #### Inherited from
 
@@ -1165,13 +1274,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L131)
+[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
 
 ___
 
 ### validateForm
 
-▸ `Protected` **validateForm**(): `boolean`
+▸ **validateForm**(): `boolean`
 
 #### Returns
 
@@ -1183,51 +1292,26 @@ ___
 
 #### Defined in
 
-[src/ui/dialogs/templateddialog.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L240)
-
-___
-
-### closePanel
-
-▸ `Static` **closePanel**(`element`, `e?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-| `e?` | `JQueryEventObject` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[closePanel](TemplatedDialog.md#closepanel)
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L280)
+[src/ui/dialogs/templateddialog.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L158)
 
 ___
 
 ### create
 
-▸ `Static` **create**<`TWidget`, `TOpt`\>(`params`): `TWidget`
+▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`TOpt`, `TWidget`\> |
-| `TOpt` | `TOpt` |
+| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
+| `P` | `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)<`TWidget`, `TOpt`\> |
+| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -1239,13 +1323,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+
+___
+
+### createDefaultElement
+
+▸ **createDefaultElement**(): `HTMLDivElement`
+
+#### Returns
+
+`HTMLDivElement`
+
+#### Inherited from
+
+[TemplatedDialog](TemplatedDialog.md).[createDefaultElement](TemplatedDialog.md#createdefaultelement)
+
+#### Defined in
+
+[src/ui/dialogs/templateddialog.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L15)
 
 ___
 
 ### createToolButton
 
-▸ `Static` **createToolButton**(`grid`): [`ToolButton`](../interfaces/ToolButton.md)
+▸ **createToolButton**(`grid`): [`ToolButton`](../interfaces/ToolButton.md)
 
 #### Parameters
 
@@ -1259,43 +1361,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/columnpickerdialog.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L45)
-
-___
-
-### elementFor
-
-▸ `Static` **elementFor**<`TWidget`\>(`editorType`): `JQuery`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TWidget` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editorType` | (...`args`: `any`[]) => `TWidget` |
-
-#### Returns
-
-`JQuery`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[elementFor](TemplatedDialog.md#elementfor)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L128)
+[src/ui/datagrid/columnpickerdialog.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.ts#L48)
 
 ___
 
 ### getWidgetName
 
-▸ `Static` **getWidgetName**(`type`): `string`
+▸ **getWidgetName**(`type`): `string`
 
 #### Parameters
 
@@ -1313,29 +1385,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
-
-___
-
-### openPanel
-
-▸ `Static` **openPanel**(`element`, `uniqueName`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `element` | `JQuery` |
-| `uniqueName` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedDialog](TemplatedDialog.md).[openPanel](TemplatedDialog.md#openpanel)
-
-#### Defined in
-
-[src/ui/dialogs/templateddialog.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/templateddialog.ts#L276)
+[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)

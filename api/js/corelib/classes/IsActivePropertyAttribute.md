@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new IsActivePropertyAttribute**(`value`)
+• **new IsActivePropertyAttribute**(`value`): [`IsActivePropertyAttribute`](IsActivePropertyAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`IsActivePropertyAttribute`](IsActivePropertyAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L141)
+[src/types/attributes.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L142)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L141)
+[src/types/attributes.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L142)

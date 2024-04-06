@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / SaveWithLocalizationRequest
 
-# Interface: SaveWithLocalizationRequest<TEntity\>
+# Interface: SaveWithLocalizationRequest\<TEntity\>
 
 ## Type parameters
 
@@ -10,7 +10,7 @@
 
 ## Hierarchy
 
-- [`SaveRequest`](SaveRequest.md)<`TEntity`\>
+- [`SaveRequest`](SaveRequest.md)\<`TEntity`\>
 
   ↳ **`SaveWithLocalizationRequest`**
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L27)
+[../base/dist/index.d.ts:462](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L462)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L26)
+[../base/dist/index.d.ts:461](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L461)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L40)
+[../base/dist/index.d.ts:472](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L472)

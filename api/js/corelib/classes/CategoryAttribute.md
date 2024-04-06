@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new CategoryAttribute**(`category`)
+• **new CategoryAttribute**(`category`): [`CategoryAttribute`](CategoryAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `category` | `string` |
 
+#### Returns
+
+[`CategoryAttribute`](CategoryAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L28)
+[src/types/attributes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L23)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L28)
+[src/types/attributes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L23)

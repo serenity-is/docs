@@ -33,7 +33,7 @@
 
 ### constructor
 
-• **new FilterStore**(`fields`)
+• **new FilterStore**(`fields`): [`FilterStore`](FilterStore.md)
 
 #### Parameters
 
@@ -41,9 +41,13 @@
 | :------ | :------ |
 | `fields` | [`PropertyItem`](../interfaces/PropertyItem.md)[] |
 
+#### Returns
+
+[`FilterStore`](FilterStore.md)
+
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L8)
+[src/ui/filtering/filterstore.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L9)
 
 ## Properties
 
@@ -53,7 +57,7 @@
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L131)
+[src/ui/filtering/filterstore.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L132)
 
 ___
 
@@ -63,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L132)
+[src/ui/filtering/filterstore.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L133)
 
 ___
 
@@ -77,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L134)
+[src/ui/filtering/filterstore.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L135)
 
 ___
 
@@ -87,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L133)
+[src/ui/filtering/filterstore.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L134)
 
 ___
 
@@ -97,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L135)
+[src/ui/filtering/filterstore.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L136)
 
 ## Methods
 
@@ -109,7 +113,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `value` | (`e`: `JQueryEventObject`, `a`: `any`) => `void` |
+| `value` | (`e`: `Event`, `a`: `any`) => `void` |
 
 #### Returns
 
@@ -117,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L154)
+[src/ui/filtering/filterstore.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L155)
 
 ___
 
@@ -131,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L162)
+[src/ui/filtering/filterstore.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L163)
 
 ___
 
@@ -145,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L166)
+[src/ui/filtering/filterstore.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L167)
 
 ___
 
@@ -159,7 +163,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L141)
+[src/ui/filtering/filterstore.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L142)
 
 ___
 
@@ -173,7 +177,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L137)
+[src/ui/filtering/filterstore.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L138)
 
 ___
 
@@ -187,7 +191,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L145)
+[src/ui/filtering/filterstore.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L146)
 
 ___
 
@@ -201,7 +205,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L149)
+[src/ui/filtering/filterstore.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L150)
 
 ___
 
@@ -213,7 +217,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `value` | (`e`: `JQueryEventObject`, `a`: `any`) => `void` |
+| `value` | (`e`: `Event`, `a`: `any`) => `void` |
 
 #### Returns
 
@@ -221,13 +225,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L158)
+[src/ui/filtering/filterstore.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L159)
 
 ___
 
 ### getCriteriaFor
 
-▸ `Static` **getCriteriaFor**(`items`): `any`[]
+▸ **getCriteriaFor**(`items`): `any`[]
 
 #### Parameters
 
@@ -241,13 +245,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L43)
+[src/ui/filtering/filterstore.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L44)
 
 ___
 
 ### getDisplayTextFor
 
-▸ `Static` **getDisplayTextFor**(`items`): `string`
+▸ **getDisplayTextFor**(`items`): `string`
 
 #### Parameters
 
@@ -261,4 +265,4 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filterstore.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L95)
+[src/ui/filtering/filterstore.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L96)

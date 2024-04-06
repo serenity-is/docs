@@ -24,21 +24,21 @@
 
 #### Defined in
 
-[src/q/router.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L19)
+[src/q/router.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L17)
 
 ## Functions
 
 ### dialog
 
-▸ **dialog**(`owner`, `element`, `hash`): `void`
+▸ **dialog**(`owner`, `element`, `dialogHash`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `owner` | `JQuery` |
-| `element` | `JQuery` |
-| `hash` | () => `string` |
+| `owner` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+| `element` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+| `dialogHash` | () => `string` |
 
 #### Returns
 
@@ -46,19 +46,19 @@
 
 #### Defined in
 
-[src/q/router.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L140)
+[src/q/router.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L156)
 
 ___
 
 ### navigate
 
-▸ **navigate**(`hash`, `tryBack?`, `silent?`): `void`
+▸ **navigate**(`newHash`, `tryBack?`, `silent?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` |
+| `newHash` | `string` |
 | `tryBack?` | `boolean` |
 | `silent?` | `boolean` |
 
@@ -68,19 +68,19 @@ ___
 
 #### Defined in
 
-[src/q/router.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L25)
+[src/q/router.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L23)
 
 ___
 
 ### replace
 
-▸ **replace**(`hash`, `tryBack?`): `void`
+▸ **replace**(`newHash`, `tryBack?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` |
+| `newHash` | `string` |
 | `tryBack?` | `boolean` |
 
 #### Returns
@@ -89,19 +89,19 @@ ___
 
 #### Defined in
 
-[src/q/router.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L53)
+[src/q/router.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L50)
 
 ___
 
 ### replaceLast
 
-▸ **replaceLast**(`hash`, `tryBack?`): `void`
+▸ **replaceLast**(`newHash`, `tryBack?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` |
+| `newHash` | `string` |
 | `tryBack?` | `boolean` |
 
 #### Returns
@@ -110,19 +110,19 @@ ___
 
 #### Defined in
 
-[src/q/router.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L57)
+[src/q/router.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L54)
 
 ___
 
 ### resolve
 
-▸ **resolve**(`hash?`): `void`
+▸ **resolve**(`newHash?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `hash?` | `string` |
+| `newHash?` | `string` |
 
 #### Returns
 
@@ -130,4 +130,4 @@ ___
 
 #### Defined in
 
-[src/q/router.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L149)
+[src/q/router.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L170)

@@ -12,4 +12,8 @@
 
 ### constructor
 
-• **new OptionAttribute**()
+• **new OptionAttribute**(): [`OptionAttribute`](OptionAttribute.md)
+
+#### Returns
+
+[`OptionAttribute`](OptionAttribute.md)

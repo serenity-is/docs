@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new ResizableAttribute**(`value?`)
+• **new ResizableAttribute**(`value?`): [`ResizableAttribute`](ResizableAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ | :------ |
 | `value` | `boolean` | `true` |
 
+#### Returns
+
+[`ResizableAttribute`](ResizableAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L215)
+[src/types/attributes.ts:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L216)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L215)
+[src/types/attributes.ts:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L216)

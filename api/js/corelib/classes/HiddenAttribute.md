@@ -12,8 +12,12 @@
 
 ### constructor
 
-• **new HiddenAttribute**()
+• **new HiddenAttribute**(): [`HiddenAttribute`](HiddenAttribute.md)
+
+#### Returns
+
+[`HiddenAttribute`](HiddenAttribute.md)
 
 #### Defined in
 
-[src/decorators/index.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L117)
+[src/types/attributes.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L118)

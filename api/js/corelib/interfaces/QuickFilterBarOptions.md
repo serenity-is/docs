@@ -14,17 +14,17 @@
 
 ### filters
 
-• **filters**: [`QuickFilter`](QuickFilter.md)<[`Widget`](../classes/Widget.md)<`any`\>, `any`\>[]
+• **filters**: [`QuickFilter`](QuickFilter.md)\<[`Widget`](../classes/Widget.md)\<`any`\>, `any`\>[]
 
 #### Defined in
 
-[src/ui/datagrid/quickfilterbar.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L11)
+[src/ui/datagrid/quickfilterbar.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L14)
 
 ___
 
 ### getTitle
 
-• `Optional` **getTitle**: (`filter`: [`QuickFilter`](QuickFilter.md)<[`Widget`](../classes/Widget.md)<`any`\>, `any`\>) => `string`
+• `Optional` **getTitle**: (`filter`: [`QuickFilter`](QuickFilter.md)\<[`Widget`](../classes/Widget.md)\<`any`\>, `any`\>) => `string`
 
 #### Type declaration
 
@@ -34,7 +34,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `filter` | [`QuickFilter`](QuickFilter.md)<[`Widget`](../classes/Widget.md)<`any`\>, `any`\> |
+| `filter` | [`QuickFilter`](QuickFilter.md)\<[`Widget`](../classes/Widget.md)\<`any`\>, `any`\> |
 
 ##### Returns
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quickfilterbar.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L12)
+[src/ui/datagrid/quickfilterbar.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L15)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quickfilterbar.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L13)
+[src/ui/datagrid/quickfilterbar.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.ts#L16)

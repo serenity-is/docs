@@ -22,7 +22,11 @@
 
 ### constructor
 
-• **new IValidateRequired**()
+• **new IValidateRequired**(): [`IValidateRequired`](IValidateRequired.md)
+
+#### Returns
+
+[`IValidateRequired`](IValidateRequired.md)
 
 ## Methods
 

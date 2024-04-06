@@ -1,10 +1,16 @@
 [@serenity-is/corelib](../README.md) / ImageUploadEditor
 
-# Class: ImageUploadEditor
+# Class: ImageUploadEditor\<P\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | extends [`ImageUploadEditorOptions`](../interfaces/ImageUploadEditorOptions.md) = [`ImageUploadEditorOptions`](../interfaces/ImageUploadEditorOptions.md) |
 
 ## Hierarchy
 
-- [`FileUploadEditor`](FileUploadEditor.md)
+- [`FileUploadEditor`](FileUploadEditor.md)\<`P`\>
 
   ↳ **`ImageUploadEditor`**
 
@@ -16,7 +22,7 @@
 
 ### Properties
 
-- [element](ImageUploadEditor.md#element)
+- [domNode](ImageUploadEditor.md#domnode)
 - [entity](ImageUploadEditor.md#entity)
 - [fileSymbols](ImageUploadEditor.md#filesymbols)
 - [hiddenInput](ImageUploadEditor.md#hiddeninput)
@@ -26,10 +32,12 @@
 - [toolbar](ImageUploadEditor.md#toolbar)
 - [uniqueName](ImageUploadEditor.md#uniquename)
 - [uploadInput](ImageUploadEditor.md#uploadinput)
-- [widgetName](ImageUploadEditor.md#widgetname)
+- [typeInfo](ImageUploadEditor.md#typeinfo)
 
 ### Accessors
 
+- [element](ImageUploadEditor.md#element)
+- [props](ImageUploadEditor.md#props)
 - [value](ImageUploadEditor.md#value)
 
 ### Methods
@@ -41,7 +49,9 @@
 - [changeSelect2](ImageUploadEditor.md#changeselect2)
 - [destroy](ImageUploadEditor.md#destroy)
 - [getCssClass](ImageUploadEditor.md#getcssclass)
+- [getCustomAttribute](ImageUploadEditor.md#getcustomattribute)
 - [getEditValue](ImageUploadEditor.md#geteditvalue)
+- [getFieldElement](ImageUploadEditor.md#getfieldelement)
 - [getGridField](ImageUploadEditor.md#getgridfield)
 - [getToolButtons](ImageUploadEditor.md#gettoolbuttons)
 - [getUploadInputOptions](ImageUploadEditor.md#getuploadinputoptions)
@@ -49,30 +59,43 @@
 - [get\_required](ImageUploadEditor.md#get_required)
 - [get\_value](ImageUploadEditor.md#get_value)
 - [init](ImageUploadEditor.md#init)
-- [initialize](ImageUploadEditor.md#initialize)
+- [internalInit](ImageUploadEditor.md#internalinit)
+- [internalRenderContents](ImageUploadEditor.md#internalrendercontents)
 - [populate](ImageUploadEditor.md#populate)
+- [render](ImageUploadEditor.md#render)
 - [renderContents](ImageUploadEditor.md#rendercontents)
 - [setEditValue](ImageUploadEditor.md#seteditvalue)
 - [set\_readOnly](ImageUploadEditor.md#set_readonly)
 - [set\_required](ImageUploadEditor.md#set_required)
 - [set\_value](ImageUploadEditor.md#set_value)
+- [syncOrAsyncThen](ImageUploadEditor.md#syncorasyncthen)
 - [updateInterface](ImageUploadEditor.md#updateinterface)
+- [useIdPrefix](ImageUploadEditor.md#useidprefix)
 - [create](ImageUploadEditor.md#create)
-- [elementFor](ImageUploadEditor.md#elementfor)
+- [createDefaultElement](ImageUploadEditor.md#createdefaultelement)
 - [getWidgetName](ImageUploadEditor.md#getwidgetname)
 
 ## Constructors
 
 ### constructor
 
-• **new ImageUploadEditor**(`div`, `opt`)
+• **new ImageUploadEditor**\<`P`\>(`props`): [`ImageUploadEditor`](ImageUploadEditor.md)\<`P`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | extends [`ImageUploadEditorOptions`](../interfaces/ImageUploadEditorOptions.md) = [`ImageUploadEditorOptions`](../interfaces/ImageUploadEditorOptions.md) |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `div` | `JQuery` |
-| `opt` | [`ImageUploadEditorOptions`](../interfaces/ImageUploadEditorOptions.md) |
+| `props` | [`EditorProps`](../README.md#editorprops)\<`P`\> |
+
+#### Returns
+
+[`ImageUploadEditor`](ImageUploadEditor.md)\<`P`\>
 
 #### Overrides
 
@@ -80,21 +103,21 @@
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L269)
+[src/ui/editors/uploadeditors.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L267)
 
 ## Properties
 
-### element
+### domNode
 
-• **element**: `JQuery`
+• `Readonly` **domNode**: `HTMLElement`
 
 #### Inherited from
 
-[FileUploadEditor](FileUploadEditor.md).[element](FileUploadEditor.md#element)
+[FileUploadEditor](FileUploadEditor.md).[domNode](FileUploadEditor.md#domnode)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L61)
+[src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
 
 ___
 
@@ -108,13 +131,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L259)
+[src/ui/editors/uploadeditors.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L257)
 
 ___
 
 ### fileSymbols
 
-• `Protected` **fileSymbols**: `JQuery`
+• `Protected` **fileSymbols**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -122,13 +145,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L262)
+[src/ui/editors/uploadeditors.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L260)
 
 ___
 
 ### hiddenInput
 
-• `Protected` **hiddenInput**: `JQuery`
+• `Protected` **hiddenInput**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -136,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L264)
+[src/ui/editors/uploadeditors.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L262)
 
 ___
 
@@ -150,13 +173,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L65)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
 ### options
 
-• `Protected` **options**: [`FileUploadEditorOptions`](../interfaces/FileUploadEditorOptions.md)
+• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<[`EditorProps`](../README.md#editorprops)\<`P`\>\>
 
 #### Inherited from
 
@@ -164,13 +187,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L62)
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ___
 
 ### progress
 
-• `Protected` **progress**: `JQuery`
+• `Protected` **progress**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -178,13 +201,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L261)
+[src/ui/editors/uploadeditors.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L259)
 
 ___
 
 ### toolbar
 
-• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)
+• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
 
 #### Inherited from
 
@@ -192,13 +215,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L260)
+[src/ui/editors/uploadeditors.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L258)
 
 ___
 
 ### uniqueName
 
-• `Protected` **uniqueName**: `string`
+• `Protected` `Readonly` **uniqueName**: `string`
 
 #### Inherited from
 
@@ -206,13 +229,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L64)
+[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ___
 
 ### uploadInput
 
-• `Protected` **uploadInput**: `JQuery`
+• `Protected` **uploadInput**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -220,23 +243,61 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L263)
+[src/ui/editors/uploadeditors.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L261)
 
 ___
 
-### widgetName
+### typeInfo
 
-• `Protected` **widgetName**: `string`
+▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.EditorWidget"``\>
 
 #### Inherited from
 
-[FileUploadEditor](FileUploadEditor.md).[widgetName](FileUploadEditor.md#widgetname)
+[FileUploadEditor](FileUploadEditor.md).[typeInfo](FileUploadEditor.md#typeinfo)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+[src/ui/widgets/widget.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L202)
 
 ## Accessors
+
+### element
+
+• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+Returns a Fluent(this.domNode) object
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+FileUploadEditor.element
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
+
+___
+
+### props
+
+• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Returns
+
+[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Inherited from
+
+FileUploadEditor.props
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
+
+___
 
 ### value
 
@@ -252,7 +313,7 @@ FileUploadEditor.value
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L185)
+[src/ui/editors/uploadeditors.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L187)
 
 • `set` **value**(`v`): `void`
 
@@ -272,13 +333,13 @@ FileUploadEditor.value
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L227)
+[src/ui/editors/uploadeditors.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L226)
 
 ## Methods
 
 ### addCssClass
 
-▸ `Protected` **addCssClass**(): `void`
+▸ **addCssClass**(): `void`
 
 #### Returns
 
@@ -290,13 +351,13 @@ FileUploadEditor.value
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 ___
 
 ### addFileButtonText
 
-▸ `Protected` **addFileButtonText**(): `string`
+▸ **addFileButtonText**(): `string`
 
 #### Returns
 
@@ -308,24 +369,24 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L87)
+[src/ui/editors/uploadeditors.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L91)
 
 ___
 
 ### addValidationRule
 
-▸ **addValidationRule**(`eventClass`, `rule`): `JQuery`
+▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `eventClass` | `string` |
-| `rule` | (`p1`: `JQuery`) => `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `uniqueName?` | `string` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Inherited from
 
@@ -333,7 +394,28 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L134)
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
+
+▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `uniqueName` | `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[FileUploadEditor](FileUploadEditor.md).[addValidationRule](FileUploadEditor.md#addvalidationrule)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
 ___
 
@@ -345,7 +427,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -357,27 +439,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[FileUploadEditor](FileUploadEditor.md).[change](FileUploadEditor.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L259)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ___
 
@@ -389,7 +451,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -401,27 +463,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[FileUploadEditor](FileUploadEditor.md).[changeSelect2](FileUploadEditor.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L260)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 ___
 
@@ -439,13 +481,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L92)
+[src/ui/widgets/widget.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L49)
 
 ___
 
 ### getCssClass
 
-▸ `Protected` **getCssClass**(): `string`
+▸ **getCssClass**(): `string`
 
 #### Returns
 
@@ -457,7 +499,38 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L104)
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
+
+___
+
+### getCustomAttribute
+
+▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TAttr` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
+
+#### Returns
+
+`TAttr`
+
+#### Inherited from
+
+[FileUploadEditor](FileUploadEditor.md).[getCustomAttribute](FileUploadEditor.md#getcustomattribute)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
 
 ___
 
@@ -482,17 +555,35 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L231)
+[src/ui/editors/uploadeditors.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L230)
+
+___
+
+### getFieldElement
+
+▸ **getFieldElement**(): `HTMLElement`
+
+#### Returns
+
+`HTMLElement`
+
+#### Inherited from
+
+[FileUploadEditor](FileUploadEditor.md).[getFieldElement](FileUploadEditor.md#getfieldelement)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
 
 ___
 
 ### getGridField
 
-▸ **getGridField**(): `JQuery`
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -500,13 +591,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
 ___
 
 ### getToolButtons
 
-▸ `Protected` **getToolButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+▸ **getToolButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
 #### Returns
 
@@ -518,13 +609,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L91)
+[src/ui/editors/uploadeditors.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L95)
 
 ___
 
 ### getUploadInputOptions
 
-▸ `Protected` **getUploadInputOptions**(): [`UploadInputOptions`](../interfaces/UploadInputOptions.md)
+▸ **getUploadInputOptions**(): [`UploadInputOptions`](../interfaces/UploadInputOptions.md)
 
 #### Returns
 
@@ -536,7 +627,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L57)
+[src/ui/editors/uploadeditors.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L64)
 
 ___
 
@@ -554,7 +645,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L144)
+[src/ui/editors/uploadeditors.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L145)
 
 ___
 
@@ -572,7 +663,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L169)
+[src/ui/editors/uploadeditors.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L171)
 
 ___
 
@@ -590,23 +681,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L177)
+[src/ui/editors/uploadeditors.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L179)
 
 ___
 
 ### init
 
-▸ **init**(`action?`): [`ImageUploadEditor`](ImageUploadEditor.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `action?` | (`widget`: `any`) => `void` |
+▸ **init**(): `this`
 
 #### Returns
 
-[`ImageUploadEditor`](ImageUploadEditor.md)
+`this`
 
 #### Inherited from
 
@@ -614,13 +699,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
 ___
 
-### initialize
+### internalInit
 
-▸ **initialize**(): `void`
+▸ **internalInit**(): `void`
 
 #### Returns
 
@@ -628,17 +713,35 @@ ___
 
 #### Inherited from
 
-[FileUploadEditor](FileUploadEditor.md).[initialize](FileUploadEditor.md#initialize)
+[FileUploadEditor](FileUploadEditor.md).[internalInit](FileUploadEditor.md#internalinit)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L176)
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+___
+
+### internalRenderContents
+
+▸ **internalRenderContents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[FileUploadEditor](FileUploadEditor.md).[internalRenderContents](FileUploadEditor.md#internalrendercontents)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
 
 ___
 
 ### populate
 
-▸ `Protected` **populate**(): `void`
+▸ **populate**(): `void`
 
 #### Returns
 
@@ -650,17 +753,39 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L119)
+[src/ui/editors/uploadeditors.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L120)
+
+___
+
+### render
+
+▸ **render**(): `any`
+
+Returns the main element for this widget or the document fragment.
+As widgets may get their elements from props unlike regular JSX widgets, 
+this method should not be overridden. Override renderContents() instead.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[FileUploadEditor](FileUploadEditor.md).[render](FileUploadEditor.md#render)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
 
 ___
 
 ### renderContents
 
-▸ `Protected` **renderContents**(): `void`
+▸ **renderContents**(): `any`
 
 #### Returns
 
-`void`
+`any`
 
 #### Inherited from
 
@@ -668,7 +793,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
+[src/ui/widgets/widget.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L178)
 
 ___
 
@@ -693,7 +818,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L236)
+[src/ui/editors/uploadeditors.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L234)
 
 ___
 
@@ -717,7 +842,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L148)
+[src/ui/editors/uploadeditors.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L149)
 
 ___
 
@@ -741,7 +866,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L173)
+[src/ui/editors/uploadeditors.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L175)
 
 ___
 
@@ -765,13 +890,45 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L189)
+[src/ui/editors/uploadeditors.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L191)
+
+___
+
+### syncOrAsyncThen
+
+▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `syncMethod` | () => `T` |
+| `asyncMethod` | () => `PromiseLike`\<`T`\> |
+| `then` | (`v`: `T`) => `void` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[FileUploadEditor](FileUploadEditor.md).[syncOrAsyncThen](FileUploadEditor.md#syncorasyncthen)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
 
 ___
 
 ### updateInterface
 
-▸ `Protected` **updateInterface**(): `void`
+▸ **updateInterface**(): `void`
 
 #### Returns
 
@@ -783,26 +940,44 @@ ___
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L136)
+[src/ui/editors/uploadeditors.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L137)
+
+___
+
+### useIdPrefix
+
+▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
+
+#### Returns
+
+[`IdPrefixType`](../README.md#idprefixtype)
+
+#### Inherited from
+
+[FileUploadEditor](FileUploadEditor.md).[useIdPrefix](FileUploadEditor.md#useidprefix)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
 
 ___
 
 ### create
 
-▸ `Static` **create**<`TWidget`, `TOpt`\>(`params`): `TWidget`
+▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`TOpt`, `TWidget`\> |
-| `TOpt` | `TOpt` |
+| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
+| `P` | `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)<`TWidget`, `TOpt`\> |
+| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -814,43 +989,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
 
 ___
 
-### elementFor
+### createDefaultElement
 
-▸ `Static` **elementFor**<`TWidget`\>(`editorType`): `JQuery`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TWidget` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editorType` | (...`args`: `any`[]) => `TWidget` |
+▸ **createDefaultElement**(): `HTMLElement`
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Inherited from
 
-[FileUploadEditor](FileUploadEditor.md).[elementFor](FileUploadEditor.md#elementfor)
+[FileUploadEditor](FileUploadEditor.md).[createDefaultElement](FileUploadEditor.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L128)
+[src/ui/widgets/widget.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L60)
 
 ___
 
 ### getWidgetName
 
-▸ `Static` **getWidgetName**(`type`): `string`
+▸ **getWidgetName**(`type`): `string`
 
 #### Parameters
 
@@ -868,4 +1031,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
+[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)

@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/ui/editors/maskededitor.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.ts#L37)
+[src/ui/editors/maskededitor.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.ts#L46)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/maskededitor.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.ts#L38)
+[src/ui/editors/maskededitor.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.ts#L47)

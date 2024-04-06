@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new FormKeyAttribute**(`value`)
+• **new FormKeyAttribute**(`value`): [`FormKeyAttribute`](FormKeyAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`FormKeyAttribute`](FormKeyAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L105)
+[src/types/attributes.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L106)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L105)
+[src/types/attributes.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L106)

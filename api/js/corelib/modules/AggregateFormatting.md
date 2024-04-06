@@ -14,7 +14,7 @@
 
 ### formatMarkup
 
-▸ **formatMarkup**<`TItem`\>(`totals`, `column`, `aggType`): `string`
+▸ **formatMarkup**\<`TItem`\>(`totals`, `column`, `aggType`): `string`
 
 #### Type parameters
 
@@ -26,8 +26,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `totals` | `GroupTotals`<`any`\> |
-| `column` | `Column`<`TItem`\> |
+| `totals` | `GroupTotals`\<`any`\> |
+| `column` | `Column`\<`TItem`\> |
 | `aggType` | `string` |
 
 #### Returns
@@ -48,7 +48,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `column` | `Column`<`any`\> |
+| `column` | `Column`\<`any`\> |
 | `value` | `number` |
 
 #### Returns
@@ -63,7 +63,7 @@ ___
 
 ### groupTotalsFormatter
 
-▸ **groupTotalsFormatter**<`TItem`\>(`totals`, `column`): `string`
+▸ **groupTotalsFormatter**\<`TItem`\>(`totals`, `column`): `string`
 
 #### Type parameters
 
@@ -75,8 +75,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `totals` | `GroupTotals`<`any`\> |
-| `column` | `Column`<`TItem`\> |
+| `totals` | `GroupTotals`\<`any`\> |
+| `column` | `Column`\<`TItem`\> |
 
 #### Returns
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/slick/aggregators.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L180)
+[src/slick/aggregators.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L185)

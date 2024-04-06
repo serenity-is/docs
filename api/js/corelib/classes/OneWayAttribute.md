@@ -12,4 +12,8 @@
 
 ### constructor
 
-• **new OneWayAttribute**()
+• **new OneWayAttribute**(): [`OneWayAttribute`](OneWayAttribute.md)
+
+#### Returns
+
+[`OneWayAttribute`](OneWayAttribute.md)

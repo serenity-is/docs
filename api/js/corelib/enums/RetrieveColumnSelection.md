@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L67)
+[../base/dist/index.d.ts:495](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L495)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L71)
+[../base/dist/index.d.ts:499](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L499)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L68)
+[../base/dist/index.d.ts:496](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L496)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L69)
+[../base/dist/index.d.ts:497](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L497)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L72)
+[../base/dist/index.d.ts:500](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L500)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L70)
+[../base/dist/index.d.ts:498](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L498)

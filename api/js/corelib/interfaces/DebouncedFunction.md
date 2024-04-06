@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / DebouncedFunction
 
-# Interface: DebouncedFunction<T\>
+# Interface: DebouncedFunction\<T\>
 
 ## Type parameters
 
@@ -12,7 +12,7 @@
 
 ### DebouncedFunction
 
-▸ **DebouncedFunction**(`...args`): `ReturnType`<`T`\>
+▸ **DebouncedFunction**(`...args`): `ReturnType`\<`T`\>
 
 Call the original function, but applying the debounce rules.
 
@@ -26,15 +26,15 @@ function was not invoked yet.
 
 | Name | Type |
 | :------ | :------ |
-| `...args` | `Parameters`<`T`\> |
+| `...args` | `Parameters`\<`T`\> |
 
 #### Returns
 
-`ReturnType`<`T`\>
+`ReturnType`\<`T`\>
 
 #### Defined in
 
-[src/q/debounce.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#L11)
+[../base/dist/index.d.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L193)
 
 ## Table of contents
 
@@ -57,13 +57,13 @@ Throw away any pending invocation of the debounced function.
 
 #### Defined in
 
-[src/q/debounce.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#L16)
+[../base/dist/index.d.ts:197](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L197)
 
 ___
 
 ### flush
 
-▸ **flush**(): `ReturnType`<`T`\>
+▸ **flush**(): `ReturnType`\<`T`\>
 
 If there is a pending invocation of the debounced function, invoke it immediately and return
 its return value.
@@ -73,8 +73,8 @@ was never invoked.
 
 #### Returns
 
-`ReturnType`<`T`\>
+`ReturnType`\<`T`\>
 
 #### Defined in
 
-[src/q/debounce.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/debounce.ts#L25)
+[../base/dist/index.d.ts:205](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L205)

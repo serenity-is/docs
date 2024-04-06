@@ -21,7 +21,7 @@
 
 ### constructor
 
-• **new PrefixedContext**(`idPrefix`)
+• **new PrefixedContext**(`idPrefix`): [`PrefixedContext`](PrefixedContext.md)
 
 #### Parameters
 
@@ -29,9 +29,13 @@
 | :------ | :------ |
 | `idPrefix` | `string` |
 
+#### Returns
+
+[`PrefixedContext`](PrefixedContext.md)
+
 #### Defined in
 
-[src/ui/widgets/prefixedcontext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L4)
+[src/ui/widgets/prefixedcontext.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L5)
 
 ## Properties
 
@@ -41,13 +45,13 @@
 
 #### Defined in
 
-[src/ui/widgets/prefixedcontext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L4)
+[src/ui/widgets/prefixedcontext.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L5)
 
 ## Methods
 
 ### byId
 
-▸ **byId**(`id`): `JQuery`
+▸ **byId**(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Parameters
 
@@ -57,17 +61,17 @@
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Defined in
 
-[src/ui/widgets/prefixedcontext.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L7)
+[src/ui/widgets/prefixedcontext.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L8)
 
 ___
 
 ### w
 
-▸ **w**<`TWidget`\>(`id`, `type`): `TWidget`
+▸ **w**\<`TWidget`\>(`id`, `type`): `TWidget`
 
 #### Type parameters
 
@@ -88,4 +92,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/prefixedcontext.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L11)
+[src/ui/widgets/prefixedcontext.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L12)

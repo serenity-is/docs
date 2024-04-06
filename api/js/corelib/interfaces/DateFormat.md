@@ -38,7 +38,7 @@ AM designator
 
 #### Defined in
 
-[src/q/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L36)
+[../base/dist/index.d.ts:1112](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1112)
 
 ___
 
@@ -50,7 +50,7 @@ Default date format string
 
 #### Defined in
 
-[src/q/formatting.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L30)
+[../base/dist/index.d.ts:1106](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1106)
 
 ___
 
@@ -62,7 +62,7 @@ Date order, like dmy, or ymd
 
 #### Defined in
 
-[src/q/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L32)
+[../base/dist/index.d.ts:1108](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1108)
 
 ___
 
@@ -74,7 +74,7 @@ Date separator
 
 #### Defined in
 
-[src/q/formatting.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L28)
+[../base/dist/index.d.ts:1104](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1104)
 
 ___
 
@@ -86,7 +86,7 @@ Default date time format string
 
 #### Defined in
 
-[src/q/formatting.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L34)
+[../base/dist/index.d.ts:1110](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1110)
 
 ___
 
@@ -98,7 +98,7 @@ Array of day names
 
 #### Defined in
 
-[src/q/formatting.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L44)
+[../base/dist/index.d.ts:1120](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1120)
 
 ___
 
@@ -110,7 +110,7 @@ First day of week, 0 = Sunday, 1 = Monday
 
 #### Defined in
 
-[src/q/formatting.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L42)
+[../base/dist/index.d.ts:1118](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1118)
 
 ___
 
@@ -122,7 +122,7 @@ Array of two letter day names
 
 #### Defined in
 
-[src/q/formatting.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L48)
+[../base/dist/index.d.ts:1124](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1124)
 
 ___
 
@@ -134,7 +134,7 @@ Array of month names
 
 #### Defined in
 
-[src/q/formatting.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L50)
+[../base/dist/index.d.ts:1126](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1126)
 
 ___
 
@@ -146,7 +146,7 @@ PM designator
 
 #### Defined in
 
-[src/q/formatting.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L38)
+[../base/dist/index.d.ts:1114](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1114)
 
 ___
 
@@ -158,7 +158,7 @@ Array of short day names
 
 #### Defined in
 
-[src/q/formatting.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L46)
+[../base/dist/index.d.ts:1122](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1122)
 
 ___
 
@@ -170,7 +170,7 @@ Array of short month names
 
 #### Defined in
 
-[src/q/formatting.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L52)
+[../base/dist/index.d.ts:1128](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1128)
 
 ___
 
@@ -182,4 +182,4 @@ Time separator
 
 #### Defined in
 
-[src/q/formatting.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/formatting.ts#L40)
+[../base/dist/index.d.ts:1116](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L1116)

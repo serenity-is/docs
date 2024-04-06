@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[src/q/layouttimer.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L124)
+[src/q/layouttimer.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L126)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L116)
+[src/q/layouttimer.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L118)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L120)
+[src/q/layouttimer.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L122)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L96)
+[src/q/layouttimer.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L98)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L112)
+[src/q/layouttimer.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L114)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L71)
+[src/q/layouttimer.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L73)
 
 ___
 
@@ -158,4 +158,4 @@ ___
 
 #### Defined in
 
-[src/q/layouttimer.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L84)
+[src/q/layouttimer.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L86)

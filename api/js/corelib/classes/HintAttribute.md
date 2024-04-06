@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new HintAttribute**(`hint`)
+• **new HintAttribute**(`hint`): [`HintAttribute`](HintAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `hint` | `string` |
 
+#### Returns
+
+[`HintAttribute`](HintAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L123)
+[src/types/attributes.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L124)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L123)
+[src/types/attributes.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L124)

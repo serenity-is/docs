@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new EnumKeyAttribute**(`value`)
+• **new EnumKeyAttribute**(`value`): [`EnumKeyAttribute`](EnumKeyAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`EnumKeyAttribute`](EnumKeyAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L16)
+[src/types/attributes.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L11)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L16)
+[src/types/attributes.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L11)

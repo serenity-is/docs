@@ -24,8 +24,8 @@
 | Name | Type |
 | :------ | :------ |
 | `dialog` | `any` |
-| `owner` | [`Widget`](../classes/Widget.md)<`any`\> |
-| `dataChange` | (`p1`: `any`, `p2`: [`DataChangeInfo`](../interfaces/DataChangeInfo.md)) => `void` |
+| `owner` | [`Widget`](../classes/Widget.md)\<`any`\> |
+| `dataChange` | (`ev`: [`DataChangeInfo`](../interfaces/DataChangeInfo.md)) => `void` |
 | `useTimeout?` | `boolean` |
 
 #### Returns
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/ui/helpers/subdialoghelper.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L5)
+[src/ui/helpers/subdialoghelper.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L6)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `dialog` | `any` |
-| `owner` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `owner` | [`Widget`](../classes/Widget.md)\<`any`\> |
 | `useTimeout?` | `boolean` |
 
 #### Returns
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/subdialoghelper.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L33)
+[src/ui/helpers/subdialoghelper.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L37)
 
 ___
 
@@ -68,8 +68,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `cascadedDialog` | `any` |
-| `ofElement` | `JQuery` |
+| `cascadedDialog` | `Object` |
+| `cascadedDialog.domNode` | `HTMLElement` |
+| `ofElement` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
@@ -77,7 +78,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/subdialoghelper.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L39)
+[src/ui/helpers/subdialoghelper.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L43)
 
 ___
 
@@ -89,7 +90,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `JQuery` |
+| `element` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
@@ -97,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/subdialoghelper.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L46)
+[src/ui/helpers/subdialoghelper.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L53)
 
 ___
 
@@ -109,7 +110,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `dialog` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `dialog` | [`Widget`](../classes/Widget.md)\<`any`\> |
 
 #### Returns
 
@@ -117,24 +118,24 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/subdialoghelper.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L23)
+[src/ui/helpers/subdialoghelper.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L28)
 
 ___
 
 ### triggerDataChanged
 
-▸ **triggerDataChanged**(`element`): `JQuery`
+▸ **triggerDataChanged**(`element`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `JQuery` |
+| `element` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Defined in
 
-[src/ui/helpers/subdialoghelper.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L28)
+[src/ui/helpers/subdialoghelper.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/subdialoghelper.ts#L33)

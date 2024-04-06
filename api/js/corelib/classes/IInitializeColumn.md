@@ -21,7 +21,11 @@
 
 ### constructor
 
-• **new IInitializeColumn**()
+• **new IInitializeColumn**(): [`IInitializeColumn`](IInitializeColumn.md)
+
+#### Returns
+
+[`IInitializeColumn`](IInitializeColumn.md)
 
 ## Methods
 
@@ -33,7 +37,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `column` | `Column`<`any`\> |
+| `column` | `Column`\<`any`\> |
 
 #### Returns
 
@@ -41,4 +45,4 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L8)
+[src/ui/formatters/formatters.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L10)

@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:537](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L537)
+[src/ui/helpers/slickhelpers.ts:546](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L546)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:526](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L526)
+[src/ui/helpers/slickhelpers.ts:535](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L535)

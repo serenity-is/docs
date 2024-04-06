@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new EntityTypeAttribute**(`value`)
+• **new EntityTypeAttribute**(`value`): [`EntityTypeAttribute`](EntityTypeAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`EntityTypeAttribute`](EntityTypeAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L87)
+[src/types/attributes.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L88)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L87)
+[src/types/attributes.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L88)

@@ -20,7 +20,11 @@
 
 ### constructor
 
-• **new IEditDialog**()
+• **new IEditDialog**(): [`IEditDialog`](IEditDialog.md)
+
+#### Returns
+
+[`IEditDialog`](IEditDialog.md)
 
 ## Methods
 

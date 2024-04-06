@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L646)
+[src/ui/widgets/propertygrid.ts:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L584)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:647](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L647)
+[src/ui/widgets/propertygrid.ts:585](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L585)
 
 ___
 
@@ -42,17 +42,17 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:643](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L643)
+[src/ui/widgets/propertygrid.ts:581](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L581)
 
 ___
 
 ### items
 
-• `Optional` **items**: [`PropertyItem`](PropertyItem.md)[]
+• **items**: [`PropertyItem`](PropertyItem.md)[]
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:644](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L644)
+[src/ui/widgets/propertygrid.ts:582](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L582)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:648](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L648)
+[src/ui/widgets/propertygrid.ts:586](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L586)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:649](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L649)
+[src/ui/widgets/propertygrid.ts:587](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L587)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertygrid.ts:645](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L645)
+[src/ui/widgets/propertygrid.ts:583](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.ts#L583)

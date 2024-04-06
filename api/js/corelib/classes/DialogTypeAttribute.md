@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new DialogTypeAttribute**(`value`)
+• **new DialogTypeAttribute**(`value`): [`DialogTypeAttribute`](DialogTypeAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `any` |
 
+#### Returns
+
+[`DialogTypeAttribute`](DialogTypeAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L52)
+[src/types/attributes.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L53)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L52)
+[src/types/attributes.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L53)

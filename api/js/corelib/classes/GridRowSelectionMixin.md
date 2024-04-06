@@ -32,7 +32,7 @@
 
 ### constructor
 
-• **new GridRowSelectionMixin**(`grid`, `options?`)
+• **new GridRowSelectionMixin**(`grid`, `options?`): [`GridRowSelectionMixin`](GridRowSelectionMixin.md)
 
 #### Parameters
 
@@ -41,9 +41,13 @@
 | `grid` | [`IDataGrid`](../interfaces/IDataGrid.md) |
 | `options?` | [`GridRowSelectionMixinOptions`](../interfaces/GridRowSelectionMixinOptions.md) |
 
+#### Returns
+
+[`GridRowSelectionMixin`](GridRowSelectionMixin.md)
+
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L24)
+[src/ui/helpers/slickhelpers.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L26)
 
 ## Properties
 
@@ -53,7 +57,7 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L21)
+[src/ui/helpers/slickhelpers.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L23)
 
 ___
 
@@ -63,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L19)
+[src/ui/helpers/slickhelpers.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L21)
 
 ___
 
@@ -77,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L20)
+[src/ui/helpers/slickhelpers.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L22)
 
 ___
 
@@ -87,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L22)
+[src/ui/helpers/slickhelpers.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L24)
 
 ## Methods
 
@@ -101,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L91)
+[src/ui/helpers/slickhelpers.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L93)
 
 ___
 
@@ -115,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L114)
+[src/ui/helpers/slickhelpers.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L116)
 
 ___
 
@@ -129,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L120)
+[src/ui/helpers/slickhelpers.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L122)
 
 ___
 
@@ -143,13 +147,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L110)
+[src/ui/helpers/slickhelpers.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L112)
 
 ___
 
 ### isSelectable
 
-▸ `Private` **isSelectable**(`item`): `boolean`
+▸ **isSelectable**(`item`): `boolean`
 
 #### Parameters
 
@@ -163,7 +167,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L135)
+[src/ui/helpers/slickhelpers.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L137)
 
 ___
 
@@ -177,7 +181,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L96)
+[src/ui/helpers/slickhelpers.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L98)
 
 ___
 
@@ -197,7 +201,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L102)
+[src/ui/helpers/slickhelpers.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L104)
 
 ___
 
@@ -217,7 +221,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L126)
+[src/ui/helpers/slickhelpers.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L128)
 
 ___
 
@@ -231,13 +235,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L78)
+[src/ui/helpers/slickhelpers.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L80)
 
 ___
 
 ### createSelectColumn
 
-▸ `Static` **createSelectColumn**(`getMixin`): `Column`<`any`\>
+▸ **createSelectColumn**(`getMixin`): `Column`\<`any`\>
 
 #### Parameters
 
@@ -247,8 +251,8 @@ ___
 
 #### Returns
 
-`Column`<`any`\>
+`Column`\<`any`\>
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L141)
+[src/ui/helpers/slickhelpers.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L143)

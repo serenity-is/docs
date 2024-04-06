@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L85)
+[../base/dist/index.d.ts:512](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L512)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L80)
+[../base/dist/index.d.ts:507](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L507)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L79)
+[../base/dist/index.d.ts:506](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L506)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L81)
+[../base/dist/index.d.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L508)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L89)
+[../base/dist/index.d.ts:516](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L516)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L82)
+[../base/dist/index.d.ts:509](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L509)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L87)
+[../base/dist/index.d.ts:514](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L514)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L84)
+[../base/dist/index.d.ts:511](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L511)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L88)
+[../base/dist/index.d.ts:515](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L515)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L86)
+[../base/dist/index.d.ts:513](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L513)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L83)
+[../base/dist/index.d.ts:510](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L510)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L76)
+[../base/dist/index.d.ts:503](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L503)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L78)
+[../base/dist/index.d.ts:505](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L505)
 
 ___
 
@@ -165,4 +165,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L77)
+[../base/dist/index.d.ts:504](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L504)

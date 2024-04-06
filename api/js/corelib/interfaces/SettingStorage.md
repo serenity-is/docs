@@ -13,7 +13,7 @@
 
 ### getItem
 
-▸ **getItem**(`key`): `string` \| `Promise`<`string`\>
+▸ **getItem**(`key`): `string` \| `Promise`\<`string`\>
 
 #### Parameters
 
@@ -23,17 +23,17 @@
 
 #### Returns
 
-`string` \| `Promise`<`string`\>
+`string` \| `Promise`\<`string`\>
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L57)
+[src/ui/datagrid/datagrid.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L30)
 
 ___
 
 ### setItem
 
-▸ **setItem**(`key`, `value`): `void` \| `Promise`<`void`\>
+▸ **setItem**(`key`, `value`): `void` \| `Promise`\<`void`\>
 
 #### Parameters
 
@@ -44,8 +44,8 @@ ___
 
 #### Returns
 
-`void` \| `Promise`<`void`\>
+`void` \| `Promise`\<`void`\>
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L58)
+[src/ui/datagrid/datagrid.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L31)

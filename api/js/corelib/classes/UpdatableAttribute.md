@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new UpdatableAttribute**(`value?`)
+• **new UpdatableAttribute**(`value?`): [`UpdatableAttribute`](UpdatableAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ | :------ |
 | `value` | `boolean` | `true` |
 
+#### Returns
+
+[`UpdatableAttribute`](UpdatableAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L233)
+[src/types/attributes.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L240)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L233)
+[src/types/attributes.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L240)

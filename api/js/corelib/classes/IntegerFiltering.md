@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEditorFiltering`](BaseEditorFiltering.md)<[`IntegerEditor`](IntegerEditor.md)\>
+- [`BaseEditorFiltering`](BaseEditorFiltering.md)\<[`IntegerEditor`](IntegerEditor.md)\>
 
   ↳ **`IntegerFiltering`**
 
@@ -17,7 +17,7 @@
 ### Properties
 
 - [editor](IntegerFiltering.md#editor)
-- [editorType](IntegerFiltering.md#editortype)
+- [editorTypeRef](IntegerFiltering.md#editortyperef)
 
 ### Methods
 
@@ -52,7 +52,11 @@
 
 ### constructor
 
-• **new IntegerFiltering**()
+• **new IntegerFiltering**(): [`IntegerFiltering`](IntegerFiltering.md)
+
+#### Returns
+
+[`IntegerFiltering`](IntegerFiltering.md)
 
 #### Overrides
 
@@ -60,13 +64,13 @@
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L594)
+[src/ui/filtering/filtering.ts:600](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L600)
 
 ## Properties
 
 ### editor
 
-• `Protected` **editor**: [`IntegerEditor`](IntegerEditor.md)
+• `Protected` **editor**: [`IntegerEditor`](IntegerEditor.md)\<[`IntegerEditorOptions`](../interfaces/IntegerEditorOptions.md)\>
 
 #### Inherited from
 
@@ -74,27 +78,27 @@
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L315)
+[src/ui/filtering/filtering.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L321)
 
 ___
 
-### editorType
+### editorTypeRef
 
-• **editorType**: `any`
+• **editorTypeRef**: `any`
 
 #### Inherited from
 
-[BaseEditorFiltering](BaseEditorFiltering.md).[editorType](BaseEditorFiltering.md#editortype)
+[BaseEditorFiltering](BaseEditorFiltering.md).[editorTypeRef](BaseEditorFiltering.md#editortyperef)
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:298](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L298)
+[src/ui/filtering/filtering.ts:304](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L304)
 
 ## Methods
 
 ### appendComparisonOperators
 
-▸ `Protected` **appendComparisonOperators**(`list`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
+▸ **appendComparisonOperators**(`list`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
 #### Parameters
 
@@ -112,13 +116,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L92)
+[src/ui/filtering/filtering.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L94)
 
 ___
 
 ### appendNullableOperators
 
-▸ `Protected` **appendNullableOperators**(`list`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
+▸ **appendNullableOperators**(`list`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
 #### Parameters
 
@@ -136,13 +140,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L83)
+[src/ui/filtering/filtering.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L85)
 
 ___
 
 ### argumentNull
 
-▸ `Protected` **argumentNull**(): `Error`
+▸ **argumentNull**(): `Error`
 
 #### Returns
 
@@ -154,7 +158,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L238)
+[src/ui/filtering/filtering.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L240)
 
 ___
 
@@ -172,13 +176,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L317)
+[src/ui/filtering/filtering.ts:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L323)
 
 ___
 
 ### displayText
 
-▸ `Protected` **displayText**(`op`, `values?`): `string`
+▸ **displayText**(`op`, `values?`): `string`
 
 #### Parameters
 
@@ -197,7 +201,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L139)
+[src/ui/filtering/filtering.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L141)
 
 ___
 
@@ -215,7 +219,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L155)
+[src/ui/filtering/filtering.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L157)
 
 ___
 
@@ -233,7 +237,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L335)
+[src/ui/filtering/filtering.ts:341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L341)
 
 ___
 
@@ -251,17 +255,17 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:345](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L345)
+[src/ui/filtering/filtering.ts:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L351)
 
 ___
 
 ### getEditorText
 
-▸ **getEditorText**(): `any`
+▸ **getEditorText**(): `string`
 
 #### Returns
 
-`any`
+`string`
 
 #### Inherited from
 
@@ -269,7 +273,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L269)
+[src/ui/filtering/filtering.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L273)
 
 ___
 
@@ -287,7 +291,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:373](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L373)
+[src/ui/filtering/filtering.ts:379](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L379)
 
 ___
 
@@ -305,13 +309,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:598](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L598)
+[src/ui/filtering/filtering.ts:604](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L604)
 
 ___
 
 ### getTitle
 
-▸ `Protected` **getTitle**(`field`): `string`
+▸ **getTitle**(`field`): `string`
 
 #### Parameters
 
@@ -329,17 +333,17 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L135)
+[src/ui/filtering/filtering.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L137)
 
 ___
 
 ### get\_container
 
-▸ **get_container**(): `JQuery`
+▸ **get_container**(): `HTMLElement`
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Inherited from
 
@@ -347,7 +351,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L63)
+[src/ui/filtering/filtering.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L65)
 
 ___
 
@@ -365,7 +369,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L53)
+[src/ui/filtering/filtering.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L55)
 
 ___
 
@@ -383,7 +387,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L73)
+[src/ui/filtering/filtering.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L75)
 
 ___
 
@@ -395,7 +399,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `filter` | [`QuickFilter`](../interfaces/QuickFilter.md)<[`Widget`](Widget.md)<`any`\>, `any`\> |
+| `filter` | [`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\> |
 
 #### Returns
 
@@ -407,13 +411,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L386)
+[src/ui/filtering/filtering.ts:392](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L392)
 
 ___
 
 ### isNullable
 
-▸ `Protected` **isNullable**(): `boolean`
+▸ **isNullable**(): `boolean`
 
 #### Returns
 
@@ -425,7 +429,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L102)
+[src/ui/filtering/filtering.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L104)
 
 ___
 
@@ -449,13 +453,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L352)
+[src/ui/filtering/filtering.ts:358](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L358)
 
 ___
 
 ### operatorFormat
 
-▸ `Protected` **operatorFormat**(`op`): `string`
+▸ **operatorFormat**(`op`): `string`
 
 #### Parameters
 
@@ -473,7 +477,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L131)
+[src/ui/filtering/filtering.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L133)
 
 ___
 
@@ -491,7 +495,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L365)
+[src/ui/filtering/filtering.ts:371](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L371)
 
 ___
 
@@ -503,7 +507,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `JQuery` |
+| `value` | `HTMLElement` |
 
 #### Returns
 
@@ -515,7 +519,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L67)
+[src/ui/filtering/filtering.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L69)
 
 ___
 
@@ -539,7 +543,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L57)
+[src/ui/filtering/filtering.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L59)
 
 ___
 
@@ -563,13 +567,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L77)
+[src/ui/filtering/filtering.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L79)
 
 ___
 
 ### useEditor
 
-▸ `Protected` **useEditor**(): `boolean`
+▸ **useEditor**(): `boolean`
 
 #### Returns
 
@@ -581,13 +585,13 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:302](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L302)
+[src/ui/filtering/filtering.ts:308](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L308)
 
 ___
 
 ### useIdField
 
-▸ `Protected` **useIdField**(): `boolean`
+▸ **useIdField**(): `boolean`
 
 #### Returns
 
@@ -599,7 +603,7 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:331](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L331)
+[src/ui/filtering/filtering.ts:337](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L337)
 
 ___
 
@@ -623,4 +627,4 @@ ___
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L242)
+[src/ui/filtering/filtering.ts:244](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L244)

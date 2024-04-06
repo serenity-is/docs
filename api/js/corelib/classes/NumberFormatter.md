@@ -10,6 +10,10 @@
 
 ### Properties
 
+- [props](NumberFormatter.md#props)
+
+### Accessors
+
 - [displayFormat](NumberFormatter.md#displayformat)
 
 ### Methods
@@ -21,17 +25,68 @@
 
 ### constructor
 
-• **new NumberFormatter**()
+• **new NumberFormatter**(`props?`): [`NumberFormatter`](NumberFormatter.md)
 
-## Properties
+#### Parameters
 
-### displayFormat
+| Name | Type |
+| :------ | :------ |
+| `props` | `Object` |
+| `props.displayFormat?` | `string` |
 
-• **displayFormat**: `string`
+#### Returns
+
+[`NumberFormatter`](NumberFormatter.md)
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L248)
+[src/ui/formatters/formatters.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L218)
+
+## Properties
+
+### props
+
+• `Readonly` **props**: `Object` = `{}`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `displayFormat?` | `string` |
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L218)
+
+## Accessors
+
+### displayFormat
+
+• `get` **displayFormat**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:245](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L245)
+
+• `set` **displayFormat**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L246)
 
 ## Methods
 
@@ -43,7 +98,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | `FormatterContext`<`any`\> |
+| `ctx` | `FormatterContext`\<`any`\> |
 
 #### Returns
 
@@ -51,13 +106,13 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:224](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L224)
+[src/ui/formatters/formatters.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L222)
 
 ___
 
 ### format
 
-▸ `Static` **format**(`value`, `format?`): `string`
+▸ **format**(`value`, `format?`): `string`
 
 #### Parameters
 
@@ -72,4 +127,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L228)
+[src/ui/formatters/formatters.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L226)

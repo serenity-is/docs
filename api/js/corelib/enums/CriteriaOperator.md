@@ -35,7 +35,7 @@ Enumeration of Criteria operator keys.
 
 #### Defined in
 
-[src/q/criteria.ts:731](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L731)
+[../base/dist/index.d.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L153)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L734)
+[../base/dist/index.d.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L156)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L730)
+[../base/dist/index.d.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L152)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L737)
+[../base/dist/index.d.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L159)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L736)
+[../base/dist/index.d.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L158)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L740)
+[../base/dist/index.d.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L162)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L729)
+[../base/dist/index.d.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L151)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:728](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L728)
+[../base/dist/index.d.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L150)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L739)
+[../base/dist/index.d.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L161)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L742)
+[../base/dist/index.d.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L164)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:738](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L738)
+[../base/dist/index.d.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L160)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L735)
+[../base/dist/index.d.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L157)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L727)
+[../base/dist/index.d.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L149)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L741)
+[../base/dist/index.d.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L163)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L743)
+[../base/dist/index.d.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L165)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:732](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L732)
+[../base/dist/index.d.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L154)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L726)
+[../base/dist/index.d.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L148)
 
 ___
 
@@ -205,4 +205,4 @@ ___
 
 #### Defined in
 
-[src/q/criteria.ts:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/criteria.ts#L733)
+[../base/dist/index.d.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L155)

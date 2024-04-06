@@ -13,18 +13,18 @@
 
 ### cols
 
-• `Optional` **cols**: `any`
+• `Optional` **cols**: `number`
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L8)
+[src/ui/editors/htmlcontenteditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L9)
 
 ___
 
 ### rows
 
-• `Optional` **rows**: `any`
+• `Optional` **rows**: `number`
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L9)
+[src/ui/editors/htmlcontenteditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L10)

@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/ui/widgets/reflectionoptionssetter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reflectionoptionssetter.ts#L6)
+[src/ui/widgets/reflectionoptionssetter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/reflectionoptionssetter.ts#L8)

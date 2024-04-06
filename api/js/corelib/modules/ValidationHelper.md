@@ -9,6 +9,7 @@
 - [asyncSubmit](ValidationHelper.md#asyncsubmit)
 - [getValidator](ValidationHelper.md#getvalidator)
 - [submit](ValidationHelper.md#submit)
+- [validateElement](ValidationHelper.md#validateelement)
 
 ## Functions
 
@@ -20,7 +21,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `form` | `JQuery` |
+| `form` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `validateBeforeSave` | () => `boolean` |
 | `submitHandler` | () => `void` |
 
@@ -30,27 +31,27 @@
 
 #### Defined in
 
-[src/ui/helpers/validationhelper.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#L5)
+[src/q/validation.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L78)
 
 ___
 
 ### getValidator
 
-▸ **getValidator**(`element`): `JQueryValidation.Validator`
+▸ **getValidator**(`elem`): [`Validator`](../classes/Validator.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `JQuery` |
+| `elem` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 
 #### Returns
 
-`JQueryValidation.Validator`
+[`Validator`](../classes/Validator.md)
 
 #### Defined in
 
-[src/ui/helpers/validationhelper.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#L43)
+[src/q/validation.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L112)
 
 ___
 
@@ -62,7 +63,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `form` | `JQuery` |
+| `form` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `validateBeforeSave` | () => `boolean` |
 | `submitHandler` | () => `void` |
 
@@ -72,4 +73,24 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/validationhelper.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/validationhelper.ts#L25)
+[src/q/validation.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L96)
+
+___
+
+### validateElement
+
+▸ **validateElement**(`elem`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `elem` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/q/validation.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L116)

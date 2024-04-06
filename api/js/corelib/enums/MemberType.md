@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/q/system.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L258)
+[src/q/system-compat.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L82)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/q/system.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system.ts#L259)
+[src/q/system-compat.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L83)

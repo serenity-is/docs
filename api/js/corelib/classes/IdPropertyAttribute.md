@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new IdPropertyAttribute**(`value`)
+• **new IdPropertyAttribute**(`value`): [`IdPropertyAttribute`](IdPropertyAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`IdPropertyAttribute`](IdPropertyAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L129)
+[src/types/attributes.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L130)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L129)
+[src/types/attributes.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L130)

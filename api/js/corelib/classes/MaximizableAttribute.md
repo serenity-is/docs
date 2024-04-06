@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new MaximizableAttribute**(`value?`)
+• **new MaximizableAttribute**(`value?`): [`MaximizableAttribute`](MaximizableAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ | :------ |
 | `value` | `boolean` | `true` |
 
+#### Returns
+
+[`MaximizableAttribute`](MaximizableAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L159)
+[src/types/attributes.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L160)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L159)
+[src/types/attributes.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L160)

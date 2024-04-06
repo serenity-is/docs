@@ -22,17 +22,17 @@
 
 ### format
 
-▸ **format**(`ctx`): `string`
+▸ **format**(`ctx`): `FormatterResult`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | `FormatterContext`<`any`\> |
+| `ctx` | `FormatterContext`\<`any`\> |
 
 #### Returns
 
-`string`
+`FormatterResult`
 
 #### Defined in
 

@@ -6,21 +6,19 @@
 
 - **`ServiceResponse`**
 
-  ↳ [`SaveResponse`](SaveResponse.md)
-
   ↳ [`DeleteResponse`](DeleteResponse.md)
-
-  ↳ [`UndeleteResponse`](UndeleteResponse.md)
 
   ↳ [`ListResponse`](ListResponse.md)
 
-  ↳ [`RetrieveResponse`](RetrieveResponse.md)
-
   ↳ [`RetrieveLocalizationResponse`](RetrieveLocalizationResponse.md)
 
-  ↳ [`UploadResponse`](UploadResponse.md)
+  ↳ [`RetrieveResponse`](RetrieveResponse.md)
 
-  ↳ [`ReportRetrieveResponse`](Reporting.ReportRetrieveResponse.md)
+  ↳ [`SaveResponse`](SaveResponse.md)
+
+  ↳ [`UndeleteResponse`](UndeleteResponse.md)
+
+  ↳ [`UploadResponse`](UploadResponse.md)
 
 ## Table of contents
 
@@ -36,4 +34,4 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L10)
+[../base/dist/index.d.ts:456](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L456)

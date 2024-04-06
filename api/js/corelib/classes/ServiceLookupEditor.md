@@ -1,10 +1,17 @@
 [@serenity-is/corelib](../README.md) / ServiceLookupEditor
 
-# Class: ServiceLookupEditor
+# Class: ServiceLookupEditor\<P, TItem\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | extends [`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md) = [`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md) |
+| `TItem` | `any` |
 
 ## Hierarchy
 
-- [`ServiceLookupEditorBase`](ServiceLookupEditorBase.md)<[`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md), `any`\>
+- [`ServiceLookupEditorBase`](ServiceLookupEditorBase.md)\<[`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md), `TItem`\>
 
   ↳ **`ServiceLookupEditor`**
 
@@ -17,24 +24,26 @@
 ### Properties
 
 - [cascadeLink](ServiceLookupEditor.md#cascadelink)
-- [element](ServiceLookupEditor.md#element)
+- [domNode](ServiceLookupEditor.md#domnode)
 - [idPrefix](ServiceLookupEditor.md#idprefix)
 - [lastCreateTerm](ServiceLookupEditor.md#lastcreateterm)
 - [onInitNewEntity](ServiceLookupEditor.md#oninitnewentity)
 - [openDialogAsPanel](ServiceLookupEditor.md#opendialogaspanel)
 - [options](ServiceLookupEditor.md#options)
 - [uniqueName](ServiceLookupEditor.md#uniquename)
-- [widgetName](ServiceLookupEditor.md#widgetname)
+- [typeInfo](ServiceLookupEditor.md#typeinfo)
 
 ### Accessors
 
 - [cascadeField](ServiceLookupEditor.md#cascadefield)
 - [cascadeFrom](ServiceLookupEditor.md#cascadefrom)
 - [cascadeValue](ServiceLookupEditor.md#cascadevalue)
+- [element](ServiceLookupEditor.md#element)
 - [filterField](ServiceLookupEditor.md#filterfield)
 - [filterValue](ServiceLookupEditor.md#filtervalue)
 - [itemById](ServiceLookupEditor.md#itembyid)
 - [items](ServiceLookupEditor.md#items)
+- [props](ServiceLookupEditor.md#props)
 - [readOnly](ServiceLookupEditor.md#readonly)
 - [selectedItem](ServiceLookupEditor.md#selecteditem)
 - [selectedItems](ServiceLookupEditor.md#selecteditems)
@@ -52,6 +61,7 @@
 - [addValidationRule](ServiceLookupEditor.md#addvalidationrule)
 - [allowClear](ServiceLookupEditor.md#allowclear)
 - [asyncSearch](ServiceLookupEditor.md#asyncsearch)
+- [canSearch](ServiceLookupEditor.md#cansearch)
 - [cascadeItems](ServiceLookupEditor.md#cascadeitems)
 - [change](ServiceLookupEditor.md#change)
 - [changeSelect2](ServiceLookupEditor.md#changeselect2)
@@ -63,11 +73,15 @@
 - [filterItems](ServiceLookupEditor.md#filteritems)
 - [getCascadeCriteria](ServiceLookupEditor.md#getcascadecriteria)
 - [getCascadeFromValue](ServiceLookupEditor.md#getcascadefromvalue)
+- [getComboboxContainer](ServiceLookupEditor.md#getcomboboxcontainer)
+- [getComboboxOptions](ServiceLookupEditor.md#getcomboboxoptions)
 - [getCreateSearchChoice](ServiceLookupEditor.md#getcreatesearchchoice)
 - [getCriteria](ServiceLookupEditor.md#getcriteria)
 - [getCssClass](ServiceLookupEditor.md#getcssclass)
+- [getCustomAttribute](ServiceLookupEditor.md#getcustomattribute)
 - [getDialogTypeKey](ServiceLookupEditor.md#getdialogtypekey)
 - [getEditValue](ServiceLookupEditor.md#geteditvalue)
+- [getFieldElement](ServiceLookupEditor.md#getfieldelement)
 - [getFilterCriteria](ServiceLookupEditor.md#getfiltercriteria)
 - [getGridField](ServiceLookupEditor.md#getgridfield)
 - [getIdField](ServiceLookupEditor.md#getidfield)
@@ -75,7 +89,6 @@
 - [getIncludeColumns](ServiceLookupEditor.md#getincludecolumns)
 - [getListRequest](ServiceLookupEditor.md#getlistrequest)
 - [getPageSize](ServiceLookupEditor.md#getpagesize)
-- [getSelect2Options](ServiceLookupEditor.md#getselect2options)
 - [getService](ServiceLookupEditor.md#getservice)
 - [getServiceCallOptions](ServiceLookupEditor.md#getservicecalloptions)
 - [getServiceUrl](ServiceLookupEditor.md#getserviceurl)
@@ -91,15 +104,15 @@
 - [get\_itemByKey](ServiceLookupEditor.md#get_itembykey)
 - [get\_items](ServiceLookupEditor.md#get_items)
 - [get\_readOnly](ServiceLookupEditor.md#get_readonly)
-- [get\_select2Container](ServiceLookupEditor.md#get_select2container)
 - [get\_text](ServiceLookupEditor.md#get_text)
 - [get\_value](ServiceLookupEditor.md#get_value)
 - [get\_values](ServiceLookupEditor.md#get_values)
 - [hasAsyncSource](ServiceLookupEditor.md#hasasyncsource)
 - [init](ServiceLookupEditor.md#init)
 - [initNewEntity](ServiceLookupEditor.md#initnewentity)
-- [initialize](ServiceLookupEditor.md#initialize)
 - [inplaceCreateClick](ServiceLookupEditor.md#inplacecreateclick)
+- [internalInit](ServiceLookupEditor.md#internalinit)
+- [internalRenderContents](ServiceLookupEditor.md#internalrendercontents)
 - [isAutoComplete](ServiceLookupEditor.md#isautocomplete)
 - [isMultiple](ServiceLookupEditor.md#ismultiple)
 - [itemDisabled](ServiceLookupEditor.md#itemdisabled)
@@ -107,6 +120,8 @@
 - [itemText](ServiceLookupEditor.md#itemtext)
 - [mapItem](ServiceLookupEditor.md#mapitem)
 - [mapItems](ServiceLookupEditor.md#mapitems)
+- [openDropdown](ServiceLookupEditor.md#opendropdown)
+- [render](ServiceLookupEditor.md#render)
 - [renderContents](ServiceLookupEditor.md#rendercontents)
 - [setCascadeFrom](ServiceLookupEditor.md#setcascadefrom)
 - [setEditDialogReadOnly](ServiceLookupEditor.md#seteditdialogreadonly)
@@ -120,10 +135,12 @@
 - [set\_readOnly](ServiceLookupEditor.md#set_readonly)
 - [set\_value](ServiceLookupEditor.md#set_value)
 - [set\_values](ServiceLookupEditor.md#set_values)
+- [syncOrAsyncThen](ServiceLookupEditor.md#syncorasyncthen)
 - [updateItems](ServiceLookupEditor.md#updateitems)
+- [useIdPrefix](ServiceLookupEditor.md#useidprefix)
 - [useInplaceAdd](ServiceLookupEditor.md#useinplaceadd)
 - [create](ServiceLookupEditor.md#create)
-- [elementFor](ServiceLookupEditor.md#elementfor)
+- [createDefaultElement](ServiceLookupEditor.md#createdefaultelement)
 - [filterByText](ServiceLookupEditor.md#filterbytext)
 - [getWidgetName](ServiceLookupEditor.md#getwidgetname)
 
@@ -131,14 +148,24 @@
 
 ### constructor
 
-• **new ServiceLookupEditor**(`hidden`, `opt?`)
+• **new ServiceLookupEditor**\<`P`, `TItem`\>(`props`): [`ServiceLookupEditor`](ServiceLookupEditor.md)\<`P`, `TItem`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `P` | extends [`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md) = [`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md) |
+| `TItem` | `any` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `hidden` | `JQuery` |
-| `opt?` | [`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md) |
+| `props` | [`EditorProps`](../README.md#editorprops)\<`P`\> |
+
+#### Returns
+
+[`ServiceLookupEditor`](ServiceLookupEditor.md)\<`P`, `TItem`\>
 
 #### Overrides
 
@@ -146,13 +173,13 @@
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L181)
+[src/ui/editors/servicelookupeditor.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L190)
 
 ## Properties
 
 ### cascadeLink
 
-• `Protected` **cascadeLink**: [`CascadedWidgetLink`](CascadedWidgetLink.md)<[`Widget`](Widget.md)<`any`\>\>
+• `Protected` **cascadeLink**: [`CascadedWidgetLink`](CascadedWidgetLink.md)\<[`Widget`](Widget.md)\<`any`\>\>
 
 #### Inherited from
 
@@ -160,21 +187,21 @@
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:701](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L701)
+[src/ui/editors/comboboxeditor.ts:572](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L572)
 
 ___
 
-### element
+### domNode
 
-• **element**: `JQuery`
+• `Readonly` **domNode**: `HTMLInputElement`
 
 #### Inherited from
 
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[element](ServiceLookupEditorBase.md#element)
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[domNode](ServiceLookupEditorBase.md#domnode)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L61)
+[src/ui/editors/comboboxeditor.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L44)
 
 ___
 
@@ -188,7 +215,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L65)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
@@ -202,13 +229,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L64)
+[src/ui/editors/comboboxeditor.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L49)
 
 ___
 
 ### onInitNewEntity
 
-• **onInitNewEntity**: (`entity`: `any`) => `void`
+• **onInitNewEntity**: (`entity`: `TItem`) => `void`
 
 #### Type declaration
 
@@ -218,7 +245,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | `any` |
+| `entity` | `TItem` |
 
 ##### Returns
 
@@ -230,7 +257,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:871](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L871)
+[src/ui/editors/comboboxeditor.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L740)
 
 ___
 
@@ -244,13 +271,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:972](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L972)
+[src/ui/editors/comboboxeditor.ts:846](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L846)
 
 ___
 
 ### options
 
-• `Protected` **options**: [`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md)
+• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<[`ServiceLookupEditorOptions`](../interfaces/ServiceLookupEditorOptions.md)\>
 
 #### Inherited from
 
@@ -258,13 +285,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L62)
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ___
 
 ### uniqueName
 
-• `Protected` **uniqueName**: `string`
+• `Protected` `Readonly` **uniqueName**: `string`
 
 #### Inherited from
 
@@ -272,21 +299,21 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L64)
+[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ___
 
-### widgetName
+### typeInfo
 
-• `Protected` **widgetName**: `string`
+▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
 
 #### Inherited from
 
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[widgetName](ServiceLookupEditorBase.md#widgetname)
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[typeInfo](ServiceLookupEditorBase.md#typeinfo)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
 
 ## Accessors
 
@@ -304,7 +331,7 @@ ServiceLookupEditorBase.cascadeField
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L745)
+[src/ui/editors/comboboxeditor.ts:616](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L616)
 
 • `set` **cascadeField**(`value`): `void`
 
@@ -324,7 +351,7 @@ ServiceLookupEditorBase.cascadeField
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:753](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L753)
+[src/ui/editors/comboboxeditor.ts:624](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L624)
 
 ___
 
@@ -342,7 +369,7 @@ ServiceLookupEditorBase.cascadeFrom
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L726)
+[src/ui/editors/comboboxeditor.ts:597](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L597)
 
 • `set` **cascadeFrom**(`value`): `void`
 
@@ -362,7 +389,7 @@ ServiceLookupEditorBase.cascadeFrom
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L737)
+[src/ui/editors/comboboxeditor.ts:608](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L608)
 
 ___
 
@@ -380,7 +407,7 @@ ServiceLookupEditorBase.cascadeValue
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:761](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L761)
+[src/ui/editors/comboboxeditor.ts:632](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L632)
 
 • `set` **cascadeValue**(`value`): `void`
 
@@ -400,7 +427,27 @@ ServiceLookupEditorBase.cascadeValue
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:773](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L773)
+[src/ui/editors/comboboxeditor.ts:644](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L644)
+
+___
+
+### element
+
+• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+Returns a Fluent(this.domNode) object
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+ServiceLookupEditorBase.element
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 ___
 
@@ -418,7 +465,7 @@ ServiceLookupEditorBase.filterField
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:781](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L781)
+[src/ui/editors/comboboxeditor.ts:652](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L652)
 
 • `set` **filterField**(`value`): `void`
 
@@ -438,7 +485,7 @@ ServiceLookupEditorBase.filterField
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:789](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L789)
+[src/ui/editors/comboboxeditor.ts:660](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L660)
 
 ___
 
@@ -456,7 +503,7 @@ ServiceLookupEditorBase.filterValue
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:797](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L797)
+[src/ui/editors/comboboxeditor.ts:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L668)
 
 • `set` **filterValue**(`value`): `void`
 
@@ -476,13 +523,13 @@ ServiceLookupEditorBase.filterValue
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:809](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L809)
+[src/ui/editors/comboboxeditor.ts:680](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L680)
 
 ___
 
 ### itemById
 
-• `Protected` `get` **itemById**(): `Object`
+• `get` **itemById**(): `Object`
 
 #### Returns
 
@@ -494,9 +541,9 @@ ServiceLookupEditorBase.itemById
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:349](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L349)
+[src/ui/editors/comboboxeditor.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L259)
 
-• `Protected` `set` **itemById**(`value`): `void`
+• `set` **itemById**(`value`): `void`
 
 #### Parameters
 
@@ -514,17 +561,17 @@ ServiceLookupEditorBase.itemById
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:356](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L356)
+[src/ui/editors/comboboxeditor.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L266)
 
 ___
 
 ### items
 
-• `get` **items**(): `Select2Item`[]
+• `get` **items**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>[]
 
 #### Returns
 
-`Select2Item`[]
+[`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>[]
 
 #### Inherited from
 
@@ -532,7 +579,7 @@ ServiceLookupEditorBase.items
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L332)
+[src/ui/editors/comboboxeditor.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L242)
 
 • `set` **items**(`value`): `void`
 
@@ -540,7 +587,7 @@ ServiceLookupEditorBase.items
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `Select2Item`[] |
+| `value` | [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>[] |
 
 #### Returns
 
@@ -552,7 +599,25 @@ ServiceLookupEditorBase.items
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:339](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L339)
+[src/ui/editors/comboboxeditor.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L249)
+
+___
+
+### props
+
+• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Returns
+
+[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Inherited from
+
+ServiceLookupEditorBase.props
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
 
 ___
 
@@ -570,7 +635,7 @@ ServiceLookupEditorBase.readOnly
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L672)
+[src/ui/editors/comboboxeditor.ts:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L542)
 
 • `set` **readOnly**(`value`): `void`
 
@@ -590,7 +655,7 @@ ServiceLookupEditorBase.readOnly
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:693](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L693)
+[src/ui/editors/comboboxeditor.ts:564](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L564)
 
 ___
 
@@ -608,7 +673,7 @@ ServiceLookupEditorBase.selectedItem
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:598](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L598)
+[src/ui/editors/comboboxeditor.ts:485](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L485)
 
 ___
 
@@ -626,7 +691,7 @@ ServiceLookupEditorBase.selectedItems
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:608](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L608)
+[src/ui/editors/comboboxeditor.ts:495](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L495)
 
 ___
 
@@ -644,7 +709,7 @@ ServiceLookupEditorBase.text
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:664](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L664)
+[src/ui/editors/comboboxeditor.ts:534](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L534)
 
 ___
 
@@ -662,7 +727,7 @@ ServiceLookupEditorBase.value
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:565](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L565)
+[src/ui/editors/comboboxeditor.ts:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L466)
 
 • `set` **value**(`v`): `void`
 
@@ -682,7 +747,7 @@ ServiceLookupEditorBase.value
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:594](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L594)
+[src/ui/editors/comboboxeditor.ts:481](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L481)
 
 ___
 
@@ -700,7 +765,7 @@ ServiceLookupEditorBase.values
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:642](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L642)
+[src/ui/editors/comboboxeditor.ts:514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L514)
 
 • `set` **values**(`value`): `void`
 
@@ -720,13 +785,13 @@ ServiceLookupEditorBase.values
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:656](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L656)
+[src/ui/editors/comboboxeditor.ts:522](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L522)
 
 ## Methods
 
 ### abortPendingQuery
 
-▸ `Protected` **abortPendingQuery**(): `void`
+▸ **abortPendingQuery**(): `void`
 
 #### Returns
 
@@ -738,13 +803,13 @@ ServiceLookupEditorBase.values
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L175)
+[src/ui/editors/comboboxeditor.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L157)
 
 ___
 
 ### addCssClass
 
-▸ `Protected` **addCssClass**(): `void`
+▸ **addCssClass**(): `void`
 
 #### Returns
 
@@ -756,13 +821,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 ___
 
 ### addInplaceCreate
 
-▸ `Protected` **addInplaceCreate**(`addTitle`, `editTitle`): `void`
+▸ **addInplaceCreate**(`addTitle`, `editTitle`): `void`
 
 #### Parameters
 
@@ -781,7 +846,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L388)
+[src/ui/editors/comboboxeditor.ts:298](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L298)
 
 ___
 
@@ -793,7 +858,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `item` | `Select2Item` |
+| `item` | [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\> |
 
 #### Returns
 
@@ -805,7 +870,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:371](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L371)
+[src/ui/editors/comboboxeditor.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L281)
 
 ___
 
@@ -832,24 +897,24 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:379](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L379)
+[src/ui/editors/comboboxeditor.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L289)
 
 ___
 
 ### addValidationRule
 
-▸ **addValidationRule**(`eventClass`, `rule`): `JQuery`
+▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `eventClass` | `string` |
-| `rule` | (`p1`: `JQuery`) => `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `uniqueName?` | `string` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Inherited from
 
@@ -857,13 +922,34 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L134)
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
+
+▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `uniqueName` | `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[addValidationRule](ServiceLookupEditorBase.md#addvalidationrule)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
 ___
 
 ### allowClear
 
-▸ `Protected` **allowClear**(): `boolean`
+▸ **allowClear**(): `boolean`
 
 #### Returns
 
@@ -875,24 +961,23 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L162)
+[src/ui/editors/comboboxeditor.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L148)
 
 ___
 
 ### asyncSearch
 
-▸ `Protected` **asyncSearch**(`query`, `results`): [`Select2SearchPromise`](../interfaces/Select2SearchPromise.md)
+▸ **asyncSearch**(`query`): `Promise`\<[`ComboboxSearchResult`](../interfaces/ComboboxSearchResult.md)\<`TItem`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `query` | [`Select2SearchQuery`](../interfaces/Select2SearchQuery.md) |
-| `results` | (`result`: [`Select2SearchResult`](../interfaces/Select2SearchResult.md)<`any`\>) => `void` |
+| `query` | [`ComboboxSearchQuery`](../interfaces/ComboboxSearchQuery.md) |
 
 #### Returns
 
-[`Select2SearchPromise`](../interfaces/Select2SearchPromise.md)
+`Promise`\<[`ComboboxSearchResult`](../interfaces/ComboboxSearchResult.md)\<`TItem`\>\>
 
 #### Inherited from
 
@@ -900,23 +985,47 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L173)
+[src/ui/editors/servicelookupeditor.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L165)
 
 ___
 
-### cascadeItems
+### canSearch
 
-▸ `Protected` **cascadeItems**(`items`): `any`[]
+▸ **canSearch**(`byId`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `items` | `any`[] |
+| `byId` | `boolean` |
 
 #### Returns
 
-`any`[]
+`boolean`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[canSearch](ServiceLookupEditorBase.md#cansearch)
+
+#### Defined in
+
+[src/ui/editors/servicelookupeditor.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L155)
+
+___
+
+### cascadeItems
+
+▸ **cascadeItems**(`items`): `TItem`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `items` | `TItem`[] |
+
+#### Returns
+
+`TItem`[]
 
 #### Inherited from
 
@@ -924,7 +1033,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:813](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L813)
+[src/ui/editors/comboboxeditor.ts:684](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L684)
 
 ___
 
@@ -936,7 +1045,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -948,27 +1057,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[change](ServiceLookupEditorBase.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L259)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ___
 
@@ -980,7 +1069,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -992,27 +1081,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[changeSelect2](ServiceLookupEditorBase.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L260)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 ___
 
@@ -1030,13 +1099,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L363)
+[src/ui/editors/comboboxeditor.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L273)
 
 ___
 
 ### createEditDialog
 
-▸ `Protected` **createEditDialog**(`callback`): `void`
+▸ **createEditDialog**(`callback`): `void`
 
 #### Parameters
 
@@ -1054,7 +1123,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:862](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L862)
+[src/ui/editors/comboboxeditor.ts:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L733)
 
 ___
 
@@ -1072,13 +1141,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L91)
+[src/ui/editors/comboboxeditor.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L79)
 
 ___
 
 ### editDialogDataChange
 
-▸ `Protected` **editDialogDataChange**(): `void`
+▸ **editDialogDataChange**(): `void`
 
 #### Returns
 
@@ -1090,13 +1159,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:895](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L895)
+[src/ui/editors/comboboxeditor.ts:765](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L765)
 
 ___
 
 ### emptyItemText
 
-▸ `Protected` **emptyItemText**(): `string`
+▸ **emptyItemText**(): `string`
 
 #### Returns
 
@@ -1108,23 +1177,23 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L114)
+[src/ui/editors/comboboxeditor.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L100)
 
 ___
 
 ### filterItems
 
-▸ `Protected` **filterItems**(`items`): `any`[]
+▸ **filterItems**(`items`): `TItem`[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `items` | `any`[] |
+| `items` | `TItem`[] |
 
 #### Returns
 
-`any`[]
+`TItem`[]
 
 #### Inherited from
 
@@ -1132,13 +1201,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:835](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L835)
+[src/ui/editors/comboboxeditor.ts:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L706)
 
 ___
 
 ### getCascadeCriteria
 
-▸ `Protected` **getCascadeCriteria**(): `any`[]
+▸ **getCascadeCriteria**(): `any`[]
 
 #### Returns
 
@@ -1150,19 +1219,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L79)
+[src/ui/editors/servicelookupeditor.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L71)
 
 ___
 
 ### getCascadeFromValue
 
-▸ `Protected` **getCascadeFromValue**(`parent`): `any`
+▸ **getCascadeFromValue**(`parent`): `any`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `parent` | [`Widget`](Widget.md)<`any`\> |
+| `parent` | [`Widget`](Widget.md)\<`any`\> |
 
 #### Returns
 
@@ -1174,13 +1243,49 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:697](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L697)
+[src/ui/editors/comboboxeditor.ts:568](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L568)
+
+___
+
+### getComboboxContainer
+
+▸ **getComboboxContainer**(): `HTMLElement`
+
+#### Returns
+
+`HTMLElement`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[getComboboxContainer](ServiceLookupEditorBase.md#getcomboboxcontainer)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.ts:428](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L428)
+
+___
+
+### getComboboxOptions
+
+▸ **getComboboxOptions**(): [`ComboboxOptions`](../interfaces/ComboboxOptions.md)\<`any`\>
+
+#### Returns
+
+[`ComboboxOptions`](../interfaces/ComboboxOptions.md)\<`any`\>
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[getComboboxOptions](ServiceLookupEditorBase.md#getcomboboxoptions)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L161)
 
 ___
 
 ### getCreateSearchChoice
 
-▸ **getCreateSearchChoice**(`getName`): (`s`: `string`) => { `id`: `string` ; `text`: `string`  }
+▸ **getCreateSearchChoice**(`getName`): (`s`: `string`) => \{ `id`: `string` ; `text`: `string`  }
 
 #### Parameters
 
@@ -1215,19 +1320,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:450](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L450)
+[src/ui/editors/comboboxeditor.ts:363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L363)
 
 ___
 
 ### getCriteria
 
-▸ `Protected` **getCriteria**(`query`): `any`[]
+▸ **getCriteria**(`query`): `any`[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `query` | [`Select2SearchQuery`](../interfaces/Select2SearchQuery.md) |
+| `query` | [`ComboboxSearchQuery`](../interfaces/ComboboxSearchQuery.md) |
 
 #### Returns
 
@@ -1239,13 +1344,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L122)
+[src/ui/editors/servicelookupeditor.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L114)
 
 ___
 
 ### getCssClass
 
-▸ `Protected` **getCssClass**(): `string`
+▸ **getCssClass**(): `string`
 
 #### Returns
 
@@ -1257,13 +1362,44 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L104)
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
+
+___
+
+### getCustomAttribute
+
+▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TAttr` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
+
+#### Returns
+
+`TAttr`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[getCustomAttribute](ServiceLookupEditorBase.md#getcustomattribute)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
 
 ___
 
 ### getDialogTypeKey
 
-▸ `Protected` **getDialogTypeKey**(): `string`
+▸ **getDialogTypeKey**(): `string`
 
 #### Returns
 
@@ -1275,7 +1411,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L28)
+[src/ui/editors/servicelookupeditor.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L26)
 
 ___
 
@@ -1300,13 +1436,31 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L508)
+[src/ui/editors/comboboxeditor.ts:419](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L419)
+
+___
+
+### getFieldElement
+
+▸ **getFieldElement**(): `HTMLElement`
+
+#### Returns
+
+`HTMLElement`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[getFieldElement](ServiceLookupEditorBase.md#getfieldelement)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
 
 ___
 
 ### getFilterCriteria
 
-▸ `Protected` **getFilterCriteria**(): `any`[]
+▸ **getFilterCriteria**(): `any`[]
 
 #### Returns
 
@@ -1318,17 +1472,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L97)
+[src/ui/editors/servicelookupeditor.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L89)
 
 ___
 
 ### getGridField
 
-▸ **getGridField**(): `JQuery`
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -1336,13 +1490,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
 ___
 
 ### getIdField
 
-▸ `Protected` **getIdField**(): `any`
+▸ **getIdField**(): `any`
 
 #### Returns
 
@@ -1354,13 +1508,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L123)
+[src/ui/editors/comboboxeditor.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L109)
 
 ___
 
 ### getIdListCriteria
 
-▸ `Protected` **getIdListCriteria**(`idList`): `any`[]
+▸ **getIdListCriteria**(`idList`): `any`[]
 
 #### Parameters
 
@@ -1378,13 +1532,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L108)
+[src/ui/editors/servicelookupeditor.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L100)
 
 ___
 
 ### getIncludeColumns
 
-▸ `Protected` **getIncludeColumns**(): `string`[]
+▸ **getIncludeColumns**(): `string`[]
 
 #### Returns
 
@@ -1396,19 +1550,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L61)
+[src/ui/editors/servicelookupeditor.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L53)
 
 ___
 
 ### getListRequest
 
-▸ `Protected` **getListRequest**(`query`): [`ListRequest`](../interfaces/ListRequest.md)
+▸ **getListRequest**(`query`): [`ListRequest`](../interfaces/ListRequest.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `query` | [`Select2SearchQuery`](../interfaces/Select2SearchQuery.md) |
+| `query` | [`ComboboxSearchQuery`](../interfaces/ComboboxSearchQuery.md) |
 
 #### Returns
 
@@ -1420,13 +1574,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L128)
+[src/ui/editors/servicelookupeditor.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L120)
 
 ___
 
 ### getPageSize
 
-▸ `Protected` **getPageSize**(): `number`
+▸ **getPageSize**(): `number`
 
 #### Returns
 
@@ -1438,31 +1592,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L119)
-
-___
-
-### getSelect2Options
-
-▸ `Protected` **getSelect2Options**(): `Select2Options`
-
-#### Returns
-
-`Select2Options`
-
-#### Inherited from
-
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[getSelect2Options](ServiceLookupEditorBase.md#getselect2options)
-
-#### Defined in
-
-[src/ui/editors/select2editor.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L184)
+[src/ui/editors/comboboxeditor.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L105)
 
 ___
 
 ### getService
 
-▸ `Protected` **getService**(): `string`
+▸ **getService**(): `string`
 
 #### Returns
 
@@ -1474,24 +1610,23 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L43)
+[src/ui/editors/servicelookupeditor.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L41)
 
 ___
 
 ### getServiceCallOptions
 
-▸ `Protected` **getServiceCallOptions**(`query`, `results`): [`ServiceOptions`](../interfaces/ServiceOptions.md)<[`ListResponse`](../interfaces/ListResponse.md)<`any`\>\>
+▸ **getServiceCallOptions**(`query`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `query` | [`Select2SearchQuery`](../interfaces/Select2SearchQuery.md) |
-| `results` | (`result`: [`Select2SearchResult`](../interfaces/Select2SearchResult.md)<`any`\>) => `void` |
+| `query` | [`ComboboxSearchQuery`](../interfaces/ComboboxSearchQuery.md) |
 
 #### Returns
 
-[`ServiceOptions`](../interfaces/ServiceOptions.md)<[`ListResponse`](../interfaces/ListResponse.md)<`any`\>\>
+[`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>\>
 
 #### Inherited from
 
@@ -1499,13 +1634,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L150)
+[src/ui/editors/servicelookupeditor.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L142)
 
 ___
 
 ### getServiceUrl
 
-▸ `Protected` **getServiceUrl**(): `string`
+▸ **getServiceUrl**(): `string`
 
 #### Returns
 
@@ -1517,13 +1652,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L47)
+[src/ui/editors/servicelookupeditor.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L45)
 
 ___
 
 ### getSort
 
-▸ `Protected` **getSort**(): `any`[]
+▸ **getSort**(): `any`[]
 
 #### Returns
 
@@ -1535,13 +1670,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L75)
+[src/ui/editors/servicelookupeditor.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L67)
 
 ___
 
 ### getTextField
 
-▸ `Protected` **getTextField**(): `any`
+▸ **getTextField**(): `any`
 
 #### Returns
 
@@ -1553,13 +1688,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L134)
+[src/ui/editors/comboboxeditor.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L120)
 
 ___
 
 ### getTypeDelay
 
-▸ `Protected` **getTypeDelay**(): `any`
+▸ **getTypeDelay**(): `any`
 
 #### Returns
 
@@ -1571,13 +1706,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L110)
+[src/ui/editors/comboboxeditor.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L96)
 
 ___
 
 ### get\_cascadeField
 
-▸ `Protected` **get_cascadeField**(): `string`
+▸ **get_cascadeField**(): `string`
 
 #### Returns
 
@@ -1589,13 +1724,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L741)
+[src/ui/editors/comboboxeditor.ts:612](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L612)
 
 ___
 
 ### get\_cascadeFrom
 
-▸ `Protected` **get_cascadeFrom**(): `string`
+▸ **get_cascadeFrom**(): `string`
 
 #### Returns
 
@@ -1607,13 +1742,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:722](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L722)
+[src/ui/editors/comboboxeditor.ts:593](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L593)
 
 ___
 
 ### get\_cascadeValue
 
-▸ `Protected` **get_cascadeValue**(): `any`
+▸ **get_cascadeValue**(): `any`
 
 #### Returns
 
@@ -1625,7 +1760,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:757](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L757)
+[src/ui/editors/comboboxeditor.ts:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L628)
 
 ___
 
@@ -1643,13 +1778,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L328)
+[src/ui/editors/comboboxeditor.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L238)
 
 ___
 
 ### get\_filterField
 
-▸ `Protected` **get_filterField**(): `string`
+▸ **get_filterField**(): `string`
 
 #### Returns
 
@@ -1661,13 +1796,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:777](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L777)
+[src/ui/editors/comboboxeditor.ts:648](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L648)
 
 ___
 
 ### get\_filterValue
 
-▸ `Protected` **get_filterValue**(): `any`
+▸ **get_filterValue**(): `any`
 
 #### Returns
 
@@ -1679,13 +1814,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:793](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L793)
+[src/ui/editors/comboboxeditor.ts:664](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L664)
 
 ___
 
 ### get\_itemByKey
 
-▸ `Protected` **get_itemByKey**(): `Object`
+▸ **get_itemByKey**(): `Object`
 
 #### Returns
 
@@ -1697,17 +1832,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:525](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L525)
+[src/ui/editors/comboboxeditor.ts:436](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L436)
 
 ___
 
 ### get\_items
 
-▸ `Protected` **get_items**(): `Select2Item`[]
+▸ **get_items**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>[]
 
 #### Returns
 
-`Select2Item`[]
+[`ComboboxItem`](../interfaces/ComboboxItem.md)\<`TItem`\>[]
 
 #### Inherited from
 
@@ -1715,7 +1850,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:521](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L521)
+[src/ui/editors/comboboxeditor.ts:432](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L432)
 
 ___
 
@@ -1733,31 +1868,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L668)
-
-___
-
-### get\_select2Container
-
-▸ `Protected` **get_select2Container**(): `JQuery`
-
-#### Returns
-
-`JQuery`
-
-#### Inherited from
-
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[get_select2Container](ServiceLookupEditorBase.md#get_select2container)
-
-#### Defined in
-
-[src/ui/editors/select2editor.ts:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L517)
+[src/ui/editors/comboboxeditor.ts:538](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L538)
 
 ___
 
 ### get\_text
 
-▸ `Protected` **get_text**(): `string`
+▸ **get_text**(): `string`
 
 #### Returns
 
@@ -1769,17 +1886,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:660](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L660)
+[src/ui/editors/comboboxeditor.ts:526](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L526)
 
 ___
 
 ### get\_value
 
-▸ **get_value**(): `any`
+▸ **get_value**(): `string`
 
 #### Returns
 
-`any`
+`string`
 
 #### Inherited from
 
@@ -1787,13 +1904,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:551](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L551)
+[src/ui/editors/comboboxeditor.ts:462](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L462)
 
 ___
 
 ### get\_values
 
-▸ `Protected` **get_values**(): `string`[]
+▸ **get_values**(): `string`[]
 
 #### Returns
 
@@ -1805,13 +1922,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:623](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L623)
+[src/ui/editors/comboboxeditor.ts:510](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L510)
 
 ___
 
 ### hasAsyncSource
 
-▸ `Protected` **hasAsyncSource**(): `boolean`
+▸ **hasAsyncSource**(): `boolean`
 
 #### Returns
 
@@ -1823,23 +1940,17 @@ ___
 
 #### Defined in
 
-[src/ui/editors/servicelookupeditor.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L169)
+[src/ui/editors/servicelookupeditor.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L151)
 
 ___
 
 ### init
 
-▸ **init**(`action?`): [`ServiceLookupEditor`](ServiceLookupEditor.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `action?` | (`widget`: `any`) => `void` |
+▸ **init**(): `this`
 
 #### Returns
 
-[`ServiceLookupEditor`](ServiceLookupEditor.md)
+`this`
 
 #### Inherited from
 
@@ -1847,19 +1958,19 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
 ___
 
 ### initNewEntity
 
-▸ `Protected` **initNewEntity**(`entity`): `void`
+▸ **initNewEntity**(`entity`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | `any` |
+| `entity` | `TItem` |
 
 #### Returns
 
@@ -1871,37 +1982,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:873](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L873)
-
-___
-
-### initialize
-
-▸ **initialize**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[initialize](ServiceLookupEditorBase.md#initialize)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L176)
+[src/ui/editors/comboboxeditor.ts:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L742)
 
 ___
 
 ### inplaceCreateClick
 
-▸ `Protected` **inplaceCreateClick**(`e`): `void`
+▸ **inplaceCreateClick**(`e`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `e` | `JQueryEventObject` |
+| `e` | `Event` |
 
 #### Returns
 
@@ -1913,13 +2006,49 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:901](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L901)
+[src/ui/editors/comboboxeditor.ts:771](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L771)
+
+___
+
+### internalInit
+
+▸ **internalInit**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[internalInit](ServiceLookupEditorBase.md#internalinit)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+___
+
+### internalRenderContents
+
+▸ **internalRenderContents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[internalRenderContents](ServiceLookupEditorBase.md#internalrendercontents)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
 
 ___
 
 ### isAutoComplete
 
-▸ `Protected` **isAutoComplete**(): `boolean`
+▸ **isAutoComplete**(): `boolean`
 
 #### Returns
 
@@ -1931,13 +2060,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:446](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L446)
+[src/ui/editors/comboboxeditor.ts:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L359)
 
 ___
 
 ### isMultiple
 
-▸ `Protected` **isMultiple**(): `boolean`
+▸ **isMultiple**(): `boolean`
 
 #### Returns
 
@@ -1949,19 +2078,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L167)
+[src/ui/editors/comboboxeditor.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L153)
 
 ___
 
 ### itemDisabled
 
-▸ `Protected` **itemDisabled**(`item`): `boolean`
+▸ **itemDisabled**(`item`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | `any` |
+| `item` | `TItem` |
 
 #### Returns
 
@@ -1973,19 +2102,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L145)
+[src/ui/editors/comboboxeditor.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L131)
 
 ___
 
 ### itemId
 
-▸ `Protected` **itemId**(`item`): `string`
+▸ **itemId**(`item`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | `any` |
+| `item` | `TItem` |
 
 #### Returns
 
@@ -1997,19 +2126,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L127)
+[src/ui/editors/comboboxeditor.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L113)
 
 ___
 
 ### itemText
 
-▸ `Protected` **itemText**(`item`): `string`
+▸ **itemText**(`item`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | `any` |
+| `item` | `TItem` |
 
 #### Returns
 
@@ -2021,23 +2150,23 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L138)
+[src/ui/editors/comboboxeditor.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L124)
 
 ___
 
 ### mapItem
 
-▸ `Protected` **mapItem**(`item`): `Select2Item`
+▸ **mapItem**(`item`): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | `any` |
+| `item` | `TItem` |
 
 #### Returns
 
-`Select2Item`
+[`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>
 
 #### Inherited from
 
@@ -2045,23 +2174,23 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L149)
+[src/ui/editors/comboboxeditor.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L135)
 
 ___
 
 ### mapItems
 
-▸ `Protected` **mapItems**(`items`): `Select2Item`[]
+▸ **mapItems**(`items`): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `items` | `any`[] |
+| `items` | `TItem`[] |
 
 #### Returns
 
-`Select2Item`[]
+[`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>[]
 
 #### Inherited from
 
@@ -2069,13 +2198,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L158)
+[src/ui/editors/comboboxeditor.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L144)
 
 ___
 
-### renderContents
+### openDropdown
 
-▸ `Protected` **renderContents**(): `void`
+▸ **openDropdown**(): `void`
 
 #### Returns
 
@@ -2083,17 +2212,57 @@ ___
 
 #### Inherited from
 
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[openDropdown](ServiceLookupEditorBase.md#opendropdown)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.ts:842](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L842)
+
+___
+
+### render
+
+▸ **render**(): `any`
+
+Returns the main element for this widget or the document fragment.
+As widgets may get their elements from props unlike regular JSX widgets, 
+this method should not be overridden. Override renderContents() instead.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[render](ServiceLookupEditorBase.md#render)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
+
+___
+
+### renderContents
+
+▸ **renderContents**(): `any`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
 [ServiceLookupEditorBase](ServiceLookupEditorBase.md).[renderContents](ServiceLookupEditorBase.md#rendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
+[src/ui/widgets/widget.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L178)
 
 ___
 
 ### setCascadeFrom
 
-▸ `Protected` **setCascadeFrom**(`value`): `void`
+▸ **setCascadeFrom**(`value`): `void`
 
 #### Parameters
 
@@ -2111,13 +2280,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:703](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L703)
+[src/ui/editors/comboboxeditor.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L574)
 
 ___
 
 ### setEditDialogReadOnly
 
-▸ `Protected` **setEditDialogReadOnly**(`dialog`): `void`
+▸ **setEditDialogReadOnly**(`dialog`): `void`
 
 #### Parameters
 
@@ -2135,7 +2304,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:887](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L887)
+[src/ui/editors/comboboxeditor.ts:756](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L756)
 
 ___
 
@@ -2160,19 +2329,19 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:498](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L498)
+[src/ui/editors/comboboxeditor.ts:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L409)
 
 ___
 
 ### setTermOnNewEntity
 
-▸ `Protected` **setTermOnNewEntity**(`entity`, `term`): `void`
+▸ **setTermOnNewEntity**(`entity`, `term`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | `any` |
+| `entity` | `TItem` |
 | `term` | `string` |
 
 #### Returns
@@ -2185,13 +2354,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:898](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L898)
+[src/ui/editors/comboboxeditor.ts:768](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L768)
 
 ___
 
 ### set\_cascadeField
 
-▸ `Protected` **set_cascadeField**(`value`): `void`
+▸ **set_cascadeField**(`value`): `void`
 
 #### Parameters
 
@@ -2209,13 +2378,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:749](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L749)
+[src/ui/editors/comboboxeditor.ts:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L620)
 
 ___
 
 ### set\_cascadeFrom
 
-▸ `Protected` **set_cascadeFrom**(`value`): `void`
+▸ **set_cascadeFrom**(`value`): `void`
 
 #### Parameters
 
@@ -2233,13 +2402,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L730)
+[src/ui/editors/comboboxeditor.ts:601](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L601)
 
 ___
 
 ### set\_cascadeValue
 
-▸ `Protected` **set_cascadeValue**(`value`): `void`
+▸ **set_cascadeValue**(`value`): `void`
 
 #### Parameters
 
@@ -2257,13 +2426,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:765](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L765)
+[src/ui/editors/comboboxeditor.ts:636](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L636)
 
 ___
 
 ### set\_filterField
 
-▸ `Protected` **set_filterField**(`value`): `void`
+▸ **set_filterField**(`value`): `void`
 
 #### Parameters
 
@@ -2281,13 +2450,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:785](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L785)
+[src/ui/editors/comboboxeditor.ts:656](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L656)
 
 ___
 
 ### set\_filterValue
 
-▸ `Protected` **set_filterValue**(`value`): `void`
+▸ **set_filterValue**(`value`): `void`
 
 #### Parameters
 
@@ -2305,7 +2474,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:801](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L801)
+[src/ui/editors/comboboxeditor.ts:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L672)
 
 ___
 
@@ -2329,7 +2498,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:686](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L686)
+[src/ui/editors/comboboxeditor.ts:557](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L557)
 
 ___
 
@@ -2353,13 +2522,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:569](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L569)
+[src/ui/editors/comboboxeditor.ts:470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L470)
 
 ___
 
 ### set\_values
 
-▸ `Protected` **set_values**(`value`): `void`
+▸ **set_values**(`value`): `void`
 
 #### Parameters
 
@@ -2377,13 +2546,45 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L646)
+[src/ui/editors/comboboxeditor.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L518)
+
+___
+
+### syncOrAsyncThen
+
+▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `syncMethod` | () => `T` |
+| `asyncMethod` | () => `PromiseLike`\<`T`\> |
+| `then` | (`v`: `T`) => `void` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[syncOrAsyncThen](ServiceLookupEditorBase.md#syncorasyncthen)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
 
 ___
 
 ### updateItems
 
-▸ `Protected` **updateItems**(): `void`
+▸ **updateItems**(): `void`
 
 #### Returns
 
@@ -2395,13 +2596,31 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:851](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L851)
+[src/ui/editors/comboboxeditor.ts:722](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L722)
+
+___
+
+### useIdPrefix
+
+▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
+
+#### Returns
+
+[`IdPrefixType`](../README.md#idprefixtype)
+
+#### Inherited from
+
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[useIdPrefix](ServiceLookupEditorBase.md#useidprefix)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
 
 ___
 
 ### useInplaceAdd
 
-▸ `Protected` **useInplaceAdd**(): `boolean`
+▸ **useInplaceAdd**(): `boolean`
 
 #### Returns
 
@@ -2413,26 +2632,26 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L439)
+[src/ui/editors/comboboxeditor.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L352)
 
 ___
 
 ### create
 
-▸ `Static` **create**<`TWidget`, `TOpt`\>(`params`): `TWidget`
+▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`TOpt`, `TWidget`\> |
-| `TOpt` | `TOpt` |
+| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
+| `P` | `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)<`TWidget`, `TOpt`\> |
+| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -2444,43 +2663,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
 
 ___
 
-### elementFor
+### createDefaultElement
 
-▸ `Static` **elementFor**<`TWidget`\>(`editorType`): `JQuery`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TWidget` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editorType` | (...`args`: `any`[]) => `TWidget` |
+▸ **createDefaultElement**(): `HTMLInputElement`
 
 #### Returns
 
-`JQuery`
+`HTMLInputElement`
 
 #### Inherited from
 
-[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[elementFor](ServiceLookupEditorBase.md#elementfor)
+[ServiceLookupEditorBase](ServiceLookupEditorBase.md).[createDefaultElement](ServiceLookupEditorBase.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L128)
+[src/ui/editors/comboboxeditor.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L43)
 
 ___
 
 ### filterByText
 
-▸ `Static` **filterByText**<`TItem`\>(`items`, `getText`, `term`): `TItem`[]
+▸ **filterByText**\<`TItem`\>(`items`, `getText`, `term`): `TItem`[]
 
 #### Type parameters
 
@@ -2506,13 +2713,13 @@ ___
 
 #### Defined in
 
-[src/ui/editors/select2editor.ts:529](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2editor.ts#L529)
+[src/ui/editors/comboboxeditor.ts:440](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L440)
 
 ___
 
 ### getWidgetName
 
-▸ `Static` **getWidgetName**(`type`): `string`
+▸ **getWidgetName**(`type`): `string`
 
 #### Parameters
 
@@ -2530,4 +2737,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
+[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)

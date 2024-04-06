@@ -1,17 +1,17 @@
 [@serenity-is/corelib](../README.md) / PropertyPanel
 
-# Class: PropertyPanel<TItem, TOptions\>
+# Class: PropertyPanel\<TItem, P\>
 
 ## Type parameters
 
 | Name |
 | :------ |
 | `TItem` |
-| `TOptions` |
+| `P` |
 
 ## Hierarchy
 
-- [`TemplatedPanel`](TemplatedPanel.md)<`TOptions`\>
+- [`TemplatedPanel`](TemplatedPanel.md)\<`P`\>
 
   ↳ **`PropertyPanel`**
 
@@ -25,7 +25,7 @@
 
 - [\_entity](PropertyPanel.md#_entity)
 - [\_entityId](PropertyPanel.md#_entityid)
-- [element](PropertyPanel.md#element)
+- [domNode](PropertyPanel.md#domnode)
 - [idPrefix](PropertyPanel.md#idprefix)
 - [isPanel](PropertyPanel.md#ispanel)
 - [options](PropertyPanel.md#options)
@@ -35,7 +35,12 @@
 - [toolbar](PropertyPanel.md#toolbar)
 - [uniqueName](PropertyPanel.md#uniquename)
 - [validator](PropertyPanel.md#validator)
-- [widgetName](PropertyPanel.md#widgetname)
+- [typeInfo](PropertyPanel.md#typeinfo)
+
+### Accessors
+
+- [element](PropertyPanel.md#element)
+- [props](PropertyPanel.md#props)
 
 ### Methods
 
@@ -46,15 +51,16 @@
 - [change](PropertyPanel.md#change)
 - [changeSelect2](PropertyPanel.md#changeselect2)
 - [destroy](PropertyPanel.md#destroy)
+- [findById](PropertyPanel.md#findbyid)
 - [getCssClass](PropertyPanel.md#getcssclass)
-- [getFallbackTemplate](PropertyPanel.md#getfallbacktemplate)
+- [getCustomAttribute](PropertyPanel.md#getcustomattribute)
+- [getFieldElement](PropertyPanel.md#getfieldelement)
 - [getFormKey](PropertyPanel.md#getformkey)
 - [getGridField](PropertyPanel.md#getgridfield)
 - [getPropertyGridOptions](PropertyPanel.md#getpropertygridoptions)
 - [getPropertyItems](PropertyPanel.md#getpropertyitems)
 - [getSaveEntity](PropertyPanel.md#getsaveentity)
 - [getTemplate](PropertyPanel.md#gettemplate)
-- [getTemplateName](PropertyPanel.md#gettemplatename)
 - [getToolbarButtons](PropertyPanel.md#gettoolbarbuttons)
 - [getValidatorOptions](PropertyPanel.md#getvalidatoroptions)
 - [get\_entity](PropertyPanel.md#get_entity)
@@ -64,38 +70,44 @@
 - [initTabs](PropertyPanel.md#inittabs)
 - [initToolbar](PropertyPanel.md#inittoolbar)
 - [initValidator](PropertyPanel.md#initvalidator)
-- [initialize](PropertyPanel.md#initialize)
+- [internalInit](PropertyPanel.md#internalinit)
+- [internalRenderContents](PropertyPanel.md#internalrendercontents)
 - [loadInitialEntity](PropertyPanel.md#loadinitialentity)
+- [render](PropertyPanel.md#render)
 - [renderContents](PropertyPanel.md#rendercontents)
 - [resetValidation](PropertyPanel.md#resetvalidation)
 - [set\_entity](PropertyPanel.md#set_entity)
 - [set\_entityId](PropertyPanel.md#set_entityid)
+- [syncOrAsyncThen](PropertyPanel.md#syncorasyncthen)
 - [useIdPrefix](PropertyPanel.md#useidprefix)
 - [validateBeforeSave](PropertyPanel.md#validatebeforesave)
 - [validateForm](PropertyPanel.md#validateform)
 - [create](PropertyPanel.md#create)
-- [elementFor](PropertyPanel.md#elementfor)
+- [createDefaultElement](PropertyPanel.md#createdefaultelement)
 - [getWidgetName](PropertyPanel.md#getwidgetname)
 
 ## Constructors
 
 ### constructor
 
-• **new PropertyPanel**<`TItem`, `TOptions`\>(`container`, `options?`)
+• **new PropertyPanel**\<`TItem`, `P`\>(`props`): [`PropertyPanel`](PropertyPanel.md)\<`TItem`, `P`\>
 
 #### Type parameters
 
 | Name |
 | :------ |
 | `TItem` |
-| `TOptions` |
+| `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `container` | `JQuery` |
-| `options?` | `TOptions` |
+| `props` | [`WidgetProps`](../README.md#widgetprops)\<`P`\> |
+
+#### Returns
+
+[`PropertyPanel`](PropertyPanel.md)\<`TItem`, `P`\>
 
 #### Overrides
 
@@ -103,7 +115,7 @@
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L12)
+[src/ui/widgets/propertypanel.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L15)
 
 ## Properties
 
@@ -113,7 +125,7 @@
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L9)
+[src/ui/widgets/propertypanel.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L12)
 
 ___
 
@@ -123,21 +135,21 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L10)
+[src/ui/widgets/propertypanel.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L13)
 
 ___
 
-### element
+### domNode
 
-• **element**: `JQuery`
+• `Readonly` **domNode**: `HTMLElement`
 
 #### Inherited from
 
-[TemplatedPanel](TemplatedPanel.md).[element](TemplatedPanel.md#element)
+[TemplatedPanel](TemplatedPanel.md).[domNode](TemplatedPanel.md#domnode)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L61)
+[src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
 
 ___
 
@@ -151,7 +163,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L65)
+[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ___
 
@@ -165,13 +177,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L38)
+[src/ui/widgets/templatedpanel.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L42)
 
 ___
 
 ### options
 
-• `Protected` **options**: `TOptions`
+• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
 
 #### Inherited from
 
@@ -179,17 +191,17 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L62)
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ___
 
 ### propertyGrid
 
-• `Protected` **propertyGrid**: [`PropertyGrid`](PropertyGrid.md)
+• `Protected` **propertyGrid**: [`PropertyGrid`](PropertyGrid.md)\<[`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)\>
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L113)
+[src/ui/widgets/propertypanel.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L107)
 
 ___
 
@@ -203,13 +215,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L39)
+[src/ui/widgets/templatedpanel.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L43)
 
 ___
 
 ### tabs
 
-• `Protected` **tabs**: `JQuery`
+• `Protected` **tabs**: [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
 
 #### Inherited from
 
@@ -217,13 +229,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L35)
+[src/ui/widgets/templatedpanel.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L39)
 
 ___
 
 ### toolbar
 
-• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)
+• `Protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
 
 #### Inherited from
 
@@ -231,13 +243,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L36)
+[src/ui/widgets/templatedpanel.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L40)
 
 ___
 
 ### uniqueName
 
-• `Protected` **uniqueName**: `string`
+• `Protected` `Readonly` **uniqueName**: `string`
 
 #### Inherited from
 
@@ -245,13 +257,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L64)
+[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ___
 
 ### validator
 
-• `Protected` **validator**: `Validator`
+• `Protected` **validator**: [`Validator`](Validator.md)
 
 #### Inherited from
 
@@ -259,27 +271,65 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L37)
+[src/ui/widgets/templatedpanel.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L41)
 
 ___
 
-### widgetName
+### typeInfo
 
-• `Protected` **widgetName**: `string`
+▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
 
 #### Inherited from
 
-[TemplatedPanel](TemplatedPanel.md).[widgetName](TemplatedPanel.md#widgetname)
+[TemplatedPanel](TemplatedPanel.md).[typeInfo](TemplatedPanel.md#typeinfo)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+
+## Accessors
+
+### element
+
+• `get` **element**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+Returns a Fluent(this.domNode) object
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+TemplatedPanel.element
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
+
+___
+
+### props
+
+• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Returns
+
+[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+
+#### Inherited from
+
+TemplatedPanel.props
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
 
 ## Methods
 
 ### addCssClass
 
-▸ `Protected` **addCssClass**(): `void`
+▸ **addCssClass**(): `void`
 
 #### Returns
 
@@ -291,24 +341,24 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 ___
 
 ### addValidationRule
 
-▸ **addValidationRule**(`eventClass`, `rule`): `JQuery`
+▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `eventClass` | `string` |
-| `rule` | (`p1`: `JQuery`) => `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+| `uniqueName?` | `string` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Inherited from
 
@@ -316,7 +366,28 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L134)
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
+
+▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `uniqueName` | `string` |
+| `rule` | (`input`: `HTMLSelectElement` \| `HTMLInputElement` \| `HTMLTextAreaElement`) => `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedPanel](TemplatedPanel.md).[addValidationRule](TemplatedPanel.md#addvalidationrule)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
 ___
 
@@ -334,13 +405,19 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L41)
+[src/ui/widgets/templatedpanel.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L45)
 
 ___
 
 ### byId
 
-▸ `Protected` **byId**(`id`): `JQuery`
+▸ **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` = `HTMLElement` |
 
 #### Parameters
 
@@ -350,7 +427,7 @@ ___
 
 #### Returns
 
-`JQuery`
+[`Fluent`](../interfaces/Fluent-1.md)\<`TElement`\>
 
 #### Inherited from
 
@@ -358,7 +435,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L10)
+[src/ui/widgets/templatedwidget.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L8)
 
 ___
 
@@ -370,7 +447,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -382,27 +459,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedPanel](TemplatedPanel.md).[change](TemplatedPanel.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L259)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ___
 
@@ -414,7 +471,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
+| `handler` | (`e`: `Event`) => `void` |
 
 #### Returns
 
@@ -426,27 +483,7 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `JQueryEventObject`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[TemplatedPanel](TemplatedPanel.md).[changeSelect2](TemplatedPanel.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L260)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 ___
 
@@ -464,13 +501,43 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L19)
+[src/ui/widgets/propertypanel.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L22)
+
+___
+
+### findById
+
+▸ **findById**\<`TElement`\>(`id`): `TElement`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TElement` | extends `HTMLElement` = `HTMLElement` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`TElement`
+
+#### Inherited from
+
+[TemplatedPanel](TemplatedPanel.md).[findById](TemplatedPanel.md#findbyid)
+
+#### Defined in
+
+[src/ui/widgets/templatedwidget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L12)
 
 ___
 
 ### getCssClass
 
-▸ `Protected` **getCssClass**(): `string`
+▸ **getCssClass**(): `string`
 
 #### Returns
 
@@ -482,53 +549,34 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L104)
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
 
 ___
 
-### getFallbackTemplate
+### getCustomAttribute
 
-▸ `Protected` **getFallbackTemplate**(): `string`
+▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `TAttr` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
+| `inherit` | `boolean` | `true` |
 
 #### Returns
 
-`string`
+`TAttr`
 
 #### Inherited from
 
-[TemplatedPanel](TemplatedPanel.md).[getFallbackTemplate](TemplatedPanel.md#getfallbacktemplate)
-
-#### Defined in
-
-[src/ui/widgets/templatedwidget.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L79)
-
-___
-
-### getFormKey
-
-▸ `Protected` **getFormKey**(): `string`
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L49)
-
-___
-
-### getGridField
-
-▸ **getGridField**(): `JQuery`
-
-#### Returns
-
-`JQuery`
-
-#### Inherited from
-
-[TemplatedPanel](TemplatedPanel.md).[getGridField](TemplatedPanel.md#getgridfield)
+[TemplatedPanel](TemplatedPanel.md).[getCustomAttribute](TemplatedPanel.md#getcustomattribute)
 
 #### Defined in
 
@@ -536,9 +584,59 @@ ___
 
 ___
 
+### getFieldElement
+
+▸ **getFieldElement**(): `HTMLElement`
+
+#### Returns
+
+`HTMLElement`
+
+#### Inherited from
+
+[TemplatedPanel](TemplatedPanel.md).[getFieldElement](TemplatedPanel.md#getfieldelement)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
+___
+
+### getFormKey
+
+▸ **getFormKey**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/ui/widgets/propertypanel.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L48)
+
+___
+
+### getGridField
+
+▸ **getGridField**(): [`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent-1.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+[TemplatedPanel](TemplatedPanel.md).[getGridField](TemplatedPanel.md#getgridfield)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+
+___
+
 ### getPropertyGridOptions
 
-▸ `Protected` **getPropertyGridOptions**(): [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
+▸ **getPropertyGridOptions**(): [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
 
 #### Returns
 
@@ -546,13 +644,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L70)
+[src/ui/widgets/propertypanel.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L64)
 
 ___
 
 ### getPropertyItems
 
-▸ `Protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
+▸ **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
 #### Returns
 
@@ -560,13 +658,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L80)
+[src/ui/widgets/propertypanel.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L74)
 
 ___
 
 ### getSaveEntity
 
-▸ `Protected` **getSaveEntity**(): `TItem`
+▸ **getSaveEntity**(): `TItem`
 
 #### Returns
 
@@ -574,13 +672,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L85)
+[src/ui/widgets/propertypanel.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L79)
 
 ___
 
 ### getTemplate
 
-▸ `Protected` **getTemplate**(): `string`
+▸ **getTemplate**(): `string`
 
 #### Returns
 
@@ -592,31 +690,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L83)
-
-___
-
-### getTemplateName
-
-▸ `Protected` **getTemplateName**(): `string`
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-[TemplatedPanel](TemplatedPanel.md).[getTemplateName](TemplatedPanel.md#gettemplatename)
-
-#### Defined in
-
-[src/ui/widgets/templatedwidget.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L31)
+[src/ui/widgets/templatedwidget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L16)
 
 ___
 
 ### getToolbarButtons
 
-▸ `Protected` **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+▸ **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
 #### Returns
 
@@ -628,17 +708,17 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L47)
+[src/ui/widgets/templatedpanel.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L51)
 
 ___
 
 ### getValidatorOptions
 
-▸ `Protected` **getValidatorOptions**(): `ValidationOptions`
+▸ **getValidatorOptions**(): `any`
 
 #### Returns
 
-`ValidationOptions`
+`any`
 
 #### Inherited from
 
@@ -646,13 +726,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L51)
+[src/ui/widgets/templatedpanel.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L55)
 
 ___
 
 ### get\_entity
 
-▸ `Protected` **get_entity**(): `TItem`
+▸ **get_entity**(): `TItem`
 
 #### Returns
 
@@ -660,13 +740,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L93)
+[src/ui/widgets/propertypanel.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L87)
 
 ___
 
 ### get\_entityId
 
-▸ `Protected` **get_entityId**(): `any`
+▸ **get_entityId**(): `any`
 
 #### Returns
 
@@ -674,23 +754,17 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L97)
+[src/ui/widgets/propertypanel.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L91)
 
 ___
 
 ### init
 
-▸ **init**(`action?`): [`PropertyPanel`](PropertyPanel.md)<`TItem`, `TOptions`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `action?` | (`widget`: `any`) => `void` |
+▸ **init**(): `this`
 
 #### Returns
 
-[`PropertyPanel`](PropertyPanel.md)<`TItem`, `TOptions`\>
+`this`
 
 #### Inherited from
 
@@ -698,13 +772,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
 ___
 
 ### initPropertyGrid
 
-▸ `Protected` **initPropertyGrid**(): `void`
+▸ **initPropertyGrid**(): `void`
 
 #### Returns
 
@@ -712,13 +786,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L31)
+[src/ui/widgets/propertypanel.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L34)
 
 ___
 
 ### initTabs
 
-▸ `Protected` **initTabs**(): `void`
+▸ **initTabs**(): `void`
 
 #### Returns
 
@@ -730,13 +804,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L55)
+[src/ui/widgets/templatedpanel.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L59)
 
 ___
 
 ### initToolbar
 
-▸ `Protected` **initToolbar**(): `void`
+▸ **initToolbar**(): `void`
 
 #### Returns
 
@@ -748,13 +822,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L63)
+[src/ui/widgets/templatedpanel.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L66)
 
 ___
 
 ### initValidator
 
-▸ `Protected` **initValidator**(): `void`
+▸ **initValidator**(): `void`
 
 #### Returns
 
@@ -766,13 +840,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L72)
+[src/ui/widgets/templatedpanel.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L73)
 
 ___
 
-### initialize
+### internalInit
 
-▸ **initialize**(): `void`
+▸ **internalInit**(): `void`
 
 #### Returns
 
@@ -780,17 +854,35 @@ ___
 
 #### Inherited from
 
-[TemplatedPanel](TemplatedPanel.md).[initialize](TemplatedPanel.md#initialize)
+[TemplatedPanel](TemplatedPanel.md).[internalInit](TemplatedPanel.md#internalinit)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L176)
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+___
+
+### internalRenderContents
+
+▸ **internalRenderContents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedPanel](TemplatedPanel.md).[internalRenderContents](TemplatedPanel.md#internalrendercontents)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
 
 ___
 
 ### loadInitialEntity
 
-▸ `Protected` **loadInitialEntity**(): `void`
+▸ **loadInitialEntity**(): `void`
 
 #### Returns
 
@@ -798,13 +890,35 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L43)
+[src/ui/widgets/propertypanel.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L42)
+
+___
+
+### render
+
+▸ **render**(): `any`
+
+Returns the main element for this widget or the document fragment.
+As widgets may get their elements from props unlike regular JSX widgets, 
+this method should not be overridden. Override renderContents() instead.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[TemplatedPanel](TemplatedPanel.md).[render](TemplatedPanel.md#render)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
 
 ___
 
 ### renderContents
 
-▸ `Protected` **renderContents**(): `void`
+▸ **renderContents**(): `void`
 
 #### Returns
 
@@ -816,13 +930,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L110)
+[src/ui/widgets/templatedwidget.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L20)
 
 ___
 
 ### resetValidation
 
-▸ `Protected` **resetValidation**(): `void`
+▸ **resetValidation**(): `void`
 
 #### Returns
 
@@ -834,13 +948,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L80)
+[src/ui/widgets/templatedpanel.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L81)
 
 ___
 
 ### set\_entity
 
-▸ `Protected` **set_entity**(`value`): `void`
+▸ **set_entity**(`value`): `void`
 
 #### Parameters
 
@@ -854,13 +968,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L101)
+[src/ui/widgets/propertypanel.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L95)
 
 ___
 
 ### set\_entityId
 
-▸ `Protected` **set_entityId**(`value`): `void`
+▸ **set_entityId**(`value`): `void`
 
 #### Parameters
 
@@ -874,17 +988,49 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L105)
+[src/ui/widgets/propertypanel.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L99)
+
+___
+
+### syncOrAsyncThen
+
+▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `syncMethod` | () => `T` |
+| `asyncMethod` | () => `PromiseLike`\<`T`\> |
+| `then` | (`v`: `T`) => `void` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[TemplatedPanel](TemplatedPanel.md).[syncOrAsyncThen](TemplatedPanel.md#syncorasyncthen)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
 
 ___
 
 ### useIdPrefix
 
-▸ `Protected` **useIdPrefix**(): `IdPrefixType`
+▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
 
 #### Returns
 
-`IdPrefixType`
+[`IdPrefixType`](../README.md#idprefixtype)
 
 #### Inherited from
 
@@ -892,13 +1038,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedwidget.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedwidget.ts#L131)
+[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
 
 ___
 
 ### validateBeforeSave
 
-▸ `Protected` **validateBeforeSave**(): `boolean`
+▸ **validateBeforeSave**(): `boolean`
 
 #### Returns
 
@@ -906,13 +1052,13 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/propertypanel.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L109)
+[src/ui/widgets/propertypanel.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L103)
 
 ___
 
 ### validateForm
 
-▸ `Protected` **validateForm**(): `boolean`
+▸ **validateForm**(): `boolean`
 
 #### Returns
 
@@ -924,26 +1070,26 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/templatedpanel.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L86)
+[src/ui/widgets/templatedpanel.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/templatedpanel.ts#L87)
 
 ___
 
 ### create
 
-▸ `Static` **create**<`TWidget`, `TOpt`\>(`params`): `TWidget`
+▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)<`TOpt`, `TWidget`\> |
-| `TOpt` | `TOpt` |
+| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
+| `P` | `P` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)<`TWidget`, `TOpt`\> |
+| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
 
 #### Returns
 
@@ -955,43 +1101,31 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
 
 ___
 
-### elementFor
+### createDefaultElement
 
-▸ `Static` **elementFor**<`TWidget`\>(`editorType`): `JQuery`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TWidget` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `editorType` | (...`args`: `any`[]) => `TWidget` |
+▸ **createDefaultElement**(): `HTMLElement`
 
 #### Returns
 
-`JQuery`
+`HTMLElement`
 
 #### Inherited from
 
-[TemplatedPanel](TemplatedPanel.md).[elementFor](TemplatedPanel.md#elementfor)
+[TemplatedPanel](TemplatedPanel.md).[createDefaultElement](TemplatedPanel.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L128)
+[src/ui/widgets/widget.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L60)
 
 ___
 
 ### getWidgetName
 
-▸ `Static` **getWidgetName**(`type`): `string`
+▸ **getWidgetName**(`type`): `string`
 
 #### Parameters
 
@@ -1009,4 +1143,4 @@ ___
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L124)
+[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)

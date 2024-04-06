@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / RetrieveResponse
 
-# Interface: RetrieveResponse<TEntity\>
+# Interface: RetrieveResponse\<TEntity\>
 
 ## Type parameters
 
@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/q/servicetypes.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L108)
+[../base/dist/index.d.ts:532](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L532)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[src/q/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/servicetypes.ts#L10)
+[../base/dist/index.d.ts:456](https://github.com/serenity-is/serenity/blob/master/packages/base/dist/index.d.ts#L456)

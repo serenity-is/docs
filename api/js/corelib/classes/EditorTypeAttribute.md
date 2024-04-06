@@ -26,7 +26,7 @@
 
 ### constructor
 
-• **new EditorTypeAttribute**(`editorType`)
+• **new EditorTypeAttribute**(`editorType`): [`EditorTypeAttribute`](EditorTypeAttribute.md)
 
 #### Parameters
 
@@ -34,13 +34,17 @@
 | :------ | :------ |
 | `editorType` | `string` |
 
+#### Returns
+
+[`EditorTypeAttribute`](EditorTypeAttribute.md)
+
 #### Overrides
 
 [EditorTypeAttributeBase](EditorTypeAttributeBase.md).[constructor](EditorTypeAttributeBase.md#constructor)
 
 #### Defined in
 
-[src/decorators/index.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L74)
+[src/types/attributes.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L75)
 
 ## Properties
 
@@ -54,7 +58,7 @@
 
 #### Defined in
 
-[src/decorators/index.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L63)
+[src/types/attributes.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L64)
 
 ## Methods
 
@@ -78,4 +82,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L66)
+[src/types/attributes.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L67)

@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new GeneratedCodeAttribute**(`origin?`)
+• **new GeneratedCodeAttribute**(`origin?`): [`GeneratedCodeAttribute`](GeneratedCodeAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `origin?` | `string` |
 
+#### Returns
+
+[`GeneratedCodeAttribute`](GeneratedCodeAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L111)
+[src/types/attributes.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L112)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L111)
+[src/types/attributes.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L112)

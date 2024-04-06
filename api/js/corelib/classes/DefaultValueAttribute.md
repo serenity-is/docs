@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new DefaultValueAttribute**(`value`)
+• **new DefaultValueAttribute**(`value`): [`DefaultValueAttribute`](DefaultValueAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `any` |
 
+#### Returns
+
+[`DefaultValueAttribute`](DefaultValueAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L46)
+[src/types/attributes.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L47)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L46)
+[src/types/attributes.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L47)

@@ -15,6 +15,10 @@
 
 ### Properties
 
+- [props](FileDownloadFormatter.md#props)
+
+### Accessors
+
 - [displayFormat](FileDownloadFormatter.md#displayformat)
 - [iconClass](FileDownloadFormatter.md#iconclass)
 - [originalNameProperty](FileDownloadFormatter.md#originalnameproperty)
@@ -29,13 +33,98 @@
 
 ### constructor
 
-• **new FileDownloadFormatter**()
+• **new FileDownloadFormatter**(`props?`): [`FileDownloadFormatter`](FileDownloadFormatter.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `Object` |
+| `props.displayFormat?` | `string` |
+| `props.iconClass?` | `string` |
+| `props.originalNameProperty?` | `string` |
+
+#### Returns
+
+[`FileDownloadFormatter`](FileDownloadFormatter.md)
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L141)
 
 ## Properties
 
+### props
+
+• `Readonly` **props**: `Object` = `{}`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `displayFormat?` | `string` |
+| `iconClass?` | `string` |
+| `originalNameProperty?` | `string` |
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L141)
+
+## Accessors
+
 ### displayFormat
 
-• **displayFormat**: `string`
+• `get` **displayFormat**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L177)
+
+• `set` **displayFormat**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L178)
+
+___
+
+### iconClass
+
+• `get` **iconClass**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L183)
+
+• `set` **iconClass**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`void`
 
 #### Defined in
 
@@ -43,23 +132,33 @@
 
 ___
 
-### iconClass
-
-• **iconClass**: `string`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L190)
-
-___
-
 ### originalNameProperty
 
-• **originalNameProperty**: `string`
+• `get` **originalNameProperty**(): `string`
+
+#### Returns
+
+`string`
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L187)
+[src/ui/formatters/formatters.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L180)
+
+• `set` **originalNameProperty**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L181)
 
 ## Methods
 
@@ -71,7 +170,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | `FormatterContext`<`any`\> |
+| `ctx` | `FormatterContext`\<`any`\> |
 
 #### Returns
 
@@ -83,7 +182,7 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L147)
+[src/ui/formatters/formatters.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L145)
 
 ___
 
@@ -95,7 +194,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `column` | `Column`<`any`\> |
+| `column` | `Column`\<`any`\> |
 
 #### Returns
 
@@ -107,13 +206,13 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L175)
+[src/ui/formatters/formatters.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L169)
 
 ___
 
 ### dbFileUrl
 
-▸ `Static` **dbFileUrl**(`filename`): `string`
+▸ **dbFileUrl**(`filename`): `string`
 
 #### Parameters
 
@@ -127,4 +226,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L170)
+[src/ui/formatters/formatters.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L164)

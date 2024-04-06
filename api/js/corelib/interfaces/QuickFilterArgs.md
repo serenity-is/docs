@@ -1,6 +1,6 @@
 [@serenity-is/corelib](../README.md) / QuickFilterArgs
 
-# Interface: QuickFilterArgs<TWidget\>
+# Interface: QuickFilterArgs\<TWidget\>
 
 ## Type parameters
 

@@ -12,6 +12,10 @@
 
 - [constructor](CheckboxFormatter.md#constructor)
 
+### Properties
+
+- [typeInfo](CheckboxFormatter.md#typeinfo)
+
 ### Methods
 
 - [format](CheckboxFormatter.md#format)
@@ -20,7 +24,21 @@
 
 ### constructor
 
-• **new CheckboxFormatter**()
+• **new CheckboxFormatter**(): [`CheckboxFormatter`](CheckboxFormatter.md)
+
+#### Returns
+
+[`CheckboxFormatter`](CheckboxFormatter.md)
+
+## Properties
+
+### typeInfo
+
+▪ `Static` **typeInfo**: [`FormatterTypeInfo`](../README.md#formattertypeinfo)\<``"Serenity.CheckboxFormatter"``\>
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L43)
 
 ## Methods
 
@@ -32,7 +50,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | `FormatterContext`<`any`\> |
+| `ctx` | `FormatterContext`\<`any`\> |
 
 #### Returns
 
@@ -44,4 +62,4 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L55)
+[src/ui/formatters/formatters.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L45)

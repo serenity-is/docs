@@ -18,7 +18,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `columns` | `Column`<`any`\>[] |
+| `columns` | `Column`\<`any`\>[] |
 | `localTextPrefix?` | `string` |
 
 #### Returns
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:686](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L686)
+[src/ui/helpers/slickhelpers.ts:722](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L722)

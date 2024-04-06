@@ -12,4 +12,8 @@
 
 ### constructor
 
-• **new ISlickFormatter**()
+• **new ISlickFormatter**(): [`ISlickFormatter`](ISlickFormatter.md)
+
+#### Returns
+
+[`ISlickFormatter`](ISlickFormatter.md)

@@ -5,6 +5,7 @@
 ## Implemented by
 
 - [`CheckTreeEditor`](CheckTreeEditor.md)
+- [`ComboboxEditor`](ComboboxEditor.md)
 - [`DataGrid`](DataGrid.md)
 - [`DateEditor`](DateEditor.md)
 - [`DateTimeEditor`](DateTimeEditor.md)
@@ -13,7 +14,6 @@
 - [`HtmlContentEditor`](HtmlContentEditor.md)
 - [`MultipleFileUploadEditor`](MultipleFileUploadEditor.md)
 - [`RadioButtonEditor`](RadioButtonEditor.md)
-- [`Select2Editor`](Select2Editor.md)
 
 ## Table of contents
 
@@ -30,7 +30,11 @@
 
 ### constructor
 
-• **new IReadOnly**()
+• **new IReadOnly**(): [`IReadOnly`](IReadOnly.md)
+
+#### Returns
+
+[`IReadOnly`](IReadOnly.md)
 
 ## Methods
 

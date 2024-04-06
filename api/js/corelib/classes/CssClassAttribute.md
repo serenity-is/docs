@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new CssClassAttribute**(`cssClass`)
+• **new CssClassAttribute**(`cssClass`): [`CssClassAttribute`](CssClassAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `cssClass` | `string` |
 
+#### Returns
+
+[`CssClassAttribute`](CssClassAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L40)
+[src/types/attributes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L41)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L40)
+[src/types/attributes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L41)

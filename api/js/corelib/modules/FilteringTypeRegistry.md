@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L740)
+[src/ui/filtering/filtering.ts:746](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L746)

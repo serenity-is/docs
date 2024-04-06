@@ -26,7 +26,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `editor` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `editor` | [`Widget`](../classes/Widget.md)\<`any`\> |
 
 #### Returns
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L6)
+[src/ui/editors/editorutils.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L11)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `editor` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `editor` | [`Widget`](../classes/Widget.md)\<`any`\> |
 
 #### Returns
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L35)
+[src/ui/editors/editorutils.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L40)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `editor` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `editor` | [`Widget`](../classes/Widget.md)\<`any`\> |
 | `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
 | `source` | `any` |
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L85)
+[src/ui/editors/editorutils.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L90)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `editor` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `editor` | [`Widget`](../classes/Widget.md)\<`any`\> |
 | `item` | [`PropertyItem`](../interfaces/PropertyItem.md) |
 | `target` | `any` |
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L41)
+[src/ui/editors/editorutils.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L46)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `container` | `JQuery` |
+| `container` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `readOnly` | `boolean` |
 
 #### Returns
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L204)
+[src/ui/editors/editorutils.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L207)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `widget` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `widget` | [`Widget`](../classes/Widget.md)\<`any`\> |
 | `isReadOnly` | `boolean` |
 
 #### Returns
@@ -140,24 +140,24 @@ ___
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L173)
+[src/ui/editors/editorutils.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L176)
 
 ___
 
 ### setReadonly
 
-▸ **setReadonly**(`elements`, `isReadOnly`): `JQuery`
+▸ **setReadonly**(`elements`, `isReadOnly`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `elements` | `JQuery` |
+| `elements` | `Element` \| `ArrayLike`\<`Element`\> |
 | `isReadOnly` | `boolean` |
 
 #### Returns
 
-`JQuery`
+`void`
 
 #### Defined in
 
@@ -173,7 +173,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `widget` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `widget` | [`Widget`](../classes/Widget.md)\<`any`\> |
 | `isRequired` | `boolean` |
 
 #### Returns
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L185)
+[src/ui/editors/editorutils.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L188)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `editor` | [`Widget`](../classes/Widget.md)<`any`\> |
+| `editor` | [`Widget`](../classes/Widget.md)\<`any`\> |
 | `value` | `any` |
 
 #### Returns
@@ -203,4 +203,4 @@ ___
 
 #### Defined in
 
-[src/ui/editors/editorutils.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L80)
+[src/ui/editors/editorutils.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.ts#L85)

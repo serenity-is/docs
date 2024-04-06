@@ -20,7 +20,11 @@
 
 ### constructor
 
-• **new IQuickFiltering**()
+• **new IQuickFiltering**(): [`IQuickFiltering`](IQuickFiltering.md)
+
+#### Returns
+
+[`IQuickFiltering`](IQuickFiltering.md)
 
 ## Methods
 
@@ -32,7 +36,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `filter` | [`QuickFilter`](../interfaces/QuickFilter.md)<[`Widget`](Widget.md)<`any`\>, `any`\> |
+| `filter` | [`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\> |
 
 #### Returns
 
@@ -40,4 +44,4 @@
 
 #### Defined in
 
-[src/ui/filtering/filtering.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L41)
+[src/ui/filtering/filtering.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L43)

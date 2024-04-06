@@ -12,4 +12,8 @@
 
 ### constructor
 
-• **new EditorAttribute**()
+• **new EditorAttribute**(): [`EditorAttribute`](EditorAttribute.md)
+
+#### Returns
+
+[`EditorAttribute`](EditorAttribute.md)

@@ -23,8 +23,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `toolDiv` | `JQuery` |
-| `view` | [`RemoteView`](../classes/RemoteView.md)<`any`\> |
+| `toolDiv` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+| `view` | [`RemoteView`](../classes/RemoteView.md)\<`any`\> |
 | `hint?` | `string` |
 | `initial?` | `boolean` |
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L352)
+[src/ui/helpers/slickhelpers.ts:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L359)
 
 ___
 
@@ -46,8 +46,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `toolDiv` | `JQuery` |
-| `view` | [`RemoteView`](../classes/RemoteView.md)<`any`\> |
+| `toolDiv` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+| `view` | [`RemoteView`](../classes/RemoteView.md)\<`any`\> |
 | `fields?` | [`QuickSearchField`](../interfaces/QuickSearchField.md)[] |
 | `onChange?` | () => `void` |
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:380](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L380)
+[src/ui/helpers/slickhelpers.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L388)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `container` | `JQuery` |
+| `container` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `onSearch` | (`p1`: `string`, `p2`: `string`, `done`: (`p3`: `boolean`) => `void`) => `void` |
 | `fields?` | [`QuickSearchField`](../interfaces/QuickSearchField.md)[] |
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:427](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L427)
+[src/ui/helpers/slickhelpers.ts:435](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L435)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `toolDiv` | `JQuery` |
+| `toolDiv` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
 | `cssClass` | `string` |
 | `callback` | (`p1`: `boolean`) => `void` |
 | `hint` | `string` |
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L335)
+[src/ui/helpers/slickhelpers.ts:336](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L336)
 
 ___
 
@@ -115,8 +115,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `grid` | `Grid`<`any`\> |
-| `handleMove` | (`p1`: `any`, `p2`: `number`) => `void` |
+| `grid` | `Grid`\<`any`\> |
+| `handleMove` | (`rows`: `number`[], `insertBefore`: `number`) => `void` |
 
 #### Returns
 
@@ -124,23 +124,30 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:444](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L444)
+[src/ui/helpers/slickhelpers.ts:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L457)
 
 ___
 
 ### makeOrderableWithUpdateRequest
 
-▸ **makeOrderableWithUpdateRequest**(`grid`, `getId`, `getDisplayOrder`, `service`, `getUpdateRequest`): `void`
+▸ **makeOrderableWithUpdateRequest**\<`TItem`, `TId`\>(`grid`, `getId`, `getDisplayOrder`, `service`, `getUpdateRequest`): `void`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TItem` | `any` |
+| `TId` | `any` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `grid` | [`IDataGrid`](../interfaces/IDataGrid.md) |
-| `getId` | (`p1`: `any`) => `number` |
-| `getDisplayOrder` | (`p1`: `any`) => `any` |
+| `getId` | (`item`: `TItem`) => `TId` |
+| `getDisplayOrder` | (`item`: `TItem`) => `any` |
 | `service` | `string` |
-| `getUpdateRequest` | (`p1`: `number`, `p2`: `number`) => [`SaveRequest`](../interfaces/SaveRequest.md)<`any`\> |
+| `getUpdateRequest` | (`id`: `TId`, `order`: `number`) => [`SaveRequest`](../interfaces/SaveRequest.md)\<`TItem`\> |
 
 #### Returns
 
@@ -148,4 +155,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L471)
+[src/ui/helpers/slickhelpers.ts:484](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L484)

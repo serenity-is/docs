@@ -17,7 +17,11 @@
 
 ### constructor
 
-• **new IBooleanValue**()
+• **new IBooleanValue**(): [`IBooleanValue`](IBooleanValue.md)
+
+#### Returns
+
+[`IBooleanValue`](IBooleanValue.md)
 
 ## Methods
 

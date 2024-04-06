@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/types/formattertyperegistry.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L10)
+[src/types/formattertyperegistry.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L11)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/types/formattertyperegistry.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L34)
+[src/types/formattertyperegistry.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L35)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/types/formattertyperegistry.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L38)
+[src/types/formattertyperegistry.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/formattertyperegistry.ts#L39)

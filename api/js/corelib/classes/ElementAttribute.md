@@ -16,7 +16,7 @@
 
 ### constructor
 
-• **new ElementAttribute**(`value`)
+• **new ElementAttribute**(`value`): [`ElementAttribute`](ElementAttribute.md)
 
 #### Parameters
 
@@ -24,9 +24,13 @@
 | :------ | :------ |
 | `value` | `string` |
 
+#### Returns
+
+[`ElementAttribute`](ElementAttribute.md)
+
 #### Defined in
 
-[src/decorators/index.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L81)
+[src/types/attributes.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L82)
 
 ## Properties
 
@@ -36,4 +40,4 @@
 
 #### Defined in
 
-[src/decorators/index.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/decorators/index.ts#L81)
+[src/types/attributes.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L82)

@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/q/services.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L150)
+[src/q/services-compat.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L20)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L149)
+[src/q/services-compat.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L19)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/q/services.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services.ts#L148)
+[src/q/services-compat.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L18)

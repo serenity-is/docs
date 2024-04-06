@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[core/event.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L5)
+[core/event.ts:3](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L3)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L8)
+[core/event.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L6)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L7)
+[core/event.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L5)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L6)
+[core/event.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L4)
 
 ___
 
@@ -73,13 +73,41 @@ ___
 
 #### Defined in
 
-[core/event.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L4)
+[core/event.ts:2](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L2)
 
 ## Methods
 
 ### isDefaultPrevented
 
-▸ `Optional` **isDefaultPrevented**(): `boolean`
+▸ **isDefaultPrevented**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[core/event.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L10)
+
+___
+
+### isImmediatePropagationStopped
+
+▸ **isImmediatePropagationStopped**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[core/event.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L11)
+
+___
+
+### isPropagationStopped
+
+▸ **isPropagationStopped**(): `boolean`
 
 #### Returns
 
@@ -91,37 +119,23 @@ ___
 
 ___
 
-### isImmediatePropagationStopped
-
-▸ `Optional` **isImmediatePropagationStopped**(): `boolean`
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-[core/event.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L13)
-
-___
-
-### isPropagationStopped
-
-▸ `Optional` **isPropagationStopped**(): `boolean`
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-[core/event.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L14)
-
-___
-
 ### preventDefault
 
-▸ `Optional` **preventDefault**(): `void`
+▸ **preventDefault**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[core/event.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L7)
+
+___
+
+### stopImmediatePropagation
+
+▸ **stopImmediatePropagation**(): `void`
 
 #### Returns
 
@@ -133,23 +147,9 @@ ___
 
 ___
 
-### stopImmediatePropagation
-
-▸ `Optional` **stopImmediatePropagation**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[core/event.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L11)
-
-___
-
 ### stopPropagation
 
-▸ `Optional` **stopPropagation**(): `void`
+▸ **stopPropagation**(): `void`
 
 #### Returns
 
@@ -157,4 +157,4 @@ ___
 
 #### Defined in
 
-[core/event.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L10)
+[core/event.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L8)

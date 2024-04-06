@@ -45,13 +45,17 @@
 
 ### constructor
 
-• **new LongTextEditor**(`args`)
+• **new LongTextEditor**(`args`): [`LongTextEditor`](LongTextEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`LongTextEditor`](LongTextEditor.md)
 
 #### Inherited from
 
@@ -83,7 +87,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:349](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L349)
+[editors/editors.ts:350](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L350)
 
 ___
 
@@ -111,7 +115,7 @@ BaseEditor.\_input
 
 #### Defined in
 
-[editors/editors.ts:348](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L348)
+[editors/editors.ts:349](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L349)
 
 ___
 
@@ -121,7 +125,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:350](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L350)
+[editors/editors.ts:351](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L351)
 
 ## Methods
 
@@ -160,7 +164,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:407](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L407)
+[editors/editors.ts:408](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L408)
 
 ___
 
@@ -178,7 +182,7 @@ BaseEditor.destroy
 
 #### Defined in
 
-[editors/editors.ts:425](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L425)
+[editors/editors.ts:426](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L426)
 
 ___
 
@@ -234,7 +238,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:377](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L377)
+[editors/editors.ts:378](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L378)
 
 ___
 
@@ -248,7 +252,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:412](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L412)
+[editors/editors.ts:413](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L413)
 
 ___
 
@@ -266,7 +270,7 @@ BaseEditor.init
 
 #### Defined in
 
-[editors/editors.ts:352](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L352)
+[editors/editors.ts:353](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L353)
 
 ___
 
@@ -328,7 +332,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:420](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L420)
+[editors/editors.ts:421](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L421)
 
 ___
 
@@ -342,7 +346,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:403](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L403)
+[editors/editors.ts:404](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L404)
 
 ___
 
@@ -398,7 +402,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:416](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L416)
+[editors/editors.ts:417](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L417)
 
 ___
 

@@ -18,7 +18,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `column` | [`Column`](Column.md)<`any`\> |
+| `column` | [`Column`](Column.md)\<`any`\> |
 | `row?` | `number` |
 
 #### Returns

@@ -13,7 +13,6 @@
 - [getGroupRowMetadata](GroupItemMetadataProvider.md#getgrouprowmetadata)
 - [getTotalsRowMetadata](GroupItemMetadataProvider.md#gettotalsrowmetadata)
 - [grid](GroupItemMetadataProvider.md#grid)
-- [options](GroupItemMetadataProvider.md#options)
 - [pluginName](GroupItemMetadataProvider.md#pluginname)
 - [defaults](GroupItemMetadataProvider.md#defaults)
 
@@ -33,13 +32,17 @@
 
 ### constructor
 
-• **new GroupItemMetadataProvider**(`opt?`)
+• **new GroupItemMetadataProvider**(`opt?`): [`GroupItemMetadataProvider`](GroupItemMetadataProvider.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opt?` | [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md) |
+
+#### Returns
+
+[`GroupItemMetadataProvider`](GroupItemMetadataProvider.md)
 
 #### Defined in
 
@@ -49,21 +52,21 @@
 
 ### getGroupRowMetadata
 
-• **getGroupRowMetadata**: (`item`: [`Group`](Group.md)<`any`\>) => [`ItemMetadata`](../interfaces/ItemMetadata.md)<`any`\>
+• **getGroupRowMetadata**: (`item`: [`Group`](Group.md)\<`any`\>) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
 #### Type declaration
 
-▸ (`item`): [`ItemMetadata`](../interfaces/ItemMetadata.md)<`any`\>
+▸ (`item`): [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`Group`](Group.md)<`any`\> |
+| `item` | [`Group`](Group.md)\<`any`\> |
 
 ##### Returns
 
-[`ItemMetadata`](../interfaces/ItemMetadata.md)<`any`\>
+[`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
 #### Defined in
 
@@ -73,21 +76,21 @@ ___
 
 ### getTotalsRowMetadata
 
-• **getTotalsRowMetadata**: (`item`: [`GroupTotals`](GroupTotals.md)<`any`\>) => [`ItemMetadata`](../interfaces/ItemMetadata.md)<`any`\>
+• **getTotalsRowMetadata**: (`item`: [`GroupTotals`](GroupTotals.md)\<`any`\>) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
 #### Type declaration
 
-▸ (`item`): [`ItemMetadata`](../interfaces/ItemMetadata.md)<`any`\>
+▸ (`item`): [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `item` | [`GroupTotals`](GroupTotals.md)<`any`\> |
+| `item` | [`GroupTotals`](GroupTotals.md)\<`any`\> |
 
 ##### Returns
 
-[`ItemMetadata`](../interfaces/ItemMetadata.md)<`any`\>
+[`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
 #### Defined in
 
@@ -97,21 +100,11 @@ ___
 
 ### grid
 
-• `Protected` **grid**: `Pick`<[`Grid`](Grid.md)<`any`\>, ``"groupTotalsFormatter"`` \| ``"onClick"`` \| ``"onKeyDown"`` \| ``"getColumns"`` \| ``"getData"`` \| ``"getDataItem"`` \| ``"getRenderedRange"`` \| ``"getActiveCell"``\>
+• `Protected` **grid**: [`Grid`](Grid.md)\<`any`\>
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L26)
-
-___
-
-### options
-
-• `Private` **options**: [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L27)
 
 ___
 
@@ -232,7 +225,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `grid` | `Pick`<[`Grid`](Grid.md)<`any`\>, ``"groupTotalsFormatter"`` \| ``"onClick"`` \| ``"onKeyDown"`` \| ``"getColumns"`` \| ``"getData"`` \| ``"getDataItem"`` \| ``"getRenderedRange"`` \| ``"getActiveCell"``\> |
+| `grid` | [`Grid`](Grid.md)\<`any`\> |
 
 #### Returns
 
@@ -266,13 +259,13 @@ ___
 
 ### defaultGroupFormat
 
-▸ `Static` **defaultGroupFormat**(`ctx`, `opt?`): `string`
+▸ **defaultGroupFormat**(`ctx`, `opt?`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](../interfaces/FormatterContext.md)<`any`\> |
+| `ctx` | [`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\> |
 | `opt?` | [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md) |
 
 #### Returns
@@ -287,14 +280,14 @@ ___
 
 ### defaultTotalsFormat
 
-▸ `Static` **defaultTotalsFormat**(`ctx`, `grid?`): `string`
+▸ **defaultTotalsFormat**(`ctx`, `grid?`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](../interfaces/FormatterContext.md)<`any`\> |
-| `grid?` | `Pick`<[`Grid`](Grid.md)<`any`\>, ``"groupTotalsFormatter"`` \| ``"onClick"`` \| ``"onKeyDown"`` \| ``"getColumns"`` \| ``"getData"`` \| ``"getDataItem"`` \| ``"getRenderedRange"`` \| ``"getActiveCell"``\> |
+| `ctx` | [`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\> |
+| `grid?` | [`Grid`](Grid.md)\<`any`\> |
 
 #### Returns
 

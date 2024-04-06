@@ -109,7 +109,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`GridOptions`](GridOptions.md)<`any`\> |
+| `args` | [`GridOptions`](GridOptions.md)\<`any`\> |
 
 #### Returns
 
@@ -695,7 +695,7 @@ ___
 
 ### reorderViewColumns
 
-▸ **reorderViewColumns**(`viewCols`, `options?`): [`Column`](Column.md)<`any`\>[]
+▸ **reorderViewColumns**(`viewCols`, `options?`): [`Column`](Column.md)\<`any`\>[]
 
 this might be called before init, chicken egg situation
 
@@ -703,12 +703,12 @@ this might be called before init, chicken egg situation
 
 | Name | Type |
 | :------ | :------ |
-| `viewCols` | [`Column`](Column.md)<`any`\>[] |
-| `options?` | [`GridOptions`](GridOptions.md)<`any`\> |
+| `viewCols` | [`Column`](Column.md)\<`any`\>[] |
+| `options?` | [`GridOptions`](GridOptions.md)\<`any`\> |
 
 #### Returns
 
-[`Column`](Column.md)<`any`\>[]
+[`Column`](Column.md)\<`any`\>[]
 
 #### Defined in
 

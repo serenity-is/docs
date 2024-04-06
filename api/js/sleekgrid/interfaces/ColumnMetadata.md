@@ -1,6 +1,6 @@
 [@serenity-is/sleekgrid](../README.md) / ColumnMetadata
 
-# Interface: ColumnMetadata<TItem\>
+# Interface: ColumnMetadata\<TItem\>
 
 ## Type parameters
 
@@ -52,7 +52,7 @@ ___
 
 ### format
 
-• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)<`TItem`\>
+• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
 
 #### Defined in
 
@@ -62,7 +62,7 @@ ___
 
 ### formatter
 
-• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)<`TItem`\>
+• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
 
 **`Deprecated`**
 

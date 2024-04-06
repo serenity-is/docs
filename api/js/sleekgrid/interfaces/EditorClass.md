@@ -16,13 +16,17 @@
 
 ### constructor
 
-• **new EditorClass**(`options`)
+• **new EditorClass**(`options`): [`Editor`](Editor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `options` | [`EditorOptions`](EditorOptions.md) |
+
+#### Returns
+
+[`Editor`](Editor.md)
 
 #### Defined in
 

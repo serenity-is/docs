@@ -1,36 +1,21 @@
-[@serenity-is/sleekgrid](../README.md) / EditorLock
+[@serenity-is/sleekgrid](../README.md) / GlobalEditorLock
 
-# Class: EditorLock
+# Class: GlobalEditorLock
 
-A locking helper to track the active edit controller and ensure that only a single controller
-can be active at a time.  This prevents a whole class of state and validation synchronization
-issues.  An edit controller (such as SleekGrid) can query if an active edit is in progress
-and attempt a commit or cancel before proceeding.
- EditorLock
+A global singleton editor lock.
+ GlobalEditorLock
+
+**`Static`**
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](EditorLock.md#constructor)
-
 ### Methods
 
-- [activate](EditorLock.md#activate)
-- [cancelCurrentEdit](EditorLock.md#cancelcurrentedit)
-- [commitCurrentEdit](EditorLock.md#commitcurrentedit)
-- [deactivate](EditorLock.md#deactivate)
-- [isActive](EditorLock.md#isactive)
-
-## Constructors
-
-### constructor
-
-• **new EditorLock**(): [`EditorLock`](EditorLock.md)
-
-#### Returns
-
-[`EditorLock`](EditorLock.md)
+- [activate](GlobalEditorLock.md#activate)
+- [cancelCurrentEdit](GlobalEditorLock.md#cancelcurrentedit)
+- [commitCurrentEdit](GlobalEditorLock.md#commitcurrentedit)
+- [deactivate](GlobalEditorLock.md#deactivate)
+- [isActive](GlobalEditorLock.md#isactive)
 
 ## Methods
 

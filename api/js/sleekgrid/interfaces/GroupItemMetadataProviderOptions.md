@@ -69,7 +69,7 @@ ___
 
 ### groupFormat
 
-• `Optional` **groupFormat**: [`ColumnFormat`](../README.md#columnformat)<[`Group`](../classes/Group.md)<`any`\>\>
+• `Optional` **groupFormat**: [`ColumnFormat`](../README.md#columnformat)\<[`Group`](../classes/Group.md)\<`any`\>\>
 
 #### Defined in
 
@@ -79,7 +79,7 @@ ___
 
 ### groupFormatter
 
-• `Optional` **groupFormatter**: [`CompatFormatter`](../README.md#compatformatter)<[`Group`](../classes/Group.md)<`any`\>\>
+• `Optional` **groupFormatter**: [`CompatFormatter`](../README.md#compatformatter)\<[`Group`](../classes/Group.md)\<`any`\>\>
 
 #### Defined in
 
@@ -129,7 +129,7 @@ ___
 
 ### hasSummaryType
 
-• `Optional` **hasSummaryType**: (`column`: [`Column`](Column.md)<`any`\>) => `boolean`
+• `Optional` **hasSummaryType**: (`column`: [`Column`](Column.md)\<`any`\>) => `boolean`
 
 #### Type declaration
 
@@ -139,7 +139,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `column` | [`Column`](Column.md)<`any`\> |
+| `column` | [`Column`](Column.md)\<`any`\> |
 
 ##### Returns
 
@@ -203,7 +203,7 @@ ___
 
 ### totalsFormat
 
-• `Optional` **totalsFormat**: [`ColumnFormat`](../README.md#columnformat)<[`GroupTotals`](../classes/GroupTotals.md)<`any`\>\>
+• `Optional` **totalsFormat**: [`ColumnFormat`](../README.md#columnformat)\<[`GroupTotals`](../classes/GroupTotals.md)\<`any`\>\>
 
 #### Defined in
 
@@ -213,7 +213,7 @@ ___
 
 ### totalsFormatter
 
-• `Optional` **totalsFormatter**: [`CompatFormatter`](../README.md#compatformatter)<[`GroupTotals`](../classes/GroupTotals.md)<`any`\>\>
+• `Optional` **totalsFormatter**: [`CompatFormatter`](../README.md#compatformatter)\<[`GroupTotals`](../classes/GroupTotals.md)\<`any`\>\>
 
 #### Defined in
 

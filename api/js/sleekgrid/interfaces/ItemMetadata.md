@@ -1,6 +1,6 @@
 [@serenity-is/sleekgrid](../README.md) / ItemMetadata
 
-# Interface: ItemMetadata<TItem\>
+# Interface: ItemMetadata\<TItem\>
 
 ## Type parameters
 
@@ -27,7 +27,7 @@
 
 #### Index signature
 
-▪ [key: `string`]: [`ColumnMetadata`](ColumnMetadata.md)<`TItem`\>
+▪ [key: `string`]: [`ColumnMetadata`](ColumnMetadata.md)\<`TItem`\>
 
 #### Defined in
 
@@ -57,7 +57,7 @@ ___
 
 ### format
 
-• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)<`TItem`\>
+• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
 
 #### Defined in
 
@@ -67,7 +67,7 @@ ___
 
 ### formatter
 
-• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)<`TItem`\>
+• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
 
 **`Deprecated`**
 

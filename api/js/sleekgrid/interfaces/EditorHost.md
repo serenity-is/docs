@@ -22,7 +22,7 @@
 
 ### onCompositeEditorChange
 
-• **onCompositeEditorChange**: [`EventEmitter`](../classes/EventEmitter.md)<`any`, [`IEventData`](IEventData.md)\>
+• **onCompositeEditorChange**: [`EventEmitter`](../classes/EventEmitter.md)\<`any`, [`IEventData`](IEventData.md)\>
 
 #### Defined in
 

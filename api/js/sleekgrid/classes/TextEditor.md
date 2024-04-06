@@ -43,13 +43,17 @@
 
 ### constructor
 
-• **new TextEditor**(`args`)
+• **new TextEditor**(`args`): [`TextEditor`](TextEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`TextEditor`](TextEditor.md)
 
 #### Inherited from
 

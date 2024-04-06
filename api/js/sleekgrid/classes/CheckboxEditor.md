@@ -38,13 +38,17 @@
 
 ### constructor
 
-• **new CheckboxEditor**(`args`)
+• **new CheckboxEditor**(`args`): [`CheckboxEditor`](CheckboxEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`CheckboxEditor`](CheckboxEditor.md)
 
 #### Inherited from
 
@@ -94,7 +98,7 @@ BaseEditor.\_input
 
 #### Defined in
 
-[editors/editors.ts:252](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L252)
+[editors/editors.ts:253](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L253)
 
 ## Methods
 
@@ -119,7 +123,7 @@ BaseEditor.applyValue
 
 #### Defined in
 
-[editors/editors.ts:274](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L274)
+[editors/editors.ts:275](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L275)
 
 ___
 
@@ -191,7 +195,7 @@ BaseEditor.init
 
 #### Defined in
 
-[editors/editors.ts:254](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L254)
+[editors/editors.ts:255](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L255)
 
 ___
 
@@ -209,7 +213,7 @@ BaseEditor.isValueChanged
 
 #### Defined in
 
-[editors/editors.ts:278](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L278)
+[editors/editors.ts:279](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L279)
 
 ___
 
@@ -233,7 +237,7 @@ BaseEditor.loadValue
 
 #### Defined in
 
-[editors/editors.ts:261](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L261)
+[editors/editors.ts:262](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L262)
 
 ___
 
@@ -247,7 +251,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:266](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L266)
+[editors/editors.ts:267](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L267)
 
 ___
 
@@ -265,7 +269,7 @@ BaseEditor.serializeValue
 
 #### Defined in
 
-[editors/editors.ts:270](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L270)
+[editors/editors.ts:271](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L271)
 
 ___
 
@@ -312,4 +316,4 @@ BaseEditor.validate
 
 #### Defined in
 
-[editors/editors.ts:282](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L282)
+[editors/editors.ts:283](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L283)

@@ -22,7 +22,7 @@
 
 ### grid
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)<`any`\>
+• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
@@ -56,7 +56,7 @@ ___
 
 ### sortCol
 
-• `Optional` **sortCol**: [`Column`](Column.md)<`any`\>
+• `Optional` **sortCol**: [`Column`](Column.md)\<`any`\>
 
 #### Defined in
 

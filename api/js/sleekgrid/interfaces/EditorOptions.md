@@ -41,7 +41,7 @@ ___
 
 ### column
 
-• `Optional` **column**: [`Column`](Column.md)<`any`\>
+• `Optional` **column**: [`Column`](Column.md)\<`any`\>
 
 #### Defined in
 
@@ -51,7 +51,7 @@ ___
 
 ### columnMetaData
 
-• `Optional` **columnMetaData**: [`ColumnMetadata`](ColumnMetadata.md)<`any`\>
+• `Optional` **columnMetaData**: [`ColumnMetadata`](ColumnMetadata.md)\<`any`\>
 
 #### Defined in
 

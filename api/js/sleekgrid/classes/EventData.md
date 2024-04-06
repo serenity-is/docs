@@ -15,11 +15,6 @@ An event object for passing data to event handlers and letting them control prop
 
 - [constructor](EventData.md#constructor)
 
-### Properties
-
-- [\_isImmediatePropagationStopped](EventData.md#_isimmediatepropagationstopped)
-- [\_isPropagationStopped](EventData.md#_ispropagationstopped)
-
 ### Methods
 
 - [isImmediatePropagationStopped](EventData.md#isimmediatepropagationstopped)
@@ -31,27 +26,11 @@ An event object for passing data to event handlers and letting them control prop
 
 ### constructor
 
-• **new EventData**()
+• **new EventData**(): [`EventData`](EventData.md)
 
-## Properties
+#### Returns
 
-### \_isImmediatePropagationStopped
-
-• `Private` **\_isImmediatePropagationStopped**: `boolean` = `false`
-
-#### Defined in
-
-[core/event.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L23)
-
-___
-
-### \_isPropagationStopped
-
-• `Private` **\_isPropagationStopped**: `boolean` = `false`
-
-#### Defined in
-
-[core/event.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L22)
+[`EventData`](EventData.md)
 
 ## Methods
 
@@ -71,7 +50,7 @@ Returns whether stopImmediatePropagation was called on this event object.\
 
 #### Defined in
 
-[core/event.ts:50](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L50)
+[core/event.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L48)
 
 ___
 
@@ -91,7 +70,7 @@ Returns whether stopPropagation was called on this event object.
 
 #### Defined in
 
-[core/event.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L36)
+[core/event.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L34)
 
 ___
 
@@ -111,7 +90,7 @@ Prevents the rest of the handlers from being executed.
 
 #### Defined in
 
-[core/event.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L43)
+[core/event.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L41)
 
 ___
 
@@ -121,13 +100,13 @@ ___
 
 Stops event from propagating up the DOM tree.
 
-**`Method`**
-
-stopPropagation
-
 #### Returns
 
 `void`
+
+**`Method`**
+
+stopPropagation
 
 #### Implementation of
 
@@ -135,4 +114,4 @@ stopPropagation
 
 #### Defined in
 
-[core/event.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L29)
+[core/event.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L27)

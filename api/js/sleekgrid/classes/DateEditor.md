@@ -17,7 +17,6 @@
 ### Properties
 
 - [\_args](DateEditor.md#_args)
-- [\_calendarOpen](DateEditor.md#_calendaropen)
 - [\_defaultValue](DateEditor.md#_defaultvalue)
 - [\_input](DateEditor.md#_input)
 
@@ -41,13 +40,17 @@
 
 ### constructor
 
-• **new DateEditor**(`args`)
+• **new DateEditor**(`args`): [`DateEditor`](DateEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`DateEditor`](DateEditor.md)
 
 #### Inherited from
 
@@ -70,16 +73,6 @@
 #### Defined in
 
 [editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L6)
-
-___
-
-### \_calendarOpen
-
-• `Private` **\_calendarOpen**: `boolean` = `false`
-
-#### Defined in
-
-[editors/editors.ts:160](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L160)
 
 ___
 
@@ -150,7 +143,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:183](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L183)
+[editors/editors.ts:184](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L184)
 
 ___
 
@@ -200,7 +193,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:198](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L198)
+[editors/editors.ts:199](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L199)
 
 ___
 
@@ -280,7 +273,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:205](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L205)
+[editors/editors.ts:206](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L206)
 
 ___
 
@@ -336,7 +329,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:191](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L191)
+[editors/editors.ts:192](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L192)
 
 ___
 

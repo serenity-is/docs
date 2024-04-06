@@ -1,6 +1,6 @@
 [@serenity-is/sleekgrid](../README.md) / FormatterContext
 
-# Interface: FormatterContext<TItem\>
+# Interface: FormatterContext\<TItem\>
 
 ## Type parameters
 
@@ -61,7 +61,7 @@ ___
 
 ### column
 
-• `Optional` **column**: [`Column`](Column.md)<`TItem`\>
+• `Optional` **column**: [`Column`](Column.md)\<`TItem`\>
 
 #### Defined in
 
@@ -73,11 +73,11 @@ ___
 
 • `Readonly` **escape**: (`value?`: `any`) => `string`
 
+returns html escaped ctx.value if called without arguments. prefer this over ctx.value to avoid html injection attacks!
+
 #### Type declaration
 
 ▸ (`value?`): `string`
-
-returns html escaped ctx.value if called without arguments. prefer this over ctx.value to avoid html injection attacks!
 
 ##### Parameters
 
@@ -139,7 +139,7 @@ ___
 
 • `Optional` **value**: `any`
 
-when returning a formatter result, prefer ctx.escape() to avoid html injection attacks!
+when returning a formatter result, prefer ctx.escape() to avoid script injection attacks!
 
 #### Defined in
 

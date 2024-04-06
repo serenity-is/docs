@@ -1,6 +1,6 @@
 [@serenity-is/sleekgrid](../README.md) / Column
 
-# Interface: Column<TItem\>
+# Interface: Column\<TItem\>
 
 ## Type parameters
 
@@ -49,7 +49,7 @@
 
 ### asyncPostRender
 
-• `Optional` **asyncPostRender**: [`AsyncPostRender`](../README.md#asyncpostrender)<`TItem`\>
+• `Optional` **asyncPostRender**: [`AsyncPostRender`](../README.md#asyncpostrender)\<`TItem`\>
 
 #### Defined in
 
@@ -59,7 +59,7 @@ ___
 
 ### asyncPostRenderCleanup
 
-• `Optional` **asyncPostRenderCleanup**: [`AsyncPostCleanup`](../README.md#asyncpostcleanup)<`TItem`\>
+• `Optional` **asyncPostRenderCleanup**: [`AsyncPostCleanup`](../README.md#asyncpostcleanup)\<`TItem`\>
 
 #### Defined in
 
@@ -159,7 +159,7 @@ ___
 
 ### format
 
-• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)<`TItem`\>
+• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
 
 #### Defined in
 
@@ -169,7 +169,7 @@ ___
 
 ### formatter
 
-• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)<`TItem`\>
+• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
 
 **`Deprecated`**
 
@@ -191,7 +191,7 @@ ___
 
 ### groupTotalsFormatter
 
-• `Optional` **groupTotalsFormatter**: (`p1?`: [`GroupTotals`](../classes/GroupTotals.md)<`TItem`\>, `p2?`: [`Column`](Column.md)<`TItem`\>, `grid?`: `unknown`) => `string`
+• `Optional` **groupTotalsFormatter**: (`p1?`: [`GroupTotals`](../classes/GroupTotals.md)\<`TItem`\>, `p2?`: [`Column`](Column.md)\<`TItem`\>, `grid?`: `unknown`) => `string`
 
 #### Type declaration
 
@@ -201,8 +201,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `p1?` | [`GroupTotals`](../classes/GroupTotals.md)<`TItem`\> |
-| `p2?` | [`Column`](Column.md)<`TItem`\> |
+| `p1?` | [`GroupTotals`](../classes/GroupTotals.md)\<`TItem`\> |
+| `p2?` | [`Column`](Column.md)\<`TItem`\> |
 | `grid?` | `unknown` |
 
 ##### Returns

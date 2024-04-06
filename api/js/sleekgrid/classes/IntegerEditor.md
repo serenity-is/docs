@@ -39,13 +39,17 @@
 
 ### constructor
 
-• **new IntegerEditor**(`args`)
+• **new IntegerEditor**(`args`): [`IntegerEditor`](IntegerEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`IntegerEditor`](IntegerEditor.md)
 
 #### Inherited from
 

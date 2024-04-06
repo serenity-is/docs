@@ -126,11 +126,11 @@ ___
 
 ### getColumns
 
-▸ **getColumns**(): [`Column`](Column.md)<`any`\>[]
+▸ **getColumns**(): [`Column`](Column.md)\<`any`\>[]
 
 #### Returns
 
-[`Column`](Column.md)<`any`\>[]
+[`Column`](Column.md)\<`any`\>[]
 
 #### Defined in
 
@@ -168,11 +168,11 @@ ___
 
 ### getOptions
 
-▸ **getOptions**(): [`GridOptions`](GridOptions.md)<`any`\>
+▸ **getOptions**(): [`GridOptions`](GridOptions.md)\<`any`\>
 
 #### Returns
 
-[`GridOptions`](GridOptions.md)<`any`\>
+[`GridOptions`](GridOptions.md)\<`any`\>
 
 #### Defined in
 

@@ -26,7 +26,11 @@ A base class that all special / non-data rows (like Group and GroupTotals) deriv
 
 ### constructor
 
-• **new NonDataRow**()
+• **new NonDataRow**(): [`NonDataRow`](NonDataRow.md)
+
+#### Returns
+
+[`NonDataRow`](NonDataRow.md)
 
 ## Properties
 

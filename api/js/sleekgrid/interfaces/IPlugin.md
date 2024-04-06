@@ -11,6 +11,8 @@
 ## Implemented by
 
 - [`AutoTooltips`](../classes/AutoTooltips.md)
+- [`RowMoveManager`](../classes/RowMoveManager.md)
+- [`RowSelectionModel`](../classes/RowSelectionModel.md)
 
 ## Table of contents
 
@@ -61,7 +63,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `grid` | [`Grid`](../classes/Grid.md)<`any`\> |
+| `grid` | [`Grid`](../classes/Grid.md)\<`any`\> |
 
 #### Returns
 

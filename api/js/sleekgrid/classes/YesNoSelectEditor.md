@@ -37,13 +37,17 @@
 
 ### constructor
 
-• **new YesNoSelectEditor**(`args`)
+• **new YesNoSelectEditor**(`args`): [`YesNoSelectEditor`](YesNoSelectEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`YesNoSelectEditor`](YesNoSelectEditor.md)
 
 #### Inherited from
 
@@ -93,7 +97,7 @@ BaseEditor.\_input
 
 #### Defined in
 
-[editors/editors.ts:218](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L218)
+[editors/editors.ts:219](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L219)
 
 ## Methods
 
@@ -190,7 +194,7 @@ BaseEditor.init
 
 #### Defined in
 
-[editors/editors.ts:220](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L220)
+[editors/editors.ts:221](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L221)
 
 ___
 
@@ -208,7 +212,7 @@ BaseEditor.isValueChanged
 
 #### Defined in
 
-[editors/editors.ts:238](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L238)
+[editors/editors.ts:239](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L239)
 
 ___
 
@@ -232,7 +236,7 @@ BaseEditor.loadValue
 
 #### Defined in
 
-[editors/editors.ts:230](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L230)
+[editors/editors.ts:231](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L231)
 
 ___
 
@@ -250,7 +254,7 @@ BaseEditor.serializeValue
 
 #### Defined in
 
-[editors/editors.ts:234](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L234)
+[editors/editors.ts:235](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L235)
 
 ___
 
@@ -297,4 +301,4 @@ BaseEditor.validate
 
 #### Defined in
 
-[editors/editors.ts:242](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L242)
+[editors/editors.ts:243](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L243)

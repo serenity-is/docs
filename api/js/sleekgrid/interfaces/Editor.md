@@ -85,7 +85,7 @@ ___
 
 ### hide
 
-▸ `Optional` **hide**(): `void`
+▸ **hide**(): `void`
 
 #### Returns
 
@@ -133,7 +133,7 @@ ___
 
 ### position
 
-▸ `Optional` **position**(`pos`): `void`
+▸ **position**(`pos`): `void`
 
 #### Parameters
 
@@ -153,7 +153,7 @@ ___
 
 ### preClick
 
-▸ `Optional` **preClick**(): `void`
+▸ **preClick**(): `void`
 
 #### Returns
 
@@ -181,7 +181,7 @@ ___
 
 ### show
 
-▸ `Optional` **show**(): `void`
+▸ **show**(): `void`
 
 #### Returns
 
@@ -195,7 +195,7 @@ ___
 
 ### validate
 
-▸ `Optional` **validate**(): [`ValidationResult`](ValidationResult.md)
+▸ **validate**(): [`ValidationResult`](ValidationResult.md)
 
 #### Returns
 

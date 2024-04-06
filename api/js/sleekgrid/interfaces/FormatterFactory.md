@@ -1,6 +1,6 @@
 [@serenity-is/sleekgrid](../README.md) / FormatterFactory
 
-# Interface: FormatterFactory<TItem\>
+# Interface: FormatterFactory\<TItem\>
 
 ## Type parameters
 
@@ -19,38 +19,38 @@
 
 ### getFormat
 
-▸ `Optional` **getFormat**(`column`): [`ColumnFormat`](../README.md#columnformat)<`TItem`\>
+▸ **getFormat**(`column`): [`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `column` | [`Column`](Column.md)<`TItem`\> |
+| `column` | [`Column`](Column.md)\<`TItem`\> |
 
 #### Returns
 
-[`ColumnFormat`](../README.md#columnformat)<`TItem`\>
+[`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
 
 #### Defined in
 
-[core/formatting.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L30)
+[core/formatting.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L31)
 
 ___
 
 ### getFormatter
 
-▸ `Optional` **getFormatter**(`column`): [`CompatFormatter`](../README.md#compatformatter)<`TItem`\>
+▸ **getFormatter**(`column`): [`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `column` | [`Column`](Column.md)<`TItem`\> |
+| `column` | [`Column`](Column.md)\<`TItem`\> |
 
 #### Returns
 
-[`CompatFormatter`](../README.md#compatformatter)<`TItem`\>
+[`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
 
 #### Defined in
 
-[core/formatting.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L31)
+[core/formatting.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L32)

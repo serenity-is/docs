@@ -40,13 +40,17 @@
 
 ### constructor
 
-• **new FloatEditor**(`args`)
+• **new FloatEditor**(`args`): [`FloatEditor`](FloatEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`FloatEditor`](FloatEditor.md)
 
 #### Inherited from
 

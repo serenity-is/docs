@@ -1,6 +1,6 @@
 [@serenity-is/sleekgrid](../README.md) / Group
 
-# Class: Group<TEntity\>
+# Class: Group\<TEntity\>
 
 Information about a group of rows.
 
@@ -44,13 +44,17 @@ Information about a group of rows.
 
 ### constructor
 
-• **new Group**<`TEntity`\>()
+• **new Group**\<`TEntity`\>(): [`Group`](Group.md)\<`TEntity`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
 | `TEntity` | `any` |
+
+#### Returns
+
+[`Group`](Group.md)\<`TEntity`\>
 
 #### Inherited from
 
@@ -121,7 +125,7 @@ ___
 
 ### groups
 
-• **groups**: [`Group`](Group.md)<`TEntity`\>[]
+• **groups**: [`Group`](Group.md)\<`TEntity`\>[]
 
 Sub-groups that are part of the group.
 
@@ -169,7 +173,7 @@ ___
 
 ### totals
 
-• **totals**: [`GroupTotals`](GroupTotals.md)<`TEntity`\>
+• **totals**: [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
 
 GroupTotals, if any.
 
@@ -197,19 +201,19 @@ Grouping value.
 
 Compares two Group instances.
 
-**`Method`**
-
-equals
-
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `group` | [`Group`](Group.md)<`any`\> | {Group} Group instance to compare to. |
+| `group` | [`Group`](Group.md)\<`any`\> | {Group} Group instance to compare to. |
 
 #### Returns
 
 `boolean`
+
+**`Method`**
+
+equals
 
 #### Defined in
 

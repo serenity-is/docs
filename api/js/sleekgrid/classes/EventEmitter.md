@@ -1,6 +1,6 @@
 [@serenity-is/sleekgrid](../README.md) / EventEmitter
 
-# Class: EventEmitter<TArgs, TEventData\>
+# Class: EventEmitter\<TArgs, TEventData\>
 
 A simple publisher-subscriber implementation.
 
@@ -17,10 +17,6 @@ A simple publisher-subscriber implementation.
 
 - [constructor](EventEmitter.md#constructor)
 
-### Properties
-
-- [\_handlers](EventEmitter.md#_handlers)
-
 ### Methods
 
 - [clear](EventEmitter.md#clear)
@@ -32,7 +28,7 @@ A simple publisher-subscriber implementation.
 
 ### constructor
 
-• **new EventEmitter**<`TArgs`, `TEventData`\>()
+• **new EventEmitter**\<`TArgs`, `TEventData`\>(): [`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\>
 
 #### Type parameters
 
@@ -41,15 +37,9 @@ A simple publisher-subscriber implementation.
 | `TArgs` | `any` |
 | `TEventData` | extends [`IEventData`](../interfaces/IEventData.md) = [`IEventData`](../interfaces/IEventData.md) |
 
-## Properties
+#### Returns
 
-### \_handlers
-
-• `Private` **\_handlers**: [`EventListener`](../README.md#eventlistener)<`TArgs`, `TEventData`\>[] = `[]`
-
-#### Defined in
-
-[core/event.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L60)
+[`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\>
 
 ## Methods
 
@@ -63,7 +53,7 @@ A simple publisher-subscriber implementation.
 
 #### Defined in
 
-[core/event.ts:110](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L110)
+[core/event.ts:108](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L108)
 
 ___
 
@@ -87,7 +77,7 @@ Fires an event notifying all subscribers.
 
 #### Defined in
 
-[core/event.ts:98](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L98)
+[core/event.ts:96](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L96)
 
 ___
 
@@ -99,23 +89,23 @@ Adds an event handler to be called when the event is fired.
 <p>Event handler will receive two arguments - an <code>EventData</code> and the <code>data</code>
 object the event was fired with.<p>
 
-**`Method`**
-
-subscribe
-
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `fn` | [`EventListener`](../README.md#eventlistener)<`TArgs`, `TEventData`\> | {Function} Event handler. |
+| `fn` | (`e`: `TEventData`, `args`: `TArgs`) => `void` | {Function} Event handler. |
 
 #### Returns
 
 `void`
 
+**`Method`**
+
+subscribe
+
 #### Defined in
 
-[core/event.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L69)
+[core/event.ts:67](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L67)
 
 ___
 
@@ -125,20 +115,20 @@ ___
 
 Removes an event handler added with <code>subscribe(fn)</code>.
 
-**`Method`**
-
-unsubscribe
-
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `fn` | [`EventListener`](../README.md#eventlistener)<`TArgs`, `TEventData`\> | {Function} Event handler to be removed. |
+| `fn` | (`e`: `TEventData`, `args`: `TArgs`) => `void` | {Function} Event handler to be removed. |
 
 #### Returns
 
 `void`
 
+**`Method`**
+
+unsubscribe
+
 #### Defined in
 
-[core/event.ts:78](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L78)
+[core/event.ts:76](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L76)

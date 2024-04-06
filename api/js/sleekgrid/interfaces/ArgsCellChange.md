@@ -37,7 +37,7 @@ ___
 
 ### grid
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)<`any`\>
+• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 

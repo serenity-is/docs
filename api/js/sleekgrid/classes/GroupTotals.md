@@ -1,11 +1,12 @@
 [@serenity-is/sleekgrid](../README.md) / GroupTotals
 
-# Class: GroupTotals<TEntity\>
+# Class: GroupTotals\<TEntity\>
 
 Information about group totals.
 An instance of GroupTotals will be created for each totals row and passed to the aggregators
 so that they can store arbitrary data in it.  That data can later be accessed by group totals
 formatters during the display.
+ GroupTotals
 
 ## Type parameters
 
@@ -40,13 +41,17 @@ formatters during the display.
 
 ### constructor
 
-• **new GroupTotals**<`TEntity`\>()
+• **new GroupTotals**\<`TEntity`\>(): [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
 | `TEntity` | `any` |
+
+#### Returns
+
+[`GroupTotals`](GroupTotals.md)\<`TEntity`\>
 
 #### Inherited from
 
@@ -92,7 +97,7 @@ ___
 
 ### group
 
-• **group**: [`Group`](Group.md)<`TEntity`\>
+• **group**: [`Group`](Group.md)\<`TEntity`\>
 
 Parent Group.
 

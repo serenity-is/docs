@@ -12,6 +12,7 @@
 ### Classes
 
 - [AutoTooltips](classes/AutoTooltips.md)
+- [CellRange](classes/CellRange.md)
 - [CheckboxEditor](classes/CheckboxEditor.md)
 - [DateEditor](classes/DateEditor.md)
 - [EditorLock](classes/EditorLock.md)
@@ -19,6 +20,7 @@
 - [EventEmitter](classes/EventEmitter.md)
 - [EventSubscriber](classes/EventSubscriber.md)
 - [FloatEditor](classes/FloatEditor.md)
+- [GlobalEditorLock](classes/GlobalEditorLock.md)
 - [Grid](classes/Grid.md)
 - [Group](classes/Group.md)
 - [GroupItemMetadataProvider](classes/GroupItemMetadataProvider.md)
@@ -27,7 +29,8 @@
 - [LongTextEditor](classes/LongTextEditor.md)
 - [NonDataRow](classes/NonDataRow.md)
 - [PercentCompleteEditor](classes/PercentCompleteEditor.md)
-- [Range](classes/Range.md)
+- [RowMoveManager](classes/RowMoveManager.md)
+- [RowSelectionModel](classes/RowSelectionModel.md)
 - [TextEditor](classes/TextEditor.md)
 - [YesNoSelectEditor](classes/YesNoSelectEditor.md)
 
@@ -69,6 +72,8 @@
 - [LayoutHost](interfaces/LayoutHost.md)
 - [Position](interfaces/Position.md)
 - [RowCell](interfaces/RowCell.md)
+- [RowMoveManagerOptions](interfaces/RowMoveManagerOptions.md)
+- [RowSelectionModelOptions](interfaces/RowSelectionModelOptions.md)
 - [SelectionModel](interfaces/SelectionModel.md)
 - [ValidationResult](interfaces/ValidationResult.md)
 - [ViewRange](interfaces/ViewRange.md)
@@ -82,13 +87,12 @@
 - [CellStylesHash](README.md#cellstyleshash)
 - [ColumnFormat](README.md#columnformat)
 - [CompatFormatter](README.md#compatformatter)
-- [EventListener](README.md#eventlistener)
+- [FormatterResult](README.md#formatterresult)
 
 ### Variables
 
 - [BasicLayout](README.md#basiclayout)
 - [FrozenLayout](README.md#frozenlayout)
-- [GlobalEditorLock](README.md#globaleditorlock)
 - [columnDefaults](README.md#columndefaults)
 - [gridDefaults](README.md#griddefaults)
 - [keyCode](README.md#keycode)
@@ -107,7 +111,7 @@
 - [convertCompatFormatter](README.md#convertcompatformatter)
 - [defaultColumnFormat](README.md#defaultcolumnformat)
 - [disableSelection](README.md#disableselection)
-- [escape](README.md#escape)
+- [escapeHtml](README.md#escapehtml)
 - [initializeColumns](README.md#initializecolumns)
 - [parsePx](README.md#parsepx)
 - [patchEvent](README.md#patchevent)
@@ -136,7 +140,7 @@ ___
 
 ### AsyncPostCleanup
 
-Ƭ **AsyncPostCleanup**<`TItem`\>: (`cellNode`: `HTMLElement`, `row?`: `number`, `column?`: [`Column`](interfaces/Column.md)<`TItem`\>) => `void`
+Ƭ **AsyncPostCleanup**\<`TItem`\>: (`cellNode`: `HTMLElement`, `row?`: `number`, `column?`: [`Column`](interfaces/Column.md)\<`TItem`\>) => `void`
 
 #### Type parameters
 
@@ -154,7 +158,7 @@ ___
 | :------ | :------ |
 | `cellNode` | `HTMLElement` |
 | `row?` | `number` |
-| `column?` | [`Column`](interfaces/Column.md)<`TItem`\> |
+| `column?` | [`Column`](interfaces/Column.md)\<`TItem`\> |
 
 ##### Returns
 
@@ -162,13 +166,13 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L35)
+[core/formatting.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L36)
 
 ___
 
 ### AsyncPostRender
 
-Ƭ **AsyncPostRender**<`TItem`\>: (`cellNode`: `HTMLElement`, `row`: `number`, `item`: `TItem`, `column`: [`Column`](interfaces/Column.md)<`TItem`\>, `reRender`: `boolean`) => `void`
+Ƭ **AsyncPostRender**\<`TItem`\>: (`cellNode`: `HTMLElement`, `row`: `number`, `item`: `TItem`, `column`: [`Column`](interfaces/Column.md)\<`TItem`\>, `reRender`: `boolean`) => `void`
 
 #### Type parameters
 
@@ -187,7 +191,7 @@ ___
 | `cellNode` | `HTMLElement` |
 | `row` | `number` |
 | `item` | `TItem` |
-| `column` | [`Column`](interfaces/Column.md)<`TItem`\> |
+| `column` | [`Column`](interfaces/Column.md)\<`TItem`\> |
 | `reRender` | `boolean` |
 
 ##### Returns
@@ -196,7 +200,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L34)
+[core/formatting.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L35)
 
 ___
 
@@ -206,17 +210,17 @@ ___
 
 #### Index signature
 
-▪ [row: `number`]: { `[columnId: string]`: `string`;  }
+▪ [row: `number`]: \{ `[columnId: string]`: `string`;  }
 
 #### Defined in
 
-[core/formatting.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L37)
+[core/formatting.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L38)
 
 ___
 
 ### ColumnFormat
 
-Ƭ **ColumnFormat**<`TItem`\>: (`ctx`: [`FormatterContext`](interfaces/FormatterContext.md)<`TItem`\>) => `string`
+Ƭ **ColumnFormat**\<`TItem`\>: (`ctx`: [`FormatterContext`](interfaces/FormatterContext.md)\<`TItem`\>) => [`FormatterResult`](README.md#formatterresult)
 
 #### Type parameters
 
@@ -226,27 +230,27 @@ ___
 
 #### Type declaration
 
-▸ (`ctx`): `string`
+▸ (`ctx`): [`FormatterResult`](README.md#formatterresult)
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`TItem`\> |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`TItem`\> |
 
 ##### Returns
 
-`string`
+[`FormatterResult`](README.md#formatterresult)
 
 #### Defined in
 
-[core/formatting.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L19)
+[core/formatting.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L20)
 
 ___
 
 ### CompatFormatter
 
-Ƭ **CompatFormatter**<`TItem`\>: (`row`: `number`, `cell`: `number`, `value`: `any`, `column`: [`Column`](interfaces/Column.md)<`TItem`\>, `item`: `TItem`, `grid?`: `any`) => `string` \| [`CompatFormatterResult`](interfaces/CompatFormatterResult.md)
+Ƭ **CompatFormatter**\<`TItem`\>: (`row`: `number`, `cell`: `number`, `value`: `any`, `column`: [`Column`](interfaces/Column.md)\<`TItem`\>, `item`: `TItem`, `grid?`: `any`) => `string` \| [`CompatFormatterResult`](interfaces/CompatFormatterResult.md)
 
 #### Type parameters
 
@@ -265,7 +269,7 @@ ___
 | `row` | `number` |
 | `cell` | `number` |
 | `value` | `any` |
-| `column` | [`Column`](interfaces/Column.md)<`TItem`\> |
+| `column` | [`Column`](interfaces/Column.md)\<`TItem`\> |
 | `item` | `TItem` |
 | `grid?` | `any` |
 
@@ -275,39 +279,17 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L27)
+[core/formatting.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L28)
 
 ___
 
-### EventListener
+### FormatterResult
 
-Ƭ **EventListener**<`TArgs`, `TEventData`\>: (`e`: `TEventData`, `args`: `TArgs`) => `void`
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TArgs` | `TArgs` |
-| `TEventData` | extends [`IEventData`](interfaces/IEventData.md) = [`IEventData`](interfaces/IEventData.md) |
-
-#### Type declaration
-
-▸ (`e`, `args`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `e` | `TEventData` |
-| `args` | `TArgs` |
-
-##### Returns
-
-`void`
+Ƭ **FormatterResult**: `string` \| `Element` \| `DocumentFragment`
 
 #### Defined in
 
-[core/event.ts:1](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L1)
+[core/formatting.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L19)
 
 ## Variables
 
@@ -347,23 +329,9 @@ ___
 
 ___
 
-### GlobalEditorLock
-
-• `Const` **GlobalEditorLock**: [`EditorLock`](classes/EditorLock.md)
-
-A global singleton editor lock.
-
-**`Static`**
-
-#### Defined in
-
-[core/editing.ts:176](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L176)
-
-___
-
 ### columnDefaults
 
-• `Const` **columnDefaults**: `Partial`<[`Column`](interfaces/Column.md)\>
+• `Const` **columnDefaults**: `Partial`\<[`Column`](interfaces/Column.md)\>
 
 #### Defined in
 
@@ -377,7 +345,7 @@ ___
 
 #### Defined in
 
-[grid/gridoptions.ts:78](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L78)
+[grid/gridoptions.ts:80](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L80)
 
 ___
 
@@ -408,7 +376,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:159](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L159)
+[core/event.ts:157](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L157)
 
 ___
 
@@ -430,7 +398,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`any`\> |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`any`\> |
 
 #### Returns
 
@@ -450,7 +418,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`any`\> |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`any`\> |
 
 #### Returns
 
@@ -464,7 +432,7 @@ ___
 
 ### H
 
-▸ **H**<`K`\>(`tag`, `attr?`, `...children`): `HTMLElementTagNameMap`[`K`]
+▸ **H**\<`K`\>(`tag`, `attr?`, `...children`): `HTMLElementTagNameMap`[`K`]
 
 #### Type parameters
 
@@ -499,7 +467,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`any`\> |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`any`\> |
 
 #### Returns
 
@@ -519,7 +487,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`any`\> |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`any`\> |
 
 #### Returns
 
@@ -539,7 +507,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`any`\> |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`any`\> |
 
 #### Returns
 
@@ -580,8 +548,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`any`\> |
-| `html` | `string` |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`any`\> |
+| `html` | [`FormatterResult`](README.md#formatterresult) |
 | `node` | `HTMLElement` |
 
 #### Returns
@@ -590,7 +558,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:58](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L58)
+[core/formatting.ts:59](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L59)
 
 ___
 
@@ -602,7 +570,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `compatFormatter` | [`CompatFormatter`](README.md#compatformatter)<`any`\> |
+| `compatFormatter` | [`CompatFormatter`](README.md#compatformatter)\<`any`\> |
 
 #### Returns
 
@@ -610,7 +578,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L43)
+[core/formatting.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L44)
 
 ___
 
@@ -622,7 +590,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)<`any`\> |
+| `ctx` | [`FormatterContext`](interfaces/FormatterContext.md)\<`any`\> |
 
 #### Returns
 
@@ -630,7 +598,7 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L39)
+[core/formatting.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L40)
 
 ___
 
@@ -654,9 +622,9 @@ ___
 
 ___
 
-### escape
+### escapeHtml
 
-▸ **escape**(`s`): `any`
+▸ **escapeHtml**(`s`): `any`
 
 #### Parameters
 
@@ -682,8 +650,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `columns` | [`Column`](interfaces/Column.md)<`any`\>[] |
-| `defaults` | `Partial`<[`Column`](interfaces/Column.md)<`any`\>\> |
+| `columns` | [`Column`](interfaces/Column.md)\<`any`\>[] |
+| `defaults` | `Partial`\<[`Column`](interfaces/Column.md)\<`any`\>\> |
 
 #### Returns
 
@@ -731,7 +699,7 @@ ___
 
 #### Defined in
 
-[core/event.ts:185](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L185)
+[core/event.ts:183](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L183)
 
 ___
 

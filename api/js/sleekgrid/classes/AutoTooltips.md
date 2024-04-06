@@ -14,23 +14,19 @@
 
 ### Properties
 
-- [grid](AutoTooltips.md#grid)
-- [options](AutoTooltips.md#options)
 - [pluginName](AutoTooltips.md#pluginname)
 - [defaults](AutoTooltips.md#defaults)
 
 ### Methods
 
 - [destroy](AutoTooltips.md#destroy)
-- [handleHeaderMouseEnter](AutoTooltips.md#handleheadermouseenter)
-- [handleMouseEnter](AutoTooltips.md#handlemouseenter)
 - [init](AutoTooltips.md#init)
 
 ## Constructors
 
 ### constructor
 
-• **new AutoTooltips**(`options?`)
+• **new AutoTooltips**(`options?`): [`AutoTooltips`](AutoTooltips.md)
 
 #### Parameters
 
@@ -38,31 +34,15 @@
 | :------ | :------ |
 | `options?` | [`AutoTooltipsOptions`](../interfaces/AutoTooltipsOptions.md) |
 
+#### Returns
+
+[`AutoTooltips`](AutoTooltips.md)
+
 #### Defined in
 
 [plugins/autotooltips.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L15)
 
 ## Properties
-
-### grid
-
-• `Private` **grid**: [`Grid`](Grid.md)<`any`\>
-
-#### Defined in
-
-[plugins/autotooltips.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L12)
-
-___
-
-### options
-
-• `Private` **options**: [`AutoTooltipsOptions`](../interfaces/AutoTooltipsOptions.md)
-
-#### Defined in
-
-[plugins/autotooltips.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L13)
-
-___
 
 ### pluginName
 
@@ -106,47 +86,6 @@ ___
 
 ___
 
-### handleHeaderMouseEnter
-
-▸ `Private` **handleHeaderMouseEnter**(`e`, `args`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `e` | `MouseEvent` |
-| `args` | [`ArgsColumn`](../interfaces/ArgsColumn.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[plugins/autotooltips.ts:67](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L67)
-
-___
-
-### handleMouseEnter
-
-▸ `Private` **handleMouseEnter**(`e`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `e` | `MouseEvent` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[plugins/autotooltips.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L44)
-
-___
-
 ### init
 
 ▸ **init**(`grid`): `void`
@@ -155,7 +94,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `grid` | [`Grid`](Grid.md)<`any`\> |
+| `grid` | [`Grid`](Grid.md)\<`any`\> |
 
 #### Returns
 

@@ -20,7 +20,7 @@
 
 ### column
 
-• **column**: [`Column`](Column.md)<`any`\>
+• **column**: [`Column`](Column.md)\<`any`\>
 
 #### Inherited from
 
@@ -34,7 +34,7 @@ ___
 
 ### grid
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)<`any`\>
+• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 

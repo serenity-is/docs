@@ -18,17 +18,17 @@
 
 #### Defined in
 
-[core/formatting.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L22)
+[core/formatting.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L23)
 
 ___
 
 ### text
 
-• `Optional` **text**: `string`
+• `Optional` **text**: [`FormatterResult`](../README.md#formatterresult)
 
 #### Defined in
 
-[core/formatting.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L23)
+[core/formatting.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L24)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[core/formatting.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L24)
+[core/formatting.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L25)

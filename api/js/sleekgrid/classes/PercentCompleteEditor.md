@@ -38,13 +38,17 @@
 
 ### constructor
 
-• **new PercentCompleteEditor**(`args`)
+• **new PercentCompleteEditor**(`args`): [`PercentCompleteEditor`](PercentCompleteEditor.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+
+#### Returns
+
+[`PercentCompleteEditor`](PercentCompleteEditor.md)
 
 #### Inherited from
 
@@ -104,7 +108,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:291](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L291)
+[editors/editors.ts:292](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L292)
 
 ## Methods
 
@@ -147,7 +151,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:335](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L335)
+[editors/editors.ts:336](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L336)
 
 ___
 
@@ -201,7 +205,7 @@ ___
 
 #### Defined in
 
-[editors/editors.ts:293](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L293)
+[editors/editors.ts:294](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L294)
 
 ___
 

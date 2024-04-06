@@ -8,6 +8,10 @@
 
   ↳ **`SelectionModel`**
 
+## Implemented by
+
+- [`RowSelectionModel`](../classes/RowSelectionModel.md)
+
 ## Table of contents
 
 ### Properties
@@ -48,7 +52,7 @@ ___
 
 ### onSelectedRangesChanged
 
-• **onSelectedRangesChanged**: [`EventEmitter`](../classes/EventEmitter.md)<[`Range`](../classes/Range.md)[], [`IEventData`](IEventData.md)\>
+• **onSelectedRangesChanged**: [`EventEmitter`](../classes/EventEmitter.md)\<[`CellRange`](../classes/CellRange.md)[], [`IEventData`](IEventData.md)\>
 
 #### Defined in
 
@@ -78,7 +82,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `grid` | [`Grid`](../classes/Grid.md)<`any`\> |
+| `grid` | [`Grid`](../classes/Grid.md)\<`any`\> |
 
 #### Returns
 
@@ -96,7 +100,7 @@ ___
 
 ### refreshSelections
 
-▸ `Optional` **refreshSelections**(): `void`
+▸ **refreshSelections**(): `void`
 
 #### Returns
 
@@ -116,7 +120,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ranges` | [`Range`](../classes/Range.md)[] |
+| `ranges` | [`CellRange`](../classes/CellRange.md)[] |
 
 #### Returns
 

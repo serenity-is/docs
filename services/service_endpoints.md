@@ -207,9 +207,8 @@ public class SaveResponse : ServiceResponse
 How is this possible? Once again, `ServiceEndpoint` handles this detail behind the scenes. It transforms our `SaveResponse` to a special action result that returns JSON data.
 
 We don't have to worry about this detail as long as our response object derives from `ServiceResponse` and is JSON-serializable.
-### About Request and Response Objects
 
-Once again, our request object is simply an ordinary class that derives from a basic `ServiceRequest`:
+The request object is also an ordinary class that derives from a basic `ServiceRequest`:
 
 ```csharp
 public class ServiceRequest

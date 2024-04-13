@@ -1,222 +1,236 @@
 # Service Endpoints
 
-> This section will be updated for Serenity v5
+In Serenity, service endpoints are a subclass of ASP.NET Core controllers.
 
-In Serenity, Service Endpoints are a subclass of ASP.NET MVC controllers.
-
-Here is an excerpt from Northwind OrderEndpoint:
+Here is an excerpt from UserEndpoint:
 
 ```cs
-namespace Serene.Northwind.Endpoints
+using MyRow = MyProject.Administration.UserRow;
+
+namespace MyProject.Administration.Endpoints;
+
+[Route("Services/Administration/User/[action]")]
+[ConnectionKey(typeof(MyRow)), ServiceAuthorize(typeof(MyRow))]
+public class UserEndpoint : ServiceEndpoint
 {
-    [RoutePrefix("Services/Northwind/Order"), Route("{action}")]
-    [ConnectionKey("Northwind"), ServiceAuthorize(Northwind.PermissionKeys.General)]
-    public class OrderController : ServiceEndpoint
+    [HttpPost, AuthorizeCreate(typeof(MyRow))]
+    public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request, 
+        [FromServices] IUserSaveHandler handler)
     {
-        [HttpPost]
-        public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
-        {
-            return new MyRepository().Create(uow, request);
-        }
-
-        public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
-        {
-            return new MyRepository().List(connection, request);
-        }
+        return handler.Create(uow, request);
     }
-}
-```
 
+    //...
+   
+    public ListResponse<MyRow> List(IDbConnection connection, UserListRequest request,
+        [FromServices] IUserListHandler handler)
+    {
+```
 
 ### Controller Naming and Namespace
 
-Our class has name *OrderController*, even though its file is named *OrderEndpoint.cs*. This is due to a ASP.NET MVC limitation (which i don't find so logical) that all controllers must end with *Controller* suffix. 
+The endpoint class above is named *UserEndpoint*. This naming convention (XYZEndpoint) is recommended for Serenity applications.
 
-If you don't end your controller class name with this suffix, your actions will simply won't work. So be very careful with this.
+The namespace of this class is *MyProject.Administration.Endpoints*. This is another convention, as we usually put endpoints under the *MyProject.Module.Endpoints* namespace for consistency.
 
-> I also did this mistake several times and it cost me hours.
+All service controllers should derive from the `ServiceEndpoint` class, which provides this MVC controller with special features that we'll see shortly.
 
-Namespace of this class (*Serene.Northwind.Endpoints*) is not important at all, though we usually put endpoints under *MyProject.Module.Endpoints* namespace for consistency.
+### Route Attribute
 
-Our OrderController derives from ServiceEndpoint (and should), which provides this MVC controller with not so usual features that we'll see shortly.
-
-
-### Routing Attributes
-
-```cs
-[RoutePrefix("Services/Northwind/Order"), Route("{action}")]
+```csharp
+[Route("Services/Administration/User/[action]")]
 ```
-Routing attributes above, which belongs to ASP.NET attribute routing, configures base address for our service endpoint. Our actions will be available under "mysite.com/Services/Northwind/Order".
 
-> Please avoid classic ASP.NET MVC routing, where you configured all routes in ApplicationStart method with *routes.AddRoute* etc. It was really hard to manage.
+The `Route` attribute above, used for ASP.NET attribute routing, configures the base address for our service endpoint. Actions will be accessible under `/Services/Administration/User`.
 
-All Serenity service endpoints uses */Services/Module/Entity* addressing scheme by default. Again even though you'd be able to use another address scheme, this is recommended for consistency and basic conventions.
-
+All Serenity service endpoints follow the `/Services/Module/Entity` addressing scheme by default. Though you can choose another scheme, this convention ensures consistency.
 
 ### ConnectionKey Attribute
 
-This attribute specificies which connection key in your application configuration file (e.g. web.config) should be used to create a connection when needed.
-
-Let's see when and how this auto created connection is used:
-
-```cs
-public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
-{
-    return new MyRepository().List(connection, request);
-}
+```csharp
+[ConnectionKey(typeof(MyRow))]
 ```
 
-Here we see that this action takes a IDbConnection parameter. You can't send a IDbConnection to an MVC action from client side. So who creates this connection?
+This attribute specifies the connection key in your application configuration file (e.g., `appsettings.json.config`) to be used when creating a connection.
 
-Remember that our controller derives from ServiceEndpoint? So ServiceEndpoint understands that our action requires a connection. It checks [ConnectionKey] attribute on top of controller class to determine connection key, creates a connection using *SqlConnections.NewByKey()*, executes our action with this connection, and when action ends executing, closes the connection.
+Here, the connection key is indirectly specified through the `MyRow` (alias for `UserRow`) class:
 
-You'd be able to remove this connection parameter from the action and create it manually:
+```csharp
+[ConnectionKey("Default"), Module("Administration"), TableName("Users")]
+public sealed partial class UserRow
+```
 
-```cs
-public ListResponse<MyRow> List(ListRequest request)
+Thus, the connection key is determined from the row type's `ConnectionKey` attribute. This reuses information instead of explicitly specifying the `"Default"` string in endpoints and elsewhere.
+
+Let's explore how this auto-created connection is used:
+
+```csharp
+public ListResponse<MyRow> List(IDbConnection connection, UserListRequest request,
+    [FromServices] IUserListHandler handler)
+```
+
+Here, the action takes an `IDbConnection` argument. You can't send an `IDbConnection` to an MVC action from the client. So, who creates this connection?
+
+As our controller derives from `ServiceEndpoint`, the base class is aware that the action requires a connection. It checks the `[ConnectionKey]` attribute atop the endpoint class to determine the connection key, creates a connection using `ISqlConnections.NewByKey()`, executes the action with this connection, and closes the connection after execution.
+
+You could remove this connection parameter from the action and create it manually:
+
+```csharp
+public ListResponse<MyRow> List(UserListRequest request,
+    [FromServices] IUserListHandler handler, [FromServices] ISqlConnections sqlConnections)
 {
-    using (var connection = SqlConnections.NewByKey("Northwind")) 
+    using (var connection = sqlConnections.NewByKey("Default"))
     {
-        return new MyRepository().List(connection, request);
+        return handler.List(connection, request);
     }
 }
 ```
 
-Actually this is what ServiceEndpoint does behind the scenes.
+This mirrors what `ServiceEndpoint` does behind the scenes.
 
-Why not use this feature while platform handles this detail automatically? One reason would be when you need to open a custom connection that is not listed in the config file, or open a dynamic one depending on some conditions.
+Why not use this feature when the platform handles this detail automatically? One reason might be when you need to open a custom connection not listed in the config file, or open a dynamic one based on conditions.
 
-We have another method that takes IUnitOfWork (transaction), instead of IDbConnection parameter:
+Another method takes an `IUnitOfWork` (transaction) instead of an `IDbConnection` parameter:
 
-```cs
-public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
-{
-    return new MyRepository().Create(uow, request);
-}
+```csharp
+public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request, 
+    [FromServices] IUserSaveHandler handler)
 ```
 
-Here situation is similar. ServiceEndpoint again creates a connection, but this time starts a transaction on it (IUnitOfWork), calls our action method, and when it returns will commit transaction automatically. Again, if it fails, would rollback it.
+Here, the situation is similar. The `ServiceEndpoint` base class creates a connection and starts a transaction on it (`IUnitOfWork`). It calls our action method, and upon return, commits the transaction automatically. If it fails, the transaction will be rolled back.
 
-Here is the manual version of the same thing:
+Here's the manual version of the same thing:
 
-```cs
-public SaveResponse Create(SaveRequest<MyRow> request)
+```csharp
+public SaveResponse Create(SaveRequest<MyRow> request, 
+    [FromServices] IUserSaveHandler handler,
+    [FromServices] ISqlConnections sqlConnections)
 {
-    using (var connection = SqlConnections.NewByKey("Northwind"))
+    using (var connection = sqlConnections.NewByKey("Default"))
     using (var uow = new UnitOfWork(connection))
     {
-        var result = new MyRepository().Create(uow, request);
+        var result = handler.Create(uow, request);
         uow.Commit();
         return result;
     }
 }
 ```
 
-So, ServiceEndpoint handles something that takes 8 lines in 1 line of code.
-
+Thus, `ServiceEndpoint` simplifies a process that would otherwise take 8 lines into 1 line of code.
 
 ### When To Use IUnitOfWork / IDbConnection
 
-By convention, Serenity action methods that modify some state (CREATE, UPDATE etc.) should run inside a transaction, thus take an IUnitOfWork parameter, and ones that are read only operations (LIST, RETRIEVE) should use IDbConnection.
+By convention, Serenity action methods that modify some state (Create, Update, etc.) should run inside a transaction, thus taking an `IUnitOfWork` parameter. On the other hand, methods that are read-only operations (List, Retrieve, etc.) should use an `IDbConnection`.
 
-If your service method takes a IUnitOfWork parameter, this is a signature that your method might modify some data.
+If your service method takes an `IUnitOfWork` parameter, it suggests that your method might modify some data.
 
 ### About [HttpPost] Attribute
 
-You may have noticed that Create, Update, Delete etc methods has this attribute while List, Retrieve etc. not.
+You may have noticed that Create, Update, and Delete methods have this attribute while List, Retrieve, etc. do not.
 
-This attribute limits Create, Update, Delete actions to HTTP POST only. It doesn't allow them to be called by HTTP GET.
+This attribute restricts Create, Update, and Delete actions to HTTP POST only, disallowing them to be called via HTTP GET. This limitation is because these methods modify some state, such as inserting, updating, or deleting records from the database. They shouldn't be callable unintentionally, and their results shouldn't be cacheable.
 
-This is because, these methods are ones that modify some state, e.g. insert, update, delete some records from DB, so they shouldn't be allowed to be called unintentionally, and their results shouldn't be allowed to be cached.
+> Additionally, there are security implications as actions with the GET method might be prone to certain attacks.
 
-> This also has some security implications. Actions with GET method might be subject to some attacks.
+List and Retrieve methods do not modify anything, so they are allowed to be called with GET requests, such as typing in a browser address bar.
 
-List, Retrieve doesn't modify anything, so they are allowed to be called with GET, e.g. typing in a browser address bar.
-
-Even though, List, Retrieve can be called by GET, Serenity always calls services using HTTP POST when you use its methods, e.g. Q.CallService, and will turn of caching to avoid unexpected results.
-
+Even though List and Retrieve can be called via GET, Serenity always utilizes HTTP POST when invoking services using its methods (e.g., via the `serviceCall` method) and disables caching to prevent unexpected outcomes.
 
 ### ServiceAuthorize Attribute
 
-Our controller class has ServiceAuthorize attribute:
+Our controller class is adorned with the `ServiceAuthorize` attribute:
 
+```csharp
+ServiceAuthorize(typeof(MyRow))
 ```
-ServiceAuthorize(Northwind.PermissionKeys.General)
-```
 
-This attribute is similar to ASP.NET MVC [Authorize] attribute but it checks only that user is logged in, and throws an exception otherwise.
+This attribute resembles ASP.NET Core's [Authorize] attribute, but `Authorize` only verifies if the user is logged in and throws an exception otherwise.
 
-If used with no parameters, e.g. [ServiceAuthorize()] this attribute also checks that user is logged in.
+When used with no parameters (e.g., `[ServiceAuthorize()]`), this attribute also checks that the user is logged in.
 
-When you pass it a permission key string, it will check that user is logged in and also has that permission.
+When provided with a permission key string, it verifies that the user is logged in and possesses that permission.
 
-```
+```csharp
 ServiceAuthorize("SomePermission")
 ```
 
-If user is not granted "SomePermission", this will prevent him from executing any endpoint method.
+If the user is not granted "SomePermission", they will be prevented from executing any endpoint method.
 
-There is also [PageAuthorize] attribute that works similar, but you should prefer [ServiceAuthorize] with service endpoints, because its error handling is more suitable for services.
+In our example, we indirectly obtain the permission key from the `ReadPermission` attribute of the `UserRow` class.
 
-While [PageAuthorize] **redirects** user to the Login page, if user doesn't have the permission, ServiceAuthorize returns a more suitable **NotAuthorized service error**.
+There's also the `[PageAuthorize]` attribute that functions similarly. However, `[ServiceAuthorize]` is preferred with service endpoints because its error handling is more suitable for services.
 
-It's also possible to use [ServiceAuthorize] attribute on actions, instead of controller:
+While `[PageAuthorize]` redirects the user to the Login page if they lack permission, `ServiceAuthorize` returns a more suitable `NotAuthorized` type of service error.
 
-```cs
+It's also possible to use the [ServiceAuthorize] attribute on actions, instead of the controller:
+
+```csharp
 [ServiceAuthorize("SomePermissionThatIsRequiredForCreate")]
-public SaveResponse Create(SaveRequest<MyRow> request)
+public SaveResponse Create(SaveRequest<MyRow> request,
 ```
 
+In this case, the attribute on the action takes precedence over the one on the class.
+
+The `AuthorizeCreate` attribute atop the `Create` method is a specialized subclass of the `ServiceAuthorize` attribute.
+
+```csharp
+[AuthorizeCreate(typeof(MyRow))]
+```
+
+It inspects one of the `[InsertPermission]`, `[ModifyPermission]`, and `[ReadPermission]` attributes on the row class (first one found) to determine the permission key to check. Similar attributes exist for other operations, such as `AuthorizeUpdate` and `AuthorizeDelete`, which check the `UpdatePermission` or `DeletePermission` attributes, respectively.
 
 ### About Request and Response Objects
 
-Except the specially handled IUnitOfWork and IDbConnection parameters, all Serenity service actions takes a single request parameter and returns a single result. 
+Apart from the specially handled `IUnitOfWork` and `IDbConnection` parameters, all Serenity service actions take a single request parameter and return a single result.
 
+```csharp
+public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request,
 ```
-public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
-```
 
-Let's start with the result. If you have some background on ASP.NET MVC, you'd know that controllers can't return arbitrary objects. They must return objects that derive from *ActionResult*.
+Let's start with the result. If you're familiar with ASP.NET MVC, you'd know that controllers can't return arbitrary objects. They must return objects that derive from `ActionResult` or implement `IActionResult`.
 
-But our *SaveResponse* derives from *ServiceResponse* which is just an ordinary object:
+However, our `SaveResponse` derives from `ServiceResponse`, which is just a plain object:
 
-```
-public class SaveResponse : ServiceResponse
-{
-    public object EntityId;
-}
-
+```csharp
 public class ServiceResponse
 {
     public ServiceError Error { get; set; }
 }
+
+public class SaveResponse : ServiceResponse
+{
+    public object EntityId { get; set; }
+    // ...
+}
 ```
 
-How this is possible? Again ServiceEndpoint handles this detail behind the scenes. It transforms our SaveResponse to a special action result that returns JSON data. 
+How is this possible? Once again, `ServiceEndpoint` handles this detail behind the scenes. It transforms our `SaveResponse` to a special action result that returns JSON data.
 
-We don't have to worry about this detail as long as our response object derives from ServiceResponse and is JSON serializable.
+We don't have to worry about this detail as long as our response object derives from `ServiceResponse` and is JSON-serializable.
+### About Request and Response Objects
 
-Again, our request object is also an ordinary class that derives from a basic ServiceRequest:
+Once again, our request object is simply an ordinary class that derives from a basic `ServiceRequest`:
 
-```cs
+```csharp
+public class ServiceRequest
+{
+} 
+
 public class SaveRequest<TEntity> : ServiceRequest, ISaveRequest
 {
     public object EntityId { get; set; }
     public TEntity Entity { get; set; }
 }
 
-public class ServiceRequest
-{
-} 
 ```
 
-ServiceEndpoint takes the HTTP request content which is usually JSON, deserializes it into our *request* parameter, using a special MVC action filter (JsonFilter).
+`ServiceEndpoint` takes the HTTP request content, usually in JSON format, and deserializes it into our *request* parameter using a special action filter (`[JsonRequest]` attribute).
 
-If you want to use some custom actions, your methods should also follow this philosophy, e.g. take just one request (deriving from ServiceRequest) and return one response (deriving from ServiceResponse).
+If you want to define custom actions, your methods should also adhere to this philosophy, accepting just one request (deriving from `ServiceRequest`) and returning one response (deriving from `ServiceResponse`).
 
-Let's add a service method that returns count of all orders greater than some amount:
+Let's define a service method that returns the count of all orders greater than a certain amount:
 
-```
+```csharp
 public class MyOrderCountRequest : ServiceRequest
 {
     public decimal MinAmount { get; set; }
@@ -232,20 +246,16 @@ public class OrderController : ServiceEndpoint
     public MyOrderCountResponse MyOrderCount(IDbConnection connection, 
         MyOrderCountRequest request)
     {
-        var fld = OrderRow.Fields;
-        return new MyOrderCountResponse 
-        {   
-            Count = connection.Count<OrderRow>(fld.TotalAmount >= request.MinAmount);
-        };
+        // ...
     }
 }
 ```
 
-Please follow this pattern and try not to add more parameters to action methods. Serenity follows message based pattern, with only one request object, that can be extended later by adding more properties. 
+Please adhere to this pattern and try not to add more parameters to action methods. Serenity follows the message-based pattern, with a single request object that can be extended later by adding more properties.
 
-Don't do this (which is called RPC - Remote procedure call style):
+Avoid using RPC (Remote Procedure Call) style like this:
 
-```cs
+```csharp
 public class OrderController : ServiceEndpoint
 {
     public decimal MyOrderCount(IDbConnection connection, 
@@ -256,9 +266,9 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-Prefer this (message based services):
+Prefer message-based services like this:
 
-```cs
+```csharp
 public class MyOrderCountRequest : ServiceRequest
 {
     public decimal MinAmount { get; set; }
@@ -275,24 +285,42 @@ public class OrderController : ServiceEndpoint
 }
 ```
 
-This will avoid having to remember parameter order, will make your request objects extensible without breaking backwards compability, and have many more advantages that you may notice later.
+This approach avoids having to remember parameter orders, makes request objects extensible without breaking backward compatibility, and offers many more advantages that you may notice later.
 
+If you don't follow this convention, Serenity won't be able to create client-side service call helpers like the following:
+
+```typescript
+export namespace UserService {
+    export const baseUrl = 'Administration/User';
+    export declare function Create(request: SaveRequest<UserRow>, 
+        onSuccess?: (response: SaveResponse) => void, 
+        opt?: ServiceOptions<any>): PromiseLike<SaveResponse>;
+
+    export declare function List(request: UserListRequest, 
+        onSuccess?: (response: ListResponse<UserRow>) => void, 
+        opt?: ServiceOptions<any>): PromiseLike<ListResponse<UserRow>>;
+```
+
+And when you try to call them by other means, the arguments won't be populated as you expect because service endpoints can only auto-serialize/deserialize single request/response classes that derive from `ServiceRequest`/`ServiceResponse` types. They won't be able to work with primitive values like strings, integers, etc.
 
 ### Why Endpoint Methods Are Almost Empty
 
-We usually delegate actual work to our repository layer:
+We usually delegate the actual work to our handler layer:
 
-```cs
-public ListResponse<MyRow> List(IDbConnection connection, ListRequest request)
+```csharp
+public ListResponse<MyRow> List(IDbConnection connection, ListRequest request,
+    [FromServices] IUserListHandler handler)
 {
-    return new MyRepository().List(connection, request);
+    return handler.List(connection, request);
 }
 ```
 
-Remember that ServiceEndpoint has a direct dependency to ASP.NET MVC. This means that any code you write inside a service endpoint will have a dependency to ASP.NET MVC, and thus web environment.
+Here, `IUserListHandler` is a service dependency injected via ASP.NET's inversion-of-control mechanism (`[FromServices]` attribute). We prefer wrapping our business logic into request/operation handler classes.
 
-You may not be able to reuse any code you wrote here, from let's say a desktop application, or won't be able to isolate this code into a DLL that doesn't have a reference to WEB libraries.
+Remember that `ServiceEndpoint` has a direct dependency on ASP.NET Core. This means that any code you write inside a service endpoint will have a dependency on ASP.NET Core controllers and thus the web environment.
 
-But if you really don't have such a requirement, you can remove repositories all together and write all your code inside the endpoint.
+You may not be able to reuse any code you wrote inside an action from a desktop application, or won't be able to isolate this code into a DLL that doesn't have a reference to web libraries. This is also important for testability concerns.
 
-Some people might argue that entities, repositories, business rules, endpoints etc. should all be in their own isolated assemblies. In theory, and for some scenarios this might be valid, but some (or most) users don't need so much isolation, and may fall into YAGNI (you aren't gonna need it) category.
+But if you don't have such a requirement, even though not recommended, you could remove handlers altogether and write all your code inside the endpoint.
+
+Some people might argue that entities, repositories, business rules, endpoints, etc., should all be in their isolated assemblies. In theory, and for some scenarios, this might be valid, but some (or most) users don't need so much isolation and may fall into the YAGNI (You Aren't Gonna Need It) category.

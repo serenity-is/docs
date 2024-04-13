@@ -51,7 +51,7 @@ All Serenity service endpoints follow the `/Services/Module/Entity` addressing s
 [ConnectionKey(typeof(MyRow))]
 ```
 
-This attribute specifies the connection key in your application configuration file (e.g., `appsettings.json.config`) to be used when creating a connection.
+This attribute specifies the connection key in your application configuration file (e.g., `appsettings.json`) to be used when creating a connection.
 
 Here, the connection key is indirectly specified through the `MyRow` (alias for `UserRow`) class:
 

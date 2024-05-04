@@ -46,6 +46,7 @@
   * [Caching](framework/caching.md)
   * Data Access
     * [Entities \(Rows\)](framework/data-access/entities.md)
+    * [Entity Assignment Tracking](framework/data-access/entity-tracking.md)
     * [Mapping](framework/data-access/mapping.md)
     * [Field Flags](framework/data-access/field-flags.md)
     * [Fluent SQL](framework/data-access/fluent-sql.md)

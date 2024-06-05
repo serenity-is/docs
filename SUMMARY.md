@@ -57,6 +57,8 @@
     * [List Request Handler](services/list_request_handler.md)
   * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
     * [Lookups](framework/dynamic-scripts/lookups.md)
+  * File Upload
+    * [Antivirus Scan](framework/file-upload/av-scan.md)
   * UI
     * Core Functions
       * [Fluent](framework/ui/fluent.md)

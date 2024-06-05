@@ -58,7 +58,7 @@
   * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
     * [Lookups](framework/dynamic-scripts/lookups.md)
   * File Upload
-    * [Antivirus Scan](framework/file-upload/av-scan.md)
+    * [Antivirus Scan](av.md)
   * UI
     * Core Functions
       * [Fluent](framework/ui/fluent.md)

@@ -33,9 +33,9 @@ Serene / StartSharp applications have custom implementations and register them i
 
 ```cs
 services.AddSingleton<IUserRetrieveService, 
-    Administration.UserRetrieveService>();
+    AppServices.UserRetrieveService>();
 services.AddSingleton<IPermissionService,
-    Administration.PermissionService>();
+    AppServices.PermissionService>();
 ```
 
 You may have a look at these sample implementations before trying to write your own.
@@ -153,13 +153,13 @@ This can be useful to call a service that requires special permissions in the co
 
 `ImpersonatingUserAccessor` wraps any class implementing the `IUserAccessor` interface and adds an impersonation ability to that. 
 
-It is not registered by default, so to use this feature, you should register it in the Startup.cs:
+In recent versions, `AppServices.UserAccessor` class already has built-in impersonation support. Please check your `UserAccessor.cs` file to see if already implements the `IImpersonator` interface. 
+
+If not, you should register it by wrapping your UserAccessor implementation in the Startup.cs:
 
 ```cs
 services.AddSingleton<IHttpContextItemsAccessor, HttpContextItemsAccessor>();
-services.AddSingleton<IUserAccessor>(services => 
-    new ImpersonatingUserAccessor(
-        ActivatorUtilities.CreateInstance<Administration.UserAccessor>(services), services.GetRequiredService<IHttpContextItemsAccessor>());
+services.AddSingletonWrapped<IUserAccessor, ImpersonatingUserAccessor, AppServices.UserAccessor>();
 ```
 
 Then anywhere you need temporary impersonation, you should cast the `IUserAccessor` service to `IImpersonator`:
@@ -212,14 +212,13 @@ We don't allow opening in the same browser window, as this would effectively mea
 
 Sometimes it would be better to temporarily (e.g. transiently) grant a user some permissions instead of impersonating an admin. [ITransientGrantor](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ITransientGrantor.md) interface and its default implementation [TransientGrantingPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Web/TransientGrantingPermissionService.md) can do just that.
 
-Again, it is not activated by default and requires registration in `Startup.cs`:
+In recent versions, `AppServices.PermissionService` class already has built-in transient-grant support. Please check your `PermissionService.cs` file to see if already implements the `ITransientGrantor` interface. 
+
+If not, it requires wrapping the registration in `Startup.cs`:
 
 ```cs
 services.AddSingleton<IHttpContextItemsAccessor, HttpContextItemsAccessor>();
-services.AddSingleton<IPermissionService>(services => new   
-    TransientGrantingPermissionService(
-        ActivatorUtilities.CreateInstance<Administration.PermissionService>(services),
-        services.GetRequiredService<IHttpContextItemsAccessor>()));
+services.AddSingletonWrapped<IPermissionService, TransientGrantingPermissionService, AppServices.PermissionService>();
 ```
 
 Then you can use it in a similar way to impersonation:

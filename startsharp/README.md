@@ -8,9 +8,9 @@ It includes everything that Serene has, in addition to extra samples, features, 
 
 Our premium packages that include the `StartSharp` template are available for purchase at [https://serenity.is](https://serenity.is).
 
-Currently, four levels are offered: `Basic`, `Freelancer`, `Business` and `Enterprise`.
+Currently, four levels are offered: `Freelancer`, `Business` and `Enterprise`.
 
-They also contain varying levels of premium support, except the `Basic` level which doesn't include support.
+They also contain varying levels of premium support.
 
 Let's first explain what you get with these premium packages.
 
@@ -18,15 +18,13 @@ Let's first explain what you get with these premium packages.
 
 Serene Template and Serenity itself have a permissive MIT licence which allows usage in open-source, commercial and proprietary applications.
 
-`StartSharp`, which is also based on Serenity, comes with a commercial licence, that allows you to use it with any number of commercial applications/sites (except the `Basic` level which allows only one application)
+`StartSharp`, which is also based on Serenity, comes with a commercial licence, that allows you to use it with any number of commercial applications/sites.
 
 > You are not allowed to use StartSharp content in an open source application as it would mean open sourcing StartSharp itself.
 
 `StartSharp` is licenced per seat/developer. 
 
-`Basic` and `Freelancer` levels come with one license and allow just one developer to use StartSharp. These levels are only suitable for single/freelance developers.
-
-You are allowed to use the `Basic` level licence for only one application/project. If you are planning to write multiple applications, you should consider `Freelancer` or higher levels.   
+`Freelancer` level allow just one developer to use StartSharp. These levels are only suitable for single/freelance developers.
 
 The `Business` level comes with 3 seats/developers licences, while `Enterprise` includes 5 seats/developers licences. 
 
@@ -37,8 +35,6 @@ We also offer volume licencing discounts. Contact us at [sales@serenity.is](mail
 ## Private Support Desk
 
 You get prioritized e-mail support from our core developers, with a guaranteed initial response time of 72 / 48 / 24 hours (excluding weekends and public holidays) based on your support level.
-
-> `Basic` level doesn't contain any support.
 
 This guaranteed response time is for a certain number of issues (as a fair use policy) based on support level:
 
@@ -60,17 +56,17 @@ You may also use these hours for custom development, additional features etc.
 
 It's also possible to buy additional hours, and our premium members get a discount over the average fee.
 
-`Basic` and `Freelancer` don't contain any live credits.
+`Freelancer` don't contain any live credits.
 
 The `Business` level comes with 3 hours of live credits, while `Enterprise` has 5 hours.
 
 ## Access to Full Source Code
 
-All levels except the `Basic` provide access to the `StartSharp` GitHub repository with full source code.
+All levels provide access to the `StartSharp` GitHub repository with full source code.
 
 ## Expiration and Renewals
 
-The packages you buy provide access to the `StartSharp` repository, updates and premium support for 12 months (except _Basic_).
+The packages you buy provide access to the `StartSharp` repository, updates and premium support for 12 months.
 
 Once that period ends, we won't auto-renew your subscription and you'll receive an e-mail from us with a discounted renewal offer (usually around 25%).
 
@@ -112,12 +108,9 @@ The features listed below are only available in StartSharp):
 * [Bootstrap Table & Form](features/bootstrap-table-form.md)
 * [Long Running Action with Progress](features/long-running-action-progress.md)
 
-These features are available to use for every level starting from `Basic`. 
+These features are available to use for every level starting from `Freelancer`. 
 
 `Freelancer`, `Business` and `Enterprise` customers can customize the features by copying the projects as they have access to the source code.
-
-`Basic` customers can only use these features as-is via NuGet package references.
-
 
 ## StartSharp Enterprise Features
 

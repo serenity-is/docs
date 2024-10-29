@@ -26,7 +26,7 @@ Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`
 
 ![Movies Nav Title and Icon](img/movies-nav-title-icon.png)
 
-The Serene template includes Font Awesome, while StartSharp utilizes `Line Awesome`, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page](https://demo.serenity.is/Serenity.Demo.AdvancedSamples/UIElements/Icons).
+The Serene and StartSharp template includes Line Awesome, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page](https://demo.serenity.is/Serenity.Demo.AdvancedSamples/UIElements/Icons).
 
 ## Ordering Navigation Sections
 
@@ -59,3 +59,5 @@ To address these issues, you can start your application without debugging by usi
 However, if you modify CSHTML or CS files, you will need to rerun the application with Ctrl+F5.
 
 Additionally, you might notice a top blue progress bar on your site that appears to keep running as if it's still loading something. This behavior is due to the `Browser Link` feature in Visual Studio. To disable it, locate the button in the Visual Studio toolbar that resembles a refresh icon (next to the play icon with the browser name like Chrome), click the dropdown, and uncheck the "Enable Browser Link" option.
+
+![Visual Studio Browser Link](img/visual-studio-browser-link.png)

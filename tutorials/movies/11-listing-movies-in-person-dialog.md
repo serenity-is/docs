@@ -53,21 +53,20 @@ public class PersonMovieColumns
 }
 ```
 
-Rebuild and define a `PersonMovieGrid` class in the file `PersonMovieGrid.ts`, which should be located next to `PersonGrid.ts`:
+Rebuild and define a `PersonMovieGrid` class in the file `PersonMovieGrid.tsx`, which should be located next to `PersonGrid.tsx`:
 
 ```ts
-import { Decorators, EntityGrid } from "@serenity-is/corelib";
-import { MovieCastRow, MovieCastService } from "../../ServerTypes/MovieDB";
+import { Decorators, EntityGrid, WidgetProps } from "@serenity-is/corelib";
+import { MovieCastRow, MovieCastService, PersonMovieColumns } from "../../ServerTypes/MovieDB";
 
 @Decorators.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid")
-export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
-{
+export class PersonMovieGrid<P = {}> extends EntityGrid<MovieCastRow, P> {
     protected getColumnsKey() { return PersonMovieColumns.columnsKey; }
     protected getRowDefinition() { return MovieCastRow; }
     protected getService() { return MovieCastService.baseUrl; }
 
-    constructor(container: JQuery) {
-        super(container);
+    constructor(props: WidgetProps<P>) {
+        super(props);
     }
 }
 ```
@@ -130,14 +129,13 @@ import { Decorators, EntityGrid } from "@serenity-is/corelib";
 import { MovieCastRow, MovieCastService } from "../../ServerTypes/MovieDB";
 
 @Decorators.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid")
-export class PersonMovieGrid extends EntityGrid<MovieCastRow, any>
-{
+export class PersonMovieGrid<P = {}> extends EntityGrid<MovieCastRow, P> {
     protected getColumnsKey() { return PersonMovieColumns.columnsKey; }
     protected getRowDefinition() { return MovieCastRow; }
     protected getService() { return MovieCastService.baseUrl; }
 
-    constructor(container: JQuery) {
-        super(container);
+    constructor(props: WidgetProps<P>) {
+        super(props);
     }
 
     protected getButtons() {
@@ -209,19 +207,28 @@ The `afterLoadEntity` method is called after an entity or a new entity is loaded
 
 `this.entityId` refers to the identity value of the currently loaded entity. In new record mode, it is null.
 
-> `afterLoadEntity` and `loadEntity` might be called several times during the dialog's lifetime, so avoid creating some child objects in these events; otherwise, you will have multiple instances of created objects. That's why we created the grid in the dialog constructor.
+> `afterLoadEntity` and `loadEntity` might be called several times during the dialog's lifetime, so avoid creating some child objects in these events; otherwise, you will have multiple instances of created objects. That's why we prefer to create additional elements and bind the events in the dialog constructor.
 
 ![Person Dialog with Movies Filtered](img/person-dialog-movies-filtered.png)
 
 ### Fixing Movies Tab Size
 
-You might have noticed that when you switch to the "Movies" tab, the dialog gets a bit shorter in height. This happens because the dialog is set to auto height and grids are 200px by default. When you switch to the "Movies" tab, the form gets hidden, so the dialog adjusts to the movies grid's height.
+You might have noticed that when you switch to the "Movies" tab, the grid is a bit shorter in height. This happens because the grids are 200px by default. When you switch to the "Movies" tab, the grid does not adjust its height.
 
-Edit `site.css`:
+Due to this `PersonMovieGrid` needs to be adjusted in height in the dialog, you need to create a `PersonDialog.css` nedt to the `PersonDialog.tsx`, then import the css file into the dialog. 
+
+Create `PersonDialog.css`:
 
 ```css
 .s-MovieDB-PersonDialog .s-PersonMovieGrid > .grid-container {
-    height: 186px;
+  height: 500px;
 }
+```
+
+Update `PersonDialog.tsx`
+```typescript
+import { Decorators, EntityDialog } from '@serenity-is/corelib';
+import { PersonForm, PersonRow, PersonService } from '../../ServerTypes/MovieDB';
+import "./PersonDialog.css"; // import the css
 ```
 

@@ -83,7 +83,7 @@ In this case, the `SearchType.Equals` option is used, and we set `numericOnly: 1
 
 The beauty of these features is that you don't need to write complex C# or SQL code to make them work. Instead, you simply specify what you want, leaving the "how to do it" part to Serenity. This approach is known as declarative programming, where you describe your intentions rather than the implementation details.
 
-You can also provide users with the ability to choose which field they want to search on. To do this, open *MovieGrid.ts* and make the following modifications (please only insert `getQuickSearchFields` method and the `QuickSearchField` import on top, don't modify other code):
+You can also provide users with the ability to choose which field they want to search on. To do this, open *MovieGrid.tsx* and make the following modifications (please only insert `getQuickSearchFields` method and the `QuickSearchField` import on top, don't modify other code):
 
 ```ts
 import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';

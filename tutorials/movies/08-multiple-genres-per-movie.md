@@ -156,12 +156,12 @@ However, it would be more informative to have genre names instead of genre IDs
 
 ## Creating the `GenreListFormatter` Class
 
-It's time to create a SlickGrid column formatter. To do this, create a file named `GenreListFormatter.ts` next to `MovieGrid.ts`:
+It's time to create a SlickGrid column formatter. To do this, create a file named `GenreListFormatter.tsx` next to `MovieGrid.tsx`:
 
 ```typescript
 import { Decorators, Formatter, Lookup } from "@serenity-is/corelib";
 import { FormatterContext } from "@serenity-is/sleekgrid";
-import { GenreRow } from "@/ServerTypes/MovieDB/GenreRow";
+import { GenreRow } from "../../ServerTypes/MovieDB/GenreRow";
 
 let lookup: Lookup<GenreRow>;
 let promise: Promise<Lookup<GenreRow>>;
@@ -177,9 +177,9 @@ export class GenreListFormatter implements Formatter {
 
         let byId = lookup?.itemById;
         if (byId) {
-            return idList.map(x => {
-                var z = byId[x];
-                return ctx.escape(z == null ? x : z.Name);
+            return idList.map(id => {
+                var genre = byId[id];
+                return ctx.escape(genre == null ? id : genre.Name);
             }).join(", ");
         }
 
@@ -194,7 +194,7 @@ export class GenreListFormatter implements Formatter {
             }
         }).catch(() => promise = null);
 
-        return `<i class="fa fa-spinner"></i>`;
+        return <i class="fa fa-spinner"></i>;
     }
 }
 ```
@@ -229,9 +229,9 @@ If the lookup is already loaded, it contains a dictionary of *Genre* rows in its
 We proceed to map the ID values in our *idList* to their corresponding Genre names using the *Array.map* function in JavaScript. This operation is akin to a LINQ Select statement:
 
 ```typescript
-return idList.map(x => {
-    var z = byId[x];
-    return ctx.escape(z == null ? x : z.Name);
+return idList.map(id => {
+    var genre = byId[id];
+    return ctx.escape(genre == null ? id : genre.Name);
 }).join(", ");
 ```
 
@@ -267,7 +267,7 @@ finally {
 While loading is in progress, we return a spinner icon from the formatter:
 
 ```typescript
-return `<i class="fa fa-spinner"></i>`;
+return <i class="fa fa-spinner"></i>;
 ```
 
 ## Applying GenreListFormatter to the GenreList Column

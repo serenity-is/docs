@@ -235,7 +235,7 @@ Parameter name: lookupType
 
 While it is possible to specify the lookup key implicitly like this: `LookupEditor("MovieDB.Genre")`, it's not recommended because it can lead to typing errors. It's best to let Serenity automatically determine the lookup key as shown in the code above.
 
-After building and launching your project, you'll have a searchable dropdown editor (using Select2.js) for the Genre field in your Movie form.
+After building and launching your project, you'll have a searchable dropdown editor for the Genre field in your Movie form.
 
 ![Movie Form With Genre Editor](img/movie-form-with-genre-editor.png)
 
@@ -250,7 +250,7 @@ Serenity provides a convenient way to define a new genre in-place directly from 
 public int? GenreId { get => fields.GenreId[this]; set => fields.GenreId[this] = value; }
 ```
 
-By adding `InplaceAdd = true` to the `LookupEditor` attribute, you enable the ability to define a new genre directly from the form. Now, you'll see a star/pen icon next to the genre field, which allows you to define a new genre without leaving the movie form.
+By adding `InplaceAdd = true` to the `LookupEditor` attribute, you enable the ability to define a new genre directly from the form. Now, you'll see a star icon next to the genre field, which allows you to define a new genre without leaving the movie form.
 
 ![Defining Genre In-Place](img/inplace-genre-dialog.png)
 
@@ -269,7 +269,7 @@ The lookup editor's lookup key is "MovieDB.Genre," so it searched for a dialog c
 - `MovieDB.GenreDialog`
 - `MovieTutorial.MovieDB.GenreDialog`
 
-Fortunately, there's a "GenreDialog" class defined in the "Modules/Genre/GenreDialog.ts" file, and its registered full name is "MovieTutorial.MovieDB.GenreDialog":
+Fortunately, there's a "GenreDialog" class defined in the "Modules/Genre/GenreDialog.tsx" file, and its registered full name is "MovieTutorial.MovieDB.GenreDialog":
 
 ```typescript
 // ...
@@ -282,7 +282,13 @@ export class GenreDialog extends EntityDialog<GenreRow, any> {
 If the lookup key for "GenreRow" and its dialog class didn't match, you'd get an error in the browser console as soon as you clicked the in-place add button:
 
 ```
-Uncaught MovieDB.GenreDialog dialog class is not found!
+"MovieDB.Genre" dialog class not found! Make sure there is such a dialog type under the project root namespace, and its namespace parts start with capital letters like MyProject.MyModule.MyDialog.
+
+If using ES modules, make sure the dialog type has a decorator like @Decorators.registerClass('MyProject.MyModule.MyDialog') with the full name and "side-effect-import" this dialog class from the current "page.ts/grid.ts/dialog.ts file (import "./path/to/MyDialog.ts").
+
+If you had this error from an editor with the InplaceAdd option, verify that the lookup key and dialog type name match case-sensitively, excluding the Dialog suffix. Specify the DialogType property in the LookupEditor attribute if it is not.
+
+After applying fixes, build and run "node ./tsbuild.js" (or "tsc" if using namespaces) from the project folder.
 ```
 
 To ensure the dialog type matches, either use a compatible lookup key like "*ModuleName*.*RowType*" or specify the dialog type explicitly in the `LookupEditor` attribute:

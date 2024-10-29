@@ -65,7 +65,7 @@ The `[DefaultDB]` attribute indicates that this migration applies to the `Defaul
 
 ## Running Migrations
 
-By default, Serene automatically runs all migrations when the application starts. The code responsible for running migrations can be found in the `Initialization/Startup.cs` and `Initialization/DataMigrations.cs` files.
+By default, Serene automatically runs all migrations when the application starts. The code responsible for running migrations can be found in the `Initialization/Startup.cs` and `Modules/Common/AppServices/DataMigrations.cs` files.
 
 **DataMigrations.cs**:
 ```csharp

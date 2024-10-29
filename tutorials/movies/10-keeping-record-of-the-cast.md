@@ -101,7 +101,7 @@ After starting the application to execute the migration, generate code for the `
 Next, open *Modules/Movie/MovieDBNavigation.cs* and modify the navigation link for the `Person` page as shown below:
 
 ```csharp
-[assembly: NavigationLink(6300, "Movie Database/People", typeof(MyPages.PersonPage), icon: "fa-users")]
+[assembly: NavigationLink(6300, "Movie Database/Person", typeof(MyPages.PersonPage), icon: "fa-users")]
 ```
 
 These changes will help you set up the necessary database tables and generate code for the `Person` table within your application.
@@ -153,7 +153,7 @@ In `PersonColumns.cs`:
 public class PersonColumns
 {
     //...
-    Gender Gender { get; set; }
+    public Gender Gender { get; set; }
 }
 ```
 
@@ -163,7 +163,7 @@ In `PersonForm.cs`:
 public class PersonForm
 {
     //...
-    Gender Gender { get; set; }
+    public Gender Gender { get; set; }
 }
 ```
 
@@ -186,6 +186,8 @@ public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
     //... Remove QuickSearch and NameProperty from FirstName
     [DisplayName("First Name"), Size(50), NotNull]
     public string FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
+    
+    //...
 
     [DisplayName("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
     public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
@@ -204,7 +206,7 @@ By adding the `QuickSearch` attribute to `FullName`, the grid will now default t
 
 However, the dialog may still display the first name in its title. To update this, we need to build and auto-transform to make it show the full name.
 
-You might wonder why this is necessary, and the reason becomes clearer when you examine the `PersonDialog.ts` file:
+You might wonder why this is necessary, and the reason becomes clearer when you examine the `PersonDialog.tsx` file:
 
 ```typescript
 export class PersonDialog extends EntityDialog<PersonRow, any> {
@@ -271,7 +273,7 @@ To begin, let's generate the code for the `MovieCast` table using the `sergen` t
 - Permission Key: **Administration:General**
 - What to Generate: **All**
 
-After generating the code, delete the *MovieCastPage.cs* and *MovieCastPage.ts* files, as well as the navigation entry for *Movie Cast* in *MovieDBNavigation.cs* since there won't be a separate page for editing the cast.
+After generating the code, delete the *MovieCastPage.cs* and *MovieCastPage.tsx* files, as well as the navigation entry for *Movie Cast* in *MovieDBNavigation.cs* since there won't be a separate page for editing the cast.
 
 Don't forget to build the project and auto-transform it after making these changes.
 
@@ -287,20 +289,20 @@ For certain types of master/detail records, such as orders and their details, ed
 
 ## Creating an Editor for Movie Cast List
 
-To create an editor for the Movie Cast list, rename the `MovieCastGrid.ts` file to `MovieCastEditor.ts` and replace its contents with the following TypeScript code:
+To create an editor for the Movie Cast list, rename the `MovieCastGrid.tsx` file to `MovieCastEditor.tsx` and replace its contents with the following TypeScript code:
 
 ```typescript
-import { Decorators } from "@serenity-is/corelib";
-import { GridEditorBase } from "@serenity-is/extensions";
-import { MovieCastColumns, MovieCastRow } from "@/ServerTypes/MovieDB";
+import { Decorators, WidgetProps } from '@serenity-is/corelib';
+import { GridEditorBase } from '@serenity-is/extensions';
+import { MovieCastColumns, MovieCastRow } from '../../ServerTypes/MovieDB';
 
 @Decorators.registerEditor("MovieTutorial.MovieDB.MovieCastEditor")
-export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
+export class MovieCastEditor<P = {}> extends GridEditorBase<MovieCastRow, P> {
     protected getColumnsKey() { return MovieCastColumns.columnsKey }
     protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
-    constructor(container: JQuery) {
-        super(container);
+    constructor(props: WidgetProps<P>) {
+        super(props);
     }
 }
 ```
@@ -339,31 +341,32 @@ After making these changes, build and launch your application. When you open a m
 
 ![Movie Cast Editor Initial](img/movie-cast-editor-initial.png)
 
-The Movie dialog is getting larger, and we have a scrollbar again, so it's time to convert the dialog into a responsive panel. Edit `MovieDialog.ts` and add a `@Decorators.panel()` on top of the dialog class:
-
-```typescript
-@Decorators.panel()
-@Decorators.registerClass('MovieTutorial.MovieDB.MovieDialog')
-export class MovieDialog extends EntityDialog<MovieRow, any> {
-```
-
-Now the Movie dialog works in panel mode by default:
-
-![Movie Dialog in Panel Mode](img/movie-dialog-panel-mode.png)
-
-However, there's more work to be done. The "New Movie Cast" button doesn't function as a dialog needs to be defined for it, the grid columns may not be configured as desired, and the field and button titles could be made more user-friendly.
+There's more work to be done. The "New Movie Cast" button doesn't function as a dialog needs to be defined for it, the grid columns may not be configured as desired, and the field and button titles could be made more user-friendly.
 
 Additionally, you'll need to handle more plumbing tasks, such as loading and saving the cast list on the server side. We'll initially show the more manual approach, and then we'll explore how it can be made easier using a service behavior.
+
 ## Configuring MovieCastEditor to Use MovieCastEditDialog
 
-To configure the `MovieCastEditor` to use the `MovieCastEditDialog`, follow these steps:
+When clicking on `New Movie Cast` button, you can see the error:
 
-1. Rename the `MovieCastDialog.ts` file to `MovieCastEditDialog` and replace its contents with the following TypeScript code:
+```
+"MovieDB.MovieCastEditor" dialog class not found! Make sure there is such a dialog type under the project root namespace, and its namespace parts start with capital letters like MyProject.MyModule.MyDialog.
+
+If using ES modules, make sure the dialog type has a decorator like @Decorators.registerClass('MyProject.MyModule.MyDialog') with the full name and "side-effect-import" this dialog class from the current "page.ts/grid.ts/dialog.ts file (import "./path/to/MyDialog.ts").
+
+If you had this error from an editor with the InplaceAdd option, verify that the lookup key and dialog type name match case-sensitively, excluding the Dialog suffix. Specify the DialogType property in the LookupEditor attribute if it is not.
+
+After applying fixes, build and run "node ./tsbuild.js" (or "tsc" if using namespaces) from the project folder.
+```
+
+It is an error due to referenced type is not included to the esm bundle. The "side-effect-import" is required only when you don't have any direct reference in your typescript code. To configure the `MovieCastEditor` to use the `MovieCastEditDialog`, follow these steps:
+
+1. Rename the `MovieCastDialog.tsx` file to `MovieCastEditDialog.tsx` and replace its contents with the following TypeScript code:
 
 ```typescript
 import { Decorators } from "@serenity-is/corelib";
 import { GridEditorDialog } from "@serenity-is/extensions";
-import { MovieCastForm, MovieCastRow } from "@/ServerTypes/MovieDB";
+import { MovieCastForm, MovieCastRow } from "../../ServerTypes/MovieDB";
 
 @Decorators.registerClass("MovieTutorial.MovieDB.MovieCastEditDialog")
 export class MovieCastEditDialog extends GridEditorDialog<MovieCastRow> {
@@ -377,7 +380,7 @@ export class MovieCastEditDialog extends GridEditorDialog<MovieCastRow> {
 
 In this code, we're using the `GridEditorDialog` class from the Extensions package, which is also used by the `OrderDetailEditDialog`.
 
-2. Open the `MovieCastEditor.ts` file once again and add a `getDialogType` method and override the `getAddButtonCaption` method as shown below:
+2. Open the `MovieCastEditor.tsx` file once again and add a `getDialogType` method and override the `getAddButtonCaption` method as shown below:
 
 ```typescript
 import { Decorators } from "@serenity-is/corelib";
@@ -432,15 +435,23 @@ public string PersonFullName { get => fields.PersonFullName[this]; set => fields
 
 After making these changes, rebuild the solution and launch it. Now, the `MovieCastEditDialog` should provide a better editing experience, but you may still find that it's too wide.
 
-To update the style of the `MovieCastEditDialog`, you can create a new rule in the `wwwroot/Content/site/site.css` file:
+To update the style of the `MovieCastEditDialog`, you can create a new css file `/Modules/MovieDB/MovieCast/MovieCastEditDialog.css`:
 
 ```css
-.s-MovieDB-MovieCastEditDialog > .size {
+.s-MovieDB-MovieCastEditDialog > .modal-dialog {
   width: 450px;
 }
 ```
 
-Serenity automatically assigns CSS classes to dialog elements by prefixing the type name with "s-". You can see this by inspecting the dialog in your browser's developer tools. The `MovieCastEditDialog` has CSS classes such as `s-MovieCastEditDialog`, `s-MovieDB-MovieCastEditDialog` and `s-MovieTutorial-MovieDB-MovieCastEditDialog` along with others like `ui-dialog`.
+Import this new css file in your `MovieCastEditDialog.tsx` file:
+
+```typescript
+//...
+import { MovieCastForm, MovieCastRow } from "../../ServerTypes/MovieDB";
+import "./MovieCastEditDialog.css";
+```
+
+Serenity automatically assigns CSS classes to dialog elements by prefixing the type name with "s-". You can see this by inspecting the dialog in your browser's developer tools. The `MovieCastEditDialog` has CSS classes such as `s-MovieCastEditDialog`, `s-MovieDB-MovieCastEditDialog` and `s-MovieTutorial-MovieDB-MovieCastEditDialog` along with others like `modal`.
 
 The `s-ModuleName-TypeName` CSS class format allows you to style individual dialog types, which is particularly helpful when two modules have types with the same name.
 
@@ -513,7 +524,7 @@ To resolve this issue, we need to set `PersonFullName` ourselves. Edit `MovieCas
 ```typescript
 import { Decorators } from "@serenity-is/corelib";
 import { GridEditorBase } from "@serenity-is/extensions";
-import { MovieCastColumns, MovieCastRow, PersonRow } from "@/ServerTypes/MovieDB";
+import { MovieCastColumns, MovieCastRow, PersonRow } from '../../ServerTypes/MovieDB';
 import { MovieCastEditDialog } from "./MovieCastEditDialog";
 
 @Decorators.registerEditor("MovieTutorial.MovieDB.MovieCastEditor")
@@ -601,7 +612,7 @@ By adding the [NotMapped] attribute, we've specified that this field is not dire
 
 Now, when you click the Save button, you will not encounter an error. However, if you reopen the Matrix entity you just saved, you'll notice that there is no cast entry there. What happened to Neo?
 
-Since this is an unmapped field, the movie Save service simply ignored the CastList property.
+Since this is an unmapped field, the movie save service simply ignored the CastList property.
 
 You may recall that in a previous section, our GenreList was also an unmapped field, but it worked there. This was because we made use of a behavior, LinkedSetRelationBehavior, with that property. Here, we are exploring what would happen if we had no such service behavior.
 

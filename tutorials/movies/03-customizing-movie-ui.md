@@ -123,32 +123,35 @@ Rebuild and run the application. You'll see that the Description and Storyline f
 
 Serenity provides various editor types, and some are automatically selected based on the field data type, while others need to be set explicitly.
 
-## Setting Initial Dialog Size With CSS
+## Setting Caption Size With CSS
 
-To adjust the size of the Movie dialog, you can add CSS rules to the `MovieTutorial.Web/wwwroot/Content/site/site.css` file:
+To adjust the caption size of the Movie dialog, you can create `Modules/MovieDB/Movie/MovieDialog.css` file and add the CSS rules to this file:
 
 ```css
-.s-MovieDB-MovieDialog > .size {
-  width: 650px;
-  height: 550px;
-}
-
 .s-MovieDB-MovieDialog .caption {
   width: 150px;
 }
 ```
 
-These rules apply to elements with the class `s-MovieDB-MovieDialog`, which is automatically generated as "s-" + ModuleName + "-" + ClassName. The first rule specifies the default width and height for the dialog, while the second rule sets the width for field labels.
+Then import the css style file in your `MovieDialog.tsx` file. 
+
+```tsx
+import "./MovieDialog.css";
+```
+
+These rules apply to elements with the class `s-MovieDB-MovieDialog`, which is automatically generated as "s-" + ModuleName + "-" + ClassName. This rule specifies the width for field labels.
 
 Rebuild the application, and when you refresh the browser, you will immediately see the effects of the CSS changes.
 
-![Movie Dialog 550px](img/movie-dialog-550px.png)
+> **Note:** If you need to update the global style for the application, you can use `MovieTutorial.Web/wwwroot/Content/site/site.css` file instead.
 
-Serenity dialogs are responsive by default. Even though we set a specific height and width for the desktop mode, the dialog will adjust its size in response to the device's screen size, eliminating the need for CSS `@media` queries.
+![Movie Dialog Caption 150px](img/movie-dialog-caption-150px.png)
+
+Serenity forms are responsive by default. Even though we set a specific height and width, the form will adjust its size in response to the device's screen size, eliminating the need for CSS `@media` queries.
 
 ## Changing Page Title
 
-The page currently has the title "Movie." Let's update it to "Movies," which is a more natural title. Open the `MovieRow.cs` file again and change the `[DisplayName]` attribute value on top of the row class to "Movies":
+The page currently has the title "Movie." Let's update it to "Movies" which is a more natural title. Open the `MovieRow.cs` file again and change the `[DisplayName]` attribute value on top of the row class to "Movies":
 
 ```cs
 // ...

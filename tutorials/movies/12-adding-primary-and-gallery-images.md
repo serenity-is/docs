@@ -124,13 +124,6 @@ public class MovieForm
 }
 ```
 
-Furthermore, there's a modification in the `PersonDialog` class to make it resemble a panel, similar to the Movie dialog:
-
-```typescript
-@Decorators.panel()
-export class PersonDialog extends EntityDialog<PersonRow, any> {
-```
-
 This results in the following user interface:
 
 ![Movie Images](img/movie-images.png)

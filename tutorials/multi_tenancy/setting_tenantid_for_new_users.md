@@ -1,14 +1,12 @@
 # Setting TenantId For New Users
 
-While logged in with Tenant2, try to create a new user, *User2*.
+While logged in with _Tenant2_ , try to create a new user, *User2*.
 
-You won't get any error but by surprise, you won't see the newly created user in list. What happened to User2?
+You will not encounter any errors; however, the newly created user will not appear in the list.
 
-As we set default value for *TenantId* to *1* in migrations, now *User2* has *1* as *TenantId* and is a member of *Primary Tenant*.
+Since the default value for `TenantId` is set to *1* in the migrations, User2 has a `TenantId` of 1 and is a member of the *Primary Tenant*
 
-We have to set new users *TenantId* to same value with logged in user.
-
-Modify *SetInternalFields* method of *UserSaveHandler* like below:
+To ensure that new users have the same *TenantId* as the currently logged-in user, modify the `SetInternalFields` method of the `UserSaveHandler` as shown below:
 
 ```cs
 protected override void SetInternalFields()
@@ -19,23 +17,20 @@ protected override void SetInternalFields()
     {
         Row.Source = "site";
         Row.IsActive = Row.IsActive ?? 1;
-        if (!Permissions.HasPermission(PermissionKeys.Tenants) ||
-            Row.TenantId == null)
-        {
+        if (!Permissions.HasPermission(PermissionKeys.Tenants) || Row.TenantId == null)
             Row.TenantId = User.GetTenantId();
-        }
     }
 
     if (IsCreate || !Row.Password.IsEmptyOrNull())
     {
         string salt = null;
-        Row.PasswordHash = GenerateHash(password, ref salt);
+        Row.PasswordHash = UserHelper.GenerateHash(password, ref salt);
         Row.PasswordSalt = salt;
     }
 }
 ```
 
-Here, we set *TenantId* to the same value with current user, unless he has tenant administration permission.
+In this modification, we set the `TenantId` to match the current user's `TenantId`, unless the user has tenant administration permissions.
 
-Now try to create a new user *User2b* and this time you'll see him on the list.
+Now, try creating a new user, *User2b*. This time, the user will appear in the list as expected.
 

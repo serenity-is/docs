@@ -1,48 +1,51 @@
 # Filtering Users By TenantId
 
-We first need to load and cache user tenant information in UserDefinition. Then we need to add user tenant information in User Claims.
+We first need to load and cache user tenant information in `UserDefinition`. Then we need to add user tenant information in User Claims.
 
-Open *UserDefinition.cs* under *Multitenancy.Web/Modules/Administration/User/Authentication* and add a *TenantId* property.
+Open `UserDefinition.cs` under `/Modules/Common/AppServices/Models/` and add a `TenantId` property.
 
 ```cs
-namespace MultiTenancy.Administration
-{
-    using Serenity;
-    using System;
+namespace MovieTutorial;
 
-    [Serializable]
-    public class UserDefinition : IUserDefinition
-    {
-        public string Id { get { return UserId.ToInvariant(); } }
-        public string DisplayName { get; set; }
-        public string Email { get; set; }
-        public short IsActive { get; set; }
-        public int UserId { get; set; }
-        public string Username { get; set; }
-        public string PasswordHash { get; set; }
-        public string PasswordSalt { get; set; }
-        public string Source { get; set; }
-        public DateTime? UpdateDate { get; set; }
-        public DateTime? LastDirectoryUpdate { get; set; }
-        public int TenantId { get; set; }
-    }
+[Serializable]
+public class UserDefinition : IUserDefinition, IHasPassword
+{
+    public string Id { get { return UserId.ToInvariant(); } }
+    public string DisplayName { get; set; }
+    public string Email { get; set; }
+    public string UserImage { get; set; }
+    public short IsActive { get; set; }
+    public int UserId { get; set; }
+    public string Username { get; set; }
+    public string PasswordHash { get; set; }
+    public string PasswordSalt { get; set; }
+    public string Source { get; set; }
+    public DateTime? UpdateDate { get; set; }
+    public DateTime? LastDirectoryUpdate { get; set; }
+    public bool HasPassword => PasswordSalt != "unassigned";
+    public int TenantId { get; set; }
 }
 ```
 
-This is the class that is returns when you ask for current user through *GetUserDefinition*.
+This class is returned when retrieving the current user via the `GetUserDefinition` method.
 
-We also need to modify the code where this class is loaded. In the same folder, edit *UserRetrieveService.cs* and change *GetFirst* method like below:
+We must also update the code responsible for loading this class. Navigate to the `/Modules/Common/AppServices/` directory, open `UserRetrieveService.cs`, and modify the `ToUserDefinition` method as shown below:
 
 ```cs
-private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
+using MyRow = MovieTutorial.Administration.UserRow;
+
+namespace MovieTutorial.AppServices;
+public class UserRetrieveService(ITwoLevelCache cache, ISqlConnections sqlConnections)
+    : BaseUserRetrieveService<MyRow>(cache, sqlConnections)
 {
-    var user = connection.TrySingle<MyRow>(criteria);
-    if (user != null)
+    protected override UserDefinition ToUserDefinition(MyRow user)
+    {
         return new UserDefinition
         {
             UserId = user.UserId.Value,
             Username = user.Username,
             Email = user.Email,
+            UserImage = user.UserImage,
             DisplayName = user.DisplayName,
             IsActive = user.IsActive.Value,
             Source = user.Source,
@@ -52,87 +55,83 @@ private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
             LastDirectoryUpdate = user.LastDirectoryUpdate,
             TenantId = user.TenantId.Value
         };
-
-    return null;
-}
-
-```
-
-And then add the tenant id claim to the *CreatePrincipal* method.
-
-```cs
-public static ClaimsPrincipal CreatePrincipal(IUserRetrieveService userRetriever, string username, string authType)
-{
-    if (userRetriever is null)
-        throw new ArgumentNullException(nameof(userRetriever));
-
-    if (username is null)
-        throw new ArgumentNullException(nameof(username));
-
-    var user = (UserDefinition)userRetriever.ByUsername(username);
-    if (user == null)
-        throw new ArgumentOutOfRangeException(nameof(username));
-
-    if (authType == null)
-        throw new ArgumentNullException(nameof(authType));
-
-    var identity = new GenericIdentity(username, authType);
-    identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.Id));
-    identity.AddClaim(new Claim("TenantId", user.TenantId.ToInvariant())); // add tenant id claim
-
-    return new ClaimsPrincipal(identity);
+    }
 }
 ```
 
-To access the tenant id claim, we can create an extension method for ClaimsPrincipal class like this:
+Next, we need to add the tenant ID claim to the user.
+
+Create a new class `TenantUserClaimCreator` in the `/Modules/Common/AppServices/` folder.
 
 ```cs
-using System;
-using System.Linq;
 using System.Security.Claims;
 
-namespace MultiTenancy
+namespace MovieTutorial.AppServices;
+
+public class TenantUserClaimCreator(IUserRetrieveService userRetriever) : DefaultUserClaimCreator(userRetriever)
 {
-    public static class ClaimsPrincipalExtensions
+    protected override void AddClaims(ClaimsIdentity identity, IUserDefinition userDefinition)
     {
-        public static int GetTenantId(this ClaimsPrincipal user)
-        {
-            if(user is null)
-                throw new ArgumentNullException(nameof(user));
-
-            var tenantClaim = user.Claims.FirstOrDefault(x => x.Type == "TenantId");
-            if (tenantClaim is null)
-                throw new NullReferenceException("TenantId claim not found");
-
-            return int.Parse(tenantClaim.Value);
-        }
+        base.AddClaims(identity, userDefinition);
+        identity.AddClaim(new Claim("TenantId", (userDefinition as UserDefinition).TenantId.ToString()));
     }
 }
 ```
 
-Now, it's time to filter listed users by *TenantId*. Open *UserListHandler.cs*, locate *UserListHandler* class and modify it like this:
+Register this class in `Startup.cs` file.
 
 ```cs
- public class UserListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IUserListHandler
-    {
-        public UserListHandler(IRequestContext context)
-             : base(context)
-        {
-        }
-
-        protected override void ApplyFilters(SqlQuery query)
-        {
-            base.ApplyFilters(query);
-
-            if (Permissions.HasPermission(PermissionKeys.Tenants))
-                return;
-
-            query.Where(MyRow.Fields.TenantId == User.GetTenantId());
-        }
-        //...
-    }
+//...
+services.AddSingleton<IUserPasswordValidator, AppServices.UserPasswordValidator>();
+services.AddSingleton<IUserClaimCreator, AppServices.TenantUserClaimCreator>();
+services.AddUserProvider<AppServices.UserAccessor, AppServices.UserRetrieveService>();
+//...
 ```
 
-Here, we first get tenant id from the logged user claims. Then we filter the users by tenant id. In this case, all users must have `TenantId` value, otherwise an exception will throw.
+To access the tenant ID claim, create an extension method for the `ClaimsPrincipal` class as shown below:
 
-We check if he has tenant administration permission, which only *admin* will have in the end. If not, we filter listed records by *TenantId*.
+```cs
+using System.Security.Claims;
+
+namespace MovieTutorial;
+
+public static class ClaimsPrincipalExtensions
+{
+    public static int? GetTenantId(this ClaimsPrincipal user)
+    {
+        ArgumentNullException.ThrowIfNull(user);
+
+        var tenantClaim = user.Claims.FirstOrDefault(x => x.Type == "TenantId");
+        if (tenantClaim is null)
+            throw new NullReferenceException("TenantId claim not found");
+
+        return int.Parse(tenantClaim.Value);
+    }
+}
+
+```
+Now, it is necessary to filter the listed users by `TenantId`. Navigate to the `/Modules/Administration/User/RequestHandlers/` directory, locate the `UserListHandler.cs` file, and modify it as shown below:
+
+```cs
+public class UserListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IUserListHandler
+{
+    public UserListHandler(IRequestContext context)
+         : base(context)
+    {
+    }
+
+    protected override void ApplyFilters(SqlQuery query)
+    {
+        base.ApplyFilters(query);
+
+        if (Permissions.HasPermission(PermissionKeys.Tenants))
+            return;
+
+        query.Where(MyRow.Fields.TenantId == User.GetTenantId());
+    }
+}
+```
+
+First, retrieve the tenant ID from the logged-in user's claims. Then, apply a filter to the users based on the tenant ID. In this implementation, all users must have a `TenantId` value; otherwise, an exception will be thrown.
+
+We check whether the user has tenant administration permissions, which are typically reserved for admin. If the user does not possess this permission, the listed records are filtered by `TenantId`.

@@ -1,45 +1,39 @@
 # Making Roles Multi-Tenant
 
-So far, we have made users page work in multi-tenant style. Seems like we did too many changes to make it work. But remember that we are trying to turn a system that is not designed to be multi-tenant into such one.
+To date, we have adapted the users page to operate in a multi-tenant fashion. While this required numerous modifications, it is important to recognize that we are transforming a system originally not designed for multi-tenancy into one that accommodates it.
 
-Let's apply similar principles to the Roles table.
+We will apply similar principles to the Roles table.
 
-Again, a user in one tenant shouldn't see or modify roles in other tenants and work in isolation.
+Specifically, a user within one tenant should neither view nor modify roles associated with other tenants, ensuring isolated operation.
 
-We start by adding *TenantId* property to *RoleRow.cs*:
+We begin by adding the `TenantId` property to `RoleRow.cs`:
 
 ```csharp
-namespace MultiTenancy.Administration
+//...
+namespace MovieTutorial.Administration;
+
+//...
+public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow
 {
     //...
-    public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow
+    [Insertable(false), Updatable(false)]
+    public int? TenantId { get => Fields.TenantId[this]; set => Fields.TenantId[this] = value; }
+
+    public class RowFields : RowFieldsBase
     {
-        [Insertable(false), Updatable(false)]
-        public int? TenantId
-        {
-            get => Fields.TenantId[this];
-            set => Fields.TenantId[this] = value;
-        }
-        
         //...
-        
-        public class RowFields : RowFieldsBase
-        {
-            //...
-            public Int32Field TenantId;
-            //...
-        }
+        public Int32Field TenantId;
     }
 }
 ```
 
-Then we'll do several changes in *RequestsHandlers*:
+Next, we will make several changes to the *RequestsHandlers*:
 
 ```csharp
-public class RoleSaveHandler :  SaveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
+//...
+public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
 {
     //...
-    
     protected override void SetInternalFields()
     {
         base.SetInternalFields();
@@ -62,10 +56,10 @@ public class RoleSaveHandler :  SaveRequestHandler<MyRow, MyRequest, MyResponse>
 ```
 
 ```csharp
+//...
 public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
 {
     //...
-    
     protected override void ValidateRequest()
     {
         base.ValidateRequest();
@@ -77,10 +71,10 @@ public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyRespon
 ```
 
 ```csharp
+//...
 public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
 {
     //...
-
     private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
     protected override void PrepareQuery(SqlQuery query)
     {
@@ -93,10 +87,10 @@ public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyRe
 ```
 
 ```csharp
+//...
 public class RoleListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IRoleListHandler
 {
     //...
-
     private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
     protected override void ApplyFilters(SqlQuery query)
     {

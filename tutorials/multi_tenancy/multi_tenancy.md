@@ -1,6 +1,6 @@
 # MultiTenancy
 
-In this tutorial, we are going to turn Movie Tutorial into a multi tenant application.
+In this tutorial, we are going to turn Movie Tutorial into a multi-tenant application.
 
 According to Wikipedia, multi-tenant software is defined as follows:
 

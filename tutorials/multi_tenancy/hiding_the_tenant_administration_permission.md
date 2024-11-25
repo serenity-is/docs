@@ -1,58 +1,64 @@
 # Hiding the Tenant Administration Permission
 
-We now have one little problem. User *tenant2* has permission *Administration:Security* so he can access user and role permission dialogs. Thus, he can grant himself *Administration:Tenants* permission using the permission UI.
+There is a security risk where user _tenant2_ possesses the *Administration:Security* permission, granting access to user and role permission dialogs. Consequently, _tenant2_ can assign the *Administration:Tenants* permission to their own user account through the permission UI.
 
-![Tenant2 Granting Himself](img/tenant2_granting_tenants.png)
+![ _Tenant2_  Granting Himself](img/tenant2_granting_tenants.png)
 
-Serenity scans your assemblies for attributes like *ReadPermission*, *WritePermission*, *PageAuthorize*, *ServiceAuthorize* etc. and lists these permissions in edit permissions dialog.
+Serenity scans your assemblies for attributes such as *ReadPermission*, *WritePermission*, *PageAuthorize*, and *ServiceAuthorize*, and displays these permissions in the edit permissions dialog. We should begin by removing it from the pre-populated list.
 
-We should first remove it from this pre-populated list.
-
-Find method, *ListPermissionKeys* in *UserPermissionRepository.cs*:
+Modify the `PermissionKeyLister.cs` file as demonstrated below:
 
 ```
-public ListResponse<string> ListPermissionKeys()
+using MovieTutorial.Administration;
+
+namespace MovieTutorial.AppServices;
+public class PermissionKeyLister(ITwoLevelCache cache, ITypeSource typeSource)
+    : BasePermissionKeyLister(cache, typeSource)
 {
-    return LocalCache.Get("Administration:PermissionKeys", TimeSpan.Zero, () =>
+    protected override string GetCacheGroupKey()
     {
-        //...
+        return RoleRow.Fields.GenerationKey;
+    }
 
-        result.Remove(Administration.PermissionKeys.Tenants);
-        result.Remove("*");
-        result.Remove("?");
-        
-        //...
+    protected override IEnumerable<string> GetPrivatePermissions()
+    {
+        return [
+            .. base.GetPrivatePermissions(),
+            PermissionKeys.Tenants
+        ];
+    }
+}
 ```
 
-Now, this permission won't be listed in *Edit User Permissions* or *Edit Role Permissions* dialog.
+As a result, this permission will no longer appear in the *Edit User Permissions* or *Edit Role Permissions* dialogs.
 
-But, still, he can grant this permission to himself, by some little hacking through *UserPermissionRepository.Update* or *RolePermissionRepository.Update* methods.
+However, the user could still assign this permission to themselves by manipulating the *UserPermissionRepository.Update* or *RolePermissionRepository.Update* methods.
 
-We should add some checks to prevent this:
+To mitigate this, we should implement additional checks:
+
 
 ```cs
-public class UserPermissionRepository
+public class UserPermissionRepository : BaseRepository
 {
-    public ITypeSource TypeSource { get; }
-    public ISqlConnections SqlConnections { get; }
+    private readonly IPermissionKeyLister permissionKeyLister;
 
-    public UserPermissionRepository(IRequestContext context, ITypeSource typeSource, ISqlConnections sqlConnections)
-            : base(context)
+    public UserPermissionRepository(IRequestContext context, IPermissionKeyLister permissionKeyLister)
+         : base(context)
     {
-        TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
-        SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+        this.permissionKeyLister = permissionKeyLister ?? throw new ArgumentNullException(nameof(permissionKeyLister));
     }
-    
-    public SaveResponse Update(IUnitOfWork uow, 
-        UserPermissionUpdateRequest request)
+
+    private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
+
+    public SaveResponse Update(IUnitOfWork uow, UserPermissionUpdateRequest request)
     {
         //...
-        var newList = new Dictionary<string, bool>(
-            StringComparer.OrdinalIgnoreCase);
-        foreach (var p in request.Permissions)
-            newList[p.PermissionKey] = p.Grant ?? false;
 
-        var allowedKeys = ListPermissionKeys(this.Cache, this.SqlConnections, this.TypeSource);
+        var newList = new Dictionary<string, bool>(StringComparer.OrdinalIgnoreCase);
+        foreach (var p in request.Permissions)
+            newList[p.PermissionKey] = p.Granted ?? false;
+
+        var allowedKeys = this.permissionKeyLister.ListPermissionKeys(true);
         if (newList.Keys.Any(x => !allowedKeys.Contains(x)))
             throw new AccessViolationException();
         //...
@@ -60,92 +66,100 @@ public class UserPermissionRepository
 ```
 
 ```cs
-//...
-using Serenity.Abstractions;
-//...
-
-public class RolePermissionRepository
+public class RolePermissionRepository : BaseRepository
 {
-    public ITypeSource TypeSource { get; }
-    public ISqlConnections SqlConnections { get; }
+    private readonly IPermissionKeyLister permissionKeyLister;
 
-    public RolePermissionRepository(IRequestContext context, ITypeSource typeSource, ISqlConnections sqlConnections)
-            : base(context)
+    public RolePermissionRepository(IRequestContext context, IPermissionKeyLister permissionKeyLister)
+         : base(context)
     {
-        TypeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));
-        SqlConnections = sqlConnections ?? throw new ArgumentNullException(nameof(sqlConnections));
+        this.permissionKeyLister = permissionKeyLister ?? throw new ArgumentNullException(nameof(permissionKeyLister));
     }
-    
-    public SaveResponse Update(IUnitOfWork uow, 
-        RolePermissionUpdateRequest request)
+
+    private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
+
+    public SaveResponse Update(IUnitOfWork uow, RolePermissionUpdateRequest request)
     {
         //...
-        var newList = new HashSet<string>(
-            request.Permissions.ToList(),
+
+        var newList = new HashSet<string>(request.Permissions.ToList(),
             StringComparer.OrdinalIgnoreCase);
 
-        var allowedKeys = UserPermissionRepository
-            .ListPermissionKeys(this.Cache, this.SqlConnections, this.TypeSource);
+        var allowedKeys = this.permissionKeyLister.ListPermissionKeys(true);
         if (newList.Any(x => !allowedKeys.Contains(x)))
             throw new AccessViolationException();
         //...
 ```
 
-Here we check if any of the new permission keys that are tried to be granted, are not listed in permission dialog. If so, this is probably a hack attempt.
+This implementation verifies whether any new permission keys being granted are absent from the permissions dialog. If such keys are detected, it likely indicates an unauthorized manipulation attempt.
 
-> Actually this check should be the default, even without multi-tenant systems, but usually we trust administrative users. Here, administrators will be only managing their own tenants, so we certainly need this check.
+> This verification should be standard practice even in single-tenant systems, but usually administrative users are typically trusted. However, in this context, where administrators are limited to managing their respective tenants, enforcing this check is essential.
 
-After add this new `ITypeSource` interface to the constructor, we need to update the endpoints as well for the inject `ITypeSource` to the related repositories.
+After adding the new `IPermissionKeyLister` interface to the constructor, it is necessary to update the endpoints to inject the `IPermissionKeyLister` into the relevant repositories.
 
-*RolePermissionEndpoint.cs*
+`RolePermissionEndpoint.cs`:
 
 ```cs
-//...
-using Serenity.Abstractions;
-//...
+using MyRepository = MovieTutorial.Administration.Repositories.RolePermissionRepository;
+using MyRow = MovieTutorial.Administration.RolePermissionRow;
 
-[HttpPost, AuthorizeUpdate(typeof(MyRow))]
-public SaveResponse Update(IUnitOfWork uow, RolePermissionUpdateRequest request,
-    [FromServices] ITypeSource typeSource,
-    [FromServices] ISqlConnections sqlConnections)
+namespace MovieTutorial.Administration.Endpoints;
+[Route("Services/Administration/RolePermission/[action]")]
+[ConnectionKey(typeof(MyRow)), ServiceAuthorize(typeof(MyRow))]
+public class RolePermissionEndpoint : ServiceEndpoint
 {
-    return new MyRepository(Context, typeSource, sqlConnections).Update(uow, request);
-}
+    [HttpPost, AuthorizeUpdate(typeof(MyRow))]
+    public SaveResponse Update(IUnitOfWork uow, RolePermissionUpdateRequest request,
+        [FromServices] IPermissionKeyLister permissionKeyLister)
+    {
+        return new MyRepository(Context, permissionKeyLister).Update(uow, request);
+    }
 
-public RolePermissionListResponse List(IDbConnection connection, RolePermissionListRequest request,
-    [FromServices] ITypeSource typeSource,
-    [FromServices] ISqlConnections sqlConnections)
-{
-    return new MyRepository(Context, typeSource, sqlConnections).List(connection, request);
+    public RolePermissionListResponse List(IDbConnection connection, RolePermissionListRequest request,
+        [FromServices] IPermissionKeyLister permissionKeyLister)
+    {
+        return new MyRepository(Context, permissionKeyLister).List(connection, request);
+    }
 }
 ```
 
-*UserPermissionEndpoint.cs*
+`UserPermissionEndpoint.cs`:
 
 ```cs
-//...
-using Serenity.Abstractions;
-//...
+using MyRepository = MovieTutorial.Administration.Repositories.UserPermissionRepository;
+using MyRow = MovieTutorial.Administration.UserPermissionRow;
 
-[HttpPost, AuthorizeUpdate(typeof(MyRow))]
-public SaveResponse Update(IUnitOfWork uow, UserPermissionUpdateRequest request,
-    [FromServices] ITypeSource typeSource,
-    [FromServices] ISqlConnections sqlConnections)
+namespace MovieTutorial.Administration.Endpoints;
+[Route("Services/Administration/UserPermission/[action]")]
+[ConnectionKey(typeof(MyRow)), ServiceAuthorize(typeof(MyRow))]
+public class UserPermissionEndpoint : ServiceEndpoint
 {
-    return new MyRepository(Context, typeSource, sqlConnections).Update(uow, request);
-}
+    [HttpPost, AuthorizeUpdate(typeof(MyRow))]
+    public SaveResponse Update(IUnitOfWork uow, UserPermissionUpdateRequest request,
+        [FromServices] IPermissionKeyLister permissionKeyLister)
+    {
+        return new MyRepository(Context, permissionKeyLister).Update(uow, request);
+    }
 
-public ListResponse<MyRow> List(IDbConnection connection, UserPermissionListRequest request,
-    [FromServices] ITypeSource typeSource,
-    [FromServices] ISqlConnections sqlConnections)
-{
-    return new MyRepository(Context, typeSource, sqlConnections).List(connection, request);
-}
+    public ListResponse<MyRow> List(IDbConnection connection, UserPermissionListRequest request,
+        [FromServices] IPermissionKeyLister permissionKeyLister)
+    {
+        return new MyRepository(Context, permissionKeyLister).List(connection, request);
+    }
 
-public ListResponse<string> ListRolePermissions(IDbConnection connection, UserPermissionListRequest request,
-    [FromServices] ITypeSource typeSource,
-    [FromServices] ISqlConnections sqlConnections)
-{
-    return new MyRepository(Context, typeSource, sqlConnections).ListRolePermissions(connection, request);
+    public ListResponse<string> ListRolePermissions(IDbConnection connection, UserPermissionListRequest request,
+        [FromServices] IPermissionKeyLister permissionKeyLister)
+    {
+        return new MyRepository(Context, permissionKeyLister).ListRolePermissions(connection, request);
+    }
+
+    public ListResponse<string> ListPermissionKeys(
+        [FromServices] IPermissionKeyLister permissionKeyLister)
+    {
+        return new ListResponse<string>
+        {
+            Entities = permissionKeyLister.ListPermissionKeys(includeRoles: false).ToList()
+        };
+    }
 }
 ```

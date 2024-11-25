@@ -1,23 +1,23 @@
 # Removing Tenant Dropdown From User Form
 
-After you rebuild, and launch, now user page will be like this:
+After rebuilding and launching, the user page will appear as follows:
 
-![Tenant2 Logged In](img/tenant2_filtered.png)
+![ _Tenant2_  Logged In](img/tenant2_filtered.png)
 
-Yes, he can't see admin user anymore, but something is wrong. When you click *tenant2*, nothing will happen and you'll get an error *"Can't load script data: Lookup.Administration.Tenant*" in browser console:
+Although the _tenant2_ user can no longer see the _admin_ user, the previous issue still exists. When clicking on _tenant2_, the error message appears: *"Access denied while trying to load the lookup: Administration.Tenant"*.
 
-This error is not related to our recent filtering at repository level. It can't load this lookup script, because current user has no permission to *Tenants* table. But how did he see it last time (in one case)? 
+This error is unrelated to our recent repository-level filtering. The script fails to load because the current user lacks permission to the *Tenants* table.
 
-He could see it, because we first logged in as *admin* and when we open edit dialog for user, we loaded this lookup script. Browser cached it, so when we logged in with *tenant2* and open edit dialog, it loaded tenants from browser cache. 
+Previously, the _tenant2_ user could open the dialog because the browser had cached the lookup script. When we logged in as _admin_ and loaded the lookup with _admin_ rights, the lookup was cached in the browser. After logging out from _admin_ and logging in with tenant2, it loaded the tenants lookup from the browser cache.
 
-But this time, as we rebuild project, browser tried to load it from server, and we got this error, as *tenant2* doesn't have this permission. It's ok, we don't want him to have this permission, but how to avoid this error?
+After rebuilding the project, the browser reset the cache and attempted to load the script from the server, resulting in the error since _tenant2_ lacks the necessary permissions. This behavior is acceptable since we do not want the _tenant2_ user to have this permission, but we need to avoid this error.
 
-We need to remove *Tenant* field from the user form. But we need that field for *admin* user, so we can't simply delete it from *UserForm.cs*. Thus, we need to do it conditionally.
+To address this, we need to remove the `Tenant` field from the user form. However, since the _admin_ user requires this field, we cannot simply delete it from `UserForm.cs`. Therefore, we need to handle it conditionally.
 
-Build the project, auto transform all and add method below to *UserDialog.ts*:
+Build the project, auto transform all, and add the following method to `UserDialog.ts`:
 
 ```ts
-import { localText, Authorization } from "@serenity-is/corelib";
+import { Authorization } from "@serenity-is/corelib";
 //...
 protected getPropertyItems() {
     var items = super.getPropertyItems();
@@ -27,10 +27,10 @@ protected getPropertyItems() {
 }
 ```
 
-Dialogs gets list of fields it will show in its form by _getPropertyItems_ method, which in turn loads them from server side form definition.
+Dialogs retrieve the list of fields to display in their form via the `getPropertyItems` method, which loads them from the server-side form definition.
 
-Here we exclude TenantId field, if current user doesn't have the tenants permission.
+Here, we exclude the `TenantId` field if the current user does not have the tenants permission.
 
-This doesn't modify the original user form, it just changes list for this dialog instance.
+This approach does not modify the original user form; it only alters the list for this dialog instance.
 
-User _tenant2_ can now open the user dialog.
+Now, the _tenant2_ user can open the user dialog without encountering the error.

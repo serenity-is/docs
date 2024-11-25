@@ -1,25 +1,19 @@
-# Multi Tenancy
+# MultiTenancy
 
-In this tutorial we are going to turn Norhwind into a multi-tenant application.
+In this tutorial, we are going to turn Movie Tutorial into a multi-tenant application.
 
-Here is a definition of multi-tenant software from Wikipedia:
+According to Wikipedia, multi-tenant software is defined as follows:
 
 > Software Multitenancy refers to a software architecture in which a single instance of a software runs on a server and serves multiple tenants. A tenant is a group of users who share a common access with specific privileges to the software instance. With a multitenant architecture, a software application is designed to provide every tenant a dedicated share of the instance including its data, configuration, user management, tenant individual functionality and non-functional properties. Multitenancy contrasts with multi-instance architectures, where separate software instances operate on behalf of different tenants. ---Wikipedia
 
-We'll add a TenantId field to every table, including Users, and let user see and modify only records belonging to her tenant. So, tenants will work in isolation, as if they are working with their own database.
+We will add a `TenantId` field to every table, including the `Users` table, and restrict users to view and modify only the records belonging to their tenant. This ensures that tenants operate in isolation, as if they are working with their own database.
 
-Multi tenant applications has some advantages like reduced cost of management. But they also have some disadvantages. For example, as all tenant data is in a single database, a tenant can't simply take or backup her data alone. Performance is usually reduced as there are more records to handle.
+Multi-tenant applications offer several advantages, such as reduced management costs. However, they also come with disadvantages. For instance, since all tenant data resides in a single database, a tenant cannot easily back up or migrate their data independently. Additionally, performance may be impacted due to the increased volume of records.
 
-With increasing trend of cloud applications, decreased cost of virtualization, and with features like migration, its now easier to setup multi-instance apps. 
+With the growing trend of cloud applications, reduced virtualization costs, and features like migration, setting up multi-instance applications has become more feasible.
 
-I'd personally avoid multi-tenant applications. It's better to have one database per customer in my opinion. 
+While I personally recommend having a separate database for each customer, this tutorial will address the implementation of multitenancy due to user requests. It will also cover some advanced topics in Serenity as an added benefit.
 
-But some users asked about how to implement this feature. This tutorial will help us explain some advanced Serenity topics as a bonus, along with multi tenancy.
+### About the Tutorial Project
 
-### Create a new project named *MultiTenancy*
-
-In Visual Studio click File -> New Project. Make sure you choose *Serene* template. Type *MultiTenancy* as name and click *OK*.
-
-In Solution explorer, you should see a project with name *MultiTenancy.Web*.
-
-We will continue with the Movie Tutorial project.
+Previously, we followed the Movie Tutorial. For implementing multitenancy, we will continue using the Movie Tutorial project.

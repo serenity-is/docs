@@ -1,135 +1,129 @@
 # Using Serenity Service Behaviors
 
-If wanted to extend this multi-tenant system to other tables in Northwind, we would repeat same steps we did with Roles. Though it doesn't look so hard, it's too much of manual work.
+To extend this multi-tenant system to other tables in MovieDB, we would need to repeat the same steps applied to Roles. Although the process may seem straightforward, it involves substantial manual effort.
 
-Serenity provides service behavior system, which allows you to intercept Create, Update, Retrieve, List, Delete handlers and add custom code to them.
+Serenity provides a service behavior system that allows you to intercept Create, Update, Retrieve, List, and Delete handlers, enabling the addition of custom code to them.
 
-Some operations in these handlers, like capture log, unique constraint validation etc. are already implemented as service behaviors.
+Some operations within these handlers, such as logging and unique constraint validation, are already implemented as service behaviors.
 
-Behaviors might be activated for all rows, or based on some rule, like having a specific attribute or interface. For example, CaptureLogBehavior activates for rows with [CaptureLog] attribute.
+Behaviors can be activated for all rows or based on specific criteria, such as possessing a particular attribute or implementing an interface. For example, `CaptureLogBehavior` activates for rows with the `[CaptureLog]` attribute.
 
-We'll first define an interface *IMultiTenantRow* that will trigger our new behavior. Place this class in file *IMultiTenantRow.cs*, next to *TenantRow.cs*:
+First, we will define an interface, `IMultiTenantRow`, that will trigger our new behavior. Place this interface in the `IMultiTenantRow.cs` file, located alongside `TenantRow.cs`:
 
 ```cs
-using Serenity.Data;
+namespace MovieTutorial;
 
-namespace MultiTenancy
+public interface IMultiTenantRow
 {
-    public interface IMultiTenantRow
-    {
-        Int32Field TenantIdField { get; }
-    }
+    Int32Field TenantIdField { get; }
 }
 ```
 
-Than add this behavior in file *MultiTenantBehavior.cs* next to it:
+Then, add this behavior to the `MultiTenantBehavior.cs` file located alongside it:
 
 ```cs
-using MultiTenancy.Administration;
-using Serenity;
-using Serenity.Data;
-using Serenity.Services;
+using MovieTutorial;
 
-namespace MultiTenancy
+namespace MovieTutorial;
+
+public class MultiTenantBehavior : IImplicitBehavior,
+    ISaveBehavior, IDeleteBehavior,
+    IListBehavior, IRetrieveBehavior
 {
-    public class MultiTenantBehavior : IImplicitBehavior,
-        ISaveBehavior, IDeleteBehavior,
-        IListBehavior, IRetrieveBehavior
+    private Int32Field tenantIdField;
+
+    public bool ActivateFor(IRow row)
     {
-        private Int32Field fldTenantId;
+        if (row is not IMultiTenantRow mtRow)
+            return false;
 
-        public bool ActivateFor(IRow row)
+        tenantIdField = mtRow.TenantIdField;
+        return true;
+    }
+
+    public void OnPrepareQuery(IRetrieveRequestHandler handler,
+        SqlQuery query)
+    {
+        if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
+            query.Where(tenantIdField == handler.Context.User.GetTenantId());
+    }
+
+    public void OnPrepareQuery(IListRequestHandler handler,
+        SqlQuery query)
+    {
+        if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
+            query.Where(tenantIdField == handler.Context.User.GetTenantId());
+    }
+
+    public void OnSetInternalFields(ISaveRequestHandler handler)
+    {
+        if (handler.IsCreate)
+            tenantIdField[handler.Row] = handler.Context.User.GetTenantId();
+    }
+
+    public void OnValidateRequest(ISaveRequestHandler handler)
+    {
+        if (handler.IsUpdate)
         {
-            if (row is not IMultiTenantRow mt)
-                return false;
-
-            fldTenantId = mt.TenantIdField;
-            return true;
-        }
-
-        public void OnPrepareQuery(IRetrieveRequestHandler handler,
-            SqlQuery query)
-        {
-            if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
-                query.Where(fldTenantId == handler.Context.User.GetTenantId());
-        }
-
-        public void OnPrepareQuery(IListRequestHandler handler,
-            SqlQuery query)
-        {
-            if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
-                query.Where(fldTenantId == handler.Context.User.GetTenantId());
-        }
-
-        public void OnSetInternalFields(ISaveRequestHandler handler)
-        {
-            if (handler.IsCreate)
-                fldTenantId[handler.Row] = handler.Context.User.GetTenantId();
-        }
-
-        public void OnValidateRequest(ISaveRequestHandler handler)
-        {
-            if (handler.IsUpdate)
-            {
-                if (fldTenantId[handler.Old] != fldTenantId[handler.Row])
-                    handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
-            }
-        }
-
-        public void OnValidateRequest(IDeleteRequestHandler handler)
-        {
-            if (fldTenantId[handler.Row] != handler.Context.User.GetTenantId())
+            if (tenantIdField[handler.Old] != tenantIdField[handler.Row])
                 handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
         }
-
-        public void OnAfterDelete(IDeleteRequestHandler handler) { }
-        public void OnAfterExecuteQuery(IRetrieveRequestHandler handler) { }
-        public void OnAfterExecuteQuery(IListRequestHandler handler) { }
-        public void OnAfterSave(ISaveRequestHandler handler) { }
-        public void OnApplyFilters(IListRequestHandler handler, SqlQuery query) { }
-        public void OnAudit(IDeleteRequestHandler handler) { }
-        public void OnAudit(ISaveRequestHandler handler) { }
-        public void OnBeforeDelete(IDeleteRequestHandler handler) { }
-        public void OnBeforeExecuteQuery(IRetrieveRequestHandler handler) { }
-        public void OnBeforeExecuteQuery(IListRequestHandler handler) { }
-        public void OnBeforeSave(ISaveRequestHandler handler) { }
-        public void OnPrepareQuery(IDeleteRequestHandler handler, SqlQuery query) { }
-        public void OnPrepareQuery(ISaveRequestHandler handler, SqlQuery query) { }
-        public void OnReturn(IDeleteRequestHandler handler) { }
-        public void OnReturn(IRetrieveRequestHandler handler) { }
-        public void OnReturn(IListRequestHandler handler) { }
-        public void OnReturn(ISaveRequestHandler handler) { }
-        public void OnValidateRequest(IRetrieveRequestHandler handler) { }
-        public void OnValidateRequest(IListRequestHandler handler) { }
     }
+
+    public void OnValidateRequest(IDeleteRequestHandler handler)
+    {
+        if (tenantIdField[handler.Row] != handler.Context.User.GetTenantId())
+            handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
+    }
+
+    public void OnAfterDelete(IDeleteRequestHandler handler) { }
+    public void OnAfterExecuteQuery(IRetrieveRequestHandler handler) { }
+    public void OnAfterExecuteQuery(IListRequestHandler handler) { }
+    public void OnAfterSave(ISaveRequestHandler handler) { }
+    public void OnApplyFilters(IListRequestHandler handler, SqlQuery query) { }
+    public void OnAudit(IDeleteRequestHandler handler) { }
+    public void OnAudit(ISaveRequestHandler handler) { }
+    public void OnBeforeDelete(IDeleteRequestHandler handler) { }
+    public void OnBeforeExecuteQuery(IRetrieveRequestHandler handler) { }
+    public void OnBeforeExecuteQuery(IListRequestHandler handler) { }
+    public void OnBeforeSave(ISaveRequestHandler handler) { }
+    public void OnPrepareQuery(IDeleteRequestHandler handler, SqlQuery query) { }
+    public void OnPrepareQuery(ISaveRequestHandler handler, SqlQuery query) { }
+    public void OnReturn(IDeleteRequestHandler handler) { }
+    public void OnReturn(IRetrieveRequestHandler handler) { }
+    public void OnReturn(IListRequestHandler handler) { }
+    public void OnReturn(ISaveRequestHandler handler) { }
+    public void OnValidateRequest(IRetrieveRequestHandler handler) { }
+    public void OnValidateRequest(IListRequestHandler handler) { }
 }
 ```
 
-Behavior classes with IImplicitBehavior interface decide if they should be activated for a specific row type.
+Behavior classes implementing the `IImplicitBehavior` interface determine whether they should be activated for a specific row type.
 
-They do this by implementing *ActivateFor* method, which is called by request handlers.
+Behaviors achieve this by overriding the `ActivateFor` method, which is invoked by request handlers.
 
-In this method, we check if row type implements *IMultiTenantRow* interface. If not it simply returns false.
+Within this method, we verify whether the row type implements the `IMultiTenantRow` interface. If it does not, the method simply returns `false`.
 
-Then we get a private reference to *TenantIdField* to reuse it later in other methods.
+Subsequently, we obtain a private reference to the `TenantIdField` to reuse it in other methods.
 
-*ActivateFor* is only called once per every handler type and row. If this method returns true, behavior instance is cached aggresively for performance reasons, and reused for any request for this row and handler type.
+The `ActivateFor` method is invoked only once per handler type and row. If this method returns `true`, the behavior instance is cached aggressively for performance reasons and reused for any request involving the corresponding row and handler type.
 
-Thus, everything you write in other methods must be thread-safe, as one instance is shared by all requests.
+Therefore, all code implemented in other methods must be thread-safe, as a single instance is shared across all requests. Additionally, consider utilizing `IServiceResolver<MyDependency>` to resolve any additional dependencies.
 
-A behavior, might intercept one or more of *Retrieve*, *List*, *Save*, *Delete* handlers. It does this by implementing *IRetrieveBehavior*, *IListBehavior*, *ISaveBehavior*, or *IDeleteBehavior* interfaces.
+A behavior may intercept one or more of the `Retrieve`, `List`, `Save`, or `Delete` handlers by implementing the corresponding interfaces: `IRetrieveBehavior`, `IListBehavior`, `ISaveBehavior`, or `IDeleteBehavior`.
 
-Here, we need to intercept all of these service calls, so we implement all interfaces.
+In this context, we need to intercept all of these service calls, so we implement all relevant interfaces.
 
-We only fill in methods we are interested in, and leave others empty.
+We only implement the methods that are necessary for our purposes and leave the others empty.
 
-The methods we implement here, corresponds to methods we override in *RoleRepository.cs* in previous section. The code they contain is almost same, except here we need to be more generic, as this behavior will work for any row type implementing *IMultiTenantRow*.
+The methods implemented here correspond to those overridden in `RoleRepository.cs` in the previous section. The code within these methods is nearly identical; however, in this behavior, we ensure it is more generic to accommodate any row type that implements the `IMultiTenantRow` interface.
 
-## Reimplementing RoleRepository With Using the Behavior
+## Reimplementing `RoleRepository` Using the Behavior
 
-Now revert every change we made in *RoleRepository.cs*:
+Now, revert all changes previously made to `RoleRepository.cs`:
 
 ```cs
+//...
 public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
 {
     public RoleSaveHandler(IRequestContext context)
@@ -137,9 +131,13 @@ public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
     {
     }
 
-    //removed methods we override
+    protected override void InvalidateCacheOnCommit()
+    {
+        base.InvalidateCacheOnCommit();
 
-    //...
+        Cache.InvalidateOnCommit(UnitOfWork, UserPermissionRow.Fields);
+        Cache.InvalidateOnCommit(UnitOfWork, RolePermissionRow.Fields);
+    }
 }
 
 public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
@@ -167,22 +165,18 @@ public class RoleListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>,
 }
 ```
 
-And add *IMultiTenantRow* interface to *RoleRow*:
+Next, add the `IMultiTenantRow` interface to `RoleRow`:
 
 ```cs
-namespace MultiTenancy.Administration
+namespace MovieTutorial.Administration;
+
+//...
+public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow, IMultiTenantRow
 {
     //...
-    public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow, IMultiTenantRow
-    {
-        //...
-        public Int32Field TenantIdField
-        {
-            get => Fields.TenantId;
-        }
-        //...
-    }
+    public Int32Field TenantIdField { get => Fields.TenantId; }
+    //...
 }
 ```
 
-You should get the same result with much less code. Declarative programming is almost always better.
+This approach achieves the same results with significantly less code. Declarative programming is generally preferred.

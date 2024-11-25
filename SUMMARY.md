@@ -130,6 +130,7 @@
   * [Serene to StartSharp (Inplace)](startsharp/serene-upgrade-inplace.md)
 
 * Release Notes
+  * [8.7.9 - 2024/11/12](release-notes/8.7.9.md)
   * [8.6.0 - 2024/07/13](release-notes/8.6.0.md)
   * [8.2.1 - 2024/01/20](release-notes/8.2.1.md)
   * [8.1.5 - 2023/12/14](release-notes/8.1.5.md)

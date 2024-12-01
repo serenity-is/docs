@@ -2,27 +2,17 @@
 
 # Class: ResizableAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ResizableAttribute.md#constructor)
-
-### Properties
-
-- [value](ResizableAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new ResizableAttribute()
 
-• **new ResizableAttribute**(`value?`): [`ResizableAttribute`](ResizableAttribute.md)
+> **new ResizableAttribute**(`value`): [`ResizableAttribute`](ResizableAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

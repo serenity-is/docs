@@ -2,27 +2,17 @@
 
 # Class: FlexifyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](FlexifyAttribute.md#constructor)
-
-### Properties
-
-- [value](FlexifyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new FlexifyAttribute()
 
-• **new FlexifyAttribute**(`value?`): [`FlexifyAttribute`](FlexifyAttribute.md)
+> **new FlexifyAttribute**(`value`): [`FlexifyAttribute`](FlexifyAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

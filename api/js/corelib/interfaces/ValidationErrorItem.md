@@ -2,40 +2,32 @@
 
 # Interface: ValidationErrorItem
 
-## Table of contents
-
-### Properties
-
-- [element](ValidationErrorItem.md#element)
-- [message](ValidationErrorItem.md#message)
-- [method](ValidationErrorItem.md#method)
-
 ## Properties
 
 ### element
 
-• **element**: [`ValidatableElement`](ValidatableElement.md)
+> **element**: [`ValidatableElement`](ValidatableElement.md)
 
 #### Defined in
 
-[src/base/validator.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L40)
+[src/base/validator.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L40)
 
-___
+***
 
 ### message
 
-• **message**: `string`
+> **message**: `string`
 
 #### Defined in
 
-[src/base/validator.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L39)
+[src/base/validator.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L39)
 
-___
+***
 
-### method
+### method?
 
-• `Optional` **method**: `string`
+> `optional` **method**: `string`
 
 #### Defined in
 
-[src/base/validator.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.ts#L41)
+[src/base/validator.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L41)

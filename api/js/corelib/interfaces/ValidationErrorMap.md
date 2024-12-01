@@ -4,4 +4,4 @@
 
 ## Indexable
 
-▪ [name: `string`]: `string` \| `boolean`
+ \[`name`: `string`\]: `string` \| `boolean`

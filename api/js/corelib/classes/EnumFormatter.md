@@ -6,39 +6,19 @@
 
 - [`Formatter`](../interfaces/Formatter.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](EnumFormatter.md#constructor)
-
-### Properties
-
-- [props](EnumFormatter.md#props)
-
-### Accessors
-
-- [enumKey](EnumFormatter.md#enumkey)
-
-### Methods
-
-- [format](EnumFormatter.md#format)
-- [format](EnumFormatter.md#format-1)
-- [getName](EnumFormatter.md#getname)
-- [getText](EnumFormatter.md#gettext)
-
 ## Constructors
 
-### constructor
+### new EnumFormatter()
 
-• **new EnumFormatter**(`props?`): [`EnumFormatter`](EnumFormatter.md)
+> **new EnumFormatter**(`props`): [`EnumFormatter`](EnumFormatter.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `props` | `Object` |
-| `props.enumKey?` | `string` |
+##### props
+
+###### props.enumKey
+
+`string`
 
 #### Returns
 
@@ -46,90 +26,91 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L100)
+[src/ui/formatters/formatters.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L99)
 
 ## Properties
 
 ### props
 
-• `Readonly` **props**: `Object` = `{}`
+> `readonly` **props**: `object` = `{}`
 
-#### Type declaration
+#### enumKey?
 
-| Name | Type |
-| :------ | :------ |
-| `enumKey?` | `string` |
+> `optional` **enumKey**: `string`
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L100)
+[src/ui/formatters/formatters.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L99)
 
 ## Accessors
 
 ### enumKey
 
-• `get` **enumKey**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **enumKey**(): `string`
+
+##### Returns
 
 `string`
 
-#### Defined in
+#### Set Signature
 
-[src/ui/formatters/formatters.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L108)
+> **set** **enumKey**(`value`): `void`
 
-• `set` **enumKey**(`value`): `void`
+##### Parameters
 
-#### Parameters
+###### value
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+`string`
 
-#### Returns
+##### Returns
 
 `void`
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L109)
+[src/ui/formatters/formatters.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L116)
 
 ## Methods
 
-### format
+### format()
 
-▸ **format**(`ctx`): `string`
+> **format**(`ctx`): `string` \| `Element`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `FormatterContext`\<`any`\> |
+##### ctx
+
+`FormatterContext`\<`any`\>
 
 #### Returns
 
-`string`
+`string` \| `Element`
 
 #### Implementation of
 
-[Formatter](../interfaces/Formatter.md).[format](../interfaces/Formatter.md#format)
+[`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L104)
+[src/ui/formatters/formatters.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L103)
 
-___
+***
 
-### format
+### format()
 
-▸ **format**(`enumType`, `value`): `string`
+> `static` **format**(`enumType`, `value`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `enumType` | `any` |
-| `value` | `any` |
+##### enumType
+
+`any`
+
+##### value
+
+`any`
 
 #### Returns
 
@@ -137,20 +118,23 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L111)
+[src/ui/formatters/formatters.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L119)
 
-___
+***
 
-### getName
+### getName()
 
-▸ **getName**(`enumType`, `value`): `string`
+> `static` **getName**(`enumType`, `value`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `enumType` | `any` |
-| `value` | `any` |
+##### enumType
+
+`any`
+
+##### value
+
+`any`
 
 #### Returns
 
@@ -158,20 +142,23 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L130)
+[src/ui/formatters/formatters.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L138)
 
-___
+***
 
-### getText
+### getText()
 
-▸ **getText**(`enumKey`, `name`): `string`
+> `static` **getText**(`enumKey`, `name`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `enumKey` | `string` |
-| `name` | `string` |
+##### enumKey
+
+`string`
+
+##### name
+
+`string`
 
 #### Returns
 
@@ -179,4 +166,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L123)
+[src/ui/formatters/formatters.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L131)

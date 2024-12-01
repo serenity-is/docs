@@ -2,115 +2,105 @@
 
 # Interface: ServiceOptions\<TResponse\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TResponse` | extends [`ServiceResponse`](ServiceResponse.md) |
-
-## Hierarchy
+## Extends
 
 - `RequestInit`
 
-  ↳ **`ServiceOptions`**
+## Type Parameters
 
-## Table of contents
-
-### Properties
-
-- [allowRedirect](ServiceOptions.md#allowredirect)
-- [async](ServiceOptions.md#async)
-- [blockUI](ServiceOptions.md#blockui)
-- [headers](ServiceOptions.md#headers)
-- [request](ServiceOptions.md#request)
-- [service](ServiceOptions.md#service)
-- [url](ServiceOptions.md#url)
-
-### Methods
-
-- [onCleanup](ServiceOptions.md#oncleanup)
-- [onError](ServiceOptions.md#onerror)
-- [onSuccess](ServiceOptions.md#onsuccess)
+• **TResponse** *extends* [`ServiceResponse`](ServiceResponse.md)
 
 ## Properties
 
-### allowRedirect
+### allowRedirect?
 
-• `Optional` **allowRedirect**: `boolean`
-
-#### Defined in
-
-[src/base/servicetypes.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L116)
-
-___
-
-### async
-
-• `Optional` **async**: `boolean`
+> `optional` **allowRedirect**: `boolean`
 
 #### Defined in
 
-[src/base/servicetypes.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L117)
+[src/base/servicetypes.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L103)
 
-___
+***
 
-### blockUI
+### async?
 
-• `Optional` **blockUI**: `boolean`
+> `optional` **async**: `boolean`
 
 #### Defined in
 
-[src/base/servicetypes.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L118)
+[src/base/servicetypes.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L104)
 
-___
+***
 
-### headers
+### blockUI?
 
-• `Optional` **headers**: `Record`\<`string`, `string`\>
+> `optional` **blockUI**: `boolean`
+
+#### Defined in
+
+[src/base/servicetypes.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L105)
+
+***
+
+### errorMode?
+
+> `optional` **errorMode**: `"none"` \| `"alert"` \| `"notification"`
+
+#### Defined in
+
+[src/base/servicetypes.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L110)
+
+***
+
+### headers?
+
+> `optional` **headers**: `Record`\<`string`, `string`\>
+
+A Headers object, an object literal, or an array of two-item arrays to set request's headers.
 
 #### Overrides
 
-RequestInit.headers
+`RequestInit.headers`
 
 #### Defined in
 
-[src/base/servicetypes.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L119)
+[src/base/servicetypes.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L106)
 
-___
+***
 
-### request
+### request?
 
-• `Optional` **request**: `any`
-
-#### Defined in
-
-[src/base/servicetypes.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L120)
-
-___
-
-### service
-
-• `Optional` **service**: `string`
+> `optional` **request**: `any`
 
 #### Defined in
 
-[src/base/servicetypes.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L121)
+[src/base/servicetypes.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L107)
 
-___
+***
 
-### url
+### service?
 
-• `Optional` **url**: `string`
+> `optional` **service**: `string`
 
 #### Defined in
 
-[src/base/servicetypes.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L122)
+[src/base/servicetypes.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L108)
+
+***
+
+### url?
+
+> `optional` **url**: `string`
+
+#### Defined in
+
+[src/base/servicetypes.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L109)
 
 ## Methods
 
-### onCleanup
+### onCleanup()?
 
-▸ **onCleanup**(): `void`
+> `optional` **onCleanup**(): `void`
 
 #### Returns
 
@@ -118,22 +108,25 @@ ___
 
 #### Defined in
 
-[src/base/servicetypes.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L123)
+[src/base/servicetypes.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L111)
 
-___
+***
 
-### onError
+### onError()?
 
-▸ **onError**(`response`, `info?`): `boolean` \| `void`
+> `optional` **onError**(`response`, `info`?): `boolean` \| `void`
 
 Should return true if the error is handled (e.g. notification shown). Otherwise the error may be shown twice.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `response` | `TResponse` |
-| `info?` | [`RequestErrorInfo`](RequestErrorInfo.md) |
+##### response
+
+`TResponse`
+
+##### info?
+
+[`RequestErrorInfo`](RequestErrorInfo.md)
 
 #### Returns
 
@@ -141,19 +134,19 @@ Should return true if the error is handled (e.g. notification shown). Otherwise 
 
 #### Defined in
 
-[src/base/servicetypes.ts:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L125)
+[src/base/servicetypes.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L113)
 
-___
+***
 
-### onSuccess
+### onSuccess()?
 
-▸ **onSuccess**(`response`): `void`
+> `optional` **onSuccess**(`response`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `response` | `TResponse` |
+##### response
+
+`TResponse`
 
 #### Returns
 
@@ -161,4 +154,4 @@ ___
 
 #### Defined in
 
-[src/base/servicetypes.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L126)
+[src/base/servicetypes.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L114)

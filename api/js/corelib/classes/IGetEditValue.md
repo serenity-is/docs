@@ -2,28 +2,11 @@
 
 # Class: IGetEditValue
 
-## Implemented by
-
-- [`CheckTreeEditor`](CheckTreeEditor.md)
-- [`ComboboxEditor`](ComboboxEditor.md)
-- [`FileUploadEditor`](FileUploadEditor.md)
-- [`MultipleFileUploadEditor`](MultipleFileUploadEditor.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IGetEditValue.md#constructor)
-
-### Methods
-
-- [getEditValue](IGetEditValue.md#geteditvalue)
-
 ## Constructors
 
-### constructor
+### new IGetEditValue()
 
-• **new IGetEditValue**(): [`IGetEditValue`](IGetEditValue.md)
+> **new IGetEditValue**(): [`IGetEditValue`](IGetEditValue.md)
 
 #### Returns
 
@@ -31,16 +14,19 @@
 
 ## Methods
 
-### getEditValue
+### getEditValue()
 
-▸ **getEditValue**(`property`, `target`): `void`
+> **getEditValue**(`property`, `target`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `property` | [`PropertyItem`](../interfaces/PropertyItem.md) |
-| `target` | `any` |
+##### property
+
+[`PropertyItem`](../interfaces/PropertyItem.md)
+
+##### target
+
+`any`
 
 #### Returns
 

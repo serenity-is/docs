@@ -2,51 +2,42 @@
 
 # Interface: PostToServiceOptions
 
-## Table of contents
-
-### Properties
-
-- [request](PostToServiceOptions.md#request)
-- [service](PostToServiceOptions.md#service)
-- [target](PostToServiceOptions.md#target)
-- [url](PostToServiceOptions.md#url)
-
 ## Properties
 
 ### request
 
-• **request**: `any`
+> **request**: `any`
 
 #### Defined in
 
-[src/q/services-compat.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L14)
+[src/q/services-compat.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L14)
 
-___
+***
 
-### service
+### service?
 
-• `Optional` **service**: `string`
-
-#### Defined in
-
-[src/q/services-compat.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L12)
-
-___
-
-### target
-
-• `Optional` **target**: `string`
+> `optional` **service**: `string`
 
 #### Defined in
 
-[src/q/services-compat.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L13)
+[src/q/services-compat.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L12)
 
-___
+***
 
-### url
+### target?
 
-• `Optional` **url**: `string`
+> `optional` **target**: `string`
 
 #### Defined in
 
-[src/q/services-compat.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.ts#L11)
+[src/q/services-compat.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L13)
+
+***
+
+### url?
+
+> `optional` **url**: `string`
+
+#### Defined in
+
+[src/q/services-compat.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L11)

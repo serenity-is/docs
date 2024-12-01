@@ -2,35 +2,11 @@
 
 # Class: IReadOnly
 
-## Implemented by
-
-- [`CheckTreeEditor`](CheckTreeEditor.md)
-- [`ComboboxEditor`](ComboboxEditor.md)
-- [`DataGrid`](DataGrid.md)
-- [`DateEditor`](DateEditor.md)
-- [`DateTimeEditor`](DateTimeEditor.md)
-- [`EntityDialog`](EntityDialog.md)
-- [`FileUploadEditor`](FileUploadEditor.md)
-- [`HtmlContentEditor`](HtmlContentEditor.md)
-- [`MultipleFileUploadEditor`](MultipleFileUploadEditor.md)
-- [`RadioButtonEditor`](RadioButtonEditor.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IReadOnly.md#constructor)
-
-### Methods
-
-- [get\_readOnly](IReadOnly.md#get_readonly)
-- [set\_readOnly](IReadOnly.md#set_readonly)
-
 ## Constructors
 
-### constructor
+### new IReadOnly()
 
-• **new IReadOnly**(): [`IReadOnly`](IReadOnly.md)
+> **new IReadOnly**(): [`IReadOnly`](IReadOnly.md)
 
 #### Returns
 
@@ -38,9 +14,9 @@
 
 ## Methods
 
-### get\_readOnly
+### get\_readOnly()
 
-▸ **get_readOnly**(): `boolean`
+> **get\_readOnly**(): `boolean`
 
 #### Returns
 
@@ -50,17 +26,17 @@
 
 [src/interfaces/ireadonly.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ireadonly.ts#L4)
 
-___
+***
 
-### set\_readOnly
+### set\_readOnly()
 
-▸ **set_readOnly**(`value`): `void`
+> **set\_readOnly**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `boolean` |
+##### value
+
+`boolean`
 
 #### Returns
 

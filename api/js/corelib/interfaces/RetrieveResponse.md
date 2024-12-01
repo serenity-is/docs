@@ -2,45 +2,48 @@
 
 # Interface: RetrieveResponse\<TEntity\>
 
-## Type parameters
-
-| Name |
-| :------ |
-| `TEntity` |
-
-## Hierarchy
+## Extends
 
 - [`ServiceResponse`](ServiceResponse.md)
 
-  ↳ **`RetrieveResponse`**
+## Type Parameters
 
-## Table of contents
-
-### Properties
-
-- [Entity](RetrieveResponse.md#entity)
-- [Error](RetrieveResponse.md#error)
+• **TEntity**
 
 ## Properties
 
-### Entity
+### Entity?
 
-• `Optional` **Entity**: `TEntity`
+> `optional` **Entity**: `TEntity`
 
 #### Defined in
 
-[src/base/servicetypes.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L99)
+[src/base/servicetypes.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L92)
 
-___
+***
 
-### Error
+### Error?
 
-• `Optional` **Error**: [`ServiceError`](ServiceError.md)
+> `optional` **Error**: [`ServiceError`](ServiceError.md)
 
 #### Inherited from
 
-[ServiceResponse](ServiceResponse.md).[Error](ServiceResponse.md#error)
+[`ServiceResponse`](ServiceResponse.md).[`Error`](ServiceResponse.md#error)
 
 #### Defined in
 
 [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
+
+***
+
+### Localizations?
+
+> `optional` **Localizations**: `object`
+
+#### Index Signature
+
+ \[`languageId`: `string`\]: `Partial`\<`TEntity`\>
+
+#### Defined in
+
+[src/base/servicetypes.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L93)

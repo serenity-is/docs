@@ -4,30 +4,15 @@
 
 Interface for number formatting, similar to .NET's NumberFormatInfo
 
-## Hierarchy
+## Extended by
 
-- **`NumberFormat`**
-
-  ↳ [`Locale`](Locale.md)
-
-## Table of contents
-
-### Properties
-
-- [currencySymbol](NumberFormat.md#currencysymbol)
-- [decimalDigits](NumberFormat.md#decimaldigits)
-- [decimalSeparator](NumberFormat.md#decimalseparator)
-- [groupSeparator](NumberFormat.md#groupseparator)
-- [nanSymbol](NumberFormat.md#nansymbol)
-- [negativeSign](NumberFormat.md#negativesign)
-- [percentSymbol](NumberFormat.md#percentsymbol)
-- [positiveSign](NumberFormat.md#positivesign)
+- [`Locale`](Locale.md)
 
 ## Properties
 
-### currencySymbol
+### currencySymbol?
 
-• `Optional` **currencySymbol**: `string`
+> `optional` **currencySymbol**: `string`
 
 Currency symbol
 
@@ -35,11 +20,11 @@ Currency symbol
 
 [src/base/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L20)
 
-___
+***
 
-### decimalDigits
+### decimalDigits?
 
-• `Optional` **decimalDigits**: `number`
+> `optional` **decimalDigits**: `number`
 
 Number of digits after decimal separator
 
@@ -47,11 +32,11 @@ Number of digits after decimal separator
 
 [src/base/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L10)
 
-___
+***
 
 ### decimalSeparator
 
-• **decimalSeparator**: `string`
+> **decimalSeparator**: `string`
 
 Decimal separator
 
@@ -59,11 +44,11 @@ Decimal separator
 
 [src/base/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L6)
 
-___
+***
 
-### groupSeparator
+### groupSeparator?
 
-• `Optional` **groupSeparator**: `string`
+> `optional` **groupSeparator**: `string`
 
 Group separator
 
@@ -71,11 +56,11 @@ Group separator
 
 [src/base/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L8)
 
-___
+***
 
-### nanSymbol
+### nanSymbol?
 
-• `Optional` **nanSymbol**: `string`
+> `optional` **nanSymbol**: `string`
 
 Zero symbol
 
@@ -83,11 +68,11 @@ Zero symbol
 
 [src/base/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L16)
 
-___
+***
 
-### negativeSign
+### negativeSign?
 
-• `Optional` **negativeSign**: `string`
+> `optional` **negativeSign**: `string`
 
 Negative sign
 
@@ -95,11 +80,11 @@ Negative sign
 
 [src/base/formatting.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L14)
 
-___
+***
 
-### percentSymbol
+### percentSymbol?
 
-• `Optional` **percentSymbol**: `string`
+> `optional` **percentSymbol**: `string`
 
 Percentage symbol
 
@@ -107,11 +92,11 @@ Percentage symbol
 
 [src/base/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L18)
 
-___
+***
 
-### positiveSign
+### positiveSign?
 
-• `Optional` **positiveSign**: `string`
+> `optional` **positiveSign**: `string`
 
 Positive sign
 

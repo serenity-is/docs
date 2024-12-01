@@ -2,37 +2,21 @@
 
 # Class: EditorTypeAttributeBase
 
-## Hierarchy
+## Extended by
 
-- **`EditorTypeAttributeBase`**
-
-  ↳ [`EditorTypeAttribute`](EditorTypeAttribute.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](EditorTypeAttributeBase.md#constructor)
-
-### Properties
-
-- [editorType](EditorTypeAttributeBase.md#editortype)
-
-### Methods
-
-- [setParams](EditorTypeAttributeBase.md#setparams)
+- [`EditorTypeAttribute`](EditorTypeAttribute.md)
 
 ## Constructors
 
-### constructor
+### new EditorTypeAttributeBase()
 
-• **new EditorTypeAttributeBase**(`editorType`): [`EditorTypeAttributeBase`](EditorTypeAttributeBase.md)
+> **new EditorTypeAttributeBase**(`editorType`): [`EditorTypeAttributeBase`](EditorTypeAttributeBase.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `editorType` | `string` |
+##### editorType
+
+`string`
 
 #### Returns
 
@@ -46,7 +30,7 @@
 
 ### editorType
 
-• **editorType**: `string`
+> **editorType**: `string`
 
 #### Defined in
 
@@ -54,15 +38,15 @@
 
 ## Methods
 
-### setParams
+### setParams()
 
-▸ **setParams**(`editorParams`): `void`
+> **setParams**(`editorParams`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `editorParams` | `any` |
+##### editorParams
+
+`any`
 
 #### Returns
 

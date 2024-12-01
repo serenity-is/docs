@@ -2,17 +2,11 @@
 
 # Class: HiddenAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](HiddenAttribute.md#constructor)
-
 ## Constructors
 
-### constructor
+### new HiddenAttribute()
 
-• **new HiddenAttribute**(): [`HiddenAttribute`](HiddenAttribute.md)
+> **new HiddenAttribute**(): [`HiddenAttribute`](HiddenAttribute.md)
 
 #### Returns
 

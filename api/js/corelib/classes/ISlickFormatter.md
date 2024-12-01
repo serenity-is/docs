@@ -2,17 +2,11 @@
 
 # Class: ISlickFormatter
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ISlickFormatter.md#constructor)
-
 ## Constructors
 
-### constructor
+### new ISlickFormatter()
 
-• **new ISlickFormatter**(): [`ISlickFormatter`](ISlickFormatter.md)
+> **new ISlickFormatter**(): [`ISlickFormatter`](ISlickFormatter.md)
 
 #### Returns
 

@@ -2,27 +2,17 @@
 
 # Class: CssClassAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](CssClassAttribute.md#constructor)
-
-### Properties
-
-- [cssClass](CssClassAttribute.md#cssclass)
-
 ## Constructors
 
-### constructor
+### new CssClassAttribute()
 
-• **new CssClassAttribute**(`cssClass`): [`CssClassAttribute`](CssClassAttribute.md)
+> **new CssClassAttribute**(`cssClass`): [`CssClassAttribute`](CssClassAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cssClass` | `string` |
+##### cssClass
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### cssClass
 
-• **cssClass**: `string`
+> **cssClass**: `string`
 
 #### Defined in
 

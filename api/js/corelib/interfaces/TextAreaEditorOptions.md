@@ -2,28 +2,21 @@
 
 # Interface: TextAreaEditorOptions
 
-## Table of contents
-
-### Properties
-
-- [cols](TextAreaEditorOptions.md#cols)
-- [rows](TextAreaEditorOptions.md#rows)
-
 ## Properties
 
-### cols
+### cols?
 
-• `Optional` **cols**: `number`
+> `optional` **cols**: `number`
 
 #### Defined in
 
 [src/ui/editors/textareaeditor.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/textareaeditor.ts#L6)
 
-___
+***
 
-### rows
+### rows?
 
-• `Optional` **rows**: `number`
+> `optional` **rows**: `number`
 
 #### Defined in
 

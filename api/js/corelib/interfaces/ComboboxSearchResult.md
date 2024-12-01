@@ -2,34 +2,25 @@
 
 # Interface: ComboboxSearchResult\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name |
-| :------ |
-| `TItem` |
-
-## Table of contents
-
-### Properties
-
-- [items](ComboboxSearchResult.md#items)
-- [more](ComboboxSearchResult.md#more)
+• **TItem**
 
 ## Properties
 
 ### items
 
-• **items**: `TItem`[]
+> **items**: `TItem`[]
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L25)
 
-___
+***
 
 ### more
 
-• **more**: `boolean`
+> **more**: `boolean`
 
 #### Defined in
 

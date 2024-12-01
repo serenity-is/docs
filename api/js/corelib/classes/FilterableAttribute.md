@@ -2,27 +2,17 @@
 
 # Class: FilterableAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](FilterableAttribute.md#constructor)
-
-### Properties
-
-- [value](FilterableAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new FilterableAttribute()
 
-• **new FilterableAttribute**(`value?`): [`FilterableAttribute`](FilterableAttribute.md)
+> **new FilterableAttribute**(`value`): [`FilterableAttribute`](FilterableAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

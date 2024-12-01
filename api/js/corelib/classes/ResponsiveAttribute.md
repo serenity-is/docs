@@ -2,27 +2,17 @@
 
 # Class: ResponsiveAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ResponsiveAttribute.md#constructor)
-
-### Properties
-
-- [value](ResponsiveAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new ResponsiveAttribute()
 
-• **new ResponsiveAttribute**(`value?`): [`ResponsiveAttribute`](ResponsiveAttribute.md)
+> **new ResponsiveAttribute**(`value`): [`ResponsiveAttribute`](ResponsiveAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

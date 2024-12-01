@@ -2,306 +2,302 @@
 
 # Interface: UploaderOptions
 
-## Table of contents
-
-### Properties
-
-- [accept](UploaderOptions.md#accept)
-- [autoClear](UploaderOptions.md#autoclear)
-- [batchHandler](UploaderOptions.md#batchhandler)
-- [batchProgress](UploaderOptions.md#batchprogress)
-- [batchSize](UploaderOptions.md#batchsize)
-- [batchStart](UploaderOptions.md#batchstart)
-- [batchStop](UploaderOptions.md#batchstop)
-- [batchSuccess](UploaderOptions.md#batchsuccess)
-- [changeCallback](UploaderOptions.md#changecallback)
-- [dropZone](UploaderOptions.md#dropzone)
-- [errorHandler](UploaderOptions.md#errorhandler)
-- [ignoreType](UploaderOptions.md#ignoretype)
-- [input](UploaderOptions.md#input)
-- [multiple](UploaderOptions.md#multiple)
-- [name](UploaderOptions.md#name)
-
 ## Properties
 
-### accept
+### accept?
 
-• `Optional` **accept**: `string`
+> `optional` **accept**: `string`
 
 Accept. If not specified, read from the passed input
 
 #### Defined in
 
-[src/base/uploader.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L10)
+[src/base/uploader.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L11)
 
-___
+***
 
-### autoClear
+### allStart()?
 
-• `Optional` **autoClear**: `boolean`
+> `optional` **allStart**: () => `void`
+
+Progress event that is called before first batch start is about to be uploaded
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/base/uploader.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L19)
+
+***
+
+### allStop()?
+
+> `optional` **allStop**: () => `void`
+
+Progress event that is called after last batch is ended uploading or failed
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/base/uploader.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L21)
+
+***
+
+### autoClear?
+
+> `optional` **autoClear**: `boolean`
 
 Auto clear input value after selection, so when same file selected it works. Default is true
 
 #### Defined in
 
-[src/base/uploader.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L12)
+[src/base/uploader.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L13)
 
-___
+***
 
-### batchHandler
+### batchHandler()?
 
-• `Optional` **batchHandler**: (`batch`: [`UploaderBatch`](UploaderBatch.md), `uploader`: [`Uploader`](../classes/Uploader.md)) => `void` \| `Promise`\<`void`\>
+> `optional` **batchHandler**: (`batch`, `uploader`) => `void` \| `Promise`\<`void`\>
 
 Callback to handle a batch. If not specified, a default handler is used.
 
-#### Type declaration
+#### Parameters
 
-▸ (`batch`, `uploader`): `void` \| `Promise`\<`void`\>
+##### batch
 
-##### Parameters
+[`UploaderBatch`](UploaderBatch.md)
 
-| Name | Type |
-| :------ | :------ |
-| `batch` | [`UploaderBatch`](UploaderBatch.md) |
-| `uploader` | [`Uploader`](../classes/Uploader.md) |
+##### uploader
 
-##### Returns
+[`Uploader`](../classes/Uploader.md)
+
+#### Returns
 
 `void` \| `Promise`\<`void`\>
 
 #### Defined in
 
-[src/base/uploader.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L26)
+[src/base/uploader.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L31)
 
-___
+***
 
-### batchProgress
+### batchProgress()?
 
-• `Optional` **batchProgress**: (`data`: \{ `batch`: [`UploaderBatch`](UploaderBatch.md) ; `loaded`: `number` ; `total`: `number`  }) => `void`
+> `optional` **batchProgress**: (`data`) => `void`
 
 Progress event that is called during upload
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+##### data
 
-##### Parameters
+###### data.batch
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Object` |
-| `data.batch` | [`UploaderBatch`](UploaderBatch.md) |
-| `data.loaded` | `number` |
-| `data.total` | `number` |
+[`UploaderBatch`](UploaderBatch.md)
 
-##### Returns
+###### data.loaded
+
+`number`
+
+###### data.total
+
+`number`
+
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/base/uploader.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L24)
+[src/base/uploader.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L29)
 
-___
+***
 
-### batchSize
+### batchSize?
 
-• `Optional` **batchSize**: `number`
+> `optional` **batchSize**: `number`
 
 Only used for multiple, default is 1 to upload multiple files in batches of size 1
 
 #### Defined in
 
-[src/base/uploader.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L14)
+[src/base/uploader.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L15)
 
-___
+***
 
-### batchStart
+### batchStart()?
 
-• `Optional` **batchStart**: (`data`: \{ `batch`: [`UploaderBatch`](UploaderBatch.md)  }) => `void`
+> `optional` **batchStart**: (`data`) => `void`
 
 Progress event that is called when a batch is about to be uploaded
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+##### data
 
-##### Parameters
+###### data.batch
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Object` |
-| `data.batch` | [`UploaderBatch`](UploaderBatch.md) |
+[`UploaderBatch`](UploaderBatch.md)
 
-##### Returns
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/base/uploader.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L18)
+[src/base/uploader.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L23)
 
-___
+***
 
-### batchStop
+### batchStop()?
 
-• `Optional` **batchStop**: (`data`: \{ `batch`: [`UploaderBatch`](UploaderBatch.md)  }) => `void`
+> `optional` **batchStop**: (`data`) => `void`
 
 Progress event that is called when a batch is ended uploading or failed
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+##### data
 
-##### Parameters
+###### data.batch
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Object` |
-| `data.batch` | [`UploaderBatch`](UploaderBatch.md) |
+[`UploaderBatch`](UploaderBatch.md)
 
-##### Returns
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/base/uploader.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L20)
+[src/base/uploader.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L25)
 
-___
+***
 
-### batchSuccess
+### batchSuccess()?
 
-• `Optional` **batchSuccess**: (`data`: [`UploaderSuccessData`](UploaderSuccessData.md)) => `void`
+> `optional` **batchSuccess**: (`data`) => `void`
 
 Called after batch is uploaded successfully
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+##### data
 
-##### Parameters
+[`UploaderSuccessData`](UploaderSuccessData.md)
 
-| Name | Type |
-| :------ | :------ |
-| `data` | [`UploaderSuccessData`](UploaderSuccessData.md) |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/base/uploader.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L22)
+[src/base/uploader.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L27)
 
-___
+***
 
-### changeCallback
+### changeCallback()?
 
-• `Optional` **changeCallback**: (`e`: `Event`) => `void`
+> `optional` **changeCallback**: (`e`) => `void`
 
 Only called when a change/drop event occurs, but files can't be determined
 
-#### Type declaration
+#### Parameters
 
-▸ (`e`): `void`
+##### e
 
-##### Parameters
+`Event`
 
-| Name | Type |
-| :------ | :------ |
-| `e` | `Event` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/base/uploader.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L28)
+[src/base/uploader.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L33)
 
-___
+***
 
-### dropZone
+### dropZone?
 
-• `Optional` **dropZone**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
+> `optional` **dropZone**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
 An optional list of dropzones.
 
 #### Defined in
 
-[src/base/uploader.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L16)
+[src/base/uploader.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L17)
 
-___
+***
 
-### errorHandler
+### errorHandler()?
 
-• `Optional` **errorHandler**: (`data`: [`UploaderErrorData`](UploaderErrorData.md)) => `void`
+> `optional` **errorHandler**: (`data`) => `void`
 
 Error handler, if not specified Uploader.errorHandler is used
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+##### data
 
-##### Parameters
+[`UploaderErrorData`](UploaderErrorData.md)
 
-| Name | Type |
-| :------ | :------ |
-| `data` | [`UploaderErrorData`](UploaderErrorData.md) |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/base/uploader.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L30)
+[src/base/uploader.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L35)
 
-___
+***
 
-### ignoreType
+### ignoreType?
 
-• `Optional` **ignoreType**: `boolean`
+> `optional` **ignoreType**: `boolean`
 
 Ignore file types, e.g. don't check accept property of input or this options
 
 #### Defined in
 
-[src/base/uploader.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L32)
+[src/base/uploader.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L37)
 
-___
+***
 
-### input
+### input?
 
-• `Optional` **input**: `HTMLInputElement`
+> `optional` **input**: `HTMLInputElement`
 
 Target input. If null, dropZone should be specified.
 
 #### Defined in
 
-[src/base/uploader.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L34)
+[src/base/uploader.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L39)
 
-___
+***
 
-### multiple
+### multiple?
 
-• `Optional` **multiple**: `boolean`
+> `optional` **multiple**: `boolean`
 
 Allow multiple files. If not specified is read from the input
 
 #### Defined in
 
-[src/base/uploader.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L36)
+[src/base/uploader.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L41)
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 The field name to use in FormData object. Default is files[]
 
 #### Defined in
 
-[src/base/uploader.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L38)
+[src/base/uploader.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L43)

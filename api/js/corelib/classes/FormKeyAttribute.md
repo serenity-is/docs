@@ -2,27 +2,17 @@
 
 # Class: FormKeyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](FormKeyAttribute.md#constructor)
-
-### Properties
-
-- [value](FormKeyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new FormKeyAttribute()
 
-• **new FormKeyAttribute**(`value`): [`FormKeyAttribute`](FormKeyAttribute.md)
+> **new FormKeyAttribute**(`value`): [`FormKeyAttribute`](FormKeyAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

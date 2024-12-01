@@ -4,442 +4,408 @@
 
 Options that apply to all message dialog types
 
-## Hierarchy
+## Extends
 
 - [`DialogOptions`](DialogOptions.md)
 
-  ↳ **`MessageDialogOptions`**
+## Extended by
 
-  ↳↳ [`ConfirmDialogOptions`](ConfirmDialogOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [autoDispose](MessageDialogOptions.md#autodispose)
-- [autoOpen](MessageDialogOptions.md#autoopen)
-- [backdrop](MessageDialogOptions.md#backdrop)
-- [buttons](MessageDialogOptions.md#buttons)
-- [centered](MessageDialogOptions.md#centered)
-- [closeButton](MessageDialogOptions.md#closebutton)
-- [closeOnEscape](MessageDialogOptions.md#closeonescape)
-- [dialogClass](MessageDialogOptions.md#dialogclass)
-- [element](MessageDialogOptions.md#element)
-- [fade](MessageDialogOptions.md#fade)
-- [fullScreen](MessageDialogOptions.md#fullscreen)
-- [htmlEncode](MessageDialogOptions.md#htmlencode)
-- [modal](MessageDialogOptions.md#modal)
-- [onClose](MessageDialogOptions.md#onclose)
-- [onOpen](MessageDialogOptions.md#onopen)
-- [preWrap](MessageDialogOptions.md#prewrap)
-- [preferBSModal](MessageDialogOptions.md#preferbsmodal)
-- [preferPanel](MessageDialogOptions.md#preferpanel)
-- [providerOptions](MessageDialogOptions.md#provideroptions)
-- [scrollable](MessageDialogOptions.md#scrollable)
-- [size](MessageDialogOptions.md#size)
-- [title](MessageDialogOptions.md#title)
-- [width](MessageDialogOptions.md#width)
+- [`ConfirmDialogOptions`](ConfirmDialogOptions.md)
 
 ## Properties
 
-### autoDispose
+### autoDispose?
 
-• `Optional` **autoDispose**: `boolean`
+> `optional` **autoDispose**: `boolean`
 
 Auto dispose dialog on close, default is true
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[autoDispose](DialogOptions.md#autodispose)
+[`DialogOptions`](DialogOptions.md).[`autoDispose`](DialogOptions.md#autodispose)
 
 #### Defined in
 
-[src/base/dialogs.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L35)
+[src/base/dialogs.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L35)
 
-___
+***
 
-### autoOpen
+### autoOpen?
 
-• `Optional` **autoOpen**: `boolean`
+> `optional` **autoOpen**: `boolean`
 
 True to auto open dialog
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[autoOpen](DialogOptions.md#autoopen)
+[`DialogOptions`](DialogOptions.md).[`autoOpen`](DialogOptions.md#autoopen)
 
 #### Defined in
 
-[src/base/dialogs.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L37)
+[src/base/dialogs.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L37)
 
-___
+***
 
-### backdrop
+### backdrop?
 
-• `Optional` **backdrop**: `boolean` \| ``"static"``
+> `optional` **backdrop**: `boolean` \| `"static"`
 
 Backdrop type, static to make it modal, e.g. can't be closed by clicking outside
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[backdrop](DialogOptions.md#backdrop)
+[`DialogOptions`](DialogOptions.md).[`backdrop`](DialogOptions.md#backdrop)
 
 #### Defined in
 
-[src/base/dialogs.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L39)
+[src/base/dialogs.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L39)
 
-___
+***
 
-### buttons
+### buttons?
 
-• `Optional` **buttons**: [`DialogButton`](DialogButton.md)[]
+> `optional` **buttons**: [`DialogButton`](DialogButton.md)[]
 
 List of buttons to show on the dialog
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[buttons](DialogOptions.md#buttons)
+[`DialogOptions`](DialogOptions.md).[`buttons`](DialogOptions.md#buttons)
 
 #### Defined in
 
-[src/base/dialogs.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L41)
+[src/base/dialogs.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L41)
 
-___
+***
 
-### centered
+### centered?
 
-• `Optional` **centered**: `boolean`
+> `optional` **centered**: `boolean`
 
 Vertically center modal
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[centered](DialogOptions.md#centered)
+[`DialogOptions`](DialogOptions.md).[`centered`](DialogOptions.md#centered)
 
 #### Defined in
 
-[src/base/dialogs.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L43)
+[src/base/dialogs.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L43)
 
-___
+***
 
-### closeButton
+### closeButton?
 
-• `Optional` **closeButton**: `boolean`
+> `optional` **closeButton**: `boolean`
 
 Show close button, default is true
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[closeButton](DialogOptions.md#closebutton)
+[`DialogOptions`](DialogOptions.md).[`closeButton`](DialogOptions.md#closebutton)
 
 #### Defined in
 
-[src/base/dialogs.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L45)
+[src/base/dialogs.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L45)
 
-___
+***
 
-### closeOnEscape
+### closeOnEscape?
 
-• `Optional` **closeOnEscape**: `boolean`
+> `optional` **closeOnEscape**: `boolean`
 
 Close dialog on escape key. Default is true for message dialogs.
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[closeOnEscape](DialogOptions.md#closeonescape)
+[`DialogOptions`](DialogOptions.md).[`closeOnEscape`](DialogOptions.md#closeonescape)
 
 #### Defined in
 
-[src/base/dialogs.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L47)
+[src/base/dialogs.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L47)
 
-___
+***
 
-### dialogClass
+### dialogClass?
 
-• `Optional` **dialogClass**: `string`
+> `optional` **dialogClass**: `string`
 
 CSS class to use for all dialog types. Is added to the top ui-dialog, panel or modal element
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[dialogClass](DialogOptions.md#dialogclass)
+[`DialogOptions`](DialogOptions.md).[`dialogClass`](DialogOptions.md#dialogclass)
 
 #### Defined in
 
-[src/base/dialogs.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L49)
+[src/base/dialogs.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L49)
 
-___
+***
 
-### element
+### element?
 
-• `Optional` **element**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`element`: `HTMLElement`) => `void`
+> `optional` **element**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`element`) => `void`
 
 Dialog content/body element, or callback that will populate the content element
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[element](DialogOptions.md#element)
+[`DialogOptions`](DialogOptions.md).[`element`](DialogOptions.md#element)
 
 #### Defined in
 
-[src/base/dialogs.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L51)
+[src/base/dialogs.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L51)
 
-___
+***
 
-### fade
+### fade?
 
-• `Optional` **fade**: `boolean`
+> `optional` **fade**: `boolean`
 
 Enable / disable animation. Default is false for message dialogs, true for other dialogs
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[fade](DialogOptions.md#fade)
+[`DialogOptions`](DialogOptions.md).[`fade`](DialogOptions.md#fade)
 
 #### Defined in
 
-[src/base/dialogs.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L53)
+[src/base/dialogs.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L53)
 
-___
+***
 
-### fullScreen
+### fullScreen?
 
-• `Optional` **fullScreen**: `boolean` \| ``"sm-down"`` \| ``"md-down"`` \| ``"lg-down"`` \| ``"xl-down"`` \| ``"xxl-down"``
+> `optional` **fullScreen**: `boolean` \| `"sm-down"` \| `"md-down"` \| `"lg-down"` \| `"xl-down"` \| `"xxl-down"`
 
 Sets one of modal-fullscreen{-...-down} classes. Only used for bootstrap modals
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[fullScreen](DialogOptions.md#fullscreen)
+[`DialogOptions`](DialogOptions.md).[`fullScreen`](DialogOptions.md#fullscreen)
 
 #### Defined in
 
-[src/base/dialogs.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L55)
+[src/base/dialogs.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L55)
 
-___
+***
 
-### htmlEncode
+### htmlEncode?
 
-• `Optional` **htmlEncode**: `boolean`
+> `optional` **htmlEncode**: `boolean`
 
 HTML encode the message, default is true
 
 #### Defined in
 
-[src/base/dialogs.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L737)
+[src/base/dialogs.tsx:895](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L895)
 
-___
+***
 
-### modal
+### modal?
 
-• `Optional` **modal**: `boolean`
+> `optional` **modal**: `boolean`
 
 Modal option for jQuery UI dialog compatibility only. Not to be confused with Bootstrap modal.
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[modal](DialogOptions.md#modal)
+[`DialogOptions`](DialogOptions.md).[`modal`](DialogOptions.md#modal)
 
 #### Defined in
 
-[src/base/dialogs.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L57)
+[src/base/dialogs.tsx:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L57)
 
-___
+***
 
-### onClose
+### onClose()?
 
-• `Optional` **onClose**: (`result`: `string`, `e?`: `Event`) => `void`
+> `optional` **onClose**: (`result`, `e`?) => `void`
 
 Event handler that is called when dialog is closed
 
-#### Type declaration
+#### Parameters
 
-▸ (`result`, `e?`): `void`
+##### result
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `result` | `string` |
-| `e?` | `Event` |
+##### e?
 
-##### Returns
+`Event`
+
+#### Returns
 
 `void`
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[onClose](DialogOptions.md#onclose)
+[`DialogOptions`](DialogOptions.md).[`onClose`](DialogOptions.md#onclose)
 
 #### Defined in
 
-[src/base/dialogs.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L61)
+[src/base/dialogs.tsx:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L61)
 
-___
+***
 
-### onOpen
+### onOpen()?
 
-• `Optional` **onOpen**: (`e?`: `Event`) => `void`
+> `optional` **onOpen**: (`e`?) => `void`
 
 Event handler that is called when dialog is opened
 
-#### Type declaration
+#### Parameters
 
-▸ (`e?`): `void`
+##### e?
 
-##### Parameters
+`Event`
 
-| Name | Type |
-| :------ | :------ |
-| `e?` | `Event` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[onOpen](DialogOptions.md#onopen)
+[`DialogOptions`](DialogOptions.md).[`onOpen`](DialogOptions.md#onopen)
 
 #### Defined in
 
-[src/base/dialogs.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L59)
+[src/base/dialogs.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L59)
 
-___
+***
 
-### preWrap
+### preferBSModal?
 
-• `Optional` **preWrap**: `boolean`
-
-Wrap the message in a `<pre>` element, so that line endings are preserved, default is true
-
-#### Defined in
-
-[src/base/dialogs.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L739)
-
-___
-
-### preferBSModal
-
-• `Optional` **preferBSModal**: `boolean`
+> `optional` **preferBSModal**: `boolean`
 
 Prefer Bootstrap modals to jQuery UI dialogs when both are available
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[preferBSModal](DialogOptions.md#preferbsmodal)
+[`DialogOptions`](DialogOptions.md).[`preferBSModal`](DialogOptions.md#preferbsmodal)
 
 #### Defined in
 
-[src/base/dialogs.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L63)
+[src/base/dialogs.tsx:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L63)
 
-___
+***
 
-### preferPanel
+### preferPanel?
 
-• `Optional` **preferPanel**: `boolean`
+> `optional` **preferPanel**: `boolean`
 
 Prefer Panel even when Modal / jQuery UI is available
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[preferPanel](DialogOptions.md#preferpanel)
+[`DialogOptions`](DialogOptions.md).[`preferPanel`](DialogOptions.md#preferpanel)
 
 #### Defined in
 
-[src/base/dialogs.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L65)
+[src/base/dialogs.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L65)
 
-___
+***
 
-### providerOptions
+### preWrap?
 
-• `Optional` **providerOptions**: (`type`: [`DialogType`](../README.md#dialogtype), `opt`: [`DialogOptions`](DialogOptions.md)) => `any`
+> `optional` **preWrap**: `boolean`
+
+Wrap the message in a `<pre>` element, so that line endings are preserved, default is true
+
+#### Defined in
+
+[src/base/dialogs.tsx:897](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L897)
+
+***
+
+### providerOptions()?
+
+> `optional` **providerOptions**: (`type`, `opt`) => `any`
 
 Callback to get options specific to the dialog provider type
 
-#### Type declaration
+#### Parameters
 
-▸ (`type`, `opt`): `any`
+##### type
 
-##### Parameters
+[`DialogProviderType`](../type-aliases/DialogProviderType.md)
 
-| Name | Type |
-| :------ | :------ |
-| `type` | [`DialogType`](../README.md#dialogtype) |
-| `opt` | [`DialogOptions`](DialogOptions.md) |
+##### opt
 
-##### Returns
+[`DialogOptions`](DialogOptions.md)
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[providerOptions](DialogOptions.md#provideroptions)
+[`DialogOptions`](DialogOptions.md).[`providerOptions`](DialogOptions.md#provideroptions)
 
 #### Defined in
 
-[src/base/dialogs.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L67)
+[src/base/dialogs.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L67)
 
-___
+***
 
-### scrollable
+### scrollable?
 
-• `Optional` **scrollable**: `boolean`
+> `optional` **scrollable**: `boolean`
 
 Scrollable, sets content of the modal to scrollable, only for Bootstrap
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[scrollable](DialogOptions.md#scrollable)
+[`DialogOptions`](DialogOptions.md).[`scrollable`](DialogOptions.md#scrollable)
 
 #### Defined in
 
-[src/base/dialogs.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L69)
+[src/base/dialogs.tsx:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L69)
 
-___
+***
 
-### size
+### size?
 
-• `Optional` **size**: ``"sm"`` \| ``"md"`` \| ``"lg"`` \| ``"xl"``
+> `optional` **size**: `"sm"` \| `"md"` \| `"lg"` \| `"xl"`
 
 Size. Default is null for (500px) message dialogs, lg for normal dialogs
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[size](DialogOptions.md#size)
+[`DialogOptions`](DialogOptions.md).[`size`](DialogOptions.md#size)
 
 #### Defined in
 
-[src/base/dialogs.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L71)
+[src/base/dialogs.tsx:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L71)
 
-___
+***
 
-### title
+### title?
 
-• `Optional` **title**: `string`
+> `optional` **title**: `string`
 
 Dialog title
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[title](DialogOptions.md#title)
+[`DialogOptions`](DialogOptions.md).[`title`](DialogOptions.md#title)
 
 #### Defined in
 
-[src/base/dialogs.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L73)
+[src/base/dialogs.tsx:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L73)
 
-___
+***
 
-### width
+### width?
 
-• `Optional` **width**: `number`
+> `optional` **width**: `number`
 
 Only used for jQuery UI dialogs for backwards compatibility
 
 #### Inherited from
 
-[DialogOptions](DialogOptions.md).[width](DialogOptions.md#width)
+[`DialogOptions`](DialogOptions.md).[`width`](DialogOptions.md#width)
 
 #### Defined in
 
-[src/base/dialogs.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L75)
+[src/base/dialogs.tsx:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L75)

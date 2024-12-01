@@ -2,27 +2,11 @@
 
 # Class: IValidateRequired
 
-## Implemented by
-
-- [`FileUploadEditor`](FileUploadEditor.md)
-- [`MultipleFileUploadEditor`](MultipleFileUploadEditor.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IValidateRequired.md#constructor)
-
-### Methods
-
-- [get\_required](IValidateRequired.md#get_required)
-- [set\_required](IValidateRequired.md#set_required)
-
 ## Constructors
 
-### constructor
+### new IValidateRequired()
 
-• **new IValidateRequired**(): [`IValidateRequired`](IValidateRequired.md)
+> **new IValidateRequired**(): [`IValidateRequired`](IValidateRequired.md)
 
 #### Returns
 
@@ -30,9 +14,9 @@
 
 ## Methods
 
-### get\_required
+### get\_required()
 
-▸ **get_required**(): `boolean`
+> **get\_required**(): `boolean`
 
 #### Returns
 
@@ -42,17 +26,17 @@
 
 [src/interfaces/ivalidaterequired.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L4)
 
-___
+***
 
-### set\_required
+### set\_required()
 
-▸ **set_required**(`value`): `void`
+> **set\_required**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `boolean` |
+##### value
+
+`boolean`
 
 #### Returns
 

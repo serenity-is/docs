@@ -2,16 +2,10 @@
 
 # Interface: ServiceRequest
 
-## Hierarchy
+## Extended by
 
-- **`ServiceRequest`**
-
-  ↳ [`SaveRequest`](SaveRequest.md)
-
-  ↳ [`DeleteRequest`](DeleteRequest.md)
-
-  ↳ [`UndeleteRequest`](UndeleteRequest.md)
-
-  ↳ [`ListRequest`](ListRequest.md)
-
-  ↳ [`RetrieveRequest`](RetrieveRequest.md)
+- [`SaveRequest`](SaveRequest.md)
+- [`DeleteRequest`](DeleteRequest.md)
+- [`UndeleteRequest`](UndeleteRequest.md)
+- [`ListRequest`](ListRequest.md)
+- [`RetrieveRequest`](RetrieveRequest.md)

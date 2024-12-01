@@ -2,51 +2,42 @@
 
 # Interface: PersistedGridColumn
 
-## Table of contents
-
-### Properties
-
-- [id](PersistedGridColumn.md#id)
-- [sort](PersistedGridColumn.md#sort)
-- [visible](PersistedGridColumn.md#visible)
-- [width](PersistedGridColumn.md#width)
-
 ## Properties
 
 ### id
 
-• **id**: `string`
+> **id**: `string`
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L35)
+[src/ui/datagrid/datagrid.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L35)
 
-___
+***
 
-### sort
+### sort?
 
-• `Optional` **sort**: `number`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L37)
-
-___
-
-### visible
-
-• `Optional` **visible**: `boolean`
+> `optional` **sort**: `number`
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L38)
+[src/ui/datagrid/datagrid.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L37)
 
-___
+***
 
-### width
+### visible?
 
-• `Optional` **width**: `number`
+> `optional` **visible**: `boolean`
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L36)
+[src/ui/datagrid/datagrid.tsx:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L38)
+
+***
+
+### width?
+
+> `optional` **width**: `number`
+
+#### Defined in
+
+[src/ui/datagrid/datagrid.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L36)

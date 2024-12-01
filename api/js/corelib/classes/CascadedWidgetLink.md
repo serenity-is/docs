@@ -2,44 +2,29 @@
 
 # Class: CascadedWidgetLink\<TParent\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TParent` | extends [`Widget`](Widget.md)\<`any`\> |
-
-## Table of contents
-
-### Constructors
-
-- [constructor](CascadedWidgetLink.md#constructor)
-
-### Methods
-
-- [bind](CascadedWidgetLink.md#bind)
-- [get\_parentID](CascadedWidgetLink.md#get_parentid)
-- [set\_parentID](CascadedWidgetLink.md#set_parentid)
-- [unbind](CascadedWidgetLink.md#unbind)
+• **TParent** *extends* [`Widget`](Widget.md)\<`any`\>
 
 ## Constructors
 
-### constructor
+### new CascadedWidgetLink()
 
-• **new CascadedWidgetLink**\<`TParent`\>(`parentType`, `widget`, `parentChange`): [`CascadedWidgetLink`](CascadedWidgetLink.md)\<`TParent`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TParent` | extends [`Widget`](Widget.md)\<`any`\> |
+> **new CascadedWidgetLink**\<`TParent`\>(`parentType`, `widget`, `parentChange`): [`CascadedWidgetLink`](CascadedWidgetLink.md)\<`TParent`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `parentType` | (...`args`: `any`[]) => `TParent` |
-| `widget` | [`Widget`](Widget.md)\<`any`\> |
-| `parentChange` | (`p1`: `TParent`) => `void` |
+##### parentType
+
+(...`args`) => `TParent`
+
+##### widget
+
+[`Widget`](Widget.md)\<`any`\>
+
+##### parentChange
+
+(`p1`) => `void`
 
 #### Returns
 
@@ -51,9 +36,9 @@
 
 ## Methods
 
-### bind
+### bind()
 
-▸ **bind**(): `TParent`
+> **bind**(): `TParent`
 
 #### Returns
 
@@ -63,11 +48,11 @@
 
 [src/ui/editors/cascadedwidgetlink.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L23)
 
-___
+***
 
-### get\_parentID
+### get\_parentID()
 
-▸ **get_parentID**(): `string`
+> **get\_parentID**(): `string`
 
 #### Returns
 
@@ -77,17 +62,17 @@ ___
 
 [src/ui/editors/cascadedwidgetlink.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L58)
 
-___
+***
 
-### set\_parentID
+### set\_parentID()
 
-▸ **set_parentID**(`value`): `void`
+> **set\_parentID**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -97,11 +82,11 @@ ___
 
 [src/ui/editors/cascadedwidgetlink.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L62)
 
-___
+***
 
-### unbind
+### unbind()
 
-▸ **unbind**(): `TParent`
+> **unbind**(): `TParent`
 
 #### Returns
 

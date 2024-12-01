@@ -2,60 +2,21 @@
 
 # Class: Combobox\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TItem` | `any` |
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Combobox.md#constructor)
-
-### Properties
-
-- [defaults](Combobox.md#defaults)
-
-### Accessors
-
-- [container](Combobox.md#container)
-- [isMultiple](Combobox.md#ismultiple)
-- [type](Combobox.md#type)
-
-### Methods
-
-- [abortInitSelection](Combobox.md#abortinitselection)
-- [abortPendingQuery](Combobox.md#abortpendingquery)
-- [closeDropdown](Combobox.md#closedropdown)
-- [dispose](Combobox.md#dispose)
-- [getSelectedItem](Combobox.md#getselecteditem)
-- [getSelectedItems](Combobox.md#getselecteditems)
-- [getValue](Combobox.md#getvalue)
-- [getValues](Combobox.md#getvalues)
-- [openDropdown](Combobox.md#opendropdown)
-- [setValue](Combobox.md#setvalue)
-- [setValues](Combobox.md#setvalues)
-- [getInstance](Combobox.md#getinstance)
+• **TItem** = `any`
 
 ## Constructors
 
-### constructor
+### new Combobox()
 
-• **new Combobox**\<`TItem`\>(`opt`): [`Combobox`](Combobox.md)\<`TItem`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TItem` | `any` |
+> **new Combobox**\<`TItem`\>(`opt`): [`Combobox`](Combobox.md)\<`TItem`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | [`ComboboxOptions`](../interfaces/ComboboxOptions.md)\<`any`\> |
+##### opt
+
+[`ComboboxOptions`](../interfaces/ComboboxOptions.md)\<`any`\>
 
 #### Returns
 
@@ -69,7 +30,7 @@
 
 ### defaults
 
-▪ `Static` **defaults**: [`ComboboxOptions`](../interfaces/ComboboxOptions.md)\<`any`\>
+> `static` **defaults**: [`ComboboxOptions`](../interfaces/ComboboxOptions.md)\<`any`\>
 
 #### Defined in
 
@@ -79,9 +40,11 @@
 
 ### container
 
-• `get` **container**(): `HTMLElement`
+#### Get Signature
 
-#### Returns
+> **get** **container**(): `HTMLElement`
+
+##### Returns
 
 `HTMLElement`
 
@@ -89,13 +52,15 @@
 
 [src/ui/editors/combobox.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L247)
 
-___
+***
 
 ### isMultiple
 
-• `get` **isMultiple**(): `boolean`
+#### Get Signature
 
-#### Returns
+> **get** **isMultiple**(): `boolean`
+
+##### Returns
 
 `boolean`
 
@@ -103,15 +68,17 @@ ___
 
 [src/ui/editors/combobox.ts:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L263)
 
-___
+***
 
 ### type
 
-• `get` **type**(): ``"select2"``
+#### Get Signature
 
-#### Returns
+> **get** **type**(): `"select2"`
 
-``"select2"``
+##### Returns
+
+`"select2"`
 
 #### Defined in
 
@@ -119,9 +86,9 @@ ___
 
 ## Methods
 
-### abortInitSelection
+### abortInitSelection()
 
-▸ **abortInitSelection**(): `void`
+> **abortInitSelection**(): `void`
 
 #### Returns
 
@@ -131,11 +98,11 @@ ___
 
 [src/ui/editors/combobox.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L230)
 
-___
+***
 
-### abortPendingQuery
+### abortPendingQuery()
 
-▸ **abortPendingQuery**(): `void`
+> **abortPendingQuery**(): `void`
 
 #### Returns
 
@@ -145,11 +112,11 @@ ___
 
 [src/ui/editors/combobox.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L217)
 
-___
+***
 
-### closeDropdown
+### closeDropdown()
 
-▸ **closeDropdown**(): `void`
+> **closeDropdown**(): `void`
 
 #### Returns
 
@@ -159,11 +126,11 @@ ___
 
 [src/ui/editors/combobox.ts:377](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L377)
 
-___
+***
 
-### dispose
+### dispose()
 
-▸ **dispose**(): `void`
+> **dispose**(): `void`
 
 #### Returns
 
@@ -173,11 +140,11 @@ ___
 
 [src/ui/editors/combobox.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L238)
 
-___
+***
 
-### getSelectedItem
+### getSelectedItem()
 
-▸ **getSelectedItem**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>
+> **getSelectedItem**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>
 
 #### Returns
 
@@ -187,11 +154,11 @@ ___
 
 [src/ui/editors/combobox.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L274)
 
-___
+***
 
-### getSelectedItems
+### getSelectedItems()
 
-▸ **getSelectedItems**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>[]
+> **getSelectedItems**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>[]
 
 #### Returns
 
@@ -201,11 +168,11 @@ ___
 
 [src/ui/editors/combobox.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L284)
 
-___
+***
 
-### getValue
+### getValue()
 
-▸ **getValue**(): `string`
+> **getValue**(): `string`
 
 #### Returns
 
@@ -215,11 +182,11 @@ ___
 
 [src/ui/editors/combobox.ts:300](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L300)
 
-___
+***
 
-### getValues
+### getValues()
 
-▸ **getValues**(): `string`[]
+> **getValues**(): `string`[]
 
 #### Returns
 
@@ -229,11 +196,11 @@ ___
 
 [src/ui/editors/combobox.ts:316](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L316)
 
-___
+***
 
-### openDropdown
+### openDropdown()
 
-▸ **openDropdown**(): `void`
+> **openDropdown**(): `void`
 
 #### Returns
 
@@ -243,18 +210,21 @@ ___
 
 [src/ui/editors/combobox.ts:381](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L381)
 
-___
+***
 
-### setValue
+### setValue()
 
-▸ **setValue**(`value`, `triggerChange?`): `void`
+> **setValue**(`value`, `triggerChange`): `void`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `string` | `undefined` |
-| `triggerChange` | `boolean` | `false` |
+##### value
+
+`string`
+
+##### triggerChange
+
+`boolean` = `false`
 
 #### Returns
 
@@ -264,18 +234,21 @@ ___
 
 [src/ui/editors/combobox.ts:336](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L336)
 
-___
+***
 
-### setValues
+### setValues()
 
-▸ **setValues**(`value`, `triggerChange?`): `void`
+> **setValues**(`value`, `triggerChange`): `void`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `string`[] | `undefined` |
-| `triggerChange` | `boolean` | `false` |
+##### value
+
+`string`[]
+
+##### triggerChange
+
+`boolean` = `false`
 
 #### Returns
 
@@ -285,17 +258,17 @@ ___
 
 [src/ui/editors/combobox.ts:368](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L368)
 
-___
+***
 
-### getInstance
+### getInstance()
 
-▸ **getInstance**(`el`): [`Combobox`](Combobox.md)\<`any`\>
+> `static` **getInstance**(`el`): [`Combobox`](Combobox.md)\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `el` | `Element` \| `ArrayLike`\<`Element`\> |
+##### el
+
+`Element` | `ArrayLike`\<`Element`\>
 
 #### Returns
 

@@ -2,95 +2,82 @@
 
 # Interface: GridPersistanceFlags
 
-## Table of contents
-
-### Properties
-
-- [columnVisibility](GridPersistanceFlags.md#columnvisibility)
-- [columnWidths](GridPersistanceFlags.md#columnwidths)
-- [filterItems](GridPersistanceFlags.md#filteritems)
-- [includeDeleted](GridPersistanceFlags.md#includedeleted)
-- [quickFilterText](GridPersistanceFlags.md#quickfiltertext)
-- [quickFilters](GridPersistanceFlags.md#quickfilters)
-- [quickSearch](GridPersistanceFlags.md#quicksearch)
-- [sortColumns](GridPersistanceFlags.md#sortcolumns)
-
 ## Properties
 
-### columnVisibility
+### columnVisibility?
 
-• `Optional` **columnVisibility**: `boolean`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L53)
-
-___
-
-### columnWidths
-
-• `Optional` **columnWidths**: `boolean`
+> `optional` **columnVisibility**: `boolean`
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L52)
+[src/ui/datagrid/datagrid.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L53)
 
-___
+***
 
-### filterItems
+### columnWidths?
 
-• `Optional` **filterItems**: `boolean`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L55)
-
-___
-
-### includeDeleted
-
-• `Optional` **includeDeleted**: `boolean`
+> `optional` **columnWidths**: `boolean`
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L59)
+[src/ui/datagrid/datagrid.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L52)
 
-___
+***
 
-### quickFilterText
+### filterItems?
 
-• `Optional` **quickFilterText**: `boolean`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L57)
-
-___
-
-### quickFilters
-
-• `Optional` **quickFilters**: `boolean`
+> `optional` **filterItems**: `boolean`
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L56)
+[src/ui/datagrid/datagrid.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L55)
 
-___
+***
 
-### quickSearch
+### includeDeleted?
 
-• `Optional` **quickSearch**: `boolean`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L58)
-
-___
-
-### sortColumns
-
-• `Optional` **sortColumns**: `boolean`
+> `optional` **includeDeleted**: `boolean`
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L54)
+[src/ui/datagrid/datagrid.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L59)
+
+***
+
+### quickFilters?
+
+> `optional` **quickFilters**: `boolean`
+
+#### Defined in
+
+[src/ui/datagrid/datagrid.tsx:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L56)
+
+***
+
+### quickFilterText?
+
+> `optional` **quickFilterText**: `boolean`
+
+#### Defined in
+
+[src/ui/datagrid/datagrid.tsx:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L57)
+
+***
+
+### quickSearch?
+
+> `optional` **quickSearch**: `boolean`
+
+#### Defined in
+
+[src/ui/datagrid/datagrid.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L58)
+
+***
+
+### sortColumns?
+
+> `optional` **sortColumns**: `boolean`
+
+#### Defined in
+
+[src/ui/datagrid/datagrid.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L54)

@@ -2,51 +2,74 @@
 
 # Interface: TimeEditorOptions
 
-## Table of contents
+## Extends
 
-### Properties
-
-- [endHour](TimeEditorOptions.md#endhour)
-- [intervalMinutes](TimeEditorOptions.md#intervalminutes)
-- [noEmptyOption](TimeEditorOptions.md#noemptyoption)
-- [startHour](TimeEditorOptions.md#starthour)
+- [`TimeEditorBaseOptions`](TimeEditorBaseOptions.md)
 
 ## Properties
 
-### endHour
+### endHour?
 
-• `Optional` **endHour**: `any`
+> `optional` **endHour**: `any`
+
+#### Inherited from
+
+[`TimeEditorBaseOptions`](TimeEditorBaseOptions.md).[`endHour`](TimeEditorBaseOptions.md#endhour)
+
+#### Defined in
+
+[src/ui/editors/timeeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L10)
+
+***
+
+### intervalMinutes?
+
+> `optional` **intervalMinutes**: `any`
+
+#### Inherited from
+
+[`TimeEditorBaseOptions`](TimeEditorBaseOptions.md).[`intervalMinutes`](TimeEditorBaseOptions.md#intervalminutes)
 
 #### Defined in
 
 [src/ui/editors/timeeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L11)
 
-___
+***
 
-### intervalMinutes
+### multiplier?
 
-• `Optional` **intervalMinutes**: `any`
+> `optional` **multiplier**: `number`
+
+Default is 1. Set to 60 to store seconds, 60000 to store ms in an integer field
 
 #### Defined in
 
-[src/ui/editors/timeeditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L12)
+[src/ui/editors/timeeditor.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L96)
 
-___
+***
 
-### noEmptyOption
+### noEmptyOption?
 
-• `Optional` **noEmptyOption**: `boolean`
+> `optional` **noEmptyOption**: `boolean`
+
+#### Inherited from
+
+[`TimeEditorBaseOptions`](TimeEditorBaseOptions.md).[`noEmptyOption`](TimeEditorBaseOptions.md#noemptyoption)
+
+#### Defined in
+
+[src/ui/editors/timeeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L8)
+
+***
+
+### startHour?
+
+> `optional` **startHour**: `any`
+
+#### Inherited from
+
+[`TimeEditorBaseOptions`](TimeEditorBaseOptions.md).[`startHour`](TimeEditorBaseOptions.md#starthour)
 
 #### Defined in
 
 [src/ui/editors/timeeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L9)
-
-___
-
-### startHour
-
-• `Optional` **startHour**: `any`
-
-#### Defined in
-
-[src/ui/editors/timeeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L10)

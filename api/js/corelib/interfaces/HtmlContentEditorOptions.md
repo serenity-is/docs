@@ -2,29 +2,22 @@
 
 # Interface: HtmlContentEditorOptions
 
-## Table of contents
-
-### Properties
-
-- [cols](HtmlContentEditorOptions.md#cols)
-- [rows](HtmlContentEditorOptions.md#rows)
-
 ## Properties
 
-### cols
+### cols?
 
-• `Optional` **cols**: `number`
-
-#### Defined in
-
-[src/ui/editors/htmlcontenteditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L9)
-
-___
-
-### rows
-
-• `Optional` **rows**: `number`
+> `optional` **cols**: `number`
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L10)
+[src/ui/editors/htmlcontenteditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L9)
+
+***
+
+### rows?
+
+> `optional` **rows**: `number`
+
+#### Defined in
+
+[src/ui/editors/htmlcontenteditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L10)

@@ -4,4 +4,4 @@
 
 ## Indexable
 
-▪ [name: `string`]: [`ValidationRules`](../README.md#validationrules)
+ \[`name`: `string`\]: [`ValidationRules`](../type-aliases/ValidationRules.md)

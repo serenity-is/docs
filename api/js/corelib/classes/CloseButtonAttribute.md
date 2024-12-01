@@ -2,27 +2,17 @@
 
 # Class: CloseButtonAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](CloseButtonAttribute.md#constructor)
-
-### Properties
-
-- [value](CloseButtonAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new CloseButtonAttribute()
 
-• **new CloseButtonAttribute**(`value?`): [`CloseButtonAttribute`](CloseButtonAttribute.md)
+> **new CloseButtonAttribute**(`value`): [`CloseButtonAttribute`](CloseButtonAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

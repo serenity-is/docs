@@ -2,33 +2,17 @@
 
 # Interface: Formatter
 
-## Implemented by
-
-- [`BooleanFormatter`](../classes/BooleanFormatter.md)
-- [`CheckboxFormatter`](../classes/CheckboxFormatter.md)
-- [`DateFormatter`](../classes/DateFormatter.md)
-- [`EnumFormatter`](../classes/EnumFormatter.md)
-- [`FileDownloadFormatter`](../classes/FileDownloadFormatter.md)
-- [`MinuteFormatter`](../classes/MinuteFormatter.md)
-- [`UrlFormatter`](../classes/UrlFormatter.md)
-
-## Table of contents
-
-### Methods
-
-- [format](Formatter.md#format)
-
 ## Methods
 
-### format
+### format()
 
-▸ **format**(`ctx`): `FormatterResult`
+> **format**(`ctx`): `FormatterResult`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `FormatterContext`\<`any`\> |
+##### ctx
+
+`FormatterContext`\<`any`\>
 
 #### Returns
 

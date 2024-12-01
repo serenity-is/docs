@@ -2,61 +2,51 @@
 
 # Interface: ServiceError
 
-## Table of contents
-
-### Properties
-
-- [Arguments](ServiceError.md#arguments)
-- [Code](ServiceError.md#code)
-- [Details](ServiceError.md#details)
-- [ErrorId](ServiceError.md#errorid)
-- [Message](ServiceError.md#message)
-
 ## Properties
 
-### Arguments
+### Arguments?
 
-• `Optional` **Arguments**: `string`
+> `optional` **Arguments**: `string`
 
 #### Defined in
 
 [src/base/servicetypes.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L3)
 
-___
+***
 
-### Code
+### Code?
 
-• `Optional` **Code**: `string`
+> `optional` **Code**: `string`
 
 #### Defined in
 
 [src/base/servicetypes.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L2)
 
-___
+***
 
-### Details
+### Details?
 
-• `Optional` **Details**: `string`
+> `optional` **Details**: `string`
 
 #### Defined in
 
 [src/base/servicetypes.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L5)
 
-___
+***
 
-### ErrorId
+### ErrorId?
 
-• `Optional` **ErrorId**: `string`
+> `optional` **ErrorId**: `string`
 
 #### Defined in
 
 [src/base/servicetypes.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L6)
 
-___
+***
 
-### Message
+### Message?
 
-• `Optional` **Message**: `string`
+> `optional` **Message**: `string`
 
 #### Defined in
 

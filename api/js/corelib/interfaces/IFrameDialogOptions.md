@@ -4,18 +4,12 @@
 
 Options for `iframeDialog` *
 
-## Table of contents
-
-### Properties
-
-- [html](IFrameDialogOptions.md#html)
-
 ## Properties
 
-### html
+### html?
 
-• `Optional` **html**: `string`
+> `optional` **html**: `string`
 
 #### Defined in
 
-[src/base/dialogs.ts:942](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L942)
+[src/base/dialogs.tsx:1100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1100)

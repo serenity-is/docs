@@ -2,28 +2,21 @@
 
 # Interface: TooltipOptions
 
-## Table of contents
-
-### Properties
-
-- [title](TooltipOptions.md#title)
-- [trigger](TooltipOptions.md#trigger)
-
 ## Properties
 
-### title
+### title?
 
-• `Optional` **title**: `string`
+> `optional` **title**: `string`
 
 #### Defined in
 
 [src/base/tooltip.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L5)
 
-___
+***
 
-### trigger
+### trigger?
 
-• `Optional` **trigger**: `string`
+> `optional` **trigger**: `string`
 
 #### Defined in
 

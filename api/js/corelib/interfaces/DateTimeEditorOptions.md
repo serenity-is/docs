@@ -2,106 +2,92 @@
 
 # Interface: DateTimeEditorOptions
 
-## Table of contents
-
-### Properties
-
-- [endHour](DateTimeEditorOptions.md#endhour)
-- [inputOnly](DateTimeEditorOptions.md#inputonly)
-- [intervalMinutes](DateTimeEditorOptions.md#intervalminutes)
-- [maxValue](DateTimeEditorOptions.md#maxvalue)
-- [minValue](DateTimeEditorOptions.md#minvalue)
-- [seconds](DateTimeEditorOptions.md#seconds)
-- [startHour](DateTimeEditorOptions.md#starthour)
-- [useUtc](DateTimeEditorOptions.md#useutc)
-- [yearRange](DateTimeEditorOptions.md#yearrange)
-
 ## Properties
 
-### endHour
+### endHour?
 
-• `Optional` **endHour**: `any`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L396)
-
-___
-
-### inputOnly
-
-• `Optional` **inputOnly**: `boolean`
+> `optional` **endHour**: `any`
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:403](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L403)
+[src/ui/editors/datetimeeditor.tsx:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L399)
 
-___
+***
 
-### intervalMinutes
+### inputOnly?
 
-• `Optional` **intervalMinutes**: `any`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L397)
-
-___
-
-### maxValue
-
-• `Optional` **maxValue**: `string`
+> `optional` **inputOnly**: `boolean`
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L399)
+[src/ui/editors/datetimeeditor.tsx:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L406)
 
-___
+***
 
-### minValue
+### intervalMinutes?
 
-• `Optional` **minValue**: `string`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L398)
-
-___
-
-### seconds
-
-• `Optional` **seconds**: `boolean`
+> `optional` **intervalMinutes**: `any`
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L402)
+[src/ui/editors/datetimeeditor.tsx:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L400)
 
-___
+***
 
-### startHour
+### maxValue?
 
-• `Optional` **startHour**: `any`
-
-#### Defined in
-
-[src/ui/editors/datetimeeditor.ts:395](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L395)
-
-___
-
-### useUtc
-
-• `Optional` **useUtc**: `boolean`
+> `optional` **maxValue**: `string`
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L401)
+[src/ui/editors/datetimeeditor.tsx:402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L402)
 
-___
+***
 
-### yearRange
+### minValue?
 
-• `Optional` **yearRange**: `string`
+> `optional` **minValue**: `string`
 
 #### Defined in
 
-[src/ui/editors/datetimeeditor.ts:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.ts#L400)
+[src/ui/editors/datetimeeditor.tsx:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L401)
+
+***
+
+### seconds?
+
+> `optional` **seconds**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/datetimeeditor.tsx:405](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L405)
+
+***
+
+### startHour?
+
+> `optional` **startHour**: `any`
+
+#### Defined in
+
+[src/ui/editors/datetimeeditor.tsx:398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L398)
+
+***
+
+### useUtc?
+
+> `optional` **useUtc**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/datetimeeditor.tsx:404](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L404)
+
+***
+
+### yearRange?
+
+> `optional` **yearRange**: `string`
+
+#### Defined in
+
+[src/ui/editors/datetimeeditor.tsx:403](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L403)

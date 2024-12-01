@@ -2,27 +2,17 @@
 
 # Class: InsertableAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](InsertableAttribute.md#constructor)
-
-### Properties
-
-- [value](InsertableAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new InsertableAttribute()
 
-• **new InsertableAttribute**(`value?`): [`InsertableAttribute`](InsertableAttribute.md)
+> **new InsertableAttribute**(`value`): [`InsertableAttribute`](InsertableAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

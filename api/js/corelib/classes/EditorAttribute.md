@@ -2,17 +2,11 @@
 
 # Class: EditorAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](EditorAttribute.md#constructor)
-
 ## Constructors
 
-### constructor
+### new EditorAttribute()
 
-• **new EditorAttribute**(): [`EditorAttribute`](EditorAttribute.md)
+> **new EditorAttribute**(): [`EditorAttribute`](EditorAttribute.md)
 
 #### Returns
 

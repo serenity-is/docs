@@ -2,40 +2,32 @@
 
 # Interface: RequestErrorInfo
 
-## Table of contents
-
-### Properties
-
-- [responseText](RequestErrorInfo.md#responsetext)
-- [status](RequestErrorInfo.md#status)
-- [statusText](RequestErrorInfo.md#statustext)
-
 ## Properties
 
-### responseText
+### responseText?
 
-• `Optional` **responseText**: `string`
-
-#### Defined in
-
-[src/base/servicetypes.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L112)
-
-___
-
-### status
-
-• `Optional` **status**: `number`
+> `optional` **responseText**: `string`
 
 #### Defined in
 
-[src/base/servicetypes.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L110)
+[src/base/servicetypes.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L99)
 
-___
+***
 
-### statusText
+### status?
 
-• `Optional` **statusText**: `string`
+> `optional` **status**: `number`
 
 #### Defined in
 
-[src/base/servicetypes.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L111)
+[src/base/servicetypes.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L97)
+
+***
+
+### statusText?
+
+> `optional` **statusText**: `string`
+
+#### Defined in
+
+[src/base/servicetypes.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L98)

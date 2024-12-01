@@ -2,97 +2,86 @@
 
 # Interface: SelectEditorOptions
 
-## Hierarchy
+## Extends
 
 - [`ComboboxCommonOptions`](ComboboxCommonOptions.md)
 
-  ↳ **`SelectEditorOptions`**
+## Extended by
 
-  ↳↳ [`DateYearEditorOptions`](DateYearEditorOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [allowClear](SelectEditorOptions.md#allowclear)
-- [delimited](SelectEditorOptions.md#delimited)
-- [emptyOptionText](SelectEditorOptions.md#emptyoptiontext)
-- [items](SelectEditorOptions.md#items)
-- [minimumResultsForSearch](SelectEditorOptions.md#minimumresultsforsearch)
-- [multiple](SelectEditorOptions.md#multiple)
+- [`DateYearEditorOptions`](DateYearEditorOptions.md)
 
 ## Properties
 
-### allowClear
+### allowClear?
 
-• `Optional` **allowClear**: `boolean`
-
-#### Inherited from
-
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[allowClear](ComboboxCommonOptions.md#allowclear)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L14)
-
-___
-
-### delimited
-
-• `Optional` **delimited**: `boolean`
+> `optional` **allowClear**: `boolean`
 
 #### Inherited from
 
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[delimited](ComboboxCommonOptions.md#delimited)
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`allowClear`](ComboboxCommonOptions.md#allowclear)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L15)
+[src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
 
-___
+***
 
-### emptyOptionText
+### delimited?
 
-• `Optional` **emptyOptionText**: `string`
+> `optional` **delimited**: `boolean`
+
+#### Inherited from
+
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`delimited`](ComboboxCommonOptions.md#delimited)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+
+***
+
+### emptyOptionText?
+
+> `optional` **emptyOptionText**: `string`
 
 #### Defined in
 
 [src/ui/editors/selecteditor.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L42)
 
-___
+***
 
-### items
+### items?
 
-• `Optional` **items**: `any`[]
+> `optional` **items**: `any`[]
 
 #### Defined in
 
 [src/ui/editors/selecteditor.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L41)
 
-___
+***
 
-### minimumResultsForSearch
+### minimumResultsForSearch?
 
-• `Optional` **minimumResultsForSearch**: `any`
-
-#### Inherited from
-
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[minimumResultsForSearch](ComboboxCommonOptions.md#minimumresultsforsearch)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L16)
-
-___
-
-### multiple
-
-• `Optional` **multiple**: `boolean`
+> `optional` **minimumResultsForSearch**: `any`
 
 #### Inherited from
 
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[multiple](ComboboxCommonOptions.md#multiple)
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`minimumResultsForSearch`](ComboboxCommonOptions.md#minimumresultsforsearch)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L17)
+[src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+
+***
+
+### multiple?
+
+> `optional` **multiple**: `boolean`
+
+#### Inherited from
+
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`multiple`](ComboboxCommonOptions.md#multiple)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)

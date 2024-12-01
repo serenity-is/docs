@@ -2,117 +2,106 @@
 
 # Interface: CreateWidgetParams\<TWidget, P\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TWidget` | extends [`Widget`](../classes/Widget.md)\<`P`\> |
-| `P` | `P` |
+• **TWidget** *extends* [`Widget`](../classes/Widget.md)\<`P`\>
 
-## Table of contents
-
-### Properties
-
-- [container](CreateWidgetParams.md#container)
-- [element](CreateWidgetParams.md#element)
-- [init](CreateWidgetParams.md#init)
-- [options](CreateWidgetParams.md#options)
-- [type](CreateWidgetParams.md#type)
+• **P**
 
 ## Properties
 
-### container
+### container?
 
-• `Optional` **container**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
+> `optional` **container**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L212)
+[src/ui/widgets/widget.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L235)
 
-___
+***
 
-### element
+### element()?
 
-• `Optional` **element**: (`e`: [`Fluent`](Fluent.md)\<`HTMLElement`\>) => `void`
+> `optional` **element**: (`e`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`e`): `void`
+##### e
 
-##### Parameters
+[`Fluent`](Fluent.md)\<`HTMLElement`\>
 
-| Name | Type |
-| :------ | :------ |
-| `e` | [`Fluent`](Fluent.md)\<`HTMLElement`\> |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L213)
+[src/ui/widgets/widget.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L236)
 
-___
+***
 
-### init
+### init()?
 
-• `Optional` **init**: (`w`: `TWidget`) => `void`
+> `optional` **init**: (`w`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`w`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `w` | `TWidget` |
-
-##### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
-
-___
-
-### options
-
-• `Optional` **options**: `P` & \{ `class?`: `string` ; `element?`: `string` \| `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`el`: `HTMLElement`) => `void` ; `id?`: `string`  }
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
-
-___
-
-### type
-
-• `Optional` **type**: `Object`
-
-#### Call signature
-
-• **new type**(`options?`): `TWidget`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options?` | `P` |
-
-##### Returns
+##### w
 
 `TWidget`
 
-#### Type declaration
+#### Returns
 
-| Name | Type |
-| :------ | :------ |
-| `prototype` | `TWidget` |
+`void`
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L210)
+[src/ui/widgets/widget.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L237)
+
+***
+
+### options?
+
+> `optional` **options**: `P` & `object`
+
+#### Type declaration
+
+##### class?
+
+> `optional` **class**: `string`
+
+##### element?
+
+> `optional` **element**: `string` \| `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`el`) => `void`
+
+##### id?
+
+> `optional` **id**: `string`
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L234)
+
+***
+
+### type()?
+
+> `optional` **type**: (`options`?) => `TWidget`
+
+#### Parameters
+
+##### options?
+
+`P`
+
+#### Returns
+
+`TWidget`
+
+#### prototype
+
+> **prototype**: `TWidget`
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L233)

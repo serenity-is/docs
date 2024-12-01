@@ -2,27 +2,17 @@
 
 # Class: ColumnsKeyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ColumnsKeyAttribute.md#constructor)
-
-### Properties
-
-- [value](ColumnsKeyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new ColumnsKeyAttribute()
 
-• **new ColumnsKeyAttribute**(`value`): [`ColumnsKeyAttribute`](ColumnsKeyAttribute.md)
+> **new ColumnsKeyAttribute**(`value`): [`ColumnsKeyAttribute`](ColumnsKeyAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

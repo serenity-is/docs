@@ -4,382 +4,349 @@
 
 Interface for a locale, similar to .NET's CultureInfo
 
-## Hierarchy
+## Extends
 
-- [`NumberFormat`](NumberFormat.md)
-
-- [`DateFormat`](DateFormat.md)
-
-  ↳ **`Locale`**
-
-## Table of contents
-
-### Properties
-
-- [amDesignator](Locale.md#amdesignator)
-- [currencySymbol](Locale.md#currencysymbol)
-- [dateFormat](Locale.md#dateformat)
-- [dateOrder](Locale.md#dateorder)
-- [dateSeparator](Locale.md#dateseparator)
-- [dateTimeFormat](Locale.md#datetimeformat)
-- [dayNames](Locale.md#daynames)
-- [decimalDigits](Locale.md#decimaldigits)
-- [decimalSeparator](Locale.md#decimalseparator)
-- [firstDayOfWeek](Locale.md#firstdayofweek)
-- [groupSeparator](Locale.md#groupseparator)
-- [minimizedDayNames](Locale.md#minimizeddaynames)
-- [monthNames](Locale.md#monthnames)
-- [nanSymbol](Locale.md#nansymbol)
-- [negativeSign](Locale.md#negativesign)
-- [percentSymbol](Locale.md#percentsymbol)
-- [pmDesignator](Locale.md#pmdesignator)
-- [positiveSign](Locale.md#positivesign)
-- [shortDayNames](Locale.md#shortdaynames)
-- [shortMonthNames](Locale.md#shortmonthnames)
-- [stringCompare](Locale.md#stringcompare)
-- [timeSeparator](Locale.md#timeseparator)
-- [toUpper](Locale.md#toupper)
+- [`NumberFormat`](NumberFormat.md).[`DateFormat`](DateFormat.md)
 
 ## Properties
 
-### amDesignator
+### amDesignator?
 
-• `Optional` **amDesignator**: `string`
+> `optional` **amDesignator**: `string`
 
 AM designator
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[amDesignator](DateFormat.md#amdesignator)
+[`DateFormat`](DateFormat.md).[`amDesignator`](DateFormat.md#amdesignator)
 
 #### Defined in
 
 [src/base/formatting.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L34)
 
-___
+***
 
-### currencySymbol
+### currencySymbol?
 
-• `Optional` **currencySymbol**: `string`
+> `optional` **currencySymbol**: `string`
 
 Currency symbol
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[currencySymbol](NumberFormat.md#currencysymbol)
+[`NumberFormat`](NumberFormat.md).[`currencySymbol`](NumberFormat.md#currencysymbol)
 
 #### Defined in
 
 [src/base/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L20)
 
-___
+***
 
-### dateFormat
+### dateFormat?
 
-• `Optional` **dateFormat**: `string`
+> `optional` **dateFormat**: `string`
 
 Default date format string
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[dateFormat](DateFormat.md#dateformat)
+[`DateFormat`](DateFormat.md).[`dateFormat`](DateFormat.md#dateformat)
 
 #### Defined in
 
 [src/base/formatting.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L28)
 
-___
+***
 
-### dateOrder
+### dateOrder?
 
-• `Optional` **dateOrder**: `string`
+> `optional` **dateOrder**: `string`
 
 Date order, like dmy, or ymd
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[dateOrder](DateFormat.md#dateorder)
+[`DateFormat`](DateFormat.md).[`dateOrder`](DateFormat.md#dateorder)
 
 #### Defined in
 
 [src/base/formatting.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L30)
 
-___
+***
 
-### dateSeparator
+### dateSeparator?
 
-• `Optional` **dateSeparator**: `string`
+> `optional` **dateSeparator**: `string`
 
 Date separator
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[dateSeparator](DateFormat.md#dateseparator)
+[`DateFormat`](DateFormat.md).[`dateSeparator`](DateFormat.md#dateseparator)
 
 #### Defined in
 
 [src/base/formatting.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L26)
 
-___
+***
 
-### dateTimeFormat
+### dateTimeFormat?
 
-• `Optional` **dateTimeFormat**: `string`
+> `optional` **dateTimeFormat**: `string`
 
 Default date time format string
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[dateTimeFormat](DateFormat.md#datetimeformat)
+[`DateFormat`](DateFormat.md).[`dateTimeFormat`](DateFormat.md#datetimeformat)
 
 #### Defined in
 
 [src/base/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L32)
 
-___
+***
 
-### dayNames
+### dayNames?
 
-• `Optional` **dayNames**: `string`[]
+> `optional` **dayNames**: `string`[]
 
 Array of day names
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[dayNames](DateFormat.md#daynames)
+[`DateFormat`](DateFormat.md).[`dayNames`](DateFormat.md#daynames)
 
 #### Defined in
 
 [src/base/formatting.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L42)
 
-___
+***
 
-### decimalDigits
+### decimalDigits?
 
-• `Optional` **decimalDigits**: `number`
+> `optional` **decimalDigits**: `number`
 
 Number of digits after decimal separator
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[decimalDigits](NumberFormat.md#decimaldigits)
+[`NumberFormat`](NumberFormat.md).[`decimalDigits`](NumberFormat.md#decimaldigits)
 
 #### Defined in
 
 [src/base/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L10)
 
-___
+***
 
 ### decimalSeparator
 
-• **decimalSeparator**: `string`
+> **decimalSeparator**: `string`
 
 Decimal separator
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[decimalSeparator](NumberFormat.md#decimalseparator)
+[`NumberFormat`](NumberFormat.md).[`decimalSeparator`](NumberFormat.md#decimalseparator)
 
 #### Defined in
 
 [src/base/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L6)
 
-___
+***
 
-### firstDayOfWeek
+### firstDayOfWeek?
 
-• `Optional` **firstDayOfWeek**: `number`
+> `optional` **firstDayOfWeek**: `number`
 
 First day of week, 0 = Sunday, 1 = Monday
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[firstDayOfWeek](DateFormat.md#firstdayofweek)
+[`DateFormat`](DateFormat.md).[`firstDayOfWeek`](DateFormat.md#firstdayofweek)
 
 #### Defined in
 
 [src/base/formatting.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L40)
 
-___
+***
 
-### groupSeparator
+### groupSeparator?
 
-• `Optional` **groupSeparator**: `string`
+> `optional` **groupSeparator**: `string`
 
 Group separator
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[groupSeparator](NumberFormat.md#groupseparator)
+[`NumberFormat`](NumberFormat.md).[`groupSeparator`](NumberFormat.md#groupseparator)
 
 #### Defined in
 
 [src/base/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L8)
 
-___
+***
 
-### minimizedDayNames
+### minimizedDayNames?
 
-• `Optional` **minimizedDayNames**: `string`[]
+> `optional` **minimizedDayNames**: `string`[]
 
 Array of two letter day names
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[minimizedDayNames](DateFormat.md#minimizeddaynames)
+[`DateFormat`](DateFormat.md).[`minimizedDayNames`](DateFormat.md#minimizeddaynames)
 
 #### Defined in
 
 [src/base/formatting.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L46)
 
-___
+***
 
-### monthNames
+### monthNames?
 
-• `Optional` **monthNames**: `string`[]
+> `optional` **monthNames**: `string`[]
 
 Array of month names
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[monthNames](DateFormat.md#monthnames)
+[`DateFormat`](DateFormat.md).[`monthNames`](DateFormat.md#monthnames)
 
 #### Defined in
 
 [src/base/formatting.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L48)
 
-___
+***
 
-### nanSymbol
+### nanSymbol?
 
-• `Optional` **nanSymbol**: `string`
+> `optional` **nanSymbol**: `string`
 
 Zero symbol
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[nanSymbol](NumberFormat.md#nansymbol)
+[`NumberFormat`](NumberFormat.md).[`nanSymbol`](NumberFormat.md#nansymbol)
 
 #### Defined in
 
 [src/base/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L16)
 
-___
+***
 
-### negativeSign
+### negativeSign?
 
-• `Optional` **negativeSign**: `string`
+> `optional` **negativeSign**: `string`
 
 Negative sign
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[negativeSign](NumberFormat.md#negativesign)
+[`NumberFormat`](NumberFormat.md).[`negativeSign`](NumberFormat.md#negativesign)
 
 #### Defined in
 
 [src/base/formatting.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L14)
 
-___
+***
 
-### percentSymbol
+### percentSymbol?
 
-• `Optional` **percentSymbol**: `string`
+> `optional` **percentSymbol**: `string`
 
 Percentage symbol
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[percentSymbol](NumberFormat.md#percentsymbol)
+[`NumberFormat`](NumberFormat.md).[`percentSymbol`](NumberFormat.md#percentsymbol)
 
 #### Defined in
 
 [src/base/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L18)
 
-___
+***
 
-### pmDesignator
+### pmDesignator?
 
-• `Optional` **pmDesignator**: `string`
+> `optional` **pmDesignator**: `string`
 
 PM designator
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[pmDesignator](DateFormat.md#pmdesignator)
+[`DateFormat`](DateFormat.md).[`pmDesignator`](DateFormat.md#pmdesignator)
 
 #### Defined in
 
 [src/base/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L36)
 
-___
+***
 
-### positiveSign
+### positiveSign?
 
-• `Optional` **positiveSign**: `string`
+> `optional` **positiveSign**: `string`
 
 Positive sign
 
 #### Inherited from
 
-[NumberFormat](NumberFormat.md).[positiveSign](NumberFormat.md#positivesign)
+[`NumberFormat`](NumberFormat.md).[`positiveSign`](NumberFormat.md#positivesign)
 
 #### Defined in
 
 [src/base/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L12)
 
-___
+***
 
-### shortDayNames
+### shortDayNames?
 
-• `Optional` **shortDayNames**: `string`[]
+> `optional` **shortDayNames**: `string`[]
 
 Array of short day names
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[shortDayNames](DateFormat.md#shortdaynames)
+[`DateFormat`](DateFormat.md).[`shortDayNames`](DateFormat.md#shortdaynames)
 
 #### Defined in
 
 [src/base/formatting.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L44)
 
-___
+***
 
-### shortMonthNames
+### shortMonthNames?
 
-• `Optional` **shortMonthNames**: `string`[]
+> `optional` **shortMonthNames**: `string`[]
 
 Array of short month names
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[shortMonthNames](DateFormat.md#shortmonthnames)
+[`DateFormat`](DateFormat.md).[`shortMonthNames`](DateFormat.md#shortmonthnames)
 
 #### Defined in
 
 [src/base/formatting.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L50)
 
-___
+***
 
-### stringCompare
+### stringCompare()?
 
-• `Optional` **stringCompare**: (`a`: `string`, `b`: `string`) => `number`
+> `optional` **stringCompare**: (`a`, `b`) => `number`
 
 Locale string comparison function, similar to .NET's StringComparer
 
-#### Type declaration
+#### Parameters
 
-▸ (`a`, `b`): `number`
+##### a
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `a` | `string` |
-| `b` | `string` |
+##### b
 
-##### Returns
+`string`
+
+#### Returns
 
 `number`
 
@@ -387,41 +354,37 @@ Locale string comparison function, similar to .NET's StringComparer
 
 [src/base/formatting.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L56)
 
-___
+***
 
-### timeSeparator
+### timeSeparator?
 
-• `Optional` **timeSeparator**: `string`
+> `optional` **timeSeparator**: `string`
 
 Time separator
 
 #### Inherited from
 
-[DateFormat](DateFormat.md).[timeSeparator](DateFormat.md#timeseparator)
+[`DateFormat`](DateFormat.md).[`timeSeparator`](DateFormat.md#timeseparator)
 
 #### Defined in
 
 [src/base/formatting.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L38)
 
-___
+***
 
-### toUpper
+### toUpper()?
 
-• `Optional` **toUpper**: (`a`: `string`) => `string`
+> `optional` **toUpper**: (`a`) => `string`
 
 Locale string to upper case function
 
-#### Type declaration
+#### Parameters
 
-▸ (`a`): `string`
+##### a
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `a` | `string` |
-
-##### Returns
+#### Returns
 
 `string`
 

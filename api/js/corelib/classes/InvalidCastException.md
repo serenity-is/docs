@@ -2,29 +2,21 @@
 
 # Class: InvalidCastException
 
-## Hierarchy
+## Extends
 
 - [`Exception`](Exception.md)
 
-  ↳ **`InvalidCastException`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](InvalidCastException.md#constructor)
-
 ## Constructors
 
-### constructor
+### new InvalidCastException()
 
-• **new InvalidCastException**(`message`): [`InvalidCastException`](InvalidCastException.md)
+> **new InvalidCastException**(`message`): [`InvalidCastException`](InvalidCastException.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `string` |
+##### message
+
+`string`
 
 #### Returns
 
@@ -32,7 +24,7 @@
 
 #### Overrides
 
-[Exception](Exception.md).[constructor](Exception.md#constructor)
+[`Exception`](Exception.md).[`constructor`](Exception.md#constructors)
 
 #### Defined in
 

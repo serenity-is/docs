@@ -2,98 +2,73 @@
 
 # Interface: RemoteViewOptions
 
-## Table of contents
-
-### Properties
-
-- [autoLoad](RemoteViewOptions.md#autoload)
-- [contentType](RemoteViewOptions.md#contenttype)
-- [dataType](RemoteViewOptions.md#datatype)
-- [errorMsg](RemoteViewOptions.md#errormsg)
-- [filter](RemoteViewOptions.md#filter)
-- [getItemMetadata](RemoteViewOptions.md#getitemmetadata)
-- [groupItemMetadataProvider](RemoteViewOptions.md#groupitemmetadataprovider)
-- [idField](RemoteViewOptions.md#idfield)
-- [inlineFilters](RemoteViewOptions.md#inlinefilters)
-- [localSort](RemoteViewOptions.md#localsort)
-- [method](RemoteViewOptions.md#method)
-- [onAjaxCall](RemoteViewOptions.md#onajaxcall)
-- [onProcessData](RemoteViewOptions.md#onprocessdata)
-- [onSubmit](RemoteViewOptions.md#onsubmit)
-- [params](RemoteViewOptions.md#params)
-- [rowsPerPage](RemoteViewOptions.md#rowsperpage)
-- [seekToPage](RemoteViewOptions.md#seektopage)
-- [sortBy](RemoteViewOptions.md#sortby)
-- [url](RemoteViewOptions.md#url)
-
 ## Properties
 
-### autoLoad
+### autoLoad?
 
-• `Optional` **autoLoad**: `boolean`
+> `optional` **autoLoad**: `boolean`
 
 #### Defined in
 
 [src/slick/remoteview.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L8)
 
-___
+***
 
-### contentType
+### contentType?
 
-• `Optional` **contentType**: `string`
+> `optional` **contentType**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L10)
 
-___
+***
 
-### dataType
+### dataType?
 
-• `Optional` **dataType**: `string`
+> `optional` **dataType**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L11)
 
-___
+***
 
-### errorMsg
+### errorMsg?
 
-• `Optional` **errorMsg**: `string`
+> `optional` **errorMsg**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L26)
 
-___
+***
 
-### filter
+### filter?
 
-• `Optional` **filter**: `any`
+> `optional` **filter**: `any`
 
 #### Defined in
 
 [src/slick/remoteview.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L12)
 
-___
+***
 
-### getItemMetadata
+### getItemMetadata()?
 
-• `Optional` **getItemMetadata**: (`p1?`: `any`, `p2?`: `number`) => `any`
+> `optional` **getItemMetadata**: (`p1`?, `p2`?) => `any`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1?`, `p2?`): `any`
+##### p1?
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1?` | `any` |
-| `p2?` | `number` |
+##### p2?
 
-##### Returns
+`number`
+
+#### Returns
 
 `any`
 
@@ -101,131 +76,131 @@ ___
 
 [src/slick/remoteview.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L25)
 
-___
+***
 
-### groupItemMetadataProvider
+### groupItemMetadataProvider?
 
-• `Optional` **groupItemMetadataProvider**: `GroupItemMetadataProvider`
+> `optional` **groupItemMetadataProvider**: `GroupItemMetadataProvider`
 
 #### Defined in
 
 [src/slick/remoteview.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L23)
 
-___
+***
 
-### idField
+### idField?
 
-• `Optional` **idField**: `string`
+> `optional` **idField**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L9)
 
-___
+***
 
-### inlineFilters
+### inlineFilters?
 
-• `Optional` **inlineFilters**: `boolean`
+> `optional` **inlineFilters**: `boolean`
 
 #### Defined in
 
 [src/slick/remoteview.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L22)
 
-___
+***
 
-### localSort
+### localSort?
 
-• `Optional` **localSort**: `boolean`
+> `optional` **localSort**: `boolean`
 
 #### Defined in
 
 [src/slick/remoteview.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L16)
 
-___
+***
 
-### method
+### method?
 
-• `Optional` **method**: `string`
+> `optional` **method**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L21)
 
-___
+***
 
-### onAjaxCall
+### onAjaxCall?
 
-• `Optional` **onAjaxCall**: [`RemoteViewAjaxCallback`](../README.md#remoteviewajaxcallback)\<`any`\>
+> `optional` **onAjaxCall**: [`RemoteViewAjaxCallback`](../type-aliases/RemoteViewAjaxCallback.md)\<`any`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L24)
 
-___
+***
 
-### onProcessData
+### onProcessData?
 
-• `Optional` **onProcessData**: [`RemoteViewProcessCallback`](../README.md#remoteviewprocesscallback)\<`any`\>
+> `optional` **onProcessData**: [`RemoteViewProcessCallback`](../type-aliases/RemoteViewProcessCallback.md)\<`any`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L20)
 
-___
+***
 
-### onSubmit
+### onSubmit?
 
-• `Optional` **onSubmit**: [`CancellableViewCallback`](../README.md#cancellableviewcallback)\<`any`\>
+> `optional` **onSubmit**: [`CancellableViewCallback`](../type-aliases/CancellableViewCallback.md)\<`any`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L14)
 
-___
+***
 
-### params
+### params?
 
-• `Optional` **params**: `any`
+> `optional` **params**: `any`
 
 #### Defined in
 
 [src/slick/remoteview.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L13)
 
-___
+***
 
-### rowsPerPage
+### rowsPerPage?
 
-• `Optional` **rowsPerPage**: `number`
+> `optional` **rowsPerPage**: `number`
 
 #### Defined in
 
 [src/slick/remoteview.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L18)
 
-___
+***
 
-### seekToPage
+### seekToPage?
 
-• `Optional` **seekToPage**: `number`
+> `optional` **seekToPage**: `number`
 
 #### Defined in
 
 [src/slick/remoteview.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L19)
 
-___
+***
 
-### sortBy
+### sortBy?
 
-• `Optional` **sortBy**: `any`
+> `optional` **sortBy**: `any`
 
 #### Defined in
 
 [src/slick/remoteview.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L17)
 
-___
+***
 
-### url
+### url?
 
-• `Optional` **url**: `string`
+> `optional` **url**: `string`
 
 #### Defined in
 

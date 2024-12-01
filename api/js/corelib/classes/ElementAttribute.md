@@ -2,27 +2,17 @@
 
 # Class: ElementAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ElementAttribute.md#constructor)
-
-### Properties
-
-- [value](ElementAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new ElementAttribute()
 
-• **new ElementAttribute**(`value`): [`ElementAttribute`](ElementAttribute.md)
+> **new ElementAttribute**(`value`): [`ElementAttribute`](ElementAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

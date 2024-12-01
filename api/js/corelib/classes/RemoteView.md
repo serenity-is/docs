@@ -2,114 +2,21 @@
 
 # Class: RemoteView\<TEntity\>
 
-## Type parameters
+## Type Parameters
 
-| Name |
-| :------ |
-| `TEntity` |
-
-## Table of contents
-
-### Constructors
-
-- [constructor](RemoteView.md#constructor)
-
-### Properties
-
-- [errormsg](RemoteView.md#errormsg)
-- [fastSort](RemoteView.md#fastsort)
-- [idField](RemoteView.md#idfield)
-- [method](RemoteView.md#method)
-- [onAjaxCall](RemoteView.md#onajaxcall)
-- [onDataChanged](RemoteView.md#ondatachanged)
-- [onDataLoaded](RemoteView.md#ondataloaded)
-- [onDataLoading](RemoteView.md#ondataloading)
-- [onGroupCollapsed](RemoteView.md#ongroupcollapsed)
-- [onGroupExpanded](RemoteView.md#ongroupexpanded)
-- [onPagingInfoChanged](RemoteView.md#onpaginginfochanged)
-- [onProcessData](RemoteView.md#onprocessdata)
-- [onRowCountChanged](RemoteView.md#onrowcountchanged)
-- [onRowsChanged](RemoteView.md#onrowschanged)
-- [onRowsOrCountChanged](RemoteView.md#onrowsorcountchanged)
-- [onSubmit](RemoteView.md#onsubmit)
-- [params](RemoteView.md#params)
-- [rowsPerPage](RemoteView.md#rowsperpage)
-- [seekToPage](RemoteView.md#seektopage)
-- [sortBy](RemoteView.md#sortby)
-- [url](RemoteView.md#url)
-
-### Methods
-
-- [addData](RemoteView.md#adddata)
-- [addItem](RemoteView.md#additem)
-- [beginUpdate](RemoteView.md#beginupdate)
-- [collapseAllGroups](RemoteView.md#collapseallgroups)
-- [collapseGroup](RemoteView.md#collapsegroup)
-- [deleteItem](RemoteView.md#deleteitem)
-- [endUpdate](RemoteView.md#endupdate)
-- [expandAllGroups](RemoteView.md#expandallgroups)
-- [expandGroup](RemoteView.md#expandgroup)
-- [getFilter](RemoteView.md#getfilter)
-- [getFilteredItems](RemoteView.md#getfiltereditems)
-- [getGrandTotals](RemoteView.md#getgrandtotals)
-- [getGroupItemMetadataProvider](RemoteView.md#getgroupitemmetadataprovider)
-- [getGrouping](RemoteView.md#getgrouping)
-- [getGroups](RemoteView.md#getgroups)
-- [getIdPropertyName](RemoteView.md#getidpropertyname)
-- [getIdxById](RemoteView.md#getidxbyid)
-- [getItem](RemoteView.md#getitem)
-- [getItemById](RemoteView.md#getitembyid)
-- [getItemByIdx](RemoteView.md#getitembyidx)
-- [getItemMetadata](RemoteView.md#getitemmetadata)
-- [getItems](RemoteView.md#getitems)
-- [getLength](RemoteView.md#getlength)
-- [getLocalSort](RemoteView.md#getlocalsort)
-- [getPagingInfo](RemoteView.md#getpaginginfo)
-- [getRowById](RemoteView.md#getrowbyid)
-- [getRowByItem](RemoteView.md#getrowbyitem)
-- [getRows](RemoteView.md#getrows)
-- [insertItem](RemoteView.md#insertitem)
-- [mapIdsToRows](RemoteView.md#mapidstorows)
-- [mapItemsToRows](RemoteView.md#mapitemstorows)
-- [mapRowsToIds](RemoteView.md#maprowstoids)
-- [populate](RemoteView.md#populate)
-- [populateLock](RemoteView.md#populatelock)
-- [populateUnlock](RemoteView.md#populateunlock)
-- [reSort](RemoteView.md#resort)
-- [refresh](RemoteView.md#refresh)
-- [setFilter](RemoteView.md#setfilter)
-- [setFilterArgs](RemoteView.md#setfilterargs)
-- [setGroupItemMetadataProvider](RemoteView.md#setgroupitemmetadataprovider)
-- [setGrouping](RemoteView.md#setgrouping)
-- [setItems](RemoteView.md#setitems)
-- [setLocalSort](RemoteView.md#setlocalsort)
-- [setPagingOptions](RemoteView.md#setpagingoptions)
-- [setRefreshHints](RemoteView.md#setrefreshhints)
-- [setSummaryOptions](RemoteView.md#setsummaryoptions)
-- [sort](RemoteView.md#sort)
-- [sortedAddItem](RemoteView.md#sortedadditem)
-- [sortedUpdateItem](RemoteView.md#sortedupdateitem)
-- [syncGridCellCssStyles](RemoteView.md#syncgridcellcssstyles)
-- [syncGridSelection](RemoteView.md#syncgridselection)
-- [updateItem](RemoteView.md#updateitem)
+• **TEntity**
 
 ## Constructors
 
-### constructor
+### new RemoteView()
 
-• **new RemoteView**\<`TEntity`\>(`options`): [`RemoteView`](RemoteView.md)\<`TEntity`\>
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TEntity` |
+> **new RemoteView**\<`TEntity`\>(`options`): [`RemoteView`](RemoteView.md)\<`TEntity`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`RemoteViewOptions`](../interfaces/RemoteViewOptions.md) |
+##### options
+
+[`RemoteViewOptions`](../interfaces/RemoteViewOptions.md)
 
 #### Returns
 
@@ -123,207 +30,207 @@
 
 ### errormsg
 
-• **errormsg**: `string`
+> **errormsg**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L106)
 
-___
+***
 
 ### fastSort
 
-• **fastSort**: `any`
+> **fastSort**: `any`
 
 #### Defined in
 
 [src/slick/remoteview.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L67)
 
-___
+***
 
 ### idField
 
-• **idField**: `string`
+> **idField**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L115)
 
-___
+***
 
 ### method
 
-• **method**: `string`
+> **method**: `string`
 
 #### Defined in
 
 [src/slick/remoteview.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L114)
 
-___
+***
 
 ### onAjaxCall
 
-• **onAjaxCall**: [`RemoteViewAjaxCallback`](../README.md#remoteviewajaxcallback)\<`TEntity`\>
+> **onAjaxCall**: [`RemoteViewAjaxCallback`](../type-aliases/RemoteViewAjaxCallback.md)\<`TEntity`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L55)
 
-___
+***
 
 ### onDataChanged
 
-• **onDataChanged**: `EventEmitter`\<`any`, `IEventData`\>
+> **onDataChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L45)
 
-___
+***
 
 ### onDataLoaded
 
-• **onDataLoaded**: `EventEmitter`\<`any`, `IEventData`\>
+> **onDataLoaded**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L47)
 
-___
+***
 
 ### onDataLoading
 
-• **onDataLoading**: `EventEmitter`\<`any`, `IEventData`\>
+> **onDataLoading**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L46)
 
-___
+***
 
 ### onGroupCollapsed
 
-• **onGroupCollapsed**: `EventEmitter`\<`any`, `IEventData`\>
+> **onGroupCollapsed**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L54)
 
-___
+***
 
 ### onGroupExpanded
 
-• **onGroupExpanded**: `EventEmitter`\<`any`, `IEventData`\>
+> **onGroupExpanded**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L53)
 
-___
+***
 
 ### onPagingInfoChanged
 
-• **onPagingInfoChanged**: `EventEmitter`\<`any`, `IEventData`\>
+> **onPagingInfoChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L48)
 
-___
+***
 
 ### onProcessData
 
-• **onProcessData**: [`RemoteViewProcessCallback`](../README.md#remoteviewprocesscallback)\<`TEntity`\>
+> **onProcessData**: [`RemoteViewProcessCallback`](../type-aliases/RemoteViewProcessCallback.md)\<`TEntity`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L56)
 
-___
+***
 
 ### onRowCountChanged
 
-• **onRowCountChanged**: `EventEmitter`\<`any`, `IEventData`\>
+> **onRowCountChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L49)
 
-___
+***
 
 ### onRowsChanged
 
-• **onRowsChanged**: `EventEmitter`\<`any`, `IEventData`\>
+> **onRowsChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L50)
 
-___
+***
 
 ### onRowsOrCountChanged
 
-• **onRowsOrCountChanged**: `EventEmitter`\<`any`, `IEventData`\>
+> **onRowsOrCountChanged**: `EventEmitter`\<`any`, `IEventData`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L51)
 
-___
+***
 
 ### onSubmit
 
-• **onSubmit**: [`CancellableViewCallback`](../README.md#cancellableviewcallback)\<`TEntity`\>
+> **onSubmit**: [`CancellableViewCallback`](../type-aliases/CancellableViewCallback.md)\<`TEntity`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L44)
 
-___
+***
 
 ### params
 
-• **params**: `any`
+> **params**: `any`
 
 #### Defined in
 
 [src/slick/remoteview.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L107)
 
-___
+***
 
 ### rowsPerPage
 
-• **rowsPerPage**: `number`
+> **rowsPerPage**: `number`
 
 #### Defined in
 
 [src/slick/remoteview.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L105)
 
-___
+***
 
-### seekToPage
+### seekToPage?
 
-• `Optional` **seekToPage**: `number`
+> `optional` **seekToPage**: `number`
 
 #### Defined in
 
 [src/slick/remoteview.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L116)
 
-___
+***
 
 ### sortBy
 
-• **sortBy**: `string`[]
+> **sortBy**: `string`[]
 
 #### Defined in
 
 [src/slick/remoteview.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L112)
 
-___
+***
 
 ### url
 
-• **url**: `string`
+> **url**: `string`
 
 #### Defined in
 
@@ -331,15 +238,15 @@ ___
 
 ## Methods
 
-### addData
+### addData()
 
-▸ **addData**(`data`): `void`
+> **addData**(`data`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | [`ListResponse`](../interfaces/ListResponse.md)\<`TEntity`\> |
+##### data
+
+[`ListResponse`](../interfaces/ListResponse.md)\<`TEntity`\>
 
 #### Returns
 
@@ -349,17 +256,17 @@ ___
 
 [src/slick/remoteview.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L57)
 
-___
+***
 
-### addItem
+### addItem()
 
-▸ **addItem**(`item`): `void`
+> **addItem**(`item`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `TEntity` |
+##### item
+
+`TEntity`
 
 #### Returns
 
@@ -369,11 +276,11 @@ ___
 
 [src/slick/remoteview.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L89)
 
-___
+***
 
-### beginUpdate
+### beginUpdate()
 
-▸ **beginUpdate**(): `void`
+> **beginUpdate**(): `void`
 
 #### Returns
 
@@ -383,17 +290,17 @@ ___
 
 [src/slick/remoteview.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L58)
 
-___
+***
 
-### collapseAllGroups
+### collapseAllGroups()
 
-▸ **collapseAllGroups**(`level`): `void`
+> **collapseAllGroups**(`level`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `level` | `number` |
+##### level
+
+`number`
 
 #### Returns
 
@@ -403,17 +310,17 @@ ___
 
 [src/slick/remoteview.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L93)
 
-___
+***
 
-### collapseGroup
+### collapseGroup()
 
-▸ **collapseGroup**(`keys`): `void`
+> **collapseGroup**(`keys`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `keys` | `any`[] |
+##### keys
+
+`any`[]
 
 #### Returns
 
@@ -423,17 +330,17 @@ ___
 
 [src/slick/remoteview.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L96)
 
-___
+***
 
-### deleteItem
+### deleteItem()
 
-▸ **deleteItem**(`id`): `void`
+> **deleteItem**(`id`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
+##### id
+
+`any`
 
 #### Returns
 
@@ -443,11 +350,11 @@ ___
 
 [src/slick/remoteview.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L60)
 
-___
+***
 
-### endUpdate
+### endUpdate()
 
-▸ **endUpdate**(): `void`
+> **endUpdate**(): `void`
 
 #### Returns
 
@@ -457,17 +364,17 @@ ___
 
 [src/slick/remoteview.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L59)
 
-___
+***
 
-### expandAllGroups
+### expandAllGroups()
 
-▸ **expandAllGroups**(`level`): `void`
+> **expandAllGroups**(`level`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `level` | `number` |
+##### level
+
+`number`
 
 #### Returns
 
@@ -477,17 +384,17 @@ ___
 
 [src/slick/remoteview.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L94)
 
-___
+***
 
-### expandGroup
+### expandGroup()
 
-▸ **expandGroup**(`keys`): `void`
+> **expandGroup**(`keys`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `keys` | `any`[] |
+##### keys
+
+`any`[]
 
 #### Returns
 
@@ -497,25 +404,25 @@ ___
 
 [src/slick/remoteview.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L95)
 
-___
+***
 
-### getFilter
+### getFilter()
 
-▸ **getFilter**(): [`RemoteViewFilter`](../README.md#remoteviewfilter)\<`TEntity`\>
+> **getFilter**(): [`RemoteViewFilter`](../type-aliases/RemoteViewFilter.md)\<`TEntity`\>
 
 #### Returns
 
-[`RemoteViewFilter`](../README.md#remoteviewfilter)\<`TEntity`\>
+[`RemoteViewFilter`](../type-aliases/RemoteViewFilter.md)\<`TEntity`\>
 
 #### Defined in
 
 [src/slick/remoteview.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L63)
 
-___
+***
 
-### getFilteredItems
+### getFilteredItems()
 
-▸ **getFilteredItems**(): `any`
+> **getFilteredItems**(): `any`
 
 #### Returns
 
@@ -525,11 +432,11 @@ ___
 
 [src/slick/remoteview.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L64)
 
-___
+***
 
-### getGrandTotals
+### getGrandTotals()
 
-▸ **getGrandTotals**(): `any`
+> **getGrandTotals**(): `any`
 
 #### Returns
 
@@ -539,25 +446,11 @@ ___
 
 [src/slick/remoteview.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L71)
 
-___
+***
 
-### getGroupItemMetadataProvider
+### getGrouping()
 
-▸ **getGroupItemMetadataProvider**(): `GroupItemMetadataProvider`
-
-#### Returns
-
-`GroupItemMetadataProvider`
-
-#### Defined in
-
-[src/slick/remoteview.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L65)
-
-___
-
-### getGrouping
-
-▸ **getGrouping**(): [`GroupInfo`](../interfaces/GroupInfo.md)\<`TEntity`\>[]
+> **getGrouping**(): [`GroupInfo`](../interfaces/GroupInfo.md)\<`TEntity`\>[]
 
 #### Returns
 
@@ -567,11 +460,25 @@ ___
 
 [src/slick/remoteview.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L72)
 
-___
+***
 
-### getGroups
+### getGroupItemMetadataProvider()
 
-▸ **getGroups**(): `any`[]
+> **getGroupItemMetadataProvider**(): `GroupItemMetadataProvider`
+
+#### Returns
+
+`GroupItemMetadataProvider`
+
+#### Defined in
+
+[src/slick/remoteview.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L65)
+
+***
+
+### getGroups()
+
+> **getGroups**(): `any`[]
 
 #### Returns
 
@@ -581,11 +488,11 @@ ___
 
 [src/slick/remoteview.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L73)
 
-___
+***
 
-### getIdPropertyName
+### getIdPropertyName()
 
-▸ **getIdPropertyName**(): `string`
+> **getIdPropertyName**(): `string`
 
 #### Returns
 
@@ -595,17 +502,17 @@ ___
 
 [src/slick/remoteview.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L69)
 
-___
+***
 
-### getIdxById
+### getIdxById()
 
-▸ **getIdxById**(`id`): `any`
+> **getIdxById**(`id`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
+##### id
+
+`any`
 
 #### Returns
 
@@ -615,17 +522,17 @@ ___
 
 [src/slick/remoteview.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L90)
 
-___
+***
 
-### getItem
+### getItem()
 
-▸ **getItem**(`row`): `any`
+> **getItem**(`row`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `row` | `number` |
+##### row
+
+`number`
 
 #### Returns
 
@@ -635,17 +542,17 @@ ___
 
 [src/slick/remoteview.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L103)
 
-___
+***
 
-### getItemById
+### getItemById()
 
-▸ **getItemById**(`id`): `TEntity`
+> **getItemById**(`id`): `TEntity`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
+##### id
+
+`any`
 
 #### Returns
 
@@ -655,17 +562,17 @@ ___
 
 [src/slick/remoteview.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L70)
 
-___
+***
 
-### getItemByIdx
+### getItemByIdx()
 
-▸ **getItemByIdx**(`index`): `any`
+> **getItemByIdx**(`index`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `index` | `number` |
+##### index
+
+`number`
 
 #### Returns
 
@@ -675,17 +582,17 @@ ___
 
 [src/slick/remoteview.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L91)
 
-___
+***
 
-### getItemMetadata
+### getItemMetadata()
 
-▸ **getItemMetadata**(`i`): `any`
+> **getItemMetadata**(`i`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `i` | `number` |
+##### i
+
+`number`
 
 #### Returns
 
@@ -695,11 +602,11 @@ ___
 
 [src/slick/remoteview.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L87)
 
-___
+***
 
-### getItems
+### getItems()
 
-▸ **getItems**(): `TEntity`[]
+> **getItems**(): `TEntity`[]
 
 #### Returns
 
@@ -709,11 +616,11 @@ ___
 
 [src/slick/remoteview.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L61)
 
-___
+***
 
-### getLength
+### getLength()
 
-▸ **getLength**(): `number`
+> **getLength**(): `number`
 
 #### Returns
 
@@ -723,11 +630,11 @@ ___
 
 [src/slick/remoteview.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L104)
 
-___
+***
 
-### getLocalSort
+### getLocalSort()
 
-▸ **getLocalSort**(): `boolean`
+> **getLocalSort**(): `boolean`
 
 #### Returns
 
@@ -737,11 +644,11 @@ ___
 
 [src/slick/remoteview.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L108)
 
-___
+***
 
-### getPagingInfo
+### getPagingInfo()
 
-▸ **getPagingInfo**(): [`PagingInfo`](../interfaces/PagingInfo.md)
+> **getPagingInfo**(): [`PagingInfo`](../interfaces/PagingInfo.md)
 
 #### Returns
 
@@ -751,17 +658,17 @@ ___
 
 [src/slick/remoteview.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L52)
 
-___
+***
 
-### getRowById
+### getRowById()
 
-▸ **getRowById**(`id`): `number`
+> **getRowById**(`id`): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
+##### id
+
+`any`
 
 #### Returns
 
@@ -771,17 +678,17 @@ ___
 
 [src/slick/remoteview.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L74)
 
-___
+***
 
-### getRowByItem
+### getRowByItem()
 
-▸ **getRowByItem**(`item`): `number`
+> **getRowByItem**(`item`): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
+##### item
+
+`any`
 
 #### Returns
 
@@ -791,11 +698,11 @@ ___
 
 [src/slick/remoteview.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L75)
 
-___
+***
 
-### getRows
+### getRows()
 
-▸ **getRows**(): `any`[]
+> **getRows**(): `any`[]
 
 #### Returns
 
@@ -805,18 +712,21 @@ ___
 
 [src/slick/remoteview.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L76)
 
-___
+***
 
-### insertItem
+### insertItem()
 
-▸ **insertItem**(`insertBefore`, `item`): `void`
+> **insertItem**(`insertBefore`, `item`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `insertBefore` | `number` |
-| `item` | `any` |
+##### insertBefore
+
+`number`
+
+##### item
+
+`any`
 
 #### Returns
 
@@ -826,17 +736,17 @@ ___
 
 [src/slick/remoteview.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L82)
 
-___
+***
 
-### mapIdsToRows
+### mapIdsToRows()
 
-▸ **mapIdsToRows**(`idAray`): `number`[]
+> **mapIdsToRows**(`idAray`): `number`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `idAray` | `any`[] |
+##### idAray
+
+`any`[]
 
 #### Returns
 
@@ -846,17 +756,17 @@ ___
 
 [src/slick/remoteview.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L79)
 
-___
+***
 
-### mapItemsToRows
+### mapItemsToRows()
 
-▸ **mapItemsToRows**(`itemArray`): `any`[]
+> **mapItemsToRows**(`itemArray`): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `itemArray` | `any`[] |
+##### itemArray
+
+`any`[]
 
 #### Returns
 
@@ -866,17 +776,17 @@ ___
 
 [src/slick/remoteview.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L77)
 
-___
+***
 
-### mapRowsToIds
+### mapRowsToIds()
 
-▸ **mapRowsToIds**(`rowArray`): `any`[]
+> **mapRowsToIds**(`rowArray`): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `rowArray` | `number`[] |
+##### rowArray
+
+`number`[]
 
 #### Returns
 
@@ -886,11 +796,11 @@ ___
 
 [src/slick/remoteview.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L78)
 
-___
+***
 
-### populate
+### populate()
 
-▸ **populate**(): `void`
+> **populate**(): `void`
 
 #### Returns
 
@@ -900,11 +810,11 @@ ___
 
 [src/slick/remoteview.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L100)
 
-___
+***
 
-### populateLock
+### populateLock()
 
-▸ **populateLock**(): `void`
+> **populateLock**(): `void`
 
 #### Returns
 
@@ -914,11 +824,11 @@ ___
 
 [src/slick/remoteview.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L101)
 
-___
+***
 
-### populateUnlock
+### populateUnlock()
 
-▸ **populateUnlock**(): `void`
+> **populateUnlock**(): `void`
 
 #### Returns
 
@@ -928,25 +838,11 @@ ___
 
 [src/slick/remoteview.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L102)
 
-___
+***
 
-### reSort
+### refresh()
 
-▸ **reSort**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/slick/remoteview.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L111)
-
-___
-
-### refresh
-
-▸ **refresh**(): `void`
+> **refresh**(): `void`
 
 #### Returns
 
@@ -956,17 +852,31 @@ ___
 
 [src/slick/remoteview.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L99)
 
-___
+***
 
-### setFilter
+### reSort()
 
-▸ **setFilter**(`filter`): `void`
+> **reSort**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/slick/remoteview.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L111)
+
+***
+
+### setFilter()
+
+> **setFilter**(`filter`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `filter` | [`RemoteViewFilter`](../README.md#remoteviewfilter)\<`TEntity`\> |
+##### filter
+
+[`RemoteViewFilter`](../type-aliases/RemoteViewFilter.md)\<`TEntity`\>
 
 #### Returns
 
@@ -976,17 +886,17 @@ ___
 
 [src/slick/remoteview.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L62)
 
-___
+***
 
-### setFilterArgs
+### setFilterArgs()
 
-▸ **setFilterArgs**(`args`): `void`
+> **setFilterArgs**(`args`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `any` |
+##### args
+
+`any`
 
 #### Returns
 
@@ -996,37 +906,17 @@ ___
 
 [src/slick/remoteview.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L80)
 
-___
+***
 
-### setGroupItemMetadataProvider
+### setGrouping()
 
-▸ **setGroupItemMetadataProvider**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `GroupItemMetadataProvider` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/slick/remoteview.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L66)
-
-___
-
-### setGrouping
-
-▸ **setGrouping**(`groupInfo`): `void`
+> **setGrouping**(`groupInfo`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `groupInfo` | [`GroupInfo`](../interfaces/GroupInfo.md)\<`TEntity`\>[] |
+##### groupInfo
+
+[`GroupInfo`](../interfaces/GroupInfo.md)\<`TEntity`\>[]
 
 #### Returns
 
@@ -1036,18 +926,41 @@ ___
 
 [src/slick/remoteview.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L92)
 
-___
+***
 
-### setItems
+### setGroupItemMetadataProvider()
 
-▸ **setItems**(`items`, `newIdProperty?`): `void`
+> **setGroupItemMetadataProvider**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `items` | `any`[] |
-| `newIdProperty?` | `string` \| `boolean` |
+##### value
+
+`GroupItemMetadataProvider`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/slick/remoteview.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L66)
+
+***
+
+### setItems()
+
+> **setItems**(`items`, `newIdProperty`?): `void`
+
+#### Parameters
+
+##### items
+
+`any`[]
+
+##### newIdProperty?
+
+`string` | `boolean`
 
 #### Returns
 
@@ -1057,17 +970,17 @@ ___
 
 [src/slick/remoteview.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L68)
 
-___
+***
 
-### setLocalSort
+### setLocalSort()
 
-▸ **setLocalSort**(`value`): `void`
+> **setLocalSort**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `boolean` |
+##### value
+
+`boolean`
 
 #### Returns
 
@@ -1077,17 +990,17 @@ ___
 
 [src/slick/remoteview.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L109)
 
-___
+***
 
-### setPagingOptions
+### setPagingOptions()
 
-▸ **setPagingOptions**(`options`): `void`
+> **setPagingOptions**(`options`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`PagingOptions`](../interfaces/PagingOptions.md) |
+##### options
+
+[`PagingOptions`](../interfaces/PagingOptions.md)
 
 #### Returns
 
@@ -1097,17 +1010,17 @@ ___
 
 [src/slick/remoteview.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L98)
 
-___
+***
 
-### setRefreshHints
+### setRefreshHints()
 
-▸ **setRefreshHints**(`hints`): `void`
+> **setRefreshHints**(`hints`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `hints` | `any`[] |
+##### hints
+
+`any`[]
 
 #### Returns
 
@@ -1117,17 +1030,17 @@ ___
 
 [src/slick/remoteview.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L81)
 
-___
+***
 
-### setSummaryOptions
+### setSummaryOptions()
 
-▸ **setSummaryOptions**(`options`): `void`
+> **setSummaryOptions**(`options`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`SummaryOptions`](../interfaces/SummaryOptions.md) |
+##### options
+
+[`SummaryOptions`](../interfaces/SummaryOptions.md)
 
 #### Returns
 
@@ -1137,18 +1050,21 @@ ___
 
 [src/slick/remoteview.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L97)
 
-___
+***
 
-### sort
+### sort()
 
-▸ **sort**(`comparer?`, `ascending?`): `void`
+> **sort**(`comparer`?, `ascending`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `comparer?` | (`a`: `any`, `b`: `any`) => `number` |
-| `ascending?` | `boolean` |
+##### comparer?
+
+(`a`, `b`) => `number`
+
+##### ascending?
+
+`boolean`
 
 #### Returns
 
@@ -1158,17 +1074,17 @@ ___
 
 [src/slick/remoteview.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L110)
 
-___
+***
 
-### sortedAddItem
+### sortedAddItem()
 
-▸ **sortedAddItem**(`item`): `void`
+> **sortedAddItem**(`item`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
+##### item
+
+`any`
 
 #### Returns
 
@@ -1178,18 +1094,21 @@ ___
 
 [src/slick/remoteview.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L83)
 
-___
+***
 
-### sortedUpdateItem
+### sortedUpdateItem()
 
-▸ **sortedUpdateItem**(`id`, `item`): `void`
+> **sortedUpdateItem**(`id`, `item`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
-| `item` | `any` |
+##### id
+
+`any`
+
+##### item
+
+`any`
 
 #### Returns
 
@@ -1199,18 +1118,21 @@ ___
 
 [src/slick/remoteview.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L84)
 
-___
+***
 
-### syncGridCellCssStyles
+### syncGridCellCssStyles()
 
-▸ **syncGridCellCssStyles**(`grid`, `key`): `void`
+> **syncGridCellCssStyles**(`grid`, `key`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `grid` | `any` |
-| `key` | `string` |
+##### grid
+
+`any`
+
+##### key
+
+`string`
 
 #### Returns
 
@@ -1220,19 +1142,25 @@ ___
 
 [src/slick/remoteview.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L86)
 
-___
+***
 
-### syncGridSelection
+### syncGridSelection()
 
-▸ **syncGridSelection**(`grid`, `preserveHidden?`, `preserveHiddenOnSelectionChange?`): `void`
+> **syncGridSelection**(`grid`, `preserveHidden`?, `preserveHiddenOnSelectionChange`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `grid` | `any` |
-| `preserveHidden?` | `boolean` |
-| `preserveHiddenOnSelectionChange?` | `boolean` |
+##### grid
+
+`any`
+
+##### preserveHidden?
+
+`boolean`
+
+##### preserveHiddenOnSelectionChange?
+
+`boolean`
 
 #### Returns
 
@@ -1242,18 +1170,21 @@ ___
 
 [src/slick/remoteview.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L85)
 
-___
+***
 
-### updateItem
+### updateItem()
 
-▸ **updateItem**(`id`, `item`): `void`
+> **updateItem**(`id`, `item`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
-| `item` | `TEntity` |
+##### id
+
+`any`
+
+##### item
+
+`TEntity`
 
 #### Returns
 

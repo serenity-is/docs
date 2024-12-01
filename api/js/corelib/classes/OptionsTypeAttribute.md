@@ -2,27 +2,17 @@
 
 # Class: OptionsTypeAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](OptionsTypeAttribute.md#constructor)
-
-### Properties
-
-- [value](OptionsTypeAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new OptionsTypeAttribute()
 
-• **new OptionsTypeAttribute**(`value`): [`OptionsTypeAttribute`](OptionsTypeAttribute.md)
+> **new OptionsTypeAttribute**(`value`): [`OptionsTypeAttribute`](OptionsTypeAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `Function` |
+##### value
+
+`Function`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `Function`
+> **value**: `Function`
 
 #### Defined in
 

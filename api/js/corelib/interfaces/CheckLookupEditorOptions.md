@@ -2,117 +2,102 @@
 
 # Interface: CheckLookupEditorOptions
 
-## Table of contents
-
-### Properties
-
-- [cascadeField](CheckLookupEditorOptions.md#cascadefield)
-- [cascadeFrom](CheckLookupEditorOptions.md#cascadefrom)
-- [cascadeValue](CheckLookupEditorOptions.md#cascadevalue)
-- [checkedOnTop](CheckLookupEditorOptions.md#checkedontop)
-- [delimited](CheckLookupEditorOptions.md#delimited)
-- [filterField](CheckLookupEditorOptions.md#filterfield)
-- [filterValue](CheckLookupEditorOptions.md#filtervalue)
-- [hideSearch](CheckLookupEditorOptions.md#hidesearch)
-- [lookupKey](CheckLookupEditorOptions.md#lookupkey)
-- [showSelectAll](CheckLookupEditorOptions.md#showselectall)
-
 ## Properties
 
-### cascadeField
+### cascadeField?
 
-• `Optional` **cascadeField**: `string`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L468)
-
-___
-
-### cascadeFrom
-
-• `Optional` **cascadeFrom**: `string`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L467)
-
-___
-
-### cascadeValue
-
-• `Optional` **cascadeValue**: `any`
+> `optional` **cascadeField**: `string`
 
 #### Defined in
 
 [src/ui/editors/checktreeeditor.ts:469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L469)
 
-___
+***
 
-### checkedOnTop
+### cascadeFrom?
 
-• `Optional` **checkedOnTop**: `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L463)
-
-___
-
-### delimited
-
-• `Optional` **delimited**: `boolean`
+> `optional` **cascadeFrom**: `string`
 
 #### Defined in
 
-[src/ui/editors/checktreeeditor.ts:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L466)
+[src/ui/editors/checktreeeditor.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L468)
 
-___
+***
 
-### filterField
+### cascadeValue?
 
-• `Optional` **filterField**: `string`
+> `optional` **cascadeValue**: `any`
 
 #### Defined in
 
 [src/ui/editors/checktreeeditor.ts:470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L470)
 
-___
+***
 
-### filterValue
+### checkedOnTop?
 
-• `Optional` **filterValue**: `any`
+> `optional` **checkedOnTop**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/checktreeeditor.ts:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L464)
+
+***
+
+### delimited?
+
+> `optional` **delimited**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/checktreeeditor.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L467)
+
+***
+
+### filterField?
+
+> `optional` **filterField**: `string`
 
 #### Defined in
 
 [src/ui/editors/checktreeeditor.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L471)
 
-___
+***
 
-### hideSearch
+### filterValue?
 
-• `Optional` **hideSearch**: `boolean`
+> `optional` **filterValue**: `any`
+
+#### Defined in
+
+[src/ui/editors/checktreeeditor.ts:472](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L472)
+
+***
+
+### hideSearch?
+
+> `optional` **hideSearch**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/checktreeeditor.ts:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L466)
+
+***
+
+### lookupKey?
+
+> `optional` **lookupKey**: `string`
+
+#### Defined in
+
+[src/ui/editors/checktreeeditor.ts:463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L463)
+
+***
+
+### showSelectAll?
+
+> `optional` **showSelectAll**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/checktreeeditor.ts:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L465)
-
-___
-
-### lookupKey
-
-• `Optional` **lookupKey**: `string`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:462](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L462)
-
-___
-
-### showSelectAll
-
-• `Optional` **showSelectAll**: `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L464)

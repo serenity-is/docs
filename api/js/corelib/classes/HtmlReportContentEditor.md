@@ -2,89 +2,25 @@
 
 # Class: HtmlReportContentEditor\<P\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `P` | extends [`HtmlContentEditorOptions`](../interfaces/HtmlContentEditorOptions.md) = [`HtmlContentEditorOptions`](../interfaces/HtmlContentEditorOptions.md) |
-
-## Hierarchy
+## Extends
 
 - [`HtmlContentEditor`](HtmlContentEditor.md)\<`P`\>
 
-  ↳ **`HtmlReportContentEditor`**
+## Type Parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](HtmlReportContentEditor.md#constructor)
-
-### Properties
-
-- [domNode](HtmlReportContentEditor.md#domnode)
-- [idPrefix](HtmlReportContentEditor.md#idprefix)
-- [options](HtmlReportContentEditor.md#options)
-- [uniqueName](HtmlReportContentEditor.md#uniquename)
-- [CKEditorBasePath](HtmlReportContentEditor.md#ckeditorbasepath)
-- [CKEditorVer](HtmlReportContentEditor.md#ckeditorver)
-- [typeInfo](HtmlReportContentEditor.md#typeinfo)
-
-### Accessors
-
-- [element](HtmlReportContentEditor.md#element)
-- [props](HtmlReportContentEditor.md#props)
-- [value](HtmlReportContentEditor.md#value)
-
-### Methods
-
-- [addCssClass](HtmlReportContentEditor.md#addcssclass)
-- [addValidationRule](HtmlReportContentEditor.md#addvalidationrule)
-- [change](HtmlReportContentEditor.md#change)
-- [changeSelect2](HtmlReportContentEditor.md#changeselect2)
-- [destroy](HtmlReportContentEditor.md#destroy)
-- [getConfig](HtmlReportContentEditor.md#getconfig)
-- [getCssClass](HtmlReportContentEditor.md#getcssclass)
-- [getCustomAttribute](HtmlReportContentEditor.md#getcustomattribute)
-- [getEditorInstance](HtmlReportContentEditor.md#geteditorinstance)
-- [getFieldElement](HtmlReportContentEditor.md#getfieldelement)
-- [getGridField](HtmlReportContentEditor.md#getgridfield)
-- [getLanguage](HtmlReportContentEditor.md#getlanguage)
-- [get\_readOnly](HtmlReportContentEditor.md#get_readonly)
-- [get\_value](HtmlReportContentEditor.md#get_value)
-- [init](HtmlReportContentEditor.md#init)
-- [instanceReady](HtmlReportContentEditor.md#instanceready)
-- [internalInit](HtmlReportContentEditor.md#internalinit)
-- [internalRenderContents](HtmlReportContentEditor.md#internalrendercontents)
-- [render](HtmlReportContentEditor.md#render)
-- [renderContents](HtmlReportContentEditor.md#rendercontents)
-- [set\_readOnly](HtmlReportContentEditor.md#set_readonly)
-- [set\_value](HtmlReportContentEditor.md#set_value)
-- [syncOrAsyncThen](HtmlReportContentEditor.md#syncorasyncthen)
-- [useIdPrefix](HtmlReportContentEditor.md#useidprefix)
-- [create](HtmlReportContentEditor.md#create)
-- [createDefaultElement](HtmlReportContentEditor.md#createdefaultelement)
-- [getCKEditorBasePath](HtmlReportContentEditor.md#getckeditorbasepath)
-- [getWidgetName](HtmlReportContentEditor.md#getwidgetname)
-- [includeCKEditor](HtmlReportContentEditor.md#includeckeditor)
+• **P** *extends* [`HtmlContentEditorOptions`](../interfaces/HtmlContentEditorOptions.md) = [`HtmlContentEditorOptions`](../interfaces/HtmlContentEditorOptions.md)
 
 ## Constructors
 
-### constructor
+### new HtmlReportContentEditor()
 
-• **new HtmlReportContentEditor**\<`P`\>(`props`): [`HtmlReportContentEditor`](HtmlReportContentEditor.md)\<`P`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `P` | extends [`HtmlContentEditorOptions`](../interfaces/HtmlContentEditorOptions.md) = [`HtmlContentEditorOptions`](../interfaces/HtmlContentEditorOptions.md) |
+> **new HtmlReportContentEditor**\<`P`\>(`props`): [`HtmlReportContentEditor`](HtmlReportContentEditor.md)\<`P`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `props` | [`EditorProps`](../README.md#editorprops)\<`P`\> |
+##### props
+
+[`EditorProps`](../type-aliases/EditorProps.md)\<`P`\>
 
 #### Returns
 
@@ -92,460 +28,413 @@
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[constructor](HtmlContentEditor.md#constructor)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`constructor`](HtmlContentEditor.md#constructors)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L25)
+[src/ui/editors/htmlcontenteditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L25)
 
 ## Properties
 
 ### domNode
 
-• `Readonly` **domNode**: `HTMLTextAreaElement`
+> `readonly` **domNode**: `HTMLTextAreaElement`
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[domNode](HtmlContentEditor.md#domnode)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`domNode`](HtmlContentEditor.md#domnode)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L21)
+[src/ui/editors/htmlcontenteditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L21)
 
-___
+***
 
 ### idPrefix
 
-• `Readonly` **idPrefix**: `string`
+> `readonly` **idPrefix**: `string`
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[idPrefix](HtmlContentEditor.md#idprefix)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
-
-___
-
-### options
-
-• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<[`EditorProps`](../README.md#editorprops)\<`P`\>\>
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[options](HtmlContentEditor.md#options)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
-
-___
-
-### uniqueName
-
-• `Protected` `Readonly` **uniqueName**: `string`
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[uniqueName](HtmlContentEditor.md#uniquename)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`idPrefix`](HtmlContentEditor.md#idprefix)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
-___
+***
+
+### options
+
+> `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<[`EditorProps`](../type-aliases/EditorProps.md)\<`P`\>\>
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`options`](HtmlContentEditor.md#options)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
+
+***
+
+### uniqueName
+
+> `readonly` **uniqueName**: `string`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`uniqueName`](HtmlContentEditor.md#uniquename)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
+
+***
 
 ### CKEditorBasePath
 
-▪ `Static` **CKEditorBasePath**: `string`
+> `static` **CKEditorBasePath**: `string`
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[CKEditorBasePath](HtmlContentEditor.md#ckeditorbasepath)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`CKEditorBasePath`](HtmlContentEditor.md#ckeditorbasepath)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L198)
+[src/ui/editors/htmlcontenteditor.tsx:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L198)
 
-___
+***
 
 ### CKEditorVer
 
-▪ `Static` **CKEditorVer**: `string` = `"4.22.1"`
+> `static` **CKEditorVer**: `string` = `"4.22.1"`
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[CKEditorVer](HtmlContentEditor.md#ckeditorver)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`CKEditorVer`](HtmlContentEditor.md#ckeditorver)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L197)
+[src/ui/editors/htmlcontenteditor.tsx:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L197)
 
-___
+***
+
+### isComponent
+
+> `readonly` `static` **isComponent**: `true` = `true`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`isComponent`](HtmlContentEditor.md#iscomponent)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L223)
+
+***
 
 ### typeInfo
 
-▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.EditorWidget"``\>
+> `static` **typeInfo**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity.EditorWidget"`\>
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[typeInfo](HtmlContentEditor.md#typeinfo)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`typeInfo`](HtmlContentEditor.md#typeinfo)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L202)
+[src/ui/editors/editorwidget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L17)
 
 ## Accessors
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+#### Get Signature
+
+> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
-#### Returns
+##### Returns
 
 [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
-HtmlContentEditor.element
+[`HtmlContentEditor`](HtmlContentEditor.md).[`element`](HtmlContentEditor.md#element)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+
+***
+
+### props
+
+#### Get Signature
+
+> **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
+
+##### Returns
+
+[`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`props`](HtmlContentEditor.md#props)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+
+***
+
+### readOnly
+
+#### Get Signature
+
+> **get** **readOnly**(): `boolean`
+
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
+> **set** **readOnly**(`value`): `void`
+
+##### Parameters
+
+###### value
+
+`boolean`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`readOnly`](HtmlContentEditor.md#readonly)
+
+#### Defined in
+
+[src/ui/editors/editorwidget.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L23)
+
+***
+
+### value
+
+#### Get Signature
+
+> **get** **value**(): `string`
+
+##### Returns
+
+`string`
+
+#### Set Signature
+
+> **set** **value**(`v`): `void`
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`value`](HtmlContentEditor.md#value)
+
+#### Defined in
+
+[src/ui/editors/htmlcontenteditor.tsx:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L162)
+
+## Methods
+
+### addCssClass()
+
+> `protected` **addCssClass**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`addCssClass`](HtmlContentEditor.md#addcssclass)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
-___
+***
 
-### props
+### addValidationRule()
 
-• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+#### Call Signature
 
-#### Returns
+> **addValidationRule**(`rule`, `uniqueName`?): `void`
 
-[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+##### Parameters
 
-#### Inherited from
+###### rule
 
-HtmlContentEditor.props
+(`input`) => `string`
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
-
-___
-
-### value
-
-• `get` **value**(): `string`
-
-#### Returns
+###### uniqueName?
 
 `string`
 
-#### Inherited from
-
-HtmlContentEditor.value
-
-#### Defined in
-
-[src/ui/editors/htmlcontenteditor.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L162)
-
-• `set` **value**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
-HtmlContentEditor.value
+[`HtmlContentEditor`](HtmlContentEditor.md).[`addValidationRule`](HtmlContentEditor.md#addvalidationrule)
 
-#### Defined in
-
-[src/ui/editors/htmlcontenteditor.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L173)
-
-## Methods
-
-### addCssClass
-
-▸ **addCssClass**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[addCssClass](HtmlContentEditor.md#addcssclass)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
-
-___
-
-### addValidationRule
-
-▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
-| `uniqueName?` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[addValidationRule](HtmlContentEditor.md#addvalidationrule)
-
-#### Defined in
+##### Defined in
 
 [src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
 
-▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+#### Call Signature
 
-#### Parameters
+> **addValidationRule**(`uniqueName`, `rule`): `void`
 
-| Name | Type |
-| :------ | :------ |
-| `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
+##### Parameters
 
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[addValidationRule](HtmlContentEditor.md#addvalidationrule)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
-___
-
-### change
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `Event`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[change](HtmlContentEditor.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
-
-___
-
-### changeSelect2
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `Event`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[changeSelect2](HtmlContentEditor.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
-
-___
-
-### destroy
-
-▸ **destroy**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[destroy](HtmlContentEditor.md#destroy)
-
-#### Defined in
-
-[src/ui/editors/htmlcontenteditor.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L146)
-
-___
-
-### getConfig
-
-▸ **getConfig**(): [`CKEditorConfig`](../interfaces/CKEditorConfig.md)
-
-#### Returns
-
-[`CKEditorConfig`](../interfaces/CKEditorConfig.md)
-
-#### Overrides
-
-[HtmlContentEditor](HtmlContentEditor.md).[getConfig](HtmlContentEditor.md#getconfig)
-
-#### Defined in
-
-[src/ui/editors/htmlcontenteditor.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L255)
-
-___
-
-### getCssClass
-
-▸ **getCssClass**(): `string`
-
-#### Returns
+###### uniqueName
 
 `string`
 
-#### Inherited from
+###### rule
 
-[HtmlContentEditor](HtmlContentEditor.md).[getCssClass](HtmlContentEditor.md#getcssclass)
+(`input`) => `string`
 
-#### Defined in
+##### Returns
 
-[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
+`void`
 
-___
+##### Inherited from
 
-### getCustomAttribute
+[`HtmlContentEditor`](HtmlContentEditor.md).[`addValidationRule`](HtmlContentEditor.md#addvalidationrule)
 
-▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+##### Defined in
 
-#### Type parameters
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
-| Name |
-| :------ |
-| `TAttr` |
+***
+
+### afterRender()
+
+> `protected` **afterRender**(`callback`): `void`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
-| `inherit` | `boolean` | `true` |
+##### callback
+
+() => `void`
 
 #### Returns
 
-`TAttr`
+`void`
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[getCustomAttribute](HtmlContentEditor.md#getcustomattribute)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`afterRender`](HtmlContentEditor.md#afterrender)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
-___
+***
 
-### getEditorInstance
+### byId()
 
-▸ **getEditorInstance**(): `any`
+> `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
-#### Returns
+#### Type Parameters
 
-`any`
+• **TElement** *extends* `HTMLElement` = `HTMLElement`
 
-#### Inherited from
+#### Parameters
 
-[HtmlContentEditor](HtmlContentEditor.md).[getEditorInstance](HtmlContentEditor.md#geteditorinstance)
+##### id
 
-#### Defined in
-
-[src/ui/editors/htmlcontenteditor.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L141)
-
-___
-
-### getFieldElement
-
-▸ **getFieldElement**(): `HTMLElement`
+`string`
 
 #### Returns
 
-`HTMLElement`
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[getFieldElement](HtmlContentEditor.md#getfieldelement)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`byId`](HtmlContentEditor.md#byid)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
 
-___
+***
 
-### getGridField
+### change()
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **change**(`handler`): `void`
 
-#### Returns
+#### Parameters
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+##### handler
 
-#### Inherited from
-
-[HtmlContentEditor](HtmlContentEditor.md).[getGridField](HtmlContentEditor.md#getgridfield)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
-
-___
-
-### getLanguage
-
-▸ **getLanguage**(): `string`
+(`e`) => `void`
 
 #### Returns
 
-`string`
+`void`
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[getLanguage](HtmlContentEditor.md#getlanguage)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`change`](HtmlContentEditor.md#change)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L72)
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
-___
+***
 
-### get\_readOnly
+### changeSelect2()
 
-▸ **get_readOnly**(): `boolean`
+> **changeSelect2**(`handler`): `void`
+
+#### Parameters
+
+##### handler
+
+(`e`) => `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`changeSelect2`](HtmlContentEditor.md#changeselect2)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L122)
+
+***
+
+### deferRender()
+
+> `protected` **deferRender**(): `boolean`
 
 #### Returns
 
@@ -553,17 +442,81 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[get_readOnly](HtmlContentEditor.md#get_readonly)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`deferRender`](HtmlContentEditor.md#deferrender)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L177)
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
-___
+***
 
-### get\_value
+### destroy()
 
-▸ **get_value**(): `string`
+> **destroy**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`destroy`](HtmlContentEditor.md#destroy)
+
+#### Defined in
+
+[src/ui/editors/htmlcontenteditor.tsx:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L146)
+
+***
+
+### findById()
+
+> `protected` **findById**\<`TElement`\>(`id`): `TElement`
+
+#### Type Parameters
+
+• **TElement** *extends* `HTMLElement` = `HTMLElement`
+
+#### Parameters
+
+##### id
+
+`string`
+
+#### Returns
+
+`TElement`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`findById`](HtmlContentEditor.md#findbyid)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+
+***
+
+### get\_readOnly()
+
+> **get\_readOnly**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`get_readOnly`](HtmlContentEditor.md#get_readonly)
+
+#### Defined in
+
+[src/ui/editors/htmlcontenteditor.tsx:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L177)
+
+***
+
+### get\_value()
+
+> **get\_value**(): `string`
 
 #### Returns
 
@@ -571,17 +524,139 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[get_value](HtmlContentEditor.md#get_value)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`get_value`](HtmlContentEditor.md#get_value)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L152)
+[src/ui/editors/htmlcontenteditor.tsx:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L152)
 
-___
+***
 
-### init
+### getConfig()
 
-▸ **init**(): `this`
+> `protected` **getConfig**(): [`CKEditorConfig`](../interfaces/CKEditorConfig.md)
+
+#### Returns
+
+[`CKEditorConfig`](../interfaces/CKEditorConfig.md)
+
+#### Overrides
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getConfig`](HtmlContentEditor.md#getconfig)
+
+#### Defined in
+
+[src/ui/editors/htmlcontenteditor.tsx:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L252)
+
+***
+
+### getCssClass()
+
+> `protected` **getCssClass**(): `string`
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getCssClass`](HtmlContentEditor.md#getcssclass)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
+
+***
+
+### getCustomAttribute()
+
+> `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
+
+#### Type Parameters
+
+• **TAttr**
+
+#### Parameters
+
+##### attrType
+
+(...`args`) => `TAttr`
+
+##### inherit
+
+`boolean` = `true`
+
+#### Returns
+
+`TAttr`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getCustomAttribute`](HtmlContentEditor.md#getcustomattribute)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+***
+
+### getEditorInstance()
+
+> `protected` **getEditorInstance**(): `any`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getEditorInstance`](HtmlContentEditor.md#geteditorinstance)
+
+#### Defined in
+
+[src/ui/editors/htmlcontenteditor.tsx:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L141)
+
+***
+
+### getGridField()
+
+> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getGridField`](HtmlContentEditor.md#getgridfield)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
+
+***
+
+### getLanguage()
+
+> `protected` **getLanguage**(): `string`
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getLanguage`](HtmlContentEditor.md#getlanguage)
+
+#### Defined in
+
+[src/ui/editors/htmlcontenteditor.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L72)
+
+***
+
+### init()
+
+> **init**(): `this`
 
 #### Returns
 
@@ -589,23 +664,23 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[init](HtmlContentEditor.md#init)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`init`](HtmlContentEditor.md#init)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
+[src/ui/widgets/widget.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L157)
 
-___
+***
 
-### instanceReady
+### instanceReady()
 
-▸ **instanceReady**(`x`): `void`
+> `protected` **instanceReady**(`x`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+##### x
+
+`any`
 
 #### Returns
 
@@ -613,17 +688,17 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[instanceReady](HtmlContentEditor.md#instanceready)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`instanceReady`](HtmlContentEditor.md#instanceready)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L60)
+[src/ui/editors/htmlcontenteditor.tsx:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L60)
 
-___
+***
 
-### internalInit
+### internalRenderContents()
 
-▸ **internalInit**(): `void`
+> **internalRenderContents**(): `void`
 
 #### Returns
 
@@ -631,35 +706,35 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[internalInit](HtmlContentEditor.md#internalinit)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`internalRenderContents`](HtmlContentEditor.md#internalrendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+[src/ui/widgets/widget.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L177)
 
-___
+***
 
-### internalRenderContents
+### legacyTemplateRender()
 
-▸ **internalRenderContents**(): `void`
+> `protected` **legacyTemplateRender**(): `boolean`
 
 #### Returns
 
-`void`
+`boolean`
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[internalRenderContents](HtmlContentEditor.md#internalrendercontents)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`legacyTemplateRender`](HtmlContentEditor.md#legacytemplaterender)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
+[src/ui/widgets/widget.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L194)
 
-___
+***
 
-### render
+### render()
 
-▸ **render**(): `any`
+> **render**(): `any`
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -671,17 +746,17 @@ this method should not be overridden. Override renderContents() instead.
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[render](HtmlContentEditor.md#render)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`render`](HtmlContentEditor.md#render)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
+[src/ui/widgets/widget.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L167)
 
-___
+***
 
-### renderContents
+### renderContents()
 
-▸ **renderContents**(): `any`
+> `protected` **renderContents**(): `any`
 
 #### Returns
 
@@ -689,23 +764,23 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[renderContents](HtmlContentEditor.md#rendercontents)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`renderContents`](HtmlContentEditor.md#rendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L178)
+[src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
 
-___
+***
 
-### set\_readOnly
+### set\_readOnly()
 
-▸ **set_readOnly**(`value`): `void`
+> **set\_readOnly**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `boolean` |
+##### value
+
+`boolean`
 
 #### Returns
 
@@ -713,23 +788,23 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[set_readOnly](HtmlContentEditor.md#set_readonly)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`set_readOnly`](HtmlContentEditor.md#set_readonly)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L181)
+[src/ui/editors/htmlcontenteditor.tsx:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L181)
 
-___
+***
 
-### set\_value
+### set\_value()
 
-▸ **set_value**(`value`): `void`
+> **set\_value**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -737,31 +812,35 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[set_value](HtmlContentEditor.md#set_value)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`set_value`](HtmlContentEditor.md#set_value)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L166)
+[src/ui/editors/htmlcontenteditor.tsx:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L166)
 
-___
+***
 
-### syncOrAsyncThen
+### syncOrAsyncThen()
 
-▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+> `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `syncMethod` | () => `T` |
-| `asyncMethod` | () => `PromiseLike`\<`T`\> |
-| `then` | (`v`: `T`) => `void` |
+##### syncMethod
+
+() => `T`
+
+##### asyncMethod
+
+() => `PromiseLike`\<`T`\>
+
+##### then
+
+(`v`) => `void`
 
 #### Returns
 
@@ -769,48 +848,47 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[syncOrAsyncThen](HtmlContentEditor.md#syncorasyncthen)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`syncOrAsyncThen`](HtmlContentEditor.md#syncorasyncthen)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
+[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
 
-___
+***
 
-### useIdPrefix
+### useIdPrefix()
 
-▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
+> `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
 #### Returns
 
-[`IdPrefixType`](../README.md#idprefixtype)
+[`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[useIdPrefix](HtmlContentEditor.md#useidprefix)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`useIdPrefix`](HtmlContentEditor.md#useidprefix)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
+[src/ui/widgets/widget.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L218)
 
-___
+***
 
-### create
+### create()
 
-▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
+> `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
-| `P` | `P` |
+• **TWidget** *extends* [`Widget`](Widget.md)\<`P`\>
+
+• **P**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
+##### params
+
+[`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\>
 
 #### Returns
 
@@ -818,17 +896,17 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[create](HtmlContentEditor.md#create)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`create`](HtmlContentEditor.md#create)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+[src/ui/widgets/widget.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L130)
 
-___
+***
 
-### createDefaultElement
+### createDefaultElement()
 
-▸ **createDefaultElement**(): `HTMLTextAreaElement`
+> `static` **createDefaultElement**(): `HTMLTextAreaElement`
 
 #### Returns
 
@@ -836,17 +914,17 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[createDefaultElement](HtmlContentEditor.md#createdefaultelement)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`createDefaultElement`](HtmlContentEditor.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L23)
+[src/ui/editors/htmlcontenteditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L23)
 
-___
+***
 
-### getCKEditorBasePath
+### getCKEditorBasePath()
 
-▸ **getCKEditorBasePath**(): `string`
+> `static` **getCKEditorBasePath**(): `string`
 
 #### Returns
 
@@ -854,23 +932,23 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[getCKEditorBasePath](HtmlContentEditor.md#getckeditorbasepath)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getCKEditorBasePath`](HtmlContentEditor.md#getckeditorbasepath)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L200)
+[src/ui/editors/htmlcontenteditor.tsx:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L200)
 
-___
+***
 
-### getWidgetName
+### getWidgetName()
 
-▸ **getWidgetName**(`type`): `string`
+> `static` **getWidgetName**(`type`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `Function` |
+##### type
+
+`Function`
 
 #### Returns
 
@@ -878,23 +956,23 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[getWidgetName](HtmlContentEditor.md#getwidgetname)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`getWidgetName`](HtmlContentEditor.md#getwidgetname)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
 
-___
+***
 
-### includeCKEditor
+### includeCKEditor()
 
-▸ **includeCKEditor**(`then`): `void`
+> `static` **includeCKEditor**(`then`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `then` | () => `void` |
+##### then
+
+() => `void`
 
 #### Returns
 
@@ -902,8 +980,8 @@ ___
 
 #### Inherited from
 
-[HtmlContentEditor](HtmlContentEditor.md).[includeCKEditor](HtmlContentEditor.md#includeckeditor)
+[`HtmlContentEditor`](HtmlContentEditor.md).[`includeCKEditor`](HtmlContentEditor.md#includeckeditor)
 
 #### Defined in
 
-[src/ui/editors/htmlcontenteditor.ts:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.ts#L215)
+[src/ui/editors/htmlcontenteditor.tsx:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L215)

@@ -2,81 +2,19 @@
 
 # Interface: Select2Options
 
-## Table of contents
-
-### Properties
-
-- [adaptContainerCssClass](Select2Options.md#adaptcontainercssclass)
-- [adaptDropdownCssClass](Select2Options.md#adaptdropdowncssclass)
-- [ajax](Select2Options.md#ajax)
-- [allowClear](Select2Options.md#allowclear)
-- [blurOnChange](Select2Options.md#bluronchange)
-- [closeOnSelect](Select2Options.md#closeonselect)
-- [containerCss](Select2Options.md#containercss)
-- [containerCssClass](Select2Options.md#containercssclass)
-- [createSearchChoice](Select2Options.md#createsearchchoice)
-- [createSearchChoicePosition](Select2Options.md#createsearchchoiceposition)
-- [data](Select2Options.md#data)
-- [dropdownAutoWidth](Select2Options.md#dropdownautowidth)
-- [dropdownCss](Select2Options.md#dropdowncss)
-- [dropdownCssClass](Select2Options.md#dropdowncssclass)
-- [dropdownParent](Select2Options.md#dropdownparent)
-- [element](Select2Options.md#element)
-- [escapeMarkup](Select2Options.md#escapemarkup)
-- [formatAjaxError](Select2Options.md#formatajaxerror)
-- [formatInputTooLong](Select2Options.md#formatinputtoolong)
-- [formatInputTooShort](Select2Options.md#formatinputtooshort)
-- [formatLoadMore](Select2Options.md#formatloadmore)
-- [formatMatches](Select2Options.md#formatmatches)
-- [formatNoMatches](Select2Options.md#formatnomatches)
-- [formatResult](Select2Options.md#formatresult)
-- [formatResultCssClass](Select2Options.md#formatresultcssclass)
-- [formatSearching](Select2Options.md#formatsearching)
-- [formatSelection](Select2Options.md#formatselection)
-- [formatSelectionCssClass](Select2Options.md#formatselectioncssclass)
-- [formatSelectionTooBig](Select2Options.md#formatselectiontoobig)
-- [id](Select2Options.md#id)
-- [initSelection](Select2Options.md#initselection)
-- [loadMorePadding](Select2Options.md#loadmorepadding)
-- [matcher](Select2Options.md#matcher)
-- [maximumInputLength](Select2Options.md#maximuminputlength)
-- [maximumSelectionSize](Select2Options.md#maximumselectionsize)
-- [minimumInputLength](Select2Options.md#minimuminputlength)
-- [minimumResultsForSearch](Select2Options.md#minimumresultsforsearch)
-- [multiple](Select2Options.md#multiple)
-- [nextSearchTerm](Select2Options.md#nextsearchterm)
-- [openOnEnter](Select2Options.md#openonenter)
-- [placeholder](Select2Options.md#placeholder)
-- [placeholderOption](Select2Options.md#placeholderoption)
-- [populateResults](Select2Options.md#populateresults)
-- [query](Select2Options.md#query)
-- [searchInputPlaceholder](Select2Options.md#searchinputplaceholder)
-- [selectOnBlur](Select2Options.md#selectonblur)
-- [separator](Select2Options.md#separator)
-- [shouldFocusInput](Select2Options.md#shouldfocusinput)
-- [sortResults](Select2Options.md#sortresults)
-- [tags](Select2Options.md#tags)
-- [tokenSeparators](Select2Options.md#tokenseparators)
-- [tokenizer](Select2Options.md#tokenizer)
-- [width](Select2Options.md#width)
-
 ## Properties
 
-### adaptContainerCssClass
+### adaptContainerCssClass()?
 
-• `Optional` **adaptContainerCssClass**: (`p1`: `string`) => `string`
+> `optional` **adaptContainerCssClass**: (`p1`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `string`
+##### p1
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-
-##### Returns
+#### Returns
 
 `string`
 
@@ -84,23 +22,19 @@
 
 [src/ui/editors/select2.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L91)
 
-___
+***
 
-### adaptDropdownCssClass
+### adaptDropdownCssClass()?
 
-• `Optional` **adaptDropdownCssClass**: (`p1`: `string`) => `string`
+> `optional` **adaptDropdownCssClass**: (`p1`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `string`
+##### p1
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-
-##### Returns
+#### Returns
 
 `string`
 
@@ -108,83 +42,79 @@ ___
 
 [src/ui/editors/select2.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L92)
 
-___
+***
 
-### ajax
+### ajax?
 
-• `Optional` **ajax**: [`Select2AjaxOptions`](Select2AjaxOptions.md)
+> `optional` **ajax**: [`Select2AjaxOptions`](Select2AjaxOptions.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L82)
 
-___
+***
 
-### allowClear
+### allowClear?
 
-• `Optional` **allowClear**: `boolean`
+> `optional` **allowClear**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L57)
 
-___
+***
 
-### blurOnChange
+### blurOnChange?
 
-• `Optional` **blurOnChange**: `boolean`
+> `optional` **blurOnChange**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L96)
 
-___
+***
 
-### closeOnSelect
+### closeOnSelect?
 
-• `Optional` **closeOnSelect**: `boolean`
+> `optional` **closeOnSelect**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L59)
 
-___
+***
 
-### containerCss
+### containerCss?
 
-• `Optional` **containerCss**: `any`
+> `optional` **containerCss**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L85)
 
-___
+***
 
-### containerCssClass
+### containerCssClass?
 
-• `Optional` **containerCssClass**: `any`
+> `optional` **containerCssClass**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L86)
 
-___
+***
 
-### createSearchChoice
+### createSearchChoice()?
 
-• `Optional` **createSearchChoice**: (`p1`: `string`) => [`Select2Item`](Select2Item.md)
+> `optional` **createSearchChoice**: (`p1`) => [`Select2Item`](Select2Item.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): [`Select2Item`](Select2Item.md)
+##### p1
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-
-##### Returns
+#### Returns
 
 [`Select2Item`](Select2Item.md)
 
@@ -192,73 +122,69 @@ ___
 
 [src/ui/editors/select2.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L76)
 
-___
+***
 
-### createSearchChoicePosition
+### createSearchChoicePosition?
 
-• `Optional` **createSearchChoicePosition**: `string` \| (`list`: [`Select2Item`](Select2Item.md)[], `item`: [`Select2Item`](Select2Item.md)) => `void`
+> `optional` **createSearchChoicePosition**: `string` \| (`list`, `item`) => `void`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L77)
 
-___
+***
 
-### data
+### data?
 
-• `Optional` **data**: `any`
+> `optional` **data**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L83)
 
-___
+***
 
-### dropdownAutoWidth
+### dropdownAutoWidth?
 
-• `Optional` **dropdownAutoWidth**: `boolean`
+> `optional` **dropdownAutoWidth**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L89)
 
-___
+***
 
-### dropdownCss
+### dropdownCss?
 
-• `Optional` **dropdownCss**: `any`
+> `optional` **dropdownCss**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L87)
 
-___
+***
 
-### dropdownCssClass
+### dropdownCssClass?
 
-• `Optional` **dropdownCssClass**: `any`
+> `optional` **dropdownCssClass**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L88)
 
-___
+***
 
-### dropdownParent
+### dropdownParent()?
 
-• `Optional` **dropdownParent**: (`input`: `HTMLElement`) => `HTMLElement`
+> `optional` **dropdownParent**: (`input`) => `HTMLElement`
 
-#### Type declaration
+#### Parameters
 
-▸ (`input`): `HTMLElement`
+##### input
 
-##### Parameters
+`HTMLElement`
 
-| Name | Type |
-| :------ | :------ |
-| `input` | `HTMLElement` |
-
-##### Returns
+#### Returns
 
 `HTMLElement`
 
@@ -266,33 +192,29 @@ ___
 
 [src/ui/editors/select2.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L90)
 
-___
+***
 
-### element
+### element?
 
-• `Optional` **element**: [`Select2Element`](../README.md#select2element)
+> `optional` **element**: [`Select2Element`](../type-aliases/Select2Element.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L48)
 
-___
+***
 
-### escapeMarkup
+### escapeMarkup()?
 
-• `Optional` **escapeMarkup**: (`p1`: `string`) => `string`
+> `optional` **escapeMarkup**: (`p1`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `string`
+##### p1
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-
-##### Returns
+#### Returns
 
 `string`
 
@@ -300,197 +222,183 @@ ___
 
 [src/ui/editors/select2.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L93)
 
-___
+***
 
-### formatAjaxError
+### formatAjaxError()?
 
-• `Optional` **formatAjaxError**: (`p1`: `any`, `p2`: `any`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatAjaxError**: (`p1`, `p2`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-| `p2` | `any` |
+##### p2
 
-##### Returns
+`any`
 
-[`Select2FormatResult`](../README.md#select2formatresult)
+#### Returns
+
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L64)
 
-___
+***
 
-### formatInputTooLong
+### formatInputTooLong()?
 
-• `Optional` **formatInputTooLong**: (`input`: `string`, `max`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatInputTooLong**: (`input`, `max`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`input`, `max`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### input
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `input` | `string` |
-| `max` | `number` |
+##### max
 
-##### Returns
+`number`
 
-[`Select2FormatResult`](../README.md#select2formatresult)
+#### Returns
+
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L73)
 
-___
+***
 
-### formatInputTooShort
+### formatInputTooShort()?
 
-• `Optional` **formatInputTooShort**: (`input`: `string`, `min`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatInputTooShort**: (`input`, `min`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`input`, `min`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### input
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `input` | `string` |
-| `min` | `number` |
+##### min
 
-##### Returns
+`number`
 
-[`Select2FormatResult`](../README.md#select2formatresult)
+#### Returns
+
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L74)
 
-___
+***
 
-### formatLoadMore
+### formatLoadMore()?
 
-• `Optional` **formatLoadMore**: (`pageNumber`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatLoadMore**: (`pageNumber`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`pageNumber`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### pageNumber
 
-##### Parameters
+`number`
 
-| Name | Type |
-| :------ | :------ |
-| `pageNumber` | `number` |
+#### Returns
 
-##### Returns
-
-[`Select2FormatResult`](../README.md#select2formatresult)
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L71)
 
-___
+***
 
-### formatMatches
+### formatMatches()?
 
-• `Optional` **formatMatches**: (`matches`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatMatches**: (`matches`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`matches`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### matches
 
-##### Parameters
+`number`
 
-| Name | Type |
-| :------ | :------ |
-| `matches` | `number` |
+#### Returns
 
-##### Returns
-
-[`Select2FormatResult`](../README.md#select2formatresult)
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L65)
 
-___
+***
 
-### formatNoMatches
+### formatNoMatches()?
 
-• `Optional` **formatNoMatches**: (`input`: `string`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatNoMatches**: (`input`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`input`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### input
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `input` | `string` |
+#### Returns
 
-##### Returns
-
-[`Select2FormatResult`](../README.md#select2formatresult)
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L70)
 
-___
+***
 
-### formatResult
+### formatResult()?
 
-• `Optional` **formatResult**: (`p1`: `any`, `p2`: `HTMLElement`, `p3`: `any`, `p4`: (`p1`: `string`) => `string`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatResult**: (`p1`, `p2`, `p3`, `p4`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`, `p3`, `p4`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-| `p2` | `HTMLElement` |
-| `p3` | `any` |
-| `p4` | (`p1`: `string`) => `string` |
+##### p2
 
-##### Returns
+`HTMLElement`
 
-[`Select2FormatResult`](../README.md#select2formatresult)
+##### p3
+
+`any`
+
+##### p4
+
+(`p1`) => `string`
+
+#### Returns
+
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L67)
 
-___
+***
 
-### formatResultCssClass
+### formatResultCssClass()?
 
-• `Optional` **formatResultCssClass**: (`p1`: `any`) => `string`
+> `optional` **formatResultCssClass**: (`p1`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `string`
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-
-##### Returns
+#### Returns
 
 `string`
 
@@ -498,68 +406,65 @@ ___
 
 [src/ui/editors/select2.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L68)
 
-___
+***
 
-### formatSearching
+### formatSearching()?
 
-• `Optional` **formatSearching**: () => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatSearching**: () => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Returns
 
-▸ (): [`Select2FormatResult`](../README.md#select2formatresult)
-
-##### Returns
-
-[`Select2FormatResult`](../README.md#select2formatresult)
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L72)
 
-___
+***
 
-### formatSelection
+### formatSelection()?
 
-• `Optional` **formatSelection**: (`p1`: `any`, `p2`: `HTMLElement`, `p3`: (`p1`: `string`) => `string`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatSelection**: (`p1`, `p2`, `p3`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`, `p3`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-| `p2` | `HTMLElement` |
-| `p3` | (`p1`: `string`) => `string` |
+##### p2
 
-##### Returns
+`HTMLElement`
 
-[`Select2FormatResult`](../README.md#select2formatresult)
+##### p3
+
+(`p1`) => `string`
+
+#### Returns
+
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L66)
 
-___
+***
 
-### formatSelectionCssClass
+### formatSelectionCssClass()?
 
-• `Optional` **formatSelectionCssClass**: (`item`: [`Select2Item`](Select2Item.md), `container`: `HTMLElement`) => `string`
+> `optional` **formatSelectionCssClass**: (`item`, `container`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`item`, `container`): `string`
+##### item
 
-##### Parameters
+[`Select2Item`](Select2Item.md)
 
-| Name | Type |
-| :------ | :------ |
-| `item` | [`Select2Item`](Select2Item.md) |
-| `container` | `HTMLElement` |
+##### container
 
-##### Returns
+`HTMLElement`
+
+#### Returns
 
 `string`
 
@@ -567,47 +472,39 @@ ___
 
 [src/ui/editors/select2.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L69)
 
-___
+***
 
-### formatSelectionTooBig
+### formatSelectionTooBig()?
 
-• `Optional` **formatSelectionTooBig**: (`p1`: `number`) => [`Select2FormatResult`](../README.md#select2formatresult)
+> `optional` **formatSelectionTooBig**: (`p1`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): [`Select2FormatResult`](../README.md#select2formatresult)
+##### p1
 
-##### Parameters
+`number`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `number` |
+#### Returns
 
-##### Returns
-
-[`Select2FormatResult`](../README.md#select2formatresult)
+[`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L75)
 
-___
+***
 
-### id
+### id()?
 
-• `Optional` **id**: (`p1`: `any`) => `string`
+> `optional` **id**: (`p1`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `string`
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-
-##### Returns
+#### Returns
 
 `string`
 
@@ -615,24 +512,23 @@ ___
 
 [src/ui/editors/select2.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L61)
 
-___
+***
 
-### initSelection
+### initSelection()?
 
-• `Optional` **initSelection**: (`p1`: `HTMLElement`, `p2`: (`p1`: `any`) => `void`) => `void`
+> `optional` **initSelection**: (`p1`, `p2`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`): `void`
+##### p1
 
-##### Parameters
+`HTMLElement`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `HTMLElement` |
-| `p2` | (`p1`: `any`) => `void` |
+##### p2
 
-##### Returns
+(`p1`) => `void`
+
+#### Returns
 
 `void`
 
@@ -640,35 +536,37 @@ ___
 
 [src/ui/editors/select2.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L78)
 
-___
+***
 
-### loadMorePadding
+### loadMorePadding?
 
-• `Optional` **loadMorePadding**: `number`
+> `optional` **loadMorePadding**: `number`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L97)
 
-___
+***
 
-### matcher
+### matcher()?
 
-• `Optional` **matcher**: (`p1`: `string`, `p2`: `string`, `p3`: `HTMLElement`) => `boolean`
+> `optional` **matcher**: (`p1`, `p2`, `p3`) => `boolean`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`, `p3`): `boolean`
+##### p1
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-| `p2` | `string` |
-| `p3` | `HTMLElement` |
+##### p2
 
-##### Returns
+`string`
+
+##### p3
+
+`HTMLElement`
+
+#### Returns
 
 `boolean`
 
@@ -676,74 +574,73 @@ ___
 
 [src/ui/editors/select2.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L62)
 
-___
+***
 
-### maximumInputLength
+### maximumInputLength?
 
-• `Optional` **maximumInputLength**: `number`
+> `optional` **maximumInputLength**: `number`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L51)
 
-___
+***
 
-### maximumSelectionSize
+### maximumSelectionSize?
 
-• `Optional` **maximumSelectionSize**: `any`
+> `optional` **maximumSelectionSize**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L53)
 
-___
+***
 
-### minimumInputLength
+### minimumInputLength?
 
-• `Optional` **minimumInputLength**: `number`
+> `optional` **minimumInputLength**: `number`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L50)
 
-___
+***
 
-### minimumResultsForSearch
+### minimumResultsForSearch?
 
-• `Optional` **minimumResultsForSearch**: `number`
+> `optional` **minimumResultsForSearch**: `number`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L52)
 
-___
+***
 
-### multiple
+### multiple?
 
-• `Optional` **multiple**: `boolean`
+> `optional` **multiple**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L58)
 
-___
+***
 
-### nextSearchTerm
+### nextSearchTerm()?
 
-• `Optional` **nextSearchTerm**: (`p1`: `any`, `p2`: `string`) => `string`
+> `optional` **nextSearchTerm**: (`p1`, `p2`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`): `string`
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-| `p2` | `string` |
+##### p2
 
-##### Returns
+`string`
+
+#### Returns
 
 `string`
 
@@ -751,55 +648,57 @@ ___
 
 [src/ui/editors/select2.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L98)
 
-___
+***
 
-### openOnEnter
+### openOnEnter?
 
-• `Optional` **openOnEnter**: `boolean`
+> `optional` **openOnEnter**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L60)
 
-___
+***
 
-### placeholder
+### placeholder?
 
-• `Optional` **placeholder**: `string`
+> `optional` **placeholder**: `string`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L54)
 
-___
+***
 
-### placeholderOption
+### placeholderOption?
 
-• `Optional` **placeholderOption**: `any`
+> `optional` **placeholderOption**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L55)
 
-___
+***
 
-### populateResults
+### populateResults()?
 
-• `Optional` **populateResults**: (`container`: `HTMLElement`, `results`: [`Select2Item`](Select2Item.md)[], `query`: [`Select2QueryOptions`](Select2QueryOptions.md)) => `void`
+> `optional` **populateResults**: (`container`, `results`, `query`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`container`, `results`, `query`): `void`
+##### container
 
-##### Parameters
+`HTMLElement`
 
-| Name | Type |
-| :------ | :------ |
-| `container` | `HTMLElement` |
-| `results` | [`Select2Item`](Select2Item.md)[] |
-| `query` | [`Select2QueryOptions`](Select2QueryOptions.md) |
+##### results
 
-##### Returns
+[`Select2Item`](Select2Item.md)[]
+
+##### query
+
+[`Select2QueryOptions`](Select2QueryOptions.md)
+
+#### Returns
 
 `void`
 
@@ -807,23 +706,19 @@ ___
 
 [src/ui/editors/select2.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L99)
 
-___
+***
 
-### query
+### query()?
 
-• `Optional` **query**: (`p1`: [`Select2QueryOptions`](Select2QueryOptions.md)) => `void`
+> `optional` **query**: (`p1`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `void`
+##### p1
 
-##### Parameters
+[`Select2QueryOptions`](Select2QueryOptions.md)
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | [`Select2QueryOptions`](Select2QueryOptions.md) |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -831,53 +726,49 @@ ___
 
 [src/ui/editors/select2.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L81)
 
-___
+***
 
-### searchInputPlaceholder
+### searchInputPlaceholder?
 
-• `Optional` **searchInputPlaceholder**: `string`
+> `optional` **searchInputPlaceholder**: `string`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L94)
 
-___
+***
 
-### selectOnBlur
+### selectOnBlur?
 
-• `Optional` **selectOnBlur**: `boolean`
+> `optional` **selectOnBlur**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L95)
 
-___
+***
 
-### separator
+### separator?
 
-• `Optional` **separator**: `string`
+> `optional` **separator**: `string`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L56)
 
-___
+***
 
-### shouldFocusInput
+### shouldFocusInput()?
 
-• `Optional` **shouldFocusInput**: (`p1`: `any`) => `boolean`
+> `optional` **shouldFocusInput**: (`p1`) => `boolean`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `boolean`
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-
-##### Returns
+#### Returns
 
 `boolean`
 
@@ -885,25 +776,27 @@ ___
 
 [src/ui/editors/select2.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L100)
 
-___
+***
 
-### sortResults
+### sortResults()?
 
-• `Optional` **sortResults**: (`p1`: `any`, `p2`: `HTMLElement`, `p3`: `any`) => `any`
+> `optional` **sortResults**: (`p1`, `p2`, `p3`) => `any`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`, `p3`): `any`
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-| `p2` | `HTMLElement` |
-| `p3` | `any` |
+##### p2
 
-##### Returns
+`HTMLElement`
+
+##### p3
+
+`any`
+
+#### Returns
 
 `any`
 
@@ -911,46 +804,41 @@ ___
 
 [src/ui/editors/select2.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L63)
 
-___
+***
 
-### tags
+### tags?
 
-• `Optional` **tags**: (`string` \| [`Select2Item`](Select2Item.md))[] \| () => (`string` \| [`Select2Item`](Select2Item.md))[]
+> `optional` **tags**: (`string` \| [`Select2Item`](Select2Item.md))[] \| () => (`string` \| [`Select2Item`](Select2Item.md))[]
 
 #### Defined in
 
 [src/ui/editors/select2.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L84)
 
-___
+***
 
-### tokenSeparators
+### tokenizer()?
 
-• `Optional` **tokenSeparators**: `any`
+> `optional` **tokenizer**: (`p1`, `p2`, `p3`, `p4`) => `string`
 
-#### Defined in
+#### Parameters
 
-[src/ui/editors/select2.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L80)
+##### p1
 
-___
+`string`
 
-### tokenizer
+##### p2
 
-• `Optional` **tokenizer**: (`p1`: `string`, `p2`: `any`, `p3`: (`p1`: `any`) => `any`, `p4`: `any`) => `string`
+`any`
 
-#### Type declaration
+##### p3
 
-▸ (`p1`, `p2`, `p3`, `p4`): `string`
+(`p1`) => `any`
 
-##### Parameters
+##### p4
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-| `p2` | `any` |
-| `p3` | (`p1`: `any`) => `any` |
-| `p4` | `any` |
+`any`
 
-##### Returns
+#### Returns
 
 `string`
 
@@ -958,11 +846,21 @@ ___
 
 [src/ui/editors/select2.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L79)
 
-___
+***
 
-### width
+### tokenSeparators?
 
-• `Optional` **width**: `any`
+> `optional` **tokenSeparators**: `any`
+
+#### Defined in
+
+[src/ui/editors/select2.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L80)
+
+***
+
+### width?
+
+> `optional` **width**: `any`
 
 #### Defined in
 

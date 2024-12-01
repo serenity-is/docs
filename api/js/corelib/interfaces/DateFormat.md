@@ -4,35 +4,15 @@
 
 Interface for date formatting, similar to .NET's DateFormatInfo
 
-## Hierarchy
+## Extended by
 
-- **`DateFormat`**
-
-  ↳ [`Locale`](Locale.md)
-
-## Table of contents
-
-### Properties
-
-- [amDesignator](DateFormat.md#amdesignator)
-- [dateFormat](DateFormat.md#dateformat)
-- [dateOrder](DateFormat.md#dateorder)
-- [dateSeparator](DateFormat.md#dateseparator)
-- [dateTimeFormat](DateFormat.md#datetimeformat)
-- [dayNames](DateFormat.md#daynames)
-- [firstDayOfWeek](DateFormat.md#firstdayofweek)
-- [minimizedDayNames](DateFormat.md#minimizeddaynames)
-- [monthNames](DateFormat.md#monthnames)
-- [pmDesignator](DateFormat.md#pmdesignator)
-- [shortDayNames](DateFormat.md#shortdaynames)
-- [shortMonthNames](DateFormat.md#shortmonthnames)
-- [timeSeparator](DateFormat.md#timeseparator)
+- [`Locale`](Locale.md)
 
 ## Properties
 
-### amDesignator
+### amDesignator?
 
-• `Optional` **amDesignator**: `string`
+> `optional` **amDesignator**: `string`
 
 AM designator
 
@@ -40,11 +20,11 @@ AM designator
 
 [src/base/formatting.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L34)
 
-___
+***
 
-### dateFormat
+### dateFormat?
 
-• `Optional` **dateFormat**: `string`
+> `optional` **dateFormat**: `string`
 
 Default date format string
 
@@ -52,11 +32,11 @@ Default date format string
 
 [src/base/formatting.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L28)
 
-___
+***
 
-### dateOrder
+### dateOrder?
 
-• `Optional` **dateOrder**: `string`
+> `optional` **dateOrder**: `string`
 
 Date order, like dmy, or ymd
 
@@ -64,11 +44,11 @@ Date order, like dmy, or ymd
 
 [src/base/formatting.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L30)
 
-___
+***
 
-### dateSeparator
+### dateSeparator?
 
-• `Optional` **dateSeparator**: `string`
+> `optional` **dateSeparator**: `string`
 
 Date separator
 
@@ -76,11 +56,11 @@ Date separator
 
 [src/base/formatting.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L26)
 
-___
+***
 
-### dateTimeFormat
+### dateTimeFormat?
 
-• `Optional` **dateTimeFormat**: `string`
+> `optional` **dateTimeFormat**: `string`
 
 Default date time format string
 
@@ -88,11 +68,11 @@ Default date time format string
 
 [src/base/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L32)
 
-___
+***
 
-### dayNames
+### dayNames?
 
-• `Optional` **dayNames**: `string`[]
+> `optional` **dayNames**: `string`[]
 
 Array of day names
 
@@ -100,11 +80,11 @@ Array of day names
 
 [src/base/formatting.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L42)
 
-___
+***
 
-### firstDayOfWeek
+### firstDayOfWeek?
 
-• `Optional` **firstDayOfWeek**: `number`
+> `optional` **firstDayOfWeek**: `number`
 
 First day of week, 0 = Sunday, 1 = Monday
 
@@ -112,11 +92,11 @@ First day of week, 0 = Sunday, 1 = Monday
 
 [src/base/formatting.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L40)
 
-___
+***
 
-### minimizedDayNames
+### minimizedDayNames?
 
-• `Optional` **minimizedDayNames**: `string`[]
+> `optional` **minimizedDayNames**: `string`[]
 
 Array of two letter day names
 
@@ -124,11 +104,11 @@ Array of two letter day names
 
 [src/base/formatting.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L46)
 
-___
+***
 
-### monthNames
+### monthNames?
 
-• `Optional` **monthNames**: `string`[]
+> `optional` **monthNames**: `string`[]
 
 Array of month names
 
@@ -136,11 +116,11 @@ Array of month names
 
 [src/base/formatting.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L48)
 
-___
+***
 
-### pmDesignator
+### pmDesignator?
 
-• `Optional` **pmDesignator**: `string`
+> `optional` **pmDesignator**: `string`
 
 PM designator
 
@@ -148,11 +128,11 @@ PM designator
 
 [src/base/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L36)
 
-___
+***
 
-### shortDayNames
+### shortDayNames?
 
-• `Optional` **shortDayNames**: `string`[]
+> `optional` **shortDayNames**: `string`[]
 
 Array of short day names
 
@@ -160,11 +140,11 @@ Array of short day names
 
 [src/base/formatting.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L44)
 
-___
+***
 
-### shortMonthNames
+### shortMonthNames?
 
-• `Optional` **shortMonthNames**: `string`[]
+> `optional` **shortMonthNames**: `string`[]
 
 Array of short month names
 
@@ -172,11 +152,11 @@ Array of short month names
 
 [src/base/formatting.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L50)
 
-___
+***
 
-### timeSeparator
+### timeSeparator?
 
-• `Optional` **timeSeparator**: `string`
+> `optional` **timeSeparator**: `string`
 
 Time separator
 

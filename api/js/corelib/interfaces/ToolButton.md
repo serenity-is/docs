@@ -2,193 +2,192 @@
 
 # Interface: ToolButton
 
-## Hierarchy
+## Extends
 
 - [`ToolButtonProps`](ToolButtonProps.md)
 
-  ↳ **`ToolButton`**
-
-## Table of contents
-
-### Properties
-
-- [action](ToolButton.md#action)
-- [cssClass](ToolButton.md#cssclass)
-- [disabled](ToolButton.md#disabled)
-- [hint](ToolButton.md#hint)
-- [hotkey](ToolButton.md#hotkey)
-- [hotkeyAllowDefault](ToolButton.md#hotkeyallowdefault)
-- [hotkeyContext](ToolButton.md#hotkeycontext)
-- [icon](ToolButton.md#icon)
-- [onClick](ToolButton.md#onclick)
-- [separator](ToolButton.md#separator)
-- [title](ToolButton.md#title)
-- [visible](ToolButton.md#visible)
-
 ## Properties
 
-### action
+### action?
 
-• `Optional` **action**: `string`
-
-#### Inherited from
-
-[ToolButtonProps](ToolButtonProps.md).[action](ToolButtonProps.md#action)
-
-#### Defined in
-
-[src/ui/widgets/toolbar.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L6)
-
-___
-
-### cssClass
-
-• `Optional` **cssClass**: `string`
+> `optional` **action**: `string`
 
 #### Inherited from
 
-[ToolButtonProps](ToolButtonProps.md).[cssClass](ToolButtonProps.md#cssclass)
+[`ToolButtonProps`](ToolButtonProps.md).[`action`](ToolButtonProps.md#action)
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L9)
+[src/ui/widgets/toolbar.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L6)
 
-___
+***
 
-### disabled
+### cssClass?
 
-• `Optional` **disabled**: `boolean` \| () => `boolean`
+> `optional` **cssClass**: `string`
 
 #### Inherited from
 
-[ToolButtonProps](ToolButtonProps.md).[disabled](ToolButtonProps.md#disabled)
+[`ToolButtonProps`](ToolButtonProps.md).[`cssClass`](ToolButtonProps.md#cssclass)
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L17)
+[src/ui/widgets/toolbar.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L9)
 
-___
+***
 
-### hint
+### disabled?
 
-• `Optional` **hint**: `string`
+> `optional` **disabled**: `boolean` \| () => `boolean`
 
 #### Inherited from
 
-[ToolButtonProps](ToolButtonProps.md).[hint](ToolButtonProps.md#hint)
+[`ToolButtonProps`](ToolButtonProps.md).[`disabled`](ToolButtonProps.md#disabled)
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L8)
+[src/ui/widgets/toolbar.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L14)
 
-___
+***
 
-### hotkey
+### hint?
 
-• `Optional` **hotkey**: `string`
-
-#### Overrides
-
-[ToolButtonProps](ToolButtonProps.md).[hotkey](ToolButtonProps.md#hotkey)
-
-#### Defined in
-
-[src/ui/widgets/toolbar.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L22)
-
-___
-
-### hotkeyAllowDefault
-
-• `Optional` **hotkeyAllowDefault**: `boolean`
-
-#### Overrides
-
-[ToolButtonProps](ToolButtonProps.md).[hotkeyAllowDefault](ToolButtonProps.md#hotkeyallowdefault)
-
-#### Defined in
-
-[src/ui/widgets/toolbar.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L23)
-
-___
-
-### hotkeyContext
-
-• `Optional` **hotkeyContext**: `any`
-
-#### Overrides
-
-[ToolButtonProps](ToolButtonProps.md).[hotkeyContext](ToolButtonProps.md#hotkeycontext)
-
-#### Defined in
-
-[src/ui/widgets/toolbar.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L24)
-
-___
-
-### icon
-
-• `Optional` **icon**: [`IconClassName`](../README.md#iconclassname)
+> `optional` **hint**: `string`
 
 #### Inherited from
 
-[ToolButtonProps](ToolButtonProps.md).[icon](ToolButtonProps.md#icon)
+[`ToolButtonProps`](ToolButtonProps.md).[`hint`](ToolButtonProps.md#hint)
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L10)
+[src/ui/widgets/toolbar.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L8)
 
-___
+***
 
-### onClick
+### hotkey?
 
-• `Optional` **onClick**: `any`
+> `optional` **hotkey**: `string`
+
+#### Defined in
+
+[src/ui/widgets/toolbar.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L18)
+
+***
+
+### hotkeyAllowDefault?
+
+> `optional` **hotkeyAllowDefault**: `boolean`
+
+#### Defined in
+
+[src/ui/widgets/toolbar.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L19)
+
+***
+
+### hotkeyContext?
+
+> `optional` **hotkeyContext**: `any`
+
+#### Defined in
+
+[src/ui/widgets/toolbar.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L20)
+
+***
+
+### icon?
+
+> `optional` **icon**: [`IconClassName`](../type-aliases/IconClassName.md)
 
 #### Inherited from
 
-[ToolButtonProps](ToolButtonProps.md).[onClick](ToolButtonProps.md#onclick)
+[`ToolButtonProps`](ToolButtonProps.md).[`icon`](ToolButtonProps.md#icon)
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L11)
+[src/ui/widgets/toolbar.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L10)
 
-___
+***
 
-### separator
+### onClick()?
 
-• `Optional` **separator**: `boolean` \| ``"left"`` \| ``"right"`` \| ``"both"``
+> `optional` **onClick**: (`e`) => `void`
 
-#### Overrides
+#### Parameters
 
-[ToolButtonProps](ToolButtonProps.md).[separator](ToolButtonProps.md#separator)
+##### e
 
-#### Defined in
+`MouseEvent` & `object`
 
-[src/ui/widgets/toolbar.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L25)
+#### Returns
 
-___
-
-### title
-
-• `Optional` **title**: `string`
+`void`
 
 #### Inherited from
 
-[ToolButtonProps](ToolButtonProps.md).[title](ToolButtonProps.md#title)
+[`ToolButtonProps`](ToolButtonProps.md).[`onClick`](ToolButtonProps.md#onclick)
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L7)
+[src/ui/widgets/toolbar.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L11)
 
-___
+***
 
-### visible
+### ref()?
 
-• `Optional` **visible**: `boolean` \| () => `boolean`
+> `optional` **ref**: (`el`) => `void`
+
+#### Parameters
+
+##### el
+
+`HTMLElement`
+
+#### Returns
+
+`void`
 
 #### Inherited from
 
-[ToolButtonProps](ToolButtonProps.md).[visible](ToolButtonProps.md#visible)
+[`ToolButtonProps`](ToolButtonProps.md).[`ref`](ToolButtonProps.md#ref)
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L16)
+[src/ui/widgets/toolbar.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L12)
+
+***
+
+### separator?
+
+> `optional` **separator**: `boolean` \| `"left"` \| `"right"` \| `"both"`
+
+#### Defined in
+
+[src/ui/widgets/toolbar.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L21)
+
+***
+
+### title?
+
+> `optional` **title**: `string` \| `HTMLElement` \| `DocumentFragment` \| `SVGElement`
+
+#### Inherited from
+
+[`ToolButtonProps`](ToolButtonProps.md).[`title`](ToolButtonProps.md#title)
+
+#### Defined in
+
+[src/ui/widgets/toolbar.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L7)
+
+***
+
+### visible?
+
+> `optional` **visible**: `boolean` \| () => `boolean`
+
+#### Inherited from
+
+[`ToolButtonProps`](ToolButtonProps.md).[`visible`](ToolButtonProps.md#visible)
+
+#### Defined in
+
+[src/ui/widgets/toolbar.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L13)

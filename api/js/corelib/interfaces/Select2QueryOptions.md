@@ -2,34 +2,19 @@
 
 # Interface: Select2QueryOptions
 
-## Table of contents
-
-### Properties
-
-- [callback](Select2QueryOptions.md#callback)
-- [context](Select2QueryOptions.md#context)
-- [element](Select2QueryOptions.md#element)
-- [matcher](Select2QueryOptions.md#matcher)
-- [page](Select2QueryOptions.md#page)
-- [term](Select2QueryOptions.md#term)
-
 ## Properties
 
-### callback
+### callback()?
 
-• `Optional` **callback**: (`p1`: [`Select2Result`](Select2Result.md)) => `void`
+> `optional` **callback**: (`p1`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `void`
+##### p1
 
-##### Parameters
+[`Select2Result`](Select2Result.md)
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | [`Select2Result`](Select2Result.md) |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -37,45 +22,47 @@
 
 [src/ui/editors/select2.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L15)
 
-___
+***
 
-### context
+### context?
 
-• `Optional` **context**: `any`
+> `optional` **context**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L14)
 
-___
+***
 
-### element
+### element?
 
-• `Optional` **element**: [`Select2Element`](../README.md#select2element)
+> `optional` **element**: [`Select2Element`](../type-aliases/Select2Element.md)
 
 #### Defined in
 
 [src/ui/editors/select2.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L11)
 
-___
+***
 
-### matcher
+### matcher()?
 
-• `Optional` **matcher**: (`p1`: `any`, `p2`: `any`, `p3?`: `any`) => `boolean`
+> `optional` **matcher**: (`p1`, `p2`, `p3`?) => `boolean`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`, `p3?`): `boolean`
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-| `p2` | `any` |
-| `p3?` | `any` |
+##### p2
 
-##### Returns
+`any`
+
+##### p3?
+
+`any`
+
+#### Returns
 
 `boolean`
 
@@ -83,21 +70,21 @@ ___
 
 [src/ui/editors/select2.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L16)
 
-___
+***
 
-### page
+### page?
 
-• `Optional` **page**: `number`
+> `optional` **page**: `number`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L13)
 
-___
+***
 
-### term
+### term?
 
-• `Optional` **term**: `string`
+> `optional` **term**: `string`
 
 #### Defined in
 

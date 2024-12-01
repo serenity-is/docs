@@ -7,42 +7,27 @@
 - [`Formatter`](../interfaces/Formatter.md)
 - [`IInitializeColumn`](IInitializeColumn.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](FileDownloadFormatter.md#constructor)
-
-### Properties
-
-- [props](FileDownloadFormatter.md#props)
-
-### Accessors
-
-- [displayFormat](FileDownloadFormatter.md#displayformat)
-- [iconClass](FileDownloadFormatter.md#iconclass)
-- [originalNameProperty](FileDownloadFormatter.md#originalnameproperty)
-
-### Methods
-
-- [format](FileDownloadFormatter.md#format)
-- [initializeColumn](FileDownloadFormatter.md#initializecolumn)
-- [dbFileUrl](FileDownloadFormatter.md#dbfileurl)
-
 ## Constructors
 
-### constructor
+### new FileDownloadFormatter()
 
-• **new FileDownloadFormatter**(`props?`): [`FileDownloadFormatter`](FileDownloadFormatter.md)
+> **new FileDownloadFormatter**(`props`): [`FileDownloadFormatter`](FileDownloadFormatter.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `props` | `Object` |
-| `props.displayFormat?` | `string` |
-| `props.iconClass?` | `string` |
-| `props.originalNameProperty?` | `string` |
+##### props
+
+###### props.displayFormat
+
+`string`
+
+###### props.iconClass
+
+`string`
+
+###### props.originalNameProperty
+
+`string`
 
 #### Returns
 
@@ -50,61 +35,179 @@
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L141)
+[src/ui/formatters/formatters.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L149)
 
 ## Properties
 
 ### props
 
-• `Readonly` **props**: `Object` = `{}`
+> `readonly` **props**: `object` = `{}`
 
-#### Type declaration
+#### displayFormat?
 
-| Name | Type |
-| :------ | :------ |
-| `displayFormat?` | `string` |
-| `iconClass?` | `string` |
-| `originalNameProperty?` | `string` |
+> `optional` **displayFormat**: `string`
+
+#### iconClass?
+
+> `optional` **iconClass**: `string`
+
+#### originalNameProperty?
+
+> `optional` **originalNameProperty**: `string`
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L141)
+[src/ui/formatters/formatters.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L149)
 
 ## Accessors
 
 ### displayFormat
 
-• `get` **displayFormat**(): `string`
+#### Get Signature
+
+> **get** **displayFormat**(): `string`
+
+##### Returns
+
+`string`
+
+#### Set Signature
+
+> **set** **displayFormat**(`value`): `void`
+
+##### Parameters
+
+###### value
+
+`string`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L185)
+
+***
+
+### iconClass
+
+#### Get Signature
+
+> **get** **iconClass**(): `string`
+
+##### Returns
+
+`string`
+
+#### Set Signature
+
+> **set** **iconClass**(`value`): `void`
+
+##### Parameters
+
+###### value
+
+`string`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L191)
+
+***
+
+### originalNameProperty
+
+#### Get Signature
+
+> **get** **originalNameProperty**(): `string`
+
+##### Returns
+
+`string`
+
+#### Set Signature
+
+> **set** **originalNameProperty**(`value`): `void`
+
+##### Parameters
+
+###### value
+
+`string`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L188)
+
+## Methods
+
+### format()
+
+> **format**(`ctx`): `string`
+
+#### Parameters
+
+##### ctx
+
+`FormatterContext`\<`any`\>
 
 #### Returns
 
 `string`
+
+#### Implementation of
+
+[`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
+
+#### Defined in
+
+[src/ui/formatters/formatters.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L153)
+
+***
+
+### initializeColumn()
+
+> **initializeColumn**(`column`): `void`
+
+#### Parameters
+
+##### column
+
+`Column`\<`any`\>
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[`IInitializeColumn`](IInitializeColumn.md).[`initializeColumn`](IInitializeColumn.md#initializecolumn)
 
 #### Defined in
 
 [src/ui/formatters/formatters.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L177)
 
-• `set` **displayFormat**(`value`): `void`
+***
+
+### dbFileUrl()
+
+> `static` **dbFileUrl**(`filename`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### filename
 
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L178)
-
-___
-
-### iconClass
-
-• `get` **iconClass**(): `string`
+`string`
 
 #### Returns
 
@@ -112,118 +215,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L183)
-
-• `set` **iconClass**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L184)
-
-___
-
-### originalNameProperty
-
-• `get` **originalNameProperty**(): `string`
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L180)
-
-• `set` **originalNameProperty**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L181)
-
-## Methods
-
-### format
-
-▸ **format**(`ctx`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `FormatterContext`\<`any`\> |
-
-#### Returns
-
-`string`
-
-#### Implementation of
-
-[Formatter](../interfaces/Formatter.md).[format](../interfaces/Formatter.md#format)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L145)
-
-___
-
-### initializeColumn
-
-▸ **initializeColumn**(`column`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `column` | `Column`\<`any`\> |
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-[IInitializeColumn](IInitializeColumn.md).[initializeColumn](IInitializeColumn.md#initializecolumn)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L169)
-
-___
-
-### dbFileUrl
-
-▸ **dbFileUrl**(`filename`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `filename` | `string` |
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L164)
+[src/ui/formatters/formatters.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L172)

@@ -2,39 +2,31 @@
 
 # Interface: FilterOperator
 
-## Table of contents
-
-### Properties
-
-- [format](FilterOperator.md#format)
-- [key](FilterOperator.md#key)
-- [title](FilterOperator.md#title)
-
 ## Properties
 
-### format
+### format?
 
-• `Optional` **format**: `string`
+> `optional` **format**: `string`
 
 #### Defined in
 
 [src/ui/filtering/filteroperator.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L6)
 
-___
+***
 
-### key
+### key?
 
-• `Optional` **key**: `string`
+> `optional` **key**: `string`
 
 #### Defined in
 
 [src/ui/filtering/filteroperator.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L4)
 
-___
+***
 
-### title
+### title?
 
-• `Optional` **title**: `string`
+> `optional` **title**: `string`
 
 #### Defined in
 

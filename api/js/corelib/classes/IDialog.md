@@ -2,21 +2,11 @@
 
 # Class: IDialog
 
-## Table of contents
-
-### Constructors
-
-- [constructor](IDialog.md#constructor)
-
-### Methods
-
-- [dialogOpen](IDialog.md#dialogopen)
-
 ## Constructors
 
-### constructor
+### new IDialog()
 
-• **new IDialog**(): [`IDialog`](IDialog.md)
+> **new IDialog**(): [`IDialog`](IDialog.md)
 
 #### Returns
 
@@ -24,15 +14,15 @@
 
 ## Methods
 
-### dialogOpen
+### dialogOpen()
 
-▸ **dialogOpen**(`asPanel?`): `void`
+> **dialogOpen**(`asPanel`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `asPanel?` | `boolean` |
+##### asPanel?
+
+`boolean`
 
 #### Returns
 

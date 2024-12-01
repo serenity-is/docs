@@ -2,27 +2,17 @@
 
 # Class: ServiceAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ServiceAttribute.md#constructor)
-
-### Properties
-
-- [value](ServiceAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new ServiceAttribute()
 
-• **new ServiceAttribute**(`value`): [`ServiceAttribute`](ServiceAttribute.md)
+> **new ServiceAttribute**(`value`): [`ServiceAttribute`](ServiceAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

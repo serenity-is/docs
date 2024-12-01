@@ -2,27 +2,17 @@
 
 # Class: HintAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](HintAttribute.md#constructor)
-
-### Properties
-
-- [hint](HintAttribute.md#hint)
-
 ## Constructors
 
-### constructor
+### new HintAttribute()
 
-• **new HintAttribute**(`hint`): [`HintAttribute`](HintAttribute.md)
+> **new HintAttribute**(`hint`): [`HintAttribute`](HintAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `hint` | `string` |
+##### hint
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### hint
 
-• **hint**: `string`
+> **hint**: `string`
 
 #### Defined in
 

@@ -2,27 +2,17 @@
 
 # Class: PlaceholderAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](PlaceholderAttribute.md#constructor)
-
-### Properties
-
-- [value](PlaceholderAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new PlaceholderAttribute()
 
-• **new PlaceholderAttribute**(`value`): [`PlaceholderAttribute`](PlaceholderAttribute.md)
+> **new PlaceholderAttribute**(`value`): [`PlaceholderAttribute`](PlaceholderAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

@@ -2,29 +2,22 @@
 
 # Interface: MaskedEditorOptions
 
-## Table of contents
-
-### Properties
-
-- [mask](MaskedEditorOptions.md#mask)
-- [placeholder](MaskedEditorOptions.md#placeholder)
-
 ## Properties
 
-### mask
+### mask?
 
-• `Optional` **mask**: `string`
-
-#### Defined in
-
-[src/ui/editors/maskededitor.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.ts#L46)
-
-___
-
-### placeholder
-
-• `Optional` **placeholder**: `string`
+> `optional` **mask**: `string`
 
 #### Defined in
 
-[src/ui/editors/maskededitor.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.ts#L47)
+[src/ui/editors/maskededitor.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.tsx#L46)
+
+***
+
+### placeholder?
+
+> `optional` **placeholder**: `string`
+
+#### Defined in
+
+[src/ui/editors/maskededitor.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.tsx#L47)

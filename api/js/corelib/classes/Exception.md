@@ -2,33 +2,26 @@
 
 # Class: Exception
 
-## Hierarchy
+## Extends
 
 - `Error`
 
-  ↳ **`Exception`**
+## Extended by
 
-  ↳↳ [`ArgumentNullException`](ArgumentNullException.md)
-
-  ↳↳ [`InvalidCastException`](InvalidCastException.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Exception.md#constructor)
+- [`ArgumentNullException`](ArgumentNullException.md)
+- [`InvalidCastException`](InvalidCastException.md)
 
 ## Constructors
 
-### constructor
+### new Exception()
 
-• **new Exception**(`message`): [`Exception`](Exception.md)
+> **new Exception**(`message`): [`Exception`](Exception.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `string` |
+##### message
+
+`string`
 
 #### Returns
 
@@ -36,7 +29,7 @@
 
 #### Overrides
 
-Error.constructor
+`Error.constructor`
 
 #### Defined in
 

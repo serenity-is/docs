@@ -2,43 +2,21 @@
 
 # Class: Tooltip
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Tooltip.md#constructor)
-
-### Properties
-
-- [defaults](Tooltip.md#defaults)
-
-### Accessors
-
-- [isAvailable](Tooltip.md#isavailable)
-
-### Methods
-
-- [delayedDispose](Tooltip.md#delayeddispose)
-- [delayedHide](Tooltip.md#delayedhide)
-- [dispose](Tooltip.md#dispose)
-- [hide](Tooltip.md#hide)
-- [setTitle](Tooltip.md#settitle)
-- [show](Tooltip.md#show)
-- [toggle](Tooltip.md#toggle)
-- [getInstance](Tooltip.md#getinstance)
-
 ## Constructors
 
-### constructor
+### new Tooltip()
 
-• **new Tooltip**(`el`, `opt?`): [`Tooltip`](Tooltip.md)
+> **new Tooltip**(`el`, `opt`?): [`Tooltip`](Tooltip.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `el` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
-| `opt?` | [`TooltipOptions`](../interfaces/TooltipOptions.md) |
+##### el
+
+`HTMLElement` | `ArrayLike`\<`HTMLElement`\>
+
+##### opt?
+
+[`TooltipOptions`](../interfaces/TooltipOptions.md)
 
 #### Returns
 
@@ -52,7 +30,7 @@
 
 ### defaults
 
-▪ `Static` **defaults**: [`TooltipOptions`](../interfaces/TooltipOptions.md)
+> `static` **defaults**: [`TooltipOptions`](../interfaces/TooltipOptions.md)
 
 #### Defined in
 
@@ -62,9 +40,11 @@
 
 ### isAvailable
 
-• `get` **isAvailable**(): `boolean`
+#### Get Signature
 
-#### Returns
+> **get** `static` **isAvailable**(): `boolean`
+
+##### Returns
 
 `boolean`
 
@@ -74,15 +54,15 @@
 
 ## Methods
 
-### delayedDispose
+### delayedDispose()
 
-▸ **delayedDispose**(`delay?`): `void`
+> **delayedDispose**(`delay`): `void`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `delay` | `number` | `5000` |
+##### delay
+
+`number` = `5000`
 
 #### Returns
 
@@ -92,17 +72,17 @@
 
 [src/base/tooltip.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L47)
 
-___
+***
 
-### delayedHide
+### delayedHide()
 
-▸ **delayedHide**(`delay?`): `void`
+> **delayedHide**(`delay`): `void`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `delay` | `number` | `5000` |
+##### delay
+
+`number` = `5000`
 
 #### Returns
 
@@ -112,11 +92,11 @@ ___
 
 [src/base/tooltip.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L51)
 
-___
+***
 
-### dispose
+### dispose()
 
-▸ **dispose**(): `void`
+> **dispose**(): `void`
 
 #### Returns
 
@@ -126,11 +106,11 @@ ___
 
 [src/base/tooltip.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L40)
 
-___
+***
 
-### hide
+### hide()
 
-▸ **hide**(): [`Tooltip`](Tooltip.md)
+> **hide**(): [`Tooltip`](Tooltip.md)
 
 #### Returns
 
@@ -140,17 +120,17 @@ ___
 
 [src/base/tooltip.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L111)
 
-___
+***
 
-### setTitle
+### setTitle()
 
-▸ **setTitle**(`value`): [`Tooltip`](Tooltip.md)
+> **setTitle**(`value`): [`Tooltip`](Tooltip.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -160,11 +140,11 @@ ___
 
 [src/base/tooltip.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L81)
 
-___
+***
 
-### show
+### show()
 
-▸ **show**(): [`Tooltip`](Tooltip.md)
+> **show**(): [`Tooltip`](Tooltip.md)
 
 #### Returns
 
@@ -174,17 +154,17 @@ ___
 
 [src/base/tooltip.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L115)
 
-___
+***
 
-### toggle
+### toggle()
 
-▸ **toggle**(`show`): [`Tooltip`](Tooltip.md)
+> **toggle**(`show`): [`Tooltip`](Tooltip.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `show` | `boolean` |
+##### show
+
+`boolean`
 
 #### Returns
 
@@ -194,17 +174,17 @@ ___
 
 [src/base/tooltip.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L99)
 
-___
+***
 
-### getInstance
+### getInstance()
 
-▸ **getInstance**(`el`): [`Tooltip`](Tooltip.md)
+> `static` **getInstance**(`el`): [`Tooltip`](Tooltip.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `el` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
+##### el
+
+`HTMLElement` | `ArrayLike`\<`HTMLElement`\>
 
 #### Returns
 

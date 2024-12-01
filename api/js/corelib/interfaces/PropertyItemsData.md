@@ -2,29 +2,22 @@
 
 # Interface: PropertyItemsData
 
-## Table of contents
-
-### Properties
-
-- [additionalItems](PropertyItemsData.md#additionalitems)
-- [items](PropertyItemsData.md#items)
-
 ## Properties
 
 ### additionalItems
 
-• **additionalItems**: [`PropertyItem`](PropertyItem.md)[]
+> **additionalItems**: [`PropertyItem`](PropertyItem.md)[]
 
 #### Defined in
 
-[src/base/propertyitem.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L74)
+[src/base/propertyitem.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L78)
 
-___
+***
 
 ### items
 
-• **items**: [`PropertyItem`](PropertyItem.md)[]
+> **items**: [`PropertyItem`](PropertyItem.md)[]
 
 #### Defined in
 
-[src/base/propertyitem.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L73)
+[src/base/propertyitem.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L77)

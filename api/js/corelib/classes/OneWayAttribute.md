@@ -2,17 +2,11 @@
 
 # Class: OneWayAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](OneWayAttribute.md#constructor)
-
 ## Constructors
 
-### constructor
+### new OneWayAttribute()
 
-• **new OneWayAttribute**(): [`OneWayAttribute`](OneWayAttribute.md)
+> **new OneWayAttribute**(): [`OneWayAttribute`](OneWayAttribute.md)
 
 #### Returns
 

@@ -2,28 +2,21 @@
 
 # Interface: RecaptchaOptions
 
-## Table of contents
-
-### Properties
-
-- [language](RecaptchaOptions.md#language)
-- [siteKey](RecaptchaOptions.md#sitekey)
-
 ## Properties
 
-### language
+### language?
 
-• `Optional` **language**: `string`
+> `optional` **language**: `string`
 
 #### Defined in
 
 [src/ui/editors/recaptcha.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/recaptcha.ts#L8)
 
-___
+***
 
-### siteKey
+### siteKey?
 
-• `Optional` **siteKey**: `string`
+> `optional` **siteKey**: `string`
 
 #### Defined in
 

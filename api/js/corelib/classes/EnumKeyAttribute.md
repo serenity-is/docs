@@ -2,27 +2,17 @@
 
 # Class: EnumKeyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](EnumKeyAttribute.md#constructor)
-
-### Properties
-
-- [value](EnumKeyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new EnumKeyAttribute()
 
-• **new EnumKeyAttribute**(`value`): [`EnumKeyAttribute`](EnumKeyAttribute.md)
+> **new EnumKeyAttribute**(`value`): [`EnumKeyAttribute`](EnumKeyAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

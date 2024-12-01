@@ -2,27 +2,17 @@
 
 # Class: DialogTypeAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](DialogTypeAttribute.md#constructor)
-
-### Properties
-
-- [value](DialogTypeAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new DialogTypeAttribute()
 
-• **new DialogTypeAttribute**(`value`): [`DialogTypeAttribute`](DialogTypeAttribute.md)
+> **new DialogTypeAttribute**(`value`): [`DialogTypeAttribute`](DialogTypeAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+##### value
+
+`any`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `any`
+> **value**: `any`
 
 #### Defined in
 

@@ -2,27 +2,19 @@
 
 # Interface: DeleteResponse
 
-## Hierarchy
+## Extends
 
 - [`ServiceResponse`](ServiceResponse.md)
 
-  ↳ **`DeleteResponse`**
-
-## Table of contents
-
-### Properties
-
-- [Error](DeleteResponse.md#error)
-
 ## Properties
 
-### Error
+### Error?
 
-• `Optional` **Error**: [`ServiceError`](ServiceError.md)
+> `optional` **Error**: [`ServiceError`](ServiceError.md)
 
 #### Inherited from
 
-[ServiceResponse](ServiceResponse.md).[Error](ServiceResponse.md#error)
+[`ServiceResponse`](ServiceResponse.md).[`Error`](ServiceResponse.md#error)
 
 #### Defined in
 

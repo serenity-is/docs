@@ -2,105 +2,91 @@
 
 # Interface: FilterLine
 
-## Table of contents
-
-### Properties
-
-- [criteria](FilterLine.md#criteria)
-- [displayText](FilterLine.md#displaytext)
-- [field](FilterLine.md#field)
-- [isOr](FilterLine.md#isor)
-- [leftParen](FilterLine.md#leftparen)
-- [operator](FilterLine.md#operator)
-- [rightParen](FilterLine.md#rightparen)
-- [state](FilterLine.md#state)
-- [validationError](FilterLine.md#validationerror)
-
 ## Properties
 
-### criteria
+### criteria?
 
-• `Optional` **criteria**: `any`[]
+> `optional` **criteria**: `any`[]
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L10)
 
-___
+***
 
-### displayText
+### displayText?
 
-• `Optional` **displayText**: `string`
+> `optional` **displayText**: `string`
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L11)
 
-___
+***
 
-### field
+### field?
 
-• `Optional` **field**: `string`
+> `optional` **field**: `string`
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L4)
 
-___
+***
 
-### isOr
+### isOr?
 
-• `Optional` **isOr**: `boolean`
+> `optional` **isOr**: `boolean`
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L6)
 
-___
+***
 
-### leftParen
+### leftParen?
 
-• `Optional` **leftParen**: `boolean`
+> `optional` **leftParen**: `boolean`
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L7)
 
-___
+***
 
-### operator
+### operator?
 
-• `Optional` **operator**: `string`
+> `optional` **operator**: `string`
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L5)
 
-___
+***
 
-### rightParen
+### rightParen?
 
-• `Optional` **rightParen**: `boolean`
+> `optional` **rightParen**: `boolean`
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L8)
 
-___
+***
 
-### state
+### state?
 
-• `Optional` **state**: `any`
+> `optional` **state**: `any`
 
 #### Defined in
 
 [src/ui/filtering/filterline.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L12)
 
-___
+***
 
-### validationError
+### validationError?
 
-• `Optional` **validationError**: `string`
+> `optional` **validationError**: `string`
 
 #### Defined in
 

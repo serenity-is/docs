@@ -2,27 +2,17 @@
 
 # Class: NamePropertyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](NamePropertyAttribute.md#constructor)
-
-### Properties
-
-- [value](NamePropertyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new NamePropertyAttribute()
 
-• **new NamePropertyAttribute**(`value`): [`NamePropertyAttribute`](NamePropertyAttribute.md)
+> **new NamePropertyAttribute**(`value`): [`NamePropertyAttribute`](NamePropertyAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

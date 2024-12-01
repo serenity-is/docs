@@ -2,29 +2,22 @@
 
 # Interface: EmailEditorOptions
 
-## Table of contents
-
-### Properties
-
-- [domain](EmailEditorOptions.md#domain)
-- [readOnlyDomain](EmailEditorOptions.md#readonlydomain)
-
 ## Properties
 
-### domain
+### domain?
 
-• `Optional` **domain**: `string`
-
-#### Defined in
-
-[src/ui/editors/emaileditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.ts#L8)
-
-___
-
-### readOnlyDomain
-
-• `Optional` **readOnlyDomain**: `boolean`
+> `optional` **domain**: `string`
 
 #### Defined in
 
-[src/ui/editors/emaileditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.ts#L9)
+[src/ui/editors/emaileditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.tsx#L8)
+
+***
+
+### readOnlyDomain?
+
+> `optional` **readOnlyDomain**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/emaileditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.tsx#L9)

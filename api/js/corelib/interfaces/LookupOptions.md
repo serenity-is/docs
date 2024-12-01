@@ -2,45 +2,35 @@
 
 # Interface: LookupOptions\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name |
-| :------ |
-| `TItem` |
-
-## Table of contents
-
-### Properties
-
-- [idField](LookupOptions.md#idfield)
-- [parentIdField](LookupOptions.md#parentidfield)
-- [textField](LookupOptions.md#textfield)
+• **TItem**
 
 ## Properties
 
-### idField
+### idField?
 
-• `Optional` **idField**: `string`
+> `optional` **idField**: `string`
 
 #### Defined in
 
 [src/base/lookup.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L2)
 
-___
+***
 
-### parentIdField
+### parentIdField?
 
-• `Optional` **parentIdField**: `string`
+> `optional` **parentIdField**: `string`
 
 #### Defined in
 
 [src/base/lookup.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L3)
 
-___
+***
 
-### textField
+### textField?
 
-• `Optional` **textField**: `string`
+> `optional` **textField**: `string`
 
 #### Defined in
 

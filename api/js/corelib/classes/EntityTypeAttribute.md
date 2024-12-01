@@ -2,27 +2,17 @@
 
 # Class: EntityTypeAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](EntityTypeAttribute.md#constructor)
-
-### Properties
-
-- [value](EntityTypeAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new EntityTypeAttribute()
 
-• **new EntityTypeAttribute**(`value`): [`EntityTypeAttribute`](EntityTypeAttribute.md)
+> **new EntityTypeAttribute**(`value`): [`EntityTypeAttribute`](EntityTypeAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

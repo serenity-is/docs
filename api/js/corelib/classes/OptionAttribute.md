@@ -2,17 +2,11 @@
 
 # Class: OptionAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](OptionAttribute.md#constructor)
-
 ## Constructors
 
-### constructor
+### new OptionAttribute()
 
-• **new OptionAttribute**(): [`OptionAttribute`](OptionAttribute.md)
+> **new OptionAttribute**(): [`OptionAttribute`](OptionAttribute.md)
 
 #### Returns
 

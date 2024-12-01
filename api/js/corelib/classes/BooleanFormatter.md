@@ -6,38 +6,23 @@
 
 - [`Formatter`](../interfaces/Formatter.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](BooleanFormatter.md#constructor)
-
-### Properties
-
-- [props](BooleanFormatter.md#props)
-
-### Accessors
-
-- [falseText](BooleanFormatter.md#falsetext)
-- [trueText](BooleanFormatter.md#truetext)
-
-### Methods
-
-- [format](BooleanFormatter.md#format)
-
 ## Constructors
 
-### constructor
+### new BooleanFormatter()
 
-• **new BooleanFormatter**(`props?`): [`BooleanFormatter`](BooleanFormatter.md)
+> **new BooleanFormatter**(`props`): [`BooleanFormatter`](BooleanFormatter.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `props` | `Object` |
-| `props.falseText?` | `string` |
-| `props.trueText?` | `string` |
+##### props
+
+###### props.falseText
+
+`string`
+
+###### props.trueText
+
+`string`
 
 #### Returns
 
@@ -51,14 +36,15 @@
 
 ### props
 
-• `Readonly` **props**: `Object` = `{}`
+> `readonly` **props**: `object` = `{}`
 
-#### Type declaration
+#### falseText?
 
-| Name | Type |
-| :------ | :------ |
-| `falseText?` | `string` |
-| `trueText?` | `string` |
+> `optional` **falseText**: `string`
+
+#### trueText?
+
+> `optional` **trueText**: `string`
 
 #### Defined in
 
@@ -68,73 +54,73 @@
 
 ### falseText
 
-• `get` **falseText**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **falseText**(): `string`
+
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **falseText**(`value`): `void`
+
+##### Parameters
+
+###### value
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Defined in
 
 [src/ui/formatters/formatters.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L34)
 
-• `set` **falseText**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L35)
-
-___
+***
 
 ### trueText
 
-• `get` **trueText**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **trueText**(): `string`
+
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **trueText**(`value`): `void`
+
+##### Parameters
+
+###### value
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Defined in
 
 [src/ui/formatters/formatters.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L37)
 
-• `set` **trueText**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L38)
-
 ## Methods
 
-### format
+### format()
 
-▸ **format**(`ctx`): `string`
+> **format**(`ctx`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `FormatterContext`\<`any`\> |
+##### ctx
+
+`FormatterContext`\<`any`\>
 
 #### Returns
 
@@ -142,7 +128,7 @@ ___
 
 #### Implementation of
 
-[Formatter](../interfaces/Formatter.md).[format](../interfaces/Formatter.md#format)
+[`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
 
 #### Defined in
 

@@ -2,27 +2,17 @@
 
 # Class: CategoryAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](CategoryAttribute.md#constructor)
-
-### Properties
-
-- [category](CategoryAttribute.md#category)
-
 ## Constructors
 
-### constructor
+### new CategoryAttribute()
 
-• **new CategoryAttribute**(`category`): [`CategoryAttribute`](CategoryAttribute.md)
+> **new CategoryAttribute**(`category`): [`CategoryAttribute`](CategoryAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `category` | `string` |
+##### category
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### category
 
-• **category**: `string`
+> **category**: `string`
 
 #### Defined in
 

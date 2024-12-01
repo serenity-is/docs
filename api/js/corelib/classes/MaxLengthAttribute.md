@@ -2,27 +2,17 @@
 
 # Class: MaxLengthAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](MaxLengthAttribute.md#constructor)
-
-### Properties
-
-- [maxLength](MaxLengthAttribute.md#maxlength)
-
 ## Constructors
 
-### constructor
+### new MaxLengthAttribute()
 
-• **new MaxLengthAttribute**(`maxLength`): [`MaxLengthAttribute`](MaxLengthAttribute.md)
+> **new MaxLengthAttribute**(`maxLength`): [`MaxLengthAttribute`](MaxLengthAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `maxLength` | `number` |
+##### maxLength
+
+`number`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### maxLength
 
-• **maxLength**: `number`
+> **maxLength**: `number`
 
 #### Defined in
 

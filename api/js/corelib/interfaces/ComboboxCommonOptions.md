@@ -2,61 +2,48 @@
 
 # Interface: ComboboxCommonOptions
 
-## Hierarchy
+## Extended by
 
-- **`ComboboxCommonOptions`**
-
-  ↳ [`ComboboxEditorOptions`](ComboboxEditorOptions.md)
-
-  ↳ [`SelectEditorOptions`](SelectEditorOptions.md)
-
-  ↳ [`EnumEditorOptions`](EnumEditorOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [allowClear](ComboboxCommonOptions.md#allowclear)
-- [delimited](ComboboxCommonOptions.md#delimited)
-- [minimumResultsForSearch](ComboboxCommonOptions.md#minimumresultsforsearch)
-- [multiple](ComboboxCommonOptions.md#multiple)
+- [`ComboboxEditorOptions`](ComboboxEditorOptions.md)
+- [`SelectEditorOptions`](SelectEditorOptions.md)
+- [`EnumEditorOptions`](EnumEditorOptions.md)
 
 ## Properties
 
-### allowClear
+### allowClear?
 
-• `Optional` **allowClear**: `boolean`
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L14)
-
-___
-
-### delimited
-
-• `Optional` **delimited**: `boolean`
+> `optional` **allowClear**: `boolean`
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L15)
+[src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
 
-___
+***
 
-### minimumResultsForSearch
+### delimited?
 
-• `Optional` **minimumResultsForSearch**: `any`
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L16)
-
-___
-
-### multiple
-
-• `Optional` **multiple**: `boolean`
+> `optional` **delimited**: `boolean`
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L17)
+[src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+
+***
+
+### minimumResultsForSearch?
+
+> `optional` **minimumResultsForSearch**: `any`
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+
+***
+
+### multiple?
+
+> `optional` **multiple**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)

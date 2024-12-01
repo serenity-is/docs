@@ -2,27 +2,17 @@
 
 # Class: IsActivePropertyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](IsActivePropertyAttribute.md#constructor)
-
-### Properties
-
-- [value](IsActivePropertyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new IsActivePropertyAttribute()
 
-• **new IsActivePropertyAttribute**(`value`): [`IsActivePropertyAttribute`](IsActivePropertyAttribute.md)
+> **new IsActivePropertyAttribute**(`value`): [`IsActivePropertyAttribute`](IsActivePropertyAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

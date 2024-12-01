@@ -2,27 +2,17 @@
 
 # Class: GeneratedCodeAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](GeneratedCodeAttribute.md#constructor)
-
-### Properties
-
-- [origin](GeneratedCodeAttribute.md#origin)
-
 ## Constructors
 
-### constructor
+### new GeneratedCodeAttribute()
 
-• **new GeneratedCodeAttribute**(`origin?`): [`GeneratedCodeAttribute`](GeneratedCodeAttribute.md)
+> **new GeneratedCodeAttribute**(`origin`?): [`GeneratedCodeAttribute`](GeneratedCodeAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `origin?` | `string` |
+##### origin?
+
+`string`
 
 #### Returns
 
@@ -34,9 +24,9 @@
 
 ## Properties
 
-### origin
+### origin?
 
-• `Optional` **origin**: `string`
+> `optional` **origin**: `string`
 
 #### Defined in
 

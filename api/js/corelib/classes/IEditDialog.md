@@ -2,25 +2,11 @@
 
 # Class: IEditDialog
 
-## Implemented by
-
-- [`EntityDialog`](EntityDialog.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IEditDialog.md#constructor)
-
-### Methods
-
-- [load](IEditDialog.md#load)
-
 ## Constructors
 
-### constructor
+### new IEditDialog()
 
-• **new IEditDialog**(): [`IEditDialog`](IEditDialog.md)
+> **new IEditDialog**(): [`IEditDialog`](IEditDialog.md)
 
 #### Returns
 
@@ -28,17 +14,23 @@
 
 ## Methods
 
-### load
+### load()
 
-▸ **load**(`entityOrId`, `done`, `fail?`): `void`
+> **load**(`entityOrId`, `done`, `fail`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entityOrId` | `any` |
-| `done` | () => `void` |
-| `fail?` | (`p1`: `any`) => `void` |
+##### entityOrId
+
+`any`
+
+##### done
+
+() => `void`
+
+##### fail?
+
+(`p1`) => `void`
 
 #### Returns
 

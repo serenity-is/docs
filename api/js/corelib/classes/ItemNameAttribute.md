@@ -2,27 +2,17 @@
 
 # Class: ItemNameAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ItemNameAttribute.md#constructor)
-
-### Properties
-
-- [value](ItemNameAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new ItemNameAttribute()
 
-• **new ItemNameAttribute**(`value`): [`ItemNameAttribute`](ItemNameAttribute.md)
+> **new ItemNameAttribute**(`value`): [`ItemNameAttribute`](ItemNameAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

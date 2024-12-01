@@ -2,27 +2,17 @@
 
 # Class: UpdatableAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](UpdatableAttribute.md#constructor)
-
-### Properties
-
-- [value](UpdatableAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new UpdatableAttribute()
 
-• **new UpdatableAttribute**(`value?`): [`UpdatableAttribute`](UpdatableAttribute.md)
+> **new UpdatableAttribute**(`value`): [`UpdatableAttribute`](UpdatableAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

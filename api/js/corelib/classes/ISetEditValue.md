@@ -2,28 +2,11 @@
 
 # Class: ISetEditValue
 
-## Implemented by
-
-- [`CheckTreeEditor`](CheckTreeEditor.md)
-- [`ComboboxEditor`](ComboboxEditor.md)
-- [`FileUploadEditor`](FileUploadEditor.md)
-- [`MultipleFileUploadEditor`](MultipleFileUploadEditor.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ISetEditValue.md#constructor)
-
-### Methods
-
-- [setEditValue](ISetEditValue.md#seteditvalue)
-
 ## Constructors
 
-### constructor
+### new ISetEditValue()
 
-• **new ISetEditValue**(): [`ISetEditValue`](ISetEditValue.md)
+> **new ISetEditValue**(): [`ISetEditValue`](ISetEditValue.md)
 
 #### Returns
 
@@ -31,16 +14,19 @@
 
 ## Methods
 
-### setEditValue
+### setEditValue()
 
-▸ **setEditValue**(`source`, `property`): `void`
+> **setEditValue**(`source`, `property`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `source` | `any` |
-| `property` | [`PropertyItem`](../interfaces/PropertyItem.md) |
+##### source
+
+`any`
+
+##### property
+
+[`PropertyItem`](../interfaces/PropertyItem.md)
 
 #### Returns
 

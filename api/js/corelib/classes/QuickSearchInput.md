@@ -2,83 +2,25 @@
 
 # Class: QuickSearchInput\<P\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `P` | extends [`QuickSearchInputOptions`](../interfaces/QuickSearchInputOptions.md) = [`QuickSearchInputOptions`](../interfaces/QuickSearchInputOptions.md) |
-
-## Hierarchy
+## Extends
 
 - [`Widget`](Widget.md)\<`P`\>
 
-  ↳ **`QuickSearchInput`**
+## Type Parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](QuickSearchInput.md#constructor)
-
-### Properties
-
-- [domNode](QuickSearchInput.md#domnode)
-- [idPrefix](QuickSearchInput.md#idprefix)
-- [options](QuickSearchInput.md#options)
-- [uniqueName](QuickSearchInput.md#uniquename)
-- [typeInfo](QuickSearchInput.md#typeinfo)
-
-### Accessors
-
-- [element](QuickSearchInput.md#element)
-- [props](QuickSearchInput.md#props)
-
-### Methods
-
-- [addCssClass](QuickSearchInput.md#addcssclass)
-- [addValidationRule](QuickSearchInput.md#addvalidationrule)
-- [change](QuickSearchInput.md#change)
-- [changeSelect2](QuickSearchInput.md#changeselect2)
-- [checkIfValueChanged](QuickSearchInput.md#checkifvaluechanged)
-- [destroy](QuickSearchInput.md#destroy)
-- [getCssClass](QuickSearchInput.md#getcssclass)
-- [getCustomAttribute](QuickSearchInput.md#getcustomattribute)
-- [getFieldElement](QuickSearchInput.md#getfieldelement)
-- [getGridField](QuickSearchInput.md#getgridfield)
-- [get\_field](QuickSearchInput.md#get_field)
-- [get\_value](QuickSearchInput.md#get_value)
-- [init](QuickSearchInput.md#init)
-- [internalInit](QuickSearchInput.md#internalinit)
-- [internalRenderContents](QuickSearchInput.md#internalrendercontents)
-- [render](QuickSearchInput.md#render)
-- [renderContents](QuickSearchInput.md#rendercontents)
-- [restoreState](QuickSearchInput.md#restorestate)
-- [searchNow](QuickSearchInput.md#searchnow)
-- [set\_field](QuickSearchInput.md#set_field)
-- [syncOrAsyncThen](QuickSearchInput.md#syncorasyncthen)
-- [updateInputPlaceHolder](QuickSearchInput.md#updateinputplaceholder)
-- [useIdPrefix](QuickSearchInput.md#useidprefix)
-- [create](QuickSearchInput.md#create)
-- [createDefaultElement](QuickSearchInput.md#createdefaultelement)
-- [getWidgetName](QuickSearchInput.md#getwidgetname)
+• **P** *extends* [`QuickSearchInputOptions`](../interfaces/QuickSearchInputOptions.md) = [`QuickSearchInputOptions`](../interfaces/QuickSearchInputOptions.md)
 
 ## Constructors
 
-### constructor
+### new QuickSearchInput()
 
-• **new QuickSearchInput**\<`P`\>(`props`): [`QuickSearchInput`](QuickSearchInput.md)\<`P`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `P` | extends [`QuickSearchInputOptions`](../interfaces/QuickSearchInputOptions.md) = [`QuickSearchInputOptions`](../interfaces/QuickSearchInputOptions.md) |
+> **new QuickSearchInput**\<`P`\>(`props`): [`QuickSearchInput`](QuickSearchInput.md)\<`P`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `props` | [`WidgetProps`](../README.md#widgetprops)\<`P`\> |
+##### props
+
+[`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
 #### Returns
 
@@ -86,354 +28,395 @@
 
 #### Overrides
 
-[Widget](Widget.md).[constructor](Widget.md#constructor)
+[`Widget`](Widget.md).[`constructor`](Widget.md#constructors)
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L29)
+[src/ui/datagrid/quicksearchinput.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L29)
 
 ## Properties
 
 ### domNode
 
-• `Readonly` **domNode**: `HTMLInputElement`
+> `readonly` **domNode**: `HTMLInputElement`
 
 #### Overrides
 
-[Widget](Widget.md).[domNode](Widget.md#domnode)
+[`Widget`](Widget.md).[`domNode`](Widget.md#domnode)
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L21)
+[src/ui/datagrid/quicksearchinput.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L21)
 
-___
+***
 
 ### idPrefix
 
-• `Readonly` **idPrefix**: `string`
+> `readonly` **idPrefix**: `string`
 
 #### Inherited from
 
-[Widget](Widget.md).[idPrefix](Widget.md#idprefix)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
-
-___
-
-### options
-
-• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
-
-#### Inherited from
-
-[Widget](Widget.md).[options](Widget.md#options)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
-
-___
-
-### uniqueName
-
-• `Protected` `Readonly` **uniqueName**: `string`
-
-#### Inherited from
-
-[Widget](Widget.md).[uniqueName](Widget.md#uniquename)
+[`Widget`](Widget.md).[`idPrefix`](Widget.md#idprefix)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
-___
+***
 
-### typeInfo
+### options
 
-▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
+> `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
 #### Inherited from
 
-[Widget](Widget.md).[typeInfo](Widget.md#typeinfo)
+[`Widget`](Widget.md).[`options`](Widget.md#options)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
+
+***
+
+### uniqueName
+
+> `readonly` **uniqueName**: `string`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`uniqueName`](Widget.md#uniquename)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
+
+***
+
+### isComponent
+
+> `readonly` `static` **isComponent**: `true` = `true`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`isComponent`](Widget.md#iscomponent)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L223)
+
+***
+
+### typeInfo
+
+> `static` **typeInfo**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity.Widget"`\>
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`typeInfo`](Widget.md#typeinfo)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
 
 ## Accessors
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+#### Get Signature
+
+> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
-#### Returns
+##### Returns
 
 [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
-Widget.element
+[`Widget`](Widget.md).[`element`](Widget.md#element)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+
+***
+
+### props
+
+#### Get Signature
+
+> **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
+
+##### Returns
+
+[`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`props`](Widget.md#props)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+
+## Methods
+
+### addCssClass()
+
+> `protected` **addCssClass**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`addCssClass`](Widget.md#addcssclass)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
-___
+***
 
-### props
+### addValidationRule()
 
-• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+#### Call Signature
 
-#### Returns
+> **addValidationRule**(`rule`, `uniqueName`?): `void`
 
-[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+##### Parameters
 
-#### Inherited from
+###### rule
 
-Widget.props
+(`input`) => `string`
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
-
-## Methods
-
-### addCssClass
-
-▸ **addCssClass**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[addCssClass](Widget.md#addcssclass)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
-
-___
-
-### addValidationRule
-
-▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
-| `uniqueName?` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[addValidationRule](Widget.md#addvalidationrule)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
-
-▸ **addValidationRule**(`uniqueName`, `rule`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[addValidationRule](Widget.md#addvalidationrule)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
-___
-
-### change
-
-▸ **change**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `Event`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[change](Widget.md#change)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
-
-___
-
-### changeSelect2
-
-▸ **changeSelect2**(`handler`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `Event`) => `void` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[changeSelect2](Widget.md#changeselect2)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
-
-___
-
-### checkIfValueChanged
-
-▸ **checkIfValueChanged**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/datagrid/quicksearchinput.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L84)
-
-___
-
-### destroy
-
-▸ **destroy**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[destroy](Widget.md#destroy)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L49)
-
-___
-
-### getCssClass
-
-▸ **getCssClass**(): `string`
-
-#### Returns
+###### uniqueName?
 
 `string`
 
-#### Inherited from
+##### Returns
 
-[Widget](Widget.md).[getCssClass](Widget.md#getcssclass)
+`void`
 
-#### Defined in
+##### Inherited from
 
-[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
+[`Widget`](Widget.md).[`addValidationRule`](Widget.md#addvalidationrule)
 
-___
+##### Defined in
 
-### getCustomAttribute
+[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
 
-▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+#### Call Signature
 
-#### Type parameters
+> **addValidationRule**(`uniqueName`, `rule`): `void`
 
-| Name |
-| :------ |
-| `TAttr` |
+##### Parameters
+
+###### uniqueName
+
+`string`
+
+###### rule
+
+(`input`) => `string`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+[`Widget`](Widget.md).[`addValidationRule`](Widget.md#addvalidationrule)
+
+##### Defined in
+
+[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
+
+***
+
+### afterRender()
+
+> `protected` **afterRender**(`callback`): `void`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
-| `inherit` | `boolean` | `true` |
+##### callback
+
+() => `void`
 
 #### Returns
 
-`TAttr`
+`void`
 
 #### Inherited from
 
-[Widget](Widget.md).[getCustomAttribute](Widget.md#getcustomattribute)
+[`Widget`](Widget.md).[`afterRender`](Widget.md#afterrender)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
-___
+***
 
-### getFieldElement
+### byId()
 
-▸ **getFieldElement**(): `HTMLElement`
+> `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
+
+#### Type Parameters
+
+• **TElement** *extends* `HTMLElement` = `HTMLElement`
+
+#### Parameters
+
+##### id
+
+`string`
 
 #### Returns
 
-`HTMLElement`
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
 #### Inherited from
 
-[Widget](Widget.md).[getFieldElement](Widget.md#getfieldelement)
+[`Widget`](Widget.md).[`byId`](Widget.md#byid)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
 
-___
+***
 
-### getGridField
+### change()
 
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **change**(`handler`): `void`
+
+#### Parameters
+
+##### handler
+
+(`e`) => `void`
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+`void`
 
 #### Inherited from
 
-[Widget](Widget.md).[getGridField](Widget.md#getgridfield)
+[`Widget`](Widget.md).[`change`](Widget.md#change)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
+
+***
+
+### changeSelect2()
+
+> **changeSelect2**(`handler`): `void`
+
+#### Parameters
+
+##### handler
+
+(`e`) => `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`changeSelect2`](Widget.md#changeselect2)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L122)
+
+***
+
+### checkIfValueChanged()
+
+> `protected` **checkIfValueChanged**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/datagrid/quicksearchinput.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L67)
+
+***
+
+### deferRender()
+
+> `protected` **deferRender**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`deferRender`](Widget.md#deferrender)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
+
+***
+
+### destroy()
+
+> **destroy**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`destroy`](Widget.md#destroy)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L47)
+
+***
+
+### findById()
+
+> `protected` **findById**\<`TElement`\>(`id`): `TElement`
+
+#### Type Parameters
+
+• **TElement** *extends* `HTMLElement` = `HTMLElement`
+
+#### Parameters
+
+##### id
+
+`string`
+
+#### Returns
+
+`TElement`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`findById`](Widget.md#findbyid)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
-___
+***
 
-### get\_field
+### get\_field()
 
-▸ **get_field**(): [`QuickSearchField`](../interfaces/QuickSearchField.md)
+> **get\_field**(): [`QuickSearchField`](../interfaces/QuickSearchField.md)
 
 #### Returns
 
@@ -441,13 +424,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L113)
+[src/ui/datagrid/quicksearchinput.tsx:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L96)
 
-___
+***
 
-### get\_value
+### get\_value()
 
-▸ **get_value**(): `string`
+> **get\_value**(): `string`
 
 #### Returns
 
@@ -455,13 +438,81 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L109)
+[src/ui/datagrid/quicksearchinput.tsx:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L92)
 
-___
+***
 
-### init
+### getCssClass()
 
-▸ **init**(): `this`
+> `protected` **getCssClass**(): `string`
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`getCssClass`](Widget.md#getcssclass)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
+
+***
+
+### getCustomAttribute()
+
+> `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
+
+#### Type Parameters
+
+• **TAttr**
+
+#### Parameters
+
+##### attrType
+
+(...`args`) => `TAttr`
+
+##### inherit
+
+`boolean` = `true`
+
+#### Returns
+
+`TAttr`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`getCustomAttribute`](Widget.md#getcustomattribute)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+***
+
+### getGridField()
+
+> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`getGridField`](Widget.md#getgridfield)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
+
+***
+
+### init()
+
+> **init**(): `this`
 
 #### Returns
 
@@ -469,17 +520,17 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[init](Widget.md#init)
+[`Widget`](Widget.md).[`init`](Widget.md#init)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
+[src/ui/widgets/widget.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L157)
 
-___
+***
 
-### internalInit
+### internalRenderContents()
 
-▸ **internalInit**(): `void`
+> **internalRenderContents**(): `void`
 
 #### Returns
 
@@ -487,35 +538,35 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[internalInit](Widget.md#internalinit)
+[`Widget`](Widget.md).[`internalRenderContents`](Widget.md#internalrendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+[src/ui/widgets/widget.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L177)
 
-___
+***
 
-### internalRenderContents
+### legacyTemplateRender()
 
-▸ **internalRenderContents**(): `void`
+> `protected` **legacyTemplateRender**(): `boolean`
 
 #### Returns
 
-`void`
+`boolean`
 
 #### Inherited from
 
-[Widget](Widget.md).[internalRenderContents](Widget.md#internalrendercontents)
+[`Widget`](Widget.md).[`legacyTemplateRender`](Widget.md#legacytemplaterender)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
+[src/ui/widgets/widget.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L194)
 
-___
+***
 
-### render
+### render()
 
-▸ **render**(): `any`
+> **render**(): `any`
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -527,17 +578,17 @@ this method should not be overridden. Override renderContents() instead.
 
 #### Inherited from
 
-[Widget](Widget.md).[render](Widget.md#render)
+[`Widget`](Widget.md).[`render`](Widget.md#render)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
+[src/ui/widgets/widget.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L167)
 
-___
+***
 
-### renderContents
+### renderContents()
 
-▸ **renderContents**(): `any`
+> `protected` **renderContents**(): `any`
 
 #### Returns
 
@@ -545,24 +596,27 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[renderContents](Widget.md#rendercontents)
+[`Widget`](Widget.md).[`renderContents`](Widget.md#rendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L178)
+[src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
 
-___
+***
 
-### restoreState
+### restoreState()
 
-▸ **restoreState**(`value`, `field`): `void`
+> **restoreState**(`value`, `field`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
-| `field` | [`QuickSearchField`](../interfaces/QuickSearchField.md) |
+##### value
+
+`string`
+
+##### field
+
+[`QuickSearchField`](../interfaces/QuickSearchField.md)
 
 #### Returns
 
@@ -570,19 +624,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L130)
+[src/ui/datagrid/quicksearchinput.tsx:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L113)
 
-___
+***
 
-### searchNow
+### searchNow()
 
-▸ **searchNow**(`value`): `void`
+> `protected` **searchNow**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -590,19 +644,19 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L143)
+[src/ui/datagrid/quicksearchinput.tsx:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L126)
 
-___
+***
 
-### set\_field
+### set\_field()
 
-▸ **set_field**(`value`): `void`
+> **set\_field**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | [`QuickSearchField`](../interfaces/QuickSearchField.md) |
+##### value
+
+[`QuickSearchField`](../interfaces/QuickSearchField.md)
 
 #### Returns
 
@@ -610,27 +664,31 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L117)
+[src/ui/datagrid/quicksearchinput.tsx:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L100)
 
-___
+***
 
-### syncOrAsyncThen
+### syncOrAsyncThen()
 
-▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+> `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `syncMethod` | () => `T` |
-| `asyncMethod` | () => `PromiseLike`\<`T`\> |
-| `then` | (`v`: `T`) => `void` |
+##### syncMethod
+
+() => `T`
+
+##### asyncMethod
+
+() => `PromiseLike`\<`T`\>
+
+##### then
+
+(`v`) => `void`
 
 #### Returns
 
@@ -638,17 +696,17 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[syncOrAsyncThen](Widget.md#syncorasyncthen)
+[`Widget`](Widget.md).[`syncOrAsyncThen`](Widget.md#syncorasyncthen)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
+[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
 
-___
+***
 
-### updateInputPlaceHolder
+### updateInputPlaceHolder()
 
-▸ **updateInputPlaceHolder**(): `void`
+> `protected` **updateInputPlaceHolder**(): `void`
 
 #### Returns
 
@@ -656,44 +714,43 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L126)
+[src/ui/datagrid/quicksearchinput.tsx:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L109)
 
-___
+***
 
-### useIdPrefix
+### useIdPrefix()
 
-▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
+> `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
 #### Returns
 
-[`IdPrefixType`](../README.md#idprefixtype)
+[`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
 #### Inherited from
 
-[Widget](Widget.md).[useIdPrefix](Widget.md#useidprefix)
+[`Widget`](Widget.md).[`useIdPrefix`](Widget.md#useidprefix)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
+[src/ui/widgets/widget.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L218)
 
-___
+***
 
-### create
+### create()
 
-▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
+> `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
-| `P` | `P` |
+• **TWidget** *extends* [`Widget`](Widget.md)\<`P`\>
+
+• **P**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
+##### params
+
+[`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\>
 
 #### Returns
 
@@ -701,17 +758,17 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[create](Widget.md#create)
+[`Widget`](Widget.md).[`create`](Widget.md#create)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+[src/ui/widgets/widget.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L130)
 
-___
+***
 
-### createDefaultElement
+### createDefaultElement()
 
-▸ **createDefaultElement**(): `HTMLInputElement`
+> `static` **createDefaultElement**(): `HTMLInputElement`
 
 #### Returns
 
@@ -719,23 +776,23 @@ ___
 
 #### Overrides
 
-[Widget](Widget.md).[createDefaultElement](Widget.md#createdefaultelement)
+[`Widget`](Widget.md).[`createDefaultElement`](Widget.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L20)
+[src/ui/datagrid/quicksearchinput.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L20)
 
-___
+***
 
-### getWidgetName
+### getWidgetName()
 
-▸ **getWidgetName**(`type`): `string`
+> `static` **getWidgetName**(`type`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `Function` |
+##### type
+
+`Function`
 
 #### Returns
 
@@ -743,7 +800,7 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[getWidgetName](Widget.md#getwidgetname)
+[`Widget`](Widget.md).[`getWidgetName`](Widget.md#getwidgetname)
 
 #### Defined in
 

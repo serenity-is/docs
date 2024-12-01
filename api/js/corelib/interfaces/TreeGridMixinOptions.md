@@ -2,38 +2,23 @@
 
 # Interface: TreeGridMixinOptions\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name |
-| :------ |
-| `TItem` |
-
-## Table of contents
-
-### Properties
-
-- [getParentId](TreeGridMixinOptions.md#getparentid)
-- [grid](TreeGridMixinOptions.md#grid)
-- [initialCollapse](TreeGridMixinOptions.md#initialcollapse)
-- [toggleField](TreeGridMixinOptions.md#togglefield)
+• **TItem**
 
 ## Properties
 
-### getParentId
+### getParentId()
 
-• **getParentId**: (`item`: `TItem`) => `any`
+> **getParentId**: (`item`) => `any`
 
-#### Type declaration
+#### Parameters
 
-▸ (`item`): `any`
+##### item
 
-##### Parameters
+`TItem`
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `TItem` |
-
-##### Returns
+#### Returns
 
 `any`
 
@@ -41,27 +26,23 @@
 
 [src/ui/datagrid/treegridmixin.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L119)
 
-___
+***
 
 ### grid
 
-• **grid**: [`DataGrid`](../classes/DataGrid.md)\<`TItem`, `any`\>
+> **grid**: [`DataGrid`](../classes/DataGrid.md)\<`TItem`, `any`\>
 
 #### Defined in
 
 [src/ui/datagrid/treegridmixin.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L117)
 
-___
+***
 
-### initialCollapse
+### initialCollapse()?
 
-• `Optional` **initialCollapse**: () => `boolean`
+> `optional` **initialCollapse**: () => `boolean`
 
-#### Type declaration
-
-▸ (): `boolean`
-
-##### Returns
+#### Returns
 
 `boolean`
 
@@ -69,11 +50,11 @@ ___
 
 [src/ui/datagrid/treegridmixin.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L123)
 
-___
+***
 
 ### toggleField
 
-• **toggleField**: `string`
+> **toggleField**: `string`
 
 #### Defined in
 

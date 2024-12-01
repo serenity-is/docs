@@ -2,27 +2,17 @@
 
 # Class: StaticPanelAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](StaticPanelAttribute.md#constructor)
-
-### Properties
-
-- [value](StaticPanelAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new StaticPanelAttribute()
 
-• **new StaticPanelAttribute**(`value?`): [`StaticPanelAttribute`](StaticPanelAttribute.md)
+> **new StaticPanelAttribute**(`value`): [`StaticPanelAttribute`](StaticPanelAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

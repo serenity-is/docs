@@ -2,29 +2,22 @@
 
 # Interface: QuickSearchField
 
-## Table of contents
-
-### Properties
-
-- [name](QuickSearchField.md#name)
-- [title](QuickSearchField.md#title)
-
 ## Properties
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L6)
+[src/ui/datagrid/quicksearchinput.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L6)
 
-___
+***
 
 ### title
 
-• **title**: `string`
+> **title**: `string`
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L7)
+[src/ui/datagrid/quicksearchinput.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L7)

@@ -2,101 +2,86 @@
 
 # Interface: FileUploadConstraints
 
-## Hierarchy
+## Extended by
 
-- **`FileUploadConstraints`**
-
-  ↳ [`FileUploadEditorOptions`](FileUploadEditorOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [allowNonImage](FileUploadConstraints.md#allownonimage)
-- [maxHeight](FileUploadConstraints.md#maxheight)
-- [maxSize](FileUploadConstraints.md#maxsize)
-- [maxWidth](FileUploadConstraints.md#maxwidth)
-- [minHeight](FileUploadConstraints.md#minheight)
-- [minSize](FileUploadConstraints.md#minsize)
-- [minWidth](FileUploadConstraints.md#minwidth)
-- [originalNameProperty](FileUploadConstraints.md#originalnameproperty)
+- [`FileUploadEditorOptions`](FileUploadEditorOptions.md)
 
 ## Properties
 
-### allowNonImage
+### allowNonImage?
 
-• `Optional` **allowNonImage**: `boolean`
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L240)
-
-___
-
-### maxHeight
-
-• `Optional` **maxHeight**: `number`
+> `optional` **allowNonImage**: `boolean`
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L237)
+[src/ui/helpers/uploadhelper.tsx:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L233)
 
-___
+***
 
-### maxSize
+### maxHeight?
 
-• `Optional` **maxSize**: `number`
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L239)
-
-___
-
-### maxWidth
-
-• `Optional` **maxWidth**: `number`
+> `optional` **maxHeight**: `number`
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L235)
+[src/ui/helpers/uploadhelper.tsx:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L230)
 
-___
+***
 
-### minHeight
+### maxSize?
 
-• `Optional` **minHeight**: `number`
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L236)
-
-___
-
-### minSize
-
-• `Optional` **minSize**: `number`
+> `optional` **maxSize**: `number`
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L238)
+[src/ui/helpers/uploadhelper.tsx:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L232)
 
-___
+***
 
-### minWidth
+### maxWidth?
 
-• `Optional` **minWidth**: `number`
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L234)
-
-___
-
-### originalNameProperty
-
-• `Optional` **originalNameProperty**: `string`
+> `optional` **maxWidth**: `number`
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L241)
+[src/ui/helpers/uploadhelper.tsx:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L228)
+
+***
+
+### minHeight?
+
+> `optional` **minHeight**: `number`
+
+#### Defined in
+
+[src/ui/helpers/uploadhelper.tsx:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L229)
+
+***
+
+### minSize?
+
+> `optional` **minSize**: `number`
+
+#### Defined in
+
+[src/ui/helpers/uploadhelper.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L231)
+
+***
+
+### minWidth?
+
+> `optional` **minWidth**: `number`
+
+#### Defined in
+
+[src/ui/helpers/uploadhelper.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L227)
+
+***
+
+### originalNameProperty?
+
+> `optional` **originalNameProperty**: `string`
+
+#### Defined in
+
+[src/ui/helpers/uploadhelper.tsx:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L234)

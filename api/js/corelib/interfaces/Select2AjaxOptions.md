@@ -2,47 +2,31 @@
 
 # Interface: Select2AjaxOptions
 
-## Hierarchy
+## Extends
 
 - `RequestInit`
 
-  ↳ **`Select2AjaxOptions`**
-
-## Table of contents
-
-### Properties
-
-- [data](Select2AjaxOptions.md#data)
-- [headers](Select2AjaxOptions.md#headers)
-- [params](Select2AjaxOptions.md#params)
-- [quietMillis](Select2AjaxOptions.md#quietmillis)
-- [results](Select2AjaxOptions.md#results)
-- [url](Select2AjaxOptions.md#url)
-
-### Methods
-
-- [onError](Select2AjaxOptions.md#onerror)
-- [onSuccess](Select2AjaxOptions.md#onsuccess)
-
 ## Properties
 
-### data
+### data()?
 
-• `Optional` **data**: (`p1`: `string`, `p2`: `number`, `p3`: `any`) => `any`
+> `optional` **data**: (`p1`, `p2`, `p3`) => `any`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`, `p3`): `any`
+##### p1
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-| `p2` | `number` |
-| `p3` | `any` |
+##### p2
 
-##### Returns
+`number`
+
+##### p3
+
+`any`
+
+#### Returns
 
 `any`
 
@@ -50,59 +34,63 @@
 
 [src/ui/editors/select2.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L40)
 
-___
+***
 
-### headers
+### headers?
 
-• `Optional` **headers**: `Record`\<`string`, `string`\>
+> `optional` **headers**: `Record`\<`string`, `string`\>
+
+A Headers object, an object literal, or an array of two-item arrays to set request's headers.
 
 #### Overrides
 
-RequestInit.headers
+`RequestInit.headers`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L37)
 
-___
+***
 
-### params
+### params?
 
-• `Optional` **params**: `any`
+> `optional` **params**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L42)
 
-___
+***
 
-### quietMillis
+### quietMillis?
 
-• `Optional` **quietMillis**: `number`
+> `optional` **quietMillis**: `number`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L39)
 
-___
+***
 
-### results
+### results()?
 
-• `Optional` **results**: (`p1`: `any`, `p2`: `number`, `p3`: `any`) => `any`
+> `optional` **results**: (`p1`, `p2`, `p3`) => `any`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`, `p2`, `p3`): `any`
+##### p1
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `any` |
-| `p2` | `number` |
-| `p3` | `any` |
+##### p2
 
-##### Returns
+`number`
+
+##### p3
+
+`any`
+
+#### Returns
 
 `any`
 
@@ -110,11 +98,11 @@ ___
 
 [src/ui/editors/select2.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L41)
 
-___
+***
 
-### url
+### url?
 
-• `Optional` **url**: `string` \| (`term`: `string`, `page`: `number`, `context`: `any`) => `string`
+> `optional` **url**: `string` \| (`term`, `page`, `context`) => `string`
 
 #### Defined in
 
@@ -122,16 +110,19 @@ ___
 
 ## Methods
 
-### onError
+### onError()?
 
-▸ **onError**(`response`, `info?`): `boolean` \| `void`
+> `optional` **onError**(`response`, `info`?): `boolean` \| `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `response` | `any` |
-| `info?` | `any` |
+##### response
+
+`any`
+
+##### info?
+
+`any`
 
 #### Returns
 
@@ -141,17 +132,17 @@ ___
 
 [src/ui/editors/select2.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L43)
 
-___
+***
 
-### onSuccess
+### onSuccess()?
 
-▸ **onSuccess**(`response`): `void`
+> `optional` **onSuccess**(`response`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `response` | `any` |
+##### response
+
+`any`
 
 #### Returns
 

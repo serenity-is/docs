@@ -2,50 +2,24 @@
 
 # Class: Dialog
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Dialog.md#constructor)
-
-### Properties
-
-- [defaults](Dialog.md#defaults)
-- [messageDefaults](Dialog.md#messagedefaults)
-
-### Accessors
-
-- [result](Dialog.md#result)
-- [type](Dialog.md#type)
-
-### Methods
-
-- [close](Dialog.md#close)
-- [createBSModal](Dialog.md#createbsmodal)
-- [createUIDialog](Dialog.md#createuidialog)
-- [dispose](Dialog.md#dispose)
-- [getContentNode](Dialog.md#getcontentnode)
-- [getDialogNode](Dialog.md#getdialognode)
-- [getEventsNode](Dialog.md#geteventsnode)
-- [getFooterNode](Dialog.md#getfooternode)
-- [getHeaderNode](Dialog.md#getheadernode)
-- [onClose](Dialog.md#onclose)
-- [onOpen](Dialog.md#onopen)
-- [open](Dialog.md#open)
-- [title](Dialog.md#title)
-- [getInstance](Dialog.md#getinstance)
+Wrapper for different types of dialogs, including jQuery UI, Bootstrap modals, and Panels.
 
 ## Constructors
 
-### constructor
+### new Dialog()
 
-• **new Dialog**(`opt?`): [`Dialog`](Dialog.md)
+> **new Dialog**(`opt`?): [`Dialog`](Dialog.md)
+
+Creates a new dialog. The type of the dialog will be determined based on 
+the availability of jQuery UI, Bootstrap, and the options provided.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt?` | [`DialogOptions`](../interfaces/DialogOptions.md) |
+##### opt?
+
+[`DialogOptions`](../interfaces/DialogOptions.md)
+
+Optional configuration for the dialog
 
 #### Returns
 
@@ -53,103 +27,113 @@
 
 #### Defined in
 
-[src/base/dialogs.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L83)
+[src/base/dialogs.tsx:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L91)
 
 ## Properties
 
 ### defaults
 
-▪ `Static` **defaults**: [`DialogOptions`](../interfaces/DialogOptions.md)
+> `static` **defaults**: [`DialogOptions`](../interfaces/DialogOptions.md)
+
+Default set of dialog options
 
 #### Defined in
 
-[src/base/dialogs.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L132)
+[src/base/dialogs.tsx:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L141)
 
-___
+***
 
 ### messageDefaults
 
-▪ `Static` **messageDefaults**: [`MessageDialogOptions`](../interfaces/MessageDialogOptions.md)
+> `static` **messageDefaults**: [`MessageDialogOptions`](../interfaces/MessageDialogOptions.md)
+
+Default set of message dialog options
 
 #### Defined in
 
-[src/base/dialogs.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L145)
+[src/base/dialogs.tsx:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L155)
 
 ## Accessors
 
 ### result
 
-• `get` **result**(): `string`
+#### Get Signature
+
+> **get** **result**(): `string`
 
 The result code of the button that is clicked. Also attached to the dialog element as data-dialog-result
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Defined in
 
-[src/base/dialogs.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L169)
+[src/base/dialogs.tsx:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L184)
 
-___
+***
 
 ### type
 
-• `get` **type**(): [`DialogType`](../README.md#dialogtype)
+#### Get Signature
 
-#### Returns
+> **get** **type**(): [`DialogProviderType`](../type-aliases/DialogProviderType.md)
 
-[`DialogType`](../README.md#dialogtype)
+Returns the type of the dialog, or null if no dialog on the current element or if the element is null, e.g. dialog was disposed
+
+##### Returns
+
+[`DialogProviderType`](../type-aliases/DialogProviderType.md)
 
 #### Defined in
 
-[src/base/dialogs.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L262)
+[src/base/dialogs.tsx:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L365)
 
 ## Methods
 
-### close
+### close()
 
-▸ **close**(): `this`
+#### Call Signature
+
+> **close**(): `this`
 
 Closes dialog setting the result to null
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Defined in
+##### Defined in
 
-[src/base/dialogs.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L174)
+[src/base/dialogs.tsx:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L189)
 
-▸ **close**(`result`): `this`
+#### Call Signature
+
+> **close**(`result`): `this`
 
 Closes dialog with the result set to value
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `result` | `string` |
+###### result
 
-#### Returns
+`string`
+
+##### Returns
 
 `this`
 
-#### Defined in
+##### Defined in
 
-[src/base/dialogs.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L176)
+[src/base/dialogs.tsx:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L191)
 
-___
+***
 
-### createBSModal
+### dispose()
 
-▸ **createBSModal**(`opt`): `void`
+> **dispose**(): `void`
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opt` | [`DialogOptions`](../interfaces/DialogOptions.md) |
+Disposes the dialog, removing it from the DOM and unbinding all event handlers.
 
 #### Returns
 
@@ -157,47 +141,13 @@ ___
 
 #### Defined in
 
-[src/base/dialogs.ts:326](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L326)
+[src/base/dialogs.tsx:551](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L551)
 
-___
+***
 
-### createUIDialog
+### getContentNode()
 
-▸ **createUIDialog**(`opt`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opt` | [`DialogOptions`](../interfaces/DialogOptions.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/base/dialogs.ts:439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L439)
-
-___
-
-### dispose
-
-▸ **dispose**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/base/dialogs.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L468)
-
-___
-
-### getContentNode
-
-▸ **getContentNode**(): `HTMLElement`
+> **getContentNode**(): `HTMLElement`
 
 Gets the body/content element of the dialog
 
@@ -207,13 +157,13 @@ Gets the body/content element of the dialog
 
 #### Defined in
 
-[src/base/dialogs.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L276)
+[src/base/dialogs.tsx:379](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L379)
 
-___
+***
 
-### getDialogNode
+### getDialogNode()
 
-▸ **getDialogNode**(): `HTMLElement`
+> **getDialogNode**(): `HTMLElement`
 
 Gets the dialog element of the dialog
 
@@ -223,13 +173,13 @@ Gets the dialog element of the dialog
 
 #### Defined in
 
-[src/base/dialogs.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L281)
+[src/base/dialogs.tsx:384](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L384)
 
-___
+***
 
-### getEventsNode
+### getEventsNode()
 
-▸ **getEventsNode**(): `HTMLElement`
+> **getEventsNode**(): `HTMLElement`
 
 Gets the node that receives events for the dialog. It's .ui-dialog-content, .modal, or .panel-body
 
@@ -239,13 +189,13 @@ Gets the node that receives events for the dialog. It's .ui-dialog-content, .mod
 
 #### Defined in
 
-[src/base/dialogs.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L286)
+[src/base/dialogs.tsx:389](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L389)
 
-___
+***
 
-### getFooterNode
+### getFooterNode()
 
-▸ **getFooterNode**(): `HTMLElement`
+> **getFooterNode**(): `HTMLElement`
 
 Gets the footer element of the dialog
 
@@ -255,13 +205,13 @@ Gets the footer element of the dialog
 
 #### Defined in
 
-[src/base/dialogs.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L291)
+[src/base/dialogs.tsx:394](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L394)
 
-___
+***
 
-### getHeaderNode
+### getHeaderNode()
 
-▸ **getHeaderNode**(): `HTMLElement`
+> **getHeaderNode**(): `HTMLElement`
 
 Gets the header element of the dialog
 
@@ -271,20 +221,201 @@ Gets the header element of the dialog
 
 #### Defined in
 
-[src/base/dialogs.ts:296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L296)
+[src/base/dialogs.tsx:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L399)
 
-___
+***
 
-### onClose
+### onClose()
 
-▸ **onClose**(`handler`, `before?`): `void`
+> **onClose**(`handler`, `opt`?): `this`
+
+Adds an event handler that is called when the dialog is closed. If the opt.before is true, the handler is called before the dialog is closed and
+the closing can be cancelled by calling preventDefault on the event object.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `handler` | (`result?`: `string`, `e?`: `Event`) => `void` | `undefined` |
-| `before` | `boolean` | `false` |
+##### handler
+
+(`result`?, `e`?) => `void`
+
+The event handler function
+
+##### opt?
+
+Options to determine whether the handler should be called before the dialog is closed, and whether the handler should be called only once. 
+The default for oneOff is true unless opt.before is true.
+
+###### opt.before
+
+`boolean`
+
+###### opt.oneOff
+
+`boolean`
+
+#### Returns
+
+`this`
+
+The dialog instance
+
+#### Defined in
+
+[src/base/dialogs.tsx:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L226)
+
+***
+
+### onOpen()
+
+> **onOpen**(`handler`, `opt`?): `this`
+
+Adds an event handler that is called when the dialog is opened. If the second parameter is true, the handler is called before the dialog is opened and
+the opening can be cancelled by calling preventDefault on the event object.
+Note that if the dialog is not yet initialized, the first argument must be the body element of the dialog.
+
+#### Parameters
+
+##### handler
+
+(`e`?) => `void`
+
+The event handler function
+
+##### opt?
+
+Options to determine whether the handler should be called before the dialog is opened, and whether the handler should be called only once. 
+The default for oneOff is true unless opt.before is true.
+
+###### opt.before
+
+`boolean`
+
+###### opt.oneOff
+
+`boolean`
+
+#### Returns
+
+`this`
+
+The dialog instance
+
+#### Defined in
+
+[src/base/dialogs.tsx:282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L282)
+
+***
+
+### open()
+
+> **open**(): [`Dialog`](Dialog.md)
+
+Opens the dialog
+
+#### Returns
+
+[`Dialog`](Dialog.md)
+
+#### Defined in
+
+[src/base/dialogs.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L330)
+
+***
+
+### title()
+
+#### Call Signature
+
+> **title**(): `string`
+
+Gets the title text of the dialog
+
+##### Returns
+
+`string`
+
+##### Defined in
+
+[src/base/dialogs.tsx:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L352)
+
+#### Call Signature
+
+> **title**(`value`): `this`
+
+Sets the title text of the dialog.
+
+##### Parameters
+
+###### value
+
+`string`
+
+##### Returns
+
+`this`
+
+##### Defined in
+
+[src/base/dialogs.tsx:354](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L354)
+
+***
+
+### getInstance()
+
+> `static` **getInstance**(`el`): [`Dialog`](Dialog.md)
+
+Gets the dialog instance for the specified element.
+
+#### Parameters
+
+##### el
+
+`HTMLElement` | `ArrayLike`\<`HTMLElement`\>
+
+#### Returns
+
+[`Dialog`](Dialog.md)
+
+The dialog instance, or null if the element is not a dialog.
+
+#### Defined in
+
+[src/base/dialogs.tsx:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L176)
+
+***
+
+### onClose()
+
+> `static` **onClose**(`el`, `handler`, `opt`?): `void`
+
+Adds an event handler that is called when the dialog is closed. If the opt.before is true, the handler is called before the dialog is closed and
+the closing can be cancelled by calling preventDefault on the event object. Note that if the dialog is not yet initialized, the first argument must be
+the body element of the dialog.
+
+#### Parameters
+
+##### el
+
+`HTMLElement` | `ArrayLike`\<`HTMLElement`\>
+
+##### handler
+
+(`result`?, `e`?) => `void`
+
+The event handler function
+
+##### opt?
+
+Options to determine whether the handler should be called before the dialog is closed, and whether the handler should be called only once. 
+The default for oneOff is true unless opt.before is true.
+
+###### opt.before
+
+`boolean`
+
+###### opt.oneOff
+
+`boolean`
 
 #### Returns
 
@@ -292,95 +423,49 @@ ___
 
 #### Defined in
 
-[src/base/dialogs.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L202)
+[src/base/dialogs.tsx:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L251)
 
-___
+***
 
-### onOpen
+### onOpen()
 
-▸ **onOpen**(`handler`, `before?`): `this`
+> `static` **onOpen**(`el`, `handler`, `opt`?): `void`
 
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `handler` | (`e?`: `Event`) => `void` | `undefined` |
-| `before` | `boolean` | `false` |
-
-#### Returns
-
-`this`
-
-#### Defined in
-
-[src/base/dialogs.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L214)
-
-___
-
-### open
-
-▸ **open**(): [`Dialog`](Dialog.md)
-
-Closes dialog
-
-#### Returns
-
-[`Dialog`](Dialog.md)
-
-#### Defined in
-
-[src/base/dialogs.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L228)
-
-___
-
-### title
-
-▸ **title**(): `string`
-
-Gets the title text of the dialog
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/base/dialogs.ts:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L250)
-
-▸ **title**(`value`): `this`
-
-Sets the title text of the dialog.
+Adds an event handler that is called when the dialog is opened. If the second parameter is true, the handler is called before the dialog is opened and
+the opening can be cancelled by calling preventDefault on the event object. Note that if the dialog is not yet initialized, the first argument must be
+the body element of the dialog.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### el
+
+`HTMLElement` | `ArrayLike`\<`HTMLElement`\>
+
+##### handler
+
+(`e`?) => `void`
+
+The event handler function
+
+##### opt?
+
+Options to determine whether the handler should be called before the dialog is opened, and whether the handler should be called only once. 
+The default for oneOff is true unless opt.before is true.
+
+###### opt.before
+
+`boolean`
+
+###### opt.oneOff
+
+`boolean`
 
 #### Returns
 
-`this`
+`void`
+
+The dialog instance
 
 #### Defined in
 
-[src/base/dialogs.ts:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L252)
-
-___
-
-### getInstance
-
-▸ **getInstance**(`el`): [`Dialog`](Dialog.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `el` | `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> |
-
-#### Returns
-
-[`Dialog`](Dialog.md)
-
-#### Defined in
-
-[src/base/dialogs.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.ts#L161)
+[src/base/dialogs.tsx:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L307)

@@ -2,89 +2,74 @@
 
 # Interface: ListResponse\<TEntity\>
 
-## Type parameters
-
-| Name |
-| :------ |
-| `TEntity` |
-
-## Hierarchy
+## Extends
 
 - [`ServiceResponse`](ServiceResponse.md)
 
-  ↳ **`ListResponse`**
+## Type Parameters
 
-## Table of contents
-
-### Properties
-
-- [Entities](ListResponse.md#entities)
-- [Error](ListResponse.md#error)
-- [Skip](ListResponse.md#skip)
-- [Take](ListResponse.md#take)
-- [TotalCount](ListResponse.md#totalcount)
-- [Values](ListResponse.md#values)
+• **TEntity**
 
 ## Properties
 
-### Entities
+### Entities?
 
-• `Optional` **Entities**: `TEntity`[]
+> `optional` **Entities**: `TEntity`[]
 
 #### Defined in
 
-[src/base/servicetypes.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L84)
+[src/base/servicetypes.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L77)
 
-___
+***
 
-### Error
+### Error?
 
-• `Optional` **Error**: [`ServiceError`](ServiceError.md)
+> `optional` **Error**: [`ServiceError`](ServiceError.md)
 
 #### Inherited from
 
-[ServiceResponse](ServiceResponse.md).[Error](ServiceResponse.md#error)
+[`ServiceResponse`](ServiceResponse.md).[`Error`](ServiceResponse.md#error)
 
 #### Defined in
 
 [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
 
-___
+***
 
-### Skip
+### Skip?
 
-• `Optional` **Skip**: `number`
-
-#### Defined in
-
-[src/base/servicetypes.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L87)
-
-___
-
-### Take
-
-• `Optional` **Take**: `number`
+> `optional` **Skip**: `number`
 
 #### Defined in
 
-[src/base/servicetypes.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L88)
+[src/base/servicetypes.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L80)
 
-___
+***
 
-### TotalCount
+### Take?
 
-• `Optional` **TotalCount**: `number`
-
-#### Defined in
-
-[src/base/servicetypes.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L86)
-
-___
-
-### Values
-
-• `Optional` **Values**: `any`[]
+> `optional` **Take**: `number`
 
 #### Defined in
 
-[src/base/servicetypes.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L85)
+[src/base/servicetypes.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L81)
+
+***
+
+### TotalCount?
+
+> `optional` **TotalCount**: `number`
+
+#### Defined in
+
+[src/base/servicetypes.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L79)
+
+***
+
+### Values?
+
+> `optional` **Values**: `any`[]
+
+#### Defined in
+
+[src/base/servicetypes.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L78)

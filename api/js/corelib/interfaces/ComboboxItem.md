@@ -2,56 +2,45 @@
 
 # Interface: ComboboxItem\<TSource\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TSource` | `any` |
-
-## Table of contents
-
-### Properties
-
-- [disabled](ComboboxItem.md#disabled)
-- [id](ComboboxItem.md#id)
-- [source](ComboboxItem.md#source)
-- [text](ComboboxItem.md#text)
+• **TSource** = `any`
 
 ## Properties
 
-### disabled
+### disabled?
 
-• `Optional` **disabled**: `boolean`
+> `optional` **disabled**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L11)
 
-___
+***
 
-### id
+### id?
 
-• `Optional` **id**: `string`
+> `optional` **id**: `string`
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L8)
 
-___
+***
 
-### source
+### source?
 
-• `Optional` **source**: `TSource`
+> `optional` **source**: `TSource`
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L10)
 
-___
+***
 
-### text
+### text?
 
-• `Optional` **text**: `string`
+> `optional` **text**: `string`
 
 #### Defined in
 

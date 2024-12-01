@@ -2,45 +2,25 @@
 
 # Interface: ComboboxOptions\<TSource\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TSource` | `any` |
-
-## Table of contents
-
-### Properties
-
-- [allowClear](ComboboxOptions.md#allowclear)
-- [arbitraryValues](ComboboxOptions.md#arbitraryvalues)
-- [createSearchChoice](ComboboxOptions.md#createsearchchoice)
-- [element](ComboboxOptions.md#element)
-- [formatResult](ComboboxOptions.md#formatresult)
-- [formatSelection](ComboboxOptions.md#formatselection)
-- [minimumResultsForSearch](ComboboxOptions.md#minimumresultsforsearch)
-- [multiple](ComboboxOptions.md#multiple)
-- [pageSize](ComboboxOptions.md#pagesize)
-- [placeholder](ComboboxOptions.md#placeholder)
-- [providerOptions](ComboboxOptions.md#provideroptions)
-- [search](ComboboxOptions.md#search)
-- [typeDelay](ComboboxOptions.md#typedelay)
+• **TSource** = `any`
 
 ## Properties
 
-### allowClear
+### allowClear?
 
-• `Optional` **allowClear**: `boolean`
+> `optional` **allowClear**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L30)
 
-___
+***
 
-### arbitraryValues
+### arbitraryValues?
 
-• `Optional` **arbitraryValues**: `boolean`
+> `optional` **arbitraryValues**: `boolean`
 
 Allow arbitrary values for items
 
@@ -48,23 +28,19 @@ Allow arbitrary values for items
 
 [src/ui/editors/combobox.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L34)
 
-___
+***
 
-### createSearchChoice
+### createSearchChoice()?
 
-• `Optional` **createSearchChoice**: (`s`: `string`) => [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
+> `optional` **createSearchChoice**: (`s`) => [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
 
-#### Type declaration
+#### Parameters
 
-▸ (`s`): [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
+##### s
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
-
-##### Returns
+#### Returns
 
 [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
 
@@ -72,89 +48,81 @@ ___
 
 [src/ui/editors/combobox.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L31)
 
-___
+***
 
-### element
+### element?
 
-• `Optional` **element**: `HTMLInputElement` \| `HTMLSelectElement` \| `Element`[]
+> `optional` **element**: `HTMLInputElement` \| `HTMLSelectElement` \| `Element`[]
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L32)
 
-___
+***
 
-### formatResult
+### formatResult()?
 
-• `Optional` **formatResult**: (`p1`: [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>) => [`ComboboxFormatResult`](../README.md#comboboxformatresult)
+> `optional` **formatResult**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): [`ComboboxFormatResult`](../README.md#comboboxformatresult)
+##### p1
 
-##### Parameters
+[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | [`ComboboxItem`](ComboboxItem.md)\<`TSource`\> |
+#### Returns
 
-##### Returns
-
-[`ComboboxFormatResult`](../README.md#comboboxformatresult)
+[`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L36)
 
-___
+***
 
-### formatSelection
+### formatSelection()?
 
-• `Optional` **formatSelection**: (`p1`: [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>) => [`ComboboxFormatResult`](../README.md#comboboxformatresult)
+> `optional` **formatSelection**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): [`ComboboxFormatResult`](../README.md#comboboxformatresult)
+##### p1
 
-##### Parameters
+[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | [`ComboboxItem`](ComboboxItem.md)\<`TSource`\> |
+#### Returns
 
-##### Returns
-
-[`ComboboxFormatResult`](../README.md#comboboxformatresult)
+[`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L35)
 
-___
+***
 
-### minimumResultsForSearch
+### minimumResultsForSearch?
 
-• `Optional` **minimumResultsForSearch**: `number`
+> `optional` **minimumResultsForSearch**: `number`
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L37)
 
-___
+***
 
-### multiple
+### multiple?
 
-• `Optional` **multiple**: `boolean`
+> `optional` **multiple**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L38)
 
-___
+***
 
-### pageSize
+### pageSize?
 
-• `Optional` **pageSize**: `number`
+> `optional` **pageSize**: `number`
 
 Page size to use while loading or displaying results
 
@@ -162,36 +130,35 @@ Page size to use while loading or displaying results
 
 [src/ui/editors/combobox.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L40)
 
-___
+***
 
-### placeholder
+### placeholder?
 
-• `Optional` **placeholder**: `string`
+> `optional` **placeholder**: `string`
 
 #### Defined in
 
 [src/ui/editors/combobox.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L41)
 
-___
+***
 
-### providerOptions
+### providerOptions()?
 
-• `Optional` **providerOptions**: (`type`: ``"select2"``, `opt`: [`ComboboxOptions`](ComboboxOptions.md)\<`any`\>) => `any`
+> `optional` **providerOptions**: (`type`, `opt`) => `any`
 
 Callback to get options specific to the combobox provider type
 
-#### Type declaration
+#### Parameters
 
-▸ (`type`, `opt`): `any`
+##### type
 
-##### Parameters
+`"select2"`
 
-| Name | Type |
-| :------ | :------ |
-| `type` | ``"select2"`` |
-| `opt` | [`ComboboxOptions`](ComboboxOptions.md)\<`any`\> |
+##### opt
 
-##### Returns
+[`ComboboxOptions`](ComboboxOptions.md)\<`any`\>
+
+#### Returns
 
 `any`
 
@@ -199,23 +166,19 @@ Callback to get options specific to the combobox provider type
 
 [src/ui/editors/combobox.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L43)
 
-___
+***
 
-### search
+### search()?
 
-• `Optional` **search**: (`query`: [`ComboboxSearchQuery`](ComboboxSearchQuery.md)) => [`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\> \| `PromiseLike`\<[`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\>\>
+> `optional` **search**: (`query`) => [`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\> \| `PromiseLike`\<[`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\>\>
 
-#### Type declaration
+#### Parameters
 
-▸ (`query`): [`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\> \| `PromiseLike`\<[`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\>\>
+##### query
 
-##### Parameters
+[`ComboboxSearchQuery`](ComboboxSearchQuery.md)
 
-| Name | Type |
-| :------ | :------ |
-| `query` | [`ComboboxSearchQuery`](ComboboxSearchQuery.md) |
-
-##### Returns
+#### Returns
 
 [`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\> \| `PromiseLike`\<[`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\>\>
 
@@ -223,11 +186,11 @@ ___
 
 [src/ui/editors/combobox.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L44)
 
-___
+***
 
-### typeDelay
+### typeDelay?
 
-• `Optional` **typeDelay**: `number`
+> `optional` **typeDelay**: `number`
 
 Type delay for searching, default is 200
 

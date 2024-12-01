@@ -2,62 +2,52 @@
 
 # Interface: UploaderSuccessData
 
-## Table of contents
-
-### Properties
-
-- [batch](UploaderSuccessData.md#batch)
-- [event](UploaderSuccessData.md#event)
-- [request](UploaderSuccessData.md#request)
-- [response](UploaderSuccessData.md#response)
-- [xhr](UploaderSuccessData.md#xhr)
-
 ## Properties
 
 ### batch
 
-• **batch**: [`UploaderBatch`](UploaderBatch.md)
+> **batch**: [`UploaderBatch`](UploaderBatch.md)
 
 #### Defined in
 
-[src/base/uploader.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L57)
+[src/base/uploader.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L63)
 
-___
+***
 
 ### event
 
-• **event**: `ProgressEvent`\<`EventTarget`\>
+> **event**: `ProgressEvent`\<`EventTarget`\>
 
 #### Defined in
 
-[src/base/uploader.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L59)
+[src/base/uploader.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L65)
 
-___
+***
 
 ### request
 
-• **request**: [`UploaderRequest`](UploaderRequest.md)
+> **request**: [`UploaderRequest`](UploaderRequest.md)
 
 #### Defined in
 
-[src/base/uploader.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L58)
+[src/base/uploader.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L64)
 
-___
+***
 
 ### response
 
-• **response**: `any`
+> **response**: `any`
 
 #### Defined in
 
-[src/base/uploader.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L61)
+[src/base/uploader.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L67)
 
-___
+***
 
 ### xhr
 
-• **xhr**: `XMLHttpRequest`
+> **xhr**: `XMLHttpRequest`
 
 #### Defined in
 
-[src/base/uploader.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L60)
+[src/base/uploader.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L66)

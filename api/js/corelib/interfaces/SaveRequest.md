@@ -2,55 +2,43 @@
 
 # Interface: SaveRequest\<TEntity\>
 
-## Type parameters
-
-| Name |
-| :------ |
-| `TEntity` |
-
-## Hierarchy
+## Extends
 
 - [`ServiceRequest`](ServiceRequest.md)
 
-  ↳ **`SaveRequest`**
+## Type Parameters
 
-  ↳↳ [`SaveRequestWithAttachment`](SaveRequestWithAttachment.md)
-
-  ↳↳ [`SaveWithLocalizationRequest`](SaveWithLocalizationRequest.md)
-
-## Table of contents
-
-### Properties
-
-- [Entity](SaveRequest.md#entity)
-- [EntityId](SaveRequest.md#entityid)
-- [Localizations](SaveRequest.md#localizations)
+• **TEntity**
 
 ## Properties
 
-### Entity
+### Entity?
 
-• `Optional` **Entity**: `TEntity`
+> `optional` **Entity**: `TEntity`
 
 #### Defined in
 
 [src/base/servicetypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L18)
 
-___
+***
 
-### EntityId
+### EntityId?
 
-• `Optional` **EntityId**: `any`
+> `optional` **EntityId**: `any`
 
 #### Defined in
 
 [src/base/servicetypes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L17)
 
-___
+***
 
-### Localizations
+### Localizations?
 
-• `Optional` **Localizations**: `any`
+> `optional` **Localizations**: `object`
+
+#### Index Signature
+
+ \[`languageId`: `string`\]: `Partial`\<`TEntity`\>
 
 #### Defined in
 

@@ -6,25 +6,11 @@
 
 - [`Formatter`](../interfaces/Formatter.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](CheckboxFormatter.md#constructor)
-
-### Properties
-
-- [typeInfo](CheckboxFormatter.md#typeinfo)
-
-### Methods
-
-- [format](CheckboxFormatter.md#format)
-
 ## Constructors
 
-### constructor
+### new CheckboxFormatter()
 
-• **new CheckboxFormatter**(): [`CheckboxFormatter`](CheckboxFormatter.md)
+> **new CheckboxFormatter**(): [`CheckboxFormatter`](CheckboxFormatter.md)
 
 #### Returns
 
@@ -34,7 +20,7 @@
 
 ### typeInfo
 
-▪ `Static` **typeInfo**: [`FormatterTypeInfo`](../README.md#formattertypeinfo)\<``"Serenity.CheckboxFormatter"``\>
+> `static` **typeInfo**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity.CheckboxFormatter"`\>
 
 #### Defined in
 
@@ -42,15 +28,15 @@
 
 ## Methods
 
-### format
+### format()
 
-▸ **format**(`ctx`): `string`
+> **format**(`ctx`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `FormatterContext`\<`any`\> |
+##### ctx
+
+`FormatterContext`\<`any`\>
 
 #### Returns
 
@@ -58,7 +44,7 @@
 
 #### Implementation of
 
-[Formatter](../interfaces/Formatter.md).[format](../interfaces/Formatter.md#format)
+[`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
 
 #### Defined in
 

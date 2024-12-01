@@ -2,28 +2,21 @@
 
 # Interface: PagingOptions
 
-## Table of contents
-
-### Properties
-
-- [page](PagingOptions.md#page)
-- [rowsPerPage](PagingOptions.md#rowsperpage)
-
 ## Properties
 
-### page
+### page?
 
-• `Optional` **page**: `number`
+> `optional` **page**: `number`
 
 #### Defined in
 
 [src/slick/slicktypes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L41)
 
-___
+***
 
-### rowsPerPage
+### rowsPerPage?
 
-• `Optional` **rowsPerPage**: `number`
+> `optional` **rowsPerPage**: `number`
 
 #### Defined in
 

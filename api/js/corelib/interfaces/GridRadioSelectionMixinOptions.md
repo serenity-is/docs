@@ -2,32 +2,22 @@
 
 # Interface: GridRadioSelectionMixinOptions
 
-## Table of contents
-
-### Properties
-
-- [selectable](GridRadioSelectionMixinOptions.md#selectable)
-
 ## Properties
 
-### selectable
+### selectable()?
 
-• `Optional` **selectable**: (`item`: `any`) => `boolean`
+> `optional` **selectable**: (`item`) => `boolean`
 
-#### Type declaration
+#### Parameters
 
-▸ (`item`): `boolean`
+##### item
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
-
-##### Returns
+#### Returns
 
 `boolean`
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L167)
+[src/ui/helpers/slickhelpers.tsx:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L168)

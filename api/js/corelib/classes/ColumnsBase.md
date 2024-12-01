@@ -2,39 +2,21 @@
 
 # Class: ColumnsBase\<TRow\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TRow` | `any` |
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ColumnsBase.md#constructor)
-
-### Methods
-
-- [valueOf](ColumnsBase.md#valueof)
+• **TRow** = `any`
 
 ## Constructors
 
-### constructor
+### new ColumnsBase()
 
-• **new ColumnsBase**\<`TRow`\>(`items`): [`ColumnsBase`](ColumnsBase.md)\<`TRow`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TRow` | `any` |
+> **new ColumnsBase**\<`TRow`\>(`items`): [`ColumnsBase`](ColumnsBase.md)\<`TRow`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `items` | `Column`\<`TRow`\>[] |
+##### items
+
+`Column`\<`TRow`\>[]
 
 #### Returns
 
@@ -42,13 +24,13 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:846](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L846)
+[src/ui/helpers/slickhelpers.tsx:849](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L849)
 
 ## Methods
 
-### valueOf
+### valueOf()
 
-▸ **valueOf**(): `Column`\<`TRow`\>[]
+> **valueOf**(): `Column`\<`TRow`\>[]
 
 #### Returns
 
@@ -56,4 +38,4 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:865](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L865)
+[src/ui/helpers/slickhelpers.tsx:868](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L868)

@@ -2,29 +2,22 @@
 
 # Interface: ToolbarOptions
 
-## Table of contents
-
-### Properties
-
-- [buttons](ToolbarOptions.md#buttons)
-- [hotkeyContext](ToolbarOptions.md#hotkeycontext)
-
 ## Properties
 
-### buttons
+### buttons?
 
-• `Optional` **buttons**: [`ToolButton`](ToolButton.md)[]
-
-#### Defined in
-
-[src/ui/widgets/toolbar.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L82)
-
-___
-
-### hotkeyContext
-
-• `Optional` **hotkeyContext**: `any`
+> `optional` **buttons**: [`ToolButton`](ToolButton.md)[]
 
 #### Defined in
 
-[src/ui/widgets/toolbar.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.ts#L83)
+[src/ui/widgets/toolbar.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L67)
+
+***
+
+### hotkeyContext?
+
+> `optional` **hotkeyContext**: `any`
+
+#### Defined in
+
+[src/ui/widgets/toolbar.tsx:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L68)

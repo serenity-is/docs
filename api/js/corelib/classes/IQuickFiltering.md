@@ -2,25 +2,11 @@
 
 # Class: IQuickFiltering
 
-## Implemented by
-
-- [`BaseFiltering`](BaseFiltering.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IQuickFiltering.md#constructor)
-
-### Methods
-
-- [initQuickFilter](IQuickFiltering.md#initquickfilter)
-
 ## Constructors
 
-### constructor
+### new IQuickFiltering()
 
-• **new IQuickFiltering**(): [`IQuickFiltering`](IQuickFiltering.md)
+> **new IQuickFiltering**(): [`IQuickFiltering`](IQuickFiltering.md)
 
 #### Returns
 
@@ -28,15 +14,15 @@
 
 ## Methods
 
-### initQuickFilter
+### initQuickFilter()
 
-▸ **initQuickFilter**(`filter`): `void`
+> **initQuickFilter**(`filter`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `filter` | [`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\> |
+##### filter
+
+[`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\>
 
 #### Returns
 

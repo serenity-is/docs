@@ -2,27 +2,17 @@
 
 # Class: RequiredAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](RequiredAttribute.md#constructor)
-
-### Properties
-
-- [isRequired](RequiredAttribute.md#isrequired)
-
 ## Constructors
 
-### constructor
+### new RequiredAttribute()
 
-• **new RequiredAttribute**(`isRequired?`): [`RequiredAttribute`](RequiredAttribute.md)
+> **new RequiredAttribute**(`isRequired`): [`RequiredAttribute`](RequiredAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `isRequired` | `boolean` | `true` |
+##### isRequired
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### isRequired
 
-• **isRequired**: `boolean` = `true`
+> **isRequired**: `boolean` = `true`
 
 #### Defined in
 

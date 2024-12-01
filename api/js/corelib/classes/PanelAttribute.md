@@ -2,27 +2,17 @@
 
 # Class: PanelAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](PanelAttribute.md#constructor)
-
-### Properties
-
-- [value](PanelAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new PanelAttribute()
 
-• **new PanelAttribute**(`value?`): [`PanelAttribute`](PanelAttribute.md)
+> **new PanelAttribute**(`value`): [`PanelAttribute`](PanelAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

@@ -2,27 +2,17 @@
 
 # Class: IdPropertyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](IdPropertyAttribute.md#constructor)
-
-### Properties
-
-- [value](IdPropertyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new IdPropertyAttribute()
 
-• **new IdPropertyAttribute**(`value`): [`IdPropertyAttribute`](IdPropertyAttribute.md)
+> **new IdPropertyAttribute**(`value`): [`IdPropertyAttribute`](IdPropertyAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

@@ -2,28 +2,21 @@
 
 # Interface: CriteriaWithText
 
-## Table of contents
-
-### Properties
-
-- [criteria](CriteriaWithText.md#criteria)
-- [displayText](CriteriaWithText.md#displaytext)
-
 ## Properties
 
-### criteria
+### criteria?
 
-• `Optional` **criteria**: `any`[]
+> `optional` **criteria**: `any`[]
 
 #### Defined in
 
 [src/ui/filtering/filtering.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L38)
 
-___
+***
 
-### displayText
+### displayText?
 
-• `Optional` **displayText**: `string`
+> `optional` **displayText**: `string`
 
 #### Defined in
 

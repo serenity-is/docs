@@ -2,216 +2,193 @@
 
 # Interface: ComboboxEditorOptions
 
-## Hierarchy
+## Extends
 
-- [`ComboboxFilterOptions`](ComboboxFilterOptions.md)
+- [`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`ComboboxCommonOptions`](ComboboxCommonOptions.md)
 
-- [`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md)
+## Extended by
 
-- [`ComboboxCommonOptions`](ComboboxCommonOptions.md)
-
-  ↳ **`ComboboxEditorOptions`**
-
-  ↳↳ [`LookupEditorOptions`](LookupEditorOptions.md)
-
-  ↳↳ [`ServiceLookupEditorOptions`](ServiceLookupEditorOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [allowClear](ComboboxEditorOptions.md#allowclear)
-- [autoComplete](ComboboxEditorOptions.md#autocomplete)
-- [cascadeField](ComboboxEditorOptions.md#cascadefield)
-- [cascadeFrom](ComboboxEditorOptions.md#cascadefrom)
-- [cascadeValue](ComboboxEditorOptions.md#cascadevalue)
-- [delimited](ComboboxEditorOptions.md#delimited)
-- [dialogType](ComboboxEditorOptions.md#dialogtype)
-- [filterField](ComboboxEditorOptions.md#filterfield)
-- [filterValue](ComboboxEditorOptions.md#filtervalue)
-- [inplaceAdd](ComboboxEditorOptions.md#inplaceadd)
-- [inplaceAddPermission](ComboboxEditorOptions.md#inplaceaddpermission)
-- [minimumResultsForSearch](ComboboxEditorOptions.md#minimumresultsforsearch)
-- [multiple](ComboboxEditorOptions.md#multiple)
+- [`LookupEditorOptions`](LookupEditorOptions.md)
+- [`ServiceLookupEditorOptions`](ServiceLookupEditorOptions.md)
 
 ## Properties
 
-### allowClear
+### allowClear?
 
-• `Optional` **allowClear**: `boolean`
-
-#### Inherited from
-
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[allowClear](ComboboxCommonOptions.md#allowclear)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L14)
-
-___
-
-### autoComplete
-
-• `Optional` **autoComplete**: `boolean`
+> `optional` **allowClear**: `boolean`
 
 #### Inherited from
 
-[ComboboxInplaceAddOptions](ComboboxInplaceAddOptions.md).[autoComplete](ComboboxInplaceAddOptions.md#autocomplete)
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`allowClear`](ComboboxCommonOptions.md#allowclear)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L32)
+[src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
 
-___
+***
 
-### cascadeField
+### autoComplete?
 
-• `Optional` **cascadeField**: `string`
+> `optional` **autoComplete**: `boolean`
 
 #### Inherited from
 
-[ComboboxFilterOptions](ComboboxFilterOptions.md).[cascadeField](ComboboxFilterOptions.md#cascadefield)
+[`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`autoComplete`](ComboboxInplaceAddOptions.md#autocomplete)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L22)
+[src/ui/editors/comboboxeditor.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L34)
 
-___
+***
 
-### cascadeFrom
+### cascadeField?
 
-• `Optional` **cascadeFrom**: `string`
+> `optional` **cascadeField**: `string`
 
 #### Inherited from
 
-[ComboboxFilterOptions](ComboboxFilterOptions.md).[cascadeFrom](ComboboxFilterOptions.md#cascadefrom)
+[`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`cascadeField`](ComboboxFilterOptions.md#cascadefield)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L21)
+[src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
 
-___
+***
 
-### cascadeValue
+### cascadeFrom?
 
-• `Optional` **cascadeValue**: `any`
+> `optional` **cascadeFrom**: `string`
 
 #### Inherited from
 
-[ComboboxFilterOptions](ComboboxFilterOptions.md).[cascadeValue](ComboboxFilterOptions.md#cascadevalue)
+[`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`cascadeFrom`](ComboboxFilterOptions.md#cascadefrom)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L23)
+[src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
 
-___
+***
 
-### delimited
+### cascadeValue?
 
-• `Optional` **delimited**: `boolean`
+> `optional` **cascadeValue**: `any`
 
 #### Inherited from
 
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[delimited](ComboboxCommonOptions.md#delimited)
+[`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`cascadeValue`](ComboboxFilterOptions.md#cascadevalue)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L15)
+[src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
 
-___
+***
 
-### dialogType
+### delimited?
 
-• `Optional` **dialogType**: `string`
+> `optional` **delimited**: `boolean`
 
 #### Inherited from
 
-[ComboboxInplaceAddOptions](ComboboxInplaceAddOptions.md).[dialogType](ComboboxInplaceAddOptions.md#dialogtype)
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`delimited`](ComboboxCommonOptions.md#delimited)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L31)
+[src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
 
-___
+***
 
-### filterField
+### dialogType?
 
-• `Optional` **filterField**: `string`
+> `optional` **dialogType**: `string`
 
 #### Inherited from
 
-[ComboboxFilterOptions](ComboboxFilterOptions.md).[filterField](ComboboxFilterOptions.md#filterfield)
+[`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`dialogType`](ComboboxInplaceAddOptions.md#dialogtype)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L24)
+[src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
 
-___
+***
 
-### filterValue
+### filterField?
 
-• `Optional` **filterValue**: `any`
+> `optional` **filterField**: `string`
 
 #### Inherited from
 
-[ComboboxFilterOptions](ComboboxFilterOptions.md).[filterValue](ComboboxFilterOptions.md#filtervalue)
+[`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`filterField`](ComboboxFilterOptions.md#filterfield)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L25)
+[src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)
 
-___
+***
 
-### inplaceAdd
+### filterValue?
 
-• `Optional` **inplaceAdd**: `boolean`
+> `optional` **filterValue**: `any`
 
 #### Inherited from
 
-[ComboboxInplaceAddOptions](ComboboxInplaceAddOptions.md).[inplaceAdd](ComboboxInplaceAddOptions.md#inplaceadd)
+[`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`filterValue`](ComboboxFilterOptions.md#filtervalue)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L29)
+[src/ui/editors/comboboxeditor.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L27)
 
-___
+***
 
-### inplaceAddPermission
+### inplaceAdd?
 
-• `Optional` **inplaceAddPermission**: `string`
+> `optional` **inplaceAdd**: `boolean`
 
 #### Inherited from
 
-[ComboboxInplaceAddOptions](ComboboxInplaceAddOptions.md).[inplaceAddPermission](ComboboxInplaceAddOptions.md#inplaceaddpermission)
+[`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`inplaceAdd`](ComboboxInplaceAddOptions.md#inplaceadd)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L30)
+[src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)
 
-___
+***
 
-### minimumResultsForSearch
+### inplaceAddPermission?
 
-• `Optional` **minimumResultsForSearch**: `any`
+> `optional` **inplaceAddPermission**: `string`
 
 #### Inherited from
 
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[minimumResultsForSearch](ComboboxCommonOptions.md#minimumresultsforsearch)
+[`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`inplaceAddPermission`](ComboboxInplaceAddOptions.md#inplaceaddpermission)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L16)
+[src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
 
-___
+***
 
-### multiple
+### minimumResultsForSearch?
 
-• `Optional` **multiple**: `boolean`
+> `optional` **minimumResultsForSearch**: `any`
 
 #### Inherited from
 
-[ComboboxCommonOptions](ComboboxCommonOptions.md).[multiple](ComboboxCommonOptions.md#multiple)
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`minimumResultsForSearch`](ComboboxCommonOptions.md#minimumresultsforsearch)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L17)
+[src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+
+***
+
+### multiple?
+
+> `optional` **multiple**: `boolean`
+
+#### Inherited from
+
+[`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`multiple`](ComboboxCommonOptions.md#multiple)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)

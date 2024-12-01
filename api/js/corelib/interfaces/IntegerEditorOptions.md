@@ -2,40 +2,32 @@
 
 # Interface: IntegerEditorOptions
 
-## Table of contents
-
-### Properties
-
-- [allowNegatives](IntegerEditorOptions.md#allownegatives)
-- [maxValue](IntegerEditorOptions.md#maxvalue)
-- [minValue](IntegerEditorOptions.md#minvalue)
-
 ## Properties
 
-### allowNegatives
+### allowNegatives?
 
-• `Optional` **allowNegatives**: `boolean`
-
-#### Defined in
-
-[src/ui/editors/integereditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L12)
-
-___
-
-### maxValue
-
-• `Optional` **maxValue**: `number`
+> `optional` **allowNegatives**: `boolean`
 
 #### Defined in
 
-[src/ui/editors/integereditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L11)
+[src/ui/editors/integereditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L12)
 
-___
+***
 
-### minValue
+### maxValue?
 
-• `Optional` **minValue**: `number`
+> `optional` **maxValue**: `number`
 
 #### Defined in
 
-[src/ui/editors/integereditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.ts#L10)
+[src/ui/editors/integereditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L11)
+
+***
+
+### minValue?
+
+> `optional` **minValue**: `number`
+
+#### Defined in
+
+[src/ui/editors/integereditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/integereditor.tsx#L10)

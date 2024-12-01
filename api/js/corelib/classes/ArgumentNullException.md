@@ -2,30 +2,25 @@
 
 # Class: ArgumentNullException
 
-## Hierarchy
+## Extends
 
 - [`Exception`](Exception.md)
 
-  ↳ **`ArgumentNullException`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ArgumentNullException.md#constructor)
-
 ## Constructors
 
-### constructor
+### new ArgumentNullException()
 
-• **new ArgumentNullException**(`paramName`, `message?`): [`ArgumentNullException`](ArgumentNullException.md)
+> **new ArgumentNullException**(`paramName`, `message`?): [`ArgumentNullException`](ArgumentNullException.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paramName` | `string` |
-| `message?` | `string` |
+##### paramName
+
+`string`
+
+##### message?
+
+`string`
 
 #### Returns
 
@@ -33,7 +28,7 @@
 
 #### Overrides
 
-[Exception](Exception.md).[constructor](Exception.md#constructor)
+[`Exception`](Exception.md).[`constructor`](Exception.md#constructors)
 
 #### Defined in
 

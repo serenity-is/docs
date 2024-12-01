@@ -2,24 +2,16 @@
 
 # Interface: DeleteRequest
 
-## Hierarchy
+## Extends
 
 - [`ServiceRequest`](ServiceRequest.md)
 
-  ↳ **`DeleteRequest`**
-
-## Table of contents
-
-### Properties
-
-- [EntityId](DeleteRequest.md#entityid)
-
 ## Properties
 
-### EntityId
+### EntityId?
 
-• `Optional` **EntityId**: `any`
+> `optional` **EntityId**: `any`
 
 #### Defined in
 
-[src/base/servicetypes.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L35)
+[src/base/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L27)

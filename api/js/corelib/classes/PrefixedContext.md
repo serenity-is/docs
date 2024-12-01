@@ -2,32 +2,17 @@
 
 # Class: PrefixedContext
 
-## Table of contents
-
-### Constructors
-
-- [constructor](PrefixedContext.md#constructor)
-
-### Properties
-
-- [idPrefix](PrefixedContext.md#idprefix)
-
-### Methods
-
-- [byId](PrefixedContext.md#byid)
-- [w](PrefixedContext.md#w)
-
 ## Constructors
 
-### constructor
+### new PrefixedContext()
 
-• **new PrefixedContext**(`idPrefix`): [`PrefixedContext`](PrefixedContext.md)
+> **new PrefixedContext**(`idPrefix`): [`PrefixedContext`](PrefixedContext.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `idPrefix` | `string` |
+##### idPrefix
+
+`string`
 
 #### Returns
 
@@ -41,7 +26,7 @@
 
 ### idPrefix
 
-• `Readonly` **idPrefix**: `string`
+> `readonly` **idPrefix**: `string`
 
 #### Defined in
 
@@ -49,15 +34,15 @@
 
 ## Methods
 
-### byId
+### byId()
 
-▸ **byId**(`id`): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **byId**(`id`): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+##### id
+
+`string`
 
 #### Returns
 
@@ -67,24 +52,25 @@
 
 [src/ui/widgets/prefixedcontext.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L8)
 
-___
+***
 
-### w
+### w()
 
-▸ **w**\<`TWidget`\>(`id`, `type`): `TWidget`
+> **w**\<`TWidget`\>(`id`, `type`): `TWidget`
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `TWidget` |
+• **TWidget**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `type` | (...`args`: `any`[]) => `TWidget` |
+##### id
+
+`string`
+
+##### type
+
+(...`args`) => `TWidget`
 
 #### Returns
 

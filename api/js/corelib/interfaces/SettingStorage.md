@@ -2,24 +2,17 @@
 
 # Interface: SettingStorage
 
-## Table of contents
-
-### Methods
-
-- [getItem](SettingStorage.md#getitem)
-- [setItem](SettingStorage.md#setitem)
-
 ## Methods
 
-### getItem
+### getItem()
 
-▸ **getItem**(`key`): `string` \| `Promise`\<`string`\>
+> **getItem**(`key`): `string` \| `Promise`\<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` |
+##### key
+
+`string`
 
 #### Returns
 
@@ -27,20 +20,23 @@
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L30)
+[src/ui/datagrid/datagrid.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L30)
 
-___
+***
 
-### setItem
+### setItem()
 
-▸ **setItem**(`key`, `value`): `void` \| `Promise`\<`void`\>
+> **setItem**(`key`, `value`): `void` \| `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` |
-| `value` | `string` |
+##### key
+
+`string`
+
+##### value
+
+`string`
 
 #### Returns
 
@@ -48,4 +44,4 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/datagrid.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.ts#L31)
+[src/ui/datagrid/datagrid.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L31)

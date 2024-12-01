@@ -2,27 +2,17 @@
 
 # Class: DefaultValueAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](DefaultValueAttribute.md#constructor)
-
-### Properties
-
-- [value](DefaultValueAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new DefaultValueAttribute()
 
-• **new DefaultValueAttribute**(`value`): [`DefaultValueAttribute`](DefaultValueAttribute.md)
+> **new DefaultValueAttribute**(`value`): [`DefaultValueAttribute`](DefaultValueAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+##### value
+
+`any`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `any`
+> **value**: `any`
 
 #### Defined in
 

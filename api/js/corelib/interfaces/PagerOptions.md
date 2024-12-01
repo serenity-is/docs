@@ -2,34 +2,19 @@
 
 # Interface: PagerOptions
 
-## Table of contents
-
-### Properties
-
-- [onChangePage](PagerOptions.md#onchangepage)
-- [onRowsPerPageChange](PagerOptions.md#onrowsperpagechange)
-- [rowsPerPage](PagerOptions.md#rowsperpage)
-- [rowsPerPageOptions](PagerOptions.md#rowsperpageoptions)
-- [showRowsPerPage](PagerOptions.md#showrowsperpage)
-- [view](PagerOptions.md#view)
-
 ## Properties
 
-### onChangePage
+### onChangePage()?
 
-• `Optional` **onChangePage**: (`newPage`: `number`) => `void`
+> `optional` **onChangePage**: (`newPage`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`newPage`): `void`
+##### newPage
 
-##### Parameters
+`number`
 
-| Name | Type |
-| :------ | :------ |
-| `newPage` | `number` |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -37,23 +22,19 @@
 
 [src/slick/slicktypes.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L31)
 
-___
+***
 
-### onRowsPerPageChange
+### onRowsPerPageChange()?
 
-• `Optional` **onRowsPerPageChange**: (`n`: `number`) => `void`
+> `optional` **onRowsPerPageChange**: (`n`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`n`): `void`
+##### n
 
-##### Parameters
+`number`
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -61,41 +42,41 @@ ___
 
 [src/slick/slicktypes.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L32)
 
-___
+***
 
-### rowsPerPage
+### rowsPerPage?
 
-• `Optional` **rowsPerPage**: `number`
+> `optional` **rowsPerPage**: `number`
 
 #### Defined in
 
 [src/slick/slicktypes.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L29)
 
-___
+***
 
-### rowsPerPageOptions
+### rowsPerPageOptions?
 
-• `Optional` **rowsPerPageOptions**: `number`[]
+> `optional` **rowsPerPageOptions**: `number`[]
 
 #### Defined in
 
 [src/slick/slicktypes.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L30)
 
-___
+***
 
-### showRowsPerPage
+### showRowsPerPage?
 
-• `Optional` **showRowsPerPage**: `boolean`
+> `optional` **showRowsPerPage**: `boolean`
 
 #### Defined in
 
 [src/slick/slicktypes.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L28)
 
-___
+***
 
-### view
+### view?
 
-• `Optional` **view**: `any`
+> `optional` **view**: `any`
 
 #### Defined in
 

@@ -2,68 +2,56 @@
 
 # Interface: ComboboxFilterOptions
 
-## Hierarchy
+## Extended by
 
-- **`ComboboxFilterOptions`**
-
-  ↳ [`ComboboxEditorOptions`](ComboboxEditorOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [cascadeField](ComboboxFilterOptions.md#cascadefield)
-- [cascadeFrom](ComboboxFilterOptions.md#cascadefrom)
-- [cascadeValue](ComboboxFilterOptions.md#cascadevalue)
-- [filterField](ComboboxFilterOptions.md#filterfield)
-- [filterValue](ComboboxFilterOptions.md#filtervalue)
+- [`ComboboxEditorOptions`](ComboboxEditorOptions.md)
 
 ## Properties
 
-### cascadeField
+### cascadeField?
 
-• `Optional` **cascadeField**: `string`
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L22)
-
-___
-
-### cascadeFrom
-
-• `Optional` **cascadeFrom**: `string`
+> `optional` **cascadeField**: `string`
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L21)
+[src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
 
-___
+***
 
-### cascadeValue
+### cascadeFrom?
 
-• `Optional` **cascadeValue**: `any`
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L23)
-
-___
-
-### filterField
-
-• `Optional` **filterField**: `string`
+> `optional` **cascadeFrom**: `string`
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L24)
+[src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
 
-___
+***
 
-### filterValue
+### cascadeValue?
 
-• `Optional` **filterValue**: `any`
+> `optional` **cascadeValue**: `any`
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L25)
+[src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+
+***
+
+### filterField?
+
+> `optional` **filterField**: `string`
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)
+
+***
+
+### filterValue?
+
+> `optional` **filterValue**: `any`
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L27)

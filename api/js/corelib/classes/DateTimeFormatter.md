@@ -2,36 +2,23 @@
 
 # Class: DateTimeFormatter
 
-## Hierarchy
+## Extends
 
 - [`DateFormatter`](DateFormatter.md)
 
-  ↳ **`DateTimeFormatter`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](DateTimeFormatter.md#constructor)
-
-### Properties
-
-- [props](DateTimeFormatter.md#props)
-
-### Accessors
-
-- [displayFormat](DateTimeFormatter.md#displayformat)
-
-### Methods
-
-- [format](DateTimeFormatter.md#format)
-- [format](DateTimeFormatter.md#format-1)
-
 ## Constructors
 
-### constructor
+### new DateTimeFormatter()
 
-• **new DateTimeFormatter**(): [`DateTimeFormatter`](DateTimeFormatter.md)
+> **new DateTimeFormatter**(`props`): [`DateTimeFormatter`](DateTimeFormatter.md)
+
+#### Parameters
+
+##### props
+
+###### props.displayFormat
+
+`string`
 
 #### Returns
 
@@ -39,7 +26,7 @@
 
 #### Overrides
 
-[DateFormatter](DateFormatter.md).[constructor](DateFormatter.md#constructor)
+[`DateFormatter`](DateFormatter.md).[`constructor`](DateFormatter.md#constructors)
 
 #### Defined in
 
@@ -49,17 +36,15 @@
 
 ### props
 
-• `Readonly` **props**: `Object` = `{}`
+> `readonly` **props**: `object` = `{}`
 
-#### Type declaration
+#### displayFormat?
 
-| Name | Type |
-| :------ | :------ |
-| `displayFormat?` | `string` |
+> `optional` **displayFormat**: `string`
 
 #### Inherited from
 
-[DateFormatter](DateFormatter.md).[props](DateFormatter.md#props)
+[`DateFormatter`](DateFormatter.md).[`props`](DateFormatter.md#props)
 
 #### Defined in
 
@@ -69,51 +54,47 @@
 
 ### displayFormat
 
-• `get` **displayFormat**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **displayFormat**(): `string`
+
+##### Returns
 
 `string`
 
-#### Inherited from
+#### Set Signature
 
-DateFormatter.displayFormat
+> **set** **displayFormat**(`value`): `void`
 
-#### Defined in
+##### Parameters
 
-[src/ui/formatters/formatters.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L81)
+###### value
 
-• `set` **displayFormat**(`value`): `void`
+`string`
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
-
-#### Returns
+##### Returns
 
 `void`
 
 #### Inherited from
 
-DateFormatter.displayFormat
+[`DateFormatter`](DateFormatter.md).[`displayFormat`](DateFormatter.md#displayformat-1)
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L82)
+[src/ui/formatters/formatters.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L81)
 
 ## Methods
 
-### format
+### format()
 
-▸ **format**(`ctx`): `string`
+> **format**(`ctx`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `FormatterContext`\<`any`\> |
+##### ctx
+
+`FormatterContext`\<`any`\>
 
 #### Returns
 
@@ -121,24 +102,27 @@ DateFormatter.displayFormat
 
 #### Inherited from
 
-[DateFormatter](DateFormatter.md).[format](DateFormatter.md#format)
+[`DateFormatter`](DateFormatter.md).[`format`](DateFormatter.md#format)
 
 #### Defined in
 
 [src/ui/formatters/formatters.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L84)
 
-___
+***
 
-### format
+### format()
 
-▸ **format**(`value`, `format?`): `any`
+> `static` **format**(`value`, `format`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
-| `format?` | `string` |
+##### value
+
+`any`
+
+##### format?
+
+`string`
 
 #### Returns
 
@@ -146,7 +130,7 @@ ___
 
 #### Inherited from
 
-[DateFormatter](DateFormatter.md).[format](DateFormatter.md#format-1)
+[`DateFormatter`](DateFormatter.md).[`format`](DateFormatter.md#format-1)
 
 #### Defined in
 

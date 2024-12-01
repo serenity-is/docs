@@ -2,78 +2,25 @@
 
 # Class: SlickPager\<P\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `P` | extends [`PagerOptions`](../interfaces/PagerOptions.md) = [`PagerOptions`](../interfaces/PagerOptions.md) |
-
-## Hierarchy
+## Extends
 
 - [`Widget`](Widget.md)\<`P`\>
 
-  ↳ **`SlickPager`**
+## Type Parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](SlickPager.md#constructor)
-
-### Properties
-
-- [domNode](SlickPager.md#domnode)
-- [idPrefix](SlickPager.md#idprefix)
-- [options](SlickPager.md#options)
-- [uniqueName](SlickPager.md#uniquename)
-- [typeInfo](SlickPager.md#typeinfo)
-
-### Accessors
-
-- [element](SlickPager.md#element)
-- [props](SlickPager.md#props)
-
-### Methods
-
-- [\_changePage](SlickPager.md#_changepage)
-- [\_updatePager](SlickPager.md#_updatepager)
-- [addCssClass](SlickPager.md#addcssclass)
-- [addValidationRule](SlickPager.md#addvalidationrule)
-- [change](SlickPager.md#change)
-- [changeSelect2](SlickPager.md#changeselect2)
-- [destroy](SlickPager.md#destroy)
-- [getCssClass](SlickPager.md#getcssclass)
-- [getCustomAttribute](SlickPager.md#getcustomattribute)
-- [getFieldElement](SlickPager.md#getfieldelement)
-- [getGridField](SlickPager.md#getgridfield)
-- [init](SlickPager.md#init)
-- [internalInit](SlickPager.md#internalinit)
-- [internalRenderContents](SlickPager.md#internalrendercontents)
-- [render](SlickPager.md#render)
-- [renderContents](SlickPager.md#rendercontents)
-- [syncOrAsyncThen](SlickPager.md#syncorasyncthen)
-- [useIdPrefix](SlickPager.md#useidprefix)
-- [create](SlickPager.md#create)
-- [createDefaultElement](SlickPager.md#createdefaultelement)
-- [getWidgetName](SlickPager.md#getwidgetname)
+• **P** *extends* [`PagerOptions`](../interfaces/PagerOptions.md) = [`PagerOptions`](../interfaces/PagerOptions.md)
 
 ## Constructors
 
-### constructor
+### new SlickPager()
 
-• **new SlickPager**\<`P`\>(`props`): [`SlickPager`](SlickPager.md)\<`P`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `P` | extends [`PagerOptions`](../interfaces/PagerOptions.md) = [`PagerOptions`](../interfaces/PagerOptions.md) |
+> **new SlickPager**\<`P`\>(`props`): [`SlickPager`](SlickPager.md)\<`P`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `props` | [`WidgetProps`](../README.md#widgetprops)\<`P`\> |
+##### props
+
+[`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
 #### Returns
 
@@ -81,131 +28,149 @@
 
 #### Overrides
 
-[Widget](Widget.md).[constructor](Widget.md#constructor)
+[`Widget`](Widget.md).[`constructor`](Widget.md#constructors)
 
 #### Defined in
 
-[src/ui/datagrid/slickpager.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L14)
+[src/ui/datagrid/slickpager.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L14)
 
 ## Properties
 
 ### domNode
 
-• `Readonly` **domNode**: `HTMLElement`
+> `readonly` **domNode**: `HTMLElement`
 
 #### Inherited from
 
-[Widget](Widget.md).[domNode](Widget.md#domnode)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
-
-___
-
-### idPrefix
-
-• `Readonly` **idPrefix**: `string`
-
-#### Inherited from
-
-[Widget](Widget.md).[idPrefix](Widget.md#idprefix)
+[`Widget`](Widget.md).[`domNode`](Widget.md#domnode)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
-___
+***
 
-### options
+### idPrefix
 
-• `Protected` `Readonly` **options**: [`WidgetProps`](../README.md#widgetprops)\<`P`\>
-
-#### Inherited from
-
-[Widget](Widget.md).[options](Widget.md#options)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
-
-___
-
-### uniqueName
-
-• `Protected` `Readonly` **uniqueName**: `string`
+> `readonly` **idPrefix**: `string`
 
 #### Inherited from
 
-[Widget](Widget.md).[uniqueName](Widget.md#uniquename)
+[`Widget`](Widget.md).[`idPrefix`](Widget.md#idprefix)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
-___
+***
 
-### typeInfo
+### options
 
-▪ `Static` **typeInfo**: [`ClassTypeInfo`](../README.md#classtypeinfo)\<``"Serenity.Widget"``\>
+> `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
 #### Inherited from
 
-[Widget](Widget.md).[typeInfo](Widget.md#typeinfo)
+[`Widget`](Widget.md).[`options`](Widget.md#options)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
+
+***
+
+### uniqueName
+
+> `readonly` **uniqueName**: `string`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`uniqueName`](Widget.md#uniquename)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
+
+***
+
+### isComponent
+
+> `readonly` `static` **isComponent**: `true` = `true`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`isComponent`](Widget.md#iscomponent)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L223)
+
+***
+
+### typeInfo
+
+> `static` **typeInfo**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity.Widget"`\>
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`typeInfo`](Widget.md#typeinfo)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
 
 ## Accessors
 
 ### element
 
-• `get` **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+#### Get Signature
+
+> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 Returns a Fluent(this.domNode) object
 
-#### Returns
+##### Returns
 
 [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Inherited from
 
-Widget.element
+[`Widget`](Widget.md).[`element`](Widget.md#element)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
+[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
 
-___
+***
 
 ### props
 
-• `get` **props**(): [`WidgetProps`](../README.md#widgetprops)\<`P`\>
+#### Get Signature
 
-#### Returns
+> **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
-[`WidgetProps`](../README.md#widgetprops)\<`P`\>
+##### Returns
+
+[`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
 #### Inherited from
 
-Widget.props
+[`Widget`](Widget.md).[`props`](Widget.md#props)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L182)
+[src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
 
 ## Methods
 
-### \_changePage
+### \_changePage()
 
-▸ **_changePage**(`ctype`): `boolean`
+> **\_changePage**(`ctype`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctype` | `string` |
+##### ctype
+
+`string`
 
 #### Returns
 
@@ -213,13 +178,13 @@ Widget.props
 
 #### Defined in
 
-[src/ui/datagrid/slickpager.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L91)
+[src/ui/datagrid/slickpager.tsx:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L71)
 
-___
+***
 
-### \_updatePager
+### \_updatePager()
 
-▸ **_updatePager**(): `void`
+> **\_updatePager**(): `void`
 
 #### Returns
 
@@ -227,38 +192,13 @@ ___
 
 #### Defined in
 
-[src/ui/datagrid/slickpager.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.ts#L133)
+[src/ui/datagrid/slickpager.tsx:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/slickpager.tsx#L113)
 
-___
+***
 
-### addCssClass
+### addCssClass()
 
-▸ **addCssClass**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[Widget](Widget.md).[addCssClass](Widget.md#addcssclass)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
-
-___
-
-### addValidationRule
-
-▸ **addValidationRule**(`rule`, `uniqueName?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
-| `uniqueName?` | `string` |
+> `protected` **addCssClass**(): `void`
 
 #### Returns
 
@@ -266,44 +206,79 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[addValidationRule](Widget.md#addvalidationrule)
+[`Widget`](Widget.md).[`addCssClass`](Widget.md#addcssclass)
 
 #### Defined in
+
+[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
+
+***
+
+### addValidationRule()
+
+#### Call Signature
+
+> **addValidationRule**(`rule`, `uniqueName`?): `void`
+
+##### Parameters
+
+###### rule
+
+(`input`) => `string`
+
+###### uniqueName?
+
+`string`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+[`Widget`](Widget.md).[`addValidationRule`](Widget.md#addvalidationrule)
+
+##### Defined in
 
 [src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
 
-▸ **addValidationRule**(`uniqueName`, `rule`): `void`
+#### Call Signature
 
-#### Parameters
+> **addValidationRule**(`uniqueName`, `rule`): `void`
 
-| Name | Type |
-| :------ | :------ |
-| `uniqueName` | `string` |
-| `rule` | (`input`: `HTMLInputElement` \| `HTMLSelectElement` \| `HTMLTextAreaElement`) => `string` |
+##### Parameters
 
-#### Returns
+###### uniqueName
+
+`string`
+
+###### rule
+
+(`input`) => `string`
+
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
-[Widget](Widget.md).[addValidationRule](Widget.md#addvalidationrule)
+[`Widget`](Widget.md).[`addValidationRule`](Widget.md#addvalidationrule)
 
-#### Defined in
+##### Defined in
 
 [src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
 
-___
+***
 
-### change
+### afterRender()
 
-▸ **change**(`handler`): `void`
+> `protected` **afterRender**(`callback`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `Event`) => `void` |
+##### callback
+
+() => `void`
 
 #### Returns
 
@@ -311,23 +286,51 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[change](Widget.md#change)
+[`Widget`](Widget.md).[`afterRender`](Widget.md#afterrender)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
+[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
 
-___
+***
 
-### changeSelect2
+### byId()
 
-▸ **changeSelect2**(`handler`): `void`
+> `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
+
+#### Type Parameters
+
+• **TElement** *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handler` | (`e`: `Event`) => `void` |
+##### id
+
+`string`
+
+#### Returns
+
+[`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`byId`](Widget.md#byid)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
+***
+
+### change()
+
+> **change**(`handler`): `void`
+
+#### Parameters
+
+##### handler
+
+(`e`) => `void`
 
 #### Returns
 
@@ -335,17 +338,23 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[changeSelect2](Widget.md#changeselect2)
+[`Widget`](Widget.md).[`change`](Widget.md#change)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
-___
+***
 
-### destroy
+### changeSelect2()
 
-▸ **destroy**(): `void`
+> **changeSelect2**(`handler`): `void`
+
+#### Parameters
+
+##### handler
+
+(`e`) => `void`
 
 #### Returns
 
@@ -353,17 +362,81 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[destroy](Widget.md#destroy)
+[`Widget`](Widget.md).[`changeSelect2`](Widget.md#changeselect2)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L49)
+[src/ui/widgets/widget.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L122)
 
-___
+***
 
-### getCssClass
+### deferRender()
 
-▸ **getCssClass**(): `string`
+> `protected` **deferRender**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`deferRender`](Widget.md#deferrender)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
+
+***
+
+### destroy()
+
+> **destroy**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`destroy`](Widget.md#destroy)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L47)
+
+***
+
+### findById()
+
+> `protected` **findById**\<`TElement`\>(`id`): `TElement`
+
+#### Type Parameters
+
+• **TElement** *extends* `HTMLElement` = `HTMLElement`
+
+#### Parameters
+
+##### id
+
+`string`
+
+#### Returns
+
+`TElement`
+
+#### Inherited from
+
+[`Widget`](Widget.md).[`findById`](Widget.md#findbyid)
+
+#### Defined in
+
+[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+
+***
+
+### getCssClass()
+
+> `protected` **getCssClass**(): `string`
 
 #### Returns
 
@@ -371,30 +444,31 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[getCssClass](Widget.md#getcssclass)
+[`Widget`](Widget.md).[`getCssClass`](Widget.md#getcssclass)
 
 #### Defined in
 
 [src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
 
-___
+***
 
-### getCustomAttribute
+### getCustomAttribute()
 
-▸ **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit?`): `TAttr`
+> `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `TAttr` |
+• **TAttr**
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `attrType` | (...`args`: `any`[]) => `TAttr` | `undefined` |
-| `inherit` | `boolean` | `true` |
+##### attrType
+
+(...`args`) => `TAttr`
+
+##### inherit
+
+`boolean` = `true`
 
 #### Returns
 
@@ -402,35 +476,17 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[getCustomAttribute](Widget.md#getcustomattribute)
+[`Widget`](Widget.md).[`getCustomAttribute`](Widget.md#getcustomattribute)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
 
-___
+***
 
-### getFieldElement
+### getGridField()
 
-▸ **getFieldElement**(): `HTMLElement`
-
-#### Returns
-
-`HTMLElement`
-
-#### Inherited from
-
-[Widget](Widget.md).[getFieldElement](Widget.md#getfieldelement)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
-
-___
-
-### getGridField
-
-▸ **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
 #### Returns
 
@@ -438,17 +494,17 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[getGridField](Widget.md#getgridfield)
+[`Widget`](Widget.md).[`getGridField`](Widget.md#getgridfield)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
-___
+***
 
-### init
+### init()
 
-▸ **init**(): `this`
+> **init**(): `this`
 
 #### Returns
 
@@ -456,17 +512,17 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[init](Widget.md#init)
+[`Widget`](Widget.md).[`init`](Widget.md#init)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
+[src/ui/widgets/widget.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L157)
 
-___
+***
 
-### internalInit
+### internalRenderContents()
 
-▸ **internalInit**(): `void`
+> **internalRenderContents**(): `void`
 
 #### Returns
 
@@ -474,35 +530,35 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[internalInit](Widget.md#internalinit)
+[`Widget`](Widget.md).[`internalRenderContents`](Widget.md#internalrendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+[src/ui/widgets/widget.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L177)
 
-___
+***
 
-### internalRenderContents
+### legacyTemplateRender()
 
-▸ **internalRenderContents**(): `void`
+> `protected` **legacyTemplateRender**(): `boolean`
 
 #### Returns
 
-`void`
+`boolean`
 
 #### Inherited from
 
-[Widget](Widget.md).[internalRenderContents](Widget.md#internalrendercontents)
+[`Widget`](Widget.md).[`legacyTemplateRender`](Widget.md#legacytemplaterender)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L169)
+[src/ui/widgets/widget.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L194)
 
-___
+***
 
-### render
+### render()
 
-▸ **render**(): `any`
+> **render**(): `any`
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -514,17 +570,17 @@ this method should not be overridden. Override renderContents() instead.
 
 #### Inherited from
 
-[Widget](Widget.md).[render](Widget.md#render)
+[`Widget`](Widget.md).[`render`](Widget.md#render)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L159)
+[src/ui/widgets/widget.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L167)
 
-___
+***
 
-### renderContents
+### renderContents()
 
-▸ **renderContents**(): `any`
+> `protected` **renderContents**(): `any`
 
 #### Returns
 
@@ -532,31 +588,35 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[renderContents](Widget.md#rendercontents)
+[`Widget`](Widget.md).[`renderContents`](Widget.md#rendercontents)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L178)
+[src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
 
-___
+***
 
-### syncOrAsyncThen
+### syncOrAsyncThen()
 
-▸ **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
+> `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `syncMethod` | () => `T` |
-| `asyncMethod` | () => `PromiseLike`\<`T`\> |
-| `then` | (`v`: `T`) => `void` |
+##### syncMethod
+
+() => `T`
+
+##### asyncMethod
+
+() => `PromiseLike`\<`T`\>
+
+##### then
+
+(`v`) => `void`
 
 #### Returns
 
@@ -564,48 +624,47 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[syncOrAsyncThen](Widget.md#syncorasyncthen)
+[`Widget`](Widget.md).[`syncOrAsyncThen`](Widget.md#syncorasyncthen)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L186)
+[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
 
-___
+***
 
-### useIdPrefix
+### useIdPrefix()
 
-▸ **useIdPrefix**(): [`IdPrefixType`](../README.md#idprefixtype)
+> `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
 #### Returns
 
-[`IdPrefixType`](../README.md#idprefixtype)
+[`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
 #### Inherited from
 
-[Widget](Widget.md).[useIdPrefix](Widget.md#useidprefix)
+[`Widget`](Widget.md).[`useIdPrefix`](Widget.md#useidprefix)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L193)
+[src/ui/widgets/widget.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L218)
 
-___
+***
 
-### create
+### create()
 
-▸ **create**\<`TWidget`, `P`\>(`params`): `TWidget`
+> `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TWidget` | extends [`Widget`](Widget.md)\<`P`\> |
-| `P` | `P` |
+• **TWidget** *extends* [`Widget`](Widget.md)\<`P`\>
+
+• **P**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\> |
+##### params
+
+[`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\>
 
 #### Returns
 
@@ -613,17 +672,17 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[create](Widget.md#create)
+[`Widget`](Widget.md).[`create`](Widget.md#create)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+[src/ui/widgets/widget.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L130)
 
-___
+***
 
-### createDefaultElement
+### createDefaultElement()
 
-▸ **createDefaultElement**(): `HTMLElement`
+> `static` **createDefaultElement**(): `HTMLElement`
 
 #### Returns
 
@@ -631,23 +690,23 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[createDefaultElement](Widget.md#createdefaultelement)
+[`Widget`](Widget.md).[`createDefaultElement`](Widget.md#createdefaultelement)
 
 #### Defined in
 
-[src/ui/widgets/widget.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L60)
+[src/ui/widgets/widget.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L56)
 
-___
+***
 
-### getWidgetName
+### getWidgetName()
 
-▸ **getWidgetName**(`type`): `string`
+> `static` **getWidgetName**(`type`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `Function` |
+##### type
+
+`Function`
 
 #### Returns
 
@@ -655,7 +714,7 @@ ___
 
 #### Inherited from
 
-[Widget](Widget.md).[getWidgetName](Widget.md#getwidgetname)
+[`Widget`](Widget.md).[`getWidgetName`](Widget.md#getwidgetname)
 
 #### Defined in
 

@@ -2,27 +2,17 @@
 
 # Class: DisplayNameAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](DisplayNameAttribute.md#constructor)
-
-### Properties
-
-- [displayName](DisplayNameAttribute.md#displayname)
-
 ## Constructors
 
-### constructor
+### new DisplayNameAttribute()
 
-• **new DisplayNameAttribute**(`displayName`): [`DisplayNameAttribute`](DisplayNameAttribute.md)
+> **new DisplayNameAttribute**(`displayName`): [`DisplayNameAttribute`](DisplayNameAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `displayName` | `string` |
+##### displayName
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### displayName
 
-• **displayName**: `string`
+> **displayName**: `string`
 
 #### Defined in
 

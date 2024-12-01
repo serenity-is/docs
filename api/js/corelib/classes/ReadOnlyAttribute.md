@@ -2,27 +2,17 @@
 
 # Class: ReadOnlyAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ReadOnlyAttribute.md#constructor)
-
-### Properties
-
-- [value](ReadOnlyAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new ReadOnlyAttribute()
 
-• **new ReadOnlyAttribute**(`value?`): [`ReadOnlyAttribute`](ReadOnlyAttribute.md)
+> **new ReadOnlyAttribute**(`value`): [`ReadOnlyAttribute`](ReadOnlyAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

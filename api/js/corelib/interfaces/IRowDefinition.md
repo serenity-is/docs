@@ -2,105 +2,91 @@
 
 # Interface: IRowDefinition
 
-## Table of contents
-
-### Properties
-
-- [deletePermission](IRowDefinition.md#deletepermission)
-- [idProperty](IRowDefinition.md#idproperty)
-- [insertPermission](IRowDefinition.md#insertpermission)
-- [isActiveProperty](IRowDefinition.md#isactiveproperty)
-- [isDeletedProperty](IRowDefinition.md#isdeletedproperty)
-- [localTextPrefix](IRowDefinition.md#localtextprefix)
-- [nameProperty](IRowDefinition.md#nameproperty)
-- [readPermission](IRowDefinition.md#readpermission)
-- [updatePermission](IRowDefinition.md#updatepermission)
-
 ## Properties
 
-### deletePermission
+### deletePermission?
 
-• `Optional` `Readonly` **deletePermission**: `string`
+> `readonly` `optional` **deletePermission**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L2)
 
-___
+***
 
-### idProperty
+### idProperty?
 
-• `Optional` `Readonly` **idProperty**: `string`
+> `readonly` `optional` **idProperty**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L3)
 
-___
+***
 
-### insertPermission
+### insertPermission?
 
-• `Optional` `Readonly` **insertPermission**: `string`
+> `readonly` `optional` **insertPermission**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L4)
 
-___
+***
 
-### isActiveProperty
+### isActiveProperty?
 
-• `Optional` `Readonly` **isActiveProperty**: `string`
+> `readonly` `optional` **isActiveProperty**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L5)
 
-___
+***
 
-### isDeletedProperty
+### isDeletedProperty?
 
-• `Optional` `Readonly` **isDeletedProperty**: `string`
+> `readonly` `optional` **isDeletedProperty**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L6)
 
-___
+***
 
-### localTextPrefix
+### localTextPrefix?
 
-• `Optional` `Readonly` **localTextPrefix**: `string`
+> `readonly` `optional` **localTextPrefix**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L7)
 
-___
+***
 
-### nameProperty
+### nameProperty?
 
-• `Optional` `Readonly` **nameProperty**: `string`
+> `readonly` `optional` **nameProperty**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L8)
 
-___
+***
 
-### readPermission
+### readPermission?
 
-• `Optional` `Readonly` **readPermission**: `string`
+> `readonly` `optional` **readPermission**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/irowdefinition.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L9)
 
-___
+***
 
-### updatePermission
+### updatePermission?
 
-• `Optional` `Readonly` **updatePermission**: `string`
+> `readonly` `optional` **updatePermission**: `string`
 
 #### Defined in
 

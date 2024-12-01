@@ -2,32 +2,22 @@
 
 # Interface: GridRowSelectionMixinOptions
 
-## Table of contents
-
-### Properties
-
-- [selectable](GridRowSelectionMixinOptions.md#selectable)
-
 ## Properties
 
-### selectable
+### selectable()?
 
-• `Optional` **selectable**: (`item`: `any`) => `boolean`
+> `optional` **selectable**: (`item`) => `boolean`
 
-#### Type declaration
+#### Parameters
 
-▸ (`item`): `boolean`
+##### item
 
-##### Parameters
+`any`
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
-
-##### Returns
+#### Returns
 
 `boolean`
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L15)
+[src/ui/helpers/slickhelpers.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L16)

@@ -2,40 +2,42 @@
 
 # Interface: UploaderBatch
 
-## Table of contents
-
-### Properties
-
-- [event](UploaderBatch.md#event)
-- [filePaths](UploaderBatch.md#filepaths)
-- [formData](UploaderBatch.md#formdata)
-
 ## Properties
 
-### event
+### event?
 
-• `Optional` **event**: `Event`
-
-#### Defined in
-
-[src/base/uploader.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L51)
-
-___
-
-### filePaths
-
-• `Optional` **filePaths**: `string`[]
+> `optional` **event**: `Event`
 
 #### Defined in
 
-[src/base/uploader.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L52)
+[src/base/uploader.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L56)
 
-___
+***
+
+### filePaths?
+
+> `optional` **filePaths**: `string`[]
+
+#### Defined in
+
+[src/base/uploader.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L57)
+
+***
 
 ### formData
 
-• **formData**: `FormData`
+> **formData**: `FormData`
 
 #### Defined in
 
-[src/base/uploader.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L53)
+[src/base/uploader.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L58)
+
+***
+
+### isFirst?
+
+> `optional` **isFirst**: `boolean`
+
+#### Defined in
+
+[src/base/uploader.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L59)

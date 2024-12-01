@@ -1,18 +1,12 @@
 [@serenity-is/corelib](../README.md) / DebouncedFunction
 
-# Interface: DebouncedFunction\<T\>
+# Interface: DebouncedFunction()\<T\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends (...`args`: `any`[]) => `any` |
+• **T** *extends* (...`args`) => `any`
 
-## Callable
-
-### DebouncedFunction
-
-▸ **DebouncedFunction**(`...args`): `ReturnType`\<`T`\>
+> **DebouncedFunction**(...`args`): `ReturnType`\<`T`\>
 
 Call the original function, but applying the debounce rules.
 
@@ -22,32 +16,25 @@ value.
 Otherwise, it returns the return value of the last invocation, or undefined if the debounced
 function was not invoked yet.
 
-#### Parameters
+## Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...args` | `Parameters`\<`T`\> |
+### args
 
-#### Returns
+...`Parameters`\<`T`\>
+
+## Returns
 
 `ReturnType`\<`T`\>
 
-#### Defined in
+## Defined in
 
 [src/base/debounce.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L11)
 
-## Table of contents
-
-### Methods
-
-- [clear](DebouncedFunction.md#clear)
-- [flush](DebouncedFunction.md#flush)
-
 ## Methods
 
-### clear
+### clear()
 
-▸ **clear**(): `void`
+> **clear**(): `void`
 
 Throw away any pending invocation of the debounced function.
 
@@ -59,11 +46,11 @@ Throw away any pending invocation of the debounced function.
 
 [src/base/debounce.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L16)
 
-___
+***
 
-### flush
+### flush()
 
-▸ **flush**(): `ReturnType`\<`T`\>
+> **flush**(): `ReturnType`\<`T`\>
 
 If there is a pending invocation of the debounced function, invoke it immediately and return
 its return value.

@@ -2,27 +2,17 @@
 
 # Class: LocalTextPrefixAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](LocalTextPrefixAttribute.md#constructor)
-
-### Properties
-
-- [value](LocalTextPrefixAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new LocalTextPrefixAttribute()
 
-• **new LocalTextPrefixAttribute**(`value`): [`LocalTextPrefixAttribute`](LocalTextPrefixAttribute.md)
+> **new LocalTextPrefixAttribute**(`value`): [`LocalTextPrefixAttribute`](LocalTextPrefixAttribute.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
+##### value
+
+`string`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `string`
+> **value**: `string`
 
 #### Defined in
 

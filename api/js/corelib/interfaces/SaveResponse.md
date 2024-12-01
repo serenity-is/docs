@@ -2,38 +2,29 @@
 
 # Interface: SaveResponse
 
-## Hierarchy
+## Extends
 
 - [`ServiceResponse`](ServiceResponse.md)
 
-  ↳ **`SaveResponse`**
-
-## Table of contents
-
-### Properties
-
-- [EntityId](SaveResponse.md#entityid)
-- [Error](SaveResponse.md#error)
-
 ## Properties
 
-### EntityId
+### EntityId?
 
-• `Optional` **EntityId**: `any`
+> `optional` **EntityId**: `any`
 
 #### Defined in
 
-[src/base/servicetypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L27)
+[src/base/servicetypes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L23)
 
-___
+***
 
-### Error
+### Error?
 
-• `Optional` **Error**: [`ServiceError`](ServiceError.md)
+> `optional` **Error**: [`ServiceError`](ServiceError.md)
 
 #### Inherited from
 
-[ServiceResponse](ServiceResponse.md).[Error](ServiceResponse.md#error)
+[`ServiceResponse`](ServiceResponse.md).[`Error`](ServiceResponse.md#error)
 
 #### Defined in
 

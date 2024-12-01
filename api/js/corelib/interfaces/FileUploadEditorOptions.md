@@ -2,181 +2,163 @@
 
 # Interface: FileUploadEditorOptions
 
-## Hierarchy
+## Extends
 
 - [`FileUploadConstraints`](FileUploadConstraints.md)
 
-  ↳ **`FileUploadEditorOptions`**
+## Extended by
 
-  ↳↳ [`ImageUploadEditorOptions`](ImageUploadEditorOptions.md)
-
-  ↳↳ [`MultipleFileUploadEditorOptions`](MultipleFileUploadEditorOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [allowNonImage](FileUploadEditorOptions.md#allownonimage)
-- [displayFileName](FileUploadEditorOptions.md#displayfilename)
-- [maxHeight](FileUploadEditorOptions.md#maxheight)
-- [maxSize](FileUploadEditorOptions.md#maxsize)
-- [maxWidth](FileUploadEditorOptions.md#maxwidth)
-- [minHeight](FileUploadEditorOptions.md#minheight)
-- [minSize](FileUploadEditorOptions.md#minsize)
-- [minWidth](FileUploadEditorOptions.md#minwidth)
-- [originalNameProperty](FileUploadEditorOptions.md#originalnameproperty)
-- [uploadIntent](FileUploadEditorOptions.md#uploadintent)
-- [uploadUrl](FileUploadEditorOptions.md#uploadurl)
-- [urlPrefix](FileUploadEditorOptions.md#urlprefix)
+- [`ImageUploadEditorOptions`](ImageUploadEditorOptions.md)
+- [`MultipleFileUploadEditorOptions`](MultipleFileUploadEditorOptions.md)
 
 ## Properties
 
-### allowNonImage
+### allowNonImage?
 
-• `Optional` **allowNonImage**: `boolean`
-
-#### Inherited from
-
-[FileUploadConstraints](FileUploadConstraints.md).[allowNonImage](FileUploadConstraints.md#allownonimage)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L240)
-
-___
-
-### displayFileName
-
-• `Optional` **displayFileName**: `boolean`
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L10)
-
-___
-
-### maxHeight
-
-• `Optional` **maxHeight**: `number`
+> `optional` **allowNonImage**: `boolean`
 
 #### Inherited from
 
-[FileUploadConstraints](FileUploadConstraints.md).[maxHeight](FileUploadConstraints.md#maxheight)
+[`FileUploadConstraints`](FileUploadConstraints.md).[`allowNonImage`](FileUploadConstraints.md#allownonimage)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L237)
+[src/ui/helpers/uploadhelper.tsx:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L233)
 
-___
+***
 
-### maxSize
+### displayFileName?
 
-• `Optional` **maxSize**: `number`
+> `optional` **displayFileName**: `boolean`
+
+#### Defined in
+
+[src/ui/editors/uploadeditors.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L10)
+
+***
+
+### maxHeight?
+
+> `optional` **maxHeight**: `number`
 
 #### Inherited from
 
-[FileUploadConstraints](FileUploadConstraints.md).[maxSize](FileUploadConstraints.md#maxsize)
+[`FileUploadConstraints`](FileUploadConstraints.md).[`maxHeight`](FileUploadConstraints.md#maxheight)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L239)
+[src/ui/helpers/uploadhelper.tsx:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L230)
 
-___
+***
 
-### maxWidth
+### maxSize?
 
-• `Optional` **maxWidth**: `number`
+> `optional` **maxSize**: `number`
 
 #### Inherited from
 
-[FileUploadConstraints](FileUploadConstraints.md).[maxWidth](FileUploadConstraints.md#maxwidth)
+[`FileUploadConstraints`](FileUploadConstraints.md).[`maxSize`](FileUploadConstraints.md#maxsize)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L235)
+[src/ui/helpers/uploadhelper.tsx:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L232)
 
-___
+***
 
-### minHeight
+### maxWidth?
 
-• `Optional` **minHeight**: `number`
+> `optional` **maxWidth**: `number`
 
 #### Inherited from
 
-[FileUploadConstraints](FileUploadConstraints.md).[minHeight](FileUploadConstraints.md#minheight)
+[`FileUploadConstraints`](FileUploadConstraints.md).[`maxWidth`](FileUploadConstraints.md#maxwidth)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L236)
+[src/ui/helpers/uploadhelper.tsx:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L228)
 
-___
+***
 
-### minSize
+### minHeight?
 
-• `Optional` **minSize**: `number`
+> `optional` **minHeight**: `number`
 
 #### Inherited from
 
-[FileUploadConstraints](FileUploadConstraints.md).[minSize](FileUploadConstraints.md#minsize)
+[`FileUploadConstraints`](FileUploadConstraints.md).[`minHeight`](FileUploadConstraints.md#minheight)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L238)
+[src/ui/helpers/uploadhelper.tsx:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L229)
 
-___
+***
 
-### minWidth
+### minSize?
 
-• `Optional` **minWidth**: `number`
+> `optional` **minSize**: `number`
 
 #### Inherited from
 
-[FileUploadConstraints](FileUploadConstraints.md).[minWidth](FileUploadConstraints.md#minwidth)
+[`FileUploadConstraints`](FileUploadConstraints.md).[`minSize`](FileUploadConstraints.md#minsize)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L234)
+[src/ui/helpers/uploadhelper.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L231)
 
-___
+***
 
-### originalNameProperty
+### minWidth?
 
-• `Optional` **originalNameProperty**: `string`
+> `optional` **minWidth**: `number`
 
 #### Inherited from
 
-[FileUploadConstraints](FileUploadConstraints.md).[originalNameProperty](FileUploadConstraints.md#originalnameproperty)
+[`FileUploadConstraints`](FileUploadConstraints.md).[`minWidth`](FileUploadConstraints.md#minwidth)
 
 #### Defined in
 
-[src/ui/helpers/uploadhelper.ts:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.ts#L241)
+[src/ui/helpers/uploadhelper.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L227)
 
-___
+***
 
-### uploadIntent
+### originalNameProperty?
 
-• `Optional` **uploadIntent**: `string`
+> `optional` **originalNameProperty**: `string`
 
-#### Defined in
+#### Inherited from
 
-[src/ui/editors/uploadeditors.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L11)
-
-___
-
-### uploadUrl
-
-• `Optional` **uploadUrl**: `string`
+[`FileUploadConstraints`](FileUploadConstraints.md).[`originalNameProperty`](FileUploadConstraints.md#originalnameproperty)
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L12)
+[src/ui/helpers/uploadhelper.tsx:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L234)
 
-___
+***
 
-### urlPrefix
+### uploadIntent?
 
-• `Optional` **urlPrefix**: `string`
+> `optional` **uploadIntent**: `string`
 
 #### Defined in
 
-[src/ui/editors/uploadeditors.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.ts#L13)
+[src/ui/editors/uploadeditors.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L11)
+
+***
+
+### uploadUrl?
+
+> `optional` **uploadUrl**: `string`
+
+#### Defined in
+
+[src/ui/editors/uploadeditors.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L12)
+
+***
+
+### urlPrefix?
+
+> `optional` **urlPrefix**: `string`
+
+#### Defined in
+
+[src/ui/editors/uploadeditors.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L13)

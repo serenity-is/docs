@@ -2,58 +2,39 @@
 
 # Interface: QuickFilter\<TWidget, P\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TWidget` | extends [`Widget`](../classes/Widget.md)\<`P`\> |
-| `P` | `P` |
+• **TWidget** *extends* [`Widget`](../classes/Widget.md)\<`P`\>
 
-## Table of contents
-
-### Properties
-
-- [cssClass](QuickFilter.md#cssclass)
-- [displayText](QuickFilter.md#displaytext)
-- [element](QuickFilter.md#element)
-- [field](QuickFilter.md#field)
-- [handler](QuickFilter.md#handler)
-- [init](QuickFilter.md#init)
-- [loadState](QuickFilter.md#loadstate)
-- [options](QuickFilter.md#options)
-- [saveState](QuickFilter.md#savestate)
-- [separator](QuickFilter.md#separator)
-- [title](QuickFilter.md#title)
-- [type](QuickFilter.md#type)
+• **P**
 
 ## Properties
 
-### cssClass
+### cssClass?
 
-• `Optional` **cssClass**: `string`
+> `optional` **cssClass**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/quickfilter.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L23)
 
-___
+***
 
-### displayText
+### displayText()?
 
-• `Optional` **displayText**: (`w`: `TWidget`, `label`: `string`) => `string`
+> `optional` **displayText**: (`w`, `label`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`w`, `label`): `string`
+##### w
 
-##### Parameters
+`TWidget`
 
-| Name | Type |
-| :------ | :------ |
-| `w` | `TWidget` |
-| `label` | `string` |
+##### label
 
-##### Returns
+`string`
+
+#### Returns
 
 `string`
 
@@ -61,23 +42,19 @@ ___
 
 [src/ui/datagrid/quickfilter.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L26)
 
-___
+***
 
-### element
+### element()?
 
-• `Optional` **element**: (`e`: [`Fluent`](Fluent.md)\<`HTMLElement`\>) => `void`
+> `optional` **element**: (`e`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`e`): `void`
+##### e
 
-##### Parameters
+[`Fluent`](Fluent.md)\<`HTMLElement`\>
 
-| Name | Type |
-| :------ | :------ |
-| `e` | [`Fluent`](Fluent.md)\<`HTMLElement`\> |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -85,33 +62,29 @@ ___
 
 [src/ui/datagrid/quickfilter.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L20)
 
-___
+***
 
-### field
+### field?
 
-• `Optional` **field**: `string`
+> `optional` **field**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/quickfilter.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L15)
 
-___
+***
 
-### handler
+### handler()?
 
-• `Optional` **handler**: (`h`: [`QuickFilterArgs`](QuickFilterArgs.md)\<`TWidget`\>) => `void`
+> `optional` **handler**: (`h`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`h`): `void`
+##### h
 
-##### Parameters
+[`QuickFilterArgs`](QuickFilterArgs.md)\<`TWidget`\>
 
-| Name | Type |
-| :------ | :------ |
-| `h` | [`QuickFilterArgs`](QuickFilterArgs.md)\<`TWidget`\> |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -119,23 +92,19 @@ ___
 
 [src/ui/datagrid/quickfilter.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L17)
 
-___
+***
 
-### init
+### init()?
 
-• `Optional` **init**: (`w`: `TWidget`) => `void`
+> `optional` **init**: (`w`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`w`): `void`
+##### w
 
-##### Parameters
+`TWidget`
 
-| Name | Type |
-| :------ | :------ |
-| `w` | `TWidget` |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -143,24 +112,23 @@ ___
 
 [src/ui/datagrid/quickfilter.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L21)
 
-___
+***
 
-### loadState
+### loadState()?
 
-• `Optional` **loadState**: (`w`: `TWidget`, `state`: `any`) => `void`
+> `optional` **loadState**: (`w`, `state`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`w`, `state`): `void`
+##### w
 
-##### Parameters
+`TWidget`
 
-| Name | Type |
-| :------ | :------ |
-| `w` | `TWidget` |
-| `state` | `any` |
+##### state
 
-##### Returns
+`any`
+
+#### Returns
 
 `void`
 
@@ -168,33 +136,43 @@ ___
 
 [src/ui/datagrid/quickfilter.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L24)
 
-___
+***
 
-### options
+### options?
 
-• `Optional` **options**: `P` & \{ `class?`: `string` ; `element?`: `string` \| `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`el`: `HTMLElement`) => `void` ; `id?`: `string`  }
+> `optional` **options**: `P` & `object`
+
+#### Type declaration
+
+##### class?
+
+> `optional` **class**: `string`
+
+##### element?
+
+> `optional` **element**: `string` \| `HTMLElement` \| `ArrayLike`\<`HTMLElement`\> \| (`el`) => `void`
+
+##### id?
+
+> `optional` **id**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/quickfilter.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L19)
 
-___
+***
 
-### saveState
+### saveState()?
 
-• `Optional` **saveState**: (`w`: `TWidget`) => `any`
+> `optional` **saveState**: (`w`) => `any`
 
-#### Type declaration
+#### Parameters
 
-▸ (`w`): `any`
+##### w
 
-##### Parameters
+`TWidget`
 
-| Name | Type |
-| :------ | :------ |
-| `w` | `TWidget` |
-
-##### Returns
+#### Returns
 
 `any`
 
@@ -202,51 +180,45 @@ ___
 
 [src/ui/datagrid/quickfilter.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L25)
 
-___
+***
 
-### separator
+### separator?
 
-• `Optional` **separator**: `boolean`
+> `optional` **separator**: `boolean`
 
 #### Defined in
 
 [src/ui/datagrid/quickfilter.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L22)
 
-___
+***
 
-### title
+### title?
 
-• `Optional` **title**: `string`
+> `optional` **title**: `string`
 
 #### Defined in
 
 [src/ui/datagrid/quickfilter.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L18)
 
-___
+***
 
-### type
+### type()?
 
-• `Optional` **type**: `Object`
+> `optional` **type**: (`options`?) => `TWidget`
 
-#### Call signature
+#### Parameters
 
-• **new type**(`options?`): `TWidget`
+##### options?
 
-##### Parameters
+`P`
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `P` |
-
-##### Returns
+#### Returns
 
 `TWidget`
 
-#### Type declaration
+#### prototype
 
-| Name | Type |
-| :------ | :------ |
-| `prototype` | `TWidget` |
+> **prototype**: `TWidget`
 
 #### Defined in
 

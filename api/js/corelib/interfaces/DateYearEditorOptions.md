@@ -2,136 +2,120 @@
 
 # Interface: DateYearEditorOptions
 
-## Hierarchy
+## Extends
 
 - [`SelectEditorOptions`](SelectEditorOptions.md)
 
-  ↳ **`DateYearEditorOptions`**
-
-## Table of contents
-
-### Properties
-
-- [allowClear](DateYearEditorOptions.md#allowclear)
-- [delimited](DateYearEditorOptions.md#delimited)
-- [descending](DateYearEditorOptions.md#descending)
-- [emptyOptionText](DateYearEditorOptions.md#emptyoptiontext)
-- [items](DateYearEditorOptions.md#items)
-- [maxYear](DateYearEditorOptions.md#maxyear)
-- [minYear](DateYearEditorOptions.md#minyear)
-- [minimumResultsForSearch](DateYearEditorOptions.md#minimumresultsforsearch)
-- [multiple](DateYearEditorOptions.md#multiple)
-
 ## Properties
 
-### allowClear
+### allowClear?
 
-• `Optional` **allowClear**: `boolean`
-
-#### Inherited from
-
-[SelectEditorOptions](SelectEditorOptions.md).[allowClear](SelectEditorOptions.md#allowclear)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L14)
-
-___
-
-### delimited
-
-• `Optional` **delimited**: `boolean`
+> `optional` **allowClear**: `boolean`
 
 #### Inherited from
 
-[SelectEditorOptions](SelectEditorOptions.md).[delimited](SelectEditorOptions.md#delimited)
+[`SelectEditorOptions`](SelectEditorOptions.md).[`allowClear`](SelectEditorOptions.md#allowclear)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L15)
+[src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
 
-___
+***
 
-### descending
+### delimited?
 
-• `Optional` **descending**: `boolean`
+> `optional` **delimited**: `boolean`
+
+#### Inherited from
+
+[`SelectEditorOptions`](SelectEditorOptions.md).[`delimited`](SelectEditorOptions.md#delimited)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+
+***
+
+### descending?
+
+> `optional` **descending**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/dateyeareditor.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateyeareditor.ts#L65)
 
-___
+***
 
-### emptyOptionText
+### emptyOptionText?
 
-• `Optional` **emptyOptionText**: `string`
+> `optional` **emptyOptionText**: `string`
 
 #### Inherited from
 
-[SelectEditorOptions](SelectEditorOptions.md).[emptyOptionText](SelectEditorOptions.md#emptyoptiontext)
+[`SelectEditorOptions`](SelectEditorOptions.md).[`emptyOptionText`](SelectEditorOptions.md#emptyoptiontext)
 
 #### Defined in
 
 [src/ui/editors/selecteditor.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L42)
 
-___
+***
 
-### items
+### items?
 
-• `Optional` **items**: `any`[]
+> `optional` **items**: `any`[]
 
 #### Inherited from
 
-[SelectEditorOptions](SelectEditorOptions.md).[items](SelectEditorOptions.md#items)
+[`SelectEditorOptions`](SelectEditorOptions.md).[`items`](SelectEditorOptions.md#items)
 
 #### Defined in
 
 [src/ui/editors/selecteditor.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L41)
 
-___
+***
 
-### maxYear
+### maxYear?
 
-• `Optional` **maxYear**: `string`
+> `optional` **maxYear**: `string`
 
 #### Defined in
 
 [src/ui/editors/dateyeareditor.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateyeareditor.ts#L64)
 
-___
+***
 
-### minYear
+### minimumResultsForSearch?
 
-• `Optional` **minYear**: `string`
+> `optional` **minimumResultsForSearch**: `any`
+
+#### Inherited from
+
+[`SelectEditorOptions`](SelectEditorOptions.md).[`minimumResultsForSearch`](SelectEditorOptions.md#minimumresultsforsearch)
+
+#### Defined in
+
+[src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+
+***
+
+### minYear?
+
+> `optional` **minYear**: `string`
 
 #### Defined in
 
 [src/ui/editors/dateyeareditor.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateyeareditor.ts#L63)
 
-___
+***
 
-### minimumResultsForSearch
+### multiple?
 
-• `Optional` **minimumResultsForSearch**: `any`
-
-#### Inherited from
-
-[SelectEditorOptions](SelectEditorOptions.md).[minimumResultsForSearch](SelectEditorOptions.md#minimumresultsforsearch)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L16)
-
-___
-
-### multiple
-
-• `Optional` **multiple**: `boolean`
+> `optional` **multiple**: `boolean`
 
 #### Inherited from
 
-[SelectEditorOptions](SelectEditorOptions.md).[multiple](SelectEditorOptions.md#multiple)
+[`SelectEditorOptions`](SelectEditorOptions.md).[`multiple`](SelectEditorOptions.md#multiple)
 
 #### Defined in
 
-[src/ui/editors/comboboxeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.ts#L17)
+[src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)

@@ -2,27 +2,11 @@
 
 # Class: IDoubleValue
 
-## Implemented by
-
-- [`DecimalEditor`](DecimalEditor.md)
-- [`IntegerEditor`](IntegerEditor.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IDoubleValue.md#constructor)
-
-### Methods
-
-- [get\_value](IDoubleValue.md#get_value)
-- [set\_value](IDoubleValue.md#set_value)
-
 ## Constructors
 
-### constructor
+### new IDoubleValue()
 
-• **new IDoubleValue**(): [`IDoubleValue`](IDoubleValue.md)
+> **new IDoubleValue**(): [`IDoubleValue`](IDoubleValue.md)
 
 #### Returns
 
@@ -30,9 +14,9 @@
 
 ## Methods
 
-### get\_value
+### get\_value()
 
-▸ **get_value**(): `any`
+> **get\_value**(): `any`
 
 #### Returns
 
@@ -42,17 +26,17 @@
 
 [src/interfaces/idoublevalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L8)
 
-___
+***
 
-### set\_value
+### set\_value()
 
-▸ **set_value**(`value`): `void`
+> **set\_value**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+##### value
+
+`any`
 
 #### Returns
 

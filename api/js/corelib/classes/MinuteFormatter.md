@@ -6,22 +6,11 @@
 
 - [`Formatter`](../interfaces/Formatter.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](MinuteFormatter.md#constructor)
-
-### Methods
-
-- [format](MinuteFormatter.md#format)
-- [format](MinuteFormatter.md#format-1)
-
 ## Constructors
 
-### constructor
+### new MinuteFormatter()
 
-• **new MinuteFormatter**(): [`MinuteFormatter`](MinuteFormatter.md)
+> **new MinuteFormatter**(): [`MinuteFormatter`](MinuteFormatter.md)
 
 #### Returns
 
@@ -29,15 +18,15 @@
 
 ## Methods
 
-### format
+### format()
 
-▸ **format**(`ctx`): `string`
+> **format**(`ctx`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `FormatterContext`\<`any`\> |
+##### ctx
+
+`FormatterContext`\<`any`\>
 
 #### Returns
 
@@ -45,23 +34,23 @@
 
 #### Implementation of
 
-[Formatter](../interfaces/Formatter.md).[format](../interfaces/Formatter.md#format)
+[`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L190)
+[src/ui/formatters/formatters.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L198)
 
-___
+***
 
-### format
+### format()
 
-▸ **format**(`value`): `string`
+> `static` **format**(`value`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `number` |
+##### value
+
+`number`
 
 #### Returns
 
@@ -69,4 +58,4 @@ ___
 
 #### Defined in
 
-[src/ui/formatters/formatters.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L194)
+[src/ui/formatters/formatters.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L202)

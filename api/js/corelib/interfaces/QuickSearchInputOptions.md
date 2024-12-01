@@ -2,78 +2,70 @@
 
 # Interface: QuickSearchInputOptions
 
-## Table of contents
-
-### Properties
-
-- [fields](QuickSearchInputOptions.md#fields)
-- [filteredParentClass](QuickSearchInputOptions.md#filteredparentclass)
-- [loadingParentClass](QuickSearchInputOptions.md#loadingparentclass)
-- [onSearch](QuickSearchInputOptions.md#onsearch)
-- [typeDelay](QuickSearchInputOptions.md#typedelay)
-
 ## Properties
 
-### fields
+### fields?
 
-• `Optional` **fields**: [`QuickSearchField`](QuickSearchField.md)[]
-
-#### Defined in
-
-[src/ui/datagrid/quicksearchinput.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L15)
-
-___
-
-### filteredParentClass
-
-• `Optional` **filteredParentClass**: `string`
+> `optional` **fields**: [`QuickSearchField`](QuickSearchField.md)[]
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L13)
+[src/ui/datagrid/quicksearchinput.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L15)
 
-___
+***
 
-### loadingParentClass
+### filteredParentClass?
 
-• `Optional` **loadingParentClass**: `string`
+> `optional` **filteredParentClass**: `string`
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L12)
+[src/ui/datagrid/quicksearchinput.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L13)
 
-___
+***
 
-### onSearch
+### loadingParentClass?
 
-• `Optional` **onSearch**: (`p1`: `string`, `p2`: `string`, `p3`: (`p1`: `boolean`) => `void`) => `void`
+> `optional` **loadingParentClass**: `string`
 
-#### Type declaration
+#### Defined in
 
-▸ (`p1`, `p2`, `p3`): `void`
+[src/ui/datagrid/quicksearchinput.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L12)
 
-##### Parameters
+***
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `string` |
-| `p2` | `string` |
-| `p3` | (`p1`: `boolean`) => `void` |
+### onSearch()?
 
-##### Returns
+> `optional` **onSearch**: (`p1`, `p2`, `p3`) => `void`
+
+#### Parameters
+
+##### p1
+
+`string`
+
+##### p2
+
+`string`
+
+##### p3
+
+(`p1`) => `void`
+
+#### Returns
 
 `void`
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L14)
+[src/ui/datagrid/quicksearchinput.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L14)
 
-___
+***
 
-### typeDelay
+### typeDelay?
 
-• `Optional` **typeDelay**: `number`
+> `optional` **typeDelay**: `number`
 
 #### Defined in
 
-[src/ui/datagrid/quicksearchinput.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.ts#L11)
+[src/ui/datagrid/quicksearchinput.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L11)

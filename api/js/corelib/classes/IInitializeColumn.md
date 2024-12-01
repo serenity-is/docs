@@ -2,26 +2,11 @@
 
 # Class: IInitializeColumn
 
-## Implemented by
-
-- [`FileDownloadFormatter`](FileDownloadFormatter.md)
-- [`UrlFormatter`](UrlFormatter.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IInitializeColumn.md#constructor)
-
-### Methods
-
-- [initializeColumn](IInitializeColumn.md#initializecolumn)
-
 ## Constructors
 
-### constructor
+### new IInitializeColumn()
 
-• **new IInitializeColumn**(): [`IInitializeColumn`](IInitializeColumn.md)
+> **new IInitializeColumn**(): [`IInitializeColumn`](IInitializeColumn.md)
 
 #### Returns
 
@@ -29,15 +14,15 @@
 
 ## Methods
 
-### initializeColumn
+### initializeColumn()
 
-▸ **initializeColumn**(`column`): `void`
+> **initializeColumn**(`column`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `column` | `Column`\<`any`\> |
+##### column
+
+`Column`\<`any`\>
 
 #### Returns
 

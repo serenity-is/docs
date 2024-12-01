@@ -2,61 +2,47 @@
 
 # Interface: GroupInfo\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name |
-| :------ |
-| `TItem` |
-
-## Table of contents
-
-### Properties
-
-- [aggregateCollapsed](GroupInfo.md#aggregatecollapsed)
-- [aggregators](GroupInfo.md#aggregators)
-- [comparer](GroupInfo.md#comparer)
-- [formatter](GroupInfo.md#formatter)
-- [getter](GroupInfo.md#getter)
-- [lazyTotalsCalculation](GroupInfo.md#lazytotalscalculation)
+• **TItem**
 
 ## Properties
 
-### aggregateCollapsed
+### aggregateCollapsed?
 
-• `Optional` **aggregateCollapsed**: `boolean`
+> `optional` **aggregateCollapsed**: `boolean`
 
 #### Defined in
 
 [src/slick/slicktypes.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L22)
 
-___
+***
 
-### aggregators
+### aggregators?
 
-• `Optional` **aggregators**: `any`[]
+> `optional` **aggregators**: `any`[]
 
 #### Defined in
 
 [src/slick/slicktypes.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L21)
 
-___
+***
 
-### comparer
+### comparer()?
 
-• `Optional` **comparer**: (`a`: `Group`\<`TItem`\>, `b`: `Group`\<`TItem`\>) => `number`
+> `optional` **comparer**: (`a`, `b`) => `number`
 
-#### Type declaration
+#### Parameters
 
-▸ (`a`, `b`): `number`
+##### a
 
-##### Parameters
+`Group`\<`TItem`\>
 
-| Name | Type |
-| :------ | :------ |
-| `a` | `Group`\<`TItem`\> |
-| `b` | `Group`\<`TItem`\> |
+##### b
 
-##### Returns
+`Group`\<`TItem`\>
+
+#### Returns
 
 `number`
 
@@ -64,23 +50,19 @@ ___
 
 [src/slick/slicktypes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L20)
 
-___
+***
 
-### formatter
+### formatter()?
 
-• `Optional` **formatter**: (`p1`: `Group`\<`TItem`\>) => `string`
+> `optional` **formatter**: (`p1`) => `string`
 
-#### Type declaration
+#### Parameters
 
-▸ (`p1`): `string`
+##### p1
 
-##### Parameters
+`Group`\<`TItem`\>
 
-| Name | Type |
-| :------ | :------ |
-| `p1` | `Group`\<`TItem`\> |
-
-##### Returns
+#### Returns
 
 `string`
 
@@ -88,21 +70,21 @@ ___
 
 [src/slick/slicktypes.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L19)
 
-___
+***
 
-### getter
+### getter?
 
-• `Optional` **getter**: `any`
+> `optional` **getter**: `any`
 
 #### Defined in
 
 [src/slick/slicktypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L18)
 
-___
+***
 
-### lazyTotalsCalculation
+### lazyTotalsCalculation?
 
-• `Optional` **lazyTotalsCalculation**: `boolean`
+> `optional` **lazyTotalsCalculation**: `boolean`
 
 #### Defined in
 

@@ -2,17 +2,11 @@
 
 # Interface: SummaryOptions
 
-## Table of contents
-
-### Properties
-
-- [aggregators](SummaryOptions.md#aggregators)
-
 ## Properties
 
 ### aggregators
 
-• **aggregators**: `any`[]
+> **aggregators**: `any`[]
 
 #### Defined in
 

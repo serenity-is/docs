@@ -2,34 +2,21 @@
 
 # Class: GridRadioSelectionMixin
 
-## Table of contents
-
-### Constructors
-
-- [constructor](GridRadioSelectionMixin.md#constructor)
-
-### Methods
-
-- [clear](GridRadioSelectionMixin.md#clear)
-- [getSelectedAsInt32](GridRadioSelectionMixin.md#getselectedasint32)
-- [getSelectedAsInt64](GridRadioSelectionMixin.md#getselectedasint64)
-- [getSelectedKey](GridRadioSelectionMixin.md#getselectedkey)
-- [resetCheckedAndRefresh](GridRadioSelectionMixin.md#resetcheckedandrefresh)
-- [setSelectedKey](GridRadioSelectionMixin.md#setselectedkey)
-- [createSelectColumn](GridRadioSelectionMixin.md#createselectcolumn)
-
 ## Constructors
 
-### constructor
+### new GridRadioSelectionMixin()
 
-• **new GridRadioSelectionMixin**(`grid`, `options?`): [`GridRadioSelectionMixin`](GridRadioSelectionMixin.md)
+> **new GridRadioSelectionMixin**(`grid`, `options`?): [`GridRadioSelectionMixin`](GridRadioSelectionMixin.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `grid` | [`IDataGrid`](../interfaces/IDataGrid.md) |
-| `options?` | [`GridRadioSelectionMixinOptions`](../interfaces/GridRadioSelectionMixinOptions.md) |
+##### grid
+
+[`IDataGrid`](../interfaces/IDataGrid.md)
+
+##### options?
+
+[`GridRadioSelectionMixinOptions`](../interfaces/GridRadioSelectionMixinOptions.md)
 
 #### Returns
 
@@ -37,13 +24,13 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L178)
+[src/ui/helpers/slickhelpers.tsx:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L179)
 
 ## Methods
 
-### clear
+### clear()
 
-▸ **clear**(): `void`
+> **clear**(): `void`
 
 #### Returns
 
@@ -51,27 +38,13 @@
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L217)
+[src/ui/helpers/slickhelpers.tsx:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L218)
 
-___
+***
 
-### getSelectedAsInt32
+### getSelectedAsInt32()
 
-▸ **getSelectedAsInt32**(): `number`
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.ts:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L235)
-
-___
-
-### getSelectedAsInt64
-
-▸ **getSelectedAsInt64**(): `number`
+> **getSelectedAsInt32**(): `number`
 
 #### Returns
 
@@ -79,13 +52,27 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L247)
+[src/ui/helpers/slickhelpers.tsx:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L236)
 
-___
+***
 
-### getSelectedKey
+### getSelectedAsInt64()
 
-▸ **getSelectedKey**(): `string`
+> **getSelectedAsInt64**(): `number`
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/ui/helpers/slickhelpers.tsx:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L248)
+
+***
+
+### getSelectedKey()
+
+> **getSelectedKey**(): `string`
 
 #### Returns
 
@@ -93,33 +80,13 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L226)
+[src/ui/helpers/slickhelpers.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L227)
 
-___
+***
 
-### resetCheckedAndRefresh
+### resetCheckedAndRefresh()
 
-▸ **resetCheckedAndRefresh**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L221)
-
-___
-
-### setSelectedKey
-
-▸ **setSelectedKey**(`key`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` |
+> **resetCheckedAndRefresh**(): `void`
 
 #### Returns
 
@@ -127,19 +94,39 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L259)
+[src/ui/helpers/slickhelpers.tsx:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L222)
 
-___
+***
 
-### createSelectColumn
+### setSelectedKey()
 
-▸ **createSelectColumn**(`getMixin`): `Column`\<`any`\>
+> **setSelectedKey**(`key`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `getMixin` | () => [`GridRadioSelectionMixin`](GridRadioSelectionMixin.md) |
+##### key
+
+`string`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/ui/helpers/slickhelpers.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L260)
+
+***
+
+### createSelectColumn()
+
+> `static` **createSelectColumn**(`getMixin`): `Column`\<`any`\>
+
+#### Parameters
+
+##### getMixin
+
+() => [`GridRadioSelectionMixin`](GridRadioSelectionMixin.md)
 
 #### Returns
 
@@ -147,4 +134,4 @@ ___
 
 #### Defined in
 
-[src/ui/helpers/slickhelpers.ts:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.ts#L264)
+[src/ui/helpers/slickhelpers.tsx:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L265)

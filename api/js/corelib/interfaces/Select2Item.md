@@ -2,72 +2,61 @@
 
 # Interface: Select2Item
 
-## Table of contents
-
-### Properties
-
-- [children](Select2Item.md#children)
-- [disabled](Select2Item.md#disabled)
-- [id](Select2Item.md#id)
-- [locked](Select2Item.md#locked)
-- [source](Select2Item.md#source)
-- [text](Select2Item.md#text)
-
 ## Properties
 
-### children
+### children?
 
-• `Optional` **children**: [`Select2Item`](Select2Item.md)[]
+> `optional` **children**: [`Select2Item`](Select2Item.md)[]
 
 #### Defined in
 
 [src/ui/editors/select2.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L23)
 
-___
+***
 
-### disabled
+### disabled?
 
-• `Optional` **disabled**: `boolean`
+> `optional` **disabled**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L24)
 
-___
+***
 
-### id
+### id?
 
-• `Optional` **id**: `string`
+> `optional` **id**: `string`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L20)
 
-___
+***
 
-### locked
+### locked?
 
-• `Optional` **locked**: `boolean`
+> `optional` **locked**: `boolean`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L25)
 
-___
+***
 
-### source
+### source?
 
-• `Optional` **source**: `any`
+> `optional` **source**: `any`
 
 #### Defined in
 
 [src/ui/editors/select2.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L22)
 
-___
+***
 
-### text
+### text?
 
-• `Optional` **text**: `string`
+> `optional` **text**: `string`
 
 #### Defined in
 

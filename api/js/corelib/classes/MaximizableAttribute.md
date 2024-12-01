@@ -2,27 +2,17 @@
 
 # Class: MaximizableAttribute
 
-## Table of contents
-
-### Constructors
-
-- [constructor](MaximizableAttribute.md#constructor)
-
-### Properties
-
-- [value](MaximizableAttribute.md#value)
-
 ## Constructors
 
-### constructor
+### new MaximizableAttribute()
 
-• **new MaximizableAttribute**(`value?`): [`MaximizableAttribute`](MaximizableAttribute.md)
+> **new MaximizableAttribute**(`value`): [`MaximizableAttribute`](MaximizableAttribute.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `boolean` | `true` |
+##### value
+
+`boolean` = `true`
 
 #### Returns
 
@@ -36,7 +26,7 @@
 
 ### value
 
-• **value**: `boolean` = `true`
+> **value**: `boolean` = `true`
 
 #### Defined in
 

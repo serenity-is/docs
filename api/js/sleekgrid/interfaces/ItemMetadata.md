@@ -2,84 +2,71 @@
 
 # Interface: ItemMetadata\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TItem` | `any` |
-
-## Table of contents
-
-### Properties
-
-- [columns](ItemMetadata.md#columns)
-- [cssClasses](ItemMetadata.md#cssclasses)
-- [focusable](ItemMetadata.md#focusable)
-- [format](ItemMetadata.md#format)
-- [formatter](ItemMetadata.md#formatter)
-- [selectable](ItemMetadata.md#selectable)
+• **TItem** = `any`
 
 ## Properties
 
-### columns
+### columns?
 
-• `Optional` **columns**: `Object`
+> `optional` **columns**: `object`
 
-#### Index signature
+#### Index Signature
 
-▪ [key: `string`]: [`ColumnMetadata`](ColumnMetadata.md)\<`TItem`\>
+ \[`key`: `string`\]: [`ColumnMetadata`](ColumnMetadata.md)\<`TItem`\>
 
 #### Defined in
 
 [core/column.ts:68](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L68)
 
-___
+***
 
-### cssClasses
+### cssClasses?
 
-• `Optional` **cssClasses**: `string`
+> `optional` **cssClasses**: `string`
 
 #### Defined in
 
 [core/column.ts:67](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L67)
 
-___
+***
 
-### focusable
+### focusable?
 
-• `Optional` **focusable**: `boolean`
+> `optional` **focusable**: `boolean`
 
 #### Defined in
 
 [core/column.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L69)
 
-___
+***
 
-### format
+### format?
 
-• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
+> `optional` **format**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
 #### Defined in
 
 [core/column.ts:70](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L70)
 
-___
+***
 
-### formatter
+### ~~formatter?~~
 
-• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
+> `optional` **formatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
 
-**`Deprecated`**
+#### Deprecated
 
 #### Defined in
 
 [core/column.ts:72](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L72)
 
-___
+***
 
-### selectable
+### selectable?
 
-• `Optional` **selectable**: `boolean`
+> `optional` **selectable**: `boolean`
 
 #### Defined in
 

@@ -2,74 +2,51 @@
 
 # Interface: IEventData
 
-## Implemented by
-
-- [`EventData`](../classes/EventData.md)
-
-## Table of contents
-
-### Properties
-
-- [currentTarget](IEventData.md#currenttarget)
-- [defaultPrevented](IEventData.md#defaultprevented)
-- [originalEvent](IEventData.md#originalevent)
-- [target](IEventData.md#target)
-- [type](IEventData.md#type)
-
-### Methods
-
-- [isDefaultPrevented](IEventData.md#isdefaultprevented)
-- [isImmediatePropagationStopped](IEventData.md#isimmediatepropagationstopped)
-- [isPropagationStopped](IEventData.md#ispropagationstopped)
-- [preventDefault](IEventData.md#preventdefault)
-- [stopImmediatePropagation](IEventData.md#stopimmediatepropagation)
-- [stopPropagation](IEventData.md#stoppropagation)
-
 ## Properties
 
-### currentTarget
+### currentTarget?
 
-• `Optional` **currentTarget**: `EventTarget`
+> `optional` **currentTarget**: `EventTarget`
 
 #### Defined in
 
 [core/event.ts:3](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L3)
 
-___
+***
 
-### defaultPrevented
+### defaultPrevented?
 
-• `Optional` **defaultPrevented**: `boolean`
+> `optional` **defaultPrevented**: `boolean`
 
 #### Defined in
 
 [core/event.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L6)
 
-___
+***
 
-### originalEvent
+### originalEvent?
 
-• `Optional` **originalEvent**: `any`
+> `optional` **originalEvent**: `any`
 
 #### Defined in
 
 [core/event.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L5)
 
-___
+***
 
-### target
+### target?
 
-• `Optional` **target**: `EventTarget`
+> `optional` **target**: `EventTarget`
 
 #### Defined in
 
 [core/event.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L4)
 
-___
+***
 
-### type
+### type?
 
-• `Optional` `Readonly` **type**: `string`
+> `readonly` `optional` **type**: `string`
 
 #### Defined in
 
@@ -77,9 +54,9 @@ ___
 
 ## Methods
 
-### isDefaultPrevented
+### isDefaultPrevented()?
 
-▸ **isDefaultPrevented**(): `boolean`
+> `optional` **isDefaultPrevented**(): `boolean`
 
 #### Returns
 
@@ -89,11 +66,11 @@ ___
 
 [core/event.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L10)
 
-___
+***
 
-### isImmediatePropagationStopped
+### isImmediatePropagationStopped()?
 
-▸ **isImmediatePropagationStopped**(): `boolean`
+> `optional` **isImmediatePropagationStopped**(): `boolean`
 
 #### Returns
 
@@ -103,11 +80,11 @@ ___
 
 [core/event.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L11)
 
-___
+***
 
-### isPropagationStopped
+### isPropagationStopped()?
 
-▸ **isPropagationStopped**(): `boolean`
+> `optional` **isPropagationStopped**(): `boolean`
 
 #### Returns
 
@@ -117,11 +94,11 @@ ___
 
 [core/event.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L12)
 
-___
+***
 
-### preventDefault
+### preventDefault()?
 
-▸ **preventDefault**(): `void`
+> `optional` **preventDefault**(): `void`
 
 #### Returns
 
@@ -131,11 +108,11 @@ ___
 
 [core/event.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L7)
 
-___
+***
 
-### stopImmediatePropagation
+### stopImmediatePropagation()?
 
-▸ **stopImmediatePropagation**(): `void`
+> `optional` **stopImmediatePropagation**(): `void`
 
 #### Returns
 
@@ -145,11 +122,11 @@ ___
 
 [core/event.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L9)
 
-___
+***
 
-### stopPropagation
+### stopPropagation()?
 
-▸ **stopPropagation**(): `void`
+> `optional` **stopPropagation**(): `void`
 
 #### Returns
 

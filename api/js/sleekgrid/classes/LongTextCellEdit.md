@@ -1,65 +1,30 @@
-[@serenity-is/sleekgrid](../README.md) / LongTextEditor
+[@serenity-is/sleekgrid](../README.md) / LongTextCellEdit
 
-# Class: LongTextEditor
+# Class: LongTextCellEdit
 
-## Hierarchy
+## Extends
 
-- `BaseEditor`
-
-  ↳ **`LongTextEditor`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](LongTextEditor.md#constructor)
-
-### Properties
-
-- [\_args](LongTextEditor.md#_args)
-- [\_container](LongTextEditor.md#_container)
-- [\_defaultValue](LongTextEditor.md#_defaultvalue)
-- [\_input](LongTextEditor.md#_input)
-- [\_wrapper](LongTextEditor.md#_wrapper)
-
-### Methods
-
-- [applyValue](LongTextEditor.md#applyvalue)
-- [cancel](LongTextEditor.md#cancel)
-- [destroy](LongTextEditor.md#destroy)
-- [focus](LongTextEditor.md#focus)
-- [getValue](LongTextEditor.md#getvalue)
-- [handleKeyDown](LongTextEditor.md#handlekeydown)
-- [hide](LongTextEditor.md#hide)
-- [init](LongTextEditor.md#init)
-- [isValueChanged](LongTextEditor.md#isvaluechanged)
-- [loadValue](LongTextEditor.md#loadvalue)
-- [position](LongTextEditor.md#position)
-- [save](LongTextEditor.md#save)
-- [serializeValue](LongTextEditor.md#serializevalue)
-- [setValue](LongTextEditor.md#setvalue)
-- [show](LongTextEditor.md#show)
-- [validate](LongTextEditor.md#validate)
+- `BaseCellEdit`
 
 ## Constructors
 
-### constructor
+### new LongTextCellEdit()
 
-• **new LongTextEditor**(`args`): [`LongTextEditor`](LongTextEditor.md)
+> **new LongTextCellEdit**(`args`): [`LongTextCellEdit`](LongTextCellEdit.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+##### args
+
+[`EditorOptions`](../interfaces/EditorOptions.md)
 
 #### Returns
 
-[`LongTextEditor`](LongTextEditor.md)
+[`LongTextCellEdit`](LongTextCellEdit.md)
 
 #### Inherited from
 
-BaseEditor.constructor
+`BaseCellEdit.constructor`
 
 #### Defined in
 
@@ -69,59 +34,59 @@ BaseEditor.constructor
 
 ### \_args
 
-• `Protected` **\_args**: [`EditorOptions`](../interfaces/EditorOptions.md)
+> `protected` **\_args**: [`EditorOptions`](../interfaces/EditorOptions.md)
 
 #### Inherited from
 
-BaseEditor.\_args
+`BaseCellEdit._args`
 
 #### Defined in
 
 [editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L6)
 
-___
+***
 
 ### \_container
 
-• `Protected` **\_container**: `HTMLElement`
+> `protected` **\_container**: `HTMLElement`
 
 #### Defined in
 
 [editors/editors.ts:350](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L350)
 
-___
+***
 
 ### \_defaultValue
 
-• `Protected` **\_defaultValue**: `any`
+> `protected` **\_defaultValue**: `any`
 
 #### Inherited from
 
-BaseEditor.\_defaultValue
+`BaseCellEdit._defaultValue`
 
 #### Defined in
 
 [editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L5)
 
-___
+***
 
 ### \_input
 
-• **\_input**: `HTMLTextAreaElement`
+> **\_input**: `HTMLTextAreaElement`
 
 #### Overrides
 
-BaseEditor.\_input
+`BaseCellEdit._input`
 
 #### Defined in
 
 [editors/editors.ts:349](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L349)
 
-___
+***
 
 ### \_wrapper
 
-• `Protected` **\_wrapper**: `HTMLDivElement`
+> `protected` **\_wrapper**: `HTMLDivElement`
 
 #### Defined in
 
@@ -129,16 +94,19 @@ ___
 
 ## Methods
 
-### applyValue
+### applyValue()
 
-▸ **applyValue**(`item`, `state`): `void`
+> **applyValue**(`item`, `state`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
-| `state` | `any` |
+##### item
+
+`any`
+
+##### state
+
+`any`
 
 #### Returns
 
@@ -146,17 +114,17 @@ ___
 
 #### Inherited from
 
-BaseEditor.applyValue
+`BaseCellEdit.applyValue`
 
 #### Defined in
 
 [editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L44)
 
-___
+***
 
-### cancel
+### cancel()
 
-▸ **cancel**(): `void`
+> **cancel**(): `void`
 
 #### Returns
 
@@ -166,11 +134,11 @@ ___
 
 [editors/editors.ts:408](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L408)
 
-___
+***
 
-### destroy
+### destroy()
 
-▸ **destroy**(): `void`
+> **destroy**(): `void`
 
 #### Returns
 
@@ -178,17 +146,17 @@ ___
 
 #### Overrides
 
-BaseEditor.destroy
+`BaseCellEdit.destroy`
 
 #### Defined in
 
 [editors/editors.ts:426](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L426)
 
-___
+***
 
-### focus
+### focus()
 
-▸ **focus**(): `void`
+> **focus**(): `void`
 
 #### Returns
 
@@ -196,17 +164,17 @@ ___
 
 #### Inherited from
 
-BaseEditor.focus
+`BaseCellEdit.focus`
 
 #### Defined in
 
 [editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L19)
 
-___
+***
 
-### getValue
+### getValue()
 
-▸ **getValue**(): `string`
+> **getValue**(): `string`
 
 #### Returns
 
@@ -214,23 +182,23 @@ ___
 
 #### Inherited from
 
-BaseEditor.getValue
+`BaseCellEdit.getValue`
 
 #### Defined in
 
 [editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L23)
 
-___
+***
 
-### handleKeyDown
+### handleKeyDown()
 
-▸ **handleKeyDown**(`e`): `void`
+> **handleKeyDown**(`e`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `e` | `KeyboardEvent` |
+##### e
+
+`KeyboardEvent`
 
 #### Returns
 
@@ -240,11 +208,11 @@ ___
 
 [editors/editors.ts:378](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L378)
 
-___
+***
 
-### hide
+### hide()
 
-▸ **hide**(): `void`
+> **hide**(): `void`
 
 #### Returns
 
@@ -254,11 +222,11 @@ ___
 
 [editors/editors.ts:413](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L413)
 
-___
+***
 
-### init
+### init()
 
-▸ **init**(): `void`
+> **init**(): `void`
 
 #### Returns
 
@@ -266,17 +234,17 @@ ___
 
 #### Overrides
 
-BaseEditor.init
+`BaseCellEdit.init`
 
 #### Defined in
 
 [editors/editors.ts:353](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L353)
 
-___
+***
 
-### isValueChanged
+### isValueChanged()
 
-▸ **isValueChanged**(): `boolean`
+> **isValueChanged**(): `boolean`
 
 #### Returns
 
@@ -284,23 +252,23 @@ ___
 
 #### Inherited from
 
-BaseEditor.isValueChanged
+`BaseCellEdit.isValueChanged`
 
 #### Defined in
 
 [editors/editors.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L48)
 
-___
+***
 
-### loadValue
+### loadValue()
 
-▸ **loadValue**(`item`): `void`
+> **loadValue**(`item`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
+##### item
+
+`any`
 
 #### Returns
 
@@ -308,23 +276,23 @@ ___
 
 #### Inherited from
 
-BaseEditor.loadValue
+`BaseCellEdit.loadValue`
 
 #### Defined in
 
 [editors/editors.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L31)
 
-___
+***
 
-### position
+### position()
 
-▸ **position**(`position`): `void`
+> **position**(`position`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `position` | [`Position`](../interfaces/Position.md) |
+##### position
+
+[`Position`](../interfaces/Position.md)
 
 #### Returns
 
@@ -334,11 +302,11 @@ ___
 
 [editors/editors.ts:421](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L421)
 
-___
+***
 
-### save
+### save()
 
-▸ **save**(): `void`
+> **save**(): `void`
 
 #### Returns
 
@@ -348,11 +316,11 @@ ___
 
 [editors/editors.ts:404](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L404)
 
-___
+***
 
-### serializeValue
+### serializeValue()
 
-▸ **serializeValue**(): `any`
+> **serializeValue**(): `any`
 
 #### Returns
 
@@ -360,23 +328,23 @@ ___
 
 #### Inherited from
 
-BaseEditor.serializeValue
+`BaseCellEdit.serializeValue`
 
 #### Defined in
 
 [editors/editors.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L40)
 
-___
+***
 
-### setValue
+### setValue()
 
-▸ **setValue**(`val`): `void`
+> **setValue**(`val`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `val` | `string` |
+##### val
+
+`string`
 
 #### Returns
 
@@ -384,17 +352,17 @@ ___
 
 #### Inherited from
 
-BaseEditor.setValue
+`BaseCellEdit.setValue`
 
 #### Defined in
 
 [editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L27)
 
-___
+***
 
-### show
+### show()
 
-▸ **show**(): `void`
+> **show**(): `void`
 
 #### Returns
 
@@ -404,11 +372,11 @@ ___
 
 [editors/editors.ts:417](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L417)
 
-___
+***
 
-### validate
+### validate()
 
-▸ **validate**(): [`ValidationResult`](../interfaces/ValidationResult.md)
+> **validate**(): [`ValidationResult`](../interfaces/ValidationResult.md)
 
 #### Returns
 
@@ -416,7 +384,7 @@ ___
 
 #### Inherited from
 
-BaseEditor.validate
+`BaseCellEdit.validate`
 
 #### Defined in
 

@@ -4,29 +4,16 @@
 
 A base class that all special / non-data rows (like Group and GroupTotals) derive from.
 
-## Hierarchy
+## Extended by
 
-- **`NonDataRow`**
-
-  ↳ [`Group`](Group.md)
-
-  ↳ [`GroupTotals`](GroupTotals.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](NonDataRow.md#constructor)
-
-### Properties
-
-- [\_\_nonDataRow](NonDataRow.md#__nondatarow)
+- [`Group`](Group.md)
+- [`GroupTotals`](GroupTotals.md)
 
 ## Constructors
 
-### constructor
+### new NonDataRow()
 
-• **new NonDataRow**(): [`NonDataRow`](NonDataRow.md)
+> **new NonDataRow**(): [`NonDataRow`](NonDataRow.md)
 
 #### Returns
 
@@ -36,7 +23,7 @@ A base class that all special / non-data rows (like Group and GroupTotals) deriv
 
 ### \_\_nonDataRow
 
-• **\_\_nonDataRow**: `boolean` = `true`
+> **\_\_nonDataRow**: `boolean` = `true`
 
 #### Defined in
 

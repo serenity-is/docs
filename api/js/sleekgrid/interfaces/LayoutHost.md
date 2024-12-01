@@ -2,37 +2,17 @@
 
 # Interface: LayoutHost
 
-## Table of contents
-
-### Methods
-
-- [bindAncestorScroll](LayoutHost.md#bindancestorscroll)
-- [cleanUpAndRenderCells](LayoutHost.md#cleanupandrendercells)
-- [getAvailableWidth](LayoutHost.md#getavailablewidth)
-- [getCellFromPoint](LayoutHost.md#getcellfrompoint)
-- [getColumnCssRules](LayoutHost.md#getcolumncssrules)
-- [getColumns](LayoutHost.md#getcolumns)
-- [getContainerNode](LayoutHost.md#getcontainernode)
-- [getDataLength](LayoutHost.md#getdatalength)
-- [getOptions](LayoutHost.md#getoptions)
-- [getRowFromNode](LayoutHost.md#getrowfromnode)
-- [getScrollDims](LayoutHost.md#getscrolldims)
-- [getScrollLeft](LayoutHost.md#getscrollleft)
-- [getScrollTop](LayoutHost.md#getscrolltop)
-- [getViewportInfo](LayoutHost.md#getviewportinfo)
-- [renderRows](LayoutHost.md#renderrows)
-
 ## Methods
 
-### bindAncestorScroll
+### bindAncestorScroll()
 
-▸ **bindAncestorScroll**(`el`): `void`
+> **bindAncestorScroll**(`el`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `el` | `HTMLElement` |
+##### el
+
+`HTMLElement`
 
 #### Returns
 
@@ -42,17 +22,17 @@
 
 [grid/layout.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L7)
 
-___
+***
 
-### cleanUpAndRenderCells
+### cleanUpAndRenderCells()
 
-▸ **cleanUpAndRenderCells**(`range`): `void`
+> **cleanUpAndRenderCells**(`range`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `range` | [`ViewRange`](ViewRange.md) |
+##### range
+
+[`ViewRange`](ViewRange.md)
 
 #### Returns
 
@@ -62,11 +42,11 @@ ___
 
 [grid/layout.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L8)
 
-___
+***
 
-### getAvailableWidth
+### getAvailableWidth()
 
-▸ **getAvailableWidth**(): `number`
+> **getAvailableWidth**(): `number`
 
 #### Returns
 
@@ -76,18 +56,21 @@ ___
 
 [grid/layout.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L9)
 
-___
+***
 
-### getCellFromPoint
+### getCellFromPoint()
 
-▸ **getCellFromPoint**(`x`, `y`): [`RowCell`](RowCell.md)
+> **getCellFromPoint**(`x`, `y`): [`RowCell`](RowCell.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
+##### x
+
+`number`
+
+##### y
+
+`number`
 
 #### Returns
 
@@ -97,36 +80,39 @@ ___
 
 [grid/layout.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L10)
 
-___
+***
 
-### getColumnCssRules
+### getColumnCssRules()
 
-▸ **getColumnCssRules**(`idx`): `Object`
+> **getColumnCssRules**(`idx`): `object`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `idx` | `number` |
+##### idx
+
+`number`
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `left` | `any` |
-| `right` | `any` |
+##### left
+
+> **left**: `any`
+
+##### right
+
+> **right**: `any`
 
 #### Defined in
 
 [grid/layout.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L11)
 
-___
+***
 
-### getColumns
+### getColumns()
 
-▸ **getColumns**(): [`Column`](Column.md)\<`any`\>[]
+> **getColumns**(): [`Column`](Column.md)\<`any`\>[]
 
 #### Returns
 
@@ -136,11 +122,11 @@ ___
 
 [grid/layout.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L12)
 
-___
+***
 
-### getContainerNode
+### getContainerNode()
 
-▸ **getContainerNode**(): `HTMLElement`
+> **getContainerNode**(): `HTMLElement`
 
 #### Returns
 
@@ -150,11 +136,11 @@ ___
 
 [grid/layout.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L13)
 
-___
+***
 
-### getDataLength
+### getDataLength()
 
-▸ **getDataLength**(): `number`
+> **getDataLength**(): `number`
 
 #### Returns
 
@@ -164,11 +150,11 @@ ___
 
 [grid/layout.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L14)
 
-___
+***
 
-### getOptions
+### getOptions()
 
-▸ **getOptions**(): [`GridOptions`](GridOptions.md)\<`any`\>
+> **getOptions**(): [`GridOptions`](GridOptions.md)\<`any`\>
 
 #### Returns
 
@@ -178,17 +164,17 @@ ___
 
 [grid/layout.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L15)
 
-___
+***
 
-### getRowFromNode
+### getRowFromNode()
 
-▸ **getRowFromNode**(`rowNode`): `number`
+> **getRowFromNode**(`rowNode`): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `rowNode` | `HTMLElement` |
+##### rowNode
+
+`HTMLElement`
 
 #### Returns
 
@@ -198,30 +184,33 @@ ___
 
 [grid/layout.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L16)
 
-___
+***
 
-### getScrollDims
+### getScrollDims()
 
-▸ **getScrollDims**(): `Object`
+> **getScrollDims**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `height` | `number` |
-| `width` | `number` |
+##### height
+
+> **height**: `number`
+
+##### width
+
+> **width**: `number`
 
 #### Defined in
 
 [grid/layout.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L17)
 
-___
+***
 
-### getScrollLeft
+### getScrollLeft()
 
-▸ **getScrollLeft**(): `number`
+> **getScrollLeft**(): `number`
 
 #### Returns
 
@@ -231,11 +220,11 @@ ___
 
 [grid/layout.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L18)
 
-___
+***
 
-### getScrollTop
+### getScrollTop()
 
-▸ **getScrollTop**(): `number`
+> **getScrollTop**(): `number`
 
 #### Returns
 
@@ -245,11 +234,11 @@ ___
 
 [grid/layout.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L19)
 
-___
+***
 
-### getViewportInfo
+### getViewportInfo()
 
-▸ **getViewportInfo**(): [`ViewportInfo`](ViewportInfo.md)
+> **getViewportInfo**(): [`ViewportInfo`](ViewportInfo.md)
 
 #### Returns
 
@@ -259,17 +248,17 @@ ___
 
 [grid/layout.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L20)
 
-___
+***
 
-### renderRows
+### renderRows()
 
-▸ **renderRows**(`range`): `void`
+> **renderRows**(`range`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `range` | [`ViewRange`](ViewRange.md) |
+##### range
+
+[`ViewRange`](ViewRange.md)
 
 #### Returns
 

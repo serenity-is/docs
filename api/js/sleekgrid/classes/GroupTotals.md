@@ -8,46 +8,19 @@ so that they can store arbitrary data in it.  That data can later be accessed by
 formatters during the display.
  GroupTotals
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TEntity` | `any` |
-
-## Hierarchy
+## Extends
 
 - [`NonDataRow`](NonDataRow.md)
 
-  ↳ **`GroupTotals`**
+## Type Parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](GroupTotals.md#constructor)
-
-### Properties
-
-- [\_\_groupTotals](GroupTotals.md#__grouptotals)
-- [\_\_nonDataRow](GroupTotals.md#__nondatarow)
-- [avg](GroupTotals.md#avg)
-- [group](GroupTotals.md#group)
-- [initialized](GroupTotals.md#initialized)
-- [max](GroupTotals.md#max)
-- [min](GroupTotals.md#min)
-- [sum](GroupTotals.md#sum)
+• **TEntity** = `any`
 
 ## Constructors
 
-### constructor
+### new GroupTotals()
 
-• **new GroupTotals**\<`TEntity`\>(): [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TEntity` | `any` |
+> **new GroupTotals**\<`TEntity`\>(): [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
 
 #### Returns
 
@@ -55,105 +28,105 @@ formatters during the display.
 
 #### Inherited from
 
-[NonDataRow](NonDataRow.md).[constructor](NonDataRow.md#constructor)
+[`NonDataRow`](NonDataRow.md).[`constructor`](NonDataRow.md#constructors)
 
 ## Properties
 
 ### \_\_groupTotals
 
-• `Readonly` **\_\_groupTotals**: ``true``
+> `readonly` **\_\_groupTotals**: `true` = `true`
 
 #### Defined in
 
-[core/group.ts:99](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L99)
+[core/group.ts:97](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L97)
 
-___
+***
 
 ### \_\_nonDataRow
 
-• **\_\_nonDataRow**: `boolean` = `true`
+> **\_\_nonDataRow**: `boolean` = `true`
 
 #### Inherited from
 
-[NonDataRow](NonDataRow.md).[__nonDataRow](NonDataRow.md#__nondatarow)
+[`NonDataRow`](NonDataRow.md).[`__nonDataRow`](NonDataRow.md#__nondatarow)
 
 #### Defined in
 
 [core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L5)
 
-___
+***
 
-### avg
+### avg?
 
-• `Optional` **avg**: `number`
+> `optional` **avg**: `number`
 
 Contains avg
 
 #### Defined in
 
-[core/group.ts:124](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L124)
+[core/group.ts:122](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L122)
 
-___
+***
 
 ### group
 
-• **group**: [`Group`](Group.md)\<`TEntity`\>
+> **group**: [`Group`](Group.md)\<`TEntity`\>
 
 Parent Group.
 
-**`Param`**
+#### Param
 
 #### Defined in
 
-[core/group.ts:106](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L106)
+[core/group.ts:104](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L104)
 
-___
+***
 
 ### initialized
 
-• **initialized**: `boolean` = `false`
+> **initialized**: `boolean` = `false`
 
 Whether the totals have been fully initialized / calculated.
 Will be set to false for lazy-calculated group totals.
 
-**`Param`**
+#### Param
 
 #### Defined in
 
-[core/group.ts:114](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L114)
+[core/group.ts:112](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L112)
 
-___
+***
 
-### max
+### max?
 
-• `Optional` **max**: `any`
+> `optional` **max**: `any`
 
 Contains max
 
 #### Defined in
 
-[core/group.ts:134](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L134)
+[core/group.ts:132](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L132)
 
-___
+***
 
-### min
+### min?
 
-• `Optional` **min**: `any`
+> `optional` **min**: `any`
 
 Contains min
 
 #### Defined in
 
-[core/group.ts:129](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L129)
+[core/group.ts:127](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L127)
 
-___
+***
 
-### sum
+### sum?
 
-• `Optional` **sum**: `number`
+> `optional` **sum**: `number`
 
 Contains sum
 
 #### Defined in
 
-[core/group.ts:119](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L119)
+[core/group.ts:117](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L117)

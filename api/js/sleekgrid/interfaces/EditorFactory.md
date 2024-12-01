@@ -2,24 +2,21 @@
 
 # Interface: EditorFactory
 
-## Table of contents
-
-### Methods
-
-- [getEditor](EditorFactory.md#geteditor)
-
 ## Methods
 
-### getEditor
+### getEditor()
 
-▸ **getEditor**(`column`, `row?`): [`EditorClass`](EditorClass.md)
+> **getEditor**(`column`, `row`?): [`EditorClass`](EditorClass.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `column` | [`Column`](Column.md)\<`any`\> |
-| `row?` | `number` |
+##### column
+
+[`Column`](Column.md)\<`any`\>
+
+##### row?
+
+`number`
 
 #### Returns
 

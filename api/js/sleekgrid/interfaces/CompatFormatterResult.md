@@ -2,40 +2,32 @@
 
 # Interface: CompatFormatterResult
 
-## Table of contents
-
-### Properties
-
-- [addClasses](CompatFormatterResult.md#addclasses)
-- [text](CompatFormatterResult.md#text)
-- [toolTip](CompatFormatterResult.md#tooltip)
-
 ## Properties
 
-### addClasses
+### addClasses?
 
-• `Optional` **addClasses**: `string`
-
-#### Defined in
-
-[core/formatting.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L23)
-
-___
-
-### text
-
-• `Optional` **text**: [`FormatterResult`](../README.md#formatterresult)
+> `optional` **addClasses**: `string`
 
 #### Defined in
 
-[core/formatting.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L24)
+[core/formatting.ts:65](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L65)
 
-___
+***
 
-### toolTip
+### text?
 
-• `Optional` **toolTip**: `string`
+> `optional` **text**: [`FormatterResult`](../type-aliases/FormatterResult.md)
 
 #### Defined in
 
-[core/formatting.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L25)
+[core/formatting.ts:66](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L66)
+
+***
+
+### toolTip?
+
+> `optional` **toolTip**: `string`
+
+#### Defined in
+
+[core/formatting.ts:67](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L67)

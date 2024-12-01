@@ -2,37 +2,17 @@
 
 # Class: EventSubscriber\<TArgs, TEventData\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TArgs` | `any` |
-| `TEventData` | extends [`IEventData`](../interfaces/IEventData.md) = [`IEventData`](../interfaces/IEventData.md) |
+• **TArgs** = `any`
 
-## Table of contents
-
-### Constructors
-
-- [constructor](EventSubscriber.md#constructor)
-
-### Methods
-
-- [subscribe](EventSubscriber.md#subscribe)
-- [unsubscribe](EventSubscriber.md#unsubscribe)
-- [unsubscribeAll](EventSubscriber.md#unsubscribeall)
+• **TEventData** *extends* [`IEventData`](../interfaces/IEventData.md) = [`IEventData`](../interfaces/IEventData.md)
 
 ## Constructors
 
-### constructor
+### new EventSubscriber()
 
-• **new EventSubscriber**\<`TArgs`, `TEventData`\>(): [`EventSubscriber`](EventSubscriber.md)\<`TArgs`, `TEventData`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TArgs` | `any` |
-| `TEventData` | extends [`IEventData`](../interfaces/IEventData.md) = [`IEventData`](../interfaces/IEventData.md) |
+> **new EventSubscriber**\<`TArgs`, `TEventData`\>(): [`EventSubscriber`](EventSubscriber.md)\<`TArgs`, `TEventData`\>
 
 #### Returns
 
@@ -40,16 +20,19 @@
 
 ## Methods
 
-### subscribe
+### subscribe()
 
-▸ **subscribe**(`event`, `handler`): `this`
+> **subscribe**(`event`, `handler`): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | [`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\> |
-| `handler` | (`e`: `TEventData`, `args`: `TArgs`) => `void` |
+##### event
+
+[`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\>
+
+##### handler
+
+(`e`, `args`) => `void`
 
 #### Returns
 
@@ -57,20 +40,23 @@
 
 #### Defined in
 
-[core/event.ts:121](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L121)
+[core/event.ts:118](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L118)
 
-___
+***
 
-### unsubscribe
+### unsubscribe()
 
-▸ **unsubscribe**(`event`, `handler`): `this`
+> **unsubscribe**(`event`, `handler`): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | [`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\> |
-| `handler` | (`e`: `TEventData`, `args`: `TArgs`) => `void` |
+##### event
+
+[`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\>
+
+##### handler
+
+(`e`, `args`) => `void`
 
 #### Returns
 
@@ -78,13 +64,13 @@ ___
 
 #### Defined in
 
-[core/event.ts:131](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L131)
+[core/event.ts:128](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L128)
 
-___
+***
 
-### unsubscribeAll
+### unsubscribeAll()
 
-▸ **unsubscribeAll**(): [`EventSubscriber`](EventSubscriber.md)\<`TArgs`, `TEventData`\>
+> **unsubscribeAll**(): [`EventSubscriber`](EventSubscriber.md)\<`TArgs`, `TEventData`\>
 
 #### Returns
 
@@ -92,4 +78,4 @@ ___
 
 #### Defined in
 
-[core/event.ts:145](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L145)
+[core/event.ts:142](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L142)

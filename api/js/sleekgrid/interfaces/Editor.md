@@ -2,31 +2,11 @@
 
 # Interface: Editor
 
-## Table of contents
-
-### Properties
-
-- [keyCaptureList](Editor.md#keycapturelist)
-
-### Methods
-
-- [applyValue](Editor.md#applyvalue)
-- [destroy](Editor.md#destroy)
-- [focus](Editor.md#focus)
-- [hide](Editor.md#hide)
-- [isValueChanged](Editor.md#isvaluechanged)
-- [loadValue](Editor.md#loadvalue)
-- [position](Editor.md#position)
-- [preClick](Editor.md#preclick)
-- [serializeValue](Editor.md#serializevalue)
-- [show](Editor.md#show)
-- [validate](Editor.md#validate)
-
 ## Properties
 
-### keyCaptureList
+### keyCaptureList?
 
-• `Optional` **keyCaptureList**: `number`[]
+> `optional` **keyCaptureList**: `number`[]
 
 #### Defined in
 
@@ -34,16 +14,19 @@
 
 ## Methods
 
-### applyValue
+### applyValue()
 
-▸ **applyValue**(`item`, `value`): `void`
+> **applyValue**(`item`, `value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
-| `value` | `any` |
+##### item
+
+`any`
+
+##### value
+
+`any`
 
 #### Returns
 
@@ -53,11 +36,11 @@
 
 [core/editing.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L71)
 
-___
+***
 
-### destroy
+### destroy()
 
-▸ **destroy**(): `void`
+> **destroy**(): `void`
 
 #### Returns
 
@@ -67,11 +50,11 @@ ___
 
 [core/editing.ts:70](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L70)
 
-___
+***
 
-### focus
+### focus()
 
-▸ **focus**(): `void`
+> **focus**(): `void`
 
 #### Returns
 
@@ -81,11 +64,11 @@ ___
 
 [core/editing.ts:72](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L72)
 
-___
+***
 
-### hide
+### hide()?
 
-▸ **hide**(): `void`
+> `optional` **hide**(): `void`
 
 #### Returns
 
@@ -95,11 +78,11 @@ ___
 
 [core/editing.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L79)
 
-___
+***
 
-### isValueChanged
+### isValueChanged()
 
-▸ **isValueChanged**(): `boolean`
+> **isValueChanged**(): `boolean`
 
 #### Returns
 
@@ -109,17 +92,17 @@ ___
 
 [core/editing.ts:73](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L73)
 
-___
+***
 
-### loadValue
+### loadValue()
 
-▸ **loadValue**(`value`): `void`
+> **loadValue**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+##### value
+
+`any`
 
 #### Returns
 
@@ -129,17 +112,17 @@ ___
 
 [core/editing.ts:75](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L75)
 
-___
+***
 
-### position
+### position()?
 
-▸ **position**(`pos`): `void`
+> `optional` **position**(`pos`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pos` | [`Position`](Position.md) |
+##### pos
+
+[`Position`](Position.md)
 
 #### Returns
 
@@ -149,11 +132,11 @@ ___
 
 [core/editing.ts:77](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L77)
 
-___
+***
 
-### preClick
+### preClick()?
 
-▸ **preClick**(): `void`
+> `optional` **preClick**(): `void`
 
 #### Returns
 
@@ -163,11 +146,11 @@ ___
 
 [core/editing.ts:78](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L78)
 
-___
+***
 
-### serializeValue
+### serializeValue()
 
-▸ **serializeValue**(): `any`
+> **serializeValue**(): `any`
 
 #### Returns
 
@@ -177,11 +160,11 @@ ___
 
 [core/editing.ts:76](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L76)
 
-___
+***
 
-### show
+### show()?
 
-▸ **show**(): `void`
+> `optional` **show**(): `void`
 
 #### Returns
 
@@ -191,11 +174,11 @@ ___
 
 [core/editing.ts:80](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L80)
 
-___
+***
 
-### validate
+### validate()?
 
-▸ **validate**(): [`ValidationResult`](ValidationResult.md)
+> `optional` **validate**(): [`ValidationResult`](ValidationResult.md)
 
 #### Returns
 

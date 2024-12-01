@@ -2,82 +2,69 @@
 
 # Interface: ArgsSelectedRowsChange
 
-## Hierarchy
+## Extends
 
 - [`ArgsGrid`](ArgsGrid.md)
-
-  ↳ **`ArgsSelectedRowsChange`**
-
-## Table of contents
-
-### Properties
-
-- [caller](ArgsSelectedRowsChange.md#caller)
-- [changedSelectedRows](ArgsSelectedRowsChange.md#changedselectedrows)
-- [changedUnselectedRows](ArgsSelectedRowsChange.md#changedunselectedrows)
-- [grid](ArgsSelectedRowsChange.md#grid)
-- [previousSelectedRows](ArgsSelectedRowsChange.md#previousselectedrows)
-- [rows](ArgsSelectedRowsChange.md#rows)
 
 ## Properties
 
 ### caller
 
-• **caller**: `any`
+> **caller**: `any`
 
 #### Defined in
 
 [grid/eventargs.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L33)
 
-___
+***
 
-### changedSelectedRows
+### changedSelectedRows?
 
-• `Optional` **changedSelectedRows**: `number`[]
+> `optional` **changedSelectedRows**: `number`[]
 
 #### Defined in
 
 [grid/eventargs.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L30)
 
-___
+***
 
-### changedUnselectedRows
+### changedUnselectedRows?
 
-• `Optional` **changedUnselectedRows**: `number`[]
+> `optional` **changedUnselectedRows**: `number`[]
 
 #### Defined in
 
 [grid/eventargs.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L31)
 
-___
+***
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsGrid](ArgsGrid.md).[grid](ArgsGrid.md#grid)
+[`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
 #### Defined in
 
 [grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
-___
+***
 
-### previousSelectedRows
+### previousSelectedRows?
 
-• `Optional` **previousSelectedRows**: `number`[]
+> `optional` **previousSelectedRows**: `number`[]
 
 #### Defined in
 
 [grid/eventargs.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L32)
 
-___
+***
 
 ### rows
 
-• **rows**: `number`[]
+> **rows**: `number`[]
 
 #### Defined in
 

@@ -2,40 +2,29 @@
 
 # Class: CellRange
 
-## Table of contents
-
-### Constructors
-
-- [constructor](CellRange.md#constructor)
-
-### Properties
-
-- [fromCell](CellRange.md#fromcell)
-- [fromRow](CellRange.md#fromrow)
-- [toCell](CellRange.md#tocell)
-- [toRow](CellRange.md#torow)
-
-### Methods
-
-- [contains](CellRange.md#contains)
-- [isSingleCell](CellRange.md#issinglecell)
-- [isSingleRow](CellRange.md#issinglerow)
-- [toString](CellRange.md#tostring)
-
 ## Constructors
 
-### constructor
+### new CellRange()
 
-• **new CellRange**(`fromRow`, `fromCell`, `toRow?`, `toCell?`): [`CellRange`](CellRange.md)
+> **new CellRange**(`fromRow`, `fromCell`, `toRow`?, `toCell`?): [`CellRange`](CellRange.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fromRow` | `number` |
-| `fromCell` | `number` |
-| `toRow?` | `number` |
-| `toCell?` | `number` |
+##### fromRow
+
+`number`
+
+##### fromCell
+
+`number`
+
+##### toRow?
+
+`number`
+
+##### toCell?
+
+`number`
 
 #### Returns
 
@@ -49,37 +38,37 @@
 
 ### fromCell
 
-• **fromCell**: `number`
+> **fromCell**: `number`
 
 #### Defined in
 
 [core/cellrange.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L11)
 
-___
+***
 
 ### fromRow
 
-• **fromRow**: `number`
+> **fromRow**: `number`
 
 #### Defined in
 
 [core/cellrange.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L10)
 
-___
+***
 
 ### toCell
 
-• **toCell**: `number`
+> **toCell**: `number`
 
 #### Defined in
 
 [core/cellrange.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L13)
 
-___
+***
 
 ### toRow
 
-• **toRow**: `number`
+> **toRow**: `number`
 
 #### Defined in
 
@@ -87,18 +76,21 @@ ___
 
 ## Methods
 
-### contains
+### contains()
 
-▸ **contains**(`row`, `cell`): `boolean`
+> **contains**(`row`, `cell`): `boolean`
 
 Returns whether a range contains a given cell.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `row` | `number` |
-| `cell` | `number` |
+##### row
+
+`number`
+
+##### cell
+
+`number`
 
 #### Returns
 
@@ -108,11 +100,11 @@ Returns whether a range contains a given cell.
 
 [core/cellrange.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L44)
 
-___
+***
 
-### isSingleCell
+### isSingleCell()
 
-▸ **isSingleCell**(): `boolean`
+> **isSingleCell**(): `boolean`
 
 Returns whether a range represents a single cell.
 
@@ -124,11 +116,11 @@ Returns whether a range represents a single cell.
 
 [core/cellrange.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L37)
 
-___
+***
 
-### isSingleRow
+### isSingleRow()
 
-▸ **isSingleRow**(): `boolean`
+> **isSingleRow**(): `boolean`
 
 Returns whether a range represents a single row.
 
@@ -140,11 +132,11 @@ Returns whether a range represents a single row.
 
 [core/cellrange.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L30)
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a readable representation of a range.
 

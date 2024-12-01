@@ -2,71 +2,59 @@
 
 # Interface: ArgsSort
 
-## Hierarchy
+## Extends
 
 - [`ArgsGrid`](ArgsGrid.md)
 
-  ↳ **`ArgsSort`**
-
-## Table of contents
-
-### Properties
-
-- [grid](ArgsSort.md#grid)
-- [multiColumnSort](ArgsSort.md#multicolumnsort)
-- [sortAsc](ArgsSort.md#sortasc)
-- [sortCol](ArgsSort.md#sortcol)
-- [sortCols](ArgsSort.md#sortcols)
-
 ## Properties
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsGrid](ArgsGrid.md).[grid](ArgsGrid.md#grid)
+[`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
 #### Defined in
 
 [grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
-___
+***
 
 ### multiColumnSort
 
-• **multiColumnSort**: `boolean`
+> **multiColumnSort**: `boolean`
 
 #### Defined in
 
 [grid/eventargs.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L22)
 
-___
+***
 
-### sortAsc
+### sortAsc?
 
-• `Optional` **sortAsc**: `boolean`
+> `optional` **sortAsc**: `boolean`
 
 #### Defined in
 
 [grid/eventargs.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L23)
 
-___
+***
 
-### sortCol
+### sortCol?
 
-• `Optional` **sortCol**: [`Column`](Column.md)\<`any`\>
+> `optional` **sortCol**: [`Column`](Column.md)\<`any`\>
 
 #### Defined in
 
 [grid/eventargs.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L24)
 
-___
+***
 
-### sortCols
+### sortCols?
 
-• `Optional` **sortCols**: [`ArgsSortCol`](../README.md#argssortcol)[]
+> `optional` **sortCols**: [`ArgsSortCol`](../type-aliases/ArgsSortCol.md)[]
 
 #### Defined in
 

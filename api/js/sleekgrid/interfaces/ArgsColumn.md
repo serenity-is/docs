@@ -2,42 +2,34 @@
 
 # Interface: ArgsColumn
 
-## Hierarchy
+## Extends
 
 - [`ArgsGrid`](ArgsGrid.md)
 
-  ↳ **`ArgsColumn`**
+## Extended by
 
-  ↳↳ [`ArgsColumnNode`](ArgsColumnNode.md)
-
-  ↳↳ [`ArgsAddNewRow`](ArgsAddNewRow.md)
-
-## Table of contents
-
-### Properties
-
-- [column](ArgsColumn.md#column)
-- [grid](ArgsColumn.md#grid)
+- [`ArgsColumnNode`](ArgsColumnNode.md)
+- [`ArgsAddNewRow`](ArgsAddNewRow.md)
 
 ## Properties
 
 ### column
 
-• **column**: [`Column`](Column.md)\<`any`\>
+> **column**: [`Column`](Column.md)\<`any`\>
 
 #### Defined in
 
 [grid/eventargs.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L9)
 
-___
+***
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsGrid](ArgsGrid.md).[grid](ArgsGrid.md#grid)
+[`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
 #### Defined in
 

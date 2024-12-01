@@ -4,53 +4,19 @@
 
 Information about a group of rows.
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TEntity` | `any` |
-
-## Hierarchy
+## Extends
 
 - [`NonDataRow`](NonDataRow.md)
 
-  ↳ **`Group`**
+## Type Parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Group.md#constructor)
-
-### Properties
-
-- [\_\_group](Group.md#__group)
-- [\_\_nonDataRow](Group.md#__nondatarow)
-- [collapsed](Group.md#collapsed)
-- [count](Group.md#count)
-- [groupingKey](Group.md#groupingkey)
-- [groups](Group.md#groups)
-- [level](Group.md#level)
-- [rows](Group.md#rows)
-- [title](Group.md#title)
-- [totals](Group.md#totals)
-- [value](Group.md#value)
-
-### Methods
-
-- [equals](Group.md#equals)
+• **TEntity** = `any`
 
 ## Constructors
 
-### constructor
+### new Group()
 
-• **new Group**\<`TEntity`\>(): [`Group`](Group.md)\<`TEntity`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TEntity` | `any` |
+> **new Group**\<`TEntity`\>(): [`Group`](Group.md)\<`TEntity`\>
 
 #### Returns
 
@@ -58,37 +24,37 @@ Information about a group of rows.
 
 #### Inherited from
 
-[NonDataRow](NonDataRow.md).[constructor](NonDataRow.md#constructor)
+[`NonDataRow`](NonDataRow.md).[`constructor`](NonDataRow.md#constructors)
 
 ## Properties
 
 ### \_\_group
 
-• `Readonly` **\_\_group**: ``true``
+> `readonly` **\_\_group**: `true` = `true`
 
 #### Defined in
 
 [core/group.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L7)
 
-___
+***
 
 ### \_\_nonDataRow
 
-• **\_\_nonDataRow**: `boolean` = `true`
+> **\_\_nonDataRow**: `boolean` = `true`
 
 #### Inherited from
 
-[NonDataRow](NonDataRow.md).[__nonDataRow](NonDataRow.md#__nondatarow)
+[`NonDataRow`](NonDataRow.md).[`__nonDataRow`](NonDataRow.md#__nondatarow)
 
 #### Defined in
 
 [core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L5)
 
-___
+***
 
 ### collapsed
 
-• **collapsed**: `boolean` = `false`
+> **collapsed**: `boolean` = `false`
 
 Whether a group is collapsed.
 
@@ -96,11 +62,11 @@ Whether a group is collapsed.
 
 [core/group.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L42)
 
-___
+***
 
 ### count
 
-• **count**: `number` = `0`
+> **count**: `number` = `0`
 
 Number of rows in the group.
 
@@ -108,11 +74,11 @@ Number of rows in the group.
 
 [core/group.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L21)
 
-___
+***
 
 ### groupingKey
 
-• **groupingKey**: `string`
+> **groupingKey**: `string`
 
 A unique key used to identify the group.  This key can be used in calls to DataView
 collapseGroup() or expandGroup().
@@ -121,11 +87,11 @@ collapseGroup() or expandGroup().
 
 [core/group.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L71)
 
-___
+***
 
 ### groups
 
-• **groups**: [`Group`](Group.md)\<`TEntity`\>[]
+> **groups**: [`Group`](Group.md)\<`TEntity`\>[]
 
 Sub-groups that are part of the group.
 
@@ -133,11 +99,11 @@ Sub-groups that are part of the group.
 
 [core/group.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L63)
 
-___
+***
 
 ### level
 
-• **level**: `number` = `0`
+> **level**: `number` = `0`
 
 Grouping level, starting with 0.
 
@@ -145,11 +111,11 @@ Grouping level, starting with 0.
 
 [core/group.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L14)
 
-___
+***
 
 ### rows
 
-• **rows**: `TEntity`[] = `[]`
+> **rows**: `TEntity`[] = `[]`
 
 Rows that are part of the group.
 
@@ -157,11 +123,11 @@ Rows that are part of the group.
 
 [core/group.ts:56](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L56)
 
-___
+***
 
 ### title
 
-• **title**: `string`
+> **title**: `string`
 
 Formatted display value of the group.
 
@@ -169,11 +135,11 @@ Formatted display value of the group.
 
 [core/group.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L35)
 
-___
+***
 
 ### totals
 
-• **totals**: [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
+> **totals**: [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
 
 GroupTotals, if any.
 
@@ -181,11 +147,11 @@ GroupTotals, if any.
 
 [core/group.ts:49](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L49)
 
-___
+***
 
 ### value
 
-• **value**: `any`
+> **value**: `any`
 
 Grouping value.
 
@@ -195,26 +161,24 @@ Grouping value.
 
 ## Methods
 
-### equals
+### equals()
 
-▸ **equals**(`group`): `boolean`
+> **equals**(`group`): `boolean`
 
 Compares two Group instances.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `group` | [`Group`](Group.md)\<`any`\> | {Group} Group instance to compare to. |
+##### group
+
+[`Group`](Group.md)\<`any`\>
+
+{Group} Group instance to compare to.
 
 #### Returns
 
 `boolean`
 
-**`Method`**
-
-equals
-
 #### Defined in
 
-[core/group.ts:80](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L80)
+[core/group.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L79)

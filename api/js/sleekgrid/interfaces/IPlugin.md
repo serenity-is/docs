@@ -2,40 +2,17 @@
 
 # Interface: IPlugin
 
-## Hierarchy
+## Extended by
 
-- **`IPlugin`**
-
-  ↳ [`SelectionModel`](SelectionModel.md)
-
-## Implemented by
-
-- [`AutoTooltips`](../classes/AutoTooltips.md)
-- [`RowMoveManager`](../classes/RowMoveManager.md)
-- [`RowSelectionModel`](../classes/RowSelectionModel.md)
-
-## Table of contents
-
-### Properties
-
-- [destroy](IPlugin.md#destroy)
-- [pluginName](IPlugin.md#pluginname)
-
-### Methods
-
-- [init](IPlugin.md#init)
+- [`SelectionModel`](SelectionModel.md)
 
 ## Properties
 
-### destroy
+### destroy()?
 
-• `Optional` **destroy**: () => `void`
+> `optional` **destroy**: () => `void`
 
-#### Type declaration
-
-▸ (): `void`
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -43,11 +20,11 @@
 
 [grid/types.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L7)
 
-___
+***
 
-### pluginName
+### pluginName?
 
-• `Optional` **pluginName**: `string`
+> `optional` **pluginName**: `string`
 
 #### Defined in
 
@@ -55,15 +32,15 @@ ___
 
 ## Methods
 
-### init
+### init()
 
-▸ **init**(`grid`): `void`
+> **init**(`grid`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `grid` | [`Grid`](../classes/Grid.md)\<`any`\> |
+##### grid
+
+[`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Returns
 

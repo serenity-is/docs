@@ -2,17 +2,11 @@
 
 # Interface: RowMoveManagerOptions
 
-## Table of contents
-
-### Properties
-
-- [cancelEditOnDrag](RowMoveManagerOptions.md#canceleditondrag)
-
 ## Properties
 
-### cancelEditOnDrag
+### cancelEditOnDrag?
 
-• `Optional` **cancelEditOnDrag**: `boolean`
+> `optional` **cancelEditOnDrag**: `boolean`
 
 #### Defined in
 

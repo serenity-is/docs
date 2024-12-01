@@ -2,27 +2,17 @@
 
 # Interface: EditorClass
 
-## Table of contents
-
-### Constructors
-
-- [constructor](EditorClass.md#constructor)
-
-### Properties
-
-- [suppressClearOnEdit](EditorClass.md#suppressclearonedit)
-
 ## Constructors
 
-### constructor
+### new EditorClass()
 
-• **new EditorClass**(`options`): [`Editor`](Editor.md)
+> **new EditorClass**(`options`): [`Editor`](Editor.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`EditorOptions`](EditorOptions.md) |
+##### options
+
+[`EditorOptions`](EditorOptions.md)
 
 #### Returns
 
@@ -34,9 +24,9 @@
 
 ## Properties
 
-### suppressClearOnEdit
+### suppressClearOnEdit?
 
-• `Optional` **suppressClearOnEdit**: `boolean`
+> `optional` **suppressClearOnEdit**: `boolean`
 
 #### Defined in
 

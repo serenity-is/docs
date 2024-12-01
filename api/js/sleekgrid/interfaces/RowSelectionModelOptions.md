@@ -2,17 +2,11 @@
 
 # Interface: RowSelectionModelOptions
 
-## Table of contents
-
-### Properties
-
-- [selectActiveRow](RowSelectionModelOptions.md#selectactiverow)
-
 ## Properties
 
-### selectActiveRow
+### selectActiveRow?
 
-• `Optional` **selectActiveRow**: `boolean`
+> `optional` **selectActiveRow**: `boolean`
 
 #### Defined in
 

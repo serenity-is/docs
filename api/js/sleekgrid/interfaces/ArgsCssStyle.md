@@ -2,49 +2,39 @@
 
 # Interface: ArgsCssStyle
 
-## Hierarchy
+## Extends
 
 - [`ArgsGrid`](ArgsGrid.md)
 
-  ↳ **`ArgsCssStyle`**
-
-## Table of contents
-
-### Properties
-
-- [grid](ArgsCssStyle.md#grid)
-- [hash](ArgsCssStyle.md#hash)
-- [key](ArgsCssStyle.md#key)
-
 ## Properties
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsGrid](ArgsGrid.md).[grid](ArgsGrid.md#grid)
+[`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
 #### Defined in
 
 [grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
-___
+***
 
 ### hash
 
-• **hash**: [`CellStylesHash`](../README.md#cellstyleshash)
+> **hash**: [`CellStylesHash`](../type-aliases/CellStylesHash.md)
 
 #### Defined in
 
 [grid/eventargs.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L43)
 
-___
+***
 
 ### key
 
-• **key**: `string`
+> **key**: `string`
 
 #### Defined in
 

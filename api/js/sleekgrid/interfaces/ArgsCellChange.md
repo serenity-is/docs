@@ -2,70 +2,61 @@
 
 # Interface: ArgsCellChange
 
-## Hierarchy
+## Extends
 
 - [`ArgsCell`](ArgsCell.md)
 
-  ↳ **`ArgsCellChange`**
+## Extended by
 
-  ↳↳ [`ArgsCellEdit`](ArgsCellEdit.md)
-
-## Table of contents
-
-### Properties
-
-- [cell](ArgsCellChange.md#cell)
-- [grid](ArgsCellChange.md#grid)
-- [item](ArgsCellChange.md#item)
-- [row](ArgsCellChange.md#row)
+- [`ArgsCellEdit`](ArgsCellEdit.md)
 
 ## Properties
 
 ### cell
 
-• **cell**: `number`
+> **cell**: `number`
 
 #### Inherited from
 
-[ArgsCell](ArgsCell.md).[cell](ArgsCell.md#cell)
+[`ArgsCell`](ArgsCell.md).[`cell`](ArgsCell.md#cell)
 
 #### Defined in
 
 [grid/eventargs.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L48)
 
-___
+***
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsCell](ArgsCell.md).[grid](ArgsCell.md#grid)
+[`ArgsCell`](ArgsCell.md).[`grid`](ArgsCell.md#grid)
 
 #### Defined in
 
 [grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
-___
+***
 
 ### item
 
-• **item**: `any`
+> **item**: `any`
 
 #### Defined in
 
 [grid/eventargs.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L52)
 
-___
+***
 
 ### row
 
-• **row**: `number`
+> **row**: `number`
 
 #### Inherited from
 
-[ArgsCell](ArgsCell.md).[row](ArgsCell.md#row)
+[`ArgsCell`](ArgsCell.md).[`row`](ArgsCell.md#row)
 
 #### Defined in
 

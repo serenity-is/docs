@@ -2,35 +2,21 @@
 
 # Interface: ArgsGrid
 
-## Hierarchy
+## Extended by
 
-- **`ArgsGrid`**
-
-  ↳ [`ArgsColumn`](ArgsColumn.md)
-
-  ↳ [`ArgsSort`](ArgsSort.md)
-
-  ↳ [`ArgsSelectedRowsChange`](ArgsSelectedRowsChange.md)
-
-  ↳ [`ArgsScroll`](ArgsScroll.md)
-
-  ↳ [`ArgsCssStyle`](ArgsCssStyle.md)
-
-  ↳ [`ArgsCell`](ArgsCell.md)
-
-  ↳ [`ArgsEditorDestroy`](ArgsEditorDestroy.md)
-
-## Table of contents
-
-### Properties
-
-- [grid](ArgsGrid.md#grid)
+- [`ArgsColumn`](ArgsColumn.md)
+- [`ArgsSort`](ArgsSort.md)
+- [`ArgsSelectedRowsChange`](ArgsSelectedRowsChange.md)
+- [`ArgsScroll`](ArgsScroll.md)
+- [`ArgsCssStyle`](ArgsCssStyle.md)
+- [`ArgsCell`](ArgsCell.md)
+- [`ArgsEditorDestroy`](ArgsEditorDestroy.md)
 
 ## Properties
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Defined in
 

@@ -9,24 +9,11 @@ An event object for passing data to event handlers and letting them control prop
 
 - [`IEventData`](../interfaces/IEventData.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](EventData.md#constructor)
-
-### Methods
-
-- [isImmediatePropagationStopped](EventData.md#isimmediatepropagationstopped)
-- [isPropagationStopped](EventData.md#ispropagationstopped)
-- [stopImmediatePropagation](EventData.md#stopimmediatepropagation)
-- [stopPropagation](EventData.md#stoppropagation)
-
 ## Constructors
 
-### constructor
+### new EventData()
 
-• **new EventData**(): [`EventData`](EventData.md)
+> **new EventData**(): [`EventData`](EventData.md)
 
 #### Returns
 
@@ -34,9 +21,9 @@ An event object for passing data to event handlers and letting them control prop
 
 ## Methods
 
-### isImmediatePropagationStopped
+### isImmediatePropagationStopped()
 
-▸ **isImmediatePropagationStopped**(): `boolean`
+> **isImmediatePropagationStopped**(): `boolean`
 
 Returns whether stopImmediatePropagation was called on this event object.\
 
@@ -46,17 +33,17 @@ Returns whether stopImmediatePropagation was called on this event object.\
 
 #### Implementation of
 
-[IEventData](../interfaces/IEventData.md).[isImmediatePropagationStopped](../interfaces/IEventData.md#isimmediatepropagationstopped)
+[`IEventData`](../interfaces/IEventData.md).[`isImmediatePropagationStopped`](../interfaces/IEventData.md#isimmediatepropagationstopped)
 
 #### Defined in
 
-[core/event.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L48)
+[core/event.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L47)
 
-___
+***
 
-### isPropagationStopped
+### isPropagationStopped()
 
-▸ **isPropagationStopped**(): `boolean`
+> **isPropagationStopped**(): `boolean`
 
 Returns whether stopPropagation was called on this event object.
 
@@ -66,17 +53,17 @@ Returns whether stopPropagation was called on this event object.
 
 #### Implementation of
 
-[IEventData](../interfaces/IEventData.md).[isPropagationStopped](../interfaces/IEventData.md#ispropagationstopped)
+[`IEventData`](../interfaces/IEventData.md).[`isPropagationStopped`](../interfaces/IEventData.md#ispropagationstopped)
 
 #### Defined in
 
-[core/event.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L34)
+[core/event.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L33)
 
-___
+***
 
-### stopImmediatePropagation
+### stopImmediatePropagation()
 
-▸ **stopImmediatePropagation**(): `void`
+> **stopImmediatePropagation**(): `void`
 
 Prevents the rest of the handlers from being executed.
 
@@ -86,17 +73,17 @@ Prevents the rest of the handlers from being executed.
 
 #### Implementation of
 
-[IEventData](../interfaces/IEventData.md).[stopImmediatePropagation](../interfaces/IEventData.md#stopimmediatepropagation)
+[`IEventData`](../interfaces/IEventData.md).[`stopImmediatePropagation`](../interfaces/IEventData.md#stopimmediatepropagation)
 
 #### Defined in
 
-[core/event.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L41)
+[core/event.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L40)
 
-___
+***
 
-### stopPropagation
+### stopPropagation()
 
-▸ **stopPropagation**(): `void`
+> **stopPropagation**(): `void`
 
 Stops event from propagating up the DOM tree.
 
@@ -104,14 +91,10 @@ Stops event from propagating up the DOM tree.
 
 `void`
 
-**`Method`**
-
-stopPropagation
-
 #### Implementation of
 
-[IEventData](../interfaces/IEventData.md).[stopPropagation](../interfaces/IEventData.md#stoppropagation)
+[`IEventData`](../interfaces/IEventData.md).[`stopPropagation`](../interfaces/IEventData.md#stoppropagation)
 
 #### Defined in
 
-[core/event.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L27)
+[core/event.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L26)

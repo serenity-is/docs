@@ -2,83 +2,71 @@
 
 # Interface: Position
 
-## Table of contents
-
-### Properties
-
-- [bottom](Position.md#bottom)
-- [height](Position.md#height)
-- [left](Position.md#left)
-- [right](Position.md#right)
-- [top](Position.md#top)
-- [visible](Position.md#visible)
-- [width](Position.md#width)
-
 ## Properties
 
-### bottom
+### bottom?
 
-• `Optional` **bottom**: `number`
+> `optional` **bottom**: `number`
 
 #### Defined in
 
 [core/editing.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L5)
 
-___
+***
 
-### height
+### height?
 
-• `Optional` **height**: `number`
+> `optional` **height**: `number`
 
 #### Defined in
 
 [core/editing.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L6)
 
-___
+***
 
-### left
+### left?
 
-• `Optional` **left**: `number`
+> `optional` **left**: `number`
 
 #### Defined in
 
 [core/editing.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L7)
 
-___
+***
 
-### right
+### right?
 
-• `Optional` **right**: `number`
+> `optional` **right**: `number`
 
 #### Defined in
 
 [core/editing.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L8)
 
-___
+***
 
-### top
+### top?
 
-• `Optional` **top**: `number`
+> `optional` **top**: `number`
 
 #### Defined in
 
 [core/editing.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L9)
 
-___
+***
 
-### visible
+### visible?
 
-• `Optional` **visible**: `boolean`
+> `optional` **visible**: `boolean`
 
 #### Defined in
 
 [core/editing.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L10)
 
-___
+***
 
-### width
+### width?
 
-• `Optional` **width**: `number`
+> `optional` **width**: `number`
 
 #### Defined in
 

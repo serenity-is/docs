@@ -2,146 +2,119 @@
 
 # Interface: GroupItemMetadataProviderOptions
 
-## Table of contents
-
-### Properties
-
-- [enableExpandCollapse](GroupItemMetadataProviderOptions.md#enableexpandcollapse)
-- [groupCellCssClass](GroupItemMetadataProviderOptions.md#groupcellcssclass)
-- [groupCssClass](GroupItemMetadataProviderOptions.md#groupcssclass)
-- [groupFocusable](GroupItemMetadataProviderOptions.md#groupfocusable)
-- [groupFormat](GroupItemMetadataProviderOptions.md#groupformat)
-- [groupFormatter](GroupItemMetadataProviderOptions.md#groupformatter)
-- [groupIndentation](GroupItemMetadataProviderOptions.md#groupindentation)
-- [groupLevelPrefix](GroupItemMetadataProviderOptions.md#grouplevelprefix)
-- [groupRowTotals](GroupItemMetadataProviderOptions.md#grouprowtotals)
-- [groupTitleCssClass](GroupItemMetadataProviderOptions.md#grouptitlecssclass)
-- [hasSummaryType](GroupItemMetadataProviderOptions.md#hassummarytype)
-- [toggleCollapsedCssClass](GroupItemMetadataProviderOptions.md#togglecollapsedcssclass)
-- [toggleCssClass](GroupItemMetadataProviderOptions.md#togglecssclass)
-- [toggleExpandedCssClass](GroupItemMetadataProviderOptions.md#toggleexpandedcssclass)
-- [totalsCssClass](GroupItemMetadataProviderOptions.md#totalscssclass)
-- [totalsFocusable](GroupItemMetadataProviderOptions.md#totalsfocusable)
-- [totalsFormat](GroupItemMetadataProviderOptions.md#totalsformat)
-- [totalsFormatter](GroupItemMetadataProviderOptions.md#totalsformatter)
-
 ## Properties
 
-### enableExpandCollapse
+### enableExpandCollapse?
 
-• `Optional` **enableExpandCollapse**: `boolean`
+> `optional` **enableExpandCollapse**: `boolean`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L5)
 
-___
+***
 
-### groupCellCssClass
+### groupCellCssClass?
 
-• `Optional` **groupCellCssClass**: `string`
+> `optional` **groupCellCssClass**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L6)
 
-___
+***
 
-### groupCssClass
+### groupCssClass?
 
-• `Optional` **groupCssClass**: `string`
+> `optional` **groupCssClass**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L7)
 
-___
+***
 
-### groupFocusable
+### groupFocusable?
 
-• `Optional` **groupFocusable**: `boolean`
+> `optional` **groupFocusable**: `boolean`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L9)
 
-___
+***
 
-### groupFormat
+### groupFormat?
 
-• `Optional` **groupFormat**: [`ColumnFormat`](../README.md#columnformat)\<[`Group`](../classes/Group.md)\<`any`\>\>
+> `optional` **groupFormat**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<[`Group`](../classes/Group.md)\<`any`\>\>
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L10)
 
-___
+***
 
-### groupFormatter
+### groupFormatter?
 
-• `Optional` **groupFormatter**: [`CompatFormatter`](../README.md#compatformatter)\<[`Group`](../classes/Group.md)\<`any`\>\>
+> `optional` **groupFormatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<[`Group`](../classes/Group.md)\<`any`\>\>
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L11)
 
-___
+***
 
-### groupIndentation
+### groupIndentation?
 
-• `Optional` **groupIndentation**: `number`
+> `optional` **groupIndentation**: `number`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L8)
 
-___
+***
 
-### groupLevelPrefix
+### groupLevelPrefix?
 
-• `Optional` **groupLevelPrefix**: `string`
+> `optional` **groupLevelPrefix**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L12)
 
-___
+***
 
-### groupRowTotals
+### groupRowTotals?
 
-• `Optional` **groupRowTotals**: `boolean`
+> `optional` **groupRowTotals**: `boolean`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L13)
 
-___
+***
 
-### groupTitleCssClass
+### groupTitleCssClass?
 
-• `Optional` **groupTitleCssClass**: `string`
+> `optional` **groupTitleCssClass**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L14)
 
-___
+***
 
-### hasSummaryType
+### hasSummaryType()?
 
-• `Optional` **hasSummaryType**: (`column`: [`Column`](Column.md)\<`any`\>) => `boolean`
+> `optional` **hasSummaryType**: (`column`) => `boolean`
 
-#### Type declaration
+#### Parameters
 
-▸ (`column`): `boolean`
+##### column
 
-##### Parameters
+[`Column`](Column.md)\<`any`\>
 
-| Name | Type |
-| :------ | :------ |
-| `column` | [`Column`](Column.md)\<`any`\> |
-
-##### Returns
+#### Returns
 
 `boolean`
 
@@ -149,71 +122,71 @@ ___
 
 [data/groupitemmetadataprovider.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L15)
 
-___
+***
 
-### toggleCollapsedCssClass
+### toggleCollapsedCssClass?
 
-• `Optional` **toggleCollapsedCssClass**: `string`
+> `optional` **toggleCollapsedCssClass**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L18)
 
-___
+***
 
-### toggleCssClass
+### toggleCssClass?
 
-• `Optional` **toggleCssClass**: `string`
+> `optional` **toggleCssClass**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L16)
 
-___
+***
 
-### toggleExpandedCssClass
+### toggleExpandedCssClass?
 
-• `Optional` **toggleExpandedCssClass**: `string`
+> `optional` **toggleExpandedCssClass**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L17)
 
-___
+***
 
-### totalsCssClass
+### totalsCssClass?
 
-• `Optional` **totalsCssClass**: `string`
+> `optional` **totalsCssClass**: `string`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L19)
 
-___
+***
 
-### totalsFocusable
+### totalsFocusable?
 
-• `Optional` **totalsFocusable**: `boolean`
+> `optional` **totalsFocusable**: `boolean`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L20)
 
-___
+***
 
-### totalsFormat
+### totalsFormat?
 
-• `Optional` **totalsFormat**: [`ColumnFormat`](../README.md#columnformat)\<[`GroupTotals`](../classes/GroupTotals.md)\<`any`\>\>
+> `optional` **totalsFormat**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<[`GroupTotals`](../classes/GroupTotals.md)\<`any`\>\>
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L21)
 
-___
+***
 
-### totalsFormatter
+### totalsFormatter?
 
-• `Optional` **totalsFormatter**: [`CompatFormatter`](../README.md#compatformatter)\<[`GroupTotals`](../classes/GroupTotals.md)\<`any`\>\>
+> `optional` **totalsFormatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<[`GroupTotals`](../classes/GroupTotals.md)\<`any`\>\>
 
 #### Defined in
 

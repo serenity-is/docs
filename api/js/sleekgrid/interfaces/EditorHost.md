@@ -2,27 +2,11 @@
 
 # Interface: EditorHost
 
-## Implemented by
-
-- [`Grid`](../classes/Grid.md)
-
-## Table of contents
-
-### Properties
-
-- [onCompositeEditorChange](EditorHost.md#oncompositeeditorchange)
-
-### Methods
-
-- [getActiveCell](EditorHost.md#getactivecell)
-- [navigateNext](EditorHost.md#navigatenext)
-- [navigatePrev](EditorHost.md#navigateprev)
-
 ## Properties
 
 ### onCompositeEditorChange
 
-• **onCompositeEditorChange**: [`EventEmitter`](../classes/EventEmitter.md)\<`any`, [`IEventData`](IEventData.md)\>
+> **onCompositeEditorChange**: [`EventEmitter`](../classes/EventEmitter.md)\<`any`, [`IEventData`](IEventData.md)\>
 
 #### Defined in
 
@@ -30,9 +14,9 @@
 
 ## Methods
 
-### getActiveCell
+### getActiveCell()
 
-▸ **getActiveCell**(): [`RowCell`](RowCell.md)
+> **getActiveCell**(): [`RowCell`](RowCell.md)
 
 #### Returns
 
@@ -42,11 +26,11 @@
 
 [core/editing.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L25)
 
-___
+***
 
-### navigateNext
+### navigateNext()
 
-▸ **navigateNext**(): `boolean`
+> **navigateNext**(): `boolean`
 
 #### Returns
 
@@ -56,11 +40,11 @@ ___
 
 [core/editing.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L26)
 
-___
+***
 
-### navigatePrev
+### navigatePrev()
 
-▸ **navigatePrev**(): `boolean`
+> **navigatePrev**(): `boolean`
 
 #### Returns
 

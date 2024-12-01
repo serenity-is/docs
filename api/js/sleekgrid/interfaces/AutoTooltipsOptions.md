@@ -2,50 +2,41 @@
 
 # Interface: AutoTooltipsOptions
 
-## Table of contents
-
-### Properties
-
-- [enableForCells](AutoTooltipsOptions.md#enableforcells)
-- [enableForHeaderCells](AutoTooltipsOptions.md#enableforheadercells)
-- [maxToolTipLength](AutoTooltipsOptions.md#maxtooltiplength)
-- [replaceExisting](AutoTooltipsOptions.md#replaceexisting)
-
 ## Properties
 
-### enableForCells
+### enableForCells?
 
-• `Optional` **enableForCells**: `boolean`
+> `optional` **enableForCells**: `boolean`
 
 #### Defined in
 
 [plugins/autotooltips.ts:4](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L4)
 
-___
+***
 
-### enableForHeaderCells
+### enableForHeaderCells?
 
-• `Optional` **enableForHeaderCells**: `boolean`
+> `optional` **enableForHeaderCells**: `boolean`
 
 #### Defined in
 
 [plugins/autotooltips.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L5)
 
-___
+***
 
-### maxToolTipLength
+### maxToolTipLength?
 
-• `Optional` **maxToolTipLength**: `number`
+> `optional` **maxToolTipLength**: `number`
 
 #### Defined in
 
 [plugins/autotooltips.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L6)
 
-___
+***
 
-### replaceExisting
+### replaceExisting?
 
-• `Optional` **replaceExisting**: `boolean`
+> `optional` **replaceExisting**: `boolean`
 
 #### Defined in
 

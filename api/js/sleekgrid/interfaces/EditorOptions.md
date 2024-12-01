@@ -2,34 +2,13 @@
 
 # Interface: EditorOptions
 
-## Table of contents
-
-### Properties
-
-- [cancelChanges](EditorOptions.md#cancelchanges)
-- [column](EditorOptions.md#column)
-- [columnMetaData](EditorOptions.md#columnmetadata)
-- [commitChanges](EditorOptions.md#commitchanges)
-- [compositeEditorOptions](EditorOptions.md#compositeeditoroptions)
-- [container](EditorOptions.md#container)
-- [editorCellNavOnLRKeys](EditorOptions.md#editorcellnavonlrkeys)
-- [event](EditorOptions.md#event)
-- [grid](EditorOptions.md#grid)
-- [gridPosition](EditorOptions.md#gridposition)
-- [item](EditorOptions.md#item)
-- [position](EditorOptions.md#position)
-
 ## Properties
 
-### cancelChanges
+### cancelChanges()?
 
-• `Optional` **cancelChanges**: () => `void`
+> `optional` **cancelChanges**: () => `void`
 
-#### Type declaration
-
-▸ (): `void`
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -37,37 +16,33 @@
 
 [core/editing.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L47)
 
-___
+***
 
-### column
+### column?
 
-• `Optional` **column**: [`Column`](Column.md)\<`any`\>
+> `optional` **column**: [`Column`](Column.md)\<`any`\>
 
 #### Defined in
 
 [core/editing.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L40)
 
-___
+***
 
-### columnMetaData
+### columnMetaData?
 
-• `Optional` **columnMetaData**: [`ColumnMetadata`](ColumnMetadata.md)\<`any`\>
+> `optional` **columnMetaData**: [`ColumnMetadata`](ColumnMetadata.md)\<`any`\>
 
 #### Defined in
 
 [core/editing.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L41)
 
-___
+***
 
-### commitChanges
+### commitChanges()?
 
-• `Optional` **commitChanges**: () => `void`
+> `optional` **commitChanges**: () => `void`
 
-#### Type declaration
-
-▸ (): `void`
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -75,81 +50,81 @@ ___
 
 [core/editing.ts:46](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L46)
 
-___
+***
 
-### compositeEditorOptions
+### compositeEditorOptions?
 
-• `Optional` **compositeEditorOptions**: `CompositeEditorOptions`
+> `optional` **compositeEditorOptions**: `CompositeEditorOptions`
 
 #### Defined in
 
 [core/editing.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L42)
 
-___
+***
 
-### container
+### container?
 
-• `Optional` **container**: `HTMLElement`
+> `optional` **container**: `HTMLElement`
 
 #### Defined in
 
 [core/editing.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L43)
 
-___
+***
 
-### editorCellNavOnLRKeys
+### editorCellNavOnLRKeys?
 
-• `Optional` **editorCellNavOnLRKeys**: `boolean`
+> `optional` **editorCellNavOnLRKeys**: `boolean`
 
 #### Defined in
 
 [core/editing.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L39)
 
-___
+***
 
-### event
+### event?
 
-• `Optional` **event**: [`IEventData`](IEventData.md)
+> `optional` **event**: [`IEventData`](IEventData.md)
 
 #### Defined in
 
 [core/editing.ts:45](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L45)
 
-___
+***
 
 ### grid
 
-• **grid**: [`EditorHost`](EditorHost.md)
+> **grid**: [`EditorHost`](EditorHost.md)
 
 #### Defined in
 
 [core/editing.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L36)
 
-___
+***
 
-### gridPosition
+### gridPosition?
 
-• `Optional` **gridPosition**: [`Position`](Position.md)
+> `optional` **gridPosition**: [`Position`](Position.md)
 
 #### Defined in
 
 [core/editing.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L37)
 
-___
+***
 
-### item
+### item?
 
-• `Optional` **item**: `any`
+> `optional` **item**: `any`
 
 #### Defined in
 
 [core/editing.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L44)
 
-___
+***
 
-### position
+### position?
 
-• `Optional` **position**: [`Position`](Position.md)
+> `optional` **position**: [`Position`](Position.md)
 
 #### Defined in
 

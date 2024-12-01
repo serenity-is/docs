@@ -2,18 +2,11 @@
 
 # Interface: EditController
 
-## Table of contents
-
-### Methods
-
-- [cancelCurrentEdit](EditController.md#cancelcurrentedit)
-- [commitCurrentEdit](EditController.md#commitcurrentedit)
-
 ## Methods
 
-### cancelCurrentEdit
+### cancelCurrentEdit()
 
-▸ **cancelCurrentEdit**(): `boolean`
+> **cancelCurrentEdit**(): `boolean`
 
 #### Returns
 
@@ -23,11 +16,11 @@
 
 [core/editing.ts:86](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L86)
 
-___
+***
 
-### commitCurrentEdit
+### commitCurrentEdit()
 
-▸ **commitCurrentEdit**(): `boolean`
+> **commitCurrentEdit**(): `boolean`
 
 #### Returns
 

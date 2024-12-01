@@ -2,50 +2,41 @@
 
 # Interface: ViewRange
 
-## Table of contents
-
-### Properties
-
-- [bottom](ViewRange.md#bottom)
-- [leftPx](ViewRange.md#leftpx)
-- [rightPx](ViewRange.md#rightpx)
-- [top](ViewRange.md#top)
-
 ## Properties
 
-### bottom
+### bottom?
 
-• `Optional` **bottom**: `number`
+> `optional` **bottom**: `number`
 
 #### Defined in
 
 [grid/types.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L33)
 
-___
+***
 
-### leftPx
+### leftPx?
 
-• `Optional` **leftPx**: `number`
+> `optional` **leftPx**: `number`
 
 #### Defined in
 
 [grid/types.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L34)
 
-___
+***
 
-### rightPx
+### rightPx?
 
-• `Optional` **rightPx**: `number`
+> `optional` **rightPx**: `number`
 
 #### Defined in
 
 [grid/types.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L35)
 
-___
+***
 
-### top
+### top?
 
-• `Optional` **top**: `number`
+> `optional` **top**: `number`
 
 #### Defined in
 

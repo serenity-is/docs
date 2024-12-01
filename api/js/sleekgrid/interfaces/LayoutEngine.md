@@ -2,64 +2,11 @@
 
 # Interface: LayoutEngine
 
-## Table of contents
-
-### Properties
-
-- [layoutName](LayoutEngine.md#layoutname)
-
-### Methods
-
-- [afterHeaderColumnDrag](LayoutEngine.md#afterheadercolumndrag)
-- [afterRenderRows](LayoutEngine.md#afterrenderrows)
-- [afterSetOptions](LayoutEngine.md#aftersetoptions)
-- [appendCachedRow](LayoutEngine.md#appendcachedrow)
-- [applyColumnWidths](LayoutEngine.md#applycolumnwidths)
-- [beforeCleanupAndRenderCells](LayoutEngine.md#beforecleanupandrendercells)
-- [bindAncestorScrollEvents](LayoutEngine.md#bindancestorscrollevents)
-- [calcCanvasWidth](LayoutEngine.md#calccanvaswidth)
-- [destroy](LayoutEngine.md#destroy)
-- [getCanvasNodeFor](LayoutEngine.md#getcanvasnodefor)
-- [getCanvasNodes](LayoutEngine.md#getcanvasnodes)
-- [getCanvasWidth](LayoutEngine.md#getcanvaswidth)
-- [getFooterRowCols](LayoutEngine.md#getfooterrowcols)
-- [getFooterRowColsFor](LayoutEngine.md#getfooterrowcolsfor)
-- [getFooterRowColumn](LayoutEngine.md#getfooterrowcolumn)
-- [getFrozenCols](LayoutEngine.md#getfrozencols)
-- [getFrozenRowOffset](LayoutEngine.md#getfrozenrowoffset)
-- [getFrozenRows](LayoutEngine.md#getfrozenrows)
-- [getHeaderCols](LayoutEngine.md#getheadercols)
-- [getHeaderColsFor](LayoutEngine.md#getheadercolsfor)
-- [getHeaderColumn](LayoutEngine.md#getheadercolumn)
-- [getHeaderRowCols](LayoutEngine.md#getheaderrowcols)
-- [getHeaderRowColsFor](LayoutEngine.md#getheaderrowcolsfor)
-- [getHeaderRowColumn](LayoutEngine.md#getheaderrowcolumn)
-- [getRowFromCellNode](LayoutEngine.md#getrowfromcellnode)
-- [getScrollCanvasY](LayoutEngine.md#getscrollcanvasy)
-- [getScrollContainerX](LayoutEngine.md#getscrollcontainerx)
-- [getScrollContainerY](LayoutEngine.md#getscrollcontainery)
-- [getTopPanelFor](LayoutEngine.md#gettoppanelfor)
-- [getTopPanelNodes](LayoutEngine.md#gettoppanelnodes)
-- [getViewportNodeFor](LayoutEngine.md#getviewportnodefor)
-- [getViewportNodes](LayoutEngine.md#getviewportnodes)
-- [handleScrollH](LayoutEngine.md#handlescrollh)
-- [handleScrollV](LayoutEngine.md#handlescrollv)
-- [init](LayoutEngine.md#init)
-- [isFrozenRow](LayoutEngine.md#isfrozenrow)
-- [realScrollHeightChange](LayoutEngine.md#realscrollheightchange)
-- [reorderViewColumns](LayoutEngine.md#reorderviewcolumns)
-- [resizeCanvas](LayoutEngine.md#resizecanvas)
-- [setOverflow](LayoutEngine.md#setoverflow)
-- [setPaneVisibility](LayoutEngine.md#setpanevisibility)
-- [setScroller](LayoutEngine.md#setscroller)
-- [updateCanvasWidth](LayoutEngine.md#updatecanvaswidth)
-- [updateHeadersWidth](LayoutEngine.md#updateheaderswidth)
-
 ## Properties
 
 ### layoutName
 
-• **layoutName**: `string`
+> **layoutName**: `string`
 
 #### Defined in
 
@@ -67,9 +14,9 @@
 
 ## Methods
 
-### afterHeaderColumnDrag
+### afterHeaderColumnDrag()
 
-▸ **afterHeaderColumnDrag**(): `void`
+> **afterHeaderColumnDrag**(): `void`
 
 #### Returns
 
@@ -79,17 +26,17 @@
 
 [grid/layout.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L26)
 
-___
+***
 
-### afterRenderRows
+### afterRenderRows()
 
-▸ **afterRenderRows**(`rendered`): `void`
+> **afterRenderRows**(`rendered`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `rendered` | [`ViewRange`](ViewRange.md) |
+##### rendered
+
+[`ViewRange`](ViewRange.md)
 
 #### Returns
 
@@ -99,17 +46,17 @@ ___
 
 [grid/layout.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L30)
 
-___
+***
 
-### afterSetOptions
+### afterSetOptions()
 
-▸ **afterSetOptions**(`args`): `void`
+> **afterSetOptions**(`args`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`GridOptions`](GridOptions.md)\<`any`\> |
+##### args
+
+[`GridOptions`](GridOptions.md)\<`any`\>
 
 #### Returns
 
@@ -119,19 +66,25 @@ ___
 
 [grid/layout.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L27)
 
-___
+***
 
-### appendCachedRow
+### appendCachedRow()
 
-▸ **appendCachedRow**(`row`, `rowNodeL`, `rowNodeR`): `void`
+> **appendCachedRow**(`row`, `rowNodeL`, `rowNodeR`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `row` | `number` |
-| `rowNodeL` | `HTMLElement` |
-| `rowNodeR` | `HTMLElement` |
+##### row
+
+`number`
+
+##### rowNodeL
+
+`HTMLElement`
+
+##### rowNodeR
+
+`HTMLElement`
 
 #### Returns
 
@@ -141,11 +94,11 @@ ___
 
 [grid/layout.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L25)
 
-___
+***
 
-### applyColumnWidths
+### applyColumnWidths()
 
-▸ **applyColumnWidths**(): `void`
+> **applyColumnWidths**(): `void`
 
 #### Returns
 
@@ -155,17 +108,17 @@ ___
 
 [grid/layout.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L28)
 
-___
+***
 
-### beforeCleanupAndRenderCells
+### beforeCleanupAndRenderCells()
 
-▸ **beforeCleanupAndRenderCells**(`rendered`): `void`
+> **beforeCleanupAndRenderCells**(`rendered`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `rendered` | [`ViewRange`](ViewRange.md) |
+##### rendered
+
+[`ViewRange`](ViewRange.md)
 
 #### Returns
 
@@ -175,11 +128,11 @@ ___
 
 [grid/layout.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L29)
 
-___
+***
 
-### bindAncestorScrollEvents
+### bindAncestorScrollEvents()
 
-▸ **bindAncestorScrollEvents**(): `void`
+> **bindAncestorScrollEvents**(): `void`
 
 #### Returns
 
@@ -189,11 +142,11 @@ ___
 
 [grid/layout.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L31)
 
-___
+***
 
-### calcCanvasWidth
+### calcCanvasWidth()
 
-▸ **calcCanvasWidth**(): `number`
+> **calcCanvasWidth**(): `number`
 
 #### Returns
 
@@ -203,11 +156,11 @@ ___
 
 [grid/layout.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L32)
 
-___
+***
 
-### destroy
+### destroy()
 
-▸ **destroy**(): `void`
+> **destroy**(): `void`
 
 #### Returns
 
@@ -217,18 +170,21 @@ ___
 
 [grid/layout.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L35)
 
-___
+***
 
-### getCanvasNodeFor
+### getCanvasNodeFor()
 
-▸ **getCanvasNodeFor**(`cell`, `row`): `HTMLElement`
+> **getCanvasNodeFor**(`cell`, `row`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
-| `row` | `number` |
+##### cell
+
+`number`
+
+##### row
+
+`number`
 
 #### Returns
 
@@ -238,11 +194,11 @@ ___
 
 [grid/layout.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L36)
 
-___
+***
 
-### getCanvasNodes
+### getCanvasNodes()
 
-▸ **getCanvasNodes**(): `HTMLElement`[]
+> **getCanvasNodes**(): `HTMLElement`[]
 
 #### Returns
 
@@ -252,11 +208,11 @@ ___
 
 [grid/layout.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L37)
 
-___
+***
 
-### getCanvasWidth
+### getCanvasWidth()
 
-▸ **getCanvasWidth**(): `number`
+> **getCanvasWidth**(): `number`
 
 #### Returns
 
@@ -266,11 +222,11 @@ ___
 
 [grid/layout.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L38)
 
-___
+***
 
-### getFooterRowCols
+### getFooterRowCols()
 
-▸ **getFooterRowCols**(): `HTMLElement`[]
+> **getFooterRowCols**(): `HTMLElement`[]
 
 #### Returns
 
@@ -280,17 +236,17 @@ ___
 
 [grid/layout.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L40)
 
-___
+***
 
-### getFooterRowColsFor
+### getFooterRowColsFor()
 
-▸ **getFooterRowColsFor**(`cell`): `HTMLElement`
+> **getFooterRowColsFor**(`cell`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
+##### cell
+
+`number`
 
 #### Returns
 
@@ -300,17 +256,17 @@ ___
 
 [grid/layout.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L41)
 
-___
+***
 
-### getFooterRowColumn
+### getFooterRowColumn()
 
-▸ **getFooterRowColumn**(`cell`): `HTMLElement`
+> **getFooterRowColumn**(`cell`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
+##### cell
+
+`number`
 
 #### Returns
 
@@ -320,11 +276,11 @@ ___
 
 [grid/layout.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L42)
 
-___
+***
 
-### getFrozenCols
+### getFrozenCols()
 
-▸ **getFrozenCols**(): `number`
+> **getFrozenCols**(): `number`
 
 #### Returns
 
@@ -334,17 +290,17 @@ ___
 
 [grid/layout.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L43)
 
-___
+***
 
-### getFrozenRowOffset
+### getFrozenRowOffset()
 
-▸ **getFrozenRowOffset**(`row`): `number`
+> **getFrozenRowOffset**(`row`): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `row` | `number` |
+##### row
+
+`number`
 
 #### Returns
 
@@ -354,11 +310,11 @@ ___
 
 [grid/layout.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L44)
 
-___
+***
 
-### getFrozenRows
+### getFrozenRows()
 
-▸ **getFrozenRows**(): `number`
+> **getFrozenRows**(): `number`
 
 #### Returns
 
@@ -368,11 +324,11 @@ ___
 
 [grid/layout.ts:45](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L45)
 
-___
+***
 
-### getHeaderCols
+### getHeaderCols()
 
-▸ **getHeaderCols**(): `HTMLElement`[]
+> **getHeaderCols**(): `HTMLElement`[]
 
 #### Returns
 
@@ -382,17 +338,17 @@ ___
 
 [grid/layout.ts:46](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L46)
 
-___
+***
 
-### getHeaderColsFor
+### getHeaderColsFor()
 
-▸ **getHeaderColsFor**(`cell`): `HTMLElement`
+> **getHeaderColsFor**(`cell`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
+##### cell
+
+`number`
 
 #### Returns
 
@@ -402,17 +358,17 @@ ___
 
 [grid/layout.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L47)
 
-___
+***
 
-### getHeaderColumn
+### getHeaderColumn()
 
-▸ **getHeaderColumn**(`cell`): `HTMLElement`
+> **getHeaderColumn**(`cell`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
+##### cell
+
+`number`
 
 #### Returns
 
@@ -422,11 +378,11 @@ ___
 
 [grid/layout.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L48)
 
-___
+***
 
-### getHeaderRowCols
+### getHeaderRowCols()
 
-▸ **getHeaderRowCols**(): `HTMLElement`[]
+> **getHeaderRowCols**(): `HTMLElement`[]
 
 #### Returns
 
@@ -436,17 +392,17 @@ ___
 
 [grid/layout.ts:49](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L49)
 
-___
+***
 
-### getHeaderRowColsFor
+### getHeaderRowColsFor()
 
-▸ **getHeaderRowColsFor**(`cell`): `HTMLElement`
+> **getHeaderRowColsFor**(`cell`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
+##### cell
+
+`number`
 
 #### Returns
 
@@ -456,17 +412,17 @@ ___
 
 [grid/layout.ts:50](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L50)
 
-___
+***
 
-### getHeaderRowColumn
+### getHeaderRowColumn()
 
-▸ **getHeaderRowColumn**(`cell`): `HTMLElement`
+> **getHeaderRowColumn**(`cell`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
+##### cell
+
+`number`
 
 #### Returns
 
@@ -476,19 +432,25 @@ ___
 
 [grid/layout.ts:51](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L51)
 
-___
+***
 
-### getRowFromCellNode
+### getRowFromCellNode()
 
-▸ **getRowFromCellNode**(`cellNode`, `clientX`, `clientY`): `number`
+> **getRowFromCellNode**(`cellNode`, `clientX`, `clientY`): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cellNode` | `HTMLElement` |
-| `clientX` | `number` |
-| `clientY` | `number` |
+##### cellNode
+
+`HTMLElement`
+
+##### clientX
+
+`number`
+
+##### clientY
+
+`number`
 
 #### Returns
 
@@ -498,11 +460,11 @@ ___
 
 [grid/layout.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L39)
 
-___
+***
 
-### getScrollCanvasY
+### getScrollCanvasY()
 
-▸ **getScrollCanvasY**(): `HTMLElement`
+> **getScrollCanvasY**(): `HTMLElement`
 
 #### Returns
 
@@ -512,11 +474,11 @@ ___
 
 [grid/layout.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L52)
 
-___
+***
 
-### getScrollContainerX
+### getScrollContainerX()
 
-▸ **getScrollContainerX**(): `HTMLElement`
+> **getScrollContainerX**(): `HTMLElement`
 
 #### Returns
 
@@ -526,11 +488,11 @@ ___
 
 [grid/layout.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L53)
 
-___
+***
 
-### getScrollContainerY
+### getScrollContainerY()
 
-▸ **getScrollContainerY**(): `HTMLElement`
+> **getScrollContainerY**(): `HTMLElement`
 
 #### Returns
 
@@ -540,17 +502,17 @@ ___
 
 [grid/layout.ts:54](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L54)
 
-___
+***
 
-### getTopPanelFor
+### getTopPanelFor()
 
-▸ **getTopPanelFor**(`arg0`): `HTMLElement`
+> **getTopPanelFor**(`arg0`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `arg0` | `number` |
+##### arg0
+
+`number`
 
 #### Returns
 
@@ -560,11 +522,11 @@ ___
 
 [grid/layout.ts:55](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L55)
 
-___
+***
 
-### getTopPanelNodes
+### getTopPanelNodes()
 
-▸ **getTopPanelNodes**(): `HTMLElement`[]
+> **getTopPanelNodes**(): `HTMLElement`[]
 
 #### Returns
 
@@ -574,18 +536,21 @@ ___
 
 [grid/layout.ts:56](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L56)
 
-___
+***
 
-### getViewportNodeFor
+### getViewportNodeFor()
 
-▸ **getViewportNodeFor**(`cell`, `row`): `HTMLElement`
+> **getViewportNodeFor**(`cell`, `row`): `HTMLElement`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
-| `row` | `number` |
+##### cell
+
+`number`
+
+##### row
+
+`number`
 
 #### Returns
 
@@ -595,11 +560,11 @@ ___
 
 [grid/layout.ts:57](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L57)
 
-___
+***
 
-### getViewportNodes
+### getViewportNodes()
 
-▸ **getViewportNodes**(): `HTMLElement`[]
+> **getViewportNodes**(): `HTMLElement`[]
 
 #### Returns
 
@@ -609,11 +574,11 @@ ___
 
 [grid/layout.ts:58](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L58)
 
-___
+***
 
-### handleScrollH
+### handleScrollH()
 
-▸ **handleScrollH**(): `void`
+> **handleScrollH**(): `void`
 
 #### Returns
 
@@ -623,11 +588,11 @@ ___
 
 [grid/layout.ts:59](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L59)
 
-___
+***
 
-### handleScrollV
+### handleScrollV()
 
-▸ **handleScrollV**(): `void`
+> **handleScrollV**(): `void`
 
 #### Returns
 
@@ -637,17 +602,17 @@ ___
 
 [grid/layout.ts:60](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L60)
 
-___
+***
 
-### init
+### init()
 
-▸ **init**(`host`): `void`
+> **init**(`host`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `host` | [`LayoutHost`](LayoutHost.md) |
+##### host
+
+[`LayoutHost`](LayoutHost.md)
 
 #### Returns
 
@@ -657,17 +622,17 @@ ___
 
 [grid/layout.ts:61](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L61)
 
-___
+***
 
-### isFrozenRow
+### isFrozenRow()
 
-▸ **isFrozenRow**(`row`): `boolean`
+> **isFrozenRow**(`row`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `row` | `number` |
+##### row
+
+`number`
 
 #### Returns
 
@@ -677,11 +642,11 @@ ___
 
 [grid/layout.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L34)
 
-___
+***
 
-### realScrollHeightChange
+### realScrollHeightChange()
 
-▸ **realScrollHeightChange**(): `void`
+> **realScrollHeightChange**(): `void`
 
 #### Returns
 
@@ -691,20 +656,23 @@ ___
 
 [grid/layout.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L63)
 
-___
+***
 
-### reorderViewColumns
+### reorderViewColumns()
 
-▸ **reorderViewColumns**(`viewCols`, `options?`): [`Column`](Column.md)\<`any`\>[]
+> **reorderViewColumns**(`viewCols`, `options`?): [`Column`](Column.md)\<`any`\>[]
 
 this might be called before init, chicken egg situation
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `viewCols` | [`Column`](Column.md)\<`any`\>[] |
-| `options?` | [`GridOptions`](GridOptions.md)\<`any`\> |
+##### viewCols
+
+[`Column`](Column.md)\<`any`\>[]
+
+##### options?
+
+[`GridOptions`](GridOptions.md)\<`any`\>
 
 #### Returns
 
@@ -714,11 +682,11 @@ this might be called before init, chicken egg situation
 
 [grid/layout.ts:65](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L65)
 
-___
+***
 
-### resizeCanvas
+### resizeCanvas()
 
-▸ **resizeCanvas**(): `void`
+> **resizeCanvas**(): `void`
 
 #### Returns
 
@@ -728,11 +696,11 @@ ___
 
 [grid/layout.ts:66](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L66)
 
-___
+***
 
-### setOverflow
+### setOverflow()
 
-▸ **setOverflow**(): `void`
+> **setOverflow**(): `void`
 
 #### Returns
 
@@ -742,11 +710,11 @@ ___
 
 [grid/layout.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L69)
 
-___
+***
 
-### setPaneVisibility
+### setPaneVisibility()
 
-▸ **setPaneVisibility**(): `void`
+> **setPaneVisibility**(): `void`
 
 #### Returns
 
@@ -756,11 +724,11 @@ ___
 
 [grid/layout.ts:67](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L67)
 
-___
+***
 
-### setScroller
+### setScroller()
 
-▸ **setScroller**(): `void`
+> **setScroller**(): `void`
 
 #### Returns
 
@@ -770,11 +738,11 @@ ___
 
 [grid/layout.ts:68](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L68)
 
-___
+***
 
-### updateCanvasWidth
+### updateCanvasWidth()
 
-▸ **updateCanvasWidth**(): `boolean`
+> **updateCanvasWidth**(): `boolean`
 
 #### Returns
 
@@ -784,11 +752,11 @@ ___
 
 [grid/layout.ts:70](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L70)
 
-___
+***
 
-### updateHeadersWidth
+### updateHeadersWidth()
 
-▸ **updateHeadersWidth**(): `void`
+> **updateHeadersWidth**(): `void`
 
 #### Returns
 

@@ -2,28 +2,21 @@
 
 # Interface: RowCell
 
-## Table of contents
-
-### Properties
-
-- [cell](RowCell.md#cell)
-- [row](RowCell.md#row)
-
 ## Properties
 
 ### cell
 
-• **cell**: `number`
+> **cell**: `number`
 
 #### Defined in
 
 [core/editing.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L21)
 
-___
+***
 
 ### row
 
-• **row**: `number`
+> **row**: `number`
 
 #### Defined in
 

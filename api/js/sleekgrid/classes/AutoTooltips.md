@@ -6,33 +6,17 @@
 
 - [`IPlugin`](../interfaces/IPlugin.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](AutoTooltips.md#constructor)
-
-### Properties
-
-- [pluginName](AutoTooltips.md#pluginname)
-- [defaults](AutoTooltips.md#defaults)
-
-### Methods
-
-- [destroy](AutoTooltips.md#destroy)
-- [init](AutoTooltips.md#init)
-
 ## Constructors
 
-### constructor
+### new AutoTooltips()
 
-• **new AutoTooltips**(`options?`): [`AutoTooltips`](AutoTooltips.md)
+> **new AutoTooltips**(`options`?): [`AutoTooltips`](AutoTooltips.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`AutoTooltipsOptions`](../interfaces/AutoTooltipsOptions.md) |
+##### options?
+
+[`AutoTooltipsOptions`](../interfaces/AutoTooltipsOptions.md)
 
 #### Returns
 
@@ -46,21 +30,21 @@
 
 ### pluginName
 
-• **pluginName**: `string` = `"AutoTooltips"`
+> **pluginName**: `string` = `"AutoTooltips"`
 
 #### Implementation of
 
-[IPlugin](../interfaces/IPlugin.md).[pluginName](../interfaces/IPlugin.md#pluginname)
+[`IPlugin`](../interfaces/IPlugin.md).[`pluginName`](../interfaces/IPlugin.md#pluginname)
 
 #### Defined in
 
 [plugins/autotooltips.ts:75](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L75)
 
-___
+***
 
 ### defaults
 
-▪ `Static` `Readonly` **defaults**: [`AutoTooltipsOptions`](../interfaces/AutoTooltipsOptions.md)
+> `readonly` `static` **defaults**: [`AutoTooltipsOptions`](../interfaces/AutoTooltipsOptions.md)
 
 #### Defined in
 
@@ -68,9 +52,9 @@ ___
 
 ## Methods
 
-### destroy
+### destroy()
 
-▸ **destroy**(): `void`
+> **destroy**(): `void`
 
 #### Returns
 
@@ -78,23 +62,23 @@ ___
 
 #### Implementation of
 
-[IPlugin](../interfaces/IPlugin.md).[destroy](../interfaces/IPlugin.md#destroy)
+[`IPlugin`](../interfaces/IPlugin.md).[`destroy`](../interfaces/IPlugin.md#destroy)
 
 #### Defined in
 
 [plugins/autotooltips.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L36)
 
-___
+***
 
-### init
+### init()
 
-▸ **init**(`grid`): `void`
+> **init**(`grid`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `grid` | [`Grid`](Grid.md)\<`any`\> |
+##### grid
+
+[`Grid`](Grid.md)\<`any`\>
 
 #### Returns
 
@@ -102,7 +86,7 @@ ___
 
 #### Implementation of
 
-[IPlugin](../interfaces/IPlugin.md).[init](../interfaces/IPlugin.md#init)
+[`IPlugin`](../interfaces/IPlugin.md).[`init`](../interfaces/IPlugin.md#init)
 
 #### Defined in
 

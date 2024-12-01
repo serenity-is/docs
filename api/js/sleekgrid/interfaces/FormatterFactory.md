@@ -2,55 +2,46 @@
 
 # Interface: FormatterFactory\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TItem` | `any` |
-
-## Table of contents
-
-### Methods
-
-- [getFormat](FormatterFactory.md#getformat)
-- [getFormatter](FormatterFactory.md#getformatter)
+• **TItem** = `any`
 
 ## Methods
 
-### getFormat
+### getFormat()?
 
-▸ **getFormat**(`column`): [`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `column` | [`Column`](Column.md)\<`TItem`\> |
-
-#### Returns
-
-[`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
-
-#### Defined in
-
-[core/formatting.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L31)
-
-___
-
-### getFormatter
-
-▸ **getFormatter**(`column`): [`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
+> `optional` **getFormat**(`column`): [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `column` | [`Column`](Column.md)\<`TItem`\> |
+##### column
+
+[`Column`](Column.md)\<`TItem`\>
 
 #### Returns
 
-[`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
+[`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
 #### Defined in
 
-[core/formatting.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L32)
+[core/formatting.ts:73](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L73)
+
+***
+
+### getFormatter()?
+
+> `optional` **getFormatter**(`column`): [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
+
+#### Parameters
+
+##### column
+
+[`Column`](Column.md)\<`TItem`\>
+
+#### Returns
+
+[`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
+
+#### Defined in
+
+[core/formatting.ts:74](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L74)

@@ -2,49 +2,39 @@
 
 # Interface: ArgsScroll
 
-## Hierarchy
+## Extends
 
 - [`ArgsGrid`](ArgsGrid.md)
 
-  ↳ **`ArgsScroll`**
-
-## Table of contents
-
-### Properties
-
-- [grid](ArgsScroll.md#grid)
-- [scrollLeft](ArgsScroll.md#scrollleft)
-- [scrollTop](ArgsScroll.md#scrolltop)
-
 ## Properties
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsGrid](ArgsGrid.md).[grid](ArgsGrid.md#grid)
+[`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
 #### Defined in
 
 [grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
-___
+***
 
 ### scrollLeft
 
-• **scrollLeft**: `number`
+> **scrollLeft**: `number`
 
 #### Defined in
 
 [grid/eventargs.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L37)
 
-___
+***
 
 ### scrollTop
 
-• **scrollTop**: `number`
+> **scrollTop**: `number`
 
 #### Defined in
 

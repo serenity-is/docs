@@ -2,53 +2,44 @@
 
 # Interface: ArgsCell
 
-## Hierarchy
+## Extends
 
 - [`ArgsGrid`](ArgsGrid.md)
 
-  ↳ **`ArgsCell`**
+## Extended by
 
-  ↳↳ [`ArgsCellChange`](ArgsCellChange.md)
-
-  ↳↳ [`ArgsValidationError`](ArgsValidationError.md)
-
-## Table of contents
-
-### Properties
-
-- [cell](ArgsCell.md#cell)
-- [grid](ArgsCell.md#grid)
-- [row](ArgsCell.md#row)
+- [`ArgsCellChange`](ArgsCellChange.md)
+- [`ArgsValidationError`](ArgsValidationError.md)
 
 ## Properties
 
 ### cell
 
-• **cell**: `number`
+> **cell**: `number`
 
 #### Defined in
 
 [grid/eventargs.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L48)
 
-___
+***
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsGrid](ArgsGrid.md).[grid](ArgsGrid.md#grid)
+[`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
 #### Defined in
 
 [grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
-___
+***
 
 ### row
 
-• **row**: `number`
+> **row**: `number`
 
 #### Defined in
 

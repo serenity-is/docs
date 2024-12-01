@@ -2,28 +2,21 @@
 
 # Interface: ValidationResult
 
-## Table of contents
-
-### Properties
-
-- [msg](ValidationResult.md#msg)
-- [valid](ValidationResult.md#valid)
-
 ## Properties
 
-### msg
+### msg?
 
-• `Optional` **msg**: `string`
+> `optional` **msg**: `string`
 
 #### Defined in
 
 [core/editing.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L16)
 
-___
+***
 
 ### valid
 
-• **valid**: `boolean`
+> **valid**: `boolean`
 
 #### Defined in
 

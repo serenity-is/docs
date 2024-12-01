@@ -2,43 +2,21 @@
 
 # Class: GroupItemMetadataProvider
 
-## Table of contents
+## Implements
 
-### Constructors
-
-- [constructor](GroupItemMetadataProvider.md#constructor)
-
-### Properties
-
-- [getGroupRowMetadata](GroupItemMetadataProvider.md#getgrouprowmetadata)
-- [getTotalsRowMetadata](GroupItemMetadataProvider.md#gettotalsrowmetadata)
-- [grid](GroupItemMetadataProvider.md#grid)
-- [pluginName](GroupItemMetadataProvider.md#pluginname)
-- [defaults](GroupItemMetadataProvider.md#defaults)
-
-### Methods
-
-- [destroy](GroupItemMetadataProvider.md#destroy)
-- [getOptions](GroupItemMetadataProvider.md#getoptions)
-- [groupCellPosition](GroupItemMetadataProvider.md#groupcellposition)
-- [handleGridClick](GroupItemMetadataProvider.md#handlegridclick)
-- [handleGridKeyDown](GroupItemMetadataProvider.md#handlegridkeydown)
-- [init](GroupItemMetadataProvider.md#init)
-- [setOptions](GroupItemMetadataProvider.md#setoptions)
-- [defaultGroupFormat](GroupItemMetadataProvider.md#defaultgroupformat)
-- [defaultTotalsFormat](GroupItemMetadataProvider.md#defaulttotalsformat)
+- [`IPlugin`](../interfaces/IPlugin.md)
 
 ## Constructors
 
-### constructor
+### new GroupItemMetadataProvider()
 
-• **new GroupItemMetadataProvider**(`opt?`): [`GroupItemMetadataProvider`](GroupItemMetadataProvider.md)
+> **new GroupItemMetadataProvider**(`opt`?): [`GroupItemMetadataProvider`](GroupItemMetadataProvider.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt?` | [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md) |
+##### opt?
+
+[`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
 
 #### Returns
 
@@ -50,21 +28,17 @@
 
 ## Properties
 
-### getGroupRowMetadata
+### getGroupRowMetadata()
 
-• **getGroupRowMetadata**: (`item`: [`Group`](Group.md)\<`any`\>) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
+> **getGroupRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
-#### Type declaration
+#### Parameters
 
-▸ (`item`): [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
+##### item
 
-##### Parameters
+[`Group`](Group.md)\<`any`\>
 
-| Name | Type |
-| :------ | :------ |
-| `item` | [`Group`](Group.md)\<`any`\> |
-
-##### Returns
+#### Returns
 
 [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
@@ -72,23 +46,19 @@
 
 [data/groupitemmetadataprovider.ts:193](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L193)
 
-___
+***
 
-### getTotalsRowMetadata
+### getTotalsRowMetadata()
 
-• **getTotalsRowMetadata**: (`item`: [`GroupTotals`](GroupTotals.md)\<`any`\>) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
+> **getTotalsRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
-#### Type declaration
+#### Parameters
 
-▸ (`item`): [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
+##### item
 
-##### Parameters
+[`GroupTotals`](GroupTotals.md)\<`any`\>
 
-| Name | Type |
-| :------ | :------ |
-| `item` | [`GroupTotals`](GroupTotals.md)\<`any`\> |
-
-##### Returns
+#### Returns
 
 [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
 
@@ -96,31 +66,35 @@ ___
 
 [data/groupitemmetadataprovider.ts:217](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L217)
 
-___
+***
 
 ### grid
 
-• `Protected` **grid**: [`Grid`](Grid.md)\<`any`\>
+> `protected` **grid**: [`Grid`](Grid.md)\<`any`\>
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L26)
 
-___
+***
 
 ### pluginName
 
-• `Readonly` **pluginName**: ``"GroupItemMetadataProvider"``
+> `readonly` **pluginName**: `"GroupItemMetadataProvider"` = `"GroupItemMetadataProvider"`
+
+#### Implementation of
+
+[`IPlugin`](../interfaces/IPlugin.md).[`pluginName`](../interfaces/IPlugin.md#pluginname)
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:77](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L77)
 
-___
+***
 
 ### defaults
 
-▪ `Static` `Readonly` **defaults**: [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
+> `readonly` `static` **defaults**: [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
 
 #### Defined in
 
@@ -128,23 +102,27 @@ ___
 
 ## Methods
 
-### destroy
+### destroy()
 
-▸ **destroy**(): `void`
+> **destroy**(): `void`
 
 #### Returns
 
 `void`
 
+#### Implementation of
+
+[`IPlugin`](../interfaces/IPlugin.md).[`destroy`](../interfaces/IPlugin.md#destroy)
+
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L79)
 
-___
+***
 
-### getOptions
+### getOptions()
 
-▸ **getOptions**(): [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
+> **getOptions**(): [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
 
 #### Returns
 
@@ -154,37 +132,43 @@ ___
 
 [data/groupitemmetadataprovider.ts:86](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L86)
 
-___
+***
 
-### groupCellPosition
+### groupCellPosition()
 
-▸ **groupCellPosition**(): `Object`
+> **groupCellPosition**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `cell` | `number` |
-| `colspan` | `number` \| ``"*"`` |
+##### cell
+
+> **cell**: `number` = `0`
+
+##### colspan
+
+> **colspan**: `number` \| `"*"`
 
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:156](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L156)
 
-___
+***
 
-### handleGridClick
+### handleGridClick()
 
-▸ **handleGridClick**(`e`, `args`): `void`
+> **handleGridClick**(`e`, `args`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `e` | `MouseEvent` |
-| `args` | [`ArgsCell`](../interfaces/ArgsCell.md) |
+##### e
+
+`MouseEvent`
+
+##### args
+
+[`ArgsCell`](../interfaces/ArgsCell.md)
 
 #### Returns
 
@@ -194,18 +178,21 @@ ___
 
 [data/groupitemmetadataprovider.ts:94](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L94)
 
-___
+***
 
-### handleGridKeyDown
+### handleGridKeyDown()
 
-▸ **handleGridKeyDown**(`e`, `args`): `void`
+> **handleGridKeyDown**(`e`, `args`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `e` | `KeyboardEvent` |
-| `args` | [`ArgsCell`](../interfaces/ArgsCell.md) |
+##### e
+
+`KeyboardEvent`
+
+##### args
+
+[`ArgsCell`](../interfaces/ArgsCell.md)
 
 #### Returns
 
@@ -215,37 +202,41 @@ ___
 
 [data/groupitemmetadataprovider.ts:120](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L120)
 
-___
+***
 
-### init
+### init()
 
-▸ **init**(`grid`): `void`
+> **init**(`grid`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `grid` | [`Grid`](Grid.md)\<`any`\> |
+##### grid
+
+[`Grid`](Grid.md)\<`any`\>
 
 #### Returns
 
 `void`
 
+#### Implementation of
+
+[`IPlugin`](../interfaces/IPlugin.md).[`init`](../interfaces/IPlugin.md#init)
+
 #### Defined in
 
 [data/groupitemmetadataprovider.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L71)
 
-___
+***
 
-### setOptions
+### setOptions()
 
-▸ **setOptions**(`value`): `void`
+> **setOptions**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md) |
+##### value
+
+[`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
 
 #### Returns
 
@@ -255,18 +246,21 @@ ___
 
 [data/groupitemmetadataprovider.ts:90](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L90)
 
-___
+***
 
-### defaultGroupFormat
+### defaultGroupFormat()
 
-▸ **defaultGroupFormat**(`ctx`, `opt?`): `string`
+> `static` **defaultGroupFormat**(`ctx`, `opt`?): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | [`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\> |
-| `opt?` | [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md) |
+##### ctx
+
+[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+
+##### opt?
+
+[`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
 
 #### Returns
 
@@ -276,18 +270,21 @@ ___
 
 [data/groupitemmetadataprovider.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L53)
 
-___
+***
 
-### defaultTotalsFormat
+### defaultTotalsFormat()
 
-▸ **defaultTotalsFormat**(`ctx`, `grid?`): `string`
+> `static` **defaultTotalsFormat**(`ctx`, `grid`?): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | [`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\> |
-| `grid?` | [`Grid`](Grid.md)\<`any`\> |
+##### ctx
+
+[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+
+##### grid?
+
+[`Grid`](Grid.md)\<`any`\>
 
 #### Returns
 

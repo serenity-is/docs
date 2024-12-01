@@ -1,57 +1,30 @@
-[@serenity-is/sleekgrid](../README.md) / YesNoSelectEditor
+[@serenity-is/sleekgrid](../README.md) / YesNoSelectCellEdit
 
-# Class: YesNoSelectEditor
+# Class: YesNoSelectCellEdit
 
-## Hierarchy
+## Extends
 
-- `BaseEditor`
-
-  ↳ **`YesNoSelectEditor`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](YesNoSelectEditor.md#constructor)
-
-### Properties
-
-- [\_args](YesNoSelectEditor.md#_args)
-- [\_defaultValue](YesNoSelectEditor.md#_defaultvalue)
-- [\_input](YesNoSelectEditor.md#_input)
-
-### Methods
-
-- [applyValue](YesNoSelectEditor.md#applyvalue)
-- [destroy](YesNoSelectEditor.md#destroy)
-- [focus](YesNoSelectEditor.md#focus)
-- [getValue](YesNoSelectEditor.md#getvalue)
-- [init](YesNoSelectEditor.md#init)
-- [isValueChanged](YesNoSelectEditor.md#isvaluechanged)
-- [loadValue](YesNoSelectEditor.md#loadvalue)
-- [serializeValue](YesNoSelectEditor.md#serializevalue)
-- [setValue](YesNoSelectEditor.md#setvalue)
-- [validate](YesNoSelectEditor.md#validate)
+- `BaseCellEdit`
 
 ## Constructors
 
-### constructor
+### new YesNoSelectCellEdit()
 
-• **new YesNoSelectEditor**(`args`): [`YesNoSelectEditor`](YesNoSelectEditor.md)
+> **new YesNoSelectCellEdit**(`args`): [`YesNoSelectCellEdit`](YesNoSelectCellEdit.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`EditorOptions`](../interfaces/EditorOptions.md) |
+##### args
+
+[`EditorOptions`](../interfaces/EditorOptions.md)
 
 #### Returns
 
-[`YesNoSelectEditor`](YesNoSelectEditor.md)
+[`YesNoSelectCellEdit`](YesNoSelectCellEdit.md)
 
 #### Inherited from
 
-BaseEditor.constructor
+`BaseCellEdit.constructor`
 
 #### Defined in
 
@@ -61,39 +34,39 @@ BaseEditor.constructor
 
 ### \_args
 
-• `Protected` **\_args**: [`EditorOptions`](../interfaces/EditorOptions.md)
+> `protected` **\_args**: [`EditorOptions`](../interfaces/EditorOptions.md)
 
 #### Inherited from
 
-BaseEditor.\_args
+`BaseCellEdit._args`
 
 #### Defined in
 
 [editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L6)
 
-___
+***
 
 ### \_defaultValue
 
-• `Protected` **\_defaultValue**: `any`
+> `protected` **\_defaultValue**: `any`
 
 #### Inherited from
 
-BaseEditor.\_defaultValue
+`BaseCellEdit._defaultValue`
 
 #### Defined in
 
 [editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L5)
 
-___
+***
 
 ### \_input
 
-• **\_input**: `HTMLSelectElement`
+> **\_input**: `HTMLSelectElement`
 
 #### Overrides
 
-BaseEditor.\_input
+`BaseCellEdit._input`
 
 #### Defined in
 
@@ -101,16 +74,19 @@ BaseEditor.\_input
 
 ## Methods
 
-### applyValue
+### applyValue()
 
-▸ **applyValue**(`item`, `state`): `void`
+> **applyValue**(`item`, `state`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
-| `state` | `any` |
+##### item
+
+`any`
+
+##### state
+
+`any`
 
 #### Returns
 
@@ -118,17 +94,17 @@ BaseEditor.\_input
 
 #### Inherited from
 
-BaseEditor.applyValue
+`BaseCellEdit.applyValue`
 
 #### Defined in
 
 [editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L44)
 
-___
+***
 
-### destroy
+### destroy()
 
-▸ **destroy**(): `void`
+> **destroy**(): `void`
 
 #### Returns
 
@@ -136,17 +112,17 @@ ___
 
 #### Inherited from
 
-BaseEditor.destroy
+`BaseCellEdit.destroy`
 
 #### Defined in
 
 [editors/editors.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L15)
 
-___
+***
 
-### focus
+### focus()
 
-▸ **focus**(): `void`
+> **focus**(): `void`
 
 #### Returns
 
@@ -154,17 +130,17 @@ ___
 
 #### Inherited from
 
-BaseEditor.focus
+`BaseCellEdit.focus`
 
 #### Defined in
 
 [editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L19)
 
-___
+***
 
-### getValue
+### getValue()
 
-▸ **getValue**(): `string`
+> **getValue**(): `string`
 
 #### Returns
 
@@ -172,17 +148,17 @@ ___
 
 #### Inherited from
 
-BaseEditor.getValue
+`BaseCellEdit.getValue`
 
 #### Defined in
 
 [editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L23)
 
-___
+***
 
-### init
+### init()
 
-▸ **init**(): `void`
+> **init**(): `void`
 
 #### Returns
 
@@ -190,17 +166,17 @@ ___
 
 #### Overrides
 
-BaseEditor.init
+`BaseCellEdit.init`
 
 #### Defined in
 
 [editors/editors.ts:221](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L221)
 
-___
+***
 
-### isValueChanged
+### isValueChanged()
 
-▸ **isValueChanged**(): `boolean`
+> **isValueChanged**(): `boolean`
 
 #### Returns
 
@@ -208,23 +184,23 @@ ___
 
 #### Overrides
 
-BaseEditor.isValueChanged
+`BaseCellEdit.isValueChanged`
 
 #### Defined in
 
 [editors/editors.ts:239](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L239)
 
-___
+***
 
-### loadValue
+### loadValue()
 
-▸ **loadValue**(`item`): `void`
+> **loadValue**(`item`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `item` | `any` |
+##### item
+
+`any`
 
 #### Returns
 
@@ -232,17 +208,17 @@ ___
 
 #### Overrides
 
-BaseEditor.loadValue
+`BaseCellEdit.loadValue`
 
 #### Defined in
 
 [editors/editors.ts:231](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L231)
 
-___
+***
 
-### serializeValue
+### serializeValue()
 
-▸ **serializeValue**(): `boolean`
+> **serializeValue**(): `boolean`
 
 #### Returns
 
@@ -250,23 +226,23 @@ ___
 
 #### Overrides
 
-BaseEditor.serializeValue
+`BaseCellEdit.serializeValue`
 
 #### Defined in
 
 [editors/editors.ts:235](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L235)
 
-___
+***
 
-### setValue
+### setValue()
 
-▸ **setValue**(`val`): `void`
+> **setValue**(`val`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `val` | `string` |
+##### val
+
+`string`
 
 #### Returns
 
@@ -274,30 +250,33 @@ ___
 
 #### Inherited from
 
-BaseEditor.setValue
+`BaseCellEdit.setValue`
 
 #### Defined in
 
 [editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L27)
 
-___
+***
 
-### validate
+### validate()
 
-▸ **validate**(): `Object`
+> **validate**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `msg` | `string` |
-| `valid` | `boolean` |
+##### msg
+
+> **msg**: `string`
+
+##### valid
+
+> **valid**: `boolean` = `true`
 
 #### Overrides
 
-BaseEditor.validate
+`BaseCellEdit.validate`
 
 #### Defined in
 

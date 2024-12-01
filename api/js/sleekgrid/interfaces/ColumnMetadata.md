@@ -2,69 +2,57 @@
 
 # Interface: ColumnMetadata\<TItem\>
 
-## Type parameters
+## Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TItem` | `any` |
-
-## Table of contents
-
-### Properties
-
-- [colspan](ColumnMetadata.md#colspan)
-- [cssClasses](ColumnMetadata.md#cssclasses)
-- [editor](ColumnMetadata.md#editor)
-- [format](ColumnMetadata.md#format)
-- [formatter](ColumnMetadata.md#formatter)
+• **TItem** = `any`
 
 ## Properties
 
 ### colspan
 
-• **colspan**: `number` \| ``"*"``
+> **colspan**: `number` \| `"*"`
 
 #### Defined in
 
 [core/column.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L53)
 
-___
+***
 
-### cssClasses
+### cssClasses?
 
-• `Optional` **cssClasses**: `string`
+> `optional` **cssClasses**: `string`
 
 #### Defined in
 
 [core/column.ts:54](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L54)
 
-___
+***
 
-### editor
+### editor?
 
-• `Optional` **editor**: [`EditorClass`](EditorClass.md)
+> `optional` **editor**: [`EditorClass`](EditorClass.md)
 
 #### Defined in
 
 [core/column.ts:55](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L55)
 
-___
+***
 
-### format
+### format?
 
-• `Optional` **format**: [`ColumnFormat`](../README.md#columnformat)\<`TItem`\>
+> `optional` **format**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
 #### Defined in
 
 [core/column.ts:56](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L56)
 
-___
+***
 
-### formatter
+### ~~formatter?~~
 
-• `Optional` **formatter**: [`CompatFormatter`](../README.md#compatformatter)\<`TItem`\>
+> `optional` **formatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
 
-**`Deprecated`**
+#### Deprecated
 
 #### Defined in
 

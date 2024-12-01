@@ -2,38 +2,29 @@
 
 # Interface: ArgsEditorDestroy
 
-## Hierarchy
+## Extends
 
 - [`ArgsGrid`](ArgsGrid.md)
-
-  ↳ **`ArgsEditorDestroy`**
-
-## Table of contents
-
-### Properties
-
-- [editor](ArgsEditorDestroy.md#editor)
-- [grid](ArgsEditorDestroy.md#grid)
 
 ## Properties
 
 ### editor
 
-• **editor**: [`Editor`](Editor.md)
+> **editor**: [`Editor`](Editor.md)
 
 #### Defined in
 
 [grid/eventargs.ts:64](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L64)
 
-___
+***
 
-### grid
+### grid?
 
-• `Optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
 
 #### Inherited from
 
-[ArgsGrid](ArgsGrid.md).[grid](ArgsGrid.md#grid)
+[`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
 #### Defined in
 

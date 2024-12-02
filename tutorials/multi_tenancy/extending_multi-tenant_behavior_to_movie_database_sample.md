@@ -1,40 +1,32 @@
-# Extending Multi-Tenant Behavior To MovieDB Sample
+# Extending Multi-Tenant Behavior to MovieDB Sample
 
-As now we have a behavior handling repository details, we just need to add *IMultiTenantRow* interface to rows and add *TenantId* property.
+Now that we have a behavior handling repository details, we need to add the `IMultiTenantRow` interface to the rows and include the `TenantId` property.
 
-Start with *MovieRow.cs*:
+Start with `MovieRow.cs`:
 
 ```cs
-[ConnectionKey("Default"), Module("MovieDB"), TableName("[mov].[Movie]")]
-[DisplayName("Movie"), InstanceName("Movie")]
-[ReadPermission("Administration:General")]
-[ModifyPermission("Administration:General")]
+//...
+
+namespace MovieTutorial.MovieDB;
+
+//...
 public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow, IMultiTenantRow
 {
     //...
     [Insertable(false), Updatable(false)]
-    public int? TenantId
-    {
-        get => Fields.TenantId[this];
-        set => Fields.TenantId[this] = value;
-    }
+    public int? TenantId { get => Fields.TenantId[this]; set => Fields.TenantId[this] = value; }
 
-    public Int32Field TenantIdField
-    {
-        get => Fields.TenantId;
-    }
+    public Int32Field TenantIdField { get => Fields.TenantId; }
 
-    //...
-    
     public class RowFields : RowFieldsBase
     {
         //...
         public Int32Field TenantId;
     }
 }
+
 ```
 
-When you these changes in *MovieRow* and build, you'll see that *tenant2* can't see suppliers from other tenants in suppliers page.
+After applying these changes to `MovieRow` and building the project, _tenant2_ will no longer be able to view suppliers from other tenants on the suppliers page.
 
-Now repeat these for *Person* and *Genre*.
-
+Next, repeat these steps for `Person` and `Genre`.

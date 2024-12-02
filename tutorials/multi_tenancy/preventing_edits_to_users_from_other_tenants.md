@@ -1,64 +1,53 @@
 # Preventing Edits To Users From Other Tenants
 
-Remember that user *tenant2* could update his *TenantId* with some service call, and we had to secure it server side.
+Remember, a user with the identifier _tenant2_ should not be able to update their tenantId through service calls. It's crucial to secure this on the server side.
 
-Similar to this, even if he can't see users from other tenants by default, he can actually retrieve and update them.
+Even if users cannot view other tenants' users by default, they can still retrieve and update them. This poses a security risk.
 
-Time to hack again.
+## Example of a Security Vulnerability
 
-Open Users page then open Chrome console and type this:
+To demonstrate, open the Users page, then open the Chrome console and enter the following:
 ```js
-new (Q.getType('StartSharp.Administration.UserDialog'))().loadByIdAndOpenDialog(1)
+new (Q.getType('MovieTutorial.Administration.UserDialog'))().loadByIdAndOpenDialog(1)
 ```
-> Make sure you have `@Decorators.registerClass("StartSharp.Administration.UserDialog")` on top of your UserDialog class
+> Ensure you have `@Decorators.registerClass("MovieTutorial.Administration.UserDialog")` at the top of your `UserDialog` class.
 
-if you are using namespaced typescript, open Chrome console and type this:
-```js
-new MultiTenancy.Administration.UserDialog().loadByIdAndOpenDialog(1)
-```
+As shown, anyone can open the user dialog for the _admin_ user and update it. The UserDialog class is invoked when clicking a username on the user administration page. We create a new instance of it and request to load a user entity by its ID, where the _admin_ user has an ID of 1.
 
+To load the entity with ID 1, the dialog calls the Retrieve service of `UserRetrieveHandler`. Note that we applied filtering in the List method of `UserListHandler`, not in Retrieve. Consequently, the service is unaware of whether it should return this record from another tenant.
 
-As you see, anyone could open user dialog for *admin* and update it.
-
-*UserDialog* is the dialog class that is opened when you click a username in user administration page.
-
-We created a new instance of it, and asked to load a user entity by its ID. Admin user has an ID of *1*.
-
-To load the entity with ID 1, dialog called *Retrieve* service of *UserRetrieveHandler*.
-
-Remember that we did filtering in *List* method of *UserListHandler*, not *Retrieve*. So, service has no idea, if it should return this record from another tenant, or not.
-
-It's time to secure retrieve service in UserRetrieveHandler:
+## Securing the Retrieve Service
+To secure the retrieve service in `UserRetrieveHandler`, modify the class as follows:
 
 ```cs
- public class UserRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IUserRetrieveHandler
+public class UserRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IUserRetrieveHandler
+{
+    public UserRetrieveHandler(IRequestContext context)
+         : base(context)
     {
-        public UserRetrieveHandler(IRequestContext context)
-             : base(context)
-        {
-        }
-
-        protected override void PrepareQuery(SqlQuery query)
-        {
-            base.PrepareQuery(query);
-
-            if (!Permissions.HasPermission(PermissionKeys.Tenants))
-                query.Where(MyRow.Fields.TenantId == User.GetTenantId());
-        }
     }
+
+    protected override void PrepareQuery(SqlQuery query)
+    {
+        base.PrepareQuery(query);
+
+        if (!Permissions.HasPermission(PermissionKeys.Tenants))
+            query.Where(MyRow.Fields.TenantId == User.GetTenantId());
+    }
+}
 ```
 
-We did same changes in UserListHandler before.
-
-If you try same Javascript code now, you'll get an error:
+We applied similar changes to `UserListHandler` previously. After these modifications, attempting the same JavaScript code will result in an error:
 
 ```txt
 Record not found. It might be deleted or you don't have required permissions!
 ```
 
-But, we could still update record calling `Update` service manually. So, we need to secure *UserSaveHandler* too.
+## Securing the Update Service
 
-Change its *ValidateRequest* method like this:
+However, it is still possible to update the record by manually calling the `Update` service. Therefore, it is necessary to secure the `UserSaveHandler` as well. Update its `ValidateRequest` method as shown below:
+
+Change its `ValidateRequest` method like this:
 
 ```cs
 protected override void ValidateRequest()
@@ -73,56 +62,34 @@ protected override void ValidateRequest()
         // ...
 ```
 
-Here we check if it's an update, and if *TenantId* of record being updated (Old.TenantId) is different than currently logged user's *TenantId*. If so, we call *Authorization.ValidatePermission* method to ensure that user has tenant administration permission. It will raise an error if not.
+This check ensures that if an update is attempted, and the TenantId of the record being updated (Old.TenantId) differs from the currently logged-in user's TenantId, the system verifies that the user has tenant administration permissions. If not, an error is raised:
 
 ```
 Authorization has been denied for this request!
 ```
 
-## Preventing To Delete Users From Other Tenants
+## Preventing Deletion of Users from Other Tenants
 
-There are delete and undelete handlers in UserRepository, and they suffer from similar security holes.
+Similar to the vulnerabilities in the Retrieve and Update services, the Delete handler is also susceptible to unauthorized access. To mitigate this, it is essential to secure the `UserDeleteHandler` to ensure that users can only delete records within their own tenant.
 
-Using similar methods, we need to secure them too:
+There are delete and undelete handlers, and they suffer from similar security holes.
 
-```cs
- public class UserDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IUserDeleteHandler
-    {
-        public UserDeleteHandler(IRequestContext context)
-             : base(context)
-        {
-        }
-
-        protected override void ValidateRequest()
-        {
-            base.ValidateRequest();
-
-            if (Row.TenantId != User.GetTenantId())
-                Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
-        }
-
-       //...
-    }
-```
-
-If you have undelete handler you should validate on that as well.
+To secure the delete service in `UserDeleteHandler`, modify the class as follows:
 
 ```cs
- public class UserUndeleteHandler : UndeleteRequestHandler<MyRow, MyRequest, MyResponse>, IUserUndeleteHandler
+public class UserDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IUserDeleteHandler
+{
+    public UserDeleteHandler(IRequestContext context)
+         : base(context)
     {
-        public UserUndeleteHandler(IRequestContext context)
-             : base(context)
-        {
-        }
-
-        protected override void ValidateRequest()
-        {
-            base.ValidateRequest();
-
-            if (Row.TenantId != User.GetTenantId())
-                Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
-        }
-
-       //...
     }
+
+    protected override void ValidateRequest()
+    {
+        base.ValidateRequest();
+
+        if (Row.TenantId != User.GetTenantId())
+            Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);
+    }
+    //...
 ```

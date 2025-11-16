@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / formatISODateTimeUTC
+[corelib](../README.md) / formatISODateTimeUTC
 
 # Function: formatISODateTimeUTC()
 

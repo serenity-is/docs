@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / IRemoteView
+[corelib](../README.md) / IRemoteView
 
 # Interface: IRemoteView\<TItem\>
 

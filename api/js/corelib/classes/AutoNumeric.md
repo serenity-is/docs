@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / AutoNumeric
+[corelib](../README.md) / AutoNumeric
 
 # Class: AutoNumeric
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / UIFieldSet
+[corelib](../README.md) / UIFieldSet
 
 # Type Alias: UIFieldSet
 

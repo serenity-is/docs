@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / QuickFilterBarOptions
+[corelib](../README.md) / QuickFilterBarOptions
 
 # Interface: QuickFilterBarOptions
 

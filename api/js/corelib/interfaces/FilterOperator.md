@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FilterOperator
+[corelib](../README.md) / FilterOperator
 
 # Interface: FilterOperator
 

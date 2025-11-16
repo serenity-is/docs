@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / GridRadioSelectionMixinOptions
+[corelib](../README.md) / GridRadioSelectionMixinOptions
 
 # Interface: GridRadioSelectionMixinOptions
 

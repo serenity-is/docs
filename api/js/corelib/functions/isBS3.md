@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isBS3
+[corelib](../README.md) / isBS3
 
 # Function: isBS3()
 

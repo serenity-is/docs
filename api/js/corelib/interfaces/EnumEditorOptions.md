@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EnumEditorOptions
+[corelib](../README.md) / EnumEditorOptions
 
 # Interface: EnumEditorOptions
 

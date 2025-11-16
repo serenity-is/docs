@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CellEvent
+[sleekgrid](../README.md) / CellEvent
 
 # Type Alias: CellEvent
 

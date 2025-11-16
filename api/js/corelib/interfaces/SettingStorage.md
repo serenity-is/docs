@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / SettingStorage
+[corelib](../README.md) / SettingStorage
 
 # Interface: SettingStorage
 

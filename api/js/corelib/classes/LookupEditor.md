@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / LookupEditor
+[corelib](../README.md) / LookupEditor
 
 # Class: LookupEditor\<P\>
 

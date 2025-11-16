@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DateEditorOptions
+[corelib](../README.md) / DateEditorOptions
 
 # Interface: DateEditorOptions
 

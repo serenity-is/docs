@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PagerTexts
+[corelib](../README.md) / PagerTexts
 
 # Variable: PagerTexts
 

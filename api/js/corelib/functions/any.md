@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / any
+[corelib](../README.md) / any
 
 # Function: any()
 

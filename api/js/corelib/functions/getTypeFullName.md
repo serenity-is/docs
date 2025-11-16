@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getTypeFullName
+[corelib](../README.md) / getTypeFullName
 
 # Function: getTypeFullName()
 

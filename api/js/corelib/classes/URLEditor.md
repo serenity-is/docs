@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / URLEditor
+[corelib](../README.md) / URLEditor
 
 # Class: URLEditor\<P\>
 

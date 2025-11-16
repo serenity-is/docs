@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / RowCell
+[sleekgrid](../README.md) / RowCell
 
 # Interface: RowCell
 

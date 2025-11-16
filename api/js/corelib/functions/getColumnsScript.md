@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getColumnsScript
+[corelib](../README.md) / getColumnsScript
 
 # Function: getColumnsScript()
 

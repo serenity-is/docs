@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DialogType
+[corelib](../README.md) / DialogType
 
 # Type Alias: DialogType()
 

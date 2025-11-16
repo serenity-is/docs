@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / QuickFilterItemData
+[corelib](../README.md) / QuickFilterItemData
 
 # Interface: QuickFilterItemData\<TWidget\>
 

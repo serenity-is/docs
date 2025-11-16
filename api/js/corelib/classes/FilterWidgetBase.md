@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FilterWidgetBase
+[corelib](../README.md) / FilterWidgetBase
 
 # Class: FilterWidgetBase\<P\>
 

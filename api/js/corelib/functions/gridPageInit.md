@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / gridPageInit
+[corelib](../README.md) / gridPageInit
 
 # Function: gridPageInit()
 

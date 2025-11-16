@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / replaceAll
+[corelib](../README.md) / replaceAll
 
 # Function: replaceAll()
 

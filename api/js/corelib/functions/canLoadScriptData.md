@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / canLoadScriptData
+[corelib](../README.md) / canLoadScriptData
 
 # Function: canLoadScriptData()
 

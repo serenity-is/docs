@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / resetCultureSettings
+[corelib](../README.md) / resetCultureSettings
 
 # Function: resetCultureSettings()
 

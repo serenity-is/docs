@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / TextAreaEditor
+[corelib](../README.md) / TextAreaEditor
 
 # Class: TextAreaEditor\<P\>
 

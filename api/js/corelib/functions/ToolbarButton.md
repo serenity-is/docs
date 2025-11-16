@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ToolbarButton
+[corelib](../README.md) / ToolbarButton
 
 # Function: ToolbarButton()
 

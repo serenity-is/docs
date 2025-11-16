@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / peekTypeInfo
+[corelib](../README.md) / peekTypeInfo
 
 # Function: peekTypeInfo()
 

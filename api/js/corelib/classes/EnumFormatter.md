@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EnumFormatter
+[corelib](../README.md) / EnumFormatter
 
 # Class: EnumFormatter
 

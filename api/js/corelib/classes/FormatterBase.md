@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FormatterBase
+[corelib](../README.md) / FormatterBase
 
 # Abstract Class: FormatterBase
 

@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CompositeEditorOptions
+[sleekgrid](../README.md) / CompositeEditorOptions
 
 # Interface: CompositeEditorOptions
 

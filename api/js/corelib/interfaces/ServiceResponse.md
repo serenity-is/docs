@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ServiceResponse
+[corelib](../README.md) / ServiceResponse
 
 # Interface: ServiceResponse
 

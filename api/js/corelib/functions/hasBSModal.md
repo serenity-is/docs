@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / hasBSModal
+[corelib](../README.md) / hasBSModal
 
 # Function: hasBSModal()
 

@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / GlobalEditorLock
+[sleekgrid](../README.md) / GlobalEditorLock
 
 # Variable: GlobalEditorLock
 

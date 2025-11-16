@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getInstanceType
+[corelib](../README.md) / getInstanceType
 
 # Function: getInstanceType()
 

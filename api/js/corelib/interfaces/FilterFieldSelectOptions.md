@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FilterFieldSelectOptions
+[corelib](../README.md) / FilterFieldSelectOptions
 
 # Interface: FilterFieldSelectOptions
 

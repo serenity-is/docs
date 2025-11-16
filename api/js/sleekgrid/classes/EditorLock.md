@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / EditorLock
+[sleekgrid](../README.md) / EditorLock
 
 # Class: EditorLock
 

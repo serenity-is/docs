@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / LookupFiltering
+[corelib](../README.md) / LookupFiltering
 
 # Class: LookupFiltering
 

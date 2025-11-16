@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EmailEditorOptions
+[corelib](../README.md) / EmailEditorOptions
 
 # Interface: EmailEditorOptions
 

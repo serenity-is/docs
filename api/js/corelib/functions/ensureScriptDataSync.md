@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ensureScriptDataSync
+[corelib](../README.md) / ensureScriptDataSync
 
 # Function: ensureScriptDataSync()
 

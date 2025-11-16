@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EnumTypeRegistry
+[corelib](../README.md) / EnumTypeRegistry
 
 # Variable: EnumTypeRegistry
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / iconClassName
+[corelib](../README.md) / iconClassName
 
 # Function: iconClassName()
 

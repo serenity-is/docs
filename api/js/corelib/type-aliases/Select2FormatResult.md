@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Select2FormatResult
+[corelib](../README.md) / Select2FormatResult
 
 # Type Alias: Select2FormatResult
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ISetEditValue
+[corelib](../README.md) / ISetEditValue
 
 # Abstract Class: ISetEditValue
 

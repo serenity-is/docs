@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / safeCast
+[corelib](../README.md) / safeCast
 
 # Function: safeCast()
 

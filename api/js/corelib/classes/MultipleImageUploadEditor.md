@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / MultipleImageUploadEditor
+[corelib](../README.md) / MultipleImageUploadEditor
 
 # Class: MultipleImageUploadEditor\<P\>
 

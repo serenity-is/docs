@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isPromiseLike
+[corelib](../README.md) / isPromiseLike
 
 # Function: isPromiseLike()
 

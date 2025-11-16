@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DecimalFiltering
+[corelib](../README.md) / DecimalFiltering
 
 # Class: DecimalFiltering
 

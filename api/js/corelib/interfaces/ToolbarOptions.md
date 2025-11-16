@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ToolbarOptions
+[corelib](../README.md) / ToolbarOptions
 
 # Interface: ToolbarOptions
 

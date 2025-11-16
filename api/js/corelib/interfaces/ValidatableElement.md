@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ValidatableElement
+[corelib](../README.md) / ValidatableElement
 
 # Interface: ValidatableElement
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / OptionAttribute
+[corelib](../README.md) / OptionAttribute
 
 # Class: OptionAttribute
 

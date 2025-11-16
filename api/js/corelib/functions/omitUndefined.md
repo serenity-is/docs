@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / omitUndefined
+[corelib](../README.md) / omitUndefined
 
 # Function: omitUndefined()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ensureTypeInfo
+[corelib](../README.md) / ensureTypeInfo
 
 # Function: ensureTypeInfo()
 

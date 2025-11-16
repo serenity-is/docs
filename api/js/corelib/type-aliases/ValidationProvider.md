@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ValidationProvider
+[corelib](../README.md) / ValidationProvider
 
 # Type Alias: ValidationProvider()
 

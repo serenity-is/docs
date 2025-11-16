@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getFormScript
+[corelib](../README.md) / getFormScript
 
 # Function: getFormScript()
 

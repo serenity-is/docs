@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / jQueryPatch
+[corelib](../README.md) / jQueryPatch
 
 # Function: jQueryPatch()
 

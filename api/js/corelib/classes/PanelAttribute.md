@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PanelAttribute
+[corelib](../README.md) / PanelAttribute
 
 # Class: PanelAttribute
 

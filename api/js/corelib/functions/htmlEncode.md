@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / htmlEncode
+[corelib](../README.md) / htmlEncode
 
 # Function: htmlEncode()
 

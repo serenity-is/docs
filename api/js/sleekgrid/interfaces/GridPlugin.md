@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / GridPlugin
+[sleekgrid](../README.md) / GridPlugin
 
 # Interface: GridPlugin
 

@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / GridBandRefs
+[sleekgrid](../README.md) / GridBandRefs
 
 # Interface: GridBandRefs
 

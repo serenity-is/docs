@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / cssEscape
+[corelib](../README.md) / cssEscape
 
 # Function: cssEscape()
 

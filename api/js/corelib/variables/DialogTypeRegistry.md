@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DialogTypeRegistry
+[corelib](../README.md) / DialogTypeRegistry
 
 # Variable: DialogTypeRegistry
 

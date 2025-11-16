@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getBaseType
+[corelib](../README.md) / getBaseType
 
 # Function: getBaseType()
 

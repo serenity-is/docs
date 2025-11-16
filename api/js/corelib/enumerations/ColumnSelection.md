@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ColumnSelection
+[corelib](../README.md) / ColumnSelection
 
 # Enumeration: ColumnSelection
 

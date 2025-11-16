@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / addValidationRule
+[corelib](../README.md) / addValidationRule
 
 # Variable: addValidationRule()
 

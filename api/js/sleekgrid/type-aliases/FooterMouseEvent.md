@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / FooterMouseEvent
+[sleekgrid](../README.md) / FooterMouseEvent
 
 # Type Alias: FooterMouseEvent
 

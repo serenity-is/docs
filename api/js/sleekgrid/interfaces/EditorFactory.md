@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / EditorFactory
+[sleekgrid](../README.md) / EditorFactory
 
 # Interface: EditorFactory
 

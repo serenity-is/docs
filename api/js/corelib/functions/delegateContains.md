@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / delegateContains
+[corelib](../README.md) / delegateContains
 
 # Function: delegateContains()
 

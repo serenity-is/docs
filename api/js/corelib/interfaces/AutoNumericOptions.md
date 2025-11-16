@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / AutoNumericOptions
+[corelib](../README.md) / AutoNumericOptions
 
 # Interface: AutoNumericOptions
 

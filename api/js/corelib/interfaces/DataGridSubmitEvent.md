@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DataGridSubmitEvent
+[corelib](../README.md) / DataGridSubmitEvent
 
 # Interface: DataGridSubmitEvent
 

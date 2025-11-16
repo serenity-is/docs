@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / peekScriptData
+[corelib](../README.md) / peekScriptData
 
 # Function: peekScriptData()
 

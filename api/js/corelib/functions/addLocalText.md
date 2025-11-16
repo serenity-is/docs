@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / addLocalText
+[corelib](../README.md) / addLocalText
 
 # Function: addLocalText()
 

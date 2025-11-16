@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / removeValidationRule
+[corelib](../README.md) / removeValidationRule
 
 # Variable: removeValidationRule()
 

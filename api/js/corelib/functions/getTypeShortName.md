@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getTypeShortName
+[corelib](../README.md) / getTypeShortName
 
 # Function: getTypeShortName()
 

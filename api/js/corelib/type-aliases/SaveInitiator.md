@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / SaveInitiator
+[corelib](../README.md) / SaveInitiator
 
 # Type Alias: SaveInitiator
 

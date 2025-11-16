@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CheckboxCellEdit
+[sleekgrid](../README.md) / CheckboxCellEdit
 
 # Class: CheckboxCellEdit
 

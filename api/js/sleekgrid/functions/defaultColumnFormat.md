@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / defaultColumnFormat
+[sleekgrid](../README.md) / defaultColumnFormat
 
 # Function: defaultColumnFormat()
 

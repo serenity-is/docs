@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / attrEncode
+[corelib](../README.md) / attrEncode
 
 # ~~Variable: attrEncode()~~
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ComboboxEditor
+[corelib](../README.md) / ComboboxEditor
 
 # Class: ComboboxEditor\<P, TItem\>
 

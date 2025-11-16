@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / notifyWarning
+[corelib](../README.md) / notifyWarning
 
 # Function: notifyWarning()
 

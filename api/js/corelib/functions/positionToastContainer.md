@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / positionToastContainer
+[corelib](../README.md) / positionToastContainer
 
 # Function: positionToastContainer()
 

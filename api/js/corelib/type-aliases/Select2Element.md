@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Select2Element
+[corelib](../README.md) / Select2Element
 
 # Type Alias: Select2Element
 

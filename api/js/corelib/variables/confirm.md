@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / confirm
+[corelib](../README.md) / confirm
 
 # ~~Variable: confirm()~~
 

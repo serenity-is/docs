@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / Position
+[sleekgrid](../README.md) / Position
 
 # Interface: Position
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DialogOptions
+[corelib](../README.md) / DialogOptions
 
 # Interface: DialogOptions
 

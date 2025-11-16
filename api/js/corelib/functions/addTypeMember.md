@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / addTypeMember
+[corelib](../README.md) / addTypeMember
 
 # Function: addTypeMember()
 

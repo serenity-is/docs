@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / UploaderRequest
+[corelib](../README.md) / UploaderRequest
 
 # Interface: UploaderRequest
 

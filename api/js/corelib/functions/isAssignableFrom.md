@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isAssignableFrom
+[corelib](../README.md) / isAssignableFrom
 
 # Function: isAssignableFrom()
 

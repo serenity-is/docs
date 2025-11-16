@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DecimalEditor
+[corelib](../README.md) / DecimalEditor
 
 # Class: DecimalEditor\<P\>
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isTrimmedEmpty
+[corelib](../README.md) / isTrimmedEmpty
 
 # Function: isTrimmedEmpty()
 

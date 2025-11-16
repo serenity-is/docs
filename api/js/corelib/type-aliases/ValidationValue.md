@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ValidationValue
+[corelib](../README.md) / ValidationValue
 
 # Type Alias: ValidationValue
 

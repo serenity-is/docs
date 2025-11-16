@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getCookie
+[corelib](../README.md) / getCookie
 
 # Function: getCookie()
 

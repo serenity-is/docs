@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getColumnsDataAsync
+[corelib](../README.md) / getColumnsDataAsync
 
 # Variable: getColumnsDataAsync()
 

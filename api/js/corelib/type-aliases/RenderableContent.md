@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RenderableContent
+[corelib](../README.md) / RenderableContent
 
 # Type Alias: RenderableContent
 

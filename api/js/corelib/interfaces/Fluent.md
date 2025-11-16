@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Fluent
+[corelib](../README.md) / Fluent
 
 # Interface: Fluent\<TElement\>
 

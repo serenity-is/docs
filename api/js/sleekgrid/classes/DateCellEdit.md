@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / DateCellEdit
+[sleekgrid](../README.md) / DateCellEdit
 
 # Class: DateCellEdit
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / IValidateRequired
+[corelib](../README.md) / IValidateRequired
 
 # Abstract Class: IValidateRequired
 

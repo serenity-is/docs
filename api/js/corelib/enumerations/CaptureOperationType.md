@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CaptureOperationType
+[corelib](../README.md) / CaptureOperationType
 
 # Enumeration: CaptureOperationType
 

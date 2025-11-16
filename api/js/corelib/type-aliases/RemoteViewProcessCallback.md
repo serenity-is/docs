@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RemoteViewProcessCallback
+[corelib](../README.md) / RemoteViewProcessCallback
 
 # Type Alias: RemoteViewProcessCallback()\<TItem\>
 

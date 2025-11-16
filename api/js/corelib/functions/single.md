@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / single
+[corelib](../README.md) / single
 
 # Function: single()
 

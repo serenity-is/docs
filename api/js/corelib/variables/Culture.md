@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Culture
+[corelib](../README.md) / Culture
 
 # Variable: Culture
 

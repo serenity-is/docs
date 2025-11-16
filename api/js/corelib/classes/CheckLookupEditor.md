@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CheckLookupEditor
+[corelib](../README.md) / CheckLookupEditor
 
 # Class: CheckLookupEditor\<TItem, P\>
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Select2AjaxOptions
+[corelib](../README.md) / Select2AjaxOptions
 
 # Interface: Select2AjaxOptions
 

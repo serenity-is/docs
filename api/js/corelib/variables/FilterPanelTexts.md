@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FilterPanelTexts
+[corelib](../README.md) / FilterPanelTexts
 
 # Variable: FilterPanelTexts
 

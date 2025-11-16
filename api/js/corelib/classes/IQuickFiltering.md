@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / IQuickFiltering
+[corelib](../README.md) / IQuickFiltering
 
 # Abstract Class: IQuickFiltering
 

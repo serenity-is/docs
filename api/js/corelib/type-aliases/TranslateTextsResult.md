@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / TranslateTextsResult
+[corelib](../README.md) / TranslateTextsResult
 
 # Type Alias: TranslateTextsResult
 

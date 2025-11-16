@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RadioButtonEditorOptions
+[corelib](../README.md) / RadioButtonEditorOptions
 
 # Interface: RadioButtonEditorOptions
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RemoteViewOptions
+[corelib](../README.md) / RemoteViewOptions
 
 # Interface: RemoteViewOptions\<TItem\>
 

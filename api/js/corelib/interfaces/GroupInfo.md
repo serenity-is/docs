@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / GroupInfo
+[corelib](../README.md) / GroupInfo
 
 # Interface: GroupInfo\<TItem\>
 

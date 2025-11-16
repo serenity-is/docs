@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / GridMouseEvent
+[sleekgrid](../README.md) / GridMouseEvent
 
 # Type Alias: GridMouseEvent
 

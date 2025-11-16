@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PropertyGridOptions
+[corelib](../README.md) / PropertyGridOptions
 
 # Interface: PropertyGridOptions
 

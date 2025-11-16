@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getWidgetName
+[corelib](../README.md) / getWidgetName
 
 # Function: getWidgetName()
 

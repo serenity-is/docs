@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CheckTreeEditorTexts
+[corelib](../README.md) / CheckTreeEditorTexts
 
 # Variable: CheckTreeEditorTexts
 

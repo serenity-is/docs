@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / removeClass
+[sleekgrid](../README.md) / removeClass
 
 # Function: removeClass()
 

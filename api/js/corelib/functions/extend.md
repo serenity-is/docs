@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / extend
+[corelib](../README.md) / extend
 
 # ~~Function: extend()~~
 

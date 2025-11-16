@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / keyOf
+[corelib](../README.md) / keyOf
 
 # Function: keyOf()
 

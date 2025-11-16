@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PostToUrlOptions
+[corelib](../README.md) / PostToUrlOptions
 
 # Interface: PostToUrlOptions
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / NumberFormatter
+[corelib](../README.md) / NumberFormatter
 
 # Class: NumberFormatter
 

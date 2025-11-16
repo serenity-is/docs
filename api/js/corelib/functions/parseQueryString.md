@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / parseQueryString
+[corelib](../README.md) / parseQueryString
 
 # Function: parseQueryString()
 

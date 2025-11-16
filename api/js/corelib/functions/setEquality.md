@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / setEquality
+[corelib](../README.md) / setEquality
 
 # Function: setEquality()
 

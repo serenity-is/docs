@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FormatterTypeInfo
+[corelib](../README.md) / FormatterTypeInfo
 
 # Type Alias: FormatterTypeInfo\<TypeName\>
 

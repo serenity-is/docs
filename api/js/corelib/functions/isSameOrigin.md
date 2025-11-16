@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isSameOrigin
+[corelib](../README.md) / isSameOrigin
 
 # Function: isSameOrigin()
 

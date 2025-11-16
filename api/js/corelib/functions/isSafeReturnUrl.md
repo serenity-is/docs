@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isSafeReturnUrl
+[corelib](../README.md) / isSafeReturnUrl
 
 # Function: isSafeReturnUrl()
 

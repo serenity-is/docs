@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / ArgsColumnNode
+[sleekgrid](../README.md) / ArgsColumnNode
 
 # Interface: ArgsColumnNode
 

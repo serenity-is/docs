@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / GroupTotals
+[sleekgrid](../README.md) / GroupTotals
 
 # Class: GroupTotals\<TEntity\>
 

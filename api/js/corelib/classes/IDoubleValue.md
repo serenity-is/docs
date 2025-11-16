@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / IDoubleValue
+[corelib](../README.md) / IDoubleValue
 
 # Abstract Class: IDoubleValue
 

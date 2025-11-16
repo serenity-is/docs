@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / QuickSearchField
+[corelib](../README.md) / QuickSearchField
 
 # Interface: QuickSearchField
 

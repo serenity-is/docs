@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / QuickSearchTexts
+[corelib](../README.md) / QuickSearchTexts
 
 # Variable: QuickSearchTexts
 

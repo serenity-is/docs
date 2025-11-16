@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Grouping
+[corelib](../README.md) / Grouping
 
 # Type Alias: Grouping\<TItem\>
 

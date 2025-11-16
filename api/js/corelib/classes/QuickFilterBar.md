@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / QuickFilterBar
+[corelib](../README.md) / QuickFilterBar
 
 # Class: QuickFilterBar\<P\>
 

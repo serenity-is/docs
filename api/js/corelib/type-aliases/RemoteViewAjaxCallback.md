@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RemoteViewAjaxCallback
+[corelib](../README.md) / RemoteViewAjaxCallback
 
 # Type Alias: RemoteViewAjaxCallback()\<TItem\>
 

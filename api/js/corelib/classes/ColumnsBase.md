@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ColumnsBase
+[corelib](../README.md) / ColumnsBase
 
 # Class: ColumnsBase\<TRow\>
 

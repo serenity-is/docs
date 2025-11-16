@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Tooltip
+[corelib](../README.md) / Tooltip
 
 # Class: Tooltip
 

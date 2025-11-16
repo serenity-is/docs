@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EditLink
+[corelib](../README.md) / EditLink
 
 # Function: EditLink()
 

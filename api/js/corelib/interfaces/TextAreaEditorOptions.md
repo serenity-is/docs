@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / TextAreaEditorOptions
+[corelib](../README.md) / TextAreaEditorOptions
 
 # Interface: TextAreaEditorOptions
 

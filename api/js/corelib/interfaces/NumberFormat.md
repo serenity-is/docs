@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / NumberFormat
+[corelib](../README.md) / NumberFormat
 
 # Interface: NumberFormat
 

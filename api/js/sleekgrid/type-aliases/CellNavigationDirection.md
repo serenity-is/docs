@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CellNavigationDirection
+[sleekgrid](../README.md) / CellNavigationDirection
 
 # Type Alias: CellNavigationDirection
 

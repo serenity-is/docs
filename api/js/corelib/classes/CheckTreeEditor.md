@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CheckTreeEditor
+[corelib](../README.md) / CheckTreeEditor
 
 # Class: CheckTreeEditor\<TItem, P\>
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / parseISODateTime
+[corelib](../README.md) / parseISODateTime
 
 # Function: parseISODateTime()
 

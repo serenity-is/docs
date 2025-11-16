@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RadioButtonEditor
+[corelib](../README.md) / RadioButtonEditor
 
 # Class: RadioButtonEditor\<P\>
 

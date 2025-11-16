@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / TemplatedPanel
+[corelib](../README.md) / TemplatedPanel
 
 # ~~Variable: TemplatedPanel~~
 

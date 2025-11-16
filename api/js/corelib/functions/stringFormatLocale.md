@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / stringFormatLocale
+[corelib](../README.md) / stringFormatLocale
 
 # Function: stringFormatLocale()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FileUploadEditor
+[corelib](../README.md) / FileUploadEditor
 
 # Class: FileUploadEditor\<P\>
 

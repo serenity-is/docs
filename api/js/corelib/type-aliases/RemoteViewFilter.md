@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RemoteViewFilter
+[corelib](../README.md) / RemoteViewFilter
 
 # Type Alias: RemoteViewFilter()\<TItem\>
 

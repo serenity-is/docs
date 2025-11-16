@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / HtmlNoteContentEditor
+[corelib](../README.md) / HtmlNoteContentEditor
 
 # Class: HtmlNoteContentEditor\<P\>
 

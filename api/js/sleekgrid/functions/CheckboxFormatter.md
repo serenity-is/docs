@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CheckboxFormatter
+[sleekgrid](../README.md) / CheckboxFormatter
 
 # Function: CheckboxFormatter()
 

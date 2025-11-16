@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / groupBy
+[corelib](../README.md) / groupBy
 
 # Function: groupBy()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / TimeSpanEditor
+[corelib](../README.md) / TimeSpanEditor
 
 # Class: TimeSpanEditor\<P\>
 

@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CellRange
+[sleekgrid](../README.md) / CellRange
 
 # Class: CellRange
 

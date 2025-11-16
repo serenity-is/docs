@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PanelPageInit
+[corelib](../README.md) / PanelPageInit
 
 # Function: PanelPageInit()
 

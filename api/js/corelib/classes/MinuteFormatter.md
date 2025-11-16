@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / MinuteFormatter
+[corelib](../README.md) / MinuteFormatter
 
 # Class: MinuteFormatter
 

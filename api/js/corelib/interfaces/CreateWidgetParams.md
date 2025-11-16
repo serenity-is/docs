@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CreateWidgetParams
+[corelib](../README.md) / CreateWidgetParams
 
 # Interface: CreateWidgetParams\<TWidget, P\>
 

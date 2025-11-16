@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / stringFormat
+[corelib](../README.md) / stringFormat
 
 # Function: stringFormat()
 

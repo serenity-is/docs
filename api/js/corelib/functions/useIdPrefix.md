@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / useIdPrefix
+[corelib](../README.md) / useIdPrefix
 
 # Function: useIdPrefix()
 

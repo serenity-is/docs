@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DataGrid
+[corelib](../README.md) / DataGrid
 
 # Class: DataGrid\<TItem, P\>
 

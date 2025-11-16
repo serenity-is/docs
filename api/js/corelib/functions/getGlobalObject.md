@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getGlobalObject
+[corelib](../README.md) / getGlobalObject
 
 # Function: getGlobalObject()
 

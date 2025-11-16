@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isValue
+[corelib](../README.md) / isValue
 
 # ~~Function: isValue()~~
 

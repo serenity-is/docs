@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / FooterRow
+[sleekgrid](../README.md) / FooterRow
 
 # Function: FooterRow()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isEmptyOrNull
+[corelib](../README.md) / isEmptyOrNull
 
 # Function: isEmptyOrNull()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / registerFormatter
+[corelib](../README.md) / registerFormatter
 
 # Function: registerFormatter()
 

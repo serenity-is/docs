@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ArgsGroupToggle
+[corelib](../README.md) / ArgsGroupToggle
 
 # Interface: ArgsGroupToggle
 

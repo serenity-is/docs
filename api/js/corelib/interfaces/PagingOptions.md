@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PagingOptions
+[corelib](../README.md) / PagingOptions
 
 # Interface: PagingOptions
 

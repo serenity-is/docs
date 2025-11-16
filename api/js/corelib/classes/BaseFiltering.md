@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / BaseFiltering
+[corelib](../README.md) / BaseFiltering
 
 # Abstract Class: BaseFiltering
 

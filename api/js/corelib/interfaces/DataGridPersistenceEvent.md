@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DataGridPersistenceEvent
+[corelib](../README.md) / DataGridPersistenceEvent
 
 # Interface: DataGridPersistenceEvent
 

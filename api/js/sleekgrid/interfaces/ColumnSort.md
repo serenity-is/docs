@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / ColumnSort
+[sleekgrid](../README.md) / ColumnSort
 
 # Interface: ColumnSort
 

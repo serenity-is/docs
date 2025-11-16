@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Toastr
+[corelib](../README.md) / Toastr
 
 # Class: Toastr
 

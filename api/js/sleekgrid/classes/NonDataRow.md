@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / NonDataRow
+[sleekgrid](../README.md) / NonDataRow
 
 # Class: NonDataRow
 

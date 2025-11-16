@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isMobileView
+[corelib](../README.md) / isMobileView
 
 # Function: isMobileView()
 

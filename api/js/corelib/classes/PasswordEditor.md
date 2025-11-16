@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PasswordEditor
+[corelib](../README.md) / PasswordEditor
 
 # Class: PasswordEditor\<TOptions\>
 

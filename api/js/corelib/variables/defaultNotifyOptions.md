@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / defaultNotifyOptions
+[corelib](../README.md) / defaultNotifyOptions
 
 # Variable: defaultNotifyOptions
 

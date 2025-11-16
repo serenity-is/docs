@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / trunc
+[corelib](../README.md) / trunc
 
 # Function: trunc()
 

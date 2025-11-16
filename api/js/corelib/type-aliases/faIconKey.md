@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / faIconKey
+[corelib](../README.md) / faIconKey
 
 # Type Alias: faIconKey
 

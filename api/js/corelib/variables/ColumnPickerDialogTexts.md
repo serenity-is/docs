@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ColumnPickerDialogTexts
+[corelib](../README.md) / ColumnPickerDialogTexts
 
 # Variable: ColumnPickerDialogTexts
 

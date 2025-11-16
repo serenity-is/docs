@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / turkishLocaleCompare
+[corelib](../README.md) / turkishLocaleCompare
 
 # ~~Variable: turkishLocaleCompare()~~
 

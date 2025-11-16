@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / EventDataWrapper
+[sleekgrid](../README.md) / EventDataWrapper
 
 # Class: EventDataWrapper\<TArgs, TEvent\>
 

@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / applyFormatterResultToCellNode
+[sleekgrid](../README.md) / applyFormatterResultToCellNode
 
 # Function: applyFormatterResultToCellNode()
 

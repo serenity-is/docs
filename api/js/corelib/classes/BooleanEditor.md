@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / BooleanEditor
+[corelib](../README.md) / BooleanEditor
 
 # Class: BooleanEditor\<P\>
 

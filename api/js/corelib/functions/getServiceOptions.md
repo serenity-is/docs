@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getServiceOptions
+[corelib](../README.md) / getServiceOptions
 
 # Function: getServiceOptions()
 

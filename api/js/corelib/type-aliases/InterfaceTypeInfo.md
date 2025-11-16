@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / InterfaceTypeInfo
+[corelib](../README.md) / InterfaceTypeInfo
 
 # Type Alias: InterfaceTypeInfo\<TypeName\>
 

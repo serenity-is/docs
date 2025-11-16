@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / EventData
+[sleekgrid](../README.md) / EventData
 
 # Type Alias: EventData\<TArgs, TEvent\>
 

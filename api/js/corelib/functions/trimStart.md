@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / trimStart
+[corelib](../README.md) / trimStart
 
 # Function: trimStart()
 

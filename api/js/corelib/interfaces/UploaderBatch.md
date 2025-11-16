@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / UploaderBatch
+[corelib](../README.md) / UploaderBatch
 
 # Interface: UploaderBatch
 

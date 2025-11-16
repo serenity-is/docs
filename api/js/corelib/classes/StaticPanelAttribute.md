@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / StaticPanelAttribute
+[corelib](../README.md) / StaticPanelAttribute
 
 # Class: StaticPanelAttribute
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ValidatorOptions
+[corelib](../README.md) / ValidatorOptions
 
 # Interface: ValidatorOptions
 

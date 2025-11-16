@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EntityDialogTexts
+[corelib](../README.md) / EntityDialogTexts
 
 # Variable: EntityDialogTexts
 

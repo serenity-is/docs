@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / ArgsDrag
+[sleekgrid](../README.md) / ArgsDrag
 
 # Interface: ArgsDrag
 

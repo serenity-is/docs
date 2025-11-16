@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / initColumnProps
+[sleekgrid](../README.md) / initColumnProps
 
 # Function: initColumnProps()
 

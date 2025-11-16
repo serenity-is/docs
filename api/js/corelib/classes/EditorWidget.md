@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EditorWidget
+[corelib](../README.md) / EditorWidget
 
 # Class: EditorWidget\<P\>
 

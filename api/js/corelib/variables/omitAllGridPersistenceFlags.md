@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / omitAllGridPersistenceFlags
+[corelib](../README.md) / omitAllGridPersistenceFlags
 
 # Variable: omitAllGridPersistenceFlags
 

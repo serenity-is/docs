@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / ViewportInfo
+[sleekgrid](../README.md) / ViewportInfo
 
 # Interface: ViewportInfo
 

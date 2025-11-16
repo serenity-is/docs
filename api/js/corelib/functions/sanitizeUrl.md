@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / sanitizeUrl
+[corelib](../README.md) / sanitizeUrl
 
 # Function: sanitizeUrl()
 

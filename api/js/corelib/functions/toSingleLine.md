@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / toSingleLine
+[corelib](../README.md) / toSingleLine
 
 # Function: toSingleLine()
 

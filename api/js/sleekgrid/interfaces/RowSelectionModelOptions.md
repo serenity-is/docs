@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / RowSelectionModelOptions
+[sleekgrid](../README.md) / RowSelectionModelOptions
 
 # Interface: RowSelectionModelOptions
 

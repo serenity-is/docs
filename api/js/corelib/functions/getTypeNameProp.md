@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getTypeNameProp
+[corelib](../README.md) / getTypeNameProp
 
 # Function: getTypeNameProp()
 

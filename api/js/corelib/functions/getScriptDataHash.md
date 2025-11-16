@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getScriptDataHash
+[corelib](../README.md) / getScriptDataHash
 
 # Function: getScriptDataHash()
 

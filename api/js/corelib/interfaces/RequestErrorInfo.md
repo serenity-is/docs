@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RequestErrorInfo
+[corelib](../README.md) / RequestErrorInfo
 
 # Interface: RequestErrorInfo
 

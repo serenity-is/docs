@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CompatFormatterResult
+[sleekgrid](../README.md) / CompatFormatterResult
 
 # Interface: CompatFormatterResult
 

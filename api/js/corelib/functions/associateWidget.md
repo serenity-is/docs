@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / associateWidget
+[corelib](../README.md) / associateWidget
 
 # Function: associateWidget()
 

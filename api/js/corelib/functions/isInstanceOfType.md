@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / isInstanceOfType
+[corelib](../README.md) / isInstanceOfType
 
 # Function: isInstanceOfType()
 

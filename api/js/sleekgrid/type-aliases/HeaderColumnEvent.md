@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / HeaderColumnEvent
+[sleekgrid](../README.md) / HeaderColumnEvent
 
 # Type Alias: HeaderColumnEvent
 

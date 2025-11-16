@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / cloneToolButton
+[corelib](../README.md) / cloneToolButton
 
 # Function: cloneToolButton()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / indexOf
+[corelib](../README.md) / indexOf
 
 # Function: indexOf()
 

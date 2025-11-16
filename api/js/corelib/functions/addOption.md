@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / addOption
+[corelib](../README.md) / addOption
 
 # Function: addOption()
 

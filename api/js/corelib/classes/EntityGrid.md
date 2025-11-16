@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EntityGrid
+[corelib](../README.md) / EntityGrid
 
 # Class: EntityGrid\<TItem, P\>
 

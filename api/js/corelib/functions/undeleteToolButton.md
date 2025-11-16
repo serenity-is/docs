@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / undeleteToolButton
+[corelib](../README.md) / undeleteToolButton
 
 # Function: undeleteToolButton()
 

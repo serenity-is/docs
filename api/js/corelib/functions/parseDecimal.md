@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / parseDecimal
+[corelib](../README.md) / parseDecimal
 
 # Function: parseDecimal()
 

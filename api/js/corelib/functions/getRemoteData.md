@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getRemoteData
+[corelib](../README.md) / getRemoteData
 
 # Function: getRemoteData()
 

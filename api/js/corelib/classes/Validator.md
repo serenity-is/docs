@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Validator
+[corelib](../README.md) / Validator
 
 # Class: Validator
 

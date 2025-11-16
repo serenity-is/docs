@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / PaneKey
+[sleekgrid](../README.md) / PaneKey
 
 # Type Alias: PaneKey
 

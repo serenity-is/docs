@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / StringLiteral
+[corelib](../README.md) / StringLiteral
 
 # Type Alias: StringLiteral\<T\>
 

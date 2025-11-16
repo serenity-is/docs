@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PropertyGridMode
+[corelib](../README.md) / PropertyGridMode
 
 # Enumeration: PropertyGridMode
 

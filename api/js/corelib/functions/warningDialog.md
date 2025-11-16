@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / warningDialog
+[corelib](../README.md) / warningDialog
 
 # Function: warningDialog()
 

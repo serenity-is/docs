@@ -1,4 +1,4 @@
-# serenity-is/sleekgrid
+# sleekgrid
 
 ## SleekGrid
 
@@ -6,8 +6,8 @@ A modern, lightweight, and highly customizable data grid component for web appli
 
 ## Namespaces
 
-- [Editors](serenity-is/namespaces/Editors/README.md)
-- [Formatters](serenity-is/namespaces/Formatters/README.md)
+- [Editors](sleekgrid/namespaces/Editors/README.md)
+- [Formatters](sleekgrid/namespaces/Formatters/README.md)
 
 ## Classes
 

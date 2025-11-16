@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CriteriaOperator
+[corelib](../README.md) / CriteriaOperator
 
 # Enumeration: CriteriaOperator
 

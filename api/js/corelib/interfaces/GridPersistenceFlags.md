@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / GridPersistenceFlags
+[corelib](../README.md) / GridPersistenceFlags
 
 # Interface: GridPersistenceFlags
 

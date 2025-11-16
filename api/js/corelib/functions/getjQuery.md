@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getjQuery
+[corelib](../README.md) / getjQuery
 
 # Function: getjQuery()
 

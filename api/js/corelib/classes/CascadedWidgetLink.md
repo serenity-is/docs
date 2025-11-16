@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CascadedWidgetLink
+[corelib](../README.md) / CascadedWidgetLink
 
 # Class: CascadedWidgetLink\<TParent\>
 

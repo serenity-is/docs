@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FileDownloadFormatter
+[corelib](../README.md) / FileDownloadFormatter
 
 # Class: FileDownloadFormatter
 

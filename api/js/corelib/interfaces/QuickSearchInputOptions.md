@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / QuickSearchInputOptions
+[corelib](../README.md) / QuickSearchInputOptions
 
 # Interface: QuickSearchInputOptions
 

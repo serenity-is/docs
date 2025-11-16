@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FormatterType
+[corelib](../README.md) / FormatterType
 
 # Type Alias: FormatterType()
 

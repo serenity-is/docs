@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / setRegisteredScripts
+[corelib](../README.md) / setRegisteredScripts
 
 # Function: setRegisteredScripts()
 

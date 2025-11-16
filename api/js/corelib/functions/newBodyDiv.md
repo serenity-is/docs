@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / newBodyDiv
+[corelib](../README.md) / newBodyDiv
 
 # Function: newBodyDiv()
 

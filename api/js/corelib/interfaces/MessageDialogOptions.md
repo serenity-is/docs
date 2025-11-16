@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / MessageDialogOptions
+[corelib](../README.md) / MessageDialogOptions
 
 # Interface: MessageDialogOptions
 

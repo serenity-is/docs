@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / TimeSpanEditorOptions
+[corelib](../README.md) / TimeSpanEditorOptions
 
 # Interface: TimeSpanEditorOptions
 

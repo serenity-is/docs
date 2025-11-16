@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / escapeHtml
+[sleekgrid](../README.md) / escapeHtml
 
 # Function: escapeHtml()
 

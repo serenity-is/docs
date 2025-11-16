@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getGlobalTypeRegistry
+[corelib](../README.md) / getGlobalTypeRegistry
 
 # Function: getGlobalTypeRegistry()
 

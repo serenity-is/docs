@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / SelectEditorOptions
+[corelib](../README.md) / SelectEditorOptions
 
 # Interface: SelectEditorOptions
 

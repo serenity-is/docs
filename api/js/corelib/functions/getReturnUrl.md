@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getReturnUrl
+[corelib](../README.md) / getReturnUrl
 
 # Function: getReturnUrl()
 

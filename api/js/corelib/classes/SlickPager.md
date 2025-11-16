@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / SlickPager
+[corelib](../README.md) / SlickPager
 
 # Class: SlickPager\<P\>
 

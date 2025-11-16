@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / HtmlReportContentEditor
+[corelib](../README.md) / HtmlReportContentEditor
 
 # Class: HtmlReportContentEditor\<P\>
 

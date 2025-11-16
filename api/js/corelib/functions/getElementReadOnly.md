@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getElementReadOnly
+[corelib](../README.md) / getElementReadOnly
 
 # Function: getElementReadOnly()
 

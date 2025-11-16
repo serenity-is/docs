@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / CellKeyboardEvent
+[sleekgrid](../README.md) / CellKeyboardEvent
 
 # Type Alias: CellKeyboardEvent
 

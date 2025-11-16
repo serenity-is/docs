@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ClassTypeInfo
+[corelib](../README.md) / ClassTypeInfo
 
 # Type Alias: ClassTypeInfo\<TypeName\>
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ArgsPagingInfo
+[corelib](../README.md) / ArgsPagingInfo
 
 # Interface: ArgsPagingInfo
 

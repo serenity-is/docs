@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / IDialog
+[corelib](../README.md) / IDialog
 
 # Abstract Class: IDialog
 

@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / FrozenLayout
+[sleekgrid](../README.md) / FrozenLayout
 
 # Class: FrozenLayout
 

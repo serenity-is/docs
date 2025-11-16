@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / ArgsEditorDestroy
+[sleekgrid](../README.md) / ArgsEditorDestroy
 
 # Interface: ArgsEditorDestroy
 

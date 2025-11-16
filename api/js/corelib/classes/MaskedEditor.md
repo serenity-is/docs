@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / MaskedEditor
+[corelib](../README.md) / MaskedEditor
 
 # Class: MaskedEditor\<P\>
 

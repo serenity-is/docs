@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ToastrOptions
+[corelib](../README.md) / ToastrOptions
 
 # Type Alias: ToastrOptions
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / RemoteView
+[corelib](../README.md) / RemoteView
 
 # Class: RemoteView\<TItem\>
 

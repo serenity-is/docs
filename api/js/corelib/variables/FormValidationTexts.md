@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FormValidationTexts
+[corelib](../README.md) / FormValidationTexts
 
 # Variable: FormValidationTexts
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Uploader
+[corelib](../README.md) / Uploader
 
 # Class: Uploader
 

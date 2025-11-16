@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ImageUploadEditorOptions
+[corelib](../README.md) / ImageUploadEditorOptions
 
 # Interface: ImageUploadEditorOptions
 

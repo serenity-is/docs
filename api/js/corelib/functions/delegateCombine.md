@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / delegateCombine
+[corelib](../README.md) / delegateCombine
 
 # Function: delegateCombine()
 

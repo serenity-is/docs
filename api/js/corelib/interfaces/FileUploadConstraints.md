@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FileUploadConstraints
+[corelib](../README.md) / FileUploadConstraints
 
 # Interface: FileUploadConstraints
 

@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / IEventData
+[sleekgrid](../README.md) / IEventData
 
 # Interface: IEventData\<TArgs, TEvent\>
 

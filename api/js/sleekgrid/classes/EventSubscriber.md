@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / EventSubscriber
+[sleekgrid](../README.md) / EventSubscriber
 
 # Class: EventSubscriber
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / iframeDialog
+[corelib](../README.md) / iframeDialog
 
 # Function: iframeDialog()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / registerClass
+[corelib](../README.md) / registerClass
 
 # Function: registerClass()
 

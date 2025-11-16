@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PropertyGrid
+[corelib](../README.md) / PropertyGrid
 
 # Class: PropertyGrid\<P\>
 

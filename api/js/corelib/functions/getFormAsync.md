@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / getFormAsync
+[corelib](../README.md) / getFormAsync
 
 # Function: getFormAsync()
 

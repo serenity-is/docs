@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ServiceOptions
+[corelib](../README.md) / ServiceOptions
 
 # Interface: ServiceOptions\<TResponse\>
 

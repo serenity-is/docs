@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / FormatterTypeRegistry
+[corelib](../README.md) / FormatterTypeRegistry
 
 # Variable: FormatterTypeRegistry
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / success
+[corelib](../README.md) / success
 
 # ~~Variable: success()~~
 

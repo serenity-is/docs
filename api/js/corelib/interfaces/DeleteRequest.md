@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DeleteRequest
+[corelib](../README.md) / DeleteRequest
 
 # Interface: DeleteRequest
 

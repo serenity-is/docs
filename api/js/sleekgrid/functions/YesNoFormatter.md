@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / YesNoFormatter
+[sleekgrid](../README.md) / YesNoFormatter
 
 # Function: YesNoFormatter()
 

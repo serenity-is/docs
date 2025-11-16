@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / BasePanel
+[corelib](../README.md) / BasePanel
 
 # Class: BasePanel\<P\>
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / trimToEmpty
+[corelib](../README.md) / trimToEmpty
 
 # Function: trimToEmpty()
 

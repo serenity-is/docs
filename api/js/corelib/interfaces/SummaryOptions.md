@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / SummaryOptions
+[corelib](../README.md) / SummaryOptions
 
 # Interface: SummaryOptions
 

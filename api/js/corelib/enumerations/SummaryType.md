@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / SummaryType
+[corelib](../README.md) / SummaryType
 
 # Enumeration: SummaryType
 

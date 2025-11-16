@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / DataGridInitEvent
+[corelib](../README.md) / DataGridInitEvent
 
 # Type Alias: DataGridInitEvent
 

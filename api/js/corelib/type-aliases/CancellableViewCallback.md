@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CancellableViewCallback
+[corelib](../README.md) / CancellableViewCallback
 
 # Type Alias: CancellableViewCallback()\<TItem\>
 

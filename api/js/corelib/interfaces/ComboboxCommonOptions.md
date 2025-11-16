@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ComboboxCommonOptions
+[corelib](../README.md) / ComboboxCommonOptions
 
 # Interface: ComboboxCommonOptions
 

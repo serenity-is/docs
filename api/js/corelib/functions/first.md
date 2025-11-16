@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / first
+[corelib](../README.md) / first
 
 # Function: first()
 

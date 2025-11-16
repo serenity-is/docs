@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / GroupByResult
+[corelib](../README.md) / GroupByResult
 
 # Type Alias: GroupByResult\<TItem\>
 

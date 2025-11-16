@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / delegateRemove
+[corelib](../README.md) / delegateRemove
 
 # Function: delegateRemove()
 

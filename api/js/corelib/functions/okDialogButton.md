@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / okDialogButton
+[corelib](../README.md) / okDialogButton
 
 # Function: okDialogButton()
 

@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / proxyTexts
+[corelib](../README.md) / proxyTexts
 
 # Function: proxyTexts()
 

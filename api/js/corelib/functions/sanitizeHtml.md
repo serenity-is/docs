@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / sanitizeHtml
+[corelib](../README.md) / sanitizeHtml
 
 # Function: sanitizeHtml()
 

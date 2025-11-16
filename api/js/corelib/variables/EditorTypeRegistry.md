@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / EditorTypeRegistry
+[corelib](../README.md) / EditorTypeRegistry
 
 # Variable: EditorTypeRegistry
 

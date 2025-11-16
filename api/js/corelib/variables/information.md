@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / information
+[corelib](../README.md) / information
 
 # ~~Variable: information()~~
 

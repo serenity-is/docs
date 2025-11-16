@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / padLeft
+[corelib](../README.md) / padLeft
 
 # Function: padLeft()
 

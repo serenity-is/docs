@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / GridRowSelectionMixinOptions
+[corelib](../README.md) / GridRowSelectionMixinOptions
 
 # Interface: GridRowSelectionMixinOptions
 

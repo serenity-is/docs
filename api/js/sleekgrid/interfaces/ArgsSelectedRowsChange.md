@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / ArgsSelectedRowsChange
+[sleekgrid](../README.md) / ArgsSelectedRowsChange
 
 # Interface: ArgsSelectedRowsChange
 

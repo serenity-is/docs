@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ComboboxInplaceAddOptions
+[corelib](../README.md) / ComboboxInplaceAddOptions
 
 # Interface: ComboboxInplaceAddOptions
 

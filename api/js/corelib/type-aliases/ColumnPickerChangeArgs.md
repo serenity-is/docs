@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ColumnPickerChangeArgs
+[corelib](../README.md) / ColumnPickerChangeArgs
 
 # Type Alias: ColumnPickerChangeArgs
 

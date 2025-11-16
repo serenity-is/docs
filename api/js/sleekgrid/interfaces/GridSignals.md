@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / GridSignals
+[sleekgrid](../README.md) / GridSignals
 
 # Interface: GridSignals
 

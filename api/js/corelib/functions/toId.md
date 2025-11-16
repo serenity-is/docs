@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / toId
+[corelib](../README.md) / toId
 
 # Function: toId()
 

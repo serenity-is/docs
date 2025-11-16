@@ -1,4 +1,4 @@
-[serenity-is/sleekgrid](../README.md) / parsePx
+[sleekgrid](../README.md) / parsePx
 
 # Function: parsePx()
 

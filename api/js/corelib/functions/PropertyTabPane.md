@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / PropertyTabPane
+[corelib](../README.md) / PropertyTabPane
 
 # Function: PropertyTabPane()
 

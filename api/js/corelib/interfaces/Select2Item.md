@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Select2Item
+[corelib](../README.md) / Select2Item
 
 # Interface: Select2Item
 

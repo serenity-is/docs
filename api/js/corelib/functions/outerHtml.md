@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / outerHtml
+[corelib](../README.md) / outerHtml
 
 # Function: outerHtml()
 

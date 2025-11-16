@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / Config
+[corelib](../README.md) / Config
 
 # Variable: Config
 

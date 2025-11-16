@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / warning
+[corelib](../README.md) / warning
 
 # ~~Variable: warning()~~
 

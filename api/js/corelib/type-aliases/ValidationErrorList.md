@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ValidationErrorList
+[corelib](../README.md) / ValidationErrorList
 
 # Type Alias: ValidationErrorList
 

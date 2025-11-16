@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / ConfirmDialogOptions
+[corelib](../README.md) / ConfirmDialogOptions
 
 # Interface: ConfirmDialogOptions
 

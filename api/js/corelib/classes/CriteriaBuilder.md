@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / CriteriaBuilder
+[corelib](../README.md) / CriteriaBuilder
 
 # Class: CriteriaBuilder
 

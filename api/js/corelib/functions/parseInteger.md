@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / parseInteger
+[corelib](../README.md) / parseInteger
 
 # Function: parseInteger()
 

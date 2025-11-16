@@ -1,4 +1,4 @@
-[serenity-is/corelib](../README.md) / QuickSearchInput
+[corelib](../README.md) / QuickSearchInput
 
 # Class: QuickSearchInput\<P\>
 

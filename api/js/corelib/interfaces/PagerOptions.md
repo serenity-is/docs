@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / PagerOptions
+[serenity-is/corelib](../README.md) / PagerOptions
 
 # Interface: PagerOptions
+
+Defined in: [src/slick/slicktypes.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L46)
 
 ## Properties
 
 ### onChangePage()?
 
 > `optional` **onChangePage**: (`newPage`) => `void`
+
+Defined in: [src/slick/slicktypes.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L51)
 
 #### Parameters
 
@@ -18,15 +22,13 @@
 
 `void`
 
-#### Defined in
-
-[src/slick/slicktypes.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L31)
-
 ***
 
 ### onRowsPerPageChange()?
 
 > `optional` **onRowsPerPageChange**: (`n`) => `void`
+
+Defined in: [src/slick/slicktypes.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L52)
 
 #### Parameters
 
@@ -38,19 +40,13 @@
 
 `void`
 
-#### Defined in
-
-[src/slick/slicktypes.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L32)
-
 ***
 
 ### rowsPerPage?
 
 > `optional` **rowsPerPage**: `number`
 
-#### Defined in
-
-[src/slick/slicktypes.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L29)
+Defined in: [src/slick/slicktypes.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L49)
 
 ***
 
@@ -58,9 +54,7 @@
 
 > `optional` **rowsPerPageOptions**: `number`[]
 
-#### Defined in
-
-[src/slick/slicktypes.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L30)
+Defined in: [src/slick/slicktypes.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L50)
 
 ***
 
@@ -68,9 +62,7 @@
 
 > `optional` **showRowsPerPage**: `boolean`
 
-#### Defined in
-
-[src/slick/slicktypes.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L28)
+Defined in: [src/slick/slicktypes.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L48)
 
 ***
 
@@ -78,6 +70,4 @@
 
 > `optional` **view**: `any`
 
-#### Defined in
-
-[src/slick/slicktypes.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L27)
+Defined in: [src/slick/slicktypes.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L47)

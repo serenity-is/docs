@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / PersistedGridColumn
+[serenity-is/corelib](../README.md) / PersistedGridColumn
 
 # Interface: PersistedGridColumn
+
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L18)
 
 ## Properties
 
@@ -8,9 +10,15 @@
 
 > **id**: `string`
 
-#### Defined in
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L19)
 
-[src/ui/datagrid/datagrid.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L35)
+***
+
+### pin?
+
+> `optional` **pin**: `false` \| `"start"` \| `"end"`
+
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L23)
 
 ***
 
@@ -18,9 +26,7 @@
 
 > `optional` **sort**: `number`
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L37)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L21)
 
 ***
 
@@ -28,9 +34,7 @@
 
 > `optional` **visible**: `boolean`
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L38)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L22)
 
 ***
 
@@ -38,6 +42,4 @@
 
 > `optional` **width**: `number`
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L36)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L20)

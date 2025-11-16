@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ServiceRequest
+[serenity-is/corelib](../README.md) / ServiceRequest
 
 # Interface: ServiceRequest
+
+Defined in: [src/base/servicetypes.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L13)
 
 ## Extended by
 

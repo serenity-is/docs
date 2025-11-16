@@ -1,10 +1,12 @@
-[@serenity-is/sleekgrid](../README.md) / keyCode
+[serenity-is/sleekgrid](../README.md) / keyCode
 
-# Variable: ~~keyCode~~
+# ~~Variable: keyCode~~
 
 > `const` **keyCode**: `object`
 
-## Type declaration
+Defined in: [src/core/event.ts:270](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L270)
+
+## Type Declaration
 
 ### ~~BACKSPACE~~
 
@@ -63,7 +65,3 @@
 > **UP**: `number` = `38`
 
 ## Deprecated
-
-## Defined in
-
-[core/event.ts:154](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L154)

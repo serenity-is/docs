@@ -1,19 +1,17 @@
-[@serenity-is/sleekgrid](../README.md) / PercentCompleteFormatter
+[serenity-is/sleekgrid](../README.md) / PercentCompleteFormatter
 
 # Function: PercentCompleteFormatter()
 
-> **PercentCompleteFormatter**(`ctx`): `string`
+> **PercentCompleteFormatter**(`ctx`): `HTMLSpanElement` \| `"-"`
+
+Defined in: [src/formatters/formatters.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/formatters/formatters.ts#L3)
 
 ## Parameters
 
 ### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ## Returns
 
-`string`
-
-## Defined in
-
-[formatters/formatters.ts:3](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L3)
+`HTMLSpanElement` \| `"-"`

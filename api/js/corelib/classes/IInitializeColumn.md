@@ -1,16 +1,26 @@
-[@serenity-is/corelib](../README.md) / IInitializeColumn
+[serenity-is/corelib](../README.md) / IInitializeColumn
 
-# Class: IInitializeColumn
+# Abstract Class: IInitializeColumn
+
+Defined in: [src/ui/formatters/iinitializecolumn.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/iinitializecolumn.ts#L4)
 
 ## Constructors
 
-### new IInitializeColumn()
+### Constructor
 
-> **new IInitializeColumn**(): [`IInitializeColumn`](IInitializeColumn.md)
+> **new IInitializeColumn**(): `IInitializeColumn`
 
 #### Returns
 
-[`IInitializeColumn`](IInitializeColumn.md)
+`IInitializeColumn`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/formatters/iinitializecolumn.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/iinitializecolumn.ts#L5)
 
 ## Methods
 
@@ -18,16 +28,14 @@
 
 > **initializeColumn**(`column`): `void`
 
+Defined in: [src/ui/formatters/iinitializecolumn.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/iinitializecolumn.ts#L9)
+
 #### Parameters
 
 ##### column
 
-`Column`\<`any`\>
+`Column`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L10)

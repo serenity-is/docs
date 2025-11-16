@@ -1,14 +1,18 @@
-[@serenity-is/corelib](../README.md) / indexOf
+[serenity-is/corelib](../README.md) / indexOf
 
 # Function: indexOf()
 
 > **indexOf**\<`TItem`\>(`array`, `predicate`): `number`
 
+Defined in: [src/compat/arrays-compat.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L103)
+
 Gets index of first element in an array that matches given predicate.
 
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Parameters
 
@@ -27,7 +31,3 @@ Predicate to test elements.
 ## Returns
 
 `number`
-
-## Defined in
-
-[src/q/arrays-compat.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays-compat.ts#L103)

@@ -1,15 +1,19 @@
-[@serenity-is/corelib](../README.md) / toGrouping
+[serenity-is/corelib](../README.md) / toGrouping
 
 # Function: toGrouping()
 
 > **toGrouping**\<`TItem`\>(`items`, `getKey`): [`Grouping`](../type-aliases/Grouping.md)\<`TItem`\>
+
+Defined in: [src/compat/arrays-compat.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L179)
 
 Maps an array into a dictionary with keys determined by specified getKey() callback,
 and values that are arrays containing elements for a particular key.
 
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Parameters
 
@@ -36,7 +40,3 @@ Grouping object.
 ```ts
 toGrouping([1, 2, 3], x => x % 2 == 0 ? "even" : "odd"); // { odd: [1, 3], even: [2] }
 ```
-
-## Defined in
-
-[src/q/arrays-compat.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays-compat.ts#L180)

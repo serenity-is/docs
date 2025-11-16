@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / removeClass
+[serenity-is/corelib](../README.md) / removeClass
 
 # Function: removeClass()
 
 > **removeClass**(`el`, `cls`): `void`
+
+Defined in: [src/base/html.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L71)
 
 Removes a CSS class from an element.
 
@@ -25,7 +27,3 @@ The CSS class to remove.
 `void`
 
 A boolean indicating whether the class was successfully removed.
-
-## Defined in
-
-[src/base/html.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L67)

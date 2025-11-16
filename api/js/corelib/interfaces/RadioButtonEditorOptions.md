@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / RadioButtonEditorOptions
+[serenity-is/corelib](../README.md) / RadioButtonEditorOptions
 
 # Interface: RadioButtonEditorOptions
+
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L7)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **enumKey**: `string`
 
-#### Defined in
-
-[src/ui/editors/radiobuttoneditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L10)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L8)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **enumType**: `any`
 
-#### Defined in
-
-[src/ui/editors/radiobuttoneditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L11)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L9)
 
 ***
 
@@ -28,6 +26,4 @@
 
 > `optional` **lookupKey**: `string`
 
-#### Defined in
-
-[src/ui/editors/radiobuttoneditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L12)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L10)

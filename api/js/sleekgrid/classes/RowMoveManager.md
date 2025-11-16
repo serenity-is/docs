@@ -1,16 +1,20 @@
-[@serenity-is/sleekgrid](../README.md) / RowMoveManager
+[serenity-is/sleekgrid](../README.md) / RowMoveManager
 
 # Class: RowMoveManager
 
+Defined in: [src/plugins/rowmovemanager.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L21)
+
 ## Implements
 
-- [`IPlugin`](../interfaces/IPlugin.md)
+- [`GridPlugin`](../interfaces/GridPlugin.md)
 
 ## Constructors
 
-### new RowMoveManager()
+### Constructor
 
-> **new RowMoveManager**(`options`?): [`RowMoveManager`](RowMoveManager.md)
+> **new RowMoveManager**(`options?`): `RowMoveManager`
+
+Defined in: [src/plugins/rowmovemanager.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L29)
 
 #### Parameters
 
@@ -20,31 +24,23 @@
 
 #### Returns
 
-[`RowMoveManager`](RowMoveManager.md)
-
-#### Defined in
-
-[plugins/rowmovemanager.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowmovemanager.ts#L29)
+`RowMoveManager`
 
 ## Properties
 
 ### onBeforeMoveRows
 
-> **onBeforeMoveRows**: [`EventEmitter`](EventEmitter.md)\<`ArgsMoveRows`, [`IEventData`](../interfaces/IEventData.md)\>
+> **onBeforeMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md), \{ \}\>
 
-#### Defined in
-
-[plugins/rowmovemanager.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowmovemanager.ts#L26)
+Defined in: [src/plugins/rowmovemanager.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L26)
 
 ***
 
 ### onMoveRows
 
-> **onMoveRows**: [`EventEmitter`](EventEmitter.md)\<`ArgsMoveRows`, [`IEventData`](../interfaces/IEventData.md)\>
+> **onMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md), \{ \}\>
 
-#### Defined in
-
-[plugins/rowmovemanager.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowmovemanager.ts#L27)
+Defined in: [src/plugins/rowmovemanager.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L27)
 
 ***
 
@@ -52,9 +48,7 @@
 
 > `readonly` `static` **defaults**: [`RowMoveManagerOptions`](../interfaces/RowMoveManagerOptions.md)
 
-#### Defined in
-
-[plugins/rowmovemanager.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowmovemanager.ts#L33)
+Defined in: [src/plugins/rowmovemanager.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L33)
 
 ## Methods
 
@@ -62,17 +56,15 @@
 
 > **destroy**(): `void`
 
+Defined in: [src/plugins/rowmovemanager.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L46)
+
 #### Returns
 
 `void`
 
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`destroy`](../interfaces/IPlugin.md#destroy)
-
-#### Defined in
-
-[plugins/rowmovemanager.ts:45](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowmovemanager.ts#L45)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`destroy`](../interfaces/GridPlugin.md#destroy)
 
 ***
 
@@ -80,11 +72,13 @@
 
 > **init**(`grid`): `void`
 
+Defined in: [src/plugins/rowmovemanager.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L37)
+
 #### Parameters
 
 ##### grid
 
-[`Grid`](Grid.md)\<`any`\>
+[`ISleekGrid`](../interfaces/ISleekGrid.md)
 
 #### Returns
 
@@ -92,8 +86,4 @@
 
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`init`](../interfaces/IPlugin.md#init)
-
-#### Defined in
-
-[plugins/rowmovemanager.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowmovemanager.ts#L37)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`init`](../interfaces/GridPlugin.md#init)

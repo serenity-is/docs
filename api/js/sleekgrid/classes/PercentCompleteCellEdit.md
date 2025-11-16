@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / PercentCompleteCellEdit
+[serenity-is/sleekgrid](../README.md) / PercentCompleteCellEdit
 
 # Class: PercentCompleteCellEdit
+
+Defined in: [src/editors/editors.tsx:293](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L293)
 
 ## Extends
 
@@ -8,9 +10,11 @@
 
 ## Constructors
 
-### new PercentCompleteCellEdit()
+### Constructor
 
-> **new PercentCompleteCellEdit**(`args`): [`PercentCompleteCellEdit`](PercentCompleteCellEdit.md)
+> **new PercentCompleteCellEdit**(`args`): `PercentCompleteCellEdit`
+
+Defined in: [src/editors/editors.tsx:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L9)
 
 #### Parameters
 
@@ -20,15 +24,11 @@
 
 #### Returns
 
-[`PercentCompleteCellEdit`](PercentCompleteCellEdit.md)
+`PercentCompleteCellEdit`
 
 #### Inherited from
 
-[`IntegerCellEdit`](IntegerCellEdit.md).[`constructor`](IntegerCellEdit.md#constructors)
-
-#### Defined in
-
-[editors/editors.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L8)
+[`IntegerCellEdit`](IntegerCellEdit.md).[`constructor`](IntegerCellEdit.md#constructor)
 
 ## Properties
 
@@ -36,13 +36,11 @@
 
 > `protected` **\_args**: [`EditorOptions`](../interfaces/EditorOptions.md)
 
+Defined in: [src/editors/editors.tsx:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L7)
+
 #### Inherited from
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`_args`](IntegerCellEdit.md#_args)
-
-#### Defined in
-
-[editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L6)
 
 ***
 
@@ -50,13 +48,11 @@
 
 > `protected` **\_defaultValue**: `any`
 
+Defined in: [src/editors/editors.tsx:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L6)
+
 #### Inherited from
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`_defaultValue`](IntegerCellEdit.md#_defaultvalue)
-
-#### Defined in
-
-[editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L5)
 
 ***
 
@@ -64,13 +60,11 @@
 
 > **\_input**: `HTMLInputElement`
 
+Defined in: [src/editors/editors.tsx:70](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L70)
+
 #### Inherited from
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`_input`](IntegerCellEdit.md#_input)
-
-#### Defined in
-
-[editors/editors.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L69)
 
 ***
 
@@ -78,15 +72,15 @@
 
 > `protected` **\_picker**: `HTMLDivElement`
 
-#### Defined in
-
-[editors/editors.ts:292](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L292)
+Defined in: [src/editors/editors.tsx:294](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L294)
 
 ## Methods
 
 ### applyValue()
 
 > **applyValue**(`item`, `state`): `void`
+
+Defined in: [src/editors/editors.tsx:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L45)
 
 #### Parameters
 
@@ -106,15 +100,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`applyValue`](IntegerCellEdit.md#applyvalue)
 
-#### Defined in
-
-[editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L44)
-
 ***
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: [src/editors/editors.tsx:342](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L342)
 
 #### Returns
 
@@ -124,15 +116,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`destroy`](IntegerCellEdit.md#destroy)
 
-#### Defined in
-
-[editors/editors.ts:336](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L336)
-
 ***
 
 ### focus()
 
 > **focus**(): `void`
+
+Defined in: [src/editors/editors.tsx:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L20)
 
 #### Returns
 
@@ -142,15 +132,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`focus`](IntegerCellEdit.md#focus)
 
-#### Defined in
-
-[editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L19)
-
 ***
 
 ### getValue()
 
 > **getValue**(): `string`
+
+Defined in: [src/editors/editors.tsx:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L24)
 
 #### Returns
 
@@ -160,15 +148,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`getValue`](IntegerCellEdit.md#getvalue)
 
-#### Defined in
-
-[editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L23)
-
 ***
 
 ### init()
 
 > **init**(): `void`
+
+Defined in: [src/editors/editors.tsx:296](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L296)
 
 #### Returns
 
@@ -178,15 +164,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`init`](IntegerCellEdit.md#init)
 
-#### Defined in
-
-[editors/editors.ts:294](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L294)
-
 ***
 
 ### isValueChanged()
 
 > **isValueChanged**(): `boolean`
+
+Defined in: [src/editors/editors.tsx:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L49)
 
 #### Returns
 
@@ -196,15 +180,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`isValueChanged`](IntegerCellEdit.md#isvaluechanged)
 
-#### Defined in
-
-[editors/editors.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L48)
-
 ***
 
 ### loadValue()
 
 > **loadValue**(`item`): `void`
+
+Defined in: [src/editors/editors.tsx:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L32)
 
 #### Parameters
 
@@ -220,15 +202,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`loadValue`](IntegerCellEdit.md#loadvalue)
 
-#### Defined in
-
-[editors/editors.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L31)
-
 ***
 
 ### serializeValue()
 
 > **serializeValue**(): `number`
+
+Defined in: [src/editors/editors.tsx:84](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L84)
 
 #### Returns
 
@@ -238,15 +218,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`serializeValue`](IntegerCellEdit.md#serializevalue)
 
-#### Defined in
-
-[editors/editors.ts:83](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L83)
-
 ***
 
 ### setValue()
 
 > **setValue**(`val`): `void`
+
+Defined in: [src/editors/editors.tsx:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L28)
 
 #### Parameters
 
@@ -262,15 +240,13 @@
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`setValue`](IntegerCellEdit.md#setvalue)
 
-#### Defined in
-
-[editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L27)
-
 ***
 
 ### validate()
 
 > **validate**(): [`ValidationResult`](../interfaces/ValidationResult.md)
+
+Defined in: [src/editors/editors.tsx:88](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L88)
 
 #### Returns
 
@@ -279,7 +255,3 @@
 #### Inherited from
 
 [`IntegerCellEdit`](IntegerCellEdit.md).[`validate`](IntegerCellEdit.md#validate)
-
-#### Defined in
-
-[editors/editors.ts:87](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L87)

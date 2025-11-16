@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / RowSelectionModelOptions
+[serenity-is/sleekgrid](../README.md) / RowSelectionModelOptions
 
 # Interface: RowSelectionModelOptions
+
+Defined in: [src/plugins/rowselectionmodel.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L3)
 
 ## Properties
 
@@ -8,6 +10,4 @@
 
 > `optional` **selectActiveRow**: `boolean`
 
-#### Defined in
-
-[plugins/rowselectionmodel.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L5)
+Defined in: [src/plugins/rowselectionmodel.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L4)

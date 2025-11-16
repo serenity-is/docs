@@ -1,16 +1,20 @@
-[@serenity-is/sleekgrid](../README.md) / GroupItemMetadataProvider
+[serenity-is/sleekgrid](../README.md) / GroupItemMetadataProvider
 
 # Class: GroupItemMetadataProvider
 
+Defined in: [src/data/groupitemmetadataprovider.tsx:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L26)
+
 ## Implements
 
-- [`IPlugin`](../interfaces/IPlugin.md)
+- [`GridPlugin`](../interfaces/GridPlugin.md)
 
 ## Constructors
 
-### new GroupItemMetadataProvider()
+### Constructor
 
-> **new GroupItemMetadataProvider**(`opt`?): [`GroupItemMetadataProvider`](GroupItemMetadataProvider.md)
+> **new GroupItemMetadataProvider**(`opt?`): `GroupItemMetadataProvider`
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L30)
 
 #### Parameters
 
@@ -20,61 +24,51 @@
 
 #### Returns
 
-[`GroupItemMetadataProvider`](GroupItemMetadataProvider.md)
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L29)
+`GroupItemMetadataProvider`
 
 ## Properties
 
 ### getGroupRowMetadata()
 
-> **getGroupRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
+> **getGroupRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:223](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L223)
 
 #### Parameters
 
 ##### item
 
-[`Group`](Group.md)\<`any`\>
+[`Group`](Group.md)
 
 #### Returns
 
-[`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:193](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L193)
+[`ItemMetadata`](../interfaces/ItemMetadata.md)
 
 ***
 
 ### getTotalsRowMetadata()
 
-> **getTotalsRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
+> **getTotalsRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:247](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L247)
 
 #### Parameters
 
 ##### item
 
-[`GroupTotals`](GroupTotals.md)\<`any`\>
+[`IGroupTotals`](../interfaces/IGroupTotals.md)
 
 #### Returns
 
-[`ItemMetadata`](../interfaces/ItemMetadata.md)\<`any`\>
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:217](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L217)
+[`ItemMetadata`](../interfaces/ItemMetadata.md)
 
 ***
 
 ### grid
 
-> `protected` **grid**: [`Grid`](Grid.md)\<`any`\>
+> `protected` **grid**: [`ISleekGrid`](../interfaces/ISleekGrid.md)
 
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L26)
+Defined in: [src/data/groupitemmetadataprovider.tsx:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L27)
 
 ***
 
@@ -82,13 +76,11 @@
 
 > `readonly` **pluginName**: `"GroupItemMetadataProvider"` = `"GroupItemMetadataProvider"`
 
+Defined in: [src/data/groupitemmetadataprovider.tsx:107](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L107)
+
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`pluginName`](../interfaces/IPlugin.md#pluginname)
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:77](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L77)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`pluginName`](../interfaces/GridPlugin.md#pluginname)
 
 ***
 
@@ -96,9 +88,7 @@
 
 > `readonly` `static` **defaults**: [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
 
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L37)
+Defined in: [src/data/groupitemmetadataprovider.tsx:38](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L38)
 
 ## Methods
 
@@ -106,17 +96,15 @@
 
 > **destroy**(): `void`
 
+Defined in: [src/data/groupitemmetadataprovider.tsx:109](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L109)
+
 #### Returns
 
 `void`
 
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`destroy`](../interfaces/IPlugin.md#destroy)
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L79)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`destroy`](../interfaces/GridPlugin.md#destroy)
 
 ***
 
@@ -124,19 +112,19 @@
 
 > **getOptions**(): [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
 
+Defined in: [src/data/groupitemmetadataprovider.tsx:116](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L116)
+
 #### Returns
 
 [`GroupItemMetadataProviderOptions`](../interfaces/GroupItemMetadataProviderOptions.md)
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:86](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L86)
 
 ***
 
 ### groupCellPosition()
 
 > **groupCellPosition**(): `object`
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:186](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L186)
 
 #### Returns
 
@@ -150,57 +138,41 @@
 
 > **colspan**: `number` \| `"*"`
 
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:156](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L156)
-
 ***
 
 ### handleGridClick()
 
-> **handleGridClick**(`e`, `args`): `void`
+> **handleGridClick**(`e`): `void`
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:124](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L124)
 
 #### Parameters
 
 ##### e
 
-`MouseEvent`
-
-##### args
-
-[`ArgsCell`](../interfaces/ArgsCell.md)
+[`CellMouseEvent`](../type-aliases/CellMouseEvent.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:94](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L94)
 
 ***
 
 ### handleGridKeyDown()
 
-> **handleGridKeyDown**(`e`, `args`): `void`
+> **handleGridKeyDown**(`e`): `void`
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:150](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L150)
 
 #### Parameters
 
 ##### e
 
-`KeyboardEvent`
-
-##### args
-
-[`ArgsCell`](../interfaces/ArgsCell.md)
+[`CellKeyboardEvent`](../type-aliases/CellKeyboardEvent.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:120](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L120)
 
 ***
 
@@ -208,11 +180,13 @@
 
 > **init**(`grid`): `void`
 
+Defined in: [src/data/groupitemmetadataprovider.tsx:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L101)
+
 #### Parameters
 
 ##### grid
 
-[`Grid`](Grid.md)\<`any`\>
+[`ISleekGrid`](../interfaces/ISleekGrid.md)
 
 #### Returns
 
@@ -220,17 +194,15 @@
 
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`init`](../interfaces/IPlugin.md#init)
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L71)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`init`](../interfaces/GridPlugin.md#init)
 
 ***
 
 ### setOptions()
 
 > **setOptions**(`value`): `void`
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:120](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L120)
 
 #### Parameters
 
@@ -242,21 +214,19 @@
 
 `void`
 
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:90](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L90)
-
 ***
 
 ### defaultGroupFormat()
 
-> `static` **defaultGroupFormat**(`ctx`, `opt`?): `string`
+> `static` **defaultGroupFormat**(`ctx`, `opt?`): [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:54](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L54)
 
 #### Parameters
 
 ##### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ##### opt?
 
@@ -264,32 +234,26 @@
 
 #### Returns
 
-`string`
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:53](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L53)
+[`FormatterResult`](../type-aliases/FormatterResult.md)
 
 ***
 
 ### defaultTotalsFormat()
 
-> `static` **defaultTotalsFormat**(`ctx`, `grid`?): `string`
+> `static` **defaultTotalsFormat**(`ctx`, `grid?`): [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/data/groupitemmetadataprovider.tsx:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L85)
 
 #### Parameters
 
 ##### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ##### grid?
 
-[`Grid`](Grid.md)\<`any`\>
+[`ISleekGrid`](../interfaces/ISleekGrid.md)
 
 #### Returns
 
-`string`
-
-#### Defined in
-
-[data/groupitemmetadataprovider.ts:63](https://github.com/serenity-is/sleekgrid/blob/master/src/data/groupitemmetadataprovider.ts#L63)
+[`FormatterResult`](../type-aliases/FormatterResult.md)

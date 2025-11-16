@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / DialogButton
+[serenity-is/corelib](../README.md) / DialogButton
 
 # Interface: DialogButton
+
+Defined in: [src/base/dialogs.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L12)
 
 Options for a message dialog button
 
@@ -9,6 +11,8 @@ Options for a message dialog button
 ### click()?
 
 > `optional` **click**: (`e`) => `false` \| `void` \| `Promise`\<`false` \| `void`\>
+
+Defined in: [src/base/dialogs.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L20)
 
 Click handler
 
@@ -22,21 +26,15 @@ Click handler
 
 `false` \| `void` \| `Promise`\<`false` \| `void`\>
 
-#### Defined in
-
-[src/base/dialogs.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L19)
-
 ***
 
 ### cssClass?
 
 > `optional` **cssClass**: `string`
 
+Defined in: [src/base/dialogs.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L22)
+
 CSS class for button
-
-#### Defined in
-
-[src/base/dialogs.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L21)
 
 ***
 
@@ -44,11 +42,9 @@ CSS class for button
 
 > `optional` **hint**: `string`
 
+Defined in: [src/base/dialogs.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L16)
+
 Button hint
-
-#### Defined in
-
-[src/base/dialogs.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L15)
 
 ***
 
@@ -56,11 +52,9 @@ Button hint
 
 > `optional` **icon**: [`IconClassName`](../type-aliases/IconClassName.md)
 
+Defined in: [src/base/dialogs.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L18)
+
 Button icon
-
-#### Defined in
-
-[src/base/dialogs.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L17)
 
 ***
 
@@ -68,12 +62,10 @@ Button icon
 
 > `optional` **result**: `string`
 
+Defined in: [src/base/dialogs.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L26)
+
 The code that is returned from message dialog function when this button is clicked.
  If this is set, and click event will not be defaultPrevented dialog will close.
-
-#### Defined in
-
-[src/base/dialogs.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L25)
 
 ***
 
@@ -81,8 +73,6 @@ The code that is returned from message dialog function when this button is click
 
 > `optional` **text**: `string`
 
+Defined in: [src/base/dialogs.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L14)
+
 Button text
-
-#### Defined in
-
-[src/base/dialogs.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L13)

@@ -1,22 +1,34 @@
-[@serenity-is/corelib](../README.md) / ISetEditValue
+[serenity-is/corelib](../README.md) / ISetEditValue
 
-# Class: ISetEditValue
+# Abstract Class: ISetEditValue
+
+Defined in: [src/interfaces/iseteditvalue.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L3)
 
 ## Constructors
 
-### new ISetEditValue()
+### Constructor
 
-> **new ISetEditValue**(): [`ISetEditValue`](ISetEditValue.md)
+> **new ISetEditValue**(): `ISetEditValue`
 
 #### Returns
 
-[`ISetEditValue`](ISetEditValue.md)
+`ISetEditValue`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/interfaces/iseteditvalue.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L4)
 
 ## Methods
 
 ### setEditValue()
 
 > **setEditValue**(`source`, `property`): `void`
+
+Defined in: [src/interfaces/iseteditvalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L8)
 
 #### Parameters
 
@@ -31,7 +43,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/interfaces/iseteditvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L9)

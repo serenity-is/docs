@@ -1,12 +1,18 @@
-[@serenity-is/corelib](../README.md) / getRemoteData
+[serenity-is/corelib](../README.md) / getRemoteData
 
 # Function: getRemoteData()
 
 > **getRemoteData**\<`TData`\>(`key`): `TData`
 
+Defined in: [src/base/scriptdata.ts:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L240)
+
+Synchronous version of getRemoteDataAsync for compatibility
+
 ## Type Parameters
 
-• **TData** = `any`
+### TData
+
+`TData` = `any`
 
 ## Parameters
 
@@ -14,10 +20,8 @@
 
 `string`
 
+Remote data key
+
 ## Returns
 
 `TData`
-
-## Defined in
-
-[src/q/scriptdata-compat.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L91)

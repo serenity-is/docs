@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / executeOnceWhenVisible
+[serenity-is/corelib](../README.md) / executeOnceWhenVisible
 
 # Function: executeOnceWhenVisible()
 
-> **executeOnceWhenVisible**(`el`, `callback`): `void`
+> **executeOnceWhenVisible**(`el`, `callback`): `number`
+
+Defined in: [src/compat/layouttimer.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layouttimer.ts#L176)
 
 ## Parameters
 
@@ -16,8 +18,4 @@
 
 ## Returns
 
-`void`
-
-## Defined in
-
-[src/q/layouttimer.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L140)
+`number`

@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / UploaderErrorData
+[serenity-is/corelib](../README.md) / UploaderErrorData
 
 # Interface: UploaderErrorData
+
+Defined in: [src/base/uploader.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L70)
 
 ## Properties
 
@@ -8,19 +10,15 @@
 
 > `optional` **batch**: [`UploaderBatch`](UploaderBatch.md)
 
-#### Defined in
-
-[src/base/uploader.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L71)
+Defined in: [src/base/uploader.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L71)
 
 ***
 
 ### event?
 
-> `optional` **event**: `ProgressEvent`\<`EventTarget`\>
+> `optional` **event**: `ProgressEvent`
 
-#### Defined in
-
-[src/base/uploader.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L72)
+Defined in: [src/base/uploader.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L72)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **exception**: `any`
 
-#### Defined in
-
-[src/base/uploader.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L73)
+Defined in: [src/base/uploader.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L73)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > `optional` **request**: [`UploaderRequest`](UploaderRequest.md)
 
-#### Defined in
-
-[src/base/uploader.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L74)
+Defined in: [src/base/uploader.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L74)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > `optional` **response**: `any`
 
-#### Defined in
-
-[src/base/uploader.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L75)
+Defined in: [src/base/uploader.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L75)
 
 ***
 
@@ -58,6 +50,4 @@
 
 > `optional` **xhr**: `XMLHttpRequest`
 
-#### Defined in
-
-[src/base/uploader.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L76)
+Defined in: [src/base/uploader.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L76)

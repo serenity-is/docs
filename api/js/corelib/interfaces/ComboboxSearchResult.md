@@ -1,10 +1,14 @@
-[@serenity-is/corelib](../README.md) / ComboboxSearchResult
+[serenity-is/corelib](../README.md) / ComboboxSearchResult
 
 # Interface: ComboboxSearchResult\<TItem\>
 
+Defined in: [src/ui/editors/combobox.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L24)
+
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Properties
 
@@ -12,9 +16,7 @@
 
 > **items**: `TItem`[]
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L25)
+Defined in: [src/ui/editors/combobox.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L25)
 
 ***
 
@@ -22,6 +24,4 @@
 
 > **more**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L26)
+Defined in: [src/ui/editors/combobox.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L26)

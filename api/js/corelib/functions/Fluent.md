@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / Fluent
+[serenity-is/corelib](../README.md) / Fluent
 
 # Function: Fluent()
 
@@ -6,9 +6,13 @@
 
 > **Fluent**\<`K`\>(`tag`): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElementTagNameMap`\[`K`\]\>
 
+Defined in: [src/base/fluent.ts:416](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L416)
+
 ### Type Parameters
 
-• **K** *extends* keyof `HTMLElementTagNameMap`
+#### K
+
+`K` *extends* keyof `HTMLElementTagNameMap`
 
 ### Parameters
 
@@ -20,17 +24,17 @@
 
 [`Fluent`](../interfaces/Fluent.md)\<`HTMLElementTagNameMap`\[`K`\]\>
 
-### Defined in
-
-[src/base/fluent.ts:398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L398)
-
 ## Call Signature
 
 > **Fluent**\<`TElement`\>(`element`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
+Defined in: [src/base/fluent.ts:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L417)
+
 ### Type Parameters
 
-• **TElement** *extends* `HTMLElement`
+#### TElement
+
+`TElement` *extends* `HTMLElement`
 
 ### Parameters
 
@@ -42,13 +46,11 @@
 
 [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
-### Defined in
-
-[src/base/fluent.ts:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L399)
-
 ## Call Signature
 
 > **Fluent**(`element`): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+
+Defined in: [src/base/fluent.ts:418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L418)
 
 ### Parameters
 
@@ -59,7 +61,3 @@
 ### Returns
 
 [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
-
-### Defined in
-
-[src/base/fluent.ts:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L400)

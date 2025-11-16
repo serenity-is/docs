@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / SaveRequest
+[serenity-is/corelib](../README.md) / SaveRequest
 
 # Interface: SaveRequest\<TEntity\>
+
+Defined in: [src/base/servicetypes.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L16)
 
 ## Extends
 
@@ -8,7 +10,9 @@
 
 ## Type Parameters
 
-• **TEntity**
+### TEntity
+
+`TEntity`
 
 ## Properties
 
@@ -16,9 +20,7 @@
 
 > `optional` **Entity**: `TEntity`
 
-#### Defined in
-
-[src/base/servicetypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L18)
+Defined in: [src/base/servicetypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L18)
 
 ***
 
@@ -26,9 +28,7 @@
 
 > `optional` **EntityId**: `any`
 
-#### Defined in
-
-[src/base/servicetypes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L17)
+Defined in: [src/base/servicetypes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L17)
 
 ***
 
@@ -36,10 +36,8 @@
 
 > `optional` **Localizations**: `object`
 
+Defined in: [src/base/servicetypes.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L19)
+
 #### Index Signature
 
- \[`languageId`: `string`\]: `Partial`\<`TEntity`\>
-
-#### Defined in
-
-[src/base/servicetypes.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L19)
+\[`languageId`: `string`\]: `Partial`\<`TEntity`\>

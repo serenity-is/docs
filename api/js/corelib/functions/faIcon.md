@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / faIcon
+[serenity-is/corelib](../README.md) / faIcon
 
 # Function: faIcon()
 
-> **faIcon**(`key`, `color`?): `string`
+> **faIcon**(`key`, `color?`): `string`
+
+Defined in: [src/base/icons.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L39)
 
 Returns the CSS class for a Font Awesome icon.
 
@@ -25,7 +27,3 @@ The optional color of the icon.
 `string`
 
 The CSS class for the icon.
-
-## Defined in
-
-[src/base/icons.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L39)

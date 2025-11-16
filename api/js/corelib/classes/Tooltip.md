@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / Tooltip
+[serenity-is/corelib](../README.md) / Tooltip
 
 # Class: Tooltip
 
+Defined in: [src/base/tooltip.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L10)
+
 ## Constructors
 
-### new Tooltip()
+### Constructor
 
-> **new Tooltip**(`el`, `opt`?): [`Tooltip`](Tooltip.md)
+> **new Tooltip**(`el`, `opt?`): `Tooltip`
+
+Defined in: [src/base/tooltip.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L13)
 
 #### Parameters
 
@@ -20,11 +24,7 @@
 
 #### Returns
 
-[`Tooltip`](Tooltip.md)
-
-#### Defined in
-
-[src/base/tooltip.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L12)
+`Tooltip`
 
 ## Properties
 
@@ -32,9 +32,7 @@
 
 > `static` **defaults**: [`TooltipOptions`](../interfaces/TooltipOptions.md)
 
-#### Defined in
-
-[src/base/tooltip.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L36)
+Defined in: [src/base/tooltip.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L37)
 
 ## Accessors
 
@@ -44,13 +42,11 @@
 
 > **get** `static` **isAvailable**(): `boolean`
 
+Defined in: [src/base/tooltip.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L77)
+
 ##### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/base/tooltip.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L76)
 
 ## Methods
 
@@ -58,6 +54,8 @@
 
 > **delayedDispose**(`delay`): `void`
 
+Defined in: [src/base/tooltip.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L48)
+
 #### Parameters
 
 ##### delay
@@ -67,10 +65,6 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/base/tooltip.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L47)
 
 ***
 
@@ -78,6 +72,8 @@
 
 > **delayedHide**(`delay`): `void`
 
+Defined in: [src/base/tooltip.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L52)
+
 #### Parameters
 
 ##### delay
@@ -88,43 +84,37 @@
 
 `void`
 
-#### Defined in
-
-[src/base/tooltip.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L51)
-
 ***
 
 ### dispose()
 
 > **dispose**(): `void`
 
+Defined in: [src/base/tooltip.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L41)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/base/tooltip.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L40)
 
 ***
 
 ### hide()
 
-> **hide**(): [`Tooltip`](Tooltip.md)
+> **hide**(): `Tooltip`
+
+Defined in: [src/base/tooltip.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L112)
 
 #### Returns
 
-[`Tooltip`](Tooltip.md)
-
-#### Defined in
-
-[src/base/tooltip.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L111)
+`Tooltip`
 
 ***
 
 ### setTitle()
 
-> **setTitle**(`value`): [`Tooltip`](Tooltip.md)
+> **setTitle**(`value`): `Tooltip`
+
+Defined in: [src/base/tooltip.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L82)
 
 #### Parameters
 
@@ -134,31 +124,27 @@
 
 #### Returns
 
-[`Tooltip`](Tooltip.md)
-
-#### Defined in
-
-[src/base/tooltip.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L81)
+`Tooltip`
 
 ***
 
 ### show()
 
-> **show**(): [`Tooltip`](Tooltip.md)
+> **show**(): `Tooltip`
+
+Defined in: [src/base/tooltip.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L116)
 
 #### Returns
 
-[`Tooltip`](Tooltip.md)
-
-#### Defined in
-
-[src/base/tooltip.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L115)
+`Tooltip`
 
 ***
 
 ### toggle()
 
-> **toggle**(`show`): [`Tooltip`](Tooltip.md)
+> **toggle**(`show`): `Tooltip`
+
+Defined in: [src/base/tooltip.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L100)
 
 #### Parameters
 
@@ -168,17 +154,15 @@
 
 #### Returns
 
-[`Tooltip`](Tooltip.md)
-
-#### Defined in
-
-[src/base/tooltip.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L99)
+`Tooltip`
 
 ***
 
 ### getInstance()
 
-> `static` **getInstance**(`el`): [`Tooltip`](Tooltip.md)
+> `static` **getInstance**(`el`): `Tooltip`
+
+Defined in: [src/base/tooltip.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L69)
 
 #### Parameters
 
@@ -188,8 +172,4 @@
 
 #### Returns
 
-[`Tooltip`](Tooltip.md)
-
-#### Defined in
-
-[src/base/tooltip.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L68)
+`Tooltip`

@@ -1,29 +1,27 @@
-[@serenity-is/corelib](../README.md) / PropertyFieldCaption
+[serenity-is/corelib](../README.md) / PropertyFieldCaption
 
 # Function: PropertyFieldCaption()
 
 > **PropertyFieldCaption**(`props`): `HTMLLabelElement`
 
+Defined in: [src/ui/widgets/propertygrid.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L14)
+
 ## Parameters
 
 ### props
 
-#### props.idPrefix
+#### idPrefix?
 
 `string`
 
-#### props.item
+#### item
 
-`Pick`\<[`PropertyItem`](../interfaces/PropertyItem.md), `"title"` \| `"name"` \| `"required"` \| `"hint"` \| `"labelWidth"`\>
+`Pick`\<[`PropertyItem`](../interfaces/PropertyItem.md), `"name"` \| `"hint"` \| `"labelWidth"` \| `"required"` \| `"title"`\>
 
-#### props.localTextPrefix
+#### localTextPrefix?
 
 `string`
 
 ## Returns
 
 `HTMLLabelElement`
-
-## Defined in
-
-[src/ui/widgets/propertygrid.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L17)

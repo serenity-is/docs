@@ -1,8 +1,12 @@
-[@serenity-is/corelib](../README.md) / registerClass
+[serenity-is/corelib](../README.md) / registerClass
 
 # Function: registerClass()
 
-> **registerClass**(`type`, `name`, `intf`?): `void`
+> **registerClass**(`type`, `name`, `intfAndAttr?`): `void`
+
+Defined in: [src/base/system.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L230)
+
+Register a class with the type system.
 
 ## Parameters
 
@@ -10,18 +14,20 @@
 
 `any`
 
+Class type to register
+
 ### name
 
 `string`
 
-### intf?
+Name to register the class under
 
-`any`[]
+### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+Optional interfaces and attributes the class implements
 
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/base/system.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L111)

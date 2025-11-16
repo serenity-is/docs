@@ -1,25 +1,23 @@
-[@serenity-is/corelib](../README.md) / registerType
+[serenity-is/corelib](../README.md) / registerType
 
 # Function: registerType()
 
 > **registerType**(`type`): `void`
 
+Defined in: [src/base/system.ts:614](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L614)
+
 ## Parameters
 
 ### type
 
-#### type.name
-
-`string`
-
-#### type.typeInfo
+#### [typeInfo]
 
 [`TypeInfo`](../type-aliases/TypeInfo.md)\<`any`\>
+
+#### name
+
+`string`
 
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/base/system.ts:301](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L301)

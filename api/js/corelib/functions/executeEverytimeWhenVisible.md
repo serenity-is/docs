@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / executeEverytimeWhenVisible
+[serenity-is/corelib](../README.md) / executeEverytimeWhenVisible
 
 # Function: executeEverytimeWhenVisible()
 
-> **executeEverytimeWhenVisible**(`el`, `callback`, `callNowIfVisible`): `void`
+> **executeEverytimeWhenVisible**(`el`, `callback`, `callNowIfVisible`): `number`
+
+Defined in: [src/compat/layouttimer.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layouttimer.ts#L192)
 
 ## Parameters
 
@@ -20,8 +22,4 @@
 
 ## Returns
 
-`void`
-
-## Defined in
-
-[src/q/layouttimer.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layouttimer.ts#L155)
+`number`

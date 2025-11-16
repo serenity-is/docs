@@ -1,10 +1,13 @@
-[@serenity-is/sleekgrid](../README.md) / ArgsGrid
+[serenity-is/sleekgrid](../README.md) / ArgsGrid
 
 # Interface: ArgsGrid
+
+Defined in: [src/core/eventargs.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L4)
 
 ## Extended by
 
 - [`ArgsColumn`](ArgsColumn.md)
+- [`ArgsDrag`](ArgsDrag.md)
 - [`ArgsSort`](ArgsSort.md)
 - [`ArgsSelectedRowsChange`](ArgsSelectedRowsChange.md)
 - [`ArgsScroll`](ArgsScroll.md)
@@ -14,10 +17,8 @@
 
 ## Properties
 
-### grid?
+### grid
 
-> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-#### Defined in
-
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)

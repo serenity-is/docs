@@ -1,18 +1,20 @@
-[@serenity-is/corelib](../README.md) / notifySuccess
+[serenity-is/corelib](../README.md) / notifySuccess
 
 # Function: notifySuccess()
 
-> **notifySuccess**(`message`, `title`?, `options`?): `void`
+> **notifySuccess**(`message`, `title?`, `options?`): `void`
+
+Defined in: [src/base/notify.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L53)
 
 ## Parameters
 
 ### message
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ### title?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ### options?
 
@@ -21,7 +23,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/base/notify.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L52)

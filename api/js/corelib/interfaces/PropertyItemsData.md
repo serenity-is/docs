@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / PropertyItemsData
+[serenity-is/corelib](../README.md) / PropertyItemsData
 
 # Interface: PropertyItemsData
+
+Defined in: [src/base/propertyitem.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L84)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > **additionalItems**: [`PropertyItem`](PropertyItem.md)[]
 
-#### Defined in
-
-[src/base/propertyitem.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L78)
+Defined in: [src/base/propertyitem.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L86)
 
 ***
 
@@ -18,6 +18,4 @@
 
 > **items**: [`PropertyItem`](PropertyItem.md)[]
 
-#### Defined in
-
-[src/base/propertyitem.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L77)
+Defined in: [src/base/propertyitem.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L85)

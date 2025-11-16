@@ -1,8 +1,10 @@
-[@serenity-is/sleekgrid](../README.md) / disableSelection
+[serenity-is/sleekgrid](../README.md) / disableSelection
 
 # Function: disableSelection()
 
 > **disableSelection**(`target`): `void`
+
+Defined in: [src/core/util.tsx:132](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/util.tsx#L132)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[core/util.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L44)

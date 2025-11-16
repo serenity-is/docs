@@ -1,41 +1,39 @@
-[@serenity-is/corelib](../README.md) / PropertyTabs
+[serenity-is/corelib](../README.md) / PropertyTabs
 
 # Function: PropertyTabs()
 
-> **PropertyTabs**(`props`): `DocumentFragment` \| `null`
+> **PropertyTabs**(`props`): `DocumentFragment`
+
+Defined in: [src/ui/widgets/propertygrid.tsx:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L273)
 
 ## Parameters
 
 ### props
 
-#### props.container
+#### container?
 
 `ParentNode`
 
-#### props.fieldElements
+#### fieldElements?
 
 [`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)[]
 
-#### props.idPrefix
+#### idPrefix?
 
 `string`
 
-#### props.items
+#### items
 
 [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-#### props.localTextPrefix
+#### localTextPrefix?
 
 `string`
 
-#### props.paneIdPrefix
+#### paneIdPrefix?
 
 `string`
 
 ## Returns
 
-`DocumentFragment` \| `null`
-
-## Defined in
-
-[src/ui/widgets/propertygrid.tsx:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L288)
+`DocumentFragment`

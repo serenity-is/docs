@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ComboboxInplaceAddOptions
+[serenity-is/corelib](../README.md) / ComboboxInplaceAddOptions
 
 # Interface: ComboboxInplaceAddOptions
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L29)
 
 ## Extended by
 
@@ -12,9 +14,7 @@
 
 > `optional` **autoComplete**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L34)
+Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
 
 ***
 
@@ -22,9 +22,7 @@
 
 > `optional` **dialogType**: `string`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+Defined in: [src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
 
 ***
 
@@ -32,9 +30,7 @@
 
 > `optional` **inplaceAdd**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)
+Defined in: [src/ui/editors/comboboxeditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L30)
 
 ***
 
@@ -42,6 +38,4 @@
 
 > `optional` **inplaceAddPermission**: `string`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
+Defined in: [src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)

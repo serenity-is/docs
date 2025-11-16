@@ -1,13 +1,15 @@
-[@serenity-is/corelib](../README.md) / ClassTypeInfo
+[serenity-is/corelib](../README.md) / ClassTypeInfo
 
-# Type Alias: ClassTypeInfo\<T\>
+# Type Alias: ClassTypeInfo\<TypeName\>
 
-> **ClassTypeInfo**\<`T`\>: [`TypeInfo`](TypeInfo.md)\<`T`\>
+> **ClassTypeInfo**\<`TypeName`\> = [`TypeInfo`](TypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/base/system.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L543)
+
+Class type information. This is used to make type name available in declaration files unlike decorators that does not show in .d.ts files.
 
 ## Type Parameters
 
-• **T**
+### TypeName
 
-## Defined in
-
-[src/base/system.ts:280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L280)
+`TypeName`

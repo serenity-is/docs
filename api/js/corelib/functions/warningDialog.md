@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / warningDialog
+[serenity-is/corelib](../README.md) / warningDialog
 
 # Function: warningDialog()
 
-> **warningDialog**(`message`, `options`?): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+> **warningDialog**(`message`, `options?`): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+
+Defined in: [src/base/dialogs.tsx:1105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1105)
 
 Display a warning dialog
 
@@ -10,7 +12,7 @@ Display a warning dialog
 
 ### message
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 The message to display
 
@@ -33,7 +35,3 @@ MessageDialogOptions
 ```ts
 warningDialog("Something is odd!");
 ```
-
-## Defined in
-
-[src/base/dialogs.tsx:1084](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1084)

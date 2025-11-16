@@ -1,22 +1,34 @@
-[@serenity-is/corelib](../README.md) / IQuickFiltering
+[serenity-is/corelib](../README.md) / IQuickFiltering
 
-# Class: IQuickFiltering
+# Abstract Class: IQuickFiltering
+
+Defined in: [src/ui/filtering/iquickfiltering.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L5)
 
 ## Constructors
 
-### new IQuickFiltering()
+### Constructor
 
-> **new IQuickFiltering**(): [`IQuickFiltering`](IQuickFiltering.md)
+> **new IQuickFiltering**(): `IQuickFiltering`
 
 #### Returns
 
-[`IQuickFiltering`](IQuickFiltering.md)
+`IQuickFiltering`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/filtering/iquickfiltering.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L6)
 
 ## Methods
 
 ### initQuickFilter()
 
 > **initQuickFilter**(`filter`): `void`
+
+Defined in: [src/ui/filtering/iquickfiltering.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L10)
 
 #### Parameters
 
@@ -27,7 +39,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/filtering/filtering.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filtering.ts#L43)

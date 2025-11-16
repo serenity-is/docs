@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / getColumns
+[serenity-is/corelib](../README.md) / getColumns
 
 # Function: getColumns()
 
 > **getColumns**(`key`): [`PropertyItem`](../interfaces/PropertyItem.md)[]
+
+Defined in: [src/compat/scriptdata-compat.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L51)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 [`PropertyItem`](../interfaces/PropertyItem.md)[]
-
-## Defined in
-
-[src/q/scriptdata-compat.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L103)

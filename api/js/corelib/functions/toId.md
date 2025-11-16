@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / toId
+[serenity-is/corelib](../README.md) / toId
 
 # Function: toId()
 
 > **toId**(`id`): `any`
+
+Defined in: [src/base/formatting.ts:595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L595)
 
 Converts a string to an ID. If the string is a number, it is returned as-is.
 If the string is empty, null or whitespace, null is returned.
@@ -20,7 +22,3 @@ the string to convert to an ID
 ## Returns
 
 `any`
-
-## Defined in
-
-[src/base/formatting.ts:579](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L579)

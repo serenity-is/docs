@@ -1,33 +1,31 @@
-[@serenity-is/corelib](../README.md) / PropertyCategory
+[serenity-is/corelib](../README.md) / PropertyCategory
 
 # Function: PropertyCategory()
 
 > **PropertyCategory**(`props`): `HTMLElement`
 
+Defined in: [src/ui/widgets/propertygrid.tsx:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L174)
+
 ## Parameters
 
 ### props
 
-#### props.category
+#### category?
 
 `string`
 
-#### props.children
+#### children?
 
 `any`
 
-#### props.collapsed
+#### collapsed?
 
 `boolean`
 
-#### props.localTextPrefix
+#### localTextPrefix?
 
 `string`
 
 ## Returns
 
 `HTMLElement`
-
-## Defined in
-
-[src/ui/widgets/propertygrid.tsx:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L189)

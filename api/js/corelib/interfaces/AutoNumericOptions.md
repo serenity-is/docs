@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / AutoNumericOptions
+[serenity-is/corelib](../README.md) / AutoNumericOptions
 
 # Interface: AutoNumericOptions
+
+Defined in: [src/ui/editors/autonumeric.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L40)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **aDec**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L41)
+Defined in: [src/ui/editors/autonumeric.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L41)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **aForm**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L45)
+Defined in: [src/ui/editors/autonumeric.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L45)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **allowedAutoStrip**: `RegExp`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L42)
+Defined in: [src/ui/editors/autonumeric.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L42)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > `optional` **allowLeading**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L43)
+Defined in: [src/ui/editors/autonumeric.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L43)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > `optional` **altDec**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L44)
+Defined in: [src/ui/editors/autonumeric.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L44)
 
 ***
 
@@ -58,9 +50,7 @@
 
 > `optional` **aNeg**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L47)
+Defined in: [src/ui/editors/autonumeric.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L47)
 
 ***
 
@@ -68,9 +58,7 @@
 
 > `optional` **aNegRegAutoStrip**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L50)
+Defined in: [src/ui/editors/autonumeric.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L50)
 
 ***
 
@@ -78,9 +66,7 @@
 
 > `optional` **aNum**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L46)
+Defined in: [src/ui/editors/autonumeric.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L46)
 
 ***
 
@@ -88,9 +74,7 @@
 
 > `optional` **aPad**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L51)
+Defined in: [src/ui/editors/autonumeric.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L51)
 
 ***
 
@@ -98,9 +82,7 @@
 
 > `optional` **aSep**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L48)
+Defined in: [src/ui/editors/autonumeric.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L48)
 
 ***
 
@@ -108,9 +90,7 @@
 
 > `optional` **aSign**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L49)
+Defined in: [src/ui/editors/autonumeric.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L49)
 
 ***
 
@@ -118,9 +98,7 @@
 
 > `optional` **dGroup**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L52)
+Defined in: [src/ui/editors/autonumeric.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L52)
 
 ***
 
@@ -128,11 +106,9 @@
 
 > `optional` **holder**: `any`
 
+Defined in: [src/ui/editors/autonumeric.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L54)
+
 internal
-
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L54)
 
 ***
 
@@ -140,9 +116,7 @@ internal
 
 > `optional` **lZero**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L55)
+Defined in: [src/ui/editors/autonumeric.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L55)
 
 ***
 
@@ -150,9 +124,7 @@ internal
 
 > `optional` **mDec**: `number`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L56)
+Defined in: [src/ui/editors/autonumeric.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L56)
 
 ***
 
@@ -160,9 +132,7 @@ internal
 
 > `optional` **mInt**: `number`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L57)
+Defined in: [src/ui/editors/autonumeric.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L57)
 
 ***
 
@@ -170,9 +140,7 @@ internal
 
 > `optional` **mRound**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L58)
+Defined in: [src/ui/editors/autonumeric.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L58)
 
 ***
 
@@ -180,9 +148,7 @@ internal
 
 > `optional` **nBracket**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L59)
+Defined in: [src/ui/editors/autonumeric.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L59)
 
 ***
 
@@ -190,9 +156,7 @@ internal
 
 > `optional` **numRegAutoStrip**: `RegExp`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L60)
+Defined in: [src/ui/editors/autonumeric.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L60)
 
 ***
 
@@ -200,9 +164,7 @@ internal
 
 > `optional` **oEvent**: `any`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L61)
+Defined in: [src/ui/editors/autonumeric.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L61)
 
 ***
 
@@ -210,9 +172,7 @@ internal
 
 > `optional` **pSign**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L62)
+Defined in: [src/ui/editors/autonumeric.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L62)
 
 ***
 
@@ -220,11 +180,9 @@ internal
 
 > `optional` **runOnce**: `boolean`
 
+Defined in: [src/ui/editors/autonumeric.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L64)
+
 internal
-
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L64)
 
 ***
 
@@ -232,9 +190,7 @@ internal
 
 > `optional` **skipFirstAutoStrip**: `RegExp`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L65)
+Defined in: [src/ui/editors/autonumeric.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L65)
 
 ***
 
@@ -242,9 +198,7 @@ internal
 
 > `optional` **skipLastAutoStrip**: `RegExp`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L66)
+Defined in: [src/ui/editors/autonumeric.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L66)
 
 ***
 
@@ -252,9 +206,7 @@ internal
 
 > `optional` **tagList**: `string`[]
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L67)
+Defined in: [src/ui/editors/autonumeric.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L67)
 
 ***
 
@@ -262,9 +214,7 @@ internal
 
 > `optional` **vMax**: `any`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L68)
+Defined in: [src/ui/editors/autonumeric.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L68)
 
 ***
 
@@ -272,9 +222,7 @@ internal
 
 > `optional` **vMin**: `any`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L69)
+Defined in: [src/ui/editors/autonumeric.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L69)
 
 ***
 
@@ -282,6 +230,4 @@ internal
 
 > `optional` **wEmpty**: `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L70)
+Defined in: [src/ui/editors/autonumeric.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L70)

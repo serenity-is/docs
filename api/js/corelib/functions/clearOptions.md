@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / clearOptions
+[serenity-is/corelib](../README.md) / clearOptions
 
 # Function: clearOptions()
 
 > **clearOptions**(`select`): `void`
+
+Defined in: [src/compat/html-compat.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/html-compat.ts#L25)
 
 Clears the options in the select element
 
@@ -15,7 +17,3 @@ Clears the options in the select element
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/q/html-compat.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html-compat.ts#L26)

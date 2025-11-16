@@ -1,9 +1,9 @@
-[@serenity-is/corelib](../README.md) / Type
+[serenity-is/corelib](../README.md) / Type
 
 # Type Alias: Type
 
-> **Type**: `Function` \| `Object`
+> **Type** = `Function` \| `Object`
 
-## Defined in
+Defined in: [src/base/system.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L43)
 
-[src/base/system.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L17)
+Type alias for a function or object (enum).

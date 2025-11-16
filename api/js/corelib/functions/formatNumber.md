@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / formatNumber
+[serenity-is/corelib](../README.md) / formatNumber
 
 # Function: formatNumber()
 
-> **formatNumber**(`num`, `format`?, `decOrLoc`?, `grp`?): `string`
+> **formatNumber**(`num`, `format?`, `decOrLoc?`, `grp?`): `string`
+
+Defined in: [src/base/formatting.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L285)
 
 Formats a number using the current `Culture` locale (or the passed locale) settings.
 It supports format specifiers similar to .NET numeric formatting strings.
@@ -33,7 +35,3 @@ See .NET numeric formatting strings documentation for more information.
 ## Returns
 
 `string`
-
-## Defined in
-
-[src/base/formatting.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L269)

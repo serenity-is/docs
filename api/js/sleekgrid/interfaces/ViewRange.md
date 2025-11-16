@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ViewRange
+[serenity-is/sleekgrid](../README.md) / ViewRange
 
 # Interface: ViewRange
+
+Defined in: [src/core/viewrange.ts:2](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L2)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **bottom**: `number`
 
-#### Defined in
-
-[grid/types.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L33)
+Defined in: [src/core/viewrange.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L4)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **leftPx**: `number`
 
-#### Defined in
-
-[grid/types.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L34)
+Defined in: [src/core/viewrange.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L5)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **rightPx**: `number`
 
-#### Defined in
-
-[grid/types.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L35)
+Defined in: [src/core/viewrange.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L6)
 
 ***
 
@@ -38,6 +34,4 @@
 
 > `optional` **top**: `number`
 
-#### Defined in
-
-[grid/types.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L32)
+Defined in: [src/core/viewrange.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L3)

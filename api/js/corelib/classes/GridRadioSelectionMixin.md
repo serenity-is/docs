@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / GridRadioSelectionMixin
+[serenity-is/corelib](../README.md) / GridRadioSelectionMixin
 
 # Class: GridRadioSelectionMixin
 
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L10)
+
 ## Constructors
 
-### new GridRadioSelectionMixin()
+### Constructor
 
-> **new GridRadioSelectionMixin**(`grid`, `options`?): [`GridRadioSelectionMixin`](GridRadioSelectionMixin.md)
+> **new GridRadioSelectionMixin**(`grid`, `options?`): `GridRadioSelectionMixin`
+
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L19)
 
 #### Parameters
 
@@ -20,11 +24,15 @@
 
 #### Returns
 
-[`GridRadioSelectionMixin`](GridRadioSelectionMixin.md)
+`GridRadioSelectionMixin`
 
-#### Defined in
+## Properties
 
-[src/ui/helpers/slickhelpers.tsx:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L179)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L12)
 
 ## Methods
 
@@ -32,13 +40,11 @@
 
 > **clear**(): `void`
 
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L58)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L218)
 
 ***
 
@@ -46,13 +52,11 @@
 
 > **getSelectedAsInt32**(): `number`
 
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L76)
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L236)
 
 ***
 
@@ -60,13 +64,11 @@
 
 > **getSelectedAsInt64**(): `number`
 
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L88)
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L248)
 
 ***
 
@@ -74,13 +76,11 @@
 
 > **getSelectedKey**(): `string`
 
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L67)
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L227)
 
 ***
 
@@ -88,19 +88,19 @@
 
 > **resetCheckedAndRefresh**(): `void`
 
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L62)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L222)
 
 ***
 
 ### setSelectedKey()
 
 > **setSelectedKey**(`key`): `void`
+
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L100)
 
 #### Parameters
 
@@ -112,26 +112,20 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L260)
-
 ***
 
 ### createSelectColumn()
 
-> `static` **createSelectColumn**(`getMixin`): `Column`\<`any`\>
+> `static` **createSelectColumn**(`getMixin`): `Column`
+
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L105)
 
 #### Parameters
 
 ##### getMixin
 
-() => [`GridRadioSelectionMixin`](GridRadioSelectionMixin.md)
+() => `GridRadioSelectionMixin`
 
 #### Returns
 
-`Column`\<`any`\>
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L265)
+`Column`

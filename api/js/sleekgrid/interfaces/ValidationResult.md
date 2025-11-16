@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ValidationResult
+[serenity-is/sleekgrid](../README.md) / ValidationResult
 
 # Interface: ValidationResult
+
+Defined in: [src/core/editing.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L14)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **msg**: `string`
 
-#### Defined in
-
-[core/editing.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L16)
+Defined in: [src/core/editing.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L16)
 
 ***
 
@@ -18,6 +18,4 @@
 
 > **valid**: `boolean`
 
-#### Defined in
-
-[core/editing.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L15)
+Defined in: [src/core/editing.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L15)

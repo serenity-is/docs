@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ArgsCssStyle
+[serenity-is/sleekgrid](../README.md) / ArgsCssStyle
 
 # Interface: ArgsCssStyle
+
+Defined in: [src/core/eventargs.ts:52](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L52)
 
 ## Extends
 
@@ -8,17 +10,15 @@
 
 ## Properties
 
-### grid?
+### grid
 
-> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> **grid**: [`ISleekGrid`](ISleekGrid.md)
+
+Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
 
 #### Inherited from
 
 [`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
-
-#### Defined in
-
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
 ***
 
@@ -26,9 +26,7 @@
 
 > **hash**: [`CellStylesHash`](../type-aliases/CellStylesHash.md)
 
-#### Defined in
-
-[grid/eventargs.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L43)
+Defined in: [src/core/eventargs.ts:54](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L54)
 
 ***
 
@@ -36,6 +34,4 @@
 
 > **key**: `string`
 
-#### Defined in
-
-[grid/eventargs.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L42)
+Defined in: [src/core/eventargs.ts:53](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L53)

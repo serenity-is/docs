@@ -1,12 +1,24 @@
-[@serenity-is/corelib](../README.md) / MaximizableAttribute
+[serenity-is/corelib](../README.md) / MaximizableAttribute
 
 # Class: MaximizableAttribute
 
+Defined in: [src/types/attributes.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L42)
+
+Indicates that a dialog or panel should be maximizable.
+Requires jquery ui dialogs and jquery.dialogextend.js.
+It does not work with current bootstrap modals.
+
+## Extends
+
+- [`CustomAttribute`](CustomAttribute.md)
+
 ## Constructors
 
-### new MaximizableAttribute()
+### Constructor
 
-> **new MaximizableAttribute**(`value`): [`MaximizableAttribute`](MaximizableAttribute.md)
+> **new MaximizableAttribute**(`value`): `MaximizableAttribute`
+
+Defined in: [src/types/attributes.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L45)
 
 #### Parameters
 
@@ -16,11 +28,11 @@
 
 #### Returns
 
-[`MaximizableAttribute`](MaximizableAttribute.md)
+`MaximizableAttribute`
 
-#### Defined in
+#### Overrides
 
-[src/types/attributes.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L160)
+[`CustomAttribute`](CustomAttribute.md).[`constructor`](CustomAttribute.md#constructor)
 
 ## Properties
 
@@ -28,6 +40,16 @@
 
 > **value**: `boolean` = `true`
 
-#### Defined in
+Defined in: [src/types/attributes.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L45)
 
-[src/types/attributes.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L160)
+***
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/types/attributes.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L43)
+
+#### Overrides
+
+[`CustomAttribute`](CustomAttribute.md).[`[typeInfo]`](CustomAttribute.md#typeinfo)

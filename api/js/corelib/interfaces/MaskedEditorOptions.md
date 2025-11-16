@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / MaskedEditorOptions
+[serenity-is/corelib](../README.md) / MaskedEditorOptions
 
 # Interface: MaskedEditorOptions
+
+Defined in: [src/ui/editors/maskededitor.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.tsx#L44)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **mask**: `string`
 
-#### Defined in
-
-[src/ui/editors/maskededitor.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.tsx#L46)
+Defined in: [src/ui/editors/maskededitor.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.tsx#L45)
 
 ***
 
@@ -18,6 +18,4 @@
 
 > `optional` **placeholder**: `string`
 
-#### Defined in
-
-[src/ui/editors/maskededitor.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.tsx#L47)
+Defined in: [src/ui/editors/maskededitor.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/maskededitor.tsx#L46)

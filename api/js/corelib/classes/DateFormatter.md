@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / DateFormatter
+[serenity-is/corelib](../README.md) / DateFormatter
 
 # Class: DateFormatter
+
+Defined in: [src/ui/formatters/dateformatter.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L5)
 
 ## Extended by
 
@@ -12,25 +14,23 @@
 
 ## Constructors
 
-### new DateFormatter()
+### Constructor
 
-> **new DateFormatter**(`props`): [`DateFormatter`](DateFormatter.md)
+> **new DateFormatter**(`props`): `DateFormatter`
+
+Defined in: [src/ui/formatters/dateformatter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L8)
 
 #### Parameters
 
 ##### props
 
-###### props.displayFormat
+###### displayFormat?
 
 `string`
 
 #### Returns
 
-[`DateFormatter`](DateFormatter.md)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L52)
+`DateFormatter`
 
 ## Properties
 
@@ -38,13 +38,19 @@
 
 > `readonly` **props**: `object` = `{}`
 
+Defined in: [src/ui/formatters/dateformatter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L8)
+
 #### displayFormat?
 
 > `optional` **displayFormat**: `string`
 
-#### Defined in
+***
 
-[src/ui/formatters/formatters.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L52)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/formatters/dateformatter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L6)
 
 ## Accessors
 
@@ -54,6 +60,8 @@
 
 > **get** **displayFormat**(): `string`
 
+Defined in: [src/ui/formatters/dateformatter.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L37)
+
 ##### Returns
 
 `string`
@@ -61,6 +69,8 @@
 #### Set Signature
 
 > **set** **displayFormat**(`value`): `void`
+
+Defined in: [src/ui/formatters/dateformatter.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L38)
 
 ##### Parameters
 
@@ -72,21 +82,19 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/formatters/formatters.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L81)
-
 ## Methods
 
 ### format()
 
 > **format**(`ctx`): `string`
 
+Defined in: [src/ui/formatters/dateformatter.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L40)
+
 #### Parameters
 
 ##### ctx
 
-`FormatterContext`\<`any`\>
+`FormatterContext`
 
 #### Returns
 
@@ -96,15 +104,13 @@
 
 [`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
 
-#### Defined in
-
-[src/ui/formatters/formatters.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L84)
-
 ***
 
 ### format()
 
-> `static` **format**(`value`, `format`?): `any`
+> `static` **format**(`value`, `format?`): `any`
+
+Defined in: [src/ui/formatters/dateformatter.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L13)
 
 #### Parameters
 
@@ -119,7 +125,3 @@
 #### Returns
 
 `any`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L57)

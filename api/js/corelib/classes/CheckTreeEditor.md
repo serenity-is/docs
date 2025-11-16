@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / CheckTreeEditor
+[serenity-is/corelib](../README.md) / CheckTreeEditor
 
 # Class: CheckTreeEditor\<TItem, P\>
+
+Defined in: [src/ui/editors/checktreeeditor.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L29)
 
 ## Extends
 
@@ -12,9 +14,13 @@
 
 ## Type Parameters
 
-• **TItem** *extends* [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>
+### TItem
 
-• **P** = \{\}
+`TItem` *extends* [`CheckTreeItem`](../interfaces/CheckTreeItem.md)\<`TItem`\>
+
+### P
+
+`P` = \{ \}
 
 ## Implements
 
@@ -24,9 +30,11 @@
 
 ## Constructors
 
-### new CheckTreeEditor()
+### Constructor
 
-> **new CheckTreeEditor**\<`TItem`, `P`\>(`props`): [`CheckTreeEditor`](CheckTreeEditor.md)\<`TItem`, `P`\>
+> **new CheckTreeEditor**\<`TItem`, `P`\>(`props`): `CheckTreeEditor`\<`TItem`, `P`\>
+
+Defined in: [src/ui/editors/checktreeeditor.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L37)
 
 #### Parameters
 
@@ -36,57 +44,35 @@
 
 #### Returns
 
-[`CheckTreeEditor`](CheckTreeEditor.md)\<`TItem`, `P`\>
+`CheckTreeEditor`\<`TItem`, `P`\>
 
 #### Overrides
 
-[`DataGrid`](DataGrid.md).[`constructor`](DataGrid.md#constructors)
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L35)
+[`DataGrid`](DataGrid.md).[`constructor`](DataGrid.md#constructor)
 
 ## Properties
-
-### allColumns
-
-> `protected` **allColumns**: `Column`\<`any`\>[]
-
-#### Inherited from
-
-[`DataGrid`](DataGrid.md).[`allColumns`](DataGrid.md#allcolumns)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L75)
-
-***
 
 ### domNode
 
 > `readonly` **domNode**: `HTMLElement`
 
+Defined in: [src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`domNode`](DataGrid.md#domnode)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ***
 
 ### filterBar
 
-> `protected` **filterBar**: [`FilterDisplayBar`](FilterDisplayBar.md)\<`object`\>
+> `protected` **filterBar**: [`FilterDisplayBar`](FilterDisplayBar.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L47)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`filterBar`](DataGrid.md#filterbar)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L71)
 
 ***
 
@@ -94,27 +80,95 @@
 
 > `readonly` **idPrefix**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L13)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`idPrefix`](DataGrid.md#idprefix)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
-
 ***
 
-### initialSettings
+### onAfterInit
 
-> `protected` **initialSettings**: [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
+> `readonly` **onAfterInit**: `PubSub`\<[`DataGridEvent`](../interfaces/DataGridEvent.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L68)
 
 #### Inherited from
 
-[`DataGrid`](DataGrid.md).[`initialSettings`](DataGrid.md#initialsettings)
+[`DataGrid`](DataGrid.md).[`onAfterInit`](DataGrid.md#onafterinit)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L77)
+### onCanSubmit
+
+> `readonly` **onCanSubmit**: `PubSub`\<[`DataGridSubmitEvent`](../interfaces/DataGridSubmitEvent.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L69)
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`onCanSubmit`](DataGrid.md#oncansubmit)
+
+***
+
+### onDataChanged
+
+> `readonly` **onDataChanged**: `PubSub`\<[`DataGridEvent`](../interfaces/DataGridEvent.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L70)
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`onDataChanged`](DataGrid.md#ondatachanged)
+
+***
+
+### onFiltering
+
+> `readonly` **onFiltering**: `PubSub`\<[`DataGridFilteringEvent`](../interfaces/DataGridFilteringEvent.md)\<`TItem`\>\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L71)
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`onFiltering`](DataGrid.md#onfiltering)
+
+***
+
+### onPersistence
+
+> `readonly` **onPersistence**: `PubSub`\<[`DataGridPersistenceEvent`](../interfaces/DataGridPersistenceEvent.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L72)
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`onPersistence`](DataGrid.md#onpersistence)
+
+***
+
+### onProcessData
+
+> `readonly` **onProcessData**: `PubSub`\<[`DataGridProcessEvent`](../interfaces/DataGridProcessEvent.md)\<`TItem`\>\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L73)
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`onProcessData`](DataGrid.md#onprocessdata)
+
+***
+
+### onSubmitting
+
+> `readonly` **onSubmitting**: `PubSub`\<[`DataGridSubmitEvent`](../interfaces/DataGridSubmitEvent.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L74)
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`onSubmitting`](DataGrid.md#onsubmitting)
 
 ***
 
@@ -122,13 +176,11 @@
 
 > **openDialogsAsPanel**: `boolean`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L55)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`openDialogsAsPanel`](DataGrid.md#opendialogsaspanel)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L81)
 
 ***
 
@@ -136,13 +188,11 @@
 
 > `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
+Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`options`](DataGrid.md#options)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
 
 ***
 
@@ -150,41 +200,35 @@
 
 > `protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
+Defined in: [src/ui/datagrid/datagrid.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L51)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`propertyItemsData`](DataGrid.md#propertyitemsdata)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L76)
 
 ***
 
 ### quickFiltersBar
 
-> `protected` **quickFiltersBar**: [`QuickFilterBar`](QuickFilterBar.md)\<[`QuickFilterBarOptions`](../interfaces/QuickFilterBarOptions.md)\>
+> `protected` **quickFiltersBar**: [`QuickFilterBar`](QuickFilterBar.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L49)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`quickFiltersBar`](DataGrid.md#quickfiltersbar)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L73)
-
 ***
 
 ### quickFiltersDiv
 
-> `protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> `protected` **quickFiltersDiv**: [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L48)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`quickFiltersDiv`](DataGrid.md#quickfiltersdiv)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L72)
 
 ***
 
@@ -192,69 +236,47 @@
 
 > `protected` **restoringSettings**: `number`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L52)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`restoringSettings`](DataGrid.md#restoringsettings)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L78)
 
 ***
 
 ### slickContainer
 
-> `protected` **slickContainer**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> `protected` **slickContainer**: [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L50)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`slickContainer`](DataGrid.md#slickcontainer)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L74)
-
-***
-
-### slickGrid
-
-> **slickGrid**: `Grid`\<`any`\>
-
-#### Inherited from
-
-[`DataGrid`](DataGrid.md).[`slickGrid`](DataGrid.md#slickgrid)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L80)
-
 ***
 
 ### titleDiv
 
-> `protected` **titleDiv**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> `protected` **titleDiv**: [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L45)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`titleDiv`](DataGrid.md#titlediv)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L69)
-
 ***
 
 ### toolbar
 
-> `protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
+> `protected` **toolbar**: [`Toolbar`](Toolbar.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L46)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`toolbar`](DataGrid.md#toolbar)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L70)
 
 ***
 
@@ -262,97 +284,93 @@
 
 > `readonly` **uniqueName**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`uniqueName`](DataGrid.md#uniquename)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ***
 
 ### view
 
-> **view**: [`RemoteView`](RemoteView.md)\<`TItem`\>
+> **view**: [`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L53)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`view`](DataGrid.md#view)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L79)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/editors/checktreeeditor.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L31)
+
+#### Implementation of
+
+[`IReadOnly`](IReadOnly.md).[`[typeInfo]`](IReadOnly.md#typeinfo)
+
+#### Overrides
+
+[`DataGrid`](DataGrid.md).[`[typeInfo]`](DataGrid.md#typeinfo)
 
 ***
 
-### defaultColumnWidthDelta
+### defaultOptions
 
-> `static` **defaultColumnWidthDelta**: `number`
+> `readonly` `static` **defaultOptions**: `object` = `dataGridDefaults`
 
-#### Inherited from
+Defined in: [src/ui/datagrid/datagrid.tsx:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L57)
 
-[`DataGrid`](DataGrid.md).[`defaultColumnWidthDelta`](DataGrid.md#defaultcolumnwidthdelta)
+#### columnWidthDelta
 
-#### Defined in
+> **columnWidthDelta**: `number`
 
-[src/ui/datagrid/datagrid.tsx:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L87)
+Default column width delta. This value if specified, is added to the width of columns defined server side. Default is null
 
-***
+#### columnWidthScale
 
-### defaultColumnWidthScale
+> **columnWidthScale**: `number`
 
-> `static` **defaultColumnWidthScale**: `number`
+Default column width scale. This value if specified, is multiplied with the width of columns defined server side. Default is null
 
-#### Inherited from
+#### enableAdvancedFiltering
 
-[`DataGrid`](DataGrid.md).[`defaultColumnWidthScale`](DataGrid.md#defaultcolumnwidthscale)
+> **enableAdvancedFiltering**: `boolean` \| (`grid`) => `boolean`
 
-#### Defined in
+Controls whether to enable advanced filtering, e.g. via filter dialog/bar. Default is null.
 
-[src/ui/datagrid/datagrid.tsx:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L86)
+#### openDialogsAsPanel
 
-***
+> **openDialogsAsPanel**: `boolean`
 
-### defaultHeaderHeight
+Controls whether to open dialogs as panels. Default is null.
 
-> `static` **defaultHeaderHeight**: `number`
+#### persistenceFlags
 
-#### Inherited from
+> **persistenceFlags**: [`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md) = `defaultGridPersistenceFlags`
 
-[`DataGrid`](DataGrid.md).[`defaultHeaderHeight`](DataGrid.md#defaultheaderheight)
+Default persistence flags. Defaults are true except quickSearch and quickFilterText
 
-#### Defined in
+#### persistenceStorage
 
-[src/ui/datagrid/datagrid.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L84)
+> **persistenceStorage**: [`SettingStorage`](../interfaces/SettingStorage.md)
 
-***
+Default persistence storage. Default is null
 
-### defaultPersistanceStorage
+#### rowHeight
 
-> `static` **defaultPersistanceStorage**: [`SettingStorage`](../interfaces/SettingStorage.md)
+> **rowHeight**: `number`
 
-#### Inherited from
-
-[`DataGrid`](DataGrid.md).[`defaultPersistanceStorage`](DataGrid.md#defaultpersistancestorage)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L85)
-
-***
-
-### defaultRowHeight
-
-> `static` **defaultRowHeight**: `number`
+Default row height. Default is null.
 
 #### Inherited from
 
-[`DataGrid`](DataGrid.md).[`defaultRowHeight`](DataGrid.md#defaultrowheight)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L83)
+[`DataGrid`](DataGrid.md).[`defaultOptions`](DataGrid.md#defaultoptions)
 
 ***
 
@@ -360,49 +378,113 @@
 
 > `readonly` `static` **isComponent**: `true` = `true`
 
+Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L219)
+
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`isComponent`](DataGrid.md#iscomponent)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L223)
-
 ***
 
-### typeInfo
+### onAfterInit
 
-> `static` **typeInfo**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity.Widget"`\>
+> `readonly` `static` **onAfterInit**: `PubSub`\<[`DataGridEvent`](../interfaces/DataGridEvent.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L67)
 
 #### Inherited from
 
-[`DataGrid`](DataGrid.md).[`typeInfo`](DataGrid.md#typeinfo)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
+[`DataGrid`](DataGrid.md).[`onAfterInit`](DataGrid.md#onafterinit-1)
 
 ## Accessors
+
+### allColumns
+
+#### Get Signature
+
+> **get** **allColumns**(): `Column`\<`any`\>[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1260)
+
+##### Returns
+
+`Column`\<`any`\>[]
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`allColumns`](DataGrid.md#allcolumns)
+
+***
+
+### columns
+
+#### Get Signature
+
+> **get** **columns**(): `Column`\<`TItem`\>[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)
+
+##### Returns
+
+`Column`\<`TItem`\>[]
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`columns`](DataGrid.md#columns)
+
+***
 
 ### element
 
 #### Get Signature
 
-> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L59)
 
 Returns a Fluent(this.domNode) object
 
 ##### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`element`](DataGrid.md#element)
 
-#### Defined in
+***
 
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+### initialSettings
+
+#### Get Signature
+
+> **get** **initialSettings**(): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1262)
+
+##### Returns
+
+[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
+
+#### Set Signature
+
+> **set** **initialSettings**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1263)
+
+##### Parameters
+
+###### value
+
+[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`initialSettings`](DataGrid.md#initialsettings)
 
 ***
 
@@ -412,6 +494,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
+Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L203)
+
 ##### Returns
 
 [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
@@ -419,10 +503,6 @@ Returns a Fluent(this.domNode) object
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`props`](DataGrid.md#props)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
 
 ***
 
@@ -432,6 +512,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **readOnly**(): `boolean`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:921](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L921)
+
 ##### Returns
 
 `boolean`
@@ -439,6 +521,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **readOnly**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:925](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L925)
 
 ##### Parameters
 
@@ -454,9 +538,61 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`readOnly`](DataGrid.md#readonly)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:980](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L980)
+### sleekGrid
+
+#### Get Signature
+
+> **get** **sleekGrid**(): `ISleekGrid`\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1246)
+
+##### Returns
+
+`ISleekGrid`\<`TItem`\>
+
+#### Set Signature
+
+> **set** **sleekGrid**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1247)
+
+##### Parameters
+
+###### value
+
+`ISleekGrid`\<`TItem`\>
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`sleekGrid`](DataGrid.md#sleekgrid)
+
+***
+
+### slickGrid
+
+#### Get Signature
+
+> **get** **slickGrid**(): `ISleekGrid`\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1250)
+
+##### Deprecated
+
+Use sleekGrid or getGrid()
+
+##### Returns
+
+`ISleekGrid`\<`TItem`\>
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`slickGrid`](DataGrid.md#slickgrid)
 
 ***
 
@@ -466,6 +602,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **value**(): `string`[]
 
+Defined in: [src/ui/editors/checktreeeditor.ts:421](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L421)
+
 ##### Returns
 
 `string`[]
@@ -473,6 +611,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **value**(`v`): `void`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L460)
 
 ##### Parameters
 
@@ -484,15 +624,175 @@ Returns a Fluent(this.domNode) object
 
 `void`
 
-#### Defined in
+***
 
-[src/ui/editors/checktreeeditor.ts:418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L418)
+### defaultColumnWidthDelta
+
+#### Get Signature
+
+> **get** `static` **defaultColumnWidthDelta**(): `number`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L64)
+
+##### Returns
+
+`number`
+
+#### Set Signature
+
+> **set** `static` **defaultColumnWidthDelta**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L65)
+
+##### Parameters
+
+###### value
+
+`number`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`defaultColumnWidthDelta`](DataGrid.md#defaultcolumnwidthdelta)
+
+***
+
+### defaultColumnWidthScale
+
+#### Get Signature
+
+> **get** `static` **defaultColumnWidthScale**(): `number`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L62)
+
+##### Returns
+
+`number`
+
+#### Set Signature
+
+> **set** `static` **defaultColumnWidthScale**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L63)
+
+##### Parameters
+
+###### value
+
+`number`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`defaultColumnWidthScale`](DataGrid.md#defaultcolumnwidthscale)
+
+***
+
+### defaultPersistanceStorage
+
+#### Get Signature
+
+> **get** `static` **defaultPersistanceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1266)
+
+##### Obsolete
+
+use defaultPersistenceStorage, this one has a typo
+
+##### Returns
+
+[`SettingStorage`](../interfaces/SettingStorage.md)
+
+#### Set Signature
+
+> **set** `static` **defaultPersistanceStorage**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1268)
+
+##### Obsolete
+
+use defaultPersistenceStorage, this one has a typo
+
+##### Parameters
+
+###### value
+
+[`SettingStorage`](../interfaces/SettingStorage.md)
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`defaultPersistanceStorage`](DataGrid.md#defaultpersistancestorage)
+
+***
+
+### defaultPersistenceStorage
+
+#### Get Signature
+
+> **get** `static` **defaultPersistenceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L60)
+
+##### Returns
+
+[`SettingStorage`](../interfaces/SettingStorage.md)
+
+#### Set Signature
+
+> **set** `static` **defaultPersistenceStorage**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L61)
+
+##### Parameters
+
+###### value
+
+[`SettingStorage`](../interfaces/SettingStorage.md)
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`defaultPersistenceStorage`](DataGrid.md#defaultpersistencestorage)
+
+***
+
+### defaultRowHeight
+
+#### Get Signature
+
+> **get** `static` **defaultRowHeight**(): `number`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L59)
+
+##### Returns
+
+`number`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`defaultRowHeight`](DataGrid.md#defaultrowheight)
 
 ## Methods
 
 ### addBooleanFilter()
 
-> `protected` **addBooleanFilter**(`field`, `title`?, `yes`?, `no`?): [`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
+> `protected` **addBooleanFilter**(`field`, `title?`, `yes?`, `no?`): [`SelectEditor`](SelectEditor.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1044](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1044)
 
 #### Parameters
 
@@ -514,21 +814,19 @@ Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
+[`SelectEditor`](SelectEditor.md)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`addBooleanFilter`](DataGrid.md#addbooleanfilter)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1115)
 
 ***
 
 ### addCssClass()
 
 > `protected` **addCssClass**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
 
 #### Returns
 
@@ -538,15 +836,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`addCssClass`](DataGrid.md#addcssclass)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
-
 ***
 
 ### addDateRangeFilter()
 
-> `protected` **addDateRangeFilter**(`field`, `title`?): [`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>
+> `protected` **addDateRangeFilter**(`field`, `title?`): [`DateEditor`](DateEditor.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1028](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1028)
 
 #### Parameters
 
@@ -560,21 +856,19 @@ Returns a Fluent(this.domNode) object
 
 #### Returns
 
-[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>
+[`DateEditor`](DateEditor.md)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`addDateRangeFilter`](DataGrid.md#adddaterangefilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1099](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1099)
-
 ***
 
 ### addDateTimeRangeFilter()
 
-> `protected` **addDateTimeRangeFilter**(`field`, `title`?): [`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+> `protected` **addDateTimeRangeFilter**(`field`, `title?`): [`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1036](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1036)
 
 #### Parameters
 
@@ -594,15 +888,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`addDateTimeRangeFilter`](DataGrid.md#adddatetimerangefilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1107)
-
 ***
 
 ### addFilterSeparator()
 
 > `protected` **addFilterSeparator**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1008](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1008)
 
 #### Returns
 
@@ -612,21 +904,23 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`addFilterSeparator`](DataGrid.md#addfilterseparator)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1079](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1079)
-
 ***
 
 ### addQuickFilter()
 
 > `protected` **addQuickFilter**\<`TWidget`, `P`\>(`opt`): `TWidget`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:1024](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1024)
+
 #### Type Parameters
 
-• **TWidget** *extends* [`Widget`](Widget.md)\<`any`\>
+##### TWidget
 
-• **P**
+`TWidget` *extends* [`Widget`](Widget.md)\<`any`\>
+
+##### P
+
+`P`
 
 #### Parameters
 
@@ -642,17 +936,15 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`addQuickFilter`](DataGrid.md#addquickfilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1095](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1095)
-
 ***
 
 ### addValidationRule()
 
 #### Call Signature
 
-> **addValidationRule**(`rule`, `uniqueName`?): `void`
+> **addValidationRule**(`rule`, `uniqueName?`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
 
 ##### Parameters
 
@@ -672,13 +964,11 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`addValidationRule`](DataGrid.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
-
 #### Call Signature
 
 > **addValidationRule**(`uniqueName`, `rule`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L96)
 
 ##### Parameters
 
@@ -698,15 +988,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`addValidationRule`](DataGrid.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
 ***
 
 ### afterInit()
 
 > `protected` **afterInit**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L150)
 
 #### Returns
 
@@ -716,15 +1004,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`afterInit`](DataGrid.md#afterinit)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L155)
-
 ***
 
 ### afterRender()
 
 > `protected` **afterRender**(`callback`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
 
 #### Parameters
 
@@ -740,15 +1026,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`afterRender`](DataGrid.md#afterrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
 ***
 
 ### allDescendantsSelected()
 
 > `protected` **allDescendantsSelected**(`item`): `boolean`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L289)
 
 #### Parameters
 
@@ -759,10 +1043,6 @@ Returns a Fluent(this.domNode) object
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L286)
 
 ***
 
@@ -770,19 +1050,19 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **allItemsSelected**(): `boolean`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:278](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L278)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L275)
 
 ***
 
 ### anyDescendantsSelected()
 
 > `protected` **anyDescendantsSelected**(`item`): `boolean`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L309)
 
 #### Parameters
 
@@ -794,15 +1074,35 @@ Returns a Fluent(this.domNode) object
 
 `boolean`
 
-#### Defined in
+***
 
-[src/ui/editors/checktreeeditor.ts:306](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L306)
+### autoRegisteringPlugin()
+
+> `protected` **autoRegisteringPlugin**(`args`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L103)
+
+#### Parameters
+
+##### args
+
+[`AutoRegisterArgs`](../interfaces/AutoRegisterArgs.md)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`autoRegisteringPlugin`](DataGrid.md#autoregisteringplugin)
 
 ***
 
 ### bindToSlickEvents()
 
 > `protected` **bindToSlickEvents**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L478)
 
 #### Returns
 
@@ -812,15 +1112,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`bindToSlickEvents`](DataGrid.md#bindtoslickevents)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:525](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L525)
-
 ***
 
 ### bindToViewEvents()
 
 > `protected` **bindToViewEvents**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:529](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L529)
 
 #### Returns
 
@@ -830,15 +1128,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`bindToViewEvents`](DataGrid.md#bindtoviewevents)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:625](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L625)
-
 ***
 
 ### booleanQuickFilter()
 
-> `protected` **booleanQuickFilter**(`field`, `title`?, `yes`?, `no`?): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>, [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
+> `protected` **booleanQuickFilter**(`field`, `title?`, `yes?`, `no?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`SelectEditor`](SelectEditor.md)\<[`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>, [`SelectEditorOptions`](../interfaces/SelectEditorOptions.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1048](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1048)
 
 #### Parameters
 
@@ -866,19 +1162,19 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`booleanQuickFilter`](DataGrid.md#booleanquickfilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1119)
-
 ***
 
 ### byId()
 
 > `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
+Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L102)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -894,21 +1190,19 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`byId`](DataGrid.md#byid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
-
 ***
 
 ### canFilterColumn()
 
 > `protected` **canFilterColumn**(`column`): `boolean`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L359)
+
 #### Parameters
 
 ##### column
 
-`Column`\<`any`\>
+`Column`
 
 #### Returns
 
@@ -918,21 +1212,19 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`canFilterColumn`](DataGrid.md#canfiltercolumn)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:438](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L438)
-
 ***
 
 ### canShowColumn()
 
 > `protected` **canShowColumn**(`column`): `boolean`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:1089](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1089)
+
 #### Parameters
 
 ##### column
 
-`Column`\<`any`\>
+`Column`
 
 #### Returns
 
@@ -942,15 +1234,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`canShowColumn`](DataGrid.md#canshowcolumn)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1154)
-
 ***
 
 ### change()
 
 > **change**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 #### Parameters
 
@@ -966,15 +1256,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`change`](DataGrid.md#change)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
-
 ***
 
 ### changeSelect2()
 
 > **changeSelect2**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 #### Parameters
 
@@ -990,15 +1278,33 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`changeSelect2`](DataGrid.md#changeselect2)
 
-#### Defined in
+***
 
-[src/ui/widgets/widget.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L122)
+### createColumns()
+
+> `protected` **createColumns**(): `Column`\<`any`\>[]
+
+Defined in: [src/ui/editors/checktreeeditor.ts:324](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L324)
+
+Creates initial column set for this grid. This column set is then passed
+to postProcessColumns to adjust widths etc, and then used as the initial
+columns for the slickgrid.
+
+#### Returns
+
+`Column`\<`any`\>[]
+
+#### Overrides
+
+[`DataGrid`](DataGrid.md).[`createColumns`](DataGrid.md#createcolumns)
 
 ***
 
 ### createFilterBar()
 
 > `protected` **createFilterBar**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:650](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L650)
 
 #### Returns
 
@@ -1008,15 +1314,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`createFilterBar`](DataGrid.md#createfilterbar)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:753](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L753)
-
 ***
 
 ### createIncludeDeletedButton()
 
 > `protected` **createIncludeDeletedButton**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L250)
 
 #### Returns
 
@@ -1026,15 +1330,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`createIncludeDeletedButton`](DataGrid.md#createincludedeletedbutton)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L305)
-
 ***
 
 ### createPager()
 
 > `protected` **createPager**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L668)
 
 #### Returns
 
@@ -1044,15 +1346,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`createPager`](DataGrid.md#createpager)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:768](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L768)
-
 ***
 
 ### createQuickFilters()
 
-> `protected` **createQuickFilters**(`filters`?): `void`
+> `protected` **createQuickFilters**(`filters?`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L198)
 
 #### Parameters
 
@@ -1068,15 +1368,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`createQuickFilters`](DataGrid.md#createquickfilters)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L203)
-
 ***
 
 ### createQuickSearchInput()
 
 > `protected` **createQuickSearchInput**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L259)
 
 #### Returns
 
@@ -1086,51 +1384,67 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`createQuickSearchInput`](DataGrid.md#createquicksearchinput)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:314](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L314)
+### createSleekColumns()
+
+> `protected` **createSleekColumns**(): `Column`\<`TItem`\>[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L398)
+
+Creates the SleekGrid columns. This method calls createColumns (via getColumns for compatibility) and then post processes them.
+
+#### Returns
+
+`Column`\<`TItem`\>[]
+
+The SleekGrid columns.
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`createSleekColumns`](DataGrid.md#createsleekcolumns)
 
 ***
 
 ### createSlickContainer()
 
-> `protected` **createSlickContainer**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> `protected` **createSlickContainer**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:622](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L622)
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`createSlickContainer`](DataGrid.md#createslickcontainer)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:707](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L707)
-
 ***
 
 ### createSlickGrid()
 
-> `protected` **createSlickGrid**(): `Grid`\<`any`\>
+> `protected` **createSlickGrid**(): `ISleekGrid`\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:404](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L404)
+
+Override initSleekGrid to add plugins to the sleekgrid
 
 #### Returns
 
-`Grid`\<`any`\>
+`ISleekGrid`\<`TItem`\>
 
-#### Overrides
+#### Inherited from
 
 [`DataGrid`](DataGrid.md).[`createSlickGrid`](DataGrid.md#createslickgrid)
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L120)
 
 ***
 
 ### createToolbar()
 
 > `protected` **createToolbar**(`buttons`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L694)
 
 #### Parameters
 
@@ -1146,15 +1460,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`createToolbar`](DataGrid.md#createtoolbar)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:794](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L794)
-
 ***
 
 ### createToolbarExtensions()
 
 > `protected` **createToolbarExtensions**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L187)
 
 #### Returns
 
@@ -1164,33 +1476,29 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`createToolbarExtensions`](DataGrid.md#createtoolbarextensions)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L192)
-
 ***
 
 ### createView()
 
-> `protected` **createView**(): [`RemoteView`](RemoteView.md)\<`TItem`\>
+> `protected` **createView**(): [`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:626](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L626)
 
 #### Returns
 
-[`RemoteView`](RemoteView.md)\<`TItem`\>
+[`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`createView`](DataGrid.md#createview)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:711](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L711)
-
 ***
 
 ### dateRangeQuickFilter()
 
-> `protected` **dateRangeQuickFilter**(`field`, `title`?): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+> `protected` **dateRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateEditor`](DateEditor.md)\<[`DateEditorOptions`](../interfaces/DateEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1032](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1032)
 
 #### Parameters
 
@@ -1210,15 +1518,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`dateRangeQuickFilter`](DataGrid.md#daterangequickfilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1103)
-
 ***
 
 ### dateTimeRangeQuickFilter()
 
-> `protected` **dateTimeRangeQuickFilter**(`field`, `title`?): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+> `protected` **dateTimeRangeQuickFilter**(`field`, `title?`): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`DateTimeEditor`](DateTimeEditor.md)\<[`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>, [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1040](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1040)
 
 #### Parameters
 
@@ -1238,15 +1544,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`dateTimeRangeQuickFilter`](DataGrid.md#datetimerangequickfilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1111)
-
 ***
 
 ### deferRender()
 
 > `protected` **deferRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 #### Returns
 
@@ -1256,15 +1560,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`deferRender`](DataGrid.md#deferrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
-
 ***
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L264)
 
 #### Returns
 
@@ -1274,15 +1576,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`destroy`](DataGrid.md#destroy)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:319](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L319)
-
 ***
 
 ### determineText()
 
 > `protected` **determineText**(`getKey`): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1012](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1012)
 
 #### Parameters
 
@@ -1298,15 +1598,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`determineText`](DataGrid.md#determinetext)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1083](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1083)
-
 ***
 
 ### editItem()
 
 > `protected` **editItem**(`entityOrId`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:494](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L494)
 
 #### Parameters
 
@@ -1322,15 +1620,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`editItem`](DataGrid.md#edititem)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:591](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L591)
-
 ***
 
 ### editItemOfType()
 
 > `protected` **editItemOfType**(`itemType`, `entityOrId`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:498](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L498)
 
 #### Parameters
 
@@ -1350,15 +1646,85 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`editItemOfType`](DataGrid.md#edititemoftype)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L595)
+### EditLink()
+
+> **EditLink**(`props`): `any`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L740)
+
+Renders an edit link for the item in current row. Returns a DocumentFragment for non-data rows, and an anchor element otherwise.
+
+#### Parameters
+
+##### props
+
+###### children?
+
+`any`
+
+The link text. If not provided it will be taken from ctx.escape(ctx.value)
+
+###### context?
+
+`FormatterContext`
+
+formatter context (contains item, value etc)
+
+###### cssClass?
+
+`string`
+
+Extra CSS class to add to the link element besides s-EditLink. Optional.
+
+###### id?
+
+`string`
+
+The id of the entity to link to. If not provided it will be taken from ctx.item[idField]
+
+###### idField?
+
+`string`
+
+The name of the field in item that contains the entity id. Defaults to idProperty. Used if id is not provided.
+
+###### itemType?
+
+`string`
+
+The item type to link to. Defaults to this.getItemType()
+
+###### tabindex?
+
+`number`
+
+The tabindex to assign to the link, default is undefined
+
+###### tabIndex?
+
+`number`
+
+**Deprecated**
+
+Use tabindex.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`EditLink`](DataGrid.md#editlink)
 
 ***
 
-### enableFiltering()
+### enableAdvancedFiltering()
 
-> `protected` **enableFiltering**(): `boolean`
+> `protected` **enableAdvancedFiltering**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:639](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L639)
 
 #### Returns
 
@@ -1366,29 +1732,39 @@ Returns a Fluent(this.domNode) object
 
 #### Inherited from
 
-[`DataGrid`](DataGrid.md).[`enableFiltering`](DataGrid.md#enablefiltering)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L745)
+[`DataGrid`](DataGrid.md).[`enableAdvancedFiltering`](DataGrid.md#enableadvancedfiltering)
 
 ***
 
 ### ensureQuickFilterBar()
 
-> `protected` **ensureQuickFilterBar**(): [`QuickFilterBar`](QuickFilterBar.md)\<[`QuickFilterBarOptions`](../interfaces/QuickFilterBarOptions.md)\>
+> `protected` **ensureQuickFilterBar**(): [`QuickFilterBar`](QuickFilterBar.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L190)
 
 #### Returns
 
-[`QuickFilterBar`](QuickFilterBar.md)\<[`QuickFilterBarOptions`](../interfaces/QuickFilterBarOptions.md)\>
+[`QuickFilterBar`](QuickFilterBar.md)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`ensureQuickFilterBar`](DataGrid.md#ensurequickfilterbar)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L195)
+### filterStoreChanged()
+
+> `protected` **filterStoreChanged**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:376](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L376)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`filterStoreChanged`](DataGrid.md#filterstorechanged)
 
 ***
 
@@ -1396,9 +1772,13 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **findById**\<`TElement`\>(`id`): `TElement`
 
+Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -1414,19 +1794,19 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`findById`](DataGrid.md#findbyid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
-
 ***
 
 ### findQuickFilter()
 
 > `protected` **findQuickFilter**\<`TWidget`\>(`type`, `field`): `TWidget`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L234)
+
 #### Type Parameters
 
-• **TWidget**
+##### TWidget
+
+`TWidget`
 
 #### Parameters
 
@@ -1446,15 +1826,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`findQuickFilter`](DataGrid.md#findquickfilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L289)
-
 ***
 
 ### get\_readOnly()
 
 > **get\_readOnly**(): `boolean`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L399)
 
 #### Returns
 
@@ -1468,15 +1846,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`get_readOnly`](DataGrid.md#get_readonly)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L396)
-
 ***
 
 ### getAddButtonCaption()
 
 > `protected` **getAddButtonCaption**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:486](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L486)
 
 #### Returns
 
@@ -1486,15 +1862,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getAddButtonCaption`](DataGrid.md#getaddbuttoncaption)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:583](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L583)
-
 ***
 
 ### getButtons()
 
 > `protected` **getButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+
+Defined in: [src/ui/editors/checktreeeditor.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L85)
 
 #### Returns
 
@@ -1504,33 +1878,33 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getButtons`](DataGrid.md#getbuttons)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L83)
-
 ***
 
-### getColumns()
+### ~~getColumns()~~
 
-> `protected` **getColumns**(): `Column`\<`any`\>[]
+> `protected` **getColumns**(): `Column`\<`TItem`\>[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:822](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L822)
 
 #### Returns
 
-`Column`\<`any`\>[]
+`Column`\<`TItem`\>[]
 
-#### Overrides
+#### Deprecated
+
+override createColumns
+
+#### Inherited from
 
 [`DataGrid`](DataGrid.md).[`getColumns`](DataGrid.md#getcolumns)
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L321)
 
 ***
 
 ### getColumnsKey()
 
 > `protected` **getColumnsKey**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:784](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L784)
 
 #### Returns
 
@@ -1540,15 +1914,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getColumnsKey`](DataGrid.md#getcolumnskey)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:848](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L848)
-
 ***
 
 ### getColumnWidthDelta()
 
 > `protected` **getColumnWidthDelta**(): `number`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:336](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L336)
 
 #### Returns
 
@@ -1558,15 +1930,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getColumnWidthDelta`](DataGrid.md#getcolumnwidthdelta)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:415](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L415)
-
 ***
 
 ### getColumnWidthScale()
 
 > `protected` **getColumnWidthScale**(): `number`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:340](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L340)
 
 #### Returns
 
@@ -1576,15 +1946,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getColumnWidthScale`](DataGrid.md#getcolumnwidthscale)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:419](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L419)
-
 ***
 
 ### getCssClass()
 
 > `protected` **getCssClass**(): `string`
+
+Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 #### Returns
 
@@ -1594,21 +1962,19 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getCssClass`](DataGrid.md#getcssclass)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
-
 ***
 
 ### getCurrentSettings()
 
-> `protected` **getCurrentSettings**(`flags`?): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
+> **getCurrentSettings**(`flags?`): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1208)
 
 #### Parameters
 
 ##### flags?
 
-[`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
+[`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md)
 
 #### Returns
 
@@ -1618,19 +1984,19 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getCurrentSettings`](DataGrid.md#getcurrentsettings)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1367](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1367)
-
 ***
 
 ### getCustomAttribute()
 
 > `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
 
+Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+
 #### Type Parameters
 
-• **TAttr**
+##### TAttr
+
+`TAttr` *extends* [`CustomAttribute`](CustomAttribute.md)
 
 #### Parameters
 
@@ -1650,15 +2016,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getCustomAttribute`](DataGrid.md#getcustomattribute)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
 ***
 
 ### getDefaultSortBy()
 
 > `protected` **getDefaultSortBy**(): `any`[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:631](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L631)
 
 #### Returns
 
@@ -1668,29 +2032,25 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getDefaultSortBy`](DataGrid.md#getdefaultsortby)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:716](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L716)
-
 ***
 
 ### getDelimited()
 
 > `protected` **getDelimited**(): `boolean`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L305)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:302](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L302)
 
 ***
 
 ### getDescendantsSelected()
 
 > `protected` **getDescendantsSelected**(`item`): `boolean`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L257)
 
 #### Parameters
 
@@ -1702,15 +2062,13 @@ Returns a Fluent(this.domNode) object
 
 `boolean`
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L254)
-
 ***
 
 ### getEditValue()
 
 > **getEditValue**(`property`, `target`): `void`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L73)
 
 #### Parameters
 
@@ -1730,15 +2088,13 @@ Returns a Fluent(this.domNode) object
 
 [`IGetEditValue`](IGetEditValue.md).[`getEditValue`](IGetEditValue.md#geteditvalue)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L71)
-
 ***
 
 ### getElement()
 
 > **getElement**(): `HTMLElement`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1238)
 
 #### Returns
 
@@ -1748,15 +2104,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getElement`](DataGrid.md#getelement)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1457)
-
 ***
 
 ### getFilterStore()
 
 > **getFilterStore**(): [`FilterStore`](FilterStore.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1256)
 
 #### Returns
 
@@ -1766,33 +2120,29 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getFilterStore`](DataGrid.md#getfilterstore)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1469)
-
 ***
 
 ### getGrid()
 
-> **getGrid**(): `Grid`\<`any`\>
+> **getGrid**(): `ISleekGrid`\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1242)
 
 #### Returns
 
-`Grid`\<`any`\>
+`ISleekGrid`\<`TItem`\>
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`getGrid`](DataGrid.md#getgrid)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1461](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1461)
 
 ***
 
 ### getGridCanLoad()
 
 > `protected` **getGridCanLoad**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:874](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L874)
 
 #### Returns
 
@@ -1802,33 +2152,29 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getGridCanLoad`](DataGrid.md#getgridcanload)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:939](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L939)
-
 ***
 
 ### getGridField()
 
-> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`getGridField`](DataGrid.md#getgridfield)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ***
 
 ### getIdProperty()
 
 > `protected` **getIdProperty**(): `string`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L44)
 
 #### Returns
 
@@ -1838,15 +2184,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getIdProperty`](DataGrid.md#getidproperty)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L42)
-
 ***
 
 ### getIncludeColumns()
 
 > `protected` **getIncludeColumns**(`include`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:570](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L570)
 
 #### Parameters
 
@@ -1860,29 +2204,25 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getIncludeColumns`](DataGrid.md#getincludecolumns)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:653](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L653)
-
 ***
 
 ### getInitialCollapse()
 
 > `protected` **getInitialCollapse**(): `boolean`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L156)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L153)
 
 ***
 
 ### getInitialTitle()
 
 > `protected` **getInitialTitle**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L183)
 
 #### Returns
 
@@ -1892,15 +2232,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getInitialTitle`](DataGrid.md#getinitialtitle)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L188)
-
 ***
 
 ### getIsActiveProperty()
 
 > `protected` **getIsActiveProperty**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:989](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L989)
 
 #### Returns
 
@@ -1910,15 +2248,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getIsActiveProperty`](DataGrid.md#getisactiveproperty)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1052](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1052)
-
 ***
 
 ### getIsDeletedProperty()
 
 > `protected` **getIsDeletedProperty**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:983](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L983)
 
 #### Returns
 
@@ -1928,15 +2264,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getIsDeletedProperty`](DataGrid.md#getisdeletedproperty)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1046](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1046)
-
 ***
 
 ### getItemCssClass()
 
 > `protected` **getItemCssClass**(`item`, `index`): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:303](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L303)
 
 #### Parameters
 
@@ -1956,15 +2290,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getItemCssClass`](DataGrid.md#getitemcssclass)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L353)
-
 ***
 
 ### getItemMetadata()
 
 > `protected` **getItemMetadata**(`item`, `index`): `any`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L307)
 
 #### Parameters
 
@@ -1984,15 +2316,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getItemMetadata`](DataGrid.md#getitemmetadata)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L386)
-
 ***
 
 ### getItems()
 
 > **getItems**(): `TItem`[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:453](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L453)
 
 #### Returns
 
@@ -2002,35 +2332,31 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getItems`](DataGrid.md#getitems)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L517)
-
 ***
 
 ### getItemText()
 
 > `protected` **getItemText**(`ctx`): `string`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:355](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L355)
+
 #### Parameters
 
 ##### ctx
 
-`FormatterContext`\<`any`\>
+`FormatterContext`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L352)
 
 ***
 
 ### getItemType()
 
 > `protected` **getItemType**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:730](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L730)
 
 #### Returns
 
@@ -2040,15 +2366,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getItemType`](DataGrid.md#getitemtype)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:830](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L830)
-
 ***
 
 ### getLocalTextDbPrefix()
 
 > `protected` **getLocalTextDbPrefix**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:950](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L950)
 
 #### Returns
 
@@ -2058,15 +2382,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getLocalTextDbPrefix`](DataGrid.md#getlocaltextdbprefix)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1009](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1009)
-
 ***
 
 ### getLocalTextPrefix()
 
 > `protected` **getLocalTextPrefix**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:962](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L962)
 
 #### Returns
 
@@ -2076,15 +2398,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getLocalTextPrefix`](DataGrid.md#getlocaltextprefix)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1021](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1021)
-
 ***
 
 ### getPagerOptions()
 
 > `protected` **getPagerOptions**(): [`PagerOptions`](../interfaces/PagerOptions.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:660](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L660)
 
 #### Returns
 
@@ -2094,51 +2414,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getPagerOptions`](DataGrid.md#getpageroptions)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:760](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L760)
-
-***
-
-### getPersistanceKey()
-
-> `protected` **getPersistanceKey**(): `string`
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-[`DataGrid`](DataGrid.md).[`getPersistanceKey`](DataGrid.md#getpersistancekey)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1139)
-
-***
-
-### getPersistanceStorage()
-
-> `protected` **getPersistanceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
-
-#### Returns
-
-[`SettingStorage`](../interfaces/SettingStorage.md)
-
-#### Inherited from
-
-[`DataGrid`](DataGrid.md).[`getPersistanceStorage`](DataGrid.md#getpersistancestorage)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1135)
-
 ***
 
 ### getPersistedSettings()
 
 > `protected` **getPersistedSettings**(): [`PersistedGridSettings`](../interfaces/PersistedGridSettings.md) \| `Promise`\<[`PersistedGridSettings`](../interfaces/PersistedGridSettings.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1110)
 
 #### Returns
 
@@ -2148,15 +2430,45 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getPersistedSettings`](DataGrid.md#getpersistedsettings)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:1175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1175)
+### getPersistenceKey()
+
+> `protected` **getPersistenceKey**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1070](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1070)
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`getPersistenceKey`](DataGrid.md#getpersistencekey)
+
+***
+
+### getPersistenceStorage()
+
+> `protected` **getPersistenceStorage**(): [`SettingStorage`](../interfaces/SettingStorage.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1064](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1064)
+
+#### Returns
+
+[`SettingStorage`](../interfaces/SettingStorage.md)
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`getPersistenceStorage`](DataGrid.md#getpersistencestorage)
 
 ***
 
 ### getPropertyItems()
 
 > `protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:788](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L788)
 
 #### Returns
 
@@ -2166,15 +2478,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getPropertyItems`](DataGrid.md#getpropertyitems)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:852](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L852)
-
 ***
 
 ### getPropertyItemsData()
 
 > `protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:792](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L792)
 
 #### Returns
 
@@ -2184,15 +2494,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getPropertyItemsData`](DataGrid.md#getpropertyitemsdata)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:856](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L856)
-
 ***
 
 ### getPropertyItemsDataAsync()
 
 > `protected` **getPropertyItemsDataAsync**(): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:812](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L812)
 
 #### Returns
 
@@ -2202,15 +2510,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getPropertyItemsDataAsync`](DataGrid.md#getpropertyitemsdataasync)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:876](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L876)
-
 ***
 
 ### getQuickFilters()
 
 > `protected` **getQuickFilters**(): [`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\>[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L220)
 
 #### Returns
 
@@ -2220,15 +2526,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getQuickFilters`](DataGrid.md#getquickfilters)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:225](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L225)
-
 ***
 
 ### getQuickSearchFields()
 
 > `protected` **getQuickSearchFields**(): [`QuickSearchField`](../interfaces/QuickSearchField.md)[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L255)
 
 #### Returns
 
@@ -2238,15 +2542,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getQuickSearchFields`](DataGrid.md#getquicksearchfields)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L310)
-
 ***
 
 ### getRowDefinition()
 
 > `protected` **getRowDefinition**(): [`IRowDefinition`](../interfaces/IRowDefinition.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:944](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L944)
 
 #### Returns
 
@@ -2256,47 +2558,41 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getRowDefinition`](DataGrid.md#getrowdefinition)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1003](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1003)
-
 ***
 
 ### getSelectAllText()
 
 > `protected` **getSelectAllText**(): `string`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L114)
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L112)
 
 ***
 
 ### getSlickOptions()
 
-> `protected` **getSlickOptions**(): `GridOptions`\<`any`\>
+> `protected` **getSlickOptions**(): `GridOptions`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:359](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L359)
 
 #### Returns
 
-`GridOptions`\<`any`\>
+`GridOptions`
 
 #### Overrides
 
 [`DataGrid`](DataGrid.md).[`getSlickOptions`](DataGrid.md#getslickoptions)
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:356](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L356)
 
 ***
 
 ### getTitle()
 
 > **getTitle**(): `string`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:702](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L702)
 
 #### Returns
 
@@ -2306,83 +2602,209 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`getTitle`](DataGrid.md#gettitle)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:802](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L802)
-
 ***
 
 ### getTreeItems()
 
 > `protected` **getTreeItems**(): `TItem`[]
 
+Defined in: [src/ui/editors/checktreeeditor.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L48)
+
 #### Returns
 
 `TItem`[]
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L46)
 
 ***
 
 ### getView()
 
-> **getView**(): [`RemoteView`](RemoteView.md)\<`TItem`\>
+> **getView**(): [`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1252)
 
 #### Returns
 
-[`RemoteView`](RemoteView.md)\<`TItem`\>
+[`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`getView`](DataGrid.md#getview)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1465)
-
 ***
 
 ### getViewOptions()
 
-> `protected` **getViewOptions**(): [`RemoteViewOptions`](../interfaces/RemoteViewOptions.md)
+> `protected` **getViewOptions**(): [`RemoteViewOptions`](../interfaces/RemoteViewOptions.md)\<`any`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L672)
 
 #### Returns
 
-[`RemoteViewOptions`](../interfaces/RemoteViewOptions.md)
+[`RemoteViewOptions`](../interfaces/RemoteViewOptions.md)\<`any`\>
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`getViewOptions`](DataGrid.md#getviewoptions)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:772](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L772)
-
 ***
 
-### gridPersistanceFlags()
+### gridPersistenceFlags()
 
-> `protected` **gridPersistanceFlags**(): [`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
+> `protected` **gridPersistenceFlags**(): [`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md)
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1083](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1083)
 
 #### Returns
 
-[`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
+[`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md)
 
 #### Inherited from
 
-[`DataGrid`](DataGrid.md).[`gridPersistanceFlags`](DataGrid.md#gridpersistanceflags)
+[`DataGrid`](DataGrid.md).[`gridPersistenceFlags`](DataGrid.md#gridpersistenceflags)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:1150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1150)
+### handleGridClick()
+
+> `protected` **handleGridClick**(`e`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L466)
+
+#### Parameters
+
+##### e
+
+`CellMouseEvent`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`handleGridClick`](DataGrid.md#handlegridclick)
+
+***
+
+### handleGridColumnsReordered()
+
+> `protected` **handleGridColumnsReordered**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L470)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`handleGridColumnsReordered`](DataGrid.md#handlegridcolumnsreordered)
+
+***
+
+### handleGridColumnsResized()
+
+> `protected` **handleGridColumnsResized**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:474](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L474)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`handleGridColumnsResized`](DataGrid.md#handlegridcolumnsresized)
+
+***
+
+### handleGridSort()
+
+> `protected` **handleGridSort**(`e`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:461](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L461)
+
+#### Parameters
+
+##### e
+
+`GridSortEvent`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`handleGridSort`](DataGrid.md#handlegridsort)
+
+***
+
+### handleViewFilter()
+
+> `protected` **handleViewFilter**(`item`): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:537](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L537)
+
+#### Parameters
+
+##### item
+
+`TItem`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`handleViewFilter`](DataGrid.md#handleviewfilter)
+
+***
+
+### handleViewProcessData()
+
+> `protected` **handleViewProcessData**(`response`): [`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:546](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L546)
+
+#### Parameters
+
+##### response
+
+[`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
+
+#### Returns
+
+[`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`handleViewProcessData`](DataGrid.md#handleviewprocessdata)
+
+***
+
+### handleViewSubmit()
+
+> `protected` **handleViewSubmit**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:553](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L553)
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`handleViewSubmit`](DataGrid.md#handleviewsubmit)
 
 ***
 
 ### init()
 
 > **init**(): `this`
+
+Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
 
 #### Returns
 
@@ -2392,15 +2814,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`init`](DataGrid.md#init)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L157)
-
 ***
 
 ### initializeFilterBar()
 
 > `protected` **initializeFilterBar**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L366)
 
 #### Returns
 
@@ -2410,15 +2830,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`initializeFilterBar`](DataGrid.md#initializefilterbar)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:445](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L445)
-
 ***
 
 ### initialPopulate()
 
 > `protected` **initialPopulate**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:344](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L344)
 
 #### Returns
 
@@ -2428,15 +2846,29 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`initialPopulate`](DataGrid.md#initialpopulate)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:423](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L423)
+### initSleekGrid()
+
+> `protected` **initSleekGrid**(): `void`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L122)
+
+#### Returns
+
+`void`
+
+#### Overrides
+
+[`DataGrid`](DataGrid.md).[`initSleekGrid`](DataGrid.md#initsleekgrid)
 
 ***
 
 ### internalRefresh()
 
 > `protected` **internalRefresh**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:915](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L915)
 
 #### Returns
 
@@ -2446,15 +2878,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`internalRefresh`](DataGrid.md#internalrefresh)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:963](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L963)
-
 ***
 
 ### internalRenderContents()
 
 > **internalRenderContents**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L173)
 
 #### Returns
 
@@ -2464,15 +2894,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`internalRenderContents`](DataGrid.md#internalrendercontents)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L177)
-
 ***
 
 ### invokeSubmitHandlers()
 
 > `protected` **invokeSubmitHandlers**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1052](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1052)
 
 #### Returns
 
@@ -2482,29 +2910,25 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`invokeSubmitHandlers`](DataGrid.md#invokesubmithandlers)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1123)
-
 ***
 
 ### isThreeStateHierarchy()
 
 > `protected` **isThreeStateHierarchy**(): `boolean`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L118)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L116)
 
 ***
 
 ### itemAt()
 
 > **itemAt**(`row`): `TItem`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:441](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L441)
 
 #### Parameters
 
@@ -2520,15 +2944,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`itemAt`](DataGrid.md#itemat)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:505](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L505)
-
 ***
 
 ### itemId()
 
 > **itemId**(`item`): `any`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:445](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L445)
 
 #### Parameters
 
@@ -2544,15 +2966,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`itemId`](DataGrid.md#itemid)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:509](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L509)
-
 ***
 
 ### itemLink()
 
-> `protected` **itemLink**(`itemType`?, `idField`?, `text`?, `cssClass`?, `encode`?): [`Format`](../type-aliases/Format.md)\<`TItem`\>
+> `protected` **itemLink**(`itemType?`, `idField?`, `text?`, `cssClass?`, `encode?`): [`Format`](../type-aliases/Format.md)\<`TItem`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L734)
 
 #### Parameters
 
@@ -2584,15 +3004,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`itemLink`](DataGrid.md#itemlink)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:834](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L834)
-
 ***
 
 ### itemSelectedChanged()
 
 > `protected` **itemSelectedChanged**(`item`): `void`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L111)
 
 #### Parameters
 
@@ -2604,15 +3022,13 @@ Returns a Fluent(this.domNode) object
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L109)
-
 ***
 
 ### layout()
 
 > `protected` **layout**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L161)
 
 #### Returns
 
@@ -2622,15 +3038,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`layout`](DataGrid.md#layout)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L166)
-
 ***
 
 ### legacyTemplateRender()
 
 > `protected` **legacyTemplateRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L190)
 
 #### Returns
 
@@ -2640,15 +3054,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`legacyTemplateRender`](DataGrid.md#legacytemplaterender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L194)
-
 ***
 
 ### markupReady()
 
 > `protected` **markupReady**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:618](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L618)
 
 #### Returns
 
@@ -2658,29 +3070,25 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`markupReady`](DataGrid.md#markupready)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:704](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L704)
-
 ***
 
 ### moveSelectedUp()
 
 > `protected` **moveSelectedUp**(): `boolean`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L393)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:390](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L390)
 
 ***
 
 ### onClick()
 
 > `protected` **onClick**(`e`, `row`, `cell`): `void`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L171)
 
 #### Parameters
 
@@ -2704,15 +3112,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`onClick`](DataGrid.md#onclick)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L168)
-
 ***
 
 ### onViewFilter()
 
 > `protected` **onViewFilter**(`item`): `boolean`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L130)
 
 #### Parameters
 
@@ -2728,15 +3134,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`onViewFilter`](DataGrid.md#onviewfilter)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L127)
-
 ***
 
 ### onViewProcessData()
 
 > `protected` **onViewProcessData**(`response`): [`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
+
+Defined in: [src/ui/editors/checktreeeditor.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L160)
 
 #### Parameters
 
@@ -2752,15 +3156,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`onViewProcessData`](DataGrid.md#onviewprocessdata)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L157)
-
 ***
 
 ### onViewSubmit()
 
 > `protected` **onViewSubmit**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:609](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L609)
 
 #### Returns
 
@@ -2770,21 +3172,51 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`onViewSubmit`](DataGrid.md#onviewsubmit)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:692](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L692)
+### persistenceLock()
+
+> **persistenceLock**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1187)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`persistenceLock`](DataGrid.md#persistencelock)
+
+***
+
+### persistenceUnlock()
+
+> **persistenceUnlock**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1191)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`persistenceUnlock`](DataGrid.md#persistenceunlock)
 
 ***
 
 ### persistSettings()
 
-> `protected` **persistSettings**(`flags`?): `void` \| `Promise`\<`void`\>
+> **persistSettings**(`flags?`): `void` \| `Promise`\<`void`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1195)
 
 #### Parameters
 
 ##### flags?
 
-[`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
+[`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md)
 
 #### Returns
 
@@ -2794,15 +3226,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`persistSettings`](DataGrid.md#persistsettings)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1357](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1357)
-
 ***
 
 ### populateLock()
 
 > `protected` **populateLock**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:866](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L866)
 
 #### Returns
 
@@ -2812,15 +3242,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`populateLock`](DataGrid.md#populatelock)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:931](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L931)
-
 ***
 
 ### populateUnlock()
 
 > `protected` **populateUnlock**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:870](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L870)
 
 #### Returns
 
@@ -2830,15 +3258,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`populateUnlock`](DataGrid.md#populateunlock)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:935](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L935)
-
 ***
 
 ### populateWhenVisible()
 
 > `protected` **populateWhenVisible**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L646)
 
 #### Returns
 
@@ -2848,15 +3274,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`populateWhenVisible`](DataGrid.md#populatewhenvisible)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:749](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L749)
-
 ***
 
 ### postProcessColumns()
 
 > `protected` **postProcessColumns**(`columns`): `Column`\<`any`\>[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L315)
 
 #### Parameters
 
@@ -2872,15 +3296,32 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`postProcessColumns`](DataGrid.md#postprocesscolumns)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:394](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L394)
+### prepareSubmit()
+
+> **prepareSubmit**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:886](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L886)
+
+Prepares submit arguments in this.view.params by calling this.view.onSubmit if available, or this.handleViewSubmit if not. 
+Note that if getGridCanLoad returns false, the prepared arguments might be in a incomplete state.
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`prepareSubmit`](DataGrid.md#preparesubmit)
 
 ***
 
 ### propertyItemsReady()
 
 > `protected` **propertyItemsReady**(`itemsData`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L112)
 
 #### Parameters
 
@@ -2896,15 +3337,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`propertyItemsReady`](DataGrid.md#propertyitemsready)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L122)
-
 ***
 
-### propertyItemsToSlickColumns()
+### propertyItemsToColumns()
 
-> `protected` **propertyItemsToSlickColumns**(`propertyItems`): `Column`\<`any`\>[]
+> `protected` **propertyItemsToColumns**(`propertyItems`): `Column`\<`any`\>[]
+
+Defined in: [src/ui/datagrid/datagrid.tsx:841](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L841)
 
 #### Parameters
 
@@ -2918,17 +3357,15 @@ Returns a Fluent(this.domNode) object
 
 #### Inherited from
 
-[`DataGrid`](DataGrid.md).[`propertyItemsToSlickColumns`](DataGrid.md#propertyitemstoslickcolumns)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:904](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L904)
+[`DataGrid`](DataGrid.md).[`propertyItemsToColumns`](DataGrid.md#propertyitemstocolumns)
 
 ***
 
 ### quickFilterChange()
 
 > `protected` **quickFilterChange**(`e`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1058](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1058)
 
 #### Parameters
 
@@ -2944,15 +3381,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`quickFilterChange`](DataGrid.md#quickfilterchange)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1129)
-
 ***
 
 ### refresh()
 
 > **refresh**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:895](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L895)
 
 #### Returns
 
@@ -2962,15 +3397,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`refresh`](DataGrid.md#refresh)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:943](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L943)
-
 ***
 
 ### refreshIfNeeded()
 
 > `protected` **refreshIfNeeded**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:908](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L908)
 
 #### Returns
 
@@ -2980,15 +3413,13 @@ Returns a Fluent(this.domNode) object
 
 [`DataGrid`](DataGrid.md).[`refreshIfNeeded`](DataGrid.md#refreshifneeded)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:956](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L956)
-
 ***
 
 ### render()
 
 > **render**(): `any`
+
+Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -3002,15 +3433,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`render`](DataGrid.md#render)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L167)
-
 ***
 
 ### renderContents()
 
 > `protected` **renderContents**(): `any`
+
+Defined in: [src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
 
 #### Returns
 
@@ -3020,15 +3449,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`renderContents`](DataGrid.md#rendercontents)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
-
 ***
 
 ### resizeCanvas()
 
 > `protected` **resizeCanvas**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1000](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1000)
 
 #### Returns
 
@@ -3038,15 +3465,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`resizeCanvas`](DataGrid.md#resizecanvas)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1071](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1071)
-
 ***
 
 ### restoreSettings()
 
-> `protected` **restoreSettings**(`settings`?, `flags`?): `void` \| `Promise`\<`void`\>
+> `protected` **restoreSettings**(`settings?`, `flags?`): `void` \| `Promise`\<`void`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1129)
 
 #### Parameters
 
@@ -3056,7 +3481,7 @@ this method should not be overridden. Override renderContents() instead.
 
 ##### flags?
 
-[`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
+[`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md)
 
 #### Returns
 
@@ -3066,15 +3491,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`restoreSettings`](DataGrid.md#restoresettings)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1194)
-
 ***
 
 ### restoreSettingsFrom()
 
-> `protected` **restoreSettingsFrom**(`settings`, `flags`?): `void`
+> `protected` **restoreSettingsFrom**(`settings`, `flags?`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1140)
 
 #### Parameters
 
@@ -3084,7 +3507,7 @@ this method should not be overridden. Override renderContents() instead.
 
 ##### flags?
 
-[`GridPersistanceFlags`](../interfaces/GridPersistanceFlags.md)
+[`GridPersistenceFlags`](../interfaces/GridPersistenceFlags.md)
 
 #### Returns
 
@@ -3094,15 +3517,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`restoreSettingsFrom`](DataGrid.md#restoresettingsfrom)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1205](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1205)
-
 ***
 
 ### rowCount()
 
 > **rowCount**(): `number`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:449](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L449)
 
 #### Returns
 
@@ -3112,15 +3533,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`rowCount`](DataGrid.md#rowcount)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:513](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L513)
-
 ***
 
 ### set\_readOnly()
 
 > **set\_readOnly**(`value`): `void`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:403](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L403)
 
 #### Parameters
 
@@ -3140,15 +3559,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`set_readOnly`](DataGrid.md#set_readonly)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L400)
-
 ***
 
 ### setAllSubTreeSelected()
 
 > `protected` **setAllSubTreeSelected**(`item`, `selected`): `boolean`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L261)
 
 #### Parameters
 
@@ -3164,15 +3581,13 @@ this method should not be overridden. Override renderContents() instead.
 
 `boolean`
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L258)
-
 ***
 
 ### setCriteriaParameter()
 
 > `protected` **setCriteriaParameter**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:585](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L585)
 
 #### Returns
 
@@ -3182,15 +3597,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`setCriteriaParameter`](DataGrid.md#setcriteriaparameter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:668](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L668)
-
 ***
 
 ### setEditValue()
 
 > **setEditValue**(`source`, `property`): `void`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L80)
 
 #### Parameters
 
@@ -3210,15 +3623,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`ISetEditValue`](ISetEditValue.md).[`setEditValue`](ISetEditValue.md#seteditvalue)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L78)
-
 ***
 
 ### setEquality()
 
 > `protected` **setEquality**(`field`, `value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L595)
 
 #### Parameters
 
@@ -3238,15 +3649,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`setEquality`](DataGrid.md#setequality)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:678](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L678)
-
 ***
 
 ### setIncludeColumnsParameter()
 
 > `protected` **setIncludeColumnsParameter**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L599)
 
 #### Returns
 
@@ -3256,15 +3665,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`setIncludeColumnsParameter`](DataGrid.md#setincludecolumnsparameter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:682](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L682)
-
 ***
 
 ### setInitialSortOrder()
 
 > `protected` **setInitialSortOrder**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:416](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L416)
 
 #### Returns
 
@@ -3274,39 +3681,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`setInitialSortOrder`](DataGrid.md#setinitialsortorder)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:480](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L480)
-
-***
-
-### setIsDisabled()
-
-> **setIsDisabled**(`value`): `void`
-
-#### Parameters
-
-##### value
-
-`boolean`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[`DataGrid`](DataGrid.md).[`setIsDisabled`](DataGrid.md#setisdisabled)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:967](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L967)
-
 ***
 
 ### setItems()
 
 > **setItems**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L457)
 
 #### Parameters
 
@@ -3322,15 +3703,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`setItems`](DataGrid.md#setitems)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:521](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L521)
-
 ***
 
 ### setTitle()
 
 > **setTitle**(`value`): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:710](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L710)
 
 #### Parameters
 
@@ -3346,29 +3725,25 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`setTitle`](DataGrid.md#settitle)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:810](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L810)
-
 ***
 
 ### sortItems()
 
 > `protected` **sortItems**(): `void`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L365)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:362](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L362)
 
 ***
 
 ### subDialogDataChange()
 
 > `protected` **subDialogDataChange**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:1004](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1004)
 
 #### Returns
 
@@ -3378,19 +3753,19 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`subDialogDataChange`](DataGrid.md#subdialogdatachange)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1075](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1075)
-
 ***
 
 ### syncOrAsyncThen()
 
 > `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
+Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -3414,19 +3789,19 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`syncOrAsyncThen`](DataGrid.md#syncorasyncthen)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
-
 ***
 
 ### tryFindQuickFilter()
 
 > `protected` **tryFindQuickFilter**\<`TWidget`\>(`type`, `field`): `TWidget`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L242)
+
 #### Type Parameters
 
-• **TWidget**
+##### TWidget
+
+`TWidget`
 
 #### Parameters
 
@@ -3446,47 +3821,25 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`tryFindQuickFilter`](DataGrid.md#tryfindquickfilter)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:297](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L297)
-
-***
-
-### updateDisabledState()
-
-> `protected` **updateDisabledState**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[`DataGrid`](DataGrid.md).[`updateDisabledState`](DataGrid.md#updatedisabledstate)
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:1067](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1067)
-
 ***
 
 ### updateFlags()
 
 > `protected` **updateFlags**(): `void`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L220)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L217)
 
 ***
 
 ### updateInterface()
 
 > **updateInterface**(): `void`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:940](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L940)
 
 #### Returns
 
@@ -3496,23 +3849,17 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`updateInterface`](DataGrid.md#updateinterface)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:999](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L999)
-
 ***
 
 ### updateItems()
 
 > `protected` **updateItems**(): `void`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L52)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L50)
 
 ***
 
@@ -3520,19 +3867,19 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **updateSelectAll**(): `void`
 
+Defined in: [src/ui/editors/checktreeeditor.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L214)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L211)
 
 ***
 
 ### useAsync()
 
 > `protected` **useAsync**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L153)
 
 #### Returns
 
@@ -3542,15 +3889,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`useAsync`](DataGrid.md#useasync)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L158)
-
 ***
 
 ### useIdPrefix()
 
 > `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
+
+Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
 
 #### Returns
 
@@ -3560,15 +3905,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`useIdPrefix`](DataGrid.md#useidprefix)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L218)
-
 ***
 
 ### useLayoutTimer()
 
 > `protected` **useLayoutTimer**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L157)
 
 #### Returns
 
@@ -3578,15 +3921,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`useLayoutTimer`](DataGrid.md#uselayouttimer)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L162)
-
 ***
 
 ### usePager()
 
 > `protected` **usePager**(): `boolean`
+
+Defined in: [src/ui/datagrid/datagrid.tsx:635](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L635)
 
 #### Returns
 
@@ -3596,25 +3937,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`usePager`](DataGrid.md#usepager)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L741)
-
 ***
 
 ### viewDataChanged()
 
-> `protected` **viewDataChanged**(`e`, `rows`): `void`
+> `protected` **viewDataChanged**(): `void`
 
-#### Parameters
-
-##### e
-
-`any`
-
-##### rows
-
-`TItem`[]
+Defined in: [src/ui/datagrid/datagrid.tsx:523](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L523)
 
 #### Returns
 
@@ -3624,21 +3953,19 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`viewDataChanged`](DataGrid.md#viewdatachanged)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L620)
-
 ***
 
 ### wrapFormatterWithEditLink()
 
 > `protected` **wrapFormatterWithEditLink**(`column`, `item`): `void`
 
+Defined in: [src/ui/datagrid/datagrid.tsx:826](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L826)
+
 #### Parameters
 
 ##### column
 
-`Column`\<`any`\>
+`Column`
 
 ##### item
 
@@ -3652,21 +3979,23 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`wrapFormatterWithEditLink`](DataGrid.md#wrapformatterwitheditlink)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:889](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L889)
-
 ***
 
 ### create()
 
 > `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
+Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+
 #### Type Parameters
 
-• **TWidget** *extends* [`Widget`](Widget.md)\<`P`\>
+##### TWidget
 
-• **P**
+`TWidget` *extends* [`Widget`](Widget.md)\<`P`\>
+
+##### P
+
+`P`
 
 #### Parameters
 
@@ -3682,15 +4011,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`create`](DataGrid.md#create)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L130)
-
 ***
 
 ### createDefaultElement()
 
 > `static` **createDefaultElement**(): `HTMLDivElement`
+
+Defined in: [src/ui/editors/checktreeeditor.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L33)
 
 #### Returns
 
@@ -3700,15 +4027,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`createDefaultElement`](DataGrid.md#createdefaultelement)
 
-#### Defined in
-
-[src/ui/editors/checktreeeditor.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L31)
-
 ***
 
 ### getWidgetName()
 
 > `static` **getWidgetName**(`type`): `string`
+
+Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L91)
 
 #### Parameters
 
@@ -3724,15 +4049,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`DataGrid`](DataGrid.md).[`getWidgetName`](DataGrid.md#getwidgetname)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
-
 ***
 
 ### propertyItemToQuickFilter()
 
-> `static` **propertyItemToQuickFilter**(`item`): `any`
+> `static` **propertyItemToQuickFilter**(`item`): [`QuickFilter`](../interfaces/QuickFilter.md)\<`any`, `any`\>
+
+Defined in: [src/ui/datagrid/datagrid.tsx:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L230)
 
 #### Parameters
 
@@ -3742,12 +4065,72 @@ this method should not be overridden. Override renderContents() instead.
 
 #### Returns
 
-`any`
+[`QuickFilter`](../interfaces/QuickFilter.md)\<`any`, `any`\>
 
 #### Inherited from
 
 [`DataGrid`](DataGrid.md).[`propertyItemToQuickFilter`](DataGrid.md#propertyitemtoquickfilter)
 
-#### Defined in
+***
 
-[src/ui/datagrid/datagrid.tsx:235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L235)
+### registerClass()
+
+> `protected` `static` **registerClass**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L221)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`registerClass`](DataGrid.md#registerclass)
+
+***
+
+### registerEditor()
+
+> `protected` `static` **registerEditor**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L230)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`DataGrid`](DataGrid.md).[`registerEditor`](DataGrid.md#registereditor)

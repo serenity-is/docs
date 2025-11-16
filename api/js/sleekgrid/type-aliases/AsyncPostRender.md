@@ -1,12 +1,16 @@
-[@serenity-is/sleekgrid](../README.md) / AsyncPostRender
+[serenity-is/sleekgrid](../README.md) / AsyncPostRender
 
 # Type Alias: AsyncPostRender()\<TItem\>
 
-> **AsyncPostRender**\<`TItem`\>: (`cellNode`, `row`, `item`, `column`, `reRender`) => `void`
+> **AsyncPostRender**\<`TItem`\> = (`cellNode`, `row`, `item`, `column`, `reRender`) => `void`
+
+Defined in: [src/core/formatting.ts:98](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L98)
 
 ## Type Parameters
 
-• **TItem** = `any`
+### TItem
+
+`TItem` = `any`
 
 ## Parameters
 
@@ -33,7 +37,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[core/formatting.ts:77](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L77)

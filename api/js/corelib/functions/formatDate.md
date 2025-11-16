@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / formatDate
+[serenity-is/corelib](../README.md) / formatDate
 
 # Function: formatDate()
 
-> **formatDate**(`d`, `format`?, `locale`?): `string`
+> **formatDate**(`d`, `format?`, `locale?`): `string`
+
+Defined in: [src/base/formatting.ts:638](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L638)
 
 Formats a date using the specified format string and optional culture.
 Supports .NET style format strings including custom formats.
@@ -11,6 +13,8 @@ See .NET documentation for supported formats.
 ## Parameters
 
 ### d
+
+the date to format. If null, it returns empty string.
 
 `string` | `Date`
 
@@ -59,7 +63,3 @@ formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff");
 // returns "2019-01-01 12:00:00.000 AM"
 formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff tt");
 ```
-
-## Defined in
-
-[src/base/formatting.ts:622](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L622)

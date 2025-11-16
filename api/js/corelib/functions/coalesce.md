@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / coalesce
+[serenity-is/corelib](../README.md) / coalesce
 
-# Function: ~~coalesce()~~
+# ~~Function: coalesce()~~
 
 > **coalesce**(`a`, `b`): `any`
+
+Defined in: [src/compat/system-compat.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L6)
 
 ## Parameters
 
@@ -21,7 +23,3 @@
 ## Deprecated
 
 Use ?? operator
-
-## Defined in
-
-[src/q/system-compat.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L6)

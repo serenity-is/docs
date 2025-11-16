@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ArgsSelectedRowsChange
+[serenity-is/sleekgrid](../README.md) / ArgsSelectedRowsChange
 
 # Interface: ArgsSelectedRowsChange
+
+Defined in: [src/core/eventargs.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L39)
 
 ## Extends
 
@@ -12,53 +14,43 @@
 
 > **caller**: `any`
 
-#### Defined in
-
-[grid/eventargs.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L33)
+Defined in: [src/core/eventargs.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L44)
 
 ***
 
-### changedSelectedRows?
+### changedSelectedRows
 
-> `optional` **changedSelectedRows**: `number`[]
+> **changedSelectedRows**: `number`[]
 
-#### Defined in
-
-[grid/eventargs.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L30)
+Defined in: [src/core/eventargs.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L41)
 
 ***
 
-### changedUnselectedRows?
+### changedUnselectedRows
 
-> `optional` **changedUnselectedRows**: `number`[]
+> **changedUnselectedRows**: `number`[]
 
-#### Defined in
-
-[grid/eventargs.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L31)
+Defined in: [src/core/eventargs.ts:42](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L42)
 
 ***
 
-### grid?
+### grid
 
-> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> **grid**: [`ISleekGrid`](ISleekGrid.md)
+
+Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
 
 #### Inherited from
 
 [`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
 
-#### Defined in
-
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
-
 ***
 
-### previousSelectedRows?
+### previousSelectedRows
 
-> `optional` **previousSelectedRows**: `number`[]
+> **previousSelectedRows**: `number`[]
 
-#### Defined in
-
-[grid/eventargs.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L32)
+Defined in: [src/core/eventargs.ts:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L43)
 
 ***
 
@@ -66,6 +58,4 @@
 
 > **rows**: `number`[]
 
-#### Defined in
-
-[grid/eventargs.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L29)
+Defined in: [src/core/eventargs.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L40)

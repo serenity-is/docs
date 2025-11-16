@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / EditorOptions
+[serenity-is/sleekgrid](../README.md) / EditorOptions
 
 # Interface: EditorOptions
+
+Defined in: [src/core/editing.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L36)
 
 ## Properties
 
@@ -8,23 +10,19 @@
 
 > `optional` **cancelChanges**: () => `void`
 
+Defined in: [src/core/editing.ts:48](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L48)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[core/editing.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L47)
 
 ***
 
 ### column?
 
-> `optional` **column**: [`Column`](Column.md)\<`any`\>
+> `optional` **column**: [`Column`](Column.md)
 
-#### Defined in
-
-[core/editing.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L40)
+Defined in: [src/core/editing.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L41)
 
 ***
 
@@ -32,9 +30,7 @@
 
 > `optional` **columnMetaData**: [`ColumnMetadata`](ColumnMetadata.md)\<`any`\>
 
-#### Defined in
-
-[core/editing.ts:41](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L41)
+Defined in: [src/core/editing.ts:42](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L42)
 
 ***
 
@@ -42,23 +38,19 @@
 
 > `optional` **commitChanges**: () => `void`
 
+Defined in: [src/core/editing.ts:47](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L47)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[core/editing.ts:46](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L46)
 
 ***
 
 ### compositeEditorOptions?
 
-> `optional` **compositeEditorOptions**: `CompositeEditorOptions`
+> `optional` **compositeEditorOptions**: [`CompositeEditorOptions`](CompositeEditorOptions.md)
 
-#### Defined in
-
-[core/editing.ts:42](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L42)
+Defined in: [src/core/editing.ts:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L43)
 
 ***
 
@@ -66,9 +58,7 @@
 
 > `optional` **container**: `HTMLElement`
 
-#### Defined in
-
-[core/editing.ts:43](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L43)
+Defined in: [src/core/editing.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L44)
 
 ***
 
@@ -76,19 +66,15 @@
 
 > `optional` **editorCellNavOnLRKeys**: `boolean`
 
-#### Defined in
-
-[core/editing.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L39)
+Defined in: [src/core/editing.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L40)
 
 ***
 
 ### event?
 
-> `optional` **event**: [`IEventData`](IEventData.md)
+> `optional` **event**: [`EventData`](../type-aliases/EventData.md)
 
-#### Defined in
-
-[core/editing.ts:45](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L45)
+Defined in: [src/core/editing.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L46)
 
 ***
 
@@ -96,9 +82,7 @@
 
 > **grid**: [`EditorHost`](EditorHost.md)
 
-#### Defined in
-
-[core/editing.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L36)
+Defined in: [src/core/editing.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L37)
 
 ***
 
@@ -106,9 +90,7 @@
 
 > `optional` **gridPosition**: [`Position`](Position.md)
 
-#### Defined in
-
-[core/editing.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L37)
+Defined in: [src/core/editing.ts:38](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L38)
 
 ***
 
@@ -116,9 +98,7 @@
 
 > `optional` **item**: `any`
 
-#### Defined in
-
-[core/editing.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L44)
+Defined in: [src/core/editing.ts:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L45)
 
 ***
 
@@ -126,6 +106,4 @@
 
 > `optional` **position**: [`Position`](Position.md)
 
-#### Defined in
-
-[core/editing.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L38)
+Defined in: [src/core/editing.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L39)

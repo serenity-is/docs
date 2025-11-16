@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ListResponse
+[serenity-is/corelib](../README.md) / ListResponse
 
 # Interface: ListResponse\<TEntity\>
+
+Defined in: [src/base/servicetypes.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L76)
 
 ## Extends
 
@@ -8,7 +10,9 @@
 
 ## Type Parameters
 
-• **TEntity**
+### TEntity
+
+`TEntity`
 
 ## Properties
 
@@ -16,9 +20,7 @@
 
 > `optional` **Entities**: `TEntity`[]
 
-#### Defined in
-
-[src/base/servicetypes.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L77)
+Defined in: [src/base/servicetypes.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L77)
 
 ***
 
@@ -26,13 +28,11 @@
 
 > `optional` **Error**: [`ServiceError`](ServiceError.md)
 
+Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
+
 #### Inherited from
 
 [`ServiceResponse`](ServiceResponse.md).[`Error`](ServiceResponse.md#error)
-
-#### Defined in
-
-[src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
 
 ***
 
@@ -40,9 +40,7 @@
 
 > `optional` **Skip**: `number`
 
-#### Defined in
-
-[src/base/servicetypes.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L80)
+Defined in: [src/base/servicetypes.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L80)
 
 ***
 
@@ -50,9 +48,7 @@
 
 > `optional` **Take**: `number`
 
-#### Defined in
-
-[src/base/servicetypes.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L81)
+Defined in: [src/base/servicetypes.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L81)
 
 ***
 
@@ -60,9 +56,7 @@
 
 > `optional` **TotalCount**: `number`
 
-#### Defined in
-
-[src/base/servicetypes.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L79)
+Defined in: [src/base/servicetypes.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L79)
 
 ***
 
@@ -70,6 +64,4 @@
 
 > `optional` **Values**: `any`[]
 
-#### Defined in
-
-[src/base/servicetypes.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L78)
+Defined in: [src/base/servicetypes.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L78)

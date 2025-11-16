@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / FloatCellEdit
+[serenity-is/sleekgrid](../README.md) / FloatCellEdit
 
 # Class: FloatCellEdit
+
+Defined in: [src/editors/editors.tsx:100](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L100)
 
 ## Extends
 
@@ -8,9 +10,11 @@
 
 ## Constructors
 
-### new FloatCellEdit()
+### Constructor
 
-> **new FloatCellEdit**(`args`): [`FloatCellEdit`](FloatCellEdit.md)
+> **new FloatCellEdit**(`args`): `FloatCellEdit`
+
+Defined in: [src/editors/editors.tsx:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L9)
 
 #### Parameters
 
@@ -20,15 +24,11 @@
 
 #### Returns
 
-[`FloatCellEdit`](FloatCellEdit.md)
+`FloatCellEdit`
 
 #### Inherited from
 
-[`TextCellEdit`](TextCellEdit.md).[`constructor`](TextCellEdit.md#constructors)
-
-#### Defined in
-
-[editors/editors.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L8)
+[`TextCellEdit`](TextCellEdit.md).[`constructor`](TextCellEdit.md#constructor)
 
 ## Properties
 
@@ -36,13 +36,11 @@
 
 > `protected` **\_args**: [`EditorOptions`](../interfaces/EditorOptions.md)
 
+Defined in: [src/editors/editors.tsx:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L7)
+
 #### Inherited from
 
 [`TextCellEdit`](TextCellEdit.md).[`_args`](TextCellEdit.md#_args)
-
-#### Defined in
-
-[editors/editors.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L6)
 
 ***
 
@@ -50,13 +48,11 @@
 
 > `protected` **\_defaultValue**: `any`
 
+Defined in: [src/editors/editors.tsx:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L6)
+
 #### Inherited from
 
 [`TextCellEdit`](TextCellEdit.md).[`_defaultValue`](TextCellEdit.md#_defaultvalue)
-
-#### Defined in
-
-[editors/editors.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L5)
 
 ***
 
@@ -64,13 +60,11 @@
 
 > **\_input**: `HTMLInputElement`
 
+Defined in: [src/editors/editors.tsx:70](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L70)
+
 #### Inherited from
 
 [`TextCellEdit`](TextCellEdit.md).[`_input`](TextCellEdit.md#_input)
-
-#### Defined in
-
-[editors/editors.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L69)
 
 ***
 
@@ -78,9 +72,7 @@
 
 > `static` **AllowEmptyValue**: `boolean` = `false`
 
-#### Defined in
-
-[editors/editors.ts:101](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L101)
+Defined in: [src/editors/editors.tsx:102](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L102)
 
 ***
 
@@ -88,15 +80,15 @@
 
 > `static` **DefaultDecimalPlaces**: `number` = `null`
 
-#### Defined in
-
-[editors/editors.ts:102](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L102)
+Defined in: [src/editors/editors.tsx:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L103)
 
 ## Methods
 
 ### applyValue()
 
 > **applyValue**(`item`, `state`): `void`
+
+Defined in: [src/editors/editors.tsx:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L45)
 
 #### Parameters
 
@@ -116,15 +108,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`applyValue`](TextCellEdit.md#applyvalue)
 
-#### Defined in
-
-[editors/editors.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L44)
-
 ***
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: [src/editors/editors.tsx:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L16)
 
 #### Returns
 
@@ -134,15 +124,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`destroy`](TextCellEdit.md#destroy)
 
-#### Defined in
-
-[editors/editors.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L15)
-
 ***
 
 ### focus()
 
 > **focus**(): `void`
+
+Defined in: [src/editors/editors.tsx:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L20)
 
 #### Returns
 
@@ -152,29 +140,25 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`focus`](TextCellEdit.md#focus)
 
-#### Defined in
-
-[editors/editors.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L19)
-
 ***
 
 ### getDecimalPlaces()
 
 > **getDecimalPlaces**(): `number`
 
+Defined in: [src/editors/editors.tsx:105](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L105)
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-[editors/editors.ts:104](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L104)
 
 ***
 
 ### getValue()
 
 > **getValue**(): `string`
+
+Defined in: [src/editors/editors.tsx:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L24)
 
 #### Returns
 
@@ -184,15 +168,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`getValue`](TextCellEdit.md#getvalue)
 
-#### Defined in
-
-[editors/editors.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L23)
-
 ***
 
 ### init()
 
 > **init**(): `void`
+
+Defined in: [src/editors/editors.tsx:72](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L72)
 
 #### Returns
 
@@ -202,15 +184,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`init`](TextCellEdit.md#init)
 
-#### Defined in
-
-[editors/editors.ts:71](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L71)
-
 ***
 
 ### isValueChanged()
 
 > **isValueChanged**(): `boolean`
+
+Defined in: [src/editors/editors.tsx:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L49)
 
 #### Returns
 
@@ -220,15 +200,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`isValueChanged`](TextCellEdit.md#isvaluechanged)
 
-#### Defined in
-
-[editors/editors.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L48)
-
 ***
 
 ### loadValue()
 
 > **loadValue**(`item`): `void`
+
+Defined in: [src/editors/editors.tsx:114](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L114)
 
 #### Parameters
 
@@ -244,15 +222,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`loadValue`](TextCellEdit.md#loadvalue)
 
-#### Defined in
-
-[editors/editors.ts:113](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L113)
-
 ***
 
 ### serializeValue()
 
 > **serializeValue**(): `any`
+
+Defined in: [src/editors/editors.tsx:129](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L129)
 
 #### Returns
 
@@ -262,15 +238,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`serializeValue`](TextCellEdit.md#serializevalue)
 
-#### Defined in
-
-[editors/editors.ts:128](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L128)
-
 ***
 
 ### setValue()
 
 > **setValue**(`val`): `void`
+
+Defined in: [src/editors/editors.tsx:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L28)
 
 #### Parameters
 
@@ -286,15 +260,13 @@
 
 [`TextCellEdit`](TextCellEdit.md).[`setValue`](TextCellEdit.md#setvalue)
 
-#### Defined in
-
-[editors/editors.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L27)
-
 ***
 
 ### validate()
 
 > **validate**(): [`ValidationResult`](../interfaces/ValidationResult.md)
+
+Defined in: [src/editors/editors.tsx:148](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L148)
 
 #### Returns
 
@@ -303,7 +275,3 @@
 #### Overrides
 
 [`TextCellEdit`](TextCellEdit.md).[`validate`](TextCellEdit.md#validate)
-
-#### Defined in
-
-[editors/editors.ts:147](https://github.com/serenity-is/sleekgrid/blob/master/src/editors/editors.ts#L147)

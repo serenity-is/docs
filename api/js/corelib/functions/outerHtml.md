@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / outerHtml
+[serenity-is/corelib](../README.md) / outerHtml
 
 # Function: outerHtml()
 
 > **outerHtml**(`element`): `string`
+
+Defined in: [src/compat/html-compat.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/html-compat.ts#L90)
 
 Returns the outer HTML of the element.
 
@@ -15,7 +17,3 @@ Returns the outer HTML of the element.
 ## Returns
 
 `string`
-
-## Defined in
-
-[src/q/html-compat.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html-compat.ts#L91)

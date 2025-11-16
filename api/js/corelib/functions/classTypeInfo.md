@@ -1,27 +1,27 @@
-[@serenity-is/corelib](../README.md) / classTypeInfo
+[serenity-is/corelib](../README.md) / classTypeInfo
 
 # Function: classTypeInfo()
 
-> **classTypeInfo**\<`T`\>(`typeName`, `interfaces`?): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`T`\>
+> **classTypeInfo**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/base/system.ts:556](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L556)
 
 ## Type Parameters
 
-• **T**
+### TypeName
+
+`TypeName`
 
 ## Parameters
 
 ### typeName
 
-[`StringLiteral`](../type-aliases/StringLiteral.md)\<`T`\>
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
 
-### interfaces?
+### intfAndAttr?
 
-`any`[]
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
 
 ## Returns
 
-[`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`T`\>
-
-## Defined in
-
-[src/base/system.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L285)
+[`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>

@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / StringEditor
+[serenity-is/corelib](../README.md) / StringEditor
 
 # Class: StringEditor\<P\>
+
+Defined in: [src/ui/editors/stringeditor.tsx:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L5)
 
 ## Extends
 
@@ -8,19 +10,23 @@
 
 ## Extended by
 
-- [`PasswordEditor`](PasswordEditor.md)
 - [`EmailAddressEditor`](EmailAddressEditor.md)
+- [`PasswordEditor`](PasswordEditor.md)
 - [`URLEditor`](URLEditor.md)
 
 ## Type Parameters
 
-• **P** = \{\}
+### P
+
+`P` = \{ \}
 
 ## Constructors
 
-### new StringEditor()
+### Constructor
 
-> **new StringEditor**\<`P`\>(`props`): [`StringEditor`](StringEditor.md)\<`P`\>
+> **new StringEditor**\<`P`\>(`props`): `StringEditor`\<`P`\>
+
+Defined in: [src/ui/editors/editorwidget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L16)
 
 #### Parameters
 
@@ -30,15 +36,11 @@
 
 #### Returns
 
-[`StringEditor`](StringEditor.md)\<`P`\>
+`StringEditor`\<`P`\>
 
 #### Inherited from
 
-[`EditorWidget`](EditorWidget.md).[`constructor`](EditorWidget.md#constructors)
-
-#### Defined in
-
-[src/ui/editors/editorwidget.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L19)
+[`EditorWidget`](EditorWidget.md).[`constructor`](EditorWidget.md#constructor)
 
 ## Properties
 
@@ -46,13 +48,11 @@
 
 > `readonly` **domNode**: `HTMLInputElement`
 
+Defined in: [src/ui/editors/stringeditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L8)
+
 #### Overrides
 
 [`EditorWidget`](EditorWidget.md).[`domNode`](EditorWidget.md#domnode)
-
-#### Defined in
-
-[src/ui/editors/stringeditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L10)
 
 ***
 
@@ -60,13 +60,11 @@
 
 > `readonly` **idPrefix**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L13)
+
 #### Inherited from
 
 [`EditorWidget`](EditorWidget.md).[`idPrefix`](EditorWidget.md#idprefix)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ***
 
@@ -74,13 +72,11 @@
 
 > `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<[`EditorProps`](../type-aliases/EditorProps.md)\<`P`\>\>
 
+Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
+
 #### Inherited from
 
 [`EditorWidget`](EditorWidget.md).[`options`](EditorWidget.md#options)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
 
 ***
 
@@ -88,13 +84,23 @@
 
 > `readonly` **uniqueName**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+
 #### Inherited from
 
 [`EditorWidget`](EditorWidget.md).[`uniqueName`](EditorWidget.md#uniquename)
 
-#### Defined in
+***
 
-[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/editors/stringeditor.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L6)
+
+#### Overrides
+
+[`EditorWidget`](EditorWidget.md).[`[typeInfo]`](EditorWidget.md#typeinfo)
 
 ***
 
@@ -102,27 +108,11 @@
 
 > `readonly` `static` **isComponent**: `true` = `true`
 
+Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L219)
+
 #### Inherited from
 
 [`EditorWidget`](EditorWidget.md).[`isComponent`](EditorWidget.md#iscomponent)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L223)
-
-***
-
-### typeInfo
-
-> `static` **typeInfo**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity.StringEditor"`\>
-
-#### Overrides
-
-[`EditorWidget`](EditorWidget.md).[`typeInfo`](EditorWidget.md#typeinfo)
-
-#### Defined in
-
-[src/ui/editors/stringeditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L8)
 
 ## Accessors
 
@@ -130,21 +120,19 @@
 
 #### Get Signature
 
-> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L59)
 
 Returns a Fluent(this.domNode) object
 
 ##### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`EditorWidget`](EditorWidget.md).[`element`](EditorWidget.md#element)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
 
 ***
 
@@ -154,6 +142,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
+Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L203)
+
 ##### Returns
 
 [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
@@ -161,10 +151,6 @@ Returns a Fluent(this.domNode) object
 #### Inherited from
 
 [`EditorWidget`](EditorWidget.md).[`props`](EditorWidget.md#props)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
 
 ***
 
@@ -174,6 +160,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **readOnly**(): `boolean`
 
+Defined in: [src/ui/editors/editorwidget.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L20)
+
 ##### Returns
 
 `boolean`
@@ -181,6 +169,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **readOnly**(`value`): `void`
+
+Defined in: [src/ui/editors/editorwidget.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L25)
 
 ##### Parameters
 
@@ -196,10 +186,6 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`readOnly`](EditorWidget.md#readonly)
 
-#### Defined in
-
-[src/ui/editors/editorwidget.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L23)
-
 ***
 
 ### value
@@ -208,6 +194,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **value**(): `string`
 
+Defined in: [src/ui/editors/stringeditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L12)
+
 ##### Returns
 
 `string`
@@ -215,6 +203,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **value**(`value`): `void`
+
+Defined in: [src/ui/editors/stringeditor.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L20)
 
 ##### Parameters
 
@@ -226,15 +216,13 @@ Returns a Fluent(this.domNode) object
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/stringeditor.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L14)
-
 ## Methods
 
 ### addCssClass()
 
 > `protected` **addCssClass**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
 
 #### Returns
 
@@ -244,17 +232,15 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`addCssClass`](EditorWidget.md#addcssclass)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
-
 ***
 
 ### addValidationRule()
 
 #### Call Signature
 
-> **addValidationRule**(`rule`, `uniqueName`?): `void`
+> **addValidationRule**(`rule`, `uniqueName?`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
 
 ##### Parameters
 
@@ -274,13 +260,11 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`addValidationRule`](EditorWidget.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
-
 #### Call Signature
 
 > **addValidationRule**(`uniqueName`, `rule`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L96)
 
 ##### Parameters
 
@@ -300,15 +284,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`addValidationRule`](EditorWidget.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
 ***
 
 ### afterRender()
 
 > `protected` **afterRender**(`callback`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
 
 #### Parameters
 
@@ -324,19 +306,19 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`afterRender`](EditorWidget.md#afterrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
 ***
 
 ### byId()
 
 > `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
+Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L102)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -352,15 +334,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`byId`](EditorWidget.md#byid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
-
 ***
 
 ### change()
 
 > **change**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 #### Parameters
 
@@ -376,15 +356,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`change`](EditorWidget.md#change)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
-
 ***
 
 ### changeSelect2()
 
 > **changeSelect2**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 #### Parameters
 
@@ -400,15 +378,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`changeSelect2`](EditorWidget.md#changeselect2)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L122)
-
 ***
 
 ### deferRender()
 
 > `protected` **deferRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 #### Returns
 
@@ -418,15 +394,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`deferRender`](EditorWidget.md#deferrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
-
 ***
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L42)
 
 #### Returns
 
@@ -436,19 +410,19 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`destroy`](EditorWidget.md#destroy)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L47)
-
 ***
 
 ### findById()
 
 > `protected` **findById**\<`TElement`\>(`id`): `TElement`
 
+Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -464,29 +438,25 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`findById`](EditorWidget.md#findbyid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
-
 ***
 
 ### get\_value()
 
 > `protected` **get\_value**(): `string`
 
+Defined in: [src/ui/editors/stringeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L16)
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/editors/stringeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L18)
 
 ***
 
 ### getCssClass()
 
 > `protected` **getCssClass**(): `string`
+
+Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 #### Returns
 
@@ -496,19 +466,19 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`getCssClass`](EditorWidget.md#getcssclass)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
-
 ***
 
 ### getCustomAttribute()
 
 > `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
 
+Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+
 #### Type Parameters
 
-• **TAttr**
+##### TAttr
+
+`TAttr` *extends* [`CustomAttribute`](CustomAttribute.md)
 
 #### Parameters
 
@@ -528,33 +498,29 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`getCustomAttribute`](EditorWidget.md#getcustomattribute)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
 ***
 
 ### getGridField()
 
-> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`EditorWidget`](EditorWidget.md).[`getGridField`](EditorWidget.md#getgridfield)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ***
 
 ### init()
 
 > **init**(): `this`
+
+Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
 
 #### Returns
 
@@ -564,15 +530,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`init`](EditorWidget.md#init)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L157)
-
 ***
 
 ### internalRenderContents()
 
 > **internalRenderContents**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L173)
 
 #### Returns
 
@@ -582,15 +546,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`internalRenderContents`](EditorWidget.md#internalrendercontents)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L177)
-
 ***
 
 ### legacyTemplateRender()
 
 > `protected` **legacyTemplateRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L190)
 
 #### Returns
 
@@ -600,15 +562,13 @@ Returns a Fluent(this.domNode) object
 
 [`EditorWidget`](EditorWidget.md).[`legacyTemplateRender`](EditorWidget.md#legacytemplaterender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L194)
-
 ***
 
 ### render()
 
 > **render**(): `any`
+
+Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -622,15 +582,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`EditorWidget`](EditorWidget.md).[`render`](EditorWidget.md#render)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L167)
-
 ***
 
 ### renderContents()
 
 > `protected` **renderContents**(): `any`
+
+Defined in: [src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
 
 #### Returns
 
@@ -640,15 +598,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`EditorWidget`](EditorWidget.md).[`renderContents`](EditorWidget.md#rendercontents)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
-
 ***
 
 ### set\_value()
 
 > `protected` **set\_value**(`value`): `void`
+
+Defined in: [src/ui/editors/stringeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L24)
 
 #### Parameters
 
@@ -660,19 +616,19 @@ this method should not be overridden. Override renderContents() instead.
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/stringeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L26)
-
 ***
 
 ### syncOrAsyncThen()
 
 > `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
+Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -696,15 +652,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`EditorWidget`](EditorWidget.md).[`syncOrAsyncThen`](EditorWidget.md#syncorasyncthen)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
-
 ***
 
 ### useIdPrefix()
 
 > `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
+
+Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
 
 #### Returns
 
@@ -714,21 +668,23 @@ this method should not be overridden. Override renderContents() instead.
 
 [`EditorWidget`](EditorWidget.md).[`useIdPrefix`](EditorWidget.md#useidprefix)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L218)
-
 ***
 
 ### create()
 
 > `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
+Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+
 #### Type Parameters
 
-• **TWidget** *extends* [`Widget`](Widget.md)\<`P`\>
+##### TWidget
 
-• **P**
+`TWidget` *extends* [`Widget`](Widget.md)\<`P`\>
+
+##### P
+
+`P`
 
 #### Parameters
 
@@ -744,15 +700,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`EditorWidget`](EditorWidget.md).[`create`](EditorWidget.md#create)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L130)
-
 ***
 
 ### createDefaultElement()
 
 > `static` **createDefaultElement**(): `HTMLInputElement`
+
+Defined in: [src/ui/editors/stringeditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L10)
 
 #### Returns
 
@@ -762,15 +716,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`EditorWidget`](EditorWidget.md).[`createDefaultElement`](EditorWidget.md#createdefaultelement)
 
-#### Defined in
-
-[src/ui/editors/stringeditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/stringeditor.tsx#L12)
-
 ***
 
 ### getWidgetName()
 
 > `static` **getWidgetName**(`type`): `string`
+
+Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L91)
 
 #### Parameters
 
@@ -786,6 +738,66 @@ this method should not be overridden. Override renderContents() instead.
 
 [`EditorWidget`](EditorWidget.md).[`getWidgetName`](EditorWidget.md#getwidgetname)
 
-#### Defined in
+***
 
-[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
+### registerClass()
+
+> `protected` `static` **registerClass**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L221)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`EditorWidget`](EditorWidget.md).[`registerClass`](EditorWidget.md#registerclass)
+
+***
+
+### registerEditor()
+
+> `protected` `static` **registerEditor**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L230)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`EditorWidget`](EditorWidget.md).[`registerEditor`](EditorWidget.md#registereditor)

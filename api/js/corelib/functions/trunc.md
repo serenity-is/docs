@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / trunc
+[serenity-is/corelib](../README.md) / trunc
 
 # Function: trunc()
 
 > **trunc**(`n`): `number`
+
+Defined in: [src/base/formatting.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L276)
 
 Truncates a number to an integer number.
 
@@ -15,7 +17,3 @@ Truncates a number to an integer number.
 ## Returns
 
 `number`
-
-## Defined in
-
-[src/base/formatting.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L260)

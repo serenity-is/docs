@@ -1,22 +1,34 @@
-[@serenity-is/corelib](../README.md) / IGetEditValue
+[serenity-is/corelib](../README.md) / IGetEditValue
 
-# Class: IGetEditValue
+# Abstract Class: IGetEditValue
+
+Defined in: [src/interfaces/igeteditvalue.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L3)
 
 ## Constructors
 
-### new IGetEditValue()
+### Constructor
 
-> **new IGetEditValue**(): [`IGetEditValue`](IGetEditValue.md)
+> **new IGetEditValue**(): `IGetEditValue`
 
 #### Returns
 
-[`IGetEditValue`](IGetEditValue.md)
+`IGetEditValue`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/interfaces/igeteditvalue.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L4)
 
 ## Methods
 
 ### getEditValue()
 
 > **getEditValue**(`property`, `target`): `void`
+
+Defined in: [src/interfaces/igeteditvalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L8)
 
 #### Parameters
 
@@ -31,7 +43,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/interfaces/igeteditvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L9)

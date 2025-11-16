@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ViewportInfo
+[serenity-is/sleekgrid](../README.md) / ViewportInfo
 
 # Interface: ViewportInfo
+
+Defined in: [src/core/viewportinfo.ts:2](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L2)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > **footerRowHeight**: `number`
 
-#### Defined in
-
-[grid/types.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L21)
+Defined in: [src/core/viewportinfo.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L13)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > **groupingPanelHeight**: `number`
 
-#### Defined in
-
-[grid/types.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L16)
+Defined in: [src/core/viewportinfo.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L8)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > **hasHScroll**: `boolean`
 
-#### Defined in
-
-[grid/types.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L14)
+Defined in: [src/core/viewportinfo.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L6)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > **hasVScroll**: `boolean`
 
-#### Defined in
-
-[grid/types.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L13)
+Defined in: [src/core/viewportinfo.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L5)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > **headerHeight**: `number`
 
-#### Defined in
-
-[grid/types.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L15)
+Defined in: [src/core/viewportinfo.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L7)
 
 ***
 
@@ -58,9 +50,7 @@
 
 > **headerRowHeight**: `number`
 
-#### Defined in
-
-[grid/types.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L20)
+Defined in: [src/core/viewportinfo.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L12)
 
 ***
 
@@ -68,9 +58,7 @@
 
 > **height**: `number`
 
-#### Defined in
-
-[grid/types.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L11)
+Defined in: [src/core/viewportinfo.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L3)
 
 ***
 
@@ -78,9 +66,7 @@
 
 > **numVisibleRows**: `number`
 
-#### Defined in
-
-[grid/types.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L22)
+Defined in: [src/core/viewportinfo.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L14)
 
 ***
 
@@ -88,9 +74,7 @@
 
 > **realScrollHeight**: `number`
 
-#### Defined in
-
-[grid/types.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L18)
+Defined in: [src/core/viewportinfo.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L10)
 
 ***
 
@@ -98,9 +82,7 @@
 
 > **topPanelHeight**: `number`
 
-#### Defined in
-
-[grid/types.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L19)
+Defined in: [src/core/viewportinfo.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L11)
 
 ***
 
@@ -108,9 +90,7 @@
 
 > **virtualHeight**: `number`
 
-#### Defined in
-
-[grid/types.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L17)
+Defined in: [src/core/viewportinfo.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L9)
 
 ***
 
@@ -118,6 +98,4 @@
 
 > **width**: `number`
 
-#### Defined in
-
-[grid/types.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L12)
+Defined in: [src/core/viewportinfo.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L4)

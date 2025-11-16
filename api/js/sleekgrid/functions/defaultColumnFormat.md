@@ -1,19 +1,17 @@
-[@serenity-is/sleekgrid](../README.md) / defaultColumnFormat
+[serenity-is/sleekgrid](../README.md) / defaultColumnFormat
 
 # Function: defaultColumnFormat()
 
 > **defaultColumnFormat**(`ctx`): `any`
 
+Defined in: [src/core/formatting.ts:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L103)
+
 ## Parameters
 
 ### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ## Returns
 
 `any`
-
-## Defined in
-
-[core/formatting.ts:82](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L82)

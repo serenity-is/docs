@@ -1,12 +1,22 @@
-[@serenity-is/corelib](../README.md) / ElementAttribute
+[serenity-is/corelib](../README.md) / ElementAttribute
 
 # Class: ElementAttribute
 
+Defined in: [src/types/attributes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L17)
+
+Indicates the element type of a widget like "div", "span" etc.
+
+## Extends
+
+- [`CustomAttribute`](CustomAttribute.md)
+
 ## Constructors
 
-### new ElementAttribute()
+### Constructor
 
-> **new ElementAttribute**(`value`): [`ElementAttribute`](ElementAttribute.md)
+> **new ElementAttribute**(`value`): `ElementAttribute`
+
+Defined in: [src/types/attributes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L20)
 
 #### Parameters
 
@@ -16,11 +26,11 @@
 
 #### Returns
 
-[`ElementAttribute`](ElementAttribute.md)
+`ElementAttribute`
 
-#### Defined in
+#### Overrides
 
-[src/types/attributes.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L82)
+[`CustomAttribute`](CustomAttribute.md).[`constructor`](CustomAttribute.md#constructor)
 
 ## Properties
 
@@ -28,6 +38,16 @@
 
 > **value**: `string`
 
-#### Defined in
+Defined in: [src/types/attributes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L20)
 
-[src/types/attributes.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L82)
+***
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/types/attributes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L18)
+
+#### Overrides
+
+[`CustomAttribute`](CustomAttribute.md).[`[typeInfo]`](CustomAttribute.md#typeinfo)

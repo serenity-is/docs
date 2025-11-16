@@ -1,22 +1,34 @@
-[@serenity-is/corelib](../README.md) / IDialog
+[serenity-is/corelib](../README.md) / IDialog
 
-# Class: IDialog
+# Abstract Class: IDialog
+
+Defined in: [src/interfaces/idialog.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idialog.ts#L3)
 
 ## Constructors
 
-### new IDialog()
+### Constructor
 
-> **new IDialog**(): [`IDialog`](IDialog.md)
+> **new IDialog**(): `IDialog`
 
 #### Returns
 
-[`IDialog`](IDialog.md)
+`IDialog`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/interfaces/idialog.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idialog.ts#L4)
 
 ## Methods
 
 ### dialogOpen()
 
-> **dialogOpen**(`asPanel`?): `void`
+> **dialogOpen**(`asPanel?`): `void`
+
+Defined in: [src/interfaces/idialog.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idialog.ts#L8)
 
 #### Parameters
 
@@ -27,7 +39,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/interfaces/idialog.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idialog.ts#L8)

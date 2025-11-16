@@ -1,23 +1,29 @@
-[@serenity-is/corelib](../README.md) / CancellableViewCallback
+[serenity-is/corelib](../README.md) / CancellableViewCallback
 
-# Type Alias: CancellableViewCallback()\<TEntity\>
+# Type Alias: CancellableViewCallback()\<TItem\>
 
-> **CancellableViewCallback**\<`TEntity`\>: (`view`) => `boolean` \| `void`
+> **CancellableViewCallback**\<`TItem`\> = (`view`) => `boolean` \| `void`
+
+Defined in: [src/slick/iremoteview.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L286)
+
+Callback function that can cancel a view operation
 
 ## Type Parameters
 
-• **TEntity**
+### TItem
+
+`TItem`
 
 ## Parameters
 
 ### view
 
-[`RemoteView`](../classes/RemoteView.md)\<`TEntity`\>
+[`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
+
+The RemoteView instance
 
 ## Returns
 
 `boolean` \| `void`
 
-## Defined in
-
-[src/slick/remoteview.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L38)
+true to continue, false to cancel

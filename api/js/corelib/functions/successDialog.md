@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / successDialog
+[serenity-is/corelib](../README.md) / successDialog
 
 # Function: successDialog()
 
-> **successDialog**(`message`, `onOk`?, `options`?): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+> **successDialog**(`message`, `onOk?`, `options?`): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+
+Defined in: [src/base/dialogs.tsx:1082](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1082)
 
 Display a success dialog
 
@@ -10,7 +12,7 @@ Display a success dialog
 
 ### message
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 The message to display
 
@@ -41,7 +43,3 @@ successDialog("Operation complete", () => {
     // do something when OK is clicked
 }
 ```
-
-## Defined in
-
-[src/base/dialogs.tsx:1061](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1061)

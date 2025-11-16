@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ImageUploadEditorOptions
+[serenity-is/corelib](../README.md) / ImageUploadEditorOptions
 
 # Interface: ImageUploadEditorOptions
+
+Defined in: [src/ui/editors/uploadeditors.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L15)
 
 ## Extends
 
@@ -12,13 +14,11 @@
 
 > `optional` **allowNonImage**: `boolean`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L270)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`allowNonImage`](FileUploadEditorOptions.md#allownonimage)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L233)
 
 ***
 
@@ -26,13 +26,11 @@
 
 > `optional` **displayFileName**: `boolean`
 
+Defined in: [src/ui/editors/uploadeditors.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L9)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`displayFileName`](FileUploadEditorOptions.md#displayfilename)
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L10)
 
 ***
 
@@ -40,13 +38,11 @@
 
 > `optional` **maxHeight**: `number`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L267)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`maxHeight`](FileUploadEditorOptions.md#maxheight)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L230)
 
 ***
 
@@ -54,13 +50,11 @@
 
 > `optional` **maxSize**: `number`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L269)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`maxSize`](FileUploadEditorOptions.md#maxsize)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L232)
 
 ***
 
@@ -68,13 +62,11 @@
 
 > `optional` **maxWidth**: `number`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L265)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`maxWidth`](FileUploadEditorOptions.md#maxwidth)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L228)
 
 ***
 
@@ -82,13 +74,11 @@
 
 > `optional` **minHeight**: `number`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L266)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`minHeight`](FileUploadEditorOptions.md#minheight)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L229)
 
 ***
 
@@ -96,13 +86,11 @@
 
 > `optional` **minSize**: `number`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L268)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`minSize`](FileUploadEditorOptions.md#minsize)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L231)
 
 ***
 
@@ -110,13 +98,11 @@
 
 > `optional` **minWidth**: `number`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L264)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`minWidth`](FileUploadEditorOptions.md#minwidth)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L227)
 
 ***
 
@@ -124,13 +110,11 @@
 
 > `optional` **originalNameProperty**: `string`
 
+Defined in: [src/ui/helpers/uploadhelper.tsx:271](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L271)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`originalNameProperty`](FileUploadEditorOptions.md#originalnameproperty)
-
-#### Defined in
-
-[src/ui/helpers/uploadhelper.tsx:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L234)
 
 ***
 
@@ -138,13 +122,11 @@
 
 > `optional` **uploadIntent**: `string`
 
+Defined in: [src/ui/editors/uploadeditors.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L10)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`uploadIntent`](FileUploadEditorOptions.md#uploadintent)
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L11)
 
 ***
 
@@ -152,13 +134,11 @@
 
 > `optional` **uploadUrl**: `string`
 
+Defined in: [src/ui/editors/uploadeditors.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L11)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`uploadUrl`](FileUploadEditorOptions.md#uploadurl)
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L12)
 
 ***
 
@@ -166,10 +146,8 @@
 
 > `optional` **urlPrefix**: `string`
 
+Defined in: [src/ui/editors/uploadeditors.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L12)
+
 #### Inherited from
 
 [`FileUploadEditorOptions`](FileUploadEditorOptions.md).[`urlPrefix`](FileUploadEditorOptions.md#urlprefix)
-
-#### Defined in
-
-[src/ui/editors/uploadeditors.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/uploadeditors.tsx#L13)

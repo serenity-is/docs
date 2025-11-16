@@ -1,35 +1,37 @@
-[@serenity-is/corelib](../README.md) / PanelPageInit
+[serenity-is/corelib](../README.md) / PanelPageInit
 
 # Function: PanelPageInit()
 
 > **PanelPageInit**\<`TPanel`, `P`\>(`__namedParameters`): `HTMLElement`
 
+Defined in: [src/compat/layout.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L42)
+
 ## Type Parameters
 
-• **TPanel** *extends* [`Widget`](../classes/Widget.md)\<`P`\>
+### TPanel
 
-• **P**
+`TPanel` *extends* [`Widget`](../classes/Widget.md)\<`P`\>
+
+### P
+
+`P`
 
 ## Parameters
 
 ### \_\_namedParameters
 
-#### __namedParameters.props
+#### props?
 
 [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
-#### __namedParameters.type
+#### type
 
-(`options`?) => `TPanel`
+\{(`options?`): `TPanel`; `prototype`: `TPanel`; \}
 
-#### __namedParameters.type.prototype
+#### type.prototype
 
 `TPanel`
 
 ## Returns
 
 `HTMLElement`
-
-## Defined in
-
-[src/q/layout.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L42)

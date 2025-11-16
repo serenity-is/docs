@@ -1,13 +1,15 @@
-[@serenity-is/corelib](../README.md) / FormatterTypeInfo
+[serenity-is/corelib](../README.md) / FormatterTypeInfo
 
-# Type Alias: FormatterTypeInfo\<T\>
+# Type Alias: FormatterTypeInfo\<TypeName\>
 
-> **FormatterTypeInfo**\<`T`\>: [`TypeInfo`](TypeInfo.md)\<`T`\>
+> **FormatterTypeInfo**\<`TypeName`\> = [`TypeInfo`](TypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/base/system.ts:547](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L547)
+
+Formatter type information. This is used to make type name available in declaration files unlike decorators that does not show in .d.ts files.
 
 ## Type Parameters
 
-• **T**
+### TypeName
 
-## Defined in
-
-[src/base/system.ts:282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L282)
+`TypeName`

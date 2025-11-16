@@ -1,19 +1,17 @@
-[@serenity-is/sleekgrid](../README.md) / PercentCompleteBarFormatter
+[serenity-is/sleekgrid](../README.md) / PercentCompleteBarFormatter
 
 # Function: PercentCompleteBarFormatter()
 
-> **PercentCompleteBarFormatter**(`ctx`): `string`
+> **PercentCompleteBarFormatter**(`ctx`): [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/formatters/formatters.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/formatters/formatters.ts#L16)
 
 ## Parameters
 
 ### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ## Returns
 
-`string`
-
-## Defined in
-
-[formatters/formatters.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L12)
+[`FormatterResult`](../type-aliases/FormatterResult.md)

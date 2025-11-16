@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / GroupTotals
+[serenity-is/sleekgrid](../README.md) / GroupTotals
 
 # Class: GroupTotals\<TEntity\>
+
+Defined in: [src/core/group.ts:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L101)
 
 Information about group totals.
 An instance of GroupTotals will be created for each totals row and passed to the aggregators
@@ -14,21 +16,27 @@ formatters during the display.
 
 ## Type Parameters
 
-• **TEntity** = `any`
+### TEntity
+
+`TEntity` = `any`
+
+## Implements
+
+- [`IGroupTotals`](../interfaces/IGroupTotals.md)\<`TEntity`\>
 
 ## Constructors
 
-### new GroupTotals()
+### Constructor
 
-> **new GroupTotals**\<`TEntity`\>(): [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
+> **new GroupTotals**\<`TEntity`\>(): `GroupTotals`\<`TEntity`\>
 
 #### Returns
 
-[`GroupTotals`](GroupTotals.md)\<`TEntity`\>
+`GroupTotals`\<`TEntity`\>
 
 #### Inherited from
 
-[`NonDataRow`](NonDataRow.md).[`constructor`](NonDataRow.md#constructors)
+[`NonDataRow`](NonDataRow.md).[`constructor`](NonDataRow.md#constructor)
 
 ## Properties
 
@@ -36,9 +44,11 @@ formatters during the display.
 
 > `readonly` **\_\_groupTotals**: `true` = `true`
 
-#### Defined in
+Defined in: [src/core/group.ts:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L103)
 
-[core/group.ts:97](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L97)
+#### Implementation of
+
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`__groupTotals`](../interfaces/IGroupTotals.md#__grouptotals)
 
 ***
 
@@ -46,25 +56,29 @@ formatters during the display.
 
 > **\_\_nonDataRow**: `boolean` = `true`
 
+Defined in: [src/core/base.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L5)
+
+#### Implementation of
+
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`__nonDataRow`](../interfaces/IGroupTotals.md#__nondatarow)
+
 #### Inherited from
 
 [`NonDataRow`](NonDataRow.md).[`__nonDataRow`](NonDataRow.md#__nondatarow)
-
-#### Defined in
-
-[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L5)
 
 ***
 
 ### avg?
 
-> `optional` **avg**: `number`
+> `optional` **avg**: `Record`\<`string`, `any`\>
+
+Defined in: [src/core/group.ts:128](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L128)
 
 Contains avg
 
-#### Defined in
+#### Implementation of
 
-[core/group.ts:122](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L122)
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`avg`](../interfaces/IGroupTotals.md#avg)
 
 ***
 
@@ -72,13 +86,15 @@ Contains avg
 
 > **group**: [`Group`](Group.md)\<`TEntity`\>
 
+Defined in: [src/core/group.ts:110](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L110)
+
 Parent Group.
 
 #### Param
 
-#### Defined in
+#### Implementation of
 
-[core/group.ts:104](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L104)
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`group`](../interfaces/IGroupTotals.md#group)
 
 ***
 
@@ -86,47 +102,55 @@ Parent Group.
 
 > **initialized**: `boolean` = `false`
 
+Defined in: [src/core/group.ts:118](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L118)
+
 Whether the totals have been fully initialized / calculated.
 Will be set to false for lazy-calculated group totals.
 
 #### Param
 
-#### Defined in
+#### Implementation of
 
-[core/group.ts:112](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L112)
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`initialized`](../interfaces/IGroupTotals.md#initialized)
 
 ***
 
 ### max?
 
-> `optional` **max**: `any`
+> `optional` **max**: `Record`\<`string`, `any`\>
+
+Defined in: [src/core/group.ts:138](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L138)
 
 Contains max
 
-#### Defined in
+#### Implementation of
 
-[core/group.ts:132](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L132)
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`max`](../interfaces/IGroupTotals.md#max)
 
 ***
 
 ### min?
 
-> `optional` **min**: `any`
+> `optional` **min**: `Record`\<`string`, `any`\>
+
+Defined in: [src/core/group.ts:133](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L133)
 
 Contains min
 
-#### Defined in
+#### Implementation of
 
-[core/group.ts:127](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L127)
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`min`](../interfaces/IGroupTotals.md#min)
 
 ***
 
 ### sum?
 
-> `optional` **sum**: `number`
+> `optional` **sum**: `Record`\<`string`, `any`\>
+
+Defined in: [src/core/group.ts:123](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L123)
 
 Contains sum
 
-#### Defined in
+#### Implementation of
 
-[core/group.ts:117](https://github.com/serenity-is/sleekgrid/blob/master/src/core/group.ts#L117)
+[`IGroupTotals`](../interfaces/IGroupTotals.md).[`sum`](../interfaces/IGroupTotals.md#sum)

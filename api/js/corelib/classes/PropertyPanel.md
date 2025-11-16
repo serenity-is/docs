@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / PropertyPanel
+[serenity-is/corelib](../README.md) / PropertyPanel
 
 # Class: PropertyPanel\<TItem, P\>
+
+Defined in: [src/ui/widgets/propertypanel.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L7)
 
 ## Extends
 
@@ -8,15 +10,21 @@
 
 ## Type Parameters
 
-• **TItem**
+### TItem
 
-• **P**
+`TItem`
+
+### P
+
+`P`
 
 ## Constructors
 
-### new PropertyPanel()
+### Constructor
 
-> **new PropertyPanel**\<`TItem`, `P`\>(`props`): [`PropertyPanel`](PropertyPanel.md)\<`TItem`, `P`\>
+> **new PropertyPanel**\<`TItem`, `P`\>(`props`): `PropertyPanel`\<`TItem`, `P`\>
+
+Defined in: [src/ui/widgets/propertypanel.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L13)
 
 #### Parameters
 
@@ -26,15 +34,11 @@
 
 #### Returns
 
-[`PropertyPanel`](PropertyPanel.md)\<`TItem`, `P`\>
+`PropertyPanel`\<`TItem`, `P`\>
 
 #### Overrides
 
-[`BasePanel`](BasePanel.md).[`constructor`](BasePanel.md#constructors)
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L15)
+[`BasePanel`](BasePanel.md).[`constructor`](BasePanel.md#constructor)
 
 ## Properties
 
@@ -42,13 +46,11 @@
 
 > `readonly` **domNode**: `HTMLElement`
 
+Defined in: [src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`domNode`](BasePanel.md#domnode)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ***
 
@@ -56,13 +58,11 @@
 
 > `readonly` **idPrefix**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L13)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`idPrefix`](BasePanel.md#idprefix)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ***
 
@@ -70,13 +70,11 @@
 
 > `protected` **isPanel**: `boolean`
 
+Defined in: [src/ui/widgets/basepanel.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L39)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`isPanel`](BasePanel.md#ispanel)
-
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L39)
 
 ***
 
@@ -84,23 +82,19 @@
 
 > `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
+Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`options`](BasePanel.md#options)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
 
 ***
 
 ### propertyGrid
 
-> `protected` **propertyGrid**: [`PropertyGrid`](PropertyGrid.md)\<[`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)\>
+> `protected` **propertyGrid**: [`PropertyGrid`](PropertyGrid.md)
 
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L106)
+Defined in: [src/ui/widgets/propertypanel.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L101)
 
 ***
 
@@ -108,41 +102,35 @@
 
 > `protected` **responsive**: `boolean`
 
+Defined in: [src/ui/widgets/basepanel.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L40)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`responsive`](BasePanel.md#responsive)
-
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L40)
 
 ***
 
 ### tabs
 
-> `protected` **tabs**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> `protected` **tabs**: [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/basepanel.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L36)
 
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`tabs`](BasePanel.md#tabs)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L36)
-
 ***
 
 ### toolbar
 
-> `protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
+> `protected` **toolbar**: [`Toolbar`](Toolbar.md)
+
+Defined in: [src/ui/widgets/basepanel.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L37)
 
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`toolbar`](BasePanel.md#toolbar)
-
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L37)
 
 ***
 
@@ -150,13 +138,11 @@
 
 > `readonly` **uniqueName**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`uniqueName`](BasePanel.md#uniquename)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ***
 
@@ -164,13 +150,23 @@
 
 > `protected` **validator**: [`Validator`](Validator.md)
 
+Defined in: [src/ui/widgets/basepanel.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L38)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`validator`](BasePanel.md#validator)
 
-#### Defined in
+***
 
-[src/ui/widgets/basepanel.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L38)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/widgets/propertypanel.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L8)
+
+#### Overrides
+
+[`BasePanel`](BasePanel.md).[`[typeInfo]`](BasePanel.md#typeinfo)
 
 ***
 
@@ -178,27 +174,11 @@
 
 > `readonly` `static` **isComponent**: `true` = `true`
 
+Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L219)
+
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`isComponent`](BasePanel.md#iscomponent)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L223)
-
-***
-
-### typeInfo
-
-> `static` **typeInfo**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity.Widget"`\>
-
-#### Inherited from
-
-[`BasePanel`](BasePanel.md).[`typeInfo`](BasePanel.md#typeinfo)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
 
 ## Accessors
 
@@ -206,21 +186,19 @@
 
 #### Get Signature
 
-> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L59)
 
 Returns a Fluent(this.domNode) object
 
 ##### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`element`](BasePanel.md#element)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
 
 ***
 
@@ -230,6 +208,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **entity**(): `TItem`
 
+Defined in: [src/ui/widgets/propertypanel.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L81)
+
 ##### Returns
 
 `TItem`
@@ -237,6 +217,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **entity**(`value`): `void`
+
+Defined in: [src/ui/widgets/propertypanel.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L89)
 
 ##### Parameters
 
@@ -247,10 +229,6 @@ Returns a Fluent(this.domNode) object
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L86)
 
 ***
 
@@ -260,6 +238,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **entityId**(): `any`
 
+Defined in: [src/ui/widgets/propertypanel.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L85)
+
 ##### Returns
 
 `any`
@@ -267,6 +247,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **entityId**(`value`): `void`
+
+Defined in: [src/ui/widgets/propertypanel.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L93)
 
 ##### Parameters
 
@@ -278,10 +260,6 @@ Returns a Fluent(this.domNode) object
 
 `void`
 
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L90)
-
 ***
 
 ### props
@@ -289,6 +267,8 @@ Returns a Fluent(this.domNode) object
 #### Get Signature
 
 > **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
+
+Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L203)
 
 ##### Returns
 
@@ -298,15 +278,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`props`](BasePanel.md#props)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
-
 ## Methods
 
 ### addCssClass()
 
 > `protected` **addCssClass**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
 
 #### Returns
 
@@ -316,17 +294,15 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`addCssClass`](BasePanel.md#addcssclass)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
-
 ***
 
 ### addValidationRule()
 
 #### Call Signature
 
-> **addValidationRule**(`rule`, `uniqueName`?): `void`
+> **addValidationRule**(`rule`, `uniqueName?`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
 
 ##### Parameters
 
@@ -346,13 +322,11 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`addValidationRule`](BasePanel.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
-
 #### Call Signature
 
 > **addValidationRule**(`uniqueName`, `rule`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L96)
 
 ##### Parameters
 
@@ -372,15 +346,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`addValidationRule`](BasePanel.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
 ***
 
 ### afterRender()
 
 > `protected` **afterRender**(`callback`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
 
 #### Parameters
 
@@ -396,15 +368,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`afterRender`](BasePanel.md#afterrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
 ***
 
 ### arrange()
 
 > **arrange**(): `void`
+
+Defined in: [src/ui/widgets/basepanel.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L42)
 
 #### Returns
 
@@ -414,19 +384,19 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`arrange`](BasePanel.md#arrange)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L42)
-
 ***
 
 ### byId()
 
 > `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
+Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L102)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -442,15 +412,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`byId`](BasePanel.md#byid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
-
 ***
 
 ### change()
 
 > **change**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 #### Parameters
 
@@ -466,15 +434,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`change`](BasePanel.md#change)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
-
 ***
 
 ### changeSelect2()
 
 > **changeSelect2**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 #### Parameters
 
@@ -490,15 +456,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`changeSelect2`](BasePanel.md#changeselect2)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L122)
-
 ***
 
 ### deferRender()
 
 > `protected` **deferRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 #### Returns
 
@@ -508,15 +472,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`deferRender`](BasePanel.md#deferrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
-
 ***
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: [src/ui/widgets/propertypanel.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L20)
 
 #### Returns
 
@@ -526,19 +488,19 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`destroy`](BasePanel.md#destroy)
 
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L22)
-
 ***
 
 ### findById()
 
 > `protected` **findById**\<`TElement`\>(`id`): `TElement`
 
+Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -554,15 +516,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`findById`](BasePanel.md#findbyid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
-
 ***
 
 ### getCssClass()
 
 > `protected` **getCssClass**(): `string`
+
+Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 #### Returns
 
@@ -572,19 +532,19 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`getCssClass`](BasePanel.md#getcssclass)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
-
 ***
 
 ### getCustomAttribute()
 
 > `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
 
+Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+
 #### Type Parameters
 
-• **TAttr**
+##### TAttr
+
+`TAttr` *extends* [`CustomAttribute`](CustomAttribute.md)
 
 #### Parameters
 
@@ -604,41 +564,33 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`getCustomAttribute`](BasePanel.md#getcustomattribute)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
 ***
 
 ### getFormKey()
 
 > `protected` **getFormKey**(): `string`
 
+Defined in: [src/ui/widgets/propertypanel.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L47)
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L48)
 
 ***
 
 ### getGridField()
 
-> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`BasePanel`](BasePanel.md).[`getGridField`](BasePanel.md#getgridfield)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ***
 
@@ -646,13 +598,11 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **getPropertyGridOptions**(): [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
 
+Defined in: [src/ui/widgets/propertypanel.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L59)
+
 #### Returns
 
 [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L64)
 
 ***
 
@@ -660,13 +610,11 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
+Defined in: [src/ui/widgets/propertypanel.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L68)
+
 #### Returns
 
 [`PropertyItem`](../interfaces/PropertyItem.md)[]
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L73)
 
 ***
 
@@ -674,19 +622,19 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **getSaveEntity**(): `TItem`
 
+Defined in: [src/ui/widgets/propertypanel.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L73)
+
 #### Returns
 
 `TItem`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L78)
 
 ***
 
 ### getToolbarButtons()
 
 > `protected` **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+
+Defined in: [src/ui/widgets/basepanel.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L48)
 
 #### Returns
 
@@ -696,15 +644,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`getToolbarButtons`](BasePanel.md#gettoolbarbuttons)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L48)
-
 ***
 
 ### getValidatorOptions()
 
 > `protected` **getValidatorOptions**(): `any`
+
+Defined in: [src/ui/widgets/basepanel.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L52)
 
 #### Returns
 
@@ -714,15 +660,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`getValidatorOptions`](BasePanel.md#getvalidatoroptions)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L52)
-
 ***
 
 ### init()
 
 > **init**(): `this`
+
+Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
 
 #### Returns
 
@@ -732,29 +676,25 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`init`](BasePanel.md#init)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L157)
-
 ***
 
 ### initPropertyGrid()
 
 > `protected` **initPropertyGrid**(): `void`
 
+Defined in: [src/ui/widgets/propertypanel.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L33)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L34)
 
 ***
 
 ### initTabs()
 
 > `protected` **initTabs**(): `void`
+
+Defined in: [src/ui/widgets/basepanel.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L56)
 
 #### Returns
 
@@ -764,15 +704,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`initTabs`](BasePanel.md#inittabs)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L56)
-
 ***
 
 ### initToolbar()
 
 > `protected` **initToolbar**(): `void`
+
+Defined in: [src/ui/widgets/basepanel.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L63)
 
 #### Returns
 
@@ -782,15 +720,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`initToolbar`](BasePanel.md#inittoolbar)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L63)
-
 ***
 
 ### initValidator()
 
 > `protected` **initValidator**(): `void`
+
+Defined in: [src/ui/widgets/basepanel.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L70)
 
 #### Returns
 
@@ -800,15 +736,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`initValidator`](BasePanel.md#initvalidator)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L70)
-
 ***
 
 ### internalRenderContents()
 
 > **internalRenderContents**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L173)
 
 #### Returns
 
@@ -818,15 +752,13 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`internalRenderContents`](BasePanel.md#internalrendercontents)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L177)
-
 ***
 
 ### legacyTemplateRender()
 
 > `protected` **legacyTemplateRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L190)
 
 #### Returns
 
@@ -836,29 +768,25 @@ Returns a Fluent(this.domNode) object
 
 [`BasePanel`](BasePanel.md).[`legacyTemplateRender`](BasePanel.md#legacytemplaterender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L194)
-
 ***
 
 ### loadInitialEntity()
 
 > `protected` **loadInitialEntity**(): `void`
 
+Defined in: [src/ui/widgets/propertypanel.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L41)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L42)
 
 ***
 
 ### render()
 
 > **render**(): `any`
+
+Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -872,15 +800,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`render`](BasePanel.md#render)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L167)
-
 ***
 
 ### renderContents()
 
 > `protected` **renderContents**(): `any`
+
+Defined in: [src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
 
 #### Returns
 
@@ -890,15 +816,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`renderContents`](BasePanel.md#rendercontents)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
-
 ***
 
 ### resetValidation()
 
 > `protected` **resetValidation**(): `void`
+
+Defined in: [src/ui/widgets/basepanel.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L78)
 
 #### Returns
 
@@ -908,19 +832,19 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`resetValidation`](BasePanel.md#resetvalidation)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L78)
-
 ***
 
 ### syncOrAsyncThen()
 
 > `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
+Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -944,15 +868,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`syncOrAsyncThen`](BasePanel.md#syncorasyncthen)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
-
 ***
 
 ### useIdPrefix()
 
 > `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
+
+Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
 
 #### Returns
 
@@ -962,29 +884,25 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`useIdPrefix`](BasePanel.md#useidprefix)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L218)
-
 ***
 
 ### validateBeforeSave()
 
 > `protected` **validateBeforeSave**(): `boolean`
 
+Defined in: [src/ui/widgets/propertypanel.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L97)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/widgets/propertypanel.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertypanel.ts#L102)
 
 ***
 
 ### validateForm()
 
 > `protected` **validateForm**(): `boolean`
+
+Defined in: [src/ui/widgets/basepanel.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L84)
 
 #### Returns
 
@@ -994,21 +912,23 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`validateForm`](BasePanel.md#validateform)
 
-#### Defined in
-
-[src/ui/widgets/basepanel.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/basepanel.ts#L84)
-
 ***
 
 ### create()
 
 > `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
+Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+
 #### Type Parameters
 
-• **TWidget** *extends* [`Widget`](Widget.md)\<`P`\>
+##### TWidget
 
-• **P**
+`TWidget` *extends* [`Widget`](Widget.md)\<`P`\>
+
+##### P
+
+`P`
 
 #### Parameters
 
@@ -1024,15 +944,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`create`](BasePanel.md#create)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L130)
-
 ***
 
 ### createDefaultElement()
 
 > `static` **createDefaultElement**(): `HTMLElement`
+
+Defined in: [src/ui/widgets/widget.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L52)
 
 #### Returns
 
@@ -1042,15 +960,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`createDefaultElement`](BasePanel.md#createdefaultelement)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L56)
-
 ***
 
 ### getWidgetName()
 
 > `static` **getWidgetName**(`type`): `string`
+
+Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L91)
 
 #### Parameters
 
@@ -1066,6 +982,66 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BasePanel`](BasePanel.md).[`getWidgetName`](BasePanel.md#getwidgetname)
 
-#### Defined in
+***
 
-[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
+### registerClass()
+
+> `protected` `static` **registerClass**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L221)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`BasePanel`](BasePanel.md).[`registerClass`](BasePanel.md#registerclass)
+
+***
+
+### registerEditor()
+
+> `protected` `static` **registerEditor**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L230)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`BasePanel`](BasePanel.md).[`registerEditor`](BasePanel.md#registereditor)

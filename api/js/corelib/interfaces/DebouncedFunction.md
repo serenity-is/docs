@@ -1,12 +1,18 @@
-[@serenity-is/corelib](../README.md) / DebouncedFunction
+[serenity-is/corelib](../README.md) / DebouncedFunction
 
 # Interface: DebouncedFunction()\<T\>
 
+Defined in: [src/base/debounce.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L1)
+
 ## Type Parameters
 
-• **T** *extends* (...`args`) => `any`
+### T
+
+`T` *extends* (...`args`) => `any`
 
 > **DebouncedFunction**(...`args`): `ReturnType`\<`T`\>
+
+Defined in: [src/base/debounce.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L11)
 
 Call the original function, but applying the debounce rules.
 
@@ -26,15 +32,13 @@ function was not invoked yet.
 
 `ReturnType`\<`T`\>
 
-## Defined in
-
-[src/base/debounce.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L11)
-
 ## Methods
 
 ### clear()
 
 > **clear**(): `void`
+
+Defined in: [src/base/debounce.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L16)
 
 Throw away any pending invocation of the debounced function.
 
@@ -42,15 +46,13 @@ Throw away any pending invocation of the debounced function.
 
 `void`
 
-#### Defined in
-
-[src/base/debounce.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L16)
-
 ***
 
 ### flush()
 
 > **flush**(): `ReturnType`\<`T`\>
+
+Defined in: [src/base/debounce.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L25)
 
 If there is a pending invocation of the debounced function, invoke it immediately and return
 its return value.
@@ -61,7 +63,3 @@ was never invoked.
 #### Returns
 
 `ReturnType`\<`T`\>
-
-#### Defined in
-
-[src/base/debounce.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L25)

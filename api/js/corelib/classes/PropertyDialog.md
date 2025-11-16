@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / PropertyDialog
+[serenity-is/corelib](../README.md) / PropertyDialog
 
 # Class: PropertyDialog\<TItem, P\>
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L8)
 
 ## Extends
 
@@ -8,15 +10,21 @@
 
 ## Type Parameters
 
-• **TItem**
+### TItem
 
-• **P**
+`TItem`
+
+### P
+
+`P`
 
 ## Constructors
 
-### new PropertyDialog()
+### Constructor
 
-> **new PropertyDialog**\<`TItem`, `P`\>(`props`?): [`PropertyDialog`](PropertyDialog.md)\<`TItem`, `P`\>
+> **new PropertyDialog**\<`TItem`, `P`\>(`props?`): `PropertyDialog`\<`TItem`, `P`\>
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L18)
 
 #### Parameters
 
@@ -26,15 +34,11 @@
 
 #### Returns
 
-[`PropertyDialog`](PropertyDialog.md)\<`TItem`, `P`\>
+`PropertyDialog`\<`TItem`, `P`\>
 
 #### Overrides
 
-[`BaseDialog`](BaseDialog.md).[`constructor`](BaseDialog.md#constructors)
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L19)
+[`BaseDialog`](BaseDialog.md).[`constructor`](BaseDialog.md#constructor)
 
 ## Properties
 
@@ -42,13 +46,11 @@
 
 > `protected` **dialog**: [`Dialog`](Dialog.md)
 
+Defined in: [src/ui/dialogs/basedialog.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L20)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`dialog`](BaseDialog.md#dialog)
-
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L20)
 
 ***
 
@@ -56,13 +58,11 @@
 
 > `readonly` **domNode**: `HTMLElement`
 
+Defined in: [src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`domNode`](BaseDialog.md#domnode)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L17)
 
 ***
 
@@ -70,13 +70,11 @@
 
 > `readonly` **idPrefix**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L13)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`idPrefix`](BaseDialog.md#idprefix)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
 
 ***
 
@@ -84,23 +82,19 @@
 
 > `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
+Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`options`](BaseDialog.md#options)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
 
 ***
 
 ### propertyGrid
 
-> `protected` **propertyGrid**: [`PropertyGrid`](PropertyGrid.md)\<[`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)\>
+> `protected` **propertyGrid**: [`PropertyGrid`](PropertyGrid.md)
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L193)
+Defined in: [src/ui/dialogs/propertydialog.tsx:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L186)
 
 ***
 
@@ -108,9 +102,7 @@
 
 > `protected` **propertyItemsData**: [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L15)
+Defined in: [src/ui/dialogs/propertydialog.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L14)
 
 ***
 
@@ -118,27 +110,23 @@
 
 > `protected` **tabs**: [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
 
+Defined in: [src/ui/dialogs/basedialog.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L17)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`tabs`](BaseDialog.md#tabs)
-
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L17)
 
 ***
 
 ### toolbar
 
-> `protected` **toolbar**: [`Toolbar`](Toolbar.md)\<[`ToolbarOptions`](../interfaces/ToolbarOptions.md)\>
+> `protected` **toolbar**: [`Toolbar`](Toolbar.md)
+
+Defined in: [src/ui/dialogs/basedialog.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L18)
 
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`toolbar`](BaseDialog.md#toolbar)
-
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L18)
 
 ***
 
@@ -146,13 +134,11 @@
 
 > `readonly` **uniqueName**: `string`
 
+Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`uniqueName`](BaseDialog.md#uniquename)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L15)
 
 ***
 
@@ -160,13 +146,23 @@
 
 > `protected` **validator**: `any`
 
+Defined in: [src/ui/dialogs/basedialog.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L19)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`validator`](BaseDialog.md#validator)
 
-#### Defined in
+***
 
-[src/ui/dialogs/basedialog.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L19)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L9)
+
+#### Overrides
+
+[`BaseDialog`](BaseDialog.md).[`[typeInfo]`](BaseDialog.md#typeinfo)
 
 ***
 
@@ -174,27 +170,11 @@
 
 > `readonly` `static` **isComponent**: `true` = `true`
 
+Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L219)
+
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`isComponent`](BaseDialog.md#iscomponent)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L223)
-
-***
-
-### typeInfo
-
-> `static` **typeInfo**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity.Widget"`\>
-
-#### Inherited from
-
-[`BaseDialog`](BaseDialog.md).[`typeInfo`](BaseDialog.md#typeinfo)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
 
 ## Accessors
 
@@ -204,6 +184,8 @@
 
 > **get** **dialogTitle**(): `string`
 
+Defined in: [src/ui/dialogs/basedialog.tsx:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L211)
+
 ##### Returns
 
 `string`
@@ -211,6 +193,8 @@
 #### Set Signature
 
 > **set** **dialogTitle**(`value`): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L215)
 
 ##### Parameters
 
@@ -226,31 +210,25 @@
 
 [`BaseDialog`](BaseDialog.md).[`dialogTitle`](BaseDialog.md#dialogtitle)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L210)
-
 ***
 
 ### element
 
 #### Get Signature
 
-> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **get** **element**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L59)
 
 Returns a Fluent(this.domNode) object
 
 ##### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`element`](BaseDialog.md#element)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
 
 ***
 
@@ -260,6 +238,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **entity**(): `TItem`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L163)
+
 ##### Returns
 
 `TItem`
@@ -267,6 +247,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **entity**(`value`): `void`
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L167)
 
 ##### Parameters
 
@@ -277,10 +259,6 @@ Returns a Fluent(this.domNode) object
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L170)
 
 ***
 
@@ -290,6 +268,8 @@ Returns a Fluent(this.domNode) object
 
 > **get** **entityId**(): `any`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L171)
+
 ##### Returns
 
 `any`
@@ -297,6 +277,8 @@ Returns a Fluent(this.domNode) object
 #### Set Signature
 
 > **set** **entityId**(`value`): `void`
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L175)
 
 ##### Parameters
 
@@ -308,10 +290,6 @@ Returns a Fluent(this.domNode) object
 
 `void`
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L178)
-
 ***
 
 ### props
@@ -319,6 +297,8 @@ Returns a Fluent(this.domNode) object
 #### Get Signature
 
 > **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
+
+Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L203)
 
 ##### Returns
 
@@ -328,15 +308,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`props`](BaseDialog.md#props)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
-
 ## Methods
 
 ### addCssClass()
 
 > `protected` **addCssClass**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L58)
 
 #### Returns
 
@@ -346,17 +324,15 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`addCssClass`](BaseDialog.md#addcssclass)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L57)
-
 ***
 
 ### addValidationRule()
 
 #### Call Signature
 
-> **addValidationRule**(`rule`, `uniqueName`?): `void`
+> **addValidationRule**(`rule`, `uniqueName?`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
 
 ##### Parameters
 
@@ -376,13 +352,11 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`addValidationRule`](BaseDialog.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L99)
-
 #### Call Signature
 
 > **addValidationRule**(`uniqueName`, `rule`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L96)
 
 ##### Parameters
 
@@ -402,29 +376,25 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`addValidationRule`](BaseDialog.md#addvalidationrule)
 
-##### Defined in
-
-[src/ui/widgets/widget.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L100)
-
 ***
 
 ### afterInit()
 
 > `protected` **afterInit**(): `void`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L32)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L33)
 
 ***
 
 ### afterRender()
 
 > `protected` **afterRender**(`callback`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
 
 #### Parameters
 
@@ -440,15 +410,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`afterRender`](BaseDialog.md#afterrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L146)
-
 ***
 
 ### arrange()
 
 > **arrange**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L184)
 
 #### Returns
 
@@ -458,19 +426,19 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`arrange`](BaseDialog.md#arrange)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L183)
-
 ***
 
 ### byId()
 
 > `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
+Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L102)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -486,29 +454,25 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`byId`](BaseDialog.md#byid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
-
 ***
 
 ### cancelClick()
 
 > `protected` **cancelClick**(): `void`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L82)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L83)
 
 ***
 
 ### change()
 
 > **change**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 #### Parameters
 
@@ -524,15 +488,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`change`](BaseDialog.md#change)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
-
 ***
 
 ### changeSelect2()
 
 > **changeSelect2**(`handler`): `void`
+
+Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
 
 #### Parameters
 
@@ -548,15 +510,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`changeSelect2`](BaseDialog.md#changeselect2)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L122)
-
 ***
 
 ### deferRender()
 
 > `protected` **deferRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
 
 #### Returns
 
@@ -566,15 +526,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`deferRender`](BaseDialog.md#deferrender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
-
 ***
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L39)
 
 #### Returns
 
@@ -584,15 +542,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`destroy`](BaseDialog.md#destroy)
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L40)
-
 ***
 
 ### dialogClose()
 
-> **dialogClose**(`result`?): `void`
+> **dialogClose**(`result?`): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L207)
 
 #### Parameters
 
@@ -608,15 +564,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`dialogClose`](BaseDialog.md#dialogclose)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L206)
-
 ***
 
 ### dialogOpen()
 
-> **dialogOpen**(`asPanel`?): `void`
+> **dialogOpen**(`asPanel?`): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L121)
 
 #### Parameters
 
@@ -632,19 +586,19 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`dialogOpen`](BaseDialog.md#dialogopen)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L120)
-
 ***
 
 ### findById()
 
 > `protected` **findById**\<`TElement`\>(`id`): `TElement`
 
+Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
 #### Type Parameters
 
-• **TElement** *extends* `HTMLElement` = `HTMLElement`
+##### TElement
+
+`TElement` *extends* `HTMLElement` = `HTMLElement`
 
 #### Parameters
 
@@ -660,15 +614,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`findById`](BaseDialog.md#findbyid)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
-
 ***
 
 ### getCssClass()
 
 > `protected` **getCssClass**(): `string`
+
+Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
 
 #### Returns
 
@@ -678,19 +630,19 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`getCssClass`](BaseDialog.md#getcssclass)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
-
 ***
 
 ### getCustomAttribute()
 
 > `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
 
+Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+
 #### Type Parameters
 
-• **TAttr**
+##### TAttr
+
+`TAttr` *extends* [`CustomAttribute`](CustomAttribute.md)
 
 #### Parameters
 
@@ -710,15 +662,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`getCustomAttribute`](BaseDialog.md#getcustomattribute)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
-
 ***
 
 ### getDialogButtons()
 
 > `protected` **getDialogButtons**(): [`DialogButton`](../interfaces/DialogButton.md)[]
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L54)
 
 #### Returns
 
@@ -728,15 +678,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`getDialogButtons`](BaseDialog.md#getdialogbuttons)
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L55)
-
 ***
 
 ### getDialogOptions()
 
 > `protected` **getDialogOptions**(): [`DialogOptions`](../interfaces/DialogOptions.md)
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L48)
 
 #### Returns
 
@@ -746,47 +694,41 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`getDialogOptions`](BaseDialog.md#getdialogoptions)
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L49)
-
 ***
 
 ### getFormKey()
 
 > `protected` **getFormKey**(): `string`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L95)
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L96)
 
 ***
 
 ### getGridField()
 
-> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **getGridField**(): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+[`Fluent`](../interfaces/Fluent.md)
 
 #### Inherited from
 
 [`BaseDialog`](BaseDialog.md).[`getGridField`](BaseDialog.md#getgridfield)
-
-#### Defined in
-
-[src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
 
 ***
 
 ### getInitialDialogTitle()
 
 > `protected` **getInitialDialogTitle**(): `string`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L62)
 
 #### Returns
 
@@ -796,23 +738,17 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`getInitialDialogTitle`](BaseDialog.md#getinitialdialogtitle)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L61)
-
 ***
 
 ### getPropertyGridOptions()
 
 > `protected` **getPropertyGridOptions**(): [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L110)
+
 #### Returns
 
 [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L117)
 
 ***
 
@@ -820,13 +756,11 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L119)
+
 #### Returns
 
 [`PropertyItem`](../interfaces/PropertyItem.md)[]
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L126)
 
 ***
 
@@ -834,13 +768,11 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L123)
+
 #### Returns
 
 [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L130)
 
 ***
 
@@ -848,13 +780,11 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **getPropertyItemsDataAsync**(): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L142)
+
 #### Returns
 
 `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L149)
 
 ***
 
@@ -862,19 +792,19 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **getSaveEntity**(): `TItem`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L151)
+
 #### Returns
 
 `TItem`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L158)
 
 ***
 
 ### getToolbarButtons()
 
 > `protected` **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
+
+Defined in: [src/ui/dialogs/basedialog.tsx:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L149)
 
 #### Returns
 
@@ -884,15 +814,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`getToolbarButtons`](BaseDialog.md#gettoolbarbuttons)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L148)
-
 ***
 
 ### getValidatorOptions()
 
 > `protected` **getValidatorOptions**(): `any`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:164](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L164)
 
 #### Returns
 
@@ -902,15 +830,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`getValidatorOptions`](BaseDialog.md#getvalidatoroptions)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L163)
-
 ***
 
 ### handleResponsive()
 
 > `protected` **handleResponsive**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L227)
 
 #### Returns
 
@@ -920,15 +846,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`handleResponsive`](BaseDialog.md#handleresponsive)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L226)
-
 ***
 
 ### init()
 
 > **init**(): `this`
+
+Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
 
 #### Returns
 
@@ -938,15 +862,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`init`](BaseDialog.md#init)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L157)
-
 ***
 
 ### initDialog()
 
 > `protected` **initDialog**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L98)
 
 #### Returns
 
@@ -956,29 +878,25 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`initDialog`](BaseDialog.md#initdialog)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L97)
-
 ***
 
 ### initPropertyGrid()
 
 > `protected` **initPropertyGrid**(): `void`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L86)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L87)
 
 ***
 
 ### initTabs()
 
 > `protected` **initTabs**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L220)
 
 #### Returns
 
@@ -988,15 +906,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`initTabs`](BaseDialog.md#inittabs)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L219)
-
 ***
 
 ### initToolbar()
 
 > `protected` **initToolbar**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L153)
 
 #### Returns
 
@@ -1006,15 +922,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`initToolbar`](BaseDialog.md#inittoolbar)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L152)
-
 ***
 
 ### initUIDialog()
 
 > `protected` **initUIDialog**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L107)
 
 #### Returns
 
@@ -1024,15 +938,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`initUIDialog`](BaseDialog.md#inituidialog)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L106)
-
 ***
 
 ### initValidator()
 
 > `protected` **initValidator**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L168)
 
 #### Returns
 
@@ -1042,15 +954,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`initValidator`](BaseDialog.md#initvalidator)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L167)
-
 ***
 
 ### internalRenderContents()
 
 > **internalRenderContents**(): `void`
+
+Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L173)
 
 #### Returns
 
@@ -1060,23 +970,17 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`internalRenderContents`](BaseDialog.md#internalrendercontents)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L177)
-
 ***
 
 ### isClosable()
 
 > `protected` **isClosable**(): `boolean`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L15)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L16)
 
 ***
 
@@ -1084,19 +988,19 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **isStatic**(): `boolean`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L16)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L17)
 
 ***
 
 ### isStaticPanel()
 
 > `protected` **isStaticPanel**(): `boolean`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L66)
 
 #### Returns
 
@@ -1106,15 +1010,13 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`isStaticPanel`](BaseDialog.md#isstaticpanel)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L65)
-
 ***
 
 ### legacyTemplateRender()
 
 > `protected` **legacyTemplateRender**(): `boolean`
+
+Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L190)
 
 #### Returns
 
@@ -1124,23 +1026,17 @@ Returns a Fluent(this.domNode) object
 
 [`BaseDialog`](BaseDialog.md).[`legacyTemplateRender`](BaseDialog.md#legacytemplaterender)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L194)
-
 ***
 
 ### loadInitialEntity()
 
 > `protected` **loadInitialEntity**(): `void`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L159)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L166)
 
 ***
 
@@ -1148,13 +1044,11 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **okClick**(): `void`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L70)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L71)
 
 ***
 
@@ -1162,19 +1056,19 @@ Returns a Fluent(this.domNode) object
 
 > `protected` **okClickValidated**(): `void`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L78)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L79)
 
 ***
 
 ### onClose()
 
-> **onClose**(`handler`, `opt`?): `void`
+> **onClose**(`handler`, `opt?`): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L140)
 
 Attaches a dialog/modal/panel close event handler. See Dialog.close for more info.
 
@@ -1182,15 +1076,15 @@ Attaches a dialog/modal/panel close event handler. See Dialog.close for more inf
 
 ##### handler
 
-(`result`?, `e`?) => `void`
+(`result?`, `e?`) => `void`
 
 ##### opt?
 
-###### opt.before
+###### before?
 
 `boolean`
 
-###### opt.oneOff
+###### oneOff?
 
 `boolean`
 
@@ -1202,15 +1096,13 @@ Attaches a dialog/modal/panel close event handler. See Dialog.close for more inf
 
 [`BaseDialog`](BaseDialog.md).[`onClose`](BaseDialog.md#onclose)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L139)
-
 ***
 
 ### onDialogClose()
 
-> `protected` **onDialogClose**(`result`?): `void`
+> `protected` **onDialogClose**(`result?`): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L190)
 
 #### Parameters
 
@@ -1226,15 +1118,13 @@ Attaches a dialog/modal/panel close event handler. See Dialog.close for more inf
 
 [`BaseDialog`](BaseDialog.md).[`onDialogClose`](BaseDialog.md#ondialogclose)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L189)
-
 ***
 
 ### onDialogOpen()
 
 > `protected` **onDialogOpen**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L132)
 
 #### Returns
 
@@ -1244,15 +1134,13 @@ Attaches a dialog/modal/panel close event handler. See Dialog.close for more inf
 
 [`BaseDialog`](BaseDialog.md).[`onDialogOpen`](BaseDialog.md#ondialogopen)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L131)
-
 ***
 
 ### onOpen()
 
-> **onOpen**(`handler`, `opt`?): `void`
+> **onOpen**(`handler`, `opt?`): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L145)
 
 Attaches a dialog/modal/panel open event handler. See Dialog.open for more info.
 
@@ -1260,15 +1148,15 @@ Attaches a dialog/modal/panel open event handler. See Dialog.open for more info.
 
 ##### handler
 
-(`e`?) => `void`
+(`e?`) => `void`
 
 ##### opt?
 
-###### opt.before
+###### before?
 
 `boolean`
 
-###### opt.oneOff
+###### oneOff?
 
 `boolean`
 
@@ -1280,15 +1168,13 @@ Attaches a dialog/modal/panel open event handler. See Dialog.open for more info.
 
 [`BaseDialog`](BaseDialog.md).[`onOpen`](BaseDialog.md#onopen)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L144)
-
 ***
 
 ### propertyItemsReady()
 
 > `protected` **propertyItemsReady**(`itemsData`): `void`
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L26)
 
 #### Parameters
 
@@ -1300,15 +1186,13 @@ Attaches a dialog/modal/panel open event handler. See Dialog.open for more info.
 
 `void`
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L27)
-
 ***
 
 ### render()
 
 > **render**(): `any`
+
+Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -1322,15 +1206,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`render`](BaseDialog.md#render)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L167)
-
 ***
 
 ### renderContents()
 
 > `protected` **renderContents**(): `any`
+
+Defined in: [src/ui/dialogs/propertydialog.tsx:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L188)
 
 #### Returns
 
@@ -1340,15 +1222,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`renderContents`](BaseDialog.md#rendercontents)
 
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L195)
-
 ***
 
 ### resetValidation()
 
 > `protected` **resetValidation**(): `void`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L176)
 
 #### Returns
 
@@ -1358,19 +1238,19 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`resetValidation`](BaseDialog.md#resetvalidation)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L175)
-
 ***
 
 ### syncOrAsyncThen()
 
 > `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
+Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -1394,23 +1274,17 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`syncOrAsyncThen`](BaseDialog.md#syncorasyncthen)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L211)
-
 ***
 
 ### updateTitle()
 
 > `protected` **updateTitle**(): `void`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L183)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L190)
 
 ***
 
@@ -1418,19 +1292,19 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **useAsync**(): `boolean`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L35)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L36)
 
 ***
 
 ### useIdPrefix()
 
 > `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
+
+Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
 
 #### Returns
 
@@ -1440,29 +1314,25 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`useIdPrefix`](BaseDialog.md#useidprefix)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L218)
-
 ***
 
 ### validateBeforeSave()
 
 > `protected` **validateBeforeSave**(): `boolean`
 
+Defined in: [src/ui/dialogs/propertydialog.tsx:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L179)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/propertydialog.tsx:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/propertydialog.tsx#L186)
 
 ***
 
 ### validateForm()
 
 > `protected` **validateForm**(): `boolean`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L180)
 
 #### Returns
 
@@ -1472,21 +1342,23 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`validateForm`](BaseDialog.md#validateform)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L179)
-
 ***
 
 ### create()
 
 > `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
+Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+
 #### Type Parameters
 
-• **TWidget** *extends* [`Widget`](Widget.md)\<`P`\>
+##### TWidget
 
-• **P**
+`TWidget` *extends* [`Widget`](Widget.md)\<`P`\>
+
+##### P
+
+`P`
 
 #### Parameters
 
@@ -1502,15 +1374,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`create`](BaseDialog.md#create)
 
-#### Defined in
-
-[src/ui/widgets/widget.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L130)
-
 ***
 
 ### createDefaultElement()
 
 > `static` **createDefaultElement**(): `HTMLDivElement`
+
+Defined in: [src/ui/dialogs/basedialog.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L15)
 
 #### Returns
 
@@ -1520,15 +1390,13 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`createDefaultElement`](BaseDialog.md#createdefaultelement)
 
-#### Defined in
-
-[src/ui/dialogs/basedialog.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/basedialog.tsx#L15)
-
 ***
 
 ### getWidgetName()
 
 > `static` **getWidgetName**(`type`): `string`
+
+Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L91)
 
 #### Parameters
 
@@ -1544,6 +1412,66 @@ this method should not be overridden. Override renderContents() instead.
 
 [`BaseDialog`](BaseDialog.md).[`getWidgetName`](BaseDialog.md#getwidgetname)
 
-#### Defined in
+***
 
-[src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
+### registerClass()
+
+> `protected` `static` **registerClass**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L221)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`BaseDialog`](BaseDialog.md).[`registerClass`](BaseDialog.md#registerclass)
+
+***
+
+### registerEditor()
+
+> `protected` `static` **registerEditor**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L230)
+
+#### Type Parameters
+
+##### TypeName
+
+`TypeName`
+
+#### Parameters
+
+##### typeName
+
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
+
+##### intfAndAttr?
+
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
+
+#### Returns
+
+[`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+#### Inherited from
+
+[`BaseDialog`](BaseDialog.md).[`registerEditor`](BaseDialog.md#registereditor)

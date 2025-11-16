@@ -1,16 +1,20 @@
-[@serenity-is/sleekgrid](../README.md) / AutoTooltips
+[serenity-is/sleekgrid](../README.md) / AutoTooltips
 
 # Class: AutoTooltips
 
+Defined in: [src/plugins/autotooltips.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L10)
+
 ## Implements
 
-- [`IPlugin`](../interfaces/IPlugin.md)
+- [`GridPlugin`](../interfaces/GridPlugin.md)
 
 ## Constructors
 
-### new AutoTooltips()
+### Constructor
 
-> **new AutoTooltips**(`options`?): [`AutoTooltips`](AutoTooltips.md)
+> **new AutoTooltips**(`options?`): `AutoTooltips`
+
+Defined in: [src/plugins/autotooltips.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L15)
 
 #### Parameters
 
@@ -20,11 +24,7 @@
 
 #### Returns
 
-[`AutoTooltips`](AutoTooltips.md)
-
-#### Defined in
-
-[plugins/autotooltips.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L15)
+`AutoTooltips`
 
 ## Properties
 
@@ -32,13 +32,11 @@
 
 > **pluginName**: `string` = `"AutoTooltips"`
 
+Defined in: [src/plugins/autotooltips.ts:75](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L75)
+
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`pluginName`](../interfaces/IPlugin.md#pluginname)
-
-#### Defined in
-
-[plugins/autotooltips.ts:75](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L75)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`pluginName`](../interfaces/GridPlugin.md#pluginname)
 
 ***
 
@@ -46,9 +44,7 @@
 
 > `readonly` `static` **defaults**: [`AutoTooltipsOptions`](../interfaces/AutoTooltipsOptions.md)
 
-#### Defined in
-
-[plugins/autotooltips.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L19)
+Defined in: [src/plugins/autotooltips.ts:19](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L19)
 
 ## Methods
 
@@ -56,17 +52,15 @@
 
 > **destroy**(): `void`
 
+Defined in: [src/plugins/autotooltips.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L36)
+
 #### Returns
 
 `void`
 
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`destroy`](../interfaces/IPlugin.md#destroy)
-
-#### Defined in
-
-[plugins/autotooltips.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L36)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`destroy`](../interfaces/GridPlugin.md#destroy)
 
 ***
 
@@ -74,11 +68,13 @@
 
 > **init**(`grid`): `void`
 
+Defined in: [src/plugins/autotooltips.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L26)
+
 #### Parameters
 
 ##### grid
 
-[`Grid`](Grid.md)\<`any`\>
+[`ISleekGrid`](../interfaces/ISleekGrid.md)
 
 #### Returns
 
@@ -86,8 +82,4 @@
 
 #### Implementation of
 
-[`IPlugin`](../interfaces/IPlugin.md).[`init`](../interfaces/IPlugin.md#init)
-
-#### Defined in
-
-[plugins/autotooltips.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/autotooltips.ts#L26)
+[`GridPlugin`](../interfaces/GridPlugin.md).[`init`](../interfaces/GridPlugin.md#init)

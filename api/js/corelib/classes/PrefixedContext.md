@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / PrefixedContext
+[serenity-is/corelib](../README.md) / PrefixedContext
 
 # Class: PrefixedContext
 
+Defined in: [src/ui/widgets/prefixedcontext.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L4)
+
 ## Constructors
 
-### new PrefixedContext()
+### Constructor
 
-> **new PrefixedContext**(`idPrefix`): [`PrefixedContext`](PrefixedContext.md)
+> **new PrefixedContext**(`idPrefix`): `PrefixedContext`
+
+Defined in: [src/ui/widgets/prefixedcontext.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L5)
 
 #### Parameters
 
@@ -16,11 +20,7 @@
 
 #### Returns
 
-[`PrefixedContext`](PrefixedContext.md)
-
-#### Defined in
-
-[src/ui/widgets/prefixedcontext.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L5)
+`PrefixedContext`
 
 ## Properties
 
@@ -28,15 +28,15 @@
 
 > `readonly` **idPrefix**: `string`
 
-#### Defined in
-
-[src/ui/widgets/prefixedcontext.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L5)
+Defined in: [src/ui/widgets/prefixedcontext.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L5)
 
 ## Methods
 
 ### byId()
 
-> **byId**(`id`): [`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
+> **byId**(`id`): [`Fluent`](../interfaces/Fluent.md)
+
+Defined in: [src/ui/widgets/prefixedcontext.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L8)
 
 #### Parameters
 
@@ -46,11 +46,7 @@
 
 #### Returns
 
-[`Fluent`](../interfaces/Fluent.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/widgets/prefixedcontext.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L8)
+[`Fluent`](../interfaces/Fluent.md)
 
 ***
 
@@ -58,9 +54,13 @@
 
 > **w**\<`TWidget`\>(`id`, `type`): `TWidget`
 
+Defined in: [src/ui/widgets/prefixedcontext.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L12)
+
 #### Type Parameters
 
-• **TWidget**
+##### TWidget
+
+`TWidget`
 
 #### Parameters
 
@@ -75,7 +75,3 @@
 #### Returns
 
 `TWidget`
-
-#### Defined in
-
-[src/ui/widgets/prefixedcontext.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/prefixedcontext.ts#L12)

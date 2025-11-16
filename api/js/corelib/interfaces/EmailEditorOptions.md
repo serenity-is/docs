@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / EmailEditorOptions
+[serenity-is/corelib](../README.md) / EmailEditorOptions
 
 # Interface: EmailEditorOptions
+
+Defined in: [src/ui/editors/emaileditor.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.tsx#L6)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **domain**: `string`
 
-#### Defined in
-
-[src/ui/editors/emaileditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.tsx#L8)
+Defined in: [src/ui/editors/emaileditor.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.tsx#L7)
 
 ***
 
@@ -18,6 +18,4 @@
 
 > `optional` **readOnlyDomain**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/emaileditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.tsx#L9)
+Defined in: [src/ui/editors/emaileditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/emaileditor.tsx#L8)

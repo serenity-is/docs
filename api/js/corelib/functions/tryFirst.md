@@ -1,15 +1,19 @@
-[@serenity-is/corelib](../README.md) / tryFirst
+[serenity-is/corelib](../README.md) / tryFirst
 
 # Function: tryFirst()
 
 > **tryFirst**\<`TItem`\>(`array`, `predicate`): `TItem`
+
+Defined in: [src/compat/arrays-compat.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L203)
 
 Gets first element in an array that matches given predicate (similar to LINQ's FirstOrDefault).
 Returns null if no match is found.
 
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Parameters
 
@@ -37,7 +41,3 @@ First element that matches.
 tryFirst([1, 2, 3], x => x == 2); // 2
 tryFirst([1, 2, 3], x => x == 4); // null
 ```
-
-## Defined in
-
-[src/q/arrays-compat.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays-compat.ts#L204)

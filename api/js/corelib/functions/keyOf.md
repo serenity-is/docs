@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / keyOf
+[serenity-is/corelib](../README.md) / keyOf
 
 # Function: keyOf()
 
 > **keyOf**\<`T`\>(`prop`): keyof `T`
 
+Defined in: [src/compat/system-compat.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L172)
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
@@ -17,7 +21,3 @@ keyof `T`
 ## Returns
 
 keyof `T`
-
-## Defined in
-
-[src/q/system-compat.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L185)

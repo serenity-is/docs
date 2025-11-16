@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / PostToUrlOptions
+[serenity-is/corelib](../README.md) / PostToUrlOptions
 
 # Interface: PostToUrlOptions
+
+Defined in: [src/compat/services-compat.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/services-compat.tsx#L17)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > **params**: `any`
 
-#### Defined in
-
-[src/q/services-compat.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L20)
+Defined in: [src/compat/services-compat.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/services-compat.tsx#L20)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **target**: `string`
 
-#### Defined in
-
-[src/q/services-compat.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L19)
+Defined in: [src/compat/services-compat.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/services-compat.tsx#L19)
 
 ***
 
@@ -28,6 +26,4 @@
 
 > `optional` **url**: `string`
 
-#### Defined in
-
-[src/q/services-compat.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L18)
+Defined in: [src/compat/services-compat.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/services-compat.tsx#L18)

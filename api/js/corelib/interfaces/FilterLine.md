@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / FilterLine
+[serenity-is/corelib](../README.md) / FilterLine
 
 # Interface: FilterLine
+
+Defined in: [src/ui/filtering/filterline.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L3)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **criteria**: `any`[]
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L10)
+Defined in: [src/ui/filtering/filterline.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L10)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **displayText**: `string`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L11)
+Defined in: [src/ui/filtering/filterline.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L11)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **field**: `string`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L4)
+Defined in: [src/ui/filtering/filterline.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L4)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > `optional` **isOr**: `boolean`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L6)
+Defined in: [src/ui/filtering/filterline.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L6)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > `optional` **leftParen**: `boolean`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L7)
+Defined in: [src/ui/filtering/filterline.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L7)
 
 ***
 
@@ -58,9 +50,7 @@
 
 > `optional` **operator**: `string`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L5)
+Defined in: [src/ui/filtering/filterline.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L5)
 
 ***
 
@@ -68,9 +58,7 @@
 
 > `optional` **rightParen**: `boolean`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L8)
+Defined in: [src/ui/filtering/filterline.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L8)
 
 ***
 
@@ -78,9 +66,7 @@
 
 > `optional` **state**: `any`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L12)
+Defined in: [src/ui/filtering/filterline.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L12)
 
 ***
 
@@ -88,6 +74,4 @@
 
 > `optional` **validationError**: `string`
 
-#### Defined in
-
-[src/ui/filtering/filterline.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L9)
+Defined in: [src/ui/filtering/filterline.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterline.ts#L9)

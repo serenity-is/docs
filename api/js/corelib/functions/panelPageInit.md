@@ -1,4 +1,4 @@
-[@serenity-is/corelib](../README.md) / panelPageInit
+[serenity-is/corelib](../README.md) / panelPageInit
 
 # Function: panelPageInit()
 
@@ -6,11 +6,17 @@
 
 > **panelPageInit**\<`TGrid`, `P`\>(`panel`): `TGrid`
 
+Defined in: [src/compat/layout.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L52)
+
 ### Type Parameters
 
-• **TGrid** *extends* [`Widget`](../classes/Widget.md)\<`P`\>
+#### TGrid
 
-• **P**
+`TGrid` *extends* [`Widget`](../classes/Widget.md)\<`P`\>
+
+#### P
+
+`P`
 
 ### Parameters
 
@@ -22,27 +28,29 @@
 
 `TGrid`
 
-### Defined in
-
-[src/q/layout.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L52)
-
 ## Call Signature
 
-> **panelPageInit**\<`TGrid`, `P`\>(`type`, `props`?): `TGrid`
+> **panelPageInit**\<`TGrid`, `P`\>(`type`, `props?`): `TGrid`
+
+Defined in: [src/compat/layout.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L53)
 
 ### Type Parameters
 
-• **TGrid** *extends* [`Widget`](../classes/Widget.md)\<`P`\>
+#### TGrid
 
-• **P**
+`TGrid` *extends* [`Widget`](../classes/Widget.md)\<`P`\>
+
+#### P
+
+`P`
 
 ### Parameters
 
 #### type
 
-(`options`?) => `TGrid`
+\{(`options?`): `TGrid`; `prototype`: `TGrid`; \}
 
-##### type.prototype
+##### prototype
 
 `TGrid`
 
@@ -53,7 +61,3 @@
 ### Returns
 
 `TGrid`
-
-### Defined in
-
-[src/q/layout.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L53)

@@ -1,10 +1,14 @@
-[@serenity-is/corelib](../README.md) / ComboboxOptions
+[serenity-is/corelib](../README.md) / ComboboxOptions
 
 # Interface: ComboboxOptions\<TSource\>
 
+Defined in: [src/ui/editors/combobox.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L29)
+
 ## Type Parameters
 
-• **TSource** = `any`
+### TSource
+
+`TSource` = `any`
 
 ## Properties
 
@@ -12,9 +16,7 @@
 
 > `optional` **allowClear**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L30)
+Defined in: [src/ui/editors/combobox.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L30)
 
 ***
 
@@ -22,17 +24,17 @@
 
 > `optional` **arbitraryValues**: `boolean`
 
+Defined in: [src/ui/editors/combobox.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L34)
+
 Allow arbitrary values for items
-
-#### Defined in
-
-[src/ui/editors/combobox.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L34)
 
 ***
 
 ### createSearchChoice()?
 
 > `optional` **createSearchChoice**: (`s`) => [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
+
+Defined in: [src/ui/editors/combobox.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L31)
 
 #### Parameters
 
@@ -44,19 +46,13 @@ Allow arbitrary values for items
 
 [`ComboboxItem`](ComboboxItem.md)\<`TSource`\>
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L31)
-
 ***
 
 ### element?
 
 > `optional` **element**: `HTMLInputElement` \| `HTMLSelectElement` \| `Element`[]
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L32)
+Defined in: [src/ui/editors/combobox.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L32)
 
 ***
 
@@ -64,6 +60,8 @@ Allow arbitrary values for items
 
 > `optional` **formatResult**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
+Defined in: [src/ui/editors/combobox.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L36)
+
 #### Parameters
 
 ##### p1
@@ -73,10 +71,6 @@ Allow arbitrary values for items
 #### Returns
 
 [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
-
-#### Defined in
-
-[src/ui/editors/combobox.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L36)
 
 ***
 
@@ -84,6 +78,8 @@ Allow arbitrary values for items
 
 > `optional` **formatSelection**: (`p1`) => [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
+Defined in: [src/ui/editors/combobox.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L35)
+
 #### Parameters
 
 ##### p1
@@ -94,19 +90,13 @@ Allow arbitrary values for items
 
 [`ComboboxFormatResult`](../type-aliases/ComboboxFormatResult.md)
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L35)
-
 ***
 
 ### minimumResultsForSearch?
 
 > `optional` **minimumResultsForSearch**: `number`
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L37)
+Defined in: [src/ui/editors/combobox.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L37)
 
 ***
 
@@ -114,9 +104,7 @@ Allow arbitrary values for items
 
 > `optional` **multiple**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L38)
+Defined in: [src/ui/editors/combobox.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L38)
 
 ***
 
@@ -124,11 +112,9 @@ Allow arbitrary values for items
 
 > `optional` **pageSize**: `number`
 
+Defined in: [src/ui/editors/combobox.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L40)
+
 Page size to use while loading or displaying results
-
-#### Defined in
-
-[src/ui/editors/combobox.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L40)
 
 ***
 
@@ -136,15 +122,15 @@ Page size to use while loading or displaying results
 
 > `optional` **placeholder**: `string`
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L41)
+Defined in: [src/ui/editors/combobox.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L41)
 
 ***
 
 ### providerOptions()?
 
 > `optional` **providerOptions**: (`type`, `opt`) => `any`
+
+Defined in: [src/ui/editors/combobox.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L43)
 
 Callback to get options specific to the combobox provider type
 
@@ -156,21 +142,19 @@ Callback to get options specific to the combobox provider type
 
 ##### opt
 
-[`ComboboxOptions`](ComboboxOptions.md)\<`any`\>
+`ComboboxOptions`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-[src/ui/editors/combobox.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L43)
 
 ***
 
 ### search()?
 
 > `optional` **search**: (`query`) => [`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\> \| `PromiseLike`\<[`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\>\>
+
+Defined in: [src/ui/editors/combobox.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L44)
 
 #### Parameters
 
@@ -182,18 +166,12 @@ Callback to get options specific to the combobox provider type
 
 [`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\> \| `PromiseLike`\<[`ComboboxSearchResult`](ComboboxSearchResult.md)\<[`ComboboxItem`](ComboboxItem.md)\<`TSource`\>\>\>
 
-#### Defined in
-
-[src/ui/editors/combobox.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L44)
-
 ***
 
 ### typeDelay?
 
 > `optional` **typeDelay**: `number`
 
+Defined in: [src/ui/editors/combobox.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L46)
+
 Type delay for searching, default is 200
-
-#### Defined in
-
-[src/ui/editors/combobox.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L46)

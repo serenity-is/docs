@@ -1,19 +1,17 @@
-[@serenity-is/sleekgrid](../README.md) / CheckboxFormatter
+[serenity-is/sleekgrid](../README.md) / CheckboxFormatter
 
 # Function: CheckboxFormatter()
 
-> **CheckboxFormatter**(`ctx`): `string`
+> **CheckboxFormatter**(`ctx`): [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/formatters/formatters.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/formatters/formatters.ts#L41)
 
 ## Parameters
 
 ### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ## Returns
 
-`string`
-
-## Defined in
-
-[formatters/formatters.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L32)
+[`FormatterResult`](../type-aliases/FormatterResult.md)

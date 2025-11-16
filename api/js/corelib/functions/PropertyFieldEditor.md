@@ -1,33 +1,31 @@
-[@serenity-is/corelib](../README.md) / PropertyFieldEditor
+[serenity-is/corelib](../README.md) / PropertyFieldEditor
 
 # Function: PropertyFieldEditor()
 
 > **PropertyFieldEditor**(`props`): `void`
 
+Defined in: [src/ui/widgets/propertygrid.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L31)
+
 ## Parameters
 
 ### props
 
-#### props.fieldElement
+#### fieldElement
 
 [`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
 
-#### props.idPrefix
+#### idPrefix?
 
 `string`
 
-#### props.item
+#### item
 
-`Pick`\<[`PropertyItem`](../interfaces/PropertyItem.md), `"name"` \| `"placeholder"` \| `"maxLength"` \| `"editorType"` \| `"editorParams"` \| `"editorAddons"` \| `"editorCssClass"`\>
+`Pick`\<[`PropertyItem`](../interfaces/PropertyItem.md), `"editorCssClass"` \| `"editorType"` \| `"editorParams"` \| `"maxLength"` \| `"name"` \| `"editorAddons"` \| `"placeholder"`\>
 
-#### props.localTextPrefix
+#### localTextPrefix?
 
 `string`
 
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/ui/widgets/propertygrid.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L34)

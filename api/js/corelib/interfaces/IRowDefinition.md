@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / IRowDefinition
+[serenity-is/corelib](../README.md) / IRowDefinition
 
 # Interface: IRowDefinition
+
+Defined in: [src/ui/datagrid/irowdefinition.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L1)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `readonly` `optional` **deletePermission**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L2)
+Defined in: [src/ui/datagrid/irowdefinition.ts:2](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L2)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `readonly` `optional` **idProperty**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L3)
+Defined in: [src/ui/datagrid/irowdefinition.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L3)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `readonly` `optional` **insertPermission**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L4)
+Defined in: [src/ui/datagrid/irowdefinition.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L4)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > `readonly` `optional` **isActiveProperty**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L5)
+Defined in: [src/ui/datagrid/irowdefinition.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L5)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > `readonly` `optional` **isDeletedProperty**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L6)
+Defined in: [src/ui/datagrid/irowdefinition.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L6)
 
 ***
 
@@ -58,9 +50,7 @@
 
 > `readonly` `optional` **localTextPrefix**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L7)
+Defined in: [src/ui/datagrid/irowdefinition.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L7)
 
 ***
 
@@ -68,9 +58,7 @@
 
 > `readonly` `optional` **nameProperty**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L8)
+Defined in: [src/ui/datagrid/irowdefinition.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L8)
 
 ***
 
@@ -78,9 +66,7 @@
 
 > `readonly` `optional` **readPermission**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L9)
+Defined in: [src/ui/datagrid/irowdefinition.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L9)
 
 ***
 
@@ -88,6 +74,4 @@
 
 > `readonly` `optional` **updatePermission**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/irowdefinition.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L10)
+Defined in: [src/ui/datagrid/irowdefinition.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/irowdefinition.ts#L10)

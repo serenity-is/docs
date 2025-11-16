@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / DateEditorOptions
+[serenity-is/corelib](../README.md) / DateEditorOptions
 
 # Interface: DateEditorOptions
+
+Defined in: [src/ui/editors/dateeditor.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L7)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **maxValue**: `string`
 
-#### Defined in
-
-[src/ui/editors/dateeditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L11)
+Defined in: [src/ui/editors/dateeditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L10)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **minValue**: `string`
 
-#### Defined in
-
-[src/ui/editors/dateeditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L10)
+Defined in: [src/ui/editors/dateeditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L9)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **sqlMinMax**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/dateeditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L12)
+Defined in: [src/ui/editors/dateeditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L11)
 
 ***
 
@@ -38,6 +34,4 @@
 
 > `optional` **yearRange**: `string`
 
-#### Defined in
-
-[src/ui/editors/dateeditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L9)
+Defined in: [src/ui/editors/dateeditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/dateeditor.tsx#L8)

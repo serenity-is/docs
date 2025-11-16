@@ -1,15 +1,19 @@
-[@serenity-is/corelib](../README.md) / single
+[serenity-is/corelib](../README.md) / single
 
 # Function: single()
 
 > **single**\<`TItem`\>(`array`, `predicate`): `TItem`
+
+Defined in: [src/compat/arrays-compat.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L150)
 
 Gets first element in an array that matches given predicate.
 Throws an error if no matches is found, or there are multiple matches.
 
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Parameters
 
@@ -37,7 +41,3 @@ First element that matches.
 first([1, 2, 3], x => x == 2); // 2
 first([1, 2, 3], x => x == 4); // throws error.
 ```
-
-## Defined in
-
-[src/q/arrays-compat.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/arrays-compat.ts#L151)

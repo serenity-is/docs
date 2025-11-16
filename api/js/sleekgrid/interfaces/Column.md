@@ -1,10 +1,14 @@
-[@serenity-is/sleekgrid](../README.md) / Column
+[serenity-is/sleekgrid](../README.md) / Column
 
 # Interface: Column\<TItem\>
 
+Defined in: [src/core/column.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L6)
+
 ## Type Parameters
 
-• **TItem** = `any`
+### TItem
+
+`TItem` = `any`
 
 ## Properties
 
@@ -12,9 +16,7 @@
 
 > `optional` **asyncPostRender**: [`AsyncPostRender`](../type-aliases/AsyncPostRender.md)\<`TItem`\>
 
-#### Defined in
-
-[core/column.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L6)
+Defined in: [src/core/column.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L7)
 
 ***
 
@@ -22,9 +24,7 @@
 
 > `optional` **asyncPostRenderCleanup**: [`AsyncPostCleanup`](../type-aliases/AsyncPostCleanup.md)\<`TItem`\>
 
-#### Defined in
-
-[core/column.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L7)
+Defined in: [src/core/column.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L8)
 
 ***
 
@@ -32,9 +32,7 @@
 
 > `optional` **behavior**: `any`
 
-#### Defined in
-
-[core/column.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L8)
+Defined in: [src/core/column.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L9)
 
 ***
 
@@ -42,9 +40,7 @@
 
 > `optional` **cannotTriggerInsert**: `boolean`
 
-#### Defined in
-
-[core/column.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L9)
+Defined in: [src/core/column.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L10)
 
 ***
 
@@ -52,9 +48,7 @@
 
 > `optional` **cssClass**: `string`
 
-#### Defined in
-
-[core/column.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L10)
+Defined in: [src/core/column.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L11)
 
 ***
 
@@ -62,9 +56,7 @@
 
 > `optional` **defaultSortAsc**: `boolean`
 
-#### Defined in
-
-[core/column.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L11)
+Defined in: [src/core/column.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L12)
 
 ***
 
@@ -72,9 +64,7 @@
 
 > `optional` **editor**: [`EditorClass`](EditorClass.md)
 
-#### Defined in
-
-[core/column.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L12)
+Defined in: [src/core/column.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L13)
 
 ***
 
@@ -82,9 +72,7 @@
 
 > `optional` **editorFixedDecimalPlaces**: `number`
 
-#### Defined in
-
-[core/column.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L13)
+Defined in: [src/core/column.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L14)
 
 ***
 
@@ -92,9 +80,7 @@
 
 > `optional` **field**: `string`
 
-#### Defined in
-
-[core/column.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L14)
+Defined in: [src/core/column.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L15)
 
 ***
 
@@ -102,9 +88,7 @@
 
 > `optional` **focusable**: `boolean`
 
-#### Defined in
-
-[core/column.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L16)
+Defined in: [src/core/column.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L17)
 
 ***
 
@@ -112,9 +96,7 @@
 
 > `optional` **footerCssClass**: `string`
 
-#### Defined in
-
-[core/column.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L17)
+Defined in: [src/core/column.ts:18](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L18)
 
 ***
 
@@ -122,47 +104,67 @@
 
 > `optional` **format**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
-#### Defined in
-
-[core/column.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L18)
+Defined in: [src/core/column.ts:19](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L19)
 
 ***
 
-### ~~formatter?~~
+### formatter?
 
 > `optional` **formatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
 
-#### Deprecated
+Defined in: [src/core/column.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L21)
 
-#### Defined in
+@deprecated, use
 
-[core/column.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L20)
+#### See
+
+format
 
 ***
 
 ### frozen?
 
-> `optional` **frozen**: `boolean`
+> `optional` **frozen**: `boolean` \| `"end"` \| `"start"`
 
-#### Defined in
+Defined in: [src/core/column.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L16)
 
-[core/column.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L15)
+***
+
+### groupTotalsFormat()?
+
+> `optional` **groupTotalsFormat**: (`ctx`) => [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/core/column.ts:22](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L22)
+
+#### Parameters
+
+##### ctx
+
+[`FormatterContext`](FormatterContext.md)\<[`IGroupTotals`](IGroupTotals.md)\<`TItem`\>\>
+
+#### Returns
+
+[`FormatterResult`](../type-aliases/FormatterResult.md)
 
 ***
 
 ### groupTotalsFormatter()?
 
-> `optional` **groupTotalsFormatter**: (`p1`?, `p2`?, `grid`?) => `string`
+> `optional` **groupTotalsFormatter**: (`totals?`, `column?`, `grid?`) => `string`
+
+Defined in: [src/core/column.ts:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L24)
+
+@deprecated, use
 
 #### Parameters
 
-##### p1?
+##### totals?
 
-[`GroupTotals`](../classes/GroupTotals.md)\<`TItem`\>
+[`IGroupTotals`](IGroupTotals.md)\<`TItem`\>
 
-##### p2?
+##### column?
 
-[`Column`](Column.md)\<`TItem`\>
+`Column`\<`TItem`\>
 
 ##### grid?
 
@@ -172,9 +174,9 @@
 
 `string`
 
-#### Defined in
+#### See
 
-[core/column.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L21)
+groupTotalsFormat
 
 ***
 
@@ -182,9 +184,7 @@
 
 > `optional` **headerCssClass**: `string`
 
-#### Defined in
-
-[core/column.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L22)
+Defined in: [src/core/column.ts:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L25)
 
 ***
 
@@ -192,9 +192,7 @@
 
 > `optional` **id**: `string`
 
-#### Defined in
-
-[core/column.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L23)
+Defined in: [src/core/column.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L26)
 
 ***
 
@@ -202,9 +200,7 @@
 
 > `optional` **maxWidth**: `any`
 
-#### Defined in
-
-[core/column.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L24)
+Defined in: [src/core/column.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L27)
 
 ***
 
@@ -212,9 +208,7 @@
 
 > `optional` **minWidth**: `number`
 
-#### Defined in
-
-[core/column.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L25)
+Defined in: [src/core/column.ts:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L28)
 
 ***
 
@@ -222,19 +216,25 @@
 
 > `optional` **name**: `string`
 
-#### Defined in
-
-[core/column.ts:26](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L26)
+Defined in: [src/core/column.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L29)
 
 ***
 
-### nameIsHtml?
+### nameFormat()?
 
-> `optional` **nameIsHtml**: `boolean`
+> `optional` **nameFormat**: (`ctx`) => [`FormatterResult`](../type-aliases/FormatterResult.md)
 
-#### Defined in
+Defined in: [src/core/column.ts:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L30)
 
-[core/column.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L27)
+#### Parameters
+
+##### ctx
+
+[`FormatterContext`](FormatterContext.md)\<`TItem`\>
+
+#### Returns
+
+[`FormatterResult`](../type-aliases/FormatterResult.md)
 
 ***
 
@@ -242,9 +242,7 @@
 
 > `optional` **previousWidth**: `number`
 
-#### Defined in
-
-[core/column.ts:28](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L28)
+Defined in: [src/core/column.ts:31](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L31)
 
 ***
 
@@ -252,9 +250,7 @@
 
 > `optional` **referencedFields**: `string`[]
 
-#### Defined in
-
-[core/column.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L29)
+Defined in: [src/core/column.ts:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L32)
 
 ***
 
@@ -262,9 +258,7 @@
 
 > `optional` **rerenderOnResize**: `boolean`
 
-#### Defined in
-
-[core/column.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L30)
+Defined in: [src/core/column.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L33)
 
 ***
 
@@ -272,9 +266,7 @@
 
 > `optional` **resizable**: `boolean`
 
-#### Defined in
-
-[core/column.ts:31](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L31)
+Defined in: [src/core/column.ts:34](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L34)
 
 ***
 
@@ -282,9 +274,7 @@
 
 > `optional` **selectable**: `boolean`
 
-#### Defined in
-
-[core/column.ts:32](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L32)
+Defined in: [src/core/column.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L35)
 
 ***
 
@@ -292,9 +282,7 @@
 
 > `optional` **sortable**: `boolean`
 
-#### Defined in
-
-[core/column.ts:33](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L33)
+Defined in: [src/core/column.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L36)
 
 ***
 
@@ -302,9 +290,7 @@
 
 > `optional` **sortOrder**: `number`
 
-#### Defined in
-
-[core/column.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L34)
+Defined in: [src/core/column.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L37)
 
 ***
 
@@ -312,15 +298,15 @@
 
 > `optional` **toolTip**: `string`
 
-#### Defined in
-
-[core/column.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L35)
+Defined in: [src/core/column.ts:38](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L38)
 
 ***
 
 ### validator()?
 
-> `optional` **validator**: (`value`, `editorArgs`?) => [`ValidationResult`](ValidationResult.md)
+> `optional` **validator**: (`value`, `editorArgs?`) => [`ValidationResult`](ValidationResult.md)
+
+Defined in: [src/core/column.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L39)
 
 #### Parameters
 
@@ -336,19 +322,13 @@
 
 [`ValidationResult`](ValidationResult.md)
 
-#### Defined in
-
-[core/column.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L36)
-
 ***
 
 ### visible?
 
 > `optional` **visible**: `boolean`
 
-#### Defined in
-
-[core/column.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L37)
+Defined in: [src/core/column.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L40)
 
 ***
 
@@ -356,6 +336,4 @@
 
 > `optional` **width**: `number`
 
-#### Defined in
-
-[core/column.ts:38](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L38)
+Defined in: [src/core/column.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L41)

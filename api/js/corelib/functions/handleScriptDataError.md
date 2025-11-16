@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / handleScriptDataError
+[serenity-is/corelib](../README.md) / handleScriptDataError
 
 # Function: handleScriptDataError()
 
-> **handleScriptDataError**(`name`, `status`?, `statusText`?, `shouldThrow`?): `string`
+> **handleScriptDataError**(`name`, `status?`, `statusText?`, `shouldThrow?`): `string`
+
+Defined in: [src/base/scriptdata.ts:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L251)
 
 Shows a suitable error message for errors occured during loading of
 a dynamic script data.
@@ -34,7 +36,3 @@ HTTP status text returned if available
 ## Returns
 
 `string`
-
-## Defined in
-
-[src/base/scriptdata.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L190)

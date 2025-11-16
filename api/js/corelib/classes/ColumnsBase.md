@@ -1,16 +1,22 @@
-[@serenity-is/corelib](../README.md) / ColumnsBase
+[serenity-is/corelib](../README.md) / ColumnsBase
 
 # Class: ColumnsBase\<TRow\>
 
+Defined in: [src/ui/helpers/columnsbase.tsx:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/columnsbase.tsx#L3)
+
 ## Type Parameters
 
-• **TRow** = `any`
+### TRow
+
+`TRow` = `any`
 
 ## Constructors
 
-### new ColumnsBase()
+### Constructor
 
-> **new ColumnsBase**\<`TRow`\>(`items`): [`ColumnsBase`](ColumnsBase.md)\<`TRow`\>
+> **new ColumnsBase**\<`TRow`\>(`items`): `ColumnsBase`\<`TRow`\>
+
+Defined in: [src/ui/helpers/columnsbase.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/columnsbase.tsx#L6)
 
 #### Parameters
 
@@ -20,11 +26,7 @@
 
 #### Returns
 
-[`ColumnsBase`](ColumnsBase.md)\<`TRow`\>
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:849](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L849)
+`ColumnsBase`\<`TRow`\>
 
 ## Methods
 
@@ -32,10 +34,8 @@
 
 > **valueOf**(): `Column`\<`TRow`\>[]
 
+Defined in: [src/ui/helpers/columnsbase.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/columnsbase.tsx#L26)
+
 #### Returns
 
 `Column`\<`TRow`\>[]
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:868](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L868)

@@ -1,13 +1,15 @@
-[@serenity-is/corelib](../README.md) / EditorTypeInfo
+[serenity-is/corelib](../README.md) / EditorTypeInfo
 
-# Type Alias: EditorTypeInfo\<T\>
+# Type Alias: EditorTypeInfo\<TypeName\>
 
-> **EditorTypeInfo**\<`T`\>: [`TypeInfo`](TypeInfo.md)\<`T`\>
+> **EditorTypeInfo**\<`TypeName`\> = [`TypeInfo`](TypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/base/system.ts:545](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L545)
+
+Editor type information. This is used to make type name available in declaration files unlike decorators that does not show in .d.ts files.
 
 ## Type Parameters
 
-• **T**
+### TypeName
 
-## Defined in
-
-[src/base/system.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L281)
+`TypeName`

@@ -1,17 +1,21 @@
-[@serenity-is/sleekgrid](../README.md) / RowSelectionModel
+[serenity-is/sleekgrid](../README.md) / RowSelectionModel
 
 # Class: RowSelectionModel
 
+Defined in: [src/plugins/rowselectionmodel.ts:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L28)
+
 ## Implements
 
-- [`IPlugin`](../interfaces/IPlugin.md)
+- [`GridPlugin`](../interfaces/GridPlugin.md)
 - [`SelectionModel`](../interfaces/SelectionModel.md)
 
 ## Constructors
 
-### new RowSelectionModel()
+### Constructor
 
-> **new RowSelectionModel**(`options`?): [`RowSelectionModel`](RowSelectionModel.md)
+> **new RowSelectionModel**(`options?`): `RowSelectionModel`
+
+Defined in: [src/plugins/rowselectionmodel.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L35)
 
 #### Parameters
 
@@ -21,25 +25,19 @@
 
 #### Returns
 
-[`RowSelectionModel`](RowSelectionModel.md)
-
-#### Defined in
-
-[plugins/rowselectionmodel.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L36)
+`RowSelectionModel`
 
 ## Properties
 
 ### onSelectedRangesChanged
 
-> **onSelectedRangesChanged**: [`EventEmitter`](EventEmitter.md)\<[`CellRange`](CellRange.md)[], [`IEventData`](../interfaces/IEventData.md)\>
+> **onSelectedRangesChanged**: [`EventEmitter`](EventEmitter.md)\<[`CellRange`](CellRange.md)[], \{ \}\>
+
+Defined in: [src/plugins/rowselectionmodel.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L33)
 
 #### Implementation of
 
 [`SelectionModel`](../interfaces/SelectionModel.md).[`onSelectedRangesChanged`](../interfaces/SelectionModel.md#onselectedrangeschanged)
-
-#### Defined in
-
-[plugins/rowselectionmodel.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L34)
 
 ***
 
@@ -47,15 +45,15 @@
 
 > `readonly` `static` **defaults**: [`RowSelectionModelOptions`](../interfaces/RowSelectionModelOptions.md)
 
-#### Defined in
-
-[plugins/rowselectionmodel.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L40)
+Defined in: [src/plugins/rowselectionmodel.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L39)
 
 ## Methods
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: [src/plugins/rowselectionmodel.ts:50](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L50)
 
 #### Returns
 
@@ -65,23 +63,17 @@
 
 [`SelectionModel`](../interfaces/SelectionModel.md).[`destroy`](../interfaces/SelectionModel.md#destroy)
 
-#### Defined in
-
-[plugins/rowselectionmodel.ts:51](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L51)
-
 ***
 
 ### getSelectedRanges()
 
 > **getSelectedRanges**(): [`CellRange`](CellRange.md)[]
 
+Defined in: [src/plugins/rowselectionmodel.ts:90](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L90)
+
 #### Returns
 
 [`CellRange`](CellRange.md)[]
-
-#### Defined in
-
-[plugins/rowselectionmodel.ts:91](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L91)
 
 ***
 
@@ -89,13 +81,11 @@
 
 > **getSelectedRows**(): `number`[]
 
+Defined in: [src/plugins/rowselectionmodel.ts:74](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L74)
+
 #### Returns
 
 `number`[]
-
-#### Defined in
-
-[plugins/rowselectionmodel.ts:75](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L75)
 
 ***
 
@@ -103,11 +93,13 @@
 
 > **init**(`grid`): `void`
 
+Defined in: [src/plugins/rowselectionmodel.ts:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L43)
+
 #### Parameters
 
 ##### grid
 
-[`Grid`](Grid.md)\<`any`\>
+[`ISleekGrid`](../interfaces/ISleekGrid.md)
 
 #### Returns
 
@@ -117,15 +109,13 @@
 
 [`SelectionModel`](../interfaces/SelectionModel.md).[`init`](../interfaces/SelectionModel.md#init)
 
-#### Defined in
-
-[plugins/rowselectionmodel.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L44)
-
 ***
 
 ### setSelectedRanges()
 
 > **setSelectedRanges**(`ranges`): `void`
+
+Defined in: [src/plugins/rowselectionmodel.ts:82](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L82)
 
 #### Parameters
 
@@ -141,15 +131,13 @@
 
 [`SelectionModel`](../interfaces/SelectionModel.md).[`setSelectedRanges`](../interfaces/SelectionModel.md#setselectedranges)
 
-#### Defined in
-
-[plugins/rowselectionmodel.ts:83](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L83)
-
 ***
 
 ### setSelectedRows()
 
 > **setSelectedRows**(`rows`): `void`
+
+Defined in: [src/plugins/rowselectionmodel.ts:78](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L78)
 
 #### Parameters
 
@@ -160,7 +148,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[plugins/rowselectionmodel.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowselectionmodel.ts#L79)

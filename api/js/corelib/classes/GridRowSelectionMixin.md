@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / GridRowSelectionMixin
+[serenity-is/corelib](../README.md) / GridRowSelectionMixin
 
 # Class: GridRowSelectionMixin
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L12)
+
 ## Constructors
 
-### new GridRowSelectionMixin()
+### Constructor
 
-> **new GridRowSelectionMixin**(`grid`, `options`?): [`GridRowSelectionMixin`](GridRowSelectionMixin.md)
+> **new GridRowSelectionMixin**(`grid`, `options?`): `GridRowSelectionMixin`
+
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L21)
 
 #### Parameters
 
@@ -20,11 +24,15 @@
 
 #### Returns
 
-[`GridRowSelectionMixin`](GridRowSelectionMixin.md)
+`GridRowSelectionMixin`
 
-#### Defined in
+## Properties
 
-[src/ui/helpers/slickhelpers.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L27)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L14)
 
 ## Methods
 
@@ -32,13 +40,23 @@
 
 > **clear**(): `void`
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L103)
+
 #### Returns
 
 `void`
 
-#### Defined in
+***
 
-[src/ui/helpers/slickhelpers.tsx:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L94)
+### destroy()
+
+> **destroy**(): `void`
+
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L33)
+
+#### Returns
+
+`void`
 
 ***
 
@@ -46,13 +64,11 @@
 
 > **getSelectedAsInt32**(): `number`[]
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L126)
+
 #### Returns
 
 `number`[]
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L117)
 
 ***
 
@@ -60,13 +76,11 @@
 
 > **getSelectedAsInt64**(): `number`[]
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L132)
+
 #### Returns
 
 `number`[]
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L123)
 
 ***
 
@@ -74,13 +88,11 @@
 
 > **getSelectedKeys**(): `string`[]
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L122)
+
 #### Returns
 
 `string`[]
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L113)
 
 ***
 
@@ -88,13 +100,11 @@
 
 > **resetCheckedAndRefresh**(): `void`
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L108)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L99)
 
 ***
 
@@ -102,6 +112,8 @@
 
 > **selectKeys**(`keys`): `void`
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L114)
+
 #### Parameters
 
 ##### keys
@@ -111,10 +123,6 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L105)
 
 ***
 
@@ -122,6 +130,8 @@
 
 > **setSelectedKeys**(`keys`): `void`
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L138)
+
 #### Parameters
 
 ##### keys
@@ -132,40 +142,36 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L129)
-
 ***
 
 ### updateSelectAll()
 
 > **updateSelectAll**(): `void`
 
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L90)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L81)
 
 ***
 
 ### createSelectColumn()
 
-> `static` **createSelectColumn**(`getMixin`): `Column`\<`any`\>
+> `static` **createSelectColumn**(`getMixin`, `columnOptions?`): `Column`
+
+Defined in: [src/ui/helpers/gridrowselectionmixin.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridrowselectionmixin.tsx#L153)
 
 #### Parameters
 
 ##### getMixin
 
-() => [`GridRowSelectionMixin`](GridRowSelectionMixin.md)
+() => `GridRowSelectionMixin`
+
+##### columnOptions?
+
+`Partial`\<`Column`\>
 
 #### Returns
 
-`Column`\<`any`\>
-
-#### Defined in
-
-[src/ui/helpers/slickhelpers.tsx:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelpers.tsx#L144)
+`Column`

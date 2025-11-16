@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ArgsEditorDestroy
+[serenity-is/sleekgrid](../README.md) / ArgsEditorDestroy
 
 # Interface: ArgsEditorDestroy
+
+Defined in: [src/core/eventargs.ts:74](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L74)
 
 ## Extends
 
@@ -12,20 +14,16 @@
 
 > **editor**: [`Editor`](Editor.md)
 
-#### Defined in
-
-[grid/eventargs.ts:64](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L64)
+Defined in: [src/core/eventargs.ts:75](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L75)
 
 ***
 
-### grid?
+### grid
 
-> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> **grid**: [`ISleekGrid`](ISleekGrid.md)
+
+Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
 
 #### Inherited from
 
 [`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
-
-#### Defined in
-
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)

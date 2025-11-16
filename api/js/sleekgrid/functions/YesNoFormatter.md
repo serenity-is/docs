@@ -1,19 +1,17 @@
-[@serenity-is/sleekgrid](../README.md) / YesNoFormatter
+[serenity-is/sleekgrid](../README.md) / YesNoFormatter
 
 # Function: YesNoFormatter()
 
-> **YesNoFormatter**(`ctx`): `"Yes"` \| `"No"`
+> **YesNoFormatter**(`ctx`): [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/formatters/formatters.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/formatters/formatters.ts#L36)
 
 ## Parameters
 
 ### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ## Returns
 
-`"Yes"` \| `"No"`
-
-## Defined in
-
-[formatters/formatters.ts:27](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L27)
+[`FormatterResult`](../type-aliases/FormatterResult.md)

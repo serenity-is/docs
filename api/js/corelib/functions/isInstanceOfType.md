@@ -1,8 +1,12 @@
-[@serenity-is/corelib](../README.md) / isInstanceOfType
+[serenity-is/corelib](../README.md) / isInstanceOfType
 
 # Function: isInstanceOfType()
 
 > **isInstanceOfType**(`instance`, `type`): `any`
+
+Defined in: [src/base/system.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L150)
+
+Check if an instance is of a specific type.
 
 ## Parameters
 
@@ -10,14 +14,16 @@
 
 `any`
 
+Object to check
+
 ### type
 
 [`Type`](../type-aliases/Type.md)
+
+Type to check against
 
 ## Returns
 
 `any`
 
-## Defined in
-
-[src/base/system.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L81)
+true if instance is of type

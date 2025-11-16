@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / Select2AjaxOptions
+[serenity-is/corelib](../README.md) / Select2AjaxOptions
 
 # Interface: Select2AjaxOptions
+
+Defined in: [src/ui/editors/select2.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L37)
 
 ## Extends
 
@@ -11,6 +13,8 @@
 ### data()?
 
 > `optional` **data**: (`p1`, `p2`, `p3`) => `any`
+
+Defined in: [src/ui/editors/select2.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L41)
 
 #### Parameters
 
@@ -30,15 +34,13 @@
 
 `any`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L40)
-
 ***
 
 ### headers?
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
+
+Defined in: [src/ui/editors/select2.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L38)
 
 A Headers object, an object literal, or an array of two-item arrays to set request's headers.
 
@@ -46,19 +48,13 @@ A Headers object, an object literal, or an array of two-item arrays to set reque
 
 `RequestInit.headers`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L37)
-
 ***
 
 ### params?
 
 > `optional` **params**: `any`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L42)
+Defined in: [src/ui/editors/select2.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L43)
 
 ***
 
@@ -66,15 +62,15 @@ A Headers object, an object literal, or an array of two-item arrays to set reque
 
 > `optional` **quietMillis**: `number`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L39)
+Defined in: [src/ui/editors/select2.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L40)
 
 ***
 
 ### results()?
 
 > `optional` **results**: (`p1`, `p2`, `p3`) => `any`
+
+Defined in: [src/ui/editors/select2.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L42)
 
 #### Parameters
 
@@ -94,25 +90,21 @@ A Headers object, an object literal, or an array of two-item arrays to set reque
 
 `any`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L41)
-
 ***
 
 ### url?
 
 > `optional` **url**: `string` \| (`term`, `page`, `context`) => `string`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L38)
+Defined in: [src/ui/editors/select2.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L39)
 
 ## Methods
 
 ### onError()?
 
-> `optional` **onError**(`response`, `info`?): `boolean` \| `void`
+> `optional` **onError**(`response`, `info?`): `boolean` \| `void`
+
+Defined in: [src/ui/editors/select2.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L44)
 
 #### Parameters
 
@@ -128,15 +120,13 @@ A Headers object, an object literal, or an array of two-item arrays to set reque
 
 `boolean` \| `void`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L43)
-
 ***
 
 ### onSuccess()?
 
 > `optional` **onSuccess**(`response`): `void`
+
+Defined in: [src/ui/editors/select2.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L45)
 
 #### Parameters
 
@@ -147,7 +137,3 @@ A Headers object, an object literal, or an array of two-item arrays to set reque
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L44)

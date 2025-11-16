@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / yesDialogButton
+[serenity-is/corelib](../README.md) / yesDialogButton
 
 # Function: yesDialogButton()
 
-> **yesDialogButton**(`opt`?): [`DialogButton`](../interfaces/DialogButton.md)
+> **yesDialogButton**(`opt?`): [`DialogButton`](../interfaces/DialogButton.md)
+
+Defined in: [src/base/dialogs.tsx:660](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L660)
 
 Creates a dialog button which, by default, has "Yes" as the caption (localized) and "yes" as the result.
 
@@ -19,7 +21,3 @@ Optional configuration for the dialog button.
 [`DialogButton`](../interfaces/DialogButton.md)
 
 The dialog button with the specified configuration.
-
-## Defined in
-
-[src/base/dialogs.tsx:659](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L659)

@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / layoutFillHeightValue
+[serenity-is/corelib](../README.md) / layoutFillHeightValue
 
 # Function: layoutFillHeightValue()
 
 > **layoutFillHeightValue**(`element`): `number`
+
+Defined in: [src/compat/layout.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L98)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `number`
-
-## Defined in
-
-[src/q/layout.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L97)

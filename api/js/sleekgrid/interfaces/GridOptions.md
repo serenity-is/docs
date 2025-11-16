@@ -1,12 +1,16 @@
-[@serenity-is/sleekgrid](../README.md) / GridOptions
+[serenity-is/sleekgrid](../README.md) / GridOptions
 
 # Interface: GridOptions\<TItem\>
+
+Defined in: [src/core/gridoptions.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L13)
 
 Configuration options for the SleekGrid component.
 
 ## Type Parameters
 
-• **TItem** = `any`
+### TItem
+
+`TItem` = `any`
 
 The type of items in the grid.
 
@@ -16,11 +20,9 @@ The type of items in the grid.
 
 > `optional` **addNewRowCssClass**: `string`
 
+Defined in: [src/core/gridoptions.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L17)
+
 CSS class applied to newly added rows for custom styling. Default is `"new-row"`.
-
-#### Defined in
-
-[grid/gridoptions.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L14)
 
 ***
 
@@ -28,11 +30,9 @@ CSS class applied to newly added rows for custom styling. Default is `"new-row"`
 
 > `optional` **alwaysAllowHorizontalScroll**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:22](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L22)
+
 Defaults to `false`. If `true`, a horizontal scrollbar is always visible regardless of content width.
-
-#### Defined in
-
-[grid/gridoptions.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L19)
 
 ***
 
@@ -40,11 +40,9 @@ Defaults to `false`. If `true`, a horizontal scrollbar is always visible regardl
 
 > `optional` **alwaysShowVerticalScroll**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L27)
+
 Defaults to `false`. If `true`, a vertical scrollbar is always visible, useful for fixed-height grids or menus.
-
-#### Defined in
-
-[grid/gridoptions.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L24)
 
 ***
 
@@ -52,11 +50,9 @@ Defaults to `false`. If `true`, a vertical scrollbar is always visible, useful f
 
 > `optional` **asyncEditorLoadDelay**: `number`
 
+Defined in: [src/core/gridoptions.ts:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L32)
+
 Defaults to `100`. Delay in milliseconds before asynchronous loading of editors.
-
-#### Defined in
-
-[grid/gridoptions.ts:29](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L29)
 
 ***
 
@@ -64,11 +60,9 @@ Defaults to `100`. Delay in milliseconds before asynchronous loading of editors.
 
 > `optional` **asyncEditorLoading**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L37)
+
 Defaults to `false`. If `true`, editors are loaded asynchronously, reducing initial rendering load.
-
-#### Defined in
-
-[grid/gridoptions.ts:34](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L34)
 
 ***
 
@@ -76,11 +70,9 @@ Defaults to `false`. If `true`, editors are loaded asynchronously, reducing init
 
 > `optional` **asyncPostCleanupDelay**: `number`
 
+Defined in: [src/core/gridoptions.ts:42](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L42)
+
 Defaults to `40`. Delay in milliseconds before cleaning up post-rendered elements.
-
-#### Defined in
-
-[grid/gridoptions.ts:39](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L39)
 
 ***
 
@@ -88,11 +80,9 @@ Defaults to `40`. Delay in milliseconds before cleaning up post-rendered element
 
 > `optional` **asyncPostRenderDelay**: `number`
 
+Defined in: [src/core/gridoptions.ts:47](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L47)
+
 Defaults to `-1` which means immediate execution. Delay in milliseconds before starting asynchronous post-rendering.
-
-#### Defined in
-
-[grid/gridoptions.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L44)
 
 ***
 
@@ -100,11 +90,9 @@ Defaults to `-1` which means immediate execution. Delay in milliseconds before s
 
 > `optional` **autoEdit**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:52](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L52)
+
 Defaults to `true`. If `true`, automatically opens the cell editor when a cell gains focus.
-
-#### Defined in
-
-[grid/gridoptions.ts:49](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L49)
 
 ***
 
@@ -112,11 +100,9 @@ Defaults to `true`. If `true`, automatically opens the cell editor when a cell g
 
 > `optional` **autoHeight**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L57)
+
 Defaults to `false`. If `true`, automatically adjusts the grid's height to fit the entire content without scrolling.
-
-#### Defined in
-
-[grid/gridoptions.ts:54](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L54)
 
 ***
 
@@ -124,11 +110,9 @@ Defaults to `false`. If `true`, automatically adjusts the grid's height to fit t
 
 > `optional` **cellFlashingCssClass**: `string`
 
+Defined in: [src/core/gridoptions.ts:62](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L62)
+
 CSS class applied to cells with a flashing effect. Default is `"flashing"`.
-
-#### Defined in
-
-[grid/gridoptions.ts:59](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L59)
 
 ***
 
@@ -136,29 +120,29 @@ CSS class applied to cells with a flashing effect. Default is `"flashing"`.
 
 > `optional` **columns**: [`Column`](Column.md)\<`TItem`\>[]
 
+Defined in: [src/core/gridoptions.ts:72](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L72)
+
 Array of column definitions for the grid.
-
-#### Defined in
-
-[grid/gridoptions.ts:69](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L69)
 
 ***
 
-### createPreHeaderPanel?
+### ~~createPreHeaderPanel?~~
 
 > `optional` **createPreHeaderPanel**: `boolean`
 
-Defaults to `false`. If `true`, creates an extra pre-header panel for column grouping.
+Defined in: [src/core/gridoptions.ts:77](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L77)
 
-#### Defined in
+#### Deprecated
 
-[grid/gridoptions.ts:74](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L74)
+Use showGroupingPanel option instead.
 
 ***
 
 ### dataItemColumnValueExtractor()?
 
 > `optional` **dataItemColumnValueExtractor**: (`item`, `column`) => `void`
+
+Defined in: [src/core/gridoptions.ts:82](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L82)
 
 Function to extract column values from data items, used for custom copy buffer operations. Default is `null`.
 
@@ -176,21 +160,15 @@ Function to extract column values from data items, used for custom copy buffer o
 
 `void`
 
-#### Defined in
-
-[grid/gridoptions.ts:79](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L79)
-
 ***
 
 ### defaultColumnWidth?
 
 > `optional` **defaultColumnWidth**: `number`
 
+Defined in: [src/core/gridoptions.ts:87](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L87)
+
 Defaults to `80`. Default width of columns in pixels.
-
-#### Defined in
-
-[grid/gridoptions.ts:84](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L84)
 
 ***
 
@@ -198,11 +176,9 @@ Defaults to `80`. Default width of columns in pixels.
 
 > `optional` **defaultFormat**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
+Defined in: [src/core/gridoptions.ts:92](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L92)
+
 Default formatting options for columns. Default is `defaultColumnFormat`.
-
-#### Defined in
-
-[grid/gridoptions.ts:89](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L89)
 
 ***
 
@@ -210,11 +186,9 @@ Default formatting options for columns. Default is `defaultColumnFormat`.
 
 > `optional` **defaultFormatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
 
+Defined in: [src/core/gridoptions.ts:97](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L97)
+
 Default formatter function for cells.
-
-#### Defined in
-
-[grid/gridoptions.ts:94](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L94)
 
 ***
 
@@ -222,17 +196,17 @@ Default formatter function for cells.
 
 > `optional` **editable**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:102](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L102)
+
 Defaults to `false`. If `true`, cells can be edited inline.
-
-#### Defined in
-
-[grid/gridoptions.ts:99](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L99)
 
 ***
 
 ### editCommandHandler()?
 
 > `optional` **editCommandHandler**: (`item`, `column`, `command`) => `void`
+
+Defined in: [src/core/gridoptions.ts:107](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L107)
 
 Function to handle edit commands, useful for implementing custom undo support. Default is `null`.
 
@@ -254,21 +228,15 @@ Function to handle edit commands, useful for implementing custom undo support. D
 
 `void`
 
-#### Defined in
-
-[grid/gridoptions.ts:104](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L104)
-
 ***
 
 ### editorCellNavOnLRKeys?
 
 > `optional` **editorCellNavOnLRKeys**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:112](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L112)
+
 Defaults to `false`. If `true`, enables navigation between cells using left and right arrow keys within the editor.
-
-#### Defined in
-
-[grid/gridoptions.ts:109](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L109)
 
 ***
 
@@ -276,11 +244,9 @@ Defaults to `false`. If `true`, enables navigation between cells using left and 
 
 > `optional` **editorFactory**: [`EditorFactory`](EditorFactory.md)
 
+Defined in: [src/core/gridoptions.ts:117](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L117)
+
 Factory function for creating custom editors. Default is `null`.
-
-#### Defined in
-
-[grid/gridoptions.ts:114](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L114)
 
 ***
 
@@ -288,17 +254,17 @@ Factory function for creating custom editors. Default is `null`.
 
 > `optional` **editorLock**: [`EditorLock`](../classes/EditorLock.md)
 
+Defined in: [src/core/gridoptions.ts:122](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L122)
+
 Global editor lock instance, used for managing concurrent editor access. Default is `GlobalEditorLock`.
-
-#### Defined in
-
-[grid/gridoptions.ts:119](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L119)
 
 ***
 
 ### emptyNode()?
 
 > `optional` **emptyNode**: (`node`) => `void`
+
+Defined in: [src/core/gridoptions.ts:67](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L67)
 
 Function to handle clearing a DOM node, used for custom cleanup logic. Default is `null`.
 
@@ -312,21 +278,15 @@ Function to handle clearing a DOM node, used for custom cleanup logic. Default i
 
 `void`
 
-#### Defined in
-
-[grid/gridoptions.ts:64](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L64)
-
 ***
 
 ### enableAddRow?
 
 > `optional` **enableAddRow**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:127](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L127)
+
 Defaults to `false`. If `true`, enables the ability to add new rows to the grid.
-
-#### Defined in
-
-[grid/gridoptions.ts:124](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L124)
 
 ***
 
@@ -334,11 +294,9 @@ Defaults to `false`. If `true`, enables the ability to add new rows to the grid.
 
 > `optional` **enableAsyncPostRender**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:132](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L132)
+
 Defaults to `false`. If `true`, enables asynchronous post-rendering.
-
-#### Defined in
-
-[grid/gridoptions.ts:129](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L129)
 
 ***
 
@@ -346,11 +304,9 @@ Defaults to `false`. If `true`, enables asynchronous post-rendering.
 
 > `optional` **enableAsyncPostRenderCleanup**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:137](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L137)
+
 Defaults to `false`. If `true`, enables cleanup after asynchronous post-rendering.
-
-#### Defined in
-
-[grid/gridoptions.ts:134](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L134)
 
 ***
 
@@ -358,11 +314,9 @@ Defaults to `false`. If `true`, enables cleanup after asynchronous post-renderin
 
 > `optional` **enableCellNavigation**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:142](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L142)
+
 Defaults to `true`. If `true`, enables cell navigation with arrow keys.
-
-#### Defined in
-
-[grid/gridoptions.ts:139](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L139)
 
 ***
 
@@ -370,11 +324,9 @@ Defaults to `true`. If `true`, enables cell navigation with arrow keys.
 
 > `optional` **enableCellRangeSelection**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:147](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L147)
+
 Defaults to `false`. If `true`, allows selection of cell ranges.
-
-#### Defined in
-
-[grid/gridoptions.ts:144](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L144)
 
 ***
 
@@ -382,11 +334,20 @@ Defaults to `false`. If `true`, allows selection of cell ranges.
 
 > `optional` **enableColumnReorder**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:152](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L152)
+
 Defaults to `true`. If `true`, enables column reordering.
 
-#### Defined in
+***
 
-[grid/gridoptions.ts:149](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L149)
+### enableHtmlRendering?
+
+> `optional` **enableHtmlRendering**: `boolean`
+
+Defined in: [src/core/gridoptions.ts:158](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L158)
+
+Allow returning raw HTML strings from formatters and use `innerHTML` to render them. Defaults to `false` for tighter security.
+It is recommended to leave this as `false` for better security and to avoid XSS vulnerabilities. In that case, formatters should return plain text or DOM elements.
 
 ***
 
@@ -394,11 +355,9 @@ Defaults to `true`. If `true`, enables column reordering.
 
 > `optional` **enableRowReordering**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:163](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L163)
+
 Defaults to `false`. If `true`, enables row reordering.
-
-#### Defined in
-
-[grid/gridoptions.ts:154](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L154)
 
 ***
 
@@ -406,11 +365,9 @@ Defaults to `false`. If `true`, enables row reordering.
 
 > `optional` **enableTabKeyNavigation**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:168](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L168)
+
 Defaults to `true`. If `true`, enables navigation between cells using the Tab key.
-
-#### Defined in
-
-[grid/gridoptions.ts:159](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L159)
 
 ***
 
@@ -418,11 +375,9 @@ Defaults to `true`. If `true`, enables navigation between cells using the Tab ke
 
 > `optional` **enableTextSelectionOnCells**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:173](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L173)
+
 Defaults to `false`. If `true`, enables text selection within cells.
-
-#### Defined in
-
-[grid/gridoptions.ts:164](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L164)
 
 ***
 
@@ -430,11 +385,9 @@ Defaults to `false`. If `true`, enables text selection within cells.
 
 > `optional` **explicitInitialization**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:178](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L178)
+
 Defaults to `false`. If `true`, requires explicit initialization of the grid.
-
-#### Defined in
-
-[grid/gridoptions.ts:169](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L169)
 
 ***
 
@@ -442,11 +395,9 @@ Defaults to `false`. If `true`, requires explicit initialization of the grid.
 
 > `optional` **footerRowHeight**: `number`
 
-Defaults to `30`. Height of the footer row in pixels.
+Defined in: [src/core/gridoptions.ts:183](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L183)
 
-#### Defined in
-
-[grid/gridoptions.ts:174](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L174)
+Defaults to null which means the footer row height is calculated based on CSS rules.
 
 ***
 
@@ -454,11 +405,9 @@ Defaults to `30`. Height of the footer row in pixels.
 
 > `optional` **forceFitColumns**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:188](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L188)
+
 Defaults to `false`. If `true`, forces columns to fit the grid width.
-
-#### Defined in
-
-[grid/gridoptions.ts:179](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L179)
 
 ***
 
@@ -466,11 +415,9 @@ Defaults to `false`. If `true`, forces columns to fit the grid width.
 
 > `optional` **forceSyncScrolling**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:193](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L193)
+
 Defaults to `false`. If `true`, synchronizes scrolling between the grid and its container.
-
-#### Defined in
-
-[grid/gridoptions.ts:184](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L184)
 
 ***
 
@@ -478,35 +425,29 @@ Defaults to `false`. If `true`, synchronizes scrolling between the grid and its 
 
 > `optional` **forceSyncScrollInterval**: `number`
 
+Defined in: [src/core/gridoptions.ts:198](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L198)
+
 Defaults to `250`. Interval in milliseconds for synchronizing scrolling when `forceSyncScrolling` is enabled.
-
-#### Defined in
-
-[grid/gridoptions.ts:189](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L189)
 
 ***
 
 ### formatterFactory?
 
-> `optional` **formatterFactory**: [`FormatterFactory`](FormatterFactory.md)\<`any`\>
+> `optional` **formatterFactory**: [`FormatterFactory`](FormatterFactory.md)
+
+Defined in: [src/core/gridoptions.ts:203](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L203)
 
 Factory function for creating custom formatters. Default is `null`.
-
-#### Defined in
-
-[grid/gridoptions.ts:194](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L194)
 
 ***
 
 ### frozenBottom?
 
-> `optional` **frozenBottom**: `boolean`
+> `optional` **frozenBottom**: `number` \| `boolean`
+
+Defined in: [src/core/gridoptions.ts:208](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L208)
 
 Defaults to `false`. If `true`, places frozen rows at the bottom edge of the grid.
-
-#### Defined in
-
-[grid/gridoptions.ts:199](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L199)
 
 ***
 
@@ -514,12 +455,10 @@ Defaults to `false`. If `true`, places frozen rows at the bottom edge of the gri
 
 > `optional` **frozenColumns**: `number`
 
+Defined in: [src/core/gridoptions.ts:214](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L214)
+
 Defaults to `undefined`. If specified, freezes the given number of columns on the left edge of the grid.
 Prefer setting column.frozen = 'true' for individual columns as this is only for compatibility.
-
-#### Defined in
-
-[grid/gridoptions.ts:205](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L205)
 
 ***
 
@@ -527,12 +466,10 @@ Prefer setting column.frozen = 'true' for individual columns as this is only for
 
 > `optional` **frozenRows**: `number`
 
+Defined in: [src/core/gridoptions.ts:220](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L220)
+
 Defaults to `undefined`. If specified, freezes the given number of rows at the top or bottom
-edge of the grid based on `frozenBottom`.
-
-#### Defined in
-
-[grid/gridoptions.ts:211](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L211)
+edge (if frozenBottom === true).
 
 ***
 
@@ -540,11 +477,9 @@ edge of the grid based on `frozenBottom`.
 
 > `optional` **fullWidthRows**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:225](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L225)
+
 Defaults to `false`. If `true`, makes rows take the full width of the grid.
-
-#### Defined in
-
-[grid/gridoptions.ts:216](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L216)
 
 ***
 
@@ -552,11 +487,9 @@ Defaults to `false`. If `true`, makes rows take the full width of the grid.
 
 > `optional` **groupingPanel**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:230](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L230)
+
 Defaults to `false`. If `true`, shows the grouping panel for grouping columns.
-
-#### Defined in
-
-[grid/gridoptions.ts:221](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L221)
 
 ***
 
@@ -564,41 +497,61 @@ Defaults to `false`. If `true`, shows the grouping panel for grouping columns.
 
 > `optional` **groupingPanelHeight**: `number`
 
-Defaults to `30`. Height of the grouping panel in pixels.
+Defined in: [src/core/gridoptions.ts:235](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L235)
 
-#### Defined in
-
-[grid/gridoptions.ts:226](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L226)
+Defaults to null, e.g. calculated based on CSS. Height of the grouping panel in pixels.
 
 ***
 
-### groupTotalsFormatter()?
+### groupTotalsFormat()?
 
-> `optional` **groupTotalsFormatter**: (`p1`?, `p2`?, `grid`?) => `string`
+> `optional` **groupTotalsFormat**: (`ctx`) => [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/core/gridoptions.ts:240](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L240)
 
 Function to format group totals for display in the grouping panel.
 
 #### Parameters
 
-##### p1?
+##### ctx
 
-[`GroupTotals`](../classes/GroupTotals.md)\<`TItem`\>
+[`FormatterContext`](FormatterContext.md)\<[`IGroupTotals`](IGroupTotals.md)\<`TItem`\>\>
 
-##### p2?
+#### Returns
+
+[`FormatterResult`](../type-aliases/FormatterResult.md)
+
+***
+
+### ~~groupTotalsFormatter()?~~
+
+> `optional` **groupTotalsFormatter**: (`totals?`, `column?`, `grid?`) => `string`
+
+Defined in: [src/core/gridoptions.ts:246](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L246)
+
+Function to format group totals for display in the grouping panel.
+
+#### Parameters
+
+##### totals?
+
+[`IGroupTotals`](IGroupTotals.md)\<`TItem`\>
+
+##### column?
 
 [`Column`](Column.md)\<`TItem`\>
 
 ##### grid?
 
-`any`
+[`ISleekGrid`](ISleekGrid.md)
 
 #### Returns
 
 `string`
 
-#### Defined in
+#### Deprecated
 
-[grid/gridoptions.ts:231](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L231)
+Use `groupTotalsFormat` with `FormatterContext<IGroupTotals>` signature instead.
 
 ***
 
@@ -606,17 +559,17 @@ Function to format group totals for display in the grouping panel.
 
 > `optional` **headerRowHeight**: `number`
 
-Defaults to `30`. Height of the header row in pixels.
+Defined in: [src/core/gridoptions.ts:251](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L251)
 
-#### Defined in
-
-[grid/gridoptions.ts:236](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L236)
+Defaults to null, e.g. calculated based on CSS. Height of the header row in pixels.
 
 ***
 
 ### jQuery?
 
 > `optional` **jQuery**: `object`
+
+Defined in: [src/core/gridoptions.ts:256](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L256)
 
 jQuery object for compatibility or custom integration purposes. Default is `undefined` unless jQuery is available in the global object (e.g. window).
 
@@ -628,21 +581,15 @@ jQuery object for compatibility or custom integration purposes. Default is `unde
 
 > **ready**: `any`
 
-#### Defined in
-
-[grid/gridoptions.ts:241](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L241)
-
 ***
 
 ### layoutEngine?
 
-> `optional` **layoutEngine**: [`LayoutEngine`](LayoutEngine.md)
+> `optional` **layoutEngine**: [`LayoutEngine`](LayoutEngine.md) \| () => [`LayoutEngine`](LayoutEngine.md)
+
+Defined in: [src/core/gridoptions.ts:266](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L266)
 
 Layout engine for custom grid layouts. Default is `BasicLayout`. Use FrozenLayout to enable frozen columns / rows.
-
-#### Defined in
-
-[grid/gridoptions.ts:251](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L251)
 
 ***
 
@@ -650,11 +597,9 @@ Layout engine for custom grid layouts. Default is `BasicLayout`. Use FrozenLayou
 
 > `optional` **leaveSpaceForNewRows**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:261](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L261)
+
 Defaults to `false`. If `true`, leaves space for new rows in the DOM visible buffer.
-
-#### Defined in
-
-[grid/gridoptions.ts:246](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L246)
 
 ***
 
@@ -662,11 +607,9 @@ Defaults to `false`. If `true`, leaves space for new rows in the DOM visible buf
 
 > `optional` **minBuffer**: `number`
 
+Defined in: [src/core/gridoptions.ts:271](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L271)
+
 Defaults to `3`. Minimum number of rows to keep in the buffer.
-
-#### Defined in
-
-[grid/gridoptions.ts:256](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L256)
 
 ***
 
@@ -674,11 +617,9 @@ Defaults to `3`. Minimum number of rows to keep in the buffer.
 
 > `optional` **multiColumnSort**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:276](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L276)
+
 Defaults to `false`. If `true`, allows sorting by multiple columns simultaneously.
-
-#### Defined in
-
-[grid/gridoptions.ts:261](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L261)
 
 ***
 
@@ -686,29 +627,29 @@ Defaults to `false`. If `true`, allows sorting by multiple columns simultaneousl
 
 > `optional` **multiSelect**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:281](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L281)
+
 Defaults to `true`. If `true`, enables multiple cell selection.
-
-#### Defined in
-
-[grid/gridoptions.ts:266](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L266)
 
 ***
 
-### preHeaderPanelHeight?
+### ~~preHeaderPanelHeight?~~
 
 > `optional` **preHeaderPanelHeight**: `number`
 
-Sets grouping panel height. Default is `undefined`, e.g. it is set via CSS.
+Defined in: [src/core/gridoptions.ts:286](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L286)
 
-#### Defined in
+#### Deprecated
 
-[grid/gridoptions.ts:271](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L271)
+Use groupingPanelHeight option instead.
 
 ***
 
 ### removeNode()?
 
 > `optional` **removeNode**: (`node`) => `void`
+
+Defined in: [src/core/gridoptions.ts:304](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L304)
 
 Function to handle removing a DOM node, used for custom cleanup logic. Default is `null` or jQuery.remove if available.
 
@@ -722,21 +663,15 @@ Function to handle removing a DOM node, used for custom cleanup logic. Default i
 
 `void`
 
-#### Defined in
-
-[grid/gridoptions.ts:289](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L289)
-
 ***
 
 ### renderAllCells?
 
 > `optional` **renderAllCells**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:291](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L291)
+
 Defaults to `false`. If `true`, renders all cells (row columns) in the viewport, at the cost of higher memory usage and reduced performance.
-
-#### Defined in
-
-[grid/gridoptions.ts:276](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L276)
 
 ***
 
@@ -744,14 +679,12 @@ Defaults to `false`. If `true`, renders all cells (row columns) in the viewport,
 
 > `optional` **renderAllRows**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:299](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L299)
+
 Defaults to `false`. If `true`, renders all rows in the viewport, at the cost of higher memory usage and reduced performance.
 When both renderAllCells and renderAllRows are true, all cells in the grid are rendered (e.g. virtualization is disabled),
 which can be very slow for large datasets, but may be desired to keep all rows and cells in the DOM for accessibility purposes,
 proper tabbing and screen reader support.
-
-#### Defined in
-
-[grid/gridoptions.ts:284](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L284)
 
 ***
 
@@ -759,11 +692,9 @@ proper tabbing and screen reader support.
 
 > `optional` **rowHeight**: `number`
 
+Defined in: [src/core/gridoptions.ts:309](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L309)
+
 Defaults to `30`. Height of rows in pixels.
-
-#### Defined in
-
-[grid/gridoptions.ts:294](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L294)
 
 ***
 
@@ -771,11 +702,9 @@ Defaults to `30`. Height of rows in pixels.
 
 > `optional` **rtl**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:314](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L314)
+
 Default is based on document element's (`<html/>`) `dir` property.. If `true`, enables right-to-left text direction.
-
-#### Defined in
-
-[grid/gridoptions.ts:299](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L299)
 
 ***
 
@@ -783,8 +712,10 @@ Default is based on document element's (`<html/>`) `dir` property.. If `true`, e
 
 > `optional` **sanitizer**: (`dirtyHtml`) => `string`
 
+Defined in: [src/core/gridoptions.ts:320](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L320)
+
 Optional function for sanitizing HTML strings to avoid XSS attacks.
-Default is `DOMPurify.sanitize` if available globally, otherwise falls back to `basicRegexSanitizer`.
+Default is `DOMPurify.sanitize` if available globally, otherwise falls back to `basicDOMSanitizer`.
 
 #### Parameters
 
@@ -796,21 +727,15 @@ Default is `DOMPurify.sanitize` if available globally, otherwise falls back to `
 
 `string`
 
-#### Defined in
-
-[grid/gridoptions.ts:305](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L305)
-
 ***
 
 ### selectedCellCssClass?
 
 > `optional` **selectedCellCssClass**: `string`
 
+Defined in: [src/core/gridoptions.ts:325](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L325)
+
 CSS class applied to selected cells. Default is `"selected"`.
-
-#### Defined in
-
-[grid/gridoptions.ts:310](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L310)
 
 ***
 
@@ -818,11 +743,9 @@ CSS class applied to selected cells. Default is `"selected"`.
 
 > `optional` **showCellSelection**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:330](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L330)
+
 Defaults to `true`. If `true`, shows cell selection indicators.
-
-#### Defined in
-
-[grid/gridoptions.ts:315](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L315)
 
 ***
 
@@ -830,11 +753,9 @@ Defaults to `true`. If `true`, shows cell selection indicators.
 
 > `optional` **showColumnHeader**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:335](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L335)
+
 Defaults to `true`. If `true`, displays the column header.
-
-#### Defined in
-
-[grid/gridoptions.ts:320](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L320)
 
 ***
 
@@ -842,11 +763,9 @@ Defaults to `true`. If `true`, displays the column header.
 
 > `optional` **showFooterRow**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:340](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L340)
+
 Defaults to `false`. If `true`, displays the footer row.
-
-#### Defined in
-
-[grid/gridoptions.ts:325](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L325)
 
 ***
 
@@ -854,11 +773,9 @@ Defaults to `false`. If `true`, displays the footer row.
 
 > `optional` **showGroupingPanel**: `boolean`
 
-Defaults to `true`. If `true`, displays the grouping panel.
+Defined in: [src/core/gridoptions.ts:345](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L345)
 
-#### Defined in
-
-[grid/gridoptions.ts:330](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L330)
+Defaults to `false`. If `true`, displays the grouping panel.
 
 ***
 
@@ -866,23 +783,21 @@ Defaults to `true`. If `true`, displays the grouping panel.
 
 > `optional` **showHeaderRow**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:350](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L350)
+
 Defaults to `false`. If `true`, displays the header row.
-
-#### Defined in
-
-[grid/gridoptions.ts:335](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L335)
 
 ***
 
-### showPreHeaderPanel?
+### ~~showPreHeaderPanel?~~
 
 > `optional` **showPreHeaderPanel**: `boolean`
 
-Defaults to `false`. If `true`, displays the pre-header panel for column grouping.
+Defined in: [src/core/gridoptions.ts:355](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L355)
 
-#### Defined in
+#### Deprecated
 
-[grid/gridoptions.ts:340](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L340)
+Use showGroupingPanel option instead.
 
 ***
 
@@ -890,11 +805,9 @@ Defaults to `false`. If `true`, displays the pre-header panel for column groupin
 
 > `optional` **showTopPanel**: `boolean`
 
-Defaults to `false`. If `true`, displays the top panel for additional controls or information.
+Defined in: [src/core/gridoptions.ts:360](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L360)
 
-#### Defined in
-
-[grid/gridoptions.ts:345](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L345)
+Defaults to `false`. If `true`, displays the post-header panel for additional controls or information.
 
 ***
 
@@ -902,11 +815,9 @@ Defaults to `false`. If `true`, displays the top panel for additional controls o
 
 > `optional` **suppressActiveCellChangeOnEdit**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:365](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L365)
+
 Defaults to `false`. If `true`, suppresses the activation of cells when they contain an editor and are clicked.
-
-#### Defined in
-
-[grid/gridoptions.ts:350](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L350)
 
 ***
 
@@ -914,11 +825,9 @@ Defaults to `false`. If `true`, suppresses the activation of cells when they con
 
 > `optional` **syncColumnCellResize**: `boolean`
 
+Defined in: [src/core/gridoptions.ts:370](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L370)
+
 Defaults to `false`. If `true`, synchronizes column resizing with cell resizing.
-
-#### Defined in
-
-[grid/gridoptions.ts:355](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L355)
 
 ***
 
@@ -926,35 +835,34 @@ Defaults to `false`. If `true`, synchronizes column resizing with cell resizing.
 
 > `optional` **topPanelHeight**: `number`
 
-Defaults to `30`. Height of the top panel in pixels.
+Defined in: [src/core/gridoptions.ts:375](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L375)
 
-#### Defined in
-
-[grid/gridoptions.ts:360](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L360)
+Defaults to null which means the top panel height is calculated based on CSS rules.
 
 ***
 
 ### useCssVars?
 
-> `optional` **useCssVars**: `boolean`
+> `optional` **useCssVars**: `number` \| `boolean`
 
-Defaults to `false`. If `true`, uses CSS variables for styling.
+Defined in: [src/core/gridoptions.ts:388](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L388)
 
-#### Defined in
-
-[grid/gridoptions.ts:370](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L370)
+Defaults to `true` which is equivalent to 50. If `true`, uses CSS variables for styling (for up to 50 cols).
+If set to a number, enables CSS variables only if column count is less than or equal to that number.
+This is dependent on the stylesheet which only supports up to 50 columns by default.
+But if you defined your own stylesheet with more columns, you can set this to a higher number.
 
 ***
 
-### useLegacyUI?
+### ~~useLegacyUI?~~
 
 > `optional` **useLegacyUI**: `boolean`
 
-Defaults to `false`. If `true`, uses legacy jQuery UI classes like ui-state-default and ui-widget-content.
+Defined in: [src/core/gridoptions.ts:380](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L380)
 
-#### Defined in
+#### Deprecated
 
-[grid/gridoptions.ts:365](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L365)
+This option has no effect.
 
 ***
 
@@ -962,8 +870,6 @@ Defaults to `false`. If `true`, uses legacy jQuery UI classes like ui-state-defa
 
 > `optional` **viewportClass**: `string`
 
+Defined in: [src/core/gridoptions.ts:393](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L393)
+
 CSS class applied to the viewport container. Default is `undefined`.
-
-#### Defined in
-
-[grid/gridoptions.ts:375](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/gridoptions.ts#L375)

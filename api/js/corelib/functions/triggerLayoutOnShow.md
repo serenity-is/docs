@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / triggerLayoutOnShow
+[serenity-is/corelib](../README.md) / triggerLayoutOnShow
 
 # Function: triggerLayoutOnShow()
 
 > **triggerLayoutOnShow**(`element`): `void`
+
+Defined in: [src/compat/layout.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L132)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/q/layout.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L143)

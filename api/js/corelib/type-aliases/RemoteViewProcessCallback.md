@@ -1,27 +1,35 @@
-[@serenity-is/corelib](../README.md) / RemoteViewProcessCallback
+[serenity-is/corelib](../README.md) / RemoteViewProcessCallback
 
-# Type Alias: RemoteViewProcessCallback()\<TEntity\>
+# Type Alias: RemoteViewProcessCallback()\<TItem\>
 
-> **RemoteViewProcessCallback**\<`TEntity`\>: (`data`, `view`) => [`ListResponse`](../interfaces/ListResponse.md)\<`TEntity`\>
+> **RemoteViewProcessCallback**\<`TItem`\> = (`data`, `view`) => [`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
+
+Defined in: [src/slick/iremoteview.ts:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L310)
+
+Callback function for processing data received from the server
 
 ## Type Parameters
 
-• **TEntity**
+### TItem
+
+`TItem`
 
 ## Parameters
 
 ### data
 
-[`ListResponse`](../interfaces/ListResponse.md)\<`TEntity`\>
+[`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
+
+The raw data response
 
 ### view
 
-[`RemoteView`](../classes/RemoteView.md)\<`TEntity`\>
+[`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
+
+The RemoteView instance
 
 ## Returns
 
-[`ListResponse`](../interfaces/ListResponse.md)\<`TEntity`\>
+[`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
 
-## Defined in
-
-[src/slick/remoteview.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L41)
+The processed data

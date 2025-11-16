@@ -1,12 +1,16 @@
-[@serenity-is/sleekgrid](../README.md) / EditorClass
+[serenity-is/sleekgrid](../README.md) / EditorClass
 
 # Interface: EditorClass
 
+Defined in: [src/core/editing.ts:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L65)
+
 ## Constructors
 
-### new EditorClass()
+### Constructor
 
 > **new EditorClass**(`options`): [`Editor`](Editor.md)
+
+Defined in: [src/core/editing.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L66)
 
 #### Parameters
 
@@ -18,16 +22,10 @@
 
 [`Editor`](Editor.md)
 
-#### Defined in
-
-[core/editing.ts:65](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L65)
-
 ## Properties
 
 ### suppressClearOnEdit?
 
 > `optional` **suppressClearOnEdit**: `boolean`
 
-#### Defined in
-
-[core/editing.ts:66](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L66)
+Defined in: [src/core/editing.ts:67](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L67)

@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / validatorAbortHandler
+[serenity-is/corelib](../README.md) / validatorAbortHandler
 
 # Function: validatorAbortHandler()
 
 > **validatorAbortHandler**(`validator`): `void`
+
+Defined in: [src/compat/validation.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/validation.ts#L3)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/q/validation.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/validation.ts#L4)

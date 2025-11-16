@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / RecaptchaOptions
+[serenity-is/corelib](../README.md) / RecaptchaOptions
 
 # Interface: RecaptchaOptions
+
+Defined in: [src/ui/editors/recaptcha.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/recaptcha.ts#L5)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **language**: `string`
 
-#### Defined in
-
-[src/ui/editors/recaptcha.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/recaptcha.ts#L8)
+Defined in: [src/ui/editors/recaptcha.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/recaptcha.ts#L7)
 
 ***
 
@@ -18,6 +18,4 @@
 
 > `optional` **siteKey**: `string`
 
-#### Defined in
-
-[src/ui/editors/recaptcha.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/recaptcha.ts#L7)
+Defined in: [src/ui/editors/recaptcha.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/recaptcha.ts#L6)

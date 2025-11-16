@@ -1,51 +1,63 @@
-[@serenity-is/sleekgrid](../README.md) / IPlugin
+[serenity-is/sleekgrid](../README.md) / IPlugin
 
-# Interface: IPlugin
+# ~~Interface: IPlugin~~
 
-## Extended by
+Defined in: [src/core/grid-plugin.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L10)
 
-- [`SelectionModel`](SelectionModel.md)
+## Deprecated
+
+Use GridPlugin instead
+
+## Extends
+
+- [`GridPlugin`](GridPlugin.md)
 
 ## Properties
 
-### destroy()?
+### ~~destroy()?~~
 
 > `optional` **destroy**: () => `void`
+
+Defined in: [src/core/grid-plugin.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L6)
 
 #### Returns
 
 `void`
 
-#### Defined in
+#### Inherited from
 
-[grid/types.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L7)
+[`GridPlugin`](GridPlugin.md).[`destroy`](GridPlugin.md#destroy)
 
 ***
 
-### pluginName?
+### ~~pluginName?~~
 
 > `optional` **pluginName**: `string`
 
-#### Defined in
+Defined in: [src/core/grid-plugin.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L5)
 
-[grid/types.ts:6](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L6)
+#### Inherited from
+
+[`GridPlugin`](GridPlugin.md).[`pluginName`](GridPlugin.md#pluginname)
 
 ## Methods
 
-### init()
+### ~~init()~~
 
 > **init**(`grid`): `void`
+
+Defined in: [src/core/grid-plugin.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L4)
 
 #### Parameters
 
 ##### grid
 
-[`Grid`](../classes/Grid.md)\<`any`\>
+[`ISleekGrid`](ISleekGrid.md)
 
 #### Returns
 
 `void`
 
-#### Defined in
+#### Inherited from
 
-[grid/types.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/types.ts#L5)
+[`GridPlugin`](GridPlugin.md).[`init`](GridPlugin.md#init)

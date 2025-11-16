@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / zeroPad
+[serenity-is/corelib](../README.md) / zeroPad
 
 # Function: zeroPad()
 
 > **zeroPad**(`n`, `len`): `string`
+
+Defined in: [src/compat/strings-compat.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L122)
 
 Pads the start of string to make it the specified length.
 
@@ -23,7 +25,3 @@ Target length of the string.
 ## Returns
 
 `string`
-
-## Defined in
-
-[src/q/strings-compat.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings-compat.ts#L123)

@@ -1,33 +1,31 @@
-[@serenity-is/corelib](../README.md) / PropertyTabItem
+[serenity-is/corelib](../README.md) / PropertyTabItem
 
 # Function: PropertyTabItem()
 
 > **PropertyTabItem**(`props`): `HTMLLIElement`
 
+Defined in: [src/ui/widgets/propertygrid.tsx:208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L208)
+
 ## Parameters
 
 ### props
 
-#### props.active
+#### active?
 
 `boolean`
 
-#### props.localTextPrefix
+#### localTextPrefix?
 
 `string`
 
-#### props.paneId
+#### paneId?
 
 `string`
 
-#### props.title
+#### title
 
 `string`
 
 ## Returns
 
 `HTMLLIElement`
-
-## Defined in
-
-[src/ui/widgets/propertygrid.tsx:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L223)

@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / TimeEditorBaseOptions
+[serenity-is/corelib](../README.md) / TimeEditorBaseOptions
 
 # Interface: TimeEditorBaseOptions
+
+Defined in: [src/ui/editors/timeeditor.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L6)
 
 ## Extended by
 
@@ -13,9 +15,7 @@
 
 > `optional` **endHour**: `any`
 
-#### Defined in
-
-[src/ui/editors/timeeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L10)
+Defined in: [src/ui/editors/timeeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L9)
 
 ***
 
@@ -23,9 +23,7 @@
 
 > `optional` **intervalMinutes**: `any`
 
-#### Defined in
-
-[src/ui/editors/timeeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L11)
+Defined in: [src/ui/editors/timeeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L10)
 
 ***
 
@@ -33,9 +31,7 @@
 
 > `optional` **noEmptyOption**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/timeeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L8)
+Defined in: [src/ui/editors/timeeditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L7)
 
 ***
 
@@ -43,6 +39,4 @@
 
 > `optional` **startHour**: `any`
 
-#### Defined in
-
-[src/ui/editors/timeeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L9)
+Defined in: [src/ui/editors/timeeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L8)

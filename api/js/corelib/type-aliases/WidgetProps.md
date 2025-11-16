@@ -1,10 +1,12 @@
-[@serenity-is/corelib](../README.md) / WidgetProps
+[serenity-is/corelib](../README.md) / WidgetProps
 
 # Type Alias: WidgetProps\<P\>
 
-> **WidgetProps**\<`P`\>: `object` & [`SNoInfer`](SNoInfer.md)\<`P`\>
+> **WidgetProps**\<`P`\> = `object` & [`SNoInfer`](SNoInfer.md)\<`P`\>
 
-## Type declaration
+Defined in: [src/ui/widgets/widgetutils.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L123)
+
+## Type Declaration
 
 ### class?
 
@@ -20,8 +22,6 @@
 
 ## Type Parameters
 
-• **P**
+### P
 
-## Defined in
-
-[src/ui/widgets/widgetutils.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L123)
+`P`

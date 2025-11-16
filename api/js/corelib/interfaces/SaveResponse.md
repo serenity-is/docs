@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / SaveResponse
+[serenity-is/corelib](../README.md) / SaveResponse
 
 # Interface: SaveResponse
+
+Defined in: [src/base/servicetypes.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L22)
 
 ## Extends
 
@@ -12,9 +14,7 @@
 
 > `optional` **EntityId**: `any`
 
-#### Defined in
-
-[src/base/servicetypes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L23)
+Defined in: [src/base/servicetypes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L23)
 
 ***
 
@@ -22,10 +22,8 @@
 
 > `optional` **Error**: [`ServiceError`](ServiceError.md)
 
+Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
+
 #### Inherited from
 
 [`ServiceResponse`](ServiceResponse.md).[`Error`](ServiceResponse.md#error)
-
-#### Defined in
-
-[src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)

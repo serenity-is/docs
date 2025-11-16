@@ -1,24 +1,30 @@
-[@serenity-is/sleekgrid](../README.md) / EventEmitter
+[serenity-is/sleekgrid](../README.md) / EventEmitter
 
-# Class: EventEmitter\<TArgs, TEventData\>
+# Class: EventEmitter\<TArgs, TEvent\>
+
+Defined in: [src/core/event.ts:173](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L173)
 
 A simple publisher-subscriber implementation.
 
 ## Type Parameters
 
-• **TArgs** = `any`
+### TArgs
 
-• **TEventData** *extends* [`IEventData`](../interfaces/IEventData.md) = [`IEventData`](../interfaces/IEventData.md)
+`TArgs` = `any`
+
+### TEvent
+
+`TEvent` = \{ \}
 
 ## Constructors
 
-### new EventEmitter()
+### Constructor
 
-> **new EventEmitter**\<`TArgs`, `TEventData`\>(): [`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\>
+> **new EventEmitter**\<`TArgs`, `TEvent`\>(): `EventEmitter`\<`TArgs`, `TEvent`\>
 
 #### Returns
 
-[`EventEmitter`](EventEmitter.md)\<`TArgs`, `TEventData`\>
+`EventEmitter`\<`TArgs`, `TEvent`\>
 
 ## Methods
 
@@ -26,19 +32,19 @@ A simple publisher-subscriber implementation.
 
 > **clear**(): `void`
 
+Defined in: [src/core/event.ts:221](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L221)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[core/event.ts:105](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L105)
 
 ***
 
 ### notify()
 
-> **notify**(`args`?, `e`?, `scope`?): `any`
+> **notify**(`args?`, `e?`, `scope?`): [`EventData`](../type-aliases/EventData.md)\<`TArgs`, `TEvent`\>
+
+Defined in: [src/core/event.ts:211](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L211)
 
 Fires an event notifying all subscribers.
 
@@ -46,15 +52,15 @@ Fires an event notifying all subscribers.
 
 ##### args?
 
-`any`
+`TArgs`
 
 {Object} Additional data object to be passed to all handlers.
 
 ##### e?
 
-`TEventData`
+`TEvent`
 
-{EventData}
+{EventDataWrapper}
      Optional.
      An <code>EventData</code> object to be passed to all handlers.
      For DOM events, an existing W3C/jQuery event object can be passed in.
@@ -70,17 +76,15 @@ Fires an event notifying all subscribers.
 
 #### Returns
 
-`any`
-
-#### Defined in
-
-[core/event.ts:93](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L93)
+[`EventData`](../type-aliases/EventData.md)\<`TArgs`, `TEvent`\>
 
 ***
 
 ### subscribe()
 
 > **subscribe**(`fn`): `void`
+
+Defined in: [src/core/event.ts:183](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L183)
 
 Adds an event handler to be called when the event is fired.
 <p>Event handler will receive two arguments - an <code>EventData</code> and the <code>data</code>
@@ -90,7 +94,7 @@ object the event was fired with.<p>
 
 ##### fn
 
-(`e`, `args`) => `void`
+[`EventCallback`](../type-aliases/EventCallback.md)\<`TArgs`, `TEvent`\>
 
 {Function} Event handler.
 
@@ -98,15 +102,13 @@ object the event was fired with.<p>
 
 `void`
 
-#### Defined in
-
-[core/event.ts:65](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L65)
-
 ***
 
 ### unsubscribe()
 
 > **unsubscribe**(`fn`): `void`
+
+Defined in: [src/core/event.ts:191](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L191)
 
 Removes an event handler added with <code>subscribe(fn)</code>.
 
@@ -114,14 +116,10 @@ Removes an event handler added with <code>subscribe(fn)</code>.
 
 ##### fn
 
-(`e`, `args`) => `void`
+[`EventCallback`](../type-aliases/EventCallback.md)\<`TArgs`, `TEvent`\>
 
 {Function} Event handler to be removed.
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-[core/event.ts:73](https://github.com/serenity-is/sleekgrid/blob/master/src/core/event.ts#L73)

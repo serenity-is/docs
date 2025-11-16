@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / getFormData
+[serenity-is/corelib](../README.md) / getFormData
 
 # Function: getFormData()
 
 > **getFormData**(`key`): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
+
+Defined in: [src/compat/scriptdata-compat.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L73)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
-
-## Defined in
-
-[src/q/scriptdata-compat.ts:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L125)

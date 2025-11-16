@@ -1,8 +1,10 @@
-[@serenity-is/sleekgrid](../README.md) / addClass
+[serenity-is/sleekgrid](../README.md) / addClass
 
 # Function: addClass()
 
 > **addClass**(`el`, `cls`): `void`
+
+Defined in: [src/core/util.tsx:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/util.tsx#L3)
 
 ## Parameters
 
@@ -17,7 +19,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[core/util.ts:1](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L1)

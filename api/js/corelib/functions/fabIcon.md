@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / fabIcon
+[serenity-is/corelib](../README.md) / fabIcon
 
 # Function: fabIcon()
 
-> **fabIcon**(`key`, `color`?): `string`
+> **fabIcon**(`key`, `color?`): `string`
+
+Defined in: [src/base/icons.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L49)
 
 Generates a fully qualified class name for a Font Awesome brand icon.
 
@@ -25,7 +27,3 @@ The optional color of the icon.
 `string`
 
 The fully qualified class name for the icon.
-
-## Defined in
-
-[src/base/icons.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L49)

@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / Toastr
+[serenity-is/corelib](../README.md) / Toastr
 
 # Class: Toastr
 
+Defined in: [src/base/toastr2.tsx:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L85)
+
 ## Constructors
 
-### new Toastr()
+### Constructor
 
-> **new Toastr**(`options`?): [`Toastr`](Toastr.md)
+> **new Toastr**(`options?`): `Toastr`
+
+Defined in: [src/base/toastr2.tsx:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L94)
 
 #### Parameters
 
@@ -16,11 +20,7 @@
 
 #### Returns
 
-[`Toastr`](Toastr.md)
-
-#### Defined in
-
-[src/base/toastr2.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L95)
+`Toastr`
 
 ## Properties
 
@@ -28,15 +28,15 @@
 
 > **options**: [`ToastrOptions`](../type-aliases/ToastrOptions.md)
 
-#### Defined in
-
-[src/base/toastr2.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L93)
+Defined in: [src/base/toastr2.tsx:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L92)
 
 ## Methods
 
 ### clear()
 
-> **clear**(`options`?): `void`
+> **clear**(`options?`): `void`
+
+Defined in: [src/base/toastr2.tsx:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L181)
 
 #### Parameters
 
@@ -48,25 +48,23 @@
 
 `void`
 
-#### Defined in
-
-[src/base/toastr2.ts:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L204)
-
 ***
 
 ### error()
 
-> **error**(`message`?, `title`?, `opt`?): `HTMLElement`
+> **error**(`message?`, `title?`, `opt?`): `HTMLElement`
+
+Defined in: [src/base/toastr2.tsx:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L110)
 
 #### Parameters
 
 ##### message?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### title?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### opt?
 
@@ -76,15 +74,13 @@
 
 `HTMLElement`
 
-#### Defined in
-
-[src/base/toastr2.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L121)
-
 ***
 
 ### getContainer()
 
-> **getContainer**(`options`?, `create`?): `HTMLElement`
+> **getContainer**(`options?`, `create?`): `HTMLElement`
+
+Defined in: [src/base/toastr2.tsx:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L100)
 
 #### Parameters
 
@@ -100,25 +96,23 @@
 
 `HTMLElement`
 
-#### Defined in
-
-[src/base/toastr2.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L101)
-
 ***
 
 ### info()
 
-> **info**(`message`?, `title`?, `opt`?): `HTMLElement`
+> **info**(`message?`, `title?`, `opt?`): `HTMLElement`
+
+Defined in: [src/base/toastr2.tsx:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L137)
 
 #### Parameters
 
 ##### message?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### title?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### opt?
 
@@ -128,35 +122,31 @@
 
 `HTMLElement`
 
-#### Defined in
-
-[src/base/toastr2.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L160)
-
 ***
 
 ### publish()
 
 > **publish**(`args`): `void`
 
+Defined in: [src/base/toastr2.tsx:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L154)
+
 #### Parameters
 
 ##### args
 
-[`Toastr`](Toastr.md)
+`Toastr`
 
 #### Returns
 
 `void`
 
-#### Defined in
-
-[src/base/toastr2.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L177)
-
 ***
 
 ### removeToast()
 
-> **removeToast**(`toastElement`, `options`?): `void`
+> **removeToast**(`toastElement`, `options?`): `void`
+
+Defined in: [src/base/toastr2.tsx:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L170)
 
 #### Parameters
 
@@ -172,15 +162,13 @@
 
 `void`
 
-#### Defined in
-
-[src/base/toastr2.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L193)
-
 ***
 
 ### subscribe()
 
 > **subscribe**(`callback`): `void`
+
+Defined in: [src/base/toastr2.tsx:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L150)
 
 #### Parameters
 
@@ -192,25 +180,23 @@
 
 `void`
 
-#### Defined in
-
-[src/base/toastr2.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L173)
-
 ***
 
 ### success()
 
-> **success**(`message`?, `title`?, `opt`?): `HTMLElement`
+> **success**(`message?`, `title?`, `opt?`): `HTMLElement`
+
+Defined in: [src/base/toastr2.tsx:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L128)
 
 #### Parameters
 
 ##### message?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### title?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### opt?
 
@@ -219,26 +205,24 @@
 #### Returns
 
 `HTMLElement`
-
-#### Defined in
-
-[src/base/toastr2.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L147)
 
 ***
 
 ### warning()
 
-> **warning**(`message`?, `title`?, `opt`?): `HTMLElement`
+> **warning**(`message?`, `title?`, `opt?`): `HTMLElement`
+
+Defined in: [src/base/toastr2.tsx:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L119)
 
 #### Parameters
 
 ##### message?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### title?
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 ##### opt?
 
@@ -247,7 +231,3 @@
 #### Returns
 
 `HTMLElement`
-
-#### Defined in
-
-[src/base/toastr2.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L134)

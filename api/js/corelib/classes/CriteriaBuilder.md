@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / CriteriaBuilder
+[serenity-is/corelib](../README.md) / CriteriaBuilder
 
 # Class: CriteriaBuilder
+
+Defined in: [src/base/criteria.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L4)
 
 CriteriaBuilder is a class that allows to build unary or binary criteria with completion support.
 
@@ -10,13 +12,15 @@ CriteriaBuilder is a class that allows to build unary or binary criteria with co
 
 ## Indexable
 
- \[`n`: `number`\]: `any`
+\[`n`: `number`\]: `any`
 
 ## Constructors
 
-### new CriteriaBuilder()
+### Constructor
 
-> **new CriteriaBuilder**(`arrayLength`?): [`CriteriaBuilder`](CriteriaBuilder.md)
+> **new CriteriaBuilder**(`arrayLength?`): `CriteriaBuilder`
+
+Defined in: C:/Users/volka/AppData/Roaming/npm/node\_modules/typedoc/node\_modules/typescript/lib/lib.es5.d.ts:1514
 
 #### Parameters
 
@@ -26,21 +30,19 @@ CriteriaBuilder is a class that allows to build unary or binary criteria with co
 
 #### Returns
 
-[`CriteriaBuilder`](CriteriaBuilder.md)
+`CriteriaBuilder`
 
 #### Inherited from
 
 `Array.constructor`
-
-#### Defined in
-
-C:/Users/volka/AppData/Local/pnpm/global/5/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1507
 
 ## Methods
 
 ### bw()
 
 > **bw**(`fromInclusive`, `toInclusive`): `any`[]
+
+Defined in: [src/base/criteria.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L10)
 
 Creates a between criteria.
 
@@ -62,15 +64,13 @@ to value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L10)
-
 ***
 
 ### contains()
 
 > **contains**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L18)
 
 Creates a contains criteria
 
@@ -86,15 +86,13 @@ contains value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L18)
-
 ***
 
 ### endsWith()
 
 > **endsWith**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L26)
 
 Creates a endsWith criteria
 
@@ -110,15 +108,13 @@ endsWith value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L26)
-
 ***
 
 ### eq()
 
 > **eq**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L34)
 
 Creates an equal (=) criteria
 
@@ -134,15 +130,13 @@ equal value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L34)
-
 ***
 
 ### ge()
 
 > **ge**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L50)
 
 Creates a greater than or equal criteria
 
@@ -158,15 +152,13 @@ greater than or equal value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L50)
-
 ***
 
 ### gt()
 
 > **gt**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L42)
 
 Creates a greater than criteria
 
@@ -182,15 +174,13 @@ greater than value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L42)
-
 ***
 
 ### in()
 
 > **in**(`values`): `any`[]
+
+Defined in: [src/base/criteria.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L58)
 
 Creates a in criteria
 
@@ -206,15 +196,13 @@ in values
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L58)
-
 ***
 
 ### isNotNull()
 
 > **isNotNull**(): `any`[]
+
+Defined in: [src/base/criteria.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L72)
 
 Creates a IS NOT NULL criteria
 
@@ -222,15 +210,13 @@ Creates a IS NOT NULL criteria
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L72)
-
 ***
 
 ### isNull()
 
 > **isNull**(): `any`[]
+
+Defined in: [src/base/criteria.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L65)
 
 Creates a IS NULL criteria
 
@@ -238,15 +224,13 @@ Creates a IS NULL criteria
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L65)
-
 ***
 
 ### le()
 
 > **le**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L80)
 
 Creates a less than or equal to criteria
 
@@ -262,15 +246,13 @@ less than or equal to value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L80)
-
 ***
 
 ### like()
 
 > **like**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L104)
 
 Creates a LIKE criteria
 
@@ -286,15 +268,13 @@ like value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L104)
-
 ***
 
 ### lt()
 
 > **lt**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L88)
 
 Creates a less than criteria
 
@@ -310,15 +290,13 @@ less than value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L88)
-
 ***
 
 ### ne()
 
 > **ne**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L96)
 
 Creates a not equal criteria
 
@@ -334,15 +312,13 @@ not equal value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L96)
-
 ***
 
 ### notIn()
 
 > **notIn**(`values`): `any`[]
+
+Defined in: [src/base/criteria.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L120)
 
 Creates a NOT IN criteria
 
@@ -358,15 +334,13 @@ array of NOT IN values
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L120)
-
 ***
 
 ### notLike()
 
 > **notLike**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L128)
 
 Creates a NOT LIKE criteria
 
@@ -382,15 +356,13 @@ not like value
 
 `any`[]
 
-#### Defined in
-
-[src/base/criteria.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L128)
-
 ***
 
 ### startsWith()
 
 > **startsWith**(`value`): `any`[]
+
+Defined in: [src/base/criteria.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L112)
 
 Creates a STARTS WITH criteria
 
@@ -405,7 +377,3 @@ startsWith value
 #### Returns
 
 `any`[]
-
-#### Defined in
-
-[src/base/criteria.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L112)

@@ -1,16 +1,26 @@
-[@serenity-is/corelib](../README.md) / IValidateRequired
+[serenity-is/corelib](../README.md) / IValidateRequired
 
-# Class: IValidateRequired
+# Abstract Class: IValidateRequired
+
+Defined in: [src/interfaces/ivalidaterequired.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L3)
 
 ## Constructors
 
-### new IValidateRequired()
+### Constructor
 
-> **new IValidateRequired**(): [`IValidateRequired`](IValidateRequired.md)
+> **new IValidateRequired**(): `IValidateRequired`
 
 #### Returns
 
-[`IValidateRequired`](IValidateRequired.md)
+`IValidateRequired`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/interfaces/ivalidaterequired.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L4)
 
 ## Methods
 
@@ -18,19 +28,19 @@
 
 > **get\_required**(): `boolean`
 
+Defined in: [src/interfaces/ivalidaterequired.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L8)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/interfaces/ivalidaterequired.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L4)
 
 ***
 
 ### set\_required()
 
 > **set\_required**(`value`): `void`
+
+Defined in: [src/interfaces/ivalidaterequired.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L9)
 
 #### Parameters
 
@@ -41,7 +51,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/interfaces/ivalidaterequired.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L5)

@@ -1,10 +1,12 @@
-[@serenity-is/corelib](../README.md) / PropertyFieldElement
+[serenity-is/corelib](../README.md) / PropertyFieldElement
 
 # Type Alias: PropertyFieldElement
 
-> **PropertyFieldElement**: `HTMLElement` & `object`
+> **PropertyFieldElement** = `HTMLElement` & `object`
 
-## Type declaration
+Defined in: [src/ui/widgets/propertygrid.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L8)
+
+## Type Declaration
 
 ### editorPromise?
 
@@ -17,7 +19,3 @@
 ### propertyItem?
 
 > `optional` **propertyItem**: [`PropertyItem`](../interfaces/PropertyItem.md)
-
-## Defined in
-
-[src/ui/widgets/propertygrid.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L11)

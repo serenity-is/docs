@@ -1,29 +1,27 @@
-[@serenity-is/corelib](../README.md) / EditorAddon
+[serenity-is/corelib](../README.md) / EditorAddon
 
 # Type Alias: EditorAddon()
 
-> **EditorAddon**: (`props`) => `void`
+> **EditorAddon** = (`props`) => `void`
+
+Defined in: [src/base/propertyitem.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L14)
 
 ## Parameters
 
 ### props
 
-#### props.documentFragment
+#### documentFragment?
 
 `DocumentFragment`
 
-#### props.editorElement
+#### editorElement
 
 `HTMLElement`
 
-#### props.propertyItem
+#### propertyItem?
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
 
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/base/propertyitem.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L14)

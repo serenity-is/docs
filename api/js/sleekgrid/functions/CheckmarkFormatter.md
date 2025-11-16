@@ -1,19 +1,17 @@
-[@serenity-is/sleekgrid](../README.md) / CheckmarkFormatter
+[serenity-is/sleekgrid](../README.md) / CheckmarkFormatter
 
 # Function: CheckmarkFormatter()
 
-> **CheckmarkFormatter**(`ctx`): `""` \| "\<i class=\"slick-checkmark\"\>\</i\>"
+> **CheckmarkFormatter**(`ctx`): [`FormatterResult`](../type-aliases/FormatterResult.md)
+
+Defined in: [src/formatters/formatters.ts:47](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/formatters/formatters.ts#L47)
 
 ## Parameters
 
 ### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
 ## Returns
 
-`""` \| "\<i class=\"slick-checkmark\"\>\</i\>"
-
-## Defined in
-
-[formatters/formatters.ts:36](https://github.com/serenity-is/sleekgrid/blob/master/src/formatters/formatters.ts#L36)
+[`FormatterResult`](../type-aliases/FormatterResult.md)

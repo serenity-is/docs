@@ -1,12 +1,14 @@
-[@serenity-is/corelib](../README.md) / ComboboxCommonOptions
+[serenity-is/corelib](../README.md) / ComboboxCommonOptions
 
 # Interface: ComboboxCommonOptions
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L14)
 
 ## Extended by
 
 - [`ComboboxEditorOptions`](ComboboxEditorOptions.md)
-- [`SelectEditorOptions`](SelectEditorOptions.md)
 - [`EnumEditorOptions`](EnumEditorOptions.md)
+- [`SelectEditorOptions`](SelectEditorOptions.md)
 
 ## Properties
 
@@ -14,9 +16,7 @@
 
 > `optional` **allowClear**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
+Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L15)
 
 ***
 
@@ -24,9 +24,7 @@
 
 > `optional` **delimited**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
 
 ***
 
@@ -34,9 +32,7 @@
 
 > `optional` **minimumResultsForSearch**: `any`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
 
 ***
 
@@ -44,6 +40,4 @@
 
 > `optional` **multiple**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)
+Defined in: [src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)

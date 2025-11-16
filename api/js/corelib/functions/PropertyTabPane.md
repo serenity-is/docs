@@ -1,29 +1,27 @@
-[@serenity-is/corelib](../README.md) / PropertyTabPane
+[serenity-is/corelib](../README.md) / PropertyTabPane
 
 # Function: PropertyTabPane()
 
 > **PropertyTabPane**(`props`): `HTMLElement`
 
+Defined in: [src/ui/widgets/propertygrid.tsx:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L222)
+
 ## Parameters
 
 ### props
 
-#### props.active
+#### active?
 
 `boolean`
 
-#### props.children
+#### children?
 
 `any`
 
-#### props.id
+#### id?
 
 `string`
 
 ## Returns
 
 `HTMLElement`
-
-## Defined in
-
-[src/ui/widgets/propertygrid.tsx:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L237)

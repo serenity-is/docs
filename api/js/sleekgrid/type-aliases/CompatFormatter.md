@@ -1,12 +1,16 @@
-[@serenity-is/sleekgrid](../README.md) / CompatFormatter
+[serenity-is/sleekgrid](../README.md) / CompatFormatter
 
 # Type Alias: CompatFormatter()\<TItem\>
 
-> **CompatFormatter**\<`TItem`\>: (`row`, `cell`, `value`, `column`, `item`, `grid`?) => `string` \| [`CompatFormatterResult`](../interfaces/CompatFormatterResult.md)
+> **CompatFormatter**\<`TItem`\> = (`row`, `cell`, `value`, `column`, `item`, `grid?`) => `string` \| [`CompatFormatterResult`](../interfaces/CompatFormatterResult.md)
+
+Defined in: [src/core/formatting.ts:91](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L91)
 
 ## Type Parameters
 
-• **TItem** = `any`
+### TItem
+
+`TItem` = `any`
 
 ## Parameters
 
@@ -32,12 +36,8 @@
 
 ### grid?
 
-`any`
+[`ISleekGrid`](../interfaces/ISleekGrid.md)
 
 ## Returns
 
 `string` \| [`CompatFormatterResult`](../interfaces/CompatFormatterResult.md)
-
-## Defined in
-
-[core/formatting.ts:70](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L70)

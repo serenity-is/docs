@@ -1,18 +1,24 @@
-[@serenity-is/corelib](../README.md) / TreeGridMixin
+[serenity-is/corelib](../README.md) / TreeGridMixin
 
 # Class: TreeGridMixin\<TItem\>
+
+Defined in: [src/ui/datagrid/treegridmixin.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L11)
 
 A mixin that can be applied to a DataGrid for tree functionality
 
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Constructors
 
-### new TreeGridMixin()
+### Constructor
 
-> **new TreeGridMixin**\<`TItem`\>(`options`): [`TreeGridMixin`](TreeGridMixin.md)\<`TItem`\>
+> **new TreeGridMixin**\<`TItem`\>(`options`): `TreeGridMixin`\<`TItem`\>
+
+Defined in: [src/ui/datagrid/treegridmixin.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L15)
 
 #### Parameters
 
@@ -22,11 +28,7 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 #### Returns
 
-[`TreeGridMixin`](TreeGridMixin.md)\<`TItem`\>
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L14)
+`TreeGridMixin`\<`TItem`\>
 
 ## Methods
 
@@ -34,13 +36,11 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 > **collapseAll**(): `void`
 
+Defined in: [src/ui/datagrid/treegridmixin.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L59)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L66)
 
 ***
 
@@ -48,13 +48,11 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 > **expandAll**(): `void`
 
+Defined in: [src/ui/datagrid/treegridmixin.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L64)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L71)
 
 ***
 
@@ -62,15 +60,13 @@ A mixin that can be applied to a DataGrid for tree functionality
 
 > **toggleAll**(): `void`
 
+Defined in: [src/ui/datagrid/treegridmixin.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L52)
+
 Expands / collapses all rows in a grid automatically
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L59)
 
 ***
 
@@ -78,12 +74,16 @@ Expands / collapses all rows in a grid automatically
 
 > `static` **applyTreeOrdering**\<`TItem`\>(`items`, `getId`, `getParentId`): `TItem`[]
 
+Defined in: [src/ui/datagrid/treegridmixin.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L76)
+
 Reorders a set of items so that parents comes before their children.
 This method is required for proper tree ordering, as it is not so easy to perform with SQL.
 
 #### Type Parameters
 
-• **TItem**
+##### TItem
+
+`TItem`
 
 #### Parameters
 
@@ -108,7 +108,3 @@ a delegate to get parent ID of a record
 #### Returns
 
 `TItem`[]
-
-#### Defined in
-
-[src/ui/datagrid/treegridmixin.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/treegridmixin.ts#L83)

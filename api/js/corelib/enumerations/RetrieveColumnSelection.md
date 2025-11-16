@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / RetrieveColumnSelection
+[serenity-is/corelib](../README.md) / RetrieveColumnSelection
 
 # Enumeration: RetrieveColumnSelection
+
+Defined in: [src/base/servicetypes.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L49)
 
 ## Enumeration Members
 
@@ -8,9 +10,7 @@
 
 > **details**: `0`
 
-#### Defined in
-
-[src/base/servicetypes.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L50)
+Defined in: [src/base/servicetypes.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L50)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > **idOnly**: `4`
 
-#### Defined in
-
-[src/base/servicetypes.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L54)
+Defined in: [src/base/servicetypes.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L54)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > **keyOnly**: `1`
 
-#### Defined in
-
-[src/base/servicetypes.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L51)
+Defined in: [src/base/servicetypes.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L51)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > **list**: `2`
 
-#### Defined in
-
-[src/base/servicetypes.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L52)
+Defined in: [src/base/servicetypes.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L52)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > **lookup**: `5`
 
-#### Defined in
-
-[src/base/servicetypes.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L55)
+Defined in: [src/base/servicetypes.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L55)
 
 ***
 
@@ -58,6 +50,4 @@
 
 > **none**: `3`
 
-#### Defined in
-
-[src/base/servicetypes.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L53)
+Defined in: [src/base/servicetypes.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L53)

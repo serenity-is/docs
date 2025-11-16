@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / SummaryType
+[serenity-is/corelib](../README.md) / SummaryType
 
 # Enumeration: SummaryType
+
+Defined in: [src/base/propertyitem.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L3)
 
 ## Enumeration Members
 
@@ -8,9 +10,7 @@
 
 > **Avg**: `2`
 
-#### Defined in
-
-[src/base/propertyitem.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L7)
+Defined in: [src/base/propertyitem.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L7)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > **Disabled**: `-1`
 
-#### Defined in
-
-[src/base/propertyitem.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L4)
+Defined in: [src/base/propertyitem.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L4)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > **Max**: `4`
 
-#### Defined in
-
-[src/base/propertyitem.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L9)
+Defined in: [src/base/propertyitem.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L9)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > **Min**: `3`
 
-#### Defined in
-
-[src/base/propertyitem.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L8)
+Defined in: [src/base/propertyitem.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L8)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > **None**: `0`
 
-#### Defined in
-
-[src/base/propertyitem.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L5)
+Defined in: [src/base/propertyitem.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L5)
 
 ***
 
@@ -58,6 +50,4 @@
 
 > **Sum**: `1`
 
-#### Defined in
-
-[src/base/propertyitem.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L6)
+Defined in: [src/base/propertyitem.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L6)

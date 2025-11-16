@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ArgsColumn
+[serenity-is/sleekgrid](../README.md) / ArgsColumn
 
 # Interface: ArgsColumn
+
+Defined in: [src/core/eventargs.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L8)
 
 ## Extends
 
@@ -15,22 +17,18 @@
 
 ### column
 
-> **column**: [`Column`](Column.md)\<`any`\>
+> **column**: [`Column`](Column.md)
 
-#### Defined in
-
-[grid/eventargs.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L9)
+Defined in: [src/core/eventargs.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L9)
 
 ***
 
-### grid?
+### grid
 
-> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> **grid**: [`ISleekGrid`](ISleekGrid.md)
+
+Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
 
 #### Inherited from
 
 [`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
-
-#### Defined in
-
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)

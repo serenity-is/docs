@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / BooleanFormatter
+[serenity-is/corelib](../README.md) / BooleanFormatter
 
 # Class: BooleanFormatter
+
+Defined in: [src/ui/formatters/booleanformatter.tsx:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L5)
 
 ## Implements
 
@@ -8,29 +10,51 @@
 
 ## Constructors
 
-### new BooleanFormatter()
+### Constructor
 
-> **new BooleanFormatter**(`props`): [`BooleanFormatter`](BooleanFormatter.md)
+> **new BooleanFormatter**(`props`): `BooleanFormatter`
+
+Defined in: [src/ui/formatters/booleanformatter.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L8)
 
 #### Parameters
 
 ##### props
 
-###### props.falseText
+###### falseIcon?
+
+[`IconClassName`](../type-aliases/IconClassName.md)
+
+###### falseText?
 
 `string`
 
-###### props.trueText
+###### nullIcon?
+
+[`IconClassName`](../type-aliases/IconClassName.md)
+
+###### nullText?
+
+`string`
+
+###### showHint?
+
+`boolean`
+
+###### showText?
+
+`boolean`
+
+###### trueIcon?
+
+[`IconClassName`](../type-aliases/IconClassName.md)
+
+###### trueText?
 
 `string`
 
 #### Returns
 
-[`BooleanFormatter`](BooleanFormatter.md)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L19)
+`BooleanFormatter`
 
 ## Properties
 
@@ -38,17 +62,47 @@
 
 > `readonly` **props**: `object` = `{}`
 
+Defined in: [src/ui/formatters/booleanformatter.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L8)
+
+#### falseIcon?
+
+> `optional` **falseIcon**: [`IconClassName`](../type-aliases/IconClassName.md)
+
 #### falseText?
 
 > `optional` **falseText**: `string`
+
+#### nullIcon?
+
+> `optional` **nullIcon**: [`IconClassName`](../type-aliases/IconClassName.md)
+
+#### nullText?
+
+> `optional` **nullText**: `string`
+
+#### showHint?
+
+> `optional` **showHint**: `boolean`
+
+#### showText?
+
+> `optional` **showText**: `boolean`
+
+#### trueIcon?
+
+> `optional` **trueIcon**: [`IconClassName`](../type-aliases/IconClassName.md)
 
 #### trueText?
 
 > `optional` **trueText**: `string`
 
-#### Defined in
+***
 
-[src/ui/formatters/formatters.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L19)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/formatters/booleanformatter.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L6)
 
 ## Accessors
 
@@ -58,6 +112,8 @@
 
 > **get** **falseText**(): `string`
 
+Defined in: [src/ui/formatters/booleanformatter.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L48)
+
 ##### Returns
 
 `string`
@@ -65,6 +121,8 @@
 #### Set Signature
 
 > **set** **falseText**(`value`): `void`
+
+Defined in: [src/ui/formatters/booleanformatter.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L49)
 
 ##### Parameters
 
@@ -75,10 +133,6 @@
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L34)
 
 ***
 
@@ -88,6 +142,8 @@
 
 > **get** **trueText**(): `string`
 
+Defined in: [src/ui/formatters/booleanformatter.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L51)
+
 ##### Returns
 
 `string`
@@ -95,6 +151,8 @@
 #### Set Signature
 
 > **set** **trueText**(`value`): `void`
+
+Defined in: [src/ui/formatters/booleanformatter.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L52)
 
 ##### Parameters
 
@@ -106,30 +164,24 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/formatters/formatters.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L37)
-
 ## Methods
 
 ### format()
 
-> **format**(`ctx`): `string`
+> **format**(`ctx`): `FormatterResult`
+
+Defined in: [src/ui/formatters/booleanformatter.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/booleanformatter.tsx#L21)
 
 #### Parameters
 
 ##### ctx
 
-`FormatterContext`\<`any`\>
+`FormatterContext`
 
 #### Returns
 
-`string`
+`FormatterResult`
 
 #### Implementation of
 
 [`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L23)

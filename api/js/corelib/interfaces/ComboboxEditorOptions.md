@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ComboboxEditorOptions
+[serenity-is/corelib](../README.md) / ComboboxEditorOptions
 
 # Interface: ComboboxEditorOptions
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L36)
 
 ## Extends
 
@@ -17,13 +19,11 @@
 
 > `optional` **allowClear**: `boolean`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L15)
+
 #### Inherited from
 
 [`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`allowClear`](ComboboxCommonOptions.md#allowclear)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
 
 ***
 
@@ -31,13 +31,11 @@
 
 > `optional` **autoComplete**: `boolean`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+
 #### Inherited from
 
 [`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`autoComplete`](ComboboxInplaceAddOptions.md#autocomplete)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L34)
 
 ***
 
@@ -45,13 +43,11 @@
 
 > `optional` **cascadeField**: `string`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
+
 #### Inherited from
 
 [`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`cascadeField`](ComboboxFilterOptions.md#cascadefield)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
 
 ***
 
@@ -59,13 +55,11 @@
 
 > `optional` **cascadeFrom**: `string`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L22)
+
 #### Inherited from
 
 [`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`cascadeFrom`](ComboboxFilterOptions.md#cascadefrom)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
 
 ***
 
@@ -73,13 +67,11 @@
 
 > `optional` **cascadeValue**: `any`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
+
 #### Inherited from
 
 [`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`cascadeValue`](ComboboxFilterOptions.md#cascadevalue)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
 
 ***
 
@@ -87,13 +79,11 @@
 
 > `optional` **delimited**: `boolean`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
+
 #### Inherited from
 
 [`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`delimited`](ComboboxCommonOptions.md#delimited)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
 
 ***
 
@@ -101,13 +91,11 @@
 
 > `optional` **dialogType**: `string`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
+
 #### Inherited from
 
 [`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`dialogType`](ComboboxInplaceAddOptions.md#dialogtype)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
 
 ***
 
@@ -115,13 +103,11 @@
 
 > `optional` **filterField**: `string`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+
 #### Inherited from
 
 [`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`filterField`](ComboboxFilterOptions.md#filterfield)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)
 
 ***
 
@@ -129,13 +115,11 @@
 
 > `optional` **filterValue**: `any`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)
+
 #### Inherited from
 
 [`ComboboxFilterOptions`](ComboboxFilterOptions.md).[`filterValue`](ComboboxFilterOptions.md#filtervalue)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L27)
 
 ***
 
@@ -143,13 +127,11 @@
 
 > `optional` **inplaceAdd**: `boolean`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L30)
+
 #### Inherited from
 
 [`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`inplaceAdd`](ComboboxInplaceAddOptions.md#inplaceadd)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)
 
 ***
 
@@ -157,13 +139,11 @@
 
 > `optional` **inplaceAddPermission**: `string`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)
+
 #### Inherited from
 
 [`ComboboxInplaceAddOptions`](ComboboxInplaceAddOptions.md).[`inplaceAddPermission`](ComboboxInplaceAddOptions.md#inplaceaddpermission)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
 
 ***
 
@@ -171,13 +151,11 @@
 
 > `optional` **minimumResultsForSearch**: `any`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+
 #### Inherited from
 
 [`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`minimumResultsForSearch`](ComboboxCommonOptions.md#minimumresultsforsearch)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
 
 ***
 
@@ -185,10 +163,8 @@
 
 > `optional` **multiple**: `boolean`
 
+Defined in: [src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+
 #### Inherited from
 
 [`ComboboxCommonOptions`](ComboboxCommonOptions.md).[`multiple`](ComboboxCommonOptions.md#multiple)
-
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)

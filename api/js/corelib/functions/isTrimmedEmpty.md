@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / isTrimmedEmpty
+[serenity-is/corelib](../README.md) / isTrimmedEmpty
 
 # Function: isTrimmedEmpty()
 
 > **isTrimmedEmpty**(`s`): `boolean`
+
+Defined in: [src/compat/strings-compat.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L26)
 
 Checks if the string is empty or null or whitespace. Prefer !s?.Trim() instead.
 
@@ -19,7 +21,3 @@ String to check.
 `boolean`
 
 True if the string is empty or null or whitespace.
-
-## Defined in
-
-[src/q/strings-compat.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings-compat.ts#L26)

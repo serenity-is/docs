@@ -1,12 +1,18 @@
-[@serenity-is/corelib](../README.md) / extend
+[serenity-is/corelib](../README.md) / extend
 
-# Function: extend()
+# ~~Function: extend()~~
 
 > **extend**\<`T`\>(`a`, `b`): `T`
 
+Defined in: [src/compat/system-compat.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L18)
+
+Extends an object with properties from another object similar to Object.assign.
+
 ## Type Parameters
 
-• **T** = `any`
+### T
+
+`T` = `any`
 
 ## Parameters
 
@@ -22,6 +28,6 @@
 
 `T`
 
-## Defined in
+## Deprecated
 
-[src/q/system-compat.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L20)
+Use Object.assign

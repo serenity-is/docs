@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / Uploader
+[serenity-is/corelib](../README.md) / Uploader
 
 # Class: Uploader
 
+Defined in: [src/base/uploader.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L81)
+
 ## Constructors
 
-### new Uploader()
+### Constructor
 
-> **new Uploader**(`opt`): [`Uploader`](Uploader.md)
+> **new Uploader**(`opt`): `Uploader`
+
+Defined in: [src/base/uploader.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L86)
 
 #### Parameters
 
@@ -16,11 +20,7 @@
 
 #### Returns
 
-[`Uploader`](Uploader.md)
-
-#### Defined in
-
-[src/base/uploader.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L86)
+`Uploader`
 
 ## Properties
 
@@ -28,9 +28,7 @@
 
 > `static` **defaults**: `Partial`\<[`UploaderOptions`](../interfaces/UploaderOptions.md)\>
 
-#### Defined in
-
-[src/base/uploader.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L142)
+Defined in: [src/base/uploader.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L142)
 
 ***
 
@@ -38,15 +36,27 @@
 
 > `static` **requestDefaults**: `Partial`\<[`UploaderRequest`](../interfaces/UploaderRequest.md)\>
 
-#### Defined in
-
-[src/base/uploader.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L148)
+Defined in: [src/base/uploader.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L148)
 
 ## Methods
 
+### isMultiple()
+
+> **isMultiple**(): `boolean`
+
+Defined in: [src/base/uploader.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L152)
+
+#### Returns
+
+`boolean`
+
+***
+
 ### uploadBatch()
 
-> **uploadBatch**(`batch`, `request`?): `Promise`\<`void`\>
+> **uploadBatch**(`batch`, `request?`): `Promise`\<`void`\>
+
+Defined in: [src/base/uploader.ts:347](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L347)
 
 #### Parameters
 
@@ -62,15 +72,13 @@
 
 `Promise`\<`void`\>
 
-#### Defined in
-
-[src/base/uploader.ts:343](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L343)
-
 ***
 
 ### errorHandler()
 
 > `static` **errorHandler**(`data`): `void`
+
+Defined in: [src/base/uploader.ts:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L464)
 
 #### Parameters
 
@@ -81,7 +89,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/base/uploader.ts:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L460)

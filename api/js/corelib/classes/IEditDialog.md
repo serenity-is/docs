@@ -1,22 +1,34 @@
-[@serenity-is/corelib](../README.md) / IEditDialog
+[serenity-is/corelib](../README.md) / IEditDialog
 
-# Class: IEditDialog
+# Abstract Class: IEditDialog
+
+Defined in: [src/interfaces/ieditdialog.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ieditdialog.ts#L3)
 
 ## Constructors
 
-### new IEditDialog()
+### Constructor
 
-> **new IEditDialog**(): [`IEditDialog`](IEditDialog.md)
+> **new IEditDialog**(): `IEditDialog`
 
 #### Returns
 
-[`IEditDialog`](IEditDialog.md)
+`IEditDialog`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/interfaces/ieditdialog.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ieditdialog.ts#L4)
 
 ## Methods
 
 ### load()
 
-> **load**(`entityOrId`, `done`, `fail`?): `void`
+> **load**(`entityOrId`, `done`, `fail?`): `void`
+
+Defined in: [src/interfaces/ieditdialog.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ieditdialog.ts#L8)
 
 #### Parameters
 
@@ -35,7 +47,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/interfaces/ieditdialog.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ieditdialog.ts#L8)

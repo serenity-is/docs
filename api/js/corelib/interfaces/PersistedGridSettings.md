@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / PersistedGridSettings
+[serenity-is/corelib](../README.md) / PersistedGridSettings
 
 # Interface: PersistedGridSettings
+
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L26)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **columns**: [`PersistedGridColumn`](PersistedGridColumn.md)[]
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L42)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L27)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **filterItems**: [`FilterLine`](FilterLine.md)[]
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L43)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L28)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **includeDeleted**: `boolean`
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L48)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L33)
 
 ***
 
@@ -38,13 +34,11 @@
 
 > `optional` **quickFilters**: `object`
 
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L29)
+
 #### Index Signature
 
- \[`key`: `string`\]: `any`
-
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L44)
+\[`key`: `string`\]: `any`
 
 ***
 
@@ -52,9 +46,7 @@
 
 > `optional` **quickFilterText**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L45)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L30)
 
 ***
 
@@ -62,9 +54,7 @@
 
 > `optional` **quickSearchField**: [`QuickSearchField`](QuickSearchField.md)
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L46)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L31)
 
 ***
 
@@ -72,6 +62,4 @@
 
 > `optional` **quickSearchText**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/datagrid.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L47)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L32)

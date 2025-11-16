@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / TooltipOptions
+[serenity-is/corelib](../README.md) / TooltipOptions
 
 # Interface: TooltipOptions
+
+Defined in: [src/base/tooltip.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L5)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **title**: `string`
 
-#### Defined in
-
-[src/base/tooltip.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L5)
+Defined in: [src/base/tooltip.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L6)
 
 ***
 
@@ -18,6 +18,4 @@
 
 > `optional` **trigger**: `string`
 
-#### Defined in
-
-[src/base/tooltip.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L6)
+Defined in: [src/base/tooltip.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L7)

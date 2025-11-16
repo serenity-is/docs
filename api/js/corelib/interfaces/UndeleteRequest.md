@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / UndeleteRequest
+[serenity-is/corelib](../README.md) / UndeleteRequest
 
 # Interface: UndeleteRequest
+
+Defined in: [src/base/servicetypes.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L33)
 
 ## Extends
 
@@ -12,6 +14,4 @@
 
 > `optional` **EntityId**: `any`
 
-#### Defined in
-
-[src/base/servicetypes.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L34)
+Defined in: [src/base/servicetypes.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L34)

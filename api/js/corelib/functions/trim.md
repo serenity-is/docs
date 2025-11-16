@@ -1,11 +1,12 @@
-[@serenity-is/corelib](../README.md) / trim
+[serenity-is/corelib](../README.md) / trim
 
 # Function: trim()
 
 > **trim**(`s`): `string`
 
+Defined in: [src/compat/strings-compat.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L82)
+
 Trims the whitespace characters from the start and end of the string
-This returns empty string even when the string is null or undefined.
 
 ## Parameters
 
@@ -16,7 +17,3 @@ This returns empty string even when the string is null or undefined.
 ## Returns
 
 `string`
-
-## Defined in
-
-[src/q/strings-compat.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings-compat.ts#L83)

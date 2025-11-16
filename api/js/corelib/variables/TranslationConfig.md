@@ -1,14 +1,20 @@
-[@serenity-is/corelib](../README.md) / TranslationConfig
+[serenity-is/corelib](../README.md) / TranslationConfig
 
 # Variable: TranslationConfig
 
 > `const` **TranslationConfig**: `object`
 
-## Type declaration
+Defined in: [src/base/localtext.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L175)
+
+Configuration for translation services.
+
+## Type Declaration
 
 ### getLanguageList()
 
 > **getLanguageList**: () => [`LanguageList`](../type-aliases/LanguageList.md)
+
+Retrieves the list of available languages
 
 #### Returns
 
@@ -17,6 +23,8 @@
 ### translateTexts()
 
 > **translateTexts**: (`opt`) => `PromiseLike`\<[`TranslateTextsResult`](../type-aliases/TranslateTextsResult.md)\>
+
+A function to translate texts based on provided options
 
 #### Parameters
 
@@ -27,7 +35,3 @@
 #### Returns
 
 `PromiseLike`\<[`TranslateTextsResult`](../type-aliases/TranslateTextsResult.md)\>
-
-## Defined in
-
-[src/base/localtext.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L67)

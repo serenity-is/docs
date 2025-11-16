@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / RowMoveManagerOptions
+[serenity-is/sleekgrid](../README.md) / RowMoveManagerOptions
 
 # Interface: RowMoveManagerOptions
+
+Defined in: [src/plugins/rowmovemanager.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L4)
 
 ## Properties
 
@@ -8,6 +10,4 @@
 
 > `optional` **cancelEditOnDrag**: `boolean`
 
-#### Defined in
-
-[plugins/rowmovemanager.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/plugins/rowmovemanager.ts#L5)
+Defined in: [src/plugins/rowmovemanager.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L5)

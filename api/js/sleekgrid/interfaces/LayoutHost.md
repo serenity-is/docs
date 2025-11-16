@@ -1,112 +1,50 @@
-[@serenity-is/sleekgrid](../README.md) / LayoutHost
+[serenity-is/sleekgrid](../README.md) / LayoutHost
 
 # Interface: LayoutHost
 
+Defined in: [src/layouts/layout-host.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L7)
+
+## Extends
+
+- `Pick`\<[`ISleekGrid`](ISleekGrid.md), `"getAllColumns"` \| `"getColumns"` \| `"getOptions"` \| `"getContainerNode"` \| `"getDataLength"` \| `"onAfterInit"`\>.[`GridPluginHost`](GridPluginHost.md)
+
+## Properties
+
+### onAfterInit
+
+> `readonly` **onAfterInit**: [`EventEmitter`](../classes/EventEmitter.md)\<[`ArgsGrid`](ArgsGrid.md)\>
+
+Defined in: [src/core/isleekgrid.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L16)
+
+#### Inherited from
+
+`Pick.onAfterInit`
+
+***
+
+### refs
+
+> `readonly` **refs**: [`GridLayoutRefs`](../type-aliases/GridLayoutRefs.md)
+
+Defined in: [src/layouts/layout-host.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L12)
+
 ## Methods
 
-### bindAncestorScroll()
+### getAllColumns()
 
-> **bindAncestorScroll**(`el`): `void`
+> **getAllColumns**(): [`Column`](Column.md)\<`any`\>[]
 
-#### Parameters
+Defined in: [src/core/isleekgrid.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L66)
 
-##### el
-
-`HTMLElement`
+Returns all columns in the grid, including hidden ones, the order might not match visible columns due to pinning, ordering etc.
 
 #### Returns
 
-`void`
+[`Column`](Column.md)\<`any`\>[]
 
-#### Defined in
+#### Inherited from
 
-[grid/layout.ts:7](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L7)
-
-***
-
-### cleanUpAndRenderCells()
-
-> **cleanUpAndRenderCells**(`range`): `void`
-
-#### Parameters
-
-##### range
-
-[`ViewRange`](ViewRange.md)
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[grid/layout.ts:8](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L8)
-
-***
-
-### getAvailableWidth()
-
-> **getAvailableWidth**(): `number`
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-[grid/layout.ts:9](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L9)
-
-***
-
-### getCellFromPoint()
-
-> **getCellFromPoint**(`x`, `y`): [`RowCell`](RowCell.md)
-
-#### Parameters
-
-##### x
-
-`number`
-
-##### y
-
-`number`
-
-#### Returns
-
-[`RowCell`](RowCell.md)
-
-#### Defined in
-
-[grid/layout.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L10)
-
-***
-
-### getColumnCssRules()
-
-> **getColumnCssRules**(`idx`): `object`
-
-#### Parameters
-
-##### idx
-
-`number`
-
-#### Returns
-
-`object`
-
-##### left
-
-> **left**: `any`
-
-##### right
-
-> **right**: `any`
-
-#### Defined in
-
-[grid/layout.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L11)
+`Pick.getAllColumns`
 
 ***
 
@@ -114,13 +52,17 @@
 
 > **getColumns**(): [`Column`](Column.md)\<`any`\>[]
 
+Defined in: [src/core/isleekgrid.ts:83](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L83)
+
+Returns only the visible columns in order
+
 #### Returns
 
 [`Column`](Column.md)\<`any`\>[]
 
-#### Defined in
+#### Inherited from
 
-[grid/layout.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L12)
+`Pick.getColumns`
 
 ***
 
@@ -128,13 +70,15 @@
 
 > **getContainerNode**(): `HTMLElement`
 
+Defined in: [src/core/isleekgrid.ts:84](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L84)
+
 #### Returns
 
 `HTMLElement`
 
-#### Defined in
+#### Inherited from
 
-[grid/layout.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L13)
+`Pick.getContainerNode`
 
 ***
 
@@ -142,13 +86,15 @@
 
 > **getDataLength**(): `number`
 
+Defined in: [src/core/isleekgrid.ts:88](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L88)
+
 #### Returns
 
 `number`
 
-#### Defined in
+#### Inherited from
 
-[grid/layout.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L14)
+`Pick.getDataLength`
 
 ***
 
@@ -156,83 +102,49 @@
 
 > **getOptions**(): [`GridOptions`](GridOptions.md)\<`any`\>
 
+Defined in: [src/core/isleekgrid.ts:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L103)
+
 #### Returns
 
 [`GridOptions`](GridOptions.md)\<`any`\>
 
-#### Defined in
+#### Inherited from
 
-[grid/layout.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L15)
+`Pick.getOptions`
 
 ***
 
-### getRowFromNode()
+### getPluginByName()
 
-> **getRowFromNode**(`rowNode`): `number`
+> **getPluginByName**(`name`): [`GridPlugin`](GridPlugin.md)
+
+Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L15)
 
 #### Parameters
 
-##### rowNode
+##### name
 
-`HTMLElement`
+`string`
 
 #### Returns
 
-`number`
+[`GridPlugin`](GridPlugin.md)
 
-#### Defined in
+#### Inherited from
 
-[grid/layout.ts:16](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L16)
+[`GridPluginHost`](GridPluginHost.md).[`getPluginByName`](GridPluginHost.md#getpluginbyname)
 
 ***
 
-### getScrollDims()
+### getSignals()
 
-> **getScrollDims**(): `object`
+> **getSignals**(): [`GridSignals`](GridSignals.md)
 
-#### Returns
-
-`object`
-
-##### height
-
-> **height**: `number`
-
-##### width
-
-> **width**: `number`
-
-#### Defined in
-
-[grid/layout.ts:17](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L17)
-
-***
-
-### getScrollLeft()
-
-> **getScrollLeft**(): `number`
+Defined in: [src/layouts/layout-host.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L9)
 
 #### Returns
 
-`number`
-
-#### Defined in
-
-[grid/layout.ts:18](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L18)
-
-***
-
-### getScrollTop()
-
-> **getScrollTop**(): `number`
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-[grid/layout.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L19)
+[`GridSignals`](GridSignals.md)
 
 ***
 
@@ -240,30 +152,70 @@
 
 > **getViewportInfo**(): [`ViewportInfo`](ViewportInfo.md)
 
+Defined in: [src/layouts/layout-host.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L10)
+
 #### Returns
 
 [`ViewportInfo`](ViewportInfo.md)
 
-#### Defined in
-
-[grid/layout.ts:20](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L20)
-
 ***
 
-### renderRows()
+### registerPlugin()
 
-> **renderRows**(`range`): `void`
+> **registerPlugin**(`plugin`): `void`
+
+Defined in: [src/core/grid-plugin.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L16)
 
 #### Parameters
 
-##### range
+##### plugin
 
-[`ViewRange`](ViewRange.md)
+[`GridPlugin`](GridPlugin.md)
 
 #### Returns
 
 `void`
 
-#### Defined in
+#### Inherited from
 
-[grid/layout.ts:21](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/layout.ts#L21)
+[`GridPluginHost`](GridPluginHost.md).[`registerPlugin`](GridPluginHost.md#registerplugin)
+
+***
+
+### removeNode()
+
+> **removeNode**(`node`): `void`
+
+Defined in: [src/layouts/layout-host.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L11)
+
+#### Parameters
+
+##### node
+
+`HTMLElement`
+
+#### Returns
+
+`void`
+
+***
+
+### unregisterPlugin()
+
+> **unregisterPlugin**(`plugin`): `void`
+
+Defined in: [src/core/grid-plugin.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L17)
+
+#### Parameters
+
+##### plugin
+
+[`GridPlugin`](GridPlugin.md)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`GridPluginHost`](GridPluginHost.md).[`unregisterPlugin`](GridPluginHost.md#unregisterplugin)

@@ -1,16 +1,18 @@
-[@serenity-is/corelib](../README.md) / scriptDataHooks
+[serenity-is/corelib](../README.md) / scriptDataHooks
 
 # Variable: scriptDataHooks
 
 > `const` **scriptDataHooks**: `object`
 
+Defined in: [src/base/scriptdata.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L50)
+
 Hook for script data related operations
 
-## Type declaration
+## Type Declaration
 
 ### fetchScriptData()
 
-> **fetchScriptData**: \<`TData`\>(`name`, `sync`?, `dynJS`?) => `TData` \| `Promise`\<`TData`\>
+> **fetchScriptData**: \<`TData`\>(`name`, `sync?`, `dynJS?`) => `TData` \| `Promise`\<`TData`\>
 
 Provides a hook to override the default fetchScriptData implementation,
 it falls back to the default implementation if undefined is returned.
@@ -21,7 +23,9 @@ and not a JSON request. This parameter is only true for the legacy/compat sync m
 
 #### Type Parameters
 
-• **TData**
+##### TData
+
+`TData`
 
 #### Parameters
 
@@ -40,7 +44,3 @@ and not a JSON request. This parameter is only true for the legacy/compat sync m
 #### Returns
 
 `TData` \| `Promise`\<`TData`\>
-
-## Defined in
-
-[src/base/scriptdata.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L50)

@@ -1,6 +1,10 @@
-[@serenity-is/corelib](../README.md) / TypeMember
+[serenity-is/corelib](../README.md) / TypeMember
 
 # Interface: TypeMember
+
+Defined in: [src/compat/system-compat.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L77)
+
+Type member information, preserved for compatibility as used by legacy option decorator
 
 ## Properties
 
@@ -8,9 +12,7 @@
 
 > `optional` **attr**: `any`[]
 
-#### Defined in
-
-[src/q/system-compat.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L76)
+Defined in: [src/compat/system-compat.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L80)
 
 ***
 
@@ -18,9 +20,15 @@
 
 > `optional` **getter**: `string`
 
-#### Defined in
+Defined in: [src/compat/system-compat.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L81)
 
-[src/q/system-compat.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L77)
+***
+
+### kind
+
+> **kind**: [`TypeMemberKind`](../enumerations/TypeMemberKind.md)
+
+Defined in: [src/compat/system-compat.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L79)
 
 ***
 
@@ -28,9 +36,7 @@
 
 > **name**: `string`
 
-#### Defined in
-
-[src/q/system-compat.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L74)
+Defined in: [src/compat/system-compat.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L78)
 
 ***
 
@@ -38,16 +44,4 @@
 
 > `optional` **setter**: `string`
 
-#### Defined in
-
-[src/q/system-compat.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L78)
-
-***
-
-### type
-
-> **type**: [`MemberType`](../enumerations/MemberType.md)
-
-#### Defined in
-
-[src/q/system-compat.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L75)
+Defined in: [src/compat/system-compat.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L82)

@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ComboboxFilterOptions
+[serenity-is/corelib](../README.md) / ComboboxFilterOptions
 
 # Interface: ComboboxFilterOptions
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L21)
 
 ## Extended by
 
@@ -12,9 +14,7 @@
 
 > `optional` **cascadeField**: `string`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
+Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
 
 ***
 
@@ -22,9 +22,7 @@
 
 > `optional` **cascadeFrom**: `string`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
+Defined in: [src/ui/editors/comboboxeditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L22)
 
 ***
 
@@ -32,9 +30,7 @@
 
 > `optional` **cascadeValue**: `any`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+Defined in: [src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
 
 ***
 
@@ -42,9 +38,7 @@
 
 > `optional` **filterField**: `string`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)
+Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
 
 ***
 
@@ -52,6 +46,4 @@
 
 > `optional` **filterValue**: `any`
 
-#### Defined in
-
-[src/ui/editors/comboboxeditor.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L27)
+Defined in: [src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)

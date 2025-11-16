@@ -1,18 +1,22 @@
-[@serenity-is/sleekgrid](../README.md) / EditorFactory
+[serenity-is/sleekgrid](../README.md) / EditorFactory
 
 # Interface: EditorFactory
+
+Defined in: [src/core/editing.ts:51](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L51)
 
 ## Methods
 
 ### getEditor()
 
-> **getEditor**(`column`, `row`?): [`EditorClass`](EditorClass.md)
+> **getEditor**(`column`, `row?`): [`EditorClass`](EditorClass.md)
+
+Defined in: [src/core/editing.ts:52](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L52)
 
 #### Parameters
 
 ##### column
 
-[`Column`](Column.md)\<`any`\>
+[`Column`](Column.md)
 
 ##### row?
 
@@ -21,7 +25,3 @@
 #### Returns
 
 [`EditorClass`](EditorClass.md)
-
-#### Defined in
-
-[core/editing.ts:51](https://github.com/serenity-is/sleekgrid/blob/master/src/core/editing.ts#L51)

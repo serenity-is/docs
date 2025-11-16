@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / Select2
+[serenity-is/corelib](../README.md) / Select2
 
 # Class: Select2
 
+Defined in: [src/ui/editors/select2.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L471)
+
 ## Constructors
 
-### new Select2()
+### Constructor
 
-> **new Select2**(`opts`?): [`Select2`](Select2.md)
+> **new Select2**(`opts?`): `Select2`
+
+Defined in: [src/ui/editors/select2.ts:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L475)
 
 #### Parameters
 
@@ -16,11 +20,7 @@
 
 #### Returns
 
-[`Select2`](Select2.md)
-
-#### Defined in
-
-[src/ui/editors/select2.ts:482](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L482)
+`Select2`
 
 ## Properties
 
@@ -28,9 +28,7 @@
 
 > `readonly` `static` **ajaxDefaults**: [`Select2AjaxOptions`](../interfaces/Select2AjaxOptions.md)
 
-#### Defined in
-
-[src/ui/editors/select2.ts:588](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L588)
+Defined in: [src/ui/editors/select2.ts:581](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L581)
 
 ***
 
@@ -38,9 +36,7 @@
 
 > `readonly` `static` **defaults**: [`Select2Options`](../interfaces/Select2Options.md)
 
-#### Defined in
-
-[src/ui/editors/select2.ts:597](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L597)
+Defined in: [src/ui/editors/select2.ts:590](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L590)
 
 ## Accessors
 
@@ -50,13 +46,11 @@
 
 > **get** **container**(): `HTMLElement`
 
+Defined in: [src/ui/editors/select2.ts:507](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L507)
+
 ##### Returns
 
 `HTMLElement`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L514)
 
 ***
 
@@ -66,6 +60,8 @@
 
 > **get** **data**(): [`Select2Item`](../interfaces/Select2Item.md) \| [`Select2Item`](../interfaces/Select2Item.md)[]
 
+Defined in: [src/ui/editors/select2.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L519)
+
 ##### Returns
 
 [`Select2Item`](../interfaces/Select2Item.md) \| [`Select2Item`](../interfaces/Select2Item.md)[]
@@ -73,6 +69,8 @@
 #### Set Signature
 
 > **set** **data**(`value`): `void`
+
+Defined in: [src/ui/editors/select2.ts:523](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L523)
 
 ##### Parameters
 
@@ -84,10 +82,6 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:526](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L526)
-
 ***
 
 ### dropdown
@@ -96,13 +90,11 @@
 
 > **get** **dropdown**(): `HTMLElement`
 
+Defined in: [src/ui/editors/select2.ts:511](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L511)
+
 ##### Returns
 
 `HTMLElement`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L518)
 
 ***
 
@@ -112,13 +104,11 @@
 
 > **get** **isFocused**(): `boolean`
 
+Defined in: [src/ui/editors/select2.ts:539](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L539)
+
 ##### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:546](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L546)
 
 ***
 
@@ -128,13 +118,11 @@
 
 > **get** **isMultiple**(): `boolean`
 
+Defined in: [src/ui/editors/select2.ts:543](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L543)
+
 ##### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:550](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L550)
 
 ***
 
@@ -144,13 +132,11 @@
 
 > **get** **opened**(): `boolean`
 
+Defined in: [src/ui/editors/select2.ts:547](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L547)
+
 ##### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:554](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L554)
 
 ***
 
@@ -160,13 +146,11 @@
 
 > **get** **search**(): `HTMLInputElement`
 
+Defined in: [src/ui/editors/select2.ts:563](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L563)
+
 ##### Returns
 
 `HTMLInputElement`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:570](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L570)
 
 ***
 
@@ -176,6 +160,8 @@
 
 > **get** **val**(): `string` \| `string`[]
 
+Defined in: [src/ui/editors/select2.ts:567](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L567)
+
 ##### Returns
 
 `string` \| `string`[]
@@ -183,6 +169,8 @@
 #### Set Signature
 
 > **set** **val**(`value`): `void`
+
+Defined in: [src/ui/editors/select2.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L571)
 
 ##### Parameters
 
@@ -194,23 +182,17 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L574)
-
 ## Methods
 
 ### close()
 
 > **close**(): `void`
 
+Defined in: [src/ui/editors/select2.ts:503](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L503)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:510](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L510)
 
 ***
 
@@ -218,13 +200,11 @@
 
 > **destroy**(): `void`
 
+Defined in: [src/ui/editors/select2.ts:515](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L515)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:522](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L522)
 
 ***
 
@@ -232,19 +212,19 @@
 
 > **disable**(): `void`
 
+Defined in: [src/ui/editors/select2.ts:527](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L527)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:534](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L534)
 
 ***
 
 ### enable()
 
-> **enable**(`enabled`?): `void`
+> **enable**(`enabled?`): `void`
+
+Defined in: [src/ui/editors/select2.ts:531](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L531)
 
 #### Parameters
 
@@ -256,23 +236,17 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:538](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L538)
-
 ***
 
 ### focus()
 
 > **focus**(): `void`
 
+Defined in: [src/ui/editors/select2.ts:535](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L535)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L542)
 
 ***
 
@@ -280,13 +254,11 @@
 
 > **open**(): `boolean`
 
+Defined in: [src/ui/editors/select2.ts:551](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L551)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:558](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L558)
 
 ***
 
@@ -294,19 +266,19 @@
 
 > **positionDropdown**(): `void`
 
+Defined in: [src/ui/editors/select2.ts:555](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L555)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:562](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L562)
 
 ***
 
 ### readonly()
 
-> **readonly**(`value`?): `void`
+> **readonly**(`value?`): `void`
+
+Defined in: [src/ui/editors/select2.ts:559](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L559)
 
 #### Parameters
 
@@ -318,15 +290,13 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/select2.ts:566](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L566)
-
 ***
 
 ### getInstance()
 
-> `static` **getInstance**(`el`): [`Select2`](Select2.md)
+> `static` **getInstance**(`el`): `Select2`
+
+Defined in: [src/ui/editors/select2.ts:575](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L575)
 
 #### Parameters
 
@@ -336,17 +306,15 @@
 
 #### Returns
 
-[`Select2`](Select2.md)
-
-#### Defined in
-
-[src/ui/editors/select2.ts:582](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L582)
+`Select2`
 
 ***
 
 ### stripDiacritics()
 
 > `static` **stripDiacritics**(`str`): `string`
+
+Defined in: [src/ui/editors/select2.ts:652](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L652)
 
 #### Parameters
 
@@ -357,7 +325,3 @@
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/editors/select2.ts:659](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L659)

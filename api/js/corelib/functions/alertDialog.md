@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / alertDialog
+[serenity-is/corelib](../README.md) / alertDialog
 
 # Function: alertDialog()
 
-> **alertDialog**(`message`, `options`?): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+> **alertDialog**(`message`, `options?`): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+
+Defined in: [src/base/dialogs.tsx:984](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L984)
 
 Displays an alert dialog
 
@@ -10,7 +12,7 @@ Displays an alert dialog
 
 ### message
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 The message to display
 
@@ -33,7 +35,3 @@ AlertOptions
 ```ts
 alertDialog("An error occured!"); }
 ```
-
-## Defined in
-
-[src/base/dialogs.tsx:963](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L963)

@@ -1,12 +1,22 @@
-[@serenity-is/corelib](../README.md) / PanelAttribute
+[serenity-is/corelib](../README.md) / PanelAttribute
 
 # Class: PanelAttribute
 
+Defined in: [src/types/attributes.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L61)
+
+Indicates if a dialog should be opened as a panel
+
+## Extends
+
+- [`CustomAttribute`](CustomAttribute.md)
+
 ## Constructors
 
-### new PanelAttribute()
+### Constructor
 
-> **new PanelAttribute**(`value`): [`PanelAttribute`](PanelAttribute.md)
+> **new PanelAttribute**(`value`): `PanelAttribute`
+
+Defined in: [src/types/attributes.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L64)
 
 #### Parameters
 
@@ -16,11 +26,11 @@
 
 #### Returns
 
-[`PanelAttribute`](PanelAttribute.md)
+`PanelAttribute`
 
-#### Defined in
+#### Overrides
 
-[src/types/attributes.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L192)
+[`CustomAttribute`](CustomAttribute.md).[`constructor`](CustomAttribute.md#constructor)
 
 ## Properties
 
@@ -28,6 +38,16 @@
 
 > **value**: `boolean` = `true`
 
-#### Defined in
+Defined in: [src/types/attributes.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L64)
 
-[src/types/attributes.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L192)
+***
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/types/attributes.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L62)
+
+#### Overrides
+
+[`CustomAttribute`](CustomAttribute.md).[`[typeInfo]`](CustomAttribute.md#typeinfo)

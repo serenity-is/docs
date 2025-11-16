@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / EntityLocalizerOptions
+[serenity-is/corelib](../README.md) / EntityLocalizerOptions
 
 # Interface: EntityLocalizerOptions
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L4)
 
 ## Properties
 
 ### byId()
 
-> **byId**: (`id`) => [`Fluent`](Fluent.md)\<`HTMLElement`\>
+> **byId**: (`id`) => [`Fluent`](Fluent.md)
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L5)
 
 #### Parameters
 
@@ -16,25 +20,19 @@
 
 #### Returns
 
-[`Fluent`](Fluent.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L6)
+[`Fluent`](Fluent.md)
 
 ***
 
 ### getButton()
 
-> **getButton**: () => [`Fluent`](Fluent.md)\<`HTMLElement`\>
+> **getButton**: () => [`Fluent`](Fluent.md)
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L8)
 
 #### Returns
 
-[`Fluent`](Fluent.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L9)
+[`Fluent`](Fluent.md)
 
 ***
 
@@ -42,13 +40,11 @@
 
 > **getEntity**: () => `any`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L9)
+
 #### Returns
 
 `any`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L10)
 
 ***
 
@@ -56,27 +52,23 @@
 
 > **getLanguages**: () => [`LanguageList`](../type-aliases/LanguageList.md)
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L10)
+
 #### Returns
 
 [`LanguageList`](../type-aliases/LanguageList.md)
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L11)
 
 ***
 
 ### getPropertyGrid()
 
-> **getPropertyGrid**: () => [`Fluent`](Fluent.md)\<`HTMLElement`\>
+> **getPropertyGrid**: () => [`Fluent`](Fluent.md)
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L11)
 
 #### Returns
 
-[`Fluent`](Fluent.md)\<`HTMLElement`\>
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L12)
+[`Fluent`](Fluent.md)
 
 ***
 
@@ -84,13 +76,11 @@
 
 > **getToolButtons**: () => `HTMLElement`[]
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L12)
+
 #### Returns
 
 `HTMLElement`[]
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L13)
 
 ***
 
@@ -98,9 +88,7 @@
 
 > **idPrefix**: `string`
 
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L7)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L6)
 
 ***
 
@@ -108,13 +96,11 @@
 
 > **isNew**: () => `boolean`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L7)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L8)
 
 ***
 
@@ -122,23 +108,19 @@
 
 > **pgOptions**: [`PropertyGridOptions`](PropertyGridOptions.md)
 
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L14)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L13)
 
 ***
 
 ### retrieveLocalizations()
 
-> **retrieveLocalizations**: () => `PromiseLike`\<`object`\>
+> **retrieveLocalizations**: () => `PromiseLike`\<\{\[`languageId`: `string`\]: `any`; \}\>
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L14)
 
 #### Returns
 
-`PromiseLike`\<`object`\>
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L15)
+`PromiseLike`\<\{\[`languageId`: `string`\]: `any`; \}\>
 
 ***
 
@@ -146,10 +128,8 @@
 
 > **validateForm**: () => `boolean`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L15)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L16)

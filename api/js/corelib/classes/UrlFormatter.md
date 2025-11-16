@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / UrlFormatter
+[serenity-is/corelib](../README.md) / UrlFormatter
 
 # Class: UrlFormatter
+
+Defined in: [src/ui/formatters/urlformatter.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L6)
 
 ## Implements
 
@@ -9,47 +11,47 @@
 
 ## Constructors
 
-### new UrlFormatter()
+### Constructor
 
-> **new UrlFormatter**(`props`): [`UrlFormatter`](UrlFormatter.md)
+> **new UrlFormatter**(`props`): `UrlFormatter`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L9)
 
 #### Parameters
 
 ##### props
 
-###### props.displayFormat
+###### displayFormat?
 
 `string`
 
-###### props.displayProperty
+###### displayProperty?
 
 `string`
 
-###### props.target
+###### target?
 
 `string`
 
-###### props.urlFormat
+###### urlFormat?
 
 `string`
 
-###### props.urlProperty
+###### urlProperty?
 
 `string`
 
 #### Returns
 
-[`UrlFormatter`](UrlFormatter.md)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L260)
+`UrlFormatter`
 
 ## Properties
 
 ### props
 
 > `readonly` **props**: `object` = `{}`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L9)
 
 #### displayFormat?
 
@@ -71,9 +73,17 @@
 
 > `optional` **urlProperty**: `string`
 
-#### Defined in
+***
 
-[src/ui/formatters/formatters.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L260)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/formatters/urlformatter.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L7)
+
+#### Implementation of
+
+[`IInitializeColumn`](IInitializeColumn.md).[`[typeInfo]`](IInitializeColumn.md#typeinfo)
 
 ## Accessors
 
@@ -83,6 +93,8 @@
 
 > **get** **displayFormat**(): `string`
 
+Defined in: [src/ui/formatters/urlformatter.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L52)
+
 ##### Returns
 
 `string`
@@ -90,6 +102,8 @@
 #### Set Signature
 
 > **set** **displayFormat**(`value`): `void`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L53)
 
 ##### Parameters
 
@@ -100,10 +114,6 @@
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:308](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L308)
 
 ***
 
@@ -113,6 +123,8 @@
 
 > **get** **displayProperty**(): `string`
 
+Defined in: [src/ui/formatters/urlformatter.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L49)
+
 ##### Returns
 
 `string`
@@ -120,6 +132,8 @@
 #### Set Signature
 
 > **set** **displayProperty**(`value`): `void`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L50)
 
 ##### Parameters
 
@@ -130,10 +144,6 @@
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:305](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L305)
 
 ***
 
@@ -143,6 +153,8 @@
 
 > **get** **target**(): `string`
 
+Defined in: [src/ui/formatters/urlformatter.tsx:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L61)
+
 ##### Returns
 
 `string`
@@ -150,6 +162,8 @@
 #### Set Signature
 
 > **set** **target**(`value`): `void`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L62)
 
 ##### Parameters
 
@@ -160,10 +174,6 @@
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L317)
 
 ***
 
@@ -173,6 +183,8 @@
 
 > **get** **urlFormat**(): `string`
 
+Defined in: [src/ui/formatters/urlformatter.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L58)
+
 ##### Returns
 
 `string`
@@ -180,6 +192,8 @@
 #### Set Signature
 
 > **set** **urlFormat**(`value`): `void`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L59)
 
 ##### Parameters
 
@@ -190,10 +204,6 @@
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:314](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L314)
 
 ***
 
@@ -203,6 +213,8 @@
 
 > **get** **urlProperty**(): `string`
 
+Defined in: [src/ui/formatters/urlformatter.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L55)
+
 ##### Returns
 
 `string`
@@ -210,6 +222,8 @@
 #### Set Signature
 
 > **set** **urlProperty**(`value`): `void`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L56)
 
 ##### Parameters
 
@@ -221,33 +235,27 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/formatters/formatters.ts:311](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L311)
-
 ## Methods
 
 ### format()
 
-> **format**(`ctx`): `string`
+> **format**(`ctx`): `FormatterResult`
+
+Defined in: [src/ui/formatters/urlformatter.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L13)
 
 #### Parameters
 
 ##### ctx
 
-`FormatterContext`\<`any`\>
+`FormatterContext`
 
 #### Returns
 
-`string`
+`FormatterResult`
 
 #### Implementation of
 
 [`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L264)
 
 ***
 
@@ -255,11 +263,13 @@
 
 > **initializeColumn**(`column`): `void`
 
+Defined in: [src/ui/formatters/urlformatter.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/urlformatter.tsx#L37)
+
 #### Parameters
 
 ##### column
 
-`Column`\<`any`\>
+`Column`
 
 #### Returns
 
@@ -268,7 +278,3 @@
 #### Implementation of
 
 [`IInitializeColumn`](IInitializeColumn.md).[`initializeColumn`](IInitializeColumn.md#initializecolumn)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L293)

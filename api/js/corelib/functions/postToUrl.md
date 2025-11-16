@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / postToUrl
+[serenity-is/corelib](../README.md) / postToUrl
 
 # Function: postToUrl()
 
 > **postToUrl**(`options`): `void`
+
+Defined in: [src/compat/services-compat.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/services-compat.tsx#L49)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/q/services-compat.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/services-compat.tsx#L65)

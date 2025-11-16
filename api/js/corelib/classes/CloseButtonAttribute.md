@@ -1,12 +1,22 @@
-[@serenity-is/corelib](../README.md) / CloseButtonAttribute
+[serenity-is/corelib](../README.md) / CloseButtonAttribute
 
 # Class: CloseButtonAttribute
 
+Defined in: [src/types/attributes.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L6)
+
+Indicates if a dialog should have a close button in its title bar (default true)
+
+## Extends
+
+- [`CustomAttribute`](CustomAttribute.md)
+
 ## Constructors
 
-### new CloseButtonAttribute()
+### Constructor
 
-> **new CloseButtonAttribute**(`value`): [`CloseButtonAttribute`](CloseButtonAttribute.md)
+> **new CloseButtonAttribute**(`value`): `CloseButtonAttribute`
+
+Defined in: [src/types/attributes.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L9)
 
 #### Parameters
 
@@ -16,11 +26,11 @@
 
 #### Returns
 
-[`CloseButtonAttribute`](CloseButtonAttribute.md)
+`CloseButtonAttribute`
 
-#### Defined in
+#### Overrides
 
-[src/types/attributes.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L35)
+[`CustomAttribute`](CustomAttribute.md).[`constructor`](CustomAttribute.md#constructor)
 
 ## Properties
 
@@ -28,6 +38,16 @@
 
 > **value**: `boolean` = `true`
 
-#### Defined in
+Defined in: [src/types/attributes.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L9)
 
-[src/types/attributes.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L35)
+***
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/types/attributes.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L7)
+
+#### Overrides
+
+[`CustomAttribute`](CustomAttribute.md).[`[typeInfo]`](CustomAttribute.md#typeinfo)

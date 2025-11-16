@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / getScriptDataHash
+[serenity-is/corelib](../README.md) / getScriptDataHash
 
 # Function: getScriptDataHash()
 
-> **getScriptDataHash**(`name`, `reload`?): `string`
+> **getScriptDataHash**(`name`, `reload?`): `string`
+
+Defined in: [src/base/scriptdata.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L19)
 
 Gets the known hash value for a given dynamic script name. They are usually
 registered server-side via dynamic script manager and their latest known
@@ -28,7 +30,3 @@ lookups etc.
 `string`
 
 The hash or null if no such known registration
-
-## Defined in
-
-[src/base/scriptdata.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L19)

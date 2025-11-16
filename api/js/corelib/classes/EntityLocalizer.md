@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / EntityLocalizer
+[serenity-is/corelib](../README.md) / EntityLocalizer
 
 # Class: EntityLocalizer
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L18)
+
 ## Constructors
 
-### new EntityLocalizer()
+### Constructor
 
-> **new EntityLocalizer**(`opt`): [`EntityLocalizer`](EntityLocalizer.md)
+> **new EntityLocalizer**(`opt`): `EntityLocalizer`
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L27)
 
 #### Parameters
 
@@ -16,21 +20,15 @@
 
 #### Returns
 
-[`EntityLocalizer`](EntityLocalizer.md)
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L28)
+`EntityLocalizer`
 
 ## Properties
 
 ### grid
 
-> `protected` **grid**: [`PropertyGrid`](PropertyGrid.md)\<[`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)\>
+> `protected` **grid**: [`PropertyGrid`](PropertyGrid.md)
 
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L21)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L20)
 
 ***
 
@@ -38,9 +36,7 @@
 
 > `protected` **lastValue**: `any`
 
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L23)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L22)
 
 ***
 
@@ -48,9 +44,7 @@
 
 > `protected` **pendingValue**: `any`
 
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L22)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L21)
 
 ***
 
@@ -58,9 +52,7 @@
 
 > `protected` **targetLanguage**: `HTMLSelectElement`
 
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L24)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L23)
 
 ## Methods
 
@@ -68,13 +60,11 @@
 
 > **buttonClick**(): `void`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L152)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L153)
 
 ***
 
@@ -82,13 +72,11 @@
 
 > **clearValue**(): `void`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L130)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L131)
 
 ***
 
@@ -96,19 +84,19 @@
 
 > **destroy**(): `void`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L123)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L124)
 
 ***
 
 ### editSaveRequest()
 
 > **editSaveRequest**(`req`): `void`
+
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L231)
 
 #### Parameters
 
@@ -120,23 +108,17 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L232)
-
 ***
 
 ### getLocalizationGridValue()
 
 > `protected` **getLocalizationGridValue**(): `any`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L218)
+
 #### Returns
 
 `any`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L219)
 
 ***
 
@@ -144,13 +126,11 @@
 
 > `protected` **getPendingLocalizations**(): `any`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L237)
+
 #### Returns
 
 `any`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L238)
 
 ***
 
@@ -158,13 +138,11 @@
 
 > **isEnabled**(): `boolean`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L135)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L136)
 
 ***
 
@@ -172,13 +150,11 @@
 
 > `protected` **isLocalizationMode**(): `boolean`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L139)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L140)
 
 ***
 
@@ -186,13 +162,11 @@
 
 > `protected` **isLocalizationModeAndChanged**(): `boolean`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L143)
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L144)
 
 ***
 
@@ -200,13 +174,11 @@
 
 > `protected` **loadLocalization**(): `void`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L170)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L171)
 
 ***
 
@@ -214,13 +186,11 @@
 
 > `protected` **setLocalizationGridCurrentValues**(): `void`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L197)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L198)
 
 ***
 
@@ -228,10 +198,8 @@
 
 > **updateInterface**(): `void`
 
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L260)
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/dialogs/entitylocalizer.tsx:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L261)

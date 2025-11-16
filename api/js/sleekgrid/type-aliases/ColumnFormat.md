@@ -1,12 +1,16 @@
-[@serenity-is/sleekgrid](../README.md) / ColumnFormat
+[serenity-is/sleekgrid](../README.md) / ColumnFormat
 
 # Type Alias: ColumnFormat()\<TItem\>
 
-> **ColumnFormat**\<`TItem`\>: (`ctx`) => [`FormatterResult`](FormatterResult.md)
+> **ColumnFormat**\<`TItem`\> = (`ctx`) => [`FormatterResult`](FormatterResult.md)
+
+Defined in: [src/core/formatting.ts:83](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L83)
 
 ## Type Parameters
 
-• **TItem** = `any`
+### TItem
+
+`TItem` = `any`
 
 ## Parameters
 
@@ -17,7 +21,3 @@
 ## Returns
 
 [`FormatterResult`](FormatterResult.md)
-
-## Defined in
-
-[core/formatting.ts:62](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L62)

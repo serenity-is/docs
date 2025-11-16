@@ -1,22 +1,34 @@
-[@serenity-is/corelib](../README.md) / AutoNumeric
+[serenity-is/corelib](../README.md) / AutoNumeric
 
 # Class: AutoNumeric
 
+Defined in: [src/ui/editors/autonumeric.ts:887](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L887)
+
 ## Constructors
 
-### new AutoNumeric()
+### Constructor
 
-> **new AutoNumeric**(): [`AutoNumeric`](AutoNumeric.md)
+> **new AutoNumeric**(): `AutoNumeric`
 
 #### Returns
 
-[`AutoNumeric`](AutoNumeric.md)
+`AutoNumeric`
+
+## Properties
+
+### allowedSettingKeys
+
+> `readonly` `static` **allowedSettingKeys**: `Set`\<`string`\>
+
+Defined in: [src/ui/editors/autonumeric.ts:1281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1281)
 
 ## Methods
 
 ### destroy()
 
 > `static` **destroy**(`input`): `void`
+
+Defined in: [src/ui/editors/autonumeric.ts:1174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1174)
 
 method to remove settings and stop autoNumeric()
 
@@ -30,15 +42,13 @@ method to remove settings and stop autoNumeric()
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:1178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1178)
-
 ***
 
 ### getSettings()
 
 > `static` **getSettings**(`input`): [`AutoNumericOptions`](../interfaces/AutoNumericOptions.md)
+
+Defined in: [src/ui/editors/autonumeric.ts:1273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1273)
 
 returns the settings object for those who need to look under the hood
 
@@ -52,15 +62,13 @@ returns the settings object for those who need to look under the hood
 
 [`AutoNumericOptions`](../interfaces/AutoNumericOptions.md)
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:1277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1277)
-
 ***
 
 ### getValue()
 
 > `static` **getValue**(`input`): `string`
+
+Defined in: [src/ui/editors/autonumeric.ts:1237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1237)
 
 method to get the unformatted value from a specific input field, returns a numeric value
 
@@ -74,15 +82,13 @@ method to get the unformatted value from a specific input field, returns a numer
 
 `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:1241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1241)
-
 ***
 
 ### hasInstance()
 
 > `static` **hasInstance**(`input`): `boolean`
+
+Defined in: [src/ui/editors/autonumeric.ts:1277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1277)
 
 #### Parameters
 
@@ -94,15 +100,13 @@ method to get the unformatted value from a specific input field, returns a numer
 
 `boolean`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:1281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1281)
-
 ***
 
 ### init()
 
 > `static` **init**(`input`, `options`): `void`
+
+Defined in: [src/ui/editors/autonumeric.ts:889](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L889)
 
 #### Parameters
 
@@ -118,15 +122,13 @@ method to get the unformatted value from a specific input field, returns a numer
 
 `void`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:893](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L893)
-
 ***
 
 ### setValue()
 
 > `static` **setValue**(`input`, `valueIn`): `string`
+
+Defined in: [src/ui/editors/autonumeric.ts:1199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1199)
 
 returns a formatted strings for "input:text" fields Uses jQuery's .val() method
 
@@ -144,15 +146,13 @@ returns a formatted strings for "input:text" fields Uses jQuery's .val() method
 
 `string`
 
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:1203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1203)
-
 ***
 
 ### updateOptions()
 
 > `static` **updateOptions**(`input`, `options`): `void`
+
+Defined in: [src/ui/editors/autonumeric.ts:1180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1180)
 
 method to update settings - can call as many times
 
@@ -169,7 +169,3 @@ method to update settings - can call as many times
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/editors/autonumeric.ts:1184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L1184)

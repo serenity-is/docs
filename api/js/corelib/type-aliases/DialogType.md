@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / DialogType
+[serenity-is/corelib](../README.md) / DialogType
 
 # Type Alias: DialogType()
 
-> **DialogType**: (`props`?) => [`IDialog`](../classes/IDialog.md) & `object`
+> **DialogType** = (`props?`) => [`IDialog`](../classes/IDialog.md) & `object`
+
+Defined in: [src/types/dialogtype.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtype.ts#L3)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 [`IDialog`](../classes/IDialog.md) & `object`
-
-## Defined in
-
-[src/types/dialogtype.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtype.ts#L3)

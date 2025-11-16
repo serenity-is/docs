@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / NumberFormat
+[serenity-is/corelib](../README.md) / NumberFormat
 
 # Interface: NumberFormat
+
+Defined in: [src/base/formatting.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L4)
 
 Interface for number formatting, similar to .NET's NumberFormatInfo
 
@@ -14,11 +16,9 @@ Interface for number formatting, similar to .NET's NumberFormatInfo
 
 > `optional` **currencySymbol**: `string`
 
+Defined in: [src/base/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L20)
+
 Currency symbol
-
-#### Defined in
-
-[src/base/formatting.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L20)
 
 ***
 
@@ -26,11 +26,9 @@ Currency symbol
 
 > `optional` **decimalDigits**: `number`
 
+Defined in: [src/base/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L10)
+
 Number of digits after decimal separator
-
-#### Defined in
-
-[src/base/formatting.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L10)
 
 ***
 
@@ -38,11 +36,9 @@ Number of digits after decimal separator
 
 > **decimalSeparator**: `string`
 
+Defined in: [src/base/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L6)
+
 Decimal separator
-
-#### Defined in
-
-[src/base/formatting.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L6)
 
 ***
 
@@ -50,11 +46,9 @@ Decimal separator
 
 > `optional` **groupSeparator**: `string`
 
+Defined in: [src/base/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L8)
+
 Group separator
-
-#### Defined in
-
-[src/base/formatting.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L8)
 
 ***
 
@@ -62,11 +56,9 @@ Group separator
 
 > `optional` **nanSymbol**: `string`
 
+Defined in: [src/base/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L16)
+
 Zero symbol
-
-#### Defined in
-
-[src/base/formatting.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L16)
 
 ***
 
@@ -74,11 +66,9 @@ Zero symbol
 
 > `optional` **negativeSign**: `string`
 
+Defined in: [src/base/formatting.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L14)
+
 Negative sign
-
-#### Defined in
-
-[src/base/formatting.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L14)
 
 ***
 
@@ -86,11 +76,9 @@ Negative sign
 
 > `optional` **percentSymbol**: `string`
 
+Defined in: [src/base/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L18)
+
 Percentage symbol
-
-#### Defined in
-
-[src/base/formatting.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L18)
 
 ***
 
@@ -98,8 +86,6 @@ Percentage symbol
 
 > `optional` **positiveSign**: `string`
 
+Defined in: [src/base/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L12)
+
 Positive sign
-
-#### Defined in
-
-[src/base/formatting.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L12)

@@ -1,19 +1,15 @@
-[@serenity-is/corelib](../README.md) / getTypes
+[serenity-is/corelib](../README.md) / getTypes
 
 # Function: getTypes()
 
-> **getTypes**(`from`?): `any`[]
+> **getTypes**(): `any`[]
 
-## Parameters
+Defined in: [src/compat/system-compat.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L155)
 
-### from?
-
-`any`
+Gets all registered types.
 
 ## Returns
 
 `any`[]
 
-## Defined in
-
-[src/q/system-compat.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L153)
+All registered types.

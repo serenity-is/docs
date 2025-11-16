@@ -1,16 +1,22 @@
-[@serenity-is/corelib](../README.md) / Lookup
+[serenity-is/corelib](../README.md) / Lookup
 
 # Class: Lookup\<TItem\>
 
+Defined in: [src/base/lookup.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L7)
+
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Constructors
 
-### new Lookup()
+### Constructor
 
-> **new Lookup**\<`TItem`\>(`options`, `items`?): [`Lookup`](Lookup.md)\<`TItem`\>
+> **new Lookup**\<`TItem`\>(`options`, `items?`): `Lookup`\<`TItem`\>
+
+Defined in: [src/base/lookup.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L22)
 
 #### Parameters
 
@@ -24,11 +30,7 @@
 
 #### Returns
 
-[`Lookup`](Lookup.md)\<`TItem`\>
-
-#### Defined in
-
-[src/base/lookup.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L22)
+`Lookup`\<`TItem`\>
 
 ## Properties
 
@@ -36,9 +38,7 @@
 
 > **idField**: `string`
 
-#### Defined in
-
-[src/base/lookup.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L10)
+Defined in: [src/base/lookup.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L10)
 
 ***
 
@@ -46,13 +46,11 @@
 
 > **itemById**: `object`
 
+Defined in: [src/base/lookup.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L9)
+
 #### Index Signature
 
- \[`key`: `string`\]: `TItem`
-
-#### Defined in
-
-[src/base/lookup.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L9)
+\[`key`: `string`\]: `TItem`
 
 ***
 
@@ -60,9 +58,7 @@
 
 > **items**: `TItem`[]
 
-#### Defined in
-
-[src/base/lookup.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L8)
+Defined in: [src/base/lookup.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L8)
 
 ***
 
@@ -70,9 +66,7 @@
 
 > **parentIdField**: `string`
 
-#### Defined in
-
-[src/base/lookup.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L11)
+Defined in: [src/base/lookup.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L11)
 
 ***
 
@@ -80,15 +74,15 @@
 
 > **textField**: `string`
 
-#### Defined in
-
-[src/base/lookup.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L12)
+Defined in: [src/base/lookup.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L12)
 
 ## Methods
 
 ### update()?
 
 > `optional` **update**(`value`): `void`
+
+Defined in: [src/base/lookup.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L34)
 
 #### Parameters
 
@@ -99,7 +93,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/base/lookup.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/lookup.ts#L34)

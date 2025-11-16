@@ -1,17 +1,17 @@
-[@serenity-is/corelib](../README.md) / Dictionary
+[serenity-is/corelib](../README.md) / Dictionary
 
 # Type Alias: Dictionary\<TItem\>
 
-> **Dictionary**\<`TItem`\>: `object`
+> **Dictionary**\<`TItem`\> = `object`
+
+Defined in: [src/compat/system-compat.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L3)
 
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Index Signature
 
- \[`key`: `string`\]: `TItem`
-
-## Defined in
-
-[src/q/system-compat.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L3)
+\[`key`: `string`\]: `TItem`

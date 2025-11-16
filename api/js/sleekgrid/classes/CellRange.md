@@ -1,12 +1,16 @@
-[@serenity-is/sleekgrid](../README.md) / CellRange
+[serenity-is/sleekgrid](../README.md) / CellRange
 
 # Class: CellRange
 
+Defined in: [src/core/cellrange.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L8)
+
 ## Constructors
 
-### new CellRange()
+### Constructor
 
-> **new CellRange**(`fromRow`, `fromCell`, `toRow`?, `toCell`?): [`CellRange`](CellRange.md)
+> **new CellRange**(`fromRow`, `fromCell`, `toRow?`, `toCell?`): `CellRange`
+
+Defined in: [src/core/cellrange.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L15)
 
 #### Parameters
 
@@ -28,11 +32,7 @@
 
 #### Returns
 
-[`CellRange`](CellRange.md)
-
-#### Defined in
-
-[core/cellrange.ts:15](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L15)
+`CellRange`
 
 ## Properties
 
@@ -40,9 +40,7 @@
 
 > **fromCell**: `number`
 
-#### Defined in
-
-[core/cellrange.ts:11](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L11)
+Defined in: [src/core/cellrange.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L11)
 
 ***
 
@@ -50,9 +48,7 @@
 
 > **fromRow**: `number`
 
-#### Defined in
-
-[core/cellrange.ts:10](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L10)
+Defined in: [src/core/cellrange.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L10)
 
 ***
 
@@ -60,9 +56,7 @@
 
 > **toCell**: `number`
 
-#### Defined in
-
-[core/cellrange.ts:13](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L13)
+Defined in: [src/core/cellrange.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L13)
 
 ***
 
@@ -70,15 +64,15 @@
 
 > **toRow**: `number`
 
-#### Defined in
-
-[core/cellrange.ts:12](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L12)
+Defined in: [src/core/cellrange.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L12)
 
 ## Methods
 
 ### contains()
 
 > **contains**(`row`, `cell`): `boolean`
+
+Defined in: [src/core/cellrange.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L44)
 
 Returns whether a range contains a given cell.
 
@@ -96,15 +90,13 @@ Returns whether a range contains a given cell.
 
 `boolean`
 
-#### Defined in
-
-[core/cellrange.ts:44](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L44)
-
 ***
 
 ### isSingleCell()
 
 > **isSingleCell**(): `boolean`
+
+Defined in: [src/core/cellrange.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L37)
 
 Returns whether a range represents a single cell.
 
@@ -112,15 +104,13 @@ Returns whether a range represents a single cell.
 
 `boolean`
 
-#### Defined in
-
-[core/cellrange.ts:37](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L37)
-
 ***
 
 ### isSingleRow()
 
 > **isSingleRow**(): `boolean`
+
+Defined in: [src/core/cellrange.ts:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L30)
 
 Returns whether a range represents a single row.
 
@@ -128,22 +118,16 @@ Returns whether a range represents a single row.
 
 `boolean`
 
-#### Defined in
-
-[core/cellrange.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L30)
-
 ***
 
 ### toString()
 
 > **toString**(): `string`
 
+Defined in: [src/core/cellrange.ts:52](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/cellrange.ts#L52)
+
 Returns a readable representation of a range.
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-[core/cellrange.ts:52](https://github.com/serenity-is/sleekgrid/blob/master/src/core/cellrange.ts#L52)

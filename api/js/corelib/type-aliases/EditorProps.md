@@ -1,10 +1,12 @@
-[@serenity-is/corelib](../README.md) / EditorProps
+[serenity-is/corelib](../README.md) / EditorProps
 
 # Type Alias: EditorProps\<T\>
 
-> **EditorProps**\<`T`\>: [`WidgetProps`](WidgetProps.md)\<`T`\> & `object`
+> **EditorProps**\<`T`\> = [`WidgetProps`](WidgetProps.md)\<`T`\> & `object`
 
-## Type declaration
+Defined in: [src/ui/editors/editorwidget.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L4)
+
+## Type Declaration
 
 ### initialValue?
 
@@ -32,8 +34,6 @@
 
 ## Type Parameters
 
-• **T**
+### T
 
-## Defined in
-
-[src/ui/editors/editorwidget.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L6)
+`T`

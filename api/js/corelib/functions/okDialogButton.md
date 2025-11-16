@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / okDialogButton
+[serenity-is/corelib](../README.md) / okDialogButton
 
 # Function: okDialogButton()
 
-> **okDialogButton**(`opt`?): [`DialogButton`](../interfaces/DialogButton.md)
+> **okDialogButton**(`opt?`): [`DialogButton`](../interfaces/DialogButton.md)
+
+Defined in: [src/base/dialogs.tsx:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L646)
 
 Creates a dialog button which, by default, has "Yes" as caption (localized) and "ok" as the result.
 
@@ -19,7 +21,3 @@ Optional configuration for the dialog button.
 [`DialogButton`](../interfaces/DialogButton.md)
 
 The dialog button with the specified configuration.
-
-## Defined in
-
-[src/base/dialogs.tsx:645](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L645)

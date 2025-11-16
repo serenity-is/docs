@@ -1,14 +1,22 @@
-[@serenity-is/sleekgrid](../README.md) / FormatterContext
+[serenity-is/sleekgrid](../README.md) / FormatterContext
 
 # Interface: FormatterContext\<TItem\>
 
+Defined in: [src/core/formatting.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L11)
+
 Context object for column formatters. It provides access to the
 current cell value, row index, column index, etc.
-Use grid.getFormatterContext() to create a new instance.
+Use grid.getFormatterContext() or the
+
+## See
+
+formatterContext helper to create a new instance.
 
 ## Type Parameters
 
-• **TItem** = `any`
+### TItem
+
+`TItem` = `any`
 
 ## Properties
 
@@ -16,15 +24,13 @@ Use grid.getFormatterContext() to create a new instance.
 
 > `optional` **addAttrs**: `object`
 
+Defined in: [src/core/formatting.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L16)
+
 Additional attributes to be added to the cell node.
 
 #### Index Signature
 
- \[`key`: `string`\]: `string`
-
-#### Defined in
-
-[core/formatting.ts:14](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L14)
+\[`key`: `string`\]: `string`
 
 ***
 
@@ -32,11 +38,9 @@ Additional attributes to be added to the cell node.
 
 > `optional` **addClass**: `string`
 
+Defined in: [src/core/formatting.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L21)
+
 Additional classes to be added to the cell node.
-
-#### Defined in
-
-[core/formatting.ts:19](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L19)
 
 ***
 
@@ -44,11 +48,9 @@ Additional classes to be added to the cell node.
 
 > `optional` **cell**: `number`
 
+Defined in: [src/core/formatting.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L46)
+
 The column index of the cell.
-
-#### Defined in
-
-[core/formatting.ts:35](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L35)
 
 ***
 
@@ -56,23 +58,32 @@ The column index of the cell.
 
 > `optional` **column**: [`Column`](Column.md)\<`TItem`\>
 
+Defined in: [src/core/formatting.ts:51](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L51)
+
 The column definition of the cell.
 
-#### Defined in
+***
 
-[core/formatting.ts:40](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L40)
+### enableHtmlRendering
+
+> `readonly` **enableHtmlRendering**: `boolean`
+
+Defined in: [src/core/formatting.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L29)
+
+True if the formatter is allowed to return raw HTML that will be set using innerHTML.
+This is set from grid options and defaults to true for backward compatibility.
+When set to false, the formatter should return plain text and the result will be set using textContent
+and the escape() method is a noop in that case.
 
 ***
 
 ### grid?
 
-> `optional` **grid**: `any`
+> `optional` **grid**: [`ISleekGrid`](ISleekGrid.md)
+
+Defined in: [src/core/formatting.ts:56](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L56)
 
 The grid instance.
-
-#### Defined in
-
-[core/formatting.ts:45](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L45)
 
 ***
 
@@ -80,11 +91,19 @@ The grid instance.
 
 > `optional` **item**: `TItem`
 
+Defined in: [src/core/formatting.ts:61](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L61)
+
 The item of the row.
 
-#### Defined in
+***
 
-[core/formatting.ts:50](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L50)
+### purpose?
+
+> `optional` **purpose**: `"print"` \| `"auto-width"` \| `"excel-export"` \| `"group-header"` \| `"grand-totals"` \| `"group-totals"` \| `"header-filter"` \| `"pdf-export"`
+
+Defined in: [src/core/formatting.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L66)
+
+Purpose of the call, e.g. "auto-width", "excel-export", "group-header", "header-filter", "pdf-export", "print".
 
 ***
 
@@ -92,11 +111,29 @@ The item of the row.
 
 > `optional` **row**: `number`
 
+Defined in: [src/core/formatting.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L41)
+
 The row index of the cell.
 
-#### Defined in
+***
 
-[core/formatting.ts:30](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L30)
+### sanitizer()
+
+> **sanitizer**: (`dirtyHtml`) => `string`
+
+Defined in: [src/core/formatting.ts:71](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L71)
+
+Sanitizer function to clean up dirty HTML.
+
+#### Parameters
+
+##### dirtyHtml
+
+`string`
+
+#### Returns
+
+`string`
 
 ***
 
@@ -104,11 +141,9 @@ The row index of the cell.
 
 > `optional` **tooltip**: `string`
 
+Defined in: [src/core/formatting.ts:76](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L76)
+
 Tooltip text to be added to the cell node as title attribute.
-
-#### Defined in
-
-[core/formatting.ts:55](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L55)
 
 ***
 
@@ -116,20 +151,21 @@ Tooltip text to be added to the cell node as title attribute.
 
 > `optional` **value**: `any`
 
-when returning a formatter result, prefer ctx.escape() to avoid script injection attacks!
+Defined in: [src/core/formatting.ts:79](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L79)
 
-#### Defined in
-
-[core/formatting.ts:58](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L58)
+when returning a formatter result as HTML string, prefer ctx.escape() to avoid script injection attacks!
 
 ## Methods
 
 ### escape()
 
-> **escape**(`value`?): `string`
+> **escape**(`value?`): `string`
 
-Returns html escaped ctx.value if called without arguments.
-prefer this over ctx.value to avoid html injection attacks!
+Defined in: [src/core/formatting.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L36)
+
+Returns html escaped ctx.value if called without arguments. Prefer this over
+ctx.value when returning as HTML string to avoid html injection attacks!
+   * Note that when enableHtmlRendering is false, this is simply a noop and returns the value as string.
 
 #### Parameters
 
@@ -140,7 +176,3 @@ prefer this over ctx.value to avoid html injection attacks!
 #### Returns
 
 `string`
-
-#### Defined in
-
-[core/formatting.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L25)

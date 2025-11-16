@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / serviceCall
+[serenity-is/corelib](../README.md) / serviceCall
 
 # Function: serviceCall()
 
 > **serviceCall**\<`TResponse`\>(`options`): `PromiseLike`\<`TResponse`\>
 
+Defined in: [src/base/services.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L188)
+
 ## Type Parameters
 
-• **TResponse** *extends* [`ServiceResponse`](../interfaces/ServiceResponse.md)
+### TResponse
+
+`TResponse` *extends* [`ServiceResponse`](../interfaces/ServiceResponse.md)
 
 ## Parameters
 
@@ -17,7 +21,3 @@
 ## Returns
 
 `PromiseLike`\<`TResponse`\>
-
-## Defined in
-
-[src/base/services.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L184)

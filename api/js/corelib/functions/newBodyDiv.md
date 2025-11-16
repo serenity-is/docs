@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / newBodyDiv
+[serenity-is/corelib](../README.md) / newBodyDiv
 
 # Function: newBodyDiv()
 
 > **newBodyDiv**(): `HTMLDivElement`
+
+Defined in: [src/compat/html-compat.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/html-compat.ts#L81)
 
 Creates a new DIV and appends it to the body.
 
@@ -11,7 +13,3 @@ Creates a new DIV and appends it to the body.
 `HTMLDivElement`
 
 the new DIV element.
-
-## Defined in
-
-[src/q/html-compat.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html-compat.ts#L82)

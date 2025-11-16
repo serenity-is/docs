@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / saveAndCloseToolButton
+[serenity-is/corelib](../README.md) / saveAndCloseToolButton
 
 # Function: saveAndCloseToolButton()
 
-> **saveAndCloseToolButton**(`opt`?): [`ToolButton`](../interfaces/ToolButton.md)
+> **saveAndCloseToolButton**(`opt?`): [`ToolButton`](../interfaces/ToolButton.md)
+
+Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L6)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 [`ToolButton`](../interfaces/ToolButton.md)
-
-## Defined in
-
-[src/ui/dialogs/entitytoolbuttons.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L6)

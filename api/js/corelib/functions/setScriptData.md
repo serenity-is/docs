@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / setScriptData
+[serenity-is/corelib](../README.md) / setScriptData
 
 # Function: setScriptData()
 
 > **setScriptData**(`name`, `value`): `void`
+
+Defined in: [src/base/scriptdata.ts:322](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L322)
 
 ## Parameters
 
@@ -17,7 +19,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/base/scriptdata.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L262)

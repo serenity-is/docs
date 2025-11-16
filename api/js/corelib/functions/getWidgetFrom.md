@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / getWidgetFrom
+[serenity-is/corelib](../README.md) / getWidgetFrom
 
 # Function: getWidgetFrom()
 
-> **getWidgetFrom**\<`TWidget`\>(`element`, `type`?): `TWidget`
+> **getWidgetFrom**\<`TWidget`\>(`element`, `type?`): `TWidget`
+
+Defined in: [src/ui/widgets/widgetutils.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L77)
 
 ## Type Parameters
 
-• **TWidget**
+### TWidget
+
+`TWidget`
 
 ## Parameters
 
@@ -21,7 +25,3 @@
 ## Returns
 
 `TWidget`
-
-## Defined in
-
-[src/ui/widgets/widgetutils.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L77)

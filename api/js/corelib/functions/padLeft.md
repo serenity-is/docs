@@ -1,14 +1,18 @@
-[@serenity-is/corelib](../README.md) / padLeft
+[serenity-is/corelib](../README.md) / padLeft
 
 # Function: padLeft()
 
 > **padLeft**(`s`, `len`, `ch`): `any`
+
+Defined in: [src/compat/strings-compat.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L37)
 
 Pads the string to the left with the specified character.
 
 ## Parameters
 
 ### s
+
+String to pad.
 
 `string` | `number`
 
@@ -29,7 +33,3 @@ Character to pad with.
 `any`
 
 Padded string.
-
-## Defined in
-
-[src/q/strings-compat.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/strings-compat.ts#L37)

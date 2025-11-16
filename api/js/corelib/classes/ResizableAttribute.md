@@ -1,12 +1,22 @@
-[@serenity-is/corelib](../README.md) / ResizableAttribute
+[serenity-is/corelib](../README.md) / ResizableAttribute
 
 # Class: ResizableAttribute
 
+Defined in: [src/types/attributes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L72)
+
+Indicates if a dialog should be resizable, only for jquery ui dialogs.
+
+## Extends
+
+- [`CustomAttribute`](CustomAttribute.md)
+
 ## Constructors
 
-### new ResizableAttribute()
+### Constructor
 
-> **new ResizableAttribute**(`value`): [`ResizableAttribute`](ResizableAttribute.md)
+> **new ResizableAttribute**(`value`): `ResizableAttribute`
+
+Defined in: [src/types/attributes.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L75)
 
 #### Parameters
 
@@ -16,11 +26,11 @@
 
 #### Returns
 
-[`ResizableAttribute`](ResizableAttribute.md)
+`ResizableAttribute`
 
-#### Defined in
+#### Overrides
 
-[src/types/attributes.ts:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L216)
+[`CustomAttribute`](CustomAttribute.md).[`constructor`](CustomAttribute.md#constructor)
 
 ## Properties
 
@@ -28,6 +38,16 @@
 
 > **value**: `boolean` = `true`
 
-#### Defined in
+Defined in: [src/types/attributes.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L75)
 
-[src/types/attributes.ts:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L216)
+***
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/types/attributes.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L73)
+
+#### Overrides
+
+[`CustomAttribute`](CustomAttribute.md).[`[typeInfo]`](CustomAttribute.md#typeinfo)

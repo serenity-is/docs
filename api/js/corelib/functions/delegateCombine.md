@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / delegateCombine
+[serenity-is/corelib](../README.md) / delegateCombine
 
 # Function: delegateCombine()
 
 > **delegateCombine**(`delegate1`, `delegate2`): `any`
+
+Defined in: [src/ui/filtering/filterstore.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L191)
 
 ## Parameters
 
@@ -17,7 +19,3 @@
 ## Returns
 
 `any`
-
-## Defined in
-
-[src/ui/filtering/filterstore.ts:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L195)

@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / centerDialog
+[serenity-is/corelib](../README.md) / centerDialog
 
 # Function: centerDialog()
 
 > **centerDialog**(`el`): `void`
+
+Defined in: [src/compat/layout.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/layout.ts#L141)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/q/layout.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/layout.ts#L152)

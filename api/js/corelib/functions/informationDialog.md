@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / informationDialog
+[serenity-is/corelib](../README.md) / informationDialog
 
 # Function: informationDialog()
 
-> **informationDialog**(`message`, `onOk`?, `options`?): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+> **informationDialog**(`message`, `onOk?`, `options?`): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+
+Defined in: [src/base/dialogs.tsx:1056](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1056)
 
 Display an information dialog
 
@@ -10,7 +12,7 @@ Display an information dialog
 
 ### message
 
-`string`
+[`RenderableContent`](../type-aliases/RenderableContent.md)
 
 The message to display
 
@@ -41,7 +43,3 @@ informationDialog("Operation complete", () => {
     // do something when OK is clicked
 }
 ```
-
-## Defined in
-
-[src/base/dialogs.tsx:1035](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1035)

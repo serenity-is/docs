@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / editToolButton
+[serenity-is/corelib](../README.md) / editToolButton
 
 # Function: editToolButton()
 
-> **editToolButton**(`opt`?): [`ToolButton`](../interfaces/ToolButton.md)
+> **editToolButton**(`opt?`): [`ToolButton`](../interfaces/ToolButton.md)
+
+Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L49)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 [`ToolButton`](../interfaces/ToolButton.md)
-
-## Defined in
-
-[src/ui/dialogs/entitytoolbuttons.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L49)

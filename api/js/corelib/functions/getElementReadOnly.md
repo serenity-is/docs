@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / getElementReadOnly
+[serenity-is/corelib](../README.md) / getElementReadOnly
 
 # Function: getElementReadOnly()
 
-> **getElementReadOnly**(`el`): `boolean` \| `null`
+> **getElementReadOnly**(`el`): `boolean`
+
+Defined in: [src/base/html.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L132)
 
 Gets readonly state of an element. If the element is null, returns null.
 It does not check for attached widgets. It returns true if the element has readonly class,
@@ -18,8 +20,4 @@ element
 
 ## Returns
 
-`boolean` \| `null`
-
-## Defined in
-
-[src/base/html.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L128)
+`boolean`

@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / NonDataRow
+[serenity-is/sleekgrid](../README.md) / NonDataRow
 
 # Class: NonDataRow
+
+Defined in: [src/core/base.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L4)
 
 A base class that all special / non-data rows (like Group and GroupTotals) derive from.
 
@@ -11,13 +13,13 @@ A base class that all special / non-data rows (like Group and GroupTotals) deriv
 
 ## Constructors
 
-### new NonDataRow()
+### Constructor
 
-> **new NonDataRow**(): [`NonDataRow`](NonDataRow.md)
+> **new NonDataRow**(): `NonDataRow`
 
 #### Returns
 
-[`NonDataRow`](NonDataRow.md)
+`NonDataRow`
 
 ## Properties
 
@@ -25,6 +27,4 @@ A base class that all special / non-data rows (like Group and GroupTotals) deriv
 
 > **\_\_nonDataRow**: `boolean` = `true`
 
-#### Defined in
-
-[core/base.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/core/base.ts#L5)
+Defined in: [src/core/base.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L5)

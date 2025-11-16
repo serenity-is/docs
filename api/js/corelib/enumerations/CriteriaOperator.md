@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / CriteriaOperator
+[serenity-is/corelib](../README.md) / CriteriaOperator
 
 # Enumeration: CriteriaOperator
+
+Defined in: [src/base/criteria.ts:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L729)
 
 Enumeration of Criteria operator keys.
 
@@ -10,9 +12,7 @@ Enumeration of Criteria operator keys.
 
 > **and**: `"and"`
 
-#### Defined in
-
-[src/base/criteria.ts:731](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L731)
+Defined in: [src/base/criteria.ts:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L735)
 
 ***
 
@@ -20,9 +20,7 @@ Enumeration of Criteria operator keys.
 
 > **eq**: `"="`
 
-#### Defined in
-
-[src/base/criteria.ts:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L734)
+Defined in: [src/base/criteria.ts:738](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L738)
 
 ***
 
@@ -30,9 +28,7 @@ Enumeration of Criteria operator keys.
 
 > **exists**: `"exists"`
 
-#### Defined in
-
-[src/base/criteria.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L730)
+Defined in: [src/base/criteria.ts:734](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L734)
 
 ***
 
@@ -40,9 +36,7 @@ Enumeration of Criteria operator keys.
 
 > **ge**: `">="`
 
-#### Defined in
-
-[src/base/criteria.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L737)
+Defined in: [src/base/criteria.ts:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L741)
 
 ***
 
@@ -50,9 +44,7 @@ Enumeration of Criteria operator keys.
 
 > **gt**: `">"`
 
-#### Defined in
-
-[src/base/criteria.ts:736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L736)
+Defined in: [src/base/criteria.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L740)
 
 ***
 
@@ -60,9 +52,7 @@ Enumeration of Criteria operator keys.
 
 > **in**: `"in"`
 
-#### Defined in
-
-[src/base/criteria.ts:740](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L740)
+Defined in: [src/base/criteria.ts:744](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L744)
 
 ***
 
@@ -70,9 +60,7 @@ Enumeration of Criteria operator keys.
 
 > **isNotNull**: `"is not null"`
 
-#### Defined in
-
-[src/base/criteria.ts:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L729)
+Defined in: [src/base/criteria.ts:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L733)
 
 ***
 
@@ -80,9 +68,7 @@ Enumeration of Criteria operator keys.
 
 > **isNull**: `"is null"`
 
-#### Defined in
-
-[src/base/criteria.ts:728](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L728)
+Defined in: [src/base/criteria.ts:732](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L732)
 
 ***
 
@@ -90,9 +76,7 @@ Enumeration of Criteria operator keys.
 
 > **le**: `"<="`
 
-#### Defined in
-
-[src/base/criteria.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L739)
+Defined in: [src/base/criteria.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L743)
 
 ***
 
@@ -100,9 +84,7 @@ Enumeration of Criteria operator keys.
 
 > **like**: `"like"`
 
-#### Defined in
-
-[src/base/criteria.ts:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L742)
+Defined in: [src/base/criteria.ts:746](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L746)
 
 ***
 
@@ -110,9 +92,7 @@ Enumeration of Criteria operator keys.
 
 > **lt**: `"<"`
 
-#### Defined in
-
-[src/base/criteria.ts:738](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L738)
+Defined in: [src/base/criteria.ts:742](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L742)
 
 ***
 
@@ -120,9 +100,7 @@ Enumeration of Criteria operator keys.
 
 > **ne**: `"!="`
 
-#### Defined in
-
-[src/base/criteria.ts:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L735)
+Defined in: [src/base/criteria.ts:739](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L739)
 
 ***
 
@@ -130,9 +108,7 @@ Enumeration of Criteria operator keys.
 
 > **not**: `"not"`
 
-#### Defined in
-
-[src/base/criteria.ts:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L727)
+Defined in: [src/base/criteria.ts:731](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L731)
 
 ***
 
@@ -140,9 +116,7 @@ Enumeration of Criteria operator keys.
 
 > **notIn**: `"not in"`
 
-#### Defined in
-
-[src/base/criteria.ts:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L741)
+Defined in: [src/base/criteria.ts:745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L745)
 
 ***
 
@@ -150,9 +124,7 @@ Enumeration of Criteria operator keys.
 
 > **notLike**: `"not like"`
 
-#### Defined in
-
-[src/base/criteria.ts:743](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L743)
+Defined in: [src/base/criteria.ts:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L747)
 
 ***
 
@@ -160,9 +132,7 @@ Enumeration of Criteria operator keys.
 
 > **or**: `"or"`
 
-#### Defined in
-
-[src/base/criteria.ts:732](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L732)
+Defined in: [src/base/criteria.ts:736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L736)
 
 ***
 
@@ -170,9 +140,7 @@ Enumeration of Criteria operator keys.
 
 > **paren**: `"()"`
 
-#### Defined in
-
-[src/base/criteria.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L726)
+Defined in: [src/base/criteria.ts:730](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L730)
 
 ***
 
@@ -180,6 +148,4 @@ Enumeration of Criteria operator keys.
 
 > **xor**: `"xor"`
 
-#### Defined in
-
-[src/base/criteria.ts:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L733)
+Defined in: [src/base/criteria.ts:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L737)

@@ -1,16 +1,26 @@
-[@serenity-is/corelib](../README.md) / IDoubleValue
+[serenity-is/corelib](../README.md) / IDoubleValue
 
-# Class: IDoubleValue
+# Abstract Class: IDoubleValue
+
+Defined in: [src/interfaces/idoublevalue.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L3)
 
 ## Constructors
 
-### new IDoubleValue()
+### Constructor
 
-> **new IDoubleValue**(): [`IDoubleValue`](IDoubleValue.md)
+> **new IDoubleValue**(): `IDoubleValue`
 
 #### Returns
 
-[`IDoubleValue`](IDoubleValue.md)
+`IDoubleValue`
+
+## Properties
+
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/interfaces/idoublevalue.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L4)
 
 ## Methods
 
@@ -18,19 +28,19 @@
 
 > **get\_value**(): `any`
 
+Defined in: [src/interfaces/idoublevalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L8)
+
 #### Returns
 
 `any`
-
-#### Defined in
-
-[src/interfaces/idoublevalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L8)
 
 ***
 
 ### set\_value()
 
 > **set\_value**(`value`): `void`
+
+Defined in: [src/interfaces/idoublevalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L9)
 
 #### Parameters
 
@@ -41,7 +51,3 @@
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/interfaces/idoublevalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/idoublevalue.ts#L9)

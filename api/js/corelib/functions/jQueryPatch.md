@@ -1,13 +1,11 @@
-[@serenity-is/corelib](../README.md) / jQueryPatch
+[serenity-is/corelib](../README.md) / jQueryPatch
 
 # Function: jQueryPatch()
 
 > **jQueryPatch**(): `boolean`
 
+Defined in: [src/compat/jquery-compat.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/jquery-compat.ts#L84)
+
 ## Returns
 
 `boolean`
-
-## Defined in
-
-[src/patch/jquerypatch.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/patch/jquerypatch.ts#L99)

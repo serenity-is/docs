@@ -1,16 +1,18 @@
-[@serenity-is/sleekgrid](../README.md) / applyFormatterResultToCellNode
+[serenity-is/sleekgrid](../README.md) / applyFormatterResultToCellNode
 
 # Function: applyFormatterResultToCellNode()
 
-> **applyFormatterResultToCellNode**(`ctx`, `html`, `node`): `void`
+> **applyFormatterResultToCellNode**(`ctx`, `fmtResult`, `node`, `opt?`): `void`
+
+Defined in: [src/core/formatting.ts:133](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L133)
 
 ## Parameters
 
 ### ctx
 
-[`FormatterContext`](../interfaces/FormatterContext.md)\<`any`\>
+[`FormatterContext`](../interfaces/FormatterContext.md)
 
-### html
+### fmtResult
 
 [`FormatterResult`](../type-aliases/FormatterResult.md)
 
@@ -18,10 +20,12 @@
 
 `HTMLElement`
 
+### opt?
+
+#### contentOnly?
+
+`boolean`
+
 ## Returns
 
 `void`
-
-## Defined in
-
-[core/formatting.ts:101](https://github.com/serenity-is/sleekgrid/blob/master/src/core/formatting.ts#L101)

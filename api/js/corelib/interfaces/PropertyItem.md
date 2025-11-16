@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / PropertyItem
+[serenity-is/corelib](../README.md) / PropertyItem
 
 # Interface: PropertyItem
+
+Defined in: [src/base/propertyitem.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L16)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **alignment**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L50)
+Defined in: [src/base/propertyitem.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L54)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **allowHide**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L46)
+Defined in: [src/base/propertyitem.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L50)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **category**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L25)
+Defined in: [src/base/propertyitem.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L25)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > `optional` **collapsed**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L27)
+Defined in: [src/base/propertyitem.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L27)
 
 ***
 
@@ -48,9 +42,7 @@
 
 > `optional` **collapsible**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L26)
+Defined in: [src/base/propertyitem.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L26)
 
 ***
 
@@ -58,9 +50,7 @@
 
 > `optional` **cssClass**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L29)
+Defined in: [src/base/propertyitem.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L29)
 
 ***
 
@@ -68,9 +58,7 @@
 
 > `optional` **defaultValue**: `any`
 
-#### Defined in
-
-[src/base/propertyitem.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L43)
+Defined in: [src/base/propertyitem.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L47)
 
 ***
 
@@ -78,9 +66,7 @@
 
 > `optional` **displayFormat**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L49)
+Defined in: [src/base/propertyitem.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L53)
 
 ***
 
@@ -88,9 +74,7 @@
 
 > `optional` **editLink**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L61)
+Defined in: [src/base/propertyitem.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L66)
 
 ***
 
@@ -98,9 +82,7 @@
 
 > `optional` **editLinkCssClass**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L64)
+Defined in: [src/base/propertyitem.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L69)
 
 ***
 
@@ -108,9 +90,7 @@
 
 > `optional` **editLinkIdField**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L63)
+Defined in: [src/base/propertyitem.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L68)
 
 ***
 
@@ -118,9 +98,7 @@
 
 > `optional` **editLinkItemType**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L62)
+Defined in: [src/base/propertyitem.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L67)
 
 ***
 
@@ -128,9 +106,15 @@
 
 > `optional` **editorAddons**: `object`[]
 
-#### Defined in
+Defined in: [src/base/propertyitem.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L23)
 
-[src/base/propertyitem.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L23)
+#### params?
+
+> `optional` **params**: `any`
+
+#### type
+
+> **type**: `string` \| [`EditorAddon`](../type-aliases/EditorAddon.md)
 
 ***
 
@@ -138,9 +122,7 @@
 
 > `optional` **editorCssClass**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L24)
+Defined in: [src/base/propertyitem.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L24)
 
 ***
 
@@ -148,19 +130,15 @@
 
 > `optional` **editorParams**: `any`
 
-#### Defined in
-
-[src/base/propertyitem.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L22)
+Defined in: [src/base/propertyitem.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L22)
 
 ***
 
 ### editorType?
 
-> `optional` **editorType**: `string` \| (`props`?) => `any` \| `PromiseLike`\<(`props`?) => `any`\>
+> `optional` **editorType**: `string` \| (`props?`) => `any` \| `PromiseLike`\<(`props?`) => `any`\>
 
-#### Defined in
-
-[src/base/propertyitem.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L21)
+Defined in: [src/base/propertyitem.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L21)
 
 ***
 
@@ -168,9 +146,7 @@
 
 > `optional` **filteringIdField**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L67)
+Defined in: [src/base/propertyitem.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L72)
 
 ***
 
@@ -178,9 +154,7 @@
 
 > `optional` **filteringParams**: `any`
 
-#### Defined in
-
-[src/base/propertyitem.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L66)
+Defined in: [src/base/propertyitem.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L71)
 
 ***
 
@@ -188,9 +162,7 @@
 
 > `optional` **filteringType**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L65)
+Defined in: [src/base/propertyitem.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L70)
 
 ***
 
@@ -198,9 +170,7 @@
 
 > `optional` **filterOnly**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L69)
+Defined in: [src/base/propertyitem.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L74)
 
 ***
 
@@ -208,19 +178,15 @@
 
 > `optional` **formatterParams**: `any`
 
-#### Defined in
-
-[src/base/propertyitem.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L48)
+Defined in: [src/base/propertyitem.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L52)
 
 ***
 
 ### formatterType?
 
-> `optional` **formatterType**: `string`
+> `optional` **formatterType**: `string` \| (`props?`) => `object` \| `PromiseLike`\<(`props?`) => `object`\>
 
-#### Defined in
-
-[src/base/propertyitem.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L47)
+Defined in: [src/base/propertyitem.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L51)
 
 ***
 
@@ -228,9 +194,7 @@
 
 > `optional` **formCssClass**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L31)
+Defined in: [src/base/propertyitem.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L31)
 
 ***
 
@@ -238,9 +202,7 @@
 
 > `optional` **groupOrder**: `number`
 
-#### Defined in
-
-[src/base/propertyitem.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L59)
+Defined in: [src/base/propertyitem.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L64)
 
 ***
 
@@ -248,9 +210,7 @@
 
 > `optional` **headerCssClass**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L30)
+Defined in: [src/base/propertyitem.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L30)
 
 ***
 
@@ -258,9 +218,7 @@
 
 > `optional` **hideOnInsert**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L36)
+Defined in: [src/base/propertyitem.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L36)
 
 ***
 
@@ -268,9 +226,7 @@
 
 > `optional` **hideOnUpdate**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L39)
+Defined in: [src/base/propertyitem.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L39)
 
 ***
 
@@ -278,9 +234,7 @@
 
 > `optional` **hint**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L19)
+Defined in: [src/base/propertyitem.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L19)
 
 ***
 
@@ -288,9 +242,7 @@
 
 > `optional` **insertable**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L34)
+Defined in: [src/base/propertyitem.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L34)
 
 ***
 
@@ -298,9 +250,7 @@
 
 > `optional` **insertPermission**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L35)
+Defined in: [src/base/propertyitem.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L35)
 
 ***
 
@@ -308,9 +258,7 @@
 
 > `optional` **labelWidth**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L55)
+Defined in: [src/base/propertyitem.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L60)
 
 ***
 
@@ -318,9 +266,7 @@
 
 > `optional` **localizable**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L44)
+Defined in: [src/base/propertyitem.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L48)
 
 ***
 
@@ -328,9 +274,7 @@
 
 > `optional` **maxLength**: `number`
 
-#### Defined in
-
-[src/base/propertyitem.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L32)
+Defined in: [src/base/propertyitem.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L32)
 
 ***
 
@@ -338,9 +282,7 @@
 
 > `optional` **maxWidth**: `number`
 
-#### Defined in
-
-[src/base/propertyitem.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L54)
+Defined in: [src/base/propertyitem.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L59)
 
 ***
 
@@ -348,9 +290,7 @@
 
 > `optional` **minWidth**: `number`
 
-#### Defined in
-
-[src/base/propertyitem.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L53)
+Defined in: [src/base/propertyitem.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L58)
 
 ***
 
@@ -358,9 +298,7 @@
 
 > **name**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L17)
+Defined in: [src/base/propertyitem.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L17)
 
 ***
 
@@ -368,19 +306,27 @@
 
 > `optional` **notFilterable**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L68)
+Defined in: [src/base/propertyitem.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L73)
 
 ***
 
-### oneWay?
+### ~~oneWay?~~
 
 > `optional` **oneWay**: `boolean`
 
-#### Defined in
+Defined in: [src/base/propertyitem.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L46)
 
-[src/base/propertyitem.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L42)
+#### Deprecated
+
+use skipOnSave instead
+
+***
+
+### pin?
+
+> `optional` **pin**: `boolean` \| `"start"` \| `"end"`
+
+Defined in: [src/base/propertyitem.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L55)
 
 ***
 
@@ -388,9 +334,7 @@
 
 > `optional` **placeholder**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L20)
+Defined in: [src/base/propertyitem.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L20)
 
 ***
 
@@ -398,9 +342,7 @@
 
 > `optional` **quickFilter**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L70)
+Defined in: [src/base/propertyitem.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L75)
 
 ***
 
@@ -408,9 +350,7 @@
 
 > `optional` **quickFilterCssClass**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L73)
+Defined in: [src/base/propertyitem.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L78)
 
 ***
 
@@ -418,9 +358,7 @@
 
 > `optional` **quickFilterParams**: `any`
 
-#### Defined in
-
-[src/base/propertyitem.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L71)
+Defined in: [src/base/propertyitem.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L76)
 
 ***
 
@@ -428,9 +366,7 @@
 
 > `optional` **quickFilterSeparator**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L72)
+Defined in: [src/base/propertyitem.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L77)
 
 ***
 
@@ -438,9 +374,7 @@
 
 > `optional` **readOnly**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L40)
+Defined in: [src/base/propertyitem.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L40)
 
 ***
 
@@ -448,9 +382,7 @@
 
 > `optional` **readPermission**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L41)
+Defined in: [src/base/propertyitem.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L41)
 
 ***
 
@@ -458,9 +390,7 @@
 
 > `optional` **required**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L33)
+Defined in: [src/base/propertyitem.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L33)
 
 ***
 
@@ -468,9 +398,23 @@
 
 > `optional` **resizable**: `boolean`
 
-#### Defined in
+Defined in: [src/base/propertyitem.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L61)
 
-[src/base/propertyitem.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L56)
+***
+
+### skipOnLoad?
+
+> `optional` **skipOnLoad**: `boolean`
+
+Defined in: [src/base/propertyitem.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L42)
+
+***
+
+### skipOnSave?
+
+> `optional` **skipOnSave**: `boolean`
+
+Defined in: [src/base/propertyitem.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L43)
 
 ***
 
@@ -478,9 +422,7 @@
 
 > `optional` **sortable**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L57)
+Defined in: [src/base/propertyitem.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L62)
 
 ***
 
@@ -488,9 +430,7 @@
 
 > `optional` **sortOrder**: `number`
 
-#### Defined in
-
-[src/base/propertyitem.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L58)
+Defined in: [src/base/propertyitem.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L63)
 
 ***
 
@@ -498,9 +438,7 @@
 
 > `optional` **summaryType**: [`SummaryType`](../enumerations/SummaryType.md)
 
-#### Defined in
-
-[src/base/propertyitem.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L60)
+Defined in: [src/base/propertyitem.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L65)
 
 ***
 
@@ -508,9 +446,7 @@
 
 > `optional` **tab**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L28)
+Defined in: [src/base/propertyitem.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L28)
 
 ***
 
@@ -518,9 +454,15 @@
 
 > `optional` **title**: `string`
 
-#### Defined in
+Defined in: [src/base/propertyitem.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L18)
 
-[src/base/propertyitem.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L18)
+***
+
+### unbound?
+
+> `optional` **unbound**: `boolean`
+
+Defined in: [src/base/propertyitem.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L44)
 
 ***
 
@@ -528,9 +470,7 @@
 
 > `optional` **updatable**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L37)
+Defined in: [src/base/propertyitem.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L37)
 
 ***
 
@@ -538,9 +478,7 @@
 
 > `optional` **updatePermission**: `string`
 
-#### Defined in
-
-[src/base/propertyitem.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L38)
+Defined in: [src/base/propertyitem.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L38)
 
 ***
 
@@ -548,9 +486,7 @@
 
 > `optional` **visible**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L45)
+Defined in: [src/base/propertyitem.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L49)
 
 ***
 
@@ -558,9 +494,7 @@
 
 > `optional` **width**: `number`
 
-#### Defined in
-
-[src/base/propertyitem.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L51)
+Defined in: [src/base/propertyitem.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L56)
 
 ***
 
@@ -568,6 +502,4 @@
 
 > `optional` **widthSet**: `boolean`
 
-#### Defined in
-
-[src/base/propertyitem.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L52)
+Defined in: [src/base/propertyitem.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L57)

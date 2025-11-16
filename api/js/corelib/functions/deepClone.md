@@ -1,12 +1,18 @@
-[@serenity-is/corelib](../README.md) / deepClone
+[serenity-is/corelib](../README.md) / deepClone
 
 # Function: deepClone()
 
-> **deepClone**\<`T`\>(`a`, `a2`?, `a3`?): `T`
+> **deepClone**\<`T`\>(`a`): `T`
+
+Defined in: [src/compat/system-compat.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L34)
+
+Deep clones an object or value.
 
 ## Type Parameters
 
-• **T** = `any`
+### T
+
+`T` = `any`
 
 ## Parameters
 
@@ -14,18 +20,10 @@
 
 `T`
 
-### a2?
-
-`any`
-
-### a3?
-
-`any`
+The value to clone.
 
 ## Returns
 
 `T`
 
-## Defined in
-
-[src/q/system-compat.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/system-compat.ts#L27)
+A deep clone of the input value.

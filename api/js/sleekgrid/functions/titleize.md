@@ -1,8 +1,10 @@
-[@serenity-is/sleekgrid](../README.md) / titleize
+[serenity-is/sleekgrid](../README.md) / titleize
 
 # Function: titleize()
 
 > **titleize**(`str`): `string`
+
+Defined in: [src/core/column.ts:116](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L116)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `string`
-
-## Defined in
-
-[core/column.ts:112](https://github.com/serenity-is/sleekgrid/blob/master/src/core/column.ts#L112)

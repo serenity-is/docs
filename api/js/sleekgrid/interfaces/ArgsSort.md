@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ArgsSort
+[serenity-is/sleekgrid](../README.md) / ArgsSort
 
 # Interface: ArgsSort
+
+Defined in: [src/core/eventargs.ts:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L32)
 
 ## Extends
 
@@ -8,17 +10,15 @@
 
 ## Properties
 
-### grid?
+### grid
 
-> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> **grid**: [`ISleekGrid`](ISleekGrid.md)
+
+Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
 
 #### Inherited from
 
 [`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
-
-#### Defined in
-
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
 ***
 
@@ -26,36 +26,28 @@
 
 > **multiColumnSort**: `boolean`
 
-#### Defined in
-
-[grid/eventargs.ts:22](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L22)
+Defined in: [src/core/eventargs.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L33)
 
 ***
 
-### sortAsc?
+### sortAsc
 
-> `optional` **sortAsc**: `boolean`
+> **sortAsc**: `boolean`
 
-#### Defined in
-
-[grid/eventargs.ts:23](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L23)
+Defined in: [src/core/eventargs.ts:34](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L34)
 
 ***
 
-### sortCol?
+### sortCol
 
-> `optional` **sortCol**: [`Column`](Column.md)\<`any`\>
+> **sortCol**: [`Column`](Column.md)
 
-#### Defined in
-
-[grid/eventargs.ts:24](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L24)
+Defined in: [src/core/eventargs.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L35)
 
 ***
 
-### sortCols?
+### sortCols
 
-> `optional` **sortCols**: [`ArgsSortCol`](../type-aliases/ArgsSortCol.md)[]
+> **sortCols**: [`ArgsSortCol`](../type-aliases/ArgsSortCol.md)[]
 
-#### Defined in
-
-[grid/eventargs.ts:25](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L25)
+Defined in: [src/core/eventargs.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L36)

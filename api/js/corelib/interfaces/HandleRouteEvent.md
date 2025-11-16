@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / HandleRouteEvent
+[serenity-is/corelib](../README.md) / HandleRouteEvent
 
 # Interface: HandleRouteEvent
+
+Defined in: [src/compat/router.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/router.ts#L3)
 
 ## Extends
 
@@ -12,9 +14,7 @@
 
 > **index**: `number`
 
-#### Defined in
-
-[src/q/router.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L6)
+Defined in: [src/compat/router.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/router.ts#L6)
 
 ***
 
@@ -22,9 +22,7 @@
 
 > **isInitial**: `boolean`
 
-#### Defined in
-
-[src/q/router.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L7)
+Defined in: [src/compat/router.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/router.ts#L7)
 
 ***
 
@@ -32,9 +30,7 @@
 
 > **parts**: `string`[]
 
-#### Defined in
-
-[src/q/router.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L5)
+Defined in: [src/compat/router.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/router.ts#L5)
 
 ***
 
@@ -42,6 +38,4 @@
 
 > **route**: `string`
 
-#### Defined in
-
-[src/q/router.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/router.ts#L4)
+Defined in: [src/compat/router.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/router.ts#L4)

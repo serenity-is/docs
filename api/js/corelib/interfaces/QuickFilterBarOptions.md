@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / QuickFilterBarOptions
+[serenity-is/corelib](../README.md) / QuickFilterBarOptions
 
 # Interface: QuickFilterBarOptions
+
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L11)
 
 ## Properties
 
@@ -8,15 +10,15 @@
 
 > **filters**: [`QuickFilter`](QuickFilter.md)\<[`Widget`](../classes/Widget.md)\<`any`\>, `any`\>[]
 
-#### Defined in
-
-[src/ui/datagrid/quickfilterbar.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L14)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L12)
 
 ***
 
 ### getTitle()?
 
 > `optional` **getTitle**: (`filter`) => `string`
+
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L13)
 
 #### Parameters
 
@@ -28,16 +30,10 @@
 
 `string`
 
-#### Defined in
-
-[src/ui/datagrid/quickfilterbar.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L15)
-
 ***
 
 ### idPrefix?
 
 > `optional` **idPrefix**: `string`
 
-#### Defined in
-
-[src/ui/datagrid/quickfilterbar.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L16)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L14)

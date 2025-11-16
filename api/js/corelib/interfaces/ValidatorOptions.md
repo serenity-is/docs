@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ValidatorOptions
+[serenity-is/corelib](../README.md) / ValidatorOptions
 
 # Interface: ValidatorOptions
+
+Defined in: [src/base/validator.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L59)
 
 ## Properties
 
@@ -8,11 +10,9 @@
 
 > `optional` **debug**: `boolean`
 
+Defined in: [src/base/validator.tsx:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L61)
+
 True for logging debug info
-
-#### Defined in
-
-[src/base/validator.tsx:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L60)
 
 ***
 
@@ -20,13 +20,11 @@ True for logging debug info
 
 > `optional` **errorClass**: `string`
 
+Defined in: [src/base/validator.tsx:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L68)
+
 Use this class to create error labels, to look for existing error labels and to add it to invalid elements.
 
 default: "error"
-
-#### Defined in
-
-[src/base/validator.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L67)
 
 ***
 
@@ -34,14 +32,12 @@ default: "error"
 
 > `optional` **errorElement**: `string`
 
+Defined in: [src/base/validator.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L76)
+
 Use this element type to create error messages and to look for existing error messages. The default, "label",
 has the advantage of creating a meaningful link between error message and invalid field using the for attribute (which is always used, regardless of element type).
 
 default: "label"
-
-#### Defined in
-
-[src/base/validator.tsx:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L75)
 
 ***
 
@@ -49,15 +45,13 @@ default: "label"
 
 > `optional` **focusInvalid**: `boolean`
 
+Defined in: [src/base/validator.tsx:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L92)
+
 Focus the last active or first invalid element on submit via validator.focusInvalid(). The last active element is the one
 that had focus when the form was submitted, avoiding stealing its focus. If there was no element focused, the first one
 in the form gets it, unless this option is turned off.
 
 default: true
-
-#### Defined in
-
-[src/base/validator.tsx:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L91)
 
 ***
 
@@ -65,18 +59,18 @@ default: true
 
 > `optional` **ignore**: `string`
 
+Defined in: [src/base/validator.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L105)
+
 Elements to ignore when validating, simply filtering them out. CSS not-method is used, therefore everything that is
 accepted by not() can be passed as this option. Inputs of type submit and reset are always ignored, so are disabled elements.
-
-#### Defined in
-
-[src/base/validator.tsx:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L104)
 
 ***
 
 ### messages?
 
-> `optional` **messages**: `Record`\<`string`, `string`\>
+> `optional` **messages**: `Record`\<`string`, `string` \| `Record`\<`string`, `string`\>\>
+
+Defined in: [src/base/validator.tsx:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L121)
 
 Key/value pairs defining custom messages. Key is the name of an element, value the message to display for that element. Instead
 of a plain message, another map with specific messages for each rule can be used. Overrides the title attribute of an element or
@@ -86,15 +80,13 @@ as the message.
 
 default: the default message for the method used
 
-#### Defined in
-
-[src/base/validator.tsx:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L120)
-
 ***
 
 ### normalizer()?
 
 > `optional` **normalizer**: (`val`, `element`) => `string`
+
+Defined in: [src/base/validator.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L123)
 
 #### Parameters
 
@@ -110,24 +102,18 @@ default: the default message for the method used
 
 `string`
 
-#### Defined in
-
-[src/base/validator.tsx:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L122)
-
 ***
 
 ### onclick?
 
 > `optional` **onclick**: `boolean` \| [`ValidateEventDelegate`](../type-aliases/ValidateEventDelegate.md)
 
+Defined in: [src/base/validator.tsx:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L131)
+
 Boolean or Function. Validate checkboxes and radio buttons on click. Set to false to disable.
 
 Set to a Function to decide for yourself when to run validation.
 A boolean true is not a valid value.
-
-#### Defined in
-
-[src/base/validator.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L130)
 
 ***
 
@@ -135,13 +121,11 @@ A boolean true is not a valid value.
 
 > `optional` **onfocusin**: [`ValidateEventDelegate`](../type-aliases/ValidateEventDelegate.md)
 
+Defined in: [src/base/validator.tsx:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L138)
+
 Function. Validate elements when user focuses in. If omitted hides all other fields marked as invalid.
 
 Set to a custom Function to decide for yourself when to run validation.
-
-#### Defined in
-
-[src/base/validator.tsx:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L137)
 
 ***
 
@@ -149,14 +133,12 @@ Set to a custom Function to decide for yourself when to run validation.
 
 > `optional` **onfocusout**: [`ValidateEventDelegate`](../type-aliases/ValidateEventDelegate.md)
 
+Defined in: [src/base/validator.tsx:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L146)
+
 Boolean or Function. Validate elements (except checkboxes/radio buttons) on blur. If nothing is entered, all rules are skipped, except when the field was already marked as invalid.
 
 Set to a Function to decide for yourself when to run validation.
 A boolean true is not a valid value.
-
-#### Defined in
-
-[src/base/validator.tsx:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L145)
 
 ***
 
@@ -164,15 +146,13 @@ A boolean true is not a valid value.
 
 > `optional` **onkeyup**: [`ValidateEventDelegate`](../type-aliases/ValidateEventDelegate.md)
 
+Defined in: [src/base/validator.tsx:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L155)
+
 Boolean or Function. Validate elements on keyup. As long as the field is not marked as invalid, nothing happens.
 Otherwise, all rules are checked on each key up event. Set to false to disable.
 
 Set to a Function to decide for yourself when to run validation.
 A boolean true is not a valid value.
-
-#### Defined in
-
-[src/base/validator.tsx:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L154)
 
 ***
 
@@ -180,15 +160,13 @@ A boolean true is not a valid value.
 
 > `optional` **onsubmit**: `boolean`
 
+Defined in: [src/base/validator.tsx:164](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L164)
+
 Validate the form on submit. Set to false to use only other events for validation.
 Set to a Function to decide for yourself when to run validation.
 A boolean true is not a valid value.
 
 default: true
-
-#### Defined in
-
-[src/base/validator.tsx:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L163)
 
 ***
 
@@ -196,12 +174,10 @@ default: true
 
 > `optional` **pendingClass**: `string`
 
+Defined in: [src/base/validator.tsx:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L170)
+
 Pending class
 default: "pending"
-
-#### Defined in
-
-[src/base/validator.tsx:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L169)
 
 ***
 
@@ -209,14 +185,12 @@ default: "pending"
 
 > `optional` **rules**: [`ValidationRulesMap`](ValidationRulesMap.md)
 
+Defined in: [src/base/validator.tsx:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L178)
+
 A custom message display handler. Gets the map of errors as the first argument and an array of errors as the second,
 called in the context of the validator object. The arguments contain only those elements currently validated,
 which can be a single element when doing validation onblur/keyup. You can trigger (in addition to your own messages)
 the default behaviour by calling this.defaultShowErrors().
-
-#### Defined in
-
-[src/base/validator.tsx:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L177)
 
 ***
 
@@ -224,13 +198,11 @@ the default behaviour by calling this.defaultShowErrors().
 
 > `optional` **success**: `string` \| (`label`, `validatedInput`) => `void`
 
+Defined in: [src/base/validator.tsx:201](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L201)
+
 String or Function. If specified, the error label is displayed to show a valid element. If a String is given, it is added as
 a class to the label. If a Function is given, it is called with the label and the validated input (as a DOM element).
 The label can be used to add a text like "ok!".
-
-#### Defined in
-
-[src/base/validator.tsx:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L200)
 
 ***
 
@@ -238,19 +210,19 @@ The label can be used to add a text like "ok!".
 
 > `optional` **validClass**: `string`
 
+Defined in: [src/base/validator.tsx:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L215)
+
 This class is added to an element after it was validated and considered valid.
 
 default: "valid"
-
-#### Defined in
-
-[src/base/validator.tsx:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L214)
 
 ## Methods
 
 ### abortHandler()?
 
 > `optional` **abortHandler**(`validator`): `void`
+
+Defined in: [src/base/validator.tsx:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L188)
 
 #### Parameters
 
@@ -262,15 +234,13 @@ default: "valid"
 
 `void`
 
-#### Defined in
-
-[src/base/validator.tsx:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L187)
-
 ***
 
 ### errorPlacement()?
 
 > `optional` **errorPlacement**(`error`, `element`, `validator`): `void`
+
+Defined in: [src/base/validator.tsx:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L83)
 
 Customize placement of created error labels. First argument: The created error label. Second argument: The invalid element.
 
@@ -294,15 +264,13 @@ default: Places the error label after the invalid element
 
 `void`
 
-#### Defined in
-
-[src/base/validator.tsx:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L82)
-
 ***
 
 ### highlight()?
 
 > `optional` **highlight**(`element`, `errorClass`, `validClass`): `void`
+
+Defined in: [src/base/validator.tsx:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L99)
 
 How to highlight invalid fields. Override to decide which fields and how to highlight.
 
@@ -326,15 +294,13 @@ default: Adds errorClass (see the option) to the element
 
 `void`
 
-#### Defined in
-
-[src/base/validator.tsx:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L98)
-
 ***
 
 ### invalidHandler()?
 
 > `optional` **invalidHandler**(`event`, `validator`): `void`
+
+Defined in: [src/base/validator.tsx:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L111)
 
 Callback for custom code when an invalid form is submitted. Called with an event object as the first argument, and the validator
 as in the second.
@@ -353,15 +319,13 @@ as in the second.
 
 `void`
 
-#### Defined in
-
-[src/base/validator.tsx:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L110)
-
 ***
 
 ### showErrors()?
 
 > `optional` **showErrors**(`errorMap`, `errorList`, `validator`): `void`
+
+Defined in: [src/base/validator.tsx:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L186)
 
 A custom message display handler. Gets the map of errors as the first argument and an array of errors as the second,
 called in the context of the validator object. The arguments contain only those elements currently validated, which can
@@ -386,15 +350,13 @@ behaviour by calling this.defaultShowErrors().
 
 `void`
 
-#### Defined in
-
-[src/base/validator.tsx:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L185)
-
 ***
 
 ### submitHandler()?
 
 > `optional` **submitHandler**(`form`, `event`, `validator`): `boolean` \| `void`
+
+Defined in: [src/base/validator.tsx:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L194)
 
 Callback for handling the actual submit when the form is valid. Gets the form and the event object. Replaces the default submit.
 The right place to submit a form via Ajax after it is validated.
@@ -417,15 +379,13 @@ The right place to submit a form via Ajax after it is validated.
 
 `boolean` \| `void`
 
-#### Defined in
-
-[src/base/validator.tsx:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L193)
-
 ***
 
 ### unhighlight()?
 
 > `optional` **unhighlight**(`element`, `errorClass`, `validClass`, `validator`): `void`
+
+Defined in: [src/base/validator.tsx:208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L208)
 
 Called to revert changes made by option highlight, same arguments as highlight.
 
@@ -452,7 +412,3 @@ default: Removes the errorClass
 #### Returns
 
 `void`
-
-#### Defined in
-
-[src/base/validator.tsx:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L207)

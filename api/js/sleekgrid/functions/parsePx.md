@@ -1,8 +1,10 @@
-[@serenity-is/sleekgrid](../README.md) / parsePx
+[serenity-is/sleekgrid](../README.md) / parsePx
 
 # Function: parsePx()
 
 > **parsePx**(`str`): `number`
+
+Defined in: [src/core/util.tsx:152](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/util.tsx#L152)
 
 ## Parameters
 
@@ -13,7 +15,3 @@
 ## Returns
 
 `number`
-
-## Defined in
-
-[core/util.ts:93](https://github.com/serenity-is/sleekgrid/blob/master/src/core/util.ts#L93)

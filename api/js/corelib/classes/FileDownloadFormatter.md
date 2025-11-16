@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / FileDownloadFormatter
+[serenity-is/corelib](../README.md) / FileDownloadFormatter
 
 # Class: FileDownloadFormatter
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L7)
 
 ## Implements
 
@@ -9,39 +11,39 @@
 
 ## Constructors
 
-### new FileDownloadFormatter()
+### Constructor
 
-> **new FileDownloadFormatter**(`props`): [`FileDownloadFormatter`](FileDownloadFormatter.md)
+> **new FileDownloadFormatter**(`props`): `FileDownloadFormatter`
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L10)
 
 #### Parameters
 
 ##### props
 
-###### props.displayFormat
+###### displayFormat?
 
 `string`
 
-###### props.iconClass
+###### iconClass?
 
 `string`
 
-###### props.originalNameProperty
+###### originalNameProperty?
 
 `string`
 
 #### Returns
 
-[`FileDownloadFormatter`](FileDownloadFormatter.md)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L149)
+`FileDownloadFormatter`
 
 ## Properties
 
 ### props
 
 > `readonly` **props**: `object` = `{}`
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L10)
 
 #### displayFormat?
 
@@ -55,9 +57,17 @@
 
 > `optional` **originalNameProperty**: `string`
 
-#### Defined in
+***
 
-[src/ui/formatters/formatters.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L149)
+### \[typeInfo\]
+
+> `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L8)
+
+#### Implementation of
+
+[`IInitializeColumn`](IInitializeColumn.md).[`[typeInfo]`](IInitializeColumn.md#typeinfo)
 
 ## Accessors
 
@@ -67,6 +77,8 @@
 
 > **get** **displayFormat**(): `string`
 
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L45)
+
 ##### Returns
 
 `string`
@@ -74,6 +86,8 @@
 #### Set Signature
 
 > **set** **displayFormat**(`value`): `void`
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L46)
 
 ##### Parameters
 
@@ -84,10 +98,6 @@
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L185)
 
 ***
 
@@ -97,6 +107,8 @@
 
 > **get** **iconClass**(): `string`
 
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L51)
+
 ##### Returns
 
 `string`
@@ -104,6 +116,8 @@
 #### Set Signature
 
 > **set** **iconClass**(`value`): `void`
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L52)
 
 ##### Parameters
 
@@ -114,10 +128,6 @@
 ##### Returns
 
 `void`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L191)
 
 ***
 
@@ -127,6 +137,8 @@
 
 > **get** **originalNameProperty**(): `string`
 
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L48)
+
 ##### Returns
 
 `string`
@@ -134,6 +146,8 @@
 #### Set Signature
 
 > **set** **originalNameProperty**(`value`): `void`
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L49)
 
 ##### Parameters
 
@@ -145,33 +159,27 @@
 
 `void`
 
-#### Defined in
-
-[src/ui/formatters/formatters.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L188)
-
 ## Methods
 
 ### format()
 
-> **format**(`ctx`): `string`
+> **format**(`ctx`): `FormatterResult`
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L14)
 
 #### Parameters
 
 ##### ctx
 
-`FormatterContext`\<`any`\>
+`FormatterContext`
 
 #### Returns
 
-`string`
+`FormatterResult`
 
 #### Implementation of
 
 [`Formatter`](../interfaces/Formatter.md).[`format`](../interfaces/Formatter.md#format)
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L153)
 
 ***
 
@@ -179,11 +187,13 @@
 
 > **initializeColumn**(`column`): `void`
 
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L37)
+
 #### Parameters
 
 ##### column
 
-`Column`\<`any`\>
+`Column`
 
 #### Returns
 
@@ -193,15 +203,13 @@
 
 [`IInitializeColumn`](IInitializeColumn.md).[`initializeColumn`](IInitializeColumn.md#initializecolumn)
 
-#### Defined in
-
-[src/ui/formatters/formatters.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L177)
-
 ***
 
 ### dbFileUrl()
 
 > `static` **dbFileUrl**(`filename`): `string`
+
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L32)
 
 #### Parameters
 
@@ -212,7 +220,3 @@
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/ui/formatters/formatters.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/formatters.ts#L172)

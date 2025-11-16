@@ -1,10 +1,12 @@
-[@serenity-is/corelib](../README.md) / Config
+[serenity-is/corelib](../README.md) / Config
 
 # Variable: Config
 
 > `const` **Config**: `object`
 
-## Type declaration
+Defined in: [src/base/config.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L1)
+
+## Type Declaration
 
 ### applicationPath
 
@@ -16,7 +18,7 @@ with ID "ApplicationPath" from current page, which is usually located in your _L
 
 ### defaultReturnUrl()
 
-> **defaultReturnUrl**: (`purpose`?) => `string`
+> **defaultReturnUrl**: (`purpose?`) => `string`
 
 Gets a default return URL for the application. This is used when a return URL is not specified
 
@@ -48,7 +50,7 @@ type registry. This is useful when a type is not available in currently loaded s
 The method may return a type or a promise that resolves to a type. If either returns null, 
 the type is considered to be not found.
 The method is called with the type key and an optional kind parameter, which is used to distinguish
-between different kinds of types (e.g. "editor" or "dialog" or "enum").
+between different kinds of types (e.g. "editor" or "dialog" or "enum") usually based on calling type registry.
 
 #### Parameters
 
@@ -81,7 +83,3 @@ of "MyEditor", first a class with name "MyEditor" will be searched, if not found
 "Serenity.MyEditor" and "MyApp.MyEditor" if you added "MyApp" to the list of root namespaces.
 
 You should usually add your application root namespace to this list in ScriptInit(ialization).ts file.
-
-## Defined in
-
-[src/base/config.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L1)

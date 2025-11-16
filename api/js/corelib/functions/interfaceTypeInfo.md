@@ -1,27 +1,27 @@
-[@serenity-is/corelib](../README.md) / interfaceTypeInfo
+[serenity-is/corelib](../README.md) / interfaceTypeInfo
 
 # Function: interfaceTypeInfo()
 
-> **interfaceTypeInfo**\<`T`\>(`typeName`, `interfaces`?): [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`T`\>
+> **interfaceTypeInfo**\<`TypeName`\>(`typeName`, `intf?`): [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/base/system.ts:601](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L601)
 
 ## Type Parameters
 
-• **T**
+### TypeName
+
+`TypeName`
 
 ## Parameters
 
 ### typeName
 
-[`StringLiteral`](../type-aliases/StringLiteral.md)\<`T`\>
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
 
-### interfaces?
+### intf?
 
-`any`[]
+[`InterfaceType`](../type-aliases/InterfaceType.md)[]
 
 ## Returns
 
-[`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`T`\>
-
-## Defined in
-
-[src/base/system.ts:297](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L297)
+[`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`TypeName`\>

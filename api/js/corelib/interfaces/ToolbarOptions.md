@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / ToolbarOptions
+[serenity-is/corelib](../README.md) / ToolbarOptions
 
 # Interface: ToolbarOptions
+
+Defined in: [src/ui/widgets/toolbar.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L65)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **buttons**: [`ToolButton`](ToolButton.md)[]
 
-#### Defined in
-
-[src/ui/widgets/toolbar.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L67)
+Defined in: [src/ui/widgets/toolbar.tsx:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L66)
 
 ***
 
@@ -18,6 +18,4 @@
 
 > `optional` **hotkeyContext**: `any`
 
-#### Defined in
-
-[src/ui/widgets/toolbar.tsx:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L68)
+Defined in: [src/ui/widgets/toolbar.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L67)

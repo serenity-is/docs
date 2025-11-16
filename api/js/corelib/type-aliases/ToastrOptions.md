@@ -1,14 +1,16 @@
-[@serenity-is/corelib](../README.md) / ToastrOptions
+[serenity-is/corelib](../README.md) / ToastrOptions
 
 # Type Alias: ToastrOptions
 
-> **ToastrOptions**: [`ToastContainerOptions`](ToastContainerOptions.md) & `object`
+> **ToastrOptions** = [`ToastContainerOptions`](ToastContainerOptions.md) & `object`
 
-## Type declaration
+Defined in: [src/base/toastr2.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L10)
+
+## Type Declaration
 
 ### closeButton?
 
-> `optional` **closeButton**: `boolean`
+> `optional` **closeButton**: `boolean` \| `HTMLElement`
 
 Show a close button, default is false
 
@@ -18,23 +20,19 @@ Show a close button, default is false
 
 CSS class for close button
 
-### closeHtml?
-
-> `optional` **closeHtml**: `string`
-
-Close button markup
-
 ### closeOnHover?
 
 > `optional` **closeOnHover**: `boolean`
 
 If true (default) toast keeps open when hovered, and closes after extendedTimeout when mouse leaves the toast
 
-### escapeHtml?
+### ~~escapeHtml?~~
 
 > `optional` **escapeHtml**: `boolean`
 
-Escape message html, default is true
+#### Deprecated
+
+Escape message html, default is true. Pass HTML element to message instead
 
 ### extendedTimeOut?
 
@@ -116,6 +114,12 @@ CSS class for toast positioning
 
 Prevent duplicates of the same toast, default is false
 
+### preWrap?
+
+> `optional` **preWrap**: `boolean`
+
+If true the toast message element will have a white-space: pre-wrap style
+
 ### rtl?
 
 > `optional` **rtl**: `boolean`
@@ -151,7 +155,3 @@ CSS class for title
 > `optional` **toastClass**: `string`
 
 CSS class for toast
-
-## Defined in
-
-[src/base/toastr2.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.ts#L10)

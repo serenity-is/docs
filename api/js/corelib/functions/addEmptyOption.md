@@ -1,8 +1,10 @@
-[@serenity-is/corelib](../README.md) / addEmptyOption
+[serenity-is/corelib](../README.md) / addEmptyOption
 
 # Function: addEmptyOption()
 
 > **addEmptyOption**(`select`): `void`
+
+Defined in: [src/compat/html-compat.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/html-compat.ts#L7)
 
 Adds an empty option to the select.
 
@@ -10,12 +12,10 @@ Adds an empty option to the select.
 
 ### select
 
+the select element
+
 `HTMLSelectElement` | `ArrayLike`\<`HTMLElement`\>
 
 ## Returns
 
 `void`
-
-## Defined in
-
-[src/q/html-compat.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/html-compat.ts#L8)

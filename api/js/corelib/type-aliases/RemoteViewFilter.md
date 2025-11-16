@@ -1,27 +1,35 @@
-[@serenity-is/corelib](../README.md) / RemoteViewFilter
+[serenity-is/corelib](../README.md) / RemoteViewFilter
 
-# Type Alias: RemoteViewFilter()\<TEntity\>
+# Type Alias: RemoteViewFilter()\<TItem\>
 
-> **RemoteViewFilter**\<`TEntity`\>: (`item`, `view`) => `boolean`
+> **RemoteViewFilter**\<`TItem`\> = (`item`, `view`) => `boolean`
+
+Defined in: [src/slick/iremoteview.ts:302](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L302)
+
+Filter function for items in the view
 
 ## Type Parameters
 
-• **TEntity**
+### TItem
+
+`TItem`
 
 ## Parameters
 
 ### item
 
-`TEntity`
+`TItem`
+
+The item to test
 
 ### view
 
-[`RemoteView`](../classes/RemoteView.md)\<`TEntity`\>
+[`IRemoteView`](../interfaces/IRemoteView.md)\<`TItem`\>
+
+The RemoteView instance
 
 ## Returns
 
 `boolean`
 
-## Defined in
-
-[src/slick/remoteview.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L40)
+true if the item should be included

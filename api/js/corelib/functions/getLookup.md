@@ -1,12 +1,16 @@
-[@serenity-is/corelib](../README.md) / getLookup
+[serenity-is/corelib](../README.md) / getLookup
 
 # Function: getLookup()
 
 > **getLookup**\<`TItem`\>(`key`): [`Lookup`](../classes/Lookup.md)\<`TItem`\>
 
+Defined in: [src/compat/scriptdata-compat.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L43)
+
 ## Type Parameters
 
-• **TItem**
+### TItem
+
+`TItem`
 
 ## Parameters
 
@@ -17,7 +21,3 @@
 ## Returns
 
 [`Lookup`](../classes/Lookup.md)\<`TItem`\>
-
-## Defined in
-
-[src/q/scriptdata-compat.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/q/scriptdata-compat.ts#L95)

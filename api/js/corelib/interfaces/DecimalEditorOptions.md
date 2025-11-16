@@ -1,6 +1,8 @@
-[@serenity-is/corelib](../README.md) / DecimalEditorOptions
+[serenity-is/corelib](../README.md) / DecimalEditorOptions
 
 # Interface: DecimalEditorOptions
+
+Defined in: [src/ui/editors/decimaleditor.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L6)
 
 ## Properties
 
@@ -8,9 +10,7 @@
 
 > `optional` **allowNegatives**: `boolean`
 
-#### Defined in
-
-[src/ui/editors/decimaleditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L12)
+Defined in: [src/ui/editors/decimaleditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L11)
 
 ***
 
@@ -18,9 +18,7 @@
 
 > `optional` **decimals**: `any`
 
-#### Defined in
-
-[src/ui/editors/decimaleditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L10)
+Defined in: [src/ui/editors/decimaleditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L9)
 
 ***
 
@@ -28,9 +26,7 @@
 
 > `optional` **maxValue**: `string`
 
-#### Defined in
-
-[src/ui/editors/decimaleditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L9)
+Defined in: [src/ui/editors/decimaleditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L8)
 
 ***
 
@@ -38,9 +34,7 @@
 
 > `optional` **minValue**: `string`
 
-#### Defined in
-
-[src/ui/editors/decimaleditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L8)
+Defined in: [src/ui/editors/decimaleditor.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L7)
 
 ***
 
@@ -48,6 +42,4 @@
 
 > `optional` **padDecimals**: `any`
 
-#### Defined in
-
-[src/ui/editors/decimaleditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L11)
+Defined in: [src/ui/editors/decimaleditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L10)

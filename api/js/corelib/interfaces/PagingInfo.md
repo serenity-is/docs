@@ -1,16 +1,20 @@
-[@serenity-is/corelib](../README.md) / PagingInfo
+[serenity-is/corelib](../README.md) / PagingInfo
 
 # Interface: PagingInfo
+
+Defined in: [src/slick/iremoteview.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L266)
+
+Information about the current paging state of the view
 
 ## Properties
 
 ### dataView
 
-> **dataView**: [`RemoteView`](../classes/RemoteView.md)\<`any`\>
+> **dataView**: [`IRemoteView`](IRemoteView.md)\<`any`\>
 
-#### Defined in
+Defined in: [src/slick/iremoteview.ts:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L268)
 
-[src/slick/remoteview.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L35)
+Reference to the RemoteView instance
 
 ***
 
@@ -18,9 +22,9 @@
 
 > **error**: `string`
 
-#### Defined in
+Defined in: [src/slick/iremoteview.ts:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L270)
 
-[src/slick/remoteview.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L34)
+Current error message, if any
 
 ***
 
@@ -28,9 +32,9 @@
 
 > **loading**: `boolean`
 
-#### Defined in
+Defined in: [src/slick/iremoteview.ts:272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L272)
 
-[src/slick/remoteview.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L33)
+Whether data is currently being loaded
 
 ***
 
@@ -38,9 +42,9 @@
 
 > **page**: `number`
 
-#### Defined in
+Defined in: [src/slick/iremoteview.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L274)
 
-[src/slick/remoteview.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L31)
+Current page number (1-based)
 
 ***
 
@@ -48,9 +52,9 @@
 
 > **rowsPerPage**: `number`
 
-#### Defined in
+Defined in: [src/slick/iremoteview.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L276)
 
-[src/slick/remoteview.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L30)
+Number of rows displayed per page
 
 ***
 
@@ -58,6 +62,6 @@
 
 > **totalCount**: `number`
 
-#### Defined in
+Defined in: [src/slick/iremoteview.ts:278](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L278)
 
-[src/slick/remoteview.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L32)
+Total number of items available

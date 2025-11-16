@@ -1,27 +1,27 @@
-[@serenity-is/corelib](../README.md) / formatterTypeInfo
+[serenity-is/corelib](../README.md) / formatterTypeInfo
 
 # Function: formatterTypeInfo()
 
-> **formatterTypeInfo**\<`T`\>(`typeName`, `interfaces`?): [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`T`\>
+> **formatterTypeInfo**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`TypeName`\>
+
+Defined in: [src/base/system.ts:587](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L587)
 
 ## Type Parameters
 
-• **T**
+### TypeName
+
+`TypeName`
 
 ## Parameters
 
 ### typeName
 
-[`StringLiteral`](../type-aliases/StringLiteral.md)\<`T`\>
+[`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
 
-### interfaces?
+### intfAndAttr?
 
-`any`[]
+([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
 
 ## Returns
 
-[`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`T`\>
-
-## Defined in
-
-[src/base/system.ts:293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L293)
+[`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`TypeName`\>

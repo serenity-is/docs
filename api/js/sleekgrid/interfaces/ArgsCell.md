@@ -1,6 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / ArgsCell
+[serenity-is/sleekgrid](../README.md) / ArgsCell
 
 # Interface: ArgsCell
+
+Defined in: [src/core/eventargs.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L57)
 
 ## Extends
 
@@ -17,23 +19,19 @@
 
 > **cell**: `number`
 
-#### Defined in
-
-[grid/eventargs.ts:48](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L48)
+Defined in: [src/core/eventargs.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L59)
 
 ***
 
-### grid?
+### grid
 
-> `optional` **grid**: [`Grid`](../classes/Grid.md)\<`any`\>
+> **grid**: [`ISleekGrid`](ISleekGrid.md)
+
+Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
 
 #### Inherited from
 
 [`ArgsGrid`](ArgsGrid.md).[`grid`](ArgsGrid.md#grid)
-
-#### Defined in
-
-[grid/eventargs.ts:5](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L5)
 
 ***
 
@@ -41,6 +39,4 @@
 
 > **row**: `number`
 
-#### Defined in
-
-[grid/eventargs.ts:47](https://github.com/serenity-is/sleekgrid/blob/master/src/grid/eventargs.ts#L47)
+Defined in: [src/core/eventargs.ts:58](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L58)

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / CellNavigation
+[@serenity-is/sleekgrid](../README.md) / CellNavigation
 
 # Interface: CellNavigation
 

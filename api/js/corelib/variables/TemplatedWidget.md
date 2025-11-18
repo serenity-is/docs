@@ -1,4 +1,4 @@
-[corelib](../README.md) / TemplatedWidget
+[@serenity-is/corelib](../README.md) / TemplatedWidget
 
 # ~~Variable: TemplatedWidget~~
 

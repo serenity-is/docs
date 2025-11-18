@@ -1,4 +1,4 @@
-[corelib](../README.md) / IFrameDialogOptions
+[@serenity-is/corelib](../README.md) / IFrameDialogOptions
 
 # Interface: IFrameDialogOptions
 

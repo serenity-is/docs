@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ArgsSortCol
+[@serenity-is/sleekgrid](../README.md) / ArgsSortCol
 
 # Type Alias: ArgsSortCol
 

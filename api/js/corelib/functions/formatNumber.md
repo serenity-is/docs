@@ -1,4 +1,4 @@
-[corelib](../README.md) / formatNumber
+[@serenity-is/corelib](../README.md) / formatNumber
 
 # Function: formatNumber()
 

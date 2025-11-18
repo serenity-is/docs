@@ -1,4 +1,4 @@
-[corelib](../README.md) / FilterDisplayBar
+[@serenity-is/corelib](../README.md) / FilterDisplayBar
 
 # Class: FilterDisplayBar\<P\>
 

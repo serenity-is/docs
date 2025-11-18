@@ -1,4 +1,4 @@
-[corelib](../README.md) / AutoRegisterArgs
+[@serenity-is/corelib](../README.md) / AutoRegisterArgs
 
 # Interface: AutoRegisterArgs\<P, T\>
 

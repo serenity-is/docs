@@ -1,4 +1,4 @@
-[corelib](../README.md) / noDialogButton
+[@serenity-is/corelib](../README.md) / noDialogButton
 
 # Function: noDialogButton()
 

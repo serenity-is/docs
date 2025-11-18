@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyField
+[@serenity-is/corelib](../README.md) / PropertyField
 
 # Function: PropertyField()
 

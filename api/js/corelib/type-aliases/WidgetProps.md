@@ -1,4 +1,4 @@
-[corelib](../README.md) / WidgetProps
+[@serenity-is/corelib](../README.md) / WidgetProps
 
 # Type Alias: WidgetProps\<P\>
 

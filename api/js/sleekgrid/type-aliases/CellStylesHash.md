@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / CellStylesHash
+[@serenity-is/sleekgrid](../README.md) / CellStylesHash
 
 # Type Alias: CellStylesHash
 

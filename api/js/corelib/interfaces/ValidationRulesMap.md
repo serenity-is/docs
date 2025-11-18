@@ -1,4 +1,4 @@
-[corelib](../README.md) / ValidationRulesMap
+[@serenity-is/corelib](../README.md) / ValidationRulesMap
 
 # Interface: ValidationRulesMap
 

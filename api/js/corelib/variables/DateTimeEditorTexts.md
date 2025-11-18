@@ -1,4 +1,4 @@
-[corelib](../README.md) / DateTimeEditorTexts
+[@serenity-is/corelib](../README.md) / DateTimeEditorTexts
 
 # Variable: DateTimeEditorTexts
 

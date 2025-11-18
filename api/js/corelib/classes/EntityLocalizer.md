@@ -1,4 +1,4 @@
-[corelib](../README.md) / EntityLocalizer
+[@serenity-is/corelib](../README.md) / EntityLocalizer
 
 # Class: EntityLocalizer
 

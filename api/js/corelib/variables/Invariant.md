@@ -1,4 +1,4 @@
-[corelib](../README.md) / Invariant
+[@serenity-is/corelib](../README.md) / Invariant
 
 # Variable: Invariant
 

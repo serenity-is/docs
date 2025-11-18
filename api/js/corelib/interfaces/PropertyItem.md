@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyItem
+[@serenity-is/corelib](../README.md) / PropertyItem
 
 # Interface: PropertyItem
 

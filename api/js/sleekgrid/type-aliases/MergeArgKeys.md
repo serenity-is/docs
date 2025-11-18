@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / MergeArgKeys
+[@serenity-is/sleekgrid](../README.md) / MergeArgKeys
 
 # Type Alias: MergeArgKeys
 

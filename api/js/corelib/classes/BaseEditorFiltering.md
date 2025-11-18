@@ -1,4 +1,4 @@
-[corelib](../README.md) / BaseEditorFiltering
+[@serenity-is/corelib](../README.md) / BaseEditorFiltering
 
 # Abstract Class: BaseEditorFiltering\<TEditor\>
 

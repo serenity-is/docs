@@ -1,4 +1,4 @@
-[corelib](../README.md) / AdvancedFilteringAttribute
+[@serenity-is/corelib](../README.md) / AdvancedFilteringAttribute
 
 # Class: AdvancedFilteringAttribute
 

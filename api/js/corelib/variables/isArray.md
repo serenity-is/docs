@@ -1,4 +1,4 @@
-[corelib](../README.md) / isArray
+[@serenity-is/corelib](../README.md) / isArray
 
 # Variable: isArray()
 

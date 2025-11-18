@@ -1,4 +1,4 @@
-[corelib](../README.md) / editToolButton
+[@serenity-is/corelib](../README.md) / editToolButton
 
 # Function: editToolButton()
 

@@ -1,8 +1,8 @@
-[corelib](../README.md) / HtmlReportContentEditor
+[@serenity-is/corelib](../README.md) / HtmlReportContentEditor
 
 # Class: HtmlReportContentEditor\<P\>
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L246)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L260)
 
 ## Extends
 
@@ -90,7 +90,7 @@ Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenit
 
 > `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L247)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L261)
 
 #### Overrides
 
@@ -102,7 +102,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:247](https://github.com/sereni
 
 > `static` **CKEditorBasePath**: `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L197)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L211)
 
 #### Inherited from
 
@@ -114,7 +114,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:197](https://github.com/sereni
 
 > `static` **CKEditorVer**: `string` = `"4.22.1"`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L196)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L210)
 
 #### Inherited from
 
@@ -212,7 +212,7 @@ Defined in: [src/ui/editors/editorwidget.ts:25](https://github.com/serenity-is/s
 
 > **get** **value**(): `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L161)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L175)
 
 ##### Returns
 
@@ -222,7 +222,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:161](https://github.com/sereni
 
 > **set** **value**(`v`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L172)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L186)
 
 ##### Parameters
 
@@ -422,7 +422,7 @@ Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/widgets/widget.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L42)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L159)
 
 #### Returns
 
@@ -466,7 +466,7 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L176)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L190)
 
 #### Returns
 
@@ -482,7 +482,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:176](https://github.com/sereni
 
 > **get\_value**(): `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L151)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L165)
 
 #### Returns
 
@@ -498,7 +498,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:151](https://github.com/sereni
 
 > `protected` **getConfig**(): [`CKEditorConfig`](../interfaces/CKEditorConfig.md)
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L249)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L263)
 
 #### Returns
 
@@ -562,7 +562,7 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 > `protected` **getEditorInstance**(): `any`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L140)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L154)
 
 #### Returns
 
@@ -676,22 +676,6 @@ Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/sereni
 
 ***
 
-### overridedestroy()
-
-> **overridedestroy**(): `void`
-
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L145)
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[`HtmlContentEditor`](HtmlContentEditor.md).[`overridedestroy`](HtmlContentEditor.md#overridedestroy)
-
-***
-
 ### render()
 
 > **render**(): `any`
@@ -732,7 +716,7 @@ Defined in: [src/ui/widgets/widget.ts:184](https://github.com/serenity-is/sereni
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L180)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L194)
 
 #### Parameters
 
@@ -754,7 +738,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:180](https://github.com/sereni
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L165)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L179)
 
 #### Parameters
 
@@ -876,7 +860,7 @@ Defined in: [src/ui/editors/htmlcontenteditor.tsx:22](https://github.com/serenit
 
 > `static` **getCKEditorBasePath**(): `string`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L199)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L213)
 
 #### Returns
 
@@ -914,7 +898,7 @@ Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenit
 
 > `static` **includeCKEditor**(`then`): `void`
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L212)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L226)
 
 #### Parameters
 

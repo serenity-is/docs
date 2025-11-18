@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / EventCallback
+[@serenity-is/sleekgrid](../README.md) / EventCallback
 
 # Type Alias: EventCallback()\<TArgs, TEvent\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / Select2QueryOptions
+[@serenity-is/corelib](../README.md) / Select2QueryOptions
 
 # Interface: Select2QueryOptions
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / AttributeSpecifier
+[@serenity-is/corelib](../README.md) / AttributeSpecifier
 
 # Type Alias: AttributeSpecifier
 

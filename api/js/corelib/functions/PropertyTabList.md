@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyTabList
+[@serenity-is/corelib](../README.md) / PropertyTabList
 
 # Function: PropertyTabList()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / EditorProps
+[@serenity-is/corelib](../README.md) / EditorProps
 
 # Type Alias: EditorProps\<T\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / getNested
+[@serenity-is/corelib](../README.md) / getNested
 
 # Function: getNested()
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ArgsCssStyle
+[@serenity-is/sleekgrid](../README.md) / ArgsCssStyle
 
 # Interface: ArgsCssStyle
 

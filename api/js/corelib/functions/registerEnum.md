@@ -1,4 +1,4 @@
-[corelib](../README.md) / registerEnum
+[@serenity-is/corelib](../README.md) / registerEnum
 
 # Function: registerEnum()
 

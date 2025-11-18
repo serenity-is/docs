@@ -1,4 +1,4 @@
-[corelib](../README.md) / EntityLocalizerOptions
+[@serenity-is/corelib](../README.md) / EntityLocalizerOptions
 
 # Interface: EntityLocalizerOptions
 

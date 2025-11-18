@@ -1,4 +1,4 @@
-[corelib](../README.md) / registerEditor
+[@serenity-is/corelib](../README.md) / registerEditor
 
 # Function: registerEditor()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / NotifyMap
+[@serenity-is/corelib](../README.md) / NotifyMap
 
 # Type Alias: NotifyMap
 

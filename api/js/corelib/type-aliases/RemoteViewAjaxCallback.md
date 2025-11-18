@@ -1,10 +1,10 @@
-[corelib](../README.md) / RemoteViewAjaxCallback
+[@serenity-is/corelib](../README.md) / RemoteViewAjaxCallback
 
 # Type Alias: RemoteViewAjaxCallback()\<TItem\>
 
 > **RemoteViewAjaxCallback**\<`TItem`\> = (`view`, `options`) => `boolean` \| `void`
 
-Defined in: [src/slick/iremoteview.ts:294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L294)
+Defined in: [src/slick/iremoteview.ts:301](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L301)
 
 Callback function for AJAX calls made by the view
 

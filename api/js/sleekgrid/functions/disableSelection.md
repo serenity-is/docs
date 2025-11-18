@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / disableSelection
+[@serenity-is/sleekgrid](../README.md) / disableSelection
 
 # Function: disableSelection()
 

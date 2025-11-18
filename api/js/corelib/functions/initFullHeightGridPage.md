@@ -1,4 +1,4 @@
-[corelib](../README.md) / initFullHeightGridPage
+[@serenity-is/corelib](../README.md) / initFullHeightGridPage
 
 # Function: initFullHeightGridPage()
 

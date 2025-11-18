@@ -1,4 +1,4 @@
-[corelib](../README.md) / validatorAbortHandler
+[@serenity-is/corelib](../README.md) / validatorAbortHandler
 
 # Function: validatorAbortHandler()
 

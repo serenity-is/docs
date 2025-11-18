@@ -1,4 +1,4 @@
-[corelib](../README.md) / HandleRouteEvent
+[@serenity-is/corelib](../README.md) / HandleRouteEvent
 
 # Interface: HandleRouteEvent
 

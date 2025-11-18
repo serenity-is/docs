@@ -1,4 +1,4 @@
-[corelib](../README.md) / PostToServiceOptions
+[@serenity-is/corelib](../README.md) / PostToServiceOptions
 
 # Interface: PostToServiceOptions
 

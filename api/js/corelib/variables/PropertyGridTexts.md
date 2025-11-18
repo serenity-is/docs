@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyGridTexts
+[@serenity-is/corelib](../README.md) / PropertyGridTexts
 
 # Variable: PropertyGridTexts
 

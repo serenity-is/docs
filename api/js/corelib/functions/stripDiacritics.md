@@ -1,4 +1,4 @@
-[corelib](../README.md) / stripDiacritics
+[@serenity-is/corelib](../README.md) / stripDiacritics
 
 # Function: stripDiacritics()
 

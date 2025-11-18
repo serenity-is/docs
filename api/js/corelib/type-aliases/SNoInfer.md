@@ -1,4 +1,4 @@
-[corelib](../README.md) / SNoInfer
+[@serenity-is/corelib](../README.md) / SNoInfer
 
 # Type Alias: SNoInfer\<T\>
 

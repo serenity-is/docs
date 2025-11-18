@@ -1,4 +1,4 @@
-[corelib](../README.md) / ValidateEventDelegate
+[@serenity-is/corelib](../README.md) / ValidateEventDelegate
 
 # Type Alias: ValidateEventDelegate()
 

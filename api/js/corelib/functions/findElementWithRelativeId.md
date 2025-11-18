@@ -1,4 +1,4 @@
-[corelib](../README.md) / findElementWithRelativeId
+[@serenity-is/corelib](../README.md) / findElementWithRelativeId
 
 # Function: findElementWithRelativeId()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / registerInterface
+[@serenity-is/corelib](../README.md) / registerInterface
 
 # Function: registerInterface()
 

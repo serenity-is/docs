@@ -1,4 +1,4 @@
-[corelib](../README.md) / resolveServiceUrl
+[@serenity-is/corelib](../README.md) / resolveServiceUrl
 
 # Function: resolveServiceUrl()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / UploaderSuccessData
+[@serenity-is/corelib](../README.md) / UploaderSuccessData
 
 # Interface: UploaderSuccessData
 

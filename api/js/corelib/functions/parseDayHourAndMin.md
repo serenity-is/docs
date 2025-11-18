@@ -1,4 +1,4 @@
-[corelib](../README.md) / parseDayHourAndMin
+[@serenity-is/corelib](../README.md) / parseDayHourAndMin
 
 # Function: parseDayHourAndMin()
 

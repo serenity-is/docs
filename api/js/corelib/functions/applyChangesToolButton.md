@@ -1,4 +1,4 @@
-[corelib](../README.md) / applyChangesToolButton
+[@serenity-is/corelib](../README.md) / applyChangesToolButton
 
 # Function: applyChangesToolButton()
 

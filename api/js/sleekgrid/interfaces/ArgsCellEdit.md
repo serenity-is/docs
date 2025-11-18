@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ArgsCellEdit
+[@serenity-is/sleekgrid](../README.md) / ArgsCellEdit
 
 # Interface: ArgsCellEdit
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / Type
+[@serenity-is/corelib](../README.md) / Type
 
 # Type Alias: Type
 

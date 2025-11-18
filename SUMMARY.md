@@ -83,6 +83,7 @@
   * [Serenity.Net.Web](api/dotnet/Serenity.Net.Web/README.md)
 * API Reference (TypeScript)
   * [@serenity-is/corelib](api/js/corelib/README.md)
+  * [@serenity-is/domwise](api/js/domwise/README.md)
   * [@serenity-is/sleekgrid](api/js/sleekgrid/README.md)
 * StartSharp
   * [Introduction](startsharp/README.md)

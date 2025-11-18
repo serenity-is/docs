@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / IntegerCellEdit
+[@serenity-is/sleekgrid](../README.md) / IntegerCellEdit
 
 # Class: IntegerCellEdit
 

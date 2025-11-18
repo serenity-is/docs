@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / AutoTooltips
+[@serenity-is/sleekgrid](../README.md) / AutoTooltips
 
 # Class: AutoTooltips
 

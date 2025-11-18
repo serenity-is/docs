@@ -1,4 +1,4 @@
-[corelib](../README.md) / GroupByElement
+[@serenity-is/corelib](../README.md) / GroupByElement
 
 # Type Alias: GroupByElement\<TItem\>
 

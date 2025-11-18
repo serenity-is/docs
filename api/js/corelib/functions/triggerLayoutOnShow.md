@@ -1,4 +1,4 @@
-[corelib](../README.md) / triggerLayoutOnShow
+[@serenity-is/corelib](../README.md) / triggerLayoutOnShow
 
 # Function: triggerLayoutOnShow()
 

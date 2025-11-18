@@ -1,4 +1,4 @@
-[corelib](../README.md) / ISlickFormatter
+[@serenity-is/corelib](../README.md) / ISlickFormatter
 
 # Abstract Class: ISlickFormatter
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / reloadLookupAsync
+[@serenity-is/corelib](../README.md) / reloadLookupAsync
 
 # Function: reloadLookupAsync()
 

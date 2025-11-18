@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / YesNoSelectCellEdit
+[@serenity-is/sleekgrid](../README.md) / YesNoSelectCellEdit
 
 # Class: YesNoSelectCellEdit
 

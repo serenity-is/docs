@@ -1,4 +1,4 @@
-[corelib](../README.md) / HtmlContentEditorOptions
+[@serenity-is/corelib](../README.md) / HtmlContentEditorOptions
 
 # Interface: HtmlContentEditorOptions
 

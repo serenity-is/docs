@@ -1,4 +1,4 @@
-[corelib](../README.md) / addCustomAttribute
+[@serenity-is/corelib](../README.md) / addCustomAttribute
 
 # Function: addCustomAttribute()
 

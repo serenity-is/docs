@@ -1,4 +1,4 @@
-[corelib](../README.md) / FilteringTypeRegistry
+[@serenity-is/corelib](../README.md) / FilteringTypeRegistry
 
 # Variable: FilteringTypeRegistry
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / requestStarting
+[@serenity-is/corelib](../README.md) / requestStarting
 
 # Function: requestStarting()
 

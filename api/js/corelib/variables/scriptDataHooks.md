@@ -1,4 +1,4 @@
-[corelib](../README.md) / scriptDataHooks
+[@serenity-is/corelib](../README.md) / scriptDataHooks
 
 # Variable: scriptDataHooks
 

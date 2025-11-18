@@ -1,4 +1,4 @@
-[corelib](../README.md) / IdPrefixType
+[@serenity-is/corelib](../README.md) / IdPrefixType
 
 # Type Alias: IdPrefixType
 

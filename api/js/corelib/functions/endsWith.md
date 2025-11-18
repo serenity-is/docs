@@ -1,4 +1,4 @@
-[corelib](../README.md) / endsWith
+[@serenity-is/corelib](../README.md) / endsWith
 
 # ~~Function: endsWith()~~
 

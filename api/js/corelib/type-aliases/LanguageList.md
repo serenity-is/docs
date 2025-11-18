@@ -1,4 +1,4 @@
-[corelib](../README.md) / LanguageList
+[@serenity-is/corelib](../README.md) / LanguageList
 
 # Type Alias: LanguageList
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / today
+[@serenity-is/corelib](../README.md) / today
 
 # Function: today()
 

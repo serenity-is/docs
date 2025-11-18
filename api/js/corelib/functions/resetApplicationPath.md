@@ -1,4 +1,4 @@
-[corelib](../README.md) / resetApplicationPath
+[@serenity-is/corelib](../README.md) / resetApplicationPath
 
 # Function: resetApplicationPath()
 

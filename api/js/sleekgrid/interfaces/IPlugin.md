@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / IPlugin
+[@serenity-is/sleekgrid](../README.md) / IPlugin
 
 # ~~Interface: IPlugin~~
 

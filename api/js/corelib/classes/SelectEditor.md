@@ -1,4 +1,4 @@
-[corelib](../README.md) / SelectEditor
+[@serenity-is/corelib](../README.md) / SelectEditor
 
 # Class: SelectEditor\<P\>
 

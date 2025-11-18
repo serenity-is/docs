@@ -1,4 +1,4 @@
-[corelib](../README.md) / EditorFiltering
+[@serenity-is/corelib](../README.md) / EditorFiltering
 
 # Class: EditorFiltering
 

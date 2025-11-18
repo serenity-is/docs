@@ -1,4 +1,4 @@
-[corelib](../README.md) / StringEditor
+[@serenity-is/corelib](../README.md) / StringEditor
 
 # Class: StringEditor\<P\>
 

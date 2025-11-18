@@ -1,4 +1,4 @@
-[corelib](../README.md) / ComboboxFormatResult
+[@serenity-is/corelib](../README.md) / ComboboxFormatResult
 
 # Type Alias: ComboboxFormatResult
 

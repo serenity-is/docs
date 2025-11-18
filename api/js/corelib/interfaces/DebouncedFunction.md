@@ -1,4 +1,4 @@
-[corelib](../README.md) / DebouncedFunction
+[@serenity-is/corelib](../README.md) / DebouncedFunction
 
 # Interface: DebouncedFunction()\<T\>
 

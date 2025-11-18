@@ -1,4 +1,4 @@
-[corelib](../README.md) / fabIcon
+[@serenity-is/corelib](../README.md) / fabIcon
 
 # Function: fabIcon()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / splitDateString
+[@serenity-is/corelib](../README.md) / splitDateString
 
 # Function: splitDateString()
 

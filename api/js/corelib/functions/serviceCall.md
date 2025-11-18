@@ -1,4 +1,4 @@
-[corelib](../README.md) / serviceCall
+[@serenity-is/corelib](../README.md) / serviceCall
 
 # Function: serviceCall()
 

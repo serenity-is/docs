@@ -1,4 +1,4 @@
-[corelib](../README.md) / GridRadioSelectionMixin
+[@serenity-is/corelib](../README.md) / GridRadioSelectionMixin
 
 # Class: GridRadioSelectionMixin
 
@@ -116,7 +116,7 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:100](https://github.com/
 
 ### createSelectColumn()
 
-> `static` **createSelectColumn**(`getMixin`): `Column`
+> `static` **createSelectColumn**(`getMixin`, `columnOptions?`): `Column`
 
 Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L105)
 
@@ -125,6 +125,10 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:105](https://github.com/
 ##### getMixin
 
 () => `GridRadioSelectionMixin`
+
+##### columnOptions?
+
+`Partial`\<`Column`\>
 
 #### Returns
 

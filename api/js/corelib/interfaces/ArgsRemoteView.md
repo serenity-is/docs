@@ -1,4 +1,4 @@
-[corelib](../README.md) / ArgsRemoteView
+[@serenity-is/corelib](../README.md) / ArgsRemoteView
 
 # Interface: ArgsRemoteView
 

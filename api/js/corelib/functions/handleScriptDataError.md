@@ -1,4 +1,4 @@
-[corelib](../README.md) / handleScriptDataError
+[@serenity-is/corelib](../README.md) / handleScriptDataError
 
 # Function: handleScriptDataError()
 

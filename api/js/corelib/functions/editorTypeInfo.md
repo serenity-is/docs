@@ -1,4 +1,4 @@
-[corelib](../README.md) / editorTypeInfo
+[@serenity-is/corelib](../README.md) / editorTypeInfo
 
 # Function: editorTypeInfo()
 

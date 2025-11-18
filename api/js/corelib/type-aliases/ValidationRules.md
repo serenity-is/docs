@@ -1,4 +1,4 @@
-[corelib](../README.md) / ValidationRules
+[@serenity-is/corelib](../README.md) / ValidationRules
 
 # Type Alias: ValidationRules
 

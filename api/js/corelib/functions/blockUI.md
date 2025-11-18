@@ -1,4 +1,4 @@
-[corelib](../README.md) / blockUI
+[@serenity-is/corelib](../README.md) / blockUI
 
 # Function: blockUI()
 

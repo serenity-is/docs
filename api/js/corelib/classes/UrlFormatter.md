@@ -1,4 +1,4 @@
-[corelib](../README.md) / UrlFormatter
+[@serenity-is/corelib](../README.md) / UrlFormatter
 
 # Class: UrlFormatter
 

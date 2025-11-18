@@ -1,4 +1,4 @@
-[corelib](../README.md) / ComboboxSearchResult
+[@serenity-is/corelib](../README.md) / ComboboxSearchResult
 
 # Interface: ComboboxSearchResult\<TItem\>
 

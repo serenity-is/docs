@@ -1,4 +1,4 @@
-[corelib](../README.md) / ImageCheckResultTexts
+[@serenity-is/corelib](../README.md) / ImageCheckResultTexts
 
 # Variable: ImageCheckResultTexts
 

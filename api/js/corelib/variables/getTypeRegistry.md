@@ -1,4 +1,4 @@
-[corelib](../README.md) / getTypeRegistry
+[@serenity-is/corelib](../README.md) / getTypeRegistry
 
 # ~~Variable: getTypeRegistry()~~
 

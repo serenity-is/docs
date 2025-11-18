@@ -1,4 +1,4 @@
-[corelib](../README.md) / textColor
+[@serenity-is/corelib](../README.md) / textColor
 
 # Function: textColor()
 

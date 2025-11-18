@@ -1,4 +1,4 @@
-[corelib](../README.md) / alert
+[@serenity-is/corelib](../README.md) / alert
 
 # ~~Variable: alert()~~
 

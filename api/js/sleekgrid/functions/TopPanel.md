@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / TopPanel
+[@serenity-is/sleekgrid](../README.md) / TopPanel
 
 # Function: TopPanel()
 

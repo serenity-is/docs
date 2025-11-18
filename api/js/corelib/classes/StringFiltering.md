@@ -1,4 +1,4 @@
-[corelib](../README.md) / StringFiltering
+[@serenity-is/corelib](../README.md) / StringFiltering
 
 # Class: StringFiltering
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / FormatterContext
+[@serenity-is/sleekgrid](../README.md) / FormatterContext
 
 # Interface: FormatterContext\<TItem\>
 

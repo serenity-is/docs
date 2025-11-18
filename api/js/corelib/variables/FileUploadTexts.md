@@ -1,4 +1,4 @@
-[corelib](../README.md) / FileUploadTexts
+[@serenity-is/corelib](../README.md) / FileUploadTexts
 
 # Variable: FileUploadTexts
 

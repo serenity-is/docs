@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / Column
+[@serenity-is/sleekgrid](../README.md) / Column
 
 # Interface: Column\<TItem\>
 

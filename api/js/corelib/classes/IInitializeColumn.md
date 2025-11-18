@@ -1,4 +1,4 @@
-[corelib](../README.md) / IInitializeColumn
+[@serenity-is/corelib](../README.md) / IInitializeColumn
 
 # Abstract Class: IInitializeColumn
 

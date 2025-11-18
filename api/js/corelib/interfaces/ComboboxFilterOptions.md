@@ -1,4 +1,4 @@
-[corelib](../README.md) / ComboboxFilterOptions
+[@serenity-is/corelib](../README.md) / ComboboxFilterOptions
 
 # Interface: ComboboxFilterOptions
 

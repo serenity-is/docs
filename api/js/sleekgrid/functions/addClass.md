@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / addClass
+[@serenity-is/sleekgrid](../README.md) / addClass
 
 # Function: addClass()
 

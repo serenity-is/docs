@@ -1,4 +1,4 @@
-[corelib](../README.md) / postToService
+[@serenity-is/corelib](../README.md) / postToService
 
 # Function: postToService()
 

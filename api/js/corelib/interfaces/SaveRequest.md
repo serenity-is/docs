@@ -1,4 +1,4 @@
-[corelib](../README.md) / SaveRequest
+[@serenity-is/corelib](../README.md) / SaveRequest
 
 # Interface: SaveRequest\<TEntity\>
 

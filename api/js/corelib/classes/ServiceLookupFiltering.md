@@ -1,4 +1,4 @@
-[corelib](../README.md) / ServiceLookupFiltering
+[@serenity-is/corelib](../README.md) / ServiceLookupFiltering
 
 # Class: ServiceLookupFiltering
 

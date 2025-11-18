@@ -1,4 +1,4 @@
-[corelib](../README.md) / format
+[@serenity-is/corelib](../README.md) / format
 
 # ~~Variable: format()~~
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / registerType
+[@serenity-is/corelib](../README.md) / registerType
 
 # Function: registerType()
 

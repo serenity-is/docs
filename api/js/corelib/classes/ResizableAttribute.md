@@ -1,4 +1,4 @@
-[corelib](../README.md) / ResizableAttribute
+[@serenity-is/corelib](../README.md) / ResizableAttribute
 
 # Class: ResizableAttribute
 

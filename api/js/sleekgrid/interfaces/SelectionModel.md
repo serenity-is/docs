@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / SelectionModel
+[@serenity-is/sleekgrid](../README.md) / SelectionModel
 
 # Interface: SelectionModel
 

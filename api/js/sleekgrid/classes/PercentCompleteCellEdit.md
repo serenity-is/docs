@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / PercentCompleteCellEdit
+[@serenity-is/sleekgrid](../README.md) / PercentCompleteCellEdit
 
 # Class: PercentCompleteCellEdit
 

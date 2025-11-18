@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / formatterContext
+[@serenity-is/sleekgrid](../README.md) / formatterContext
 
 # Function: formatterContext()
 

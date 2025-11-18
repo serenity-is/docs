@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / EditorClass
+[@serenity-is/sleekgrid](../README.md) / EditorClass
 
 # Interface: EditorClass
 

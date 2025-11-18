@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / HeaderRenderEvent
+[@serenity-is/sleekgrid](../README.md) / HeaderRenderEvent
 
 # Type Alias: HeaderRenderEvent
 

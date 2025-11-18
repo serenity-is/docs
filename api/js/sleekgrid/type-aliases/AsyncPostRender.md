@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / AsyncPostRender
+[@serenity-is/sleekgrid](../README.md) / AsyncPostRender
 
 # Type Alias: AsyncPostRender()\<TItem\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / serviceRequest
+[@serenity-is/corelib](../README.md) / serviceRequest
 
 # Function: serviceRequest()
 

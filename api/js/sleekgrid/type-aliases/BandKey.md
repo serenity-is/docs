@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / BandKey
+[@serenity-is/sleekgrid](../README.md) / BandKey
 
 # Type Alias: BandKey
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ValidationResult
+[@serenity-is/sleekgrid](../README.md) / ValidationResult
 
 # Interface: ValidationResult
 

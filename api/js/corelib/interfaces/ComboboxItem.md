@@ -1,4 +1,4 @@
-[corelib](../README.md) / ComboboxItem
+[@serenity-is/corelib](../README.md) / ComboboxItem
 
 # Interface: ComboboxItem\<TSource\>
 

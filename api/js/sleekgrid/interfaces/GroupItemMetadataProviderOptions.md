@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / GroupItemMetadataProviderOptions
+[@serenity-is/sleekgrid](../README.md) / GroupItemMetadataProviderOptions
 
 # Interface: GroupItemMetadataProviderOptions
 

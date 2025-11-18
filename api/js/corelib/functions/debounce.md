@@ -1,4 +1,4 @@
-[corelib](../README.md) / debounce
+[@serenity-is/corelib](../README.md) / debounce
 
 # Function: debounce()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / toGrouping
+[@serenity-is/corelib](../README.md) / toGrouping
 
 # Function: toGrouping()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / interfaceTypeInfo
+[@serenity-is/corelib](../README.md) / interfaceTypeInfo
 
 # Function: interfaceTypeInfo()
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / convertCompatFormatter
+[@serenity-is/sleekgrid](../README.md) / convertCompatFormatter
 
 # Function: convertCompatFormatter()
 

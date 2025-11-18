@@ -1,4 +1,4 @@
-[corelib](../README.md) / ArgsRowCountChanged
+[@serenity-is/corelib](../README.md) / ArgsRowCountChanged
 
 # Interface: ArgsRowCountChanged
 

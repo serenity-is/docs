@@ -1,4 +1,4 @@
-[corelib](../README.md) / Format
+[@serenity-is/corelib](../README.md) / Format
 
 # Type Alias: Format()\<TItem\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / TimeEditor
+[@serenity-is/corelib](../README.md) / TimeEditor
 
 # Class: TimeEditor\<P\>
 

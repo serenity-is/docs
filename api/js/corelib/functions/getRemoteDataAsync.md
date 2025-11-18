@@ -1,4 +1,4 @@
-[corelib](../README.md) / getRemoteDataAsync
+[@serenity-is/corelib](../README.md) / getRemoteDataAsync
 
 # Function: getRemoteDataAsync()
 

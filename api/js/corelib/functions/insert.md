@@ -1,4 +1,4 @@
-[corelib](../README.md) / insert
+[@serenity-is/corelib](../README.md) / insert
 
 # Function: insert()
 

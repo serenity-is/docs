@@ -1,4 +1,4 @@
-[corelib](../README.md) / FilterDialog
+[@serenity-is/corelib](../README.md) / FilterDialog
 
 # Class: FilterDialog\<P\>
 

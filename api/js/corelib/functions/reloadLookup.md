@@ -1,4 +1,4 @@
-[corelib](../README.md) / reloadLookup
+[@serenity-is/corelib](../README.md) / reloadLookup
 
 # Function: reloadLookup()
 

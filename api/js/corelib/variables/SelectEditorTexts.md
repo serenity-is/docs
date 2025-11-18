@@ -1,4 +1,4 @@
-[corelib](../README.md) / SelectEditorTexts
+[@serenity-is/corelib](../README.md) / SelectEditorTexts
 
 # Variable: SelectEditorTexts
 

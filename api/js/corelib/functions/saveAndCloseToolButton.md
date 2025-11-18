@@ -1,4 +1,4 @@
-[corelib](../README.md) / saveAndCloseToolButton
+[@serenity-is/corelib](../README.md) / saveAndCloseToolButton
 
 # Function: saveAndCloseToolButton()
 

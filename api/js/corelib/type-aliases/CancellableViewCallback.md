@@ -1,10 +1,10 @@
-[corelib](../README.md) / CancellableViewCallback
+[@serenity-is/corelib](../README.md) / CancellableViewCallback
 
 # Type Alias: CancellableViewCallback()\<TItem\>
 
 > **CancellableViewCallback**\<`TItem`\> = (`view`) => `boolean` \| `void`
 
-Defined in: [src/slick/iremoteview.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L286)
+Defined in: [src/slick/iremoteview.ts:293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L293)
 
 Callback function that can cancel a view operation
 

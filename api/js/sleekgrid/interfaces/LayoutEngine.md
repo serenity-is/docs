@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / LayoutEngine
+[@serenity-is/sleekgrid](../README.md) / LayoutEngine
 
 # Interface: LayoutEngine
 

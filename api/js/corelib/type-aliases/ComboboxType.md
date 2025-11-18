@@ -1,4 +1,4 @@
-[corelib](../README.md) / ComboboxType
+[@serenity-is/corelib](../README.md) / ComboboxType
 
 # Type Alias: ComboboxType
 

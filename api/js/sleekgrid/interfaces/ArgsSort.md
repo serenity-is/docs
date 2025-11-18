@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ArgsSort
+[@serenity-is/sleekgrid](../README.md) / ArgsSort
 
 # Interface: ArgsSort
 

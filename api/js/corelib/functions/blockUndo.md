@@ -1,4 +1,4 @@
-[corelib](../README.md) / blockUndo
+[@serenity-is/corelib](../README.md) / blockUndo
 
 # Function: blockUndo()
 

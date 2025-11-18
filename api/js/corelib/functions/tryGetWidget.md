@@ -1,4 +1,4 @@
-[corelib](../README.md) / tryGetWidget
+[@serenity-is/corelib](../README.md) / tryGetWidget
 
 # Function: tryGetWidget()
 

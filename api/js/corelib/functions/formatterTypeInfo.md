@@ -1,4 +1,4 @@
-[corelib](../README.md) / formatterTypeInfo
+[@serenity-is/corelib](../README.md) / formatterTypeInfo
 
 # Function: formatterTypeInfo()
 

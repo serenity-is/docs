@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyPanel
+[@serenity-is/corelib](../README.md) / PropertyPanel
 
 # Class: PropertyPanel\<TItem, P\>
 

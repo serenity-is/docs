@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / LayoutHost
+[@serenity-is/sleekgrid](../README.md) / LayoutHost
 
 # Interface: LayoutHost
 

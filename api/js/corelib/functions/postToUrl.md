@@ -1,4 +1,4 @@
-[corelib](../README.md) / postToUrl
+[@serenity-is/corelib](../README.md) / postToUrl
 
 # Function: postToUrl()
 

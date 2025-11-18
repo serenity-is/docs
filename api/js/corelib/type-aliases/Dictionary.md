@@ -1,4 +1,4 @@
-[corelib](../README.md) / Dictionary
+[@serenity-is/corelib](../README.md) / Dictionary
 
 # Type Alias: Dictionary\<TItem\>
 

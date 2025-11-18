@@ -1,4 +1,4 @@
-[corelib](../README.md) / DeleteResponse
+[@serenity-is/corelib](../README.md) / DeleteResponse
 
 # Interface: DeleteResponse
 

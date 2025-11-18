@@ -1,4 +1,4 @@
-[corelib](../README.md) / TimeEditorBaseOptions
+[@serenity-is/corelib](../README.md) / TimeEditorBaseOptions
 
 # Interface: TimeEditorBaseOptions
 

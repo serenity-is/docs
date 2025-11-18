@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / FormatterResult
+[@serenity-is/sleekgrid](../README.md) / FormatterResult
 
 # Type Alias: FormatterResult
 

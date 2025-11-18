@@ -1,4 +1,4 @@
-[corelib](../README.md) / DateYearEditor
+[@serenity-is/corelib](../README.md) / DateYearEditor
 
 # Class: DateYearEditor\<P\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / addClass
+[@serenity-is/corelib](../README.md) / addClass
 
 # Function: addClass()
 

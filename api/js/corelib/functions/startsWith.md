@@ -1,4 +1,4 @@
-[corelib](../README.md) / startsWith
+[@serenity-is/corelib](../README.md) / startsWith
 
 # ~~Function: startsWith()~~
 

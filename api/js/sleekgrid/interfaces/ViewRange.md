@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ViewRange
+[@serenity-is/sleekgrid](../README.md) / ViewRange
 
 # Interface: ViewRange
 

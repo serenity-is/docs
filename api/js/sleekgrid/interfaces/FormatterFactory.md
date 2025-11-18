@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / FormatterFactory
+[@serenity-is/sleekgrid](../README.md) / FormatterFactory
 
 # Interface: FormatterFactory\<TItem\>
 

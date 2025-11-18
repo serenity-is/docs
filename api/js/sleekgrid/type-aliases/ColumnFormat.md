@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ColumnFormat
+[@serenity-is/sleekgrid](../README.md) / ColumnFormat
 
 # Type Alias: ColumnFormat()\<TItem\>
 

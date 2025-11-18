@@ -1,4 +1,4 @@
-[corelib](../README.md) / EditorAddon
+[@serenity-is/corelib](../README.md) / EditorAddon
 
 # Type Alias: EditorAddon()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / toggleClass
+[@serenity-is/corelib](../README.md) / toggleClass
 
 # Function: toggleClass()
 

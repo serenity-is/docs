@@ -1,4 +1,4 @@
-[corelib](../README.md) / cast
+[@serenity-is/corelib](../README.md) / cast
 
 # Function: cast()
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / GridSortEvent
+[@serenity-is/sleekgrid](../README.md) / GridSortEvent
 
 # Type Alias: GridSortEvent
 

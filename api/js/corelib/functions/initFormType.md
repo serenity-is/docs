@@ -1,4 +1,4 @@
-[corelib](../README.md) / initFormType
+[@serenity-is/corelib](../README.md) / initFormType
 
 # Function: initFormType()
 

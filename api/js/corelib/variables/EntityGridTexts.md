@@ -1,4 +1,4 @@
-[corelib](../README.md) / EntityGridTexts
+[@serenity-is/corelib](../README.md) / EntityGridTexts
 
 # Variable: EntityGridTexts
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / IDataView
+[@serenity-is/sleekgrid](../README.md) / IDataView
 
 # Interface: IDataView\<TItem\>
 

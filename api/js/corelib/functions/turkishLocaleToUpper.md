@@ -1,4 +1,4 @@
-[corelib](../README.md) / turkishLocaleToUpper
+[@serenity-is/corelib](../README.md) / turkishLocaleToUpper
 
 # Function: turkishLocaleToUpper()
 

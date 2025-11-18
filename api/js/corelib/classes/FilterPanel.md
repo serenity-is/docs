@@ -1,4 +1,4 @@
-[corelib](../README.md) / FilterPanel
+[@serenity-is/corelib](../README.md) / FilterPanel
 
 # Class: FilterPanel\<P\>
 

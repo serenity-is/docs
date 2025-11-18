@@ -1,4 +1,4 @@
-[corelib](../README.md) / isBS5Plus
+[@serenity-is/corelib](../README.md) / isBS5Plus
 
 # Function: isBS5Plus()
 

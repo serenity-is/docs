@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / GridOptions
+[@serenity-is/sleekgrid](../README.md) / GridOptions
 
 # Interface: GridOptions\<TItem\>
 

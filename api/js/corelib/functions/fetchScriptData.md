@@ -1,4 +1,4 @@
-[corelib](../README.md) / fetchScriptData
+[@serenity-is/corelib](../README.md) / fetchScriptData
 
 # Function: fetchScriptData()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / parseCriteria
+[@serenity-is/corelib](../README.md) / parseCriteria
 
 # Function: parseCriteria()
 

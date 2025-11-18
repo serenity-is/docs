@@ -1,4 +1,4 @@
-[corelib](../README.md) / KnownIconClass
+[@serenity-is/corelib](../README.md) / KnownIconClass
 
 # Type Alias: KnownIconClass
 

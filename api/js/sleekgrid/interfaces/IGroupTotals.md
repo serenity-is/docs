@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / IGroupTotals
+[@serenity-is/sleekgrid](../README.md) / IGroupTotals
 
 # Interface: IGroupTotals\<TEntity\>
 

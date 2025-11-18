@@ -1,4 +1,4 @@
-[corelib](../README.md) / IRowDefinition
+[@serenity-is/corelib](../README.md) / IRowDefinition
 
 # Interface: IRowDefinition
 

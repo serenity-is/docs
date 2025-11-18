@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ISleekGrid
+[@serenity-is/sleekgrid](../README.md) / ISleekGrid
 
 # Interface: ISleekGrid\<TItem\>
 

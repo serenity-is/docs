@@ -1,4 +1,4 @@
-[corelib](../README.md) / hasUIDialog
+[@serenity-is/corelib](../README.md) / hasUIDialog
 
 # Function: hasUIDialog()
 

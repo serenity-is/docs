@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / LongTextCellEdit
+[@serenity-is/sleekgrid](../README.md) / LongTextCellEdit
 
 # Class: LongTextCellEdit
 

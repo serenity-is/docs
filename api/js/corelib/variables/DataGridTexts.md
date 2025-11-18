@@ -1,4 +1,4 @@
-[corelib](../README.md) / DataGridTexts
+[@serenity-is/corelib](../README.md) / DataGridTexts
 
 # Variable: DataGridTexts
 

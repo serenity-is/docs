@@ -1,4 +1,4 @@
-[corelib](../README.md) / setTypeNameProp
+[@serenity-is/corelib](../README.md) / setTypeNameProp
 
 # Function: setTypeNameProp()
 

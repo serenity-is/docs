@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / RowMoveManagerOptions
+[@serenity-is/sleekgrid](../README.md) / RowMoveManagerOptions
 
 # Interface: RowMoveManagerOptions
 

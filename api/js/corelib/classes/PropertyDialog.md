@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyDialog
+[@serenity-is/corelib](../README.md) / PropertyDialog
 
 # Class: PropertyDialog\<TItem, P\>
 

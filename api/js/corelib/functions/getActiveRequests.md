@@ -1,4 +1,4 @@
-[corelib](../README.md) / getActiveRequests
+[@serenity-is/corelib](../README.md) / getActiveRequests
 
 # Function: getActiveRequests()
 

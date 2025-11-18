@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / FooterColumnEvent
+[@serenity-is/sleekgrid](../README.md) / FooterColumnEvent
 
 # Type Alias: FooterColumnEvent
 

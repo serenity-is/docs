@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / RowSelectionModel
+[@serenity-is/sleekgrid](../README.md) / RowSelectionModel
 
 # Class: RowSelectionModel
 

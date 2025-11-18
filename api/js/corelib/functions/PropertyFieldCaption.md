@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyFieldCaption
+[@serenity-is/corelib](../README.md) / PropertyFieldCaption
 
 # Function: PropertyFieldCaption()
 

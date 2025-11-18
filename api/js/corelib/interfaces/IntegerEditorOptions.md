@@ -1,4 +1,4 @@
-[corelib](../README.md) / IntegerEditorOptions
+[@serenity-is/corelib](../README.md) / IntegerEditorOptions
 
 # Interface: IntegerEditorOptions
 

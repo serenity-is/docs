@@ -1,4 +1,4 @@
-[corelib](../README.md) / Select2
+[@serenity-is/corelib](../README.md) / Select2
 
 # Class: Select2
 

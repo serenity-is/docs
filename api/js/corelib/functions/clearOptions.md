@@ -1,4 +1,4 @@
-[corelib](../README.md) / clearOptions
+[@serenity-is/corelib](../README.md) / clearOptions
 
 # Function: clearOptions()
 

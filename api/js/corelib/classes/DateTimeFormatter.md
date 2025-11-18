@@ -1,4 +1,4 @@
-[corelib](../README.md) / DateTimeFormatter
+[@serenity-is/corelib](../README.md) / DateTimeFormatter
 
 # Class: DateTimeFormatter
 

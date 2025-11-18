@@ -1,4 +1,4 @@
-[corelib](../README.md) / TemplatedDialog
+[@serenity-is/corelib](../README.md) / TemplatedDialog
 
 # ~~Variable: TemplatedDialog~~
 

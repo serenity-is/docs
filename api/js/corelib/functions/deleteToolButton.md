@@ -1,4 +1,4 @@
-[corelib](../README.md) / deleteToolButton
+[@serenity-is/corelib](../README.md) / deleteToolButton
 
 # Function: deleteToolButton()
 

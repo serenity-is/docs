@@ -1,4 +1,4 @@
-[corelib](../README.md) / TypeMember
+[@serenity-is/corelib](../README.md) / TypeMember
 
 # Interface: TypeMember
 

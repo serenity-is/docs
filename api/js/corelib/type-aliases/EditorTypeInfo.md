@@ -1,4 +1,4 @@
-[corelib](../README.md) / EditorTypeInfo
+[@serenity-is/corelib](../README.md) / EditorTypeInfo
 
 # Type Alias: EditorTypeInfo\<TypeName\>
 

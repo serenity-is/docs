@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / PercentCompleteBarFormatter
+[@serenity-is/sleekgrid](../README.md) / PercentCompleteBarFormatter
 
 # Function: PercentCompleteBarFormatter()
 

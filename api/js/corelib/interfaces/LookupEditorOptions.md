@@ -1,4 +1,4 @@
-[corelib](../README.md) / LookupEditorOptions
+[@serenity-is/corelib](../README.md) / LookupEditorOptions
 
 # Interface: LookupEditorOptions
 

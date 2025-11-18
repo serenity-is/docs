@@ -1,4 +1,4 @@
-[corelib](../README.md) / EntityGrid
+[@serenity-is/corelib](../README.md) / EntityGrid
 
 # Class: EntityGrid\<TItem, P\>
 
@@ -658,7 +658,7 @@ Defined in: [src/ui/datagrid/datagrid.tsx:63](https://github.com/serenity-is/ser
 
 Defined in: [src/ui/datagrid/datagrid.tsx:1266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1266)
 
-##### Obsolete
+##### Deprecated
 
 use defaultPersistenceStorage, this one has a typo
 
@@ -672,7 +672,7 @@ use defaultPersistenceStorage, this one has a typo
 
 Defined in: [src/ui/datagrid/datagrid.tsx:1268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1268)
 
-##### Obsolete
+##### Deprecated
 
 use defaultPersistenceStorage, this one has a typo
 

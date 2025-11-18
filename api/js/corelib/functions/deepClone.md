@@ -1,4 +1,4 @@
-[corelib](../README.md) / deepClone
+[@serenity-is/corelib](../README.md) / deepClone
 
 # Function: deepClone()
 

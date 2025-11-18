@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / AsyncPostCleanup
+[@serenity-is/sleekgrid](../README.md) / AsyncPostCleanup
 
 # Type Alias: AsyncPostCleanup()\<TItem\>
 

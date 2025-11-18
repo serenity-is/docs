@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / EditController
+[@serenity-is/sleekgrid](../README.md) / EditController
 
 # Interface: EditController
 

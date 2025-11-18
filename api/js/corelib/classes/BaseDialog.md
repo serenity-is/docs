@@ -1,4 +1,4 @@
-[corelib](../README.md) / BaseDialog
+[@serenity-is/corelib](../README.md) / BaseDialog
 
 # Class: BaseDialog\<P\>
 

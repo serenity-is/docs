@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / TextCellEdit
+[@serenity-is/sleekgrid](../README.md) / TextCellEdit
 
 # Class: TextCellEdit
 

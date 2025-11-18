@@ -1,4 +1,4 @@
-[corelib](../README.md) / IReadOnly
+[@serenity-is/corelib](../README.md) / IReadOnly
 
 # Abstract Class: IReadOnly
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / IGetEditValue
+[@serenity-is/corelib](../README.md) / IGetEditValue
 
 # Abstract Class: IGetEditValue
 

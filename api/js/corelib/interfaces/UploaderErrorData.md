@@ -1,4 +1,4 @@
-[corelib](../README.md) / UploaderErrorData
+[@serenity-is/corelib](../README.md) / UploaderErrorData
 
 # Interface: UploaderErrorData
 

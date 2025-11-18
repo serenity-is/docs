@@ -1,4 +1,4 @@
-[corelib](../README.md) / UtilityColor
+[@serenity-is/corelib](../README.md) / UtilityColor
 
 # Type Alias: UtilityColor
 

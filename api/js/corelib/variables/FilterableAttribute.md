@@ -1,4 +1,4 @@
-[corelib](../README.md) / FilterableAttribute
+[@serenity-is/corelib](../README.md) / FilterableAttribute
 
 # ~~Variable: FilterableAttribute~~
 

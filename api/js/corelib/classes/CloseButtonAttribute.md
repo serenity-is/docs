@@ -1,4 +1,4 @@
-[corelib](../README.md) / CloseButtonAttribute
+[@serenity-is/corelib](../README.md) / CloseButtonAttribute
 
 # Class: CloseButtonAttribute
 

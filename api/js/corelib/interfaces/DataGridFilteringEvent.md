@@ -1,4 +1,4 @@
-[corelib](../README.md) / DataGridFilteringEvent
+[@serenity-is/corelib](../README.md) / DataGridFilteringEvent
 
 # Interface: DataGridFilteringEvent\<TItem\>
 

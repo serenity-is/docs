@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / GridLayoutRefs
+[@serenity-is/sleekgrid](../README.md) / GridLayoutRefs
 
 # Type Alias: GridLayoutRefs
 

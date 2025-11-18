@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / GridLayoutInfo
+[@serenity-is/sleekgrid](../README.md) / GridLayoutInfo
 
 # Type Alias: GridLayoutInfo
 

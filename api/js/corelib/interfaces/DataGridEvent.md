@@ -1,4 +1,4 @@
-[corelib](../README.md) / DataGridEvent
+[@serenity-is/corelib](../README.md) / DataGridEvent
 
 # Interface: DataGridEvent
 

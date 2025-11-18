@@ -1,4 +1,4 @@
-[corelib](../README.md) / DataValidationTexts
+[@serenity-is/corelib](../README.md) / DataValidationTexts
 
 # Variable: DataValidationTexts
 

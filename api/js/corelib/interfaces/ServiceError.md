@@ -1,4 +1,4 @@
-[corelib](../README.md) / ServiceError
+[@serenity-is/corelib](../README.md) / ServiceError
 
 # Interface: ServiceError
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / GroupInfo
+[@serenity-is/corelib](../README.md) / GroupInfo
 
 # Interface: GroupInfo\<TItem\>
 
@@ -104,7 +104,7 @@ so never use or rely on ctx.value here!
 
 ***
 
-### formatter()?
+### ~~formatter()?~~
 
 > `optional` **formatter**: (`group`) => `string`
 
@@ -120,7 +120,7 @@ Defined in: [src/slick/slicktypes.ts:34](https://github.com/serenity-is/serenity
 
 `string`
 
-#### Obsolete
+#### Deprecated
 
 use format
 

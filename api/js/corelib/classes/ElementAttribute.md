@@ -1,4 +1,4 @@
-[corelib](../README.md) / ElementAttribute
+[@serenity-is/corelib](../README.md) / ElementAttribute
 
 # Class: ElementAttribute
 

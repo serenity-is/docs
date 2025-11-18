@@ -1,4 +1,4 @@
-[corelib](../README.md) / appendToNode
+[@serenity-is/corelib](../README.md) / appendToNode
 
 # Function: appendToNode()
 

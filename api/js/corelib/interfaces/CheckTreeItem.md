@@ -1,4 +1,4 @@
-[corelib](../README.md) / CheckTreeItem
+[@serenity-is/corelib](../README.md) / CheckTreeItem
 
 # Interface: CheckTreeItem\<TSource\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / coalesce
+[@serenity-is/corelib](../README.md) / coalesce
 
 # ~~Function: coalesce()~~
 

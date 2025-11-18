@@ -1,4 +1,4 @@
-[corelib](../README.md) / ToolButton
+[@serenity-is/corelib](../README.md) / ToolButton
 
 # Interface: ToolButton
 

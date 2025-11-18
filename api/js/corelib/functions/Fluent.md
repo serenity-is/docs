@@ -1,4 +1,4 @@
-[corelib](../README.md) / Fluent
+[@serenity-is/corelib](../README.md) / Fluent
 
 # Function: Fluent()
 

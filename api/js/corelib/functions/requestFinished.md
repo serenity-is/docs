@@ -1,4 +1,4 @@
-[corelib](../README.md) / requestFinished
+[@serenity-is/corelib](../README.md) / requestFinished
 
 # Function: requestFinished()
 

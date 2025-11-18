@@ -1,4 +1,4 @@
-[corelib](../README.md) / removeClass
+[@serenity-is/corelib](../README.md) / removeClass
 
 # Function: removeClass()
 

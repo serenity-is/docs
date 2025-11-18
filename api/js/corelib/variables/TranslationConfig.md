@@ -1,4 +1,4 @@
-[corelib](../README.md) / TranslationConfig
+[@serenity-is/corelib](../README.md) / TranslationConfig
 
 # Variable: TranslationConfig
 

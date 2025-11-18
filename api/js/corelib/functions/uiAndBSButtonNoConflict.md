@@ -1,4 +1,4 @@
-[corelib](../README.md) / uiAndBSButtonNoConflict
+[@serenity-is/corelib](../README.md) / uiAndBSButtonNoConflict
 
 # Function: uiAndBSButtonNoConflict()
 

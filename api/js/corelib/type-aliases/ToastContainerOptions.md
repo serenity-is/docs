@@ -1,4 +1,4 @@
-[corelib](../README.md) / ToastContainerOptions
+[@serenity-is/corelib](../README.md) / ToastContainerOptions
 
 # Type Alias: ToastContainerOptions
 

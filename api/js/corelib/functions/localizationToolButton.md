@@ -1,4 +1,4 @@
-[corelib](../README.md) / localizationToolButton
+[@serenity-is/corelib](../README.md) / localizationToolButton
 
 # Function: localizationToolButton()
 

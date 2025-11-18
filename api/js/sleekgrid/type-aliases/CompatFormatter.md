@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / CompatFormatter
+[@serenity-is/sleekgrid](../README.md) / CompatFormatter
 
 # Type Alias: CompatFormatter()\<TItem\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / EnumFiltering
+[@serenity-is/corelib](../README.md) / EnumFiltering
 
 # Class: EnumFiltering
 

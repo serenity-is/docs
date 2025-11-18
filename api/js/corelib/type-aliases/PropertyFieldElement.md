@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyFieldElement
+[@serenity-is/corelib](../README.md) / PropertyFieldElement
 
 # Type Alias: PropertyFieldElement
 

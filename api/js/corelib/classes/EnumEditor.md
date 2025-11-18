@@ -1,4 +1,4 @@
-[corelib](../README.md) / EnumEditor
+[@serenity-is/corelib](../README.md) / EnumEditor
 
 # Class: EnumEditor\<P\>
 

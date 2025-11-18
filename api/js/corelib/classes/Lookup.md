@@ -1,4 +1,4 @@
-[corelib](../README.md) / Lookup
+[@serenity-is/corelib](../README.md) / Lookup
 
 # Class: Lookup\<TItem\>
 

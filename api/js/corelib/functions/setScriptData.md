@@ -1,4 +1,4 @@
-[corelib](../README.md) / setScriptData
+[@serenity-is/corelib](../README.md) / setScriptData
 
 # Function: setScriptData()
 

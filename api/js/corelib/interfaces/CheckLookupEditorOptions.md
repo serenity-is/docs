@@ -1,4 +1,4 @@
-[corelib](../README.md) / CheckLookupEditorOptions
+[@serenity-is/corelib](../README.md) / CheckLookupEditorOptions
 
 # Interface: CheckLookupEditorOptions
 

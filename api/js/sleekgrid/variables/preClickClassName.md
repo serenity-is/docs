@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / preClickClassName
+[@serenity-is/sleekgrid](../README.md) / preClickClassName
 
 # Variable: preClickClassName
 

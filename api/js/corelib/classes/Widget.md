@@ -1,4 +1,4 @@
-[corelib](../README.md) / Widget
+[@serenity-is/corelib](../README.md) / Widget
 
 # Class: Widget\<P\>
 

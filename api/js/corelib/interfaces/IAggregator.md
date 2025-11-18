@@ -1,4 +1,4 @@
-[corelib](../README.md) / IAggregator
+[@serenity-is/corelib](../README.md) / IAggregator
 
 # Interface: IAggregator
 

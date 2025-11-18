@@ -1,4 +1,4 @@
-[corelib](../README.md) / executeOnceWhenVisible
+[@serenity-is/corelib](../README.md) / executeOnceWhenVisible
 
 # Function: executeOnceWhenVisible()
 

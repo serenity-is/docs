@@ -1,4 +1,4 @@
-[corelib](../README.md) / parseDate
+[@serenity-is/corelib](../README.md) / parseDate
 
 # Function: parseDate()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / EditorAttribute
+[@serenity-is/corelib](../README.md) / EditorAttribute
 
 # Class: EditorAttribute
 

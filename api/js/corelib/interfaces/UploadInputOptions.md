@@ -1,4 +1,4 @@
-[corelib](../README.md) / UploadInputOptions
+[@serenity-is/corelib](../README.md) / UploadInputOptions
 
 # Interface: UploadInputOptions
 

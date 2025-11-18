@@ -1,4 +1,4 @@
-[corelib](../README.md) / IStringValue
+[@serenity-is/corelib](../README.md) / IStringValue
 
 # Abstract Class: IStringValue
 

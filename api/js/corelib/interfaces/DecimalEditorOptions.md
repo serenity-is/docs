@@ -1,4 +1,4 @@
-[corelib](../README.md) / DecimalEditorOptions
+[@serenity-is/corelib](../README.md) / DecimalEditorOptions
 
 # Interface: DecimalEditorOptions
 

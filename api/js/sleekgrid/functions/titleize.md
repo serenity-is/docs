@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / titleize
+[@serenity-is/sleekgrid](../README.md) / titleize
 
 # Function: titleize()
 

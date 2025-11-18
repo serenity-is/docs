@@ -1,4 +1,4 @@
-[corelib](../README.md) / UserDefinition
+[@serenity-is/corelib](../README.md) / UserDefinition
 
 # Interface: UserDefinition
 

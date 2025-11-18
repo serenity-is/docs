@@ -1,4 +1,4 @@
-[corelib](../README.md) / fieldsProxy
+[@serenity-is/corelib](../README.md) / fieldsProxy
 
 # Function: fieldsProxy()
 

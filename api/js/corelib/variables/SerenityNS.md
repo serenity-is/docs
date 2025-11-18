@@ -1,4 +1,4 @@
-[corelib](../README.md) / SerenityNS
+[@serenity-is/corelib](../README.md) / SerenityNS
 
 # Variable: SerenityNS
 

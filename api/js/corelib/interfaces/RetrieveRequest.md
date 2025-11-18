@@ -1,4 +1,4 @@
-[corelib](../README.md) / RetrieveRequest
+[@serenity-is/corelib](../README.md) / RetrieveRequest
 
 # Interface: RetrieveRequest
 

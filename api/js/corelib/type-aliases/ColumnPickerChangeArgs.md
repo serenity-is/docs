@@ -1,4 +1,4 @@
-[corelib](../README.md) / ColumnPickerChangeArgs
+[@serenity-is/corelib](../README.md) / ColumnPickerChangeArgs
 
 # Type Alias: ColumnPickerChangeArgs
 
@@ -24,8 +24,8 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:17](https://github.com/seren
 
 ***
 
-### toggledColumn
+### toggledColumns
 
-> **toggledColumn**: `Column`
+> **toggledColumns**: `Column`[]
 
 Defined in: [src/ui/datagrid/columnpickerdialog.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L15)

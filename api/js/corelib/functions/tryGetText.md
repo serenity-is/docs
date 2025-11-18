@@ -1,4 +1,4 @@
-[corelib](../README.md) / tryGetText
+[@serenity-is/corelib](../README.md) / tryGetText
 
 # Function: tryGetText()
 

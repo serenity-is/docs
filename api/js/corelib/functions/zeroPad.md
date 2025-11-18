@@ -1,4 +1,4 @@
-[corelib](../README.md) / zeroPad
+[@serenity-is/corelib](../README.md) / zeroPad
 
 # Function: zeroPad()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / confirmDialog
+[@serenity-is/corelib](../README.md) / confirmDialog
 
 # Function: confirmDialog()
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / BasicLayout
+[@serenity-is/sleekgrid](../README.md) / BasicLayout
 
 # Class: BasicLayout
 

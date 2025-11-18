@@ -1,4 +1,4 @@
-[corelib](../README.md) / FilterLine
+[@serenity-is/corelib](../README.md) / FilterLine
 
 # Interface: FilterLine
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ArgsAddNewRow
+[@serenity-is/sleekgrid](../README.md) / ArgsAddNewRow
 
 # Interface: ArgsAddNewRow
 

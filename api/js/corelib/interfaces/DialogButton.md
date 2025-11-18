@@ -1,4 +1,4 @@
-[corelib](../README.md) / DialogButton
+[@serenity-is/corelib](../README.md) / DialogButton
 
 # Interface: DialogButton
 

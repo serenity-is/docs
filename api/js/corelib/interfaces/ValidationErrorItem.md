@@ -1,4 +1,4 @@
-[corelib](../README.md) / ValidationErrorItem
+[@serenity-is/corelib](../README.md) / ValidationErrorItem
 
 # Interface: ValidationErrorItem
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / ToolButtonProps
+[@serenity-is/corelib](../README.md) / ToolButtonProps
 
 # Interface: ToolButtonProps
 

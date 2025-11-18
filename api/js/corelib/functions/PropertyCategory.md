@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyCategory
+[@serenity-is/corelib](../README.md) / PropertyCategory
 
 # Function: PropertyCategory()
 

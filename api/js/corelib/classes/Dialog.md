@@ -1,4 +1,4 @@
-[corelib](../README.md) / Dialog
+[@serenity-is/corelib](../README.md) / Dialog
 
 # Class: Dialog
 

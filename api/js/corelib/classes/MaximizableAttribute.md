@@ -1,4 +1,4 @@
-[corelib](../README.md) / MaximizableAttribute
+[@serenity-is/corelib](../README.md) / MaximizableAttribute
 
 # Class: MaximizableAttribute
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / clearKeys
+[@serenity-is/corelib](../README.md) / clearKeys
 
 # Function: clearKeys()
 

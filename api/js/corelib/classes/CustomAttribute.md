@@ -1,4 +1,4 @@
-[corelib](../README.md) / CustomAttribute
+[@serenity-is/corelib](../README.md) / CustomAttribute
 
 # Abstract Class: CustomAttribute
 

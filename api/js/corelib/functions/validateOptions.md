@@ -1,4 +1,4 @@
-[corelib](../README.md) / validateOptions
+[@serenity-is/corelib](../README.md) / validateOptions
 
 # Function: validateOptions()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / PersistedGridSettings
+[@serenity-is/corelib](../README.md) / PersistedGridSettings
 
 # Interface: PersistedGridSettings
 
@@ -10,7 +10,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:26](https://github.com/sere
 
 > `optional` **columns**: [`PersistedGridColumn`](PersistedGridColumn.md)[]
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L27)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L28)
 
 ***
 
@@ -18,7 +18,15 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:27](https://github.com/sere
 
 > `optional` **filterItems**: [`FilterLine`](FilterLine.md)[]
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L28)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L29)
+
+***
+
+### flags?
+
+> `optional` **flags**: [`GridPersistenceFlags`](GridPersistenceFlags.md)
+
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L27)
 
 ***
 
@@ -26,7 +34,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:28](https://github.com/sere
 
 > `optional` **includeDeleted**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L33)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L34)
 
 ***
 
@@ -34,7 +42,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:33](https://github.com/sere
 
 > `optional` **quickFilters**: `object`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L29)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L30)
 
 #### Index Signature
 
@@ -46,7 +54,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:29](https://github.com/sere
 
 > `optional` **quickFilterText**: `string`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L30)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L31)
 
 ***
 
@@ -54,7 +62,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:30](https://github.com/sere
 
 > `optional` **quickSearchField**: [`QuickSearchField`](QuickSearchField.md)
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L31)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L32)
 
 ***
 
@@ -62,4 +70,4 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:31](https://github.com/sere
 
 > `optional` **quickSearchText**: `string`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L32)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L33)

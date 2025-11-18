@@ -1,4 +1,4 @@
-[corelib](../README.md) / TypeMemberKind
+[@serenity-is/corelib](../README.md) / TypeMemberKind
 
 # Enumeration: TypeMemberKind
 

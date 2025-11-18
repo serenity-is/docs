@@ -1,4 +1,4 @@
-[corelib](../README.md) / centerDialog
+[@serenity-is/corelib](../README.md) / centerDialog
 
 # Function: centerDialog()
 

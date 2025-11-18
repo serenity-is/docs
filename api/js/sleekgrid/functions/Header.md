@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / Header
+[@serenity-is/sleekgrid](../README.md) / Header
 
 # Function: Header()
 

@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / EditorHost
+[@serenity-is/sleekgrid](../README.md) / EditorHost
 
 # Interface: EditorHost
 

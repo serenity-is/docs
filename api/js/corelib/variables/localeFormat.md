@@ -1,4 +1,4 @@
-[corelib](../README.md) / localeFormat
+[@serenity-is/corelib](../README.md) / localeFormat
 
 # ~~Variable: localeFormat()~~
 

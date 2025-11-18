@@ -1,4 +1,4 @@
-[corelib](../README.md) / getColumns
+[@serenity-is/corelib](../README.md) / getColumns
 
 # Function: getColumns()
 

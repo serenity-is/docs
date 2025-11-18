@@ -1,4 +1,4 @@
-[corelib](../README.md) / count
+[@serenity-is/corelib](../README.md) / count
 
 # Function: count()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / isEnum
+[@serenity-is/corelib](../README.md) / isEnum
 
 # Function: isEnum()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / addEmptyOption
+[@serenity-is/corelib](../README.md) / addEmptyOption
 
 # Function: addEmptyOption()
 

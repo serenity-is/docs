@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / Group
+[@serenity-is/sleekgrid](../README.md) / Group
 
 # Class: Group\<TEntity\>
 

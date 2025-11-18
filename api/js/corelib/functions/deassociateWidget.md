@@ -1,4 +1,4 @@
-[corelib](../README.md) / deassociateWidget
+[@serenity-is/corelib](../README.md) / deassociateWidget
 
 # Function: deassociateWidget()
 

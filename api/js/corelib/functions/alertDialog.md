@@ -1,4 +1,4 @@
-[corelib](../README.md) / alertDialog
+[@serenity-is/corelib](../README.md) / alertDialog
 
 # Function: alertDialog()
 

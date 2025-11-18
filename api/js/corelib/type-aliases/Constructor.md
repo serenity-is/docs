@@ -1,4 +1,4 @@
-[corelib](../README.md) / Constructor
+[@serenity-is/corelib](../README.md) / Constructor
 
 # Type Alias: Constructor()\<T\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / cancelDialogButton
+[@serenity-is/corelib](../README.md) / cancelDialogButton
 
 # Function: cancelDialogButton()
 

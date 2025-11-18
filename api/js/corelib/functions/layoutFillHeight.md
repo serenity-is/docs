@@ -1,4 +1,4 @@
-[corelib](../README.md) / layoutFillHeight
+[@serenity-is/corelib](../README.md) / layoutFillHeight
 
 # Function: layoutFillHeight()
 

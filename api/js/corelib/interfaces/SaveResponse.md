@@ -1,4 +1,4 @@
-[corelib](../README.md) / SaveResponse
+[@serenity-is/corelib](../README.md) / SaveResponse
 
 # Interface: SaveResponse
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / classTypeInfo
+[@serenity-is/corelib](../README.md) / classTypeInfo
 
 # Function: classTypeInfo()
 

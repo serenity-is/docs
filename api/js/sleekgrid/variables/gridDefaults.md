@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / gridDefaults
+[@serenity-is/sleekgrid](../README.md) / gridDefaults
 
 # Variable: gridDefaults
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / AutoRegisterHandler
+[@serenity-is/corelib](../README.md) / AutoRegisterHandler
 
 # Type Alias: AutoRegisterHandler()\<P, T\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / trimEnd
+[@serenity-is/corelib](../README.md) / trimEnd
 
 # Function: trimEnd()
 

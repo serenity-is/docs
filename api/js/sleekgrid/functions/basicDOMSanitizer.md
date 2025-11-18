@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / basicDOMSanitizer
+[@serenity-is/sleekgrid](../README.md) / basicDOMSanitizer
 
 # Function: basicDOMSanitizer()
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / formatDayHourAndMin
+[@serenity-is/corelib](../README.md) / formatDayHourAndMin
 
 # Function: formatDayHourAndMin()
 

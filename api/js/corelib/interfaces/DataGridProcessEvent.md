@@ -1,4 +1,4 @@
-[corelib](../README.md) / DataGridProcessEvent
+[@serenity-is/corelib](../README.md) / DataGridProcessEvent
 
 # Interface: DataGridProcessEvent\<TItem\>
 

@@ -1,4 +1,4 @@
-[corelib](../README.md) / PropertyFieldLineBreak
+[@serenity-is/corelib](../README.md) / PropertyFieldLineBreak
 
 # Function: PropertyFieldLineBreak()
 

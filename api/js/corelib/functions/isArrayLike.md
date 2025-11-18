@@ -1,4 +1,4 @@
-[corelib](../README.md) / isArrayLike
+[@serenity-is/corelib](../README.md) / isArrayLike
 
 # Function: isArrayLike()
 

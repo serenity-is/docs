@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ItemMetadata
+[@serenity-is/sleekgrid](../README.md) / ItemMetadata
 
 # Interface: ItemMetadata\<TItem\>
 

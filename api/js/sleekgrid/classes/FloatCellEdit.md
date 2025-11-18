@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / FloatCellEdit
+[@serenity-is/sleekgrid](../README.md) / FloatCellEdit
 
 # Class: FloatCellEdit
 

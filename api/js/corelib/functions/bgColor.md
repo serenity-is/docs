@@ -1,4 +1,4 @@
-[corelib](../README.md) / bgColor
+[@serenity-is/corelib](../README.md) / bgColor
 
 # Function: bgColor()
 

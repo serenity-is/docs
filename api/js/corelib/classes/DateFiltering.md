@@ -1,4 +1,4 @@
-[corelib](../README.md) / DateFiltering
+[@serenity-is/corelib](../README.md) / DateFiltering
 
 # Class: DateFiltering
 

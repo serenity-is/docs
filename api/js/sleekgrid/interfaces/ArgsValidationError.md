@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / ArgsValidationError
+[@serenity-is/sleekgrid](../README.md) / ArgsValidationError
 
 # Interface: ArgsValidationError
 

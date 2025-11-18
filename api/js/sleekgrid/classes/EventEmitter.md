@@ -1,4 +1,4 @@
-[sleekgrid](../README.md) / EventEmitter
+[@serenity-is/sleekgrid](../README.md) / EventEmitter
 
 # Class: EventEmitter\<TArgs, TEvent\>
 

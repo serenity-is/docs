@@ -8,7 +8,7 @@ It includes everything that Serene has, in addition to extra samples, features, 
 
 Our premium packages that include the `StartSharp` template are available for purchase at [https://serenity.is](https://serenity.is).
 
-Currently, four levels are offered: `Freelancer`, `Business` and `Enterprise`.
+Currently, three levels are offered: `Freelancer`, `Business` and `Enterprise`.
 
 They also contain varying levels of premium support.
 

@@ -26,7 +26,7 @@ Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`
 
 ![Movies Nav Title and Icon](img/movies-nav-title-icon.png)
 
-The Serene and StartSharp template includes Line Awesome, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page](https://demo.serenity.is/Serenity.Demo.AdvancedSamples/UIElements/Icons).
+The Serene and StartSharp template includes Line Awesome, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page](https://demo.serenity.is/UIElements/Icons).
 
 ## Ordering Navigation Sections
 

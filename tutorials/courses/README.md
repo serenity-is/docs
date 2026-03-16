@@ -4,8 +4,8 @@
 
 ## Defining the Department Table with a Migration
 
-Define a database table to store the departments that students belong to.
-is entered
+Start by defining a database table to store the departments that students belong to.
+
 Add a new migration named `Department` using the timestamp-based naming convention. This approach helps maintain consistency and avoids conflicts in team environments.
 
 In this migration, define the `Departments` table with the following fields:
@@ -13,7 +13,7 @@ In this migration, define the `Departments` table with the following fields:
 - An auto-incrementing `Id` column as the primary key
 - A `Name` column used to store the department name, marked as unique
 
-The migration derives from Serenity’s `AutoReversingMigration`, allowing rollback operations to be handled automatically during database downgrades and simplifying the migration lifecycle.
+The migration derives from `AutoReversingMigration`, allowing rollback operations to be handled automatically during database downgrades and simplifying the migration lifecycle.
 
 ```csharp
 using FluentMigrator;

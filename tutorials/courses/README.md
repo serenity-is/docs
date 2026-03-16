@@ -2,13 +2,32 @@
 
 > This tutorial is contributed by `Burcu Canur`.
 
+## What you will build
+
+In this tutorial, we build a simple **Student Information System** using Serenity. The system will let you manage:
+
+- **Departments** (e.g., Computer Science, Mathematics)
+- **Terms** (academic periods, e.g., Fall 2026, Spring 2027)
+- **Courses** (with departments, codes, and credits)
+- **Students** (with personal info and department assignment)
+- **Student enrollments** (student ↔ course relationships via a master–detail grid)
+- **Teachers and course assignments**
+- **Grades** (midterm/final/average for each student/course/term)
+
+You’ll see how to:
+
+- Define database schema using migrations
+- Generate CRUD screens with Sergen
+- Build a master–detail UI (students + enrollments)
+- Add filtering, exporting (Excel/PDF), and friendly navigation
+
 ## Defining the Department Table with a Migration
 
-Start by defining a database table to store the departments that students belong to.
+Let's start by defining a database table to store the departments that students belong to.
 
-Add a new migration named `Department` using the timestamp-based naming convention. This approach helps maintain consistency and avoids conflicts in team environments.
+Let's add a new migration named `Department` using the timestamp-based naming convention. This approach helps maintain consistency and avoids conflicts in team environments.
 
-In this migration, define the `Departments` table with the following fields:
+In this migration, define the `Department` table with the following fields:
 
 - An auto-incrementing `Id` column as the primary key
 - A `Name` column used to store the department name, marked as unique
@@ -33,14 +52,14 @@ public class DefaultDB_20250614_1700_Department : AutoReversingMigration
 
 ## Verifying the Migration
 
-After running the migration, verify the applied schema changes.
+After running the migration, let's verify the applied schema changes.
 
-Confirm that the `Departments` table has been created:
+Check that the `Department` table has been created:
 
 - Open **SQL Server Management Studio (SSMS)** or **Visual Studio**
 - Connect to the database used by the Serenity application
 - Expand the **Tables** node under the target database
-- Locate the `[dbo].[Departments]` table
+- Locate the `[dbo].[Department]` table
 
 Executed migrations are tracked in the `[dbo].[VersionInfo]` table, which records version numbers and timestamps to ensure schema consistency across environments.
 
@@ -65,8 +84,6 @@ When prompted for a module name, enter `CourseDB`.
 
 ![Migration Screenshot](./img/department_module_table.png)
 
-Sergen then displays the list of available tables. Select the `dbo.Department` table using the Space key, and press Enter to confirm.
-
 Keep the default `All` option enabled; Sergen generates all required files, including repositories, services, and user interface components, resulting in a fully functional editing interface.
 
 After code generation is complete, start the application; the `Department` entity becomes available under the `CourseDB` module in the navigation menu.
@@ -81,11 +98,9 @@ To support upcoming relationships, add a few sample department records.
 
 Using the CourseDB → Department screen, add the following records:
 
-Computer Science
-
-Mathematics
-
-Physics
+- Computer Science
+- Mathematics
+- Physics
 
 Reference these records later from tables such as `Courses`, `Students`, and `Teachers`.
 
@@ -95,13 +110,10 @@ Adding sample data at this stage will provide a more meaningful working environm
 
 After defining the `Department` table, create migrations for the remaining core entities of the system:
 
-Term
-
-Courses
-
-Student and StudentCourses
-
-Other related tables
+- Term
+- Courses
+- Student and StudentCourses
+- Other related tables
 
 This approach ensures that the database schema is completed in a structured and consistent manner.
 
@@ -208,7 +220,7 @@ public class DefaultDB_20250615_1220_Courses : AutoReversingMigration
 
 ## Verifying the Courses Migration
 
-After applying the migration, verify the schema changes to ensure correctness.
+After applying the migration, let's verify the schema changes to ensure correctness.
 
 Verification includes:
 
@@ -236,7 +248,7 @@ The generated user interface provides full CRUD functionality for managing cours
 
 ## Adding Sample Data for the Courses Table
 
-After creating the `Courses` table and its UI, add sample course records for the upcoming steps.
+Now add sample course records for the upcoming steps.
 
 Open the CourseDB → Courses screen and create the following records:
 
@@ -289,7 +301,7 @@ namespace CourseTutorial.Migrations.DefaultDB
 }
 ```
 
-After applying the migration, build the project and generate the `Students` and `StudentCourses` modules using the Serenity Code Generator.
+Once the migration is applied, build the project and generate the `Students` and `StudentCourses` modules using the Serenity Code Generator.
 
 Start the application; the new screens become available in the navigation menu, providing fully functional CRUD interfaces for managing students and their course enrollments.
 
@@ -350,7 +362,7 @@ However, in a master–detail architecture, detail tables are not intended to be
 
 For this reason, the page structure created for StudentCourses is removed.
 
-Delete the following files:
+Remove the following files (they are not needed when StudentCourses is managed as a detail grid):
 
 StudentCoursesPage.cs
 
@@ -507,11 +519,14 @@ export class StudentCoursesEditor extends GridEditorBase<StudentCoursesRow> {
 
 The `getDialogType` method specifies the dialog type used by the grid editor.
 
-```csharp
-You can override it as follows:
+To customize the caption of the add button, override `getAddButtonCaption` in the editor class:
+
+```ts
 protected getAddButtonCaption() {
-        return "Add";}
+    return "Add";
+}
 ```
+
 ![Migration Screenshot](./img/add_course_button.png)
 
 Click the Add button to open the StudentCoursesEditDialog popup dialog.
@@ -636,26 +651,17 @@ public class DefaultDB_20250616_1200_Grades : AutoReversingMigration
 {
     public override void Up()
     {
-using FluentMigrator;
-
-namespace CourseTutorial.Migrations.DefaultDB;
-
-[DefaultDB, Migration(20250616_1200)]
-public class DefaultDB_20250616_1200_Grades : AutoReversingMigration
-{
-    public override void Up()
-    {
         Create.Table("Grades")
-      .WithColumn("Id").AsInt32().PrimaryKey().Identity()
-      .WithColumn("StudentId").AsInt32().NotNullable()
-          .ForeignKey("FK_Grades_StudentId", "Students", "Id")
-      .WithColumn("CourseId").AsInt32().NotNullable()
-          .ForeignKey("FK_Grades_CourseId", "Courses", "Id")
-      .WithColumn("TermId").AsInt32().NotNullable()
-          .ForeignKey("FK_Grades_TermId", "Terms", "Id")
-      .WithColumn("Midterm").AsDecimal(5, 2).Nullable()
-      .WithColumn("Final").AsDecimal(5, 2).Nullable()
-      .WithColumn("Average").AsDecimal(5, 2).Nullable();
+            .WithColumn("Id").AsInt32().PrimaryKey().Identity()
+            .WithColumn("StudentId").AsInt32().NotNullable()
+                .ForeignKey("FK_Grades_StudentId", "Students", "Id")
+            .WithColumn("CourseId").AsInt32().NotNullable()
+                .ForeignKey("FK_Grades_CourseId", "Courses", "Id")
+            .WithColumn("TermId").AsInt32().NotNullable()
+                .ForeignKey("FK_Grades_TermId", "Terms", "Id")
+            .WithColumn("Midterm").AsDecimal(5, 2).Nullable()
+            .WithColumn("Final").AsDecimal(5, 2).Nullable()
+            .WithColumn("Average").AsDecimal(5, 2).Nullable();
 
         Create.UniqueConstraint("UQ_Grades_StudentId_CourseId_TermId")
             .OnTable("Grades")
@@ -663,6 +669,7 @@ public class DefaultDB_20250616_1200_Grades : AutoReversingMigration
     }
 }
 ```
+
 With this definition:
 
 Each Grades record is associated with a Student and a Course, and the Midterm, Final, and Average fields store the grade information.
@@ -675,7 +682,7 @@ After applying the migration, generate Serenity code for the `Grades` table usin
 
 Select the `dbo.Grades` table, use the `CourseDB` module, and retain the default `All` option.
 
-After code generation, start the application to display the `Grades` screen under the `CourseDB` module.
+Once code generation is complete, start the application to display the `Grades` screen under the `CourseDB` module.
 
 ![Migration Screenshot](./img/grades_ui.png)
 
@@ -971,7 +978,8 @@ using MyPages = CourseTutorial.CourseDB.Pages;
 ![Migration Screenshot](./img/navigation_icons.png)
 ## Overriding Column Header and Width
 
-If you want to display a different header in a grid (columns) or dialog (form), you can override it in the corresponding definition file. You can modify the columns by updating the following file located in TermRow.cs instead of TermRow.cs:
+If you want to display a different header in a grid column or dialog field, do it in the columns definition file (typically `TermsColumns.cs`) instead of editing the row class (`TermsRow.cs`).
+
 ![Migration Screenshot](./img/is_registiration_open_and_is_active.png)
 
 ```csharp
@@ -981,11 +989,12 @@ namespace CourseTutorial.CourseDB.Columns;
 [BasedOnRow(typeof(TermsRow), CheckNames = true)]
 public class TermsColumns
 {
-      public bool IsActive { get; set; }
-      public bool IsRegistirationOpen {get; set;}
+    public bool IsActive { get; set; }
+    public bool IsRegistrationOpen { get; set; }
 }
 ```
-This column definition is based on the TermRow entity, and any properties you add here will override the properties defined in the entity class. Now, let's add a [DisplayName] attribute to the IsActive and IsRegistrationOpen properties, and also set the column widths and alignments.
+
+This column definition is based on the `TermsRow` entity, and any properties you add here will override the properties defined in the entity class. Next, add `[DisplayName]`, width, and alignment attributes to customize the column headers and widths.
 
 ```csharp
 namespace CourseTutorial.CourseDB.Columns;

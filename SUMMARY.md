@@ -38,6 +38,7 @@
     * [Using Serenity Service Behaviors](tutorials/multi_tenancy/using_serenity_service_behaviors.md)
     * [Extending Multi-Tenant Behavior To Movie Sample](tutorials/multi_tenancy/extending_multi-tenant_behavior_to_movie_database_sample.md)
     * [Handling Lookup Scripts](tutorials/multi_tenancy/handling_lookup_scripts.md)
+  * [Student Information System](tutorials/coureses/README.md)
 * Framework Features
   * [Dependency Injection](framework/dependency-injection.md)
   * [Configuration](framework/configuration.md)

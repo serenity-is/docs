@@ -200,7 +200,7 @@ After the Term table is in place, add a migration for the `Courses` table. The s
 This structure ensures that courses are correctly associated with departments while enforcing uniqueness and consistency.
 ```csharp
 using FluentMigrator;
-namespace CourseTutorial4.Migrations.DefaultDB;
+namespace CourseTutorial.Migrations.DefaultDB;
 
 [DefaultDB, Migration(20250615_1220)]
 public class DefaultDB_20250615_1220_Courses : AutoReversingMigration
@@ -511,9 +511,9 @@ import { StudentCoursesEditDialog } from "./StudentCoursesEditDialog";
 @Decorators.registerEditor("CourseTutorial.CourseDB.StudentCoursesEditor")
 export class StudentCoursesEditor extends GridEditorBase<StudentCoursesRow> {
 
-    protected getColumnsKey() { return StudentCoursesColumns.columnsKey;}
-    protected getDialogType() { return StudentCoursesEditDialog;}
-    protected getAddButtonCaption() { return "Add"; }
+    protected override getColumnsKey() { return StudentCoursesColumns.columnsKey;}
+    protected override getDialogType() { return StudentCoursesEditDialog;}
+    protected override getAddButtonCaption() { return "Add"; }
 }
 ```
 
@@ -772,13 +772,13 @@ The StudentId field in GradesRow is linked to FullName:
 ```csharp
 [DisplayName("Student"), NotNull, ForeignKey(typeof(StudentsRow)), LeftJoin(jStudent), TextualField(nameof(FullName))]
 [ServiceLookupEditor(typeof(StudentsRow), Service = "CourseDB/Students/List")]
-public int? StudentId 
-{ 
-    get => fields.StudentId[this]; 
-    set => fields.StudentId[this] = value; 
-}
+public int? StudentId { get => fields.StudentId[this]; set => fields.StudentId[this] = value;}
 ```
-
+Additionally, the field marked as NameProperty in StudentsRow is changed to FullName.
+```csharp
+[DisplayName("Full Name"), Size(201), NotNull, NameProperty, QuickSearch]
+public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+```
 The Student column in the Grades screen now displays the FullName.
 
 ![Migration Screenshot](./img/full_name_field.png)

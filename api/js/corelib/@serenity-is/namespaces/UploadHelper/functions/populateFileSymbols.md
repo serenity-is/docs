@@ -4,7 +4,7 @@
 
 > **populateFileSymbols**(`c`, `items`, `displayOriginalName?`, `urlPrefix?`): `void`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L200)
+Defined in: [src/ui/helpers/uploadhelper.tsx:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L207)
 
 ## Parameters
 

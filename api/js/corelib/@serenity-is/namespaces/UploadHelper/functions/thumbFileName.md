@@ -4,7 +4,7 @@
 
 > **thumbFileName**(`filename`): `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L134)
+Defined in: [src/ui/helpers/uploadhelper.tsx:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L141)
 
 ## Parameters
 

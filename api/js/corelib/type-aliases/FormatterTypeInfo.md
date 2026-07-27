@@ -4,7 +4,7 @@
 
 > **FormatterTypeInfo**\<`TypeName`\> = [`TypeInfo`](TypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:547](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L547)
+Defined in: [src/base/system.ts:548](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L548)
 
 Formatter type information. This is used to make type name available in declaration files unlike decorators that does not show in .d.ts files.
 

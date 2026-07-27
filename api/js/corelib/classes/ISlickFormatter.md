@@ -2,7 +2,7 @@
 
 # Abstract Class: ISlickFormatter
 
-Defined in: [src/base/system.ts:432](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L432)
+Defined in: [src/base/system.ts:433](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L433)
 
 Marker interface for SleekGrid formatters.
 
@@ -22,4 +22,4 @@ Marker interface for SleekGrid formatters.
 
 > `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/base/system.ts:433](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L433)
+Defined in: [src/base/system.ts:434](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L434)

@@ -4,7 +4,7 @@
 
 > **AsyncPostRender**\<`TItem`\> = (`cellNode`, `row`, `item`, `column`, `reRender`) => `void`
 
-Defined in: [src/core/formatting.ts:98](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L98)
+Defined in: [src/core/formatting.ts:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L101)
 
 ## Type Parameters
 

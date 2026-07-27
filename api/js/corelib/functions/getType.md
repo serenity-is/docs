@@ -4,7 +4,7 @@
 
 > **getType**(`name`, `target?`): [`Type`](../type-aliases/Type.md)
 
-Defined in: [src/base/system.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L67)
+Defined in: [src/base/system.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L68)
 
 Get a type by name from the type registry, global object or a specific target.
 

@@ -4,7 +4,7 @@
 
 > **InterfaceType** = `Function` & `object`
 
-Defined in: [src/base/system.ts:554](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L554)
+Defined in: [src/base/system.ts:555](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L555)
 
 Type for interface class
 

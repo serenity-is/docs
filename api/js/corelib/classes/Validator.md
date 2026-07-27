@@ -2,7 +2,7 @@
 
 # Class: Validator
 
-Defined in: [src/base/validator.tsx:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L259)
+Defined in: [src/base/validator.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L260)
 
 ## Constructors
 
@@ -10,7 +10,7 @@ Defined in: [src/base/validator.tsx:259](https://github.com/serenity-is/serenity
 
 > **new Validator**(`form`, `options`): `Validator`
 
-Defined in: [src/base/validator.tsx:556](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L556)
+Defined in: [src/base/validator.tsx:557](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L557)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [src/base/validator.tsx:556](https://github.com/serenity-is/serenity
 
 > **dependTypes**: `object`
 
-Defined in: [src/base/validator.tsx:1402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1402)
+Defined in: [src/base/validator.tsx:1406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1406)
 
 #### boolean()
 
@@ -90,7 +90,7 @@ Defined in: [src/base/validator.tsx:1402](https://github.com/serenity-is/serenit
 
 > **lastActive**: [`ValidatableElement`](../interfaces/ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:540](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L540)
+Defined in: [src/base/validator.tsx:541](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L541)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [src/base/validator.tsx:540](https://github.com/serenity-is/serenity
 
 > `readonly` **settings**: [`ValidatorOptions`](../interfaces/ValidatorOptions.md)
 
-Defined in: [src/base/validator.tsx:539](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L539)
+Defined in: [src/base/validator.tsx:540](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L540)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [src/base/validator.tsx:539](https://github.com/serenity-is/serenity
 
 > `static` **autoCreateRanges**: `boolean` = `false`
 
-Defined in: [src/base/validator.tsx:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L267)
+Defined in: [src/base/validator.tsx:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L268)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [src/base/validator.tsx:267](https://github.com/serenity-is/serenity
 
 > `static` **classRuleSettings**: `Record`\<`string`, [`ValidationRules`](../type-aliases/ValidationRules.md)\>
 
-Defined in: [src/base/validator.tsx:1483](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1483)
+Defined in: [src/base/validator.tsx:1487](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1487)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [src/base/validator.tsx:1483](https://github.com/serenity-is/serenit
 
 > `static` **defaults**: [`ValidatorOptions`](../interfaces/ValidatorOptions.md)
 
-Defined in: [src/base/validator.tsx:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L269)
+Defined in: [src/base/validator.tsx:270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L270)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [src/base/validator.tsx:269](https://github.com/serenity-is/serenity
 
 > `readonly` `static` **excludedModifierKeys**: `Set`\<`string`\>
 
-Defined in: [src/base/validator.tsx:1727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1727)
+Defined in: [src/base/validator.tsx:1737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1737)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [src/base/validator.tsx:1727](https://github.com/serenity-is/serenit
 
 > `readonly` `static` **messages**: `Record`\<`string`, `string` \| `Function`\>
 
-Defined in: [src/base/validator.tsx:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L361)
+Defined in: [src/base/validator.tsx:362](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L362)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [src/base/validator.tsx:361](https://github.com/serenity-is/serenity
 
 > `readonly` `static` **methods**: `Record`\<`string`, [`ValidationProvider`](../type-aliases/ValidationProvider.md)\>
 
-Defined in: [src/base/validator.tsx:383](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L383)
+Defined in: [src/base/validator.tsx:384](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L384)
 
 ## Methods
 
@@ -154,7 +154,7 @@ Defined in: [src/base/validator.tsx:383](https://github.com/serenity-is/serenity
 
 > **abortRequest**(`element`): `void`
 
-Defined in: [src/base/validator.tsx:1450](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1450)
+Defined in: [src/base/validator.tsx:1454](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1454)
 
 #### Parameters
 
@@ -172,7 +172,7 @@ Defined in: [src/base/validator.tsx:1450](https://github.com/serenity-is/serenit
 
 > **check**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:1118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1118)
+Defined in: [src/base/validator.tsx:1119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1119)
 
 #### Parameters
 
@@ -190,7 +190,7 @@ Defined in: [src/base/validator.tsx:1118](https://github.com/serenity-is/serenit
 
 > **checkForm**(): `boolean`
 
-Defined in: [src/base/validator.tsx:892](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L892)
+Defined in: [src/base/validator.tsx:893](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L893)
 
 #### Returns
 
@@ -202,7 +202,7 @@ Defined in: [src/base/validator.tsx:892](https://github.com/serenity-is/serenity
 
 > **customDataMessage**(`element`, `method`): `string`
 
-Defined in: [src/base/validator.tsx:1199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1199)
+Defined in: [src/base/validator.tsx:1200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1200)
 
 #### Parameters
 
@@ -224,7 +224,7 @@ Defined in: [src/base/validator.tsx:1199](https://github.com/serenity-is/serenit
 
 > **customMessage**(`name`, `method`): `any`
 
-Defined in: [src/base/validator.tsx:1204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1204)
+Defined in: [src/base/validator.tsx:1205](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1205)
 
 #### Parameters
 
@@ -246,7 +246,7 @@ Defined in: [src/base/validator.tsx:1204](https://github.com/serenity-is/serenit
 
 > **defaultMessage**(`element`, `rule`): `any`
 
-Defined in: [src/base/validator.tsx:1219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1219)
+Defined in: [src/base/validator.tsx:1220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1220)
 
 #### Parameters
 
@@ -274,7 +274,7 @@ Defined in: [src/base/validator.tsx:1219](https://github.com/serenity-is/serenit
 
 > **defaultShowErrors**(): `void`
 
-Defined in: [src/base/validator.tsx:1254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1254)
+Defined in: [src/base/validator.tsx:1255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1255)
 
 #### Returns
 
@@ -286,7 +286,7 @@ Defined in: [src/base/validator.tsx:1254](https://github.com/serenity-is/serenit
 
 > **depend**(`param`, `element`): `any`
 
-Defined in: [src/base/validator.tsx:1414](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1414)
+Defined in: [src/base/validator.tsx:1418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1418)
 
 #### Parameters
 
@@ -308,7 +308,7 @@ Defined in: [src/base/validator.tsx:1414](https://github.com/serenity-is/serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/base/validator.tsx:1476](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1476)
+Defined in: [src/base/validator.tsx:1480](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1480)
 
 #### Returns
 
@@ -320,7 +320,7 @@ Defined in: [src/base/validator.tsx:1476](https://github.com/serenity-is/serenit
 
 > **element**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:900](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L900)
+Defined in: [src/base/validator.tsx:901](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L901)
 
 #### Parameters
 
@@ -338,7 +338,7 @@ Defined in: [src/base/validator.tsx:900](https://github.com/serenity-is/serenity
 
 > **elements**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1041](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1041)
+Defined in: [src/base/validator.tsx:1042](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1042)
 
 #### Returns
 
@@ -350,7 +350,7 @@ Defined in: [src/base/validator.tsx:1041](https://github.com/serenity-is/serenit
 
 > **errors**(): `HTMLElement`[]
 
-Defined in: [src/base/validator.tsx:1086](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1086)
+Defined in: [src/base/validator.tsx:1087](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1087)
 
 #### Returns
 
@@ -362,7 +362,7 @@ Defined in: [src/base/validator.tsx:1086](https://github.com/serenity-is/serenit
 
 > **errorsFor**(`element`): `HTMLElement`[]
 
-Defined in: [src/base/validator.tsx:1367](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1367)
+Defined in: [src/base/validator.tsx:1370](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1370)
 
 #### Parameters
 
@@ -380,7 +380,7 @@ Defined in: [src/base/validator.tsx:1367](https://github.com/serenity-is/serenit
 
 > **findByName**(`name`): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1398)
+Defined in: [src/base/validator.tsx:1402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1402)
 
 #### Parameters
 
@@ -398,7 +398,7 @@ Defined in: [src/base/validator.tsx:1398](https://github.com/serenity-is/serenit
 
 > **findDefined**(...`args`): `any`
 
-Defined in: [src/base/validator.tsx:1210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1210)
+Defined in: [src/base/validator.tsx:1211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1211)
 
 #### Parameters
 
@@ -416,7 +416,7 @@ Defined in: [src/base/validator.tsx:1210](https://github.com/serenity-is/serenit
 
 > **findLastActive**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:1036](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1036)
+Defined in: [src/base/validator.tsx:1037](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1037)
 
 #### Returns
 
@@ -428,7 +428,7 @@ Defined in: [src/base/validator.tsx:1036](https://github.com/serenity-is/serenit
 
 > **focusInvalid**(): `void`
 
-Defined in: [src/base/validator.tsx:1018](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1018)
+Defined in: [src/base/validator.tsx:1019](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1019)
 
 #### Returns
 
@@ -440,7 +440,7 @@ Defined in: [src/base/validator.tsx:1018](https://github.com/serenity-is/serenit
 
 > **form**(): `boolean`
 
-Defined in: [src/base/validator.tsx:881](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L881)
+Defined in: [src/base/validator.tsx:882](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L882)
 
 #### Returns
 
@@ -452,7 +452,7 @@ Defined in: [src/base/validator.tsx:881](https://github.com/serenity-is/serenity
 
 > **formatAndAdd**(`element`, `rule`): `void`
 
-Defined in: [src/base/validator.tsx:1241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1241)
+Defined in: [src/base/validator.tsx:1242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1242)
 
 #### Parameters
 
@@ -480,7 +480,7 @@ Defined in: [src/base/validator.tsx:1241](https://github.com/serenity-is/serenit
 
 > **hideErrors**(): `void`
 
-Defined in: [src/base/validator.tsx:999](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L999)
+Defined in: [src/base/validator.tsx:1000](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1000)
 
 #### Returns
 
@@ -492,7 +492,7 @@ Defined in: [src/base/validator.tsx:999](https://github.com/serenity-is/serenity
 
 > **hideThese**(`errors`): `void`
 
-Defined in: [src/base/validator.tsx:1003](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1003)
+Defined in: [src/base/validator.tsx:1004](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1004)
 
 #### Parameters
 
@@ -510,7 +510,7 @@ Defined in: [src/base/validator.tsx:1003](https://github.com/serenity-is/serenit
 
 > **idOrName**(`element`): `string`
 
-Defined in: [src/base/validator.tsx:1382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1382)
+Defined in: [src/base/validator.tsx:1386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1386)
 
 #### Parameters
 
@@ -528,7 +528,7 @@ Defined in: [src/base/validator.tsx:1382](https://github.com/serenity-is/serenit
 
 > **invalidElements**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1286)
+Defined in: [src/base/validator.tsx:1289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1289)
 
 #### Returns
 
@@ -540,7 +540,7 @@ Defined in: [src/base/validator.tsx:1286](https://github.com/serenity-is/serenit
 
 > **numberOfInvalids**(): `number`
 
-Defined in: [src/base/validator.tsx:981](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L981)
+Defined in: [src/base/validator.tsx:982](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L982)
 
 #### Returns
 
@@ -552,7 +552,7 @@ Defined in: [src/base/validator.tsx:981](https://github.com/serenity-is/serenity
 
 > **prepareElement**(`element`): `void`
 
-Defined in: [src/base/validator.tsx:1113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1113)
+Defined in: [src/base/validator.tsx:1114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1114)
 
 #### Parameters
 
@@ -570,7 +570,7 @@ Defined in: [src/base/validator.tsx:1113](https://github.com/serenity-is/serenit
 
 > **prepareForm**(): `void`
 
-Defined in: [src/base/validator.tsx:1108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1108)
+Defined in: [src/base/validator.tsx:1109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1109)
 
 #### Returns
 
@@ -582,7 +582,7 @@ Defined in: [src/base/validator.tsx:1108](https://github.com/serenity-is/serenit
 
 > **previousValue**(`element`, `method`): `any`
 
-Defined in: [src/base/validator.tsx:1465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1465)
+Defined in: [src/base/validator.tsx:1469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1469)
 
 #### Parameters
 
@@ -604,7 +604,7 @@ Defined in: [src/base/validator.tsx:1465](https://github.com/serenity-is/serenit
 
 > **reset**(): `void`
 
-Defined in: [src/base/validator.tsx:1099](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1099)
+Defined in: [src/base/validator.tsx:1100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1100)
 
 #### Returns
 
@@ -616,7 +616,7 @@ Defined in: [src/base/validator.tsx:1099](https://github.com/serenity-is/serenit
 
 > **resetAll**(): `void`
 
-Defined in: [src/base/validator.tsx:1104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1104)
+Defined in: [src/base/validator.tsx:1105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1105)
 
 #### Returns
 
@@ -628,7 +628,7 @@ Defined in: [src/base/validator.tsx:1104](https://github.com/serenity-is/serenit
 
 > **resetElements**(`elements`): `void`
 
-Defined in: [src/base/validator.tsx:965](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L965)
+Defined in: [src/base/validator.tsx:966](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L966)
 
 #### Parameters
 
@@ -646,7 +646,7 @@ Defined in: [src/base/validator.tsx:965](https://github.com/serenity-is/serenity
 
 > **resetForm**(): `void`
 
-Defined in: [src/base/validator.tsx:951](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L951)
+Defined in: [src/base/validator.tsx:952](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L952)
 
 #### Returns
 
@@ -658,7 +658,7 @@ Defined in: [src/base/validator.tsx:951](https://github.com/serenity-is/serenity
 
 > **resetInternals**(): `void`
 
-Defined in: [src/base/validator.tsx:1091](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1091)
+Defined in: [src/base/validator.tsx:1092](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1092)
 
 #### Returns
 
@@ -670,7 +670,7 @@ Defined in: [src/base/validator.tsx:1091](https://github.com/serenity-is/serenit
 
 > **showErrors**(`errors?`): `void`
 
-Defined in: [src/base/validator.tsx:930](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L930)
+Defined in: [src/base/validator.tsx:931](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L931)
 
 #### Parameters
 
@@ -688,7 +688,7 @@ Defined in: [src/base/validator.tsx:930](https://github.com/serenity-is/serenity
 
 > **showLabel**(`element`, `message?`): `void`
 
-Defined in: [src/base/validator.tsx:1290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1290)
+Defined in: [src/base/validator.tsx:1293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1293)
 
 #### Parameters
 
@@ -710,7 +710,7 @@ Defined in: [src/base/validator.tsx:1290](https://github.com/serenity-is/serenit
 
 > **size**(): `number`
 
-Defined in: [src/base/validator.tsx:1014](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1014)
+Defined in: [src/base/validator.tsx:1015](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1015)
 
 #### Returns
 
@@ -722,7 +722,7 @@ Defined in: [src/base/validator.tsx:1014](https://github.com/serenity-is/serenit
 
 > **startRequest**(`element`): `void`
 
-Defined in: [src/base/validator.tsx:1418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1418)
+Defined in: [src/base/validator.tsx:1422](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1422)
 
 #### Parameters
 
@@ -740,7 +740,7 @@ Defined in: [src/base/validator.tsx:1418](https://github.com/serenity-is/serenit
 
 > **stopRequest**(`element`, `valid`): `void`
 
-Defined in: [src/base/validator.tsx:1426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1426)
+Defined in: [src/base/validator.tsx:1430](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1430)
 
 #### Parameters
 
@@ -762,7 +762,7 @@ Defined in: [src/base/validator.tsx:1426](https://github.com/serenity-is/serenit
 
 > **valid**(): `boolean`
 
-Defined in: [src/base/validator.tsx:1010](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1010)
+Defined in: [src/base/validator.tsx:1011](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1011)
 
 #### Returns
 
@@ -774,7 +774,7 @@ Defined in: [src/base/validator.tsx:1010](https://github.com/serenity-is/serenit
 
 > **validationTargetFor**(`element`): [`ValidatableElement`](../interfaces/ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:1386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1386)
+Defined in: [src/base/validator.tsx:1390](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1390)
 
 #### Parameters
 
@@ -792,7 +792,7 @@ Defined in: [src/base/validator.tsx:1386](https://github.com/serenity-is/serenit
 
 > **validElements**(): [`ValidatableElement`](../interfaces/ValidatableElement.md)[]
 
-Defined in: [src/base/validator.tsx:1281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1281)
+Defined in: [src/base/validator.tsx:1284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1284)
 
 #### Returns
 
@@ -804,7 +804,7 @@ Defined in: [src/base/validator.tsx:1281](https://github.com/serenity-is/serenit
 
 > `static` **addClassRules**(`className`, `rules`): `void`
 
-Defined in: [src/base/validator.tsx:1495](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1495)
+Defined in: [src/base/validator.tsx:1499](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1499)
 
 #### Parameters
 
@@ -826,7 +826,7 @@ Defined in: [src/base/validator.tsx:1495](https://github.com/serenity-is/serenit
 
 > `static` **addCustomRule**(`element`, `rule`, `uniqueName?`): `void`
 
-Defined in: [src/base/validator.tsx:1697](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1697)
+Defined in: [src/base/validator.tsx:1701](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1701)
 
 #### Parameters
 
@@ -852,7 +852,7 @@ Defined in: [src/base/validator.tsx:1697](https://github.com/serenity-is/serenit
 
 > `static` **addMethod**(`name`, `method`, `message?`): `void`
 
-Defined in: [src/base/validator.tsx:1679](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1679)
+Defined in: [src/base/validator.tsx:1683](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1683)
 
 #### Parameters
 
@@ -878,7 +878,7 @@ Defined in: [src/base/validator.tsx:1679](https://github.com/serenity-is/serenit
 
 > `static` **attributeRules**(`element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1540](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1540)
+Defined in: [src/base/validator.tsx:1544](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1544)
 
 #### Parameters
 
@@ -896,7 +896,7 @@ Defined in: [src/base/validator.tsx:1540](https://github.com/serenity-is/serenit
 
 > `static` **classRules**(`element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1503](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1503)
+Defined in: [src/base/validator.tsx:1507](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1507)
 
 #### Parameters
 
@@ -914,7 +914,7 @@ Defined in: [src/base/validator.tsx:1503](https://github.com/serenity-is/serenit
 
 > `static` **dataRules**(`element`): `object`
 
-Defined in: [src/base/validator.tsx:1577](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1577)
+Defined in: [src/base/validator.tsx:1581](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1581)
 
 #### Parameters
 
@@ -932,7 +932,7 @@ Defined in: [src/base/validator.tsx:1577](https://github.com/serenity-is/serenit
 
 > `static` **elementValue**(`element`): `any`
 
-Defined in: [src/base/validator.tsx:723](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L723)
+Defined in: [src/base/validator.tsx:724](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L724)
 
 #### Parameters
 
@@ -950,7 +950,7 @@ Defined in: [src/base/validator.tsx:723](https://github.com/serenity-is/serenity
 
 > `static` **getHighlightTarget**(`el`): `HTMLElement`
 
-Defined in: [src/base/validator.tsx:1687](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1687)
+Defined in: [src/base/validator.tsx:1691](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1691)
 
 #### Parameters
 
@@ -968,7 +968,7 @@ Defined in: [src/base/validator.tsx:1687](https://github.com/serenity-is/serenit
 
 > `static` **getInstance**(`element`): `Validator`
 
-Defined in: [src/base/validator.tsx:653](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L653)
+Defined in: [src/base/validator.tsx:654](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L654)
 
 #### Parameters
 
@@ -986,7 +986,7 @@ Defined in: [src/base/validator.tsx:653](https://github.com/serenity-is/serenity
 
 > `static` **getLength**(`value`, `element`): `number`
 
-Defined in: [src/base/validator.tsx:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L705)
+Defined in: [src/base/validator.tsx:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L706)
 
 #### Parameters
 
@@ -1008,7 +1008,7 @@ Defined in: [src/base/validator.tsx:705](https://github.com/serenity-is/serenity
 
 > `static` **isCheckOrRadio**(`element`): `element is HTMLInputElement`
 
-Defined in: [src/base/validator.tsx:701](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L701)
+Defined in: [src/base/validator.tsx:702](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L702)
 
 #### Parameters
 
@@ -1026,7 +1026,7 @@ Defined in: [src/base/validator.tsx:701](https://github.com/serenity-is/serenity
 
 > `static` **isContentEditable**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:718](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L718)
+Defined in: [src/base/validator.tsx:719](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L719)
 
 #### Parameters
 
@@ -1044,7 +1044,7 @@ Defined in: [src/base/validator.tsx:718](https://github.com/serenity-is/serenity
 
 > `static` **isValidatableElement**(`element`): `element is ValidatableElement`
 
-Defined in: [src/base/validator.tsx:697](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L697)
+Defined in: [src/base/validator.tsx:698](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L698)
 
 Checks if `element` is validatable (`input`, `select`, `textarea`).
 
@@ -1068,7 +1068,7 @@ The element to check.
 
 > `static` **normalizeAttributeRule**(`rules`, `type`, `method`, `value`): `void`
 
-Defined in: [src/base/validator.tsx:1517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1517)
+Defined in: [src/base/validator.tsx:1521](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1521)
 
 #### Parameters
 
@@ -1098,7 +1098,7 @@ Defined in: [src/base/validator.tsx:1517](https://github.com/serenity-is/serenit
 
 > `static` **normalizeRules**(`rules`, `element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1606](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1606)
+Defined in: [src/base/validator.tsx:1610](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1610)
 
 #### Parameters
 
@@ -1120,7 +1120,7 @@ Defined in: [src/base/validator.tsx:1606](https://github.com/serenity-is/serenit
 
 > `static` **optional**(`element`, `value?`): `""` \| `"dependency-mismatch"`
 
-Defined in: [src/base/validator.tsx:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L261)
+Defined in: [src/base/validator.tsx:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L262)
 
 #### Parameters
 
@@ -1142,7 +1142,7 @@ Defined in: [src/base/validator.tsx:261](https://github.com/serenity-is/serenity
 
 > `static` **removeCustomRule**(`element`, `uniqueName`): `void`
 
-Defined in: [src/base/validator.tsx:1711](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1711)
+Defined in: [src/base/validator.tsx:1721](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1721)
 
 #### Parameters
 
@@ -1164,7 +1164,7 @@ Defined in: [src/base/validator.tsx:1711](https://github.com/serenity-is/serenit
 
 > `static` **rules**(`element`, `command?`, `argument?`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:805](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L805)
+Defined in: [src/base/validator.tsx:806](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L806)
 
 #### Parameters
 
@@ -1190,7 +1190,7 @@ Defined in: [src/base/validator.tsx:805](https://github.com/serenity-is/serenity
 
 > `static` **staticRules**(`element`): [`ValidationRules`](../type-aliases/ValidationRules.md)
 
-Defined in: [src/base/validator.tsx:1595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1595)
+Defined in: [src/base/validator.tsx:1599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L1599)
 
 #### Parameters
 
@@ -1208,7 +1208,7 @@ Defined in: [src/base/validator.tsx:1595](https://github.com/serenity-is/serenit
 
 > `static` **valid**(`element`): `boolean`
 
-Defined in: [src/base/validator.tsx:790](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L790)
+Defined in: [src/base/validator.tsx:791](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L791)
 
 #### Parameters
 

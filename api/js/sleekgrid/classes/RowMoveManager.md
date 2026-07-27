@@ -30,7 +30,7 @@ Defined in: [src/plugins/rowmovemanager.ts:29](https://github.com/serenity-is/Se
 
 ### onBeforeMoveRows
 
-> **onBeforeMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md), \{ \}\>
+> **onBeforeMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md)\>
 
 Defined in: [src/plugins/rowmovemanager.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L26)
 
@@ -38,7 +38,7 @@ Defined in: [src/plugins/rowmovemanager.ts:26](https://github.com/serenity-is/Se
 
 ### onMoveRows
 
-> **onMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md), \{ \}\>
+> **onMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md)\>
 
 Defined in: [src/plugins/rowmovemanager.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L27)
 

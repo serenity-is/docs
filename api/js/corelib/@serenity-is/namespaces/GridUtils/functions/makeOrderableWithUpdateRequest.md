@@ -4,7 +4,7 @@
 
 > **makeOrderableWithUpdateRequest**\<`TItem`, `TId`\>(`dataGrid`, `getId`, `getDisplayOrder`, `service`, `getUpdateRequest`): `void`
 
-Defined in: [src/ui/helpers/gridutils.tsx:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L141)
+Defined in: [src/ui/helpers/gridutils.tsx:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L181)
 
 ## Type Parameters
 

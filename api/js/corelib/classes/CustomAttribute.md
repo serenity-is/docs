@@ -2,7 +2,7 @@
 
 # Abstract Class: CustomAttribute
 
-Defined in: [src/base/system.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L237)
+Defined in: [src/base/system.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L238)
 
 ## Extended by
 
@@ -33,4 +33,4 @@ Defined in: [src/base/system.ts:237](https://github.com/serenity-is/serenity/blo
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/base/system.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L238)
+Defined in: [src/base/system.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L239)

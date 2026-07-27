@@ -2,7 +2,7 @@
 
 # Interface: DataGridEvent
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1271](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1271)
+Defined in: [src/ui/datagrid/datagrid.tsx:1260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1260)
 
 ## Extended by
 
@@ -17,4 +17,4 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1271](https://github.com/serenity-is/s
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
+Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)

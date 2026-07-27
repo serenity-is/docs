@@ -2,7 +2,7 @@
 
 # Interface: UploadInputOptions
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:244](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L244)
+Defined in: [src/ui/helpers/uploadhelper.tsx:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L251)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:244](https://github.com/serenity-is
 
 > `optional` **allowMultiple**: `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L249)
+Defined in: [src/ui/helpers/uploadhelper.tsx:256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L256)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:249](https://github.com/serenity-is
 
 > `optional` **container**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:245](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L245)
+Defined in: [src/ui/helpers/uploadhelper.tsx:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L252)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:245](https://github.com/serenity-is
 
 > `optional` **fileDone**: (`p1`, `p2`, `p3`) => `void`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L252)
+Defined in: [src/ui/helpers/uploadhelper.tsx:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L259)
 
 #### Parameters
 
@@ -52,7 +52,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:252](https://github.com/serenity-is
 
 > `optional` **inputName**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L248)
+Defined in: [src/ui/helpers/uploadhelper.tsx:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L255)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:248](https://github.com/serenity-is
 
 > `optional` **progress**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L247)
+Defined in: [src/ui/helpers/uploadhelper.tsx:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L254)
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:247](https://github.com/serenity-is
 
 > `optional` **uploadIntent**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:250](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L250)
+Defined in: [src/ui/helpers/uploadhelper.tsx:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L257)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:250](https://github.com/serenity-is
 
 > `optional` **uploadUrl**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L251)
+Defined in: [src/ui/helpers/uploadhelper.tsx:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L258)
 
 ***
 
@@ -84,4 +84,4 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:251](https://github.com/serenity-is
 
 > `optional` **zone**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L246)
+Defined in: [src/ui/helpers/uploadhelper.tsx:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L253)

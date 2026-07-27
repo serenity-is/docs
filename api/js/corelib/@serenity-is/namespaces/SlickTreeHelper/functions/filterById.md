@@ -4,7 +4,7 @@
 
 > **filterById**\<`TItem`\>(`item`, `view`, `getParentId`): `boolean`
 
-Defined in: [src/ui/helpers/slicktreehelper.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L20)
+Defined in: [src/ui/helpers/slicktreehelper.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L21)
 
 ## Type Parameters
 

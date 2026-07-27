@@ -4,7 +4,7 @@
 
 > **PropertyFieldLineBreak**(`props`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L107)
+Defined in: [src/ui/widgets/propertygrid.tsx:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L108)
 
 ## Parameters
 

@@ -2,7 +2,7 @@
 
 # Class: QuickSearchInput\<P\>
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L18)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L28)
 
 ## Extends
 
@@ -20,7 +20,7 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:18](https://github.com/serenit
 
 > **new QuickSearchInput**\<`P`\>(`props`): `QuickSearchInput`\<`P`\>
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L30)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L40)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:30](https://github.com/serenit
 
 > `readonly` **domNode**: `HTMLInputElement`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L22)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L32)
 
 #### Overrides
 
@@ -90,7 +90,7 @@ Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenit
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L19)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L29)
 
 #### Overrides
 
@@ -314,7 +314,7 @@ Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/sereni
 
 > `protected` **checkIfValueChanged**(): `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L69)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L79)
 
 #### Returns
 
@@ -386,7 +386,7 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 > **get\_field**(): [`QuickSearchField`](../interfaces/QuickSearchField.md)
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L98)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L108)
 
 #### Returns
 
@@ -398,7 +398,7 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:98](https://github.com/serenit
 
 > **get\_value**(): `string`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L94)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L104)
 
 #### Returns
 
@@ -558,7 +558,7 @@ Defined in: [src/ui/widgets/widget.ts:184](https://github.com/serenity-is/sereni
 
 > **restoreState**(`value`, `field`): `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L115)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L125)
 
 #### Parameters
 
@@ -580,7 +580,7 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:115](https://github.com/sereni
 
 > `protected` **searchNow**(`value`): `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L128)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L138)
 
 #### Parameters
 
@@ -598,7 +598,7 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:128](https://github.com/sereni
 
 > **set\_field**(`value`): `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L102)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L112)
 
 #### Parameters
 
@@ -652,7 +652,7 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 > `protected` **updateInputPlaceHolder**(): `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L111)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L121)
 
 #### Returns
 
@@ -712,7 +712,7 @@ Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/sereni
 
 > `static` **createDefaultElement**(): `HTMLInputElement`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L21)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L31)
 
 #### Returns
 

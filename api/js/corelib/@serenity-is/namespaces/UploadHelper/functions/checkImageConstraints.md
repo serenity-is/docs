@@ -4,7 +4,7 @@
 
 > **checkImageConstraints**(`file`, `opt`): `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L63)
+Defined in: [src/ui/helpers/uploadhelper.tsx:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L70)
 
 ## Parameters
 

@@ -4,7 +4,7 @@
 
 > **registerType**(`type`): `void`
 
-Defined in: [src/base/system.ts:614](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L614)
+Defined in: [src/base/system.ts:615](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L615)
 
 ## Parameters
 

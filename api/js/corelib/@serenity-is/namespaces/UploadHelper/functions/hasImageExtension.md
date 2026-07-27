@@ -4,7 +4,7 @@
 
 > **hasImageExtension**(`filename`): `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:124](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L124)
+Defined in: [src/ui/helpers/uploadhelper.tsx:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L131)
 
 ## Parameters
 

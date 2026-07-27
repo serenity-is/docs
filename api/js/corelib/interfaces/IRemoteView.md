@@ -22,7 +22,7 @@ Interface for an extension of IDataView that support remote data loading
 
 > **onAjaxCall**: [`RemoteViewAjaxCallback`](../type-aliases/RemoteViewAjaxCallback.md)\<`TItem`\>
 
-Defined in: [src/slick/iremoteview.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L148)
+Defined in: [src/slick/iremoteview.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L152)
 
 Callback invoked before making AJAX calls
 
@@ -32,7 +32,7 @@ Callback invoked before making AJAX calls
 
 > `readonly` **onDataChanged**: `EventEmitter`\<[`ArgsRemoteView`](ArgsRemoteView.md)\>
 
-Defined in: [src/slick/iremoteview.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L150)
+Defined in: [src/slick/iremoteview.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L154)
 
 Event fired when the underlying data changes
 
@@ -46,7 +46,7 @@ Event fired when the underlying data changes
 
 > `readonly` **onDataLoaded**: `EventEmitter`\<[`ArgsRemoteView`](ArgsRemoteView.md)\>
 
-Defined in: [src/slick/iremoteview.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L152)
+Defined in: [src/slick/iremoteview.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L156)
 
 Event fired when data loading completes
 
@@ -56,7 +56,7 @@ Event fired when data loading completes
 
 > `readonly` **onDataLoading**: `EventEmitter`\<[`ArgsRemoteView`](ArgsRemoteView.md)\>
 
-Defined in: [src/slick/iremoteview.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L154)
+Defined in: [src/slick/iremoteview.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L158)
 
 Event fired when data loading begins
 
@@ -66,7 +66,7 @@ Event fired when data loading begins
 
 > `readonly` `optional` **onGroupCollapsed**: `EventEmitter`\<[`ArgsGroupToggle`](ArgsGroupToggle.md)\>
 
-Defined in: [src/slick/iremoteview.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L156)
+Defined in: [src/slick/iremoteview.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L160)
 
 Event fired when a group is collapsed
 
@@ -76,7 +76,7 @@ Event fired when a group is collapsed
 
 > `readonly` `optional` **onGroupExpanded**: `EventEmitter`\<[`ArgsGroupToggle`](ArgsGroupToggle.md)\>
 
-Defined in: [src/slick/iremoteview.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L158)
+Defined in: [src/slick/iremoteview.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L162)
 
 Event fired when a group is expanded
 
@@ -86,7 +86,7 @@ Event fired when a group is expanded
 
 > `readonly` **onPagingInfoChanged**: `EventEmitter`\<[`ArgsPagingInfo`](ArgsPagingInfo.md)\>
 
-Defined in: [src/slick/iremoteview.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L160)
+Defined in: [src/slick/iremoteview.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L164)
 
 Event fired when paging information changes
 
@@ -96,9 +96,19 @@ Event fired when paging information changes
 
 > **onProcessData**: [`RemoteViewProcessCallback`](../type-aliases/RemoteViewProcessCallback.md)\<`TItem`\>
 
-Defined in: [src/slick/iremoteview.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L162)
+Defined in: [src/slick/iremoteview.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L166)
 
 Callback invoked to process data received from the server
+
+***
+
+### onRecalcRows
+
+> `readonly` **onRecalcRows**: `EventEmitter`\<[`ArgsRecalcRows`](ArgsRecalcRows.md)\>
+
+Defined in: [src/slick/iremoteview.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L168)
+
+Event fired when rows need to be recalculated
 
 ***
 
@@ -106,7 +116,7 @@ Callback invoked to process data received from the server
 
 > `readonly` **onRowCountChanged**: `EventEmitter`\<[`ArgsRowCountChanged`](ArgsRowCountChanged.md)\>
 
-Defined in: [src/slick/iremoteview.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L164)
+Defined in: [src/slick/iremoteview.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L170)
 
 Event fired when the row count changes
 
@@ -120,7 +130,7 @@ Event fired when the row count changes
 
 > `readonly` `optional` **onRowsChanged**: `EventEmitter`\<\{ `rows`: `number`[]; \}\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:1282](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1282)
+Defined in: [../sleekgrid/dist/index.d.ts:1303](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1303)
 
 Event fired when specific rows change
 
@@ -134,7 +144,7 @@ Event fired when specific rows change
 
 > `readonly` `optional` **onRowsOrCountChanged**: `EventEmitter`\<[`ArgsRowsOrCountChanged`](ArgsRowsOrCountChanged.md)\>
 
-Defined in: [src/slick/iremoteview.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L166)
+Defined in: [src/slick/iremoteview.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L172)
 
 Event fired when rows or count change
 
@@ -144,7 +154,7 @@ Event fired when rows or count change
 
 > **onSubmit**: [`CancellableViewCallback`](../type-aliases/CancellableViewCallback.md)\<`TItem`\>
 
-Defined in: [src/slick/iremoteview.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L168)
+Defined in: [src/slick/iremoteview.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L174)
 
 Callback invoked before submitting a request, can cancel the operation
 
@@ -154,7 +164,7 @@ Callback invoked before submitting a request, can cancel the operation
 
 > **params**: `Record`\<`string`, `any`\>
 
-Defined in: [src/slick/iremoteview.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L170)
+Defined in: [src/slick/iremoteview.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L176)
 
 Additional parameters to send with service requests
 
@@ -164,7 +174,7 @@ Additional parameters to send with service requests
 
 > **seekToPage**: `number`
 
-Defined in: [src/slick/iremoteview.ts:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L196)
+Defined in: [src/slick/iremoteview.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L202)
 
 The page number to seek to when loading data
 
@@ -174,7 +184,7 @@ The page number to seek to when loading data
 
 > **sortBy**: `string`[]
 
-Defined in: [src/slick/iremoteview.ts:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L251)
+Defined in: [src/slick/iremoteview.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L261)
 
 Sort expressions for the data
 
@@ -184,7 +194,7 @@ Sort expressions for the data
 
 > **url**: `string`
 
-Defined in: [src/slick/iremoteview.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L267)
+Defined in: [src/slick/iremoteview.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L277)
 
 The URL to fetch data from
 
@@ -414,7 +424,7 @@ Array of filtered items
 
 > **getGrandTotals**(): `IGroupTotals`
 
-Defined in: [../sleekgrid/dist/index.d.ts:1267](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1267)
+Defined in: [../sleekgrid/dist/index.d.ts:1288](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1288)
 
 Gets the grand totals for all aggregated data.
 
@@ -520,7 +530,7 @@ The index of the item, or undefined if not found
 
 > **getItem**(`row`): `IGroupTotals`\<`any`\> \| `TItem` \| `Group`\<`TItem`\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:1271](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1271)
+Defined in: [../sleekgrid/dist/index.d.ts:1292](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1292)
 
 Gets the item at the specified row index.
 
@@ -592,7 +602,7 @@ The item at the specified index
 
 > `optional` **getItemMetadata**(`row`): `ItemMetadata`\<`TItem`\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:1273](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1273)
+Defined in: [../sleekgrid/dist/index.d.ts:1294](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1294)
 
 Gets metadata for the item at the specified row index.
 
@@ -612,11 +622,39 @@ Gets metadata for the item at the specified row index.
 
 ***
 
+### getItemMetadataCallback()
+
+> **getItemMetadataCallback**(): (`item`, `row`) => `ItemMetadata`\<`TItem`\>
+
+Defined in: [src/slick/iremoteview.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L112)
+
+Gets a callback function to retrieve item metadata. This can be used to dynamically assign CSS classes or other properties to items.
+
+#### Returns
+
+> (`item`, `row`): `ItemMetadata`\<`TItem`\>
+
+##### Parameters
+
+###### item
+
+`TItem`
+
+###### row
+
+`number`
+
+##### Returns
+
+`ItemMetadata`\<`TItem`\>
+
+***
+
 ### getItems()
 
 > **getItems**(): `TItem`[]
 
-Defined in: [src/slick/iremoteview.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L113)
+Defined in: [src/slick/iremoteview.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L117)
 
 Gets all items in the view.
 
@@ -632,7 +670,7 @@ Array of all items
 
 > **getLength**(): `number`
 
-Defined in: [../sleekgrid/dist/index.d.ts:1269](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1269)
+Defined in: [../sleekgrid/dist/index.d.ts:1290](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1290)
 
 Gets the total number of rows in the view.
 
@@ -650,7 +688,7 @@ Gets the total number of rows in the view.
 
 > `optional` **getLocalSort**(): `boolean`
 
-Defined in: [src/slick/iremoteview.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L118)
+Defined in: [src/slick/iremoteview.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L122)
 
 Gets whether local sorting is enabled.
 
@@ -666,7 +704,7 @@ true if local sorting is enabled
 
 > **getPagingInfo**(): [`PagingInfo`](PagingInfo.md)
 
-Defined in: [src/slick/iremoteview.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L123)
+Defined in: [src/slick/iremoteview.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L127)
 
 Gets the current paging information.
 
@@ -682,7 +720,7 @@ Object containing paging state information
 
 > `optional` **getRowById**(`id`): `number`
 
-Defined in: [src/slick/iremoteview.ts:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L129)
+Defined in: [src/slick/iremoteview.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L133)
 
 Gets the row index for an item by its ID.
 
@@ -706,7 +744,7 @@ The row index of the item
 
 > `optional` **getRowByItem**(`item`): `number`
 
-Defined in: [src/slick/iremoteview.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L135)
+Defined in: [src/slick/iremoteview.ts:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L139)
 
 Gets the row index for an item.
 
@@ -730,7 +768,7 @@ The row index of the item
 
 > **getRows**(): (`TItem` \| `Group`\<`any`\> \| `GroupTotals`\<`any`\>)[]
 
-Defined in: [src/slick/iremoteview.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L140)
+Defined in: [src/slick/iremoteview.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L144)
 
 Gets all rows in the view (including group rows and totals rows).
 
@@ -746,7 +784,7 @@ Array of all rows
 
 > `optional` **insertItem**(`insertBefore`, `item`): `void`
 
-Defined in: [src/slick/iremoteview.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L146)
+Defined in: [src/slick/iremoteview.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L150)
 
 Inserts an item at the specified position.
 
@@ -774,7 +812,7 @@ The item to insert
 
 > **populate**(): `boolean`
 
-Defined in: [src/slick/iremoteview.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L175)
+Defined in: [src/slick/iremoteview.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L181)
 
 Loads data from the server using the configured URL and parameters.
 
@@ -790,7 +828,7 @@ false if the operation was cancelled or no URL is configured
 
 > **populateLock**(): `void`
 
-Defined in: [src/slick/iremoteview.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L180)
+Defined in: [src/slick/iremoteview.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L186)
 
 Locks population to prevent automatic data loading.
 Use this when you want to make multiple changes without triggering loads.
@@ -805,7 +843,7 @@ Use this when you want to make multiple changes without triggering loads.
 
 > **populateUnlock**(): `void`
 
-Defined in: [src/slick/iremoteview.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L184)
+Defined in: [src/slick/iremoteview.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L190)
 
 Unlocks population. If there were pending populate calls while locked, executes them.
 
@@ -819,7 +857,7 @@ Unlocks population. If there were pending populate calls while locked, executes 
 
 > **refresh**(): `void`
 
-Defined in: [src/slick/iremoteview.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L190)
+Defined in: [src/slick/iremoteview.ts:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L196)
 
 Refresh the view by recalculating the rows and notifying changes.
 Note that this does not re-fetch the data from the server, use populate
@@ -835,7 +873,7 @@ method for that purpose.
 
 > **reSort**(): `void`
 
-Defined in: [src/slick/iremoteview.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L194)
+Defined in: [src/slick/iremoteview.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L200)
 
 Re-sorts the items using the current sort settings.
 
@@ -849,7 +887,7 @@ Re-sorts the items using the current sort settings.
 
 > **setFilter**(`filterFn`): `void`
 
-Defined in: [src/slick/iremoteview.ts:201](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L201)
+Defined in: [src/slick/iremoteview.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L207)
 
 Sets the filter function to apply to items.
 
@@ -871,7 +909,7 @@ The filter function to apply
 
 > `optional` **setGrouping**(`groupingInfo`): `void`
 
-Defined in: [src/slick/iremoteview.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L206)
+Defined in: [src/slick/iremoteview.ts:212](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L212)
 
 Sets the grouping configuration for the view.
 
@@ -893,7 +931,7 @@ Grouping information or array of grouping information
 
 > `optional` **setGroupItemMetadataProvider**(`value`): `void`
 
-Defined in: [src/slick/iremoteview.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L211)
+Defined in: [src/slick/iremoteview.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L217)
 
 Sets the group item metadata provider.
 
@@ -911,11 +949,31 @@ The metadata provider to set
 
 ***
 
+### setItemMetadataCallback()
+
+> **setItemMetadataCallback**(`value`): `void`
+
+Defined in: [src/slick/iremoteview.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L227)
+
+Sets a callback function to retrieve item metadata. This can be used to dynamically assign CSS classes or other properties to items.
+
+#### Parameters
+
+##### value
+
+(`item`, `row`) => `ItemMetadata`\<`TItem`\>
+
+#### Returns
+
+`void`
+
+***
+
 ### setItems()
 
 > **setItems**(`data`, `newIdProperty?`): `void`
 
-Defined in: [src/slick/iremoteview.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L217)
+Defined in: [src/slick/iremoteview.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L223)
 
 Sets the items in the view and optionally changes the ID property.
 
@@ -943,7 +1001,7 @@ Optional new ID property name, or boolean to reset
 
 > `optional` **setLocalSort**(`value`): `void`
 
-Defined in: [src/slick/iremoteview.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L222)
+Defined in: [src/slick/iremoteview.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L232)
 
 Sets whether to use local sorting. When enabled, sorting is done client-side.
 
@@ -965,7 +1023,7 @@ Whether to enable local sorting
 
 > **setPagingOptions**(`args`): `void`
 
-Defined in: [src/slick/iremoteview.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L227)
+Defined in: [src/slick/iremoteview.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L237)
 
 Sets paging options and triggers a data reload if options changed.
 
@@ -987,7 +1045,7 @@ The paging options to set
 
 > `optional` **setSummaryOptions**(`summary`): `void`
 
-Defined in: [src/slick/iremoteview.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L232)
+Defined in: [src/slick/iremoteview.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L242)
 
 Sets summary/aggregation options for the view.
 
@@ -1009,7 +1067,7 @@ Object containing aggregators and other summary options
 
 > `optional` **sort**(`comparer?`, `ascending?`): `void`
 
-Defined in: [src/slick/iremoteview.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L238)
+Defined in: [src/slick/iremoteview.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L248)
 
 Sorts the items using the specified comparer function.
 
@@ -1037,7 +1095,7 @@ Whether to sort in ascending order (default true)
 
 > `optional` **sortedAddItem**(`item`): `void`
 
-Defined in: [src/slick/iremoteview.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L243)
+Defined in: [src/slick/iremoteview.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L253)
 
 Adds an item in sorted order.
 
@@ -1059,7 +1117,7 @@ The item to add
 
 > `optional` **sortedUpdateItem**(`id`, `item`): `void`
 
-Defined in: [src/slick/iremoteview.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L249)
+Defined in: [src/slick/iremoteview.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L259)
 
 Updates an item while maintaining sorted order.
 
@@ -1087,7 +1145,7 @@ The new item data
 
 > `optional` **syncGridCellCssStyles**(`grid`, `key`): `void`
 
-Defined in: [src/slick/iremoteview.ts:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L255)
+Defined in: [src/slick/iremoteview.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L265)
 
 Syncs cell CSS styles between the grid and the data view.
 
@@ -1111,7 +1169,7 @@ Syncs cell CSS styles between the grid and the data view.
 
 > `optional` **syncGridSelection**(`grid`, `preserveHidden?`, `preserveHiddenOnSelectionChange?`): `EventEmitter`\<`any`, \{ \}\>
 
-Defined in: [src/slick/iremoteview.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L259)
+Defined in: [src/slick/iremoteview.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L269)
 
 Wires the grid and the DataView together to keep row selection tied to item ids.
 
@@ -1139,7 +1197,7 @@ Wires the grid and the DataView together to keep row selection tied to item ids.
 
 > **updateItem**(`id`, `item`): `void`
 
-Defined in: [src/slick/iremoteview.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L265)
+Defined in: [src/slick/iremoteview.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L275)
 
 Updates an existing item in the view.
 

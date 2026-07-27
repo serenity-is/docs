@@ -10,6 +10,7 @@
 
 - [addUploadInput](functions/addUploadInput.md)
 - [checkImageConstraints](functions/checkImageConstraints.md)
+- [createUploadInput](functions/createUploadInput.md)
 - [dbFileUrl](functions/dbFileUrl.md)
 - [fileNameSizeDisplay](functions/fileNameSizeDisplay.md)
 - [fileSizeDisplay](functions/fileSizeDisplay.md)

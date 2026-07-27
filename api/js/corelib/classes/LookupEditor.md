@@ -102,7 +102,7 @@ Defined in: [src/ui/editors/lookupeditor.ts:60](https://github.com/serenity-is/s
 
 > **onInitNewEntity**: (`entity`) => `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L745)
+Defined in: [src/ui/editors/comboboxeditor.tsx:757](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L757)
 
 #### Parameters
 
@@ -122,7 +122,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:745](https://github.com/serenity-
 
 > **openDialogAsPanel**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:857](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L857)
+Defined in: [src/ui/editors/comboboxeditor.tsx:869](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L869)
 
 #### Inherited from
 
@@ -948,7 +948,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:286](https://github.com/serenity-
 
 > `protected` **createEditDialog**(`callback`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L735)
+Defined in: [src/ui/editors/comboboxeditor.tsx:748](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L748)
 
 #### Parameters
 
@@ -1414,7 +1414,23 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 ***
 
-### getDialogTypeKey()
+### getDialogType()
+
+> `protected` **getDialogType**(): [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
+
+Defined in: [src/ui/editors/comboboxeditor.tsx:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L727)
+
+#### Returns
+
+[`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
+
+#### Inherited from
+
+[`LookupEditorBase`](LookupEditorBase.md).[`getDialogType`](LookupEditorBase.md#getdialogtype)
+
+***
+
+### ~~getDialogTypeKey()~~
 
 > `protected` **getDialogTypeKey**(): `string`
 
@@ -1423,6 +1439,10 @@ Defined in: [src/ui/editors/lookupeditor.ts:128](https://github.com/serenity-is/
 #### Returns
 
 `string`
+
+#### Deprecated
+
+Override getDialogType() instead
 
 #### Inherited from
 
@@ -1690,7 +1710,7 @@ Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/sereni
 
 > `protected` **initNewEntity**(`entity`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L747)
+Defined in: [src/ui/editors/comboboxeditor.tsx:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L759)
 
 #### Parameters
 
@@ -1710,7 +1730,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:747](https://github.com/serenity-
 
 > `protected` **inplaceCreateClick**(`e`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:782](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L782)
+Defined in: [src/ui/editors/comboboxeditor.tsx:794](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L794)
 
 #### Parameters
 
@@ -1898,7 +1918,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:144](https://github.com/serenity-
 
 > **openDropdown**(): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:853](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L853)
+Defined in: [src/ui/editors/comboboxeditor.tsx:865](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L865)
 
 #### Returns
 
@@ -2172,7 +2192,7 @@ Defined in: [src/ui/editors/lookupeditor.ts:136](https://github.com/serenity-is/
 
 > `protected` **setEditDialogReadOnly**(`dialog`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:761](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L761)
+Defined in: [src/ui/editors/comboboxeditor.tsx:773](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L773)
 
 #### Parameters
 
@@ -2220,7 +2240,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:419](https://github.com/serenity-
 
 > `protected` **setTermOnNewEntity**(`entity`, `term`, `dialog`): `void`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:773](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L773)
+Defined in: [src/ui/editors/comboboxeditor.tsx:785](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L785)
 
 #### Parameters
 

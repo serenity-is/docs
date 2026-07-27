@@ -2,7 +2,7 @@
 
 # Interface: CompatFormatterResult
 
-Defined in: [src/core/formatting.ts:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L85)
+Defined in: [src/core/formatting.ts:88](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L88)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/core/formatting.ts:85](https://github.com/serenity-is/Serenity/
 
 > `optional` **addClasses**: `string`
 
-Defined in: [src/core/formatting.ts:86](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L86)
+Defined in: [src/core/formatting.ts:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L89)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [src/core/formatting.ts:86](https://github.com/serenity-is/Serenity/
 
 > `optional` **text**: [`FormatterResult`](../type-aliases/FormatterResult.md)
 
-Defined in: [src/core/formatting.ts:87](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L87)
+Defined in: [src/core/formatting.ts:90](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L90)
 
 ***
 
@@ -26,4 +26,4 @@ Defined in: [src/core/formatting.ts:87](https://github.com/serenity-is/Serenity/
 
 > `optional` **toolTip**: `string`
 
-Defined in: [src/core/formatting.ts:88](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L88)
+Defined in: [src/core/formatting.ts:91](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L91)

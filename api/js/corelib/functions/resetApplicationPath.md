@@ -4,7 +4,7 @@
 
 > **resetApplicationPath**(): `void`
 
-Defined in: [src/base/config.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L48)
+Defined in: [src/base/config.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/config.ts#L54)
 
 ## Returns
 

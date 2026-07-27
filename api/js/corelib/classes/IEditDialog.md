@@ -26,7 +26,7 @@ Defined in: [src/interfaces/ieditdialog.ts:4](https://github.com/serenity-is/ser
 
 ### load()
 
-> **load**(`entityOrId`, `done`, `fail?`): `void`
+> **load**(`entityOrId`, `done`, `fail?`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`any`\>\>
 
 Defined in: [src/interfaces/ieditdialog.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ieditdialog.ts#L8)
 
@@ -46,4 +46,4 @@ Defined in: [src/interfaces/ieditdialog.ts:8](https://github.com/serenity-is/ser
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`any`\>\>

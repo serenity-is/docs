@@ -2,7 +2,7 @@
 
 # Interface: CheckLookupEditorOptions
 
-Defined in: [src/ui/editors/checktreeeditor.ts:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L465)
+Defined in: [src/ui/editors/checktreeeditor.tsx:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L457)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:465](https://github.com/serenity-
 
 > `optional` **cascadeField**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:472](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L472)
+Defined in: [src/ui/editors/checktreeeditor.tsx:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L464)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:472](https://github.com/serenity-
 
 > `optional` **cascadeFrom**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L471)
+Defined in: [src/ui/editors/checktreeeditor.tsx:463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L463)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:471](https://github.com/serenity-
 
 > `optional` **cascadeValue**: `any`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:473](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L473)
+Defined in: [src/ui/editors/checktreeeditor.tsx:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L465)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:473](https://github.com/serenity-
 
 > `optional` **checkedOnTop**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L467)
+Defined in: [src/ui/editors/checktreeeditor.tsx:459](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L459)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:467](https://github.com/serenity-
 
 > `optional` **delimited**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L470)
+Defined in: [src/ui/editors/checktreeeditor.tsx:462](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L462)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:470](https://github.com/serenity-
 
 > `optional` **filterField**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:474](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L474)
+Defined in: [src/ui/editors/checktreeeditor.tsx:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L466)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:474](https://github.com/serenity-
 
 > `optional` **filterValue**: `any`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L475)
+Defined in: [src/ui/editors/checktreeeditor.tsx:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L467)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:475](https://github.com/serenity-
 
 > `optional` **hideSearch**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L469)
+Defined in: [src/ui/editors/checktreeeditor.tsx:461](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L461)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [src/ui/editors/checktreeeditor.ts:469](https://github.com/serenity-
 
 > `optional` **lookupKey**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L466)
+Defined in: [src/ui/editors/checktreeeditor.tsx:458](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L458)
 
 ***
 
@@ -82,4 +82,4 @@ Defined in: [src/ui/editors/checktreeeditor.ts:466](https://github.com/serenity-
 
 > `optional` **showSelectAll**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.ts#L468)
+Defined in: [src/ui/editors/checktreeeditor.tsx:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L460)

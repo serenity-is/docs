@@ -2,7 +2,7 @@
 
 # Function: escapeHtml()
 
-> **escapeHtml**(`s`): `any`
+> **escapeHtml**(`s`): `string`
 
 Defined in: [src/core/util.tsx:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/util.tsx#L28)
 
@@ -14,4 +14,4 @@ Defined in: [src/core/util.tsx:28](https://github.com/serenity-is/Serenity/blob/
 
 ## Returns
 
-`any`
+`string`

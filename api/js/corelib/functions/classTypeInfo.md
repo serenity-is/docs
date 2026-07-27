@@ -4,7 +4,7 @@
 
 > **classTypeInfo**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:556](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L556)
+Defined in: [src/base/system.ts:557](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L557)
 
 ## Type Parameters
 

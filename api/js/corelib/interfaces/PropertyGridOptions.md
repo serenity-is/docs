@@ -2,7 +2,7 @@
 
 # Interface: PropertyGridOptions
 
-Defined in: [src/ui/widgets/propertygrid.tsx:604](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L604)
+Defined in: [src/ui/widgets/propertygrid.tsx:617](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L617)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:604](https://github.com/serenity-is
 
 > `optional` **idPrefix**: `string`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L605)
+Defined in: [src/ui/widgets/propertygrid.tsx:618](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L618)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:605](https://github.com/serenity-is
 
 > **items**: [`PropertyItem`](PropertyItem.md)[]
 
-Defined in: [src/ui/widgets/propertygrid.tsx:606](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L606)
+Defined in: [src/ui/widgets/propertygrid.tsx:619](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L619)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:606](https://github.com/serenity-is
 
 > `optional` **localTextPrefix**: `string`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:607](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L607)
+Defined in: [src/ui/widgets/propertygrid.tsx:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L620)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:607](https://github.com/serenity-is
 
 > `optional` **mode**: [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
 
-Defined in: [src/ui/widgets/propertygrid.tsx:609](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L609)
+Defined in: [src/ui/widgets/propertygrid.tsx:622](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L622)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: [src/ui/widgets/propertygrid.tsx:609](https://github.com/serenity-is
 
 > `optional` **value**: `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:608](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L608)
+Defined in: [src/ui/widgets/propertygrid.tsx:621](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L621)

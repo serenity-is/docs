@@ -4,7 +4,7 @@
 
 > **isAssignableFrom**(`target`, `fromType`): `any`
 
-Defined in: [src/base/system.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L134)
+Defined in: [src/base/system.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L135)
 
 Check if a type is assignable from another type. A type is
 assignable from another type if they are the same or if the other type

@@ -4,7 +4,7 @@
 
 > **SNoInfer**\<`T`\> = \[`T`\]\[`T` *extends* `any` ? `0` : `never`\]
 
-Defined in: [src/base/system.ts:419](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L419)
+Defined in: [src/base/system.ts:420](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L420)
 
 Utility type to prevent type inference in generic types.
 TypeScript 5.4 has added a built-in NoInfer<T> type that can be used instead of this.

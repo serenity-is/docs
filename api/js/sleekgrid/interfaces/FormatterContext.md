@@ -48,7 +48,7 @@ Additional classes to be added to the cell node.
 
 > `optional` **cell**: `number`
 
-Defined in: [src/core/formatting.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L46)
+Defined in: [src/core/formatting.ts:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L49)
 
 The column index of the cell.
 
@@ -58,7 +58,7 @@ The column index of the cell.
 
 > `optional` **column**: [`Column`](Column.md)\<`TItem`\>
 
-Defined in: [src/core/formatting.ts:51](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L51)
+Defined in: [src/core/formatting.ts:54](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L54)
 
 The column definition of the cell.
 
@@ -68,12 +68,13 @@ The column definition of the cell.
 
 > `readonly` **enableHtmlRendering**: `boolean`
 
-Defined in: [src/core/formatting.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L29)
+Defined in: [src/core/formatting.ts:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L30)
 
 True if the formatter is allowed to return raw HTML that will be set using innerHTML.
-This is set from grid options and defaults to true for backward compatibility.
-When set to false, the formatter should return plain text and the result will be set using textContent
-and the escape() method is a noop in that case.
+This is set from grid options and defaults to false which means the formatter
+should return plain text and the result will be set using textContent and
+the escape() method is a noop. If true, the formatter can return HTML strings but should
+take care to avoid script injection attacks by using ctx.escape() method.
 
 ***
 
@@ -81,7 +82,7 @@ and the escape() method is a noop in that case.
 
 > `optional` **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/formatting.ts:56](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L56)
+Defined in: [src/core/formatting.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L59)
 
 The grid instance.
 
@@ -91,7 +92,7 @@ The grid instance.
 
 > `optional` **item**: `TItem`
 
-Defined in: [src/core/formatting.ts:61](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L61)
+Defined in: [src/core/formatting.ts:64](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L64)
 
 The item of the row.
 
@@ -101,7 +102,7 @@ The item of the row.
 
 > `optional` **purpose**: `"print"` \| `"auto-width"` \| `"excel-export"` \| `"group-header"` \| `"grand-totals"` \| `"group-totals"` \| `"header-filter"` \| `"pdf-export"`
 
-Defined in: [src/core/formatting.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L66)
+Defined in: [src/core/formatting.ts:69](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L69)
 
 Purpose of the call, e.g. "auto-width", "excel-export", "group-header", "header-filter", "pdf-export", "print".
 
@@ -111,7 +112,7 @@ Purpose of the call, e.g. "auto-width", "excel-export", "group-header", "header-
 
 > `optional` **row**: `number`
 
-Defined in: [src/core/formatting.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L41)
+Defined in: [src/core/formatting.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L44)
 
 The row index of the cell.
 
@@ -121,7 +122,7 @@ The row index of the cell.
 
 > **sanitizer**: (`dirtyHtml`) => `string`
 
-Defined in: [src/core/formatting.ts:71](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L71)
+Defined in: [src/core/formatting.ts:74](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L74)
 
 Sanitizer function to clean up dirty HTML.
 
@@ -141,7 +142,7 @@ Sanitizer function to clean up dirty HTML.
 
 > `optional` **tooltip**: `string`
 
-Defined in: [src/core/formatting.ts:76](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L76)
+Defined in: [src/core/formatting.ts:79](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L79)
 
 Tooltip text to be added to the cell node as title attribute.
 
@@ -151,7 +152,7 @@ Tooltip text to be added to the cell node as title attribute.
 
 > `optional` **value**: `any`
 
-Defined in: [src/core/formatting.ts:79](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L79)
+Defined in: [src/core/formatting.ts:82](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L82)
 
 when returning a formatter result as HTML string, prefer ctx.escape() to avoid script injection attacks!
 
@@ -161,11 +162,13 @@ when returning a formatter result as HTML string, prefer ctx.escape() to avoid s
 
 > **escape**(`value?`): `string`
 
-Defined in: [src/core/formatting.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L36)
+Defined in: [src/core/formatting.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L39)
 
-Returns html escaped ctx.value if called without arguments. Prefer this over
-ctx.value when returning as HTML string to avoid html injection attacks!
-   * Note that when enableHtmlRendering is false, this is simply a noop and returns the value as string.
+When enableHtmlRendering is false (default), this simply returns the value as string.
+When enableHtmlRendering is true, returns html escaped value / ctx.value if called without
+arguments. Prefer this over ctx.value when returning HTML strings to avoid html injection
+attacks when enableHtmlRendering is true. You don't have to use this inside JSX
+style formatters as JSX automatically escapes values.
 
 #### Parameters
 

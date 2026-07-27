@@ -2,7 +2,7 @@
 
 # Function: runtimeErrorHandler()
 
-> **runtimeErrorHandler**(`message`, `filename?`, `lineno?`, `colno?`, `error?`): `void`
+> **runtimeErrorHandler**(`messageOrEvent`, `filename?`, `lineno?`, `colno?`, `error?`): `void`
 
 Defined in: [src/base/errorhandling.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.tsx#L48)
 
@@ -14,9 +14,9 @@ can notice an error without having to check the browser console.
 
 ## Parameters
 
-### message
+### messageOrEvent
 
-`string`
+`string` | `ErrorEvent`
 
 ### filename?
 

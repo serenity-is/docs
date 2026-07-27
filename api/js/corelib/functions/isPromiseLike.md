@@ -4,7 +4,7 @@
 
 > **isPromiseLike**(`obj`): `obj is PromiseLike<any>`
 
-Defined in: [src/base/system.ts:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L411)
+Defined in: [src/base/system.ts:412](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L412)
 
 Check if an object is Promise-like, meaning it is either a native Promise
 or an object with then and catch methods (like jQuery Deferred).

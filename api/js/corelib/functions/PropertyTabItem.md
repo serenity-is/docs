@@ -4,7 +4,7 @@
 
 > **PropertyTabItem**(`props`): `HTMLLIElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L208)
+Defined in: [src/ui/widgets/propertygrid.tsx:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L209)
 
 ## Parameters
 

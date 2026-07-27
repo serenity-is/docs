@@ -2,7 +2,7 @@
 
 # Enumeration: PropertyGridMode
 
-Defined in: [src/ui/widgets/propertygrid.tsx:599](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L599)
+Defined in: [src/ui/widgets/propertygrid.tsx:612](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L612)
 
 ## Enumeration Members
 
@@ -10,7 +10,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:599](https://github.com/serenity-is
 
 > **insert**: `1`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:600](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L600)
+Defined in: [src/ui/widgets/propertygrid.tsx:613](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L613)
 
 ***
 
@@ -18,4 +18,4 @@ Defined in: [src/ui/widgets/propertygrid.tsx:600](https://github.com/serenity-is
 
 > **update**: `2`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:601](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L601)
+Defined in: [src/ui/widgets/propertygrid.tsx:614](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L614)

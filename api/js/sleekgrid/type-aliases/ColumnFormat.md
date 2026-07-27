@@ -4,7 +4,7 @@
 
 > **ColumnFormat**\<`TItem`\> = (`ctx`) => [`FormatterResult`](FormatterResult.md)
 
-Defined in: [src/core/formatting.ts:83](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L83)
+Defined in: [src/core/formatting.ts:86](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L86)
 
 ## Type Parameters
 

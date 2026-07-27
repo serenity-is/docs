@@ -2,7 +2,7 @@
 
 # Interface: DataGridPersistenceEvent
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L342)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:345](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L345)
 
 ## Extends
 
@@ -14,7 +14,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:342](https://github.com/ser
 
 > **after**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:343](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L343)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L346)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:343](https://github.com/ser
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
+Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)
 
 #### Inherited from
 
@@ -34,7 +34,7 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/s
 
 > **flagsArgument**: [`GridPersistenceFlags`](GridPersistenceFlags.md)
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:344](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L344)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:347](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L347)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:344](https://github.com/ser
 
 > **flagsDefault**: [`GridPersistenceFlags`](GridPersistenceFlags.md)
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:345](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L345)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:348](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L348)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:345](https://github.com/ser
 
 > **flagsToUse**: [`GridPersistenceFlags`](GridPersistenceFlags.md)
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L346)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:349](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L349)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:346](https://github.com/ser
 
 > `readonly` **persisting**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:349](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L349)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L352)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:349](https://github.com/ser
 
 > `readonly` **restoring**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:348](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L348)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:351](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L351)
 
 ***
 
@@ -74,4 +74,4 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:348](https://github.com/ser
 
 > **settings**: [`PersistedGridSettings`](PersistedGridSettings.md)
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:347](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L347)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:350](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L350)

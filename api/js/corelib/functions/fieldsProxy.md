@@ -4,7 +4,7 @@
 
 > **fieldsProxy**\<`TRow`\>(): `Readonly`\<`Record`\<keyof `TRow`, `string`\>\>
 
-Defined in: [src/base/system.ts:390](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L390)
+Defined in: [src/base/system.ts:391](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L391)
 
 Get a proxy for form fields. This proxy returns the field name for any property
 accessed on it. This is used in form initialization to avoid having to declare

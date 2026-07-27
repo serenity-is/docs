@@ -2,7 +2,7 @@
 
 # Class: ColumnPickerDialog\<P\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L31)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L32)
 
 ## Extends
 
@@ -20,7 +20,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:31](https://github.com/seren
 
 > **new ColumnPickerDialog**\<`P`\>(`opt`): `ColumnPickerDialog`\<`P`\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L46)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L47)
 
 #### Parameters
 
@@ -138,7 +138,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:19](https://github.com/serenity-is/se
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L33)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L34)
 
 #### Overrides
 
@@ -412,7 +412,7 @@ Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/sereni
 
 > `protected` **createColumnItems**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L388)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L397)
 
 #### Returns
 
@@ -424,7 +424,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:388](https://github.com/sere
 
 > `protected` **createSearch**(`div`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L198)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L199)
 
 #### Parameters
 
@@ -458,7 +458,7 @@ Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L126)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L127)
 
 #### Returns
 
@@ -594,7 +594,7 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 > `protected` **getDialogButtons**(): [`DialogButton`](../interfaces/DialogButton.md)[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L330)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:334](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L334)
 
 #### Returns
 
@@ -610,7 +610,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:330](https://github.com/sere
 
 > `protected` **getDialogOptions**(): [`DialogOptions`](../interfaces/DialogOptions.md)
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L323)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:327](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L327)
 
 #### Returns
 
@@ -706,7 +706,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:227](https://github.com/serenity-is/s
 
 > `protected` **handleRestoreDefaults**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:210](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L210)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L214)
 
 #### Returns
 
@@ -716,23 +716,15 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:210](https://github.com/sere
 
 ### handleSearch()
 
-> `protected` **handleSearch**(`_field`, `query`, `done`): `void`
+> `protected` **handleSearch**(`__namedParameters`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L276)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L280)
 
 #### Parameters
 
-##### \_field
+##### \_\_namedParameters
 
-`string`
-
-##### query
-
-`string`
-
-##### done
-
-(`found`) => `void`
+[`QuickSearchArgs`](../interfaces/QuickSearchArgs.md)
 
 #### Returns
 
@@ -744,7 +736,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:276](https://github.com/sere
 
 > `protected` **handleToggleAllClick**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L254)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L258)
 
 #### Returns
 
@@ -756,7 +748,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:254](https://github.com/sere
 
 > `protected` **handleToggleClick**(`e`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L152)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L153)
 
 #### Parameters
 
@@ -918,7 +910,7 @@ Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/sereni
 
 > `protected` **onChange**(`args`): `PromiseLike`\<`any`\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L148)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L149)
 
 #### Parameters
 
@@ -992,7 +984,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:190](https://github.com/serenity-is/s
 
 > `protected` **onDialogOpen**(): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:408](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L408)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L417)
 
 #### Returns
 
@@ -1062,7 +1054,7 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L173)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L174)
 
 #### Returns
 
@@ -1078,7 +1070,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:173](https://github.com/sere
 
 > `protected` **reorderColumns**(`columnIds`, `setVisible?`, `restoredDefaults?`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L204)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:208](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L208)
 
 #### Parameters
 
@@ -1156,7 +1148,7 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 > `protected` **toggleColumns**(`columnIds`, `show?`): `Column`\<`any`\>[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L140)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L141)
 
 #### Parameters
 
@@ -1178,7 +1170,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:140](https://github.com/sere
 
 > `protected` **updateToggleAllValue**(): `boolean`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:271](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L271)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L275)
 
 #### Returns
 
@@ -1270,7 +1262,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:15](https://github.com/serenity-is/se
 
 > `static` **createToolButton**(`optOrDataGrid`): [`ToolButton`](../interfaces/ToolButton.md)
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:298](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L298)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:302](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L302)
 
 #### Parameters
 
@@ -1310,7 +1302,7 @@ Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenit
 
 > `static` **openDialog**(`opt`): `void`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:416](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L416)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:425](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L425)
 
 #### Parameters
 

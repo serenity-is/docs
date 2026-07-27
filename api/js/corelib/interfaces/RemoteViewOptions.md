@@ -2,7 +2,7 @@
 
 # Interface: RemoteViewOptions\<TItem\>
 
-Defined in: [src/slick/remoteview.ts:1260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1260)
+Defined in: [src/slick/remoteview.ts:1280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1280)
 
 Options for configuring a RemoteView instance
 
@@ -18,7 +18,7 @@ Options for configuring a RemoteView instance
 
 > `optional` **autoLoad**: `boolean`
 
-Defined in: [src/slick/remoteview.ts:1262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1262)
+Defined in: [src/slick/remoteview.ts:1282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1282)
 
 Automatically load data (call populate) on initialization
 
@@ -28,7 +28,7 @@ Automatically load data (call populate) on initialization
 
 > `optional` **contentType**: `string`
 
-Defined in: [src/slick/remoteview.ts:1264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1264)
+Defined in: [src/slick/remoteview.ts:1284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1284)
 
 HTTP content type for service requests
 
@@ -38,7 +38,7 @@ HTTP content type for service requests
 
 > `optional` **dataType**: `string`
 
-Defined in: [src/slick/remoteview.ts:1266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1266)
+Defined in: [src/slick/remoteview.ts:1286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1286)
 
 Expected data type of the service response
 
@@ -48,7 +48,7 @@ Expected data type of the service response
 
 > `optional` **errormsg**: `string`
 
-Defined in: [src/slick/remoteview.ts:1268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1268)
+Defined in: [src/slick/remoteview.ts:1288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1288)
 
 Error message to display when requests fail
 
@@ -58,7 +58,7 @@ Error message to display when requests fail
 
 > `optional` **filter**: [`RemoteViewFilter`](../type-aliases/RemoteViewFilter.md)\<`TItem`\>
 
-Defined in: [src/slick/remoteview.ts:1270](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1270)
+Defined in: [src/slick/remoteview.ts:1290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1290)
 
 Filter criteria or function to apply to the data
 
@@ -68,7 +68,7 @@ Filter criteria or function to apply to the data
 
 > `optional` **getItemMetadata**: (`item`, `row`) => `ItemMetadata`\<`TItem`\>
 
-Defined in: [src/slick/remoteview.ts:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1272)
+Defined in: [src/slick/remoteview.ts:1292](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1292)
 
 Callback function to get metadata for individual items
 
@@ -92,7 +92,7 @@ Callback function to get metadata for individual items
 
 > `optional` **groupItemMetadataProvider**: `GroupItemMetadataProvider`
 
-Defined in: [src/slick/remoteview.ts:1274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1274)
+Defined in: [src/slick/remoteview.ts:1294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1294)
 
 Provider for group item metadata in grouped views
 
@@ -102,7 +102,7 @@ Provider for group item metadata in grouped views
 
 > `optional` **idField**: `string`
 
-Defined in: [src/slick/remoteview.ts:1276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1276)
+Defined in: [src/slick/remoteview.ts:1296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1296)
 
 Name of the field containing unique item identifiers
 
@@ -112,7 +112,7 @@ Name of the field containing unique item identifiers
 
 > `optional` **localSort**: `boolean`
 
-Defined in: [src/slick/remoteview.ts:1278](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1278)
+Defined in: [src/slick/remoteview.ts:1298](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1298)
 
 Whether to perform sorting locally instead of server-side
 
@@ -122,7 +122,7 @@ Whether to perform sorting locally instead of server-side
 
 > `optional` **method**: `string`
 
-Defined in: [src/slick/remoteview.ts:1280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1280)
+Defined in: [src/slick/remoteview.ts:1300](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1300)
 
 HTTP method to use for service requests
 
@@ -132,7 +132,7 @@ HTTP method to use for service requests
 
 > `optional` **onAjaxCall**: [`RemoteViewAjaxCallback`](../type-aliases/RemoteViewAjaxCallback.md)\<`TItem`\>
 
-Defined in: [src/slick/remoteview.ts:1282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1282)
+Defined in: [src/slick/remoteview.ts:1302](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1302)
 
 Callback function invoked before AJAX calls are made
 
@@ -142,7 +142,7 @@ Callback function invoked before AJAX calls are made
 
 > `optional` **onProcessData**: [`RemoteViewProcessCallback`](../type-aliases/RemoteViewProcessCallback.md)\<`TItem`\>
 
-Defined in: [src/slick/remoteview.ts:1284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1284)
+Defined in: [src/slick/remoteview.ts:1304](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1304)
 
 Callback function to process data received from the server
 
@@ -152,7 +152,7 @@ Callback function to process data received from the server
 
 > `optional` **onSubmit**: [`CancellableViewCallback`](../type-aliases/CancellableViewCallback.md)\<`TItem`\>
 
-Defined in: [src/slick/remoteview.ts:1286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1286)
+Defined in: [src/slick/remoteview.ts:1306](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1306)
 
 Callback function invoked before submitting service requests
 
@@ -162,7 +162,7 @@ Callback function invoked before submitting service requests
 
 > `optional` **params**: `Record`\<`string`, `object`\>
 
-Defined in: [src/slick/remoteview.ts:1288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1288)
+Defined in: [src/slick/remoteview.ts:1308](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1308)
 
 Additional parameters to include in service requests
 
@@ -172,7 +172,7 @@ Additional parameters to include in service requests
 
 > `optional` **rowsPerPage**: `number`
 
-Defined in: [src/slick/remoteview.ts:1290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1290)
+Defined in: [src/slick/remoteview.ts:1310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1310)
 
 Number of rows to display per page (0 for no paging)
 
@@ -182,7 +182,7 @@ Number of rows to display per page (0 for no paging)
 
 > `optional` **seekToPage**: `number`
 
-Defined in: [src/slick/remoteview.ts:1292](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1292)
+Defined in: [src/slick/remoteview.ts:1312](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1312)
 
 Initial page number to seek to on first load
 
@@ -192,7 +192,7 @@ Initial page number to seek to on first load
 
 > `optional` **sortBy**: `string` \| `string`[]
 
-Defined in: [src/slick/remoteview.ts:1294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1294)
+Defined in: [src/slick/remoteview.ts:1314](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1314)
 
 Initial sort criteria for the data
 
@@ -202,6 +202,6 @@ Initial sort criteria for the data
 
 > `optional` **url**: `string`
 
-Defined in: [src/slick/remoteview.ts:1296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1296)
+Defined in: [src/slick/remoteview.ts:1316](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L1316)
 
 URL of the service endpoint for data requests

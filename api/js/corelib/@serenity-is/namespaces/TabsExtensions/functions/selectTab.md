@@ -4,7 +4,7 @@
 
 > **selectTab**(`tabs`, `tabKey`): `void`
 
-Defined in: [src/ui/helpers/tabsextensions.tsx:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L128)
+Defined in: [src/ui/helpers/tabsextensions.tsx:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L132)
 
 ## Parameters
 

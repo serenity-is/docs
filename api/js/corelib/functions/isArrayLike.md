@@ -4,7 +4,7 @@
 
 > **isArrayLike**(`obj`): `obj is ArrayLike<any>`
 
-Defined in: [src/base/system.ts:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L401)
+Defined in: [src/base/system.ts:402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L402)
 
 Check if an object is array-like. An object is considered array-like if it is
 not null, is of type object, has a numeric length property and does not have

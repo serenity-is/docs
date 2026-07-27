@@ -2,7 +2,7 @@
 
 # Interface: DataGridSubmitEvent
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1279)
+Defined in: [src/ui/datagrid/datagrid.tsx:1268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1268)
 
 ## Extends
 
@@ -14,7 +14,7 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1279](https://github.com/serenity-is/s
 
 > `optional` **cancel**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1280)
+Defined in: [src/ui/datagrid/datagrid.tsx:1269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1269)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1280](https://github.com/serenity-is/s
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
+Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)
 
 #### Inherited from
 

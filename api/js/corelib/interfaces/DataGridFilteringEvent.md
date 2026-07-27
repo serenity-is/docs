@@ -2,7 +2,7 @@
 
 # Interface: DataGridFilteringEvent\<TItem\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1283)
+Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
 
 ## Extends
 
@@ -20,7 +20,7 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1283](https://github.com/serenity-is/s
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
+Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)
 
 #### Inherited from
 
@@ -32,7 +32,7 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/s
 
 > **isMatch**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1285)
+Defined in: [src/ui/datagrid/datagrid.tsx:1274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1274)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1285](https://github.com/serenity-is/s
 
 > **item**: `TItem`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1284)
+Defined in: [src/ui/datagrid/datagrid.tsx:1273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1273)

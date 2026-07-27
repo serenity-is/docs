@@ -11,6 +11,7 @@ Defined in: [src/slick/remoteview.ts:8](https://github.com/serenity-is/serenity/
 - [`ArgsRowCountChanged`](ArgsRowCountChanged.md)
 - [`ArgsRowsChanged`](ArgsRowsChanged.md)
 - [`ArgsRowsOrCountChanged`](ArgsRowsOrCountChanged.md)
+- [`ArgsRecalcRows`](ArgsRecalcRows.md)
 
 ## Properties
 

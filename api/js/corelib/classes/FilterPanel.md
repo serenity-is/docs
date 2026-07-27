@@ -138,6 +138,20 @@ Returns a Fluent(this.domNode) object
 
 ***
 
+### hasErrors
+
+#### Get Signature
+
+> **get** **hasErrors**(): `boolean`
+
+Defined in: [src/ui/filtering/filterpanel.tsx:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L182)
+
+##### Returns
+
+`boolean`
+
+***
+
 ### props
 
 #### Get Signature
@@ -220,7 +234,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:150](https://github.com/serenity-i
 
 > `protected` **addButtonClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L241)
+Defined in: [src/ui/filtering/filterpanel.tsx:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L246)
 
 #### Parameters
 
@@ -254,7 +268,7 @@ Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenit
 
 > `protected` **addEmptyRow**(`popupField`): `HTMLElement`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:280](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L280)
+Defined in: [src/ui/filtering/filterpanel.tsx:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L285)
 
 #### Parameters
 
@@ -346,7 +360,7 @@ Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/sereni
 
 > `protected` **andOrClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:447](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L447)
+Defined in: [src/ui/filtering/filterpanel.tsx:452](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L452)
 
 #### Parameters
 
@@ -452,7 +466,7 @@ Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenit
 
 > `protected` **deleteRowClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:429](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L429)
+Defined in: [src/ui/filtering/filterpanel.tsx:434](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L434)
 
 #### Parameters
 
@@ -530,7 +544,7 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 > `protected` **findEmptyRow**(): `HTMLElement`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L263)
+Defined in: [src/ui/filtering/filterpanel.tsx:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L268)
 
 #### Returns
 
@@ -540,9 +554,9 @@ Defined in: [src/ui/filtering/filterpanel.tsx:263](https://github.com/serenity-i
 
 ### get\_hasErrors()
 
-> **get\_hasErrors**(): `boolean`
+> `protected` **get\_hasErrors**(): `boolean`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L182)
+Defined in: [src/ui/filtering/filterpanel.tsx:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L187)
 
 #### Returns
 
@@ -618,7 +632,7 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 > `protected` **getFieldFor**(`row`): [`PropertyItem`](../interfaces/PropertyItem.md)
 
-Defined in: [src/ui/filtering/filterpanel.tsx:353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L353)
+Defined in: [src/ui/filtering/filterpanel.tsx:358](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L358)
 
 #### Parameters
 
@@ -636,7 +650,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:353](https://github.com/serenity-i
 
 > `protected` **getFilteringFor**(`row`): [`IFiltering`](IFiltering.md)
 
-Defined in: [src/ui/filtering/filterpanel.tsx:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L366)
+Defined in: [src/ui/filtering/filterpanel.tsx:371](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L371)
 
 #### Parameters
 
@@ -702,7 +716,7 @@ Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/sereni
 
 > `protected` **leftRightParenClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:454](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L454)
+Defined in: [src/ui/filtering/filterpanel.tsx:459](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L459)
 
 #### Parameters
 
@@ -736,7 +750,7 @@ Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/sereni
 
 > `protected` **onRowFieldChange**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:318](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L318)
+Defined in: [src/ui/filtering/filterpanel.tsx:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L323)
 
 #### Parameters
 
@@ -754,7 +768,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:318](https://github.com/serenity-i
 
 > `protected` **onRowOperatorChange**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:389](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L389)
+Defined in: [src/ui/filtering/filterpanel.tsx:394](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L394)
 
 #### Parameters
 
@@ -772,7 +786,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:389](https://github.com/serenity-i
 
 > `protected` **populateOperatorList**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:338](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L338)
+Defined in: [src/ui/filtering/filterpanel.tsx:343](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L343)
 
 #### Parameters
 
@@ -790,7 +804,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:338](https://github.com/serenity-i
 
 > `protected` **removeFiltering**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L333)
+Defined in: [src/ui/filtering/filterpanel.tsx:338](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L338)
 
 #### Parameters
 
@@ -844,7 +858,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:159](https://github.com/serenity-i
 
 > `protected` **resetButtonClick**(`e`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L246)
+Defined in: [src/ui/filtering/filterpanel.tsx:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L251)
 
 #### Parameters
 
@@ -862,7 +876,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:246](https://github.com/serenity-i
 
 > `protected` **rowFieldChange**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:324](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L324)
+Defined in: [src/ui/filtering/filterpanel.tsx:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L329)
 
 #### Parameters
 
@@ -880,7 +894,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:324](https://github.com/serenity-i
 
 > `protected` **rowOperatorChange**(`row`): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L400)
+Defined in: [src/ui/filtering/filterpanel.tsx:405](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L405)
 
 #### Parameters
 
@@ -898,7 +912,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:400](https://github.com/serenity-i
 
 > **search**(): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L186)
+Defined in: [src/ui/filtering/filterpanel.tsx:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L191)
 
 #### Returns
 
@@ -986,7 +1000,7 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 > `protected` **updateButtons**(): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:442](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L442)
+Defined in: [src/ui/filtering/filterpanel.tsx:447](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L447)
 
 #### Returns
 
@@ -998,7 +1012,7 @@ Defined in: [src/ui/filtering/filterpanel.tsx:442](https://github.com/serenity-i
 
 > `protected` **updateParens**(): `void`
 
-Defined in: [src/ui/filtering/filterpanel.tsx:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L460)
+Defined in: [src/ui/filtering/filterpanel.tsx:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L465)
 
 #### Returns
 

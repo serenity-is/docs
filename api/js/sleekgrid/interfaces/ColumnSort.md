@@ -2,7 +2,7 @@
 
 # Interface: ColumnSort
 
-Defined in: [src/core/column.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L66)
+Defined in: [src/core/column.ts:69](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L69)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/core/column.ts:66](https://github.com/serenity-is/Serenity/blob
 
 > **columnId**: `string`
 
-Defined in: [src/core/column.ts:67](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L67)
+Defined in: [src/core/column.ts:70](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L70)
 
 ***
 
@@ -18,4 +18,4 @@ Defined in: [src/core/column.ts:67](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **sortAsc**: `boolean`
 
-Defined in: [src/core/column.ts:68](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L68)
+Defined in: [src/core/column.ts:71](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L71)

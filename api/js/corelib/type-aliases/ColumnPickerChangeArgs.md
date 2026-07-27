@@ -4,7 +4,7 @@
 
 > **ColumnPickerChangeArgs** = `object`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L14)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L15)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:14](https://github.com/seren
 
 > **reorderedColumns**: `boolean`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L16)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L17)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:16](https://github.com/seren
 
 > **restoredDefaults**: `boolean`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L17)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L18)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:17](https://github.com/seren
 
 > **toggledColumns**: `Column`[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L15)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L16)

@@ -4,7 +4,7 @@
 
 > **makeOrderable**(`grid`, `handleMove`): `void`
 
-Defined in: [src/ui/helpers/gridutils.tsx:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L114)
+Defined in: [src/ui/helpers/gridutils.tsx:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L154)
 
 ## Parameters
 

@@ -4,7 +4,7 @@
 
 > **PropertyCategories**(`props`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L230)
+Defined in: [src/ui/widgets/propertygrid.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L231)
 
 ## Parameters
 

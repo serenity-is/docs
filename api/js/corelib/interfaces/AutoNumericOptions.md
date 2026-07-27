@@ -10,7 +10,17 @@ Defined in: [src/ui/editors/autonumeric.ts:40](https://github.com/serenity-is/se
 
 > `optional` **aDec**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L41)
+Defined in: [src/ui/editors/autonumeric.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L46)
+
+allowed decimal separator characters
+period "full stop" = '.'
+comma = ','
+
+#### Default
+
+```ts
+'.'
+```
 
 ***
 
@@ -18,23 +28,17 @@ Defined in: [src/ui/editors/autonumeric.ts:41](https://github.com/serenity-is/se
 
 > `optional` **aForm**: `boolean`
 
-Defined in: [src/ui/editors/autonumeric.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L45)
+Defined in: [src/ui/editors/autonumeric.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L62)
 
-***
+determine if the default value will be formatted on page ready.
+true = automatically formats the default value on page ready
+false = will not format the default value
 
-### allowedAutoStrip?
+#### Default
 
-> `optional` **allowedAutoStrip**: `RegExp`
-
-Defined in: [src/ui/editors/autonumeric.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L42)
-
-***
-
-### allowLeading?
-
-> `optional` **allowLeading**: `boolean`
-
-Defined in: [src/ui/editors/autonumeric.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L43)
+```ts
+true
+```
 
 ***
 
@@ -42,23 +46,17 @@ Defined in: [src/ui/editors/autonumeric.ts:43](https://github.com/serenity-is/se
 
 > `optional` **altDec**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L44)
+Defined in: [src/ui/editors/autonumeric.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L56)
 
-***
+allow to declare alternative decimal separator which is automatically replaced by aDec
+developed for countries the use a comma ',' as the decimal character
+and have keyboards\numeric pads that have a period 'full stop' as the decimal characters (Spain is an example)
 
-### aNeg?
+#### Default
 
-> `optional` **aNeg**: `string`
-
-Defined in: [src/ui/editors/autonumeric.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L47)
-
-***
-
-### aNegRegAutoStrip?
-
-> `optional` **aNegRegAutoStrip**: `string`
-
-Defined in: [src/ui/editors/autonumeric.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L50)
+```ts
+null
+```
 
 ***
 
@@ -66,7 +64,16 @@ Defined in: [src/ui/editors/autonumeric.ts:50](https://github.com/serenity-is/se
 
 > `optional` **aNum**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L46)
+Defined in: [src/ui/editors/autonumeric.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L67)
+
+allowed numeric values
+please do not modify
+
+#### Default
+
+```ts
+'0123456789'
+```
 
 ***
 
@@ -74,7 +81,19 @@ Defined in: [src/ui/editors/autonumeric.ts:46](https://github.com/serenity-is/se
 
 > `optional` **aPad**: `boolean`
 
-Defined in: [src/ui/editors/autonumeric.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L51)
+Defined in: [src/ui/editors/autonumeric.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L94)
+
+controls decimal padding
+aPad: true - always Pad decimals with zeros
+aPad: false - does not pad with zeros.
+aPad: `some number` - pad decimals with zero to number different from mDec
+thanks to Jonas Johansson for the suggestion
+
+#### Default
+
+```ts
+true
+```
 
 ***
 
@@ -82,7 +101,21 @@ Defined in: [src/ui/editors/autonumeric.ts:51](https://github.com/serenity-is/se
 
 > `optional` **aSep**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L48)
+Defined in: [src/ui/editors/autonumeric.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L81)
+
+allowed thousand separator characters
+comma = ','
+period "full stop" = '.'
+apostrophe is escaped = '\''
+space = ' '
+none = ''
+NOTE: do not use numeric characters
+
+#### Default
+
+```ts
+','
+```
 
 ***
 
@@ -90,7 +123,16 @@ Defined in: [src/ui/editors/autonumeric.ts:48](https://github.com/serenity-is/se
 
 > `optional` **aSign**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L49)
+Defined in: [src/ui/editors/autonumeric.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L86)
+
+allowed currency symbol
+Must be in quotes aSign: '$', a space is allowed aSign: '$ '
+
+#### Default
+
+```ts
+''
+```
 
 ***
 
@@ -98,7 +140,18 @@ Defined in: [src/ui/editors/autonumeric.ts:49](https://github.com/serenity-is/se
 
 > `optional` **dGroup**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L52)
+Defined in: [src/ui/editors/autonumeric.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L101)
+
+digital grouping for the thousand separator used in Format
+dGroup: '2', results in 99,99,99,999 common in India for values less than 1 billion and greater than -1 billion
+dGroup: '3', results in 999,999,999 default
+dGroup: '4', results in 9999,9999,9999 used in some Asian countries
+
+#### Default
+
+```ts
+'3'
+```
 
 ***
 
@@ -106,7 +159,7 @@ Defined in: [src/ui/editors/autonumeric.ts:52](https://github.com/serenity-is/se
 
 > `optional` **holder**: `any`
 
-Defined in: [src/ui/editors/autonumeric.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L54)
+Defined in: [src/ui/editors/autonumeric.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L103)
 
 internal
 
@@ -116,7 +169,18 @@ internal
 
 > `optional` **lZero**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L55)
+Defined in: [src/ui/editors/autonumeric.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L110)
+
+controls leading zero behavior
+lZero: 'allow', - allows leading zeros to be entered. Zeros will be truncated when entering additional digits. On focusout zeros will be deleted.
+lZero: 'deny', - allows only one leading zero on values less than one
+lZero: 'keep', - allows leading zeros to be entered. on fousout zeros will be retained.
+
+#### Default
+
+```ts
+'allow'
+```
 
 ***
 
@@ -124,15 +188,17 @@ Defined in: [src/ui/editors/autonumeric.ts:55](https://github.com/serenity-is/se
 
 > `optional` **mDec**: `number`
 
-Defined in: [src/ui/editors/autonumeric.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L56)
+Defined in: [src/ui/editors/autonumeric.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L116)
 
-***
+max number of decimal places = used to override decimal places set by the vMin & vMax values
+value must be enclosed in quotes example mDec: '3',
+This can also set the value via a call back function mDec: 'css:#
 
-### mInt?
+#### Default
 
-> `optional` **mInt**: `number`
-
-Defined in: [src/ui/editors/autonumeric.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L57)
+```ts
+null
+```
 
 ***
 
@@ -140,7 +206,24 @@ Defined in: [src/ui/editors/autonumeric.ts:57](https://github.com/serenity-is/se
 
 > `optional` **mRound**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L58)
+Defined in: [src/ui/editors/autonumeric.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L131)
+
+method used for rounding
+mRound: 'S', Round-Half-Up Symmetric (default)
+mRound: 'A', Round-Half-Up Asymmetric
+mRound: 's', Round-Half-Down Symmetric (lower case s)
+mRound: 'a', Round-Half-Down Asymmetric (lower case a)
+mRound: 'B', Round-Half-Even "Bankers Rounding"
+mRound: 'U', Round Up "Round-Away-From-Zero"
+mRound: 'D', Round Down "Round-Toward-Zero" - same as truncate
+mRound: 'C', Round to Ceiling "Toward Positive Infinity"
+mRound: 'F', Round to Floor "Toward Negative Infinity"
+
+#### Default
+
+```ts
+'S'
+```
 
 ***
 
@@ -148,23 +231,17 @@ Defined in: [src/ui/editors/autonumeric.ts:58](https://github.com/serenity-is/se
 
 > `optional` **nBracket**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L59)
+Defined in: [src/ui/editors/autonumeric.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L137)
 
-***
+places brackets on negative value -$ 999.99 to (999.99)
+visible only when the field does NOT have focus the left and right symbols should be enclosed in quotes and separated by a comma
+nBracket: null, nBracket: '(,)', nBracket: '[,]', nBracket: '<,>' or nBracket: '{,}'
 
-### numRegAutoStrip?
+#### Default
 
-> `optional` **numRegAutoStrip**: `RegExp`
-
-Defined in: [src/ui/editors/autonumeric.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L60)
-
-***
-
-### oEvent?
-
-> `optional` **oEvent**: `any`
-
-Defined in: [src/ui/editors/autonumeric.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L61)
+```ts
+null
+```
 
 ***
 
@@ -172,7 +249,17 @@ Defined in: [src/ui/editors/autonumeric.ts:61](https://github.com/serenity-is/se
 
 > `optional` **pSign**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L62)
+Defined in: [src/ui/editors/autonumeric.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L147)
+
+placement of currency sign
+for prefix pSign: 'p',
+for suffix pSign: 's',
+
+#### Default
+
+```ts
+'p'
+```
 
 ***
 
@@ -180,33 +267,9 @@ Defined in: [src/ui/editors/autonumeric.ts:62](https://github.com/serenity-is/se
 
 > `optional` **runOnce**: `boolean`
 
-Defined in: [src/ui/editors/autonumeric.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L64)
+Defined in: [src/ui/editors/autonumeric.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L149)
 
 internal
-
-***
-
-### skipFirstAutoStrip?
-
-> `optional` **skipFirstAutoStrip**: `RegExp`
-
-Defined in: [src/ui/editors/autonumeric.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L65)
-
-***
-
-### skipLastAutoStrip?
-
-> `optional` **skipLastAutoStrip**: `RegExp`
-
-Defined in: [src/ui/editors/autonumeric.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L66)
-
-***
-
-### tagList?
-
-> `optional` **tagList**: `string`[]
-
-Defined in: [src/ui/editors/autonumeric.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L67)
 
 ***
 
@@ -214,7 +277,17 @@ Defined in: [src/ui/editors/autonumeric.ts:67](https://github.com/serenity-is/se
 
 > `optional` **vMax**: `any`
 
-Defined in: [src/ui/editors/autonumeric.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L68)
+Defined in: [src/ui/editors/autonumeric.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L161)
+
+maximum possible value
+value must be enclosed in quotes and use the period for the decimal point
+value must be larger than vMin
+
+#### Default
+
+```ts
+'9999999999999.99'
+```
 
 ***
 
@@ -222,7 +295,17 @@ Defined in: [src/ui/editors/autonumeric.ts:68](https://github.com/serenity-is/se
 
 > `optional` **vMin**: `any`
 
-Defined in: [src/ui/editors/autonumeric.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L69)
+Defined in: [src/ui/editors/autonumeric.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L167)
+
+minimum possible value
+value must be enclosed in quotes and use the period for the decimal point
+value must be smaller than vMax
+
+#### Default
+
+```ts
+'0.00'
+```
 
 ***
 
@@ -230,4 +313,15 @@ Defined in: [src/ui/editors/autonumeric.ts:69](https://github.com/serenity-is/se
 
 > `optional` **wEmpty**: `string`
 
-Defined in: [src/ui/editors/autonumeric.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L70)
+Defined in: [src/ui/editors/autonumeric.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/autonumeric.ts#L174)
+
+Displayed on empty string
+wEmpty: 'empty', - input can be blank
+wEmpty: 'zero', - displays zero
+wEmpty: 'sign', - displays the currency sign
+
+#### Default
+
+```ts
+'empty'
+```

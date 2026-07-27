@@ -198,13 +198,13 @@ Defined in: [src/editors/editors.tsx:233](https://github.com/serenity-is/Serenit
 
 ### serializeValue()
 
-> **serializeValue**(): `boolean`
+> **serializeValue**(): `any`
 
 Defined in: [src/editors/editors.tsx:237](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L237)
 
 #### Returns
 
-`boolean`
+`any`
 
 #### Overrides
 
@@ -236,21 +236,13 @@ Defined in: [src/editors/editors.tsx:28](https://github.com/serenity-is/Serenity
 
 ### validate()
 
-> **validate**(): `object`
+> **validate**(): [`ValidationResult`](../interfaces/ValidationResult.md)
 
 Defined in: [src/editors/editors.tsx:245](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L245)
 
 #### Returns
 
-`object`
-
-##### msg
-
-> **msg**: `string`
-
-##### valid
-
-> **valid**: `boolean` = `true`
+[`ValidationResult`](../interfaces/ValidationResult.md)
 
 #### Overrides
 

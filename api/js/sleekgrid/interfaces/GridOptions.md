@@ -811,6 +811,18 @@ Defaults to `false`. If `true`, displays the post-header panel for additional co
 
 ***
 
+### styleNonce?
+
+> `optional` **styleNonce**: `string`
+
+Defined in: [src/core/gridoptions.ts:372](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L372)
+
+Nonce value for CSP (Content Security Policy) when `useCssVars` is `false`. Applied to the dynamically
+created `<style>` element to allow inline CSS injection without violating CSP rules.
+If not provided, the grid will attempt to detect a nonce from a meta element with `csp-nonce` name or from existing `<style>` or `<script>` elements on the page.
+
+***
+
 ### suppressActiveCellChangeOnEdit?
 
 > `optional` **suppressActiveCellChangeOnEdit**: `boolean`
@@ -825,7 +837,7 @@ Defaults to `false`. If `true`, suppresses the activation of cells when they con
 
 > `optional` **syncColumnCellResize**: `boolean`
 
-Defined in: [src/core/gridoptions.ts:370](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L370)
+Defined in: [src/core/gridoptions.ts:377](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L377)
 
 Defaults to `false`. If `true`, synchronizes column resizing with cell resizing.
 
@@ -835,7 +847,7 @@ Defaults to `false`. If `true`, synchronizes column resizing with cell resizing.
 
 > `optional` **topPanelHeight**: `number`
 
-Defined in: [src/core/gridoptions.ts:375](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L375)
+Defined in: [src/core/gridoptions.ts:382](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L382)
 
 Defaults to null which means the top panel height is calculated based on CSS rules.
 
@@ -845,12 +857,15 @@ Defaults to null which means the top panel height is calculated based on CSS rul
 
 > `optional` **useCssVars**: `number` \| `boolean`
 
-Defined in: [src/core/gridoptions.ts:388](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L388)
+Defined in: [src/core/gridoptions.ts:399](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L399)
 
-Defaults to `true` which is equivalent to 50. If `true`, uses CSS variables for styling (for up to 50 cols).
+Defaults to `true` which is equivalent to 100. If `true`, uses CSS variables for styling (for up to 100 cols).
 If set to a number, enables CSS variables only if column count is less than or equal to that number.
-This is dependent on the stylesheet which only supports up to 50 columns by default.
+This is dependent on the stylesheet which only supports up to 100 columns by default.
 But if you defined your own stylesheet with more columns, you can set this to a higher number.
+
+If set to `false`, uses a dynamic `<style>` element (with optional `styleNonce` for CSP) to inject CSS rules
+for positioning, avoiding inline styles entirely.
 
 ***
 
@@ -858,7 +873,7 @@ But if you defined your own stylesheet with more columns, you can set this to a 
 
 > `optional` **useLegacyUI**: `boolean`
 
-Defined in: [src/core/gridoptions.ts:380](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L380)
+Defined in: [src/core/gridoptions.ts:387](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L387)
 
 #### Deprecated
 
@@ -870,6 +885,6 @@ This option has no effect.
 
 > `optional` **viewportClass**: `string`
 
-Defined in: [src/core/gridoptions.ts:393](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L393)
+Defined in: [src/core/gridoptions.ts:404](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/gridoptions.ts#L404)
 
 CSS class applied to the viewport container. Default is `undefined`.

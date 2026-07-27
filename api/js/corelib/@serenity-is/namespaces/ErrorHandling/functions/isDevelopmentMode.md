@@ -4,7 +4,7 @@
 
 > **isDevelopmentMode**(): `boolean`
 
-Defined in: [src/base/errorhandling.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.tsx#L84)
+Defined in: [src/base/errorhandling.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.tsx#L105)
 
 Determines if the current environment is development mode.
 The runtimeErrorHandler (window.onerror) shows error notifications only

@@ -4,7 +4,7 @@
 
 > **omitUndefined**(`x`): `any`
 
-Defined in: [src/base/system.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L32)
+Defined in: [src/base/system.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L33)
 
 Omit undefined properties from an object. Does not modify the original object.
 This is useful when using Object.assign to avoid overwriting existing values with undefined

@@ -4,7 +4,7 @@
 
 > **AsyncPostCleanup**\<`TItem`\> = (`cellNode`, `row?`, `column?`) => `void`
 
-Defined in: [src/core/formatting.ts:99](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L99)
+Defined in: [src/core/formatting.ts:102](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L102)
 
 ## Type Parameters
 

@@ -4,7 +4,7 @@
 
 > **PropertyTabs**(`props`): `DocumentFragment`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L273)
+Defined in: [src/ui/widgets/propertygrid.tsx:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L274)
 
 ## Parameters
 

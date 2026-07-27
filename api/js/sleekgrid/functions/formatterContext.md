@@ -4,7 +4,7 @@
 
 > **formatterContext**\<`TItem`\>(`opt?`): [`FormatterContext`](../interfaces/FormatterContext.md)\<`TItem`\>
 
-Defined in: [src/core/formatting.ts:185](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L185)
+Defined in: [src/core/formatting.ts:188](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L188)
 
 ## Type Parameters
 

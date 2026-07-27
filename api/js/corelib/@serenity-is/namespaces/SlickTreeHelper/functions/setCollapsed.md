@@ -4,7 +4,7 @@
 
 > **setCollapsed**\<`TItem`\>(`items`, `collapsed`): `void`
 
-Defined in: [src/ui/helpers/slicktreehelper.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L31)
+Defined in: [src/ui/helpers/slicktreehelper.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L32)
 
 ## Type Parameters
 

@@ -4,7 +4,7 @@
 
 > **ValidationProvider** = (`value`, `element`, `params?`) => `boolean` \| `string` \| `Promise`\<`boolean` \| `string`\>
 
-Defined in: [src/base/validator.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L33)
+Defined in: [src/base/validator.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L34)
 
 Validation plugin signature with multitype return.
 Boolean return signifies the validation result, which uses the default validation error message read from the element attribute.

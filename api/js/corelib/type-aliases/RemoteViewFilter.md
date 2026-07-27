@@ -4,7 +4,7 @@
 
 > **RemoteViewFilter**\<`TItem`\> = (`item`, `view`) => `boolean`
 
-Defined in: [src/slick/iremoteview.ts:309](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L309)
+Defined in: [src/slick/iremoteview.ts:319](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L319)
 
 Filter function for items in the view
 

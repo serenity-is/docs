@@ -4,7 +4,7 @@
 
 > **PropertyFieldEditor**(`props`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L31)
+Defined in: [src/ui/widgets/propertygrid.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L32)
 
 ## Parameters
 

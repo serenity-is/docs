@@ -2,7 +2,7 @@
 
 # Interface: ValidationErrorItem
 
-Defined in: [src/base/validator.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L39)
+Defined in: [src/base/validator.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L40)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/base/validator.tsx:39](https://github.com/serenity-is/serenity/
 
 > **element**: [`ValidatableElement`](ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L41)
+Defined in: [src/base/validator.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L42)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [src/base/validator.tsx:41](https://github.com/serenity-is/serenity/
 
 > **message**: `string`
 
-Defined in: [src/base/validator.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L40)
+Defined in: [src/base/validator.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L41)
 
 ***
 
@@ -26,4 +26,4 @@ Defined in: [src/base/validator.tsx:40](https://github.com/serenity-is/serenity/
 
 > `optional` **method**: `string`
 
-Defined in: [src/base/validator.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L42)
+Defined in: [src/base/validator.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L43)

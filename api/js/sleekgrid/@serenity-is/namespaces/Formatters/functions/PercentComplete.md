@@ -2,7 +2,7 @@
 
 # Function: PercentComplete()
 
-> **PercentComplete**(`_row`, `_cell`, `value`): `HTMLSpanElement` \| `"-"`
+> **PercentComplete**(`_row`, `_cell`, `value`): [`FormatterResult`](../../../../type-aliases/FormatterResult.md)
 
 Defined in: [src/formatters/index.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/formatters/index.ts#L7)
 
@@ -22,4 +22,4 @@ Defined in: [src/formatters/index.ts:7](https://github.com/serenity-is/Serenity/
 
 ## Returns
 
-`HTMLSpanElement` \| `"-"`
+[`FormatterResult`](../../../../type-aliases/FormatterResult.md)

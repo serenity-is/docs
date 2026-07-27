@@ -4,7 +4,7 @@
 
 > **PropertyField**(`props`): [`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
 
-Defined in: [src/ui/widgets/propertygrid.tsx:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L129)
+Defined in: [src/ui/widgets/propertygrid.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L130)
 
 ## Parameters
 

@@ -137,10 +137,10 @@ A modern, lightweight, and highly customizable data grid component for web appli
 
 ## Functions
 
-- [addClass](functions/addClass.md)
+- [addCssClass](functions/addCssClass.md)
 - [applyFormatterResultToCellNode](functions/applyFormatterResultToCellNode.md)
 - [basicDOMSanitizer](functions/basicDOMSanitizer.md)
-- [CheckboxFormatter](functions/CheckboxFormatter.md)
+- [CheckBoxFormatter](functions/CheckBoxFormatter.md)
 - [CheckmarkFormatter](functions/CheckmarkFormatter.md)
 - [convertCompatFormatter](functions/convertCompatFormatter.md)
 - [defaultColumnFormat](functions/defaultColumnFormat.md)
@@ -154,7 +154,7 @@ A modern, lightweight, and highly customizable data grid component for web appli
 - [parsePx](functions/parsePx.md)
 - [PercentCompleteBarFormatter](functions/PercentCompleteBarFormatter.md)
 - [PercentCompleteFormatter](functions/PercentCompleteFormatter.md)
-- [removeClass](functions/removeClass.md)
+- [removeCssClass](functions/removeCssClass.md)
 - [titleize](functions/titleize.md)
 - [TopPanel](functions/TopPanel.md)
 - [Viewport](functions/Viewport.md)

@@ -4,7 +4,7 @@
 
 > **treeToggle**(`getView`, `getId`, `formatter`): [`Format`](../../../../type-aliases/Format.md)
 
-Defined in: [src/ui/helpers/slickformatting.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickformatting.tsx#L43)
+Defined in: [src/ui/helpers/slickformatting.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickformatting.tsx#L41)
 
 ## Parameters
 

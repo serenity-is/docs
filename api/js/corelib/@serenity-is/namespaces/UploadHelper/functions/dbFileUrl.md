@@ -4,7 +4,7 @@
 
 > **dbFileUrl**(`filename`): `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L143)
+Defined in: [src/ui/helpers/uploadhelper.tsx:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L150)
 
 ## Parameters
 

@@ -2,7 +2,7 @@
 
 # Interface: PagingInfo
 
-Defined in: [src/slick/iremoteview.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L273)
+Defined in: [src/slick/iremoteview.ts:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L283)
 
 Information about the current paging state of the view
 
@@ -12,7 +12,7 @@ Information about the current paging state of the view
 
 > **dataView**: [`IRemoteView`](IRemoteView.md)\<`any`\>
 
-Defined in: [src/slick/iremoteview.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L275)
+Defined in: [src/slick/iremoteview.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L285)
 
 Reference to the RemoteView instance
 
@@ -22,7 +22,7 @@ Reference to the RemoteView instance
 
 > **error**: `string`
 
-Defined in: [src/slick/iremoteview.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L277)
+Defined in: [src/slick/iremoteview.ts:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L287)
 
 Current error message, if any
 
@@ -32,7 +32,7 @@ Current error message, if any
 
 > **loading**: `boolean`
 
-Defined in: [src/slick/iremoteview.ts:279](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L279)
+Defined in: [src/slick/iremoteview.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L289)
 
 Whether data is currently being loaded
 
@@ -42,7 +42,7 @@ Whether data is currently being loaded
 
 > **page**: `number`
 
-Defined in: [src/slick/iremoteview.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L281)
+Defined in: [src/slick/iremoteview.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L291)
 
 Current page number (1-based)
 
@@ -52,7 +52,7 @@ Current page number (1-based)
 
 > **rowsPerPage**: `number`
 
-Defined in: [src/slick/iremoteview.ts:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L283)
+Defined in: [src/slick/iremoteview.ts:293](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L293)
 
 Number of rows displayed per page
 
@@ -62,6 +62,6 @@ Number of rows displayed per page
 
 > **totalCount**: `number`
 
-Defined in: [src/slick/iremoteview.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L285)
+Defined in: [src/slick/iremoteview.ts:295](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L295)
 
 Total number of items available

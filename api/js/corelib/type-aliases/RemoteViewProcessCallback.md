@@ -4,7 +4,7 @@
 
 > **RemoteViewProcessCallback**\<`TItem`\> = (`data`, `view`) => [`ListResponse`](../interfaces/ListResponse.md)\<`TItem`\>
 
-Defined in: [src/slick/iremoteview.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L317)
+Defined in: [src/slick/iremoteview.ts:327](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L327)
 
 Callback function for processing data received from the server
 

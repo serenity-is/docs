@@ -1,8 +1,8 @@
-[@serenity-is/sleekgrid](../README.md) / CheckboxFormatter
+[@serenity-is/sleekgrid](../README.md) / CheckBoxFormatter
 
-# Function: CheckboxFormatter()
+# Function: CheckBoxFormatter()
 
-> **CheckboxFormatter**(`ctx`): [`FormatterResult`](../type-aliases/FormatterResult.md)
+> **CheckBoxFormatter**(`ctx`): [`FormatterResult`](../type-aliases/FormatterResult.md)
 
 Defined in: [src/formatters/formatters.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/formatters/formatters.ts#L41)
 

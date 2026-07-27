@@ -2,9 +2,9 @@
 
 # Function: defaultColumnFormat()
 
-> **defaultColumnFormat**(`ctx`): `any`
+> **defaultColumnFormat**(`ctx`): [`FormatterResult`](../type-aliases/FormatterResult.md)
 
-Defined in: [src/core/formatting.ts:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L103)
+Defined in: [src/core/formatting.ts:106](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L106)
 
 ## Parameters
 
@@ -14,4 +14,4 @@ Defined in: [src/core/formatting.ts:103](https://github.com/serenity-is/Serenity
 
 ## Returns
 
-`any`
+[`FormatterResult`](../type-aliases/FormatterResult.md)

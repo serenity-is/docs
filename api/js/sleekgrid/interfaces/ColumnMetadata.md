@@ -2,7 +2,7 @@
 
 # Interface: ColumnMetadata\<TItem\>
 
-Defined in: [src/core/column.ts:55](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L55)
+Defined in: [src/core/column.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L57)
 
 ## Type Parameters
 
@@ -12,11 +12,11 @@ Defined in: [src/core/column.ts:55](https://github.com/serenity-is/Serenity/blob
 
 ## Properties
 
-### colspan
+### colspan?
 
-> **colspan**: `number` \| `"*"`
+> `optional` **colspan**: `number` \| `"*"`
 
-Defined in: [src/core/column.ts:56](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L56)
+Defined in: [src/core/column.ts:58](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L58)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/core/column.ts:56](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **cssClasses**: `string`
 
-Defined in: [src/core/column.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L57)
+Defined in: [src/core/column.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L59)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/core/column.ts:57](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **editor**: [`EditorClass`](EditorClass.md)
 
-Defined in: [src/core/column.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L59)
+Defined in: [src/core/column.ts:61](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L61)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/core/column.ts:59](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **focusable**: `boolean`
 
-Defined in: [src/core/column.ts:58](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L58)
+Defined in: [src/core/column.ts:60](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L60)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/core/column.ts:58](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **format**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
-Defined in: [src/core/column.ts:60](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L60)
+Defined in: [src/core/column.ts:62](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L62)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/core/column.ts:60](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **formatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
 
-Defined in: [src/core/column.ts:62](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L62)
+Defined in: [src/core/column.ts:64](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L64)
 
 #### Deprecated
 
@@ -66,4 +66,12 @@ Defined in: [src/core/column.ts:62](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **selectable**: `boolean`
 
-Defined in: [src/core/column.ts:63](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L63)
+Defined in: [src/core/column.ts:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L65)
+
+***
+
+### tabbable?
+
+> `optional` **tabbable**: `boolean`
+
+Defined in: [src/core/column.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L66)

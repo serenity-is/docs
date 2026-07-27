@@ -42,7 +42,7 @@ Defined in: [src/base/tooltip.ts:37](https://github.com/serenity-is/serenity/blo
 
 > **get** `static` **isAvailable**(): `boolean`
 
-Defined in: [src/base/tooltip.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L77)
+Defined in: [src/base/tooltip.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L80)
 
 ##### Returns
 
@@ -54,7 +54,7 @@ Defined in: [src/base/tooltip.ts:77](https://github.com/serenity-is/serenity/blo
 
 > **delayedDispose**(`delay`): `void`
 
-Defined in: [src/base/tooltip.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L48)
+Defined in: [src/base/tooltip.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L51)
 
 #### Parameters
 
@@ -72,7 +72,7 @@ Defined in: [src/base/tooltip.ts:48](https://github.com/serenity-is/serenity/blo
 
 > **delayedHide**(`delay`): `void`
 
-Defined in: [src/base/tooltip.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L52)
+Defined in: [src/base/tooltip.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L55)
 
 #### Parameters
 
@@ -102,7 +102,7 @@ Defined in: [src/base/tooltip.ts:41](https://github.com/serenity-is/serenity/blo
 
 > **hide**(): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L112)
+Defined in: [src/base/tooltip.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L115)
 
 #### Returns
 
@@ -114,7 +114,7 @@ Defined in: [src/base/tooltip.ts:112](https://github.com/serenity-is/serenity/bl
 
 > **setTitle**(`value`): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L82)
+Defined in: [src/base/tooltip.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L85)
 
 #### Parameters
 
@@ -132,7 +132,7 @@ Defined in: [src/base/tooltip.ts:82](https://github.com/serenity-is/serenity/blo
 
 > **show**(): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L116)
+Defined in: [src/base/tooltip.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L119)
 
 #### Returns
 
@@ -144,7 +144,7 @@ Defined in: [src/base/tooltip.ts:116](https://github.com/serenity-is/serenity/bl
 
 > **toggle**(`show`): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L100)
+Defined in: [src/base/tooltip.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L103)
 
 #### Parameters
 
@@ -162,7 +162,7 @@ Defined in: [src/base/tooltip.ts:100](https://github.com/serenity-is/serenity/bl
 
 > `static` **getInstance**(`el`): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L69)
+Defined in: [src/base/tooltip.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L72)
 
 #### Parameters
 

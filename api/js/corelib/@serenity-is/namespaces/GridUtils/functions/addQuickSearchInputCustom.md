@@ -1,10 +1,10 @@
 [@serenity-is/corelib](../../../../README.md) / [GridUtils](../README.md) / addQuickSearchInputCustom
 
-# Function: addQuickSearchInputCustom()
+# ~~Function: addQuickSearchInputCustom()~~
 
-> **addQuickSearchInputCustom**(`container`, `onSearch`, `fields?`): [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
+> **addQuickSearchInputCustom**(`container`, `search`, `fields?`): [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
 
-Defined in: [src/ui/helpers/gridutils.tsx:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L100)
+Defined in: [src/ui/helpers/gridutils.tsx:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L143)
 
 ## Parameters
 
@@ -12,7 +12,7 @@ Defined in: [src/ui/helpers/gridutils.tsx:100](https://github.com/serenity-is/se
 
 `HTMLElement` | `ArrayLike`\<`HTMLElement`\>
 
-### onSearch
+### search
 
 (`field`, `query`, `done`) => `void`
 
@@ -23,3 +23,7 @@ Defined in: [src/ui/helpers/gridutils.tsx:100](https://github.com/serenity-is/se
 ## Returns
 
 [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
+
+## Deprecated
+
+use addQuickSearch with named args

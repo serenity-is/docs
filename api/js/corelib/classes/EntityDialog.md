@@ -107,7 +107,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:32](https://github.com/serenity-is/
 
 > `protected` **editClicked**: `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L745)
+Defined in: [src/ui/dialogs/entitydialog.tsx:768](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L768)
 
 ***
 
@@ -397,7 +397,7 @@ Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/sereni
 
 > **get** **readOnly**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:694](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L694)
+Defined in: [src/ui/dialogs/entitydialog.tsx:717](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L717)
 
 ##### Returns
 
@@ -407,7 +407,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:694](https://github.com/serenity-is
 
 > **set** **readOnly**(`value`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:698](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L698)
+Defined in: [src/ui/dialogs/entitydialog.tsx:721](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L721)
 
 ##### Parameters
 
@@ -427,7 +427,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:698](https://github.com/serenity-is
 
 > **get** `static` **defaultLanguageList**(): `string`[][]
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:770](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L770)
+Defined in: [src/ui/dialogs/entitydialog.tsx:793](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L793)
 
 ##### Returns
 
@@ -437,7 +437,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:770](https://github.com/serenity-is
 
 > **set** `static` **defaultLanguageList**(`value`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:774](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L774)
+Defined in: [src/ui/dialogs/entitydialog.tsx:797](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L797)
 
 ##### Parameters
 
@@ -535,7 +535,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:52](https://github.com/serenity-is/
 
 > `protected` **afterLoadEntity**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:358](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L358)
+Defined in: [src/ui/dialogs/entitydialog.tsx:360](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L360)
 
 #### Returns
 
@@ -585,7 +585,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:184](https://github.com/serenity-is/s
 
 > `protected` **beforeLoadEntity**(`entity`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:354](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L354)
+Defined in: [src/ui/dialogs/entitydialog.tsx:356](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L356)
 
 #### Parameters
 
@@ -671,6 +671,18 @@ Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/sereni
 
 ***
 
+### commitEdits()
+
+> `protected` **commitEdits**(): `Promise`\<`boolean`\>
+
+Defined in: [src/ui/dialogs/entitydialog.tsx:500](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L500)
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+***
+
 ### deferRender()
 
 > `protected` **deferRender**(): `boolean`
@@ -689,9 +701,9 @@ Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenit
 
 ### deleteHandler()
 
-> `protected` **deleteHandler**(`options`, `callback`): `void`
+> `protected` **deleteHandler**(`options`, `callback`): `PromiseLike`\<[`DeleteResponse`](../interfaces/DeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L142)
+Defined in: [src/ui/dialogs/entitydialog.tsx:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L161)
 
 #### Parameters
 
@@ -705,7 +717,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:142](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`DeleteResponse`](../interfaces/DeleteResponse.md)\>
 
 ***
 
@@ -771,9 +783,9 @@ Defined in: [src/ui/dialogs/basedialog.tsx:121](https://github.com/serenity-is/s
 
 ### doDelete()
 
-> `protected` **doDelete**(`callback`): `void`
+> `protected` **doDelete**(`callback`): `PromiseLike`\<[`DeleteResponse`](../interfaces/DeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L150)
+Defined in: [src/ui/dialogs/entitydialog.tsx:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L169)
 
 #### Parameters
 
@@ -783,7 +795,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:150](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`DeleteResponse`](../interfaces/DeleteResponse.md)\>
 
 ***
 
@@ -835,7 +847,7 @@ use entityId
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:702](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L702)
+Defined in: [src/ui/dialogs/entitydialog.tsx:725](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L725)
 
 #### Returns
 
@@ -851,7 +863,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:702](https://github.com/serenity-is
 
 > `protected` **getCloningEntity**(): `TItem`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:634](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L634)
+Defined in: [src/ui/dialogs/entitydialog.tsx:653](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L653)
 
 #### Returns
 
@@ -863,7 +875,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:634](https://github.com/serenity-is
 
 > `protected` **getCreateServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:501](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L501)
+Defined in: [src/ui/dialogs/entitydialog.tsx:512](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L512)
 
 #### Returns
 
@@ -923,7 +935,7 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 > `protected` **getDeleteOptions**(`callback`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`DeleteResponse`](../interfaces/DeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L138)
+Defined in: [src/ui/dialogs/entitydialog.tsx:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L144)
 
 #### Parameters
 
@@ -941,7 +953,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:138](https://github.com/serenity-is
 
 > `protected` **getDeletePermission**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:722](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L722)
+Defined in: [src/ui/dialogs/entitydialog.tsx:745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L745)
 
 #### Returns
 
@@ -949,11 +961,23 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:722](https://github.com/serenity-is
 
 ***
 
+### getDeleteRequest()
+
+> `protected` **getDeleteRequest**(): [`DeleteRequest`](../interfaces/DeleteRequest.md)
+
+Defined in: [src/ui/dialogs/entitydialog.tsx:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L138)
+
+#### Returns
+
+[`DeleteRequest`](../interfaces/DeleteRequest.md)
+
+***
+
 ### getDeleteServiceMethod()
 
 > `protected` **getDeleteServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L146)
+Defined in: [src/ui/dialogs/entitydialog.tsx:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L165)
 
 #### Returns
 
@@ -1009,7 +1033,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:90](https://github.com/serenity-is/
 
 > `protected` **getEntitySingular**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L232)
+Defined in: [src/ui/dialogs/entitydialog.tsx:234](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L234)
 
 #### Returns
 
@@ -1033,7 +1057,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:94](https://github.com/serenity-is/
 
 > `protected` **getEntityType**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L181)
+Defined in: [src/ui/dialogs/entitydialog.tsx:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L183)
 
 #### Returns
 
@@ -1045,7 +1069,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:181](https://github.com/serenity-is
 
 > `protected` **getFormKey**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L202)
+Defined in: [src/ui/dialogs/entitydialog.tsx:204](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L204)
 
 #### Returns
 
@@ -1073,7 +1097,7 @@ Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/sereni
 
 > `protected` **getIdProperty**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L254)
+Defined in: [src/ui/dialogs/entitydialog.tsx:256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L256)
 
 #### Returns
 
@@ -1101,7 +1125,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:62](https://github.com/serenity-is/se
 
 > `protected` **getInsertPermission**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:714](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L714)
+Defined in: [src/ui/dialogs/entitydialog.tsx:737](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L737)
 
 #### Returns
 
@@ -1113,7 +1137,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:714](https://github.com/serenity-is
 
 > `protected` **getIsActiveProperty**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L267)
+Defined in: [src/ui/dialogs/entitydialog.tsx:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L269)
 
 #### Returns
 
@@ -1125,7 +1149,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:267](https://github.com/serenity-is
 
 > `protected` **getIsDeletedProperty**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L275)
+Defined in: [src/ui/dialogs/entitydialog.tsx:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L277)
 
 #### Returns
 
@@ -1137,7 +1161,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:275](https://github.com/serenity-is
 
 > `protected` **getLanguages**(): [`LanguageList`](../type-aliases/LanguageList.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:452](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L452)
+Defined in: [src/ui/dialogs/entitydialog.tsx:455](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L455)
 
 #### Returns
 
@@ -1149,7 +1173,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:452](https://github.com/serenity-is
 
 > `protected` **getLoadByIdOptions**(`id`, `callback`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:380](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L380)
+Defined in: [src/ui/dialogs/entitydialog.tsx:382](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L382)
 
 #### Parameters
 
@@ -1171,7 +1195,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:380](https://github.com/serenity-is
 
 > `protected` **getLoadByIdRequest**(`id`): [`RetrieveRequest`](../interfaces/RetrieveRequest.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L393)
+Defined in: [src/ui/dialogs/entitydialog.tsx:395](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L395)
 
 #### Parameters
 
@@ -1189,7 +1213,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:393](https://github.com/serenity-is
 
 > `protected` **getLocalizerOptions**(): [`EntityLocalizerOptions`](../interfaces/EntityLocalizerOptions.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:431](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L431)
+Defined in: [src/ui/dialogs/entitydialog.tsx:434](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L434)
 
 #### Returns
 
@@ -1201,7 +1225,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:431](https://github.com/serenity-is
 
 > `protected` **getLocalTextDbPrefix**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L211)
+Defined in: [src/ui/dialogs/entitydialog.tsx:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L213)
 
 #### Returns
 
@@ -1213,7 +1237,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:211](https://github.com/serenity-is
 
 > `protected` **getLocalTextPrefix**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L223)
+Defined in: [src/ui/dialogs/entitydialog.tsx:225](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L225)
 
 #### Returns
 
@@ -1225,7 +1249,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:223](https://github.com/serenity-is
 
 > `protected` **getNameProperty**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L241)
+Defined in: [src/ui/dialogs/entitydialog.tsx:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L243)
 
 #### Returns
 
@@ -1237,7 +1261,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:241](https://github.com/serenity-is
 
 > `protected` **getPropertyGridOptions**(): [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:488](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L488)
+Defined in: [src/ui/dialogs/entitydialog.tsx:491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L491)
 
 #### Returns
 
@@ -1249,7 +1273,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:488](https://github.com/serenity-is
 
 > `protected` **getPropertyItems**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L464)
+Defined in: [src/ui/dialogs/entitydialog.tsx:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L467)
 
 #### Returns
 
@@ -1261,7 +1285,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:464](https://github.com/serenity-is
 
 > `protected` **getPropertyItemsData**(): [`PropertyItemsData`](../interfaces/PropertyItemsData.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L468)
+Defined in: [src/ui/dialogs/entitydialog.tsx:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L471)
 
 #### Returns
 
@@ -1273,7 +1297,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:468](https://github.com/serenity-is
 
 > `protected` **getPropertyItemsDataAsync**(): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:483](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L483)
+Defined in: [src/ui/dialogs/entitydialog.tsx:486](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L486)
 
 #### Returns
 
@@ -1285,7 +1309,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:483](https://github.com/serenity-is
 
 > `protected` **getRetrieveServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:403](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L403)
+Defined in: [src/ui/dialogs/entitydialog.tsx:405](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L405)
 
 #### Returns
 
@@ -1297,7 +1321,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:403](https://github.com/serenity-is
 
 > `protected` **getRowDefinition**(): [`IRowDefinition`](../interfaces/IRowDefinition.md)
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L175)
+Defined in: [src/ui/dialogs/entitydialog.tsx:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L177)
 
 #### Returns
 
@@ -1309,7 +1333,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:175](https://github.com/serenity-is
 
 > `protected` **getSaveEntity**(): `TItem`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:526](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L526)
+Defined in: [src/ui/dialogs/entitydialog.tsx:537](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L537)
 
 #### Returns
 
@@ -1321,7 +1345,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:526](https://github.com/serenity-is
 
 > `protected` **getSaveOptions**(`callback`, `initiator?`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:509](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L509)
+Defined in: [src/ui/dialogs/entitydialog.tsx:520](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L520)
 
 #### Parameters
 
@@ -1343,7 +1367,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:509](https://github.com/serenity-is
 
 > `protected` **getSaveRequest**(): [`SaveRequest`](../interfaces/SaveRequest.md)\<`TItem`\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:539](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L539)
+Defined in: [src/ui/dialogs/entitydialog.tsx:550](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L550)
 
 #### Returns
 
@@ -1355,7 +1379,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:539](https://github.com/serenity-is
 
 > `protected` **getService**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L281)
+Defined in: [src/ui/dialogs/entitydialog.tsx:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L283)
 
 #### Returns
 
@@ -1367,7 +1391,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:281](https://github.com/serenity-is
 
 > `protected` **getToolbarButtons**(): [`ToolButton`](../interfaces/ToolButton.md)[]
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:573](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L573)
+Defined in: [src/ui/dialogs/entitydialog.tsx:584](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L584)
 
 #### Returns
 
@@ -1383,7 +1407,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:573](https://github.com/serenity-is
 
 > `protected` **getUndeleteOptions**(`callback?`): [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:662](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L662)
+Defined in: [src/ui/dialogs/entitydialog.tsx:685](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L685)
 
 #### Parameters
 
@@ -1397,11 +1421,23 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:662](https://github.com/serenity-is
 
 ***
 
+### getUndeleteRequest()
+
+> `protected` **getUndeleteRequest**(): [`UndeleteRequest`](../interfaces/UndeleteRequest.md)
+
+Defined in: [src/ui/dialogs/entitydialog.tsx:681](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L681)
+
+#### Returns
+
+[`UndeleteRequest`](../interfaces/UndeleteRequest.md)
+
+***
+
 ### getUndeleteServiceMethod()
 
 > `protected` **getUndeleteServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:670](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L670)
+Defined in: [src/ui/dialogs/entitydialog.tsx:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L706)
 
 #### Returns
 
@@ -1413,7 +1449,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:670](https://github.com/serenity-is
 
 > `protected` **getUpdatePermission**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:718](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L718)
+Defined in: [src/ui/dialogs/entitydialog.tsx:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L741)
 
 #### Returns
 
@@ -1425,7 +1461,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:718](https://github.com/serenity-is
 
 > `protected` **getUpdateServiceMethod**(): `string`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:505](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L505)
+Defined in: [src/ui/dialogs/entitydialog.tsx:516](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L516)
 
 #### Returns
 
@@ -1469,7 +1505,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:227](https://github.com/serenity-is/s
 
 > `protected` **hasDeletePermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L726)
+Defined in: [src/ui/dialogs/entitydialog.tsx:749](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L749)
 
 #### Returns
 
@@ -1481,7 +1517,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:726](https://github.com/serenity-is
 
 > `protected` **hasInsertPermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:731](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L731)
+Defined in: [src/ui/dialogs/entitydialog.tsx:754](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L754)
 
 #### Returns
 
@@ -1493,7 +1529,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:731](https://github.com/serenity-is
 
 > `protected` **hasSavePermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:741](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L741)
+Defined in: [src/ui/dialogs/entitydialog.tsx:764](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L764)
 
 #### Returns
 
@@ -1505,7 +1541,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:741](https://github.com/serenity-is
 
 > `protected` **hasUpdatePermission**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:736](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L736)
+Defined in: [src/ui/dialogs/entitydialog.tsx:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L759)
 
 #### Returns
 
@@ -1549,7 +1585,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:98](https://github.com/serenity-is/se
 
 > `protected` **initLocalizer**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:447](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L447)
+Defined in: [src/ui/dialogs/entitydialog.tsx:450](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L450)
 
 #### Returns
 
@@ -1561,7 +1597,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:447](https://github.com/serenity-is
 
 > `protected` **initPropertyGrid**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:456](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L456)
+Defined in: [src/ui/dialogs/entitydialog.tsx:459](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L459)
 
 #### Returns
 
@@ -1729,7 +1765,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:66](https://github.com/serenity-is/se
 
 > `protected` **isViewMode**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:747](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L747)
+Defined in: [src/ui/dialogs/entitydialog.tsx:770](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L770)
 
 #### Returns
 
@@ -1755,9 +1791,9 @@ Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/sereni
 
 ### load()
 
-> **load**(`entityOrId`, `done`, `fail?`): `void`
+> **load**(`entityOrId`, `done`, `fail?`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L288)
+Defined in: [src/ui/dialogs/entitydialog.tsx:290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L290)
 
 #### Parameters
 
@@ -1775,7 +1811,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:288](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
 #### Implementation of
 
@@ -1785,9 +1821,9 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:288](https://github.com/serenity-is
 
 ### loadById()
 
-> **loadById**(`id`, `callback?`, `fail?`): `void`
+> **loadById**(`id`, `callback?`, `fail?`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:407](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L407)
+Defined in: [src/ui/dialogs/entitydialog.tsx:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L409)
 
 #### Parameters
 
@@ -1805,15 +1841,15 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:407](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
 ***
 
 ### loadByIdAndOpenDialog()
 
-> **loadByIdAndOpenDialog**(`entityId`, `asPanel?`, `callback?`, `fail?`): `void`
+> **loadByIdAndOpenDialog**(`entityId`, `asPanel?`, `callback?`, `fail?`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:363](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L363)
+Defined in: [src/ui/dialogs/entitydialog.tsx:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L365)
 
 #### Parameters
 
@@ -1835,15 +1871,15 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:363](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
 ***
 
 ### loadByIdHandler()
 
-> `protected` **loadByIdHandler**(`options`, `callback`, `fail`): `void`
+> `protected` **loadByIdHandler**(`options`, `callback`, `fail`): `PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L411)
+Defined in: [src/ui/dialogs/entitydialog.tsx:413](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L413)
 
 #### Parameters
 
@@ -1861,7 +1897,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:411](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`RetrieveResponse`](../interfaces/RetrieveResponse.md)\<`TItem`\>\>
 
 ***
 
@@ -1869,7 +1905,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:411](https://github.com/serenity-is
 
 > `protected` **loadEntity**(`entity`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:344](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L344)
+Defined in: [src/ui/dialogs/entitydialog.tsx:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L346)
 
 #### Parameters
 
@@ -1887,7 +1923,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:344](https://github.com/serenity-is
 
 > **loadEntityAndOpenDialog**(`entity`, `asPanel?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:328](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L328)
+Defined in: [src/ui/dialogs/entitydialog.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L330)
 
 #### Parameters
 
@@ -1909,7 +1945,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:328](https://github.com/serenity-is
 
 > **loadNewAndOpenDialog**(`asPanel?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L323)
+Defined in: [src/ui/dialogs/entitydialog.tsx:325](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L325)
 
 #### Parameters
 
@@ -1927,7 +1963,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:323](https://github.com/serenity-is
 
 > `protected` **loadResponse**(`data`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L333)
+Defined in: [src/ui/dialogs/entitydialog.tsx:335](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L335)
 
 #### Parameters
 
@@ -1979,7 +2015,7 @@ Attaches a dialog/modal/panel close event handler. See Dialog.close for more inf
 
 > `protected` **onDeleteSuccess**(`response`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L172)
+Defined in: [src/ui/dialogs/entitydialog.tsx:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L174)
 
 #### Parameters
 
@@ -2035,7 +2071,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:132](https://github.com/serenity-is/s
 
 > `protected` **onLoadingData**(`data`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:377](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L377)
+Defined in: [src/ui/dialogs/entitydialog.tsx:379](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L379)
 
 #### Parameters
 
@@ -2087,7 +2123,7 @@ Attaches a dialog/modal/panel open event handler. See Dialog.open for more info.
 
 > `protected` **onSaveSuccess**(`response`, `initiator?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:550](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L550)
+Defined in: [src/ui/dialogs/entitydialog.tsx:561](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L561)
 
 #### Parameters
 
@@ -2127,7 +2163,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:46](https://github.com/serenity-is/
 
 > `protected` **reloadById**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L399)
+Defined in: [src/ui/dialogs/entitydialog.tsx:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L401)
 
 #### Returns
 
@@ -2159,7 +2195,7 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:755](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L755)
+Defined in: [src/ui/dialogs/entitydialog.tsx:778](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L778)
 
 #### Returns
 
@@ -2191,7 +2227,7 @@ Defined in: [src/ui/dialogs/basedialog.tsx:176](https://github.com/serenity-is/s
 
 > `protected` **retrieveLocalizations**(): `Promise`\<`Record`\<`string`, `Partial`\<`TItem`\>\>\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:416](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L416)
+Defined in: [src/ui/dialogs/entitydialog.tsx:419](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L419)
 
 #### Returns
 
@@ -2201,9 +2237,9 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:416](https://github.com/serenity-is
 
 ### save()
 
-> `protected` **save**(`callback?`, `initiator?`): `boolean` \| `void`
+> `protected` **save**(`callback?`, `initiator?`): `false` \| `PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:559](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L559)
+Defined in: [src/ui/dialogs/entitydialog.tsx:570](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L570)
 
 #### Parameters
 
@@ -2217,15 +2253,15 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:559](https://github.com/serenity-is
 
 #### Returns
 
-`boolean` \| `void`
+`false` \| `PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
 ***
 
 ### save\_submitHandler()
 
-> `protected` **save\_submitHandler**(`callback`, `initiator`): `void`
+> `protected` **save\_submitHandler**(`callback`, `initiator`): `PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:554](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L554)
+Defined in: [src/ui/dialogs/entitydialog.tsx:565](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L565)
 
 #### Parameters
 
@@ -2239,15 +2275,15 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:554](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
 ***
 
 ### saveHandler()
 
-> `protected` **saveHandler**(`options`, `callback`, `initiator`): `void`
+> `protected` **saveHandler**(`options`, `callback`, `initiator`): `PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:565](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L565)
+Defined in: [src/ui/dialogs/entitydialog.tsx:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L576)
 
 #### Parameters
 
@@ -2265,7 +2301,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:565](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`SaveResponse`](../interfaces/SaveResponse.md)\>
 
 ***
 
@@ -2273,7 +2309,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:565](https://github.com/serenity-is
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:706](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L706)
+Defined in: [src/ui/dialogs/entitydialog.tsx:729](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L729)
 
 #### Parameters
 
@@ -2295,7 +2331,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:706](https://github.com/serenity-is
 
 > `protected` **showSaveSuccessMessage**(`response`, `initiator?`): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:569](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L569)
+Defined in: [src/ui/dialogs/entitydialog.tsx:580](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L580)
 
 #### Parameters
 
@@ -2351,9 +2387,9 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 ### undelete()
 
-> `protected` **undelete**(`callback?`): `void`
+> `protected` **undelete**(`callback?`): `void` \| `PromiseLike`\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L674)
+Defined in: [src/ui/dialogs/entitydialog.tsx:710](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L710)
 
 #### Parameters
 
@@ -2363,15 +2399,15 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:674](https://github.com/serenity-is
 
 #### Returns
 
-`void`
+`void` \| `PromiseLike`\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
 ***
 
 ### undeleteHandler()
 
-> `protected` **undeleteHandler**(`options`, `callback`): `void`
+> `protected` **undeleteHandler**(`options`, `callback?`): `PromiseLike`\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:666](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L666)
+Defined in: [src/ui/dialogs/entitydialog.tsx:702](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L702)
 
 #### Parameters
 
@@ -2379,13 +2415,13 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:666](https://github.com/serenity-is
 
 [`ServiceOptions`](../interfaces/ServiceOptions.md)\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
-##### callback
+##### callback?
 
 (`response`) => `void`
 
 #### Returns
 
-`void`
+`PromiseLike`\<[`UndeleteResponse`](../interfaces/UndeleteResponse.md)\>
 
 ***
 
@@ -2393,7 +2429,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:666](https://github.com/serenity-is
 
 > `protected` **updateInterface**(): `void`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:653](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L653)
+Defined in: [src/ui/dialogs/entitydialog.tsx:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L672)
 
 #### Returns
 
@@ -2445,7 +2481,7 @@ Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/sereni
 
 > `protected` **useViewMode**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:751](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L751)
+Defined in: [src/ui/dialogs/entitydialog.tsx:774](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L774)
 
 #### Returns
 
@@ -2457,7 +2493,7 @@ Defined in: [src/ui/dialogs/entitydialog.tsx:751](https://github.com/serenity-is
 
 > `protected` **validateBeforeSave**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitydialog.tsx:497](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L497)
+Defined in: [src/ui/dialogs/entitydialog.tsx:508](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitydialog.tsx#L508)
 
 #### Returns
 

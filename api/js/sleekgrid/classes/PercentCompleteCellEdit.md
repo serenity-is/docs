@@ -206,13 +206,13 @@ Defined in: [src/editors/editors.tsx:32](https://github.com/serenity-is/Serenity
 
 ### serializeValue()
 
-> **serializeValue**(): `number`
+> **serializeValue**(): `any`
 
 Defined in: [src/editors/editors.tsx:84](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L84)
 
 #### Returns
 
-`number`
+`any`
 
 #### Inherited from
 

@@ -2,7 +2,7 @@
 
 # Class: EnumKeyAttribute
 
-Defined in: [src/base/system.ts:245](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L245)
+Defined in: [src/base/system.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L246)
 
 Indicates the enum key of an enum type (by default the name of the enum type is used as key)
 
@@ -16,7 +16,7 @@ Indicates the enum key of an enum type (by default the name of the enum type is 
 
 > **new EnumKeyAttribute**(`value`): `EnumKeyAttribute`
 
-Defined in: [src/base/system.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L248)
+Defined in: [src/base/system.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L249)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/base/system.ts:248](https://github.com/serenity-is/serenity/blo
 
 > **value**: `string`
 
-Defined in: [src/base/system.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L248)
+Defined in: [src/base/system.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L249)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/base/system.ts:248](https://github.com/serenity-is/serenity/blo
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/base/system.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L246)
+Defined in: [src/base/system.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L247)
 
 #### Overrides
 

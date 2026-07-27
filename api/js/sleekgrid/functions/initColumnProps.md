@@ -4,7 +4,7 @@
 
 > **initColumnProps**(`columns`, `defaults`): `void`
 
-Defined in: [src/core/column.ts:81](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L81)
+Defined in: [src/core/column.ts:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L85)
 
 ## Parameters
 

@@ -4,7 +4,7 @@
 
 > **activeTabKey**(`tabs`): `string`
 
-Defined in: [src/ui/helpers/tabsextensions.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L84)
+Defined in: [src/ui/helpers/tabsextensions.tsx:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L88)
 
 ## Parameters
 

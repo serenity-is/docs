@@ -4,7 +4,7 @@
 
 > **CellStylesHash** = `object`
 
-Defined in: [src/core/formatting.ts:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L101)
+Defined in: [src/core/formatting.ts:104](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L104)
 
 ## Index Signature
 

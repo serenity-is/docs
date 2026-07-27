@@ -4,7 +4,7 @@
 
 > **registerInterface**(`type`, `name`, `intf?`): `void`
 
-Defined in: [src/base/system.ts:285](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L285)
+Defined in: [src/base/system.ts:286](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L286)
 
 Register an interface with the type system. There is no runtime representation of interfaces
 in JavaScript, so Serenity uses classes decorated with some special symbols to emulate

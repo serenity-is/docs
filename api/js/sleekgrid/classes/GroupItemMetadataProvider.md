@@ -32,7 +32,7 @@ Defined in: [src/data/groupitemmetadataprovider.tsx:30](https://github.com/seren
 
 > **getGroupRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)
 
-Defined in: [src/data/groupitemmetadataprovider.tsx:223](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L223)
+Defined in: [src/data/groupitemmetadataprovider.tsx:226](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L226)
 
 #### Parameters
 
@@ -50,7 +50,7 @@ Defined in: [src/data/groupitemmetadataprovider.tsx:223](https://github.com/sere
 
 > **getTotalsRowMetadata**: (`item`) => [`ItemMetadata`](../interfaces/ItemMetadata.md)
 
-Defined in: [src/data/groupitemmetadataprovider.tsx:247](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L247)
+Defined in: [src/data/groupitemmetadataprovider.tsx:250](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/data/groupitemmetadataprovider.tsx#L250)
 
 #### Parameters
 
@@ -132,7 +132,7 @@ Defined in: [src/data/groupitemmetadataprovider.tsx:186](https://github.com/sere
 
 ##### cell
 
-> **cell**: `number` = `0`
+> **cell**: `number`
 
 ##### colspan
 

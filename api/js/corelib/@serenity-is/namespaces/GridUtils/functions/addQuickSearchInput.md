@@ -1,10 +1,10 @@
 [@serenity-is/corelib](../../../../README.md) / [GridUtils](../README.md) / addQuickSearchInput
 
-# Function: addQuickSearchInput()
+# ~~Function: addQuickSearchInput()~~
 
 > **addQuickSearchInput**(`toolDiv`, `view`, `fields?`, `onChange?`): [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
 
-Defined in: [src/ui/helpers/gridutils.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L53)
+Defined in: [src/ui/helpers/gridutils.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L130)
 
 ## Parameters
 
@@ -27,3 +27,7 @@ Defined in: [src/ui/helpers/gridutils.tsx:53](https://github.com/serenity-is/ser
 ## Returns
 
 [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
+
+## Deprecated
+
+use addQuickSearch with named args

@@ -4,7 +4,7 @@
 
 > **isInstanceOfType**(`instance`, `type`): `any`
 
-Defined in: [src/base/system.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L150)
+Defined in: [src/base/system.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L151)
 
 Check if an instance is of a specific type.
 

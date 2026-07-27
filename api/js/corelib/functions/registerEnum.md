@@ -4,7 +4,7 @@
 
 > **registerEnum**(`enumType`, `name`, `enumKey?`): `void`
 
-Defined in: [src/base/system.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L259)
+Defined in: [src/base/system.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L260)
 
 Register an enum with the type system.
 

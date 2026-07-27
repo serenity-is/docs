@@ -4,7 +4,7 @@
 
 > **EditorTypeInfo**\<`TypeName`\> = [`TypeInfo`](TypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:545](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L545)
+Defined in: [src/base/system.ts:546](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L546)
 
 Editor type information. This is used to make type name available in declaration files unlike decorators that does not show in .d.ts files.
 

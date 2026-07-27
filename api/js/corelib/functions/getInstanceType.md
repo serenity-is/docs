@@ -4,7 +4,7 @@
 
 > **getInstanceType**(`instance`): `any`
 
-Defined in: [src/base/system.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L112)
+Defined in: [src/base/system.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L113)
 
 Get the instance type of an object.
 

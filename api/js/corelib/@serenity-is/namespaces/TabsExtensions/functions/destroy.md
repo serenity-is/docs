@@ -4,7 +4,7 @@
 
 > **destroy**(`tabs`): `void`
 
-Defined in: [src/ui/helpers/tabsextensions.tsx:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L219)
+Defined in: [src/ui/helpers/tabsextensions.tsx:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L223)
 
 ## Parameters
 

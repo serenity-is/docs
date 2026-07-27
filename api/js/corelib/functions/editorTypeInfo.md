@@ -4,7 +4,7 @@
 
 > **editorTypeInfo**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/base/system.ts:573](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L573)
+Defined in: [src/base/system.ts:574](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L574)
 
 ## Type Parameters
 

@@ -4,7 +4,7 @@
 
 > **registerFormatter**(`type`, `name`, `intfAndAttr?`): `void`
 
-Defined in: [src/base/system.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L442)
+Defined in: [src/base/system.ts:443](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L443)
 
 Register a SleekGrid formatter.
 

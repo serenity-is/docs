@@ -34,7 +34,7 @@ Defined in: [src/layouts/layout-host.ts:12](https://github.com/serenity-is/Seren
 
 > **getAllColumns**(): [`Column`](Column.md)\<`any`\>[]
 
-Defined in: [src/core/isleekgrid.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L66)
+Defined in: [src/core/isleekgrid.ts:67](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L67)
 
 Returns all columns in the grid, including hidden ones, the order might not match visible columns due to pinning, ordering etc.
 
@@ -52,7 +52,7 @@ Returns all columns in the grid, including hidden ones, the order might not matc
 
 > **getColumns**(): [`Column`](Column.md)\<`any`\>[]
 
-Defined in: [src/core/isleekgrid.ts:83](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L83)
+Defined in: [src/core/isleekgrid.ts:84](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L84)
 
 Returns only the visible columns in order
 
@@ -70,7 +70,7 @@ Returns only the visible columns in order
 
 > **getContainerNode**(): `HTMLElement`
 
-Defined in: [src/core/isleekgrid.ts:84](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L84)
+Defined in: [src/core/isleekgrid.ts:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L85)
 
 #### Returns
 
@@ -86,7 +86,7 @@ Defined in: [src/core/isleekgrid.ts:84](https://github.com/serenity-is/Serenity/
 
 > **getDataLength**(): `number`
 
-Defined in: [src/core/isleekgrid.ts:88](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L88)
+Defined in: [src/core/isleekgrid.ts:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L89)
 
 #### Returns
 
@@ -102,7 +102,7 @@ Defined in: [src/core/isleekgrid.ts:88](https://github.com/serenity-is/Serenity/
 
 > **getOptions**(): [`GridOptions`](GridOptions.md)\<`any`\>
 
-Defined in: [src/core/isleekgrid.ts:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L103)
+Defined in: [src/core/isleekgrid.ts:104](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L104)
 
 #### Returns
 

@@ -4,7 +4,7 @@
 
 > **CompatFormatter**\<`TItem`\> = (`row`, `cell`, `value`, `column`, `item`, `grid?`) => `string` \| [`CompatFormatterResult`](../interfaces/CompatFormatterResult.md)
 
-Defined in: [src/core/formatting.ts:91](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L91)
+Defined in: [src/core/formatting.ts:94](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L94)
 
 ## Type Parameters
 

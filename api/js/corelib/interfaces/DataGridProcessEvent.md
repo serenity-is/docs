@@ -2,7 +2,7 @@
 
 # Interface: DataGridProcessEvent\<TItem\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1288)
+Defined in: [src/ui/datagrid/datagrid.tsx:1277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1277)
 
 ## Extends
 
@@ -20,7 +20,7 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1288](https://github.com/serenity-is/s
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
+Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)
 
 #### Inherited from
 
@@ -32,4 +32,4 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/s
 
 > **response**: [`ListResponse`](ListResponse.md)\<`TItem`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1289)
+Defined in: [src/ui/datagrid/datagrid.tsx:1278](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1278)

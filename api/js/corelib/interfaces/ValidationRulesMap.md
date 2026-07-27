@@ -2,7 +2,7 @@
 
 # Interface: ValidationRulesMap
 
-Defined in: [src/base/validator.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L49)
+Defined in: [src/base/validator.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L50)
 
 ## Indexable
 

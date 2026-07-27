@@ -2,7 +2,7 @@
 
 # Interface: UploadedFile
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L239)
+Defined in: [src/ui/helpers/uploadhelper.tsx:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L246)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:239](https://github.com/serenity-is
 
 > `optional` **Filename**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:240](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L240)
+Defined in: [src/ui/helpers/uploadhelper.tsx:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L247)
 
 ***
 
@@ -18,4 +18,4 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:240](https://github.com/serenity-is
 
 > `optional` **OriginalName**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L241)
+Defined in: [src/ui/helpers/uploadhelper.tsx:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L248)

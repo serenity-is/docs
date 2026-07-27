@@ -4,7 +4,7 @@
 
 > **getTypeFullName**(`type`): `string`
 
-Defined in: [src/base/system.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L90)
+Defined in: [src/base/system.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L91)
 
 Get the full name of a type (including namespace if any).
 This returns the name from typeInfo.typeName if available (e.g. registered via decorators), 

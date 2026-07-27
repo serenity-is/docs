@@ -4,7 +4,7 @@
 
 > **initialize**(`tabs`, `activeChange`): [`Fluent`](../../../../interfaces/Fluent.md)\<`HTMLElement`\>
 
-Defined in: [src/ui/helpers/tabsextensions.tsx:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L158)
+Defined in: [src/ui/helpers/tabsextensions.tsx:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L162)
 
 ## Parameters
 

@@ -4,7 +4,7 @@
 
 > **addUploadInput**(`options`): [`Fluent`](../../../../interfaces/Fluent.md)
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L6)
+Defined in: [src/ui/helpers/uploadhelper.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L7)
 
 ## Parameters
 

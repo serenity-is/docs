@@ -4,7 +4,7 @@
 
 > **toggleClick**\<`TItem`\>(`e`, `row`, `cell`, `view`, `getId`): `void`
 
-Defined in: [src/ui/helpers/slicktreehelper.tsx:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L74)
+Defined in: [src/ui/helpers/slicktreehelper.tsx:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L75)
 
 ## Type Parameters
 

@@ -4,7 +4,7 @@
 
 > **unhandledRejectionHandler**(`err`): `void`
 
-Defined in: [src/base/errorhandling.tsx:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.tsx#L100)
+Defined in: [src/base/errorhandling.tsx:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.tsx#L121)
 
 Unhandled promise rejection error handler. It's purpose is to
 ignore logging serviceCall / serviceFetch errors as they have built-in

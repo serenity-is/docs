@@ -4,7 +4,7 @@
 
 > **setCollapsedFlag**\<`TItem`\>(`item`, `collapsed`): `void`
 
-Defined in: [src/ui/helpers/slicktreehelper.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L39)
+Defined in: [src/ui/helpers/slicktreehelper.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L40)
 
 ## Type Parameters
 

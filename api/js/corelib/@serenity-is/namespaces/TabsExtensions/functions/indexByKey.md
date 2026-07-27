@@ -4,7 +4,7 @@
 
 > **indexByKey**(`tabs`): `Record`\<`string`, `number`\>
 
-Defined in: [src/ui/helpers/tabsextensions.tsx:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L115)
+Defined in: [src/ui/helpers/tabsextensions.tsx:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/tabsextensions.tsx#L119)
 
 ## Parameters
 

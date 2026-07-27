@@ -4,7 +4,7 @@
 
 > **GridLayoutInfo** = `object`
 
-Defined in: [src/core/isleekgrid.ts:175](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L175)
+Defined in: [src/core/isleekgrid.ts:176](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L176)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/core/isleekgrid.ts:175](https://github.com/serenity-is/Serenity
 
 > **frozenBottomRows**: `number`
 
-Defined in: [src/core/isleekgrid.ts:177](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L177)
+Defined in: [src/core/isleekgrid.ts:178](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L178)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/core/isleekgrid.ts:177](https://github.com/serenity-is/Serenity
 
 > **frozenTopRows**: `number`
 
-Defined in: [src/core/isleekgrid.ts:176](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L176)
+Defined in: [src/core/isleekgrid.ts:177](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L177)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/core/isleekgrid.ts:176](https://github.com/serenity-is/Serenity
 
 > **pinnedEndCols**: `number`
 
-Defined in: [src/core/isleekgrid.ts:179](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L179)
+Defined in: [src/core/isleekgrid.ts:180](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L180)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/core/isleekgrid.ts:179](https://github.com/serenity-is/Serenity
 
 > **pinnedStartCols**: `number`
 
-Defined in: [src/core/isleekgrid.ts:178](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L178)
+Defined in: [src/core/isleekgrid.ts:179](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L179)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/core/isleekgrid.ts:178](https://github.com/serenity-is/Serenity
 
 > **supportFrozenBottom**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:181](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L181)
+Defined in: [src/core/isleekgrid.ts:182](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L182)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: [src/core/isleekgrid.ts:181](https://github.com/serenity-is/Serenity
 
 > **supportFrozenRows**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:180](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L180)
+Defined in: [src/core/isleekgrid.ts:181](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L181)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [src/core/isleekgrid.ts:180](https://github.com/serenity-is/Serenity
 
 > **supportPinnedCols**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:182](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L182)
+Defined in: [src/core/isleekgrid.ts:183](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L183)
 
 ***
 
@@ -68,4 +68,4 @@ Defined in: [src/core/isleekgrid.ts:182](https://github.com/serenity-is/Serenity
 
 > **supportPinnedEnd**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:183](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L183)
+Defined in: [src/core/isleekgrid.ts:184](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L184)

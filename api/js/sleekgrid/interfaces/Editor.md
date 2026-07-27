@@ -74,9 +74,17 @@ Defined in: [src/core/editing.ts:80](https://github.com/serenity-is/Serenity/blo
 
 ### isValueChanged()
 
-> **isValueChanged**(): `boolean`
+> **isValueChanged**(`args`): `boolean`
 
 Defined in: [src/core/editing.ts:74](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L74)
+
+#### Parameters
+
+##### args
+
+###### commitEdit?
+
+`boolean`
 
 #### Returns
 

@@ -210,13 +210,13 @@ Defined in: [src/editors/editors.tsx:269](https://github.com/serenity-is/Serenit
 
 ### serializeValue()
 
-> **serializeValue**(): `boolean`
+> **serializeValue**(): `any`
 
 Defined in: [src/editors/editors.tsx:273](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L273)
 
 #### Returns
 
-`boolean`
+`any`
 
 #### Overrides
 

@@ -14,7 +14,7 @@ Defined in: [src/ui/helpers/tabsextensions.tsx:9](https://github.com/serenity-is
 
 ### tabKey
 
-`string`
+`string` | `number`
 
 ### isDisabled
 

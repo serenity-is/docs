@@ -31,7 +31,7 @@ Defined in: [src/plugins/rowselectionmodel.ts:35](https://github.com/serenity-is
 
 ### onSelectedRangesChanged
 
-> **onSelectedRangesChanged**: [`EventEmitter`](EventEmitter.md)\<[`CellRange`](CellRange.md)[], \{ \}\>
+> **onSelectedRangesChanged**: [`EventEmitter`](EventEmitter.md)\<[`CellRange`](CellRange.md)[]\>
 
 Defined in: [src/plugins/rowselectionmodel.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L33)
 

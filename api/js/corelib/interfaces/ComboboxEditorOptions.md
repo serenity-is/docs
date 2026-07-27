@@ -89,7 +89,7 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-i
 
 ### dialogType?
 
-> `optional` **dialogType**: `string`
+> `optional` **dialogType**: `string` \| [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
 Defined in: [src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
 

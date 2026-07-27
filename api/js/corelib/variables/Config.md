@@ -16,6 +16,13 @@ This is the root path of your application. If your application resides under htt
 your root path is "/mysite/". This variable is automatically initialized by reading from a <link> element
 with ID "ApplicationPath" from current page, which is usually located in your _LayoutHead.cshtml file
 
+### cspNonce
+
+> **cspNonce**: `string`
+
+Gets the content Security Policy nonce value to be used in script/style tags. This is usually set from server side
+via a meta tag with name "csp-nonce".
+
 ### defaultReturnUrl()
 
 > **defaultReturnUrl**: (`purpose?`) => `string`

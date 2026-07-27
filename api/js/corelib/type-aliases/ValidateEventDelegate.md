@@ -4,7 +4,7 @@
 
 > **ValidateEventDelegate** = (`element`, `event`, `validator`) => `void`
 
-Defined in: [src/base/validator.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L53)
+Defined in: [src/base/validator.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L54)
 
 ## Parameters
 

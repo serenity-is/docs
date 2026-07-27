@@ -4,7 +4,7 @@
 
 > **setIndents**\<`TItem`\>(`items`, `getId`, `getParentId`, `setCollapsed?`): `void`
 
-Defined in: [src/ui/helpers/slicktreehelper.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L43)
+Defined in: [src/ui/helpers/slicktreehelper.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L44)
 
 ## Type Parameters
 

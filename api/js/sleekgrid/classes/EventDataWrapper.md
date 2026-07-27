@@ -151,13 +151,13 @@ Defined in: [src/core/event.ts:157](https://github.com/serenity-is/Serenity/blob
 
 ### isDefaultPrevented()
 
-> **isDefaultPrevented**(): `any`
+> **isDefaultPrevented**(): `boolean`
 
 Defined in: [src/core/event.ts:104](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L104)
 
 #### Returns
 
-`any`
+`boolean`
 
 #### Implementation of
 

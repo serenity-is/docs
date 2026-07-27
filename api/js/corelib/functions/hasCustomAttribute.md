@@ -4,7 +4,7 @@
 
 > **hasCustomAttribute**\<`TAttr`\>(`type`, `attrType`, `inherit`): `boolean`
 
-Defined in: [src/base/system.ts:508](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L508)
+Defined in: [src/base/system.ts:509](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L509)
 
 Get whether a type has a specific custom attribute.
 

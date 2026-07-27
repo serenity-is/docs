@@ -2,7 +2,7 @@
 
 # Class: PropertyGrid\<P\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L330)
+Defined in: [src/ui/widgets/propertygrid.tsx:331](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L331)
 
 ## Extends
 
@@ -90,7 +90,7 @@ Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenit
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:332](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L332)
+Defined in: [src/ui/widgets/propertygrid.tsx:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L333)
 
 #### Overrides
 
@@ -154,7 +154,7 @@ Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/sereni
 
 > **get** **value**(): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L465)
+Defined in: [src/ui/widgets/propertygrid.tsx:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L478)
 
 ##### Returns
 
@@ -164,7 +164,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:465](https://github.com/serenity-is
 
 > **set** **value**(`val`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:469](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L469)
+Defined in: [src/ui/widgets/propertygrid.tsx:482](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L482)
 
 ##### Parameters
 
@@ -300,7 +300,7 @@ Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/sereni
 
 > `protected` **canModifyItem**(`item`): `boolean`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:501](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L501)
+Defined in: [src/ui/widgets/propertygrid.tsx:514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L514)
 
 #### Parameters
 
@@ -358,6 +358,18 @@ Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/sereni
 
 ***
 
+### commitEdits()
+
+> **commitEdits**(): `Promise`\<`boolean`\>
+
+Defined in: [src/ui/widgets/propertygrid.tsx:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L466)
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+***
+
 ### deferRender()
 
 > `protected` **deferRender**(): `boolean`
@@ -378,7 +390,7 @@ Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L365)
+Defined in: [src/ui/widgets/propertygrid.tsx:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L366)
 
 #### Returns
 
@@ -394,7 +406,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:365](https://github.com/serenity-is
 
 > **enumerateItems**(`callback`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L396)
+Defined in: [src/ui/widgets/propertygrid.tsx:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L397)
 
 #### Parameters
 
@@ -440,7 +452,7 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 > **get\_editors**(): [`Widget`](Widget.md)\<`any`\>[]
 
-Defined in: [src/ui/widgets/propertygrid.tsx:384](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L384)
+Defined in: [src/ui/widgets/propertygrid.tsx:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L385)
 
 #### Returns
 
@@ -452,7 +464,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:384](https://github.com/serenity-is
 
 > **get\_idPrefix**(): `string`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:392](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L392)
+Defined in: [src/ui/widgets/propertygrid.tsx:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L393)
 
 #### Returns
 
@@ -464,7 +476,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:392](https://github.com/serenity-is
 
 > **get\_items**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-Defined in: [src/ui/widgets/propertygrid.tsx:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L388)
+Defined in: [src/ui/widgets/propertygrid.tsx:389](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L389)
 
 #### Returns
 
@@ -476,7 +488,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:388](https://github.com/serenity-is
 
 > **get\_mode**(): [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
 
-Defined in: [src/ui/widgets/propertygrid.tsx:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L406)
+Defined in: [src/ui/widgets/propertygrid.tsx:407](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L407)
 
 #### Returns
 
@@ -600,7 +612,7 @@ Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/sereni
 
 > **load**(`source`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:438](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L438)
+Defined in: [src/ui/widgets/propertygrid.tsx:439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L439)
 
 #### Parameters
 
@@ -638,7 +650,7 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:336](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L336)
+Defined in: [src/ui/widgets/propertygrid.tsx:337](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L337)
 
 #### Returns
 
@@ -654,7 +666,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:336](https://github.com/serenity-is
 
 > **save**(`target?`): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:456](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L456)
+Defined in: [src/ui/widgets/propertygrid.tsx:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L457)
 
 #### Parameters
 
@@ -672,7 +684,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:456](https://github.com/serenity-is
 
 > **set\_mode**(`value`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:410](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L410)
+Defined in: [src/ui/widgets/propertygrid.tsx:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L411)
 
 #### Parameters
 
@@ -726,7 +738,7 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 > `protected` **updateFieldElement**(`fieldElement`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:538](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L538)
+Defined in: [src/ui/widgets/propertygrid.tsx:551](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L551)
 
 #### Parameters
 
@@ -744,7 +756,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:538](https://github.com/serenity-is
 
 > **updateInterface**(): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:542](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L542)
+Defined in: [src/ui/widgets/propertygrid.tsx:555](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L555)
 
 #### Returns
 
@@ -772,7 +784,7 @@ Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/sereni
 
 > `static` **canModifyItem**(`item`, `mode?`): `boolean`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L475)
+Defined in: [src/ui/widgets/propertygrid.tsx:488](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L488)
 
 #### Parameters
 
@@ -864,7 +876,7 @@ Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenit
 
 > `static` **loadFieldValue**(`source`, `fieldElement`, `mode?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L417)
+Defined in: [src/ui/widgets/propertygrid.tsx:418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L418)
 
 #### Parameters
 
@@ -954,7 +966,7 @@ Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/sereni
 
 > `static` **saveFieldValue**(`target`, `fieldElement`, `canModify?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:445](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L445)
+Defined in: [src/ui/widgets/propertygrid.tsx:446](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L446)
 
 #### Parameters
 
@@ -980,7 +992,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:445](https://github.com/serenity-is
 
 > `static` **updateFieldElement**(`fieldElement`, `mode?`, `canModify?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:505](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L505)
+Defined in: [src/ui/widgets/propertygrid.tsx:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L518)
 
 #### Parameters
 

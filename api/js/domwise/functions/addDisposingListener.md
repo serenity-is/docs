@@ -4,7 +4,7 @@
 
 > **addDisposingListener**\<`T`\>(`target`, `handler`, `regKey?`): `T` \| `null` \| `undefined`
 
-Defined in: [src/disposing-listener.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L93)
+Defined in: [src/disposing-listener.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L98)
 
 Adds a disposing listener to an element. Note that the listener itself is not added as an event listener,
 but will be called when the `disposing` event is dispatched on the element, along with other disposing listeners.

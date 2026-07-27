@@ -2,16 +2,24 @@
 
 # Function: ShadowRootNode()
 
-> **ShadowRootNode**(`__namedParameters`): `any`
+> **ShadowRootNode**(`options`): `any`
 
-Defined in: [src/shadow.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/shadow.ts#L6)
+Defined in: [src/shadow.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/shadow.ts#L13)
+
+Creates a virtual node descriptor for a `ShadowRoot` that can be used
+during JSX element creation. The returned object is recognized by the
+JSX factory to create a shadow root on the parent element.
 
 ## Parameters
 
-### \_\_namedParameters
+### options
 
 `ShadowRootInit` & `object`
+
+An object with `ShadowRootInit` properties plus optional `ref` and `children`.
 
 ## Returns
 
 `any`
+
+A virtual node descriptor recognized by the JSX factory.

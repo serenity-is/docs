@@ -4,9 +4,11 @@
 
 > **currentLifecycleRoot**(...`args`): `Element` \| `null`
 
-Defined in: [src/disposing-listener.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L161)
+Defined in: [src/disposing-listener.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L168)
 
-Sets or gets the current lifecycle root element.
+Gets or sets the current lifecycle root element.
+When called with an argument, sets the lifecycle root and returns the previous value.
+When called without arguments, returns the current lifecycle root.
 
 ## Parameters
 
@@ -14,10 +16,10 @@ Sets or gets the current lifecycle root element.
 
 ...`Element`[]
 
-If provided, sets the lifecycle root to the first argument and returns the previous root.
+If provided, the first element is set as the new lifecycle root.
 
 ## Returns
 
 `Element` \| `null`
 
-The current lifecycle root element or null if none is set.
+The current (or previous) lifecycle root element, or `null` if none is set.

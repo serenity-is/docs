@@ -4,7 +4,7 @@
 
 > **removeDisposingListener**\<`T`\>(`target`, `handler`, `regKey?`): `T` \| `null` \| `undefined`
 
-Defined in: [src/disposing-listener.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L133)
+Defined in: [src/disposing-listener.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L138)
 
 Removes a disposing listener from an element. Note that this does not remove an event listener from the element,
 but removes the listener from the list of disposing listeners that will be called when the `disposing` event

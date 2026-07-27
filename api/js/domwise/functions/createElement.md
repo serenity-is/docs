@@ -2,11 +2,15 @@
 
 # Function: createElement()
 
-> **createElement**(`tag`, `attr`, ...`children`): `any`
+> **createElement**(`tag`, `attr`, ...`children`): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [src/compat-api.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/compat-api.ts#L7)
+Defined in: [src/compat-api.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/compat-api.ts#L17)
 
-Required for classic (non-automatic) jsx factory. Prefer jsx function
+Creates a JSX element using the classic (non-automatic) JSX factory signature.
+Children are passed as additional arguments after `attr` (rest params).
+If `attr` is a string or array, it is treated as the first child and `attr` becomes `{}`.
+If `attr.children` exists and no additional children were given, `attr.children` is used.
+Prefer using the `jsx` function directly when using the automatic JSX runtime.
 
 ## Parameters
 
@@ -14,14 +18,22 @@ Required for classic (non-automatic) jsx factory. Prefer jsx function
 
 `any`
 
+The HTML/SVG tag name or component function/class.
+
 ### attr
 
 `any`
+
+The attributes/props for the element, or the first child if it is a string/array.
 
 ### children
 
 ...`any`[]
 
+Child elements passed as rest arguments.
+
 ## Returns
 
-`any`
+[`JSXElement`](../type-aliases/JSXElement.md)
+
+The created JSX element.

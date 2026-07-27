@@ -6,13 +6,21 @@
 
 > **jsx**\<`THtmlTag`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [src/jsx-factory.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/jsx-factory.ts#L14)
+Defined in: [src/jsx-factory.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/jsx-factory.ts#L28)
+
+Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
+Supports HTML elements, SVG elements, MathML elements, and custom components.
+When the tag is a string, it creates a DOM element; when it is a function/class,
+it instantiates a component.
+
+Unlike `createElement` (or `h`), which takes children as additional arguments,
+`jsx` expects children as part of the `props` object (`props.children`).
 
 ### Type Parameters
 
 #### THtmlTag
 
-`THtmlTag` *extends* keyof `HTMLElementTagNameMap`
+`THtmlTag` *extends* `"object"` \| `"search"` \| `"link"` \| `"small"` \| `"sub"` \| `"sup"` \| `"time"` \| `"menu"` \| `"dialog"` \| `"article"` \| `"button"` \| `"figure"` \| `"form"` \| `"img"` \| `"main"` \| `"meter"` \| `"option"` \| `"table"` \| `"input"` \| `"progress"` \| `"select"` \| `"slot"` \| `"style"` \| `"title"` \| `"audio"` \| `"embed"` \| `"script"` \| `"track"` \| `"video"` \| `"cite"` \| `"span"` \| `"a"` \| `"i"` \| `"label"` \| `"data"` \| `"code"` \| `"abbr"` \| `"col"` \| `"colgroup"` \| `"map"` \| `"address"` \| `"area"` \| `"aside"` \| `"b"` \| `"base"` \| `"bdi"` \| `"bdo"` \| `"blockquote"` \| `"body"` \| `"br"` \| `"canvas"` \| `"caption"` \| `"datalist"` \| `"dd"` \| `"del"` \| `"details"` \| `"dfn"` \| `"div"` \| `"dl"` \| `"dt"` \| `"em"` \| `"fieldset"` \| `"figcaption"` \| `"footer"` \| `"h1"` \| `"h2"` \| `"h3"` \| `"h4"` \| `"h5"` \| `"h6"` \| `"head"` \| `"header"` \| `"hgroup"` \| `"hr"` \| `"html"` \| `"iframe"` \| `"ins"` \| `"kbd"` \| `"legend"` \| `"li"` \| `"mark"` \| `"meta"` \| `"nav"` \| `"noscript"` \| `"ol"` \| `"optgroup"` \| `"output"` \| `"p"` \| `"picture"` \| `"pre"` \| `"q"` \| `"rp"` \| `"rt"` \| `"ruby"` \| `"s"` \| `"samp"` \| `"section"` \| `"source"` \| `"strong"` \| `"summary"` \| `"tbody"` \| `"td"` \| `"template"` \| `"textarea"` \| `"tfoot"` \| `"th"` \| `"thead"` \| `"tr"` \| `"u"` \| `"ul"` \| `"var"` \| `"wbr"`
 
 #### TElement
 
@@ -24,7 +32,11 @@ Defined in: [src/jsx-factory.ts:14](https://github.com/serenity-is/serenity/blob
 
 `THtmlTag`
 
+The HTML/SVG/MathML tag name or a component function/class.
+
 #### props?
+
+The attributes/props for the element. Children are passed via `props.children`.
 
 [`HTMLElementTags`](../interfaces/HTMLElementTags.md)\[`THtmlTag`\] & `Record`\<`` `data-${string}` ``, `string` \| `number`\> | `null`
 
@@ -32,11 +44,21 @@ Defined in: [src/jsx-factory.ts:14](https://github.com/serenity-is/serenity/blob
 
 `TElement`
 
+The created JSX element (DOM node).
+
 ## Call Signature
 
 > **jsx**\<`TSVGTag`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [src/jsx-factory.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/jsx-factory.ts#L18)
+Defined in: [src/jsx-factory.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/jsx-factory.ts#L32)
+
+Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
+Supports HTML elements, SVG elements, MathML elements, and custom components.
+When the tag is a string, it creates a DOM element; when it is a function/class,
+it instantiates a component.
+
+Unlike `createElement` (or `h`), which takes children as additional arguments,
+`jsx` expects children as part of the `props` object (`props.children`).
 
 ### Type Parameters
 
@@ -54,7 +76,11 @@ Defined in: [src/jsx-factory.ts:18](https://github.com/serenity-is/serenity/blob
 
 `TSVGTag`
 
+The HTML/SVG/MathML tag name or a component function/class.
+
 #### props?
+
+The attributes/props for the element. Children are passed via `props.children`.
 
 [`SVGElementTags`](../interfaces/SVGElementTags.md)\[`TSVGTag`\] & `Record`\<`` `data-${string}` ``, `string` \| `number`\> | `null`
 
@@ -62,11 +88,21 @@ Defined in: [src/jsx-factory.ts:18](https://github.com/serenity-is/serenity/blob
 
 `TElement`
 
+The created JSX element (DOM node).
+
 ## Call Signature
 
 > **jsx**(`type`, `props?`): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [src/jsx-factory.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/jsx-factory.ts#L22)
+Defined in: [src/jsx-factory.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/jsx-factory.ts#L36)
+
+Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
+Supports HTML elements, SVG elements, MathML elements, and custom components.
+When the tag is a string, it creates a DOM element; when it is a function/class,
+it instantiates a component.
+
+Unlike `createElement` (or `h`), which takes children as additional arguments,
+`jsx` expects children as part of the `props` object (`props.children`).
 
 ### Parameters
 
@@ -74,10 +110,60 @@ Defined in: [src/jsx-factory.ts:22](https://github.com/serenity-is/serenity/blob
 
 `string`
 
+The HTML/SVG/MathML tag name or a component function/class.
+
 #### props?
+
+The attributes/props for the element. Children are passed via `props.children`.
 
 [`ElementAttributes`](../interfaces/ElementAttributes.md)\<[`JSXElement`](../type-aliases/JSXElement.md)\> & `Record`\<`` `data-${string}` ``, `string` \| `number`\> | `null`
 
 ### Returns
 
 [`JSXElement`](../type-aliases/JSXElement.md)
+
+The created JSX element (DOM node).
+
+## Call Signature
+
+> **jsx**\<`P`, `TElement`\>(`type`, `props?`): `TElement`
+
+Defined in: [src/jsx-factory.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/jsx-factory.ts#L41)
+
+Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
+Supports HTML elements, SVG elements, MathML elements, and custom components.
+When the tag is a string, it creates a DOM element; when it is a function/class,
+it instantiates a component.
+
+Unlike `createElement` (or `h`), which takes children as additional arguments,
+`jsx` expects children as part of the `props` object (`props.children`).
+
+### Type Parameters
+
+#### P
+
+`P` *extends* `object`
+
+#### TElement
+
+`TElement` *extends* [`JSXElement`](../type-aliases/JSXElement.md) = [`JSXElement`](../type-aliases/JSXElement.md)
+
+### Parameters
+
+#### type
+
+[`ComponentType`](../type-aliases/ComponentType.md)\<`P`, `TElement`\>
+
+The HTML/SVG/MathML tag name or a component function/class.
+
+#### props?
+
+The attributes/props for the element. Children are passed via `props.children`.
+
+`P` & `object` | `null`
+
+### Returns
+
+`TElement`
+
+The created JSX element (DOM node).

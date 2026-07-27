@@ -4,9 +4,12 @@
 
 > **derivedSignal**\<`TDerived`, `TInput`\>(`input`, `fn`): `DerivedSignalLike`\<`TDerived`\>
 
-Defined in: [src/signal-util.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L162)
+Defined in: [src/signal-util.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L192)
 
-Creates a derived signal from a computation function
+Creates a derived (computed) signal from an input signal and a transform function.
+The returned signal-like object re-computes its value whenever the input signal changes.
+If the input signal's constructor supports derived computation, it is used; otherwise
+a `PrimitiveComputed` fallback is created.
 
 ## Type Parameters
 
@@ -14,9 +17,13 @@ Creates a derived signal from a computation function
 
 `TDerived`
 
+The type of the derived value.
+
 ### TInput
 
 `TInput` = `any`
+
+The type of the input signal's value.
 
 ## Parameters
 
@@ -24,10 +31,16 @@ Creates a derived signal from a computation function
 
 [`SignalLike`](../interfaces/SignalLike.md)\<`TInput`\>
 
+The source signal to observe.
+
 ### fn
 
 (`value`) => `TDerived`
 
+A transform function that maps the input value to the derived value.
+
 ## Returns
 
 `DerivedSignalLike`\<`TDerived`\>
+
+A `DerivedSignalLike` that updates when the input signal changes.

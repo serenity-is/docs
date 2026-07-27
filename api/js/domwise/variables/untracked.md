@@ -4,7 +4,10 @@
 
 > `const` **untracked**: \<`T`\>(`fn`) => `T` = `signals.untracked`
 
-Defined in: [src/signals.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L26)
+Defined in: [src/signals.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L63)
+
+Reads signal values without creating a dependency tracking context.
+Re-exported from `@preact/signals-core`.
 
 ## Type Parameters
 
@@ -12,12 +15,18 @@ Defined in: [src/signals.ts:26](https://github.com/serenity-is/serenity/blob/mas
 
 `T`
 
+The return type of the function.
+
 ## Parameters
 
 ### fn
 
 () => `T`
 
+A function that reads signals without tracking them.
+
 ## Returns
 
 `T`
+
+The return value of `fn`.

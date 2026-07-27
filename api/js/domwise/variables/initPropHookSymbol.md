@@ -2,6 +2,6 @@
 
 # Variable: initPropHookSymbol
 
-> `const` **initPropHookSymbol**: *typeof* `initPropHookSymbol`
+> `const` **initPropHookSymbol**: unique `symbol`
 
 Defined in: [src/prop-hook.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/prop-hook.ts#L1)

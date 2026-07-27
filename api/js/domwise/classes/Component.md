@@ -2,7 +2,10 @@
 
 # Class: Component\<T\>
 
-Defined in: [src/component.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L4)
+Defined in: [src/component.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L9)
+
+Base class for creating JSX components with optional props, children, and ref support.
+Extend this class and override the `render` method to return a `JSXElement`.
 
 ## Type Parameters
 
@@ -10,13 +13,15 @@ Defined in: [src/component.ts:4](https://github.com/serenity-is/serenity/blob/ma
 
 `T` = `any`
 
+The type of the component's props.
+
 ## Constructors
 
 ### Constructor
 
 > **new Component**\<`T`\>(`props`): `Component`\<`T`\>
 
-Defined in: [src/component.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L7)
+Defined in: [src/component.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L12)
 
 #### Parameters
 
@@ -34,7 +39,7 @@ Defined in: [src/component.ts:7](https://github.com/serenity-is/serenity/blob/ma
 
 > `readonly` **props**: `T` & `object`
 
-Defined in: [src/component.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L11)
+Defined in: [src/component.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L16)
 
 #### Type Declaration
 
@@ -52,7 +57,7 @@ Defined in: [src/component.ts:11](https://github.com/serenity-is/serenity/blob/m
 
 > `static` **isComponent**: `boolean` = `true`
 
-Defined in: [src/component.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L5)
+Defined in: [src/component.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L10)
 
 ## Methods
 
@@ -60,7 +65,7 @@ Defined in: [src/component.ts:5](https://github.com/serenity-is/serenity/blob/ma
 
 > **render**(): [`JSXElement`](../type-aliases/JSXElement.md) \| `null`
 
-Defined in: [src/component.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L13)
+Defined in: [src/component.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L18)
 
 #### Returns
 

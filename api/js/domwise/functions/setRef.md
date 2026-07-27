@@ -4,9 +4,9 @@
 
 > **setRef**\<`T`\>(`ref`, `current`): `void`
 
-Defined in: [src/ref.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/ref.ts#L13)
+Defined in: [src/ref.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/ref.ts#L28)
 
-Sets ref.current for a RefObject or a by calling a ref callback
+Sets the `current` property of a `RefObject`, or calls a ref callback with the given value.
 
 ## Type Parameters
 
@@ -14,15 +14,21 @@ Sets ref.current for a RefObject or a by calling a ref callback
 
 `T` = `Node`
 
+The type of the referenced node.
+
 ## Parameters
 
 ### ref
+
+A `RefObject` or a ref callback, or `undefined`.
 
 [`Ref`](../type-aliases/Ref.md)\<`T`\> | `undefined`
 
 ### current
 
 `T`
+
+The value to assign to the ref.
 
 ## Returns
 

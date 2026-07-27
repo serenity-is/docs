@@ -15,4 +15,4 @@ public static class BehaviorProviderExtensions
 
 ## See Also
 
-* **Source:** *[BehaviorProviderExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/BehaviorProviderExtensions.cs)*
+* **Source:** *[BehaviorProviderExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/BehaviorProviderExtensions.cs)*

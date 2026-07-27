@@ -4,8 +4,7 @@
 A generic dependency sort function
 
 ```csharp
-public static IEnumerable<T> TSort<T>(IEnumerable<T> source, Func<T, IEnumerable<T>> dependencies, 
-    bool throwOnCycle = false)
+public static IEnumerable<T> TSort<T>(IEnumerable<T> source, Func<T, IEnumerable<T>> dependencies)
 ```
 
 | parameter | description |
@@ -13,7 +12,6 @@ public static IEnumerable<T> TSort<T>(IEnumerable<T> source, Func<T, IEnumerable
 | T | Type of items |
 | source | The source. |
 | dependencies | The dependencies. |
-| throwOnCycle | if set to `true` throw on circular link. |
 
 ## See Also
 

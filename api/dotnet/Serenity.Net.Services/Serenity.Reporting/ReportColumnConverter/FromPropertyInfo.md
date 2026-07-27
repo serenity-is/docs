@@ -18,5 +18,5 @@ public static ReportColumn FromPropertyInfo(PropertyInfo property, ITextLocalize
 
 * class [ReportColumn](../ReportColumn.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [ReportColumnConverter](../ReportColumnConverter.md)

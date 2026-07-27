@@ -8,5 +8,5 @@ public virtual void OnPrepareQuery(IUndeleteRequestHandler handler, SqlQuery que
 ## See Also
 
 * interface [IUndeleteRequestHandler](../IUndeleteRequestHandler.md)
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [BaseUndeleteBehavior](../BaseUndeleteBehavior.md)

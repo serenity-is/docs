@@ -24,5 +24,5 @@ public interface ISaveRequestHandler : IRequestHandler
 
 ## See Also
 
-* interface [IRequestHandler](IRequestHandler.md)
-* **Source:** *[ISaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/ISaveRequestHandler.cs)*
+* interface [IRequestHandler](../Serenity.Net.Core/IRequestHandler.md)
+* **Source:** *[ISaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/ISaveRequestHandler.cs)*

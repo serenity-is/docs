@@ -24,4 +24,4 @@ public class AutoValidateAntiforgeryIgnoreBearerAttribute : Attribute, IFilterFa
 
 ## See Also
 
-* **Source:** *[AutoValidateAntiforgeryIgnoreBearerAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/AutoValidateAntiforgeryIgnoreBearerAttribute.cs)*
+* **Source:** *[AutoValidateAntiforgeryIgnoreBearerAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/AutoValidateAntiforgeryIgnoreBearerAttribute.cs)*

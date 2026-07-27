@@ -16,7 +16,7 @@ protected virtual string CustomValidate(RowValidationContext context, Field fiel
 
 ## See Also
 
-* class [RowValidationContext](../Serenity.Net.Entity/../RowValidationContext.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
-* interface [ICustomValidator](../Serenity.Net.Data/../../Serenity/ICustomValidator.md)
+* class [RowValidationContext](../RowValidationContext.md)
+* class [Field](../../Serenity.Data/Field.md)
+* interface [ICustomValidator](../../Serenity/ICustomValidator.md)
 * class [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](../SaveRequestHandler-3.md)

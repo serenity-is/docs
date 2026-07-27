@@ -16,4 +16,4 @@ public class ScriptIncludeAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[ScriptIncludeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Common/ScriptIncludeAttribute.cs)*
+* **Source:** *[ScriptIncludeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/ScriptIncludeAttribute.cs)*

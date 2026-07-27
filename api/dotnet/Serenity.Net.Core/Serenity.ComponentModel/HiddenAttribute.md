@@ -17,4 +17,4 @@ public class HiddenAttribute : VisibleAttribute
 ## See Also
 
 * class [VisibleAttribute](VisibleAttribute.md)
-* **Source:** *[HiddenAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Common/HiddenAttribute.cs)*
+* **Source:** *[HiddenAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/HiddenAttribute.cs)*

@@ -17,4 +17,4 @@ public class DeletePermissionAttribute : PermissionAttributeBase
 ## See Also
 
 * class [PermissionAttributeBase](PermissionAttributeBase.md)
-* **Source:** *[DeletePermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Permission/DeletePermissionAttribute.cs)*
+* **Source:** *[DeletePermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/DeletePermissionAttribute.cs)*

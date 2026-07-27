@@ -18,4 +18,4 @@ public class BooleanEditorAttribute : CustomEditorAttribute
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[BooleanEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/BooleanEditorAttribute.cs)*
+* **Source:** *[BooleanEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/BooleanEditorAttribute.cs)*

@@ -15,4 +15,4 @@ public interface IHandlerActivator
 
 ## See Also
 
-* **Source:** *[IHandlerActivator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Handler/IHandlerActivator.cs)*
+* **Source:** *[IHandlerActivator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/IHandlerActivator.cs)*

@@ -1,7 +1,7 @@
 # TwoLevelCache constructor
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a new TwoLevelCache instance
+Contains helper functions to use local and distributed cache in sync with optional cache invalidation.
 
 ```csharp
 public TwoLevelCache(IMemoryCache memoryCache, IDistributedCache distributedCache)
@@ -11,6 +11,10 @@ public TwoLevelCache(IMemoryCache memoryCache, IDistributedCache distributedCach
 | --- | --- |
 | memoryCache | Memory cache |
 | distributedCache | Distributed cache |
+
+## Remarks
+
+Creates a new TwoLevelCache instance
 
 ## See Also
 

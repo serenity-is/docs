@@ -22,4 +22,4 @@ public class IntegerEditorAttribute : CustomEditorAttribute
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[IntegerEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/IntegerEditorAttribute.cs)*
+* **Source:** *[IntegerEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/IntegerEditorAttribute.cs)*

@@ -15,4 +15,4 @@ public interface ICustomTitle
 
 ## See Also
 
-* **Source:** *[ICustomTitle.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/ICustomTitle.cs)*
+* **Source:** *[ICustomTitle.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Rendering/ICustomTitle.cs)*

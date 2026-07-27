@@ -16,8 +16,8 @@ public class ServiceError
 | [Code](ServiceError/Code.md) { get; set; } | Error code if any |
 | [Details](ServiceError/Details.md) { get; set; } | Error details, like stack trace etc. Normally, this is only returned in development mode. |
 | [ErrorId](ServiceError/ErrorId.md) { get; set; } | When provided, this might be the related error ID stored in the exception log. |
-| [Message](ServiceError/Message.md) { get; set; } | The error message. In non-development mode the message might be something generic like "some error occured" if the error itself is not a ValidationError. The detailed error can be seen in exception log. |
+| [Message](ServiceError/Message.md) { get; set; } | The error message. In non-development mode the message might be something generic like "some error occurred" if the error itself is not a ValidationError. The detailed error can be seen in exception log. |
 
 ## See Also
 
-* **Source:** *[ServiceError.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/ServiceError.cs)*
+* **Source:** *[ServiceError.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/ServiceError.cs)*

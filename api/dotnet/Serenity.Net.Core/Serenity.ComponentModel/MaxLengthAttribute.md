@@ -8,13 +8,21 @@ Sets the maximum length of an editor attached to the target property.
 public class MaxLengthAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| maxLength | The maximum length. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [MaxLengthAttribute](MaxLengthAttribute/MaxLengthAttribute.md)(…) | Initializes a new instance of the [`MaxLengthAttribute`](MaxLengthAttribute.md) class. |
+| [MaxLengthAttribute](MaxLengthAttribute/MaxLengthAttribute.md)(…) | Sets the maximum length of an editor attached to the target property. |
 | [MaxLength](MaxLengthAttribute/MaxLength.md) { get; } | Gets the maximum length. |
+
+## Remarks
+
+Initializes a new instance of the [`MaxLengthAttribute`](MaxLengthAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[MaxLengthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/MaxLengthAttribute.cs)*
+* **Source:** *[MaxLengthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/MaxLengthAttribute.cs)*

@@ -15,4 +15,4 @@ public static class RecaptchaValidation
 
 ## See Also
 
-* **Source:** *[RecaptchaValidation.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Security/RecaptchaValidation.cs)*
+* **Source:** *[RecaptchaValidation.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Security/RecaptchaValidation.cs)*

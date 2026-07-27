@@ -15,4 +15,4 @@ public interface IDefaultHandlerFactory
 
 ## See Also
 
-* **Source:** *[IDefaultHandlerFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Handler/IDefaultHandlerFactory.cs)*
+* **Source:** *[IDefaultHandlerFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/IDefaultHandlerFactory.cs)*

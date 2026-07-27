@@ -16,7 +16,7 @@ public SaveResponse Process(IUnitOfWork uow, ISaveRequest request, SaveRequestTy
 ## See Also
 
 * class [SaveResponse](../SaveResponse.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * interface [ISaveRequest](../ISaveRequest.md)
 * enum [SaveRequestType](../SaveRequestType.md)
 * interface [ISaveRequestProcessor](../ISaveRequestProcessor.md)

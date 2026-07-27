@@ -12,9 +12,9 @@ public class UndeleteRequest : ServiceRequest
 | name | description |
 | --- | --- |
 | [UndeleteRequest](UndeleteRequest/UndeleteRequest.md)() | The default constructor. |
-| [EntityId](UndeleteRequest/EntityId.md) | The entity ID to undelete |
+| [EntityId](UndeleteRequest/EntityId.md) { get; set; } | The entity ID to undelete |
 
 ## See Also
 
 * class [ServiceRequest](ServiceRequest.md)
-* **Source:** *[UndeleteRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/UndeleteRequest.cs)*
+* **Source:** *[UndeleteRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/UndeleteRequest.cs)*

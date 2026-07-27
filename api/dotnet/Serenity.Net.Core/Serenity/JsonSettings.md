@@ -1,7 +1,7 @@
 # JsonSettings class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains default Serenity JSON serialization settings.
+Contains default Serenity JSON serialization settings for Newtonsoft.Json.
 
 ```csharp
 public static class JsonSettings
@@ -19,4 +19,4 @@ public static class JsonSettings
 
 ## See Also
 
-* **Source:** *[JsonSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Json/JsonSettings.cs)*
+* **Source:** *[JsonSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Json/JsonSettings.cs)*

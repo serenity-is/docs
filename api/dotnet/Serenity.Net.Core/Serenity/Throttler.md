@@ -11,7 +11,7 @@ public class Throttler
 
 | name | description |
 | --- | --- |
-| [Throttler](Throttler/Throttler.md)(…) | Creates a new throttler |
+| [Throttler](Throttler/Throttler.md)(…) | Creates a new throttler (2 constructors) |
 | [CacheKey](Throttler/CacheKey.md) { get; } | Full cache key |
 | [Duration](Throttler/Duration.md) { get; } | Duration |
 | [Key](Throttler/Key.md) { get; } | Cache key |
@@ -21,4 +21,4 @@ public class Throttler
 
 ## See Also
 
-* **Source:** *[Throttler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/Throttler.cs)*
+* **Source:** *[Throttler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/Throttler.cs)*

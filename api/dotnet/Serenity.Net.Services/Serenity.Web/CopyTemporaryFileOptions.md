@@ -18,4 +18,4 @@ public class CopyTemporaryFileOptions : FormatFilenameOptions
 ## See Also
 
 * class [FormatFilenameOptions](FormatFilenameOptions.md)
-* **Source:** *[CopyTemporaryFileOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/CopyTemporaryFileOptions.cs)*
+* **Source:** *[CopyTemporaryFileOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/CopyTemporaryFileOptions.cs)*

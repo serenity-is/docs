@@ -15,4 +15,4 @@ public interface IUserClaimCreator
 
 ## See Also
 
-* **Source:** *[IUserClaimCreator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IUserClaimCreator.cs)*
+* **Source:** *[IUserClaimCreator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IUserClaimCreator.cs)*

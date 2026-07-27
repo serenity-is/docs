@@ -14,6 +14,6 @@ protected virtual void ApplySortBy(SqlQuery query, SortBy sortBy)
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [SortBy](../SortBy.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

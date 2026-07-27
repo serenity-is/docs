@@ -9,5 +9,5 @@ public Field[] GetDistinctFields()
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

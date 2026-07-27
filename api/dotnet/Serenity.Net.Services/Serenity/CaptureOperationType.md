@@ -18,4 +18,4 @@ public enum CaptureOperationType
 
 ## See Also
 
-* **Source:** *[CaptureOperationType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureOperationType.cs)*
+* **Source:** *[CaptureOperationType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureOperationType.cs)*

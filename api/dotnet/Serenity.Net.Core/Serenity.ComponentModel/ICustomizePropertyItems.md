@@ -15,4 +15,4 @@ public interface ICustomizePropertyItems
 
 ## See Also
 
-* **Source:** *[ICustomizePropertyItems.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/ICustomizePropertyItems.cs)*
+* **Source:** *[ICustomizePropertyItems.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/ICustomizePropertyItems.cs)*

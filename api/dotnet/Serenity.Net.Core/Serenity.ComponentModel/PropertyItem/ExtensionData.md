@@ -4,7 +4,7 @@
 Gets or sets the extension data, used for JSON.NET serialization / deserialization of dynamic properties.
 
 ```csharp
-public IDictionary<string, JToken> ExtensionData { get; set; }
+public Dictionary<string, object> ExtensionData { get; set; }
 ```
 
 ## Property Value

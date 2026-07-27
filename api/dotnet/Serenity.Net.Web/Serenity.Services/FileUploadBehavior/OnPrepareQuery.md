@@ -8,5 +8,5 @@ public override void OnPrepareQuery(ISaveRequestHandler handler, SqlQuery query)
 ## See Also
 
 * interface [ISaveRequestHandler](../Serenity.Net.Services/../ISaveRequestHandler.md)
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../Serenity.Net.Services/../../Serenity.Data/SqlQuery.md)
 * class [FileUploadBehavior](../FileUploadBehavior.md)

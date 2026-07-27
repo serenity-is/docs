@@ -17,4 +17,4 @@ public class NavigationMenuAttribute : NavigationItemAttribute
 ## See Also
 
 * class [NavigationItemAttribute](NavigationItemAttribute.md)
-* **Source:** *[NavigationMenuAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Navigation/NavigationMenuAttribute.cs)*
+* **Source:** *[NavigationMenuAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Navigation/NavigationMenuAttribute.cs)*

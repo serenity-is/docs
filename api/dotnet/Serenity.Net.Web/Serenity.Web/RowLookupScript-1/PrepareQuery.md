@@ -13,5 +13,5 @@ protected virtual void PrepareQuery(SqlQuery query)
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../Serenity.Net.Services/../../Serenity.Data/SqlQuery.md)
 * class [RowLookupScript&lt;TRow&gt;](../RowLookupScript-1.md)

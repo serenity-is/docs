@@ -16,5 +16,5 @@ public static SqlQuery ApplyContainsText(this SqlQuery query, string containsTex
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [ServiceQueryHelper](../ServiceQueryHelper.md)

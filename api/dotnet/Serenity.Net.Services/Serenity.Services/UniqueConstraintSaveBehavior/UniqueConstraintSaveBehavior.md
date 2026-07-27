@@ -1,7 +1,7 @@
 # UniqueConstraintSaveBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance of the class
+Behavior that handles [`UniqueConstraintAttribute`](../../Serenity.Data.Mapping/UniqueConstraintAttribute.md)
 
 ```csharp
 public UniqueConstraintSaveBehavior(ITextLocalizer localizer)
@@ -10,6 +10,10 @@ public UniqueConstraintSaveBehavior(ITextLocalizer localizer)
 | parameter | description |
 | --- | --- |
 | localizer | Text localizer |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 

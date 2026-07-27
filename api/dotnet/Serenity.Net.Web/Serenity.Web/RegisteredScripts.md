@@ -18,7 +18,7 @@ public class RegisteredScripts : DynamicScript, IGetScriptData, INamedDynamicScr
 
 ## See Also
 
-* class [DynamicScript](DynamicScript.md)
-* interface [IGetScriptData](IGetScriptData.md)
-* interface [INamedDynamicScript](INamedDynamicScript.md)
-* **Source:** *[RegisteredScripts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/DynamicScriptTypes/RegisteredScripts.cs)*
+* class [DynamicScript](../Serenity.Net.Services/DynamicScript.md)
+* interface [IGetScriptData](../Serenity.Net.Core/IGetScriptData.md)
+* interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
+* **Source:** *[RegisteredScripts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScriptTypes/RegisteredScripts.cs)*

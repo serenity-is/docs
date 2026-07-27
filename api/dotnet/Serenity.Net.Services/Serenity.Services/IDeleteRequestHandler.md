@@ -21,5 +21,5 @@ public interface IDeleteRequestHandler : IRequestHandler
 
 ## See Also
 
-* interface [IRequestHandler](IRequestHandler.md)
-* **Source:** *[IDeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Delete/IDeleteRequestHandler.cs)*
+* interface [IRequestHandler](../Serenity.Net.Core/IRequestHandler.md)
+* **Source:** *[IDeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Delete/IDeleteRequestHandler.cs)*

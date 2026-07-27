@@ -17,4 +17,4 @@ public class CssMinifyResult
 
 ## See Also
 
-* **Source:** *[CssMinifyResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/CssMinifyResult.cs)*
+* **Source:** *[CssMinifyResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/CssMinifyResult.cs)*

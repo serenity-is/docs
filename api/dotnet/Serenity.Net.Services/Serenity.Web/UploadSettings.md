@@ -12,6 +12,7 @@ public class UploadSettings : IOptions<UploadSettings>
 | name | description |
 | --- | --- |
 | [UploadSettings](UploadSettings/UploadSettings.md)() | Creates a new instance of the class |
+| [EditableMetadataKeys](UploadSettings/EditableMetadataKeys.md) { get; set; } | Semicolon separated list of custom metadata keys that are allowed to be set by client |
 | [ExtensionBlacklist](UploadSettings/ExtensionBlacklist.md) { get; set; } | List of blacklisted extensions |
 | [ExtensionBlacklistExclude](UploadSettings/ExtensionBlacklistExclude.md) { get; set; } | This allows excluding some extensions from ExtensionBlacklist without having to write all the default extensions in ExtensionBlacklist |
 | [ExtensionBlacklistInclude](UploadSettings/ExtensionBlacklistInclude.md) { get; set; } | This allows including additional extensions in ExtensionBlacklist without having to write all the default extensions in ExtensionBlacklist |
@@ -25,4 +26,4 @@ public class UploadSettings : IOptions<UploadSettings>
 
 ## See Also
 
-* **Source:** *[UploadSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/UploadSettings.cs)*
+* **Source:** *[UploadSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/UploadSettings.cs)*

@@ -9,5 +9,5 @@ protected virtual SqlQuery PrepareQuery()
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](../SaveRequestHandler-3.md)

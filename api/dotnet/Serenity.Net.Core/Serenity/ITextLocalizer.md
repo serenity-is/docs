@@ -15,4 +15,4 @@ public interface ITextLocalizer
 
 ## See Also
 
-* **Source:** *[ITextLocalizer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/ITextLocalizer.cs)*
+* **Source:** *[ITextLocalizer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/ITextLocalizer.cs)*

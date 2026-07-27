@@ -44,7 +44,7 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 | virtual [DoAudit](UndeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteUndelete](UndeleteRequestHandler-3/ExecuteUndelete.md)() | Executes the actual SQL undelete/update operation |
 | virtual [GetBehaviors](UndeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of undelete behaviors |
-| virtual [GetDisplayOrderFilter](UndeleteRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements IDisplayOrderRow interface |
+| virtual [GetDisplayOrderFilter](UndeleteRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [InvalidateCacheOnCommit](UndeleteRequestHandler-3/InvalidateCacheOnCommit.md)() | Attaches a cache invalidation call to to OnCommit callback of the current unit of work. This would clear cached items related to this row type. |
 | virtual [InvokeUndeleteAction](UndeleteRequestHandler-3/InvokeUndeleteAction.md)(…) | Invokes the passed undelete action method |
 | virtual [IsDeleted](UndeleteRequestHandler-3/IsDeleted.md)() | Checks that row type implements one of IIsActiveDeletedRow, IIsDeletedRow or IDeleteLogRow interfaces and it is actual marked as deleted |
@@ -63,8 +63,8 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 * class [TUndeleteRequest](../Serenity.Net.Services/UndeleteRequestHandler-3.TUndeleteRequest.md)
 * class [TUndeleteResponse](../Serenity.Net.Services/UndeleteRequestHandler-3.TUndeleteResponse.md)
 * interface [IUndeleteRequestProcessor](IUndeleteRequestProcessor.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [UndeleteRequest](UndeleteRequest.md)
 * class [UndeleteResponse](UndeleteResponse.md)
-* **Source:** *[UndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Undelete/UndeleteRequestHandler.cs)*
+* **Source:** *[UndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Undelete/UndeleteRequestHandler.cs)*

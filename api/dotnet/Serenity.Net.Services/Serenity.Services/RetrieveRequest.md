@@ -21,4 +21,4 @@ public class RetrieveRequest : ServiceRequest, IIncludeExcludeColumns
 
 * class [ServiceRequest](ServiceRequest.md)
 * interface [IIncludeExcludeColumns](IIncludeExcludeColumns.md)
-* **Source:** *[RetrieveRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/RetrieveRequest.cs)*
+* **Source:** *[RetrieveRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/RetrieveRequest.cs)*

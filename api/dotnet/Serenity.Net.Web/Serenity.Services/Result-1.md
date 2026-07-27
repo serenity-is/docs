@@ -10,19 +10,23 @@ public class Result<TResponse> : ActionResult
 | parameter | description |
 | --- | --- |
 | TResponse | Response data type |
+| data | Data object |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [Result](Result-1/Result.md)(…) | Creates a new instance of the class |
+| [Result](Result-1/Result.md)(…) | An action result type containing a object |
 | [ContentEncoding](Result-1/ContentEncoding.md) { get; set; } | Content encoding |
 | [ContentType](Result-1/ContentType.md) { get; set; } | Content type |
 | [Data](Result-1/Data.md) { get; set; } | The data |
-| [Formatting](Result-1/Formatting.md) { get; set; } | Formatting |
-| [SerializerSettings](Result-1/SerializerSettings.md) { get; set; } | JSON serializer settings |
-| override [ExecuteResult](Result-1/ExecuteResult.md)(…) |  |
+| [SerializerOptions](Result-1/SerializerOptions.md) { get; set; } | JSON serializer settings |
+| override [ExecuteResultAsync](Result-1/ExecuteResultAsync.md)(…) |  |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 
-* **Source:** *[Result.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/Result.cs)*
+* **Source:** *[Result.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/Result.cs)*

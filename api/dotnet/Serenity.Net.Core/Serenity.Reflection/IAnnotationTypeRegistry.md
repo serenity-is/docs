@@ -15,4 +15,4 @@ public interface IAnnotationTypeRegistry
 
 ## See Also
 
-* **Source:** *[IAnnotationTypeRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Reflection/IAnnotationTypeRegistry.cs)*
+* **Source:** *[IAnnotationTypeRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/IAnnotationTypeRegistry.cs)*

@@ -7,14 +7,29 @@ Default implementation for [`IBehaviorProvider`](IBehaviorProvider.md)
 public class DefaultBehaviorProvider : IBehaviorProvider
 ```
 
+| parameter | description |
+| --- | --- |
+| implicitBehaviors | Registry for implicit behaviors. |
+| behaviorFactory | Behavior factory |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultBehaviorProvider](DefaultBehaviorProvider/DefaultBehaviorProvider.md)(…) | Creates an instance of the class. |
+| [DefaultBehaviorProvider](DefaultBehaviorProvider/DefaultBehaviorProvider.md)(…) | Default implementation for [`IBehaviorProvider`](IBehaviorProvider.md) |
 | [Resolve](DefaultBehaviorProvider/Resolve.md)(…) |  |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException |  |
+
+## Remarks
+
+Creates an instance of the class.
 
 ## See Also
 
 * interface [IBehaviorProvider](IBehaviorProvider.md)
-* **Source:** *[DefaultBehaviorProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/DefaultBehaviorProvider.cs)*
+* **Source:** *[DefaultBehaviorProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/DefaultBehaviorProvider.cs)*

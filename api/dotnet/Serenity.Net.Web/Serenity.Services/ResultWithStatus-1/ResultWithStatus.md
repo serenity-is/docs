@@ -1,7 +1,7 @@
 # ResultWithStatus&lt;TResponse&gt; constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+An action result type containing a object with status code
 
 ```csharp
 public ResultWithStatus(int statusCode, TResponse data)
@@ -9,8 +9,13 @@ public ResultWithStatus(int statusCode, TResponse data)
 
 | parameter | description |
 | --- | --- |
+| TResponse | Response data type |
 | data | Data object |
 | statusCode | Status code |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 

@@ -20,4 +20,4 @@ public class JsonStringHashSetConverter : JsonConverter
 
 ## See Also
 
-* **Source:** *[JsonStringHashSetConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Json/JsonStringHashSetConverter.cs)*
+* **Source:** *[JsonStringHashSetConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Json/JsonStringHashSetConverter.cs)*

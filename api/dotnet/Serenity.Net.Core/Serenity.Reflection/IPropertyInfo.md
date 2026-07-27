@@ -13,9 +13,9 @@ public interface IPropertyInfo
 | --- | --- |
 | [Name](IPropertyInfo/Name.md) { get; } | Gets the name. |
 | [PropertyType](IPropertyInfo/PropertyType.md) { get; } | Gets the type of the property. |
-| [GetAttribute&lt;TAttr&gt;](IPropertyInfo/GetAttribute.md)() | Gets the attribute. |
-| [GetAttributes&lt;TAttr&gt;](IPropertyInfo/GetAttributes.md)() | Gets the attributes. |
+| [GetAttribute&lt;TAttr&gt;](IPropertyInfo/GetAttribute.md)(…) | Gets the attribute. |
+| [GetAttributes&lt;TAttr&gt;](IPropertyInfo/GetAttributes.md)(…) | Gets the attributes. |
 
 ## See Also
 
-* **Source:** *[IPropertyInfo.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Reflection/IPropertyInfo.cs)*
+* **Source:** *[IPropertyInfo.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/IPropertyInfo.cs)*

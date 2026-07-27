@@ -28,4 +28,4 @@ public abstract class BaseCellDecorator : ICellDecorator
 ## See Also
 
 * interface [ICellDecorator](ICellDecorator.md)
-* **Source:** *[BaseCellDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Decorators/BaseCellDecorator.cs)*
+* **Source:** *[BaseCellDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Decorators/BaseCellDecorator.cs)*

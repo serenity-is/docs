@@ -9,5 +9,5 @@ public IRow Row { get; }
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * interface [ISaveRequestHandler](../ISaveRequestHandler.md)

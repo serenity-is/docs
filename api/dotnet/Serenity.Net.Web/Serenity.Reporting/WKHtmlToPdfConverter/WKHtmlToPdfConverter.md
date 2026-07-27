@@ -1,7 +1,7 @@
 # WKHtmlToPdfConverter constructor
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Implementation for IWKHtmlToPdfConverter
 
 ```csharp
 public WKHtmlToPdfConverter(IOptions<WKHtmlToPdfSettings> options = null, 
@@ -13,6 +13,10 @@ public WKHtmlToPdfConverter(IOptions<WKHtmlToPdfSettings> options = null,
 | options | Options |
 | webHostEnvironment | Host environment |
 | fileSystem | File system |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 

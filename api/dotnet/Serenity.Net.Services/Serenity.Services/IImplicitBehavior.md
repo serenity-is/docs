@@ -15,4 +15,4 @@ public interface IImplicitBehavior
 
 ## See Also
 
-* **Source:** *[IImplicitBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/IImplicitBehavior.cs)*
+* **Source:** *[IImplicitBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/IImplicitBehavior.cs)*

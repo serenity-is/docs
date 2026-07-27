@@ -19,4 +19,4 @@ This is introduced so that we don't have to add a RemoveAll to ILocalTextRegistr
 
 ## See Also
 
-* **Source:** *[IRemoveAll.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/IRemoveAll.cs)*
+* **Source:** *[IRemoveAll.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/IRemoveAll.cs)*

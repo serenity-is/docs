@@ -15,5 +15,5 @@ public void OnPrepareQuery(IListRequestHandler handler, SqlQuery query)
 ## See Also
 
 * interface [IListRequestHandler](../IListRequestHandler.md)
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * interface [IListBehavior](../IListBehavior.md)

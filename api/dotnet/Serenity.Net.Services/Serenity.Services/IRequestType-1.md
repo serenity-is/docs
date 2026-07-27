@@ -13,4 +13,4 @@ public interface IRequestType<TRequestType>
 
 ## See Also
 
-* **Source:** *[IRequestType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Handler/IRequestType.cs)*
+* **Source:** *[IRequestType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/IRequestType.cs)*

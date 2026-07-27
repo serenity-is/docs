@@ -11,6 +11,10 @@ public InsertableAttribute(bool insertable = true)
 | --- | --- |
 | insertable | True to make field insertable |
 
+## Remarks
+
+Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag.
+
 ## See Also
 
 * class [InsertableAttribute](../InsertableAttribute.md)

@@ -24,4 +24,4 @@ A behavior instance is always cached and reused across requests, so make sure yo
 
 ## See Also
 
-* **Source:** *[IUndeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Undelete/IUndeleteBehavior.cs)*
+* **Source:** *[IUndeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Undelete/IUndeleteBehavior.cs)*

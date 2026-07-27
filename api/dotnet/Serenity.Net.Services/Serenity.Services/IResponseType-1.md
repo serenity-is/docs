@@ -13,4 +13,4 @@ public interface IResponseType<TResponseType>
 
 ## See Also
 
-* **Source:** *[IResponseType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Handler/IResponseType.cs)*
+* **Source:** *[IResponseType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/IResponseType.cs)*

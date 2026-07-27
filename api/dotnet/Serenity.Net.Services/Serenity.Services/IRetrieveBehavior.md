@@ -23,4 +23,4 @@ A retrieve behavior instance is always cached and reused across requests, so mak
 
 ## See Also
 
-* **Source:** *[IRetrieveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Retrieve/IRetrieveBehavior.cs)*
+* **Source:** *[IRetrieveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Retrieve/IRetrieveBehavior.cs)*

@@ -1,7 +1,7 @@
 # DefaultReportRenderer constructor
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates an instance of the class
+Default implementation for IReportRenderer
 
 ```csharp
 public DefaultReportRenderer(IDataReportExcelRenderer excelRenderer, 
@@ -15,6 +15,10 @@ public DefaultReportRenderer(IDataReportExcelRenderer excelRenderer,
 | htmlReportPdfRenderer | HTML report pdf renderer |
 | serviceProvider | Service provider |
 | httpContextAccessor | Http context accessor |
+
+## Remarks
+
+Creates an instance of the class
 
 ## See Also
 

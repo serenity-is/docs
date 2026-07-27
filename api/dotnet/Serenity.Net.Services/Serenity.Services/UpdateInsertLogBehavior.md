@@ -1,7 +1,7 @@
 # UpdateInsertLogBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Behavior class that handles assignment of relevant fields for rows with IInsertLogRow and IUpdateLogRow interfaces
+Behavior class that handles assignment of relevant fields for rows with [`IInsertLogRow`](../Serenity.Data/IInsertLogRow.md) and [`IUpdateLogRow`](../Serenity.Data/IUpdateLogRow.md) interfaces
 
 ```csharp
 public class UpdateInsertLogBehavior : BaseSaveBehavior, IImplicitBehavior
@@ -19,4 +19,4 @@ public class UpdateInsertLogBehavior : BaseSaveBehavior, IImplicitBehavior
 
 * class [BaseSaveBehavior](BaseSaveBehavior.md)
 * interface [IImplicitBehavior](IImplicitBehavior.md)
-* **Source:** *[InsertUpdateLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/InsertUpdateLog/InsertUpdateLogBehavior.cs)*
+* **Source:** *[InsertUpdateLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/InsertUpdateLog/InsertUpdateLogBehavior.cs)*

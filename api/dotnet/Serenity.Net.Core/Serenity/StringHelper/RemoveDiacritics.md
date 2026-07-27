@@ -4,12 +4,12 @@
 Removes the diacritic characters from string by replacing them with ASCII versions.
 
 ```csharp
-public static string RemoveDiacritics(string s)
+public static string RemoveDiacritics(string str)
 ```
 
 | parameter | description |
 | --- | --- |
-| s | The string. |
+| str | The string. |
 
 ## Return Value
 

@@ -16,4 +16,4 @@ public interface IReportFactory
 
 ## See Also
 
-* **Source:** *[IReportFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IReportFactory.cs)*
+* **Source:** *[IReportFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/IReportFactory.cs)*

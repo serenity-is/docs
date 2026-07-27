@@ -15,4 +15,4 @@ public static class ExcelContentResult
 
 ## See Also
 
-* **Source:** *[ExcelContentResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ExcelContentResult.cs)*
+* **Source:** *[ExcelContentResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ExcelContentResult.cs)*

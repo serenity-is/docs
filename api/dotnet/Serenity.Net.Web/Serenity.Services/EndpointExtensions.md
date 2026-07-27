@@ -19,4 +19,4 @@ public static class EndpointExtensions
 
 ## See Also
 
-* **Source:** *[EndpointExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/EndpointExtensions.cs)*
+* **Source:** *[EndpointExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/EndpointExtensions.cs)*

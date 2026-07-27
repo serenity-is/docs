@@ -27,4 +27,4 @@ public abstract class BaseRetrieveBehavior : IRetrieveBehavior
 ## See Also
 
 * interface [IRetrieveBehavior](IRetrieveBehavior.md)
-* **Source:** *[BaseRetrieveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Retrieve/BaseRetrieveBehavior.cs)*
+* **Source:** *[BaseRetrieveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Retrieve/BaseRetrieveBehavior.cs)*

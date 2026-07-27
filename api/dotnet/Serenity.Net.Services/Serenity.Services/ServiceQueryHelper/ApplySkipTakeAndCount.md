@@ -17,5 +17,5 @@ public static SqlQuery ApplySkipTakeAndCount(this SqlQuery query, int skip, int 
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [ServiceQueryHelper](../ServiceQueryHelper.md)

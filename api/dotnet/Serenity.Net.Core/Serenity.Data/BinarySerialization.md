@@ -16,4 +16,4 @@ public static class BinarySerialization
 
 ## See Also
 
-* **Source:** *[BinarySerialization.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/BinarySerialization.cs)*
+* **Source:** *[BinarySerialization.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/BinarySerialization.cs)*

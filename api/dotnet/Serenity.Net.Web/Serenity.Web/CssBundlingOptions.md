@@ -23,4 +23,4 @@ public class CssBundlingOptions : IOptions<CssBundlingOptions>
 
 ## See Also
 
-* **Source:** *[CssBundlingOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/CssBundlingOptions.cs)*
+* **Source:** *[CssBundlingOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/CssBundlingOptions.cs)*

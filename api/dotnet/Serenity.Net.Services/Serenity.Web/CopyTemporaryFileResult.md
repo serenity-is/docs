@@ -19,4 +19,4 @@ public class CopyTemporaryFileResult
 
 ## See Also
 
-* **Source:** *[CopyTemporaryFileResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/CopyTemporaryFileResult.cs)*
+* **Source:** *[CopyTemporaryFileResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/CopyTemporaryFileResult.cs)*

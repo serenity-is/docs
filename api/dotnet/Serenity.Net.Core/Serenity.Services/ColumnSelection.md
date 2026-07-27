@@ -20,4 +20,4 @@ public enum ColumnSelection
 
 ## See Also
 
-* **Source:** *[ColumnSelection.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/ColumnSelection.cs)*
+* **Source:** *[ColumnSelection.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/ColumnSelection.cs)*

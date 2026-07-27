@@ -21,4 +21,4 @@ public class DateEditorAttribute : CustomEditorAttribute
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[DateEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/DateEditorAttribute.cs)*
+* **Source:** *[DateEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/DateEditorAttribute.cs)*

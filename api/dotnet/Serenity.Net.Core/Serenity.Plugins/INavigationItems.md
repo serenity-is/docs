@@ -15,4 +15,4 @@ public interface INavigationItems
 
 ## See Also
 
-* **Source:** *[INavigationEntries.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/INavigationEntries.cs)*
+* **Source:** *[INavigationEntries.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/INavigationEntries.cs)*

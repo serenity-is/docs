@@ -20,4 +20,4 @@ public class JsonSafeInt64Converter : JsonConverter
 
 ## See Also
 
-* **Source:** *[JsonSafeInt64Converter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Json/JsonSafeInt64Converter.cs)*
+* **Source:** *[JsonSafeInt64Converter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Json/JsonSafeInt64Converter.cs)*

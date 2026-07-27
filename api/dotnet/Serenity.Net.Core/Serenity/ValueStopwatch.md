@@ -18,4 +18,4 @@ public struct ValueStopwatch
 
 ## See Also
 
-* **Source:** *[ValueStopwatch.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/ValueStopwatch.cs)*
+* **Source:** *[ValueStopwatch.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/ValueStopwatch.cs)*

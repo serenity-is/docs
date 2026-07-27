@@ -7,17 +7,26 @@ Contains helper functions to use local and distributed cache in sync with option
 public class TwoLevelCache : ITwoLevelCache
 ```
 
+| parameter | description |
+| --- | --- |
+| memoryCache | Memory cache |
+| distributedCache | Distributed cache |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [TwoLevelCache](TwoLevelCache/TwoLevelCache.md)(…) | Creates a new TwoLevelCache instance |
+| [TwoLevelCache](TwoLevelCache/TwoLevelCache.md)(…) | Contains helper functions to use local and distributed cache in sync with optional cache invalidation. |
 | [Distributed](TwoLevelCache/Distributed.md) { get; } | Gets distributed cache |
 | [Memory](TwoLevelCache/Memory.md) { get; } | Gets memory cache |
 | static readonly [GenerationCacheExpiration](TwoLevelCache/GenerationCacheExpiration.md) | Expiration timeout for cache generation keys |
 | const [GenerationSuffix](TwoLevelCache/GenerationSuffix.md) | Suffix for cache generation keys |
 
+## Remarks
+
+Creates a new TwoLevelCache instance
+
 ## See Also
 
 * interface [ITwoLevelCache](../Serenity.Abstractions/ITwoLevelCache.md)
-* **Source:** *[TwoLevelCache.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Caching/TwoLevelCache.cs)*
+* **Source:** *[TwoLevelCache.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Caching/TwoLevelCache.cs)*

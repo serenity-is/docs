@@ -17,4 +17,4 @@ public interface IUploadEditor
 
 ## See Also
 
-* **Source:** *[IUploadEditor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IUploadEditor.cs)*
+* **Source:** *[IUploadEditor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/IUploadEditor.cs)*

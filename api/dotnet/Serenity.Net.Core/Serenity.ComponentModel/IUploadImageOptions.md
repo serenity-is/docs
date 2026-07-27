@@ -27,4 +27,4 @@ public interface IUploadImageOptions : IUploadOptions
 ## See Also
 
 * interface [IUploadOptions](IUploadOptions.md)
-* **Source:** *[IUploadImageOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IUploadImageOptions.cs)*
+* **Source:** *[IUploadImageOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/IUploadImageOptions.cs)*

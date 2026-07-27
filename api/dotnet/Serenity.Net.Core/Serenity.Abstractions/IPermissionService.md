@@ -15,4 +15,4 @@ public interface IPermissionService
 
 ## See Also
 
-* **Source:** *[IPermissionService.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IPermissionService.cs)*
+* **Source:** *[IPermissionService.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IPermissionService.cs)*

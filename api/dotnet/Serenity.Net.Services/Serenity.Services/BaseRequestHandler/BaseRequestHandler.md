@@ -1,10 +1,10 @@
 # BaseRequestHandler constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class.
+An abstract class that can be used as base for request handlers that accept a [`IRequestContext`](../IRequestContext.md) instance.
 
 ```csharp
-public BaseRequestHandler(IRequestContext context)
+protected BaseRequestHandler(IRequestContext context)
 ```
 
 | parameter | description |
@@ -16,6 +16,10 @@ public BaseRequestHandler(IRequestContext context)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | Context is null |
+
+## Remarks
+
+Creates an instance of the class.
 
 ## See Also
 

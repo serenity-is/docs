@@ -17,4 +17,4 @@ public class ThreeQuarterWidthAttribute : FormWidthAttribute
 ## See Also
 
 * class [FormWidthAttribute](FormWidthAttribute.md)
-* **Source:** *[ThreeQuarterWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/Layout/ThreeQuarterWidthAttribute.cs)*
+* **Source:** *[ThreeQuarterWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Layout/ThreeQuarterWidthAttribute.cs)*

@@ -8,13 +8,21 @@ Attribute to access the default section key for an option class
 public class DefaultSectionKeyAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| sectionKey | Section key |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultSectionKeyAttribute](DefaultSectionKeyAttribute/DefaultSectionKeyAttribute.md)(…) | Creates a new instance of the attribute |
+| [DefaultSectionKeyAttribute](DefaultSectionKeyAttribute/DefaultSectionKeyAttribute.md)(…) | Attribute to access the default section key for an option class |
 | [SectionKey](DefaultSectionKeyAttribute/SectionKey.md) { get; } | Gets the default section key |
+
+## Remarks
+
+Creates a new instance of the attribute
 
 ## See Also
 
-* **Source:** *[DefaultSectionKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/DefaultSectionKeyAttribute.cs)*
+* **Source:** *[DefaultSectionKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/DefaultSectionKeyAttribute.cs)*

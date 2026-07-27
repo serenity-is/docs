@@ -1,4 +1,4 @@
-# ValidationError constructor (1 of 6)
+# ValidationError constructor (1 of 9)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
@@ -13,7 +13,7 @@ public ValidationError()
 
 ---
 
-# ValidationError constructor (2 of 6)
+# ValidationError constructor (2 of 9)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
@@ -32,7 +32,29 @@ public ValidationError(string message)
 
 ---
 
-# ValidationError constructor (3 of 6)
+# ValidationError constructor (3 of 9)
+**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
+
+Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
+
+```csharp
+public ValidationError(ITextLocalizer localizer, LocalText message)
+```
+
+| parameter | description |
+| --- | --- |
+| localizer | Text localizer |
+| message | The message that describes the error. |
+
+## See Also
+
+* interface [ITextLocalizer](../../Serenity/ITextLocalizer.md)
+* class [LocalText](../../Serenity/LocalText.md)
+* class [ValidationError](../ValidationError.md)
+
+---
+
+# ValidationError constructor (4 of 9)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
@@ -52,7 +74,7 @@ public ValidationError(string message, Exception innerException)
 
 ---
 
-# ValidationError constructor (4 of 6)
+# ValidationError constructor (5 of 9)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
@@ -72,7 +94,30 @@ public ValidationError(string errorCode, string errorMessage)
 
 ---
 
-# ValidationError constructor (5 of 6)
+# ValidationError constructor (6 of 9)
+**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
+
+Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
+
+```csharp
+public ValidationError(ITextLocalizer localizer, string errorCode, LocalText errorMessage)
+```
+
+| parameter | description |
+| --- | --- |
+| localizer | Text localizer |
+| errorCode | The error code. |
+| errorMessage | The error message. |
+
+## See Also
+
+* interface [ITextLocalizer](../../Serenity/ITextLocalizer.md)
+* class [LocalText](../../Serenity/LocalText.md)
+* class [ValidationError](../ValidationError.md)
+
+---
+
+# ValidationError constructor (7 of 9)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
@@ -93,7 +138,32 @@ public ValidationError(string errorCode, string arguments, string errorMessage)
 
 ---
 
-# ValidationError constructor (6 of 6)
+# ValidationError constructor (8 of 9)
+**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
+
+Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.
+
+```csharp
+public ValidationError(ITextLocalizer localizer, string errorCode, string arguments, 
+    LocalText errorMessage)
+```
+
+| parameter | description |
+| --- | --- |
+| localizer | Text localizer |
+| errorCode | The error code. |
+| arguments | The arguments. |
+| errorMessage | The error message. |
+
+## See Also
+
+* interface [ITextLocalizer](../../Serenity/ITextLocalizer.md)
+* class [LocalText](../../Serenity/LocalText.md)
+* class [ValidationError](../ValidationError.md)
+
+---
+
+# ValidationError constructor (9 of 9)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`ValidationError`](../ValidationError.md) class.

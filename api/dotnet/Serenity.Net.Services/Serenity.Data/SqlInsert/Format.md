@@ -1,0 +1,24 @@
+# SqlInsert.Format method
+**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+
+Formats an INSERT query.
+
+```csharp
+public static string Format(string tableName, List<string> nameValuePairs, 
+    ISqlDialect dialect = null)
+```
+
+| parameter | description |
+| --- | --- |
+| tableName | Table name (required). |
+| nameValuePairs | Field names and values. Must be passed in the order of `[field1, value1, field2, value2, ...., fieldN, valueN]`. It must have even number of elements. |
+| dialect | Target dialect |
+
+## Return Value
+
+Formatted query.
+
+## See Also
+
+* interface [ISqlDialect](../ISqlDialect.md)
+* class [SqlInsert](../SqlInsert.md)

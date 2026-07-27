@@ -15,4 +15,4 @@ public interface ICssFiles
 
 ## See Also
 
-* **Source:** *[ICssFiles.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/ICssFiles.cs)*
+* **Source:** *[ICssFiles.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/ICssFiles.cs)*

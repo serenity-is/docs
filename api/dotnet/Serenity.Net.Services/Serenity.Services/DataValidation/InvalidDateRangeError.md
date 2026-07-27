@@ -17,6 +17,6 @@ public static ValidationError InvalidDateRangeError(DateTimeField start, DateTim
 ## See Also
 
 * class [ValidationError](../Serenity.Net.Core/../ValidationError.md)
-* class [DateTimeField](../Serenity.Net.Entity/../../Serenity.Data/DateTimeField.md)
+* class [DateTimeField](../../Serenity.Data/DateTimeField.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

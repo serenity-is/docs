@@ -15,4 +15,4 @@ public static class PrefixHelper
 
 ## See Also
 
-* **Source:** *[PrefixHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Helpers/PrefixHelper.cs)*
+* **Source:** *[PrefixHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Helpers/PrefixHelper.cs)*

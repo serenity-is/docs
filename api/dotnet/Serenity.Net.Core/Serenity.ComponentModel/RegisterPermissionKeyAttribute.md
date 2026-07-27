@@ -17,4 +17,4 @@ public class RegisterPermissionKeyAttribute : PermissionAttributeBase
 ## See Also
 
 * class [PermissionAttributeBase](../Serenity.Data/PermissionAttributeBase.md)
-* **Source:** *[RegisterPermissionKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Permission/RegisterPermissionKeyAttribute.cs)*
+* **Source:** *[RegisterPermissionKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/RegisterPermissionKeyAttribute.cs)*

@@ -1,7 +1,7 @@
 # FilteringOptionAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`FilteringOptionAttribute`](../FilteringOptionAttribute.md) class.
+Declares a new filtering option
 
 ```csharp
 public FilteringOptionAttribute(string key, object value)
@@ -11,6 +11,10 @@ public FilteringOptionAttribute(string key, object value)
 | --- | --- |
 | key | The key. |
 | value | The value. |
+
+## Remarks
+
+Initializes a new instance of the [`FilteringOptionAttribute`](../FilteringOptionAttribute.md) class.
 
 ## See Also
 

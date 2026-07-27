@@ -7,17 +7,25 @@ A class that basically implements IPropertyInfo for PropertyInfo objects
 public class WrappedProperty : IPropertyInfo
 ```
 
+| parameter | description |
+| --- | --- |
+| property | The property. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [WrappedProperty](WrappedProperty/WrappedProperty.md)(…) | Initializes a new instance of the [`WrappedProperty`](WrappedProperty.md) class. |
+| [WrappedProperty](WrappedProperty/WrappedProperty.md)(…) | A class that basically implements IPropertyInfo for PropertyInfo objects |
 | [Name](WrappedProperty/Name.md) { get; } | Gets the name. |
 | [PropertyType](WrappedProperty/PropertyType.md) { get; } | Gets the type of the property. |
-| [GetAttribute&lt;TAttr&gt;](WrappedProperty/GetAttribute.md)() | Gets the attribute. |
-| [GetAttributes&lt;TAttr&gt;](WrappedProperty/GetAttributes.md)() | Gets the attributes. |
+| [GetAttribute&lt;TAttr&gt;](WrappedProperty/GetAttribute.md)(…) | Gets the attribute. |
+| [GetAttributes&lt;TAttr&gt;](WrappedProperty/GetAttributes.md)(…) | Gets the attributes. |
+
+## Remarks
+
+Initializes a new instance of the [`WrappedProperty`](WrappedProperty.md) class.
 
 ## See Also
 
 * interface [IPropertyInfo](IPropertyInfo.md)
-* **Source:** *[WrappedProperty.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Reflection/WrappedProperty.cs)*
+* **Source:** *[WrappedProperty.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/WrappedProperty.cs)*

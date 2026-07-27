@@ -11,9 +11,11 @@ public static class HtmlScriptExtensions
 
 | name | description |
 | --- | --- |
+| static [AutoIncludeModuleCss](HtmlScriptExtensions/AutoIncludeModuleCss.md)(…) | Automatically includes corresponding .css file for an ES module if it exists next to the .js file |
 | static [GetLocalTextContent](HtmlScriptExtensions/GetLocalTextContent.md)(…) | Gets the text content of a local text script |
 | static [GetLocalTextInclude](HtmlScriptExtensions/GetLocalTextInclude.md)(…) | Gets the script URL for a local text script |
 | static [LocalTextScript](HtmlScriptExtensions/LocalTextScript.md)(…) | Gets a script element for including a local text script |
+| static [ModulePageInit](HtmlScriptExtensions/ModulePageInit.md)(…) | Executes default export of a module page, usually pageInit |
 | static [ResolveWithHash](HtmlScriptExtensions/ResolveWithHash.md)(…) | Resolves a content URL by adding its hash with "?v=" prefix. |
 | static [Script](HtmlScriptExtensions/Script.md)(…) | Renders a script include element. If bundling is enabled, it may contain the bundle URL instead of the script URL. If the bundle containing the script file is already rendered in this context, it will return an empty string. |
 | static [ScriptBundle](HtmlScriptExtensions/ScriptBundle.md)(…) | Renders individual script elements for all JS files in a bundle if bundling is disabled, and renders a single script element containing the bundle URL if it is enabled. |
@@ -22,4 +24,4 @@ public static class HtmlScriptExtensions
 
 ## See Also
 
-* **Source:** *[HtmlScriptExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/HtmlScriptExtensions.cs)*
+* **Source:** *[HtmlScriptExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/HtmlScriptExtensions.cs)*

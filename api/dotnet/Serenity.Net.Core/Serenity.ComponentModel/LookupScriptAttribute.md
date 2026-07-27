@@ -22,4 +22,4 @@ public sealed class LookupScriptAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[LookupScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/LookupScriptAttribute.cs)*
+* **Source:** *[LookupScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/LookupScriptAttribute.cs)*

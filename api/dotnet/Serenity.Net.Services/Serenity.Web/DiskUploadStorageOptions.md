@@ -17,4 +17,4 @@ public class DiskUploadStorageOptions
 
 ## See Also
 
-* **Source:** *[DiskUploadStorageOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/DiskUploadStorageOptions.cs)*
+* **Source:** *[DiskUploadStorageOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/DiskUploadStorageOptions.cs)*

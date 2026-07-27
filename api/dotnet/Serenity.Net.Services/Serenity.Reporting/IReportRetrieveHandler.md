@@ -15,4 +15,4 @@ public interface IReportRetrieveHandler
 
 ## See Also
 
-* **Source:** *[IReportRetrieveHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Retrieve/IReportRetrieveHandler.cs)*
+* **Source:** *[IReportRetrieveHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Retrieve/IReportRetrieveHandler.cs)*

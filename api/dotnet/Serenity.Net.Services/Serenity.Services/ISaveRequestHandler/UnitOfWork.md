@@ -9,5 +9,5 @@ public IUnitOfWork UnitOfWork { get; }
 
 ## See Also
 
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * interface [ISaveRequestHandler](../ISaveRequestHandler.md)

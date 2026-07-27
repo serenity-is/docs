@@ -15,4 +15,4 @@ public interface IBehaviorFactory
 
 ## See Also
 
-* **Source:** *[IBehaviorFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/IBehaviorFactory.cs)*
+* **Source:** *[IBehaviorFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/IBehaviorFactory.cs)*

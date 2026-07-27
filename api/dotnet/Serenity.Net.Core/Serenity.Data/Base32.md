@@ -16,4 +16,4 @@ public sealed class Base32
 
 ## See Also
 
-* **Source:** *[Base32.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/Base32.cs)*
+* **Source:** *[Base32.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/Base32.cs)*

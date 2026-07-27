@@ -15,6 +15,6 @@ public static ValidationError RecordNotActive(IRow row, ITextLocalizer localizer
 ## See Also
 
 * class [ValidationError](../Serenity.Net.Core/../ValidationError.md)
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

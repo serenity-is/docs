@@ -18,4 +18,4 @@ public interface IFileWatcher
 
 ## See Also
 
-* **Source:** *[IFileWatcher.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Common/IFileWatcher.cs)*
+* **Source:** *[IFileWatcher.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Common/IFileWatcher.cs)*

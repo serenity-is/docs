@@ -16,4 +16,4 @@ public interface ILocalTextRegistry
 
 ## See Also
 
-* **Source:** *[ILocalTextRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/ILocalTextRegistry.cs)*
+* **Source:** *[ILocalTextRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/ILocalTextRegistry.cs)*

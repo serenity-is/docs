@@ -15,4 +15,4 @@ public interface IBehaviorProvider
 
 ## See Also
 
-* **Source:** *[IBehaviorProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/IBehaviorProvider.cs)*
+* **Source:** *[IBehaviorProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/IBehaviorProvider.cs)*

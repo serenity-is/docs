@@ -19,4 +19,4 @@ public class DateTimeFilteringAttribute : CustomFilteringAttribute
 ## See Also
 
 * class [CustomFilteringAttribute](CustomFilteringAttribute.md)
-* **Source:** *[DateTimeFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Filtering/BasicFilteringTypes/DateTimeFilteringAttribute.cs)*
+* **Source:** *[DateTimeFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Filtering/BasicFilteringTypes/DateTimeFilteringAttribute.cs)*

@@ -26,4 +26,4 @@ public class NavigationEntry
 
 ## See Also
 
-* **Source:** *[NavigationEntry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/NavigationEntry.cs)*
+* **Source:** *[NavigationEntry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/NavigationEntry.cs)*

@@ -1,7 +1,7 @@
 # DataScriptAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this method / type should generate a remote data script. Data contained by remote data scripts can be accessed client side using Q.getRemoteData("Key") function.
+Indicates that this method / type should generate a remote data script. Data contained by remote data scripts can be accessed client side using Serenity.getRemoteData("Key") function.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]
@@ -23,4 +23,4 @@ public class DataScriptAttribute : Attribute
 ## See Also
 
 * class [DynamicScriptAttribute](DynamicScriptAttribute.md)
-* **Source:** *[DataScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/DataScriptAttribute.cs)*
+* **Source:** *[DataScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/DataScriptAttribute.cs)*

@@ -26,4 +26,4 @@ public class ListResponse<T> : ServiceResponse, IListResponse
 
 * class [ServiceResponse](ServiceResponse.md)
 * interface [IListResponse](IListResponse.md)
-* **Source:** *[ListResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/ListResponse.cs)*
+* **Source:** *[ListResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/ListResponse.cs)*

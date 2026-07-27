@@ -15,8 +15,8 @@ public static void ValidateRequired(this IRow row, Field field, ITextLocalizer l
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
+* class [Field](../../Serenity.Data/Field.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)
 
@@ -40,7 +40,7 @@ public static void ValidateRequired(this IRow row, IEnumerable<Field> fields,
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
+* class [Field](../../Serenity.Data/Field.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

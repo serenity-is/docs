@@ -18,6 +18,6 @@ protected virtual void ApplyFieldContainsText(Field field, string containsText, 
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
-* class [BaseCriteria](../Serenity.Net.Data/../../Serenity.Data/BaseCriteria.md)
+* class [Field](../../Serenity.Data/Field.md)
+* class [BaseCriteria](../../Serenity.Data/BaseCriteria.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

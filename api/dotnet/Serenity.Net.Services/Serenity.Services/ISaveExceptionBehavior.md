@@ -15,4 +15,4 @@ public interface ISaveExceptionBehavior
 
 ## See Also
 
-* **Source:** *[ISaveExceptionBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/ISaveExceptionBehavior.cs)*
+* **Source:** *[ISaveExceptionBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/ISaveExceptionBehavior.cs)*

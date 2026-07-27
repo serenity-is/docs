@@ -15,4 +15,4 @@ public static class AnnotationTypeExtensions
 
 ## See Also
 
-* **Source:** *[AnnotationTypeExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Reflection/AnnotationTypeExtensions.cs)*
+* **Source:** *[AnnotationTypeExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/AnnotationTypeExtensions.cs)*

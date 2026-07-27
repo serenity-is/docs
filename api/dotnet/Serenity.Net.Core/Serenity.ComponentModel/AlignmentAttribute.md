@@ -8,6 +8,10 @@ Controls horizontal alignment of text (usually in grid columns).
 public abstract class AlignmentAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| align | Alignment |
+
 ## Public Members
 
 | name | description |
@@ -18,7 +22,7 @@ public abstract class AlignmentAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [AlignmentAttribute](AlignmentAttribute/AlignmentAttribute.md)(…) | Creates a new AlignmentAttribute |
+| [AlignmentAttribute](AlignmentAttribute/AlignmentAttribute.md)(…) | Controls horizontal alignment of text (usually in grid columns). |
 
 ## Remarks
 
@@ -26,4 +30,4 @@ This is an abstract base class. You need to use AlignCenter or AlignRight attrib
 
 ## See Also
 
-* **Source:** *[AlignmentAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Alignment/AlignmentAttribute.cs)*
+* **Source:** *[AlignmentAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Alignment/AlignmentAttribute.cs)*

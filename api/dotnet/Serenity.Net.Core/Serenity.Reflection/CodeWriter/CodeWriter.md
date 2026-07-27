@@ -20,7 +20,7 @@ public CodeWriter(int tabSize = 4)
 # CodeWriter constructor (2 of 3)
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`CodeWriter`](../CodeWriter.md) class.
+Used to write formatted code to a string builder.
 
 ```csharp
 public CodeWriter(StringBuilder sb, int tabSize)
@@ -30,6 +30,10 @@ public CodeWriter(StringBuilder sb, int tabSize)
 | --- | --- |
 | sb | The sb. |
 | tabSize | Number of spaces. |
+
+## Remarks
+
+Initializes a new instance of the [`CodeWriter`](../CodeWriter.md) class.
 
 ## See Also
 

@@ -17,4 +17,4 @@ public enum SaveRequestType
 
 ## See Also
 
-* **Source:** *[SaveRequestType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/SaveRequestType.cs)*
+* **Source:** *[SaveRequestType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/SaveRequestType.cs)*

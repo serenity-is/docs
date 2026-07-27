@@ -22,4 +22,4 @@ public class ScriptCulture
 
 ## See Also
 
-* **Source:** *[ScriptCulture.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Common/ScriptCulture.cs)*
+* **Source:** *[ScriptCulture.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Common/ScriptCulture.cs)*

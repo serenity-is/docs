@@ -12,7 +12,7 @@ public static string SanitizeFilename(string filename, string replacement = "_",
 | --- | --- |
 | filename | The string. |
 | replacement | Replacement string for invalid characters |
-| removeDiacritics | True to remove diacritics |
+| removeDiacritics | True (default) to remove diacritics |
 
 ## Exceptions
 

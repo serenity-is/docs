@@ -4,13 +4,14 @@
 Gets thumb file name
 
 ```csharp
-public static string GetThumbnailName(string path, string thumbSuffix = "_t.jpg")
+public static string GetThumbnailName(string path, int? width = null, int? height = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | path | File path |
-| thumbSuffix | Thumb suffix, default is "_t.jpg" |
+| width | Thumb width |
+| height | Thumb height |
 
 ## See Also
 

@@ -19,4 +19,4 @@ public class DefaultFileWatcherFactory : IFileWatcherFactory
 ## See Also
 
 * interface [IFileWatcherFactory](IFileWatcherFactory.md)
-* **Source:** *[DefaultFileWatcherFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Common/DefaultFileWatcherFactory.cs)*
+* **Source:** *[DefaultFileWatcherFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Common/DefaultFileWatcherFactory.cs)*

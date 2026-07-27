@@ -16,4 +16,4 @@ public interface IUserRetrieveService
 
 ## See Also
 
-* **Source:** *[IUserRetrieveService.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IUserRetrieveService.cs)*
+* **Source:** *[IUserRetrieveService.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IUserRetrieveService.cs)*

@@ -4,7 +4,7 @@
 Gets the attribute.
 
 ```csharp
-public TAttr GetAttribute<TAttr>()
+public TAttr GetAttribute<TAttr>(AttributeOrigin origin = AttributeOrigin.All)
     where TAttr : Attribute
 ```
 
@@ -15,4 +15,5 @@ public TAttr GetAttribute<TAttr>()
 ## See Also
 
 * class [TAttr](../Serenity.Net.Core/../WrappedProperty.TAttr.md)
+* enum [AttributeOrigin](../../Serenity/AttributeOrigin.md)
 * class [WrappedProperty](../WrappedProperty.md)

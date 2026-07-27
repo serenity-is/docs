@@ -19,4 +19,4 @@ public class AsyncLookupEditorAttribute : LookupEditorAttribute
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
 * class [LookupEditorAttribute](LookupEditorAttribute.md)
-* **Source:** *[AsyncLookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/AsyncLookupEditorAttribute.cs)*
+* **Source:** *[AsyncLookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/AsyncLookupEditorAttribute.cs)*

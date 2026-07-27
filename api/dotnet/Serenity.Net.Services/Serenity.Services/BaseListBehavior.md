@@ -27,4 +27,4 @@ public abstract class BaseListBehavior : IListBehavior
 ## See Also
 
 * interface [IListBehavior](IListBehavior.md)
-* **Source:** *[BaseListBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/List/BaseListBehavior.cs)*
+* **Source:** *[BaseListBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/List/BaseListBehavior.cs)*

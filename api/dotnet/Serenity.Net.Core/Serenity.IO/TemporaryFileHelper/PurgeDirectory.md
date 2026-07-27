@@ -5,7 +5,7 @@ Clears a folder based on specified conditions
 
 ```csharp
 public static void PurgeDirectory(string directoryToClean, TimeSpan autoExpireTime, 
-    int maxFilesInDirectory, string checkFileName)
+    int maxFilesInDirectory, string checkFileName, ITemporaryFileSystem fileSystem = null)
 ```
 
 | parameter | description |
@@ -14,6 +14,7 @@ public static void PurgeDirectory(string directoryToClean, TimeSpan autoExpireTi
 | autoExpireTime | Files with creation time older than this is deleted. If passed as 0, time based cleanup is skipped. |
 | maxFilesInDirectory | If more than this number of files exists, files will be deleted starting from oldest to newest. By passing 0, all files can be deleted. If passed as -1, file count based cleanup is skipped. |
 | checkFileName | Safety file to be checked. If it is specified and it doesn't exists, operation is aborted. |
+| fileSystem | File system |
 
 ## Remarks
 
@@ -21,4 +22,5 @@ If any errors occur during cleanup, this doesn't raise an exception and ignored.
 
 ## See Also
 
+* interface [ITemporaryFileSystem](../../Serenity/ITemporaryFileSystem.md)
 * class [TemporaryFileHelper](../TemporaryFileHelper.md)

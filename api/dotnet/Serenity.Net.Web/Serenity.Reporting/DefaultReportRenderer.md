@@ -7,11 +7,18 @@ Default implementation for IReportRenderer
 public class DefaultReportRenderer : IReportRenderer
 ```
 
+| parameter | description |
+| --- | --- |
+| excelRenderer | Excel renderer |
+| htmlReportPdfRenderer | HTML report pdf renderer |
+| serviceProvider | Service provider |
+| httpContextAccessor | Http context accessor |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultReportRenderer](DefaultReportRenderer/DefaultReportRenderer.md)(…) | Creates an instance of the class |
+| [DefaultReportRenderer](DefaultReportRenderer/DefaultReportRenderer.md)(…) | Default implementation for IReportRenderer |
 | [Render](DefaultReportRenderer/Render.md)(…) |  |
 
 ## Protected Members
@@ -30,7 +37,11 @@ public class DefaultReportRenderer : IReportRenderer
 | [RenderHtmlReport](DefaultReportRenderer/RenderHtmlReport.md)(…) | Renders an HTML report |
 | virtual [RenderUnknownFormat](DefaultReportRenderer/RenderUnknownFormat.md)(…) | Renders an unknown format. Can be overridden in derived classes. |
 
+## Remarks
+
+Creates an instance of the class
+
 ## See Also
 
 * interface [IReportRenderer](../Serenity.Net.Services/IReportRenderer.md)
-* **Source:** *[DefaultReportRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Reporting/DefaultReportRenderer.cs)*
+* **Source:** *[DefaultReportRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Reporting/DefaultReportRenderer.cs)*

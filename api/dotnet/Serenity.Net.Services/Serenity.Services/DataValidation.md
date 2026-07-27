@@ -36,4 +36,4 @@ public static class DataValidation
 
 ## See Also
 
-* **Source:** *[DataValidation.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/Validation/DataValidation.cs)*
+* **Source:** *[DataValidation.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/Validation/DataValidation.cs)*

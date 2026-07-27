@@ -38,4 +38,4 @@ public interface IHtmlToPdfOptions
 
 ## See Also
 
-* **Source:** *[IHtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/IHtmlToPdfOptions.cs)*
+* **Source:** *[IHtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/HtmlToPdf/IHtmlToPdfOptions.cs)*

@@ -16,4 +16,4 @@ public static class KnownMimeTypes
 
 ## See Also
 
-* **Source:** *[KnownMimeTypes.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Upload/KnownMimeTypes.cs)*
+* **Source:** *[KnownMimeTypes.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Upload/KnownMimeTypes.cs)*

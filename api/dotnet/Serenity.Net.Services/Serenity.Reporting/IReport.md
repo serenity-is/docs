@@ -15,4 +15,4 @@ public interface IReport
 
 ## See Also
 
-* **Source:** *[IReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IReport.cs)*
+* **Source:** *[IReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/IReport.cs)*

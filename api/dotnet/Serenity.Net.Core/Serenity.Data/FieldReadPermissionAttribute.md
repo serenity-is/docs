@@ -18,4 +18,4 @@ public class FieldReadPermissionAttribute : PermissionAttributeBase
 ## See Also
 
 * class [PermissionAttributeBase](PermissionAttributeBase.md)
-* **Source:** *[FieldReadPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Permission/FieldReadPermissionAttribute.cs)*
+* **Source:** *[FieldReadPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/FieldReadPermissionAttribute.cs)*

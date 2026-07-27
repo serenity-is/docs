@@ -12,12 +12,17 @@ public class SaveRequestHandler<TRow> : SaveRequestHandler<TRow, SaveRequest<TRo
 | parameter | description |
 | --- | --- |
 | TRow | The entity type |
+| context | Request context |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [SaveRequestHandler](SaveRequestHandler-1/SaveRequestHandler.md)(…) | Creates a new instance of the class |
+| [SaveRequestHandler](SaveRequestHandler-1/SaveRequestHandler.md)(…) | Base generic class for save request handlers that use [`SaveRequest`](SaveRequest-1.md) as the request type, and [`SaveResponse`](SaveResponse.md) as the response type. |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 
@@ -26,6 +31,6 @@ public class SaveRequestHandler<TRow> : SaveRequestHandler<TRow, SaveRequest<TRo
 * class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
 * class [SaveResponse](SaveResponse.md)
 * interface [ISaveHandler&lt;TRow&gt;](ISaveHandler-1.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
-* **Source:** *[SaveRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/SaveRequestHandlerT.cs)*
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
+* **Source:** *[SaveRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/SaveRequestHandlerT.cs)*

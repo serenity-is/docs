@@ -8,13 +8,21 @@ Assigns the generic handler type (e.g. [`SaveRequestHandler`](SaveRequestHandler
 public class GenericHandlerTypeAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| type | The handler type |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [GenericHandlerTypeAttribute](GenericHandlerTypeAttribute/GenericHandlerTypeAttribute.md)(…) | Creates an instance of the attribute |
+| [GenericHandlerTypeAttribute](GenericHandlerTypeAttribute/GenericHandlerTypeAttribute.md)(…) | Assigns the generic handler type (e.g. [`SaveRequestHandler`](SaveRequestHandler-1.md) for a handler interface (like [`ISaveRequestHandler`](ISaveRequestHandler.md)) |
 | [Value](GenericHandlerTypeAttribute/Value.md) { get; } | The generic handler type. |
+
+## Remarks
+
+Creates an instance of the attribute
 
 ## See Also
 
-* **Source:** *[GenericHandlerTypeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Handler/GenericHandlerTypeAttribute.cs)*
+* **Source:** *[GenericHandlerTypeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/GenericHandlerTypeAttribute.cs)*

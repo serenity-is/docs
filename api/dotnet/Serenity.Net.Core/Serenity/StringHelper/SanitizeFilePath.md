@@ -1,7 +1,7 @@
 # StringHelper.SanitizeFilePath method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Sanitizes the path by removing diacritics, ı with i and replacing any invalid file path characters with underscore.
+Sanitizes the path by removing diacritics (ü with u, ı with i etc.) and replacing any invalid file path characters with underscore.
 
 ```csharp
 public static string SanitizeFilePath(string filename, string replacement = "_", 

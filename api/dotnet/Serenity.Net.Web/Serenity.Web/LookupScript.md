@@ -19,6 +19,7 @@ public abstract class LookupScript : DynamicScript, IGetScriptData, INamedDynami
 | [TextField](LookupScript/TextField.md) { get; set; } | Gets / sets lookup text field |
 | override [GetScript](LookupScript/GetScript.md)() |  |
 | [GetScriptData](LookupScript/GetScriptData.md)() |  |
+| const [NewLookupFormat](LookupScript/NewLookupFormat.md) | Format string for new Lookup({0}, {1}) |
 | class [Data](LookupScript.Data.md) | Data format for a lookup script |
 
 ## Protected Members
@@ -30,7 +31,7 @@ public abstract class LookupScript : DynamicScript, IGetScriptData, INamedDynami
 
 ## See Also
 
-* class [DynamicScript](DynamicScript.md)
-* interface [IGetScriptData](IGetScriptData.md)
-* interface [INamedDynamicScript](INamedDynamicScript.md)
-* **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*
+* class [DynamicScript](../Serenity.Net.Services/DynamicScript.md)
+* interface [IGetScriptData](../Serenity.Net.Core/IGetScriptData.md)
+* interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
+* **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*

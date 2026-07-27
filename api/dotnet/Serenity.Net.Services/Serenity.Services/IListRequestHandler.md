@@ -23,5 +23,5 @@ public interface IListRequestHandler : IRequestHandler
 
 ## See Also
 
-* interface [IRequestHandler](IRequestHandler.md)
-* **Source:** *[IListRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/List/IListRequestHandler.cs)*
+* interface [IRequestHandler](../Serenity.Net.Core/IRequestHandler.md)
+* **Source:** *[IListRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/List/IListRequestHandler.cs)*

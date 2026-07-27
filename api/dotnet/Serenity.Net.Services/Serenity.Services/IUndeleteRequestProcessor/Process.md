@@ -15,6 +15,6 @@ public UndeleteResponse Process(IUnitOfWork uow, UndeleteRequest request)
 ## See Also
 
 * class [UndeleteResponse](../UndeleteResponse.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * class [UndeleteRequest](../UndeleteRequest.md)
 * interface [IUndeleteRequestProcessor](../IUndeleteRequestProcessor.md)

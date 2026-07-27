@@ -15,4 +15,4 @@ public interface IUserPasswordValidator
 
 ## See Also
 
-* **Source:** *[IUserPasswordValidator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IUserPasswordValidator.cs)*
+* **Source:** *[IUserPasswordValidator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IUserPasswordValidator.cs)*

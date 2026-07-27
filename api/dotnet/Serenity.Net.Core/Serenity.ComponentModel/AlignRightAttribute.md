@@ -16,9 +16,9 @@ public class AlignRightAttribute : AlignmentAttribute
 
 ## Remarks
 
-Used for text alignment in grids by adding `align-center` CSS class to corresponding SlickGrid column. Note that it has no effect on editors or forms.
+Used for text alignment in grids by adding `align-center` CSS class to corresponding SleekGrid column. Note that it has no effect on editors or forms.
 
 ## See Also
 
 * class [AlignmentAttribute](AlignmentAttribute.md)
-* **Source:** *[AlignRightAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Alignment/AlignRightAttribute.cs)*
+* **Source:** *[AlignRightAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Alignment/AlignRightAttribute.cs)*

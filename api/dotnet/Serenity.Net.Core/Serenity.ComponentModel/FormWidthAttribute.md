@@ -24,4 +24,4 @@ public class FormWidthAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[FormWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/Layout/FormWidthAttribute.cs)*
+* **Source:** *[FormWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Layout/FormWidthAttribute.cs)*

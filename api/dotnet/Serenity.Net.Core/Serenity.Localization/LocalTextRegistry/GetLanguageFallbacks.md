@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 ```csharp
-public IDictionary<string, string> GetLanguageFallbacks()
+public IEnumerable<string> GetLanguageFallbacks(string languageID)
 ```
 
 ## See Also

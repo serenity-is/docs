@@ -21,4 +21,4 @@ public sealed class EditLinkAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[EditLinkAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/EditLinkAttribute.cs)*
+* **Source:** *[EditLinkAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/EditLinkAttribute.cs)*

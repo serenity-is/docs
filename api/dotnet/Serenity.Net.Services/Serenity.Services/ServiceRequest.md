@@ -16,4 +16,4 @@ public class ServiceRequest
 
 ## See Also
 
-* **Source:** *[ServiceRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/ServiceRequest.cs)*
+* **Source:** *[ServiceRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/ServiceRequest.cs)*

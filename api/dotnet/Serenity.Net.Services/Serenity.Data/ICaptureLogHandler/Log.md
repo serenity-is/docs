@@ -16,6 +16,6 @@ public void Log(IUnitOfWork uow, IRow old, IRow row, object userId)
 
 ## See Also
 
-* interface [IUnitOfWork](../Serenity.Net.Data/../IUnitOfWork.md)
-* interface [IRow](../Serenity.Net.Entity/../IRow.md)
+* interface [IUnitOfWork](../IUnitOfWork.md)
+* interface [IRow](../IRow.md)
 * interface [ICaptureLogHandler](../ICaptureLogHandler.md)

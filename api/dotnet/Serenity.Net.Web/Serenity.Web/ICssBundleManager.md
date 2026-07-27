@@ -19,4 +19,4 @@ public interface ICssBundleManager
 
 ## See Also
 
-* **Source:** *[ICssBundleManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ICssBundleManager.cs)*
+* **Source:** *[ICssBundleManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ICssBundleManager.cs)*

@@ -16,4 +16,4 @@ public class LookupScriptRegistration
 
 ## See Also
 
-* **Source:** *[LookupScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/PropertyEditor/LookupScriptRegistration.cs)*
+* **Source:** *[LookupScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/PropertyEditor/LookupScriptRegistration.cs)*

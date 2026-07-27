@@ -7,11 +7,15 @@ A JSON service client implementation
 public class JsonServiceClient
 ```
 
+| parameter | description |
+| --- | --- |
+| baseUrl | The base url |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [JsonServiceClient](JsonServiceClient/JsonServiceClient.md)(…) | Creates an instance of JsonServiceClient for the passed baseUrl |
+| [JsonServiceClient](JsonServiceClient/JsonServiceClient.md)(…) | A JSON service client implementation |
 | virtual [Post&lt;TResponse&gt;](JsonServiceClient/Post.md)(…) | Post to JSON service |
 
 ## Protected Members
@@ -22,6 +26,10 @@ public class JsonServiceClient
 | [cookies-](JsonServiceClient/cookies-.md) | Cookie container |
 | [InternalPost&lt;TResponse&gt;](JsonServiceClient/InternalPost.md)(…) | Posts to a JSON service, internal version |
 
+## Remarks
+
+Creates an instance of JsonServiceClient for the passed baseUrl
+
 ## See Also
 
-* **Source:** *[JsonServiceClient.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Json/JsonServiceClient.cs)*
+* **Source:** *[JsonServiceClient.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Json/JsonServiceClient.cs)*

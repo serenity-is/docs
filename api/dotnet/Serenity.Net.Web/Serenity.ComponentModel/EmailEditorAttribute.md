@@ -22,5 +22,5 @@ public class EmailEditorAttribute : CustomEditorAttribute, ICustomValidator
 ## See Also
 
 * class [CustomEditorAttribute](../Serenity.Net.Core/CustomEditorAttribute.md)
-* interface [ICustomValidator](../Serenity.Net.Data/../Serenity/ICustomValidator.md)
-* **Source:** *[EmailEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/PropertyEditor/EmailEditorAttribute.cs)*
+* interface [ICustomValidator](../Serenity.Net.Services/../Serenity/ICustomValidator.md)
+* **Source:** *[EmailEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/PropertyEditor/EmailEditorAttribute.cs)*

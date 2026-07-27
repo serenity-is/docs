@@ -12,16 +12,13 @@ public static class UploadStorageExtensions
 | name | description |
 | --- | --- |
 | static [CopyTemporaryFile](UploadStorageExtensions/CopyTemporaryFile.md)(…) | Copies a temporary file to its target location |
-| static [CreateAdditionalThumbs](UploadStorageExtensions/CreateAdditionalThumbs.md)(…) | Creates additional thumbs if specified in the upload image options, and saves them to the target upload storage |
-| static [CreateDefaultThumb](UploadStorageExtensions/CreateDefaultThumb.md)(…) | Creates the default thumbnail for image if the size is provided in the upload image options (ThumbWidth and ThumbHeight &gt;= 0) and saves it to the target upload storage file |
 | static [GetOriginalName](UploadStorageExtensions/GetOriginalName.md)(…) | Gets original name of a file |
+| static [GetPrimaryFileFromThumb](UploadStorageExtensions/GetPrimaryFileFromThumb.md)(…) | Gets the primary file path from a thumbnail path |
+| static [GetThumbnailFiles](UploadStorageExtensions/GetThumbnailFiles.md)(…) | Gets thumbnail files for a source file |
 | static [GetThumbnailUrl](UploadStorageExtensions/GetThumbnailUrl.md)(…) | Gets thumbnail URL for the file path |
 | static [ReadAllFileBytes](UploadStorageExtensions/ReadAllFileBytes.md)(…) | Reads all file bytes |
-| static [ScaleImage](UploadStorageExtensions/ScaleImage.md)(…) | Scales the temporary image with provided upload image options if required based on the options and saves the result to the target upload storage file |
-| static [ScaleImageAndCreateAllThumbs](UploadStorageExtensions/ScaleImageAndCreateAllThumbs.md)(…) | Depending on the image upload options, scales image, creates default and additional thumbs and saves them to the upload storage files. |
-| static [ScaleImageAs](UploadStorageExtensions/ScaleImageAs.md)(…) | Scales an image and saves it to an upload storage file |
 | static [SetOriginalName](UploadStorageExtensions/SetOriginalName.md)(…) | Sets original name for a file |
 
 ## See Also
 
-* **Source:** *[UploadStorageExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/UploadStorageExtensions.cs)*
+* **Source:** *[UploadStorageExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/UploadStorageExtensions.cs)*

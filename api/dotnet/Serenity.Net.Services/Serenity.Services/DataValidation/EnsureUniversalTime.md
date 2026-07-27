@@ -14,6 +14,6 @@ public static void EnsureUniversalTime(IRow row, DateTimeField field)
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
-* class [DateTimeField](../Serenity.Net.Entity/../../Serenity.Data/DateTimeField.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
+* class [DateTimeField](../../Serenity.Data/DateTimeField.md)
 * class [DataValidation](../DataValidation.md)

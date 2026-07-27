@@ -21,7 +21,7 @@ public NavigationGroupAttribute(string title, string icon = null)
 # NavigationGroupAttribute constructor (2 of 2)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a new instance of the attribute
+Defines a navigation group, which are usually the icons on the sidebar band
 
 ```csharp
 public NavigationGroupAttribute(int order, string title, string icon = null)
@@ -32,6 +32,10 @@ public NavigationGroupAttribute(int order, string title, string icon = null)
 | order | Order |
 | title | Title |
 | icon | Icon class |
+
+## Remarks
+
+Creates a new instance of the attribute
 
 ## See Also
 

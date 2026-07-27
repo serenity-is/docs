@@ -14,5 +14,5 @@ public void IfNotRegistered(string name, Func<IDynamicScript> callback)
 
 ## See Also
 
-* interface [IDynamicScript](../IDynamicScript.md)
+* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)

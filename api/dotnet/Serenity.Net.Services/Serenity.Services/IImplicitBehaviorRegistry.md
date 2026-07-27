@@ -11,8 +11,8 @@ public interface IImplicitBehaviorRegistry
 
 | name | description |
 | --- | --- |
-| [GetTypes](IImplicitBehaviorRegistry/GetTypes.md)() | Gets type list of implict behavior ([`IImplicitBehavior`](IImplicitBehavior.md)) types |
+| [GetTypes](IImplicitBehaviorRegistry/GetTypes.md)() | Gets type list of implicit behavior ([`IImplicitBehavior`](IImplicitBehavior.md)) types |
 
 ## See Also
 
-* **Source:** *[IImplicitBehaviorRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/IImplicitBehaviorRegistry.cs)*
+* **Source:** *[IImplicitBehaviorRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/IImplicitBehaviorRegistry.cs)*

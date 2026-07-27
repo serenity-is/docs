@@ -18,4 +18,4 @@ public sealed class RequiredAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[RequiredAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/RequiredAttribute.cs)*
+* **Source:** *[RequiredAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/RequiredAttribute.cs)*

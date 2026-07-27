@@ -21,5 +21,5 @@ public interface IUndeleteRequestHandler : IRequestHandler
 
 ## See Also
 
-* interface [IRequestHandler](IRequestHandler.md)
-* **Source:** *[IUndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Undelete/IUndeleteRequestHandler.cs)*
+* interface [IRequestHandler](../Serenity.Net.Core/IRequestHandler.md)
+* **Source:** *[IUndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Undelete/IUndeleteRequestHandler.cs)*

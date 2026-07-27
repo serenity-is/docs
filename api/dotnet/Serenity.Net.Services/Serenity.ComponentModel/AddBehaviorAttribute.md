@@ -17,4 +17,4 @@ public class AddBehaviorAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[AddBehaviorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/AddBehaviorAttribute.cs)*
+* **Source:** *[AddBehaviorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/AddBehaviorAttribute.cs)*

@@ -43,6 +43,7 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 | [behaviors-](RetrieveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
 | virtual [AllowSelectField](RetrieveRequestHandler-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on is read permission, selectlevel.never flag, and lookup access mode |
 | virtual [CreateQuery](RetrieveRequestHandler-3/CreateQuery.md)() | Creates a query instance with the dialect for current connection. |
+| virtual [ExecuteQuery](RetrieveRequestHandler-3/ExecuteQuery.md)() | Executes the query and sets the response entity if found. |
 | virtual [GetBehaviors](RetrieveRequestHandler-3/GetBehaviors.md)() | Gets the list of retrieve behaviors |
 | [IsIncluded](RetrieveRequestHandler-3/IsIncluded.md)(…) | Returns true if field is included in [`IncludeColumns`](RetrieveRequest/IncludeColumns.md) (2 methods) |
 | virtual [OnAfterExecuteQuery](RetrieveRequestHandler-3/OnAfterExecuteQuery.md)() | Called after executing the retrieve query |
@@ -51,7 +52,7 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 | virtual [PrepareQuery](RetrieveRequestHandler-3/PrepareQuery.md)(…) | Prepares query by calling [`SelectFields`](RetrieveRequestHandler-3/SelectFields.md). |
 | virtual [SelectField](RetrieveRequestHandler-3/SelectField.md)(…) | Calls query.Select(field) |
 | virtual [SelectFields](RetrieveRequestHandler-3/SelectFields.md)(…) | Calls query.Select(field) for all the fields without NotMapped, and if [`AllowSelectField`](RetrieveRequestHandler-3/AllowSelectField.md) and [`ShouldSelectField`](RetrieveRequestHandler-3/ShouldSelectField.md) returns true. |
-| virtual [ShouldSelectField](RetrieveRequestHandler-3/ShouldSelectField.md)(…) | Returns true if the field should be selected, based on current ColumnSelection, field MinSelectLevelAttribute, the field being a not mapped (NotMappedAttribute) field, table field, or a view / expression field. |
+| virtual [ShouldSelectField](RetrieveRequestHandler-3/ShouldSelectField.md)(…) | Returns true if the field should be selected, based on current ColumnSelection, field [`MinSelectLevelAttribute`](../Serenity.Data.Mapping/MinSelectLevelAttribute.md), the field being a not mapped ([`NotMappedAttribute`](../Serenity.Data.Mapping/NotMappedAttribute.md)) field, table field, or a view / expression field. |
 | virtual [ValidatePermissions](RetrieveRequestHandler-3/ValidatePermissions.md)() | Validates if the user is allowed to query this entity type by checking ReadPermissionAttribute and ServiceLookupPermissionAttribute if the request is in lookup access mode. |
 | virtual [ValidateRequest](RetrieveRequestHandler-3/ValidateRequest.md)() | Validates the request by calling [`ValidatePermissions`](RetrieveRequestHandler-3/ValidatePermissions.md) |
 
@@ -62,7 +63,7 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 * class [TRetrieveRequest](../Serenity.Net.Services/RetrieveRequestHandler-3.TRetrieveRequest.md)
 * class [TRetrieveResponse](../Serenity.Net.Services/RetrieveRequestHandler-3.TRetrieveResponse.md)
 * interface [IRetrieveRequestProcessor](IRetrieveRequestProcessor.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
 * class [RetrieveRequest](RetrieveRequest.md)
 * class [RetrieveResponse&lt;T&gt;](RetrieveResponse-1.md)
-* **Source:** *[RetrieveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Retrieve/RetrieveRequestHandler.cs)*
+* **Source:** *[RetrieveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Retrieve/RetrieveRequestHandler.cs)*

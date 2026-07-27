@@ -26,4 +26,4 @@ public interface IUploadStorage
 
 ## See Also
 
-* **Source:** *[IUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/IUploadStorage.cs)*
+* **Source:** *[IUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/IUploadStorage.cs)*

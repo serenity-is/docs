@@ -21,6 +21,6 @@ public interface ISaveHandler<TRow> : ICreateHandler<TRow>,
 * class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
 * class [SaveResponse](SaveResponse.md)
 * interface [IUpdateHandler&lt;TRow&gt;](IUpdateHandler-1.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
-* **Source:** *[ISaveHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/ISaveHandlerT.cs)*
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
+* **Source:** *[ISaveHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/ISaveHandlerT.cs)*

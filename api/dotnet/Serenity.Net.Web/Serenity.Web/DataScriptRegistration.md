@@ -16,4 +16,4 @@ public class DataScriptRegistration
 
 ## See Also
 
-* **Source:** *[DataScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/PropertyEditor/DataScriptRegistration.cs)*
+* **Source:** *[DataScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/PropertyEditor/DataScriptRegistration.cs)*

@@ -15,4 +15,4 @@ public interface IHasPassword
 
 ## See Also
 
-* **Source:** *[IHasPassword.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IHasPassword.cs)*
+* **Source:** *[IHasPassword.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IHasPassword.cs)*

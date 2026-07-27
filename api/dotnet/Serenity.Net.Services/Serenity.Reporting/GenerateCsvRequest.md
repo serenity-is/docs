@@ -19,4 +19,4 @@ public class GenerateCsvRequest : ServiceRequest
 ## See Also
 
 * class [ServiceRequest](../Serenity.Services/ServiceRequest.md)
-* **Source:** *[GenerateCsvRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Model/GenerateCsvRequest.cs)*
+* **Source:** *[GenerateCsvRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Model/GenerateCsvRequest.cs)*

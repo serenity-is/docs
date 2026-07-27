@@ -1,18 +1,22 @@
 # MasterDetailRelationBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Behavior class that handles MasterDetailRelationAttribute
+Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md)
 
 ```csharp
 public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior, 
     IImplicitBehavior, IListBehavior, IRetrieveBehavior
 ```
 
+| parameter | description |
+| --- | --- |
+| handlerFactory | Default handler factory |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [MasterDetailRelationBehavior](MasterDetailRelationBehavior/MasterDetailRelationBehavior.md)(…) | Creates an instance of the class |
+| [MasterDetailRelationBehavior](MasterDetailRelationBehavior/MasterDetailRelationBehavior.md)(…) | Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md) |
 | [Target](MasterDetailRelationBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](MasterDetailRelationBehavior/ActivateFor.md)(…) |  |
 | [OnAfterExecuteQuery](MasterDetailRelationBehavior/OnAfterExecuteQuery.md)(…) |  (2 methods) |
@@ -24,6 +28,16 @@ public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavi
 | [OnReturn](MasterDetailRelationBehavior/OnReturn.md)(…) |  (2 methods) |
 | [OnValidateRequest](MasterDetailRelationBehavior/OnValidateRequest.md)(…) |  (2 methods) |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | handlerFactory is null |
+
+## Remarks
+
+Creates an instance of the class
+
 ## See Also
 
 * class [BaseSaveDeleteBehavior](BaseSaveDeleteBehavior.md)
@@ -31,4 +45,4 @@ public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavi
 * interface [IImplicitBehavior](IImplicitBehavior.md)
 * interface [IListBehavior](IListBehavior.md)
 * interface [IRetrieveBehavior](IRetrieveBehavior.md)
-* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*
+* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*

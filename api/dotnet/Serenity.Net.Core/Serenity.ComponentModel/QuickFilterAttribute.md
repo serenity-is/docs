@@ -8,15 +8,23 @@ Indicates that this property should have a quick filter on grid.
 public class QuickFilterAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | if set to `true` quick filter is enabled. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [QuickFilterAttribute](QuickFilterAttribute/QuickFilterAttribute.md)(…) | Initializes a new instance of the [`QuickFilterAttribute`](QuickFilterAttribute.md) class. |
+| [QuickFilterAttribute](QuickFilterAttribute/QuickFilterAttribute.md)(…) | Indicates that this property should have a quick filter on grid. |
 | [CssClass](QuickFilterAttribute/CssClass.md) { get; set; } | Gets or sets the CSS class for generated quick filter div. |
 | [Separator](QuickFilterAttribute/Separator.md) { get; set; } | Gets or sets a value indicating whether this [`QuickFilterAttribute`](QuickFilterAttribute.md) should have a separator before others, e.g. wrap into new line. |
 | [Value](QuickFilterAttribute/Value.md) { get; } | Gets a value indicating whether this [`QuickFilterAttribute`](QuickFilterAttribute.md) is enabled. |
 
+## Remarks
+
+Initializes a new instance of the [`QuickFilterAttribute`](QuickFilterAttribute.md) class.
+
 ## See Also
 
-* **Source:** *[QuickFilterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Filtering/QuickFilterAttribute.cs)*
+* **Source:** *[QuickFilterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Filtering/QuickFilterAttribute.cs)*

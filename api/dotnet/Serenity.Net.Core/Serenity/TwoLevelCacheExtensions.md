@@ -20,4 +20,4 @@ public static class TwoLevelCacheExtensions
 
 ## See Also
 
-* **Source:** *[TwoLevelCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Caching/TwoLevelCacheExtensions.cs)*
+* **Source:** *[TwoLevelCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Caching/TwoLevelCacheExtensions.cs)*

@@ -15,6 +15,6 @@ public TSaveResponse Create(IUnitOfWork uow, TSaveRequest request)
 ## See Also
 
 * class [TSaveResponse](../Serenity.Net.Services/../ICreateHandler-3.TSaveResponse.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * class [TSaveRequest](../Serenity.Net.Services/../ICreateHandler-3.TSaveRequest.md)
 * interface [ICreateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](../ICreateHandler-3.md)

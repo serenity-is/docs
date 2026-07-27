@@ -15,4 +15,4 @@ public static class NestedPermissionKeyRegistration
 
 ## See Also
 
-* **Source:** *[NestedPermissionKeyRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/NestedPermissionKeyRegistration.cs)*
+* **Source:** *[NestedPermissionKeyRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/NestedPermissionKeyRegistration.cs)*

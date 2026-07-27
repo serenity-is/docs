@@ -17,4 +17,4 @@ public class FieldModifyPermissionAttribute : PermissionAttributeBase
 ## See Also
 
 * class [PermissionAttributeBase](PermissionAttributeBase.md)
-* **Source:** *[FieldModifyPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Permission/FieldModifyPermissionAttribute.cs)*
+* **Source:** *[FieldModifyPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/FieldModifyPermissionAttribute.cs)*

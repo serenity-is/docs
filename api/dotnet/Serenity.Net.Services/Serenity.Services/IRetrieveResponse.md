@@ -16,4 +16,4 @@ public interface IRetrieveResponse
 
 ## See Also
 
-* **Source:** *[IRetrieveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/IRetrieveResponse.cs)*
+* **Source:** *[IRetrieveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/IRetrieveResponse.cs)*

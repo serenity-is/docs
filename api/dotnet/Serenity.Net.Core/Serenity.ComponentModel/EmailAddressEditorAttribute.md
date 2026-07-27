@@ -18,4 +18,4 @@ public class EmailAddressEditorAttribute : CustomEditorAttribute
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[EmailAddressEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/EmailAddressEditorAttribute.cs)*
+* **Source:** *[EmailAddressEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/EmailAddressEditorAttribute.cs)*

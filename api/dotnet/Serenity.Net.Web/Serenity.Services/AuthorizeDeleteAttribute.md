@@ -8,13 +8,21 @@ Authorizes access to a service method by reading one of DeletePermissionAttribut
 public class AuthorizeDeleteAttribute : ServiceAuthorizeAttribute
 ```
 
+| parameter | description |
+| --- | --- |
+| sourceType | Source type |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [AuthorizeDeleteAttribute](AuthorizeDeleteAttribute/AuthorizeDeleteAttribute.md)(…) | Creates a new instance of the attribute |
+| [AuthorizeDeleteAttribute](AuthorizeDeleteAttribute/AuthorizeDeleteAttribute.md)(…) | Authorizes access to a service method by reading one of DeletePermissionAttribute, ModifyPermissionAttribute or ReadPermissionAttribute from the target type, which is usually a Row class. |
+
+## Remarks
+
+Creates a new instance of the attribute
 
 ## See Also
 
 * class [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute.md)
-* **Source:** *[AuthorizeDeleteAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/AuthorizeDeleteAttribute.cs)*
+* **Source:** *[AuthorizeDeleteAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/AuthorizeDeleteAttribute.cs)*

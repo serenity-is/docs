@@ -22,7 +22,8 @@ public class PhysicalFileSystem : IFileSystem
 | [GetFiles](PhysicalFileSystem/GetFiles.md)(…) |  |
 | [GetFileSize](PhysicalFileSystem/GetFileSize.md)(…) |  |
 | [GetFullPath](PhysicalFileSystem/GetFullPath.md)(…) |  |
-| virtual [GetRelativePath](PhysicalFileSystem/GetRelativePath.md)(…) |  |
+| [GetLastWriteTimeUtc](PhysicalFileSystem/GetLastWriteTimeUtc.md)(…) |  |
+| [GetRelativePath](PhysicalFileSystem/GetRelativePath.md)(…) |  |
 | [OpenRead](PhysicalFileSystem/OpenRead.md)(…) |  |
 | [ReadAllBytes](PhysicalFileSystem/ReadAllBytes.md)(…) |  |
 | [ReadAllText](PhysicalFileSystem/ReadAllText.md)(…) |  |
@@ -32,4 +33,4 @@ public class PhysicalFileSystem : IFileSystem
 ## See Also
 
 * interface [IFileSystem](IFileSystem.md)
-* **Source:** *[PhysicalFileSystem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/IO/PhysicalFileSystem.cs)*
+* **Source:** *[PhysicalFileSystem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/IO/PhysicalFileSystem.cs)*

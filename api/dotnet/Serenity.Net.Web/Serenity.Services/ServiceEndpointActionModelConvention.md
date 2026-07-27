@@ -16,4 +16,4 @@ public class ServiceEndpointActionModelConvention : IActionModelConvention
 
 ## See Also
 
-* **Source:** *[ServiceEndpointActionModelConvention.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ServiceEndpointActionModelConvention.cs)*
+* **Source:** *[ServiceEndpointActionModelConvention.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ServiceEndpointActionModelConvention.cs)*

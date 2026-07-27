@@ -8,13 +8,21 @@ Sets the enumeration key of an enum
 public class EnumKeyAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [EnumKeyAttribute](EnumKeyAttribute/EnumKeyAttribute.md)(…) | Initializes a new instance of the [`EnumKeyAttribute`](EnumKeyAttribute.md) class. |
+| [EnumKeyAttribute](EnumKeyAttribute/EnumKeyAttribute.md)(…) | Sets the enumeration key of an enum |
 | [Value](EnumKeyAttribute/Value.md) { get; } | Gets the enum key. |
+
+## Remarks
+
+Initializes a new instance of the [`EnumKeyAttribute`](EnumKeyAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[EnumKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/EnumKeyAttribute.cs)*
+* **Source:** *[EnumKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/EnumKeyAttribute.cs)*

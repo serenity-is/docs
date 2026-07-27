@@ -16,4 +16,4 @@ public interface IWKHtmlToPdfConverter : IHtmlToPdfConverter
 ## See Also
 
 * interface [IHtmlToPdfConverter](IHtmlToPdfConverter.md)
-* **Source:** *[IWKHtmlToPdfConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/IWKHtmlToPdfConverter.cs)*
+* **Source:** *[IWKHtmlToPdfConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/HtmlToPdf/IWKHtmlToPdfConverter.cs)*

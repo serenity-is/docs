@@ -18,4 +18,4 @@ public interface IImageProcessor
 
 ## See Also
 
-* **Source:** *[IImageProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/IImageProcessor.cs)*
+* **Source:** *[IImageProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/IImageProcessor.cs)*

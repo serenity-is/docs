@@ -16,4 +16,4 @@ public interface ISaveRequestProcessor : ISaveRequestHandler
 ## See Also
 
 * interface [ISaveRequestHandler](ISaveRequestHandler.md)
-* **Source:** *[ISaveRequestProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/ISaveRequestProcessor.cs)*
+* **Source:** *[ISaveRequestProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/ISaveRequestProcessor.cs)*

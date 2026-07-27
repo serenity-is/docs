@@ -1,7 +1,7 @@
 # ServiceLookupEditorBaseAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`ServiceLookupEditorBaseAttribute`](../ServiceLookupEditorBaseAttribute.md) class.
+Base class for service lookup based editor types
 
 ```csharp
 protected ServiceLookupEditorBaseAttribute(string editorType)
@@ -11,6 +11,11 @@ protected ServiceLookupEditorBaseAttribute(string editorType)
 | --- | --- |
 | editorType | Type of the editor. |
 
+## Remarks
+
+Initializes a new instance of the [`ServiceLookupEditorBaseAttribute`](../ServiceLookupEditorBaseAttribute.md) class.
+
 ## See Also
 
+* class [CustomEditorAttribute](../CustomEditorAttribute.md)
 * class [ServiceLookupEditorBaseAttribute](../ServiceLookupEditorBaseAttribute.md)

@@ -1,21 +1,25 @@
 # DefaultUserClaimCreator constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates an instance of the class
+Default implementation for IUserClaimCreator
 
 ```csharp
-public DefaultUserClaimCreator(IUserRetrieveService userRetrieveService)
+public DefaultUserClaimCreator(IUserRetrieveService userRetriever)
 ```
 
 | parameter | description |
 | --- | --- |
-| userRetrieveService |  |
+| userRetriever |  |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
 | ArgumentNullException |  |
+
+## Remarks
+
+Creates an instance of the class
 
 ## See Also
 

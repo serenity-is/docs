@@ -8,13 +8,21 @@ Sets a tab for a form field.
 public class TabAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [TabAttribute](TabAttribute/TabAttribute.md)(…) | Initializes a new instance of the [`TabAttribute`](TabAttribute.md) class. |
+| [TabAttribute](TabAttribute/TabAttribute.md)(…) | Sets a tab for a form field. |
 | [Value](TabAttribute/Value.md) { get; } | Gets the value. |
+
+## Remarks
+
+Initializes a new instance of the [`TabAttribute`](TabAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[TabAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/TabAttribute.cs)*
+* **Source:** *[TabAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/TabAttribute.cs)*

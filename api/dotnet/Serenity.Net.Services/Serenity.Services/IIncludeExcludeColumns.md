@@ -16,4 +16,4 @@ public interface IIncludeExcludeColumns
 
 ## See Also
 
-* **Source:** *[IIncludeExcludeColumns.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/IIncludeExcludeColumns.cs)*
+* **Source:** *[IIncludeExcludeColumns.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/IIncludeExcludeColumns.cs)*

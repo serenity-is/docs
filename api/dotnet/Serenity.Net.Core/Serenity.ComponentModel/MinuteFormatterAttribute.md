@@ -19,4 +19,4 @@ public class MinuteFormatterAttribute : CustomFormatterAttribute
 ## See Also
 
 * class [CustomFormatterAttribute](CustomFormatterAttribute.md)
-* **Source:** *[BasicFormatterTypes.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Formatting/BasicFormatterTypes.cs)*
+* **Source:** *[MinuteFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Formatting/BasicFormatterTypes/MinuteFormatterAttribute.cs)*

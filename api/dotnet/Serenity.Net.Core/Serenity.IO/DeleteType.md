@@ -17,4 +17,4 @@ public enum DeleteType
 
 ## See Also
 
-* **Source:** *[DeleteType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/IO/DeleteType.cs)*
+* **Source:** *[DeleteType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/IO/DeleteType.cs)*

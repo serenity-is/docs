@@ -13,10 +13,11 @@ public class NavigationLinkAttribute : NavigationItemAttribute
 | name | description |
 | --- | --- |
 | [NavigationLinkAttribute](NavigationLinkAttribute/NavigationLinkAttribute.md)(…) | Creates a new instance of the attribute (4 constructors) |
+| static [GetFeaturesFromController](NavigationLinkAttribute/GetFeaturesFromController.md)(…) | Tries to extract features from a controller action |
 | static [GetPermissionFromController](NavigationLinkAttribute/GetPermissionFromController.md)(…) | Tries to extract permission from a controller action |
 | static [GetUrlFromController](NavigationLinkAttribute/GetUrlFromController.md)(…) | Tries to extract URL from a controller action |
 
 ## See Also
 
 * class [NavigationItemAttribute](../Serenity.Net.Core/NavigationItemAttribute.md)
-* **Source:** *[NavigationLinkAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Navigation/NavigationLinkAttribute.cs)*
+* **Source:** *[NavigationLinkAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Navigation/NavigationLinkAttribute.cs)*

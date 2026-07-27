@@ -14,12 +14,17 @@ public class ListRequestHandler<TRow, TListRequest> :
 | --- | --- |
 | TRow | The entity type |
 | TListRequest | List request type |
+| context | Request context |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ListRequestHandler](ListRequestHandler-2/ListRequestHandler.md)(…) | Creates a new instance of the class |
+| [ListRequestHandler](ListRequestHandler-2/ListRequestHandler.md)(…) | Base generic class for list request handlers that use a custom list request as the request type, and [`ListResponse`](ListResponse-1.md) as the response type. |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 
@@ -28,6 +33,6 @@ public class ListRequestHandler<TRow, TListRequest> :
 * class [TListRequest](../Serenity.Net.Services/ListRequestHandler-2.TListRequest.md)
 * class [ListResponse&lt;T&gt;](ListResponse-1.md)
 * interface [IListHandler&lt;TRow,TListRequest&gt;](IListHandler-2.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
 * class [ListRequest](ListRequest.md)
-* **Source:** *[ListRequestHandlerT2.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/List/ListRequestHandlerT2.cs)*
+* **Source:** *[ListRequestHandlerT2.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/List/ListRequestHandlerT2.cs)*

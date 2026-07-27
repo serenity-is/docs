@@ -20,4 +20,4 @@ public enum RetrieveColumnSelection
 
 ## See Also
 
-* **Source:** *[RetrieveColumnSelection.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/RetrieveColumnSelection.cs)*
+* **Source:** *[RetrieveColumnSelection.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/RetrieveColumnSelection.cs)*

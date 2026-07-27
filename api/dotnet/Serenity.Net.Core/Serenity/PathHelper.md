@@ -20,4 +20,4 @@ public static class PathHelper
 
 ## See Also
 
-* **Source:** *[PathHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/PathHelper.cs)*
+* **Source:** *[PathHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/PathHelper.cs)*

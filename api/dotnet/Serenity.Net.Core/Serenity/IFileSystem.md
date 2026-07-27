@@ -21,6 +21,7 @@ public interface IFileSystem
 | [GetFiles](IFileSystem/GetFiles.md)(…) | Gets files at specified path |
 | [GetFileSize](IFileSystem/GetFileSize.md)(…) | Gets file size for specified path |
 | [GetFullPath](IFileSystem/GetFullPath.md)(…) | Returns the absolute path for the specified path string. |
+| [GetLastWriteTimeUtc](IFileSystem/GetLastWriteTimeUtc.md)(…) | Gets last write time in UTC for file at path |
 | [GetRelativePath](IFileSystem/GetRelativePath.md)(…) | Returns the absolute path for the specified path string. |
 | [OpenRead](IFileSystem/OpenRead.md)(…) | Opens the file at path for reading |
 | [ReadAllBytes](IFileSystem/ReadAllBytes.md)(…) | Reads all bytes from a file |
@@ -30,4 +31,4 @@ public interface IFileSystem
 
 ## See Also
 
-* **Source:** *[IFileSystem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/IO/IFileSystem.cs)*
+* **Source:** *[IFileSystem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/IO/IFileSystem.cs)*

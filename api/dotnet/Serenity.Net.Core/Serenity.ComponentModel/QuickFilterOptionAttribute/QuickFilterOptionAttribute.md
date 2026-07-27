@@ -1,7 +1,7 @@
 # QuickFilterOptionAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`QuickFilterOptionAttribute`](../QuickFilterOptionAttribute.md) class.
+Add an option to the quick filtering.
 
 ```csharp
 public QuickFilterOptionAttribute(string key, object value)
@@ -11,6 +11,10 @@ public QuickFilterOptionAttribute(string key, object value)
 | --- | --- |
 | key | The key. |
 | value | The value. |
+
+## Remarks
+
+Initializes a new instance of the [`QuickFilterOptionAttribute`](../QuickFilterOptionAttribute.md) class.
 
 ## See Also
 

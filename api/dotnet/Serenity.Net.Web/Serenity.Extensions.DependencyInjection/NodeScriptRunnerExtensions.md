@@ -15,4 +15,4 @@ public static class NodeScriptRunnerExtensions
 
 ## See Also
 
-* **Source:** *[NodeScriptRunnerExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/NodeScriptRunner/NodeScriptRunnerExtensions.cs)*
+* **Source:** *[NodeScriptRunnerExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/NodeScriptRunner/NodeScriptRunnerExtensions.cs)*

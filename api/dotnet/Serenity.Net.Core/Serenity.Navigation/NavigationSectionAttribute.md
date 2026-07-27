@@ -8,13 +8,23 @@ Navigation section attribute
 public class NavigationSectionAttribute : NavigationGroupAttribute
 ```
 
+| parameter | description |
+| --- | --- |
+| order | Display order |
+| title | Title |
+| icon | Icon class |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [NavigationSectionAttribute](NavigationSectionAttribute/NavigationSectionAttribute.md)(…) | Creates a new instance of the class (2 constructors) |
+| [NavigationSectionAttribute](NavigationSectionAttribute/NavigationSectionAttribute.md)(…) | Navigation section attribute (2 constructors) |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 
 * class [NavigationGroupAttribute](NavigationGroupAttribute.md)
-* **Source:** *[NavigationSectionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Navigation/NavigationSectionAttribute.cs)*
+* **Source:** *[NavigationSectionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Navigation/NavigationSectionAttribute.cs)*

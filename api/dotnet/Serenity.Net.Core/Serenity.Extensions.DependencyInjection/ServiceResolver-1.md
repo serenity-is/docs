@@ -10,16 +10,27 @@ public class ServiceResolver<TService> : IServiceResolver<TService>
 | parameter | description |
 | --- | --- |
 | TService |  |
+| serviceProvider | The service provider |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ServiceResolver](ServiceResolver-1/ServiceResolver.md)(…) | Initializes a new instance. |
+| [ServiceResolver](ServiceResolver-1/ServiceResolver.md)(…) | A generic version of IServiceProvider which resolves a service on demand. |
 | [Resolve](ServiceResolver-1/Resolve.md)() | Resolves TService using the service provider. If the service was registered as transient, this method acts like a factory. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | Throws when service provider is null |
+
+## Remarks
+
+Initializes a new instance.
 
 ## See Also
 
 * interface [IServiceResolver&lt;TService&gt;](../Serenity/IServiceResolver-1.md)
 * class [TService](../Serenity.Net.Core/ServiceResolver-1.TService.md)
-* **Source:** *[ServiceResolver.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/ServiceResolver.cs)*
+* **Source:** *[ServiceResolver.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/ServiceResolver.cs)*

@@ -18,4 +18,4 @@ public static class ForXmlHelper
 
 ## See Also
 
-* **Source:** *[ForXmlHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ForXmlHelper.cs)*
+* **Source:** *[ForXmlHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ForXmlHelper.cs)*

@@ -15,4 +15,4 @@ public static class ServiceRequestExtensions
 
 ## See Also
 
-* **Source:** *[ServiceRequestExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/ServiceRequestExtensions.cs)*
+* **Source:** *[ServiceRequestExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/ServiceRequestExtensions.cs)*

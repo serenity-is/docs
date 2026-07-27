@@ -16,4 +16,4 @@ public class GlobFilter
 
 ## See Also
 
-* **Source:** *[GlobFilter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/IO/GlobFilter.cs)*
+* **Source:** *[GlobFilter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/IO/GlobFilter.cs)*

@@ -9,5 +9,5 @@ public DateTimeField ValidFromField { get; }
 
 ## See Also
 
-* class [DateTimeField](../Serenity.Net.Entity/../DateTimeField.md)
+* class [DateTimeField](../DateTimeField.md)
 * interface [ICaptureLogRow](../ICaptureLogRow.md)

@@ -13,5 +13,5 @@ public static bool UseSoftDelete(IRow row)
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * class [ServiceQueryHelper](../ServiceQueryHelper.md)

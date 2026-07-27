@@ -26,6 +26,6 @@ public static ReportColumn FromPropertyItem(PropertyItem item, Field field, Prop
 
 * class [ReportColumn](../ReportColumn.md)
 * class [PropertyItem](../Serenity.Net.Core/../../Serenity.ComponentModel/PropertyItem.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [TabularDataReport](../TabularDataReport.md)

@@ -13,5 +13,5 @@ protected virtual bool AllowSelectField(Field field)
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](../RetrieveRequestHandler-3.md)

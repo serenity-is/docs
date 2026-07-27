@@ -17,4 +17,4 @@ public class HalfWidthAttribute : FormWidthAttribute
 ## See Also
 
 * class [FormWidthAttribute](FormWidthAttribute.md)
-* **Source:** *[HalfWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/Layout/HalfWidthAttribute.cs)*
+* **Source:** *[HalfWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Layout/HalfWidthAttribute.cs)*

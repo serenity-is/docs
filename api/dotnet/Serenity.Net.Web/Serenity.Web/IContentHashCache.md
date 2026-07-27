@@ -17,4 +17,4 @@ public interface IContentHashCache
 
 ## See Also
 
-* **Source:** *[IContentHashCache.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/IContentHashCache.cs)*
+* **Source:** *[IContentHashCache.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/IContentHashCache.cs)*

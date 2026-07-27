@@ -13,7 +13,7 @@ public void Register(INamedDynamicScript script)
 
 ## See Also
 
-* interface [INamedDynamicScript](../INamedDynamicScript.md)
+* interface [INamedDynamicScript](../Serenity.Net.Core/../INamedDynamicScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
 
 ---
@@ -34,5 +34,5 @@ public void Register(string name, IDynamicScript script)
 
 ## See Also
 
-* interface [IDynamicScript](../IDynamicScript.md)
+* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)

@@ -17,4 +17,4 @@ public class UndeleteResponse : ServiceResponse
 ## See Also
 
 * class [ServiceResponse](ServiceResponse.md)
-* **Source:** *[UndeleteResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/UndeleteResponse.cs)*
+* **Source:** *[UndeleteResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/UndeleteResponse.cs)*

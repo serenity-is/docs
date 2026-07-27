@@ -19,4 +19,4 @@ public static class JsonLocalTextRegistration
 
 ## See Also
 
-* **Source:** *[JsonLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/JsonLocalTextRegistration.cs)*
+* **Source:** *[JsonLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/JsonLocalTextRegistration.cs)*

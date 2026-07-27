@@ -15,4 +15,4 @@ public interface IHtmlReportPdfRenderer
 
 ## See Also
 
-* **Source:** *[IHtmlReportPdfRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/IHtmlReportPdfRenderer.cs)*
+* **Source:** *[IHtmlReportPdfRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/HtmlToPdf/IHtmlReportPdfRenderer.cs)*

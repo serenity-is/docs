@@ -21,4 +21,4 @@ public static class Invariants
 
 ## See Also
 
-* **Source:** *[Invariants.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/Invariants.cs)*
+* **Source:** *[Invariants.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/Invariants.cs)*

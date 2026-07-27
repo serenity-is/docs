@@ -12,9 +12,9 @@ public class ImageFormatInfo
 | name | description |
 | --- | --- |
 | [ImageFormatInfo](ImageFormatInfo/ImageFormatInfo.md)() | The default constructor. |
-| [FileExtensions](ImageFormatInfo/FileExtensions.md) { get; set; } | List of expecteed file extensions |
+| [FileExtensions](ImageFormatInfo/FileExtensions.md) { get; set; } | List of expected file extensions |
 | [MimeType](ImageFormatInfo/MimeType.md) { get; set; } | Default mime type |
 
 ## See Also
 
-* **Source:** *[ImageFormatInfo.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/ImageFormatInfo.cs)*
+* **Source:** *[ImageFormatInfo.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/ImageFormatInfo.cs)*

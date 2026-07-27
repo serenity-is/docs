@@ -24,4 +24,4 @@ public abstract class BaseReport : IReport, IReportWithAdditionalData
 
 * interface [IReport](IReport.md)
 * interface [IReportWithAdditionalData](IReportWithAdditionalData.md)
-* **Source:** *[BaseReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/BaseReport.cs)*
+* **Source:** *[BaseReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/BaseReport.cs)*

@@ -8,13 +8,21 @@ Sets a hint for a form field. Hint is shown when field label is hovered. This ha
 public class HintAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| hint | The hint. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [HintAttribute](HintAttribute/HintAttribute.md)(…) | Initializes a new instance of the [`HintAttribute`](HintAttribute.md) class. |
+| [HintAttribute](HintAttribute/HintAttribute.md)(…) | Sets a hint for a form field. Hint is shown when field label is hovered. This has no effect on columns. |
 | [Hint](HintAttribute/Hint.md) { get; } | Gets the hint. |
+
+## Remarks
+
+Initializes a new instance of the [`HintAttribute`](HintAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[HintAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/HintAttribute.cs)*
+* **Source:** *[HintAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/HintAttribute.cs)*

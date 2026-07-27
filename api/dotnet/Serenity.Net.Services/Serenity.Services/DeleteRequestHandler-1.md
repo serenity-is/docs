@@ -12,12 +12,17 @@ public class DeleteRequestHandler<TRow> :
 | parameter | description |
 | --- | --- |
 | TRow | The entity type |
+| context | The request context |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DeleteRequestHandler](DeleteRequestHandler-1/DeleteRequestHandler.md)(…) | Creates an instance of the class |
+| [DeleteRequestHandler](DeleteRequestHandler-1/DeleteRequestHandler.md)(…) | Base generic class for delete request handlers that use [`DeleteRequest`](DeleteRequest.md) as the request type, and [`DeleteResponse`](DeleteResponse.md) as the response type. |
+
+## Remarks
+
+Creates an instance of the class
 
 ## See Also
 
@@ -26,6 +31,6 @@ public class DeleteRequestHandler<TRow> :
 * class [DeleteRequest](DeleteRequest.md)
 * class [DeleteResponse](DeleteResponse.md)
 * interface [IDeleteHandler&lt;TRow&gt;](IDeleteHandler-1.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
-* **Source:** *[DeleteRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Delete/DeleteRequestHandlerT.cs)*
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
+* **Source:** *[DeleteRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Delete/DeleteRequestHandlerT.cs)*

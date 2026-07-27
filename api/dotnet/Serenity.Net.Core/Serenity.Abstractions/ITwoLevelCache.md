@@ -16,4 +16,4 @@ public interface ITwoLevelCache
 
 ## See Also
 
-* **Source:** *[ITwoLevelCache.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Caching/ITwoLevelCache.cs)*
+* **Source:** *[ITwoLevelCache.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Caching/ITwoLevelCache.cs)*

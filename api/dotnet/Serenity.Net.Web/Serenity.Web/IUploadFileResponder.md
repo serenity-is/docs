@@ -15,4 +15,4 @@ public interface IUploadFileResponder
 
 ## See Also
 
-* **Source:** *[IUploadFileResponder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Upload/IUploadFileResponder.cs)*
+* **Source:** *[IUploadFileResponder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Upload/IUploadFileResponder.cs)*

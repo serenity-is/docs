@@ -16,4 +16,4 @@ public interface IFilenameFormatSanitizer
 
 ## See Also
 
-* **Source:** *[IFilenameFormatSanitizer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IFilenameFormatSanitizer.cs)*
+* **Source:** *[IFilenameFormatSanitizer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/IFilenameFormatSanitizer.cs)*

@@ -1,7 +1,7 @@
 # DefaultUploadFileResponder constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Default implementation for upload file responder
 
 ```csharp
 public DefaultUploadFileResponder(IUploadStorage uploadStorage)
@@ -16,6 +16,10 @@ public DefaultUploadFileResponder(IUploadStorage uploadStorage)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | One of arguments is null |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 

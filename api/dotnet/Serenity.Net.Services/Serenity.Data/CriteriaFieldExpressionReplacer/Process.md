@@ -13,5 +13,5 @@ public BaseCriteria Process(BaseCriteria criteria)
 
 ## See Also
 
-* class [BaseCriteria](../Serenity.Net.Data/../BaseCriteria.md)
+* class [BaseCriteria](../BaseCriteria.md)
 * class [CriteriaFieldExpressionReplacer](../CriteriaFieldExpressionReplacer.md)

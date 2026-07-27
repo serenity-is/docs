@@ -20,4 +20,4 @@ public static class ServiceQueryHelper
 
 ## See Also
 
-* **Source:** *[ServiceQueryHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Helpers/ServiceQueryHelper.cs)*
+* **Source:** *[ServiceQueryHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Helpers/ServiceQueryHelper.cs)*

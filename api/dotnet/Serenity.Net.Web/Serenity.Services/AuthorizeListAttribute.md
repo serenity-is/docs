@@ -17,4 +17,4 @@ public class AuthorizeListAttribute : ServiceAuthorizeAttribute
 ## See Also
 
 * class [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute.md)
-* **Source:** *[AuthorizeListAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/AuthorizeListAttribute.cs)*
+* **Source:** *[AuthorizeListAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/AuthorizeListAttribute.cs)*

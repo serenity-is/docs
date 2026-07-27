@@ -17,5 +17,5 @@ public static List<TRow> ToRows<TRow>(string forXml, Action<XElement, TRow> read
 ## See Also
 
 * class [TRow](../Serenity.Net.Web/../ForXmlHelper.TRow.md)
-* interface [IRow](../Serenity.Net.Entity/../IRow.md)
+* interface [IRow](../Serenity.Net.Services/../IRow.md)
 * class [ForXmlHelper](../ForXmlHelper.md)

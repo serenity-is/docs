@@ -12,9 +12,9 @@ public class DeleteRequest : ServiceRequest
 | name | description |
 | --- | --- |
 | [DeleteRequest](DeleteRequest/DeleteRequest.md)() | The default constructor. |
-| [EntityId](DeleteRequest/EntityId.md) | The ID of the entity to delete. |
+| [EntityId](DeleteRequest/EntityId.md) { get; set; } | The ID of the entity to delete. |
 
 ## See Also
 
 * class [ServiceRequest](ServiceRequest.md)
-* **Source:** *[DeleteRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/DeleteRequest.cs)*
+* **Source:** *[DeleteRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/DeleteRequest.cs)*

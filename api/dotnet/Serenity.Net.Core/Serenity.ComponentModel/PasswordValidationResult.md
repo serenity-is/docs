@@ -22,4 +22,4 @@ public enum PasswordValidationResult
 
 ## See Also
 
-* **Source:** *[PasswordValidationResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/PasswordValidationResult.cs)*
+* **Source:** *[PasswordValidationResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/PasswordValidationResult.cs)*

@@ -28,4 +28,4 @@ public class HtmlReportRenderUrl : IDisposable
 
 ## See Also
 
-* **Source:** *[HtmlReportRenderUrl.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/HtmlReportRenderUrl.cs)*
+* **Source:** *[HtmlReportRenderUrl.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/HtmlToPdf/HtmlReportRenderUrl.cs)*

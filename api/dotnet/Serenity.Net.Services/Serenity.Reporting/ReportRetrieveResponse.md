@@ -22,4 +22,4 @@ public class ReportRetrieveResponse : ServiceResponse
 ## See Also
 
 * class [ServiceResponse](../Serenity.Services/ServiceResponse.md)
-* **Source:** *[ReportRetrieveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Retrieve/ReportRetrieveResponse.cs)*
+* **Source:** *[ReportRetrieveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Retrieve/ReportRetrieveResponse.cs)*

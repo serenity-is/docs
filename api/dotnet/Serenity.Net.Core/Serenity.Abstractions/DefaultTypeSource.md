@@ -1,25 +1,29 @@
 # DefaultTypeSource class
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Default implementation for a type source
+Default implementation for a type source that accepts an assembly list
 
 ```csharp
-public class DefaultTypeSource : IGetAssemblies, ITypeSource
+public class DefaultTypeSource : BaseAssemblyTypeSource
 ```
+
+| parameter | description |
+| --- | --- |
+| assemblies | List of assemblies |
+| featureToggles | Feature toggles service used to filter types |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultTypeSource](DefaultTypeSource/DefaultTypeSource.md)(…) | Creates a new instance |
-| [GetAssemblies](DefaultTypeSource/GetAssemblies.md)() |  |
-| [GetAssemblyAttributes](DefaultTypeSource/GetAssemblyAttributes.md)(…) | Gets all attributes for assemblies with given type |
-| [GetTypes](DefaultTypeSource/GetTypes.md)() | Gets all types |
-| [GetTypesWithAttribute](DefaultTypeSource/GetTypesWithAttribute.md)(…) | Gets all types that has an attribute |
-| [GetTypesWithInterface](DefaultTypeSource/GetTypesWithInterface.md)(…) | Gets all types that implement an interface |
+| [DefaultTypeSource](DefaultTypeSource/DefaultTypeSource.md)(…) | Default implementation for a type source that accepts an assembly list |
+| override [GetAssemblies](DefaultTypeSource/GetAssemblies.md)() |  |
+
+## Remarks
+
+Creates a new instance
 
 ## See Also
 
-* interface [IGetAssemblies](IGetAssemblies.md)
-* interface [ITypeSource](ITypeSource.md)
-* **Source:** *[DefaultTypeSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/DefaultTypeSource.cs)*
+* class [BaseAssemblyTypeSource](BaseAssemblyTypeSource.md)
+* **Source:** *[DefaultTypeSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/DefaultTypeSource.cs)*

@@ -21,4 +21,4 @@ public class FileDownloadFormatterAttribute : CustomFormatterAttribute
 ## See Also
 
 * class [CustomFormatterAttribute](CustomFormatterAttribute.md)
-* **Source:** *[BasicFormatterTypes.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Formatting/BasicFormatterTypes.cs)*
+* **Source:** *[FileDownloadFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Formatting/BasicFormatterTypes/FileDownloadFormatterAttribute.cs)*

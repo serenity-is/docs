@@ -15,4 +15,4 @@ public interface IScriptFiles
 
 ## See Also
 
-* **Source:** *[IScriptFiles.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/IScriptFiles.cs)*
+* **Source:** *[IScriptFiles.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/IScriptFiles.cs)*

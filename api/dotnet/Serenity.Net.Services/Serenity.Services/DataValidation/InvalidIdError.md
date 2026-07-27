@@ -16,7 +16,7 @@ public static ValidationError InvalidIdError(Field field, long value, ITextLocal
 ## See Also
 
 * class [ValidationError](../Serenity.Net.Core/../ValidationError.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)
 
@@ -40,7 +40,7 @@ public static ValidationError InvalidIdError(IRow row, Field field, ITextLocaliz
 ## See Also
 
 * class [ValidationError](../Serenity.Net.Core/../ValidationError.md)
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
+* class [Field](../../Serenity.Data/Field.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

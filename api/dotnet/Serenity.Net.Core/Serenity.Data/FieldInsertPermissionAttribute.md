@@ -17,4 +17,4 @@ public class FieldInsertPermissionAttribute : PermissionAttributeBase
 ## See Also
 
 * class [PermissionAttributeBase](PermissionAttributeBase.md)
-* **Source:** *[FieldInsertPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Permission/FieldInsertPermissionAttribute.cs)*
+* **Source:** *[FieldInsertPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/FieldInsertPermissionAttribute.cs)*

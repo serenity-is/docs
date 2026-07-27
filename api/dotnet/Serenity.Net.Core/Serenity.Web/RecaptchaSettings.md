@@ -18,4 +18,4 @@ public class RecaptchaSettings
 
 ## See Also
 
-* **Source:** *[RecaptchaSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/RecaptchaSettings.cs)*
+* **Source:** *[RecaptchaSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/RecaptchaSettings.cs)*

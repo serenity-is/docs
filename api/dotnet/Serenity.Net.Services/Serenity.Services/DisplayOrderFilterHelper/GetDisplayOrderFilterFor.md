@@ -13,6 +13,6 @@ public static BaseCriteria GetDisplayOrderFilterFor(IRow row)
 
 ## See Also
 
-* class [BaseCriteria](../Serenity.Net.Data/../../Serenity.Data/BaseCriteria.md)
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* class [BaseCriteria](../../Serenity.Data/BaseCriteria.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * class [DisplayOrderFilterHelper](../DisplayOrderFilterHelper.md)

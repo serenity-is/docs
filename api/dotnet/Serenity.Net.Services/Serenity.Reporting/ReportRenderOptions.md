@@ -19,4 +19,4 @@ public class ReportRenderOptions
 
 ## See Also
 
-* **Source:** *[ReportRenderOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/ReportRenderOptions.cs)*
+* **Source:** *[ReportRenderOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Rendering/ReportRenderOptions.cs)*

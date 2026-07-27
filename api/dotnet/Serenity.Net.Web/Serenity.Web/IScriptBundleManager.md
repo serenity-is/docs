@@ -19,4 +19,4 @@ public interface IScriptBundleManager
 
 ## See Also
 
-* **Source:** *[IScriptBundleManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/IScriptBundleManager.cs)*
+* **Source:** *[IScriptBundleManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/IScriptBundleManager.cs)*

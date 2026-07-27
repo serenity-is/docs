@@ -16,4 +16,4 @@ public class ImageEncoderParams
 
 ## See Also
 
-* **Source:** *[ImageEncoderParams.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/ImageEncoderParams.cs)*
+* **Source:** *[ImageEncoderParams.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/ImageEncoderParams.cs)*

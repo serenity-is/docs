@@ -17,4 +17,4 @@ public interface ILocalText
 
 ## See Also
 
-* **Source:** *[ILocalText.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/ILocalText.cs)*
+* **Source:** *[ILocalText.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/ILocalText.cs)*

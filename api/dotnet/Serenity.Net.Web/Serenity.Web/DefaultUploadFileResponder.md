@@ -7,14 +7,28 @@ Default implementation for upload file responder
 public class DefaultUploadFileResponder : IUploadFileResponder
 ```
 
+| parameter | description |
+| --- | --- |
+| uploadStorage | Upload storage |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultUploadFileResponder](DefaultUploadFileResponder/DefaultUploadFileResponder.md)(…) | Creates a new instance of the class |
+| [DefaultUploadFileResponder](DefaultUploadFileResponder/DefaultUploadFileResponder.md)(…) | Default implementation for upload file responder |
 | [Read](DefaultUploadFileResponder/Read.md)(…) |  |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | One of arguments is null |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 
 * interface [IUploadFileResponder](IUploadFileResponder.md)
-* **Source:** *[DefaultUploadFileResponder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Upload/DefaultUploadFileResponder.cs)*
+* **Source:** *[DefaultUploadFileResponder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Upload/DefaultUploadFileResponder.cs)*

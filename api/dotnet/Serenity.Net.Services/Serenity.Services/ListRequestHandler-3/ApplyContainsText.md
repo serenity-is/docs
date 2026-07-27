@@ -16,9 +16,9 @@ protected virtual void ApplyContainsText(SqlQuery query, string containsText)
 
 | exception | condition |
 | --- | --- |
-| ArgumentOutOfRangeException | There are no quick search fields (QuickSearchAttribute |
+| ArgumentOutOfRangeException | There are no quick search fields ([`QuickSearchAttribute`](../../Serenity.Data.Mapping/QuickSearchAttribute.md) |
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

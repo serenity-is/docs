@@ -29,7 +29,7 @@ public interface IRetrieveHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 * class [TRow](../Serenity.Net.Services/IRetrieveHandler-3.TRow.md)
 * class [TRetrieveRequest](../Serenity.Net.Services/IRetrieveHandler-3.TRetrieveRequest.md)
 * class [TRetrieveResponse](../Serenity.Net.Services/IRetrieveHandler-3.TRetrieveResponse.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
 * class [RetrieveRequest](RetrieveRequest.md)
 * class [RetrieveResponse&lt;T&gt;](RetrieveResponse-1.md)
-* **Source:** *[IRetrieveHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Retrieve/IRetrieveHandler.cs)*
+* **Source:** *[IRetrieveHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Retrieve/IRetrieveHandler.cs)*

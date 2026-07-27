@@ -29,4 +29,4 @@ public class DynamicScriptManager : IDynamicScriptManager
 ## See Also
 
 * interface [IDynamicScriptManager](IDynamicScriptManager.md)
-* **Source:** *[DynamicScriptManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/DynamicScript/DynamicScriptManager.cs)*
+* **Source:** *[DynamicScriptManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScript/DynamicScriptManager.cs)*

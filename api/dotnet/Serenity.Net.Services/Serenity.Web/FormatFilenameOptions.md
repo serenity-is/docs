@@ -19,4 +19,4 @@ public class FormatFilenameOptions
 
 ## See Also
 
-* **Source:** *[FormatFilenameOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/FormatFilenameOptions.cs)*
+* **Source:** *[FormatFilenameOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/FormatFilenameOptions.cs)*

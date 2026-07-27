@@ -15,4 +15,4 @@ public interface IUserAccessor
 
 ## See Also
 
-* **Source:** *[IUserAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IUserAccessor.cs)*
+* **Source:** *[IUserAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IUserAccessor.cs)*

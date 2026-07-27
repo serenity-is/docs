@@ -7,5 +7,5 @@ public IScriptContent ReadScriptContent(string name, bool json)
 
 ## See Also
 
-* interface [IScriptContent](../IScriptContent.md)
+* interface [IScriptContent](../Serenity.Net.Core/../IScriptContent.md)
 * class [DynamicScriptManager](../DynamicScriptManager.md)

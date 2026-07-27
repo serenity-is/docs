@@ -15,4 +15,4 @@ public static class ReportFactoryExtensions
 
 ## See Also
 
-* **Source:** *[ReportFactoryExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/ReportFactoryExtensions.cs)*
+* **Source:** *[ReportFactoryExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/ReportFactoryExtensions.cs)*

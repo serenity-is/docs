@@ -7,5 +7,5 @@ public Field Target { get; set; }
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../Serenity.Net.Services/../../Serenity.Data/Field.md)
 * class [FileUploadBehavior](../FileUploadBehavior.md)

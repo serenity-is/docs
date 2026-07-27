@@ -17,4 +17,4 @@ public static class UploadFormatting
 
 ## See Also
 
-* **Source:** *[UploadFormatting.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/UploadFormatting.cs)*
+* **Source:** *[UploadFormatting.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/UploadFormatting.cs)*

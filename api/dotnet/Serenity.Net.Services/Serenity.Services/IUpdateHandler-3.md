@@ -29,8 +29,8 @@ public interface IUpdateHandler<TRow, TSaveRequest, TSaveResponse> :
 * class [TRow](../Serenity.Net.Services/IUpdateHandler-3.TRow.md)
 * class [TSaveRequest](../Serenity.Net.Services/IUpdateHandler-3.TSaveRequest.md)
 * class [TSaveResponse](../Serenity.Net.Services/IUpdateHandler-3.TSaveResponse.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
 * class [SaveResponse](SaveResponse.md)
-* **Source:** *[IUpdateHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/IUpdateHandler.cs)*
+* **Source:** *[IUpdateHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/IUpdateHandler.cs)*

@@ -11,9 +11,9 @@ public interface ILocalizationRow : IIdRow
 
 | name | description |
 | --- | --- |
-| [CultureIdField](ILocalizationRow/CultureIdField.md) { get; } | Culture ID field, e.g. LanguageID / LanguageKey |
+| [CultureIdField](ILocalizationRow/CultureIdField.md) { get; } | Language ID field (must be a two or four letter culture code, e.g. en-GB) |
 
 ## See Also
 
-* interface [IIdRow](../Serenity.Net.Entity/IIdRow.md)
-* **Source:** *[ILocalizationRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/Localization/ILocalizationRow.cs)*
+* interface [IIdRow](IIdRow.md)
+* **Source:** *[ILocalizationRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/Localization/ILocalizationRow.cs)*

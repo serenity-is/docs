@@ -11,6 +11,10 @@ public HideOnInsertAttribute(bool value = true)
 | --- | --- |
 | value | True to hide field on insert |
 
+## Remarks
+
+Controls whether this field is visible on new record mode
+
 ## See Also
 
 * class [HideOnInsertAttribute](../HideOnInsertAttribute.md)

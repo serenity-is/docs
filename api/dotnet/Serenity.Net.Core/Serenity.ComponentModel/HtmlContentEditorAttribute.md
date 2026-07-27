@@ -14,10 +14,11 @@ public class HtmlContentEditorAttribute : CustomEditorAttribute
 | --- | --- |
 | [HtmlContentEditorAttribute](HtmlContentEditorAttribute/HtmlContentEditorAttribute.md)() | Initializes a new instance of the [`HtmlContentEditorAttribute`](HtmlContentEditorAttribute.md) class. |
 | [Cols](HtmlContentEditorAttribute/Cols.md) { get; set; } | Gets or sets the cols for underlying textarea. |
+| [EditorProvider](HtmlContentEditorAttribute/EditorProvider.md) { get; set; } | Gets or sets the editor provider. Allowed values are "ckeditor" and "tiptap". Default is "ckeditor". |
 | [Rows](HtmlContentEditorAttribute/Rows.md) { get; set; } | Gets or sets the rows for underlying textarea. |
 | const [Key](HtmlContentEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[HtmlContentEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/HtmlContentEditorAttribute.cs)*
+* **Source:** *[HtmlContentEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/HtmlContentEditorAttribute.cs)*

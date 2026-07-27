@@ -27,4 +27,4 @@ public class CaptureLogBehavior : BaseSaveDeleteBehavior, IImplicitBehavior, IUn
 * class [BaseSaveDeleteBehavior](BaseSaveDeleteBehavior.md)
 * interface [IImplicitBehavior](IImplicitBehavior.md)
 * interface [IUndeleteBehavior](IUndeleteBehavior.md)
-* **Source:** *[CaptureLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureLogBehavior.cs)*
+* **Source:** *[CaptureLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureLogBehavior.cs)*

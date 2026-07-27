@@ -7,5 +7,5 @@ public Field Target { get; set; }
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [LinkingSetRelationBehavior](../LinkingSetRelationBehavior.md)

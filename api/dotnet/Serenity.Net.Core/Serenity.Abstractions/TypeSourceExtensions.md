@@ -15,4 +15,4 @@ public static class TypeSourceExtensions
 
 ## See Also
 
-* **Source:** *[TypeSourceExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/TypeSourceExtensions.cs)*
+* **Source:** *[TypeSourceExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/TypeSourceExtensions.cs)*

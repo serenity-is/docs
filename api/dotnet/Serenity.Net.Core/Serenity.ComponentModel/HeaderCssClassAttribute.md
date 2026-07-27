@@ -8,13 +8,21 @@ Sets the CSS class for grid column headers. It sets headerCssClass property of S
 public class HeaderCssClassAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [HeaderCssClassAttribute](HeaderCssClassAttribute/HeaderCssClassAttribute.md)(…) | Initializes a new instance of the [`HeaderCssClassAttribute`](HeaderCssClassAttribute.md) class. |
+| [HeaderCssClassAttribute](HeaderCssClassAttribute/HeaderCssClassAttribute.md)(…) | Sets the CSS class for grid column headers. It sets headerCssClass property of SlickColumn. This has no effect for forms. |
 | [Value](HeaderCssClassAttribute/Value.md) { get; } | Gets the value. |
+
+## Remarks
+
+Initializes a new instance of the [`HeaderCssClassAttribute`](HeaderCssClassAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[HeaderCssClassAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/HeaderCssClassAttribute.cs)*
+* **Source:** *[HeaderCssClassAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/HeaderCssClassAttribute.cs)*

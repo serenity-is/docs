@@ -12,9 +12,13 @@ public sealed class JsonLocalTextAssetsAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [JsonLocalTextAssetsAttribute](JsonLocalTextAssetsAttribute/JsonLocalTextAssetsAttribute.md)(…) | Initializes a new instance of the [`JsonLocalTextAssetsAttribute`](JsonLocalTextAssetsAttribute.md) class. |
+| [JsonLocalTextAssetsAttribute](JsonLocalTextAssetsAttribute/JsonLocalTextAssetsAttribute.md)(…) | Registers a folder with json local text files packed as static web assets for the assembly |
 | [Path](JsonLocalTextAssetsAttribute/Path.md) { get; } | The path for static web assets folder with json local text files |
+
+## Remarks
+
+Initializes a new instance of the [`JsonLocalTextAssetsAttribute`](JsonLocalTextAssetsAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[JsonLocalTextAssetsAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/JsonLocalTextAssetsAttribute.cs)*
+* **Source:** *[JsonLocalTextAssetsAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/JsonLocalTextAssetsAttribute.cs)*

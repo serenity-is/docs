@@ -8,13 +8,21 @@ Sets a placeholder for a form field. Placeholder text is shown inside the editor
 public class PlaceholderAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [PlaceholderAttribute](PlaceholderAttribute/PlaceholderAttribute.md)(…) | Initializes a new instance of the [`PlaceholderAttribute`](PlaceholderAttribute.md) class. |
+| [PlaceholderAttribute](PlaceholderAttribute/PlaceholderAttribute.md)(…) | Sets a placeholder for a form field. Placeholder text is shown inside the editor when its value is empty. Only editors using basic inputs and Select2 editor supports this. |
 | [Value](PlaceholderAttribute/Value.md) { get; } | Gets the value. |
+
+## Remarks
+
+Initializes a new instance of the [`PlaceholderAttribute`](PlaceholderAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[PlaceholderAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/PlaceholderAttribute.cs)*
+* **Source:** *[PlaceholderAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/PlaceholderAttribute.cs)*

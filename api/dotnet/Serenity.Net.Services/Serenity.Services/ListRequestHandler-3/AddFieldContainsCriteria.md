@@ -26,7 +26,7 @@ protected virtual void AddFieldContainsCriteria(Field field, string containsText
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
-* enum [SearchType](../Serenity.Net.Data/../../Serenity.Data.Mapping/SearchType.md)
-* class [BaseCriteria](../Serenity.Net.Data/../../Serenity.Data/BaseCriteria.md)
+* class [Field](../../Serenity.Data/Field.md)
+* enum [SearchType](../../Serenity.Data.Mapping/SearchType.md)
+* class [BaseCriteria](../../Serenity.Data/BaseCriteria.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

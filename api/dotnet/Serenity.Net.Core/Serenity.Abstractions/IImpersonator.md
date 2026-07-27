@@ -16,4 +16,4 @@ public interface IImpersonator
 
 ## See Also
 
-* **Source:** *[IImpersonator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IImpersonator.cs)*
+* **Source:** *[IImpersonator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IImpersonator.cs)*

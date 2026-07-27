@@ -11,8 +11,8 @@ public interface IUploadAVScanner
 
 | name | description |
 | --- | --- |
-| [Scan](IUploadAVScanner/Scan.md)(…) | Processes a temporary upload stream, usually from the HTTP request files and raises an exception if any issues found or an error occured during scan |
+| [Scan](IUploadAVScanner/Scan.md)(…) | Processes a temporary upload stream, usually from the HTTP request files and raises an exception if any issues found or an error occurred during scan |
 
 ## See Also
 
-* **Source:** *[IUploadAVScanner.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/IUploadAVScanner.cs)*
+* **Source:** *[IUploadAVScanner.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/IUploadAVScanner.cs)*

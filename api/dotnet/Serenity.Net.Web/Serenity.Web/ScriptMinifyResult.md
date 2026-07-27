@@ -17,4 +17,4 @@ public class ScriptMinifyResult
 
 ## See Also
 
-* **Source:** *[ScriptMinifyResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ScriptMinifyResult.cs)*
+* **Source:** *[ScriptMinifyResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ScriptMinifyResult.cs)*

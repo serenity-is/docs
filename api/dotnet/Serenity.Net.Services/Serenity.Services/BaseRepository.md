@@ -7,11 +7,15 @@ An base class that can be used for repositories (obsolete, [`BaseRequestHandler`
 public class BaseRepository
 ```
 
+| parameter | description |
+| --- | --- |
+| context | Request context |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [BaseRepository](BaseRepository/BaseRepository.md)(…) | Creates an instance of the class. |
+| [BaseRepository](BaseRepository/BaseRepository.md)(…) | An base class that can be used for repositories (obsolete, [`BaseRequestHandler`](BaseRequestHandler.md)) that accept a [`IRequestContext`](IRequestContext.md) instance. |
 
 ## Protected Members
 
@@ -23,6 +27,16 @@ public class BaseRepository
 | [Permissions](BaseRepository/Permissions.md) { get; } | Gets permission service from the request context |
 | [User](BaseRepository/User.md) { get; } | Gets the user from the request context |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | Context is null |
+
+## Remarks
+
+Creates an instance of the class.
+
 ## See Also
 
-* **Source:** *[BaseRepository.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Repository/BaseRepository.cs)*
+* **Source:** *[BaseRepository.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Repository/BaseRepository.cs)*

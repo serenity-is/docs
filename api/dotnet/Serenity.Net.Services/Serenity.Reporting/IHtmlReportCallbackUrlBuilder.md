@@ -10,4 +10,4 @@ public interface IHtmlReportCallbackUrlBuilder : IHtmlReportRenderUrlBuilder
 ## See Also
 
 * interface [IHtmlReportRenderUrlBuilder](IHtmlReportRenderUrlBuilder.md)
-* **Source:** *[IHtmlReportCallbackUrlBuilder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/IHtmlReportCallbackUrlBuilder.cs)*
+* **Source:** *[IHtmlReportCallbackUrlBuilder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/HtmlToPdf/IHtmlReportCallbackUrlBuilder.cs)*

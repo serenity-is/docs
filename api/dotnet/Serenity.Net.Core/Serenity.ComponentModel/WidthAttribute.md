@@ -8,15 +8,23 @@ Sets column width
 public class WidthAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [WidthAttribute](WidthAttribute/WidthAttribute.md)(…) | Initializes a new instance of the [`WidthAttribute`](WidthAttribute.md) class. |
+| [WidthAttribute](WidthAttribute/WidthAttribute.md)(…) | Sets column width |
 | [Max](WidthAttribute/Max.md) { get; set; } | Gets or sets the maximum width. |
 | [Min](WidthAttribute/Min.md) { get; set; } | Gets or sets the minimum width. |
 | [Value](WidthAttribute/Value.md) { get; } | Gets the column width. |
 
+## Remarks
+
+Initializes a new instance of the [`WidthAttribute`](WidthAttribute.md) class.
+
 ## See Also
 
-* **Source:** *[WidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/WidthAttribute.cs)*
+* **Source:** *[FixedWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/FixedWidthAttribute.cs)*

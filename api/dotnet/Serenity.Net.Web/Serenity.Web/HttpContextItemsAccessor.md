@@ -7,14 +7,22 @@ Default implementation for IHttpContextItemsAccessor using IHttpContextAccessor 
 public class HttpContextItemsAccessor : IHttpContextItemsAccessor
 ```
 
+| parameter | description |
+| --- | --- |
+| httpContextAccessor | HTTP context accessor |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [HttpContextItemsAccessor](HttpContextItemsAccessor/HttpContextItemsAccessor.md)(…) | Creates a new instance of the class |
+| [HttpContextItemsAccessor](HttpContextItemsAccessor/HttpContextItemsAccessor.md)(…) | Default implementation for IHttpContextItemsAccessor using IHttpContextAccessor and its Items property. |
 | [Items](HttpContextItemsAccessor/Items.md) { get; } |  |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 
 * interface [IHttpContextItemsAccessor](../Serenity.Net.Core/../Serenity.Abstractions/IHttpContextItemsAccessor.md)
-* **Source:** *[HttpContextItemsAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Common/HttpContextItemsAccessor.cs)*
+* **Source:** *[HttpContextItemsAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Common/HttpContextItemsAccessor.cs)*

@@ -7,6 +7,6 @@ protected override BaseCriteria VisitBinary(BinaryCriteria criteria)
 
 ## See Also
 
-* class [BaseCriteria](../Serenity.Net.Data/../BaseCriteria.md)
-* class [BinaryCriteria](../Serenity.Net.Data/../BinaryCriteria.md)
+* class [BaseCriteria](../BaseCriteria.md)
+* class [BinaryCriteria](../BinaryCriteria.md)
 * class [CriteriaFieldExpressionReplacer](../CriteriaFieldExpressionReplacer.md)

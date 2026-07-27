@@ -15,4 +15,4 @@ public interface IBackgroundJobs
 
 ## See Also
 
-* **Source:** *[IBackgroundJobs.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/IBackgroundJobs.cs)*
+* **Source:** *[IBackgroundJobs.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/IBackgroundJobs.cs)*

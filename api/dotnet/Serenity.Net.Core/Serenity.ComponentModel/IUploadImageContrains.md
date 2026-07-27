@@ -1,7 +1,7 @@
 # IUploadImageContrains interface
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contstraints for the uploaded image.
+Constraints for the uploaded image.
 
 ```csharp
 public interface IUploadImageContrains : IUploadOptions
@@ -22,4 +22,4 @@ public interface IUploadImageContrains : IUploadOptions
 ## See Also
 
 * interface [IUploadOptions](IUploadOptions.md)
-* **Source:** *[IUploadImageConstraints.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IUploadImageConstraints.cs)*
+* **Source:** *[IUploadImageConstraints.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/IUploadImageConstraints.cs)*

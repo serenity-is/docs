@@ -21,4 +21,4 @@ public class CssBundleManager : ICssBundleManager
 ## See Also
 
 * interface [ICssBundleManager](ICssBundleManager.md)
-* **Source:** *[CssBundleManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/CssBundleManager.cs)*
+* **Source:** *[CssBundleManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/CssBundleManager.cs)*

@@ -15,4 +15,4 @@ public interface IConfigureServices
 
 ## See Also
 
-* **Source:** *[IConfigureServices.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/IConfigureServices.cs)*
+* **Source:** *[IConfigureServices.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/IConfigureServices.cs)*

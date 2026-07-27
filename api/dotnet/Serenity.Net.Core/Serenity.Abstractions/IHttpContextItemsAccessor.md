@@ -15,4 +15,4 @@ public interface IHttpContextItemsAccessor
 
 ## See Also
 
-* **Source:** *[IHttpContextItemsAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IHttpContextItemsAccessor.cs)*
+* **Source:** *[IHttpContextItemsAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IHttpContextItemsAccessor.cs)*

@@ -10,4 +10,4 @@ public interface IExternalReport : IReport
 ## See Also
 
 * interface [IReport](IReport.md)
-* **Source:** *[IExternalReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/IExternalReport.cs)*
+* **Source:** *[IExternalReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Rendering/IExternalReport.cs)*

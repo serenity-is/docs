@@ -28,4 +28,4 @@ public class CheckLookupEditorAttribute : CustomEditorAttribute
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[CheckLookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/CheckLookupEditorAttribute.cs)*
+* **Source:** *[CheckLookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/CheckLookupEditorAttribute.cs)*

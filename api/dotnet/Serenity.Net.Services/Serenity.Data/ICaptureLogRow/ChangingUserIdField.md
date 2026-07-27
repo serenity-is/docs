@@ -9,5 +9,5 @@ public Field ChangingUserIdField { get; }
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../Field.md)
+* class [Field](../Field.md)
 * interface [ICaptureLogRow](../ICaptureLogRow.md)

@@ -14,6 +14,6 @@ public static BaseCriteria GetContainsTextFilter(string containsText, Criteria[]
 
 ## See Also
 
-* class [BaseCriteria](../Serenity.Net.Data/../../Serenity.Data/BaseCriteria.md)
-* class [Criteria](../Serenity.Net.Data/../../Serenity.Data/Criteria.md)
+* class [BaseCriteria](../../Serenity.Data/BaseCriteria.md)
+* class [Criteria](../../Serenity.Data/Criteria.md)
 * class [ServiceQueryHelper](../ServiceQueryHelper.md)

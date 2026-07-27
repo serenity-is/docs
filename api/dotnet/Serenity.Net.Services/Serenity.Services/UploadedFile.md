@@ -17,4 +17,4 @@ public class UploadedFile
 
 ## See Also
 
-* **Source:** *[UploadedFile.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/UploadedFile.cs)*
+* **Source:** *[UploadedFile.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/UploadedFile.cs)*

@@ -25,4 +25,4 @@ A save behavior instance is always cached and reused across requests, so make su
 
 ## See Also
 
-* **Source:** *[ISaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/ISaveBehavior.cs)*
+* **Source:** *[ISaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/ISaveBehavior.cs)*

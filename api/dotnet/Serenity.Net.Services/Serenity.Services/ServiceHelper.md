@@ -17,4 +17,4 @@ public static class ServiceHelper
 
 ## See Also
 
-* **Source:** *[ServiceHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Helpers/ServiceHelper.cs)*
+* **Source:** *[ServiceHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Helpers/ServiceHelper.cs)*

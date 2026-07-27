@@ -14,6 +14,6 @@ protected virtual void SelectField(SqlQuery query, Field field)
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

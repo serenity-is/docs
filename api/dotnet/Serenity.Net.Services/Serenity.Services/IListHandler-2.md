@@ -21,6 +21,6 @@ public interface IListHandler<TRow, TListRequest> :
 * class [TRow](../Serenity.Net.Services/IListHandler-2.TRow.md)
 * class [TListRequest](../Serenity.Net.Services/IListHandler-2.TListRequest.md)
 * class [ListResponse&lt;T&gt;](ListResponse-1.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
 * class [ListRequest](ListRequest.md)
-* **Source:** *[IListHandlerT2.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/List/IListHandlerT2.cs)*
+* **Source:** *[IListHandlerT2.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/List/IListHandlerT2.cs)*

@@ -17,4 +17,4 @@ public class PropertyItemsData
 
 ## See Also
 
-* **Source:** *[PropertyItemsData.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/PropertyItemsData.cs)*
+* **Source:** *[PropertyItemsData.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/PropertyItemsData.cs)*

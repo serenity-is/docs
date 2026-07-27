@@ -8,5 +8,5 @@ public void OnApplyFilters(IListRequestHandler handler, SqlQuery query)
 ## See Also
 
 * interface [IListRequestHandler](../IListRequestHandler.md)
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [LinkingSetRelationBehavior](../LinkingSetRelationBehavior.md)

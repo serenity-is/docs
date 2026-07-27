@@ -16,4 +16,4 @@ public class CssMinifyOptions
 
 ## See Also
 
-* **Source:** *[CssMinifyOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/CssMinifyOptions.cs)*
+* **Source:** *[CssMinifyOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/CssMinifyOptions.cs)*

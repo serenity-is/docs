@@ -17,4 +17,4 @@ public class AssemblySorter
 
 ## See Also
 
-* **Source:** *[AssemblySorter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/AssemblySorter.cs)*
+* **Source:** *[AssemblySorter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/AssemblySorter.cs)*

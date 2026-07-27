@@ -17,11 +17,11 @@ public class JsonRequestAttribute : ActionFilterAttribute
 | [AllowGet](JsonRequestAttribute/AllowGet.md) { get; set; } | True to allow this filter for GET request |
 | [AllowQuery](JsonRequestAttribute/AllowQuery.md) { get; set; } | True to allow getting JSON body from query string |
 | [ParamName](JsonRequestAttribute/ParamName.md) { get; set; } | The parameter name for "request" argument. |
-| override [OnActionExecuting](JsonRequestAttribute/OnActionExecuting.md)(…) |  |
+| override [OnActionExecutionAsync](JsonRequestAttribute/OnActionExecutionAsync.md)(…) |  |
 | static [DefaultAllowForm](JsonRequestAttribute/DefaultAllowForm.md) { get; set; } | The default for AllowForm which is true |
 | static [DefaultAllowGet](JsonRequestAttribute/DefaultAllowGet.md) { get; set; } | The default for AllowGet which is True |
 | static [DefaultAllowQuery](JsonRequestAttribute/DefaultAllowQuery.md) { get; set; } | The default for AllowQuery which is true |
 
 ## See Also
 
-* **Source:** *[JsonRequestAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/JsonRequestAttribute.cs)*
+* **Source:** *[JsonRequestAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/JsonRequestAttribute.cs)*

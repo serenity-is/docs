@@ -8,6 +8,10 @@ Controls whether this field is visible on new record mode
 public class HideOnInsertAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | True to hide field on insert |
+
 ## Public Members
 
 | name | description |
@@ -15,6 +19,10 @@ public class HideOnInsertAttribute : Attribute
 | [HideOnInsertAttribute](HideOnInsertAttribute/HideOnInsertAttribute.md)(…) | Controls whether this field is visible on new record mode |
 | [Value](HideOnInsertAttribute/Value.md) { get; } | Gets a value indicating whether this [`HideOnInsertAttribute`](HideOnInsertAttribute.md) is on. |
 
+## Remarks
+
+Controls whether this field is visible on new record mode
+
 ## See Also
 
-* **Source:** *[HideOnInsertAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/HideOnInsertAttribute.cs)*
+* **Source:** *[HideOnInsertAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/HideOnInsertAttribute.cs)*

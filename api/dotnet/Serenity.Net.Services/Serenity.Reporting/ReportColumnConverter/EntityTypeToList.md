@@ -1,7 +1,7 @@
 # ReportColumnConverter.EntityTypeToList method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Extracts report columns from an entity type (IRow)
+Extracts report columns from an entity type ([`IRow`](../../Serenity.Data/IRow.md))
 
 ```csharp
 public static List<ReportColumn> EntityTypeToList(IRow instance, ITextLocalizer localizer)
@@ -15,6 +15,6 @@ public static List<ReportColumn> EntityTypeToList(IRow instance, ITextLocalizer 
 ## See Also
 
 * class [ReportColumn](../ReportColumn.md)
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [ReportColumnConverter](../ReportColumnConverter.md)

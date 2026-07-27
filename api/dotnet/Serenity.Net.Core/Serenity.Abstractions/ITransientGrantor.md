@@ -11,10 +11,12 @@ public interface ITransientGrantor
 
 | name | description |
 | --- | --- |
+| [GetGranted](ITransientGrantor/GetGranted.md)() | Returns a list of permissions granted via Grant. |
 | [Grant](ITransientGrantor/Grant.md)(…) | Grants specified permissions temporarily (or makes it look like) |
 | [GrantAll](ITransientGrantor/GrantAll.md)() | Grants all permissions temporarily (or makes it look like) |
+| [IsAllGranted](ITransientGrantor/IsAllGranted.md)() | Returns true if currently all permissions are granted via GrantAll. |
 | [UndoGrant](ITransientGrantor/UndoGrant.md)() | Undoes last grant or grant all operation |
 
 ## See Also
 
-* **Source:** *[ITransientGrantor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/ITransientGrantor.cs)*
+* **Source:** *[ITransientGrantor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/ITransientGrantor.cs)*

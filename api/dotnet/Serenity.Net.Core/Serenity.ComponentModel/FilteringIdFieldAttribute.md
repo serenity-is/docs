@@ -8,13 +8,21 @@ Specifies ID field to filter on a field. For example, if this attribute is place
 public class FilteringIdFieldAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [FilteringIdFieldAttribute](FilteringIdFieldAttribute/FilteringIdFieldAttribute.md)(…) | Initializes a new instance of the [`FilteringIdFieldAttribute`](FilteringIdFieldAttribute.md) class. |
+| [FilteringIdFieldAttribute](FilteringIdFieldAttribute/FilteringIdFieldAttribute.md)(…) | Specifies ID field to filter on a field. For example, if this attribute is placed on EmployeeName field, EmployeeId can be the filtering field, so that values are filtered on ID not text value. |
 | [Value](FilteringIdFieldAttribute/Value.md) { get; } | Gets the filtering ID value. |
+
+## Remarks
+
+Initializes a new instance of the [`FilteringIdFieldAttribute`](FilteringIdFieldAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[FilteringIdFieldAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Filtering/FilteringIdFieldAttribute.cs)*
+* **Source:** *[FilteringIdFieldAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Filtering/FilteringIdFieldAttribute.cs)*

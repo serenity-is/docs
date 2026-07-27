@@ -15,4 +15,4 @@ public interface IReportWithAdditionalData
 
 ## See Also
 
-* **Source:** *[IReportWithAdditionalData.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/IReportWithAdditionalData.cs)*
+* **Source:** *[IReportWithAdditionalData.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/IReportWithAdditionalData.cs)*

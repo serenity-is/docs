@@ -22,4 +22,4 @@ public static class FileSystemExtensions
 
 ## See Also
 
-* **Source:** *[FileSystemExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/IO/FileSystemExtensions.cs)*
+* **Source:** *[FileSystemExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/IO/FileSystemExtensions.cs)*

@@ -29,7 +29,7 @@ public interface IUndeleteHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 * class [TRow](../Serenity.Net.Services/IUndeleteHandler-3.TRow.md)
 * class [TUndeleteRequest](../Serenity.Net.Services/IUndeleteHandler-3.TUndeleteRequest.md)
 * class [TUndeleteResponse](../Serenity.Net.Services/IUndeleteHandler-3.TUndeleteResponse.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
 * class [UndeleteRequest](UndeleteRequest.md)
 * class [UndeleteResponse](UndeleteResponse.md)
-* **Source:** *[IUndeleteHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Undelete/IUndeleteHandler.cs)*
+* **Source:** *[IUndeleteHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Undelete/IUndeleteHandler.cs)*

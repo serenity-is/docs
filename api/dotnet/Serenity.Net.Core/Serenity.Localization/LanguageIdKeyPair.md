@@ -17,4 +17,4 @@ public struct LanguageIdKeyPair : IEquatable<LanguageIdKeyPair>
 
 ## See Also
 
-* **Source:** *[LanguageIdKeyPair.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/LanguageIdKeyPair.cs)*
+* **Source:** *[LanguageIdKeyPair.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/LanguageIdKeyPair.cs)*

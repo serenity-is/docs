@@ -19,4 +19,4 @@ public interface IServiceResolver<TService>
 
 ## See Also
 
-* **Source:** *[IServiceResolver.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/IServiceResolver.cs)*
+* **Source:** *[IServiceResolver.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/IServiceResolver.cs)*

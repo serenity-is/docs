@@ -15,4 +15,4 @@ public static class ThumbnailGenerator
 
 ## See Also
 
-* **Source:** *[ThumbnailGenerator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/ThumbnailGenerator.cs)*
+* **Source:** *[ThumbnailGenerator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/ThumbnailGenerator.cs)*

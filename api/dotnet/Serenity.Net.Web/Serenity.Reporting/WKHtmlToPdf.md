@@ -7,11 +7,15 @@ HTML to PDF converter class using WKHTMLToPdf
 public class WKHtmlToPdf : IHtmlToPdfOptions
 ```
 
+| parameter | description |
+| --- | --- |
+| options | List of options |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [WKHtmlToPdf](WKHtmlToPdf/WKHtmlToPdf.md)(…) | WKHtmlToPdf converter class |
+| [WKHtmlToPdf](WKHtmlToPdf/WKHtmlToPdf.md)(…) | HTML to PDF converter class using WKHTMLToPdf |
 | [AdditionalUrls](WKHtmlToPdf/AdditionalUrls.md) { get; } |  |
 | [AllowedLocalPaths](WKHtmlToPdf/AllowedLocalPaths.md) { get; } |  |
 | [Cookies](WKHtmlToPdf/Cookies.md) { get; } |  |
@@ -39,7 +43,11 @@ public class WKHtmlToPdf : IHtmlToPdfOptions
 | [Zoom](WKHtmlToPdf/Zoom.md) { get; set; } |  |
 | [Execute](WKHtmlToPdf/Execute.md)() | Executes the converter process and returns the PDF bytes |
 
+## Remarks
+
+WKHtmlToPdf converter class
+
 ## See Also
 
 * interface [IHtmlToPdfOptions](../Serenity.Net.Services/IHtmlToPdfOptions.md)
-* **Source:** *[WKHtmlToPdf.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Reporting/WKHtmlToPdf.cs)*
+* **Source:** *[WKHtmlToPdf.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Reporting/WKHtmlToPdf.cs)*

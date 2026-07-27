@@ -13,7 +13,7 @@ public void PurgeDirectory(string directoryToClean, TimeSpan? autoExpireTime = d
 | directoryToClean | Directory to clean |
 | autoExpireTime | Auto expire old files timespan |
 | maxFilesInDirectory | Max files to keep in directory |
-| checkFileName | A filename to check existance to confirm the target is a temporary directory. By default it is ".temporary" |
+| checkFileName | A filename to check existence to confirm the target is a temporary directory. By default it is ".temporary" |
 
 ## See Also
 

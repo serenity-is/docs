@@ -51,7 +51,7 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 | virtual [CustomValidate](SaveRequestHandler-3/CustomValidate.md)(…) | Calls custom validator |
 | virtual [ExecuteSave](SaveRequestHandler-3/ExecuteSave.md)() | Executes the actual SQL save operation |
 | virtual [GetBehaviors](SaveRequestHandler-3/GetBehaviors.md)() | Gets the list of save behaviors |
-| virtual [GetDisplayOrderFilter](SaveRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements IDisplayOrderRow interface |
+| virtual [GetDisplayOrderFilter](SaveRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [GetEditableFields](SaveRequestHandler-3/GetEditableFields.md)(…) | Gets the list of editable fields. These are fields that have Insertable (if Create), or Updatable (if Update) flags, and have the insert or update permission based on the type of the current operation. |
 | virtual [GetRequiredFields](SaveRequestHandler-3/GetRequiredFields.md)(…) | Gets the list of required fields based on editable list, and NotNull |
 | virtual [HandleDisplayOrder](SaveRequestHandler-3/HandleDisplayOrder.md)(…) | Handles display order field calculation before and after save |
@@ -69,7 +69,7 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 | virtual [ValidateAndClearIdField](SaveRequestHandler-3/ValidateAndClearIdField.md)() | Validates and clears the ID field |
 | virtual [ValidateEditable](SaveRequestHandler-3/ValidateEditable.md)() | Validates editable fields |
 | virtual [ValidateEditableFields](SaveRequestHandler-3/ValidateEditableFields.md)(…) | Validates editable fields, e.g. checks if the assigned fields are all in the editable set. Calls [`HandleNonEditable`](SaveRequestHandler-3/HandleNonEditable.md) if not. |
-| virtual [ValidateFieldValues](SaveRequestHandler-3/ValidateFieldValues.md)() | Validates field values via ICustomValidator interface. |
+| virtual [ValidateFieldValues](SaveRequestHandler-3/ValidateFieldValues.md)() | Validates field values via [`ICustomValidator`](../Serenity/ICustomValidator.md) interface. |
 | virtual [ValidateIsActive](SaveRequestHandler-3/ValidateIsActive.md)() | Validates that record is not soft deleted |
 | virtual [ValidatePermissions](SaveRequestHandler-3/ValidatePermissions.md)() | Validates user permissions by checking InsertPermissionAttribute and UpdatePermissionAttribute, and ModifyPermissionAttribute or ReadPermissionAttribute if others are not found. |
 | virtual [ValidateRequest](SaveRequestHandler-3/ValidateRequest.md)() | Validates the request by checking insert / update permissions. |
@@ -82,8 +82,8 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 * class [TSaveRequest](../Serenity.Net.Services/SaveRequestHandler-3.TSaveRequest.md)
 * class [TSaveResponse](../Serenity.Net.Services/SaveRequestHandler-3.TSaveResponse.md)
 * interface [ISaveRequestProcessor](ISaveRequestProcessor.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
 * class [SaveResponse](SaveResponse.md)
-* **Source:** *[SaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/SaveRequestHandler.cs)*
+* **Source:** *[SaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/SaveRequestHandler.cs)*

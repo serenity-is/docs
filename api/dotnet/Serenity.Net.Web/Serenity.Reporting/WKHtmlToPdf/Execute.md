@@ -12,7 +12,7 @@ public byte[] Execute()
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | UtilityExePath or URL is null |
-| InvalidOperationException | An error occureed during process execution |
+| InvalidOperationException | An error occurred during process execution |
 
 ## See Also
 

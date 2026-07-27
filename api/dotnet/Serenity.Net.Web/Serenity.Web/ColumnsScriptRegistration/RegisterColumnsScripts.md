@@ -4,9 +4,9 @@
 Creates and registers column scripts
 
 ```csharp
-public static void RegisterColumnsScripts(IDynamicScriptManager scriptManager, 
-    ITypeSource typeSource, IPropertyItemProvider propertyProvider, 
-    IServiceProvider serviceProvider)
+public static IEnumerable<ColumnsScript> RegisterColumnsScripts(
+    IDynamicScriptManager scriptManager, ITypeSource typeSource, 
+    IPropertyItemProvider propertyProvider, IServiceProvider serviceProvider)
 ```
 
 | parameter | description |
@@ -24,7 +24,8 @@ public static void RegisterColumnsScripts(IDynamicScriptManager scriptManager,
 
 ## See Also
 
+* class [ColumnsScript](../Serenity.Net.Services/../ColumnsScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
 * interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
-* interface [IPropertyItemProvider](../Serenity.Net.Entity/../../Serenity.PropertyGrid/IPropertyItemProvider.md)
+* interface [IPropertyItemProvider](../Serenity.Net.Services/../../Serenity.PropertyGrid/IPropertyItemProvider.md)
 * class [ColumnsScriptRegistration](../ColumnsScriptRegistration.md)

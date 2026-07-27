@@ -17,4 +17,4 @@ public class HandleServiceExceptionAttribute : ExceptionFilterAttribute
 
 ## See Also
 
-* **Source:** *[HandleServiceExceptionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/HandleServiceExceptionAttribute.cs)*
+* **Source:** *[HandleServiceExceptionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/HandleServiceExceptionAttribute.cs)*

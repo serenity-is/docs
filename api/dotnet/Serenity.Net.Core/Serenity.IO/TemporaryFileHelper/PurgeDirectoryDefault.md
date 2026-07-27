@@ -4,12 +4,14 @@
 Clears a folder based on default conditions
 
 ```csharp
-public static void PurgeDirectoryDefault(string directoryToClean)
+public static void PurgeDirectoryDefault(string directoryToClean, 
+    ITemporaryFileSystem fileSystem = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | directoryToClean | Folder to be cleared |
+| fileSystem | File system |
 
 ## Remarks
 
@@ -17,4 +19,5 @@ If any errors occur during cleanup, this doesn't raise an exception and ignored.
 
 ## See Also
 
+* interface [ITemporaryFileSystem](../../Serenity/ITemporaryFileSystem.md)
 * class [TemporaryFileHelper](../TemporaryFileHelper.md)

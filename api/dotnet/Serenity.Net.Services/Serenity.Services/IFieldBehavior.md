@@ -15,4 +15,4 @@ public interface IFieldBehavior
 
 ## See Also
 
-* **Source:** *[IFieldBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Behavior/IFieldBehavior.cs)*
+* **Source:** *[IFieldBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/IFieldBehavior.cs)*

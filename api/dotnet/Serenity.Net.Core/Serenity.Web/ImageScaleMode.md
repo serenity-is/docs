@@ -18,4 +18,4 @@ public enum ImageScaleMode
 
 ## See Also
 
-* **Source:** *[ImageScaleMode.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/ImageScaleMode.cs)*
+* **Source:** *[ImageScaleMode.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/ImageScaleMode.cs)*

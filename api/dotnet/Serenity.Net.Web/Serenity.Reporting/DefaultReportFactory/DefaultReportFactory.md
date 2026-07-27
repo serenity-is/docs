@@ -1,7 +1,7 @@
 # DefaultReportFactory constructor
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates an instance of the class
+Default implementation for IReportFactory
 
 ```csharp
 public DefaultReportFactory(IReportRegistry reportRegistry, IServiceProvider serviceProvider, 
@@ -10,7 +10,7 @@ public DefaultReportFactory(IReportRegistry reportRegistry, IServiceProvider ser
 
 | parameter | description |
 | --- | --- |
-| reportRegistry | Report regitry |
+| reportRegistry | Report registry |
 | serviceProvider | Service provider |
 | httpContextAccessor | Http context accessor |
 
@@ -19,6 +19,10 @@ public DefaultReportFactory(IReportRegistry reportRegistry, IServiceProvider ser
 | exception | condition |
 | --- | --- |
 | ArgumentNullException |  |
+
+## Remarks
+
+Creates an instance of the class
 
 ## See Also
 

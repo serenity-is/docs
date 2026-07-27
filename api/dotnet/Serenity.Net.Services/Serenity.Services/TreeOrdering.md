@@ -15,4 +15,4 @@ public static class TreeOrdering
 
 ## See Also
 
-* **Source:** *[TreeOrdering.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Helpers/TreeOrdering.cs)*
+* **Source:** *[TreeOrdering.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Helpers/TreeOrdering.cs)*

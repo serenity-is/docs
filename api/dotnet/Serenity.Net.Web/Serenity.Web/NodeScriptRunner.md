@@ -16,4 +16,4 @@ public sealed class NodeScriptRunner : IDisposable
 
 ## See Also
 
-* **Source:** *[NodeScriptRunner.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/NodeScriptRunner/NodeScriptRunner.cs)*
+* **Source:** *[NodeScriptRunner.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/NodeScriptRunner/NodeScriptRunner.cs)*

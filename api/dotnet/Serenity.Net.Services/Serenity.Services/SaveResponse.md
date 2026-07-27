@@ -12,9 +12,9 @@ public class SaveResponse : ServiceResponse
 | name | description |
 | --- | --- |
 | [SaveResponse](SaveResponse/SaveResponse.md)() | The default constructor. |
-| [EntityId](SaveResponse/EntityId.md) | The entity ID of the created / updated entity. |
+| [EntityId](SaveResponse/EntityId.md) { get; set; } | The entity ID of the created / updated entity. |
 
 ## See Also
 
 * class [ServiceResponse](ServiceResponse.md)
-* **Source:** *[SaveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/SaveResponse.cs)*
+* **Source:** *[SaveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/SaveResponse.cs)*

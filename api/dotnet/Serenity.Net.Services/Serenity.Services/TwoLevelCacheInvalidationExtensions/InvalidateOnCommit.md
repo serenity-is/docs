@@ -22,8 +22,8 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 ## See Also
 
 * interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * class [TwoLevelCacheInvalidationExtensions](../TwoLevelCacheInvalidationExtensions.md)
 
 ---
@@ -53,8 +53,8 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 ## See Also
 
 * interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
-* class [RowFieldsBase](../Serenity.Net.Entity/../../Serenity.Data/RowFieldsBase.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
+* class [RowFieldsBase](../../Serenity.Data/RowFieldsBase.md)
 * class [TwoLevelCacheInvalidationExtensions](../TwoLevelCacheInvalidationExtensions.md)
 
 ---
@@ -83,5 +83,5 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 ## See Also
 
 * interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * class [TwoLevelCacheInvalidationExtensions](../TwoLevelCacheInvalidationExtensions.md)

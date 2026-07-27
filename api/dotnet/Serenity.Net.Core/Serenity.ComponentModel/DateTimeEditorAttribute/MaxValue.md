@@ -4,7 +4,7 @@
 Gets or sets the maximum value.
 
 ```csharp
-public DateTime MaxValue { get; set; }
+public string MaxValue { get; set; }
 ```
 
 ## Property Value

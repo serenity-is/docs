@@ -15,4 +15,4 @@ public interface ICaptureLogHandler
 
 ## See Also
 
-* **Source:** *[ICaptureLogHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/CaptureLog/ICaptureLogHandler.cs)*
+* **Source:** *[ICaptureLogHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/CaptureLog/ICaptureLogHandler.cs)*

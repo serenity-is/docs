@@ -13,5 +13,5 @@ protected virtual Field FindField(string expression)
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../Field.md)
+* class [Field](../Field.md)
 * class [CriteriaFieldExpressionReplacer](../CriteriaFieldExpressionReplacer.md)

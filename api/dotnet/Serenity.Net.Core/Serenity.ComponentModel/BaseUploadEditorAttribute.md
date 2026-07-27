@@ -9,6 +9,10 @@ public abstract class BaseUploadEditorAttribute : CustomEditorAttribute, IUpload
     IUploadFileConstraints, IUploadFileOptions, IUploadImageContrains, IUploadImageOptions
 ```
 
+| parameter | description |
+| --- | --- |
+| editorType | Type of the editor. |
+
 ## Public Members
 
 | name | description |
@@ -50,7 +54,11 @@ public abstract class BaseUploadEditorAttribute : CustomEditorAttribute, IUpload
 
 | name | description |
 | --- | --- |
-| [BaseUploadEditorAttribute](BaseUploadEditorAttribute/BaseUploadEditorAttribute.md)(…) | Initializes a new instance of the [`ImageUploadEditorAttribute`](ImageUploadEditorAttribute.md) class. |
+| [BaseUploadEditorAttribute](BaseUploadEditorAttribute/BaseUploadEditorAttribute.md)(…) | Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in row, otherwise your files will stay in temporary directory. |
+
+## Remarks
+
+Initializes a new instance of the [`ImageUploadEditorAttribute`](ImageUploadEditorAttribute.md) class.
 
 ## See Also
 
@@ -60,4 +68,4 @@ public abstract class BaseUploadEditorAttribute : CustomEditorAttribute, IUpload
 * interface [IUploadFileOptions](IUploadFileOptions.md)
 * interface [IUploadImageContrains](IUploadImageContrains.md)
 * interface [IUploadImageOptions](IUploadImageOptions.md)
-* **Source:** *[BaseUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/BaseUploadEditorAttribute.cs)*
+* **Source:** *[BaseUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/BaseUploadEditorAttribute.cs)*

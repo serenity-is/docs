@@ -17,5 +17,5 @@ public static void SetSkipTakeTotal<T>(this ListResponse<T> response, SqlQuery q
 
 * class [ListResponse&lt;T&gt;](../ListResponse-1.md)
 * class [T](../Serenity.Net.Services/../ServiceHelper.T.md)
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [ServiceHelper](../ServiceHelper.md)

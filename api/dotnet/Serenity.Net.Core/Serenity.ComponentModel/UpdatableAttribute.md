@@ -8,6 +8,10 @@ Controls if this field is editable in update record mode. When used with fields,
 public class UpdatableAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| updatable | True to make field updatable |
+
 ## Public Members
 
 | name | description |
@@ -15,6 +19,10 @@ public class UpdatableAttribute : Attribute
 | [UpdatableAttribute](UpdatableAttribute/UpdatableAttribute.md)(…) | Controls if this field is editable in update record mode. When used with fields, turns on or off the updatable flag. |
 | [Value](UpdatableAttribute/Value.md) { get; } | Gets a value indicating whether this [`UpdatableAttribute`](UpdatableAttribute.md) is enabled. |
 
+## Remarks
+
+Controls if this field is editable in update record mode. When used with fields, turns on or off the updatable flag.
+
 ## See Also
 
-* **Source:** *[UpdatableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Common/UpdatableAttribute.cs)*
+* **Source:** *[UpdatableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/UpdatableAttribute.cs)*

@@ -23,4 +23,4 @@ Your application might have a class that implements this interface, e.g. UserDef
 
 ## See Also
 
-* **Source:** *[IUserDefinition.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/IUserDefinition.cs)*
+* **Source:** *[IUserDefinition.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IUserDefinition.cs)*

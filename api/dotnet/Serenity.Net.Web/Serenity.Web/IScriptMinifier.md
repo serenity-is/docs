@@ -15,4 +15,4 @@ public interface IScriptMinifier
 
 ## See Also
 
-* **Source:** *[IScriptMinifier.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/IScriptMinifier.cs)*
+* **Source:** *[IScriptMinifier.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/IScriptMinifier.cs)*

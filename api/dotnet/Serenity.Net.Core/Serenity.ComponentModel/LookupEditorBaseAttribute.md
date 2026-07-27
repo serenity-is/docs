@@ -8,6 +8,10 @@ Base class for lookup based editor types
 public abstract class LookupEditorBaseAttribute : CustomEditorAttribute
 ```
 
+| parameter | description |
+| --- | --- |
+| editorType | Type of the editor. |
+
 ## Public Members
 
 | name | description |
@@ -32,9 +36,13 @@ public abstract class LookupEditorBaseAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [LookupEditorBaseAttribute](LookupEditorBaseAttribute/LookupEditorBaseAttribute.md)(…) | Initializes a new instance of the [`LookupEditorBaseAttribute`](LookupEditorBaseAttribute.md) class. |
+| [LookupEditorBaseAttribute](LookupEditorBaseAttribute/LookupEditorBaseAttribute.md)(…) | Base class for lookup based editor types |
+
+## Remarks
+
+Initializes a new instance of the [`LookupEditorBaseAttribute`](LookupEditorBaseAttribute.md) class.
 
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[LookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/LookupEditorBaseAttribute.cs)*
+* **Source:** *[LookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/LookupEditorBaseAttribute.cs)*

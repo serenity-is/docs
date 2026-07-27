@@ -16,4 +16,4 @@ public class ScriptMinifyOptions
 
 ## See Also
 
-* **Source:** *[ScriptMinifyOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ScriptMinifyOptions.cs)*
+* **Source:** *[ScriptMinifyOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ScriptMinifyOptions.cs)*

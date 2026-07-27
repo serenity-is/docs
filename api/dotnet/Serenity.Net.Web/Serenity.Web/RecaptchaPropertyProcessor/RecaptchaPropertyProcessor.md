@@ -1,11 +1,15 @@
 # RecaptchaPropertyProcessor constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Property processor to pass recaptcha site key to client side
 
 ```csharp
 public RecaptchaPropertyProcessor(IOptions<RecaptchaSettings> options = null)
 ```
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 

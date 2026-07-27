@@ -11,6 +11,10 @@ public HideOnUpdateAttribute(bool value = true)
 | --- | --- |
 | value | True to hide field on update |
 
+## Remarks
+
+Controls whether this field is visible on edit record mode
+
 ## See Also
 
 * class [HideOnUpdateAttribute](../HideOnUpdateAttribute.md)

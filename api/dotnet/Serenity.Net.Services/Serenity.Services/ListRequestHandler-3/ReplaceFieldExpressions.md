@@ -17,5 +17,5 @@ Processed criteria
 
 ## See Also
 
-* class [BaseCriteria](../Serenity.Net.Data/../../Serenity.Data/BaseCriteria.md)
+* class [BaseCriteria](../../Serenity.Data/BaseCriteria.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

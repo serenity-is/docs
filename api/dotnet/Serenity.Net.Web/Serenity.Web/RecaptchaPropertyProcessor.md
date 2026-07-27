@@ -11,11 +11,15 @@ public class RecaptchaPropertyProcessor : PropertyProcessor
 
 | name | description |
 | --- | --- |
-| [RecaptchaPropertyProcessor](RecaptchaPropertyProcessor/RecaptchaPropertyProcessor.md)(…) | Creates a new instance of the class |
+| [RecaptchaPropertyProcessor](RecaptchaPropertyProcessor/RecaptchaPropertyProcessor.md)(…) | Property processor to pass recaptcha site key to client side |
 | override [Priority](RecaptchaPropertyProcessor/Priority.md) { get; } |  |
 | override [Process](RecaptchaPropertyProcessor/Process.md)(…) |  |
 
+## Remarks
+
+Creates a new instance of the class
+
 ## See Also
 
-* class [PropertyProcessor](../Serenity.Net.Entity/../Serenity.PropertyGrid/PropertyProcessor.md)
-* **Source:** *[RecaptchaPropertyProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Security/RecaptchaPropertyProcessor.cs)*
+* class [PropertyProcessor](../Serenity.Net.Services/../Serenity.PropertyGrid/PropertyProcessor.md)
+* **Source:** *[RecaptchaPropertyProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Security/RecaptchaPropertyProcessor.cs)*

@@ -18,4 +18,4 @@ public sealed class NestedLocalTextsAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[NestedLocalTextsAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/NestedLocalTextsAttribute.cs)*
+* **Source:** *[NestedLocalTextsAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/NestedLocalTextsAttribute.cs)*

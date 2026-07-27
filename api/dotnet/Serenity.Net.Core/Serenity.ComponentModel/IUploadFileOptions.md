@@ -20,4 +20,4 @@ public interface IUploadFileOptions : IUploadOptions
 ## See Also
 
 * interface [IUploadOptions](IUploadOptions.md)
-* **Source:** *[IUploadFileOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/IUploadFileOptions.cs)*
+* **Source:** *[IUploadFileOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/IUploadFileOptions.cs)*

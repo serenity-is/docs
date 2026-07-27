@@ -8,6 +8,10 @@ Controls if this field is editable in new record mode. When used with fields, tu
 public class InsertableAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| insertable | True to make field insertable |
+
 ## Public Members
 
 | name | description |
@@ -15,6 +19,10 @@ public class InsertableAttribute : Attribute
 | [InsertableAttribute](InsertableAttribute/InsertableAttribute.md)(…) | Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag. |
 | [Value](InsertableAttribute/Value.md) { get; } | Gets a value indicating whether this [`InsertableAttribute`](InsertableAttribute.md) is enabled. |
 
+## Remarks
+
+Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag.
+
 ## See Also
 
-* **Source:** *[InsertableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Common/InsertableAttribute.cs)*
+* **Source:** *[InsertableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/InsertableAttribute.cs)*

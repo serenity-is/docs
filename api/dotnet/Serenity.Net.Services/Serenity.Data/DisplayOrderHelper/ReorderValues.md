@@ -25,8 +25,8 @@ If any of the display order values is changed true.
 
 ## See Also
 
-* interface [IDisplayOrderRow](../Serenity.Net.Entity/../IDisplayOrderRow.md)
-* interface [ICriteria](../Serenity.Net.Data/../../Serenity/ICriteria.md)
+* interface [IDisplayOrderRow](../IDisplayOrderRow.md)
+* interface [ICriteria](../../Serenity/ICriteria.md)
 * class [DisplayOrderHelper](../DisplayOrderHelper.md)
 
 ---
@@ -60,6 +60,6 @@ If any of the display order values is changed true.
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../Field.md)
-* interface [ICriteria](../Serenity.Net.Data/../../Serenity/ICriteria.md)
+* class [Field](../Field.md)
+* interface [ICriteria](../../Serenity/ICriteria.md)
 * class [DisplayOrderHelper](../DisplayOrderHelper.md)

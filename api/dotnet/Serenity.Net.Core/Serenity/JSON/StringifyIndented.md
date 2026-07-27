@@ -4,14 +4,13 @@
 Converts object to its JSON representation
 
 ```csharp
-public static string StringifyIndented(object value, int indentation = 4, bool includeNulls = false)
+public static string StringifyIndented(object value, bool writeNulls = false)
 ```
 
 | parameter | description |
 | --- | --- |
 | value | Value to convert to JSON |
-| indentation | Indentation (default 4) |
-| includeNulls | If true, serializes null values. |
+| writeNulls | If true, serializes null values. |
 
 ## Return Value
 

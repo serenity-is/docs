@@ -19,4 +19,4 @@ public interface IRequestContext
 
 ## See Also
 
-* **Source:** *[IRequestContext.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Repository/IRequestContext.cs)*
+* **Source:** *[IRequestContext.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Repository/IRequestContext.cs)*

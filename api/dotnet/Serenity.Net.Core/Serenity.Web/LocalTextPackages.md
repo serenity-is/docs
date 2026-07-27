@@ -17,4 +17,4 @@ public class LocalTextPackages : Dictionary<string, string>
 
 ## See Also
 
-* **Source:** *[LocalTextPackages.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/LocalTextPackages.cs)*
+* **Source:** *[LocalTextPackages.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/LocalTextPackages.cs)*

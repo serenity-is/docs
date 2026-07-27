@@ -1,7 +1,7 @@
 # FormScriptAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this type should generate a form script, which contains information about properties in this type and is an array of PropertyItem objects. Form scripts can be accessed from client side using Q.getForm("Key")
+Indicates that this type should generate a form script, which contains information about properties in this type and is an array of PropertyItem objects. Form scripts can be accessed from client side using Serenity.getForm("Key")
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]
@@ -19,4 +19,4 @@ public sealed class FormScriptAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[FormScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/FormScriptAttribute.cs)*
+* **Source:** *[FormScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/FormScriptAttribute.cs)*

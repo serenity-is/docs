@@ -15,4 +15,4 @@ public interface ICacheSuffix
 
 ## See Also
 
-* **Source:** *[ICacheSuffix.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/DynamicScript/ICacheSuffix.cs)*
+* **Source:** *[ICacheSuffix.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScript/ICacheSuffix.cs)*

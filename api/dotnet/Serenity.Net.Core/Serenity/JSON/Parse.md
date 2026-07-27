@@ -4,14 +4,14 @@
 Deserializes a JSON string to an object
 
 ```csharp
-public static object Parse(string input, Type targetType, bool includeNulls = false)
+public static object Parse(string input, Type targetType, JsonSerializerOptions options = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | targetType | Type to deserialize |
+| options | Serializer options. Defaults to StrictWriteNulls. |
 | input | JSON string |
-| includeNulls | If true, if a value is null and target property is not nullable, raises error. |
 
 ## Return Value
 
@@ -29,14 +29,14 @@ Deserialized object
 Deserializes a JSON string to an object
 
 ```csharp
-public static T Parse<T>(string input, bool includeNulls = false)
+public static T Parse<T>(string input, JsonSerializerOptions options = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | T | Type to deserialize |
 | input | JSON string |
-| includeNulls | If true, if a value is null and target property is not nullable, raises error. |
+| options | Serializer options. Defaults to StrictWriteNulls. |
 
 ## Return Value
 

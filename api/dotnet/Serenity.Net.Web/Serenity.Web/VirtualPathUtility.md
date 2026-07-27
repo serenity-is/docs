@@ -15,4 +15,4 @@ public static class VirtualPathUtility
 
 ## See Also
 
-* **Source:** *[VirtualPathUtility.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/VirtualPathUtility.cs)*
+* **Source:** *[VirtualPathUtility.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/VirtualPathUtility.cs)*

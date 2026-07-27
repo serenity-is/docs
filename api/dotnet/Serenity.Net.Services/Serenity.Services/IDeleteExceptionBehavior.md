@@ -15,4 +15,4 @@ public interface IDeleteExceptionBehavior
 
 ## See Also
 
-* **Source:** *[IDeleteExceptionBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Delete/IDeleteExceptionBehavior.cs)*
+* **Source:** *[IDeleteExceptionBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Delete/IDeleteExceptionBehavior.cs)*

@@ -7,14 +7,23 @@ A decorator used to export enum name instead of the enum integer value.
 public class EnumDecorator : BaseCellDecorator
 ```
 
+| parameter | description |
+| --- | --- |
+| enumType | Enum type |
+| localizer | Text localizer |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [EnumDecorator](EnumDecorator/EnumDecorator.md)(…) | Creates an instance of the class. |
+| [EnumDecorator](EnumDecorator/EnumDecorator.md)(…) | A decorator used to export enum name instead of the enum integer value. |
 | override [Decorate](EnumDecorator/Decorate.md)() |  |
+
+## Remarks
+
+Creates an instance of the class.
 
 ## See Also
 
 * class [BaseCellDecorator](BaseCellDecorator.md)
-* **Source:** *[EnumDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Decorators/EnumDecorator.cs)*
+* **Source:** *[EnumDecorator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Decorators/EnumDecorator.cs)*

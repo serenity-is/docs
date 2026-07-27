@@ -18,4 +18,4 @@ public class NavigationHelper
 
 ## See Also
 
-* **Source:** *[NavigationHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Navigation/NavigationHelper.cs)*
+* **Source:** *[NavigationHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Navigation/NavigationHelper.cs)*

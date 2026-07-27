@@ -15,4 +15,4 @@ public static class DefaultHandlerFactoryExtensions
 
 ## See Also
 
-* **Source:** *[DefaultHandlerFactoryExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Handler/DefaultHandlerFactoryExtensions.cs)*
+* **Source:** *[DefaultHandlerFactoryExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/DefaultHandlerFactoryExtensions.cs)*

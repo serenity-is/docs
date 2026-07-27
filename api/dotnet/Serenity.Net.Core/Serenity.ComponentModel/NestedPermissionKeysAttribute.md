@@ -17,4 +17,4 @@ public sealed class NestedPermissionKeysAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[NestedPermissionKeysAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/NestedPermissionKeysAttribute.cs)*
+* **Source:** *[NestedPermissionKeysAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/NestedPermissionKeysAttribute.cs)*

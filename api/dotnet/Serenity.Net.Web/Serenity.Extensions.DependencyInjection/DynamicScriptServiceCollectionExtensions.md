@@ -16,14 +16,15 @@ public static class DynamicScriptServiceCollectionExtensions
 | static [AddDynamicScriptManager](DynamicScriptServiceCollectionExtensions/AddDynamicScriptManager.md)(…) | Registers he default [`IDynamicScriptManager`](../Serenity.Web/IDynamicScriptManager.md) implementation. |
 | static [AddDynamicScripts](DynamicScriptServiceCollectionExtensions/AddDynamicScripts.md)(…) | Registers the default [`IDynamicScriptManager`](../Serenity.Web/IDynamicScriptManager.md) implementation in addition to the IPropertyItemProvider implementation. |
 | static [AddFileWatcherFactory](DynamicScriptServiceCollectionExtensions/AddFileWatcherFactory.md)(…) | Registers the default [`IFileWatcherFactory`](../Serenity.Web/IFileWatcherFactory.md) implementation. |
+| static [AddLocalTextInitializer](DynamicScriptServiceCollectionExtensions/AddLocalTextInitializer.md)(…) | Registers the default local text initializer |
 | static [AddScriptBundling](DynamicScriptServiceCollectionExtensions/AddScriptBundling.md)(…) | Registers the default service types related to Script bundling, including [`IScriptBundleManager`](../Serenity.Web/IScriptBundleManager.md). (2 methods) |
+| static [InitializeLocalTexts](DynamicScriptServiceCollectionExtensions/InitializeLocalTexts.md)(…) | Initializes local texts by calling ILocalTextRegistry) |
 | static [UseCssWatching](DynamicScriptServiceCollectionExtensions/UseCssWatching.md)(…) | Actives CSS file watching (2 methods) |
 | static [UseDynamicScriptMiddleware](DynamicScriptServiceCollectionExtensions/UseDynamicScriptMiddleware.md)(…) | Adds [`DynamicScriptMiddleware`](../Serenity.Web.Middleware/DynamicScriptMiddleware.md) to the application pipeline |
 | static [UseDynamicScripts](DynamicScriptServiceCollectionExtensions/UseDynamicScripts.md)(…) | Adds dynamic script related services to the application including dynamic script types, css watching, script watching, template scripts, and dynamic script middleware |
 | static [UseDynamicScriptTypes](DynamicScriptServiceCollectionExtensions/UseDynamicScriptTypes.md)(…) | Executes registration of dynamic script types including data scripts, lookup scripts, distinct values, columns and forms. |
 | static [UseScriptWatching](DynamicScriptServiceCollectionExtensions/UseScriptWatching.md)(…) | Activates script file watching (2 methods) |
-| static [UseTemplateScripts](DynamicScriptServiceCollectionExtensions/UseTemplateScripts.md)(…) | Registers template scripts (2 methods) |
 
 ## See Also
 
-* **Source:** *[DynamicScriptServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/DynamicScript/DynamicScript/DynamicScriptServiceCollectionExtensions.cs)*
+* **Source:** *[DynamicScriptServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScript/DynamicScriptServiceCollectionExtensions.cs)*

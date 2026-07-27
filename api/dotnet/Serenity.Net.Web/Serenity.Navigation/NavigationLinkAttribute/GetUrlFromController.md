@@ -16,7 +16,7 @@ public static string GetUrlFromController(Type controller, string action)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Controll or action is null |
+| ArgumentNullException | Controller or action is null |
 | ArgumentOutOfRangeException | Action name is invalid |
 | InvalidOperationException | Route attribute is not found |
 

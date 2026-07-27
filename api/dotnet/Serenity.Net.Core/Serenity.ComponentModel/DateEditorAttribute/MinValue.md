@@ -4,7 +4,7 @@
 Gets or sets the minimum value.
 
 ```csharp
-public DateTime MinValue { get; set; }
+public string MinValue { get; set; }
 ```
 
 ## Property Value

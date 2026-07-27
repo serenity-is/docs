@@ -8,13 +8,21 @@ Controls initial visibility of a column / form field.
 public class VisibleAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | if set to `true` (default) column is visible initially. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [VisibleAttribute](VisibleAttribute/VisibleAttribute.md)(…) | Initializes a new instance of the [`VisibleAttribute`](VisibleAttribute.md) class. |
+| [VisibleAttribute](VisibleAttribute/VisibleAttribute.md)(…) | Controls initial visibility of a column / form field. |
 | [Value](VisibleAttribute/Value.md) { get; } | Gets a value indicating whether this [`VisibleAttribute`](VisibleAttribute.md) is ON. |
+
+## Remarks
+
+Initializes a new instance of the [`VisibleAttribute`](VisibleAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[VisibleAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Common/VisibleAttribute.cs)*
+* **Source:** *[VisibleAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/VisibleAttribute.cs)*

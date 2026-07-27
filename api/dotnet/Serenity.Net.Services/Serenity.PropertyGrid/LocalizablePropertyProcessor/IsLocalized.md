@@ -13,5 +13,5 @@ public bool IsLocalized(Field field)
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [LocalizablePropertyProcessor](../LocalizablePropertyProcessor.md)

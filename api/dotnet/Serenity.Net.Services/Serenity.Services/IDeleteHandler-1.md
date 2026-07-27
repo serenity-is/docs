@@ -18,5 +18,5 @@ public interface IDeleteHandler<TRow> : IDeleteHandler<TRow, DeleteRequest, Dele
 * class [TRow](../Serenity.Net.Services/IDeleteHandler-1.TRow.md)
 * class [DeleteRequest](DeleteRequest.md)
 * class [DeleteResponse](DeleteResponse.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* **Source:** *[IDeleteHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Delete/IDeleteHandler.cs)*
+* interface [IRow](../Serenity.Data/IRow.md)
+* **Source:** *[IDeleteHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Delete/IDeleteHandler.cs)*

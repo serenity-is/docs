@@ -18,6 +18,8 @@ public abstract class NavigationItemAttribute : Attribute
 | [ItemClass](NavigationItemAttribute/ItemClass.md) { get; set; } | Extra css class to apply to its navigation element e.g. LI |
 | [Order](NavigationItemAttribute/Order.md) { get; set; } | Gets / sets the order (only) among its siblings. |
 | [Permission](NavigationItemAttribute/Permission.md) { get; set; } | Permission required to view this navigation item |
+| [RequireAnyFeature](NavigationItemAttribute/RequireAnyFeature.md) { get; set; } | True to require any of the RequireFeatures to be enabled in order to pass. |
+| [RequireFeatures](NavigationItemAttribute/RequireFeatures.md) { get; set; } | The set of feature toggles that this navigation item depends on. |
 | [Target](NavigationItemAttribute/Target.md) { get; set; } | Window target to open this link, e.g. _blank etc. |
 | [Title](NavigationItemAttribute/Title.md) { get; set; } | Title of the navigation item. It is the part after last slash, e.g. C for A/B/C |
 | [Url](NavigationItemAttribute/Url.md) { get; set; } | Url of this navigation item, should be null for menu |
@@ -30,4 +32,4 @@ public abstract class NavigationItemAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[NavigationItemAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Navigation/NavigationItemAttribute.cs)*
+* **Source:** *[NavigationItemAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Navigation/NavigationItemAttribute.cs)*

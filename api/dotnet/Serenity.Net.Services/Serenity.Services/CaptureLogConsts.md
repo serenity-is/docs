@@ -16,4 +16,4 @@ public class CaptureLogConsts
 
 ## See Also
 
-* **Source:** *[CaptureLogConsts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureLogConsts.cs)*
+* **Source:** *[CaptureLogConsts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/CaptureLog/CaptureLogConsts.cs)*

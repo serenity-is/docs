@@ -9,5 +9,5 @@ public BaseCriteria Criteria { get; set; }
 
 ## See Also
 
-* class [BaseCriteria](../Serenity.Net.Data/../../Serenity.Data/BaseCriteria.md)
+* class [BaseCriteria](../../Serenity.Data/BaseCriteria.md)
 * class [ListRequest](../ListRequest.md)

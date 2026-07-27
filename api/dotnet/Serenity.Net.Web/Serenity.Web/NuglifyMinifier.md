@@ -19,4 +19,4 @@ public class NuglifyMinifier : ICssMinifier, IScriptMinifier
 
 * interface [ICssMinifier](ICssMinifier.md)
 * interface [IScriptMinifier](IScriptMinifier.md)
-* **Source:** *[NuglifyMinifier.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/NuglifyMinifier.cs)*
+* **Source:** *[NuglifyMinifier.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/NuglifyMinifier.cs)*

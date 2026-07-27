@@ -17,4 +17,4 @@ public class WKHtmlToPdfSettings
 
 ## See Also
 
-* **Source:** *[WKHtmlToPdfSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Reporting/WKHtmlToPdfSettings.cs)*
+* **Source:** *[WKHtmlToPdfSettings.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Reporting/WKHtmlToPdfSettings.cs)*

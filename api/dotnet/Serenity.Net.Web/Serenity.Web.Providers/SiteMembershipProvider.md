@@ -15,4 +15,4 @@ public static class SiteMembershipProvider
 
 ## See Also
 
-* **Source:** *[SiteMembershipProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Security/SiteMembershipProvider.cs)*
+* **Source:** *[SiteMembershipProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Security/SiteMembershipProvider.cs)*

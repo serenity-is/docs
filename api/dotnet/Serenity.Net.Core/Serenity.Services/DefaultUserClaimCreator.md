@@ -7,11 +7,15 @@ Default implementation for IUserClaimCreator
 public class DefaultUserClaimCreator : IUserClaimCreator
 ```
 
+| parameter | description |
+| --- | --- |
+| userRetriever |  |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultUserClaimCreator](DefaultUserClaimCreator/DefaultUserClaimCreator.md)(…) | Creates an instance of the class |
+| [DefaultUserClaimCreator](DefaultUserClaimCreator/DefaultUserClaimCreator.md)(…) | Default implementation for IUserClaimCreator |
 | virtual [CreatePrincipal](DefaultUserClaimCreator/CreatePrincipal.md)(…) | Create user Principal |
 
 ## Protected Members
@@ -20,7 +24,17 @@ public class DefaultUserClaimCreator : IUserClaimCreator
 | --- | --- |
 | virtual [AddClaims](DefaultUserClaimCreator/AddClaims.md)(…) | Add User Claims To Identity |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException |  |
+
+## Remarks
+
+Creates an instance of the class
+
 ## See Also
 
 * interface [IUserClaimCreator](../Serenity.Abstractions/IUserClaimCreator.md)
-* **Source:** *[DefaultUserClaimCreator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/DefaultUserClaimCreator.cs)*
+* **Source:** *[DefaultUserClaimCreator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/DefaultUserClaimCreator.cs)*

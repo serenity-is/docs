@@ -29,4 +29,4 @@ public abstract class BaseUndeleteBehavior : IUndeleteBehavior, IUndeleteExcepti
 
 * interface [IUndeleteBehavior](IUndeleteBehavior.md)
 * interface [IUndeleteExceptionBehavior](IUndeleteExceptionBehavior.md)
-* **Source:** *[BaseUndeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Undelete/BaseUndeleteBehavior.cs)*
+* **Source:** *[BaseUndeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Undelete/BaseUndeleteBehavior.cs)*

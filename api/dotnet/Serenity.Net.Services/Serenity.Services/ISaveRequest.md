@@ -17,4 +17,4 @@ public interface ISaveRequest
 
 ## See Also
 
-* **Source:** *[ISaveRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/ISaveRequest.cs)*
+* **Source:** *[ISaveRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/ISaveRequest.cs)*

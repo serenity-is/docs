@@ -16,4 +16,4 @@ public interface IRetrieveRequestProcessor : IRetrieveRequestHandler
 ## See Also
 
 * interface [IRetrieveRequestHandler](IRetrieveRequestHandler.md)
-* **Source:** *[IRetrieveRequestProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Retrieve/IRetrieveRequestProcessor.cs)*
+* **Source:** *[IRetrieveRequestProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Retrieve/IRetrieveRequestProcessor.cs)*

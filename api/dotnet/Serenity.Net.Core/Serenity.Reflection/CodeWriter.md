@@ -7,11 +7,16 @@ Used to write formatted code to a string builder.
 public class CodeWriter
 ```
 
+| parameter | description |
+| --- | --- |
+| sb | The sb. |
+| tabSize | Number of spaces. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [CodeWriter](CodeWriter/CodeWriter.md)(…) | Initializes a new instance of the [`CodeWriter`](CodeWriter.md) class. (3 constructors) |
+| [CodeWriter](CodeWriter/CodeWriter.md)(…) | Used to write formatted code to a string builder. (3 constructors) |
 | [AllowUsing](CodeWriter/AllowUsing.md) { get; set; } | Gets sets function that determines if a namespace is allowed to be added to the local usings |
 | [BraceOnSameLine](CodeWriter/BraceOnSameLine.md) { get; set; } | Whether to put opening brace on the same line. |
 | [Builder](CodeWriter/Builder.md) { get; } | Gets internal string builder |
@@ -19,6 +24,7 @@ public class CodeWriter
 | [FileComment](CodeWriter/FileComment.md) { get; set; } | Gets / sets file comment |
 | [FileScopedNamespaces](CodeWriter/FileScopedNamespaces.md) { get; set; } | Use a file scoped namespace instead. Can only be used with one namespace per file. |
 | [GlobalUsings](CodeWriter/GlobalUsings.md) { get; set; } | Gets / sets global usings hash set |
+| [Indentation](CodeWriter/Indentation.md) { get; } | Gets current indentation string |
 | [IsCSharp](CodeWriter/IsCSharp.md) { get; set; } | Gets / sets if the code writer is used for generating C# code. |
 | [LocalUsings](CodeWriter/LocalUsings.md) { get; } | Gets / sets local usings hash set |
 | [Tab](CodeWriter/Tab.md) { get; } | Gets tab string |
@@ -37,13 +43,20 @@ public class CodeWriter
 | [InNamespace](CodeWriter/InNamespace.md)(…) | Executes action by opening namespace if it is not null or empty |
 | [Insert](CodeWriter/Insert.md)(…) | Inserts string to internal string builder |
 | [IsUsing](CodeWriter/IsUsing.md)(…) | Returns true if the namespace is in list of usings. |
-| [ShortTypeName](CodeWriter/ShortTypeName.md)(…) | Tries to add namespace (3 methods) |
+| [ShortTypeName](CodeWriter/ShortTypeName.md)(…) | Tries to add namespace (2 methods) |
+| [ShortTypeRef](CodeWriter/ShortTypeRef.md)(…) | Converts datatype with a namespace to datatype without namespace if its namespace is in the allowed usings else returns fullname. This can handle nullables, CS keywords and generics to some extent. Please see [`IsCSharp`](CodeWriter/IsCSharp.md) if you are using this for C# |
 | [StartBrace](CodeWriter/StartBrace.md)() | Adds a brace, increases indent. |
 | override [ToString](CodeWriter/ToString.md)() | Returns string representation of internal string builder, including file comment and any local usings if any |
 | [Using](CodeWriter/Using.md)(…) | Returns true if the namespace is in list of usings. If AllowUsing callback is null or returns true, or force is true, this may add it to the list of local usings. (2 methods) |
+| static readonly [SafeSetOfUsings](CodeWriter/SafeSetOfUsings.md) | List of usings that can be safely used during code generation without causing type name clashes |
 | static [IsCSKeyword](CodeWriter/IsCSKeyword.md)(…) | Determines is Type is a C# primitive keyword |
+| static [IsJSKeyword](CodeWriter/IsJSKeyword.md)(…) | Returns true if the identifier is a reserved JavaScript keyword |
 | static [ToCSKeyword](CodeWriter/ToCSKeyword.md)(…) | Converts primitive class to C# keyword if given class is not a primitive class returns null. |
+
+## Remarks
+
+Initializes a new instance of the [`CodeWriter`](CodeWriter.md) class.
 
 ## See Also
 
-* **Source:** *[CodeWriter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Reflection/CodeWriter.cs)*
+* **Source:** *[CodeWriter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/CodeWriter.cs)*

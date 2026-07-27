@@ -7,6 +7,6 @@ public override void Process(IPropertySource source, PropertyItem item)
 
 ## See Also
 
-* interface [IPropertySource](../Serenity.Net.Entity/../IPropertySource.md)
+* interface [IPropertySource](../IPropertySource.md)
 * class [PropertyItem](../Serenity.Net.Core/../../Serenity.ComponentModel/PropertyItem.md)
 * class [LocalizablePropertyProcessor](../LocalizablePropertyProcessor.md)

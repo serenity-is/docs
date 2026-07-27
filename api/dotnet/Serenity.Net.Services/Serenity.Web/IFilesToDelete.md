@@ -17,4 +17,4 @@ public interface IFilesToDelete
 
 ## See Also
 
-* **Source:** *[IFilesToDelete.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/IFilesToDelete.cs)*
+* **Source:** *[IFilesToDelete.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/IFilesToDelete.cs)*

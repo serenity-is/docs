@@ -1,7 +1,7 @@
 # EditorOptionAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`EditorOptionAttribute`](../EditorOptionAttribute.md) class.
+Sets an editor option for target property editor. Avoid using this where possible as option keys and values are not checked.
 
 ```csharp
 public EditorOptionAttribute(string key, object value)
@@ -11,6 +11,10 @@ public EditorOptionAttribute(string key, object value)
 | --- | --- |
 | key | The key. |
 | value | The value. |
+
+## Remarks
+
+Initializes a new instance of the [`EditorOptionAttribute`](../EditorOptionAttribute.md) class.
 
 ## See Also
 

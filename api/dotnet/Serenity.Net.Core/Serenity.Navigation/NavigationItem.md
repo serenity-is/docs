@@ -24,4 +24,4 @@ public class NavigationItem
 
 ## See Also
 
-* **Source:** *[NavigationItem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Navigation/NavigationItem.cs)*
+* **Source:** *[NavigationItem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Navigation/NavigationItem.cs)*

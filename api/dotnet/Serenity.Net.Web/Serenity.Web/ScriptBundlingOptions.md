@@ -23,4 +23,4 @@ public class ScriptBundlingOptions : IOptions<ScriptBundlingOptions>
 
 ## See Also
 
-* **Source:** *[ScriptBundlingOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/ScriptBundlingOptions.cs)*
+* **Source:** *[ScriptBundlingOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ScriptBundlingOptions.cs)*

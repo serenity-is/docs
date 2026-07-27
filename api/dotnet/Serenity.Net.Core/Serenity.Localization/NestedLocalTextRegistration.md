@@ -15,4 +15,4 @@ public static class NestedLocalTextRegistration
 
 ## See Also
 
-* **Source:** *[NestedLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/NestedLocalTextRegistration.cs)*
+* **Source:** *[NestedLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/NestedLocalTextRegistration.cs)*

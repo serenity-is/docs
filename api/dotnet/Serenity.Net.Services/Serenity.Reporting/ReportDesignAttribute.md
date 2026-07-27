@@ -8,13 +8,21 @@ The attribute used to determine the location of the report design which is usual
 public class ReportDesignAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| design |  |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ReportDesignAttribute](ReportDesignAttribute/ReportDesignAttribute.md)(…) | Creates an instance of the attribute |
+| [ReportDesignAttribute](ReportDesignAttribute/ReportDesignAttribute.md)(…) | The attribute used to determine the location of the report design which is usually a CSHTML file. |
 | [Design](ReportDesignAttribute/Design.md) { get; } | Returns the location of the design file which is passed via the constructor. |
+
+## Remarks
+
+Creates an instance of the attribute
 
 ## See Also
 
-* **Source:** *[ReportDesignAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/ReportDesignAttribute.cs)*
+* **Source:** *[ReportDesignAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Rendering/ReportDesignAttribute.cs)*

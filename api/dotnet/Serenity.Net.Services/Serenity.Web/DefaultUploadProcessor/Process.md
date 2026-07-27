@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public ProcessedUploadInfo Process(Stream stream, string filename, IUploadOptions options)
+public virtual ProcessedUploadInfo Process(Stream stream, string filename, IUploadOptions options)
 ```
 
 ## See Also

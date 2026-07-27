@@ -1,11 +1,12 @@
 # CriteriaFieldExpressionReplacer constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class
+Converts field names in a criteria to their corresponding SQL field expressions.
 
 ```csharp
 public CriteriaFieldExpressionReplacer(IRow row, IPermissionService permissions, 
-    bool lookupAccessMode = false)
+    bool lookupAccessMode = false, ISqlDialect dialect = null, 
+    Func<IField, BaseCriteria> toCriteria = null)
 ```
 
 | parameter | description |
@@ -13,6 +14,8 @@ public CriteriaFieldExpressionReplacer(IRow row, IPermissionService permissions,
 | row | The row instance |
 | permissions | Permission service |
 | lookupAccessMode | Use lookup access mode. In the lookup access mode only the lookup fields can be used in the filter. Default is false. |
+| dialect | Optional dialect |
+| toCriteria | Optional field to criteria converter |
 
 ## Exceptions
 
@@ -20,8 +23,15 @@ public CriteriaFieldExpressionReplacer(IRow row, IPermissionService permissions,
 | --- | --- |
 | ArgumentNullException | row or permissions is null |
 
+## Remarks
+
+Creates an instance of the class
+
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../IRow.md)
+* interface [IRow](../IRow.md)
 * interface [IPermissionService](../Serenity.Net.Core/../../Serenity.Abstractions/IPermissionService.md)
+* interface [ISqlDialect](../ISqlDialect.md)
+* interface [IField](../IField.md)
+* class [BaseCriteria](../BaseCriteria.md)
 * class [CriteriaFieldExpressionReplacer](../CriteriaFieldExpressionReplacer.md)

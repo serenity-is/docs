@@ -14,6 +14,7 @@ public class ReportRenderResult
 | [ReportRenderResult](ReportRenderResult/ReportRenderResult.md)() | The default constructor. |
 | [ContentBytes](ReportRenderResult/ContentBytes.md) { get; set; } | File content bytes |
 | [FileExtension](ReportRenderResult/FileExtension.md) { get; set; } | File extension |
+| [FileName](ReportRenderResult/FileName.md) { get; set; } | Suggested file name (without extension) |
 | [MimeType](ReportRenderResult/MimeType.md) { get; set; } | Mime type if available |
 | [Model](ReportRenderResult/Model.md) { get; set; } | View model, only returned in preview mode for HTML |
 | [RedirectUri](ReportRenderResult/RedirectUri.md) { get; set; } | A redirect URI, only returned for external reports |
@@ -22,4 +23,4 @@ public class ReportRenderResult
 
 ## See Also
 
-* **Source:** *[ReportRenderResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/ReportRenderResult.cs)*
+* **Source:** *[ReportRenderResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Rendering/ReportRenderResult.cs)*

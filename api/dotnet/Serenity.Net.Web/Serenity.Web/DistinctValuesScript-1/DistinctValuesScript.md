@@ -20,5 +20,5 @@ public DistinctValuesScript(ISqlConnections connections, string propertyName)
 
 ## See Also
 
-* interface [ISqlConnections](../Serenity.Net.Data/../../Serenity.Data/ISqlConnections.md)
+* interface [ISqlConnections](../Serenity.Net.Services/../../Serenity.Data/ISqlConnections.md)
 * class [DistinctValuesScript&lt;TRow&gt;](../DistinctValuesScript-1.md)

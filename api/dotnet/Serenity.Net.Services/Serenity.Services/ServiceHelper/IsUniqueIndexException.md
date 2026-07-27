@@ -25,6 +25,6 @@ public static bool IsUniqueIndexException(IDbConnection connection, Exception ex
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [ServiceHelper](../ServiceHelper.md)

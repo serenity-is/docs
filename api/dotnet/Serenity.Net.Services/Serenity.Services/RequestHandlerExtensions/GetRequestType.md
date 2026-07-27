@@ -13,5 +13,5 @@ public static Type GetRequestType(this IRequestHandler handler)
 
 ## See Also
 
-* interface [IRequestHandler](../IRequestHandler.md)
+* interface [IRequestHandler](../Serenity.Net.Core/../IRequestHandler.md)
 * class [RequestHandlerExtensions](../RequestHandlerExtensions.md)

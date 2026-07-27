@@ -15,4 +15,4 @@ public static class EnumLocalTextRegistration
 
 ## See Also
 
-* **Source:** *[EnumLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/EnumLocalTextRegistration.cs)*
+* **Source:** *[EnumLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/EnumLocalTextRegistration.cs)*

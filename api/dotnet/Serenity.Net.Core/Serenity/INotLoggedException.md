@@ -15,4 +15,4 @@ public interface INotLoggedException
 
 ## See Also
 
-* **Source:** *[INotLoggedException.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Interface/INotLoggedException.cs)*
+* **Source:** *[INotLoggedException.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Interface/INotLoggedException.cs)*

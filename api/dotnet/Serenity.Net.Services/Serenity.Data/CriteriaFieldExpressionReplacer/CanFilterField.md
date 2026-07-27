@@ -13,5 +13,5 @@ protected virtual bool CanFilterField(Field field)
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../Field.md)
+* class [Field](../Field.md)
 * class [CriteriaFieldExpressionReplacer](../CriteriaFieldExpressionReplacer.md)

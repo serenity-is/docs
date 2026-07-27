@@ -1,0 +1,16 @@
+# LinkingSetRelationAttribute.FilterValue property
+**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+
+Gets or sets the filter value.
+
+```csharp
+public object FilterValue { get; set; }
+```
+
+## Property Value
+
+The filter value.
+
+## See Also
+
+* class [LinkingSetRelationAttribute](../LinkingSetRelationAttribute.md)

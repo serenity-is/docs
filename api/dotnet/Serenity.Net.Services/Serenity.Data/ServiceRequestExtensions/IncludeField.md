@@ -17,7 +17,7 @@ public static TRequest IncludeField<TRequest>(this TRequest request, Field field
 ## See Also
 
 * class [TRequest](../Serenity.Net.Services/../ServiceRequestExtensions.TRequest.md)
-* class [Field](../Serenity.Net.Entity/../Field.md)
+* class [Field](../Field.md)
 * class [ServiceRequest](../../Serenity.Services/ServiceRequest.md)
 * interface [IIncludeExcludeColumns](../../Serenity.Services/IIncludeExcludeColumns.md)
 * class [ServiceRequestExtensions](../ServiceRequestExtensions.md)

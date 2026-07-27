@@ -13,5 +13,5 @@ public string Validate(IValidationContext context)
 
 ## See Also
 
-* interface [IValidationContext](../Serenity.Net.Data/../../Serenity/IValidationContext.md)
+* interface [IValidationContext](../Serenity.Net.Services/../../Serenity/IValidationContext.md)
 * class [EmailEditorAttribute](../EmailEditorAttribute.md)

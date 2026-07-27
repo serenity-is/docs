@@ -20,6 +20,6 @@ public static Result<TResponse> InTransaction<TResponse>(this ControllerBase con
 
 * class [Result&lt;TResponse&gt;](../Result-1.md)
 * class [TResponse](../Serenity.Net.Web/../EndpointExtensions.TResponse.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../Serenity.Net.Services/../../Serenity.Data/IUnitOfWork.md)
 * class [ServiceResponse](../Serenity.Net.Services/../ServiceResponse.md)
 * class [EndpointExtensions](../EndpointExtensions.md)

@@ -15,4 +15,4 @@ public static class TwoLevelCacheInvalidationExtensions
 
 ## See Also
 
-* **Source:** *[TwoLevelCacheInvalidationExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Helpers/TwoLevelCacheInvalidationExtensions.cs)*
+* **Source:** *[TwoLevelCacheInvalidationExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Helpers/TwoLevelCacheInvalidationExtensions.cs)*

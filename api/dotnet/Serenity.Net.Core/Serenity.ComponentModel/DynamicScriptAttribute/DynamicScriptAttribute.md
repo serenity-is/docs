@@ -1,15 +1,19 @@
 # DynamicScriptAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`DynamicScriptAttribute`](../DynamicScriptAttribute.md) class.
+Base class for dynamic script attributes. Dynamic scripts contain dynamic data, but they are not parameterized.
 
 ```csharp
-public DynamicScriptAttribute(string key)
+protected DynamicScriptAttribute(string key)
 ```
 
 | parameter | description |
 | --- | --- |
 | key | The key. |
+
+## Remarks
+
+Initializes a new instance of the [`DynamicScriptAttribute`](../DynamicScriptAttribute.md) class.
 
 ## See Also
 

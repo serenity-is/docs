@@ -4,14 +4,13 @@
 Deserializes a JSON string to an object, using more tolerant settings
 
 ```csharp
-public static object ParseTolerant(string input, Type targetType, bool includeNulls = false)
+public static object ParseTolerant(string input, Type targetType)
 ```
 
 | parameter | description |
 | --- | --- |
 | targetType | Type to deserialize |
 | input | JSON string |
-| includeNulls | If true, if a value is null and target property is not nullable, raises error. |
 
 ## Return Value
 
@@ -29,14 +28,13 @@ Deserialized object
 Deserializes a JSON string to an object, using more tolerant settings.
 
 ```csharp
-public static T ParseTolerant<T>(string input, bool includeNulls = false)
+public static T ParseTolerant<T>(string input)
 ```
 
 | parameter | description |
 | --- | --- |
 | T | Type to deserialize |
 | input | JSON string |
-| includeNulls | If true, if a value is null and target property is not nullable, raises error. |
 
 ## Return Value
 

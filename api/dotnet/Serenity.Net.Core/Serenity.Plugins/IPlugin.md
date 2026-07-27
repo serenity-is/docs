@@ -9,4 +9,4 @@ public interface IPlugin
 
 ## See Also
 
-* **Source:** *[IPlugin.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/IPlugin.cs)*
+* **Source:** *[IPlugin.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/IPlugin.cs)*

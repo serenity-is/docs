@@ -8,13 +8,21 @@ Sets the module name for the row. Module name is usually the folder name under ~
 public class ModuleAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| module | The module. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ModuleAttribute](ModuleAttribute/ModuleAttribute.md)(…) | Initializes a new instance of the [`ModuleAttribute`](ModuleAttribute.md) class. |
+| [ModuleAttribute](ModuleAttribute/ModuleAttribute.md)(…) | Sets the module name for the row. Module name is usually the folder name under ~/Modules folder entity resides in. |
 | [Value](ModuleAttribute/Value.md) { get; } | Gets the module. |
+
+## Remarks
+
+Initializes a new instance of the [`ModuleAttribute`](ModuleAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[ModuleAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Common/ModuleAttribute.cs)*
+* **Source:** *[ModuleAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/ModuleAttribute.cs)*

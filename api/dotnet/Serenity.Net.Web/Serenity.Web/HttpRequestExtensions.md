@@ -15,4 +15,4 @@ public static class HttpRequestExtensions
 
 ## See Also
 
-* **Source:** *[HttpRequestExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/HttpRequestExtensions.cs)*
+* **Source:** *[HttpRequestExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/HttpRequestExtensions.cs)*

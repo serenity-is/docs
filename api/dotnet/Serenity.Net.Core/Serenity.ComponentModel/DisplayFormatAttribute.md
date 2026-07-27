@@ -14,17 +14,23 @@ If column is an integer, double or decimal it accepts.NET custom numeric format 
 public class DisplayFormatAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DisplayFormatAttribute](DisplayFormatAttribute/DisplayFormatAttribute.md)(…) | Initializes a new instance of the [`DisplayFormatAttribute`](DisplayFormatAttribute.md) class. |
+| [DisplayFormatAttribute](DisplayFormatAttribute/DisplayFormatAttribute.md)(…) | Sets the display format for a column. This has no effect on editors! It is only for Display, "NOT Editing". For editing, you have to change UI culture. |
 | [Value](DisplayFormatAttribute/Value.md) { get; } | Gets the display format value. |
 
 ## Remarks
 
 public class SomeColumns { [DisplayFormat("d")] public DateTime DateWithCultureDMYOrder { get; set; } [DisplayFormat("dd/MM/yyyy")] public DateTime DateWithConstantDMYOrder { get; set; } [DisplayFormat("g")] public DateTime DateTimeToMinWithCultureDMYOrder { get; set; } [DisplayFormat("dd/MM/yyyy HH:mm")] public DateTime DateTimeToMinConstantDMYOrder { get; set; } [DisplayFormat("G")] public DateTime DateTimeToSecWithCultureDMYOrder { get; set; } [DisplayFormat("dd/MM/yyyy HH:mm:ss")] public DateTime DateTimeToSecWithConstantDMYOrder { get; set; } [DisplayFormat("s")] public DateTime SortableDateTime { get; set; } [DisplayFormat("u")] public DateTime ISO8601UTC { get; set; } [DisplayFormat("#,##0.00")] public Decimal ShowTwoZerosAfterDecimalWithGrouping { get; set; } [DisplayFormat("0.00")] public Decimal ShowTwoZerosAfterDecimalNoGrouping { get; set; } }
 
+Initializes a new instance of the [`DisplayFormatAttribute`](DisplayFormatAttribute.md) class.
+
 ## See Also
 
-* **Source:** *[DisplayFormatAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Formatting/DisplayFormatAttribute.cs)*
+* **Source:** *[DisplayFormatAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Formatting/DisplayFormatAttribute.cs)*

@@ -16,4 +16,4 @@ public static class CollectionExtensions
 
 ## See Also
 
-* **Source:** *[CollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Helpers/CollectionExtensions.cs)*
+* **Source:** *[CollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/CollectionExtensions.cs)*

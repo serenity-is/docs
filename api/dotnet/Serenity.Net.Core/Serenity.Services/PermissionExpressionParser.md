@@ -17,4 +17,4 @@ public static class PermissionExpressionParser
 
 ## See Also
 
-* **Source:** *[PermissionExpressionParser.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Authorization/PermissionExpressionParser.cs)*
+* **Source:** *[PermissionExpressionParser.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/PermissionExpressionParser.cs)*

@@ -31,4 +31,4 @@ public abstract class BaseSaveDeleteBehavior : BaseSaveBehavior, IDeleteBehavior
 * class [BaseSaveBehavior](BaseSaveBehavior.md)
 * interface [IDeleteBehavior](IDeleteBehavior.md)
 * interface [IDeleteExceptionBehavior](IDeleteExceptionBehavior.md)
-* **Source:** *[BaseSaveDeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/BaseSaveDeleteBehavior.cs)*
+* **Source:** *[BaseSaveDeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/BaseSaveDeleteBehavior.cs)*

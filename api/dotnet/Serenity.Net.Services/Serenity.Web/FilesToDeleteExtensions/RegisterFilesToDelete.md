@@ -14,6 +14,6 @@ public static void RegisterFilesToDelete(this IUnitOfWork unitOfWork, FilesToDel
 
 ## See Also
 
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * class [FilesToDelete](../FilesToDelete.md)
 * class [FilesToDeleteExtensions](../FilesToDeleteExtensions.md)

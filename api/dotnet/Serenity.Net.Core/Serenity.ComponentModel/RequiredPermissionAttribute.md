@@ -17,4 +17,4 @@ public class RequiredPermissionAttribute : PermissionAttributeBase
 ## See Also
 
 * class [PermissionAttributeBase](../Serenity.Data/PermissionAttributeBase.md)
-* **Source:** *[RequiredPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Permission/RequiredPermissionAttribute.cs)*
+* **Source:** *[RequiredPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/RequiredPermissionAttribute.cs)*

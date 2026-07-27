@@ -1,7 +1,7 @@
 # ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.GetQuickSearchFields method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the list of quick search fields (QuickSearchAttribute) based on the containsField argument.
+Gets the list of quick search fields ([`QuickSearchAttribute`](../../Serenity.Data.Mapping/QuickSearchAttribute.md)) based on the containsField argument.
 
 ```csharp
 protected virtual IEnumerable<Field> GetQuickSearchFields(string containsField)
@@ -15,9 +15,9 @@ protected virtual IEnumerable<Field> GetQuickSearchFields(string containsField)
 
 | exception | condition |
 | --- | --- |
-| ArgumentOutOfRangeException | The containsField has Never or it does not have a QuickSearchAttribute |
+| ArgumentOutOfRangeException | The containsField has Never or it does not have a [`QuickSearchAttribute`](../../Serenity.Data.Mapping/QuickSearchAttribute.md) |
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

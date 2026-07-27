@@ -17,4 +17,4 @@ public class ResetLabelWidthAttribute : LabelWidthAttribute
 ## See Also
 
 * class [LabelWidthAttribute](LabelWidthAttribute.md)
-* **Source:** *[ResetLabelWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/Layout/ResetLabelWidthAttribute.cs)*
+* **Source:** *[ResetLabelWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Layout/ResetLabelWidthAttribute.cs)*

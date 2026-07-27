@@ -24,6 +24,8 @@ public class PropertyItem
 | [EditLinkCssClass](PropertyItem/EditLinkCssClass.md) { get; set; } | Gets or sets the edit link CSS class. |
 | [EditLinkIdField](PropertyItem/EditLinkIdField.md) { get; set; } | Gets or sets the edit link identifier (e.g. ID) field. If edit link is in CompanyName field, EditLinkId field might be CompanyId. |
 | [EditLinkItemType](PropertyItem/EditLinkItemType.md) { get; set; } | Gets or sets the type of the edit link item type if it is different than the item type of the grid. |
+| [EditorAddons](PropertyItem/EditorAddons.md) { get; set; } | Gets or sets the editor parameters that should be passed to the editor while it is being created. |
+| [EditorCssClass](PropertyItem/EditorCssClass.md) { get; set; } | Gets or sets the CSS class to apply to the editor element. |
 | [EditorParams](PropertyItem/EditorParams.md) { get; set; } | Gets or sets the editor parameters that should be passed to the editor while it is being created. |
 | [EditorType](PropertyItem/EditorType.md) { get; set; } | Gets or sets the type of the editor used in form. |
 | [ExtensionData](PropertyItem/ExtensionData.md) { get; set; } | Gets or sets the extension data, used for JSON.NET serialization / deserialization of dynamic properties. |
@@ -31,6 +33,7 @@ public class PropertyItem
 | [FilteringParams](PropertyItem/FilteringParams.md) { get; set; } | Gets or sets the filtering parameters. |
 | [FilteringType](PropertyItem/FilteringType.md) { get; set; } | Gets or sets the type of the filtering for the column. |
 | [FilterOnly](PropertyItem/FilterOnly.md) { get; set; } | Gets or sets the filter only flag, e.g. this property should not be used for forms/grids, it is here only to set filtering options. |
+| [Focusable](PropertyItem/Focusable.md) { get; set; } | Gets or sets the focusable flag of a column. |
 | [FormatterParams](PropertyItem/FormatterParams.md) { get; set; } | Gets or sets the formatter parameters for columns. |
 | [FormatterType](PropertyItem/FormatterType.md) { get; set; } | Gets or sets the type of the formatter for columns. |
 | [FormCssClass](PropertyItem/FormCssClass.md) { get; set; } | Gets or sets the form CSS class for the property. This class is applied to containing "div.field" not the editor. Only used in forms. |
@@ -48,7 +51,7 @@ public class PropertyItem
 | [MinWidth](PropertyItem/MinWidth.md) { get; set; } | Gets or sets the minimum width of a column. |
 | [Name](PropertyItem/Name.md) { get; set; } | Gets or sets the property name. |
 | [NotFilterable](PropertyItem/NotFilterable.md) { get; set; } | Gets or sets the not filterable that disables filtering by the property in advanced filter dialog. |
-| [OneWay](PropertyItem/OneWay.md) { get; set; } | Gets or sets the one way flag, which when true field won't be serialized back to entity on save. |
+| [Pin](PropertyItem/Pin.md) { get; set; } | Gets or sets the pinning side (start/end) of the column. |
 | [Placeholder](PropertyItem/Placeholder.md) { get; set; } | Gets or sets the placeholder for the editor when it has an empty value. Only useful for forms. |
 | [QuickFilter](PropertyItem/QuickFilter.md) { get; set; } | Gets or sets the quick filter flag. Only used for columns. |
 | [QuickFilterCssClass](PropertyItem/QuickFilterCssClass.md) { get; set; } | Gets or sets the quick filter CSS class. |
@@ -58,11 +61,16 @@ public class PropertyItem
 | [ReadPermission](PropertyItem/ReadPermission.md) { get; set; } | Gets or sets the read permission. If user doesn't have this permission, they won't see it in grid / form. |
 | [Required](PropertyItem/Required.md) { get; set; } | Gets or sets the required flag of the property in forms. |
 | [Resizable](PropertyItem/Resizable.md) { get; set; } | Gets or sets the resizable flag of a column. |
+| [ShowSelection](PropertyItem/ShowSelection.md) { get; set; } | Gets or sets the apply selected CSS flag of a column. |
+| [SkipOnLoad](PropertyItem/SkipOnLoad.md) { get; set; } | Gets or sets the ignore on loadflag, which when true field won't be read from the entity on load. |
+| [SkipOnSave](PropertyItem/SkipOnSave.md) { get; set; } | Gets or sets the ignore on save flag, which when true field won't be serialized back to entity on save. |
 | [Sortable](PropertyItem/Sortable.md) { get; set; } | Gets or sets the sortable flag of a column. |
 | [SortOrder](PropertyItem/SortOrder.md) { get; set; } | Gets or sets the sort order of a column, e.g. in which position this column is sorted by default in the grid. Only applies to grids, not forms. |
 | [SummaryType](PropertyItem/SummaryType.md) { get; set; } | Gets or sets the type of the summary. Only applies to grids. |
 | [Tab](PropertyItem/Tab.md) { get; set; } | Gets or sets the tab for the property. Used only in forms. |
+| [Tabbable](PropertyItem/Tabbable.md) { get; set; } | Gets or sets the tabbable flag of a column. |
 | [Title](PropertyItem/Title.md) { get; set; } | Gets or sets the title, e.g. label of a form field, or caption of a grid column. |
+| [Unbound](PropertyItem/Unbound.md) { get; set; } | Gets or sets the unbound flag, which when true the generated field won't have a field name and the grid / form won't try to load or save any value for it. |
 | [Updatable](PropertyItem/Updatable.md) { get; set; } | Gets or sets the updatable flag of the property. If it is false, property won't be serialized back in edit forms and it will be readonly. |
 | [UpdatePermission](PropertyItem/UpdatePermission.md) { get; set; } | Gets or sets the update permission. If user doesn't have this permission, field won't be serialized back in edit record forms and it will be readonly. |
 | [Visible](PropertyItem/Visible.md) { get; set; } | Gets or sets the visible flag. Only used for columns. |
@@ -77,4 +85,4 @@ public class PropertyItem
 
 ## See Also
 
-* **Source:** *[PropertyItem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/PropertyItem.cs)*
+* **Source:** *[PropertyItem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/PropertyItem.cs)*

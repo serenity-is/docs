@@ -17,4 +17,4 @@ public class ServiceResponse
 
 ## See Also
 
-* **Source:** *[ServiceResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/ServiceResponse.cs)*
+* **Source:** *[ServiceResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/ServiceResponse.cs)*

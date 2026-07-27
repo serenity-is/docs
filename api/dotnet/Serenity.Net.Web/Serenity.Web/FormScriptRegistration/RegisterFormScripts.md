@@ -4,8 +4,9 @@
 Creates and form scripts
 
 ```csharp
-public static void RegisterFormScripts(IDynamicScriptManager scriptManager, ITypeSource typeSource, 
-    IPropertyItemProvider propertyProvider, IServiceProvider serviceProvider)
+public static IEnumerable<FormScript> RegisterFormScripts(IDynamicScriptManager scriptManager, 
+    ITypeSource typeSource, IPropertyItemProvider propertyProvider, 
+    IServiceProvider serviceProvider)
 ```
 
 | parameter | description |
@@ -23,7 +24,8 @@ public static void RegisterFormScripts(IDynamicScriptManager scriptManager, ITyp
 
 ## See Also
 
+* class [FormScript](../Serenity.Net.Services/../FormScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
 * interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
-* interface [IPropertyItemProvider](../Serenity.Net.Entity/../../Serenity.PropertyGrid/IPropertyItemProvider.md)
+* interface [IPropertyItemProvider](../Serenity.Net.Services/../../Serenity.PropertyGrid/IPropertyItemProvider.md)
 * class [FormScriptRegistration](../FormScriptRegistration.md)

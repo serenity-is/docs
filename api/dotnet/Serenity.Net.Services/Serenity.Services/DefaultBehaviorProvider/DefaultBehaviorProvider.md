@@ -1,7 +1,7 @@
 # DefaultBehaviorProvider constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class.
+Default implementation for [`IBehaviorProvider`](../IBehaviorProvider.md)
 
 ```csharp
 public DefaultBehaviorProvider(IImplicitBehaviorRegistry implicitBehaviors, 
@@ -10,7 +10,7 @@ public DefaultBehaviorProvider(IImplicitBehaviorRegistry implicitBehaviors,
 
 | parameter | description |
 | --- | --- |
-| implicitBehaviors | Registry for implict behaviors. |
+| implicitBehaviors | Registry for implicit behaviors. |
 | behaviorFactory | Behavior factory |
 
 ## Exceptions
@@ -18,6 +18,10 @@ public DefaultBehaviorProvider(IImplicitBehaviorRegistry implicitBehaviors,
 | exception | condition |
 | --- | --- |
 | ArgumentNullException |  |
+
+## Remarks
+
+Creates an instance of the class.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # LocalTextScript constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Local text dynamic script
 
 ```csharp
 public LocalTextScript(ILocalTextRegistry registry, string package, string includes, 
@@ -21,6 +21,10 @@ public LocalTextScript(ILocalTextRegistry registry, string package, string inclu
 | exception | condition |
 | --- | --- |
 | ArgumentNullException |  |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 

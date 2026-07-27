@@ -8,13 +8,21 @@ Indicates if sorting is enabled for this property
 public class SortableAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| value | if set to `true` (default) sorting is enabled. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [SortableAttribute](SortableAttribute/SortableAttribute.md)(…) | Initializes a new instance of the [`SortableAttribute`](SortableAttribute.md) class. |
+| [SortableAttribute](SortableAttribute/SortableAttribute.md)(…) | Indicates if sorting is enabled for this property |
 | [Value](SortableAttribute/Value.md) { get; } | Gets a value indicating whether this [`SortableAttribute`](SortableAttribute.md) is enabled. |
+
+## Remarks
+
+Initializes a new instance of the [`SortableAttribute`](SortableAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[SortableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Filtering/SortableAttribute.cs)*
+* **Source:** *[SortableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/SortableAttribute.cs)*

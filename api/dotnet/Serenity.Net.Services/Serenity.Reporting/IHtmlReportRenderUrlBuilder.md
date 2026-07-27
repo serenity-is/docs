@@ -15,4 +15,4 @@ public interface IHtmlReportRenderUrlBuilder
 
 ## See Also
 
-* **Source:** *[IHtmlReportRenderUrlBuilder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/HtmlToPdf/IHtmlReportRenderUrlBuilder.cs)*
+* **Source:** *[IHtmlReportRenderUrlBuilder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/HtmlToPdf/IHtmlReportRenderUrlBuilder.cs)*

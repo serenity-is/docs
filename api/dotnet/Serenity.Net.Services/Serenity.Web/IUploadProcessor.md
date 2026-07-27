@@ -15,4 +15,4 @@ public interface IUploadProcessor
 
 ## See Also
 
-* **Source:** *[IUploadProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Upload/IUploadProcessor.cs)*
+* **Source:** *[IUploadProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/IUploadProcessor.cs)*

@@ -16,4 +16,4 @@ public class PrecompiledViewsAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[PrecompiledViewsAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/PrecompiledViewsAttribute.cs)*
+* **Source:** *[PrecompiledViewsAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/PrecompiledViewsAttribute.cs)*

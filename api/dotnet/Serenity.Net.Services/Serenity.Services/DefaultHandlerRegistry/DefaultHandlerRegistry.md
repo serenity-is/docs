@@ -1,7 +1,7 @@
 # DefaultHandlerRegistry constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class
+Default implentation for the [`IDefaultHandlerFactory`](../IDefaultHandlerFactory.md)
 
 ```csharp
 public DefaultHandlerRegistry(ITypeSource typeSource)
@@ -16,6 +16,10 @@ public DefaultHandlerRegistry(ITypeSource typeSource)
 | exception | condition |
 | --- | --- |
 | ArgumentNullException | typeSource is null |
+
+## Remarks
+
+Creates an instance of the class
 
 ## See Also
 

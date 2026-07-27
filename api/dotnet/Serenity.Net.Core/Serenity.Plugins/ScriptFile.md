@@ -16,4 +16,4 @@ public class ScriptFile
 
 ## See Also
 
-* **Source:** *[ScriptFile.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Plugins/ScriptFile.cs)*
+* **Source:** *[ScriptFile.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/ScriptFile.cs)*

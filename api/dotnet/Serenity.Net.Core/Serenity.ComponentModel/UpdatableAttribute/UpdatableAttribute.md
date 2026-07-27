@@ -11,6 +11,10 @@ public UpdatableAttribute(bool updatable = true)
 | --- | --- |
 | updatable | True to make field updatable |
 
+## Remarks
+
+Controls if this field is editable in update record mode. When used with fields, turns on or off the updatable flag.
+
 ## See Also
 
 * class [UpdatableAttribute](../UpdatableAttribute.md)

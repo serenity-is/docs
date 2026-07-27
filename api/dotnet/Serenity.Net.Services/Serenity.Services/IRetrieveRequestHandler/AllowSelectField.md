@@ -17,5 +17,5 @@ True if field is allowed to be selected
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * interface [IRetrieveRequestHandler](../IRetrieveRequestHandler.md)

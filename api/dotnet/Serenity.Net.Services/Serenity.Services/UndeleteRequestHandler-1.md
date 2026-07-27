@@ -12,12 +12,17 @@ public class UndeleteRequestHandler<TRow> :
 | parameter | description |
 | --- | --- |
 | TRow | The entity type |
+| context | The request context |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [UndeleteRequestHandler](UndeleteRequestHandler-1/UndeleteRequestHandler.md)(…) | Creates an instance of the class |
+| [UndeleteRequestHandler](UndeleteRequestHandler-1/UndeleteRequestHandler.md)(…) | Base generic class for undelete request handlers that use [`UndeleteRequest`](UndeleteRequest.md) as the request type, and [`UndeleteResponse`](UndeleteResponse.md) as the response type. |
+
+## Remarks
+
+Creates an instance of the class
 
 ## See Also
 
@@ -26,6 +31,6 @@ public class UndeleteRequestHandler<TRow> :
 * class [UndeleteRequest](UndeleteRequest.md)
 * class [UndeleteResponse](UndeleteResponse.md)
 * interface [IUndeleteHandler&lt;TRow&gt;](IUndeleteHandler-1.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
-* **Source:** *[UndeleteRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Undelete/UndeleteRequestHandlerT.cs)*
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
+* **Source:** *[UndeleteRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Undelete/UndeleteRequestHandlerT.cs)*

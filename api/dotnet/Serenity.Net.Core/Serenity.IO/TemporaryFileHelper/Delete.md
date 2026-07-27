@@ -4,15 +4,17 @@
 Deletes a file.
 
 ```csharp
-public static void Delete(string filePath)
+public static void Delete(string filePath, IFileSystem fileSystem = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | filePath | File to be deleted (can be null). |
+| fileSystem |  |
 
 ## See Also
 
+* interface [IFileSystem](../../Serenity/IFileSystem.md)
 * class [TemporaryFileHelper](../TemporaryFileHelper.md)
 
 ---
@@ -23,15 +25,17 @@ public static void Delete(string filePath)
 Deletes, tries to delete or marks a file for deletion depending on type.
 
 ```csharp
-public static void Delete(string filePath, DeleteType type)
+public static void Delete(string filePath, DeleteType type, ITemporaryFileSystem fileSystem = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | filePath | File to be deleted (can be null). |
 | type | Delete type. |
+| fileSystem | File system |
 
 ## See Also
 
 * enum [DeleteType](../DeleteType.md)
+* interface [ITemporaryFileSystem](../../Serenity/ITemporaryFileSystem.md)
 * class [TemporaryFileHelper](../TemporaryFileHelper.md)

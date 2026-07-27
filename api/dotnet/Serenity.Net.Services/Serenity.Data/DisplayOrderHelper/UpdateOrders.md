@@ -26,5 +26,5 @@ public static bool UpdateOrders(IDbConnection connection, List<OrderRecord> orde
 ## See Also
 
 * class [OrderRecord](../DisplayOrderHelper.OrderRecord.md)
-* class [Field](../Serenity.Net.Entity/../Field.md)
+* class [Field](../Field.md)
 * class [DisplayOrderHelper](../DisplayOrderHelper.md)

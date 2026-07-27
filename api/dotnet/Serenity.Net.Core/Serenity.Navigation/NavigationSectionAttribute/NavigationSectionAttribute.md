@@ -21,7 +21,7 @@ public NavigationSectionAttribute(string title, string icon = null)
 # NavigationSectionAttribute constructor (2 of 2)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a new instance of the class
+Navigation section attribute
 
 ```csharp
 public NavigationSectionAttribute(int order, string title, string icon = null)
@@ -32,6 +32,10 @@ public NavigationSectionAttribute(int order, string title, string icon = null)
 | order | Display order |
 | title | Title |
 | icon | Icon class |
+
+## Remarks
+
+Creates a new instance of the class
 
 ## See Also
 

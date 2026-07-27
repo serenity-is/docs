@@ -9,5 +9,5 @@ protected IRow Row { get; }
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../IRow.md)
+* interface [IRow](../IRow.md)
 * class [CriteriaFieldExpressionReplacer](../CriteriaFieldExpressionReplacer.md)

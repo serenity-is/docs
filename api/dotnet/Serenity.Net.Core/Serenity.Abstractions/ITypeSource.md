@@ -18,4 +18,4 @@ public interface ITypeSource
 
 ## See Also
 
-* **Source:** *[ITypeSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Extensibility/ITypeSource.cs)*
+* **Source:** *[ITypeSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/ITypeSource.cs)*

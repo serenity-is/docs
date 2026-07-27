@@ -23,4 +23,4 @@ public class RetrieveResponse<T> : ServiceResponse, IRetrieveResponse
 
 * class [ServiceResponse](ServiceResponse.md)
 * interface [IRetrieveResponse](IRetrieveResponse.md)
-* **Source:** *[RetrieveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/RetrieveResponse.cs)*
+* **Source:** *[RetrieveResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/RetrieveResponse.cs)*

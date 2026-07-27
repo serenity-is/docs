@@ -15,4 +15,4 @@ public interface IIsSensitiveMessage
 
 ## See Also
 
-* **Source:** *[IIsSensitiveMessage.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Interface/IIsSensitiveMessage.cs)*
+* **Source:** *[IIsSensitiveMessage.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Interface/IIsSensitiveMessage.cs)*

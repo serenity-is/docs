@@ -19,4 +19,4 @@ public class DateTimeFormatterAttribute : CustomFormatterAttribute
 ## See Also
 
 * class [CustomFormatterAttribute](CustomFormatterAttribute.md)
-* **Source:** *[BasicFormatterTypes.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Formatting/BasicFormatterTypes.cs)*
+* **Source:** *[DateTimeFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Formatting/BasicFormatterTypes/DateTimeFormatterAttribute.cs)*

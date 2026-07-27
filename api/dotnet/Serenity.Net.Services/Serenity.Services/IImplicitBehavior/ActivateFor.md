@@ -13,5 +13,5 @@ public bool ActivateFor(IRow row)
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * interface [IImplicitBehavior](../IImplicitBehavior.md)

@@ -17,4 +17,4 @@ public interface INavigationModel
 
 ## See Also
 
-* **Source:** *[INavigationModel.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Navigation/INavigationModel.cs)*
+* **Source:** *[INavigationModel.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Navigation/INavigationModel.cs)*

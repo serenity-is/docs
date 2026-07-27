@@ -15,6 +15,8 @@ public class PageAuthorizeAttribute : TypeFilterAttribute
 | [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)() | Creates an instance of the PageAuthorizeAttribute. |
 | [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)(…) | Creates an instance of the PageAuthorizeAttribute, while reading the permission key from the NavigationPermissionAttribute or ReadPermissionAttribute of the source type. (4 constructors) |
 | [Permission](PageAuthorizeAttribute/Permission.md) { get; } | The permission key |
+| override [Equals](PageAuthorizeAttribute/Equals.md)(…) |  |
+| override [GetHashCode](PageAuthorizeAttribute/GetHashCode.md)() |  |
 
 ## Protected Members
 
@@ -24,4 +26,4 @@ public class PageAuthorizeAttribute : TypeFilterAttribute
 
 ## See Also
 
-* **Source:** *[PageAuthorizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/PageAuthorizeAttribute.cs)*
+* **Source:** *[PageAuthorizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/PageAuthorizeAttribute.cs)*

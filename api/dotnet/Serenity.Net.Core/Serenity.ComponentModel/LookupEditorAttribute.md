@@ -19,4 +19,4 @@ public class LookupEditorAttribute : LookupEditorBaseAttribute
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
 * class [LookupEditorBaseAttribute](LookupEditorBaseAttribute.md)
-* **Source:** *[LookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/LookupEditorAttribute.cs)*
+* **Source:** *[LookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/LookupEditorAttribute.cs)*

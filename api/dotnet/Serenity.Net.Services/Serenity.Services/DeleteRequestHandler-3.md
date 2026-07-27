@@ -44,7 +44,7 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 | virtual [DoAudit](DeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteDelete](DeleteRequestHandler-3/ExecuteDelete.md)() | Executes the actual SQL delete operation |
 | virtual [GetBehaviors](DeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of delete behaviors |
-| virtual [GetDisplayOrderFilter](DeleteRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements IDisplayOrderRow interface |
+| virtual [GetDisplayOrderFilter](DeleteRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [InvalidateCacheOnCommit](DeleteRequestHandler-3/InvalidateCacheOnCommit.md)() | Attaches a cache invalidation call to to OnCommit callback of the current unit of work. This would clear cached items related to this row type. |
 | virtual [InvokeDeleteAction](DeleteRequestHandler-3/InvokeDeleteAction.md)(…) | Invokes the passed delete action method |
 | virtual [IsDeleted](DeleteRequestHandler-3/IsDeleted.md)() | Checks if the entity is already deleted |
@@ -63,8 +63,8 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 * class [TDeleteRequest](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteRequest.md)
 * class [TDeleteResponse](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteResponse.md)
 * interface [IDeleteRequestProcessor](IDeleteRequestProcessor.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Entity/../Serenity.Data/IIdRow.md)
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [DeleteRequest](DeleteRequest.md)
 * class [DeleteResponse](DeleteResponse.md)
-* **Source:** *[DeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Delete/DeleteRequestHandler.cs)*
+* **Source:** *[DeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Delete/DeleteRequestHandler.cs)*

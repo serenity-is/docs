@@ -61,5 +61,5 @@ Local text registry
 
 * interface [ILocalTextRegistry](../Serenity.Net.Core/../../Serenity.Abstractions/ILocalTextRegistry.md)
 * interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
-* interface [IRowTypeRegistry](../Serenity.Net.Entity/../../Serenity.Data/IRowTypeRegistry.md)
+* interface [IRowTypeRegistry](../../Serenity.Data/IRowTypeRegistry.md)
 * class [ServiceCollectionExtensions](../ServiceCollectionExtensions.md)

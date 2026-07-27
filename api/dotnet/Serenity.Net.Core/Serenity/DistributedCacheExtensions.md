@@ -16,4 +16,4 @@ public static class DistributedCacheExtensions
 
 ## See Also
 
-* **Source:** *[DistributedCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Caching/DistributedCacheExtensions.cs)*
+* **Source:** *[DistributedCacheExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Caching/DistributedCacheExtensions.cs)*

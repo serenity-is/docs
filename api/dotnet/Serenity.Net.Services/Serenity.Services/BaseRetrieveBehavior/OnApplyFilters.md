@@ -8,5 +8,5 @@ public virtual void OnApplyFilters(IRetrieveRequestHandler handler, SqlQuery que
 ## See Also
 
 * interface [IRetrieveRequestHandler](../IRetrieveRequestHandler.md)
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [BaseRetrieveBehavior](../BaseRetrieveBehavior.md)

@@ -20,4 +20,4 @@ public class ServiceLookupEditorAttribute : ServiceLookupEditorBaseAttribute
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
 * class [ServiceLookupEditorBaseAttribute](ServiceLookupEditorBaseAttribute.md)
-* **Source:** *[ServiceLookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorAttribute.cs)*
+* **Source:** *[ServiceLookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorAttribute.cs)*

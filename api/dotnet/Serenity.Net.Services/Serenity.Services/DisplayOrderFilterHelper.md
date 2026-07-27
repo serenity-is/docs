@@ -16,4 +16,4 @@ public class DisplayOrderFilterHelper
 
 ## See Also
 
-* **Source:** *[DisplayOrderFilterHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/DisplayOrder/DisplayOrderFilterHelper.cs)*
+* **Source:** *[DisplayOrderFilterHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/DisplayOrder/DisplayOrderFilterHelper.cs)*

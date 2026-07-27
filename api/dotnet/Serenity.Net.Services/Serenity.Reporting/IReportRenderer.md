@@ -15,4 +15,4 @@ public interface IReportRenderer
 
 ## See Also
 
-* **Source:** *[IReportRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Reporting/Rendering/IReportRenderer.cs)*
+* **Source:** *[IReportRenderer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Rendering/IReportRenderer.cs)*

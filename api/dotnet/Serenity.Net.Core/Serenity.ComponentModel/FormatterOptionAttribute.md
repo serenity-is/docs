@@ -8,14 +8,23 @@ Adds a formatter option
 public class FormatterOptionAttribute : Attribute
 ```
 
+| parameter | description |
+| --- | --- |
+| key | The key. |
+| value | The value. |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [FormatterOptionAttribute](FormatterOptionAttribute/FormatterOptionAttribute.md)(…) | Initializes a new instance of the [`FormatterOptionAttribute`](FormatterOptionAttribute.md) class. |
+| [FormatterOptionAttribute](FormatterOptionAttribute/FormatterOptionAttribute.md)(…) | Adds a formatter option |
 | [Key](FormatterOptionAttribute/Key.md) { get; } | Gets the option key. |
 | [Value](FormatterOptionAttribute/Value.md) { get; } | Gets the option value. |
 
+## Remarks
+
+Initializes a new instance of the [`FormatterOptionAttribute`](FormatterOptionAttribute.md) class.
+
 ## See Also
 
-* **Source:** *[FormatterOptionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Columns/Formatting/FormatterOptionAttribute.cs)*
+* **Source:** *[FormatterOptionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Formatting/FormatterOptionAttribute.cs)*

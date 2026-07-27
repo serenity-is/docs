@@ -1,7 +1,7 @@
 # CollapsibleAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`CollapsibleAttribute`](../CollapsibleAttribute.md) class.
+Used to specify a target is collapsible. Commonly used with form categories to make them collapsible.
 
 ```csharp
 public CollapsibleAttribute(bool value = true)
@@ -10,6 +10,10 @@ public CollapsibleAttribute(bool value = true)
 | parameter | description |
 | --- | --- |
 | value | if set to `true` target is collapsible. |
+
+## Remarks
+
+Initializes a new instance of the [`CollapsibleAttribute`](../CollapsibleAttribute.md) class.
 
 ## See Also
 

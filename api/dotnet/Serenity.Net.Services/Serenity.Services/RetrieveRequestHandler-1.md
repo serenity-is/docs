@@ -12,12 +12,17 @@ public class RetrieveRequestHandler<TRow> :
 | parameter | description |
 | --- | --- |
 | TRow | The entity type |
+| context | The request context |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [RetrieveRequestHandler](RetrieveRequestHandler-1/RetrieveRequestHandler.md)(…) | Creates an instance of the class |
+| [RetrieveRequestHandler](RetrieveRequestHandler-1/RetrieveRequestHandler.md)(…) | Base generic class for retrieve request handlers that use [`RetrieveRequest`](RetrieveRequest.md) as the request type, and [`RetrieveResponse`](RetrieveResponse-1.md) as the response type. |
+
+## Remarks
+
+Creates an instance of the class
 
 ## See Also
 
@@ -26,5 +31,5 @@ public class RetrieveRequestHandler<TRow> :
 * class [RetrieveRequest](RetrieveRequest.md)
 * class [RetrieveResponse&lt;T&gt;](RetrieveResponse-1.md)
 * interface [IRetrieveHandler&lt;TRow&gt;](IRetrieveHandler-1.md)
-* interface [IRow](../Serenity.Net.Entity/../Serenity.Data/IRow.md)
-* **Source:** *[RetrieveRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Retrieve/RetrieveRequestHandlerT.cs)*
+* interface [IRow](../Serenity.Data/IRow.md)
+* **Source:** *[RetrieveRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Retrieve/RetrieveRequestHandlerT.cs)*

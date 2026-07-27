@@ -1,7 +1,7 @@
 # ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.ShouldSelectField method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns true if the field should be selected, based on current ColumnSelection, field MinSelectLevelAttribute, the field being a not mapped (NotMappedAttribute) field, table field, or a view / expression field.
+Returns true if the field should be selected, based on current ColumnSelection, field [`MinSelectLevelAttribute`](../../Serenity.Data.Mapping/MinSelectLevelAttribute.md), the field being a not mapped ([`NotMappedAttribute`](../../Serenity.Data.Mapping/NotMappedAttribute.md)) field, table field, or a view / expression field.
 
 ```csharp
 protected virtual bool ShouldSelectField(Field field)
@@ -13,5 +13,5 @@ protected virtual bool ShouldSelectField(Field field)
 
 ## See Also
 
-* class [Field](../Serenity.Net.Entity/../../Serenity.Data/Field.md)
+* class [Field](../../Serenity.Data/Field.md)
 * class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](../ListRequestHandler-3.md)

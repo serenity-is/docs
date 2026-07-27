@@ -14,7 +14,7 @@ public static SqlQuery ApplySort(this SqlQuery query, SortBy sortBy)
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [SortBy](../SortBy.md)
 * class [ServiceQueryHelper](../ServiceQueryHelper.md)
 
@@ -38,7 +38,7 @@ public static SqlQuery ApplySort(this SqlQuery query, IList<SortBy> sortByList,
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [SortBy](../SortBy.md)
 * class [ServiceQueryHelper](../ServiceQueryHelper.md)
 
@@ -67,5 +67,5 @@ public static SqlQuery ApplySort(this SqlQuery query, string sort, bool descendi
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * class [ServiceQueryHelper](../ServiceQueryHelper.md)

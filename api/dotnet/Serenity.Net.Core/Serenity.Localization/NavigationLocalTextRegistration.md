@@ -15,4 +15,4 @@ public static class NavigationLocalTextRegistration
 
 ## See Also
 
-* **Source:** *[NavigationLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/NavigationLocalTextRegistration.cs)*
+* **Source:** *[NavigationLocalTextRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/NavigationLocalTextRegistration.cs)*

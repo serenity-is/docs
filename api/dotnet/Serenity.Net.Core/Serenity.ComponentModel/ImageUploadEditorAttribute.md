@@ -20,4 +20,4 @@ public class ImageUploadEditorAttribute : BaseUploadEditorAttribute
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
 * class [BaseUploadEditorAttribute](BaseUploadEditorAttribute.md)
-* **Source:** *[ImageUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/ComponentModel/Upload/ImageUploadEditorAttribute.cs)*
+* **Source:** *[ImageUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/ImageUploadEditorAttribute.cs)*

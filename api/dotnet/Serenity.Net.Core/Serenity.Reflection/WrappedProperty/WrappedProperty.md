@@ -1,7 +1,7 @@
 # WrappedProperty constructor
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Initializes a new instance of the [`WrappedProperty`](../WrappedProperty.md) class.
+A class that basically implements IPropertyInfo for PropertyInfo objects
 
 ```csharp
 public WrappedProperty(PropertyInfo property)
@@ -10,6 +10,10 @@ public WrappedProperty(PropertyInfo property)
 | parameter | description |
 | --- | --- |
 | property | The property. |
+
+## Remarks
+
+Initializes a new instance of the [`WrappedProperty`](../WrappedProperty.md) class.
 
 ## See Also
 

@@ -12,9 +12,9 @@ public class DeleteResponse : ServiceResponse
 | name | description |
 | --- | --- |
 | [DeleteResponse](DeleteResponse/DeleteResponse.md)() | The default constructor. |
-| [WasAlreadyDeleted](DeleteResponse/WasAlreadyDeleted.md) | True if the entity was already deleted. Not all services support this. Only soft delete services may return this information, while others may raise a record not found exception. |
+| [WasAlreadyDeleted](DeleteResponse/WasAlreadyDeleted.md) { get; set; } | True if the entity was already deleted. Not all services support this. Only soft delete services may return this information, while others may raise a record not found exception. |
 
 ## See Also
 
 * class [ServiceResponse](ServiceResponse.md)
-* **Source:** *[DeleteResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/DeleteResponse.cs)*
+* **Source:** *[DeleteResponse.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/DeleteResponse.cs)*

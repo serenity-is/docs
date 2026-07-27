@@ -15,4 +15,4 @@ public static class TemplateHelper
 
 ## See Also
 
-* **Source:** *[TemplateHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Web/Mvc/TemplateHelper.cs)*
+* **Source:** *[TemplateHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/TemplateHelper.cs)*

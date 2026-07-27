@@ -15,4 +15,4 @@ public interface IGetAllTexts
 
 ## See Also
 
-* **Source:** *[IGetAllTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Localization/IGetAllTexts.cs)*
+* **Source:** *[IGetAllTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/IGetAllTexts.cs)*

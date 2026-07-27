@@ -1,18 +1,22 @@
 # LinkingSetRelationBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Behavior class that handles LinkingSetRelationAttribute
+Behavior class that handles [`LinkingSetRelationAttribute`](../Serenity.Data.Mapping/LinkingSetRelationAttribute.md)
 
 ```csharp
 public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior, 
     IImplicitBehavior, IListBehavior, IRetrieveBehavior
 ```
 
+| parameter | description |
+| --- | --- |
+| handlerFactory | Default handler factory |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [LinkingSetRelationBehavior](LinkingSetRelationBehavior/LinkingSetRelationBehavior.md)(…) | Creates an instance of the class |
+| [LinkingSetRelationBehavior](LinkingSetRelationBehavior/LinkingSetRelationBehavior.md)(…) | Behavior class that handles [`LinkingSetRelationAttribute`](../Serenity.Data.Mapping/LinkingSetRelationAttribute.md) |
 | [Target](LinkingSetRelationBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](LinkingSetRelationBehavior/ActivateFor.md)(…) |  |
 | [OnAfterExecuteQuery](LinkingSetRelationBehavior/OnAfterExecuteQuery.md)(…) |  (2 methods) |
@@ -24,6 +28,16 @@ public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior
 | [OnReturn](LinkingSetRelationBehavior/OnReturn.md)(…) |  (2 methods) |
 | [OnValidateRequest](LinkingSetRelationBehavior/OnValidateRequest.md)(…) |  (2 methods) |
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | handlerFactory is null |
+
+## Remarks
+
+Creates an instance of the class
+
 ## See Also
 
 * class [BaseSaveDeleteBehavior](BaseSaveDeleteBehavior.md)
@@ -31,4 +45,4 @@ public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior
 * interface [IImplicitBehavior](IImplicitBehavior.md)
 * interface [IListBehavior](IListBehavior.md)
 * interface [IRetrieveBehavior](IRetrieveBehavior.md)
-* **Source:** *[LinkingSetRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/IntegratedFeatures/LinkingSetRelation/LinkingSetRelationBehavior.cs)*
+* **Source:** *[LinkingSetRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/LinkingSetRelation/LinkingSetRelationBehavior.cs)*

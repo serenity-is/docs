@@ -20,5 +20,5 @@ public string PeekScriptHash(string name, IDynamicScript script)
 
 ## See Also
 
-* interface [IDynamicScript](../IDynamicScript.md)
+* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
 * class [DynamicScriptManager](../DynamicScriptManager.md)

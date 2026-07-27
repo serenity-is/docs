@@ -23,6 +23,6 @@ public void Log(IUnitOfWork uow, IRow old, IRow row, object userId)
 
 ## See Also
 
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
-* interface [IRow](../Serenity.Net.Entity/../../Serenity.Data/IRow.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
+* interface [IRow](../../Serenity.Data/IRow.md)
 * class [CaptureLogBehavior](../CaptureLogBehavior.md)

@@ -12,7 +12,7 @@ public static void Copy(this IFileSystem fileSystem, string sourceFileName, stri
 | --- | --- |
 | fileSystem | File system |
 | sourceFileName | Source file name |
-| destFileName | Destion |
+| destFileName | Destination |
 | overwrite |  |
 
 ## See Also

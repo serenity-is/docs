@@ -13,8 +13,8 @@ public class ListRequest : ServiceRequest, IIncludeExcludeColumns
 | --- | --- |
 | [ListRequest](ListRequest/ListRequest.md)() | The default constructor. |
 | [ColumnSelection](ListRequest/ColumnSelection.md) { get; set; } | Group of columns to select. This is ColumnSelection.List, e.g. only the table fields, not view fields by default. |
-| [ContainsField](ListRequest/ContainsField.md) { get; set; } | If specified, the text is only searched in this column. The column should still have a QuickSearchAttribute. |
-| [ContainsText](ListRequest/ContainsText.md) { get; set; } | The text to search in columns with the QuickSearchAttribute. |
+| [ContainsField](ListRequest/ContainsField.md) { get; set; } | If specified, the text is only searched in this column. The column should still have a [`QuickSearchAttribute`](../Serenity.Data.Mapping/QuickSearchAttribute.md). |
+| [ContainsText](ListRequest/ContainsText.md) { get; set; } | The text to search in columns with the [`QuickSearchAttribute`](../Serenity.Data.Mapping/QuickSearchAttribute.md). |
 | [Criteria](ListRequest/Criteria.md) { get; set; } | The where criteria for the query. This is passed as an array of arrays in the JSON. |
 | [DistinctFields](ListRequest/DistinctFields.md) { get; set; } | Distinct set of columns. If set a DISTINCT query is used, and only these columns can be returned from the query. |
 | [EqualityFilter](ListRequest/EqualityFilter.md) { get; set; } | A dictionary of field name / value pairs used to filter those fields by the passed value. Please note that "NULL" values are ignored, so you can't filter a field with a NULL value. |
@@ -23,6 +23,7 @@ public class ListRequest : ServiceRequest, IIncludeExcludeColumns
 | [ExportColumns](ListRequest/ExportColumns.md) { get; set; } | Gets or sets the set of columns to export. This should only be used to specify list of columns for contexts like Excel export etc. |
 | [IncludeColumns](ListRequest/IncludeColumns.md) { get; set; } |  |
 | [IncludeDeleted](ListRequest/IncludeDeleted.md) { get; set; } | Include the deleted records. Default is false. This is only supported by services and entities that implement soft delete, e.g. IsActive etc. |
+| [Localize](ListRequest/Localize.md) { get; set; } | Set to "true" to localize fields with the Localize attribute. Note that this will also affect filtering and sorting as the field's expression will be changed to a COALESCE one. To get a localized version in a specific language, pass the language code as the value. |
 | [Skip](ListRequest/Skip.md) { get; set; } | Number of records to skip |
 | [Sort](ListRequest/Sort.md) { get; set; } | Columns to sort returned records by |
 | [Take](ListRequest/Take.md) { get; set; } | Number of records to take |
@@ -31,4 +32,4 @@ public class ListRequest : ServiceRequest, IIncludeExcludeColumns
 
 * class [ServiceRequest](ServiceRequest.md)
 * interface [IIncludeExcludeColumns](IIncludeExcludeColumns.md)
-* **Source:** *[ListRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/Models/ListRequest.cs)*
+* **Source:** *[ListRequest.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Models/ListRequest.cs)*

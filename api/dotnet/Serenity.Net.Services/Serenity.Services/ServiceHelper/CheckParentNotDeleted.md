@@ -17,6 +17,6 @@ public static void CheckParentNotDeleted(IDbConnection connection, string tableN
 
 ## See Also
 
-* class [SqlQuery](../Serenity.Net.Data/../../Serenity.Data/SqlQuery.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
 * class [ServiceHelper](../ServiceHelper.md)

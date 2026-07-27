@@ -15,6 +15,6 @@ public TUndeleteResponse Undelete(IUnitOfWork uow, TUndeleteRequest request)
 ## See Also
 
 * class [TUndeleteResponse](../Serenity.Net.Services/../IUndeleteHandler-3.TUndeleteResponse.md)
-* interface [IUnitOfWork](../Serenity.Net.Data/../../Serenity.Data/IUnitOfWork.md)
+* interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * class [TUndeleteRequest](../Serenity.Net.Services/../IUndeleteHandler-3.TUndeleteRequest.md)
 * interface [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](../IUndeleteHandler-3.md)

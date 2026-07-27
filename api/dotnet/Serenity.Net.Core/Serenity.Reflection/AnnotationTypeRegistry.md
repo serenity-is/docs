@@ -7,14 +7,22 @@ Default annotation type registry
 public class AnnotationTypeRegistry : IAnnotationTypeRegistry
 ```
 
+| parameter | description |
+| --- | --- |
+| typeSource | Type source |
+
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [AnnotationTypeRegistry](AnnotationTypeRegistry/AnnotationTypeRegistry.md)(…) | Creates a new instance |
+| [AnnotationTypeRegistry](AnnotationTypeRegistry/AnnotationTypeRegistry.md)(…) | Default annotation type registry |
 | [GetAnnotationTypesFor](AnnotationTypeRegistry/GetAnnotationTypesFor.md)(…) | Gets the annotation types for given type. |
+
+## Remarks
+
+Creates a new instance
 
 ## See Also
 
 * interface [IAnnotationTypeRegistry](IAnnotationTypeRegistry.md)
-* **Source:** *[AnnotationTypeRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Core/Reflection/AnnotationTypeRegistry.cs)*
+* **Source:** *[AnnotationTypeRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/AnnotationTypeRegistry.cs)*

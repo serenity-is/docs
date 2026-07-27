@@ -30,4 +30,4 @@ public abstract class BaseSaveBehavior : ISaveBehavior, ISaveExceptionBehavior
 
 * interface [ISaveBehavior](ISaveBehavior.md)
 * interface [ISaveExceptionBehavior](ISaveExceptionBehavior.md)
-* **Source:** *[BaseSaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Serenity.Net.Services/RequestHandlers/Save/BaseSaveBehavior.cs)*
+* **Source:** *[BaseSaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/BaseSaveBehavior.cs)*

@@ -69,7 +69,7 @@ Once you've rebuilt your solution and run it, you'll find a new section in your 
 
 In the screenshot above, you'll notice that the "Genres" page is located under the "MovieDB" section. This organization might differ from the section you recently renamed as "Movie Database." The reason for this distinction is that Sergen isn't aware of the customizations made to your existing navigation items. To rectify the section organization, you'll need to manually move the "Genres" page under the "Movie Database" section.
 
-To accomplish this, navigate to the `Modules/Movie/MovieDBNavigation.cs` file and modify the navigation link for "Genre" as follows:
+To accomplish this, navigate to the `Modules/MovieDB/MovieDBNavigation.cs` file and modify the navigation link for "Genre" as follows:
 
 ```csharp
 [assembly: NavigationLink(6200, "Movie Database/Genres", typeof(MyPages.GenrePage), icon: "fa-thumb-tack")]
@@ -110,7 +110,7 @@ In the provided code:
 
 - The `GenreId` field is mapped using the `[ForeignKey]` attribute. We specify `typeof(GenreRow)` to indicate that this field is related to the `GenreRow` entity. This also informs Serenity to determine the name of the table and its ID property from the `GenreRow` entity. This is a recommended approach as it helps prevent typing errors.
 
-- The `[LeftJoin(jGenre)]` attribute declares that when the Genre table needs to be joined, its alias should be set to `jGenre`. In SQL terms, this corresponds to generating queries with a LEFT JOIN between the Movies and Genre tables. This join is only performed when fields from the Genre table are requested, for instance, if its columns are visible in a data grid. The internally generated query could look like below:
+- The `[LeftJoin(jGenre)]` attribute declares that when the Genre table needs to be joined, its alias should be set to `jGenre`. In SQL terms, this corresponds to generating queries with a LEFT JOIN between the Movies and Genre tables. This join is only performed when fields from the Genre table are requested, for instance, if its columns are visible in a data grid. The internally generated query could look like this:
 
     ```sql
     SELECT t0.MovieId, t0.Kind, t0.GenreId, jGenre.Name as GenreName 
@@ -192,11 +192,11 @@ public sealed class GenreRow : Row<GenreRow.RowFields>, IIdRow, INameRow
 
 By adding the `[LookupScript]` attribute to the `GenreRow` class, you're specifying that a lookup script is associated with the Genre table.
 
-It's important to note that lookups are recommended for small tables that change rarely. For large or frequently modified tables, it's better not to define a LookupScript and instead use `ServiceLookupEditor` which works via List service calls.
+It's important to note that lookups are recommended for small tables that rarely change. For large or frequently modified tables, it's better not to define a LookupScript and instead use `ServiceLookupEditor` which works via List service calls.
 
 After making this change, rebuild your project and launch the application. Once you've logged in, open the developer console by pressing F12 in your browser.
 
-Inside the console, type `Q.getLookup('MovieDB.Genre')`, and you'll receive an output similar to this:
+Inside the console, type `Serenity.getLookup('MovieDB.Genre')`, and you'll receive an output similar to this:
 
 ![Movies Genre Lookup from Console](img/mdb_genre_getlookup.png)
 
@@ -208,7 +208,7 @@ While you can implicitly specify the lookup key by using `[LookupScript("MovieDB
 
 ## Using the LookupEditor for the Genre Field
 
-You have two options to specify the editor type for the `GenreId` field: one is to define it in the `MovieForm.cs` file, and the other is to do it in the `MovieRow.cs` file. While you can set it on the form level, it's generally preferred to define it in the row class because it's a more central location, and the information defined at this level can be reused in various parts of your application.
+You have two options for specifying the editor type for the `GenreId` field: one is to define it in the `MovieForm.cs` file, and the other is to do it in the `MovieRow.cs` file. While you can set it on the form level, it's generally preferred to define it in the row class because it's a more central location, and the information defined at this level can be reused in various parts of your application.
 
 Keep in mind that the information defined on a form is specific to that form and cannot be reused elsewhere. For example, grids use information from `XYZColumn.cs` or `XYZRow.cs`, while dialogs rely on information in `XYZForm.cs` or `XYZRow.cs`. So, it's usually better to define such details in the `XYZRow.cs` file.
 
@@ -269,12 +269,12 @@ The lookup editor's lookup key is "MovieDB.Genre," so it searched for a dialog c
 - `MovieDB.GenreDialog`
 - `MovieTutorial.MovieDB.GenreDialog`
 
-Fortunately, there's a "GenreDialog" class defined in the "Modules/Genre/GenreDialog.tsx" file, and its registered full name is "MovieTutorial.MovieDB.GenreDialog":
+Fortunately, there's a "GenreDialog" class defined in the "Modules/MovieDB/Genre/GenreDialog.tsx" file, and its registered full name is "MovieTutorial.MovieDB.GenreDialog":
 
 ```typescript
 // ...
-@Decorators.registerClass('MovieTutorial.MovieDB.GenreDialog')
 export class GenreDialog extends EntityDialog<GenreRow, any> {
+    static override[Symbol.typeInfo] = this.registerClass("MovieTutorial.MovieDB.GenreDialog");
     // ...
 }
 ```
@@ -282,13 +282,17 @@ export class GenreDialog extends EntityDialog<GenreRow, any> {
 If the lookup key for "GenreRow" and its dialog class didn't match, you'd get an error in the browser console as soon as you clicked the in-place add button:
 
 ```
-"MovieDB.Genre" dialog class not found! Make sure there is such a dialog type under the project root namespace, and its namespace parts start with capital letters like MyProject.MyModule.MyDialog.
+The dialog class "MovieDB.Genre" was not found. 
 
-If using ES modules, make sure the dialog type has a decorator like @Decorators.registerClass('MyProject.MyModule.MyDialog') with the full name and "side-effect-import" this dialog class from the current "page.ts/grid.ts/dialog.ts file (import "./path/to/MyDialog.ts").
+Ensure that the dialog type includes a line similar to the following (using the correct full name):
+static [Symbol.typeInfo] = this.registerClass("MyProject.MyModule.MyDialog");
 
-If you had this error from an editor with the InplaceAdd option, verify that the lookup key and dialog type name match case-sensitively, excluding the Dialog suffix. Specify the DialogType property in the LookupEditor attribute if it is not.
+Also, side-effect import this dialog class from the current page.ts, grid.ts, or dialog.ts file. For example:
+import "./path/to/MyDialog.ts";
 
-After applying fixes, build and run "node ./tsbuild.js" (or "tsc" if using namespaces) from the project folder.
+If you encounter this error from an editor with the InplaceAdd option, verify that the lookup key and dialog type name match case-sensitively, excluding the "Dialog" suffix. Specify the DialogType property in the LookupEditor attribute if it does not match.
+
+After applying the fixes, build the project by running "npm run build" from the project folder.
 ```
 
 To ensure the dialog type matches, either use a compatible lookup key like "*ModuleName*.*RowType*" or specify the dialog type explicitly in the `LookupEditor` attribute:

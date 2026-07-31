@@ -8,7 +8,7 @@ To include TV series and mini-series in your movie database, you'll need to add 
 
 **Note:** Do not modify existing migrations, as they will not run again.
 
-1. Create a new migration file under *Migrations/DefaultDB/DefaultDB_20221114_1825_MovieKind.cs*:
+1. Create a new migration file in *Migrations/DefaultDB/DefaultDB_20221114_1825_MovieKind.cs*:
 
     ```csharp
     using FluentMigrator;

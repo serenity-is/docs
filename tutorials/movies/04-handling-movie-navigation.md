@@ -15,7 +15,7 @@ Open the `MovieDBNavigation.cs` file in the `MovieDB` module folder. You'll find
 
 The first argument to this attribute is the display order for this navigation item (`int.MaxValue`). Since we currently have only one navigation item in the `Movie` section, we don't need to worry about ordering for now.
 
-The second parameter is the navigation title in the format `Section Title/Link Title`, with a slash (`/`) separating the section and navigation items.
+The second parameter is the navigation title in the format `Section Title/Link Title`, with a slash (`/`) separating the section title from the link title.
 
 Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`:
 
@@ -26,7 +26,7 @@ Let's change it to `Movie Database/Movies` and set the icon to `fa-video-camera`
 
 ![Movies Nav Title and Icon](img/movies-nav-title-icon.png)
 
-The Serene and StartSharp template includes Line Awesome, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page](https://demo.serenity.is/UIElements/Icons).
+The Serene and StartSharp templates include Line Awesome, which is a modern alternative to Font Awesome. You can find a comprehensive list of icons and their corresponding CSS classes on [this page](https://demo.serenity.is/UIElements/Icons).
 
 ## Ordering Navigation Sections
 

@@ -56,7 +56,7 @@ public sealed class PersonRow : Row<PersonRow.RowFields>, IIdRow, INameRow
 ```
 
 ```csharp
-public sealed class MovieRow : Row<MoviesRow.RowFields>, IIdRow, INameRow
+public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
 {
     // ...
     [DisplayName("Primary Image"), Size(100)]

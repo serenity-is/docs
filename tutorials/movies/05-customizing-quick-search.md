@@ -40,7 +40,7 @@ However, if you attempted to search for "Gandalf," you wouldn't find any results
 
 The name field also determines the initial sorting order and is used in edit dialog titles. In some cases, the first textual column might not be suitable as the name field. If that's the case, you can change it by switching the `[NameProperty]` attribute from the current property, such as "Title," to another property, like "Description." However, in our case, "Title" is indeed the name field, so we'll leave it as is.
 
-If you want Serenity to search in additional fields, like "Description" and "Storyline, you should add the `QuickSearch` attribute to these fields as well. Here's how it's done:
+If you want Serenity to search in additional fields, like "Description" and "Storyline," you should add the `QuickSearch` attribute to these fields as well. Here's how it's done:
 
 ```cs
 //...
@@ -88,8 +88,8 @@ You can also provide users with the ability to choose which field they want to s
 ```ts
 import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
 //...
-@Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
 export class MovieGrid extends EntityGrid<MovieRow, any> {
+    static override[Symbol.typeInfo] = this.registerClass("MovieTutorial.MovieDB.MovieGrid");
     // ...
     protected getQuickSearchFields(): QuickSearchField[] {
         return [
@@ -136,7 +136,7 @@ export class MovieGrid extends EntityGrid<MovieRow, any> {
 }
 ```
 
-What about field titles? They are not as critical as field names but can be useful for localization purposes (if you later decide to translate it):
+What about field titles? They are not as critical as field names but can be useful for localization purposes (if you later decide to translate them):
 
 ```ts
 import { localText } from '@serenity-is/corelib';

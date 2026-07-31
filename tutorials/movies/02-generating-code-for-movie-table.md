@@ -2,13 +2,13 @@
 
 ## Using the Serenity Code Generator
 
-After confirming the existence of the `Movie` table in the database, you can employ the Serenity Code Generator (`dotnet sergen`) to create the initial editing interface.
+After confirming the existence of the `Movie` table in the database, you can use the Serenity Code Generator (`dotnet sergen`) to create the initial editing interface.
 
 <video alt="Generating Code for Movie Table Animation" controls>
   <source src="img/02-generating-code-for-movie-table.mp4" type="video/mp4">
 </video>
 
-Since ASP.NET Core offers cross-platform support, the .NET Core version of Sergen can run on macOS, Linux, and Windows. Presently, it has a console-based user interface.
+Since ASP.NET Core offers cross-platform support, the .NET version of Sergen can run on macOS, Linux, and Windows. It currently has a console-based user interface.
 
 1. Right-click on the `MovieTutorial.Web` project and select "Open in Terminal."
 
@@ -24,7 +24,7 @@ Sergen will list the connections found in the `appsettings.json` file.
 
 You can navigate through the connections using the up and down arrow keys. Select the `Default` connection and press Enter.
 
-After pressing Enter, you'll receive a list of tables in that database:
+After pressing Enter, you'll see a list of tables in that database:
 
 ![Sergen Movie Selected](img/dotnet-sergen-movie.png)
 
@@ -62,7 +62,7 @@ Leave the permission as `Administration:General` and press Enter again.
 
 In Serenity, access control to resources (pages, services, etc.) is managed using permission keys, which are simple strings. Users or roles are granted these permissions.
 
-For our Movie page, it will be used exclusively by administrative users (or perhaps content moderators in the future). Therefore, let's set the permission to `Administration:General` for now. In the Serene template, by default, only the `admin` user has this permission.
+Our Movie page will be used exclusively by administrative users (or perhaps content moderators in the future). Therefore, let's set the permission to `Administration:General` for now. In the Serene template, by default, only the `admin` user has this permission.
 
 ![Sergen what to generate](img/dotnet-sergen-whattogenerate.png)
 
@@ -88,7 +88,7 @@ You can now exit the command prompt and return to Visual Studio to continue your
 
 Now, try adding a new movie, and then attempt to update and delete it.
 
-Sergen generated code for our table, and it works seamlessly without us needing to write a single line of code.
+Sergen generated code for our table, and it works seamlessly without us having to write a single line of code.
 
 However, it's essential to note that Serenity is not a no-code or low-code platform for non-developers who avoid writing code entirely. The key point here is maintainability. The code produced by some designers and code generators is often an unmanageable mess that developers are discouraged from touching.
 

@@ -10,9 +10,9 @@ This tutorial will guide you through the process of creating an editing interfac
   <source src="img/00-introduction.mp4" type="video/mp4">
 </video>
 
-To initiate a new project, launch Visual Studio and click on "Create a New Project" from the welcome screen.
+To start a new project, launch Visual Studio and click "Create a New Project" on the welcome screen.
 
-If you are already in the Integrated Development Environment (IDE) and not on the welcome screen, close the current solution by selecting "File -> Close Solution," then choose "File -> New Project."
+If you are already in the Integrated Development Environment (IDE) and not on the welcome screen, close the current solution by selecting "File -> Close Solution," then select "File -> New Project."
 
 In the "Create a New Project" dialog, type "Serene" into the search input:
 
@@ -22,7 +22,7 @@ Select the "Serene" template and click the "Next" button located at the bottom r
 
 ![VS New Project Serene](img/vs_new_serene.png)
 
-Within the "Configure your new project" dialog, input "MovieTutorial" as the project name and click the "Next" button once more.
+In the "Configure your new project" dialog, enter "MovieTutorial" as the project name and click the "Next" button once more.
 
 ![VS New Project Name](img/vs_new_project_name.png)
 
@@ -35,3 +35,17 @@ In the Solution Explorer, you should now see a project named "MovieTutorial.Web.
 ![VS New Serene Solution](img/vs_new_serene_solution.png)
 
 MovieTutorial.Web is an ASP.NET Core project that contains server-side code as well as static resources like CSS files, images, and more. It also includes a tsconfig.json file at the root, indicating that it is a TypeScript project.
+
+### Creating the Project from the Command Line
+
+If you don't have Visual Studio (or simply prefer working from the command line, e.g. on Linux or macOS), you can create the same project with the .NET CLI. First, make sure the Serene template is installed — see [Installing Serene with DotNet New](../../getting_started/installing_serene_with_dotnet_new.md) for details.
+
+To create the project named "MovieTutorial", run:
+
+```bash
+dotnet new serene -n MovieTutorial
+```
+
+This creates a `MovieTutorial` folder containing a `MovieTutorial.Web` project, equivalent to the Visual Studio flow described above, and the rest of this tutorial works the same either way.
+
+> Note: the template name is case-sensitive, so use `dotnet new serene` (all lowercase). Pass `-o <folder>` to place the project in a specific folder.

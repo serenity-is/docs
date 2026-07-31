@@ -292,12 +292,13 @@ For certain types of master/detail records, such as orders and their details, ed
 To create an editor for the Movie Cast list, rename the `MovieCastGrid.tsx` file to `MovieCastEditor.tsx` and replace its contents with the following TypeScript code:
 
 ```typescript
-import { Decorators, WidgetProps } from '@serenity-is/corelib';
+import { WidgetProps } from '@serenity-is/corelib';
 import { GridEditorBase } from '@serenity-is/extensions';
 import { MovieCastColumns, MovieCastRow } from '../../ServerTypes/MovieDB';
 
-@Decorators.registerEditor("MovieTutorial.MovieDB.MovieCastEditor")
 export class MovieCastEditor<P = {}> extends GridEditorBase<MovieCastRow, P> {
+    static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.MovieCastEditor");
+
     protected getColumnsKey() { return MovieCastColumns.columnsKey }
     protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
@@ -322,7 +323,7 @@ public class MovieForm
     [TextAreaEditor(Rows = 3)]
     public string Description { get; set; }
 
-    [DisplayName("Cast"), MovieCastEditor, IgnoreName]
+    [DisplayName("Cast"), MovieCastEditor, SkipNameCheck]
     public List<MovieCastRow> CastList { get; set; }
 
     [TextAreaEditor(Rows = 8)]
@@ -335,7 +336,7 @@ By applying the `[MovieCastEditor]` attribute to the `CastList` property, you sp
 
 Although you could use `[EditorType("MovieDB.MovieCast")] as an alternative, it's generally preferred to avoid hard-coded strings.
 
-The `[IgnoreName]` attribute is used to instruct the `CheckNames` attribute to skip checking if the `CastList` property exists on the `MovieRow`.
+The `[SkipNameCheck]` attribute is used to instruct the `CheckNames` attribute to skip checking if the `CastList` property exists on the `MovieRow`.
 
 After making these changes, build and launch your application. When you open a movie dialog, you'll see our new editor:
 
@@ -350,26 +351,24 @@ Additionally, you'll need to handle more plumbing tasks, such as loading and sav
 When clicking on `New Movie Cast` button, you can see the error:
 
 ```
-"MovieDB.MovieCastEditor" dialog class not found! Make sure there is such a dialog type under the project root namespace, and its namespace parts start with capital letters like MyProject.MyModule.MyDialog.
+The dialog class "MovieDB.MovieCastEditor" was not found. 
 
-If using ES modules, make sure the dialog type has a decorator like @Decorators.registerClass('MyProject.MyModule.MyDialog') with the full name and "side-effect-import" this dialog class from the current "page.ts/grid.ts/dialog.ts file (import "./path/to/MyDialog.ts").
-
-If you had this error from an editor with the InplaceAdd option, verify that the lookup key and dialog type name match case-sensitively, excluding the Dialog suffix. Specify the DialogType property in the LookupEditor attribute if it is not.
-
-After applying fixes, build and run "node ./tsbuild.js" (or "tsc" if using namespaces) from the project folder.
+Ensure that the dialog type includes a line similar to the following (using the correct full name):
+static [Symbol.typeInfo] = this.registerClass("MyProject.MyModule.MyDialog");
+//...
 ```
 
-It is an error due to referenced type is not included to the esm bundle. The "side-effect-import" is required only when you don't have any direct reference in your typescript code. To configure the `MovieCastEditor` to use the `MovieCastEditDialog`, follow these steps:
+This error occurs because the referenced type is not included in the esm bundle. The "side-effect-import" is required only when you don't have any direct reference in your typescript code. To configure the `MovieCastEditor` to use the `MovieCastEditDialog`, follow these steps:
 
 1. Rename the `MovieCastDialog.tsx` file to `MovieCastEditDialog.tsx` and replace its contents with the following TypeScript code:
 
 ```typescript
-import { Decorators } from "@serenity-is/corelib";
 import { GridEditorDialog } from "@serenity-is/extensions";
 import { MovieCastForm, MovieCastRow } from "../../ServerTypes/MovieDB";
 
-@Decorators.registerClass("MovieTutorial.MovieDB.MovieCastEditDialog")
 export class MovieCastEditDialog extends GridEditorDialog<MovieCastRow> {
+    static override [Symbol.typeInfo] = this.registerClass("MovieTutorial.MovieDB.MovieCastEditDialog");
+
     protected getFormKey() { return MovieCastForm.formKey; }
     protected getNameProperty() { return MovieCastRow.nameProperty; }
     protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
@@ -383,13 +382,13 @@ In this code, we're using the `GridEditorDialog` class from the Extensions packa
 2. Open the `MovieCastEditor.tsx` file once again and add a `getDialogType` method and override the `getAddButtonCaption` method as shown below:
 
 ```typescript
-import { Decorators } from "@serenity-is/corelib";
 import { GridEditorBase } from "@serenity-is/extensions";
 import { MovieCastColumns, MovieCastRow } from "../../ServerTypes/MovieDB";
 import { MovieCastEditDialog } from "./MovieCastEditDialog";
 
-@Decorators.registerEditor("MovieTutorial.MovieDB.MovieCastEditor")
 export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
+    static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.MovieCastEditor");
+
     //...
     protected getDialogType() { return MovieCastEditDialog; }
 
@@ -522,13 +521,13 @@ There is no `PersonFullName` field in this entity, so the grid can't display its
 To resolve this issue, we need to set `PersonFullName` ourselves. Edit `MovieCastEditor` to add a `validateEntity` method:
 
 ```typescript
-import { Decorators } from "@serenity-is/corelib";
 import { GridEditorBase } from "@serenity-is/extensions";
 import { MovieCastColumns, MovieCastRow, PersonRow } from '../../ServerTypes/MovieDB';
 import { MovieCastEditDialog } from "./MovieCastEditDialog";
 
-@Decorators.registerEditor("MovieTutorial.MovieDB.MovieCastEditor")
 export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
+    static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.MovieCastEditor");
+
     //...
     protected validateEntity(row: MovieCastRow, id: number) {
         if (!super.validateEntity(row, id))

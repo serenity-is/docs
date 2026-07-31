@@ -159,15 +159,15 @@ However, it would be more informative to have genre names instead of genre IDs
 It's time to create a SlickGrid column formatter. To do this, create a file named `GenreListFormatter.tsx` next to `MovieGrid.tsx`:
 
 ```typescript
-import { Decorators, Formatter, Lookup } from "@serenity-is/corelib";
+import { Decorators, Formatter, Lookup, formatterTypeInfo, registerType } from "@serenity-is/corelib";
 import { FormatterContext } from "@serenity-is/sleekgrid";
 import { GenreRow } from "../../ServerTypes/MovieDB/GenreRow";
 
 let lookup: Lookup<GenreRow>;
 let promise: Promise<Lookup<GenreRow>>;
 
-@Decorators.registerFormatter('MovieTutorial.GenreListFormatter')
 export class GenreListFormatter implements Formatter {
+    static [Symbol.typeInfo] = formatterTypeInfo("MovieTutorial.GenreListFormatter"); static { registerType(this); }
 
     format(ctx: FormatterContext) {
 
@@ -199,7 +199,7 @@ export class GenreListFormatter implements Formatter {
 }
 ```
 
-Here, we introduce a new formatter, *GenreListFormatter*, and register it with the Serenity type system using the *@Decorators.registerFormatter* decorator. These decorators serve a purpose similar to .NET attributes.
+Here, we introduce a new formatter, *GenreListFormatter*, and register it with the Serenity type system using *[Symbol.typeInfo]*.
 
 All formatters must implement the Formatter interface, which includes a *format* method that accepts a *ctx* parameter of type *FormatterContext*.
 
@@ -237,13 +237,13 @@ return idList.map(id => {
 
 If we can find the genre row corresponding to a specific ID, we return its Name value. We also ensure that the genre name is HTML encoded in case it contains invalid HTML characters like `<`, `>`, or `&`. For this encoding, we make use of the ctx.escape function.
 
-If the lookup is not yet available, we verify if there is an existing asynchronous call in progress to load the lookup and create a promise if not by calling the `getLookupAsync` method:
+If the lookup is not yet available, we verify if there is an existing asynchronous call in progress to load the lookup and, if not, create a promise by calling the `getLookupAsync` method:
 
 ```typescript
 promise ??= GenreRow.getLookupAsync().then(l => {
 ```
 
-This way we avoid multiple successive calls to getLookupAsync as this formatter is called for every cell in the `GenderList` of the grid. 
+This way we avoid multiple successive calls to getLookupAsync as this formatter is called for every cell in the `GenreList` of the grid. 
 
 Once the promise completes, we set the lookup variable and trigger a grid re-render:
 
@@ -254,7 +254,7 @@ try {
 }
 ```
 
-After re-rendering is complete we set the promise and lookup variables to null.
+After re-rendering is complete, we set the promise and lookup variables to null.
 
 ```typescript
 finally {

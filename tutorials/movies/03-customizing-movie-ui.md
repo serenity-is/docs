@@ -125,7 +125,7 @@ Serenity provides various editor types, and some are automatically selected base
 
 ## Setting Caption Size With CSS
 
-To adjust the caption size of the Movie dialog, you can create `Modules/MovieDB/Movie/MovieDialog.css` file and add the CSS rules to this file:
+To adjust the caption size of the Movie dialog, you can create a `Modules/MovieDB/Movie/MovieDialog.css` file and add the CSS rules to this file:
 
 ```css
 .s-MovieDB-MovieDialog .caption {
@@ -133,7 +133,7 @@ To adjust the caption size of the Movie dialog, you can create `Modules/MovieDB/
 }
 ```
 
-Then import the css style file in your `MovieDialog.tsx` file. 
+Then import the CSS style file in your `MovieDialog.tsx` file. 
 
 ```tsx
 import "./MovieDialog.css";
@@ -143,11 +143,11 @@ These rules apply to elements with the class `s-MovieDB-MovieDialog`, which is a
 
 Rebuild the application, and when you refresh the browser, you will immediately see the effects of the CSS changes.
 
-> **Note:** If you need to update the global style for the application, you can use `MovieTutorial.Web/wwwroot/Content/site/site.css` file instead.
+> **Note:** If you need to update the global style for the application, you can use the `MovieTutorial.Web/wwwroot/Content/site/site.css` file instead.
 
 ![Movie Dialog Caption 150px](img/movie-dialog-caption-150px.png)
 
-Serenity forms are responsive by default. Even though we set a specific height and width, the form will adjust its size in response to the device's screen size, eliminating the need for CSS `@media` queries.
+Serenity forms are responsive by default. Even though we set a specific width, the form will adjust its size in response to the device's screen size, eliminating the need for CSS `@media` queries.
 
 ## Changing Page Title
 

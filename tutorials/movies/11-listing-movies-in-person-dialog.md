@@ -22,12 +22,12 @@ public class PersonForm
     public Gender Gender { get; set; }
     public int Height { get; set; }
 
-    [Tab("Movies"), IgnoreName]
+    [Tab("Movies"), SkipNameCheck]
     public string MoviesGrid { get; set; }
 }
 ```
 
-Serenity will open a tab named "Person" and add the properties until it encounters another tab or reaches the end of the properties. It creates the tabs in order, so be careful where you place properties. Don't forget to include the `IgnoreName` attribute since `MoviesGrid` is not a property in `PersonRow`.
+Serenity will open a tab named "Person" and add the properties until it encounters another tab or reaches the end of the properties. It creates the tabs in order, so be careful where you place properties. Don't forget to include the `SkipNameCheck` attribute since `MoviesGrid` is not a property in `PersonRow`.
 
 Now, we have tabs in the `PersonDialog`:
 
@@ -56,11 +56,12 @@ public class PersonMovieColumns
 Rebuild and define a `PersonMovieGrid` class in the file `PersonMovieGrid.tsx`, which should be located next to `PersonGrid.tsx`:
 
 ```ts
-import { Decorators, EntityGrid, WidgetProps } from "@serenity-is/corelib";
+import { EntityGrid, WidgetProps } from "@serenity-is/corelib";
 import { MovieCastRow, MovieCastService, PersonMovieColumns } from "../../ServerTypes/MovieDB";
 
-@Decorators.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid")
 export class PersonMovieGrid<P = {}> extends EntityGrid<MovieCastRow, P> {
+    static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid");
+
     protected getColumnsKey() { return PersonMovieColumns.columnsKey; }
     protected getRowDefinition() { return MovieCastRow; }
     protected getService() { return MovieCastService.baseUrl; }
@@ -80,7 +81,7 @@ Open `PersonForm.cs` and set `PersonMovieGrid` as the editor for the `MoviesGrid
 public class PersonForm
 {
     //...
-    [Tab("Movies"), IgnoreName, PersonMovieGrid]
+    [Tab("Movies"), SkipNameCheck, PersonMovieGrid]
     public string MoviesGrid { get; set; }
 }
 ```
@@ -104,7 +105,7 @@ namespace MovieTutorial.MovieDB.Forms
     public class PersonForm
     {
         //...
-        [Tab("Movies"), IgnoreName, PersonMovieGrid, LabelWidth("0")]
+        [Tab("Movies"), SkipNameCheck, PersonMovieGrid, LabelWidth("0")]
         public string MoviesGrid { get; set; }
     }
 }
@@ -125,11 +126,12 @@ No, Carrie-Anne Moss didn't act in three roles. This grid is showing all movie c
 `PersonMovieGrid` should know the person it shows the movie cast records for. We need to add a `personId` property to this grid. This `personId` should be passed somehow to the list service for filtering.
 
 ```ts
-import { Decorators, EntityGrid } from "@serenity-is/corelib";
+import { EntityGrid, WidgetProps } from "@serenity-is/corelib";
 import { MovieCastRow, MovieCastService } from "../../ServerTypes/MovieDB";
 
-@Decorators.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid")
 export class PersonMovieGrid<P = {}> extends EntityGrid<MovieCastRow, P> {
+    static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid");
+
     protected getColumnsKey() { return PersonMovieColumns.columnsKey; }
     protected getRowDefinition() { return MovieCastRow; }
     protected getService() { return MovieCastService.baseUrl; }
@@ -176,15 +178,13 @@ We store the person ID in a private variable. When it changes, we also set an eq
 
 > The equality filter is the list request parameter that is also used by quick filter items.
 
-Overriding `getGridCanLoad` method allows us to control when the grid can call the list service. If we didn't override it, while creating a new person, the grid would load all movie cast records, as there is not a `personId` yet (it is null).
+Overriding the `getGridCanLoad` method allows us to control when the grid can call the list service. If we didn't override it, while creating a new person, the grid would load all movie cast records, as there is not a `personId` yet (it is null).
 
 > List handler ignores an equality filter parameter if its value is null, just like when a quick filter dropdown is empty, all records are shown.
 
 We also made three cosmetic changes by overriding three methods: first to remove all buttons from the toolbar (`getButtons`), second to remove the title from the grid (`getInitialTitle`) as the tab title is enough, and third to remove paging functionality (`usePager`), as a person can't have a million movies, right?
 
-### Setting PersonId of PersonMovie
-
-Grid in PersonDialog
+### Setting PersonId of PersonMovieGrid in PersonDialog
 
 If nobody sets the grid's `personId` property, it will always be null, and no records will be loaded. We should set it in the `afterLoadEntity` method of the `PersonDialog`:
 
@@ -215,7 +215,7 @@ The `afterLoadEntity` method is called after an entity or a new entity is loaded
 
 You might have noticed that when you switch to the "Movies" tab, the grid is a bit shorter in height. This happens because the grids are 200px by default. When you switch to the "Movies" tab, the grid does not adjust its height.
 
-Due to this `PersonMovieGrid` needs to be adjusted in height in the dialog, you need to create a `PersonDialog.css` nedt to the `PersonDialog.tsx`, then import the css file into the dialog. 
+Because of this, `PersonMovieGrid` needs its height adjusted in the dialog. Create a `PersonDialog.css` next to the `PersonDialog.tsx`, then import the CSS file into the dialog. 
 
 Create `PersonDialog.css`:
 
@@ -227,7 +227,7 @@ Create `PersonDialog.css`:
 
 Update `PersonDialog.tsx`
 ```typescript
-import { Decorators, EntityDialog } from '@serenity-is/corelib';
+import { EntityDialog } from '@serenity-is/corelib';
 import { PersonForm, PersonRow, PersonService } from '../../ServerTypes/MovieDB';
 import "./PersonDialog.css"; // import the css
 ```

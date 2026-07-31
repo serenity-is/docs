@@ -1,8 +1,8 @@
 # Creating Movie Table
 
-To store a list of movies, we'll need a `Movie` table. While you could create this table using traditional SQL Management Studio methods, we prefer to create it as a *migration* using *Fluent Migrator*. Fluent Migrator is a .NET migration framework, similar to Ruby on Rails Migrations. Migrations provide a structured approach to modifying your database schema, eliminating the need for manual execution of numerous SQL scripts by each developer involved. Migrations effectively address the challenge of evolving a database schema across multiple databases, such as the developer's local database, the test database, and the production database. Database schema changes are described in C# classes that can be version-controlled. For more information, visit [FluentMigrator on GitHub](https://github.com/schambers/fluentmigrator).
+To store a list of movies, we'll need a `Movie` table. While you could create this table manually in SQL Server Management Studio, we prefer to create it as a *migration* using *Fluent Migrator*. Fluent Migrator is a .NET migration framework, similar to Ruby on Rails Migrations. Migrations provide a structured approach to modifying your database schema, eliminating the need for manual execution of numerous SQL scripts by each developer involved. Migrations effectively address the challenge of evolving a database schema across multiple databases, such as the developer's local database, the test database, and the production database. Database schema changes are described in C# classes that can be version-controlled. For more information, visit [FluentMigrator on GitHub](https://github.com/schambers/fluentmigrator).
 
-> Please Note: While we use FluentMigrator in our examples, it's important to clarify that Serenity does not have a direct dependency on migrations. You are not obligated to use migrations. Serenity functions without them. If you prefer, you can manually create tables in SQL Management Studio or work with an existing database.
+> Note: While we use FluentMigrator in our examples, it's important to clarify that Serenity does not have a direct dependency on migrations. You are not obligated to use migrations. Serenity functions without them. If you prefer, you can manually create tables in SQL Management Studio or work with an existing database.
 
 <video alt="Creating Movie Table Animation" controls>
   <source src="img/01-creating-movie-table.mp4" type="video/mp4">
@@ -14,7 +14,7 @@ To find the Migration Folder, use the *Solution Explorer* to navigate to `Migrat
 
 ![Initial Migration Folder](img/initial_migration_folder.png)
 
-Within this folder, you'll discover several migrations. Think of a migration as a Data Manipulation Language (DML) script that alters your database's structure. For instance, `DefaultDB_20141103_1400_Initial.cs` represents the initial migration responsible for creating the `Language` table and the `Users` table.
+Within this folder, you'll discover several migrations. Think of a migration as a Data Definition Language (DDL) script that alters your database's structure. For instance, `DefaultDB_20141103_1400_Initial.cs` represents the initial migration responsible for creating the `Language` table and the `Users` table.
 
 ## Creating a New Migration for the Movie Table
 
@@ -61,19 +61,30 @@ Migrations are executed in key order, and using a sortable datetime pattern for 
 
 Please ensure that you consistently use the same number of digits for migration keys. In this example, we use 12 digits (e.g., 20221114_1505). To achieve this, zero-pad single-digit month, day, hour, and minute values to two digits. Neglecting this consistency can lead to complications in the migration order and may result in migration errors due to migrations running in an unexpected sequence.
 
-The `[DefaultDB]` attribute indicates that this migration applies to the `Default` database. It identifies which migrations should be run against which database, especially if your application uses multiple databases. It's a shortened version of `[FluentMigrator.Tags("DefaultDB")` and is defined in the Serenity.Extensions namespace.
+The `[DefaultDB]` attribute indicates that this migration applies to the `Default` database. It identifies which migrations should be run against which database, especially if your application uses multiple databases. It's a shortened version of `[FluentMigrator.Tags("DefaultDB")]` and is defined in the Serenity.Extensions namespace.
 
 ## Running Migrations
 
 By default, Serene automatically runs all migrations when the application starts. The code responsible for running migrations can be found in the `Initialization/Startup.cs` and `Modules/Common/AppServices/DataMigrations.cs` files.
 
-**DataMigrations.cs**:
+In `Startup.cs`, `DataMigrations` is registered as a singleton in `ConfigureServices`, and its `Initialize()` method is called at the end of `Configure`:
+
 ```csharp
+services.AddSingleton<IDataMigrations, AppServices.DataMigrations>();
+// ...
+app.ApplicationServices.GetRequiredService<IDataMigrations>().Initialize();
+```
+
+**DataMigrations.cs** (simplified excerpt of the generated file):
+```csharp
+
 namespace MovieTutorial.AppServices;
 
-public class DataMigrations : IDataMigrations
+public class DataMigrations(ITypeSource typeSource, ISqlConnections sqlConnections,
+    IWebHostEnvironment hostEnvironment) : IDataMigrations
 {
-    //...
+    private static readonly string[] databaseKeys = ["Default", "Northwind"];
+
     public void Initialize()
     {
         foreach (var databaseKey in databaseKeys)
@@ -90,18 +101,20 @@ public class DataMigrations : IDataMigrations
 
     private void RunMigrations(string databaseKey)
     {
-        //...
-            runner.MigrateUp();
-        //...
+        // ...
+        var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
+        runner.MigrateUp();
     }
 }
 ```
 
-## Running Migrations
+> Note that the template also runs the Northwind demo migrations on a separate database (the `databaseKeys` array contains both `Default` and `Northwind`), which is why you'll see extra tables beyond the ones defined here.
+
+## Running the Application
 
 Now, press `F5` to run your application and create the `Movie` table in the default database by executing the migrations.
 
-## Verifying That the Migration is Run
+## Verifying That the Migration Has Run
 
 To verify that the migration has been executed, you can use `SQL Server Management Studio` or go to `Visual Studio -> Tools -> Connect To Database`. Open a connection to the `MovieTutorial_Default_v1` database on the server `(localdb)\MsSqlLocalDB`.
 
@@ -109,7 +122,7 @@ In the SQL Object Explorer, you should see the `[dbo].[Movie]` table. Additional
 
 > Please note that the version key in the database contains the seconds part, e.g., `00` at the end. We no longer use seconds in the migration key we enter, but it is still part of the actual migration key for compatibility reasons.
 
-So, even if you change the migration source code, that migration won't run again in this database. It's a good practice to avoid modifying migrations after they have been applied. If necessary, create a new migration.
+Even if you change the migration source code, that migration won't run again in this database. It's a good practice to avoid modifying migrations after they have been applied. If necessary, create a new migration.
 
 ![Migration VersionInfo Table](img/movie-migration-check.png)
 

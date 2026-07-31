@@ -18,7 +18,7 @@ public class MovieColumns
 }
 ```
 
-The LinkingSetRelation will automatically handle equality filtering for its field, making it work seamlessly. We could conclude this topic here, but for the sake of providing a sample for defining custom list requests and handling filtering when there is no LinkingSetRelation behavior available, let's continue with the steps below.
+The LinkingSetRelation will automatically handle equality filtering for its field, making it work seamlessly. We could conclude this topic here, but to provide a sample of defining custom list requests and handling filtering when there is no LinkingSetRelation behavior available, let's continue with the steps below.
 
 ## Declaring the MovieListRequest Type
 
@@ -74,8 +74,8 @@ import { Decorators, EntityGrid, first, localText, LookupEditor, QuickSearchFiel
 import { MovieColumns, MovieListRequest, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
 import { MovieDialog } from './MovieDialog';
 
-@Decorators.registerClass('MovieTutorial.MovieDB.MovieGrid')
 export class MovieGrid extends EntityGrid<MovieRow> {
+    static override[Symbol.typeInfo] = this.registerClass('MovieTutorial.MovieDB.MovieGrid')
     //...
 
     protected getQuickFilters() {

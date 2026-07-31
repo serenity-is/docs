@@ -16,17 +16,17 @@ You have a few options to install the Serene template:
 
 ### Visual Studio, .NET, and TypeScript Versions
 
-The application requires _Visual Studio 2022+_ with the most recent updates installed. 
+The application requires _Visual Studio 2026+_ with the most recent updates installed. 
 
-.NET 8 SDK is also only supported in Visual Studio 2022 17.8+. 
+.NET 10 SDK is also only supported in Visual Studio 2026 18.8+. 
 
-An alternative option is to use the command line to create projects and work in Visual Studio Code if you don't have access to Visual Studio 2022+.
+An alternative option is to use the command line to create projects and work in Visual Studio Code if you don't have access to Visual Studio 2026+.
 
 Please install .NET SDK from:
 
 https://dotnet.microsoft.com/download
 
-As of writing, the recommended version of TypeScript is 4.8+ 
+As of writing, the recommended version of TypeScript is 6.0.3+ 
 
 The project comes with a reference to a recent version of Microsoft.TypeScript.MSBuild package and it should be used by Visual Studio automatically.
 
@@ -45,12 +45,12 @@ The application will check their versions on project creation and ask for confir
 
 ```cmd
 > npm -v
-8.19.2
+11.1.1
 ```
 
 ```cmd
 > node -v
-18.12.1
+24.10.0
 ```
 
 If you get an error, they might not be installed or not in the path. Also, confirm that the versions listed are higher than the ones shown above.

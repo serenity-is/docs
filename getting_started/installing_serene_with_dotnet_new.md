@@ -1,74 +1,74 @@
-# Installing Serene with the `dotnet new`
+# Installing Serene with `dotnet new`
 
-This section is for users who doesn't or can't use Visual Studio (in Linux / OSX). 
+This section is for users who don't use, or can't use, Visual Studio (for example, on Linux or macOS).
 
-Serene (and StartSharp) Asp.Net Core version supports Linux and Mac OSX in addition to Windows.
+Serene (and StartSharp) supports Linux and macOS in addition to Windows.
 
-> We recommend Visual Studio Code for all platforms, but it is also possible to work with a basic text editor like Notepad / VIM. There are also other nice options e.g. Atom.
+> We recommend Visual Studio Code on all platforms, but it's also possible to work with a basic text editor like Notepad or Vim.
 
-## Install .NET SDK 
+## Installing the .NET SDK
 
-Please go to the address below and follow the instructions for your specific platform:
+Go to the address below and follow the instructions for your specific platform:
 
 https://dotnet.microsoft.com/en-us/download
 
-> Serenity usually depends on latest stable version of .NET SDK (10.0 as of writing), if you get an error on project creation about .NET SDK, please check the error message, and install appropriate version of .NET SDK as this document might be updated yet.
+> Serenity typically depends on the latest stable version of the .NET SDK (10.0 as of this writing). If you get an error about the .NET SDK when creating a project, check the error message and install the appropriate version, as this document might not be updated yet.
 
-## Install NodeJS
+## Installing Node.js
 
-As `TypeScript` and `esbuild` run on NodeJS you need to install Node/NPM from:
+Because `TypeScript` and `esbuild` run on Node.js, you need to install Node.js/npm from:
 
 https://nodejs.org/en/download/
 
-or using your favorite package manager:
+or via your favorite package manager:
 
 https://nodejs.org/en/download/package-manager/
 
-### Install the Template Package
+### Installing the Template Package
 
-`Serene.Templates` is a NuGet package that contains our `Serene` template. Install it with `dotnet new` via command line:
+`Serene.Templates` is a NuGet package that contains the `Serene` template. Install it from the command line with `dotnet new`:
 
 ```cmd
 dotnet new install Serene.Templates
 ```
 
-> If you are a premium customer and want to create a `StartSharp` project instead, make sure you have the premium package source configured and run:
+> If you're a premium customer and want to create a `StartSharp` project instead, make sure you have the premium package source configured, then run:
 > ```cmd
->dotnet new install Serenity.Pro.Templates
+> dotnet new install Serenity.Pro.Templates
 > ```
 
-The command above should install latest version of Serene.Templates (or Serenity.Pro.Templates), or update it to latest version if it is already installed.
+The command above installs the latest version of `Serene.Templates` (or `Serenity.Pro.Templates`), or updates it to the latest version if it's already installed.
 
-> If you want to install an older version, specify it like: `dotnet new install Serene.Templates:6.4.4`
+> To install an older version, specify it like this: `dotnet new install Serene.Templates:6.4.4`
 
-See `dotnet new` documentation for more information:
+See the `dotnet new` documentation for more information:
 
 https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new
 
 ## Creating a New Project Using the Template
 
-Create an empty folder, for instance, `MyProject` and cd into that folder:
+Create an empty folder, for instance `MyProject`, and change into it:
 
 ```bash
 ~/> mkdir MyProject
 ~/> cd MyProject
 ```
 
-To create a new project with the name of the current folder name type:
+To create a new project named after the current folder, type:
 
 ```bash
 ~/MyProject> dotnet new serene
 ```
 
-> If you wanted to specify a different name pass `-n` argument:
+> To specify a different name, pass the `-n` argument:
 > ```bash
 > ~/MyProject> dotnet new serene -n MyAnotherProject
 > ```
-> Note that in that case the project will be created in a sub-directory named `MyAnotherProject`. You should `cd` into that folder after creating.
+> In that case, the project will be created in a subdirectory named `MyAnotherProject`. You should `cd` into that folder after creating it.
 
-> Use `dotnet new startsharp` to create a StartSharp based project
+> Use `dotnet new startsharp` to create a StartSharp-based project.
 
-Change directory to `MyProject.Web` folder, run `npm install` to install packages, followed by `dotnet build` and `dotnet run` to try the project:
+Change to the `MyProject.Web` folder, run `npm install` to install the packages, then `dotnet build` and `dotnet run` to try the project:
 
 ```bash
 ~/MyProject/MyProject.Web> npm i
@@ -79,25 +79,25 @@ info: Microsoft.Hosting.Lifetime[14]
       Now listening on: http://localhost:5000
 ```
 
-> Note that dotnet new won't create a solution file. If you open this project in Visual Studio we recommend naming the solution `MyProject` and saving the solution file in the root folder as `MyProject/MyProject.sln`, not `MyProject.Web/MyProject.Web.sln`.
+> Note that `dotnet new` won't create a solution file. If you open this project in Visual Studio, we recommend naming the solution `MyProject` and saving the solution file in the root folder as `MyProject/MyProject.sln`, rather than `MyProject.Web/MyProject.Web.sln`.
 
 Now open a browser and navigate to `http://localhost:5000`.
 
-> Actual port may vary. You'll see it on console after executing *dotnet run*.
+> The actual port may vary. You'll see it in the console after running *dotnet run*.
 
-## Excluding Modules / Features During Project Creation
+## Excluding Modules / Features When Creating a Project
 
-`dotnet new` command for `serene` and `startsharp` supports arguments that lets you specify which modules to enable/disable.
+The `dotnet new` command for `serene` and `startsharp` supports arguments that let you specify which modules to enable or disable.
 
 Type `dotnet new serene --help` or `dotnet new startsharp --help` to see the arguments and their possible values.
 
-For example, to exclude demo modules like `Northwind`, `Basic Samples`, etc. you can type:
+For example, to exclude demo modules such as `Northwind` and `Basic Samples`, type:
 
 ```
 ~/MyProject> dotnet new serene -E
 ```
 
-To exclude demo modules and to only include `DataAuditLog` and `OpenIddict` instead of the all pro modules in StartSharp:
+To exclude the demo modules and include only `DataAuditLog` and `OpenIddict` instead of all the pro modules in StartSharp:
 
 ```
 ~/MyProject> dotnet new startsharp -E -P DataAuditLog -P OpenIddict

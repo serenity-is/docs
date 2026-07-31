@@ -1,6 +1,6 @@
-# Installing Serene From Visual Studio Marketplace
+# Installing Serene From the Visual Studio Marketplace
 
-## Downloading Template
+## Downloading the Template
 
 Open the URL below in your browser:
 
@@ -10,12 +10,13 @@ https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityA
 
 Click *Download* to transfer the VSIX file to your computer.
 
-**You need Visual Studio 2026 18.8+ to run Serene as .NET 10 SDK only supports VS with the latest updates.**
+**You need Visual Studio 2026 18.8+ to run Serene, because the .NET 10 SDK only supports Visual Studio with the latest updates.**
 
-## Install Template into Visual Studio
+## Installing the Template in Visual Studio
 
-After the download is finished, double-click the downloaded VSIX file to start the Visual Studio extension installation dialog 
-> ![VSIX Installation](img/vsixopenwith.png)
+After the download finishes, double-click the downloaded VSIX file to open the Visual Studio extension installer:
+
+![VSIX Installation](img/vsixopenwith.png)
 
 Click Install when prompted.
 
@@ -23,30 +24,30 @@ Click Install when prompted.
 
 ## Creating a New Project in Visual Studio
 
-Start Visual Studio (if it was already open, restart it). Click `Create a new project` on the startup screen (or from the menu `File` => `New Project`).
+Start Visual Studio (if it was already open, restart it), and click `Create a new project` on the startup screen, or select `File` => `New Project` from the menu.
 
 ![Create a new project](img/startup-new-project.png)
 
-If not displayed already, find `Serene` using the top search input, and select `SERENE`.
+If it isn't already displayed, use the search box at the top to find `Serene`, then select `SERENE`.
 
 ![Serene template selection](img/new-serene-selection.png)
 
-Name your application something like `MyCompany`, `MyProduct`, or `HelloSerenity`, or leave the default name `Serene1`. 
+Name your application something like `MyCompany`, `MyProduct`, or `HelloSerenity`, or leave the default name `Serene1`.
 
 Please don't name it `Serenity`. It may conflict with other Serenity assemblies.
 
-You should use Pascal casing, e.g. a name that starts with a `Capital Letter`. Don't name your project something like `myProject`.
+You should use Pascal casing, for example a name that starts with a capital letter. Don't name your project something like `myProject`.
 
 Click `OK`.
 
-## Feature Selection
+## Selecting Features
 
-Serene will prompt you to choose features you would like to see.
+Serene will prompt you to choose the features you would like to include.
 
 ![Feature selection](img/feature-selection.png)
 
-The listed features/samples are all optional. Initially, we recommend you leave them all checked so that you might have a look at how they are implemented.
+All of the listed features/samples are optional. Initially, we recommend you leave them all checked so you can see how they are implemented.
 
-After having some experience with Serene, you might create a new application and clear all these checkboxes to have a bare minimum project.
+Once you have some experience with Serene, you can create a new application and clear all of these checkboxes for a bare-minimum project.
 
-Choose features you like, click `OK` and take a break while Visual Studio creates the solution.
+Choose the features you like, click `OK`, and take a break while Visual Studio creates the solution.

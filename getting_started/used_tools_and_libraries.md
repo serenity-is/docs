@@ -1,16 +1,16 @@
 # Used Tools and Libraries
 
-Serenity platform makes use of some valuable open source tools and libraries that are listed below (in alphabetic order)
+The Serenity platform makes use of several valuable open-source tools and libraries, listed below in alphabetical order.
 
->This list might seem a bit long, but not all of them are direct dependencies for a Serenity Application.
+> This list might seem a bit long, but not all of these are direct dependencies of a Serenity application. We rewrote some of them and created internal versions that integrate well with Serenity.
 
->Some of them are only used during development of Serenity platform itself, while some are dependencies for optional features.
+> See https://github.com/serenity-is/Serenity/blob/master/NOTICE.md for a more up-to-date version and licensing information.
 
->We tried to reuse open source libraries, where there is a quality one available to avoid reinventing the wheel.
+> Some of them are used only during development of the Serenity platform itself, while others are dependencies of optional features.
 
-### Autonumeric (https://github.com/BobKnothe/autoNumeric)
+> We've tried to reuse open-source libraries whenever a quality one is available, to avoid reinventing the wheel.
 
-### BlockUI (https://github.com/malsup/blockui/)
+### Autonumeric (https://github.com/BobKnothe/autoNumeric) - integrated into @serenity-is/corelib
 
 ### Bootstrap (https://github.com/twbs/bootstrap)
 
@@ -20,57 +20,25 @@ Serenity platform makes use of some valuable open source tools and libraries tha
 
 ### Clean-CSS [Node] (https://github.com/jakubpawlowicz/clean-css)
 
-### Colorbox (https://github.com/jackmoore/colorbox)
-
 ### Dapper (https://github.com/StackExchange/dapper-dot-net)
 
-### DialogExtend (https://github.com/ROMB/jquery-dialogextend)
-
-### jLayout (https://github.com/bramstein/jlayout)
+### DialogExtend (https://github.com/ROMB/jquery-dialogextend) - integrated into @serenity-is/corelib
 
 ### Json.NET (https://github.com/JamesNK/Newtonsoft.Json)
 
-### JSON2 (https://github.com/douglascrockford/JSON-js)
+### jQuery (https://github.com/jquery/jquery) - now optional
 
-### JSRender (https://github.com/BorisMoore/jsrender)
+### jQuery UI (https://github.com/jquery/jquery-ui) - now optional
 
-### jQuery (https://github.com/jquery/jquery)
-
-### jQuery Cookie (https://github.com/carhartl/jquery-cookie)
-
-### jQuery Validation (https://github.com/jzaefferer/jquery-validation)
-
-### jQuery UI (https://github.com/jquery/jquery-ui)
-
-### jQuery.event.drag (http://threedubmedia.com/code/event/drag)
-
-### Less.JS (Node) (https://github.com/less/less.js)
-
-### Linq.js (http://linqjs.codeplex.com/)
-
-### metisMenu (https://github.com/onokumus/metisMenu)
-
-### Munq (https://munq.codeplex.com/)
+### jQuery Validation (https://github.com/jzaefferer/jquery-validation) - integrated into @serenity-is/corelib
 
 ### NodeJS (https://github.com/joyent/node)
 
-### Pace (https://github.com/HubSpot/pace)
-
-### PhantomJS (https://github.com/ariya/phantomjs)
-
-### RazorGenerator (https://razorgenerator.codeplex.com/)
-
-### RSVP (https://github.com/tildeio/rsvp.js/)
-
-### Saltarelle Compiler (https://github.com/erik-kallen/SaltarelleCompiler)
-
 ### Select2 (https://github.com/ivaynberg/select2)
 
-### SlickGrid (https://github.com/mleibman/SlickGrid)
+### SlickGrid (https://github.com/mleibman/SlickGrid) - forked as @serenity-is/sleekgrid
 
-### Toastr (https://github.com/CodeSeven/toastr)
-
-### UglifyJS2 (Node) (https://github.com/mishoo/UglifyJS2)
+### Toastr (https://github.com/CodeSeven/toastr) - integrated into @serenity-is/corelib
 
 ### XUnit (https://github.com/xunit/xunit)
 

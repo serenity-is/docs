@@ -12,7 +12,7 @@ Please go to the address below and follow the instructions for your specific pla
 
 https://dotnet.microsoft.com/en-us/download
 
-> Serenity usually depends on latest stable version of .NET SDK (6.0 as of writing), if you get an error on project creation about .NET SDK, please check the error message, and install appropriate version of .NET SDK as this document might be updated yet.
+> Serenity usually depends on latest stable version of .NET SDK (10.0 as of writing), if you get an error on project creation about .NET SDK, please check the error message, and install appropriate version of .NET SDK as this document might be updated yet.
 
 ## Install NodeJS
 
@@ -26,15 +26,11 @@ https://nodejs.org/en/download/package-manager/
 
 ### Install the Template Package
 
-> Note: As of Serene 6.4.4, the old `serin` tool is obsolete and may not work properly  to create new Serene projects as we are now using `dotnet new` templating.
-
 `Serene.Templates` is a NuGet package that contains our `Serene` template. Install it with `dotnet new` via command line:
 
 ```cmd
 dotnet new install Serene.Templates
 ```
-
-If you don't have the .NET 7 SDK, you may have to type `dotnet new --install Serene.Templates` instead.
 
 > If you are a premium customer and want to create a `StartSharp` project instead, make sure you have the premium package source configured and run:
 > ```cmd

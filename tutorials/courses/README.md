@@ -21,6 +21,15 @@ You’ll see how to:
 - Build a master–detail UI (students + enrollments)
 - Add filtering, exporting (Excel/PDF), and friendly navigation
 
+## Running the Application
+
+Before you begin, start the application from your IDE or from the command line with `dotnet run`. The default login is:
+
+- **Username:** `admin`
+- **Password:** `serenity`
+
+You need to be signed in to create records through the screens you'll build in this tutorial.
+
 ## Defining the Department Table with a Migration
 
 Let's start by defining a database table to store the departments that students belong to.
@@ -119,11 +128,9 @@ This approach ensures that the database schema is completed in a structured and 
 
 Throughout this process, the system is developed incrementally with a focus on clarity and maintainability. The following principles guide this stage of development:
 
-Consistent naming conventions
-
-Correct chronological ordering of migrations
-
-Proper foreign key definitions to ensure data integrity
+- Consistent naming conventions
+- Correct chronological ordering of migrations
+- Proper foreign key definitions to ensure data integrity
 
 
 ## Creating the Term Table Migration
@@ -142,7 +149,7 @@ The migration derives from `AutoReversingMigration`, allowing rollback operation
 
 ```csharp
 using FluentMigrator;
-namespace CourseTutorial4.Migrations.DefaultDB;
+namespace CourseTutorial.Migrations.DefaultDB;
 
 [DefaultDB, Migration(20250614_1706)]
 public class DefaultDB_20250614_1706_Term : AutoReversingMigration
@@ -182,10 +189,12 @@ Open the CourseDB → Terms screen and create the following records:
 
 | Term        | Start Date | End Date   | Is Active | Is Registration Open |
 | ----------- | ---------- | ---------- | --------- | -------------------- |
-| Fall 2026   | 09.01.2026 | 12.31.2026 | True      | True                 |
-| Spring 2027 | 02.01.2027 | 06.15.2027 | False     | False                |
+| Fall 2026   | 2026-09-01 | 2026-12-31 | True      | True                 |
+| Spring 2027 | 2027-02-01 | 2027-06-15 | False     | False                |
 
 Use these term records as references during student course registrations and related operations.
+
+> **Note:** Dates in this tutorial are written in ISO format (`YYYY-MM-DD`) so they're unambiguous regardless of the reader's culture. When you enter dates, Serenity's date editor uses your browser/application culture's format (e.g., `MM/DD/YYYY` for English/US), so you may need to type them in that culture's format.
 
 ## Creating the Courses Table Migration
 
@@ -315,10 +324,12 @@ Open the CourseDB → Students screen and create the following records:
 
 | Full Name     | Birth Date | Department       |
 | ------------- | ---------- | ---------------- |
-| John Smith    | 15.03.2004 | Computer Science |
-| Emily Johnson | 22.07.2003 | Mathematics      |
-| Michael Brown | 05.11.2004 | Physics          |
-| Sarah Davis   | 18.05.2003 | Computer Science |
+| John Smith    | 2004-03-15 | Computer Science |
+| Emily Johnson | 2003-07-22 | Mathematics      |
+| Michael Brown | 2004-11-05 | Physics          |
+| Sarah Davis   | 2003-05-18 | Computer Science |
+
+> **Note:** Enter the birth dates using the same date format described for the Terms records.
 
 The StudentCourses table was already defined in the migration we created earlier. However, this table will not be used as a standalone screen.
 
@@ -326,11 +337,9 @@ Manage StudentCourses records within the Students dialog using a master–detail
 
 With this structure:
 
-Students represent the master records
-
-StudentCourses represent the detail records
-
-Perform course assignment operations within the Students dialog.
+- Students represent the master records
+- StudentCourses represent the detail records
+- Course assignment operations are performed within the Students dialog
 
 ## Establishing the Student – StudentCourses Master–Detail Relationship
 
@@ -346,13 +355,10 @@ For this reason, the StudentCourses structure is configured according to the mas
 
 After this adjustment:
 
-There is no independent menu or page for StudentCourses
-
-Course records are viewed and edited only within the Student dialog
-
-Each course record is stored in relation to its corresponding Student record
-
-Detail records are managed within the context of the master record
+- There is no independent menu or page for StudentCourses
+- Course records are viewed and edited only within the Student dialog
+- Each course record is stored in relation to its corresponding Student record
+- Detail records are managed within the context of the master record
 
 ## Removing the StudentCourses Page Structure
 
@@ -364,11 +370,12 @@ For this reason, the page structure created for StudentCourses is removed.
 
 Remove the following files (they are not needed when StudentCourses is managed as a detail grid):
 
-StudentCoursesPage.cs
+- `StudentCoursesPage.cs`
+- `StudentCoursesPage.tsx`
 
-StudentCoursesPage.tsx
+Also, if there is a menu item defined for StudentCourses in the navigation file (Sergen generates one in `CourseDBNavigation.cs`), remove that line.
 
-Also, if there is a menu item defined for StudentCourses in the Navigation.cs file, remove it.
+> **Note:** After you rename `StudentCoursesGrid.tsx` to `StudentCoursesEditor.tsx` in the next step, the old `StudentCoursesDialog.tsx` is no longer referenced and can also be deleted.
 
 After making these changes, rebuild the project.
 
@@ -385,24 +392,22 @@ Therefore, define a GridEditorBase-based editor for StudentCourses instead of us
 Rename the existing StudentCoursesGrid.tsx file to StudentCoursesEditor.tsx and update its contents as follows:
 
 StudentCoursesEditor.tsx
-```csharp
-import { Decorators } from '@serenity-is/corelib';
+```typescript
 import { StudentCoursesColumns, StudentCoursesRow } from '../../ServerTypes/CourseDB';
-import { GridEditorBase } from '@serenity-is/extensions'
+import { GridEditorBase } from '@serenity-is/extensions';
 
-@Decorators.registerEditor('CourseTutorial.CourseDB.StudentCoursesEditor')
 export class StudentCoursesEditor<P = {}> extends GridEditorBase<StudentCoursesRow, P> {
+    static override [Symbol.typeInfo] = this.registerEditor('CourseTutorial.CourseDB.StudentCoursesEditor');
+
     protected override getColumnsKey() { return StudentCoursesColumns.columnsKey; }
     protected override getLocalTextPrefix() { return StudentCoursesRow.localTextPrefix; }
 }
 ```
-This definition creates a grid editor for managing StudentCourses records.
+This definition creates a grid editor for managing StudentCourses records. This editor:
 
-This editor:
-
-It is used only within the Student dialog and manages detail records together with the master record.
-
-Allows adding, editing, and deleting detail records directly within the dialog and is not used as a standalone list screen
+- Is used only within the Student dialog and manages detail records together with the master record.
+- Allows adding, editing, and deleting detail records directly within the dialog.
+- Is not used as a standalone list screen.
 
 This structure ensures that StudentCourses records are managed in accordance with the master–detail architecture.
 
@@ -418,6 +423,8 @@ public List<StudentCoursesRow> CourseList { get; set; }
 Use the `StudentCoursesEditor` attribute to specify the grid editor for this field.
 
 The `SkipNameCheck` attribute prevents Serenity from looking for a physical column for this field in the `StudentsRow` table; this field represents the detail side of the master–detail relationship.
+
+> **Note:** The `StudentCoursesEditor` attribute is generated from the TypeScript editor class by Serenity's client-types transform (`sergen t`, which also runs during `dotnet build`). If the attribute isn't found when you build, rebuild the project so the generated attribute file is picked up.
 
 After this change, the Student dialog displays a grid editor to view and edit StudentCourses records.
 
@@ -445,6 +452,8 @@ public class StudentCoursesForm
 }
 ```
 With this change, the StudentId field is no longer displayed in the dialog. The information about which Student record the detail belongs to is managed automatically by the master–detail relationship.
+
+> **Tip:** Because `CourseId` and `TermId` are plain `int` properties, the dialog renders them as numeric input boxes — you type the numeric ID (e.g., `1`) rather than picking from a list. To show dropdowns instead, add a lookup editor attribute, e.g. `[ServiceLookupEditor(typeof(CoursesRow))]` on `CourseId` and `[ServiceLookupEditor(typeof(TermsRow))]` on `TermId`.
 
 In addition, the column defined in the StudentCoursesColumns.cs file that displays the Student information is also removed.
 ```csharp
@@ -475,17 +484,16 @@ In the master–detail architecture, derive this dialog from `GridEditorDialog` 
 For this purpose, create a new file named StudentCoursesEditDialog.tsx and define its contents as follows:
 StudentCoursesEditDialog.tsx
 
-```csharp
-import { Decorators } from "@serenity-is/corelib";
+```typescript
 import { GridEditorDialog } from "@serenity-is/extensions";
 import { StudentCoursesForm, StudentCoursesRow } from "../../ServerTypes/CourseDB";
 
-@Decorators.registerClass("CourseTutorial.CourseDB.StudentCoursesEditDialog")
 export class StudentCoursesEditDialog extends GridEditorDialog<StudentCoursesRow> {
+    static override [Symbol.typeInfo] = this.registerClass("CourseTutorial.CourseDB.StudentCoursesEditDialog");
 
     protected override getFormKey() { return StudentCoursesForm.formKey; }
     protected override getLocalTextPrefix() { return StudentCoursesRow.localTextPrefix; }
-    protected form: StudentCoursesForm = new StudentCoursesForm(this.idPrefix);
+    protected form = new StudentCoursesForm(this.idPrefix);
 }
 ```
 The `GridEditorDialog` class provides the foundation for the add and edit dialogs used within a grid editor.
@@ -502,17 +510,16 @@ To enable adding and editing StudentCourses records within the grid editor, defi
 
 For this purpose, update the StudentCoursesEditor.tsx file as follows:
 
-```csharp
-import { Decorators } from "@serenity-is/corelib";
+```typescript
 import { GridEditorBase } from "@serenity-is/extensions";
 import { StudentCoursesColumns, StudentCoursesRow } from "../../ServerTypes/CourseDB";
 import { StudentCoursesEditDialog } from "./StudentCoursesEditDialog";
 
-@Decorators.registerEditor("CourseTutorial.CourseDB.StudentCoursesEditor")
 export class StudentCoursesEditor extends GridEditorBase<StudentCoursesRow> {
+    static override [Symbol.typeInfo] = this.registerEditor("CourseTutorial.CourseDB.StudentCoursesEditor");
 
-    protected override getColumnsKey() { return StudentCoursesColumns.columnsKey;}
-    protected override getDialogType() { return StudentCoursesEditDialog;}
+    protected override getColumnsKey() { return StudentCoursesColumns.columnsKey; }
+    protected override getDialogType() { return StudentCoursesEditDialog; }
     protected override getAddButtonCaption() { return "Add"; }
 }
 ```
@@ -522,7 +529,7 @@ The `getDialogType` method specifies the dialog type used by the grid editor.
 To customize the caption of the add button, override `getAddButtonCaption` in the editor class:
 
 ```ts
-protected getAddButtonCaption() {
+protected override getAddButtonCaption() {
     return "Add";
 }
 ```
@@ -535,13 +542,13 @@ Add and edit detail records through the dialog.
 
 Use this structure to manage detail records via a dialog in a master–detail architecture.
 
-Defining the Master–Detail Relationship on StudentsRow
+## Defining the Master–Detail Relationship on StudentsRow
 
-The server-side definition of the master–detail relationship is done using the MasterDetailRelation attribute.
+The server-side definition of the master–detail relationship is done using the `MasterDetailRelation` attribute.
 
-Define a list field representing StudentCourses records in `StudentsRow.cs`.
+Define a list field representing StudentCourses records in `StudentsRow.cs`:
 ```csharp
-[MasterDetailRelation(foreignKey: nameof(StudentCoursesRow.StudentId), ColumnsType = typeof(StudentCoursesColumns))]
+[MasterDetailRelation(foreignKey: nameof(StudentCoursesRow.StudentId), ColumnsType = typeof(Columns.StudentCoursesColumns))]
 [DisplayName("Course List"), NotMapped]
 public List<StudentCoursesRow> CourseList{get => fields.CourseList[this];set => fields.CourseList[this] = value;}
 
@@ -550,17 +557,17 @@ public class RowFields : RowFieldsBase
     public RowListField<StudentCoursesRow> CourseList;
 }
 ```
-The MasterDetailRelation attribute defines the relationship between records in the StudentCourses table and the Student record. In this relationship, the foreign key field used is StudentCoursesRow.StudentId.
+The `MasterDetailRelation` attribute defines the relationship between records in the StudentCourses table and the Student record. In this relationship, the foreign key field used is `StudentCoursesRow.StudentId`.
+
+> **Note:** `StudentCoursesColumns` lives in the `CourseTutorial.CourseDB.Columns` namespace. From inside `StudentsRow.cs` you must refer to it as `Columns.StudentCoursesColumns` (the child namespace), otherwise the code won't compile.
 
 The `NotMapped` attribute indicates that this field is not a physical column in the `Students` table; use it solely to manage the master–detail relationship.
 
 With this definition:
 
-When you load a Student record, the related StudentCourses records are retrieved automatically.
-
-When you create new detail records, the `StudentId` field is assigned automatically.
-
-Add, update, and delete detail records together with the master record.
+- When you load a Student record, the related StudentCourses records are retrieved automatically.
+- When you create new detail records, the `StudentId` field is assigned automatically.
+- Add, update, and delete detail records together with the master record.
 
 This structure ensures that the master–detail relationship works fully on the server side.
 
@@ -570,29 +577,24 @@ Because you defined the editor on the `StudentsForm`, no additional action is re
 
 When the dialog opens:
 
-The Student fields are displayed at the top of the dialog.
-
-StudentCourses records are displayed within the grid editor.
-
-The addition, editing, and deletion of detail records are carried out through a popup dialog.
+- The Student fields are displayed at the top of the dialog.
+- StudentCourses records are displayed within the grid editor.
+- The addition, editing, and deletion of detail records are carried out through a popup dialog.
 
 ## Conclusion
 
 With these arrangements:
 
-StudentCourses is not used as a standalone screen; detail records are managed only within the Student dialog.
-
-Master and detail records are saved together, and the student–course relationship is structured according to the master–detail architecture.
+- StudentCourses is not used as a standalone screen; detail records are managed only within the Student dialog.
+- Master and detail records are saved together, and the student–course relationship is structured according to the master–detail architecture.
 
 ## Advantages Provided by Serenity
 
-This structure is achieved with minimal additional code, thanks to Serenity’s master–detail support.
+This structure is achieved with minimal additional code, thanks to Serenity's master–detail support:
 
-Detail records are automatically managed during the master record’s save operation.
-
-There is no need to define an additional service or custom record operation.
-
-Data integrity is maintained by the framework.
+- Detail records are automatically managed during the master record's save operation.
+- There is no need to define an additional service or custom record operation.
+- Data integrity is maintained by the framework.
 
 ## Creating the Teacher and TeacherCourses Tables
 
@@ -633,6 +635,9 @@ namespace CourseTutorial.Migrations.DefaultDB
 }
 
 ```
+
+> **Note:** This tutorial only creates the `Teachers` and `TeacherCourse` tables to keep the schema complete; it does not generate a user interface or sample data for them. You can extend the application later by running Sergen for these tables.
+
 ## Creating the Grades Table
 
 After creating the `Students` and `Courses` tables, add the `Grades` table to store the grades each student receives for each course.
@@ -672,9 +677,8 @@ public class DefaultDB_20250616_1200_Grades : AutoReversingMigration
 
 With this definition:
 
-Each Grades record is associated with a Student and a Course, and the Midterm, Final, and Average fields store the grade information.
-
-This prevents creating multiple grade records for the same student and course.
+- Each Grades record is associated with a Student and a Course, and the Midterm, Final, and Average fields store the grade information.
+- The unique constraint prevents creating multiple grade records for the same student, course, and term.
 
 ## Generating Serenity Code for the Grades Table
 
@@ -698,23 +702,30 @@ It may cause data inconsistencies, so the average value is calculated automatica
 
 ## Step 1 — Removing the Average Field from the Form
 
-GradesForm.cs:
+Open `GradesForm.cs` and **remove** the `Average` property, so the form ends with `Midterm` and `Final` only:
+
 ```csharp
-public decimal? Average { get; set; }
+public int StudentId { get; set; }
+public int CourseId { get; set; }
+public int TermId { get; set; }
+public decimal Midterm { get; set; }
+public decimal Final { get; set; }
 ```
 ## Step 2 — Calculating Average in GradesRow
-GradesRow.cs:
+
+Add the following method to `GradesRow.cs`:
+
 ```csharp
 public void CalculateAverage()
 {
     if (Midterm != null && Final != null)
         Average = (Midterm + Final) / 2;
 }
-
 ```
 ## Step 3 — Updating the SaveHandler
 
-GradesSaveHandler.cs:
+Override `BeforeSave` in `GradesSaveHandler.cs` so the average is calculated before the record is saved:
+
 ```csharp
 protected override void BeforeSave()
 {
@@ -733,17 +744,15 @@ Thanks to Serenity’s powerful framework, the grade calculation process becomes
 
 ## Using Student FullName in the Grades Table
 
-In the Grades screen, instead of displaying only the student's FirstName, the Full Name (First + Last Name) will be shown. To achieve this:
+In the Grades screen, instead of displaying only the student's first name, the full name (first + last name) will be shown. To achieve this:
 
-The FirstName field in GradesRow.cs will be removed.
-
-The FullName field from StudentsRow will be linked to GradesRow.
-
-GradesColumns.cs and the form fields will be updated accordingly.
+- The `StudentFirstName` field that Sergen generated in `GradesRow.cs` (from the student join) will be removed.
+- A `FullName` field from `StudentsRow` will be linked to `GradesRow` instead.
+- `GradesColumns.cs` and the form fields will be updated accordingly.
 
 ## Updating GradesRow.cs
 
-The unnecessary FirstName field in GradesRow is removed. Instead, a FullName field is added:
+The unnecessary `StudentFirstName` field in `GradesRow` is removed. Instead, a `FullName` field is added:
 ```csharp
 [DisplayName("Full Name"), Origin(jStudent, nameof(StudentsRow.FullName))]
 public string FullName 
@@ -761,14 +770,15 @@ Now, GradesRow can use the FullName field directly.
 
 ## Updating GradesColumns.cs
 
-To display the FullName column in the grid, add the following property to the GradesColumns.cs file:
+To display the FullName column in the grid, add the following property to the `GradesColumns.cs` file:
 ```csharp
 public string FullName { get; set; }
 ```
 This allows the student's first and last name to appear together in a single column.
-StudentId and TextualField
 
-The StudentId field in GradesRow is linked to FullName:
+## Linking StudentId to FullName
+
+The `StudentId` field in `GradesRow` is linked to `FullName`:
 ```csharp
 [DisplayName("Student"), NotNull, ForeignKey(typeof(StudentsRow)), LeftJoin(jStudent), TextualField(nameof(FullName))]
 [ServiceLookupEditor(typeof(StudentsRow), Service = "CourseDB/Students/List")]
@@ -784,13 +794,14 @@ The Student column in the Grades screen now displays the FullName.
 ![Migration Screenshot](./img/full_name_field.png)
 
 ## Result
-Previously, only the FirstName was visible.
 
-Now, the full name (First + Last Name) is listed in a single column.
+Previously, only the student's first name was visible.
 
-This allows the Grades screen to display a column named FullName containing the student’s full name:
+Now, the full name (first + last name) is listed in a single column.
 
-Before adding Excel and PDF export buttons to the page, apply filtering using the QuickFilter feature. This will be useful for filtering data in the Excel and PDF exports.
+This allows the Grades screen to display a column named FullName containing the student's full name.
+
+Next, before adding the Excel and PDF export buttons, we'll add quick filtering — this will be useful for filtering the data that gets exported.
 
 ## QuickFilter and Excel/PDF Export in the Grades Screen
 
@@ -832,10 +843,15 @@ In the Grades screen, users can export data to Excel or PDF by using buttons in 
 
 ## Defining the Grid Class
 
-The GradesGrid class extends EntityGrid<GradesRow>:
-```csharp
-@Decorators.registerClass("CourseTutorial.CourseDB.GradesGrid")
-export class GradesGrid extends EntityGrid<GradesRow, any> {
+The `GradesGrid` class extends `EntityGrid<GradesRow>`:
+```typescript
+import { EntityGrid } from '@serenity-is/corelib';
+import { GradesColumns, GradesRow, GradesService } from '../../ServerTypes/CourseDB';
+import { GradesDialog } from './GradesDialog';
+
+export class GradesGrid extends EntityGrid<GradesRow> {
+    static override [Symbol.typeInfo] = this.registerClass("CourseTutorial.CourseDB.GradesGrid");
+
     protected override getColumnsKey() { return GradesColumns.columnsKey; }
     protected override getDialogType() { return GradesDialog; }
     protected override getRowDefinition() { return GradesRow; }
@@ -844,8 +860,8 @@ export class GradesGrid extends EntityGrid<GradesRow, any> {
 ```
 ## Adding Excel and PDF Buttons
 
-Override the getButtons() method to add export buttons:
-```csharp
+Override the `getButtons()` method to add export buttons (add `import { ExcelExportHelper, PdfExportHelper } from "@serenity-is/extensions";` at the top of the file):
+```typescript
 protected override getButtons() {
     let buttons = super.getButtons();
 
@@ -865,59 +881,43 @@ protected override getButtons() {
 }
 ```
 
-## Explanation:
+## Explanation
 
-ExcelExportHelper.createToolButton: Exports grid data to Excel. The service parameter points to the backend endpoint. separator: true adds a visual separator between buttons.
-
-PdfExportHelper.createToolButton: Exports grid data to PDF on the frontend. Any applied filters or selected columns are automatically reflected in the PDF.
+- `ExcelExportHelper.createToolButton`: Exports grid data to Excel. The `service` parameter points to the backend endpoint; `separator: true` adds a visual separator between buttons.
+- `PdfExportHelper.createToolButton`: Exports grid data to PDF on the frontend. Any applied filters or selected columns are automatically reflected in the PDF.
 
 ## Export Process Flow
 
 When a user clicks an export button, the flow works as follows:
 
-## Excel Export:
+### Excel Export
 
-The grid sends a request to the backend endpoint (e.g., /ListExcel).
+- The grid sends a request to the backend endpoint (e.g., `/ListExcel`).
+- `GradesListHandler.cs` retrieves filtered, sorted, and paged records from the database.
+- `IExcelExporter` generates the Excel file from the retrieved data.
+- `ExcelContentResult.Create(...)` sends the Excel file to the user's browser for download.
 
-GradesListHandler.cs retrieves filtered, sorted, and paged records from the database.
+### PDF Export
 
-IExcelExporter generates the Excel file from the retrieved data.
+- The grid triggers the export on the frontend.
+- `PdfExportHelper` reads the grid data, including any applied filters and column selections.
+- The PDF file is generated and sent to the browser for download.
 
-ExcelContentResult.Create(...) sends the Excel file to the user’s browser for download.
+Both Excel and PDF exports fully respect the grid's state:
 
-## PDF Export:
-
-The grid triggers the export on the frontend.
-
-PdfExportHelper reads the grid data, including any applied filters and column selections.
-
-The PDF file is generated and sent to the browser for download.
-
-Both Excel and PDF exports fully respect the grid’s filtering, sorting, and selected columns.
-
-## How Filtering and Columns Work
-
-Both Excel and PDF exports fully respect the grid’s state:
-
-Quick filters, column filters, and sorting are applied automatically.
-
-Columns selected via ColumnsPicker are included in the export.
-
-Only the visible data is exported.
+- Quick filters, column filters, and sorting are applied automatically.
+- Columns selected via ColumnsPicker are included in the export.
+- Only the visible data is exported.
 
 This ensures consistent and accurate reporting.
 
 ## Serenity Advantages
 
-Minimal code: Developers only need to add the export buttons; no custom backend or frontend code is required.
-
-Fully integrated: Export operations automatically respect the grid’s filters, sorting, and column selections.
-
-Fast and reliable: Serenity uses built-in handler, exporter, and frontend helper services to generate Excel and PDF files.
-
-User-friendly: Users can export exactly what they see in the grid, making reporting simple and intuitive.
-
-Flexible column management: Using Serenity’s built-in **ColumnsPicker**, users can dynamically choose which columns should be visible in the grid. The export operations also respect these selections, meaning only the selected columns will be included in the Excel or PDF output.
+- **Minimal code:** Developers only need to add the export buttons; no custom backend or frontend code is required.
+- **Fully integrated:** Export operations automatically respect the grid's filters, sorting, and column selections.
+- **Fast and reliable:** Serenity uses built-in handler, exporter, and frontend helper services to generate Excel and PDF files.
+- **User-friendly:** Users can export exactly what they see in the grid, making reporting simple and intuitive.
+- **Flexible column management:** Using Serenity's built-in **ColumnsPicker**, users can dynamically choose which columns should be visible in the grid. The export operations also respect these selections, meaning only the selected columns will be included in the Excel or PDF output.
 
 ![Migration Screenshot](./img/default_columns_picker.png)
 
@@ -937,43 +937,44 @@ PDF output example:
 
 Users can now:
 
-Export filtered and sorted data to Excel or PDF.
+- Export filtered and sorted data to Excel or PDF.
+- Select which columns to include via ColumnsPicker.
+- Generate reports quickly without writing any extra export logic.
 
-Select which columns to include via ColumnsPicker.
-
-Generate reports quickly without writing any extra export logic.
-
-Serenity’s helpers leverage the framework’s flexible and powerful grid infrastructure, making reporting fast, reliable, and user-friendly.
+Serenity's helpers leverage the framework's flexible and powerful grid infrastructure, making reporting fast, reliable, and user-friendly.
 
 ## Navigation Links and Icon Configuration
-Purpose
 
 Group pages under relevant sections and assign meaningful icons to each navigation item to make the sidebar menu more user-friendly and visually organized.
+
 ### Open the Navigation File
 
-Open the navigation file located under your `CourseTutorial` module:
+Open the navigation file located under your `CourseTutorial` module (e.g., `Modules/CourseDB/CourseDBNavigation.cs`).
+
+> **Note:** Sergen may have already added `NavigationLink` attributes for your pages in this file. In that case, **edit the existing lines** to add icons rather than adding duplicate attributes — otherwise you'll end up with multiple menu entries for the same page.
 
 ## Add NavigationLink Attributes
 
 Below are example NavigationLink declarations for each page in your project. Each one includes a meaningful section name, page title, and an appropriate icon.
 
-Icon Support
+Serenity templates such as Serene and StartSharp include the Line Awesome icon library, which is a modern alternative to Font Awesome.
 
-Serenity templates such as Serene and StartSharp include the Line Awesome icon library, which is a modern alternative to Font Awesome. 
-
-Line Awesome is largely compatible with Font Awesome 4.7 icon class names, so you can use icon classes like "fa-book" or "fa-user-graduate" in your NavigationLink attributes.
+Line Awesome is largely compatible with Font Awesome 4.7 icon class names, so you can use icon classes like `fa-book` or `fa-user-graduate` in your `NavigationLink` attributes.
 
 You can find a comprehensive list of available icons and their corresponding CSS classes on [this page](https://demo.serenity.is/UIElements/Icons).
 
 ```csharp
+using Serenity.Navigation;
 using MyPages = CourseTutorial.CourseDB.Pages;
 
 [assembly: NavigationLink(int.MaxValue, "CourseDB/Department", typeof(MyPages.DepartmentPage), icon: "fas fa-building")]
 [assembly: NavigationLink(int.MaxValue, "CourseDB/Terms", typeof(MyPages.TermsPage), icon: "fas fa-calendar-alt")]
-[assembly: NavigationLink(int.MaxValue, "CourseDB/Course", typeof(MyPages.CoursesPage), icon: "fas fa-book")]
-[assembly: NavigationLink(int.MaxValue, "CourseDB/Student", typeof(MyPages.StudentsPage), icon: "fas fa-user-graduate")]
+[assembly: NavigationLink(int.MaxValue, "CourseDB/Courses", typeof(MyPages.CoursesPage), icon: "fas fa-book")]
+[assembly: NavigationLink(int.MaxValue, "CourseDB/Students", typeof(MyPages.StudentsPage), icon: "fas fa-user-graduate")]
 [assembly: NavigationLink(int.MaxValue, "CourseDB/Grades", typeof(MyPages.GradesPage), icon: "fas fa-clipboard-list")]
 ```
+
+> **Note:** The path in each link (e.g., `CourseDB/Courses`) should match the actual page/table name. Use `Courses` and `Students` (plural) to match the page names, otherwise the menu item text or links will be inconsistent.
 
 ![Migration Screenshot](./img/navigation_icons.png)
 ## Overriding Column Header and Width
@@ -982,6 +983,8 @@ If you want to display a different header in a grid column or dialog field, do i
 
 ![Migration Screenshot](./img/is_registiration_open_and_is_active.png)
 
+The generated `TermsColumns.cs` contains all of the row's fields:
+
 ```csharp
 namespace CourseTutorial.CourseDB.Columns;
 
@@ -989,12 +992,18 @@ namespace CourseTutorial.CourseDB.Columns;
 [BasedOnRow(typeof(TermsRow), CheckNames = true)]
 public class TermsColumns
 {
+    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    public int Id { get; set; }
+    [EditLink]
+    public string Name { get; set; }
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; }
     public bool IsActive { get; set; }
     public bool IsRegistrationOpen { get; set; }
 }
 ```
 
-This column definition is based on the `TermsRow` entity, and any properties you add here will override the properties defined in the entity class. Next, add `[DisplayName]`, width, and alignment attributes to customize the column headers and widths.
+This column definition is based on the `TermsRow` entity, and the attributes you add to a property here override the properties defined in the entity class. To customize the headers and widths of the two boolean columns, add `[DisplayName]`, width, and alignment attributes **to the existing properties**, keeping the other columns in the file:
 
 ```csharp
 namespace CourseTutorial.CourseDB.Columns;
@@ -1003,6 +1012,13 @@ namespace CourseTutorial.CourseDB.Columns;
 [BasedOnRow(typeof(TermsRow), CheckNames = true)]
 public class TermsColumns
 {
+    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    public int Id { get; set; }
+    [EditLink]
+    public string Name { get; set; }
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; }
+
     [DisplayName("IsCurrent"), Width(150), AlignRight]
     public bool IsActive { get; set; }
 
@@ -1010,6 +1026,9 @@ public class TermsColumns
     public bool IsRegistrationOpen { get; set; }
 }
 ```
+
+> **Important:** If you replace the class with only the two boolean properties, the other columns (`Id`, `Name`, `StartDate`, `EndDate`) will disappear from the grid. Always keep the full set of columns and only modify the attributes.
+
 ![Migration Screenshot](./img/is_current_and_is_enrollment_open_.png)
 
 

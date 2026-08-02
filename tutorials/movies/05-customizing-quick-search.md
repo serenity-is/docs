@@ -88,7 +88,7 @@ The beauty of these features is that you don't need to write complex C# or SQL c
 You can also provide users with the ability to choose which field they want to search on. To do this, open *MovieGrid.tsx* and make the following modifications (please only insert `getQuickSearchFields` method and the `QuickSearchField` import on top, don't modify other code):
 
 ```ts
-import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
+import { EntityGrid, QuickSearchField } from '@serenity-is/corelib';
 //...
 export class MovieGrid extends EntityGrid<MovieRow, any> {
     // ...

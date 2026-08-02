@@ -70,26 +70,27 @@ Now it's time to rebuild the project so that our MovieListRequest object and rel
 In this section, we'll be intercepting the quick filter item and moving the genre list to the *Genres* property of our *MovieListRequest*. To accomplish this, we'll make edits in the *MovieGrid.tsx* file:
 
 ```typescript
-import { Decorators, EntityGrid, first, localText, LookupEditor, QuickSearchField } from '@serenity-is/corelib';
+import { EntityGrid, localText, LookupEditor, QuickSearchField, tryFirst } from '@serenity-is/corelib';
 import { MovieColumns, MovieListRequest, MovieRow, MovieService } from '../../ServerTypes/MovieDB';
+import { nsMovieDB } from '../../ServerTypes/Namespaces';
 import { MovieDialog } from './MovieDialog';
 
 export class MovieGrid extends EntityGrid<MovieRow> {
-    static override[Symbol.typeInfo] = this.registerClass('MovieTutorial.MovieDB.MovieGrid')
+    static override[Symbol.typeInfo] = this.registerClass(nsMovieDB)
     //...
 
     protected override getQuickFilters() {
         let items = super.getQuickFilters();
 
-        const genreListFilter = first(items, x =>
+        const genreListFilter = tryFirst(items, x =>
             x.field == MovieRow.Fields.GenreList);
 
-        genreListFilter.handler = h => {
+        genreListFilter && (genreListFilter.handler = h => {
             const request = (h.request as MovieListRequest);
             const values = (h.widget as LookupEditor).values;
             request.Genres = values.map(x => parseInt(x, 10));
             h.handled = true;
-        };
+        });
 
         return items;
     }
@@ -107,7 +108,7 @@ let items = super.getQuickFilters();
 Then, we locate the quick filter object for the *GenreList* property:
 
 ```typescript
-const genreListFilter = first(items, x =>
+const genreListFilter = tryFirst(items, x =>
     x.field == MovieRow.Fields.GenreList);
 ```
 

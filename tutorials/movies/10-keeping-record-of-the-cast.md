@@ -37,7 +37,7 @@ public class DefaultDB_20221115_1612_PersonAndMovieCast : AutoReversingMigration
     public override void Up()
     {
         Create.Table("Person")
-            .WithColumn("PersonId").AsInt32().IdentityKey()
+            .WithColumn("PersonId").AsInt32().IdentityKey(this)
             .WithColumn("FirstName").AsString(50).NotNullable()
             .WithColumn("LastName").AsString(50).NotNullable()
             .WithColumn("BirthDate").AsDateTime().Nullable()
@@ -46,7 +46,7 @@ public class DefaultDB_20221115_1612_PersonAndMovieCast : AutoReversingMigration
             .WithColumn("Height").AsInt32().Nullable();
 
         Create.Table("MovieCast")
-            .WithColumn("MovieCastId").AsInt32().IdentityKey()
+            .WithColumn("MovieCastId").AsInt32().IdentityKey(this)
             .WithColumn("MovieId").AsInt32().NotNullable()
                 .ForeignKey("FK_MovieCast_MovieId", "Movie", "MovieId")
             .WithColumn("PersonId").AsInt32().NotNullable()
@@ -422,7 +422,7 @@ Next, modify the `PersonId` and `PersonFullName` properties in `MovieCastRow.cs`
 ```csharp
 //...
 [DisplayName("Actor/Actress"), NotNull, ForeignKey(typeof(PersonRow)), LeftJoin(jPerson), TextualField(nameof(PersonFullName))]
-[LookupEditor(typeof(PersonRow), Async = true)]
+[AsyncLookupEditor(typeof(PersonRow))]
 public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
 
 //...

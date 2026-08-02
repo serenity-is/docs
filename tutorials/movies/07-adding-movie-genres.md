@@ -23,7 +23,7 @@ public class DefaultDB_20221114_1836_GenreTable : AutoReversingMigration
     public override void Up()
     {
         Create.Table("Genre")
-            .WithColumn("GenreId").AsInt32().NotNullable().IdentityKey()
+            .WithColumn("GenreId").AsInt32().NotNullable().IdentityKey(this)
             .WithColumn("Name").AsString(100).NotNullable();
 
         Alter.Table("Movie")

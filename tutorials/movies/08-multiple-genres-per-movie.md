@@ -19,7 +19,7 @@ public class DefaultDB_20221115_1405_MovieGenres : ForwardOnlyMigration
     public override void Up()
     {
         Create.Table("MovieGenres")
-            .WithColumn("MovieGenreId").AsInt32().IdentityKey()
+            .WithColumn("MovieGenreId").AsInt32().IdentityKey(this)
             .WithColumn("MovieId").AsInt32().NotNullable()
                 .ForeignKey("FK_MovieGenres_MovieId", "Movie", "MovieId")
             .WithColumn("GenreId").AsInt32().NotNullable()

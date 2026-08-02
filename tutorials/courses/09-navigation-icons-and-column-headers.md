@@ -14,11 +14,11 @@ Below are the NavigationLink declarations for each page, each with a section nam
 using Serenity.Navigation;
 using MyPages = CourseTutorial.CourseDB.Pages;
 
-[assembly: NavigationLink(int.MaxValue, "CourseDB/Department", typeof(MyPages.DepartmentPage), icon: "fas fa-building")]
-[assembly: NavigationLink(int.MaxValue, "CourseDB/Terms", typeof(MyPages.TermsPage), icon: "fas fa-calendar-alt")]
-[assembly: NavigationLink(int.MaxValue, "CourseDB/Courses", typeof(MyPages.CoursesPage), icon: "fas fa-book")]
-[assembly: NavigationLink(int.MaxValue, "CourseDB/Students", typeof(MyPages.StudentsPage), icon: "fas fa-user-graduate")]
-[assembly: NavigationLink(int.MaxValue, "CourseDB/Grades", typeof(MyPages.GradesPage), icon: "fas fa-clipboard-list")]
+[assembly: NavigationLink(int.MaxValue, "CourseDB/Department", typeof(MyPages.DepartmentPage), icon: "fa-building")]
+[assembly: NavigationLink(int.MaxValue, "CourseDB/Terms", typeof(MyPages.TermsPage), icon: "fa-calendar-alt")]
+[assembly: NavigationLink(int.MaxValue, "CourseDB/Courses", typeof(MyPages.CoursesPage), icon: "fa-book")]
+[assembly: NavigationLink(int.MaxValue, "CourseDB/Students", typeof(MyPages.StudentsPage), icon: "fa-user-graduate")]
+[assembly: NavigationLink(int.MaxValue, "CourseDB/Grades", typeof(MyPages.GradesPage), icon: "fa-clipboard-list")]
 ```
 
 > **Note:** The path in each link (e.g., `CourseDB/Courses`) should match the actual page/table name. Use `Courses` and `Students` (plural) to match the page names, otherwise the menu item text or links will be inconsistent.

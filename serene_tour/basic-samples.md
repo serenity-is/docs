@@ -6,7 +6,7 @@ This module contains additional samples that demonstrate how to handle common co
 
 The samples are divided into several categories, including Dialogs, Editors, and Grids.
 
-The source code for each sample, which is hosted in the `common-features` repository can be directly accessed by clicking the `Source File` links on the top right of the sample page.
+The source code for each sample, which is hosted in the `common-features` folder of the Serenity repository, can be directly accessed by clicking the `Source File` links on the top right of the sample page.
 
 Most of the samples require the types in the Northwind module, thus the NuGet package containing basic samples (`Serenity.Demo.BasicSamples`) has a reference to the `Serenity.Demo.Northwind` package.
 

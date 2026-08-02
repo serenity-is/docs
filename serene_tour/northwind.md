@@ -12,17 +12,17 @@ Northwind module is installed in Serene as a NuGet package reference (`Serenity.
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Serenity.Extensions" Version="6.3.6" />
-    <PackageReference Include="Serenity.Demo.Northwind" Version="6.3.6" />
-    <PackageReference Include="Serenity.Demo.BasicSamples" Version="6.3.6" />
+    <PackageReference Include="Serenity.Extensions" Version="10.3.6" />
+    <PackageReference Include="Serenity.Demo.Northwind" Version="10.3.6" />
+    <PackageReference Include="Serenity.Demo.BasicSamples" Version="10.3.6" />
   </ItemGroup>
 ```
 
 Because of this, you can't see the source code for Northwind and other modules directly inside your Serene template-based project.
 
-The source code for Northwind can be found in the `common-features` repository:
+The source code for Northwind can be found in the `common-features` folder in the Serenity repository:
 
-https://github.com/serenity-is/common-features/tree/master/src
+https://github.com/serenity-is/serenity/tree/master/common-features/src
 
 ![](img/common-features-repo.png)
 

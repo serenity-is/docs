@@ -32,7 +32,7 @@ If it isn't already displayed, use the search box at the top to find `Serene`, t
 
 ![Serene template selection](img/new-serene-selection.png)
 
-Name your application something like `MyCompany`, `MyProduct`, or `HelloSerenity`, or leave the default name `Serene1`.
+Name your application something like `MyCompany`, `MyProduct`, or `HelloSerenity`, or leave the default name `MySerene1`.
 
 Please don't name it `Serenity`. It may conflict with other Serenity assemblies.
 

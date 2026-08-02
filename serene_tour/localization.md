@@ -1,10 +1,8 @@
 # Localization
 
-Serene allows you to change the active language from the top right language dropdown:
+Serene allows you to change the active language from the language dropdown at the top of the left sidebar:
 
 ![Language Dropdown](img/language-dropdown.png)
-
-> This dropdown is located on the left sidebar band in `StartSharp`.
 
 Try changing the active language to German.
 
@@ -18,7 +16,7 @@ Serene also added a cookie named `LanguagePreference` with content `"de"` to you
 
 When you launched Serene first time, you might have seen the site in English, but it is also possible that it started in Spanish, Turkish, or Russian if you have an operating system or browser using that language as the default.
 
-If you don't want to let users to the change UI language, you should remove the language selection dropdown.
+If you don't want to let users change the UI language, you should remove the language selection dropdown.
 
 You may add more languages to the language selection dropdown by using the `Languages` page under the `Administration` menu.
 
@@ -50,10 +48,10 @@ When you saved changes, Serene created a `user.texts.de.json` file in the folder
 }
 ```
 
-There are also other similar JSON files in the `wwwroot/Scripts/site/texts` folder, with default translations for the Serene interface:
+There are also similar JSON files in the `texts/resources` folder, with default translations for the Serene interface:
 
 - site.texts.de.json
-- site.texts.invariant.json
+- site.texts.es.json
 - site.texts.tr.json
 
 > It is recommended to transfer your translations from user.texts.xx.json files to site.texts.xx.json files before publishing. You can also keep them under version control this way, if ``App_Data` folder is ignored.

@@ -47,39 +47,37 @@ https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new
 
 ## Creating a New Project Using the Template
 
-Create an empty folder, for instance `MyProject`, and change into it:
+Create an empty folder, for instance `Projects`, and change into it:
 
 ```bash
-~/> mkdir MyProject
-~/> cd MyProject
+~/> mkdir Projects
+~/> cd Projects
 ```
 
-To create a new project named after the current folder, type:
+Specify a name for the project with the `-n` argument, for example:
 
 ```bash
-~/MyProject> dotnet new serene
+~/Projects> dotnet new serene -n HelloSerenity
 ```
 
-> To specify a different name, pass the `-n` argument:
-> ```bash
-> ~/MyProject> dotnet new serene -n MyAnotherProject
-> ```
-> In that case, the project will be created in a subdirectory named `MyAnotherProject`. You should `cd` into that folder after creating it.
+This creates the project in a subdirectory named after the project name, e.g. `Projects/HelloSerenity/HelloSerenity.Web/HelloSerenity.Web.csproj`.
 
-> Use `dotnet new startsharp` to create a StartSharp-based project.
+> Use `dotnet new startsharp -n HelloSerenity` to create a StartSharp-based project.
 
-Change to the `MyProject.Web` folder, run `npm install` to install the packages, then `dotnet build` and `dotnet run` to try the project:
+Change to the project's `.Web` folder, run `npm install` to install the packages, then `dotnet build` and `dotnet run` to try the project:
 
 ```bash
-~/MyProject/MyProject.Web> npm i
-~/MyProject/MyProject.Web> dotnet build
-~/MyProject/MyProject.Web> dotnet run
+~/Projects/HelloSerenity/HelloSerenity.Web> npm i
+~/Projects/HelloSerenity/HelloSerenity.Web> dotnet build
+~/Projects/HelloSerenity/HelloSerenity.Web> dotnet run
 
 info: Microsoft.Hosting.Lifetime[14]
       Now listening on: http://localhost:5000
 ```
 
-> Note that `dotnet new` won't create a solution file. If you open this project in Visual Studio, we recommend naming the solution `MyProject` and saving the solution file in the root folder as `MyProject/MyProject.sln`, rather than `MyProject.Web/MyProject.Web.sln`.
+> If you run `dotnet new serene` without a name, `dotnet new` names the project after the current folder, e.g. from `~/Projects` it creates `~/Projects/Projects.Web/Projects.Web.csproj`. This can result in an unintended name (for example, a lowercase one), so it's usually better to pass an explicit name with `-n`.
+
+> Note that `dotnet new` won't create a solution file. If you open this project in Visual Studio, we recommend naming the solution `HelloSerenity` and saving the solution file in the root folder as `HelloSerenity/HelloSerenity.sln`, rather than `HelloSerenity.Web/HelloSerenity.Web.sln`.
 
 Now open a browser and navigate to `http://localhost:5000`.
 
@@ -94,11 +92,15 @@ Type `dotnet new serene --help` or `dotnet new startsharp --help` to see the arg
 For example, to exclude demo modules such as `Northwind` and `Basic Samples`, type:
 
 ```
-~/MyProject> dotnet new serene -E
+~/Projects> dotnet new serene -n HelloSerenity -D false
 ```
 
-To exclude the demo modules and include only `DataAuditLog` and `OpenIddict` instead of all the pro modules in StartSharp:
+> `-D` (or `--DemoModules`) is `true` by default, so pass `false` to exclude the demo modules.
+
+The `startsharp` template accepts similar boolean options, all of which default to `true`, e.g. `-dm/--demo-modules`, `-dx/--data-explorer`, `-ec/--email-client`, `-mt/--meeting`, `-os/--openid-server`, `-oc/--openid-client`, `-T/--TwoFactorAuthenticator`, and `-wl/--worklog`.
+
+For example, to exclude the demo modules and other pro modules in StartSharp, keeping only the OpenId server and Data Explorer:
 
 ```
-~/MyProject> dotnet new startsharp -E -P DataAuditLog -P OpenIddict
+~/Projects> dotnet new startsharp -n HelloSerenity -dm false -ec false -mt false -T false -wl false
 ```

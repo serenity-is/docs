@@ -6,7 +6,7 @@
 
 It aims to make development easier while reducing maintenance costs by avoiding boilerplate code, reducing the time spent on repetitive tasks, and applying the best software design practices.
 
-[Serene](https://github.com/serenity-is/serene) is our free, open-source starter application template based on the Serenity platform. We'll mainly use Serene for our tutorial and other samples through this documentation.
+[Serene](https://github.com/serenity-is/Serenity/tree/master/serene) is our free, open-source starter application template based on the Serenity platform. We'll mainly use Serene for our tutorial and other samples through this documentation.
 
 [StartSharp](https://serenity.is) is the premium application template we offer to our paid customers. It contains everything in Serene, in addition to a more polished theme, and some [extra features](startsharp/README.md). They are both based on the Serenity platform.
 
@@ -71,7 +71,7 @@ After reading this guide and its tutorials, follow the resources below for more 
   <dd><a href='https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityApplicationTemplate'>https://marketplace.visualstudio.com/items?itemName=VolkanCeylan.SereneSerenityApplicationTemplate</a></dd>
 
   <dt>Serene Github Repository:</dt>
-  <dd><a href='https://github.com/serenity-is/Serene' target='_blank'>https://github.com/serenity-is/Serene</a></dd>
+  <dd><a href='https://github.com/serenity-is/Serenity/tree/master/serene' target='_blank'>https://github.com/serenity-is/Serenity/tree/master/serene</a></dd>
 
 </dl>
 

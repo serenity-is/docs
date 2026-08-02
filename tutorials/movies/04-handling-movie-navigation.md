@@ -32,7 +32,7 @@ The Serene and StartSharp templates include Line Awesome, which is a modern alte
 
 By default, the `Movie Database` menu, which is auto-generated, has `int.MaxValue` as the order, which is calculated from the lowest order of its children. This places it at the bottom of the left navigation menu.
 
-To move it above the `Northwind` menu, which has an order value of `7000` (as seen in the Northwind menu definition [here](https://github.com/serenity-is/common-features/blob/master/src/Serenity.Demo.Northwind/Modules/Shared/NorthwindNavigation.cs)), we can use an order value lower than `7000`, such as `6000`. This new order value will place our `Movie Database` menu before the `Northwind` menu:
+To move it above the `Northwind` menu, which has an order value of `7000` (as seen in the Northwind menu definition [here](https://github.com/serenity-is/Serenity/blob/master/common-features/src/demo.northwind/Modules/Shared/NorthwindNavigation.cs)), we can use an order value lower than `7000`, such as `6000`. This new order value will place our `Movie Database` menu before the `Northwind` menu:
 
 ```cs
 [assembly: NavigationMenu(6000, "Movie Database", icon: "fa-film")]

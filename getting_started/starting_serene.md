@@ -6,11 +6,11 @@ After your first project is created in Visual Studio using the Serene template, 
 
 ![Initial Solution Content](img/serene1web.png)
 
-Your solution contains a `Serene1.Web` project, which is an ASP.NET Core application.
+Your solution contains a `MySerene1.Web` project, which is an ASP.NET Core application.
 
 It includes server-side code written in C# (.cs) and client-side code written in TypeScript (.ts).
 
-`Serene1.Web` has references to Serenity NuGet packages, so you can update them when required, either with the package manager or manually by editing the project file.
+`MySerene1.Web` has references to Serenity NuGet packages, so you can update them when required, either with the package manager or manually by editing the project file.
 
 Serene automatically creates its database in `SQL Local DB` on the first run, so just press F5 (or click Run) and you're ready to go.
 
@@ -39,12 +39,12 @@ In the `appsettings.json` file, you'll find the `Default` and `Northwind` connec
 "Data": {
   "Default": {
     "ConnectionString": 
-      "Server=(localdb)\\MsSqlLocalDB;Database=Serene2_Default_v1;..."
+      "Server=(localdb)\\MsSqlLocalDB;Database=MySerene1_Default_v1;...",
     "ProviderName": "System.Data.SqlClient"
   },
   "Northwind": {
     "ConnectionString": 
-      "Server=(localdb)\\MsSqlLocalDB;Database=Serene2_Northwind_v1;...",
+      "Server=(localdb)\\MsSqlLocalDB;Database=MySerene1_Northwind_v1;...",
     "ProviderName": "System.Data.SqlClient"
   }
 }
@@ -79,12 +79,12 @@ If you have another SQL Server instance, for example SQL Express, change the dat
 "Data": {
   "Default": {
     "ConnectionString": 
-      "Server=.\\SqlExpress;Database=Serene1_Default_v1;...",
+      "Server=.\\SqlExpress;Database=MySerene1_Default_v1;...",
     "ProviderName": "System.Data.SqlClient"
   },
   "Northwind": {
     "ConnectionString": 
-      "Server=.\\SqlExpress;Database=Serene1_Northwind_v1;...",
+      "Server=.\\SqlExpress;Database=MySerene1_Northwind_v1;...",
     "ProviderName": "System.Data.SqlClient"
   }
 }

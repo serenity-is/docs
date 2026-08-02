@@ -34,7 +34,7 @@ You can also change its password (which is `serenity` by default) by typing into
 
 > You can also delete it but this would make your site unusable as you wouldn't be able to login.
 
-`admin` is a special user in Serene, as it has all permissions even if none is explicitly granted to him.
+`admin` is a special user in Serene, as it has all permissions even if none are explicitly granted.
 
 Let's create another one and grant roles/permissions to it.
 
@@ -44,7 +44,7 @@ Close this dialog, click the `New User` button and type `translator` as the user
 
 > You may have noticed there is an *Apply Changes* button with a disk icon without title, next to *Save*. Unlike *Save*, when you use it, the form stays open, so you can see how your record looks like after saving, also you can edit roles and permissions before closing the form.
 
-When you grant a role to a user, he gets all the permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. You can also revoke any of the role permission from a user explicitly.
+When you grant a role to a user, they get all the permissions granted to the role automatically. By clicking Edit Permissions, you can also grant extra permissions explicitly. You can also revoke any of the role's permissions from a user explicitly.
 
 Now close all dialogs and log out by clicking the user icon on the top right of page and clicking *Logout*. 
 

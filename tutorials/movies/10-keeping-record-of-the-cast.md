@@ -37,8 +37,7 @@ public class DefaultDB_20221115_1612_PersonAndMovieCast : AutoReversingMigration
     public override void Up()
     {
         Create.Table("Person")
-            .WithColumn("PersonId").AsInt32().Identity()
-                .PrimaryKey().NotNullable()
+            .WithColumn("PersonId").AsInt32().IdentityKey()
             .WithColumn("FirstName").AsString(50).NotNullable()
             .WithColumn("LastName").AsString(50).NotNullable()
             .WithColumn("BirthDate").AsDateTime().Nullable()
@@ -47,8 +46,7 @@ public class DefaultDB_20221115_1612_PersonAndMovieCast : AutoReversingMigration
             .WithColumn("Height").AsInt32().Nullable();
 
         Create.Table("MovieCast")
-            .WithColumn("MovieCastId").AsInt32().Identity()
-                .PrimaryKey().NotNullable()
+            .WithColumn("MovieCastId").AsInt32().IdentityKey()
             .WithColumn("MovieId").AsInt32().NotNullable()
                 .ForeignKey("FK_MovieCast_MovieId", "Movie", "MovieId")
             .WithColumn("PersonId").AsInt32().NotNullable()
@@ -299,8 +297,8 @@ import { MovieCastColumns, MovieCastRow } from '../../ServerTypes/MovieDB';
 export class MovieCastEditor<P = {}> extends GridEditorBase<MovieCastRow, P> {
     static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.MovieCastEditor");
 
-    protected getColumnsKey() { return MovieCastColumns.columnsKey }
-    protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
+    protected override getColumnsKey() { return MovieCastColumns.columnsKey }
+    protected override getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
     constructor(props: WidgetProps<P>) {
         super(props);
@@ -369,9 +367,9 @@ import { MovieCastForm, MovieCastRow } from "../../ServerTypes/MovieDB";
 export class MovieCastEditDialog extends GridEditorDialog<MovieCastRow> {
     static override [Symbol.typeInfo] = this.registerClass("MovieTutorial.MovieDB.MovieCastEditDialog");
 
-    protected getFormKey() { return MovieCastForm.formKey; }
-    protected getNameProperty() { return MovieCastRow.nameProperty; }
-    protected getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
+    protected override getFormKey() { return MovieCastForm.formKey; }
+    protected override getNameProperty() { return MovieCastRow.nameProperty; }
+    protected override getLocalTextPrefix() { return MovieCastRow.localTextPrefix; }
 
     protected form: MovieCastForm = new MovieCastForm(this.idPrefix);
 }
@@ -390,9 +388,9 @@ export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
     static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.MovieCastEditor");
 
     //...
-    protected getDialogType() { return MovieCastEditDialog; }
+    protected override getDialogType() { return MovieCastEditDialog; }
 
-    protected getAddButtonCaption() {
+    protected override getAddButtonCaption() {
         return "Add";
     }
 }
@@ -529,7 +527,7 @@ export class MovieCastEditor extends GridEditorBase<MovieCastRow> {
     static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.MovieCastEditor");
 
     //...
-    protected validateEntity(row: MovieCastRow, id: number) {
+    protected override validateEntity(row: MovieCastRow, id: number) {
         if (!super.validateEntity(row, id))
             return false;
 
@@ -774,7 +772,7 @@ Master/detail relations are an integrated feature on the server side, so instead
 Open `MovieRow.cs` and modify the `CastList` property as follows:
 
 ```csharp
-[MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(MovieCastColumns))]
+[MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(Columns.MovieCastColumns))]
 [DisplayName("Cast List"), NotMapped]
 public List<MovieCastRow> CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
 ```
@@ -822,7 +820,7 @@ public class MovieDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyRespo
 In our `MasterDetailRelation` attribute, we specified an extra property, `ColumnsType`:
 
 ```csharp
-[MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(MovieCastColumns)]
+[MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(Columns.MovieCastColumns))]
 ```
 
 This ensures that the `PersonFullName` field on the cast list is selected on retrieve. Otherwise, it wouldn't be loaded, as only table fields are selected by default. When you open a movie dialog with an existing cast list, the full name would be empty.

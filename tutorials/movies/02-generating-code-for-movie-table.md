@@ -92,7 +92,7 @@ Sergen generated code for our table, and it works seamlessly without us having t
 
 However, it's essential to note that Serenity is not a no-code or low-code platform for non-developers who avoid writing code entirely. The key point here is maintainability. The code produced by some designers and code generators is often an unmanageable mess that developers are discouraged from touching.
 
-Sergen has been invaluable for our initial setup, which is crucial for a layered architecture and adhering to platform standards. Without Sergen, we would need to create approximately 13 files for the entity, request handlers, page, endpoint, grid, form, and more. We would also need to set up configurations in a few other places.
+Sergen has been invaluable for our initial setup; having a clean, standards-compliant codebase from the start is crucial for a layered architecture. Without Sergen, we would need to create approximately 13 files for the entity, request handlers, page, endpoint, grid, form, and more. We would also need to set up configurations in a few other places.
 
 Even if we copied and pasted code from another page, it could be error-prone and take about 5-10 minutes.
 

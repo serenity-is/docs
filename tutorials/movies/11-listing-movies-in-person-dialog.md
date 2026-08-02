@@ -62,9 +62,9 @@ import { MovieCastRow, MovieCastService, PersonMovieColumns } from "../../Server
 export class PersonMovieGrid<P = {}> extends EntityGrid<MovieCastRow, P> {
     static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid");
 
-    protected getColumnsKey() { return PersonMovieColumns.columnsKey; }
-    protected getRowDefinition() { return MovieCastRow; }
-    protected getService() { return MovieCastService.baseUrl; }
+    protected override getColumnsKey() { return PersonMovieColumns.columnsKey; }
+    protected override getRowDefinition() { return MovieCastRow; }
+    protected override getService() { return MovieCastService.baseUrl; }
 
     constructor(props: WidgetProps<P>) {
         super(props);
@@ -132,27 +132,27 @@ import { MovieCastRow, MovieCastService } from "../../ServerTypes/MovieDB";
 export class PersonMovieGrid<P = {}> extends EntityGrid<MovieCastRow, P> {
     static override [Symbol.typeInfo] = this.registerEditor("MovieTutorial.MovieDB.PersonMovieGrid");
 
-    protected getColumnsKey() { return PersonMovieColumns.columnsKey; }
-    protected getRowDefinition() { return MovieCastRow; }
-    protected getService() { return MovieCastService.baseUrl; }
+    protected override getColumnsKey() { return PersonMovieColumns.columnsKey; }
+    protected override getRowDefinition() { return MovieCastRow; }
+    protected override getService() { return MovieCastService.baseUrl; }
 
     constructor(props: WidgetProps<P>) {
         super(props);
     }
 
-    protected getButtons() {
+    protected override getButtons() {
         return null;
     }
 
-    protected getInitialTitle() {
+    protected override getInitialTitle() {
         return null;
     }
 
-    protected usePager() {
+    protected override usePager() {
         return false;
     }
 
-    protected getGridCanLoad() {
+    protected override getGridCanLoad() {
         return this.personId != null;
     }
 
@@ -193,7 +193,7 @@ If nobody sets the grid's `personId` property, it will always be null, and no re
 export class PersonDialog extends EntityDialog<PersonRow, any> {
     //...
 
-    protected afterLoadEntity() {
+    protected override afterLoadEntity() {
         super.afterLoadEntity();
 
         this.form.MoviesGrid.personId = this.entityId;

@@ -78,7 +78,7 @@ export class MovieGrid extends EntityGrid<MovieRow> {
     static override[Symbol.typeInfo] = this.registerClass('MovieTutorial.MovieDB.MovieGrid')
     //...
 
-    protected getQuickFilters() {
+    protected override getQuickFilters() {
         let items = super.getQuickFilters();
 
         const genreListFilter = first(items, x =>

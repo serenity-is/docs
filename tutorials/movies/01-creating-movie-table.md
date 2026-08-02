@@ -33,8 +33,7 @@ public class DefaultDB_20221114_1505_MovieTable : AutoReversingMigration
     public override void Up()
     {
         Create.Table("Movie")
-            .WithColumn("MovieId").AsInt32()
-                .Identity().PrimaryKey().NotNullable()
+            .WithColumn("MovieId").AsInt32().IdentityKey()
             .WithColumn("Title").AsString(200).NotNullable()
             .WithColumn("Description").AsString(1000).Nullable()
             .WithColumn("Storyline").AsString(Int32.MaxValue).Nullable()

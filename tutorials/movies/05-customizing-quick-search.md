@@ -11,6 +11,8 @@ Before we dive into the upcoming sections, it's essential to have some sample da
 If you opt for the migration file, create a new migration with a suitable name, like `DefaultDB_20221114_1703_MovieData.cs`. In the `Up` method of this migration, paste the code from the provided gist:
 
 ```cs
+using FluentMigrator;
+
 namespace MovieTutorial.Migrations.DefaultDB;
 
 [DefaultDB, MigrationKey(20221114_1703)]
@@ -89,9 +91,8 @@ You can also provide users with the ability to choose which field they want to s
 import { Decorators, EntityGrid, QuickSearchField } from '@serenity-is/corelib';
 //...
 export class MovieGrid extends EntityGrid<MovieRow, any> {
-    static override[Symbol.typeInfo] = this.registerClass("MovieTutorial.MovieDB.MovieGrid");
     // ...
-    protected getQuickSearchFields(): QuickSearchField[] {
+    protected override getQuickSearchFields(): QuickSearchField[] {
         return [
             { name: "", title: "All" },
             { name: "Description", title: "Description" },
@@ -124,7 +125,7 @@ After transforming the templates, you can use IntelliSense to replace hardcoded 
 //...
 export class MovieGrid extends EntityGrid<MovieRow, any> {
     //...
-    protected getQuickSearchFields(): QuickSearchField[] {
+    protected override getQuickSearchFields(): QuickSearchField[] {
         const fld = MovieRow.Fields;
         return [
             { name: "", title: "All" },
@@ -143,7 +144,7 @@ import { localText } from '@serenity-is/corelib';
 //..
 export class MovieGrid extends EntityGrid<MovieRow, any> {
     // ...
-    protected getQuickSearchFields(): QuickSearchField[] {
+    protected override getQuickSearchFields(): QuickSearchField[] {
         const txt = s => localText(`Db.${MovieRow.localTextPrefix}.${s}`);
         const fld = MovieRow.Fields;
         return [

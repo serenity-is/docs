@@ -19,8 +19,7 @@ public class DefaultDB_20221115_1405_MovieGenres : ForwardOnlyMigration
     public override void Up()
     {
         Create.Table("MovieGenres")
-            .WithColumn("MovieGenreId").AsInt32()
-                .Identity().PrimaryKey().NotNullable()
+            .WithColumn("MovieGenreId").AsInt32().IdentityKey()
             .WithColumn("MovieId").AsInt32().NotNullable()
                 .ForeignKey("FK_MovieGenres_MovieId", "Movie", "MovieId")
             .WithColumn("GenreId").AsInt32().NotNullable()
@@ -150,24 +149,23 @@ public class MovieColumns
 
 With this addition, the `GenreList` column now contains a list of integer values, which can be thought of as an array in JavaScript. Fortunately, in JavaScript, the `.toString()` method for an array returns items separated by commas. So, for example, for the movie *Fight Club*, we would have *"1,2"*.
 
-However, it would be more informative to have genre names instead of genre IDs
-
-. Therefore, we need to format these values by converting the Genre IDs into their corresponding Genre names.
+However, it would be more informative to have genre names instead of genre IDs. Therefore, we need to format these values by converting the Genre IDs into their corresponding genre names.
 
 ## Creating the `GenreListFormatter` Class
 
 It's time to create a SlickGrid column formatter. To do this, create a file named `GenreListFormatter.tsx` next to `MovieGrid.tsx`:
 
 ```typescript
-import { Decorators, Formatter, Lookup, formatterTypeInfo, registerType } from "@serenity-is/corelib";
+import { Formatter, Lookup, formatterTypeInfo, registerType } from "@serenity-is/corelib";
 import { FormatterContext } from "@serenity-is/sleekgrid";
 import { GenreRow } from "../../ServerTypes/MovieDB/GenreRow";
+import { nsMovieDB } from "../../ServerTypes/Namespaces";
 
 let lookup: Lookup<GenreRow>;
 let promise: Promise<Lookup<GenreRow>>;
 
 export class GenreListFormatter implements Formatter {
-    static [Symbol.typeInfo] = formatterTypeInfo("MovieTutorial.GenreListFormatter"); static { registerType(this); }
+    static [Symbol.typeInfo] = formatterTypeInfo(nsMovieDB); static { registerType(this); }
 
     format(ctx: FormatterContext) {
 

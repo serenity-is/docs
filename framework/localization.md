@@ -162,42 +162,54 @@ Let's say we set `en-US` as the language fallback of `en-UK`. If we search for a
 
 ## Initialization of the Local Text System
 
-The default implementations of services required localization system is registered in `Startup.cs` file via `[CoreServiceCollections.AddTextRegistry](../api/dotnet/Serenity.Net.Core/Serenity.Extensions.DependencyInjection/CoreServiceCollectionExtensions/AddTextRegistry.md) method.
-
-You may not find that in the `Startup.cs` file, as the method is called internally by the `AddServiceHandlers`:
+The default services required by the localization system (the `ILocalTextRegistry` and `ITextLocalizer` implementations) are registered via the [AddTextRegistry](../api/dotnet/Serenity.Net.Core/Serenity.Extensions.DependencyInjection/CoreServiceCollectionExtensions/AddTextRegistry.md) extension. You won't find an explicit call for it in `Startup.cs`, as it is called internally by `AddServiceHandlers` (and `AddDynamicScripts`):
 
 ```cs
 services.AddServiceHandlers(); // this internally calls AddTextRegistry
 ```
 
-There is also an `InitializeLocalText` method in `Startup.cs` file which adds local text keys and translations to the local text registry from a set of classes in your application and other sources like JSON files:
+Loading the actual translations is handled by the `ILocalTextInitializer` abstraction. The default implementation, `DefaultLocalTextInitializer`, registers:
+
+- **Base texts** — nested local texts, row texts (from `DisplayName` attributes), enumeration texts, permission texts, and property item texts, discovered through the type source.
+- **Embedded resource texts** — the JSON translation files under each assembly's `texts/resources` folder, which are compiled into the assemblies as embedded resources (via `AddJsonResourceTexts`).
+- **User texts** — the JSON files under `App_Data/texts`, where the translations made through the *Administration / Translations* page are saved.
+
+`DefaultLocalTextInitializer` is registered and executed from `Startup.cs`:
 
 ```cs
-public static void InitializeLocalTexts(IServiceProvider services)
-{
-    var env = services.GetRequiredService<IWebHostEnvironment>();
-    services.AddBaseTexts(env.WebRootFileProvider)
-        .AddJsonTexts(env.WebRootFileProvider, "Scripts/site/texts")
-        .AddJsonTexts(env.ContentRootFileProvider, "App_Data/texts");
-}
+// in ConfigureServices
+services.AddLocalTextInitializer();   // registers ILocalTextInitializer (DefaultLocalTextInitializer)
+
+// in Configure
+app.InitializeLocalTexts();           // runs the initializer against the ILocalTextRegistry
 ```
+
+Unlike the old static `InitializeLocalTexts` method, this is a proper service, so local texts can be re-initialized whenever needed (for example, after editing translations on the *Translations* page), and the behavior can be customized by replacing `ILocalTextInitializer` with your own implementation.
 
 ## Registering Translations Manually
 
-You can add translations to the local text registry from the `InitializeLocalTexts` method. Sources for these translations might be a database table, an XML file, embedded resources, etc.
+You can add translations to the local text registry from a custom `ILocalTextInitializer`. Sources for these translations might be a database table, an XML file, embedded resources, etc. The simplest way is to implement the interface yourself, mirroring what `DefaultLocalTextInitializer` does and then adding your own sources:
 
 ```cs
-public static void InitializeLocalTexts(IServiceProvider services)
+public class MyTextInitializer(ITypeSource typeSource, IWebHostEnvironment env) : ILocalTextInitializer
 {
-    var env = services.GetRequiredService<IWebHostEnvironment>();
-    services.AddBaseTexts(env.WebRootFileProvider)
-    // ..
-    var registry = services.GetRequiredService<ILocalTextRegistry>();
-    // load these texts from some source like a database table
-    registry.Add("es", "Dialogs.YesButton", "Sí");
-    registry.Add("fr", "Dialogs.YesButton", "Oui");
-    // ..
+    public void Initialize(ILocalTextRegistry registry)
+    {
+        // load the default texts (base + embedded + App_Data) like DefaultLocalTextInitializer does
+        registry.AddBaseTexts(typeSource, includeResources: true);
+        registry.AddJsonTexts(env.ContentRootFileProvider, "App_Data/texts");
+
+        // ... then add your own texts from a database, XML, etc.
+        registry.Add("es", "Dialogs.YesButton", "Sí");
+        registry.Add("fr", "Dialogs.YesButton", "Oui");
+    }
 }
+```
+
+Register it in `Startup.cs` instead of (or before) `AddLocalTextInitializer()`, which uses `TryAddSingleton` and won't override an existing registration:
+
+```cs
+services.AddSingleton<ILocalTextInitializer, MyTextInitializer>();
 ```
 
 Please note that the order is important here, e.g. the texts added later will override the texts that may be added before them for the same text key and language ID pairs.
@@ -241,18 +253,11 @@ Files in a folder are parsed and added to the registry in their file name order.
 
 > This order is important as adding a translation in some language with same key overrides prior translation.
 
-## Default Folders Containing JSON Local Texts
+## Where JSON Local Texts Live
 
-As you might have noticed, the `InitializeLocalTexts` method calls `AddJsonTexts` for two predetermined folders:
+Each assembly — including your main application — has a `texts/resources` folder that contains its translation JSON files (e.g. `site.texts.de.json`, `site.texts.tr.json`). These files are compiled into the assemblies as **embedded resources** (not satellite assemblies), so they travel with the assembly and are loaded by `AddJsonResourceTexts` through the type source.
 
-```cs
-.AddJsonTexts(env.WebRootFileProvider, "Scripts/site/texts")
-.AddJsonTexts(env.ContentRootFileProvider, "App_Data/texts");
-```
-
-The first one is a folder that contains your application-specific translations. 
-
-The one under `App_Data/texts` is the folder where the user translations made through `Administration/Translations` page is saved by default. It is recommended to transfer texts from these files to application translation files under `~/Scripts/site/texts` before publishing.
+The only JSON texts that remain on disk are the ones under `App_Data/texts`. This is the folder where the user translations made through the *Administration / Translations* page are saved by default, and it is loaded by `DefaultLocalTextInitializer` via `AddJsonTexts(..., "App_Data/texts")`. It is recommended to transfer translations from these files into the assembly `texts/resources` folders before publishing.
 
 ## Nested Local Texts
 
@@ -343,7 +348,7 @@ Key                                        |LanguageID|Text (Translation)
 APrefix.Site.Dashboard.WelcomeMessage      |en-US     |Welcome to Serenity
 APrefix.Validation.DeleteForeignKeyError   |en-US     |Can't delete record...
 
-NestedLocalTexts are automatically registered in the `Startup.cs` file, via the `AddBaseTexts` call in the `InitializeLocalTexts` method.
+NestedLocalTexts are automatically registered during application startup, via the `AddBaseTexts` call made by `DefaultLocalTextInitializer` (see `app.InitializeLocalTexts()`).
 
 ## Row Texts
 
@@ -394,7 +399,7 @@ The local text prefix can also be set by placing a [LocalTextPrefixAttribute](..
 
 Another way is to set the `LocalTextPrefix` property in the `RowFields` class constructor but is not recommended.
 
-Row texts are also automatically registered in the `Startup.cs` file, via the `AddBaseTexts` call in the `InitializeLocalTexts` method.
+Row texts are also automatically registered during application startup, via the `AddBaseTexts` call made by `DefaultLocalTextInitializer` (see `app.InitializeLocalTexts()`).
 
 ## Enumeration Texts
 
@@ -430,7 +435,7 @@ Console.WriteLine(MyApplication.Sample.Value1.GetText(localizer));
 > First Value
 ```
 
-Enum texts are also automatically registered in the `Startup.cs` file, via the `AddBaseTexts` call in the `InitializeLocalTexts` method.
+Enum texts are also automatically registered during application startup, via the `AddBaseTexts` call made by `DefaultLocalTextInitializer` (see `app.InitializeLocalTexts()`).
 
 ## EnumKey Attribute
 

@@ -10,7 +10,7 @@ Serenity uses integrated authentication and authorization systems in the ASP.NET
 
 See the following document for more information about ASP.NET Core security:
 
-[ASP.NET Core Security Topics - Microsoft Docs](https://learn.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-7.0)
+[ASP.NET Core Security Topics - Microsoft Docs](https://learn.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-10.0)
 
 ## IUserAccessor Interface
 
@@ -20,25 +20,134 @@ To abstract this, and make Serenity also useful for console, desktop, and other 
 
 The default implementation for this interface uses HttpContext.User in web applications but can be implemented differently for other kinds of applications/tests.
 
-## IPermissionService and IUserRetrieveService Abstractions
+## Security Service Abstractions
 
-We also provide the following abstractions for permission checking (authorization) and user detail retrieval.
+Serenity provides abstractions for permission checking (authorization), user detail retrieval, password validation, claim creation, and permission key listing. They live in the `Serenity.Abstractions` namespace:
 
-* [IPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
-* [IUserRetrieveService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserRetrieveService.md)
+* [IUserAccessor](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserAccessor.md) — access to the current user
+* [IUserRetrieveService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserRetrieveService.md) — user detail retrieval by id or username
+* [IUserClaimCreator](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserClaimCreator.md) — creates a `ClaimsPrincipal` for a user
+* [IUserPasswordValidator](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserPasswordValidator.md) — validates usernames / passwords
+* [IPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md) — permission checking
+* [IPermissionKeyLister](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IPermissionKeyLister.md) — lists permission keys (used by the permission editor UI)
+* [IRolePermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IRolePermissionService.md) — role permission queries
+* [IUserProvider](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserProvider.md) — a combination of `IUserAccessor`, `IUserRetrieveService`, `IUserClaimCreator`, `IImpersonator`, `IRemoveCachedUser` and `IRemoveAll`
 
-As the framework itself doesn't have a default implementation for these abstractions, they should be provided in the application itself through dependency injection.
+The `Serenity.Extensions` package provides base implementations for most of these, which handle the common logic so your application only needs a small subclass:
 
-Serene / StartSharp applications have custom implementations and register them in `Startup.cs`:
+* `BaseUserRetrieveService<TRow>` — user retrieval from a `Users` table
+* `BasePermissionService<TUserPermissionRow, TUserRoleRow>` — permission checking against user/role permission tables, including `ITransientGrantor` support
+* `BaseRolePermissionService<TRolePermissionRow>` — role permission storage
+* `BasePermissionKeyLister` — permission key listing from `[NestedPermissionKeys]` classes
+
+Serene / StartSharp applications put their (thin) implementations of these in the `Modules/Common/AppServices` folder, under the `{ProjectName}.AppServices` namespace, and register them in `Startup.cs`:
 
 ```cs
-services.AddSingleton<IUserRetrieveService, 
-    AppServices.UserRetrieveService>();
-services.AddSingleton<IPermissionService,
-    AppServices.PermissionService>();
+services.AddSingleton<IPermissionService, AppServices.PermissionService>();
+services.AddSingleton<IPermissionKeyLister, AppServices.PermissionKeyLister>();
+services.AddSingleton<IRolePermissionService, AppServices.RolePermissionService>();
+services.AddSingleton<IUserPasswordValidator, AppServices.UserPasswordValidator>();
+services.AddUserProvider<AppServices.UserAccessor, AppServices.UserRetrieveService>();
 ```
 
+`AddUserProvider` registers the `IUserAccessor` / `IUserRetrieveService` implementations you specify, tries to register a default `IUserClaimCreator` (`DefaultUserClaimCreator`), and registers the combination `IUserProvider` service.
+
 You may have a look at these sample implementations before trying to write your own.
+
+### IUserRetrieveService and UserDefinition
+
+`IUserRetrieveService` is used to fetch a user's definition by their ID or username. Its interface is small:
+
+```cs
+public interface IUserRetrieveService
+{
+    IUserDefinition? ById(string id);
+    IUserDefinition? ByUsername(string username);
+}
+```
+
+It is implemented in `Serenity.Extensions` by `BaseUserRetrieveService<TRow>`, which loads the user row from the `Users` table. The application's `UserRetrieveService` (in `Modules/Common/AppServices/UserRetrieveService.cs`, namespace `{ProjectName}.AppServices`) only needs to tell the base class how to convert a user row into a user definition:
+
+```cs
+public class UserRetrieveService(ITwoLevelCache cache, ISqlConnections sqlConnections)
+    : BaseUserRetrieveService<MyRow>(cache, sqlConnections)
+{
+    protected override IUserDefinition ToUserDefinition(MyRow user)
+    {
+        return new UserDefinition
+        {
+            UserId = user.UserId.Value,
+            Username = user.Username,
+            Email = user.Email,
+            UserImage = user.UserImage,
+            DisplayName = user.DisplayName,
+            IsActive = user.IsActive.Value,
+            Source = user.Source,
+            PasswordHash = user.PasswordHash,
+            PasswordSalt = user.PasswordSalt,
+            UpdateDate = user.UpdateDate,
+            LastDirectoryUpdate = user.LastDirectoryUpdate
+        };
+    }
+}
+```
+
+#### UserDefinition
+
+The object returned by the retrieve service implements the [IUserDefinition](../api/dotnet/Serenity.Net.Core/Serenity/IUserDefinition.md) abstraction:
+
+```cs
+public interface IUserDefinition
+{
+    string Id { get; }
+    string Username { get; }
+    string DisplayName { get; }
+    string Email { get; }
+    short IsActive { get; }
+}
+```
+
+The template's `UserDefinition` class (in `Modules/Common/AppServices/Models/UserDefinition.cs`) implements `IUserDefinition` and `IHasPassword`, and adds app-specific members like `UserId`, `UserImage`, `PasswordHash`, `PasswordSalt`, `Source`, `UpdateDate`, `LastDirectoryUpdate`, and `HasPassword`.
+
+#### Caching Behavior
+
+`BaseUserRetrieveService<TRow>` caches user definitions in the local (two-level) cache:
+
+- Lookups are cached under `UserByID_<id>` and `UserByName_<lowercase username>` keys.
+- By default there is no expiry; entries stay cached until their cache group is invalidated.
+- The cache group key comes from the user row's `GenerationKey`, so cached users are cleared whenever the `Users` table generation changes.
+- The base class also implements `IRemoveCachedUser` (removes a single cached user) and `IRemoveAll` (clears the whole user cache group), which Serenity calls after user records are modified.
+
+### IUserProvider
+
+`IUserProvider` is a combination interface that merges the user-related abstractions into one:
+
+```cs
+public interface IUserProvider : IUserAccessor, IUserRetrieveService, IUserClaimCreator,
+    IImpersonator, IRemoveCachedUser, IRemoveAll
+{
+}
+```
+
+Its default implementation, `DefaultUserProvider`, delegates to the `IUserAccessor`, `IUserRetrieveService`, and `IUserClaimCreator` services registered in the container, and is registered by `AddUserProvider`.
+
+The main advantage is convenience: instead of injecting all those interfaces one by one into every class that needs the current user, user lookup, claim creation, or impersonation, you inject a single `IUserProvider`:
+
+```cs
+public class SomeService(IUserProvider users)
+{
+    public void DoSomething()
+    {
+        var current = users.User;                              // IUserAccessor
+        var admin = users.ByUsername("admin");                 // IUserRetrieveService
+        var principal = users.CreatePrincipal("admin", "Test"); // IUserClaimCreator
+        users.Impersonate(principal);                          // IImpersonator
+        users.RemoveCachedUser(id, username);                  // IRemoveCachedUser
+    }
+}
+```
+
+> Note: `DefaultUserProvider` implements `IImpersonator`, but its impersonation methods throw if the underlying `IUserAccessor` does not implement `IImpersonator`. The template's `UserAccessor` does, so impersonation works out of the box.
 
 ## Permission Keys
 
@@ -153,14 +262,7 @@ This can be useful to call a service that requires special permissions in the co
 
 `ImpersonatingUserAccessor` wraps any class implementing the `IUserAccessor` interface and adds an impersonation ability to that. 
 
-In recent versions, `AppServices.UserAccessor` class already has built-in impersonation support. Please check your `UserAccessor.cs` file to see if already implements the `IImpersonator` interface. 
-
-If not, you should register it by wrapping your UserAccessor implementation in the Startup.cs:
-
-```cs
-services.AddSingleton<IHttpContextItemsAccessor, HttpContextItemsAccessor>();
-services.AddSingletonWrapped<IUserAccessor, ImpersonatingUserAccessor, AppServices.UserAccessor>();
-```
+The template's `AppServices.UserAccessor` (in `Modules/Common/AppServices/UserAccessor.cs`, namespace `{ProjectName}.AppServices`) implements both `IUserAccessor` and `IImpersonator` out of the box, so no wrapping registration is required.
 
 Then anywhere you need temporary impersonation, you should cast the `IUserAccessor` service to `IImpersonator`:
 
@@ -212,14 +314,7 @@ We don't allow opening in the same browser window, as this would effectively mea
 
 Sometimes it would be better to temporarily (e.g. transiently) grant a user some permissions instead of impersonating an admin. [ITransientGrantor](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ITransientGrantor.md) interface and its default implementation [TransientGrantingPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Web/TransientGrantingPermissionService.md) can do just that.
 
-In recent versions, `AppServices.PermissionService` class already has built-in transient-grant support. Please check your `PermissionService.cs` file to see if already implements the `ITransientGrantor` interface. 
-
-If not, it requires wrapping the registration in `Startup.cs`:
-
-```cs
-services.AddSingleton<IHttpContextItemsAccessor, HttpContextItemsAccessor>();
-services.AddSingletonWrapped<IPermissionService, TransientGrantingPermissionService, AppServices.PermissionService>();
-```
+The template's `AppServices.PermissionService` (in `Modules/Common/AppServices/PermissionService.cs`) already has built-in transient-grant support: it derives from `BasePermissionService`, which implements `IPermissionService` and `ITransientGrantor`. No wrapping registration is required.
 
 Then you can use it in a similar way to impersonation:
 

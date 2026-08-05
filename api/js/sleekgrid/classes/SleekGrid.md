@@ -502,7 +502,7 @@ Defined in: [src/grid/sleekgrid.tsx:130](https://github.com/serenity-is/Serenity
 
 > **addCellCssStyles**(`key`, `hash`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2852](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2852)
+Defined in: [src/grid/sleekgrid.tsx:2853](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2853)
 
 #### Parameters
 
@@ -528,7 +528,7 @@ Defined in: [src/grid/sleekgrid.tsx:2852](https://github.com/serenity-is/Serenit
 
 > **autosizeColumns**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1209](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1209)
+Defined in: [src/grid/sleekgrid.tsx:1210](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1210)
 
 #### Returns
 
@@ -544,7 +544,7 @@ Defined in: [src/grid/sleekgrid.tsx:1209](https://github.com/serenity-is/Serenit
 
 > **cancelCurrentEdit**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:4010](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4010)
+Defined in: [src/grid/sleekgrid.tsx:4011](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4011)
 
 #### Returns
 
@@ -560,7 +560,7 @@ Defined in: [src/grid/sleekgrid.tsx:4010](https://github.com/serenity-is/Serenit
 
 > **canCellBeActive**(`row`, `cell`, `tab?`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3839](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3839)
+Defined in: [src/grid/sleekgrid.tsx:3840](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3840)
 
 #### Parameters
 
@@ -590,7 +590,7 @@ Defined in: [src/grid/sleekgrid.tsx:3839](https://github.com/serenity-is/Serenit
 
 > **canCellBeSelected**(`row`, `cell`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3886](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3886)
+Defined in: [src/grid/sleekgrid.tsx:3887](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3887)
 
 #### Parameters
 
@@ -616,7 +616,7 @@ Defined in: [src/grid/sleekgrid.tsx:3886](https://github.com/serenity-is/Serenit
 
 > **clearTextSelection**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3379](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3379)
+Defined in: [src/grid/sleekgrid.tsx:3380](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3380)
 
 #### Returns
 
@@ -632,7 +632,7 @@ Defined in: [src/grid/sleekgrid.tsx:3379](https://github.com/serenity-is/Serenit
 
 > **columnsResized**(`invalidate`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1049](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1049)
+Defined in: [src/grid/sleekgrid.tsx:1050](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1050)
 
 #### Parameters
 
@@ -654,7 +654,7 @@ Defined in: [src/grid/sleekgrid.tsx:1049](https://github.com/serenity-is/Serenit
 
 > **commitCurrentEdit**(`opt?`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3931](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3931)
+Defined in: [src/grid/sleekgrid.tsx:3932](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3932)
 
 #### Parameters
 
@@ -678,7 +678,7 @@ Defined in: [src/grid/sleekgrid.tsx:3931](https://github.com/serenity-is/Serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1126](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1126)
+Defined in: [src/grid/sleekgrid.tsx:1127](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1127)
 
 #### Returns
 
@@ -694,7 +694,7 @@ Defined in: [src/grid/sleekgrid.tsx:1126](https://github.com/serenity-is/Serenit
 
 > **editActiveCell**(`editor?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3436](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3436)
+Defined in: [src/grid/sleekgrid.tsx:3437](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3437)
 
 #### Parameters
 
@@ -716,7 +716,7 @@ Defined in: [src/grid/sleekgrid.tsx:3436](https://github.com/serenity-is/Serenit
 
 > **flashCell**(`row`, `cell`, `speed?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2887](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2887)
+Defined in: [src/grid/sleekgrid.tsx:2888](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2888)
 
 #### Parameters
 
@@ -746,7 +746,7 @@ Defined in: [src/grid/sleekgrid.tsx:2887](https://github.com/serenity-is/Serenit
 
 > **focus**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3282](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3282)
+Defined in: [src/grid/sleekgrid.tsx:3283](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3283)
 
 #### Returns
 
@@ -802,7 +802,7 @@ Defined in: [src/grid/sleekgrid.tsx:550](https://github.com/serenity-is/Serenity
 
 > **getActiveCell**(): [`RowCell`](../interfaces/RowCell.md)
 
-Defined in: [src/grid/sleekgrid.tsx:3560](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3560)
+Defined in: [src/grid/sleekgrid.tsx:3561](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3561)
 
 #### Returns
 
@@ -818,7 +818,7 @@ Defined in: [src/grid/sleekgrid.tsx:3560](https://github.com/serenity-is/Serenit
 
 > **getActiveCellNode**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:3568](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3568)
+Defined in: [src/grid/sleekgrid.tsx:3569](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3569)
 
 #### Returns
 
@@ -858,7 +858,7 @@ Defined in: [src/grid/sleekgrid.tsx:569](https://github.com/serenity-is/Serenity
 
 > **getAllColumns**(): [`Column`](../interfaces/Column.md)\<`TItem`\>[]
 
-Defined in: [src/grid/sleekgrid.tsx:1336](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1336)
+Defined in: [src/grid/sleekgrid.tsx:1337](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1337)
 
 Returns all columns in the grid, including hidden ones, the order might not match visible columns due to pinning, ordering etc.
 
@@ -918,7 +918,7 @@ Defined in: [src/grid/sleekgrid.tsx:532](https://github.com/serenity-is/Serenity
 
 > **getCellCssStyles**(`key`): [`CellStylesHash`](../type-aliases/CellStylesHash.md)
 
-Defined in: [src/grid/sleekgrid.tsx:2883](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2883)
+Defined in: [src/grid/sleekgrid.tsx:2884](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2884)
 
 #### Parameters
 
@@ -940,7 +940,7 @@ Defined in: [src/grid/sleekgrid.tsx:2883](https://github.com/serenity-is/Serenit
 
 > **getCellEditor**(): [`Editor`](../interfaces/Editor.md)
 
-Defined in: [src/grid/sleekgrid.tsx:3556](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3556)
+Defined in: [src/grid/sleekgrid.tsx:3557](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3557)
 
 #### Returns
 
@@ -956,7 +956,7 @@ Defined in: [src/grid/sleekgrid.tsx:3556](https://github.com/serenity-is/Serenit
 
 > **getCellFromEvent**(`e`): `object`
 
-Defined in: [src/grid/sleekgrid.tsx:3225](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3225)
+Defined in: [src/grid/sleekgrid.tsx:3226](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3226)
 
 #### Parameters
 
@@ -986,7 +986,7 @@ Defined in: [src/grid/sleekgrid.tsx:3225](https://github.com/serenity-is/Serenit
 
 > **getCellFromNode**(`cellNode`): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:3184](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3184)
+Defined in: [src/grid/sleekgrid.tsx:3185](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3185)
 
 #### Parameters
 
@@ -1008,7 +1008,7 @@ Defined in: [src/grid/sleekgrid.tsx:3184](https://github.com/serenity-is/Serenit
 
 > **getCellFromPoint**(`x`, `y`): `object`
 
-Defined in: [src/grid/sleekgrid.tsx:3167](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3167)
+Defined in: [src/grid/sleekgrid.tsx:3168](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3168)
 
 #### Parameters
 
@@ -1042,7 +1042,7 @@ Defined in: [src/grid/sleekgrid.tsx:3167](https://github.com/serenity-is/Serenit
 
 > **getCellNode**(`row`, `cell`): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:3804](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3804)
+Defined in: [src/grid/sleekgrid.tsx:3805](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3805)
 
 #### Parameters
 
@@ -1068,7 +1068,7 @@ Defined in: [src/grid/sleekgrid.tsx:3804](https://github.com/serenity-is/Serenit
 
 > **getCellNodeBox**(`row`, `cell`): `object`
 
-Defined in: [src/grid/sleekgrid.tsx:3245](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3245)
+Defined in: [src/grid/sleekgrid.tsx:3246](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3246)
 
 #### Parameters
 
@@ -1110,7 +1110,7 @@ Defined in: [src/grid/sleekgrid.tsx:3245](https://github.com/serenity-is/Serenit
 
 > **getColspan**(`row`, `cell`): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:3693](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3693)
+Defined in: [src/grid/sleekgrid.tsx:3694](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3694)
 
 #### Parameters
 
@@ -1136,7 +1136,7 @@ Defined in: [src/grid/sleekgrid.tsx:3693](https://github.com/serenity-is/Serenit
 
 > **getColumnById**(`id`): [`Column`](../interfaces/Column.md)\<`TItem`\>
 
-Defined in: [src/grid/sleekgrid.tsx:1201](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1201)
+Defined in: [src/grid/sleekgrid.tsx:1202](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1202)
 
 Gets a column by its ID. May also return hidden columns.
 
@@ -1160,7 +1160,7 @@ Gets a column by its ID. May also return hidden columns.
 
 > **getColumnFromNode**(`cellNode`): [`Column`](../interfaces/Column.md)\<`TItem`\>
 
-Defined in: [src/grid/sleekgrid.tsx:3200](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3200)
+Defined in: [src/grid/sleekgrid.tsx:3201](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3201)
 
 #### Parameters
 
@@ -1182,7 +1182,7 @@ Defined in: [src/grid/sleekgrid.tsx:3200](https://github.com/serenity-is/Serenit
 
 > **getColumnIndex**(`id`, `opt?`): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:1205](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1205)
+Defined in: [src/grid/sleekgrid.tsx:1206](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1206)
 
 Returns a column's index in the visible columns list by its column ID. If opt.inAll is true, it will return index in all columns.
 
@@ -1212,7 +1212,7 @@ Returns a column's index in the visible columns list by its column ID. If opt.in
 
 > **getColumns**(): [`Column`](../interfaces/Column.md)\<`TItem`\>[]
 
-Defined in: [src/grid/sleekgrid.tsx:1340](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1340)
+Defined in: [src/grid/sleekgrid.tsx:1341](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1341)
 
 Returns only the visible columns in order
 
@@ -1230,7 +1230,7 @@ Returns only the visible columns in order
 
 > **getContainerNode**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:1681](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1681)
+Defined in: [src/grid/sleekgrid.tsx:1682](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1682)
 
 #### Returns
 
@@ -1246,7 +1246,7 @@ Defined in: [src/grid/sleekgrid.tsx:1681](https://github.com/serenity-is/Serenit
 
 > **getData**(): `any`
 
-Defined in: [src/grid/sleekgrid.tsx:1611](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1611)
+Defined in: [src/grid/sleekgrid.tsx:1612](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1612)
 
 #### Returns
 
@@ -1262,7 +1262,7 @@ Defined in: [src/grid/sleekgrid.tsx:1611](https://github.com/serenity-is/Serenit
 
 > **getDataItem**(`row`): `TItem`
 
-Defined in: [src/grid/sleekgrid.tsx:1628](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1628)
+Defined in: [src/grid/sleekgrid.tsx:1629](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1629)
 
 #### Parameters
 
@@ -1284,7 +1284,7 @@ Defined in: [src/grid/sleekgrid.tsx:1628](https://github.com/serenity-is/Serenit
 
 > **getDataItemValueForColumn**(`item`, `columnDef`): `any`
 
-Defined in: [src/grid/sleekgrid.tsx:1834](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1834)
+Defined in: [src/grid/sleekgrid.tsx:1835](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1835)
 
 #### Parameters
 
@@ -1310,7 +1310,7 @@ Defined in: [src/grid/sleekgrid.tsx:1834](https://github.com/serenity-is/Serenit
 
 > **getDataLength**(): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:1615](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1615)
+Defined in: [src/grid/sleekgrid.tsx:1616](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1616)
 
 #### Returns
 
@@ -1350,7 +1350,7 @@ Defined in: [src/grid/sleekgrid.tsx:491](https://github.com/serenity-is/Serenity
 
 > **getEditController**(): [`EditController`](../interfaces/EditController.md)
 
-Defined in: [src/grid/sleekgrid.tsx:1197](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1197)
+Defined in: [src/grid/sleekgrid.tsx:1198](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1198)
 
 #### Returns
 
@@ -1366,7 +1366,7 @@ Defined in: [src/grid/sleekgrid.tsx:1197](https://github.com/serenity-is/Serenit
 
 > **getEditorFactory**(): [`EditorFactory`](../interfaces/EditorFactory.md)
 
-Defined in: [src/grid/sleekgrid.tsx:1189](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1189)
+Defined in: [src/grid/sleekgrid.tsx:1190](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1190)
 
 #### Returns
 
@@ -1382,7 +1382,7 @@ Defined in: [src/grid/sleekgrid.tsx:1189](https://github.com/serenity-is/Serenit
 
 > **getEditorLock**(): [`EditorLock`](EditorLock.md)
 
-Defined in: [src/grid/sleekgrid.tsx:1193](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1193)
+Defined in: [src/grid/sleekgrid.tsx:1194](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1194)
 
 #### Returns
 
@@ -1436,7 +1436,7 @@ Defined in: [src/grid/sleekgrid.tsx:792](https://github.com/serenity-is/Serenity
 
 > **getFormatter**(`row`, `column`): [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
-Defined in: [src/grid/sleekgrid.tsx:1736](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1736)
+Defined in: [src/grid/sleekgrid.tsx:1737](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1737)
 
 #### Parameters
 
@@ -1462,7 +1462,7 @@ Defined in: [src/grid/sleekgrid.tsx:1736](https://github.com/serenity-is/Serenit
 
 > **getFormatterContext**(`row`, `cell`): [`FormatterContext`](../interfaces/FormatterContext.md)
 
-Defined in: [src/grid/sleekgrid.tsx:1789](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1789)
+Defined in: [src/grid/sleekgrid.tsx:1790](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1790)
 
 #### Parameters
 
@@ -1488,7 +1488,7 @@ Defined in: [src/grid/sleekgrid.tsx:1789](https://github.com/serenity-is/Serenit
 
 > **getGridPosition**(): [`Position`](../interfaces/Position.md)
 
-Defined in: [src/grid/sleekgrid.tsx:3529](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3529)
+Defined in: [src/grid/sleekgrid.tsx:3530](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3530)
 
 #### Returns
 
@@ -1612,7 +1612,7 @@ Defined in: [src/grid/sleekgrid.tsx:517](https://github.com/serenity-is/Serenity
 
 > **getOptions**(): [`GridOptions`](../interfaces/GridOptions.md)\<`TItem`\>
 
-Defined in: [src/grid/sleekgrid.tsx:1499](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1499)
+Defined in: [src/grid/sleekgrid.tsx:1500](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1500)
 
 #### Returns
 
@@ -1666,7 +1666,7 @@ Defined in: [src/grid/sleekgrid.tsx:769](https://github.com/serenity-is/Serenity
 
 > **getRenderedRange**(`viewportTop?`, `viewportLeft?`): [`ViewRange`](../interfaces/ViewRange.md)
 
-Defined in: [src/grid/sleekgrid.tsx:2190](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2190)
+Defined in: [src/grid/sleekgrid.tsx:2191](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2191)
 
 #### Parameters
 
@@ -1692,7 +1692,7 @@ Defined in: [src/grid/sleekgrid.tsx:2190](https://github.com/serenity-is/Serenit
 
 > **getRowFromNode**(`rowNode`): `number`
 
-Defined in: [src/grid/sleekgrid.tsx:3211](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3211)
+Defined in: [src/grid/sleekgrid.tsx:3212](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3212)
 
 #### Parameters
 
@@ -1738,7 +1738,7 @@ Defined in: [src/grid/sleekgrid.tsx:487](https://github.com/serenity-is/Serenity
 
 > **getScrollContainerX**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:2064](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2064)
+Defined in: [src/grid/sleekgrid.tsx:2065](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2065)
 
 #### Returns
 
@@ -1750,7 +1750,7 @@ Defined in: [src/grid/sleekgrid.tsx:2064](https://github.com/serenity-is/Serenit
 
 > **getScrollContainerY**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:2068](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2068)
+Defined in: [src/grid/sleekgrid.tsx:2069](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2069)
 
 #### Returns
 
@@ -1762,7 +1762,7 @@ Defined in: [src/grid/sleekgrid.tsx:2068](https://github.com/serenity-is/Serenit
 
 > **getSelectedRows**(): `number`[]
 
-Defined in: [src/grid/sleekgrid.tsx:4024](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4024)
+Defined in: [src/grid/sleekgrid.tsx:4025](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4025)
 
 #### Returns
 
@@ -1794,7 +1794,7 @@ Defined in: [src/grid/sleekgrid.tsx:502](https://github.com/serenity-is/Serenity
 
 > **getSortColumns**(): [`ColumnSort`](../interfaces/ColumnSort.md)[]
 
-Defined in: [src/grid/sleekgrid.tsx:1275](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1275)
+Defined in: [src/grid/sleekgrid.tsx:1276](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1276)
 
 #### Returns
 
@@ -1810,7 +1810,7 @@ Defined in: [src/grid/sleekgrid.tsx:1275](https://github.com/serenity-is/Serenit
 
 > **getTopPanel**(): `HTMLElement`
 
-Defined in: [src/grid/sleekgrid.tsx:1636](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1636)
+Defined in: [src/grid/sleekgrid.tsx:1637](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1637)
 
 #### Returns
 
@@ -1826,7 +1826,7 @@ Defined in: [src/grid/sleekgrid.tsx:1636](https://github.com/serenity-is/Serenit
 
 > **getTotalsFormatter**(`column`): [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
-Defined in: [src/grid/sleekgrid.tsx:1802](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1802)
+Defined in: [src/grid/sleekgrid.tsx:1803](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1803)
 
 #### Parameters
 
@@ -1848,7 +1848,7 @@ Defined in: [src/grid/sleekgrid.tsx:1802](https://github.com/serenity-is/Serenit
 
 > **getUID**(): `string`
 
-Defined in: [src/grid/sleekgrid.tsx:1685](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1685)
+Defined in: [src/grid/sleekgrid.tsx:1686](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1686)
 
 #### Returns
 
@@ -1864,7 +1864,7 @@ Defined in: [src/grid/sleekgrid.tsx:1685](https://github.com/serenity-is/Serenit
 
 > **getViewport**(`viewportTop?`, `viewportLeft?`): [`ViewRange`](../interfaces/ViewRange.md)
 
-Defined in: [src/grid/sleekgrid.tsx:2168](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2168)
+Defined in: [src/grid/sleekgrid.tsx:2169](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2169)
 
 Gets the viewport range
 
@@ -1918,7 +1918,7 @@ Defined in: [src/grid/sleekgrid.tsx:557](https://github.com/serenity-is/Serenity
 
 > **getVisibleRange**(`viewportTop?`, `viewportLeft?`): [`ViewRange`](../interfaces/ViewRange.md)
 
-Defined in: [src/grid/sleekgrid.tsx:2172](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2172)
+Defined in: [src/grid/sleekgrid.tsx:2173](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2173)
 
 #### Parameters
 
@@ -1944,7 +1944,7 @@ Defined in: [src/grid/sleekgrid.tsx:2172](https://github.com/serenity-is/Serenit
 
 > **gotoCell**(`row`, `cell`, `forceEdit?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3905](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3905)
+Defined in: [src/grid/sleekgrid.tsx:3906](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3906)
 
 #### Parameters
 
@@ -1990,7 +1990,7 @@ Defined in: [src/grid/sleekgrid.tsx:327](https://github.com/serenity-is/Serenity
 
 > **invalidate**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1852](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1852)
+Defined in: [src/grid/sleekgrid.tsx:1853](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1853)
 
 #### Returns
 
@@ -2006,7 +2006,7 @@ Defined in: [src/grid/sleekgrid.tsx:1852](https://github.com/serenity-is/Serenit
 
 > **invalidateAllRows**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1859](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1859)
+Defined in: [src/grid/sleekgrid.tsx:1860](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1860)
 
 #### Returns
 
@@ -2022,7 +2022,7 @@ Defined in: [src/grid/sleekgrid.tsx:1859](https://github.com/serenity-is/Serenit
 
 > **invalidateColumns**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1478](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1478)
+Defined in: [src/grid/sleekgrid.tsx:1479](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1479)
 
 Invalidates various elements after properties of columns have changed.
 Call this if you change columns properties that don't require a full setColumns call (e.g. width, name, visible etc.)
@@ -2041,7 +2041,7 @@ Call this if you change columns properties that don't require a full setColumns 
 
 > **invalidateRow**(`row`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1948](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1948)
+Defined in: [src/grid/sleekgrid.tsx:1949](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1949)
 
 #### Parameters
 
@@ -2063,7 +2063,7 @@ Defined in: [src/grid/sleekgrid.tsx:1948](https://github.com/serenity-is/Serenit
 
 > **invalidateRows**(`rows`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1930](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1930)
+Defined in: [src/grid/sleekgrid.tsx:1931](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1931)
 
 #### Parameters
 
@@ -2085,7 +2085,7 @@ Defined in: [src/grid/sleekgrid.tsx:1930](https://github.com/serenity-is/Serenit
 
 > **navigate**(`dir`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3755](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3755)
+Defined in: [src/grid/sleekgrid.tsx:3756](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3756)
 
 Navigate the active cell in the specified direction.
 
@@ -2113,7 +2113,7 @@ Whether navigation resulted in a change of active cell.
 
 > **navigateBottom**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3656](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3656)
+Defined in: [src/grid/sleekgrid.tsx:3657](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3657)
 
 #### Returns
 
@@ -2129,7 +2129,7 @@ Defined in: [src/grid/sleekgrid.tsx:3656](https://github.com/serenity-is/Serenit
 
 > **navigateDown**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3719](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3719)
+Defined in: [src/grid/sleekgrid.tsx:3720](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3720)
 
 #### Returns
 
@@ -2145,7 +2145,7 @@ Defined in: [src/grid/sleekgrid.tsx:3719](https://github.com/serenity-is/Serenit
 
 > **navigateLeft**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3715](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3715)
+Defined in: [src/grid/sleekgrid.tsx:3716](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3716)
 
 #### Returns
 
@@ -2161,7 +2161,7 @@ Defined in: [src/grid/sleekgrid.tsx:3715](https://github.com/serenity-is/Serenit
 
 > **navigateNext**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3727](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3727)
+Defined in: [src/grid/sleekgrid.tsx:3728](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3728)
 
 #### Returns
 
@@ -2177,7 +2177,7 @@ Defined in: [src/grid/sleekgrid.tsx:3727](https://github.com/serenity-is/Serenit
 
 > **navigatePageDown**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3644](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3644)
+Defined in: [src/grid/sleekgrid.tsx:3645](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3645)
 
 #### Returns
 
@@ -2193,7 +2193,7 @@ Defined in: [src/grid/sleekgrid.tsx:3644](https://github.com/serenity-is/Serenit
 
 > **navigatePageUp**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3648](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3648)
+Defined in: [src/grid/sleekgrid.tsx:3649](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3649)
 
 #### Returns
 
@@ -2209,7 +2209,7 @@ Defined in: [src/grid/sleekgrid.tsx:3648](https://github.com/serenity-is/Serenit
 
 > **navigatePrev**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3731](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3731)
+Defined in: [src/grid/sleekgrid.tsx:3732](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3732)
 
 #### Returns
 
@@ -2225,7 +2225,7 @@ Defined in: [src/grid/sleekgrid.tsx:3731](https://github.com/serenity-is/Serenit
 
 > **navigateRight**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3711](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3711)
+Defined in: [src/grid/sleekgrid.tsx:3712](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3712)
 
 #### Returns
 
@@ -2241,7 +2241,7 @@ Defined in: [src/grid/sleekgrid.tsx:3711](https://github.com/serenity-is/Serenit
 
 > **navigateRowEnd**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3739](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3739)
+Defined in: [src/grid/sleekgrid.tsx:3740](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3740)
 
 #### Returns
 
@@ -2257,7 +2257,7 @@ Defined in: [src/grid/sleekgrid.tsx:3739](https://github.com/serenity-is/Serenit
 
 > **navigateRowStart**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3735](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3735)
+Defined in: [src/grid/sleekgrid.tsx:3736](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3736)
 
 #### Returns
 
@@ -2273,7 +2273,7 @@ Defined in: [src/grid/sleekgrid.tsx:3735](https://github.com/serenity-is/Serenit
 
 > **navigateTop**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3652](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3652)
+Defined in: [src/grid/sleekgrid.tsx:3653](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3653)
 
 #### Returns
 
@@ -2289,7 +2289,7 @@ Defined in: [src/grid/sleekgrid.tsx:3652](https://github.com/serenity-is/Serenit
 
 > **navigateToRow**(`row`): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3660](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3660)
+Defined in: [src/grid/sleekgrid.tsx:3661](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3661)
 
 #### Parameters
 
@@ -2311,7 +2311,7 @@ Defined in: [src/grid/sleekgrid.tsx:3660](https://github.com/serenity-is/Serenit
 
 > **navigateUp**(): `boolean`
 
-Defined in: [src/grid/sleekgrid.tsx:3723](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3723)
+Defined in: [src/grid/sleekgrid.tsx:3724](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3724)
 
 #### Returns
 
@@ -2327,7 +2327,7 @@ Defined in: [src/grid/sleekgrid.tsx:3723](https://github.com/serenity-is/Serenit
 
 > `protected` **prepareForOptionsChange**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1503](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1503)
+Defined in: [src/grid/sleekgrid.tsx:1504](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1504)
 
 #### Returns
 
@@ -2361,7 +2361,7 @@ Defined in: [src/grid/sleekgrid.tsx:445](https://github.com/serenity-is/Serenity
 
 > **removeCellCssStyles**(`key`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2863](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2863)
+Defined in: [src/grid/sleekgrid.tsx:2864](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2864)
 
 #### Parameters
 
@@ -2383,7 +2383,7 @@ Defined in: [src/grid/sleekgrid.tsx:2863](https://github.com/serenity-is/Serenit
 
 > **render**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2573](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2573)
+Defined in: [src/grid/sleekgrid.tsx:2574](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2574)
 
 #### Returns
 
@@ -2399,7 +2399,7 @@ Defined in: [src/grid/sleekgrid.tsx:2573](https://github.com/serenity-is/Serenit
 
 > **reorderColumns**(`columnIds`, `opt?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1455](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1455)
+Defined in: [src/grid/sleekgrid.tsx:1456](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1456)
 
 Reorders columns based on their IDs and notifies onColumnsReordered by default.
 
@@ -2436,7 +2436,7 @@ This function is used by column picker and other plugins to reorder columns and 
 
 > **resetActiveCell**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3278](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3278)
+Defined in: [src/grid/sleekgrid.tsx:3279](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3279)
 
 #### Returns
 
@@ -2452,7 +2452,7 @@ Defined in: [src/grid/sleekgrid.tsx:3278](https://github.com/serenity-is/Serenit
 
 > **resizeCanvas**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2036](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2036)
+Defined in: [src/grid/sleekgrid.tsx:2037](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2037)
 
 #### Returns
 
@@ -2468,7 +2468,7 @@ Defined in: [src/grid/sleekgrid.tsx:2036](https://github.com/serenity-is/Serenit
 
 > **scrollActiveCellIntoView**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3572](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3572)
+Defined in: [src/grid/sleekgrid.tsx:3573](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3573)
 
 #### Returns
 
@@ -2484,7 +2484,7 @@ Defined in: [src/grid/sleekgrid.tsx:3572](https://github.com/serenity-is/Serenit
 
 > **scrollCellIntoView**(`row`, `cell`, `doPaging?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3294](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3294)
+Defined in: [src/grid/sleekgrid.tsx:3295](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3295)
 
 #### Parameters
 
@@ -2514,7 +2514,7 @@ Defined in: [src/grid/sleekgrid.tsx:3294](https://github.com/serenity-is/Serenit
 
 > **scrollColumnIntoView**(`cell`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3305](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3305)
+Defined in: [src/grid/sleekgrid.tsx:3306](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3306)
 
 #### Parameters
 
@@ -2536,7 +2536,7 @@ Defined in: [src/grid/sleekgrid.tsx:3305](https://github.com/serenity-is/Serenit
 
 > **scrollRowIntoView**(`row`, `doPaging?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3578](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3578)
+Defined in: [src/grid/sleekgrid.tsx:3579](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3579)
 
 #### Parameters
 
@@ -2562,7 +2562,7 @@ Defined in: [src/grid/sleekgrid.tsx:3578](https://github.com/serenity-is/Serenit
 
 > **scrollRowToTop**(`row`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3606](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3606)
+Defined in: [src/grid/sleekgrid.tsx:3607](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3607)
 
 #### Parameters
 
@@ -2584,7 +2584,7 @@ Defined in: [src/grid/sleekgrid.tsx:3606](https://github.com/serenity-is/Serenit
 
 > **setActiveCell**(`row`, `cell`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3812](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3812)
+Defined in: [src/grid/sleekgrid.tsx:3813](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3813)
 
 #### Parameters
 
@@ -2610,7 +2610,7 @@ Defined in: [src/grid/sleekgrid.tsx:3812](https://github.com/serenity-is/Serenit
 
 > **setActiveRow**(`row`, `cell`, `suppressScrollIntoView?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:3827](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3827)
+Defined in: [src/grid/sleekgrid.tsx:3828](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L3828)
 
 #### Parameters
 
@@ -2640,7 +2640,7 @@ Defined in: [src/grid/sleekgrid.tsx:3827](https://github.com/serenity-is/Serenit
 
 > **setCellCssStyles**(`key`, `hash`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2874](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2874)
+Defined in: [src/grid/sleekgrid.tsx:2875](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2875)
 
 #### Parameters
 
@@ -2666,7 +2666,7 @@ Defined in: [src/grid/sleekgrid.tsx:2874](https://github.com/serenity-is/Serenit
 
 > **setColumnHeaderVisibility**(`visible`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1647](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1647)
+Defined in: [src/grid/sleekgrid.tsx:1648](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1648)
 
 #### Parameters
 
@@ -2688,7 +2688,7 @@ Defined in: [src/grid/sleekgrid.tsx:1647](https://github.com/serenity-is/Serenit
 
 > **setColumns**(`columns`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1422](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1422)
+Defined in: [src/grid/sleekgrid.tsx:1423](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1423)
 
 #### Parameters
 
@@ -2710,7 +2710,7 @@ Defined in: [src/grid/sleekgrid.tsx:1422](https://github.com/serenity-is/Serenit
 
 > **setData**(`newData`, `scrollToTop?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1600](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1600)
+Defined in: [src/grid/sleekgrid.tsx:1601](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1601)
 
 #### Parameters
 
@@ -2736,7 +2736,7 @@ Defined in: [src/grid/sleekgrid.tsx:1600](https://github.com/serenity-is/Serenit
 
 > **setFooterRowVisibility**(`visible`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1654](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1654)
+Defined in: [src/grid/sleekgrid.tsx:1655](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1655)
 
 #### Parameters
 
@@ -2758,7 +2758,7 @@ Defined in: [src/grid/sleekgrid.tsx:1654](https://github.com/serenity-is/Serenit
 
 > **setGroupingPanelVisibility**(`visible`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1662](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1662)
+Defined in: [src/grid/sleekgrid.tsx:1663](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1663)
 
 #### Parameters
 
@@ -2780,7 +2780,7 @@ Defined in: [src/grid/sleekgrid.tsx:1662](https://github.com/serenity-is/Serenit
 
 > **setHeaderRowVisibility**(`visible`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1674](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1674)
+Defined in: [src/grid/sleekgrid.tsx:1675](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1675)
 
 #### Parameters
 
@@ -2802,7 +2802,7 @@ Defined in: [src/grid/sleekgrid.tsx:1674](https://github.com/serenity-is/Serenit
 
 > **setOptions**(`args`, `suppressRender?`, `suppressColumnSet?`, `suppressSetOverflow?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1513](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1513)
+Defined in: [src/grid/sleekgrid.tsx:1514](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1514)
 
 #### Parameters
 
@@ -2836,7 +2836,7 @@ Defined in: [src/grid/sleekgrid.tsx:1513](https://github.com/serenity-is/Serenit
 
 > **setPreHeaderPanelVisibility**(`visible`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1670](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1670)
+Defined in: [src/grid/sleekgrid.tsx:1671](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1671)
 
 #### Parameters
 
@@ -2858,7 +2858,7 @@ Defined in: [src/grid/sleekgrid.tsx:1670](https://github.com/serenity-is/Serenit
 
 > **setSelectedRows**(`rows`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:4031](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4031)
+Defined in: [src/grid/sleekgrid.tsx:4032](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L4032)
 
 #### Parameters
 
@@ -2902,7 +2902,7 @@ Defined in: [src/grid/sleekgrid.tsx:469](https://github.com/serenity-is/Serenity
 
 > **setSortColumn**(`columnId`, `ascending`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1240](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1240)
+Defined in: [src/grid/sleekgrid.tsx:1241](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1241)
 
 #### Parameters
 
@@ -2928,7 +2928,7 @@ Defined in: [src/grid/sleekgrid.tsx:1240](https://github.com/serenity-is/Serenit
 
 > **setSortColumns**(`cols`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1244](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1244)
+Defined in: [src/grid/sleekgrid.tsx:1245](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1245)
 
 #### Parameters
 
@@ -2950,7 +2950,7 @@ Defined in: [src/grid/sleekgrid.tsx:1244](https://github.com/serenity-is/Serenit
 
 > **setTopPanelVisibility**(`visible`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1640](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1640)
+Defined in: [src/grid/sleekgrid.tsx:1641](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1641)
 
 #### Parameters
 
@@ -2972,7 +2972,7 @@ Defined in: [src/grid/sleekgrid.tsx:1640](https://github.com/serenity-is/Serenit
 
 > **setVisibleColumns**(`columnIds`, `opt?`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1465](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1465)
+Defined in: [src/grid/sleekgrid.tsx:1466](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1466)
 
 Sets the visible columns based on their IDs and reorders them to provided order
 unless specified otherwise.
@@ -3034,7 +3034,7 @@ Defined in: [src/grid/sleekgrid.tsx:450](https://github.com/serenity-is/Serenity
 
 > **updateCell**(`row`, `cell`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1952](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1952)
+Defined in: [src/grid/sleekgrid.tsx:1953](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1953)
 
 #### Parameters
 
@@ -3090,7 +3090,7 @@ Defined in: [src/grid/sleekgrid.tsx:697](https://github.com/serenity-is/Serenity
 
 > **updatePagingStatusFromView**(`pagingInfo`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2059](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2059)
+Defined in: [src/grid/sleekgrid.tsx:2060](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2060)
 
 #### Parameters
 
@@ -3122,7 +3122,7 @@ Defined in: [src/grid/sleekgrid.tsx:2059](https://github.com/serenity-is/Serenit
 
 > **updateRow**(`row`): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:1978](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1978)
+Defined in: [src/grid/sleekgrid.tsx:1979](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L1979)
 
 #### Parameters
 
@@ -3144,7 +3144,7 @@ Defined in: [src/grid/sleekgrid.tsx:1978](https://github.com/serenity-is/Serenit
 
 > **updateRowCount**(): `void`
 
-Defined in: [src/grid/sleekgrid.tsx:2072](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2072)
+Defined in: [src/grid/sleekgrid.tsx:2073](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/grid/sleekgrid.tsx#L2073)
 
 #### Returns
 

@@ -6,14 +6,14 @@ Serenity is deeply integrated with the built-in Dependency Injection feature of 
 
 We provide some extension methods to easily configure the default Serenity services in *Serenity.Extensions.DependencyInjection* namespace of some Serenity assemblies:
 
-| assembly          | class |
-| ----------------- | ----- |
-| Serenity.Core     | [CoreServiceCollectionExtensions](../api/dotnet/Serenity.Net.Core/Serenity.Extensions.DependencyInjection/CoreServiceCollectionExtensions.md) |
-| Serenity.Data     | [DataServiceCollectionExtensions](../api/dotnet/Serenity.Net.Data/Serenity.Extensions.DependencyInjection/DataServiceCollectionExtensions.md) |
-| Serenity.Entity   | [EntityServiceCollectionExtensions](../api/dotnet/Serenity.Net.Entity/Serenity.Extensions.DependencyInjection/EntityServiceCollectionExtensions.md) |
-| Serenity.Services | [ServiceCollectionExtensions](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/ServiceCollectionExtensions.md) |
-| Serenity.Web      | [DynamicScriptServiceCollectionExtensions](../api/dotnet/Serenity.Net.Web/Serenity.Extensions.DependencyInjection/DynamicScriptServiceCollectionExtensions.md) |
-| Serenity.Web      | [UploadServiceCollectionExtensions](../api/dotnet/Serenity.Net.Web/Serenity.Web/UploadServiceCollectionExtensions.md)| 
+| assembly              | class |
+| --------------------- | ----- |
+| Serenity.Net.Core     | [CoreServiceCollectionExtensions](../api/dotnet/Serenity.Net.Core/Serenity.Extensions.DependencyInjection/CoreServiceCollectionExtensions.md) |
+| Serenity.Net.Services | [DataServiceCollectionExtensions](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/DataServiceCollectionExtensions.md) |
+| Serenity.Net.Services | [EntityServiceCollectionExtensions](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/EntityServiceCollectionExtensions.md) |
+| Serenity.Net.Services | [ServiceCollectionExtensions](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/ServiceCollectionExtensions.md) |
+| Serenity.Net.Web      | [DynamicScriptServiceCollectionExtensions](../api/dotnet/Serenity.Net.Web/Serenity.Extensions.DependencyInjection/DynamicScriptServiceCollectionExtensions.md) |
+| Serenity.Net.Web      | [UploadServiceCollectionExtensions](../api/dotnet/Serenity.Net.Web/Serenity.Web/UploadServiceCollectionExtensions.md)| 
 
 These extension methods are generally called inside the `Startup.cs` file to register default implementations of the Serenity service abstractions:
 
@@ -40,6 +40,6 @@ services.AddScriptBundling();
 
 See the document below for more info about DI in the ASP.NET Core framework:
 
-[Dependency injection in ASP.NET Core - learn.microsoft.com](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-7.0)
+[Dependency injection in ASP.NET Core - learn.microsoft.com](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0)
 
 > Before v5, Serenity used to have a service location container, but since then we completely migrated to .NET DI.

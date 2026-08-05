@@ -49,6 +49,7 @@
     * [Extending Multi-Tenant Behavior To Movie Sample](tutorials/multi_tenancy/extending_multi-tenant_behavior_to_movie_database_sample.md)
     * [Handling Lookup Scripts](tutorials/multi_tenancy/handling_lookup_scripts.md)
 * Framework Features
+  * [Initialization and Startup](framework/initialization.md)
   * [Dependency Injection](framework/dependency-injection.md)
   * [Configuration](framework/configuration.md)
   * [Authentication & Authorization](framework/authorization.md)

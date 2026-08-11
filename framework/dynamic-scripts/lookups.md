@@ -4,7 +4,7 @@ In computer science, a lookup table (LUT) is an array that replaces runtime comp
 
 Lookups in Serenity are an array of objects, e.g. an in-memory table, sorted by default in a natural order like the `Name` column, suitable for display in a dropdown, in addition to the ability to access a particular item quickly via its `ID` property. Some people might call them `"reference tables"`.
 
-## Q.Lookup Class
+## Lookup Class
 
 Before explaining what a `Lookup Script` is, we should first look at the `Lookup` TypeScript class in the `@serenity-is/corelib` package:
 
@@ -30,7 +30,7 @@ It has a constructor accepting an options object with information about the `"id
 Let's create a lookup object for a set of languages.
 
 ```ts
-var languages = new Q.Lookup({
+var languages = new Lookup({
     idField: 'Code',
     textField: 'Name',
 }, [
@@ -74,16 +74,16 @@ If we populated an ordinary `SELECT` element's options via this lookup, it would
 
 The `Lookup` class was originally designed to populate dropdown items; while providing some additional features like accessing an item by its ID, being able to read properties of the items other than the ID and Text, and providing a way to raise notifications when the source data changes so that the dropdowns which reference the lookup can update their options.
 
-## Q.ScriptData Registry
+## ScriptData Registry
 
-`Q.ScriptData` is a central registry for named data objects like lookups. You may think of it as a version of the `IDynamicScriptManager` that works client-side.
+`ScriptData` is a central registry for named data objects like lookups. You may think of it as a version of the `IDynamicScriptManager` that works client-side.
 
 Let's register our language lookup with a custom key:
 
 ![ScriptData Lookup Register](img/scriptdata-lookup-register.png)
 
 
-`Q.ScriptData.set` method registers an object with the specified key which is passed as `Lookup.MyLanguages` in the sample above.
+`ScriptData.set` method registers an object with the specified key which is passed as `Lookup.MyLanguages` in the sample above.
 
 `"Lookup."` is the standard prefix for lookup objects in the `ScriptData` registry.
 
@@ -93,21 +93,21 @@ Let's see what happens if we try to get a lookup that does not exist:
 
 ![Non-existent lookup in the console](img/non-existent-lookup-console.png)
 
-As seen in the screenshot above, the `Q.getLookup` function tried to load the lookup from the server via a call to the URL `~/DynJS.axd/Lookup.MyFriends.js`. As the dynamic script manager has no script registered with the name `"Lookup.MyFriends"`, it responded with a `404`, e.g. `Not Found`.
+As seen in the screenshot above, the `getLookup` function tried to load the lookup from the server via a call to the URL `~/DynJS.axd/Lookup.MyFriends.js`. As the dynamic script manager has no script registered with the name `"Lookup.MyFriends"`, it responded with a `404`, e.g. `Not Found`.
 
 Then, our client-side error handler kicked in and tried to inform you about a possible typo or forgetting to add a `LookupScript` attribute on one of your entity objects server-side.
 
-> ## Warning: Q.getLookup is Obsolete
+> ## Warning: getLookup is Obsolete
 > 
-> You should note that the `Q.getLookup` method is obsolete, and you should prefer the `Q.getLookupAsync` instead. We merely use it here for sampling.
+> You should note that the `getLookup` method is obsolete, and you should prefer the `getLookupAsync` instead. We merely use it here for sampling.
 > 
 > The first one does a synchronous XHR request, blocking the main browser UI thread, while the second one works asynchronously and returns a promise.
 > 
-> If you use `Q.getLookup` you'll be blocking the browser tab while the request is in progress, and will get a warning in the browser console like the one below:
+> If you use `getLookup` you'll be blocking the browser tab while the request is in progress, and will get a warning in the browser console like the one below:
 > 
 > ![Sync request is deprecated](img/sync-request-deprecated.png)
 > 
-> For compatibility reasons, we can't remove the `Q.getLookup` method or the `MyRow.getLookup()` variants that call it, but you should avoid using them where possible.
+> For compatibility reasons, we can't remove the `getLookup` method or the `MyRow.getLookup()` variants that call it, but you should avoid using them where possible.
 
 ## Contents of a Lookup Script
 
@@ -117,11 +117,11 @@ Let's see what is returned from `DynJS.axd` for an actual lookup script:
 
 The above screenshot displays what is returned for `"Lookup.Administration.Language"` which is defined on the `LanguageRow` using the `[LookupScript]` attribute.
 
-You should notice that it is very similar to the one we defined for our custom language lookup, containing a `Q.ScriptData.set` statement with some options and an array of language items.
+You should notice that it is very similar to the one we defined for our custom language lookup, containing a `ScriptData.set` statement with some options and an array of language items.
 
-Most dynamic scripts contain such a simple `Q.ScriptData.set` block with a key based on the script type and name. The remaining content is merely a JSON serialized array of objects.
+Most dynamic scripts contain such a simple `ScriptData.set` block with a key based on the script type and name. The remaining content is merely a JSON serialized array of objects.
 
-If we wanted to get the data part only in JSON format, e.g. without the `Q.ScriptData.set` part, we could use the `DynamicData` endpoint instead of the `DynJS`:
+If we wanted to get the data part only in JSON format, e.g. without the `ScriptData.set` part, we could use the `DynamicData` endpoint instead of the `DynJS`:
 
 ![Dynamic Data - Languages](img/dynamic-data-languages.png)
 
@@ -273,13 +273,13 @@ We set the permission to `*` in the constructor to allow anonymous users to acce
 
 ## Lookup Loading Process
 
-As we saw in our previous sample, the lookups will be automatically loaded from the `DynJS` endpoint when they are requested first time via `Q.getLookup` or `Q.getLookupAsync` calls.
+As we saw in our previous sample, the lookups will be automatically loaded from the `DynJS` endpoint when they are requested first time via `getLookup` or `getLookupAsync` calls.
 
-Once a lookup gets loaded on the current page, it will be cached in memory (e.g. in Q.ScriptData dictionary), and the next time it is requested via `Q.getLookup` or `Q.getLookupAsync` the memory cached version, without calling the `DynJS` endpoint.
+Once a lookup gets loaded on the current page, it will be cached in memory (e.g. in ScriptData dictionary), and the next time it is requested via `getLookup` or `getLookupAsync` the memory cached version, without calling the `DynJS` endpoint.
 
 In some cases, even if the script is not in the memory cache, if the browser already cached the dynamic script, it may return it without calling the `DynJS` endpoint.
 
-Let's try to list the steps of what happens when you call Q.getLookupAsync, etc.
+Let's try to list the steps of what happens when you call getLookupAsync, etc.
 
 - If the script is already in the Javascript memory cache, e.g. the ScriptData dictionary, return it directly
 - Check if the script is in the list of registered scripts server side. This list is provided via the special `RegisteredScripts` dictionary on the page load. It contains script names and their hashes. If it is not, generate a random hash via `new Date().getTime().toString()`.
@@ -299,9 +299,9 @@ Let's try to list the steps of what happens when you call Q.getLookupAsync, etc.
 
 As we mentioned in the previous topic, the lookups are cached on both the client side; and the server side, and at various layers including the browser itself.
 
-If you wanted to force reloading of a lookup script on the client side, you may use `Q.reloadLookup('TheLookupKey')` method. This will randomize its hash on the client-side `RegisteredScripts` dictionary, and force calling the `DynJS` endpoint next time.
+If you wanted to force reloading of a lookup script on the client side, you may use `reloadLookup('TheLookupKey')` method. This will randomize its hash on the client-side `RegisteredScripts` dictionary, and force calling the `DynJS` endpoint next time.
 
-Please note that even if you force calling the `DynJS` endpoint, it does not always mean the lookup data will be reloaded in the server. So you should use `Q.reloadLookup` only if you are certain that some action you performed from the client side, e.g. calling the save service for the lookup's entity (by clicking the Save button in the language dialog, etc.), should cause the lookup data to be invalidated server side.
+Please note that even if you force calling the `DynJS` endpoint, it does not always mean the lookup data will be reloaded in the server. So you should use `reloadLookup` only if you are certain that some action you performed from the client side, e.g. calling the save service for the lookup's entity (by clicking the Save button in the language dialog, etc.), should cause the lookup data to be invalidated server side.
 
 If the dynamic script manager cached the lookup, it will simply return the cached version, instead of hitting the database.
 

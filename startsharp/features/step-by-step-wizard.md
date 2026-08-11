@@ -62,7 +62,7 @@ protected next(toStep: number) {
         // validate that details list not empty before moving 
         // away from details step
         if (!this.form.DetailList.value.length) {
-            Q.notifyWarning("Please enter at least one detail!");
+            notifyWarning("Please enter at least one detail!");
             return;
         }
     }

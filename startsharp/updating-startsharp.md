@@ -423,7 +423,7 @@ namespace StartSharp.Northwind {
     ];
 
     function getRandomImage(item: CustomerRow) {
-        return Q.resolveUrl("~/Content/adminlte/img/" +
+        return resolveUrl("~/Content/adminlte/img/" +
             randomImages[Math.floor(Math.random() * randomImages.length)]);
     }
 
@@ -478,7 +478,7 @@ In this version an idle timeout sample is added. To enable it for your site, add
 
         var meta = $('meta[name=username]');
         if ((meta.length && meta.attr('content')) ||
-            (!meta.length && Q.Authorization.isLoggedIn)) {
+            (!meta.length && Authorization.isLoggedIn)) {
 
             new Serenity.IdleTimeout({
                 activityTimeout: 15 * 60,

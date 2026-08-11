@@ -8,7 +8,7 @@ Even if users cannot view other tenants' users by default, they can still retrie
 
 To demonstrate, open the Users page, then open the Chrome console and enter the following:
 ```js
-new (Q.getType('MovieTutorial.Administration.UserDialog'))().loadByIdAndOpenDialog(1)
+new (getType('MovieTutorial.Administration.UserDialog'))().loadByIdAndOpenDialog(1)
 ```
 > Ensure you have `@Decorators.registerClass("MovieTutorial.Administration.UserDialog")` at the top of your `UserDialog` class.
 

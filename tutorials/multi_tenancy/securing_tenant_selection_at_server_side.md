@@ -9,7 +9,7 @@ Let's demonstrate this. Open the Chrome console while logged in as the _tenant2_
 Copy and paste the following into the console:
 
 ```js
-Q.serviceCall({ 
+serviceCall({ 
     service: 'Administration/User/Update', 
     request: { 
         EntityId: 2, 
@@ -28,7 +28,7 @@ We called the *User Update* service with JavaScript and changed the _tenant2_ us
 First, revert it back to *Second Tenant (2)*, then we'll address this security vulnerability:
 
 ```js
-Q.serviceCall({ 
+serviceCall({ 
     service: 'Administration/User/Update', 
     request: { 
         EntityId: 2, 
@@ -55,7 +55,7 @@ Now, only an _admin_ can view and update the *tenant* field for users.
 Build your project, then try typing the following into the console:
 
 ```js
-Q.serviceCall({ 
+serviceCall({ 
     service: 'Administration/User/Update', 
     request: { 
         EntityId: 2, 

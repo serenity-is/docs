@@ -152,11 +152,11 @@ export class BSMultiSelectEditor {
     constructor(element: JQuery, opt: BSMultiSelectOptions) {
         super(element, opt);
         
-        let lookup = Q.getLookup(this.options.lookupKey) as Q.Lookup<any>;
+        let lookup = getLookup(this.options.lookupKey) as Lookup<any>;
         for (let item of lookup.get_items()) {
             let key = item[lookup.get_idField()];
             let text = item[lookup.get_textField()] || '';
-            Q.addOption(element, key, text);
+            addOption(element, key, text);
         }        
     }
 ```
@@ -208,11 +208,11 @@ export class BSMultiSelectEditor {
         
         element.attr('multiple', 'multiple')
         
-        let lookup = Q.getLookup(this.options.lookupKey) as Q.Lookup<any>;
+        let lookup = getLookup(this.options.lookupKey) as Lookup<any>;
         for (let item of lookup.get_items()) {
             let key = item[lookup.get_idField()];
             let text = item[lookup.get_textField()] || '';
-            Q.addOption(element, key, text);
+            addOption(element, key, text);
         }        
         
         element

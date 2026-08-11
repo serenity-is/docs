@@ -91,8 +91,6 @@
       * [ScriptContext Class](widgets/scriptcontext_class.md)
       * [Widget Class](widgets/widget_class.md)
       * [Widget With Options](widgets/widget_with_options.md)
-      * [TemplatedWidget Class](widgets/templated_widget_class.md)
-      * [TemplatedDialog Class](widgets/templated_dialog_class.md)
   * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
 * API Reference (.NET)
   * [Serenity.Net.Core](api/dotnet/Serenity.Net.Core/README.md)

@@ -77,7 +77,7 @@ public Decimal MyProperty { get; set; }
 
 **How can i reload/refresh a lookup editor data**
 
-Use *Q.ReloadLookup("MyModule.MyLookupKey")* to reload a lookup by its key.
+Use *reloadLookup("MyModule.MyLookupKey")* to reload a lookup by its key.
 
 **How to create filter editor for an Enum:**
 

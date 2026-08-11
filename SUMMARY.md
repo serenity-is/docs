@@ -52,7 +52,9 @@
   * [Initialization and Startup](framework/initialization.md)
   * [Dependency Injection](framework/dependency-injection.md)
   * [Configuration](framework/configuration.md)
+  * [Feature Toggles](framework/feature-toggles.md)
   * [Authentication & Authorization](framework/authorization.md)
+  * [Password Strength](framework/password-strength.md)
   * [Localization](framework/localization.md)
   * [Caching](framework/caching.md)
   * Data Access
@@ -66,6 +68,12 @@
   * [Services](services/README.md)
     * [Service Endpoints](services/service_endpoints.md)
     * [List Request Handler](services/list_request_handler.md)
+    * [Save Request Handler](services/save_request_handler.md)
+    * [Delete Request Handler](services/delete_request_handler.md)
+    * [Undelete Request Handler](services/undelete_request_handler.md)
+    * [Generating Handler Interfaces](services/generate_interface.md)
+    * [Custom Request Handlers](services/custom_request_handlers.md)
+    * [Auto-Registration of Request Handlers](services/handler_auto_registration.md)
   * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
     * [Lookups](framework/dynamic-scripts/lookups.md)
   * File Upload

@@ -21,7 +21,7 @@ Here's an example of how password rules can be configured within `appsettings.js
 
 Each of the attributes within `Membership` section controls a different aspect of the password policy:
 
-- `MinPasswordLength` sets the minimum character count for passwords. Default value is 8.
+- `MinPasswordLength` sets the minimum character count for passwords. Default value is 6.
 - `RequireDigit` requires at least one numeral within the password. Default value is `true`.
 - `RequireLowercase` and `RequireUppercase` requires the inclusion of case-sensitive letters. Default values are `true`.
 - `RequireNonAlphanumeric` requires the inclusion of special characters, such as punctuation marks. Spaces are not considered special characters. Default value is `true`.
@@ -54,20 +54,18 @@ The `Validate` method checks the provided password against a set of strength cri
 
 The `PasswordStrengthValidator` class in `Serenity.Extensions` implements the `IPasswordStrengthValidator` interface and provides the default password strength validation logic. It uses the `MembershipSettings` class to get the password strength rules and throws a `ValidationError` if the password does not meet the criteria.
 
-To integrate the `IPasswordStrengthValidator` with a Serenity based application, registeration is required with the dependency injection container. This involves adding a line to the `ConfigureServices` method within your `Startup.cs` file to wire up the interface with a concrete implementation, which will provide the password validation logic.
-
-Here is how you would add the necessary line to your Startup.cs file:
+To integrate the `IPasswordStrengthValidator` with a Serenity based application, registration is required with the dependency injection container. The `Serenity.Extensions` package provides an `AddPasswordStrengthValidator()` extension that registers the default `PasswordStrengthValidator` as the `IPasswordStrengthValidator` implementation (using `TryAddSingleton`, so it won't override an existing registration):
 
 ```cs
 public void ConfigureServices(IServiceCollection services)
 {
     // ...
-    services.AddSingleton<IPasswordStrengthValidator, PasswordStrengthValidator>();
+    services.AddPasswordStrengthValidator();
     // ...
 }
 ```
 
-This approach allows you to easily swap out the default implementation with a custom implementation, if necessary.
+This approach allows you to easily swap out the default implementation with a custom implementation, if necessary — register your own `IPasswordStrengthValidator` before calling `AddPasswordStrengthValidator()`, or use `AddSingleton` directly instead.
 
 ## Password Strength Validation on script side
 

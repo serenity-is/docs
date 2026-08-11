@@ -6,7 +6,7 @@ It provides some basic helpers to create a connection, add parameters, execute q
 
 ## ISqlConnections Interface
 
-The [ISqlConnections](../../api/dotnet/Serenity.Net.Data/Serenity.Data/ISqlConnections.md) is a factory interface to create a connection in a database-agnostic way.
+The [ISqlConnections](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlConnections.md) is a factory interface to create a connection in a database-agnostic way.
 
 ```cs
 public interface ISqlConnections : IConnectionStrings
@@ -45,7 +45,7 @@ public class SomeClass
 }
 ```
 
-The default implementation for `ISqlConnections` which is [DefaultSqlConnections](../../api/dotnet/Serenity.Net.Data/Serenity.Data/DefaultSqlConnections.md) creates a connection by locating the connection definition from the `Data` section in the `appsettings.json` file:
+The default implementation for `ISqlConnections` which is [DefaultSqlConnections](../../api/dotnet/Serenity.Net.Services/Serenity.Data/DefaultSqlConnections.md) creates a connection by locating the connection definition from the `Data` section in the `appsettings.json` file:
 
 ```json
   "Data": {
@@ -77,7 +77,7 @@ public static void RegisterDataProviders()
 
 As listed above, only the SQL Server and the `SQLite` connection factories are registered by default. If you want to use another type of server, you should uncomment the relevant line there, and add the NuGet reference for its client library in the project file.
 
-The default implementations for the `ISqlConnections` and other related services are registered via an [AddSqlConnections](../../api/dotnet/Serenity.Net.Data/Serenity.Extensions.DependencyInjection/DataServiceCollectionExtensions.md) call. You may not see it in the `Startup.cs` file as it is indirectly called by the `AddServiceHandlers` method.
+The default implementations for the `ISqlConnections` and other related services are registered via an [AddSqlConnections](../../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/DataServiceCollectionExtensions.md) call. You may not see it in the `Startup.cs` file as it is indirectly called by the `AddServiceHandlers` method.
 
 ## SqlConnectionExtensions.NewFor`<TClass>` extension method
 

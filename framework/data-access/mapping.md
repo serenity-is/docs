@@ -47,7 +47,7 @@ You have to use the form `SELECT "StreetAddress"`.
 
 Thus, Postgres users usually prefer lowercase identifiers. But FluentMigrator always quotes identifiers, so we need a workaround to add brackets/quotes to identifiers.
 
-Serenity doesn't quote/bracket column and table names by default, but it has a compatibility setting. If [SqlSettings.AutoQuotedIdentifiers](../../api/dotnet/Serenity.Net.Data/Serenity.Data/SqlSettings/AutoQuotedIdentifiers.md) flag is set to true, the previous query would look like this:
+Serenity doesn't quote/bracket column and table names by default, but it has a compatibility setting. If [SqlSettings.AutoQuotedIdentifiers](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlSettings/AutoQuotedIdentifiers.md) flag is set to true, the previous query would look like this:
 
 ```sql
 SELECT 
@@ -65,13 +65,13 @@ T0."StreetAddress" AS "StreetAddress"
 FROM "Customer" T0
 ```
 
-Serenity provides a set of attributes in the [Serenity.Data.Mapping](../../api/dotnet/Serenity.Net.Data/README.md#serenity.data.mapping-namespace) namespace that can be used to adjust mappings for entities and their properties to the corresponding tables in the database.
+Serenity provides a set of attributes in the [Serenity.Data.Mapping](../../api/dotnet/Serenity.Net.Services/README.md#serenity.data.mapping-namespace) namespace that can be used to adjust mappings for entities and their properties to the corresponding tables in the database.
 
 We'll talk about the most commonly used ones below.
 
 ## Column Attribute
 
-You can map a property to some other column name in the database using the [Column](../../api/dotnet/Serenity.Net.Data/Serenity.Data.Mapping/ColumnAttribute.md) attribute:
+You can map a property to some other column name in the database using the [Column](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ColumnAttribute.md) attribute:
 
 ```cs
 public class CustomerRow : Row<CustomerRow.RowFields>
@@ -121,7 +121,7 @@ But, if you only target one type of database, you could prefer using quotes spec
 
 ## TableName Attribute
 
-If the table name in the database is different from the row class name, use the[TableName](../../api/dotnet/Serenity.Net.Data/Serenity.Data.Mapping/TableNameAttribute.md) attribute:
+If the table name in the database is different from the row class name, use the[TableName](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/TableNameAttribute.md) attribute:
 
 ```cs
 [TableName("TheCustomers")]
@@ -165,7 +165,7 @@ Again, prefer brackets for database compatibility
 
 ## Expression Attribute
 
-The [Expression](../../api/dotnet/Serenity.Net.Data/Serenity.Data.Mapping/ExpressionAttribute.md) attribute is used to specify the expression of a non-basic field, e.g. one that doesn't exist in the table.
+The [Expression](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ExpressionAttribute.md) attribute is used to specify the expression of a non-basic field, e.g. one that doesn't exist in the table.
 
 There can be several types of such fields. 
 
@@ -213,7 +213,7 @@ It would probably work without that prefix too. But it is better to use it. When
 
 ## ForeignKey Attribute
 
-The [ForeignKey](../../api/dotnet/Serenity.Net.Data/Serenity.Data.Mapping/ForeignKeyAttribute.md) attribute is used to specify foreign key columns and adds information about the primary table and primary field that they are related to.
+The [ForeignKey](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ForeignKeyAttribute.md) attribute is used to specify foreign key columns and adds information about the primary table and primary field that they are related to.
 
 ```cs
 public class CustomerRow : Row<CustomerRow.RowFields>
@@ -267,7 +267,7 @@ Database admins prefer to define views to make it easier to query a combination 
 
 Serenity entities can be used just like SQL views, so you can bring in columns from other tables to an entity, and query it as if they are one big combined table.
 
-One of the ways to do this is via the [LeftJoin](../../api/dotnet/Serenity.Net.Data/Serenity.Data.Mapping/LeftJoinAttribute.md) attribute.
+One of the ways to do this is via the [LeftJoin](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/LeftJoinAttribute.md) attribute.
 ```cs
 public class CustomerRow : Row<CustomerRow.RowFields>
 {
@@ -405,7 +405,7 @@ public String FullName
 
 Here, as the first Expression has no dialect, it will be used for any database type, unless the connection corresponding to this row has dialect of `Sqlite`, e.g. it is a *System.Data.Sqlite* connection.
 
-[ServerType](../../api/dotnet/Serenity.Net.Data/Serenity.Data/ServerType.md) is an enum that contains common server type names. It is possible to use a string, but we prefer the enum with `nameof` operator to avoid typing errors.
+[ServerType](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ServerType.md) is an enum that contains common server type names. It is possible to use a string, but we prefer the enum with `nameof` operator to avoid typing errors.
 
 ### How Dialect for a Row is Determined
 
@@ -431,7 +431,7 @@ public String FullName
 
 ## Dialect Matching
 
-The [ISqlDialect](../../api/dotnet/Serenity.Net.Data/Serenity.Data/ISqlDialect.md) interface has a `ServerType` property. It is `Postgres` for PostgresDialect, `SqlServer` for `SqlServer2012Dialect`, `SqlServer2008Dialect` and `SqlServer2005Dialect`.
+The [ISqlDialect](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ISqlDialect.md) interface has a `ServerType` property. It is `Postgres` for PostgresDialect, `SqlServer` for `SqlServer2012Dialect`, `SqlServer2008Dialect` and `SqlServer2005Dialect`.
 
 For an expression dialect to match a connection dialect, it should start with the `ServerType` and/or the class name of the connection dialect (e.g. SqlServer2012Dialect).
 

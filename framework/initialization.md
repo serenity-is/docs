@@ -19,6 +19,7 @@ public void ConfigureServices(IServiceCollection services)
     services.AddSingleton<IPermissionService, AppServices.PermissionService>();
     services.AddUserProvider<AppServices.UserAccessor, AppServices.UserRetrieveService>();
     services.AddServiceHandlers();
+    services.AddLocalTextInitializer();
     services.AddDynamicScripts();
     services.AddCssBundling();
     services.AddScriptBundling();
@@ -34,7 +35,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     RowFieldsProvider.SetDefaultFrom(app.ApplicationServices);
 
-    InitializeLocalTexts(app.ApplicationServices);
+    app.InitializeLocalTexts();
 
     app.UseRequestLocalization();
     // ... exception handling, security headers, HTTPS, static files
@@ -140,6 +141,8 @@ It resolves the `ApplicationPartManager` from the service collection (calling `A
 services.AddApplicationPartsFeatureToggles(Configuration);
 ```
 
+See the [Feature Toggles](feature-toggles.md) topic for details.
+
 ## Where the Type Source Is Used
 
 Once registered, the type source drives a large part of the framework:
@@ -148,6 +151,7 @@ Once registered, the type source drives a large part of the framework:
 - **Row fields** — `RowFieldsProvider.SetDefaultFrom(...)` initializes the field provider from the type source.
 - **Dynamic scripts** — lookups, data scripts, and other dynamic scripts are enumerated from the types and assembly attributes.
 - **Navigation** — `[assembly: NavigationLink(...)]` / `[NavigationMenu]` attributes are collected via `GetAssemblyAttributes`.
+- **Auto-registration** — `AddAutoRegisteredServices()` registers types marked with `[RegisterService]` and its subclasses (see [Dependency Injection](dependency-injection.md)).
 - **Report & upload registration** — report renderers, upload processors, and similar services are discovered the same way.
 
 In short, if you add a new row, request handler, behavior, or navigation attribute to an assembly that is marked as a type source, Serenity will find it on the next start — no registration lists to update.
@@ -155,6 +159,7 @@ In short, if you add a new row, request handler, behavior, or navigation attribu
 ## See Also
 
 - [Dependency Injection](dependency-injection.md)
+- [Feature Toggles](feature-toggles.md)
 - [Configuration](configuration.md)
 - [ITypeSource (API reference)](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 - [ApplicationPartsTypeSource (API reference)](../api/dotnet/Serenity.Net.Web/Serenity.Web/ApplicationPartsTypeSource.md)

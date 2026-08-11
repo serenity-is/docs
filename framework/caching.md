@@ -329,3 +329,30 @@ You should call this from methods that change data.
 
 Removes an item and its version from local and distributed cache.
 
+## Throttler
+
+The [Throttler](../api/dotnet/Serenity.Net.Core/Serenity/Throttler.md) class helps you limit how many times an operation can be performed within a time window — for example, allowing a limited number of login attempts per minute.
+
+It keeps a counter for a given key (plus an optional resource name, like a username) and an expiration duration. Each call to `Check()` increments the counter; it returns `false` once the configured limit is exceeded within the duration.
+
+```cs
+var throttler = new Throttler(cache.Memory,
+    "ValidateUser:" + username.ToLowerInvariant(),
+    TimeSpan.FromMinutes(30), 50);
+
+if (!throttler.Check())
+    throw new ValidationError("Throttle", "Too many requests!");
+```
+
+The constructor accepts either an `IMemoryCache` or an `IDistributedCache`:
+
+```cs
+new Throttler(memoryCache, "Login:" + username, TimeSpan.FromMinutes(5), 10);
+new Throttler(distributedCache, "Login:" + username, TimeSpan.FromMinutes(5), 10);
+```
+
+When backed by a distributed cache, the throttle count is shared across all servers in a web farm. `Reset()` clears the throttle for a key.
+
+Serene uses a `Throttler` in `AppServices.UserPasswordValidator` to prevent more than 50 invalid login attempts in 30 minutes, and the template's exception log page throttles similar operations.
+
+

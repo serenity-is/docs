@@ -8,7 +8,7 @@ Their output can be executed directly, through a micro-ORM like Dapper (which is
 
 ## SQL Query
 
-[SqlQuery](../../api/dotnet/Serenity.Net.Data/Serenity.Data/SqlQuery.md) is an object to compose dynamic SQL SELECT queries through a fluent interface.
+[SqlQuery](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlQuery.md) is an object to compose dynamic SQL SELECT queries through a fluent interface.
 
 SqlQuery offers some advantages over hand-crafted SQL:
 

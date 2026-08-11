@@ -8,7 +8,7 @@ It's designed to closely resemble SQL within the constraints of C#, offering ope
 
 By default, any entity created via its constructor has assignment tracking enabled. This means Serenity keeps track of assigned and unassigned fields.
 
-For this example, we'll use Northwind's [CustomerRow](https://github.com/serenity-is/common-features/blob/master/src/Serenity.Demo.Northwind/Modules/Customer/CustomerRow.cs), defined in the common-features repository:
+For this example, we'll use Northwind's [CustomerRow](https://github.com/serenity-is/Serenity/blob/master/common-features/src/demo.northwind/Modules/Customer/CustomerRow.cs), defined in the common-features folder of the Serenity repository:
 
 ```cs
 var customer = new CustomerRow();

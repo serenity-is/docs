@@ -146,19 +146,22 @@
   * [Serene to StartSharp (Inplace)](startsharp/serene-upgrade-inplace.md)
 
 * Release Notes
+  * [10.3.7 - 2026/08/12](release-notes/10.3.7.md)
   * [10.3.5 - 2026/07/25](release-notes/10.3.5.md)
   * [10.3.0 - 2026/04/14](release-notes/10.3.0.md)
   * [10.2.0 - 2026/02/16](release-notes/10.2.0.md)
   * [10.1.0 - 2026/01/12](release-notes/10.1.0.md)
-  * [9.2.0 - 2025/11/24](release-notes/9.2.0.md)
-  * [9.1.0 - 2025/11/10](release-notes/9.1.0.md)
-  * [9.0.0 - 2025/09/16](release-notes/9.0.0.md)
-  * [8.7.9 - 2024/11/12](release-notes/8.7.9.md)
-  * [8.6.0 - 2024/07/13](release-notes/8.6.0.md)
-  * [8.2.1 - 2024/01/20](release-notes/8.2.1.md)
-  * [8.1.5 - 2023/12/14](release-notes/8.1.5.md)
-  * [8.0.7 - 2023/12/07](release-notes/8.0.7.md)
-  * [8.0.0 - 2023/11/16](release-notes/8.0.0.md)
+  * 9.x
+    * [9.2.0 - 2025/11/24](release-notes/9.2.0.md)
+    * [9.1.0 - 2025/11/10](release-notes/9.1.0.md)
+    * [9.0.0 - 2025/09/16](release-notes/9.0.0.md)
+  * 8.x
+    * [8.7.9 - 2024/11/12](release-notes/8.7.9.md)
+    * [8.6.0 - 2024/07/13](release-notes/8.6.0.md)
+    * [8.2.1 - 2024/01/20](release-notes/8.2.1.md)
+    * [8.1.5 - 2023/12/14](release-notes/8.1.5.md)
+    * [8.0.7 - 2023/12/07](release-notes/8.0.7.md)
+    * [8.0.0 - 2023/11/16](release-notes/8.0.0.md)
   * 6.x
     * [6.9.6 - 2023/10/26](release-notes/6.9.6.md)
     * [6.9.3 - 2023/10/22](release-notes/6.9.3.md)

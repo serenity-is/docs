@@ -2,6 +2,8 @@
 
 # EditorUtils
 
+Utility functions for working with editor widgets.
+
 ## Variables
 
 - [setReadOnly](variables/setReadOnly.md)

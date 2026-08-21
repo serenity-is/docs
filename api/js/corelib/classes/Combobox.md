@@ -2,7 +2,9 @@
 
 # Class: Combobox\<TItem\>
 
-Defined in: [src/ui/editors/combobox.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L49)
+Defined in: [src/ui/editors/combobox.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L92)
+
+A combobox widget that provides searchable selection over a set of items.
 
 ## Type Parameters
 
@@ -10,19 +12,25 @@ Defined in: [src/ui/editors/combobox.ts:49](https://github.com/serenity-is/seren
 
 `TItem` = `any`
 
+The item type.
+
 ## Constructors
 
 ### Constructor
 
 > **new Combobox**\<`TItem`\>(`opt`): `Combobox`\<`TItem`\>
 
-Defined in: [src/ui/editors/combobox.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L57)
+Defined in: [src/ui/editors/combobox.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L105)
+
+Creates a combobox.
 
 #### Parameters
 
 ##### opt
 
 [`ComboboxOptions`](../interfaces/ComboboxOptions.md)
+
+Combobox options.
 
 #### Returns
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/editors/combobox.ts:57](https://github.com/serenity-is/seren
 
 > `static` **defaults**: [`ComboboxOptions`](../interfaces/ComboboxOptions.md)
 
-Defined in: [src/ui/editors/combobox.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L52)
+Defined in: [src/ui/editors/combobox.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L96)
+
+Default combobox options.
 
 ## Accessors
 
@@ -44,11 +54,15 @@ Defined in: [src/ui/editors/combobox.ts:52](https://github.com/serenity-is/seren
 
 > **get** **container**(): `HTMLElement`
 
-Defined in: [src/ui/editors/combobox.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L247)
+Defined in: [src/ui/editors/combobox.ts:313](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L313)
+
+Returns the combobox container element.
 
 ##### Returns
 
 `HTMLElement`
+
+The container element.
 
 ***
 
@@ -58,11 +72,15 @@ Defined in: [src/ui/editors/combobox.ts:247](https://github.com/serenity-is/sere
 
 > **get** **isMultiple**(): `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L263)
+Defined in: [src/ui/editors/combobox.ts:337](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L337)
+
+Whether the combobox allows multiple selection.
 
 ##### Returns
 
 `boolean`
+
+True when multiple.
 
 ***
 
@@ -72,11 +90,15 @@ Defined in: [src/ui/editors/combobox.ts:263](https://github.com/serenity-is/sere
 
 > **get** **type**(): `"select2"`
 
-Defined in: [src/ui/editors/combobox.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L253)
+Defined in: [src/ui/editors/combobox.ts:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L323)
+
+Returns the combobox provider type.
 
 ##### Returns
 
 `"select2"`
+
+The provider type, or null.
 
 ## Methods
 
@@ -84,7 +106,9 @@ Defined in: [src/ui/editors/combobox.ts:253](https://github.com/serenity-is/sere
 
 > **abortInitSelection**(): `void`
 
-Defined in: [src/ui/editors/combobox.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L230)
+Defined in: [src/ui/editors/combobox.ts:289](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L289)
+
+Aborts any pending initial selection query.
 
 #### Returns
 
@@ -96,7 +120,9 @@ Defined in: [src/ui/editors/combobox.ts:230](https://github.com/serenity-is/sere
 
 > **abortPendingQuery**(): `void`
 
-Defined in: [src/ui/editors/combobox.ts:217](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L217)
+Defined in: [src/ui/editors/combobox.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L273)
+
+Aborts any pending search query.
 
 #### Returns
 
@@ -108,7 +134,9 @@ Defined in: [src/ui/editors/combobox.ts:217](https://github.com/serenity-is/sere
 
 > **closeDropdown**(): `void`
 
-Defined in: [src/ui/editors/combobox.ts:377](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L377)
+Defined in: [src/ui/editors/combobox.ts:480](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L480)
+
+Closes the dropdown.
 
 #### Returns
 
@@ -120,7 +148,9 @@ Defined in: [src/ui/editors/combobox.ts:377](https://github.com/serenity-is/sere
 
 > **dispose**(): `void`
 
-Defined in: [src/ui/editors/combobox.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L238)
+Defined in: [src/ui/editors/combobox.ts:300](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L300)
+
+Disposes the combobox and cleans up its resources.
 
 #### Returns
 
@@ -132,11 +162,15 @@ Defined in: [src/ui/editors/combobox.ts:238](https://github.com/serenity-is/sere
 
 > **getSelectedItem**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)
 
-Defined in: [src/ui/editors/combobox.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L274)
+Defined in: [src/ui/editors/combobox.ts:352](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L352)
+
+Returns the first selected item.
 
 #### Returns
 
 [`ComboboxItem`](../interfaces/ComboboxItem.md)
+
+The selected item.
 
 ***
 
@@ -144,11 +178,15 @@ Defined in: [src/ui/editors/combobox.ts:274](https://github.com/serenity-is/sere
 
 > **getSelectedItems**(): [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>[]
 
-Defined in: [src/ui/editors/combobox.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L284)
+Defined in: [src/ui/editors/combobox.ts:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L366)
+
+Returns all selected items.
 
 #### Returns
 
 [`ComboboxItem`](../interfaces/ComboboxItem.md)\<`any`\>[]
+
+The selected items.
 
 ***
 
@@ -156,11 +194,15 @@ Defined in: [src/ui/editors/combobox.ts:284](https://github.com/serenity-is/sere
 
 > **getValue**(): `string`
 
-Defined in: [src/ui/editors/combobox.ts:300](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L300)
+Defined in: [src/ui/editors/combobox.ts:386](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L386)
+
+Returns the current value as a comma-separated string.
 
 #### Returns
 
 `string`
+
+The value.
 
 ***
 
@@ -168,11 +210,15 @@ Defined in: [src/ui/editors/combobox.ts:300](https://github.com/serenity-is/sere
 
 > **getValues**(): `string`[]
 
-Defined in: [src/ui/editors/combobox.ts:316](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L316)
+Defined in: [src/ui/editors/combobox.ts:406](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L406)
+
+Returns the current values as an array.
 
 #### Returns
 
 `string`[]
+
+The values.
 
 ***
 
@@ -180,7 +226,9 @@ Defined in: [src/ui/editors/combobox.ts:316](https://github.com/serenity-is/sere
 
 > **openDropdown**(): `void`
 
-Defined in: [src/ui/editors/combobox.ts:381](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L381)
+Defined in: [src/ui/editors/combobox.ts:487](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L487)
+
+Opens the dropdown.
 
 #### Returns
 
@@ -192,7 +240,9 @@ Defined in: [src/ui/editors/combobox.ts:381](https://github.com/serenity-is/sere
 
 > **setValue**(`value`, `triggerChange`): `void`
 
-Defined in: [src/ui/editors/combobox.ts:336](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L336)
+Defined in: [src/ui/editors/combobox.ts:431](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L431)
+
+Sets the current value.
 
 #### Parameters
 
@@ -200,9 +250,13 @@ Defined in: [src/ui/editors/combobox.ts:336](https://github.com/serenity-is/sere
 
 `string`
 
+The value to set.
+
 ##### triggerChange
 
 `boolean` = `false`
+
+When true, triggers a change event.
 
 #### Returns
 
@@ -214,7 +268,9 @@ Defined in: [src/ui/editors/combobox.ts:336](https://github.com/serenity-is/sere
 
 > **setValues**(`value`, `triggerChange`): `void`
 
-Defined in: [src/ui/editors/combobox.ts:368](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L368)
+Defined in: [src/ui/editors/combobox.ts:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L468)
+
+Sets the current values.
 
 #### Parameters
 
@@ -222,9 +278,13 @@ Defined in: [src/ui/editors/combobox.ts:368](https://github.com/serenity-is/sere
 
 `string`[]
 
+The values to set.
+
 ##### triggerChange
 
 `boolean` = `false`
+
+When true, triggers a change event.
 
 #### Returns
 
@@ -236,14 +296,20 @@ Defined in: [src/ui/editors/combobox.ts:368](https://github.com/serenity-is/sere
 
 > `static` **getInstance**(`el`): `Combobox`
 
-Defined in: [src/ui/editors/combobox.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L385)
+Defined in: [src/ui/editors/combobox.ts:496](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L496)
+
+Returns the combobox instance attached to an element, or null.
 
 #### Parameters
 
 ##### el
+
+The element or collection.
 
 `Element` | `ArrayLike`\<`Element`\>
 
 #### Returns
 
 `Combobox`
+
+The combobox instance, or null.

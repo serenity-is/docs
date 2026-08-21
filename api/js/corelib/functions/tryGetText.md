@@ -4,9 +4,9 @@
 
 > **tryGetText**(`key`): `string`
 
-Defined in: [src/base/localtext.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L55)
+Defined in: [src/base/localtext.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L67)
 
-Tries to retrieve a localized string from the localization table.
+Tries to retrieve a localized string without falling back to the key.
 
 ## Parameters
 
@@ -14,10 +14,10 @@ Tries to retrieve a localized string from the localization table.
 
 `string`
 
-The key of the localized string.
+Localization key to look up.
 
 ## Returns
 
 `string`
 
-The localized string or undefined if not found.
+The localized value if found, otherwise `undefined` (unlike [localText](localText.md) which returns the key).

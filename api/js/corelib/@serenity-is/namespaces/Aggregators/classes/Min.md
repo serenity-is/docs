@@ -2,7 +2,9 @@
 
 # Class: Min
 
-Defined in: [src/slick/aggregators.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L90)
+Defined in: [src/slick/aggregators.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L128)
+
+Minimum of a field.
 
 ## Implements
 
@@ -14,13 +16,17 @@ Defined in: [src/slick/aggregators.ts:90](https://github.com/serenity-is/serenit
 
 > **new Min**(`field`): `Min`
 
-Defined in: [src/slick/aggregators.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L94)
+Defined in: [src/slick/aggregators.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L138)
+
+Creates a new minimum aggregator.
 
 #### Parameters
 
 ##### field
 
 `string`
+
+The field to aggregate.
 
 #### Returns
 
@@ -32,7 +38,9 @@ Defined in: [src/slick/aggregators.ts:94](https://github.com/serenity-is/serenit
 
 > `readonly` **field**: `string`
 
-Defined in: [src/slick/aggregators.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L91)
+Defined in: [src/slick/aggregators.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L130)
+
+The field to aggregate.
 
 ***
 
@@ -40,7 +48,9 @@ Defined in: [src/slick/aggregators.ts:91](https://github.com/serenity-is/serenit
 
 > **min**: `any`
 
-Defined in: [src/slick/aggregators.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L92)
+Defined in: [src/slick/aggregators.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L132)
+
+Current minimum value.
 
 ***
 
@@ -48,7 +58,9 @@ Defined in: [src/slick/aggregators.ts:92](https://github.com/serenity-is/serenit
 
 > `readonly` `static` **aggregateKey**: `"min"` = `"min"`
 
-Defined in: [src/slick/aggregators.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L119)
+Defined in: [src/slick/aggregators.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L168)
+
+Key used to store/lookup this aggregator in totals.
 
 ***
 
@@ -56,7 +68,9 @@ Defined in: [src/slick/aggregators.ts:119](https://github.com/serenity-is/sereni
 
 > `readonly` `static` **summaryType**: [`Min`](../../../../enumerations/SummaryType.md#min) = `SummaryType.Min`
 
-Defined in: [src/slick/aggregators.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L118)
+Defined in: [src/slick/aggregators.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L166)
+
+Summary type for this aggregator.
 
 ## Accessors
 
@@ -66,7 +80,9 @@ Defined in: [src/slick/aggregators.ts:118](https://github.com/serenity-is/sereni
 
 > **get** `static` **displayName**(): `string`
 
-Defined in: [src/slick/aggregators.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L120)
+Defined in: [src/slick/aggregators.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L170)
+
+Localized display name for this aggregator.
 
 ##### Returns
 
@@ -78,13 +94,17 @@ Defined in: [src/slick/aggregators.ts:120](https://github.com/serenity-is/sereni
 
 > **accumulate**(`item`): `void`
 
-Defined in: [src/slick/aggregators.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L102)
+Defined in: [src/slick/aggregators.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L148)
+
+Accumulates a single item into the aggregator state.
 
 #### Parameters
 
 ##### item
 
 `any`
+
+Row item to accumulate; numeric field values are compared against the current minimum.
 
 #### Returns
 
@@ -100,7 +120,9 @@ Defined in: [src/slick/aggregators.ts:102](https://github.com/serenity-is/sereni
 
 > **init**(): `void`
 
-Defined in: [src/slick/aggregators.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L98)
+Defined in: [src/slick/aggregators.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L143)
+
+Initializes state before a new group is processed.
 
 #### Returns
 
@@ -116,13 +138,17 @@ Defined in: [src/slick/aggregators.ts:98](https://github.com/serenity-is/serenit
 
 > **storeResult**(`groupTotals`): `void`
 
-Defined in: [src/slick/aggregators.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L111)
+Defined in: [src/slick/aggregators.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L158)
+
+Writes computed totals into the group totals object.
 
 #### Parameters
 
 ##### groupTotals
 
 `any`
+
+Totals container to write the computed minimum into, keyed by field name.
 
 #### Returns
 

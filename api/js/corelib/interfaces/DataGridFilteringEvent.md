@@ -2,7 +2,9 @@
 
 # Interface: DataGridFilteringEvent\<TItem\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1272)
+Defined in: [src/ui/datagrid/datagrid.tsx:1883](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1883)
+
+Event raised while filtering items in the view.
 
 ## Extends
 
@@ -14,13 +16,17 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1272](https://github.com/serenity-is/s
 
 `TItem` = `any`
 
+Row type displayed in the grid.
+
 ## Properties
 
 ### dataGrid
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)
+Defined in: [src/ui/datagrid/datagrid.tsx:1862](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1862)
+
+The data grid that raised the event.
 
 #### Inherited from
 
@@ -32,7 +38,9 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/s
 
 > **isMatch**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1274)
+Defined in: [src/ui/datagrid/datagrid.tsx:1887](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1887)
+
+Whether the item matches the filter; subscribers may change this.
 
 ***
 
@@ -40,4 +48,6 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1274](https://github.com/serenity-is/s
 
 > **item**: `TItem`
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1273)
+Defined in: [src/ui/datagrid/datagrid.tsx:1885](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1885)
+
+The item being filtered.

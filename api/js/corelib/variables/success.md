@@ -4,9 +4,11 @@
 
 > `const` **success**: (`message`, `onOk?`, `options?`) => `Partial`\<[`Dialog`](../classes/Dialog.md)\> = `successDialog`
 
-Defined in: [src/compat/dialogs-compat.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L13)
+Defined in: [src/compat/dialogs-compat.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L29)
 
-Display a success dialog
+Legacy `Q.success` alias.
+
+Displays a success dialog with a single OK button.
 
 ## Parameters
 
@@ -14,36 +16,38 @@ Display a success dialog
 
 [`RenderableContent`](../type-aliases/RenderableContent.md)
 
-The message to display
+Text or renderable content shown in the dialog body.
 
 ### onOk?
 
 () => `void`
 
-Callback for OK button click
+Optional callback invoked when OK is clicked.
 
 ### options?
 
 [`MessageDialogOptions`](../interfaces/MessageDialogOptions.md)
 
-Additional options.
+Additional [MessageDialogOptions](../interfaces/MessageDialogOptions.md).
 
 ## Returns
 
 `Partial`\<[`Dialog`](../classes/Dialog.md)\>
 
-## See
-
-MessageDialogOptions
+A [Dialog](../classes/Dialog.md) handle (partial when falling back to the native `alert()`).
 
 ## Example
 
 ```ts
-successDialog("Operation complete", () => { 
-    // do something when OK is clicked
-}
+successDialog("Operation complete", () => {
+  // do something when OK is clicked
+});
 ```
 
 ## Deprecated
 
-use successDialog
+Use [successDialog](../functions/successDialog.md) instead.
+
+## See
+
+[successDialog](../functions/successDialog.md)

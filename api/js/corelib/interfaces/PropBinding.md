@@ -2,7 +2,12 @@
 
 # Interface: PropBinding()\<T, TElement\>
 
-Defined in: [../domwise/dist/index.d.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L33)
+Defined in: [../domwise/dist/index.d.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L121)
+
+A two-way prop binding hook created by `usePropBinding`. It acts as a
+getter when called with no arguments and a setter when called with a value;
+when attached as a prop hook it synchronizes that value to the bound element
+attribute.
 
 ## Extends
 
@@ -14,25 +19,35 @@ Defined in: [../domwise/dist/index.d.ts:33](https://github.com/serenity-is/seren
 
 `T` = `any`
 
+The type of the bound value.
+
 ### TElement
 
 `TElement` *extends* `Element` = `Element`
+
+The type of the element the binding is attached to.
 
 ## Call Signature
 
 > **PropBinding**(): `T`
 
-Defined in: [../domwise/dist/index.d.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L34)
+Defined in: [../domwise/dist/index.d.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L126)
+
+Gets the current bound value.
 
 ### Returns
 
 `T`
 
+The current value.
+
 ## Call Signature
 
 > **PropBinding**(`value`): `T`
 
-Defined in: [../domwise/dist/index.d.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L35)
+Defined in: [../domwise/dist/index.d.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L132)
+
+Sets the bound value and synchronizes it to the attached element (if any).
 
 ### Parameters
 
@@ -40,9 +55,13 @@ Defined in: [../domwise/dist/index.d.ts:35](https://github.com/serenity-is/seren
 
 `T`
 
+New value to store and propagate to the DOM.
+
 ### Returns
 
 `T`
+
+The value that was set.
 
 ## Methods
 
@@ -50,7 +69,7 @@ Defined in: [../domwise/dist/index.d.ts:35](https://github.com/serenity-is/seren
 
 > **\[initPropHookSymbol\]**(`node`, `propName`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2425](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2425)
+Defined in: [../domwise/dist/index.d.ts:2759](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2759)
 
 #### Parameters
 

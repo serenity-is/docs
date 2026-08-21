@@ -2,7 +2,9 @@
 
 # Class: DateTimeEditor\<P\>
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L8)
+Defined in: [src/ui/editors/datetimeeditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L12)
+
+An editor that renders a date-time input with a date picker and time select.
 
 ## Extends
 
@@ -13,6 +15,8 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:8](https://github.com/serenity-is
 ### P
 
 `P` *extends* [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md) = [`DateTimeEditorOptions`](../interfaces/DateTimeEditorOptions.md)
+
+Widget props type.
 
 ## Implements
 
@@ -25,13 +29,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:8](https://github.com/serenity-is
 
 > **new DateTimeEditor**\<`P`\>(`props`): `DateTimeEditor`\<`P`\>
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L19)
+Defined in: [src/ui/editors/datetimeeditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L30)
+
+Creates a date-time editor.
 
 #### Parameters
 
 ##### props
 
 [`EditorProps`](../type-aliases/EditorProps.md)\<`P`\>
+
+Widget props.
 
 #### Returns
 
@@ -47,7 +55,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:19](https://github.com/serenity-i
 
 > `readonly` **domNode**: `HTMLInputElement`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L13)
+Defined in: [src/ui/editors/datetimeeditor.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L20)
+
+The text input element that backs the editor.
 
 #### Overrides
 
@@ -59,7 +69,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:13](https://github.com/serenity-i
 
 > `readonly` **idPrefix**: `string`
 
-Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L13)
+Defined in: [src/ui/widgets/widget.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L22)
+
+The id prefix used for this widget's child element ids.
 
 #### Inherited from
 
@@ -71,7 +83,9 @@ Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenit
 
 > `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<[`EditorProps`](../type-aliases/EditorProps.md)\<`P`\>\>
 
-Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
+Defined in: [src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
+
+The widget's options/props.
 
 #### Inherited from
 
@@ -83,7 +97,9 @@ Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenit
 
 > `readonly` **uniqueName**: `string`
 
-Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+Defined in: [src/ui/widgets/widget.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L20)
+
+A unique name for this widget instance, used for event namespacing.
 
 #### Inherited from
 
@@ -95,7 +111,7 @@ Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenit
 
 > `static` **\[typeInfo\]**: [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L10)
+Defined in: [src/ui/editors/datetimeeditor.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L14)
 
 #### Implementation of
 
@@ -111,7 +127,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:10](https://github.com/serenity-i
 
 > `static` **getTimeOptions**: (`fromHour`, `fromMin`, `toHour`, `toMin`, `stepMins`) => `string`[]
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:369](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L369)
+Defined in: [src/ui/editors/datetimeeditor.tsx:485](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L485)
+
+Generates a list of time strings at a fixed step.
 
 #### Parameters
 
@@ -119,25 +137,37 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:369](https://github.com/serenity-
 
 `number`
 
+Start hour.
+
 ##### fromMin
 
 `number`
+
+Start minute.
 
 ##### toHour
 
 `number`
 
+End hour.
+
 ##### toMin
 
 `number`
+
+End minute.
 
 ##### stepMins
 
 `number`
 
+Step size in minutes.
+
 #### Returns
 
 `string`[]
+
+Array of "HH:mm" time strings.
 
 ***
 
@@ -145,7 +175,7 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:369](https://github.com/serenity-
 
 > `readonly` `static` **isComponent**: `true` = `true`
 
-Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L219)
+Defined in: [src/ui/widgets/widget.ts:334](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L334)
 
 #### Inherited from
 
@@ -159,7 +189,7 @@ Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/sereni
 
 > **get** **element**(): [`Fluent`](../interfaces/Fluent.md)
 
-Defined in: [src/ui/widgets/widget.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L59)
+Defined in: [src/ui/widgets/widget.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L82)
 
 Returns a Fluent(this.domNode) object
 
@@ -179,7 +209,9 @@ Returns a Fluent(this.domNode) object
 
 > **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
-Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L203)
+Defined in: [src/ui/widgets/widget.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L307)
+
+Returns the widget's props/options.
 
 ##### Returns
 
@@ -197,17 +229,23 @@ Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/sereni
 
 > **get** **readOnly**(): `boolean`
 
-Defined in: [src/ui/editors/editorwidget.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L20)
+Defined in: [src/ui/editors/editorwidget.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L42)
+
+Returns whether the editor is read-only.
 
 ##### Returns
 
 `boolean`
 
+True when read-only.
+
 #### Set Signature
 
 > **set** **readOnly**(`value`): `void`
 
-Defined in: [src/ui/editors/editorwidget.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L25)
+Defined in: [src/ui/editors/editorwidget.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorwidget.ts#L48)
+
+Sets whether the editor is read-only.
 
 ##### Parameters
 
@@ -231,23 +269,31 @@ Defined in: [src/ui/editors/editorwidget.ts:25](https://github.com/serenity-is/s
 
 > **get** **value**(): `string`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L223)
+Defined in: [src/ui/editors/datetimeeditor.tsx:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L265)
+
+Returns the current date-time value.
 
 ##### Returns
 
 `string`
 
+The value.
+
 #### Set Signature
 
 > **set** **value**(`v`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L267)
+Defined in: [src/ui/editors/datetimeeditor.tsx:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L315)
+
+Sets the date-time value.
 
 ##### Parameters
 
 ###### v
 
 `string`
+
+The date-time string to set.
 
 ##### Returns
 
@@ -261,23 +307,31 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:267](https://github.com/serenity-
 
 > **get** **valueAsDate**(): `Date`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:278](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L278)
+Defined in: [src/ui/editors/datetimeeditor.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L330)
+
+Returns the current date-time value as a Date.
 
 ##### Returns
 
 `Date`
 
+The date-time value.
+
 #### Set Signature
 
 > **set** **valueAsDate**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:290](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L290)
+Defined in: [src/ui/editors/datetimeeditor.tsx:345](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L345)
+
+Sets the date-time value as a Date.
 
 ##### Parameters
 
 ###### value
 
 `Date`
+
+The date-time value to set.
 
 ##### Returns
 
@@ -289,7 +343,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:290](https://github.com/serenity-
 
 > `protected` **addCssClass**(): `void`
 
-Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+Defined in: [src/ui/widgets/widget.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L89)
+
+Adds the widget's CSS class to its DOM node.
 
 #### Returns
 
@@ -307,7 +363,9 @@ Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenit
 
 > **addValidationRule**(`rule`, `uniqueName?`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
+Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+Adds a validation rule to the widget's DOM node.
 
 ##### Parameters
 
@@ -315,9 +373,15 @@ Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenit
 
 (`input`) => `string`
 
+The validation rule function, or a unique name when the
+  two-argument overload is used.
+
 ###### uniqueName?
 
 `string`
+
+A unique name for the rule, or the rule function when
+  the two-argument overload is used.
 
 ##### Returns
 
@@ -331,7 +395,9 @@ Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenit
 
 > **addValidationRule**(`uniqueName`, `rule`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L96)
+Defined in: [src/ui/widgets/widget.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L143)
+
+Adds a validation rule to the widget's DOM node.
 
 ##### Parameters
 
@@ -339,9 +405,15 @@ Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenit
 
 `string`
 
+A unique name for the rule, or the rule function when
+  the two-argument overload is used.
+
 ###### rule
 
 (`input`) => `string`
+
+The validation rule function, or a unique name when the
+  two-argument overload is used.
 
 ##### Returns
 
@@ -357,13 +429,17 @@ Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenit
 
 > `protected` **afterRender**(`callback`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+Defined in: [src/ui/widgets/widget.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L228)
+
+Queues a callback to run after the widget's contents are rendered.
 
 #### Parameters
 
 ##### callback
 
 () => `void`
+
+The callback to run after rendering.
 
 #### Returns
 
@@ -379,7 +455,9 @@ Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/sereni
 
 > `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
-Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L102)
+Defined in: [src/ui/widgets/widget.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L154)
+
+Finds a child element by its prefix-relative id.
 
 #### Type Parameters
 
@@ -393,9 +471,13 @@ Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/sereni
 
 `string`
 
+The id relative to the widget's id prefix.
+
 #### Returns
 
 [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
+
+A [Fluent](../functions/Fluent.md) wrapper for the matching element.
 
 #### Inherited from
 
@@ -407,13 +489,17 @@ Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/sereni
 
 > **change**(`handler`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
+Defined in: [src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+
+Registers a `change` handler on the widget's DOM node.
 
 #### Parameters
 
 ##### handler
 
 (`e`) => `void`
+
+The change event handler.
 
 #### Returns
 
@@ -429,13 +515,18 @@ Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/sereni
 
 > **changeSelect2**(`handler`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
+Defined in: [src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
+
+Registers a `change` handler that ignores changes originating from
+combobox setting values.
 
 #### Parameters
 
 ##### handler
 
 (`e`) => `void`
+
+The change event handler.
 
 #### Returns
 
@@ -451,11 +542,15 @@ Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/sereni
 
 > **createFlatPickrTrigger**(): `HTMLElement`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L192)
+Defined in: [src/ui/editors/datetimeeditor.tsx:226](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L226)
+
+Creates the flatpickr trigger button.
 
 #### Returns
 
 `HTMLElement`
+
+The trigger element.
 
 ***
 
@@ -463,11 +558,16 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:192](https://github.com/serenity-
 
 > `protected` **deferRender**(): `boolean`
 
-Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
+Defined in: [src/ui/widgets/widget.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L98)
+
+Determines whether rendering should be deferred until [init](#init) is
+called.
 
 #### Returns
 
 `boolean`
+
+True to defer rendering.
 
 #### Inherited from
 
@@ -479,7 +579,9 @@ Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L150)
+Defined in: [src/ui/editors/datetimeeditor.tsx:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L176)
+
+Cleans up the date-time picker instance.
 
 #### Returns
 
@@ -495,7 +597,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:150](https://github.com/serenity-
 
 > `protected` **findById**\<`TElement`\>(`id`): `TElement`
 
-Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
+
+Finds a child element by its prefix-relative id.
 
 #### Type Parameters
 
@@ -509,9 +613,13 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 `string`
 
+The id relative to the widget's id prefix.
+
 #### Returns
 
 `TElement`
+
+The matching element, or null if not found.
 
 #### Inherited from
 
@@ -523,11 +631,15 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 > **get\_maxDate**(): `Date`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:318](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L318)
+Defined in: [src/ui/editors/datetimeeditor.tsx:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L401)
+
+Returns the maximum allowed date-time as a Date.
 
 #### Returns
 
 `Date`
+
+The maximum date-time.
 
 ***
 
@@ -535,11 +647,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:318](https://github.com/serenity-
 
 > **get\_maxValue**(): `string`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:302](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L302)
+Defined in: [src/ui/editors/datetimeeditor.tsx:369](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L369)
+
+Returns the maximum allowed date-time value.
 
 #### Returns
 
 `string`
+
+The maximum value.
 
 ***
 
@@ -547,11 +663,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:302](https://github.com/serenity-
 
 > **get\_minDate**(): `Date`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:310](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L310)
+Defined in: [src/ui/editors/datetimeeditor.tsx:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L385)
+
+Returns the minimum allowed date-time as a Date.
 
 #### Returns
 
 `Date`
+
+The minimum date-time.
 
 ***
 
@@ -559,11 +679,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:310](https://github.com/serenity-
 
 > **get\_minValue**(): `string`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L294)
+Defined in: [src/ui/editors/datetimeeditor.tsx:353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L353)
+
+Returns the minimum allowed date-time value.
 
 #### Returns
 
 `string`
+
+The minimum value.
 
 ***
 
@@ -571,11 +695,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:294](https://github.com/serenity-
 
 > **get\_readOnly**(): `boolean`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L341)
+Defined in: [src/ui/editors/datetimeeditor.tsx:440](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L440)
+
+Returns whether the editor is read-only.
 
 #### Returns
 
 `boolean`
+
+True when read-only.
 
 #### Implementation of
 
@@ -587,11 +715,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:341](https://github.com/serenity-
 
 > **get\_sqlMinMax**(): `boolean`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:326](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L326)
+Defined in: [src/ui/editors/datetimeeditor.tsx:417](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L417)
+
+Whether SQL min/max date-time bounds are applied.
 
 #### Returns
 
 `boolean`
+
+True when SQL bounds are set.
 
 ***
 
@@ -599,11 +731,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:326](https://github.com/serenity-
 
 > **get\_value**(): `string`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L198)
+Defined in: [src/ui/editors/datetimeeditor.tsx:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L236)
+
+Returns the current date-time value.
 
 #### Returns
 
 `string`
+
+The value, or null when empty.
 
 #### Implementation of
 
@@ -615,11 +751,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:198](https://github.com/serenity-
 
 > `protected` **getCssClass**(): `string`
 
-Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
+Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
+Returns the CSS class(es) applied to the widget's DOM node.
 
 #### Returns
 
 `string`
+
+The space-separated CSS class string.
 
 #### Inherited from
 
@@ -631,7 +771,9 @@ Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenit
 
 > `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
 
-Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+Defined in: [src/ui/widgets/widget.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L220)
+
+Returns a custom attribute applied to the widget's type.
 
 #### Type Parameters
 
@@ -645,13 +787,19 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 (...`args`) => `TAttr`
 
+The attribute type to look up.
+
 ##### inherit
 
 `boolean` = `true`
 
+Whether to search inherited types; defaults to true.
+
 #### Returns
 
 `TAttr`
+
+The matching attribute, or null.
 
 #### Inherited from
 
@@ -663,11 +811,15 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 > **getFlatpickrOptions**(): `any`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L157)
+Defined in: [src/ui/editors/datetimeeditor.tsx:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L187)
+
+Returns the flatpickr options for this editor.
 
 #### Returns
 
 `any`
+
+Flatpickr options.
 
 ***
 
@@ -675,11 +827,15 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:157](https://github.com/serenity-
 
 > **getGridField**(): [`Fluent`](../interfaces/Fluent.md)
 
-Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+Defined in: [src/ui/widgets/widget.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L171)
+
+Returns the closest `.field` element containing the widget's DOM node.
 
 #### Returns
 
 [`Fluent`](../interfaces/Fluent.md)
+
+A [Fluent](../functions/Fluent.md) wrapper for the grid field.
 
 #### Inherited from
 
@@ -691,11 +847,15 @@ Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/sereni
 
 > **init**(): `this`
 
-Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+Defined in: [src/ui/widgets/widget.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L243)
+
+Initializes the widget, rendering its contents if rendering was deferred.
 
 #### Returns
 
 `this`
+
+This widget instance.
 
 #### Inherited from
 
@@ -707,7 +867,9 @@ Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/sereni
 
 > **internalRenderContents**(): `void`
 
-Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L173)
+Defined in: [src/ui/widgets/widget.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L266)
+
+Renders the widget's contents and runs any queued after-render callbacks.
 
 #### Returns
 
@@ -723,11 +885,15 @@ Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/sereni
 
 > `protected` **legacyTemplateRender**(): `boolean`
 
-Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L190)
+Defined in: [src/ui/widgets/widget.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L291)
+
+Renders the widget from a legacy `getTemplate` string, if defined.
 
 #### Returns
 
 `boolean`
+
+True if a legacy template was rendered.
 
 #### Inherited from
 
@@ -739,7 +905,7 @@ Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/sereni
 
 > **render**(): `any`
 
-Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
+Defined in: [src/ui/widgets/widget.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L253)
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -759,11 +925,15 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/widgets/widget.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L184)
+Defined in: [src/ui/widgets/widget.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L281)
+
+Renders the widget's contents. Override this to provide custom content.
 
 #### Returns
 
 `any`
+
+The rendered contents.
 
 #### Inherited from
 
@@ -775,13 +945,17 @@ Defined in: [src/ui/widgets/widget.ts:184](https://github.com/serenity-is/sereni
 
 > **set\_maxDate**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:322](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L322)
+Defined in: [src/ui/editors/datetimeeditor.tsx:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L409)
+
+Sets the maximum allowed date-time as a Date.
 
 #### Parameters
 
 ##### value
 
 `Date`
+
+The maximum date-time.
 
 #### Returns
 
@@ -793,13 +967,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:322](https://github.com/serenity-
 
 > **set\_maxValue**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:306](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L306)
+Defined in: [src/ui/editors/datetimeeditor.tsx:377](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L377)
+
+Sets the maximum allowed date-time value.
 
 #### Parameters
 
 ##### value
 
 `string`
+
+The maximum value.
 
 #### Returns
 
@@ -811,13 +989,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:306](https://github.com/serenity-
 
 > **set\_minDate**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:314](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L314)
+Defined in: [src/ui/editors/datetimeeditor.tsx:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L393)
+
+Sets the minimum allowed date-time as a Date.
 
 #### Parameters
 
 ##### value
 
 `Date`
+
+The minimum date-time.
 
 #### Returns
 
@@ -829,13 +1011,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:314](https://github.com/serenity-
 
 > **set\_minValue**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:298](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L298)
+Defined in: [src/ui/editors/datetimeeditor.tsx:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L361)
+
+Sets the minimum allowed date-time value.
 
 #### Parameters
 
 ##### value
 
 `string`
+
+The minimum value.
 
 #### Returns
 
@@ -847,13 +1033,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:298](https://github.com/serenity-
 
 > **set\_readOnly**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:345](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L345)
+Defined in: [src/ui/editors/datetimeeditor.tsx:448](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L448)
+
+Sets whether the editor is read-only.
 
 #### Parameters
 
 ##### value
 
 `boolean`
+
+True to enable read-only mode.
 
 #### Returns
 
@@ -869,13 +1059,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:345](https://github.com/serenity-
 
 > **set\_sqlMinMax**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L330)
+Defined in: [src/ui/editors/datetimeeditor.tsx:425](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L425)
+
+Sets whether SQL min/max date-time bounds are applied.
 
 #### Parameters
 
 ##### value
 
 `boolean`
+
+True to apply SQL bounds.
 
 #### Returns
 
@@ -887,13 +1081,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:330](https://github.com/serenity-
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L227)
+Defined in: [src/ui/editors/datetimeeditor.tsx:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L273)
+
+Sets the date-time value.
 
 #### Parameters
 
 ##### value
 
 `string`
+
+The value to set.
 
 #### Returns
 
@@ -909,13 +1107,17 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:227](https://github.com/serenity-
 
 > **setToNow**(`triggerChange?`): `void`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L144)
+Defined in: [src/ui/editors/datetimeeditor.tsx:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L167)
+
+Sets the value to the current date and time.
 
 #### Parameters
 
 ##### triggerChange?
 
 `boolean`
+
+When true, triggers a change event.
 
 #### Returns
 
@@ -927,7 +1129,10 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:144](https://github.com/serenity-
 
 > `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+Defined in: [src/ui/widgets/widget.ts:318](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L318)
+
+Runs a method synchronously or asynchronously depending on the widget's
+`useAsync` flag, then invokes a continuation.
 
 #### Type Parameters
 
@@ -941,13 +1146,19 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 () => `T`
 
+The synchronous method to run.
+
 ##### asyncMethod
 
 () => `PromiseLike`\<`T`\>
 
+The asynchronous method to run.
+
 ##### then
 
 (`v`) => `void`
+
+The continuation invoked with the result.
 
 #### Returns
 
@@ -963,11 +1174,15 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 > `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
-Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
+Defined in: [src/ui/widgets/widget.ts:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L329)
+
+Returns an id prefix helper for resolving child element ids.
 
 #### Returns
 
 [`IdPrefixType`](../type-aliases/IdPrefixType.md)
+
+An [IdPrefixType](../type-aliases/IdPrefixType.md) proxy for this widget's id prefix.
 
 #### Inherited from
 
@@ -979,7 +1194,10 @@ Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/sereni
 
 > `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
-Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+Defined in: [src/ui/widgets/widget.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L202)
+
+Creates a widget instance from the given params, appending its element to
+the container and invoking the init/init callbacks.
 
 #### Type Parameters
 
@@ -997,9 +1215,13 @@ Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/sereni
 
 [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\>
 
+The widget creation params.
+
 #### Returns
 
 `TWidget`
+
+The created widget instance.
 
 #### Inherited from
 
@@ -1011,11 +1233,15 @@ Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/sereni
 
 > `static` **createDefaultElement**(): `HTMLInputElement`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L12)
+Defined in: [src/ui/editors/datetimeeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L18)
+
+Creates the default text input element for the date-time editor.
 
 #### Returns
 
 `HTMLInputElement`
+
+The input element.
 
 #### Overrides
 
@@ -1027,7 +1253,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:12](https://github.com/serenity-i
 
 > `static` **getWidgetName**(`type`): `string`
 
-Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L91)
+Defined in: [src/ui/widgets/widget.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L131)
+
+Returns the widget name for a type, used for association and unique names.
 
 #### Parameters
 
@@ -1035,9 +1263,13 @@ Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenit
 
 `Function`
 
+The widget type.
+
 #### Returns
 
 `string`
+
+The widget name.
 
 #### Inherited from
 
@@ -1049,7 +1281,9 @@ Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenit
 
 > `protected` `static` **registerClass**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L221)
+Defined in: [src/ui/widgets/widget.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L342)
+
+Registers this type as a class with the given type name.
 
 #### Type Parameters
 
@@ -1063,13 +1297,19 @@ Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/sereni
 
 [`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
 
+The type name to register.
+
 ##### intfAndAttr?
 
 ([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
 
+Optional interfaces and attributes.
+
 #### Returns
 
 [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+The class type info.
 
 #### Inherited from
 
@@ -1081,7 +1321,9 @@ Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/sereni
 
 > `protected` `static` **registerEditor**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L230)
+Defined in: [src/ui/widgets/widget.ts:357](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L357)
+
+Registers this type as an editor with the given type name.
 
 #### Type Parameters
 
@@ -1095,13 +1337,19 @@ Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/sereni
 
 [`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
 
+The type name to register.
+
 ##### intfAndAttr?
 
 ([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
 
+Optional interfaces and attributes.
+
 #### Returns
 
 [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+The editor type info.
 
 #### Inherited from
 
@@ -1113,7 +1361,9 @@ Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/sereni
 
 > `static` **roundToMinutes**(`date`, `minutesStep`): `Date`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:360](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L360)
+Defined in: [src/ui/editors/datetimeeditor.tsx:468](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L468)
+
+Rounds a date to the nearest minute step.
 
 #### Parameters
 
@@ -1121,10 +1371,16 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:360](https://github.com/serenity-
 
 `Date`
 
+The date to round.
+
 ##### minutesStep
 
 `number`
 
+Step size in minutes.
+
 #### Returns
 
 `Date`
+
+The rounded date with seconds and milliseconds zeroed.

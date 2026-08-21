@@ -4,18 +4,18 @@
 
 > **isLoggedInAsync**: `Promise`\<`boolean`\>
 
-Defined in: [src/base/authorization.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L162)
+Defined in: [src/base/authorization.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L221)
 
-Checks if the current user is logged in.
+Whether the current user is logged in (asynchronous).
 
-## Returns
+## Remarks
 
-`true` if the user is logged in, `false` otherwise.
+Awaits [Authorization.userDefinitionAsync](userDefinitionAsync.md) so it never blocks the UI thread.
 
 ## Example
 
 ```ts
 if (await Authorization.isLoggedInAsync) {
-    // do something
+    // user is authenticated
 }
 ```

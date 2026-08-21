@@ -4,7 +4,7 @@
 
 > **addTypeMember**(`type`, `member`): [`TypeMember`](../interfaces/TypeMember.md)
 
-Defined in: [src/compat/system-compat.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L131)
+Defined in: [src/compat/system-compat.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L169)
 
 Adds a new member to a type or updates an existing member.
 

@@ -2,7 +2,9 @@
 
 # Abstract Class: BaseFiltering
 
-Defined in: [src/ui/filtering/basefiltering.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L12)
+Defined in: [src/ui/filtering/basefiltering.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L15)
+
+Base class for filtering handlers that build criteria and editors for a field.
 
 ## Extended by
 
@@ -31,7 +33,7 @@ Defined in: [src/ui/filtering/basefiltering.ts:12](https://github.com/serenity-i
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/filtering/basefiltering.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L269)
+Defined in: [src/ui/filtering/basefiltering.ts:370](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L370)
 
 #### Implementation of
 
@@ -43,7 +45,9 @@ Defined in: [src/ui/filtering/basefiltering.ts:269](https://github.com/serenity-
 
 > `protected` **appendComparisonOperators**(`list`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
-Defined in: [src/ui/filtering/basefiltering.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L55)
+Defined in: [src/ui/filtering/basefiltering.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L96)
+
+Appends the comparison operators (eq, ne, lt, le, gt, ge).
 
 #### Parameters
 
@@ -51,9 +55,13 @@ Defined in: [src/ui/filtering/basefiltering.ts:55](https://github.com/serenity-i
 
 [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
+The operator list.
+
 #### Returns
 
 [`FilterOperator`](../interfaces/FilterOperator.md)[]
+
+The operator list.
 
 ***
 
@@ -61,7 +69,9 @@ Defined in: [src/ui/filtering/basefiltering.ts:55](https://github.com/serenity-i
 
 > `protected` **appendNullableOperators**(`list`): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
-Defined in: [src/ui/filtering/basefiltering.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L46)
+Defined in: [src/ui/filtering/basefiltering.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L82)
+
+Appends the is-null and is-not-null operators when the field is nullable.
 
 #### Parameters
 
@@ -69,9 +79,13 @@ Defined in: [src/ui/filtering/basefiltering.ts:46](https://github.com/serenity-i
 
 [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
+The operator list.
+
 #### Returns
 
 [`FilterOperator`](../interfaces/FilterOperator.md)[]
+
+The operator list.
 
 ***
 
@@ -79,11 +93,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:46](https://github.com/serenity-i
 
 > `protected` **argumentNull**(): `Error`
 
-Defined in: [src/ui/filtering/basefiltering.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L203)
+Defined in: [src/ui/filtering/basefiltering.ts:287](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L287)
+
+Returns the error thrown when a required value is missing.
 
 #### Returns
 
 `Error`
+
+The error.
 
 ***
 
@@ -91,7 +109,9 @@ Defined in: [src/ui/filtering/basefiltering.ts:203](https://github.com/serenity-
 
 > **createEditor**(): `void`
 
-Defined in: [src/ui/filtering/basefiltering.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L69)
+Defined in: [src/ui/filtering/basefiltering.ts:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L117)
+
+Creates the editor for the current operator.
 
 #### Returns
 
@@ -107,7 +127,9 @@ Defined in: [src/ui/filtering/basefiltering.ts:69](https://github.com/serenity-i
 
 > `protected` **displayText**(`op`, `values?`): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L104)
+Defined in: [src/ui/filtering/basefiltering.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L168)
+
+Builds the display text for an operator and its values.
 
 #### Parameters
 
@@ -115,13 +137,19 @@ Defined in: [src/ui/filtering/basefiltering.ts:104](https://github.com/serenity-
 
 [`FilterOperator`](../interfaces/FilterOperator.md)
 
+The operator.
+
 ##### values?
 
 `any`[]
 
+The filter values.
+
 #### Returns
 
 `string`
+
+The display text.
 
 ***
 
@@ -129,11 +157,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:104](https://github.com/serenity-
 
 > **get\_container**(): `HTMLElement`
 
-Defined in: [src/ui/filtering/basefiltering.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L26)
+Defined in: [src/ui/filtering/basefiltering.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L41)
+
+Returns the container element for the editor.
 
 #### Returns
 
 `HTMLElement`
+
+The container element.
 
 #### Implementation of
 
@@ -145,11 +177,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:26](https://github.com/serenity-i
 
 > **get\_field**(): [`PropertyItem`](../interfaces/PropertyItem.md)
 
-Defined in: [src/ui/filtering/basefiltering.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L16)
+Defined in: [src/ui/filtering/basefiltering.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L23)
+
+Returns the field being filtered.
 
 #### Returns
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
+
+The field.
 
 #### Implementation of
 
@@ -161,11 +197,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:16](https://github.com/serenity-i
 
 > **get\_operator**(): [`FilterOperator`](../interfaces/FilterOperator.md)
 
-Defined in: [src/ui/filtering/basefiltering.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L36)
+Defined in: [src/ui/filtering/basefiltering.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L59)
+
+Returns the current operator.
 
 #### Returns
 
 [`FilterOperator`](../interfaces/FilterOperator.md)
+
+The operator.
 
 #### Implementation of
 
@@ -177,11 +217,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:36](https://github.com/serenity-i
 
 > **getCriteria**(): `CriteriaWithText`
 
-Defined in: [src/ui/filtering/basefiltering.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L120)
+Defined in: [src/ui/filtering/basefiltering.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L192)
+
+Returns the criteria and display text for the current operator.
 
 #### Returns
 
 `CriteriaWithText`
+
+The criteria with display text.
 
 #### Implementation of
 
@@ -193,11 +237,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:120](https://github.com/serenity-
 
 > `protected` **getCriteriaField**(): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L116)
+Defined in: [src/ui/filtering/basefiltering.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L184)
+
+Returns the criteria field name.
 
 #### Returns
 
 `string`
+
+The field name.
 
 ***
 
@@ -205,11 +253,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:116](https://github.com/serenity-
 
 > **getEditorText**(): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L236)
+Defined in: [src/ui/filtering/basefiltering.ts:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L333)
+
+Returns the display text of the current editor value.
 
 #### Returns
 
 `string`
+
+The editor text.
 
 ***
 
@@ -217,11 +269,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:236](https://github.com/serenity-
 
 > **getEditorValue**(): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L214)
+Defined in: [src/ui/filtering/basefiltering.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L307)
+
+Returns the current editor value.
 
 #### Returns
 
 `string`
+
+The editor value.
 
 ***
 
@@ -229,11 +285,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:214](https://github.com/serenity-
 
 > `abstract` **getOperators**(): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
-Defined in: [src/ui/filtering/basefiltering.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L44)
+Defined in: [src/ui/filtering/basefiltering.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L75)
+
+Returns the operators supported by this filtering handler.
 
 #### Returns
 
 [`FilterOperator`](../interfaces/FilterOperator.md)[]
+
+The operators.
 
 #### Implementation of
 
@@ -245,7 +305,9 @@ Defined in: [src/ui/filtering/basefiltering.ts:44](https://github.com/serenity-i
 
 > `protected` **getTitle**(`field`): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L100)
+Defined in: [src/ui/filtering/basefiltering.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L158)
+
+Returns the localized title of a field.
 
 #### Parameters
 
@@ -253,9 +315,13 @@ Defined in: [src/ui/filtering/basefiltering.ts:100](https://github.com/serenity-
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
 
+The field.
+
 #### Returns
 
 `string`
+
+The title.
 
 ***
 
@@ -263,13 +329,17 @@ Defined in: [src/ui/filtering/basefiltering.ts:100](https://github.com/serenity-
 
 > **initQuickFilter**(`filter`): `void`
 
-Defined in: [src/ui/filtering/basefiltering.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L253)
+Defined in: [src/ui/filtering/basefiltering.ts:354](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L354)
+
+Initializes a quick filter for this field.
 
 #### Parameters
 
 ##### filter
 
 [`QuickFilter`](../interfaces/QuickFilter.md)\<[`Widget`](Widget.md)\<`any`\>, `any`\>
+
+The quick filter to initialize.
 
 #### Returns
 
@@ -285,11 +355,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:253](https://github.com/serenity-
 
 > `protected` **isNullable**(): `boolean`
 
-Defined in: [src/ui/filtering/basefiltering.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L65)
+Defined in: [src/ui/filtering/basefiltering.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L110)
+
+Whether the field is nullable.
 
 #### Returns
 
 `boolean`
+
+True when the field is not required.
 
 ***
 
@@ -297,13 +371,17 @@ Defined in: [src/ui/filtering/basefiltering.ts:65](https://github.com/serenity-i
 
 > **loadState**(`state`): `void`
 
-Defined in: [src/ui/filtering/basefiltering.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L181)
+Defined in: [src/ui/filtering/basefiltering.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L257)
+
+Loads persisted state into the editor.
 
 #### Parameters
 
 ##### state
 
 `any`
+
+The persisted state.
 
 #### Returns
 
@@ -319,7 +397,9 @@ Defined in: [src/ui/filtering/basefiltering.ts:181](https://github.com/serenity-
 
 > `protected` **operatorFormat**(`op`): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L96)
+Defined in: [src/ui/filtering/basefiltering.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L149)
+
+Returns the format string for an operator.
 
 #### Parameters
 
@@ -327,9 +407,13 @@ Defined in: [src/ui/filtering/basefiltering.ts:96](https://github.com/serenity-i
 
 [`FilterOperator`](../interfaces/FilterOperator.md)
 
+The operator.
+
 #### Returns
 
 `string`
+
+The format string.
 
 ***
 
@@ -337,11 +421,15 @@ Defined in: [src/ui/filtering/basefiltering.ts:96](https://github.com/serenity-i
 
 > **saveState**(): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L186)
+Defined in: [src/ui/filtering/basefiltering.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L266)
+
+Saves the editor state for persistence.
 
 #### Returns
 
 `string`
+
+The saved state.
 
 #### Implementation of
 
@@ -353,13 +441,17 @@ Defined in: [src/ui/filtering/basefiltering.ts:186](https://github.com/serenity-
 
 > **set\_container**(`value`): `void`
 
-Defined in: [src/ui/filtering/basefiltering.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L30)
+Defined in: [src/ui/filtering/basefiltering.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L49)
+
+Sets the container element for the editor.
 
 #### Parameters
 
 ##### value
 
 `HTMLElement`
+
+The container element.
 
 #### Returns
 
@@ -375,13 +467,17 @@ Defined in: [src/ui/filtering/basefiltering.ts:30](https://github.com/serenity-i
 
 > **set\_field**(`value`): `void`
 
-Defined in: [src/ui/filtering/basefiltering.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L20)
+Defined in: [src/ui/filtering/basefiltering.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L31)
+
+Sets the field being filtered.
 
 #### Parameters
 
 ##### value
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
+
+The field.
 
 #### Returns
 
@@ -397,13 +493,17 @@ Defined in: [src/ui/filtering/basefiltering.ts:20](https://github.com/serenity-i
 
 > **set\_operator**(`value`): `void`
 
-Defined in: [src/ui/filtering/basefiltering.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L40)
+Defined in: [src/ui/filtering/basefiltering.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L67)
+
+Sets the current operator.
 
 #### Parameters
 
 ##### value
 
 [`FilterOperator`](../interfaces/FilterOperator.md)
+
+The operator.
 
 #### Returns
 
@@ -419,7 +519,9 @@ Defined in: [src/ui/filtering/basefiltering.ts:40](https://github.com/serenity-i
 
 > **validateEditorValue**(`value`): `string`
 
-Defined in: [src/ui/filtering/basefiltering.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L207)
+Defined in: [src/ui/filtering/basefiltering.ts:296](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L296)
+
+Validates the editor value.
 
 #### Parameters
 
@@ -427,9 +529,13 @@ Defined in: [src/ui/filtering/basefiltering.ts:207](https://github.com/serenity-
 
 `string`
 
+The value to validate.
+
 #### Returns
 
 `string`
+
+The validated value.
 
 ***
 
@@ -437,7 +543,7 @@ Defined in: [src/ui/filtering/basefiltering.ts:207](https://github.com/serenity-
 
 > `protected` `static` **registerClass**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/ui/filtering/basefiltering.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L260)
+Defined in: [src/ui/filtering/basefiltering.ts:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/basefiltering.ts#L361)
 
 #### Type Parameters
 

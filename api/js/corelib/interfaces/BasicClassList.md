@@ -2,7 +2,12 @@
 
 # Interface: BasicClassList()
 
-Defined in: [../domwise/dist/index.d.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L3)
+Defined in: [../domwise/dist/index.d.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L14)
+
+A class list manager created by `useClassList`. It wraps a `DOMTokenList`
+and provides a subset of the native `classList` API (`add`, `remove`,
+`toggle`, `contains`, `size`, `value`). It can also be used as a JSX prop
+hook to reactively bind the `class` attribute; see [useClassList](../functions/useClassList.md).
 
 ## Extends
 
@@ -10,7 +15,9 @@ Defined in: [../domwise/dist/index.d.ts:3](https://github.com/serenity-is/sereni
 
 > **BasicClassList**(): `DOMTokenList`
 
-Defined in: [../domwise/dist/index.d.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L4)
+Defined in: [../domwise/dist/index.d.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L16)
+
+Returns the underlying `DOMTokenList` (detached before binding, live after).
 
 ## Returns
 
@@ -22,7 +29,9 @@ Defined in: [../domwise/dist/index.d.ts:4](https://github.com/serenity-is/sereni
 
 > `readonly` **size**: `number`
 
-Defined in: [../domwise/dist/index.d.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L5)
+Defined in: [../domwise/dist/index.d.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L18)
+
+Number of tokens in the list.
 
 ***
 
@@ -30,7 +39,9 @@ Defined in: [../domwise/dist/index.d.ts:5](https://github.com/serenity-is/sereni
 
 > `readonly` **value**: `string`
 
-Defined in: [../domwise/dist/index.d.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L6)
+Defined in: [../domwise/dist/index.d.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L20)
+
+Space-separated string of all tokens (mirrors `DOMTokenList.value`).
 
 ## Methods
 
@@ -38,7 +49,7 @@ Defined in: [../domwise/dist/index.d.ts:6](https://github.com/serenity-is/sereni
 
 > **\[initPropHookSymbol\]**(`node`, `propName`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2425](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2425)
+Defined in: [../domwise/dist/index.d.ts:2759](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2759)
 
 #### Parameters
 
@@ -64,13 +75,17 @@ Defined in: [../domwise/dist/index.d.ts:2425](https://github.com/serenity-is/ser
 
 > **add**(...`tokens`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L7)
+Defined in: [../domwise/dist/index.d.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L25)
+
+Adds one or more tokens to the list. Duplicate tokens are ignored.
 
 #### Parameters
 
 ##### tokens
 
 ...`string`[]
+
+Class names to add.
 
 #### Returns
 
@@ -82,7 +97,9 @@ Defined in: [../domwise/dist/index.d.ts:7](https://github.com/serenity-is/sereni
 
 > **contains**(`token`): `boolean`
 
-Defined in: [../domwise/dist/index.d.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L10)
+Defined in: [../domwise/dist/index.d.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L42)
+
+Checks whether the list contains the given token.
 
 #### Parameters
 
@@ -90,9 +107,13 @@ Defined in: [../domwise/dist/index.d.ts:10](https://github.com/serenity-is/seren
 
 `string`
 
+Class name to test.
+
 #### Returns
 
 `boolean`
+
+`true` if the token is present.
 
 ***
 
@@ -100,13 +121,17 @@ Defined in: [../domwise/dist/index.d.ts:10](https://github.com/serenity-is/seren
 
 > **remove**(...`tokens`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L8)
+Defined in: [../domwise/dist/index.d.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L30)
+
+Removes one or more tokens from the list.
 
 #### Parameters
 
 ##### tokens
 
 ...`string`[]
+
+Class names to remove.
 
 #### Returns
 
@@ -118,7 +143,9 @@ Defined in: [../domwise/dist/index.d.ts:8](https://github.com/serenity-is/sereni
 
 > **toggle**(`token`, `force?`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L9)
+Defined in: [../domwise/dist/index.d.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L36)
+
+Toggles a token, optionally forcing the presence or absence.
 
 #### Parameters
 
@@ -126,9 +153,13 @@ Defined in: [../domwise/dist/index.d.ts:9](https://github.com/serenity-is/sereni
 
 `string`
 
+Class name to toggle.
+
 ##### force?
 
 `boolean`
+
+When provided, forces add (`true`) or remove (`false`).
 
 #### Returns
 

@@ -4,9 +4,9 @@
 
 > **TranslateTextsOptions** = `object`
 
-Defined in: [src/base/localtext.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L143)
+Defined in: [src/base/localtext.ts:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L157)
 
-Options for translating texts.
+Options passed to [TranslationConfig.translateTexts](../variables/TranslationConfig.md#translatetexts) to request machine/human translations.
 
 ## Properties
 
@@ -14,7 +14,7 @@ Options for translating texts.
 
 > **Inputs**: `object`[]
 
-Defined in: [src/base/localtext.ts:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L147)
+Defined in: [src/base/localtext.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L161)
 
 An array of inputs for translation
 
@@ -42,6 +42,6 @@ The text key to be translated
 
 > `optional` **SourceLanguageID**: `string`
 
-Defined in: [src/base/localtext.ts:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L145)
+Defined in: [src/base/localtext.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L159)
 
 The source language ID

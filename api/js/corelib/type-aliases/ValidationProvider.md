@@ -4,12 +4,12 @@
 
 > **ValidationProvider** = (`value`, `element`, `params?`) => `boolean` \| `string` \| `Promise`\<`boolean` \| `string`\>
 
-Defined in: [src/base/validator.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L34)
+Defined in: [src/base/validator.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L44)
 
-Validation plugin signature with multitype return.
-Boolean return signifies the validation result, which uses the default validation error message read from the element attribute.
-String return signifies failed validation, which then will be used as the validation error message.
-Promise return signifies asynchronous plugin behavior, with same behavior as Boolean or String.
+Validation rule implementation.
+- `boolean` return: `true` passes, `false` fails using the default message.
+- `string` return: non-empty string fails and is used as the error message.
+- `Promise` return: async variant with the same semantics.
 
 ## Parameters
 
@@ -17,14 +17,22 @@ Promise return signifies asynchronous plugin behavior, with same behavior as Boo
 
 [`ValidationValue`](ValidationValue.md)
 
+Current field value.
+
 ### element
 
 [`ValidatableElement`](../interfaces/ValidatableElement.md)
+
+Element being validated.
 
 ### params?
 
 `any`
 
+Optional rule parameter (e.g. min value, regex).
+
 ## Returns
 
 `boolean` \| `string` \| `Promise`\<`boolean` \| `string`\>
+
+Validation result or promise thereof.

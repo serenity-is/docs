@@ -4,10 +4,12 @@
 
 > **appendToNode**(`parent`, `child`): `void`
 
-Defined in: [src/base/html.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L81)
+Defined in: [src/base/html.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L94)
 
-Appends content like DOM nodes, string, number or an array of these to the parent node.
-Undefined, null, false values are ignored. Promises are awaited.
+Appends heterogeneous content to a parent node.
+Handles strings (as text nodes), `Node` instances, array-like collections (recursively),
+promise-like values (async placeholder replaced on resolve/reject), and primitive values via `Node.append`.
+Falsy values `null`, `undefined`, and `false` are ignored.
 
 ## Parameters
 
@@ -15,14 +17,18 @@ Undefined, null, false values are ignored. Promises are awaited.
 
 `ParentNode`
 
-Target parent element
+Target parent node to append into.
 
 ### child
 
 `any`
 
-The content
+Content to append: a single value, array-like collection, `Node`, string, or `PromiseLike`.
 
 ## Returns
 
 `void`
+
+## Remarks
+
+Promise children insert a comment placeholder synchronously and replace it with the resolved fragment when settled.

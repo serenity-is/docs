@@ -4,11 +4,11 @@
 
 > **getElementReadOnly**(`el`): `boolean`
 
-Defined in: [src/base/html.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L132)
+Defined in: [src/base/html.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L158)
 
-Gets readonly state of an element. If the element is null, returns null.
-It does not check for attached widgets. It returns true if the element has readonly class,
-disabled attribute (select, radio, checkbox) or readonly attribute (other inputs).
+Gets the read-only state of a DOM element without consulting attached widgets.
+Considers the `readonly` CSS class, the `disabled` attribute for `select`/`radio`/`checkbox`,
+and the `readonly` attribute for other inputs.
 
 ## Parameters
 
@@ -16,8 +16,10 @@ disabled attribute (select, radio, checkbox) or readonly attribute (other inputs
 
 `Element`
 
-element
+Element to inspect. Returns `null` if `el` is `null`/`undefined`.
 
 ## Returns
 
 `boolean`
+
+`true` if read-only/disabled, `false` otherwise, or `null` when `el` is absent.

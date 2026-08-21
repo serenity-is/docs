@@ -4,9 +4,9 @@
 
 > **zeroPad**(`n`, `len`): `string`
 
-Defined in: [src/compat/strings-compat.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L122)
+Defined in: [src/compat/strings-compat.ts:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L139)
 
-Pads the start of string to make it the specified length.
+Left-pads the decimal representation of `n` with `"0"` to reach `len` characters.
 
 ## Parameters
 
@@ -14,14 +14,16 @@ Pads the start of string to make it the specified length.
 
 `number`
 
-The number to pad.
+The number to format; `null`/`undefined` yields `""`.
 
 ### len
 
 `number`
 
-Target length of the string.
+The desired total length of the resulting string.
 
 ## Returns
 
 `string`
+
+The zero-padded string.

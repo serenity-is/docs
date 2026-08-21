@@ -2,7 +2,11 @@
 
 # Class: PropertyGrid\<P\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:331](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L331)
+Defined in: [src/ui/widgets/propertygrid.tsx:409](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L409)
+
+A widget that renders a set of [PropertyItem](../interfaces/PropertyItem.md)s as a form, organizing
+them into categories and/or tabs, and manages loading/saving values to and
+from the underlying editors.
 
 ## Extends
 
@@ -14,19 +18,26 @@ Defined in: [src/ui/widgets/propertygrid.tsx:331](https://github.com/serenity-is
 
 `P` *extends* [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md) = [`PropertyGridOptions`](../interfaces/PropertyGridOptions.md)
 
+Widget props type, constrained to [PropertyGridOptions](../interfaces/PropertyGridOptions.md).
+
 ## Constructors
 
 ### Constructor
 
 > **new PropertyGrid**\<`P`\>(`props`): `PropertyGrid`\<`P`\>
 
-Defined in: [src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L16)
+Defined in: [src/ui/widgets/widget.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L31)
+
+Creates a widget bound to the given props, resolving the DOM node,
+associating the widget with it and rendering its contents.
 
 #### Parameters
 
 ##### props
 
 [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
+
+The widget props, including the target element.
 
 #### Returns
 
@@ -42,7 +53,9 @@ Defined in: [src/ui/widgets/widget.ts:16](https://github.com/serenity-is/serenit
 
 > `readonly` **domNode**: `HTMLElement`
 
-Defined in: [src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L14)
+Defined in: [src/ui/widgets/widget.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L24)
+
+The DOM node this widget is bound to.
 
 #### Inherited from
 
@@ -54,7 +67,9 @@ Defined in: [src/ui/widgets/widget.ts:14](https://github.com/serenity-is/serenit
 
 > `readonly` **idPrefix**: `string`
 
-Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L13)
+Defined in: [src/ui/widgets/widget.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L22)
+
+The id prefix used for this widget's child element ids.
 
 #### Inherited from
 
@@ -66,7 +81,9 @@ Defined in: [src/ui/widgets/widget.ts:13](https://github.com/serenity-is/serenit
 
 > `protected` `readonly` **options**: [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
-Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L11)
+Defined in: [src/ui/widgets/widget.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L18)
+
+The widget's options/props.
 
 #### Inherited from
 
@@ -78,7 +95,9 @@ Defined in: [src/ui/widgets/widget.ts:11](https://github.com/serenity-is/serenit
 
 > `readonly` **uniqueName**: `string`
 
-Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L12)
+Defined in: [src/ui/widgets/widget.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L20)
+
+A unique name for this widget instance, used for event namespacing.
 
 #### Inherited from
 
@@ -90,7 +109,7 @@ Defined in: [src/ui/widgets/widget.ts:12](https://github.com/serenity-is/serenit
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L333)
+Defined in: [src/ui/widgets/propertygrid.tsx:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L411)
 
 #### Overrides
 
@@ -102,7 +121,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:333](https://github.com/serenity-is
 
 > `readonly` `static` **isComponent**: `true` = `true`
 
-Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L219)
+Defined in: [src/ui/widgets/widget.ts:334](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L334)
 
 #### Inherited from
 
@@ -116,7 +135,7 @@ Defined in: [src/ui/widgets/widget.ts:219](https://github.com/serenity-is/sereni
 
 > **get** **element**(): [`Fluent`](../interfaces/Fluent.md)
 
-Defined in: [src/ui/widgets/widget.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L59)
+Defined in: [src/ui/widgets/widget.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L82)
 
 Returns a Fluent(this.domNode) object
 
@@ -136,7 +155,9 @@ Returns a Fluent(this.domNode) object
 
 > **get** **props**(): [`WidgetProps`](../type-aliases/WidgetProps.md)\<`P`\>
 
-Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L203)
+Defined in: [src/ui/widgets/widget.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L307)
+
+Returns the widget's props/options.
 
 ##### Returns
 
@@ -154,7 +175,9 @@ Defined in: [src/ui/widgets/widget.ts:203](https://github.com/serenity-is/sereni
 
 > **get** **value**(): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:478](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L478)
+Defined in: [src/ui/widgets/propertygrid.tsx:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L620)
+
+Gets the current values of all editors as an object.
 
 ##### Returns
 
@@ -164,13 +187,17 @@ Defined in: [src/ui/widgets/propertygrid.tsx:478](https://github.com/serenity-is
 
 > **set** **value**(`val`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:482](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L482)
+Defined in: [src/ui/widgets/propertygrid.tsx:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L628)
+
+Loads values from an object into all editors.
 
 ##### Parameters
 
 ###### val
 
 `any`
+
+The object containing values to load.
 
 ##### Returns
 
@@ -182,7 +209,9 @@ Defined in: [src/ui/widgets/propertygrid.tsx:482](https://github.com/serenity-is
 
 > `protected` **addCssClass**(): `void`
 
-Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L63)
+Defined in: [src/ui/widgets/widget.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L89)
+
+Adds the widget's CSS class to its DOM node.
 
 #### Returns
 
@@ -200,7 +229,9 @@ Defined in: [src/ui/widgets/widget.ts:63](https://github.com/serenity-is/serenit
 
 > **addValidationRule**(`rule`, `uniqueName?`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L95)
+Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+
+Adds a validation rule to the widget's DOM node.
 
 ##### Parameters
 
@@ -208,9 +239,15 @@ Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenit
 
 (`input`) => `string`
 
+The validation rule function, or a unique name when the
+  two-argument overload is used.
+
 ###### uniqueName?
 
 `string`
+
+A unique name for the rule, or the rule function when
+  the two-argument overload is used.
 
 ##### Returns
 
@@ -224,7 +261,9 @@ Defined in: [src/ui/widgets/widget.ts:95](https://github.com/serenity-is/serenit
 
 > **addValidationRule**(`uniqueName`, `rule`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L96)
+Defined in: [src/ui/widgets/widget.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L143)
+
+Adds a validation rule to the widget's DOM node.
 
 ##### Parameters
 
@@ -232,9 +271,15 @@ Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenit
 
 `string`
 
+A unique name for the rule, or the rule function when
+  the two-argument overload is used.
+
 ###### rule
 
 (`input`) => `string`
+
+The validation rule function, or a unique name when the
+  two-argument overload is used.
 
 ##### Returns
 
@@ -250,13 +295,17 @@ Defined in: [src/ui/widgets/widget.ts:96](https://github.com/serenity-is/serenit
 
 > `protected` **afterRender**(`callback`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L142)
+Defined in: [src/ui/widgets/widget.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L228)
+
+Queues a callback to run after the widget's contents are rendered.
 
 #### Parameters
 
 ##### callback
 
 () => `void`
+
+The callback to run after rendering.
 
 #### Returns
 
@@ -272,7 +321,9 @@ Defined in: [src/ui/widgets/widget.ts:142](https://github.com/serenity-is/sereni
 
 > `protected` **byId**\<`TElement`\>(`id`): [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
 
-Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L102)
+Defined in: [src/ui/widgets/widget.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L154)
+
+Finds a child element by its prefix-relative id.
 
 #### Type Parameters
 
@@ -286,9 +337,13 @@ Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/sereni
 
 `string`
 
+The id relative to the widget's id prefix.
+
 #### Returns
 
 [`Fluent`](../interfaces/Fluent.md)\<`TElement`\>
+
+A [Fluent](../functions/Fluent.md) wrapper for the matching element.
 
 #### Inherited from
 
@@ -300,7 +355,9 @@ Defined in: [src/ui/widgets/widget.ts:102](https://github.com/serenity-is/sereni
 
 > `protected` **canModifyItem**(`item`): `boolean`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L514)
+Defined in: [src/ui/widgets/propertygrid.tsx:672](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L672)
+
+Determines whether a property item may be modified in the current mode.
 
 #### Parameters
 
@@ -308,9 +365,13 @@ Defined in: [src/ui/widgets/propertygrid.tsx:514](https://github.com/serenity-is
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
 
+The property item to check.
+
 #### Returns
 
 `boolean`
+
+True if the item can be modified.
 
 ***
 
@@ -318,13 +379,17 @@ Defined in: [src/ui/widgets/propertygrid.tsx:514](https://github.com/serenity-is
 
 > **change**(`handler`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L114)
+Defined in: [src/ui/widgets/widget.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L179)
+
+Registers a `change` handler on the widget's DOM node.
 
 #### Parameters
 
 ##### handler
 
 (`e`) => `void`
+
+The change event handler.
 
 #### Returns
 
@@ -340,13 +405,18 @@ Defined in: [src/ui/widgets/widget.ts:114](https://github.com/serenity-is/sereni
 
 > **changeSelect2**(`handler`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L118)
+Defined in: [src/ui/widgets/widget.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L188)
+
+Registers a `change` handler that ignores changes originating from
+combobox setting values.
 
 #### Parameters
 
 ##### handler
 
 (`e`) => `void`
+
+The change event handler.
 
 #### Returns
 
@@ -362,11 +432,15 @@ Defined in: [src/ui/widgets/widget.ts:118](https://github.com/serenity-is/sereni
 
 > **commitEdits**(): `Promise`\<`boolean`\>
 
-Defined in: [src/ui/widgets/propertygrid.tsx:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L466)
+Defined in: [src/ui/widgets/propertygrid.tsx:605](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L605)
+
+Commits pending edits on all editors that support it.
 
 #### Returns
 
 `Promise`\<`boolean`\>
+
+True if all commits succeeded, false if any editor rejected.
 
 ***
 
@@ -374,11 +448,16 @@ Defined in: [src/ui/widgets/propertygrid.tsx:466](https://github.com/serenity-is
 
 > `protected` **deferRender**(): `boolean`
 
-Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L67)
+Defined in: [src/ui/widgets/widget.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L98)
+
+Determines whether rendering should be deferred until [init](#init) is
+called.
 
 #### Returns
 
 `boolean`
+
+True to defer rendering.
 
 #### Inherited from
 
@@ -390,7 +469,9 @@ Defined in: [src/ui/widgets/widget.ts:67](https://github.com/serenity-is/serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:366](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L366)
+Defined in: [src/ui/widgets/propertygrid.tsx:452](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L452)
+
+Destroys all field editors and clears the grid contents.
 
 #### Returns
 
@@ -406,13 +487,18 @@ Defined in: [src/ui/widgets/propertygrid.tsx:366](https://github.com/serenity-is
 
 > **enumerateItems**(`callback`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L397)
+Defined in: [src/ui/widgets/propertygrid.tsx:500](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L500)
+
+Invokes a callback for each rendered field with its property item and
+editor widget.
 
 #### Parameters
 
 ##### callback
 
 (`p1`, `p2`) => `void`
+
+Callback receiving the property item and editor widget.
 
 #### Returns
 
@@ -424,7 +510,9 @@ Defined in: [src/ui/widgets/propertygrid.tsx:397](https://github.com/serenity-is
 
 > `protected` **findById**\<`TElement`\>(`id`): `TElement`
 
-Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
+
+Finds a child element by its prefix-relative id.
 
 #### Type Parameters
 
@@ -438,9 +526,13 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 `string`
 
+The id relative to the widget's id prefix.
+
 #### Returns
 
 `TElement`
+
+The matching element, or null if not found.
 
 #### Inherited from
 
@@ -452,11 +544,15 @@ Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/sereni
 
 > **get\_editors**(): [`Widget`](Widget.md)\<`any`\>[]
 
-Defined in: [src/ui/widgets/propertygrid.tsx:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L385)
+Defined in: [src/ui/widgets/propertygrid.tsx:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L475)
+
+Returns the editor widgets for all rendered fields.
 
 #### Returns
 
 [`Widget`](Widget.md)\<`any`\>[]
+
+Array of editor widgets.
 
 ***
 
@@ -464,11 +560,15 @@ Defined in: [src/ui/widgets/propertygrid.tsx:385](https://github.com/serenity-is
 
 > **get\_idPrefix**(): `string`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:393](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L393)
+Defined in: [src/ui/widgets/propertygrid.tsx:491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L491)
+
+Returns the id prefix used by this grid.
 
 #### Returns
 
 `string`
+
+The id prefix.
 
 ***
 
@@ -476,11 +576,15 @@ Defined in: [src/ui/widgets/propertygrid.tsx:393](https://github.com/serenity-is
 
 > **get\_items**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-Defined in: [src/ui/widgets/propertygrid.tsx:389](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L389)
+Defined in: [src/ui/widgets/propertygrid.tsx:483](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L483)
+
+Returns the property items for all rendered fields.
 
 #### Returns
 
 [`PropertyItem`](../interfaces/PropertyItem.md)[]
+
+Array of property items.
 
 ***
 
@@ -488,11 +592,15 @@ Defined in: [src/ui/widgets/propertygrid.tsx:389](https://github.com/serenity-is
 
 > **get\_mode**(): [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
 
-Defined in: [src/ui/widgets/propertygrid.tsx:407](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L407)
+Defined in: [src/ui/widgets/propertygrid.tsx:514](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L514)
+
+Returns the current grid mode (insert or update).
 
 #### Returns
 
 [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
+
+The current [PropertyGridMode](../enumerations/PropertyGridMode.md).
 
 ***
 
@@ -500,11 +608,15 @@ Defined in: [src/ui/widgets/propertygrid.tsx:407](https://github.com/serenity-is
 
 > `protected` **getCssClass**(): `string`
 
-Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L71)
+Defined in: [src/ui/widgets/widget.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L106)
+
+Returns the CSS class(es) applied to the widget's DOM node.
 
 #### Returns
 
 `string`
+
+The space-separated CSS class string.
 
 #### Inherited from
 
@@ -516,7 +628,9 @@ Defined in: [src/ui/widgets/widget.ts:71](https://github.com/serenity-is/serenit
 
 > `protected` **getCustomAttribute**\<`TAttr`\>(`attrType`, `inherit`): `TAttr`
 
-Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L138)
+Defined in: [src/ui/widgets/widget.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L220)
+
+Returns a custom attribute applied to the widget's type.
 
 #### Type Parameters
 
@@ -530,13 +644,19 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 (...`args`) => `TAttr`
 
+The attribute type to look up.
+
 ##### inherit
 
 `boolean` = `true`
 
+Whether to search inherited types; defaults to true.
+
 #### Returns
 
 `TAttr`
+
+The matching attribute, or null.
 
 #### Inherited from
 
@@ -548,11 +668,15 @@ Defined in: [src/ui/widgets/widget.ts:138](https://github.com/serenity-is/sereni
 
 > **getGridField**(): [`Fluent`](../interfaces/Fluent.md)
 
-Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L110)
+Defined in: [src/ui/widgets/widget.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L171)
+
+Returns the closest `.field` element containing the widget's DOM node.
 
 #### Returns
 
 [`Fluent`](../interfaces/Fluent.md)
+
+A [Fluent](../functions/Fluent.md) wrapper for the grid field.
 
 #### Inherited from
 
@@ -564,11 +688,15 @@ Defined in: [src/ui/widgets/widget.ts:110](https://github.com/serenity-is/sereni
 
 > **init**(): `this`
 
-Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L153)
+Defined in: [src/ui/widgets/widget.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L243)
+
+Initializes the widget, rendering its contents if rendering was deferred.
 
 #### Returns
 
 `this`
+
+This widget instance.
 
 #### Inherited from
 
@@ -580,7 +708,9 @@ Defined in: [src/ui/widgets/widget.ts:153](https://github.com/serenity-is/sereni
 
 > **internalRenderContents**(): `void`
 
-Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L173)
+Defined in: [src/ui/widgets/widget.ts:266](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L266)
+
+Renders the widget's contents and runs any queued after-render callbacks.
 
 #### Returns
 
@@ -596,11 +726,15 @@ Defined in: [src/ui/widgets/widget.ts:173](https://github.com/serenity-is/sereni
 
 > `protected` **legacyTemplateRender**(): `boolean`
 
-Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L190)
+Defined in: [src/ui/widgets/widget.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L291)
+
+Renders the widget from a legacy `getTemplate` string, if defined.
 
 #### Returns
 
 `boolean`
+
+True if a legacy template was rendered.
 
 #### Inherited from
 
@@ -612,13 +746,17 @@ Defined in: [src/ui/widgets/widget.ts:190](https://github.com/serenity-is/sereni
 
 > **load**(`source`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:439](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L439)
+Defined in: [src/ui/widgets/propertygrid.tsx:561](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L561)
+
+Loads values from a source object into all field editors.
 
 #### Parameters
 
 ##### source
 
 `any`
+
+The source object to read values from.
 
 #### Returns
 
@@ -630,7 +768,7 @@ Defined in: [src/ui/widgets/propertygrid.tsx:439](https://github.com/serenity-is
 
 > **render**(): `any`
 
-Defined in: [src/ui/widgets/widget.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L163)
+Defined in: [src/ui/widgets/widget.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L253)
 
 Returns the main element for this widget or the document fragment.
 As widgets may get their elements from props unlike regular JSX widgets, 
@@ -650,11 +788,16 @@ this method should not be overridden. Override renderContents() instead.
 
 > `protected` **renderContents**(): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:337](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L337)
+Defined in: [src/ui/widgets/propertygrid.tsx:420](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L420)
+
+Renders the property grid contents, building categories/tabs and loading
+the initial value.
 
 #### Returns
 
 `any`
+
+The rendered contents.
 
 #### Overrides
 
@@ -666,7 +809,9 @@ Defined in: [src/ui/widgets/propertygrid.tsx:337](https://github.com/serenity-is
 
 > **save**(`target?`): `any`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L457)
+Defined in: [src/ui/widgets/propertygrid.tsx:592](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L592)
+
+Saves all field editor values into a target object.
 
 #### Parameters
 
@@ -674,9 +819,13 @@ Defined in: [src/ui/widgets/propertygrid.tsx:457](https://github.com/serenity-is
 
 `any`
 
+Optional target object; a new object is created if omitted.
+
 #### Returns
 
 `any`
+
+The object containing the saved values.
 
 ***
 
@@ -684,13 +833,17 @@ Defined in: [src/ui/widgets/propertygrid.tsx:457](https://github.com/serenity-is
 
 > **set\_mode**(`value`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L411)
+Defined in: [src/ui/widgets/propertygrid.tsx:522](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L522)
+
+Sets the grid mode and refreshes the interface.
 
 #### Parameters
 
 ##### value
 
 [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
+
+The new [PropertyGridMode](../enumerations/PropertyGridMode.md).
 
 #### Returns
 
@@ -702,7 +855,10 @@ Defined in: [src/ui/widgets/propertygrid.tsx:411](https://github.com/serenity-is
 
 > `protected` **syncOrAsyncThen**\<`T`\>(`syncMethod`, `asyncMethod`, `then`): `void`
 
-Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L207)
+Defined in: [src/ui/widgets/widget.ts:318](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L318)
+
+Runs a method synchronously or asynchronously depending on the widget's
+`useAsync` flag, then invokes a continuation.
 
 #### Type Parameters
 
@@ -716,13 +872,19 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 () => `T`
 
+The synchronous method to run.
+
 ##### asyncMethod
 
 () => `PromiseLike`\<`T`\>
 
+The asynchronous method to run.
+
 ##### then
 
 (`v`) => `void`
+
+The continuation invoked with the result.
 
 #### Returns
 
@@ -738,13 +900,17 @@ Defined in: [src/ui/widgets/widget.ts:207](https://github.com/serenity-is/sereni
 
 > `protected` **updateFieldElement**(`fieldElement`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:551](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L551)
+Defined in: [src/ui/widgets/propertygrid.tsx:720](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L720)
+
+Updates a single field element in the current mode.
 
 #### Parameters
 
 ##### fieldElement
 
 [`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
+
+The field element to update.
 
 #### Returns
 
@@ -756,7 +922,9 @@ Defined in: [src/ui/widgets/propertygrid.tsx:551](https://github.com/serenity-is
 
 > **updateInterface**(): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:555](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L555)
+Defined in: [src/ui/widgets/propertygrid.tsx:727](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L727)
+
+Refreshes the read-only/required state and visibility of all fields.
 
 #### Returns
 
@@ -768,11 +936,15 @@ Defined in: [src/ui/widgets/propertygrid.tsx:555](https://github.com/serenity-is
 
 > `protected` **useIdPrefix**(): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
-Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L214)
+Defined in: [src/ui/widgets/widget.ts:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L329)
+
+Returns an id prefix helper for resolving child element ids.
 
 #### Returns
 
 [`IdPrefixType`](../type-aliases/IdPrefixType.md)
+
+An [IdPrefixType](../type-aliases/IdPrefixType.md) proxy for this widget's id prefix.
 
 #### Inherited from
 
@@ -784,7 +956,10 @@ Defined in: [src/ui/widgets/widget.ts:214](https://github.com/serenity-is/sereni
 
 > `static` **canModifyItem**(`item`, `mode?`): `boolean`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:488](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L488)
+Defined in: [src/ui/widgets/propertygrid.tsx:641](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L641)
+
+Determines whether a property item may be modified in the given mode,
+taking insert/update permissions into account.
 
 #### Parameters
 
@@ -792,13 +967,19 @@ Defined in: [src/ui/widgets/propertygrid.tsx:488](https://github.com/serenity-is
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
 
+The property item to check.
+
 ##### mode?
 
 [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
 
+The grid mode; defaults to update semantics when omitted.
+
 #### Returns
 
 `boolean`
+
+True if the item can be modified.
 
 ***
 
@@ -806,7 +987,10 @@ Defined in: [src/ui/widgets/propertygrid.tsx:488](https://github.com/serenity-is
 
 > `static` **create**\<`TWidget`, `P`\>(`params`): `TWidget`
 
-Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L126)
+Defined in: [src/ui/widgets/widget.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L202)
+
+Creates a widget instance from the given params, appending its element to
+the container and invoking the init/init callbacks.
 
 #### Type Parameters
 
@@ -824,9 +1008,13 @@ Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/sereni
 
 [`CreateWidgetParams`](../interfaces/CreateWidgetParams.md)\<`TWidget`, `P`\>
 
+The widget creation params.
+
 #### Returns
 
 `TWidget`
+
+The created widget instance.
 
 #### Inherited from
 
@@ -838,11 +1026,15 @@ Defined in: [src/ui/widgets/widget.ts:126](https://github.com/serenity-is/sereni
 
 > `static` **createDefaultElement**(): `HTMLElement`
 
-Defined in: [src/ui/widgets/widget.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L52)
+Defined in: [src/ui/widgets/widget.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L75)
+
+Creates the default DOM element for a widget.
 
 #### Returns
 
 `HTMLElement`
+
+A new `div` element.
 
 #### Inherited from
 
@@ -854,7 +1046,9 @@ Defined in: [src/ui/widgets/widget.ts:52](https://github.com/serenity-is/serenit
 
 > `static` **getWidgetName**(`type`): `string`
 
-Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L91)
+Defined in: [src/ui/widgets/widget.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L131)
+
+Returns the widget name for a type, used for association and unique names.
 
 #### Parameters
 
@@ -862,9 +1056,13 @@ Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenit
 
 `Function`
 
+The widget type.
+
 #### Returns
 
 `string`
+
+The widget name.
 
 #### Inherited from
 
@@ -876,7 +1074,10 @@ Defined in: [src/ui/widgets/widget.ts:91](https://github.com/serenity-is/serenit
 
 > `static` **loadFieldValue**(`source`, `fieldElement`, `mode?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:418](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L418)
+Defined in: [src/ui/widgets/propertygrid.tsx:536](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L536)
+
+Loads a field's value from a source object into its editor, applying
+defaults in insert mode.
 
 #### Parameters
 
@@ -884,13 +1085,19 @@ Defined in: [src/ui/widgets/propertygrid.tsx:418](https://github.com/serenity-is
 
 `any`
 
+The source object to read values from.
+
 ##### fieldElement
 
 [`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
 
+The field element whose editor receives the value.
+
 ##### mode?
 
 [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
+
+The grid mode, used to apply insert defaults.
 
 #### Returns
 
@@ -902,7 +1109,9 @@ Defined in: [src/ui/widgets/propertygrid.tsx:418](https://github.com/serenity-is
 
 > `protected` `static` **registerClass**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L221)
+Defined in: [src/ui/widgets/widget.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L342)
+
+Registers this type as a class with the given type name.
 
 #### Type Parameters
 
@@ -916,13 +1125,19 @@ Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/sereni
 
 [`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
 
+The type name to register.
+
 ##### intfAndAttr?
 
 ([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
 
+Optional interfaces and attributes.
+
 #### Returns
 
 [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`TypeName`\>
+
+The class type info.
 
 #### Inherited from
 
@@ -934,7 +1149,9 @@ Defined in: [src/ui/widgets/widget.ts:221](https://github.com/serenity-is/sereni
 
 > `protected` `static` **registerEditor**\<`TypeName`\>(`typeName`, `intfAndAttr?`): [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
 
-Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L230)
+Defined in: [src/ui/widgets/widget.ts:357](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L357)
+
+Registers this type as an editor with the given type name.
 
 #### Type Parameters
 
@@ -948,13 +1165,19 @@ Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/sereni
 
 [`StringLiteral`](../type-aliases/StringLiteral.md)\<`TypeName`\>
 
+The type name to register.
+
 ##### intfAndAttr?
 
 ([`InterfaceType`](../type-aliases/InterfaceType.md) \| [`AttributeSpecifier`](../type-aliases/AttributeSpecifier.md))[]
 
+Optional interfaces and attributes.
+
 #### Returns
 
 [`EditorTypeInfo`](../type-aliases/EditorTypeInfo.md)\<`TypeName`\>
+
+The editor type info.
 
 #### Inherited from
 
@@ -966,7 +1189,10 @@ Defined in: [src/ui/widgets/widget.ts:230](https://github.com/serenity-is/sereni
 
 > `static` **saveFieldValue**(`target`, `fieldElement`, `canModify?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:446](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L446)
+Defined in: [src/ui/widgets/propertygrid.tsx:576](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L576)
+
+Saves a field's editor value into a target object when the item is
+modifiable.
 
 #### Parameters
 
@@ -974,13 +1200,20 @@ Defined in: [src/ui/widgets/propertygrid.tsx:446](https://github.com/serenity-is
 
 `any`
 
+The target object to write values into.
+
 ##### fieldElement
 
 [`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
 
+The field element whose editor value is saved.
+
 ##### canModify?
 
 `boolean`
+
+Whether the item may be modified; defaults to the
+  result of [PropertyGrid.canModifyItem](#canmodifyitem-2).
 
 #### Returns
 
@@ -992,7 +1225,10 @@ Defined in: [src/ui/widgets/propertygrid.tsx:446](https://github.com/serenity-is
 
 > `static` **updateFieldElement**(`fieldElement`, `mode?`, `canModify?`): `void`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:518](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L518)
+Defined in: [src/ui/widgets/propertygrid.tsx:683](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L683)
+
+Updates a field element's editor read-only/required state and visibility
+based on the item and mode.
 
 #### Parameters
 
@@ -1000,13 +1236,19 @@ Defined in: [src/ui/widgets/propertygrid.tsx:518](https://github.com/serenity-is
 
 [`PropertyFieldElement`](../type-aliases/PropertyFieldElement.md)
 
+The field element to update.
+
 ##### mode?
 
 [`PropertyGridMode`](../enumerations/PropertyGridMode.md)
 
+The grid mode.
+
 ##### canModify?
 
 `boolean`
+
+Whether the item may be modified.
 
 #### Returns
 

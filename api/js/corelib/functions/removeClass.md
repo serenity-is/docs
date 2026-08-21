@@ -4,9 +4,9 @@
 
 > **removeClass**(`el`, `cls`): `void`
 
-Defined in: [src/base/html.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L71)
+Defined in: [src/base/html.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L81)
 
-Removes a CSS class from an element.
+Removes one or more CSS classes from an element.
 
 ## Parameters
 
@@ -14,16 +14,18 @@ Removes a CSS class from an element.
 
 `Element`
 
-The element from which to remove the class.
+Target element.
 
 ### cls
 
 `string`
 
-The CSS class to remove.
+Class name or space-separated list of class names to remove.
 
 ## Returns
 
 `void`
 
-A boolean indicating whether the class was successfully removed.
+## Remarks
+
+Wraps [toggleClass](toggleClass.md) with `add=false`; no-ops for empty/null inputs.

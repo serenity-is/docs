@@ -4,19 +4,20 @@
 
 > **userDefinition**: [`UserDefinition`](../../../../interfaces/UserDefinition.md)
 
-Defined in: [src/base/authorization.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L191)
+Defined in: [src/base/authorization.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L257)
 
-Returns the user data for currently logged user. Prefer `userDefinitionAsync` as this one might block the UI if the `UserData`
-is not already loaded.
+User definition for the currently logged-in user (synchronous).
 
-## Returns
+## Remarks
 
-User data for currently logged user.
+Retrieved via [getRemoteData](../../../../functions/getRemoteData.md)`("UserData")`. This may trigger a
+synchronous load if not cached — prefer [Authorization.userDefinitionAsync](userDefinitionAsync.md).
+Returns `undefined`/`null` when not logged in.
 
 ## Example
 
 ```ts
-if (Authorization.userDefinition.IsAdmin) {
-    // do something
+if (Authorization.userDefinition?.IsAdmin) {
+    // super-admin branch
 }
 ```

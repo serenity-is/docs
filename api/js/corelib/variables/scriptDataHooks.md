@@ -4,9 +4,11 @@
 
 > `const` **scriptDataHooks**: `object`
 
-Defined in: [src/base/scriptdata.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L50)
+Defined in: [src/base/scriptdata.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L52)
 
-Hook for script data related operations
+Global hooks for script-data loading.
+Allows tests or custom bootstrapping to intercept `fetchScriptData` / `ensureScriptDataSync`.
+When the hook returns `undefined` the default `fetch` / XHR implementation is used.
 
 ## Type Declaration
 
@@ -14,12 +16,8 @@ Hook for script data related operations
 
 > **fetchScriptData**: \<`TData`\>(`name`, `sync?`, `dynJS?`) => `TData` \| `Promise`\<`TData`\>
 
-Provides a hook to override the default fetchScriptData implementation,
-it falls back to the default implementation if undefined is returned.
-It is recommended to use this hook mainly for test purposes.
-If the sync parameter is true (legacy/compat), then the result should be returned synchronously.
-DynJS parameter is true if the script is requested to be loaded via a dynamic script,
-and not a JSON request. This parameter is only true for the legacy/compat sync mode.
+Override for script-data fetching.
+Return a value / promise to short-circuit the default loader, or `undefined` to fall back.
 
 #### Type Parameters
 
@@ -33,14 +31,22 @@ and not a JSON request. This parameter is only true for the legacy/compat sync m
 
 `string`
 
+Dynamic script name (e.g. `"Lookup.MyLookup"`, `"Form.MyForm"`).
+
 ##### sync?
 
 `boolean`
+
+When true the caller expects a synchronous result (legacy compat path). The hook must return data directly, not a promise.
 
 ##### dynJS?
 
 `boolean`
 
+When true the script was requested as a legacy `DynJS.axd` JavaScript payload rather than JSON. Only relevant when `sync` is true.
+
 #### Returns
 
 `TData` \| `Promise`\<`TData`\>
+
+The script data directly (sync) or a promise of it, or `undefined` to use the default fetch.

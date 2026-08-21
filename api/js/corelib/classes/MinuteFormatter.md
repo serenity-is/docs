@@ -2,7 +2,9 @@
 
 # Class: MinuteFormatter
 
-Defined in: [src/ui/formatters/minuteformatter.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L5)
+Defined in: [src/ui/formatters/minuteformatter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L6)
+
+Formats an integer minute count as `HH:mm` (e.g. 90 → `"01:30"`).
 
 ## Implements
 
@@ -24,7 +26,7 @@ Defined in: [src/ui/formatters/minuteformatter.ts:5](https://github.com/serenity
 
 > `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/formatters/minuteformatter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L6)
+Defined in: [src/ui/formatters/minuteformatter.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L7)
 
 ## Methods
 
@@ -32,7 +34,9 @@ Defined in: [src/ui/formatters/minuteformatter.ts:6](https://github.com/serenity
 
 > **format**(`ctx`): `string`
 
-Defined in: [src/ui/formatters/minuteformatter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L8)
+Defined in: [src/ui/formatters/minuteformatter.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L14)
+
+Formats the cell value as `HH:mm`.
 
 #### Parameters
 
@@ -40,9 +44,13 @@ Defined in: [src/ui/formatters/minuteformatter.ts:8](https://github.com/serenity
 
 `FormatterContext`
 
+Formatter context containing the minute value.
+
 #### Returns
 
 `string`
+
+`HH:mm` string.
 
 #### Implementation of
 
@@ -54,7 +62,9 @@ Defined in: [src/ui/formatters/minuteformatter.ts:8](https://github.com/serenity
 
 > `static` **format**(`value`): `string`
 
-Defined in: [src/ui/formatters/minuteformatter.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L12)
+Defined in: [src/ui/formatters/minuteformatter.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/minuteformatter.ts#L23)
+
+Static helper to format minutes.
 
 #### Parameters
 
@@ -62,6 +72,10 @@ Defined in: [src/ui/formatters/minuteformatter.ts:12](https://github.com/serenit
 
 `number`
 
+Total minutes.
+
 #### Returns
 
 `string`
+
+`HH:mm` string or empty if invalid.

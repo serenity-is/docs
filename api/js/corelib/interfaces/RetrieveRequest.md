@@ -2,7 +2,9 @@
 
 # Interface: RetrieveRequest
 
-Defined in: [src/base/servicetypes.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L84)
+Defined in: [src/base/servicetypes.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L179)
+
+Request DTO for `Retrieve` handlers (single-entity fetch).
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/base/servicetypes.ts:84](https://github.com/serenity-is/serenit
 
 > `optional` **ColumnSelection**: [`RetrieveColumnSelection`](../enumerations/RetrieveColumnSelection.md)
 
-Defined in: [src/base/servicetypes.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L86)
+Defined in: [src/base/servicetypes.ts:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L183)
+
+Preset that controls which columns are returned. See [RetrieveColumnSelection](../enumerations/RetrieveColumnSelection.md).
 
 ***
 
@@ -22,7 +26,9 @@ Defined in: [src/base/servicetypes.ts:86](https://github.com/serenity-is/serenit
 
 > `optional` **EntityId**: `any`
 
-Defined in: [src/base/servicetypes.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L85)
+Defined in: [src/base/servicetypes.ts:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L181)
+
+Primary key of the entity to retrieve.
 
 ***
 
@@ -30,7 +36,9 @@ Defined in: [src/base/servicetypes.ts:85](https://github.com/serenity-is/serenit
 
 > `optional` **ExcludeColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L88)
+Defined in: [src/base/servicetypes.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L187)
+
+Explicit deny-list of columns to exclude.
 
 ***
 
@@ -38,4 +46,6 @@ Defined in: [src/base/servicetypes.ts:88](https://github.com/serenity-is/serenit
 
 > `optional` **IncludeColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L87)
+Defined in: [src/base/servicetypes.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L185)
+
+Explicit allow-list of columns to include.

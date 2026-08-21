@@ -2,7 +2,9 @@
 
 # Interface: QuickFilterBarOptions
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L11)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L14)
+
+Options for the [QuickFilterBar](../classes/QuickFilterBar.md) widget.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/datagrid/quickfilterbar.tsx:11](https://github.com/serenity-
 
 > **filters**: [`QuickFilter`](QuickFilter.md)\<[`Widget`](../classes/Widget.md)\<`any`\>, `any`\>[]
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L12)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L16)
+
+Quick filter definitions to render in the bar.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/datagrid/quickfilterbar.tsx:12](https://github.com/serenity-
 
 > `optional` **getTitle**: (`filter`) => `string`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L13)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L18)
+
+Optional callback that returns the display title for a filter.
 
 #### Parameters
 
@@ -36,4 +42,6 @@ Defined in: [src/ui/datagrid/quickfilterbar.tsx:13](https://github.com/serenity-
 
 > `optional` **idPrefix**: `string`
 
-Defined in: [src/ui/datagrid/quickfilterbar.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L14)
+Defined in: [src/ui/datagrid/quickfilterbar.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilterbar.tsx#L20)
+
+Prefix used for generated element ids; defaults to the widget unique name.

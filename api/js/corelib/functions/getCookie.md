@@ -4,7 +4,10 @@
 
 > **getCookie**(`name`): `any`
 
-Defined in: [src/base/services.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L20)
+Defined in: [src/base/services.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/services.ts#L39)
+
+Reads a cookie value by name.
+Prefers jQuery's `$.cookie` when available, otherwise parses `document.cookie`.
 
 ## Parameters
 
@@ -12,6 +15,10 @@ Defined in: [src/base/services.ts:20](https://github.com/serenity-is/serenity/bl
 
 `string`
 
+Cookie name to look up.
+
 ## Returns
 
 `any`
+
+The cookie value, or `undefined` / empty string when not found.

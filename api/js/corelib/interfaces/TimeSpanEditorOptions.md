@@ -2,7 +2,9 @@
 
 # Interface: TimeSpanEditorOptions
 
-Defined in: [src/ui/editors/timeeditor.ts:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L149)
+Defined in: [src/ui/editors/timeeditor.ts:220](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L220)
+
+Options for the [TimeSpanEditor](../classes/TimeSpanEditor.md).
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/ui/editors/timeeditor.ts:149](https://github.com/serenity-is/se
 
 > `optional` **endHour**: `any`
 
-Defined in: [src/ui/editors/timeeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L9)
+Defined in: [src/ui/editors/timeeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L15)
+
+Ending hour for the hour select.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/ui/editors/timeeditor.ts:9](https://github.com/serenity-is/sere
 
 > `optional` **intervalMinutes**: `any`
 
-Defined in: [src/ui/editors/timeeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L10)
+Defined in: [src/ui/editors/timeeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L17)
+
+Interval in minutes between minute options.
 
 #### Inherited from
 
@@ -38,7 +44,9 @@ Defined in: [src/ui/editors/timeeditor.ts:10](https://github.com/serenity-is/ser
 
 > `optional` **noEmptyOption**: `boolean`
 
-Defined in: [src/ui/editors/timeeditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L7)
+Defined in: [src/ui/editors/timeeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L11)
+
+Whether to omit the empty option.
 
 #### Inherited from
 
@@ -50,7 +58,9 @@ Defined in: [src/ui/editors/timeeditor.ts:7](https://github.com/serenity-is/sere
 
 > `optional` **startHour**: `any`
 
-Defined in: [src/ui/editors/timeeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L8)
+Defined in: [src/ui/editors/timeeditor.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/timeeditor.ts#L13)
+
+Starting hour for the hour select.
 
 #### Inherited from
 

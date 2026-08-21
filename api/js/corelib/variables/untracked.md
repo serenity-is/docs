@@ -4,7 +4,7 @@
 
 > `const` **untracked**: \<`T`\>(`fn`) => `T`
 
-Defined in: [../domwise/dist/index.d.ts:2565](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2565)
+Defined in: [../domwise/dist/index.d.ts:2954](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2954)
 
 Reads signal values without creating a dependency tracking context.
 Re-exported from `@preact/signals-core`.

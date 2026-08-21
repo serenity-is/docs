@@ -4,7 +4,9 @@
 
 > **empty**(`element`): `void`
 
-Defined in: [src/base/fluent.ts:499](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L499)
+Defined in: [src/base/fluent.ts:666](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L666)
+
+Removes all child nodes from the element, notifying `disposing` handlers and clearing Fluent event listeners.
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/base/fluent.ts:499](https://github.com/serenity-is/serenity/blo
 
 `Element`
 
+Element to empty. No-op when `null` / `undefined`.
+
 ## Returns
 
 `void`
+
+`void`.

@@ -4,6 +4,6 @@
 
 > `const` **RestoreHint**: `string`
 
-Defined in: [src/base/dialogs.tsx:750](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L750)
+Defined in: [src/base/dialogs.tsx:839](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L839)
 
 Hint for restoring dialogs.

@@ -2,7 +2,9 @@
 
 # Abstract Class: ISetEditValue
 
-Defined in: [src/interfaces/iseteditvalue.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L3)
+Defined in: [src/interfaces/iseteditvalue.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L6)
+
+Type token for editors that can be populated from a source object.
 
 ## Constructors
 
@@ -20,7 +22,7 @@ Defined in: [src/interfaces/iseteditvalue.ts:3](https://github.com/serenity-is/s
 
 > `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/interfaces/iseteditvalue.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L4)
+Defined in: [src/interfaces/iseteditvalue.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L7)
 
 ## Methods
 
@@ -28,7 +30,9 @@ Defined in: [src/interfaces/iseteditvalue.ts:4](https://github.com/serenity-is/s
 
 > **setEditValue**(`source`, `property`): `void`
 
-Defined in: [src/interfaces/iseteditvalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L8)
+Defined in: [src/interfaces/iseteditvalue.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/iseteditvalue.ts#L16)
+
+Populates the editor from a source object.
 
 #### Parameters
 
@@ -36,9 +40,13 @@ Defined in: [src/interfaces/iseteditvalue.ts:8](https://github.com/serenity-is/s
 
 `any`
 
+Object containing property values.
+
 ##### property
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
+
+Property metadata for the field.
 
 #### Returns
 

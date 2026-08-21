@@ -4,9 +4,9 @@
 
 > **htmlEncode**(`s`): `string`
 
-Defined in: [src/base/html.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L23)
+Defined in: [src/base/html.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L33)
 
-Html encodes a string (encodes single and double quotes, & (ampersand), > and < characters)
+HTML-encodes a value by escaping `<`, `>`, `"`, `'`, and `&`.
 
 ## Parameters
 
@@ -14,8 +14,16 @@ Html encodes a string (encodes single and double quotes, & (ampersand), > and < 
 
 `any`
 
-String (or number etc.) to be HTML encoded
+Value to encode. Non-string values are coerced to string; `null`/`undefined` yields an empty string.
 
 ## Returns
 
 `string`
+
+The HTML-escaped string, safe for interpolation into HTML markup.
+
+## Example
+
+```ts
+htmlEncode('<a href="x">a & b</a>'); // "&lt;a href=&quot;x&quot;&gt;a &amp; b&lt;/a&gt;"
+```

@@ -2,7 +2,9 @@
 
 # Interface: ComboboxSearchResult\<TItem\>
 
-Defined in: [src/ui/editors/combobox.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L24)
+Defined in: [src/ui/editors/combobox.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L48)
+
+Result of a combobox search.
 
 ## Type Parameters
 
@@ -10,13 +12,17 @@ Defined in: [src/ui/editors/combobox.ts:24](https://github.com/serenity-is/seren
 
 `TItem`
 
+The item type.
+
 ## Properties
 
 ### items
 
 > **items**: `TItem`[]
 
-Defined in: [src/ui/editors/combobox.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L25)
+Defined in: [src/ui/editors/combobox.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L50)
+
+The matching items.
 
 ***
 
@@ -24,4 +30,6 @@ Defined in: [src/ui/editors/combobox.ts:25](https://github.com/serenity-is/seren
 
 > **more**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L26)
+Defined in: [src/ui/editors/combobox.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L52)
+
+Whether there are more results.

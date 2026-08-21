@@ -4,11 +4,13 @@
 
 > **currentNamespaceURI**(`value?`): `string`
 
-Defined in: [../domwise/dist/index.d.ts:2373](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2373)
+Defined in: [../domwise/dist/index.d.ts:2680](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2680)
 
-Gets or sets the current JSX namespace URI.
-When called without arguments, returns the current namespace URI.
-When called with a value, sets the namespace and returns the previous value.
+Gets or sets the ambient JSX namespace URI used for `createElement`/`jsx`.
+
+Stored on `globalThis` under `Serenity.jsxNamespaceURI`. When the active
+namespace is `"http://www.w3.org/2000/svg"` (or MathML), elements created
+without an explicit `namespaceURI` prop are created via `createElementNS`.
 
 ## Parameters
 
@@ -16,10 +18,13 @@ When called with a value, sets the namespace and returns the previous value.
 
 `string`
 
-If provided, sets the namespace URI to this value.
+When arguments are supplied, the namespace is set to this
+value (use `null` to reset to the HTML namespace). When called with no
+arguments the current value is simply returned.
 
 ## Returns
 
 `string`
 
-The current (or previous) namespace URI, or `null` / `undefined`.
+The current namespace URI (no-arg call), or the previous value
+(setter call). May be `null`/`undefined` when no override is active.

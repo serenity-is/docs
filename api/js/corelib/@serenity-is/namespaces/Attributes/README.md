@@ -2,6 +2,9 @@
 
 # Attributes
 
+Factory helpers for common widget attributes. Each method creates an attribute instance
+and is flagged with `isAttributeFactory` for reflection discovery.
+
 ## Functions
 
 - [advancedFiltering](functions/advancedFiltering.md)

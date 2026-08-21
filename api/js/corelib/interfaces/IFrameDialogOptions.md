@@ -2,9 +2,9 @@
 
 # Interface: IFrameDialogOptions
 
-Defined in: [src/base/dialogs.tsx:1120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1120)
+Defined in: [src/base/dialogs.tsx:1233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1233)
 
-Options for `iframeDialog` *
+Options for [iframeDialog](../functions/iframeDialog.md).
 
 ## Properties
 
@@ -12,4 +12,6 @@ Options for `iframeDialog` *
 
 > `optional` **html**: `string`
 
-Defined in: [src/base/dialogs.tsx:1121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1121)
+Defined in: [src/base/dialogs.tsx:1235](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1235)
+
+HTML string rendered inside the sandboxed `iframe` via `srcdoc`. Sanitized before injection.

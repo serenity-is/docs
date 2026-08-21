@@ -2,7 +2,10 @@
 
 # Interface: SettingStorage
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L13)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L17)
+
+Minimal storage abstraction used for grid persistence.
+Implementations may be synchronous (localStorage) or asynchronous.
 
 ## Methods
 
@@ -10,7 +13,9 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:13](https://github.com/sere
 
 > **getItem**(`key`): `string` \| `Promise`\<`string`\>
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L14)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L23)
+
+Retrieves a stored value by key.
 
 #### Parameters
 
@@ -18,9 +23,13 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:14](https://github.com/sere
 
 `string`
 
+Storage key.
+
 #### Returns
 
 `string` \| `Promise`\<`string`\>
+
+Stored value or a promise that resolves to it.
 
 ***
 
@@ -28,7 +37,9 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:14](https://github.com/sere
 
 > **setItem**(`key`, `value`): `void` \| `Promise`\<`void`\>
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L15)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L30)
+
+Persists a value under the given key.
 
 #### Parameters
 
@@ -36,10 +47,16 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:15](https://github.com/sere
 
 `string`
 
+Storage key.
+
 ##### value
 
 `string`
 
+Value to store.
+
 #### Returns
 
 `void` \| `Promise`\<`void`\>
+
+Void or a promise that resolves when the write completes.

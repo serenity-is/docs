@@ -4,8 +4,8 @@
 
 > `const` **TemplatedWidget**: *typeof* [`Widget`](../classes/Widget.md) = `Widget`
 
-Defined in: [src/ui/widgets/widget.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L243)
+Defined in: [src/ui/widgets/widget.ts:370](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widget.ts#L370)
 
 ## Deprecated
 
-Use Widget
+Use [Widget](../classes/Widget.md)

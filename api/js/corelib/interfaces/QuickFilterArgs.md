@@ -2,7 +2,9 @@
 
 # Interface: QuickFilterArgs\<TWidget\>
 
-Defined in: [src/ui/datagrid/quickfilter.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L4)
+Defined in: [src/ui/datagrid/quickfilter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L8)
+
+Arguments passed to a quick filter handler when a list request is prepared.
 
 ## Type Parameters
 
@@ -10,13 +12,17 @@ Defined in: [src/ui/datagrid/quickfilter.ts:4](https://github.com/serenity-is/se
 
 `TWidget`
 
+The widget type that backs the quick filter.
+
 ## Properties
 
 ### active?
 
 > `optional` **active**: `boolean`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L10)
+Defined in: [src/ui/datagrid/quickfilter.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L20)
+
+Whether the filter is currently considered active.
 
 ***
 
@@ -24,7 +30,9 @@ Defined in: [src/ui/datagrid/quickfilter.ts:10](https://github.com/serenity-is/s
 
 > `optional` **equalityFilter**: `any`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L8)
+Defined in: [src/ui/datagrid/quickfilter.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L16)
+
+Equality filter value derived from the widget, if any.
 
 ***
 
@@ -32,7 +40,9 @@ Defined in: [src/ui/datagrid/quickfilter.ts:8](https://github.com/serenity-is/se
 
 > `optional` **field**: `string`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L5)
+Defined in: [src/ui/datagrid/quickfilter.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L10)
+
+Field name the filter is bound to.
 
 ***
 
@@ -40,7 +50,9 @@ Defined in: [src/ui/datagrid/quickfilter.ts:5](https://github.com/serenity-is/se
 
 > `optional` **handled**: `boolean`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L11)
+Defined in: [src/ui/datagrid/quickfilter.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L22)
+
+When set, the framework skips default equality-filter handling.
 
 ***
 
@@ -48,7 +60,9 @@ Defined in: [src/ui/datagrid/quickfilter.ts:11](https://github.com/serenity-is/s
 
 > `optional` **request**: [`ListRequest`](ListRequest.md)
 
-Defined in: [src/ui/datagrid/quickfilter.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L7)
+Defined in: [src/ui/datagrid/quickfilter.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L14)
+
+Current list request being built; handler may mutate criteria.
 
 ***
 
@@ -56,7 +70,9 @@ Defined in: [src/ui/datagrid/quickfilter.ts:7](https://github.com/serenity-is/se
 
 > `optional` **value**: `any`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L9)
+Defined in: [src/ui/datagrid/quickfilter.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L18)
+
+Canonical value of the filter.
 
 ***
 
@@ -64,4 +80,6 @@ Defined in: [src/ui/datagrid/quickfilter.ts:9](https://github.com/serenity-is/se
 
 > `optional` **widget**: `TWidget`
 
-Defined in: [src/ui/datagrid/quickfilter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L6)
+Defined in: [src/ui/datagrid/quickfilter.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quickfilter.ts#L12)
+
+Widget instance for the quick filter, if created.

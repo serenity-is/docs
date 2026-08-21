@@ -4,6 +4,6 @@
 
 > `const` **inputLikeSelector**: `"input,select,textarea,button"` = `"input,select,textarea,button"`
 
-Defined in: [src/base/fluent.ts:617](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L617)
+Defined in: [src/base/fluent.ts:784](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L784)
 
-A CSS selector for input like tags
+CSS selector that matches input-like elements (`input,select,textarea,button`).

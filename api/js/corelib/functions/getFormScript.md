@@ -4,9 +4,9 @@
 
 > **getFormScript**(`key`): `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-Defined in: [src/base/scriptdata.ts:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L216)
+Defined in: [src/base/scriptdata.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L223)
 
-Gets or loads a [FormScript] data
+Loads a `FormScript` bundle for the given key.
 
 ## Parameters
 
@@ -14,10 +14,10 @@ Gets or loads a [FormScript] data
 
 `string`
 
-Form key
+Form key (usually the row/form type name, e.g. `"Administration.User"`).
 
 ## Returns
 
 `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-A property items data object containing items and additionalItems properties
+A promise resolving to a [PropertyItemsData](../interfaces/PropertyItemsData.md) describing the form fields.

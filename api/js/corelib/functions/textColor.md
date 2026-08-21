@@ -4,9 +4,9 @@
 
 > **textColor**(`color`): `string`
 
-Defined in: [src/base/icons.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L29)
+Defined in: [src/base/icons.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L37)
 
-Returns the CSS class for the specified text color.
+Returns the text utility class for a [TextColor](../type-aliases/TextColor.md).
 
 ## Parameters
 
@@ -14,10 +14,16 @@ Returns the CSS class for the specified text color.
 
 [`TextColor`](../type-aliases/TextColor.md)
 
-The text color.
+Text color token.
 
 ## Returns
 
 `string`
 
-The CSS class for the specified text color.
+CSS class name such as `"text-primary"` or `"text-teal"`.
+
+## Example
+
+```ts
+textColor("warning"); // "text-warning"
+```

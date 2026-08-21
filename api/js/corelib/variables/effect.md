@@ -4,7 +4,7 @@
 
 > `const` **effect**: (`fn`, `options?`) => () => `void`
 
-Defined in: [../domwise/dist/index.d.ts:2549](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2549)
+Defined in: [../domwise/dist/index.d.ts:2938](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2938)
 
 Creates an effect that runs whenever its signal dependencies change.
 Re-exported from `@preact/signals-core`.

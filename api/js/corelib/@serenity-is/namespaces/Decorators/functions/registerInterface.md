@@ -1,14 +1,18 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / registerInterface
 
-# Function: registerInterface()
+# ~~Function: registerInterface()~~
 
 > **registerInterface**(`nameOrIntf?`, `intf2?`): (`target`, `_context?`) => `void`
 
-Defined in: [src/types/decorators.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L26)
+Defined in: [src/types/decorators.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L33)
+
+Registers an interface.
 
 ## Parameters
 
 ### nameOrIntf?
+
+Full type name or interface list.
 
 `string` | [`InterfaceType`](../../../../type-aliases/InterfaceType.md)[]
 
@@ -16,7 +20,11 @@ Defined in: [src/types/decorators.ts:26](https://github.com/serenity-is/serenity
 
 [`InterfaceType`](../../../../type-aliases/InterfaceType.md)[]
 
+Additional interfaces.
+
 ## Returns
+
+Class decorator.
 
 > (`target`, `_context?`): `void`
 

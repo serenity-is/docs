@@ -4,4 +4,6 @@
 
 > `const` **startsWith**: `"startswith"` = `'startswith'`
 
-Defined in: [src/ui/filtering/filteroperator.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L14)
+Defined in: [src/ui/filtering/filteroperator.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L27)
+
+Starts with operator.

@@ -2,6 +2,8 @@
 
 # GridSelectAllButtonHelper
 
+Helper functions for managing a "select all" toolbar button on a data grid.
+
 ## Functions
 
 - [define](functions/define.md)

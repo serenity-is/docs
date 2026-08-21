@@ -4,9 +4,11 @@
 
 > `const` **warning**: (`message`, `options?`) => `Partial`\<[`Dialog`](../classes/Dialog.md)\> = `warningDialog`
 
-Defined in: [src/compat/dialogs-compat.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L16)
+Defined in: [src/compat/dialogs-compat.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L36)
 
-Display a warning dialog
+Legacy `Q.warning` alias.
+
+Displays a warning dialog with a single OK button.
 
 ## Parameters
 
@@ -14,21 +16,19 @@ Display a warning dialog
 
 [`RenderableContent`](../type-aliases/RenderableContent.md)
 
-The message to display
+Text or renderable content shown in the dialog body.
 
 ### options?
 
 [`MessageDialogOptions`](../interfaces/MessageDialogOptions.md)
 
-Additional options.
+Additional [MessageDialogOptions](../interfaces/MessageDialogOptions.md).
 
 ## Returns
 
 `Partial`\<[`Dialog`](../classes/Dialog.md)\>
 
-## See
-
-MessageDialogOptions
+A [Dialog](../classes/Dialog.md) handle (partial when falling back to the native `alert()`).
 
 ## Example
 
@@ -38,4 +38,8 @@ warningDialog("Something is odd!");
 
 ## Deprecated
 
-use warningDialog
+Use [warningDialog](../functions/warningDialog.md) instead.
+
+## See
+
+[warningDialog](../functions/warningDialog.md)

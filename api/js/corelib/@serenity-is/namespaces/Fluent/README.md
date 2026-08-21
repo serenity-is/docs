@@ -2,6 +2,12 @@
 
 # Fluent
 
+Static helpers that operate on raw DOM elements without requiring a [Fluent](../../../functions/Fluent.md) wrapper.
+
+## Remarks
+
+Supports jQuery-style namespaced and delegated events via the shared `fluent-events` module.
+
 ## Variables
 
 - [inputLikeSelector](variables/inputLikeSelector.md)

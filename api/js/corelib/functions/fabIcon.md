@@ -4,9 +4,9 @@
 
 > **fabIcon**(`key`, `color?`): `string`
 
-Defined in: [src/base/icons.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L49)
+Defined in: [src/base/icons.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L66)
 
-Generates a fully qualified class name for a Font Awesome brand icon.
+Builds the CSS class string for a Font Awesome Brands icon.
 
 ## Parameters
 
@@ -14,16 +14,22 @@ Generates a fully qualified class name for a Font Awesome brand icon.
 
 [`fabIconKey`](../type-aliases/fabIconKey.md)
 
-The key of the Font Awesome brand icon.
+Brand icon key from [fabIconKey](../type-aliases/fabIconKey.md) (without the `fa-` prefix).
 
 ### color?
 
 [`TextColor`](../type-aliases/TextColor.md)
 
-The optional color of the icon.
+Optional [TextColor](../type-aliases/TextColor.md) appended as a `text-*` class.
 
 ## Returns
 
 `string`
 
-The fully qualified class name for the icon.
+Class string such as `"fab fa-github"` or `"fab fa-github text-muted"`.
+
+## Example
+
+```ts
+fabIcon("github"); // "fab fa-github"
+```

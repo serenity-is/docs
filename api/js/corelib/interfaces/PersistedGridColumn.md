@@ -2,7 +2,9 @@
 
 # Interface: PersistedGridColumn
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L18)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L36)
+
+Persisted state for a single grid column.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:18](https://github.com/sere
 
 > **id**: `string`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L19)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L38)
+
+Column identifier (matches Column.id).
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:19](https://github.com/sere
 
 > `optional` **pin**: `false` \| `"start"` \| `"end"`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L23)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L46)
+
+Frozen / pinned state of the column.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:23](https://github.com/sere
 
 > `optional` **sort**: `number`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L21)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L42)
+
+Sort order and direction; positive for ascending, negative for descending.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:21](https://github.com/sere
 
 > `optional` **visible**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L22)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L44)
+
+Whether the column is visible.
 
 ***
 
@@ -42,4 +52,6 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:22](https://github.com/sere
 
 > `optional` **width**: `number`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L20)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L40)
+
+Persisted width in pixels.

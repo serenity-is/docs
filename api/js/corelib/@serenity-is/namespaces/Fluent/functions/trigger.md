@@ -4,9 +4,9 @@
 
 > **trigger**(`element`, `type`, `args?`): `Event` & `object`
 
-Defined in: [src/base/fluent.ts:485](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L485)
+Defined in: [src/base/fluent.ts:647](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L647)
 
-Triggers a specified event on the element.
+Dispatches a synthetic event on the element.
 
 ## Parameters
 
@@ -14,22 +14,22 @@ Triggers a specified event on the element.
 
 `EventTarget`
 
-The target element
+Target element to dispatch on.
 
 ### type
 
 `string`
 
-The type of the event to trigger.
+Event type to trigger (e.g. `"click"`, `"change"`).
 
 ### args?
 
 `any`
 
-Optional. An object that specifies event-specific initialization properties.
+Optional properties merged into the created `Event` / `CustomEvent` (`detail`, `bubbles`, etc.).
 
 ## Returns
 
 `Event` & `object`
 
-The event object. Use Fluent.isDefaultPrevented the check if preventDefault is called.
+The dispatched event. Use [Fluent.isDefaultPrevented](isDefaultPrevented.md) to test whether `preventDefault()` was called.

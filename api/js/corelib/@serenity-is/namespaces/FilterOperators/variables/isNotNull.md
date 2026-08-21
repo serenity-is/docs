@@ -4,4 +4,6 @@
 
 > `const` **isNotNull**: `"isnotnull"` = `'isnotnull'`
 
-Defined in: [src/ui/filtering/filteroperator.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L24)
+Defined in: [src/ui/filtering/filteroperator.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L47)
+
+Is not null operator.

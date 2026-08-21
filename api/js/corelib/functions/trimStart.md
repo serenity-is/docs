@@ -1,12 +1,12 @@
 [@serenity-is/corelib](../README.md) / trimStart
 
-# Function: trimStart()
+# ~~Function: trimStart()~~
 
 > **trimStart**(`s`): `any`
 
-Defined in: [src/compat/strings-compat.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L75)
+Defined in: [src/compat/strings-compat.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L85)
 
-Trims the whitespace characters from the start of the string
+Removes leading whitespace from a string.
 
 ## Parameters
 
@@ -14,6 +14,14 @@ Trims the whitespace characters from the start of the string
 
 `string`
 
+The input string; `null`/`undefined` yields `""`.
+
 ## Returns
 
 `any`
+
+The string without leading whitespace.
+
+## Deprecated
+
+Use String.prototype.trimStart / `trimLeft` directly.

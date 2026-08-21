@@ -2,7 +2,9 @@
 
 # Class: Sum
 
-Defined in: [src/slick/aggregators.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L158)
+Defined in: [src/slick/aggregators.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L221)
+
+Sum of a numeric field.
 
 ## Implements
 
@@ -14,13 +16,17 @@ Defined in: [src/slick/aggregators.ts:158](https://github.com/serenity-is/sereni
 
 > **new Sum**(`field`): `Sum`
 
-Defined in: [src/slick/aggregators.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L162)
+Defined in: [src/slick/aggregators.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L231)
+
+Creates a new sum aggregator.
 
 #### Parameters
 
 ##### field
 
 `string`
+
+The field to aggregate.
 
 #### Returns
 
@@ -32,7 +38,9 @@ Defined in: [src/slick/aggregators.ts:162](https://github.com/serenity-is/sereni
 
 > `readonly` **field**: `string`
 
-Defined in: [src/slick/aggregators.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L159)
+Defined in: [src/slick/aggregators.ts:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L223)
+
+The field to aggregate.
 
 ***
 
@@ -40,7 +48,9 @@ Defined in: [src/slick/aggregators.ts:159](https://github.com/serenity-is/sereni
 
 > **sum**: `number`
 
-Defined in: [src/slick/aggregators.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L160)
+Defined in: [src/slick/aggregators.ts:225](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L225)
+
+Running sum of valid values.
 
 ***
 
@@ -48,7 +58,9 @@ Defined in: [src/slick/aggregators.ts:160](https://github.com/serenity-is/sereni
 
 > `readonly` `static` **aggregateKey**: `"sum"` = `"sum"`
 
-Defined in: [src/slick/aggregators.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L185)
+Defined in: [src/slick/aggregators.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L259)
+
+Key used to store/lookup this aggregator in totals.
 
 ***
 
@@ -56,7 +68,9 @@ Defined in: [src/slick/aggregators.ts:185](https://github.com/serenity-is/sereni
 
 > `readonly` `static` **summaryType**: [`Sum`](../../../../enumerations/SummaryType.md#sum) = `SummaryType.Sum`
 
-Defined in: [src/slick/aggregators.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L184)
+Defined in: [src/slick/aggregators.ts:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L257)
+
+Summary type for this aggregator.
 
 ## Accessors
 
@@ -66,7 +80,9 @@ Defined in: [src/slick/aggregators.ts:184](https://github.com/serenity-is/sereni
 
 > **get** `static` **displayName**(): `string`
 
-Defined in: [src/slick/aggregators.ts:186](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L186)
+Defined in: [src/slick/aggregators.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L261)
+
+Localized display name for this aggregator.
 
 ##### Returns
 
@@ -78,13 +94,17 @@ Defined in: [src/slick/aggregators.ts:186](https://github.com/serenity-is/sereni
 
 > **accumulate**(`item`): `void`
 
-Defined in: [src/slick/aggregators.ts:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L170)
+Defined in: [src/slick/aggregators.ts:241](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L241)
+
+Accumulates a single item into the aggregator state.
 
 #### Parameters
 
 ##### item
 
 `any`
+
+Row item to accumulate; the configured field value is parsed as a number when valid.
 
 #### Returns
 
@@ -100,7 +120,9 @@ Defined in: [src/slick/aggregators.ts:170](https://github.com/serenity-is/sereni
 
 > **init**(): `void`
 
-Defined in: [src/slick/aggregators.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L166)
+Defined in: [src/slick/aggregators.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L236)
+
+Initializes state before a new group is processed.
 
 #### Returns
 
@@ -116,13 +138,17 @@ Defined in: [src/slick/aggregators.ts:166](https://github.com/serenity-is/sereni
 
 > **storeResult**(`groupTotals`): `void`
 
-Defined in: [src/slick/aggregators.ts:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L177)
+Defined in: [src/slick/aggregators.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L249)
+
+Writes computed totals into the group totals object.
 
 #### Parameters
 
 ##### groupTotals
 
 `any`
+
+Totals container to write the computed sum into, keyed by field name.
 
 #### Returns
 

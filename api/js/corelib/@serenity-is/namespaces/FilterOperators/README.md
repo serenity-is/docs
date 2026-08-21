@@ -2,6 +2,8 @@
 
 # FilterOperators
 
+Constants for the built-in filter operators.
+
 ## Variables
 
 - [BW](variables/BW.md)

@@ -2,7 +2,9 @@
 
 # Interface: DecimalEditorOptions
 
-Defined in: [src/ui/editors/decimaleditor.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L6)
+Defined in: [src/ui/editors/decimaleditor.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L20)
+
+Options for the [DecimalEditor](../classes/DecimalEditor.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/decimaleditor.tsx:6](https://github.com/serenity-is/
 
 > `optional` **allowNegatives**: `boolean`
 
-Defined in: [src/ui/editors/decimaleditor.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L11)
+Defined in: [src/ui/editors/decimaleditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L30)
+
+Whether negative values are allowed.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/editors/decimaleditor.tsx:11](https://github.com/serenity-is
 
 > `optional` **decimals**: `any`
 
-Defined in: [src/ui/editors/decimaleditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L9)
+Defined in: [src/ui/editors/decimaleditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L26)
+
+Number of decimal places.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/editors/decimaleditor.tsx:9](https://github.com/serenity-is/
 
 > `optional` **maxValue**: `string`
 
-Defined in: [src/ui/editors/decimaleditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L8)
+Defined in: [src/ui/editors/decimaleditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L24)
+
+Maximum allowed value as a string.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/editors/decimaleditor.tsx:8](https://github.com/serenity-is/
 
 > `optional` **minValue**: `string`
 
-Defined in: [src/ui/editors/decimaleditor.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L7)
+Defined in: [src/ui/editors/decimaleditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L22)
+
+Minimum allowed value as a string.
 
 ***
 
@@ -42,4 +52,6 @@ Defined in: [src/ui/editors/decimaleditor.tsx:7](https://github.com/serenity-is/
 
 > `optional` **padDecimals**: `any`
 
-Defined in: [src/ui/editors/decimaleditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L10)
+Defined in: [src/ui/editors/decimaleditor.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/decimaleditor.tsx#L28)
+
+Whether to pad decimals with zeros.

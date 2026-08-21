@@ -4,7 +4,7 @@
 
 > **registerClass**(`type`, `name`, `intfAndAttr?`): `void`
 
-Defined in: [src/base/system.ts:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L231)
+Defined in: [src/base/system.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L239)
 
 Register a class with the type system.
 

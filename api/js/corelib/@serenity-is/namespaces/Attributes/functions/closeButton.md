@@ -4,15 +4,17 @@
 
 > **closeButton**(`value`): [`CloseButtonAttribute`](../../../../classes/CloseButtonAttribute.md)
 
-Defined in: [src/types/attributes.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L98)
+Defined in: [src/types/attributes.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L133)
 
-Indicates if a dialog should have a close button in its title bar (default true)
+Creates a [CloseButtonAttribute](../../../../classes/CloseButtonAttribute.md).
 
 ## Parameters
 
 ### value
 
 `boolean` = `true`
+
+True to show close button (default `true`).
 
 ## Returns
 

@@ -4,9 +4,9 @@
 
 > **toggleClass**(`element`, `value`, `add?`): `void`
 
-Defined in: [src/base/fluent.ts:588](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L588)
+Defined in: [src/base/fluent.ts:755](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L755)
 
-Toggles one or more classes on the element. If the class exists, it is removed; otherwise, it is added. Falsy values are ignored.
+Toggles one or more classes on the element.
 
 ## Parameters
 
@@ -14,11 +14,11 @@ Toggles one or more classes on the element. If the class exists, it is removed; 
 
 `Element`
 
-The target element
+Target element.
 
 ### value
 
-The class or classes to toggle. It can be a string, boolean, or an array of strings or booleans.
+Class name(s) to toggle. Falsy entries are ignored.
 
 `string` | `boolean` | (`string` \| `boolean`)[]
 
@@ -26,6 +26,10 @@ The class or classes to toggle. It can be a string, boolean, or an array of stri
 
 `boolean`
 
+When `true`, forces addition; when `false`, forces removal; when omitted, each class is toggled.
+
 ## Returns
 
 `void`
+
+`void`.

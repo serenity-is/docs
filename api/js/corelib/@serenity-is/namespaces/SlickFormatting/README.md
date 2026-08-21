@@ -2,6 +2,8 @@
 
 # SlickFormatting
 
+Formatting helpers for sleek grids.
+
 ## Functions
 
 - [itemLink](functions/itemLink.md)

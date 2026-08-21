@@ -2,7 +2,9 @@
 
 # Interface: RetrieveResponse\<TEntity\>
 
-Defined in: [src/base/servicetypes.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L91)
+Defined in: [src/base/servicetypes.ts:194](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L194)
+
+Response DTO for `Retrieve` handlers.
 
 ## Extends
 
@@ -14,13 +16,17 @@ Defined in: [src/base/servicetypes.ts:91](https://github.com/serenity-is/serenit
 
 `TEntity`
 
+Row / entity type.
+
 ## Properties
 
 ### Entity?
 
 > `optional` **Entity**: `TEntity`
 
-Defined in: [src/base/servicetypes.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L92)
+Defined in: [src/base/servicetypes.ts:196](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L196)
+
+The retrieved entity, or `undefined` if not found (depending on handler).
 
 ***
 
@@ -28,7 +34,9 @@ Defined in: [src/base/servicetypes.ts:92](https://github.com/serenity-is/serenit
 
 > `optional` **Error**: [`ServiceError`](ServiceError.md)
 
-Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
+Defined in: [src/base/servicetypes.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L25)
+
+Error information when the request failed; `undefined` on success.
 
 #### Inherited from
 
@@ -40,7 +48,9 @@ Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenit
 
 > `optional` **Localizations**: `object`
 
-Defined in: [src/base/servicetypes.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L93)
+Defined in: [src/base/servicetypes.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L198)
+
+Per-language values for localizable fields, keyed by language ID.
 
 #### Index Signature
 

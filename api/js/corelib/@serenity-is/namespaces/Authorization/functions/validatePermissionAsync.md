@@ -4,9 +4,9 @@
 
 > **validatePermissionAsync**(`permission`): `Promise`\<`void`\>
 
-Defined in: [src/base/authorization.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L134)
+Defined in: [src/base/authorization.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L188)
 
-Throws an error if the current user does not have the specified permission.
+Asynchronously validates that the current user has the specified permission.
 
 ## Parameters
 
@@ -14,11 +14,22 @@ Throws an error if the current user does not have the specified permission.
 
 `string`
 
-Permission key. It may contain logical operators like A&B|C.
+Permission key or expression with `&`/`|` operators.
 
 ## Returns
 
 `Promise`\<`void`\>
+
+Promise that resolves if authorized, or rejects/throws if not.
+
+## Remarks
+
+Awaits [Authorization.hasPermissionAsync](hasPermissionAsync.md) and, on failure, shows a
+localized "Access Denied" notification before throwing.
+
+## Throws
+
+Error with localized "Authorization.AccessDenied" message if the user lacks the permission.
 
 ## Example
 

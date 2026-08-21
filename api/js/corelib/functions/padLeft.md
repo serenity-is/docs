@@ -1,18 +1,18 @@
 [@serenity-is/corelib](../README.md) / padLeft
 
-# Function: padLeft()
+# ~~Function: padLeft()~~
 
 > **padLeft**(`s`, `len`, `ch`): `any`
 
-Defined in: [src/compat/strings-compat.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L37)
+Defined in: [src/compat/strings-compat.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L40)
 
-Pads the string to the left with the specified character.
+Pads the string representation of `s` on the left to reach `len` characters.
 
 ## Parameters
 
 ### s
 
-String to pad.
+The value to pad; `null`/`undefined` is treated as an empty string.
 
 `string` | `number`
 
@@ -20,16 +20,20 @@ String to pad.
 
 `number`
 
-Target length of the string.
+The desired total length after padding.
 
 ### ch
 
 `string` = `' '`
 
-Character to pad with.
+The character to pad with. Defaults to a single space.
 
 ## Returns
 
 `any`
 
-Padded string.
+The left-padded string; already-longer strings are returned unchanged.
+
+## Deprecated
+
+Use String.prototype.padStart directly — e.g. `String(s ?? "").padStart(len, ch)`.

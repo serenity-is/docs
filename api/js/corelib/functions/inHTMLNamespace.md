@@ -4,9 +4,10 @@
 
 > **inHTMLNamespace**(`fn`): [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:2399](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2399)
+Defined in: [../domwise/dist/index.d.ts:2718](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2718)
 
-Executes a children factory within the HTML namespace (explicitly setting namespace to `null`).
+Executes a children factory within the HTML namespace (clears any active SVG/MathML override).
+Sugar over [inNamespaceURI](inNamespaceURI.md) with `null`.
 
 ## Parameters
 
@@ -14,7 +15,7 @@ Executes a children factory within the HTML namespace (explicitly setting namesp
 
 () => [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-A factory function that returns children.
+Factory that returns children to create as HTML elements.
 
 ## Returns
 

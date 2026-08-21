@@ -2,6 +2,8 @@
 
 # Aggregators
 
+Built-in aggregator implementations.
+
 ## Classes
 
 - [Avg](classes/Avg.md)

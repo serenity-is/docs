@@ -4,10 +4,14 @@
 
 > **inNamespaceURI**(`namespaceURI`, `children`): [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:2381](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2381)
+Defined in: [../domwise/dist/index.d.ts:2697](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2697)
 
-Executes a children factory within a specific namespace URI context.
-The namespace is temporarily set for the duration of the call and restored afterwards.
+Executes a children factory within a scoped namespace URI.
+
+Temporarily sets [currentNamespaceURI](currentNamespaceURI.md) to `namespaceURI` for the
+duration of `children()`, then restores the previous value (even if the
+factory throws). This lets you create SVG/MathML subtrees imperatively
+without setting `namespaceURI` on every element.
 
 ## Parameters
 
@@ -15,16 +19,22 @@ The namespace is temporarily set for the duration of the call and restored after
 
 `string`
 
-The namespace URI to use, or `null` for HTML namespace.
+Namespace URI to activate, or `null` for the HTML namespace.
 
 ### children
 
 () => [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-A factory function that returns children to be created in the given namespace.
+Factory that produces the children to render in the given namespace.
 
 ## Returns
 
 [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-The children produced by the factory.
+The children returned by the factory.
+
+## Example
+
+```tsx
+const icon = inNamespaceURI(SVGNamespace, () => <><circle r={10} /><path d="M0 0" /></>);
+```

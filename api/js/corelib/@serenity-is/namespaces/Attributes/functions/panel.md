@@ -4,15 +4,17 @@
 
 > **panel**(`value`): [`PanelAttribute`](../../../../classes/PanelAttribute.md)
 
-Defined in: [src/types/attributes.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L104)
+Defined in: [src/types/attributes.ts:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L139)
 
-Indicates if a dialog should be opened as a panel by default (default null)
+Creates a [PanelAttribute](../../../../classes/PanelAttribute.md).
 
 ## Parameters
 
 ### value
 
 `boolean` = `true`
+
+True to prefer panel mode (default `true`).
 
 ## Returns
 

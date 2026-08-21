@@ -2,7 +2,9 @@
 
 # Abstract Class: IStringValue
 
-Defined in: [src/interfaces/istringvalue.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L3)
+Defined in: [src/interfaces/istringvalue.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L6)
+
+Type token for editors that expose a string value.
 
 ## Constructors
 
@@ -20,7 +22,7 @@ Defined in: [src/interfaces/istringvalue.ts:3](https://github.com/serenity-is/se
 
 > `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/interfaces/istringvalue.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L4)
+Defined in: [src/interfaces/istringvalue.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L7)
 
 ## Methods
 
@@ -28,11 +30,15 @@ Defined in: [src/interfaces/istringvalue.ts:4](https://github.com/serenity-is/se
 
 > **get\_value**(): `string`
 
-Defined in: [src/interfaces/istringvalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L8)
+Defined in: [src/interfaces/istringvalue.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L12)
+
+Gets the current string value.
 
 #### Returns
 
 `string`
+
+Current value.
 
 ***
 
@@ -40,13 +46,17 @@ Defined in: [src/interfaces/istringvalue.ts:8](https://github.com/serenity-is/se
 
 > **set\_value**(`value`): `void`
 
-Defined in: [src/interfaces/istringvalue.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L9)
+Defined in: [src/interfaces/istringvalue.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/istringvalue.ts#L14)
+
+Sets the string value.
 
 #### Parameters
 
 ##### value
 
 `string`
+
+New value to assign.
 
 #### Returns
 

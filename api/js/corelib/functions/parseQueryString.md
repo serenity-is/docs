@@ -4,9 +4,9 @@
 
 > **parseQueryString**(`s?`): `Record`\<`string`, `string`\>
 
-Defined in: [src/base/html.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L172)
+Defined in: [src/base/html.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L202)
 
-Parses a query string into an object.
+Parses a URL query string into a key/value map.
 
 ## Parameters
 
@@ -14,10 +14,16 @@ Parses a query string into an object.
 
 `string`
 
-Query string to parse, if not specified, location.search will be used.
+Query string to parse (without leading `?` is also accepted). When `undefined`, `location.search` is used.
 
 ## Returns
 
 `Record`\<`string`, `string`\>
 
-An object with key/value pairs from the query string.
+An object mapping decoded keys to decoded values. Keys without `=` map to their own name; malformed percent-encodings are skipped.
+
+## Example
+
+```ts
+parseQueryString("a=1&b=hello%20world"); // { a: "1", b: "hello world" }
+```

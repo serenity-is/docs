@@ -1,10 +1,12 @@
 [@serenity-is/corelib](../../../../README.md) / [Decorators](../README.md) / closeButton
 
-# Function: closeButton()
+# ~~Function: closeButton()~~
 
 > **closeButton**(`value`): (`target`, `_context?`) => `void`
 
-Defined in: [src/types/decorators.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L86)
+Defined in: [src/types/decorators.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L111)
+
+Legacy decorator that attaches a [CloseButtonAttribute](../../../../classes/CloseButtonAttribute.md) to a dialog class.
 
 ## Parameters
 
@@ -12,7 +14,11 @@ Defined in: [src/types/decorators.ts:86](https://github.com/serenity-is/serenity
 
 `boolean` = `true`
 
+Whether the dialog should show a close button. Defaults to `true`.
+
 ## Returns
+
+Class decorator.
 
 > (`target`, `_context?`): `void`
 
@@ -29,3 +35,7 @@ Defined in: [src/types/decorators.ts:86](https://github.com/serenity-is/serenity
 ### Returns
 
 `void`
+
+## Deprecated
+
+Prefer `static override [Symbol.typeInfo] = classTypeInfo("...")` with [CloseButtonAttribute](../../../../classes/CloseButtonAttribute.md) metadata instead.

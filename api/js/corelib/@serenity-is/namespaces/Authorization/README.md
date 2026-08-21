@@ -2,11 +2,32 @@
 
 # Authorization
 
-Contains permission related functions.
+Provides permission checks and user-state accessors for the current session.
 
-## Note
-We use a namespace here both for compatibility and for allowing users to override
-these functions easily in ES modules environment, which is normally hard to do.
+Aggregates synchronous and asynchronous helpers that are intended for UI gating only;
+server-side authorization must still be enforced. Permission expressions may combine
+keys with `&` (AND) and `|` (OR), e.g. `"Admin&Sales|Manager"`.
+
+## Remarks
+
+Defined as a namespace (rather than plain functions) for backward compatibility and
+to allow consumers to override/monkey-patch members in ES-module environments.
+`*` always grants access; `""` and `"?"` only check that a user is logged in.
+Users with `IsAdmin` are granted every permission.
+
+## Examples
+
+```ts
+if (Authorization.hasPermission("Administration:General")) {
+    // show admin UI
+}
+```
+
+```ts
+if (await Authorization.hasPermissionAsync("Orders:View&Orders:Approve")) {
+    // show approve button
+}
+```
 
 ## Variables
 

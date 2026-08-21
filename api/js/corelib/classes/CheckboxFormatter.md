@@ -2,7 +2,10 @@
 
 # Class: CheckboxFormatter
 
-Defined in: [src/ui/formatters/checkboxformatter.tsx:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L5)
+Defined in: [src/ui/formatters/checkboxformatter.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L9)
+
+Renders a boolean as a checkbox-like visual (with optional text). In grid display
+the checkbox is read-only; in header-filter context it falls back to text/icon.
 
 ## Implements
 
@@ -14,43 +17,63 @@ Defined in: [src/ui/formatters/checkboxformatter.tsx:5](https://github.com/seren
 
 > **new CheckboxFormatter**(`props`): `CheckboxFormatter`
 
-Defined in: [src/ui/formatters/checkboxformatter.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L8)
+Defined in: [src/ui/formatters/checkboxformatter.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L24)
+
+Creates a new CheckboxFormatter.
 
 #### Parameters
 
 ##### props
 
+Formatter options.
+
 ###### falseIcon?
 
 [`IconClassName`](../type-aliases/IconClassName.md)
+
+Icon for `false`.
 
 ###### falseText?
 
 `string`
 
+Text for `false`.
+
 ###### nullIcon?
 
 [`IconClassName`](../type-aliases/IconClassName.md)
+
+Icon for `null`.
 
 ###### nullText?
 
 `string`
 
+Text for `null`.
+
 ###### showHint?
 
 `boolean`
+
+Whether to surface text as `title` hint.
 
 ###### showText?
 
 `boolean`
 
+Whether to show text (defaults to `true`, or `false` in grid cells).
+
 ###### trueIcon?
 
 [`IconClassName`](../type-aliases/IconClassName.md)
 
+Icon for `true`.
+
 ###### trueText?
 
 `string`
+
+Text for `true`.
 
 #### Returns
 
@@ -62,7 +85,9 @@ Defined in: [src/ui/formatters/checkboxformatter.tsx:8](https://github.com/seren
 
 > `readonly` **props**: `object` = `{}`
 
-Defined in: [src/ui/formatters/checkboxformatter.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L8)
+Defined in: [src/ui/formatters/checkboxformatter.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L24)
+
+Formatter options.
 
 #### falseIcon?
 
@@ -102,7 +127,7 @@ Defined in: [src/ui/formatters/checkboxformatter.tsx:8](https://github.com/seren
 
 > `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/formatters/checkboxformatter.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L6)
+Defined in: [src/ui/formatters/checkboxformatter.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L10)
 
 ## Methods
 
@@ -110,7 +135,9 @@ Defined in: [src/ui/formatters/checkboxformatter.tsx:6](https://github.com/seren
 
 > **format**(`ctx`): `FormatterResult`
 
-Defined in: [src/ui/formatters/checkboxformatter.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L21)
+Defined in: [src/ui/formatters/checkboxformatter.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/checkboxformatter.tsx#L42)
+
+Formats the boolean value as a checkbox or icon/text markup.
 
 #### Parameters
 
@@ -118,9 +145,13 @@ Defined in: [src/ui/formatters/checkboxformatter.tsx:21](https://github.com/sere
 
 `FormatterContext`
 
+Formatter context containing the cell value.
+
 #### Returns
 
 `FormatterResult`
+
+Checkbox, icon, or text markup for the cell.
 
 #### Implementation of
 

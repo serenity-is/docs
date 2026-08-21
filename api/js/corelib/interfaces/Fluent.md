@@ -2,7 +2,7 @@
 
 # Interface: Fluent\<TElement\>
 
-Defined in: [src/base/fluent.ts:416](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L416)
+Defined in: [src/base/fluent.ts:491](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L491)
 
 Represents a Fluent object, which is similar to jQuery but works for only one element.
 It implements the `ArrayLike` interface and can have 0 (null) or 1 element.
@@ -29,7 +29,7 @@ Gets the element at the specified index.
 
 > **\[iterator\]**: `TElement`[]
 
-Defined in: [src/base/fluent.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L229)
+Defined in: [src/base/fluent.ts:236](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L236)
 
 Gets an iterator for the elements in the Fluent object.
 
@@ -43,7 +43,7 @@ An iterator for the elements in the Fluent object.
 
 > `readonly` **length**: `number`
 
-Defined in: [src/base/fluent.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L242)
+Defined in: [src/base/fluent.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L249)
 
 Gets the number of elements in the Fluent object. Can only be 1 or 0.
 
@@ -359,7 +359,7 @@ A Fluent object representing the closest ancestor element.
 
 Defined in: [src/base/fluent.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L112)
 
-Gets or sets the value of the specified data attribute.
+Gets the value of the specified `data-*` attribute.
 
 ##### Parameters
 
@@ -367,19 +367,21 @@ Gets or sets the value of the specified data attribute.
 
 `string`
 
-The name of the data attribute.
+Name of the data attribute without the `data-` prefix.
 
 ##### Returns
 
 `string`
 
-The value of the data attribute if no value is provided, or the Fluent object itself if a value is provided.
+The attribute value, or `null`/`undefined` when not present.
 
 #### Call Signature
 
 > **data**(`name`, `value`): `this`
 
-Defined in: [src/base/fluent.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L113)
+Defined in: [src/base/fluent.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L120)
+
+Sets the value of the specified `data-*` attribute.
 
 ##### Parameters
 
@@ -387,13 +389,19 @@ Defined in: [src/base/fluent.ts:113](https://github.com/serenity-is/serenity/blo
 
 `string`
 
+Name of the data attribute without the `data-` prefix.
+
 ###### value
 
 `string`
 
+Value to set; `null`/`undefined` removes the attribute via [Fluent.attr](#attr).
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 ***
 
@@ -401,7 +409,7 @@ Defined in: [src/base/fluent.ts:113](https://github.com/serenity-is/serenity/blo
 
 > **each**(`callback`): `this`
 
-Defined in: [src/base/fluent.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L121)
+Defined in: [src/base/fluent.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L128)
 
 Executes a callback function for the element in the Fluent object if it is not null.
 
@@ -425,7 +433,7 @@ The Fluent object itself.
 
 > **empty**(): `this`
 
-Defined in: [src/base/fluent.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L135)
+Defined in: [src/base/fluent.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L142)
 
 Removes all child nodes from the element. It also clears event handlers attached via Fluent, and disposes any attached widgets.
 
@@ -441,7 +449,7 @@ The Fluent object itself.
 
 > **findAll**\<`TElement`\>(`selector`): `TElement`[]
 
-Defined in: [src/base/fluent.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L143)
+Defined in: [src/base/fluent.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L150)
 
 Finds all elements that match the specified selector within the element.
 
@@ -471,7 +479,7 @@ An array of elements that match the selector.
 
 > **findEach**\<`TElement`\>(`selector`, `callback`): `this`
 
-Defined in: [src/base/fluent.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L152)
+Defined in: [src/base/fluent.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L159)
 
 Finds each element that matches the specified selector within the element and executes a callback function for each found element as a Fluent object.
 
@@ -507,7 +515,7 @@ The Fluent object itself.
 
 > **findFirst**\<`TElement`\>(`selector`): `Fluent`\<`TElement`\>
 
-Defined in: [src/base/fluent.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L160)
+Defined in: [src/base/fluent.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L167)
 
 Finds the first element that matches the specified selector within the element.
 
@@ -537,7 +545,7 @@ A Fluent object representing the first element that matches the selector.
 
 > **focus**(): `this`
 
-Defined in: [src/base/fluent.ts:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L167)
+Defined in: [src/base/fluent.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L174)
 
 Sets focus on the element.
 
@@ -553,7 +561,7 @@ The Fluent object itself.
 
 > **getNode**(): `TElement`
 
-Defined in: [src/base/fluent.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L128)
+Defined in: [src/base/fluent.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L135)
 
 Gets the underlying HTML element.
 
@@ -569,7 +577,7 @@ The underlying HTML element.
 
 > **getWidget**\<`TWidget`\>(`type?`): `TWidget`
 
-Defined in: [src/base/fluent.ts:206](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L206)
+Defined in: [src/base/fluent.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L213)
 
 Gets the widget associated with the element.
 
@@ -599,7 +607,7 @@ The widget associated with the element.
 
 > **hasClass**(`klass`): `boolean`
 
-Defined in: [src/base/fluent.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L175)
+Defined in: [src/base/fluent.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L182)
 
 Checks if the element has the specified class.
 
@@ -625,9 +633,9 @@ The class to check for.
 
 > **hidden**(`name`): `boolean`
 
-Defined in: [src/base/fluent.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L182)
+Defined in: [src/base/fluent.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L190)
 
-Gets the value of the hidden attribute/property.
+Gets whether the element is hidden (`hidden` property).
 
 ##### Parameters
 
@@ -635,19 +643,21 @@ Gets the value of the hidden attribute/property.
 
 `string`
 
+Reserved attribute name parameter for compatibility; not used for the `hidden` property check.
+
 ##### Returns
 
 `boolean`
 
-The value of the hidden attribute/property
+`true` if the element is hidden, otherwise `false`.
 
 #### Call Signature
 
 > **hidden**(`value`): `this`
 
-Defined in: [src/base/fluent.ts:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L191)
+Defined in: [src/base/fluent.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L198)
 
-Sets the value of the hidden property/attribute.
+Sets whether the element is hidden.
 
 ##### Parameters
 
@@ -655,13 +665,13 @@ Sets the value of the hidden property/attribute.
 
 `boolean`
 
-The value of the attribute. If the value is falsy the attribute is removed.
+When `true` sets `element.hidden = true`, otherwise `false`.
 
 ##### Returns
 
 `this`
 
-The Fluent object itself if a value is provided.
+The Fluent object itself.
 
 ***
 
@@ -669,7 +679,7 @@ The Fluent object itself if a value is provided.
 
 > **hide**(): `this`
 
-Defined in: [src/base/fluent.ts:198](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L198)
+Defined in: [src/base/fluent.ts:205](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L205)
 
 Hides the element by setting its hidden property to true.
 
@@ -685,7 +695,7 @@ The Fluent object itself.
 
 > **insertAfter**(`referenceNode`): `this`
 
-Defined in: [src/base/fluent.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L214)
+Defined in: [src/base/fluent.ts:221](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L221)
 
 Inserts the element after the specified reference element.
 
@@ -709,7 +719,7 @@ The Fluent object itself.
 
 > **insertBefore**(`referenceNode`): `this`
 
-Defined in: [src/base/fluent.ts:222](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L222)
+Defined in: [src/base/fluent.ts:229](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L229)
 
 Inserts the element before the specified reference element.
 
@@ -733,7 +743,7 @@ The Fluent object itself.
 
 > **matches**(`selector`): `boolean`
 
-Defined in: [src/base/fluent.ts:284](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L284)
+Defined in: [src/base/fluent.ts:342](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L342)
 
 Checks if the element matches the specified selector.
 
@@ -757,7 +767,7 @@ A CSS selector to match against.
 
 > **nextSibling**(`selector?`): `Fluent`\<`any`\>
 
-Defined in: [src/base/fluent.ts:292](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L292)
+Defined in: [src/base/fluent.ts:350](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L350)
 
 Gets the next sibling element that matches the specified selector, or the first sibling if no selector is provided..
 
@@ -783,7 +793,7 @@ A Fluent object representing the next sibling element.
 
 > **off**\<`K`\>(`type`, `listener`): `this`
 
-Defined in: [src/base/fluent.ts:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L251)
+Defined in: [src/base/fluent.ts:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L258)
 
 Removes an event listener from the element.
 
@@ -799,13 +809,13 @@ Removes an event listener from the element.
 
 `K`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type, may include a `.namespace` suffix (e.g. `"click.myNs"`).
 
 ###### listener
 
 (`this`, `ev`) => `any`
 
-The event listener to remove.
+Event listener to remove.
 
 ##### Returns
 
@@ -817,7 +827,9 @@ The Fluent object itself.
 
 > **off**(`type`): `this`
 
-Defined in: [src/base/fluent.ts:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L252)
+Defined in: [src/base/fluent.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L265)
+
+Removes event listener(s) for the given type / namespace.
 
 ##### Parameters
 
@@ -825,35 +837,49 @@ Defined in: [src/base/fluent.ts:252](https://github.com/serenity-is/serenity/blo
 
 `string`
 
+Event type or `.namespace`; when only a namespace is handled all matching listeners are removed.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 #### Call Signature
 
 > **off**(`type`, `listener`): `this`
 
-Defined in: [src/base/fluent.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L253)
+Defined in: [src/base/fluent.ts:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L273)
+
+Removes an event listener from the element.
 
 ##### Parameters
 
 ###### type
 
 `string`
+
+Event type, may include a `.namespace`.
 
 ###### listener
 
 `EventListener`
 
+Event listener to remove.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 #### Call Signature
 
 > **off**(`type`, `selector`, `delegationHandler`): `this`
 
-Defined in: [src/base/fluent.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L254)
+Defined in: [src/base/fluent.ts:282](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L282)
+
+Removes a delegated event listener.
 
 ##### Parameters
 
@@ -861,17 +887,25 @@ Defined in: [src/base/fluent.ts:254](https://github.com/serenity-is/serenity/blo
 
 `string`
 
+Event type, may include a `.namespace`.
+
 ###### selector
 
 `string`
+
+Delegation selector used when the listener was added.
 
 ###### delegationHandler
 
 `Function`
 
+Delegated handler to remove.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 ***
 
@@ -881,9 +915,9 @@ Defined in: [src/base/fluent.ts:254](https://github.com/serenity-is/serenity/blo
 
 > **on**\<`K`\>(`type`, `listener`): `this`
 
-Defined in: [src/base/fluent.ts:263](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L263)
+Defined in: [src/base/fluent.ts:291](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L291)
 
-Adds an event listener to the element. It is possible to use delegated events like jQuery.
+Adds an event listener to the element. Supports namespaced and delegated events via the shared `fluent-events` module.
 
 ##### Type Parameters
 
@@ -897,13 +931,13 @@ Adds an event listener to the element. It is possible to use delegated events li
 
 `K`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type, may include a `.namespace` suffix.
 
 ###### listener
 
 (`this`, `ev`) => `any`
 
-The event listener to add.
+Event listener to add.
 
 ##### Returns
 
@@ -915,27 +949,37 @@ The Fluent object itself.
 
 > **on**(`type`, `listener`): `this`
 
-Defined in: [src/base/fluent.ts:264](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L264)
+Defined in: [src/base/fluent.ts:299](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L299)
+
+Adds an event listener to the element.
 
 ##### Parameters
 
 ###### type
 
 `string`
+
+Event type, may include a `.namespace`.
 
 ###### listener
 
 `EventListener`
 
+Event listener to add.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 #### Call Signature
 
 > **on**(`type`, `selector`, `delegationHandler`): `this`
 
-Defined in: [src/base/fluent.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L265)
+Defined in: [src/base/fluent.ts:308](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L308)
+
+Adds a delegated event listener to the element.
 
 ##### Parameters
 
@@ -943,17 +987,25 @@ Defined in: [src/base/fluent.ts:265](https://github.com/serenity-is/serenity/blo
 
 `string`
 
+Event type, may include a `.namespace`.
+
 ###### selector
 
 `string`
+
+CSS selector to delegate to.
 
 ###### delegationHandler
 
 `Function`
 
+Handler invoked when the delegated target matches.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 ***
 
@@ -963,9 +1015,9 @@ Defined in: [src/base/fluent.ts:265](https://github.com/serenity-is/serenity/blo
 
 > **one**\<`K`\>(`type`, `listener`): `this`
 
-Defined in: [src/base/fluent.ts:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L274)
+Defined in: [src/base/fluent.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L317)
 
-Adds a one-time event listener to the element. It is possible to use delegated events like jQuery.
+Adds a one-time event listener that is automatically removed after the first invocation.
 
 ##### Type Parameters
 
@@ -979,13 +1031,13 @@ Adds a one-time event listener to the element. It is possible to use delegated e
 
 `K`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type, may include a `.namespace` suffix.
 
 ###### listener
 
 (`this`, `ev`) => `any`
 
-The event listener to add.
+Event listener to add.
 
 ##### Returns
 
@@ -997,27 +1049,37 @@ The Fluent object itself.
 
 > **one**(`type`, `listener`): `this`
 
-Defined in: [src/base/fluent.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L275)
+Defined in: [src/base/fluent.ts:325](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L325)
+
+Adds a one-time event listener to the element.
 
 ##### Parameters
 
 ###### type
 
 `string`
+
+Event type, may include a `.namespace`.
 
 ###### listener
 
 `EventListener`
 
+Event listener to add.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 #### Call Signature
 
 > **one**(`type`, `selector`, `delegationHandler`): `this`
 
-Defined in: [src/base/fluent.ts:276](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L276)
+Defined in: [src/base/fluent.ts:334](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L334)
+
+Adds a one-time delegated event listener to the element.
 
 ##### Parameters
 
@@ -1025,17 +1087,25 @@ Defined in: [src/base/fluent.ts:276](https://github.com/serenity-is/serenity/blo
 
 `string`
 
+Event type, may include a `.namespace`.
+
 ###### selector
 
 `string`
+
+CSS selector to delegate to.
 
 ###### delegationHandler
 
 `Function`
 
+Handler invoked once when the delegated target matches.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 ***
 
@@ -1043,7 +1113,7 @@ Defined in: [src/base/fluent.ts:276](https://github.com/serenity-is/serenity/blo
 
 > **parent**\<`TElement`\>(): `Fluent`\<`TElement`\>
 
-Defined in: [src/base/fluent.ts:299](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L299)
+Defined in: [src/base/fluent.ts:357](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L357)
 
 Gets the parent element of the element.
 
@@ -1065,7 +1135,7 @@ A Fluent object representing the parent element.
 
 > **prepend**(`child`): `this`
 
-Defined in: [src/base/fluent.ts:307](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L307)
+Defined in: [src/base/fluent.ts:365](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L365)
 
 Prepends content to the element.
 
@@ -1089,7 +1159,7 @@ The Fluent object itself.
 
 > **prependTo**(`parent`): `this`
 
-Defined in: [src/base/fluent.ts:315](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L315)
+Defined in: [src/base/fluent.ts:373](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L373)
 
 Prepends the element to the specified parent element.
 
@@ -1113,7 +1183,7 @@ The Fluent object itself.
 
 > **prevSibling**(`selector?`): `Fluent`\<`any`\>
 
-Defined in: [src/base/fluent.ts:323](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L323)
+Defined in: [src/base/fluent.ts:381](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L381)
 
 Gets the previous sibling element that matches the specified selector, or the first sibling if no selector is provided.
 
@@ -1137,7 +1207,7 @@ A Fluent object representing the previous sibling element.
 
 > **remove**(): `this`
 
-Defined in: [src/base/fluent.ts:330](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L330)
+Defined in: [src/base/fluent.ts:388](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L388)
 
 Removes the element from the DOM. It also removes event handlers and disposes widgets by calling "disposing" event handlers.
 
@@ -1153,7 +1223,7 @@ The Fluent object itself.
 
 > **removeAttr**(`name`): `this`
 
-Defined in: [src/base/fluent.ts:338](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L338)
+Defined in: [src/base/fluent.ts:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L396)
 
 Removes the specified attribute from the element.
 
@@ -1177,7 +1247,7 @@ The Fluent object itself.
 
 > **removeClass**(`value`): `this`
 
-Defined in: [src/base/fluent.ts:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L346)
+Defined in: [src/base/fluent.ts:404](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L404)
 
 Removes one or more classes from the element. Any falsy value is ignored.
 
@@ -1201,7 +1271,7 @@ The Fluent object itself.
 
 > **show**(): `this`
 
-Defined in: [src/base/fluent.ts:353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L353)
+Defined in: [src/base/fluent.ts:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L411)
 
 Shows the element by setting its hidden property to false.
 
@@ -1217,7 +1287,7 @@ The Fluent object itself.
 
 > **style**(`callback`): `this`
 
-Defined in: [src/base/fluent.ts:361](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L361)
+Defined in: [src/base/fluent.ts:419](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L419)
 
 Executes a callback function to modify the inline style of the element.
 
@@ -1243,21 +1313,23 @@ The Fluent object itself.
 
 > **text**(): `string`
 
-Defined in: [src/base/fluent.ts:368](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L368)
+Defined in: [src/base/fluent.ts:426](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L426)
 
-Gets or sets the text content of the element.
+Gets the text content of the element.
 
 ##### Returns
 
 `string`
 
-The text content of the element if no value is provided, or the Fluent object itself if a value is provided.
+The current `textContent` of the element.
 
 #### Call Signature
 
 > **text**(`value`): `this`
 
-Defined in: [src/base/fluent.ts:369](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L369)
+Defined in: [src/base/fluent.ts:433](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L433)
+
+Sets the text content of the element.
 
 ##### Parameters
 
@@ -1265,9 +1337,13 @@ Defined in: [src/base/fluent.ts:369](https://github.com/serenity-is/serenity/blo
 
 `string`
 
+Text to set as `textContent`.
+
 ##### Returns
 
 `this`
+
+The Fluent object itself.
 
 ***
 
@@ -1275,7 +1351,7 @@ Defined in: [src/base/fluent.ts:369](https://github.com/serenity-is/serenity/blo
 
 > **toggle**(`flag?`): `this`
 
-Defined in: [src/base/fluent.ts:377](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L377)
+Defined in: [src/base/fluent.ts:441](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L441)
 
 Toggles the visibility of the element.
 
@@ -1299,7 +1375,7 @@ The Fluent object itself.
 
 > **toggleClass**(`value`, `add?`): `this`
 
-Defined in: [src/base/fluent.ts:385](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L385)
+Defined in: [src/base/fluent.ts:450](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L450)
 
 Toggles one or more classes on the element. If the class exists, it is removed; otherwise, it is added.
 
@@ -1307,13 +1383,15 @@ Toggles one or more classes on the element. If the class exists, it is removed; 
 
 ##### value
 
-The class or classes to toggle. It can be a string, boolean, or an array of strings or booleans.
+Class or classes to toggle. Strings are split on whitespace; arrays are flattened; falsy entries are ignored.
 
 `string` | `boolean` | (`string` \| `boolean`)[]
 
 ##### add?
 
 `boolean`
+
+When `true` forces addition, when `false` forces removal, when omitted toggles.
 
 #### Returns
 
@@ -1327,7 +1405,7 @@ The Fluent object itself.
 
 > **trigger**(`type`, `args?`): `this`
 
-Defined in: [src/base/fluent.ts:394](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L394)
+Defined in: [src/base/fluent.ts:459](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L459)
 
 Triggers a specified event on the element.
 
@@ -1357,7 +1435,7 @@ The Fluent object itself.
 
 > **tryGetWidget**\<`TWidget`\>(`type?`): `TWidget`
 
-Defined in: [src/base/fluent.ts:402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L402)
+Defined in: [src/base/fluent.ts:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L467)
 
 Tries to get the widget associated with the element.
 
@@ -1389,9 +1467,9 @@ The widget associated with the element, or `null` if no widget is found.
 
 > **val**(`value`): `this`
 
-Defined in: [src/base/fluent.ts:410](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L410)
+Defined in: [src/base/fluent.ts:475](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L475)
 
-Gets or sets the value of the element.
+Sets the value of the element (input / select / textarea).
 
 ##### Parameters
 
@@ -1399,20 +1477,24 @@ Gets or sets the value of the element.
 
 `string`
 
-The value to set. If no value is provided, returns the current value of the element.
+Value to set.
 
 ##### Returns
 
 `this`
 
-The value of the element if no value is provided, or the Fluent object itself if a value is provided.
+The Fluent object itself.
 
 #### Call Signature
 
 > **val**(): `string`
 
-Defined in: [src/base/fluent.ts:411](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L411)
+Defined in: [src/base/fluent.ts:481](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L481)
+
+Gets the value of the element (input / select / textarea).
 
 ##### Returns
 
 `string`
+
+The current value of the element.

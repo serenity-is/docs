@@ -4,9 +4,9 @@
 
 > **isInputLike**(`element`): element is HTMLButtonElement \| HTMLInputElement \| HTMLSelectElement \| HTMLTextAreaElement
 
-Defined in: [src/base/fluent.ts:612](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L612)
+Defined in: [src/base/fluent.ts:779](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L779)
 
-Returns true if the element is input like. E.g. one of input, textarea, select, button. This is for compatibility with jQuery's :input selector.
+Tests whether the element is an input-like control (`input`, `select`, `textarea`, or `button`).
 
 ## Parameters
 
@@ -14,10 +14,10 @@ Returns true if the element is input like. E.g. one of input, textarea, select, 
 
 `Element`
 
-The target element
+Element to test.
 
 ## Returns
 
 element is HTMLButtonElement \| HTMLInputElement \| HTMLSelectElement \| HTMLTextAreaElement
 
-true if element is an input like node
+`true` when the element's tag name matches an input-like tag.

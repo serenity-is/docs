@@ -2,7 +2,9 @@
 
 # Interface: ConfigureElement
 
-Defined in: [../domwise/dist/index.d.ts:2146](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2146)
+Defined in: [../domwise/dist/index.d.ts:2284](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2284)
+
+Toggles for optional JSX element namespaces. Set to `false` to exclude SVG/MathML from `JSXElement` / `IntrinsicElements`.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [../domwise/dist/index.d.ts:2146](https://github.com/serenity-is/ser
 
 > **mathml**: `boolean`
 
-Defined in: [../domwise/dist/index.d.ts:2148](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2148)
+Defined in: [../domwise/dist/index.d.ts:2288](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2288)
+
+When `false`, MathML elements are excluded from the JSX element union.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [../domwise/dist/index.d.ts:2148](https://github.com/serenity-is/ser
 
 > **svg**: `boolean`
 
-Defined in: [../domwise/dist/index.d.ts:2147](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2147)
+Defined in: [../domwise/dist/index.d.ts:2286](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2286)
+
+When `false`, SVG elements are excluded from the JSX element union.

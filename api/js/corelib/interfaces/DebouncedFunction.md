@@ -2,7 +2,22 @@
 
 # Interface: DebouncedFunction()\<T\>
 
-Defined in: [src/base/debounce.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L1)
+Defined in: [src/base/debounce.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L13)
+
+A debounced wrapper around a function `T` with helper methods.
+
+## Remarks
+
+The callable signature applies debounce timing; [DebouncedFunction.clear](#clear)
+cancels a pending invocation and [DebouncedFunction.flush](#flush) forces it to run now.
+
+## Example
+
+```ts
+const onResize = debounce(() => layout(), 150);
+window.addEventListener("resize", onResize);
+onResize.clear(); // cancel pending call
+```
 
 ## Type Parameters
 
@@ -10,17 +25,13 @@ Defined in: [src/base/debounce.ts:1](https://github.com/serenity-is/serenity/blo
 
 `T` *extends* (...`args`) => `any`
 
+The original function type being debounced.
+
 > **DebouncedFunction**(...`args`): `ReturnType`\<`T`\>
 
-Defined in: [src/base/debounce.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L11)
+Defined in: [src/base/debounce.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L20)
 
-Call the original function, but applying the debounce rules.
-
-If the debounced function can be run immediately, this calls it and returns its return
-value.
-
-Otherwise, it returns the return value of the last invocation, or undefined if the debounced
-function was not invoked yet.
+Invokes the debounced function, applying debounce timing rules.
 
 ## Parameters
 
@@ -28,9 +39,13 @@ function was not invoked yet.
 
 ...`Parameters`\<`T`\>
 
+Arguments forwarded to the original function `T`.
+
 ## Returns
 
 `ReturnType`\<`T`\>
+
+Return value of the last immediate invocation, or `undefined` if the call was deferred / never invoked.
 
 ## Methods
 
@@ -38,13 +53,20 @@ function was not invoked yet.
 
 > **clear**(): `void`
 
-Defined in: [src/base/debounce.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L16)
+Defined in: [src/base/debounce.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L29)
 
-Throw away any pending invocation of the debounced function.
+Cancels any pending (not yet fired) invocation.
 
 #### Returns
 
 `void`
+
+#### Example
+
+```ts
+const fn = debounce(save, 300);
+fn(); fn.clear(); // save will not run
+```
 
 ***
 
@@ -52,14 +74,19 @@ Throw away any pending invocation of the debounced function.
 
 > **flush**(): `ReturnType`\<`T`\>
 
-Defined in: [src/base/debounce.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L25)
+Defined in: [src/base/debounce.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/debounce.ts#L39)
 
-If there is a pending invocation of the debounced function, invoke it immediately and return
-its return value.
-
-Otherwise, return the value from the last invocation, or undefined if the debounced function
-was never invoked.
+Immediately invokes the pending debounced call (if any) and returns its result.
 
 #### Returns
 
 `ReturnType`\<`T`\>
+
+Return value of the flushed invocation, or the last invocation's return value if nothing was pending, or `undefined` if never invoked.
+
+#### Example
+
+```ts
+const fn = debounce(save, 300);
+fn(); fn.flush(); // save runs now instead of after 300 ms
+```

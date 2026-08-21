@@ -2,7 +2,9 @@
 
 # Interface: ArgsRecalcRows
 
-Defined in: [src/slick/remoteview.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L38)
+Defined in: [src/slick/remoteview.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L71)
+
+Arguments for the recalc rows event.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/slick/remoteview.ts:38](https://github.com/serenity-is/serenity
 
 > **dataView**: [`IRemoteView`](IRemoteView.md)
 
-Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L9)
+Defined in: [src/slick/remoteview.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L13)
+
+The data view that raised the event.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/
 
 > **newRows**: `any`[]
 
-Defined in: [src/slick/remoteview.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L40)
+Defined in: [src/slick/remoteview.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L75)
+
+Rows after recalculation.
 
 ***
 
@@ -34,4 +40,6 @@ Defined in: [src/slick/remoteview.ts:40](https://github.com/serenity-is/serenity
 
 > **oldRows**: `any`[]
 
-Defined in: [src/slick/remoteview.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L39)
+Defined in: [src/slick/remoteview.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L73)
+
+Rows before recalculation.

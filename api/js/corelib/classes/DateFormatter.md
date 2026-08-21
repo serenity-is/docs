@@ -2,7 +2,9 @@
 
 # Class: DateFormatter
 
-Defined in: [src/ui/formatters/dateformatter.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L5)
+Defined in: [src/ui/formatters/dateformatter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L6)
+
+Formats date values using [formatDate](../functions/formatDate.md) / [Culture.dateFormat](../interfaces/DateFormat.md#dateformat).
 
 ## Extended by
 
@@ -18,15 +20,21 @@ Defined in: [src/ui/formatters/dateformatter.ts:5](https://github.com/serenity-i
 
 > **new DateFormatter**(`props`): `DateFormatter`
 
-Defined in: [src/ui/formatters/dateformatter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L8)
+Defined in: [src/ui/formatters/dateformatter.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L14)
+
+Creates a new DateFormatter.
 
 #### Parameters
 
 ##### props
 
+Formatter options.
+
 ###### displayFormat?
 
 `string`
+
+Date format string (default `Culture.dateFormat`).
 
 #### Returns
 
@@ -38,7 +46,9 @@ Defined in: [src/ui/formatters/dateformatter.ts:8](https://github.com/serenity-i
 
 > `readonly` **props**: `object` = `{}`
 
-Defined in: [src/ui/formatters/dateformatter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L8)
+Defined in: [src/ui/formatters/dateformatter.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L14)
+
+Formatter options.
 
 #### displayFormat?
 
@@ -50,7 +60,7 @@ Defined in: [src/ui/formatters/dateformatter.ts:8](https://github.com/serenity-i
 
 > `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/formatters/dateformatter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L6)
+Defined in: [src/ui/formatters/dateformatter.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L7)
 
 ## Accessors
 
@@ -60,23 +70,31 @@ Defined in: [src/ui/formatters/dateformatter.ts:6](https://github.com/serenity-i
 
 > **get** **displayFormat**(): `string`
 
-Defined in: [src/ui/formatters/dateformatter.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L37)
+Defined in: [src/ui/formatters/dateformatter.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L50)
+
+Gets the date display format.
 
 ##### Returns
 
 `string`
 
+The display format string.
+
 #### Set Signature
 
 > **set** **displayFormat**(`value`): `void`
 
-Defined in: [src/ui/formatters/dateformatter.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L38)
+Defined in: [src/ui/formatters/dateformatter.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L55)
+
+Sets the date display format.
 
 ##### Parameters
 
 ###### value
 
 `string`
+
+The display format string.
 
 ##### Returns
 
@@ -88,7 +106,9 @@ Defined in: [src/ui/formatters/dateformatter.ts:38](https://github.com/serenity-
 
 > **format**(`ctx`): `string`
 
-Defined in: [src/ui/formatters/dateformatter.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L40)
+Defined in: [src/ui/formatters/dateformatter.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L62)
+
+Formats the cell value as a date string.
 
 #### Parameters
 
@@ -96,9 +116,13 @@ Defined in: [src/ui/formatters/dateformatter.ts:40](https://github.com/serenity-
 
 `FormatterContext`
 
+Formatter context containing the cell value.
+
 #### Returns
 
 `string`
+
+HTML-encoded formatted date string.
 
 #### Implementation of
 
@@ -110,7 +134,9 @@ Defined in: [src/ui/formatters/dateformatter.ts:40](https://github.com/serenity-
 
 > `static` **format**(`value`, `format?`): `any`
 
-Defined in: [src/ui/formatters/dateformatter.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L13)
+Defined in: [src/ui/formatters/dateformatter.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/dateformatter.ts#L25)
+
+Static helper to format any date-like value.
 
 #### Parameters
 
@@ -118,10 +144,16 @@ Defined in: [src/ui/formatters/dateformatter.ts:13](https://github.com/serenity-
 
 `any`
 
+Date instance or ISO string.
+
 ##### format?
 
 `string`
 
+Format string (defaults to culture format).
+
 #### Returns
 
 `any`
+
+HTML-encoded formatted string.

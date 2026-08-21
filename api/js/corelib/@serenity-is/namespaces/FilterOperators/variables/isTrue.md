@@ -4,4 +4,6 @@
 
 > `const` **isTrue**: `"true"` = `'true'`
 
-Defined in: [src/ui/filtering/filteroperator.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L11)
+Defined in: [src/ui/filtering/filteroperator.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L21)
+
+Is true operator.

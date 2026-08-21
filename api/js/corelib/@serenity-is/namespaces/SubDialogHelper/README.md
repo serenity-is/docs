@@ -2,6 +2,9 @@
 
 # SubDialogHelper
 
+Helper functions for coordinating data changes between dialogs and their
+owner widgets.
+
 ## Functions
 
 - [bindToDataChange](functions/bindToDataChange.md)

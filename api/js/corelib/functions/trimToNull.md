@@ -4,10 +4,9 @@
 
 > **trimToNull**(`s`): `string`
 
-Defined in: [src/compat/strings-compat.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L98)
+Defined in: [src/compat/strings-compat.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L113)
 
-Trims the whitespace characters from the start and end of the string
-Returns null if the string is null, undefined or whitespace.
+Trims leading and trailing whitespace, returning `null` for empty or whitespace-only results.
 
 ## Parameters
 
@@ -15,6 +14,10 @@ Returns null if the string is null, undefined or whitespace.
 
 `string`
 
+The input string; `null`/`undefined` yields `null` directly.
+
 ## Returns
 
 `string`
+
+The trimmed string, or `null` if the input is `null`/`undefined` or trims to `""`.

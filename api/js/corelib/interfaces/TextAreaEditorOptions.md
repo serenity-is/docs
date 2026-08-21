@@ -2,7 +2,9 @@
 
 # Interface: TextAreaEditorOptions
 
-Defined in: [src/ui/editors/textareaeditor.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/textareaeditor.ts#L5)
+Defined in: [src/ui/editors/textareaeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/textareaeditor.ts#L8)
+
+Options for the [TextAreaEditor](../classes/TextAreaEditor.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/textareaeditor.ts:5](https://github.com/serenity-is/
 
 > `optional` **cols**: `number`
 
-Defined in: [src/ui/editors/textareaeditor.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/textareaeditor.ts#L6)
+Defined in: [src/ui/editors/textareaeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/textareaeditor.ts#L10)
+
+Number of columns; 0 disables the attribute.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/ui/editors/textareaeditor.ts:6](https://github.com/serenity-is/
 
 > `optional` **rows**: `number`
 
-Defined in: [src/ui/editors/textareaeditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/textareaeditor.ts#L7)
+Defined in: [src/ui/editors/textareaeditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/textareaeditor.ts#L12)
+
+Number of rows; 0 disables the attribute.

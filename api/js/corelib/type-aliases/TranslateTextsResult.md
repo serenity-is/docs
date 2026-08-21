@@ -4,9 +4,9 @@
 
 > **TranslateTextsResult** = `object`
 
-Defined in: [src/base/localtext.ts:160](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L160)
+Defined in: [src/base/localtext.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L174)
 
-The result of a translation operation.
+Result returned by [TranslationConfig.translateTexts](../variables/TranslationConfig.md#translatetexts) containing translated entries.
 
 ## Properties
 
@@ -14,7 +14,7 @@ The result of a translation operation.
 
 > `optional` **Translations**: `object`[]
 
-Defined in: [src/base/localtext.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L162)
+Defined in: [src/base/localtext.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L176)
 
 An array of resulting translations
 

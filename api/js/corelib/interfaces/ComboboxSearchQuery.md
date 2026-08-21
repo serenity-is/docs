@@ -2,7 +2,9 @@
 
 # Interface: ComboboxSearchQuery
 
-Defined in: [src/ui/editors/combobox.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L14)
+Defined in: [src/ui/editors/combobox.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L27)
+
+Query passed to a combobox search callback.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/combobox.ts:14](https://github.com/serenity-is/seren
 
 > `optional` **checkMore**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L19)
+Defined in: [src/ui/editors/combobox.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L37)
+
+Whether to check for more results.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/editors/combobox.ts:19](https://github.com/serenity-is/seren
 
 > `optional` **idList**: `string`[]
 
-Defined in: [src/ui/editors/combobox.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L16)
+Defined in: [src/ui/editors/combobox.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L31)
+
+List of ids to initialize the selection from.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/editors/combobox.ts:16](https://github.com/serenity-is/seren
 
 > `optional` **initSelection**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L20)
+Defined in: [src/ui/editors/combobox.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L39)
+
+Whether this is an initial selection query.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/editors/combobox.ts:20](https://github.com/serenity-is/seren
 
 > `optional` **searchTerm**: `string`
 
-Defined in: [src/ui/editors/combobox.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L15)
+Defined in: [src/ui/editors/combobox.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L29)
+
+The search term.
 
 ***
 
@@ -42,7 +52,9 @@ Defined in: [src/ui/editors/combobox.ts:15](https://github.com/serenity-is/seren
 
 > `optional` **signal**: `AbortSignal`
 
-Defined in: [src/ui/editors/combobox.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L21)
+Defined in: [src/ui/editors/combobox.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L41)
+
+Abort signal for cancelling the query.
 
 ***
 
@@ -50,7 +62,9 @@ Defined in: [src/ui/editors/combobox.ts:21](https://github.com/serenity-is/seren
 
 > `optional` **skip**: `number`
 
-Defined in: [src/ui/editors/combobox.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L17)
+Defined in: [src/ui/editors/combobox.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L33)
+
+Number of items to skip.
 
 ***
 
@@ -58,4 +72,6 @@ Defined in: [src/ui/editors/combobox.ts:17](https://github.com/serenity-is/seren
 
 > `optional` **take**: `number`
 
-Defined in: [src/ui/editors/combobox.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L18)
+Defined in: [src/ui/editors/combobox.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L35)
+
+Number of items to take.

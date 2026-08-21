@@ -4,9 +4,11 @@
 
 > `const` **alert**: (`message`, `options?`) => `Partial`\<[`Dialog`](../classes/Dialog.md)\> = `alertDialog`
 
-Defined in: [src/compat/dialogs-compat.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L4)
+Defined in: [src/compat/dialogs-compat.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/dialogs-compat.ts#L8)
 
-Displays an alert dialog
+Legacy `Q.alert` alias.
+
+Displays a modal alert dialog with a single OK button.
 
 ## Parameters
 
@@ -14,28 +16,34 @@ Displays an alert dialog
 
 [`RenderableContent`](../type-aliases/RenderableContent.md)
 
-The message to display
+Text or renderable content shown in the dialog body.
 
 ### options?
 
 [`MessageDialogOptions`](../interfaces/MessageDialogOptions.md)
 
-Additional options.
+Additional [MessageDialogOptions](../interfaces/MessageDialogOptions.md).
 
 ## Returns
 
 `Partial`\<[`Dialog`](../classes/Dialog.md)\>
 
-## See
+A [Dialog](../classes/Dialog.md) handle (partial when falling back to the native `alert()`), whose `result` is `"ok"`.
 
-AlertOptions
+## Remarks
+
+Falls back to the native `alert()` when neither Bootstrap modal nor jQuery UI dialog is available.
 
 ## Example
 
 ```ts
-alertDialog("An error occured!"); }
+alertDialog("An error occurred!");
 ```
 
 ## Deprecated
 
-use alertDialog
+Use [alertDialog](../functions/alertDialog.md) from `"@serenity-is/corelib"` instead. This re-export is retained for compat with code that imports `Q.alert` / `Serenity.alert`.
+
+## See
+
+[alertDialog](../functions/alertDialog.md)

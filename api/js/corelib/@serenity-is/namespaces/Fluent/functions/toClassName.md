@@ -4,15 +4,15 @@
 
 > **toClassName**(`value`): `string`
 
-Defined in: [src/base/fluent.ts:597](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L597)
+Defined in: [src/base/fluent.ts:764](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L764)
 
-Converts the given class value or an array of class values to a CSS class name. Any falsy value is ignored.
+Normalizes a class value (string, boolean flag, or nested array) to a space-separated class string.
 
 ## Parameters
 
 ### value
 
-The class or classes. It can be a string, boolean, or an array of strings or booleans.
+Value to normalize. Non-string primitives are stringified; booleans and `null` / `undefined` yield `""`; arrays are recursively flattened and falsy entries dropped.
 
 `string` | `boolean` | (`string` \| `boolean`)[]
 
@@ -20,4 +20,4 @@ The class or classes. It can be a string, boolean, or an array of strings or boo
 
 `string`
 
-Class name string
+The concatenated class string (may be empty).

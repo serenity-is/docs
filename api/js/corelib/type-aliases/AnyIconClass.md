@@ -4,6 +4,7 @@
 
 > **AnyIconClass** = [`KnownIconClass`](KnownIconClass.md) \| `string` & `object`
 
-Defined in: [src/base/icons.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L63)
+Defined in: [src/base/icons.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L80)
 
-Represents a type that can be either a known icon class or a string.
+Icon class type that accepts either a [KnownIconClass](KnownIconClass.md) (with completions) or any custom string class.
+The `(string & {})` trick preserves autocomplete for known values while still allowing arbitrary classes.

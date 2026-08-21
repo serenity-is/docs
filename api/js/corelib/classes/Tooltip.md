@@ -2,7 +2,10 @@
 
 # Class: Tooltip
 
-Defined in: [src/base/tooltip.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L10)
+Defined in: [src/base/tooltip.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L19)
+
+Thin wrapper around Bootstrap / jQuery tooltip plugins with a fallback to the native
+`title` attribute. Handles instance reuse, cleanup, and title updates.
 
 ## Constructors
 
@@ -10,11 +13,15 @@ Defined in: [src/base/tooltip.ts:10](https://github.com/serenity-is/serenity/blo
 
 > **new Tooltip**(`el`, `opt?`): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L13)
+Defined in: [src/base/tooltip.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L29)
+
+Creates or wraps a tooltip for an element.
 
 #### Parameters
 
 ##### el
+
+Target element or array-like collection (first element is used).
 
 `HTMLElement` | `ArrayLike`\<`HTMLElement`\>
 
@@ -22,9 +29,13 @@ Defined in: [src/base/tooltip.ts:13](https://github.com/serenity-is/serenity/blo
 
 [`TooltipOptions`](../interfaces/TooltipOptions.md)
 
+Tooltip options; if omitted defaults are applied.
+
 #### Returns
 
 `Tooltip`
+
+A `Tooltip` wrapper instance.
 
 ## Properties
 
@@ -32,7 +43,9 @@ Defined in: [src/base/tooltip.ts:13](https://github.com/serenity-is/serenity/blo
 
 > `static` **defaults**: [`TooltipOptions`](../interfaces/TooltipOptions.md)
 
-Defined in: [src/base/tooltip.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L37)
+Defined in: [src/base/tooltip.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L60)
+
+Default options applied when none are supplied.
 
 ## Accessors
 
@@ -42,11 +55,15 @@ Defined in: [src/base/tooltip.ts:37](https://github.com/serenity-is/serenity/blo
 
 > **get** `static` **isAvailable**(): `boolean`
 
-Defined in: [src/base/tooltip.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L80)
+Defined in: [src/base/tooltip.ts:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L123)
+
+Whether a tooltip implementation (Bootstrap or jQuery) is available in the current environment.
 
 ##### Returns
 
 `boolean`
+
+`true` if Bootstrap Tooltip or jQuery tooltip is available, otherwise `false`.
 
 ## Methods
 
@@ -54,13 +71,17 @@ Defined in: [src/base/tooltip.ts:80](https://github.com/serenity-is/serenity/blo
 
 > **delayedDispose**(`delay`): `void`
 
-Defined in: [src/base/tooltip.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L51)
+Defined in: [src/base/tooltip.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L81)
+
+Disposes the tooltip after a delay.
 
 #### Parameters
 
 ##### delay
 
 `number` = `5000`
+
+Delay in milliseconds before disposing. Defaults to `5000`.
 
 #### Returns
 
@@ -72,13 +93,17 @@ Defined in: [src/base/tooltip.ts:51](https://github.com/serenity-is/serenity/blo
 
 > **delayedHide**(`delay`): `void`
 
-Defined in: [src/base/tooltip.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L55)
+Defined in: [src/base/tooltip.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L89)
+
+Hides the tooltip after a delay.
 
 #### Parameters
 
 ##### delay
 
 `number` = `5000`
+
+Delay in milliseconds before hiding. Defaults to `5000`.
 
 #### Returns
 
@@ -90,7 +115,9 @@ Defined in: [src/base/tooltip.ts:55](https://github.com/serenity-is/serenity/blo
 
 > **dispose**(): `void`
 
-Defined in: [src/base/tooltip.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L41)
+Defined in: [src/base/tooltip.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L67)
+
+Disposes the underlying tooltip instance and clears internal Bootstrap state.
 
 #### Returns
 
@@ -102,11 +129,15 @@ Defined in: [src/base/tooltip.ts:41](https://github.com/serenity-is/serenity/blo
 
 > **hide**(): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L115)
+Defined in: [src/base/tooltip.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L172)
+
+Hides the tooltip.
 
 #### Returns
 
 `Tooltip`
+
+This instance for chaining.
 
 ***
 
@@ -114,7 +145,9 @@ Defined in: [src/base/tooltip.ts:115](https://github.com/serenity-is/serenity/bl
 
 > **setTitle**(`value`): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L85)
+Defined in: [src/base/tooltip.ts:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L133)
+
+Updates the tooltip title text and synchronizes it with the underlying implementation.
 
 #### Parameters
 
@@ -122,9 +155,13 @@ Defined in: [src/base/tooltip.ts:85](https://github.com/serenity-is/serenity/blo
 
 `string`
 
+New title text.
+
 #### Returns
 
 `Tooltip`
+
+This instance for chaining.
 
 ***
 
@@ -132,11 +169,15 @@ Defined in: [src/base/tooltip.ts:85](https://github.com/serenity-is/serenity/blo
 
 > **show**(): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L119)
+Defined in: [src/base/tooltip.ts:180](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L180)
+
+Shows the tooltip.
 
 #### Returns
 
 `Tooltip`
+
+This instance for chaining.
 
 ***
 
@@ -144,7 +185,9 @@ Defined in: [src/base/tooltip.ts:119](https://github.com/serenity-is/serenity/bl
 
 > **toggle**(`show`): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L103)
+Defined in: [src/base/tooltip.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L156)
+
+Shows or hides the tooltip.
 
 #### Parameters
 
@@ -152,9 +195,13 @@ Defined in: [src/base/tooltip.ts:103](https://github.com/serenity-is/serenity/bl
 
 `boolean`
 
+`true` to show, `false` to hide.
+
 #### Returns
 
 `Tooltip`
+
+This instance for chaining.
 
 ***
 
@@ -162,14 +209,20 @@ Defined in: [src/base/tooltip.ts:103](https://github.com/serenity-is/serenity/bl
 
 > `static` **getInstance**(`el`): `Tooltip`
 
-Defined in: [src/base/tooltip.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L72)
+Defined in: [src/base/tooltip.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L111)
+
+Gets the existing tooltip wrapper for an element, if any.
 
 #### Parameters
 
 ##### el
+
+Target element or array-like collection.
 
 `HTMLElement` | `ArrayLike`\<`HTMLElement`\>
 
 #### Returns
 
 `Tooltip`
+
+A `Tooltip` wrapper around the existing instance, or `null` if none exists.

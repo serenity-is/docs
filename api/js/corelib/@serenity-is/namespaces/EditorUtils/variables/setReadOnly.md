@@ -4,7 +4,7 @@
 
 > `const` **setReadOnly**: (`elements`, `value`) => `void` = `setReadonly`
 
-Defined in: [src/ui/editors/editorutils.tsx:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.tsx#L188)
+Defined in: [src/ui/editors/editorutils.tsx:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.tsx#L218)
 
 Legacy alias for setReadonly
 

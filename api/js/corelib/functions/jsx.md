@@ -6,15 +6,21 @@
 
 > **jsx**\<`THtmlTag`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [../domwise/dist/index.d.ts:2414](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2414)
+Defined in: [../domwise/dist/index.d.ts:2739](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2739)
 
-Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
-Supports HTML elements, SVG elements, MathML elements, and custom components.
-When the tag is a string, it creates a DOM element; when it is a function/class,
-it instantiates a component.
+Creates a JSX element. This is the automatic JSX factory used by the
+compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements
+and custom function or class components.
 
-Unlike `createElement` (or `h`), which takes children as additional arguments,
-`jsx` expects children as part of the `props` object (`props.children`).
+When `type` is a string, a real DOM element is created (with namespace
+auto-detection for SVG/MathML), props are assigned via `assignProps`, and
+children are appended. `select[value]` signals are resolved and applied.
+When `type` is a function/class, it is invoked or instantiated as a
+component and the resulting node is returned. `defaultProps` are respected
+and `ref` is forwarded via [setRef](setRef.md).
+
+Unlike [createElement](createElement.md) / `h`, children are expected inside `props`
+(`props.children`) rather than as rest arguments.
 
 ### Type Parameters
 
@@ -32,33 +38,39 @@ Unlike `createElement` (or `h`), which takes children as additional arguments,
 
 `THtmlTag`
 
-The HTML/SVG/MathML tag name or a component function/class.
+HTML/SVG/MathML tag name or a component function/class.
 
 #### props?
 
 [`HTMLElementTags`](../interfaces/HTMLElementTags.md)\[`THtmlTag`\] & `Record`\<`` `data-${string}` ``, `string` \| `number`\>
 
-The attributes/props for the element. Children are passed via `props.children`.
+Attributes/props for the element. Children are read from `props.children`; may be `null`.
 
 ### Returns
 
 `TElement`
 
-The created JSX element (DOM node).
+The created DOM node (or component render result).
 
 ## Call Signature
 
 > **jsx**\<`TSVGTag`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [../domwise/dist/index.d.ts:2415](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2415)
+Defined in: [../domwise/dist/index.d.ts:2740](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2740)
 
-Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
-Supports HTML elements, SVG elements, MathML elements, and custom components.
-When the tag is a string, it creates a DOM element; when it is a function/class,
-it instantiates a component.
+Creates a JSX element. This is the automatic JSX factory used by the
+compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements
+and custom function or class components.
 
-Unlike `createElement` (or `h`), which takes children as additional arguments,
-`jsx` expects children as part of the `props` object (`props.children`).
+When `type` is a string, a real DOM element is created (with namespace
+auto-detection for SVG/MathML), props are assigned via `assignProps`, and
+children are appended. `select[value]` signals are resolved and applied.
+When `type` is a function/class, it is invoked or instantiated as a
+component and the resulting node is returned. `defaultProps` are respected
+and `ref` is forwarded via [setRef](setRef.md).
+
+Unlike [createElement](createElement.md) / `h`, children are expected inside `props`
+(`props.children`) rather than as rest arguments.
 
 ### Type Parameters
 
@@ -76,33 +88,39 @@ Unlike `createElement` (or `h`), which takes children as additional arguments,
 
 `TSVGTag`
 
-The HTML/SVG/MathML tag name or a component function/class.
+HTML/SVG/MathML tag name or a component function/class.
 
 #### props?
 
 [`SVGElementTags`](../interfaces/SVGElementTags.md)\[`TSVGTag`\] & `Record`\<`` `data-${string}` ``, `string` \| `number`\>
 
-The attributes/props for the element. Children are passed via `props.children`.
+Attributes/props for the element. Children are read from `props.children`; may be `null`.
 
 ### Returns
 
 `TElement`
 
-The created JSX element (DOM node).
+The created DOM node (or component render result).
 
 ## Call Signature
 
 > **jsx**(`type`, `props?`): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [../domwise/dist/index.d.ts:2416](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2416)
+Defined in: [../domwise/dist/index.d.ts:2741](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2741)
 
-Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
-Supports HTML elements, SVG elements, MathML elements, and custom components.
-When the tag is a string, it creates a DOM element; when it is a function/class,
-it instantiates a component.
+Creates a JSX element. This is the automatic JSX factory used by the
+compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements
+and custom function or class components.
 
-Unlike `createElement` (or `h`), which takes children as additional arguments,
-`jsx` expects children as part of the `props` object (`props.children`).
+When `type` is a string, a real DOM element is created (with namespace
+auto-detection for SVG/MathML), props are assigned via `assignProps`, and
+children are appended. `select[value]` signals are resolved and applied.
+When `type` is a function/class, it is invoked or instantiated as a
+component and the resulting node is returned. `defaultProps` are respected
+and `ref` is forwarded via [setRef](setRef.md).
+
+Unlike [createElement](createElement.md) / `h`, children are expected inside `props`
+(`props.children`) rather than as rest arguments.
 
 ### Parameters
 
@@ -110,33 +128,39 @@ Unlike `createElement` (or `h`), which takes children as additional arguments,
 
 `string`
 
-The HTML/SVG/MathML tag name or a component function/class.
+HTML/SVG/MathML tag name or a component function/class.
 
 #### props?
 
 [`ElementAttributes`](../interfaces/ElementAttributes.md)\<[`JSXElement`](../type-aliases/JSXElement.md)\> & `Record`\<`` `data-${string}` ``, `string` \| `number`\>
 
-The attributes/props for the element. Children are passed via `props.children`.
+Attributes/props for the element. Children are read from `props.children`; may be `null`.
 
 ### Returns
 
 [`JSXElement`](../type-aliases/JSXElement.md)
 
-The created JSX element (DOM node).
+The created DOM node (or component render result).
 
 ## Call Signature
 
 > **jsx**\<`P`, `TElement`\>(`type`, `props?`): `TElement`
 
-Defined in: [../domwise/dist/index.d.ts:2417](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2417)
+Defined in: [../domwise/dist/index.d.ts:2742](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2742)
 
-Creates a JSX element. Acts as the JSX factory function (used as `jsx()` and `jsxs()`).
-Supports HTML elements, SVG elements, MathML elements, and custom components.
-When the tag is a string, it creates a DOM element; when it is a function/class,
-it instantiates a component.
+Creates a JSX element. This is the automatic JSX factory used by the
+compiler (imported as `jsx` and `jsxs`). Handles HTML/SVG/MathML elements
+and custom function or class components.
 
-Unlike `createElement` (or `h`), which takes children as additional arguments,
-`jsx` expects children as part of the `props` object (`props.children`).
+When `type` is a string, a real DOM element is created (with namespace
+auto-detection for SVG/MathML), props are assigned via `assignProps`, and
+children are appended. `select[value]` signals are resolved and applied.
+When `type` is a function/class, it is invoked or instantiated as a
+component and the resulting node is returned. `defaultProps` are respected
+and `ref` is forwarded via [setRef](setRef.md).
+
+Unlike [createElement](createElement.md) / `h`, children are expected inside `props`
+(`props.children`) rather than as rest arguments.
 
 ### Type Parameters
 
@@ -154,16 +178,16 @@ Unlike `createElement` (or `h`), which takes children as additional arguments,
 
 [`ComponentType`](../type-aliases/ComponentType.md)\<`P`, `TElement`\>
 
-The HTML/SVG/MathML tag name or a component function/class.
+HTML/SVG/MathML tag name or a component function/class.
 
 #### props?
 
 `P` & `object`
 
-The attributes/props for the element. Children are passed via `props.children`.
+Attributes/props for the element. Children are read from `props.children`; may be `null`.
 
 ### Returns
 
 `TElement`
 
-The created JSX element (DOM node).
+The created DOM node (or component render result).

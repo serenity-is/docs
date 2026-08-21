@@ -2,7 +2,9 @@
 
 # Class: FileDownloadFormatter
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L7)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L8)
+
+Renders a DB file path as a download link with an icon and optional original name.
 
 ## Implements
 
@@ -15,23 +17,33 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:7](https://github.com/s
 
 > **new FileDownloadFormatter**(`props`): `FileDownloadFormatter`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L10)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L18)
+
+Creates a new FileDownloadFormatter.
 
 #### Parameters
 
 ##### props
 
+Formatter options.
+
 ###### displayFormat?
 
 `string`
+
+Format string for link text (default `"{0}"`).
 
 ###### iconClass?
 
 `string`
 
+Icon class for the download icon.
+
 ###### originalNameProperty?
 
 `string`
+
+Field holding the original file name.
 
 #### Returns
 
@@ -43,7 +55,9 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:10](https://github.com/
 
 > `readonly` **props**: `object` = `{}`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L10)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L18)
+
+Formatter options.
 
 #### displayFormat?
 
@@ -63,7 +77,7 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:10](https://github.com/
 
 > `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L8)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L9)
 
 #### Implementation of
 
@@ -77,23 +91,31 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:8](https://github.com/s
 
 > **get** **displayFormat**(): `string`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L45)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L68)
+
+Gets the format string for link text.
 
 ##### Returns
 
 `string`
 
+The display format.
+
 #### Set Signature
 
 > **set** **displayFormat**(`value`): `void`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L46)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L73)
+
+Sets the format string for link text.
 
 ##### Parameters
 
 ###### value
 
 `string`
+
+The display format string.
 
 ##### Returns
 
@@ -107,23 +129,31 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:46](https://github.com/
 
 > **get** **iconClass**(): `string`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L51)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L84)
+
+Gets the icon class for the download icon.
 
 ##### Returns
 
 `string`
 
+The icon class.
+
 #### Set Signature
 
 > **set** **iconClass**(`value`): `void`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L52)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L89)
+
+Sets the icon class for the download icon.
 
 ##### Parameters
 
 ###### value
 
 `string`
+
+The icon class.
 
 ##### Returns
 
@@ -137,23 +167,31 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:52](https://github.com/
 
 > **get** **originalNameProperty**(): `string`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L48)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L76)
+
+Gets the field holding the original file name.
 
 ##### Returns
 
 `string`
 
+The original name property.
+
 #### Set Signature
 
 > **set** **originalNameProperty**(`value`): `void`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L49)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L81)
+
+Sets the field holding the original file name.
 
 ##### Parameters
 
 ###### value
 
 `string`
+
+The original name property.
 
 ##### Returns
 
@@ -165,7 +203,9 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:49](https://github.com/
 
 > **format**(`ctx`): `FormatterResult`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L14)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L27)
+
+Formats the stored file path as a download link.
 
 #### Parameters
 
@@ -173,9 +213,13 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:14](https://github.com/
 
 `FormatterContext`
 
+Formatter context containing the cell value and row item.
+
 #### Returns
 
 `FormatterResult`
+
+Anchor element markup or an empty string if the value is empty.
 
 #### Implementation of
 
@@ -187,13 +231,17 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:14](https://github.com/
 
 > **initializeColumn**(`column`): `void`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L37)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L59)
+
+Declares `originalNameProperty` as a referenced field so it is fetched for formatting.
 
 #### Parameters
 
 ##### column
 
 `Column`
+
+Column being initialized.
 
 #### Returns
 
@@ -209,7 +257,9 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:37](https://github.com/
 
 > `static` **dbFileUrl**(`filename`): `string`
 
-Defined in: [src/ui/formatters/filedownloadformatter.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L32)
+Defined in: [src/ui/formatters/filedownloadformatter.tsx:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/filedownloadformatter.tsx#L50)
+
+Builds the download URL for a temp/upload file.
 
 #### Parameters
 
@@ -217,6 +267,10 @@ Defined in: [src/ui/formatters/filedownloadformatter.tsx:32](https://github.com/
 
 `string`
 
+Stored file path.
+
 #### Returns
 
 `string`
+
+Resolved URL under `~/upload/`.

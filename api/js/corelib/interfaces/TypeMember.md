@@ -2,9 +2,10 @@
 
 # Interface: TypeMember
 
-Defined in: [src/compat/system-compat.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L77)
+Defined in: [src/compat/system-compat.ts:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L105)
 
-Type member information, preserved for compatibility as used by legacy option decorator
+Describes a single type member collected via the legacy [addTypeMember](../functions/addTypeMember.md) / option-decorator mechanism.
+Preserved for backward compatibility; prefer Symbol.metadata / `Symbol.typeInfo` where possible.
 
 ## Properties
 
@@ -12,7 +13,9 @@ Type member information, preserved for compatibility as used by legacy option de
 
 > `optional` **attr**: `any`[]
 
-Defined in: [src/compat/system-compat.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L80)
+Defined in: [src/compat/system-compat.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L111)
+
+Optional attribute/metadata objects attached to the member.
 
 ***
 
@@ -20,7 +23,9 @@ Defined in: [src/compat/system-compat.ts:80](https://github.com/serenity-is/sere
 
 > `optional` **getter**: `string`
 
-Defined in: [src/compat/system-compat.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L81)
+Defined in: [src/compat/system-compat.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L113)
+
+Optional getter method name for property members.
 
 ***
 
@@ -28,7 +33,9 @@ Defined in: [src/compat/system-compat.ts:81](https://github.com/serenity-is/sere
 
 > **kind**: [`TypeMemberKind`](../enumerations/TypeMemberKind.md)
 
-Defined in: [src/compat/system-compat.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L79)
+Defined in: [src/compat/system-compat.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L109)
+
+Bitmask indicating the member kind (field vs. property).
 
 ***
 
@@ -36,7 +43,9 @@ Defined in: [src/compat/system-compat.ts:79](https://github.com/serenity-is/sere
 
 > **name**: `string`
 
-Defined in: [src/compat/system-compat.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L78)
+Defined in: [src/compat/system-compat.ts:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L107)
+
+Member name (field or property name).
 
 ***
 
@@ -44,4 +53,6 @@ Defined in: [src/compat/system-compat.ts:78](https://github.com/serenity-is/sere
 
 > `optional` **setter**: `string`
 
-Defined in: [src/compat/system-compat.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L82)
+Defined in: [src/compat/system-compat.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L115)
+
+Optional setter method name for property members.

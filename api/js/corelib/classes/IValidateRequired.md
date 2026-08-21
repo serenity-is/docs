@@ -2,7 +2,9 @@
 
 # Abstract Class: IValidateRequired
 
-Defined in: [src/interfaces/ivalidaterequired.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L3)
+Defined in: [src/interfaces/ivalidaterequired.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L6)
+
+Type token for editors that support a required-field flag.
 
 ## Constructors
 
@@ -20,7 +22,7 @@ Defined in: [src/interfaces/ivalidaterequired.ts:3](https://github.com/serenity-
 
 > `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/interfaces/ivalidaterequired.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L4)
+Defined in: [src/interfaces/ivalidaterequired.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L7)
 
 ## Methods
 
@@ -28,11 +30,15 @@ Defined in: [src/interfaces/ivalidaterequired.ts:4](https://github.com/serenity-
 
 > **get\_required**(): `boolean`
 
-Defined in: [src/interfaces/ivalidaterequired.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L8)
+Defined in: [src/interfaces/ivalidaterequired.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L12)
+
+Gets whether a value is required.
 
 #### Returns
 
 `boolean`
+
+True if required.
 
 ***
 
@@ -40,13 +46,17 @@ Defined in: [src/interfaces/ivalidaterequired.ts:8](https://github.com/serenity-
 
 > **set\_required**(`value`): `void`
 
-Defined in: [src/interfaces/ivalidaterequired.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L9)
+Defined in: [src/interfaces/ivalidaterequired.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/ivalidaterequired.ts#L14)
+
+Sets whether a value is required.
 
 #### Parameters
 
 ##### value
 
 `boolean`
+
+True to require a value.
 
 #### Returns
 

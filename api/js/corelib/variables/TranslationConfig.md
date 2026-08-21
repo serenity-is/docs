@@ -4,9 +4,10 @@
 
 > `const` **TranslationConfig**: `object`
 
-Defined in: [src/base/localtext.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L175)
+Defined in: [src/base/localtext.ts:190](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L190)
 
-Configuration for translation services.
+Global configuration hooks for the optional translation service integration.
+Assign these before invoking translation features in the UI.
 
 ## Type Declaration
 

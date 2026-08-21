@@ -2,6 +2,9 @@
 
 # TabsExtensions
 
+Helper functions for working with tab controls, supporting both jQuery UI
+tabs and Bootstrap-style tabs.
+
 ## Functions
 
 - [activeTabKey](functions/activeTabKey.md)

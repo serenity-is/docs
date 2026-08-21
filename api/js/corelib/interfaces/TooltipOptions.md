@@ -2,7 +2,9 @@
 
 # Interface: TooltipOptions
 
-Defined in: [src/base/tooltip.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L5)
+Defined in: [src/base/tooltip.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L8)
+
+Options for initializing a Bootstrap/jQuery tooltip.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/base/tooltip.ts:5](https://github.com/serenity-is/serenity/blob
 
 > `optional` **title**: `string`
 
-Defined in: [src/base/tooltip.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L6)
+Defined in: [src/base/tooltip.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L10)
+
+Text shown inside the tooltip.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/base/tooltip.ts:6](https://github.com/serenity-is/serenity/blob
 
 > `optional` **trigger**: `string`
 
-Defined in: [src/base/tooltip.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L7)
+Defined in: [src/base/tooltip.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/tooltip.ts#L12)
+
+Trigger events (e.g. `"hover focus"`, `"click"`). Defaults vary by implementation.

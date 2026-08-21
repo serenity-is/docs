@@ -2,9 +2,27 @@
 
 # Class: CriteriaBuilder
 
-Defined in: [src/base/criteria.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L4)
+Defined in: [src/base/criteria.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L15)
 
-CriteriaBuilder is a class that allows to build unary or binary criteria with completion support.
+Fluent builder for Serenity criteria expressions with completion support.
+
+## Remarks
+
+Extends `Array` so an instance itself acts as a field-reference token (e.g. `["Amount"]`).
+Create instances via [Criteria](../functions/Criteria.md)`("FieldName")` rather than `new CriteriaBuilder()`.
+Each method returns a Serenity criteria tuple/array that can be combined with
+[Criteria.and](../@serenity-is/namespaces/Criteria/functions/and.md), [Criteria.or](../@serenity-is/namespaces/Criteria/functions/or.md), [Criteria.join](../@serenity-is/namespaces/Criteria/functions/join.md), or the
+[parseCriteria](../functions/parseCriteria.md) parser. `bw` stands for "between" (inclusive).
+
+## Examples
+
+```ts
+Criteria("Age").ge(18); // [["Age"], ">=", 18]
+```
+
+```ts
+Criteria("Status").in([1, 2, 3]); // [["Status"], "in", [[1, 2, 3]]]
+```
 
 ## Extends
 
@@ -42,9 +60,9 @@ Defined in: C:/Users/volka/AppData/Roaming/npm/node\_modules/typedoc/node\_modul
 
 > **bw**(`fromInclusive`, `toInclusive`): `any`[]
 
-Defined in: [src/base/criteria.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L10)
+Defined in: [src/base/criteria.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L25)
 
-Creates a between criteria.
+Creates a BETWEEN (inclusive) criteria: `field >= from AND field <= to`.
 
 #### Parameters
 
@@ -52,17 +70,25 @@ Creates a between criteria.
 
 `any`
 
-from value
+Lower bound (inclusive).
 
 ##### toInclusive
 
 `any`
 
-to value
+Upper bound (inclusive).
 
 #### Returns
 
 `any`[]
+
+Composite criteria `[[field, ">=", from], "and", [field, "<=", to]]`.
+
+#### Example
+
+```ts
+Criteria("Amount").bw(10, 20);
+```
 
 ***
 
@@ -70,9 +96,9 @@ to value
 
 > **contains**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L18)
+Defined in: [src/base/criteria.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L37)
 
-Creates a contains criteria
+Creates a `LIKE '%value%'` (contains) criteria.
 
 #### Parameters
 
@@ -80,11 +106,19 @@ Creates a contains criteria
 
 `string`
 
-contains value
+Substring to search for. Wrapped with `%` on both sides.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "like", "%value%"]`.
+
+#### Example
+
+```ts
+Criteria("Name").contains("ser"); // [["Name"], "like", "%ser%"]
+```
 
 ***
 
@@ -92,9 +126,9 @@ contains value
 
 > **endsWith**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L26)
+Defined in: [src/base/criteria.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L49)
 
-Creates a endsWith criteria
+Creates a `LIKE '%value'` (ends-with) criteria.
 
 #### Parameters
 
@@ -102,11 +136,19 @@ Creates a endsWith criteria
 
 `string`
 
-endsWith value
+Suffix to match. Prefixed with `%`.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "like", "%value"]`.
+
+#### Example
+
+```ts
+Criteria("Email").endsWith("@example.com");
+```
 
 ***
 
@@ -114,9 +156,9 @@ endsWith value
 
 > **eq**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L34)
+Defined in: [src/base/criteria.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L61)
 
-Creates an equal (=) criteria
+Creates an equality (`=`) criteria.
 
 #### Parameters
 
@@ -124,11 +166,19 @@ Creates an equal (=) criteria
 
 `any`
 
-equal value
+Value to compare for equality.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "=", value]`.
+
+#### Example
+
+```ts
+Criteria("IsActive").eq(true);
+```
 
 ***
 
@@ -136,9 +186,9 @@ equal value
 
 > **ge**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L50)
+Defined in: [src/base/criteria.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L81)
 
-Creates a greater than or equal criteria
+Creates a greater-than-or-equal (`>=`) criteria.
 
 #### Parameters
 
@@ -146,11 +196,13 @@ Creates a greater than or equal criteria
 
 `any`
 
-greater than or equal value
+Lower inclusive bound.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, ">=", value]`.
 
 ***
 
@@ -158,9 +210,9 @@ greater than or equal value
 
 > **gt**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L42)
+Defined in: [src/base/criteria.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L71)
 
-Creates a greater than criteria
+Creates a greater-than (`>`) criteria.
 
 #### Parameters
 
@@ -168,11 +220,13 @@ Creates a greater than criteria
 
 `any`
 
-greater than value
+Lower exclusive bound.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, ">", value]`.
 
 ***
 
@@ -180,9 +234,9 @@ greater than value
 
 > **in**(`values`): `any`[]
 
-Defined in: [src/base/criteria.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L58)
+Defined in: [src/base/criteria.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L93)
 
-Creates a in criteria
+Creates an `IN` criteria.
 
 #### Parameters
 
@@ -190,11 +244,19 @@ Creates a in criteria
 
 `any`[]
 
-in values
+Array of allowed values. Wrapped as `[values]` per Serenity wire format.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "in", [values]]`.
+
+#### Example
+
+```ts
+Criteria("Status").in([1, 2]); // [["Status"], "in", [[1, 2]]]
+```
 
 ***
 
@@ -202,13 +264,15 @@ in values
 
 > **isNotNull**(): `any`[]
 
-Defined in: [src/base/criteria.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L72)
+Defined in: [src/base/criteria.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L111)
 
-Creates a IS NOT NULL criteria
+Creates an `IS NOT NULL` criteria.
 
 #### Returns
 
 `any`[]
+
+Criteria `["is not null", field]`.
 
 ***
 
@@ -216,13 +280,15 @@ Creates a IS NOT NULL criteria
 
 > **isNull**(): `any`[]
 
-Defined in: [src/base/criteria.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L65)
+Defined in: [src/base/criteria.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L102)
 
-Creates a IS NULL criteria
+Creates an `IS NULL` criteria.
 
 #### Returns
 
 `any`[]
+
+Criteria `["is null", field]`.
 
 ***
 
@@ -230,9 +296,9 @@ Creates a IS NULL criteria
 
 > **le**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L80)
+Defined in: [src/base/criteria.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L121)
 
-Creates a less than or equal to criteria
+Creates a less-than-or-equal (`<=`) criteria.
 
 #### Parameters
 
@@ -240,11 +306,13 @@ Creates a less than or equal to criteria
 
 `any`
 
-less than or equal to value
+Upper inclusive bound.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "<=", value]`.
 
 ***
 
@@ -252,9 +320,9 @@ less than or equal to value
 
 > **like**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L104)
+Defined in: [src/base/criteria.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L153)
 
-Creates a LIKE criteria
+Creates a `LIKE` criteria with the exact pattern provided.
 
 #### Parameters
 
@@ -262,11 +330,19 @@ Creates a LIKE criteria
 
 `any`
 
-like value
+SQL LIKE pattern (use `%` / `_` wildcards as needed).
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "like", value]`.
+
+#### Example
+
+```ts
+Criteria("Name").like("A%");
+```
 
 ***
 
@@ -274,9 +350,9 @@ like value
 
 > **lt**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L88)
+Defined in: [src/base/criteria.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L131)
 
-Creates a less than criteria
+Creates a less-than (`<`) criteria.
 
 #### Parameters
 
@@ -284,11 +360,13 @@ Creates a less than criteria
 
 `any`
 
-less than value
+Upper exclusive bound.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "<", value]`.
 
 ***
 
@@ -296,9 +374,9 @@ less than value
 
 > **ne**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L96)
+Defined in: [src/base/criteria.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L141)
 
-Creates a not equal criteria
+Creates a not-equal (`!=`) criteria.
 
 #### Parameters
 
@@ -306,11 +384,13 @@ Creates a not equal criteria
 
 `any`
 
-not equal value
+Value that the field must not equal.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "!=", value]`.
 
 ***
 
@@ -318,9 +398,9 @@ not equal value
 
 > **notIn**(`values`): `any`[]
 
-Defined in: [src/base/criteria.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L120)
+Defined in: [src/base/criteria.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L175)
 
-Creates a NOT IN criteria
+Creates a `NOT IN` criteria.
 
 #### Parameters
 
@@ -328,11 +408,13 @@ Creates a NOT IN criteria
 
 `any`[]
 
-array of NOT IN values
+Array of disallowed values. Wrapped as `[values]`.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "not in", [values]]`.
 
 ***
 
@@ -340,9 +422,9 @@ array of NOT IN values
 
 > **notLike**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L128)
+Defined in: [src/base/criteria.ts:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L185)
 
-Creates a NOT LIKE criteria
+Creates a `NOT LIKE` criteria.
 
 #### Parameters
 
@@ -350,11 +432,13 @@ Creates a NOT LIKE criteria
 
 `any`
 
-not like value
+SQL LIKE pattern that the field must not match.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "not like", value]`.
 
 ***
 
@@ -362,9 +446,9 @@ not like value
 
 > **startsWith**(`value`): `any`[]
 
-Defined in: [src/base/criteria.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L112)
+Defined in: [src/base/criteria.ts:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L165)
 
-Creates a STARTS WITH criteria
+Creates a `LIKE 'value%'` (starts-with) criteria.
 
 #### Parameters
 
@@ -372,8 +456,16 @@ Creates a STARTS WITH criteria
 
 `string`
 
-startsWith value
+Prefix to match. Suffixed with `%`.
 
 #### Returns
 
 `any`[]
+
+Criteria `[field, "like", "value%"]`.
+
+#### Example
+
+```ts
+Criteria("Name").startsWith("Jo"); // [["Name"], "like", "Jo%"]
+```

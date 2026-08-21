@@ -4,11 +4,16 @@
 
 > **PropertyTabs**(`props`): `DocumentFragment`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:274](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L274)
+Defined in: [src/ui/widgets/propertygrid.tsx:346](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L346)
+
+Renders the full tabbed layout for property items that declare a `tab`,
+grouping items without a tab into a leading untabbed section.
 
 ## Parameters
 
 ### props
+
+Tabs rendering props.
 
 #### container?
 
@@ -37,3 +42,6 @@ Defined in: [src/ui/widgets/propertygrid.tsx:274](https://github.com/serenity-is
 ## Returns
 
 `DocumentFragment`
+
+A document fragment containing the tabs, or null when a container
+  was provided and the content was appended directly to it.

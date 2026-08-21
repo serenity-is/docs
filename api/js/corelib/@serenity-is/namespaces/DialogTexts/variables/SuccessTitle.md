@@ -4,6 +4,6 @@
 
 > `const` **SuccessTitle**: `string`
 
-Defined in: [src/base/dialogs.tsx:755](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L755)
+Defined in: [src/base/dialogs.tsx:844](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L844)
 
 Title for success dialogs.

@@ -4,7 +4,9 @@
 
 > **setCollapsed**\<`TItem`\>(`items`, `collapsed`): `void`
 
-Defined in: [src/ui/helpers/slicktreehelper.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L32)
+Defined in: [src/ui/helpers/slicktreehelper.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slicktreehelper.tsx#L58)
+
+Sets the collapsed state of all given items.
 
 ## Type Parameters
 
@@ -12,15 +14,21 @@ Defined in: [src/ui/helpers/slicktreehelper.tsx:32](https://github.com/serenity-
 
 `TItem`
 
+The type of the item.
+
 ## Parameters
 
 ### items
 
 `TItem`[]
 
+The items to update.
+
 ### collapsed
 
 `boolean`
+
+The collapsed state to set.
 
 ## Returns
 

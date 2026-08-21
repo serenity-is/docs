@@ -4,9 +4,9 @@
 
 > **addClass**(`element`, `value`): `void`
 
-Defined in: [src/base/fluent.ts:495](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L495)
+Defined in: [src/base/fluent.ts:657](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L657)
 
-Adds one or more classes to the element. Any falsy value is ignored.
+Adds one or more classes to the element.
 
 ## Parameters
 
@@ -14,14 +14,16 @@ Adds one or more classes to the element. Any falsy value is ignored.
 
 `Element`
 
-The target element
+Target element.
 
 ### value
 
-The class or classes to add. It can be a string, boolean, or an array of strings or booleans.
+Class name(s) to add. Strings are split on whitespace; arrays are flattened; falsy entries are ignored.
 
 `string` | `boolean` | (`string` \| `boolean`)[]
 
 ## Returns
 
 `void`
+
+`void`.

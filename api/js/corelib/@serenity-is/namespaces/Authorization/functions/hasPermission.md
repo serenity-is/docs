@@ -4,12 +4,9 @@
 
 > **hasPermission**(`permission`): `boolean`
 
-Defined in: [src/base/authorization.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L26)
+Defined in: [src/base/authorization.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L48)
 
-Checks if the current user has the permission specified.
-This should only be used for UI purposes and it is strongly recommended to check permissions server side.
-
-> Please prefer the `hasPermissionAsync` variant as this may block the UI thread if the `UserData` script is not already loaded.
+Synchronously checks whether the current user has the specified permission.
 
 ## Parameters
 
@@ -17,11 +14,29 @@ This should only be used for UI purposes and it is strongly recommended to check
 
 `string`
 
-Permission key. It may contain logical operators like A&B|C.
+Permission key or expression. May contain `&` (AND) and `|` (OR)
+operators, e.g. `"A&B|C"`. `null`/`undefined` returns `false`; `"*"` returns `true`;
+`""` or `"?"` returns whether the user is logged in.
 
 ## Returns
 
 `boolean`
 
-`false` for "null or undefined", true for "*", `IsLoggedIn` for "?". For other permissions, 
-if the user has the permission or if the user has the `IsAdmin` flag (super admin) `true`, otherwise `false`.
+`true` if the user has the permission (or is an admin), otherwise `false`.
+
+## Remarks
+
+Prefer [Authorization.hasPermissionAsync](hasPermissionAsync.md) in new code — this synchronous
+variant may block the UI thread if the `UserData` script has not been loaded yet
+(it falls back to [getRemoteData](../../../../functions/getRemoteData.md) which can issue a synchronous request).
+Use only for UI gating; always enforce permissions server-side as well.
+
+## Examples
+
+```ts
+Authorization.hasPermission("Administration:General"); // true if admin or granted
+```
+
+```ts
+Authorization.hasPermission("A&B|C"); // true if (A and B) or C
+```

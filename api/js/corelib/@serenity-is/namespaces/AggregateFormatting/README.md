@@ -2,6 +2,8 @@
 
 # AggregateFormatting
 
+Formatting helpers for aggregate / group-totals rows.
+
 ## Functions
 
 - [groupTotalsFormat](functions/groupTotalsFormat.md)

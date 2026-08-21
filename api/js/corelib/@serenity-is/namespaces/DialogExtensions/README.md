@@ -2,6 +2,8 @@
 
 # DialogExtensions
 
+Helper functions for extending jQuery UI dialogs.
+
 ## Functions
 
 - [dialogMaximizable](functions/dialogMaximizable.md)

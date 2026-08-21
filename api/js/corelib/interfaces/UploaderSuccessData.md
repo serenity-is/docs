@@ -2,7 +2,9 @@
 
 # Interface: UploaderSuccessData
 
-Defined in: [src/base/uploader.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L62)
+Defined in: [src/base/uploader.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L78)
+
+Data passed to [UploaderOptions.batchSuccess](UploaderOptions.md#batchsuccess) after a successful upload.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/base/uploader.ts:62](https://github.com/serenity-is/serenity/bl
 
 > **batch**: [`UploaderBatch`](UploaderBatch.md)
 
-Defined in: [src/base/uploader.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L63)
+Defined in: [src/base/uploader.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L80)
+
+The batch that was uploaded.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/base/uploader.ts:63](https://github.com/serenity-is/serenity/bl
 
 > **event**: `ProgressEvent`
 
-Defined in: [src/base/uploader.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L65)
+Defined in: [src/base/uploader.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L84)
+
+XHR load event.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/base/uploader.ts:65](https://github.com/serenity-is/serenity/bl
 
 > **request**: [`UploaderRequest`](UploaderRequest.md)
 
-Defined in: [src/base/uploader.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L64)
+Defined in: [src/base/uploader.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L82)
+
+Request configuration used for the upload.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/base/uploader.ts:64](https://github.com/serenity-is/serenity/bl
 
 > **response**: `any`
 
-Defined in: [src/base/uploader.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L67)
+Defined in: [src/base/uploader.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L88)
+
+Parsed response body (JSON or text depending on [UploaderRequest.responseType](UploaderRequest.md#responsetype)).
 
 ***
 
@@ -42,4 +52,6 @@ Defined in: [src/base/uploader.ts:67](https://github.com/serenity-is/serenity/bl
 
 > **xhr**: `XMLHttpRequest`
 
-Defined in: [src/base/uploader.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L66)
+Defined in: [src/base/uploader.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L86)
+
+The underlying `XMLHttpRequest`.

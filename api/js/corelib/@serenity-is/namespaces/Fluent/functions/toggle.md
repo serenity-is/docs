@@ -4,9 +4,9 @@
 
 > **toggle**(`element`, `flag?`): `void`
 
-Defined in: [src/base/fluent.ts:560](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L560)
+Defined in: [src/base/fluent.ts:726](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L726)
 
-Toggles the visibility of the element.
+Shows or hides the element, handling `hidden`, `display:none`, and `.hidden` class.
 
 ## Parameters
 
@@ -14,16 +14,16 @@ Toggles the visibility of the element.
 
 `Element`
 
-The target element
+Target element.
 
 ### flag?
 
 `boolean`
 
-Optional. A flag indicating whether to show or hide the element. If not provided, the visibility will be toggled.
+When `true`, shows the element; when `false`, hides it; when omitted, toggles the current visibility.
 
 ## Returns
 
 `void`
 
-The Fluent object itself.
+`void`.

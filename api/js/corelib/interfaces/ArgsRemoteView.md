@@ -2,7 +2,9 @@
 
 # Interface: ArgsRemoteView
 
-Defined in: [src/slick/remoteview.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L8)
+Defined in: [src/slick/remoteview.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L11)
+
+Arguments for RemoteView data events.
 
 ## Extended by
 
@@ -19,4 +21,6 @@ Defined in: [src/slick/remoteview.ts:8](https://github.com/serenity-is/serenity/
 
 > **dataView**: [`IRemoteView`](IRemoteView.md)
 
-Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L9)
+Defined in: [src/slick/remoteview.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L13)
+
+The data view that raised the event.

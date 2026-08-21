@@ -2,7 +2,9 @@
 
 # Class: Max
 
-Defined in: [src/slick/aggregators.ts:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L125)
+Defined in: [src/slick/aggregators.ts:176](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L176)
+
+Maximum of a field.
 
 ## Implements
 
@@ -14,13 +16,17 @@ Defined in: [src/slick/aggregators.ts:125](https://github.com/serenity-is/sereni
 
 > **new Max**(`field`): `Max`
 
-Defined in: [src/slick/aggregators.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L128)
+Defined in: [src/slick/aggregators.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L184)
+
+Creates a new maximum aggregator.
 
 #### Parameters
 
 ##### field
 
 `string`
+
+The field to aggregate.
 
 #### Returns
 
@@ -32,7 +38,9 @@ Defined in: [src/slick/aggregators.ts:128](https://github.com/serenity-is/sereni
 
 > `readonly` **field**: `string`
 
-Defined in: [src/slick/aggregators.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L128)
+Defined in: [src/slick/aggregators.ts:184](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L184)
+
+The field to aggregate.
 
 ***
 
@@ -40,7 +48,9 @@ Defined in: [src/slick/aggregators.ts:128](https://github.com/serenity-is/sereni
 
 > **max**: `any`
 
-Defined in: [src/slick/aggregators.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L126)
+Defined in: [src/slick/aggregators.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L178)
+
+Current maximum value.
 
 ***
 
@@ -48,7 +58,9 @@ Defined in: [src/slick/aggregators.ts:126](https://github.com/serenity-is/sereni
 
 > `readonly` `static` **aggregateKey**: `"max"` = `"max"`
 
-Defined in: [src/slick/aggregators.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L152)
+Defined in: [src/slick/aggregators.ts:213](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L213)
+
+Key used to store/lookup this aggregator in totals.
 
 ***
 
@@ -56,7 +68,9 @@ Defined in: [src/slick/aggregators.ts:152](https://github.com/serenity-is/sereni
 
 > `readonly` `static` **summaryType**: [`Max`](../../../../enumerations/SummaryType.md#max) = `SummaryType.Max`
 
-Defined in: [src/slick/aggregators.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L151)
+Defined in: [src/slick/aggregators.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L211)
+
+Summary type for this aggregator.
 
 ## Accessors
 
@@ -66,7 +80,9 @@ Defined in: [src/slick/aggregators.ts:151](https://github.com/serenity-is/sereni
 
 > **get** `static` **displayName**(): `string`
 
-Defined in: [src/slick/aggregators.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L153)
+Defined in: [src/slick/aggregators.ts:215](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L215)
+
+Localized display name for this aggregator.
 
 ##### Returns
 
@@ -78,13 +94,17 @@ Defined in: [src/slick/aggregators.ts:153](https://github.com/serenity-is/sereni
 
 > **accumulate**(`item`): `void`
 
-Defined in: [src/slick/aggregators.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L135)
+Defined in: [src/slick/aggregators.ts:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L193)
+
+Accumulates a single item into the aggregator state.
 
 #### Parameters
 
 ##### item
 
 `any`
+
+Row item to accumulate; numeric field values are compared against the current maximum.
 
 #### Returns
 
@@ -100,7 +120,9 @@ Defined in: [src/slick/aggregators.ts:135](https://github.com/serenity-is/sereni
 
 > **init**(): `void`
 
-Defined in: [src/slick/aggregators.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L131)
+Defined in: [src/slick/aggregators.ts:188](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L188)
+
+Initializes state before a new group is processed.
 
 #### Returns
 
@@ -116,13 +138,17 @@ Defined in: [src/slick/aggregators.ts:131](https://github.com/serenity-is/sereni
 
 > **storeResult**(`groupTotals`): `void`
 
-Defined in: [src/slick/aggregators.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L144)
+Defined in: [src/slick/aggregators.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L203)
+
+Writes computed totals into the group totals object.
 
 #### Parameters
 
 ##### groupTotals
 
 `any`
+
+Totals container to write the computed maximum into, keyed by field name.
 
 #### Returns
 

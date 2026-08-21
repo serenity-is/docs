@@ -2,7 +2,9 @@
 
 # Interface: LookupEditorOptions
 
-Defined in: [src/ui/editors/lookupeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/lookupeditor.ts#L8)
+Defined in: [src/ui/editors/lookupeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/lookupeditor.ts#L11)
+
+Options for the [LookupEditor](../classes/LookupEditor.md).
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/ui/editors/lookupeditor.ts:8](https://github.com/serenity-is/se
 
 > `optional` **allowClear**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L15)
+Defined in: [src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)
+
+Whether the selection can be cleared.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-i
 
 > `optional` **async**: `boolean`
 
-Defined in: [src/ui/editors/lookupeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/lookupeditor.ts#L10)
+Defined in: [src/ui/editors/lookupeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/lookupeditor.ts#L15)
+
+Whether items are loaded asynchronously.
 
 ***
 
@@ -34,7 +40,9 @@ Defined in: [src/ui/editors/lookupeditor.ts:10](https://github.com/serenity-is/s
 
 > `optional` **autoComplete**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+Defined in: [src/ui/editors/comboboxeditor.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L55)
+
+Whether arbitrary values are allowed.
 
 #### Inherited from
 
@@ -46,7 +54,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-i
 
 > `optional` **cascadeField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
+Defined in: [src/ui/editors/comboboxeditor.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L35)
+
+Field used for cascading.
 
 #### Inherited from
 
@@ -58,7 +68,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-i
 
 > `optional` **cascadeFrom**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L22)
+Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+
+Id of the parent editor to cascade from.
 
 #### Inherited from
 
@@ -70,7 +82,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:22](https://github.com/serenity-i
 
 > `optional` **cascadeValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
+Defined in: [src/ui/editors/comboboxeditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L37)
+
+Value used for cascading.
 
 #### Inherited from
 
@@ -82,7 +96,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-i
 
 > `optional` **delimited**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
+Defined in: [src/ui/editors/comboboxeditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L21)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 
@@ -94,7 +110,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-i
 
 > `optional` **dialogType**: `string` \| [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
+Defined in: [src/ui/editors/comboboxeditor.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L53)
+
+Dialog type used for in-place add.
 
 #### Inherited from
 
@@ -106,7 +124,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-i
 
 > `optional` **filterField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+Defined in: [src/ui/editors/comboboxeditor.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L39)
+
+Field used for filtering.
 
 #### Inherited from
 
@@ -118,7 +138,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-i
 
 > `optional` **filterValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)
+Defined in: [src/ui/editors/comboboxeditor.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L41)
+
+Value used for filtering.
 
 #### Inherited from
 
@@ -130,7 +152,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-i
 
 > `optional` **inplaceAdd**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L30)
+Defined in: [src/ui/editors/comboboxeditor.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L49)
+
+Whether in-place add is enabled.
 
 #### Inherited from
 
@@ -142,7 +166,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:30](https://github.com/serenity-i
 
 > `optional` **inplaceAddPermission**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)
+Defined in: [src/ui/editors/comboboxeditor.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L51)
+
+Permission required for in-place add.
 
 #### Inherited from
 
@@ -154,7 +180,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-i
 
 > `optional` **lookupKey**: `string`
 
-Defined in: [src/ui/editors/lookupeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/lookupeditor.ts#L9)
+Defined in: [src/ui/editors/lookupeditor.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/lookupeditor.ts#L13)
+
+Key of the lookup to load items from.
 
 ***
 
@@ -162,7 +190,9 @@ Defined in: [src/ui/editors/lookupeditor.ts:9](https://github.com/serenity-is/se
 
 > `optional` **minimumResultsForSearch**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
+
+Minimum results required to show the search box.
 
 #### Inherited from
 
@@ -174,7 +204,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-i
 
 > `optional` **multiple**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 

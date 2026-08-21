@@ -4,7 +4,7 @@
 
 > **noDialogButton**(`opt?`): [`DialogButton`](../interfaces/DialogButton.md)
 
-Defined in: [src/base/dialogs.tsx:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L674)
+Defined in: [src/base/dialogs.tsx:761](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L761)
 
 Creates a dialog button which, by default, has "No" as the caption (localized) and "no" as the result.
 

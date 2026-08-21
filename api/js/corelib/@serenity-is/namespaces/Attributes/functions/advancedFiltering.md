@@ -4,15 +4,17 @@
 
 > **advancedFiltering**(`value`): [`AdvancedFilteringAttribute`](../../../../classes/AdvancedFilteringAttribute.md)
 
-Defined in: [src/types/attributes.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L96)
+Defined in: [src/types/attributes.ts:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L131)
 
-Indicates if a grid should have an advanced filter editor
+Creates an [AdvancedFilteringAttribute](../../../../classes/AdvancedFilteringAttribute.md).
 
 ## Parameters
 
 ### value
 
 `boolean` = `true`
+
+True to enable (default `true`).
 
 ## Returns
 

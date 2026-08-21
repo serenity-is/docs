@@ -2,6 +2,8 @@
 
 # UploadHelper
 
+Helper functions for file uploads, image constraints, and file display.
+
 ## Variables
 
 - [~~colorBox~~](variables/colorBox.md)

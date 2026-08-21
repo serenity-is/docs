@@ -4,12 +4,9 @@
 
 > **parseDecimal**(`s`): `number`
 
-Defined in: [src/base/formatting.ts:541](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L541)
+Defined in: [src/base/formatting.ts:592](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L592)
 
-Converts a string to a decimal. The difference between parseFloat and parseDecimal
-is that parseDecimal will return null if the string is empty or null, whereas
-parseFloat will return NaN and parseDecimal will use the current culture's group
-and decimal separators.
+Parses a string as a decimal number using [Culture](../variables/Culture.md) group and decimal separators.
 
 ## Parameters
 
@@ -17,8 +14,14 @@ and decimal separators.
 
 `string`
 
-the string to parse
+String to parse; `null` or whitespace yields `null`. Group separators are stripped and the locale decimal separator is normalized to `"."` before `parseFloat`.
 
 ## Returns
 
 `number`
+
+The parsed number, `null` for empty/null input, or `NaN` when the string is not a valid decimal.
+
+## Remarks
+
+Only patterns matching `^\s*[+-]?(\d*)[decimalSep]?(\d*)\s*$` are accepted.

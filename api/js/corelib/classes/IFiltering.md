@@ -2,7 +2,9 @@
 
 # Abstract Class: IFiltering
 
-Defined in: [src/ui/filtering/ifiltering.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L5)
+Defined in: [src/ui/filtering/ifiltering.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L8)
+
+Interface for filtering handlers that build criteria and editors for a field.
 
 ## Constructors
 
@@ -20,7 +22,7 @@ Defined in: [src/ui/filtering/ifiltering.ts:5](https://github.com/serenity-is/se
 
 > `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/filtering/ifiltering.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L6)
+Defined in: [src/ui/filtering/ifiltering.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L9)
 
 ## Methods
 
@@ -28,7 +30,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:6](https://github.com/serenity-is/se
 
 > **createEditor**(): `void`
 
-Defined in: [src/ui/filtering/ifiltering.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L10)
+Defined in: [src/ui/filtering/ifiltering.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L17)
+
+Creates the editor for the current operator.
 
 #### Returns
 
@@ -40,7 +44,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:10](https://github.com/serenity-is/s
 
 > **get\_container**(): `HTMLElement`
 
-Defined in: [src/ui/filtering/ifiltering.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L17)
+Defined in: [src/ui/filtering/ifiltering.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L31)
+
+Returns the container element for the editor.
 
 #### Returns
 
@@ -52,7 +58,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:17](https://github.com/serenity-is/s
 
 > **get\_field**(): [`PropertyItem`](../interfaces/PropertyItem.md)
 
-Defined in: [src/ui/filtering/ifiltering.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L15)
+Defined in: [src/ui/filtering/ifiltering.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L27)
+
+Returns the field being filtered.
 
 #### Returns
 
@@ -64,7 +72,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:15](https://github.com/serenity-is/s
 
 > **get\_operator**(): [`FilterOperator`](../interfaces/FilterOperator.md)
 
-Defined in: [src/ui/filtering/ifiltering.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L19)
+Defined in: [src/ui/filtering/ifiltering.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L35)
+
+Returns the current operator.
 
 #### Returns
 
@@ -76,7 +86,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:19](https://github.com/serenity-is/s
 
 > **getCriteria**(): `CriteriaWithText`
 
-Defined in: [src/ui/filtering/ifiltering.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L11)
+Defined in: [src/ui/filtering/ifiltering.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L19)
+
+Returns the criteria and display text for the current operator.
 
 #### Returns
 
@@ -88,7 +100,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:11](https://github.com/serenity-is/s
 
 > **getOperators**(): [`FilterOperator`](../interfaces/FilterOperator.md)[]
 
-Defined in: [src/ui/filtering/ifiltering.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L12)
+Defined in: [src/ui/filtering/ifiltering.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L21)
+
+Returns the operators supported by this filtering handler.
 
 #### Returns
 
@@ -100,7 +114,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:12](https://github.com/serenity-is/s
 
 > **loadState**(`state`): `void`
 
-Defined in: [src/ui/filtering/ifiltering.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L13)
+Defined in: [src/ui/filtering/ifiltering.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L23)
+
+Loads persisted state into the editor.
 
 #### Parameters
 
@@ -118,7 +134,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:13](https://github.com/serenity-is/s
 
 > **saveState**(): `any`
 
-Defined in: [src/ui/filtering/ifiltering.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L14)
+Defined in: [src/ui/filtering/ifiltering.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L25)
+
+Saves the editor state for persistence.
 
 #### Returns
 
@@ -130,7 +148,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:14](https://github.com/serenity-is/s
 
 > **set\_container**(`value`): `void`
 
-Defined in: [src/ui/filtering/ifiltering.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L18)
+Defined in: [src/ui/filtering/ifiltering.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L33)
+
+Sets the container element for the editor.
 
 #### Parameters
 
@@ -148,7 +168,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:18](https://github.com/serenity-is/s
 
 > **set\_field**(`value`): `void`
 
-Defined in: [src/ui/filtering/ifiltering.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L16)
+Defined in: [src/ui/filtering/ifiltering.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L29)
+
+Sets the field being filtered.
 
 #### Parameters
 
@@ -166,7 +188,9 @@ Defined in: [src/ui/filtering/ifiltering.ts:16](https://github.com/serenity-is/s
 
 > **set\_operator**(`value`): `void`
 
-Defined in: [src/ui/filtering/ifiltering.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L20)
+Defined in: [src/ui/filtering/ifiltering.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/ifiltering.ts#L37)
+
+Sets the current operator.
 
 #### Parameters
 

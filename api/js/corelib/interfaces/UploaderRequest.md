@@ -2,7 +2,9 @@
 
 # Interface: UploaderRequest
 
-Defined in: [src/base/uploader.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L46)
+Defined in: [src/base/uploader.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L52)
+
+Request configuration for [Uploader.uploadBatch](../classes/Uploader.md#uploadbatch).
 
 ## Properties
 
@@ -10,9 +12,9 @@ Defined in: [src/base/uploader.ts:46](https://github.com/serenity-is/serenity/bl
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [src/base/uploader.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L48)
+Defined in: [src/base/uploader.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L54)
 
-A function that will return headers to be sent with request, or static set of headers
+Extra headers to send with the upload request.
 
 ***
 
@@ -20,9 +22,9 @@ A function that will return headers to be sent with request, or static set of he
 
 > `optional` **responseType**: `"text"` \| `"json"`
 
-Defined in: [src/base/uploader.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L50)
+Defined in: [src/base/uploader.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L56)
 
-Response type expected from the server. Default is json
+Expected response type. Defaults to `"json"`.
 
 ***
 
@@ -30,6 +32,6 @@ Response type expected from the server. Default is json
 
 > `optional` **url**: `string`
 
-Defined in: [src/base/uploader.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L52)
+Defined in: [src/base/uploader.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L58)
 
-URL to send the request to. Default is ~/File/TemporaryUpload
+Endpoint URL for the upload. Defaults to `~/File/TemporaryUpload`.

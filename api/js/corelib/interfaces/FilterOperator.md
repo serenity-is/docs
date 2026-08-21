@@ -2,7 +2,9 @@
 
 # Interface: FilterOperator
 
-Defined in: [src/ui/filtering/filteroperator.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L3)
+Defined in: [src/ui/filtering/filteroperator.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L6)
+
+Describes a filter operator (e.g. equals, contains, is null).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/filtering/filteroperator.ts:3](https://github.com/serenity-i
 
 > `optional` **format**: `string`
 
-Defined in: [src/ui/filtering/filteroperator.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L6)
+Defined in: [src/ui/filtering/filteroperator.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L12)
+
+Format string used to build the display text.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/filtering/filteroperator.ts:6](https://github.com/serenity-i
 
 > `optional` **key**: `string`
 
-Defined in: [src/ui/filtering/filteroperator.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L4)
+Defined in: [src/ui/filtering/filteroperator.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L8)
+
+Operator key.
 
 ***
 
@@ -26,4 +32,6 @@ Defined in: [src/ui/filtering/filteroperator.ts:4](https://github.com/serenity-i
 
 > `optional` **title**: `string`
 
-Defined in: [src/ui/filtering/filteroperator.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L5)
+Defined in: [src/ui/filtering/filteroperator.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L10)
+
+Display title.

@@ -2,7 +2,9 @@
 
 # Interface: UndeleteRequest
 
-Defined in: [src/base/servicetypes.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L33)
+Defined in: [src/base/servicetypes.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L73)
+
+Request DTO for `Undelete` handlers (restores a soft-deleted row).
 
 ## Extends
 
@@ -14,4 +16,6 @@ Defined in: [src/base/servicetypes.ts:33](https://github.com/serenity-is/serenit
 
 > `optional` **EntityId**: `any`
 
-Defined in: [src/base/servicetypes.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L34)
+Defined in: [src/base/servicetypes.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L75)
+
+Primary key of the entity to undelete.

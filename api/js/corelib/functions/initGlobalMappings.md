@@ -2,65 +2,35 @@
 
 # Function: initGlobalMappings()
 
-> **initGlobalMappings**(`param0`): `void`
+> **initGlobalMappings**(`options`): `void`
 
-Defined in: [src/compat/init-global-mappings.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/init-global-mappings.ts#L25)
+Defined in: [src/compat/init-global-mappings.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/init-global-mappings.ts#L63)
 
-Setups global namespace mappings like Serenity, Slick etc. for compatibility with feature 
-packages that use global references via tsbuild's importAsGlobals option.
+Installs legacy global namespace mappings (`Serenity`, `Slick`, `Q`, and vendor globals) for
+compatibility with feature packages that consume globals via `tsbuild`'s `importAsGlobals`.
 
 ## Parameters
 
-### param0
+### options
 
-#### bootstrap?
+[`InitGlobalMappingsOptions`](../interfaces/InitGlobalMappingsOptions.md)
 
-`any`
-
-#### corelib?
-
-`any`
-
-#### domwise?
-
-`any`
-
-#### extensions?
-
-`any`
-
-#### flatpickr?
-
-`any`
-
-#### glightbox?
-
-`any`
-
-#### globals?
-
-`any`
-
-#### mousetrap?
-
-`any`
-
-#### nprogress?
-
-`any`
-
-#### proextensions?
-
-`any`
-
-#### sleekgrid?
-
-`any`
-
-#### sortable?
-
-`any`
+Bag of package exports / vendor modules to expose on the global object.
 
 ## Returns
 
 `void`
+
+## Remarks
+
+- When `corelib` is provided it becomes `globals.Serenity` (or is merged via live getters if `Serenity` already exists).
+- `sleekgrid` populates `globals.Slick` and is merged into `Serenity`; `Aggregators`/`AggregateFormatting` sub-objects and `RemoteView` are synced between `Slick` and `Serenity`.
+- `extensions`/`proextensions`/`domwise` are merged into `Serenity` (extensions also under `Serenity.Extensions`).
+- `bootstrap`/`mousetrap`/`sortable`/`nprogress`/`glightbox`/`flatpickr` unwrap `.default` when needed and are assigned to `bootstrap`/`Mousetrap`/`Sortable`/`NProgress`/`GLightbox`/`flatpickr` respectively.
+- Missing or already-present targets are merged via getter/setter proxies (`copyProps`) so later assignments stay in sync.
+
+## Example
+
+```ts
+initGlobalMappings({ corelib: SerenityCore, sleekgrid: SlickGrid, globals: window });
+```

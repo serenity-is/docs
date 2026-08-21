@@ -2,7 +2,9 @@
 
 # Interface: ArgsPagingInfo
 
-Defined in: [src/slick/remoteview.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L17)
+Defined in: [src/slick/remoteview.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L29)
+
+Arguments for paging info changed events.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/slick/remoteview.ts:17](https://github.com/serenity-is/serenity
 
 > **dataView**: [`IRemoteView`](IRemoteView.md)
 
-Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L9)
+Defined in: [src/slick/remoteview.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L13)
+
+The data view that raised the event.
 
 #### Inherited from
 
@@ -26,4 +30,6 @@ Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/
 
 > **pagingInfo**: [`PagingInfo`](PagingInfo.md)
 
-Defined in: [src/slick/remoteview.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L18)
+Defined in: [src/slick/remoteview.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L31)
+
+The current paging information.

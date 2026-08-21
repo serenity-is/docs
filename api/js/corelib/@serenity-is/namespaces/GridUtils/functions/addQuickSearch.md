@@ -2,13 +2,17 @@
 
 # Function: addQuickSearch()
 
-> **addQuickSearch**(`__namedParameters`): [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
+> **addQuickSearch**(`options`): [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
 
-Defined in: [src/ui/helpers/gridutils.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L53)
+Defined in: [src/ui/helpers/gridutils.tsx:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridutils.tsx#L77)
+
+Adds a quick search input to a container and wires it to the given view.
 
 ## Parameters
 
-### \_\_namedParameters
+### options
+
+The quick search options.
 
 #### beforeSearch?
 
@@ -33,3 +37,5 @@ Defined in: [src/ui/helpers/gridutils.tsx:53](https://github.com/serenity-is/ser
 ## Returns
 
 [`QuickSearchInput`](../../../../classes/QuickSearchInput.md)
+
+The created QuickSearchInput widget.

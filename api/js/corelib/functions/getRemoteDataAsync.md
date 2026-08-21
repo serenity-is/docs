@@ -4,9 +4,9 @@
 
 > **getRemoteDataAsync**\<`TData`\>(`key`): `Promise`\<`TData`\>
 
-Defined in: [src/base/scriptdata.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L232)
+Defined in: [src/base/scriptdata.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L243)
 
-Gets or loads a [RemoteData]
+Loads a `RemoteData` script by key.
 
 ## Type Parameters
 
@@ -14,14 +14,18 @@ Gets or loads a [RemoteData]
 
 `TData` = `any`
 
+Expected payload type.
+
 ## Parameters
 
 ### key
 
 `string`
 
-Remote data key
+Remote data key as registered server-side via `[RemoteDataScript]`.
 
 ## Returns
 
 `Promise`\<`TData`\>
+
+A promise resolving to the remote data payload.

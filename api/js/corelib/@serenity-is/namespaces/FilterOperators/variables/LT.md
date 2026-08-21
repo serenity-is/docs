@@ -4,4 +4,6 @@
 
 > `const` **LT**: `"lt"` = `'lt'`
 
-Defined in: [src/ui/filtering/filteroperator.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L19)
+Defined in: [src/ui/filtering/filteroperator.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L37)
+
+Less than operator.

@@ -2,7 +2,9 @@
 
 # Interface: DataGridEvent
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1260)
+Defined in: [src/ui/datagrid/datagrid.tsx:1860](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1860)
+
+Base event arguments for data grid events.
 
 ## Extended by
 
@@ -17,4 +19,6 @@ Defined in: [src/ui/datagrid/datagrid.tsx:1260](https://github.com/serenity-is/s
 
 > **dataGrid**: [`DataGrid`](../classes/DataGrid.md)\<`any`\>
 
-Defined in: [src/ui/datagrid/datagrid.tsx:1261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1261)
+Defined in: [src/ui/datagrid/datagrid.tsx:1862](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid.tsx#L1862)
+
+The data grid that raised the event.

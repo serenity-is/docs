@@ -4,9 +4,10 @@
 
 > **LanguageList** = `object`[]
 
-Defined in: [src/base/localtext.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L138)
+Defined in: [src/base/localtext.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L152)
 
-A list of languages with their IDs and display texts.
+List of available languages for the translation UI.
+Each entry pairs a language identifier with its display name.
 
 ## Type Declaration
 

@@ -2,7 +2,9 @@
 
 # Interface: CheckLookupEditorOptions
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:457](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L457)
+Defined in: [src/ui/editors/checktreeeditor.tsx:612](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L612)
+
+Options for the [CheckLookupEditor](../classes/CheckLookupEditor.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:457](https://github.com/serenity
 
 > `optional` **cascadeField**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L464)
+Defined in: [src/ui/editors/checktreeeditor.tsx:626](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L626)
+
+Field name in the lookup used for cascading.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:464](https://github.com/serenity
 
 > `optional` **cascadeFrom**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:463](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L463)
+Defined in: [src/ui/editors/checktreeeditor.tsx:624](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L624)
+
+Id of the parent editor to cascade from.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:463](https://github.com/serenity
 
 > `optional` **cascadeValue**: `any`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:465](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L465)
+Defined in: [src/ui/editors/checktreeeditor.tsx:628](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L628)
+
+Current cascade value used to filter items.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:465](https://github.com/serenity
 
 > `optional` **checkedOnTop**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:459](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L459)
+Defined in: [src/ui/editors/checktreeeditor.tsx:616](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L616)
+
+Whether to move checked items to the top of the list.
 
 ***
 
@@ -42,7 +52,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:459](https://github.com/serenity
 
 > `optional` **delimited**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:462](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L462)
+Defined in: [src/ui/editors/checktreeeditor.tsx:622](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L622)
+
+Whether the edit value is a comma-delimited string.
 
 ***
 
@@ -50,7 +62,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:462](https://github.com/serenity
 
 > `optional` **filterField**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:466](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L466)
+Defined in: [src/ui/editors/checktreeeditor.tsx:630](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L630)
+
+Field name in the lookup used for filtering.
 
 ***
 
@@ -58,7 +72,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:466](https://github.com/serenity
 
 > `optional` **filterValue**: `any`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:467](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L467)
+Defined in: [src/ui/editors/checktreeeditor.tsx:632](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L632)
+
+Current filter value used to filter items.
 
 ***
 
@@ -66,7 +82,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:467](https://github.com/serenity
 
 > `optional` **hideSearch**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:461](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L461)
+Defined in: [src/ui/editors/checktreeeditor.tsx:620](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L620)
+
+Whether to hide the quick search box.
 
 ***
 
@@ -74,7 +92,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:461](https://github.com/serenity
 
 > `optional` **lookupKey**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:458](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L458)
+Defined in: [src/ui/editors/checktreeeditor.tsx:614](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L614)
+
+Lookup key for the source lookup.
 
 ***
 
@@ -82,4 +102,6 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:458](https://github.com/serenity
 
 > `optional` **showSelectAll**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:460](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L460)
+Defined in: [src/ui/editors/checktreeeditor.tsx:618](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L618)
+
+Whether to show the select-all toolbar button.

@@ -4,15 +4,17 @@
 
 > **staticPanel**(`value`): [`StaticPanelAttribute`](../../../../classes/StaticPanelAttribute.md)
 
-Defined in: [src/types/attributes.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L106)
+Defined in: [src/types/attributes.ts:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L141)
 
-Indicates if a dialog should be a static panel, which is not a dialog at all.
+Creates a [StaticPanelAttribute](../../../../classes/StaticPanelAttribute.md).
 
 ## Parameters
 
 ### value
 
 `boolean` = `true`
+
+True for static panel (default `true`).
 
 ## Returns
 

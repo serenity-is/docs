@@ -2,7 +2,9 @@
 
 # Interface: Select2Result
 
-Defined in: [src/ui/editors/select2.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L29)
+Defined in: [src/ui/editors/select2.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L52)
+
+Result of a Select2 query.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/select2.ts:29](https://github.com/serenity-is/sereni
 
 > `optional` **context**: `any`
 
-Defined in: [src/ui/editors/select2.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L34)
+Defined in: [src/ui/editors/select2.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L62)
+
+Additional context.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/editors/select2.ts:34](https://github.com/serenity-is/sereni
 
 > `optional` **errorInfo**: `any`
 
-Defined in: [src/ui/editors/select2.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L31)
+Defined in: [src/ui/editors/select2.tsx:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L56)
+
+Error information.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/editors/select2.ts:31](https://github.com/serenity-is/sereni
 
 > `optional` **hasError**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L30)
+Defined in: [src/ui/editors/select2.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L54)
+
+Whether the query failed.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/editors/select2.ts:30](https://github.com/serenity-is/sereni
 
 > `optional` **more**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L33)
+Defined in: [src/ui/editors/select2.tsx:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L60)
+
+Whether there are more results.
 
 ***
 
@@ -42,4 +52,6 @@ Defined in: [src/ui/editors/select2.ts:33](https://github.com/serenity-is/sereni
 
 > **results**: [`Select2Item`](Select2Item.md)[]
 
-Defined in: [src/ui/editors/select2.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L32)
+Defined in: [src/ui/editors/select2.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L58)
+
+The result items.

@@ -4,7 +4,9 @@
 
 > **DialogType** = (`props?`) => [`IDialog`](../classes/IDialog.md) & `object`
 
-Defined in: [src/types/dialogtype.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtype.ts#L3)
+Defined in: [src/types/dialogtype.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/dialogtype.ts#L4)
+
+Constructor type for dialog widgets registered with [DialogTypeRegistry](../variables/DialogTypeRegistry.md).
 
 ## Parameters
 

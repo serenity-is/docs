@@ -2,6 +2,8 @@
 
 # LazyLoadHelper
 
+Helper functions for lazy loading content when it becomes visible.
+
 ## Variables
 
 - [executeEverytimeWhenShown](variables/executeEverytimeWhenShown.md)

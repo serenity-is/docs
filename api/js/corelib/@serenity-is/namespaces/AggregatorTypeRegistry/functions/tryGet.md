@@ -4,7 +4,7 @@
 
 > **tryGet**(`aggKey`): [`IAggregatorConstructor`](../../../../interfaces/IAggregatorConstructor.md)
 
-Defined in: [src/slick/aggregatortyperegistry.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregatortyperegistry.ts#L54)
+Defined in: [src/slick/aggregatortyperegistry.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregatortyperegistry.ts#L59)
 
 Tries to get an aggregator constructor by its SummaryType or unique key.
 

@@ -4,7 +4,9 @@
 
 > **fileSizeDisplay**(`bytes`): `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L113)
+Defined in: [src/ui/helpers/uploadhelper.tsx:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L146)
+
+Formats a byte count into a human-readable size string (KB or MB).
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:113](https://github.com/serenity-is
 
 `number`
 
+The file size in bytes.
+
 ## Returns
 
 `string`
+
+The formatted size string.

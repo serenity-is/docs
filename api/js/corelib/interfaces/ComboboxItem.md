@@ -2,7 +2,9 @@
 
 # Interface: ComboboxItem\<TSource\>
 
-Defined in: [src/ui/editors/combobox.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L7)
+Defined in: [src/ui/editors/combobox.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L13)
+
+A single item in a combobox.
 
 ## Type Parameters
 
@@ -10,13 +12,17 @@ Defined in: [src/ui/editors/combobox.ts:7](https://github.com/serenity-is/sereni
 
 `TSource` = `any`
 
+The source item type.
+
 ## Properties
 
 ### disabled?
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [src/ui/editors/combobox.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L11)
+Defined in: [src/ui/editors/combobox.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L21)
+
+Whether the item is disabled.
 
 ***
 
@@ -24,7 +30,9 @@ Defined in: [src/ui/editors/combobox.ts:11](https://github.com/serenity-is/seren
 
 > `optional` **id**: `string`
 
-Defined in: [src/ui/editors/combobox.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L8)
+Defined in: [src/ui/editors/combobox.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L15)
+
+Unique identifier of the combobox item.
 
 ***
 
@@ -32,7 +40,9 @@ Defined in: [src/ui/editors/combobox.ts:8](https://github.com/serenity-is/sereni
 
 > `optional` **source**: `TSource`
 
-Defined in: [src/ui/editors/combobox.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L10)
+Defined in: [src/ui/editors/combobox.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L19)
+
+The source item.
 
 ***
 
@@ -40,4 +50,6 @@ Defined in: [src/ui/editors/combobox.ts:10](https://github.com/serenity-is/seren
 
 > `optional` **text**: `string`
 
-Defined in: [src/ui/editors/combobox.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L9)
+Defined in: [src/ui/editors/combobox.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/combobox.ts#L17)
+
+Display text.

@@ -4,7 +4,9 @@
 
 > **ValidateEventDelegate** = (`element`, `event`, `validator`) => `void`
 
-Defined in: [src/base/validator.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L54)
+Defined in: [src/base/validator.tsx:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L80)
+
+Event delegate for validation triggers (`onclick`, `onfocusout`, `onkeyup`, `onfocusin`).
 
 ## Parameters
 
@@ -12,13 +14,19 @@ Defined in: [src/base/validator.tsx:54](https://github.com/serenity-is/serenity/
 
 [`ValidatableElement`](../interfaces/ValidatableElement.md)
 
+Source element that raised the event.
+
 ### event
 
 `Event`
 
+DOM event.
+
 ### validator
 
 [`Validator`](../classes/Validator.md)
+
+Owning validator instance.
 
 ## Returns
 

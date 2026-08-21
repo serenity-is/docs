@@ -4,9 +4,9 @@
 
 > **turkishLocaleCompare**: (`a`, `b`) => `number` = `Culture.stringCompare`
 
-Defined in: [src/compat/formatting-compat.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/formatting-compat.ts#L26)
+Defined in: [src/compat/formatting-compat.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/formatting-compat.ts#L37)
 
-This is an alias for Culture.stringCompare, left in for compatibility reasons.
+Legacy alias for [Culture.stringCompare](../interfaces/Locale.md#stringcompare).
 
 ## Parameters
 
@@ -24,4 +24,8 @@ This is an alias for Culture.stringCompare, left in for compatibility reasons.
 
 ## Deprecated
 
-Use Culture.stringCompare
+Use `Culture.stringCompare` directly.
+
+## See
+
+[Culture.stringCompare](../interfaces/Locale.md#stringcompare)

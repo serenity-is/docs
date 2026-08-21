@@ -4,13 +4,16 @@
 
 > **createElement**(`tag`, `attr`, ...`children`): [`JSXElement`](../type-aliases/JSXElement.md)
 
-Defined in: [../domwise/dist/index.d.ts:2237](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2237)
+Defined in: [../domwise/dist/index.d.ts:2434](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2434)
 
 Creates a JSX element using the classic (non-automatic) JSX factory signature.
-Children are passed as additional arguments after `attr` (rest params).
-If `attr` is a string or array, it is treated as the first child and `attr` becomes `{}`.
-If `attr.children` exists and no additional children were given, `attr.children` is used.
-Prefer using the `jsx` function directly when using the automatic JSX runtime.
+
+Children are passed as variadic rest arguments after `attr`. For compatibility,
+if `attr` itself is a string or array it is treated as the first child and
+`attr` is replaced with `{}`. If `attr.children` is set and no explicit
+`children` were supplied, the `children` property is extracted from `attr`.
+
+Prefer [jsx](jsx.md) when using the automatic JSX runtime (`"jsx": "automatic"`).
 
 ## Parameters
 
@@ -18,13 +21,14 @@ Prefer using the `jsx` function directly when using the automatic JSX runtime.
 
 `any`
 
-The HTML/SVG tag name or component function/class.
+HTML/SVG tag name or a component function/class.
 
 ### attr
 
 `any`
 
-The attributes/props for the element, or the first child if it is a string/array.
+Attributes/props for the element, or the first child when a
+string or array. May be `null`/`undefined` when no attributes are needed.
 
 ### children
 
@@ -36,4 +40,4 @@ Child elements passed as rest arguments.
 
 [`JSXElement`](../type-aliases/JSXElement.md)
 
-The created JSX element.
+The created JSX DOM node.

@@ -4,7 +4,7 @@
 
 > **setReadonly**(`elements`, `value`): `void`
 
-Defined in: [src/ui/editors/editorutils.tsx:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.tsx#L157)
+Defined in: [src/ui/editors/editorutils.tsx:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.tsx#L187)
 
 This functions sets readonly class and disabled (for select, radio, checkbox) or readonly attribute (for other inputs) on given elements
 or widgets. If a widget is passed and it has set_readOnly method it is called instead of setting readonly class or attributes.

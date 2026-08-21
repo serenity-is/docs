@@ -4,9 +4,9 @@
 
 > **toSingleLine**(`str`): `string`
 
-Defined in: [src/compat/strings-compat.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L61)
+Defined in: [src/compat/strings-compat.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L65)
 
-Converts the string to single line by removing line end characters
+Collapses a string to a single line by replacing CR/LF and LF with spaces and trimming the result.
 
 ## Parameters
 
@@ -14,8 +14,10 @@ Converts the string to single line by removing line end characters
 
 `string`
 
-String to convert.
+The input string; `null`/`undefined` is treated as an empty string.
 
 ## Returns
 
 `string`
+
+The single-line, trimmed string.

@@ -4,10 +4,9 @@
 
 > **stringFormatLocale**(`l`, `format`, ...`prm`): `string`
 
-Defined in: [src/base/formatting.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L232)
+Defined in: [src/base/formatting.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L262)
 
-Formats a string with parameters similar to .NET's String.Format function
-using the locale passed as the first argument.
+Locale-specific variant of [stringFormat](stringFormat.md).
 
 ## Parameters
 
@@ -15,14 +14,22 @@ using the locale passed as the first argument.
 
 [`Locale`](../interfaces/Locale.md)
 
+Locale whose settings are applied when formatting each argument.
+
 ### format
 
 `string`
+
+Composite format string with `{index[:format]}` placeholders.
 
 ### prm
 
 ...`any`[]
 
+Values to substitute. Numbers and Dates are formatted with `l`; objects with a `format` method are delegated to that method.
+
 ## Returns
 
 `string`
+
+The formatted string.

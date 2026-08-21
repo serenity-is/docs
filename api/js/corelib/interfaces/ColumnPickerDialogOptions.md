@@ -2,7 +2,9 @@
 
 # Interface: ColumnPickerDialogOptions
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L21)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L31)
+
+Options for the [ColumnPickerDialog](../classes/ColumnPickerDialog.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:21](https://github.com/seren
 
 > `optional` **columns**: `Column`\<`any`\>[] \| () => `Column`\<`any`\>[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L22)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L33)
+
+Columns to display in the picker, or a function returning them.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:22](https://github.com/seren
 
 > `optional` **dataGrid**: [`IDataGrid`](IDataGrid.md)
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L25)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L39)
+
+Data grid the picker is associated with.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:25](https://github.com/seren
 
 > `optional` **defaultOrder**: `string`[] \| () => `string`[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L23)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L35)
+
+Default column order, or a function returning it.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:23](https://github.com/seren
 
 > `optional` **defaultVisible**: `string`[] \| () => `string`[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L24)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L37)
+
+Default visible column ids, or a function returning them.
 
 ***
 
@@ -42,7 +52,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:24](https://github.com/seren
 
 > `optional` **onChange**: (`args`) => `Promise`\<`any`\>
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L27)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L43)
+
+Callback invoked when the picker state changes.
 
 #### Parameters
 
@@ -60,7 +72,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:27](https://github.com/seren
 
 > `optional` **reorderColumns**: (`columnIds`, `setVisible?`) => `boolean`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L29)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L47)
+
+Custom handler for reordering columns.
 
 #### Parameters
 
@@ -82,7 +96,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:29](https://github.com/seren
 
 > `optional` **sleekGrid**: `ISleekGrid`
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L26)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L41)
+
+SleekGrid instance the picker operates on.
 
 ***
 
@@ -90,7 +106,9 @@ Defined in: [src/ui/datagrid/columnpickerdialog.tsx:26](https://github.com/seren
 
 > `optional` **toggleColumns**: (`columnIds`, `show?`) => `Column`\<`any`\>[]
 
-Defined in: [src/ui/datagrid/columnpickerdialog.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L28)
+Defined in: [src/ui/datagrid/columnpickerdialog.tsx:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/columnpickerdialog.tsx#L45)
+
+Custom handler for toggling column visibility.
 
 #### Parameters
 

@@ -2,7 +2,10 @@
 
 # Interface: GridPersistenceFlags
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L37)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L75)
+
+Flags controlling which parts of grid state are persisted.
+Unspecified flags fall back to defaultGridPersistenceFlags.
 
 ## Properties
 
@@ -10,7 +13,7 @@ Defined in: [src/ui/datagrid/datagrid-persistence.ts:37](https://github.com/sere
 
 > `optional` **columnPinning**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L39)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L77)
 
 Column pinning state. Defaults to persist unless explicitly set to false.
 
@@ -20,7 +23,7 @@ Column pinning state. Defaults to persist unless explicitly set to false.
 
 > `optional` **columnVisibility**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L43)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L81)
 
 Column visibility. Defaults to persist unless explicitly set to false.
 
@@ -30,7 +33,7 @@ Column visibility. Defaults to persist unless explicitly set to false.
 
 > `optional` **columnWidths**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L41)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L79)
 
 Column widths. Defaults to persist unless explicitly set to false.
 
@@ -40,7 +43,7 @@ Column widths. Defaults to persist unless explicitly set to false.
 
 > `optional` **filterItems**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L47)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L85)
 
 Filter items. Defaults to persist unless explicitly set to false.
 
@@ -50,7 +53,7 @@ Filter items. Defaults to persist unless explicitly set to false.
 
 > `optional` **includeDeleted**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L55)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L93)
 
 Include deleted toggle state. Defaults to persist unless explicitly set to false.
 
@@ -60,7 +63,7 @@ Include deleted toggle state. Defaults to persist unless explicitly set to false
 
 > `optional` **quickFilters**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L49)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L87)
 
 Quick filter values. Defaults to persist unless explicitly set to false.
 
@@ -70,7 +73,7 @@ Quick filter values. Defaults to persist unless explicitly set to false.
 
 > `optional` **quickFilterText**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L51)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L89)
 
 Quick filter display text. Only persists when explicitly set to true.
 
@@ -80,7 +83,7 @@ Quick filter display text. Only persists when explicitly set to true.
 
 > `optional` **quickSearch**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L53)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L91)
 
 Quick search input text. Only persists when explicitly set to true.
 
@@ -90,6 +93,6 @@ Quick search input text. Only persists when explicitly set to true.
 
 > `optional` **sortColumns**: `boolean`
 
-Defined in: [src/ui/datagrid/datagrid-persistence.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L45)
+Defined in: [src/ui/datagrid/datagrid-persistence.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/datagrid-persistence.ts#L83)
 
 Sort columns. Defaults to persist unless explicitly set to false.

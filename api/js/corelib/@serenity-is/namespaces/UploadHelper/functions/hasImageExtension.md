@@ -4,7 +4,9 @@
 
 > **hasImageExtension**(`filename`): `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L131)
+Defined in: [src/ui/helpers/uploadhelper.tsx:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L169)
+
+Returns whether the given filename has a common image extension.
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:131](https://github.com/serenity-is
 
 `string`
 
+The filename to check.
+
 ## Returns
 
 `boolean`
+
+True if the filename ends with a known image extension.

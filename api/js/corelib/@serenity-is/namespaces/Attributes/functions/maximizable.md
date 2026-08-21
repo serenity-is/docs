@@ -4,15 +4,17 @@
 
 > **maximizable**(`value`): [`MaximizableAttribute`](../../../../classes/MaximizableAttribute.md)
 
-Defined in: [src/types/attributes.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L102)
+Defined in: [src/types/attributes.ts:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L137)
 
-Indicates if a dialog should be maximizable, only for jquery ui dialogs.
+Creates a [MaximizableAttribute](../../../../classes/MaximizableAttribute.md).
 
 ## Parameters
 
 ### value
 
 `boolean` = `true`
+
+True to allow maximizing (default `true`).
 
 ## Returns
 

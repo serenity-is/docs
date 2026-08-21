@@ -4,9 +4,13 @@
 
 > **GroupByResult**\<`TItem`\> = `object`
 
-Defined in: [src/compat/arrays-compat.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L57)
+Defined in: [src/compat/arrays-compat.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L73)
 
-Return type of the `groupBy` function.
+Result returned by [groupBy](../functions/groupBy.md).
+
+## Remarks
+
+Provides both dictionary (`byKey`) and ordered (`inOrder`) access to groups.
 
 ## Type Parameters
 
@@ -14,13 +18,17 @@ Return type of the `groupBy` function.
 
 `TItem`
 
+Element type of the source array.
+
 ## Properties
 
 ### byKey
 
 > **byKey**: `object`
 
-Defined in: [src/compat/arrays-compat.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L58)
+Defined in: [src/compat/arrays-compat.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L75)
+
+Dictionary mapping stringified key to its [GroupByElement](GroupByElement.md).
 
 #### Index Signature
 
@@ -32,4 +40,6 @@ Defined in: [src/compat/arrays-compat.ts:58](https://github.com/serenity-is/sere
 
 > **inOrder**: [`GroupByElement`](GroupByElement.md)\<`TItem`\>[]
 
-Defined in: [src/compat/arrays-compat.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L59)
+Defined in: [src/compat/arrays-compat.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L77)
+
+Groups in order of first encounter in the source array.

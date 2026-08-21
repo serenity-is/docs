@@ -2,7 +2,9 @@
 
 # Interface: SummaryOptions
 
-Defined in: [src/slick/slicktypes.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L55)
+Defined in: [src/slick/slicktypes.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L78)
+
+Aggregator configuration for view-level summaries.
 
 ## Properties
 
@@ -10,4 +12,6 @@ Defined in: [src/slick/slicktypes.ts:55](https://github.com/serenity-is/serenity
 
 > **aggregators**: [`IAggregator`](IAggregator.md)[]
 
-Defined in: [src/slick/slicktypes.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L56)
+Defined in: [src/slick/slicktypes.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L80)
+
+Aggregators used for grand totals.

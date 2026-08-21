@@ -1,13 +1,12 @@
 [@serenity-is/corelib](../README.md) / first
 
-# Function: first()
+# ~~Function: first()~~
 
 > **first**\<`TItem`\>(`array`, `predicate`): `TItem`
 
-Defined in: [src/compat/arrays-compat.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L32)
+Defined in: [src/compat/arrays-compat.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L42)
 
-Gets first element in an array that matches given predicate similar to LINQ's First.
-Throws an error if no match is found.
+Returns the first element that satisfies the predicate (LINQ `First` semantics).
 
 ## Type Parameters
 
@@ -21,16 +20,30 @@ Throws an error if no match is found.
 
 `TItem`[]
 
-Array to test.
+Array to search.
 
 ### predicate
 
 (`x`) => `boolean`
 
-Predicate to test elements.
+Function invoked per element; return `true` for the desired element.
 
 ## Returns
 
 `TItem`
 
-First element that matches.
+The first matching element.
+
+## Throws
+
+If no element satisfies the predicate (`"first:No element satisfies the condition."`).
+
+## Deprecated
+
+Prefer `array.find(predicate)` with explicit not-found handling. Retained as a `Q.first` compat shim.
+
+## Example
+
+```ts
+first([1, 2, 3], x => x > 1); // 2
+```

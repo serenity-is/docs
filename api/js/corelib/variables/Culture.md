@@ -4,10 +4,10 @@
 
 > **Culture**: [`Locale`](../interfaces/Locale.md)
 
-Defined in: [src/base/formatting.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L95)
+Defined in: [src/base/formatting.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L112)
 
-Current culture, e.g. CultureInfo.CurrentCulture. This is overridden by
-settings passed from a `<script>` element in the page with id `ScriptCulture`
-containing a JSON object if available. This element is generally created in 
-the _LayoutHead.cshtml file for Serenity applications, so that the culture
-settings determined server, can be passed to the client.
+Current culture used by all formatting and parsing helpers, analogous to `CultureInfo.CurrentCulture`.
+
+## Remarks
+
+Initialized by [resetCultureSettings](../functions/resetCultureSettings.md). When a `<script id="ScriptCulture">` element containing a JSON object is present (rendered by `_LayoutHead.cshtml`), its values override the defaults. The `DecimalSeparator` / `GroupSeparator` keys are mapped explicitly; remaining keys are camel-cased from PascalCase.

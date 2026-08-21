@@ -2,7 +2,10 @@
 
 # Class: CascadedWidgetLink\<TParent\>
 
-Defined in: [src/ui/editors/cascadedwidgetlink.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L7)
+Defined in: [src/ui/editors/cascadedwidgetlink.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L12)
+
+Links a widget to a parent widget so that it reacts to the parent's changes,
+typically used for cascading select editors.
 
 ## Type Parameters
 
@@ -10,13 +13,17 @@ Defined in: [src/ui/editors/cascadedwidgetlink.ts:7](https://github.com/serenity
 
 `TParent` *extends* [`Widget`](Widget.md)\<`any`\>
 
+The parent widget type.
+
 ## Constructors
 
 ### Constructor
 
 > **new CascadedWidgetLink**\<`TParent`\>(`parentType`, `widget`, `parentChange`): `CascadedWidgetLink`\<`TParent`\>
 
-Defined in: [src/ui/editors/cascadedwidgetlink.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L11)
+Defined in: [src/ui/editors/cascadedwidgetlink.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L22)
+
+Creates a cascaded widget link.
 
 #### Parameters
 
@@ -24,13 +31,19 @@ Defined in: [src/ui/editors/cascadedwidgetlink.ts:11](https://github.com/serenit
 
 (...`args`) => `TParent`
 
+Constructor of the parent widget type.
+
 ##### widget
 
 [`Widget`](Widget.md)\<`any`\>
 
+The child widget to link.
+
 ##### parentChange
 
 (`p1`) => `void`
+
+Callback invoked when the parent changes.
 
 #### Returns
 
@@ -42,7 +55,7 @@ Defined in: [src/ui/editors/cascadedwidgetlink.ts:11](https://github.com/serenit
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/editors/cascadedwidgetlink.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L9)
+Defined in: [src/ui/editors/cascadedwidgetlink.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L14)
 
 ## Methods
 
@@ -50,11 +63,15 @@ Defined in: [src/ui/editors/cascadedwidgetlink.ts:9](https://github.com/serenity
 
 > **bind**(): `TParent`
 
-Defined in: [src/ui/editors/cascadedwidgetlink.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L24)
+Defined in: [src/ui/editors/cascadedwidgetlink.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L39)
+
+Binds the link to the parent widget and subscribes to its change event.
 
 #### Returns
 
 `TParent`
+
+The parent widget, or null if not found.
 
 ***
 
@@ -62,11 +79,15 @@ Defined in: [src/ui/editors/cascadedwidgetlink.ts:24](https://github.com/serenit
 
 > **get\_parentID**(): `string`
 
-Defined in: [src/ui/editors/cascadedwidgetlink.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L59)
+Defined in: [src/ui/editors/cascadedwidgetlink.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L86)
+
+Returns the parent element id.
 
 #### Returns
 
 `string`
+
+The parent id.
 
 ***
 
@@ -74,13 +95,17 @@ Defined in: [src/ui/editors/cascadedwidgetlink.ts:59](https://github.com/serenit
 
 > **set\_parentID**(`value`): `void`
 
-Defined in: [src/ui/editors/cascadedwidgetlink.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L63)
+Defined in: [src/ui/editors/cascadedwidgetlink.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L94)
+
+Sets the parent element id and rebinds the link.
 
 #### Parameters
 
 ##### value
 
 `string`
+
+The parent id.
 
 #### Returns
 
@@ -90,10 +115,14 @@ Defined in: [src/ui/editors/cascadedwidgetlink.ts:63](https://github.com/serenit
 
 ### unbind()
 
-> **unbind**(): `TParent`
+> **unbind**(): `HTMLElement`
 
-Defined in: [src/ui/editors/cascadedwidgetlink.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L44)
+Defined in: [src/ui/editors/cascadedwidgetlink.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/cascadedwidgetlink.ts#L64)
+
+Unbinds the link from the parent widget.
 
 #### Returns
 
-`TParent`
+`HTMLElement`
+
+The parent node, or null.

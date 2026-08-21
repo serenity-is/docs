@@ -4,7 +4,7 @@
 
 > **registerEditor**(`type`, `name`, `intfAndAttr?`): `void`
 
-Defined in: [src/base/system.ts:453](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L453)
+Defined in: [src/base/system.ts:473](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L473)
 
 Register an editor type. Adds EditorAttribute if not already present.
 

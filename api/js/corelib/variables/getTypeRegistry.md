@@ -4,7 +4,7 @@
 
 > `const` **getTypeRegistry**: () => `object` = `getGlobalTypeRegistry`
 
-Defined in: [src/base/system.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L6)
+Defined in: [src/base/system.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L8)
 
 ## Returns
 
@@ -12,4 +12,4 @@ Defined in: [src/base/system.ts:6](https://github.com/serenity-is/serenity/blob/
 
 ## Deprecated
 
-Use getGlobalTypeRegistry instead
+Use [getGlobalTypeRegistry](../functions/getGlobalTypeRegistry.md) instead. Kept for backward compatibility.

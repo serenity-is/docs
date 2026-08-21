@@ -1,13 +1,12 @@
 [@serenity-is/corelib](../README.md) / single
 
-# Function: single()
+# ~~Function: single()~~
 
 > **single**\<`TItem`\>(`array`, `predicate`): `TItem`
 
-Defined in: [src/compat/arrays-compat.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L150)
+Defined in: [src/compat/arrays-compat.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L179)
 
-Gets first element in an array that matches given predicate.
-Throws an error if no matches is found, or there are multiple matches.
+Returns the single element satisfying the predicate (LINQ `Single` semantics).
 
 ## Type Parameters
 
@@ -21,23 +20,30 @@ Throws an error if no matches is found, or there are multiple matches.
 
 `TItem`[]
 
-Array to test.
+Array to search.
 
 ### predicate
 
 (`x`) => `boolean`
 
-Predicate to test elements.
+Function invoked per element; exactly one element must return `true`.
 
 ## Returns
 
 `TItem`
 
-First element that matches.
+The sole matching element.
+
+## Throws
+
+If no element matches (`"single:No element satisfies the condition."`) or more than one matches (`"single:sequence contains more than one element."`).
+
+## Deprecated
+
+Retained as a `Q.single` compat shim; prefer explicit `filter` + length check for clarity.
 
 ## Example
 
 ```ts
-first([1, 2, 3], x => x == 2); // 2
-first([1, 2, 3], x => x == 4); // throws error.
+single([1, 2, 3], x => x == 2); // 2
 ```

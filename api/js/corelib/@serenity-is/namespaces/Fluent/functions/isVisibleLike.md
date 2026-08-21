@@ -4,9 +4,9 @@
 
 > **isVisibleLike**(`element`): `boolean`
 
-Defined in: [src/base/fluent.ts:521](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L521)
+Defined in: [src/base/fluent.ts:688](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L688)
 
-Returns true if the element is visible like. This is for compatibility with jQuery's :visible selector.
+Tests whether the element is considered visible (jQuery `:visible` semantics).
 
 ## Parameters
 
@@ -14,10 +14,10 @@ Returns true if the element is visible like. This is for compatibility with jQue
 
 `Element`
 
-The target element
+Element to test.
 
 ## Returns
 
 `boolean`
 
-true if the element has offsetWidth or offsetHeight or any getClientRects().length > 0
+`true` when the element has non-zero `offsetWidth` / `offsetHeight` or any client rects.

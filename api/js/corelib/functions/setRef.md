@@ -4,9 +4,13 @@
 
 > **setRef**\<`T`\>(`ref`, `current`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2337](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2337)
+Defined in: [../domwise/dist/index.d.ts:2605](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2605)
 
-Sets the `current` property of a `RefObject`, or calls a ref callback with the given value.
+Assigns a value to a ref, handling both object and callback forms.
+
+- If `ref` is a `RefObject`, its `current` property is set to `current`.
+- If `ref` is a function, it is invoked with `current`.
+- If `ref` is `null`/`undefined` or neither form, no action is taken.
 
 ## Type Parameters
 
@@ -14,7 +18,7 @@ Sets the `current` property of a `RefObject`, or calls a ref callback with the g
 
 `T` = `Node`
 
-The type of the referenced node.
+Type of the node/value being assigned.
 
 ## Parameters
 
@@ -22,13 +26,13 @@ The type of the referenced node.
 
 [`Ref`](../type-aliases/Ref.md)\<`T`\>
 
-A `RefObject` or a ref callback, or `undefined`.
+Target `RefObject`, callback, or `null`/`undefined`.
 
 ### current
 
 `T`
 
-The value to assign to the ref.
+Value to assign to the ref.
 
 ## Returns
 

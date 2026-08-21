@@ -4,13 +4,18 @@
 
 > **Grouping**\<`TItem`\> = `object`
 
-Defined in: [src/compat/arrays-compat.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L168)
+Defined in: [src/compat/arrays-compat.ts:202](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L202)
+
+Dictionary mapping a stringified key to the array of items sharing that key.
+Produced by [toGrouping](../functions/toGrouping.md).
 
 ## Type Parameters
 
 ### TItem
 
 `TItem`
+
+Element type of the source array.
 
 ## Index Signature
 

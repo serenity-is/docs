@@ -4,9 +4,9 @@
 
 > **remove**(`element`): `void`
 
-Defined in: [src/base/fluent.ts:530](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L530)
+Defined in: [src/base/fluent.ts:697](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L697)
 
-Removes the element from the DOM. It also removes event handlers and disposes widgets by calling "disposing" event handlers.
+Removes the element from the DOM, clearing Fluent event handlers and firing `disposing` notifications for the element and its descendants.
 
 ## Parameters
 
@@ -14,8 +14,10 @@ Removes the element from the DOM. It also removes event handlers and disposes wi
 
 `Element`
 
-The element to remove
+Element to remove. No-op when `null` / `undefined`.
 
 ## Returns
 
 `void`
+
+`void`.

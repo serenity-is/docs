@@ -4,17 +4,15 @@
 
 > **formatDate**(`d`, `format?`, `locale?`): `string`
 
-Defined in: [src/base/formatting.ts:638](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L638)
+Defined in: [src/base/formatting.ts:680](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L680)
 
-Formats a date using the specified format string and optional culture.
-Supports .NET style format strings including custom formats.
-See .NET documentation for supported formats.
+Formats a `Date` (or date string) using .NET-style format tokens and locale settings.
 
 ## Parameters
 
 ### d
 
-the date to format. If null, it returns empty string.
+Date to format, or an ISO / locale date string that is first parsed. Falsy yields `""`.
 
 `string` | `Date`
 
@@ -22,44 +20,25 @@ the date to format. If null, it returns empty string.
 
 `string`
 
-the format string to use. If null, it uses the current culture's default format.
-'G' uses the culture's datetime format.
-'g' uses the culture's datetime format with secs removed. 
-'d' uses the culture's date format.
-'t' uses the culture's time format.
-'u' uses the sortable ISO format with UTC time.
-'U' uses the culture's date format with UTC time.
+Format string. Special single-letter presets: `"d"` (short date), `"g"` (short datetime without seconds), `"G"` (full datetime), `"t"` (time only), `"s"` (sortable `yyyy-MM-ddTHH:mm:ss`), `"u"` (UTC sortable), `"U"` (locale datetime in UTC), `"i"`/`"id"`/`"it"` (JS `toString` variants). Prefixing with `"%"` forces a custom token (e.g. `"%M"`). When `null`, the locale's `dateFormat` is used.
 
 ### locale?
 
 [`Locale`](../interfaces/Locale.md)
 
-the locale to use
+Locale overrides token names and separators. Defaults to [Culture](../variables/Culture.md).
 
 ## Returns
 
 `string`
 
-the formatted date
+The formatted date string, or `""` / the original string on parse failure.
 
-## Examples
-
-```ts
-// returns "2019-01-01"
-formatDate(new Date(2019, 0, 1), "yyyy-MM-dd");
-```
+## Example
 
 ```ts
-// returns "2019-01-01 12:00:00"
-formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss");
-```
-
-```ts
-// returns "2019-01-01 12:00:00.000"
-formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff");
-```
-
-```ts
-// returns "2019-01-01 12:00:00.000 AM"
-formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff tt");
+formatDate(new Date(2019, 0, 1), "yyyy-MM-dd");                // "2019-01-01"
+formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss");   // "2019-01-01 12:00:00"
+formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff"); // "2019-01-01 12:00:00.000"
+formatDate(new Date(2019, 0, 1, 12), "yyyy-MM-dd HH:mm:ss.fff tt"); // "2019-01-01 12:00:00.000 PM"
 ```

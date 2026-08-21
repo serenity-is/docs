@@ -2,7 +2,11 @@
 
 # DialogTexts
 
-Namespace containing localizable text constants for dialogs.
+Localizable text constants for dialogs.
+
+## Remarks
+
+Each property is a getter that calls `localText("Dialogs." + key, defaultValue)` and HTML-encodes the result. Defaults are in English; override via `Texts.Dialogs.*` localizations.
 
 ## Variables
 

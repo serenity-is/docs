@@ -2,6 +2,8 @@
 
 # SlickTreeHelper
 
+Helper functions for tree-structured data in grids.
+
 ## Functions
 
 - [filterById](functions/filterById.md)

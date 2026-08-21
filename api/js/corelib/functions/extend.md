@@ -4,9 +4,9 @@
 
 > **extend**\<`T`\>(`a`, `b`): `T`
 
-Defined in: [src/compat/system-compat.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L18)
+Defined in: [src/compat/system-compat.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L39)
 
-Extends an object with properties from another object similar to Object.assign.
+Shallow-copies properties from `b` onto `a`, mutating `a` — equivalent to `Object.assign(a, b)`.
 
 ## Type Parameters
 
@@ -14,20 +14,28 @@ Extends an object with properties from another object similar to Object.assign.
 
 `T` = `any`
 
+The common object type.
+
 ## Parameters
 
 ### a
 
 `T`
 
+The target object to extend (mutated and returned).
+
 ### b
 
 `T`
+
+The source object whose own properties are copied onto `a`.
 
 ## Returns
 
 `T`
 
+The mutated target object `a`.
+
 ## Deprecated
 
-Use Object.assign
+Use Object.assign directly.

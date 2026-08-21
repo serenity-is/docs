@@ -2,13 +2,31 @@
 
 # Function: off()
 
+Removes an event listener (implementation).
+
+## Param
+
+Target element.
+
+## Param
+
+Event type; may include a `.namespace`.
+
+## Param
+
+Specific callback to remove.
+
+## Param
+
+Delegated handler to remove.
+
 ## Call Signature
 
 > **off**\<`K`\>(`element`, `type`, `listener?`): `void`
 
-Defined in: [src/base/fluent.ts:470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L470)
+Defined in: [src/base/fluent.ts:610](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L610)
 
-Removes an event listener from the element.
+Removes an event listener (or all listeners for a namespaced type).
 
 ### Type Parameters
 
@@ -22,31 +40,33 @@ Removes an event listener from the element.
 
 `EventTarget`
 
-The target element
+Target element.
 
 #### type
 
 `K`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type; may include a `.namespace`. When only a namespace is handled, all matching listeners are removed.
 
 #### listener?
 
 (`this`, `ev`) => `any`
 
-The event listener to remove.
+Specific callback to remove. When omitted, all listeners for `type` are removed.
 
 ### Returns
 
 `void`
+
+`void`.
 
 ## Call Signature
 
 > **off**(`element`, `type`, `listener?`): `void`
 
-Defined in: [src/base/fluent.ts:471](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L471)
+Defined in: [src/base/fluent.ts:618](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L618)
 
-Removes an event listener from the element.
+Removes an event listener.
 
 ### Parameters
 
@@ -54,31 +74,33 @@ Removes an event listener from the element.
 
 `EventTarget`
 
-The target element
+Target element.
 
 #### type
 
 `string`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type; may include a `.namespace`.
 
 #### listener?
 
 `EventListener`
 
-The event listener to remove.
+Specific callback to remove. When omitted, all listeners for `type` are removed.
 
 ### Returns
 
 `void`
 
+`void`.
+
 ## Call Signature
 
 > **off**(`element`, `type`, `selector?`, `delegationHandler?`): `void`
 
-Defined in: [src/base/fluent.ts:472](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L472)
+Defined in: [src/base/fluent.ts:627](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L627)
 
-Removes an event listener from the element.
+Removes a delegated event listener.
 
 ### Parameters
 
@@ -86,22 +108,28 @@ Removes an event listener from the element.
 
 `EventTarget`
 
-The target element
+Target element.
 
 #### type
 
 `string`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type; may include a `.namespace`.
 
 #### selector?
 
 `string`
 
+Delegation selector used when the listener was added.
+
 #### delegationHandler?
 
 `Function`
 
+Delegated handler to remove.
+
 ### Returns
 
 `void`
+
+`void`.

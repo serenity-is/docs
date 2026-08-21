@@ -130,9 +130,10 @@ Event fired when the row count changes
 
 > `readonly` `optional` **onRowsChanged**: `EventEmitter`\<\{ `rows`: `number`[]; \}\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:1303](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1303)
+Defined in: [../sleekgrid/dist/index.d.ts:2490](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2490)
 
-Event fired when specific rows change
+Event fired when specific view rows change (values or metadata).
+Payload is `{ rows }` with the list of affected view indices.
 
 #### Inherited from
 
@@ -184,7 +185,7 @@ The page number to seek to when loading data
 
 > **sortBy**: `string`[]
 
-Defined in: [src/slick/iremoteview.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L261)
+Defined in: [src/slick/iremoteview.ts:262](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L262)
 
 Sort expressions for the data
 
@@ -194,7 +195,7 @@ Sort expressions for the data
 
 > **url**: `string`
 
-Defined in: [src/slick/iremoteview.ts:277](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L277)
+Defined in: [src/slick/iremoteview.ts:283](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L283)
 
 The URL to fetch data from
 
@@ -424,13 +425,15 @@ Array of filtered items
 
 > **getGrandTotals**(): `IGroupTotals`
 
-Defined in: [../sleekgrid/dist/index.d.ts:1288](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1288)
+Defined in: [../sleekgrid/dist/index.d.ts:2458](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2458)
 
-Gets the grand totals for all aggregated data.
+Gets grand totals aggregated over the entire data set.
 
 #### Returns
 
 `IGroupTotals`
+
+Grand totals object containing `sum`/`avg`/`min`/`max`, if any.
 
 #### Inherited from
 
@@ -530,9 +533,9 @@ The index of the item, or undefined if not found
 
 > **getItem**(`row`): `IGroupTotals`\<`any`\> \| `TItem` \| `Group`\<`TItem`\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:1292](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1292)
+Defined in: [../sleekgrid/dist/index.d.ts:2469](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2469)
 
-Gets the item at the specified row index.
+Gets the item at the specified view row.
 
 #### Parameters
 
@@ -540,9 +543,13 @@ Gets the item at the specified row index.
 
 `number`
 
+Zero-based view index.
+
 #### Returns
 
 `IGroupTotals`\<`any`\> \| `TItem` \| `Group`\<`TItem`\>
+
+Data item, `Group` header, or `IGroupTotals` row.
 
 #### Inherited from
 
@@ -602,9 +609,9 @@ The item at the specified index
 
 > `optional` **getItemMetadata**(`row`): `ItemMetadata`\<`TItem`\>
 
-Defined in: [../sleekgrid/dist/index.d.ts:1294](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1294)
+Defined in: [../sleekgrid/dist/index.d.ts:2475](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2475)
 
-Gets metadata for the item at the specified row index.
+Gets row metadata (CSS classes, per-column overrides) for the specified view row.
 
 #### Parameters
 
@@ -612,9 +619,13 @@ Gets metadata for the item at the specified row index.
 
 `number`
 
+Zero-based view index.
+
 #### Returns
 
 `ItemMetadata`\<`TItem`\>
+
+Metadata object or `undefined` when none applies.
 
 #### Inherited from
 
@@ -670,13 +681,15 @@ Array of all items
 
 > **getLength**(): `number`
 
-Defined in: [../sleekgrid/dist/index.d.ts:1290](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L1290)
+Defined in: [../sleekgrid/dist/index.d.ts:2463](https://github.com/serenity-is/serenity/blob/master/packages/sleekgrid/dist/index.d.ts#L2463)
 
-Gets the total number of rows in the view.
+Gets the total number of rows currently in the view (including group headers/totals).
 
 #### Returns
 
 `number`
+
+Row count.
 
 #### Inherited from
 
@@ -953,7 +966,7 @@ The metadata provider to set
 
 > **setItemMetadataCallback**(`value`): `void`
 
-Defined in: [src/slick/iremoteview.ts:227](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L227)
+Defined in: [src/slick/iremoteview.ts:228](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L228)
 
 Sets a callback function to retrieve item metadata. This can be used to dynamically assign CSS classes or other properties to items.
 
@@ -962,6 +975,8 @@ Sets a callback function to retrieve item metadata. This can be used to dynamica
 ##### value
 
 (`item`, `row`) => `ItemMetadata`\<`TItem`\>
+
+The item metadata callback.
 
 #### Returns
 
@@ -1001,7 +1016,7 @@ Optional new ID property name, or boolean to reset
 
 > `optional` **setLocalSort**(`value`): `void`
 
-Defined in: [src/slick/iremoteview.ts:232](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L232)
+Defined in: [src/slick/iremoteview.ts:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L233)
 
 Sets whether to use local sorting. When enabled, sorting is done client-side.
 
@@ -1023,7 +1038,7 @@ Whether to enable local sorting
 
 > **setPagingOptions**(`args`): `void`
 
-Defined in: [src/slick/iremoteview.ts:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L237)
+Defined in: [src/slick/iremoteview.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L238)
 
 Sets paging options and triggers a data reload if options changed.
 
@@ -1045,7 +1060,7 @@ The paging options to set
 
 > `optional` **setSummaryOptions**(`summary`): `void`
 
-Defined in: [src/slick/iremoteview.ts:242](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L242)
+Defined in: [src/slick/iremoteview.ts:243](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L243)
 
 Sets summary/aggregation options for the view.
 
@@ -1067,7 +1082,7 @@ Object containing aggregators and other summary options
 
 > `optional` **sort**(`comparer?`, `ascending?`): `void`
 
-Defined in: [src/slick/iremoteview.ts:248](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L248)
+Defined in: [src/slick/iremoteview.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L249)
 
 Sorts the items using the specified comparer function.
 
@@ -1095,7 +1110,7 @@ Whether to sort in ascending order (default true)
 
 > `optional` **sortedAddItem**(`item`): `void`
 
-Defined in: [src/slick/iremoteview.ts:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L253)
+Defined in: [src/slick/iremoteview.ts:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L254)
 
 Adds an item in sorted order.
 
@@ -1117,7 +1132,7 @@ The item to add
 
 > `optional` **sortedUpdateItem**(`id`, `item`): `void`
 
-Defined in: [src/slick/iremoteview.ts:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L259)
+Defined in: [src/slick/iremoteview.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L260)
 
 Updates an item while maintaining sorted order.
 
@@ -1145,7 +1160,7 @@ The new item data
 
 > `optional` **syncGridCellCssStyles**(`grid`, `key`): `void`
 
-Defined in: [src/slick/iremoteview.ts:265](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L265)
+Defined in: [src/slick/iremoteview.ts:268](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L268)
 
 Syncs cell CSS styles between the grid and the data view.
 
@@ -1155,9 +1170,13 @@ Syncs cell CSS styles between the grid and the data view.
 
 `ISleekGrid`
 
+The grid to sync with.
+
 ##### key
 
 `string`
+
+The CSS style key.
 
 #### Returns
 
@@ -1169,7 +1188,7 @@ Syncs cell CSS styles between the grid and the data view.
 
 > `optional` **syncGridSelection**(`grid`, `preserveHidden?`, `preserveHiddenOnSelectionChange?`): `EventEmitter`\<`any`, \{ \}\>
 
-Defined in: [src/slick/iremoteview.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L269)
+Defined in: [src/slick/iremoteview.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L275)
 
 Wires the grid and the DataView together to keep row selection tied to item ids.
 
@@ -1179,13 +1198,19 @@ Wires the grid and the DataView together to keep row selection tied to item ids.
 
 `ISleekGrid`
 
+The grid to sync selection with.
+
 ##### preserveHidden?
 
 `boolean`
 
+Whether to keep selected items that go out of view due to filtering.
+
 ##### preserveHiddenOnSelectionChange?
 
 `boolean`
+
+Whether to keep hidden items selected when selection changes.
 
 #### Returns
 
@@ -1197,7 +1222,7 @@ Wires the grid and the DataView together to keep row selection tied to item ids.
 
 > **updateItem**(`id`, `item`): `void`
 
-Defined in: [src/slick/iremoteview.ts:275](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L275)
+Defined in: [src/slick/iremoteview.ts:281](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/iremoteview.ts#L281)
 
 Updates an existing item in the view.
 

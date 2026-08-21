@@ -4,16 +4,15 @@
 
 > **isDefaultPrevented**(`event`): `boolean`
 
-Defined in: [src/base/fluent.ts:634](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L634)
+Defined in: [src/base/fluent.ts:800](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L800)
 
-Checks if the event's preventDefault method is called. This is for compatibility with jQuery which
-has a non-standard isDefaultPrevented method.
+Tests whether `preventDefault()` was called on the event, supporting both native and jQuery-wrapped events.
 
 ## Parameters
 
 ### event
 
-The event object
+Event object, possibly with a jQuery `isDefaultPrevented()` method.
 
 #### defaultPrevented?
 
@@ -27,4 +26,4 @@ The event object
 
 `boolean`
 
-True if preventDefault is called.
+`true` when `defaultPrevented` is `true` or `isDefaultPrevented()` returns `true`.

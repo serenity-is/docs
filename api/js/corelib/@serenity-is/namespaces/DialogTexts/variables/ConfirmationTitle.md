@@ -4,6 +4,6 @@
 
 > `const` **ConfirmationTitle**: `string`
 
-Defined in: [src/base/dialogs.tsx:720](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L720)
+Defined in: [src/base/dialogs.tsx:809](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L809)
 
 Title for confirmation dialogs.

@@ -2,13 +2,31 @@
 
 # Function: on()
 
+Adds an event listener (implementation).
+
+## Param
+
+Target element to listen on.
+
+## Param
+
+Event type; may include a `.namespace` suffix.
+
+## Param
+
+Event listener or selector when delegating.
+
+## Param
+
+Delegated handler when `handler` is a selector.
+
 ## Call Signature
 
 > **on**\<`K`\>(`element`, `type`, `listener`): `void`
 
-Defined in: [src/base/fluent.ts:442](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L442)
+Defined in: [src/base/fluent.ts:536](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L536)
 
-Adds an event listener to the element. It is possible to use delegated events like jQuery.
+Adds an event listener, with optional delegation and namespace support.
 
 ### Type Parameters
 
@@ -22,31 +40,33 @@ Adds an event listener to the element. It is possible to use delegated events li
 
 `EventTarget`
 
-The target element
+Target element to listen on.
 
 #### type
 
 `K`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type; may include a `.namespace` suffix (e.g. `"click.myNs"`).
 
 #### listener
 
 (`this`, `ev`) => `any`
 
-The event listener to add.
+Callback to invoke when the event fires.
 
 ### Returns
 
 `void`
+
+`void`.
 
 ## Call Signature
 
 > **on**(`element`, `type`, `listener`): `void`
 
-Defined in: [src/base/fluent.ts:443](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L443)
+Defined in: [src/base/fluent.ts:544](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L544)
 
-Adds an event listener to the element. It is possible to use delegated events like jQuery.
+Adds an event listener.
 
 ### Parameters
 
@@ -54,31 +74,33 @@ Adds an event listener to the element. It is possible to use delegated events li
 
 `EventTarget`
 
-The target element
+Target element to listen on.
 
 #### type
 
 `string`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type; may include a `.namespace` suffix.
 
 #### listener
 
 `EventListener`
 
-The event listener to add.
+Callback to invoke when the event fires.
 
 ### Returns
 
 `void`
 
+`void`.
+
 ## Call Signature
 
 > **on**(`element`, `type`, `selector`, `delegationHandler`): `void`
 
-Defined in: [src/base/fluent.ts:444](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L444)
+Defined in: [src/base/fluent.ts:553](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L553)
 
-Adds an event listener to the element. It is possible to use delegated events like jQuery.
+Adds a delegated event listener.
 
 ### Parameters
 
@@ -86,22 +108,28 @@ Adds an event listener to the element. It is possible to use delegated events li
 
 `EventTarget`
 
-The target element
+Target element to listen on.
 
 #### type
 
 `string`
 
-The type of the event. It can include a ".namespace" similar to jQuery.
+Event type; may include a `.namespace` suffix.
 
 #### selector
 
 `string`
 
+CSS selector to delegate to.
+
 #### delegationHandler
 
 `Function`
 
+Handler invoked when the delegated target matches.
+
 ### Returns
 
 `void`
+
+`void`.

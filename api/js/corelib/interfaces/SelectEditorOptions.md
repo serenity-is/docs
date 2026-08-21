@@ -2,7 +2,9 @@
 
 # Interface: SelectEditorOptions
 
-Defined in: [src/ui/editors/selecteditor.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L41)
+Defined in: [src/ui/editors/selecteditor.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L63)
+
+Options for the [SelectEditor](../classes/SelectEditor.md).
 
 ## Extends
 
@@ -18,7 +20,9 @@ Defined in: [src/ui/editors/selecteditor.ts:41](https://github.com/serenity-is/s
 
 > `optional` **allowClear**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L15)
+Defined in: [src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)
+
+Whether the selection can be cleared.
 
 #### Inherited from
 
@@ -30,7 +34,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-i
 
 > `optional` **delimited**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
+Defined in: [src/ui/editors/comboboxeditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L21)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 
@@ -42,7 +48,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-i
 
 > `optional` **emptyOptionText**: `string`
 
-Defined in: [src/ui/editors/selecteditor.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L43)
+Defined in: [src/ui/editors/selecteditor.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L67)
+
+Text for the empty option.
 
 ***
 
@@ -50,7 +58,9 @@ Defined in: [src/ui/editors/selecteditor.ts:43](https://github.com/serenity-is/s
 
 > `optional` **items**: `any`[]
 
-Defined in: [src/ui/editors/selecteditor.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L42)
+Defined in: [src/ui/editors/selecteditor.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/selecteditor.ts#L65)
+
+Items to display; each is a value or a [value, text] pair.
 
 ***
 
@@ -58,7 +68,9 @@ Defined in: [src/ui/editors/selecteditor.ts:42](https://github.com/serenity-is/s
 
 > `optional` **minimumResultsForSearch**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
+
+Minimum results required to show the search box.
 
 #### Inherited from
 
@@ -70,7 +82,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-i
 
 > `optional` **multiple**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 

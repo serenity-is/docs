@@ -4,9 +4,16 @@
 
 > **GroupByElement**\<`TItem`\> = `object`
 
-Defined in: [src/compat/arrays-compat.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L43)
+Defined in: [src/compat/arrays-compat.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L57)
 
-A group item returned by `groupBy()`.
+Single group produced by [groupBy](../functions/groupBy.md).
+
+## Example
+
+```ts
+const g = groupBy(users, u => u.department);
+g.inOrder[0].key; // department key
+```
 
 ## Type Parameters
 
@@ -14,15 +21,17 @@ A group item returned by `groupBy()`.
 
 `TItem`
 
+Element type of the source array.
+
 ## Properties
 
 ### items
 
 > **items**: `TItem`[]
 
-Defined in: [src/compat/arrays-compat.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L49)
+Defined in: [src/compat/arrays-compat.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L63)
 
-the items in the group
+Elements belonging to this group, in original encounter order.
 
 ***
 
@@ -30,9 +39,9 @@ the items in the group
 
 > **key**: `string`
 
-Defined in: [src/compat/arrays-compat.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L47)
+Defined in: [src/compat/arrays-compat.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L61)
 
-key of the group
+Group key as returned by the `getKey` callback (normalized to string).
 
 ***
 
@@ -40,9 +49,9 @@ key of the group
 
 > **order**: `number`
 
-Defined in: [src/compat/arrays-compat.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L45)
+Defined in: [src/compat/arrays-compat.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L59)
 
-index of the item in `inOrder` array
+Zero-based position of this group in the [GroupByResult.inOrder](GroupByResult.md#inorder) array.
 
 ***
 
@@ -50,6 +59,6 @@ index of the item in `inOrder` array
 
 > **start**: `number`
 
-Defined in: [src/compat/arrays-compat.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L51)
+Defined in: [src/compat/arrays-compat.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L65)
 
-index of the first item of this group in the original array
+Index of the first element of this group in the original source array.

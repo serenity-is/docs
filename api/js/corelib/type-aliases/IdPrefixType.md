@@ -4,7 +4,10 @@
 
 > **IdPrefixType** = `object`
 
-Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L108)
+Defined in: [src/ui/widgets/widgetutils.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L143)
+
+A helper object that resolves prefix-relative ids, with special handling for
+the `Form`, `Tabs`, `Toolbar` and `PropertyGrid` keys.
 
 ## Indexable
 
@@ -16,7 +19,7 @@ Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/s
 
 > **Form**: `string`
 
-Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L108)
+Defined in: [src/ui/widgets/widgetutils.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L143)
 
 ***
 
@@ -24,7 +27,7 @@ Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/s
 
 > **PropertyGrid**: `string`
 
-Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L108)
+Defined in: [src/ui/widgets/widgetutils.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L143)
 
 ***
 
@@ -32,7 +35,7 @@ Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/s
 
 > **Tabs**: `string`
 
-Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L108)
+Defined in: [src/ui/widgets/widgetutils.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L143)
 
 ***
 
@@ -40,4 +43,4 @@ Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/s
 
 > **Toolbar**: `string`
 
-Defined in: [src/ui/widgets/widgetutils.ts:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L108)
+Defined in: [src/ui/widgets/widgetutils.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L143)

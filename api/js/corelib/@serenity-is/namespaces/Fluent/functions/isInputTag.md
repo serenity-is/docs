@@ -4,9 +4,9 @@
 
 > **isInputTag**(`tag`): `boolean`
 
-Defined in: [src/base/fluent.ts:624](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L624)
+Defined in: [src/base/fluent.ts:791](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L791)
 
-Returns true if the tag is one of input, textarea, select, button.
+Tests whether a tag name is an input-like tag.
 
 ## Parameters
 
@@ -14,10 +14,10 @@ Returns true if the tag is one of input, textarea, select, button.
 
 `string`
 
-The tag
+Tag name to test (case-insensitive).
 
 ## Returns
 
 `boolean`
 
-true if the element has offsetWidth or offsetHeight or any getClientRects().length > 0
+`true` when `tag` is `input`, `select`, `textarea`, or `button`.

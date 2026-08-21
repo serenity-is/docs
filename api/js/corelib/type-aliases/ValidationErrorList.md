@@ -4,4 +4,6 @@
 
 > **ValidationErrorList** = [`ValidationErrorItem`](../interfaces/ValidationErrorItem.md)[]
 
-Defined in: [src/base/validator.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L46)
+Defined in: [src/base/validator.tsx:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L63)
+
+Ordered list of validation failures for the current validation run.

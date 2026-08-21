@@ -4,7 +4,9 @@
 
 > **notifyInfo**(`message`, `title?`, `options?`): `void`
 
-Defined in: [src/base/notify.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L49)
+Defined in: [src/base/notify.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/notify.ts#L86)
+
+Shows an informational toast notification.
 
 ## Parameters
 
@@ -12,14 +14,26 @@ Defined in: [src/base/notify.ts:49](https://github.com/serenity-is/serenity/blob
 
 [`RenderableContent`](../type-aliases/RenderableContent.md)
 
+Main content of the toast.
+
 ### title?
 
 [`RenderableContent`](../type-aliases/RenderableContent.md)
+
+Optional title displayed above the message.
 
 ### options?
 
 [`ToastrOptions`](../type-aliases/ToastrOptions.md)
 
+Per-call toastr overrides merged over [defaultNotifyOptions](../variables/defaultNotifyOptions.md).
+
 ## Returns
 
 `void`
+
+## Example
+
+```ts
+notifyInfo("Your changes were saved.");
+```

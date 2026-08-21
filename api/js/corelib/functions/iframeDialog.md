@@ -4,9 +4,9 @@
 
 > **iframeDialog**(`options`): `Partial`\<[`Dialog`](../classes/Dialog.md)\>
 
-Defined in: [src/base/dialogs.tsx:1128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1128)
+Defined in: [src/base/dialogs.tsx:1245](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L1245)
 
-Display a dialog that shows an HTML block in an IFRAME, which is usually returned from server callbacks
+Displays a dialog whose content is an `iframe` rendering arbitrary HTML.
 
 ## Parameters
 
@@ -14,8 +14,14 @@ Display a dialog that shows an HTML block in an IFRAME, which is usually returne
 
 [`IFrameDialogOptions`](../interfaces/IFrameDialogOptions.md)
 
-The options
+Configuration containing the HTML to display.
 
 ## Returns
 
 `Partial`\<[`Dialog`](../classes/Dialog.md)\>
+
+A [Dialog](../classes/Dialog.md) handle (partial when falling back to `alert` without modal support).
+
+## Remarks
+
+Falls back to `window.alert` with sanitized HTML when neither Bootstrap modal nor jQuery UI dialog is available.

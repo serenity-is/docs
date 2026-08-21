@@ -4,7 +4,9 @@
 
 > **undeleteToolButton**(`opt?`): [`ToolButton`](../interfaces/ToolButton.md)
 
-Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L40)
+Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L63)
+
+Creates a toolbar button that undeletes a soft-deleted entity.
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:40](https://github.com/serenit
 
 [`ToolButton`](../interfaces/ToolButton.md)
 
+Optional overrides merged into the button definition.
+
 ## Returns
 
 [`ToolButton`](../interfaces/ToolButton.md)
+
+Tool button definition.

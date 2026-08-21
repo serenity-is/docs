@@ -4,7 +4,7 @@
 
 > **getTypeShortName**(`type`): `string`
 
-Defined in: [src/base/system.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L101)
+Defined in: [src/base/system.ts:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L109)
 
 Get the short name of a type (without namespace).
 

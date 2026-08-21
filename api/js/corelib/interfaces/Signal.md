@@ -2,7 +2,9 @@
 
 # Interface: Signal\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L27)
+Defined in: [../domwise/dist/index.d.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L99)
+
+A writable signal whose `value` can be set.
 
 ## Extends
 
@@ -14,6 +16,8 @@ Defined in: [../domwise/dist/index.d.ts:27](https://github.com/serenity-is/seren
 
 `T`
 
+The type of the signal's value.
+
 ## Accessors
 
 ### value
@@ -22,7 +26,9 @@ Defined in: [../domwise/dist/index.d.ts:27](https://github.com/serenity-is/seren
 
 > **set** **value**(`value`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L28)
+Defined in: [../domwise/dist/index.d.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L100)
+
+Current value; reading may track a dependency when inside an effect/computed.
 
 ##### Parameters
 
@@ -44,11 +50,15 @@ Defined in: [../domwise/dist/index.d.ts:28](https://github.com/serenity-is/seren
 
 > **peek**(): `T`
 
-Defined in: [../domwise/dist/index.d.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L24)
+Defined in: [../domwise/dist/index.d.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L87)
+
+Returns the current value without creating a dependency.
 
 #### Returns
 
 `T`
+
+The current value.
 
 #### Inherited from
 
@@ -60,7 +70,9 @@ Defined in: [../domwise/dist/index.d.ts:24](https://github.com/serenity-is/seren
 
 > **subscribe**(`fn`): () => `void`
 
-Defined in: [../domwise/dist/index.d.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L25)
+Defined in: [../domwise/dist/index.d.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L93)
+
+Subscribes to value changes.
 
 #### Parameters
 
@@ -68,7 +80,11 @@ Defined in: [../domwise/dist/index.d.ts:25](https://github.com/serenity-is/seren
 
 (`value`) => `void`
 
+Callback invoked with each new value (and typically immediately with the current value).
+
 #### Returns
+
+A disposer that unsubscribes, or `null` if unsubscription is not supported.
 
 > (): `void`
 

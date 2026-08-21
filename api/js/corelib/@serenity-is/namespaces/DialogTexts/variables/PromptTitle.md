@@ -4,6 +4,6 @@
 
 > `const` **PromptTitle**: `string`
 
-Defined in: [src/base/dialogs.tsx:745](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L745)
+Defined in: [src/base/dialogs.tsx:834](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L834)
 
 Title for the prompt dialog.

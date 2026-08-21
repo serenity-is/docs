@@ -2,7 +2,10 @@
 
 # Interface: ListRequest
 
-Defined in: [src/base/servicetypes.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L58)
+Defined in: [src/base/servicetypes.ts:126](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L126)
+
+Request DTO for `List` handlers (grid data source).
+Supports paging, sorting, filtering and column selection.
 
 ## Extends
 
@@ -14,7 +17,9 @@ Defined in: [src/base/servicetypes.ts:58](https://github.com/serenity-is/serenit
 
 > `optional` **ColumnSelection**: [`ColumnSelection`](../enumerations/ColumnSelection.md)
 
-Defined in: [src/base/servicetypes.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L68)
+Defined in: [src/base/servicetypes.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L146)
+
+Preset that controls which columns are returned. See [ColumnSelection](../enumerations/ColumnSelection.md).
 
 ***
 
@@ -22,7 +27,9 @@ Defined in: [src/base/servicetypes.ts:68](https://github.com/serenity-is/serenit
 
 > `optional` **ContainsField**: `string`
 
-Defined in: [src/base/servicetypes.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L63)
+Defined in: [src/base/servicetypes.ts:136](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L136)
+
+When set, `ContainsText` is applied only to this field instead of all searchable fields.
 
 ***
 
@@ -30,7 +37,9 @@ Defined in: [src/base/servicetypes.ts:63](https://github.com/serenity-is/serenit
 
 > `optional` **ContainsText**: `string`
 
-Defined in: [src/base/servicetypes.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L62)
+Defined in: [src/base/servicetypes.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L134)
+
+Quick-search text applied across searchable fields (or [ContainsField](#containsfield) when specified).
 
 ***
 
@@ -38,7 +47,9 @@ Defined in: [src/base/servicetypes.ts:62](https://github.com/serenity-is/serenit
 
 > `optional` **Criteria**: `any`[]
 
-Defined in: [src/base/servicetypes.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L64)
+Defined in: [src/base/servicetypes.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L138)
+
+Advanced filter criteria tree (Serenity `Criteria` format: `[field, op, value]` or nested `["and", [...]]`).
 
 ***
 
@@ -46,7 +57,9 @@ Defined in: [src/base/servicetypes.ts:64](https://github.com/serenity-is/serenit
 
 > `optional` **DistinctFields**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L72)
+Defined in: [src/base/servicetypes.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L154)
+
+Fields to apply `DISTINCT` on (server-dependent).
 
 ***
 
@@ -54,7 +67,9 @@ Defined in: [src/base/servicetypes.ts:72](https://github.com/serenity-is/serenit
 
 > `optional` **EqualityFilter**: `any`
 
-Defined in: [src/base/servicetypes.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L65)
+Defined in: [src/base/servicetypes.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L140)
+
+Simple equality filter map, e.g. `{ Status: 1 }`. Combined with `Criteria` via AND.
 
 ***
 
@@ -62,7 +77,9 @@ Defined in: [src/base/servicetypes.ts:65](https://github.com/serenity-is/serenit
 
 > `optional` **ExcludeColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L70)
+Defined in: [src/base/servicetypes.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L150)
+
+Explicit deny-list of columns to exclude.
 
 ***
 
@@ -70,7 +87,9 @@ Defined in: [src/base/servicetypes.ts:70](https://github.com/serenity-is/serenit
 
 > `optional` **ExcludeTotalCount**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L67)
+Defined in: [src/base/servicetypes.ts:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L144)
+
+When true the server may skip computing `TotalCount` for performance.
 
 ***
 
@@ -78,7 +97,9 @@ Defined in: [src/base/servicetypes.ts:67](https://github.com/serenity-is/serenit
 
 > `optional` **ExportColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L71)
+Defined in: [src/base/servicetypes.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L152)
+
+Columns to export when `List` is used for export; defaults to visible columns.
 
 ***
 
@@ -86,7 +107,9 @@ Defined in: [src/base/servicetypes.ts:71](https://github.com/serenity-is/serenit
 
 > `optional` **IncludeColumns**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L69)
+Defined in: [src/base/servicetypes.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L148)
+
+Explicit allow-list of columns to include (overrides `ColumnSelection`).
 
 ***
 
@@ -94,7 +117,9 @@ Defined in: [src/base/servicetypes.ts:69](https://github.com/serenity-is/serenit
 
 > `optional` **IncludeDeleted**: `boolean`
 
-Defined in: [src/base/servicetypes.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L66)
+Defined in: [src/base/servicetypes.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L142)
+
+When true, soft-deleted rows are included in results.
 
 ***
 
@@ -102,7 +127,9 @@ Defined in: [src/base/servicetypes.ts:66](https://github.com/serenity-is/serenit
 
 > `optional` **Localize**: `string`
 
-Defined in: [src/base/servicetypes.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L73)
+Defined in: [src/base/servicetypes.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L156)
+
+Language ID for localized field selection (e.g. `"en"`, `"tr"`).
 
 ***
 
@@ -110,7 +137,9 @@ Defined in: [src/base/servicetypes.ts:73](https://github.com/serenity-is/serenit
 
 > `optional` **Skip**: `number`
 
-Defined in: [src/base/servicetypes.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L59)
+Defined in: [src/base/servicetypes.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L128)
+
+Number of records to skip (offset) for paging.
 
 ***
 
@@ -118,7 +147,9 @@ Defined in: [src/base/servicetypes.ts:59](https://github.com/serenity-is/serenit
 
 > `optional` **Sort**: `string`[]
 
-Defined in: [src/base/servicetypes.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L61)
+Defined in: [src/base/servicetypes.ts:132](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L132)
+
+Sort expressions, e.g. `["Name ASC", "Age DESC"]`.
 
 ***
 
@@ -126,4 +157,6 @@ Defined in: [src/base/servicetypes.ts:61](https://github.com/serenity-is/serenit
 
 > `optional` **Take**: `number`
 
-Defined in: [src/base/servicetypes.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L60)
+Defined in: [src/base/servicetypes.ts:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L130)
+
+Maximum number of records to take (page size). Omit or 0 for server default.

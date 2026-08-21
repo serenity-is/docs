@@ -4,9 +4,11 @@
 
 > `const` **getFormDataAsync**: (`key`) => `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\> = `getFormScript`
 
-Defined in: [src/compat/scriptdata-compat.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L77)
+Defined in: [src/compat/scriptdata-compat.ts:162](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L162)
 
-Gets or loads a [FormScript] data
+Alias for [getFormScript](../functions/getFormScript.md). Compat shim for `Q.getFormDataAsync`.
+
+Loads a `FormScript` bundle for the given key.
 
 ## Parameters
 
@@ -14,10 +16,10 @@ Gets or loads a [FormScript] data
 
 `string`
 
-Form key
+Form key (usually the row/form type name, e.g. `"Administration.User"`).
 
 ## Returns
 
 `Promise`\<[`PropertyItemsData`](../interfaces/PropertyItemsData.md)\>
 
-A property items data object containing items and additionalItems properties
+A promise resolving to a [PropertyItemsData](../interfaces/PropertyItemsData.md) describing the form fields.

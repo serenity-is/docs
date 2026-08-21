@@ -1,13 +1,12 @@
 [@serenity-is/corelib](../README.md) / toGrouping
 
-# Function: toGrouping()
+# ~~Function: toGrouping()~~
 
 > **toGrouping**\<`TItem`\>(`items`, `getKey`): [`Grouping`](../type-aliases/Grouping.md)\<`TItem`\>
 
-Defined in: [src/compat/arrays-compat.ts:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L179)
+Defined in: [src/compat/arrays-compat.ts:214](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L214)
 
-Maps an array into a dictionary with keys determined by specified getKey() callback,
-and values that are arrays containing elements for a particular key.
+Groups an array into a dictionary keyed by `getKey`.
 
 ## Type Parameters
 
@@ -21,19 +20,27 @@ and values that are arrays containing elements for a particular key.
 
 `TItem`[]
 
-Array to map.
+Array to group.
 
 ### getKey
 
 (`x`) => `any`
 
-Function that returns key for each item.
+Callback returning the group key for an element; `null`/`undefined` is normalized to `""`.
 
 ## Returns
 
 [`Grouping`](../type-aliases/Grouping.md)\<`TItem`\>
 
-Grouping object.
+A [Grouping](../type-aliases/Grouping.md) dictionary whose values are arrays of matching elements. Uses a null-prototype object.
+
+## Remarks
+
+Lighter alternative to [groupBy](groupBy.md) when ordered metadata is not needed.
+
+## Deprecated
+
+Retained as a `Q.toGrouping` compat shim; new code may prefer `Map`-grouping.
 
 ## Example
 

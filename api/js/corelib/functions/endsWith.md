@@ -6,7 +6,7 @@
 
 Defined in: [src/compat/strings-compat.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L8)
 
-Checks if the string ends with the specified substring.
+Determines whether a string ends with the specified suffix.
 
 ## Parameters
 
@@ -14,20 +14,20 @@ Checks if the string ends with the specified substring.
 
 `string`
 
-String to check.
+The string to test.
 
 ### suffix
 
 `string`
 
-Suffix to check.
+The suffix to look for at the end of `s`.
 
 ## Returns
 
 `boolean`
 
-True if the string ends with the specified substring.
+`true` if `s` ends with `suffix`; otherwise `false`.
 
 ## Deprecated
 
-Use .endsWith method of String directly
+Use String.prototype.endsWith directly — e.g. `s.endsWith(suffix)`.

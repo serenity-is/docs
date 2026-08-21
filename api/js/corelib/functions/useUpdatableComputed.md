@@ -4,18 +4,22 @@
 
 > **useUpdatableComputed**(): `object`
 
-Defined in: [../domwise/dist/index.d.ts:2581](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2581)
+Defined in: [../domwise/dist/index.d.ts:2987](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2987)
 
-Creates a factory for computed signals that can be manually refreshed as a batch.
-Returns an object with a `computed` method that creates computed signals tied to an
-internal updater signal, and an `update` method that triggers a refresh of all created
-computed signals.
+Creates a factory for computed signals that can be manually invalidated in batch.
+
+Computed signals produced by the returned `computed` wrapper depend on an
+internal `updater` signal; calling `update()` bumps that signal so every
+derived computed re-evaluates on its next read, without wiring each one to
+a separate source.
 
 ## Returns
 
 `object`
 
-An object with `computed` factory and `update` trigger.
+An object with:
+ - `computed` — factory that wraps a computation so it tracks the shared updater.
+ - `update` — bumps the updater, invalidating all computeds created from this factory.
 
 ### computed()
 
@@ -44,3 +48,12 @@ An object with `computed` factory and `update` trigger.
 #### Returns
 
 `void`
+
+## Example
+
+```ts
+const { computed: uc, update } = useUpdatableComputed();
+const derived = uc(() => expensiveRead());
+// later: after external state changes
+update();
+```

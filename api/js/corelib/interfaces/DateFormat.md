@@ -2,9 +2,13 @@
 
 # Interface: DateFormat
 
-Defined in: [src/base/formatting.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L24)
+Defined in: [src/base/formatting.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L28)
 
-Interface for date formatting, similar to .NET's DateFormatInfo
+Locale settings for date/time formatting, mirroring .NET `DateTimeFormatInfo`.
+
+## Remarks
+
+Consumed by [formatDate](../functions/formatDate.md) and [parseDate](../functions/parseDate.md) via [Culture](../variables/Culture.md).
 
 ## Extended by
 
@@ -16,9 +20,13 @@ Interface for date formatting, similar to .NET's DateFormatInfo
 
 > `optional` **amDesignator**: `string`
 
-Defined in: [src/base/formatting.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L34)
+Defined in: [src/base/formatting.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L38)
 
-AM designator
+Designator for AM hours (used with `t`/`tt` tokens).
+
+#### Default Value
+
+`"AM"`.
 
 ***
 
@@ -26,9 +34,9 @@ AM designator
 
 > `optional` **dateFormat**: `string`
 
-Defined in: [src/base/formatting.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L28)
+Defined in: [src/base/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L32)
 
-Default date format string
+Default date-only format string (e.g. `"dd/MM/yyyy"`).
 
 ***
 
@@ -36,9 +44,9 @@ Default date format string
 
 > `optional` **dateOrder**: `string`
 
-Defined in: [src/base/formatting.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L30)
+Defined in: [src/base/formatting.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L34)
 
-Date order, like dmy, or ymd
+Token order for parsing ambiguous numeric dates: `"dmy"`, `"mdy"`, or `"ymd"`.
 
 ***
 
@@ -46,9 +54,9 @@ Date order, like dmy, or ymd
 
 > `optional` **dateSeparator**: `string`
 
-Defined in: [src/base/formatting.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L26)
+Defined in: [src/base/formatting.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L30)
 
-Date separator
+Character separating date parts (e.g. `"/"` or `"."`).
 
 ***
 
@@ -56,9 +64,9 @@ Date separator
 
 > `optional` **dateTimeFormat**: `string`
 
-Defined in: [src/base/formatting.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L32)
+Defined in: [src/base/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L36)
 
-Default date time format string
+Default combined date+time format string (e.g. `"dd/MM/yyyy HH:mm:ss"`).
 
 ***
 
@@ -66,9 +74,9 @@ Default date time format string
 
 > `optional` **dayNames**: `string`[]
 
-Defined in: [src/base/formatting.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L42)
+Defined in: [src/base/formatting.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L46)
 
-Array of day names
+Full day names starting with Sunday — 7 entries.
 
 ***
 
@@ -76,9 +84,9 @@ Array of day names
 
 > `optional` **firstDayOfWeek**: `number`
 
-Defined in: [src/base/formatting.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L40)
+Defined in: [src/base/formatting.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L44)
 
-First day of week, 0 = Sunday, 1 = Monday
+Index of the first day of the week (`0` = Sunday, `1` = Monday).
 
 ***
 
@@ -86,9 +94,9 @@ First day of week, 0 = Sunday, 1 = Monday
 
 > `optional` **minimizedDayNames**: `string`[]
 
-Defined in: [src/base/formatting.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L46)
+Defined in: [src/base/formatting.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L50)
 
-Array of two letter day names
+Two-letter day names (e.g. `"Su"`, `"Mo"`). — 7 entries.
 
 ***
 
@@ -96,9 +104,9 @@ Array of two letter day names
 
 > `optional` **monthNames**: `string`[]
 
-Defined in: [src/base/formatting.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L48)
+Defined in: [src/base/formatting.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L52)
 
-Array of month names
+Full month names starting with January — 12 entries plus a trailing empty slot for compatibility.
 
 ***
 
@@ -106,9 +114,13 @@ Array of month names
 
 > `optional` **pmDesignator**: `string`
 
-Defined in: [src/base/formatting.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L36)
+Defined in: [src/base/formatting.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L40)
 
-PM designator
+Designator for PM hours (used with `t`/`tt` tokens).
+
+#### Default Value
+
+`"PM"`.
 
 ***
 
@@ -116,9 +128,9 @@ PM designator
 
 > `optional` **shortDayNames**: `string`[]
 
-Defined in: [src/base/formatting.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L44)
+Defined in: [src/base/formatting.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L48)
 
-Array of short day names
+Abbreviated day names (e.g. `"Sun"`, `"Mon"`). — 7 entries.
 
 ***
 
@@ -126,9 +138,9 @@ Array of short day names
 
 > `optional` **shortMonthNames**: `string`[]
 
-Defined in: [src/base/formatting.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L50)
+Defined in: [src/base/formatting.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L54)
 
-Array of short month names
+Abbreviated month names (e.g. `"Jan"`, `"Feb"`). — 12 entries plus a trailing empty slot.
 
 ***
 
@@ -136,6 +148,10 @@ Array of short month names
 
 > `optional` **timeSeparator**: `string`
 
-Defined in: [src/base/formatting.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L38)
+Defined in: [src/base/formatting.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L42)
 
-Time separator
+Character separating time parts.
+
+#### Default Value
+
+`":"`.

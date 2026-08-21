@@ -4,7 +4,7 @@
 
 > `const` **Enum**: `object`
 
-Defined in: [src/base/system.ts:294](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L294)
+Defined in: [src/base/system.ts:312](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L312)
 
 Enum utilities
 
@@ -14,7 +14,7 @@ Enum utilities
 
 > **getValues**: (`enumType`) => `number`[]
 
-Get all numeric values of an enum as an array.
+Returns all numeric values of an enum as an array.
 
 #### Parameters
 
@@ -22,9 +22,13 @@ Get all numeric values of an enum as an array.
 
 `any`
 
+Enum object to enumerate.
+
 #### Returns
 
 `number`[]
+
+Array of numeric enum values.
 
 ### toString()
 

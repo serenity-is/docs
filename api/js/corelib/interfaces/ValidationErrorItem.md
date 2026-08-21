@@ -2,7 +2,9 @@
 
 # Interface: ValidationErrorItem
 
-Defined in: [src/base/validator.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L40)
+Defined in: [src/base/validator.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L53)
+
+Single validation failure entry.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/base/validator.tsx:40](https://github.com/serenity-is/serenity/
 
 > **element**: [`ValidatableElement`](ValidatableElement.md)
 
-Defined in: [src/base/validator.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L42)
+Defined in: [src/base/validator.tsx:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L57)
+
+Element that failed validation.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/base/validator.tsx:42](https://github.com/serenity-is/serenity/
 
 > **message**: `string`
 
-Defined in: [src/base/validator.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L41)
+Defined in: [src/base/validator.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L55)
+
+Localized error message to display.
 
 ***
 
@@ -26,4 +32,6 @@ Defined in: [src/base/validator.tsx:41](https://github.com/serenity-is/serenity/
 
 > `optional` **method**: `string`
 
-Defined in: [src/base/validator.tsx:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L43)
+Defined in: [src/base/validator.tsx:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L59)
+
+Name of the rule / method that failed (e.g. `"required"`, `"email"`).

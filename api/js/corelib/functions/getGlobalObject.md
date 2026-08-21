@@ -4,10 +4,12 @@
 
 > **getGlobalObject**(): `any`
 
-Defined in: [src/base/system.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L22)
+Defined in: [src/base/system.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L27)
 
-Get the global object  (window in browsers, global in node)
+Gets the global object (`window` in browsers, `global` in Node / workers).
 
 ## Returns
 
 `any`
+
+The global object instance.

@@ -2,6 +2,8 @@
 
 # PropertyItemColumnConverter
 
+Converts [PropertyItem](../../../interfaces/PropertyItem.md) definitions into sleek grid column definitions.
+
 ## Functions
 
 - [toColumn](functions/toColumn.md)

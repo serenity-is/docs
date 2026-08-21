@@ -2,7 +2,9 @@
 
 # Interface: CustomElementsHTML
 
-Defined in: [../domwise/dist/index.d.ts:2144](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2144)
+Defined in: [../domwise/dist/index.d.ts:2281](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2281)
+
+Augment to declare custom HTML element tag/type mappings.
 
 ## Extended by
 

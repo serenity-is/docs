@@ -4,9 +4,9 @@
 
 > **removeClass**(`element`, `value`): `void`
 
-Defined in: [src/base/fluent.ts:549](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L549)
+Defined in: [src/base/fluent.ts:716](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/fluent.ts#L716)
 
-Removes one or more classes from the element. Any falsy value is ignored.
+Removes one or more classes from the element.
 
 ## Parameters
 
@@ -14,14 +14,16 @@ Removes one or more classes from the element. Any falsy value is ignored.
 
 `Element`
 
-The target element
+Target element.
 
 ### value
 
-The class or classes to remove. It can be a string, boolean, or an array of strings or booleans.
+Class name(s) to remove. Falsy entries are ignored.
 
 `string` | `boolean` | (`string` \| `boolean`)[]
 
 ## Returns
 
 `void`
+
+`void`.

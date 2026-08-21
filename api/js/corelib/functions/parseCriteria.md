@@ -2,14 +2,23 @@
 
 # Function: parseCriteria()
 
+Parses a criteria expression (string or tagged template) to Serenity criteria array format.
+
+## Param
+
+Expression string or template strings array.
+
+## Param
+
+Parameter values or interpolated template values.
+
 ## Call Signature
 
 > **parseCriteria**(`expression`, `params?`): `any`[]
 
-Defined in: [src/base/criteria.ts:698](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L698)
+Defined in: [src/base/criteria.ts:759](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L759)
 
-Parses a criteria expression to Serenity Criteria array format.
-The string may optionally contain parameters like `A >= @p1 and B < @p2`.
+Parses a criteria expression string to Serenity criteria array format.
 
 ### Parameters
 
@@ -17,17 +26,24 @@ The string may optionally contain parameters like `A >= @p1 and B < @p2`.
 
 `string`
 
-The criteria expression.
+Expression text, e.g. `"A >= @p1 and B < @p2"`.
 
 #### params?
 
 `any`
 
-The dictionary containing parameter values like { p1: 10, p2: 20 }.
+Dictionary mapping parameter names to values, e.g. `{ p1: 5, p2: 4 }`.
 
 ### Returns
 
 `any`[]
+
+Serenity criteria array, e.g. `[[["A"], ">=", 5], "and", [["B"], "<", 4]]`.
+
+### Remarks
+
+Supports named parameters via `@name` placeholders. Operator precedence is handled
+via a shunting-yard pass; string literals use single quotes with `''` escaping.
 
 ### Example
 
@@ -39,11 +55,9 @@ The dictionary containing parameter values like { p1: 10, p2: 20 }.
 
 > **parseCriteria**(`strings`, ...`values`): `any`[]
 
-Defined in: [src/base/criteria.ts:709](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L709)
+Defined in: [src/base/criteria.ts:773](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/criteria.ts#L773)
 
-Parses a criteria expression to Serenity Criteria array format.
-The expression may contain parameter placeholders like `A >= ${p1}`
-where p1 is a variable in the scope.
+Parses a tagged-template criteria expression to Serenity criteria array format.
 
 ### Parameters
 
@@ -51,21 +65,28 @@ where p1 is a variable in the scope.
 
 `TemplateStringsArray`
 
-The string fragments.
+Template string fragments.
 
 #### values
 
 ...`any`[]
 
-The tagged template arguments.
+Interpolated values (one per placeholder).
 
 ### Returns
 
 `any`[]
 
+Serenity criteria array.
+
+### Remarks
+
+Each interpolated value becomes an auto-named `@__N` parameter, avoiding manual
+parameter dictionaries and SQL-injection-prone concatenation.
+
 ### Example
 
 ```ts
 let a = 5, b = 4;
-parseCriteria`A >= ${a} and B < ${b}` // [[[a], '>=' 5], 'and', [[b], '<', 4]]
+parseCriteria`A >= ${a} and B < ${b}`; // [[["A"], ">=", 5], "and", [["B"], "<", 4]]
 ```

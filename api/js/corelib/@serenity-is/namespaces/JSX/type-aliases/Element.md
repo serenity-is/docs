@@ -4,4 +4,4 @@
 
 > **Element** = [`JSXElement`](../../../../type-aliases/JSXElement.md)
 
-Defined in: [../domwise/dist/index.d.ts:2150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2150)
+Defined in: [../domwise/dist/index.d.ts:2290](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2290)

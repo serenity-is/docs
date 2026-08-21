@@ -4,7 +4,9 @@
 
 > **setValue**(`editor`, `value`): `void`
 
-Defined in: [src/ui/editors/editorutils.tsx:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.tsx#L84)
+Defined in: [src/ui/editors/editorutils.tsx:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/editorutils.tsx#L108)
+
+Sets the value of an editor.
 
 ## Parameters
 
@@ -12,9 +14,13 @@ Defined in: [src/ui/editors/editorutils.tsx:84](https://github.com/serenity-is/s
 
 [`Widget`](../../../../classes/Widget.md)\<`any`\>
 
+The editor widget.
+
 ### value
 
 `any`
+
+The value to set.
 
 ## Returns
 

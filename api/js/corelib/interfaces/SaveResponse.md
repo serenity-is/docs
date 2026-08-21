@@ -2,7 +2,9 @@
 
 # Interface: SaveResponse
 
-Defined in: [src/base/servicetypes.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L22)
+Defined in: [src/base/servicetypes.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L51)
+
+Response DTO for `Create` / `Update` handlers.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/base/servicetypes.ts:22](https://github.com/serenity-is/serenit
 
 > `optional` **EntityId**: `any`
 
-Defined in: [src/base/servicetypes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L23)
+Defined in: [src/base/servicetypes.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L53)
+
+Primary key of the created / updated entity as assigned / confirmed by the server.
 
 ***
 
@@ -22,7 +26,9 @@ Defined in: [src/base/servicetypes.ts:23](https://github.com/serenity-is/serenit
 
 > `optional` **Error**: [`ServiceError`](ServiceError.md)
 
-Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
+Defined in: [src/base/servicetypes.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L25)
+
+Error information when the request failed; `undefined` on success.
 
 #### Inherited from
 

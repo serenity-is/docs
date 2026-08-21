@@ -2,7 +2,10 @@
 
 # Interface: UserDefinition
 
-Defined in: [src/base/userdefinition.ts:1](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L1)
+Defined in: [src/base/userdefinition.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L5)
+
+Describes the currently authenticated user as resolved on the client.
+Typically populated from the server's user definition script.
 
 ## Properties
 
@@ -12,7 +15,7 @@ Defined in: [src/base/userdefinition.ts:1](https://github.com/serenity-is/sereni
 
 Defined in: [src/base/userdefinition.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L9)
 
-Display name of the logged user
+Human-readable display name of the current user.
 
 ***
 
@@ -20,10 +23,11 @@ Display name of the logged user
 
 > `optional` **IsAdmin**: `boolean`
 
-Defined in: [src/base/userdefinition.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L13)
+Defined in: [src/base/userdefinition.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L15)
 
-This indicates that the user is a super "admin", e.g. assumed to have all the permissions available. 
-It does not mean a member of Administrators, who might not have some of the permissions
+Whether the user is a super-admin with implicit access to all permissions.
+This is distinct from membership in an Administrators role, which may not
+grant every permission individually.
 
 ***
 
@@ -31,11 +35,11 @@ It does not mean a member of Administrators, who might not have some of the perm
 
 > `optional` **Permissions**: `object`
 
-Defined in: [src/base/userdefinition.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L19)
+Defined in: [src/base/userdefinition.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L21)
 
-A hashset of permission keys that the current user have, explicitly assigned or via its
-roles. Note that client side permission checks should only be used for UI enable/disable etc.
-You should not rely on client side permission checks and always re-check permissions server side.
+Map of permission keys granted to the user (explicitly or via roles).
+Client-side checks should only drive UI enable/disable; always re-validate
+permissions on the server.
 
 #### Index Signature
 
@@ -47,6 +51,6 @@ You should not rely on client side permission checks and always re-check permiss
 
 > `optional` **Username**: `string`
 
-Defined in: [src/base/userdefinition.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L5)
+Defined in: [src/base/userdefinition.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/userdefinition.ts#L7)
 
-Username of the logged user
+Username / login name of the current user.

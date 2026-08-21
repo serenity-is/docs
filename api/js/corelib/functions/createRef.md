@@ -4,10 +4,12 @@
 
 > **createRef**\<`T`\>(): [`RefObject`](../type-aliases/RefObject.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:2330](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2330)
+Defined in: [../domwise/dist/index.d.ts:2593](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2593)
 
-Creates a new `RefObject` with `current` initially set to `null`.
-The returned object is sealed to prevent extension.
+Creates a new sealed `RefObject` whose `current` is initially `null`.
+
+The returned object is `Object.seal`ed so that no new properties can be
+added, matching the `React.createRef` contract.
 
 ## Type Parameters
 
@@ -15,10 +17,18 @@ The returned object is sealed to prevent extension.
 
 `T` = `any`
 
-The type of the referenced value.
+Type of the value held by the ref.
 
 ## Returns
 
 [`RefObject`](../type-aliases/RefObject.md)\<`T`\>
 
-A new sealed `RefObject<T>`.
+A sealed `RefObject<T>` with `current` set to `null`.
+
+## Example
+
+```tsx
+const inputRef = createRef<HTMLInputElement>();
+return <input ref={inputRef} />;
+// later: inputRef.current?.focus();
+```

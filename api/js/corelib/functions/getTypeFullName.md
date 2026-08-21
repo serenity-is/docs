@@ -4,11 +4,10 @@
 
 > **getTypeFullName**(`type`): `string`
 
-Defined in: [src/base/system.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L91)
+Defined in: [src/base/system.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L99)
 
-Get the full name of a type (including namespace if any).
-This returns the name from typeInfo.typeName if available (e.g. registered via decorators), 
-otherwise tries to get the name from function's name property.
+Gets the full name of a type including its namespace if any.
+Prefers the registered `typeInfo.typeName` when available, otherwise falls back to the function's `name` property.
 
 ## Parameters
 
@@ -16,8 +15,10 @@ otherwise tries to get the name from function's name property.
 
 [`Type`](../type-aliases/Type.md)
 
-Type to get the name of
+Type to get the full name of.
 
 ## Returns
 
 `string`
+
+Fully-qualified type name (e.g. `"Serenity.StringEditor"`).

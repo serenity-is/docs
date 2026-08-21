@@ -2,6 +2,8 @@
 
 # GridUtils
 
+Utility functions for working with data grids.
+
 ## Functions
 
 - [addIncludeDeletedToggle](functions/addIncludeDeletedToggle.md)

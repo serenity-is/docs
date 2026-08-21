@@ -2,7 +2,9 @@
 
 # Interface: EnumEditorOptions
 
-Defined in: [src/ui/editors/enumeditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L7)
+Defined in: [src/ui/editors/enumeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L10)
+
+Options for the [EnumEditor](../classes/EnumEditor.md).
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/ui/editors/enumeditor.ts:7](https://github.com/serenity-is/sere
 
 > `optional` **allowClear**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L15)
+Defined in: [src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)
+
+Whether the selection can be cleared.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-i
 
 > `optional` **delimited**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
+Defined in: [src/ui/editors/comboboxeditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L21)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 
@@ -38,7 +44,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-i
 
 > `optional` **enumKey**: `string`
 
-Defined in: [src/ui/editors/enumeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L8)
+Defined in: [src/ui/editors/enumeditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L12)
+
+Key of the enum to load items from.
 
 ***
 
@@ -46,7 +54,9 @@ Defined in: [src/ui/editors/enumeditor.ts:8](https://github.com/serenity-is/sere
 
 > `optional` **enumType**: `any`
 
-Defined in: [src/ui/editors/enumeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L9)
+Defined in: [src/ui/editors/enumeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/enumeditor.ts#L14)
+
+The enum type to load items from.
 
 ***
 
@@ -54,7 +64,9 @@ Defined in: [src/ui/editors/enumeditor.ts:9](https://github.com/serenity-is/sere
 
 > `optional` **minimumResultsForSearch**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L17)
+Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
+
+Minimum results required to show the search box.
 
 #### Inherited from
 
@@ -66,7 +78,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:17](https://github.com/serenity-i
 
 > `optional` **multiple**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 

@@ -4,7 +4,7 @@
 
 > **getTypeMembers**(`type`, `memberKinds?`): [`TypeMember`](../interfaces/TypeMember.md)[]
 
-Defined in: [src/compat/system-compat.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L97)
+Defined in: [src/compat/system-compat.ts:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/system-compat.ts#L135)
 
 Gets type members including inherited ones. Optionally filters by member kinds.
 

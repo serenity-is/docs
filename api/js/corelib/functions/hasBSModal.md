@@ -4,10 +4,12 @@
 
 > **hasBSModal**(): `boolean`
 
-Defined in: [src/base/dialogs.tsx:590](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L590)
+Defined in: [src/base/dialogs.tsx:666](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L666)
 
-Returns true if Bootstrap modal is available
+Determines whether a Bootstrap modal provider is available.
 
 ## Returns
 
 `boolean`
+
+`true` when Bootstrap 5+ `bootstrap.Modal` or jQuery `fn.modal` (Bootstrap 3/4) is loaded.

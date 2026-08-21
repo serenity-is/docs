@@ -4,10 +4,9 @@
 
 > **hasPermissionAsync**(`permission`): `Promise`\<`boolean`\>
 
-Defined in: [src/base/authorization.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L57)
+Defined in: [src/base/authorization.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L88)
 
-Checks if the current user has the permission specified.
-This should only be used for UI purposes and it is strongly recommended to check permissions server side.
+Asynchronously checks whether the current user has the specified permission.
 
 ## Parameters
 
@@ -15,11 +14,29 @@ This should only be used for UI purposes and it is strongly recommended to check
 
 `string`
 
-Permission key. It may contain logical operators like A&B|C.
+Permission key or expression with `&`/`|` operators,
+e.g. `"A&B|C"`. `null`/`undefined` returns `false`; `"*"` returns `true`;
+`""` or `"?"` returns whether the user is logged in.
 
 ## Returns
 
 `Promise`\<`boolean`\>
 
-`false` for "null or undefined", true for "*", `IsLoggedIn` for "?". For other permissions, 
-if the user has the permission or if the user has the `IsAdmin` flag (super admin) `true`, otherwise `false`.
+Promise that resolves to `true` if the user has the permission
+(or is an admin), otherwise `false`.
+
+## Remarks
+
+Preferred over [Authorization.hasPermission](hasPermission.md) because it awaits
+`UserData` via [getRemoteDataAsync](../../../../functions/getRemoteDataAsync.md) instead of potentially blocking
+the UI thread. Still UI-only — enforce permissions server-side as well.
+
+## Examples
+
+```ts
+if (await Authorization.hasPermissionAsync("Administration:General")) { ... }
+```
+
+```ts
+await Authorization.hasPermissionAsync("A&B|C"); // true if (A and B) or C
+```

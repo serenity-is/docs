@@ -2,7 +2,9 @@
 
 # Enumeration: CaptureOperationType
 
-Defined in: [src/types/captureoperationtype.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L5)
+Defined in: [src/types/captureoperationtype.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L8)
+
+Operation type for data change capture (used by history / audit features).
 
 ## Enumeration Members
 
@@ -10,7 +12,9 @@ Defined in: [src/types/captureoperationtype.ts:5](https://github.com/serenity-is
 
 > **Before**: `0`
 
-Defined in: [src/types/captureoperationtype.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L6)
+Defined in: [src/types/captureoperationtype.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L10)
+
+Fired before the operation; allows cancellation or modification.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/types/captureoperationtype.ts:6](https://github.com/serenity-is
 
 > **Delete**: `1`
 
-Defined in: [src/types/captureoperationtype.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L7)
+Defined in: [src/types/captureoperationtype.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L12)
+
+Entity deletion.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/types/captureoperationtype.ts:7](https://github.com/serenity-is
 
 > **Insert**: `2`
 
-Defined in: [src/types/captureoperationtype.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L8)
+Defined in: [src/types/captureoperationtype.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L14)
+
+Entity insertion.
 
 ***
 
@@ -34,4 +42,6 @@ Defined in: [src/types/captureoperationtype.ts:8](https://github.com/serenity-is
 
 > **Update**: `3`
 
-Defined in: [src/types/captureoperationtype.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L9)
+Defined in: [src/types/captureoperationtype.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/captureoperationtype.ts#L16)
+
+Entity update.

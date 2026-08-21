@@ -2,7 +2,9 @@
 
 # Interface: RadioButtonEditorOptions
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L7)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L10)
+
+Options for the [RadioButtonEditor](../classes/RadioButtonEditor.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/radiobuttoneditor.tsx:7](https://github.com/serenity
 
 > `optional` **enumKey**: `string`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L8)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L12)
+
+Key of the enum to load radio options from.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/editors/radiobuttoneditor.tsx:8](https://github.com/serenity
 
 > `optional` **enumType**: `any`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L9)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L14)
+
+The enum type to load radio options from.
 
 ***
 
@@ -26,4 +32,6 @@ Defined in: [src/ui/editors/radiobuttoneditor.tsx:9](https://github.com/serenity
 
 > `optional` **lookupKey**: `string`
 
-Defined in: [src/ui/editors/radiobuttoneditor.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L10)
+Defined in: [src/ui/editors/radiobuttoneditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/radiobuttoneditor.tsx#L16)
+
+Key of the lookup to load radio options from.

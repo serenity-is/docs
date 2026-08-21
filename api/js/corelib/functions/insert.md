@@ -1,13 +1,12 @@
 [@serenity-is/corelib](../README.md) / insert
 
-# Function: insert()
+# ~~Function: insert()~~
 
 > **insert**(`obj`, `index`, `item`): `void`
 
-Defined in: [src/compat/arrays-compat.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L122)
+Defined in: [src/compat/arrays-compat.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L150)
 
-Inserts an item to the array at specified index. Prefer Array.splice unless
-you need to support IE.
+Inserts an item into an array at the given index.
 
 ## Parameters
 
@@ -15,13 +14,13 @@ you need to support IE.
 
 `any`
 
-Array or array like object to insert to.
+Target array or array-like object with an `insert(index, item)` method.
 
 ### index
 
 `number`
 
-Index to insert at.
+Zero-based index at which to insert.
 
 ### item
 
@@ -35,11 +34,18 @@ Item to insert.
 
 ## Throws
 
-Error if object does not support insert.
+If `obj` is neither an array nor exposes `insert`.
+
+## Remarks
+
+If `obj.insert` exists it is delegated to; otherwise `Array.prototype.splice` is used. No return value.
+
+## Deprecated
+
+Prefer `array.splice(index, 0, item)` directly. Retained as a `Q.insert` compat shim.
 
 ## Example
 
 ```ts
 insert([1, 2, 3], 1, 4); // [1, 4, 2, 3]
-insert({ insert: (index, item) => { this.splice(index, 0, item); } }
 ```

@@ -2,6 +2,8 @@
 
 # AggregatorTypeRegistry
 
+Registry for aggregator types by key and SummaryType.
+
 ## Functions
 
 - [register](functions/register.md)

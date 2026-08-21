@@ -2,7 +2,9 @@
 
 # Class: FilterStore
 
-Defined in: [src/ui/filtering/filterstore.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L4)
+Defined in: [src/ui/filtering/filterstore.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L7)
+
+Stores filter lines for a grid and builds criteria and display text from them.
 
 ## Constructors
 
@@ -10,13 +12,17 @@ Defined in: [src/ui/filtering/filterstore.ts:4](https://github.com/serenity-is/s
 
 > **new FilterStore**(`fields`): `FilterStore`
 
-Defined in: [src/ui/filtering/filterstore.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L7)
+Defined in: [src/ui/filtering/filterstore.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L14)
+
+Creates a filter store.
 
 #### Parameters
 
 ##### fields
 
 [`PropertyItem`](../interfaces/PropertyItem.md)[]
+
+The filterable fields.
 
 #### Returns
 
@@ -28,21 +34,25 @@ Defined in: [src/ui/filtering/filterstore.ts:7](https://github.com/serenity-is/s
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/filtering/filterstore.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L5)
+Defined in: [src/ui/filtering/filterstore.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L8)
 
 ## Methods
 
 ### add\_changed()
 
-> **add\_changed**(`value`): `void`
+> **add\_changed**(`listener`): `void`
 
-Defined in: [src/ui/filtering/filterstore.ts:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L151)
+Defined in: [src/ui/filtering/filterstore.ts:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L187)
+
+Subscribes a listener to store changes.
 
 #### Parameters
 
-##### value
+##### listener
 
-(`e`, `a`) => `void`
+(`store`) => `void`
+
+The listener.
 
 #### Returns
 
@@ -54,11 +64,15 @@ Defined in: [src/ui/filtering/filterstore.ts:151](https://github.com/serenity-is
 
 > **get\_activeCriteria**(): `any`[]
 
-Defined in: [src/ui/filtering/filterstore.ts:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L159)
+Defined in: [src/ui/filtering/filterstore.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L203)
+
+Returns the active criteria for the current filter lines.
 
 #### Returns
 
 `any`[]
+
+The criteria expression.
 
 ***
 
@@ -66,11 +80,15 @@ Defined in: [src/ui/filtering/filterstore.ts:159](https://github.com/serenity-is
 
 > **get\_displayText**(): `string`
 
-Defined in: [src/ui/filtering/filterstore.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L163)
+Defined in: [src/ui/filtering/filterstore.ts:211](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L211)
+
+Returns the display text for the current filter lines.
 
 #### Returns
 
 `string`
+
+The display text.
 
 ***
 
@@ -78,11 +96,15 @@ Defined in: [src/ui/filtering/filterstore.ts:163](https://github.com/serenity-is
 
 > **get\_fieldByName**(): `object`
 
-Defined in: [src/ui/filtering/filterstore.ts:138](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L138)
+Defined in: [src/ui/filtering/filterstore.ts:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L163)
+
+Returns the fields by name.
 
 #### Returns
 
 `object`
+
+The field map.
 
 ***
 
@@ -90,11 +112,15 @@ Defined in: [src/ui/filtering/filterstore.ts:138](https://github.com/serenity-is
 
 > **get\_fields**(): [`PropertyItem`](../interfaces/PropertyItem.md)[]
 
-Defined in: [src/ui/filtering/filterstore.ts:134](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L134)
+Defined in: [src/ui/filtering/filterstore.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L155)
+
+Returns the filterable fields.
 
 #### Returns
 
 [`PropertyItem`](../interfaces/PropertyItem.md)[]
+
+The fields.
 
 ***
 
@@ -102,11 +128,15 @@ Defined in: [src/ui/filtering/filterstore.ts:134](https://github.com/serenity-is
 
 > **get\_items**(): [`FilterLine`](../interfaces/FilterLine.md)[]
 
-Defined in: [src/ui/filtering/filterstore.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L142)
+Defined in: [src/ui/filtering/filterstore.ts:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L171)
+
+Returns the filter lines.
 
 #### Returns
 
 [`FilterLine`](../interfaces/FilterLine.md)[]
+
+The filter lines.
 
 ***
 
@@ -114,7 +144,9 @@ Defined in: [src/ui/filtering/filterstore.ts:142](https://github.com/serenity-is
 
 > **raiseChanged**(): `void`
 
-Defined in: [src/ui/filtering/filterstore.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L146)
+Defined in: [src/ui/filtering/filterstore.ts:178](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L178)
+
+Notifies listeners that the store changed.
 
 #### Returns
 
@@ -124,15 +156,19 @@ Defined in: [src/ui/filtering/filterstore.ts:146](https://github.com/serenity-is
 
 ### remove\_changed()
 
-> **remove\_changed**(`value`): `void`
+> **remove\_changed**(`listener`): `void`
 
-Defined in: [src/ui/filtering/filterstore.ts:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L155)
+Defined in: [src/ui/filtering/filterstore.ts:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L195)
+
+Unsubscribes a listener from store changes.
 
 #### Parameters
 
-##### value
+##### listener
 
-(`e`, `a`) => `void`
+(`store`) => `void`
+
+The listener.
 
 #### Returns
 
@@ -144,7 +180,9 @@ Defined in: [src/ui/filtering/filterstore.ts:155](https://github.com/serenity-is
 
 > `static` **getCriteriaFor**(`items`): `any`[]
 
-Defined in: [src/ui/filtering/filterstore.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L41)
+Defined in: [src/ui/filtering/filterstore.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L53)
+
+Builds a criteria expression from a list of filter lines.
 
 #### Parameters
 
@@ -152,9 +190,13 @@ Defined in: [src/ui/filtering/filterstore.ts:41](https://github.com/serenity-is/
 
 [`FilterLine`](../interfaces/FilterLine.md)[]
 
+The filter lines.
+
 #### Returns
 
 `any`[]
+
+The criteria expression.
 
 ***
 
@@ -162,7 +204,9 @@ Defined in: [src/ui/filtering/filterstore.ts:41](https://github.com/serenity-is/
 
 > `static` **getDisplayTextFor**(`items`): `string`
 
-Defined in: [src/ui/filtering/filterstore.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L93)
+Defined in: [src/ui/filtering/filterstore.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterstore.ts#L110)
+
+Builds the display text for a list of filter lines.
 
 #### Parameters
 
@@ -170,6 +214,10 @@ Defined in: [src/ui/filtering/filterstore.ts:93](https://github.com/serenity-is/
 
 [`FilterLine`](../interfaces/FilterLine.md)[]
 
+The filter lines.
+
 #### Returns
 
 `string`
+
+The display text.

@@ -2,9 +2,10 @@
 
 # Class: CloseButtonAttribute
 
-Defined in: [src/types/attributes.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L6)
+Defined in: [src/types/attributes.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L7)
 
-Indicates if a dialog should have a close button in its title bar (default true)
+Indicates whether a dialog should show a close button in its title bar.
+Applied via `static [Symbol.typeInfo]` metadata or the legacy decorator.
 
 ## Extends
 
@@ -16,13 +17,17 @@ Indicates if a dialog should have a close button in its title bar (default true)
 
 > **new CloseButtonAttribute**(`value`): `CloseButtonAttribute`
 
-Defined in: [src/types/attributes.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L9)
+Defined in: [src/types/attributes.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L14)
+
+Creates a new CloseButtonAttribute.
 
 #### Parameters
 
 ##### value
 
 `boolean` = `true`
+
+Whether the title bar should display a close button. Defaults to `true`.
 
 #### Returns
 
@@ -38,7 +43,9 @@ Defined in: [src/types/attributes.ts:9](https://github.com/serenity-is/serenity/
 
 > **value**: `boolean` = `true`
 
-Defined in: [src/types/attributes.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L9)
+Defined in: [src/types/attributes.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L14)
+
+Whether the title bar should display a close button. Defaults to `true`.
 
 ***
 
@@ -46,7 +53,7 @@ Defined in: [src/types/attributes.ts:9](https://github.com/serenity-is/serenity/
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/types/attributes.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L7)
+Defined in: [src/types/attributes.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L8)
 
 #### Overrides
 

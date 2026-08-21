@@ -2,12 +2,11 @@
 
 # Class: StaticPanelAttribute
 
-Defined in: [src/types/attributes.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L86)
+Defined in: [src/types/attributes.ts:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L113)
 
-Indicates if a dialog should be a static panel, which is not a dialog at all,
-but a simple div element embedded in the page.
-It does not have a title bar, close button or modal behavior.
-It is just a way to show a form inside a page, without any dialog stuff.
+Indicates that the widget should render as a static panel (plain div embedded
+in the page without title bar / modal behavior).
+Useful for embedding widgets directly in page layout.
 
 ## Extends
 
@@ -19,13 +18,17 @@ It is just a way to show a form inside a page, without any dialog stuff.
 
 > **new StaticPanelAttribute**(`value`): `StaticPanelAttribute`
 
-Defined in: [src/types/attributes.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L89)
+Defined in: [src/types/attributes.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L120)
+
+Creates a new StaticPanelAttribute.
 
 #### Parameters
 
 ##### value
 
 `boolean` = `true`
+
+Whether the widget should render as a static panel. Defaults to `true`.
 
 #### Returns
 
@@ -41,7 +44,9 @@ Defined in: [src/types/attributes.ts:89](https://github.com/serenity-is/serenity
 
 > **value**: `boolean` = `true`
 
-Defined in: [src/types/attributes.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L89)
+Defined in: [src/types/attributes.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L120)
+
+Whether the widget should render as a static panel. Defaults to `true`.
 
 ***
 
@@ -49,7 +54,7 @@ Defined in: [src/types/attributes.ts:89](https://github.com/serenity-is/serenity
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/types/attributes.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L87)
+Defined in: [src/types/attributes.ts:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L114)
 
 #### Overrides
 

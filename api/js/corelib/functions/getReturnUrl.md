@@ -4,15 +4,15 @@
 
 > **getReturnUrl**(`opt?`): `string`
 
-Defined in: [src/base/html.ts:219](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L219)
+Defined in: [src/base/html.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L260)
 
-Gets the return URL from the query string.
+Retrieves the `returnUrl` from the current query string, falling back to application config.
 
 ## Parameters
 
 ### opt?
 
-Options for getting the return URL.
+Options controlling lookup behavior.
 
 #### ignoreUnsafe?
 
@@ -35,3 +35,5 @@ Whether to only consider the query string. If true, the function will not check 
 ## Returns
 
 `string`
+
+The validated return URL, the configured default, or `null`/`undefined` if none is available or the query value is unsafe.

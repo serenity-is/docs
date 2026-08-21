@@ -4,7 +4,10 @@
 
 > **setDefaults**(`columns`, `localTextPrefix?`): `any`
 
-Defined in: [src/ui/helpers/slickhelper.tsx:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelper.tsx#L5)
+Defined in: [src/ui/helpers/slickhelper.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/slickhelper.tsx#L15)
+
+Applies default values to column definitions, such as sortability, id,
+and localized names.
 
 ## Parameters
 
@@ -12,10 +15,16 @@ Defined in: [src/ui/helpers/slickhelper.tsx:5](https://github.com/serenity-is/se
 
 `Column`\<`any`\>[]
 
+The column definitions to update.
+
 ### localTextPrefix?
 
 `string`
 
+Optional local text prefix used to localize column names.
+
 ## Returns
 
 `any`
+
+The updated column definitions.

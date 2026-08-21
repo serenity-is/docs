@@ -4,6 +4,6 @@
 
 > `const` **AlertTitle**: `string`
 
-Defined in: [src/base/dialogs.tsx:705](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L705)
+Defined in: [src/base/dialogs.tsx:794](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L794)
 
 Title for alert dialogs.

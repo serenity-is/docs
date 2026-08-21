@@ -1,13 +1,12 @@
 [@serenity-is/corelib](../README.md) / turkishLocaleToLower
 
-# Function: turkishLocaleToLower()
+# ~~Function: turkishLocaleToLower()~~
 
 > **turkishLocaleToLower**(`a`): `string`
 
-Defined in: [src/compat/formatting-compat.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/formatting-compat.ts#L6)
+Defined in: [src/compat/formatting-compat.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/formatting-compat.ts#L11)
 
-A string to lowercase function that handles special Turkish
-characters like 'ı'. Left in for compatibility reasons.
+Lowercases a string with Turkish-specific handling (`İ` → `i`, `I` → `ı`).
 
 ## Parameters
 
@@ -15,6 +14,24 @@ characters like 'ı'. Left in for compatibility reasons.
 
 `string`
 
+Input string; if falsy, returned as-is.
+
 ## Returns
 
 `string`
+
+Lowercased string with Turkish dotted/dotless-I mapping preserved.
+
+## Remarks
+
+Compat shim retained because native `String.prototype.toLocaleLowerCase('tr')` behaves differently across engines; prefer locale-aware APIs for new code.
+
+## Deprecated
+
+Retained for legacy `Q.turkishLocaleToLower` call sites.
+
+## Example
+
+```ts
+turkishLocaleToLower("İSTANBUL"); // "istanbul" with ı handling
+```

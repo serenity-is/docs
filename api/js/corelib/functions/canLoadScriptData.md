@@ -1,13 +1,13 @@
 [@serenity-is/corelib](../README.md) / canLoadScriptData
 
-# Function: canLoadScriptData()
+# ~~Function: canLoadScriptData()~~
 
 > **canLoadScriptData**(`name`): `boolean`
 
-Defined in: [src/compat/scriptdata-compat.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L39)
+Defined in: [src/compat/scriptdata-compat.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L68)
 
-Check if a dynamic script with provided name is available in the cache
-or it is a registered script name
+Checks whether a dynamic script with the given name is available in the cache or is a registered script name.
+Compat shim for the legacy `Q.canLoadScriptData` global; delegates to `peekScriptData` and `getScriptDataHash`.
 
 ## Parameters
 
@@ -15,10 +15,14 @@ or it is a registered script name
 
 `string`
 
-Dynamic script name
+Dynamic script name (e.g., `"Lookup.Administration.User"`).
 
 ## Returns
 
 `boolean`
 
-True if already available or registered
+`true` if the script is already cached or its hash is registered; otherwise `false`.
+
+## Deprecated
+
+Prefer `peekScriptData` / `getScriptDataHash` checks or `getScriptData` directly.

@@ -2,9 +2,10 @@
 
 # Class: ElementAttribute
 
-Defined in: [src/types/attributes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L17)
+Defined in: [src/types/attributes.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L23)
 
-Indicates the element type of a widget like "div", "span" etc.
+Specifies the root element tag for a widget (e.g. `"div"`, `"span"`).
+Used by the widget factory to create the default DOM element.
 
 ## Extends
 
@@ -16,13 +17,17 @@ Indicates the element type of a widget like "div", "span" etc.
 
 > **new ElementAttribute**(`value`): `ElementAttribute`
 
-Defined in: [src/types/attributes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L20)
+Defined in: [src/types/attributes.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L30)
+
+Creates a new ElementAttribute.
 
 #### Parameters
 
 ##### value
 
 `string`
+
+Tag name for the widget's root element (e.g. `"div"`).
 
 #### Returns
 
@@ -38,7 +43,9 @@ Defined in: [src/types/attributes.ts:20](https://github.com/serenity-is/serenity
 
 > **value**: `string`
 
-Defined in: [src/types/attributes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L20)
+Defined in: [src/types/attributes.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L30)
+
+Tag name for the widget's root element (e.g. `"div"`).
 
 ***
 
@@ -46,7 +53,7 @@ Defined in: [src/types/attributes.ts:20](https://github.com/serenity-is/serenity
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/types/attributes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L18)
+Defined in: [src/types/attributes.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L24)
 
 #### Overrides
 

@@ -2,9 +2,10 @@
 
 # Interface: ValidatableElement
 
-Defined in: [src/base/validator.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L19)
+Defined in: [src/base/validator.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L20)
 
-An `HTMLElement` that can be validated (`input`, `select`, `textarea`, or [contenteditable).
+An `HTMLElement` that can be validated (`input`, `select`, `textarea`, or `[contenteditable]`).
+Extends `HTMLElement` with form-associated properties used by the validation engine.
 
 ## Extends
 
@@ -16,7 +17,9 @@ An `HTMLElement` that can be validated (`input`, `select`, `textarea`, or [conte
 
 > `optional` **form**: `HTMLFormElement`
 
-Defined in: [src/base/validator.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L20)
+Defined in: [src/base/validator.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L22)
+
+Owning form element, if associated.
 
 ***
 
@@ -24,7 +27,9 @@ Defined in: [src/base/validator.tsx:20](https://github.com/serenity-is/serenity/
 
 > `optional` **name**: `string`
 
-Defined in: [src/base/validator.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L21)
+Defined in: [src/base/validator.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L24)
+
+Field name used as the validation key.
 
 ***
 
@@ -32,7 +37,9 @@ Defined in: [src/base/validator.tsx:21](https://github.com/serenity-is/serenity/
 
 > `optional` **type**: `string`
 
-Defined in: [src/base/validator.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L22)
+Defined in: [src/base/validator.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L26)
+
+Input type (e.g. `"text"`, `"checkbox"`, `"radio"`).
 
 ***
 
@@ -40,4 +47,6 @@ Defined in: [src/base/validator.tsx:22](https://github.com/serenity-is/serenity/
 
 > `optional` **value**: `string`
 
-Defined in: [src/base/validator.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L23)
+Defined in: [src/base/validator.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/validator.tsx#L28)
+
+Current string value of the element.

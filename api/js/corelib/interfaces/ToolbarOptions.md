@@ -2,7 +2,9 @@
 
 # Interface: ToolbarOptions
 
-Defined in: [src/ui/widgets/toolbar.tsx:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L65)
+Defined in: [src/ui/widgets/toolbar.tsx:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L93)
+
+Options for configuring a [Toolbar](../classes/Toolbar.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:65](https://github.com/serenity-is/seren
 
 > `optional` **buttons**: [`ToolButton`](ToolButton.md)[]
 
-Defined in: [src/ui/widgets/toolbar.tsx:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L66)
+Defined in: [src/ui/widgets/toolbar.tsx:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L95)
+
+The buttons to render in the toolbar.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/ui/widgets/toolbar.tsx:66](https://github.com/serenity-is/seren
 
 > `optional` **hotkeyContext**: `any`
 
-Defined in: [src/ui/widgets/toolbar.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L67)
+Defined in: [src/ui/widgets/toolbar.tsx:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L97)
+
+Optional default context element for hotkey bindings.

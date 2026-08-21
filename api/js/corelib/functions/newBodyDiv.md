@@ -4,12 +4,16 @@
 
 > **newBodyDiv**(): `HTMLDivElement`
 
-Defined in: [src/compat/html-compat.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/html-compat.ts#L81)
+Defined in: [src/compat/html-compat.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/html-compat.ts#L97)
 
-Creates a new DIV and appends it to the body.
+Creates a new `<div>` and appends it to `document.body`.
 
 ## Returns
 
 `HTMLDivElement`
 
-the new DIV element.
+The newly created and appended `HTMLDivElement`.
+
+## Remarks
+
+Compat helper from `Q.newBodyDiv`; prefer `document.createElement` + explicit append in new code.

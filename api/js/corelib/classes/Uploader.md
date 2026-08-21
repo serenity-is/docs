@@ -2,7 +2,11 @@
 
 # Class: Uploader
 
-Defined in: [src/base/uploader.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L81)
+Defined in: [src/base/uploader.ts:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L116)
+
+File uploader that handles `input` change, drag-and-drop, paste, and directory
+traversal, batching files and uploading each batch via `XMLHttpRequest`.
+Supports MIME filtering, progress events, CSRF headers, and custom batch handling.
 
 ## Constructors
 
@@ -10,13 +14,17 @@ Defined in: [src/base/uploader.ts:81](https://github.com/serenity-is/serenity/bl
 
 > **new Uploader**(`opt`): `Uploader`
 
-Defined in: [src/base/uploader.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L86)
+Defined in: [src/base/uploader.ts:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L125)
+
+Creates a new uploader and wires up the configured input and drop zones.
 
 #### Parameters
 
 ##### opt
 
 [`UploaderOptions`](../interfaces/UploaderOptions.md)
+
+Uploader configuration; defaults from [Uploader.defaults](#defaults) are applied.
 
 #### Returns
 
@@ -28,7 +36,9 @@ Defined in: [src/base/uploader.ts:86](https://github.com/serenity-is/serenity/bl
 
 > `static` **defaults**: `Partial`\<[`UploaderOptions`](../interfaces/UploaderOptions.md)\>
 
-Defined in: [src/base/uploader.ts:142](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L142)
+Defined in: [src/base/uploader.ts:182](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L182)
+
+Default [UploaderOptions](../interfaces/UploaderOptions.md) applied when constructing an instance.
 
 ***
 
@@ -36,7 +46,9 @@ Defined in: [src/base/uploader.ts:142](https://github.com/serenity-is/serenity/b
 
 > `static` **requestDefaults**: `Partial`\<[`UploaderRequest`](../interfaces/UploaderRequest.md)\>
 
-Defined in: [src/base/uploader.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L148)
+Defined in: [src/base/uploader.ts:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L189)
+
+Default [UploaderRequest](../interfaces/UploaderRequest.md) applied when [Uploader.uploadBatch](#uploadbatch) is called without explicit request options.
 
 ## Methods
 
@@ -44,11 +56,15 @@ Defined in: [src/base/uploader.ts:148](https://github.com/serenity-is/serenity/b
 
 > **isMultiple**(): `boolean`
 
-Defined in: [src/base/uploader.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L152)
+Defined in: [src/base/uploader.ts:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L197)
+
+Whether the uploader is configured for multiple file selection.
 
 #### Returns
 
 `boolean`
+
+`true` if multiple files are allowed.
 
 ***
 
@@ -56,7 +72,9 @@ Defined in: [src/base/uploader.ts:152](https://github.com/serenity-is/serenity/b
 
 > **uploadBatch**(`batch`, `request?`): `Promise`\<`void`\>
 
-Defined in: [src/base/uploader.ts:347](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L347)
+Defined in: [src/base/uploader.ts:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L397)
+
+Uploads a single batch via `XMLHttpRequest`.
 
 #### Parameters
 
@@ -64,9 +82,13 @@ Defined in: [src/base/uploader.ts:347](https://github.com/serenity-is/serenity/b
 
 [`UploaderBatch`](../interfaces/UploaderBatch.md)
 
+Batch payload containing `FormData` and file paths.
+
 ##### request?
 
 [`UploaderRequest`](../interfaces/UploaderRequest.md)
+
+Optional request overrides merged over [Uploader.requestDefaults](#requestdefaults).
 
 #### Returns
 
@@ -78,13 +100,18 @@ Defined in: [src/base/uploader.ts:347](https://github.com/serenity-is/serenity/b
 
 > `static` **errorHandler**(`data`): `void`
 
-Defined in: [src/base/uploader.ts:464](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L464)
+Defined in: [src/base/uploader.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L519)
+
+Default error handler. Logs the exception, surfaces server error messages,
+and falls back to generic notifications or an iframe dialog for HTML responses.
 
 #### Parameters
 
 ##### data
 
 [`UploaderErrorData`](../interfaces/UploaderErrorData.md)
+
+Error context for the failed upload.
 
 #### Returns
 

@@ -2,7 +2,10 @@
 
 # Interface: ToolButton
 
-Defined in: [src/ui/widgets/toolbar.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L16)
+Defined in: [src/ui/widgets/toolbar.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L32)
+
+A toolbar button definition, extending [ToolButtonProps](ToolButtonProps.md) with hotkey
+and separator support.
 
 ## Extends
 
@@ -14,7 +17,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:16](https://github.com/serenity-is/seren
 
 > `optional` **action**: `string`
 
-Defined in: [src/ui/widgets/toolbar.tsx:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L5)
+Defined in: [src/ui/widgets/toolbar.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L9)
+
+Optional action name stored on the button's `data-action` attribute.
 
 #### Inherited from
 
@@ -26,7 +31,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:5](https://github.com/serenity-is/sereni
 
 > `optional` **cssClass**: `string`
 
-Defined in: [src/ui/widgets/toolbar.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L8)
+Defined in: [src/ui/widgets/toolbar.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L15)
+
+Optional CSS class(es) applied to the button.
 
 #### Inherited from
 
@@ -38,7 +45,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:8](https://github.com/serenity-is/sereni
 
 > `optional` **disabled**: `boolean` \| () => `boolean`
 
-Defined in: [src/ui/widgets/toolbar.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L13)
+Defined in: [src/ui/widgets/toolbar.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L25)
+
+Whether the button is disabled; may be a function evaluated on update.
 
 #### Inherited from
 
@@ -50,7 +59,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:13](https://github.com/serenity-is/seren
 
 > `optional` **hint**: `string`
 
-Defined in: [src/ui/widgets/toolbar.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L7)
+Defined in: [src/ui/widgets/toolbar.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L13)
+
+Optional tooltip hint shown on hover.
 
 #### Inherited from
 
@@ -62,7 +73,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:7](https://github.com/serenity-is/sereni
 
 > `optional` **hotkey**: `string`
 
-Defined in: [src/ui/widgets/toolbar.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L17)
+Defined in: [src/ui/widgets/toolbar.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L34)
+
+Optional hotkey binding (e.g. "ctrl+s").
 
 ***
 
@@ -70,7 +83,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:17](https://github.com/serenity-is/seren
 
 > `optional` **hotkeyAllowDefault**: `boolean`
 
-Defined in: [src/ui/widgets/toolbar.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L18)
+Defined in: [src/ui/widgets/toolbar.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L36)
+
+Whether the browser's default hotkey behavior should be allowed.
 
 ***
 
@@ -78,7 +93,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:18](https://github.com/serenity-is/seren
 
 > `optional` **hotkeyContext**: `any`
 
-Defined in: [src/ui/widgets/toolbar.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L19)
+Defined in: [src/ui/widgets/toolbar.tsx:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L38)
+
+Optional context element to which the hotkey is bound.
 
 ***
 
@@ -86,7 +103,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:19](https://github.com/serenity-is/seren
 
 > `optional` **icon**: [`IconClassName`](../type-aliases/IconClassName.md)
 
-Defined in: [src/ui/widgets/toolbar.tsx:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L9)
+Defined in: [src/ui/widgets/toolbar.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L17)
+
+Optional icon class name to display before the title.
 
 #### Inherited from
 
@@ -98,7 +117,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:9](https://github.com/serenity-is/sereni
 
 > `optional` **onClick**: (`e`) => `void`
 
-Defined in: [src/ui/widgets/toolbar.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L10)
+Defined in: [src/ui/widgets/toolbar.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L19)
+
+Handler invoked when the button is clicked.
 
 #### Parameters
 
@@ -120,7 +141,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:10](https://github.com/serenity-is/seren
 
 > `optional` **ref**: (`el`) => `void`
 
-Defined in: [src/ui/widgets/toolbar.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L11)
+Defined in: [src/ui/widgets/toolbar.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L21)
+
+Callback invoked with the created button element.
 
 #### Parameters
 
@@ -142,7 +165,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:11](https://github.com/serenity-is/seren
 
 > `optional` **separator**: `boolean` \| `"left"` \| `"right"` \| `"both"`
 
-Defined in: [src/ui/widgets/toolbar.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L20)
+Defined in: [src/ui/widgets/toolbar.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L40)
+
+Whether (and where) a separator should be rendered before the button.
 
 ***
 
@@ -150,7 +175,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:20](https://github.com/serenity-is/seren
 
 > `optional` **title**: `string` \| `HTMLElement` \| `DocumentFragment` \| `SVGElement` \| `MathMLElement`
 
-Defined in: [src/ui/widgets/toolbar.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L6)
+Defined in: [src/ui/widgets/toolbar.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L11)
+
+The button's title (text or element).
 
 #### Inherited from
 
@@ -162,7 +189,9 @@ Defined in: [src/ui/widgets/toolbar.tsx:6](https://github.com/serenity-is/sereni
 
 > `optional` **visible**: `boolean` \| () => `boolean`
 
-Defined in: [src/ui/widgets/toolbar.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L12)
+Defined in: [src/ui/widgets/toolbar.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/toolbar.tsx#L23)
+
+Whether the button is visible; may be a function evaluated on update.
 
 #### Inherited from
 

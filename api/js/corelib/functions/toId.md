@@ -4,12 +4,9 @@
 
 > **toId**(`id`): `any`
 
-Defined in: [src/base/formatting.ts:595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L595)
+Defined in: [src/base/formatting.ts:650](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L650)
 
-Converts a string to an ID. If the string is a number, it is returned as-is.
-If the string is empty, null or whitespace, null is returned.
-Otherwise, it is converted to a number if possible. If the string is not a
-valid number or longer than 14 digits, the trimmed string is returned as-is.
+Normalizes a value to an ID suitable for entity keys.
 
 ## Parameters
 
@@ -17,8 +14,18 @@ valid number or longer than 14 digits, the trimmed string is returned as-is.
 
 `any`
 
-the string to convert to an ID
+Candidate ID: a number is returned as-is; a string is trimmed and, when it is a plain integer with fewer than 15 characters, parsed to a number; otherwise the trimmed string is returned. `null`, `undefined`, or whitespace yields `null`.
 
 ## Returns
 
 `any`
+
+The normalized ID (`number` or `string`) or `null` for empty input.
+
+## Example
+
+```ts
+toId(" 42 "); // 42
+toId("abc");  // "abc"
+toId("");     // null
+```

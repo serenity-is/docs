@@ -4,7 +4,7 @@
 
 > **register**(`cls`): `void`
 
-Defined in: [src/slick/aggregatortyperegistry.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregatortyperegistry.ts#L29)
+Defined in: [src/slick/aggregatortyperegistry.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregatortyperegistry.ts#L34)
 
 Registers a new aggregator class.
 

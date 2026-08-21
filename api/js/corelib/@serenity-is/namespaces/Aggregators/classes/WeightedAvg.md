@@ -2,7 +2,9 @@
 
 # Class: WeightedAvg
 
-Defined in: [src/slick/aggregators.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L48)
+Defined in: [src/slick/aggregators.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L68)
+
+Weighted average given a value field and a weight field.
 
 ## Implements
 
@@ -14,7 +16,9 @@ Defined in: [src/slick/aggregators.ts:48](https://github.com/serenity-is/serenit
 
 > **new WeightedAvg**(`field`, `weightedField`): `WeightedAvg`
 
-Defined in: [src/slick/aggregators.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L52)
+Defined in: [src/slick/aggregators.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L79)
+
+Creates a new weighted average aggregator.
 
 #### Parameters
 
@@ -22,9 +26,13 @@ Defined in: [src/slick/aggregators.ts:52](https://github.com/serenity-is/serenit
 
 `string`
 
+The value field name.
+
 ##### weightedField
 
 `string`
+
+The weight field name.
 
 #### Returns
 
@@ -36,7 +44,9 @@ Defined in: [src/slick/aggregators.ts:52](https://github.com/serenity-is/serenit
 
 > `readonly` **field**: `string`
 
-Defined in: [src/slick/aggregators.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L52)
+Defined in: [src/slick/aggregators.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L79)
+
+The value field name.
 
 ***
 
@@ -44,7 +54,9 @@ Defined in: [src/slick/aggregators.ts:52](https://github.com/serenity-is/serenit
 
 > **sum**: `number`
 
-Defined in: [src/slick/aggregators.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L49)
+Defined in: [src/slick/aggregators.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L70)
+
+Weighted sum of values.
 
 ***
 
@@ -52,7 +64,9 @@ Defined in: [src/slick/aggregators.ts:49](https://github.com/serenity-is/serenit
 
 > `readonly` **weightedField**: `string`
 
-Defined in: [src/slick/aggregators.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L53)
+Defined in: [src/slick/aggregators.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L80)
+
+The weight field name.
 
 ***
 
@@ -60,7 +74,9 @@ Defined in: [src/slick/aggregators.ts:53](https://github.com/serenity-is/serenit
 
 > **weightedSum**: `number`
 
-Defined in: [src/slick/aggregators.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L50)
+Defined in: [src/slick/aggregators.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L72)
+
+Sum of weights.
 
 ***
 
@@ -68,7 +84,9 @@ Defined in: [src/slick/aggregators.ts:50](https://github.com/serenity-is/serenit
 
 > `readonly` `static` **aggregateKey**: `"weightedAvg"` = `"weightedAvg"`
 
-Defined in: [src/slick/aggregators.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L84)
+Defined in: [src/slick/aggregators.ts:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L120)
+
+Key used to store/lookup this aggregator in totals.
 
 ## Accessors
 
@@ -78,7 +96,9 @@ Defined in: [src/slick/aggregators.ts:84](https://github.com/serenity-is/serenit
 
 > **get** `static` **displayName**(): `string`
 
-Defined in: [src/slick/aggregators.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L85)
+Defined in: [src/slick/aggregators.ts:122](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L122)
+
+Localized display name for this aggregator.
 
 ##### Returns
 
@@ -90,13 +110,17 @@ Defined in: [src/slick/aggregators.ts:85](https://github.com/serenity-is/serenit
 
 > **accumulate**(`item`): `void`
 
-Defined in: [src/slick/aggregators.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L61)
+Defined in: [src/slick/aggregators.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L90)
+
+Accumulates a single item into the aggregator state.
 
 #### Parameters
 
 ##### item
 
 `any`
+
+Row item to accumulate; both value and weight fields must contain valid numeric values.
 
 #### Returns
 
@@ -112,7 +136,9 @@ Defined in: [src/slick/aggregators.ts:61](https://github.com/serenity-is/serenit
 
 > **init**(): `void`
 
-Defined in: [src/slick/aggregators.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L56)
+Defined in: [src/slick/aggregators.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L84)
+
+Initializes state before a new group is processed.
 
 #### Returns
 
@@ -128,13 +154,17 @@ Defined in: [src/slick/aggregators.ts:56](https://github.com/serenity-is/serenit
 
 > **storeResult**(`groupTotals`): `void`
 
-Defined in: [src/slick/aggregators.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L71)
+Defined in: [src/slick/aggregators.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L101)
+
+Writes computed totals into the group totals object.
 
 #### Parameters
 
 ##### groupTotals
 
 `any`
+
+Totals container to write the computed weighted average into, keyed by field name.
 
 #### Returns
 
@@ -150,7 +180,9 @@ Defined in: [src/slick/aggregators.ts:71](https://github.com/serenity-is/serenit
 
 > `static` **isValid**(`val`): `boolean`
 
-Defined in: [src/slick/aggregators.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L80)
+Defined in: [src/slick/aggregators.ts:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/aggregators.ts#L115)
+
+Checks if a value is valid for aggregation.
 
 #### Parameters
 
@@ -158,6 +190,10 @@ Defined in: [src/slick/aggregators.ts:80](https://github.com/serenity-is/serenit
 
 `any`
 
+The value to check.
+
 #### Returns
 
 `boolean`
+
+True if valid.

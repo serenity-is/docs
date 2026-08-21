@@ -4,12 +4,9 @@
 
 > **parseInteger**(`s`): `number`
 
-Defined in: [src/base/formatting.ts:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L519)
+Defined in: [src/base/formatting.ts:571](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/formatting.ts#L571)
 
-Converts a string to an integer. The difference between parseInt and parseInteger 
-is that parseInteger will return null if the string is empty or null, whereas
-parseInt will return NaN and parseInteger will use the current culture's group
-and decimal separators.
+Parses a string as an integer using [Culture](../variables/Culture.md) grouping rules.
 
 ## Parameters
 
@@ -17,8 +14,14 @@ and decimal separators.
 
 `string`
 
-the string to parse
+String to parse; `null` or whitespace yields `null`. Group separators for the current culture are stripped before validation.
 
 ## Returns
 
 `number`
+
+The parsed integer, `null` for empty/null input, or `NaN` when the string is not a valid integer.
+
+## Remarks
+
+Unlike `parseInt`, only strings matching `^[+-]?\d+$` (after group-separator removal) are accepted; trailing characters cause `NaN`.

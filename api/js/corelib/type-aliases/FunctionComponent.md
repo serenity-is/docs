@@ -4,7 +4,10 @@
 
 > **FunctionComponent**\<`P`, `T`\> = (`props`) => `T` \| `null`
 
-Defined in: [../domwise/dist/index.d.ts:2176](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2176)
+Defined in: [../domwise/dist/index.d.ts:2339](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2339)
+
+A function-based JSX component that receives props (including `children`)
+and returns a `JSXElement` or `null`.
 
 ## Type Parameters
 
@@ -12,9 +15,13 @@ Defined in: [../domwise/dist/index.d.ts:2176](https://github.com/serenity-is/ser
 
 `P` = \{ \}
 
+The type of the component's props.
+
 ### T
 
 `T` *extends* `Node` = [`JSXElement`](JSXElement.md)
+
+The type of the DOM node the component renders.
 
 ## Parameters
 

@@ -2,7 +2,9 @@
 
 # Interface: ArgsRowsChanged
 
-Defined in: [src/slick/remoteview.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L26)
+Defined in: [src/slick/remoteview.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L47)
+
+Arguments for rows changed events.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/slick/remoteview.ts:26](https://github.com/serenity-is/serenity
 
 > **dataView**: [`IRemoteView`](IRemoteView.md)
 
-Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L9)
+Defined in: [src/slick/remoteview.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L13)
+
+The data view that raised the event.
 
 #### Inherited from
 
@@ -26,4 +30,6 @@ Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/
 
 > **rows**: `number`[]
 
-Defined in: [src/slick/remoteview.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L27)
+Defined in: [src/slick/remoteview.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L49)
+
+Indices of the rows that changed.

@@ -1,12 +1,12 @@
 [@serenity-is/corelib](../README.md) / isEmptyOrNull
 
-# Function: isEmptyOrNull()
+# ~~Function: isEmptyOrNull()~~
 
 > **isEmptyOrNull**(`s`): `boolean`
 
-Defined in: [src/compat/strings-compat.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L17)
+Defined in: [src/compat/strings-compat.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L18)
 
-Checks if the string is empty or null. Prefer (!s) instead.
+Determines whether a string is `null`, `undefined`, or empty (`""`).
 
 ## Parameters
 
@@ -14,10 +14,14 @@ Checks if the string is empty or null. Prefer (!s) instead.
 
 `string`
 
-String to check.
+The string to test; may be `null` or `undefined`.
 
 ## Returns
 
 `boolean`
 
-True if the string is empty or null.
+`true` if `s` is `null`/`undefined` or has zero length.
+
+## Deprecated
+
+Prefer a direct falsy check `!s` or `s == null || s.length === 0` over this shim.

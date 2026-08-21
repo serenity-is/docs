@@ -4,6 +4,6 @@
 
 > `const` **NoButton**: `string`
 
-Defined in: [src/base/dialogs.tsx:735](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L735)
+Defined in: [src/base/dialogs.tsx:824](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L824)
 
 Text for the "No" button in dialogs.

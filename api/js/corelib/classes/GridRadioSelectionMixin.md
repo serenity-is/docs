@@ -2,7 +2,9 @@
 
 # Class: GridRadioSelectionMixin
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L10)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L19)
+
+A mixin that adds single (radio) row selection behavior to a data grid.
 
 ## Constructors
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:10](https://github.com/s
 
 > **new GridRadioSelectionMixin**(`grid`, `options?`): `GridRadioSelectionMixin`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L19)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L33)
+
+Creates a new GridRadioSelectionMixin for the given grid.
 
 #### Parameters
 
@@ -18,9 +22,13 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:19](https://github.com/s
 
 [`IDataGrid`](../interfaces/IDataGrid.md)
 
+The data grid to attach the mixin to.
+
 ##### options?
 
 [`GridRadioSelectionMixinOptions`](../interfaces/GridRadioSelectionMixinOptions.md)
+
+Optional mixin options.
 
 #### Returns
 
@@ -32,7 +40,7 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:19](https://github.com/s
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L12)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L21)
 
 ## Methods
 
@@ -40,7 +48,9 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:12](https://github.com/s
 
 > **clear**(): `void`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L58)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L72)
+
+Clears the current selection.
 
 #### Returns
 
@@ -52,11 +62,15 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:58](https://github.com/s
 
 > **getSelectedAsInt32**(): `number`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L76)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L101)
+
+Returns the selected key parsed as a 32-bit integer, or null if none is selected.
 
 #### Returns
 
 `number`
+
+The selected key as an int32, or null.
 
 ***
 
@@ -64,11 +78,15 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:76](https://github.com/s
 
 > **getSelectedAsInt64**(): `number`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L88)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L117)
+
+Returns the selected key parsed as a 64-bit integer, or null if none is selected.
 
 #### Returns
 
 `number`
+
+The selected key as an int64, or null.
 
 ***
 
@@ -76,11 +94,15 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:88](https://github.com/s
 
 > **getSelectedKey**(): `string`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L67)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L88)
+
+Returns the key of the currently selected item, or null if none is selected.
 
 #### Returns
 
 `string`
+
+The selected key, or null.
 
 ***
 
@@ -88,7 +110,9 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:67](https://github.com/s
 
 > **resetCheckedAndRefresh**(): `void`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L62)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L79)
+
+Clears the current selection and refreshes the grid view.
 
 #### Returns
 
@@ -100,13 +124,17 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:62](https://github.com/s
 
 > **setSelectedKey**(`key`): `void`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L100)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L133)
+
+Selects the item with the given key, clearing any previous selection.
 
 #### Parameters
 
 ##### key
 
 `string`
+
+The key of the item to select.
 
 #### Returns
 
@@ -118,7 +146,9 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:100](https://github.com/
 
 > `static` **createSelectColumn**(`getMixin`, `columnOptions?`): `Column`
 
-Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L105)
+Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:144](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/gridradioselectionmixin.tsx#L144)
+
+Creates a radio select column for the grid.
 
 #### Parameters
 
@@ -126,10 +156,16 @@ Defined in: [src/ui/helpers/gridradioselectionmixin.tsx:105](https://github.com/
 
 () => `GridRadioSelectionMixin`
 
+A function that returns the mixin instance.
+
 ##### columnOptions?
 
 `Partial`\<`Column`\>
 
+Optional column options to merge into the select column.
+
 #### Returns
 
 `Column`
+
+The select column definition.

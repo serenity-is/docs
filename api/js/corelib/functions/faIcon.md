@@ -4,9 +4,9 @@
 
 > **faIcon**(`key`, `color?`): `string`
 
-Defined in: [src/base/icons.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L39)
+Defined in: [src/base/icons.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L52)
 
-Returns the CSS class for a Font Awesome icon.
+Builds the CSS class string for a Font Awesome (solid/regular) icon.
 
 ## Parameters
 
@@ -14,16 +14,23 @@ Returns the CSS class for a Font Awesome icon.
 
 [`faIconKey`](../type-aliases/faIconKey.md)
 
-The key of the Font Awesome icon.
+Icon key from [faIconKey](../type-aliases/faIconKey.md) (without the `fa-` prefix).
 
 ### color?
 
 [`TextColor`](../type-aliases/TextColor.md)
 
-The optional color of the icon.
+Optional [TextColor](../type-aliases/TextColor.md) appended as a `text-*` class.
 
 ## Returns
 
 `string`
 
-The CSS class for the icon.
+Class string such as `"fa fa-home"` or `"fa fa-home text-danger"`.
+
+## Example
+
+```ts
+faIcon("home"); // "fa fa-home"
+faIcon("home", "primary"); // "fa fa-home text-primary"
+```

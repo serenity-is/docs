@@ -4,7 +4,7 @@
 
 > **getBaseType**(`type`): `any`
 
-Defined in: [src/base/system.ts:166](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L166)
+Defined in: [src/base/system.ts:174](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L174)
 
 Get the base type of a class or interface.
 

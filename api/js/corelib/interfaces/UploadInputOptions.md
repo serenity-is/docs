@@ -2,7 +2,9 @@
 
 # Interface: UploadInputOptions
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L251)
+Defined in: [src/ui/helpers/uploadhelper.tsx:321](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L321)
+
+Options for creating an upload input.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:251](https://github.com/serenity-is
 
 > `optional` **allowMultiple**: `boolean`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:256](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L256)
+Defined in: [src/ui/helpers/uploadhelper.tsx:341](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L341)
+
+Whether multiple files may be selected.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:256](https://github.com/serenity-is
 
 > `optional` **container**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L252)
+Defined in: [src/ui/helpers/uploadhelper.tsx:325](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L325)
+
+The container element to add the input to.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:252](https://github.com/serenity-is
 
 > `optional` **fileDone**: (`p1`, `p2`, `p3`) => `void`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:259](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L259)
+Defined in: [src/ui/helpers/uploadhelper.tsx:353](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L353)
+
+Callback invoked when a file upload completes.
 
 #### Parameters
 
@@ -52,7 +60,9 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:259](https://github.com/serenity-is
 
 > `optional` **inputName**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:255](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L255)
+Defined in: [src/ui/helpers/uploadhelper.tsx:337](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L337)
+
+The name of the input element.
 
 ***
 
@@ -60,7 +70,9 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:255](https://github.com/serenity-is
 
 > `optional` **progress**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:254](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L254)
+Defined in: [src/ui/helpers/uploadhelper.tsx:333](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L333)
+
+The progress element.
 
 ***
 
@@ -68,7 +80,9 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:254](https://github.com/serenity-is
 
 > `optional` **uploadIntent**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:257](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L257)
+Defined in: [src/ui/helpers/uploadhelper.tsx:345](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L345)
+
+An optional upload intent appended to the upload URL.
 
 ***
 
@@ -76,7 +90,9 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:257](https://github.com/serenity-is
 
 > `optional` **uploadUrl**: `string`
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:258](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L258)
+Defined in: [src/ui/helpers/uploadhelper.tsx:349](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L349)
+
+The upload URL. Defaults to the temporary upload endpoint.
 
 ***
 
@@ -84,4 +100,6 @@ Defined in: [src/ui/helpers/uploadhelper.tsx:258](https://github.com/serenity-is
 
 > `optional` **zone**: `HTMLElement` \| `ArrayLike`\<`HTMLElement`\>
 
-Defined in: [src/ui/helpers/uploadhelper.tsx:253](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L253)
+Defined in: [src/ui/helpers/uploadhelper.tsx:329](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/uploadhelper.tsx#L329)
+
+The drop zone element.

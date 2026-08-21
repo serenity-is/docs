@@ -1,12 +1,12 @@
 [@serenity-is/corelib](../README.md) / any
 
-# Function: any()
+# ~~Function: any()~~
 
 > **any**\<`TItem`\>(`array`, `predicate`): `boolean`
 
-Defined in: [src/compat/arrays-compat.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L7)
+Defined in: [src/compat/arrays-compat.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L10)
 
-Tests if any of array elements matches given predicate. Prefer Array.some() over this function (e.g. `[1, 2, 3].some(predicate)`).
+Tests whether any element in the array satisfies the predicate.
 
 ## Type Parameters
 
@@ -26,10 +26,20 @@ Array to test.
 
 (`x`) => `boolean`
 
-Predicate to test elements.
+Function invoked per element; should return `true` for a match.
 
 ## Returns
 
 `boolean`
 
-True if any element matches.
+`true` if at least one element matches, otherwise `false`.
+
+## Deprecated
+
+Prefer native `Array.prototype.some` — e.g. `array.some(predicate)`. Retained as a `Q.any` compat shim.
+
+## Example
+
+```ts
+any([1, 2, 3], x => x > 2); // true
+```

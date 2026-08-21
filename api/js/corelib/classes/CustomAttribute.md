@@ -2,7 +2,11 @@
 
 # Abstract Class: CustomAttribute
 
-Defined in: [src/base/system.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L238)
+Defined in: [src/base/system.ts:251](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L251)
+
+Base class for all Serenity custom attributes (metadata attached to types).
+Attributes are stored on `typeInfo.customAttributes` and queried via
+[getCustomAttribute](../functions/getCustomAttribute.md) / [hasCustomAttribute](../functions/hasCustomAttribute.md).
 
 ## Extended by
 
@@ -33,4 +37,4 @@ Defined in: [src/base/system.ts:238](https://github.com/serenity-is/serenity/blo
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/base/system.ts:239](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L239)
+Defined in: [src/base/system.ts:252](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L252)

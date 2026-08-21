@@ -2,7 +2,9 @@
 
 # Interface: DateTimeEditorOptions
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:396](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L396)
+Defined in: [src/ui/editors/datetimeeditor.tsx:515](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L515)
+
+Options for the [DateTimeEditor](../classes/DateTimeEditor.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:396](https://github.com/serenity-
 
 > `optional` **endHour**: `any`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:398](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L398)
+Defined in: [src/ui/editors/datetimeeditor.tsx:519](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L519)
+
+Ending hour for the time select (0-23).
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:398](https://github.com/serenity-
 
 > `optional` **inputOnly**: `boolean`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:405](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L405)
+Defined in: [src/ui/editors/datetimeeditor.tsx:533](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L533)
+
+Whether to render as a plain input without picker UI.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:405](https://github.com/serenity-
 
 > `optional` **intervalMinutes**: `any`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:399](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L399)
+Defined in: [src/ui/editors/datetimeeditor.tsx:521](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L521)
+
+Interval in minutes between time options.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:399](https://github.com/serenity-
 
 > `optional` **maxValue**: `string`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:401](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L401)
+Defined in: [src/ui/editors/datetimeeditor.tsx:525](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L525)
+
+Maximum allowed date-time as an ISO string.
 
 ***
 
@@ -42,7 +52,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:401](https://github.com/serenity-
 
 > `optional` **minValue**: `string`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:400](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L400)
+Defined in: [src/ui/editors/datetimeeditor.tsx:523](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L523)
+
+Minimum allowed date-time as an ISO string.
 
 ***
 
@@ -50,7 +62,19 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:400](https://github.com/serenity-
 
 > `optional` **seconds**: `boolean`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:404](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L404)
+Defined in: [src/ui/editors/datetimeeditor.tsx:531](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L531)
+
+Whether to include seconds in the time picker.
+
+***
+
+### sqlMinMax?
+
+> `optional` **sqlMinMax**: `boolean`
+
+Defined in: [src/ui/editors/datetimeeditor.tsx:535](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L535)
+
+Whether to apply SQL min/max date bounds.
 
 ***
 
@@ -58,7 +82,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:404](https://github.com/serenity-
 
 > `optional` **startHour**: `any`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:397](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L397)
+Defined in: [src/ui/editors/datetimeeditor.tsx:517](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L517)
+
+Starting hour for the time select (0-23).
 
 ***
 
@@ -66,7 +92,9 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:397](https://github.com/serenity-
 
 > `optional` **useUtc**: `boolean`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:403](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L403)
+Defined in: [src/ui/editors/datetimeeditor.tsx:529](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L529)
+
+Whether to store and display values in UTC.
 
 ***
 
@@ -74,4 +102,6 @@ Defined in: [src/ui/editors/datetimeeditor.tsx:403](https://github.com/serenity-
 
 > `optional` **yearRange**: `string`
 
-Defined in: [src/ui/editors/datetimeeditor.tsx:402](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L402)
+Defined in: [src/ui/editors/datetimeeditor.tsx:527](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/datetimeeditor.tsx#L527)
+
+Year range for the date picker (e.g. "-100:+50").

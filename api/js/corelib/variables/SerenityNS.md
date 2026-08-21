@@ -4,4 +4,6 @@
 
 > `const` **SerenityNS**: `"Serenity"` = `"Serenity"`
 
-Defined in: [src/base/system.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L9)
+Defined in: [src/base/system.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L13)
+
+Root namespace `"Serenity"` without trailing dot.

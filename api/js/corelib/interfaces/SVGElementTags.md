@@ -2,7 +2,7 @@
 
 # Interface: SVGElementTags
 
-Defined in: [../domwise/dist/index.d.ts:2034](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2034)
+Defined in: [../domwise/dist/index.d.ts:2155](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2155)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [../domwise/dist/index.d.ts:2034](https://github.com/serenity-is/ser
 
 > **animate**: `AnimateSVGAttributes`\<`SVGAnimateElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2035](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2035)
+Defined in: [../domwise/dist/index.d.ts:2156](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2156)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [../domwise/dist/index.d.ts:2035](https://github.com/serenity-is/ser
 
 > **animateMotion**: `AnimateMotionSVGAttributes`\<`SVGAnimateMotionElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2036](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2036)
+Defined in: [../domwise/dist/index.d.ts:2157](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2157)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [../domwise/dist/index.d.ts:2036](https://github.com/serenity-is/ser
 
 > **animateTransform**: `AnimateTransformSVGAttributes`\<`SVGAnimateTransformElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2037](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2037)
+Defined in: [../domwise/dist/index.d.ts:2158](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2158)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [../domwise/dist/index.d.ts:2037](https://github.com/serenity-is/ser
 
 > **circle**: `CircleSVGAttributes`\<`SVGCircleElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2038](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2038)
+Defined in: [../domwise/dist/index.d.ts:2159](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2159)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [../domwise/dist/index.d.ts:2038](https://github.com/serenity-is/ser
 
 > **clipPath**: `ClipPathSVGAttributes`\<`SVGClipPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2039](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2039)
+Defined in: [../domwise/dist/index.d.ts:2160](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2160)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [../domwise/dist/index.d.ts:2039](https://github.com/serenity-is/ser
 
 > **defs**: `DefsSVGAttributes`\<`SVGDefsElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2040](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2040)
+Defined in: [../domwise/dist/index.d.ts:2161](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2161)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [../domwise/dist/index.d.ts:2040](https://github.com/serenity-is/ser
 
 > **desc**: `DescSVGAttributes`\<`SVGDescElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2041](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2041)
+Defined in: [../domwise/dist/index.d.ts:2162](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2162)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [../domwise/dist/index.d.ts:2041](https://github.com/serenity-is/ser
 
 > **ellipse**: `EllipseSVGAttributes`\<`SVGEllipseElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2042](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2042)
+Defined in: [../domwise/dist/index.d.ts:2163](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2163)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [../domwise/dist/index.d.ts:2042](https://github.com/serenity-is/ser
 
 > **feBlend**: `FeBlendSVGAttributes`\<`SVGFEBlendElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2043](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2043)
+Defined in: [../domwise/dist/index.d.ts:2164](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2164)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [../domwise/dist/index.d.ts:2043](https://github.com/serenity-is/ser
 
 > **feColorMatrix**: `FeColorMatrixSVGAttributes`\<`SVGFEColorMatrixElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2044](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2044)
+Defined in: [../domwise/dist/index.d.ts:2165](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2165)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [../domwise/dist/index.d.ts:2044](https://github.com/serenity-is/ser
 
 > **feComponentTransfer**: `FeComponentTransferSVGAttributes`\<`SVGFEComponentTransferElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2045](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2045)
+Defined in: [../domwise/dist/index.d.ts:2166](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2166)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [../domwise/dist/index.d.ts:2045](https://github.com/serenity-is/ser
 
 > **feComposite**: `FeCompositeSVGAttributes`\<`SVGFECompositeElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2046](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2046)
+Defined in: [../domwise/dist/index.d.ts:2167](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2167)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [../domwise/dist/index.d.ts:2046](https://github.com/serenity-is/ser
 
 > **feConvolveMatrix**: `FeConvolveMatrixSVGAttributes`\<`SVGFEConvolveMatrixElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2047](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2047)
+Defined in: [../domwise/dist/index.d.ts:2168](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2168)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [../domwise/dist/index.d.ts:2047](https://github.com/serenity-is/ser
 
 > **feDiffuseLighting**: `FeDiffuseLightingSVGAttributes`\<`SVGFEDiffuseLightingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2048](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2048)
+Defined in: [../domwise/dist/index.d.ts:2169](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2169)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [../domwise/dist/index.d.ts:2048](https://github.com/serenity-is/ser
 
 > **feDisplacementMap**: `FeDisplacementMapSVGAttributes`\<`SVGFEDisplacementMapElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2049](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2049)
+Defined in: [../domwise/dist/index.d.ts:2170](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2170)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [../domwise/dist/index.d.ts:2049](https://github.com/serenity-is/ser
 
 > **feDistantLight**: `FeDistantLightSVGAttributes`\<`SVGFEDistantLightElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2050](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2050)
+Defined in: [../domwise/dist/index.d.ts:2171](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2171)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [../domwise/dist/index.d.ts:2050](https://github.com/serenity-is/ser
 
 > **feDropShadow**: `FeDropShadowSVGAttributes`\<`SVGFEDropShadowElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2051](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2051)
+Defined in: [../domwise/dist/index.d.ts:2172](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2172)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [../domwise/dist/index.d.ts:2051](https://github.com/serenity-is/ser
 
 > **feFlood**: `FeFloodSVGAttributes`\<`SVGFEFloodElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2052](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2052)
+Defined in: [../domwise/dist/index.d.ts:2173](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2173)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [../domwise/dist/index.d.ts:2052](https://github.com/serenity-is/ser
 
 > **feFuncA**: `FeFuncSVGAttributes`\<`SVGFEFuncAElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2053](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2053)
+Defined in: [../domwise/dist/index.d.ts:2174](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2174)
 
 ***
 
@@ -162,7 +162,7 @@ Defined in: [../domwise/dist/index.d.ts:2053](https://github.com/serenity-is/ser
 
 > **feFuncB**: `FeFuncSVGAttributes`\<`SVGFEFuncBElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2054](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2054)
+Defined in: [../domwise/dist/index.d.ts:2175](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2175)
 
 ***
 
@@ -170,7 +170,7 @@ Defined in: [../domwise/dist/index.d.ts:2054](https://github.com/serenity-is/ser
 
 > **feFuncG**: `FeFuncSVGAttributes`\<`SVGFEFuncGElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2055](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2055)
+Defined in: [../domwise/dist/index.d.ts:2176](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2176)
 
 ***
 
@@ -178,7 +178,7 @@ Defined in: [../domwise/dist/index.d.ts:2055](https://github.com/serenity-is/ser
 
 > **feFuncR**: `FeFuncSVGAttributes`\<`SVGFEFuncRElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2056](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2056)
+Defined in: [../domwise/dist/index.d.ts:2177](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2177)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [../domwise/dist/index.d.ts:2056](https://github.com/serenity-is/ser
 
 > **feGaussianBlur**: `FeGaussianBlurSVGAttributes`\<`SVGFEGaussianBlurElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2057](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2057)
+Defined in: [../domwise/dist/index.d.ts:2178](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2178)
 
 ***
 
@@ -194,7 +194,7 @@ Defined in: [../domwise/dist/index.d.ts:2057](https://github.com/serenity-is/ser
 
 > **feImage**: `FeImageSVGAttributes`\<`SVGFEImageElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2058](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2058)
+Defined in: [../domwise/dist/index.d.ts:2179](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2179)
 
 ***
 
@@ -202,7 +202,7 @@ Defined in: [../domwise/dist/index.d.ts:2058](https://github.com/serenity-is/ser
 
 > **feMerge**: `FeMergeSVGAttributes`\<`SVGFEMergeElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2059](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2059)
+Defined in: [../domwise/dist/index.d.ts:2180](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2180)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [../domwise/dist/index.d.ts:2059](https://github.com/serenity-is/ser
 
 > **feMergeNode**: `FeMergeNodeSVGAttributes`\<`SVGFEMergeNodeElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2060](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2060)
+Defined in: [../domwise/dist/index.d.ts:2181](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2181)
 
 ***
 
@@ -218,7 +218,7 @@ Defined in: [../domwise/dist/index.d.ts:2060](https://github.com/serenity-is/ser
 
 > **feMorphology**: `FeMorphologySVGAttributes`\<`SVGFEMorphologyElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2061](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2061)
+Defined in: [../domwise/dist/index.d.ts:2182](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2182)
 
 ***
 
@@ -226,7 +226,7 @@ Defined in: [../domwise/dist/index.d.ts:2061](https://github.com/serenity-is/ser
 
 > **feOffset**: `FeOffsetSVGAttributes`\<`SVGFEOffsetElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2062](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2062)
+Defined in: [../domwise/dist/index.d.ts:2183](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2183)
 
 ***
 
@@ -234,7 +234,7 @@ Defined in: [../domwise/dist/index.d.ts:2062](https://github.com/serenity-is/ser
 
 > **fePointLight**: `FePointLightSVGAttributes`\<`SVGFEPointLightElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2063](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2063)
+Defined in: [../domwise/dist/index.d.ts:2184](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2184)
 
 ***
 
@@ -242,7 +242,7 @@ Defined in: [../domwise/dist/index.d.ts:2063](https://github.com/serenity-is/ser
 
 > **feSpecularLighting**: `FeSpecularLightingSVGAttributes`\<`SVGFESpecularLightingElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2064](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2064)
+Defined in: [../domwise/dist/index.d.ts:2185](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2185)
 
 ***
 
@@ -250,7 +250,7 @@ Defined in: [../domwise/dist/index.d.ts:2064](https://github.com/serenity-is/ser
 
 > **feSpotLight**: `FeSpotLightSVGAttributes`\<`SVGFESpotLightElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2065](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2065)
+Defined in: [../domwise/dist/index.d.ts:2186](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2186)
 
 ***
 
@@ -258,7 +258,7 @@ Defined in: [../domwise/dist/index.d.ts:2065](https://github.com/serenity-is/ser
 
 > **feTile**: `FeTileSVGAttributes`\<`SVGFETileElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2066](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2066)
+Defined in: [../domwise/dist/index.d.ts:2187](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2187)
 
 ***
 
@@ -266,7 +266,7 @@ Defined in: [../domwise/dist/index.d.ts:2066](https://github.com/serenity-is/ser
 
 > **feTurbulence**: `FeTurbulanceSVGAttributes`\<`SVGFETurbulenceElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2067](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2067)
+Defined in: [../domwise/dist/index.d.ts:2188](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2188)
 
 ***
 
@@ -274,7 +274,7 @@ Defined in: [../domwise/dist/index.d.ts:2067](https://github.com/serenity-is/ser
 
 > **filter**: `FilterSVGAttributes`\<`SVGFilterElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2068](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2068)
+Defined in: [../domwise/dist/index.d.ts:2189](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2189)
 
 ***
 
@@ -282,7 +282,7 @@ Defined in: [../domwise/dist/index.d.ts:2068](https://github.com/serenity-is/ser
 
 > **foreignObject**: `ForeignObjectSVGAttributes`\<`SVGForeignObjectElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2069](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2069)
+Defined in: [../domwise/dist/index.d.ts:2190](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2190)
 
 ***
 
@@ -290,7 +290,7 @@ Defined in: [../domwise/dist/index.d.ts:2069](https://github.com/serenity-is/ser
 
 > **g**: `GSVGAttributes`\<`SVGGElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2070](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2070)
+Defined in: [../domwise/dist/index.d.ts:2191](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2191)
 
 ***
 
@@ -298,7 +298,7 @@ Defined in: [../domwise/dist/index.d.ts:2070](https://github.com/serenity-is/ser
 
 > **image**: `ImageSVGAttributes`\<`SVGImageElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2071](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2071)
+Defined in: [../domwise/dist/index.d.ts:2192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2192)
 
 ***
 
@@ -306,7 +306,7 @@ Defined in: [../domwise/dist/index.d.ts:2071](https://github.com/serenity-is/ser
 
 > **line**: `LineSVGAttributes`\<`SVGLineElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2072](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2072)
+Defined in: [../domwise/dist/index.d.ts:2193](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2193)
 
 ***
 
@@ -314,7 +314,7 @@ Defined in: [../domwise/dist/index.d.ts:2072](https://github.com/serenity-is/ser
 
 > **linearGradient**: `LinearGradientSVGAttributes`\<`SVGLinearGradientElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2073](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2073)
+Defined in: [../domwise/dist/index.d.ts:2194](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2194)
 
 ***
 
@@ -322,7 +322,7 @@ Defined in: [../domwise/dist/index.d.ts:2073](https://github.com/serenity-is/ser
 
 > **marker**: `MarkerSVGAttributes`\<`SVGMarkerElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2074](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2074)
+Defined in: [../domwise/dist/index.d.ts:2195](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2195)
 
 ***
 
@@ -330,7 +330,7 @@ Defined in: [../domwise/dist/index.d.ts:2074](https://github.com/serenity-is/ser
 
 > **mask**: `MaskSVGAttributes`\<`SVGMaskElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2075](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2075)
+Defined in: [../domwise/dist/index.d.ts:2196](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2196)
 
 ***
 
@@ -338,7 +338,7 @@ Defined in: [../domwise/dist/index.d.ts:2075](https://github.com/serenity-is/ser
 
 > **metadata**: `MetadataSVGAttributes`\<`SVGMetadataElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2076](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2076)
+Defined in: [../domwise/dist/index.d.ts:2197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2197)
 
 ***
 
@@ -346,7 +346,7 @@ Defined in: [../domwise/dist/index.d.ts:2076](https://github.com/serenity-is/ser
 
 > **mpath**: `MPathSVGAttributes`\<`SVGMPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2077](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2077)
+Defined in: [../domwise/dist/index.d.ts:2198](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2198)
 
 ***
 
@@ -354,7 +354,7 @@ Defined in: [../domwise/dist/index.d.ts:2077](https://github.com/serenity-is/ser
 
 > **path**: `PathSVGAttributes`\<`SVGPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2078](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2078)
+Defined in: [../domwise/dist/index.d.ts:2199](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2199)
 
 ***
 
@@ -362,7 +362,7 @@ Defined in: [../domwise/dist/index.d.ts:2078](https://github.com/serenity-is/ser
 
 > **pattern**: `PatternSVGAttributes`\<`SVGPatternElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2079](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2079)
+Defined in: [../domwise/dist/index.d.ts:2200](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2200)
 
 ***
 
@@ -370,7 +370,7 @@ Defined in: [../domwise/dist/index.d.ts:2079](https://github.com/serenity-is/ser
 
 > **polygon**: `PolygonSVGAttributes`\<`SVGPolygonElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2080](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2080)
+Defined in: [../domwise/dist/index.d.ts:2201](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2201)
 
 ***
 
@@ -378,7 +378,7 @@ Defined in: [../domwise/dist/index.d.ts:2080](https://github.com/serenity-is/ser
 
 > **polyline**: `PolylineSVGAttributes`\<`SVGPolylineElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2081](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2081)
+Defined in: [../domwise/dist/index.d.ts:2202](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2202)
 
 ***
 
@@ -386,7 +386,7 @@ Defined in: [../domwise/dist/index.d.ts:2081](https://github.com/serenity-is/ser
 
 > **radialGradient**: `RadialGradientSVGAttributes`\<`SVGRadialGradientElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2082](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2082)
+Defined in: [../domwise/dist/index.d.ts:2203](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2203)
 
 ***
 
@@ -394,7 +394,7 @@ Defined in: [../domwise/dist/index.d.ts:2082](https://github.com/serenity-is/ser
 
 > **rect**: `RectSVGAttributes`\<`SVGRectElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2083](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2083)
+Defined in: [../domwise/dist/index.d.ts:2204](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2204)
 
 ***
 
@@ -402,7 +402,7 @@ Defined in: [../domwise/dist/index.d.ts:2083](https://github.com/serenity-is/ser
 
 > **set**: `SetSVGAttributes`\<`SVGSetElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2084](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2084)
+Defined in: [../domwise/dist/index.d.ts:2205](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2205)
 
 ***
 
@@ -410,7 +410,7 @@ Defined in: [../domwise/dist/index.d.ts:2084](https://github.com/serenity-is/ser
 
 > **stop**: `StopSVGAttributes`\<`SVGStopElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2085](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2085)
+Defined in: [../domwise/dist/index.d.ts:2206](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2206)
 
 ***
 
@@ -418,7 +418,7 @@ Defined in: [../domwise/dist/index.d.ts:2085](https://github.com/serenity-is/ser
 
 > **svg**: `SvgSVGAttributes`\<`SVGSVGElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2086](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2086)
+Defined in: [../domwise/dist/index.d.ts:2207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2207)
 
 ***
 
@@ -426,7 +426,7 @@ Defined in: [../domwise/dist/index.d.ts:2086](https://github.com/serenity-is/ser
 
 > **switch**: `SwitchSVGAttributes`\<`SVGSwitchElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2087](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2087)
+Defined in: [../domwise/dist/index.d.ts:2208](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2208)
 
 ***
 
@@ -434,7 +434,7 @@ Defined in: [../domwise/dist/index.d.ts:2087](https://github.com/serenity-is/ser
 
 > **symbol**: `SymbolSVGAttributes`\<`SVGSymbolElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2088](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2088)
+Defined in: [../domwise/dist/index.d.ts:2209](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2209)
 
 ***
 
@@ -442,7 +442,7 @@ Defined in: [../domwise/dist/index.d.ts:2088](https://github.com/serenity-is/ser
 
 > **text**: `TextSVGAttributes`\<`SVGTextElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2089](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2089)
+Defined in: [../domwise/dist/index.d.ts:2210](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2210)
 
 ***
 
@@ -450,7 +450,7 @@ Defined in: [../domwise/dist/index.d.ts:2089](https://github.com/serenity-is/ser
 
 > **textPath**: `TextPathSVGAttributes`\<`SVGTextPathElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2090](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2090)
+Defined in: [../domwise/dist/index.d.ts:2211](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2211)
 
 ***
 
@@ -458,7 +458,7 @@ Defined in: [../domwise/dist/index.d.ts:2090](https://github.com/serenity-is/ser
 
 > **tspan**: `TSpanSVGAttributes`\<`SVGTSpanElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2091](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2091)
+Defined in: [../domwise/dist/index.d.ts:2212](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2212)
 
 ***
 
@@ -466,7 +466,7 @@ Defined in: [../domwise/dist/index.d.ts:2091](https://github.com/serenity-is/ser
 
 > **use**: `UseSVGAttributes`\<`SVGUseElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2092](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2092)
+Defined in: [../domwise/dist/index.d.ts:2213](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2213)
 
 ***
 
@@ -474,4 +474,4 @@ Defined in: [../domwise/dist/index.d.ts:2092](https://github.com/serenity-is/ser
 
 > **view**: `ViewSVGAttributes`\<`SVGViewElement`\>
 
-Defined in: [../domwise/dist/index.d.ts:2093](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2093)
+Defined in: [../domwise/dist/index.d.ts:2214](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2214)

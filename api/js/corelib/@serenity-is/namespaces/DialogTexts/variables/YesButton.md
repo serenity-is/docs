@@ -4,6 +4,6 @@
 
 > `const` **YesButton**: `string`
 
-Defined in: [src/base/dialogs.tsx:765](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L765)
+Defined in: [src/base/dialogs.tsx:854](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L854)
 
 Text for the "Yes" button in dialogs.

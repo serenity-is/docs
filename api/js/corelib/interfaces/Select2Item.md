@@ -2,7 +2,9 @@
 
 # Interface: Select2Item
 
-Defined in: [src/ui/editors/select2.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L20)
+Defined in: [src/ui/editors/select2.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L34)
+
+A single Select2 item.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/select2.ts:20](https://github.com/serenity-is/sereni
 
 > `optional` **children**: `Select2Item`[]
 
-Defined in: [src/ui/editors/select2.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L24)
+Defined in: [src/ui/editors/select2.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L42)
+
+Child items.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/ui/editors/select2.ts:24](https://github.com/serenity-is/sereni
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L25)
+Defined in: [src/ui/editors/select2.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L44)
+
+Whether the item is disabled.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/ui/editors/select2.ts:25](https://github.com/serenity-is/sereni
 
 > `optional` **id**: `string`
 
-Defined in: [src/ui/editors/select2.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L21)
+Defined in: [src/ui/editors/select2.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L36)
+
+Unique identifier of the select item.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/editors/select2.ts:21](https://github.com/serenity-is/sereni
 
 > `optional` **locked**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L26)
+Defined in: [src/ui/editors/select2.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L46)
+
+Whether the item is locked.
 
 ***
 
@@ -42,7 +52,9 @@ Defined in: [src/ui/editors/select2.ts:26](https://github.com/serenity-is/sereni
 
 > `optional` **source**: `any`
 
-Defined in: [src/ui/editors/select2.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L23)
+Defined in: [src/ui/editors/select2.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L40)
+
+The source item.
 
 ***
 
@@ -50,4 +62,6 @@ Defined in: [src/ui/editors/select2.ts:23](https://github.com/serenity-is/sereni
 
 > `optional` **text**: `string`
 
-Defined in: [src/ui/editors/select2.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L22)
+Defined in: [src/ui/editors/select2.tsx:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L38)
+
+Display text.

@@ -2,7 +2,7 @@
 
 # Interface: TiptapToolbarHiddenOption
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L10)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:108](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L108)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:10](https://github.com/
 
 > `optional` **alignment**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L11)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L109)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:11](https://github.com/
 
 > `optional` **alignmentJustify**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L12)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L110)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:12](https://github.com/
 
 > `optional` **blockquote**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L13)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L111)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:13](https://github.com/
 
 > `optional` **boldItalicUnderline**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L14)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L112)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:14](https://github.com/
 
 > `optional` **headings**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L16)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:114](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L114)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:16](https://github.com/
 
 > `optional` **image**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L17)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L115)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:17](https://github.com/
 
 > `optional` **inlineCode**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L15)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L113)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:15](https://github.com/
 
 > `optional` **link**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L18)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:116](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L116)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:18](https://github.com/
 
 > `optional` **listOptions**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L19)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L117)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:19](https://github.com/
 
 > `optional` **strike**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L20)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:118](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L118)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:20](https://github.com/
 
 > `optional` **superSubScript**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L21)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L119)
 
 ***
 
@@ -98,4 +98,4 @@ Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:21](https://github.com/
 
 > `optional` **undoRedo**: `boolean`
 
-Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L22)
+Defined in: [src/ui/editors/htmlcontenteditor-tiptap.tsx:120](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor-tiptap.tsx#L120)

@@ -2,9 +2,10 @@
 
 # Class: ResizableAttribute
 
-Defined in: [src/types/attributes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L72)
+Defined in: [src/types/attributes.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L96)
 
-Indicates if a dialog should be resizable, only for jquery ui dialogs.
+Indicates whether a dialog should be resizable (jQuery UI dialogs only).
+Has no effect on Bootstrap modal dialogs.
 
 ## Extends
 
@@ -16,13 +17,17 @@ Indicates if a dialog should be resizable, only for jquery ui dialogs.
 
 > **new ResizableAttribute**(`value`): `ResizableAttribute`
 
-Defined in: [src/types/attributes.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L75)
+Defined in: [src/types/attributes.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L103)
+
+Creates a new ResizableAttribute.
 
 #### Parameters
 
 ##### value
 
 `boolean` = `true`
+
+Whether the dialog may be resized by the user. Defaults to `true`.
 
 #### Returns
 
@@ -38,7 +43,9 @@ Defined in: [src/types/attributes.ts:75](https://github.com/serenity-is/serenity
 
 > **value**: `boolean` = `true`
 
-Defined in: [src/types/attributes.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L75)
+Defined in: [src/types/attributes.ts:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L103)
+
+Whether the dialog may be resized by the user. Defaults to `true`.
 
 ***
 
@@ -46,7 +53,7 @@ Defined in: [src/types/attributes.ts:75](https://github.com/serenity-is/serenity
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/types/attributes.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L73)
+Defined in: [src/types/attributes.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L97)
 
 #### Overrides
 

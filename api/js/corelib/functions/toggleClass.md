@@ -4,9 +4,10 @@
 
 > **toggleClass**(`el`, `cls`, `add?`): `void`
 
-Defined in: [src/base/html.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L39)
+Defined in: [src/base/html.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L51)
 
-Toggles the class on the element handling spaces like addClass does.
+Toggles one or more CSS classes on an element, supporting space-separated lists.
+When `cls` contains spaces it is split and each token is toggled individually.
 
 ## Parameters
 
@@ -14,20 +15,24 @@ Toggles the class on the element handling spaces like addClass does.
 
 `Element`
 
-the element
+Target element. No-op if falsy.
 
 ### cls
 
 `string`
 
-the class to toggle
+Single class or space-separated class list to toggle. No-op if `null`/empty.
 
 ### add?
 
 `boolean`
 
-if true, the class will be added, if false the class will be removed, otherwise it will be toggled.
+Force mode: `true` to add, `false` to remove, `undefined` to toggle.
 
 ## Returns
 
 `void`
+
+## Remarks
+
+Delegates to `Element.classList.toggle` per token, preserving existing classes.

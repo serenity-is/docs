@@ -4,11 +4,9 @@
 
 > **validatePermission**(`permission`): `void`
 
-Defined in: [src/base/authorization.ts:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L121)
+Defined in: [src/base/authorization.ts:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L169)
 
-Throws an error if the current user does not have the specified permission. 
-Prefer `await validatePermissionAsync()` as this one might block the UI if the `UserData`
-is not already loaded.
+Synchronously validates that the current user has the specified permission.
 
 ## Parameters
 
@@ -16,8 +14,24 @@ is not already loaded.
 
 `string`
 
-Permission key. It may contain logical operators like A&B|C.
+Permission key or expression with `&`/`|` operators.
 
 ## Returns
 
 `void`
+
+## Remarks
+
+Shows a localized "Access Denied" notification and throws if the check fails.
+Prefer [Authorization.validatePermissionAsync](validatePermissionAsync.md) to avoid potentially
+blocking on `UserData` loading. Use only for UI gating.
+
+## Throws
+
+Error with localized "Authorization.AccessDenied" message if the user lacks the permission.
+
+## Example
+
+```ts
+Authorization.validatePermission("Administration:General");
+```

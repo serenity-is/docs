@@ -4,7 +4,9 @@
 
 > **editToolButton**(`opt?`): [`ToolButton`](../interfaces/ToolButton.md)
 
-Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L49)
+Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitytoolbuttons.tsx#L77)
+
+Creates a toolbar button that switches the dialog to edit mode.
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/ui/dialogs/entitytoolbuttons.tsx:49](https://github.com/serenit
 
 [`ToolButton`](../interfaces/ToolButton.md)
 
+Optional overrides merged into the button definition.
+
 ## Returns
 
 [`ToolButton`](../interfaces/ToolButton.md)
+
+Tool button definition.

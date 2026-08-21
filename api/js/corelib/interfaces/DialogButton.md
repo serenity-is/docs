@@ -2,9 +2,16 @@
 
 # Interface: DialogButton
 
-Defined in: [src/base/dialogs.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L12)
+Defined in: [src/base/dialogs.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L17)
 
-Options for a message dialog button
+Options that describe a single button rendered in a [Dialog](../classes/Dialog.md) footer.
+
+## Remarks
+
+Buttons are rendered as Bootstrap `btn` or jQuery UI button elements depending
+on the active dialog provider. When [DialogButton.result](#result) is set and the
+click handler does not cancel the event, the dialog automatically closes with
+that result code.
 
 ## Properties
 
@@ -12,9 +19,9 @@ Options for a message dialog button
 
 > `optional` **click**: (`e`) => `false` \| `void` \| `Promise`\<`false` \| `void`\>
 
-Defined in: [src/base/dialogs.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L20)
+Defined in: [src/base/dialogs.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L29)
 
-Click handler
+Click handler invoked when the button is activated.
 
 #### Parameters
 
@@ -22,9 +29,13 @@ Click handler
 
 `MouseEvent`
 
+The originating mouse event.
+
 #### Returns
 
 `false` \| `void` \| `Promise`\<`false` \| `void`\>
+
+`false` to prevent the automatic close, or a `Promise` that resolves to `false` to cancel asynchronously.
 
 ***
 
@@ -32,9 +43,9 @@ Click handler
 
 > `optional` **cssClass**: `string`
 
-Defined in: [src/base/dialogs.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L22)
+Defined in: [src/base/dialogs.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L31)
 
-CSS class for button
+Additional CSS class(es) added to the button element (e.g. `"btn-primary"`, `"btn-danger"`).
 
 ***
 
@@ -42,9 +53,9 @@ CSS class for button
 
 > `optional` **hint**: `string`
 
-Defined in: [src/base/dialogs.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L16)
+Defined in: [src/base/dialogs.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L21)
 
-Button hint
+Tooltip / `title` attribute shown on hover.
 
 ***
 
@@ -52,9 +63,9 @@ Button hint
 
 > `optional` **icon**: [`IconClassName`](../type-aliases/IconClassName.md)
 
-Defined in: [src/base/dialogs.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L18)
+Defined in: [src/base/dialogs.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L23)
 
-Button icon
+Optional icon displayed before the text; resolved via [iconClassName](../functions/iconClassName.md).
 
 ***
 
@@ -62,10 +73,11 @@ Button icon
 
 > `optional` **result**: `string`
 
-Defined in: [src/base/dialogs.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L26)
+Defined in: [src/base/dialogs.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L37)
 
-The code that is returned from message dialog function when this button is clicked.
- If this is set, and click event will not be defaultPrevented dialog will close.
+Result code assigned to the dialog when this button is clicked.
+The value is stored in `dataset.dialogResult` and passed to `onClose` handlers.
+If set and the click handler does not call `preventDefault()` / return `false`, the dialog closes automatically.
 
 ***
 
@@ -73,6 +85,6 @@ The code that is returned from message dialog function when this button is click
 
 > `optional` **text**: `string`
 
-Defined in: [src/base/dialogs.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L14)
+Defined in: [src/base/dialogs.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L19)
 
-Button text
+Visible caption rendered inside the button. Defaults to a localized value when created via helper factories.

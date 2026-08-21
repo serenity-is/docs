@@ -4,9 +4,9 @@
 
 > **startsWith**(`s`, `prefix`): `boolean`
 
-Defined in: [src/compat/strings-compat.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L53)
+Defined in: [src/compat/strings-compat.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L56)
 
-Checks if the string starts with the prefix
+Determines whether a string starts with the specified prefix.
 
 ## Parameters
 
@@ -14,20 +14,20 @@ Checks if the string starts with the prefix
 
 `string`
 
-String to check.
+The string to test.
 
 ### prefix
 
 `string`
 
-Prefix to check.
+The prefix to look for at the start of `s`.
 
 ## Returns
 
 `boolean`
 
-True if the string starts with the prefix.
+`true` if `s` starts with `prefix`; otherwise `false`.
 
 ## Deprecated
 
-Use .startsWith method of String directly
+Use String.prototype.startsWith directly — e.g. `s.startsWith(prefix)`.

@@ -4,4 +4,6 @@
 
 > `const` **GT**: `"gt"` = `'gt'`
 
-Defined in: [src/ui/filtering/filteroperator.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L17)
+Defined in: [src/ui/filtering/filteroperator.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L33)
+
+Greater than operator.

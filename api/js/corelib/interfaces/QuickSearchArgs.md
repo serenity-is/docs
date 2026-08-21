@@ -2,7 +2,9 @@
 
 # Interface: QuickSearchArgs
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L10)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L18)
+
+Arguments passed to quick search callbacks.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:10](https://github.com/serenit
 
 > **done**: (`found?`) => `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L13)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L24)
+
+Callback to signal that the search completed; pass false when no results were found.
 
 #### Parameters
 
@@ -28,7 +32,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:13](https://github.com/serenit
 
 > `optional` **field**: `string`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L11)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L20)
+
+Name of the selected search field, if any.
 
 ***
 
@@ -36,7 +42,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:11](https://github.com/serenit
 
 > `optional` **handled**: `boolean`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L14)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L26)
+
+When set, the search was already handled by a callback.
 
 ***
 
@@ -44,4 +52,6 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:14](https://github.com/serenit
 
 > **query**: `string`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L12)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L22)
+
+The search query text.

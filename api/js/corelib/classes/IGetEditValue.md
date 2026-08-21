@@ -2,7 +2,9 @@
 
 # Abstract Class: IGetEditValue
 
-Defined in: [src/interfaces/igeteditvalue.ts:3](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L3)
+Defined in: [src/interfaces/igeteditvalue.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L6)
+
+Type token for editors that can write their value into a target object.
 
 ## Constructors
 
@@ -20,7 +22,7 @@ Defined in: [src/interfaces/igeteditvalue.ts:3](https://github.com/serenity-is/s
 
 > `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/interfaces/igeteditvalue.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L4)
+Defined in: [src/interfaces/igeteditvalue.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L7)
 
 ## Methods
 
@@ -28,7 +30,9 @@ Defined in: [src/interfaces/igeteditvalue.ts:4](https://github.com/serenity-is/s
 
 > **getEditValue**(`property`, `target`): `void`
 
-Defined in: [src/interfaces/igeteditvalue.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L8)
+Defined in: [src/interfaces/igeteditvalue.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/interfaces/igeteditvalue.ts#L16)
+
+Writes the editor value into the target object.
 
 #### Parameters
 
@@ -36,9 +40,13 @@ Defined in: [src/interfaces/igeteditvalue.ts:8](https://github.com/serenity-is/s
 
 [`PropertyItem`](../interfaces/PropertyItem.md)
 
+Property metadata for the field.
+
 ##### target
 
 `any`
+
+Object to populate.
 
 #### Returns
 

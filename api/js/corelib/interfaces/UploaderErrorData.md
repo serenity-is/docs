@@ -2,7 +2,9 @@
 
 # Interface: UploaderErrorData
 
-Defined in: [src/base/uploader.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L70)
+Defined in: [src/base/uploader.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L94)
+
+Data passed to error handlers when an upload fails.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/base/uploader.ts:70](https://github.com/serenity-is/serenity/bl
 
 > `optional` **batch**: [`UploaderBatch`](UploaderBatch.md)
 
-Defined in: [src/base/uploader.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L71)
+Defined in: [src/base/uploader.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L96)
+
+The batch that failed, if available.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/base/uploader.ts:71](https://github.com/serenity-is/serenity/bl
 
 > `optional` **event**: `ProgressEvent`
 
-Defined in: [src/base/uploader.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L72)
+Defined in: [src/base/uploader.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L98)
+
+XHR progress / error event, if available.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/base/uploader.ts:72](https://github.com/serenity-is/serenity/bl
 
 > `optional` **exception**: `any`
 
-Defined in: [src/base/uploader.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L73)
+Defined in: [src/base/uploader.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L100)
+
+Exception thrown during setup or handling, if any.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/base/uploader.ts:73](https://github.com/serenity-is/serenity/bl
 
 > `optional` **request**: [`UploaderRequest`](UploaderRequest.md)
 
-Defined in: [src/base/uploader.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L74)
+Defined in: [src/base/uploader.ts:102](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L102)
+
+Request configuration used for the failed attempt.
 
 ***
 
@@ -42,7 +52,9 @@ Defined in: [src/base/uploader.ts:74](https://github.com/serenity-is/serenity/bl
 
 > `optional` **response**: `any`
 
-Defined in: [src/base/uploader.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L75)
+Defined in: [src/base/uploader.ts:104](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L104)
+
+Parsed response body, if available.
 
 ***
 
@@ -50,4 +62,6 @@ Defined in: [src/base/uploader.ts:75](https://github.com/serenity-is/serenity/bl
 
 > `optional` **xhr**: `XMLHttpRequest`
 
-Defined in: [src/base/uploader.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L76)
+Defined in: [src/base/uploader.ts:106](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L106)
+
+The underlying `XMLHttpRequest`, if available.

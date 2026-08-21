@@ -4,4 +4,6 @@
 
 > `const` **IN**: `"in"` = `'in'`
 
-Defined in: [src/ui/filtering/filteroperator.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L22)
+Defined in: [src/ui/filtering/filteroperator.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L43)
+
+In operator.

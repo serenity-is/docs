@@ -4,7 +4,9 @@
 
 > `const` **toCriteriaOperator**: `object`
 
-Defined in: [src/ui/filtering/filteroperator.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L26)
+Defined in: [src/ui/filtering/filteroperator.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filteroperator.ts#L50)
+
+Maps operator keys to criteria comparison symbols.
 
 ## Index Signature
 

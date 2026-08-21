@@ -2,7 +2,9 @@
 
 # Abstract Class: IQuickFiltering
 
-Defined in: [src/ui/filtering/iquickfiltering.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L5)
+Defined in: [src/ui/filtering/iquickfiltering.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L8)
+
+Interface for filtering handlers that can initialize a quick filter.
 
 ## Constructors
 
@@ -20,7 +22,7 @@ Defined in: [src/ui/filtering/iquickfiltering.ts:5](https://github.com/serenity-
 
 > `static` **\[typeInfo\]**: [`InterfaceTypeInfo`](../type-aliases/InterfaceTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/filtering/iquickfiltering.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L6)
+Defined in: [src/ui/filtering/iquickfiltering.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L9)
 
 ## Methods
 
@@ -28,7 +30,9 @@ Defined in: [src/ui/filtering/iquickfiltering.ts:6](https://github.com/serenity-
 
 > **initQuickFilter**(`filter`): `void`
 
-Defined in: [src/ui/filtering/iquickfiltering.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L10)
+Defined in: [src/ui/filtering/iquickfiltering.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/iquickfiltering.ts#L17)
+
+Initializes a quick filter for this field.
 
 #### Parameters
 

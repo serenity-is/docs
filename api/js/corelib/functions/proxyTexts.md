@@ -4,9 +4,10 @@
 
 > **proxyTexts**\<`T`\>(`obj`, `pfx`, `tpl`, `mode?`): `Record`\<`string`, `any`\> & `object`
 
-Defined in: [src/base/localtext.ts:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L127)
+Defined in: [src/base/localtext.ts:140](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/localtext.ts#L140)
 
-Creates a proxy object for localized text retrieval.
+Creates a typed proxy that resolves nested property access to localized strings.
+The proxy lazily wraps each level of `tpl`; property access concatenates `pfx` with the property name and performs the lookup according to `mode`.
 
 ## Type Parameters
 
@@ -20,24 +21,23 @@ Creates a proxy object for localized text retrieval.
 
 `T`
 
-The target object to proxy (usually an empty object {})
+Target object to proxy (usually `{}`). Mutated in place with hidden symbols and returned as a `Proxy`.
 
 ### pfx
 
 `string`
 
-The key prefix for all text lookups
+Prefix prepended to every key lookup (e.g. `"Db.Northwind."`). Pass `""` for no prefix.
 
 ### tpl
 
 `Record`\<`string`, `any`\>
 
-Template object defining the structure (object properties become nested proxies)
+Template object whose shape defines the available text keys; leaf values determine nesting. `null`/`undefined` leaves resolve to string lookups, objects create nested sub-proxies.
 
 ### mode?
 
-The lookup mode: by default it uses localText, e.g. returns the localized text or the text key if not found,
-"asTry"=tryGetText, e.g. returns undefined if not found, "asKey"=return the text key ("Forms.Something.Abc") as is (no lookup)
+Lookup strategy: `undefined` uses [localText](localText.md) (returns key on miss), `"asTry"` uses [tryGetText](tryGetText.md) (returns `undefined` on miss), `"asKey"` returns the generated key without any lookup.
 
 `"asTry"` | `"asKey"`
 
@@ -45,13 +45,13 @@ The lookup mode: by default it uses localText, e.g. returns the localized text o
 
 `Record`\<`string`, `any`\> & `object`
 
-A proxy object that provides localized text access
+A proxy over `obj` augmented with `asTry()` and `asKey()` mode-switchers. Access a leaf string like `proxy.foo.bar` to get the localized text for `"<pfx>foo.bar"`.
 
 ## Example
 
 ```ts
-const texts = proxyTexts({}, '', { user: { name: {} } });
-texts.user.name.first // looks up "user.name.first" key, returns "user.name.first" if not found
-texts.user.asTry().name.first // returns undefined if not found
-texts.user.asKey().name.first // returns "user.name.first"
+const texts = proxyTexts({}, "", { user: { name: {} } });
+texts.user.name.first // localText("user.name.first")
+texts.user.asTry().name.first // tryGetText("user.name.first")
+texts.user.asKey().name.first // "user.name.first"
 ```

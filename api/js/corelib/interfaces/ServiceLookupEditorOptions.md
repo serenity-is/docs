@@ -2,7 +2,9 @@
 
 # Interface: ServiceLookupEditorOptions
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L6)
+Defined in: [src/ui/editors/servicelookupeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L9)
+
+Options for the [ServiceLookupEditor](../classes/ServiceLookupEditor.md).
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:6](https://github.com/serenit
 
 > `optional` **allowClear**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L15)
+Defined in: [src/ui/editors/comboboxeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L19)
+
+Whether the selection can be cleared.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:15](https://github.com/serenity-i
 
 > `optional` **autoComplete**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+Defined in: [src/ui/editors/comboboxeditor.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L55)
+
+Whether arbitrary values are allowed.
 
 #### Inherited from
 
@@ -38,7 +44,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-i
 
 > `optional` **cascadeField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L23)
+Defined in: [src/ui/editors/comboboxeditor.tsx:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L35)
+
+Field used for cascading.
 
 #### Inherited from
 
@@ -50,7 +58,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:23](https://github.com/serenity-i
 
 > `optional` **cascadeFrom**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L22)
+Defined in: [src/ui/editors/comboboxeditor.tsx:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L33)
+
+Id of the parent editor to cascade from.
 
 #### Inherited from
 
@@ -62,7 +72,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:22](https://github.com/serenity-i
 
 > `optional` **cascadeValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L24)
+Defined in: [src/ui/editors/comboboxeditor.tsx:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L37)
+
+Value used for cascading.
 
 #### Inherited from
 
@@ -74,7 +86,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:24](https://github.com/serenity-i
 
 > `optional` **columnSelection**: [`ColumnSelection`](../enumerations/ColumnSelection.md)
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L13)
+Defined in: [src/ui/editors/servicelookupeditor.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L23)
+
+Column selection mode.
 
 ***
 
@@ -82,7 +96,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:13](https://github.com/sereni
 
 > `optional` **containsField**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L17)
+Defined in: [src/ui/editors/servicelookupeditor.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L31)
+
+Field used for contains-text search.
 
 ***
 
@@ -90,7 +106,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:17](https://github.com/sereni
 
 > `optional` **criteria**: `any`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L19)
+Defined in: [src/ui/editors/servicelookupeditor.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L35)
+
+Criteria applied to the request.
 
 ***
 
@@ -98,7 +116,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:19](https://github.com/sereni
 
 > `optional` **delimited**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L16)
+Defined in: [src/ui/editors/comboboxeditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L21)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 
@@ -110,7 +130,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:16](https://github.com/serenity-i
 
 > `optional` **dialogType**: `string` \| [`DialogType`](../type-aliases/DialogType.md) \| `PromiseLike`\<[`DialogType`](../type-aliases/DialogType.md)\>
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L32)
+Defined in: [src/ui/editors/comboboxeditor.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L53)
+
+Dialog type used for in-place add.
 
 #### Inherited from
 
@@ -122,7 +144,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:32](https://github.com/serenity-i
 
 > `optional` **equalityFilter**: `any`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L18)
+Defined in: [src/ui/editors/servicelookupeditor.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L33)
+
+Equality filter applied to the request.
 
 ***
 
@@ -130,7 +154,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:18](https://github.com/sereni
 
 > `optional` **excludeColumns**: `string`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L15)
+Defined in: [src/ui/editors/servicelookupeditor.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L27)
+
+Columns to exclude.
 
 ***
 
@@ -138,7 +164,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:15](https://github.com/sereni
 
 > `optional` **filterField**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+Defined in: [src/ui/editors/comboboxeditor.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L39)
+
+Field used for filtering.
 
 #### Inherited from
 
@@ -150,7 +178,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-i
 
 > `optional` **filterValue**: `any`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L26)
+Defined in: [src/ui/editors/comboboxeditor.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L41)
+
+Value used for filtering.
 
 #### Inherited from
 
@@ -162,7 +192,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:26](https://github.com/serenity-i
 
 > `optional` **idField**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L8)
+Defined in: [src/ui/editors/servicelookupeditor.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L13)
+
+Id field name.
 
 ***
 
@@ -170,7 +202,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:8](https://github.com/serenit
 
 > `optional` **includeColumns**: `string`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L14)
+Defined in: [src/ui/editors/servicelookupeditor.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L25)
+
+Columns to include.
 
 ***
 
@@ -178,7 +212,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:14](https://github.com/sereni
 
 > `optional` **includeDeleted**: `boolean`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L16)
+Defined in: [src/ui/editors/servicelookupeditor.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L29)
+
+Whether to include deleted rows.
 
 ***
 
@@ -186,7 +222,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:16](https://github.com/sereni
 
 > `optional` **inplaceAdd**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L30)
+Defined in: [src/ui/editors/comboboxeditor.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L49)
+
+Whether in-place add is enabled.
 
 #### Inherited from
 
@@ -198,7 +236,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:30](https://github.com/serenity-i
 
 > `optional` **inplaceAddPermission**: `string`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L31)
+Defined in: [src/ui/editors/comboboxeditor.tsx:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L51)
+
+Permission required for in-place add.
 
 #### Inherited from
 
@@ -210,7 +250,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:31](https://github.com/serenity-i
 
 > `optional` **minimumResultsForSearch**: `any`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L11)
+Defined in: [src/ui/editors/servicelookupeditor.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L19)
+
+Minimum results required to show the search box.
 
 #### Overrides
 
@@ -222,7 +264,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:11](https://github.com/sereni
 
 > `optional` **multiple**: `boolean`
 
-Defined in: [src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L18)
+Defined in: [src/ui/editors/comboboxeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/comboboxeditor.tsx#L25)
+
+Whether multiple items can be selected.
 
 #### Inherited from
 
@@ -234,7 +278,9 @@ Defined in: [src/ui/editors/comboboxeditor.tsx:18](https://github.com/serenity-i
 
 > `optional` **pageSize**: `number`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L10)
+Defined in: [src/ui/editors/servicelookupeditor.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L17)
+
+Page size for paged searches.
 
 ***
 
@@ -242,7 +288,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:10](https://github.com/sereni
 
 > `optional` **service**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L7)
+Defined in: [src/ui/editors/servicelookupeditor.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L11)
+
+Service endpoint to load items from.
 
 ***
 
@@ -250,7 +298,9 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:7](https://github.com/serenit
 
 > `optional` **sort**: `string`[]
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L12)
+Defined in: [src/ui/editors/servicelookupeditor.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L21)
+
+Sort order for results.
 
 ***
 
@@ -258,4 +308,6 @@ Defined in: [src/ui/editors/servicelookupeditor.ts:12](https://github.com/sereni
 
 > `optional` **textField**: `string`
 
-Defined in: [src/ui/editors/servicelookupeditor.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L9)
+Defined in: [src/ui/editors/servicelookupeditor.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/servicelookupeditor.ts#L15)
+
+Text field name.

@@ -4,10 +4,12 @@
 
 > **hasUIDialog**(): `boolean`
 
-Defined in: [src/base/dialogs.tsx:595](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L595)
+Defined in: [src/base/dialogs.tsx:674](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L674)
 
-Returns true if jQuery UI dialog is available
+Determines whether the jQuery UI dialog provider is available.
 
 ## Returns
 
 `boolean`
+
+`true` when `jQuery.ui.dialog` is loaded.

@@ -4,7 +4,9 @@
 
 > **NotifyMap** = `object`
 
-Defined in: [src/base/toastr2.tsx:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L52)
+Defined in: [src/base/toastr2.tsx:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L70)
+
+Internal descriptor for a toast notification passed to Toastr.notify.
 
 ## Properties
 
@@ -12,7 +14,9 @@ Defined in: [src/base/toastr2.tsx:52](https://github.com/serenity-is/serenity/bl
 
 > **iconClass**: `string`
 
-Defined in: [src/base/toastr2.tsx:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L54)
+Defined in: [src/base/toastr2.tsx:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L74)
+
+CSS class for the toast icon corresponding to the type.
 
 ***
 
@@ -20,7 +24,9 @@ Defined in: [src/base/toastr2.tsx:54](https://github.com/serenity-is/serenity/bl
 
 > `optional` **message**: [`RenderableContent`](RenderableContent.md)
 
-Defined in: [src/base/toastr2.tsx:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L56)
+Defined in: [src/base/toastr2.tsx:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L78)
+
+Optional message content for the toast.
 
 ***
 
@@ -28,7 +34,9 @@ Defined in: [src/base/toastr2.tsx:56](https://github.com/serenity-is/serenity/bl
 
 > `optional` **title**: [`RenderableContent`](RenderableContent.md)
 
-Defined in: [src/base/toastr2.tsx:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L55)
+Defined in: [src/base/toastr2.tsx:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L76)
+
+Optional title content for the toast.
 
 ***
 
@@ -36,4 +44,6 @@ Defined in: [src/base/toastr2.tsx:55](https://github.com/serenity-is/serenity/bl
 
 > **type**: `string`
 
-Defined in: [src/base/toastr2.tsx:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L53)
+Defined in: [src/base/toastr2.tsx:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/toastr2.tsx#L72)
+
+Toast type key (`"success"` | `"info"` | `"warning"` | `"error"`).

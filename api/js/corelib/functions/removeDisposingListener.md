@@ -4,12 +4,15 @@
 
 > **removeDisposingListener**\<`T`\>(`target`, `handler`, `regKey?`): `T`
 
-Defined in: [../domwise/dist/index.d.ts:2306](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2306)
+Defined in: [../domwise/dist/index.d.ts:2552](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2552)
 
-Removes a disposing listener from an element. Note that this does not remove an event listener from the element,
-but removes the listener from the list of disposing listeners that will be called when the `disposing` event
-is dispatched on the element. If no more disposing listeners remain, the `disposing` event listener is also
-removed from the element.
+Removes a previously registered disposing listener from an element.
+
+This removes the entry from the internal disposing-listener registry, not a
+direct DOM `EventListener`. A listener matches when either its `handler`
+reference equals the stored callback or its `regKey` equals the stored key.
+When the last listener is removed the underlying `disposing` DOM listener
+is also detached from the target.
 
 ## Type Parameters
 
@@ -17,28 +20,30 @@ removed from the element.
 
 `T` *extends* `EventTarget`
 
+Type of the target event target.
+
 ## Parameters
 
 ### target
 
 `T`
 
-The element to remove the listener from.
+Element/event target to remove the listener from. No-op when `null`/`undefined`.
 
 ### handler
 
 () => `void`
 
-The disposing listener to remove.
+Callback whose registration should be removed. If `null`/`undefined`, matching falls back to `regKey`.
 
 ### regKey?
 
 `string`
 
-An optional registration key to identify the listener.
+Optional registration key to match against.
 
 ## Returns
 
 `T`
 
-The element that the listener was removed from.
+The `target` that was passed in, for chaining.

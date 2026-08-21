@@ -4,9 +4,9 @@
 
 > **okDialogButton**(`opt?`): [`DialogButton`](../interfaces/DialogButton.md)
 
-Defined in: [src/base/dialogs.tsx:646](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L646)
+Defined in: [src/base/dialogs.tsx:733](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L733)
 
-Creates a dialog button which, by default, has "Yes" as caption (localized) and "ok" as the result.
+Creates an "OK" dialog button.
 
 ## Parameters
 
@@ -14,10 +14,16 @@ Creates a dialog button which, by default, has "Yes" as caption (localized) and 
 
 [`DialogButton`](../interfaces/DialogButton.md)
 
-Optional configuration for the dialog button.
+Optional overrides for [DialogButton](../interfaces/DialogButton.md) properties. Only `text`, `cssClass`, `result`, and `click` are respected; unspecified fields fall back to localized defaults.
 
 ## Returns
 
 [`DialogButton`](../interfaces/DialogButton.md)
 
-The dialog button with the specified configuration.
+A [DialogButton](../interfaces/DialogButton.md) with `text` defaulting to `DialogTexts.OkButton`, `cssClass` to `"btn-info"`, and `result` to `"ok"`.
+
+## Example
+
+```ts
+new Dialog({ buttons: [okDialogButton({ click: () => save() })] });
+```

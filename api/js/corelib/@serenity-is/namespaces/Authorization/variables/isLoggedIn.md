@@ -4,19 +4,20 @@
 
 > **isLoggedIn**: `boolean`
 
-Defined in: [src/base/authorization.ts:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L152)
+Defined in: [src/base/authorization.ts:209](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L209)
 
-Checks if the current user is logged in. Prefer `isLoggedInAsync` as this one might block the UI if the `UserData`
-is not already loaded.
+Whether the current user is logged in (synchronous).
 
-## Returns
+## Remarks
 
-`true` if the user is logged in, `false` otherwise.
+Implemented as a getter over [Authorization.userDefinition](userDefinition.md). Prefer
+[Authorization.isLoggedInAsync](isLoggedInAsync.md) to avoid blocking on `UserData` load.
+Returns `true` when `UserDefinition.Username` is truthy.
 
 ## Example
 
 ```ts
 if (Authorization.isLoggedIn) {
-    // do something
+    // user is authenticated
 }
 ```

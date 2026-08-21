@@ -4,18 +4,18 @@
 
 > **userDefinitionAsync**: `Promise`\<[`UserDefinition`](../../../../interfaces/UserDefinition.md)\>
 
-Defined in: [src/base/authorization.ts:200](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L200)
+Defined in: [src/base/authorization.ts:269](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L269)
 
-Returns the user data for currently logged user.
+User definition for the currently logged-in user (asynchronous).
 
-## Returns
+## Remarks
 
-User data for currently logged user.
+Retrieved via [getRemoteDataAsync](../../../../functions/getRemoteDataAsync.md)`("UserData")`.
 
 ## Example
 
 ```ts
-if ((await Authorization.userDefinitionAsync).IsAdmin) {
-    // do something
+if ((await Authorization.userDefinitionAsync)?.IsAdmin) {
+    // super-admin branch
 }
 ```

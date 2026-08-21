@@ -1,10 +1,12 @@
 [@serenity-is/corelib](../../../../README.md) / [ScriptData](../README.md) / reloadAsync
 
-# Function: reloadAsync()
+# ~~Function: reloadAsync()~~
 
 > **reloadAsync**\<`TData`\>(`name`): `Promise`\<`TData`\>
 
-Defined in: [src/compat/scriptdata-compat.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L28)
+Defined in: [src/compat/scriptdata-compat.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/scriptdata-compat.ts#L56)
+
+Asynchronously reloads a dynamic script, bypassing the cache.
 
 ## Type Parameters
 
@@ -18,6 +20,14 @@ Defined in: [src/compat/scriptdata-compat.ts:28](https://github.com/serenity-is/
 
 `string`
 
+Dynamic script name.
+
 ## Returns
 
 `Promise`\<`TData`\>
+
+A promise resolving to the reloaded script data.
+
+## Deprecated
+
+Prefer `getScriptData(name, true)` directly.

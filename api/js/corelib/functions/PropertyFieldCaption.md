@@ -4,11 +4,16 @@
 
 > **PropertyFieldCaption**(`props`): `HTMLLabelElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L14)
+Defined in: [src/ui/widgets/propertygrid.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L27)
+
+Renders the caption (label) for a property field, including the required
+marker and localized title/hint text.
 
 ## Parameters
 
 ### props
+
+Caption rendering props.
 
 #### idPrefix?
 
@@ -25,3 +30,5 @@ Defined in: [src/ui/widgets/propertygrid.tsx:14](https://github.com/serenity-is/
 ## Returns
 
 `HTMLLabelElement`
+
+The label element for the field.

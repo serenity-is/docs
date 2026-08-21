@@ -1,12 +1,12 @@
 [@serenity-is/corelib](../README.md) / isTrimmedEmpty
 
-# Function: isTrimmedEmpty()
+# ~~Function: isTrimmedEmpty()~~
 
 > **isTrimmedEmpty**(`s`): `boolean`
 
-Defined in: [src/compat/strings-compat.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L26)
+Defined in: [src/compat/strings-compat.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L28)
 
-Checks if the string is empty or null or whitespace. Prefer !s?.Trim() instead.
+Determines whether a string is `null`, `undefined`, empty, or whitespace-only.
 
 ## Parameters
 
@@ -14,10 +14,14 @@ Checks if the string is empty or null or whitespace. Prefer !s?.Trim() instead.
 
 `string`
 
-String to check.
+The string to test; may be `null` or `undefined`.
 
 ## Returns
 
 `boolean`
 
-True if the string is empty or null or whitespace.
+`true` if `s` is `null`/`undefined`, empty, or contains only whitespace.
+
+## Deprecated
+
+Prefer `!s?.trim()` over this shim.

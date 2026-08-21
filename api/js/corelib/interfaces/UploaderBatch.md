@@ -2,7 +2,9 @@
 
 # Interface: UploaderBatch
 
-Defined in: [src/base/uploader.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L55)
+Defined in: [src/base/uploader.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L64)
+
+Represents a single upload batch queued by [Uploader](../classes/Uploader.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/base/uploader.ts:55](https://github.com/serenity-is/serenity/bl
 
 > `optional` **event**: `Event`
 
-Defined in: [src/base/uploader.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L56)
+Defined in: [src/base/uploader.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L66)
+
+Originating DOM event (change / drop / paste).
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/base/uploader.ts:56](https://github.com/serenity-is/serenity/bl
 
 > `optional` **filePaths**: `string`[]
 
-Defined in: [src/base/uploader.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L57)
+Defined in: [src/base/uploader.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L68)
+
+Relative paths / names of files in this batch.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/base/uploader.ts:57](https://github.com/serenity-is/serenity/bl
 
 > **formData**: `FormData`
 
-Defined in: [src/base/uploader.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L58)
+Defined in: [src/base/uploader.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L70)
+
+`FormData` payload containing the batched files.
 
 ***
 
@@ -34,4 +42,6 @@ Defined in: [src/base/uploader.ts:58](https://github.com/serenity-is/serenity/bl
 
 > `optional` **isFirst**: `boolean`
 
-Defined in: [src/base/uploader.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L59)
+Defined in: [src/base/uploader.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/uploader.ts#L72)
+
+`true` for the first batch in a multi-batch sequence.

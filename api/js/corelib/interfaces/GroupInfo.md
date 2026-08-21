@@ -2,7 +2,9 @@
 
 # Interface: GroupInfo\<TItem\>
 
-Defined in: [src/slick/slicktypes.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L24)
+Defined in: [src/slick/slicktypes.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L28)
+
+Configuration for a single grouping level.
 
 ## Type Parameters
 
@@ -16,7 +18,9 @@ Defined in: [src/slick/slicktypes.ts:24](https://github.com/serenity-is/serenity
 
 > `optional` **aggregateChildGroups**: `boolean`
 
-Defined in: [src/slick/slicktypes.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L37)
+Defined in: [src/slick/slicktypes.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L46)
+
+Whether to aggregate child groups as well.
 
 ***
 
@@ -24,7 +28,9 @@ Defined in: [src/slick/slicktypes.ts:37](https://github.com/serenity-is/serenity
 
 > `optional` **aggregateCollapsed**: `boolean`
 
-Defined in: [src/slick/slicktypes.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L38)
+Defined in: [src/slick/slicktypes.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L48)
+
+Whether collapsed groups still show aggregates.
 
 ***
 
@@ -32,7 +38,9 @@ Defined in: [src/slick/slicktypes.ts:38](https://github.com/serenity-is/serenity
 
 > `optional` **aggregateEmpty**: `boolean`
 
-Defined in: [src/slick/slicktypes.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L39)
+Defined in: [src/slick/slicktypes.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L50)
+
+Whether empty groups still show aggregates.
 
 ***
 
@@ -40,7 +48,9 @@ Defined in: [src/slick/slicktypes.ts:39](https://github.com/serenity-is/serenity
 
 > `optional` **aggregators**: [`IAggregator`](IAggregator.md)[]
 
-Defined in: [src/slick/slicktypes.ts:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L36)
+Defined in: [src/slick/slicktypes.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L44)
+
+Aggregators applied to this group level.
 
 ***
 
@@ -48,7 +58,9 @@ Defined in: [src/slick/slicktypes.ts:36](https://github.com/serenity-is/serenity
 
 > `optional` **collapsed**: `boolean`
 
-Defined in: [src/slick/slicktypes.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L40)
+Defined in: [src/slick/slicktypes.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L52)
+
+True if groups start collapsed.
 
 ***
 
@@ -56,7 +68,9 @@ Defined in: [src/slick/slicktypes.ts:40](https://github.com/serenity-is/serenity
 
 > `optional` **comparer**: (`a`, `b`) => `number`
 
-Defined in: [src/slick/slicktypes.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L35)
+Defined in: [src/slick/slicktypes.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L42)
+
+Comparator for group ordering.
 
 #### Parameters
 
@@ -64,13 +78,19 @@ Defined in: [src/slick/slicktypes.ts:35](https://github.com/serenity-is/serenity
 
 `Group`\<`TItem`\>
 
+First group.
+
 ##### b
 
 `Group`\<`TItem`\>
 
+Second group.
+
 #### Returns
 
 `number`
+
+Negative / zero / positive.
 
 ***
 
@@ -78,7 +98,9 @@ Defined in: [src/slick/slicktypes.ts:35](https://github.com/serenity-is/serenity
 
 > `optional` **displayTotalsRow**: `boolean`
 
-Defined in: [src/slick/slicktypes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L41)
+Defined in: [src/slick/slicktypes.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L54)
+
+True to render a totals row for this level.
 
 ***
 
@@ -86,11 +108,9 @@ Defined in: [src/slick/slicktypes.ts:41](https://github.com/serenity-is/serenity
 
 > `optional` **format**: (`ctx`) => `FormatterResult`
 
-Defined in: [src/slick/slicktypes.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L32)
+Defined in: [src/slick/slicktypes.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L38)
 
-The format function for the group value. Note that the group item is in ctx.item and its value 
-is in ctx.item.value, not in ctx.value as it is set by the grid to ctx.item["__groupdisplaycolumnfield__"]
-so never use or rely on ctx.value here!
+Formats the group header. Note: group value is in `ctx.item.value`, not `ctx.value`.
 
 #### Parameters
 
@@ -98,9 +118,13 @@ so never use or rely on ctx.value here!
 
 `FormatterContext`\<`Group`\<`TItem`\>\>
 
+Formatter context for the group row.
+
 #### Returns
 
 `FormatterResult`
+
+Formatter result.
 
 ***
 
@@ -108,7 +132,7 @@ so never use or rely on ctx.value here!
 
 > `optional` **formatter**: (`group`) => `string`
 
-Defined in: [src/slick/slicktypes.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L34)
+Defined in: [src/slick/slicktypes.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L40)
 
 #### Parameters
 
@@ -116,13 +140,17 @@ Defined in: [src/slick/slicktypes.ts:34](https://github.com/serenity-is/serenity
 
 `Group`\<`TItem`\>
 
+Group object.
+
 #### Returns
 
 `string`
 
+Formatted group title.
+
 #### Deprecated
 
-use format
+Use `format` instead.
 
 ***
 
@@ -130,7 +158,9 @@ use format
 
 > `optional` **getter**: `string` \| (`item`) => `any`
 
-Defined in: [src/slick/slicktypes.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L25)
+Defined in: [src/slick/slicktypes.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L30)
+
+Field name or getter for the group value.
 
 ***
 
@@ -138,7 +168,9 @@ Defined in: [src/slick/slicktypes.ts:25](https://github.com/serenity-is/serenity
 
 > `optional` **getterIsAFn**: `boolean`
 
-Defined in: [src/slick/slicktypes.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L26)
+Defined in: [src/slick/slicktypes.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L32)
+
+True if `getter` is a function.
 
 ***
 
@@ -146,7 +178,9 @@ Defined in: [src/slick/slicktypes.ts:26](https://github.com/serenity-is/serenity
 
 > `optional` **lazyTotalsCalculation**: `boolean`
 
-Defined in: [src/slick/slicktypes.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L42)
+Defined in: [src/slick/slicktypes.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L56)
+
+True to calculate totals lazily.
 
 ***
 
@@ -154,4 +188,6 @@ Defined in: [src/slick/slicktypes.ts:42](https://github.com/serenity-is/serenity
 
 > `optional` **predefinedValues**: `any`[]
 
-Defined in: [src/slick/slicktypes.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L43)
+Defined in: [src/slick/slicktypes.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L58)
+
+Predefined group values to ensure groups exist even without data.

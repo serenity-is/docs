@@ -4,9 +4,10 @@
 
 > **inSVGNamespace**(`fn`): [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:2387](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2387)
+Defined in: [../domwise/dist/index.d.ts:2704](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2704)
 
-Executes a children factory within the SVG namespace.
+Executes a children factory within the SVG namespace (`http://www.w3.org/2000/svg`).
+Sugar over [inNamespaceURI](inNamespaceURI.md) with [SVGNamespace](../variables/SVGNamespace.md).
 
 ## Parameters
 
@@ -14,7 +15,7 @@ Executes a children factory within the SVG namespace.
 
 () => [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-A factory function that returns children.
+Factory that returns children to create as SVG elements.
 
 ## Returns
 

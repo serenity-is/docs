@@ -2,9 +2,10 @@
 
 # Class: EnumKeyAttribute
 
-Defined in: [src/base/system.ts:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L246)
+Defined in: [src/base/system.ts:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L260)
 
-Indicates the enum key of an enum type (by default the name of the enum type is used as key)
+Attribute that overrides the lookup key under which an enum is registered in the global type registry.
+By default the enum's full name is used as the key; this attribute allows an alternative key.
 
 ## Extends
 
@@ -16,13 +17,17 @@ Indicates the enum key of an enum type (by default the name of the enum type is 
 
 > **new EnumKeyAttribute**(`value`): `EnumKeyAttribute`
 
-Defined in: [src/base/system.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L249)
+Defined in: [src/base/system.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L267)
+
+Creates a new enum-key attribute.
 
 #### Parameters
 
 ##### value
 
 `string`
+
+Alternative registry key for the enum (e.g. `"MyApp.MyEnum"`).
 
 #### Returns
 
@@ -38,7 +43,9 @@ Defined in: [src/base/system.ts:249](https://github.com/serenity-is/serenity/blo
 
 > **value**: `string`
 
-Defined in: [src/base/system.ts:249](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L249)
+Defined in: [src/base/system.ts:267](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L267)
+
+Alternative registry key for the enum (e.g. `"MyApp.MyEnum"`).
 
 ***
 
@@ -46,7 +53,7 @@ Defined in: [src/base/system.ts:249](https://github.com/serenity-is/serenity/blo
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/base/system.ts:247](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L247)
+Defined in: [src/base/system.ts:261](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L261)
 
 #### Overrides
 

@@ -4,9 +4,9 @@
 
 > **bgColor**(`color`): `string`
 
-Defined in: [src/base/icons.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L20)
+Defined in: [src/base/icons.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/icons.ts#L24)
 
-Returns the CSS class name for the background color based on the provided UtilityColor.
+Returns the Bootstrap background utility class for a [UtilityColor](../type-aliases/UtilityColor.md).
 
 ## Parameters
 
@@ -14,10 +14,16 @@ Returns the CSS class name for the background color based on the provided Utilit
 
 [`UtilityColor`](../type-aliases/UtilityColor.md)
 
-The UtilityColor to generate the CSS class name for.
+Utility color token (e.g. `"primary"`, `"danger"`).
 
 ## Returns
 
 `string`
 
-The CSS class name for the background color.
+CSS class name such as `"bg-primary"`.
+
+## Example
+
+```ts
+bgColor("success"); // "bg-success"
+```

@@ -2,7 +2,10 @@
 
 # Class: EntityLocalizer
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L18)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L36)
+
+Manages the localization grid for an entity dialog, letting users edit
+translations of localizable fields for each language.
 
 ## Constructors
 
@@ -10,13 +13,17 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:18](https://github.com/serenity-
 
 > **new EntityLocalizer**(`opt`): `EntityLocalizer`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L27)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L49)
+
+Creates a localizer and builds the localization grid.
 
 #### Parameters
 
 ##### opt
 
 [`EntityLocalizerOptions`](../interfaces/EntityLocalizerOptions.md)
+
+Options for the localizer.
 
 #### Returns
 
@@ -28,7 +35,7 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:27](https://github.com/serenity-
 
 > `protected` **grid**: [`PropertyGrid`](PropertyGrid.md)
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L20)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L38)
 
 ***
 
@@ -36,7 +43,7 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:20](https://github.com/serenity-
 
 > `protected` **lastValue**: `any`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L22)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L40)
 
 ***
 
@@ -44,7 +51,7 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:22](https://github.com/serenity-
 
 > `protected` **pendingValue**: `any`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L21)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L39)
 
 ***
 
@@ -52,7 +59,7 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:21](https://github.com/serenity-
 
 > `protected` **targetLanguage**: `HTMLSelectElement`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L23)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L41)
 
 ## Methods
 
@@ -60,7 +67,9 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:23](https://github.com/serenity-
 
 > **buttonClick**(): `void`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:152](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L152)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L195)
+
+Toggles localization mode and loads/saves localization values.
 
 #### Returns
 
@@ -72,7 +81,9 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:152](https://github.com/serenity
 
 > **clearValue**(): `void`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:130](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L130)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:158](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L158)
+
+Clears pending and last localization values.
 
 #### Returns
 
@@ -84,7 +95,9 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:130](https://github.com/serenity
 
 > **destroy**(): `void`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L123)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:148](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L148)
+
+Destroys the localization grid.
 
 #### Returns
 
@@ -96,13 +109,17 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:123](https://github.com/serenity
 
 > **editSaveRequest**(`req`): `void`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:231](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L231)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:288](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L288)
+
+Adds pending localizations to a save request.
 
 #### Parameters
 
 ##### req
 
 [`SaveRequest`](../interfaces/SaveRequest.md)\<`any`\>
+
+The save request to modify.
 
 #### Returns
 
@@ -114,11 +131,15 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:231](https://github.com/serenity
 
 > `protected` **getLocalizationGridValue**(): `any`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:218](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L218)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:271](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L271)
+
+Returns the localization values from the grid, keyed by language and field.
 
 #### Returns
 
 `any`
+
+The localization values.
 
 ***
 
@@ -126,11 +147,15 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:218](https://github.com/serenity
 
 > `protected` **getPendingLocalizations**(): `any`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:237](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L237)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:298](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L298)
+
+Returns pending localizations grouped by language.
 
 #### Returns
 
 `any`
+
+The pending localizations.
 
 ***
 
@@ -138,11 +163,15 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:237](https://github.com/serenity
 
 > **isEnabled**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L135)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L167)
+
+Whether the localization grid is enabled (there are localizable fields).
 
 #### Returns
 
 `boolean`
+
+True when enabled.
 
 ***
 
@@ -150,11 +179,15 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:135](https://github.com/serenity
 
 > `protected` **isLocalizationMode**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L139)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L175)
+
+Whether the dialog is currently in localization mode.
 
 #### Returns
 
 `boolean`
+
+True when in localization mode.
 
 ***
 
@@ -162,11 +195,15 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:139](https://github.com/serenity
 
 > `protected` **isLocalizationModeAndChanged**(): `boolean`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L143)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L183)
+
+Whether the localization values changed since the last save.
 
 #### Returns
 
 `boolean`
+
+True when changed.
 
 ***
 
@@ -174,7 +211,9 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:143](https://github.com/serenity
 
 > `protected` **loadLocalization**(): `void`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:170](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L170)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:216](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L216)
+
+Loads localization values into the grid.
 
 #### Returns
 
@@ -186,7 +225,9 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:170](https://github.com/serenity
 
 > `protected` **setLocalizationGridCurrentValues**(): `void`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L197)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:246](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L246)
+
+Copies current field values into the localization grid as hints.
 
 #### Returns
 
@@ -198,7 +239,9 @@ Defined in: [src/ui/dialogs/entitylocalizer.tsx:197](https://github.com/serenity
 
 > **updateInterface**(): `void`
 
-Defined in: [src/ui/dialogs/entitylocalizer.tsx:260](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L260)
+Defined in: [src/ui/dialogs/entitylocalizer.tsx:324](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/dialogs/entitylocalizer.tsx#L324)
+
+Updates the UI to reflect the current localization mode.
 
 #### Returns
 

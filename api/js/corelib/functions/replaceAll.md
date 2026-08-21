@@ -1,12 +1,12 @@
 [@serenity-is/corelib](../README.md) / replaceAll
 
-# Function: replaceAll()
+# ~~Function: replaceAll()~~
 
 > **replaceAll**(`str`, `find`, `replace`): `string`
 
-Defined in: [src/compat/strings-compat.ts:112](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L112)
+Defined in: [src/compat/strings-compat.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/strings-compat.ts#L128)
 
-Replaces all occurrences of the search string with the replacement string.
+Replaces all occurrences of `find` in `str` with `replace`.
 
 ## Parameters
 
@@ -14,22 +14,26 @@ Replaces all occurrences of the search string with the replacement string.
 
 `string`
 
-String to replace.
+The source string; `null`/`undefined` is treated as `""`.
 
 ### find
 
 `string`
 
-String to find.
+The substring to search for. Must be a non-empty string.
 
 ### replace
 
 `string`
 
-String to replace with.
+The replacement string.
 
 ## Returns
 
 `string`
 
-Replaced string.
+A new string with all occurrences replaced.
+
+## Deprecated
+
+Prefer String.prototype.replaceAll when targeting modern runtimes; this shim falls back to `split/join`.

@@ -1,13 +1,12 @@
 [@serenity-is/corelib](../README.md) / tryFirst
 
-# Function: tryFirst()
+# ~~Function: tryFirst()~~
 
 > **tryFirst**\<`TItem`\>(`array`, `predicate`): `TItem`
 
-Defined in: [src/compat/arrays-compat.ts:203](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L203)
+Defined in: [src/compat/arrays-compat.ts:238](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/compat/arrays-compat.ts#L238)
 
-Gets first element in an array that matches given predicate (similar to LINQ's FirstOrDefault).
-Returns null if no match is found.
+Returns the first element satisfying the predicate, or `undefined` if none matches (LINQ `FirstOrDefault`).
 
 ## Type Parameters
 
@@ -21,23 +20,27 @@ Returns null if no match is found.
 
 `TItem`[]
 
-Array to test.
+Array to search.
 
 ### predicate
 
 (`x`) => `boolean`
 
-Predicate to test elements.
+Function invoked per element; return `true` for the desired element.
 
 ## Returns
 
 `TItem`
 
-First element that matches.
+The first matching element, or `undefined` when no match is found.
+
+## Deprecated
+
+Prefer `Array.prototype.find` — `array.find(predicate)`. Retained as a `Q.tryFirst` compat shim.
 
 ## Example
 
 ```ts
 tryFirst([1, 2, 3], x => x == 2); // 2
-tryFirst([1, 2, 3], x => x == 4); // null
+tryFirst([1, 2, 3], x => x == 4); // undefined
 ```

@@ -4,16 +4,17 @@
 
 > **isDevelopmentMode**(): `boolean`
 
-Defined in: [src/base/errorhandling.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.tsx#L105)
+Defined in: [src/base/errorhandling.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/errorhandling.tsx#L123)
 
-Determines if the current environment is development mode.
-The runtimeErrorHandler (window.onerror) shows error notifications only
-when this function returns true. The default implementation considers 
-the environment as development mode if the host is localhost, 127.0.0.1, ::1,
-or a domain name that ends with .local/.localhost.
+Determines whether the current host should be treated as a development environment.
 
 ## Returns
 
 `boolean`
 
-true if the current environment is development mode, false otherwise.
+`true` when `window.location.hostname` is `localhost`, `127.0.0.1`, `[::1]`, or ends with `.local` / `.localhost`; `false` otherwise.
+
+## Remarks
+
+Both [ErrorHandling.runtimeErrorHandler](runtimeErrorHandler.md) and [ErrorHandling.unhandledRejectionHandler](unhandledRejectionHandler.md) gate their notifications on this check.
+Override by replacing `ErrorHandling.isDevelopmentMode` at startup if a different heuristic is needed.

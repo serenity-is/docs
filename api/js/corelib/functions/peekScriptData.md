@@ -4,7 +4,9 @@
 
 > **peekScriptData**(`name`): `any`
 
-Defined in: [src/base/scriptdata.ts:298](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L298)
+Defined in: [src/base/scriptdata.ts:317](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/scriptdata.ts#L317)
+
+Returns cached script data without triggering a fetch.
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/base/scriptdata.ts:298](https://github.com/serenity-is/serenity
 
 `string`
 
+Dynamic script name.
+
 ## Returns
 
 `any`
+
+The cached value or `undefined` if not loaded yet.

@@ -4,12 +4,13 @@
 
 > **invokeDisposingListeners**(`node`, `opt?`): `void`
 
-Defined in: [../domwise/dist/index.d.ts:2283](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2283)
+Defined in: [../domwise/dist/index.d.ts:2514](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2514)
 
-Invokes all registered disposing listeners for the element and removes the
-global `disposing` event listener from the element as it is no longer needed.
-Note that this does not dispatch a `disposing` event; to do that,
-use `dispatchDisposingEvent` instead.
+Synchronously invokes all disposing listeners registered for `node` and
+removes the internal `disposing` DOM listener from the target.
+
+This does **not** dispatch a `disposing` DOM event; use
+[dispatchDisposingEvent](dispatchDisposingEvent.md) for that. Listener errors are swallowed.
 
 ## Parameters
 
@@ -17,23 +18,23 @@ use `dispatchDisposingEvent` instead.
 
 `EventTarget`
 
-The node that is being disposed.
+Target whose disposing listeners should be invoked. No-op when falsy.
 
 ### opt?
 
-Optional configuration.
+Optional behavior flags.
 
 #### descendants?
 
 `boolean`
 
-If true, also invokes listeners on descendant nodes.
+When `true`, also invokes listeners registered on descendant elements/text/comment nodes found via `createNodeIterator`.
 
 #### excludeSelf?
 
 `boolean`
 
-If true, skips invoking listeners on the node itself (only descendants).
+When `true`, skips listeners registered directly on `node` itself (only descendants are invoked, in combination with `descendants`).
 
 ## Returns
 

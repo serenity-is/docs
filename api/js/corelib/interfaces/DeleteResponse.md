@@ -2,7 +2,9 @@
 
 # Interface: DeleteResponse
 
-Defined in: [src/base/servicetypes.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L30)
+Defined in: [src/base/servicetypes.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L67)
+
+Response DTO for `Delete` handlers. No additional fields beyond [ServiceResponse](ServiceResponse.md).
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/base/servicetypes.ts:30](https://github.com/serenity-is/serenit
 
 > `optional` **Error**: [`ServiceError`](ServiceError.md)
 
-Defined in: [src/base/servicetypes.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L10)
+Defined in: [src/base/servicetypes.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L25)
+
+Error information when the request failed; `undefined` on success.
 
 #### Inherited from
 

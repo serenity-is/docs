@@ -4,7 +4,7 @@
 
 > **ExcludeMethods**\<`T`\> = `Pick`\<`T`, `{ [K in keyof T]: T[K] extends Function ? never : K }`\[keyof `T`\]\>
 
-Defined in: [../domwise/dist/index.d.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L95)
+Defined in: [../domwise/dist/index.d.ts:207](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L207)
 
 ## Type Parameters
 

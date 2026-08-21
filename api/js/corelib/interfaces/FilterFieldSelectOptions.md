@@ -2,7 +2,9 @@
 
 # Interface: FilterFieldSelectOptions
 
-Defined in: [src/ui/filtering/filterpanel.tsx:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L13)
+Defined in: [src/ui/filtering/filterpanel.tsx:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L16)
+
+Options for the [FilterFieldSelect](../classes/FilterFieldSelect.md).
 
 ## Properties
 
@@ -10,4 +12,6 @@ Defined in: [src/ui/filtering/filterpanel.tsx:13](https://github.com/serenity-is
 
 > **fields**: [`PropertyItem`](PropertyItem.md)[]
 
-Defined in: [src/ui/filtering/filterpanel.tsx:14](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L14)
+Defined in: [src/ui/filtering/filterpanel.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/filtering/filterpanel.tsx#L18)
+
+The fields to display in the select.

@@ -4,7 +4,9 @@
 
 > **useIdPrefix**(`prefix`): [`IdPrefixType`](../type-aliases/IdPrefixType.md)
 
-Defined in: [src/ui/widgets/widgetutils.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L110)
+Defined in: [src/ui/widgets/widgetutils.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L150)
+
+Creates an id prefix helper for resolving child element ids.
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/ui/widgets/widgetutils.ts:110](https://github.com/serenity-is/s
 
 `string`
 
+The id prefix to use.
+
 ## Returns
 
 [`IdPrefixType`](../type-aliases/IdPrefixType.md)
+
+An [IdPrefixType](../type-aliases/IdPrefixType.md) proxy.

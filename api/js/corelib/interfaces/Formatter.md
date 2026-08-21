@@ -2,7 +2,9 @@
 
 # Interface: Formatter
 
-Defined in: [src/slick/slicktypes.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L20)
+Defined in: [src/slick/slicktypes.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L22)
+
+Legacy formatter contract. Prefer [Format](../type-aliases/Format.md).
 
 ## Methods
 
@@ -10,7 +12,9 @@ Defined in: [src/slick/slicktypes.ts:20](https://github.com/serenity-is/serenity
 
 > **format**(`ctx`): `FormatterResult`
 
-Defined in: [src/slick/slicktypes.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L21)
+Defined in: [src/slick/slicktypes.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/slicktypes.ts#L24)
+
+Formats a cell value.
 
 #### Parameters
 
@@ -18,6 +22,10 @@ Defined in: [src/slick/slicktypes.ts:21](https://github.com/serenity-is/serenity
 
 `FormatterContext`
 
+Formatter context with item/column/value/grid.
+
 #### Returns
 
 `FormatterResult`
+
+Formatted result.

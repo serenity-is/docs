@@ -4,6 +4,7 @@
 
 > **UIFieldItem** = [`PropertyItem`](../interfaces/PropertyItem.md)
 
-Defined in: [src/base/propertyitem.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L85)
+Defined in: [src/base/propertyitem.ts:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/propertyitem.ts#L175)
 
-Alias for PropertyItem. It may replace PropertyItem in the future
+Alias for [PropertyItem](../interfaces/PropertyItem.md).
+Prefer UIFieldItem for new code; `PropertyItem` is kept for compatibility and may be phased out.

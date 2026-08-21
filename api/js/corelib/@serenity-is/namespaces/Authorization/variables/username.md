@@ -4,19 +4,18 @@
 
 > **username**: `string`
 
-Defined in: [src/base/authorization.ts:172](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L172)
+Defined in: [src/base/authorization.ts:233](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/authorization.ts#L233)
 
-Returns the username for currently logged user. Prefer `usernameAsync` as this one might block the UI if the `UserData`
-is not already loaded.
+Username of the currently logged-in user (synchronous).
 
-## Returns
+## Remarks
 
-Username for currently logged user.
+Getter over [Authorization.userDefinition](userDefinition.md)`.Username`. Prefer
+[Authorization.usernameAsync](usernameAsync.md) if `UserData` may not be loaded yet.
+Returns `undefined` when no user is logged in.
 
 ## Example
 
 ```ts
-if (Authorization.username) {
-    // do something
-}
+const name = Authorization.username;
 ```

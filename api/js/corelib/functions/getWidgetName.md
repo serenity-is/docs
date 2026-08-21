@@ -4,7 +4,10 @@
 
 > **getWidgetName**(`type`): `string`
 
-Defined in: [src/ui/widgets/widgetutils.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L5)
+Defined in: [src/ui/widgets/widgetutils.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/widgetutils.ts#L11)
+
+Returns the widget name for a type, derived from its full type name with
+dots replaced by underscores.
 
 ## Parameters
 
@@ -12,6 +15,10 @@ Defined in: [src/ui/widgets/widgetutils.ts:5](https://github.com/serenity-is/ser
 
 `Function`
 
+The widget type.
+
 ## Returns
 
 `string`
+
+The widget name.

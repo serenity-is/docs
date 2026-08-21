@@ -2,7 +2,9 @@
 
 # Interface: ArgsRowsOrCountChanged
 
-Defined in: [src/slick/remoteview.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L30)
+Defined in: [src/slick/remoteview.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L55)
+
+Arguments for rows or row-count changed events.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/slick/remoteview.ts:30](https://github.com/serenity-is/serenity
 
 > **currentRowCount**: `number`
 
-Defined in: [src/slick/remoteview.ts:33](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L33)
+Defined in: [src/slick/remoteview.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L61)
+
+Current row count after the change.
 
 ***
 
@@ -22,7 +26,9 @@ Defined in: [src/slick/remoteview.ts:33](https://github.com/serenity-is/serenity
 
 > **dataView**: [`IRemoteView`](IRemoteView.md)
 
-Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L9)
+Defined in: [src/slick/remoteview.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L13)
+
+The data view that raised the event.
 
 #### Inherited from
 
@@ -34,7 +40,9 @@ Defined in: [src/slick/remoteview.ts:9](https://github.com/serenity-is/serenity/
 
 > **previousRowCount**: `number`
 
-Defined in: [src/slick/remoteview.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L32)
+Defined in: [src/slick/remoteview.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L59)
+
+Previous row count before the change.
 
 ***
 
@@ -42,7 +50,9 @@ Defined in: [src/slick/remoteview.ts:32](https://github.com/serenity-is/serenity
 
 > **rowCountChanged**: `boolean`
 
-Defined in: [src/slick/remoteview.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L34)
+Defined in: [src/slick/remoteview.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L63)
+
+Whether the row count changed.
 
 ***
 
@@ -50,7 +60,9 @@ Defined in: [src/slick/remoteview.ts:34](https://github.com/serenity-is/serenity
 
 > **rowsChanged**: `boolean`
 
-Defined in: [src/slick/remoteview.ts:35](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L35)
+Defined in: [src/slick/remoteview.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L65)
+
+Whether any rows changed.
 
 ***
 
@@ -58,4 +70,6 @@ Defined in: [src/slick/remoteview.ts:35](https://github.com/serenity-is/serenity
 
 > **rowsDiff**: `number`[]
 
-Defined in: [src/slick/remoteview.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L31)
+Defined in: [src/slick/remoteview.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/slick/remoteview.ts#L57)
+
+Indices of the rows that changed.

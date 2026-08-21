@@ -2,7 +2,9 @@
 
 # Interface: CheckTreeItem\<TSource\>
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L18)
+Defined in: [src/ui/editors/checktreeeditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L22)
+
+A single item in a check tree editor.
 
 ## Type Parameters
 
@@ -10,13 +12,17 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:18](https://github.com/serenity-
 
 `TSource`
 
+The source item type.
+
 ## Properties
 
 ### children?
 
 > `optional` **children**: `CheckTreeItem`\<`TSource`\>[]
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L25)
+Defined in: [src/ui/editors/checktreeeditor.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L36)
+
+Child items.
 
 ***
 
@@ -24,7 +30,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:25](https://github.com/serenity-
 
 > `optional` **hideCheckBox**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L20)
+Defined in: [src/ui/editors/checktreeeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L26)
+
+Whether to hide the checkbox for this item.
 
 ***
 
@@ -32,7 +40,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:20](https://github.com/serenity-
 
 > `optional` **id**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:22](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L22)
+Defined in: [src/ui/editors/checktreeeditor.tsx:30](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L30)
+
+Unique identifier of the tree item, used as the node key and selection value.
 
 ***
 
@@ -40,7 +50,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:22](https://github.com/serenity-
 
 > `optional` **isAllDescendantsSelected**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L21)
+Defined in: [src/ui/editors/checktreeeditor.tsx:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L28)
+
+Whether all descendants are selected.
 
 ***
 
@@ -48,7 +60,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:21](https://github.com/serenity-
 
 > `optional` **isSelected**: `boolean`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L19)
+Defined in: [src/ui/editors/checktreeeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L24)
+
+Whether the item is selected.
 
 ***
 
@@ -56,7 +70,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:19](https://github.com/serenity-
 
 > `optional` **parentId**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L24)
+Defined in: [src/ui/editors/checktreeeditor.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L34)
+
+Parent item id.
 
 ***
 
@@ -64,7 +80,9 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:24](https://github.com/serenity-
 
 > `optional` **source**: `TSource`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L26)
+Defined in: [src/ui/editors/checktreeeditor.tsx:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L38)
+
+The source item.
 
 ***
 
@@ -72,4 +90,6 @@ Defined in: [src/ui/editors/checktreeeditor.tsx:26](https://github.com/serenity-
 
 > `optional` **text**: `string`
 
-Defined in: [src/ui/editors/checktreeeditor.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L23)
+Defined in: [src/ui/editors/checktreeeditor.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/checktreeeditor.tsx#L32)
+
+Display text.

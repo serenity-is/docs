@@ -2,7 +2,9 @@
 
 # Interface: SaveRequest\<TEntity\>
 
-Defined in: [src/base/servicetypes.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L16)
+Defined in: [src/base/servicetypes.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L39)
+
+Request DTO for `Create` / `Update` service handlers.
 
 ## Extends
 
@@ -14,13 +16,17 @@ Defined in: [src/base/servicetypes.ts:16](https://github.com/serenity-is/serenit
 
 `TEntity`
 
+Row / entity type being saved.
+
 ## Properties
 
 ### Entity?
 
 > `optional` **Entity**: `TEntity`
 
-Defined in: [src/base/servicetypes.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L18)
+Defined in: [src/base/servicetypes.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L43)
+
+Entity fields to persist. For updates only modified fields need to be sent, depending on handler.
 
 ***
 
@@ -28,7 +34,9 @@ Defined in: [src/base/servicetypes.ts:18](https://github.com/serenity-is/serenit
 
 > `optional` **EntityId**: `any`
 
-Defined in: [src/base/servicetypes.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L17)
+Defined in: [src/base/servicetypes.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L41)
+
+Primary key of the entity to update; omit for inserts (server generates the key).
 
 ***
 
@@ -36,7 +44,9 @@ Defined in: [src/base/servicetypes.ts:17](https://github.com/serenity-is/serenit
 
 > `optional` **Localizations**: `object`
 
-Defined in: [src/base/servicetypes.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L19)
+Defined in: [src/base/servicetypes.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/servicetypes.ts#L45)
+
+Per-language patches for localizable rows, keyed by language ID (e.g. `{ "en": { Name: "Hello" } }`).
 
 #### Index Signature
 

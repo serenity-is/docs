@@ -2,6 +2,8 @@
 
 # SlickHelper
 
+Helper functions for sleek grids.
+
 ## Functions
 
 - [setDefaults](functions/setDefaults.md)

@@ -2,7 +2,9 @@
 
 # Interface: QuickSearchField
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:5](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L5)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L8)
+
+Describes a selectable quick search field.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:5](https://github.com/serenity
 
 > **name**: `string`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L6)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:10](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L10)
+
+Field name sent with the search request.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:6](https://github.com/serenity
 
 > **title**: `string`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L7)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:12](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L12)
+
+Display title shown in the field selector.

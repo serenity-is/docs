@@ -4,7 +4,9 @@
 
 > `const` **filterable**: (`value`) => (`target`, `_context?`) => `void` = `advancedFiltering`
 
-Defined in: [src/types/decorators.ts:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L111)
+Defined in: [src/types/decorators.ts:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/decorators.ts#L153)
+
+Legacy decorator that attaches an [AdvancedFilteringAttribute](../../../../classes/AdvancedFilteringAttribute.md) to a grid class.
 
 ## Parameters
 
@@ -12,7 +14,11 @@ Defined in: [src/types/decorators.ts:111](https://github.com/serenity-is/serenit
 
 `boolean` = `true`
 
+Whether advanced filtering should be enabled. Defaults to `true`.
+
 ## Returns
+
+Class decorator.
 
 > (`target`, `_context?`): `void`
 
@@ -29,6 +35,10 @@ Defined in: [src/types/decorators.ts:111](https://github.com/serenity-is/serenit
 ### Returns
 
 `void`
+
+## Deprecated
+
+Prefer `static override [Symbol.typeInfo]` with [AdvancedFilteringAttribute](../../../../classes/AdvancedFilteringAttribute.md) metadata instead.
 
 ## Deprecated
 

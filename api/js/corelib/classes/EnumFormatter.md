@@ -2,7 +2,9 @@
 
 # Class: EnumFormatter
 
-Defined in: [src/ui/formatters/enumformatter.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L6)
+Defined in: [src/ui/formatters/enumformatter.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L7)
+
+Renders enum values as localized text via `Enums.<EnumKey>.<Name>`.
 
 ## Implements
 
@@ -14,15 +16,21 @@ Defined in: [src/ui/formatters/enumformatter.ts:6](https://github.com/serenity-i
 
 > **new EnumFormatter**(`props`): `EnumFormatter`
 
-Defined in: [src/ui/formatters/enumformatter.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L9)
+Defined in: [src/ui/formatters/enumformatter.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L15)
+
+Creates a new EnumFormatter.
 
 #### Parameters
 
 ##### props
 
+Formatter options.
+
 ###### enumKey?
 
 `string`
+
+Full enum key (e.g. `"MyProject.MyEnum"`). Resolved via [EnumTypeRegistry](../variables/EnumTypeRegistry.md).
 
 #### Returns
 
@@ -34,7 +42,9 @@ Defined in: [src/ui/formatters/enumformatter.ts:9](https://github.com/serenity-i
 
 > `readonly` **props**: `object` = `{}`
 
-Defined in: [src/ui/formatters/enumformatter.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L9)
+Defined in: [src/ui/formatters/enumformatter.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L15)
+
+Formatter options.
 
 #### enumKey?
 
@@ -46,7 +56,7 @@ Defined in: [src/ui/formatters/enumformatter.ts:9](https://github.com/serenity-i
 
 > `static` **\[typeInfo\]**: [`FormatterTypeInfo`](../type-aliases/FormatterTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/ui/formatters/enumformatter.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L7)
+Defined in: [src/ui/formatters/enumformatter.ts:8](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L8)
 
 ## Accessors
 
@@ -56,23 +66,31 @@ Defined in: [src/ui/formatters/enumformatter.ts:7](https://github.com/serenity-i
 
 > **get** **enumKey**(): `string`
 
-Defined in: [src/ui/formatters/enumformatter.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L26)
+Defined in: [src/ui/formatters/enumformatter.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L38)
+
+Gets the enum key used to resolve the enum type.
 
 ##### Returns
 
 `string`
 
+The enum key.
+
 #### Set Signature
 
 > **set** **enumKey**(`value`): `void`
 
-Defined in: [src/ui/formatters/enumformatter.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L27)
+Defined in: [src/ui/formatters/enumformatter.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L43)
+
+Sets the enum key used to resolve the enum type.
 
 ##### Parameters
 
 ###### value
 
 `string`
+
+The enum key.
 
 ##### Returns
 
@@ -84,7 +102,9 @@ Defined in: [src/ui/formatters/enumformatter.ts:27](https://github.com/serenity-
 
 > **format**(`ctx`): `FormatterResult`
 
-Defined in: [src/ui/formatters/enumformatter.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L13)
+Defined in: [src/ui/formatters/enumformatter.ts:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L24)
+
+Formats the enum value as localized text.
 
 #### Parameters
 
@@ -92,9 +112,13 @@ Defined in: [src/ui/formatters/enumformatter.ts:13](https://github.com/serenity-
 
 `FormatterContext`
 
+Formatter context containing the enum value.
+
 #### Returns
 
 `FormatterResult`
+
+Localized enum text or a placeholder element when the enum type loads asynchronously.
 
 #### Implementation of
 
@@ -106,7 +130,9 @@ Defined in: [src/ui/formatters/enumformatter.ts:13](https://github.com/serenity-
 
 > `static` **format**(`enumType`, `value`): `string`
 
-Defined in: [src/ui/formatters/enumformatter.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L29)
+Defined in: [src/ui/formatters/enumformatter.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L51)
+
+Formats an enum value given an enum type.
 
 #### Parameters
 
@@ -114,13 +140,19 @@ Defined in: [src/ui/formatters/enumformatter.ts:29](https://github.com/serenity-
 
 `any`
 
+Registered enum object.
+
 ##### value
 
 `any`
 
+Enum numeric value.
+
 #### Returns
 
 `string`
+
+Localized display text.
 
 ***
 
@@ -128,7 +160,9 @@ Defined in: [src/ui/formatters/enumformatter.ts:29](https://github.com/serenity-
 
 > `static` **getName**(`enumType`, `value`): `string`
 
-Defined in: [src/ui/formatters/enumformatter.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L48)
+Defined in: [src/ui/formatters/enumformatter.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L82)
+
+Gets the member name for a value.
 
 #### Parameters
 
@@ -136,13 +170,19 @@ Defined in: [src/ui/formatters/enumformatter.ts:48](https://github.com/serenity-
 
 `any`
 
+Enum object.
+
 ##### value
 
 `any`
 
+Numeric value.
+
 #### Returns
 
 `string`
+
+Enum member name or empty string.
 
 ***
 
@@ -150,7 +190,9 @@ Defined in: [src/ui/formatters/enumformatter.ts:48](https://github.com/serenity-
 
 > `static` **getText**(`enumKey`, `name`): `string`
 
-Defined in: [src/ui/formatters/enumformatter.ts:41](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L41)
+Defined in: [src/ui/formatters/enumformatter.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/formatters/enumformatter.ts#L69)
+
+Gets localized text for an enum name.
 
 #### Parameters
 
@@ -158,10 +200,16 @@ Defined in: [src/ui/formatters/enumformatter.ts:41](https://github.com/serenity-
 
 `string`
 
+Enum key (e.g. `"MyEnum"`).
+
 ##### name
 
 `string`
 
+Member name.
+
 #### Returns
 
 `string`
+
+Localized string (falls back to name).

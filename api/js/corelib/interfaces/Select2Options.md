@@ -2,7 +2,9 @@
 
 # Interface: Select2Options
 
-Defined in: [src/ui/editors/select2.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L48)
+Defined in: [src/ui/editors/select2.tsx:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L93)
+
+Options for the [Select2](../classes/Select2.md) widget.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/editors/select2.ts:48](https://github.com/serenity-is/sereni
 
 > `optional` **adaptContainerCssClass**: (`p1`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:92](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L92)
+Defined in: [src/ui/editors/select2.tsx:181](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L181)
+
+Callback that adapts the container CSS class.
 
 #### Parameters
 
@@ -28,7 +32,9 @@ Defined in: [src/ui/editors/select2.ts:92](https://github.com/serenity-is/sereni
 
 > `optional` **adaptDropdownCssClass**: (`p1`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:93](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L93)
+Defined in: [src/ui/editors/select2.tsx:183](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L183)
+
+Callback that adapts the dropdown CSS class.
 
 #### Parameters
 
@@ -46,7 +52,9 @@ Defined in: [src/ui/editors/select2.ts:93](https://github.com/serenity-is/sereni
 
 > `optional` **ajax**: [`Select2AjaxOptions`](Select2AjaxOptions.md)
 
-Defined in: [src/ui/editors/select2.ts:83](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L83)
+Defined in: [src/ui/editors/select2.tsx:163](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L163)
+
+Ajax options.
 
 ***
 
@@ -54,7 +62,9 @@ Defined in: [src/ui/editors/select2.ts:83](https://github.com/serenity-is/sereni
 
 > `optional` **allowClear**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:58](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L58)
+Defined in: [src/ui/editors/select2.tsx:113](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L113)
+
+Whether the selection can be cleared.
 
 ***
 
@@ -62,7 +72,9 @@ Defined in: [src/ui/editors/select2.ts:58](https://github.com/serenity-is/sereni
 
 > `optional` **blurOnChange**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L97)
+Defined in: [src/ui/editors/select2.tsx:191](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L191)
+
+Whether to blur on change.
 
 ***
 
@@ -70,7 +82,9 @@ Defined in: [src/ui/editors/select2.ts:97](https://github.com/serenity-is/sereni
 
 > `optional` **closeOnSelect**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L60)
+Defined in: [src/ui/editors/select2.tsx:117](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L117)
+
+Whether to close the dropdown on select.
 
 ***
 
@@ -78,7 +92,9 @@ Defined in: [src/ui/editors/select2.ts:60](https://github.com/serenity-is/sereni
 
 > `optional` **containerCss**: `any`
 
-Defined in: [src/ui/editors/select2.ts:86](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L86)
+Defined in: [src/ui/editors/select2.tsx:169](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L169)
+
+Container CSS.
 
 ***
 
@@ -86,7 +102,9 @@ Defined in: [src/ui/editors/select2.ts:86](https://github.com/serenity-is/sereni
 
 > `optional` **containerCssClass**: `any`
 
-Defined in: [src/ui/editors/select2.ts:87](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L87)
+Defined in: [src/ui/editors/select2.tsx:171](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L171)
+
+Container CSS class.
 
 ***
 
@@ -94,7 +112,9 @@ Defined in: [src/ui/editors/select2.ts:87](https://github.com/serenity-is/sereni
 
 > `optional` **createSearchChoice**: (`p1`) => [`Select2Item`](Select2Item.md)
 
-Defined in: [src/ui/editors/select2.ts:77](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L77)
+Defined in: [src/ui/editors/select2.tsx:151](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L151)
+
+Callback that creates a search choice.
 
 #### Parameters
 
@@ -112,7 +132,9 @@ Defined in: [src/ui/editors/select2.ts:77](https://github.com/serenity-is/sereni
 
 > `optional` **createSearchChoicePosition**: `string` \| (`list`, `item`) => `void`
 
-Defined in: [src/ui/editors/select2.ts:78](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L78)
+Defined in: [src/ui/editors/select2.tsx:153](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L153)
+
+Position of the create-search-choice item.
 
 ***
 
@@ -120,7 +142,9 @@ Defined in: [src/ui/editors/select2.ts:78](https://github.com/serenity-is/sereni
 
 > `optional` **data**: `any`
 
-Defined in: [src/ui/editors/select2.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L84)
+Defined in: [src/ui/editors/select2.tsx:165](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L165)
+
+Static data.
 
 ***
 
@@ -128,7 +152,9 @@ Defined in: [src/ui/editors/select2.ts:84](https://github.com/serenity-is/sereni
 
 > `optional` **dropdownAutoWidth**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:90](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L90)
+Defined in: [src/ui/editors/select2.tsx:177](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L177)
+
+Whether the dropdown auto-widths.
 
 ***
 
@@ -136,7 +162,9 @@ Defined in: [src/ui/editors/select2.ts:90](https://github.com/serenity-is/sereni
 
 > `optional` **dropdownCss**: `any`
 
-Defined in: [src/ui/editors/select2.ts:88](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L88)
+Defined in: [src/ui/editors/select2.tsx:173](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L173)
+
+Dropdown CSS.
 
 ***
 
@@ -144,7 +172,9 @@ Defined in: [src/ui/editors/select2.ts:88](https://github.com/serenity-is/sereni
 
 > `optional` **dropdownCssClass**: `any`
 
-Defined in: [src/ui/editors/select2.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L89)
+Defined in: [src/ui/editors/select2.tsx:175](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L175)
+
+Dropdown CSS class.
 
 ***
 
@@ -152,7 +182,9 @@ Defined in: [src/ui/editors/select2.ts:89](https://github.com/serenity-is/sereni
 
 > `optional` **dropdownParent**: (`input`) => `HTMLElement`
 
-Defined in: [src/ui/editors/select2.ts:91](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L91)
+Defined in: [src/ui/editors/select2.tsx:179](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L179)
+
+Callback that returns the dropdown parent.
 
 #### Parameters
 
@@ -170,7 +202,9 @@ Defined in: [src/ui/editors/select2.ts:91](https://github.com/serenity-is/sereni
 
 > `optional` **element**: [`Select2Element`](../type-aliases/Select2Element.md)
 
-Defined in: [src/ui/editors/select2.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L49)
+Defined in: [src/ui/editors/select2.tsx:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L95)
+
+The element to attach Select2 to.
 
 ***
 
@@ -178,7 +212,9 @@ Defined in: [src/ui/editors/select2.ts:49](https://github.com/serenity-is/sereni
 
 > `optional` **escapeMarkup**: (`p1`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L94)
+Defined in: [src/ui/editors/select2.tsx:185](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L185)
+
+Callback that escapes markup.
 
 #### Parameters
 
@@ -196,7 +232,9 @@ Defined in: [src/ui/editors/select2.ts:94](https://github.com/serenity-is/sereni
 
 > `optional` **formatAjaxError**: (`p1`, `p2`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:65](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L65)
+Defined in: [src/ui/editors/select2.tsx:127](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L127)
+
+Formatter for ajax errors.
 
 #### Parameters
 
@@ -218,7 +256,9 @@ Defined in: [src/ui/editors/select2.ts:65](https://github.com/serenity-is/sereni
 
 > `optional` **formatInputTooLong**: (`input`, `max`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:74](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L74)
+Defined in: [src/ui/editors/select2.tsx:145](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L145)
+
+Formatter for input-too-long text.
 
 #### Parameters
 
@@ -240,7 +280,9 @@ Defined in: [src/ui/editors/select2.ts:74](https://github.com/serenity-is/sereni
 
 > `optional` **formatInputTooShort**: (`input`, `min`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:75](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L75)
+Defined in: [src/ui/editors/select2.tsx:147](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L147)
+
+Formatter for input-too-short text.
 
 #### Parameters
 
@@ -262,7 +304,9 @@ Defined in: [src/ui/editors/select2.ts:75](https://github.com/serenity-is/sereni
 
 > `optional` **formatLoadMore**: (`pageNumber`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L72)
+Defined in: [src/ui/editors/select2.tsx:141](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L141)
+
+Formatter for load-more text.
 
 #### Parameters
 
@@ -280,7 +324,9 @@ Defined in: [src/ui/editors/select2.ts:72](https://github.com/serenity-is/sereni
 
 > `optional` **formatMatches**: (`matches`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:66](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L66)
+Defined in: [src/ui/editors/select2.tsx:129](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L129)
+
+Formatter for the matches count.
 
 #### Parameters
 
@@ -298,7 +344,9 @@ Defined in: [src/ui/editors/select2.ts:66](https://github.com/serenity-is/sereni
 
 > `optional` **formatNoMatches**: (`input`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L71)
+Defined in: [src/ui/editors/select2.tsx:139](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L139)
+
+Formatter for no-matches text.
 
 #### Parameters
 
@@ -316,7 +364,9 @@ Defined in: [src/ui/editors/select2.ts:71](https://github.com/serenity-is/sereni
 
 > `optional` **formatResult**: (`p1`, `p2`, `p3`, `p4`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L68)
+Defined in: [src/ui/editors/select2.tsx:133](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L133)
+
+Formatter for result items.
 
 #### Parameters
 
@@ -346,7 +396,9 @@ Defined in: [src/ui/editors/select2.ts:68](https://github.com/serenity-is/sereni
 
 > `optional` **formatResultCssClass**: (`p1`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:69](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L69)
+Defined in: [src/ui/editors/select2.tsx:135](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L135)
+
+Formatter for result CSS classes.
 
 #### Parameters
 
@@ -364,7 +416,9 @@ Defined in: [src/ui/editors/select2.ts:69](https://github.com/serenity-is/sereni
 
 > `optional` **formatSearching**: () => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L73)
+Defined in: [src/ui/editors/select2.tsx:143](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L143)
+
+Formatter for searching text.
 
 #### Returns
 
@@ -376,7 +430,9 @@ Defined in: [src/ui/editors/select2.ts:73](https://github.com/serenity-is/sereni
 
 > `optional` **formatSelection**: (`p1`, `p2`, `p3`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L67)
+Defined in: [src/ui/editors/select2.tsx:131](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L131)
+
+Formatter for selected items.
 
 #### Parameters
 
@@ -402,7 +458,9 @@ Defined in: [src/ui/editors/select2.ts:67](https://github.com/serenity-is/sereni
 
 > `optional` **formatSelectionCssClass**: (`item`, `container`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:70](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L70)
+Defined in: [src/ui/editors/select2.tsx:137](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L137)
+
+Formatter for selection CSS classes.
 
 #### Parameters
 
@@ -424,7 +482,9 @@ Defined in: [src/ui/editors/select2.ts:70](https://github.com/serenity-is/sereni
 
 > `optional` **formatSelectionTooBig**: (`p1`) => [`Select2FormatResult`](../type-aliases/Select2FormatResult.md)
 
-Defined in: [src/ui/editors/select2.ts:76](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L76)
+Defined in: [src/ui/editors/select2.tsx:149](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L149)
+
+Formatter for selection-too-big text.
 
 #### Parameters
 
@@ -442,7 +502,9 @@ Defined in: [src/ui/editors/select2.ts:76](https://github.com/serenity-is/sereni
 
 > `optional` **id**: (`p1`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:62](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L62)
+Defined in: [src/ui/editors/select2.tsx:121](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L121)
+
+Callback that returns the id of an item.
 
 #### Parameters
 
@@ -460,7 +522,9 @@ Defined in: [src/ui/editors/select2.ts:62](https://github.com/serenity-is/sereni
 
 > `optional` **initSelection**: (`p1`, `p2`) => `void`
 
-Defined in: [src/ui/editors/select2.ts:79](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L79)
+Defined in: [src/ui/editors/select2.tsx:155](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L155)
+
+Callback that initializes the selection.
 
 #### Parameters
 
@@ -482,7 +546,9 @@ Defined in: [src/ui/editors/select2.ts:79](https://github.com/serenity-is/sereni
 
 > `optional` **loadMorePadding**: `number`
 
-Defined in: [src/ui/editors/select2.ts:98](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L98)
+Defined in: [src/ui/editors/select2.tsx:193](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L193)
+
+Padding for load-more.
 
 ***
 
@@ -490,7 +556,9 @@ Defined in: [src/ui/editors/select2.ts:98](https://github.com/serenity-is/sereni
 
 > `optional` **matcher**: (`p1`, `p2`, `p3`) => `boolean`
 
-Defined in: [src/ui/editors/select2.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L63)
+Defined in: [src/ui/editors/select2.tsx:123](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L123)
+
+Custom matcher function.
 
 #### Parameters
 
@@ -516,7 +584,9 @@ Defined in: [src/ui/editors/select2.ts:63](https://github.com/serenity-is/sereni
 
 > `optional` **maximumInputLength**: `number`
 
-Defined in: [src/ui/editors/select2.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L52)
+Defined in: [src/ui/editors/select2.tsx:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L101)
+
+Maximum input length.
 
 ***
 
@@ -524,7 +594,9 @@ Defined in: [src/ui/editors/select2.ts:52](https://github.com/serenity-is/sereni
 
 > `optional` **maximumSelectionSize**: `any`
 
-Defined in: [src/ui/editors/select2.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L54)
+Defined in: [src/ui/editors/select2.tsx:105](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L105)
+
+Maximum number of selectable items.
 
 ***
 
@@ -532,7 +604,9 @@ Defined in: [src/ui/editors/select2.ts:54](https://github.com/serenity-is/sereni
 
 > `optional` **minimumInputLength**: `number`
 
-Defined in: [src/ui/editors/select2.ts:51](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L51)
+Defined in: [src/ui/editors/select2.tsx:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L99)
+
+Minimum input length before searching.
 
 ***
 
@@ -540,7 +614,9 @@ Defined in: [src/ui/editors/select2.ts:51](https://github.com/serenity-is/sereni
 
 > `optional` **minimumResultsForSearch**: `number`
 
-Defined in: [src/ui/editors/select2.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L53)
+Defined in: [src/ui/editors/select2.tsx:103](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L103)
+
+Minimum results required to show the search box.
 
 ***
 
@@ -548,7 +624,9 @@ Defined in: [src/ui/editors/select2.ts:53](https://github.com/serenity-is/sereni
 
 > `optional` **multiple**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:59](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L59)
+Defined in: [src/ui/editors/select2.tsx:115](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L115)
+
+Whether multiple items can be selected.
 
 ***
 
@@ -556,7 +634,9 @@ Defined in: [src/ui/editors/select2.ts:59](https://github.com/serenity-is/sereni
 
 > `optional` **nextSearchTerm**: (`p1`, `p2`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:99](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L99)
+Defined in: [src/ui/editors/select2.tsx:195](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L195)
+
+Callback that returns the next search term.
 
 #### Parameters
 
@@ -578,7 +658,9 @@ Defined in: [src/ui/editors/select2.ts:99](https://github.com/serenity-is/sereni
 
 > `optional` **openOnEnter**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:61](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L61)
+Defined in: [src/ui/editors/select2.tsx:119](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L119)
+
+Whether to open the dropdown on enter.
 
 ***
 
@@ -586,7 +668,9 @@ Defined in: [src/ui/editors/select2.ts:61](https://github.com/serenity-is/sereni
 
 > `optional` **placeholder**: `string`
 
-Defined in: [src/ui/editors/select2.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L55)
+Defined in: [src/ui/editors/select2.tsx:107](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L107)
+
+Placeholder text.
 
 ***
 
@@ -594,7 +678,9 @@ Defined in: [src/ui/editors/select2.ts:55](https://github.com/serenity-is/sereni
 
 > `optional` **placeholderOption**: `any`
 
-Defined in: [src/ui/editors/select2.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L56)
+Defined in: [src/ui/editors/select2.tsx:109](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L109)
+
+Placeholder option.
 
 ***
 
@@ -602,7 +688,9 @@ Defined in: [src/ui/editors/select2.ts:56](https://github.com/serenity-is/sereni
 
 > `optional` **populateResults**: (`container`, `results`, `query`) => `void`
 
-Defined in: [src/ui/editors/select2.ts:100](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L100)
+Defined in: [src/ui/editors/select2.tsx:197](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L197)
+
+Callback that populates results.
 
 #### Parameters
 
@@ -628,7 +716,9 @@ Defined in: [src/ui/editors/select2.ts:100](https://github.com/serenity-is/seren
 
 > `optional` **query**: (`p1`) => `void`
 
-Defined in: [src/ui/editors/select2.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L82)
+Defined in: [src/ui/editors/select2.tsx:161](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L161)
+
+Query callback.
 
 #### Parameters
 
@@ -646,7 +736,9 @@ Defined in: [src/ui/editors/select2.ts:82](https://github.com/serenity-is/sereni
 
 > `optional` **searchInputPlaceholder**: `string`
 
-Defined in: [src/ui/editors/select2.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L95)
+Defined in: [src/ui/editors/select2.tsx:187](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L187)
+
+Placeholder for the search input.
 
 ***
 
@@ -654,7 +746,9 @@ Defined in: [src/ui/editors/select2.ts:95](https://github.com/serenity-is/sereni
 
 > `optional` **selectOnBlur**: `boolean`
 
-Defined in: [src/ui/editors/select2.ts:96](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L96)
+Defined in: [src/ui/editors/select2.tsx:189](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L189)
+
+Whether to select on blur.
 
 ***
 
@@ -662,7 +756,9 @@ Defined in: [src/ui/editors/select2.ts:96](https://github.com/serenity-is/sereni
 
 > `optional` **separator**: `string`
 
-Defined in: [src/ui/editors/select2.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L57)
+Defined in: [src/ui/editors/select2.tsx:111](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L111)
+
+Separator for multiple values.
 
 ***
 
@@ -670,7 +766,9 @@ Defined in: [src/ui/editors/select2.ts:57](https://github.com/serenity-is/sereni
 
 > `optional` **shouldFocusInput**: (`p1`) => `boolean`
 
-Defined in: [src/ui/editors/select2.ts:101](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L101)
+Defined in: [src/ui/editors/select2.tsx:199](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L199)
+
+Callback that determines whether to focus the input.
 
 #### Parameters
 
@@ -688,7 +786,9 @@ Defined in: [src/ui/editors/select2.ts:101](https://github.com/serenity-is/seren
 
 > `optional` **sortResults**: (`p1`, `p2`, `p3`) => `any`
 
-Defined in: [src/ui/editors/select2.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L64)
+Defined in: [src/ui/editors/select2.tsx:125](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L125)
+
+Callback that sorts results.
 
 #### Parameters
 
@@ -714,7 +814,9 @@ Defined in: [src/ui/editors/select2.ts:64](https://github.com/serenity-is/sereni
 
 > `optional` **tags**: (`string` \| [`Select2Item`](Select2Item.md))[] \| () => (`string` \| [`Select2Item`](Select2Item.md))[]
 
-Defined in: [src/ui/editors/select2.ts:85](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L85)
+Defined in: [src/ui/editors/select2.tsx:167](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L167)
+
+Tags for tag mode.
 
 ***
 
@@ -722,7 +824,9 @@ Defined in: [src/ui/editors/select2.ts:85](https://github.com/serenity-is/sereni
 
 > `optional` **tokenizer**: (`p1`, `p2`, `p3`, `p4`) => `string`
 
-Defined in: [src/ui/editors/select2.ts:80](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L80)
+Defined in: [src/ui/editors/select2.tsx:157](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L157)
+
+Tokenizer function.
 
 #### Parameters
 
@@ -752,7 +856,9 @@ Defined in: [src/ui/editors/select2.ts:80](https://github.com/serenity-is/sereni
 
 > `optional` **tokenSeparators**: `any`
 
-Defined in: [src/ui/editors/select2.ts:81](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L81)
+Defined in: [src/ui/editors/select2.tsx:159](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L159)
+
+Token separators.
 
 ***
 
@@ -760,4 +866,6 @@ Defined in: [src/ui/editors/select2.ts:81](https://github.com/serenity-is/sereni
 
 > `optional` **width**: `any`
 
-Defined in: [src/ui/editors/select2.ts:50](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.ts#L50)
+Defined in: [src/ui/editors/select2.tsx:97](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/select2.tsx#L97)
+
+Width of the widget.

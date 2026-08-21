@@ -2,7 +2,11 @@
 
 # Interface: CustomDomAttributes\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L38)
+Defined in: [../domwise/dist/index.d.ts:146](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L146)
+
+Custom DOM attributes supported by DomWise on all elements.
+Includes `children`, `ref`, `dangerouslySetInnerHTML`, and jsx-dom/react-compatible
+`on` / `onCapture` event maps.
 
 ## Extended by
 
@@ -14,13 +18,17 @@ Defined in: [../domwise/dist/index.d.ts:38](https://github.com/serenity-is/seren
 
 `T`
 
+The type of the DOM element.
+
 ## Properties
 
 ### children?
 
 > `optional` **children**: [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [../domwise/dist/index.d.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L39)
+Defined in: [../domwise/dist/index.d.ts:148](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L148)
+
+Child nodes / JSX children for the element.
 
 ***
 
@@ -28,7 +36,9 @@ Defined in: [../domwise/dist/index.d.ts:39](https://github.com/serenity-is/seren
 
 > `optional` **dangerouslySetInnerHTML**: `object`
 
-Defined in: [../domwise/dist/index.d.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L40)
+Defined in: [../domwise/dist/index.d.ts:150](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L150)
+
+Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
 #### \_\_html
 
@@ -40,9 +50,9 @@ Defined in: [../domwise/dist/index.d.ts:40](https://github.com/serenity-is/seren
 
 > `optional` **on**: `Record`\<`string`, `Function`\>
 
-Defined in: [../domwise/dist/index.d.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L45)
+Defined in: [../domwise/dist/index.d.ts:156](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L156)
 
-compat from jsx-dom/react
+Compatibility event map for `on*` handlers (jsx-dom / React style).
 
 ***
 
@@ -50,7 +60,9 @@ compat from jsx-dom/react
 
 > `optional` **onCapture**: `Record`\<`string`, `Function`\>
 
-Defined in: [../domwise/dist/index.d.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L46)
+Defined in: [../domwise/dist/index.d.ts:158](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L158)
+
+Compatibility event map for capture-phase handlers.
 
 ***
 
@@ -58,4 +70,6 @@ Defined in: [../domwise/dist/index.d.ts:46](https://github.com/serenity-is/seren
 
 > `optional` **ref**: [`Ref`](../type-aliases/Ref.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L43)
+Defined in: [../domwise/dist/index.d.ts:154](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L154)
+
+Ref object or callback that receives the created DOM node.

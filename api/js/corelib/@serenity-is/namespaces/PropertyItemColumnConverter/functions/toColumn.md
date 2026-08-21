@@ -4,7 +4,9 @@
 
 > **toColumn**(`item`): `Column`
 
-Defined in: [src/ui/helpers/propertyitemcolumnconverter.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/propertyitemcolumnconverter.tsx#L21)
+Defined in: [src/ui/helpers/propertyitemcolumnconverter.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/helpers/propertyitemcolumnconverter.tsx#L34)
+
+Converts a single property item into a column definition.
 
 ## Parameters
 
@@ -12,6 +14,10 @@ Defined in: [src/ui/helpers/propertyitemcolumnconverter.tsx:21](https://github.c
 
 [`PropertyItem`](../../../../interfaces/PropertyItem.md)
 
+The property item to convert.
+
 ## Returns
 
 `Column`
+
+The resulting column definition.

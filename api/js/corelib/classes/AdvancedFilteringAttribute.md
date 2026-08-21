@@ -2,9 +2,10 @@
 
 # Class: AdvancedFilteringAttribute
 
-Defined in: [src/types/attributes.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L28)
+Defined in: [src/types/attributes.ts:39](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L39)
 
-Indicates if a grid should have an advanced filter editor
+Indicates whether a grid should expose the advanced filter editor.
+When disabled the filter panel and advanced filter dialog are hidden.
 
 ## Extends
 
@@ -16,13 +17,17 @@ Indicates if a grid should have an advanced filter editor
 
 > **new AdvancedFilteringAttribute**(`value`): `AdvancedFilteringAttribute`
 
-Defined in: [src/types/attributes.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L31)
+Defined in: [src/types/attributes.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L46)
+
+Creates a new AdvancedFilteringAttribute.
 
 #### Parameters
 
 ##### value
 
 `boolean` = `true`
+
+Whether advanced filtering should be enabled. Defaults to `true`.
 
 #### Returns
 
@@ -38,7 +43,9 @@ Defined in: [src/types/attributes.ts:31](https://github.com/serenity-is/serenity
 
 > **value**: `boolean` = `true`
 
-Defined in: [src/types/attributes.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L31)
+Defined in: [src/types/attributes.ts:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L46)
+
+Whether advanced filtering should be enabled. Defaults to `true`.
 
 ***
 
@@ -46,7 +53,7 @@ Defined in: [src/types/attributes.ts:31](https://github.com/serenity-is/serenity
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/types/attributes.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L29)
+Defined in: [src/types/attributes.ts:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L40)
 
 #### Overrides
 

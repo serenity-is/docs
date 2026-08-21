@@ -2,4 +2,6 @@
 
 # Interface: CKEditorConfig
 
-Defined in: [src/ui/editors/htmlcontenteditor.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L19)
+Defined in: [src/ui/editors/htmlcontenteditor.tsx:29](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/editors/htmlcontenteditor.tsx#L29)
+
+Configuration for the CKEditor instance.

@@ -2,7 +2,9 @@
 
 # Interface: QuickSearchInputOptions
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:17](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L17)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:32](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L32)
+
+Options for the [QuickSearchInput](../classes/QuickSearchInput.md) widget.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:17](https://github.com/serenit
 
 > `optional` **beforeSearch**: (`args`) => `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:24](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L24)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:44](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L44)
+
+Callback invoked before the search is executed.
 
 #### Parameters
 
@@ -28,7 +32,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:24](https://github.com/serenit
 
 > `optional` **fields**: [`QuickSearchField`](QuickSearchField.md)[]
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:20](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L20)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:38](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L38)
+
+Optional list of fields the user can search within.
 
 ***
 
@@ -36,7 +42,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:20](https://github.com/serenit
 
 > `optional` **filteredParentClass**: `string`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:21](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L21)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:40](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L40)
+
+CSS class added to the parent element when the search filters results.
 
 ***
 
@@ -44,7 +52,9 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:21](https://github.com/serenit
 
 > `optional` **loadingParentClass**: `string`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:19](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L19)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:36](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L36)
+
+CSS class added to the parent element while a search is in progress.
 
 ***
 
@@ -52,7 +62,7 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:19](https://github.com/serenit
 
 > `optional` **onSearch**: (`field`, `query`, `done`) => `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:23](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L23)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L42)
 
 #### Parameters
 
@@ -82,7 +92,9 @@ Prefer search
 
 > `optional` **search**: (`args`) => `void`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:25](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L25)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:46](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L46)
+
+Callback that performs the actual search.
 
 #### Parameters
 
@@ -100,4 +112,6 @@ Defined in: [src/ui/datagrid/quicksearchinput.tsx:25](https://github.com/serenit
 
 > `optional` **typeDelay**: `number`
 
-Defined in: [src/ui/datagrid/quicksearchinput.tsx:18](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L18)
+Defined in: [src/ui/datagrid/quicksearchinput.tsx:34](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/datagrid/quicksearchinput.tsx#L34)
+
+Delay in milliseconds before the search is triggered after typing stops.

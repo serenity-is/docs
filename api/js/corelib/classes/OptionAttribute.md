@@ -2,7 +2,7 @@
 
 # Class: OptionAttribute
 
-Defined in: [src/types/attributes.ts:54](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L54)
+Defined in: [src/types/attributes.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L72)
 
 Indicates that the property is an option. This is no longer used as JSX
 does not support it, but it is kept for backward compatibility.
@@ -31,7 +31,7 @@ does not support it, but it is kept for backward compatibility.
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/types/attributes.ts:55](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L55)
+Defined in: [src/types/attributes.ts:73](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L73)
 
 #### Overrides
 

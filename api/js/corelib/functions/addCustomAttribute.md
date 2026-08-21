@@ -4,11 +4,10 @@
 
 > **addCustomAttribute**(`type`, `attr`): `void`
 
-Defined in: [src/base/system.ts:470](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L470)
+Defined in: [src/base/system.ts:489](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/system.ts#L489)
 
-Adds a custom attribute to a type. JavaScript does not have built-in support for attributes,
-so Serenity uses a customAttributes array on typeInfo to store them. This is used by
-decorators and some helper functions to add attributes to classes.
+Attaches a custom attribute instance to a type's metadata.
+JavaScript has no native attribute support, so Serenity stores attributes on `typeInfo.customAttributes`.
 
 ## Parameters
 
@@ -16,9 +15,13 @@ decorators and some helper functions to add attributes to classes.
 
 `any`
 
+Target type (class / enum object) to attach the attribute to.
+
 ### attr
 
 [`CustomAttribute`](../classes/CustomAttribute.md)
+
+Attribute instance to add.
 
 ## Returns
 

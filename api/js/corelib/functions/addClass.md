@@ -4,9 +4,9 @@
 
 > **addClass**(`el`, `cls`): `void`
 
-Defined in: [src/base/html.ts:60](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L60)
+Defined in: [src/base/html.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/html.ts#L71)
 
-Adds a CSS class to the specified element.
+Adds one or more CSS classes to an element.
 
 ## Parameters
 
@@ -14,16 +14,18 @@ Adds a CSS class to the specified element.
 
 `Element`
 
-The element to add the class to.
+Target element.
 
 ### cls
 
 `string`
 
-The CSS class to add.
+Class name or space-separated list of class names to add.
 
 ## Returns
 
 `void`
 
-A boolean value indicating whether the class was successfully added.
+## Remarks
+
+Wraps [toggleClass](toggleClass.md) with `add=true`; no-ops for empty/null inputs.

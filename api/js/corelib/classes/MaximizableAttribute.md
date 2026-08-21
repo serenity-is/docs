@@ -2,11 +2,13 @@
 
 # Class: MaximizableAttribute
 
-Defined in: [src/types/attributes.ts:42](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L42)
+Defined in: [src/types/attributes.ts:56](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L56)
 
-Indicates that a dialog or panel should be maximizable.
-Requires jquery ui dialogs and jquery.dialogextend.js.
-It does not work with current bootstrap modals.
+Indicates that a dialog should be maximizable.
+
+## Remarks
+
+Requires jQuery UI and `jquery.dialogextend.js`; not applicable to Bootstrap modals.
 
 ## Extends
 
@@ -18,13 +20,17 @@ It does not work with current bootstrap modals.
 
 > **new MaximizableAttribute**(`value`): `MaximizableAttribute`
 
-Defined in: [src/types/attributes.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L45)
+Defined in: [src/types/attributes.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L63)
+
+Creates a new MaximizableAttribute.
 
 #### Parameters
 
 ##### value
 
 `boolean` = `true`
+
+Whether the dialog may be maximized. Defaults to `true`.
 
 #### Returns
 
@@ -40,7 +46,9 @@ Defined in: [src/types/attributes.ts:45](https://github.com/serenity-is/serenity
 
 > **value**: `boolean` = `true`
 
-Defined in: [src/types/attributes.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L45)
+Defined in: [src/types/attributes.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L63)
+
+Whether the dialog may be maximized. Defaults to `true`.
 
 ***
 
@@ -48,7 +56,7 @@ Defined in: [src/types/attributes.ts:45](https://github.com/serenity-is/serenity
 
 > `static` **\[typeInfo\]**: [`ClassTypeInfo`](../type-aliases/ClassTypeInfo.md)\<`"Serenity."`\>
 
-Defined in: [src/types/attributes.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L43)
+Defined in: [src/types/attributes.ts:57](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/types/attributes.ts#L57)
 
 #### Overrides
 

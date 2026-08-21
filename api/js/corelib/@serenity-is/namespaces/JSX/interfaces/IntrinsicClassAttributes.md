@@ -2,7 +2,7 @@
 
 # Interface: IntrinsicClassAttributes\<T\>
 
-Defined in: [../domwise/dist/index.d.ts:2157](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2157)
+Defined in: [../domwise/dist/index.d.ts:2297](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2297)
 
 ## Type Parameters
 
@@ -16,4 +16,4 @@ Defined in: [../domwise/dist/index.d.ts:2157](https://github.com/serenity-is/ser
 
 > `optional` **ref**: [`Ref`](../../../../type-aliases/Ref.md)\<`T`\>
 
-Defined in: [../domwise/dist/index.d.ts:2158](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2158)
+Defined in: [../domwise/dist/index.d.ts:2298](https://github.com/serenity-is/serenity/blob/master/packages/domwise/dist/index.d.ts#L2298)

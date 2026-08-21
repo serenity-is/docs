@@ -4,11 +4,15 @@
 
 > **PropertyTabPane**(`props`): `HTMLElement`
 
-Defined in: [src/ui/widgets/propertygrid.tsx:223](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L223)
+Defined in: [src/ui/widgets/propertygrid.tsx:273](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/ui/widgets/propertygrid.tsx#L273)
+
+Renders a single tab pane that hosts the fields of a tab.
 
 ## Parameters
 
 ### props
+
+Tab pane rendering props.
 
 #### active?
 
@@ -25,3 +29,5 @@ Defined in: [src/ui/widgets/propertygrid.tsx:223](https://github.com/serenity-is
 ## Returns
 
 `HTMLElement`
+
+The tab pane element.

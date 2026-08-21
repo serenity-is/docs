@@ -4,7 +4,7 @@
 
 > **cancelDialogButton**(`opt?`): [`DialogButton`](../interfaces/DialogButton.md)
 
-Defined in: [src/base/dialogs.tsx:688](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L688)
+Defined in: [src/base/dialogs.tsx:775](https://github.com/serenity-is/serenity/blob/master/packages/corelib/src/base/dialogs.tsx#L775)
 
 Creates a dialog button which, by default, has "Cancel" as the caption (localized) and "cancel" as the result.
 

@@ -4,7 +4,7 @@
 
 > `const` **signal**: \{\<`T`\>(`value`, `options?`): [`Signal`](../interfaces/Signal.md)\<`T`\>; \<`T`\>(): [`Signal`](../interfaces/Signal.md)\<`T` \| `undefined`\>; \}
 
-Defined in: [src/signals.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L26)
+Defined in: [src/signals.ts:43](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L43)
 
 Creates a new writable signal with an optional initial value.
 Re-exported from `@preact/signals-core` with typed overloads.
@@ -49,11 +49,11 @@ Re-exported from `@preact/signals-core` with typed overloads.
 
 ## Type Param
 
-The type of the signal's value.
+Type of the signal's value.
 
 ## Param
 
-Optional initial value.
+Optional initial value for the signal. When omitted the signal starts as `undefined`.
 
 ## Param
 
@@ -62,3 +62,10 @@ Optional signal options (`watched`, `unwatched`, `name`).
 ## Returns
 
 A writable `Signal<T>`.
+
+## Example
+
+```ts
+const count = signal(0);
+count.value++;
+```

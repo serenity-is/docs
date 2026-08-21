@@ -2,7 +2,11 @@
 
 # Interface: CustomDomAttributes\<T\>
 
-Defined in: [types/custom-attributes.d.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L4)
+Defined in: [types/custom-attributes.d.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L10)
+
+Custom DOM attributes supported by DomWise on all elements.
+Includes `children`, `ref`, `dangerouslySetInnerHTML`, and jsx-dom/react-compatible
+`on` / `onCapture` event maps.
 
 ## Extended by
 
@@ -14,13 +18,17 @@ Defined in: [types/custom-attributes.d.ts:4](https://github.com/serenity-is/sere
 
 `T`
 
+The type of the DOM element.
+
 ## Properties
 
 ### children?
 
 > `optional` **children**: [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [types/custom-attributes.d.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L5)
+Defined in: [types/custom-attributes.d.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L12)
+
+Child nodes / JSX children for the element.
 
 ***
 
@@ -28,7 +36,9 @@ Defined in: [types/custom-attributes.d.ts:5](https://github.com/serenity-is/sere
 
 > `optional` **dangerouslySetInnerHTML**: `object`
 
-Defined in: [types/custom-attributes.d.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L6)
+Defined in: [types/custom-attributes.d.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L14)
+
+Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
 #### \_\_html
 
@@ -40,9 +50,9 @@ Defined in: [types/custom-attributes.d.ts:6](https://github.com/serenity-is/sere
 
 > `optional` **on**: `Record`\<`string`, `Function`\>
 
-Defined in: [types/custom-attributes.d.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L10)
+Defined in: [types/custom-attributes.d.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L19)
 
-compat from jsx-dom/react
+Compatibility event map for `on*` handlers (jsx-dom / React style).
 
 ***
 
@@ -50,7 +60,9 @@ compat from jsx-dom/react
 
 > `optional` **onCapture**: `Record`\<`string`, `Function`\>
 
-Defined in: [types/custom-attributes.d.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L11)
+Defined in: [types/custom-attributes.d.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L21)
+
+Compatibility event map for capture-phase handlers.
 
 ***
 
@@ -58,4 +70,6 @@ Defined in: [types/custom-attributes.d.ts:11](https://github.com/serenity-is/ser
 
 > `optional` **ref**: [`Ref`](../type-aliases/Ref.md)\<`T`\>
 
-Defined in: [types/custom-attributes.d.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L7)
+Defined in: [types/custom-attributes.d.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L16)
+
+Ref object or callback that receives the created DOM node.

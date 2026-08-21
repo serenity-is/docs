@@ -2,7 +2,7 @@
 
 # Interface: ElementChildrenAttribute
 
-Defined in: [types/jsx-namespace.d.ts:48](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L48)
+Defined in: [types/jsx-namespace.d.ts:67](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L67)
 
 ## Properties
 
@@ -10,4 +10,4 @@ Defined in: [types/jsx-namespace.d.ts:48](https://github.com/serenity-is/serenit
 
 > **children**: `object`
 
-Defined in: [types/jsx-namespace.d.ts:49](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L49)
+Defined in: [types/jsx-namespace.d.ts:68](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L68)

@@ -2,7 +2,7 @@
 
 # Interface: IntrinsicClassAttributes\<T\>
 
-Defined in: [types/jsx-namespace.d.ts:52](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L52)
+Defined in: [types/jsx-namespace.d.ts:71](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L71)
 
 ## Type Parameters
 
@@ -16,4 +16,4 @@ Defined in: [types/jsx-namespace.d.ts:52](https://github.com/serenity-is/serenit
 
 > `optional` **ref**: [`Ref`](../../../../type-aliases/Ref.md)\<`T`\>
 
-Defined in: [types/jsx-namespace.d.ts:53](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L53)
+Defined in: [types/jsx-namespace.d.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L72)

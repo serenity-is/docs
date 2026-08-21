@@ -2,7 +2,9 @@
 
 # Interface: IntrinsicElements
 
-Defined in: [types/jsx-namespace.d.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L63)
+Defined in: [types/jsx-namespace.d.ts:82](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L82)
+
+Augment to declare custom HTML element tag/type mappings.
 
 ## Extends
 
@@ -1215,8 +1217,6 @@ Defined in: [types/jsx-elements.d.ts:2241](https://github.com/serenity-is/sereni
 > **maction**: `MathMLMactionElementAttributes`\<`MathMLElement`\>
 
 Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2405)
-
-*
 
 #### Deprecated
 

@@ -2,10 +2,23 @@
 
 # Class: Component\<T\>
 
-Defined in: [src/component.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L9)
+Defined in: [src/component.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L21)
 
-Base class for creating JSX components with optional props, children, and ref support.
-Extend this class and override the `render` method to return a `JSXElement`.
+Base class for class-based JSX components.
+
+Extend this class and override [render](#render) to return a [JSXElement](../type-aliases/JSXElement.md).
+Props (including optional `children` and `ref`) are available via [props](#props).
+
+## Example
+
+```tsx
+class Greeting extends Component<{ name: string }> {
+  render() {
+    return <div>Hello, {this.props.name}!</div>;
+  }
+}
+// usage: <Greeting name="World" />
+```
 
 ## Type Parameters
 
@@ -13,7 +26,7 @@ Extend this class and override the `render` method to return a `JSXElement`.
 
 `T` = `any`
 
-The type of the component's props.
+The type of the component's props (excluding `children` and `ref` which are added automatically).
 
 ## Constructors
 
@@ -21,13 +34,17 @@ The type of the component's props.
 
 > **new Component**\<`T`\>(`props`): `Component`\<`T`\>
 
-Defined in: [src/component.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L12)
+Defined in: [src/component.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L32)
+
+Creates a component instance.
 
 #### Parameters
 
 ##### props
 
 `T` & `object`
+
+Props passed to the component, including optional `children` and `ref`.
 
 #### Returns
 
@@ -39,7 +56,9 @@ Defined in: [src/component.ts:12](https://github.com/serenity-is/serenity/blob/m
 
 > `readonly` **props**: `T` & `object`
 
-Defined in: [src/component.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L16)
+Defined in: [src/component.ts:37](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L37)
+
+Props passed to this component instance, including optional `children` and `ref`.
 
 #### Type Declaration
 
@@ -57,7 +76,10 @@ Defined in: [src/component.ts:16](https://github.com/serenity-is/serenity/blob/m
 
 > `static` **isComponent**: `boolean` = `true`
 
-Defined in: [src/component.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L10)
+Defined in: [src/component.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L26)
+
+Marker used by the JSX factory to distinguish class components from function components.
+Do not modify.
 
 ## Methods
 
@@ -65,8 +87,13 @@ Defined in: [src/component.ts:10](https://github.com/serenity-is/serenity/blob/m
 
 > **render**(): [`JSXElement`](../type-aliases/JSXElement.md) \| `null`
 
-Defined in: [src/component.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L18)
+Defined in: [src/component.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/component.ts#L44)
+
+Renders the component's output.
+Override in subclasses to return a DOM node, fragment, or `null`.
 
 #### Returns
 
 [`JSXElement`](../type-aliases/JSXElement.md) \| `null`
+
+The rendered [JSXElement](../type-aliases/JSXElement.md), or `null` to render nothing.

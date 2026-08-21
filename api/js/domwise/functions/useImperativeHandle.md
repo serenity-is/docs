@@ -4,10 +4,12 @@
 
 > **useImperativeHandle**\<`T`\>(`ref`, `init`): `void`
 
-Defined in: [src/compat-api.ts:38](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/compat-api.ts#L38)
+Defined in: [src/compat-api.ts:47](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/compat-api.ts#L47)
 
 Compatibility helper similar to React's `useImperativeHandle`.
-Calls `setRef` with the result of `init()`. Prefer using `setRef` directly.
+
+Evaluates `init()` and forwards the result to `ref` via [setRef](setRef.md).
+Prefer calling [setRef](setRef.md) directly in new code.
 
 ## Type Parameters
 
@@ -15,19 +17,21 @@ Calls `setRef` with the result of `init()`. Prefer using `setRef` directly.
 
 `T`
 
+Type of the value exposed through the ref.
+
 ## Parameters
 
 ### ref
 
 [`Ref`](../type-aliases/Ref.md)\<`T`\>
 
-A `RefObject` or ref callback.
+Target `RefObject` or ref callback to update.
 
 ### init
 
 () => `T`
 
-A factory function returning the value to assign to the ref.
+Factory that produces the value to assign to the ref.
 
 ## Returns
 

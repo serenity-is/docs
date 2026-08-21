@@ -4,11 +4,13 @@
 
 > **currentLifecycleRoot**(...`args`): `Element` \| `null`
 
-Defined in: [src/disposing-listener.ts:168](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L168)
+Defined in: [src/disposing-listener.ts:197](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L197)
 
-Gets or sets the current lifecycle root element.
-When called with an argument, sets the lifecycle root and returns the previous value.
-When called without arguments, returns the current lifecycle root.
+Gets or sets the current JSX lifecycle root element used to scope signal subscriptions.
+
+The lifecycle root is the `EventTarget` whose `disposing` event will dispose
+effects created during JSX construction (e.g. via `observeSignal` with
+`useLifecycleRoot: true`).
 
 ## Parameters
 
@@ -16,10 +18,11 @@ When called without arguments, returns the current lifecycle root.
 
 ...`Element`[]
 
-If provided, the first element is set as the new lifecycle root.
+When provided, the first element is installed as the new lifecycle root.
+When called with no arguments the current root (or `null` if none) is returned.
 
 ## Returns
 
 `Element` \| `null`
 
-The current (or previous) lifecycle root element, or `null` if none is set.
+The current lifecycle root, or the previous root when a new one is being set. Returns `null` if none is set.

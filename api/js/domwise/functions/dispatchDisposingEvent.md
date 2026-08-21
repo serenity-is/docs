@@ -4,9 +4,11 @@
 
 > **dispatchDisposingEvent**(`target`, `opt?`): `void`
 
-Defined in: [src/disposing-listener.ts:23](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L23)
+Defined in: [src/disposing-listener.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/disposing-listener.ts#L31)
 
-Dispatches a `disposing` event on the target element.
+Dispatches a `disposing` event on the target element, causing any
+listeners registered via [addDisposingListener](addDisposingListener.md) to be invoked.
+No-ops when `target` is falsy or `CustomEvent` is unavailable.
 
 ## Parameters
 
@@ -14,7 +16,7 @@ Dispatches a `disposing` event on the target element.
 
 `EventTarget`
 
-The target element to dispatch the event on.
+Event target to dispatch the event on.
 
 ### opt?
 
@@ -24,7 +26,7 @@ Optional event configuration.
 
 `boolean`
 
-Whether the event bubbles. Defaults to `false`.
+Whether the event should bubble. Defaults to `false`.
 
 #### cancelable?
 

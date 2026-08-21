@@ -4,11 +4,13 @@
 
 > **useText**(`initialValue?`): readonly \[`Text`, (`value`) => `void`\]
 
-Defined in: [src/hooks.ts:128](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/hooks.ts#L128)
+Defined in: [src/hooks.ts:161](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/hooks.ts#L161)
 
-Creates a `Text` node and a setter function to update its content.
-The text node's `toString` is overridden to return its `textContent`,
-making it suitable for use as a child in JSX.
+Creates a `Text` node and a setter to update its content.
+
+The node's `toString()` is overridden to return `textContent`, so the
+returned `Text` can be interpolated directly as a JSX child and will
+render its string value.
 
 ## Parameters
 
@@ -16,10 +18,17 @@ making it suitable for use as a child in JSX.
 
 `string`
 
-Optional initial text content.
+Optional initial text content. If omitted the node starts empty.
 
 ## Returns
 
 readonly \[`Text`, (`value`) => `void`\]
 
-A tuple of the `Text` node and a setter to update its content.
+A readonly tuple `[textNode, setText]` where `setText` assigns `textContent`.
+
+## Example
+
+```tsx
+const [label, setLabel] = useText("hello");
+return <><span>{label}</span><button onClick={() => setLabel("world")} /></>;
+```

@@ -4,16 +4,19 @@
 
 > **Fragment**(`attr`): `any`
 
-Defined in: [src/fragment.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/fragment.ts#L10)
+Defined in: [src/fragment.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/fragment.ts#L14)
 
-Creates a document fragment containing the given children.
-Useful as a JSX fragment factory (e.g. `<></>`).
+Creates a `DocumentFragment` containing the given children.
+
+Intended as the JSX fragment factory (i.e. the target for the `<></>` syntax
+when `jsxFragment` is set to `Fragment`). Accepts the standard
+`{ children }` props bag produced by the JSX transform.
 
 ## Parameters
 
 ### attr
 
-Object with an optional `children` property.
+Props bag with optional `children` to append to the fragment.
 
 #### children?
 
@@ -23,4 +26,4 @@ Object with an optional `children` property.
 
 `any`
 
-A `DocumentFragment` with the appended children.
+A `DocumentFragment` containing the appended children.

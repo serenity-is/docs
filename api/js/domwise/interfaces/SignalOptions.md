@@ -2,7 +2,10 @@
 
 # Interface: SignalOptions\<T\>
 
-Defined in: [src/signals.ts:4](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L4)
+Defined in: [src/signals.ts:9](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L9)
+
+Options for creating a signal via [signal](../variables/signal.md) / [computed](../variables/computed.md).
+Re-exported from `@preact/signals-core`.
 
 ## Type Parameters
 
@@ -10,13 +13,17 @@ Defined in: [src/signals.ts:4](https://github.com/serenity-is/serenity/blob/mast
 
 `T`
 
+Type of the signal's value.
+
 ## Properties
 
 ### name?
 
 > `optional` **name**: `string`
 
-Defined in: [src/signals.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L7)
+Defined in: [src/signals.ts:15](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L15)
+
+Optional debug name for the signal.
 
 ***
 
@@ -24,7 +31,9 @@ Defined in: [src/signals.ts:7](https://github.com/serenity-is/serenity/blob/mast
 
 > `optional` **unwatched**: (`this`) => `void`
 
-Defined in: [src/signals.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L6)
+Defined in: [src/signals.ts:13](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L13)
+
+Called when the signal loses its last subscriber.
 
 #### Parameters
 
@@ -42,7 +51,9 @@ Defined in: [src/signals.ts:6](https://github.com/serenity-is/serenity/blob/mast
 
 > `optional` **watched**: (`this`) => `void`
 
-Defined in: [src/signals.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L5)
+Defined in: [src/signals.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L11)
+
+Called when the signal gains its first subscriber.
 
 #### Parameters
 

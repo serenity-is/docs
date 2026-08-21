@@ -4,10 +4,16 @@
 
 > **observeSignal**\<`T`\>(`signal`, `callback`, `opt?`): [`EffectDisposer`](../type-aliases/EffectDisposer.md) \| `undefined`
 
-Defined in: [src/signal-util.ts:143](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L143)
+Defined in: [src/signal-util.ts:164](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L164)
 
-Observes a signal and calls the callback immediately upon subscription and when the signal changes.
-Returns an effect disposer that can be used to stop observing.
+Subscribes to a signal and invokes `callback` immediately and on every subsequent change.
+
+On subscription a SignalObserveArgs object is created and `callback` is
+invoked synchronously with `isInitial: true`. Future notifications update
+`newValue`/`prevValue`/`hasChanged` and invoke `callback` again. The
+returned disposer (when non-null) can be used to unsubscribe; it is also
+automatically registered as a disposing listener on `lifecycleNode` /
+`lifecycleRoot` so it is cleaned up when the owning DOM node is disposed.
 
 ## Type Parameters
 
@@ -15,41 +21,42 @@ Returns an effect disposer that can be used to stop observing.
 
 `T`
 
+Type of the signal's value.
+
 ## Parameters
 
 ### signal
 
 [`SignalLike`](../interfaces/SignalLike.md)\<`T`\>
 
-Signal to observe.
+Signal-like object to observe (must have `subscribe`/`peek`/`value`).
 
 ### callback
 
 `ObserveSignalCallback`\<`T`\>
 
-Callback to execute immediately upon subscription and when the signal value changes.
+Function called initially and on each change.
 
 ### opt?
 
-Optional configuration. useLifecycleRoot - If true, `currentLifecycleRoot()` at 
-subscription time is recorded as the lifecycle node. lifecycleNode - Optional node to tie the signal's lifecycle 
-to (auto-disposal on dispose).
+Optional lifecycle wiring.
 
 #### lifecycleNode?
 
 `EventTarget`
 
-Optional node to tie the signal's lifecycle to.
+Optional DOM node whose `disposing` event will automatically dispose the
+subscription via [addDisposingListener](addDisposingListener.md).
 
 #### useLifecycleRoot?
 
 `boolean`
 
-If true, `currentLifecycleRoot()` at the time of subscription will be recorded
-to be potentially used as the lifecycle node.
+When `true`, the current lifecycle root (see [currentLifecycleRoot](currentLifecycleRoot.md))
+at subscription time is recorded as SignalObserveArgs.lifecycleRoot.
 
 ## Returns
 
 [`EffectDisposer`](../type-aliases/EffectDisposer.md) \| `undefined`
 
-An effect disposer function, or `null`/`undefined` if the signal does not support disposal.
+A disposer function for the subscription, or `null`/`undefined` if the signal does not expose one.

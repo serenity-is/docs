@@ -935,7 +935,9 @@ Defined in: [types/jsx-elements.d.ts:569](https://github.com/serenity-is/serenit
 
 > `optional` **children**: [`ComponentChildren`](../type-aliases/ComponentChildren.md)
 
-Defined in: [types/custom-attributes.d.ts:5](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L5)
+Defined in: [types/custom-attributes.d.ts:12](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L12)
+
+Child nodes / JSX children for the element.
 
 #### Inherited from
 
@@ -955,7 +957,7 @@ Defined in: [types/jsx-elements.d.ts:570](https://github.com/serenity-is/serenit
 
 > `optional` **className**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `false` \| `DOMTokenList` \| \{\[`key`: `string`\]: `boolean`; \} \| [`ClassName`](../type-aliases/ClassName.md)[] \| `Iterable`\<`string`, `any`, `any`\> \| `null` \| `undefined`\> \| \{\[`key`: `string`\]: [`PropValue`](../type-aliases/PropValue.md)\<true \| RemoveAttribute\>; \}
 
-Defined in: [types/custom-attributes.d.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L16)
+Defined in: [types/custom-attributes.d.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L26)
 
 ***
 
@@ -963,7 +965,9 @@ Defined in: [types/custom-attributes.d.ts:16](https://github.com/serenity-is/ser
 
 > `optional` **dangerouslySetInnerHTML**: `object`
 
-Defined in: [types/custom-attributes.d.ts:6](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L6)
+Defined in: [types/custom-attributes.d.ts:14](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L14)
+
+Raw HTML to assign via `innerHTML`. Use with caution — content is not escaped.
 
 #### \_\_html
 
@@ -995,7 +999,7 @@ Defined in: [types/jsx-elements.d.ts:572](https://github.com/serenity-is/serenit
 
 > `optional` **namespaceURI**: `string`
 
-Defined in: [types/custom-attributes.d.ts:18](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L18)
+Defined in: [types/custom-attributes.d.ts:28](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L28)
 
 ***
 
@@ -1011,9 +1015,9 @@ Defined in: [types/jsx-elements.d.ts:573](https://github.com/serenity-is/serenit
 
 > `optional` **on**: `Record`\<`string`, `Function`\>
 
-Defined in: [types/custom-attributes.d.ts:10](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L10)
+Defined in: [types/custom-attributes.d.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L19)
 
-compat from jsx-dom/react
+Compatibility event map for `on*` handlers (jsx-dom / React style).
 
 #### Inherited from
 
@@ -1229,7 +1233,9 @@ Defined in: [types/jsx-elements.d.ts:429](https://github.com/serenity-is/serenit
 
 > `optional` **onCapture**: `Record`\<`string`, `Function`\>
 
-Defined in: [types/custom-attributes.d.ts:11](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L11)
+Defined in: [types/custom-attributes.d.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L21)
+
+Compatibility event map for capture-phase handlers.
 
 #### Inherited from
 
@@ -1265,7 +1271,7 @@ Defined in: [types/jsx-elements.d.ts:431](https://github.com/serenity-is/serenit
 
 > `optional` **onClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:19](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L19)
+Defined in: [types/custom-attributes.d.ts:29](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L29)
 
 ***
 
@@ -1429,7 +1435,7 @@ Defined in: [types/jsx-elements.d.ts:447](https://github.com/serenity-is/serenit
 
 > `optional` **onDblClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:20](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L20)
+Defined in: [types/custom-attributes.d.ts:30](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L30)
 
 ***
 
@@ -1437,7 +1443,7 @@ Defined in: [types/custom-attributes.d.ts:20](https://github.com/serenity-is/ser
 
 > `optional` **onDoubleClick**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:21](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L21)
+Defined in: [types/custom-attributes.d.ts:31](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L31)
 
 ***
 
@@ -1445,7 +1451,7 @@ Defined in: [types/custom-attributes.d.ts:21](https://github.com/serenity-is/ser
 
 > `optional` **onDoubleClickCapture**: `EventHandler`\<`T`, `MouseEvent`\>
 
-Defined in: [types/custom-attributes.d.ts:22](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L22)
+Defined in: [types/custom-attributes.d.ts:32](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L32)
 
 ***
 
@@ -2421,7 +2427,9 @@ Defined in: [types/jsx-elements.d.ts:574](https://github.com/serenity-is/serenit
 
 > `optional` **ref**: [`Ref`](../type-aliases/Ref.md)\<`T`\>
 
-Defined in: [types/custom-attributes.d.ts:7](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L7)
+Defined in: [types/custom-attributes.d.ts:16](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L16)
+
+Ref object or callback that receives the created DOM node.
 
 #### Inherited from
 
@@ -2469,7 +2477,7 @@ Defined in: [types/jsx-elements.d.ts:577](https://github.com/serenity-is/serenit
 
 > `optional` **tabIndex**: [`PropValue`](../type-aliases/PropValue.md)\<`string` \| `number` \| `RemoveAttribute`\>
 
-Defined in: [types/custom-attributes.d.ts:17](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L17)
+Defined in: [types/custom-attributes.d.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/custom-attributes.d.ts#L27)
 
 ***
 

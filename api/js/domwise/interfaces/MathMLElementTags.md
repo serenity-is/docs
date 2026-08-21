@@ -28,8 +28,6 @@ Defined in: [types/jsx-elements.d.ts:2374](https://github.com/serenity-is/sereni
 
 Defined in: [types/jsx-elements.d.ts:2405](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-elements.d.ts#L2405)
 
-*
-
 #### Deprecated
 
 ***

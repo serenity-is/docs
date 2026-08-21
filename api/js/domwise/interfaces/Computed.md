@@ -2,7 +2,9 @@
 
 # Interface: Computed\<T\>
 
-Defined in: [types/basic-types.d.ts:34](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L34)
+Defined in: [types/basic-types.d.ts:110](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L110)
+
+A read-only (computed) signal.
 
 ## Extends
 
@@ -14,6 +16,8 @@ Defined in: [types/basic-types.d.ts:34](https://github.com/serenity-is/serenity/
 
 `T`
 
+The type of the computed value.
+
 ## Accessors
 
 ### value
@@ -22,7 +26,9 @@ Defined in: [types/basic-types.d.ts:34](https://github.com/serenity-is/serenity/
 
 > **get** **value**(): `T`
 
-Defined in: [types/basic-types.d.ts:25](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L25)
+Defined in: [types/basic-types.d.ts:84](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L84)
+
+Current value; reading may track a dependency when inside an effect/computed.
 
 ##### Returns
 
@@ -38,11 +44,15 @@ Defined in: [types/basic-types.d.ts:25](https://github.com/serenity-is/serenity/
 
 > **peek**(): `T`
 
-Defined in: [types/basic-types.d.ts:26](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L26)
+Defined in: [types/basic-types.d.ts:89](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L89)
+
+Returns the current value without creating a dependency.
 
 #### Returns
 
 `T`
+
+The current value.
 
 #### Inherited from
 
@@ -54,7 +64,9 @@ Defined in: [types/basic-types.d.ts:26](https://github.com/serenity-is/serenity/
 
 > **subscribe**(`fn`): [`EffectDisposer`](../type-aliases/EffectDisposer.md)
 
-Defined in: [types/basic-types.d.ts:27](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L27)
+Defined in: [types/basic-types.d.ts:95](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/basic-types.d.ts#L95)
+
+Subscribes to value changes.
 
 #### Parameters
 
@@ -62,9 +74,13 @@ Defined in: [types/basic-types.d.ts:27](https://github.com/serenity-is/serenity/
 
 (`value`) => `void`
 
+Callback invoked with each new value (and typically immediately with the current value).
+
 #### Returns
 
 [`EffectDisposer`](../type-aliases/EffectDisposer.md)
+
+A disposer that unsubscribes, or `null` if unsubscription is not supported.
 
 #### Inherited from
 

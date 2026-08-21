@@ -4,12 +4,16 @@
 
 > **derivedSignal**\<`TDerived`, `TInput`\>(`input`, `fn`): `DerivedSignalLike`\<`TDerived`\>
 
-Defined in: [src/signal-util.ts:192](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L192)
+Defined in: [src/signal-util.ts:226](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signal-util.ts#L226)
 
-Creates a derived (computed) signal from an input signal and a transform function.
-The returned signal-like object re-computes its value whenever the input signal changes.
-If the input signal's constructor supports derived computation, it is used; otherwise
-a `PrimitiveComputed` fallback is created.
+Creates a derived (computed) signal from a source signal and a transform.
+
+When the source signal changes, the derived value is re-computed via `fn`.
+If the source signal's constructor appears to be a computed-capable type,
+a new instance of that constructor wrapping `() => fn(input.value)` is
+attempted; otherwise a lightweight PrimitiveComputed fallback is
+used. The returned signal exposes a `derivedDisposer` that unsubscribes
+from the source.
 
 ## Type Parameters
 
@@ -17,13 +21,13 @@ a `PrimitiveComputed` fallback is created.
 
 `TDerived`
 
-The type of the derived value.
+Type of the derived/computed value.
 
 ### TInput
 
 `TInput` = `any`
 
-The type of the input signal's value.
+Type of the source signal's value.
 
 ## Parameters
 
@@ -31,16 +35,20 @@ The type of the input signal's value.
 
 [`SignalLike`](../interfaces/SignalLike.md)\<`TInput`\>
 
-The source signal to observe.
+Source signal to derive from. Must be signal-like.
 
 ### fn
 
 (`value`) => `TDerived`
 
-A transform function that maps the input value to the derived value.
+Transform applied to the source value to produce the derived value.
 
 ## Returns
 
 `DerivedSignalLike`\<`TDerived`\>
 
-A `DerivedSignalLike` that updates when the input signal changes.
+A `DerivedSignalLike<TDerived>` whose `value` tracks `fn(input.value)`.
+
+## Throws
+
+When `input` is not signal-like.

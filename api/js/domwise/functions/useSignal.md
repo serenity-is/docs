@@ -4,10 +4,10 @@
 
 > **useSignal**\<`T`\>(`initialValue`): [`Signal`](../interfaces/Signal.md)\<`T`\>
 
-Defined in: [src/signals.ts:72](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L72)
+Defined in: [src/signals.ts:94](https://github.com/serenity-is/serenity/blob/master/packages/domwise/src/signals.ts#L94)
 
 Creates a writable signal with the given initial value.
-Convenience wrapper around the `signal()` function.
+Convenience wrapper around [signal](../variables/signal.md).
 
 ## Type Parameters
 
@@ -15,7 +15,7 @@ Convenience wrapper around the `signal()` function.
 
 `T`
 
-The type of the signal's value.
+Type of the signal's value.
 
 ## Parameters
 
@@ -23,10 +23,17 @@ The type of the signal's value.
 
 `T`
 
-The initial value.
+Initial value for the signal.
 
 ## Returns
 
 [`Signal`](../interfaces/Signal.md)\<`T`\>
 
 A `Signal<T>` instance.
+
+## Example
+
+```ts
+const name = useSignal("Alice");
+name.value = "Bob";
+```

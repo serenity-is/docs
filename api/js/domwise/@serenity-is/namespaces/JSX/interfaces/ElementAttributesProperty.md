@@ -2,7 +2,7 @@
 
 # Interface: ElementAttributesProperty
 
-Defined in: [types/jsx-namespace.d.ts:44](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L44)
+Defined in: [types/jsx-namespace.d.ts:63](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L63)
 
 ## Properties
 
@@ -10,4 +10,4 @@ Defined in: [types/jsx-namespace.d.ts:44](https://github.com/serenity-is/serenit
 
 > **props**: `unknown`
 
-Defined in: [types/jsx-namespace.d.ts:45](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L45)
+Defined in: [types/jsx-namespace.d.ts:64](https://github.com/serenity-is/serenity/blob/master/packages/domwise/types/jsx-namespace.d.ts#L64)

@@ -4,7 +4,9 @@
 
 > **TopPanel**(`__namedParameters`): `JSXElement`
 
-Defined in: [src/layouts/layout-components.tsx:47](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L47)
+Defined in: [src/layouts/layout-components.tsx:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L65)
+
+Top panel container attached to the main band; hidden when `hideTopPanel` is true.
 
 ## Parameters
 

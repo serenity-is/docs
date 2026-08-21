@@ -2,7 +2,10 @@
 
 # Interface: SelectionModel
 
-Defined in: [src/core/selection-model.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L4)
+Defined in: [src/core/selection-model.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L8)
+
+Contract for a grid selection model (e.g. `CellSelectionModel`, `RowSelectionModel`).
+Implements [GridPlugin](GridPlugin.md) so it can be registered via `grid.setSelectionModel()`.
 
 ## Extends
 
@@ -14,7 +17,9 @@ Defined in: [src/core/selection-model.ts:4](https://github.com/serenity-is/Seren
 
 > `optional` **destroy**: () => `void`
 
-Defined in: [src/core/grid-plugin.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L6)
+Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L15)
+
+Optional teardown hook; called when the grid or plugin is unregistered.
 
 #### Returns
 
@@ -30,7 +35,9 @@ Defined in: [src/core/grid-plugin.ts:6](https://github.com/serenity-is/Serenity/
 
 > **onSelectedRangesChanged**: [`EventEmitter`](../classes/EventEmitter.md)\<[`CellRange`](../classes/CellRange.md)[]\>
 
-Defined in: [src/core/selection-model.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L6)
+Defined in: [src/core/selection-model.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L15)
+
+Emits when the selected ranges change; payload is the new `CellRange[]`.
 
 ***
 
@@ -38,7 +45,9 @@ Defined in: [src/core/selection-model.ts:6](https://github.com/serenity-is/Seren
 
 > `optional` **pluginName**: `string`
 
-Defined in: [src/core/grid-plugin.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L5)
+Defined in: [src/core/grid-plugin.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L13)
+
+Optional unique name used by [GridPluginHost.getPluginByName](GridPluginHost.md#getpluginbyname) for lookup.
 
 #### Inherited from
 
@@ -50,13 +59,17 @@ Defined in: [src/core/grid-plugin.ts:5](https://github.com/serenity-is/Serenity/
 
 > **init**(`grid`): `void`
 
-Defined in: [src/core/grid-plugin.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L4)
+Defined in: [src/core/grid-plugin.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L11)
+
+Called by the grid when the plugin is registered.
 
 #### Parameters
 
 ##### grid
 
 [`ISleekGrid`](ISleekGrid.md)
+
+Host grid instance the plugin attaches to.
 
 #### Returns
 
@@ -72,7 +85,10 @@ Defined in: [src/core/grid-plugin.ts:4](https://github.com/serenity-is/Serenity/
 
 > `optional` **refreshSelections**(): `void`
 
-Defined in: [src/core/selection-model.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L7)
+Defined in: [src/core/selection-model.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L20)
+
+Optional hook invoked when the grid re-renders rows; selection models can
+re-apply visual selection state here.
 
 #### Returns
 
@@ -84,13 +100,17 @@ Defined in: [src/core/selection-model.ts:7](https://github.com/serenity-is/Seren
 
 > **setSelectedRanges**(`ranges`): `void`
 
-Defined in: [src/core/selection-model.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L5)
+Defined in: [src/core/selection-model.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/selection-model.ts#L13)
+
+Sets the current selection to the given cell ranges.
 
 #### Parameters
 
 ##### ranges
 
 [`CellRange`](../classes/CellRange.md)[]
+
+New selected ranges; implementations should normalize/clamp them.
 
 #### Returns
 

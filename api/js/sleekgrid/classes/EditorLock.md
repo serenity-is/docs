@@ -2,13 +2,11 @@
 
 # Class: EditorLock
 
-Defined in: [src/core/editing.ts:97](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L97)
+Defined in: [src/core/editing.ts:210](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L210)
 
-A locking helper to track the active edit controller and ensure that only a single controller
-can be active at a time.  This prevents a whole class of state and validation synchronization
-issues.  An edit controller (such as SleekGrid) can query if an active edit is in progress
-and attempt a commit or cancel before proceeding.
- EditorLock
+Locking helper that ensures only a single [EditController](../interfaces/EditController.md) is active at a time.
+Prevents concurrent edits and validation races; the grid queries this before
+navigating, sorting, or scrolling while an edit is open.
 
 ## Constructors
 
@@ -26,10 +24,11 @@ and attempt a commit or cancel before proceeding.
 
 > **activate**(`editController`): `void`
 
-Defined in: [src/core/editing.ts:115](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L115)
+Defined in: [src/core/editing.ts:228](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L228)
 
-Sets the specified edit controller as the active edit controller (acquire edit lock).
-If another edit controller is already active, and exception will be thrown.
+Acquires the edit lock for the given controller.
+Throws if another controller already holds the lock or if the controller
+does not implement the required methods.
 
 #### Parameters
 
@@ -37,7 +36,7 @@ If another edit controller is already active, and exception will be thrown.
 
 [`EditController`](../interfaces/EditController.md)
 
-{EditController} edit controller acquiring the lock
+Controller acquiring the lock.
 
 #### Returns
 
@@ -49,15 +48,15 @@ If another edit controller is already active, and exception will be thrown.
 
 > **cancelCurrentEdit**(): `boolean`
 
-Defined in: [src/core/editing.ts:160](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L160)
+Defined in: [src/core/editing.ts:268](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L268)
 
-Attempts to cancel the current edit by calling "cancelCurrentEdit" method on the active edit
-controller and returns whether the edit was successfully cancelled.  If no edit controller is
-active, returns true.
+Attempts to cancel the current edit via the active controller.
 
 #### Returns
 
 `boolean`
+
+`true` if cancelled (or no edit was active).
 
 ***
 
@@ -65,16 +64,15 @@ active, returns true.
 
 > **commitCurrentEdit**(): `boolean`
 
-Defined in: [src/core/editing.ts:150](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L150)
+Defined in: [src/core/editing.ts:260](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L260)
 
-Attempts to commit the current edit by calling "commitCurrentEdit" method on the active edit
-controller and returns whether the commit attempt was successful (commit may fail due to validation
-errors, etc.).  Edit controller's "commitCurrentEdit" must return true if the commit has succeeded
-and false otherwise.  If no edit controller is active, returns true.
+Attempts to commit the current edit via the active controller.
 
 #### Returns
 
 `boolean`
+
+`true` if committed (or no edit was active), `false` if validation failed.
 
 ***
 
@@ -82,10 +80,10 @@ and false otherwise.  If no edit controller is active, returns true.
 
 > **deactivate**(`editController`): `void`
 
-Defined in: [src/core/editing.ts:136](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L136)
+Defined in: [src/core/editing.ts:249](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L249)
 
-Unsets the specified edit controller as the active edit controller (release edit lock).
-If the specified edit controller is not the active one, an exception will be thrown.
+Releases the edit lock held by the given controller.
+Throws if the controller is not the currently active one.
 
 #### Parameters
 
@@ -93,7 +91,7 @@ If the specified edit controller is not the active one, an exception will be thr
 
 [`EditController`](../interfaces/EditController.md)
 
-{EditController} edit controller releasing the lock
+Controller releasing the lock.
 
 #### Returns
 
@@ -105,10 +103,9 @@ If the specified edit controller is not the active one, an exception will be thr
 
 > **isActive**(`editController?`): `boolean`
 
-Defined in: [src/core/editing.ts:106](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L106)
+Defined in: [src/core/editing.ts:218](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L218)
 
-Returns true if a specified edit controller is active (has the edit lock).
-If the parameter is not specified, returns true if any edit controller is active.
+Checks whether an edit controller currently holds the edit lock.
 
 #### Parameters
 
@@ -116,8 +113,10 @@ If the parameter is not specified, returns true if any edit controller is active
 
 [`EditController`](../interfaces/EditController.md)
 
-{EditController}
+Controller to test; when omitted, returns `true` if *any* controller is active.
 
 #### Returns
 
 `boolean`
+
+Whether the given (or any) controller is active.

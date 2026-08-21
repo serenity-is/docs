@@ -2,9 +2,11 @@
 
 # Class: NonDataRow
 
-Defined in: [src/core/base.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L4)
+Defined in: [src/core/base.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L6)
 
-A base class that all special / non-data rows (like Group and GroupTotals) derive from.
+Base class for special rows that do not represent regular data items.
+Group headers and group totals derive from this to allow the grid and
+data view to distinguish them from plain data rows via the marker property.
 
 ## Extended by
 
@@ -27,4 +29,7 @@ A base class that all special / non-data rows (like Group and GroupTotals) deriv
 
 > **\_\_nonDataRow**: `boolean` = `true`
 
-Defined in: [src/core/base.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L5)
+Defined in: [src/core/base.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L11)
+
+Marker flag used at runtime to identify non-data rows.
+Checked by the grid and `DataView` to skip data-specific handling.

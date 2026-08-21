@@ -2,7 +2,9 @@
 
 # Interface: ArgsMoveRows
 
-Defined in: [src/plugins/rowmovemanager.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L16)
+Defined in: [src/plugins/rowmovemanager.ts:23](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L23)
+
+Payload for row-move events ([RowMoveManager.onBeforeMoveRows](../classes/RowMoveManager.md#onbeforemoverows) / [RowMoveManager.onMoveRows](../classes/RowMoveManager.md#onmoverows)).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/plugins/rowmovemanager.ts:16](https://github.com/serenity-is/Se
 
 > **insertBefore**: `number`
 
-Defined in: [src/plugins/rowmovemanager.ts:18](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L18)
+Defined in: [src/plugins/rowmovemanager.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L27)
+
+Insertion index before which the rows should be placed.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/plugins/rowmovemanager.ts:18](https://github.com/serenity-is/Se
 
 > **rows**: `number`[]
 
-Defined in: [src/plugins/rowmovemanager.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L17)
+Defined in: [src/plugins/rowmovemanager.ts:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L25)
+
+Data rows being moved (view indices, in display order).

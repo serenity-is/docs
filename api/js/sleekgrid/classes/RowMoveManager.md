@@ -2,7 +2,11 @@
 
 # Class: RowMoveManager
 
-Defined in: [src/plugins/rowmovemanager.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L21)
+Defined in: [src/plugins/rowmovemanager.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L35)
+
+Drag-and-drop plugin that lets users reorder rows via a proxy and guide.
+Works only when the target column `behavior` is `"move"` or `"selectAndMove"`.
+Emits [RowMoveManager.onBeforeMoveRows](#onbeforemoverows) (cancelable) and [RowMoveManager.onMoveRows](#onmoverows).
 
 ## Implements
 
@@ -14,13 +18,17 @@ Defined in: [src/plugins/rowmovemanager.ts:21](https://github.com/serenity-is/Se
 
 > **new RowMoveManager**(`options?`): `RowMoveManager`
 
-Defined in: [src/plugins/rowmovemanager.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L29)
+Defined in: [src/plugins/rowmovemanager.ts:52](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L52)
+
+Creates the manager.
 
 #### Parameters
 
 ##### options?
 
 [`RowMoveManagerOptions`](../interfaces/RowMoveManagerOptions.md)
+
+Partial options merged with [RowMoveManager.defaults](#defaults).
 
 #### Returns
 
@@ -32,7 +40,9 @@ Defined in: [src/plugins/rowmovemanager.ts:29](https://github.com/serenity-is/Se
 
 > **onBeforeMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md)\>
 
-Defined in: [src/plugins/rowmovemanager.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L26)
+Defined in: [src/plugins/rowmovemanager.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L44)
+
+Fired before the drop position is accepted; handlers may return `false` to reject the insertion point.
 
 ***
 
@@ -40,7 +50,9 @@ Defined in: [src/plugins/rowmovemanager.ts:26](https://github.com/serenity-is/Se
 
 > **onMoveRows**: [`EventEmitter`](EventEmitter.md)\<[`ArgsMoveRows`](../interfaces/ArgsMoveRows.md)\>
 
-Defined in: [src/plugins/rowmovemanager.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L27)
+Defined in: [src/plugins/rowmovemanager.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L46)
+
+Fired on successful drop; subscribers should reorder data accordingly.
 
 ***
 
@@ -48,7 +60,9 @@ Defined in: [src/plugins/rowmovemanager.ts:27](https://github.com/serenity-is/Se
 
 > `readonly` `static` **defaults**: [`RowMoveManagerOptions`](../interfaces/RowMoveManagerOptions.md)
 
-Defined in: [src/plugins/rowmovemanager.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L33)
+Defined in: [src/plugins/rowmovemanager.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L57)
+
+Default option values.
 
 ## Methods
 
@@ -56,7 +70,9 @@ Defined in: [src/plugins/rowmovemanager.ts:33](https://github.com/serenity-is/Se
 
 > **destroy**(): `void`
 
-Defined in: [src/plugins/rowmovemanager.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L46)
+Defined in: [src/plugins/rowmovemanager.ts:77](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L77)
+
+Unsubscribes all grid drag handlers.
 
 #### Returns
 
@@ -72,13 +88,17 @@ Defined in: [src/plugins/rowmovemanager.ts:46](https://github.com/serenity-is/Se
 
 > **init**(`grid`): `void`
 
-Defined in: [src/plugins/rowmovemanager.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L37)
+Defined in: [src/plugins/rowmovemanager.ts:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L65)
+
+Subscribes to the grid's drag lifecycle to implement row moving.
 
 #### Parameters
 
 ##### grid
 
 [`ISleekGrid`](../interfaces/ISleekGrid.md)
+
+Host grid instance.
 
 #### Returns
 

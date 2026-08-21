@@ -2,7 +2,9 @@
 
 # Interface: RowMoveManagerOptions
 
-Defined in: [src/plugins/rowmovemanager.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L4)
+Defined in: [src/plugins/rowmovemanager.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L7)
+
+Options for [RowMoveManager](../classes/RowMoveManager.md).
 
 ## Properties
 
@@ -10,4 +12,6 @@ Defined in: [src/plugins/rowmovemanager.ts:4](https://github.com/serenity-is/Ser
 
 > `optional` **cancelEditOnDrag**: `boolean`
 
-Defined in: [src/plugins/rowmovemanager.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L5)
+Defined in: [src/plugins/rowmovemanager.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowmovemanager.ts#L9)
+
+When `true`, cancels the active cell edit when a drag starts.

@@ -2,6 +2,9 @@
 
 # Editors
 
+Legacy namespace providing stable aliases for cell editors.
+Prefers named imports from `"./editors"` when possible.
+
 ## Variables
 
 - [Checkbox](variables/Checkbox.md)

@@ -2,7 +2,9 @@
 
 # Interface: ArgsCellChange
 
-Defined in: [src/core/eventargs.ts:62](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L62)
+Defined in: [src/core/eventargs.ts:99](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L99)
+
+Payload for cell-change events where the row item is known.
 
 ## Extends
 
@@ -18,7 +20,9 @@ Defined in: [src/core/eventargs.ts:62](https://github.com/serenity-is/Serenity/b
 
 > **cell**: `number`
 
-Defined in: [src/core/eventargs.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L59)
+Defined in: [src/core/eventargs.ts:95](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L95)
+
+Cell/column index of the event cell.
 
 #### Inherited from
 
@@ -30,7 +34,9 @@ Defined in: [src/core/eventargs.ts:59](https://github.com/serenity-is/Serenity/b
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -42,7 +48,9 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **item**: `any`
 
-Defined in: [src/core/eventargs.ts:63](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L63)
+Defined in: [src/core/eventargs.ts:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L101)
+
+Data item at `row`.
 
 ***
 
@@ -50,7 +58,9 @@ Defined in: [src/core/eventargs.ts:63](https://github.com/serenity-is/Serenity/b
 
 > **row**: `number`
 
-Defined in: [src/core/eventargs.ts:58](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L58)
+Defined in: [src/core/eventargs.ts:93](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L93)
+
+Row index of the event cell.
 
 #### Inherited from
 

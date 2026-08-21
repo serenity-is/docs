@@ -4,7 +4,9 @@
 
 > `const` **keyCode**: `object`
 
-Defined in: [src/core/event.ts:270](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L270)
+Defined in: [src/core/event.ts:335](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L335)
+
+Legacy key-code constants.
 
 ## Type Declaration
 
@@ -65,3 +67,5 @@ Defined in: [src/core/event.ts:270](https://github.com/serenity-is/Serenity/blob
 > **UP**: `number` = `38`
 
 ## Deprecated
+
+Prefer `KeyboardEvent.key`/`KeyboardEvent.code` checks over numeric codes.

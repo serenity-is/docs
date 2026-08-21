@@ -2,7 +2,9 @@
 
 # Interface: ColumnSort
 
-Defined in: [src/core/column.ts:69](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L69)
+Defined in: [src/core/column.ts:137](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L137)
+
+Describes a single active sort criterion.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/core/column.ts:69](https://github.com/serenity-is/Serenity/blob
 
 > **columnId**: `string`
 
-Defined in: [src/core/column.ts:70](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L70)
+Defined in: [src/core/column.ts:139](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L139)
+
+Column `id` to sort by.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/core/column.ts:70](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **sortAsc**: `boolean`
 
-Defined in: [src/core/column.ts:71](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L71)
+Defined in: [src/core/column.ts:141](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L141)
+
+Sort direction; `true` for ascending, `false` for descending.

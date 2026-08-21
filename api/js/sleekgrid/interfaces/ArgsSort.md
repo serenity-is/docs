@@ -2,7 +2,9 @@
 
 # Interface: ArgsSort
 
-Defined in: [src/core/eventargs.ts:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L32)
+Defined in: [src/core/eventargs.ts:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L49)
+
+Payload for `onSort` events.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/core/eventargs.ts:32](https://github.com/serenity-is/Serenity/b
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **multiColumnSort**: `boolean`
 
-Defined in: [src/core/eventargs.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L33)
+Defined in: [src/core/eventargs.ts:51](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L51)
+
+Whether multiple columns are being sorted.
 
 ***
 
@@ -34,7 +40,9 @@ Defined in: [src/core/eventargs.ts:33](https://github.com/serenity-is/Serenity/b
 
 > **sortAsc**: `boolean`
 
-Defined in: [src/core/eventargs.ts:34](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L34)
+Defined in: [src/core/eventargs.ts:53](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L53)
+
+Primary sort direction (for single-column sort).
 
 ***
 
@@ -42,7 +50,9 @@ Defined in: [src/core/eventargs.ts:34](https://github.com/serenity-is/Serenity/b
 
 > **sortCol**: [`Column`](Column.md)
 
-Defined in: [src/core/eventargs.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L35)
+Defined in: [src/core/eventargs.ts:55](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L55)
+
+Primary sort column (for single-column sort).
 
 ***
 
@@ -50,4 +60,6 @@ Defined in: [src/core/eventargs.ts:35](https://github.com/serenity-is/Serenity/b
 
 > **sortCols**: [`ArgsSortCol`](../type-aliases/ArgsSortCol.md)[]
 
-Defined in: [src/core/eventargs.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L36)
+Defined in: [src/core/eventargs.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L57)
+
+All active sort columns for multi-sort.

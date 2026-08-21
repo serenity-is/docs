@@ -2,7 +2,9 @@
 
 # Interface: EditorClass
 
-Defined in: [src/core/editing.ts:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L65)
+Defined in: [src/core/editing.ts:135](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L135)
+
+Constructor type for cell editors.
 
 ## Constructors
 
@@ -10,7 +12,9 @@ Defined in: [src/core/editing.ts:65](https://github.com/serenity-is/Serenity/blo
 
 > **new EditorClass**(`options`): [`Editor`](Editor.md)
 
-Defined in: [src/core/editing.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L66)
+Defined in: [src/core/editing.ts:137](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L137)
+
+Instantiates the editor for the given options.
 
 #### Parameters
 
@@ -28,4 +32,7 @@ Defined in: [src/core/editing.ts:66](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **suppressClearOnEdit**: `boolean`
 
-Defined in: [src/core/editing.ts:67](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L67)
+Defined in: [src/core/editing.ts:142](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L142)
+
+When `true`, the editor is not cleared on first key press; the existing
+value is preserved and the key is forwarded to the editor.

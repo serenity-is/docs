@@ -2,7 +2,9 @@
 
 # Interface: EditorOptions
 
-Defined in: [src/core/editing.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L36)
+Defined in: [src/core/editing.ts:71](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L71)
+
+Options passed to every editor instance on construction.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/core/editing.ts:36](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **cancelChanges**: () => `void`
 
-Defined in: [src/core/editing.ts:48](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L48)
+Defined in: [src/core/editing.ts:95](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L95)
+
+Callback to cancel pending editor changes.
 
 #### Returns
 
@@ -22,7 +26,9 @@ Defined in: [src/core/editing.ts:48](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **column**: [`Column`](Column.md)
 
-Defined in: [src/core/editing.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L41)
+Defined in: [src/core/editing.ts:81](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L81)
+
+Column definition for the cell being edited.
 
 ***
 
@@ -30,7 +36,9 @@ Defined in: [src/core/editing.ts:41](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **columnMetaData**: [`ColumnMetadata`](ColumnMetadata.md)\<`any`\>
 
-Defined in: [src/core/editing.ts:42](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L42)
+Defined in: [src/core/editing.ts:83](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L83)
+
+Metadata overrides for the column/row being edited.
 
 ***
 
@@ -38,7 +46,9 @@ Defined in: [src/core/editing.ts:42](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **commitChanges**: () => `void`
 
-Defined in: [src/core/editing.ts:47](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L47)
+Defined in: [src/core/editing.ts:93](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L93)
+
+Callback to commit pending editor changes.
 
 #### Returns
 
@@ -50,7 +60,9 @@ Defined in: [src/core/editing.ts:47](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **compositeEditorOptions**: [`CompositeEditorOptions`](CompositeEditorOptions.md)
 
-Defined in: [src/core/editing.ts:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L43)
+Defined in: [src/core/editing.ts:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L85)
+
+Options from a parent composite editor, if any.
 
 ***
 
@@ -58,7 +70,9 @@ Defined in: [src/core/editing.ts:43](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **container**: `HTMLElement`
 
-Defined in: [src/core/editing.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L44)
+Defined in: [src/core/editing.ts:87](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L87)
+
+DOM container the editor should render into.
 
 ***
 
@@ -66,7 +80,9 @@ Defined in: [src/core/editing.ts:44](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **editorCellNavOnLRKeys**: `boolean`
 
-Defined in: [src/core/editing.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L40)
+Defined in: [src/core/editing.ts:79](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L79)
+
+Whether left/right arrow keys should navigate between cells while editing.
 
 ***
 
@@ -74,7 +90,9 @@ Defined in: [src/core/editing.ts:40](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **event**: [`EventData`](../type-aliases/EventData.md)
 
-Defined in: [src/core/editing.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L46)
+Defined in: [src/core/editing.ts:91](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L91)
+
+Event that triggered the edit, if available.
 
 ***
 
@@ -82,7 +100,9 @@ Defined in: [src/core/editing.ts:46](https://github.com/serenity-is/Serenity/blo
 
 > **grid**: [`EditorHost`](EditorHost.md)
 
-Defined in: [src/core/editing.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L37)
+Defined in: [src/core/editing.ts:73](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L73)
+
+Host grid instance the editor operates within.
 
 ***
 
@@ -90,7 +110,9 @@ Defined in: [src/core/editing.ts:37](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **gridPosition**: [`Position`](Position.md)
 
-Defined in: [src/core/editing.ts:38](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L38)
+Defined in: [src/core/editing.ts:75](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L75)
+
+Bounds of the entire grid container in viewport coordinates.
 
 ***
 
@@ -98,7 +120,9 @@ Defined in: [src/core/editing.ts:38](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **item**: `any`
 
-Defined in: [src/core/editing.ts:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L45)
+Defined in: [src/core/editing.ts:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L89)
+
+Data item (row) being edited.
 
 ***
 
@@ -106,4 +130,6 @@ Defined in: [src/core/editing.ts:45](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **position**: [`Position`](Position.md)
 
-Defined in: [src/core/editing.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L39)
+Defined in: [src/core/editing.ts:77](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L77)
+
+Bounds of the target cell where the editor should be positioned.

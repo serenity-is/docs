@@ -4,4 +4,6 @@
 
 > `const` **PercentComplete**: *typeof* [`PercentCompleteCellEdit`](../../../../classes/PercentCompleteCellEdit.md) = `PercentCompleteCellEdit`
 
-Defined in: [src/editors/index.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L12)
+Defined in: [src/editors/index.ts:23](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L23)
+
+Legacy alias for [PercentCompleteCellEdit](../../../../classes/PercentCompleteCellEdit.md).

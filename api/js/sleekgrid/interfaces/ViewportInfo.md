@@ -2,7 +2,10 @@
 
 # Interface: ViewportInfo
 
-Defined in: [src/core/viewportinfo.ts:2](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L2)
+Defined in: [src/core/viewportinfo.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L5)
+
+Computed layout metrics for the grid viewport. Calculated during `computeViewportInfo()`
+and used to size canvases, set scroll extents and decide virtualization bounds.
 
 ## Properties
 
@@ -10,7 +13,9 @@ Defined in: [src/core/viewportinfo.ts:2](https://github.com/serenity-is/Serenity
 
 > **footerRowHeight**: `number`
 
-Defined in: [src/core/viewportinfo.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L13)
+Defined in: [src/core/viewportinfo.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L27)
+
+Height of the footer row in pixels.
 
 ***
 
@@ -18,7 +23,9 @@ Defined in: [src/core/viewportinfo.ts:13](https://github.com/serenity-is/Serenit
 
 > **groupingPanelHeight**: `number`
 
-Defined in: [src/core/viewportinfo.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L8)
+Defined in: [src/core/viewportinfo.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L17)
+
+Height of the grouping panel in pixels.
 
 ***
 
@@ -26,7 +33,9 @@ Defined in: [src/core/viewportinfo.ts:8](https://github.com/serenity-is/Serenity
 
 > **hasHScroll**: `boolean`
 
-Defined in: [src/core/viewportinfo.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L6)
+Defined in: [src/core/viewportinfo.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L13)
+
+Whether a horizontal scrollbar is currently present.
 
 ***
 
@@ -34,7 +43,9 @@ Defined in: [src/core/viewportinfo.ts:6](https://github.com/serenity-is/Serenity
 
 > **hasVScroll**: `boolean`
 
-Defined in: [src/core/viewportinfo.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L5)
+Defined in: [src/core/viewportinfo.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L11)
+
+Whether a vertical scrollbar is currently present.
 
 ***
 
@@ -42,7 +53,9 @@ Defined in: [src/core/viewportinfo.ts:5](https://github.com/serenity-is/Serenity
 
 > **headerHeight**: `number`
 
-Defined in: [src/core/viewportinfo.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L7)
+Defined in: [src/core/viewportinfo.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L15)
+
+Height of the column header row in pixels.
 
 ***
 
@@ -50,7 +63,9 @@ Defined in: [src/core/viewportinfo.ts:7](https://github.com/serenity-is/Serenity
 
 > **headerRowHeight**: `number`
 
-Defined in: [src/core/viewportinfo.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L12)
+Defined in: [src/core/viewportinfo.ts:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L25)
+
+Height of the header-row (filter row) in pixels.
 
 ***
 
@@ -58,7 +73,9 @@ Defined in: [src/core/viewportinfo.ts:12](https://github.com/serenity-is/Serenit
 
 > **height**: `number`
 
-Defined in: [src/core/viewportinfo.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L3)
+Defined in: [src/core/viewportinfo.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L7)
+
+Height of the scrollable viewport in pixels.
 
 ***
 
@@ -66,7 +83,9 @@ Defined in: [src/core/viewportinfo.ts:3](https://github.com/serenity-is/Serenity
 
 > **numVisibleRows**: `number`
 
-Defined in: [src/core/viewportinfo.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L14)
+Defined in: [src/core/viewportinfo.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L29)
+
+Number of rows estimated to fit in the current viewport (`ceil(height/rowHeight)+1`).
 
 ***
 
@@ -74,7 +93,9 @@ Defined in: [src/core/viewportinfo.ts:14](https://github.com/serenity-is/Serenit
 
 > **realScrollHeight**: `number`
 
-Defined in: [src/core/viewportinfo.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L10)
+Defined in: [src/core/viewportinfo.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L21)
+
+Actual scrollable height applied to the canvas (capped for very large data sets).
 
 ***
 
@@ -82,7 +103,9 @@ Defined in: [src/core/viewportinfo.ts:10](https://github.com/serenity-is/Serenit
 
 > **topPanelHeight**: `number`
 
-Defined in: [src/core/viewportinfo.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L11)
+Defined in: [src/core/viewportinfo.ts:23](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L23)
+
+Height of the top panel in pixels.
 
 ***
 
@@ -90,7 +113,9 @@ Defined in: [src/core/viewportinfo.ts:11](https://github.com/serenity-is/Serenit
 
 > **virtualHeight**: `number`
 
-Defined in: [src/core/viewportinfo.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L9)
+Defined in: [src/core/viewportinfo.ts:19](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L19)
+
+Total virtual height of all rows (`rowHeight * rowCount`), before capping.
 
 ***
 
@@ -98,4 +123,6 @@ Defined in: [src/core/viewportinfo.ts:9](https://github.com/serenity-is/Serenity
 
 > **width**: `number`
 
-Defined in: [src/core/viewportinfo.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L4)
+Defined in: [src/core/viewportinfo.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewportinfo.ts#L9)
+
+Width of the scrollable viewport in pixels.

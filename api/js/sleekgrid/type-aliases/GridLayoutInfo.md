@@ -4,7 +4,9 @@
 
 > **GridLayoutInfo** = `object`
 
-Defined in: [src/core/isleekgrid.ts:176](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L176)
+Defined in: [src/core/isleekgrid.ts:563](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L563)
+
+Summarized description of the grid's layout and pinning support/counters.
 
 ## Properties
 
@@ -12,7 +14,9 @@ Defined in: [src/core/isleekgrid.ts:176](https://github.com/serenity-is/Serenity
 
 > **frozenBottomRows**: `number`
 
-Defined in: [src/core/isleekgrid.ts:178](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L178)
+Defined in: [src/core/isleekgrid.ts:567](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L567)
+
+Number of rows frozen at the bottom.
 
 ***
 
@@ -20,7 +24,9 @@ Defined in: [src/core/isleekgrid.ts:178](https://github.com/serenity-is/Serenity
 
 > **frozenTopRows**: `number`
 
-Defined in: [src/core/isleekgrid.ts:177](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L177)
+Defined in: [src/core/isleekgrid.ts:565](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L565)
+
+Number of rows frozen at the top.
 
 ***
 
@@ -28,7 +34,9 @@ Defined in: [src/core/isleekgrid.ts:177](https://github.com/serenity-is/Serenity
 
 > **pinnedEndCols**: `number`
 
-Defined in: [src/core/isleekgrid.ts:180](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L180)
+Defined in: [src/core/isleekgrid.ts:571](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L571)
+
+Number of columns pinned at the end side.
 
 ***
 
@@ -36,7 +44,9 @@ Defined in: [src/core/isleekgrid.ts:180](https://github.com/serenity-is/Serenity
 
 > **pinnedStartCols**: `number`
 
-Defined in: [src/core/isleekgrid.ts:179](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L179)
+Defined in: [src/core/isleekgrid.ts:569](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L569)
+
+Number of columns pinned at the start side.
 
 ***
 
@@ -44,7 +54,9 @@ Defined in: [src/core/isleekgrid.ts:179](https://github.com/serenity-is/Serenity
 
 > **supportFrozenBottom**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:182](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L182)
+Defined in: [src/core/isleekgrid.ts:575](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L575)
+
+Whether the layout engine supports bottom-frozen rows.
 
 ***
 
@@ -52,7 +64,9 @@ Defined in: [src/core/isleekgrid.ts:182](https://github.com/serenity-is/Serenity
 
 > **supportFrozenRows**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:181](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L181)
+Defined in: [src/core/isleekgrid.ts:573](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L573)
+
+Whether the current layout engine supports frozen rows.
 
 ***
 
@@ -60,7 +74,9 @@ Defined in: [src/core/isleekgrid.ts:181](https://github.com/serenity-is/Serenity
 
 > **supportPinnedCols**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:183](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L183)
+Defined in: [src/core/isleekgrid.ts:577](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L577)
+
+Whether the layout engine supports pinned columns.
 
 ***
 
@@ -68,4 +84,6 @@ Defined in: [src/core/isleekgrid.ts:183](https://github.com/serenity-is/Serenity
 
 > **supportPinnedEnd**: `boolean`
 
-Defined in: [src/core/isleekgrid.ts:184](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L184)
+Defined in: [src/core/isleekgrid.ts:579](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L579)
+
+Whether the layout engine supports end-pinned columns.

@@ -4,4 +4,4 @@
 
 > **FooterColumnEvent** = [`HeaderColumnEvent`](HeaderColumnEvent.md)
 
-Defined in: [src/core/eventargs.ts:91](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L91)
+Defined in: [src/core/eventargs.ts:140](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L140)

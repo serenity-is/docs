@@ -2,7 +2,9 @@
 
 # Interface: EditorFactory
 
-Defined in: [src/core/editing.ts:51](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L51)
+Defined in: [src/core/editing.ts:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L101)
+
+Factory that resolves an editor class for a given column/row.
 
 ## Methods
 
@@ -10,7 +12,9 @@ Defined in: [src/core/editing.ts:51](https://github.com/serenity-is/Serenity/blo
 
 > **getEditor**(`column`, `row?`): [`EditorClass`](EditorClass.md)
 
-Defined in: [src/core/editing.ts:52](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L52)
+Defined in: [src/core/editing.ts:108](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L108)
+
+Returns the editor class for the given column and optional row.
 
 #### Parameters
 
@@ -18,10 +22,16 @@ Defined in: [src/core/editing.ts:52](https://github.com/serenity-is/Serenity/blo
 
 [`Column`](Column.md)
 
+Column to resolve an editor for.
+
 ##### row?
 
 `number`
 
+Optional row index for row-specific resolution.
+
 #### Returns
 
 [`EditorClass`](EditorClass.md)
+
+Editor constructor.

@@ -2,7 +2,9 @@
 
 # Interface: GridPluginHost
 
-Defined in: [src/core/grid-plugin.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L14)
+Defined in: [src/core/grid-plugin.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L29)
+
+Host surface implemented by the grid for managing [GridPlugin](GridPlugin.md) lifetimes.
 
 ## Extended by
 
@@ -15,7 +17,9 @@ Defined in: [src/core/grid-plugin.ts:14](https://github.com/serenity-is/Serenity
 
 > **getPluginByName**(`name`): [`GridPlugin`](GridPlugin.md)
 
-Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L15)
+Defined in: [src/core/grid-plugin.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L35)
+
+Retrieves a plugin by its [GridPlugin.pluginName](GridPlugin.md#pluginname).
 
 #### Parameters
 
@@ -23,9 +27,13 @@ Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity
 
 `string`
 
+Plugin name to look up.
+
 #### Returns
 
 [`GridPlugin`](GridPlugin.md)
+
+The plugin instance, or `null`/`undefined` when not found.
 
 ***
 
@@ -33,13 +41,17 @@ Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity
 
 > **registerPlugin**(`plugin`): `void`
 
-Defined in: [src/core/grid-plugin.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L16)
+Defined in: [src/core/grid-plugin.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L40)
+
+Registers a plugin and calls its [GridPlugin.init](GridPlugin.md#init).
 
 #### Parameters
 
 ##### plugin
 
 [`GridPlugin`](GridPlugin.md)
+
+Plugin to register.
 
 #### Returns
 
@@ -51,13 +63,17 @@ Defined in: [src/core/grid-plugin.ts:16](https://github.com/serenity-is/Serenity
 
 > **unregisterPlugin**(`plugin`): `void`
 
-Defined in: [src/core/grid-plugin.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L17)
+Defined in: [src/core/grid-plugin.ts:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L45)
+
+Unregisters a plugin, calling [GridPlugin.destroy](GridPlugin.md#destroy) if defined.
 
 #### Parameters
 
 ##### plugin
 
 [`GridPlugin`](GridPlugin.md)
+
+Plugin to remove.
 
 #### Returns
 

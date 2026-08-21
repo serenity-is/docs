@@ -2,7 +2,10 @@
 
 # Interface: EditCommand
 
-Defined in: [src/core/editing.ts:55](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L55)
+Defined in: [src/core/editing.ts:115](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L115)
+
+Command produced by an editor commit; supports undo/redo when the grid's
+`editCommandHandler` queues it.
 
 ## Properties
 
@@ -10,7 +13,9 @@ Defined in: [src/core/editing.ts:55](https://github.com/serenity-is/Serenity/blo
 
 > **cell**: `number`
 
-Defined in: [src/core/editing.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L57)
+Defined in: [src/core/editing.ts:119](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L119)
+
+Cell/column index that was edited.
 
 ***
 
@@ -18,7 +23,9 @@ Defined in: [src/core/editing.ts:57](https://github.com/serenity-is/Serenity/blo
 
 > **editor**: [`Editor`](Editor.md)
 
-Defined in: [src/core/editing.ts:58](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L58)
+Defined in: [src/core/editing.ts:121](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L121)
+
+Editor instance that produced the change.
 
 ***
 
@@ -26,7 +33,9 @@ Defined in: [src/core/editing.ts:58](https://github.com/serenity-is/Serenity/blo
 
 > **execute**: () => `void`
 
-Defined in: [src/core/editing.ts:61](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L61)
+Defined in: [src/core/editing.ts:127](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L127)
+
+Applies the edit.
 
 #### Returns
 
@@ -38,7 +47,9 @@ Defined in: [src/core/editing.ts:61](https://github.com/serenity-is/Serenity/blo
 
 > **prevSerializedValue**: `any`
 
-Defined in: [src/core/editing.ts:60](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L60)
+Defined in: [src/core/editing.ts:125](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L125)
+
+Previous serialized value before the edit.
 
 ***
 
@@ -46,7 +57,9 @@ Defined in: [src/core/editing.ts:60](https://github.com/serenity-is/Serenity/blo
 
 > **row**: `number`
 
-Defined in: [src/core/editing.ts:56](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L56)
+Defined in: [src/core/editing.ts:117](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L117)
+
+Row index that was edited.
 
 ***
 
@@ -54,7 +67,9 @@ Defined in: [src/core/editing.ts:56](https://github.com/serenity-is/Serenity/blo
 
 > **serializedValue**: `any`
 
-Defined in: [src/core/editing.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L59)
+Defined in: [src/core/editing.ts:123](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L123)
+
+New serialized value from the editor.
 
 ***
 
@@ -62,7 +77,9 @@ Defined in: [src/core/editing.ts:59](https://github.com/serenity-is/Serenity/blo
 
 > **undo**: () => `void`
 
-Defined in: [src/core/editing.ts:62](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L62)
+Defined in: [src/core/editing.ts:129](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L129)
+
+Reverts the edit.
 
 #### Returns
 

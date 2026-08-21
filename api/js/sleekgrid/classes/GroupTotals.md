@@ -2,13 +2,10 @@
 
 # Class: GroupTotals\<TEntity\>
 
-Defined in: [src/core/group.ts:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L101)
+Defined in: [src/core/group.ts:96](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L96)
 
-Information about group totals.
-An instance of GroupTotals will be created for each totals row and passed to the aggregators
-so that they can store arbitrary data in it.  That data can later be accessed by group totals
-formatters during the display.
- GroupTotals
+Totales row for a [Group](Group.md). Created for each group and passed to aggregators
+so they can store computed data that is later accessed by group-totals formatters.
 
 ## Extends
 
@@ -19,6 +16,8 @@ formatters during the display.
 ### TEntity
 
 `TEntity` = `any`
+
+Row item type.
 
 ## Implements
 
@@ -44,7 +43,9 @@ formatters during the display.
 
 > `readonly` **\_\_groupTotals**: `true` = `true`
 
-Defined in: [src/core/group.ts:103](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L103)
+Defined in: [src/core/group.ts:99](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L99)
+
+Marker identifying this row as a group-totals row.
 
 #### Implementation of
 
@@ -56,7 +57,10 @@ Defined in: [src/core/group.ts:103](https://github.com/serenity-is/Serenity/blob
 
 > **\_\_nonDataRow**: `boolean` = `true`
 
-Defined in: [src/core/base.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L5)
+Defined in: [src/core/base.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L11)
+
+Marker flag used at runtime to identify non-data rows.
+Checked by the grid and `DataView` to skip data-specific handling.
 
 #### Implementation of
 
@@ -72,9 +76,9 @@ Defined in: [src/core/base.ts:5](https://github.com/serenity-is/Serenity/blob/ma
 
 > `optional` **avg**: `Record`\<`string`, `any`\>
 
-Defined in: [src/core/group.ts:128](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L128)
+Defined in: [src/core/group.ts:120](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L120)
 
-Contains avg
+Per-field average values computed by aggregators.
 
 #### Implementation of
 
@@ -86,11 +90,9 @@ Contains avg
 
 > **group**: [`Group`](Group.md)\<`TEntity`\>
 
-Defined in: [src/core/group.ts:110](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L110)
+Defined in: [src/core/group.ts:104](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L104)
 
-Parent Group.
-
-#### Param
+Parent group this totals row belongs to.
 
 #### Implementation of
 
@@ -102,12 +104,10 @@ Parent Group.
 
 > **initialized**: `boolean` = `false`
 
-Defined in: [src/core/group.ts:118](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L118)
+Defined in: [src/core/group.ts:110](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L110)
 
-Whether the totals have been fully initialized / calculated.
-Will be set to false for lazy-calculated group totals.
-
-#### Param
+Whether the totals have been fully initialized/calculated.
+Set to `false` for lazy-calculated totals.
 
 #### Implementation of
 
@@ -119,9 +119,9 @@ Will be set to false for lazy-calculated group totals.
 
 > `optional` **max**: `Record`\<`string`, `any`\>
 
-Defined in: [src/core/group.ts:138](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L138)
+Defined in: [src/core/group.ts:130](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L130)
 
-Contains max
+Per-field maximum values computed by aggregators.
 
 #### Implementation of
 
@@ -133,9 +133,9 @@ Contains max
 
 > `optional` **min**: `Record`\<`string`, `any`\>
 
-Defined in: [src/core/group.ts:133](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L133)
+Defined in: [src/core/group.ts:125](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L125)
 
-Contains min
+Per-field minimum values computed by aggregators.
 
 #### Implementation of
 
@@ -147,9 +147,9 @@ Contains min
 
 > `optional` **sum**: `Record`\<`string`, `any`\>
 
-Defined in: [src/core/group.ts:123](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L123)
+Defined in: [src/core/group.ts:115](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L115)
 
-Contains sum
+Per-field sum values computed by aggregators.
 
 #### Implementation of
 

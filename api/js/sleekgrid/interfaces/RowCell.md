@@ -2,7 +2,9 @@
 
 # Interface: RowCell
 
-Defined in: [src/core/editing.ts:19](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L19)
+Defined in: [src/core/editing.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L37)
+
+Row/cell coordinate pair that identifies a single cell.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/core/editing.ts:19](https://github.com/serenity-is/Serenity/blo
 
 > **cell**: `number`
 
-Defined in: [src/core/editing.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L21)
+Defined in: [src/core/editing.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L41)
+
+Zero-based cell/column index.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/core/editing.ts:21](https://github.com/serenity-is/Serenity/blo
 
 > **row**: `number`
 
-Defined in: [src/core/editing.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L20)
+Defined in: [src/core/editing.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L39)
+
+Zero-based row index.

@@ -2,7 +2,11 @@
 
 # Interface: LayoutEngine
 
-Defined in: [src/layouts/layout-engine.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L6)
+Defined in: [src/layouts/layout-engine.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L11)
+
+Pluggable layout strategy responsible for creating DOM panes and responding
+to grid option changes. The grid instantiates one engine (typically
+[BasicLayout](../classes/BasicLayout.md) or [FrozenLayout](../classes/FrozenLayout.md)).
 
 ## Properties
 
@@ -10,7 +14,9 @@ Defined in: [src/layouts/layout-engine.ts:6](https://github.com/serenity-is/Sere
 
 > **layoutName**: `string`
 
-Defined in: [src/layouts/layout-engine.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L7)
+Defined in: [src/layouts/layout-engine.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L13)
+
+Human-readable layout name (e.g. `"BasicLayout"`).
 
 ***
 
@@ -18,7 +24,9 @@ Defined in: [src/layouts/layout-engine.ts:7](https://github.com/serenity-is/Sere
 
 > `optional` **supportFrozenBottom**: `boolean`
 
-Defined in: [src/layouts/layout-engine.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L17)
+Defined in: [src/layouts/layout-engine.ts:46](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L46)
+
+Whether the engine supports bottom-frozen rows.
 
 ***
 
@@ -26,7 +34,9 @@ Defined in: [src/layouts/layout-engine.ts:17](https://github.com/serenity-is/Ser
 
 > `optional` **supportFrozenRows**: `boolean`
 
-Defined in: [src/layouts/layout-engine.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L16)
+Defined in: [src/layouts/layout-engine.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L44)
+
+Whether the engine supports top-frozen rows.
 
 ***
 
@@ -34,7 +44,9 @@ Defined in: [src/layouts/layout-engine.ts:16](https://github.com/serenity-is/Ser
 
 > `optional` **supportPinnedCols**: `boolean`
 
-Defined in: [src/layouts/layout-engine.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L14)
+Defined in: [src/layouts/layout-engine.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L40)
+
+Whether the engine supports pinned (frozen) columns.
 
 ***
 
@@ -42,7 +54,9 @@ Defined in: [src/layouts/layout-engine.ts:14](https://github.com/serenity-is/Ser
 
 > `optional` **supportPinnedEnd**: `boolean`
 
-Defined in: [src/layouts/layout-engine.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L15)
+Defined in: [src/layouts/layout-engine.ts:42](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L42)
+
+Whether the engine supports end-pinned columns.
 
 ## Methods
 
@@ -50,7 +64,10 @@ Defined in: [src/layouts/layout-engine.ts:15](https://github.com/serenity-is/Ser
 
 > `optional` **adjustFrozenRowsOption**(): `void`
 
-Defined in: [src/layouts/layout-engine.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L10)
+Defined in: [src/layouts/layout-engine.ts:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L25)
+
+Adjusts the frozen-row refs from the current grid options without a
+full re-layout. Called when `frozenRows` / `frozenBottom` change.
 
 #### Returns
 
@@ -62,13 +79,17 @@ Defined in: [src/layouts/layout-engine.ts:10](https://github.com/serenity-is/Ser
 
 > **afterSetOptions**(`args`): `void`
 
-Defined in: [src/layouts/layout-engine.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L11)
+Defined in: [src/layouts/layout-engine.ts:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L30)
+
+Called after `grid.setOptions(args)` merges new options.
 
 #### Parameters
 
 ##### args
 
 [`GridOptions`](GridOptions.md)
+
+Options delta passed to `setOptions`.
 
 #### Returns
 
@@ -80,7 +101,9 @@ Defined in: [src/layouts/layout-engine.ts:11](https://github.com/serenity-is/Ser
 
 > **destroy**(): `void`
 
-Defined in: [src/layouts/layout-engine.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L9)
+Defined in: [src/layouts/layout-engine.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L20)
+
+Tears down DOM and listeners created by [LayoutEngine.init](#init).
 
 #### Returns
 
@@ -92,13 +115,17 @@ Defined in: [src/layouts/layout-engine.ts:9](https://github.com/serenity-is/Sere
 
 > **init**(`host`): `void`
 
-Defined in: [src/layouts/layout-engine.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L8)
+Defined in: [src/layouts/layout-engine.ts:18](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L18)
+
+Initializes the layout, creating DOM inside `host.getContainerNode()`.
 
 #### Parameters
 
 ##### host
 
 [`LayoutHost`](LayoutHost.md)
+
+Layout host providing grid state, signals and refs.
 
 #### Returns
 
@@ -110,9 +137,10 @@ Defined in: [src/layouts/layout-engine.ts:8](https://github.com/serenity-is/Sere
 
 > `optional` **reorderViewColumns**(`viewCols`, `refs`): [`Column`](Column.md)\<`any`\>[]
 
-Defined in: [src/layouts/layout-engine.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L13)
+Defined in: [src/layouts/layout-engine.ts:38](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-engine.ts#L38)
 
-this might be called before init, chicken egg situation
+Optionally reorders the visible columns before they are laid out.
+May be called before [LayoutEngine.init](#init) during early option setup.
 
 #### Parameters
 
@@ -120,10 +148,16 @@ this might be called before init, chicken egg situation
 
 [`Column`](Column.md)\<`any`\>[]
 
+Current visible columns in display order.
+
 ##### refs
 
 [`GridLayoutRefs`](../type-aliases/GridLayoutRefs.md)
 
+Mutable layout refs whose config may be updated.
+
 #### Returns
 
 [`Column`](Column.md)\<`any`\>[]
+
+Reordered columns, or `null` when no reorder is needed.

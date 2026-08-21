@@ -4,7 +4,9 @@
 
 > **ArgsSortCol** = `object`
 
-Defined in: [src/core/eventargs.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L27)
+Defined in: [src/core/eventargs.ts:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L41)
+
+Single entry within a multi-column sort description.
 
 ## Properties
 
@@ -12,7 +14,9 @@ Defined in: [src/core/eventargs.ts:27](https://github.com/serenity-is/Serenity/b
 
 > **sortAsc**: `boolean`
 
-Defined in: [src/core/eventargs.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L29)
+Defined in: [src/core/eventargs.ts:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L45)
+
+Sort direction; `true` for ascending.
 
 ***
 
@@ -20,4 +24,6 @@ Defined in: [src/core/eventargs.ts:29](https://github.com/serenity-is/Serenity/b
 
 > **sortCol**: [`Column`](../interfaces/Column.md)
 
-Defined in: [src/core/eventargs.ts:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L28)
+Defined in: [src/core/eventargs.ts:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L43)
+
+Column being sorted.

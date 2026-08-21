@@ -2,7 +2,10 @@
 
 # Class: BasicLayout
 
-Defined in: [src/layouts/basic-layout.tsx:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L6)
+Defined in: [src/layouts/basic-layout.tsx:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L10)
+
+Default single-pane layout. Renders header, header row, top panel, body
+viewport and footer row in the main band without pinning or frozen panes.
 
 ## Implements
 
@@ -24,7 +27,9 @@ Defined in: [src/layouts/basic-layout.tsx:6](https://github.com/serenity-is/Sere
 
 > `protected` **host**: [`LayoutHost`](../interfaces/LayoutHost.md)
 
-Defined in: [src/layouts/basic-layout.tsx:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L7)
+Defined in: [src/layouts/basic-layout.tsx:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L12)
+
+Host provided during [BasicLayout.init](#init).
 
 ***
 
@@ -32,7 +37,9 @@ Defined in: [src/layouts/basic-layout.tsx:7](https://github.com/serenity-is/Sere
 
 > `readonly` **layoutName**: `"BasicLayout"` = `"BasicLayout"`
 
-Defined in: [src/layouts/basic-layout.tsx:31](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L31)
+Defined in: [src/layouts/basic-layout.tsx:48](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L48)
+
+Layout identifier.
 
 #### Implementation of
 
@@ -44,7 +51,9 @@ Defined in: [src/layouts/basic-layout.tsx:31](https://github.com/serenity-is/Ser
 
 > `protected` **refs**: [`GridLayoutRefs`](../type-aliases/GridLayoutRefs.md)
 
-Defined in: [src/layouts/basic-layout.tsx:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L8)
+Defined in: [src/layouts/basic-layout.tsx:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L14)
+
+Refs snapshot provided during [BasicLayout.init](#init).
 
 ## Methods
 
@@ -52,7 +61,9 @@ Defined in: [src/layouts/basic-layout.tsx:8](https://github.com/serenity-is/Sere
 
 > **afterSetOptions**(): `void`
 
-Defined in: [src/layouts/basic-layout.tsx:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L29)
+Defined in: [src/layouts/basic-layout.tsx:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L45)
+
+No-op for the basic layout; options require no layout-specific handling.
 
 #### Returns
 
@@ -68,7 +79,9 @@ Defined in: [src/layouts/basic-layout.tsx:29](https://github.com/serenity-is/Ser
 
 > **destroy**(): `void`
 
-Defined in: [src/layouts/basic-layout.tsx:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L25)
+Defined in: [src/layouts/basic-layout.tsx:38](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L38)
+
+Clears host and refs references.
 
 #### Returns
 
@@ -84,13 +97,17 @@ Defined in: [src/layouts/basic-layout.tsx:25](https://github.com/serenity-is/Ser
 
 > **init**(`host`): `void`
 
-Defined in: [src/layouts/basic-layout.tsx:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L10)
+Defined in: [src/layouts/basic-layout.tsx:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/basic-layout.tsx#L20)
+
+Builds the basic layout DOM inside `host.getContainerNode()`.
 
 #### Parameters
 
 ##### host
 
 [`LayoutHost`](../interfaces/LayoutHost.md)
+
+Layout host.
 
 #### Returns
 

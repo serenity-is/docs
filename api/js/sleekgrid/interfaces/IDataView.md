@@ -2,7 +2,9 @@
 
 # Interface: IDataView\<TItem\>
 
-Defined in: [src/core/idataview.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L6)
+Defined in: [src/core/idataview.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L10)
+
+Minimal data-view contract consumed by the grid. Implemented by `DataView`.
 
 ## Type Parameters
 
@@ -10,15 +12,17 @@ Defined in: [src/core/idataview.ts:6](https://github.com/serenity-is/Serenity/bl
 
 `TItem` = `any`
 
+Row item type.
+
 ## Properties
 
 ### onDataChanged?
 
 > `readonly` `optional` **onDataChanged**: [`EventEmitter`](../classes/EventEmitter.md)\<\{ \}\>
 
-Defined in: [src/core/idataview.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L16)
+Defined in: [src/core/idataview.ts:34](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L34)
 
-Event fired when the underlying data changes
+Event fired when the underlying data set changes.
 
 ***
 
@@ -26,9 +30,10 @@ Event fired when the underlying data changes
 
 > `readonly` `optional` **onRowCountChanged**: [`EventEmitter`](../classes/EventEmitter.md)\<\{ `current`: `number`; `previous`: `number`; \}\>
 
-Defined in: [src/core/idataview.ts:18](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L18)
+Defined in: [src/core/idataview.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L39)
 
-Event fired when the row count changes
+Event fired when the row count changes.
+Payload is `{ previous, current }` with the counts before and after the change.
 
 ***
 
@@ -36,9 +41,10 @@ Event fired when the row count changes
 
 > `readonly` `optional` **onRowsChanged**: [`EventEmitter`](../classes/EventEmitter.md)\<\{ `rows`: `number`[]; \}\>
 
-Defined in: [src/core/idataview.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L20)
+Defined in: [src/core/idataview.ts:44](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L44)
 
-Event fired when specific rows change
+Event fired when specific view rows change (values or metadata).
+Payload is `{ rows }` with the list of affected view indices.
 
 ## Methods
 
@@ -46,13 +52,15 @@ Event fired when specific rows change
 
 > **getGrandTotals**(): [`IGroupTotals`](IGroupTotals.md)
 
-Defined in: [src/core/idataview.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L8)
+Defined in: [src/core/idataview.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L15)
 
-Gets the grand totals for all aggregated data.
+Gets grand totals aggregated over the entire data set.
 
 #### Returns
 
 [`IGroupTotals`](IGroupTotals.md)
+
+Grand totals object containing `sum`/`avg`/`min`/`max`, if any.
 
 ***
 
@@ -60,9 +68,9 @@ Gets the grand totals for all aggregated data.
 
 > **getItem**(`row`): `TItem` \| [`IGroupTotals`](IGroupTotals.md)\<`any`\> \| [`Group`](../classes/Group.md)\<`TItem`\>
 
-Defined in: [src/core/idataview.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L12)
+Defined in: [src/core/idataview.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L26)
 
-Gets the item at the specified row index.
+Gets the item at the specified view row.
 
 #### Parameters
 
@@ -70,9 +78,13 @@ Gets the item at the specified row index.
 
 `number`
 
+Zero-based view index.
+
 #### Returns
 
 `TItem` \| [`IGroupTotals`](IGroupTotals.md)\<`any`\> \| [`Group`](../classes/Group.md)\<`TItem`\>
+
+Data item, `Group` header, or `IGroupTotals` row.
 
 ***
 
@@ -80,9 +92,9 @@ Gets the item at the specified row index.
 
 > `optional` **getItemMetadata**(`row`): [`ItemMetadata`](ItemMetadata.md)\<`TItem`\>
 
-Defined in: [src/core/idataview.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L14)
+Defined in: [src/core/idataview.ts:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L32)
 
-Gets metadata for the item at the specified row index.
+Gets row metadata (CSS classes, per-column overrides) for the specified view row.
 
 #### Parameters
 
@@ -90,9 +102,13 @@ Gets metadata for the item at the specified row index.
 
 `number`
 
+Zero-based view index.
+
 #### Returns
 
 [`ItemMetadata`](ItemMetadata.md)\<`TItem`\>
+
+Metadata object or `undefined` when none applies.
 
 ***
 
@@ -100,10 +116,12 @@ Gets metadata for the item at the specified row index.
 
 > **getLength**(): `number`
 
-Defined in: [src/core/idataview.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L10)
+Defined in: [src/core/idataview.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/idataview.ts#L20)
 
-Gets the total number of rows in the view.
+Gets the total number of rows currently in the view (including group headers/totals).
 
 #### Returns
 
 `number`
+
+Row count.

@@ -2,7 +2,10 @@
 
 # Interface: LayoutHost
 
-Defined in: [src/layouts/layout-host.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L7)
+Defined in: [src/layouts/layout-host.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L11)
+
+Minimal host surface exposed to [LayoutEngine](LayoutEngine.md) implementations.
+Narrower than [ISleekGrid](ISleekGrid.md); only what layouts need is exposed.
 
 ## Extends
 
@@ -14,7 +17,9 @@ Defined in: [src/layouts/layout-host.ts:7](https://github.com/serenity-is/Sereni
 
 > `readonly` **onAfterInit**: [`EventEmitter`](../classes/EventEmitter.md)\<[`ArgsGrid`](ArgsGrid.md)\>
 
-Defined in: [src/core/isleekgrid.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L16)
+Defined in: [src/core/isleekgrid.ts:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L24)
+
+Fired once after `init()` completes. [ArgsGrid](ArgsGrid.md) payload.
 
 #### Inherited from
 
@@ -26,7 +31,9 @@ Defined in: [src/core/isleekgrid.ts:16](https://github.com/serenity-is/Serenity/
 
 > `readonly` **refs**: [`GridLayoutRefs`](../type-aliases/GridLayoutRefs.md)
 
-Defined in: [src/layouts/layout-host.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L12)
+Defined in: [src/layouts/layout-host.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L29)
+
+Mutable refs tracking per-band DOM nodes and pinning/frozen state.
 
 ## Methods
 
@@ -34,9 +41,9 @@ Defined in: [src/layouts/layout-host.ts:12](https://github.com/serenity-is/Seren
 
 > **getAllColumns**(): [`Column`](Column.md)\<`any`\>[]
 
-Defined in: [src/core/isleekgrid.ts:67](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L67)
+Defined in: [src/core/isleekgrid.ts:170](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L170)
 
-Returns all columns in the grid, including hidden ones, the order might not match visible columns due to pinning, ordering etc.
+Returns all columns in the grid, including hidden ones; order may differ from visible columns due to pinning/reordering.
 
 #### Returns
 
@@ -52,9 +59,9 @@ Returns all columns in the grid, including hidden ones, the order might not matc
 
 > **getColumns**(): [`Column`](Column.md)\<`any`\>[]
 
-Defined in: [src/core/isleekgrid.ts:84](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L84)
+Defined in: [src/core/isleekgrid.ts:246](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L246)
 
-Returns only the visible columns in order
+Returns only the visible columns in display order.
 
 #### Returns
 
@@ -70,7 +77,9 @@ Returns only the visible columns in order
 
 > **getContainerNode**(): `HTMLElement`
 
-Defined in: [src/core/isleekgrid.ts:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L85)
+Defined in: [src/core/isleekgrid.ts:248](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L248)
+
+Returns the root container element of the grid.
 
 #### Returns
 
@@ -86,7 +95,9 @@ Defined in: [src/core/isleekgrid.ts:85](https://github.com/serenity-is/Serenity/
 
 > **getDataLength**(): `number`
 
-Defined in: [src/core/isleekgrid.ts:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L89)
+Defined in: [src/core/isleekgrid.ts:265](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L265)
+
+Returns the number of rows in the grid's data source/view.
 
 #### Returns
 
@@ -102,7 +113,9 @@ Defined in: [src/core/isleekgrid.ts:89](https://github.com/serenity-is/Serenity/
 
 > **getOptions**(): [`GridOptions`](GridOptions.md)\<`any`\>
 
-Defined in: [src/core/isleekgrid.ts:104](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L104)
+Defined in: [src/core/isleekgrid.ts:314](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/isleekgrid.ts#L314)
+
+Returns the current grid options.
 
 #### Returns
 
@@ -118,7 +131,9 @@ Defined in: [src/core/isleekgrid.ts:104](https://github.com/serenity-is/Serenity
 
 > **getPluginByName**(`name`): [`GridPlugin`](GridPlugin.md)
 
-Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L15)
+Defined in: [src/core/grid-plugin.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L35)
+
+Retrieves a plugin by its [GridPlugin.pluginName](GridPlugin.md#pluginname).
 
 #### Parameters
 
@@ -126,9 +141,13 @@ Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity
 
 `string`
 
+Plugin name to look up.
+
 #### Returns
 
 [`GridPlugin`](GridPlugin.md)
+
+The plugin instance, or `null`/`undefined` when not found.
 
 #### Inherited from
 
@@ -140,11 +159,15 @@ Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity
 
 > **getSignals**(): [`GridSignals`](GridSignals.md)
 
-Defined in: [src/layouts/layout-host.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L9)
+Defined in: [src/layouts/layout-host.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L17)
+
+Returns the shared reactive signals controlling visibility/pinning.
 
 #### Returns
 
 [`GridSignals`](GridSignals.md)
+
+Grid signals object.
 
 ***
 
@@ -152,11 +175,15 @@ Defined in: [src/layouts/layout-host.ts:9](https://github.com/serenity-is/Sereni
 
 > **getViewportInfo**(): [`ViewportInfo`](ViewportInfo.md)
 
-Defined in: [src/layouts/layout-host.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L10)
+Defined in: [src/layouts/layout-host.ts:22](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L22)
+
+Returns computed viewport metrics (dimensions, scroll flags, heights).
 
 #### Returns
 
 [`ViewportInfo`](ViewportInfo.md)
+
+Current [ViewportInfo](ViewportInfo.md).
 
 ***
 
@@ -164,13 +191,17 @@ Defined in: [src/layouts/layout-host.ts:10](https://github.com/serenity-is/Seren
 
 > **registerPlugin**(`plugin`): `void`
 
-Defined in: [src/core/grid-plugin.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L16)
+Defined in: [src/core/grid-plugin.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L40)
+
+Registers a plugin and calls its [GridPlugin.init](GridPlugin.md#init).
 
 #### Parameters
 
 ##### plugin
 
 [`GridPlugin`](GridPlugin.md)
+
+Plugin to register.
 
 #### Returns
 
@@ -186,13 +217,17 @@ Defined in: [src/core/grid-plugin.ts:16](https://github.com/serenity-is/Serenity
 
 > **removeNode**(`node`): `void`
 
-Defined in: [src/layouts/layout-host.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L11)
+Defined in: [src/layouts/layout-host.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-host.ts#L27)
+
+Removes a DOM node via the grid's configured sanitizer/custom remover.
 
 #### Parameters
 
 ##### node
 
 `HTMLElement`
+
+Element to remove.
 
 #### Returns
 
@@ -204,13 +239,17 @@ Defined in: [src/layouts/layout-host.ts:11](https://github.com/serenity-is/Seren
 
 > **unregisterPlugin**(`plugin`): `void`
 
-Defined in: [src/core/grid-plugin.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L17)
+Defined in: [src/core/grid-plugin.ts:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L45)
+
+Unregisters a plugin, calling [GridPlugin.destroy](GridPlugin.md#destroy) if defined.
 
 #### Parameters
 
 ##### plugin
 
 [`GridPlugin`](GridPlugin.md)
+
+Plugin to remove.
 
 #### Returns
 

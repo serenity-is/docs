@@ -4,4 +4,7 @@
 
 > **FormatterResult** = `string` \| `HTMLElement` \| `SVGElement` \| `MathMLElement` \| `DocumentFragment`
 
-Defined in: [src/core/formatting.ts:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L85)
+Defined in: [src/core/formatting.ts:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L89)
+
+Value returned by a formatter. Strings are treated as text or HTML depending on
+`enableHtmlRendering`; DOM nodes are appended directly.

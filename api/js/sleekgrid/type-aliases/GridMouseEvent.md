@@ -4,4 +4,4 @@
 
 > **GridMouseEvent** = [`EventData`](EventData.md)\<[`ArgsGrid`](../interfaces/ArgsGrid.md), `MouseEvent`\>
 
-Defined in: [src/core/eventargs.ts:96](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L96)
+Defined in: [src/core/eventargs.ts:145](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L145)

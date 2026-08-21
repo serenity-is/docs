@@ -4,4 +4,6 @@
 
 > `const` **YesNoSelect**: *typeof* [`YesNoSelectCellEdit`](../../../../classes/YesNoSelectCellEdit.md) = `YesNoSelectCellEdit`
 
-Defined in: [src/editors/index.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L10)
+Defined in: [src/editors/index.ts:19](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L19)
+
+Legacy alias for [YesNoSelectCellEdit](../../../../classes/YesNoSelectCellEdit.md).

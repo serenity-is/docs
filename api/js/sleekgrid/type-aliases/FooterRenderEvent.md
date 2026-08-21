@@ -4,4 +4,4 @@
 
 > **FooterRenderEvent** = [`HeaderRenderEvent`](HeaderRenderEvent.md)
 
-Defined in: [src/core/eventargs.ts:93](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L93)
+Defined in: [src/core/eventargs.ts:142](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L142)

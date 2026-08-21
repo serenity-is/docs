@@ -4,4 +4,6 @@
 
 > `const` **Integer**: *typeof* [`IntegerCellEdit`](../../../../classes/IntegerCellEdit.md) = `IntegerCellEdit`
 
-Defined in: [src/editors/index.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L7)
+Defined in: [src/editors/index.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L13)
+
+Legacy alias for [IntegerCellEdit](../../../../classes/IntegerCellEdit.md).

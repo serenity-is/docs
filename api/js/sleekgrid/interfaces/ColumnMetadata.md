@@ -2,7 +2,9 @@
 
 # Interface: ColumnMetadata\<TItem\>
 
-Defined in: [src/core/column.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L57)
+Defined in: [src/core/column.ts:112](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L112)
+
+Per-cell metadata that can override column-level settings for a specific row.
 
 ## Type Parameters
 
@@ -10,13 +12,17 @@ Defined in: [src/core/column.ts:57](https://github.com/serenity-is/Serenity/blob
 
 `TItem` = `any`
 
+Row item type.
+
 ## Properties
 
 ### colspan?
 
 > `optional` **colspan**: `number` \| `"*"`
 
-Defined in: [src/core/column.ts:58](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L58)
+Defined in: [src/core/column.ts:114](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L114)
+
+Column span for this cell. Use `"*"` to span to the end of the row.
 
 ***
 
@@ -24,7 +30,9 @@ Defined in: [src/core/column.ts:58](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **cssClasses**: `string`
 
-Defined in: [src/core/column.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L59)
+Defined in: [src/core/column.ts:116](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L116)
+
+Extra CSS classes applied to the cell node.
 
 ***
 
@@ -32,7 +40,9 @@ Defined in: [src/core/column.ts:59](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **editor**: [`EditorClass`](EditorClass.md)
 
-Defined in: [src/core/column.ts:61](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L61)
+Defined in: [src/core/column.ts:120](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L120)
+
+Editor class override for this cell.
 
 ***
 
@@ -40,7 +50,9 @@ Defined in: [src/core/column.ts:61](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **focusable**: `boolean`
 
-Defined in: [src/core/column.ts:60](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L60)
+Defined in: [src/core/column.ts:118](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L118)
+
+Whether the cell can receive focus.
 
 ***
 
@@ -48,7 +60,9 @@ Defined in: [src/core/column.ts:60](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **format**: [`ColumnFormat`](../type-aliases/ColumnFormat.md)\<`TItem`\>
 
-Defined in: [src/core/column.ts:62](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L62)
+Defined in: [src/core/column.ts:122](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L122)
+
+Formatter override for this cell.
 
 ***
 
@@ -56,9 +70,13 @@ Defined in: [src/core/column.ts:62](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **formatter**: [`CompatFormatter`](../type-aliases/CompatFormatter.md)\<`TItem`\>
 
-Defined in: [src/core/column.ts:64](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L64)
+Defined in: [src/core/column.ts:127](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L127)
+
+Legacy formatter override.
 
 #### Deprecated
+
+Use [ColumnMetadata.format](#format) instead.
 
 ***
 
@@ -66,7 +84,9 @@ Defined in: [src/core/column.ts:64](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **selectable**: `boolean`
 
-Defined in: [src/core/column.ts:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L65)
+Defined in: [src/core/column.ts:129](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L129)
+
+Whether the cell can be selected.
 
 ***
 
@@ -74,4 +94,6 @@ Defined in: [src/core/column.ts:65](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **tabbable**: `boolean`
 
-Defined in: [src/core/column.ts:66](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L66)
+Defined in: [src/core/column.ts:131](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/column.ts#L131)
+
+Whether the cell participates in tab navigation.

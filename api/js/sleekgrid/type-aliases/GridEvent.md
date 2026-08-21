@@ -4,4 +4,4 @@
 
 > **GridEvent** = [`EventData`](EventData.md)\<[`ArgsGrid`](../interfaces/ArgsGrid.md)\>
 
-Defined in: [src/core/eventargs.ts:94](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L94)
+Defined in: [src/core/eventargs.ts:143](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L143)

@@ -4,4 +4,4 @@
 
 > **HeaderMouseEvent** = [`EventData`](EventData.md)\<[`ArgsColumn`](../interfaces/ArgsColumn.md), `MouseEvent`\>
 
-Defined in: [src/core/eventargs.ts:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L89)
+Defined in: [src/core/eventargs.ts:138](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L138)

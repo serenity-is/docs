@@ -2,7 +2,10 @@
 
 # Interface: IEventData\<TArgs, TEvent\>
 
-Defined in: [src/core/event.ts:2](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L2)
+Defined in: [src/core/event.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L7)
+
+Core event object passed to every grid event handler. Mirrors W3C/jQuery event
+semantics with propagation and default-prevent controls.
 
 ## Type Parameters
 
@@ -10,9 +13,13 @@ Defined in: [src/core/event.ts:2](https://github.com/serenity-is/Serenity/blob/m
 
 `TArgs` = \{ \}
 
+Payload specific to the event.
+
 ### TEvent
 
 `TEvent` = \{ \}
+
+Native DOM event wrapped by this object.
 
 ## Properties
 
@@ -20,7 +27,9 @@ Defined in: [src/core/event.ts:2](https://github.com/serenity-is/Serenity/blob/m
 
 > **args**: `TArgs`
 
-Defined in: [src/core/event.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L3)
+Defined in: [src/core/event.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L9)
+
+Payload supplied by the event emitter (e.g. `{row, cell, grid}`).
 
 ***
 
@@ -28,7 +37,9 @@ Defined in: [src/core/event.ts:3](https://github.com/serenity-is/Serenity/blob/m
 
 > **defaultPrevented**: `boolean`
 
-Defined in: [src/core/event.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L4)
+Defined in: [src/core/event.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L11)
+
+Whether [IEventData.preventDefault](#preventdefault) has been called.
 
 ***
 
@@ -36,7 +47,9 @@ Defined in: [src/core/event.ts:4](https://github.com/serenity-is/Serenity/blob/m
 
 > **nativeEvent**: `TEvent`
 
-Defined in: [src/core/event.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L13)
+Defined in: [src/core/event.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L36)
+
+The wrapped native DOM event, if any.
 
 ## Methods
 
@@ -44,7 +57,9 @@ Defined in: [src/core/event.ts:13](https://github.com/serenity-is/Serenity/blob/
 
 > **getReturnValue**(): `any`
 
-Defined in: [src/core/event.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L11)
+Defined in: [src/core/event.ts:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L32)
+
+Returns the last non-`undefined` return value from the handlers that have run.
 
 #### Returns
 
@@ -56,7 +71,9 @@ Defined in: [src/core/event.ts:11](https://github.com/serenity-is/Serenity/blob/
 
 > **getReturnValues**(): `any`[]
 
-Defined in: [src/core/event.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L12)
+Defined in: [src/core/event.ts:34](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L34)
+
+Returns all return values collected from handlers.
 
 #### Returns
 
@@ -68,7 +85,9 @@ Defined in: [src/core/event.ts:12](https://github.com/serenity-is/Serenity/blob/
 
 > **isDefaultPrevented**(): `boolean`
 
-Defined in: [src/core/event.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L8)
+Defined in: [src/core/event.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L26)
+
+Returns `true` if [IEventData.preventDefault](#preventdefault) has been called or the native event is default-prevented.
 
 #### Returns
 
@@ -80,7 +99,9 @@ Defined in: [src/core/event.ts:8](https://github.com/serenity-is/Serenity/blob/m
 
 > **isImmediatePropagationStopped**(): `boolean`
 
-Defined in: [src/core/event.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L9)
+Defined in: [src/core/event.ts:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L28)
+
+Returns `true` if [IEventData.stopImmediatePropagation](#stopimmediatepropagation) has been called.
 
 #### Returns
 
@@ -92,7 +113,9 @@ Defined in: [src/core/event.ts:9](https://github.com/serenity-is/Serenity/blob/m
 
 > **isPropagationStopped**(): `boolean`
 
-Defined in: [src/core/event.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L10)
+Defined in: [src/core/event.ts:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L30)
+
+Returns `true` if [IEventData.stopPropagation](#stoppropagation) has been called.
 
 #### Returns
 
@@ -104,7 +127,9 @@ Defined in: [src/core/event.ts:10](https://github.com/serenity-is/Serenity/blob/
 
 > **preventDefault**(): `void`
 
-Defined in: [src/core/event.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L5)
+Defined in: [src/core/event.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L15)
+
+Prevents the default action associated with the event.
 
 #### Returns
 
@@ -116,7 +141,9 @@ Defined in: [src/core/event.ts:5](https://github.com/serenity-is/Serenity/blob/m
 
 > **stopImmediatePropagation**(): `void`
 
-Defined in: [src/core/event.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L7)
+Defined in: [src/core/event.ts:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L24)
+
+Prevents remaining handlers from being executed. Also stops DOM propagation.
 
 #### Returns
 
@@ -128,7 +155,10 @@ Defined in: [src/core/event.ts:7](https://github.com/serenity-is/Serenity/blob/m
 
 > **stopPropagation**(): `void`
 
-Defined in: [src/core/event.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L6)
+Defined in: [src/core/event.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L20)
+
+Stops the event from bubbling further, but remaining handlers on the same
+emitter still run. Also calls `stopPropagation` on the native event when present.
 
 #### Returns
 

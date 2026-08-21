@@ -4,6 +4,7 @@
 
 > `const` **GlobalEditorLock**: [`EditorLock`](../classes/EditorLock.md)
 
-Defined in: [src/core/editing.ts:168](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L168)
+Defined in: [src/core/editing.ts:277](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L277)
 
-A global singleton editor lock.
+Global singleton editor lock instance used by the grid by default.
+Import this when you need a shared lock outside the grid.

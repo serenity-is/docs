@@ -2,7 +2,11 @@
 
 # Interface: GridSignals
 
-Defined in: [src/core/grid-signals.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L3)
+Defined in: [src/core/grid-signals.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L8)
+
+Reactive signals surface for the grid's chrome and pinning state.
+Backed by `@serenity-is/domwise` signals and used internally by the grid
+and layout engine to drive visibility and pinning.
 
 ## Properties
 
@@ -10,7 +14,9 @@ Defined in: [src/core/grid-signals.ts:3](https://github.com/serenity-is/Serenity
 
 > `readonly` **frozenBottomRows**: `Signal`\<`number`\>
 
-Defined in: [src/core/grid-signals.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L15)
+Defined in: [src/core/grid-signals.ts:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L32)
+
+Number of rows frozen at the bottom of the viewport.
 
 ***
 
@@ -18,7 +24,9 @@ Defined in: [src/core/grid-signals.ts:15](https://github.com/serenity-is/Serenit
 
 > `readonly` **frozenTopRows**: `Signal`\<`number`\>
 
-Defined in: [src/core/grid-signals.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L14)
+Defined in: [src/core/grid-signals.ts:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L30)
+
+Number of rows frozen at the top of the viewport.
 
 ***
 
@@ -26,7 +34,9 @@ Defined in: [src/core/grid-signals.ts:14](https://github.com/serenity-is/Serenit
 
 > `readonly` **hideColumnHeader**: `Computed`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L5)
+Defined in: [src/core/grid-signals.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L12)
+
+Inverse of [GridSignals.showColumnHeader](#showcolumnheader); `true` when the header is hidden.
 
 ***
 
@@ -34,7 +44,9 @@ Defined in: [src/core/grid-signals.ts:5](https://github.com/serenity-is/Serenity
 
 > `readonly` **hideFooterRow**: `Computed`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L11)
+Defined in: [src/core/grid-signals.ts:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L24)
+
+Inverse of [GridSignals.showFooterRow](#showfooterrow).
 
 ***
 
@@ -42,7 +54,9 @@ Defined in: [src/core/grid-signals.ts:11](https://github.com/serenity-is/Serenit
 
 > `readonly` **hideHeaderRow**: `Computed`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L9)
+Defined in: [src/core/grid-signals.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L20)
+
+Inverse of [GridSignals.showHeaderRow](#showheaderrow).
 
 ***
 
@@ -50,7 +64,9 @@ Defined in: [src/core/grid-signals.ts:9](https://github.com/serenity-is/Serenity
 
 > `readonly` **hideTopPanel**: `Computed`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L7)
+Defined in: [src/core/grid-signals.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L16)
+
+Inverse of [GridSignals.showTopPanel](#showtoppanel).
 
 ***
 
@@ -58,7 +74,9 @@ Defined in: [src/core/grid-signals.ts:7](https://github.com/serenity-is/Serenity
 
 > `readonly` **pinnedEndCols**: `Signal`\<`number`\>
 
-Defined in: [src/core/grid-signals.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L13)
+Defined in: [src/core/grid-signals.ts:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L28)
+
+Number of columns pinned to the end (right in LTR, left in RTL) side.
 
 ***
 
@@ -66,7 +84,9 @@ Defined in: [src/core/grid-signals.ts:13](https://github.com/serenity-is/Serenit
 
 > `readonly` **pinnedStartCols**: `Signal`\<`number`\>
 
-Defined in: [src/core/grid-signals.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L12)
+Defined in: [src/core/grid-signals.ts:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L26)
+
+Number of columns pinned to the start (left in LTR, right in RTL) side.
 
 ***
 
@@ -74,7 +94,9 @@ Defined in: [src/core/grid-signals.ts:12](https://github.com/serenity-is/Serenit
 
 > `readonly` **showColumnHeader**: `Signal`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L4)
+Defined in: [src/core/grid-signals.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L10)
+
+Whether the column header row is visible.
 
 ***
 
@@ -82,7 +104,9 @@ Defined in: [src/core/grid-signals.ts:4](https://github.com/serenity-is/Serenity
 
 > `readonly` **showFooterRow**: `Signal`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L10)
+Defined in: [src/core/grid-signals.ts:22](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L22)
+
+Whether the footer row is visible.
 
 ***
 
@@ -90,7 +114,9 @@ Defined in: [src/core/grid-signals.ts:10](https://github.com/serenity-is/Serenit
 
 > `readonly` **showHeaderRow**: `Signal`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L8)
+Defined in: [src/core/grid-signals.ts:18](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L18)
+
+Whether the header row (filter row) is visible.
 
 ***
 
@@ -98,4 +124,6 @@ Defined in: [src/core/grid-signals.ts:8](https://github.com/serenity-is/Serenity
 
 > `readonly` **showTopPanel**: `Signal`\<`boolean`\>
 
-Defined in: [src/core/grid-signals.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L6)
+Defined in: [src/core/grid-signals.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-signals.ts#L14)
+
+Whether the top panel row is visible.

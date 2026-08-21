@@ -2,9 +2,9 @@
 
 # Class: EventEmitter\<TArgs, TEvent\>
 
-Defined in: [src/core/event.ts:173](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L173)
+Defined in: [src/core/event.ts:217](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L217)
 
-A simple publisher-subscriber implementation.
+Lightweight publish–subscribe implementation used for all SleekGrid events.
 
 ## Type Parameters
 
@@ -12,9 +12,13 @@ A simple publisher-subscriber implementation.
 
 `TArgs` = `any`
 
+Payload type.
+
 ### TEvent
 
 `TEvent` = \{ \}
+
+Wrapped native event type.
 
 ## Constructors
 
@@ -32,7 +36,9 @@ A simple publisher-subscriber implementation.
 
 > **clear**(): `void`
 
-Defined in: [src/core/event.ts:221](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L221)
+Defined in: [src/core/event.ts:262](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L262)
+
+Removes all registered handlers.
 
 #### Returns
 
@@ -44,9 +50,9 @@ Defined in: [src/core/event.ts:221](https://github.com/serenity-is/Serenity/blob
 
 > **notify**(`args?`, `e?`, `scope?`): [`EventData`](../type-aliases/EventData.md)\<`TArgs`, `TEvent`\>
 
-Defined in: [src/core/event.ts:211](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L211)
+Defined in: [src/core/event.ts:249](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L249)
 
-Fires an event notifying all subscribers.
+Fires the event, invoking all subscribers in order until propagation is stopped.
 
 #### Parameters
 
@@ -54,29 +60,25 @@ Fires an event notifying all subscribers.
 
 `TArgs`
 
-{Object} Additional data object to be passed to all handlers.
+Payload passed to handlers as `e.args`.
 
 ##### e?
 
 `TEvent`
 
-{EventDataWrapper}
-     Optional.
-     An <code>EventData</code> object to be passed to all handlers.
-     For DOM events, an existing W3C/jQuery event object can be passed in.
+Optional native DOM event to wrap.
 
 ##### scope?
 
 `object`
 
-{Object}
-     Optional.
-     The scope ("this") within which the handler will be executed.
-     If not specified, the scope will be set to the <code>Event</code> instance.
+`this` value for handlers; defaults to the emitter itself.
 
 #### Returns
 
 [`EventData`](../type-aliases/EventData.md)\<`TArgs`, `TEvent`\>
+
+The [EventData](../type-aliases/EventData.md) object created for this notification (carries return values and propagation flags).
 
 ***
 
@@ -84,11 +86,10 @@ Fires an event notifying all subscribers.
 
 > **subscribe**(`fn`): `void`
 
-Defined in: [src/core/event.ts:183](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L183)
+Defined in: [src/core/event.ts:226](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L226)
 
-Adds an event handler to be called when the event is fired.
-<p>Event handler will receive two arguments - an <code>EventData</code> and the <code>data</code>
-object the event was fired with.<p>
+Registers an event handler to be invoked when the event is fired.
+Handlers receive `(eventData, args)` and run in insertion order.
 
 #### Parameters
 
@@ -96,7 +97,7 @@ object the event was fired with.<p>
 
 [`EventCallback`](../type-aliases/EventCallback.md)\<`TArgs`, `TEvent`\>
 
-{Function} Event handler.
+Handler to register.
 
 #### Returns
 
@@ -108,9 +109,9 @@ object the event was fired with.<p>
 
 > **unsubscribe**(`fn`): `void`
 
-Defined in: [src/core/event.ts:191](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L191)
+Defined in: [src/core/event.ts:234](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L234)
 
-Removes an event handler added with <code>subscribe(fn)</code>.
+Removes a previously registered handler.
 
 #### Parameters
 
@@ -118,7 +119,7 @@ Removes an event handler added with <code>subscribe(fn)</code>.
 
 [`EventCallback`](../type-aliases/EventCallback.md)\<`TArgs`, `TEvent`\>
 
-{Function} Event handler to be removed.
+Handler to remove; must be the exact function reference passed to [EventEmitter.subscribe](#subscribe).
 
 #### Returns
 

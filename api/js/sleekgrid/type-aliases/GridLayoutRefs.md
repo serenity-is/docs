@@ -4,7 +4,9 @@
 
 > **GridLayoutRefs** = `object`
 
-Defined in: [src/layouts/layout-refs.tsx:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L21)
+Defined in: [src/layouts/layout-refs.tsx:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L39)
+
+Aggregated refs for all bands and derived pinning/frozen indices.
 
 ## Properties
 
@@ -12,39 +14,57 @@ Defined in: [src/layouts/layout-refs.tsx:21](https://github.com/serenity-is/Sere
 
 > **config**: `object`
 
-Defined in: [src/layouts/layout-refs.tsx:34](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L34)
+Defined in: [src/layouts/layout-refs.tsx:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L65)
+
+Writable config inputs; setters trigger createGridSignalsAndRefs recalculation.
 
 #### colCount?
 
 > `optional` **colCount**: `number`
 
+Total column count driving index calculations.
+
 #### dataLength?
 
 > `optional` **dataLength**: `number`
+
+Total data row count driving frozen calculations.
 
 #### frozenBottomRows?
 
 > `optional` **frozenBottomRows**: `number`
 
+Desired bottom-frozen row count.
+
 #### frozenLimit?
 
 > `optional` **frozenLimit**: `number` \| `null`
+
+Maximum total frozen rows, or `null` to allow all.
 
 #### frozenTopRows?
 
 > `optional` **frozenTopRows**: `number`
 
+Desired top-frozen row count.
+
 #### pinnedEndCols?
 
 > `optional` **pinnedEndCols**: `number`
+
+Desired end-pinned column count.
 
 #### pinnedLimit?
 
 > `optional` **pinnedLimit**: `number` \| `null`
 
+Maximum total pinned columns, or `null` to allow all.
+
 #### pinnedStartCols?
 
 > `optional` **pinnedStartCols**: `number`
+
+Desired start-pinned column count.
 
 ***
 
@@ -52,7 +72,9 @@ Defined in: [src/layouts/layout-refs.tsx:34](https://github.com/serenity-is/Sere
 
 > `readonly` **end**: [`GridBandRefs`](../interfaces/GridBandRefs.md)
 
-Defined in: [src/layouts/layout-refs.tsx:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L24)
+Defined in: [src/layouts/layout-refs.tsx:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L45)
+
+Band refs for the pinned-end side.
 
 ***
 
@@ -60,7 +82,9 @@ Defined in: [src/layouts/layout-refs.tsx:24](https://github.com/serenity-is/Sere
 
 > `readonly` **frozenBottomFirst**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L33)
+Defined in: [src/layouts/layout-refs.tsx:63](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L63)
+
+First bottom-frozen row index or `Infinity` when none.
 
 ***
 
@@ -68,7 +92,9 @@ Defined in: [src/layouts/layout-refs.tsx:33](https://github.com/serenity-is/Sere
 
 > `readonly` **frozenBottomRows**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L32)
+Defined in: [src/layouts/layout-refs.tsx:61](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L61)
+
+Number of bottom-frozen rows.
 
 ***
 
@@ -76,7 +102,9 @@ Defined in: [src/layouts/layout-refs.tsx:32](https://github.com/serenity-is/Sere
 
 > `readonly` **frozenTopLast**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:31](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L31)
+Defined in: [src/layouts/layout-refs.tsx:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L59)
+
+Last top-frozen row index or `-Infinity` when none.
 
 ***
 
@@ -84,7 +112,9 @@ Defined in: [src/layouts/layout-refs.tsx:31](https://github.com/serenity-is/Sere
 
 > `readonly` **frozenTopRows**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L30)
+Defined in: [src/layouts/layout-refs.tsx:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L57)
+
+Number of top-frozen rows.
 
 ***
 
@@ -92,7 +122,9 @@ Defined in: [src/layouts/layout-refs.tsx:30](https://github.com/serenity-is/Sere
 
 > `readonly` **main**: [`GridBandRefs`](../interfaces/GridBandRefs.md)
 
-Defined in: [src/layouts/layout-refs.tsx:23](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L23)
+Defined in: [src/layouts/layout-refs.tsx:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L43)
+
+Band refs for the main (center, scrollable) band.
 
 ***
 
@@ -100,7 +132,9 @@ Defined in: [src/layouts/layout-refs.tsx:23](https://github.com/serenity-is/Sere
 
 > `readonly` **pinnedEndCols**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L28)
+Defined in: [src/layouts/layout-refs.tsx:53](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L53)
+
+Number of columns pinned to the end.
 
 ***
 
@@ -108,7 +142,9 @@ Defined in: [src/layouts/layout-refs.tsx:28](https://github.com/serenity-is/Sere
 
 > `readonly` **pinnedEndFirst**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L29)
+Defined in: [src/layouts/layout-refs.tsx:55](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L55)
+
+First pinned-end column index or `Infinity` when none.
 
 ***
 
@@ -116,7 +152,9 @@ Defined in: [src/layouts/layout-refs.tsx:29](https://github.com/serenity-is/Sere
 
 > `readonly` **pinnedStartCols**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:26](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L26)
+Defined in: [src/layouts/layout-refs.tsx:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L49)
+
+Number of columns pinned to the start (derived, bounded by `config`).
 
 ***
 
@@ -124,7 +162,9 @@ Defined in: [src/layouts/layout-refs.tsx:26](https://github.com/serenity-is/Sere
 
 > `readonly` **pinnedStartLast**: `number`
 
-Defined in: [src/layouts/layout-refs.tsx:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L27)
+Defined in: [src/layouts/layout-refs.tsx:51](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L51)
+
+Last pinned-start column index or `-Infinity` when none.
 
 ***
 
@@ -132,7 +172,9 @@ Defined in: [src/layouts/layout-refs.tsx:27](https://github.com/serenity-is/Sere
 
 > `readonly` **start**: [`GridBandRefs`](../interfaces/GridBandRefs.md)
 
-Defined in: [src/layouts/layout-refs.tsx:22](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L22)
+Defined in: [src/layouts/layout-refs.tsx:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L41)
+
+Band refs for the pinned-start side.
 
 ***
 
@@ -140,4 +182,6 @@ Defined in: [src/layouts/layout-refs.tsx:22](https://github.com/serenity-is/Sere
 
 > `optional` **topPanel**: `HTMLElement`
 
-Defined in: [src/layouts/layout-refs.tsx:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L25)
+Defined in: [src/layouts/layout-refs.tsx:47](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-refs.tsx#L47)
+
+Top panel container element, if rendered.

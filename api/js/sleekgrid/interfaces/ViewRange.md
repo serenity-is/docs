@@ -2,7 +2,10 @@
 
 # Interface: ViewRange
 
-Defined in: [src/core/viewrange.ts:2](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L2)
+Defined in: [src/core/viewrange.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L5)
+
+Describes the current view/buffer window that is (or should be) rendered.
+Row bounds are view indices; column bounds are pixel offsets into the virtual canvas.
 
 ## Properties
 
@@ -10,7 +13,9 @@ Defined in: [src/core/viewrange.ts:2](https://github.com/serenity-is/Serenity/bl
 
 > `optional` **bottom**: `number`
 
-Defined in: [src/core/viewrange.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L4)
+Defined in: [src/core/viewrange.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L9)
+
+Bottom row index of the range (exclusive or inclusive depending on caller; typically exclusive).
 
 ***
 
@@ -18,7 +23,9 @@ Defined in: [src/core/viewrange.ts:4](https://github.com/serenity-is/Serenity/bl
 
 > `optional` **leftPx**: `number`
 
-Defined in: [src/core/viewrange.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L5)
+Defined in: [src/core/viewrange.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L11)
+
+Left pixel offset of the visible buffer window.
 
 ***
 
@@ -26,7 +33,9 @@ Defined in: [src/core/viewrange.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > `optional` **rightPx**: `number`
 
-Defined in: [src/core/viewrange.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L6)
+Defined in: [src/core/viewrange.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L13)
+
+Right pixel offset of the visible buffer window.
 
 ***
 
@@ -34,4 +43,6 @@ Defined in: [src/core/viewrange.ts:6](https://github.com/serenity-is/Serenity/bl
 
 > `optional` **top**: `number`
 
-Defined in: [src/core/viewrange.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L3)
+Defined in: [src/core/viewrange.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/viewrange.ts#L7)
+
+Top row index of the range (inclusive).

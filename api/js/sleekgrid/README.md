@@ -12,7 +12,7 @@ A modern, lightweight, and highly customizable data grid component for web appli
 ## Namespaces
 
 - [Editors](@serenity-is/namespaces/Editors/README.md)
-- [Formatters](@serenity-is/namespaces/Formatters/README.md)
+- [~~Formatters~~](@serenity-is/namespaces/Formatters/README.md)
 
 ## Classes
 
@@ -64,6 +64,10 @@ A modern, lightweight, and highly customizable data grid component for web appli
 - [ColumnSort](interfaces/ColumnSort.md)
 - [CompatFormatterResult](interfaces/CompatFormatterResult.md)
 - [CompositeEditorOptions](interfaces/CompositeEditorOptions.md)
+- [DraggableOption](interfaces/DraggableOption.md)
+- [DragItem](interfaces/DragItem.md)
+- [DragPosition](interfaces/DragPosition.md)
+- [DragRange](interfaces/DragRange.md)
 - [EditCommand](interfaces/EditCommand.md)
 - [EditController](interfaces/EditController.md)
 - [Editor](interfaces/Editor.md)
@@ -145,6 +149,7 @@ A modern, lightweight, and highly customizable data grid component for web appli
 - [convertCompatFormatter](functions/convertCompatFormatter.md)
 - [defaultColumnFormat](functions/defaultColumnFormat.md)
 - [disableSelection](functions/disableSelection.md)
+- [Draggable](functions/Draggable.md)
 - [escapeHtml](functions/escapeHtml.md)
 - [FooterRow](functions/FooterRow.md)
 - [formatterContext](functions/formatterContext.md)

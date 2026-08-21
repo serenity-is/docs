@@ -2,7 +2,11 @@
 
 # Class: RowSelectionModel
 
-Defined in: [src/plugins/rowselectionmodel.ts:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L28)
+Defined in: [src/plugins/rowselectionmodel.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L40)
+
+Selection model that treats selection as whole rows (full-width ranges).
+Supports ActiveCell-driven selection, Shift+Up/Down range extension and
+Ctrl/Meta/Shift-click row toggling. Implements [SelectionModel](../interfaces/SelectionModel.md).
 
 ## Implements
 
@@ -15,13 +19,17 @@ Defined in: [src/plugins/rowselectionmodel.ts:28](https://github.com/serenity-is
 
 > **new RowSelectionModel**(`options?`): `RowSelectionModel`
 
-Defined in: [src/plugins/rowselectionmodel.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L35)
+Defined in: [src/plugins/rowselectionmodel.ts:55](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L55)
+
+Creates the selection model.
 
 #### Parameters
 
 ##### options?
 
 [`RowSelectionModelOptions`](../interfaces/RowSelectionModelOptions.md)
+
+Partial options merged with [RowSelectionModel.defaults](#defaults).
 
 #### Returns
 
@@ -33,7 +41,9 @@ Defined in: [src/plugins/rowselectionmodel.ts:35](https://github.com/serenity-is
 
 > **onSelectedRangesChanged**: [`EventEmitter`](EventEmitter.md)\<[`CellRange`](CellRange.md)[]\>
 
-Defined in: [src/plugins/rowselectionmodel.ts:33](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L33)
+Defined in: [src/plugins/rowselectionmodel.ts:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L49)
+
+Emits when selected ranges change; used by the grid to update UI state.
 
 #### Implementation of
 
@@ -45,7 +55,9 @@ Defined in: [src/plugins/rowselectionmodel.ts:33](https://github.com/serenity-is
 
 > `readonly` `static` **defaults**: [`RowSelectionModelOptions`](../interfaces/RowSelectionModelOptions.md)
 
-Defined in: [src/plugins/rowselectionmodel.ts:39](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L39)
+Defined in: [src/plugins/rowselectionmodel.ts:60](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L60)
+
+Default option values.
 
 ## Methods
 
@@ -53,7 +65,9 @@ Defined in: [src/plugins/rowselectionmodel.ts:39](https://github.com/serenity-is
 
 > **destroy**(): `void`
 
-Defined in: [src/plugins/rowselectionmodel.ts:50](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L50)
+Defined in: [src/plugins/rowselectionmodel.ts:78](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L78)
+
+Unsubscribes handlers installed by [RowSelectionModel.init](#init).
 
 #### Returns
 
@@ -69,11 +83,15 @@ Defined in: [src/plugins/rowselectionmodel.ts:50](https://github.com/serenity-is
 
 > **getSelectedRanges**(): [`CellRange`](CellRange.md)[]
 
-Defined in: [src/plugins/rowselectionmodel.ts:90](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L90)
+Defined in: [src/plugins/rowselectionmodel.ts:134](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L134)
+
+Returns the current selection as full-width [CellRange](CellRange.md) objects.
 
 #### Returns
 
 [`CellRange`](CellRange.md)[]
+
+Current selected ranges.
 
 ***
 
@@ -81,11 +99,15 @@ Defined in: [src/plugins/rowselectionmodel.ts:90](https://github.com/serenity-is
 
 > **getSelectedRows**(): `number`[]
 
-Defined in: [src/plugins/rowselectionmodel.ts:74](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L74)
+Defined in: [src/plugins/rowselectionmodel.ts:106](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L106)
+
+Returns selected view row indices derived from the internal ranges.
 
 #### Returns
 
 `number`[]
+
+Array of selected row indices.
 
 ***
 
@@ -93,13 +115,17 @@ Defined in: [src/plugins/rowselectionmodel.ts:74](https://github.com/serenity-is
 
 > **init**(`grid`): `void`
 
-Defined in: [src/plugins/rowselectionmodel.ts:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L43)
+Defined in: [src/plugins/rowselectionmodel.ts:68](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L68)
+
+Attaches to `onActiveCellChanged`, `onKeyDown` and `onClick` on `grid`.
 
 #### Parameters
 
 ##### grid
 
 [`ISleekGrid`](../interfaces/ISleekGrid.md)
+
+Host grid instance.
 
 #### Returns
 
@@ -115,13 +141,17 @@ Defined in: [src/plugins/rowselectionmodel.ts:43](https://github.com/serenity-is
 
 > **setSelectedRanges**(`ranges`): `void`
 
-Defined in: [src/plugins/rowselectionmodel.ts:82](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L82)
+Defined in: [src/plugins/rowselectionmodel.ts:122](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L122)
+
+Sets selection from explicit ranges (each range should span the full row width).
 
 #### Parameters
 
 ##### ranges
 
 [`CellRange`](CellRange.md)[]
+
+Cell ranges representing row selection.
 
 #### Returns
 
@@ -137,13 +167,17 @@ Defined in: [src/plugins/rowselectionmodel.ts:82](https://github.com/serenity-is
 
 > **setSelectedRows**(`rows`): `void`
 
-Defined in: [src/plugins/rowselectionmodel.ts:78](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L78)
+Defined in: [src/plugins/rowselectionmodel.ts:114](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/rowselectionmodel.ts#L114)
+
+Sets selection from a list of row indices.
 
 #### Parameters
 
 ##### rows
 
 `number`[]
+
+Row indices to select.
 
 #### Returns
 

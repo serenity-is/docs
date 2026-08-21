@@ -2,7 +2,9 @@
 
 # Interface: ArgsScroll
 
-Defined in: [src/core/eventargs.ts:47](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L47)
+Defined in: [src/core/eventargs.ts:75](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L75)
+
+Payload for `onScroll`.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/core/eventargs.ts:47](https://github.com/serenity-is/Serenity/b
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **scrollLeft**: `number`
 
-Defined in: [src/core/eventargs.ts:48](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L48)
+Defined in: [src/core/eventargs.ts:77](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L77)
+
+Horizontal scroll offset in pixels.
 
 ***
 
@@ -34,4 +40,6 @@ Defined in: [src/core/eventargs.ts:48](https://github.com/serenity-is/Serenity/b
 
 > **scrollTop**: `number`
 
-Defined in: [src/core/eventargs.ts:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L49)
+Defined in: [src/core/eventargs.ts:79](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L79)
+
+Vertical scroll offset in pixels.

@@ -2,7 +2,9 @@
 
 # Interface: AutoTooltipsOptions
 
-Defined in: [src/plugins/autotooltips.ts:3](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L3)
+Defined in: [src/plugins/autotooltips.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L6)
+
+Options for [AutoTooltips](../classes/AutoTooltips.md).
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/plugins/autotooltips.ts:3](https://github.com/serenity-is/Seren
 
 > `optional` **enableForCells**: `boolean`
 
-Defined in: [src/plugins/autotooltips.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L4)
+Defined in: [src/plugins/autotooltips.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L8)
+
+Auto-assign tooltips for body cells when text overflows. Defaults to `true`.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/plugins/autotooltips.ts:4](https://github.com/serenity-is/Seren
 
 > `optional` **enableForHeaderCells**: `boolean`
 
-Defined in: [src/plugins/autotooltips.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L5)
+Defined in: [src/plugins/autotooltips.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L10)
+
+Auto-assign tooltips for header cells when text overflows. Defaults to `false`.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/plugins/autotooltips.ts:5](https://github.com/serenity-is/Seren
 
 > `optional` **maxToolTipLength**: `number`
 
-Defined in: [src/plugins/autotooltips.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L6)
+Defined in: [src/plugins/autotooltips.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L12)
+
+Maximum tooltip length before truncation with `"..."`; `null` means no limit.
 
 ***
 
@@ -34,4 +42,6 @@ Defined in: [src/plugins/autotooltips.ts:6](https://github.com/serenity-is/Seren
 
 > `optional` **replaceExisting**: `boolean`
 
-Defined in: [src/plugins/autotooltips.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L7)
+Defined in: [src/plugins/autotooltips.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/plugins/autotooltips.ts#L14)
+
+When `true`, overwrites existing `title` attributes.

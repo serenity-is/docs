@@ -4,4 +4,4 @@
 
 > **GridSortEvent** = [`EventData`](EventData.md)\<[`ArgsSort`](../interfaces/ArgsSort.md)\>
 
-Defined in: [src/core/eventargs.ts:97](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L97)
+Defined in: [src/core/eventargs.ts:146](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L146)

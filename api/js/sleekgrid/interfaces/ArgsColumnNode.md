@@ -2,7 +2,9 @@
 
 # Interface: ArgsColumnNode
 
-Defined in: [src/core/eventargs.ts:23](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L23)
+Defined in: [src/core/eventargs.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L35)
+
+Payload for events that reference both a column and its DOM node.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/core/eventargs.ts:23](https://github.com/serenity-is/Serenity/b
 
 > **column**: [`Column`](Column.md)
 
-Defined in: [src/core/eventargs.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L9)
+Defined in: [src/core/eventargs.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L13)
+
+Column related to the event.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/core/eventargs.ts:9](https://github.com/serenity-is/Serenity/bl
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -38,4 +44,6 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **node**: `HTMLElement`
 
-Defined in: [src/core/eventargs.ts:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L24)
+Defined in: [src/core/eventargs.ts:37](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L37)
+
+Header/footer cell node for the column.

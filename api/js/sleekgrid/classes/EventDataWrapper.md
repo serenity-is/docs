@@ -2,10 +2,12 @@
 
 # Class: EventDataWrapper\<TArgs, TEvent\>
 
-Defined in: [src/core/event.ts:78](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L78)
+Defined in: [src/core/event.ts:118](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L118)
 
-An event object for passing data to event handlers and letting them control propagation.
-<p>This is pretty much identical to how W3C and jQuery implement events.</p>
+Wraps a native DOM event and a payload object, exposing propagation controls.
+Property access for common DOM fields (e.g. `clientX`, `key`, `target`) and arg keys
+(`grid`, `row`, `cell`) is dynamically proxied via getters installed by
+`initializeEventDataProps()`.
 
 ## Type Parameters
 
@@ -13,9 +15,13 @@ An event object for passing data to event handlers and letting them control prop
 
 `TArgs`
 
+Event payload type.
+
 ### TEvent
 
 `TEvent` = \{ \}
+
+Wrapped native event type.
 
 ## Implements
 
@@ -27,7 +33,7 @@ An event object for passing data to event handlers and letting them control prop
 
 > **new EventDataWrapper**\<`TArgs`, `TEvent`\>(`event?`, `args?`): `EventDataWrapper`\<`TArgs`, `TEvent`\>
 
-Defined in: [src/core/event.ts:87](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L87)
+Defined in: [src/core/event.ts:127](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L127)
 
 #### Parameters
 
@@ -51,11 +57,15 @@ Defined in: [src/core/event.ts:87](https://github.com/serenity-is/Serenity/blob/
 
 > **get** **args**(): `TArgs`
 
-Defined in: [src/core/event.ts:147](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L147)
+Defined in: [src/core/event.ts:189](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L189)
+
+Payload supplied by the event emitter (e.g. `{row, cell, grid}`).
 
 ##### Returns
 
 `TArgs`
+
+Payload supplied by the event emitter (e.g. `{row, cell, grid}`).
 
 #### Implementation of
 
@@ -69,11 +79,15 @@ Defined in: [src/core/event.ts:147](https://github.com/serenity-is/Serenity/blob
 
 > **get** **defaultPrevented**(): `boolean`
 
-Defined in: [src/core/event.ts:97](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L97)
+Defined in: [src/core/event.ts:137](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L137)
+
+Whether [IEventData.preventDefault](../interfaces/IEventData.md#preventdefault) has been called.
 
 ##### Returns
 
 `boolean`
+
+Whether [IEventData.preventDefault](../interfaces/IEventData.md#preventdefault) has been called.
 
 #### Implementation of
 
@@ -87,11 +101,15 @@ Defined in: [src/core/event.ts:97](https://github.com/serenity-is/Serenity/blob/
 
 > **get** **nativeEvent**(): `TEvent`
 
-Defined in: [src/core/event.ts:165](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L165)
+Defined in: [src/core/event.ts:207](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L207)
+
+The wrapped native DOM event, if any.
 
 ##### Returns
 
 `TEvent`
+
+The wrapped native DOM event, if any.
 
 #### Implementation of
 
@@ -103,7 +121,7 @@ Defined in: [src/core/event.ts:165](https://github.com/serenity-is/Serenity/blob
 
 > **addReturnValue**(`value`): `void`
 
-Defined in: [src/core/event.ts:151](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L151)
+Defined in: [src/core/event.ts:193](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L193)
 
 #### Parameters
 
@@ -121,7 +139,9 @@ Defined in: [src/core/event.ts:151](https://github.com/serenity-is/Serenity/blob
 
 > **getReturnValue**(): `any`
 
-Defined in: [src/core/event.ts:161](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L161)
+Defined in: [src/core/event.ts:203](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L203)
+
+Returns the last non-`undefined` return value from the handlers that have run.
 
 #### Returns
 
@@ -137,7 +157,9 @@ Defined in: [src/core/event.ts:161](https://github.com/serenity-is/Serenity/blob
 
 > **getReturnValues**(): `any`[]
 
-Defined in: [src/core/event.ts:157](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L157)
+Defined in: [src/core/event.ts:199](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L199)
+
+Returns all return values collected from handlers.
 
 #### Returns
 
@@ -153,7 +175,9 @@ Defined in: [src/core/event.ts:157](https://github.com/serenity-is/Serenity/blob
 
 > **isDefaultPrevented**(): `boolean`
 
-Defined in: [src/core/event.ts:104](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L104)
+Defined in: [src/core/event.ts:144](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L144)
+
+Returns `true` if [IEventData.preventDefault](../interfaces/IEventData.md#preventdefault) has been called or the native event is default-prevented.
 
 #### Returns
 
@@ -169,13 +193,15 @@ Defined in: [src/core/event.ts:104](https://github.com/serenity-is/Serenity/blob
 
 > **isImmediatePropagationStopped**(): `boolean`
 
-Defined in: [src/core/event.ts:143](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L143)
+Defined in: [src/core/event.ts:185](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L185)
 
-Returns whether stopImmediatePropagation was called on this event object.\
+Returns whether [EventDataWrapper.stopImmediatePropagation](#stopimmediatepropagation) was called on this event object.
 
 #### Returns
 
 `boolean`
+
+`true` if immediate propagation was stopped.
 
 #### Implementation of
 
@@ -187,13 +213,15 @@ Returns whether stopImmediatePropagation was called on this event object.\
 
 > **isPropagationStopped**(): `boolean`
 
-Defined in: [src/core/event.ts:128](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L128)
+Defined in: [src/core/event.ts:169](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L169)
 
-Returns whether stopPropagation was called on this event object.
+Returns whether [EventDataWrapper.stopPropagation](#stoppropagation) was called on this event object.
 
 #### Returns
 
 `boolean`
+
+`true` if propagation was stopped.
 
 #### Implementation of
 
@@ -205,7 +233,9 @@ Returns whether stopPropagation was called on this event object.
 
 > **preventDefault**(): `void`
 
-Defined in: [src/core/event.ts:99](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L99)
+Defined in: [src/core/event.ts:139](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L139)
+
+Prevents the default action associated with the event.
 
 #### Returns
 
@@ -221,9 +251,9 @@ Defined in: [src/core/event.ts:99](https://github.com/serenity-is/Serenity/blob/
 
 > **stopImmediatePropagation**(): `void`
 
-Defined in: [src/core/event.ts:135](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L135)
+Defined in: [src/core/event.ts:176](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L176)
 
-Prevents the rest of the handlers from being executed.
+Prevents remaining handlers from being executed and stops DOM propagation.
 
 #### Returns
 
@@ -239,9 +269,9 @@ Prevents the rest of the handlers from being executed.
 
 > **stopPropagation**(): `void`
 
-Defined in: [src/core/event.ts:120](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L120)
+Defined in: [src/core/event.ts:160](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/event.ts#L160)
 
-Stops event from propagating up the DOM tree.
+Stops event from propagating up the DOM tree and marks it as propagation-stopped.
 
 #### Returns
 

@@ -2,7 +2,9 @@
 
 # Interface: ArgsAddNewRow
 
-Defined in: [src/core/eventargs.ts:70](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L70)
+Defined in: [src/core/eventargs.ts:111](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L111)
+
+Payload for `onAddNewRow`.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/core/eventargs.ts:70](https://github.com/serenity-is/Serenity/b
 
 > **column**: [`Column`](Column.md)
 
-Defined in: [src/core/eventargs.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L9)
+Defined in: [src/core/eventargs.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L13)
+
+Column related to the event.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/core/eventargs.ts:9](https://github.com/serenity-is/Serenity/bl
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -38,4 +44,6 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **item**: `any`
 
-Defined in: [src/core/eventargs.ts:71](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L71)
+Defined in: [src/core/eventargs.ts:113](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L113)
+
+Provisional new data item being added.

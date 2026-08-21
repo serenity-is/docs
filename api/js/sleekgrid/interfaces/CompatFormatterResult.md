@@ -2,7 +2,9 @@
 
 # Interface: CompatFormatterResult
 
-Defined in: [src/core/formatting.ts:88](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L88)
+Defined in: [src/core/formatting.ts:102](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L102)
+
+Structured result for legacy formatters that need to convey extra metadata.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/core/formatting.ts:88](https://github.com/serenity-is/Serenity/
 
 > `optional` **addClasses**: `string`
 
-Defined in: [src/core/formatting.ts:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L89)
+Defined in: [src/core/formatting.ts:104](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L104)
+
+Extra CSS classes to add to the cell node.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/core/formatting.ts:89](https://github.com/serenity-is/Serenity/
 
 > `optional` **text**: [`FormatterResult`](../type-aliases/FormatterResult.md)
 
-Defined in: [src/core/formatting.ts:90](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L90)
+Defined in: [src/core/formatting.ts:106](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L106)
+
+Main cell content.
 
 ***
 
@@ -26,4 +32,6 @@ Defined in: [src/core/formatting.ts:90](https://github.com/serenity-is/Serenity/
 
 > `optional` **toolTip**: `string`
 
-Defined in: [src/core/formatting.ts:91](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L91)
+Defined in: [src/core/formatting.ts:108](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/formatting.ts#L108)
+
+Tooltip text for the cell node.

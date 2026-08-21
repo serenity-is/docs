@@ -2,7 +2,9 @@
 
 # Interface: ArgsCssStyle
 
-Defined in: [src/core/eventargs.ts:52](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L52)
+Defined in: [src/core/eventargs.ts:83](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L83)
+
+Payload for `onCellCssStylesChanged` / cell-style setter events.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/core/eventargs.ts:52](https://github.com/serenity-is/Serenity/b
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **hash**: [`CellStylesHash`](../type-aliases/CellStylesHash.md)
 
-Defined in: [src/core/eventargs.ts:54](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L54)
+Defined in: [src/core/eventargs.ts:87](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L87)
+
+Hash of `row -> columnId -> cssClass` describing the new styles.
 
 ***
 
@@ -34,4 +40,6 @@ Defined in: [src/core/eventargs.ts:54](https://github.com/serenity-is/Serenity/b
 
 > **key**: `string`
 
-Defined in: [src/core/eventargs.ts:53](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L53)
+Defined in: [src/core/eventargs.ts:85](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L85)
+
+Style key/bucket name.

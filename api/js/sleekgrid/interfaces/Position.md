@@ -2,7 +2,9 @@
 
 # Interface: Position
 
-Defined in: [src/core/editing.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L4)
+Defined in: [src/core/editing.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L7)
+
+Pixel bounds for positioning an editor or other overlay relative to the grid viewport.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/core/editing.ts:4](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **bottom**: `number`
 
-Defined in: [src/core/editing.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L5)
+Defined in: [src/core/editing.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L9)
+
+Bottom offset in pixels.
 
 ***
 
@@ -18,7 +22,9 @@ Defined in: [src/core/editing.ts:5](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **height**: `number`
 
-Defined in: [src/core/editing.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L6)
+Defined in: [src/core/editing.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L11)
+
+Height in pixels.
 
 ***
 
@@ -26,7 +32,9 @@ Defined in: [src/core/editing.ts:6](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **left**: `number`
 
-Defined in: [src/core/editing.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L7)
+Defined in: [src/core/editing.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L13)
+
+Left offset in pixels.
 
 ***
 
@@ -34,7 +42,9 @@ Defined in: [src/core/editing.ts:7](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **right**: `number`
 
-Defined in: [src/core/editing.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L8)
+Defined in: [src/core/editing.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L15)
+
+Right offset in pixels.
 
 ***
 
@@ -42,7 +52,9 @@ Defined in: [src/core/editing.ts:8](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **top**: `number`
 
-Defined in: [src/core/editing.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L9)
+Defined in: [src/core/editing.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L17)
+
+Top offset in pixels.
 
 ***
 
@@ -50,7 +62,9 @@ Defined in: [src/core/editing.ts:9](https://github.com/serenity-is/Serenity/blob
 
 > `optional` **visible**: `boolean`
 
-Defined in: [src/core/editing.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L10)
+Defined in: [src/core/editing.ts:19](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L19)
+
+Whether the positioned element is currently visible.
 
 ***
 
@@ -58,4 +72,6 @@ Defined in: [src/core/editing.ts:10](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **width**: `number`
 
-Defined in: [src/core/editing.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L11)
+Defined in: [src/core/editing.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L21)
+
+Width in pixels.

@@ -4,7 +4,10 @@
 
 > **Header**(`__namedParameters`): `JSXElement`
 
-Defined in: [src/layouts/layout-components.tsx:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L25)
+Defined in: [src/layouts/layout-components.tsx:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L32)
+
+Header shell component for a single band. Hosts the column-header container
+and hides automatically when the band is empty or the header is hidden.
 
 ## Parameters
 

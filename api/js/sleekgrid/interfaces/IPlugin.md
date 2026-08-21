@@ -2,11 +2,13 @@
 
 # ~~Interface: IPlugin~~
 
-Defined in: [src/core/grid-plugin.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L10)
+Defined in: [src/core/grid-plugin.ts:22](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L22)
+
+Legacy alias for [GridPlugin](GridPlugin.md).
 
 ## Deprecated
 
-Use GridPlugin instead
+Use [GridPlugin](GridPlugin.md) instead.
 
 ## Extends
 
@@ -18,7 +20,9 @@ Use GridPlugin instead
 
 > `optional` **destroy**: () => `void`
 
-Defined in: [src/core/grid-plugin.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L6)
+Defined in: [src/core/grid-plugin.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L15)
+
+Optional teardown hook; called when the grid or plugin is unregistered.
 
 #### Returns
 
@@ -34,7 +38,9 @@ Defined in: [src/core/grid-plugin.ts:6](https://github.com/serenity-is/Serenity/
 
 > `optional` **pluginName**: `string`
 
-Defined in: [src/core/grid-plugin.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L5)
+Defined in: [src/core/grid-plugin.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L13)
+
+Optional unique name used by [GridPluginHost.getPluginByName](GridPluginHost.md#getpluginbyname) for lookup.
 
 #### Inherited from
 
@@ -46,13 +52,17 @@ Defined in: [src/core/grid-plugin.ts:5](https://github.com/serenity-is/Serenity/
 
 > **init**(`grid`): `void`
 
-Defined in: [src/core/grid-plugin.ts:4](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L4)
+Defined in: [src/core/grid-plugin.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/grid-plugin.ts#L11)
+
+Called by the grid when the plugin is registered.
 
 #### Parameters
 
 ##### grid
 
 [`ISleekGrid`](ISleekGrid.md)
+
+Host grid instance the plugin attaches to.
 
 #### Returns
 

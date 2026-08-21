@@ -4,4 +4,4 @@
 
 > **CellKeyboardEvent** = [`EventData`](EventData.md)\<[`ArgsCell`](../interfaces/ArgsCell.md), `KeyboardEvent`\>
 
-Defined in: [src/core/eventargs.ts:86](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L86)
+Defined in: [src/core/eventargs.ts:135](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L135)

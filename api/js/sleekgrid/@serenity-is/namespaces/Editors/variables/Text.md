@@ -4,4 +4,6 @@
 
 > `const` **Text**: *typeof* [`TextCellEdit`](../../../../classes/TextCellEdit.md) = `TextCellEdit`
 
-Defined in: [src/editors/index.ts:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L6)
+Defined in: [src/editors/index.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L11)
+
+Legacy alias for [TextCellEdit](../../../../classes/TextCellEdit.md).

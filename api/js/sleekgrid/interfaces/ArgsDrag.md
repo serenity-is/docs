@@ -2,7 +2,9 @@
 
 # Interface: ArgsDrag
 
-Defined in: [src/core/eventargs.ts:12](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L12)
+Defined in: [src/core/eventargs.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L17)
+
+Payload for drag lifecycle events (drag init/start/drag/end).
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/core/eventargs.ts:12](https://github.com/serenity-is/Serenity/b
 
 > **cell**: `number`
 
-Defined in: [src/core/eventargs.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L15)
+Defined in: [src/core/eventargs.ts:23](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L23)
+
+Cell/column index where the drag originated.
 
 ***
 
@@ -22,7 +26,9 @@ Defined in: [src/core/eventargs.ts:15](https://github.com/serenity-is/Serenity/b
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -34,7 +40,9 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **helper**: `HTMLElement`
 
-Defined in: [src/core/eventargs.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L17)
+Defined in: [src/core/eventargs.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L27)
+
+Visual helper element following the pointer during the drag.
 
 ***
 
@@ -42,7 +50,9 @@ Defined in: [src/core/eventargs.ts:17](https://github.com/serenity-is/Serenity/b
 
 > **item**: `any`
 
-Defined in: [src/core/eventargs.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L16)
+Defined in: [src/core/eventargs.ts:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L25)
+
+Data item at `row`.
 
 ***
 
@@ -50,7 +60,9 @@ Defined in: [src/core/eventargs.ts:16](https://github.com/serenity-is/Serenity/b
 
 > **mode**: `string`
 
-Defined in: [src/core/eventargs.ts:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L13)
+Defined in: [src/core/eventargs.ts:19](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L19)
+
+Drag mode/category (e.g. `"cell"`, `"column"`).
 
 ***
 
@@ -58,4 +70,6 @@ Defined in: [src/core/eventargs.ts:13](https://github.com/serenity-is/Serenity/b
 
 > **row**: `number`
 
-Defined in: [src/core/eventargs.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L14)
+Defined in: [src/core/eventargs.ts:21](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L21)
+
+Row index where the drag originated.

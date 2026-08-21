@@ -2,7 +2,9 @@
 
 # Interface: ArgsValidationError
 
-Defined in: [src/core/eventargs.ts:78](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L78)
+Defined in: [src/core/eventargs.ts:123](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L123)
+
+Payload for `onValidationError`.
 
 ## Extends
 
@@ -14,7 +16,9 @@ Defined in: [src/core/eventargs.ts:78](https://github.com/serenity-is/Serenity/b
 
 > **cell**: `number`
 
-Defined in: [src/core/eventargs.ts:59](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L59)
+Defined in: [src/core/eventargs.ts:95](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L95)
+
+Cell/column index of the event cell.
 
 #### Inherited from
 
@@ -26,7 +30,9 @@ Defined in: [src/core/eventargs.ts:59](https://github.com/serenity-is/Serenity/b
 
 > **cellNode**: `HTMLElement`
 
-Defined in: [src/core/eventargs.ts:81](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L81)
+Defined in: [src/core/eventargs.ts:129](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L129)
+
+DOM node of the failing cell.
 
 ***
 
@@ -34,7 +40,9 @@ Defined in: [src/core/eventargs.ts:81](https://github.com/serenity-is/Serenity/b
 
 > **column**: [`Column`](Column.md)
 
-Defined in: [src/core/eventargs.ts:80](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L80)
+Defined in: [src/core/eventargs.ts:127](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L127)
+
+Column being validated.
 
 ***
 
@@ -42,7 +50,9 @@ Defined in: [src/core/eventargs.ts:80](https://github.com/serenity-is/Serenity/b
 
 > **editor**: [`Editor`](Editor.md)
 
-Defined in: [src/core/eventargs.ts:79](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L79)
+Defined in: [src/core/eventargs.ts:125](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L125)
+
+Editor that failed validation.
 
 ***
 
@@ -50,7 +60,9 @@ Defined in: [src/core/eventargs.ts:79](https://github.com/serenity-is/Serenity/b
 
 > **grid**: [`ISleekGrid`](ISleekGrid.md)
 
-Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L5)
+Defined in: [src/core/eventargs.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L7)
+
+Grid instance that emitted the event.
 
 #### Inherited from
 
@@ -62,7 +74,9 @@ Defined in: [src/core/eventargs.ts:5](https://github.com/serenity-is/Serenity/bl
 
 > **row**: `number`
 
-Defined in: [src/core/eventargs.ts:58](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L58)
+Defined in: [src/core/eventargs.ts:93](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L93)
+
+Row index of the event cell.
 
 #### Inherited from
 
@@ -74,4 +88,6 @@ Defined in: [src/core/eventargs.ts:58](https://github.com/serenity-is/Serenity/b
 
 > **validationResults**: [`ValidationResult`](ValidationResult.md)
 
-Defined in: [src/core/eventargs.ts:82](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L82)
+Defined in: [src/core/eventargs.ts:131](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/eventargs.ts#L131)
+
+Validation result containing `valid` flag and message.

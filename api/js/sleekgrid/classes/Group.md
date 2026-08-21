@@ -2,9 +2,9 @@
 
 # Class: Group\<TEntity\>
 
-Defined in: [src/core/group.ts:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L7)
+Defined in: [src/core/group.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L8)
 
-Information about a group of rows.
+Represents a group of rows produced by a `DataView` grouping.
 
 ## Extends
 
@@ -15,6 +15,8 @@ Information about a group of rows.
 ### TEntity
 
 `TEntity` = `any`
+
+Row item type being grouped.
 
 ## Constructors
 
@@ -36,7 +38,9 @@ Information about a group of rows.
 
 > `readonly` **\_\_group**: `true` = `true`
 
-Defined in: [src/core/group.ts:8](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L8)
+Defined in: [src/core/group.ts:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L10)
+
+Marker flag identifying this row as a group header.
 
 ***
 
@@ -44,7 +48,10 @@ Defined in: [src/core/group.ts:8](https://github.com/serenity-is/Serenity/blob/m
 
 > **\_\_nonDataRow**: `boolean` = `true`
 
-Defined in: [src/core/base.ts:5](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L5)
+Defined in: [src/core/base.ts:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/base.ts#L11)
+
+Marker flag used at runtime to identify non-data rows.
+Checked by the grid and `DataView` to skip data-specific handling.
 
 #### Inherited from
 
@@ -56,9 +63,9 @@ Defined in: [src/core/base.ts:5](https://github.com/serenity-is/Serenity/blob/ma
 
 > **collapsed**: `boolean` = `false`
 
-Defined in: [src/core/group.ts:36](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L36)
+Defined in: [src/core/group.ts:30](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L30)
 
-Whether a group is collapsed.
+Whether the group is currently collapsed (children hidden).
 
 ***
 
@@ -66,9 +73,9 @@ Whether a group is collapsed.
 
 > **count**: `number` = `0`
 
-Defined in: [src/core/group.ts:22](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L22)
+Defined in: [src/core/group.ts:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L20)
 
-Number of rows in the group.
+Number of leaf rows in the group (excluding group headers/totals).
 
 ***
 
@@ -76,9 +83,9 @@ Number of rows in the group.
 
 > **formatValue**: (`ctx`) => [`FormatterResult`](../type-aliases/FormatterResult.md)
 
-Defined in: [src/core/group.ts:68](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L68)
+Defined in: [src/core/group.ts:53](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L53)
 
-Returns a text representation of the group value.
+Formatter that renders the group value as text.
 
 #### Parameters
 
@@ -96,10 +103,9 @@ Returns a text representation of the group value.
 
 > **groupingKey**: `string`
 
-Defined in: [src/core/group.ts:65](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L65)
+Defined in: [src/core/group.ts:50](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L50)
 
-A unique key used to identify the group.  This key can be used in calls to DataView
-collapseGroup() or expandGroup().
+Unique key used to identify the group; pass to `DataView.collapseGroup()` / `expandGroup()`.
 
 ***
 
@@ -107,9 +113,9 @@ collapseGroup() or expandGroup().
 
 > **groups**: `Group`\<`TEntity`\>[]
 
-Defined in: [src/core/group.ts:57](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L57)
+Defined in: [src/core/group.ts:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L45)
 
-Sub-groups that are part of the group.
+Child groups when multiple grouping levels are active.
 
 ***
 
@@ -119,7 +125,7 @@ Sub-groups that are part of the group.
 
 Defined in: [src/core/group.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L15)
 
-Grouping level, starting with 0.
+Grouping level, starting with `0` for top-level groups.
 
 ***
 
@@ -127,9 +133,9 @@ Grouping level, starting with 0.
 
 > **rows**: `TEntity`[] = `[]`
 
-Defined in: [src/core/group.ts:50](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L50)
+Defined in: [src/core/group.ts:40](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L40)
 
-Rows that are part of the group.
+Leaf rows that are part of the group.
 
 ***
 
@@ -137,9 +143,9 @@ Rows that are part of the group.
 
 > **totals**: [`GroupTotals`](GroupTotals.md)\<`TEntity`\>
 
-Defined in: [src/core/group.ts:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L43)
+Defined in: [src/core/group.ts:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L35)
 
-GroupTotals, if any.
+Associated totals row for the group, if aggregation is enabled.
 
 ***
 
@@ -147,9 +153,9 @@ GroupTotals, if any.
 
 > **value**: `any`
 
-Defined in: [src/core/group.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L29)
+Defined in: [src/core/group.ts:25](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L25)
 
-Grouping value.
+Grouping value that all rows in this group share (e.g. the field value).
 
 ## Methods
 
@@ -157,9 +163,9 @@ Grouping value.
 
 > **equals**(`group`): `boolean`
 
-Defined in: [src/core/group.ts:75](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L75)
+Defined in: [src/core/group.ts:60](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/group.ts#L60)
 
-Compares two Group instances.
+Compares two groups by `value`, `count` and `collapsed` state.
 
 #### Parameters
 
@@ -167,8 +173,10 @@ Compares two Group instances.
 
 `Group`
 
-{Group} Group instance to compare to.
+Group instance to compare to.
 
 #### Returns
 
 `boolean`
+
+`true` if the groups are equal by the above fields.

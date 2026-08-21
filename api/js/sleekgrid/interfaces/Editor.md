@@ -2,7 +2,9 @@
 
 # Interface: Editor
 
-Defined in: [src/core/editing.ts:70](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L70)
+Defined in: [src/core/editing.ts:148](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L148)
+
+Contract that all cell editors must implement.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/core/editing.ts:70](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **keyCaptureList**: `number`[]
 
-Defined in: [src/core/editing.ts:75](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L75)
+Defined in: [src/core/editing.ts:166](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L166)
+
+Key codes the editor captures even when the grid also handles them.
 
 ## Methods
 
@@ -18,7 +22,9 @@ Defined in: [src/core/editing.ts:75](https://github.com/serenity-is/Serenity/blo
 
 > **applyValue**(`item`, `value`): `void`
 
-Defined in: [src/core/editing.ts:72](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L72)
+Defined in: [src/core/editing.ts:156](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L156)
+
+Writes the edited value back to the data item.
 
 #### Parameters
 
@@ -26,9 +32,13 @@ Defined in: [src/core/editing.ts:72](https://github.com/serenity-is/Serenity/blo
 
 `any`
 
+Row item to mutate.
+
 ##### value
 
 `any`
+
+Serialized value from [Editor.serializeValue](#serializevalue).
 
 #### Returns
 
@@ -40,7 +50,9 @@ Defined in: [src/core/editing.ts:72](https://github.com/serenity-is/Serenity/blo
 
 > **destroy**(): `void`
 
-Defined in: [src/core/editing.ts:71](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L71)
+Defined in: [src/core/editing.ts:150](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L150)
+
+Tears down DOM and listeners created by the editor.
 
 #### Returns
 
@@ -52,7 +64,9 @@ Defined in: [src/core/editing.ts:71](https://github.com/serenity-is/Serenity/blo
 
 > **focus**(): `void`
 
-Defined in: [src/core/editing.ts:73](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L73)
+Defined in: [src/core/editing.ts:158](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L158)
+
+Focuses the editor's input element.
 
 #### Returns
 
@@ -64,7 +78,9 @@ Defined in: [src/core/editing.ts:73](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **hide**(): `void`
 
-Defined in: [src/core/editing.ts:80](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L80)
+Defined in: [src/core/editing.ts:182](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L182)
+
+Hides the editor without destroying it.
 
 #### Returns
 
@@ -76,11 +92,15 @@ Defined in: [src/core/editing.ts:80](https://github.com/serenity-is/Serenity/blo
 
 > **isValueChanged**(`args`): `boolean`
 
-Defined in: [src/core/editing.ts:74](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L74)
+Defined in: [src/core/editing.ts:164](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L164)
+
+Checks whether the current editor value differs from the original.
 
 #### Parameters
 
 ##### args
+
+Flags influencing the check (e.g. whether a commit is in progress).
 
 ###### commitEdit?
 
@@ -90,19 +110,25 @@ Defined in: [src/core/editing.ts:74](https://github.com/serenity-is/Serenity/blo
 
 `boolean`
 
+`true` if the value has changed.
+
 ***
 
 ### loadValue()
 
 > **loadValue**(`value`): `void`
 
-Defined in: [src/core/editing.ts:76](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L76)
+Defined in: [src/core/editing.ts:171](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L171)
+
+Loads an existing cell value into the editor.
 
 #### Parameters
 
 ##### value
 
 `any`
+
+The value to load.
 
 #### Returns
 
@@ -114,13 +140,17 @@ Defined in: [src/core/editing.ts:76](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **position**(`pos`): `void`
 
-Defined in: [src/core/editing.ts:78](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L78)
+Defined in: [src/core/editing.ts:178](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L178)
+
+Repositions the editor overlay.
 
 #### Parameters
 
 ##### pos
 
 [`Position`](Position.md)
+
+New pixel bounds.
 
 #### Returns
 
@@ -132,7 +162,9 @@ Defined in: [src/core/editing.ts:78](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **preClick**(): `void`
 
-Defined in: [src/core/editing.ts:79](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L79)
+Defined in: [src/core/editing.ts:180](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L180)
+
+Hook invoked when the cell received a pre-click; editors may skip selection.
 
 #### Returns
 
@@ -144,7 +176,9 @@ Defined in: [src/core/editing.ts:79](https://github.com/serenity-is/Serenity/blo
 
 > **serializeValue**(): `any`
 
-Defined in: [src/core/editing.ts:77](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L77)
+Defined in: [src/core/editing.ts:173](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L173)
+
+Serializes the current editor value for commit.
 
 #### Returns
 
@@ -156,7 +190,9 @@ Defined in: [src/core/editing.ts:77](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **show**(): `void`
 
-Defined in: [src/core/editing.ts:81](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L81)
+Defined in: [src/core/editing.ts:184](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L184)
+
+Shows a previously hidden editor.
 
 #### Returns
 
@@ -168,8 +204,12 @@ Defined in: [src/core/editing.ts:81](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **validate**(): [`ValidationResult`](ValidationResult.md)
 
-Defined in: [src/core/editing.ts:82](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L82)
+Defined in: [src/core/editing.ts:186](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L186)
+
+Validates the current value.
 
 #### Returns
 
 [`ValidationResult`](ValidationResult.md)
+
+Validation result.

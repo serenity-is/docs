@@ -2,7 +2,9 @@
 
 # Interface: ValidationResult
 
-Defined in: [src/core/editing.ts:14](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L14)
+Defined in: [src/core/editing.ts:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L27)
+
+Result of validating an editor value before commit.
 
 ## Properties
 
@@ -10,7 +12,9 @@ Defined in: [src/core/editing.ts:14](https://github.com/serenity-is/Serenity/blo
 
 > `optional` **msg**: `string`
 
-Defined in: [src/core/editing.ts:16](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L16)
+Defined in: [src/core/editing.ts:31](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L31)
+
+Human-readable error message when `valid` is `false`.
 
 ***
 
@@ -18,4 +22,6 @@ Defined in: [src/core/editing.ts:16](https://github.com/serenity-is/Serenity/blo
 
 > **valid**: `boolean`
 
-Defined in: [src/core/editing.ts:15](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L15)
+Defined in: [src/core/editing.ts:29](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/core/editing.ts#L29)
+
+Whether the value is valid.

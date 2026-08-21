@@ -2,7 +2,11 @@
 
 # Class: LongTextCellEdit
 
-Defined in: [src/editors/editors.tsx:353](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L353)
+Defined in: [src/editors/editors.tsx:434](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L434)
+
+Detached multi-line text editor using a floating `<textarea>` overlay.
+Renders attached to `document.body` (or inline for composite editors) and
+implements `show`/`hide`/`position` for the overlay lifecycle.
 
 ## Extends
 
@@ -14,7 +18,7 @@ Defined in: [src/editors/editors.tsx:353](https://github.com/serenity-is/Serenit
 
 > **new LongTextCellEdit**(`args`): `LongTextCellEdit`
 
-Defined in: [src/editors/editors.tsx:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L9)
+Defined in: [src/editors/editors.tsx:13](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L13)
 
 #### Parameters
 
@@ -36,7 +40,7 @@ Defined in: [src/editors/editors.tsx:9](https://github.com/serenity-is/Serenity/
 
 > `protected` **\_args**: [`EditorOptions`](../interfaces/EditorOptions.md)
 
-Defined in: [src/editors/editors.tsx:7](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L7)
+Defined in: [src/editors/editors.tsx:11](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L11)
 
 #### Inherited from
 
@@ -48,7 +52,7 @@ Defined in: [src/editors/editors.tsx:7](https://github.com/serenity-is/Serenity/
 
 > `protected` **\_container**: `HTMLElement`
 
-Defined in: [src/editors/editors.tsx:356](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L356)
+Defined in: [src/editors/editors.tsx:437](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L437)
 
 ***
 
@@ -56,7 +60,7 @@ Defined in: [src/editors/editors.tsx:356](https://github.com/serenity-is/Serenit
 
 > `protected` **\_defaultValue**: `any`
 
-Defined in: [src/editors/editors.tsx:6](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L6)
+Defined in: [src/editors/editors.tsx:10](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L10)
 
 #### Inherited from
 
@@ -68,7 +72,7 @@ Defined in: [src/editors/editors.tsx:6](https://github.com/serenity-is/Serenity/
 
 > **\_input**: `HTMLTextAreaElement`
 
-Defined in: [src/editors/editors.tsx:355](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L355)
+Defined in: [src/editors/editors.tsx:436](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L436)
 
 #### Overrides
 
@@ -80,7 +84,7 @@ Defined in: [src/editors/editors.tsx:355](https://github.com/serenity-is/Serenit
 
 > `protected` **\_wrapper**: `HTMLDivElement`
 
-Defined in: [src/editors/editors.tsx:357](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L357)
+Defined in: [src/editors/editors.tsx:438](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L438)
 
 ## Methods
 
@@ -88,7 +92,9 @@ Defined in: [src/editors/editors.tsx:357](https://github.com/serenity-is/Serenit
 
 > **applyValue**(`item`, `state`): `void`
 
-Defined in: [src/editors/editors.tsx:45](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L45)
+Defined in: [src/editors/editors.tsx:73](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L73)
+
+Writes the serialized value back to the data item's field.
 
 #### Parameters
 
@@ -96,9 +102,13 @@ Defined in: [src/editors/editors.tsx:45](https://github.com/serenity-is/Serenity
 
 `any`
 
+Row data item to mutate.
+
 ##### state
 
 `any`
+
+Value returned by [BaseCellEdit.serializeValue](TextCellEdit.md#serializevalue).
 
 #### Returns
 
@@ -114,7 +124,9 @@ Defined in: [src/editors/editors.tsx:45](https://github.com/serenity-is/Serenity
 
 > **cancel**(): `void`
 
-Defined in: [src/editors/editors.tsx:415](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L415)
+Defined in: [src/editors/editors.tsx:505](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L505)
+
+Cancels editing, restoring the default value and notifying the grid.
 
 #### Returns
 
@@ -126,7 +138,9 @@ Defined in: [src/editors/editors.tsx:415](https://github.com/serenity-is/Serenit
 
 > **destroy**(): `void`
 
-Defined in: [src/editors/editors.tsx:433](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L433)
+Defined in: [src/editors/editors.tsx:529](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L529)
+
+Removes the editor input from the DOM.
 
 #### Returns
 
@@ -142,7 +156,9 @@ Defined in: [src/editors/editors.tsx:433](https://github.com/serenity-is/Serenit
 
 > **focus**(): `void`
 
-Defined in: [src/editors/editors.tsx:20](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L20)
+Defined in: [src/editors/editors.tsx:27](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L27)
+
+Focuses the editor's input element.
 
 #### Returns
 
@@ -158,11 +174,15 @@ Defined in: [src/editors/editors.tsx:20](https://github.com/serenity-is/Serenity
 
 > **getValue**(): `string`
 
-Defined in: [src/editors/editors.tsx:24](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L24)
+Defined in: [src/editors/editors.tsx:35](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L35)
+
+Reads the current input value as a string.
 
 #### Returns
 
 `string`
+
+Raw string value from the input.
 
 #### Inherited from
 
@@ -174,13 +194,18 @@ Defined in: [src/editors/editors.tsx:24](https://github.com/serenity-is/Serenity
 
 > **handleKeyDown**(`e`): `void`
 
-Defined in: [src/editors/editors.tsx:385](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L385)
+Defined in: [src/editors/editors.tsx:471](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L471)
+
+Handles overlay-specific keys: Ctrl+Enter to save, Esc to cancel, Tab/Shift+Tab
+to navigate cells, and optionally Left/Right to navigate when at string bounds.
 
 #### Parameters
 
 ##### e
 
 `KeyboardEvent`
+
+Keyboard event from the textarea.
 
 #### Returns
 
@@ -192,7 +217,9 @@ Defined in: [src/editors/editors.tsx:385](https://github.com/serenity-is/Serenit
 
 > **hide**(): `void`
 
-Defined in: [src/editors/editors.tsx:420](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L420)
+Defined in: [src/editors/editors.tsx:511](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L511)
+
+Hides the detached overlay wrapper.
 
 #### Returns
 
@@ -204,7 +231,9 @@ Defined in: [src/editors/editors.tsx:420](https://github.com/serenity-is/Serenit
 
 > **init**(): `void`
 
-Defined in: [src/editors/editors.tsx:359](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L359)
+Defined in: [src/editors/editors.tsx:440](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L440)
+
+Creates and attaches the editor DOM; called by the constructor.
 
 #### Returns
 
@@ -220,11 +249,15 @@ Defined in: [src/editors/editors.tsx:359](https://github.com/serenity-is/Serenit
 
 > **isValueChanged**(): `boolean`
 
-Defined in: [src/editors/editors.tsx:49](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L49)
+Defined in: [src/editors/editors.tsx:81](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L81)
+
+Tests whether the editor content differs from the loaded default.
 
 #### Returns
 
 `boolean`
+
+`true` if the value has changed.
 
 #### Inherited from
 
@@ -236,13 +269,17 @@ Defined in: [src/editors/editors.tsx:49](https://github.com/serenity-is/Serenity
 
 > **loadValue**(`item`): `void`
 
-Defined in: [src/editors/editors.tsx:32](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L32)
+Defined in: [src/editors/editors.tsx:51](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L51)
+
+Loads the item's field value into the editor and selects it.
 
 #### Parameters
 
 ##### item
 
 `any`
+
+Row data item whose field is being edited.
 
 #### Returns
 
@@ -258,13 +295,17 @@ Defined in: [src/editors/editors.tsx:32](https://github.com/serenity-is/Serenity
 
 > **position**(`position`): `void`
 
-Defined in: [src/editors/editors.tsx:428](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L428)
+Defined in: [src/editors/editors.tsx:524](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L524)
+
+Positions the detached overlay relative to the cell bounds.
 
 #### Parameters
 
 ##### position
 
 [`Position`](../interfaces/Position.md)
+
+Pixel bounds of the target cell.
 
 #### Returns
 
@@ -276,7 +317,9 @@ Defined in: [src/editors/editors.tsx:428](https://github.com/serenity-is/Serenit
 
 > **save**(): `void`
 
-Defined in: [src/editors/editors.tsx:411](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L411)
+Defined in: [src/editors/editors.tsx:498](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L498)
+
+Commits the current textarea value via the grid.
 
 #### Returns
 
@@ -288,11 +331,15 @@ Defined in: [src/editors/editors.tsx:411](https://github.com/serenity-is/Serenit
 
 > **serializeValue**(): `any`
 
-Defined in: [src/editors/editors.tsx:41](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L41)
+Defined in: [src/editors/editors.tsx:64](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L64)
+
+Serializes the current input value for commit.
 
 #### Returns
 
 `any`
+
+String content of the input.
 
 #### Inherited from
 
@@ -304,13 +351,17 @@ Defined in: [src/editors/editors.tsx:41](https://github.com/serenity-is/Serenity
 
 > **setValue**(`val`): `void`
 
-Defined in: [src/editors/editors.tsx:28](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L28)
+Defined in: [src/editors/editors.tsx:43](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L43)
+
+Writes a string value into the input.
 
 #### Parameters
 
 ##### val
 
 `string`
+
+Value to set; `null`/`undefined` becomes empty string.
 
 #### Returns
 
@@ -326,7 +377,9 @@ Defined in: [src/editors/editors.tsx:28](https://github.com/serenity-is/Serenity
 
 > **show**(): `void`
 
-Defined in: [src/editors/editors.tsx:424](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L424)
+Defined in: [src/editors/editors.tsx:516](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L516)
+
+Shows the detached overlay wrapper.
 
 #### Returns
 
@@ -338,11 +391,15 @@ Defined in: [src/editors/editors.tsx:424](https://github.com/serenity-is/Serenit
 
 > **validate**(): [`ValidationResult`](../interfaces/ValidationResult.md)
 
-Defined in: [src/editors/editors.tsx:53](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L53)
+Defined in: [src/editors/editors.tsx:89](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/editors.tsx#L89)
+
+Validates the current value using the column's `validator`, if any.
 
 #### Returns
 
 [`ValidationResult`](../interfaces/ValidationResult.md)
+
+Validation result; always valid when no validator is configured.
 
 #### Inherited from
 

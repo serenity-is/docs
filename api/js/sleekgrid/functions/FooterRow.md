@@ -4,7 +4,9 @@
 
 > **FooterRow**(`__namedParameters`): `JSXElement`
 
-Defined in: [src/layouts/layout-components.tsx:69](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L69)
+Defined in: [src/layouts/layout-components.tsx:101](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/layouts/layout-components.tsx#L101)
+
+Footer row shell for a single band.
 
 ## Parameters
 

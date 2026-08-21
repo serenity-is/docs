@@ -4,4 +4,6 @@
 
 > `const` **Date**: *typeof* [`DateCellEdit`](../../../../classes/DateCellEdit.md) = `DateCellEdit`
 
-Defined in: [src/editors/index.ts:9](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L9)
+Defined in: [src/editors/index.ts:17](https://github.com/serenity-is/Serenity/blob/master/packages/sleekgrid/src/editors/index.ts#L17)
+
+Legacy alias for [DateCellEdit](../../../../classes/DateCellEdit.md).

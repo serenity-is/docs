@@ -1,7 +1,7 @@
 # ConnectionStringInfo class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Contains a connection string, its key and provider name.
+Contains a connection string, its key, and provider name.
 
 ```csharp
 public class ConnectionStringInfo : IConnectionString
@@ -11,14 +11,14 @@ public class ConnectionStringInfo : IConnectionString
 | --- | --- |
 | connectionKey | The connection key. |
 | connectionString | The connection string. |
-| providerName | Name of the provider. |
-| dialect | Dialect |
+| providerName | The name of the provider. |
+| dialect | The SQL dialect. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ConnectionStringInfo](ConnectionStringInfo/ConnectionStringInfo.md)(…) | Contains a connection string, its key and provider name. |
+| [ConnectionStringInfo](ConnectionStringInfo/ConnectionStringInfo.md)(…) | Contains a connection string, its key, and provider name. |
 | [ConnectionKey](ConnectionStringInfo/ConnectionKey.md) { get; } | Gets the connection key. |
 | [ConnectionString](ConnectionStringInfo/ConnectionString.md) { get; } | Gets the connection string. |
 | [Dialect](ConnectionStringInfo/Dialect.md) { get; } | Gets the dialect. |

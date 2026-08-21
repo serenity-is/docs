@@ -1,7 +1,7 @@
 # ScriptMinifyResult class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Result returned from a script minifier
+Result returned from a script minifier.
 
 ```csharp
 public class ScriptMinifyResult
@@ -12,8 +12,8 @@ public class ScriptMinifyResult
 | name | description |
 | --- | --- |
 | [ScriptMinifyResult](ScriptMinifyResult/ScriptMinifyResult.md)() | The default constructor. |
-| [Code](ScriptMinifyResult/Code.md) { get; set; } | Gets the minified code |
-| [HasErrors](ScriptMinifyResult/HasErrors.md) { get; set; } | Gets if minifying had errors |
+| [Code](ScriptMinifyResult/Code.md) { get; set; } | Gets or sets the minified code. |
+| [HasErrors](ScriptMinifyResult/HasErrors.md) { get; set; } | Gets or sets whether minifying had errors. |
 
 ## See Also
 

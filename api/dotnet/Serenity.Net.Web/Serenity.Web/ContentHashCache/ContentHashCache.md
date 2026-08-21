@@ -1,7 +1,7 @@
 # ContentHashCache constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the [`ContentHashCache`](../ContentHashCache.md) class.
 
 ```csharp
 public ContentHashCache(IOptions<CDNSettings> cdnSettings, IWebHostEnvironment hostEnvironment, 
@@ -10,15 +10,15 @@ public ContentHashCache(IOptions<CDNSettings> cdnSettings, IWebHostEnvironment h
 
 | parameter | description |
 | --- | --- |
-| cdnSettings | CDN settings |
-| hostEnvironment | Host environment |
-| httpContextAccessor | HTTP context accessor |
+| cdnSettings | The CDN settings. |
+| hostEnvironment | The host environment. |
+| httpContextAccessor | The HTTP context accessor. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | hostEnvironment of httpContextAccessor is null |
+| ArgumentNullException | *hostEnvironment* is `null`. |
 
 ## See Also
 

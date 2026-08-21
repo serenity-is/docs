@@ -1,7 +1,7 @@
 # ValueStopwatch.ElapsedMilliseconds property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets elapsed milliseconds
+Gets the elapsed milliseconds.
 
 ```csharp
 public double ElapsedMilliseconds { get; }

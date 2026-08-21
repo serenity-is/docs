@@ -1,7 +1,7 @@
 # FileSystemExtensions.GetExtension method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets extension for path
+Gets the extension for the specified path.
 
 ```csharp
 public static string GetExtension(this IFileSystem _, string path)
@@ -9,8 +9,12 @@ public static string GetExtension(this IFileSystem _, string path)
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| path | Path |
+| _ | The file system. |
+| path | The path. |
+
+## Return Value
+
+The extension, including the leading period, or an empty string if there is no extension.
 
 ## See Also
 

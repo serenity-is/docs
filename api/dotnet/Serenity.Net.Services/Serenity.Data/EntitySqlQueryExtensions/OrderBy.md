@@ -1,7 +1,7 @@
 # EntitySqlQueryExtensions.OrderBy method (1 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds fields expressions to order by list
+Adds field expressions to the order by list.
 
 ```csharp
 public static SqlQuery OrderBy(this SqlQuery query, params IField[] fields)
@@ -12,11 +12,15 @@ public static SqlQuery OrderBy(this SqlQuery query, params IField[] fields)
 | query | The query. |
 | fields | The fields. |
 
+## Return Value
+
+The query itself.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | fields |
+| ArgumentNullException | fields is null. |
 
 ## See Also
 
@@ -29,7 +33,7 @@ public static SqlQuery OrderBy(this SqlQuery query, params IField[] fields)
 # EntitySqlQueryExtensions.OrderBy method (2 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds fields expression to order by list
+Adds a field's expression to the order by list.
 
 ```csharp
 public static SqlQuery OrderBy(this SqlQuery query, IField field, bool desc = false)
@@ -39,13 +43,17 @@ public static SqlQuery OrderBy(this SqlQuery query, IField field, bool desc = fa
 | --- | --- |
 | query | The query. |
 | field | The field. |
-| desc | if set to `true` [desc]. |
+| desc | if set to `true`, sorts in descending order. |
+
+## Return Value
+
+The query itself.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field |
+| ArgumentNullException | field is null. |
 
 ## See Also
 

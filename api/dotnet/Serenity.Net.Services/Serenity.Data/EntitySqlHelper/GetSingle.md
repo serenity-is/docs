@@ -14,7 +14,7 @@ public static bool GetSingle(this SqlQuery query, IDbConnection connection)
 
 ## Return Value
 
-True if any results returned from data reader
+True if any results were returned from the data reader.
 
 ## Exceptions
 

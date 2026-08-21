@@ -11,11 +11,15 @@ public static string Max(IField field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The MAX() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -37,11 +41,15 @@ public static string Max(string field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The MAX() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 
@@ -63,11 +71,15 @@ public static string Max(int joinNumber, string field)
 | joinNumber | The join number. |
 | field | The field. |
 
+## Return Value
+
+The MAX() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 

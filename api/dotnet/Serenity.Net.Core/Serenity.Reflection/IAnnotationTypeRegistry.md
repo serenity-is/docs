@@ -1,7 +1,7 @@
 # IAnnotationTypeRegistry interface
 **namespace:** *[Serenity.Reflection](../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-An interface to query list of annotation types for a given type
+An interface to query the list of annotation types for a given type.
 
 ```csharp
 public interface IAnnotationTypeRegistry
@@ -11,7 +11,7 @@ public interface IAnnotationTypeRegistry
 
 | name | description |
 | --- | --- |
-| [GetAnnotationTypesFor](IAnnotationTypeRegistry/GetAnnotationTypesFor.md)(…) | Gets the annotation types for given type. |
+| [GetAnnotationTypesFor](IAnnotationTypeRegistry/GetAnnotationTypesFor.md)(…) | Gets the annotation types for the given type. |
 
 ## See Also
 

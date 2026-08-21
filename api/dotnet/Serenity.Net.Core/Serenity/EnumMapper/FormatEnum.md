@@ -13,6 +13,10 @@ public static string FormatEnum(this ITextLocalizer localizer, Type enumType, ob
 | enumType | Type of the enum. |
 | value | The value. |
 
+## Return Value
+
+The formatted display text of the enum value.
+
 ## See Also
 
 * interface [ITextLocalizer](../ITextLocalizer.md)

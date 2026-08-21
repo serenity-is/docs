@@ -1,7 +1,7 @@
 # PermissionExpressionParser class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-A simple parser / evaluator for logic permission expressions
+Parses and evaluates logical permission expressions containing `!`, `&`, `|`, and parentheses.
 
 ```csharp
 public static class PermissionExpressionParser
@@ -11,9 +11,9 @@ public static class PermissionExpressionParser
 
 | name | description |
 | --- | --- |
-| static [Evaluate](PermissionExpressionParser/Evaluate.md)(…) | Evaluates a list of tokens in RPN notation, produced from ShuntingYard method. |
-| static [ShuntingYard](PermissionExpressionParser/ShuntingYard.md)(…) | Converts a list of tokens to Reverse Polish Notation using ShuntingYard algorithm. |
-| static [Tokenize](PermissionExpressionParser/Tokenize.md)(…) | Tokenizes a permission expression |
+| static [Evaluate](PermissionExpressionParser/Evaluate.md)(…) | Evaluates tokens in Reverse Polish Notation produced by [`ShuntingYard`](PermissionExpressionParser/ShuntingYard.md). |
+| static [ShuntingYard](PermissionExpressionParser/ShuntingYard.md)(…) | Converts tokens to Reverse Polish Notation using the shunting-yard algorithm. |
+| static [Tokenize](PermissionExpressionParser/Tokenize.md)(…) | Tokenizes a permission expression into individual operators, parentheses, and permission keys. |
 
 ## See Also
 

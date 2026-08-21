@@ -1,7 +1,7 @@
 # DynamicScriptServiceCollectionExtensions.UseCssWatching method (1 of 2)
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Actives CSS file watching
+Activates CSS file watching.
 
 ```csharp
 public static IServiceProvider UseCssWatching(this IServiceProvider serviceProvider)
@@ -9,7 +9,7 @@ public static IServiceProvider UseCssWatching(this IServiceProvider serviceProvi
 
 | parameter | description |
 | --- | --- |
-| serviceProvider | Service provider |
+| serviceProvider | The service provider. |
 
 ## See Also
 
@@ -20,7 +20,7 @@ public static IServiceProvider UseCssWatching(this IServiceProvider serviceProvi
 # DynamicScriptServiceCollectionExtensions.UseCssWatching method (2 of 2)
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Activates CSS file watching
+Activates CSS file watching.
 
 ```csharp
 public static IServiceProvider UseCssWatching(this IServiceProvider serviceProvider, 
@@ -29,15 +29,19 @@ public static IServiceProvider UseCssWatching(this IServiceProvider serviceProvi
 
 | parameter | description |
 | --- | --- |
-| serviceProvider |  |
-| cssPaths | CSS paths |
+| serviceProvider | The service provider. |
+| cssPaths | The CSS paths to watch. |
+
+## Return Value
+
+The same service provider so that calls can be chained.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | serviceProvider is null |
-| InvalidOperationException | CSS bundle manager is not registered |
+| ArgumentNullException | *serviceProvider* or *cssPaths* is `null`. |
+| InvalidOperationException | No CSS bundle manager or content hash cache is registered. |
 
 ## See Also
 

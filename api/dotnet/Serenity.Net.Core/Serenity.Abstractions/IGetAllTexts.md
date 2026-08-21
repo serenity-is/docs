@@ -1,7 +1,7 @@
 # IGetAllTexts interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for local text registry that can return all registered entries
+Abstraction for a local text registry that can return all registered entries.
 
 ```csharp
 public interface IGetAllTexts
@@ -11,7 +11,7 @@ public interface IGetAllTexts
 
 | name | description |
 | --- | --- |
-| [GetAllTexts](IGetAllTexts/GetAllTexts.md)(…) | Gets all local text entries |
+| [GetAllTexts](IGetAllTexts/GetAllTexts.md)(…) | Gets all local text entries. |
 
 ## See Also
 

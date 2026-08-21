@@ -1,7 +1,7 @@
 # ScriptCulture.DateSeparator property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Date separator
+Gets or sets the date separator.
 
 ```csharp
 public string DateSeparator { get; set; }

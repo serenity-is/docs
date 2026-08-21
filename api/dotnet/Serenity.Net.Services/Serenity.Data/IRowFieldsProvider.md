@@ -11,8 +11,8 @@ public interface IRowFieldsProvider
 
 | name | description |
 | --- | --- |
-| [Resolve](IRowFieldsProvider/Resolve.md)(…) | Resolves the specified fields type. |
-| [ResolveWithAlias](IRowFieldsProvider/ResolveWithAlias.md)(…) | Resolves the with alias. |
+| [Resolve](IRowFieldsProvider/Resolve.md)(…) | Resolves the fields instance for the specified fields type. |
+| [ResolveWithAlias](IRowFieldsProvider/ResolveWithAlias.md)(…) | Resolves the fields instance for the specified fields type with the given alias applied. |
 
 ## See Also
 

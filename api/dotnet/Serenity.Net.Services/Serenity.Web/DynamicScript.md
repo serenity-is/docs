@@ -1,7 +1,7 @@
 # DynamicScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base abstract implementation for IDynamicScript
+Base abstract implementation for IDynamicScript.
 
 ```csharp
 public abstract class DynamicScript : IDynamicScript
@@ -21,7 +21,7 @@ public abstract class DynamicScript : IDynamicScript
 
 | name | description |
 | --- | --- |
-| [DynamicScript](DynamicScript/DynamicScript.md)() | Creates a new instance of the class |
+| [DynamicScript](DynamicScript/DynamicScript.md)() | Creates a new instance of the class. |
 
 ## See Also
 

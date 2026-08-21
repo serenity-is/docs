@@ -1,7 +1,7 @@
 # IFileSystem.CreateDirectory method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a directory
+Creates a directory.
 
 ```csharp
 public void CreateDirectory(string path)
@@ -9,7 +9,7 @@ public void CreateDirectory(string path)
 
 | parameter | description |
 | --- | --- |
-| path | Path to the directory |
+| path | The path of the directory to create. |
 
 ## See Also
 

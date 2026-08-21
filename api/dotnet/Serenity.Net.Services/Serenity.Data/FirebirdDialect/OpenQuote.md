@@ -1,15 +1,9 @@
 # FirebirdDialect.OpenQuote property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the open quote character for quoting identifiers.
-
 ```csharp
 public virtual char OpenQuote { get; }
 ```
-
-## Property Value
-
-The open quote.
 
 ## See Also
 

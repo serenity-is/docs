@@ -12,6 +12,10 @@ protected virtual int CompareValues(TValue value1, TValue value2)
 | value1 | The value1. |
 | value2 | The value2. |
 
+## Return Value
+
+A value indicating the relative order of the two values.
+
 ## See Also
 
 * class [TValue](../Serenity.Net.Services/../CustomClassField-1.TValue.md)

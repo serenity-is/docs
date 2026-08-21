@@ -1,7 +1,7 @@
 # HttpContextItemsAccessor constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Default implementation for IHttpContextItemsAccessor using IHttpContextAccessor and its Items property.
+Default implementation of IHttpContextItemsAccessor that reads the HttpContext items.
 
 ```csharp
 public HttpContextItemsAccessor(IHttpContextAccessor httpContextAccessor = null)
@@ -9,11 +9,11 @@ public HttpContextItemsAccessor(IHttpContextAccessor httpContextAccessor = null)
 
 | parameter | description |
 | --- | --- |
-| httpContextAccessor | HTTP context accessor |
+| httpContextAccessor | The HTTP context accessor. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`HttpContextItemsAccessor`](../HttpContextItemsAccessor.md) class.
 
 ## See Also
 

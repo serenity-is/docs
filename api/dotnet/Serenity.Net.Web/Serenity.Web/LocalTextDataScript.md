@@ -1,7 +1,7 @@
 # LocalTextDataScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Local text data script to access local texts from an external app like mobile
+Local text data script to access local texts from an external app like mobile.
 
 ```csharp
 public class LocalTextDataScript : DataScript<IDictionary<string, string>>, ICacheSuffix
@@ -9,17 +9,17 @@ public class LocalTextDataScript : DataScript<IDictionary<string, string>>, ICac
 
 | parameter | description |
 | --- | --- |
-| localTextRegistry | Local text registry |
-| localTextPackages | Package list |
-| httpContextAccessor | HTTP context accessor |
+| localTextRegistry | The local text registry. |
+| localTextPackages | The package list. |
+| httpContextAccessor | The HTTP context accessor. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [LocalTextDataScript](LocalTextDataScript/LocalTextDataScript.md)(…) | Local text data script to access local texts from an external app like mobile |
+| [LocalTextDataScript](LocalTextDataScript/LocalTextDataScript.md)(…) | Local text data script to access local texts from an external app like mobile. |
 | [CacheSuffix](LocalTextDataScript/CacheSuffix.md) { get; } |  |
-| static [GetPackageData](LocalTextDataScript/GetPackageData.md)(…) | Gets a local text package as a dictionary |
+| static [GetPackageData](LocalTextDataScript/GetPackageData.md)(…) | Gets a local text package as a dictionary. |
 
 ## Protected Members
 
@@ -31,11 +31,11 @@ public class LocalTextDataScript : DataScript<IDictionary<string, string>>, ICac
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | One of arguments is null |
+| ArgumentNullException | One of the arguments is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the [`LocalTextDataScript`](LocalTextDataScript.md) class.
 
 ## See Also
 

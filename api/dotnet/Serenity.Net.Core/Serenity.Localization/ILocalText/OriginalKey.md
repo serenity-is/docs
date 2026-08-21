@@ -1,7 +1,7 @@
 # ILocalText.OriginalKey property
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns original key before the replacement / initialization
+Returns the original key before the replacement or initialization.
 
 ```csharp
 public string OriginalKey { get; }

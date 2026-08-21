@@ -17,7 +17,7 @@ public static TItem Add<TItem>(this IMemoryCache cache, object key, TItem value,
 
 ## Return Value
 
-The value
+The value that was added to the cache.
 
 ## See Also
 

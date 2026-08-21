@@ -1,7 +1,7 @@
 # Criteria constructor (1 of 10)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new criteria that contains field name of the metafield.
+Creates a new criteria that contains the field name of the metafield.
 
 ```csharp
 public Criteria(IField field)
@@ -9,7 +9,7 @@ public Criteria(IField field)
 
 | parameter | description |
 | --- | --- |
-| field | Field (required). |
+| field | The field (required). |
 
 ## See Also
 
@@ -41,7 +41,7 @@ public Criteria(ISqlQuery query)
 # Criteria constructor (3 of 10)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new criteria with given condition. This condition is usually a field name, but it can also be a criteria text pre-generated.
+Creates a new criteria with the given condition. This condition is usually a field name, but it can also be a pre-generated criteria text.
 
 ```csharp
 public Criteria(string expression)
@@ -49,7 +49,7 @@ public Criteria(string expression)
 
 | parameter | description |
 | --- | --- |
-| expression | A field name or criteria condition (can be null) |
+| expression | A field name or criteria condition (can be `null`). |
 
 ## Remarks
 

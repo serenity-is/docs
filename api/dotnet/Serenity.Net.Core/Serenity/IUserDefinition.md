@@ -1,7 +1,7 @@
 # IUserDefinition interface
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-User definition abstraction.
+Represents the core identity information for a user.
 
 ```csharp
 public interface IUserDefinition
@@ -11,15 +11,15 @@ public interface IUserDefinition
 
 | name | description |
 | --- | --- |
-| [DisplayName](IUserDefinition/DisplayName.md) { get; } | Display name for user (can be same with Username) |
-| [Email](IUserDefinition/Email.md) { get; } | Email address |
-| [Id](IUserDefinition/Id.md) { get; } | User ID |
-| [IsActive](IUserDefinition/IsActive.md) { get; } | Is user active (1 = active, 0 = disabled, -1 = deleted) |
-| [Username](IUserDefinition/Username.md) { get; } | User login name |
+| [DisplayName](IUserDefinition/DisplayName.md) { get; } | Gets the display name of the user, which may be the same as [`Username`](IUserDefinition/Username.md). |
+| [Email](IUserDefinition/Email.md) { get; } | Gets the email address of the user. |
+| [Id](IUserDefinition/Id.md) { get; } | Gets the unique user identifier. |
+| [IsActive](IUserDefinition/IsActive.md) { get; } | Gets a value indicating whether the user is active (1 = active, 0 = disabled, -1 = deleted). |
+| [Username](IUserDefinition/Username.md) { get; } | Gets the login name of the user. |
 
 ## Remarks
 
-Your application might have a class that implements this interface, e.g. UserDefinition, that has these properties plus some more specific to your app.
+Applications typically implement this interface with an application-specific class (for example, `UserDefinition`) that adds additional properties.
 
 ## See Also
 

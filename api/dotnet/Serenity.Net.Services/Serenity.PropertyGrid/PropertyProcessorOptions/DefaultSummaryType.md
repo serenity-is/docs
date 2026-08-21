@@ -1,7 +1,7 @@
 # PropertyProcessorOptions.DefaultSummaryType property
 **namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets or sets a the default summary type for numeric fields if no SummaryTypeAttribute is present. This only applies if the property is of a numeric type and is not a primary key, identity, foreign key, unbound or has a LeftJoin attribute. Default is SummaryType.Sum.
+Gets or sets the default summary type for numeric fields if no SummaryTypeAttribute is present. This only applies if the property is of a numeric type and is not a primary key, identity, foreign key, unbound or has a [`LeftJoinAttribute`](../../Serenity.Data.Mapping/LeftJoinAttribute.md). Default is Sum.
 
 ```csharp
 public SummaryType? DefaultSummaryType { get; set; }

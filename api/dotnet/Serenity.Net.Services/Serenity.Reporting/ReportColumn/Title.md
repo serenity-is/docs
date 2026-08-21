@@ -1,7 +1,7 @@
 # ReportColumn.Title property
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Title for the column.
+Gets or sets the title for the column.
 
 ```csharp
 public string Title { get; set; }

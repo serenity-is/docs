@@ -1,7 +1,7 @@
 # AddBehaviorAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the attribute
+Initializes a new instance of the attribute.
 
 ```csharp
 public AddBehaviorAttribute(Type behaviorType)
@@ -15,7 +15,7 @@ public AddBehaviorAttribute(Type behaviorType)
 
 | exception | condition |
 | --- | --- |
-| ArgumentException | behaviorType is abstract or an interface |
+| ArgumentException | *behaviorType* is abstract or an interface. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ServiceEndpointModelBinderProvider class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Provides model binding for service endpoints
+Provides model binding for service endpoints.
 
 ```csharp
 public class ServiceEndpointModelBinderProvider : IModelBinderProvider

@@ -1,7 +1,7 @@
 # NavigationHelper.GetNavigationItems method
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets navigation items
+Gets navigation items.
 
 ```csharp
 public static List<NavigationItem> GetNavigationItems(IPermissionService permissions, 
@@ -11,11 +11,15 @@ public static List<NavigationItem> GetNavigationItems(IPermissionService permiss
 
 | parameter | description |
 | --- | --- |
-| permissions | Permission service |
-| typeSource | Type source |
-| serviceProvider | Service provider |
-| resolveUrl | Resolve URL callback |
-| filter | Filter function |
+| permissions | The permission service. |
+| typeSource | The type source. |
+| serviceProvider | The service provider. |
+| resolveUrl | The resolve URL callback. |
+| filter | The filter function. |
+
+## Return Value
+
+The list of navigation items.
 
 ## See Also
 

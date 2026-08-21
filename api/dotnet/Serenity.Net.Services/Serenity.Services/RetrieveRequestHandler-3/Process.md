@@ -16,7 +16,7 @@ public TRetrieveResponse Process(IDbConnection connection, TRetrieveRequest requ
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | connection or the request is null |
+| ArgumentNullException | *connection* or *request* is `null`. |
 
 ## See Also
 

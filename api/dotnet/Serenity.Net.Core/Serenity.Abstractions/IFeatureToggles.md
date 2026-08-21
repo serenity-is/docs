@@ -1,7 +1,7 @@
 # IFeatureToggles interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-An interface to access feature toggle values
+An interface to access feature toggle values.
 
 ```csharp
 public interface IFeatureToggles

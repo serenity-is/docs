@@ -1,7 +1,7 @@
 # FieldInfo class
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Meta data information for an SQL column
+Meta data information for an SQL column.
 
 ```csharp
 public class FieldInfo

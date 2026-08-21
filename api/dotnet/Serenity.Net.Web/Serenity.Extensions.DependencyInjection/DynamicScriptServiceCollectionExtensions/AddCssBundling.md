@@ -4,18 +4,22 @@
 Registers the default service types related to CSS bundling, including [`ICssBundleManager`](../../Serenity.Web/ICssBundleManager.md).
 
 ```csharp
-public static void AddCssBundling(this IServiceCollection collection)
+public static IServiceCollection AddCssBundling(this IServiceCollection collection)
 ```
 
 | parameter | description |
 | --- | --- |
-| collection | Service collection |
+| collection | The service collection. |
+
+## Return Value
+
+The same service collection so that calls can be chained.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Collection is null |
+| ArgumentNullException | *collection* is `null`. |
 
 ## See Also
 
@@ -35,14 +39,14 @@ public static void AddCssBundling(this IServiceCollection collection,
 
 | parameter | description |
 | --- | --- |
-| collection | Service collection |
-| setupAction | Action to edit options |
+| collection | The service collection. |
+| setupAction | The action to edit options. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Collection is null |
+| ArgumentNullException | *collection* or *setupAction* is `null`. |
 
 ## See Also
 

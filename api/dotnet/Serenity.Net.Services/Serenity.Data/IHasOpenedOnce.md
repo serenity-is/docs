@@ -1,7 +1,7 @@
 # IHasOpenedOnce interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interfaces for types that has an OpenedOnce property that determines if the connection has opened at least once
+Interface for types that have an [`OpenedOnce`](IHasOpenedOnce/OpenedOnce.md) property that determines if the connection has been opened at least once.
 
 ```csharp
 public interface IHasOpenedOnce
@@ -11,7 +11,7 @@ public interface IHasOpenedOnce
 
 | name | description |
 | --- | --- |
-| [OpenedOnce](IHasOpenedOnce/OpenedOnce.md) { get; } | Gets opened once info |
+| [OpenedOnce](IHasOpenedOnce/OpenedOnce.md) { get; } | Gets the opened once info. |
 
 ## See Also
 

@@ -21,21 +21,21 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 
 | name | description |
 | --- | --- |
-| [SaveRequestHandler](SaveRequestHandler-3/SaveRequestHandler.md)(…) | Creates a new instance of the class |
-| [Cache](SaveRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context |
-| [Connection](SaveRequestHandler-3/Connection.md) { get; } | Gets connection |
-| [Context](SaveRequestHandler-3/Context.md) { get; } | Gets the request context |
-| [IsCreate](SaveRequestHandler-3/IsCreate.md) { get; } | Returns true if this is a Create operation |
-| [IsUpdate](SaveRequestHandler-3/IsUpdate.md) { get; } | Returns true if this is an Update operation |
-| [Localizer](SaveRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
-| [Old](SaveRequestHandler-3/Old.md) { get; protected set; } | The old entity for update |
-| [Permissions](SaveRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
-| [Request](SaveRequestHandler-3/Request.md) { get; protected set; } | Request object |
-| [Response](SaveRequestHandler-3/Response.md) { get; protected set; } | Response object |
-| [Row](SaveRequestHandler-3/Row.md) { get; protected set; } | The inserted entity for Create and new entity for Update |
+| [SaveRequestHandler](SaveRequestHandler-3/SaveRequestHandler.md)(…) | Initializes a new instance of the class. |
+| [Cache](SaveRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context. |
+| [Connection](SaveRequestHandler-3/Connection.md) { get; } | Gets the current connection. |
+| [Context](SaveRequestHandler-3/Context.md) { get; } | Gets the request context. |
+| [IsCreate](SaveRequestHandler-3/IsCreate.md) { get; } | Returns true if this is a Create operation. |
+| [IsUpdate](SaveRequestHandler-3/IsUpdate.md) { get; } | Returns true if this is an Update operation. |
+| [Localizer](SaveRequestHandler-3/Localizer.md) { get; } | Gets the localizer from the request context. |
+| [Old](SaveRequestHandler-3/Old.md) { get; protected set; } | Gets the old entity for update. |
+| [Permissions](SaveRequestHandler-3/Permissions.md) { get; } | Gets the permission service from the request context. |
+| [Request](SaveRequestHandler-3/Request.md) { get; protected set; } | Gets the request object. |
+| [Response](SaveRequestHandler-3/Response.md) { get; protected set; } | Gets the response object. |
+| [Row](SaveRequestHandler-3/Row.md) { get; protected set; } | Gets the inserted entity for Create and the new entity for Update. |
 | [StateBag](SaveRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
-| [UnitOfWork](SaveRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets the current unit of work |
-| [User](SaveRequestHandler-3/User.md) { get; } | Gets current user from the request context |
+| [UnitOfWork](SaveRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets the current unit of work. |
+| [User](SaveRequestHandler-3/User.md) { get; } | Gets the current user from the request context. |
 | [Create](SaveRequestHandler-3/Create.md)(…) |  |
 | [Process](SaveRequestHandler-3/Process.md)(…) | Processes the save request. This is the entry point for the handler. |
 | [Update](SaveRequestHandler-3/Update.md)(…) |  |
@@ -44,13 +44,13 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](SaveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
+| [behaviors-](SaveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [AfterSave](SaveRequestHandler-3/AfterSave.md)() | Called after executing the insert/update statement |
 | virtual [BeforeSave](SaveRequestHandler-3/BeforeSave.md)() | Called before executing the insert/update statement |
 | virtual [ClearNonTableAssignments](SaveRequestHandler-3/ClearNonTableAssignments.md)() | Clears assignment for fields that are marked as non table field, e.g. fields that are not mapped, view, expression etc. |
-| virtual [CustomValidate](SaveRequestHandler-3/CustomValidate.md)(…) | Calls custom validator |
+| virtual [CustomValidate](SaveRequestHandler-3/CustomValidate.md)(…) | Calls custom validator. |
 | virtual [ExecuteSave](SaveRequestHandler-3/ExecuteSave.md)() | Executes the actual SQL save operation |
-| virtual [GetBehaviors](SaveRequestHandler-3/GetBehaviors.md)() | Gets the list of save behaviors |
+| virtual [GetBehaviors](SaveRequestHandler-3/GetBehaviors.md)() | Gets the list of save behaviors. |
 | virtual [GetDisplayOrderFilter](SaveRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [GetEditableFields](SaveRequestHandler-3/GetEditableFields.md)(…) | Gets the list of editable fields. These are fields that have Insertable (if Create), or Updatable (if Update) flags, and have the insert or update permission based on the type of the current operation. |
 | virtual [GetRequiredFields](SaveRequestHandler-3/GetRequiredFields.md)(…) | Gets the list of required fields based on editable list, and NotNull |
@@ -61,13 +61,13 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 | virtual [LoadOldEntity](SaveRequestHandler-3/LoadOldEntity.md)() | Loads the old entity for an update operation |
 | virtual [OnReturn](SaveRequestHandler-3/OnReturn.md)() | Called just before the response is returned |
 | virtual [PerformAuditing](SaveRequestHandler-3/PerformAuditing.md)() | Performs auditing |
-| virtual [PrepareQuery](SaveRequestHandler-3/PrepareQuery.md)() | Prepares the query for selecting old record in an update operation |
+| virtual [PrepareQuery](SaveRequestHandler-3/PrepareQuery.md)() | Prepares the query for selecting old record in an update operation. |
 | virtual [SetDefaultValue](SaveRequestHandler-3/SetDefaultValue.md)(…) | Sets the default value (DefaultValueAttribute) for the field |
 | virtual [SetDefaultValues](SaveRequestHandler-3/SetDefaultValues.md)() | Sets the default values for all fields (DefaultValueAttribute) |
 | virtual [SetInternalFields](SaveRequestHandler-3/SetInternalFields.md)() | Sets values for internal fields |
 | virtual [SetTrimToEmptyFields](SaveRequestHandler-3/SetTrimToEmptyFields.md)() | Sets values for TrimToEmpty fields. |
 | virtual [ValidateAndClearIdField](SaveRequestHandler-3/ValidateAndClearIdField.md)() | Validates and clears the ID field |
-| virtual [ValidateEditable](SaveRequestHandler-3/ValidateEditable.md)() | Validates editable fields |
+| virtual [ValidateEditable](SaveRequestHandler-3/ValidateEditable.md)() | Validates editable fields. |
 | virtual [ValidateEditableFields](SaveRequestHandler-3/ValidateEditableFields.md)(…) | Validates editable fields, e.g. checks if the assigned fields are all in the editable set. Calls [`HandleNonEditable`](SaveRequestHandler-3/HandleNonEditable.md) if not. |
 | virtual [ValidateFieldValues](SaveRequestHandler-3/ValidateFieldValues.md)() | Validates field values via [`ICustomValidator`](../Serenity/ICustomValidator.md) interface. |
 | virtual [ValidateIsActive](SaveRequestHandler-3/ValidateIsActive.md)() | Validates that record is not soft deleted |

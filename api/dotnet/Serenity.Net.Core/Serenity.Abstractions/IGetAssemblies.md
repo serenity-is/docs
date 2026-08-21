@@ -1,7 +1,7 @@
 # IGetAssemblies interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for type source that can return a list of assemblies
+Abstraction for a type source that can return a list of assemblies.
 
 ```csharp
 public interface IGetAssemblies
@@ -11,7 +11,7 @@ public interface IGetAssemblies
 
 | name | description |
 | --- | --- |
-| [GetAssemblies](IGetAssemblies/GetAssemblies.md)() | Gets all distinct assemblies in the type source |
+| [GetAssemblies](IGetAssemblies/GetAssemblies.md)() | Gets all distinct assemblies in the type source. |
 
 ## See Also
 

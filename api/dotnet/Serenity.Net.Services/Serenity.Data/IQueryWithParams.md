@@ -1,7 +1,7 @@
 # IQueryWithParams interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for objects setting parameters by PARAM method (like SqlInsert, SqlUpdate, SqlDelete...)
+Interface for objects setting parameters by PARAM method (like SqlInsert, SqlUpdate, SqlDelete...).
 
 ```csharp
 public interface IQueryWithParams

@@ -1,7 +1,7 @@
 # ColumnsScriptRegistration class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Contains registration methods for ColumnsScript types
+Contains registration methods for ColumnsScript types.
 
 ```csharp
 public class ColumnsScriptRegistration
@@ -12,7 +12,7 @@ public class ColumnsScriptRegistration
 | name | description |
 | --- | --- |
 | [ColumnsScriptRegistration](ColumnsScriptRegistration/ColumnsScriptRegistration.md)() | The default constructor. |
-| static [RegisterColumnsScripts](ColumnsScriptRegistration/RegisterColumnsScripts.md)(…) | Creates and registers column scripts |
+| static [RegisterColumnsScripts](ColumnsScriptRegistration/RegisterColumnsScripts.md)(…) | Creates and registers column scripts. |
 
 ## See Also
 

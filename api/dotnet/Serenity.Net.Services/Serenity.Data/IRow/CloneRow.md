@@ -7,6 +7,10 @@ Clones the row.
 public IRow CloneRow()
 ```
 
+## Return Value
+
+A clone of this row.
+
 ## See Also
 
 * interface [IRow](../IRow.md)

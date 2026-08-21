@@ -9,7 +9,11 @@ public static bool IsReservedKeywordForAny(string identifier)
 
 | parameter | description |
 | --- | --- |
-| identifier | Identifier |
+| identifier | The identifier. |
+
+## Return Value
+
+True if the identifier is a reserved keyword in any dialect; otherwise, false.
 
 ## See Also
 

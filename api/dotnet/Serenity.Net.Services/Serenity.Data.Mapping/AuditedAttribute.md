@@ -13,7 +13,7 @@ public class AuditedAttribute : Attribute
 | name | description |
 | --- | --- |
 | [AuditedAttribute](AuditedAttribute/AuditedAttribute.md)(…) | Indicates if the field is audited. For DataAuditLog, all fields are audited by default, but if the field has [Audited(false)] it will not be logged. |
-| [Value](AuditedAttribute/Value.md) { get; } | Gets the value of the attribute |
+| [Value](AuditedAttribute/Value.md) { get; } | Gets the value of the attribute. |
 
 ## Remarks
 

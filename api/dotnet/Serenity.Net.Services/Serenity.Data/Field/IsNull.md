@@ -1,11 +1,15 @@
 # Field.IsNull method (1 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new "the Field IS NULL" criteria
+Creates a new "the Field IS NULL" criteria.
 
 ```csharp
 public BaseCriteria IsNull()
 ```
+
+## Return Value
+
+The IS NULL criteria.
 
 ## See Also
 

@@ -9,7 +9,11 @@ public bool IsUsing(string ns)
 
 | parameter | description |
 | --- | --- |
-| ns |  |
+| ns | The namespace to check. |
+
+## Return Value
+
+True if the namespace is in the list of usings; otherwise, false.
 
 ## See Also
 

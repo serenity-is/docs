@@ -11,6 +11,10 @@ public IPropertyInfo GetAnnotatedProperty(PropertyInfo property)
 | --- | --- |
 | property | The property. |
 
+## Return Value
+
+The annotated property information.
+
 ## See Also
 
 * interface [IPropertyInfo](../IPropertyInfo.md)

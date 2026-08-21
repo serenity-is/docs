@@ -1,7 +1,7 @@
 # DynamicScriptMiddleware.WriteWithIfModifiedSinceControl method
 **namespace:** *[Serenity.Web.Middleware](../../README.md#serenity.web.middleware-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Writes a file content to the response with modified since control
+Writes file content to the response with If-Modified-Since control.
 
 ```csharp
 public static Task WriteWithIfModifiedSinceControl(HttpContext context, byte[] bytes, 
@@ -10,15 +10,15 @@ public static Task WriteWithIfModifiedSinceControl(HttpContext context, byte[] b
 
 | parameter | description |
 | --- | --- |
-| context | HTTP context |
-| bytes | Content bytes |
-| lastWriteTime | Last write time |
+| context | The HTTP context. |
+| bytes | The content bytes. |
+| lastWriteTime | The last write time. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Context is null |
+| ArgumentNullException | *context* is `null`. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ISqlOperationInterceptor.ExecuteReader method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts SqlHelper.ExecuteReader method.
+Intercepts the [`SqlHelper`](../SqlHelper.md)`ExecuteReader` method.
 
 ```csharp
 public OptionalValue<IDataReader> ExecuteReader(string commandText, 
@@ -10,9 +10,9 @@ public OptionalValue<IDataReader> ExecuteReader(string commandText,
 
 | parameter | description |
 | --- | --- |
-| commandText | Command text |
+| commandText | The command text. |
 | parameters | The parameters. |
-| query | The query |
+| query | The query. |
 
 ## See Also
 

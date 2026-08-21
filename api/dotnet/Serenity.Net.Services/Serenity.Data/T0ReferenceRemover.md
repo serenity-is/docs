@@ -1,7 +1,7 @@
 # T0ReferenceRemover class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Removes T0. references in SQL expression
+Removes T0. references in SQL expression.
 
 ```csharp
 public static class T0ReferenceRemover

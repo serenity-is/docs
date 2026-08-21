@@ -1,7 +1,7 @@
 # ISqlJoin interface
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for SQL join types
+Interface for SQL join types.
 
 ```csharp
 public interface ISqlJoin

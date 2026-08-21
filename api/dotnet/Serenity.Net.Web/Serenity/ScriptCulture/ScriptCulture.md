@@ -1,7 +1,7 @@
 # ScriptCulture constructor (1 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class using CurrentCulture
+Initializes a new instance of the [`ScriptCulture`](../ScriptCulture.md) class using CurrentCulture.
 
 ```csharp
 public ScriptCulture()
@@ -16,7 +16,7 @@ public ScriptCulture()
 # ScriptCulture constructor (2 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the [`ScriptCulture`](../ScriptCulture.md) class.
 
 ```csharp
 public ScriptCulture(CultureInfo culture)
@@ -24,7 +24,7 @@ public ScriptCulture(CultureInfo culture)
 
 | parameter | description |
 | --- | --- |
-| culture | The culture to read settings from |
+| culture | The culture to read settings from. |
 
 ## See Also
 

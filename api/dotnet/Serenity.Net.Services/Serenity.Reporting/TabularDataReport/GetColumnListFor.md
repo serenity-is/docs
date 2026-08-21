@@ -18,7 +18,7 @@ public static List<ReportColumn> GetColumnListFor(Type columnsType,
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | columnsType or serviceProvider is null |
+| ArgumentNullException | *columnsType* or *serviceProvider* is `null`. |
 
 ## See Also
 

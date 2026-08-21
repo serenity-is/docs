@@ -9,8 +9,8 @@ public struct OptionalValue<T>
 
 | parameter | description |
 | --- | --- |
-| T | Value type |
-| value | Value |
+| T | The value type. |
+| value | The value. |
 
 ## Public Members
 

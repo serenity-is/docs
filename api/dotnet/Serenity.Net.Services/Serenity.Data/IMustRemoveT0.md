@@ -1,7 +1,7 @@
 # IMustRemoveT0 interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Obsolete interface
+Obsolete interface.
 
 ```csharp
 public interface IMustRemoveT0

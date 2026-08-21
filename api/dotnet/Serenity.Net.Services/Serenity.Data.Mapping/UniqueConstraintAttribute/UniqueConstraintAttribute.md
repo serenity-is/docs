@@ -15,7 +15,7 @@ public UniqueConstraintAttribute(params string[] fields)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | fields |
+| ArgumentNullException | fields is null or empty. |
 
 ## See Also
 

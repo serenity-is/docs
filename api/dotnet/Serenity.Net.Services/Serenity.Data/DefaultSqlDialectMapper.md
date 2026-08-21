@@ -1,7 +1,7 @@
 # DefaultSqlDialectMapper class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Sql Dialect mapper
+Default implementation of [`ISqlDialectMapper`](ISqlDialectMapper.md) that maps well-known provider names and dialect type names to their corresponding [`ISqlDialect`](ISqlDialect.md).
 
 ```csharp
 public class DefaultSqlDialectMapper : ISqlDialectMapper
@@ -12,7 +12,7 @@ public class DefaultSqlDialectMapper : ISqlDialectMapper
 | name | description |
 | --- | --- |
 | [DefaultSqlDialectMapper](DefaultSqlDialectMapper/DefaultSqlDialectMapper.md)() | The default constructor. |
-| [TryGet](DefaultSqlDialectMapper/TryGet.md)(…) | Returns dialect for a dialect or provider name |
+| [TryGet](DefaultSqlDialectMapper/TryGet.md)(…) | Returns the dialect for a dialect or provider name, or `null` if none is found. |
 
 ## See Also
 

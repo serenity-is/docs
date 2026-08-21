@@ -1,7 +1,7 @@
 # DefaultReportRenderer.RenderExternalReport method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Renders an external report, generally returns a RedirectResult
+Renders an external report, generally returns a ReportRenderResult with a redirect URI.
 
 ```csharp
 protected virtual ReportRenderResult RenderExternalReport(IExternalReport report, 
@@ -10,8 +10,12 @@ protected virtual ReportRenderResult RenderExternalReport(IExternalReport report
 
 | parameter | description |
 | --- | --- |
-| report | Report |
-| options | Options |
+| report | The report. |
+| options | The options. |
+
+## Return Value
+
+The render result.
 
 ## See Also
 

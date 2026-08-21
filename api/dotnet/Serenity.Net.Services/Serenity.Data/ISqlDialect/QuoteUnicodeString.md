@@ -11,6 +11,10 @@ public string QuoteUnicodeString(string s)
 | --- | --- |
 | s | The string. |
 
+## Return Value
+
+The quoted unicode string.
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

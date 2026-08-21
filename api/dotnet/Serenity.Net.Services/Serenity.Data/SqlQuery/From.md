@@ -43,6 +43,12 @@ public SqlQuery From(string table)
 
 The query itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | table is null or empty. |
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

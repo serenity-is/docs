@@ -1,7 +1,7 @@
 # SqlDateTimeOffsetAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Dialect specific SQL expression for current date/time with timezone
+Dialect specific SQL expression for current date/time with timezone.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]

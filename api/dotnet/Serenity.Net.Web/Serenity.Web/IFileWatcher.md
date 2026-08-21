@@ -1,7 +1,7 @@
 # IFileWatcher interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-File system watcher abstraction
+Abstraction for a file system watcher.
 
 ```csharp
 public interface IFileWatcher
@@ -11,10 +11,10 @@ public interface IFileWatcher
 
 | name | description |
 | --- | --- |
-| [Filter](IFileWatcher/Filter.md) { get; } | Watch filter |
-| [Path](IFileWatcher/Path.md) { get; } | Watch path |
-| event [Changed](IFileWatcher/Changed.md) | Event that is raised when a file changed |
-| [RaiseChanged](IFileWatcher/RaiseChanged.md)(…) | Raises the change even |
+| [Filter](IFileWatcher/Filter.md) { get; } | Gets the file filter being watched. |
+| [Path](IFileWatcher/Path.md) { get; } | Gets the directory path being watched. |
+| event [Changed](IFileWatcher/Changed.md) | Raised when a watched file changes. |
+| [RaiseChanged](IFileWatcher/RaiseChanged.md)(…) | Raises the [`Changed`](IFileWatcher/Changed.md) event for the specified file. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # SqlConversions.ToSql method (1 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this bool? value)
@@ -10,6 +10,10 @@ public static string ToSql(this bool? value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The SQL constant, or NULL if the value has no value.
 
 ## See Also
 
@@ -20,7 +24,7 @@ public static string ToSql(this bool? value)
 # SqlConversions.ToSql method (2 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this decimal? value)
@@ -29,6 +33,10 @@ public static string ToSql(this decimal? value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The SQL constant, or NULL if the value has no value.
 
 ## See Also
 
@@ -39,7 +47,7 @@ public static string ToSql(this decimal? value)
 # SqlConversions.ToSql method (3 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this double? value)
@@ -48,6 +56,10 @@ public static string ToSql(this double? value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The SQL constant, or NULL if the value has no value.
 
 ## See Also
 
@@ -58,7 +70,7 @@ public static string ToSql(this double? value)
 # SqlConversions.ToSql method (4 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this Guid? value)
@@ -67,6 +79,10 @@ public static string ToSql(this Guid? value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The SQL constant, or NULL if the value has no value.
 
 ## See Also
 
@@ -77,7 +93,7 @@ public static string ToSql(this Guid? value)
 # SqlConversions.ToSql method (5 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this int? value)
@@ -86,6 +102,10 @@ public static string ToSql(this int? value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The SQL constant, or NULL if the value has no value.
 
 ## See Also
 
@@ -96,7 +116,7 @@ public static string ToSql(this int? value)
 # SqlConversions.ToSql method (6 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this long? value)
@@ -105,6 +125,10 @@ public static string ToSql(this long? value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The SQL constant, or NULL if the value has no value.
 
 ## See Also
 
@@ -115,7 +139,7 @@ public static string ToSql(this long? value)
 # SqlConversions.ToSql method (7 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this DateTime value, ISqlDialect dialect = null)
@@ -125,6 +149,10 @@ public static string ToSql(this DateTime value, ISqlDialect dialect = null)
 | --- | --- |
 | value | The value. |
 | dialect | The dialect. |
+
+## Return Value
+
+The SQL constant.
 
 ## See Also
 
@@ -136,7 +164,7 @@ public static string ToSql(this DateTime value, ISqlDialect dialect = null)
 # SqlConversions.ToSql method (8 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this DateTime? value, ISqlDialect dialect = null)
@@ -146,6 +174,10 @@ public static string ToSql(this DateTime? value, ISqlDialect dialect = null)
 | --- | --- |
 | value | The value. |
 | dialect | The dialect. |
+
+## Return Value
+
+The SQL constant, or NULL if the value has no value.
 
 ## See Also
 
@@ -157,7 +189,7 @@ public static string ToSql(this DateTime? value, ISqlDialect dialect = null)
 # SqlConversions.ToSql method (9 of 9)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql.
+Converts the value to SQL.
 
 ```csharp
 public static string ToSql(this string value, ISqlDialect dialect = null)
@@ -167,6 +199,10 @@ public static string ToSql(this string value, ISqlDialect dialect = null)
 | --- | --- |
 | value | The value. |
 | dialect | The dialect. |
+
+## Return Value
+
+The SQL constant, or NULL if the value is null.
 
 ## See Also
 

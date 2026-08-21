@@ -1,7 +1,7 @@
 # IPasswordStrengthValidator.Validate method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Validates password strength
+Validates the strength of the specified password.
 
 ```csharp
 public void Validate(string password)
@@ -9,13 +9,13 @@ public void Validate(string password)
 
 | parameter | description |
 | --- | --- |
-| password |  |
+| password | The plain-text password to validate. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| [ValidationError](../../Serenity.Services/ValidationError.md) | Throws validation error if password does not match the expected password strength rules |
+| [ValidationError](../../Serenity.Services/ValidationError.md) | Thrown when the password does not satisfy the strength rules. |
 
 ## See Also
 

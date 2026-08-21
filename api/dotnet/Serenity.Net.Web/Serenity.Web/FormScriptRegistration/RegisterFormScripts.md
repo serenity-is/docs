@@ -1,7 +1,7 @@
 # FormScriptRegistration.RegisterFormScripts method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates and form scripts
+Creates and registers form scripts.
 
 ```csharp
 public static IEnumerable<FormScript> RegisterFormScripts(IDynamicScriptManager scriptManager, 
@@ -11,16 +11,20 @@ public static IEnumerable<FormScript> RegisterFormScripts(IDynamicScriptManager 
 
 | parameter | description |
 | --- | --- |
-| scriptManager | Dynamic script manager |
-| typeSource | Type source |
-| propertyProvider | Property item provider |
-| serviceProvider | Service provider |
+| scriptManager | The dynamic script manager. |
+| typeSource | The type source. |
+| propertyProvider | The property item provider. |
+| serviceProvider | The service provider. |
+
+## Return Value
+
+The list of registered form scripts.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Script manager or type source is null |
+| ArgumentNullException | Script manager, type source or service provider is `null`. |
 
 ## See Also
 

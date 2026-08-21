@@ -11,6 +11,10 @@ public SqlQuery Union(SqlUnionType unionType = SqlUnionType.Union)
 | --- | --- |
 | unionType | Type of the union. |
 
+## Return Value
+
+The query itself.
+
 ## See Also
 
 * enum [SqlUnionType](../SqlUnionType.md)

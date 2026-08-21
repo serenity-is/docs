@@ -1,7 +1,7 @@
 # BinarySerialization.Deserialize&lt;TValue&gt; method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-A helper method to deserialize objects with BinaryWriter. Creates a memory stream and a BinaryReader on it, and invokes the callback specified.
+A helper method to deserialize objects with BinaryReader. Creates a memory stream and a BinaryReader on it, and invokes the callback specified.
 
 ```csharp
 public static TValue Deserialize<TValue>(byte[] input, Func<BinaryReader, TValue> deserialize)
@@ -9,8 +9,8 @@ public static TValue Deserialize<TValue>(byte[] input, Func<BinaryReader, TValue
 
 | parameter | description |
 | --- | --- |
-| input | Input array |
-| deserialize | Deserialization delegate |
+| input | Input array. |
+| deserialize | Deserialization delegate. |
 
 ## See Also
 

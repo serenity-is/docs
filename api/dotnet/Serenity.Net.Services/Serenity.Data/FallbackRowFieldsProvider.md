@@ -12,8 +12,8 @@ public class FallbackRowFieldsProvider : IRowFieldsProvider
 | name | description |
 | --- | --- |
 | static [Instance](FallbackRowFieldsProvider/Instance.md) | The instance |
-| [Resolve](FallbackRowFieldsProvider/Resolve.md)(…) | Resolves the specified fields type. |
-| [ResolveWithAlias](FallbackRowFieldsProvider/ResolveWithAlias.md)(…) | Resolves the with alias. |
+| [Resolve](FallbackRowFieldsProvider/Resolve.md)(…) | Resolves the fields instance for the specified fields type. |
+| [ResolveWithAlias](FallbackRowFieldsProvider/ResolveWithAlias.md)(…) | Resolves the fields instance for the specified fields type with the given alias applied. |
 
 ## See Also
 

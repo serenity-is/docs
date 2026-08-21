@@ -12,7 +12,7 @@ public class PropertyProcessorOptions
 | name | description |
 | --- | --- |
 | [PropertyProcessorOptions](PropertyProcessorOptions/PropertyProcessorOptions.md)() | The default constructor. |
-| [DefaultSummaryType](PropertyProcessorOptions/DefaultSummaryType.md) { get; set; } | Gets or sets a the default summary type for numeric fields if no SummaryTypeAttribute is present. This only applies if the property is of a numeric type and is not a primary key, identity, foreign key, unbound or has a LeftJoin attribute. Default is SummaryType.Sum. |
+| [DefaultSummaryType](PropertyProcessorOptions/DefaultSummaryType.md) { get; set; } | Gets or sets the default summary type for numeric fields if no SummaryTypeAttribute is present. This only applies if the property is of a numeric type and is not a primary key, identity, foreign key, unbound or has a [`LeftJoinAttribute`](../Serenity.Data.Mapping/LeftJoinAttribute.md). Default is Sum. |
 | const [SectionKey](PropertyProcessorOptions/SectionKey.md) | Default section key |
 
 ## See Also

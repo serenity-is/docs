@@ -1,7 +1,7 @@
 # ConcatenatedScript constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-A dynamic script that is formed from concatenation of other scripts
+A dynamic script that is formed from the concatenation of other scripts.
 
 ```csharp
 public ConcatenatedScript(IEnumerable<Func<string>> scriptParts, string separator = "\r\n;\r\n", 
@@ -10,19 +10,19 @@ public ConcatenatedScript(IEnumerable<Func<string>> scriptParts, string separato
 
 | parameter | description |
 | --- | --- |
-| scriptParts | Script parts |
-| separator | Separator |
-| checkRights | Callback to check permissions for individual scripts |
+| scriptParts | The script parts. |
+| separator | The separator. |
+| checkRights | Callback to check permissions for individual scripts. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Script parts is null |
+| ArgumentNullException | Script parts are null. |
 
 ## Remarks
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ## See Also
 

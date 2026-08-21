@@ -1,7 +1,7 @@
 # CustomClassField&lt;TValue&gt;.ValueFromJson method (1 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Deserializes this fields value from JSON
+Deserializes this field's value from JSON.
 
 ```csharp
 protected virtual TValue ValueFromJson(JsonReader reader, JsonSerializer serializer)
@@ -11,6 +11,10 @@ protected virtual TValue ValueFromJson(JsonReader reader, JsonSerializer seriali
 | --- | --- |
 | reader | The reader. |
 | serializer | The serializer. |
+
+## Return Value
+
+The deserialized value.
 
 ## See Also
 
@@ -22,7 +26,7 @@ protected virtual TValue ValueFromJson(JsonReader reader, JsonSerializer seriali
 # CustomClassField&lt;TValue&gt;.ValueFromJson method (2 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Deserializes this fields value from JSON
+Deserializes this field's value from JSON.
 
 ```csharp
 protected virtual TValue ValueFromJson(ref Utf8JsonReader reader, JsonSerializerOptions options)
@@ -31,7 +35,11 @@ protected virtual TValue ValueFromJson(ref Utf8JsonReader reader, JsonSerializer
 | parameter | description |
 | --- | --- |
 | reader | The reader. |
-| options | Serializer options |
+| options | The serializer options. |
+
+## Return Value
+
+The deserialized value.
 
 ## See Also
 
@@ -43,7 +51,7 @@ protected virtual TValue ValueFromJson(ref Utf8JsonReader reader, JsonSerializer
 # CustomClassField&lt;TValue&gt;.ValueFromJson method (3 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Deserializes this fields value from JSON
+Deserializes this field's value from JSON.
 
 ```csharp
 public override void ValueFromJson(JsonReader reader, IRow row, JsonSerializer serializer)
@@ -59,7 +67,7 @@ public override void ValueFromJson(JsonReader reader, IRow row, JsonSerializer s
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | reader |
+| ArgumentNullException | reader is null. |
 
 ## See Also
 

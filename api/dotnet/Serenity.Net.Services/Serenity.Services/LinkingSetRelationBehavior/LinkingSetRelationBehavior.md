@@ -1,7 +1,7 @@
 # LinkingSetRelationBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Behavior class that handles [`LinkingSetRelationAttribute`](../../Serenity.Data.Mapping/LinkingSetRelationAttribute.md)
+Behavior class that handles [`LinkingSetRelationAttribute`](../../Serenity.Data.Mapping/LinkingSetRelationAttribute.md).
 
 ```csharp
 public LinkingSetRelationBehavior(IDefaultHandlerFactory handlerFactory)
@@ -15,11 +15,11 @@ public LinkingSetRelationBehavior(IDefaultHandlerFactory handlerFactory)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | handlerFactory is null |
+| ArgumentNullException | *handlerFactory* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

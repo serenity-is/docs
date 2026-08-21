@@ -10,7 +10,7 @@ public static void CopyStream(Stream source, Stream dest)
 | parameter | description |
 | --- | --- |
 | source | The source. |
-| dest | The dest. |
+| dest | The destination. |
 
 ## Exceptions
 

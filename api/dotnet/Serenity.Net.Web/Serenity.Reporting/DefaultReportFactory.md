@@ -1,7 +1,7 @@
 # DefaultReportFactory class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation for IReportFactory
+Default implementation of IReportFactory.
 
 ```csharp
 public class DefaultReportFactory : IReportFactory
@@ -9,15 +9,15 @@ public class DefaultReportFactory : IReportFactory
 
 | parameter | description |
 | --- | --- |
-| reportRegistry | Report registry |
-| serviceProvider | Service provider |
-| httpContextAccessor | Http context accessor |
+| reportRegistry | The report registry. |
+| serviceProvider | The service provider. |
+| httpContextAccessor | The HTTP context accessor. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultReportFactory](DefaultReportFactory/DefaultReportFactory.md)(…) | Default implementation for IReportFactory |
+| [DefaultReportFactory](DefaultReportFactory/DefaultReportFactory.md)(…) | Default implementation of IReportFactory. |
 | [Create](DefaultReportFactory/Create.md)(…) |  |
 | [SetParams](DefaultReportFactory/SetParams.md)(…) |  |
 
@@ -25,11 +25,11 @@ public class DefaultReportFactory : IReportFactory
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *reportRegistry* or *serviceProvider* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the [`DefaultReportFactory`](DefaultReportFactory.md) class.
 
 ## See Also
 

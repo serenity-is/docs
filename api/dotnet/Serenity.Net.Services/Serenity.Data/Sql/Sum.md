@@ -1,7 +1,7 @@
 # Sql.Sum method (1 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a SUM() expression
+Creates a SUM() expression.
 
 ```csharp
 public static string Sum(IField field)
@@ -11,11 +11,15 @@ public static string Sum(IField field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The SUM() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -27,7 +31,7 @@ public static string Sum(IField field)
 # Sql.Sum method (2 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a SUM() expression
+Creates a SUM() expression.
 
 ```csharp
 public static string Sum(string field)
@@ -37,11 +41,15 @@ public static string Sum(string field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The SUM() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 
@@ -62,6 +70,10 @@ public static string Sum(int joinNumber, string field)
 | --- | --- |
 | joinNumber | The join number. |
 | field | The field. |
+
+## Return Value
+
+The SUM() expression.
 
 ## Exceptions
 

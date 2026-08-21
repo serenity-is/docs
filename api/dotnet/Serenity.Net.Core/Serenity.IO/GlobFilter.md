@@ -1,7 +1,7 @@
 # GlobFilter class
 **namespace:** *[Serenity.IO](../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-A fast glob implementation, compatible with .gitignore patterns of GIT
+A fast glob implementation, compatible with the .gitignore patterns of GIT.
 
 ```csharp
 public class GlobFilter
@@ -11,7 +11,7 @@ public class GlobFilter
 
 | name | description |
 | --- | --- |
-| [GlobFilter](GlobFilter/GlobFilter.md)(…) | Creates a new GlobFilter, containing both include and exclude patterns. When "include" is null / empty, all files are included by default, unless they match a pattern in "exclude" list. When "exclude" is null, it is ignored. (2 constructors) |
+| [GlobFilter](GlobFilter/GlobFilter.md)(…) | Creates a new [`GlobFilter`](GlobFilter.md) containing both include and exclude patterns. When *include* is `null` or empty, all files are included by default, unless they match a pattern in the *exclude* list. When *exclude* is `null`, it is ignored. (2 constructors) |
 | [IsMatch](GlobFilter/IsMatch.md)(…) | Determines whether the specified path is matching this filter. |
 
 ## See Also

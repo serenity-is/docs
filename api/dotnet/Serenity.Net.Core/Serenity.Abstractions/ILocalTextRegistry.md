@@ -1,7 +1,7 @@
 # ILocalTextRegistry interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for local text registry which stores translations for local text keys.
+Abstraction for a local text registry which stores translations for local text keys.
 
 ```csharp
 public interface ILocalTextRegistry
@@ -11,8 +11,8 @@ public interface ILocalTextRegistry
 
 | name | description |
 | --- | --- |
-| [Add](ILocalTextRegistry/Add.md)(…) | Adds a local text entry to the registry |
-| [TryGet](ILocalTextRegistry/TryGet.md)(…) | Returns localized representation which corresponds to the local text key or null if none found in the source. |
+| [Add](ILocalTextRegistry/Add.md)(…) | Adds a local text entry to the registry. |
+| [TryGet](ILocalTextRegistry/TryGet.md)(…) | Returns the localized representation that corresponds to the local text key, or `null` if none is found in the source. |
 
 ## See Also
 

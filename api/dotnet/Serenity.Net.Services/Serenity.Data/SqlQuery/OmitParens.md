@@ -11,6 +11,10 @@ public SqlQuery OmitParens(bool value = true)
 | --- | --- |
 | value | Value |
 
+## Return Value
+
+The query itself.
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

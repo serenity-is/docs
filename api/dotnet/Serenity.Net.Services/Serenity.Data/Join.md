@@ -1,7 +1,7 @@
 # Join class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Corresponds to an SQL JOIN (INNER, OUTER, CROSS etc.)
+Corresponds to an SQL JOIN (INNER, OUTER, CROSS etc.).
 
 ```csharp
 public abstract class Join : Alias

@@ -1,7 +1,7 @@
 # FormScriptAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this type should generate a form script, which contains information about properties in this type and is an array of PropertyItem objects. Form scripts can be accessed from client side using Serenity.getForm("Key")
+Indicates that this type should generate a form script, which contains information about properties in this type and is an array of PropertyItem objects. Form scripts can be accessed from the client side using Serenity.getForm("Key").
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]

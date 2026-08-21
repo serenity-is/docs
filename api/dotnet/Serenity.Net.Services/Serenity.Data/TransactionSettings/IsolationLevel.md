@@ -1,7 +1,7 @@
 # TransactionSettings.IsolationLevel property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets sets the isolation level
+Gets or sets the isolation level.
 
 ```csharp
 public IsolationLevel? IsolationLevel { get; set; }

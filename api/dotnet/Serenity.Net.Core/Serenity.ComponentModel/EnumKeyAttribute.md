@@ -1,7 +1,7 @@
 # EnumKeyAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets the enumeration key of an enum
+Sets the enumeration key of an enum.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Enum)]
@@ -16,7 +16,7 @@ public class EnumKeyAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [EnumKeyAttribute](EnumKeyAttribute/EnumKeyAttribute.md)(…) | Sets the enumeration key of an enum |
+| [EnumKeyAttribute](EnumKeyAttribute/EnumKeyAttribute.md)(…) | Sets the enumeration key of an enum. |
 | [Value](EnumKeyAttribute/Value.md) { get; } | Gets the enum key. |
 
 ## Remarks

@@ -16,7 +16,7 @@ public SortBy()
 # SortBy constructor (2 of 3)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a SortBy object for specified field name.
+Creates a SortBy object for the specified field name.
 
 ```csharp
 public SortBy(string field)
@@ -24,7 +24,7 @@ public SortBy(string field)
 
 | parameter | description |
 | --- | --- |
-| field |  |
+| field | The field name. |
 
 ## See Also
 
@@ -35,7 +35,7 @@ public SortBy(string field)
 # SortBy constructor (3 of 3)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the SortBy object containg the specified field name, and descending flag.
+Creates an instance of the SortBy object containing the specified field name and descending flag.
 
 ```csharp
 public SortBy(string field, bool descending)
@@ -43,8 +43,8 @@ public SortBy(string field, bool descending)
 
 | parameter | description |
 | --- | --- |
-| field |  |
-| descending |  |
+| field | The field name. |
+| descending | Whether to sort in descending order. |
 
 ## See Also
 

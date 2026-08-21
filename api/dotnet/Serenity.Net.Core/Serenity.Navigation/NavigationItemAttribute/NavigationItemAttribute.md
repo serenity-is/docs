@@ -1,7 +1,7 @@
 # NavigationItemAttribute constructor
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a new instance of the attribute
+Creates a new instance of the attribute.
 
 ```csharp
 protected NavigationItemAttribute(int order, string path, string url, object permission, 
@@ -10,11 +10,11 @@ protected NavigationItemAttribute(int order, string path, string url, object per
 
 | parameter | description |
 | --- | --- |
-| order | Order |
-| path | Path |
-| url | Url |
-| permission | Permission |
-| icon | Icon class |
+| order | Order. |
+| path | Path. |
+| url | URL. |
+| permission | Permission. |
+| icon | Icon class. |
 
 ## See Also
 

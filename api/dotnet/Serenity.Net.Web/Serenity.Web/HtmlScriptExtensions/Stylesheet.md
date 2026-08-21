@@ -9,14 +9,18 @@ public static HtmlString Stylesheet(this IHtmlHelper helper, string cssUrl)
 
 | parameter | description |
 | --- | --- |
-| helper | HTML helper |
-| cssUrl | CSS Url |
+| helper | The HTML helper. |
+| cssUrl | The CSS URL. |
+
+## Return Value
+
+The rendered stylesheet link element.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | HTML helper or cssUrl is null |
+| ArgumentNullException | HTML helper or *cssUrl* is `null`. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # DataReaderExtensions.AsInt64 method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Reads value at field index. Returns DbNull as Null.Int64.
+Reads the value at the field index. Returns `null` if the value is DBNull.
 
 ```csharp
 public static long? AsInt64(this IDataReader reader, int index)
@@ -9,12 +9,12 @@ public static long? AsInt64(this IDataReader reader, int index)
 
 | parameter | description |
 | --- | --- |
-| reader | Reader (required). |
-| index | Index. |
+| reader | The reader (required). |
+| index | The field index. |
 
 ## Return Value
 
-Field value or Null.Int64 if value is DbNull.
+The field value, or `null` if the value is DBNull.
 
 ## See Also
 

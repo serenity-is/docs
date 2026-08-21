@@ -1,7 +1,7 @@
 # UniqueFieldSaveBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md) on fields
+Interface that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md) on fields.
 
 ```csharp
 public class UniqueFieldSaveBehavior : BaseSaveBehavior, IFieldBehavior, IImplicitBehavior
@@ -15,14 +15,14 @@ public class UniqueFieldSaveBehavior : BaseSaveBehavior, IFieldBehavior, IImplic
 
 | name | description |
 | --- | --- |
-| [UniqueFieldSaveBehavior](UniqueFieldSaveBehavior/UniqueFieldSaveBehavior.md)(…) | Interface that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md) on fields |
+| [UniqueFieldSaveBehavior](UniqueFieldSaveBehavior/UniqueFieldSaveBehavior.md)(…) | Interface that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md) on fields. |
 | [Target](UniqueFieldSaveBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](UniqueFieldSaveBehavior/ActivateFor.md)(…) |  |
 | override [OnBeforeSave](UniqueFieldSaveBehavior/OnBeforeSave.md)(…) |  |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

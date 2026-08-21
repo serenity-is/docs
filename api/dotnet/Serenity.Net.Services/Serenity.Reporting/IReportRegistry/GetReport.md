@@ -12,6 +12,10 @@ public Report GetReport(string reportKey, bool validatePermission = true)
 | reportKey | Report key |
 | validatePermission | Should validate the permission for report before returning. |
 
+## Return Value
+
+The report with the given key, or `null` if it is not found.
+
 ## See Also
 
 * class [Report](../ReportRegistry.Report.md)

@@ -1,7 +1,7 @@
 # SearchType enumeration
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Quick search type enumeration
+Quick search type enumeration.
 
 ```csharp
 public enum SearchType
@@ -12,10 +12,10 @@ public enum SearchType
 | name | value | description |
 | --- | --- | --- |
 | Auto | `0` | Automatic mode. Equals for integer types, Contains for other. |
-| Equals | `1` | Search with equality |
-| Contains | `2` | Search with contains |
-| StartsWith | `3` | Search with STARTS WITH |
-| FullTextContains | `4` | Use full text CONTAINS |
+| Equals | `1` | Search with equality. |
+| Contains | `2` | Search with contains. |
+| StartsWith | `3` | Search with STARTS WITH. |
+| FullTextContains | `4` | Use full text CONTAINS. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ParamPrefixReplacer class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Param prefix replacer
+Replaces the parameter prefix character in SQL expressions.
 
 ```csharp
 public static class ParamPrefixReplacer

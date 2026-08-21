@@ -1,7 +1,7 @@
 # IHasCommandTimeout.CommandTimeout property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the command timeout
+Gets or sets the command timeout.
 
 ```csharp
 public int? CommandTimeout { get; set; }

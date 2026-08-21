@@ -11,8 +11,8 @@ public override object ReadJson(JsonReader reader, Type objectType, object exist
 | parameter | description |
 | --- | --- |
 | reader | The JsonReader to read from. |
-| objectType | Type of the object. |
-| existingValue | The existing value of object being read. |
+| objectType | The type of the object. |
+| existingValue | The existing value of the object being read. |
 | serializer | The calling serializer. |
 
 ## Return Value

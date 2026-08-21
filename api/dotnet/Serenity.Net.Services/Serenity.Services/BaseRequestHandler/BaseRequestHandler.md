@@ -15,11 +15,11 @@ protected BaseRequestHandler(IRequestContext context)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Context is null |
+| ArgumentNullException | *context* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class.
+Initializes a new instance of the class.
 
 ## See Also
 

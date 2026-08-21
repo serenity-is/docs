@@ -1,7 +1,7 @@
 # HashSetStringJsonConverter class
 **namespace:** *[Serenity.JsonConverters](../README.md#serenity.jsonconverters-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Serialize/deserialize a HashSet object as string
+Serializes and deserializes a HashSet of strings as a JSON array.
 
 ```csharp
 public class HashSetStringJsonConverter : JsonConverter<HashSet<string>>

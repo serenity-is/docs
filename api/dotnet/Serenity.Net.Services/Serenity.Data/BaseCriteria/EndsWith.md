@@ -10,7 +10,11 @@ public BaseCriteria EndsWith(string mask, bool upper = false)
 | parameter | description |
 | --- | --- |
 | mask | The ends with mask. |
-| upper | True to use UPPER function both sides |
+| upper | `true` to use the UPPER function on both sides. |
+
+## Return Value
+
+A new binary Ends With criteria.
 
 ## Exceptions
 

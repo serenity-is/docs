@@ -12,7 +12,7 @@ public enum SummaryType
 | name | value | description |
 | --- | --- | --- |
 | Disabled | `-1` | Summary popup is disabled for this column |
-| None | `0` | No aggregate by default, but user might change |
+| None | `0` | No aggregate by default, but the user might change it. |
 | Sum | `1` | Use Sum aggregate by default |
 | Avg | `2` | Use Avg aggregate by default |
 | Min | `3` | Use Min aggregate by default |

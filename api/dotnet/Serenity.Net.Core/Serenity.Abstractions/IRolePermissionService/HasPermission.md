@@ -1,7 +1,7 @@
 # IRolePermissionService.HasPermission method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Return if given role has given permission.
+Determines whether the specified role has the given permission.
 
 ```csharp
 public bool HasPermission(string role, string permission)
@@ -9,8 +9,12 @@ public bool HasPermission(string role, string permission)
 
 | parameter | description |
 | --- | --- |
-| role | Role Key or Name |
-| permission | Permission Key |
+| role | The role key or name. |
+| permission | The permission key to check. |
+
+## Return Value
+
+`true` if the role has the permission; otherwise `false`.
 
 ## See Also
 

@@ -13,12 +13,12 @@ public abstract class BaseCriteriaVisitor
 | --- | --- |
 | [BaseCriteriaVisitor](BaseCriteriaVisitor/BaseCriteriaVisitor.md)() | Initializes a new instance of the [`BaseCriteriaVisitor`](BaseCriteriaVisitor.md) class. |
 | virtual [Visit](BaseCriteriaVisitor/Visit.md)(…) | Visits the specified criteria. |
-| virtual [VisitBinary](BaseCriteriaVisitor/VisitBinary.md)(…) | Visits the binary criteria. Binary criteria is one with two operands and an operator between. |
-| virtual [VisitCriteria](BaseCriteriaVisitor/VisitCriteria.md)(…) | Visits the criteria returning potentially reworked version. |
+| virtual [VisitBinary](BaseCriteriaVisitor/VisitBinary.md)(…) | Visits the binary criteria. A binary criteria is one with two operands and an operator between them. |
+| virtual [VisitCriteria](BaseCriteriaVisitor/VisitCriteria.md)(…) | Visits the criteria, returning a potentially reworked version. |
 | virtual [VisitFunctionCall](BaseCriteriaVisitor/VisitFunctionCall.md)(…) | Visits the function call criteria. |
-| virtual [VisitParam](BaseCriteriaVisitor/VisitParam.md)(…) | Visits the parameter criteria. Parameter criteria is just a parameter name. |
-| virtual [VisitUnary](BaseCriteriaVisitor/VisitUnary.md)(…) | Visits the unary criteria. Unary criteria is one with one operand and one operator. |
-| virtual [VisitValue](BaseCriteriaVisitor/VisitValue.md)(…) | Visits the value criteria. Value criteria is just a constant value. |
+| virtual [VisitParam](BaseCriteriaVisitor/VisitParam.md)(…) | Visits the parameter criteria. A parameter criteria is just a parameter name. |
+| virtual [VisitUnary](BaseCriteriaVisitor/VisitUnary.md)(…) | Visits the unary criteria. A unary criteria is one with one operand and one operator. |
+| virtual [VisitValue](BaseCriteriaVisitor/VisitValue.md)(…) | Visits the value criteria. A value criteria is just a constant value. |
 
 ## See Also
 

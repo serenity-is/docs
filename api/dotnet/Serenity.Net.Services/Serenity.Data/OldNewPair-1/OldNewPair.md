@@ -1,7 +1,7 @@
 # OldNewPair&lt;TItem&gt; constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-A pair of old new values
+A pair of old and new values.
 
 ```csharp
 public OldNewPair(TItem o, TItem n)
@@ -10,8 +10,8 @@ public OldNewPair(TItem o, TItem n)
 | parameter | description |
 | --- | --- |
 | TItem | The type of the item. |
-| o | The o. |
-| n | The n. |
+| o | The old value. |
+| n | The new value. |
 
 ## Remarks
 

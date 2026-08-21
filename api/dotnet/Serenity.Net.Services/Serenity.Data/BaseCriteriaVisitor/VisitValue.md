@@ -1,7 +1,7 @@
 # BaseCriteriaVisitor.VisitValue method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Visits the value criteria. Value criteria is just a constant value.
+Visits the value criteria. A value criteria is just a constant value.
 
 ```csharp
 protected virtual BaseCriteria VisitValue(ValueCriteria criteria)
@@ -10,6 +10,10 @@ protected virtual BaseCriteria VisitValue(ValueCriteria criteria)
 | parameter | description |
 | --- | --- |
 | criteria | The criteria. |
+
+## Return Value
+
+The visited value criteria.
 
 ## See Also
 

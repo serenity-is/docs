@@ -1,7 +1,7 @@
 # ReflectionExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Reflection extensions
+Reflection extensions.
 
 ```csharp
 public static class ReflectionExtensions

@@ -34,8 +34,8 @@ public AsyncLookupEditorAttribute(Type lookupType)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | lookupType |
-| ArgumentException | lookupType |
+| ArgumentNullException | Thrown if *lookupType* is null. |
+| ArgumentException | Thrown if the type has no [LookupScript] attribute. |
 
 ## See Also
 

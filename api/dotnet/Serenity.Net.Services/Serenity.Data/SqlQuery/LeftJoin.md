@@ -12,6 +12,10 @@ public SqlQuery LeftJoin(IAlias alias, ICriteria onCriteria)
 | alias | The alias. |
 | onCriteria | The on criteria. |
 
+## Return Value
+
+The query itself.
+
 ## Exceptions
 
 | exception | condition |
@@ -40,6 +44,10 @@ public SqlQuery LeftJoin(string toTable, IAlias alias, ICriteria onCriteria)
 | toTable | To table. |
 | alias | The alias. |
 | onCriteria | The on criteria. |
+
+## Return Value
+
+The query itself.
 
 ## Exceptions
 

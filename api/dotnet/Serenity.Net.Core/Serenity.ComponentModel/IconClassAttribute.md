@@ -1,7 +1,7 @@
 # IconClassAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets icon class
+Sets the icon class.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,8 +16,8 @@ public class IconClassAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [IconClassAttribute](IconClassAttribute/IconClassAttribute.md)(…) | Sets icon class |
-| [Value](IconClassAttribute/Value.md) { get; } | Gets the icon class |
+| [IconClassAttribute](IconClassAttribute/IconClassAttribute.md)(…) | Sets the icon class. |
+| [Value](IconClassAttribute/Value.md) { get; } | Gets the icon class. |
 
 ## Remarks
 

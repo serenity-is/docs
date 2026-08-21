@@ -1,4 +1,4 @@
-# SqlQuery.Where method (1 of 2)
+# SqlQuery.Where method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds an expression to WHERE clause. If query already has a WHERE clause, inserts AND between existing one and new one.
@@ -15,28 +15,11 @@ public SqlQuery Where(string expression)
 
 The query itself.
 
-## See Also
+## Exceptions
 
-* class [SqlQuery](../SqlQuery.md)
-
----
-
-# SqlQuery.Where method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
-
-Adds expressions to WHERE clause, inserting AND between them.
-
-```csharp
-public SqlQuery Where(params string[] expressions)
-```
-
-| parameter | description |
+| exception | condition |
 | --- | --- |
-| expressions | An array of expressions |
-
-## Return Value
-
-The query itself.
+| ArgumentNullException | expression is null or empty. |
 
 ## See Also
 

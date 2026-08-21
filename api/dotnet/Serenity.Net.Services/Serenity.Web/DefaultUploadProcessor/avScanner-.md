@@ -1,7 +1,7 @@
 # DefaultUploadProcessor.avScanner- field
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-AV Scanner
+Gets the AV scanner.
 
 ```csharp
 protected readonly IUploadAVScanner avScanner-;

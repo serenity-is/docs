@@ -1,7 +1,7 @@
 # MasterDetailRelationAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Defines a master detail relation (1-N) between this row and another
+Defines a master detail relation (1-N) between this row and another.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property)]
@@ -16,7 +16,7 @@ public sealed class MasterDetailRelationAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [MasterDetailRelationAttribute](MasterDetailRelationAttribute/MasterDetailRelationAttribute.md)(…) | Defines a master detail relation (1-N) between this row and another |
+| [MasterDetailRelationAttribute](MasterDetailRelationAttribute/MasterDetailRelationAttribute.md)(…) | Defines a master detail relation (1-N) between this row and another. |
 | [CheckChangesOnUpdate](MasterDetailRelationAttribute/CheckChangesOnUpdate.md) { get; set; } | Gets or sets a value indicating whether to check changes on update. Disable this if you are getting comparison errors. |
 | [ColumnSelection](MasterDetailRelationAttribute/ColumnSelection.md) { get; set; } | Gets or sets the column selection. |
 | [ColumnsType](MasterDetailRelationAttribute/ColumnsType.md) { get; set; } | Gets or sets the columns type with properties to include in column selection |

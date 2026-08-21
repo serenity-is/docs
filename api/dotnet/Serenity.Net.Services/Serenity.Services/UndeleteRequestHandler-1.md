@@ -22,7 +22,7 @@ public class UndeleteRequestHandler<TRow> :
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

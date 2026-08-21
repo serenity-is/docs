@@ -1,7 +1,7 @@
 # ForeignKeyInfo class
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-SQL metadata for a foreign key
+SQL metadata for a foreign key.
 
 ```csharp
 public class ForeignKeyInfo

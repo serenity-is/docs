@@ -11,7 +11,7 @@ public static class TwoLevelCacheInvalidationExtensions
 
 | name | description |
 | --- | --- |
-| static [InvalidateOnCommit](TwoLevelCacheInvalidationExtensions/InvalidateOnCommit.md)(…) | Invalidates cached items related to a group key when the unit of work commits (3 methods) |
+| static [InvalidateOnCommit](TwoLevelCacheInvalidationExtensions/InvalidateOnCommit.md)(…) | Invalidates cached items related to a group key when the unit of work commits. (3 methods) |
 
 ## See Also
 

@@ -9,7 +9,7 @@ public static HashSet<Field> GetTableFields(this IRow row)
 
 | parameter | description |
 | --- | --- |
-| row | The row to return dictionary of table fields |
+| row | The row to return the dictionary of table fields for. |
 
 ## Return Value
 

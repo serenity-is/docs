@@ -1,7 +1,7 @@
 # SqlSyntax.TableAliasDot method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a table alias dot like "T0."
+Creates a table alias dot like "T0.".
 
 ```csharp
 public static string TableAliasDot(this int joinIndex)
@@ -10,6 +10,10 @@ public static string TableAliasDot(this int joinIndex)
 | parameter | description |
 | --- | --- |
 | joinIndex | Index of the join. |
+
+## Return Value
+
+The table alias dot.
 
 ## See Also
 

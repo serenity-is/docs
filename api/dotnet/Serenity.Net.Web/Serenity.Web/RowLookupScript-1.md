@@ -1,7 +1,7 @@
 # RowLookupScript&lt;TRow&gt; class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Generic lookup script type for rows
+Generic lookup script type for rows.
 
 ```csharp
 public class RowLookupScript<TRow> : LookupScript
@@ -10,22 +10,22 @@ public class RowLookupScript<TRow> : LookupScript
 
 | parameter | description |
 | --- | --- |
-| TRow | Row type |
+| TRow | The row type. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [RowLookupScript](RowLookupScript-1/RowLookupScript.md)(…) | Creates a new instance of the class |
+| [RowLookupScript](RowLookupScript-1/RowLookupScript.md)(…) | Initializes a new instance of the [`RowLookupScript`](RowLookupScript-1.md) class. |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
-| readonly [sqlConnections-](RowLookupScript-1/sqlConnections-.md) | Sql connections |
-| virtual [ApplyOrder](RowLookupScript-1/ApplyOrder.md)(…) | Applies the sort order to the query |
+| readonly [sqlConnections-](RowLookupScript-1/sqlConnections-.md) | The SQL connections. |
+| virtual [ApplyOrder](RowLookupScript-1/ApplyOrder.md)(…) | Applies the sort order to the query. |
 | override [GetItems](RowLookupScript-1/GetItems.md)() |  |
-| virtual [PrepareQuery](RowLookupScript-1/PrepareQuery.md)(…) | Prepares the sql query to select fields |
+| virtual [PrepareQuery](RowLookupScript-1/PrepareQuery.md)(…) | Prepares the SQL query to select fields. |
 
 ## See Also
 

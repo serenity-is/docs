@@ -9,13 +9,13 @@ public static void CheckFileNameSecurity(string path)
 
 | parameter | description |
 | --- | --- |
-| path |  |
+| path | The file path to check. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentOutOfRangeException |  |
+| ArgumentOutOfRangeException | *path* is not a secure relative file. |
 
 ## See Also
 

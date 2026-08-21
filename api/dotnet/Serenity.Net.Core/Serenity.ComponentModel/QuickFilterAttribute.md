@@ -1,7 +1,7 @@
 # QuickFilterAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this property should have a quick filter on grid.
+Indicates that this property should have a quick filter on the grid.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,9 +16,9 @@ public class QuickFilterAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [QuickFilterAttribute](QuickFilterAttribute/QuickFilterAttribute.md)(…) | Indicates that this property should have a quick filter on grid. |
+| [QuickFilterAttribute](QuickFilterAttribute/QuickFilterAttribute.md)(…) | Indicates that this property should have a quick filter on the grid. |
 | [CssClass](QuickFilterAttribute/CssClass.md) { get; set; } | Gets or sets the CSS class for generated quick filter div. |
-| [Separator](QuickFilterAttribute/Separator.md) { get; set; } | Gets or sets a value indicating whether this [`QuickFilterAttribute`](QuickFilterAttribute.md) should have a separator before others, e.g. wrap into new line. |
+| [Separator](QuickFilterAttribute/Separator.md) { get; set; } | Gets or sets a value indicating whether this [`QuickFilterAttribute`](QuickFilterAttribute.md) should have a separator before others, e.g. wrap onto a new line. |
 | [Value](QuickFilterAttribute/Value.md) { get; } | Gets a value indicating whether this [`QuickFilterAttribute`](QuickFilterAttribute.md) is enabled. |
 
 ## Remarks

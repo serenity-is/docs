@@ -1,7 +1,7 @@
 # FilterableQueryExtensions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extensions for objects implementing IDbWhere interface.
+Extensions for objects implementing [`IFilterableQuery`](IFilterableQuery.md).
 
 ```csharp
 public static class FilterableQueryExtensions
@@ -11,7 +11,7 @@ public static class FilterableQueryExtensions
 
 | name | description |
 | --- | --- |
-| static [Where&lt;T&gt;](FilterableQueryExtensions/Where.md)(…) | Adds a filter to query |
+| static [Where&lt;T&gt;](FilterableQueryExtensions/Where.md)(…) | Adds a filter to query. |
 | static [WhereEqual&lt;T&gt;](FilterableQueryExtensions/WhereEqual.md)(…) | Adds a where statement with equality filter to a query, and sets the parameter value with a parameter. |
 
 ## See Also

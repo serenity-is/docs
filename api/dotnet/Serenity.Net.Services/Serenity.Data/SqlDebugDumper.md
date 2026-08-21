@@ -12,7 +12,7 @@ public class SqlDebugDumper
 | name | description |
 | --- | --- |
 | [SqlDebugDumper](SqlDebugDumper/SqlDebugDumper.md)() | The default constructor. |
-| static [Dump](SqlDebugDumper/Dump.md)(…) | Dumps the specified SQL. |
+| static [Dump](SqlDebugDumper/Dump.md)(…) | Dumps the specified SQL, replacing parameters with SQL constants, fixing brackets and database caret references. |
 
 ## See Also
 

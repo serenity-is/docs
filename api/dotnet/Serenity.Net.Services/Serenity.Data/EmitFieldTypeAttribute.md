@@ -17,7 +17,7 @@ public class EmitFieldTypeAttribute : Attribute
 | name | description |
 | --- | --- |
 | [EmitFieldTypeAttribute](EmitFieldTypeAttribute/EmitFieldTypeAttribute.md)(…) | Declares that the field generated for this template property should be of type specified. |
-| [FieldType](EmitFieldTypeAttribute/FieldType.md) { get; } | The field type |
+| [FieldType](EmitFieldTypeAttribute/FieldType.md) { get; } | The field type. |
 
 ## Remarks
 

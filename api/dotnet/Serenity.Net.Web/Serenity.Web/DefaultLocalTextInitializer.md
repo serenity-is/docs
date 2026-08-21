@@ -1,7 +1,7 @@
 # DefaultLocalTextInitializer class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default local text initializer
+Default ILocalTextInitializer that registers base texts and JSON texts from the `App_Data/texts` folder.
 
 ```csharp
 public class DefaultLocalTextInitializer : ILocalTextInitializer
@@ -9,22 +9,22 @@ public class DefaultLocalTextInitializer : ILocalTextInitializer
 
 | parameter | description |
 | --- | --- |
-| typeSource | Type source |
-| rowTypeRegistry | Row type registry |
-| webHostEnvironment | Web host environment |
+| typeSource | The type source used to discover text registrations. |
+| rowTypeRegistry | The row type registry used to discover row texts. |
+| webHostEnvironment | The web host environment used to locate the texts folder. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultLocalTextInitializer](DefaultLocalTextInitializer/DefaultLocalTextInitializer.md)(…) | Default local text initializer |
+| [DefaultLocalTextInitializer](DefaultLocalTextInitializer/DefaultLocalTextInitializer.md)(…) | Default ILocalTextInitializer that registers base texts and JSON texts from the `App_Data/texts` folder. |
 | virtual [Initialize](DefaultLocalTextInitializer/Initialize.md)(…) |  |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
-| virtual [AddJsonTexts](DefaultLocalTextInitializer/AddJsonTexts.md)(…) | Adds json texts to the local text registry |
+| virtual [AddJsonTexts](DefaultLocalTextInitializer/AddJsonTexts.md)(…) | Adds JSON texts to the local text registry. |
 
 ## See Also
 

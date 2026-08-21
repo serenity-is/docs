@@ -1,7 +1,7 @@
 # SummaryTypeAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Determines type of aggregate function for a column to use
+Determines the type of aggregate function to use for a column.
 
 ```csharp
 public SummaryTypeAttribute(SummaryType value)
@@ -9,7 +9,7 @@ public SummaryTypeAttribute(SummaryType value)
 
 | parameter | description |
 | --- | --- |
-| value | Aggregate function type |
+| value | Aggregate function type. |
 
 ## Remarks
 

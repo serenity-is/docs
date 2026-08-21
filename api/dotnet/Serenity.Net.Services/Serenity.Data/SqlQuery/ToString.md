@@ -9,7 +9,7 @@ public override string ToString()
 
 ## Return Value
 
-Formatted SELECT statement
+Formatted SELECT statement.
 
 ## See Also
 
@@ -26,9 +26,20 @@ Formats SQL Query as string. If paging is used and skip requested, multiple quer
 public static string ToString(ISqlQuery query, ISqlDialect dialect)
 ```
 
+| parameter | description |
+| --- | --- |
+| query | The query to format. |
+| dialect | The target dialect. |
+
 ## Return Value
 
-Formatted SELECT statement
+Formatted SELECT statement.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | query is null. |
 
 ## See Also
 

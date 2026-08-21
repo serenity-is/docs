@@ -21,7 +21,7 @@ public class RowValidationContext : IValidationContext
 | [Connection](RowValidationContext/Connection.md) { get; } | Gets the connection. |
 | [Localizer](RowValidationContext/Localizer.md) { get; } | Localizer |
 | [Value](RowValidationContext/Value.md) { get; set; } | Gets the value. |
-| [GetFieldValue](RowValidationContext/GetFieldValue.md)(…) | Gets the field value. |
+| [GetFieldValue](RowValidationContext/GetFieldValue.md)(…) | Gets the value of the field with the specified name. |
 
 ## Remarks
 

@@ -1,7 +1,7 @@
 # DefaultReportRenderer.excelRenderer- field
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Excel renderer
+The Excel renderer.
 
 ```csharp
 protected readonly IDataReportExcelRenderer excelRenderer-;

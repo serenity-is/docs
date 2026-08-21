@@ -1,7 +1,7 @@
 # TemplateHelper class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Helper methods for CSHTML templating
+Helper methods for CSHTML templating.
 
 ```csharp
 public static class TemplateHelper
@@ -11,7 +11,7 @@ public static class TemplateHelper
 
 | name | description |
 | --- | --- |
-| static [RenderViewToString](TemplateHelper/RenderViewToString.md)(…) | Renders a CSHTML view to string |
+| static [RenderViewToString](TemplateHelper/RenderViewToString.md)(…) | Renders a CSHTML view to a string. |
 
 ## See Also
 

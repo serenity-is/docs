@@ -9,7 +9,7 @@ public TService Resolve()
 
 ## Return Value
 
-TService instance
+TService instance.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # LocalizationRowAttribute constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Maps a row to its localization row
+Maps a row to its localization row.
 
 ```csharp
 public LocalizationRowAttribute(Type localizationRow)
@@ -15,11 +15,11 @@ public LocalizationRowAttribute(Type localizationRow)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | localizationRow is null |
+| ArgumentNullException | *localizationRow* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the attribute
+Initializes a new instance of the attribute.
 
 ## See Also
 

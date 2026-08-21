@@ -1,7 +1,7 @@
 # ReportRenderResult.FileExtension property
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-File extension
+Gets or sets the file extension.
 
 ```csharp
 public string FileExtension { get; set; }

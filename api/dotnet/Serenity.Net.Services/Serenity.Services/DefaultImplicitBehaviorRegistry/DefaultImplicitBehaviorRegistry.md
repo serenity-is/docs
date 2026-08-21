@@ -1,7 +1,7 @@
 # DefaultImplicitBehaviorRegistry constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance
+Initializes a new instance of the class.
 
 ```csharp
 public DefaultImplicitBehaviorRegistry(ITypeSource typeSource)
@@ -10,6 +10,12 @@ public DefaultImplicitBehaviorRegistry(ITypeSource typeSource)
 | parameter | description |
 | --- | --- |
 | typeSource | The type source to extract [`IImplicitBehavior`](../IImplicitBehavior.md) types from |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *typeSource* is `null`. |
 
 ## See Also
 

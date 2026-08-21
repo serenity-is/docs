@@ -1,7 +1,7 @@
 # IField interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field object abstraction for SQL query
+Field object abstraction for SQL query.
 
 ```csharp
 public interface IField
@@ -12,8 +12,8 @@ public interface IField
 | name | description |
 | --- | --- |
 | [ColumnAlias](IField/ColumnAlias.md) { get; } | Select as column alias. Can be equal to property name or name. |
-| [Expression](IField/Expression.md) { get; } | The expression (can be equal to name if no expression) |
-| [Name](IField/Name.md) { get; } | Column name |
+| [Expression](IField/Expression.md) { get; } | The expression (can be equal to name if no expression). |
+| [Name](IField/Name.md) { get; } | Column name. |
 
 ## See Also
 

@@ -9,7 +9,7 @@ public int? GroupOrder { get; set; }
 
 ## Property Value
 
-The sort order.
+The group order.
 
 ## See Also
 

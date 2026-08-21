@@ -1,7 +1,7 @@
 # DefaultHandlerRegistry class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Default implentation for the [`IDefaultHandlerFactory`](IDefaultHandlerFactory.md)
+Default implementation for the [`IDefaultHandlerRegistry`](IDefaultHandlerRegistry.md).
 
 ```csharp
 public class DefaultHandlerRegistry : IDefaultHandlerRegistry
@@ -15,7 +15,7 @@ public class DefaultHandlerRegistry : IDefaultHandlerRegistry
 
 | name | description |
 | --- | --- |
-| [DefaultHandlerRegistry](DefaultHandlerRegistry/DefaultHandlerRegistry.md)(…) | Default implentation for the [`IDefaultHandlerFactory`](IDefaultHandlerFactory.md) |
+| [DefaultHandlerRegistry](DefaultHandlerRegistry/DefaultHandlerRegistry.md)(…) | Default implementation for the [`IDefaultHandlerRegistry`](IDefaultHandlerRegistry.md). |
 | virtual [GetTypes](DefaultHandlerRegistry/GetTypes.md)() |  |
 | [GetTypes](DefaultHandlerRegistry/GetTypes.md)(…) |  |
 
@@ -23,11 +23,11 @@ public class DefaultHandlerRegistry : IDefaultHandlerRegistry
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | typeSource is null |
+| ArgumentNullException | *typeSource* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

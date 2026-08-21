@@ -1,7 +1,7 @@
 # BaseCriteriaVisitor.VisitBinary method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Visits the binary criteria. Binary criteria is one with two operands and an operator between.
+Visits the binary criteria. A binary criteria is one with two operands and an operator between them.
 
 ```csharp
 protected virtual BaseCriteria VisitBinary(BinaryCriteria criteria)
@@ -10,6 +10,10 @@ protected virtual BaseCriteria VisitBinary(BinaryCriteria criteria)
 | parameter | description |
 | --- | --- |
 | criteria | The binary criteria. |
+
+## Return Value
+
+The visited binary criteria.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ReportRegistry.Report.Permission property
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Report permission
+Gets the report permission.
 
 ```csharp
 public string Permission { get; }

@@ -1,7 +1,7 @@
 # LocalTextRegistry.TryGet method
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Converts the local text key to its representation in requested language. Looks up text in requested language, its Fallbacks and invariant language in order. If not found in any, null is returned. See SetLanguageFallback for information about language fallbacks.
+Converts the local text key to its representation in the requested language. Looks up the text in the requested language, its fallbacks, and the invariant language in order. If not found in any, `null` is returned. See [`SetLanguageFallback`](SetLanguageFallback.md) for information about language fallbacks.
 
 ```csharp
 public string TryGet(string languageID, string textKey, bool pending)
@@ -9,9 +9,13 @@ public string TryGet(string languageID, string textKey, bool pending)
 
 | parameter | description |
 | --- | --- |
-| languageID | Language ID. |
-| textKey | Local text key |
-| pending | If pending approval texts to be used, true. |
+| languageID | The language ID. |
+| textKey | The local text key. |
+| pending | `true` if pending approval texts should be used. |
+
+## Return Value
+
+The localized text, or `null` if none is found.
 
 ## See Also
 

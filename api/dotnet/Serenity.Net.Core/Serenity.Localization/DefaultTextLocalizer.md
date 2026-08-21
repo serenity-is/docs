@@ -1,7 +1,7 @@
 # DefaultTextLocalizer class
 **namespace:** *[Serenity.Localization](../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Implementation of text localizer for current ui culture name and text registry
+An [`ITextLocalizer`](../Serenity/ITextLocalizer.md) implementation that resolves translations from an [`ILocalTextRegistry`](../Serenity.Abstractions/ILocalTextRegistry.md) using the current UI culture.
 
 ```csharp
 public class DefaultTextLocalizer : ITextLocalizer
@@ -9,18 +9,18 @@ public class DefaultTextLocalizer : ITextLocalizer
 
 | parameter | description |
 | --- | --- |
-| registry |  |
+| registry | The local text registry to resolve translations from. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultTextLocalizer](DefaultTextLocalizer/DefaultTextLocalizer.md)(…) | Implementation of text localizer for current ui culture name and text registry |
-| [TryGet](DefaultTextLocalizer/TryGet.md)(…) | Gets translation for a key based on the context language |
+| [DefaultTextLocalizer](DefaultTextLocalizer/DefaultTextLocalizer.md)(…) | An [`ITextLocalizer`](../Serenity/ITextLocalizer.md) implementation that resolves translations from an [`ILocalTextRegistry`](../Serenity.Abstractions/ILocalTextRegistry.md) using the current UI culture. |
+| [TryGet](DefaultTextLocalizer/TryGet.md)(…) | Gets the translation for a key based on the current UI culture language. |
 
 ## Remarks
 
-Creates a new default text localizer instance
+Creates a new default text localizer instance.
 
 ## See Also
 

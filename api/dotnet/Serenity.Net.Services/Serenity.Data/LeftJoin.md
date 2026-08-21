@@ -1,7 +1,7 @@
 # LeftJoin class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-LEFT JOIN type
+LEFT JOIN type.
 
 ```csharp
 public class LeftJoin : Join

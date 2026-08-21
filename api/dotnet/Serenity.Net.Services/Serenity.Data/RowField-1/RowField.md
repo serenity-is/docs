@@ -1,7 +1,7 @@
 # RowField&lt;TForeign&gt; constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a Row value
+Field with a Row value.
 
 ```csharp
 public RowField(ICollection<Field> collection, string name, LocalText caption = null, int size = 0, 

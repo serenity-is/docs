@@ -1,7 +1,7 @@
 # ScriptContent constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Default implementation for IScriptContent
+Default implementation of IScriptContent.
 
 ```csharp
 public ScriptContent(byte[] content, DateTime time, CompressionLevel compressionLevel)
@@ -9,19 +9,19 @@ public ScriptContent(byte[] content, DateTime time, CompressionLevel compression
 
 | parameter | description |
 | --- | --- |
-| content | Content |
-| time | Time |
-| compressionLevel | Suggested compression level |
+| content | The content bytes. |
+| time | The generation time. |
+| compressionLevel | The suggested compression level. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *content* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`ScriptContent`](../ScriptContent.md) class.
 
 ## See Also
 

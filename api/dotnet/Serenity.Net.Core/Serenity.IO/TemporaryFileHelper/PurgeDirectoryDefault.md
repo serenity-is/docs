@@ -1,7 +1,7 @@
 # TemporaryFileHelper.PurgeDirectoryDefault method
 **namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Clears a folder based on default conditions
+Clears a folder based on the default conditions.
 
 ```csharp
 public static void PurgeDirectoryDefault(string directoryToClean, 
@@ -10,12 +10,12 @@ public static void PurgeDirectoryDefault(string directoryToClean,
 
 | parameter | description |
 | --- | --- |
-| directoryToClean | Folder to be cleared |
-| fileSystem | File system |
+| directoryToClean | The folder to be cleared. |
+| fileSystem | The file system to use, or `null` to use the physical file system. |
 
 ## Remarks
 
-If any errors occur during cleanup, this doesn't raise an exception and ignored. Other errors might raise an exception. As errors are ignored, method can't guarantee that less than specified number of files will be in the folder after it ends.
+If any errors occur during cleanup, they are ignored and do not raise an exception. Other errors might raise an exception. As errors are ignored, this method cannot guarantee that fewer than the specified number of files will remain in the folder after it ends.
 
 ## See Also
 

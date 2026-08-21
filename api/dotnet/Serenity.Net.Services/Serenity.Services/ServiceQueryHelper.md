@@ -12,7 +12,7 @@ public static class ServiceQueryHelper
 | name | description |
 | --- | --- |
 | static [ApplyContainsText](ServiceQueryHelper/ApplyContainsText.md)(…) | Applies contains text criteria to the query |
-| static [ApplySkipTakeAndCount](ServiceQueryHelper/ApplySkipTakeAndCount.md)(…) | Applies skip, take and exclude total count parameters to the query |
+| static [ApplySkipTakeAndCount](ServiceQueryHelper/ApplySkipTakeAndCount.md)(…) | Applies skip, take and exclude total count parameters to the query. |
 | static [ApplySort](ServiceQueryHelper/ApplySort.md)(…) | Applies the sort order to the query (3 methods) |
 | static [GetContainsTextFilter](ServiceQueryHelper/GetContainsTextFilter.md)(…) | Creates a contains text criteria |
 | static [GetNotDeletedCriteria](ServiceQueryHelper/GetNotDeletedCriteria.md)(…) | Gets not deleted criteria for a row type, e.g. for rows that support soft delete. |

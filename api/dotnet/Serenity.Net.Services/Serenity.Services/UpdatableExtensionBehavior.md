@@ -1,7 +1,7 @@
 # UpdatableExtensionBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Behavior that handles [`UpdatableExtensionAttribute`](../Serenity.Data.Mapping/UpdatableExtensionAttribute.md)
+Behavior that handles [`UpdatableExtensionAttribute`](../Serenity.Data.Mapping/UpdatableExtensionAttribute.md).
 
 ```csharp
 public class UpdatableExtensionBehavior : BaseSaveDeleteBehavior, IImplicitBehavior
@@ -15,7 +15,7 @@ public class UpdatableExtensionBehavior : BaseSaveDeleteBehavior, IImplicitBehav
 
 | name | description |
 | --- | --- |
-| [UpdatableExtensionBehavior](UpdatableExtensionBehavior/UpdatableExtensionBehavior.md)(…) | Behavior that handles [`UpdatableExtensionAttribute`](../Serenity.Data.Mapping/UpdatableExtensionAttribute.md) |
+| [UpdatableExtensionBehavior](UpdatableExtensionBehavior/UpdatableExtensionBehavior.md)(…) | Behavior that handles [`UpdatableExtensionAttribute`](../Serenity.Data.Mapping/UpdatableExtensionAttribute.md). |
 | [ActivateFor](UpdatableExtensionBehavior/ActivateFor.md)(…) |  |
 | override [OnAfterSave](UpdatableExtensionBehavior/OnAfterSave.md)(…) |  |
 | override [OnBeforeDelete](UpdatableExtensionBehavior/OnBeforeDelete.md)(…) |  |
@@ -25,11 +25,11 @@ public class UpdatableExtensionBehavior : BaseSaveDeleteBehavior, IImplicitBehav
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | handlerFactory is null |
+| ArgumentNullException | *handlerFactory* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

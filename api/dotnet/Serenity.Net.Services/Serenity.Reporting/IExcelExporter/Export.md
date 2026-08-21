@@ -1,7 +1,7 @@
 # IExcelExporter.Export method (1 of 3)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Exports the specified data to Excel format
+Exports the specified data to Excel format using the given report columns.
 
 ```csharp
 public byte[] Export(IEnumerable data, IEnumerable<ReportColumn> columns)
@@ -9,8 +9,12 @@ public byte[] Export(IEnumerable data, IEnumerable<ReportColumn> columns)
 
 | parameter | description |
 | --- | --- |
-| data | The data. |
+| data | The data to export. |
 | columns | The columns to export. |
+
+## Return Value
+
+The generated Excel file content.
 
 ## See Also
 
@@ -22,7 +26,7 @@ public byte[] Export(IEnumerable data, IEnumerable<ReportColumn> columns)
 # IExcelExporter.Export method (2 of 3)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Exports the specified data to Excel format
+Exports the specified data to Excel format, deriving the report columns from a columns type.
 
 ```csharp
 public byte[] Export(IEnumerable data, Type columnsType)
@@ -30,8 +34,12 @@ public byte[] Export(IEnumerable data, Type columnsType)
 
 | parameter | description |
 | --- | --- |
-| data | The data. |
+| data | The data to export. |
 | columnsType | The columns type that will be used to determine report columns to export. |
+
+## Return Value
+
+The generated Excel file content.
 
 ## See Also
 
@@ -42,7 +50,7 @@ public byte[] Export(IEnumerable data, Type columnsType)
 # IExcelExporter.Export method (3 of 3)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Exports the specified data to Excel format
+Exports the specified data to Excel format, deriving the report columns from a columns type and restricting the output to the given column names.
 
 ```csharp
 public byte[] Export(IEnumerable data, Type columnsType, IEnumerable<string> exportColumns)
@@ -50,9 +58,13 @@ public byte[] Export(IEnumerable data, Type columnsType, IEnumerable<string> exp
 
 | parameter | description |
 | --- | --- |
-| data | The data. |
+| data | The data to export. |
 | columnsType | The columns type that will be used to determine available report columns to export. |
-| exportColumns | Determines the names and order of columns to be exported |
+| exportColumns | Determines the names and order of columns to be exported. |
+
+## Return Value
+
+The generated Excel file content.
 
 ## See Also
 

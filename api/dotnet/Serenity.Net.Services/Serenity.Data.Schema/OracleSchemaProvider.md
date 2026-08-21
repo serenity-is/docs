@@ -13,11 +13,11 @@ public class OracleSchemaProvider : ISchemaProvider
 | --- | --- |
 | [OracleSchemaProvider](OracleSchemaProvider/OracleSchemaProvider.md)() | The default constructor. |
 | [DefaultSchema](OracleSchemaProvider/DefaultSchema.md) { get; } | Gets the default schema. |
-| [GetFieldInfos](OracleSchemaProvider/GetFieldInfos.md)(…) | Gets the field infos. |
-| [GetForeignKeys](OracleSchemaProvider/GetForeignKeys.md)(…) | Gets the foreign keys. |
-| [GetIdentityFields](OracleSchemaProvider/GetIdentityFields.md)(…) | Gets the identity fields. |
-| [GetPrimaryKeyFields](OracleSchemaProvider/GetPrimaryKeyFields.md)(…) | Gets the primary key fields. |
-| [GetTableNames](OracleSchemaProvider/GetTableNames.md)(…) | Gets the table names. |
+| [GetFieldInfos](OracleSchemaProvider/GetFieldInfos.md)(…) |  |
+| [GetForeignKeys](OracleSchemaProvider/GetForeignKeys.md)(…) |  |
+| [GetIdentityFields](OracleSchemaProvider/GetIdentityFields.md)(…) |  |
+| [GetPrimaryKeyFields](OracleSchemaProvider/GetPrimaryKeyFields.md)(…) |  |
+| [GetTableNames](OracleSchemaProvider/GetTableNames.md)(…) |  |
 
 ## See Also
 

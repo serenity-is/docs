@@ -1,7 +1,7 @@
 # BaseCriteria class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base criteria object type
+The base criteria object type, from which all criteria types derive.
 
 ```csharp
 public abstract class BaseCriteria : ICriteria
@@ -26,11 +26,11 @@ public abstract class BaseCriteria : ICriteria
 | [NotIn](BaseCriteria/NotIn.md)(…) | Creates a new binary NOT IN criteria containing this criteria as the left operand. (2 methods) |
 | [NotIn&lt;T&gt;](BaseCriteria/NotIn.md)(…) | Creates a new binary NOT IN criteria containing this criteria as the left operand. |
 | [NotLike](BaseCriteria/NotLike.md)(…) | Creates a new binary Not Like criteria containing this criteria as the left operand. |
-| [StartsWith](BaseCriteria/StartsWith.md)(…) | Creates a new binary Stars With (LIKE '...%') criteria containing this criteria as the left operand. |
+| [StartsWith](BaseCriteria/StartsWith.md)(…) | Creates a new binary Starts With (LIKE '...%') criteria containing this criteria as the left operand. |
 | override [ToString](BaseCriteria/ToString.md)() | Converts the criteria to string. Raises an exception if criteria contains parameters. |
 | [ToString](BaseCriteria/ToString.md)(…) | Converts the criteria to string representation while adding params to the target query. |
 | virtual [ToString](BaseCriteria/ToString.md)(…) | Converts the criteria to string representation into a string builder, while adding its params to the target query. |
-| [ToStringIgnoreParams](BaseCriteria/ToStringIgnoreParams.md)() | Converts the criteria to string while ignoring its params if any. ToString() raises an exception if a criteria has params, while this not. |
+| [ToStringIgnoreParams](BaseCriteria/ToStringIgnoreParams.md)() | Converts the criteria to a string while ignoring its params, if any. [`ToString`](BaseCriteria/ToString.md) raises an exception if a criteria has params, while this does not. |
 | [operator &amp;](BaseCriteria/op_BitwiseAnd.md) | Implements the operator &amp;. |
 | [operator &#x7C;](BaseCriteria/op_BitwiseOr.md) | Implements the operator &#x7C;. |
 | [operator ==](BaseCriteria/op_Equality.md) | Implements the operator ==. (10 operators) |

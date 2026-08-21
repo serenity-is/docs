@@ -30,8 +30,8 @@ public RadioButtonEditorAttribute(Type enumOrLookupType)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | enumOrLookupType |
-| ArgumentException | lookupType |
+| ArgumentNullException | Thrown if *enumOrLookupType* is null. |
+| ArgumentException | Thrown if the type is not an enum and has no [LookupScript] attribute. |
 
 ## See Also
 

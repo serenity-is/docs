@@ -1,7 +1,7 @@
 # JsonSettings class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains default Serenity JSON serialization settings for Newtonsoft.Json.
+Contains the default Serenity JSON serialization settings for Newtonsoft.Json.
 
 ```csharp
 public static class JsonSettings
@@ -11,11 +11,11 @@ public static class JsonSettings
 
 | name | description |
 | --- | --- |
-| static [Strict](JsonSettings/Strict.md) | The stricter settings, raises error on missing members / reference loops, ignores nulls. |
-| static [StrictIncludeNulls](JsonSettings/StrictIncludeNulls.md) | The stricter settings, raises error on missing members / reference loops, includes nulls. |
-| static [Tolerant](JsonSettings/Tolerant.md) | The tolerant settings, ignores missing members, reference loops on deserialization, ignores nulls |
-| static [TolerantIncludeNulls](JsonSettings/TolerantIncludeNulls.md) | The tolerant settings, ignores missing members, reference loops on deserialization, includes nulls |
-| static [CreateDefaults](JsonSettings/CreateDefaults.md)() | Creates a JsonSerializerSettings object with common values and converters. |
+| static [Strict](JsonSettings/Strict.md) | The stricter settings, which raise an error on missing members and reference loops, and ignore nulls. |
+| static [StrictIncludeNulls](JsonSettings/StrictIncludeNulls.md) | The stricter settings, which raise an error on missing members and reference loops, and include nulls. |
+| static [Tolerant](JsonSettings/Tolerant.md) | The tolerant settings, which ignore missing members and reference loops on deserialization, and ignore nulls. |
+| static [TolerantIncludeNulls](JsonSettings/TolerantIncludeNulls.md) | The tolerant settings, which ignore missing members and reference loops on deserialization, and include nulls. |
+| static [CreateDefaults](JsonSettings/CreateDefaults.md)() | Creates a JsonSerializerSettings object with the common Serenity values and converters. |
 
 ## See Also
 

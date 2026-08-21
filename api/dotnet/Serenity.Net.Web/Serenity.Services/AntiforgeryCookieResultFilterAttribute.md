@@ -1,7 +1,7 @@
 # AntiforgeryCookieResultFilterAttribute class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Append the anti forgery token as CSRF-TOKEN cookie to the response, so that AJAX calls can read it client side and send as a header.
+Appends the anti forgery token as a `CSRF-TOKEN` cookie to the response, so that AJAX calls can read it client side and send it as a header.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
@@ -10,18 +10,18 @@ public class AntiforgeryCookieResultFilterAttribute : ResultFilterAttribute
 
 | parameter | description |
 | --- | --- |
-| antiforgery | Antiforgery service |
+| antiforgery | The antiforgery service. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [AntiforgeryCookieResultFilterAttribute](AntiforgeryCookieResultFilterAttribute/AntiforgeryCookieResultFilterAttribute.md)(…) | Append the anti forgery token as CSRF-TOKEN cookie to the response, so that AJAX calls can read it client side and send as a header. |
+| [AntiforgeryCookieResultFilterAttribute](AntiforgeryCookieResultFilterAttribute/AntiforgeryCookieResultFilterAttribute.md)(…) | Appends the anti forgery token as a `CSRF-TOKEN` cookie to the response, so that AJAX calls can read it client side and send it as a header. |
 | override [OnResultExecuting](AntiforgeryCookieResultFilterAttribute/OnResultExecuting.md)(…) |  |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`AntiforgeryCookieResultFilterAttribute`](AntiforgeryCookieResultFilterAttribute.md) class.
 
 ## See Also
 

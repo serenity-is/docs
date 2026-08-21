@@ -16,6 +16,12 @@ public SqlQuery OrderBy(string expression, bool desc = false)
 
 The query itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | expression is null or empty. |
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

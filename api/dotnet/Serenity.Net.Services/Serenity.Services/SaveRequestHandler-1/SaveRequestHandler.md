@@ -14,7 +14,7 @@ public SaveRequestHandler(IRequestContext context)
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ISaveRequestHandler.Row property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-New row
+Gets the new row.
 
 ```csharp
 public IRow Row { get; }

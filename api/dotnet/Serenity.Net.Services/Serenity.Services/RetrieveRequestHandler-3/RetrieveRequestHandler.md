@@ -1,7 +1,7 @@
 # RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt; constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ```csharp
 public RetrieveRequestHandler(IRequestContext context)
@@ -15,7 +15,7 @@ public RetrieveRequestHandler(IRequestContext context)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Context is null |
+| ArgumentNullException | *context* is `null`. |
 
 ## See Also
 

@@ -11,7 +11,7 @@ public interface ISaveRequestProcessor : ISaveRequestHandler
 
 | name | description |
 | --- | --- |
-| [Process](ISaveRequestProcessor/Process.md)(…) | Processes the [`ISaveRequest`](ISaveRequest.md) and returns a [`SaveResponse`](SaveResponse.md) |
+| [Process](ISaveRequestProcessor/Process.md)(…) | Processes the [`ISaveRequest`](ISaveRequest.md) and returns a [`SaveResponse`](SaveResponse.md). |
 
 ## See Also
 

@@ -9,7 +9,7 @@ public IEnumerable<ScriptFile> GetScriptFiles()
 
 ## Return Value
 
-List of script files.
+The list of script files.
 
 ## See Also
 

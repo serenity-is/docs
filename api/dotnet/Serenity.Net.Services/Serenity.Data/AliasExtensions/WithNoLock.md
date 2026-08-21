@@ -11,6 +11,10 @@ public static Alias WithNoLock(this IAlias alias)
 | --- | --- |
 | alias | The alias. |
 
+## Return Value
+
+A new alias with the WITH(NOLOCK) hint appended.
+
 ## See Also
 
 * class [Alias](../Alias.md)

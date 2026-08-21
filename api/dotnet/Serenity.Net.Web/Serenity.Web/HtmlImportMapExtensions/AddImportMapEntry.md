@@ -10,12 +10,12 @@ public static void AddImportMapEntry(this HttpContext context, string specifier,
 
 | parameter | description |
 | --- | --- |
-| context | Http context. |
-| specifier | The module specifier to map, such as a package name or relative path. Cannot be null. |
-| address | The address or URL where the module can be loaded from. Cannot be null. |
-| integrity | An optional integrity hash for the module, used to verify its contents. If null, no integrity value is set. |
+| context | The HTTP context. |
+| specifier | The module specifier to map, such as a package name or relative path. Cannot be `null`. |
+| address | The address or URL where the module can be loaded from. Cannot be `null`. |
+| integrity | An optional integrity hash for the module, used to verify its contents. If `null`, no integrity value is set. |
 | csp | Indicates whether to add a Content Security Policy directive for the module address. Set to `true` to add the directive; otherwise, `false`. |
-| overwrite | True (default) to overwrite existing entries if any |
+| overwrite | `true` (default) to overwrite existing entries if any. |
 
 ## Remarks
 

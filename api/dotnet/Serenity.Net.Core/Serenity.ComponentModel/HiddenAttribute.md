@@ -1,7 +1,7 @@
 # HiddenAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets a column as initially hidden
+Sets a column as initially hidden.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

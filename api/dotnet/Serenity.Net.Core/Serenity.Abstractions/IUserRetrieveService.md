@@ -1,7 +1,7 @@
 # IUserRetrieveService interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction to retrieve a user definition by its id or username
+Retrieves user definitions by identifier or username.
 
 ```csharp
 public interface IUserRetrieveService
@@ -11,8 +11,8 @@ public interface IUserRetrieveService
 
 | name | description |
 | --- | --- |
-| [ById](IUserRetrieveService/ById.md)(…) | Returns user definition for specified user ID or null if doesn't exist. |
-| [ByUsername](IUserRetrieveService/ByUsername.md)(…) | Returns user definition for specified username or null if doesn't exist. |
+| [ById](IUserRetrieveService/ById.md)(…) | Gets the user definition with the specified identifier. |
+| [ByUsername](IUserRetrieveService/ByUsername.md)(…) | Gets the user definition with the specified username. |
 
 ## See Also
 

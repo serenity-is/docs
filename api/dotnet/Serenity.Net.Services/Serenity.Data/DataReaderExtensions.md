@@ -11,18 +11,18 @@ public static class DataReaderExtensions
 
 | name | description |
 | --- | --- |
-| static [AsDateTime](DataReaderExtensions/AsDateTime.md)(…) | Reads value at field index. Returns DbNull as Null.DateTime. |
-| static [AsDecimal](DataReaderExtensions/AsDecimal.md)(…) | Reads value at field index. Returns DbNull as Null.Decimal. |
-| static [AsDouble](DataReaderExtensions/AsDouble.md)(…) | Reads value at field index. Returns DbNull as Null.Double. |
-| static [AsInt32](DataReaderExtensions/AsInt32.md)(…) | Reads value at field index. Returns DbNull as Null.Int32. |
-| static [AsInt64](DataReaderExtensions/AsInt64.md)(…) | Reads value at field index. Returns DbNull as Null.Int64. |
-| static [AsString](DataReaderExtensions/AsString.md)(…) | Reads value at field index. Returns DbNull as null. |
-| static [ToDateTime](DataReaderExtensions/ToDateTime.md)(…) | Reads and converts value at field index to DateTime. Returns DbNull as Null.DateTime. |
-| static [ToDecimal](DataReaderExtensions/ToDecimal.md)(…) | Reads and converts value at field index to Decimal. Returns DbNull as Null.Decimal. |
-| static [ToDouble](DataReaderExtensions/ToDouble.md)(…) | Reads and converts value at field index to Double. Returns DbNull as Null.Double. |
-| static [ToInt32](DataReaderExtensions/ToInt32.md)(…) | Reads and converts value at field index to Int32. Returns DbNull as Null.Int32. |
-| static [ToInt64](DataReaderExtensions/ToInt64.md)(…) | Reads and converts value at field index to Int64. Returns DbNull as Null.Int64. |
-| static [ToString](DataReaderExtensions/ToString.md)(…) | Reads and converts value at field index to String. Returns DbNull as null. |
+| static [AsDateTime](DataReaderExtensions/AsDateTime.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
+| static [AsDecimal](DataReaderExtensions/AsDecimal.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
+| static [AsDouble](DataReaderExtensions/AsDouble.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
+| static [AsInt32](DataReaderExtensions/AsInt32.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
+| static [AsInt64](DataReaderExtensions/AsInt64.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
+| static [AsString](DataReaderExtensions/AsString.md)(…) | Reads the value at the field index. Returns `null` if the value is DBNull. |
+| static [ToDateTime](DataReaderExtensions/ToDateTime.md)(…) | Reads and converts the value at the field index to DateTime. Returns `null` if the value is DBNull. |
+| static [ToDecimal](DataReaderExtensions/ToDecimal.md)(…) | Reads and converts the value at the field index to Decimal. Returns `null` if the value is DBNull. |
+| static [ToDouble](DataReaderExtensions/ToDouble.md)(…) | Reads and converts the value at the field index to Double. Returns `null` if the value is DBNull. |
+| static [ToInt32](DataReaderExtensions/ToInt32.md)(…) | Reads and converts the value at the field index to Int32. Returns `null` if the value is DBNull. |
+| static [ToInt64](DataReaderExtensions/ToInt64.md)(…) | Reads and converts the value at the field index to Int64. Returns `null` if the value is DBNull. |
+| static [ToString](DataReaderExtensions/ToString.md)(…) | Reads and converts the value at the field index to String. Returns `null` if the value is DBNull. |
 
 ## See Also
 

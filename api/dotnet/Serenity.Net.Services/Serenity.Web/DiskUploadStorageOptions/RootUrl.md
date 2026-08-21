@@ -1,7 +1,7 @@
 # DiskUploadStorageOptions.RootUrl property
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Root URL
+Gets or sets the root URL.
 
 ```csharp
 public string RootUrl { get; set; }

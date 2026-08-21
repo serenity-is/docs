@@ -1,4 +1,4 @@
-# SqlUpdate.Where method (1 of 2)
+# SqlUpdate.Where method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a condition to WHERE clause of the query.
@@ -15,28 +15,11 @@ public SqlUpdate Where(string condition)
 
 SqlUpdate object itself.
 
-## See Also
+## Exceptions
 
-* class [SqlUpdate](../SqlUpdate.md)
-
----
-
-# SqlUpdate.Where method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
-
-Adds conditions to WHERE clause of the query.
-
-```csharp
-public SqlUpdate Where(params string[] conditions)
-```
-
-| parameter | description |
+| exception | condition |
 | --- | --- |
-| conditions | Condition. |
-
-## Return Value
-
-SqlUpdate object itself.
+| ArgumentNullException | condition is null or empty. |
 
 ## See Also
 

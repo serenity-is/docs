@@ -10,8 +10,8 @@ public static void AddSerenityAssetsImportMapEntries(this HttpContext context,
 
 | parameter | description |
 | --- | --- |
-| context | Http context |
-| overwrite | True (default) to overwrite existing entries if any |
+| context | The HTTP context. |
+| overwrite | `true` (default) to overwrite existing entries if any. |
 
 ## See Also
 

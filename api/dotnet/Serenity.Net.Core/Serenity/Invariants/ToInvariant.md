@@ -57,6 +57,10 @@ public static string ToInvariant(this int value)
 | --- | --- |
 | value | The value. |
 
+## Return Value
+
+The value converted to a string using the invariant culture.
+
 ## See Also
 
 * class [Invariants](../Invariants.md)

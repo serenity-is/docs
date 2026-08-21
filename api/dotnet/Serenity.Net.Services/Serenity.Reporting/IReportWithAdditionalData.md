@@ -11,7 +11,7 @@ public interface IReportWithAdditionalData
 
 | name | description |
 | --- | --- |
-| [GetAdditionalData](IReportWithAdditionalData/GetAdditionalData.md)() | Should returns the additional data the report have as a dictionary of dataset key / dataset content, if any. |
+| [GetAdditionalData](IReportWithAdditionalData/GetAdditionalData.md)() | Returns the additional data the report has as a dictionary of dataset key / dataset content, if any. |
 
 ## See Also
 

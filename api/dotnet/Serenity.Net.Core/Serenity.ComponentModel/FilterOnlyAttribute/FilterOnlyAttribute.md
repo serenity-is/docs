@@ -1,7 +1,7 @@
 # FilterOnlyAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Indicates that this field should not be shown, and could not be made visible in column selection dialog, but only used for advanced filtering.
+Indicates that this field should not be shown, and cannot be made visible in the column selection dialog, but is only used for advanced filtering.
 
 ```csharp
 public FilterOnlyAttribute(bool value = true)

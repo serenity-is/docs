@@ -1,7 +1,7 @@
 # NavigationEntry class
 **namespace:** *[Serenity.Plugins](../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Plugin navigation entry abstraction.
+A plugin navigation entry abstraction.
 
 ```csharp
 public class NavigationEntry

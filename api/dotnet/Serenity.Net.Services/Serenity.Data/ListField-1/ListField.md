@@ -1,7 +1,7 @@
 # ListField&lt;TItem&gt; constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a list value
+Field with a list value.
 
 ```csharp
 public ListField(ICollection<Field> collection, string name, LocalText caption = null, 

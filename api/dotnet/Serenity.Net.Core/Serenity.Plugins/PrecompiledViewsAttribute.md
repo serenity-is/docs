@@ -1,7 +1,7 @@
 # PrecompiledViewsAttribute class
 **namespace:** *[Serenity.Plugins](../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this plugin assembly contains precompiled views (by RazorGenerator)
+Indicates that this plugin assembly contains precompiled views (by RazorGenerator).
 
 ```csharp
 [AttributeUsage(AttributeTargets.Assembly)]

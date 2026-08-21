@@ -11,14 +11,14 @@ public interface IListRequestHandler : IRequestHandler
 
 | name | description |
 | --- | --- |
-| [Connection](IListRequestHandler/Connection.md) { get; } | Current connection |
-| [Context](IListRequestHandler/Context.md) { get; } | Current request context |
-| [Request](IListRequestHandler/Request.md) { get; } | List request |
-| [Response](IListRequestHandler/Response.md) { get; } | List response |
-| [Row](IListRequestHandler/Row.md) { get; } | Loader row |
-| [StateBag](IListRequestHandler/StateBag.md) { get; } | A state bag that can be used as storage within a request handler context |
+| [Connection](IListRequestHandler/Connection.md) { get; } | Gets the current connection. |
+| [Context](IListRequestHandler/Context.md) { get; } | Gets the current request context. |
+| [Request](IListRequestHandler/Request.md) { get; } | Gets the list request. |
+| [Response](IListRequestHandler/Response.md) { get; } | Gets the list response. |
+| [Row](IListRequestHandler/Row.md) { get; } | Gets the row used for querying / metadata lookup. |
+| [StateBag](IListRequestHandler/StateBag.md) { get; } | Gets a state bag that can be used as storage within a request handler context. |
 | [AllowSelectField](IListRequestHandler/AllowSelectField.md)(…) | Returns true if field is allowed to be selected, based on permissions and SelectLevel.Never. |
-| [IgnoreEqualityFilter](IListRequestHandler/IgnoreEqualityFilter.md)(…) | Use to ignore an equality filter |
+| [IgnoreEqualityFilter](IListRequestHandler/IgnoreEqualityFilter.md)(…) | Use to ignore an equality filter. |
 | [ShouldSelectField](IListRequestHandler/ShouldSelectField.md)(…) | Returns true if field should be selected based on ColumnSelection flags. |
 
 ## See Also

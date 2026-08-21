@@ -1,7 +1,7 @@
 # EntityQueryExtensions.SelectTableFields method (1 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds actual table fields in a row to select list of a query.
+Adds actual table fields in a row to the select list of a query.
 
 ```csharp
 public static SqlQuery SelectTableFields(this SqlQuery query, params Field[] exclude)
@@ -23,7 +23,7 @@ public static SqlQuery SelectTableFields(this SqlQuery query, params Field[] exc
 # EntityQueryExtensions.SelectTableFields method (2 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds actual table fields in a row to select list of a query.
+Adds actual table fields in a row to the select list of a query.
 
 ```csharp
 public static SqlQuery SelectTableFields(this SqlQuery query, IRow row, params Field[] exclude)

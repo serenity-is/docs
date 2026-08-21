@@ -1,7 +1,7 @@
 # IParentIdRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for rows that has a ParentId field
+Interface for rows that have a ParentId field.
 
 ```csharp
 public interface IParentIdRow : IRow

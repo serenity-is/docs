@@ -1,7 +1,7 @@
 # CssMinifyOptions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Set of options for CSS minifying
+Set of options for CSS minifying.
 
 ```csharp
 public class CssMinifyOptions
@@ -12,7 +12,7 @@ public class CssMinifyOptions
 | name | description |
 | --- | --- |
 | [CssMinifyOptions](CssMinifyOptions/CssMinifyOptions.md)() | The default constructor. |
-| [LineBreakThreshold](CssMinifyOptions/LineBreakThreshold.md) { get; set; } | Line break threshold |
+| [LineBreakThreshold](CssMinifyOptions/LineBreakThreshold.md) { get; set; } | Gets or sets the line break threshold. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ListField&lt;TItem&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a list value
+Field with a list value.
 
 ```csharp
 public class ListField<TItem> : CustomClassField<List<TItem>>
@@ -22,7 +22,7 @@ public class ListField<TItem> : CustomClassField<List<TItem>>
 
 | name | description |
 | --- | --- |
-| [ListField](ListField-1/ListField.md)(…) | Field with a list value |
+| [ListField](ListField-1/ListField.md)(…) | Field with a list value. |
 
 ## Protected Members
 

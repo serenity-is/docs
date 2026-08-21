@@ -1,7 +1,7 @@
 # SqliteSchemaProvider class
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-SQLite metadata provider
+SQLite metadata provider.
 
 ```csharp
 public class SqliteSchemaProvider : ISchemaProvider
@@ -13,11 +13,11 @@ public class SqliteSchemaProvider : ISchemaProvider
 | --- | --- |
 | [SqliteSchemaProvider](SqliteSchemaProvider/SqliteSchemaProvider.md)() | The default constructor. |
 | [DefaultSchema](SqliteSchemaProvider/DefaultSchema.md) { get; } | Gets the default schema. |
-| [GetFieldInfos](SqliteSchemaProvider/GetFieldInfos.md)(…) | Gets the field infos. |
-| [GetForeignKeys](SqliteSchemaProvider/GetForeignKeys.md)(…) | Gets the foreign keys. |
-| [GetIdentityFields](SqliteSchemaProvider/GetIdentityFields.md)(…) | Gets the identity fields. |
-| [GetPrimaryKeyFields](SqliteSchemaProvider/GetPrimaryKeyFields.md)(…) | Gets the primary key fields. |
-| [GetTableNames](SqliteSchemaProvider/GetTableNames.md)(…) | Gets the table names. |
+| [GetFieldInfos](SqliteSchemaProvider/GetFieldInfos.md)(…) |  |
+| [GetForeignKeys](SqliteSchemaProvider/GetForeignKeys.md)(…) |  |
+| [GetIdentityFields](SqliteSchemaProvider/GetIdentityFields.md)(…) |  |
+| [GetPrimaryKeyFields](SqliteSchemaProvider/GetPrimaryKeyFields.md)(…) |  |
+| [GetTableNames](SqliteSchemaProvider/GetTableNames.md)(…) |  |
 
 ## See Also
 

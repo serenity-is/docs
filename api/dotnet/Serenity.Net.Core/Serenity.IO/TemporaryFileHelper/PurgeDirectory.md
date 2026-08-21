@@ -1,7 +1,7 @@
 # TemporaryFileHelper.PurgeDirectory method
 **namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Clears a folder based on specified conditions
+Clears a folder based on the specified conditions.
 
 ```csharp
 public static void PurgeDirectory(string directoryToClean, TimeSpan autoExpireTime, 
@@ -10,15 +10,15 @@ public static void PurgeDirectory(string directoryToClean, TimeSpan autoExpireTi
 
 | parameter | description |
 | --- | --- |
-| directoryToClean | Folder to be cleared |
-| autoExpireTime | Files with creation time older than this is deleted. If passed as 0, time based cleanup is skipped. |
-| maxFilesInDirectory | If more than this number of files exists, files will be deleted starting from oldest to newest. By passing 0, all files can be deleted. If passed as -1, file count based cleanup is skipped. |
-| checkFileName | Safety file to be checked. If it is specified and it doesn't exists, operation is aborted. |
-| fileSystem | File system |
+| directoryToClean | The folder to be cleared. |
+| autoExpireTime | Files with a creation time older than this are deleted. If passed as Zero, time-based cleanup is skipped. |
+| maxFilesInDirectory | If more than this number of files exist, files are deleted starting from oldest to newest. Passing `0` deletes all files; passing `-1` skips file-count-based cleanup. |
+| checkFileName | The safety file to check. If specified and it does not exist, the operation is aborted. |
+| fileSystem | The file system to use, or `null` to use the physical file system. |
 
 ## Remarks
 
-If any errors occur during cleanup, this doesn't raise an exception and ignored. Other errors might raise an exception. As errors are ignored, method can't guarantee that less than specified number of files will be in the folder after it ends.
+If any errors occur during cleanup, they are ignored and do not raise an exception. Other errors might raise an exception. As errors are ignored, this method cannot guarantee that fewer than the specified number of files will remain in the folder after it ends.
 
 ## See Also
 

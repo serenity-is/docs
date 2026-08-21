@@ -1,7 +1,7 @@
 # NestedLocalTextsAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this class contains local texts with optionally subclasses that also contains local texts with keys joined by "." between each class name. The topmost class has no local text prefix by default and its name doesn't take role in local text key generation.
+Indicates that this class contains local texts with optional subclasses that also contain local texts with keys joined by "." between each class name. The topmost class has no local text prefix by default and its name doesn't take part in local text key generation.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]

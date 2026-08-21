@@ -1,7 +1,7 @@
 # PropertyItem class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Corresponds to a property item (e.g. a field in property grid with a label and editor, or a column specification in a grid)
+Corresponds to a property item (e.g. a field in a property grid with a label and editor, or a column specification in a grid).
 
 ```csharp
 public class PropertyItem
@@ -20,11 +20,11 @@ public class PropertyItem
 | [CssClass](PropertyItem/CssClass.md) { get; set; } | Gets or sets the CSS class that should be applied to the grid column, e.g. data cells for this property. Only used in grids. |
 | [DefaultValue](PropertyItem/DefaultValue.md) { get; set; } | Gets or sets the default value of the property in new record forms. |
 | [DisplayFormat](PropertyItem/DisplayFormat.md) { get; set; } | Gets or sets the display format to be passed to the formatter of a column. Note that display format has no effect on editors. |
-| [EditLink](PropertyItem/EditLink.md) { get; set; } | Gets or sets the edit link flag. Determines if column should have a edit link to open related dialog. |
+| [EditLink](PropertyItem/EditLink.md) { get; set; } | Gets or sets the edit link flag. Determines if the column should have an edit link to open the related dialog. |
 | [EditLinkCssClass](PropertyItem/EditLinkCssClass.md) { get; set; } | Gets or sets the edit link CSS class. |
 | [EditLinkIdField](PropertyItem/EditLinkIdField.md) { get; set; } | Gets or sets the edit link identifier (e.g. ID) field. If edit link is in CompanyName field, EditLinkId field might be CompanyId. |
 | [EditLinkItemType](PropertyItem/EditLinkItemType.md) { get; set; } | Gets or sets the type of the edit link item type if it is different than the item type of the grid. |
-| [EditorAddons](PropertyItem/EditorAddons.md) { get; set; } | Gets or sets the editor parameters that should be passed to the editor while it is being created. |
+| [EditorAddons](PropertyItem/EditorAddons.md) { get; set; } | Gets or sets the editor addons that should be attached to the editor while it is being created. |
 | [EditorCssClass](PropertyItem/EditorCssClass.md) { get; set; } | Gets or sets the CSS class to apply to the editor element. |
 | [EditorParams](PropertyItem/EditorParams.md) { get; set; } | Gets or sets the editor parameters that should be passed to the editor while it is being created. |
 | [EditorType](PropertyItem/EditorType.md) { get; set; } | Gets or sets the type of the editor used in form. |
@@ -62,8 +62,8 @@ public class PropertyItem
 | [Required](PropertyItem/Required.md) { get; set; } | Gets or sets the required flag of the property in forms. |
 | [Resizable](PropertyItem/Resizable.md) { get; set; } | Gets or sets the resizable flag of a column. |
 | [ShowSelection](PropertyItem/ShowSelection.md) { get; set; } | Gets or sets the apply selected CSS flag of a column. |
-| [SkipOnLoad](PropertyItem/SkipOnLoad.md) { get; set; } | Gets or sets the ignore on loadflag, which when true field won't be read from the entity on load. |
-| [SkipOnSave](PropertyItem/SkipOnSave.md) { get; set; } | Gets or sets the ignore on save flag, which when true field won't be serialized back to entity on save. |
+| [SkipOnLoad](PropertyItem/SkipOnLoad.md) { get; set; } | Gets or sets the ignore on load flag, which, when true, the field won't be read from the entity on load. |
+| [SkipOnSave](PropertyItem/SkipOnSave.md) { get; set; } | Gets or sets the ignore on save flag, which, when true, the field won't be serialized back to the entity on save. |
 | [Sortable](PropertyItem/Sortable.md) { get; set; } | Gets or sets the sortable flag of a column. |
 | [SortOrder](PropertyItem/SortOrder.md) { get; set; } | Gets or sets the sort order of a column, e.g. in which position this column is sorted by default in the grid. Only applies to grids, not forms. |
 | [SummaryType](PropertyItem/SummaryType.md) { get; set; } | Gets or sets the type of the summary. Only applies to grids. |

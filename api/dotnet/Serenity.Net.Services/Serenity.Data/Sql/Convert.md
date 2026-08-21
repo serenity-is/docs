@@ -12,6 +12,10 @@ public static string Convert(string type, string field)
 | type | The type. |
 | field | The field. |
 
+## Return Value
+
+The Convert() expression.
+
 ## Exceptions
 
 | exception | condition |

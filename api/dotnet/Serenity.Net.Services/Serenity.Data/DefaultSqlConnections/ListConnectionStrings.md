@@ -1,7 +1,7 @@
 # DefaultSqlConnections.ListConnectionStrings method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Lists all known connections strings
+Lists all known connection strings.
 
 ```csharp
 public IEnumerable<IConnectionString> ListConnectionStrings()
@@ -9,7 +9,7 @@ public IEnumerable<IConnectionString> ListConnectionStrings()
 
 ## Return Value
 
-List of all registered connections
+The list of all registered connections.
 
 ## See Also
 

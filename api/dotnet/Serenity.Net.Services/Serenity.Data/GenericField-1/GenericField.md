@@ -1,7 +1,7 @@
 # GenericField&lt;TValue&gt; constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Base generic class for fields with a value
+Base generic class for fields with a value.
 
 ```csharp
 protected GenericField(ICollection<Field> collection, FieldType type, string name, string caption, 

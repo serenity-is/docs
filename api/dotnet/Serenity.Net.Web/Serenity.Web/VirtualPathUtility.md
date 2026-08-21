@@ -1,7 +1,7 @@
 # VirtualPathUtility class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Extension methods providing partial compatibility with legacy VirtualPathUtility.
+Extension methods providing partial compatibility with the legacy `VirtualPathUtility`.
 
 ```csharp
 public static class VirtualPathUtility
@@ -11,7 +11,7 @@ public static class VirtualPathUtility
 
 | name | description |
 | --- | --- |
-| static [ToAbsolute](VirtualPathUtility/ToAbsolute.md)(…) | Converts a path to absolute (3 methods) |
+| static [ToAbsolute](VirtualPathUtility/ToAbsolute.md)(…) | Converts a path to absolute. (3 methods) |
 
 ## See Also
 

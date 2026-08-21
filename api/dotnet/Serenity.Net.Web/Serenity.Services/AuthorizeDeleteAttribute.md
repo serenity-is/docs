@@ -10,7 +10,7 @@ public class AuthorizeDeleteAttribute : ServiceAuthorizeAttribute
 
 | parameter | description |
 | --- | --- |
-| sourceType | Source type |
+| sourceType | The source type. |
 
 ## Public Members
 
@@ -20,7 +20,7 @@ public class AuthorizeDeleteAttribute : ServiceAuthorizeAttribute
 
 ## Remarks
 
-Creates a new instance of the attribute
+Initializes a new instance of the [`AuthorizeDeleteAttribute`](AuthorizeDeleteAttribute.md) class.
 
 ## See Also
 

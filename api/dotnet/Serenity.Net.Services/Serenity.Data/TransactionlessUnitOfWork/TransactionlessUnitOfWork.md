@@ -1,7 +1,7 @@
 # TransactionlessUnitOfWork constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Unit of work implementation without an underlying actual transaction. Use with care only to pass a IUnitOfWork instance to some methods that you don't want to actually start a transaction.
+A unit of work implementation without an underlying actual transaction. Use with care, only to pass an [`IUnitOfWork`](../IUnitOfWork.md) instance to some methods where you don't want to actually start a transaction.
 
 ```csharp
 public TransactionlessUnitOfWork(IDbConnection connection)

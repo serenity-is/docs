@@ -1,7 +1,7 @@
 # ImpersonatingUserAccessor.UndoImpersonate method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Undoes impersonation
+Pops the most recent impersonation from the stack.
 
 ```csharp
 public void UndoImpersonate()
@@ -11,7 +11,7 @@ public void UndoImpersonate()
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | UndoImpersonate() is called while impersonation stack is empty! |
+| InvalidOperationException | The impersonation stack is empty. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # HandleControllerExceptionAttribute class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-An exception filter attribute to handle controller exceptions and return as view.
+An exception filter attribute to handle controller exceptions and return them as a view.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]

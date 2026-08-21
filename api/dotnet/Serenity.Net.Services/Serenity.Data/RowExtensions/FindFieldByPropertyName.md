@@ -1,7 +1,7 @@
 # RowExtensions.FindFieldByPropertyName method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Finds the field by property name.
+Finds the field by its property name.
 
 ```csharp
 public static Field FindFieldByPropertyName(this IRow row, string name)
@@ -11,6 +11,10 @@ public static Field FindFieldByPropertyName(this IRow row, string name)
 | --- | --- |
 | row | The row. |
 | name | The name. |
+
+## Return Value
+
+The field with the specified property name.
 
 ## See Also
 

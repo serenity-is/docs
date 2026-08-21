@@ -1,7 +1,7 @@
 # HalfWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Marks form field with "col-sm-6" css class, which makes it allocate half of form row on device widths &gt;= 768px (e.g. iPad)
+Marks the form field with the "col-sm-6" CSS class, which makes it allocate half of the form row on device widths &gt;= 768px (e.g. iPad).
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

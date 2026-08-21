@@ -22,7 +22,7 @@ protected virtual void AddFieldContainsCriteria(Field field, string containsText
 
 | exception | condition |
 | --- | --- |
-| ArgumentOutOfRangeException |  |
+| ArgumentOutOfRangeException | *searchType* is not a supported [`SearchType`](../../Serenity.Data.Mapping/SearchType.md). |
 
 ## See Also
 

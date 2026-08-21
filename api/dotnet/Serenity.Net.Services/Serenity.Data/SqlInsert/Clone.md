@@ -9,7 +9,7 @@ public SqlInsert Clone()
 
 ## Return Value
 
-Clone.
+A clone of this query.
 
 ## See Also
 

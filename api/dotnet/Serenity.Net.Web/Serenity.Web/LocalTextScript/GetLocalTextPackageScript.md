@@ -1,7 +1,7 @@
 # LocalTextScript.GetLocalTextPackageScript method (1 of 2)
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets local text package script content
+Gets the local text package script content.
 
 ```csharp
 public static string GetLocalTextPackageScript(ILocalTextRegistry registry, 
@@ -10,17 +10,21 @@ public static string GetLocalTextPackageScript(ILocalTextRegistry registry,
 
 | parameter | description |
 | --- | --- |
-| registry | Text registry |
-| packages | Packages setting |
-| package | Package key |
-| languageId | Language ID |
-| isPending | True to include pending texts |
+| registry | The text registry. |
+| packages | The packages setting. |
+| package | The package key. |
+| languageId | The language ID. |
+| isPending | `true` to include pending texts. |
+
+## Return Value
+
+The script content.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Package key or packages setting is null |
+| ArgumentNullException | The package key or packages setting is `null`. |
 
 ## See Also
 
@@ -33,7 +37,7 @@ public static string GetLocalTextPackageScript(ILocalTextRegistry registry,
 # LocalTextScript.GetLocalTextPackageScript method (2 of 2)
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets a local text package script content
+Gets a local text package script content.
 
 ```csharp
 public static string GetLocalTextPackageScript(ILocalTextRegistry registry, string includes, 
@@ -42,17 +46,21 @@ public static string GetLocalTextPackageScript(ILocalTextRegistry registry, stri
 
 | parameter | description |
 | --- | --- |
-| registry | Text registry |
-| includes | Includes regex |
-| languageId | Language ID |
-| isPending | True to include pending text |
-| packageId | Package ID |
+| registry | The text registry. |
+| includes | The includes regex. |
+| languageId | The language ID. |
+| isPending | `true` to include pending texts. |
+| packageId | The package ID. |
+
+## Return Value
+
+The script content.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Registry is null |
+| ArgumentNullException | *registry* is `null`. |
 
 ## See Also
 

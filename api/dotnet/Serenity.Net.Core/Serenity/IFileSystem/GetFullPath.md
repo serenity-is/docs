@@ -9,11 +9,11 @@ public string GetFullPath(string path)
 
 | parameter | description |
 | --- | --- |
-| path | File path |
+| path | The path. |
 
 ## Return Value
 
-Absolute path
+The absolute path.
 
 ## See Also
 

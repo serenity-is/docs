@@ -1,7 +1,7 @@
 # INavigationModel.Items property
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Navigation items tree
+The navigation items tree.
 
 ```csharp
 public IEnumerable<NavigationItem> Items { get; }

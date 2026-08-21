@@ -1,7 +1,7 @@
 # TableName class
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Table schema/name and view information
+Table schema/name and view information.
 
 ```csharp
 public class TableName

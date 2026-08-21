@@ -1,7 +1,7 @@
 # EnumField&lt;TEnum&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with an Enum value
+Field with an Enum value.
 
 ```csharp
 public class EnumField<TEnum> : Int32Field

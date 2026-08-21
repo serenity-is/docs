@@ -18,6 +18,10 @@ public static DoubleField Factory(ICollection<Field> collection, string name, Lo
 | getValue | The get value. |
 | setValue | The set value. |
 
+## Return Value
+
+A new DoubleField instance.
+
 ## See Also
 
 * class [Field](../Field.md)

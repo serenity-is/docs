@@ -1,7 +1,7 @@
 # DateTimeField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a DateTime value
+Field with a DateTime value.
 
 ```csharp
 public DateTimeField(ICollection<Field> collection, string name, LocalText caption = null, 

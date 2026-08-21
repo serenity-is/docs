@@ -1,7 +1,7 @@
 # EsBuildMinifierExtensions class
 **namespace:** *[Serenity.Extensions.DependencyInjection](../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Extensions for adding EsBuild minifiers to IServiceCollection.
+Extensions for adding EsBuild minifiers to an IServiceCollection.
 
 ```csharp
 public static class EsBuildMinifierExtensions
@@ -11,9 +11,9 @@ public static class EsBuildMinifierExtensions
 
 | name | description |
 | --- | --- |
-| static [AddEsBuildCssMinifier](EsBuildMinifierExtensions/AddEsBuildCssMinifier.md)(…) | Adds EsBuild CSS minifier to IServiceCollection. |
-| static [AddEsBuildMinifiers](EsBuildMinifierExtensions/AddEsBuildMinifiers.md)(…) | Adds EsBuild minifiers to IServiceCollection. |
-| static [AddEsBuildScriptMinifier](EsBuildMinifierExtensions/AddEsBuildScriptMinifier.md)(…) | Adds EsBuild script minifier to IServiceCollection. |
+| static [AddEsBuildCssMinifier](EsBuildMinifierExtensions/AddEsBuildCssMinifier.md)(…) | Adds the EsBuild CSS minifier to the service collection. |
+| static [AddEsBuildMinifiers](EsBuildMinifierExtensions/AddEsBuildMinifiers.md)(…) | Adds both the EsBuild CSS and script minifiers to the service collection. |
+| static [AddEsBuildScriptMinifier](EsBuildMinifierExtensions/AddEsBuildScriptMinifier.md)(…) | Adds the EsBuild script minifier to the service collection. |
 
 ## See Also
 

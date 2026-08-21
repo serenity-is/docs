@@ -9,7 +9,7 @@ public string SanitizeResult(string result)
 
 | parameter | description |
 | --- | --- |
-| result |  |
+| result | The formatted file name result to sanitize. |
 
 ## See Also
 

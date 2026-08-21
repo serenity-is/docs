@@ -9,9 +9,9 @@ public static void LogCommand(string method, IDbCommand command, ILogger logger)
 
 | parameter | description |
 | --- | --- |
-| method | The type. |
+| method | The method name. |
 | command | The command. |
-| logger | Logger |
+| logger | The logger. |
 
 ## See Also
 

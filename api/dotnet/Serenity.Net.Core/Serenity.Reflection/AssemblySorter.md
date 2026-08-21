@@ -1,7 +1,7 @@
 # AssemblySorter class
 **namespace:** *[Serenity.Reflection](../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sorts assemblies based on their dependencies
+Sorts assemblies based on their dependencies.
 
 ```csharp
 public class AssemblySorter

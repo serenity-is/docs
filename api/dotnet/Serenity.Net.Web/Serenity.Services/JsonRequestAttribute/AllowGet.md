@@ -1,7 +1,7 @@
 # JsonRequestAttribute.AllowGet property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-True to allow this filter for GET request
+Gets or sets whether to allow this filter for GET requests.
 
 ```csharp
 public bool AllowGet { get; set; }

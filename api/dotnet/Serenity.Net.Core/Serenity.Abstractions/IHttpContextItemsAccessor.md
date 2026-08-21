@@ -1,7 +1,7 @@
 # IHttpContextItemsAccessor interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Interface for abstraction that should return HttpContext.Current.Items for web requests, and null for normal threads.
+Provides access to the per-request item dictionary, typically backed by `HttpContext.Items` for web requests.
 
 ```csharp
 public interface IHttpContextItemsAccessor
@@ -11,7 +11,11 @@ public interface IHttpContextItemsAccessor
 
 | name | description |
 | --- | --- |
-| [Items](IHttpContextItemsAccessor/Items.md) { get; } | A dictionary that can be used as a request context specific storage |
+| [Items](IHttpContextItemsAccessor/Items.md) { get; } | Gets the dictionary that can be used as request-scoped storage. |
+
+## Remarks
+
+Returns `null` when accessed outside of a web request context.
 
 ## See Also
 

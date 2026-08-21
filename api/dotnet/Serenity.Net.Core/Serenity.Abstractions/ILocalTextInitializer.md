@@ -1,7 +1,7 @@
 # ILocalTextInitializer interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for local text registry initializer, which initializes local text registry with translations.
+Abstraction for a local text registry initializer, which initializes a local text registry with translations.
 
 ```csharp
 public interface ILocalTextInitializer
@@ -11,7 +11,7 @@ public interface ILocalTextInitializer
 
 | name | description |
 | --- | --- |
-| [Initialize](ILocalTextInitializer/Initialize.md)(…) | Initializes local text registry with translations. |
+| [Initialize](ILocalTextInitializer/Initialize.md)(…) | Initializes the local text registry with translations. |
 
 ## See Also
 

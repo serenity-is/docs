@@ -10,7 +10,7 @@ public class UpdatableAttribute : Attribute
 
 | parameter | description |
 | --- | --- |
-| updatable | True to make field updatable |
+| updatable | True to make the field updatable. |
 
 ## Public Members
 
@@ -21,7 +21,7 @@ public class UpdatableAttribute : Attribute
 
 ## Remarks
 
-Controls if this field is editable in update record mode. When used with fields, turns on or off the updatable flag.
+When placed on a field, this attribute controls whether the field is included when updating an existing record.
 
 ## See Also
 

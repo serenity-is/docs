@@ -1,7 +1,7 @@
 # IFileSystem.DirectoryExists method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Checks if directory exists
+Checks whether a directory exists at the specified path.
 
 ```csharp
 public bool DirectoryExists(string path)
@@ -9,11 +9,11 @@ public bool DirectoryExists(string path)
 
 | parameter | description |
 | --- | --- |
-| path | Path to the directory |
+| path | The path of the directory. |
 
 ## Return Value
 
-True if exists
+`true` if the directory exists; otherwise, `false`.
 
 ## See Also
 

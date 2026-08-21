@@ -1,7 +1,7 @@
 # ITransientGrantor interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Interface for permission services that supports granting permissions temporarily
+Defines a permission service that supports temporarily granting permissions.
 
 ```csharp
 public interface ITransientGrantor
@@ -11,11 +11,11 @@ public interface ITransientGrantor
 
 | name | description |
 | --- | --- |
-| [GetGranted](ITransientGrantor/GetGranted.md)() | Returns a list of permissions granted via Grant. |
-| [Grant](ITransientGrantor/Grant.md)(…) | Grants specified permissions temporarily (or makes it look like) |
-| [GrantAll](ITransientGrantor/GrantAll.md)() | Grants all permissions temporarily (or makes it look like) |
-| [IsAllGranted](ITransientGrantor/IsAllGranted.md)() | Returns true if currently all permissions are granted via GrantAll. |
-| [UndoGrant](ITransientGrantor/UndoGrant.md)() | Undoes last grant or grant all operation |
+| [GetGranted](ITransientGrantor/GetGranted.md)() | Gets the permissions that were granted via [`Grant`](ITransientGrantor/Grant.md). |
+| [Grant](ITransientGrantor/Grant.md)(…) | Temporarily grants the specified permissions. |
+| [GrantAll](ITransientGrantor/GrantAll.md)() | Temporarily grants all permissions. |
+| [IsAllGranted](ITransientGrantor/IsAllGranted.md)() | Determines whether all permissions are currently granted via [`GrantAll`](ITransientGrantor/GrantAll.md). |
+| [UndoGrant](ITransientGrantor/UndoGrant.md)() | Reverts the most recent [`Grant`](ITransientGrantor/Grant.md) or [`GrantAll`](ITransientGrantor/GrantAll.md) operation. |
 
 ## See Also
 

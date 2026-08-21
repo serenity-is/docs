@@ -23,7 +23,7 @@ public EnumField(ICollection<Field> collection, string name, LocalText caption =
 
 | exception | condition |
 | --- | --- |
-| InvalidProgramException |  |
+| InvalidProgramException | TEnum is not an enum type or is not based on Int32. |
 
 ## See Also
 

@@ -11,6 +11,10 @@ public static IEnumerable<Assembly> Sort(IEnumerable<Assembly> assemblies)
 | --- | --- |
 | assemblies | The assemblies. |
 
+## Return Value
+
+The assemblies sorted so that dependencies come before dependents.
+
 ## See Also
 
 * class [AssemblySorter](../AssemblySorter.md)

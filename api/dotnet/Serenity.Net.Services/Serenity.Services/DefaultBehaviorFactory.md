@@ -1,7 +1,7 @@
 # DefaultBehaviorFactory class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Default [`IBehaviorFactory`](IBehaviorFactory.md) implementation
+Default [`IBehaviorFactory`](IBehaviorFactory.md) implementation.
 
 ```csharp
 public class DefaultBehaviorFactory : IBehaviorFactory
@@ -15,18 +15,18 @@ public class DefaultBehaviorFactory : IBehaviorFactory
 
 | name | description |
 | --- | --- |
-| [DefaultBehaviorFactory](DefaultBehaviorFactory/DefaultBehaviorFactory.md)(…) | Default [`IBehaviorFactory`](IBehaviorFactory.md) implementation |
+| [DefaultBehaviorFactory](DefaultBehaviorFactory/DefaultBehaviorFactory.md)(…) | Default [`IBehaviorFactory`](IBehaviorFactory.md) implementation. |
 | [CreateInstance](DefaultBehaviorFactory/CreateInstance.md)(…) |  |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *provider* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

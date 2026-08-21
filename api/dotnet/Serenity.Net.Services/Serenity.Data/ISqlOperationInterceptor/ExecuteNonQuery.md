@@ -1,13 +1,21 @@
 # ISqlOperationInterceptor.ExecuteNonQuery method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts SqlHelper.Execute(SqlDelete/SqlUpdate/SqlInsert) method. Command textParametersThe query.Expected rowsTrue if InsertAndGetID is called
+Intercepts the [`SqlHelper`](../SqlHelper.md)`Execute` method (SqlDelete/SqlUpdate/SqlInsert).
 
 ```csharp
 public OptionalValue<long?> ExecuteNonQuery(string commandText, 
     IDictionary<string, object> parameters, ExpectedRows expectedRows, IQueryWithParams query, 
     bool getNewId)
 ```
+
+| parameter | description |
+| --- | --- |
+| commandText | The command text. |
+| parameters | The parameters. |
+| expectedRows | The expected rows. |
+| query | The query. |
+| getNewId | True if `InsertAndGetID` is called. |
 
 ## See Also
 

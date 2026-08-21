@@ -1,7 +1,7 @@
 # IImpersonator interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Interface for authorization services that supports temporary impersonating
+Defines a service that supports temporary user impersonation.
 
 ```csharp
 public interface IImpersonator
@@ -11,8 +11,8 @@ public interface IImpersonator
 
 | name | description |
 | --- | --- |
-| [Impersonate](IImpersonator/Impersonate.md)(…) | Temporarily impersonates as a user |
-| [UndoImpersonate](IImpersonator/UndoImpersonate.md)() | Undoes impersonation |
+| [Impersonate](IImpersonator/Impersonate.md)(…) | Temporarily impersonates the specified user. |
+| [UndoImpersonate](IImpersonator/UndoImpersonate.md)() | Ends the most recent impersonation and restores the previous principal. |
 
 ## See Also
 

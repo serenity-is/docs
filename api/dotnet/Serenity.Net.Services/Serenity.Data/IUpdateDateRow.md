@@ -1,7 +1,7 @@
 # IUpdateDateRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for rows that has a UpdateDate field
+Interface for rows that have an UpdateDate field.
 
 ```csharp
 public interface IUpdateDateRow

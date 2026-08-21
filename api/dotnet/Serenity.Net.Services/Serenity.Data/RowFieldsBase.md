@@ -30,8 +30,8 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
 | [TableOnly](RowFieldsBase/TableOnly.md) { get; } | Gets the table only. |
 | [FindField](RowFieldsBase/FindField.md)(…) | Finds the field. |
 | [FindFieldByPropertyName](RowFieldsBase/FindFieldByPropertyName.md)(…) | Finds the name of the field by property. |
-| [GetFieldsByAttribute](RowFieldsBase/GetFieldsByAttribute.md)(…) | Gets the fields by attribute. |
-| [GetFieldsByAttribute&lt;TAttr&gt;](RowFieldsBase/GetFieldsByAttribute.md)() | Gets the fields by attribute. |
+| [GetFieldsByAttribute](RowFieldsBase/GetFieldsByAttribute.md)(…) | Gets the fields that have an attribute of the specified type. |
+| [GetFieldsByAttribute&lt;TAttr&gt;](RowFieldsBase/GetFieldsByAttribute.md)() | Gets the fields that have an attribute of the specified type. |
 | [Initialize](RowFieldsBase/Initialize.md)(…) | Initializes the specified annotations. |
 | [LockAlias](RowFieldsBase/LockAlias.md)() | Locks the alias. |
 | [ReplaceAliasWith](RowFieldsBase/ReplaceAliasWith.md)(…) | Replaces the alias with. |

@@ -11,7 +11,7 @@ public class DefaultUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| [DefaultUploadStorage](DefaultUploadStorage/DefaultUploadStorage.md)(…) | Creates a new instance of the object |
+| [DefaultUploadStorage](DefaultUploadStorage/DefaultUploadStorage.md)(…) | Initializes a new instance of the [`DefaultUploadStorage`](DefaultUploadStorage.md) class. |
 | [ArchiveFile](DefaultUploadStorage/ArchiveFile.md)(…) |  |
 | [CopyFrom](DefaultUploadStorage/CopyFrom.md)(…) |  |
 | [DeleteFile](DefaultUploadStorage/DeleteFile.md)(…) |  |

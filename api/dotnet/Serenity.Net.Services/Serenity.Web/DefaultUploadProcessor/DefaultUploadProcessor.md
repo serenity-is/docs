@@ -1,7 +1,7 @@
 # DefaultUploadProcessor constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default implementation for [`IUploadProcessor`](../IUploadProcessor.md)
+Default implementation for [`IUploadProcessor`](../IUploadProcessor.md).
 
 ```csharp
 public DefaultUploadProcessor(IImageProcessor imageProcessor, IUploadStorage uploadStorage, 
@@ -21,11 +21,11 @@ public DefaultUploadProcessor(IImageProcessor imageProcessor, IUploadStorage upl
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *imageProcessor*, *uploadStorage* or *uploadValidator* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

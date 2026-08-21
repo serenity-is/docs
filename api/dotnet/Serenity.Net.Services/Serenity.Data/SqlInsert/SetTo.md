@@ -4,13 +4,13 @@
 Sets field value.
 
 ```csharp
-public SqlInsert SetTo(IField field, string value)
+public SqlInsert SetTo(IField field, string expression)
 ```
 
 | parameter | description |
 | --- | --- |
 | field | Field (required). |
-| value | Field value (expression, required). |
+| expression | Field expression, required. |
 
 ## Return Value
 
@@ -29,17 +29,23 @@ SqlInsert object itself.
 Sets field value.
 
 ```csharp
-public SqlInsert SetTo(string field, string value)
+public SqlInsert SetTo(string field, string expression)
 ```
 
 | parameter | description |
 | --- | --- |
 | field | Field name (required). |
-| value | Field value (expression, required). |
+| expression | Field expression, required. |
 
 ## Return Value
 
 SqlInsert object itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | field or expression is null or empty. |
 
 ## See Also
 

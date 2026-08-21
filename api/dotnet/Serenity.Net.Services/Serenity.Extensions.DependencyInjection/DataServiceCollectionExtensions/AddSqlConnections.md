@@ -1,7 +1,7 @@
 # DataServiceCollectionExtensions.AddSqlConnections method (1 of 2)
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds default IConnectionStrings and ISqlConnections interfaces
+Adds the default [`IConnectionStrings`](../../Serenity.Data/IConnectionStrings.md) and [`ISqlConnections`](../../Serenity.Data/ISqlConnections.md) interfaces.
 
 ```csharp
 public static void AddSqlConnections(this IServiceCollection services)
@@ -20,7 +20,7 @@ public static void AddSqlConnections(this IServiceCollection services)
 # DataServiceCollectionExtensions.AddSqlConnections method (2 of 2)
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds default IConnectionStrings and ISqlConnections interfaces
+Adds the default [`IConnectionStrings`](../../Serenity.Data/IConnectionStrings.md) and [`ISqlConnections`](../../Serenity.Data/ISqlConnections.md) interfaces.
 
 ```csharp
 public static void AddSqlConnections(this IServiceCollection services, 
@@ -30,7 +30,7 @@ public static void AddSqlConnections(this IServiceCollection services,
 | parameter | description |
 | --- | --- |
 | services | The service collection. |
-| setupAction | Setup action to manually modify connection strings |
+| setupAction | The setup action to manually modify connection strings. |
 
 ## See Also
 

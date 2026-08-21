@@ -1,7 +1,7 @@
 # DecimalField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a Decimal value
+Field with a Decimal value.
 
 ```csharp
 public DecimalField(ICollection<Field> collection, string name, LocalText caption = null, 

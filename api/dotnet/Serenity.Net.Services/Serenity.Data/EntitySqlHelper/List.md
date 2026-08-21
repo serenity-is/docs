@@ -18,7 +18,7 @@ public static List<TRow> List<TRow>(this SqlQuery query, IDbConnection connectio
 
 ## Return Value
 
-List of rows
+List of rows.
 
 ## See Also
 

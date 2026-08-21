@@ -1,7 +1,7 @@
 # CodeWriter.Using method (1 of 2)
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns true if the namespace is in list of usings. If AllowUsing callback is null or returns true, this may add it to the list of local usings.
+Returns true if the namespace is in the list of usings. If the AllowUsing callback is null or returns true, this may add it to the list of local usings.
 
 ```csharp
 public bool Using(string ns)
@@ -9,7 +9,11 @@ public bool Using(string ns)
 
 | parameter | description |
 | --- | --- |
-| ns |  |
+| ns | The namespace to check. |
+
+## Return Value
+
+`true` if the namespace is in the list of usings; otherwise, `false`.
 
 ## See Also
 
@@ -20,7 +24,7 @@ public bool Using(string ns)
 # CodeWriter.Using method (2 of 2)
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns true if the namespace is in list of usings. If AllowUsing callback is null or returns true, or force is true, this may add it to the list of local usings.
+Returns true if the namespace is in the list of usings. If the AllowUsing callback is null or returns true, or force is true, this may add it to the list of local usings.
 
 ```csharp
 public bool Using(string ns, bool force)
@@ -28,8 +32,12 @@ public bool Using(string ns, bool force)
 
 | parameter | description |
 | --- | --- |
-| ns |  |
-| force |  |
+| ns | The namespace to check. |
+| force | `true` to add the namespace to the local usings regardless of the AllowUsing callback. |
+
+## Return Value
+
+`true` if the namespace is in the list of usings; otherwise, `false`.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # LookupScriptAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Placed on rows / or custom lookup classes to denote it has a lookup script. When placed on a row class, lookup scripts only transfer ID and Name fields by default to client side for security / performance reasons. Make sure you add [LookupInclude] attribute to properties you'll need to access from script.
+Placed on rows or custom lookup classes to denote that they have a lookup script. When placed on a row class, lookup scripts only transfer ID and Name fields by default to the client side for security / performance reasons. Make sure you add the [LookupInclude] attribute to properties you'll need to access from script.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]
@@ -14,7 +14,7 @@ public sealed class LookupScriptAttribute : Attribute
 | --- | --- |
 | [LookupScriptAttribute](LookupScriptAttribute/LookupScriptAttribute.md)() | Creates a LookupScriptAttribute with auto determined lookup key |
 | [LookupScriptAttribute](LookupScriptAttribute/LookupScriptAttribute.md)(…) | Creates a LookupScriptAttribute. (2 constructors) |
-| [Expiration](LookupScriptAttribute/Expiration.md) { get; set; } | Cache duration in seconds |
+| [Expiration](LookupScriptAttribute/Expiration.md) { get; set; } | Cache duration in seconds. |
 | [Key](LookupScriptAttribute/Key.md) { get; } | Lookup key, usually in "Module.EntityName" format. |
 | [LookupType](LookupScriptAttribute/LookupType.md) { get; set; } | External lookup script type or base type that should be used for generating dynamic lookup script. Only meaningful for Row types with external lookup scripts. Can be a generic type of TRow or a simple lookup class. |
 | [Permission](LookupScriptAttribute/Permission.md) { get; set; } | Permission key required to access this lookup script. Use special value "?" for all logged-in users. Use special value "*" for anyone including not logged-in users. |

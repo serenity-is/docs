@@ -16,13 +16,13 @@ public static TRow TryById<TRow>(this IDbConnection connection, object id)
 
 ## Return Value
 
-Entity with given ID, or null if not found
+Entity with the given ID, or null if not found.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | Multiple records with the ID found |
+| InvalidOperationException | Multiple records with the ID found. |
 
 ## See Also
 
@@ -53,13 +53,13 @@ public static TRow TryById<TRow>(this IDbConnection connection, object id,
 
 ## Return Value
 
-Entity with given ID, or null if not found
+Entity with the given ID, or null if not found.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | Multiple records with the ID found |
+| InvalidOperationException | Multiple records with the ID found. |
 
 ## See Also
 

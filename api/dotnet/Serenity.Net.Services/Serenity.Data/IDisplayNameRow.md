@@ -1,7 +1,7 @@
 # IDisplayNameRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-An interface to provide access to a display name field
+An interface to provide access to a display name field.
 
 ```csharp
 public interface IDisplayNameRow
@@ -11,7 +11,7 @@ public interface IDisplayNameRow
 
 | name | description |
 | --- | --- |
-| [DisplayNameField](IDisplayNameRow/DisplayNameField.md) { get; } | Gets display name field |
+| [DisplayNameField](IDisplayNameRow/DisplayNameField.md) { get; } | Gets the display name field. |
 
 ## See Also
 

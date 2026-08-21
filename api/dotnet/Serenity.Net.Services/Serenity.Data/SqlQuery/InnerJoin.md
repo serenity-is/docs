@@ -12,6 +12,10 @@ public SqlQuery InnerJoin(IAlias alias, ICriteria onCriteria)
 | alias | The alias. |
 | onCriteria | The ON criteria. |
 
+## Return Value
+
+The query itself.
+
 ## Exceptions
 
 | exception | condition |

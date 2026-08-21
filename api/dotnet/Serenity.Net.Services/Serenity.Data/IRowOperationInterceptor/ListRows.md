@@ -10,10 +10,10 @@ public OptionalValue<IList> ListRows(Type rowType, ICriteria where, Action<SqlQu
 
 | parameter | description |
 | --- | --- |
-| rowType | Type of the row |
+| rowType | Type of the row. |
 | where | The where criteria. |
 | editQuery | The edit query callback. |
-| countOnly | True if intercepting Count method. |
+| countOnly | True if intercepting the Count method. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # RequiredAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Determines if field is required in form.
+Determines if the field is required in a form.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

@@ -1,7 +1,7 @@
 # NodeScriptRunner constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the [`NodeScriptRunner`](../NodeScriptRunner.md) class.
 
 ```csharp
 public NodeScriptRunner(string scriptName, string arguments = null, string workingDirectory = null, 
@@ -12,19 +12,19 @@ public NodeScriptRunner(string scriptName, string arguments = null, string worki
 
 | parameter | description |
 | --- | --- |
-| scriptName | Script name |
-| arguments | Arguments |
-| workingDirectory | Working directory |
-| envVars | Environment variables |
-| pkgManagerCommand | Package manager command. Defaul is "npm" |
-| diagnosticSource | Diagnostics source |
-| applicationStoppingToken | Application stopping token |
+| scriptName | The name of the script to run. |
+| arguments | The arguments to pass to the script. |
+| workingDirectory | The working directory in which to run the script. |
+| envVars | Optional environment variables to set for the process. |
+| pkgManagerCommand | The package manager command. Defaults to `npm`. |
+| diagnosticSource | The diagnostics source used to emit start events. |
+| applicationStoppingToken | A token that stops the process when the application is shutting down. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentException | One of arguments is null |
+| ArgumentException | One of the required arguments is null or empty. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # StringField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a String value
+Field with a String value.
 
 ```csharp
 public class StringField : GenericClassField<string>
@@ -21,12 +21,12 @@ public class StringField : GenericClassField<string>
 
 | name | description |
 | --- | --- |
-| [StringField](StringField/StringField.md)(…) | Field with a String value |
+| [StringField](StringField/StringField.md)(…) | Field with a String value. |
 | static [Factory](StringField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [GetFromReader](StringField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [IndexCompare](StringField/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort |
-| override [ValueFromJson](StringField/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](StringField/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [IndexCompare](StringField/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort. |
+| override [ValueFromJson](StringField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](StringField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

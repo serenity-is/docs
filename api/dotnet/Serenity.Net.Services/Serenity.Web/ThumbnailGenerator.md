@@ -11,7 +11,7 @@ public static class ThumbnailGenerator
 
 | name | description |
 | --- | --- |
-| static [GenerateEmptyBitmap](ThumbnailGenerator/GenerateEmptyBitmap.md)(…) | Generates an empty bitmap |
+| static [GenerateEmptyBitmap](ThumbnailGenerator/GenerateEmptyBitmap.md)(…) | Generates an empty bitmap. |
 
 ## See Also
 

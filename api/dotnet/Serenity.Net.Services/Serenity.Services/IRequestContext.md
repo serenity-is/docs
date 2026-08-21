@@ -11,11 +11,11 @@ public interface IRequestContext
 
 | name | description |
 | --- | --- |
-| [Behaviors](IRequestContext/Behaviors.md) { get; } | Gets the behavior provider |
-| [Cache](IRequestContext/Cache.md) { get; } | Get the two level cache |
-| [Localizer](IRequestContext/Localizer.md) { get; } | Gets the text localizer |
-| [Permissions](IRequestContext/Permissions.md) { get; } | Gets the permission service |
-| [User](IRequestContext/User.md) { get; } | Gets current user |
+| [Behaviors](IRequestContext/Behaviors.md) { get; } | Gets the behavior provider. |
+| [Cache](IRequestContext/Cache.md) { get; } | Gets the two level cache. |
+| [Localizer](IRequestContext/Localizer.md) { get; } | Gets the text localizer. |
+| [Permissions](IRequestContext/Permissions.md) { get; } | Gets the permission service. |
+| [User](IRequestContext/User.md) { get; } | Gets the current user. |
 
 ## See Also
 

@@ -16,7 +16,7 @@ public Report GetReport(string reportKey, bool validatePermission = true)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | reportKey is n ull |
+| ArgumentNullException | *reportKey* is `null` or empty. |
 
 ## See Also
 

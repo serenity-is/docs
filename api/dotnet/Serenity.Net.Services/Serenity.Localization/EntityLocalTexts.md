@@ -1,7 +1,7 @@
 # EntityLocalTexts class
 **namespace:** *[Serenity.Localization](../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-EntityLocalTexts
+Contains extension methods to register local texts for entity rows.
 
 ```csharp
 public static class EntityLocalTexts

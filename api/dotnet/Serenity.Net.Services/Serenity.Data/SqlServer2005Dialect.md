@@ -12,7 +12,7 @@ public class SqlServer2005Dialect : SqlServer2000Dialect
 | name | description |
 | --- | --- |
 | [SqlServer2005Dialect](SqlServer2005Dialect/SqlServer2005Dialect.md)() | The default constructor. |
-| override [CanUseRowNumber](SqlServer2005Dialect/CanUseRowNumber.md) { get; } | Gets a value indicating whether the server supports ROWNUMBER. |
+| override [CanUseRowNumber](SqlServer2005Dialect/CanUseRowNumber.md) { get; } |  |
 | static readonly [Instance](SqlServer2005Dialect/Instance.md) | The shared instance of SqlServer2005Dialect. |
 
 ## See Also

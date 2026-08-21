@@ -1,7 +1,7 @@
 # IIdRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Basic interface for rows that has an ID field. You should put [IdProperty] attribute to corresponding field.
+Basic interface for rows that have an ID field. You should put the [IdProperty] attribute on the corresponding field.
 
 ```csharp
 public interface IIdRow : IRow

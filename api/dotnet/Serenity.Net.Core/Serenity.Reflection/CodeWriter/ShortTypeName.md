@@ -1,15 +1,19 @@
 # CodeWriter.ShortTypeName method (1 of 2)
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Tries to add namespace
+Returns the short type name for the given fully qualified name, adding the namespace to the local usings if possible.
 
 ```csharp
 public string ShortTypeName(string fullName)
 ```
 
+| parameter | description |
+| --- | --- |
+| fullName | The fully qualified type name. |
+
 ## Return Value
 
-if succeeds returns only typeName if fails returns fullName
+The type name alone if the namespace can be used, otherwise the fully qualified name.
 
 ## See Also
 
@@ -20,7 +24,7 @@ if succeeds returns only typeName if fails returns fullName
 # CodeWriter.ShortTypeName method (2 of 2)
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Tries to add namespace
+Returns the short type name for the given namespace and type name, adding the namespace to the local usings if possible.
 
 ```csharp
 public string ShortTypeName(string ns, string typeName)
@@ -28,12 +32,12 @@ public string ShortTypeName(string ns, string typeName)
 
 | parameter | description |
 | --- | --- |
-| ns | Namespace |
-| typeName | Type name |
+| ns | The namespace. |
+| typeName | The type name. |
 
 ## Return Value
 
-if succeeds returns only typeName if fails returns fullName
+The type name alone if the namespace can be used, otherwise the fully qualified name.
 
 ## See Also
 

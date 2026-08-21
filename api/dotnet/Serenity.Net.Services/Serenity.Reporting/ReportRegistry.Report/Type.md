@@ -1,7 +1,7 @@
 # ReportRegistry.Report.Type property
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Type of the report
+Gets the type of the report.
 
 ```csharp
 public Type Type { get; }

@@ -19,7 +19,7 @@ A String that represents this instance.
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | There should be at least one WHEN/THEN pair. or WHEN/THEN pairs doesn't match. |
+| InvalidOperationException | There should be at least one WHEN/THEN pair. or WHEN/THEN pairs don't match. |
 
 ## See Also
 

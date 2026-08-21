@@ -10,7 +10,11 @@ public BaseCriteria Contains(string mask, bool upper = false)
 | parameter | description |
 | --- | --- |
 | mask | The contains mask. |
-| upper | True to use UPPER function both sides |
+| upper | `true` to use the UPPER function on both sides. |
+
+## Return Value
+
+A new binary Contains criteria.
 
 ## See Also
 

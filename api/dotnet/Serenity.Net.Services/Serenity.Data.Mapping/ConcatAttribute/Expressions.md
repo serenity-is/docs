@@ -1,7 +1,7 @@
 # ConcatAttribute.Expressions property
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the expressions
+Gets the expressions.
 
 ```csharp
 public object[] Expressions { get; }

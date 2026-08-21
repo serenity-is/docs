@@ -26,8 +26,8 @@ public class CriteriaFieldExpressionReplacer : SafeCriteriaValidator
 
 | name | description |
 | --- | --- |
-| [Dialect](CriteriaFieldExpressionReplacer/Dialect.md) { get; } | The dialect passed in or default dialect |
-| [Row](CriteriaFieldExpressionReplacer/Row.md) { get; } | The row instance |
+| [Dialect](CriteriaFieldExpressionReplacer/Dialect.md) { get; } | Gets the dialect passed in or the default dialect. |
+| [Row](CriteriaFieldExpressionReplacer/Row.md) { get; } | Gets the row instance. |
 | virtual [CanFilterField](CriteriaFieldExpressionReplacer/CanFilterField.md)(…) | Virtual method to check if a Field can be filtered. |
 | virtual [FindField](CriteriaFieldExpressionReplacer/FindField.md)(…) | Finds a field by its property name or field name |
 | virtual [ToCriteria](CriteriaFieldExpressionReplacer/ToCriteria.md)(…) | Converts field to criteria |
@@ -38,11 +38,11 @@ public class CriteriaFieldExpressionReplacer : SafeCriteriaValidator
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | row or permissions is null |
+| ArgumentNullException | *row* or *permissions* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

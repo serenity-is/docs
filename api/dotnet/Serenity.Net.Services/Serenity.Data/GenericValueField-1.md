@@ -1,7 +1,7 @@
 # GenericValueField&lt;TValue&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base class for fields with a value type value
+Base class for fields with a value type value.
 
 ```csharp
 public abstract class GenericValueField<TValue> : Field, IEnumTypeField
@@ -23,16 +23,16 @@ public abstract class GenericValueField<TValue> : Field, IEnumTypeField
 | override [AsObjectNoCheck](GenericValueField-1/AsObjectNoCheck.md)(…) |  |
 | override [ConvertValue](GenericValueField-1/ConvertValue.md)(…) | Converts the value. |
 | override [Copy](GenericValueField-1/Copy.md)(…) | Copies the specified source. |
-| override [IndexCompare](GenericValueField-1/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort |
+| override [IndexCompare](GenericValueField-1/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort. |
 | override [IsNullNoCheck](GenericValueField-1/IsNullNoCheck.md)(…) |  |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
-| [_enumType](GenericValueField-1/_enumType.md) | The enum type |
-| [_getValue](GenericValueField-1/_getValue.md) | The get value |
-| [_setValue](GenericValueField-1/_setValue.md) | The set value |
+| [_enumType](GenericValueField-1/_enumType.md) | The enum type. |
+| [_getValue](GenericValueField-1/_getValue.md) | The get value. |
+| [_setValue](GenericValueField-1/_setValue.md) | The set value. |
 
 ## See Also
 

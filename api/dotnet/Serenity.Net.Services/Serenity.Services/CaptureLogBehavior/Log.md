@@ -18,7 +18,7 @@ public void Log(IUnitOfWork uow, IRow old, IRow row, object userId)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | old and row is null |
+| ArgumentNullException | *old* and *row* are both `null`. |
 | InvalidOperationException | Capture log row type does not implement ICaptureLogRow interface |
 
 ## See Also

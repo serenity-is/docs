@@ -13,11 +13,11 @@ public class FirebirdSchemaProvider : ISchemaProvider
 | --- | --- |
 | [FirebirdSchemaProvider](FirebirdSchemaProvider/FirebirdSchemaProvider.md)() | The default constructor. |
 | [DefaultSchema](FirebirdSchemaProvider/DefaultSchema.md) { get; } | Gets the default schema. |
-| [GetFieldInfos](FirebirdSchemaProvider/GetFieldInfos.md)(…) | Gets the field infos. |
-| [GetForeignKeys](FirebirdSchemaProvider/GetForeignKeys.md)(…) | Gets the foreign keys. |
-| [GetIdentityFields](FirebirdSchemaProvider/GetIdentityFields.md)(…) | Gets the identity fields. |
-| [GetPrimaryKeyFields](FirebirdSchemaProvider/GetPrimaryKeyFields.md)(…) | Gets the primary key fields. |
-| [GetTableNames](FirebirdSchemaProvider/GetTableNames.md)(…) | Gets the table names. |
+| [GetFieldInfos](FirebirdSchemaProvider/GetFieldInfos.md)(…) |  |
+| [GetForeignKeys](FirebirdSchemaProvider/GetForeignKeys.md)(…) |  |
+| [GetIdentityFields](FirebirdSchemaProvider/GetIdentityFields.md)(…) |  |
+| [GetPrimaryKeyFields](FirebirdSchemaProvider/GetPrimaryKeyFields.md)(…) |  |
+| [GetTableNames](FirebirdSchemaProvider/GetTableNames.md)(…) |  |
 | static [GetSqlTypeFromBlrType](FirebirdSchemaProvider/GetSqlTypeFromBlrType.md)(…) | Gets the type of the SQL type from BLR. |
 
 ## See Also

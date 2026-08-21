@@ -1,7 +1,7 @@
 # DateHelper class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Static class with common date utilities and constants
+Static class with common date utilities and constants.
 
 ```csharp
 public static class DateHelper
@@ -16,7 +16,7 @@ public static class DateHelper
 | static [CurrentDateTimeFormat](DateHelper/CurrentDateTimeFormat.md) { get; } | Gets default date time format for current culture. |
 | static [ISODateTimeFormatLocal](DateHelper/ISODateTimeFormatLocal.md) | ISO Date and Time Format (up to milliseconds). |
 | static [ISODateTimeFormatUTC](DateHelper/ISODateTimeFormatUTC.md) | ISO Date and Time Format (up to milliseconds). |
-| static [DateElementOrderFor](DateHelper/DateElementOrderFor.md)(…) | Gets the date element order for specified short date time format. |
+| static [DateElementOrderFor](DateHelper/DateElementOrderFor.md)(…) | Gets the date element order for the specified short date time format. |
 | static [DateOrderString](DateHelper/DateOrderString.md)(…) | Gets date order string (one of "dmy", "ymd", "mdy") for a specified order. |
 | static [DefaultDateFormat](DateHelper/DefaultDateFormat.md)(…) | Gets default date format for specified order. |
 | static [DefaultDateTimeFormat](DateHelper/DefaultDateTimeFormat.md)(…) | Gets default date time format for specified order. |

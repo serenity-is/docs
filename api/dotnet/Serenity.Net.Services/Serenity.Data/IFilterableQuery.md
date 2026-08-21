@@ -1,7 +1,7 @@
 # IFilterableQuery interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for query classes (e.g. SqlSelect, SqlUpdate) having a where method to filter records
+Interface for query classes (e.g. SqlSelect, SqlUpdate) having a where method to filter records.
 
 ```csharp
 public interface IFilterableQuery : IQueryWithParams

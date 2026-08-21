@@ -1,7 +1,7 @@
 # ConnectionExtensions.GetLogger method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the logger for a connection if it implements IHasLogger interface, or null if not.
+Gets the logger for a connection if it implements the [`IHasLogger`](../IHasLogger.md) interface, or `null` if not.
 
 ```csharp
 public static ILogger GetLogger(this IDbConnection connection)
@@ -13,7 +13,7 @@ public static ILogger GetLogger(this IDbConnection connection)
 
 ## Return Value
 
-The logger for connection (used by static SqlHelper methods)
+The logger for the connection (used by static SqlHelper methods).
 
 ## See Also
 

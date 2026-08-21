@@ -1,7 +1,7 @@
 # VariantField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a Variant (e.g. SQL VARIANT) value
+Field with a Variant (e.g. SQL VARIANT) value.
 
 ```csharp
 public VariantField(ICollection<Field> collection, string name, LocalText caption = null, 

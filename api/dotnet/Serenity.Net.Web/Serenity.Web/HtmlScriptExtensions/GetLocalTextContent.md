@@ -1,7 +1,7 @@
 # HtmlScriptExtensions.GetLocalTextContent method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets the text content of a local text script
+Gets the text content of a local text script.
 
 ```csharp
 public static string GetLocalTextContent(this IHtmlHelper page, string package, 
@@ -10,9 +10,13 @@ public static string GetLocalTextContent(this IHtmlHelper page, string package,
 
 | parameter | description |
 | --- | --- |
-| page | HTML helper |
-| package | Package key |
-| isPending | True to include pending texts |
+| page | The HTML helper. |
+| package | The package key. |
+| isPending | `true` to include pending texts. |
+
+## Return Value
+
+The local text script content.
 
 ## See Also
 

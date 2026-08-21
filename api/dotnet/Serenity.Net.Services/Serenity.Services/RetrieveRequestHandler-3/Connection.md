@@ -1,7 +1,7 @@
 # RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.Connection property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets current connection
+Gets the current connection.
 
 ```csharp
 public IDbConnection Connection { get; }

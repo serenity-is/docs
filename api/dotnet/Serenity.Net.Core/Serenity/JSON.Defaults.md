@@ -15,7 +15,7 @@ public static class Defaults
 | static readonly [StrictWriteNulls](JSON.Defaults/StrictWriteNulls.md) | The stricter settings, raises error on missing members / reference loops, writes nulls |
 | static readonly [Tolerant](JSON.Defaults/Tolerant.md) | The tolerant settings, ignores missing members, reference loops on deserialization, skips nulls when serializing |
 | static readonly [TolerantWriteNulls](JSON.Defaults/TolerantWriteNulls.md) | The tolerant settings, ignores missing members, reference loops on deserialization, writes nulls |
-| static [Populate](JSON.Defaults/Populate.md)(…) | Creates a JsonSerializerSettings object with common values and converters. |
+| static [Populate](JSON.Defaults/Populate.md)(…) | Creates a JsonSerializerOptions object with the common Serenity values and converters. |
 
 ## See Also
 

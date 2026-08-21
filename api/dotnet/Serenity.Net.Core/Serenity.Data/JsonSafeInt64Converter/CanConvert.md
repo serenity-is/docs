@@ -9,11 +9,11 @@ public override bool CanConvert(Type objectType)
 
 | parameter | description |
 | --- | --- |
-| objectType | Type of the object. |
+| objectType | The type of the object. |
 
 ## Return Value
 
-True if this instance can convert the specified object type; otherwise, false.
+`true` if this instance can convert the specified object type; otherwise, `false`.
 
 ## See Also
 

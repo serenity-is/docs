@@ -1,7 +1,7 @@
 # RegisteredScripts class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-A dynamic script type for registered scripts
+A dynamic script type for registered scripts.
 
 ```csharp
 public class RegisteredScripts : DynamicScript, IGetScriptData, INamedDynamicScript
@@ -11,7 +11,7 @@ public class RegisteredScripts : DynamicScript, IGetScriptData, INamedDynamicScr
 
 | name | description |
 | --- | --- |
-| [RegisteredScripts](RegisteredScripts/RegisteredScripts.md)(…) | Creates a new instance of the class |
+| [RegisteredScripts](RegisteredScripts/RegisteredScripts.md)(…) | Initializes a new instance of the [`RegisteredScripts`](RegisteredScripts.md) class. |
 | [ScriptName](RegisteredScripts/ScriptName.md) { get; } |  |
 | override [GetScript](RegisteredScripts/GetScript.md)() |  |
 | [GetScriptData](RegisteredScripts/GetScriptData.md)() |  |

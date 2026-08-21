@@ -1,7 +1,7 @@
 # CoreServiceCollectionExtensions.AddFeatureToggles method
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Adds IFeatureToggles service to the registry.
+Adds the IFeatureToggles service to the registry.
 
 ```csharp
 public static IServiceCollection AddFeatureToggles(this IServiceCollection services, 
@@ -12,8 +12,8 @@ public static IServiceCollection AddFeatureToggles(this IServiceCollection servi
 | parameter | description |
 | --- | --- |
 | services | The services. |
-| configuration | Configuration source |
-| disableByDefault | Features to disable by default, pass ["*"] to disable all features by default |
+| configuration | Configuration source. |
+| disableByDefault | Features to disable by default, pass ["*"] to disable all features by default. |
 | dependencyMap | Feature dependency map. Features are dictionary keys and the list of features that they depend on (e.g. all must be enabled) for that feature to be enabled. |
 
 ## See Also

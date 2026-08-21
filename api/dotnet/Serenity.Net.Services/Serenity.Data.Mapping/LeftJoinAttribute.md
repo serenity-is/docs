@@ -1,7 +1,7 @@
 # LeftJoinAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-LEFT JOIN type
+LEFT JOIN type.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property, AllowMultiple = true)]

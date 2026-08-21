@@ -1,7 +1,7 @@
 # ConnectionStringOptions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Connection string options
+Connection string options.
 
 ```csharp
 public class ConnectionStringOptions : Dictionary<string, ConnectionStringEntry>, 
@@ -12,9 +12,9 @@ public class ConnectionStringOptions : Dictionary<string, ConnectionStringEntry>
 
 | name | description |
 | --- | --- |
-| [ConnectionStringOptions](ConnectionStringOptions/ConnectionStringOptions.md)() | Creates a new instance |
-| [Value](ConnectionStringOptions/Value.md) { get; } | Returns this |
-| const [SectionKey](ConnectionStringOptions/SectionKey.md) | Default sectionkey for ConnectionStringOptions |
+| [ConnectionStringOptions](ConnectionStringOptions/ConnectionStringOptions.md)() | Creates a new instance. |
+| [Value](ConnectionStringOptions/Value.md) { get; } | Returns this instance. |
+| const [SectionKey](ConnectionStringOptions/SectionKey.md) | The default section key for [`ConnectionStringOptions`](ConnectionStringOptions.md). |
 
 ## See Also
 

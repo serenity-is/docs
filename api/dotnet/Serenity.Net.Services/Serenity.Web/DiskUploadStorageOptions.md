@@ -12,8 +12,8 @@ public class DiskUploadStorageOptions
 | name | description |
 | --- | --- |
 | [DiskUploadStorageOptions](DiskUploadStorageOptions/DiskUploadStorageOptions.md)() | The default constructor. |
-| [RootPath](DiskUploadStorageOptions/RootPath.md) { get; set; } | Root path |
-| [RootUrl](DiskUploadStorageOptions/RootUrl.md) { get; set; } | Root URL |
+| [RootPath](DiskUploadStorageOptions/RootPath.md) { get; set; } | Gets or sets the root path. |
+| [RootUrl](DiskUploadStorageOptions/RootUrl.md) { get; set; } | Gets or sets the root URL. |
 
 ## See Also
 

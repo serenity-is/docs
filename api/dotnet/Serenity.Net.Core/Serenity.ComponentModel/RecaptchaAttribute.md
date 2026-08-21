@@ -1,7 +1,7 @@
 # RecaptchaAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that the target property should use a "Recaptcha" (Google).
+Indicates that the target property should use a Google "Recaptcha" editor.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

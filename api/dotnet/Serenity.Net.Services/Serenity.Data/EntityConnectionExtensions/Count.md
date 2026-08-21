@@ -15,7 +15,7 @@ public static int Count<TRow>(this IDbConnection connection)
 
 ## Return Value
 
-Number of records in the table
+Number of records in the table.
 
 ## See Also
 
@@ -42,7 +42,7 @@ public static int Count<TRow>(this IDbConnection connection, ICriteria where)
 
 ## Return Value
 
-Number of records matching the specified criteria
+Number of records matching the specified criteria.
 
 ## See Also
 

@@ -11,11 +11,15 @@ public static string RemoveT0Aliases(string expression)
 | --- | --- |
 | expression | The expression. |
 
+## Return Value
+
+The expression with T0 references removed.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | expression |
+| ArgumentNullException | expression is null. |
 
 ## See Also
 

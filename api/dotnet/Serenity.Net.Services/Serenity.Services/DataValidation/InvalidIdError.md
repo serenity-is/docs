@@ -1,7 +1,7 @@
 # DataValidation.InvalidIdError method (1 of 2)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns an invalid ID error
+Returns an invalid ID error.
 
 ```csharp
 public static ValidationError InvalidIdError(Field field, long value, ITextLocalizer localizer)
@@ -12,6 +12,10 @@ public static ValidationError InvalidIdError(Field field, long value, ITextLocal
 | field | Field |
 | value | Value |
 | localizer | Text localizer |
+
+## Return Value
+
+The invalid ID error.
 
 ## See Also
 

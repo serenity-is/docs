@@ -1,7 +1,7 @@
 # DiskUploadStorage constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ```csharp
 public DiskUploadStorage(DiskUploadStorageOptions options, IDiskUploadFileSystem fileSystem = null)
@@ -16,7 +16,7 @@ public DiskUploadStorage(DiskUploadStorageOptions options, IDiskUploadFileSystem
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Options is null |
+| ArgumentNullException | *options* is `null`. |
 
 ## See Also
 

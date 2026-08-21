@@ -1,7 +1,7 @@
 # DefaultReportRenderer.htmlReportPdfRenderer- field
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Html report pdf renderer
+The HTML report PDF renderer.
 
 ```csharp
 protected readonly IHtmlReportPdfRenderer htmlReportPdfRenderer-;

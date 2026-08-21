@@ -1,7 +1,7 @@
 # LogicOperatorPermissionService constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Adds AND OR operator support to any IPermissionService implementation
+Decorates an [`IPermissionService`](../../Serenity.Abstractions/IPermissionService.md) to support logical operators (`!`, `&`, `|`, parentheses) in permission expressions.
 
 ```csharp
 public LogicOperatorPermissionService(IPermissionService permissionService)
@@ -9,17 +9,17 @@ public LogicOperatorPermissionService(IPermissionService permissionService)
 
 | parameter | description |
 | --- | --- |
-| permissionService | Permission service to wrap with AND/OR functionality |
+| permissionService | The underlying permission service to delegate simple permission checks to. |
 
 ## Remarks
 
-Register this class in your application start, to allow !, &#x7C;, &amp;, () operators in your permission services, e.g.
+Register this decorator at application startup to enable expressions such as `PermissionA & !PermissionB`.
 
 ```csharp
 registrar.RegisterInstance<IPermissionService>(new LogicOperatorPermissionService(new MyPermissionService()))
 ```
 
-Creates a new LogicOperatorPermissionService wrapping passed IPermissionService
+Creates a new instance of the [`LogicOperatorPermissionService`](../LogicOperatorPermissionService.md) class wrapping the specified permission service.
 
 ## See Also
 

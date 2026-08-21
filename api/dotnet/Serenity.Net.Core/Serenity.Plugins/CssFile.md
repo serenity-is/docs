@@ -1,7 +1,7 @@
 # CssFile class
 **namespace:** *[Serenity.Plugins](../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-CSS file dependency for plugins
+A CSS file dependency for plugins.
 
 ```csharp
 public class CssFile
@@ -12,7 +12,7 @@ public class CssFile
 | name | description |
 | --- | --- |
 | [CssFile](CssFile/CssFile.md)() | The default constructor. |
-| [Path](CssFile/Path.md) { get; set; } | Gets or sets the path. Should start with "./" corresponding to plugin folder. |
+| [Path](CssFile/Path.md) { get; set; } | Gets or sets the path. Should start with "./" corresponding to the plugin folder. |
 
 ## See Also
 

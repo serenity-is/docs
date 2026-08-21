@@ -11,6 +11,10 @@ public static string Unquote(string s)
 | --- | --- |
 | s | The string. |
 
+## Return Value
+
+The unquoted string.
+
 ## See Also
 
 * class [SqlSyntax](../SqlSyntax.md)

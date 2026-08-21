@@ -1,7 +1,7 @@
 # ArgumentExceptions.OutOfRange method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates an ArgumentOutOfRangeException
+Creates an ArgumentOutOfRangeException for the given argument.
 
 ```csharp
 public static ArgumentOutOfRangeException OutOfRange(object argument, string paramName = null)
@@ -9,14 +9,12 @@ public static ArgumentOutOfRangeException OutOfRange(object argument, string par
 
 | parameter | description |
 | --- | --- |
-| argument | Argument value, ignored |
-| paramName |  |
+| argument | The argument value; ignored by this method. |
+| paramName | The name of the parameter that caused the exception. |
 
-## Exceptions
+## Return Value
 
-| exception | condition |
-| --- | --- |
-| ArgumentNullException |  |
+A new ArgumentOutOfRangeException instance.
 
 ## See Also
 

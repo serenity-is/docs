@@ -17,6 +17,12 @@ public static string Format(string tableName, string where, ISqlDialect dialect 
 
 Formatted query.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | tableName is null or empty. |
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

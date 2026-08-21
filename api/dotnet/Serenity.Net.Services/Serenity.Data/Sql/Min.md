@@ -1,7 +1,7 @@
 # Sql.Min method (1 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a MIN() expression
+Creates a MIN() expression.
 
 ```csharp
 public static string Min(IField field)
@@ -11,11 +11,15 @@ public static string Min(IField field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The MIN() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -27,7 +31,7 @@ public static string Min(IField field)
 # Sql.Min method (2 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a MIN() expression
+Creates a MIN() expression.
 
 ```csharp
 public static string Min(string field)
@@ -37,11 +41,15 @@ public static string Min(string field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The MIN() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 
@@ -63,11 +71,15 @@ public static string Min(int joinNumber, string field)
 | joinNumber | The join number. |
 | field | The field. |
 
+## Return Value
+
+The MIN() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 

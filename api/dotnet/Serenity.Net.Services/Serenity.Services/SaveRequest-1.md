@@ -9,7 +9,7 @@ public class SaveRequest<TEntity> : ServiceRequest, ISaveRequest
 
 | parameter | description |
 | --- | --- |
-| TEntity |  |
+| TEntity | The type of the entity. |
 
 ## Public Members
 

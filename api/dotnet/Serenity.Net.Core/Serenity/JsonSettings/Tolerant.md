@@ -1,7 +1,7 @@
 # JsonSettings.Tolerant field
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-The tolerant settings, ignores missing members, reference loops on deserialization, ignores nulls
+The tolerant settings, which ignore missing members and reference loops on deserialization, and ignore nulls.
 
 ```csharp
 public static JsonSerializerSettings Tolerant;

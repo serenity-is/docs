@@ -42,7 +42,7 @@ public static int ForEach(this SqlQuery query, IDbConnection connection,
 
 ## Return Value
 
-Number of returned results
+Number of returned results.
 
 ## See Also
 

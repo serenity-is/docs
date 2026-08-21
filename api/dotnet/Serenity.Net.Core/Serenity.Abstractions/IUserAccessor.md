@@ -1,7 +1,7 @@
 # IUserAccessor interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction to access the current user
+Provides access to the current authenticated user.
 
 ```csharp
 public interface IUserAccessor
@@ -11,7 +11,7 @@ public interface IUserAccessor
 
 | name | description |
 | --- | --- |
-| [User](IUserAccessor/User.md) { get; } | Gets current user |
+| [User](IUserAccessor/User.md) { get; } | Gets the current user principal, or `null` if no user is authenticated. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # PermissionAttributeBase constructor (1 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-An abstract base attribute that all permission related attributes derive from.
+An abstract base attribute that all permission-related attributes derive from.
 
 ```csharp
 protected PermissionAttributeBase(object permission)

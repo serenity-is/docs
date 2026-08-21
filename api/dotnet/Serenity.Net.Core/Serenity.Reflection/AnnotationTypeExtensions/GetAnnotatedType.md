@@ -1,7 +1,7 @@
 # AnnotationTypeExtensions.GetAnnotatedType method
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets the annotated type information for given type.
+Gets the annotated type information for the given type.
 
 ```csharp
 public static IAnnotatedType GetAnnotatedType(this IEnumerable<Type> annotationTypes)
@@ -9,11 +9,11 @@ public static IAnnotatedType GetAnnotatedType(this IEnumerable<Type> annotationT
 
 | parameter | description |
 | --- | --- |
-| annotationTypes | Annotation types |
+| annotationTypes | The annotation types. |
 
 ## Return Value
 
-Annotated type information
+The annotated type information.
 
 ## See Also
 

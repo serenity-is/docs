@@ -1,7 +1,7 @@
 # DefaultSqlConnections.profiler- field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Profiler
+The profiler.
 
 ```csharp
 protected readonly IConnectionProfiler profiler-;

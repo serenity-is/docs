@@ -1,7 +1,7 @@
 # DateOnlyField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a DateOnly value
+Field with a DateOnly value.
 
 ```csharp
 public DateOnlyField(ICollection<Field> collection, string name, LocalText caption = null, 

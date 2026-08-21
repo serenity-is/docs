@@ -1,7 +1,7 @@
 # CssBundleManager constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates an instance of the class
+Initializes a new instance of the [`CssBundleManager`](../CssBundleManager.md) class.
 
 ```csharp
 public CssBundleManager(IOptions<CssBundlingOptions> options, IDynamicScriptManager scriptManager, 
@@ -11,18 +11,18 @@ public CssBundleManager(IOptions<CssBundlingOptions> options, IDynamicScriptMana
 
 | parameter | description |
 | --- | --- |
-| options | Options |
-| scriptManager | Dynamic script manager |
-| cssMinifier |  |
-| hostEnvironment | Web host environment |
-| contextAccessor | HTTP context accessor |
-| logger | Exception logger |
+| options | The options. |
+| scriptManager | The dynamic script manager. |
+| cssMinifier | The CSS minifier. |
+| hostEnvironment | The web host environment. |
+| contextAccessor | The HTTP context accessor. |
+| logger | The exception logger. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | One of the required arguments is `null`. |
 
 ## See Also
 

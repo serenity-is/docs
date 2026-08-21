@@ -10,10 +10,14 @@ public static T SetParam<T>(this T self, Parameter param, object value)
 
 | parameter | description |
 | --- | --- |
-| T |  |
+| T | The query type. |
 | self | The query. |
 | param | The parameter. |
 | value | The value. |
+
+## Return Value
+
+The query itself.
 
 ## See Also
 

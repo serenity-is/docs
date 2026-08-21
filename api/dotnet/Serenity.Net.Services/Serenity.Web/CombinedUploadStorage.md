@@ -11,7 +11,7 @@ public class CombinedUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| [CombinedUploadStorage](CombinedUploadStorage/CombinedUploadStorage.md)(…) | Creates a new instance of the class |
+| [CombinedUploadStorage](CombinedUploadStorage/CombinedUploadStorage.md)(…) | Initializes a new instance of the class. |
 | [ArchiveFile](CombinedUploadStorage/ArchiveFile.md)(…) |  |
 | [CopyFrom](CombinedUploadStorage/CopyFrom.md)(…) |  |
 | [DeleteFile](CombinedUploadStorage/DeleteFile.md)(…) |  |
@@ -29,8 +29,8 @@ public class CombinedUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| [IsSubPath](CombinedUploadStorage/IsSubPath.md)(…) | Returns true if the path is the subpath |
-| [UnderSubPath](CombinedUploadStorage/UnderSubPath.md)(…) | Returns if the path is under sub path |
+| [IsSubPath](CombinedUploadStorage/IsSubPath.md)(…) | Returns a value indicating whether the path is the sub path. |
+| [UnderSubPath](CombinedUploadStorage/UnderSubPath.md)(…) | Returns a value indicating whether the path is under the sub path. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # IUpdateLogRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for rows that have UpdateUserId and UpdateDate fields
+Interface for rows that have UpdateUserId and UpdateDate fields.
 
 ```csharp
 public interface IUpdateLogRow : IUpdateDateRow, IUpdateUserIdRow

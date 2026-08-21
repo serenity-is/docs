@@ -1,7 +1,7 @@
 # PermissionExpressionParser.Evaluate method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Evaluates a list of tokens in RPN notation, produced from ShuntingYard method.
+Evaluates tokens in Reverse Polish Notation produced by [`ShuntingYard`](ShuntingYard.md).
 
 ```csharp
 public static bool Evaluate(IEnumerable<string> rpnTokens, Func<string, bool> hasPermission)
@@ -9,12 +9,19 @@ public static bool Evaluate(IEnumerable<string> rpnTokens, Func<string, bool> ha
 
 | parameter | description |
 | --- | --- |
-| rpnTokens | List of tokens in RPN notation |
-| hasPermission | A method that returns True if the user has given permission |
+| rpnTokens | The tokens in Reverse Polish Notation. |
+| hasPermission | A function that returns `true` if the user has the specified permission key. |
 
 ## Return Value
 
-True if expression evaluates to true
+`true` if the expression evaluates to granted; otherwise `false`.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *rpnTokens* or *hasPermission* is `null`. |
+| InvalidOperationException | The expression is malformed and cannot be evaluated. |
 
 ## See Also
 

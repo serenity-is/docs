@@ -12,16 +12,16 @@ public DeltaLister(IEnumerable<TItem> oldList, IEnumerable<TItem> newList,
 | --- | --- |
 | oldList | The old list. |
 | newList | The new list. |
-| getItemId | The get item identifier. |
+| getItemId | The function used to get the identifier of an item. |
 | options | The options. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | oldList or newList or getItemId or oldItem or oldItemId or newItem is null. |
-| ArgumentOutOfRangeException | newItemId |
-| DuplicateNameException | newItemId |
+| ArgumentNullException | oldList, newList, getItemId, oldItem, oldItemId or newItem is null. |
+| ArgumentOutOfRangeException | newItemId is not present in the old list. |
+| ArgumentException | newItemId is duplicated in the new list. |
 
 ## See Also
 

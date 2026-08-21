@@ -11,12 +11,12 @@ public enum SqlUnionType
 
 | name | value | description |
 | --- | --- | --- |
-| Union | `1` | UNION |
-| UnionAll | `2` | UNION ALL |
-| Intersect | `3` | INTERSECT |
-| IntersectAll | `4` | INTERSECT ALL |
-| Except | `5` | EXCEPT |
-| ExceptAll | `6` | EXCEPT ALL |
+| Union | `1` | UNION. |
+| UnionAll | `2` | UNION ALL. |
+| Intersect | `3` | INTERSECT. |
+| IntersectAll | `4` | INTERSECT ALL. |
+| Except | `5` | EXCEPT. |
+| ExceptAll | `6` | EXCEPT ALL. |
 
 ## See Also
 

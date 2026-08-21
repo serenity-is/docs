@@ -9,9 +9,13 @@ public static string ChangeExtension(this IFileSystem _, string path, string ext
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| path | The path information to modify. The path cannot contain any of the characters defined in System.IO.Path.GetInvalidPathChars. |
-| extension | The new extension (with or without a leading period). Specify null to remove an existing extension from path. |
+| _ | The file system. |
+| path | The path information to modify. The path cannot contain any of the characters defined in GetInvalidPathChars. |
+| extension | The new extension (with or without a leading period). Specify `null` to remove an existing extension from *path*. |
+
+## Return Value
+
+The modified path.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ScriptContent class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation for IScriptContent
+Default implementation of IScriptContent.
 
 ```csharp
 public class ScriptContent : IScriptContent
@@ -9,31 +9,31 @@ public class ScriptContent : IScriptContent
 
 | parameter | description |
 | --- | --- |
-| content | Content |
-| time | Time |
-| compressionLevel | Suggested compression level |
+| content | The content bytes. |
+| time | The generation time. |
+| compressionLevel | The suggested compression level. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ScriptContent](ScriptContent/ScriptContent.md)(…) | Default implementation for IScriptContent |
+| [ScriptContent](ScriptContent/ScriptContent.md)(…) | Default implementation of IScriptContent. |
 | [BrotliContent](ScriptContent/BrotliContent.md) { get; } |  |
 | [CanCompress](ScriptContent/CanCompress.md) { get; } |  |
 | [CompressedContent](ScriptContent/CompressedContent.md) { get; } |  |
 | [Content](ScriptContent/Content.md) { get; } |  |
-| [Hash](ScriptContent/Hash.md) { get; } | Gets script hash |
-| [Time](ScriptContent/Time.md) { get; } | Gets script generated time |
+| [Hash](ScriptContent/Hash.md) { get; } | Gets the script hash. |
+| [Time](ScriptContent/Time.md) { get; } | Gets the script generation time. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *content* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`ScriptContent`](ScriptContent.md) class.
 
 ## See Also
 

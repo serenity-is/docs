@@ -17,7 +17,7 @@ public override void GetFromReader(IDataReader reader, int index, IRow row)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | reader |
+| ArgumentNullException | reader is null. |
 
 ## See Also
 

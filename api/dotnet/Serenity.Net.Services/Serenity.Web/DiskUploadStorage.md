@@ -11,9 +11,9 @@ public class DiskUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| [DiskUploadStorage](DiskUploadStorage/DiskUploadStorage.md)(…) | Creates a new instance of the class |
-| [RootPath](DiskUploadStorage/RootPath.md) { get; } | Root path for the uploads |
-| [RootUrl](DiskUploadStorage/RootUrl.md) { get; } | Root URL for the uploads |
+| [DiskUploadStorage](DiskUploadStorage/DiskUploadStorage.md)(…) | Initializes a new instance of the class. |
+| [RootPath](DiskUploadStorage/RootPath.md) { get; } | Gets the root path for the uploads. |
+| [RootUrl](DiskUploadStorage/RootUrl.md) { get; } | Gets the root URL for the uploads. |
 | [ArchiveFile](DiskUploadStorage/ArchiveFile.md)(…) |  |
 | [CopyFrom](DiskUploadStorage/CopyFrom.md)(…) |  |
 | [DeleteFile](DiskUploadStorage/DeleteFile.md)(…) |  |
@@ -31,7 +31,7 @@ public class DiskUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| readonly [fileSystem-](DiskUploadStorage/fileSystem-.md) | File system |
+| readonly [fileSystem-](DiskUploadStorage/fileSystem-.md) | Gets the file system. |
 | [FilePath](DiskUploadStorage/FilePath.md)(…) | Gets the full path for the file |
 
 ## See Also

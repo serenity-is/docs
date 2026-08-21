@@ -1,7 +1,7 @@
 # IFileSystem.GetRelativePath method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns the absolute path for the specified path string.
+Returns a relative path from one path to another.
 
 ```csharp
 public string GetRelativePath(string relativeTo, string path)
@@ -10,11 +10,11 @@ public string GetRelativePath(string relativeTo, string path)
 | parameter | description |
 | --- | --- |
 | relativeTo | The source path the result should be relative to. |
-| path | File path |
+| path | The destination path. |
 
 ## Return Value
 
-Absolute path
+The relative path.
 
 ## See Also
 

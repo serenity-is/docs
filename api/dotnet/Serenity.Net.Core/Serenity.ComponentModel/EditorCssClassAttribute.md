@@ -1,7 +1,7 @@
 # EditorCssClassAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets CSS class for editor on forms only.
+Sets the CSS class for the editor on forms only.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,7 +16,7 @@ public class EditorCssClassAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [EditorCssClassAttribute](EditorCssClassAttribute/EditorCssClassAttribute.md)(…) | Sets CSS class for editor on forms only. |
+| [EditorCssClassAttribute](EditorCssClassAttribute/EditorCssClassAttribute.md)(…) | Sets the CSS class for the editor on forms only. |
 | [Value](EditorCssClassAttribute/Value.md) { get; } | Gets the value. |
 
 ## Remarks

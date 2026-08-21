@@ -1,7 +1,7 @@
 # GenericField&lt;TValue&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base generic class for fields with a value
+Base generic class for fields with a value.
 
 ```csharp
 public abstract class GenericField<TValue> : Field
@@ -30,9 +30,9 @@ public abstract class GenericField<TValue> : Field
 
 | name | description |
 | --- | --- |
-| [GenericField](GenericField-1/GenericField.md)(…) | Base generic class for fields with a value |
-| [_getValue](GenericField-1/_getValue.md) | The get value |
-| [_setValue](GenericField-1/_setValue.md) | The set value |
+| [GenericField](GenericField-1/GenericField.md)(…) | Base generic class for fields with a value. |
+| [_getValue](GenericField-1/_getValue.md) | The get value. |
+| [_setValue](GenericField-1/_setValue.md) | The set value. |
 
 ## Remarks
 

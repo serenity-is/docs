@@ -1,7 +1,7 @@
 # ISqlOperationInterceptor.ExecuteScalar method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts SqlHelper.ExecuteReader method.
+Intercepts the [`SqlHelper`](../SqlHelper.md)`ExecuteScalar` method.
 
 ```csharp
 public OptionalValue<object> ExecuteScalar(string commandText, 
@@ -10,9 +10,9 @@ public OptionalValue<object> ExecuteScalar(string commandText,
 
 | parameter | description |
 | --- | --- |
-| commandText | Command text |
+| commandText | The command text. |
 | parameters | The parameters. |
-| query | The query |
+| query | The query. |
 
 ## See Also
 

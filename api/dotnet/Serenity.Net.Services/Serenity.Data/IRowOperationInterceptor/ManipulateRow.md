@@ -10,11 +10,15 @@ public OptionalValue<long?> ManipulateRow(Type rowType, OptionalValue<object> id
 
 | parameter | description |
 | --- | --- |
-| rowType | Type of the row |
+| rowType | Type of the row. |
 | id | The identifier if Update/Delete is used. |
-| row | Row being manipulated. Is null for delete. |
+| row | The row being manipulated. Is null for delete. |
 | expectedRows | The expected number of rows to be manipulated. Default is 1. |
-| getNewId | True if InsertAndGetID is called |
+| getNewId | True if InsertAndGetID is called. |
+
+## Return Value
+
+The generated identity value, or null if none was generated.
 
 ## See Also
 

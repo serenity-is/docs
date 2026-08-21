@@ -9,11 +9,11 @@ public UseWKHtmlToPdfAttribute(bool value = true)
 
 | parameter | description |
 | --- | --- |
-| value |  |
+| value | Whether the report should use WKHTML to PDF. |
 
 ## Remarks
 
-Creates a new instance of the attribute
+Initializes a new instance of the attribute.
 
 ## See Also
 

@@ -11,6 +11,10 @@ public string GetTitle(ITextLocalizer localizer)
 | --- | --- |
 | localizer | The localizer. |
 
+## Return Value
+
+The localized title of the field.
+
 ## See Also
 
 * interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)

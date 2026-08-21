@@ -1,7 +1,7 @@
 # ConnectionStringsExtensions.Get method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets connection string by key
+Gets the connection string by key.
 
 ```csharp
 public static IConnectionString Get(this IConnectionStrings connectionStrings, string connectionKey)
@@ -9,12 +9,12 @@ public static IConnectionString Get(this IConnectionStrings connectionStrings, s
 
 | parameter | description |
 | --- | --- |
-| connectionStrings | Connection strings object |
-| connectionKey | Connection key |
+| connectionStrings | The connection strings object. |
+| connectionKey | The connection key. |
 
 ## Return Value
 
-Connection string with key, or throws an ArgumentOutOfRangeException
+The connection string with the key, or throws an ArgumentOutOfRangeException.
 
 ## See Also
 

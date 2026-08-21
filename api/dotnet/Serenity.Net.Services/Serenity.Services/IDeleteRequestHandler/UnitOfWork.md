@@ -1,7 +1,7 @@
 # IDeleteRequestHandler.UnitOfWork property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Current transaction
+Gets the current unit of work.
 
 ```csharp
 public IUnitOfWork UnitOfWork { get; }

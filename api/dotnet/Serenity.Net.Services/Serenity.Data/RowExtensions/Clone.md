@@ -13,6 +13,10 @@ public static TRow Clone<TRow>(this TRow row)
 | TRow | The type of the row. |
 | row | The row. |
 
+## Return Value
+
+A clone of the row.
+
 ## See Also
 
 * class [TRow](../Serenity.Net.Services/../RowExtensions.TRow.md)

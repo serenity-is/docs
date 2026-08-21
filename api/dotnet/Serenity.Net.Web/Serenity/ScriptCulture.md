@@ -1,7 +1,7 @@
 # ScriptCulture class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Culture options that are passed to the client side
+Culture options that are passed to the client side.
 
 ```csharp
 public class ScriptCulture
@@ -11,14 +11,14 @@ public class ScriptCulture
 
 | name | description |
 | --- | --- |
-| [ScriptCulture](ScriptCulture/ScriptCulture.md)() | Creates a new instance of the class using CurrentCulture |
-| [ScriptCulture](ScriptCulture/ScriptCulture.md)(…) | Creates a new instance of the class |
-| [DateFormat](ScriptCulture/DateFormat.md) { get; set; } | Date format |
-| [DateOrder](ScriptCulture/DateOrder.md) { get; set; } | Date year month day ordering like d/M/y etc. |
-| [DateSeparator](ScriptCulture/DateSeparator.md) { get; set; } | Date separator |
-| [DateTimeFormat](ScriptCulture/DateTimeFormat.md) { get; set; } | Date/time format |
-| [DecimalSeparator](ScriptCulture/DecimalSeparator.md) { get; set; } | Decimal separator |
-| [GroupSeparator](ScriptCulture/GroupSeparator.md) { get; set; } | Group separator |
+| [ScriptCulture](ScriptCulture/ScriptCulture.md)() | Initializes a new instance of the [`ScriptCulture`](ScriptCulture.md) class using CurrentCulture. |
+| [ScriptCulture](ScriptCulture/ScriptCulture.md)(…) | Initializes a new instance of the [`ScriptCulture`](ScriptCulture.md) class. |
+| [DateFormat](ScriptCulture/DateFormat.md) { get; set; } | Gets or sets the date format. |
+| [DateOrder](ScriptCulture/DateOrder.md) { get; set; } | Gets or sets the date year-month-day ordering, e.g. `d/M/y`. |
+| [DateSeparator](ScriptCulture/DateSeparator.md) { get; set; } | Gets or sets the date separator. |
+| [DateTimeFormat](ScriptCulture/DateTimeFormat.md) { get; set; } | Gets or sets the date/time format. |
+| [DecimalSeparator](ScriptCulture/DecimalSeparator.md) { get; set; } | Gets or sets the decimal separator. |
+| [GroupSeparator](ScriptCulture/GroupSeparator.md) { get; set; } | Gets or sets the group separator. |
 
 ## See Also
 

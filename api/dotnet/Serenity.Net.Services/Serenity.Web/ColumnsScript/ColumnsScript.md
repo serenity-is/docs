@@ -1,7 +1,7 @@
 # ColumnsScript constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Dynamic script type for columns (ColumnsScriptAttribute)
+Dynamic script type for columns (ColumnsScriptAttribute).
 
 ```csharp
 public ColumnsScript(string name, Type columnsType, IPropertyItemProvider propertyProvider, 
@@ -10,14 +10,14 @@ public ColumnsScript(string name, Type columnsType, IPropertyItemProvider proper
 
 | parameter | description |
 | --- | --- |
-| name | Script name |
-| columnsType | Columns type |
-| propertyProvider | Property item provider |
-| serviceProvider | Service provider |
+| name | The script name. |
+| columnsType | The columns type. |
+| propertyProvider | The property item provider. |
+| serviceProvider | The service provider. |
 
 ## Remarks
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ## See Also
 

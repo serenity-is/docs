@@ -1,7 +1,7 @@
 # RowLookupScript&lt;TRow&gt; constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the [`RowLookupScript`](../RowLookupScript-1.md) class.
 
 ```csharp
 public RowLookupScript(ISqlConnections sqlConnections)
@@ -9,13 +9,13 @@ public RowLookupScript(ISqlConnections sqlConnections)
 
 | parameter | description |
 | --- | --- |
-| sqlConnections | Sql connections |
+| sqlConnections | The SQL connections. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Connections is null |
+| ArgumentNullException | *sqlConnections* is `null`. |
 
 ## See Also
 

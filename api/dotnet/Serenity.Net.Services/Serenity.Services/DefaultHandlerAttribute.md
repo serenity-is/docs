@@ -1,7 +1,7 @@
 # DefaultHandlerAttribute class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Specifies that the class this attribute attached to is the default handler (list, create, delete, update etc). and should be used by some behaviors like MasterDetailRelationBehavior instead of creating a generic handler.
+Specifies that the class this attribute is attached to is the default handler (list, create, delete, update etc.) and should be used by some behaviors like MasterDetailRelationBehavior instead of creating a generic handler.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]
@@ -16,12 +16,12 @@ public class DefaultHandlerAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [DefaultHandlerAttribute](DefaultHandlerAttribute/DefaultHandlerAttribute.md)(…) | Specifies that the class this attribute attached to is the default handler (list, create, delete, update etc). and should be used by some behaviors like MasterDetailRelationBehavior instead of creating a generic handler. |
-| [Value](DefaultHandlerAttribute/Value.md) { get; } | Gets if the handler marked as default. |
+| [DefaultHandlerAttribute](DefaultHandlerAttribute/DefaultHandlerAttribute.md)(…) | Specifies that the class this attribute is attached to is the default handler (list, create, delete, update etc.) and should be used by some behaviors like MasterDetailRelationBehavior instead of creating a generic handler. |
+| [Value](DefaultHandlerAttribute/Value.md) { get; } | Gets a value indicating whether the handler is marked as default. |
 
 ## Remarks
 
-Creates an instance of the attribute
+Initializes a new instance of the attribute.
 
 ## See Also
 

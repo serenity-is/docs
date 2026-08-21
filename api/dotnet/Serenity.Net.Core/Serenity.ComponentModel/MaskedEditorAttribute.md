@@ -1,7 +1,7 @@
 # MaskedEditorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that the target property should use a "Masked" editor and also defines an automatic lookup script for row fields. Note that this requires https://www.npmjs.com/package/jquery.maskedinput, e.g. jquery.maskedinput.js which can be installed via libman or npm, and referenced in your scripts (via appsettings.bundles.json).
+Indicates that the target property should use a "Masked" editor. Note that this requires https://www.npmjs.com/package/jquery.maskedinput, e.g. jquery.maskedinput.js which can be installed via libman or npm, and referenced in your scripts (via appsettings.bundles.json).
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

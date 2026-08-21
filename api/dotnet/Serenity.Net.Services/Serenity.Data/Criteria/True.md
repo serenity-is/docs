@@ -1,7 +1,7 @@
 # Criteria.True field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-The true criteria instance (1 = 1)
+The true criteria instance (1 = 1).
 
 ```csharp
 public static readonly BaseCriteria True;

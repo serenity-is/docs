@@ -1,7 +1,7 @@
 # PasswordValidationResult enumeration
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Password validation result
+Represents the result of a password validation attempt.
 
 ```csharp
 public enum PasswordValidationResult
@@ -11,14 +11,14 @@ public enum PasswordValidationResult
 
 | name | value | description |
 | --- | --- | --- |
-| EmptyUsername | `0` | Username is empty |
-| EmptyPassword | `1` | Password is empty |
-| InactiveUser | `2` | User is not active |
-| UnknownSource | `3` | User source is not found |
-| Throttle | `4` | To many retries |
-| DirectoryError | `5` | Directory error |
-| Invalid | `6` | Invalid |
-| Valid | `7` | Valid |
+| EmptyUsername | `0` | The username was empty. |
+| EmptyPassword | `1` | The password was empty. |
+| InactiveUser | `2` | The user account is not active. |
+| UnknownSource | `3` | The user source could not be found. |
+| Throttle | `4` | The request was throttled due to too many attempts. |
+| DirectoryError | `5` | A directory service error occurred. |
+| Invalid | `6` | The credentials are invalid. |
+| Valid | `7` | The credentials are valid. |
 
 ## See Also
 

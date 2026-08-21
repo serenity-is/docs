@@ -1,7 +1,7 @@
 # NavigationLinkAttribute.GetUrlFromController method
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Tries to extract URL from a controller action
+Tries to extract the URL from a controller action.
 
 ```csharp
 public static string GetUrlFromController(Type controller, string action)
@@ -9,16 +9,20 @@ public static string GetUrlFromController(Type controller, string action)
 
 | parameter | description |
 | --- | --- |
-| controller | Controller |
-| action | Action name |
+| controller | The controller. |
+| action | The action name. |
+
+## Return Value
+
+The resolved URL.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Controller or action is null |
-| ArgumentOutOfRangeException | Action name is invalid |
-| InvalidOperationException | Route attribute is not found |
+| ArgumentNullException | Controller or action is `null`. |
+| ArgumentOutOfRangeException | The action name is invalid. |
+| InvalidOperationException | The route attribute is not found. |
 
 ## See Also
 

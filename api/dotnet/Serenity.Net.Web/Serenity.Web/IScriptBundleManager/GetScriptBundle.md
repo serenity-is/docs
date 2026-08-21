@@ -1,7 +1,7 @@
 # IScriptBundleManager.GetScriptBundle method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets the script bundle containing a script url
+Gets the script bundle containing a script URL.
 
 ```csharp
 public string GetScriptBundle(string scriptUrl)
@@ -9,7 +9,11 @@ public string GetScriptBundle(string scriptUrl)
 
 | parameter | description |
 | --- | --- |
-| scriptUrl | Script url |
+| scriptUrl | The script URL. |
+
+## Return Value
+
+The script bundle URL.
 
 ## See Also
 

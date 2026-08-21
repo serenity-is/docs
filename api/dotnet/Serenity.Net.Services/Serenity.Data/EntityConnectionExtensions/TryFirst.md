@@ -45,7 +45,7 @@ public static TRow TryFirst<TRow>(this IDbConnection connection, ICriteria where
 
 ## Return Value
 
-First entity matching the where criteria or null if not found.
+First entity matching the where criteria, or null if not found.
 
 ## See Also
 

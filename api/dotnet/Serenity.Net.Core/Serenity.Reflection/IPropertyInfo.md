@@ -1,7 +1,7 @@
 # IPropertyInfo interface
 **namespace:** *[Serenity.Reflection](../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-An interface to virtualize property attribute access
+An interface to virtualize property attribute access.
 
 ```csharp
 public interface IPropertyInfo
@@ -13,8 +13,8 @@ public interface IPropertyInfo
 | --- | --- |
 | [Name](IPropertyInfo/Name.md) { get; } | Gets the name. |
 | [PropertyType](IPropertyInfo/PropertyType.md) { get; } | Gets the type of the property. |
-| [GetAttribute&lt;TAttr&gt;](IPropertyInfo/GetAttribute.md)(…) | Gets the attribute. |
-| [GetAttributes&lt;TAttr&gt;](IPropertyInfo/GetAttributes.md)(…) | Gets the attributes. |
+| [GetAttribute&lt;TAttr&gt;](IPropertyInfo/GetAttribute.md)(…) | Gets the attribute of the specified type. |
+| [GetAttributes&lt;TAttr&gt;](IPropertyInfo/GetAttributes.md)(…) | Gets the attributes of the specified type. |
 
 ## See Also
 

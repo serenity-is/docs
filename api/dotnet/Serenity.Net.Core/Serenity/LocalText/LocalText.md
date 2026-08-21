@@ -9,11 +9,11 @@ public LocalText(string key)
 
 | parameter | description |
 | --- | --- |
-| key | Local text key |
+| key | The local text key. |
 
 ## Remarks
 
-Creates a new LocalText instance that contains the specified local text key
+Creates a new [`LocalText`](../LocalText.md) instance that contains the specified local text key.
 
 ## See Also
 

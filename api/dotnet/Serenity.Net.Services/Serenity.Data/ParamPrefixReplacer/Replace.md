@@ -12,6 +12,10 @@ public static string Replace(string expression, char paramPrefix)
 | expression | The expression. |
 | paramPrefix | The parameter prefix. |
 
+## Return Value
+
+The expression with parameter prefixes replaced.
+
 ## See Also
 
 * class [ParamPrefixReplacer](../ParamPrefixReplacer.md)

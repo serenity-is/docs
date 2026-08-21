@@ -11,6 +11,10 @@ public static RowFieldsBase GetFields(this IRow row)
 | --- | --- |
 | row | The row. |
 
+## Return Value
+
+The fields of the row.
+
 ## See Also
 
 * class [RowFieldsBase](../RowFieldsBase.md)

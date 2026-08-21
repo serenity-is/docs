@@ -1,7 +1,7 @@
 # ThreeQuarterWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Marks form field with "col-lg-9" css class, which makes it allocate three quarter on device widths &gt;= 1200px
+Marks the form field with the "col-lg-9" CSS class, which makes it allocate three quarters on device widths &gt;= 1200px.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

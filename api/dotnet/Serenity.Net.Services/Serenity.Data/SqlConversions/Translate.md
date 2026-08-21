@@ -1,7 +1,7 @@
 # SqlConversions.Translate method (1 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Translates the command text to target connection dialect by replacing brackets ([]), and parameter prefixes (@). If the query already has a dialect set, it uses that instead of the connection one.
+Translates the command text to the target connection dialect by replacing brackets ([]) and parameter prefixes (@). If the query already has a dialect set, it uses that instead of the connection one.
 
 ```csharp
 public static string Translate(IQueryWithParams query, IDbConnection connection)
@@ -9,12 +9,12 @@ public static string Translate(IQueryWithParams query, IDbConnection connection)
 
 | parameter | description |
 | --- | --- |
-| query | The sql query. |
-| connection | The connection to get dialect from. |
+| query | The SQL query. |
+| connection | The connection to get the dialect from. |
 
 ## Return Value
 
-Translated query.
+The translated query.
 
 ## See Also
 
@@ -26,7 +26,7 @@ Translated query.
 # SqlConversions.Translate method (2 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Translates the command text to target connection dialect by replacing brackets ([]), and parameter prefixes (@).
+Translates the command text to the target connection dialect by replacing brackets ([]) and parameter prefixes (@).
 
 ```csharp
 public static string Translate(string commandText, IDbConnection connection)
@@ -39,7 +39,7 @@ public static string Translate(string commandText, IDbConnection connection)
 
 ## Return Value
 
-Translated query.
+The translated query.
 
 ## See Also
 
@@ -50,7 +50,7 @@ Translated query.
 # SqlConversions.Translate method (3 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Translates the command text to target dialect by replacing brackets ([]), and parameter prefixes (@).
+Translates the command text to the target dialect by replacing brackets ([]) and parameter prefixes (@).
 
 ```csharp
 public static string Translate(string commandText, ISqlDialect dialect)
@@ -63,7 +63,7 @@ public static string Translate(string commandText, ISqlDialect dialect)
 
 ## Return Value
 
-Translated query.
+The translated query.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # FullWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Set form field width class to null, e.g. full width
+Sets the form field width class to null, e.g. full width.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

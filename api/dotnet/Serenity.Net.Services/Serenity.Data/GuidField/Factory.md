@@ -18,6 +18,10 @@ public static GuidField Factory(ICollection<Field> collection, string name, Loca
 | getValue | The get value. |
 | setValue | The set value. |
 
+## Return Value
+
+A new GuidField instance.
+
 ## See Also
 
 * class [Field](../Field.md)

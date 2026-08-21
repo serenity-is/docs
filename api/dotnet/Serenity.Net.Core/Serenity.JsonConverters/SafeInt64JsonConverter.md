@@ -1,7 +1,7 @@
 # SafeInt64JsonConverter class
 **namespace:** *[Serenity.JsonConverters](../README.md#serenity.jsonconverters-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Serialize/deserialize a long value converting it to string if it is higher than precision double can handle
+Serializes and deserializes a Int64 value, converting it to a string when it is larger than the precision a double can safely handle.
 
 ```csharp
 public class SafeInt64JsonConverter : JsonConverter<long>
@@ -12,7 +12,7 @@ public class SafeInt64JsonConverter : JsonConverter<long>
 | name | description |
 | --- | --- |
 | [SafeInt64JsonConverter](SafeInt64JsonConverter/SafeInt64JsonConverter.md)() | The default constructor. |
-| static readonly [Instance](SafeInt64JsonConverter/Instance.md) | The default instance |
+| static readonly [Instance](SafeInt64JsonConverter/Instance.md) | The default instance of the [`SafeInt64JsonConverter`](SafeInt64JsonConverter.md). |
 | override [Read](SafeInt64JsonConverter/Read.md)(…) |  |
 | override [Write](SafeInt64JsonConverter/Write.md)(…) |  |
 

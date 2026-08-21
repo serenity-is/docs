@@ -1,7 +1,7 @@
 # NodeScriptRunnerExtensions.StartNodeScript method
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Starts a node (NPM) script
+Starts a node (NPM) script and attaches its output to the application logger.
 
 ```csharp
 public static void StartNodeScript(this IApplicationBuilder appBuilder, string scriptName, 
@@ -11,12 +11,12 @@ public static void StartNodeScript(this IApplicationBuilder appBuilder, string s
 
 | parameter | description |
 | --- | --- |
-| appBuilder | Application builder |
-| scriptName | Script name in package.json |
-| arguments | Arguments |
-| workingDirectory | Working directory |
-| envVars | Environment variables |
-| pkgManagerCommand | Package manager command (default is "npm") |
+| appBuilder | The application builder. |
+| scriptName | The script name in `package.json`. |
+| arguments | The arguments to pass to the script. |
+| workingDirectory | The working directory; defaults to the content root path. |
+| envVars | Optional environment variables to set for the process. |
+| pkgManagerCommand | The package manager command (defaults to `npm`). |
 
 ## See Also
 

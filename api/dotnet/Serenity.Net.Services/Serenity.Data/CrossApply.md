@@ -1,7 +1,7 @@
 # CrossApply class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-CROSS APPLY type of join
+CROSS APPLY type of join.
 
 ```csharp
 public class CrossApply : Join

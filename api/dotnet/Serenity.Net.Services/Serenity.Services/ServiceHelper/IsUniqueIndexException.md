@@ -21,7 +21,7 @@ public static bool IsUniqueIndexException(IDbConnection connection, Exception ex
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | connection or exception is null |
+| ArgumentNullException | *connection* or *exception* is `null`. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # AuthorizationExtensions.RemoveCachedUser method (1 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Tries to invalidate user in cache if the user retrieve service implements IUserCacheInvalidator. If not, and cache is not null and user is not null, it tries to remove user by id and username from cache.
+Removes the specified user from the cache.
 
 ```csharp
 public static void RemoveCachedUser(this IUserRetrieveService userRetriever, IUserDefinition user, 
@@ -10,9 +10,13 @@ public static void RemoveCachedUser(this IUserRetrieveService userRetriever, IUs
 
 | parameter | description |
 | --- | --- |
-| userRetriever | User retrieve service |
-| user | User |
-| cache | Cache |
+| userRetriever | The user retrieve service. |
+| user | The user definition to invalidate, or `null`. |
+| cache | The two-level cache to remove entries from when the service does not handle invalidation itself. |
+
+## Remarks
+
+If *userRetriever* implements [`IRemoveCachedUser`](../../Serenity.Abstractions/IRemoveCachedUser.md), that mechanism is used. Otherwise the user is removed from *cache* by identifier and username when available.
 
 ## See Also
 
@@ -26,7 +30,7 @@ public static void RemoveCachedUser(this IUserRetrieveService userRetriever, IUs
 # AuthorizationExtensions.RemoveCachedUser method (2 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Tries to invalidate user by its id / name if the user retrieve service implements IUserCacheInvalidator. If not, and cache is not null, it tries to remove user by id from cache.
+Removes a cached user entry by identifier and/or username.
 
 ```csharp
 public static void RemoveCachedUser(this IUserRetrieveService userRetriever, string userId, 
@@ -35,10 +39,14 @@ public static void RemoveCachedUser(this IUserRetrieveService userRetriever, str
 
 | parameter | description |
 | --- | --- |
-| userRetriever | User retrieve service |
-| userId | UserId |
-| username | Username |
-| cache |  |
+| userRetriever | The user retrieve service. |
+| userId | The user identifier, or `null`. |
+| username | The username, or `null`. |
+| cache | The two-level cache to remove entries from when the service does not handle invalidation itself. |
+
+## Remarks
+
+If *userRetriever* implements [`IRemoveCachedUser`](../../Serenity.Abstractions/IRemoveCachedUser.md), that mechanism is used. Otherwise entries are removed from *cache* by the supplied keys.
 
 ## See Also
 

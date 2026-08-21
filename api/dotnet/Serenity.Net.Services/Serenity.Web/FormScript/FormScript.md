@@ -1,7 +1,7 @@
 # FormScript constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Dynamic script type for forms (FormScriptAttribute)
+Dynamic script type for forms (FormScriptAttribute).
 
 ```csharp
 public FormScript(string name, Type formType, IPropertyItemProvider propertyProvider, 
@@ -10,14 +10,14 @@ public FormScript(string name, Type formType, IPropertyItemProvider propertyProv
 
 | parameter | description |
 | --- | --- |
-| name | Script name |
-| formType | Columns type |
-| propertyProvider | Property item provider |
-| serviceProvider | Service provider |
+| name | The script name. |
+| formType | The form type. |
+| propertyProvider | The property item provider. |
+| serviceProvider | The service provider. |
 
 ## Remarks
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ## See Also
 

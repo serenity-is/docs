@@ -1,7 +1,7 @@
 # IFileSystem.GetFileSize method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets file size for specified path
+Gets the size of the file at the specified path.
 
 ```csharp
 public long GetFileSize(string path)
@@ -9,11 +9,11 @@ public long GetFileSize(string path)
 
 | parameter | description |
 | --- | --- |
-| path | File path |
+| path | The path of the file. |
 
 ## Return Value
 
-Size of the file at path
+The size of the file in bytes.
 
 ## See Also
 

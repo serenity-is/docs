@@ -1,7 +1,7 @@
 # AutoIncrementAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Marks the field as auto increment, e.g. generated on insert in SQL side
+Marks the field as auto increment, e.g. generated on insert in SQL side.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

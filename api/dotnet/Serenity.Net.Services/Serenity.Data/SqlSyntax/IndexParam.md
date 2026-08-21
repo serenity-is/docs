@@ -9,11 +9,11 @@ public static string IndexParam(this int param)
 
 | parameter | description |
 | --- | --- |
-| param | Param index. |
+| param | The parameter index. |
 
 ## Return Value
 
-Param name.
+The parameter name.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # NotMappedAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Specifies that this property is not mapped to an SQL column/expression
+Specifies that this property is not mapped to an SQL column/expression.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

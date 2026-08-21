@@ -1,7 +1,7 @@
 # DataReaderExtensions.ToDecimal method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Reads and converts value at field index to Decimal. Returns DbNull as Null.Decimal.
+Reads and converts the value at the field index to Decimal. Returns `null` if the value is DBNull.
 
 ```csharp
 public static decimal? ToDecimal(this IDataReader reader, int index)
@@ -9,12 +9,12 @@ public static decimal? ToDecimal(this IDataReader reader, int index)
 
 | parameter | description |
 | --- | --- |
-| reader | Reader (required). |
-| index | Index. |
+| reader | The reader (required). |
+| index | The field index. |
 
 ## Return Value
 
-Field value or Null.Decimal if value is DbNull.
+The field value, or `null` if the value is DBNull.
 
 ## See Also
 

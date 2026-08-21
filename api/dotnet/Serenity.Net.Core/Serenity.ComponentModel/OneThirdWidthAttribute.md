@@ -1,7 +1,7 @@
 # OneThirdWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Marks form field with "col-md-4" css class, which makes it allocate a third of form row on device widths &gt;= 992px (e.g. medium desktop)
+Marks the form field with the "col-md-4" CSS class, which makes it allocate a third of the form row on device widths &gt;= 992px (e.g. medium desktop).
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

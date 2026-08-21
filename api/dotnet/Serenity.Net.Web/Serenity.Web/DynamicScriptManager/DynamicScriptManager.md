@@ -1,7 +1,7 @@
 # DynamicScriptManager constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the [`DynamicScriptManager`](../DynamicScriptManager.md) class.
 
 ```csharp
 public DynamicScriptManager(ITwoLevelCache cache, IPermissionService permissions, 
@@ -10,15 +10,15 @@ public DynamicScriptManager(ITwoLevelCache cache, IPermissionService permissions
 
 | parameter | description |
 | --- | --- |
-| cache | Two level cache |
-| permissions | Permission service |
-| localizer | Text localizer |
+| cache | The two level cache. |
+| permissions | The permission service. |
+| localizer | The text localizer. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *cache* or *permissions* is `null`. |
 
 ## See Also
 

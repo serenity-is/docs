@@ -17,8 +17,8 @@ public static class UploadPathHelper
 | const [ThumbBaseSuffix](UploadPathHelper/ThumbBaseSuffix.md) | The thumbnail suffix used for thumbnail images. Does not include file extension. |
 | const [ThumbExtension](UploadPathHelper/ThumbExtension.md) | Represents the file extension used for thumbnail images in JPEG format. |
 | static [CheckFileNameSecurity](UploadPathHelper/CheckFileNameSecurity.md)(…) | Checks file name security, e.g. it is a relative file (not rooted) that does not contain ".." etc. |
-| static [FindAvailableName](UploadPathHelper/FindAvailableName.md)(…) | Finds an available name for a file |
-| static [GetThumbnailName](UploadPathHelper/GetThumbnailName.md)(…) | Gets thumb file name |
+| static [FindAvailableName](UploadPathHelper/FindAvailableName.md)(…) | Finds an available name for a file. |
+| static [GetThumbnailName](UploadPathHelper/GetThumbnailName.md)(…) | Gets thumb file name. |
 | static [IsTemporaryFile](UploadPathHelper/IsTemporaryFile.md)(…) | Determines whether the specified file name represents a temporary upload file. |
 | static [TryParseThumbSuffix](UploadPathHelper/TryParseThumbSuffix.md)(…) | Tries to parse a thumbnail filename suffix, e.g. it ends with "_t.jpg", or "_tNxN.jpg" where N is a number |
 

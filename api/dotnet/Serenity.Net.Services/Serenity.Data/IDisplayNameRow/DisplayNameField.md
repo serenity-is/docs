@@ -1,7 +1,7 @@
 # IDisplayNameRow.DisplayNameField property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets display name field
+Gets the display name field.
 
 ```csharp
 public StringField DisplayNameField { get; }

@@ -1,7 +1,7 @@
 # IFieldWithJoinInfo interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for a field with join and referenced join alias information
+Interface for a field with join and referenced join alias information.
 
 ```csharp
 public interface IFieldWithJoinInfo : IField
@@ -11,8 +11,8 @@ public interface IFieldWithJoinInfo : IField
 
 | name | description |
 | --- | --- |
-| [Joins](IFieldWithJoinInfo/Joins.md) { get; } | List of all joins in fields entity |
-| [ReferencedAliases](IFieldWithJoinInfo/ReferencedAliases.md) { get; } | List of referenced joins in field expression |
+| [Joins](IFieldWithJoinInfo/Joins.md) { get; } | List of all joins in the field's entity. |
+| [ReferencedAliases](IFieldWithJoinInfo/ReferencedAliases.md) { get; } | List of referenced joins in the field expression. |
 
 ## See Also
 

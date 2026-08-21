@@ -1,7 +1,7 @@
 # RecaptchaPropertyProcessor class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Property processor to pass recaptcha site key to client side
+Property processor that passes the recaptcha site key to the client side.
 
 ```csharp
 public class RecaptchaPropertyProcessor : PropertyProcessor
@@ -11,13 +11,13 @@ public class RecaptchaPropertyProcessor : PropertyProcessor
 
 | name | description |
 | --- | --- |
-| [RecaptchaPropertyProcessor](RecaptchaPropertyProcessor/RecaptchaPropertyProcessor.md)(…) | Property processor to pass recaptcha site key to client side |
+| [RecaptchaPropertyProcessor](RecaptchaPropertyProcessor/RecaptchaPropertyProcessor.md)(…) | Property processor that passes the recaptcha site key to the client side. |
 | override [Priority](RecaptchaPropertyProcessor/Priority.md) { get; } |  |
 | override [Process](RecaptchaPropertyProcessor/Process.md)(…) |  |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`RecaptchaPropertyProcessor`](RecaptchaPropertyProcessor.md) class.
 
 ## See Also
 

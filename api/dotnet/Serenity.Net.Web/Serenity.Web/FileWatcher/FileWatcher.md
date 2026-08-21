@@ -1,7 +1,7 @@
 # FileWatcher constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the [`FileWatcher`](../FileWatcher.md) class.
 
 ```csharp
 public FileWatcher(string path, string filter)
@@ -9,14 +9,14 @@ public FileWatcher(string path, string filter)
 
 | parameter | description |
 | --- | --- |
-| path | Watch path |
-| filter | Watch filter |
+| path | The directory path to watch. |
+| filter | The file filter to watch for. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | One of the arguments is null |
+| ArgumentNullException | One of the arguments is `null`. |
 
 ## See Also
 

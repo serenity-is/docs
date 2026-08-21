@@ -9,7 +9,7 @@ public IEnumerable<CssFile> GetCssFiles()
 
 ## Return Value
 
-List of CSS files.
+The list of CSS files.
 
 ## See Also
 

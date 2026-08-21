@@ -1,7 +1,7 @@
 # IPermissionKeyLister interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Permission key lister abstraction
+Enumerates all permission keys registered in the application.
 
 ```csharp
 public interface IPermissionKeyLister
@@ -11,7 +11,7 @@ public interface IPermissionKeyLister
 
 | name | description |
 | --- | --- |
-| [ListPermissionKeys](IPermissionKeyLister/ListPermissionKeys.md)(…) | List all permission keys |
+| [ListPermissionKeys](IPermissionKeyLister/ListPermissionKeys.md)(…) | Lists all permission keys. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # IFileWatcher.RaiseChanged method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Raises the change even
+Raises the [`Changed`](Changed.md) event for the specified file.
 
 ```csharp
 public void RaiseChanged(string name)
@@ -9,7 +9,7 @@ public void RaiseChanged(string name)
 
 | parameter | description |
 | --- | --- |
-| name | File name |
+| name | The name of the changed file. |
 
 ## See Also
 

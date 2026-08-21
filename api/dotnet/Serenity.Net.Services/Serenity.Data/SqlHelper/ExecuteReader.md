@@ -12,11 +12,11 @@ public static IDataReader ExecuteReader(this SqlQuery query, IDbConnection conne
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
-| logger | Logger |
+| logger | The logger. |
 
 ## Return Value
 
-A data reader with results.
+A data reader with the results.
 
 ## See Also
 
@@ -40,13 +40,17 @@ public static IDataReader ExecuteReader(IDbConnection connection, string command
 | connection | The connection. |
 | commandText | The command text. |
 | param | The parameters. |
-| logger | Logger |
+| logger | The logger. |
+
+## Return Value
+
+A data reader with the results.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | connection is null |
+| ArgumentNullException | connection is null. |
 
 ## See Also
 

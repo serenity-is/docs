@@ -11,6 +11,10 @@ protected override byte[] Clone(byte[] value)
 | --- | --- |
 | value | The value. |
 
+## Return Value
+
+A clone of the value.
+
 ## See Also
 
 * class [ByteArrayField](../ByteArrayField.md)

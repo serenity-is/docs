@@ -1,7 +1,7 @@
 # Base32.Encode method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Encode a buffer using the default options
+Encodes a buffer using the default options.
 
 ```csharp
 public static string Encode(byte[] bytes)
@@ -13,7 +13,7 @@ public static string Encode(byte[] bytes)
 
 ## Return Value
 
-An encoded string that holds the contents of the inputs
+An encoded string that holds the contents of the inputs.
 
 ## See Also
 

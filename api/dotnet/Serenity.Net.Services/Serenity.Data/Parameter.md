@@ -1,7 +1,7 @@
 # Parameter structure
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Parameter struct
+Parameter struct.
 
 ```csharp
 public struct Parameter
@@ -15,7 +15,7 @@ public struct Parameter
 
 | name | description |
 | --- | --- |
-| [Parameter](Parameter/Parameter.md)(…) | Parameter struct |
+| [Parameter](Parameter/Parameter.md)(…) | Parameter struct. |
 | [Name](Parameter/Name.md) { get; } | Gets the name. |
 
 ## Remarks

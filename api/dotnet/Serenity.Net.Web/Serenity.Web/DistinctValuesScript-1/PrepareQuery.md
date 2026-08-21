@@ -1,7 +1,7 @@
 # DistinctValuesScript&lt;TRow&gt;.PrepareQuery method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Prepares the sql query
+Prepares the SQL query.
 
 ```csharp
 protected virtual void PrepareQuery(SqlQuery query)
@@ -9,7 +9,7 @@ protected virtual void PrepareQuery(SqlQuery query)
 
 | parameter | description |
 | --- | --- |
-| query | Sql query |
+| query | The SQL query. |
 
 ## See Also
 

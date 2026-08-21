@@ -1,7 +1,7 @@
 # WrappedConnection.Logger property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the logger instance for this connection if any
+Gets the logger instance for this connection, if any.
 
 ```csharp
 public ILogger Logger { get; }

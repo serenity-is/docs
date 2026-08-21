@@ -1,12 +1,21 @@
 # NestedPermissionKeyRegistration.AddNestedPermissions method
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets permission keys and adds texts if any from static nested permission key classes marked with NestedPermissionKeys attribute.
+Gets permission keys and adds texts, if any, from static nested permission key classes marked with [`NestedPermissionKeysAttribute`](../../Serenity.ComponentModel/NestedPermissionKeysAttribute.md).
 
 ```csharp
 public static HashSet<string> AddNestedPermissions(this ILocalTextRegistry registry, 
     ITypeSource typeSource)
 ```
+
+| parameter | description |
+| --- | --- |
+| registry | The registry to add texts to, or `null`. |
+| typeSource | The type source to search for nested permission key classes in. |
+
+## Return Value
+
+A set of the permission keys found.
 
 ## See Also
 

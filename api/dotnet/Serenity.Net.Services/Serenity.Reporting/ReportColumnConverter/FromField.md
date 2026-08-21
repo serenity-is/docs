@@ -12,6 +12,10 @@ public static ReportColumn FromField(Field field, ITextLocalizer localizer)
 | field | The field object |
 | localizer | Text localizer |
 
+## Return Value
+
+The extracted report column.
+
 ## See Also
 
 * class [ReportColumn](../ReportColumn.md)

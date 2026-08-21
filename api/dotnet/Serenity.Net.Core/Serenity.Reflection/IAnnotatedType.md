@@ -1,7 +1,7 @@
 # IAnnotatedType interface
 **namespace:** *[Serenity.Reflection](../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Annotated type information
+Annotated type information.
 
 ```csharp
 public interface IAnnotatedType

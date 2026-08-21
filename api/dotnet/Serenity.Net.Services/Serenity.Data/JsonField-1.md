@@ -1,7 +1,7 @@
 # JsonField&lt;TValue&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with JSON value
+Field with a JSON value.
 
 ```csharp
 public class JsonField<TValue> : GenericClassField<TValue>
@@ -23,14 +23,14 @@ public class JsonField<TValue> : GenericClassField<TValue>
 
 | name | description |
 | --- | --- |
-| [JsonField](JsonField-1/JsonField.md)(…) | Field with JSON value |
+| [JsonField](JsonField-1/JsonField.md)(…) | Field with a JSON value. |
 | static [Factory](JsonField-1/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | [SerializerOptions](JsonField-1/SerializerOptions.md) { get; set; } | Gets or sets the settings. |
 | override [AsSqlValue](JsonField-1/AsSqlValue.md)(…) | Gets the value of this row as an SQL value. |
 | override [GetFromReader](JsonField-1/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [IndexCompare](JsonField-1/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort |
-| override [ValueFromJson](JsonField-1/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](JsonField-1/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [IndexCompare](JsonField-1/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort. |
+| override [ValueFromJson](JsonField-1/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](JsonField-1/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

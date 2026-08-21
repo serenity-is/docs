@@ -9,8 +9,8 @@ public OptionalValue(T value)
 
 | parameter | description |
 | --- | --- |
-| T | Value type |
-| value | Value |
+| T | The value type. |
+| value | The value. |
 
 ## See Also
 

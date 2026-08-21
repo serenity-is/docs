@@ -18,8 +18,8 @@ public class DatePartAttribute : BaseExpressionAttribute
 | name | description |
 | --- | --- |
 | [DatePartAttribute](DatePartAttribute/DatePartAttribute.md)(…) | DatePart expression attribute |
-| [Expression](DatePartAttribute/Expression.md) { get; } | Date expression |
-| [Part](DatePartAttribute/Part.md) { get; } | Date part |
+| [Expression](DatePartAttribute/Expression.md) { get; } | Date expression. |
+| [Part](DatePartAttribute/Part.md) { get; } | Date part. |
 | override [Translate](DatePartAttribute/Translate.md)(…) |  |
 
 ## Exceptions

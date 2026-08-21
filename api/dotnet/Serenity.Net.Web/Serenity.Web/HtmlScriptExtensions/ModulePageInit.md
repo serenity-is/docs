@@ -1,7 +1,7 @@
 # HtmlScriptExtensions.ModulePageInit method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Executes default export of a module page, usually pageInit
+Executes the default export of a module page, usually `pageInit`.
 
 ```csharp
 public static HtmlString ModulePageInit(this IHtmlHelper html, string module, 
@@ -10,10 +10,14 @@ public static HtmlString ModulePageInit(this IHtmlHelper html, string module,
 
 | parameter | description |
 | --- | --- |
-| html |  |
-| module |  |
-| options |  |
-| css |  |
+| html | The HTML helper. |
+| module | The module. |
+| options | The options to pass to the module. |
+| css | `true` to also include the module's CSS file. |
+
+## Return Value
+
+The rendered module page init script.
 
 ## See Also
 

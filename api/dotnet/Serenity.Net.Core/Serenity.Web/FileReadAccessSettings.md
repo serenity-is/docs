@@ -1,7 +1,7 @@
 # FileReadAccessSettings class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Settings for file read access control
+Settings for file read access control.
 
 ```csharp
 public class FileReadAccessSettings : IOptions<FileReadAccessSettings>

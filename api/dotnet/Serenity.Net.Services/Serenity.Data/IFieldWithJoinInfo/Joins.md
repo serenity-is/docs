@@ -1,7 +1,7 @@
 # IFieldWithJoinInfo.Joins property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-List of all joins in fields entity
+List of all joins in the field's entity.
 
 ```csharp
 public IDictionary<string, Join> Joins { get; }

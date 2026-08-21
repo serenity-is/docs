@@ -1,7 +1,7 @@
 # JsonSafeCriteriaConverter class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Serialize/deserialize a BaseCriteria object and checks for safety of criteria expressions.
+Serializes and deserializes a [`BaseCriteria`](BaseCriteria.md) object and checks for the safety of criteria expressions.
 
 ```csharp
 public class JsonSafeCriteriaConverter : JsonCriteriaConverter

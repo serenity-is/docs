@@ -34,7 +34,7 @@ public ConnectionKeyAttribute(Type sourceType)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | sourceType is null |
+| ArgumentNullException | sourceType is null. |
 | ArgumentOutOfRangeException | sourceType has no ConnectionKey attribute. |
 
 ## See Also

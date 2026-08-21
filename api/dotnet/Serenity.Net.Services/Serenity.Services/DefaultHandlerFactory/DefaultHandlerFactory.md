@@ -1,7 +1,7 @@
 # DefaultHandlerFactory constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default implementation for the [`IDefaultHandlerFactory`](../IDefaultHandlerFactory.md)
+Default implementation for the [`IDefaultHandlerFactory`](../IDefaultHandlerFactory.md).
 
 ```csharp
 public DefaultHandlerFactory(IDefaultHandlerRegistry registry, IHandlerActivator activator)
@@ -16,11 +16,11 @@ public DefaultHandlerFactory(IDefaultHandlerRegistry registry, IHandlerActivator
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *registry* or *activator* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class.
+Initializes a new instance of the class.
 
 ## See Also
 

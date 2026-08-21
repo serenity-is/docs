@@ -1,7 +1,7 @@
 # IScriptFiles interface
 **namespace:** *[Serenity.Plugins](../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for plugins with script file dependencies
+Abstraction for plugins with script file dependencies.
 
 ```csharp
 public interface IScriptFiles

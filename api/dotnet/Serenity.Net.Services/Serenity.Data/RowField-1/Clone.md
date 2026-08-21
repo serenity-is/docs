@@ -11,6 +11,10 @@ protected override TForeign Clone(TForeign value)
 | --- | --- |
 | value | The value. |
 
+## Return Value
+
+A clone of the value.
+
 ## See Also
 
 * class [TForeign](../Serenity.Net.Services/../RowField-1.TForeign.md)

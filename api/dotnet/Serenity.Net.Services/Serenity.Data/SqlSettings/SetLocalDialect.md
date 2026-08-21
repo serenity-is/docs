@@ -1,7 +1,7 @@
 # SqlSettings.SetLocalDialect method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Sets local dialect for current thread and async context. Useful for background tasks, async methods, and testing to set dialect locally and for auto spawned threads.
+Sets the local dialect for the current thread and async context. Useful for background tasks, async methods, and testing to set the dialect locally and for auto spawned threads.
 
 ```csharp
 public static ISqlDialect SetLocalDialect(ISqlDialect dialect)
@@ -9,11 +9,11 @@ public static ISqlDialect SetLocalDialect(ISqlDialect dialect)
 
 | parameter | description |
 | --- | --- |
-| dialect | Dialect. Can be null. |
+| dialect | The dialect. Can be null. |
 
 ## Return Value
 
-Old local dialect if any.
+The old local dialect, if any.
 
 ## See Also
 

@@ -13,7 +13,7 @@ public class DateTimeFilteringAttribute : CustomFilteringAttribute
 | name | description |
 | --- | --- |
 | [DateTimeFilteringAttribute](DateTimeFilteringAttribute/DateTimeFilteringAttribute.md)() | Creates a new DateTimeFilteringAttribute |
-| [DisplayFormat](DateTimeFilteringAttribute/DisplayFormat.md) { get; set; } | Gets/sets optional display format to use for display of filter |
+| [DisplayFormat](DateTimeFilteringAttribute/DisplayFormat.md) { get; set; } | Gets or sets the optional display format to use when displaying the filter. |
 | const [Key](DateTimeFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also

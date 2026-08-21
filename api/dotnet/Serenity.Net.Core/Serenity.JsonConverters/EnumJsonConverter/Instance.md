@@ -1,7 +1,7 @@
 # EnumJsonConverter.Instance field
 **namespace:** *[Serenity.JsonConverters](../../README.md#serenity.jsonconverters-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Default instance
+The default instance of the [`EnumJsonConverter`](../EnumJsonConverter.md).
 
 ```csharp
 public static readonly EnumJsonConverter Instance;

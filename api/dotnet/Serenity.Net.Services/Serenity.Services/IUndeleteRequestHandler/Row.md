@@ -1,7 +1,7 @@
 # IUndeleteRequestHandler.Row property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-New row
+Gets the row being undeleted.
 
 ```csharp
 public IRow Row { get; }

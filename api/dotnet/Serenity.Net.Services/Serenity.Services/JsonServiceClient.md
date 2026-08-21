@@ -16,7 +16,7 @@ public class JsonServiceClient
 | name | description |
 | --- | --- |
 | [JsonServiceClient](JsonServiceClient/JsonServiceClient.md)(…) | A JSON service client implementation |
-| virtual [Post&lt;TResponse&gt;](JsonServiceClient/Post.md)(…) | Post to JSON service |
+| virtual [Post&lt;TResponse&gt;](JsonServiceClient/Post.md)(…) | Posts a request to a JSON service and returns the typed response. |
 
 ## Protected Members
 

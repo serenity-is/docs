@@ -1,7 +1,7 @@
 # Throttler.CacheKey property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Full cache key
+Gets the full cache key used to store the throttling state.
 
 ```csharp
 public string CacheKey { get; }

@@ -15,6 +15,12 @@ public SqlQuery GroupBy(string expression)
 
 The query itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | expression is null or empty. |
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

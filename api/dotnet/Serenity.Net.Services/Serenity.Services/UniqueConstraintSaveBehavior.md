@@ -1,7 +1,7 @@
 # UniqueConstraintSaveBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Behavior that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md)
+Behavior that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md).
 
 ```csharp
 public class UniqueConstraintSaveBehavior : BaseSaveBehavior, IImplicitBehavior
@@ -15,13 +15,13 @@ public class UniqueConstraintSaveBehavior : BaseSaveBehavior, IImplicitBehavior
 
 | name | description |
 | --- | --- |
-| [UniqueConstraintSaveBehavior](UniqueConstraintSaveBehavior/UniqueConstraintSaveBehavior.md)(…) | Behavior that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md) |
+| [UniqueConstraintSaveBehavior](UniqueConstraintSaveBehavior/UniqueConstraintSaveBehavior.md)(…) | Behavior that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md). |
 | [ActivateFor](UniqueConstraintSaveBehavior/ActivateFor.md)(…) |  |
 | override [OnBeforeSave](UniqueConstraintSaveBehavior/OnBeforeSave.md)(…) |  |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

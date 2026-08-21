@@ -1,7 +1,7 @@
 # FileSystemExtensions.Combine method (1 of 3)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Combines path strings
+Combines an array of path strings.
 
 ```csharp
 public static string Combine(this IFileSystem _, params string[] paths)
@@ -9,8 +9,12 @@ public static string Combine(this IFileSystem _, params string[] paths)
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| paths | Paths to combine |
+| _ | The file system. |
+| paths | The paths to combine. |
+
+## Return Value
+
+The combined path.
 
 ## See Also
 
@@ -22,7 +26,7 @@ public static string Combine(this IFileSystem _, params string[] paths)
 # FileSystemExtensions.Combine method (2 of 3)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Combines path strings
+Combines two path strings.
 
 ```csharp
 public static string Combine(this IFileSystem _, string path1, string path2)
@@ -30,9 +34,13 @@ public static string Combine(this IFileSystem _, string path1, string path2)
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| path1 | Path 1 |
-| path2 | Path 2 |
+| _ | The file system. |
+| path1 | The first path. |
+| path2 | The second path. |
+
+## Return Value
+
+The combined path.
 
 ## See Also
 
@@ -44,7 +52,7 @@ public static string Combine(this IFileSystem _, string path1, string path2)
 # FileSystemExtensions.Combine method (3 of 3)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Combines path strings
+Combines three path strings.
 
 ```csharp
 public static string Combine(this IFileSystem _, string path1, string path2, string path3)
@@ -52,10 +60,14 @@ public static string Combine(this IFileSystem _, string path1, string path2, str
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| path1 | Path 1 |
-| path2 | Path 2 |
-| path3 | Path 3 |
+| _ | The file system. |
+| path1 | The first path. |
+| path2 | The second path. |
+| path3 | The third path. |
+
+## Return Value
+
+The combined path.
 
 ## See Also
 

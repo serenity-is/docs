@@ -12,10 +12,10 @@ public abstract class RegisterServiceAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [RegisterServiceAttribute](RegisterServiceAttribute/RegisterServiceAttribute.md)() | Creates a new instance of RegisterServiceAttribute |
+| [RegisterServiceAttribute](RegisterServiceAttribute/RegisterServiceAttribute.md)() | Creates a new instance of RegisterServiceAttribute. |
 | [AsSelf](RegisterServiceAttribute/AsSelf.md) { get; set; } | Register the type itself as concrete implementation for itself in addition to any [`Types`](RegisterServiceAttribute/Types.md) specified, or the type's auto-detected interface. To register only itself with no interfaces, pass an empty array as Types: `[]`. Note that AsSelf cannot be used with keyed service registrations and Key property will be ignored. |
 | [Key](RegisterServiceAttribute/Key.md) { get; set; } | The key identifier for keyed service registration. |
-| [Lifetime](RegisterServiceAttribute/Lifetime.md) { get; protected set; } | Gets lifetime, which is transient by default |
+| [Lifetime](RegisterServiceAttribute/Lifetime.md) { get; protected set; } | Gets the lifetime, which is transient by default. |
 | [Order](RegisterServiceAttribute/Order.md) { get; set; } | Gets or sets the order of registration. Services with lower order will be registered first. This can be used to ensure that certain services are registered before others, e.g. when multiple implementations of the same service type are registered and the order matters. The default value is 0, and a higher value means a later registration. |
 | [ReplaceExisting](RegisterServiceAttribute/ReplaceExisting.md) { get; set; } | Indicates whether to replace existing registration. Note that when ReplaceExisting is true, SkipExisting is ignored. |
 | [SkipExisting](RegisterServiceAttribute/SkipExisting.md) { get; set; } | Gets or sets a value indicating whether to skip registration if a registration for the service already exists (default true), e.g. use TryAddSingleton etc. methods instead of AddSingleton. |

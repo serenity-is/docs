@@ -1,7 +1,7 @@
 # ICssMinifier interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Abstraction for Css minifier
+Abstraction for a CSS minifier.
 
 ```csharp
 public interface ICssMinifier
@@ -11,7 +11,7 @@ public interface ICssMinifier
 
 | name | description |
 | --- | --- |
-| [MinifyCss](ICssMinifier/MinifyCss.md)(…) | Minifies the given Css |
+| [MinifyCss](ICssMinifier/MinifyCss.md)(…) | Minifies the given CSS. |
 
 ## See Also
 

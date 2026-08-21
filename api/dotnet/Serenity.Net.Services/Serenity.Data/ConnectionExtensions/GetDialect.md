@@ -1,7 +1,7 @@
 # ConnectionExtensions.GetDialect method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the dialect for given connection.
+Gets the dialect for the given connection.
 
 ```csharp
 public static ISqlDialect GetDialect(this IDbConnection connection)
@@ -13,7 +13,7 @@ public static ISqlDialect GetDialect(this IDbConnection connection)
 
 ## Return Value
 
-The sql dialect.
+The SQL dialect.
 
 ## See Also
 

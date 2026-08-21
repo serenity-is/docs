@@ -1,7 +1,7 @@
 # TimeSpanField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a TimeSpan value
+Field with a TimeSpan value.
 
 ```csharp
 public sealed class TimeSpanField : GenericValueField<TimeSpan>
@@ -21,11 +21,11 @@ public sealed class TimeSpanField : GenericValueField<TimeSpan>
 
 | name | description |
 | --- | --- |
-| [TimeSpanField](TimeSpanField/TimeSpanField.md)(…) | Field with a TimeSpan value |
+| [TimeSpanField](TimeSpanField/TimeSpanField.md)(…) | Field with a TimeSpan value. |
 | static [Factory](TimeSpanField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [GetFromReader](TimeSpanField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [ValueFromJson](TimeSpanField/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](TimeSpanField/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [ValueFromJson](TimeSpanField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](TimeSpanField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

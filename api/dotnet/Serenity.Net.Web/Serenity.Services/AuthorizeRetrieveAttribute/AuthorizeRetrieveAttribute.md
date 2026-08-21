@@ -1,7 +1,7 @@
 # AuthorizeRetrieveAttribute constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Authorizes retrieve access to a service method by reading ReadPermissionAttribute. ServiceLookupPermissionAttribute
+Authorizes retrieve access to a service method by reading ReadPermissionAttribute.
 
 ```csharp
 public AuthorizeRetrieveAttribute(Type sourceType)
@@ -9,11 +9,11 @@ public AuthorizeRetrieveAttribute(Type sourceType)
 
 | parameter | description |
 | --- | --- |
-| sourceType | Source type |
+| sourceType | The source type. |
 
 ## Remarks
 
-Creates a new instance of the attribute
+Initializes a new instance of the [`AuthorizeRetrieveAttribute`](../AuthorizeRetrieveAttribute.md) class.
 
 ## See Also
 

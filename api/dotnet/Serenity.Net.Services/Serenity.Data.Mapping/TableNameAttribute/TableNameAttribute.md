@@ -15,7 +15,7 @@ public TableNameAttribute(string name)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | name |
+| ArgumentNullException | name is null or empty. |
 
 ## See Also
 
@@ -41,7 +41,7 @@ public TableNameAttribute(string name, params ServerType[] serverTypes)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | name |
+| ArgumentNullException | name is null or empty. |
 
 ## See Also
 

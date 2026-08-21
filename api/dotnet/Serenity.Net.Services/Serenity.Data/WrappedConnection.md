@@ -26,7 +26,7 @@ public class WrappedConnection : IDbConnection, IHasActualConnection, IHasComman
 | [CurrentTransaction](WrappedConnection/CurrentTransaction.md) { get; } | Gets the current transaction. |
 | [Database](WrappedConnection/Database.md) { get; } | Gets the name of the current database or the database to be used after a connection is opened. |
 | [Dialect](WrappedConnection/Dialect.md) { get; set; } | Gets or sets the SQL dialect. |
-| [Logger](WrappedConnection/Logger.md) { get; } | Gets the logger instance for this connection if any |
+| [Logger](WrappedConnection/Logger.md) { get; } | Gets the logger instance for this connection, if any. |
 | [OpenedOnce](WrappedConnection/OpenedOnce.md) { get; } | Gets a value indicating whether the connection was opened once. |
 | [State](WrappedConnection/State.md) { get; } | Gets the current state of the connection. |
 | event [StateChange](WrappedConnection/StateChange.md) | Implements state change event by proxying it to the actual connection |
@@ -35,7 +35,7 @@ public class WrappedConnection : IDbConnection, IHasActualConnection, IHasComman
 | [ChangeDatabase](WrappedConnection/ChangeDatabase.md)(…) | Changes the current database for an open Connection object. |
 | [Close](WrappedConnection/Close.md)() | Closes the connection to the database. |
 | [CreateCommand](WrappedConnection/CreateCommand.md)() | Creates and returns a Command object associated with the connection. |
-| [Dispose](WrappedConnection/Dispose.md)() | Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. |
+| [Dispose](WrappedConnection/Dispose.md)() | Disposes the actual connection. |
 | [Open](WrappedConnection/Open.md)() | Opens a database connection with the settings specified by the ConnectionString property of the provider-specific Connection object. |
 
 ## Remarks

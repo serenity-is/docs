@@ -11,7 +11,7 @@ public interface ICustomizeHtmlToPdf
 
 | name | description |
 | --- | --- |
-| [Customize](ICustomizeHtmlToPdf/Customize.md)(…) | Method that is called to customize HTML to PDF options |
+| [Customize](ICustomizeHtmlToPdf/Customize.md)(…) | Method that is called to customize HTML to PDF options. |
 
 ## See Also
 

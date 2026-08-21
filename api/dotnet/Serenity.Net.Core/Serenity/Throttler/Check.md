@@ -1,7 +1,7 @@
 # Throttler.Check method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Checks if over throttle limit
+Records an attempt and checks whether the throttling limit has been exceeded.
 
 ```csharp
 public bool Check()
@@ -9,7 +9,7 @@ public bool Check()
 
 ## Return Value
 
-True if under throttle limit, false otherwise
+`true` if the attempt is within the allowed limit; `false` if throttled.
 
 ## See Also
 

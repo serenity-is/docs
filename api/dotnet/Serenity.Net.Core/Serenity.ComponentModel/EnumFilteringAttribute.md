@@ -1,7 +1,7 @@
 # EnumFilteringAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that property should use enum type of filtering
+Indicates that the property should use enum type of filtering.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

@@ -1,7 +1,7 @@
 # IUserClaimCreator interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Interface for getting user ClaimsPrincipal
+Creates a ClaimsPrincipal for a given username.
 
 ```csharp
 public interface IUserClaimCreator
@@ -11,7 +11,7 @@ public interface IUserClaimCreator
 
 | name | description |
 | --- | --- |
-| [CreatePrincipal](IUserClaimCreator/CreatePrincipal.md)(…) | Gets the ClaimsPrincipal for user with given username |
+| [CreatePrincipal](IUserClaimCreator/CreatePrincipal.md)(…) | Creates a principal for the specified user. |
 
 ## See Also
 

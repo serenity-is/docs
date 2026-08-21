@@ -4,7 +4,7 @@
 Validates image constraints
 
 ```csharp
-public void ValidateImage(IUploadImageContrains constraints, Stream stream, string filename, 
+public void ValidateImage(IUploadImageConstraints constraints, Stream stream, string filename, 
     out object image)
 ```
 
@@ -17,5 +17,5 @@ public void ValidateImage(IUploadImageContrains constraints, Stream stream, stri
 
 ## See Also
 
-* interface [IUploadImageContrains](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadImageContrains.md)
+* interface [IUploadImageConstraints](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadImageConstraints.md)
 * interface [IUploadValidator](../IUploadValidator.md)

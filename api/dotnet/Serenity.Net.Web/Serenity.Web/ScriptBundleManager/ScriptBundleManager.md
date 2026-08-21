@@ -1,7 +1,7 @@
 # ScriptBundleManager constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the [`ScriptBundleManager`](../ScriptBundleManager.md) class.
 
 ```csharp
 public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, IScriptMinifier scriptMinifier, 
@@ -11,18 +11,18 @@ public ScriptBundleManager(IOptions<ScriptBundlingOptions> options, IScriptMinif
 
 | parameter | description |
 | --- | --- |
-| options | Options |
-| scriptManager | Dynamic script manager |
-| scriptMinifier | Script minifier |
-| hostEnvironment | Web host environment |
-| contextAccessor | HTTP context accessor |
-| logger | Logger |
+| options | The options. |
+| scriptManager | The dynamic script manager. |
+| scriptMinifier | The script minifier. |
+| hostEnvironment | The web host environment. |
+| contextAccessor | The HTTP context accessor. |
+| logger | The logger. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | One of arguments is null |
+| ArgumentNullException | One of the required arguments is `null`. |
 
 ## See Also
 

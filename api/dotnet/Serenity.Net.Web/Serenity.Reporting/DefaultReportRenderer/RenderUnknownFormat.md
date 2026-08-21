@@ -10,14 +10,18 @@ protected virtual ReportRenderResult RenderUnknownFormat(IReport report,
 
 | parameter | description |
 | --- | --- |
-| report | Report |
-| options | Options |
+| report | The report. |
+| options | The options. |
+
+## Return Value
+
+The render result.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentOutOfRangeException | Throws argument null by default |
+| NotImplementedException | Thrown by default. |
 
 ## See Also
 

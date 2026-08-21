@@ -1,7 +1,7 @@
 # DefaultUploadProcessor class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Default implementation for [`IUploadProcessor`](IUploadProcessor.md)
+Default implementation for [`IUploadProcessor`](IUploadProcessor.md).
 
 ```csharp
 public class DefaultUploadProcessor : IUploadProcessor
@@ -19,7 +19,7 @@ public class DefaultUploadProcessor : IUploadProcessor
 
 | name | description |
 | --- | --- |
-| [DefaultUploadProcessor](DefaultUploadProcessor/DefaultUploadProcessor.md)(…) | Default implementation for [`IUploadProcessor`](IUploadProcessor.md) |
+| [DefaultUploadProcessor](DefaultUploadProcessor/DefaultUploadProcessor.md)(…) | Default implementation for [`IUploadProcessor`](IUploadProcessor.md). |
 | virtual [CreateDefaultThumb](DefaultUploadProcessor/CreateDefaultThumb.md)(…) | Creates the default thumbnail for image if the size is provided in the upload image options (ThumbWidth and ThumbHeight &gt;= 0) and saves it to the target upload storage file |
 | virtual [Process](DefaultUploadProcessor/Process.md)(…) |  |
 | class [ScaleImageAsResult](DefaultUploadProcessor.ScaleImageAsResult.md) | Result for the scale image as operation |
@@ -28,11 +28,11 @@ public class DefaultUploadProcessor : IUploadProcessor
 
 | name | description |
 | --- | --- |
-| readonly [avScanner-](DefaultUploadProcessor/avScanner-.md) | AV Scanner |
-| readonly [imageProcessor-](DefaultUploadProcessor/imageProcessor-.md) | Image processor |
-| readonly [logger-](DefaultUploadProcessor/logger-.md) | Logger |
-| readonly [uploadStorage-](DefaultUploadProcessor/uploadStorage-.md) | Upload storage |
-| readonly [uploadValidator-](DefaultUploadProcessor/uploadValidator-.md) | Upload validator |
+| readonly [avScanner-](DefaultUploadProcessor/avScanner-.md) | Gets the AV scanner. |
+| readonly [imageProcessor-](DefaultUploadProcessor/imageProcessor-.md) | Gets the image processor. |
+| readonly [logger-](DefaultUploadProcessor/logger-.md) | Gets the logger. |
+| readonly [uploadStorage-](DefaultUploadProcessor/uploadStorage-.md) | Gets the upload storage. |
+| readonly [uploadValidator-](DefaultUploadProcessor/uploadValidator-.md) | Gets the upload validator. |
 | virtual [CreateAdditionalThumbs](DefaultUploadProcessor/CreateAdditionalThumbs.md)(…) | Creates additional thumbs if specified in the upload image options, and saves them to the target upload storage |
 | virtual [ProcessImage](DefaultUploadProcessor/ProcessImage.md)(…) | Depending on the image upload options, scales image, creates default and additional thumbs and saves them to the upload storage files. |
 | virtual [ScaleImageAs](DefaultUploadProcessor/ScaleImageAs.md)(…) | Scales an image and saves it to an upload storage file |
@@ -42,11 +42,11 @@ public class DefaultUploadProcessor : IUploadProcessor
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *imageProcessor*, *uploadStorage* or *uploadValidator* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

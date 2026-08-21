@@ -1,7 +1,7 @@
 # RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.Query property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the select query
+Gets the select query.
 
 ```csharp
 public SqlQuery Query { get; }

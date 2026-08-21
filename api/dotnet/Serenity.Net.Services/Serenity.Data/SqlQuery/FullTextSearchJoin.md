@@ -21,6 +21,12 @@ public SqlQuery FullTextSearchJoin(string searchTable, string searchFields, stri
 
 The SqlSelect object itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | Any of the parameters is null or empty. |
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

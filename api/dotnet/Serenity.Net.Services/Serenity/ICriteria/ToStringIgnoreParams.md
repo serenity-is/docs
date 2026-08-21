@@ -7,6 +7,10 @@ Converts the criteria to string while ignoring its params if any. ToString() rai
 public string ToStringIgnoreParams()
 ```
 
+## Return Value
+
+The criteria as a string, ignoring its parameters.
+
 ## See Also
 
 * interface [ICriteria](../ICriteria.md)

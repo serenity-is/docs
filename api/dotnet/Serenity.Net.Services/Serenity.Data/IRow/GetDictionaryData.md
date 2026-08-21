@@ -11,6 +11,10 @@ public object GetDictionaryData(object key)
 | --- | --- |
 | key | The key. |
 
+## Return Value
+
+The value stored under the specified key, or `null` if not present.
+
 ## See Also
 
 * interface [IRow](../IRow.md)

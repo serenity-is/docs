@@ -1,7 +1,7 @@
 # IContentHashCache interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-An abstraction for content hash cache, which contains hashes of web servable files.
+An abstraction for a content hash cache, which contains hashes of web servable files.
 
 ```csharp
 public interface IContentHashCache
@@ -11,9 +11,9 @@ public interface IContentHashCache
 
 | name | description |
 | --- | --- |
-| [ResolvePath](IContentHashCache/ResolvePath.md)(…) | Resolves a relative path |
-| [ResolveWithHash](IContentHashCache/ResolveWithHash.md)(…) | Resolves a relative path with its hash |
-| [ScriptsChanged](IContentHashCache/ScriptsChanged.md)() | Raises scripts changed event causing cache to be cleared |
+| [ResolvePath](IContentHashCache/ResolvePath.md)(…) | Resolves a relative path. |
+| [ResolveWithHash](IContentHashCache/ResolveWithHash.md)(…) | Resolves a relative path with its hash. |
+| [ScriptsChanged](IContentHashCache/ScriptsChanged.md)() | Raises the scripts changed event, causing the cache to be cleared. |
 
 ## See Also
 

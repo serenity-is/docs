@@ -11,17 +11,17 @@ public static object ExecuteScalar(IDbConnection connection, SqlQuery query, ILo
 | --- | --- |
 | connection | The connection. |
 | query | The select query. |
-| logger | Logger |
+| logger | The logger. |
 
 ## Return Value
 
-Scalar value
+The scalar value.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | selectQuery is null |
+| ArgumentNullException | selectQuery is null. |
 
 ## See Also
 
@@ -45,13 +45,17 @@ public static object ExecuteScalar(IDbConnection connection, string commandText,
 | connection | The connection. |
 | commandText | The command text. |
 | param | The parameters. |
-| logger | Logger |
+| logger | The logger. |
+
+## Return Value
+
+The scalar value.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | connection |
+| ArgumentNullException | connection is null. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # DefaultConnectionStrings.DetermineDialect method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Determines dialect for a connection
+Determines the dialect for a connection.
 
 ```csharp
 protected virtual ISqlDialect DetermineDialect(string connectionKey, ConnectionStringEntry entry)
@@ -9,8 +9,12 @@ protected virtual ISqlDialect DetermineDialect(string connectionKey, ConnectionS
 
 | parameter | description |
 | --- | --- |
-| connectionKey | Connection key |
-| entry | Connection entry |
+| connectionKey | The connection key. |
+| entry | The connection entry. |
+
+## Return Value
+
+The SQL dialect.
 
 ## See Also
 

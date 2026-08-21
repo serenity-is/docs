@@ -1,7 +1,7 @@
 # EmailAddressEditorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that the target property should use a "EmailAddress" editor.
+Indicates that the target property should use an "EmailAddress" editor.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

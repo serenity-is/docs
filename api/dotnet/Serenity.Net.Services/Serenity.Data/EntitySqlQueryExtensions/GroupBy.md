@@ -1,7 +1,7 @@
 # EntitySqlQueryExtensions.GroupBy method (1 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds fields expressions to group by list
+Adds a field's expression to the group by list.
 
 ```csharp
 public static SqlQuery GroupBy(this SqlQuery query, IField field)
@@ -12,11 +12,15 @@ public static SqlQuery GroupBy(this SqlQuery query, IField field)
 | query | The query. |
 | field | The field. |
 
+## Return Value
+
+The query itself.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -29,7 +33,7 @@ public static SqlQuery GroupBy(this SqlQuery query, IField field)
 # EntitySqlQueryExtensions.GroupBy method (2 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds fields expression to group by list
+Adds field expressions to the group by list.
 
 ```csharp
 public static SqlQuery GroupBy(this SqlQuery query, params IField[] fields)
@@ -40,11 +44,15 @@ public static SqlQuery GroupBy(this SqlQuery query, params IField[] fields)
 | query | The query. |
 | fields | The fields. |
 
+## Return Value
+
+The query itself.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | fields |
+| ArgumentNullException | fields is null. |
 
 ## See Also
 

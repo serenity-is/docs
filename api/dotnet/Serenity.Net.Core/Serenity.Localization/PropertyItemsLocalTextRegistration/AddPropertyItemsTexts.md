@@ -1,7 +1,7 @@
 # PropertyItemsLocalTextRegistration.AddPropertyItemsTexts method
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Adds local text translations defined implicitly by DisplayName, Tab, Placeholder, Hint etc. attributes used in Column/Form etc. definitions.
+Adds local text translations defined implicitly by DisplayNameAttribute, [`TabAttribute`](../../Serenity.ComponentModel/TabAttribute.md), [`PlaceholderAttribute`](../../Serenity.ComponentModel/PlaceholderAttribute.md), [`HintAttribute`](../../Serenity.ComponentModel/HintAttribute.md), etc. attributes used in Column/Form definitions.
 
 ```csharp
 public static void AddPropertyItemsTexts(this ILocalTextRegistry registry, ITypeSource typeSource, 
@@ -10,9 +10,9 @@ public static void AddPropertyItemsTexts(this ILocalTextRegistry registry, IType
 
 | parameter | description |
 | --- | --- |
-| typeSource | Type source to search for enumeration classes in |
-| languageID | Language ID texts will be added (default is invariant language) |
-| registry | Registry |
+| registry | The registry to add texts to. |
+| typeSource | The type source to search for property item types in. |
+| languageID | The language ID texts will be added for (default is the invariant language). |
 
 ## See Also
 

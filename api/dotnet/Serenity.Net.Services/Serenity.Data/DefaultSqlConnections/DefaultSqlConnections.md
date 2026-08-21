@@ -1,7 +1,7 @@
 # DefaultSqlConnections constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default connection factory
+The default connection factory.
 
 ```csharp
 public DefaultSqlConnections(IConnectionStrings connectionStrings, 
@@ -10,13 +10,13 @@ public DefaultSqlConnections(IConnectionStrings connectionStrings,
 
 | parameter | description |
 | --- | --- |
-| connectionStrings | Named connection strings |
-| profiler | Profiler if any |
-| loggerFactory | Optional logger factory (to be used by static SqlHelper methods) |
+| connectionStrings | The named connection strings. |
+| profiler | The profiler, if any. |
+| loggerFactory | The optional logger factory (to be used by static SqlHelper methods). |
 
 ## Remarks
 
-Creates a new instance
+Creates a new instance.
 
 ## See Also
 

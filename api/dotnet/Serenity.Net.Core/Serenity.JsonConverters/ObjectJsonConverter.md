@@ -1,7 +1,7 @@
 # ObjectJsonConverter class
 **namespace:** *[Serenity.JsonConverters](../README.md#serenity.jsonconverters-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Provides deserialization for object type similar to Newtonsoft https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/converters-how-to?pivots=dotnet-8-0#deserialize-inferred-types-to-object-properties
+Provides deserialization for the Object type, inferring the concrete type from the JSON value, similar to Newtonsoft. See https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/converters-how-to?pivots=dotnet-8-0#deserialize-inferred-types-to-object-properties
 
 ```csharp
 public class ObjectJsonConverter : JsonConverter<object>
@@ -12,7 +12,7 @@ public class ObjectJsonConverter : JsonConverter<object>
 | name | description |
 | --- | --- |
 | [ObjectJsonConverter](ObjectJsonConverter/ObjectJsonConverter.md)() | The default constructor. |
-| static readonly [Instance](ObjectJsonConverter/Instance.md) | Default instance of the ObjectJsonConverter |
+| static readonly [Instance](ObjectJsonConverter/Instance.md) | The default instance of the [`ObjectJsonConverter`](ObjectJsonConverter.md). |
 | override [Read](ObjectJsonConverter/Read.md)(…) |  |
 | override [Write](ObjectJsonConverter/Write.md)(…) |  |
 

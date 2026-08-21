@@ -1,7 +1,7 @@
 # ConnectionExtensions.NewFor&lt;TClass&gt; method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new connection for specified class, determining the connection key by checking its [ConnectionKey] attribute.
+Creates a new connection for the specified class, determining the connection key by checking its [`ConnectionKeyAttribute`](../ConnectionKeyAttribute.md).
 
 ```csharp
 public static IDbConnection NewFor<TClass>(this ISqlConnections factory)
@@ -10,11 +10,11 @@ public static IDbConnection NewFor<TClass>(this ISqlConnections factory)
 | parameter | description |
 | --- | --- |
 | TClass | The type of the class. |
-| factory | Connection factory |
+| factory | The connection factory. |
 
 ## Return Value
 
-A new connection
+A new connection.
 
 ## Exceptions
 

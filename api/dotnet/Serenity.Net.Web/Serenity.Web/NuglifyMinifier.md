@@ -1,7 +1,7 @@
 # NuglifyMinifier class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation of IScriptMinifier and ICssMinifer interfaces with Nuglify library
+Default implementation of [`IScriptMinifier`](IScriptMinifier.md) and [`ICssMinifier`](ICssMinifier.md) using the Nuglify library.
 
 ```csharp
 public class NuglifyMinifier : ICssMinifier, IScriptMinifier

@@ -16,13 +16,13 @@ public static TFields As<TFields>(this TFields fields, string alias)
 
 ## Return Value
 
-An instance of RowFieldsBase with T0 replaced with specified alias
+An instance of RowFieldsBase with T0 replaced with the specified alias.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | alias |
+| ArgumentNullException | alias is null or whitespace. |
 
 ## See Also
 

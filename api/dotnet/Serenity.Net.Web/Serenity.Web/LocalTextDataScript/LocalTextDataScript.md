@@ -1,7 +1,7 @@
 # LocalTextDataScript constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Local text data script to access local texts from an external app like mobile
+Local text data script to access local texts from an external app like mobile.
 
 ```csharp
 public LocalTextDataScript(ILocalTextRegistry localTextRegistry, 
@@ -10,19 +10,19 @@ public LocalTextDataScript(ILocalTextRegistry localTextRegistry,
 
 | parameter | description |
 | --- | --- |
-| localTextRegistry | Local text registry |
-| localTextPackages | Package list |
-| httpContextAccessor | HTTP context accessor |
+| localTextRegistry | The local text registry. |
+| localTextPackages | The package list. |
+| httpContextAccessor | The HTTP context accessor. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | One of arguments is null |
+| ArgumentNullException | One of the arguments is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the [`LocalTextDataScript`](../LocalTextDataScript.md) class.
 
 ## See Also
 

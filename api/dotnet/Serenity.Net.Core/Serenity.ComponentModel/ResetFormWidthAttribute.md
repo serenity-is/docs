@@ -1,7 +1,7 @@
 # ResetFormWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Resets form field width to null. It maybe used to cancel UntilNext flag of a prior width attribute.
+Resets the form field width to null. It may be used to cancel the UntilNext flag of a prior width attribute.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

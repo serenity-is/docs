@@ -1,7 +1,7 @@
 # WKHtmlToPdfSettings.SectionKey field
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Section key for WKHtmlToPdf
+The section key for WKHtmlToPdf.
 
 ```csharp
 public const string SectionKey;

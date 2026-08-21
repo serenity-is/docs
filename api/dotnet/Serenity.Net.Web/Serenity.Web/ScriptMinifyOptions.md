@@ -1,7 +1,7 @@
 # ScriptMinifyOptions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Set of options for script minifying
+Set of options for script minifying.
 
 ```csharp
 public class ScriptMinifyOptions
@@ -12,7 +12,7 @@ public class ScriptMinifyOptions
 | name | description |
 | --- | --- |
 | [ScriptMinifyOptions](ScriptMinifyOptions/ScriptMinifyOptions.md)() | The default constructor. |
-| [LineBreakThreshold](ScriptMinifyOptions/LineBreakThreshold.md) { get; set; } | Line break threshold |
+| [LineBreakThreshold](ScriptMinifyOptions/LineBreakThreshold.md) { get; set; } | Gets or sets the line break threshold. |
 
 ## See Also
 

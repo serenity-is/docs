@@ -7,6 +7,10 @@ Gets the keyword.
 public abstract string GetKeyword()
 ```
 
+## Return Value
+
+The SQL keyword for this join type.
+
 ## See Also
 
 * class [Join](../Join.md)

@@ -1,7 +1,7 @@
 # RecaptchaValidation class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Recaptcha validation extensions. This was written for a very old version of Google Recaptcha and might not be working properly.
+Recaptcha validation extensions. This was written for a very old version of Google Recaptcha and might not work properly.
 
 ```csharp
 public static class RecaptchaValidation
@@ -11,7 +11,7 @@ public static class RecaptchaValidation
 
 | name | description |
 | --- | --- |
-| static [Validate](RecaptchaValidation/Validate.md)(…) | Validates a recaptcha token |
+| static [Validate](RecaptchaValidation/Validate.md)(…) | Validates a recaptcha token against the Google site verify endpoint. |
 
 ## See Also
 

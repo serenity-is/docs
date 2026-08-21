@@ -1,7 +1,7 @@
 # CombinedUploadStorage constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ```csharp
 public CombinedUploadStorage(IUploadStorage mainStorage, IUploadStorage subStorage, 
@@ -18,7 +18,7 @@ public CombinedUploadStorage(IUploadStorage mainStorage, IUploadStorage subStora
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | One of the arguments is null |
+| ArgumentNullException | One of the arguments is `null`. |
 
 ## See Also
 

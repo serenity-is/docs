@@ -1,7 +1,7 @@
 # ReportRegistry.Category class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Model for a report category
+Model for a report category.
 
 ```csharp
 public class Category
@@ -16,13 +16,13 @@ public class Category
 
 | name | description |
 | --- | --- |
-| [Category](ReportRegistry.Category/Category.md)(…) | Model for a report category |
-| [Key](ReportRegistry.Category/Key.md) { get; } | Key for the category |
-| [Title](ReportRegistry.Category/Title.md) { get; } | Category title |
+| [Category](ReportRegistry.Category/Category.md)(…) | Model for a report category. |
+| [Key](ReportRegistry.Category/Key.md) { get; } | Gets the key for the category. |
+| [Title](ReportRegistry.Category/Title.md) { get; } | Gets the category title. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

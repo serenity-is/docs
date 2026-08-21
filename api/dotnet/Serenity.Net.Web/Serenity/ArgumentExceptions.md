@@ -11,7 +11,7 @@ public static class ArgumentExceptions
 
 | name | description |
 | --- | --- |
-| static [OutOfRange](ArgumentExceptions/OutOfRange.md)(…) | Creates an ArgumentOutOfRangeException |
+| static [OutOfRange](ArgumentExceptions/OutOfRange.md)(…) | Creates an ArgumentOutOfRangeException for the given argument. |
 
 ## See Also
 

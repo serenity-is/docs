@@ -1,7 +1,7 @@
 # NavigationLocalTextRegistration class
 **namespace:** *[Serenity.Localization](../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains initialization method for adding navigation item attribute related local texts
+Contains initialization methods for adding navigation item attribute related local texts.
 
 ```csharp
 public static class NavigationLocalTextRegistration
@@ -11,7 +11,7 @@ public static class NavigationLocalTextRegistration
 
 | name | description |
 | --- | --- |
-| static [AddNavigationTexts](NavigationLocalTextRegistration/AddNavigationTexts.md)(…) | Adds navigation item related texts |
+| static [AddNavigationTexts](NavigationLocalTextRegistration/AddNavigationTexts.md)(…) | Adds navigation item related texts. |
 
 ## See Also
 

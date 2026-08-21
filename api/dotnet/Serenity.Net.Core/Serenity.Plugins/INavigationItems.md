@@ -1,7 +1,7 @@
 # INavigationItems interface
 **namespace:** *[Serenity.Plugins](../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for plugins with navigation entries
+Abstraction for plugins with navigation entries.
 
 ```csharp
 public interface INavigationItems
@@ -15,4 +15,4 @@ public interface INavigationItems
 
 ## See Also
 
-* **Source:** *[INavigationEntries.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/INavigationEntries.cs)*
+* **Source:** *[INavigationItems.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Plugins/INavigationItems.cs)*

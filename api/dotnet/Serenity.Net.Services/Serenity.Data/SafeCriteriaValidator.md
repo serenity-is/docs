@@ -18,8 +18,8 @@ public class SafeCriteriaValidator : BaseCriteriaVisitor
 
 | name | description |
 | --- | --- |
-| override [VisitCriteria](SafeCriteriaValidator/VisitCriteria.md)(…) | Visits the criteria returning potentially reworked version. |
-| override [VisitParam](SafeCriteriaValidator/VisitParam.md)(…) | Visits the parameter criteria. Parameter criteria is just a parameter name. |
+| override [VisitCriteria](SafeCriteriaValidator/VisitCriteria.md)(…) | Visits the criteria, returning a potentially reworked version. |
+| override [VisitParam](SafeCriteriaValidator/VisitParam.md)(…) | Visits the parameter criteria. A parameter criteria is just a parameter name. |
 
 ## See Also
 

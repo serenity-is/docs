@@ -1,7 +1,7 @@
 # ExceptionExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Exception data extensions
+Exception data extensions.
 
 ```csharp
 public static class ExceptionExtensions
@@ -11,7 +11,7 @@ public static class ExceptionExtensions
 
 | name | description |
 | --- | --- |
-| static [SetData](ExceptionExtensions/SetData.md)(…) | Sets custom exception data with given property name and value. Sets the data in base exception. |
+| static [SetData](ExceptionExtensions/SetData.md)(…) | Sets custom exception data with the given property name and value. Sets the data in the base exception. |
 
 ## See Also
 

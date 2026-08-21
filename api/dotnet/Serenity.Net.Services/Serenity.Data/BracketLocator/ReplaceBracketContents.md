@@ -14,6 +14,10 @@ public static string ReplaceBracketContents(string expression, char validChar1,
 | validChar1 | An additional character allowed to be in brackets. |
 | replace | The replace function. |
 
+## Return Value
+
+The expression with bracket contents replaced.
+
 ## See Also
 
 * class [BracketLocator](../BracketLocator.md)

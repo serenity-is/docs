@@ -1,7 +1,7 @@
 # FileSystemExtensions.IsPathRooted method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets if the path is rooted
+Gets a value indicating whether the specified path is rooted.
 
 ```csharp
 public static bool IsPathRooted(this IFileSystem _, string path)
@@ -9,8 +9,12 @@ public static bool IsPathRooted(this IFileSystem _, string path)
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| path | Path |
+| _ | The file system. |
+| path | The path. |
+
+## Return Value
+
+`true` if the path is rooted; otherwise, `false`.
 
 ## See Also
 

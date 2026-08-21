@@ -13,7 +13,7 @@ public interface IDynamicScript
 | --- | --- |
 | [Expiration](IDynamicScript/Expiration.md) { get; } | Cache expiration timespan |
 | [GroupKey](IDynamicScript/GroupKey.md) { get; } | Group key for cached items |
-| [CheckRights](IDynamicScript/CheckRights.md)(…) | Checks script permissions |
+| [CheckRights](IDynamicScript/CheckRights.md)(…) | Checks whether the current user has the permissions required to access this script, throwing an exception if access is not allowed. |
 | [GetScript](IDynamicScript/GetScript.md)() | Gets the script content |
 
 ## See Also

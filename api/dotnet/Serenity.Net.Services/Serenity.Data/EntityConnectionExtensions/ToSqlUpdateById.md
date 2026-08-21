@@ -13,13 +13,13 @@ public static SqlUpdate ToSqlUpdateById(this IIdRow row)
 
 ## Return Value
 
-SqlUpdate object
+SqlUpdate object.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | row is null |
+| ArgumentNullException | row is null. |
 
 ## See Also
 

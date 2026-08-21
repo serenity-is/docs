@@ -52,13 +52,13 @@ public static TRow Single<TRow>(this IDbConnection connection, ICriteria where)
 
 ## Return Value
 
-The single entity matching the specified criteria
+The single entity matching the specified criteria.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ValidationError | No matching records found |
+| ValidationError | No matching records found. |
 | InvalidOperationException | Multiple records matching the specified criteria. |
 
 ## See Also

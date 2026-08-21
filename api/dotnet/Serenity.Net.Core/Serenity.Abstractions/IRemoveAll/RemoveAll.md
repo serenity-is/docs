@@ -1,7 +1,7 @@
 # IRemoveAll.RemoveAll method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Removes all cached items from target object.
+Removes all cached items from the target object.
 
 ```csharp
 public void RemoveAll()

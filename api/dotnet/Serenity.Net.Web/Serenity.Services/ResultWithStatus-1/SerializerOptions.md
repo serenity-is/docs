@@ -1,7 +1,7 @@
 # ResultWithStatus&lt;TResponse&gt;.SerializerOptions property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-JSON serializer settings
+Gets or sets the JSON serializer settings.
 
 ```csharp
 public JsonSerializerOptions SerializerOptions { get; set; }

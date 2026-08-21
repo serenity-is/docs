@@ -1,7 +1,7 @@
 # DefaultReportRenderer.RenderAsHtml method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Renders a report as HTML
+Renders a report as HTML.
 
 ```csharp
 protected virtual ReportRenderResult RenderAsHtml(IReport report, ReportRenderOptions options)
@@ -9,14 +9,18 @@ protected virtual ReportRenderResult RenderAsHtml(IReport report, ReportRenderOp
 
 | parameter | description |
 | --- | --- |
-| report | Report |
-| options | Options |
+| report | The report. |
+| options | The options. |
+
+## Return Value
+
+The render result.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | Report has no design attribute |
+| InvalidOperationException | The report has no design attribute. |
 
 ## See Also
 

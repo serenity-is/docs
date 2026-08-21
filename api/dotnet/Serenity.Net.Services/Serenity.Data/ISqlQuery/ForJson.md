@@ -1,7 +1,7 @@
 # ISqlQuery.ForJson property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets FOR JSON part if any
+Gets FOR JSON part if any.
 
 ```csharp
 public string ForJson { get; }

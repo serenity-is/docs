@@ -1,7 +1,7 @@
 # IEmailRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-An interface that provides access to email field
+An interface that provides access to the email field.
 
 ```csharp
 public interface IEmailRow
@@ -11,7 +11,7 @@ public interface IEmailRow
 
 | name | description |
 | --- | --- |
-| [EmailField](IEmailRow/EmailField.md) { get; } | Gets email field |
+| [EmailField](IEmailRow/EmailField.md) { get; } | Gets the email field. |
 
 ## See Also
 

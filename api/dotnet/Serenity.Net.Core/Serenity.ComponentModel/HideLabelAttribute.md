@@ -1,7 +1,7 @@
 # HideLabelAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets label width to "0", e.g. hides the label
+Sets the label width to "0", e.g. hides the label.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

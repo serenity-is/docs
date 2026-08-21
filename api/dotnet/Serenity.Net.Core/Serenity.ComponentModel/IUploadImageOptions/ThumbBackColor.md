@@ -1,7 +1,7 @@
 # IUploadImageOptions.ThumbBackColor property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Background color to use when padding thumbnails
+Background color to use when padding thumbnails.
 
 ```csharp
 public string ThumbBackColor { get; set; }

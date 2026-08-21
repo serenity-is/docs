@@ -21,18 +21,18 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 
 | name | description |
 | --- | --- |
-| [RetrieveRequestHandler](RetrieveRequestHandler-3/RetrieveRequestHandler.md)(…) | Creates an instance of the class |
-| [Cache](RetrieveRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context |
-| [Connection](RetrieveRequestHandler-3/Connection.md) { get; } | Gets current connection |
-| [Context](RetrieveRequestHandler-3/Context.md) { get; } | Gets the request context |
-| [Localizer](RetrieveRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
-| [Permissions](RetrieveRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
-| [Query](RetrieveRequestHandler-3/Query.md) { get; } | Gets the select query |
-| [Request](RetrieveRequestHandler-3/Request.md) { get; protected set; } | Response object |
-| [Response](RetrieveRequestHandler-3/Response.md) { get; protected set; } | Response object |
-| [Row](RetrieveRequestHandler-3/Row.md) { get; protected set; } | The entity used for querying / metadata lookup |
+| [RetrieveRequestHandler](RetrieveRequestHandler-3/RetrieveRequestHandler.md)(…) | Initializes a new instance of the class. |
+| [Cache](RetrieveRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context. |
+| [Connection](RetrieveRequestHandler-3/Connection.md) { get; } | Gets the current connection. |
+| [Context](RetrieveRequestHandler-3/Context.md) { get; } | Gets the request context. |
+| [Localizer](RetrieveRequestHandler-3/Localizer.md) { get; } | Gets the localizer from the request context. |
+| [Permissions](RetrieveRequestHandler-3/Permissions.md) { get; } | Gets the permission service from the request context. |
+| [Query](RetrieveRequestHandler-3/Query.md) { get; } | Gets the select query. |
+| [Request](RetrieveRequestHandler-3/Request.md) { get; protected set; } | Gets the request object. |
+| [Response](RetrieveRequestHandler-3/Response.md) { get; protected set; } | Gets the response object. |
+| [Row](RetrieveRequestHandler-3/Row.md) { get; protected set; } | Gets the entity used for querying / metadata lookup. |
 | [StateBag](RetrieveRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
-| [User](RetrieveRequestHandler-3/User.md) { get; } | Gets current user from the request context |
+| [User](RetrieveRequestHandler-3/User.md) { get; } | Gets the current user from the request context. |
 | [Process](RetrieveRequestHandler-3/Process.md)(…) | Processes the retrieve request. This is the entry point for the handler. |
 | [Retrieve](RetrieveRequestHandler-3/Retrieve.md)(…) |  |
 
@@ -40,11 +40,11 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](RetrieveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
-| virtual [AllowSelectField](RetrieveRequestHandler-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on is read permission, selectlevel.never flag, and lookup access mode |
+| [behaviors-](RetrieveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| virtual [AllowSelectField](RetrieveRequestHandler-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on its read permission and the SelectLevel.Never flag. |
 | virtual [CreateQuery](RetrieveRequestHandler-3/CreateQuery.md)() | Creates a query instance with the dialect for current connection. |
 | virtual [ExecuteQuery](RetrieveRequestHandler-3/ExecuteQuery.md)() | Executes the query and sets the response entity if found. |
-| virtual [GetBehaviors](RetrieveRequestHandler-3/GetBehaviors.md)() | Gets the list of retrieve behaviors |
+| virtual [GetBehaviors](RetrieveRequestHandler-3/GetBehaviors.md)() | Gets the list of retrieve behaviors. |
 | [IsIncluded](RetrieveRequestHandler-3/IsIncluded.md)(…) | Returns true if field is included in [`IncludeColumns`](RetrieveRequest/IncludeColumns.md) (2 methods) |
 | virtual [OnAfterExecuteQuery](RetrieveRequestHandler-3/OnAfterExecuteQuery.md)() | Called after executing the retrieve query |
 | virtual [OnBeforeExecuteQuery](RetrieveRequestHandler-3/OnBeforeExecuteQuery.md)() | Called before executing the retrieve query |

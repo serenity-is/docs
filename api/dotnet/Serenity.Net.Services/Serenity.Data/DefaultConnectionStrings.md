@@ -1,7 +1,7 @@
 # DefaultConnectionStrings class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Default connection string source
+The default connection string source.
 
 ```csharp
 public class DefaultConnectionStrings : IConnectionStrings
@@ -9,29 +9,29 @@ public class DefaultConnectionStrings : IConnectionStrings
 
 | parameter | description |
 | --- | --- |
-| options | Connection string options |
-| sqlDialectMapper | Sql Dialect Mapper |
+| options | The connection string options. |
+| sqlDialectMapper | The SQL dialect mapper. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultConnectionStrings](DefaultConnectionStrings/DefaultConnectionStrings.md)(…) | Default connection string source |
-| virtual [ListConnectionStrings](DefaultConnectionStrings/ListConnectionStrings.md)() | Lists all known connections strings |
-| virtual [TryGetConnectionString](DefaultConnectionStrings/TryGetConnectionString.md)(…) | Gets a connection string by its key |
+| [DefaultConnectionStrings](DefaultConnectionStrings/DefaultConnectionStrings.md)(…) | The default connection string source. |
+| virtual [ListConnectionStrings](DefaultConnectionStrings/ListConnectionStrings.md)() | Lists all known connection strings. |
+| virtual [TryGetConnectionString](DefaultConnectionStrings/TryGetConnectionString.md)(…) | Gets a connection string by its key. |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
-| readonly [byKey-](DefaultConnectionStrings/byKey-.md) | Cached dictionary of connection string infos |
-| readonly [options-](DefaultConnectionStrings/options-.md) | Options |
-| readonly [sqlDialectMapper-](DefaultConnectionStrings/sqlDialectMapper-.md) | Sql dialect mapper |
-| virtual [DetermineDialect](DefaultConnectionStrings/DetermineDialect.md)(…) | Determines dialect for a connection |
+| readonly [byKey-](DefaultConnectionStrings/byKey-.md) | The cached dictionary of connection string infos. |
+| readonly [options-](DefaultConnectionStrings/options-.md) | The options. |
+| readonly [sqlDialectMapper-](DefaultConnectionStrings/sqlDialectMapper-.md) | The SQL dialect mapper. |
+| virtual [DetermineDialect](DefaultConnectionStrings/DetermineDialect.md)(…) | Determines the dialect for a connection. |
 
 ## Remarks
 
-Creates a new instance of DefaultConnectionStringSource
+Creates a new instance of [`DefaultConnectionStrings`](DefaultConnectionStrings.md).
 
 ## See Also
 

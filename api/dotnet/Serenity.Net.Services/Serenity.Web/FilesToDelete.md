@@ -25,11 +25,11 @@ public class FilesToDelete : List<string>, IDisposable, IFilesToDelete
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | storage is null |
+| ArgumentNullException | *storage* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

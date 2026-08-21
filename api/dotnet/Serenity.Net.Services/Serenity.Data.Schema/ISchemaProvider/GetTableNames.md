@@ -11,6 +11,10 @@ public IEnumerable<TableName> GetTableNames(IDbConnection connection)
 | --- | --- |
 | connection | The connection. |
 
+## Return Value
+
+The list of table names in the database.
+
 ## See Also
 
 * class [TableName](../TableName.md)

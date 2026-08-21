@@ -1,7 +1,7 @@
 # IInsertDateRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for rows that has InsertDate field
+Interface for rows that have an InsertDate field.
 
 ```csharp
 public interface IInsertDateRow

@@ -1,7 +1,7 @@
 # IReportFactory.Create method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a report for the given report key
+Creates a report for the given report key.
 
 ```csharp
 public IReport Create(string reportKey, string reportParams, bool validatePermission = true)
@@ -12,6 +12,10 @@ public IReport Create(string reportKey, string reportParams, bool validatePermis
 | reportKey | Report key |
 | reportParams | Optional JSON options to set in the report |
 | validatePermission | True if the permission for the report should be validated |
+
+## Return Value
+
+The created report instance.
 
 ## See Also
 

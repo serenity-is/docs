@@ -1,7 +1,7 @@
 # WebTypeSource class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Base type source for apps using Serenity.Web assembly and its reference chain
+Base type source for apps using the Serenity.Web assembly and its reference chain.
 
 ```csharp
 public class WebTypeSource : BaseAssemblyTypeSource
@@ -11,12 +11,12 @@ public class WebTypeSource : BaseAssemblyTypeSource
 
 | name | description |
 | --- | --- |
-| [WebTypeSource](WebTypeSource/WebTypeSource.md)(…) | Base type source for apps using Serenity.Web assembly and its reference chain |
+| [WebTypeSource](WebTypeSource/WebTypeSource.md)(…) | Base type source for apps using the Serenity.Web assembly and its reference chain. |
 | override [GetAssemblies](WebTypeSource/GetAssemblies.md)() |  |
-| static readonly [SerenityNetCoreAssembly](WebTypeSource/SerenityNetCoreAssembly.md) | Reference to Serenity.Net.Core assembly |
-| static readonly [SerenityNetServicesAssembly](WebTypeSource/SerenityNetServicesAssembly.md) | Reference to Serenity.Net.Services assembly |
-| static readonly [SerenityNetWebAssembly](WebTypeSource/SerenityNetWebAssembly.md) | Reference to Serenity.Net.Web assembly |
-| static readonly [SerenityNetWebAssemblyChain](WebTypeSource/SerenityNetWebAssemblyChain.md) | List of assemblies up to Serenity.Web |
+| static readonly [SerenityNetCoreAssembly](WebTypeSource/SerenityNetCoreAssembly.md) | Reference to the Serenity.Net.Core assembly. |
+| static readonly [SerenityNetServicesAssembly](WebTypeSource/SerenityNetServicesAssembly.md) | Reference to the Serenity.Net.Services assembly. |
+| static readonly [SerenityNetWebAssembly](WebTypeSource/SerenityNetWebAssembly.md) | Reference to the Serenity.Net.Web assembly. |
+| static readonly [SerenityNetWebAssemblyChain](WebTypeSource/SerenityNetWebAssemblyChain.md) | List of assemblies up to Serenity.Web. |
 
 ## See Also
 

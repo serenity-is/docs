@@ -1,7 +1,7 @@
 # DataScriptRegistration.RegisterDataScripts method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates and registers dynamic scripts for types with DataScriptAttribute
+Creates and registers dynamic scripts for types with DataScriptAttribute.
 
 ```csharp
 public static void RegisterDataScripts(IDynamicScriptManager scriptManager, ITypeSource typeSource, 
@@ -10,15 +10,15 @@ public static void RegisterDataScripts(IDynamicScriptManager scriptManager, ITyp
 
 | parameter | description |
 | --- | --- |
-| scriptManager | Dynamic script manager |
-| typeSource | Type source |
-| serviceProvider | Service provider |
+| scriptManager | The dynamic script manager. |
+| typeSource | The type source. |
+| serviceProvider | The service provider. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Script manager, type source or , service provider is null |
+| ArgumentNullException | Script manager, type source or service provider is `null`. |
 
 ## See Also
 

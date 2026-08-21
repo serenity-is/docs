@@ -11,11 +11,11 @@ public static bool Exists(this SqlQuery query, IDbConnection connection, ILogger
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
-| logger | Logger |
+| logger | The logger. |
 
 ## Return Value
 
-True if query returns one result.
+True if the query returns at least one result.
 
 ## See Also
 

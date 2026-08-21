@@ -1,7 +1,7 @@
 # ConnectionStringOptions.Value property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns this
+Returns this instance.
 
 ```csharp
 public ConnectionStringOptions Value { get; }

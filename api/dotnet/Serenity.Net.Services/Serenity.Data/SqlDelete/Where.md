@@ -15,6 +15,12 @@ public SqlDelete Where(string condition)
 
 SqlDelete object itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | condition is null or empty. |
+
 ## See Also
 
 * class [SqlDelete](../SqlDelete.md)
@@ -37,6 +43,12 @@ public SqlDelete Where(params string[] conditions)
 ## Return Value
 
 SqlDelete object itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | conditions is null or empty. |
 
 ## See Also
 

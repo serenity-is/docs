@@ -1,7 +1,7 @@
 # TwoLevelCache class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains helper functions to use local and distributed cache in sync with optional cache invalidation.
+A two level cache that combines an in-memory cache with a distributed cache, keeping them in sync with optional group-based cache invalidation.
 
 ```csharp
 public class TwoLevelCache : ITwoLevelCache
@@ -16,7 +16,7 @@ public class TwoLevelCache : ITwoLevelCache
 
 | name | description |
 | --- | --- |
-| [TwoLevelCache](TwoLevelCache/TwoLevelCache.md)(…) | Contains helper functions to use local and distributed cache in sync with optional cache invalidation. |
+| [TwoLevelCache](TwoLevelCache/TwoLevelCache.md)(…) | A two level cache that combines an in-memory cache with a distributed cache, keeping them in sync with optional group-based cache invalidation. |
 | [Distributed](TwoLevelCache/Distributed.md) { get; } | Gets distributed cache |
 | [Memory](TwoLevelCache/Memory.md) { get; } | Gets memory cache |
 | static readonly [GenerationCacheExpiration](TwoLevelCache/GenerationCacheExpiration.md) | Expiration timeout for cache generation keys |

@@ -1,7 +1,7 @@
 # UploadServiceCollectionExtensions class
 **namespace:** *[Serenity.Extensions.DependencyInjection](../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-DI extension methods related to upload services
+DI extension methods related to upload services.
 
 ```csharp
 public static class UploadServiceCollectionExtensions

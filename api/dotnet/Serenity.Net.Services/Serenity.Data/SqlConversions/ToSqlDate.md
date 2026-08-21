@@ -1,7 +1,7 @@
 # SqlConversions.ToSqlDate method (1 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql date.
+Converts the value to a SQL date.
 
 ```csharp
 public static string ToSqlDate(this DateTime value, ISqlDialect dialect = null)
@@ -11,6 +11,10 @@ public static string ToSqlDate(this DateTime value, ISqlDialect dialect = null)
 | --- | --- |
 | value | The value. |
 | dialect | The dialect. |
+
+## Return Value
+
+The SQL date constant.
 
 ## See Also
 
@@ -22,7 +26,7 @@ public static string ToSqlDate(this DateTime value, ISqlDialect dialect = null)
 # SqlConversions.ToSqlDate method (2 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to sql date.
+Converts the value to a SQL date.
 
 ```csharp
 public static string ToSqlDate(this DateTime? value, ISqlDialect dialect = null)
@@ -32,6 +36,10 @@ public static string ToSqlDate(this DateTime? value, ISqlDialect dialect = null)
 | --- | --- |
 | value | The value. |
 | dialect | The dialect. |
+
+## Return Value
+
+The SQL date constant, or NULL if the value has no value.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # IHaveJoins interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for row type that provides a list of its joins
+Interface for row type that provides a list of its joins.
 
 ```csharp
 public interface IHaveJoins
@@ -11,7 +11,7 @@ public interface IHaveJoins
 
 | name | description |
 | --- | --- |
-| [Joins](IHaveJoins/Joins.md) { get; } | List of all joins in entity |
+| [Joins](IHaveJoins/Joins.md) { get; } | List of all joins in entity. |
 
 ## See Also
 

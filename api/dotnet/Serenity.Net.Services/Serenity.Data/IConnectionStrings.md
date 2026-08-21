@@ -1,7 +1,7 @@
 # IConnectionStrings interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Abstraction to access connection strings along with dialect and provider information
+Abstraction to access connection strings along with dialect and provider information.
 
 ```csharp
 public interface IConnectionStrings
@@ -11,8 +11,8 @@ public interface IConnectionStrings
 
 | name | description |
 | --- | --- |
-| [ListConnectionStrings](IConnectionStrings/ListConnectionStrings.md)() | Lists all known connections strings |
-| [TryGetConnectionString](IConnectionStrings/TryGetConnectionString.md)(…) | Gets a connection string by its key |
+| [ListConnectionStrings](IConnectionStrings/ListConnectionStrings.md)() | Lists all known connection strings. |
+| [TryGetConnectionString](IConnectionStrings/TryGetConnectionString.md)(…) | Gets a connection string by its key. |
 
 ## See Also
 

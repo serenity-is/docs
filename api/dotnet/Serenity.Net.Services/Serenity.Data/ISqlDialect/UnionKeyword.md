@@ -1,7 +1,7 @@
 # ISqlDialect.UnionKeyword method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the union keyword for specified union type.
+Gets the union keyword for the specified union type.
 
 ```csharp
 public string UnionKeyword(SqlUnionType unionType)
@@ -13,7 +13,7 @@ public string UnionKeyword(SqlUnionType unionType)
 
 ## Return Value
 
-Union keyword
+The union keyword.
 
 ## See Also
 

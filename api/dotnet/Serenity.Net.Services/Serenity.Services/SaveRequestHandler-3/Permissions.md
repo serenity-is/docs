@@ -1,7 +1,7 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.Permissions property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets permission service from the request context
+Gets the permission service from the request context.
 
 ```csharp
 public IPermissionService Permissions { get; }

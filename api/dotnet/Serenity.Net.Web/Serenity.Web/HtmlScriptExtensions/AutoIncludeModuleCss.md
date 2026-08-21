@@ -1,7 +1,7 @@
 # HtmlScriptExtensions.AutoIncludeModuleCss method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Automatically includes corresponding .css file for an ES module if it exists next to the .js file
+Automatically includes the corresponding `.css` file for an ES module if it exists next to the `.js` file.
 
 ```csharp
 public static HtmlString AutoIncludeModuleCss(this IHtmlHelper helper, string module)
@@ -9,8 +9,12 @@ public static HtmlString AutoIncludeModuleCss(this IHtmlHelper helper, string mo
 
 | parameter | description |
 | --- | --- |
-| helper | HTML helper |
-| module | ES module |
+| helper | The HTML helper. |
+| module | The ES module. |
+
+## Return Value
+
+The rendered stylesheet link element, or an empty string if no CSS file exists.
 
 ## See Also
 

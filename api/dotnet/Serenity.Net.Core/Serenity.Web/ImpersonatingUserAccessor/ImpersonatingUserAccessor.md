@@ -1,7 +1,7 @@
 # ImpersonatingUserAccessor constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Adds impersonation support to any IUserContext implementation
+Wraps an [`IUserAccessor`](../../Serenity.Abstractions/IUserAccessor.md) and adds support for temporary user impersonation.
 
 ```csharp
 public ImpersonatingUserAccessor(IUserAccessor userContext, IHttpContextItemsAccessor itemsAccessor)
@@ -9,12 +9,12 @@ public ImpersonatingUserAccessor(IUserAccessor userContext, IHttpContextItemsAcc
 
 | parameter | description |
 | --- | --- |
-| userContext | The user accessor service to wrap with impersonation support. |
-| itemsAccessor | Request items accessor |
+| userContext | The underlying user accessor to delegate to when no impersonation is active. |
+| itemsAccessor | The accessor that provides the per-request item dictionary used to store the impersonation stack. |
 
 ## Remarks
 
-Initializes a new instance of the [`ImpersonatingUserAccessor`](../ImpersonatingUserAccessor.md) class that wraps passed authorization service and adds impersonation support.
+Initializes a new instance of the [`ImpersonatingUserAccessor`](../ImpersonatingUserAccessor.md) class that wraps the specified user accessor and adds impersonation support.
 
 ## See Also
 

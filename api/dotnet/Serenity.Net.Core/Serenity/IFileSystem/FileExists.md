@@ -1,7 +1,7 @@
 # IFileSystem.FileExists method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Checks if file exists
+Checks whether a file exists at the specified path.
 
 ```csharp
 public bool FileExists(string path)
@@ -9,11 +9,11 @@ public bool FileExists(string path)
 
 | parameter | description |
 | --- | --- |
-| path | Path to the file |
+| path | The path of the file. |
 
 ## Return Value
 
-True if exists
+`true` if the file exists; otherwise, `false`.
 
 ## See Also
 

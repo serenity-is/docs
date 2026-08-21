@@ -1,7 +1,7 @@
 # IPasswordRow.PasswordSaltField property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets password salt field
+Gets the password salt field.
 
 ```csharp
 public StringField PasswordSaltField { get; }

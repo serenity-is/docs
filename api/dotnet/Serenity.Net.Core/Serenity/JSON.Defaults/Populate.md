@@ -1,7 +1,7 @@
 # JSON.Defaults.Populate method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a JsonSerializerSettings object with common values and converters.
+Creates a JsonSerializerOptions object with the common Serenity values and converters.
 
 ```csharp
 public static JsonSerializerOptions Populate(JsonSerializerOptions options, bool tolerant = false, 
@@ -10,9 +10,13 @@ public static JsonSerializerOptions Populate(JsonSerializerOptions options, bool
 
 | parameter | description |
 | --- | --- |
-| options | Options to populate with defaults |
-| tolerant | True to ignore deserializing unmapped members |
-| writeNulls | True to write null values |
+| options | The options to populate with defaults. |
+| tolerant | `true` to ignore unmapped members when deserializing. |
+| writeNulls | `true` to write null values. |
+
+## Return Value
+
+The populated JsonSerializerOptions instance.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # FileSystemExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-IFileSystem extensions to reduce dependency on System.IO, in case these methods are also added to IFileSystem in the future
+Provides extension methods for [`IFileSystem`](IFileSystem.md) that delegate to Path helpers, reducing direct dependency on System.IO in case these methods are later added to [`IFileSystem`](IFileSystem.md).
 
 ```csharp
 public static class FileSystemExtensions
@@ -12,13 +12,13 @@ public static class FileSystemExtensions
 | name | description |
 | --- | --- |
 | static [ChangeExtension](FileSystemExtensions/ChangeExtension.md)(…) | Changes the extension of a path string. |
-| static [Combine](FileSystemExtensions/Combine.md)(…) | Combines path strings (3 methods) |
-| static [Copy](FileSystemExtensions/Copy.md)(…) | Copies a file to another destination by optionally overwriting the destination if it exists |
-| static [GetDirectoryName](FileSystemExtensions/GetDirectoryName.md)(…) | Gets directory name for path |
-| static [GetExtension](FileSystemExtensions/GetExtension.md)(…) | Gets extension for path |
-| static [GetFileName](FileSystemExtensions/GetFileName.md)(…) | Gets file name for path |
-| static [GetFileNameWithoutExtension](FileSystemExtensions/GetFileNameWithoutExtension.md)(…) | Gets file name without extension for path |
-| static [IsPathRooted](FileSystemExtensions/IsPathRooted.md)(…) | Gets if the path is rooted |
+| static [Combine](FileSystemExtensions/Combine.md)(…) | Combines two path strings. (3 methods) |
+| static [Copy](FileSystemExtensions/Copy.md)(…) | Copies a file to another destination, optionally overwriting the destination if it exists. |
+| static [GetDirectoryName](FileSystemExtensions/GetDirectoryName.md)(…) | Gets the directory name for the specified path. |
+| static [GetExtension](FileSystemExtensions/GetExtension.md)(…) | Gets the extension for the specified path. |
+| static [GetFileName](FileSystemExtensions/GetFileName.md)(…) | Gets the file name for the specified path. |
+| static [GetFileNameWithoutExtension](FileSystemExtensions/GetFileNameWithoutExtension.md)(…) | Gets the file name without its extension for the specified path. |
+| static [IsPathRooted](FileSystemExtensions/IsPathRooted.md)(…) | Gets a value indicating whether the specified path is rooted. |
 
 ## See Also
 

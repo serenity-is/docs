@@ -1,7 +1,7 @@
 # ConnectionStringOptions.SectionKey field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default sectionkey for ConnectionStringOptions
+The default section key for [`ConnectionStringOptions`](../ConnectionStringOptions.md).
 
 ```csharp
 public const string SectionKey;

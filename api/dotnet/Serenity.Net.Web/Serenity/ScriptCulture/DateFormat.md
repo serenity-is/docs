@@ -1,7 +1,7 @@
 # ScriptCulture.DateFormat property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Date format
+Gets or sets the date format.
 
 ```csharp
 public string DateFormat { get; set; }

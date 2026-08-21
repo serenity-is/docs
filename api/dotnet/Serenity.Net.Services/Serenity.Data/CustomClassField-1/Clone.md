@@ -11,6 +11,10 @@ protected virtual TValue Clone(TValue value)
 | --- | --- |
 | value | The value. |
 
+## Return Value
+
+A clone of the value.
+
 ## See Also
 
 * class [TValue](../Serenity.Net.Services/../CustomClassField-1.TValue.md)

@@ -1,7 +1,7 @@
 # IInsertLogRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for rows that have InsertUserId and InsertDate fields
+Interface for rows that have InsertUserId and InsertDate fields.
 
 ```csharp
 public interface IInsertLogRow : IInsertDateRow, IInsertUserIdRow

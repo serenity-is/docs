@@ -9,14 +9,18 @@ public static HtmlString Script(this IHtmlHelper helper, string includeJS)
 
 | parameter | description |
 | --- | --- |
-| helper | HTML helper |
-| includeJS | Script url |
+| helper | The HTML helper. |
+| includeJS | The script URL. |
+
+## Return Value
+
+The rendered script element.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | HTML helper or includeJS is null |
+| ArgumentNullException | HTML helper or *includeJS* is `null`. |
 
 ## See Also
 

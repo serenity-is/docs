@@ -1,7 +1,7 @@
 # CaptureLogAttribute constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Enables capture logging for a row type
+Enables capture logging for a row type.
 
 ```csharp
 public CaptureLogAttribute(Type logRow)
@@ -15,11 +15,11 @@ public CaptureLogAttribute(Type logRow)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *logRow* is `null`. |
 
 ## Remarks
 
-Creates an instance of the attribute
+Initializes a new instance of the attribute.
 
 ## See Also
 

@@ -15,11 +15,15 @@ public class SqlUpdate : QueryWithParams, IFilterableQuery, ISetFieldByStatement
 | [Clone](SqlUpdate/Clone.md)() | Clones this SqlUpdate query. |
 | [Dec](SqlUpdate/Dec.md)(…) | Decreases a fields value. (2 methods) |
 | [Dialect](SqlUpdate/Dialect.md)(…) | Sets the dialect (SQL server type / version) for query. |
+| [GetFieldExpressions](SqlUpdate/GetFieldExpressions.md)() | Returns field and value expression pairs. |
+| [GetWhereClause](SqlUpdate/GetWhereClause.md)() | Returns the WHERE clause (excluding WHERE keyword). |
+| [GetWhereConditions](SqlUpdate/GetWhereConditions.md)() | Returns the WHERE conditions. |
 | [Inc](SqlUpdate/Inc.md)(…) | Increases a fields value. (2 methods) |
 | [SetNull](SqlUpdate/SetNull.md)(…) | Sets field value to NULL. |
 | [SetTo](SqlUpdate/SetTo.md)(…) | Sets field value to the expression. (2 methods) |
+| [TableName](SqlUpdate/TableName.md)() | Gets the table name. |
 | override [ToString](SqlUpdate/ToString.md)() | Gets string representation of SqlUpdate query. |
-| [Where](SqlUpdate/Where.md)(…) | Adds a condition to WHERE clause of the query. (2 methods) |
+| [Where](SqlUpdate/Where.md)(…) | Adds a condition to WHERE clause of the query. |
 | static [Format](SqlUpdate/Format.md)(…) | Formats an SQL UPDATE statement. |
 | static [RemoveT0Reference](SqlUpdate/RemoveT0Reference.md)(…) | Removes the t0 reference from an SQL field reference. |
 

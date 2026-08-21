@@ -1,7 +1,7 @@
 # JsonLocalTextAssetsAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Registers a folder with json local text files packed as static web assets for the assembly
+Registers a folder with JSON local text files packed as static web assets for the assembly.
 
 ```csharp
 public JsonLocalTextAssetsAttribute(string path)

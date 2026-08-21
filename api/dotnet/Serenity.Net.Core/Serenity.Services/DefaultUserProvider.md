@@ -1,7 +1,7 @@
 # DefaultUserProvider class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Default implementation for [`IUserProvider`](../Serenity.Abstractions/IUserProvider.md) which is a combination of IUserAccessor and IUserRetrieveService.
+Default implementation of [`IUserProvider`](../Serenity.Abstractions/IUserProvider.md) that delegates to an [`IUserAccessor`](../Serenity.Abstractions/IUserAccessor.md), [`IUserClaimCreator`](../Serenity.Abstractions/IUserClaimCreator.md), and [`IUserRetrieveService`](../Serenity.Abstractions/IUserRetrieveService.md).
 
 ```csharp
 public class DefaultUserProvider : IUserProvider
@@ -9,16 +9,16 @@ public class DefaultUserProvider : IUserProvider
 
 | parameter | description |
 | --- | --- |
-| userAccessor | User accessor |
-| userClaimCreator | User claim creator |
-| userRetriever | User retrieve service |
-| cache | Optional cache for graceful invalidation if the IUserRetrieveService does not implement IUser |
+| userAccessor | The accessor that provides the current user principal. |
+| userClaimCreator | The service used to create principals for impersonation. |
+| userRetriever | The service used to retrieve user definitions. |
+| cache | The two-level cache used for fallback invalidation when the retrieve service does not implement [`IRemoveCachedUser`](../Serenity.Abstractions/IRemoveCachedUser.md). Optional. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultUserProvider](DefaultUserProvider/DefaultUserProvider.md)(…) | Default implementation for [`IUserProvider`](../Serenity.Abstractions/IUserProvider.md) which is a combination of IUserAccessor and IUserRetrieveService. |
+| [DefaultUserProvider](DefaultUserProvider/DefaultUserProvider.md)(…) | Default implementation of [`IUserProvider`](../Serenity.Abstractions/IUserProvider.md) that delegates to an [`IUserAccessor`](../Serenity.Abstractions/IUserAccessor.md), [`IUserClaimCreator`](../Serenity.Abstractions/IUserClaimCreator.md), and [`IUserRetrieveService`](../Serenity.Abstractions/IUserRetrieveService.md). |
 | [User](DefaultUserProvider/User.md) { get; } |  |
 | [ById](DefaultUserProvider/ById.md)(…) |  |
 | [ByUsername](DefaultUserProvider/ByUsername.md)(…) |  |
@@ -32,7 +32,11 @@ public class DefaultUserProvider : IUserProvider
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *userAccessor*, *userClaimCreator* or *userRetriever* is `null`. |
+
+## Remarks
+
+Creates a new instance of the [`DefaultUserProvider`](DefaultUserProvider.md) class.
 
 ## See Also
 

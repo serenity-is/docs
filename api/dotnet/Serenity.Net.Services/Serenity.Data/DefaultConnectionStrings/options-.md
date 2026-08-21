@@ -1,7 +1,7 @@
 # DefaultConnectionStrings.options- field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Options
+The options.
 
 ```csharp
 protected readonly IOptions<ConnectionStringOptions> options-;

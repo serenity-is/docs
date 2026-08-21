@@ -11,7 +11,7 @@ public class DefaultImplicitBehaviorRegistry : IImplicitBehaviorRegistry
 
 | name | description |
 | --- | --- |
-| [DefaultImplicitBehaviorRegistry](DefaultImplicitBehaviorRegistry/DefaultImplicitBehaviorRegistry.md)(…) | Creates a new instance |
+| [DefaultImplicitBehaviorRegistry](DefaultImplicitBehaviorRegistry/DefaultImplicitBehaviorRegistry.md)(…) | Initializes a new instance of the class. |
 | [GetTypes](DefaultImplicitBehaviorRegistry/GetTypes.md)() |  |
 
 ## See Also

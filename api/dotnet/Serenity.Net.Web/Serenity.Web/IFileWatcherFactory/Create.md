@@ -1,7 +1,7 @@
 # IFileWatcherFactory.Create method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new file system watcher for path and filter
+Creates a new file system watcher for the given path and filter.
 
 ```csharp
 public IFileWatcher Create(string path, string filter)
@@ -9,8 +9,12 @@ public IFileWatcher Create(string path, string filter)
 
 | parameter | description |
 | --- | --- |
-| path | Watch path |
-| filter | Watch filter |
+| path | The directory path to watch. |
+| filter | The file filter to watch for. |
+
+## Return Value
+
+A new [`IFileWatcher`](../IFileWatcher.md) instance.
 
 ## See Also
 

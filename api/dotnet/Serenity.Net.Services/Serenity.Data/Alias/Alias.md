@@ -34,7 +34,7 @@ public Alias(string alias)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | alias |
+| ArgumentNullException | alias is null or empty. |
 
 ## See Also
 

@@ -1,6 +1,8 @@
 # LanguageIdKeyPair.Key property
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
+The local text key.
+
 ```csharp
 public string Key { get; set; }
 ```

@@ -1,7 +1,7 @@
 # IImpersonator.Impersonate method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Temporarily impersonates as a user
+Temporarily impersonates the specified user.
 
 ```csharp
 public void Impersonate(ClaimsPrincipal user)
@@ -9,7 +9,7 @@ public void Impersonate(ClaimsPrincipal user)
 
 | parameter | description |
 | --- | --- |
-| user | User to impersonate as |
+| user | The principal to impersonate. |
 
 ## See Also
 

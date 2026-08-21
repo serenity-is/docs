@@ -18,6 +18,10 @@ public static DecimalField Factory(ICollection<Field> collection, string name, L
 | getValue | The get value. |
 | setValue | The set value. |
 
+## Return Value
+
+A new DecimalField instance.
+
 ## See Also
 
 * class [Field](../Field.md)

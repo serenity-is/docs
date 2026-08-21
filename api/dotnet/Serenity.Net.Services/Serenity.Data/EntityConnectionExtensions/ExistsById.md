@@ -16,7 +16,7 @@ public static bool ExistsById<TRow>(this IDbConnection connection, object id)
 
 ## Return Value
 
-True if record exists
+True if the record exists.
 
 ## See Also
 

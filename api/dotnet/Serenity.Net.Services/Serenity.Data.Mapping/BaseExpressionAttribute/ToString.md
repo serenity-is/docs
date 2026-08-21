@@ -1,7 +1,7 @@
 # BaseExpressionAttribute.ToString method (1 of 2)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the expression to string for specified dialect
+Converts the expression to string for specified dialect.
 
 ```csharp
 public string ToString(ISqlDialect dialect)
@@ -10,6 +10,10 @@ public string ToString(ISqlDialect dialect)
 | parameter | description |
 | --- | --- |
 | dialect | Target dialect |
+
+## Return Value
+
+The expression formatted for the specified dialect.
 
 ## See Also
 
@@ -32,11 +36,15 @@ public static string ToString(object expression, ISqlDialect dialect)
 | expression | Expression |
 | dialect | Target dialect |
 
+## Return Value
+
+The expression converted to a string.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Dialect is null |
+| ArgumentNullException | dialect is null. |
 
 ## See Also
 

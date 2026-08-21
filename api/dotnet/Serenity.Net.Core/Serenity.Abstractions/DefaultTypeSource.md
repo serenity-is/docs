@@ -1,7 +1,7 @@
 # DefaultTypeSource class
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Default implementation for a type source that accepts an assembly list
+Default implementation for a type source that accepts an assembly list.
 
 ```csharp
 public class DefaultTypeSource : BaseAssemblyTypeSource
@@ -9,19 +9,19 @@ public class DefaultTypeSource : BaseAssemblyTypeSource
 
 | parameter | description |
 | --- | --- |
-| assemblies | List of assemblies |
-| featureToggles | Feature toggles service used to filter types |
+| assemblies | List of assemblies. |
+| featureToggles | Feature toggles service used to filter types. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultTypeSource](DefaultTypeSource/DefaultTypeSource.md)(…) | Default implementation for a type source that accepts an assembly list |
+| [DefaultTypeSource](DefaultTypeSource/DefaultTypeSource.md)(…) | Default implementation for a type source that accepts an assembly list. |
 | override [GetAssemblies](DefaultTypeSource/GetAssemblies.md)() |  |
 
 ## Remarks
 
-Creates a new instance
+Creates a new instance.
 
 ## See Also
 

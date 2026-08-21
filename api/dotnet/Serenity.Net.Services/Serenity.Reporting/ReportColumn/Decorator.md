@@ -1,7 +1,7 @@
 # ReportColumn.Decorator property
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Decorator to use for the column
+Gets or sets the decorator to use for the column.
 
 ```csharp
 public ICellDecorator Decorator { get; set; }

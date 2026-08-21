@@ -1,7 +1,7 @@
 # MediumThirdLargeQuarterWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Marks form field with "col-md-4 col-lg-3" css class, which makes it allocate third of form row on device widths &gt;= 992px (some desktop), and quarter on device widths &gt;= 1200px
+Marks the form field with the "col-md-4 col-lg-3" CSS class, which makes it allocate a third of the form row on device widths &gt;= 992px (some desktops), and a quarter on device widths &gt;= 1200px.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

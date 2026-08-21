@@ -1,7 +1,7 @@
 # WKHtmlToPdf class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-HTML to PDF converter class using WKHTMLToPdf
+HTML to PDF converter class using WKHTMLToPdf.
 
 ```csharp
 public class WKHtmlToPdf : IHtmlToPdfOptions
@@ -9,20 +9,20 @@ public class WKHtmlToPdf : IHtmlToPdfOptions
 
 | parameter | description |
 | --- | --- |
-| options | List of options |
+| options | The list of options. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [WKHtmlToPdf](WKHtmlToPdf/WKHtmlToPdf.md)(…) | HTML to PDF converter class using WKHTMLToPdf |
+| [WKHtmlToPdf](WKHtmlToPdf/WKHtmlToPdf.md)(…) | HTML to PDF converter class using WKHTMLToPdf. |
 | [AdditionalUrls](WKHtmlToPdf/AdditionalUrls.md) { get; } |  |
 | [AllowedLocalPaths](WKHtmlToPdf/AllowedLocalPaths.md) { get; } |  |
 | [Cookies](WKHtmlToPdf/Cookies.md) { get; } |  |
 | [CustomArgs](WKHtmlToPdf/CustomArgs.md) { get; } |  |
 | [DisableLocalFileAccess](WKHtmlToPdf/DisableLocalFileAccess.md) { get; set; } |  |
 | [Dpi](WKHtmlToPdf/Dpi.md) { get; set; } |  |
-| [ExecutablePath](WKHtmlToPdf/ExecutablePath.md) { get; set; } | Path to the wkhtmltopdf executable |
+| [ExecutablePath](WKHtmlToPdf/ExecutablePath.md) { get; set; } | Gets or sets the path to the wkhtmltopdf executable. |
 | [FooterHeaderReplace](WKHtmlToPdf/FooterHeaderReplace.md) { get; } |  |
 | [FooterHtmlUrl](WKHtmlToPdf/FooterHtmlUrl.md) { get; set; } |  |
 | [HeaderHtmlUrl](WKHtmlToPdf/HeaderHtmlUrl.md) { get; set; } |  |
@@ -41,11 +41,11 @@ public class WKHtmlToPdf : IHtmlToPdfOptions
 | [Url](WKHtmlToPdf/Url.md) { get; set; } |  |
 | [UsePrintMediaType](WKHtmlToPdf/UsePrintMediaType.md) { get; set; } |  |
 | [Zoom](WKHtmlToPdf/Zoom.md) { get; set; } |  |
-| [Execute](WKHtmlToPdf/Execute.md)() | Executes the converter process and returns the PDF bytes |
+| [Execute](WKHtmlToPdf/Execute.md)() | Executes the converter process and returns the PDF bytes. |
 
 ## Remarks
 
-WKHtmlToPdf converter class
+WKHtmlToPdf converter class.
 
 ## See Also
 

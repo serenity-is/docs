@@ -9,7 +9,7 @@ protected virtual void HandleNonEditable(Field field)
 
 | parameter | description |
 | --- | --- |
-| field |  |
+| field | The field to handle. |
 
 ## See Also
 

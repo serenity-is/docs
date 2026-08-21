@@ -11,6 +11,10 @@ public object GetIndexedData(int index)
 | --- | --- |
 | index | The index. |
 
+## Return Value
+
+The value stored at the specified index, or `null` if not present.
+
 ## See Also
 
 * interface [IRow](../IRow.md)

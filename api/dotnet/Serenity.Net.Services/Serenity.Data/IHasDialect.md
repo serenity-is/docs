@@ -1,7 +1,7 @@
 # IHasDialect interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interfaces for types that has a Dialect property of type ISqlDialect
+Interface for types that have a [`Dialect`](IHasDialect/Dialect.md) property of type [`ISqlDialect`](ISqlDialect.md).
 
 ```csharp
 public interface IHasDialect
@@ -11,7 +11,7 @@ public interface IHasDialect
 
 | name | description |
 | --- | --- |
-| [Dialect](IHasDialect/Dialect.md) { get; } | Gets the sql dialect |
+| [Dialect](IHasDialect/Dialect.md) { get; } | Gets the SQL dialect. |
 
 ## See Also
 

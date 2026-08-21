@@ -1,7 +1,7 @@
 # IScriptMinifier.MinifyScript method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Minifies the given script
+Minifies the given script.
 
 ```csharp
 public ScriptMinifyResult MinifyScript(string source, ScriptMinifyOptions options)
@@ -9,12 +9,12 @@ public ScriptMinifyResult MinifyScript(string source, ScriptMinifyOptions option
 
 | parameter | description |
 | --- | --- |
-| source | Javascript content |
-| options | Minify options |
+| source | The JavaScript content. |
+| options | The minify options. |
 
 ## Return Value
 
-Minify result
+The minify result.
 
 ## See Also
 

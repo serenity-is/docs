@@ -18,7 +18,7 @@ public class CollapsibleAttribute : Attribute
 | --- | --- |
 | [CollapsibleAttribute](CollapsibleAttribute/CollapsibleAttribute.md)(…) | Used to specify a target is collapsible. Commonly used with form categories to make them collapsible. |
 | [Collapsed](CollapsibleAttribute/Collapsed.md) { get; set; } | Gets or sets a value indicating whether the target is initially collapsed. Default is false. |
-| [Value](CollapsibleAttribute/Value.md) { get; } | Gets a value indicating whether this [`CollapsibleAttribute`](CollapsibleAttribute.md) is value. |
+| [Value](CollapsibleAttribute/Value.md) { get; } | Gets a value indicating whether this [`CollapsibleAttribute`](CollapsibleAttribute.md) is enabled. |
 
 ## Remarks
 

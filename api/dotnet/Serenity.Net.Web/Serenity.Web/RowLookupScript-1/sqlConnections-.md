@@ -1,7 +1,7 @@
 # RowLookupScript&lt;TRow&gt;.sqlConnections- field
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Sql connections
+The SQL connections.
 
 ```csharp
 protected readonly ISqlConnections sqlConnections-;

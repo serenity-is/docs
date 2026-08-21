@@ -15,7 +15,7 @@ public ColumnAttribute(string name)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | name |
+| ArgumentNullException | name is null or empty. |
 
 ## See Also
 

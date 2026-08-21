@@ -51,13 +51,13 @@ public static TRow TrySingle<TRow>(this IDbConnection connection, ICriteria wher
 
 ## Return Value
 
-The single entity matching the specified criteria, or null if no matching record found
+The single entity matching the specified criteria, or null if no matching record is found.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | Multiple records matching the criteria found |
+| InvalidOperationException | Multiple records matching the criteria found. |
 
 ## See Also
 

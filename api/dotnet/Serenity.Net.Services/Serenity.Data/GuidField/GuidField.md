@@ -1,7 +1,7 @@
 # GuidField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a Guid value
+Field with a Guid value.
 
 ```csharp
 public GuidField(ICollection<Field> collection, string name, LocalText caption = null, 

@@ -1,7 +1,7 @@
 # INavigationModelFactory interface
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Factory abstraction for navigation models
+Factory abstraction for navigation models.
 
 ```csharp
 public interface INavigationModelFactory
@@ -11,7 +11,7 @@ public interface INavigationModelFactory
 
 | name | description |
 | --- | --- |
-| [Create](INavigationModelFactory/Create.md)() | Creates a navigation model for current user |
+| [Create](INavigationModelFactory/Create.md)() | Creates a navigation model for the current user. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # DecimalField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a Decimal value
+Field with a Decimal value.
 
 ```csharp
 public sealed class DecimalField : GenericValueField<decimal>
@@ -21,11 +21,11 @@ public sealed class DecimalField : GenericValueField<decimal>
 
 | name | description |
 | --- | --- |
-| [DecimalField](DecimalField/DecimalField.md)(…) | Field with a Decimal value |
+| [DecimalField](DecimalField/DecimalField.md)(…) | Field with a Decimal value. |
 | static [Factory](DecimalField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [GetFromReader](DecimalField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [ValueFromJson](DecimalField/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](DecimalField/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [ValueFromJson](DecimalField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](DecimalField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

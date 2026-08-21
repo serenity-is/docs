@@ -1,7 +1,7 @@
 # ConnectionStringEntry.DialectInstance property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets / sets the dialect instance
+Gets or sets the dialect instance.
 
 ```csharp
 public ISqlDialect DialectInstance { get; set; }

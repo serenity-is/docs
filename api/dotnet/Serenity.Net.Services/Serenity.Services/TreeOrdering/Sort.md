@@ -1,7 +1,7 @@
 # TreeOrdering.Sort&lt;TItem,TIdentity&gt; method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Applies tree based ordering to the items
+Applies tree based ordering to the items.
 
 ```csharp
 public static List<TItem> Sort<TItem, TIdentity>(IEnumerable<TItem> items, 
@@ -16,6 +16,10 @@ public static List<TItem> Sort<TItem, TIdentity>(IEnumerable<TItem> items,
 | items | List of items |
 | getId | Callback to get ID for an item |
 | getParentId | Callback to get parent ID for an item |
+
+## Return Value
+
+The tree ordered list of items.
 
 ## See Also
 

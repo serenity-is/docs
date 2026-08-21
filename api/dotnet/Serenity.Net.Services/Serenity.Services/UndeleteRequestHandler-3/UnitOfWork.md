@@ -1,7 +1,7 @@
 # UndeleteRequestHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;.UnitOfWork property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets current unit of work
+Gets the current unit of work.
 
 ```csharp
 public IUnitOfWork UnitOfWork { get; protected set; }

@@ -1,7 +1,7 @@
 # Sql.CaseBuilder.Else method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a ELSE part
+Adds an ELSE part.
 
 ```csharp
 public CaseBuilder Else(object elseValue)
@@ -11,11 +11,15 @@ public CaseBuilder Else(object elseValue)
 | --- | --- |
 | elseValue | The else value. |
 
+## Return Value
+
+This builder.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | Internal else value is not null |
+| InvalidOperationException | Internal else value is not null. |
 
 ## See Also
 

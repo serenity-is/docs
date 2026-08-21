@@ -18,7 +18,7 @@ public TSaveResponse Process(IUnitOfWork unitOfWork, TSaveRequest request,
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | unitofWork or request is null |
+| ArgumentNullException | *unitOfWork* or *request* is `null`. |
 
 ## See Also
 

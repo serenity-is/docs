@@ -1,7 +1,7 @@
 # DateHelper.DateElementOrderFor method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets the date element order for specified short date time format.
+Gets the date element order for the specified short date time format.
 
 ```csharp
 public static DateElementOrder DateElementOrderFor(string shortDatePattern)
@@ -13,7 +13,7 @@ public static DateElementOrder DateElementOrderFor(string shortDatePattern)
 
 ## Return Value
 
-Date element order
+Date element order.
 
 ## See Also
 

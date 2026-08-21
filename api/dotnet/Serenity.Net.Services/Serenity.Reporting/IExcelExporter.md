@@ -1,7 +1,7 @@
 # IExcelExporter interface
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for Excel exporters
+Interface for Excel exporters.
 
 ```csharp
 public interface IExcelExporter
@@ -11,7 +11,7 @@ public interface IExcelExporter
 
 | name | description |
 | --- | --- |
-| [Export](IExcelExporter/Export.md)(…) | Exports the specified data to Excel format (3 methods) |
+| [Export](IExcelExporter/Export.md)(…) | Exports the specified data to Excel format using the given report columns. (3 methods) |
 
 ## See Also
 

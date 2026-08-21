@@ -9,7 +9,7 @@ public override bool CanWrite { get; }
 
 ## Property Value
 
-True if this JsonConverter can write JSON; otherwise, false.
+`true`, as this converter supports writing.
 
 ## See Also
 

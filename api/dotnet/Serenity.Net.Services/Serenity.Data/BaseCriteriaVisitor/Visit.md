@@ -11,6 +11,10 @@ protected virtual BaseCriteria Visit(BaseCriteria criteria)
 | --- | --- |
 | criteria | The criteria. |
 
+## Return Value
+
+The visited criteria, which may be a reworked version.
+
 ## Exceptions
 
 | exception | condition |

@@ -1,7 +1,7 @@
 # PropertyItemsScript.Compact method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Generates a compact version of the scripts
+Generates a compact version of the scripts.
 
 ```csharp
 public static string Compact(IEnumerable<ValueTuple<string, PropertyItemsData>> inputs)
@@ -9,13 +9,13 @@ public static string Compact(IEnumerable<ValueTuple<string, PropertyItemsData>> 
 
 | parameter | description |
 | --- | --- |
-| inputs | Inputs |
+| inputs | The inputs. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | inputs is null. |
 
 ## See Also
 

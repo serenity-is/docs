@@ -1,7 +1,7 @@
 # CustomClassField&lt;TValue&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base class for custom fields with reference type values
+Base class for custom fields with reference type values.
 
 ```csharp
 public class CustomClassField<TValue> : GenericClassField<TValue>
@@ -23,13 +23,13 @@ public class CustomClassField<TValue> : GenericClassField<TValue>
 
 | name | description |
 | --- | --- |
-| [CustomClassField](CustomClassField-1/CustomClassField.md)(…) | Base class for custom fields with reference type values |
+| [CustomClassField](CustomClassField-1/CustomClassField.md)(…) | Base class for custom fields with reference type values. |
 | override [Copy](CustomClassField-1/Copy.md)(…) | Copies the specified source. |
 | override [GetFromReader](CustomClassField-1/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [IndexCompare](CustomClassField-1/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort |
-| override [ValueFromJson](CustomClassField-1/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](CustomClassField-1/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
-| virtual [ValueToJson](CustomClassField-1/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [IndexCompare](CustomClassField-1/IndexCompare.md)(…) | Compares the field values for two rows for an ascending index sort. |
+| override [ValueFromJson](CustomClassField-1/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](CustomClassField-1/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
+| virtual [ValueToJson](CustomClassField-1/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Protected Members
 
@@ -38,7 +38,7 @@ public class CustomClassField<TValue> : GenericClassField<TValue>
 | virtual [Clone](CustomClassField-1/Clone.md)(…) | Clones the specified value. |
 | virtual [CompareValues](CustomClassField-1/CompareValues.md)(…) | Compares the values. |
 | virtual [GetFromReader](CustomClassField-1/GetFromReader.md)(…) | Gets field value from a data reader. |
-| virtual [ValueFromJson](CustomClassField-1/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
+| virtual [ValueFromJson](CustomClassField-1/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
 
 ## Remarks
 

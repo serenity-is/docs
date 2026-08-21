@@ -1,7 +1,7 @@
 # IUploadImageOptions.ScaleSmaller property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Should image be scaled up to requested size when its smaller
+Should the image be scaled up to the requested size when it is smaller.
 
 ```csharp
 public bool ScaleSmaller { get; }

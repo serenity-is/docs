@@ -20,7 +20,7 @@ public static ReportColumn FromPropertyItem(PropertyItem item, Field field, Prop
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | item or localizer is null |
+| ArgumentNullException | *item* or *localizer* is `null`. |
 
 ## See Also
 

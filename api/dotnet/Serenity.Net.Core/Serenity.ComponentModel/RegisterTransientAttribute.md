@@ -1,7 +1,7 @@
 # RegisterTransientAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Enables auto registering for the implementation type this attribute is placed on by using {Try}AddTransient{Keyed} method.
+Enables auto registering for the implementation type this attribute is placed on by using the {Try}AddTransient{Keyed} method.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
@@ -13,7 +13,7 @@ public class RegisterTransientAttribute : RegisterServiceAttribute
 | name | description |
 | --- | --- |
 | [RegisterTransientAttribute](RegisterTransientAttribute/RegisterTransientAttribute.md)() | Creates a new instance of the attribute. |
-| [RegisterTransientAttribute](RegisterTransientAttribute/RegisterTransientAttribute.md)(…) | Creates a new instance of the attribute for specified types. |
+| [RegisterTransientAttribute](RegisterTransientAttribute/RegisterTransientAttribute.md)(…) | Creates a new instance of the attribute for the specified types. |
 
 ## See Also
 

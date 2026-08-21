@@ -1,7 +1,7 @@
 # QueryWithParams class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base class for queries with params like SqlQuery, SqlUpdate, SqlInsert
+Base class for queries with params like SqlQuery, SqlUpdate, SqlInsert.
 
 ```csharp
 public class QueryWithParams : IQueryWithParams
@@ -26,11 +26,11 @@ public class QueryWithParams : IQueryWithParams
 
 | name | description |
 | --- | --- |
-| [dialect-](QueryWithParams/dialect-.md) | The dialect |
-| [dialectOverridden-](QueryWithParams/dialectOverridden-.md) | Is the dialect overridden |
-| [nextAutoParam-](QueryWithParams/nextAutoParam-.md) | The next auto param counter |
-| [parameters-](QueryWithParams/parameters-.md) | The parameters |
-| [parent-](QueryWithParams/parent-.md) | The parent query with param storage |
+| [dialect-](QueryWithParams/dialect-.md) | The dialect. |
+| [dialectOverridden-](QueryWithParams/dialectOverridden-.md) | Is the dialect overridden. |
+| [nextAutoParam-](QueryWithParams/nextAutoParam-.md) | The next auto param counter. |
+| [parameters-](QueryWithParams/parameters-.md) | The parameters. |
+| [parent-](QueryWithParams/parent-.md) | The parent query with param storage. |
 | [CloneParams](QueryWithParams/CloneParams.md)(…) | Clones the parameters into a target query. |
 
 ## See Also

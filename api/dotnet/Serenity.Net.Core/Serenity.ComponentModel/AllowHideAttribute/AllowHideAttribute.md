@@ -1,7 +1,7 @@
 # AllowHideAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Controls users ability to hide a column, e.g. using column picker.
+Controls the user's ability to hide a column, e.g. using the column picker.
 
 ```csharp
 public AllowHideAttribute(bool value)
@@ -9,7 +9,7 @@ public AllowHideAttribute(bool value)
 
 | parameter | description |
 | --- | --- |
-| value | if set to `false` column can't be hidden by user. |
+| value | If set to `false`, the column cannot be hidden by the user. |
 
 ## Remarks
 

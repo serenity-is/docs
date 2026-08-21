@@ -1,7 +1,7 @@
 # Sql.CaseBuilder.WhenThen method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a WHEN THEN part
+Adds a WHEN THEN part.
 
 ```csharp
 public CaseBuilder WhenThen(ICriteria when, object then)
@@ -11,6 +11,10 @@ public CaseBuilder WhenThen(ICriteria when, object then)
 | --- | --- |
 | when | The when. |
 | then | The then. |
+
+## Return Value
+
+This builder.
 
 ## See Also
 

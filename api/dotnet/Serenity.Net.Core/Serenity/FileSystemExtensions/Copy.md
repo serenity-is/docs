@@ -1,7 +1,7 @@
 # FileSystemExtensions.Copy method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Copies a file to another destination by optionally overwriting the destination if it exists
+Copies a file to another destination, optionally overwriting the destination if it exists.
 
 ```csharp
 public static void Copy(this IFileSystem fileSystem, string sourceFileName, string destFileName, 
@@ -10,10 +10,10 @@ public static void Copy(this IFileSystem fileSystem, string sourceFileName, stri
 
 | parameter | description |
 | --- | --- |
-| fileSystem | File system |
-| sourceFileName | Source file name |
-| destFileName | Destination |
-| overwrite |  |
+| fileSystem | The file system. |
+| sourceFileName | The source file name. |
+| destFileName | The destination file name. |
+| overwrite | `true` to overwrite the destination file if it already exists. |
 
 ## See Also
 

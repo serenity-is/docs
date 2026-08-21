@@ -11,6 +11,10 @@ protected override List<TForeign> Clone(List<TForeign> value)
 | --- | --- |
 | value | The value. |
 
+## Return Value
+
+A clone of the value.
+
 ## See Also
 
 * class [TForeign](../Serenity.Net.Services/../RowListField-1.TForeign.md)

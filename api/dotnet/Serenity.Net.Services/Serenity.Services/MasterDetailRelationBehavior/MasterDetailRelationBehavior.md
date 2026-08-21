@@ -1,7 +1,7 @@
 # MasterDetailRelationBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Behavior class that handles [`MasterDetailRelationAttribute`](../../Serenity.Data.Mapping/MasterDetailRelationAttribute.md)
+Behavior class that handles [`MasterDetailRelationAttribute`](../../Serenity.Data.Mapping/MasterDetailRelationAttribute.md).
 
 ```csharp
 public MasterDetailRelationBehavior(IDefaultHandlerFactory handlerFactory)
@@ -15,11 +15,11 @@ public MasterDetailRelationBehavior(IDefaultHandlerFactory handlerFactory)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | handlerFactory is null |
+| ArgumentNullException | *handlerFactory* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

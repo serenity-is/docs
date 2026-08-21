@@ -14,13 +14,13 @@ public static IDbCommand NewCommand(IDbConnection connection, string commandText
 
 ## Return Value
 
-A new command with specified command text
+A new command with the specified command text.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | connection |
+| ArgumentNullException | connection is null. |
 
 ## See Also
 
@@ -31,7 +31,7 @@ A new command with specified command text
 # SqlHelper.NewCommand method (2 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates new command.
+Creates a new command.
 
 ```csharp
 public static IDbCommand NewCommand(IDbConnection connection, string commandText, 
@@ -46,7 +46,7 @@ public static IDbCommand NewCommand(IDbConnection connection, string commandText
 
 ## Return Value
 
-New command with specified command text and parameters
+A new command with the specified command text and parameters.
 
 ## See Also
 

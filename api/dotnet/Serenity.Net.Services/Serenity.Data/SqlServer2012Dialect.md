@@ -13,9 +13,9 @@ public class SqlServer2012Dialect : SqlServer2008Dialect
 | --- | --- |
 | [SqlServer2012Dialect](SqlServer2012Dialect/SqlServer2012Dialect.md)() | The default constructor. |
 | override [CanUseConcat](SqlServer2012Dialect/CanUseConcat.md) { get; } |  |
-| override [CanUseOffsetFetch](SqlServer2012Dialect/CanUseOffsetFetch.md) { get; } | Gets a value indicating whether the server supports OFFSET FETCH. |
-| override [OffsetFetchFormat](SqlServer2012Dialect/OffsetFetchFormat.md) { get; } | Gets the format for OFFSET FETCH statements. |
-| override [OffsetFormat](SqlServer2012Dialect/OffsetFormat.md) { get; } | Gets the format for OFFSET only statements. |
+| override [CanUseOffsetFetch](SqlServer2012Dialect/CanUseOffsetFetch.md) { get; } |  |
+| override [OffsetFetchFormat](SqlServer2012Dialect/OffsetFetchFormat.md) { get; } |  |
+| override [OffsetFormat](SqlServer2012Dialect/OffsetFormat.md) { get; } |  |
 | static readonly [Instance](SqlServer2012Dialect/Instance.md) | The shared instance of SqlServer2012Dialect. |
 
 ## See Also

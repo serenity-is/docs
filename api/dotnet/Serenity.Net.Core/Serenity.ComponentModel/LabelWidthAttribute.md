@@ -1,7 +1,7 @@
 # LabelWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Determines label with of target property, and optionally the properties following it until another of this attribute is used.
+Determines the label width of the target property, and optionally the properties following it until another of this attribute is used.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

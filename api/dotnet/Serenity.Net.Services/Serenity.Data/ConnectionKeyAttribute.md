@@ -1,7 +1,7 @@
 # ConnectionKeyAttribute class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Determines the connection key used for a class
+Determines the connection key used for a class.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

@@ -1,7 +1,7 @@
 # SqlUtcNowAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Dialect specific SQL expression for UTC date/time
+Dialect specific SQL expression for UTC date/time.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]

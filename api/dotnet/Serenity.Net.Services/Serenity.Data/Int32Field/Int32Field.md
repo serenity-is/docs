@@ -1,7 +1,7 @@
 # Int32Field constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with Int32 value
+Field with an Int32 value.
 
 ```csharp
 public Int32Field(ICollection<Field> collection, string name, LocalText caption = null, 

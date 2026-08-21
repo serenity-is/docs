@@ -1,7 +1,7 @@
 # InnerJoinAttribute constructor (1 of 4)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a inner join on foreign key. Use this version only on properties with ForeignKey attribute.
+Adds an inner join on foreign key. Use this version only on properties with ForeignKey attribute.
 
 ```csharp
 public InnerJoinAttribute(string alias)
@@ -20,7 +20,7 @@ public InnerJoinAttribute(string alias)
 # InnerJoinAttribute constructor (2 of 4)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a inner join on foreign key. Use this version only on properties with ForeignKey attribute.
+Adds an inner join on foreign key. Use this version only on properties with ForeignKey attribute.
 
 ```csharp
 public InnerJoinAttribute(string alias, params ServerType[] serverTypes)
@@ -41,7 +41,7 @@ public InnerJoinAttribute(string alias, params ServerType[] serverTypes)
 # InnerJoinAttribute constructor (3 of 4)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a inner join
+Adds an inner join.
 
 ```csharp
 public InnerJoinAttribute(string alias, string toTable, string onCriteria)
@@ -62,7 +62,7 @@ public InnerJoinAttribute(string alias, string toTable, string onCriteria)
 # InnerJoinAttribute constructor (4 of 4)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a inner join
+Adds an inner join.
 
 ```csharp
 public InnerJoinAttribute(string alias, string toTable, string onCriteria, 

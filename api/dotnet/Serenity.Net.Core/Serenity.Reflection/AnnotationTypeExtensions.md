@@ -1,7 +1,7 @@
 # AnnotationTypeExtensions class
 **namespace:** *[Serenity.Reflection](../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Extension methods for annotation types
+Extension methods for annotation types.
 
 ```csharp
 public static class AnnotationTypeExtensions
@@ -11,7 +11,7 @@ public static class AnnotationTypeExtensions
 
 | name | description |
 | --- | --- |
-| static [GetAnnotatedType](AnnotationTypeExtensions/GetAnnotatedType.md)(…) | Gets the annotated type information for given type. |
+| static [GetAnnotatedType](AnnotationTypeExtensions/GetAnnotatedType.md)(…) | Gets the annotated type information for the given type. |
 
 ## See Also
 

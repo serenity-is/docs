@@ -1,7 +1,7 @@
 # WrappedConnection.Dispose method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+Disposes the actual connection.
 
 ```csharp
 public void Dispose()

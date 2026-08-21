@@ -1,7 +1,7 @@
 # DataValidation.RelatedRecordExist method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns a related record exist error
+Returns a related record exist error.
 
 ```csharp
 public static ValidationError RelatedRecordExist(string foreignTable, ITextLocalizer localizer)
@@ -11,6 +11,10 @@ public static ValidationError RelatedRecordExist(string foreignTable, ITextLocal
 | --- | --- |
 | foreignTable | Foreign table |
 | localizer | Text localizer |
+
+## Return Value
+
+The related record exist error.
 
 ## See Also
 

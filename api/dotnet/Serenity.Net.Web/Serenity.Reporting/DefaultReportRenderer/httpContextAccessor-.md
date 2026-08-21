@@ -1,7 +1,7 @@
 # DefaultReportRenderer.httpContextAccessor- field
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Http context accessor
+The HTTP context accessor.
 
 ```csharp
 protected readonly IHttpContextAccessor httpContextAccessor-;

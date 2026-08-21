@@ -1,7 +1,7 @@
 # TemporaryFileHelper.RandomFileCode method
 **namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets a 13 character random code that can be used safely in a filename
+Gets a 13 character random code that can be used safely in a file name.
 
 ```csharp
 public static string RandomFileCode()

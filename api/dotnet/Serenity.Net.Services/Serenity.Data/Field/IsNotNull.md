@@ -1,11 +1,15 @@
 # Field.IsNotNull method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new "the Field IS NOT NULL" criteria
+Creates a new "the Field IS NOT NULL" criteria.
 
 ```csharp
 public BaseCriteria IsNotNull()
 ```
+
+## Return Value
+
+The IS NOT NULL criteria.
 
 ## See Also
 

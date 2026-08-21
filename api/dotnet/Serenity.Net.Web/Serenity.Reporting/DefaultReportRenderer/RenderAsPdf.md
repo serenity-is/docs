@@ -1,7 +1,7 @@
 # DefaultReportRenderer.RenderAsPdf method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Renders an HTML report as pdf
+Renders an HTML report as PDF.
 
 ```csharp
 protected virtual ReportRenderResult RenderAsPdf(IReport report, ReportRenderOptions renderOptions)
@@ -9,8 +9,12 @@ protected virtual ReportRenderResult RenderAsPdf(IReport report, ReportRenderOpt
 
 | parameter | description |
 | --- | --- |
-| report | Report |
-| renderOptions | Render options |
+| report | The report. |
+| renderOptions | The render options. |
+
+## Return Value
+
+The render result.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # ICustomizeHtmlToPdf.Customize method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Method that is called to customize HTML to PDF options
+Method that is called to customize HTML to PDF options.
 
 ```csharp
 public void Customize(IHtmlToPdfOptions options)
@@ -9,7 +9,7 @@ public void Customize(IHtmlToPdfOptions options)
 
 | parameter | description |
 | --- | --- |
-| options |  |
+| options | The HTML to PDF options to customize. |
 
 ## See Also
 

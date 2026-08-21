@@ -1,7 +1,7 @@
 # IIsDeletedRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Determines that this row uses soft delete and the field that holds this flag
+Determines that this row uses soft delete and the field that holds this flag.
 
 ```csharp
 public interface IIsDeletedRow

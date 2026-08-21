@@ -1,7 +1,7 @@
 # CaseSwitchAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Case expression with simple switch value
+Case expression with simple switch value.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]

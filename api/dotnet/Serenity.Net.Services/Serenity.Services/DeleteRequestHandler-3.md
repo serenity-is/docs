@@ -21,18 +21,18 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [DeleteRequestHandler](DeleteRequestHandler-3/DeleteRequestHandler.md)(…) | Creates an instance of the class |
-| [Cache](DeleteRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context |
-| [Connection](DeleteRequestHandler-3/Connection.md) { get; } | Gets current connection from the unit of work |
-| [Context](DeleteRequestHandler-3/Context.md) { get; } | Gets the request context |
-| [Localizer](DeleteRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
-| [Permissions](DeleteRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
-| [Request](DeleteRequestHandler-3/Request.md) { get; protected set; } | Request object |
-| [Response](DeleteRequestHandler-3/Response.md) { get; protected set; } | Response object |
-| [Row](DeleteRequestHandler-3/Row.md) { get; protected set; } | The entity |
+| [DeleteRequestHandler](DeleteRequestHandler-3/DeleteRequestHandler.md)(…) | Initializes a new instance of the class. |
+| [Cache](DeleteRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context. |
+| [Connection](DeleteRequestHandler-3/Connection.md) { get; } | Gets the current connection from the unit of work. |
+| [Context](DeleteRequestHandler-3/Context.md) { get; } | Gets the request context. |
+| [Localizer](DeleteRequestHandler-3/Localizer.md) { get; } | Gets the localizer from the request context. |
+| [Permissions](DeleteRequestHandler-3/Permissions.md) { get; } | Gets the permission service from the request context. |
+| [Request](DeleteRequestHandler-3/Request.md) { get; protected set; } | Gets the request object. |
+| [Response](DeleteRequestHandler-3/Response.md) { get; protected set; } | Gets the response object. |
+| [Row](DeleteRequestHandler-3/Row.md) { get; protected set; } | Gets the entity being deleted. |
 | [StateBag](DeleteRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
-| [UnitOfWork](DeleteRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets current unit of work |
-| [User](DeleteRequestHandler-3/User.md) { get; } | Gets current user from the request context |
+| [UnitOfWork](DeleteRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets the current unit of work. |
+| [User](DeleteRequestHandler-3/User.md) { get; } | Gets the current user from the request context. |
 | [Delete](DeleteRequestHandler-3/Delete.md)(…) |  |
 | [Process](DeleteRequestHandler-3/Process.md)(…) | Processes the delete request. This is the entry point for the handler. |
 
@@ -40,10 +40,10 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](DeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
+| [behaviors-](DeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAudit](DeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteDelete](DeleteRequestHandler-3/ExecuteDelete.md)() | Executes the actual SQL delete operation |
-| virtual [GetBehaviors](DeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of delete behaviors |
+| virtual [GetBehaviors](DeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of delete behaviors. |
 | virtual [GetDisplayOrderFilter](DeleteRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [InvalidateCacheOnCommit](DeleteRequestHandler-3/InvalidateCacheOnCommit.md)() | Attaches a cache invalidation call to to OnCommit callback of the current unit of work. This would clear cached items related to this row type. |
 | virtual [InvokeDeleteAction](DeleteRequestHandler-3/InvokeDeleteAction.md)(…) | Invokes the passed delete action method |

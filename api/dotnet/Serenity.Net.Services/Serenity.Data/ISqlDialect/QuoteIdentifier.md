@@ -13,7 +13,7 @@ public string QuoteIdentifier(string s)
 
 ## Return Value
 
-Quoted identifier
+The quoted identifier.
 
 ## See Also
 

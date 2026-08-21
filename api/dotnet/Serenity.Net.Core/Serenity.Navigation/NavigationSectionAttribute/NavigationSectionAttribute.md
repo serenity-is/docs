@@ -1,7 +1,7 @@
 # NavigationSectionAttribute constructor (1 of 2)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ```csharp
 public NavigationSectionAttribute(string title, string icon = null)
@@ -9,8 +9,8 @@ public NavigationSectionAttribute(string title, string icon = null)
 
 | parameter | description |
 | --- | --- |
-| title | Title |
-| icon | Icon class |
+| title | Title. |
+| icon | Icon class. |
 
 ## See Also
 
@@ -21,7 +21,7 @@ public NavigationSectionAttribute(string title, string icon = null)
 # NavigationSectionAttribute constructor (2 of 2)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Navigation section attribute
+Navigation section attribute.
 
 ```csharp
 public NavigationSectionAttribute(int order, string title, string icon = null)
@@ -29,13 +29,13 @@ public NavigationSectionAttribute(int order, string title, string icon = null)
 
 | parameter | description |
 | --- | --- |
-| order | Display order |
-| title | Title |
-| icon | Icon class |
+| order | Display order. |
+| title | Title. |
+| icon | Icon class. |
 
 ## Remarks
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ## See Also
 

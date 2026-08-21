@@ -10,15 +10,15 @@ public OptionalValue<IRow> FindRow(Type rowType, OptionalValue<object> id, ICrit
 
 | parameter | description |
 | --- | --- |
-| rowType | Type of the row |
-| id | The identifier if one of ById methods are used. |
-| where | The where criteria for First/TryFirst/Single/TrySingle methods. |
+| rowType | Type of the row. |
+| id | The identifier if one of the ById methods is used. |
+| where | The where criteria for the First/TryFirst/Single/TrySingle methods. |
 | editQuery | Callback to edit the query. |
-| byIdOrSingle | True if one of ById/TryById/Single/TrySingle methods is used |
+| byIdOrSingle | True if one of the ById/TryById/Single/TrySingle methods is used. |
 
 ## Return Value
 
-Entity with given ID, or null if not found
+Entity with the given ID, or null if not found.
 
 ## See Also
 

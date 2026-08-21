@@ -1,7 +1,7 @@
 # DateOnlyField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a DateOnly value
+Field with a DateOnly value.
 
 ```csharp
 public sealed class DateOnlyField : GenericValueField<DateOnly>
@@ -21,13 +21,13 @@ public sealed class DateOnlyField : GenericValueField<DateOnly>
 
 | name | description |
 | --- | --- |
-| [DateOnlyField](DateOnlyField/DateOnlyField.md)(…) | Field with a DateOnly value |
+| [DateOnlyField](DateOnlyField/DateOnlyField.md)(…) | Field with a DateOnly value. |
 | static [Factory](DateOnlyField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [AsObject](DateOnlyField/AsObject.md)(…) | Sets the value of this field in specified row as object. |
 | override [ConvertValue](DateOnlyField/ConvertValue.md)(…) | Converts the value. |
 | override [GetFromReader](DateOnlyField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [ValueFromJson](DateOnlyField/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](DateOnlyField/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [ValueFromJson](DateOnlyField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](DateOnlyField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

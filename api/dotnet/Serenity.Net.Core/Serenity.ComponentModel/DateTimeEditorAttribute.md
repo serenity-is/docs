@@ -17,7 +17,7 @@ public class DateTimeEditorAttribute : CustomEditorAttribute
 | [IntervalMinutes](DateTimeEditorAttribute/IntervalMinutes.md) { get; set; } | Gets or sets the interval minutes, default is 5 minutes. |
 | [MaxValue](DateTimeEditorAttribute/MaxValue.md) { get; set; } | Gets or sets the maximum value. |
 | [MinValue](DateTimeEditorAttribute/MinValue.md) { get; set; } | Gets or sets the minimum value. |
-| [SqlMinMax](DateTimeEditorAttribute/SqlMinMax.md) { get; set; } | Gets or sets a value indicating whether SQL server min max dates should be used. |
+| [SqlMinMax](DateTimeEditorAttribute/SqlMinMax.md) { get; set; } | Gets or sets a value indicating whether SQL Server min max dates should be used. |
 | [StartHour](DateTimeEditorAttribute/StartHour.md) { get; set; } | Gets or sets the start hour between 0 and 23. |
 | [UseUtc](DateTimeEditorAttribute/UseUtc.md) { get; set; } | Gets or sets a value indicating whether the editor should use UTC format. |
 | const [Key](DateTimeEditorAttribute/Key.md) | Editor type key |

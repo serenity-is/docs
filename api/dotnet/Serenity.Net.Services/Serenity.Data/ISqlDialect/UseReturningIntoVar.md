@@ -1,7 +1,7 @@
 # ISqlDialect.UseReturningIntoVar property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets a value indicating whether use returning into variable.
+Gets a value indicating whether to use RETURNING INTO variable.
 
 ```csharp
 public bool UseReturningIntoVar { get; }
@@ -9,7 +9,7 @@ public bool UseReturningIntoVar { get; }
 
 ## Property Value
 
-`true` if use returning into variable; otherwise, `false`.
+`true` if RETURNING INTO variable should be used; otherwise, `false`.
 
 ## See Also
 

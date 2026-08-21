@@ -10,12 +10,18 @@ public static TChain With<TChain>(this TChain chain, Action<TChain> action)
 
 | parameter | description |
 | --- | --- |
-| chain | Chaining object |
+| chain | The chaining object. |
 | action | An action that will be called with the chain object as parameter. |
 
 ## Return Value
 
 The query itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *action* is null. |
 
 ## See Also
 

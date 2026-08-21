@@ -33,17 +33,17 @@ public interface ISqlDialect
 | [SkipKeyword](ISqlDialect/SkipKeyword.md) { get; } | Gets the skip keyword. |
 | [TakeKeyword](ISqlDialect/TakeKeyword.md) { get; } | Gets the take keyword. |
 | [TimeFormat](ISqlDialect/TimeFormat.md) { get; } | Gets the time format. |
-| [UseDateTime2](ISqlDialect/UseDateTime2.md) { get; } | Gets a value indicating whether use datetime2 type. |
-| [UseReturningIdentity](ISqlDialect/UseReturningIdentity.md) { get; } | Gets a value indicating whether to use returning identity. |
-| [UseReturningIntoVar](ISqlDialect/UseReturningIntoVar.md) { get; } | Gets a value indicating whether use returning into variable. |
-| [UseRowNum](ISqlDialect/UseRowNum.md) { get; } | Gets a value indicating whether ROWNUM. |
-| [UseScopeIdentity](ISqlDialect/UseScopeIdentity.md) { get; } | Gets a value indicating whether to use scope identity. |
-| [UseTakeAtEnd](ISqlDialect/UseTakeAtEnd.md) { get; } | Gets a value indicating whether to use TAKE at end. |
+| [UseDateTime2](ISqlDialect/UseDateTime2.md) { get; } | Gets a value indicating whether the server uses the datetime2 type. |
+| [UseReturningIdentity](ISqlDialect/UseReturningIdentity.md) { get; } | Gets a value indicating whether to use RETURNING identity. |
+| [UseReturningIntoVar](ISqlDialect/UseReturningIntoVar.md) { get; } | Gets a value indicating whether to use RETURNING INTO variable. |
+| [UseRowNum](ISqlDialect/UseRowNum.md) { get; } | Gets a value indicating whether the server supports ROWNUM. |
+| [UseScopeIdentity](ISqlDialect/UseScopeIdentity.md) { get; } | Gets a value indicating whether to use SCOPE IDENTITY. |
+| [UseTakeAtEnd](ISqlDialect/UseTakeAtEnd.md) { get; } | Gets a value indicating whether to use TAKE at the end. |
 | [IsReservedKeyword](ISqlDialect/IsReservedKeyword.md)(…) | Returns true if the specified identifier is a SQL keyword. |
 | [QuoteColumnAlias](ISqlDialect/QuoteColumnAlias.md)(…) | Quotes the column alias. This usually calls QuoteIdentifier except for Oracle. |
 | [QuoteIdentifier](ISqlDialect/QuoteIdentifier.md)(…) | Quotes the identifier. |
 | [QuoteUnicodeString](ISqlDialect/QuoteUnicodeString.md)(…) | Quotes the unicode string. |
-| [UnionKeyword](ISqlDialect/UnionKeyword.md)(…) | Gets the union keyword for specified union type. |
+| [UnionKeyword](ISqlDialect/UnionKeyword.md)(…) | Gets the union keyword for the specified union type. |
 
 ## See Also
 

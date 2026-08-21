@@ -1,7 +1,7 @@
 # PropertyItemsScript.CheckName method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Checks the name if its empty or null
+Checks the name if it is empty or null.
 
 ```csharp
 protected static string CheckName(string name)
@@ -9,13 +9,17 @@ protected static string CheckName(string name)
 
 | parameter | description |
 | --- | --- |
-| name |  |
+| name | The name to check. |
+
+## Return Value
+
+The validated name.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | name is null or empty. |
 
 ## See Also
 

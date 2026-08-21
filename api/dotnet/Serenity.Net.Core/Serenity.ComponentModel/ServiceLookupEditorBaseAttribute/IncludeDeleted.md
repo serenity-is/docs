@@ -1,10 +1,10 @@
 # ServiceLookupEditorBaseAttribute.IncludeDeleted property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Include deleted, defaults to false
+Include deleted, defaults to false.
 
 ```csharp
-public string[] IncludeDeleted { get; set; }
+public bool IncludeDeleted { get; set; }
 ```
 
 ## See Also

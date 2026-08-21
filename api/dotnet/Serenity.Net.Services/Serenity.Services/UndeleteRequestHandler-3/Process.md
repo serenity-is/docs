@@ -16,7 +16,7 @@ public TUndeleteResponse Process(IUnitOfWork unitOfWork, TUndeleteRequest reques
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | unitofWork is null |
+| ArgumentNullException | *unitOfWork* is `null`. |
 
 ## See Also
 

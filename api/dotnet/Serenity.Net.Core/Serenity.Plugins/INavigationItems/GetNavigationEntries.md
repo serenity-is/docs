@@ -9,7 +9,7 @@ public IEnumerable<NavigationEntry> GetNavigationEntries()
 
 ## Return Value
 
-List of navigation entries.
+The list of navigation entries.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # IImpersonator.UndoImpersonate method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Undoes impersonation
+Ends the most recent impersonation and restores the previous principal.
 
 ```csharp
 public void UndoImpersonate()

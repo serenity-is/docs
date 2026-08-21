@@ -1,7 +1,7 @@
 # ITextLocalizer.TryGet method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets translation for a key based on the context language / pending approval state, or null if not available
+Gets the translation for a key based on the context language and pending approval state, or `null` if not available.
 
 ```csharp
 public string TryGet(string key)
@@ -9,11 +9,11 @@ public string TryGet(string key)
 
 | parameter | description |
 | --- | --- |
-| key | Local text key |
+| key | The local text key. |
 
 ## Return Value
 
-Translated text or null if no translation found in the context language
+The translated text, or `null` if no translation is found in the context language.
 
 ## See Also
 

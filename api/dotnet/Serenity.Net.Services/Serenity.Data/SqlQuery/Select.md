@@ -39,6 +39,12 @@ public SqlQuery Select(string expression)
 
 The query itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | expression is null or empty. |
+
 ## Remarks
 
 No column name is used for the field or expression.
@@ -120,6 +126,12 @@ public SqlQuery Select(string expression, string columnName)
 ## Return Value
 
 The query itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | expression or columnName is null or empty. |
 
 ## See Also
 

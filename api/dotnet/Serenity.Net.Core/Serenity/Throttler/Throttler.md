@@ -1,7 +1,7 @@
 # Throttler constructor (1 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a new throttler
+Initializes a new throttler backed by a distributed cache.
 
 ```csharp
 public Throttler(IDistributedCache distributedCache, string key, TimeSpan duration, int limit)
@@ -9,10 +9,10 @@ public Throttler(IDistributedCache distributedCache, string key, TimeSpan durati
 
 | parameter | description |
 | --- | --- |
-| distributedCache | Distributed cache |
-| key | Cache key for throttler. Include the resource name, e.g. username, you are throttling |
-| duration | Check period |
-| limit | How many times are allowed |
+| distributedCache | The distributed cache used to store attempt counts. |
+| key | The cache key identifying the throttled resource, for example a username. |
+| duration | The sliding window over which attempts are counted. |
+| limit | The maximum number of attempts allowed within *duration*. |
 
 ## See Also
 
@@ -23,7 +23,7 @@ public Throttler(IDistributedCache distributedCache, string key, TimeSpan durati
 # Throttler constructor (2 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a new throttler
+Initializes a new throttler backed by an in-memory cache.
 
 ```csharp
 public Throttler(IMemoryCache cache, string key, TimeSpan duration, int limit)
@@ -31,10 +31,10 @@ public Throttler(IMemoryCache cache, string key, TimeSpan duration, int limit)
 
 | parameter | description |
 | --- | --- |
-| cache | Memory cache |
-| key | Cache key for throttler. Include the resource name, e.g. username, you are throttling |
-| duration | Check period |
-| limit | How many times are allowed |
+| cache | The memory cache used to store attempt counts. |
+| key | The cache key identifying the throttled resource, for example a username. |
+| duration | The sliding window over which attempts are counted. |
+| limit | The maximum number of attempts allowed within *duration*. |
 
 ## See Also
 

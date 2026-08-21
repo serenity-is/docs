@@ -1,7 +1,7 @@
 # PostgresSchemaProvider class
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-PostgreSQL metadata provider
+PostgreSQL metadata provider.
 
 ```csharp
 public class PostgresSchemaProvider : ISchemaProvider
@@ -13,11 +13,11 @@ public class PostgresSchemaProvider : ISchemaProvider
 | --- | --- |
 | [PostgresSchemaProvider](PostgresSchemaProvider/PostgresSchemaProvider.md)() | The default constructor. |
 | [DefaultSchema](PostgresSchemaProvider/DefaultSchema.md) { get; } | Gets the default schema. |
-| [GetFieldInfos](PostgresSchemaProvider/GetFieldInfos.md)(…) | Gets the field infos. |
-| [GetForeignKeys](PostgresSchemaProvider/GetForeignKeys.md)(…) | Gets the foreign keys. |
-| [GetIdentityFields](PostgresSchemaProvider/GetIdentityFields.md)(…) | Gets the identity fields. |
-| [GetPrimaryKeyFields](PostgresSchemaProvider/GetPrimaryKeyFields.md)(…) | Gets the primary key fields. |
-| [GetTableNames](PostgresSchemaProvider/GetTableNames.md)(…) | Gets the table names. |
+| [GetFieldInfos](PostgresSchemaProvider/GetFieldInfos.md)(…) |  |
+| [GetForeignKeys](PostgresSchemaProvider/GetForeignKeys.md)(…) |  |
+| [GetIdentityFields](PostgresSchemaProvider/GetIdentityFields.md)(…) |  |
+| [GetPrimaryKeyFields](PostgresSchemaProvider/GetPrimaryKeyFields.md)(…) |  |
+| [GetTableNames](PostgresSchemaProvider/GetTableNames.md)(…) |  |
 
 ## See Also
 

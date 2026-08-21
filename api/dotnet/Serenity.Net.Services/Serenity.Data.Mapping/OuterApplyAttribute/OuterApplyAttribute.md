@@ -1,7 +1,7 @@
 # OuterApplyAttribute constructor (1 of 2)
 **namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a OUTER APPLY to the row
+Adds an OUTER APPLY to the row.
 
 ```csharp
 public OuterApplyAttribute(string alias, string innerQuery)

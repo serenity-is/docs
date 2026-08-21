@@ -11,8 +11,8 @@ public static class ServiceCollectionConfigureExtensions
 
 | name | description |
 | --- | --- |
-| static [ConfigureSection&lt;TOptions&gt;](ServiceCollectionConfigureExtensions/ConfigureSection.md)(…) | Calls `Configure&lt;TOptions&gt;` with the section key determined from DefaultSectionKeyAttribute on TOptions. |
-| static [ConfigureSections](ServiceCollectionConfigureExtensions/ConfigureSections.md)(…) | Calls `Configure&lt;TOptionsType&gt;` for all setting classes with DefaultSectionKeyAttribute. |
+| static [ConfigureSection&lt;TOptions&gt;](ServiceCollectionConfigureExtensions/ConfigureSection.md)(…) | Calls `Configure<TOptions>` with the section key determined from DefaultSectionKeyAttribute on *TOptions*. |
+| static [ConfigureSections](ServiceCollectionConfigureExtensions/ConfigureSections.md)(…) | Calls `Configure<TOptionsType>` for all setting classes that have a DefaultSectionKeyAttribute. |
 
 ## See Also
 

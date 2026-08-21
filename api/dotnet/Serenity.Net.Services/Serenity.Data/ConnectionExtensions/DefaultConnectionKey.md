@@ -1,7 +1,7 @@
 # ConnectionExtensions.DefaultConnectionKey field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default connection key, this is an optional name
+The default connection key, which is an optional name.
 
 ```csharp
 public const string DefaultConnectionKey;

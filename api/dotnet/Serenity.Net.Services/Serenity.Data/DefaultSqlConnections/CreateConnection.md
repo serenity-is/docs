@@ -1,7 +1,7 @@
 # DefaultSqlConnections.CreateConnection method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an actual connection based on providerName, this should not return a wrapped connection.
+Creates an actual connection based on the provider name. This should not return a wrapped connection.
 
 ```csharp
 protected virtual IDbConnection CreateConnection(string connectionString, string providerName, 
@@ -10,9 +10,9 @@ protected virtual IDbConnection CreateConnection(string connectionString, string
 
 | parameter | description |
 | --- | --- |
-| connectionString | Connection string |
-| providerName | Provider name |
-| dialect | Dialect |
+| connectionString | The connection string. |
+| providerName | The provider name. |
+| dialect | The dialect. |
 
 ## Return Value
 

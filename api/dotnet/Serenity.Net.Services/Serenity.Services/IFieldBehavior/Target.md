@@ -1,7 +1,7 @@
 # IFieldBehavior.Target property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets / sets the target field that current behavior should operate on
+Gets or sets the target field that the current behavior should operate on.
 
 ```csharp
 public Field Target { get; set; }

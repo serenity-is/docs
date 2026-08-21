@@ -1,7 +1,7 @@
 # EnumLocalTextRegistration class
 **namespace:** *[Serenity.Localization](../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains initialization method for adding local text translations defined by Description attributes in enumeration classes.
+Contains initialization methods for adding local text translations defined by DescriptionAttribute attributes in enumeration classes.
 
 ```csharp
 public static class EnumLocalTextRegistration
@@ -11,7 +11,7 @@ public static class EnumLocalTextRegistration
 
 | name | description |
 | --- | --- |
-| static [AddEnumTexts](EnumLocalTextRegistration/AddEnumTexts.md)(…) | Adds local text translations defined implicitly by Description attributes in enumeration classes. Only enum values that has Description attribute are added as local text. By default, enums are registered in format: "Enums.{EnumerationTypeFullName}.{EnumValueName}". EnumerationTypeFullName, is fullname of the enumeration type. This can be overridden by attaching a EnumKey attribute. |
+| static [AddEnumTexts](EnumLocalTextRegistration/AddEnumTexts.md)(…) | Adds local text translations defined implicitly by DescriptionAttribute attributes in enumeration classes. Only enum values that have a DescriptionAttribute are added as local text. By default, enums are registered in the format "Enums.{EnumerationTypeFullName}.{EnumValueName}", where EnumerationTypeFullName is the full name of the enumeration type. This can be overridden by attaching an [`EnumKeyAttribute`](../Serenity.ComponentModel/EnumKeyAttribute.md). |
 
 ## See Also
 

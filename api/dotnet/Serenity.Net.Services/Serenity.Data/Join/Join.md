@@ -18,7 +18,7 @@ protected Join(IDictionary<string, Join> joins, string toTable, string alias, IC
 
 | exception | condition |
 | --- | --- |
-| ArgumentException |  |
+| ArgumentException | A join with the same alias already exists in the joins dictionary. |
 
 ## See Also
 

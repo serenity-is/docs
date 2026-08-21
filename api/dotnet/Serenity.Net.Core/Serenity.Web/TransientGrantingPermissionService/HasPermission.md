@@ -1,7 +1,7 @@
 # TransientGrantingPermissionService.HasPermission method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Checks if user has specified permission
+Determines whether the current user has the specified permission, taking transient grants into account.
 
 ```csharp
 public bool HasPermission(string permission)
@@ -9,11 +9,11 @@ public bool HasPermission(string permission)
 
 | parameter | description |
 | --- | --- |
-| permission | Permission to check |
+| permission | The permission key to check. |
 
 ## Return Value
 
-True if user has the permission
+`true` if the permission is granted; otherwise `false`.
 
 ## See Also
 

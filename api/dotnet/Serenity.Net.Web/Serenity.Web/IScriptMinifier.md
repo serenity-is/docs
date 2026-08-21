@@ -1,7 +1,7 @@
 # IScriptMinifier interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Abstraction for script minifier
+Abstraction for a script minifier.
 
 ```csharp
 public interface IScriptMinifier
@@ -11,7 +11,7 @@ public interface IScriptMinifier
 
 | name | description |
 | --- | --- |
-| [MinifyScript](IScriptMinifier/MinifyScript.md)(…) | Minifies the given script |
+| [MinifyScript](IScriptMinifier/MinifyScript.md)(…) | Minifies the given script. |
 
 ## See Also
 

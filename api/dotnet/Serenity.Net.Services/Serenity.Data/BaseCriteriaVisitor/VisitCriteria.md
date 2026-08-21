@@ -1,7 +1,7 @@
 # BaseCriteriaVisitor.VisitCriteria method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Visits the criteria returning potentially reworked version.
+Visits the criteria, returning a potentially reworked version.
 
 ```csharp
 protected virtual BaseCriteria VisitCriteria(Criteria criteria)
@@ -10,6 +10,10 @@ protected virtual BaseCriteria VisitCriteria(Criteria criteria)
 | parameter | description |
 | --- | --- |
 | criteria | The criteria. |
+
+## Return Value
+
+The visited criteria.
 
 ## See Also
 

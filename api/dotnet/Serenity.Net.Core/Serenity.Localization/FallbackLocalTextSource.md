@@ -1,7 +1,7 @@
 # FallbackLocalTextSource class
 **namespace:** *[Serenity.Localization](../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Adds key fallback to any ILocalTextSource implementation
+Adds key fallback behavior to any [`ILocalTextRegistry`](../Serenity.Abstractions/ILocalTextRegistry.md) implementation.
 
 ```csharp
 public class FallbackLocalTextSource : ILocalTextRegistry
@@ -15,11 +15,11 @@ public class FallbackLocalTextSource : ILocalTextRegistry
 
 | name | description |
 | --- | --- |
-| [FallbackLocalTextSource](FallbackLocalTextSource/FallbackLocalTextSource.md)(…) | Adds key fallback to any ILocalTextSource implementation |
-| [Add](FallbackLocalTextSource/Add.md)(…) | Adds a local text entry to the registry |
-| [TryGet](FallbackLocalTextSource/TryGet.md)(…) | Returns localized representation which corresponds to the local text key or the fallback if none found in the registry. |
-| static [BreakUpString](FallbackLocalTextSource/BreakUpString.md)(…) | Break up string without spaces (e.g. LastDirectoryUpdate) into a normal string (e.g. 'Last Directory Update') |
-| static [TryGetKeyFallback](FallbackLocalTextSource/TryGetKeyFallback.md)(…) | Get a fallback of the local text key |
+| [FallbackLocalTextSource](FallbackLocalTextSource/FallbackLocalTextSource.md)(…) | Adds key fallback behavior to any [`ILocalTextRegistry`](../Serenity.Abstractions/ILocalTextRegistry.md) implementation. |
+| [Add](FallbackLocalTextSource/Add.md)(…) | Adds a local text entry to the registry. |
+| [TryGet](FallbackLocalTextSource/TryGet.md)(…) | Returns the localized representation that corresponds to the local text key, or a fallback if none is found in the registry. |
+| static [BreakUpString](FallbackLocalTextSource/BreakUpString.md)(…) | Breaks up a string without spaces (e.g. LastDirectoryUpdate) into a normal string (e.g. 'Last Directory Update'). |
+| static [TryGetKeyFallback](FallbackLocalTextSource/TryGetKeyFallback.md)(…) | Gets a fallback of the local text key. |
 
 ## Remarks
 

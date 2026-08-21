@@ -1,7 +1,7 @@
 # IConfigureServices.ConfigureServices method
 **namespace:** *[Serenity.Plugins](../../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Configures the services / options for the plugin
+Configures the services and options for the plugin.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
@@ -9,8 +9,8 @@ public void ConfigureServices(IServiceCollection services, IConfiguration config
 
 | parameter | description |
 | --- | --- |
-| services | Services |
-| configuration | Configuration |
+| services | The service collection. |
+| configuration | The configuration. |
 
 ## See Also
 

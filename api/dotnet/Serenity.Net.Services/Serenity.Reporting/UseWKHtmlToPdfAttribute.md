@@ -10,18 +10,18 @@ public class UseWKHtmlToPdfAttribute : Attribute
 
 | parameter | description |
 | --- | --- |
-| value |  |
+| value | Whether the report should use WKHTML to PDF. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
 | [UseWKHtmlToPdfAttribute](UseWKHtmlToPdfAttribute/UseWKHtmlToPdfAttribute.md)(…) | Marks a report to determine if it should use WKHTML instead of another converter, e.g. Puppeteer etc. (only if configured in service provider). |
-| [Value](UseWKHtmlToPdfAttribute/Value.md) { get; } | Gets the value |
+| [Value](UseWKHtmlToPdfAttribute/Value.md) { get; } | Gets a value indicating whether WKHTML to PDF should be used. |
 
 ## Remarks
 
-Creates a new instance of the attribute
+Initializes a new instance of the attribute.
 
 ## See Also
 

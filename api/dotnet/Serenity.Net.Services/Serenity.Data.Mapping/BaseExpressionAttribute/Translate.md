@@ -11,6 +11,10 @@ public abstract string Translate(ISqlDialect dialect)
 | --- | --- |
 | dialect | Target dialect |
 
+## Return Value
+
+The translated expression for the specified dialect.
+
 ## See Also
 
 * interface [ISqlDialect](../../Serenity.Data/ISqlDialect.md)

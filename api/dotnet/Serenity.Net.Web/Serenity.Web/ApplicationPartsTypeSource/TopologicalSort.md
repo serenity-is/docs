@@ -1,7 +1,7 @@
 # ApplicationPartsTypeSource.TopologicalSort method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Sorts assemblies by dependency order
+Sorts assemblies by dependency order.
 
 ```csharp
 protected virtual IEnumerable<Assembly> TopologicalSort(IEnumerable<Assembly> assemblies)
@@ -9,7 +9,7 @@ protected virtual IEnumerable<Assembly> TopologicalSort(IEnumerable<Assembly> as
 
 | parameter | description |
 | --- | --- |
-| assemblies | Assemblies |
+| assemblies | The assemblies. |
 
 ## See Also
 

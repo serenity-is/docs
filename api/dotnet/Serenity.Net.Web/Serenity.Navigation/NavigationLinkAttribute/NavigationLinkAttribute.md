@@ -1,7 +1,7 @@
 # NavigationLinkAttribute constructor (1 of 4)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the attribute
+Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
 public NavigationLinkAttribute(string path, string url, object permission, string icon = null)
@@ -9,10 +9,10 @@ public NavigationLinkAttribute(string path, string url, object permission, strin
 
 | parameter | description |
 | --- | --- |
-| path | Path |
-| url | URL |
-| permission | Permission |
-| icon | Icon |
+| path | The path. |
+| url | The URL. |
+| permission | The permission. |
+| icon | The icon. |
 
 ## See Also
 
@@ -23,7 +23,7 @@ public NavigationLinkAttribute(string path, string url, object permission, strin
 # NavigationLinkAttribute constructor (2 of 4)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the attribute
+Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
 public NavigationLinkAttribute(string path, Type controller, string icon = null, 
@@ -32,10 +32,10 @@ public NavigationLinkAttribute(string path, Type controller, string icon = null,
 
 | parameter | description |
 | --- | --- |
-| path | Path |
-| controller | Controller to get URL and action from |
-| icon | Icon |
-| action | Action name |
+| path | The path. |
+| controller | The controller to get the URL and action from. |
+| icon | The icon. |
+| action | The action name. |
 
 ## See Also
 
@@ -46,7 +46,7 @@ public NavigationLinkAttribute(string path, Type controller, string icon = null,
 # NavigationLinkAttribute constructor (3 of 4)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the attribute
+Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
 public NavigationLinkAttribute(int order, string path, string url, object permission, 
@@ -55,11 +55,11 @@ public NavigationLinkAttribute(int order, string path, string url, object permis
 
 | parameter | description |
 | --- | --- |
-| order | Order |
-| path | Path |
-| url | URL |
-| permission | Permission |
-| icon | Icon |
+| order | The order. |
+| path | The path. |
+| url | The URL. |
+| permission | The permission. |
+| icon | The icon. |
 
 ## See Also
 
@@ -70,7 +70,7 @@ public NavigationLinkAttribute(int order, string path, string url, object permis
 # NavigationLinkAttribute constructor (4 of 4)
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the attribute
+Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
 ```csharp
 public NavigationLinkAttribute(int order, string path, Type controller, string icon = null, 
@@ -79,11 +79,11 @@ public NavigationLinkAttribute(int order, string path, Type controller, string i
 
 | parameter | description |
 | --- | --- |
-| order | Order |
-| path | Path |
-| controller | Controller to get URL and action from |
-| icon | Icon |
-| action | Action name |
+| order | The order. |
+| path | The path. |
+| controller | The controller to get the URL and action from. |
+| icon | The icon. |
+| action | The action name. |
 
 ## See Also
 

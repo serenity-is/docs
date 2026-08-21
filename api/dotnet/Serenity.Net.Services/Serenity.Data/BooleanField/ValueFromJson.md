@@ -1,7 +1,7 @@
 # BooleanField.ValueFromJson method (1 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets field value from JSON.
+Gets the field value from JSON.
 
 ```csharp
 public override void ValueFromJson(JsonReader reader, IRow row, JsonSerializer serializer)
@@ -17,7 +17,7 @@ public override void ValueFromJson(JsonReader reader, IRow row, JsonSerializer s
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | reader is null |
+| ArgumentNullException | reader is null. |
 
 ## See Also
 

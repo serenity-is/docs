@@ -12,6 +12,10 @@ public static string ReplaceBrackets(string expression, ISqlDialect dialect)
 | expression | The expression. |
 | dialect | The dialect. |
 
+## Return Value
+
+The expression with brackets replaced.
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

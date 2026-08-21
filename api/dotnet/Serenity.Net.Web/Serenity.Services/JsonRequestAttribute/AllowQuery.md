@@ -1,7 +1,7 @@
 # JsonRequestAttribute.AllowQuery property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-True to allow getting JSON body from query string
+Gets or sets whether to allow getting the JSON body from the query string.
 
 ```csharp
 public bool AllowQuery { get; set; }

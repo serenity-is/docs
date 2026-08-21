@@ -12,7 +12,7 @@ public class SqlServer2008Dialect : SqlServer2005Dialect
 | name | description |
 | --- | --- |
 | [SqlServer2008Dialect](SqlServer2008Dialect/SqlServer2008Dialect.md)() | The default constructor. |
-| override [UseDateTime2](SqlServer2008Dialect/UseDateTime2.md) { get; } | Gets a value indicating whether use datetime2 type. |
+| override [UseDateTime2](SqlServer2008Dialect/UseDateTime2.md) { get; } |  |
 | static readonly [Instance](SqlServer2008Dialect/Instance.md) | The shared instance of SqlServer2008 dialect. |
 
 ## See Also

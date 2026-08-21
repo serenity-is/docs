@@ -1,7 +1,7 @@
 # PlaceholderAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Sets a placeholder for a form field. Placeholder text is shown inside the editor when its value is empty. Only editors using basic inputs and Select2 editor supports this.
+Sets a placeholder for a form field. Placeholder text is shown inside the editor when its value is empty. Only editors using basic inputs and the Select2 editor support this.
 
 ```csharp
 public PlaceholderAttribute(string value)

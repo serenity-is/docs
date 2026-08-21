@@ -11,7 +11,7 @@ public class HtmlReportRenderUrl : IDisposable
 
 | name | description |
 | --- | --- |
-| [HtmlReportRenderUrl](HtmlReportRenderUrl/HtmlReportRenderUrl.md)() | Creates a new instance of the class |
+| [HtmlReportRenderUrl](HtmlReportRenderUrl/HtmlReportRenderUrl.md)() | Initializes a new instance of the class. |
 | [CookiesToForward](HtmlReportRenderUrl/CookiesToForward.md) { get; } | List of cookies to forward |
 | [FooterUrl](HtmlReportRenderUrl/FooterUrl.md) { get; set; } | The generated URL for footer content |
 | [HeaderUrl](HtmlReportRenderUrl/HeaderUrl.md) { get; set; } | The generated URL for header content |

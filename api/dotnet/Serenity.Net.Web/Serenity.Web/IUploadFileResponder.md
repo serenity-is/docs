@@ -1,7 +1,7 @@
 # IUploadFileResponder interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Abstraction for reading a file via /upload/path, e.g. the Read action in the FilePage
+Abstraction for reading a file via `/upload/path`, e.g. the Read action in the FilePage.
 
 ```csharp
 public interface IUploadFileResponder
@@ -11,7 +11,7 @@ public interface IUploadFileResponder
 
 | name | description |
 | --- | --- |
-| [Read](IUploadFileResponder/Read.md)(…) | Reads the file, e.g. writes to the response |
+| [Read](IUploadFileResponder/Read.md)(…) | Reads the file, e.g. writes to the response. |
 
 ## See Also
 

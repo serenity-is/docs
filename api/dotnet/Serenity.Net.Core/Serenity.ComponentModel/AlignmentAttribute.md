@@ -16,7 +16,7 @@ public abstract class AlignmentAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [Value](AlignmentAttribute/Value.md) { get; } | Gets/sets value of the alignment attribute |
+| [Value](AlignmentAttribute/Value.md) { get; } | Gets or sets the value of the alignment attribute. |
 
 ## Protected Members
 

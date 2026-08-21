@@ -1,7 +1,7 @@
 # DefaultReportRenderer.RenderDataOnlyReport method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Renders a data only report
+Renders a data only report.
 
 ```csharp
 protected virtual ReportRenderResult RenderDataOnlyReport(IDataOnlyReport report, 
@@ -10,8 +10,12 @@ protected virtual ReportRenderResult RenderDataOnlyReport(IDataOnlyReport report
 
 | parameter | description |
 | --- | --- |
-| report | Report |
-| options | Options |
+| report | The report. |
+| options | The options. |
+
+## Return Value
+
+The render result.
 
 ## See Also
 

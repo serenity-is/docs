@@ -1,7 +1,7 @@
 # ITypeSource interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for type source which is used as an extensibility point for Serenity applications
+Abstraction for a type source which is used as an extensibility point for Serenity applications.
 
 ```csharp
 public interface ITypeSource
@@ -11,10 +11,10 @@ public interface ITypeSource
 
 | name | description |
 | --- | --- |
-| [GetAssemblyAttributes](ITypeSource/GetAssemblyAttributes.md)(…) | Gets all attributes for assemblies with given type |
-| [GetTypes](ITypeSource/GetTypes.md)() | Gets all types |
-| [GetTypesWithAttribute](ITypeSource/GetTypesWithAttribute.md)(…) | Gets all types that has an attribute |
-| [GetTypesWithInterface](ITypeSource/GetTypesWithInterface.md)(…) | Gets all types that implement an interface |
+| [GetAssemblyAttributes](ITypeSource/GetAssemblyAttributes.md)(…) | Gets all attributes for assemblies with the given type. |
+| [GetTypes](ITypeSource/GetTypes.md)() | Gets all types. |
+| [GetTypesWithAttribute](ITypeSource/GetTypesWithAttribute.md)(…) | Gets all types that have an attribute. |
+| [GetTypesWithInterface](ITypeSource/GetTypesWithInterface.md)(…) | Gets all types that implement an interface. |
 
 ## See Also
 

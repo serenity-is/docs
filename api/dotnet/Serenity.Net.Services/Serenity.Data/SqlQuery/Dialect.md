@@ -7,6 +7,20 @@ Sets the dialect (SQL server type / version) for query.
 public SqlQuery Dialect(ISqlDialect dialect)
 ```
 
+| parameter | description |
+| --- | --- |
+| dialect | The dialect to use. |
+
+## Return Value
+
+The query itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | dialect is null. |
+
 ## See Also
 
 * interface [ISqlDialect](../ISqlDialect.md)

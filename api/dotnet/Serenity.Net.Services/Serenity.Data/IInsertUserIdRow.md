@@ -1,7 +1,7 @@
 # IInsertUserIdRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for rows that has InsertUserId field
+Interface for rows that have an InsertUserId field.
 
 ```csharp
 public interface IInsertUserIdRow

@@ -1,7 +1,7 @@
 # JsonRequestAttribute.AllowForm property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-True to allow getting JSON body from the posted form
+Gets or sets whether to allow getting the JSON body from the posted form.
 
 ```csharp
 public bool AllowForm { get; set; }

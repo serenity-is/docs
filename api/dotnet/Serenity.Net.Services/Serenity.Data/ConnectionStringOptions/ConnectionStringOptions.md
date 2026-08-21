@@ -1,7 +1,7 @@
 # ConnectionStringOptions constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance
+Creates a new instance.
 
 ```csharp
 public ConnectionStringOptions()

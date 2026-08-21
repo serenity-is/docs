@@ -1,7 +1,7 @@
 # CopyTemporaryFileResult.HasThumbnail property
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-If the file has thumbnail
+Gets or sets a value indicating whether the file has a thumbnail.
 
 ```csharp
 public bool HasThumbnail { get; set; }

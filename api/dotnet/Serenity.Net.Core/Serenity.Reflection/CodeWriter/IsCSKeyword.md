@@ -1,7 +1,7 @@
 # CodeWriter.IsCSKeyword method
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Determines is Type is a C# primitive keyword
+Determines whether the given type name is a C# primitive keyword.
 
 ```csharp
 public static bool IsCSKeyword(string dataType)
@@ -9,7 +9,11 @@ public static bool IsCSKeyword(string dataType)
 
 | parameter | description |
 | --- | --- |
-| dataType |  |
+| dataType | The type name to check. |
+
+## Return Value
+
+`true` if the type name is a C# primitive keyword; otherwise, `false`.
 
 ## See Also
 

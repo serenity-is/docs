@@ -1,7 +1,7 @@
 # DoubleField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a Double value
+Field with a Double value.
 
 ```csharp
 public sealed class DoubleField : GenericValueField<double>
@@ -21,11 +21,11 @@ public sealed class DoubleField : GenericValueField<double>
 
 | name | description |
 | --- | --- |
-| [DoubleField](DoubleField/DoubleField.md)(…) | Field with a Double value |
+| [DoubleField](DoubleField/DoubleField.md)(…) | Field with a Double value. |
 | static [Factory](DoubleField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [GetFromReader](DoubleField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [ValueFromJson](DoubleField/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](DoubleField/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [ValueFromJson](DoubleField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](DoubleField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

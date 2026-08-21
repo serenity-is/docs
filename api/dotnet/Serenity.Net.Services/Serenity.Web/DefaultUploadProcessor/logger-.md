@@ -1,7 +1,7 @@
 # DefaultUploadProcessor.logger- field
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Logger
+Gets the logger.
 
 ```csharp
 protected readonly ILogger<DefaultUploadProcessor> logger-;

@@ -12,8 +12,8 @@ public class CopyTemporaryFileOptions : FormatFilenameOptions
 | name | description |
 | --- | --- |
 | [CopyTemporaryFileOptions](CopyTemporaryFileOptions/CopyTemporaryFileOptions.md)() | The default constructor. |
-| [FilesToDelete](CopyTemporaryFileOptions/FilesToDelete.md) { get; set; } | Files to delete container |
-| [TemporaryFile](CopyTemporaryFileOptions/TemporaryFile.md) { get; set; } | Temporary file |
+| [FilesToDelete](CopyTemporaryFileOptions/FilesToDelete.md) { get; set; } | Gets or sets the files to delete container. |
+| [TemporaryFile](CopyTemporaryFileOptions/TemporaryFile.md) { get; set; } | Gets or sets the temporary file. |
 
 ## See Also
 

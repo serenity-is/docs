@@ -1,7 +1,7 @@
 # CodeWriter.ShortTypeRef method
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Converts datatype with a namespace to datatype without namespace if its namespace is in the allowed usings else returns fullname. This can handle nullables, CS keywords and generics to some extent. Please see [`IsCSharp`](IsCSharp.md) if you are using this for C#
+Converts a data type with a namespace to a data type without the namespace if its namespace is in the allowed usings, otherwise returns the full name. This can handle nullables, C# keywords, and generics to some extent. See [`IsCSharp`](IsCSharp.md) if you are using this for C#.
 
 ```csharp
 public string ShortTypeRef(string fullName)
@@ -9,7 +9,11 @@ public string ShortTypeRef(string fullName)
 
 | parameter | description |
 | --- | --- |
-| fullName | Full name of the class |
+| fullName | The full name of the class. |
+
+## Return Value
+
+The short type reference, or the full name if the namespace cannot be used.
 
 ## See Also
 

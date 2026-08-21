@@ -7,6 +7,10 @@ Gets the SQL keyword.
 public override string GetKeyword()
 ```
 
+## Return Value
+
+The SQL keyword for this join type.
+
 ## See Also
 
 * class [InnerJoin](../InnerJoin.md)

@@ -1,7 +1,7 @@
 # ITemporaryFileSystem interface
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Base file system used by TemporaryFileHelper
+A file system abstraction used by [`TemporaryFileHelper`](../Serenity.IO/TemporaryFileHelper.md) that additionally exposes temporary file information.
 
 ```csharp
 public interface ITemporaryFileSystem : IFileSystem
@@ -11,7 +11,7 @@ public interface ITemporaryFileSystem : IFileSystem
 
 | name | description |
 | --- | --- |
-| [GetTemporaryFileInfos](ITemporaryFileSystem/GetTemporaryFileInfos.md)(…) | Gets temporary file info objects |
+| [GetTemporaryFileInfos](ITemporaryFileSystem/GetTemporaryFileInfos.md)(…) | Gets the temporary file info objects for the files in the specified directory. |
 
 ## See Also
 

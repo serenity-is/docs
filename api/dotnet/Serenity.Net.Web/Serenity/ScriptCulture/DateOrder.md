@@ -1,7 +1,7 @@
 # ScriptCulture.DateOrder property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Date year month day ordering like d/M/y etc.
+Gets or sets the date year-month-day ordering, e.g. `d/M/y`.
 
 ```csharp
 public string DateOrder { get; set; }

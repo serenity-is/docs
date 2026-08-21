@@ -11,7 +11,7 @@ public static class DistributedCacheExtensions
 
 | name | description |
 | --- | --- |
-| static [GetAutoJson&lt;TValue&gt;](DistributedCacheExtensions/GetAutoJson.md)(…) | Sets a value from the cache as byte[], string, or using JSON deserialization depending on type |
+| static [GetAutoJson&lt;TValue&gt;](DistributedCacheExtensions/GetAutoJson.md)(…) | Gets a value from the cache as byte[], string, or using JSON deserialization depending on type |
 | static [SetAutoJson&lt;TValue&gt;](DistributedCacheExtensions/SetAutoJson.md)(…) | Sets a value in the cache as byte[], string, or using JSON serialization depending on type of TValue (2 methods) |
 
 ## See Also

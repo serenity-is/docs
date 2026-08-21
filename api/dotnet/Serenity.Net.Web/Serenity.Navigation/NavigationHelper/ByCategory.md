@@ -1,7 +1,7 @@
 # NavigationHelper.ByCategory method
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a lookup of navigation item attributes by their category
+Creates a lookup of navigation item attributes by their category.
 
 ```csharp
 public static ILookup<string, NavigationItemAttribute> ByCategory(
@@ -10,13 +10,17 @@ public static ILookup<string, NavigationItemAttribute> ByCategory(
 
 | parameter | description |
 | --- | --- |
-| list | List with navigation item attributes |
+| list | The list with navigation item attributes. |
+
+## Return Value
+
+A lookup of navigation item attributes by category.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | List is null |
+| ArgumentNullException | *list* is `null`. |
 
 ## See Also
 

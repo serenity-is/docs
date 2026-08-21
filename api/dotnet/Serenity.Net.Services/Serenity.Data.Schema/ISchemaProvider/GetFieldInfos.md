@@ -13,6 +13,10 @@ public IEnumerable<FieldInfo> GetFieldInfos(IDbConnection connection, string sch
 | schema | The schema. |
 | table | The table. |
 
+## Return Value
+
+The list of field metadata for the table.
+
 ## See Also
 
 * class [FieldInfo](../FieldInfo.md)

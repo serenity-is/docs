@@ -22,7 +22,7 @@ public class SaveRequestHandler<TRow> : SaveRequestHandler<TRow, SaveRequest<TRo
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

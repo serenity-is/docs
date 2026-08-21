@@ -1,7 +1,7 @@
 # DataServiceCollectionExtensions class
 **namespace:** *[Serenity.Extensions.DependencyInjection](../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Contains extensions to register data services
+Contains extensions to register data services.
 
 ```csharp
 public static class DataServiceCollectionExtensions
@@ -11,8 +11,8 @@ public static class DataServiceCollectionExtensions
 
 | name | description |
 | --- | --- |
-| static [AddSqlConnections](DataServiceCollectionExtensions/AddSqlConnections.md)(…) | Adds default IConnectionStrings and ISqlConnections interfaces (2 methods) |
-| static [GetDataConnectionString](DataServiceCollectionExtensions/GetDataConnectionString.md)(…) | Gets the specified connection string entry from the specified configuration's Data:[name] section. Only for use in Startup where IConnectionStrings is not yet available. Throws if no such connection is found. |
+| static [AddSqlConnections](DataServiceCollectionExtensions/AddSqlConnections.md)(…) | Adds the default [`IConnectionStrings`](../Serenity.Data/IConnectionStrings.md) and [`ISqlConnections`](../Serenity.Data/ISqlConnections.md) interfaces. (2 methods) |
+| static [GetDataConnectionString](DataServiceCollectionExtensions/GetDataConnectionString.md)(…) | Gets the specified connection string entry from the specified configuration's Data:[name] section. Only for use in Startup where [`IConnectionStrings`](../Serenity.Data/IConnectionStrings.md) is not yet available. Throws if no such connection is found. |
 
 ## See Also
 

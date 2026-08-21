@@ -1,7 +1,7 @@
 # OuterApply class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-OUTER APPLY join type
+OUTER APPLY join type.
 
 ```csharp
 public class OuterApply : Join

@@ -15,6 +15,12 @@ public SqlUpdate SetNull(string field)
 
 SqlUpdate object itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | field is null or empty. |
+
 ## See Also
 
 * class [SqlUpdate](../SqlUpdate.md)

@@ -1,7 +1,7 @@
 # ISaveRequestProcessor.Process method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Processes the [`ISaveRequest`](../ISaveRequest.md) and returns a [`SaveResponse`](../SaveResponse.md)
+Processes the [`ISaveRequest`](../ISaveRequest.md) and returns a [`SaveResponse`](../SaveResponse.md).
 
 ```csharp
 public SaveResponse Process(IUnitOfWork uow, ISaveRequest request, SaveRequestType type)
@@ -10,7 +10,7 @@ public SaveResponse Process(IUnitOfWork uow, ISaveRequest request, SaveRequestTy
 | parameter | description |
 | --- | --- |
 | uow | Unit of work |
-| request | List request |
+| request | Save request |
 | type | Save request type, Create or Update |
 
 ## See Also

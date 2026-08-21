@@ -12,8 +12,8 @@ public class UploadedFile
 | name | description |
 | --- | --- |
 | [UploadedFile](UploadedFile/UploadedFile.md)() | The default constructor. |
-| [Filename](UploadedFile/Filename.md) { get; set; } | File path |
-| [OriginalName](UploadedFile/OriginalName.md) { get; set; } | Original file name |
+| [Filename](UploadedFile/Filename.md) { get; set; } | Gets or sets the file path. |
+| [OriginalName](UploadedFile/OriginalName.md) { get; set; } | Gets or sets the original file name. |
 
 ## See Also
 

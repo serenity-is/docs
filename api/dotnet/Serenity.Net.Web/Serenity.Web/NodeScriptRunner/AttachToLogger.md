@@ -1,7 +1,7 @@
 # NodeScriptRunner.AttachToLogger method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Attaches to the logger
+Attaches the runner's output to the given logger.
 
 ```csharp
 public void AttachToLogger(ILogger logger)
@@ -9,7 +9,7 @@ public void AttachToLogger(ILogger logger)
 
 | parameter | description |
 | --- | --- |
-| logger | Logger |
+| logger | The logger to write output to. |
 
 ## See Also
 

@@ -7,6 +7,10 @@ Creates a new unary IsNull criteria containing this criteria as the operand.
 public BaseCriteria IsNull()
 ```
 
+## Return Value
+
+A new unary IsNull criteria.
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)

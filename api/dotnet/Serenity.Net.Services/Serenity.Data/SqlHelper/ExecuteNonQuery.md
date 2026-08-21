@@ -1,7 +1,7 @@
 # SqlHelper.ExecuteNonQuery method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Executes the statement
+Executes the statement.
 
 ```csharp
 public static int ExecuteNonQuery(IDbConnection connection, string commandText, 
@@ -13,11 +13,11 @@ public static int ExecuteNonQuery(IDbConnection connection, string commandText,
 | connection | The connection. |
 | commandText | The command text. |
 | param | The parameters. |
-| logger | Logger |
+| logger | The logger. |
 
 ## Return Value
 
-Number of affected rows
+The number of affected rows.
 
 ## See Also
 

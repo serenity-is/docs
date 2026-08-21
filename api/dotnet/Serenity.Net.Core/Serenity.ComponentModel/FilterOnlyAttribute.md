@@ -1,7 +1,7 @@
 # FilterOnlyAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this field should not be shown, and could not be made visible in column selection dialog, but only used for advanced filtering.
+Indicates that this field should not be shown, and cannot be made visible in the column selection dialog, but is only used for advanced filtering.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,7 +16,7 @@ public class FilterOnlyAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [FilterOnlyAttribute](FilterOnlyAttribute/FilterOnlyAttribute.md)(…) | Indicates that this field should not be shown, and could not be made visible in column selection dialog, but only used for advanced filtering. |
+| [FilterOnlyAttribute](FilterOnlyAttribute/FilterOnlyAttribute.md)(…) | Indicates that this field should not be shown, and cannot be made visible in the column selection dialog, but is only used for advanced filtering. |
 | [Value](FilterOnlyAttribute/Value.md) { get; } | Gets a value indicating whether this [`FilterOnlyAttribute`](FilterOnlyAttribute.md) is enabled. |
 
 ## Remarks

@@ -1,7 +1,7 @@
 # ValueStopwatch structure
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-A value stopwatch
+A value stopwatch.
 
 ```csharp
 public struct ValueStopwatch
@@ -11,10 +11,10 @@ public struct ValueStopwatch
 
 | name | description |
 | --- | --- |
-| static [StartNew](ValueStopwatch/StartNew.md)() | Creates a new ValueStopwatch |
-| [ElapsedMilliseconds](ValueStopwatch/ElapsedMilliseconds.md) { get; } | Gets elapsed milliseconds |
-| [ElapsedTime](ValueStopwatch/ElapsedTime.md) { get; } | Gets elapsed time |
-| [IsActive](ValueStopwatch/IsActive.md) { get; } | Returns if stopwatch is active |
+| static [StartNew](ValueStopwatch/StartNew.md)() | Creates a new ValueStopwatch. |
+| [ElapsedMilliseconds](ValueStopwatch/ElapsedMilliseconds.md) { get; } | Gets the elapsed milliseconds. |
+| [ElapsedTime](ValueStopwatch/ElapsedTime.md) { get; } | Gets the elapsed time. |
+| [IsActive](ValueStopwatch/IsActive.md) { get; } | Returns whether the stopwatch is active. |
 
 ## See Also
 

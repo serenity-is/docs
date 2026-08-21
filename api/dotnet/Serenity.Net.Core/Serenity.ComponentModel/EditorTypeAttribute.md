@@ -1,7 +1,7 @@
 # EditorTypeAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets editor type of the target property.
+Sets the editor type of the target property.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,7 +16,7 @@ public class EditorTypeAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [EditorTypeAttribute](EditorTypeAttribute/EditorTypeAttribute.md)(…) | Sets editor type of the target property. |
+| [EditorTypeAttribute](EditorTypeAttribute/EditorTypeAttribute.md)(…) | Sets the editor type of the target property. |
 | [EditorType](EditorTypeAttribute/EditorType.md) { get; } | Gets the type of the editor. |
 | virtual [SetParams](EditorTypeAttribute/SetParams.md)(…) | Transfers the current editor parameters to specified editorParams dictionary. |
 

@@ -7,6 +7,10 @@ Gets the identity column.
 public string IdentityColumn()
 ```
 
+## Return Value
+
+The identity column name, or `null` if none is set.
+
 ## See Also
 
 * class [SqlInsert](../SqlInsert.md)
@@ -25,6 +29,10 @@ public SqlInsert IdentityColumn(string value)
 | parameter | description |
 | --- | --- |
 | value | The identity column. |
+
+## Return Value
+
+The SqlInsert object itself.
 
 ## See Also
 

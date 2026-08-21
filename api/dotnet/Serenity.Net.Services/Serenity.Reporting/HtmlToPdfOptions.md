@@ -11,7 +11,7 @@ public class HtmlToPdfOptions : IHtmlToPdfOptions
 
 | name | description |
 | --- | --- |
-| [HtmlToPdfOptions](HtmlToPdfOptions/HtmlToPdfOptions.md)() | Creates a new instance of the class |
+| [HtmlToPdfOptions](HtmlToPdfOptions/HtmlToPdfOptions.md)() | Initializes a new instance of the class with default option values. |
 | [AdditionalUrls](HtmlToPdfOptions/AdditionalUrls.md) { get; set; } |  |
 | [AllowedLocalPaths](HtmlToPdfOptions/AllowedLocalPaths.md) { get; } |  |
 | [Cookies](HtmlToPdfOptions/Cookies.md) { get; set; } |  |

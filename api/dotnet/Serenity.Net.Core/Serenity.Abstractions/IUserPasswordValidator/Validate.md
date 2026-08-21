@@ -1,7 +1,7 @@
 # IUserPasswordValidator.Validate method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Validates a user password
+Validates the specified username and password.
 
 ```csharp
 public PasswordValidationResult Validate(ref string username, string password)
@@ -9,12 +9,12 @@ public PasswordValidationResult Validate(ref string username, string password)
 
 | parameter | description |
 | --- | --- |
-| username |  |
-| password |  |
+| username | The username to validate. The implementation may normalize the value in place. |
+| password | The plain-text password to validate. |
 
 ## Return Value
 
-Valid if given username and password is true
+Valid when the credentials are valid; otherwise a value indicating the reason for failure.
 
 ## See Also
 

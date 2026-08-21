@@ -1,7 +1,7 @@
 # BaseRepository constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-An base class that can be used for repositories (obsolete, [`BaseRequestHandler`](../BaseRequestHandler.md)) that accept a [`IRequestContext`](../IRequestContext.md) instance.
+A base class that can be used for repositories (obsolete, [`BaseRequestHandler`](../BaseRequestHandler.md)) that accept a [`IRequestContext`](../IRequestContext.md) instance.
 
 ```csharp
 public BaseRepository(IRequestContext context)
@@ -15,11 +15,11 @@ public BaseRepository(IRequestContext context)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Context is null |
+| ArgumentNullException | *context* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class.
+Initializes a new instance of the class.
 
 ## See Also
 

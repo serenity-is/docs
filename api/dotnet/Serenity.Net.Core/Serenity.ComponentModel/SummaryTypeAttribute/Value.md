@@ -1,7 +1,7 @@
 # SummaryTypeAttribute.Value property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets aggregate function type
+Gets the aggregate function type.
 
 ```csharp
 public SummaryType Value { get; }

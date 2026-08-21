@@ -14,10 +14,10 @@ public class DistinctValuesEditorAttribute : LookupEditorBaseAttribute
 | --- | --- |
 | [DistinctValuesEditorAttribute](DistinctValuesEditorAttribute/DistinctValuesEditorAttribute.md)() | Initializes a new instance of the [`DistinctValuesEditorAttribute`](DistinctValuesEditorAttribute.md) class. |
 | [DistinctValuesEditorAttribute](DistinctValuesEditorAttribute/DistinctValuesEditorAttribute.md)(…) | Initializes a new instance of the [`DistinctValuesEditorAttribute`](DistinctValuesEditorAttribute.md) class. |
-| [Expiration](DistinctValuesEditorAttribute/Expiration.md) { get; set; } | Cache duration in seconds |
+| [Expiration](DistinctValuesEditorAttribute/Expiration.md) { get; set; } | Cache duration in seconds. |
 | [Permission](DistinctValuesEditorAttribute/Permission.md) { get; set; } | Permission key required to access this lookup script. Use special value "?" for all logged-in users. Use special value "*" for anyone including not logged-in users. |
-| [PropertyName](DistinctValuesEditorAttribute/PropertyName.md) { get; set; } | Property name that this editor will get values from |
-| [RowType](DistinctValuesEditorAttribute/RowType.md) { get; set; } | RowType that this editor will get values from |
+| [PropertyName](DistinctValuesEditorAttribute/PropertyName.md) { get; set; } | The property name that this editor will get values from. |
+| [RowType](DistinctValuesEditorAttribute/RowType.md) { get; set; } | The row type that this editor will get values from. |
 | const [Key](DistinctValuesEditorAttribute/Key.md) | Editor type key |
 
 ## See Also

@@ -1,7 +1,7 @@
 # QueryWithParams.dialect- field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-The dialect
+The dialect.
 
 ```csharp
 protected ISqlDialect dialect-;

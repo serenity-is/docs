@@ -11,11 +11,15 @@ public static HashSet<string> Locate(string expression)
 | --- | --- |
 | expression | The expression. |
 
+## Return Value
+
+The set of aliases found, or `null` if none are found.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | expression is null |
+| ArgumentNullException | expression is null. |
 
 ## See Also
 

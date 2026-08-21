@@ -1,7 +1,7 @@
 # IUserDefinition.Id property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-User ID
+Gets the unique user identifier.
 
 ```csharp
 public string Id { get; }

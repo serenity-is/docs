@@ -1,7 +1,7 @@
 # IPermissionService interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Permission service abstraction
+Checks whether the current user has a given permission.
 
 ```csharp
 public interface IPermissionService
@@ -11,7 +11,7 @@ public interface IPermissionService
 
 | name | description |
 | --- | --- |
-| [HasPermission](IPermissionService/HasPermission.md)(…) | Returns true if user has specified permission |
+| [HasPermission](IPermissionService/HasPermission.md)(…) | Determines whether the current user has the specified permission. |
 
 ## See Also
 

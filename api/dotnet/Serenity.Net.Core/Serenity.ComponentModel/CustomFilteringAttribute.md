@@ -1,7 +1,7 @@
 # CustomFilteringAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Base class which other custom filtering types derive from.
+Base class from which other custom filtering types derive.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -22,7 +22,7 @@ public abstract class CustomFilteringAttribute : FilteringTypeAttribute
 
 | name | description |
 | --- | --- |
-| [CustomFilteringAttribute](CustomFilteringAttribute/CustomFilteringAttribute.md)(…) | Base class which other custom filtering types derive from. |
+| [CustomFilteringAttribute](CustomFilteringAttribute/CustomFilteringAttribute.md)(…) | Base class from which other custom filtering types derive. |
 | [GetOption&lt;TType&gt;](CustomFilteringAttribute/GetOption.md)(…) | Gets the option. |
 | [SetOption](CustomFilteringAttribute/SetOption.md)(…) | Sets the option. |
 

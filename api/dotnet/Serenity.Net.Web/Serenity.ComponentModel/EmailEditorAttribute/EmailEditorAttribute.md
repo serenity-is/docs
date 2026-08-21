@@ -1,7 +1,7 @@
 # EmailEditorAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the email editor
+Initializes a new instance of the [`EmailEditorAttribute`](../EmailEditorAttribute.md) class.
 
 ```csharp
 public EmailEditorAttribute()

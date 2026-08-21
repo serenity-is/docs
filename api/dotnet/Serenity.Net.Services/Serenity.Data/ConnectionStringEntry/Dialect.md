@@ -1,7 +1,7 @@
 # ConnectionStringEntry.Dialect property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets / sets dialect name
+Gets or sets the dialect name.
 
 ```csharp
 public string Dialect { get; set; }

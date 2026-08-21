@@ -1,7 +1,7 @@
 # FormatFilenameOptions.EntityId property
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Entity ID
+Gets or sets the entity ID.
 
 ```csharp
 public object EntityId { get; set; }

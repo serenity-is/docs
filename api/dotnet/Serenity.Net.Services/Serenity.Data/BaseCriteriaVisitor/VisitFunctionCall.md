@@ -11,6 +11,10 @@ protected virtual BaseCriteria VisitFunctionCall(FunctionCallCriteria criteria)
 | --- | --- |
 | criteria | The criteria. |
 
+## Return Value
+
+The visited function call criteria.
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)

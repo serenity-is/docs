@@ -21,7 +21,7 @@ public interface IRetrieveHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 
 | name | description |
 | --- | --- |
-| [Retrieve](IRetrieveHandler-3/Retrieve.md)(…) | Processes a Retrieve request |
+| [Retrieve](IRetrieveHandler-3/Retrieve.md)(…) | Processes a Retrieve request. |
 
 ## See Also
 

@@ -11,6 +11,10 @@ public SqlQuery ForXml(string forXml)
 | --- | --- |
 | forXml | FOR XML type, usually "RAW". |
 
+## Return Value
+
+The query itself.
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

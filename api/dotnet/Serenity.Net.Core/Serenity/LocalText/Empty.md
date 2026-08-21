@@ -1,7 +1,7 @@
 # LocalText.Empty field
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-An empty local text instance like string.Empty
+An empty local text instance, similar to Empty.
 
 ```csharp
 public static readonly LocalText Empty;

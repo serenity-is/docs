@@ -1,7 +1,7 @@
 # SiteMembershipProvider.ComputeSHA512 method
 **namespace:** *[Serenity.Web.Providers](../../README.md#serenity.web.providers-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Computes SHA512 of the string
+Computes the SHA512 hash of the given string.
 
 ```csharp
 public static string ComputeSHA512(string s)
@@ -9,13 +9,17 @@ public static string ComputeSHA512(string s)
 
 | parameter | description |
 | --- | --- |
-| s | String |
+| s | The string to hash. |
+
+## Return Value
+
+The base64 encoded SHA512 hash with padding stripped.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | String is null or empty |
+| ArgumentNullException | *s* is null or empty. |
 
 ## See Also
 

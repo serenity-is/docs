@@ -1,7 +1,7 @@
 # HttpRequestExtensions.GetBaseUri method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets the base uri for the current request
+Gets the base URI for the current request.
 
 ```csharp
 public static Uri GetBaseUri(this HttpRequest request, bool pathBase = true)
@@ -9,14 +9,18 @@ public static Uri GetBaseUri(this HttpRequest request, bool pathBase = true)
 
 | parameter | description |
 | --- | --- |
-| request | HTTP request |
-| pathBase | Include path base |
+| request | The HTTP request. |
+| pathBase | Whether to include the path base. |
+
+## Return Value
+
+The base URI.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Request is null |
+| ArgumentNullException | *request* is `null`. |
 
 ## See Also
 

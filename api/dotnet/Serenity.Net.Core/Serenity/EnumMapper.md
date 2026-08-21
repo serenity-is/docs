@@ -1,7 +1,7 @@
 # EnumMapper class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains Enum mapping and other helper functions
+Contains Enum mapping and other helper functions.
 
 ```csharp
 public static class EnumMapper

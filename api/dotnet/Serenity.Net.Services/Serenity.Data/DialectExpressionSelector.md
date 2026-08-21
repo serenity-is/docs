@@ -17,7 +17,7 @@ public class DialectExpressionSelector
 | --- | --- |
 | [DialectExpressionSelector](DialectExpressionSelector/DialectExpressionSelector.md)(…) | Selects field expressions based on dialect |
 | [Dialect](DialectExpressionSelector/Dialect.md) { get; } | Gets the dialect used for this expression selector |
-| [GetBestMatch&lt;TAttribute&gt;](DialectExpressionSelector/GetBestMatch.md)(…) | Gets the best match. |
+| [GetBestMatch&lt;TAttribute&gt;](DialectExpressionSelector/GetBestMatch.md)(…) | Gets the best matching attribute for the current dialect. |
 
 ## Exceptions
 

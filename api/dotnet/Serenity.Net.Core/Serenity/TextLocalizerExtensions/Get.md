@@ -1,7 +1,7 @@
 # TextLocalizerExtensions.Get method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets translation for a key
+Gets the translation for a key.
 
 ```csharp
 public static string Get(this ITextLocalizer localTexts, string key)
@@ -9,12 +9,12 @@ public static string Get(this ITextLocalizer localTexts, string key)
 
 | parameter | description |
 | --- | --- |
-| localTexts | The local texts |
-| key | Key |
+| localTexts | The text localizer. |
+| key | The key. |
 
 ## Return Value
 
-Translated text or key itself if no translation found
+The translated text, or the key itself if no translation is found.
 
 ## See Also
 

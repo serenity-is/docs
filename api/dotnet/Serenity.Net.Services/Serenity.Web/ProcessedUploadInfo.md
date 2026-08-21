@@ -12,11 +12,11 @@ public class ProcessedUploadInfo
 | name | description |
 | --- | --- |
 | [ProcessedUploadInfo](ProcessedUploadInfo/ProcessedUploadInfo.md)() | The default constructor. |
-| [FileSize](ProcessedUploadInfo/FileSize.md) { get; set; } | File size |
-| [ImageHeight](ProcessedUploadInfo/ImageHeight.md) { get; set; } | Image height |
-| [ImageWidth](ProcessedUploadInfo/ImageWidth.md) { get; set; } | Image width |
-| [IsImage](ProcessedUploadInfo/IsImage.md) { get; set; } | True if the file contains an image |
-| [TemporaryFile](ProcessedUploadInfo/TemporaryFile.md) { get; set; } | Temporary file path |
+| [FileSize](ProcessedUploadInfo/FileSize.md) { get; set; } | Gets or sets the file size. |
+| [ImageHeight](ProcessedUploadInfo/ImageHeight.md) { get; set; } | Gets or sets the image height. |
+| [ImageWidth](ProcessedUploadInfo/ImageWidth.md) { get; set; } | Gets or sets the image width. |
+| [IsImage](ProcessedUploadInfo/IsImage.md) { get; set; } | Gets or sets a value indicating whether the file contains an image. |
+| [TemporaryFile](ProcessedUploadInfo/TemporaryFile.md) { get; set; } | Gets or sets the temporary file path. |
 
 ## See Also
 

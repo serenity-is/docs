@@ -1,7 +1,7 @@
 # IEditableRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Methods and properties of a row to support desktop app grid etc. editing
+Methods and properties of a row to support editing in desktop applications, grids, and similar scenarios.
 
 ```csharp
 public interface IEditableRow : IEditableObject, INotifyPropertyChanged, IRow

@@ -1,7 +1,7 @@
 # RowField&lt;TForeign&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a Row value
+Field with a Row value.
 
 ```csharp
 public class RowField<TForeign> : CustomClassField<TForeign>
@@ -23,7 +23,7 @@ public class RowField<TForeign> : CustomClassField<TForeign>
 
 | name | description |
 | --- | --- |
-| [RowField](RowField-1/RowField.md)(…) | Field with a Row value |
+| [RowField](RowField-1/RowField.md)(…) | Field with a Row value. |
 
 ## Protected Members
 

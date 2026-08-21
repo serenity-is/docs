@@ -1,7 +1,7 @@
 # LocalTextScript constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Local text dynamic script
+Local text dynamic script.
 
 ```csharp
 public LocalTextScript(ILocalTextRegistry registry, string package, string includes, 
@@ -10,21 +10,21 @@ public LocalTextScript(ILocalTextRegistry registry, string package, string inclu
 
 | parameter | description |
 | --- | --- |
-| registry | Text registry |
-| package | Package key |
-| includes | Includes regex |
-| languageId | LanguageID |
-| isPending | True to include pending texts |
+| registry | The text registry. |
+| package | The package key. |
+| includes | The includes regex. |
+| languageId | The language ID. |
+| isPending | `true` to include pending texts. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *registry* or *package* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`LocalTextScript`](../LocalTextScript.md) class.
 
 ## See Also
 

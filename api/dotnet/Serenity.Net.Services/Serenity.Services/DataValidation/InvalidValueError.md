@@ -1,7 +1,7 @@
 # DataValidation.InvalidValueError method (1 of 2)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns an invalid value error
+Returns an invalid value error.
 
 ```csharp
 public static ValidationError InvalidValueError(Field field, object value, ITextLocalizer localizer)
@@ -12,6 +12,10 @@ public static ValidationError InvalidValueError(Field field, object value, IText
 | field | Field |
 | value | Value |
 | localizer | Text localizer |
+
+## Return Value
+
+The invalid value error.
 
 ## See Also
 
@@ -25,7 +29,7 @@ public static ValidationError InvalidValueError(Field field, object value, IText
 # DataValidation.InvalidValueError method (2 of 2)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns an invalid value error
+Returns an invalid value error.
 
 ```csharp
 public static ValidationError InvalidValueError(IRow row, Field field, ITextLocalizer localizer)
@@ -36,6 +40,10 @@ public static ValidationError InvalidValueError(IRow row, Field field, ITextLoca
 | row | Row instance |
 | field | Field |
 | localizer | Text localizer |
+
+## Return Value
+
+The invalid value error.
 
 ## See Also
 

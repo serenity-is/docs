@@ -1,7 +1,7 @@
 # FormCssClassAttribute.UntilNext property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Applies this form css class to all following fields until next another FormCssClass attribute
+Applies this form CSS class to all following fields until another FormCssClass attribute.
 
 ```csharp
 public bool UntilNext { get; set; }

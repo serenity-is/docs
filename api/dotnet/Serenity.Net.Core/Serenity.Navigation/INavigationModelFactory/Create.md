@@ -1,7 +1,7 @@
 # INavigationModelFactory.Create method
 **namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Creates a navigation model for current user
+Creates a navigation model for the current user.
 
 ```csharp
 public INavigationModel Create()

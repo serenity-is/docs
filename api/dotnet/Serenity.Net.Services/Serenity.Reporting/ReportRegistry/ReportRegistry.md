@@ -1,7 +1,7 @@
 # ReportRegistry constructor
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class.
+Initializes a new instance of the class.
 
 ```csharp
 public ReportRegistry(ITypeSource typeSource, IPermissionService permissions, 
@@ -18,7 +18,7 @@ public ReportRegistry(ITypeSource typeSource, IPermissionService permissions,
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *typeSource*, *permissions* or *localizer* is `null`. |
 
 ## See Also
 

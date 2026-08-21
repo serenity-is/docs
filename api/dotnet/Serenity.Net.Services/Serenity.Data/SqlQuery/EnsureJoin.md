@@ -19,7 +19,7 @@ The query itself.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | join is null |
+| ArgumentNullException | join is null. |
 
 ## See Also
 

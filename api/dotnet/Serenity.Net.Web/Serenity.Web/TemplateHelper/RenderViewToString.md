@@ -1,7 +1,7 @@
 # TemplateHelper.RenderViewToString method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Renders a CSHTML view to string
+Renders a CSHTML view to a string.
 
 ```csharp
 public static string RenderViewToString(IServiceProvider serviceProvider, string viewName, 
@@ -10,16 +10,20 @@ public static string RenderViewToString(IServiceProvider serviceProvider, string
 
 | parameter | description |
 | --- | --- |
-| serviceProvider | Service provider |
-| viewName | View name |
-| model | Model object, can also be ViewDataDictionary containing the actual model |
-| beforeRender | An optional callback which will be passed the view context before rendering starts |
+| serviceProvider | The service provider. |
+| viewName | The view name. |
+| model | The model object; can also be a ViewDataDictionary containing the actual model. |
+| beforeRender | An optional callback which will be passed the view context before rendering starts. |
+
+## Return Value
+
+The rendered view content.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException |  |
+| ArgumentNullException | The view is not found. |
 
 ## See Also
 

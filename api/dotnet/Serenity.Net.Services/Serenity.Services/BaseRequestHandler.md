@@ -16,21 +16,21 @@ public abstract class BaseRequestHandler : IRequestHandler
 | name | description |
 | --- | --- |
 | [BaseRequestHandler](BaseRequestHandler/BaseRequestHandler.md)(…) | An abstract class that can be used as base for request handlers that accept a [`IRequestContext`](IRequestContext.md) instance. |
-| [Cache](BaseRequestHandler/Cache.md) { get; } | Gets cache from the request context |
-| [Context](BaseRequestHandler/Context.md) { get; } | Gets the request context |
-| [Localizer](BaseRequestHandler/Localizer.md) { get; } | Gets text localizer from the request context |
-| [Permissions](BaseRequestHandler/Permissions.md) { get; } | Gets permission service from the request context |
-| [User](BaseRequestHandler/User.md) { get; } | Gets the user from the request context |
+| [Cache](BaseRequestHandler/Cache.md) { get; } | Gets the cache from the request context. |
+| [Context](BaseRequestHandler/Context.md) { get; } | Gets the request context. |
+| [Localizer](BaseRequestHandler/Localizer.md) { get; } | Gets the text localizer from the request context. |
+| [Permissions](BaseRequestHandler/Permissions.md) { get; } | Gets the permission service from the request context. |
+| [User](BaseRequestHandler/User.md) { get; } | Gets the user from the request context. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Context is null |
+| ArgumentNullException | *context* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class.
+Initializes a new instance of the class.
 
 ## See Also
 

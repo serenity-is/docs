@@ -1,7 +1,7 @@
 # JsonSafeInt64Converter class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Serialize/deserialize a row
+Serializes and deserializes a row.
 
 ```csharp
 public class JsonSafeInt64Converter : JsonConverter

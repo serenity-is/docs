@@ -1,7 +1,7 @@
 # ITypeSource.GetTypesWithAttribute method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets all types that has an attribute
+Gets all types that have an attribute.
 
 ```csharp
 public IEnumerable<Type> GetTypesWithAttribute(Type attributeType)
@@ -9,11 +9,11 @@ public IEnumerable<Type> GetTypesWithAttribute(Type attributeType)
 
 | parameter | description |
 | --- | --- |
-| attributeType | Attribute type |
+| attributeType | Attribute type. |
 
 ## Return Value
 
-Types with that attribute type
+Types with that attribute type.
 
 ## See Also
 

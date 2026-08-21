@@ -11,6 +11,10 @@ public static string RemoveT0Reference(string expression)
 | --- | --- |
 | expression | The expression. |
 
+## Return Value
+
+The expression with the T0 reference removed.
+
 ## See Also
 
 * class [SqlUpdate](../SqlUpdate.md)

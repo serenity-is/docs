@@ -13,6 +13,10 @@ public static IEnumerable<T> TSort<T>(IEnumerable<T> source, Func<T, IEnumerable
 | source | The source. |
 | dependencies | The dependencies. |
 
+## Return Value
+
+The items sorted so that dependencies come before dependents.
+
 ## See Also
 
 * class [T](../Serenity.Net.Core/../AssemblySorter.T.md)

@@ -1,7 +1,7 @@
 # DataReaderExtensions.AsString method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Reads value at field index. Returns DbNull as null.
+Reads the value at the field index. Returns `null` if the value is DBNull.
 
 ```csharp
 public static string AsString(this IDataReader reader, int index)
@@ -9,12 +9,12 @@ public static string AsString(this IDataReader reader, int index)
 
 | parameter | description |
 | --- | --- |
-| reader | Reader (required). |
-| index | Index. |
+| reader | The reader (required). |
+| index | The field index. |
 
 ## Return Value
 
-Field value or null if value is DbNull.
+The field value, or `null` if the value is DBNull.
 
 ## See Also
 

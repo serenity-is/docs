@@ -9,14 +9,14 @@ public ServiceResolver(IServiceProvider serviceProvider)
 
 | parameter | description |
 | --- | --- |
-| TService |  |
-| serviceProvider | The service provider |
+| TService | The type of the service to resolve. |
+| serviceProvider | The service provider. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Throws when service provider is null |
+| ArgumentNullException | Throws when the service provider is null. |
 
 ## Remarks
 

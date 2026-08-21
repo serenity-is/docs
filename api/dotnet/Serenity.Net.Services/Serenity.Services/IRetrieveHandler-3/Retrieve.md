@@ -1,7 +1,7 @@
 # IRetrieveHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.Retrieve method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Processes a Retrieve request
+Processes a Retrieve request.
 
 ```csharp
 public TRetrieveResponse Retrieve(IDbConnection connection, TRetrieveRequest request)
@@ -11,6 +11,10 @@ public TRetrieveResponse Retrieve(IDbConnection connection, TRetrieveRequest req
 | --- | --- |
 | connection | Connection |
 | request | Retrieve request |
+
+## Return Value
+
+The retrieve response.
 
 ## See Also
 

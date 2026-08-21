@@ -12,8 +12,8 @@ public class ImageFormatInfo
 | name | description |
 | --- | --- |
 | [ImageFormatInfo](ImageFormatInfo/ImageFormatInfo.md)() | The default constructor. |
-| [FileExtensions](ImageFormatInfo/FileExtensions.md) { get; set; } | List of expected file extensions |
-| [MimeType](ImageFormatInfo/MimeType.md) { get; set; } | Default mime type |
+| [FileExtensions](ImageFormatInfo/FileExtensions.md) { get; set; } | Gets or sets the list of expected file extensions. |
+| [MimeType](ImageFormatInfo/MimeType.md) { get; set; } | Gets or sets the default MIME type. |
 
 ## See Also
 

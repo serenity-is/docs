@@ -1,7 +1,7 @@
 # Throttler.Key property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Cache key
+Gets the logical key identifying the throttled resource.
 
 ```csharp
 public string Key { get; }

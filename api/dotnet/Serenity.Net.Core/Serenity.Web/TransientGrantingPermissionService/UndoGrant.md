@@ -1,11 +1,17 @@
 # TransientGrantingPermissionService.UndoGrant method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Undoes last grant or grant all operation
+Reverts the most recent [`Grant`](Grant.md) or [`GrantAll`](GrantAll.md) operation.
 
 ```csharp
 public void UndoGrant()
 ```
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| InvalidOperationException | The granting stack is empty. |
 
 ## See Also
 

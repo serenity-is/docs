@@ -17,7 +17,7 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Cache is null |
+| ArgumentNullException | *row* is `null`. |
 
 ## See Also
 
@@ -48,7 +48,7 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Cache is null |
+| ArgumentNullException | *fields* is `null`. |
 
 ## See Also
 
@@ -62,7 +62,7 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 # TwoLevelCacheInvalidationExtensions.InvalidateOnCommit method (3 of 3)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Invalidates cached items related to a group key when the unit of work commits
+Invalidates cached items related to a group key when the unit of work commits.
 
 ```csharp
 public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow, string groupKey)
@@ -78,7 +78,7 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | cache is null |
+| ArgumentNullException | *cache* is `null`. |
 
 ## See Also
 

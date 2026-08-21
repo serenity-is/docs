@@ -13,7 +13,7 @@ public IDbConnection Profile(IDbConnection connection)
 
 ## Return Value
 
-Wrapped connection.
+The wrapped connection.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # CustomEditorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Base attribute class that all other custom editor types derives from.
+Base attribute class that all other custom editor types derive from.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -22,7 +22,7 @@ public abstract class CustomEditorAttribute : EditorTypeAttribute
 
 | name | description |
 | --- | --- |
-| [CustomEditorAttribute](CustomEditorAttribute/CustomEditorAttribute.md)(…) | Base attribute class that all other custom editor types derives from. |
+| [CustomEditorAttribute](CustomEditorAttribute/CustomEditorAttribute.md)(…) | Base attribute class that all other custom editor types derive from. |
 | [GetOption&lt;TType&gt;](CustomEditorAttribute/GetOption.md)(…) | Gets the editor option. |
 | [SetOption](CustomEditorAttribute/SetOption.md)(…) | Sets the editor option. |
 

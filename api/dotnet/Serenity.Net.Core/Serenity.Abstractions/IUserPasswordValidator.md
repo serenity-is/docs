@@ -1,7 +1,7 @@
 # IUserPasswordValidator interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction to validate a user password
+Validates a username and password combination.
 
 ```csharp
 public interface IUserPasswordValidator
@@ -11,7 +11,7 @@ public interface IUserPasswordValidator
 
 | name | description |
 | --- | --- |
-| [Validate](IUserPasswordValidator/Validate.md)(…) | Validates a user password |
+| [Validate](IUserPasswordValidator/Validate.md)(…) | Validates the specified username and password. |
 
 ## See Also
 

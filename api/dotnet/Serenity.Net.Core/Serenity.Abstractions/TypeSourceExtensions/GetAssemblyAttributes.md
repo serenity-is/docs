@@ -1,7 +1,7 @@
 # TypeSourceExtensions.GetAssemblyAttributes&lt;TAttribute&gt; method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets all attributes for assemblies
+Gets all attributes for assemblies.
 
 ```csharp
 public static IEnumerable<TAttribute> GetAssemblyAttributes<TAttribute>(this ITypeSource typeSource)
@@ -10,7 +10,7 @@ public static IEnumerable<TAttribute> GetAssemblyAttributes<TAttribute>(this ITy
 
 ## Return Value
 
-List of attributes for assemblies
+List of attributes for assemblies.
 
 ## See Also
 

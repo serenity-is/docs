@@ -1,7 +1,7 @@
 # ImpersonatingUserAccessor.Impersonate method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Temporarily impersonates as a user
+Pushes the specified principal onto the impersonation stack.
 
 ```csharp
 public void Impersonate(ClaimsPrincipal user)
@@ -9,7 +9,13 @@ public void Impersonate(ClaimsPrincipal user)
 
 | parameter | description |
 | --- | --- |
-| user | User to impersonate as |
+| user | The principal to impersonate. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *user* is `null`. |
 
 ## See Also
 

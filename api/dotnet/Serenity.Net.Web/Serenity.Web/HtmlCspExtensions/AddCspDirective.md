@@ -10,9 +10,9 @@ public static void AddCspDirective(this ControllerBase controller, string direct
 
 | parameter | description |
 | --- | --- |
-| controller | Controller |
-| directiveName | CSP directive name |
-| values | CSP directive values. Note that these values will be automatically quoted if they look like keywords ([A-Za-z0-9_-] only) and are not already quoted. |
+| controller | The controller. |
+| directiveName | The CSP directive name. |
+| values | The CSP directive values. Note that these values will be automatically quoted if they look like keywords (`[A-Za-z0-9_-]` only) and are not already quoted. |
 
 ## See Also
 
@@ -32,9 +32,9 @@ public static void AddCspDirective(this HttpContext context, string directiveNam
 
 | parameter | description |
 | --- | --- |
-| context | Http context |
-| directiveName | CSP directive name |
-| values | CSP directive values. Note that these values will be automatically quoted if they look like keywords ([A-Za-z0-9_-] only) and are not already quoted. |
+| context | The HTTP context. |
+| directiveName | The CSP directive name. |
+| values | The CSP directive values. Note that these values will be automatically quoted if they look like keywords (`[A-Za-z0-9_-]` only) and are not already quoted. |
 
 ## See Also
 
@@ -54,9 +54,9 @@ public static void AddCspDirective(this IHtmlHelper html, string directiveName,
 
 | parameter | description |
 | --- | --- |
-| html | Html helper |
-| directiveName | CSP directive name |
-| values | CSP directive values. Note that these values will be automatically quoted if they look like keywords ([A-Za-z0-9_-] only) and are not already quoted. |
+| html | The HTML helper. |
+| directiveName | The CSP directive name. |
+| values | The CSP directive values. Note that these values will be automatically quoted if they look like keywords (`[A-Za-z0-9_-]` only) and are not already quoted. |
 
 ## See Also
 

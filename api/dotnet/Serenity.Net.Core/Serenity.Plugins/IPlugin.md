@@ -1,7 +1,7 @@
 # IPlugin interface
 **namespace:** *[Serenity.Plugins](../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for plugins
+Abstraction for plugins.
 
 ```csharp
 public interface IPlugin

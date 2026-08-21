@@ -1,7 +1,7 @@
 # SqlCommandDumper class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-http://stackoverflow.com/questions/265192/get-the-generated-sql-statement-from-a-sqlcommand-object (answer by Mitch)
+Generates a debug version of a SQL command, including DECLARE statements for its parameters, so that it can be executed or inspected outside of the original connection. Based on the answer by Mitch at http://stackoverflow.com/questions/265192/get-the-generated-sql-statement-from-a-sqlcommand-object.
 
 ```csharp
 public class SqlCommandDumper
@@ -12,7 +12,7 @@ public class SqlCommandDumper
 | name | description |
 | --- | --- |
 | [SqlCommandDumper](SqlCommandDumper/SqlCommandDumper.md)() | The default constructor. |
-| static [GetCommandText](SqlCommandDumper/GetCommandText.md)(…) | Gets the command text. |
+| static [GetCommandText](SqlCommandDumper/GetCommandText.md)(…) | Gets the command text for the specified command, including parameter declarations. |
 
 ## See Also
 

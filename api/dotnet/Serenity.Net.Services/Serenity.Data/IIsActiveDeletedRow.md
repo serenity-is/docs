@@ -1,7 +1,7 @@
 # IIsActiveDeletedRow interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Marks an IIsActiveRow that -1 is used as deleted value
+Marks an [`IIsActiveRow`](IIsActiveRow.md) where -1 is used as the deleted value.
 
 ```csharp
 public interface IIsActiveDeletedRow : IIsActiveRow

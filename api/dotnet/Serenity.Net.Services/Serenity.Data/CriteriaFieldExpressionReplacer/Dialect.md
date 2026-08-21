@@ -1,7 +1,7 @@
 # CriteriaFieldExpressionReplacer.Dialect property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-The dialect passed in or default dialect
+Gets the dialect passed in or the default dialect.
 
 ```csharp
 protected ISqlDialect Dialect { get; }

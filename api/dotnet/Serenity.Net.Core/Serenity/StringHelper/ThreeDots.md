@@ -1,7 +1,7 @@
 # StringHelper.ThreeDots method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-If the string's length is over a specified limit, trims its right and adds three points ("...").
+If the string's length is over a specified limit, trims its right side and adds three points ("...").
 
 ```csharp
 public static string ThreeDots(this string str, int maxLength)

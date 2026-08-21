@@ -1,7 +1,7 @@
 # JsonLocalTextRegistration.ProcessNestedDictionary&lt;TValue&gt; method
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Converts translation from a hierarchical local text dictionary to a simple dictionary.
+Converts translations from a hierarchical local text dictionary to a simple dictionary.
 
 ```csharp
 public static void ProcessNestedDictionary<TValue>(IDictionary<string, TValue> nested, 
@@ -10,9 +10,9 @@ public static void ProcessNestedDictionary<TValue>(IDictionary<string, TValue> n
 
 | parameter | description |
 | --- | --- |
-| nested | Object parsed from local text JSON string |
-| prefix | Prefix to prepend before local text keys |
-| target | Target dictionary that will contain keys and translations |
+| nested | The object parsed from the local text JSON string. |
+| prefix | The prefix to prepend before local text keys. |
+| target | The target dictionary that will contain the keys and translations. |
 
 ## See Also
 

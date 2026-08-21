@@ -1,7 +1,7 @@
 # RowListField&lt;TForeign&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a RowList value
+Field with a RowList value.
 
 ```csharp
 public class RowListField<TForeign> : CustomClassField<List<TForeign>>
@@ -23,7 +23,7 @@ public class RowListField<TForeign> : CustomClassField<List<TForeign>>
 
 | name | description |
 | --- | --- |
-| [RowListField](RowListField-1/RowListField.md)(…) | Field with a RowList value |
+| [RowListField](RowListField-1/RowListField.md)(…) | Field with a RowList value. |
 
 ## Protected Members
 

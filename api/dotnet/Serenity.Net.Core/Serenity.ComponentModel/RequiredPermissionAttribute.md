@@ -1,7 +1,7 @@
 # RequiredPermissionAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Specifies required permission to access an object, e.g. a report
+Specifies the required permission to access an object, e.g. a report.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

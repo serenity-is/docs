@@ -1,7 +1,7 @@
 # DefaultRequestContext constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default implementation for a [`IRequestContext`](../IRequestContext.md)
+Default implementation for a [`IRequestContext`](../IRequestContext.md).
 
 ```csharp
 public DefaultRequestContext(IBehaviorProvider behaviors, ITwoLevelCache cache, 
@@ -20,11 +20,11 @@ public DefaultRequestContext(IBehaviorProvider behaviors, ITwoLevelCache cache,
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Any of the arguments is null |
+| ArgumentNullException | Any of the arguments is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

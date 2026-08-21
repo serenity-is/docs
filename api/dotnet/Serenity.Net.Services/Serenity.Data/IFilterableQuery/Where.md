@@ -11,10 +11,6 @@ public void Where(string filter)
 | --- | --- |
 | filter | Filter string. |
 
-## Return Value
-
-Object itself.
-
 ## See Also
 
 * interface [IFilterableQuery](../IFilterableQuery.md)

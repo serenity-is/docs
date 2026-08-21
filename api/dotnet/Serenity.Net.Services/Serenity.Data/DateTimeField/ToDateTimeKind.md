@@ -1,7 +1,7 @@
 # DateTimeField.ToDateTimeKind method (1 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to this field's DateTimeKind
+Converts the value to this field's DateTimeKind.
 
 ```csharp
 public DateTime ToDateTimeKind(DateTime value)
@@ -10,6 +10,10 @@ public DateTime ToDateTimeKind(DateTime value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The converted value.
 
 ## See Also
 
@@ -20,7 +24,7 @@ public DateTime ToDateTimeKind(DateTime value)
 # DateTimeField.ToDateTimeKind method (2 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to this field's DateTimeKind
+Converts the value to this field's DateTimeKind.
 
 ```csharp
 public DateTime ToDateTimeKind(DateTimeOffset value)
@@ -29,6 +33,10 @@ public DateTime ToDateTimeKind(DateTimeOffset value)
 | parameter | description |
 | --- | --- |
 | value | The value. |
+
+## Return Value
+
+The converted value.
 
 ## See Also
 
@@ -39,7 +47,7 @@ public DateTime ToDateTimeKind(DateTimeOffset value)
 # DateTimeField.ToDateTimeKind method (3 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to specified DateTimeKind
+Converts the value to the specified DateTimeKind.
 
 ```csharp
 public static DateTime ToDateTimeKind(DateTime value, DateTimeKind? dateTimeKind)
@@ -50,6 +58,10 @@ public static DateTime ToDateTimeKind(DateTime value, DateTimeKind? dateTimeKind
 | value | The value. |
 | dateTimeKind | Kind of the date time. |
 
+## Return Value
+
+The converted value.
+
 ## See Also
 
 * class [DateTimeField](../DateTimeField.md)
@@ -59,7 +71,7 @@ public static DateTime ToDateTimeKind(DateTime value, DateTimeKind? dateTimeKind
 # DateTimeField.ToDateTimeKind method (4 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Converts the value to specified DateTimeKind
+Converts the value to the specified DateTimeKind.
 
 ```csharp
 public static DateTime ToDateTimeKind(DateTimeOffset value, DateTimeKind? dateTimeKind)
@@ -69,6 +81,10 @@ public static DateTime ToDateTimeKind(DateTimeOffset value, DateTimeKind? dateTi
 | --- | --- |
 | value | The value. |
 | dateTimeKind | Kind of the date time. |
+
+## Return Value
+
+The converted value.
 
 ## See Also
 

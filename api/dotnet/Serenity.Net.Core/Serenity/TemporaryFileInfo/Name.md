@@ -1,7 +1,7 @@
 # TemporaryFileInfo.Name property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Name of the file
+Gets or sets the name of the file.
 
 ```csharp
 public string Name { get; set; }

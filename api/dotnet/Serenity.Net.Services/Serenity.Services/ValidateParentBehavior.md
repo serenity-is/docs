@@ -1,7 +1,7 @@
 # ValidateParentBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Validation behavior for rows that have a parent record via [`IParentIdRow`](../Serenity.Data/IParentIdRow.md) interface
+Validation behavior for rows that have a parent record via [`IParentIdRow`](../Serenity.Data/IParentIdRow.md) interface.
 
 ```csharp
 public class ValidateParentBehavior : BaseSaveBehavior
@@ -16,18 +16,18 @@ public class ValidateParentBehavior : BaseSaveBehavior
 
 | name | description |
 | --- | --- |
-| [ValidateParentBehavior](ValidateParentBehavior/ValidateParentBehavior.md)(…) | Validation behavior for rows that have a parent record via [`IParentIdRow`](../Serenity.Data/IParentIdRow.md) interface |
+| [ValidateParentBehavior](ValidateParentBehavior/ValidateParentBehavior.md)(…) | Validation behavior for rows that have a parent record via [`IParentIdRow`](../Serenity.Data/IParentIdRow.md) interface. |
 | override [OnValidateRequest](ValidateParentBehavior/OnValidateRequest.md)(…) |  |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | rowTypeRegistry or localizer is null |
+| ArgumentNullException | *rowTypeRegistry* or *localizer* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

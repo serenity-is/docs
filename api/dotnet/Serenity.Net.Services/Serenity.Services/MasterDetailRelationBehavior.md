@@ -1,7 +1,7 @@
 # MasterDetailRelationBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md)
+Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md).
 
 ```csharp
 public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior, 
@@ -16,7 +16,7 @@ public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavi
 
 | name | description |
 | --- | --- |
-| [MasterDetailRelationBehavior](MasterDetailRelationBehavior/MasterDetailRelationBehavior.md)(…) | Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md) |
+| [MasterDetailRelationBehavior](MasterDetailRelationBehavior/MasterDetailRelationBehavior.md)(…) | Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md). |
 | [Target](MasterDetailRelationBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](MasterDetailRelationBehavior/ActivateFor.md)(…) |  |
 | [OnAfterExecuteQuery](MasterDetailRelationBehavior/OnAfterExecuteQuery.md)(…) |  (2 methods) |
@@ -32,11 +32,11 @@ public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavi
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | handlerFactory is null |
+| ArgumentNullException | *handlerFactory* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

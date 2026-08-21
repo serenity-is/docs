@@ -1,7 +1,7 @@
 # DataValidation.ArgumentOutOfRange method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns an argument out of range error
+Returns an argument out of range error.
 
 ```csharp
 public static ValidationError ArgumentOutOfRange(string argument, ITextLocalizer localizer)
@@ -11,6 +11,10 @@ public static ValidationError ArgumentOutOfRange(string argument, ITextLocalizer
 | --- | --- |
 | argument | Argument name |
 | localizer | Text localizer |
+
+## Return Value
+
+The argument out of range error.
 
 ## See Also
 

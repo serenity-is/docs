@@ -18,7 +18,7 @@ public class FilteringTypeAttribute : Attribute
 | --- | --- |
 | [FilteringTypeAttribute](FilteringTypeAttribute/FilteringTypeAttribute.md)(…) | Sets filtering type for the field |
 | [FilteringType](FilteringTypeAttribute/FilteringType.md) { get; } | Gets the type of the filtering. |
-| virtual [SetParams](FilteringTypeAttribute/SetParams.md)(…) | Sets the parameters. This is called by filtering system to pass additional parameters / options to the filtering object |
+| virtual [SetParams](FilteringTypeAttribute/SetParams.md)(…) | Sets the parameters. This is called by the filtering system to pass additional parameters / options to the filtering object. |
 
 ## Remarks
 

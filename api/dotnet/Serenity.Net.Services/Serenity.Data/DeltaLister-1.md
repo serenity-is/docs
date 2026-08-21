@@ -1,7 +1,7 @@
 # DeltaLister&lt;TItem&gt; class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Helper class to find differences between to lists for updating
+Helper class to find differences between two lists for updating.
 
 ```csharp
 public class DeltaLister<TItem>

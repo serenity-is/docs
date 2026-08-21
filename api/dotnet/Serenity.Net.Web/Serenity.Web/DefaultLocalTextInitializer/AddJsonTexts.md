@@ -1,7 +1,7 @@
 # DefaultLocalTextInitializer.AddJsonTexts method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Adds json texts to the local text registry
+Adds JSON texts to the local text registry.
 
 ```csharp
 protected virtual void AddJsonTexts(ILocalTextRegistry registry)
@@ -9,7 +9,7 @@ protected virtual void AddJsonTexts(ILocalTextRegistry registry)
 
 | parameter | description |
 | --- | --- |
-| registry | Target registry |
+| registry | The target registry. |
 
 ## See Also
 

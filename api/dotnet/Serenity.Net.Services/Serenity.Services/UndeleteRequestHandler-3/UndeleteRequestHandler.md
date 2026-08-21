@@ -1,7 +1,7 @@
 # UndeleteRequestHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt; constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ```csharp
 public UndeleteRequestHandler(IRequestContext context)
@@ -15,7 +15,7 @@ public UndeleteRequestHandler(IRequestContext context)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Context is null |
+| ArgumentNullException | *context* is `null`. |
 
 ## See Also
 

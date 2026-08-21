@@ -1,7 +1,7 @@
 # ReportRegistry.Report.Category property
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-The category
+Gets the category.
 
 ```csharp
 public Category Category { get; }

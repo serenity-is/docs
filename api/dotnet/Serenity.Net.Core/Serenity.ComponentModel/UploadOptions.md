@@ -1,10 +1,10 @@
 # UploadOptions class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Set of default upload options
+Set of default upload options.
 
 ```csharp
-public class UploadOptions : IUploadFileConstraints, IUploadFileOptions, IUploadImageContrains, 
+public class UploadOptions : IUploadFileConstraints, IUploadFileOptions, IUploadImageConstraints, 
     IUploadImageOptions
 ```
 
@@ -42,15 +42,15 @@ public class UploadOptions : IUploadFileConstraints, IUploadFileOptions, IUpload
 | [ThumbQuality](UploadOptions/ThumbQuality.md) { get; set; } |  |
 | [ThumbSizes](UploadOptions/ThumbSizes.md) { get; set; } |  |
 | [ThumbWidth](UploadOptions/ThumbWidth.md) { get; set; } |  |
-| static [DefaultImageExtensions](UploadOptions/DefaultImageExtensions.md) |  |
-| const [DefaultScaleMode](UploadOptions/DefaultScaleMode.md) | Default scale mode |
-| const [DefaultThumbMode](UploadOptions/DefaultThumbMode.md) | Default thumb mode |
-| const [DefaultThumbQuality](UploadOptions/DefaultThumbQuality.md) | Default thumb quality |
+| static [DefaultImageExtensions](UploadOptions/DefaultImageExtensions.md) | Default list of image extensions: ".gif;.jpg;.jpeg;.png;" |
+| const [DefaultScaleMode](UploadOptions/DefaultScaleMode.md) | Default scale mode. |
+| const [DefaultThumbMode](UploadOptions/DefaultThumbMode.md) | Default thumb mode. |
+| const [DefaultThumbQuality](UploadOptions/DefaultThumbQuality.md) | Default thumb quality. |
 
 ## See Also
 
 * interface [IUploadFileConstraints](IUploadFileConstraints.md)
 * interface [IUploadFileOptions](IUploadFileOptions.md)
-* interface [IUploadImageContrains](IUploadImageContrains.md)
+* interface [IUploadImageConstraints](IUploadImageConstraints.md)
 * interface [IUploadImageOptions](IUploadImageOptions.md)
 * **Source:** *[UploadOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/UploadOptions.cs)*

@@ -21,18 +21,18 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [UndeleteRequestHandler](UndeleteRequestHandler-3/UndeleteRequestHandler.md)(…) | Creates an instance of the class |
-| [Cache](UndeleteRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context |
-| [Connection](UndeleteRequestHandler-3/Connection.md) { get; } | Gets current connection from the unit of work |
-| [Context](UndeleteRequestHandler-3/Context.md) { get; } | Gets the request context |
-| [Localizer](UndeleteRequestHandler-3/Localizer.md) { get; } | Gets localizer from the request context |
-| [Permissions](UndeleteRequestHandler-3/Permissions.md) { get; } | Gets permission service from the request context |
-| [Request](UndeleteRequestHandler-3/Request.md) { get; protected set; } | Request object |
-| [Response](UndeleteRequestHandler-3/Response.md) { get; protected set; } | Response object |
-| [Row](UndeleteRequestHandler-3/Row.md) { get; protected set; } | The entity |
+| [UndeleteRequestHandler](UndeleteRequestHandler-3/UndeleteRequestHandler.md)(…) | Initializes a new instance of the class. |
+| [Cache](UndeleteRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context. |
+| [Connection](UndeleteRequestHandler-3/Connection.md) { get; } | Gets the current connection from the unit of work. |
+| [Context](UndeleteRequestHandler-3/Context.md) { get; } | Gets the request context. |
+| [Localizer](UndeleteRequestHandler-3/Localizer.md) { get; } | Gets the localizer from the request context. |
+| [Permissions](UndeleteRequestHandler-3/Permissions.md) { get; } | Gets the permission service from the request context. |
+| [Request](UndeleteRequestHandler-3/Request.md) { get; protected set; } | Gets the request object. |
+| [Response](UndeleteRequestHandler-3/Response.md) { get; protected set; } | Gets the response object. |
+| [Row](UndeleteRequestHandler-3/Row.md) { get; protected set; } | Gets the entity being undeleted. |
 | [StateBag](UndeleteRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
-| [UnitOfWork](UndeleteRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets current unit of work |
-| [User](UndeleteRequestHandler-3/User.md) { get; } | Gets current user from the request context |
+| [UnitOfWork](UndeleteRequestHandler-3/UnitOfWork.md) { get; protected set; } | Gets the current unit of work. |
+| [User](UndeleteRequestHandler-3/User.md) { get; } | Gets the current user from the request context. |
 | [Process](UndeleteRequestHandler-3/Process.md)(…) | Processes the undelete request. This is the entry point for the handler. |
 | [Undelete](UndeleteRequestHandler-3/Undelete.md)(…) |  |
 
@@ -40,10 +40,10 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](UndeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request |
+| [behaviors-](UndeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAudit](UndeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteUndelete](UndeleteRequestHandler-3/ExecuteUndelete.md)() | Executes the actual SQL undelete/update operation |
-| virtual [GetBehaviors](UndeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of undelete behaviors |
+| virtual [GetBehaviors](UndeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of undelete behaviors. |
 | virtual [GetDisplayOrderFilter](UndeleteRequestHandler-3/GetDisplayOrderFilter.md)() | Gets the display order filter for current group, if the entity implements [`IDisplayOrderRow`](../Serenity.Data/IDisplayOrderRow.md) interface |
 | virtual [InvalidateCacheOnCommit](UndeleteRequestHandler-3/InvalidateCacheOnCommit.md)() | Attaches a cache invalidation call to to OnCommit callback of the current unit of work. This would clear cached items related to this row type. |
 | virtual [InvokeUndeleteAction](UndeleteRequestHandler-3/InvokeUndeleteAction.md)(…) | Invokes the passed undelete action method |

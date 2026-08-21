@@ -1,7 +1,7 @@
 # DiskUploadStorage.RootPath property
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Root path for the uploads
+Gets the root path for the uploads.
 
 ```csharp
 public string RootPath { get; }

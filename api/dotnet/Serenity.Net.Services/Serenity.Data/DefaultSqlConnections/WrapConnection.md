@@ -1,7 +1,7 @@
 # DefaultSqlConnections.WrapConnection method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Wraps and profiles the actual connection
+Wraps and profiles the actual connection.
 
 ```csharp
 protected virtual IDbConnection WrapConnection(IDbConnection connection, string providerName, 
@@ -10,9 +10,13 @@ protected virtual IDbConnection WrapConnection(IDbConnection connection, string 
 
 | parameter | description |
 | --- | --- |
-| connection | Actual connection |
-| providerName | Provider name |
-| dialect | Dialect |
+| connection | The actual connection. |
+| providerName | The provider name. |
+| dialect | The dialect. |
+
+## Return Value
+
+The wrapped connection.
 
 ## See Also
 

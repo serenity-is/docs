@@ -1,7 +1,7 @@
 # ContentHashCache.CDNSettings class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-CDN settings for content hash cache
+CDN settings for the content hash cache.
 
 ```csharp
 public class CDNSettings
@@ -12,11 +12,11 @@ public class CDNSettings
 | name | description |
 | --- | --- |
 | [CDNSettings](ContentHashCache.CDNSettings/CDNSettings.md)() | The default constructor. |
-| [Enabled](ContentHashCache.CDNSettings/Enabled.md) { get; set; } | Is CDN enabled |
-| [Exclude](ContentHashCache.CDNSettings/Exclude.md) { get; set; } | List of exclude patterns |
-| [HttpsUrl](ContentHashCache.CDNSettings/HttpsUrl.md) { get; set; } | HTTPS URL for the CDN |
-| [Include](ContentHashCache.CDNSettings/Include.md) { get; set; } | List of include patterns |
-| [Url](ContentHashCache.CDNSettings/Url.md) { get; set; } | The CDN URL |
+| [Enabled](ContentHashCache.CDNSettings/Enabled.md) { get; set; } | Gets or sets whether the CDN is enabled. |
+| [Exclude](ContentHashCache.CDNSettings/Exclude.md) { get; set; } | Gets or sets the list of exclude patterns. |
+| [HttpsUrl](ContentHashCache.CDNSettings/HttpsUrl.md) { get; set; } | Gets or sets the HTTPS URL for the CDN. |
+| [Include](ContentHashCache.CDNSettings/Include.md) { get; set; } | Gets or sets the list of include patterns. |
+| [Url](ContentHashCache.CDNSettings/Url.md) { get; set; } | Gets or sets the CDN URL. |
 
 ## See Also
 

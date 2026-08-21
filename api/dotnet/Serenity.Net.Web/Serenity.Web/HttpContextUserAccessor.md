@@ -1,7 +1,7 @@
 # HttpContextUserAccessor class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation of IUserAccessor for HTTP context
+Default implementation of IUserAccessor that reads the current user from the HTTP context.
 
 ```csharp
 public class HttpContextUserAccessor : IUserAccessor
@@ -9,18 +9,18 @@ public class HttpContextUserAccessor : IUserAccessor
 
 | parameter | description |
 | --- | --- |
-| httpContextAccessor | HTTP context accessor |
+| httpContextAccessor | The HTTP context accessor. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [HttpContextUserAccessor](HttpContextUserAccessor/HttpContextUserAccessor.md)(…) | Default implementation of IUserAccessor for HTTP context |
+| [HttpContextUserAccessor](HttpContextUserAccessor/HttpContextUserAccessor.md)(…) | Default implementation of IUserAccessor that reads the current user from the HTTP context. |
 | [User](HttpContextUserAccessor/User.md) { get; } |  |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`HttpContextUserAccessor`](HttpContextUserAccessor.md) class.
 
 ## See Also
 

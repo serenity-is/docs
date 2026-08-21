@@ -11,6 +11,10 @@ public object AsObject(IRow row)
 | --- | --- |
 | row | The row. |
 
+## Return Value
+
+The value of the field in the row as an object.
+
 ## See Also
 
 * interface [IRow](../IRow.md)

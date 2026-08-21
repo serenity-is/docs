@@ -1,7 +1,7 @@
 # IDeleteRequestHandler.Request property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Delete request
+Gets the delete request.
 
 ```csharp
 public DeleteRequest Request { get; }

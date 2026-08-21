@@ -1,7 +1,7 @@
 # Throttler.Limit property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Limit
+Gets the maximum number of attempts allowed within [`Duration`](Duration.md).
 
 ```csharp
 public int Limit { get; }

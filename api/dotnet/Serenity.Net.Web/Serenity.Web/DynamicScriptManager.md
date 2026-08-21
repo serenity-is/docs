@@ -1,7 +1,7 @@
 # DynamicScriptManager class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation for [`IDynamicScriptManager`](IDynamicScriptManager.md)
+Default implementation of [`IDynamicScriptManager`](IDynamicScriptManager.md).
 
 ```csharp
 public class DynamicScriptManager : IDynamicScriptManager
@@ -11,7 +11,7 @@ public class DynamicScriptManager : IDynamicScriptManager
 
 | name | description |
 | --- | --- |
-| [DynamicScriptManager](DynamicScriptManager/DynamicScriptManager.md)(…) | Creates a new instance of the class |
+| [DynamicScriptManager](DynamicScriptManager/DynamicScriptManager.md)(…) | Initializes a new instance of the [`DynamicScriptManager`](DynamicScriptManager.md) class. |
 | event [ScriptChanged](DynamicScriptManager/ScriptChanged.md) |  |
 | [Changed](DynamicScriptManager/Changed.md)(…) |  |
 | [CheckScriptRights](DynamicScriptManager/CheckScriptRights.md)(…) |  |
@@ -21,7 +21,7 @@ public class DynamicScriptManager : IDynamicScriptManager
 | [GetScriptText](DynamicScriptManager/GetScriptText.md)(…) |  |
 | [IfNotRegistered](DynamicScriptManager/IfNotRegistered.md)(…) |  |
 | [IsRegistered](DynamicScriptManager/IsRegistered.md)(…) |  |
-| [PeekScriptHash](DynamicScriptManager/PeekScriptHash.md)(…) | Peeks the script hash for a script without actually executing it |
+| [PeekScriptHash](DynamicScriptManager/PeekScriptHash.md)(…) | Peeks the script hash for a script without actually executing it. |
 | [ReadScriptContent](DynamicScriptManager/ReadScriptContent.md)(…) |  |
 | [Register](DynamicScriptManager/Register.md)(…) |  (2 methods) |
 | [Reset](DynamicScriptManager/Reset.md)() |  |

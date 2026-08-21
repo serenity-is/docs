@@ -1,7 +1,7 @@
 # TransactionSettings.SectionKey field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default sectionkey for TransactionSettings
+The default section key for [`TransactionSettings`](../TransactionSettings.md).
 
 ```csharp
 public const string SectionKey;

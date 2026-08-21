@@ -1,7 +1,7 @@
 # ImageFormatInfo.FileExtensions property
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-List of expected file extensions
+Gets or sets the list of expected file extensions.
 
 ```csharp
 public IEnumerable<string> FileExtensions { get; set; }

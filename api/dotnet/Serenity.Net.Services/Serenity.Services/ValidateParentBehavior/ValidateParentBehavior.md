@@ -1,7 +1,7 @@
 # ValidateParentBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Validation behavior for rows that have a parent record via [`IParentIdRow`](../../Serenity.Data/IParentIdRow.md) interface
+Validation behavior for rows that have a parent record via [`IParentIdRow`](../../Serenity.Data/IParentIdRow.md) interface.
 
 ```csharp
 public ValidateParentBehavior(IRowTypeRegistry rowTypeRegistry, ITextLocalizer localizer)
@@ -16,11 +16,11 @@ public ValidateParentBehavior(IRowTypeRegistry rowTypeRegistry, ITextLocalizer l
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | rowTypeRegistry or localizer is null |
+| ArgumentNullException | *rowTypeRegistry* or *localizer* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

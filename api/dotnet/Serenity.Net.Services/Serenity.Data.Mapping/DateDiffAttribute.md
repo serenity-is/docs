@@ -19,9 +19,9 @@ public class DateDiffAttribute : BaseExpressionAttribute
 | name | description |
 | --- | --- |
 | [DateDiffAttribute](DateDiffAttribute/DateDiffAttribute.md)(…) | DateDiff expression attribute |
-| [End](DateDiffAttribute/End.md) { get; } | Date expression 1 |
-| [Part](DateDiffAttribute/Part.md) { get; } | Date part |
-| [Start](DateDiffAttribute/Start.md) { get; } | Date expression 1 |
+| [End](DateDiffAttribute/End.md) { get; } | Date expression 2. |
+| [Part](DateDiffAttribute/Part.md) { get; } | Date part. |
+| [Start](DateDiffAttribute/Start.md) { get; } | Date expression 1. |
 | override [Translate](DateDiffAttribute/Translate.md)(…) |  |
 
 ## Exceptions

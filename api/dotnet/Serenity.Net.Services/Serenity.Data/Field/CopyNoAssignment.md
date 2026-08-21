@@ -1,7 +1,7 @@
 # Field.CopyNoAssignment method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Copies the no assignment.
+Copies the field value without marking the target as assigned.
 
 ```csharp
 public void CopyNoAssignment(IRow source, IRow target)

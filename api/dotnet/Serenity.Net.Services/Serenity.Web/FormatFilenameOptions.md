@@ -12,10 +12,10 @@ public class FormatFilenameOptions
 | name | description |
 | --- | --- |
 | [FormatFilenameOptions](FormatFilenameOptions/FormatFilenameOptions.md)() | The default constructor. |
-| [EntityId](FormatFilenameOptions/EntityId.md) { get; set; } | Entity ID |
-| [Format](FormatFilenameOptions/Format.md) { get; set; } | File name format |
-| [OriginalName](FormatFilenameOptions/OriginalName.md) { get; set; } | The original name of the file |
-| [PostFormat](FormatFilenameOptions/PostFormat.md) { get; set; } | A call back that will be executed after formatting |
+| [EntityId](FormatFilenameOptions/EntityId.md) { get; set; } | Gets or sets the entity ID. |
+| [Format](FormatFilenameOptions/Format.md) { get; set; } | Gets or sets the file name format. |
+| [OriginalName](FormatFilenameOptions/OriginalName.md) { get; set; } | Gets or sets the original name of the file. |
+| [PostFormat](FormatFilenameOptions/PostFormat.md) { get; set; } | Gets or sets a callback that will be executed after formatting. |
 
 ## See Also
 

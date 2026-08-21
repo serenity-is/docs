@@ -1,7 +1,7 @@
 # ICustomizePropertyItems interface
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Represents a customized column / form script
+Represents a customized column / form script.
 
 ```csharp
 public interface ICustomizePropertyItems

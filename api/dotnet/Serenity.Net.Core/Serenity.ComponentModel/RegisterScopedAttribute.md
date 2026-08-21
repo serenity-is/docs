@@ -1,7 +1,7 @@
 # RegisterScopedAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Enables auto registering for the implementation type this attribute is placed on by using {Try}AddScoped{Keyed} method.
+Enables auto registering for the implementation type this attribute is placed on by using the {Try}AddScoped{Keyed} method.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
@@ -13,7 +13,7 @@ public class RegisterScopedAttribute : RegisterServiceAttribute
 | name | description |
 | --- | --- |
 | [RegisterScopedAttribute](RegisterScopedAttribute/RegisterScopedAttribute.md)() | Creates a new instance of the attribute. |
-| [RegisterScopedAttribute](RegisterScopedAttribute/RegisterScopedAttribute.md)(…) | Creates a new instance of the attribute for specified types. |
+| [RegisterScopedAttribute](RegisterScopedAttribute/RegisterScopedAttribute.md)(…) | Creates a new instance of the attribute for the specified types. |
 
 ## See Also
 

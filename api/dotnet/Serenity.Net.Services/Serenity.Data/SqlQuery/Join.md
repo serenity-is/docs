@@ -11,11 +11,15 @@ public SqlQuery Join(Join join)
 | --- | --- |
 | join | The join. |
 
+## Return Value
+
+The query itself.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | join |
+| ArgumentNullException | join is null. |
 | InvalidOperationException | Another join with different expression is already in the query. |
 
 ## See Also

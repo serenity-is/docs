@@ -11,6 +11,11 @@ public IEnumerable<TAttr> GetAttributes<TAttr>(AttributeOrigin origin = Attribut
 | parameter | description |
 | --- | --- |
 | TAttr | The type of the attribute. |
+| origin | The attribute origin to search. |
+
+## Return Value
+
+The attributes of the specified type.
 
 ## See Also
 

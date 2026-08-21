@@ -1,7 +1,7 @@
 # TemporaryFileHelper.Delete method (1 of 2)
 **namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Deletes a file.
+Deletes the file at the given path.
 
 ```csharp
 public static void Delete(string filePath, IFileSystem fileSystem = null)
@@ -9,8 +9,8 @@ public static void Delete(string filePath, IFileSystem fileSystem = null)
 
 | parameter | description |
 | --- | --- |
-| filePath | File to be deleted (can be null). |
-| fileSystem |  |
+| filePath | The file to be deleted (can be `null`). |
+| fileSystem | The file system to use, or `null` to use the physical file system. |
 
 ## See Also
 
@@ -22,7 +22,7 @@ public static void Delete(string filePath, IFileSystem fileSystem = null)
 # TemporaryFileHelper.Delete method (2 of 2)
 **namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Deletes, tries to delete or marks a file for deletion depending on type.
+Deletes, tries to delete, or marks a file for deletion depending on the specified [`DeleteType`](../DeleteType.md).
 
 ```csharp
 public static void Delete(string filePath, DeleteType type, ITemporaryFileSystem fileSystem = null)
@@ -30,9 +30,9 @@ public static void Delete(string filePath, DeleteType type, ITemporaryFileSystem
 
 | parameter | description |
 | --- | --- |
-| filePath | File to be deleted (can be null). |
-| type | Delete type. |
-| fileSystem | File system |
+| filePath | The file to be deleted (can be `null`). |
+| type | The delete type. |
+| fileSystem | The file system to use, or `null` to use the physical file system. |
 
 ## See Also
 

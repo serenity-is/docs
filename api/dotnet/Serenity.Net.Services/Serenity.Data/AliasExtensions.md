@@ -1,7 +1,7 @@
 # AliasExtensions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Contains extension methods for Alias objects
+Contains extension methods for Alias objects.
 
 ```csharp
 public static class AliasExtensions

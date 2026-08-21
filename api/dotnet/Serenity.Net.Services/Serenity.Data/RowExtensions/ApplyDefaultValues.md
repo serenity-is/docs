@@ -12,13 +12,17 @@ public static TRow ApplyDefaultValues<TRow>(this TRow row, bool unassignedOnly =
 | --- | --- |
 | TRow | The type of the row. |
 | row | The row. |
-| unassignedOnly | if set to `true` [unassigned only]. |
+| unassignedOnly | if set to `true`, only unassigned fields are set. |
+
+## Return Value
+
+The row with default values applied.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | row |
+| ArgumentNullException | row is null. |
 
 ## See Also
 

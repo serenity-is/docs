@@ -1,7 +1,7 @@
 # SqlMapper.Execute method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Execute parameterized SQL
+Executes a parameterized SQL statement.
 
 ```csharp
 public static int Execute(this IDbConnection cnn, string sql, object param = null, 
@@ -11,8 +11,8 @@ public static int Execute(this IDbConnection cnn, string sql, object param = nul
 
 | parameter | description |
 | --- | --- |
-| cnn | Connection. |
-| sql | SQL query. |
+| cnn | The connection. |
+| sql | The SQL query. |
 | param | The parameters. |
 | transaction | The transaction. |
 | commandTimeout | The command timeout. |
@@ -20,7 +20,7 @@ public static int Execute(this IDbConnection cnn, string sql, object param = nul
 
 ## Return Value
 
-Number of rows affected
+The number of rows affected.
 
 ## See Also
 

@@ -15,6 +15,12 @@ public SqlInsert SetNull(string field)
 
 SqlInsert object itself.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | field is null or empty. |
+
 ## See Also
 
 * class [SqlInsert](../SqlInsert.md)

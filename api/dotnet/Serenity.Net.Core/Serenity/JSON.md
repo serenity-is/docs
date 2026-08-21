@@ -1,7 +1,7 @@
 # JSON class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Contains shortcuts to Json serialization / deserialization methods, and default Serenity settings.
+Contains shortcuts to JSON serialization and deserialization methods, along with the default Serenity settings.
 
 ```csharp
 public static class JSON

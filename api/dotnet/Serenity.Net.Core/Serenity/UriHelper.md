@@ -11,7 +11,7 @@ public static class UriHelper
 
 | name | description |
 | --- | --- |
-| static [Combine](UriHelper/Combine.md)(…) | Combine a url with a filename by inserting "/" char between them.This works like Path.Combine |
+| static [Combine](UriHelper/Combine.md)(…) | Combines a URL with a filename by inserting a "/" character between them. This works like Path.Combine. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # DeltaOptions enumeration
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Delta options flags
+Delta options flags.
 
 ```csharp
 [Flags]
@@ -12,8 +12,8 @@ public enum DeltaOptions
 
 | name | value | description |
 | --- | --- | --- |
-| Default | `0x1` | The default |
-| IgnoreInvalidNewId | `0x1` | The ignore invalid new identifier |
+| Default | `0x1` | The default options. |
+| IgnoreInvalidNewId | `0x1` | Ignore new item identifiers that are not present in the old list. |
 
 ## See Also
 

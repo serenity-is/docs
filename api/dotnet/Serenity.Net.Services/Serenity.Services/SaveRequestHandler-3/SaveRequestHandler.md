@@ -1,7 +1,7 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt; constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ```csharp
 public SaveRequestHandler(IRequestContext context)
@@ -15,7 +15,7 @@ public SaveRequestHandler(IRequestContext context)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | context is null |
+| ArgumentNullException | *context* is `null`. |
 
 ## See Also
 

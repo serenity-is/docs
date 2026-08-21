@@ -1,7 +1,7 @@
 # Int64Field constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with Int64 value
+Field with an Int64 value.
 
 ```csharp
 public Int64Field(ICollection<Field> collection, string name, LocalText caption = null, 

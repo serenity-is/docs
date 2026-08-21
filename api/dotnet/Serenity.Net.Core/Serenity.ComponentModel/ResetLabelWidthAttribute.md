@@ -1,7 +1,7 @@
 # ResetLabelWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Resets form css class to null, it maybe used to cancel a prior LabelWidth attribute with UntilNext = true
+Resets the form label width to null. It may be used to cancel a prior LabelWidth attribute with UntilNext = true.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

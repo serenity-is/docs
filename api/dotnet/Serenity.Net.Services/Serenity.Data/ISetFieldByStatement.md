@@ -1,7 +1,7 @@
 # ISetFieldByStatement interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for objects setting values by SetTo method (like SqlInsert, SqlUpdate...)
+Interface for objects setting values by SetTo method (like SqlInsert, SqlUpdate...).
 
 ```csharp
 public interface ISetFieldByStatement : IQueryWithParams

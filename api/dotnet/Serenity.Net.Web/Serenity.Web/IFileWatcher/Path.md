@@ -1,7 +1,7 @@
 # IFileWatcher.Path property
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Watch path
+Gets the directory path being watched.
 
 ```csharp
 public string Path { get; }

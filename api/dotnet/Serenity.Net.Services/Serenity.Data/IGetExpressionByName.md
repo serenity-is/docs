@@ -1,7 +1,7 @@
 # IGetExpressionByName interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for query classes (e.g. SqlQuery) that can return expression given column name
+Interface for query classes (e.g. SqlQuery) that can return expression given column name.
 
 ```csharp
 public interface IGetExpressionByName

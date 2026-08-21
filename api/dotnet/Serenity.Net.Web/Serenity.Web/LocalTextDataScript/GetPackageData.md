@@ -1,7 +1,7 @@
 # LocalTextDataScript.GetPackageData method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets a local text package as a dictionary
+Gets a local text package as a dictionary.
 
 ```csharp
 public static IDictionary<string, string> GetPackageData(ILocalTextRegistry registry, 
@@ -10,17 +10,21 @@ public static IDictionary<string, string> GetPackageData(ILocalTextRegistry regi
 
 | parameter | description |
 | --- | --- |
-| registry | Text registry |
-| includes | Includes regex |
-| languageId | Language ID |
-| isPending | True to include pending text |
-| packageId | Package ID |
+| registry | The text registry. |
+| includes | The includes regex. |
+| languageId | The language ID. |
+| isPending | `true` to include pending texts. |
+| packageId | The package ID. |
+
+## Return Value
+
+A dictionary of local text keys and values.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Registry is null |
+| ArgumentNullException | *registry* is `null`. |
 
 ## See Also
 

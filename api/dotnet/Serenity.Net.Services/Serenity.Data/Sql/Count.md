@@ -1,7 +1,7 @@
 # Sql.Count method (1 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns COUNT(*)
+Returns COUNT(*).
 
 ```csharp
 public static string Count()
@@ -9,7 +9,7 @@ public static string Count()
 
 ## Return Value
 
-COUNT(*)
+COUNT(*).
 
 ## See Also
 
@@ -20,7 +20,7 @@ COUNT(*)
 # Sql.Count method (2 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a COUNT() expression
+Creates a COUNT() expression.
 
 ```csharp
 public static string Count(IField field)
@@ -30,11 +30,15 @@ public static string Count(IField field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The COUNT() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -46,7 +50,7 @@ public static string Count(IField field)
 # Sql.Count method (3 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a COUNT() expression
+Creates a COUNT() expression.
 
 ```csharp
 public static string Count(string field)
@@ -56,11 +60,15 @@ public static string Count(string field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The COUNT() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 
@@ -71,7 +79,7 @@ public static string Count(string field)
 # Sql.Count method (4 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a COUNT() expression
+Creates a COUNT() expression.
 
 ```csharp
 public static string Count(int joinNumber, string field)
@@ -82,11 +90,15 @@ public static string Count(int joinNumber, string field)
 | joinNumber | The join number. |
 | field | The field. |
 
+## Return Value
+
+The COUNT() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 

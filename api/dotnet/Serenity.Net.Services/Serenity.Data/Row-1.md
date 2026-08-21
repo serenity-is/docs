@@ -17,9 +17,9 @@ public abstract class Row<TFields> : IEditableRow, IRow<TFields>
 | name | description |
 | --- | --- |
 | [ClearAssignment](Row-1/ClearAssignment.md)(…) | Clears the assignment flag of the field. |
-| [FindField](Row-1/FindField.md)(…) | Finds the field. |
-| [FindFieldByPropertyName](Row-1/FindFieldByPropertyName.md)(…) | Finds the name of the field by property. |
-| [GetFields](Row-1/GetFields.md)() | Gets the fields. |
+| [FindField](Row-1/FindField.md)(…) | Finds the field with the specified name. |
+| [FindFieldByPropertyName](Row-1/FindFieldByPropertyName.md)(…) | Finds the field with the specified property name. |
+| [GetFields](Row-1/GetFields.md)() | Gets the fields instance for this row type. |
 | [IsAssigned](Row-1/IsAssigned.md)(…) | Determines whether the specified field is assigned. |
 | [OnFieldGet](Row-1/OnFieldGet.md)(…) |  |
 | [OnFieldSet](Row-1/OnFieldSet.md)(…) |  |

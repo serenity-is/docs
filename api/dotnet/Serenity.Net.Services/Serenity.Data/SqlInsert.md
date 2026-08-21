@@ -14,12 +14,16 @@ public class SqlInsert : QueryWithParams, ISetFieldByStatement
 | [SqlInsert](SqlInsert/SqlInsert.md)(…) | Creates a new SqlInsert query. |
 | [Clone](SqlInsert/Clone.md)() | Clones the query. |
 | [Dialect](SqlInsert/Dialect.md)(…) | Sets the dialect (SQL server type / version) for query. |
+| [GetFieldExpressions](SqlInsert/GetFieldExpressions.md)() | Returns field and value expression pairs. |
 | [IdentityColumn](SqlInsert/IdentityColumn.md)() | Gets the identity column. |
 | [IdentityColumn](SqlInsert/IdentityColumn.md)(…) | Sets the identity column. |
 | [SetNull](SqlInsert/SetNull.md)(…) | Assigns NULL as the field value. |
 | [SetTo](SqlInsert/SetTo.md)(…) | Sets field value. (2 methods) |
+| [TableName](SqlInsert/TableName.md)() | Gets the table name. |
 | override [ToString](SqlInsert/ToString.md)() | Gets string representation of the query. |
+| [ToUpsertString](SqlInsert/ToUpsertString.md)(…) | Formats an UPSERT query, i.e. a query that updates the row matching the key fields or inserts a new row if no such row exists. |
 | static [Format](SqlInsert/Format.md)(…) | Formats an INSERT query. |
+| static [FormatUpsert](SqlInsert/FormatUpsert.md)(…) | Formats an UPSERT query, i.e. a query that updates the row matching the key fields or inserts a new row if no such row exists. |
 
 ## See Also
 

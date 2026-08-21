@@ -1,7 +1,7 @@
 # FileReadPermissionAttribute class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-A subclass of [`FileReadAccessAttribute`](FileReadAccessAttribute.md) that specifies a permission
+A subclass of [`FileReadAccessAttribute`](FileReadAccessAttribute.md) that specifies a permission.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property)]

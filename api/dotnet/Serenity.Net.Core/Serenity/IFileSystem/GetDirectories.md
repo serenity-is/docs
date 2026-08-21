@@ -1,7 +1,7 @@
 # IFileSystem.GetDirectories method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets directories at specified path
+Gets the directories at the specified path.
 
 ```csharp
 public string[] GetDirectories(string path, string searchPattern = "*", bool recursive = false)
@@ -9,13 +9,13 @@ public string[] GetDirectories(string path, string searchPattern = "*", bool rec
 
 | parameter | description |
 | --- | --- |
-| path |  |
-| searchPattern | Search pattern |
-| recursive | Scan subdirectories recursively |
+| path | The path of the directory to list. |
+| searchPattern | The search pattern used to filter directory names. |
+| recursive | `true` to scan subdirectories recursively. |
 
 ## Return Value
 
-List of directories
+An array of directory paths.
 
 ## See Also
 

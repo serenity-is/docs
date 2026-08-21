@@ -1,7 +1,7 @@
 # ICriteria interface
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Shared criteria interface
+Shared criteria interface.
 
 ```csharp
 public interface ICriteria

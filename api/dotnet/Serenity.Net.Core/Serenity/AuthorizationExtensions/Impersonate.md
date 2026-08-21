@@ -1,7 +1,7 @@
 # AuthorizationExtensions.Impersonate method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Impersonates a user by its username. Note that this throws an exception if the user is not found, or the underlying user accessor is not an impersonator.
+Impersonates the user with the specified username.
 
 ```csharp
 public static void Impersonate(this IUserProvider userProvider, string username, 
@@ -10,9 +10,16 @@ public static void Impersonate(this IUserProvider userProvider, string username,
 
 | parameter | description |
 | --- | --- |
-| userProvider | User provider |
-| username | Username |
-| authType | Authentication type to use while creating the ClaimsPrincipal. Default is "Impersonation". |
+| userProvider | The user provider that performs the impersonation. |
+| username | The username of the user to impersonate. |
+| authType | The authentication type to assign to the new principal. Defaults to `Impersonation`. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentOutOfRangeException | No user exists with the specified username. |
+| InvalidOperationException | The underlying accessor does not support impersonation. |
 
 ## See Also
 

@@ -9,7 +9,17 @@ public static IServiceCollection AddFileWatcherFactory(this IServiceCollection c
 
 | parameter | description |
 | --- | --- |
-| collection | Service collection |
+| collection | The service collection. |
+
+## Return Value
+
+The same service collection so that calls can be chained.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *collection* is `null`. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # Field.Name property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Column name
+Gets the column name.
 
 ```csharp
 public string Name { get; }

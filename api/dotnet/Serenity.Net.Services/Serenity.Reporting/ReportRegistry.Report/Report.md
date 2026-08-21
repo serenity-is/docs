@@ -1,7 +1,7 @@
 # ReportRegistry.Report constructor
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ```csharp
 public Report(Type type, ITextLocalizer localizer)
@@ -16,7 +16,7 @@ public Report(Type type, ITextLocalizer localizer)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Type is null |
+| ArgumentNullException | *type* is `null`. |
 
 ## See Also
 

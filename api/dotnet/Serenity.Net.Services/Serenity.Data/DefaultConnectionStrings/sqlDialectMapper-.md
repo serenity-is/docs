@@ -1,7 +1,7 @@
 # DefaultConnectionStrings.sqlDialectMapper- field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Sql dialect mapper
+The SQL dialect mapper.
 
 ```csharp
 protected readonly ISqlDialectMapper sqlDialectMapper-;

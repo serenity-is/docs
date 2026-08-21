@@ -1,7 +1,7 @@
 # LookupEditorBaseAttribute.AutoComplete property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Allows dynamically creating new options from text input by the user in the search box. This option should only be used for free text inputs, not ID / Text pairs. When this option is enabled InplaceAdd cannot be used. Newly created option will have same ID / Text which is user entered text.
+Allows dynamically creating new options from text input by the user in the search box. This option should only be used for free text inputs, not ID / Text pairs. When this option is enabled, InplaceAdd cannot be used. A newly created option will have the same ID / Text as the user-entered text.
 
 ```csharp
 public bool AutoComplete { get; set; }

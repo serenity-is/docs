@@ -1,7 +1,7 @@
 # ServiceEndpointApplicationModelProvider class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Applies action model conventions for [`ServiceEndpoint`](ServiceEndpoint.md) controllers
+Applies action model conventions for [`ServiceEndpoint`](ServiceEndpoint.md) controllers.
 
 ```csharp
 public class ServiceEndpointApplicationModelProvider : IApplicationModelProvider

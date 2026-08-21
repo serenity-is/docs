@@ -1,7 +1,7 @@
 # UniqueAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Defines a unique constraint on the field
+Defines a unique constraint on the field.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Property)]

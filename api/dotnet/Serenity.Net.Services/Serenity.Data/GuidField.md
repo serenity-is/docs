@@ -1,7 +1,7 @@
 # GuidField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a Guid value
+Field with a Guid value.
 
 ```csharp
 public sealed class GuidField : GenericValueField<Guid>
@@ -21,12 +21,12 @@ public sealed class GuidField : GenericValueField<Guid>
 
 | name | description |
 | --- | --- |
-| [GuidField](GuidField/GuidField.md)(…) | Field with a Guid value |
+| [GuidField](GuidField/GuidField.md)(…) | Field with a Guid value. |
 | static [Factory](GuidField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [ConvertValue](GuidField/ConvertValue.md)(…) | Converts the value. |
 | override [GetFromReader](GuidField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [ValueFromJson](GuidField/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](GuidField/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [ValueFromJson](GuidField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](GuidField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

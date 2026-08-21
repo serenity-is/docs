@@ -18,6 +18,10 @@ public static Int64Field Factory(ICollection<Field> collection, string name, Loc
 | getValue | The get value. |
 | setValue | The set value. |
 
+## Return Value
+
+A new Int64Field instance.
+
 ## See Also
 
 * class [Field](../Field.md)

@@ -17,7 +17,7 @@ protected virtual void ApplyFieldEqualityFilter(SqlQuery query, Field field, obj
 
 | exception | condition |
 | --- | --- |
-| ArgumentOutOfRangeException |  |
+| ArgumentOutOfRangeException | The field is not allowed to be filtered. |
 
 ## See Also
 

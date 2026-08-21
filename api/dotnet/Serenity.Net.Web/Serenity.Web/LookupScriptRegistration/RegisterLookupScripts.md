@@ -1,7 +1,7 @@
 # LookupScriptRegistration.RegisterLookupScripts method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates and registers dynamic [`LookupScript`](../LookupScript.md) objects for classes with LookupScriptAttribute
+Creates and registers dynamic [`LookupScript`](../LookupScript.md) objects for classes with LookupScriptAttribute.
 
 ```csharp
 public static void RegisterLookupScripts(IDynamicScriptManager scriptManager, 
@@ -10,16 +10,16 @@ public static void RegisterLookupScripts(IDynamicScriptManager scriptManager,
 
 | parameter | description |
 | --- | --- |
-| scriptManager | Dynamic script manager |
-| typeSource | Type source |
-| serviceProvider | Service provider |
+| scriptManager | The dynamic script manager. |
+| typeSource | The type source. |
+| serviceProvider | The service provider. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Script manager, type source or service provider is null |
-| InvalidOperationException | A custom type has LookupScriptAttribute but it does not derive from the [`LookupScript`](../LookupScript.md) class. |
+| ArgumentNullException | Script manager, type source or service provider is `null`. |
+| InvalidOperationException | A custom type has LookupScriptAttribute but does not derive from the [`LookupScript`](../LookupScript.md) class. |
 
 ## See Also
 

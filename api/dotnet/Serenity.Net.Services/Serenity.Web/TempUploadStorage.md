@@ -11,7 +11,7 @@ public class TempUploadStorage : DiskUploadStorage
 
 | name | description |
 | --- | --- |
-| [TempUploadStorage](TempUploadStorage/TempUploadStorage.md)(…) | Creates an instance of the class |
+| [TempUploadStorage](TempUploadStorage/TempUploadStorage.md)(…) | Initializes a new instance of the class. |
 | override [PurgeTemporaryFiles](TempUploadStorage/PurgeTemporaryFiles.md)() |  |
 
 ## See Also

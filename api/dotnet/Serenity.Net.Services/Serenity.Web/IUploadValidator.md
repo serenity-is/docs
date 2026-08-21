@@ -1,7 +1,7 @@
 # IUploadValidator interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-An upload validator abstraction for checking IUploadFileConstraints and IUploadImageContrains
+An upload validator abstraction for checking IUploadFileConstraints and IUploadImageConstraints
 
 ```csharp
 public interface IUploadValidator

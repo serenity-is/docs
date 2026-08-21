@@ -13,18 +13,18 @@ public static class StringHelper
 | --- | --- |
 | static readonly [InvalidFilenameCharsRegex](StringHelper/InvalidFilenameCharsRegex.md) | A regex to remove invalid file name characters |
 | static readonly [InvalidPathCharsRegex](StringHelper/InvalidPathCharsRegex.md) | A regex to remove invalid file path characters |
-| static [IsEmptyOrNull](StringHelper/IsEmptyOrNull.md)(…) | This function is just an extension method version of string.IsNullOrEmpty and is effectively obsolete. String.If *str* is `null` or empty, `true` (2 methods) |
-| static [IsNullOrEmpty](StringHelper/IsNullOrEmpty.md)(…) | This function is just an extension method version of string.IsNullOrEmpty and is effectively obsolete. String.If *str* is `null` or empty, `true` |
-| static [IsTrimmedEmpty](StringHelper/IsTrimmedEmpty.md)(…) | This function is just an extension method version of string.IsNullOrWhitespace and is effectively obsolete. String.If *str* is `null`, empty or whitespace, `true` |
+| static [IsEmptyOrNull](StringHelper/IsEmptyOrNull.md)(…) | This function is just an extension method version of string.IsNullOrEmpty and is effectively obsolete. (2 methods) |
+| static [IsNullOrEmpty](StringHelper/IsNullOrEmpty.md)(…) | This function is just an extension method version of string.IsNullOrEmpty and is effectively obsolete. |
+| static [IsTrimmedEmpty](StringHelper/IsTrimmedEmpty.md)(…) | This function is just an extension method version of string.IsNullOrWhitespace and is effectively obsolete. |
 | static [IsTrimmedSame](StringHelper/IsTrimmedSame.md)(…) | Compares two strings ignoring whitespace at the left or right. |
 | static [Join](StringHelper/Join.md)(…) | Joins two strings conditionally, by putting separator between if both are non empty |
 | static [JoinNonEmpty](StringHelper/JoinNonEmpty.md)(…) | Joins strings conditionally, by putting separator between if both are non empty or null (2 methods) |
-| static [QuoteString](StringHelper/QuoteString.md)(…) | Quotes a string |
+| static [QuoteString](StringHelper/QuoteString.md)(…) | Quotes a string. |
 | static [RemoveDiacritics](StringHelper/RemoveDiacritics.md)(…) | Removes the diacritic characters from string by replacing them with ASCII versions. |
 | static [SafeSubstring](StringHelper/SafeSubstring.md)(…) | A substring function that doesn't raise out of bound errors or null reference exception. |
 | static [SanitizeFilename](StringHelper/SanitizeFilename.md)(…) | Sanitizes the filename by removing diacritics, ı with i and replacing any invalid filename characters with underscore. |
 | static [SanitizeFilePath](StringHelper/SanitizeFilePath.md)(…) | Sanitizes the path by removing diacritics (ü with u, ı with i etc.) and replacing any invalid file path characters with underscore. |
-| static [ThreeDots](StringHelper/ThreeDots.md)(…) | If the string's length is over a specified limit, trims its right and adds three points ("..."). |
+| static [ThreeDots](StringHelper/ThreeDots.md)(…) | If the string's length is over a specified limit, trims its right side and adds three points ("..."). |
 | static [ToDoubleQuoted](StringHelper/ToDoubleQuoted.md)(…) | Converts the string to its double quoted representation. |
 | static [ToSingleLine](StringHelper/ToSingleLine.md)(…) | Converts the string to single line by replacing line endings with space. |
 | static [ToSingleQuoted](StringHelper/ToSingleQuoted.md)(…) | Converts the string to its single quoted representation. |

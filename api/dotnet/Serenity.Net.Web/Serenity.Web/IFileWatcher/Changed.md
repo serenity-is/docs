@@ -1,7 +1,7 @@
 # IFileWatcher.Changed event
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Event that is raised when a file changed
+Raised when a watched file changes.
 
 ```csharp
 public event Action<string> Changed;

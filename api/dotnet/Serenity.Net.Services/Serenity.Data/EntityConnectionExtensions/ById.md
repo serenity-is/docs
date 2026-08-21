@@ -16,14 +16,14 @@ public static TRow ById<TRow>(this IDbConnection connection, object id)
 
 ## Return Value
 
-Entity with given ID
+Entity with the given ID.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ValidationError | Record with specified ID is not found |
-| InvalidOperationException | Multiple records with the ID found |
+| ValidationError | Record with the specified ID is not found. |
+| InvalidOperationException | Multiple records with the ID found. |
 
 ## See Also
 
@@ -53,14 +53,14 @@ public static TRow ById<TRow>(this IDbConnection connection, object id, Action<S
 
 ## Return Value
 
-Entity with given ID
+Entity with the given ID.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ValidationError | Record with specified ID is not found |
-| InvalidOperationException | Multiple records with the ID found |
+| ValidationError | Record with the specified ID is not found. |
+| InvalidOperationException | Multiple records with the ID found. |
 
 ## See Also
 

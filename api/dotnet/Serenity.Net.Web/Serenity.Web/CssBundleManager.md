@@ -1,7 +1,7 @@
 # CssBundleManager class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation for [`ICssBundleManager`](ICssBundleManager.md)
+Default implementation of [`ICssBundleManager`](ICssBundleManager.md).
 
 ```csharp
 public class CssBundleManager : ICssBundleManager
@@ -11,7 +11,7 @@ public class CssBundleManager : ICssBundleManager
 
 | name | description |
 | --- | --- |
-| [CssBundleManager](CssBundleManager/CssBundleManager.md)(…) | Creates an instance of the class |
+| [CssBundleManager](CssBundleManager/CssBundleManager.md)(…) | Initializes a new instance of the [`CssBundleManager`](CssBundleManager.md) class. |
 | [IsEnabled](CssBundleManager/IsEnabled.md) { get; } |  |
 | [CssChanged](CssBundleManager/CssChanged.md)() |  |
 | [GetBundleIncludes](CssBundleManager/GetBundleIncludes.md)(…) |  |

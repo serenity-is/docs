@@ -1,7 +1,7 @@
 # IConfigureServices interface
 **namespace:** *[Serenity.Plugins](../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Interface for plugins that requires to configure their own services / options
+Interface for plugins that require configuring their own services or options.
 
 ```csharp
 public interface IConfigureServices
@@ -11,7 +11,7 @@ public interface IConfigureServices
 
 | name | description |
 | --- | --- |
-| [ConfigureServices](IConfigureServices/ConfigureServices.md)(…) | Configures the services / options for the plugin |
+| [ConfigureServices](IConfigureServices/ConfigureServices.md)(…) | Configures the services and options for the plugin. |
 
 ## See Also
 

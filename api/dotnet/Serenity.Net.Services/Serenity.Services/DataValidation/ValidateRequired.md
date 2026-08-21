@@ -36,7 +36,7 @@ public static void ValidateRequired(this IRow row, IEnumerable<Field> fields,
 | --- | --- |
 | row | Row instance |
 | fields | List of fields |
-| localizer |  |
+| localizer | Text localizer |
 
 ## See Also
 

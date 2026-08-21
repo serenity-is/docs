@@ -9,11 +9,11 @@ public AuthorizeCreateAttribute(Type sourceType)
 
 | parameter | description |
 | --- | --- |
-| sourceType | Source type |
+| sourceType | The source type. |
 
 ## Remarks
 
-Creates a new instance of the attribute
+Initializes a new instance of the [`AuthorizeCreateAttribute`](../AuthorizeCreateAttribute.md) class.
 
 ## See Also
 

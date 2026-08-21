@@ -1,7 +1,7 @@
 # LinkingSetRelationBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Behavior class that handles [`LinkingSetRelationAttribute`](../Serenity.Data.Mapping/LinkingSetRelationAttribute.md)
+Behavior class that handles [`LinkingSetRelationAttribute`](../Serenity.Data.Mapping/LinkingSetRelationAttribute.md).
 
 ```csharp
 public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior, 
@@ -16,7 +16,7 @@ public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior
 
 | name | description |
 | --- | --- |
-| [LinkingSetRelationBehavior](LinkingSetRelationBehavior/LinkingSetRelationBehavior.md)(…) | Behavior class that handles [`LinkingSetRelationAttribute`](../Serenity.Data.Mapping/LinkingSetRelationAttribute.md) |
+| [LinkingSetRelationBehavior](LinkingSetRelationBehavior/LinkingSetRelationBehavior.md)(…) | Behavior class that handles [`LinkingSetRelationAttribute`](../Serenity.Data.Mapping/LinkingSetRelationAttribute.md). |
 | [Target](LinkingSetRelationBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](LinkingSetRelationBehavior/ActivateFor.md)(…) |  |
 | [OnAfterExecuteQuery](LinkingSetRelationBehavior/OnAfterExecuteQuery.md)(…) |  (2 methods) |
@@ -32,11 +32,11 @@ public class LinkingSetRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | handlerFactory is null |
+| ArgumentNullException | *handlerFactory* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

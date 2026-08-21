@@ -1,7 +1,7 @@
 # LogicOperatorPermissionService class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Adds AND OR operator support to any IPermissionService implementation
+Decorates an [`IPermissionService`](../Serenity.Abstractions/IPermissionService.md) to support logical operators (`!`, `&`, `|`, parentheses) in permission expressions.
 
 ```csharp
 public class LogicOperatorPermissionService : IPermissionService, ITransientGrantor
@@ -9,29 +9,29 @@ public class LogicOperatorPermissionService : IPermissionService, ITransientGran
 
 | parameter | description |
 | --- | --- |
-| permissionService | Permission service to wrap with AND/OR functionality |
+| permissionService | The underlying permission service to delegate simple permission checks to. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [LogicOperatorPermissionService](LogicOperatorPermissionService/LogicOperatorPermissionService.md)(…) | Adds AND OR operator support to any IPermissionService implementation |
+| [LogicOperatorPermissionService](LogicOperatorPermissionService/LogicOperatorPermissionService.md)(…) | Decorates an [`IPermissionService`](../Serenity.Abstractions/IPermissionService.md) to support logical operators (`!`, `&`, `|`, parentheses) in permission expressions. |
 | [GetGranted](LogicOperatorPermissionService/GetGranted.md)() |  |
 | [Grant](LogicOperatorPermissionService/Grant.md)(…) |  |
 | [GrantAll](LogicOperatorPermissionService/GrantAll.md)() |  |
-| [HasPermission](LogicOperatorPermissionService/HasPermission.md)(…) | Returns true if user has specified permission |
+| [HasPermission](LogicOperatorPermissionService/HasPermission.md)(…) | Determines whether the current user has the specified permission or satisfies the given logical permission expression. |
 | [IsAllGranted](LogicOperatorPermissionService/IsAllGranted.md)() |  |
 | [UndoGrant](LogicOperatorPermissionService/UndoGrant.md)() |  |
 
 ## Remarks
 
-Register this class in your application start, to allow !, &#x7C;, &amp;, () operators in your permission services, e.g.
+Register this decorator at application startup to enable expressions such as `PermissionA & !PermissionB`.
 
 ```csharp
 registrar.RegisterInstance<IPermissionService>(new LogicOperatorPermissionService(new MyPermissionService()))
 ```
 
-Creates a new LogicOperatorPermissionService wrapping passed IPermissionService
+Creates a new instance of the [`LogicOperatorPermissionService`](LogicOperatorPermissionService.md) class wrapping the specified permission service.
 
 ## See Also
 

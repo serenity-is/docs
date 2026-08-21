@@ -1,7 +1,7 @@
 # Sql.Avg method (1 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a AVG expression.
+Creates an AVG() expression.
 
 ```csharp
 public static string Avg(IField field)
@@ -11,11 +11,15 @@ public static string Avg(IField field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The AVG() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -27,7 +31,7 @@ public static string Avg(IField field)
 # Sql.Avg method (2 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a AVG expression.
+Creates an AVG() expression.
 
 ```csharp
 public static string Avg(string field)
@@ -37,11 +41,15 @@ public static string Avg(string field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The AVG() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 
@@ -52,7 +60,7 @@ public static string Avg(string field)
 # Sql.Avg method (3 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a AVG() expression.
+Creates an AVG() expression.
 
 ```csharp
 public static string Avg(int joinNumber, string field)
@@ -63,11 +71,15 @@ public static string Avg(int joinNumber, string field)
 | joinNumber | The join number. |
 | field | The field. |
 
+## Return Value
+
+The AVG() expression.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field is null or empty |
+| ArgumentNullException | field is null or empty. |
 
 ## See Also
 

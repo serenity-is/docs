@@ -1,7 +1,7 @@
 # BracketLocator class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Contains helper methods for locating / replacing brackets in an SQL expression
+Contains helper methods for locating / replacing brackets in an SQL expression.
 
 ```csharp
 public static class BracketLocator

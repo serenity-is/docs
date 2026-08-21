@@ -1,7 +1,7 @@
 # NestedPermissionKeysAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that this class contains permission keys with optional subclasses that also contains permission keys.
+Indicates that this class contains permission keys with optional subclasses that also contain permission keys.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]
@@ -13,7 +13,7 @@ public sealed class NestedPermissionKeysAttribute : Attribute
 | name | description |
 | --- | --- |
 | [NestedPermissionKeysAttribute](NestedPermissionKeysAttribute/NestedPermissionKeysAttribute.md)() | Initializes a new instance of the [`NestedPermissionKeysAttribute`](NestedPermissionKeysAttribute.md) class. |
-| [LanguageID](NestedPermissionKeysAttribute/LanguageID.md) { get; set; } | Gets / sets optional language identifier that specifies language for texts specified in [DisplayName] attribute. |
+| [LanguageID](NestedPermissionKeysAttribute/LanguageID.md) { get; set; } | Gets or sets the optional language identifier that specifies the language for texts specified in the [DisplayName] attribute. |
 
 ## See Also
 

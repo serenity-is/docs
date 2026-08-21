@@ -1,7 +1,7 @@
 # DateTimeOffsetField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a DateTimeOffset value
+Field with a DateTimeOffset value.
 
 ```csharp
 public DateTimeOffsetField(ICollection<Field> collection, string name, LocalText caption = null, 

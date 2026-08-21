@@ -12,8 +12,8 @@ public abstract class BaseExpressionAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [Format](BaseExpressionAttribute/Format.md) { get; set; } | Gets sets an optional format string to apply with {0} placeholder for the expression. |
-| [ToString](BaseExpressionAttribute/ToString.md)(…) | Converts the expression to string for specified dialect |
+| [Format](BaseExpressionAttribute/Format.md) { get; set; } | Gets or sets an optional format string to apply with {0} placeholder for the expression. |
+| [ToString](BaseExpressionAttribute/ToString.md)(…) | Converts the expression to string for specified dialect. |
 | abstract [Translate](BaseExpressionAttribute/Translate.md)(…) | Gets the expression for specified dialect. Prefer ToString(ISqlDialect) version as it allows the dialect to optionally customize the formatted expression via ISqlExpressionTranslator interface. |
 | static [ToString](BaseExpressionAttribute/ToString.md)(…) | Convert the expression to string. Used by derived expression attributes to convert their constructor arguments to string while supporting other expression attribute types, or a special array with the first argument as the attribute type and others as its constructor parameters. |
 

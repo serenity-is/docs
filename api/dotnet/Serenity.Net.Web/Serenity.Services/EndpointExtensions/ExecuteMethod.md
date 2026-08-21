@@ -1,7 +1,7 @@
 # EndpointExtensions.ExecuteMethod&lt;TResponse&gt; method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Executes an action method and converts any exception to a service response
+Executes an action method and converts any exception to a service response.
 
 ```csharp
 public static Result<TResponse> ExecuteMethod<TResponse>(this ControllerBase controller, 
@@ -11,9 +11,13 @@ public static Result<TResponse> ExecuteMethod<TResponse>(this ControllerBase con
 
 | parameter | description |
 | --- | --- |
-| TResponse | Response type |
-| controller | Controller |
-| handler | Handler callback |
+| TResponse | The response type. |
+| controller | The controller. |
+| handler | The handler callback. |
+
+## Return Value
+
+The action result.
 
 ## See Also
 

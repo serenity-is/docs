@@ -1,7 +1,7 @@
 # FileSystemExtensions.GetFileName method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets file name for path
+Gets the file name for the specified path.
 
 ```csharp
 public static string GetFileName(this IFileSystem _, string path)
@@ -9,8 +9,12 @@ public static string GetFileName(this IFileSystem _, string path)
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| path | Path |
+| _ | The file system. |
+| path | The path. |
+
+## Return Value
+
+The file name.
 
 ## See Also
 

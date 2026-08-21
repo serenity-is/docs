@@ -11,6 +11,10 @@ public TValue this[IRow row] { get; set; }
 | --- | --- |
 | row | The row. |
 
+## Return Value
+
+The value of the field in the row.
+
 ## See Also
 
 * class [TValue](../Serenity.Net.Services/../GenericClassField-1.TValue.md)

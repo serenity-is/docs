@@ -1,7 +1,7 @@
 # PermissionAttributeBase class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-An abstract base attribute that all permission related attributes derive from.
+An abstract base attribute that all permission-related attributes derive from.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -23,7 +23,7 @@ public abstract class PermissionAttributeBase : Attribute
 
 | name | description |
 | --- | --- |
-| [PermissionAttributeBase](PermissionAttributeBase/PermissionAttributeBase.md)(…) | An abstract base attribute that all permission related attributes derive from. |
+| [PermissionAttributeBase](PermissionAttributeBase/PermissionAttributeBase.md)(…) | An abstract base attribute that all permission-related attributes derive from. |
 
 ## Remarks
 

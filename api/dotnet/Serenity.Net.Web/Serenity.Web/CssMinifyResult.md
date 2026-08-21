@@ -1,7 +1,7 @@
 # CssMinifyResult class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Result returned from a CSS minifier
+Result returned from a CSS minifier.
 
 ```csharp
 public class CssMinifyResult
@@ -12,8 +12,8 @@ public class CssMinifyResult
 | name | description |
 | --- | --- |
 | [CssMinifyResult](CssMinifyResult/CssMinifyResult.md)() | The default constructor. |
-| [Code](CssMinifyResult/Code.md) { get; set; } | Gets the minified code |
-| [HasErrors](CssMinifyResult/HasErrors.md) { get; set; } | Gets if minifying had errors |
+| [Code](CssMinifyResult/Code.md) { get; set; } | Gets or sets the minified code. |
+| [HasErrors](CssMinifyResult/HasErrors.md) { get; set; } | Gets or sets whether minifying had errors. |
 
 ## See Also
 

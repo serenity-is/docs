@@ -1,7 +1,7 @@
 # JsonField&lt;TValue&gt; constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with JSON value
+Field with a JSON value.
 
 ```csharp
 public JsonField(ICollection<Field> collection, string name, LocalText caption = null, 

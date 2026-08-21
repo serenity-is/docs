@@ -14,6 +14,10 @@ public IEnumerable<ForeignKeyInfo> GetForeignKeys(IDbConnection connection, stri
 | schema | The schema. |
 | table | The table. |
 
+## Return Value
+
+The list of foreign keys for the table.
+
 ## See Also
 
 * class [ForeignKeyInfo](../ForeignKeyInfo.md)

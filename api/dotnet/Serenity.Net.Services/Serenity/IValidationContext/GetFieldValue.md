@@ -11,6 +11,10 @@ public object GetFieldValue(string fieldName)
 | --- | --- |
 | fieldName | Name of the field. |
 
+## Return Value
+
+The value of the field.
+
 ## See Also
 
 * interface [IValidationContext](../IValidationContext.md)

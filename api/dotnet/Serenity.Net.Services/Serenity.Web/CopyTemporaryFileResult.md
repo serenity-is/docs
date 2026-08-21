@@ -12,10 +12,10 @@ public class CopyTemporaryFileResult
 | name | description |
 | --- | --- |
 | [CopyTemporaryFileResult](CopyTemporaryFileResult/CopyTemporaryFileResult.md)() | The default constructor. |
-| [FileSize](CopyTemporaryFileResult/FileSize.md) { get; set; } | File size |
-| [HasThumbnail](CopyTemporaryFileResult/HasThumbnail.md) { get; set; } | If the file has thumbnail |
-| [OriginalName](CopyTemporaryFileResult/OriginalName.md) { get; set; } | Original name |
-| [Path](CopyTemporaryFileResult/Path.md) { get; set; } | The path of the file |
+| [FileSize](CopyTemporaryFileResult/FileSize.md) { get; set; } | Gets or sets the file size. |
+| [HasThumbnail](CopyTemporaryFileResult/HasThumbnail.md) { get; set; } | Gets or sets a value indicating whether the file has a thumbnail. |
+| [OriginalName](CopyTemporaryFileResult/OriginalName.md) { get; set; } | Gets or sets the original name. |
+| [Path](CopyTemporaryFileResult/Path.md) { get; set; } | Gets or sets the path of the file. |
 
 ## See Also
 

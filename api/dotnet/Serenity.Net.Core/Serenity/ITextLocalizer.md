@@ -1,7 +1,7 @@
 # ITextLocalizer interface
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Text localizer for current context language / pending state.
+Text localizer for the current context language and pending approval state.
 
 ```csharp
 public interface ITextLocalizer
@@ -11,7 +11,7 @@ public interface ITextLocalizer
 
 | name | description |
 | --- | --- |
-| [TryGet](ITextLocalizer/TryGet.md)(…) | Gets translation for a key based on the context language / pending approval state, or null if not available |
+| [TryGet](ITextLocalizer/TryGet.md)(…) | Gets the translation for a key based on the context language and pending approval state, or `null` if not available. |
 
 ## See Also
 

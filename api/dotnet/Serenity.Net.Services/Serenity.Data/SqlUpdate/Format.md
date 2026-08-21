@@ -4,14 +4,14 @@
 Formats an SQL UPDATE statement.
 
 ```csharp
-public static string Format(string tableName, string where, List<string> nameValuePairs, 
-    ISqlDialect dialect = null)
+public static string Format(string tableName, string where, 
+    IEnumerable<FieldExpressionPair> fieldExpressions, ISqlDialect dialect = null)
 ```
 
 | parameter | description |
 | --- | --- |
 | tableName | Table name (required). |
-| nameValuePairs | Field name and values. Should have structure of `[field1, value1, field2, value2, ...., fieldN, valueN]`. This array is required and must have even number of elements. |
+| fieldExpressions | Field names and their value expressions. |
 | where | WHERE clause (can be null). |
 | dialect | Target dialect |
 
@@ -19,7 +19,14 @@ public static string Format(string tableName, string where, List<string> nameVal
 
 Formatted UPDATE query.
 
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | tableName or fieldExpressions is null. |
+
 ## See Also
 
+* struct [FieldExpressionPair](../FieldExpressionPair.md)
 * interface [ISqlDialect](../ISqlDialect.md)
 * class [SqlUpdate](../SqlUpdate.md)

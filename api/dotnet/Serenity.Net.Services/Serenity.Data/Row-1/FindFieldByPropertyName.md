@@ -1,7 +1,7 @@
 # Row&lt;TFields&gt;.FindFieldByPropertyName method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Finds the name of the field by property.
+Finds the field with the specified property name.
 
 ```csharp
 public Field FindFieldByPropertyName(string propertyName)
@@ -10,6 +10,10 @@ public Field FindFieldByPropertyName(string propertyName)
 | parameter | description |
 | --- | --- |
 | propertyName | Name of the property. |
+
+## Return Value
+
+The field with the specified property name, or `null` if not found.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # IFileWatcher.Filter property
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Watch filter
+Gets the file filter being watched.
 
 ```csharp
 public string Filter { get; }

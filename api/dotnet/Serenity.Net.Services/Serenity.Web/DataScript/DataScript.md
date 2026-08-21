@@ -1,7 +1,7 @@
 # DataScript constructor (1 of 2)
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ```csharp
 protected DataScript()
@@ -16,7 +16,7 @@ protected DataScript()
 # DataScript constructor (2 of 2)
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ```csharp
 public DataScript(string key, Func<object> getData)
@@ -24,14 +24,14 @@ public DataScript(string key, Func<object> getData)
 
 | parameter | description |
 | --- | --- |
-| key | Data script key |
-| getData | Get data callback |
+| key | The data script key. |
+| getData | The get data callback. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | getData is null. |
 
 ## See Also
 

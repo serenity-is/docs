@@ -1,7 +1,7 @@
 # IPropertyInfo.GetAttributes&lt;TAttr&gt; method
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets the attributes.
+Gets the attributes of the specified type.
 
 ```csharp
 public IEnumerable<TAttr> GetAttributes<TAttr>(AttributeOrigin origin = AttributeOrigin.All)
@@ -11,6 +11,11 @@ public IEnumerable<TAttr> GetAttributes<TAttr>(AttributeOrigin origin = Attribut
 | parameter | description |
 | --- | --- |
 | TAttr | The type of the attribute. |
+| origin | The attribute origin to search. |
+
+## Return Value
+
+The attributes of the specified type.
 
 ## See Also
 

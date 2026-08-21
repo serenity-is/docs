@@ -14,6 +14,10 @@ public IEnumerable<string> GetPrimaryKeyFields(IDbConnection connection, string 
 | schema | The schema. |
 | table | The table. |
 
+## Return Value
+
+The list of primary key field names for the table.
+
 ## See Also
 
 * interface [ISchemaProvider](../ISchemaProvider.md)

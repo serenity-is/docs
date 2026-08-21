@@ -17,9 +17,9 @@ public class AnnotationTypeAttribute : Attribute
 | name | description |
 | --- | --- |
 | [AnnotationTypeAttribute](AnnotationTypeAttribute/AnnotationTypeAttribute.md)(…) | Declares that the type with this attribute is an annotation type for another type, e.g. it contains attributes for the other type and its properties. This is mainly used to separate dependencies between rows and UI related properties like editor types etc. |
-| [AnnotatedType](AnnotationTypeAttribute/AnnotatedType.md) { get; } | Other type, interface or type of attribute that other type should have |
+| [AnnotatedType](AnnotationTypeAttribute/AnnotatedType.md) { get; } | The other type, interface, or type of attribute that the other type should have. |
 | [Inherited](AnnotationTypeAttribute/Inherited.md) { get; set; } | Should type exactly match, or can it be a subclass of the type. Default is true, ignored for attribute types. |
-| [Namespaces](AnnotationTypeAttribute/Namespaces.md) { get; set; } | If specified this annotation only applies to types in the namespaces and their sub namespaces if namespace ends with ".*" |
+| [Namespaces](AnnotationTypeAttribute/Namespaces.md) { get; set; } | If specified, this annotation only applies to types in the namespaces and their sub namespaces if the namespace ends with ".*". |
 | [Properties](AnnotationTypeAttribute/Properties.md) { get; set; } | If specified, this annotation matches the type only if it has all the properties listed in this array. |
 
 ## Remarks

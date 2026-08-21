@@ -1,7 +1,7 @@
 # ServiceEndpointServiceCollectionExtensions class
 **namespace:** *[Serenity.Extensions.DependencyInjection](../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-DI extension methods related to service endpoints
+DI extension methods related to service endpoints.
 
 ```csharp
 public static class ServiceEndpointServiceCollectionExtensions
@@ -11,7 +11,7 @@ public static class ServiceEndpointServiceCollectionExtensions
 
 | name | description |
 | --- | --- |
-| static [AddServiceEndpointConventions](ServiceEndpointServiceCollectionExtensions/AddServiceEndpointConventions.md)(…) | Adds service endpoint related services and conventions to the service collection |
+| static [AddServiceEndpointConventions](ServiceEndpointServiceCollectionExtensions/AddServiceEndpointConventions.md)(…) | Adds service endpoint related services and conventions to the service collection. |
 
 ## See Also
 

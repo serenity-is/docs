@@ -1,7 +1,7 @@
 # EntityQueryExtensions.SelectForeignFields method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds foreign / calculated table fields in a row to select list of a query.
+Adds foreign / calculated table fields in a row to the select list of a query.
 
 ```csharp
 public static SqlQuery SelectForeignFields(this SqlQuery query, IRow row, params Field[] exclude)

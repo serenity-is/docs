@@ -1,7 +1,7 @@
 # JsonLocalTextRegistration.AddJsonResourceTexts method (1 of 2)
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Adds json texts from embedded resources
+Adds JSON texts from embedded resources.
 
 ```csharp
 public static ILocalTextRegistry AddJsonResourceTexts(this ILocalTextRegistry registry, 
@@ -10,18 +10,18 @@ public static ILocalTextRegistry AddJsonResourceTexts(this ILocalTextRegistry re
 
 | parameter | description |
 | --- | --- |
-| registry | The text registry |
-| assemblies | List of assemblies |
+| registry | The text registry. |
+| assemblies | The list of assemblies. |
 
 ## Return Value
 
-The text registry
+The text registry.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | registry, provider or sub path is null |
+| ArgumentNullException | registry or assemblies is null. |
 
 ## See Also
 
@@ -33,7 +33,7 @@ The text registry
 # JsonLocalTextRegistration.AddJsonResourceTexts method (2 of 2)
 **namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Adds json texts from embedded resources
+Adds JSON texts from embedded resources.
 
 ```csharp
 public static ILocalTextRegistry AddJsonResourceTexts(this ILocalTextRegistry registry, 
@@ -42,18 +42,18 @@ public static ILocalTextRegistry AddJsonResourceTexts(this ILocalTextRegistry re
 
 | parameter | description |
 | --- | --- |
-| registry | The text registry |
-| typeSource | Type source |
+| registry | The text registry. |
+| typeSource | The type source. |
 
 ## Return Value
 
-The text registry
+The text registry.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | registry, provider or sub path is null |
+| ArgumentNullException | registry or type source is null. |
 
 ## See Also
 

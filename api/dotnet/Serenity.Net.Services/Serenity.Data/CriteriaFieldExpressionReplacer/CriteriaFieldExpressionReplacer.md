@@ -21,11 +21,11 @@ public CriteriaFieldExpressionReplacer(IRow row, IPermissionService permissions,
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | row or permissions is null |
+| ArgumentNullException | *row* or *permissions* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

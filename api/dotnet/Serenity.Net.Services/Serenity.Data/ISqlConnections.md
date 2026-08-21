@@ -1,7 +1,7 @@
 # ISqlConnections interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-An interface used to abstract sql connections
+An interface used to abstract SQL connections.
 
 ```csharp
 public interface ISqlConnections : IConnectionStrings
@@ -11,8 +11,8 @@ public interface ISqlConnections : IConnectionStrings
 
 | name | description |
 | --- | --- |
-| [New](ISqlConnections/New.md)(…) | Creates a new IDbConnection for given connection string, provider name and dialect. |
-| [NewByKey](ISqlConnections/NewByKey.md)(…) | Creates a new IDbConnection for given connection key. |
+| [New](ISqlConnections/New.md)(…) | Creates a new IDbConnection for the given connection string, provider name, and dialect. |
+| [NewByKey](ISqlConnections/NewByKey.md)(…) | Creates a new IDbConnection for the given connection key. |
 
 ## See Also
 

@@ -1,11 +1,19 @@
 # AuthorizationExtensions.IsLoggedIn method (1 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns true if user is logged in (authenticated).
+Determines whether the specified principal is authenticated.
 
 ```csharp
 public static bool IsLoggedIn(this ClaimsPrincipal user)
 ```
+
+| parameter | description |
+| --- | --- |
+| user | The principal to check. |
+
+## Return Value
+
+`true` if the principal is authenticated; otherwise `false`.
 
 ## See Also
 
@@ -16,11 +24,19 @@ public static bool IsLoggedIn(this ClaimsPrincipal user)
 # AuthorizationExtensions.IsLoggedIn method (2 of 2)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns true if user is logged in (authenticated).
+Determines whether the user accessed via *userAccessor* is authenticated.
 
 ```csharp
 public static bool IsLoggedIn(this IUserAccessor userAccessor)
 ```
+
+| parameter | description |
+| --- | --- |
+| userAccessor | The accessor that provides the current user principal. |
+
+## Return Value
+
+`true` if a user is authenticated; otherwise `false`.
 
 ## See Also
 

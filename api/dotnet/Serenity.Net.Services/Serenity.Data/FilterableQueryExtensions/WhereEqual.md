@@ -10,8 +10,9 @@ public static T WhereEqual<T>(this T self, IField field, object value)
 
 | parameter | description |
 | --- | --- |
-|  | Field. |
-|  | Parameter value |
+| self | Query. |
+| field | Field. |
+| value | Parameter value. |
 
 ## Return Value
 

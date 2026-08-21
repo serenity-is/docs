@@ -1,7 +1,7 @@
 # LocalTextScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Local text dynamic script
+Local text dynamic script.
 
 ```csharp
 public class LocalTextScript : DynamicScript, INamedDynamicScript
@@ -9,31 +9,31 @@ public class LocalTextScript : DynamicScript, INamedDynamicScript
 
 | parameter | description |
 | --- | --- |
-| registry | Text registry |
-| package | Package key |
-| includes | Includes regex |
-| languageId | LanguageID |
-| isPending | True to include pending texts |
+| registry | The text registry. |
+| package | The package key. |
+| includes | The includes regex. |
+| languageId | The language ID. |
+| isPending | `true` to include pending texts. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [LocalTextScript](LocalTextScript/LocalTextScript.md)(…) | Local text dynamic script |
+| [LocalTextScript](LocalTextScript/LocalTextScript.md)(…) | Local text dynamic script. |
 | [ScriptName](LocalTextScript/ScriptName.md) { get; } |  |
 | override [GetScript](LocalTextScript/GetScript.md)() |  |
-| static [GetLocalTextPackageScript](LocalTextScript/GetLocalTextPackageScript.md)(…) | Gets local text package script content (2 methods) |
-| static [GetScriptName](LocalTextScript/GetScriptName.md)(…) | Gets script registration name for a local text package |
+| static [GetLocalTextPackageScript](LocalTextScript/GetLocalTextPackageScript.md)(…) | Gets the local text package script content. (2 methods) |
+| static [GetScriptName](LocalTextScript/GetScriptName.md)(…) | Gets the script registration name for a local text package. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *registry* or *package* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the [`LocalTextScript`](LocalTextScript.md) class.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # TypeSourceExtensions class
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Type source extension methods
+Type source extension methods.
 
 ```csharp
 public static class TypeSourceExtensions
@@ -11,7 +11,7 @@ public static class TypeSourceExtensions
 
 | name | description |
 | --- | --- |
-| static [GetAssemblyAttributes&lt;TAttribute&gt;](TypeSourceExtensions/GetAssemblyAttributes.md)(…) | Gets all attributes for assemblies |
+| static [GetAssemblyAttributes&lt;TAttribute&gt;](TypeSourceExtensions/GetAssemblyAttributes.md)(…) | Gets all attributes for assemblies. |
 
 ## See Also
 

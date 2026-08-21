@@ -1,7 +1,7 @@
 # ServiceLookupPermissionAttribute class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets a permission to read only lookup fields in a row via List service Lookup field means ID, Name, and [LookupInclude] properties in a row. You must use [AuthorizeList(typeof(XRow))] instead of ServiceAuthorize in service endpoint.
+Sets a permission to read only lookup fields in a row via the List service. Lookup field means ID, Name, and [LookupInclude] properties in a row. You must use [AuthorizeList(typeof(XRow))] instead of ServiceAuthorize in the service endpoint.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

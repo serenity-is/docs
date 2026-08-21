@@ -9,8 +9,8 @@ public class ServiceResolver<TService> : IServiceResolver<TService>
 
 | parameter | description |
 | --- | --- |
-| TService |  |
-| serviceProvider | The service provider |
+| TService | The type of the service to resolve. |
+| serviceProvider | The service provider. |
 
 ## Public Members
 
@@ -23,7 +23,7 @@ public class ServiceResolver<TService> : IServiceResolver<TService>
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Throws when service provider is null |
+| ArgumentNullException | Throws when the service provider is null. |
 
 ## Remarks
 

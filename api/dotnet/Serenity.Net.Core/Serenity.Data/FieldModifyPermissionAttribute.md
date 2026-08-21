@@ -1,7 +1,7 @@
 # FieldModifyPermissionAttribute class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets default read permission for fields of a row which doesn't have a ModifyPermission themselves.
+Sets the default modify permission for fields of a row that don't have a ModifyPermission themselves.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

@@ -1,7 +1,7 @@
 # DefaultConnectionStrings.byKey- field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Cached dictionary of connection string infos
+The cached dictionary of connection string infos.
 
 ```csharp
 protected readonly ConcurrentDictionary<string, ConnectionStringInfo> byKey-;

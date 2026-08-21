@@ -1,7 +1,7 @@
 # IIsSensitiveMessage interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-An interface to determine if the message of an exception might contain sensitive information that should not be shown to the end user. Currently only ValidationError implements this and returns false by default unless set explicitly.
+An interface to determine if the message of an exception might contain sensitive information that should not be shown to the end user. Currently only [`ValidationError`](ValidationError.md) implements this and returns false by default unless set explicitly.
 
 ```csharp
 public interface IIsSensitiveMessage
@@ -11,7 +11,7 @@ public interface IIsSensitiveMessage
 
 | name | description |
 | --- | --- |
-| [IsSensitiveMessage](IIsSensitiveMessage/IsSensitiveMessage.md) { get; } | Gets if the message of this exception can be safely shown to the end user, e.g. |
+| [IsSensitiveMessage](IIsSensitiveMessage/IsSensitiveMessage.md) { get; } | Gets a value indicating whether the message of this exception can be safely shown to the end user, e.g. whether it does not contain sensitive information. |
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # HeaderCssClassAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Sets the CSS class for grid column headers. It sets headerCssClass property of SlickColumn. This has no effect for forms.
+Sets the CSS class for grid column headers. It sets the headerCssClass property of SlickColumn. This has no effect for forms.
 
 ```csharp
 public HeaderCssClassAttribute(string value)

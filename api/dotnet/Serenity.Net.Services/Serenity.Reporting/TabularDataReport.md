@@ -11,10 +11,10 @@ public class TabularDataReport : IDataOnlyReport
 
 | name | description |
 | --- | --- |
-| [TabularDataReport](TabularDataReport/TabularDataReport.md)(…) | Creates an instance of the class. (3 constructors) |
+| [TabularDataReport](TabularDataReport/TabularDataReport.md)(…) | Initializes a new instance of the class with the given data and report columns. (3 constructors) |
 | virtual [GetColumnList](TabularDataReport/GetColumnList.md)() |  |
 | virtual [GetData](TabularDataReport/GetData.md)() |  |
-| const [CacheGroupKey](TabularDataReport/CacheGroupKey.md) | A group key for caching |
+| const [CacheGroupKey](TabularDataReport/CacheGroupKey.md) | A group key for caching. |
 | static [FromPropertyItem](TabularDataReport/FromPropertyItem.md)(…) | Creates a [`ReportColumn`](ReportColumn.md) from a PropertyItem |
 | static [GetColumnListFor](TabularDataReport/GetColumnListFor.md)(…) | Extracts report columns from a columns type |
 
@@ -22,7 +22,7 @@ public class TabularDataReport : IDataOnlyReport
 
 | name | description |
 | --- | --- |
-| [TabularDataReport](TabularDataReport/TabularDataReport.md)() | Creates an instance of the class. |
+| [TabularDataReport](TabularDataReport/TabularDataReport.md)() | Initializes a new instance of the class. |
 | [ColumnList](TabularDataReport/ColumnList.md) { get; set; } | The column list |
 | [ColumnsType](TabularDataReport/ColumnsType.md) { get; set; } | Columns type to use for export. This is used to determine the list of columns and their formats, decorator types etc. |
 | [Data](TabularDataReport/Data.md) { get; set; } | The report data |

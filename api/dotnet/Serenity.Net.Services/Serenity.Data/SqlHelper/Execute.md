@@ -1,7 +1,7 @@
 # SqlHelper.Execute method (1 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Executes the specified query on connection.
+Executes the specified query on the connection.
 
 ```csharp
 public static void Execute(this SqlInsert query, IDbConnection connection, ILogger logger = null)
@@ -11,7 +11,7 @@ public static void Execute(this SqlInsert query, IDbConnection connection, ILogg
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
-| logger | Logger |
+| logger | The logger. |
 
 ## See Also
 
@@ -23,7 +23,7 @@ public static void Execute(this SqlInsert query, IDbConnection connection, ILogg
 # SqlHelper.Execute method (2 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Executes the specified delete query on connection and returns number of affected rows.
+Executes the specified delete query on the connection and returns the number of affected rows.
 
 ```csharp
 public static int Execute(this SqlDelete query, IDbConnection connection, 
@@ -34,12 +34,12 @@ public static int Execute(this SqlDelete query, IDbConnection connection,
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
-| expectedRows | The expected rows. Used to validate expected number of affected rows. |
-| logger | Logger |
+| expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| logger | The logger. |
 
 ## Return Value
 
-Number of affected rows.
+The number of affected rows.
 
 ## See Also
 
@@ -52,7 +52,7 @@ Number of affected rows.
 # SqlHelper.Execute method (3 of 3)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Executes the specified update query on connection and returns number of affected rows.
+Executes the specified update query on the connection and returns the number of affected rows.
 
 ```csharp
 public static int Execute(this SqlUpdate query, IDbConnection connection, 
@@ -63,12 +63,12 @@ public static int Execute(this SqlUpdate query, IDbConnection connection,
 | --- | --- |
 | query | The query. |
 | connection | The connection. |
-| expectedRows | The expected rows. Used to validate expected number of affected rows. |
-| logger | Logger |
+| expectedRows | The expected rows. Used to validate the expected number of affected rows. |
+| logger | The logger. |
 
 ## Return Value
 
-Number of affected rows.
+The number of affected rows.
 
 ## See Also
 

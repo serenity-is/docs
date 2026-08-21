@@ -13,7 +13,7 @@ public string QuoteColumnAlias(string s)
 
 ## Return Value
 
-Quoted column alias
+The quoted column alias.
 
 ## See Also
 

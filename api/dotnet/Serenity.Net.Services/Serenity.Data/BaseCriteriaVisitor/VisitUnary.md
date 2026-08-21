@@ -1,7 +1,7 @@
 # BaseCriteriaVisitor.VisitUnary method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Visits the unary criteria. Unary criteria is one with one operand and one operator.
+Visits the unary criteria. A unary criteria is one with one operand and one operator.
 
 ```csharp
 protected virtual BaseCriteria VisitUnary(UnaryCriteria criteria)
@@ -10,6 +10,10 @@ protected virtual BaseCriteria VisitUnary(UnaryCriteria criteria)
 | parameter | description |
 | --- | --- |
 | criteria | The unary criteria. |
+
+## Return Value
+
+The visited unary criteria.
 
 ## See Also
 

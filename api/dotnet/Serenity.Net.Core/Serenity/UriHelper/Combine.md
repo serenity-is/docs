@@ -1,7 +1,7 @@
 # UriHelper.Combine method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Combine a url with a filename by inserting "/" char between them.This works like Path.Combine
+Combines a URL with a filename by inserting a "/" character between them. This works like Path.Combine.
 
 ```csharp
 public static string Combine(string url, string fileName)
@@ -14,7 +14,7 @@ public static string Combine(string url, string fileName)
 
 ## Return Value
 
-New string which consists of combining URL and Filename by inserting "/" char between them
+New string which consists of combining URL and Filename by inserting a "/" character between them.
 
 ## Remarks
 

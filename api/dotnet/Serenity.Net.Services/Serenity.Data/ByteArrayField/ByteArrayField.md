@@ -1,7 +1,7 @@
 # ByteArrayField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a byte[] value
+Field with a byte[] value.
 
 ```csharp
 public ByteArrayField(ICollection<Field> collection, string name, LocalText caption = null, 

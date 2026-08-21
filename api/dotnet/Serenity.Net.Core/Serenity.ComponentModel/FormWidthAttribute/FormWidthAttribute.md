@@ -24,7 +24,7 @@ public FormWidthAttribute(string cssClass)
 
 | parameter | description |
 | --- | --- |
-| cssClass |  |
+| cssClass | The CSS class to apply to the field, e.g. col-md-6. |
 
 ## See Also
 

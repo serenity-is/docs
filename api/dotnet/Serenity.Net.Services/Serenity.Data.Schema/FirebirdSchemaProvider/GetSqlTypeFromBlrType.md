@@ -14,6 +14,10 @@ public static string GetSqlTypeFromBlrType(int type, int subType, int size, int 
 | size | The size. |
 | scale | The scale. |
 
+## Return Value
+
+The SQL type name.
+
 ## See Also
 
 * class [FirebirdSchemaProvider](../FirebirdSchemaProvider.md)

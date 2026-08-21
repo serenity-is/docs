@@ -18,6 +18,10 @@ public static SingleField Factory(ICollection<Field> collection, string name, Lo
 | getValue | The get value. |
 | setValue | The set value. |
 
+## Return Value
+
+A new SingleField instance.
+
 ## See Also
 
 * class [Field](../Field.md)

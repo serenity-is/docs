@@ -1,7 +1,7 @@
 # ConnectionStringEntry class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Connection string setting
+A connection string setting.
 
 ```csharp
 public class ConnectionStringEntry
@@ -12,10 +12,10 @@ public class ConnectionStringEntry
 | name | description |
 | --- | --- |
 | [ConnectionStringEntry](ConnectionStringEntry/ConnectionStringEntry.md)() | The default constructor. |
-| [ConnectionString](ConnectionStringEntry/ConnectionString.md) { get; set; } | Gets / sets connection string |
-| [Dialect](ConnectionStringEntry/Dialect.md) { get; set; } | Gets / sets dialect name |
-| [DialectInstance](ConnectionStringEntry/DialectInstance.md) { get; set; } | Gets / sets the dialect instance |
-| [ProviderName](ConnectionStringEntry/ProviderName.md) { get; set; } | Gets / sets provider name |
+| [ConnectionString](ConnectionStringEntry/ConnectionString.md) { get; set; } | Gets or sets the connection string. |
+| [Dialect](ConnectionStringEntry/Dialect.md) { get; set; } | Gets or sets the dialect name. |
+| [DialectInstance](ConnectionStringEntry/DialectInstance.md) { get; set; } | Gets or sets the dialect instance. |
+| [ProviderName](ConnectionStringEntry/ProviderName.md) { get; set; } | Gets or sets the provider name. |
 
 ## See Also
 

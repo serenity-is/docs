@@ -12,7 +12,7 @@ public class CaptureLogConsts
 | name | description |
 | --- | --- |
 | [CaptureLogConsts](CaptureLogConsts/CaptureLogConsts.md)() | The default constructor. |
-| static readonly [UntilMax](CaptureLogConsts/UntilMax.md) | The maximum value for ValidUntil column |
+| static readonly [UntilMax](CaptureLogConsts/UntilMax.md) | Gets the maximum value for the ValidUntil column. |
 
 ## See Also
 

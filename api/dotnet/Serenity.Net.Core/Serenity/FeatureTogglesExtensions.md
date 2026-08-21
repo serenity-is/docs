@@ -1,7 +1,7 @@
 # FeatureTogglesExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Extensions for IFeatureToggles
+Extensions for [`IFeatureToggles`](../Serenity.Abstractions/IFeatureToggles.md).
 
 ```csharp
 public static class FeatureTogglesExtensions

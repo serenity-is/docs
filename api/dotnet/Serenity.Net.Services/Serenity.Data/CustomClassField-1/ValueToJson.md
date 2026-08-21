@@ -1,7 +1,7 @@
 # CustomClassField&lt;TValue&gt;.ValueToJson method (1 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Serializes this fields value to JSON
+Serializes this field's value to JSON.
 
 ```csharp
 public override void ValueToJson(JsonWriter writer, IRow row, JsonSerializer serializer)
@@ -23,7 +23,7 @@ public override void ValueToJson(JsonWriter writer, IRow row, JsonSerializer ser
 # CustomClassField&lt;TValue&gt;.ValueToJson method (2 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Serializes this fields value to JSON
+Serializes this field's value to JSON.
 
 ```csharp
 public virtual void ValueToJson(JsonWriter writer, TValue value, JsonSerializer serializer)
@@ -59,7 +59,7 @@ public override void ValueToJson(Utf8JsonWriter writer, IRow row, JsonSerializer
 # CustomClassField&lt;TValue&gt;.ValueToJson method (4 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Serializes the value to json
+Serializes the value to JSON.
 
 ```csharp
 public virtual void ValueToJson(Utf8JsonWriter writer, TValue value, JsonSerializerOptions options)
@@ -67,9 +67,9 @@ public virtual void ValueToJson(Utf8JsonWriter writer, TValue value, JsonSeriali
 
 | parameter | description |
 | --- | --- |
-| writer | Writer |
-| value | Value |
-| options | Serializer options |
+| writer | The writer. |
+| value | The value. |
+| options | The serializer options. |
 
 ## See Also
 

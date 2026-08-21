@@ -18,13 +18,13 @@ public static int DeleteById<TRow>(this IDbConnection connection, object id,
 
 ## Return Value
 
-Number of deleted rows
+Number of deleted rows.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | Expected rows and number of deleted rows does not match! |
+| InvalidOperationException | Expected rows and number of deleted rows do not match! |
 
 ## See Also
 

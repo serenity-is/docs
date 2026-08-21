@@ -1,7 +1,7 @@
 # DefaultUploadStorage constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates a new instance of the object
+Initializes a new instance of the [`DefaultUploadStorage`](../DefaultUploadStorage.md) class.
 
 ```csharp
 public DefaultUploadStorage(IOptions<UploadSettings> options, 
@@ -10,16 +10,16 @@ public DefaultUploadStorage(IOptions<UploadSettings> options,
 
 | parameter | description |
 | --- | --- |
-| options | Upload storage options |
-| hostEnvironment | Web host environment |
-| fileSystem | File system |
+| options | The upload storage options. |
+| hostEnvironment | The web host environment. |
+| fileSystem | The file system. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | One of arguments is null |
-| ArgumentOutOfRangeException | Options.URL or Options.Path is empty |
+| ArgumentNullException | One of the arguments is `null`. |
+| ArgumentException | `Options.Url` or `Options.Path` is empty. |
 
 ## See Also
 

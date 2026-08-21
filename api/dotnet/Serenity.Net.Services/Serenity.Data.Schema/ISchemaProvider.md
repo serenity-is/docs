@@ -1,7 +1,7 @@
 # ISchemaProvider interface
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Abstraction for SQL metadata providers
+Abstraction for SQL metadata providers.
 
 ```csharp
 public interface ISchemaProvider

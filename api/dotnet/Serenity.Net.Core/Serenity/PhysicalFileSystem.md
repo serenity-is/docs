@@ -1,7 +1,7 @@
 # PhysicalFileSystem class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Physical file sytem
+An [`IFileSystem`](IFileSystem.md) implementation that operates on the physical disk.
 
 ```csharp
 public class PhysicalFileSystem : IFileSystem

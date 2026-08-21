@@ -1,7 +1,7 @@
 # BaseCriteriaVisitor.VisitParam method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Visits the parameter criteria. Parameter criteria is just a parameter name.
+Visits the parameter criteria. A parameter criteria is just a parameter name.
 
 ```csharp
 protected virtual BaseCriteria VisitParam(ParamCriteria criteria)
@@ -10,6 +10,10 @@ protected virtual BaseCriteria VisitParam(ParamCriteria criteria)
 | parameter | description |
 | --- | --- |
 | criteria | The parameter criteria. |
+
+## Return Value
+
+The visited parameter criteria.
 
 ## See Also
 

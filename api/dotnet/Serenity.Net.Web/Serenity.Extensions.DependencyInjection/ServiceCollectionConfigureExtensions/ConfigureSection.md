@@ -1,7 +1,7 @@
 # ServiceCollectionConfigureExtensions.ConfigureSection&lt;TOptions&gt; method
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Calls `Configure&lt;TOptions&gt;` with the section key determined from DefaultSectionKeyAttribute on TOptions.
+Calls `Configure<TOptions>` with the section key determined from DefaultSectionKeyAttribute on *TOptions*.
 
 ```csharp
 public static IServiceCollection ConfigureSection<TOptions>(this IServiceCollection services, 
@@ -18,6 +18,13 @@ public static IServiceCollection ConfigureSection<TOptions>(this IServiceCollect
 ## Return Value
 
 The IServiceCollection so that additional calls can be chained.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *config* is `null`. |
+| ArgumentOutOfRangeException | *TOptions* has no DefaultSectionKeyAttribute. |
 
 ## See Also
 

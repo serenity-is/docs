@@ -11,6 +11,10 @@ public BaseCriteria InStatement(BaseCriteria statement)
 | --- | --- |
 | statement | The statement. |
 
+## Return Value
+
+A new binary IN criteria.
+
 ## See Also
 
 * class [BaseCriteria](../BaseCriteria.md)

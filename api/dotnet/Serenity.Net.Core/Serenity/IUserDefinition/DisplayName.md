@@ -1,7 +1,7 @@
 # IUserDefinition.DisplayName property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Display name for user (can be same with Username)
+Gets the display name of the user, which may be the same as [`Username`](Username.md).
 
 ```csharp
 public string DisplayName { get; }

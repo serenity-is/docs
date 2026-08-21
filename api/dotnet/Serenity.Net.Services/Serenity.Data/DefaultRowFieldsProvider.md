@@ -16,8 +16,8 @@ public class DefaultRowFieldsProvider : IRowFieldsProvider
 | name | description |
 | --- | --- |
 | [DefaultRowFieldsProvider](DefaultRowFieldsProvider/DefaultRowFieldsProvider.md)(…) | Default row fields instance provider, that resolves row fields instances using ActivatorUtilities.CreateInstance through a IServiceProvider. |
-| [Resolve](DefaultRowFieldsProvider/Resolve.md)(…) | Resolves the specified fields type. |
-| [ResolveWithAlias](DefaultRowFieldsProvider/ResolveWithAlias.md)(…) | Resolves the with alias. |
+| [Resolve](DefaultRowFieldsProvider/Resolve.md)(…) | Resolves the fields instance for the specified fields type. |
+| [ResolveWithAlias](DefaultRowFieldsProvider/ResolveWithAlias.md)(…) | Resolves the fields instance for the specified fields type with the given alias applied. |
 
 ## Exceptions
 

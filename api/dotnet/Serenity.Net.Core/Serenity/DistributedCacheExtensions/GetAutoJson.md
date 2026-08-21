@@ -1,7 +1,7 @@
 # DistributedCacheExtensions.GetAutoJson&lt;TValue&gt; method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Sets a value from the cache as byte[], string, or using JSON deserialization depending on type
+Gets a value from the cache as byte[], string, or using JSON deserialization depending on type
 
 ```csharp
 public static TValue GetAutoJson<TValue>(this IDistributedCache cache, string key)
@@ -12,6 +12,10 @@ public static TValue GetAutoJson<TValue>(this IDistributedCache cache, string ke
 | --- | --- |
 | cache | Cache |
 | key | Key |
+
+## Return Value
+
+The cached value, or `null` if the key does not exist in the cache.
 
 ## See Also
 

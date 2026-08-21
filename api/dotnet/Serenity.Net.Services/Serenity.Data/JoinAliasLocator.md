@@ -1,7 +1,7 @@
 # JoinAliasLocator class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Locates alias references in an SQL expression
+Locates alias references in an SQL expression.
 
 ```csharp
 public class JoinAliasLocator

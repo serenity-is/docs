@@ -11,6 +11,10 @@ public TEnum? this[IRow row] { get; set; }
 | --- | --- |
 | row | The row. |
 
+## Return Value
+
+The enum value of the field in the row.
+
 ## See Also
 
 * struct [TEnum](../Serenity.Net.Services/../EnumField-1.TEnum.md)

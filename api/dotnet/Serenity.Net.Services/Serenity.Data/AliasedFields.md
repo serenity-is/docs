@@ -1,7 +1,7 @@
 # AliasedFields class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Contains extension method to create aliased fields
+Contains extension methods to create aliased fields.
 
 ```csharp
 public static class AliasedFields

@@ -10,9 +10,9 @@ public static T Set<T>(this T self, string field, object value)
 
 | parameter | description |
 | --- | --- |
-|  | Field name. |
-|  | Parameter name |
-|  | Parameter value |
+| self | The object itself. |
+| field | Field name. |
+| value | Parameter value. |
 
 ## Return Value
 

@@ -10,9 +10,13 @@ public static Parameter AddParam<T>(this T self, object value)
 
 | parameter | description |
 | --- | --- |
-| T |  |
+| T | The query type. |
 | self | The query. |
 | value | The value. |
+
+## Return Value
+
+The automatically named parameter that was added.
 
 ## See Also
 

@@ -12,6 +12,10 @@ protected override int CompareValues(List<TForeign> value1, List<TForeign> value
 | value1 | The value1. |
 | value2 | The value2. |
 
+## Return Value
+
+A value indicating the relative order of the two values.
+
 ## See Also
 
 * class [TForeign](../Serenity.Net.Services/../RowListField-1.TForeign.md)

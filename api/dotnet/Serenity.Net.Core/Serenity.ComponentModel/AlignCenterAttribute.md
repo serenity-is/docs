@@ -12,7 +12,7 @@ public class AlignCenterAttribute : AlignmentAttribute
 
 | name | description |
 | --- | --- |
-| [AlignCenterAttribute](AlignCenterAttribute/AlignCenterAttribute.md)() | Creates a new AlignCenterAttribute |
+| [AlignCenterAttribute](AlignCenterAttribute/AlignCenterAttribute.md)() | Creates a new AlignCenterAttribute. |
 
 ## Remarks
 

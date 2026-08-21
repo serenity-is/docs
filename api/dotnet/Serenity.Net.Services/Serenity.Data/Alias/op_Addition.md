@@ -14,13 +14,13 @@ public static string operator +(Alias alias, IField field)
 
 ## Return Value
 
-String containing prefixed field
+String containing prefixed field.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -45,7 +45,7 @@ public static string operator +(Alias alias, string fieldName)
 
 ## Return Value
 
-String containing prefixed field
+String containing prefixed field.
 
 ## See Also
 

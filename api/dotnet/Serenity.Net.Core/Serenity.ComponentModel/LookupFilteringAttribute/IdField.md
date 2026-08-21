@@ -1,7 +1,7 @@
 # LookupFilteringAttribute.IdField property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets or sets the ID field editor should filter on.
+Gets or sets the ID field that the editor should filter on.
 
 ```csharp
 public string IdField { get; set; }

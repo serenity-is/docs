@@ -1,12 +1,12 @@
 # BaseUploadEditorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in row, otherwise your files will stay in temporary directory.
+Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in the row, otherwise your files will stay in the temporary directory.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
 public abstract class BaseUploadEditorAttribute : CustomEditorAttribute, IUploadEditor, 
-    IUploadFileConstraints, IUploadFileOptions, IUploadImageContrains, IUploadImageOptions
+    IUploadFileConstraints, IUploadFileOptions, IUploadImageConstraints, IUploadImageOptions
 ```
 
 | parameter | description |
@@ -54,11 +54,11 @@ public abstract class BaseUploadEditorAttribute : CustomEditorAttribute, IUpload
 
 | name | description |
 | --- | --- |
-| [BaseUploadEditorAttribute](BaseUploadEditorAttribute/BaseUploadEditorAttribute.md)(…) | Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in row, otherwise your files will stay in temporary directory. |
+| [BaseUploadEditorAttribute](BaseUploadEditorAttribute/BaseUploadEditorAttribute.md)(…) | Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in the row, otherwise your files will stay in the temporary directory. |
 
 ## Remarks
 
-Initializes a new instance of the [`ImageUploadEditorAttribute`](ImageUploadEditorAttribute.md) class.
+Initializes a new instance of the [`BaseUploadEditorAttribute`](BaseUploadEditorAttribute.md) class.
 
 ## See Also
 
@@ -66,6 +66,6 @@ Initializes a new instance of the [`ImageUploadEditorAttribute`](ImageUploadEdit
 * interface [IUploadEditor](IUploadEditor.md)
 * interface [IUploadFileConstraints](IUploadFileConstraints.md)
 * interface [IUploadFileOptions](IUploadFileOptions.md)
-* interface [IUploadImageContrains](IUploadImageContrains.md)
+* interface [IUploadImageConstraints](IUploadImageConstraints.md)
 * interface [IUploadImageOptions](IUploadImageOptions.md)
 * **Source:** *[BaseUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/BaseUploadEditorAttribute.cs)*

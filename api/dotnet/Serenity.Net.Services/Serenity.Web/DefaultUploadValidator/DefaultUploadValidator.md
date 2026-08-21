@@ -1,7 +1,7 @@
 # DefaultUploadValidator constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Default implementation for [`IUploadValidator`](../IUploadValidator.md)
+Default implementation for [`IUploadValidator`](../IUploadValidator.md).
 
 ```csharp
 public DefaultUploadValidator(IImageProcessor imageProcessor, ITextLocalizer localizer, 
@@ -19,11 +19,11 @@ public DefaultUploadValidator(IImageProcessor imageProcessor, ITextLocalizer loc
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | imageProcessor or localizer is null |
+| ArgumentNullException | *imageProcessor* or *localizer* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

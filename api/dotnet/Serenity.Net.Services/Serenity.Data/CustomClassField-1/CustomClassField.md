@@ -1,7 +1,7 @@
 # CustomClassField&lt;TValue&gt; constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Base class for custom fields with reference type values
+Base class for custom fields with reference type values.
 
 ```csharp
 public CustomClassField(ICollection<Field> collection, string name, LocalText caption, int size, 

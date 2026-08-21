@@ -1,7 +1,7 @@
 # HintAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets a hint for a form field. Hint is shown when field label is hovered. This has no effect on columns.
+Sets a hint for a form field. The hint is shown when the field label is hovered. This has no effect on columns.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,7 +16,7 @@ public class HintAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [HintAttribute](HintAttribute/HintAttribute.md)(…) | Sets a hint for a form field. Hint is shown when field label is hovered. This has no effect on columns. |
+| [HintAttribute](HintAttribute/HintAttribute.md)(…) | Sets a hint for a form field. The hint is shown when the field label is hovered. This has no effect on columns. |
 | [Hint](HintAttribute/Hint.md) { get; } | Gets the hint. |
 
 ## Remarks

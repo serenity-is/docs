@@ -24,7 +24,7 @@ public static ValidationError RequiredError(Field field, ITextLocalizer localize
 # DataValidation.RequiredError method (2 of 2)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Returns a required validation error
+Returns a required validation error.
 
 ```csharp
 public static ValidationError RequiredError(string name, ITextLocalizer localizer, 
@@ -36,6 +36,10 @@ public static ValidationError RequiredError(string name, ITextLocalizer localize
 | name | Field name |
 | localizer | Text localizer |
 | title | Field title |
+
+## Return Value
+
+The required validation error.
 
 ## See Also
 

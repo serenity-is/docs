@@ -12,7 +12,7 @@ public class ImageEncoderParams
 | name | description |
 | --- | --- |
 | [ImageEncoderParams](ImageEncoderParams/ImageEncoderParams.md)() | The default constructor. |
-| [Quality](ImageEncoderParams/Quality.md) { get; set; } | JPEG quality |
+| [Quality](ImageEncoderParams/Quality.md) { get; set; } | Gets or sets the JPEG quality. |
 
 ## See Also
 

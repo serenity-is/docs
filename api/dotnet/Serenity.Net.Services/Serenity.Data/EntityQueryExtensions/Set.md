@@ -10,13 +10,13 @@ public static T Set<T>(this T self, IField field, object value)
 
 | parameter | description |
 | --- | --- |
-|  | Field name. |
-|  | Parameter name |
-|  | Parameter value |
+| self | The query to set the field value on. |
+| field | The field name. |
+| value | The parameter value. |
 
 ## Return Value
 
-Object itself.
+The object itself.
 
 ## See Also
 
@@ -39,11 +39,13 @@ public static T Set<T>(this T self, IRow row, IField exclude = null)
 
 | parameter | description |
 | --- | --- |
-|  | The row with modified field values. Must be in TrackAssignments mode, or an exception is raised. |
+| self | The query to set the field values on. |
+| row | The row with modified field values. Must be in TrackAssignments mode, or an exception is raised. |
+| exclude | The field to exclude from being set. |
 
 ## Return Value
 
-Object itself.
+The object itself.
 
 ## See Also
 

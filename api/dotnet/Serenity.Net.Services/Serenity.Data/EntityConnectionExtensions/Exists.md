@@ -16,7 +16,7 @@ public static bool Exists<TRow>(this IDbConnection connection, ICriteria where)
 
 ## Return Value
 
-True if record matching criteria exists.
+True if a record matching the criteria exists.
 
 ## See Also
 

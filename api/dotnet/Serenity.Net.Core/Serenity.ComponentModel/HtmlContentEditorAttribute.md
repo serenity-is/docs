@@ -1,7 +1,7 @@
 # HtmlContentEditorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that the target property should use a "HtmlContent" editor. This is generally a CK editor that contains more functionalities compared to other ones.
+Indicates that the target property should use an "HtmlContent" editor. This is generally a CK editor that contains more functionality compared to other ones.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

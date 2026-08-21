@@ -1,7 +1,7 @@
 # IRetrieveRequestHandler.Row property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Loader row
+Gets the row used for querying / metadata lookup.
 
 ```csharp
 public IRow Row { get; }

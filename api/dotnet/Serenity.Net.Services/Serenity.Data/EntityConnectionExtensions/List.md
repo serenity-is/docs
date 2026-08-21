@@ -15,7 +15,7 @@ public static List<TRow> List<TRow>(this IDbConnection connection)
 
 ## Return Value
 
-All records
+All records.
 
 ## See Also
 
@@ -72,7 +72,7 @@ public static List<TRow> List<TRow>(this IDbConnection connection, ICriteria whe
 
 ## Return Value
 
-Records matching the specified criteria
+Records matching the specified criteria.
 
 ## See Also
 

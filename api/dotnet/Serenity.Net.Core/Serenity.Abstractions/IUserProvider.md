@@ -1,12 +1,16 @@
 # IUserProvider interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction that is a combination of IUserAccessor, IImpersonator, IUserClaimCreator, IUserRetrieveService and IUserCacheInvalidator. Note that although the [`DefaultUserProvider`](../Serenity.Services/DefaultUserProvider.md) implements IImpersonator, its methods may throw exceptions if the underlying IUserAccessor does not implement IImpersonator.
+Combines user access, retrieval, claim creation, impersonation, and cache invalidation into a single abstraction.
 
 ```csharp
 public interface IUserProvider : IImpersonator, IRemoveAll, IRemoveCachedUser, IUserAccessor, 
     IUserClaimCreator, IUserRetrieveService
 ```
+
+## Remarks
+
+Although [`DefaultUserProvider`](../Serenity.Services/DefaultUserProvider.md) implements [`IImpersonator`](IImpersonator.md), its impersonation methods may throw InvalidOperationException when the underlying [`IUserAccessor`](IUserAccessor.md) does not implement [`IImpersonator`](IImpersonator.md).
 
 ## See Also
 

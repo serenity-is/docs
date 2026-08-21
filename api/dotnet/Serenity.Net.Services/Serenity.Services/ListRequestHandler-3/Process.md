@@ -16,7 +16,7 @@ public TListResponse Process(IDbConnection connection, TListRequest request)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | connection or the request is null |
+| ArgumentNullException | *connection* or *request* is `null`. |
 
 ## See Also
 

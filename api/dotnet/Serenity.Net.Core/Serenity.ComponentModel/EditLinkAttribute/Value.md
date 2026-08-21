@@ -1,7 +1,7 @@
 # EditLinkAttribute.Value property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets/sets edit link enable state
+Gets or sets the edit link enable state.
 
 ```csharp
 public bool Value { get; }

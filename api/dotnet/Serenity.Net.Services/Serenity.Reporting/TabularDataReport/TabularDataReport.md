@@ -1,7 +1,7 @@
 # TabularDataReport constructor (1 of 4)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class.
+Initializes a new instance of the class.
 
 ```csharp
 protected TabularDataReport()
@@ -16,7 +16,7 @@ protected TabularDataReport()
 # TabularDataReport constructor (2 of 4)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class.
+Initializes a new instance of the class with the given data and report columns.
 
 ```csharp
 public TabularDataReport(IEnumerable data, IEnumerable<ReportColumn> columns)
@@ -31,7 +31,7 @@ public TabularDataReport(IEnumerable data, IEnumerable<ReportColumn> columns)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *data* or *columns* is `null`. |
 
 ## See Also
 
@@ -43,7 +43,7 @@ public TabularDataReport(IEnumerable data, IEnumerable<ReportColumn> columns)
 # TabularDataReport constructor (3 of 4)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class.
+Initializes a new instance of the class with the given data and columns type.
 
 ```csharp
 public TabularDataReport(IEnumerable data, Type columnsType, IServiceProvider serviceProvider)
@@ -59,7 +59,7 @@ public TabularDataReport(IEnumerable data, Type columnsType, IServiceProvider se
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *data*, *columnsType* or *serviceProvider* is `null`. |
 
 ## See Also
 
@@ -70,7 +70,7 @@ public TabularDataReport(IEnumerable data, Type columnsType, IServiceProvider se
 # TabularDataReport constructor (4 of 4)
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates an instance of the class.
+Initializes a new instance of the class with the given data, columns type and export columns.
 
 ```csharp
 public TabularDataReport(IEnumerable data, Type columnsType, IEnumerable<string> exportColumns, 
@@ -88,7 +88,7 @@ public TabularDataReport(IEnumerable data, Type columnsType, IEnumerable<string>
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException |  |
+| ArgumentNullException | *data*, *columnsType*, *exportColumns* or *serviceProvider* is `null`. |
 
 ## See Also
 

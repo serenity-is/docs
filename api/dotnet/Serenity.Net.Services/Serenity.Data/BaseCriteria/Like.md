@@ -10,7 +10,11 @@ public BaseCriteria Like(string mask, bool upper = false)
 | parameter | description |
 | --- | --- |
 | mask | The LIKE mask. |
-| upper | True to use UPPER function both sides |
+| upper | `true` to use the UPPER function on both sides. |
+
+## Return Value
+
+A new binary Like criteria.
 
 ## See Also
 

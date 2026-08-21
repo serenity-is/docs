@@ -1,7 +1,7 @@
 # DistinctValuesRegistration.RegisterDistinctValueScripts method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Creates and registers dynamic scripts for row properties with DistinctValuesEditorAttribute
+Creates and registers dynamic scripts for row properties with DistinctValuesEditorAttribute.
 
 ```csharp
 public static void RegisterDistinctValueScripts(IDynamicScriptManager scriptManager, 
@@ -10,16 +10,16 @@ public static void RegisterDistinctValueScripts(IDynamicScriptManager scriptMana
 
 | parameter | description |
 | --- | --- |
-| scriptManager | Dynamic script manager |
-| typeSource | Type source |
-| serviceProvider | Service provider |
+| scriptManager | The dynamic script manager. |
+| typeSource | The type source. |
+| serviceProvider | The service provider. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Script manager, type source or service provider is null |
-| Exception | DistinctValuesAttribute is placed on a non-row type |
+| ArgumentNullException | Script manager, type source or service provider is `null`. |
+| Exception | The DistinctValuesEditorAttribute is placed on a non-row type. |
 
 ## See Also
 

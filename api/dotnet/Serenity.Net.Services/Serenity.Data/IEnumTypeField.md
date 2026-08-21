@@ -1,7 +1,7 @@
 # IEnumTypeField interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for fields with an enum type property
+Interface for fields with an enum type property.
 
 ```csharp
 public interface IEnumTypeField

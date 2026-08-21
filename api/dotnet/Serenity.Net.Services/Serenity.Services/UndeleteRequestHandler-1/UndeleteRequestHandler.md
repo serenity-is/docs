@@ -14,7 +14,7 @@ public UndeleteRequestHandler(IRequestContext context)
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

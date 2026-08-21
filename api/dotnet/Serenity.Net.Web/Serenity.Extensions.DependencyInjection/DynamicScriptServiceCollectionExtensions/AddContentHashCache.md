@@ -9,7 +9,11 @@ public static IServiceCollection AddContentHashCache(this IServiceCollection col
 
 | parameter | description |
 | --- | --- |
-| collection | Service collection |
+| collection | The service collection. |
+
+## Return Value
+
+The same service collection so that calls can be chained.
 
 ## See Also
 

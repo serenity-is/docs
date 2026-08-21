@@ -1,7 +1,7 @@
 # BaseDynamicDataGenerator.InitializeScripts method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Initializes scripts
+Initializes the dynamic scripts.
 
 ```csharp
 protected virtual void InitializeScripts(IServiceProvider services)
@@ -9,7 +9,7 @@ protected virtual void InitializeScripts(IServiceProvider services)
 
 | parameter | description |
 | --- | --- |
-| services | Service provider |
+| services | The service provider. |
 
 ## See Also
 

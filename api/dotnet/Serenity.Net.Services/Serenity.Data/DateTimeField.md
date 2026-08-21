@@ -1,7 +1,7 @@
 # DateTimeField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with a DateTime value
+Field with a DateTime value.
 
 ```csharp
 public sealed class DateTimeField : GenericValueField<DateTime>
@@ -21,7 +21,7 @@ public sealed class DateTimeField : GenericValueField<DateTime>
 
 | name | description |
 | --- | --- |
-| [DateTimeField](DateTimeField/DateTimeField.md)(…) | Field with a DateTime value |
+| [DateTimeField](DateTimeField/DateTimeField.md)(…) | Field with a DateTime value. |
 | static [Factory](DateTimeField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | [DateOnly](DateTimeField/DateOnly.md) { get; set; } | Gets or sets a value indicating whether the field is date only, e.g. no time part. |
 | [DateTimeKind](DateTimeField/DateTimeKind.md) { get; set; } | Gets or sets the kind of the date time. Unspecified means no date/time conversions, Local means local time zone, Utc means UTC time zone |
@@ -29,10 +29,10 @@ public sealed class DateTimeField : GenericValueField<DateTime>
 | override [AsObject](DateTimeField/AsObject.md)(…) | Sets the value of this field in specified row as object. |
 | override [ConvertValue](DateTimeField/ConvertValue.md)(…) | Converts the value. |
 | override [GetFromReader](DateTimeField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| [ToDateTimeKind](DateTimeField/ToDateTimeKind.md)(…) | Converts the value to this field's DateTimeKind (2 methods) |
-| override [ValueFromJson](DateTimeField/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](DateTimeField/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
-| static [ToDateTimeKind](DateTimeField/ToDateTimeKind.md)(…) | Converts the value to specified DateTimeKind (2 methods) |
+| [ToDateTimeKind](DateTimeField/ToDateTimeKind.md)(…) | Converts the value to this field's DateTimeKind. (2 methods) |
+| override [ValueFromJson](DateTimeField/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](DateTimeField/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
+| static [ToDateTimeKind](DateTimeField/ToDateTimeKind.md)(…) | Converts the value to the specified DateTimeKind. (2 methods) |
 
 ## Remarks
 

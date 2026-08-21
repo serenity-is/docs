@@ -10,15 +10,19 @@ public static List<NavigationItem> ConvertToNavigationItems(IPermissionService p
 
 | parameter | description |
 | --- | --- |
-| permissions | Permission service |
-| attrByCategory | A lookup to find attributes by their category |
-| resolveUrl | Resolve url callback |
+| permissions | The permission service. |
+| attrByCategory | A lookup to find attributes by their category. |
+| resolveUrl | The resolve URL callback. |
+
+## Return Value
+
+The list of navigation items.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | One of the arguments is null |
+| ArgumentNullException | One of the arguments is `null`. |
 
 ## See Also
 

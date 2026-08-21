@@ -1,7 +1,7 @@
 # CodeWriter.ToCSKeyword method
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Converts primitive class to C# keyword if given class is not a primitive class returns null.
+Converts a primitive class name to its C# keyword. If the given class is not a primitive class, returns `null`.
 
 ```csharp
 public static string ToCSKeyword(string dataType)
@@ -9,7 +9,11 @@ public static string ToCSKeyword(string dataType)
 
 | parameter | description |
 | --- | --- |
-| dataType |  |
+| dataType | The class name to convert. |
+
+## Return Value
+
+The corresponding C# keyword, or `null` if the class is not a primitive.
 
 ## See Also
 

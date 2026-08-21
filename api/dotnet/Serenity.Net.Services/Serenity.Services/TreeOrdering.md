@@ -11,7 +11,7 @@ public static class TreeOrdering
 
 | name | description |
 | --- | --- |
-| static [Sort&lt;TItem,TIdentity&gt;](TreeOrdering/Sort.md)(…) | Applies tree based ordering to the items |
+| static [Sort&lt;TItem,TIdentity&gt;](TreeOrdering/Sort.md)(…) | Applies tree based ordering to the items. |
 
 ## See Also
 

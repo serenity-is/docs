@@ -14,7 +14,7 @@ public sealed class UpdatableExtensionAttribute : Attribute
 | --- | --- |
 | [UpdatableExtensionAttribute](UpdatableExtensionAttribute/UpdatableExtensionAttribute.md)(…) | Initializes a new instance of the [`UpdatableExtensionAttribute`](UpdatableExtensionAttribute.md) class. |
 | [Alias](UpdatableExtensionAttribute/Alias.md) { get; } | The join alias in this row that brings in extension table fields as view fields |
-| [CascadeDelete](UpdatableExtensionAttribute/CascadeDelete.md) { get; set; } | Delete extension record if this record is deleted |
+| [CascadeDelete](UpdatableExtensionAttribute/CascadeDelete.md) { get; set; } | Delete extension record if this record is deleted. |
 | [FilterField](UpdatableExtensionAttribute/FilterField.md) { get; set; } | Name of a field in extension table that will be filtered in extension table in addition to key. For example, if you have a CustomerAddresses table, and your join condition is T0.CustomerID = ca.CustomerID and ca.AddressType = 'Billing', your FilterField is AddressType and your FilterValue is 'Billing' |
 | [FilterValue](UpdatableExtensionAttribute/FilterValue.md) { get; set; } | Constant value of a field in extension table that will be filtered in extension table in addition to key. For example, if you have a CustomerAddresses table, and your join condition is T0.CustomerID = ca.CustomerID and ca.AddressType = 'Billing', your FilterField is AddressType and your FilterValue is 'Billing' |
 | [OtherKey](UpdatableExtensionAttribute/OtherKey.md) { get; set; } | Name of the key field in extension table. If not specified, ID field of extension table is assumed, unless there is a field with matching name to ThisKey in extension table. |

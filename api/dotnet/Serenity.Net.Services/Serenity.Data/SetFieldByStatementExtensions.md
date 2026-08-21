@@ -1,7 +1,7 @@
 # SetFieldByStatementExtensions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extension methods for classes implementing IDbSet interface
+Extension methods for classes implementing [`ISetFieldByStatement`](ISetFieldByStatement.md).
 
 ```csharp
 public static class SetFieldByStatementExtensions

@@ -1,7 +1,7 @@
 # IRolePermissionService interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Role Permission Service abstraction
+Checks whether a specific role has a given permission.
 
 ```csharp
 public interface IRolePermissionService
@@ -11,7 +11,7 @@ public interface IRolePermissionService
 
 | name | description |
 | --- | --- |
-| [HasPermission](IRolePermissionService/HasPermission.md)(…) | Return if given role has given permission. |
+| [HasPermission](IRolePermissionService/HasPermission.md)(…) | Determines whether the specified role has the given permission. |
 
 ## See Also
 

@@ -43,7 +43,7 @@ public static bool IsEnabled(this IFeatureToggles featureToggles, IEnumerable<st
 # FeatureTogglesExtensions.IsEnabled method (3 of 3)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets if a set of features are enabled, requiring just one to be enabled if requireAny is true
+Gets if a set of features is enabled, requiring just one to be enabled if requireAny is true.
 
 ```csharp
 public static bool IsEnabled(this IFeatureToggles featureToggles, IEnumerable<string> features, 
@@ -54,7 +54,7 @@ public static bool IsEnabled(this IFeatureToggles featureToggles, IEnumerable<st
 | --- | --- |
 | featureToggles | Feature toggles |
 | features | Features |
-| requireAny | Require any (true) or all (false) feature |
+| requireAny | Require any (true) or all (false) feature. |
 
 ## See Also
 

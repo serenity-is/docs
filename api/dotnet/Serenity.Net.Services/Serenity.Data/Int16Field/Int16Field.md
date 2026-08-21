@@ -1,7 +1,7 @@
 # Int16Field constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with Int16 value
+Field with an Int16 value.
 
 ```csharp
 public Int16Field(ICollection<Field> collection, string name, LocalText caption = null, 

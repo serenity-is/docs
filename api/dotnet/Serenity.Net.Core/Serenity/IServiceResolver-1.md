@@ -9,7 +9,7 @@ public interface IServiceResolver<TService>
 
 | parameter | description |
 | --- | --- |
-| TService |  |
+| TService | The type of the service to resolve. |
 
 ## Members
 

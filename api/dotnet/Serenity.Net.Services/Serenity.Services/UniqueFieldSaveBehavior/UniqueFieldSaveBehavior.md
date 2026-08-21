@@ -1,7 +1,7 @@
 # UniqueFieldSaveBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Interface that handles [`UniqueConstraintAttribute`](../../Serenity.Data.Mapping/UniqueConstraintAttribute.md) on fields
+Interface that handles [`UniqueConstraintAttribute`](../../Serenity.Data.Mapping/UniqueConstraintAttribute.md) on fields.
 
 ```csharp
 public UniqueFieldSaveBehavior(ITextLocalizer localizer)
@@ -13,7 +13,7 @@ public UniqueFieldSaveBehavior(ITextLocalizer localizer)
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

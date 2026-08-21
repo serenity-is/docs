@@ -1,7 +1,7 @@
 # Int64Field class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with Int64 value
+Field with an Int64 value.
 
 ```csharp
 public sealed class Int64Field : GenericValueField<long>
@@ -21,11 +21,11 @@ public sealed class Int64Field : GenericValueField<long>
 
 | name | description |
 | --- | --- |
-| [Int64Field](Int64Field/Int64Field.md)(…) | Field with Int64 value |
+| [Int64Field](Int64Field/Int64Field.md)(…) | Field with an Int64 value. |
 | static [Factory](Int64Field/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [GetFromReader](Int64Field/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [ValueFromJson](Int64Field/ValueFromJson.md)(…) | Deserializes this fields value from JSON (2 methods) |
-| override [ValueToJson](Int64Field/ValueToJson.md)(…) | Serializes this fields value to JSON (2 methods) |
+| override [ValueFromJson](Int64Field/ValueFromJson.md)(…) | Deserializes this field's value from JSON. (2 methods) |
+| override [ValueToJson](Int64Field/ValueToJson.md)(…) | Serializes this field's value to JSON. (2 methods) |
 
 ## Remarks
 

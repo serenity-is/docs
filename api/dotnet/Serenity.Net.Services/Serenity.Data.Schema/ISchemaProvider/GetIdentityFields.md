@@ -13,6 +13,10 @@ public IEnumerable<string> GetIdentityFields(IDbConnection connection, string sc
 | schema | The schema. |
 | table | The table. |
 
+## Return Value
+
+The list of identity field names for the table.
+
 ## See Also
 
 * interface [ISchemaProvider](../ISchemaProvider.md)

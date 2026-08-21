@@ -1,7 +1,7 @@
 # EmailEditorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Email editor type with two inputs. Please prefer EmailAddressEditorAttribute which uses a single input.
+Email editor type with two inputs. Prefer EmailAddressEditorAttribute which uses a single input.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -12,12 +12,12 @@ public class EmailEditorAttribute : CustomEditorAttribute, ICustomValidator
 
 | name | description |
 | --- | --- |
-| [EmailEditorAttribute](EmailEditorAttribute/EmailEditorAttribute.md)() | Creates a new instance of the email editor |
-| [Domain](EmailEditorAttribute/Domain.md) { get; set; } | Domain |
-| [ReadOnlyDomain](EmailEditorAttribute/ReadOnlyDomain.md) { get; set; } | True if the domain should be readonly |
-| [Validate](EmailEditorAttribute/Validate.md)(…) | Validates the email address |
-| static readonly [EmailPattern](EmailEditorAttribute/EmailPattern.md) | Default email validation pattern |
-| const [Key](EmailEditorAttribute/Key.md) | Editor type key |
+| [EmailEditorAttribute](EmailEditorAttribute/EmailEditorAttribute.md)() | Initializes a new instance of the [`EmailEditorAttribute`](EmailEditorAttribute.md) class. |
+| [Domain](EmailEditorAttribute/Domain.md) { get; set; } | Gets or sets the domain. |
+| [ReadOnlyDomain](EmailEditorAttribute/ReadOnlyDomain.md) { get; set; } | Gets or sets a value indicating whether the domain should be read-only. |
+| [Validate](EmailEditorAttribute/Validate.md)(…) | Validates the email address. |
+| static readonly [EmailPattern](EmailEditorAttribute/EmailPattern.md) | The default email validation pattern. |
+| const [Key](EmailEditorAttribute/Key.md) | The editor type key. |
 
 ## See Also
 

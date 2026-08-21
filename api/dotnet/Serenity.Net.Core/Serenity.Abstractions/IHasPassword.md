@@ -1,7 +1,7 @@
 # IHasPassword interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Used to determine if user has a password. If interface not found on user definition it assumes user has a password.
+Indicates whether a user account has a password set.
 
 ```csharp
 public interface IHasPassword
@@ -11,7 +11,11 @@ public interface IHasPassword
 
 | name | description |
 | --- | --- |
-| [HasPassword](IHasPassword/HasPassword.md) { get; } | Is user has a password |
+| [HasPassword](IHasPassword/HasPassword.md) { get; } | Gets a value indicating whether the user has a password. |
+
+## Remarks
+
+When a user definition does not implement this interface, the system assumes that the user has a password.
 
 ## See Also
 

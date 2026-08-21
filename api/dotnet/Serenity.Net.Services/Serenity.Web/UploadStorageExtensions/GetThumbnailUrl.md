@@ -1,7 +1,7 @@
 # UploadStorageExtensions.GetThumbnailUrl method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets thumbnail URL for the file path
+Gets thumbnail URL for the file path.
 
 ```csharp
 public static string GetThumbnailUrl(this IUploadStorage uploadStorage, string path)
@@ -11,6 +11,10 @@ public static string GetThumbnailUrl(this IUploadStorage uploadStorage, string p
 | --- | --- |
 | uploadStorage | Upload storage |
 | path | Path |
+
+## Return Value
+
+The thumbnail URL, or `null` if the path is empty.
 
 ## See Also
 

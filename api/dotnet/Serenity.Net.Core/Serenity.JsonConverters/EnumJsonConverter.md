@@ -1,7 +1,7 @@
 # EnumJsonConverter class
 **namespace:** *[Serenity.JsonConverters](../README.md#serenity.jsonconverters-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Serializes enum values as numbers while trying to handle string values while deserializing
+Serializes enum values as numbers while trying to handle string values when deserializing.
 
 ```csharp
 public class EnumJsonConverter : JsonConverterFactory
@@ -12,7 +12,7 @@ public class EnumJsonConverter : JsonConverterFactory
 | name | description |
 | --- | --- |
 | [EnumJsonConverter](EnumJsonConverter/EnumJsonConverter.md)() | The default constructor. |
-| static readonly [Instance](EnumJsonConverter/Instance.md) | Default instance |
+| static readonly [Instance](EnumJsonConverter/Instance.md) | The default instance of the [`EnumJsonConverter`](EnumJsonConverter.md). |
 | override [CanConvert](EnumJsonConverter/CanConvert.md)(…) |  |
 | override [CreateConverter](EnumJsonConverter/CreateConverter.md)(…) |  |
 

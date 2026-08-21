@@ -1,7 +1,7 @@
 # IReportRenderer.Render method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Renders a report
+Renders a report.
 
 ```csharp
 public ReportRenderResult Render(IReport report, ReportRenderOptions options)
@@ -11,6 +11,10 @@ public ReportRenderResult Render(IReport report, ReportRenderOptions options)
 | --- | --- |
 | report | Report object |
 | options | Report render options |
+
+## Return Value
+
+The render result.
 
 ## See Also
 

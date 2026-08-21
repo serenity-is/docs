@@ -1,7 +1,7 @@
 # ObjectJsonConverter.Instance field
 **namespace:** *[Serenity.JsonConverters](../../README.md#serenity.jsonconverters-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Default instance of the ObjectJsonConverter
+The default instance of the [`ObjectJsonConverter`](../ObjectJsonConverter.md).
 
 ```csharp
 public static readonly ObjectJsonConverter Instance;

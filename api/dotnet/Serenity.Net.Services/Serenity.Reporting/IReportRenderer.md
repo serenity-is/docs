@@ -1,7 +1,7 @@
 # IReportRenderer interface
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Abstraction for the a report render that renders a report
+Abstraction for a report renderer that renders a report.
 
 ```csharp
 public interface IReportRenderer
@@ -11,7 +11,7 @@ public interface IReportRenderer
 
 | name | description |
 | --- | --- |
-| [Render](IReportRenderer/Render.md)(…) | Renders a report |
+| [Render](IReportRenderer/Render.md)(…) | Renders a report. |
 
 ## See Also
 

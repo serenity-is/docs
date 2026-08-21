@@ -11,6 +11,10 @@ public string GetExpression(string columnName)
 | --- | --- |
 | columnName | Name of the column. |
 
+## Return Value
+
+The expression for the column, or `null` if not found.
+
 ## See Also
 
 * interface [IGetExpressionByName](../IGetExpressionByName.md)

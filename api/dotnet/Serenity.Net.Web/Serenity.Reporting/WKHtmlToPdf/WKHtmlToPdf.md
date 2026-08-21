@@ -1,7 +1,7 @@
 # WKHtmlToPdf constructor
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-HTML to PDF converter class using WKHTMLToPdf
+HTML to PDF converter class using WKHTMLToPdf.
 
 ```csharp
 public WKHtmlToPdf(IHtmlToPdfOptions options = null)
@@ -9,11 +9,11 @@ public WKHtmlToPdf(IHtmlToPdfOptions options = null)
 
 | parameter | description |
 | --- | --- |
-| options | List of options |
+| options | The list of options. |
 
 ## Remarks
 
-WKHtmlToPdf converter class
+WKHtmlToPdf converter class.
 
 ## See Also
 

@@ -11,10 +11,14 @@ public static Result<TResponse> InTransaction<TResponse>(this ControllerBase con
 
 | parameter | description |
 | --- | --- |
-| TResponse | Response type |
-| controller | Controller |
-| connectionKey | Connection key |
-| handler | Handler callback |
+| TResponse | The response type. |
+| controller | The controller. |
+| connectionKey | The connection key. |
+| handler | The handler callback. |
+
+## Return Value
+
+The action result.
 
 ## See Also
 

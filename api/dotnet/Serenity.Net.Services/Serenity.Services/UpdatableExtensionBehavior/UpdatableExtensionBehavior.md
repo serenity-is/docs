@@ -1,7 +1,7 @@
 # UpdatableExtensionBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Behavior that handles [`UpdatableExtensionAttribute`](../../Serenity.Data.Mapping/UpdatableExtensionAttribute.md)
+Behavior that handles [`UpdatableExtensionAttribute`](../../Serenity.Data.Mapping/UpdatableExtensionAttribute.md).
 
 ```csharp
 public UpdatableExtensionBehavior(IDefaultHandlerFactory handlerFactory)
@@ -15,11 +15,11 @@ public UpdatableExtensionBehavior(IDefaultHandlerFactory handlerFactory)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | handlerFactory is null |
+| ArgumentNullException | *handlerFactory* is `null`. |
 
 ## Remarks
 
-Creates a new instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

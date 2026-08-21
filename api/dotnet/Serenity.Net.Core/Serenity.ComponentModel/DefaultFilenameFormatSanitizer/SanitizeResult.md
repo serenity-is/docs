@@ -9,7 +9,11 @@ public virtual string SanitizeResult(string result)
 
 | parameter | description |
 | --- | --- |
-| result |  |
+| result | The formatted file name result to sanitize. |
+
+## Return Value
+
+The sanitized file name result.
 
 ## See Also
 

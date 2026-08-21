@@ -1,7 +1,7 @@
 # NavigationGroupAttribute class
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Defines a navigation group, which are usually the icons on the sidebar band
+Defines a navigation group, which is usually the icons on the sidebar band.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
@@ -10,21 +10,21 @@ public class NavigationGroupAttribute : NavigationItemAttribute
 
 | parameter | description |
 | --- | --- |
-| order | Order |
-| title | Title |
-| icon | Icon class |
+| order | Order. |
+| title | Title. |
+| icon | Icon class. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [NavigationGroupAttribute](NavigationGroupAttribute/NavigationGroupAttribute.md)(…) | Defines a navigation group, which are usually the icons on the sidebar band (2 constructors) |
-| [Default](NavigationGroupAttribute/Default.md) { get; set; } | This group automatically includes siblings that does not match any other groups |
+| [NavigationGroupAttribute](NavigationGroupAttribute/NavigationGroupAttribute.md)(…) | Defines a navigation group, which is usually the icons on the sidebar band. (2 constructors) |
+| [Default](NavigationGroupAttribute/Default.md) { get; set; } | This group automatically includes siblings that do not match any other groups. |
 | [Include](NavigationGroupAttribute/Include.md) { get; set; } | This is a list used to move items that are not normally under this item based on path (to create groups). For example, if this item is named A, and want to move all menus under B/.. or C/.. to A, the list should be ["B/", "C/"]. To move B and C themselves under A, list should be ["B", "C"]. |
 
 ## Remarks
 
-Creates a new instance of the attribute
+Creates a new instance of the attribute.
 
 ## See Also
 

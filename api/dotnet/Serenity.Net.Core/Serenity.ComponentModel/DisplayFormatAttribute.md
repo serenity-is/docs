@@ -5,9 +5,9 @@ Sets the display format for a column. This has no effect on editors! It is only 
 
 Display format strings are specific to column data and formatter type.
 
-If column is a Date or DateTime column, its default formatter accepts custom DateTime format strings like "dd/MM/yyyy". We don't suggest setting DisplayFormat for dates explicitly, use UI culture setting in Web.config unless a column has to display date/time in a different order than the default. You may also use following standard format strings: - "d": "dd/MM/yyyy" where DMY order changes based on current UI culture. - "g": "dd/MM/yyyy HH:mm" where DMY order changes based on current UI culture. - "G": "dd/MM/yyyy HH:mm:ss" where DMY order changes based on current UI culture. - "s": "yyydd-MM-ddTHH:mm:ss" ISO sortable date time format. - "u": "yyydd-MM-ddTHH:mm:ss.fffZ" ISO 8601 UTC.
+If column is a Date or DateTime column, its default formatter accepts custom DateTime format strings like "dd/MM/yyyy". We don't suggest setting DisplayFormat for dates explicitly, use UI culture setting in Web.config unless a column has to display date/time in a different order than the default. You may also use following standard format strings: - "d": "dd/MM/yyyy" where DMY order changes based on current UI culture. - "g": "dd/MM/yyyy HH:mm" where DMY order changes based on current UI culture. - "G": "dd/MM/yyyy HH:mm:ss" where DMY order changes based on current UI culture. - "s": "yyyy-MM-ddTHH:mm:ss" ISO sortable date time format. - "u": "yyyy-MM-ddTHH:mm:ss.fffZ" ISO 8601 UTC.
 
-If column is an integer, double or decimal it accepts.NET custom numeric format strings like "#,##0.00", "0.#"
+If column is an integer, double or decimal it accepts .NET custom numeric format strings like "#,##0.00", "0.#"
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

@@ -1,7 +1,7 @@
 # Parameter constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Parameter struct
+Parameter struct.
 
 ```csharp
 public Parameter(string name)

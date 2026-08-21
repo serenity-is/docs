@@ -11,6 +11,10 @@ public int GetSelectIntoIndex(IField field)
 | --- | --- |
 | field | The field. |
 
+## Return Value
+
+The index of the select into field, or -1 if not found.
+
 ## See Also
 
 * interface [IField](../IField.md)

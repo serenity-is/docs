@@ -9,14 +9,18 @@ public static HtmlString ScriptBundle(this IHtmlHelper helper, string bundleKey)
 
 | parameter | description |
 | --- | --- |
-| helper | HTML helper |
-| bundleKey | Bundle key |
+| helper | The HTML helper. |
+| bundleKey | The bundle key. |
+
+## Return Value
+
+The rendered script bundle element.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Helper or bundleKey is null |
+| ArgumentNullException | Helper or *bundleKey* is `null`. |
 
 ## See Also
 

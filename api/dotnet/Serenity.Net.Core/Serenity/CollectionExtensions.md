@@ -1,7 +1,7 @@
 # CollectionExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Basic collection extensions
+Basic collection extensions.
 
 ```csharp
 public static class CollectionExtensions

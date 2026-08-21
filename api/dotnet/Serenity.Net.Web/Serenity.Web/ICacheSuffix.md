@@ -1,7 +1,7 @@
 # ICacheSuffix interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Abstraction to get cache suffix used while generating key for a cached dynamic script
+Abstraction to get the cache suffix used while generating the key for a cached dynamic script.
 
 ```csharp
 public interface ICacheSuffix
@@ -11,7 +11,7 @@ public interface ICacheSuffix
 
 | name | description |
 | --- | --- |
-| [CacheSuffix](ICacheSuffix/CacheSuffix.md) { get; } | Gets cache suffix |
+| [CacheSuffix](ICacheSuffix/CacheSuffix.md) { get; } | Gets the cache suffix. |
 
 ## See Also
 

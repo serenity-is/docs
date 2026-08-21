@@ -1,7 +1,7 @@
 # ResultWithStatus&lt;TResponse&gt;.ContentEncoding property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Content encoding
+Gets or sets the content encoding.
 
 ```csharp
 public Encoding ContentEncoding { get; set; }

@@ -1,7 +1,7 @@
 # ConcatenatedScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-A dynamic script that is formed from concatenation of other scripts
+A dynamic script that is formed from the concatenation of other scripts.
 
 ```csharp
 public class ConcatenatedScript : DynamicScript
@@ -9,15 +9,15 @@ public class ConcatenatedScript : DynamicScript
 
 | parameter | description |
 | --- | --- |
-| scriptParts | Script parts |
-| separator | Separator |
-| checkRights | Callback to check permissions for individual scripts |
+| scriptParts | The script parts. |
+| separator | The separator. |
+| checkRights | Callback to check permissions for individual scripts. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [ConcatenatedScript](ConcatenatedScript/ConcatenatedScript.md)(…) | A dynamic script that is formed from concatenation of other scripts |
+| [ConcatenatedScript](ConcatenatedScript/ConcatenatedScript.md)(…) | A dynamic script that is formed from the concatenation of other scripts. |
 | override [CheckRights](ConcatenatedScript/CheckRights.md)(…) |  |
 | override [GetScript](ConcatenatedScript/GetScript.md)() |  |
 
@@ -25,11 +25,11 @@ public class ConcatenatedScript : DynamicScript
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Script parts is null |
+| ArgumentNullException | Script parts are null. |
 
 ## Remarks
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ## See Also
 

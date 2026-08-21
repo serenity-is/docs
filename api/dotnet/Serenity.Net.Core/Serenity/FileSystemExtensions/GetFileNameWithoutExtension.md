@@ -1,7 +1,7 @@
 # FileSystemExtensions.GetFileNameWithoutExtension method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets file name without extension for path
+Gets the file name without its extension for the specified path.
 
 ```csharp
 public static string GetFileNameWithoutExtension(this IFileSystem _, string path)
@@ -9,8 +9,12 @@ public static string GetFileNameWithoutExtension(this IFileSystem _, string path
 
 | parameter | description |
 | --- | --- |
-| _ | File system |
-| path | Path |
+| _ | The file system. |
+| path | The path. |
+
+## Return Value
+
+The file name without its extension.
 
 ## See Also
 

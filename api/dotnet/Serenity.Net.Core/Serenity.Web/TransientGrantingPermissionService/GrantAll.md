@@ -1,7 +1,7 @@
 # TransientGrantingPermissionService.GrantAll method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Grants all permissions temporarily (or makes it look like)
+Temporarily grants all permissions.
 
 ```csharp
 public void GrantAll()

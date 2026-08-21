@@ -17,7 +17,7 @@ public class EmitNameAttribute : Attribute
 | name | description |
 | --- | --- |
 | [EmitNameAttribute](EmitNameAttribute/EmitNameAttribute.md)(…) | Declares that the property generated for this template property should have the specified name, instead of the auto generated one. |
-| [Name](EmitNameAttribute/Name.md) { get; } | The property name |
+| [Name](EmitNameAttribute/Name.md) { get; } | The property name. |
 
 ## Remarks
 

@@ -1,7 +1,7 @@
 # BooleanField class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Field with boolean value
+Field with a boolean value.
 
 ```csharp
 public sealed class BooleanField : GenericValueField<bool>
@@ -21,11 +21,11 @@ public sealed class BooleanField : GenericValueField<bool>
 
 | name | description |
 | --- | --- |
-| [BooleanField](BooleanField/BooleanField.md)(…) | Field with boolean value |
+| [BooleanField](BooleanField/BooleanField.md)(…) | Field with a boolean value. |
 | static [Factory](BooleanField/Factory.md)(…) | Static factory for field, for backward compatibility, avoid using. |
 | override [GetFromReader](BooleanField/GetFromReader.md)(…) | Gets field value from a data reader. |
-| override [ValueFromJson](BooleanField/ValueFromJson.md)(…) | Gets field value from JSON. (2 methods) |
-| override [ValueToJson](BooleanField/ValueToJson.md)(…) | Converts field value to json. (2 methods) |
+| override [ValueFromJson](BooleanField/ValueFromJson.md)(…) | Gets the field value from JSON. (2 methods) |
+| override [ValueToJson](BooleanField/ValueToJson.md)(…) | Converts the field value to JSON. (2 methods) |
 
 ## Remarks
 

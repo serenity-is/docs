@@ -14,6 +14,10 @@ public static THandler CreateHandler<THandler>(this IDefaultHandlerFactory handl
 | handlerFactory | Default handler factory |
 | rowType | Row type |
 
+## Return Value
+
+The created handler instance.
+
 ## See Also
 
 * class [THandler](../Serenity.Net.Services/../DefaultHandlerFactoryExtensions.THandler.md)

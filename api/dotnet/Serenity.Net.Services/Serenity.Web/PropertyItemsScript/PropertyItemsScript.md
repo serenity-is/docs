@@ -1,7 +1,7 @@
 # PropertyItemsScript constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Abstract base class for [`ColumnsScript`](../ColumnsScript.md) and [`FormScript`](../FormScript.md)
+Abstract base class for [`ColumnsScript`](../ColumnsScript.md) and [`FormScript`](../FormScript.md).
 
 ```csharp
 protected PropertyItemsScript(string scriptName, Type type, IPropertyItemProvider propertyProvider, 
@@ -10,14 +10,14 @@ protected PropertyItemsScript(string scriptName, Type type, IPropertyItemProvide
 
 | parameter | description |
 | --- | --- |
-| scriptName | Script name |
-| type | Columns or form type |
-| propertyProvider | Property item provider |
-| serviceProvider | Service provider |
+| scriptName | The script name. |
+| type | The columns or form type. |
+| propertyProvider | The property item provider. |
+| serviceProvider | The service provider. |
 
 ## Remarks
 
-Creates a new instance of the class
+Creates a new instance of the class.
 
 ## See Also
 

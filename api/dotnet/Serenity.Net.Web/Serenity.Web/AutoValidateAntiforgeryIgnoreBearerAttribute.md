@@ -1,7 +1,7 @@
 # AutoValidateAntiforgeryIgnoreBearerAttribute class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-An attribute that causes validation of antiforgery tokens for all unsafe HTTP methods. An antiforgery token is required for HTTP methods other than GET, HEAD, OPTIONS, and TRACE, and when there is no cookie header and authorization is Bearer, e.g. JWT etc.
+An attribute that causes validation of antiforgery tokens for all unsafe HTTP methods. An antiforgery token is required for HTTP methods other than GET, HEAD, OPTIONS, and TRACE, and when there is no cookie header and authorization is Bearer, e.g. JWT.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]

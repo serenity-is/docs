@@ -1,7 +1,7 @@
 # DataScript.getData- field
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Callback to get data
+Callback to get the data.
 
 ```csharp
 protected Func<object> getData-;

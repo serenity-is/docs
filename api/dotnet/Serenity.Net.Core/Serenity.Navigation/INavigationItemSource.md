@@ -1,7 +1,7 @@
 # INavigationItemSource interface
 **namespace:** *[Serenity.Navigation](../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Navigation item source abstraction
+Navigation item source abstraction.
 
 ```csharp
 public interface INavigationItemSource
@@ -11,7 +11,7 @@ public interface INavigationItemSource
 
 | name | description |
 | --- | --- |
-| [GetItems](INavigationItemSource/GetItems.md)() | Gets list of navigation item attributes ([`NavigationItemAttribute`](NavigationItemAttribute.md)) |
+| [GetItems](INavigationItemSource/GetItems.md)() | Gets the list of navigation item attributes ([`NavigationItemAttribute`](NavigationItemAttribute.md)). |
 
 ## See Also
 

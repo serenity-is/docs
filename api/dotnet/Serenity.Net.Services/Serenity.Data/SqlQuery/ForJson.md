@@ -11,6 +11,10 @@ public SqlQuery ForJson(string forJson = "AUTO")
 | --- | --- |
 | forJson | FOR JSON type, usually "auto". |
 
+## Return Value
+
+The query itself.
+
 ## See Also
 
 * class [SqlQuery](../SqlQuery.md)

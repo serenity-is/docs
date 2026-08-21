@@ -1,7 +1,7 @@
 # RecaptchaSettings class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Settings for Recaptcha integration Get your keys from https://www.google.com/recaptcha/admin/ Generate keys for the V2, not V3
+Settings for Recaptcha integration. Get your keys from https://www.google.com/recaptcha/admin/ Generate keys for the V2, not V3.
 
 ```csharp
 public class RecaptchaSettings

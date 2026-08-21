@@ -1,7 +1,7 @@
 # AnnotationTypeRegistry class
 **namespace:** *[Serenity.Reflection](../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Default annotation type registry
+The default annotation type registry.
 
 ```csharp
 public class AnnotationTypeRegistry : IAnnotationTypeRegistry
@@ -9,18 +9,18 @@ public class AnnotationTypeRegistry : IAnnotationTypeRegistry
 
 | parameter | description |
 | --- | --- |
-| typeSource | Type source |
+| typeSource | The type source. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [AnnotationTypeRegistry](AnnotationTypeRegistry/AnnotationTypeRegistry.md)(…) | Default annotation type registry |
-| [GetAnnotationTypesFor](AnnotationTypeRegistry/GetAnnotationTypesFor.md)(…) | Gets the annotation types for given type. |
+| [AnnotationTypeRegistry](AnnotationTypeRegistry/AnnotationTypeRegistry.md)(…) | The default annotation type registry. |
+| [GetAnnotationTypesFor](AnnotationTypeRegistry/GetAnnotationTypesFor.md)(…) | Gets the annotation types for the given type. |
 
 ## Remarks
 
-Creates a new instance
+Creates a new instance.
 
 ## See Also
 

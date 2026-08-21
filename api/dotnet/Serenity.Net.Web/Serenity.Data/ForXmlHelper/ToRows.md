@@ -1,7 +1,7 @@
 # ForXmlHelper.ToRows&lt;TRow&gt; method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Converts data returned from FOR XML statement to a row type
+Converts data returned from a `FOR XML` statement to a row type.
 
 ```csharp
 public static List<TRow> ToRows<TRow>(string forXml, Action<XElement, TRow> readRow)
@@ -10,9 +10,13 @@ public static List<TRow> ToRows<TRow>(string forXml, Action<XElement, TRow> read
 
 | parameter | description |
 | --- | --- |
-| TRow | Target row type |
-| forXml | Returned FOR XML data |
-| readRow | Action to read a row |
+| TRow | The target row type. |
+| forXml | The returned `FOR XML` data. |
+| readRow | The action to read a row. |
+
+## Return Value
+
+The list of rows.
 
 ## See Also
 

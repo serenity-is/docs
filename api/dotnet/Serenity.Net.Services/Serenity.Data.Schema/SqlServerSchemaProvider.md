@@ -1,7 +1,7 @@
 # SqlServerSchemaProvider class
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-SQL server metadata provider
+SQL server metadata provider.
 
 ```csharp
 public class SqlServerSchemaProvider : ISchemaProvider
@@ -13,11 +13,11 @@ public class SqlServerSchemaProvider : ISchemaProvider
 | --- | --- |
 | [SqlServerSchemaProvider](SqlServerSchemaProvider/SqlServerSchemaProvider.md)() | The default constructor. |
 | [DefaultSchema](SqlServerSchemaProvider/DefaultSchema.md) { get; } | Gets the default schema. |
-| [GetFieldInfos](SqlServerSchemaProvider/GetFieldInfos.md)(…) | Gets the field infos. |
-| [GetForeignKeys](SqlServerSchemaProvider/GetForeignKeys.md)(…) | Gets the foreign keys. |
-| [GetIdentityFields](SqlServerSchemaProvider/GetIdentityFields.md)(…) | Gets the identity fields. |
-| [GetPrimaryKeyFields](SqlServerSchemaProvider/GetPrimaryKeyFields.md)(…) | Gets the primary key fields. |
-| [GetTableNames](SqlServerSchemaProvider/GetTableNames.md)(…) | Gets the table names. |
+| [GetFieldInfos](SqlServerSchemaProvider/GetFieldInfos.md)(…) |  |
+| [GetForeignKeys](SqlServerSchemaProvider/GetForeignKeys.md)(…) |  |
+| [GetIdentityFields](SqlServerSchemaProvider/GetIdentityFields.md)(…) |  |
+| [GetPrimaryKeyFields](SqlServerSchemaProvider/GetPrimaryKeyFields.md)(…) |  |
+| [GetTableNames](SqlServerSchemaProvider/GetTableNames.md)(…) |  |
 
 ## See Also
 

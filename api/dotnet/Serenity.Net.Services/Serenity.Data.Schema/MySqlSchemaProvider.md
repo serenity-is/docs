@@ -1,7 +1,7 @@
 # MySqlSchemaProvider class
 **namespace:** *[Serenity.Data.Schema](../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-MySql metadata provider
+MySql metadata provider.
 
 ```csharp
 public class MySqlSchemaProvider : ISchemaProvider
@@ -13,11 +13,11 @@ public class MySqlSchemaProvider : ISchemaProvider
 | --- | --- |
 | [MySqlSchemaProvider](MySqlSchemaProvider/MySqlSchemaProvider.md)() | The default constructor. |
 | [DefaultSchema](MySqlSchemaProvider/DefaultSchema.md) { get; } | Gets the default schema. |
-| [GetFieldInfos](MySqlSchemaProvider/GetFieldInfos.md)(…) | Gets the field infos. |
-| [GetForeignKeys](MySqlSchemaProvider/GetForeignKeys.md)(…) | Gets the foreign keys. |
-| [GetIdentityFields](MySqlSchemaProvider/GetIdentityFields.md)(…) | Gets the identity fields. |
-| [GetPrimaryKeyFields](MySqlSchemaProvider/GetPrimaryKeyFields.md)(…) | Gets the primary key fields. |
-| [GetTableNames](MySqlSchemaProvider/GetTableNames.md)(…) | Gets the table names. |
+| [GetFieldInfos](MySqlSchemaProvider/GetFieldInfos.md)(…) |  |
+| [GetForeignKeys](MySqlSchemaProvider/GetForeignKeys.md)(…) |  |
+| [GetIdentityFields](MySqlSchemaProvider/GetIdentityFields.md)(…) |  |
+| [GetPrimaryKeyFields](MySqlSchemaProvider/GetPrimaryKeyFields.md)(…) |  |
+| [GetTableNames](MySqlSchemaProvider/GetTableNames.md)(…) |  |
 
 ## See Also
 

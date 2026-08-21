@@ -1,7 +1,7 @@
 # FilterableQueryExtensions.Where&lt;T&gt; method
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Adds a filter to query
+Adds a filter to query.
 
 ```csharp
 public static T Where<T>(this T self, ICriteria filter)
@@ -10,9 +10,9 @@ public static T Where<T>(this T self, ICriteria filter)
 
 | parameter | description |
 | --- | --- |
-| T | Query class |
-| self | Query |
-| filter | Filter |
+| T | Query class. |
+| self | Query. |
+| filter | Filter. |
 
 ## Return Value
 

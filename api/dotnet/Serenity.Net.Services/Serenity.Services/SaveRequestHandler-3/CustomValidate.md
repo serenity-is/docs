@@ -1,7 +1,7 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.CustomValidate method
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Calls custom validator
+Calls custom validator.
 
 ```csharp
 protected virtual string CustomValidate(RowValidationContext context, Field field, 
@@ -13,6 +13,10 @@ protected virtual string CustomValidate(RowValidationContext context, Field fiel
 | context | Validation context |
 | field | Field |
 | validator | Custom validator |
+
+## Return Value
+
+The validation error message, or `null` if the value is valid.
 
 ## See Also
 

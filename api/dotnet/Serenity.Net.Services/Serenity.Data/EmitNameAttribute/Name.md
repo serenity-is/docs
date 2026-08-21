@@ -1,7 +1,7 @@
 # EmitNameAttribute.Name property
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-The property name
+The property name.
 
 ```csharp
 public string Name { get; }

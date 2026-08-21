@@ -26,7 +26,7 @@ public abstract class FunctionCallCriteria : BaseCriteria
 | [FunctionCallCriteria](FunctionCallCriteria/FunctionCallCriteria.md)(…) | Criteria object that identifies a function call |
 | virtual [AppendArguments](FunctionCallCriteria/AppendArguments.md)(…) | Appends the arguments |
 | virtual [AppendCloseParenthesis](FunctionCallCriteria/AppendCloseParenthesis.md)(…) | Appends the closing parenthesis |
-| virtual [AppendFunctionName](FunctionCallCriteria/AppendFunctionName.md)(…) | Appends the function name |
+| virtual [AppendFunctionName](FunctionCallCriteria/AppendFunctionName.md)(…) | Appends the function name. |
 | virtual [AppendOpenParenthesis](FunctionCallCriteria/AppendOpenParenthesis.md)(…) | Appends the opening parenthesis |
 
 ## See Also

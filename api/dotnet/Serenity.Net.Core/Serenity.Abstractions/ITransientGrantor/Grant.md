@@ -1,7 +1,7 @@
 # ITransientGrantor.Grant method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Grants specified permissions temporarily (or makes it look like)
+Temporarily grants the specified permissions.
 
 ```csharp
 public void Grant(params string[] permissions)
@@ -9,7 +9,7 @@ public void Grant(params string[] permissions)
 
 | parameter | description |
 | --- | --- |
-| permissions | List of permission keys |
+| permissions | The permission keys to grant. |
 
 ## See Also
 

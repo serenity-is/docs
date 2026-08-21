@@ -9,7 +9,11 @@ public bool IsReservedKeyword(string keyword)
 
 | parameter | description |
 | --- | --- |
-| keyword |  |
+| keyword | The identifier to check. |
+
+## Return Value
+
+`true` if the identifier is a reserved SQL keyword; otherwise, `false`.
 
 ## See Also
 

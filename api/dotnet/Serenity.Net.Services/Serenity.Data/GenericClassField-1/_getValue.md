@@ -1,7 +1,7 @@
 # GenericClassField&lt;TValue&gt;._getValue field
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-The get value callback
+The get value callback.
 
 ```csharp
 protected internal Func<IRow, TValue> _getValue;

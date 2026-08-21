@@ -1,7 +1,7 @@
 # DefaultReportRenderer.RenderHtmlReport method
 **namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Renders an HTML report
+Renders an HTML report.
 
 ```csharp
 protected ReportRenderResult RenderHtmlReport(IReport report, ReportRenderOptions options)
@@ -9,8 +9,12 @@ protected ReportRenderResult RenderHtmlReport(IReport report, ReportRenderOption
 
 | parameter | description |
 | --- | --- |
-| report | Report |
-| options | Options |
+| report | The report. |
+| options | The options. |
+
+## Return Value
+
+The render result.
 
 ## See Also
 

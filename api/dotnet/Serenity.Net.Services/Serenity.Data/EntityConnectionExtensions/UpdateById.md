@@ -20,8 +20,8 @@ public static int UpdateById<TRow>(this IDbConnection connection, TRow row,
 
 | exception | condition |
 | --- | --- |
-| InvalidOperationException | ID field of row has null value! |
-| InvalidOperationException | Expected rows and number of updated rows does not match! |
+| InvalidOperationException | ID field of the row has a null value! |
+| InvalidOperationException | Expected rows and number of updated rows do not match! |
 
 ## See Also
 

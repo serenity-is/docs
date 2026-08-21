@@ -12,11 +12,15 @@ public static HashSet<string> LocateOptimized(string expression, out string sing
 | expression | The expression. |
 | singleAlias | The single alias. |
 
+## Return Value
+
+The set of aliases found, or `null` if none are found.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | expression is null |
+| ArgumentNullException | expression is null. |
 
 ## See Also
 

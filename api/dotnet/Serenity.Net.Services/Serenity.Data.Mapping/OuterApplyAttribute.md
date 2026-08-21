@@ -1,7 +1,7 @@
 # OuterApplyAttribute class
 **namespace:** *[Serenity.Data.Mapping](../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Adds a OUTER APPLY to the row
+Adds an OUTER APPLY to the row.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
@@ -17,7 +17,7 @@ public class OuterApplyAttribute : Attribute, ISqlJoin
 
 | name | description |
 | --- | --- |
-| [OuterApplyAttribute](OuterApplyAttribute/OuterApplyAttribute.md)(…) | Adds a OUTER APPLY to the row (2 constructors) |
+| [OuterApplyAttribute](OuterApplyAttribute/OuterApplyAttribute.md)(…) | Adds an OUTER APPLY to the row. (2 constructors) |
 | [Alias](OuterApplyAttribute/Alias.md) { get; } | Gets the alias. |
 | [Dialect](OuterApplyAttribute/Dialect.md) { get; set; } | Gets or sets the dialect. |
 | [InnerQuery](OuterApplyAttribute/InnerQuery.md) { get; } | Gets the inner query. |

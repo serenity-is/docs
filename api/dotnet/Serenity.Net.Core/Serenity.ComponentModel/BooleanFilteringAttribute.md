@@ -13,7 +13,7 @@ public class BooleanFilteringAttribute : CustomFilteringAttribute
 | name | description |
 | --- | --- |
 | [BooleanFilteringAttribute](BooleanFilteringAttribute/BooleanFilteringAttribute.md)() | Initializes a new instance of the [`BooleanFilteringAttribute`](BooleanFilteringAttribute.md) class. |
-| [FalseText](BooleanFilteringAttribute/FalseText.md) { get; set; } | Gets or sets the text used of false value. |
+| [FalseText](BooleanFilteringAttribute/FalseText.md) { get; set; } | Gets or sets the text used for the false value. |
 | [TrueText](BooleanFilteringAttribute/TrueText.md) { get; set; } | Gets or sets the text used for true value. |
 | const [Key](BooleanFilteringAttribute/Key.md) | Filtering type key |
 

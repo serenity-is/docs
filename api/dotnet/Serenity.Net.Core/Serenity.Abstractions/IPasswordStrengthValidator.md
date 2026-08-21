@@ -1,7 +1,7 @@
 # IPasswordStrengthValidator interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction to validate the password strength
+Validates that a password meets the configured strength requirements.
 
 ```csharp
 public interface IPasswordStrengthValidator
@@ -11,7 +11,7 @@ public interface IPasswordStrengthValidator
 
 | name | description |
 | --- | --- |
-| [Validate](IPasswordStrengthValidator/Validate.md)(…) | Validates password strength |
+| [Validate](IPasswordStrengthValidator/Validate.md)(…) | Validates the strength of the specified password. |
 
 ## See Also
 

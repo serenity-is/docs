@@ -1,7 +1,7 @@
 # Criteria.Exists method (1 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new EXISTS criteria
+Creates a new EXISTS criteria.
 
 ```csharp
 public static BaseCriteria Exists(ISqlQuery query)
@@ -9,7 +9,11 @@ public static BaseCriteria Exists(ISqlQuery query)
 
 | parameter | description |
 | --- | --- |
-| query | Expression |
+| query | The expression. |
+
+## Return Value
+
+A new EXISTS criteria.
 
 ## See Also
 
@@ -22,7 +26,7 @@ public static BaseCriteria Exists(ISqlQuery query)
 # Criteria.Exists method (2 of 2)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Creates a new EXISTS criteria
+Creates a new EXISTS criteria.
 
 ```csharp
 public static BaseCriteria Exists(string expression)
@@ -30,7 +34,11 @@ public static BaseCriteria Exists(string expression)
 
 | parameter | description |
 | --- | --- |
-| expression | Expression |
+| expression | The expression. |
+
+## Return Value
+
+A new EXISTS criteria.
 
 ## See Also
 

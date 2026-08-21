@@ -1,7 +1,7 @@
 # TransientGrantingPermissionService constructor
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Adds temporary granting support to any IPermissionService implementation
+Decorates an [`IPermissionService`](../../Serenity.Abstractions/IPermissionService.md) to support temporarily granting permissions.
 
 ```csharp
 public TransientGrantingPermissionService(IPermissionService permissionService = null, 
@@ -10,18 +10,18 @@ public TransientGrantingPermissionService(IPermissionService permissionService =
 
 | parameter | description |
 | --- | --- |
-| permissionService | Permission service to wrap with transient granting ability |
-| requestContext | Request context |
+| permissionService | The underlying permission service to delegate to when no transient grant is active. |
+| requestContext | The accessor that provides per-request storage for the granting stack. |
 
 ## Remarks
 
-Register this class in your application start, to allow granting permissions temporarily.
+Register this decorator at application startup to enable temporary permission grants.
 
 ```csharp
 registrar.RegisterInstance<IPermissionService>(new TransientGrantingPermissionService(new MyPermissionService()))
 ```
 
-Creates a new TransientGrantingPermissionService wrapping passed service
+Creates a new instance of the [`TransientGrantingPermissionService`](../TransientGrantingPermissionService.md) class wrapping the specified service.
 
 ## See Also
 

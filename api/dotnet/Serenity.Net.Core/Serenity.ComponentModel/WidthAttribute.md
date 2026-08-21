@@ -27,4 +27,4 @@ Initializes a new instance of the [`WidthAttribute`](WidthAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[FixedWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/FixedWidthAttribute.cs)*
+* **Source:** *[WidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/WidthAttribute.cs)*

@@ -13,7 +13,7 @@ public string this[IField field] { get; }
 
 ## Return Value
 
-Expression like t0.fieldName
+Expression like t0.fieldName.
 
 ## Property Value
 
@@ -23,7 +23,7 @@ The String.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | field |
+| ArgumentNullException | field is null. |
 
 ## See Also
 
@@ -47,7 +47,7 @@ public string this[string fieldName] { get; }
 
 ## Return Value
 
-Expression like t0.fieldName
+Expression like t0.fieldName.
 
 ## Property Value
 

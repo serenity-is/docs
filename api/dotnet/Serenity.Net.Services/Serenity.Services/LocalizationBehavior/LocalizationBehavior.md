@@ -1,7 +1,7 @@
 # LocalizationBehavior constructor
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Behavior for handling localizable rows / properties
+Behavior for handling localizable rows / properties.
 
 ```csharp
 public LocalizationBehavior(IDefaultHandlerFactory handlerFactory)
@@ -15,11 +15,11 @@ public LocalizationBehavior(IDefaultHandlerFactory handlerFactory)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | handlerFactory is null |
+| ArgumentNullException | *handlerFactory* is `null`. |
 
 ## Remarks
 
-Creates an instance of the class
+Initializes a new instance of the class.
 
 ## See Also
 

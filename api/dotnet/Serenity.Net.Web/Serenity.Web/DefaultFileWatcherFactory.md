@@ -1,7 +1,7 @@
 # DefaultFileWatcherFactory class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation for [`IFileWatcherFactory`](IFileWatcherFactory.md)
+Default implementation of [`IFileWatcherFactory`](IFileWatcherFactory.md) that keeps created watchers alive for the lifetime of the factory.
 
 ```csharp
 public class DefaultFileWatcherFactory : IFileWatcherFactory
@@ -11,7 +11,7 @@ public class DefaultFileWatcherFactory : IFileWatcherFactory
 
 | name | description |
 | --- | --- |
-| [DefaultFileWatcherFactory](DefaultFileWatcherFactory/DefaultFileWatcherFactory.md)() | Creates a new instance of the class |
+| [DefaultFileWatcherFactory](DefaultFileWatcherFactory/DefaultFileWatcherFactory.md)() | Initializes a new instance of the [`DefaultFileWatcherFactory`](DefaultFileWatcherFactory.md) class. |
 | [Watchers](DefaultFileWatcherFactory/Watchers.md) { get; } |  |
 | [Create](DefaultFileWatcherFactory/Create.md)(…) |  |
 | [KeepAlive](DefaultFileWatcherFactory/KeepAlive.md)(…) |  |

@@ -1,7 +1,7 @@
 # SingleField constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Field with a Single value
+Field with a Single value.
 
 ```csharp
 public SingleField(ICollection<Field> collection, string name, LocalText caption = null, 

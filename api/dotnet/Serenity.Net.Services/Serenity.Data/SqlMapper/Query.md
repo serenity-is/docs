@@ -1,89 +1,7 @@
-# SqlMapper.Query method (1 of 7)
+# SqlMapper.Query method (1 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Return a list of dynamic objects, reader is closed after the call
-
-```csharp
-public static IEnumerable<object> Query(this IDbConnection cnn, string sql, object param, 
-    CommandType? commandType)
-```
-
-| parameter | description |
-| --- | --- |
-| cnn | Connection. |
-| sql | SQL query. |
-| param | The parameters. |
-| commandType | Type of the command. |
-
-## Return Value
-
-List of dynamic objects
-
-## See Also
-
-* class [SqlMapper](../SqlMapper.md)
-
----
-
-# SqlMapper.Query method (2 of 7)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
-
-Return a list of dynamic objects, reader is closed after the call
-
-```csharp
-public static IEnumerable<object> Query(this IDbConnection cnn, string sql, object param, 
-    IDbTransaction transaction)
-```
-
-| parameter | description |
-| --- | --- |
-| cnn | Connection. |
-| sql | SQL query. |
-| param | The parameters. |
-| transaction | The transaction. |
-
-## Return Value
-
-List of values
-
-## See Also
-
-* class [SqlMapper](../SqlMapper.md)
-
----
-
-# SqlMapper.Query method (3 of 7)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
-
-Return a list of dynamic objects, reader is closed after the call
-
-```csharp
-public static IEnumerable<object> Query(this IDbConnection cnn, string sql, object param, 
-    IDbTransaction transaction, CommandType? commandType)
-```
-
-| parameter | description |
-| --- | --- |
-| cnn | Connection. |
-| sql | SQL query. |
-| param | The parameters. |
-| transaction | The transaction. |
-| commandType | Type of the command. |
-
-## Return Value
-
-List of dynamic objects
-
-## See Also
-
-* class [SqlMapper](../SqlMapper.md)
-
----
-
-# SqlMapper.Query method (4 of 7)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
-
-Return a list of dynamic objects, reader is closed after the call
+Returns a list of dynamic objects; the reader is closed after the call. Serenity specific overload for [`ISqlQuery`](../ISqlQuery.md), not present in Dapper.
 
 ```csharp
 public static IEnumerable<object> Query(this IDbConnection cnn, ISqlQuery sql, 
@@ -93,16 +11,16 @@ public static IEnumerable<object> Query(this IDbConnection cnn, ISqlQuery sql,
 
 | parameter | description |
 | --- | --- |
-| cnn | Connection. |
-| sql | SQL query. |
+| cnn | The connection. |
+| sql | The SQL query. |
 | transaction | The transaction. |
-| buffered | if set to `true` results are buffered. |
+| buffered | If set to `true`, results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
-List of dynamic objects
+List of dynamic objects.
 
 ## See Also
 
@@ -111,10 +29,10 @@ List of dynamic objects
 
 ---
 
-# SqlMapper.Query method (5 of 7)
+# SqlMapper.Query method (2 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Return a list of dynamic objects, reader is closed after the call
+Returns a list of dynamic objects; the reader is closed after the call.
 
 ```csharp
 public static IEnumerable<object> Query(this IDbConnection cnn, string sql, object param = null, 
@@ -124,17 +42,17 @@ public static IEnumerable<object> Query(this IDbConnection cnn, string sql, obje
 
 | parameter | description |
 | --- | --- |
-| cnn | Connection. |
-| sql | SQL query. |
+| cnn | The connection. |
+| sql | The SQL query. |
 | param | The parameters. |
 | transaction | The transaction. |
-| buffered | if set to `true` results are buffered. |
+| buffered | If set to `true`, results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
-List of dynamic objects
+List of dynamic objects.
 
 ## See Also
 
@@ -142,43 +60,43 @@ List of dynamic objects
 
 ---
 
-# SqlMapper.Query&lt;TValue&gt; method (6 of 7)
+# SqlMapper.Query&lt;T&gt; method (3 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Return a list of values, reader is closed after the call
+Returns a list of values; the reader is closed after the call. Serenity specific overload for [`ISqlQuery`](../ISqlQuery.md), not present in Dapper.
 
 ```csharp
-public static IEnumerable<TValue> Query<TValue>(this IDbConnection cnn, ISqlQuery sql, 
+public static IEnumerable<T> Query<T>(this IDbConnection cnn, ISqlQuery sql, 
     IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
     CommandType? commandType = default(CommandType?))
 ```
 
 | parameter | description |
 | --- | --- |
-| TValue | The type of the value. |
-| cnn | Connection. |
-| sql | SQL query. |
+| T | The type of the value. |
+| cnn | The connection. |
+| sql | The SQL query. |
 | transaction | The transaction. |
-| buffered | if set to `true` results are buffered. |
+| buffered | If set to `true`, results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
-List of values
+List of values.
 
 ## See Also
 
-* class [TValue](../Serenity.Net.Services/../SqlMapper.TValue.md)
+* class [T](../Serenity.Net.Services/../SqlMapper.T.md)
 * interface [ISqlQuery](../ISqlQuery.md)
 * class [SqlMapper](../SqlMapper.md)
 
 ---
 
-# SqlMapper.Query&lt;T&gt; method (7 of 7)
+# SqlMapper.Query&lt;T&gt; method (4 of 4)
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Return a list of objects, reader is closed after the call
+Returns a list of objects; the reader is closed after the call.
 
 ```csharp
 public static IEnumerable<T> Query<T>(this IDbConnection cnn, string sql, object param = null, 
@@ -188,18 +106,18 @@ public static IEnumerable<T> Query<T>(this IDbConnection cnn, string sql, object
 
 | parameter | description |
 | --- | --- |
-| T |  |
-| cnn | Connection. |
-| sql | SQL query. |
+| T | The type of the objects to return. |
+| cnn | The connection. |
+| sql | The SQL query. |
 | param | The parameters. |
 | transaction | The transaction. |
-| buffered | if set to `true` results are buffered. |
+| buffered | If set to `true`, results are buffered. |
 | commandTimeout | The command timeout. |
 | commandType | Type of the command. |
 
 ## Return Value
 
-List of objects
+List of objects.
 
 ## See Also
 

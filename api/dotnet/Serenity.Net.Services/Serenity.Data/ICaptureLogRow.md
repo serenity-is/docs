@@ -11,10 +11,10 @@ public interface ICaptureLogRow : IIdRow
 
 | name | description |
 | --- | --- |
-| [ChangingUserIdField](ICaptureLogRow/ChangingUserIdField.md) { get; } | Field containing the user ID |
-| [OperationTypeField](ICaptureLogRow/OperationTypeField.md) { get; } | Field containing the operation type |
-| [ValidFromField](ICaptureLogRow/ValidFromField.md) { get; } | Field containing ValidFrom date |
-| [ValidUntilField](ICaptureLogRow/ValidUntilField.md) { get; } | Field containing ValidUntil date |
+| [ChangingUserIdField](ICaptureLogRow/ChangingUserIdField.md) { get; } | Gets the field containing the user ID. |
+| [OperationTypeField](ICaptureLogRow/OperationTypeField.md) { get; } | Gets the field containing the operation type. |
+| [ValidFromField](ICaptureLogRow/ValidFromField.md) { get; } | Gets the field containing the ValidFrom date. |
+| [ValidUntilField](ICaptureLogRow/ValidUntilField.md) { get; } | Gets the field containing the ValidUntil date. |
 
 ## See Also
 

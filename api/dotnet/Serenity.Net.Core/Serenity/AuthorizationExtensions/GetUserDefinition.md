@@ -1,7 +1,7 @@
 # AuthorizationExtensions.GetUserDefinition method (1 of 4)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets user definition for current user
+Gets the user definition for the currently authenticated user.
 
 ```csharp
 public static IUserDefinition GetUserDefinition(this IUserProvider userProvider)
@@ -9,7 +9,11 @@ public static IUserDefinition GetUserDefinition(this IUserProvider userProvider)
 
 | parameter | description |
 | --- | --- |
-| userProvider | User provider |
+| userProvider | The user provider that supplies the current principal. |
+
+## Return Value
+
+The user definition, or `null` if no user is authenticated or the user is not found.
 
 ## See Also
 
@@ -22,7 +26,7 @@ public static IUserDefinition GetUserDefinition(this IUserProvider userProvider)
 # AuthorizationExtensions.GetUserDefinition method (2 of 4)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets user definition for given user identity
+Gets the user definition for the specified principal.
 
 ```csharp
 public static IUserDefinition GetUserDefinition(this ClaimsPrincipal identity, 
@@ -31,8 +35,12 @@ public static IUserDefinition GetUserDefinition(this ClaimsPrincipal identity,
 
 | parameter | description |
 | --- | --- |
-| identity |  |
-| userRetriever | User retrieve service |
+| identity | The principal whose identity name is used for lookup. |
+| userRetriever | The service used to retrieve the user definition. |
+
+## Return Value
+
+The user definition, or `null` if the principal is not authenticated or the user is not found.
 
 ## See Also
 
@@ -45,7 +53,7 @@ public static IUserDefinition GetUserDefinition(this ClaimsPrincipal identity,
 # AuthorizationExtensions.GetUserDefinition method (3 of 4)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets user definition for given user identity
+Gets the user definition for the specified principal.
 
 ```csharp
 public static IUserDefinition GetUserDefinition(this IUserRetrieveService userRetriever, 
@@ -54,8 +62,12 @@ public static IUserDefinition GetUserDefinition(this IUserRetrieveService userRe
 
 | parameter | description |
 | --- | --- |
-| userRetriever | User retrieve service |
-| identity |  |
+| userRetriever | The service used to retrieve the user definition. |
+| identity | The principal whose identity name is used for lookup. |
+
+## Return Value
+
+The user definition, or `null` if the principal is not authenticated or the user is not found.
 
 ## See Also
 
@@ -68,7 +80,7 @@ public static IUserDefinition GetUserDefinition(this IUserRetrieveService userRe
 # AuthorizationExtensions.GetUserDefinition&lt;TUserDefinition&gt; method (4 of 4)
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets user definition for given user identity
+Gets the typed user definition for the specified principal.
 
 ```csharp
 public static TUserDefinition GetUserDefinition<TUserDefinition>(this ClaimsPrincipal identity, 
@@ -78,8 +90,13 @@ public static TUserDefinition GetUserDefinition<TUserDefinition>(this ClaimsPrin
 
 | parameter | description |
 | --- | --- |
-| identity |  |
-| userRetriever | User retrieve service |
+| TUserDefinition | The concrete user definition type. |
+| identity | The principal whose identity name is used for lookup. |
+| userRetriever | The service used to retrieve the user definition. |
+
+## Return Value
+
+The typed user definition, or `null` if the principal is not authenticated or the user is not found.
 
 ## See Also
 

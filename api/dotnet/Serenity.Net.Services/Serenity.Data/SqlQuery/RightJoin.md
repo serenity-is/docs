@@ -12,6 +12,10 @@ public SqlQuery RightJoin(IAlias alias, ICriteria onCriteria)
 | alias | The alias with table name/alias name. |
 | onCriteria | The ON criteria. |
 
+## Return Value
+
+The query itself.
+
 ## Exceptions
 
 | exception | condition |

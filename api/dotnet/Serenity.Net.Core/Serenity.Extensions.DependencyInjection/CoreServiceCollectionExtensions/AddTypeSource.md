@@ -11,8 +11,8 @@ public static void AddTypeSource(this IServiceCollection services, Assembly[] as
 | parameter | description |
 | --- | --- |
 | services | The services. |
-| assemblies | List of assembles |
-| featureToggles | Feature toggles |
+| assemblies | List of assemblies. |
+| featureToggles | Feature toggles. |
 
 ## See Also
 

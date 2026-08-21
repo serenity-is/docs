@@ -1,7 +1,7 @@
 # IRemoveCachedUser interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction to remove a cached user by its id or username
+Removes a cached user entry by identifier or username.
 
 ```csharp
 public interface IRemoveCachedUser
@@ -11,7 +11,7 @@ public interface IRemoveCachedUser
 
 | name | description |
 | --- | --- |
-| [RemoveCachedUser](IRemoveCachedUser/RemoveCachedUser.md)(…) | Removed cached user by its user ID and/or username |
+| [RemoveCachedUser](IRemoveCachedUser/RemoveCachedUser.md)(…) | Removes the cached user with the specified identifier and/or username. |
 
 ## See Also
 

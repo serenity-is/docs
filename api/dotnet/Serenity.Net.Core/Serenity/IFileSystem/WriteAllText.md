@@ -1,7 +1,7 @@
 # IFileSystem.WriteAllText method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Writes content to a file
+Writes content to the file at the specified path.
 
 ```csharp
 public void WriteAllText(string path, string content, Encoding encoding = null)
@@ -9,9 +9,9 @@ public void WriteAllText(string path, string content, Encoding encoding = null)
 
 | parameter | description |
 | --- | --- |
-| path | Path to the file |
-| content | Content |
-| encoding | Optional encoding |
+| path | The path of the file. |
+| content | The content to write. |
+| encoding | The optional encoding to use when writing the file. |
 
 ## See Also
 

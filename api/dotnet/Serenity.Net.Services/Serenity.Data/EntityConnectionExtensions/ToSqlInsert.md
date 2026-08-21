@@ -13,13 +13,13 @@ public static SqlInsert ToSqlInsert(this IRow row)
 
 ## Return Value
 
-SqlInsert object
+SqlInsert object.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | row is null |
+| ArgumentNullException | row is null. |
 
 ## See Also
 

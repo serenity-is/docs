@@ -14,7 +14,7 @@ public static bool GetFirst(this SqlQuery query, IDbConnection connection)
 
 ## Return Value
 
-True if any rows returned
+True if any rows were returned.
 
 ## See Also
 

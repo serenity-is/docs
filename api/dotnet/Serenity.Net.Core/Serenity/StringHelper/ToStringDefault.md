@@ -11,7 +11,7 @@ public static string ToStringDefault<T>(this T source, string format = null,
 
 | parameter | description |
 | --- | --- |
-| source |  |
+| source | The value to format. |
 | format | The format string If `null` use the default format defined for the type of the IFormattable implementation. |
 | provider | The format provider If `null` the default provider is used |
 | empty | The string to show when the source is `null`. If `null` an empty string is returned |
@@ -40,7 +40,7 @@ public static string ToStringDefault<T>(this T? source, string format = null,
 
 | parameter | description |
 | --- | --- |
-| source |  |
+| source | The value to format. |
 | format | The format string If `null` use the default format defined for the type of the IFormattable implementation. |
 | provider | The format provider If `null` the default provider is used |
 | empty | The string to show when the source is `null`. If `null` an empty string is returned |

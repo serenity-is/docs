@@ -9,8 +9,12 @@ public static string CspNonce(this IHtmlHelper html, bool addDirectives = true)
 
 | parameter | description |
 | --- | --- |
-| html | Html helper |
-| addDirectives | True to add CSP directives for script-src, style-src, font-src |
+| html | The HTML helper. |
+| addDirectives | `true` to add CSP directives for `script-src`, `style-src`, `font-src`. |
+
+## Return Value
+
+The generated nonce value.
 
 ## See Also
 

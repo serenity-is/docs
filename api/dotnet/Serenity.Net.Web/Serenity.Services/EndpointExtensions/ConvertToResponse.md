@@ -1,7 +1,7 @@
 # EndpointExtensions.ConvertToResponse&lt;TResponse&gt; method (1 of 2)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Converts the exception object to a service response
+Converts the exception object to a service response.
 
 ```csharp
 public static TResponse ConvertToResponse<TResponse>(this Exception exception, 
@@ -11,9 +11,13 @@ public static TResponse ConvertToResponse<TResponse>(this Exception exception,
 
 | parameter | description |
 | --- | --- |
-| TResponse | Response object |
-| exception | Exception |
-| httpContext | HTTP context |
+| TResponse | The response object type. |
+| exception | The exception. |
+| httpContext | The HTTP context. |
+
+## Return Value
+
+The converted service response.
 
 ## See Also
 
@@ -26,7 +30,7 @@ public static TResponse ConvertToResponse<TResponse>(this Exception exception,
 # EndpointExtensions.ConvertToResponse&lt;TResponse&gt; method (2 of 2)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Convert the exception to a service response
+Converts the exception to a service response.
 
 ```csharp
 public static TResponse ConvertToResponse<TResponse>(this Exception exception, ILogger logger, 
@@ -36,11 +40,15 @@ public static TResponse ConvertToResponse<TResponse>(this Exception exception, I
 
 | parameter | description |
 | --- | --- |
-| TResponse |  |
-| exception | Exception |
-| logger | Exception logger |
-| localizer | Text localizer |
-| showDetails | True to show details |
+| TResponse | The response object type. |
+| exception | The exception. |
+| logger | The exception logger. |
+| localizer | The text localizer. |
+| showDetails | `true` to show details. |
+
+## Return Value
+
+The converted service response.
 
 ## See Also
 

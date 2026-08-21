@@ -9,11 +9,11 @@ public static HtmlString RenderImportMap(this IHtmlHelper html)
 
 | parameter | description |
 | --- | --- |
-| html | The HTML helper instance used to access the current view context and import map data. Cannot be null. |
+| html | The HTML helper instance used to access the current view context and import map data. Cannot be `null`. |
 
 ## Return Value
 
-An HtmlString containing a  element with the serialized import map, or an empty HtmlString if no import map is available.
+An HtmlString containing a `script type="importmap"` element with the serialized import map, or an empty HtmlString if no import map is available.
 
 ## Remarks
 

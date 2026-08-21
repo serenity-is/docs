@@ -1,7 +1,7 @@
 # TwoThirdWidthAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Marks form field with "col-md-8" css class, which makes it allocate two third of form row on device widths &gt;= 992px (e.g. medium desktop)
+Marks the form field with the "col-md-8" CSS class, which makes it allocate two thirds of the form row on device widths &gt;= 992px (e.g. medium desktop).
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

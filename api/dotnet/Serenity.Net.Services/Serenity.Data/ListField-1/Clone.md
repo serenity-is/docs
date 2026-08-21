@@ -11,6 +11,10 @@ protected override List<TItem> Clone(List<TItem> value)
 | --- | --- |
 | value | The value. |
 
+## Return Value
+
+A clone of the value.
+
 ## See Also
 
 * class [TItem](../Serenity.Net.Services/../ListField-1.TItem.md)

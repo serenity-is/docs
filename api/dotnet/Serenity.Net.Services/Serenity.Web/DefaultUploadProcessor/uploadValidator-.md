@@ -1,7 +1,7 @@
 # DefaultUploadProcessor.uploadValidator- field
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Upload validator
+Gets the upload validator.
 
 ```csharp
 protected readonly IUploadValidator uploadValidator-;

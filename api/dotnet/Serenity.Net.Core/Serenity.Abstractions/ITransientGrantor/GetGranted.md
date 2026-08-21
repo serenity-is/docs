@@ -1,11 +1,15 @@
 # ITransientGrantor.GetGranted method
 **namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns a list of permissions granted via Grant.
+Gets the permissions that were granted via [`Grant`](Grant.md).
 
 ```csharp
 public IEnumerable<string> GetGranted()
 ```
+
+## Return Value
+
+An enumerable of granted permission keys.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # TextLocalizerExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Extensions for local text context
+Extensions for [`ITextLocalizer`](ITextLocalizer.md).
 
 ```csharp
 public static class TextLocalizerExtensions
@@ -11,7 +11,7 @@ public static class TextLocalizerExtensions
 
 | name | description |
 | --- | --- |
-| static [Get](TextLocalizerExtensions/Get.md)(…) | Gets translation for a key |
+| static [Get](TextLocalizerExtensions/Get.md)(…) | Gets the translation for a key. |
 
 ## See Also
 

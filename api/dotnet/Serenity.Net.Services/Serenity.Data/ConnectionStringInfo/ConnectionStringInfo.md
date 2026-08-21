@@ -1,7 +1,7 @@
 # ConnectionStringInfo constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Contains a connection string, its key and provider name.
+Contains a connection string, its key, and provider name.
 
 ```csharp
 public ConnectionStringInfo(string connectionKey, string connectionString, string providerName, 
@@ -12,8 +12,8 @@ public ConnectionStringInfo(string connectionKey, string connectionString, strin
 | --- | --- |
 | connectionKey | The connection key. |
 | connectionString | The connection string. |
-| providerName | Name of the provider. |
-| dialect | Dialect |
+| providerName | The name of the provider. |
+| dialect | The SQL dialect. |
 
 ## Remarks
 

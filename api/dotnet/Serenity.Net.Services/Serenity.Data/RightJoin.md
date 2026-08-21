@@ -1,7 +1,7 @@
 # RightJoin class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-RIGHT JOIN type
+RIGHT JOIN type.
 
 ```csharp
 public class RightJoin : Join

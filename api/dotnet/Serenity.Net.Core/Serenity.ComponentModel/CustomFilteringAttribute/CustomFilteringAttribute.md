@@ -1,7 +1,7 @@
 # CustomFilteringAttribute constructor
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Base class which other custom filtering types derive from.
+Base class from which other custom filtering types derive.
 
 ```csharp
 protected CustomFilteringAttribute(string filteringType)

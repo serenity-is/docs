@@ -18,6 +18,10 @@ public static TimeSpanField Factory(ICollection<Field> collection, string name, 
 | getValue | The get value. |
 | setValue | The set value. |
 
+## Return Value
+
+A new TimeSpanField instance.
+
 ## See Also
 
 * class [Field](../Field.md)

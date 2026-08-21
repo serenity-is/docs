@@ -1,7 +1,7 @@
 # LogicOperatorPermissionService.HasPermission method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Returns true if user has specified permission
+Determines whether the current user has the specified permission or satisfies the given logical permission expression.
 
 ```csharp
 public bool HasPermission(string permission)
@@ -9,11 +9,11 @@ public bool HasPermission(string permission)
 
 | parameter | description |
 | --- | --- |
-| permission | Permission to check |
+| permission | The permission key or logical expression (supporting `!`, `&`, `|`, and parentheses). |
 
 ## Return Value
 
-True if user has specified permission
+`true` if the expression evaluates to granted; otherwise `false`.
 
 ## See Also
 

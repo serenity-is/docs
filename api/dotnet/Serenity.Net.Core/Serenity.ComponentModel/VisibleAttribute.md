@@ -17,7 +17,7 @@ public class VisibleAttribute : Attribute
 | name | description |
 | --- | --- |
 | [VisibleAttribute](VisibleAttribute/VisibleAttribute.md)(…) | Controls initial visibility of a column / form field. |
-| [Value](VisibleAttribute/Value.md) { get; } | Gets a value indicating whether this [`VisibleAttribute`](VisibleAttribute.md) is ON. |
+| [Value](VisibleAttribute/Value.md) { get; } | Gets a value indicating whether this [`VisibleAttribute`](VisibleAttribute.md) is on. |
 
 ## Remarks
 

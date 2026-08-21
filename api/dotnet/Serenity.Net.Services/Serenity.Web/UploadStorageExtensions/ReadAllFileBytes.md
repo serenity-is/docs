@@ -1,7 +1,7 @@
 # UploadStorageExtensions.ReadAllFileBytes method
 **namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Reads all file bytes
+Reads all file bytes.
 
 ```csharp
 public static byte[] ReadAllFileBytes(this IUploadStorage uploadStorage, string path)
@@ -16,7 +16,7 @@ public static byte[] ReadAllFileBytes(this IUploadStorage uploadStorage, string 
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Upload storage is null |
+| ArgumentNullException | *uploadStorage* is `null`. |
 
 ## See Also
 

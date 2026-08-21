@@ -1,7 +1,7 @@
 # ICustomValidator.Validate method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Validates value using specified context.
+Validates the value using the specified context.
 
 ```csharp
 public string Validate(IValidationContext context)
@@ -10,6 +10,10 @@ public string Validate(IValidationContext context)
 | parameter | description |
 | --- | --- |
 | context | The context. |
+
+## Return Value
+
+The validation error message, or null if the value is valid.
 
 ## See Also
 

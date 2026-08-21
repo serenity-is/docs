@@ -1,7 +1,7 @@
 # IValidationContext interface
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Validation context abstraction
+Validation context abstraction.
 
 ```csharp
 public interface IValidationContext
@@ -12,7 +12,7 @@ public interface IValidationContext
 | name | description |
 | --- | --- |
 | [Connection](IValidationContext/Connection.md) { get; } | Gets the connection. |
-| [Localizer](IValidationContext/Localizer.md) { get; } | Localizer |
+| [Localizer](IValidationContext/Localizer.md) { get; } | Gets the localizer used to translate texts. |
 | [Value](IValidationContext/Value.md) { get; } | Gets the value. |
 | [GetFieldValue](IValidationContext/GetFieldValue.md)(…) | Gets the field value. |
 

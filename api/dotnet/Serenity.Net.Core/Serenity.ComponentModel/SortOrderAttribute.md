@@ -1,7 +1,7 @@
 # SortOrderAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets the column as sorted by default, and its index among sorted columns. Negative values means descending sort. Applies only to columns.
+Sets the column as sorted by default, and its index among sorted columns. Negative values mean descending sort. Applies only to columns.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,7 +16,7 @@ public class SortOrderAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [SortOrderAttribute](SortOrderAttribute/SortOrderAttribute.md)(…) | Sets the column as sorted by default, and its index among sorted columns. Negative values means descending sort. Applies only to columns. (2 constructors) |
+| [SortOrderAttribute](SortOrderAttribute/SortOrderAttribute.md)(…) | Sets the column as sorted by default, and its index among sorted columns. Negative values mean descending sort. Applies only to columns. (2 constructors) |
 | [Descending](SortOrderAttribute/Descending.md) { get; } | Gets a value indicating whether sort is descending. |
 | [SortOrder](SortOrderAttribute/SortOrder.md) { get; } | Gets the sort order. |
 

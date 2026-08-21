@@ -1,7 +1,7 @@
 # SqlMapper class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Dapper wrapper
+Provides IDbConnection extension methods that wrap the corresponding Dapper SqlMapper methods, translating Serenity SQL (dialect specific brackets and parameter prefixes) via [`Translate`](SqlConversions/Translate.md) and ensuring the connection is open before execution. It mirrors the string based `Execute` and `Query` extension methods of Dapper's `SqlMapper`, not every Dapper overload (CommandDefinition based methods, ExecuteScalar, ExecuteReader, QueryFirst, QueryMultiple, async variants, etc.). The [`ISqlQuery`](ISqlQuery.md) overloads are Serenity specific and have no Dapper equivalent. Note that unlike [`SqlHelper`](SqlHelper.md) methods, these extension methods do not go through [`ISqlOperationInterceptor`](ISqlOperationInterceptor.md).
 
 ```csharp
 public static class SqlMapper
@@ -11,10 +11,9 @@ public static class SqlMapper
 
 | name | description |
 | --- | --- |
-| static [Execute](SqlMapper/Execute.md)(…) | Execute parameterized SQL |
-| static [Query](SqlMapper/Query.md)(…) | Return a list of dynamic objects, reader is closed after the call (5 methods) |
-| static [Query&lt;TValue&gt;](SqlMapper/Query.md)(…) | Return a list of values, reader is closed after the call |
-| static [Query&lt;T&gt;](SqlMapper/Query.md)(…) | Return a list of objects, reader is closed after the call |
+| static [Execute](SqlMapper/Execute.md)(…) | Executes a parameterized SQL statement. |
+| static [Query](SqlMapper/Query.md)(…) | Returns a list of dynamic objects; the reader is closed after the call. (2 methods) |
+| static [Query&lt;T&gt;](SqlMapper/Query.md)(…) | Returns a list of objects; the reader is closed after the call. (2 methods) |
 
 ## See Also
 

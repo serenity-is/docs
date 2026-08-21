@@ -1,7 +1,7 @@
 # IRequestContext.Permissions property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Gets the permission service
+Gets the permission service.
 
 ```csharp
 public IPermissionService Permissions { get; }

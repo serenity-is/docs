@@ -1,7 +1,7 @@
 # InsertPermissionAttribute class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Sets delete permission for the row.
+Sets insert permission for the row.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

@@ -17,7 +17,7 @@ public static IDbDataParameter AddParamWithValue(this IDbCommand command, string
 
 ## Return Value
 
-New parameter
+The new parameter.
 
 ## See Also
 

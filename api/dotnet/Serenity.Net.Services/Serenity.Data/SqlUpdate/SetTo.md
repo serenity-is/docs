@@ -4,13 +4,13 @@
 Sets field value to the expression.
 
 ```csharp
-public SqlUpdate SetTo(IField field, string value)
+public SqlUpdate SetTo(IField field, string expression)
 ```
 
 | parameter | description |
 | --- | --- |
 | field | Field name (required). |
-| value | Field expression (required). |
+| expression | Field expression (required). |
 
 ## Return Value
 
@@ -29,17 +29,23 @@ SqlUpdate object itself.
 Sets field value to the expression.
 
 ```csharp
-public SqlUpdate SetTo(string field, string value)
+public SqlUpdate SetTo(string field, string expression)
 ```
 
 | parameter | description |
 | --- | --- |
 | field | Field name (required). |
-| value | Field value (expression, required). |
+| expression | Field expression, required. |
 
 ## Return Value
 
 SqlUpdate object itself.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | field or expression is null or empty. |
 
 ## See Also
 

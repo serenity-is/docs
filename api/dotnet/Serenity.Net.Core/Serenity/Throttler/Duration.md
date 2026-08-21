@@ -1,7 +1,7 @@
 # Throttler.Duration property
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Duration
+Gets the sliding window duration.
 
 ```csharp
 public TimeSpan Duration { get; }

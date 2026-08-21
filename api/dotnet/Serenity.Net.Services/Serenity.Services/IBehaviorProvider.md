@@ -11,7 +11,7 @@ public interface IBehaviorProvider
 
 | name | description |
 | --- | --- |
-| [Resolve](IBehaviorProvider/Resolve.md)(…) | Resolves a list of behavior instances targeted for a handler, row and behaivor type. |
+| [Resolve](IBehaviorProvider/Resolve.md)(…) | Resolves a list of behavior instances targeted for a handler, row and behavior type. |
 
 ## See Also
 

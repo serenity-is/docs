@@ -1,7 +1,7 @@
 # AuthorizationExtensions.ValidatePermission method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Checks if current user has given permission and throws a validation error with "AccessDenied" error code if not.
+Ensures the current user has the specified permission, throwing a validation error with code `AccessDenied` otherwise.
 
 ```csharp
 public static void ValidatePermission(this IPermissionService permissions, string permission, 
@@ -10,9 +10,16 @@ public static void ValidatePermission(this IPermissionService permissions, strin
 
 | parameter | description |
 | --- | --- |
-| permissions | Permissions service |
-| permission | Permission key |
-| localizer | Localizer |
+| permissions | The permission service to query. |
+| permission | The required permission key. |
+| localizer | The localizer used to produce the error message. |
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | *permissions* is `null`. |
+| [ValidationError](../../Serenity.Services/ValidationError.md) | The current user does not have the required permission. |
 
 ## See Also
 

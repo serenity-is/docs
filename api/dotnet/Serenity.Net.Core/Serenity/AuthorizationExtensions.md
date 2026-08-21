@@ -1,7 +1,7 @@
 # AuthorizationExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Authorization extension methods
+Provides helper extension methods for authorization, permission checks, and user retrieval.
 
 ```csharp
 public static class AuthorizationExtensions
@@ -11,14 +11,14 @@ public static class AuthorizationExtensions
 
 | name | description |
 | --- | --- |
-| static [GetIdentifier](AuthorizationExtensions/GetIdentifier.md)(…) | Gets name identifier claim from given identity |
-| static [GetUserDefinition](AuthorizationExtensions/GetUserDefinition.md)(…) | Gets user definition for given user identity (3 methods) |
-| static [GetUserDefinition&lt;TUserDefinition&gt;](AuthorizationExtensions/GetUserDefinition.md)(…) | Gets user definition for given user identity |
-| static [Impersonate](AuthorizationExtensions/Impersonate.md)(…) | Impersonates a user by its username. Note that this throws an exception if the user is not found, or the underlying user accessor is not an impersonator. |
-| static [IsLoggedIn](AuthorizationExtensions/IsLoggedIn.md)(…) | Returns true if user is logged in (authenticated). (2 methods) |
-| static [RemoveCachedUser](AuthorizationExtensions/RemoveCachedUser.md)(…) | Tries to invalidate user in cache if the user retrieve service implements IUserCacheInvalidator. If not, and cache is not null and user is not null, it tries to remove user by id and username from cache. (2 methods) |
-| static [ValidateLoggedIn](AuthorizationExtensions/ValidateLoggedIn.md)(…) | Checks if there is a currently logged user and throws a validation error with "NotLoggedIn" error code if not. |
-| static [ValidatePermission](AuthorizationExtensions/ValidatePermission.md)(…) | Checks if current user has given permission and throws a validation error with "AccessDenied" error code if not. |
+| static [GetIdentifier](AuthorizationExtensions/GetIdentifier.md)(…) | Gets the value of the NameIdentifier claim from the specified principal. |
+| static [GetUserDefinition](AuthorizationExtensions/GetUserDefinition.md)(…) | Gets the user definition for the specified principal. (3 methods) |
+| static [GetUserDefinition&lt;TUserDefinition&gt;](AuthorizationExtensions/GetUserDefinition.md)(…) | Gets the typed user definition for the specified principal. |
+| static [Impersonate](AuthorizationExtensions/Impersonate.md)(…) | Impersonates the user with the specified username. |
+| static [IsLoggedIn](AuthorizationExtensions/IsLoggedIn.md)(…) | Determines whether the user accessed via *userAccessor* is authenticated. (2 methods) |
+| static [RemoveCachedUser](AuthorizationExtensions/RemoveCachedUser.md)(…) | Removes the specified user from the cache. (2 methods) |
+| static [ValidateLoggedIn](AuthorizationExtensions/ValidateLoggedIn.md)(…) | Ensures a user is currently authenticated, throwing a validation error with code `NotLoggedIn` otherwise. |
+| static [ValidatePermission](AuthorizationExtensions/ValidatePermission.md)(…) | Ensures the current user has the specified permission, throwing a validation error with code `AccessDenied` otherwise. |
 
 ## See Also
 

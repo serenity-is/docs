@@ -4,18 +4,22 @@
 Registers the default implementations of IUploadStorage, IUploadValidator, IImageProcessor and IUploadProcessor interfaces.
 
 ```csharp
-public static void AddUploadStorage(this IServiceCollection collection)
+public static IServiceCollection AddUploadStorage(this IServiceCollection collection)
 ```
 
 | parameter | description |
 | --- | --- |
-| collection | Service collection |
+| collection | The service collection. |
+
+## Return Value
+
+The same service collection so that calls can be chained.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Collection is null |
+| ArgumentNullException | *collection* is `null`. |
 
 ## See Also
 
@@ -29,20 +33,24 @@ public static void AddUploadStorage(this IServiceCollection collection)
 Registers the default implementations of IUploadStorage, IUploadValidator, IImageProcessor and IUploadProcessor interfaces.
 
 ```csharp
-public static void AddUploadStorage(this IServiceCollection collection, 
+public static IServiceCollection AddUploadStorage(this IServiceCollection collection, 
     Action<UploadSettings> setupAction)
 ```
 
 | parameter | description |
 | --- | --- |
-| collection | Service collection |
-| setupAction | Callback to edit options |
+| collection | The service collection. |
+| setupAction | The callback to edit options. |
+
+## Return Value
+
+The same service collection so that calls can be chained.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | Collection is null |
+| ArgumentNullException | *collection* or *setupAction* is `null`. |
 
 ## See Also
 

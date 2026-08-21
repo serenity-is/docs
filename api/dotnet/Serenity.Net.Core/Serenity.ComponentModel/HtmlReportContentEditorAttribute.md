@@ -1,7 +1,7 @@
 # HtmlReportContentEditorAttribute class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Indicates that the target property should use a "HtmlReportContent" editor. This is generally a CK editor with only functionality compatible with common reporting tools like SSRS, Telerik, DevExpress etc. enabled.
+Indicates that the target property should use an "HtmlReportContent" editor. This is generally a CK editor with only functionality compatible with common reporting tools like SSRS, Telerik, DevExpress etc. enabled.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]

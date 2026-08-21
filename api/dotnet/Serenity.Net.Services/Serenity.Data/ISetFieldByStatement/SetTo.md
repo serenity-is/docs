@@ -12,10 +12,6 @@ public void SetTo(string name, string statement)
 | name | Field name (required). |
 | statement | Value identifier (e.g. param name). |
 
-## Return Value
-
-Query itself.
-
 ## See Also
 
 * interface [ISetFieldByStatement](../ISetFieldByStatement.md)

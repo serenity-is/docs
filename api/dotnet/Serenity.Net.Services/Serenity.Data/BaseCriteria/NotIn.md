@@ -11,6 +11,10 @@ public BaseCriteria NotIn(BaseCriteria statement)
 | --- | --- |
 | statement | The statement. |
 
+## Return Value
+
+A new binary NOT IN criteria.
+
 ## Exceptions
 
 | exception | condition |
@@ -36,6 +40,10 @@ public BaseCriteria NotIn(ISqlQuery statement)
 | --- | --- |
 | statement | The statement. |
 
+## Return Value
+
+A new binary NOT IN criteria.
+
 ## Exceptions
 
 | exception | condition |
@@ -60,8 +68,12 @@ public BaseCriteria NotIn<T>(params T[] values)
 
 | parameter | description |
 | --- | --- |
-| T | Type of values |
+| T | The type of values. |
 | values | The values. |
+
+## Return Value
+
+A new binary NOT IN criteria.
 
 ## Exceptions
 

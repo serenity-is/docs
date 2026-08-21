@@ -1,7 +1,7 @@
 # AnnotationTypeRegistry constructor
 **namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Default annotation type registry
+The default annotation type registry.
 
 ```csharp
 public AnnotationTypeRegistry(ITypeSource typeSource)
@@ -9,11 +9,11 @@ public AnnotationTypeRegistry(ITypeSource typeSource)
 
 | parameter | description |
 | --- | --- |
-| typeSource | Type source |
+| typeSource | The type source. |
 
 ## Remarks
 
-Creates a new instance
+Creates a new instance.
 
 ## See Also
 

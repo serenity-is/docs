@@ -1,7 +1,7 @@
 # ITemporaryFileSystem.GetTemporaryFileInfos method
 **namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Gets temporary file info objects
+Gets the temporary file info objects for the files in the specified directory.
 
 ```csharp
 public TemporaryFileInfo[] GetTemporaryFileInfos(string path)
@@ -9,11 +9,11 @@ public TemporaryFileInfo[] GetTemporaryFileInfos(string path)
 
 | parameter | description |
 | --- | --- |
-| path | Path |
+| path | The path of the directory. |
 
 ## Return Value
 
-Array of temporary file info objects
+An array of temporary file info objects.
 
 ## See Also
 

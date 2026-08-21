@@ -12,11 +12,15 @@ protected virtual TValue GetFromReader(IDataReader reader, int index)
 | reader | The reader. |
 | index | The index. |
 
+## Return Value
+
+The field value read from the reader.
+
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| NotImplementedException |  |
+| NotImplementedException | This method must be overridden in a derived class. |
 
 ## See Also
 
@@ -44,7 +48,7 @@ public override void GetFromReader(IDataReader reader, int index, IRow row)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | reader |
+| ArgumentNullException | reader is null. |
 
 ## See Also
 

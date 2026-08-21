@@ -1,7 +1,7 @@
 # InnerJoin class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-INNER JOIN type
+INNER JOIN type.
 
 ```csharp
 public class InnerJoin : Join

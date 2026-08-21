@@ -1,7 +1,7 @@
 # IUploadImageOptions.ScaleBackColor property
 **namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Background color to use when padding image
+Background color to use when padding the image.
 
 ```csharp
 public string ScaleBackColor { get; set; }

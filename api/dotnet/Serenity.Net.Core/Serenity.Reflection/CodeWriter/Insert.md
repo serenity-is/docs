@@ -9,8 +9,8 @@ public StringBuilder Insert(int index, string text)
 
 | parameter | description |
 | --- | --- |
-| text |  |
-| index |  |
+| text | The text to insert. |
+| index | The zero-based index at which to insert the text. |
 
 ## See Also
 

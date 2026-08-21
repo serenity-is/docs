@@ -1,7 +1,7 @@
 # IListRequestHandler.Response property
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-List response
+Gets the list response.
 
 ```csharp
 public IListResponse Response { get; }

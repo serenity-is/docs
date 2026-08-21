@@ -12,6 +12,10 @@ public static string ReplaceAliases(string expression, Func<string, string> repl
 | expression | The expression. |
 | replace | The replace function. |
 
+## Return Value
+
+The expression with aliases replaced.
+
 ## See Also
 
 * class [JoinAliasLocator](../JoinAliasLocator.md)

@@ -1,7 +1,7 @@
 # DynamicScriptServiceCollectionExtensions.UseScriptWatching method (1 of 2)
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Activates script file watching
+Activates script file watching.
 
 ```csharp
 public static IServiceProvider UseScriptWatching(this IServiceProvider serviceProvider)
@@ -9,7 +9,7 @@ public static IServiceProvider UseScriptWatching(this IServiceProvider servicePr
 
 | parameter | description |
 | --- | --- |
-| serviceProvider | Service provider |
+| serviceProvider | The service provider. |
 
 ## See Also
 
@@ -20,7 +20,7 @@ public static IServiceProvider UseScriptWatching(this IServiceProvider servicePr
 # DynamicScriptServiceCollectionExtensions.UseScriptWatching method (2 of 2)
 **namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Activates script file watching
+Activates script file watching.
 
 ```csharp
 public static IServiceProvider UseScriptWatching(this IServiceProvider serviceProvider, 
@@ -29,15 +29,19 @@ public static IServiceProvider UseScriptWatching(this IServiceProvider servicePr
 
 | parameter | description |
 | --- | --- |
-| serviceProvider | Service provider |
-| scriptPaths | List of script paths to watch |
+| serviceProvider | The service provider. |
+| scriptPaths | The list of script paths to watch. |
+
+## Return Value
+
+The same service provider so that calls can be chained.
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | serviceProvider or scriptPaths is null |
-| InvalidOperationException | Script bundle manager is not registered |
+| ArgumentNullException | *serviceProvider* or *scriptPaths* is `null`. |
+| InvalidOperationException | No script bundle manager or content hash cache is registered. |
 
 ## See Also
 

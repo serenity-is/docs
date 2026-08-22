@@ -763,11 +763,11 @@ In the `OnBeforeDelete` method, we first call the base class method, and then we
 
 This method provides more control and flexibility in handling the deletion process while avoiding foreign key errors.
 
-Keep in mind that there is a more intuitive and integrated feature called `MasterDetailRelationAttribute` that simplifies master-detail handling. You can learn more about it in the following sections.
+Keep in mind that there is a more intuitive and built-in feature called `MasterDetailRelationAttribute` that simplifies master-detail handling. You can learn more about it in the following sections.
 
 ## Handling Save / Retrieve / Delete With a Behavior
 
-Master/detail relations are an integrated feature on the server side, so instead of manually overriding Save / Retrieve and Delete handlers, we'll use an attribute called `MasterDetailRelation`.
+Master/detail relations are an built-in feature on the server side, so instead of manually overriding Save / Retrieve and Delete handlers, we'll use an attribute called `MasterDetailRelation`.
 
 Open `MovieRow.cs` and modify the `CastList` property as follows:
 

@@ -33,6 +33,8 @@ Serenity provides abstractions for permission checking (authorization), user det
 * [IRolePermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IRolePermissionService.md) — role permission queries
 * [IUserProvider](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IUserProvider.md) — a combination of `IUserAccessor`, `IUserRetrieveService`, `IUserClaimCreator`, `IImpersonator`, `IRemoveCachedUser` and `IRemoveAll`
 
+> Password strength rules and the related types (`IHasPassword`, `IPasswordStrengthValidator`, `PasswordValidationResult`) are covered in [Password Strength](password-strength.md).
+
 The `Serenity.Extensions` package provides base implementations for most of these, which handle the common logic so your application only needs a small subclass:
 
 * `BaseUserRetrieveService<TRow>` — user retrieval from a `Users` table
@@ -254,6 +256,26 @@ There are also specialized versions of the `ServiceAuthorize` attribute that rea
 - [AuthorizeListAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Services/AuthorizeListAttribute.md): `Read` or `ServiceLookup` permission attributes. 
 - [AuthorizeUpdateAttribute](../api/dotnet/Serenity.Net.Web/Serenity.Services/AuthorizeUpdateAttribute.md): `Update`, `Modify`, or `Read` permission attributes.
 
+## Permission Expressions
+
+By default a permission check (e.g. `IPermissionService.HasPermission`) takes a single permission key. When you need to require a combination of permissions, you can enable logical permission expressions with [LogicOperatorPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Web/LogicOperatorPermissionService.md), which decorates an `IPermissionService` in the DI container:
+
+```cs
+services.AddSingleton<IPermissionService>(serviceProvider =>
+    new LogicOperatorPermissionService(serviceProvider.GetRequiredService<BasePermissionService>()));
+```
+
+Once registered, `HasPermission` accepts logical expressions that support the operators `!` (not), `&` (and), `|` (or), and parentheses:
+
+- `"Administration:Security & Administration:Translation"` — the user must have **both**.
+- `"Administration:Security | Administration:Translation"` — the user must have **either**.
+- `"!Administration:Security"` — the user must **not** have the permission.
+- `"(Administration:Security & Administration:Translation) | Administration:User:Read"` — grouped expressions.
+
+The parsing and evaluation is handled by [PermissionExpressionParser](../api/dotnet/Serenity.Net.Core/Serenity.Services/PermissionExpressionParser.md), which tokenizes the expression, converts the tokens to Reverse Polish Notation (shunting-yard), and evaluates them against the wrapped permission service. The result is cached, so repeated checks of the same expression are cheap.
+
+> When a permission string contains none of the operator characters, `LogicOperatorPermissionService` delegates directly to the inner service, so plain keys behave exactly as before.
+
 ## Impersonation
 
 - The [`IImpersonator`](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/IImpersonator.md) interface and its default implementation [ImpersonatingUserAccessor](../api/dotnet/Serenity.Net.Core/Serenity.Web/ImpersonatingUserAccessor.md) class provide an option to execute an action as if another user is currently logged in.
@@ -350,3 +372,24 @@ public class SomeHandler : IRequestHandler
 ```
 
 Please note that granting temporary permission is performed in memory and is not stored anywhere.
+
+## Throttler
+
+[Throttler](../api/dotnet/Serenity.Net.Core/Serenity/Throttler.md) limits the rate of an operation — for example, allowing only a certain number of login attempts within a time window. It counts attempts in a sliding window backed by either `IMemoryCache` or `IDistributedCache`.
+
+Construct it with a cache, a key identifying the throttled resource (e.g. a username), a duration, and a limit:
+
+```cs
+var throttler = new Throttler(cache.Memory,
+    "ValidateUser:" + username.ToLowerInvariant(),
+    TimeSpan.FromMinutes(30), 50);
+
+if (!throttler.Check())
+    throw new ValidationError("Too many login attempts. Please try again later.");
+```
+
+- `Check()` records an attempt and returns `true` if it is within the limit, or `false` if the limit has been exceeded.
+- `Reset()` clears the throttling state for the key (used after a successful login).
+- `Duration` and `Limit` are available as properties, and `CacheKey` exposes the combined cache key.
+
+StartSharp and Serene use this in their `UserPasswordValidator` to block brute-force login attempts (30-minute window, 50 attempts per username).

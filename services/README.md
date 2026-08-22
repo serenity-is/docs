@@ -9,6 +9,9 @@ Serenity services follow a **request handler** based architecture. When a client
 - [Generating Handler Interfaces](generate_interface.md) — auto-generate handler interfaces with `[GenerateInterface]` (StartSharp)
 - [Custom Request Handlers](custom_request_handlers.md) — write handlers for non-CRUD actions
 - [Auto-Registration of Request Handlers](handler_auto_registration.md) — how handlers are registered automatically
+- [Service Behaviors](behaviors.md) — cross-cutting hooks that run for every handler of a matching type
+- [Built-in Service Behaviors](built-in-behaviors.md) — framework behaviors (capture log, localization, master-detail, unique constraints, etc.)
+- [Uploads](upload.md) — file and image uploads (storage, processing, validation, configuration)
 - Retrieve Request Handler — retrieves a single record by ID
 
 Each handler type has a corresponding base class (`ListRequestHandler`, `SaveRequestHandler`, `DeleteRequestHandler`, `UndeleteRequestHandler`, `RetrieveRequestHandler`) and a marker interface (`IListRequestHandler`, `ISaveRequestHandler`, etc.) that behaviors use.
@@ -31,6 +34,8 @@ The base classes provide all the default logic (validation, permission checks, a
 ## Behaviors
 
 In addition to overriding methods, you can intercept request handlers through *behaviors* — classes implementing `ISaveBehavior`, `IListBehavior`, `IDeleteBehavior`, `IUndeleteBehavior`, or `IRetrieveBehavior`. Behaviors run for every handler of the matching type (they are discovered through the type source), making them ideal for cross-cutting concerns like audit logging, multi-tenancy, or master–detail handling.
+
+See [Service Behaviors](behaviors.md) for the full guide — the behavior interfaces, how they are discovered and attached, the handler lifecycle, and worked examples.
 
 ## Service Endpoints
 

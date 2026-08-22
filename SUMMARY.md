@@ -57,6 +57,7 @@
   * [Password Strength](framework/password-strength.md)
   * [Localization](framework/localization.md)
   * [Caching](framework/caching.md)
+  * [JSON Serialization](framework/json.md)
   * Data Access
     * [Entities \(Rows\)](framework/data-access/entities.md)
     * [Entity Assignment Tracking](framework/data-access/entity-tracking.md)
@@ -74,10 +75,12 @@
     * [Generating Handler Interfaces](services/generate_interface.md)
     * [Custom Request Handlers](services/custom_request_handlers.md)
     * [Auto-Registration of Request Handlers](services/handler_auto_registration.md)
+    * [Service Behaviors](services/behaviors.md)
+    * [Built-in Service Behaviors](services/built-in-behaviors.md)
+    * [Uploads](services/upload.md)
+      * [Antivirus Scan](av.md)
   * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
     * [Lookups](framework/dynamic-scripts/lookups.md)
-  * File Upload
-    * [Antivirus Scan](av.md)
   * UI
     * Core Functions
       * [Fluent](framework/ui/fluent.md)
@@ -121,6 +124,7 @@
     * [Meeting Module](startsharp/features/meeting-module.md)
     * [Organization & Contacts Module](startsharp/features/organization-contacts-module.md)
     * [Login As User](startsharp/features/login-as-user.md)
+    * [Account Elevation](startsharp/features/account-elevation.md)
     * [Two Factor Authentication](startsharp/features/two-factor-auth.md)
     * [Role-Based Access Control](startsharp/features/role-based-access-control.md)
     * [Implicitly Granted Permissions](startsharp/features/implicitly-granted-permissions.md)

@@ -18,4 +18,4 @@ public static class RequestHandlerExtensions
 
 ## See Also
 
-* **Source:** *[RequestHandlerExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/RequestHandlerExtensions.cs)*
+* **Source:** *[RequestHandlerExtensions.cs](https://github.com/serenity-is/Serenity/blob/9dd7db586970bccd1b22a6b4d0ef9892b529b61d/src/services/RequestHandlers/Handler/RequestHandlerExtensions.cs)*

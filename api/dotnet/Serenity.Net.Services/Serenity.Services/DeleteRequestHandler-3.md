@@ -67,4 +67,4 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * class [DeleteRequest](DeleteRequest.md)
 * class [DeleteResponse](DeleteResponse.md)
-* **Source:** *[DeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Delete/DeleteRequestHandler.cs)*
+* **Source:** *[DeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Delete/DeleteRequestHandler.cs)*

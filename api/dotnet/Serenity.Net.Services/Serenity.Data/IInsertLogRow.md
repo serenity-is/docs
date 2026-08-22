@@ -11,4 +11,4 @@ public interface IInsertLogRow : IInsertDateRow, IInsertUserIdRow
 
 * interface [IInsertDateRow](IInsertDateRow.md)
 * interface [IInsertUserIdRow](IInsertUserIdRow.md)
-* **Source:** *[IInsertLogRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Contracts/IInsertLogRow.cs)*
+* **Source:** *[IInsertLogRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Contracts/IInsertLogRow.cs)*

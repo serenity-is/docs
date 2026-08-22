@@ -35,4 +35,4 @@ Initializes a new instance of the [`VariantField`](VariantField.md) class.
 ## See Also
 
 * class [GenericClassField&lt;TValue&gt;](GenericClassField-1.md)
-* **Source:** *[VariantField.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/VariantField.cs)*
+* **Source:** *[VariantField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/VariantField.cs)*

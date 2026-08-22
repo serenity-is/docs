@@ -32,4 +32,4 @@ public interface ISqlQuery : IChainable, IQueryWithParams
 
 * interface [IQueryWithParams](IQueryWithParams.md)
 * interface [IChainable](../Serenity/IChainable.md)
-* **Source:** *[ISqlQuery.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/QueryModel/ISqlQuery.cs)*
+* **Source:** *[ISqlQuery.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryModel/ISqlQuery.cs)*

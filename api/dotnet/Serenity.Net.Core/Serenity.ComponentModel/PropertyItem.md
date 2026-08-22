@@ -85,4 +85,4 @@ public class PropertyItem
 
 ## See Also
 
-* **Source:** *[PropertyItem.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/PropertyItem.cs)*
+* **Source:** *[PropertyItem.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/PropertyItem.cs)*

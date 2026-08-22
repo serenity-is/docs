@@ -25,4 +25,4 @@ Initializes a new instance of the [`AuthorizeRetrieveAttribute`](AuthorizeRetrie
 ## See Also
 
 * class [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute.md)
-* **Source:** *[AuthorizeRetrieveAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/AuthorizeRetrieveAttribute.cs)*
+* **Source:** *[AuthorizeRetrieveAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/AuthorizeRetrieveAttribute.cs)*

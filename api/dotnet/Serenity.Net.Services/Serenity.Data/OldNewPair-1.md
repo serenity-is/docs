@@ -27,4 +27,4 @@ Initializes a new instance of the [`OldNewPair`](OldNewPair-1.md) struct.
 
 ## See Also
 
-* **Source:** *[OldNewPair.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Utility/OldNewPair.cs)*
+* **Source:** *[OldNewPair.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Utility/OldNewPair.cs)*

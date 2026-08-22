@@ -25,4 +25,4 @@ Creates an instance of the class.
 
 ## See Also
 
-* **Source:** *[CellDecoratorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Decorators/CellDecoratorAttribute.cs)*
+* **Source:** *[CellDecoratorAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Reporting/Decorators/CellDecoratorAttribute.cs)*

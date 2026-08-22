@@ -32,4 +32,4 @@ Initializes a new instance of the [`DefaultRowTypeRegistry`](DefaultRowTypeRegis
 ## See Also
 
 * interface [IRowTypeRegistry](IRowTypeRegistry.md)
-* **Source:** *[DefaultRowTypeRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Row/DefaultRowTypeRegistry.cs)*
+* **Source:** *[DefaultRowTypeRegistry.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Entity/Row/DefaultRowTypeRegistry.cs)*

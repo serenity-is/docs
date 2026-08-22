@@ -34,4 +34,4 @@ Declares a linking set relation
 
 ## See Also
 
-* **Source:** *[LinkingSetRelationAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Mapping/LinkingSetRelationAttribute.cs)*
+* **Source:** *[LinkingSetRelationAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/LinkingSetRelationAttribute.cs)*

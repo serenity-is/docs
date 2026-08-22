@@ -15,4 +15,4 @@ public static class UriHelper
 
 ## See Also
 
-* **Source:** *[UriHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/UriHelper.cs)*
+* **Source:** *[UriHelper.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Helpers/UriHelper.cs)*

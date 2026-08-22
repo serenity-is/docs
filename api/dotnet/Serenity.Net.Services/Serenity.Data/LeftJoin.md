@@ -17,4 +17,4 @@ public class LeftJoin : Join
 ## See Also
 
 * class [Join](Join.md)
-* **Source:** *[LeftJoin.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Join/LeftJoin.cs)*
+* **Source:** *[LeftJoin.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Join/LeftJoin.cs)*

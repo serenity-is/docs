@@ -24,4 +24,4 @@ public static class ImageCheckResultTexts
 
 ## See Also
 
-* **Source:** *[ImageCheckResultTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/ImageCheckResultTexts.cs)*
+* **Source:** *[ImageCheckResultTexts.cs](https://github.com/serenity-is/Serenity/blob/e70f72898a2a32ea35ed2bc06be42e63f57750bc/src/services/Upload/ImageCheckResultTexts.cs)*

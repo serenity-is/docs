@@ -40,4 +40,4 @@ public static class FilterPanelTexts
 
 ## See Also
 
-* **Source:** *[FilterPanelTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/FilterPanelTexts.cs)*
+* **Source:** *[FilterPanelTexts.cs](https://github.com/serenity-is/Serenity/blob/4e69594410bda5abf3f500766d995a0d7373e6ce/src/web/texts/FilterPanelTexts.cs)*

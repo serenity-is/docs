@@ -25,4 +25,4 @@ Initializes a new instance of the [`HeaderCssClassAttribute`](HeaderCssClassAttr
 
 ## See Also
 
-* **Source:** *[HeaderCssClassAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/HeaderCssClassAttribute.cs)*
+* **Source:** *[HeaderCssClassAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/HeaderCssClassAttribute.cs)*

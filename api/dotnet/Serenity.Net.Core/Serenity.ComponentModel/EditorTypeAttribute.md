@@ -26,4 +26,4 @@ Initializes a new instance of the [`EditorTypeAttribute`](EditorTypeAttribute.md
 
 ## See Also
 
-* **Source:** *[EditorTypeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Editing/EditorTypeAttribute.cs)*
+* **Source:** *[EditorTypeAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Editing/EditorTypeAttribute.cs)*

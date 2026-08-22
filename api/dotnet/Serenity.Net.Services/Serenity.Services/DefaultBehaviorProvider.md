@@ -32,4 +32,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IBehaviorProvider](IBehaviorProvider.md)
-* **Source:** *[DefaultBehaviorProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Behavior/DefaultBehaviorProvider.cs)*
+* **Source:** *[DefaultBehaviorProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Behavior/DefaultBehaviorProvider.cs)*

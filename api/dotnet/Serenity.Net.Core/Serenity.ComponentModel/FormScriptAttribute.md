@@ -19,4 +19,4 @@ public sealed class FormScriptAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[FormScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/FormScriptAttribute.cs)*
+* **Source:** *[FormScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/FormScriptAttribute.cs)*

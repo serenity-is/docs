@@ -19,4 +19,4 @@ public class ConnectionStringOptions : Dictionary<string, ConnectionStringEntry>
 ## See Also
 
 * class [ConnectionStringEntry](ConnectionStringEntry.md)
-* **Source:** *[ConnectionStringOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Connections/ConnectionStringOptions.cs)*
+* **Source:** *[ConnectionStringOptions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/ConnectionStringOptions.cs)*

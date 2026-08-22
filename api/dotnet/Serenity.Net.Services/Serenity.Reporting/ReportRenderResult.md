@@ -23,4 +23,4 @@ public class ReportRenderResult
 
 ## See Also
 
-* **Source:** *[ReportRenderResult.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/Rendering/ReportRenderResult.cs)*
+* **Source:** *[ReportRenderResult.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Reporting/Rendering/ReportRenderResult.cs)*

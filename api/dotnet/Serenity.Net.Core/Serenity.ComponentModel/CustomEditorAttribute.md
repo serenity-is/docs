@@ -33,4 +33,4 @@ Initializes a new instance of the [`CustomEditorAttribute`](CustomEditorAttribut
 ## See Also
 
 * class [EditorTypeAttribute](EditorTypeAttribute.md)
-* **Source:** *[CustomEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Editing/CustomEditorAttribute.cs)*
+* **Source:** *[CustomEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Editing/CustomEditorAttribute.cs)*

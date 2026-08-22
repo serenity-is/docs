@@ -18,4 +18,4 @@ public class ParamCriteria : BaseCriteria
 ## See Also
 
 * class [BaseCriteria](BaseCriteria.md)
-* **Source:** *[ParamCriteria.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Criteria/ParamCriteria.cs)*
+* **Source:** *[ParamCriteria.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Criteria/ParamCriteria.cs)*

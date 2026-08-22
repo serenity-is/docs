@@ -17,4 +17,4 @@ public class OneThirdWidthAttribute : FormWidthAttribute
 ## See Also
 
 * class [FormWidthAttribute](FormWidthAttribute.md)
-* **Source:** *[OneThirdWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Layout/OneThirdWidthAttribute.cs)*
+* **Source:** *[OneThirdWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/OneThirdWidthAttribute.cs)*

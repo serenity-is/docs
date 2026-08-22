@@ -18,4 +18,4 @@ public class SqlUtcNowAttribute : BaseExpressionAttribute
 ## See Also
 
 * class [BaseExpressionAttribute](BaseExpressionAttribute.md)
-* **Source:** *[SqlUtcNowAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Mapping/SqlUtcNowAttribute.cs)*
+* **Source:** *[SqlUtcNowAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/SqlUtcNowAttribute.cs)*

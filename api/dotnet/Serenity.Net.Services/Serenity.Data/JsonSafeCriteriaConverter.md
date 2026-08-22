@@ -17,4 +17,4 @@ public class JsonSafeCriteriaConverter : JsonCriteriaConverter
 ## See Also
 
 * class [JsonCriteriaConverter](JsonCriteriaConverter.md)
-* **Source:** *[JsonSafeCriteriaConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Criteria/JsonSafeCriteriaConverter.cs)*
+* **Source:** *[JsonSafeCriteriaConverter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Criteria/JsonSafeCriteriaConverter.cs)*

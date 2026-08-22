@@ -24,4 +24,4 @@ public class BooleanFormatterAttribute : CustomFormatterAttribute
 ## See Also
 
 * class [CustomFormatterAttribute](CustomFormatterAttribute.md)
-* **Source:** *[BooleanFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Formatting/BasicFormatterTypes/BooleanFormatterAttribute.cs)*
+* **Source:** *[BooleanFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/BooleanFormatterAttribute.cs)*

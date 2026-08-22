@@ -32,4 +32,4 @@ Creates an instance of JsonServiceClient for the passed baseUrl
 
 ## See Also
 
-* **Source:** *[JsonServiceClient.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Json/JsonServiceClient.cs)*
+* **Source:** *[JsonServiceClient.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Json/JsonServiceClient.cs)*

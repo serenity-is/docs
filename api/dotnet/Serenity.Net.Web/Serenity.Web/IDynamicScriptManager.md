@@ -26,4 +26,4 @@ public interface IDynamicScriptManager
 
 ## See Also
 
-* **Source:** *[IDynamicScriptManager.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScript/IDynamicScriptManager.cs)*
+* **Source:** *[IDynamicScriptManager.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScript/IDynamicScriptManager.cs)*

@@ -15,4 +15,4 @@ public interface IUpdateDateRow
 
 ## See Also
 
-* **Source:** *[IUpdateDateRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Contracts/IUpdateDateRow.cs)*
+* **Source:** *[IUpdateDateRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Contracts/IUpdateDateRow.cs)*

@@ -52,4 +52,4 @@ public static class HtmlContentEditorTexts
 
 ## See Also
 
-* **Source:** *[HtmlContentEditorTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/HtmlContentEditorTexts.cs)*
+* **Source:** *[HtmlContentEditorTexts.cs](https://github.com/serenity-is/Serenity/blob/1c3c6a283acf8f34775cc7e05ff212c61cd01972/src/web/texts/HtmlContentEditorTexts.cs)*

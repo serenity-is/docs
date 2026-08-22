@@ -20,4 +20,4 @@ public class MultipleImageUploadEditorAttribute : BaseUploadEditorAttribute
 
 * class [ImageUploadEditorAttribute](ImageUploadEditorAttribute.md)
 * class [BaseUploadEditorAttribute](BaseUploadEditorAttribute.md)
-* **Source:** *[MultipleImageUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Upload/MultipleImageUploadEditorAttribute.cs)*
+* **Source:** *[MultipleImageUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Upload/MultipleImageUploadEditorAttribute.cs)*

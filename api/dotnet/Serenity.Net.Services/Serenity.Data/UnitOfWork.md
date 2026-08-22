@@ -22,4 +22,4 @@ public class UnitOfWork : IDisposable, IUnitOfWork
 ## See Also
 
 * interface [IUnitOfWork](IUnitOfWork.md)
-* **Source:** *[UnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Connections/UnitOfWork.cs)*
+* **Source:** *[UnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Connections/UnitOfWork.cs)*

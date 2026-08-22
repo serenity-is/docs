@@ -22,4 +22,4 @@ public abstract class DataScript<TData> : DataScript
 ## See Also
 
 * class [DataScript](DataScript.md)
-* **Source:** *[DataScriptT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/DynamicScript/DataScriptT.cs)*
+* **Source:** *[DataScriptT.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/DynamicScript/DataScriptT.cs)*

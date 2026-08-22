@@ -63,4 +63,4 @@ Initializes a new instance of the [`CodeWriter`](CodeWriter.md) class.
 
 ## See Also
 
-* **Source:** *[CodeWriter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/CodeWriter.cs)*
+* **Source:** *[CodeWriter.cs](https://github.com/serenity-is/Serenity/blob/29e3c5749407b73f1ce944ccdc31bc628d59d7ef/src/core/Reflection/CodeWriter.cs)*

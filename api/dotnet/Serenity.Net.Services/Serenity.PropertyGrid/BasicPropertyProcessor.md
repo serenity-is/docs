@@ -22,4 +22,4 @@ public class BasicPropertyProcessor : PropertyProcessor
 ## See Also
 
 * class [PropertyProcessor](PropertyProcessor.md)
-* **Source:** *[BasicPropertyProcessor.Alignment.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/PropertyGrid/BasicPropertyProcessor/BasicPropertyProcessor.Alignment.cs)*
+* **Source:** *[BasicPropertyProcessor.Alignment.cs](https://github.com/serenity-is/Serenity/blob/a208f637c41c1cd64c6a2dff54e77302d53f73a8/src/services/Entity/PropertyGrid/BasicPropertyProcessor/BasicPropertyProcessor.Alignment.cs)*

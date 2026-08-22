@@ -28,4 +28,4 @@ public class DefaultUploadStorage : IUploadStorage
 ## See Also
 
 * interface [IUploadStorage](../Serenity.Net.Services/IUploadStorage.md)
-* **Source:** *[DefaultUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Upload/DefaultUploadStorage.cs)*
+* **Source:** *[DefaultUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Upload/DefaultUploadStorage.cs)*

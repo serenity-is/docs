@@ -25,4 +25,4 @@ When placed on a field, this attribute controls whether the field is included wh
 
 ## See Also
 
-* **Source:** *[UpdatableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/UpdatableAttribute.cs)*
+* **Source:** *[UpdatableAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Common/UpdatableAttribute.cs)*

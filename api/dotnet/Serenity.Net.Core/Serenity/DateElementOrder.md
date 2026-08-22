@@ -17,4 +17,4 @@ public enum DateElementOrder
 
 ## See Also
 
-* **Source:** *[DateElementOrder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/DateElementOrder.cs)*
+* **Source:** *[DateElementOrder.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/Helpers/DateElementOrder.cs)*

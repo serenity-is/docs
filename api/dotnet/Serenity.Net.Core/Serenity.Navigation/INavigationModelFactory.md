@@ -15,4 +15,4 @@ public interface INavigationModelFactory
 
 ## See Also
 
-* **Source:** *[INavigationModelFactory.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Navigation/INavigationModelFactory.cs)*
+* **Source:** *[INavigationModelFactory.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Navigation/INavigationModelFactory.cs)*

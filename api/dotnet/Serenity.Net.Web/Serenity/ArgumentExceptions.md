@@ -15,4 +15,4 @@ public static class ArgumentExceptions
 
 ## See Also
 
-* **Source:** *[ArgumentExceptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Common/ArgumentExceptions.cs)*
+* **Source:** *[ArgumentExceptions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Common/ArgumentExceptions.cs)*

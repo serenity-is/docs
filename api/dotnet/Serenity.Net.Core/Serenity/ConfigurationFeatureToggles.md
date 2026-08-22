@@ -23,4 +23,4 @@ public class ConfigurationFeatureToggles : IFeatureToggles
 ## See Also
 
 * interface [IFeatureToggles](../Serenity.Abstractions/IFeatureToggles.md)
-* **Source:** *[ConfigurationFeatureToggles.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/FeatureToggles/ConfigurationFeatureToggles.cs)*
+* **Source:** *[ConfigurationFeatureToggles.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/FeatureToggles/ConfigurationFeatureToggles.cs)*

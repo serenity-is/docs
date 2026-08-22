@@ -17,4 +17,4 @@ public class FileReadPermissionAttribute : FileReadAccessAttribute
 ## See Also
 
 * class [FileReadAccessAttribute](FileReadAccessAttribute.md)
-* **Source:** *[FileReadPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/FileAccess/FileReadPermissionAttribute.cs)*
+* **Source:** *[FileReadPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/FileAccess/FileReadPermissionAttribute.cs)*

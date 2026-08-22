@@ -26,4 +26,4 @@ Initializes a new instance of the [`FormCssClassAttribute`](FormCssClassAttribut
 
 ## See Also
 
-* **Source:** *[FormCssClassAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/Layout/FormCssClassAttribute.cs)*
+* **Source:** *[FormCssClassAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/FormCssClassAttribute.cs)*

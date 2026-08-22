@@ -17,4 +17,4 @@ public class ReadPermissionAttribute : PermissionAttributeBase
 ## See Also
 
 * class [PermissionAttributeBase](PermissionAttributeBase.md)
-* **Source:** *[ReadPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/ReadPermissionAttribute.cs)*
+* **Source:** *[ReadPermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Permission/ReadPermissionAttribute.cs)*

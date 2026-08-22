@@ -16,4 +16,4 @@ public interface ISiteAbsoluteUrl
 
 ## See Also
 
-* **Source:** *[ISiteAbsoluteUrl.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Interface/ISiteAbsoluteUrl.cs)*
+* **Source:** *[ISiteAbsoluteUrl.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/Interface/ISiteAbsoluteUrl.cs)*

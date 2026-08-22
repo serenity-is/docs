@@ -29,4 +29,4 @@ Initializes a new instance of the [`Result`](Result-1.md) class.
 
 ## See Also
 
-* **Source:** *[Result.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/Result.cs)*
+* **Source:** *[Result.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/Result.cs)*

@@ -26,4 +26,4 @@ public class PropertyInfoSource : IPropertySource
 ## See Also
 
 * interface [IPropertySource](IPropertySource.md)
-* **Source:** *[PropertyInfoSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/PropertyGrid/PropertyInfoSource.cs)*
+* **Source:** *[PropertyInfoSource.cs](https://github.com/serenity-is/Serenity/blob/4d2aea70b1129eefd7b1c32874a242aeee51b48a/src/services/Entity/PropertyGrid/PropertyInfoSource.cs)*

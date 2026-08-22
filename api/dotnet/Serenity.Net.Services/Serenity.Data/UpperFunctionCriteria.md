@@ -21,4 +21,4 @@ public class UpperFunctionCriteria : FunctionCallCriteria
 ## See Also
 
 * class [FunctionCallCriteria](FunctionCallCriteria.md)
-* **Source:** *[UpperFunctionCriteria.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Criteria/UpperFunctionCriteria.cs)*
+* **Source:** *[UpperFunctionCriteria.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Criteria/UpperFunctionCriteria.cs)*

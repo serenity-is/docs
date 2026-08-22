@@ -16,4 +16,4 @@ public interface IDeleteLogRow
 
 ## See Also
 
-* **Source:** *[IDeleteLogRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Contracts/IDeleteLogRow.cs)*
+* **Source:** *[IDeleteLogRow.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Entity/Contracts/IDeleteLogRow.cs)*

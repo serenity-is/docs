@@ -26,4 +26,4 @@ public static class SelectEditorTexts
 
 ## See Also
 
-* **Source:** *[SelectEditorTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/SelectEditorTexts.cs)*
+* **Source:** *[SelectEditorTexts.cs](https://github.com/serenity-is/Serenity/blob/4e69594410bda5abf3f500766d995a0d7373e6ce/src/web/texts/SelectEditorTexts.cs)*

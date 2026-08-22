@@ -18,4 +18,4 @@ public static class ColumnPickerDialogTexts
 
 ## See Also
 
-* **Source:** *[ColumnPickerDialogTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/ColumnPickerDialogTexts.cs)*
+* **Source:** *[ColumnPickerDialogTexts.cs](https://github.com/serenity-is/Serenity/blob/4e69594410bda5abf3f500766d995a0d7373e6ce/src/web/texts/ColumnPickerDialogTexts.cs)*

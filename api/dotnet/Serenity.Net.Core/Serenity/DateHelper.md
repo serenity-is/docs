@@ -24,4 +24,4 @@ public static class DateHelper
 
 ## See Also
 
-* **Source:** *[DateHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/DateHelper.cs)*
+* **Source:** *[DateHelper.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Helpers/DateHelper.cs)*

@@ -32,4 +32,4 @@ Initializes a new instance of the [`DefaultRowFieldsProvider`](DefaultRowFieldsP
 ## See Also
 
 * interface [IRowFieldsProvider](IRowFieldsProvider.md)
-* **Source:** *[DefaultRowFieldsProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Row/DefaultRowFieldsProvider.cs)*
+* **Source:** *[DefaultRowFieldsProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/DefaultRowFieldsProvider.cs)*

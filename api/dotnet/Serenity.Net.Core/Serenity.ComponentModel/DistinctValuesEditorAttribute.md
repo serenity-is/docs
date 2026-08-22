@@ -24,4 +24,4 @@ public class DistinctValuesEditorAttribute : LookupEditorBaseAttribute
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
 * class [LookupEditorBaseAttribute](LookupEditorBaseAttribute.md)
-* **Source:** *[DistinctValuesEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/DistinctValuesEditorAttribute.cs)*
+* **Source:** *[DistinctValuesEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/DistinctValuesEditorAttribute.cs)*

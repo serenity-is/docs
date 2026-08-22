@@ -16,4 +16,4 @@ public class ColumnsScriptRegistration
 
 ## See Also
 
-* **Source:** *[ColumnsScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScript/ColumnsScriptRegistration.cs)*
+* **Source:** *[ColumnsScriptRegistration.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScript/ColumnsScriptRegistration.cs)*

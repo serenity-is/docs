@@ -16,4 +16,4 @@ public interface IUploadValidator
 
 ## See Also
 
-* **Source:** *[IUploadValidator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/IUploadValidator.cs)*
+* **Source:** *[IUploadValidator.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Upload/IUploadValidator.cs)*

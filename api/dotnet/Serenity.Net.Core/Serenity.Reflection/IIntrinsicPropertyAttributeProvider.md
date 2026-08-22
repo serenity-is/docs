@@ -15,4 +15,4 @@ public interface IIntrinsicPropertyAttributeProvider
 
 ## See Also
 
-* **Source:** *[IIntrinsicPropertyAttributeProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/IIntrinsicPropertyAttributeProvider.cs)*
+* **Source:** *[IIntrinsicPropertyAttributeProvider.cs](https://github.com/serenity-is/Serenity/blob/c35c5f281624d870ca40cc45f0aa53545bf23e58/src/core/Reflection/IIntrinsicPropertyAttributeProvider.cs)*

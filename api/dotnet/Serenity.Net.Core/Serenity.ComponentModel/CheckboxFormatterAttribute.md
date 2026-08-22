@@ -25,4 +25,4 @@ public class CheckboxFormatterAttribute : CustomFormatterAttribute
 ## See Also
 
 * class [CustomFormatterAttribute](CustomFormatterAttribute.md)
-* **Source:** *[CheckboxFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Formatting/BasicFormatterTypes/CheckboxFormatterAttribute.cs)*
+* **Source:** *[CheckboxFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/ec5c58655f3cf1433bb5d3bcc63605ac577d118e/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/CheckboxFormatterAttribute.cs)*

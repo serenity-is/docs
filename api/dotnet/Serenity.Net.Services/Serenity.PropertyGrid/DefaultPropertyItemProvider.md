@@ -32,4 +32,4 @@ Initializes a new instance of the [`DefaultPropertyItemProvider`](DefaultPropert
 ## See Also
 
 * interface [IPropertyItemProvider](IPropertyItemProvider.md)
-* **Source:** *[DefaultPropertyItemProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/PropertyGrid/DefaultPropertyItemProvider.cs)*
+* **Source:** *[DefaultPropertyItemProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/PropertyGrid/DefaultPropertyItemProvider.cs)*

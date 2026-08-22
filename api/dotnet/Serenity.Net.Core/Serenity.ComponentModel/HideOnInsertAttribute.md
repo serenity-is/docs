@@ -25,4 +25,4 @@ When placed on a field, this attribute controls whether the field is hidden when
 
 ## See Also
 
-* **Source:** *[HideOnInsertAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/HideOnInsertAttribute.cs)*
+* **Source:** *[HideOnInsertAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/HideOnInsertAttribute.cs)*

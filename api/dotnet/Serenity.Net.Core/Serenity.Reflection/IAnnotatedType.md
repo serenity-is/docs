@@ -15,4 +15,4 @@ public interface IAnnotatedType
 
 ## See Also
 
-* **Source:** *[IAnnotatedType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/IAnnotatedType.cs)*
+* **Source:** *[IAnnotatedType.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Reflection/IAnnotatedType.cs)*

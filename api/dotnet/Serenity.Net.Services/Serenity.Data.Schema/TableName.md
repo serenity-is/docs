@@ -19,4 +19,4 @@ public class TableName
 
 ## See Also
 
-* **Source:** *[TableName.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Schema/TableName.cs)*
+* **Source:** *[TableName.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Schema/TableName.cs)*

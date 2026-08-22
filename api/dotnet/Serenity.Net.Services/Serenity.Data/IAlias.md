@@ -17,4 +17,4 @@ public interface IAlias
 
 ## See Also
 
-* **Source:** *[IAlias.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Join/IAlias.cs)*
+* **Source:** *[IAlias.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Join/IAlias.cs)*

@@ -40,4 +40,4 @@ Creates a new instance of the class.
 * class [BaseSaveDeleteBehavior](../Serenity.Net.Services/BaseSaveDeleteBehavior.md)
 * interface [IFieldBehavior](../Serenity.Net.Services/IFieldBehavior.md)
 * interface [IImplicitBehavior](../Serenity.Net.Services/IImplicitBehavior.md)
-* **Source:** *[FileUploadBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Upload/FileUploadBehavior.cs)*
+* **Source:** *[FileUploadBehavior.cs](https://github.com/serenity-is/Serenity/blob/698c03e19442aa8f1ffcb540f5c6f4875bb23d1a/src/web/Upload/FileUploadBehavior.cs)*

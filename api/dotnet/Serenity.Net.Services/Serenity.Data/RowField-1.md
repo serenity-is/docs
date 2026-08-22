@@ -41,4 +41,4 @@ Initializes a new instance of the [`RowField`](RowField-1.md) class.
 * class [CustomClassField&lt;TValue&gt;](CustomClassField-1.md)
 * class [TForeign](../Serenity.Net.Services/RowField-1.TForeign.md)
 * interface [IRow](IRow.md)
-* **Source:** *[RowField.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/RowField.cs)*
+* **Source:** *[RowField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/RowField.cs)*

@@ -34,4 +34,4 @@ Initializes a new instance of the [`MasterDetailRelationAttribute`](MasterDetail
 
 ## See Also
 
-* **Source:** *[MasterDetailRelationAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Mapping/MasterDetailRelationAttribute.cs)*
+* **Source:** *[MasterDetailRelationAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/MasterDetailRelationAttribute.cs)*

@@ -22,4 +22,4 @@ public class SqlServerSchemaProvider : ISchemaProvider
 ## See Also
 
 * interface [ISchemaProvider](ISchemaProvider.md)
-* **Source:** *[SqlServerSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Schema/Providers/SqlServerSchemaProvider.cs)*
+* **Source:** *[SqlServerSchemaProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Schema/Providers/SqlServerSchemaProvider.cs)*

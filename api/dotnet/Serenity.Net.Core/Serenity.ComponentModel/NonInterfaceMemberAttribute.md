@@ -16,4 +16,4 @@ public class NonInterfaceMemberAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[NonInterfaceMemberAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/NonInterfaceMemberAttribute.cs)*
+* **Source:** *[NonInterfaceMemberAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Extensibility/NonInterfaceMemberAttribute.cs)*

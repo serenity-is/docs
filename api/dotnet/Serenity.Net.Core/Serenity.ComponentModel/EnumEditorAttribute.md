@@ -22,4 +22,4 @@ public class EnumEditorAttribute : CustomEditorAttribute
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[EnumEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/EnumEditorAttribute.cs)*
+* **Source:** *[EnumEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/EnumEditorAttribute.cs)*

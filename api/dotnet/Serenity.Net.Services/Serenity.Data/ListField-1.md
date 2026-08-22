@@ -39,4 +39,4 @@ Initializes a new instance of the [`ListField`](ListField-1.md) class.
 
 * class [CustomClassField&lt;TValue&gt;](CustomClassField-1.md)
 * class [TItem](../Serenity.Net.Services/ListField-1.TItem.md)
-* **Source:** *[ListField.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/ListField.cs)*
+* **Source:** *[ListField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/ListField.cs)*

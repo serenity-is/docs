@@ -21,4 +21,4 @@ Used for text alignment in grids by adding `align-center` CSS class to correspon
 ## See Also
 
 * class [AlignmentAttribute](AlignmentAttribute.md)
-* **Source:** *[AlignCenterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Alignment/AlignCenterAttribute.cs)*
+* **Source:** *[AlignCenterAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Alignment/AlignCenterAttribute.cs)*

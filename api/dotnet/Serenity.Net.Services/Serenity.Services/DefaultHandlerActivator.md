@@ -31,4 +31,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IHandlerActivator](IHandlerActivator.md)
-* **Source:** *[DefaultHandlerActivator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/DefaultHandlerActivator.cs)*
+* **Source:** *[DefaultHandlerActivator.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Handler/DefaultHandlerActivator.cs)*

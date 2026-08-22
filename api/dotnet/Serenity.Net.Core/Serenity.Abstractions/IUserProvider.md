@@ -20,4 +20,4 @@ Although [`DefaultUserProvider`](../Serenity.Services/DefaultUserProvider.md) im
 * interface [IUserAccessor](IUserAccessor.md)
 * interface [IUserClaimCreator](IUserClaimCreator.md)
 * interface [IUserRetrieveService](IUserRetrieveService.md)
-* **Source:** *[IUserProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IUserProvider.cs)*
+* **Source:** *[IUserProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/IUserProvider.cs)*

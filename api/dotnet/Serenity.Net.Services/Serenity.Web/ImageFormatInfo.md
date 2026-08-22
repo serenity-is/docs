@@ -17,4 +17,4 @@ public class ImageFormatInfo
 
 ## See Also
 
-* **Source:** *[ImageFormatInfo.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/ImageFormatInfo.cs)*
+* **Source:** *[ImageFormatInfo.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Upload/ImageFormatInfo.cs)*

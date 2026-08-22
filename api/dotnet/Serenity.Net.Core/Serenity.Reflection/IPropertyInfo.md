@@ -18,4 +18,4 @@ public interface IPropertyInfo
 
 ## See Also
 
-* **Source:** *[IPropertyInfo.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/IPropertyInfo.cs)*
+* **Source:** *[IPropertyInfo.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Reflection/IPropertyInfo.cs)*

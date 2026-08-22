@@ -88,4 +88,4 @@ public abstract class Field : IFieldWithJoinInfo
 ## See Also
 
 * interface [IFieldWithJoinInfo](IFieldWithJoinInfo.md)
-* **Source:** *[Field.CriteriaOperators.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/Field.CriteriaOperators.cs)*
+* **Source:** *[Field.CriteriaOperators.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/Field.CriteriaOperators.cs)*

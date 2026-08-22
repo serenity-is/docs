@@ -16,4 +16,4 @@ public static class FilterableQueryExtensions
 
 ## See Also
 
-* **Source:** *[FilterableQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/QueryExtensions/FilterableQueryExtensions.cs)*
+* **Source:** *[FilterableQueryExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryExtensions/FilterableQueryExtensions.cs)*

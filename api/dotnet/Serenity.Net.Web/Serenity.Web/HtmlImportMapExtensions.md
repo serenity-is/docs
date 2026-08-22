@@ -17,4 +17,4 @@ public static class HtmlImportMapExtensions
 
 ## See Also
 
-* **Source:** *[HtmlImportMapExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/HtmlImportMapExtensions.cs)*
+* **Source:** *[HtmlImportMapExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/HtmlImportMapExtensions.cs)*

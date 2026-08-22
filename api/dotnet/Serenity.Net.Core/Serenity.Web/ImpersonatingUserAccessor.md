@@ -29,4 +29,4 @@ Initializes a new instance of the [`ImpersonatingUserAccessor`](ImpersonatingUse
 
 * interface [IImpersonator](../Serenity.Abstractions/IImpersonator.md)
 * interface [IUserAccessor](../Serenity.Abstractions/IUserAccessor.md)
-* **Source:** *[ImpersonatingUserAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/ImpersonatingUserAccessor.cs)*
+* **Source:** *[ImpersonatingUserAccessor.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/ImpersonatingUserAccessor.cs)*

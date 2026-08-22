@@ -18,4 +18,4 @@ public class IntegerFilteringAttribute : CustomFilteringAttribute
 ## See Also
 
 * class [CustomFilteringAttribute](CustomFilteringAttribute.md)
-* **Source:** *[IntegerFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Filtering/BasicFilteringTypes/IntegerFilteringAttribute.cs)*
+* **Source:** *[IntegerFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/IntegerFilteringAttribute.cs)*

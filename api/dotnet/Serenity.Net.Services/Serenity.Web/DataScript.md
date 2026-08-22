@@ -30,4 +30,4 @@ public class DataScript : DynamicScript, IGetScriptData, INamedDynamicScript
 * class [DynamicScript](DynamicScript.md)
 * interface [IGetScriptData](../Serenity.Net.Core/IGetScriptData.md)
 * interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
-* **Source:** *[DataScript.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/DynamicScript/DataScript.cs)*
+* **Source:** *[DataScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/DynamicScript/DataScript.cs)*

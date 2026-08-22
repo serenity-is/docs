@@ -22,4 +22,4 @@ public enum AttributeOrigin
 
 ## See Also
 
-* **Source:** *[AttributeOrigin.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Reflection/AttributeOrigin.cs)*
+* **Source:** *[AttributeOrigin.cs](https://github.com/serenity-is/Serenity/blob/a4ffb9b6867f00f7f71ede2a5fcfa8dd476c9648/src/core/Reflection/AttributeOrigin.cs)*

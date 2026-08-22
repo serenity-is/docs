@@ -17,4 +17,4 @@ public class NullTextLocalizer : ITextLocalizer
 ## See Also
 
 * interface [ITextLocalizer](ITextLocalizer.md)
-* **Source:** *[NullTextLocalizer.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/NullTextLocalizer.cs)*
+* **Source:** *[NullTextLocalizer.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Localization/NullTextLocalizer.cs)*

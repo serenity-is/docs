@@ -15,4 +15,4 @@ public interface INavigationItemSource
 
 ## See Also
 
-* **Source:** *[INavigationItemSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Navigation/INavigationItemSource.cs)*
+* **Source:** *[INavigationItemSource.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Navigation/INavigationItemSource.cs)*

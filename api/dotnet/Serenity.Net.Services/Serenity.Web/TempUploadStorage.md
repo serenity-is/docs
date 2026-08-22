@@ -17,4 +17,4 @@ public class TempUploadStorage : DiskUploadStorage
 ## See Also
 
 * class [DiskUploadStorage](DiskUploadStorage.md)
-* **Source:** *[TempUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/TempUploadStorage.cs)*
+* **Source:** *[TempUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Upload/TempUploadStorage.cs)*

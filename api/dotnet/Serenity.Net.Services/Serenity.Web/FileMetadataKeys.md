@@ -25,4 +25,4 @@ public static class FileMetadataKeys
 
 ## See Also
 
-* **Source:** *[FileMetadataKeys.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/FileMetadataKeys.cs)*
+* **Source:** *[FileMetadataKeys.cs](https://github.com/serenity-is/Serenity/blob/ce2eb88987e0293022224ec28f1cd3c962ed96ca/src/services/Upload/FileMetadataKeys.cs)*

@@ -18,4 +18,4 @@ public class DecimalFilteringAttribute : CustomFilteringAttribute
 ## See Also
 
 * class [CustomFilteringAttribute](CustomFilteringAttribute.md)
-* **Source:** *[DecimalFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Filtering/BasicFilteringTypes/DecimalFilteringAttribute.cs)*
+* **Source:** *[DecimalFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/DecimalFilteringAttribute.cs)*

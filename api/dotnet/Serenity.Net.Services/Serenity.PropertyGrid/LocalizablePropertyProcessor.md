@@ -20,4 +20,4 @@ public class LocalizablePropertyProcessor : PropertyProcessor
 ## See Also
 
 * class [PropertyProcessor](PropertyProcessor.md)
-* **Source:** *[LocalizablePropertyProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/Localization/LocalizablePropertyProcessor.cs)*
+* **Source:** *[LocalizablePropertyProcessor.cs](https://github.com/serenity-is/Serenity/blob/c35c5f281624d870ca40cc45f0aa53545bf23e58/src/services/RequestHandlers/IntegratedFeatures/Localization/LocalizablePropertyProcessor.cs)*

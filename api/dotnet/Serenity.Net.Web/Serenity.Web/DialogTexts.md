@@ -24,4 +24,4 @@ public static class DialogTexts
 
 ## See Also
 
-* **Source:** *[DialogTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/DialogTexts.cs)*
+* **Source:** *[DialogTexts.cs](https://github.com/serenity-is/Serenity/blob/32d177a71ed058ac8915a7dd666f4de2a20bf205/src/web/texts/DialogTexts.cs)*

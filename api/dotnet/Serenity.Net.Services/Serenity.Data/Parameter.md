@@ -24,4 +24,4 @@ Initializes a new instance of the [`Parameter`](Parameter.md) struct.
 
 ## See Also
 
-* **Source:** *[Parameter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/QueryModel/Parameter.cs)*
+* **Source:** *[Parameter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryModel/Parameter.cs)*

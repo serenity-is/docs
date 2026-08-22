@@ -15,4 +15,4 @@ public static class ServiceEndpointServiceCollectionExtensions
 
 ## See Also
 
-* **Source:** *[ServiceEndpointServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ServiceEndpointServiceCollectionExtensions.cs)*
+* **Source:** *[ServiceEndpointServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ServiceEndpointServiceCollectionExtensions.cs)*

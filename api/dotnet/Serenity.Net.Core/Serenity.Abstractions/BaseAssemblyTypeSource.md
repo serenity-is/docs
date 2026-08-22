@@ -36,4 +36,4 @@ Creates a new instance.
 
 * interface [IGetAssemblies](IGetAssemblies.md)
 * interface [ITypeSource](ITypeSource.md)
-* **Source:** *[BaseAssemblyTypeSource.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/BaseAssemblyTypeSource.cs)*
+* **Source:** *[BaseAssemblyTypeSource.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/BaseAssemblyTypeSource.cs)*

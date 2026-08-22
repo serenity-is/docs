@@ -18,4 +18,4 @@ public class RegisterScopedAttribute : RegisterServiceAttribute
 ## See Also
 
 * class [RegisterServiceAttribute](RegisterServiceAttribute.md)
-* **Source:** *[RegisterScopedAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/AutoRegister/RegisterScopedAttribute.cs)*
+* **Source:** *[RegisterScopedAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/AutoRegister/RegisterScopedAttribute.cs)*

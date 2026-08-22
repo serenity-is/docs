@@ -16,4 +16,4 @@ public static class QueryWithParamsExtensions
 
 ## See Also
 
-* **Source:** *[QueryWithParamsExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/QueryExtensions/QueryWithParamsExtensions.cs)*
+* **Source:** *[QueryWithParamsExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryExtensions/QueryWithParamsExtensions.cs)*

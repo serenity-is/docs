@@ -27,4 +27,4 @@ Initializes a new instance of the [`QuickFilterAttribute`](QuickFilterAttribute.
 
 ## See Also
 
-* **Source:** *[QuickFilterAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Filtering/QuickFilterAttribute.cs)*
+* **Source:** *[QuickFilterAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Filtering/QuickFilterAttribute.cs)*

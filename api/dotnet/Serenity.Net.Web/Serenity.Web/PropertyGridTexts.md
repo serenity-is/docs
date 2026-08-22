@@ -13,4 +13,4 @@ public static class PropertyGridTexts
 
 ## See Also
 
-* **Source:** *[PropertyGridTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/PropertyGridTexts.cs)*
+* **Source:** *[PropertyGridTexts.cs](https://github.com/serenity-is/Serenity/blob/4e69594410bda5abf3f500766d995a0d7373e6ce/src/web/texts/PropertyGridTexts.cs)*

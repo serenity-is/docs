@@ -16,4 +16,4 @@ public class TransformIgnoreAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[TransformIgnoreAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Common/TransformIgnoreAttribute.cs)*
+* **Source:** *[TransformIgnoreAttribute.cs](https://github.com/serenity-is/Serenity/blob/72f080a5c220e57b99cca3c414f83974de88cff1/src/core/ComponentModel/Common/TransformIgnoreAttribute.cs)*

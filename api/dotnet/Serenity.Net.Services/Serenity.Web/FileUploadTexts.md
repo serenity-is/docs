@@ -32,4 +32,4 @@ public static class FileUploadTexts
 
 ## See Also
 
-* **Source:** *[FileUploadTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/FileUploadTexts.cs)*
+* **Source:** *[FileUploadTexts.cs](https://github.com/serenity-is/Serenity/blob/e70f72898a2a32ea35ed2bc06be42e63f57750bc/src/services/Upload/FileUploadTexts.cs)*

@@ -13,4 +13,4 @@ public static class CheckTreeEditorTexts
 
 ## See Also
 
-* **Source:** *[CheckTreeEditorTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/CheckTreeEditorTexts.cs)*
+* **Source:** *[CheckTreeEditorTexts.cs](https://github.com/serenity-is/Serenity/blob/4e69594410bda5abf3f500766d995a0d7373e6ce/src/web/texts/CheckTreeEditorTexts.cs)*

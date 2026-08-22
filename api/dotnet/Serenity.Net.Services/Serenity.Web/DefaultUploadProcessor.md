@@ -51,4 +51,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IUploadProcessor](IUploadProcessor.md)
-* **Source:** *[DefaultUploadProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/DefaultUploadProcessor.cs)*
+* **Source:** *[DefaultUploadProcessor.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Upload/DefaultUploadProcessor.cs)*

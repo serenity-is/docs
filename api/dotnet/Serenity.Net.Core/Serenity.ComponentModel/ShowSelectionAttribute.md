@@ -25,4 +25,4 @@ This attribute only affects the visual styling of cells when rows are selected. 
 
 ## See Also
 
-* **Source:** *[ShowSelectionAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/ShowSelectionAttribute.cs)*
+* **Source:** *[ShowSelectionAttribute.cs](https://github.com/serenity-is/Serenity/blob/be74f5e101063f34fecfdcdaa30f211acf9a77e4/src/core/ComponentModel/Columns/ShowSelectionAttribute.cs)*

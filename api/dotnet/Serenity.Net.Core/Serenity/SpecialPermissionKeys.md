@@ -17,4 +17,4 @@ public static class SpecialPermissionKeys
 
 ## See Also
 
-* **Source:** *[SpecialPermissionKeys.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Permission/SpecialPermissionKeys.cs)*
+* **Source:** *[SpecialPermissionKeys.cs](https://github.com/serenity-is/Serenity/blob/1adbde9efed11ac5db44d76eefe5bdafe9dc62de/src/core/ComponentModel/Permission/SpecialPermissionKeys.cs)*

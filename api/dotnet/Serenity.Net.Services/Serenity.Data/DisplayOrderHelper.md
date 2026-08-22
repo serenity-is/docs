@@ -18,4 +18,4 @@ public static class DisplayOrderHelper
 
 ## See Also
 
-* **Source:** *[DisplayOrderHelper.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/DisplayOrder/DisplayOrderHelper.cs)*
+* **Source:** *[DisplayOrderHelper.cs](https://github.com/serenity-is/Serenity/blob/9dd7db586970bccd1b22a6b4d0ef9892b529b61d/src/services/RequestHandlers/IntegratedFeatures/DisplayOrder/DisplayOrderHelper.cs)*

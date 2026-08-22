@@ -15,4 +15,4 @@ public interface IDefaultHandlerRegistry
 
 ## See Also
 
-* **Source:** *[IDefaultHandlerRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/IDefaultHandlerRegistry.cs)*
+* **Source:** *[IDefaultHandlerRegistry.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Handler/IDefaultHandlerRegistry.cs)*

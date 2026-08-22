@@ -15,4 +15,4 @@ public static class CoreTexts
 
 ## See Also
 
-* **Source:** *[CoreTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/texts/CoreTexts.cs)*
+* **Source:** *[CoreTexts.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/texts/CoreTexts.cs)*

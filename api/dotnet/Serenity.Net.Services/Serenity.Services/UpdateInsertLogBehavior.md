@@ -19,4 +19,4 @@ public class UpdateInsertLogBehavior : BaseSaveBehavior, IImplicitBehavior
 
 * class [BaseSaveBehavior](BaseSaveBehavior.md)
 * interface [IImplicitBehavior](IImplicitBehavior.md)
-* **Source:** *[InsertUpdateLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/InsertUpdateLog/InsertUpdateLogBehavior.cs)*
+* **Source:** *[InsertUpdateLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/IntegratedFeatures/InsertUpdateLog/InsertUpdateLogBehavior.cs)*

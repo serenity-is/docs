@@ -32,4 +32,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * class [BaseSaveBehavior](BaseSaveBehavior.md)
-* **Source:** *[ValidateParentAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/IntegratedFeatures/Validation/ValidateParentAttribute.cs)*
+* **Source:** *[ValidateParentAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/IntegratedFeatures/Validation/ValidateParentAttribute.cs)*

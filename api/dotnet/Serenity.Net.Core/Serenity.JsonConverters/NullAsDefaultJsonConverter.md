@@ -18,4 +18,4 @@ public class NullAsDefaultJsonConverter : JsonConverterFactory
 
 ## See Also
 
-* **Source:** *[NullAsDefaultJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Json/NullAsDefaultJsonConverter.cs)*
+* **Source:** *[NullAsDefaultJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Json/NullAsDefaultJsonConverter.cs)*

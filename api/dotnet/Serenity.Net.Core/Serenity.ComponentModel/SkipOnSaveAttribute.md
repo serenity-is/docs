@@ -16,4 +16,4 @@ public class SkipOnSaveAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[SkipOnSaveAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/SkipOnSaveAttribute.cs)*
+* **Source:** *[SkipOnSaveAttribute.cs](https://github.com/serenity-is/Serenity/blob/aeacad7c72ee3e47d94d27be39e83faa59a75cf1/src/core/ComponentModel/PropertyGrid/SkipOnSaveAttribute.cs)*

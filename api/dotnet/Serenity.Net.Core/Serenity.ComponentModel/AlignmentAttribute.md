@@ -30,4 +30,4 @@ This is an abstract base class. You need to use AlignCenter or AlignRight attrib
 
 ## See Also
 
-* **Source:** *[AlignmentAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Alignment/AlignmentAttribute.cs)*
+* **Source:** *[AlignmentAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Alignment/AlignmentAttribute.cs)*

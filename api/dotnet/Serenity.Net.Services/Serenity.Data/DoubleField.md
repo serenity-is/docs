@@ -34,4 +34,4 @@ Initializes a new instance of the [`DoubleField`](DoubleField.md) class.
 ## See Also
 
 * class [GenericValueField&lt;TValue&gt;](GenericValueField-1.md)
-* **Source:** *[DoubleField.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/DoubleField.cs)*
+* **Source:** *[DoubleField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/DoubleField.cs)*

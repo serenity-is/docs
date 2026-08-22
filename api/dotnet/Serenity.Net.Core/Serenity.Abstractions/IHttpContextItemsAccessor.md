@@ -19,4 +19,4 @@ Returns `null` when accessed outside of a web request context.
 
 ## See Also
 
-* **Source:** *[IHttpContextItemsAccessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IHttpContextItemsAccessor.cs)*
+* **Source:** *[IHttpContextItemsAccessor.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/IHttpContextItemsAccessor.cs)*

@@ -37,4 +37,4 @@ Creates a new instance of the [`LogicOperatorPermissionService`](LogicOperatorPe
 
 * interface [IPermissionService](../Serenity.Abstractions/IPermissionService.md)
 * interface [ITransientGrantor](../Serenity.Abstractions/ITransientGrantor.md)
-* **Source:** *[LogicOperatorPermissionService.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/LogicOperatorPermissionService.cs)*
+* **Source:** *[LogicOperatorPermissionService.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/LogicOperatorPermissionService.cs)*

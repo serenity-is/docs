@@ -17,4 +17,4 @@ public class AntiforgeryFilterOptions
 
 ## See Also
 
-* **Source:** *[AntiforgeryFilterOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/AntiforgeryFilterOptions.cs)*
+* **Source:** *[AntiforgeryFilterOptions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/AntiforgeryFilterOptions.cs)*

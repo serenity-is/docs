@@ -16,4 +16,4 @@ public class ServiceEndpointModelBinderProvider : IModelBinderProvider
 
 ## See Also
 
-* **Source:** *[ServiceEndpointModelBinder.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/Mvc/ServiceEndpointModelBinder.cs)*
+* **Source:** *[ServiceEndpointModelBinder.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ServiceEndpointModelBinder.cs)*

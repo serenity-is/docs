@@ -32,4 +32,4 @@ public class TabularDataReport : IDataOnlyReport
 ## See Also
 
 * interface [IDataOnlyReport](IDataOnlyReport.md)
-* **Source:** *[TabularDataReport.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/DataReport/TabularDataReport.cs)*
+* **Source:** *[TabularDataReport.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Reporting/DataReport/TabularDataReport.cs)*

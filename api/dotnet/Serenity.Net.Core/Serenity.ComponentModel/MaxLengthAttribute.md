@@ -25,4 +25,4 @@ Initializes a new instance of the [`MaxLengthAttribute`](MaxLengthAttribute.md) 
 
 ## See Also
 
-* **Source:** *[MaxLengthAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/MaxLengthAttribute.cs)*
+* **Source:** *[MaxLengthAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/MaxLengthAttribute.cs)*

@@ -31,4 +31,4 @@ public class DistinctValuesScript<TRow> : LookupScript
 
 * class [LookupScript](LookupScript.md)
 * interface [IRow](../Serenity.Net.Services/../Serenity.Data/IRow.md)
-* **Source:** *[DistinctValuesScript.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicScriptTypes/DistinctValuesScript.cs)*
+* **Source:** *[DistinctValuesScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScriptTypes/DistinctValuesScript.cs)*

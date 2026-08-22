@@ -49,4 +49,4 @@ public class FirebirdDialect : ISqlDialect
 ## See Also
 
 * interface [ISqlDialect](ISqlDialect.md)
-* **Source:** *[FirebirdDialect.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Dialects/FirebirdDialect.cs)*
+* **Source:** *[FirebirdDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/FirebirdDialect.cs)*

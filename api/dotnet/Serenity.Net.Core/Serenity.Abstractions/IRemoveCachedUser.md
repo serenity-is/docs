@@ -15,4 +15,4 @@ public interface IRemoveCachedUser
 
 ## See Also
 
-* **Source:** *[IRemoveCachedUser.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IRemoveCachedUser.cs)*
+* **Source:** *[IRemoveCachedUser.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/IRemoveCachedUser.cs)*

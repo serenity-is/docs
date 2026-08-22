@@ -25,4 +25,4 @@ Initializes a new instance of the [`SizeAttribute`](SizeAttribute.md) class.
 
 ## See Also
 
-* **Source:** *[SizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Mapping/SizeAttribute.cs)*
+* **Source:** *[SizeAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/SizeAttribute.cs)*

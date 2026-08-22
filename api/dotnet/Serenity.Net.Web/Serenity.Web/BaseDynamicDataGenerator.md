@@ -28,4 +28,4 @@ public abstract class BaseDynamicDataGenerator
 
 ## See Also
 
-* **Source:** *[BaseDynamicDataGenerator.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/DynamicScript/DynamicDataGenerator/BaseDynamicDataGenerator.cs)*
+* **Source:** *[BaseDynamicDataGenerator.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicDataGenerator/BaseDynamicDataGenerator.cs)*

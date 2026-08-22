@@ -19,4 +19,4 @@ public class EnumFilteringAttribute : CustomFilteringAttribute
 ## See Also
 
 * class [CustomFilteringAttribute](CustomFilteringAttribute.md)
-* **Source:** *[EnumFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Filtering/BasicFilteringTypes/EnumFilteringAttribute.cs)*
+* **Source:** *[EnumFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/EnumFilteringAttribute.cs)*

@@ -16,4 +16,4 @@ public class GenerateFieldsAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[GenerateFieldsAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/GenerateFieldsAttribute.cs)*
+* **Source:** *[GenerateFieldsAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/GenerateFieldsAttribute.cs)*

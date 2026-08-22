@@ -20,4 +20,4 @@ public class JsonSortByConverter : JsonConverter
 
 ## See Also
 
-* **Source:** *[JsonSortByConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Json/JsonSortByConverter.cs)*
+* **Source:** *[JsonSortByConverter.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Json/JsonSortByConverter.cs)*

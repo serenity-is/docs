@@ -53,4 +53,4 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
 * interface [IAlias](IAlias.md)
 * interface [IHaveJoins](IHaveJoins.md)
 * class [Field](Field.md)
-* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Row/RowFieldsBase.cs)*
+* **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/RowFieldsBase.cs)*

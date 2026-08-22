@@ -14,4 +14,4 @@ public interface IRequestHandler<TRow> : IRequestHandler
 ## See Also
 
 * interface [IRequestHandler](../Serenity.Net.Core/IRequestHandler.md)
-* **Source:** *[IRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/IRequestHandlerT.cs)*
+* **Source:** *[IRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/93f83578d978ab1bb84f2b9bbd74146bc91bb5d4/src/services/RequestHandlers/Handler/IRequestHandlerT.cs)*

@@ -36,4 +36,4 @@ To determine updated field values, Set(field, value) should be called several ti
 * class [QueryWithParams](QueryWithParams.md)
 * interface [IFilterableQuery](IFilterableQuery.md)
 * interface [ISetFieldByStatement](ISetFieldByStatement.md)
-* **Source:** *[SqlUpdate.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/FluentSql/SqlUpdate.cs)*
+* **Source:** *[SqlUpdate.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/FluentSql/SqlUpdate.cs)*

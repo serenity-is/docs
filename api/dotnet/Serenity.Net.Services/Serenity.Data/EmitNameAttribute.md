@@ -25,4 +25,4 @@ Creates an instance of EmitNameAttribute attribute
 
 ## See Also
 
-* **Source:** *[EmitNameAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Mapping/EmitNameAttribute.cs)*
+* **Source:** *[EmitNameAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/EmitNameAttribute.cs)*

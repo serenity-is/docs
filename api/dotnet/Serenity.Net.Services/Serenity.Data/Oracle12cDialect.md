@@ -20,4 +20,4 @@ public class Oracle12cDialect : OracleDialect
 ## See Also
 
 * class [OracleDialect](OracleDialect.md)
-* **Source:** *[Oracle12cDialect.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Dialects/Oracle12cDialect.cs)*
+* **Source:** *[Oracle12cDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/Oracle12cDialect.cs)*

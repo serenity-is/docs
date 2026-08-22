@@ -15,4 +15,4 @@ public interface IHtmlToPdfConverter
 
 ## See Also
 
-* **Source:** *[IHtmlToPdfConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Reporting/HtmlToPdf/IHtmlToPdfConverter.cs)*
+* **Source:** *[IHtmlToPdfConverter.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Reporting/HtmlToPdf/IHtmlToPdfConverter.cs)*

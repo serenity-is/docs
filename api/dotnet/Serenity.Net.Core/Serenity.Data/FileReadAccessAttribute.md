@@ -19,4 +19,4 @@ public class FileReadAccessAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[FileReadAccessAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/FileAccess/FileReadAccessAttribute.cs)*
+* **Source:** *[FileReadAccessAttribute.cs](https://github.com/serenity-is/Serenity/blob/b96e1612823c013b83ea8e36631b69fdbe427dc4/src/core/ComponentModel/FileAccess/FileReadAccessAttribute.cs)*

@@ -34,4 +34,4 @@ Initializes a new instance of the [`Int32Field`](Int32Field.md) class.
 ## See Also
 
 * class [GenericValueField&lt;TValue&gt;](GenericValueField-1.md)
-* **Source:** *[Int32Field.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/Int32Field.cs)*
+* **Source:** *[Int32Field.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/Int32Field.cs)*

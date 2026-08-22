@@ -34,4 +34,4 @@ public abstract class GenericClassField<TValue> : Field
 ## See Also
 
 * class [Field](Field.md)
-* **Source:** *[GenericClassField.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/GenericClassField.cs)*
+* **Source:** *[GenericClassField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/GenericClassField.cs)*

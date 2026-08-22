@@ -48,4 +48,4 @@ public class MySqlDialect : ISqlDialect
 ## See Also
 
 * interface [ISqlDialect](ISqlDialect.md)
-* **Source:** *[MySqlDialect.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Dialects/MySqlDialect.cs)*
+* **Source:** *[MySqlDialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/MySqlDialect.cs)*

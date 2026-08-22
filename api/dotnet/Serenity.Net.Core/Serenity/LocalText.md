@@ -29,4 +29,4 @@ Creates a new [`LocalText`](LocalText.md) instance that contains the specified l
 ## See Also
 
 * interface [ILocalText](../Serenity.Localization/ILocalText.md)
-* **Source:** *[LocalText.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/LocalText.cs)*
+* **Source:** *[LocalText.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Localization/LocalText.cs)*

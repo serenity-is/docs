@@ -15,4 +15,4 @@ public interface IGetAssemblies
 
 ## See Also
 
-* **Source:** *[IGetAssemblies.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Extensibility/IGetAssemblies.cs)*
+* **Source:** *[IGetAssemblies.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/IGetAssemblies.cs)*

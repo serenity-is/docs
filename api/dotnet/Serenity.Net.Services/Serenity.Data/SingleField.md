@@ -34,4 +34,4 @@ Initializes a new instance of the [`SingleField`](SingleField.md) class.
 ## See Also
 
 * class [GenericValueField&lt;TValue&gt;](GenericValueField-1.md)
-* **Source:** *[SingleField.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/SingleField.cs)*
+* **Source:** *[SingleField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/SingleField.cs)*

@@ -15,4 +15,4 @@ public interface IIsDeletedRow
 
 ## See Also
 
-* **Source:** *[IIsDeletedRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Contracts/IIsDeletedRow.cs)*
+* **Source:** *[IIsDeletedRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Contracts/IIsDeletedRow.cs)*

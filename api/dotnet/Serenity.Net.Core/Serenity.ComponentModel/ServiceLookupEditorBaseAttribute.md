@@ -53,4 +53,4 @@ Initializes a new instance of the [`ServiceLookupEditorBaseAttribute`](ServiceLo
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[ServiceLookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorBaseAttribute.cs)*
+* **Source:** *[ServiceLookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorBaseAttribute.cs)*

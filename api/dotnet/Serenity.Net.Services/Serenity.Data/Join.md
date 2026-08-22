@@ -26,4 +26,4 @@ public abstract class Join : Alias
 ## See Also
 
 * class [Alias](Alias.md)
-* **Source:** *[Join.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Join/Join.cs)*
+* **Source:** *[Join.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Join/Join.cs)*

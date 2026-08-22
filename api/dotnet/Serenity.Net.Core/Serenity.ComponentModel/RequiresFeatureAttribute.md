@@ -18,4 +18,4 @@ public class RequiresFeatureAttribute : Attribute
 
 ## See Also
 
-* **Source:** *[RequiresFeatureAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/FeatureToggles/RequiresFeatureAttribute.cs)*
+* **Source:** *[RequiresFeatureAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/FeatureToggles/RequiresFeatureAttribute.cs)*

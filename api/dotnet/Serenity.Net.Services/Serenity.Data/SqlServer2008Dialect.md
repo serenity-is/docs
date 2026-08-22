@@ -18,4 +18,4 @@ public class SqlServer2008Dialect : SqlServer2005Dialect
 ## See Also
 
 * class [SqlServer2005Dialect](SqlServer2005Dialect.md)
-* **Source:** *[SqlServer2008Dialect.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Dialects/SqlServer2008Dialect.cs)*
+* **Source:** *[SqlServer2008Dialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/SqlServer2008Dialect.cs)*

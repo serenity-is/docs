@@ -15,4 +15,4 @@ public interface IUpdateUserIdRow
 
 ## See Also
 
-* **Source:** *[IUpdateUserIdRow.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Contracts/IUpdateUserIdRow.cs)*
+* **Source:** *[IUpdateUserIdRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Contracts/IUpdateUserIdRow.cs)*

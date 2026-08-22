@@ -18,4 +18,4 @@ public class ObjectJsonConverter : JsonConverter<object>
 
 ## See Also
 
-* **Source:** *[ObjectJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Json/ObjectJsonConverter.cs)*
+* **Source:** *[ObjectJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Json/ObjectJsonConverter.cs)*

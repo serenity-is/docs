@@ -15,4 +15,4 @@ public static class ExceptionExtensions
 
 ## See Also
 
-* **Source:** *[ExceptionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/ExceptionExtensions.cs)*
+* **Source:** *[ExceptionExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Helpers/ExceptionExtensions.cs)*

@@ -35,4 +35,4 @@ Initializes a new instance of the [`DateTimeOffsetField`](DateTimeOffsetField.md
 ## See Also
 
 * class [GenericValueField&lt;TValue&gt;](GenericValueField-1.md)
-* **Source:** *[DateTimeOffsetField.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/FieldTypes/DateTimeOffsetField.cs)*
+* **Source:** *[DateTimeOffsetField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/DateTimeOffsetField.cs)*

@@ -21,4 +21,4 @@ public class RadioButtonEditorAttribute : CustomEditorAttribute
 ## See Also
 
 * class [CustomEditorAttribute](CustomEditorAttribute.md)
-* **Source:** *[RadioButtonEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/PropertyGrid/EditorTypes/RadioButtonEditorAttribute.cs)*
+* **Source:** *[RadioButtonEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/RadioButtonEditorAttribute.cs)*

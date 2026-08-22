@@ -19,4 +19,4 @@ When a user definition does not implement this interface, the system assumes tha
 
 ## See Also
 
-* **Source:** *[IHasPassword.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/IHasPassword.cs)*
+* **Source:** *[IHasPassword.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/IHasPassword.cs)*

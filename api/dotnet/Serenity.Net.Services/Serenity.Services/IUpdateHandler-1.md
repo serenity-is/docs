@@ -20,4 +20,4 @@ public interface IUpdateHandler<TRow> : IUpdateHandler<TRow, SaveRequest<TRow>, 
 * class [SaveResponse](SaveResponse.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* **Source:** *[IUpdateHandlerT.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Save/IUpdateHandlerT.cs)*
+* **Source:** *[IUpdateHandlerT.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Save/IUpdateHandlerT.cs)*

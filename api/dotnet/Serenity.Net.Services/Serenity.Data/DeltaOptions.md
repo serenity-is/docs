@@ -17,4 +17,4 @@ public enum DeltaOptions
 
 ## See Also
 
-* **Source:** *[DeltaOptions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Utility/DeltaOptions.cs)*
+* **Source:** *[DeltaOptions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Utility/DeltaOptions.cs)*

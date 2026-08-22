@@ -28,4 +28,4 @@ Initializes a new instance of the [`FallbackLocalTextSource`](FallbackLocalTextS
 ## See Also
 
 * interface [ILocalTextRegistry](../Serenity.Abstractions/ILocalTextRegistry.md)
-* **Source:** *[FallbackLocalTextRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/FallbackLocalTextRegistry.cs)*
+* **Source:** *[FallbackLocalTextRegistry.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Localization/FallbackLocalTextRegistry.cs)*

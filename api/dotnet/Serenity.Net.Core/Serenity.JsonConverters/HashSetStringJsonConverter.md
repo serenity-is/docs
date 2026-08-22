@@ -17,4 +17,4 @@ public class HashSetStringJsonConverter : JsonConverter<HashSet<string>>
 
 ## See Also
 
-* **Source:** *[HashSetStringJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Json/HashSetStringJsonConverter.cs)*
+* **Source:** *[HashSetStringJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Json/HashSetStringJsonConverter.cs)*

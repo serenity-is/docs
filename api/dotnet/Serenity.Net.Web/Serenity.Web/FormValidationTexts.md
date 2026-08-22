@@ -36,4 +36,4 @@ public static class FormValidationTexts
 
 ## See Also
 
-* **Source:** *[FormValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/FormValidationTexts.cs)*
+* **Source:** *[FormValidationTexts.cs](https://github.com/serenity-is/Serenity/blob/4e69594410bda5abf3f500766d995a0d7373e6ce/src/web/texts/FormValidationTexts.cs)*

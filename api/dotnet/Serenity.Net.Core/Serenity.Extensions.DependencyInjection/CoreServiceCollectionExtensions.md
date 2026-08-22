@@ -26,4 +26,4 @@ public static class CoreServiceCollectionExtensions
 
 ## See Also
 
-* **Source:** *[CoreServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Helpers/CoreServiceCollectionExtensions.cs)*
+* **Source:** *[CoreServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Helpers/CoreServiceCollectionExtensions.cs)*

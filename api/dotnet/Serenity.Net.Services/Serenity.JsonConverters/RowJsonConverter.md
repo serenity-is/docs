@@ -21,4 +21,4 @@ public class RowJsonConverter : JsonConverter<IRow>
 ## See Also
 
 * interface [IRow](../Serenity.Data/IRow.md)
-* **Source:** *[RowJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Entity/Row/RowJsonConverter.cs)*
+* **Source:** *[RowJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Entity/Row/RowJsonConverter.cs)*

@@ -41,4 +41,4 @@ Creates a new instance of the [`DefaultUserProvider`](DefaultUserProvider.md) cl
 ## See Also
 
 * interface [IUserProvider](../Serenity.Abstractions/IUserProvider.md)
-* **Source:** *[DefaultUserProvider.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Authorization/DefaultUserProvider.cs)*
+* **Source:** *[DefaultUserProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Authorization/DefaultUserProvider.cs)*

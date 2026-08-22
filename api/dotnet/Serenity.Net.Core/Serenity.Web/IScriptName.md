@@ -15,4 +15,4 @@ public interface IScriptName
 
 ## See Also
 
-* **Source:** *[IScriptName.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/DynamicScript/IScriptName.cs)*
+* **Source:** *[IScriptName.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/DynamicScript/IScriptName.cs)*

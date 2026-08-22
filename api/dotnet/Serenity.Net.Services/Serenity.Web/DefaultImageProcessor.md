@@ -20,4 +20,4 @@ public class DefaultImageProcessor : IImageProcessor
 ## See Also
 
 * interface [IImageProcessor](IImageProcessor.md)
-* **Source:** *[DefaultImageProcessor.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Upload/DefaultImageProcessor.cs)*
+* **Source:** *[DefaultImageProcessor.cs](https://github.com/serenity-is/Serenity/blob/9dd7db586970bccd1b22a6b4d0ef9892b529b61d/src/services/Upload/DefaultImageProcessor.cs)*

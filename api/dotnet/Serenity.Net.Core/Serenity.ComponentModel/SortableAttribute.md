@@ -25,4 +25,4 @@ Initializes a new instance of the [`SortableAttribute`](SortableAttribute.md) cl
 
 ## See Also
 
-* **Source:** *[SortableAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/SortableAttribute.cs)*
+* **Source:** *[SortableAttribute.cs](https://github.com/serenity-is/Serenity/blob/f54a931b1d09943e1aaabff1f43534e6a5baab90/src/core/ComponentModel/Columns/SortableAttribute.cs)*

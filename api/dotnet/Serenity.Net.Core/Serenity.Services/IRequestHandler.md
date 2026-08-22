@@ -9,4 +9,4 @@ public interface IRequestHandler
 
 ## See Also
 
-* **Source:** *[IRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Interface/IRequestHandler.cs)*
+* **Source:** *[IRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/93f83578d978ab1bb84f2b9bbd74146bc91bb5d4/src/core/Interface/IRequestHandler.cs)*

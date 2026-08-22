@@ -16,4 +16,4 @@ public static class DataServiceCollectionExtensions
 
 ## See Also
 
-* **Source:** *[DataServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/Connections/DataServiceCollectionExtensions.cs)*
+* **Source:** *[DataServiceCollectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/DataServiceCollectionExtensions.cs)*

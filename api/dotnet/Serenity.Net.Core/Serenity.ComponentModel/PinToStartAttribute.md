@@ -17,4 +17,4 @@ public class PinToStartAttribute : PinColumnAttribute
 ## See Also
 
 * class [PinColumnAttribute](PinColumnAttribute.md)
-* **Source:** *[PinToStartAttribute.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/ComponentModel/Columns/Pinning/PinToStartAttribute.cs)*
+* **Source:** *[PinToStartAttribute.cs](https://github.com/serenity-is/Serenity/blob/075fabc73abbe2a574a5d304b07a74586c12835c/src/core/ComponentModel/Columns/Pinning/PinToStartAttribute.cs)*

@@ -15,4 +15,4 @@ public static class TextLocalizerExtensions
 
 ## See Also
 
-* **Source:** *[TextLocalizerExtensions.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Localization/TextLocalizerExtensions.cs)*
+* **Source:** *[TextLocalizerExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Localization/TextLocalizerExtensions.cs)*

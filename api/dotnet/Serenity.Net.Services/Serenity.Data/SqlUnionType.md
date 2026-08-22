@@ -20,4 +20,4 @@ public enum SqlUnionType
 
 ## See Also
 
-* **Source:** *[SqlUnionType.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/Data/FluentSql/SqlUnionType.cs)*
+* **Source:** *[SqlUnionType.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/FluentSql/SqlUnionType.cs)*

@@ -18,4 +18,4 @@ public static class EntityGridTexts
 
 ## See Also
 
-* **Source:** *[EntityGridTexts.cs](https://github.com/serenity-is/Serenity/blob/master/src/Web/texts/EntityGridTexts.cs)*
+* **Source:** *[EntityGridTexts.cs](https://github.com/serenity-is/Serenity/blob/c35c5f281624d870ca40cc45f0aa53545bf23e58/src/web/texts/EntityGridTexts.cs)*

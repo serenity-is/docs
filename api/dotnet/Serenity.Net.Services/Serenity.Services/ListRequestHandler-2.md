@@ -35,4 +35,4 @@ Initializes a new instance of the class.
 * interface [IListHandler&lt;TRow,TListRequest&gt;](IListHandler-2.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [ListRequest](ListRequest.md)
-* **Source:** *[ListRequestHandlerT2.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/List/ListRequestHandlerT2.cs)*
+* **Source:** *[ListRequestHandlerT2.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/List/ListRequestHandlerT2.cs)*

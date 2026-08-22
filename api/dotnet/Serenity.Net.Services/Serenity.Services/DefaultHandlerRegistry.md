@@ -32,4 +32,4 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IDefaultHandlerRegistry](IDefaultHandlerRegistry.md)
-* **Source:** *[DefaultHandlerRegistry.cs](https://github.com/serenity-is/Serenity/blob/master/src/Services/RequestHandlers/Handler/DefaultHandlerRegistry.cs)*
+* **Source:** *[DefaultHandlerRegistry.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Handler/DefaultHandlerRegistry.cs)*

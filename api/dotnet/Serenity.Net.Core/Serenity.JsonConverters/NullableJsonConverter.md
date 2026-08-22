@@ -18,4 +18,4 @@ public class NullableJsonConverter : JsonConverterFactory
 
 ## See Also
 
-* **Source:** *[NullableJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/master/src/Core/Json/NullableJsonConverter.cs)*
+* **Source:** *[NullableJsonConverter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Json/NullableJsonConverter.cs)*

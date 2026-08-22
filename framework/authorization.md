@@ -42,6 +42,43 @@ The `Serenity.Extensions` package provides base implementations for most of thes
 * `BaseRolePermissionService<TRolePermissionRow>` — role permission storage
 * `BasePermissionKeyLister` — permission key listing from `[NestedPermissionKeys]` classes
 
+### Base Implementations in `Serenity.Extensions`
+
+These base classes live in the `Serenity.Extensions` package (namespace `Serenity.Extensions`) and are the recommended starting point for your app's implementations. They implement the common logic; you derive from them and override only what differs for your application. (Note: the `Serenity.Extensions` base classes don't currently have generated API reference pages — check the [Serenity.Net.Core](../api/dotnet/Serenity.Net.Core/README.md) and related references, or the source, for the full member list.)
+
+#### `BasePermissionService<TUserPermissionRow, TUserRoleRow>`
+
+Handles the core `IPermissionService.HasPermission` logic: valid-key and special-key checks (`*`, `?`, `DENY`), transient grants, user role lookup, and checking permissions directly on the user and then through their roles. You only need to implement the storage-dependent parts. Common members you might override:
+
+- `GetUserRoles(ClaimsPrincipal user)` — **abstract**; return the role keys for a user. Most implementations query a user-role table.
+- `UserHasPermission(ClaimsPrincipal user, string permission)` — **abstract**; return `true`/`false` for a directly-granted/denied permission, or `null` if not assigned directly. The generic base class already reads this from `TUserPermissionRow`.
+- `IsSuperAdmin(ClaimsPrincipal user)` — virtual, defaults to `false`. Override to treat certain users (e.g. the `admin`/`superadmin` user) as having all permissions. This is the most common override.
+- `SuperAdminHasPermission(ClaimsPrincipal user, string permission)` — virtual, defaults to `true`; controls whether a super admin has a *specific* permission (you can restrict super admins from certain keys).
+- `IsAsterisk` / `IsQuestionMark` / `IsDeny` / `IsValidKey` — virtual; customize how the special permission keys (`*`, `?`, `DENY`, empty) are treated.
+- `IsImpersonationPermission` / `HasImpersonationPermission` — virtual; control which permission keys are treated as impersonation permissions and who may impersonate.
+- `HasPermission(string permission)` — virtual; the whole entry point, in case you need custom logic before the default checks.
+
+Related caches you can tune on the generic base class: `GetUserPermissionsCacheKey`, `GetUserPermissionsCacheGroupKey`, `GetUserPermissionsCacheDuration`, and `LoadUserPermissions`.
+
+#### `BaseRolePermissionService<TRolePermissionRow>`
+
+Implements `IRolePermissionService.HasPermission(role, permission)` by loading a role's permission keys (cached) and checking membership. Common overrides:
+
+- `LoadRolePermissions(string role)` — virtual; load the permission keys for a role (the default reads from `TRolePermissionRow`).
+- `GetCacheKey` / `GetCacheGroupKey` / `GetCacheDuration` — virtual; control caching of role permissions.
+- `IsValidRoleKeyOrName(string role)` — virtual; what counts as a valid role key.
+
+#### `BasePermissionKeyLister`
+
+Implements `IPermissionKeyLister.ListPermissionKeys(includeRoles)`, enumerating permission keys from `[NestedPermissionKeys]` classes, assembly-level `PermissionAttributeBase`, and type/method/property permission attributes. Common overrides:
+
+- `GetCacheKey` / `GetCacheDuration` / `GetCacheGroupKey` — virtual; control caching.
+- `GetNestedPermissions` / `GetAssemblyPermissions` / `GetPermissionsFromType` — virtual; customize where permission keys are collected from.
+
+#### `BaseUserRetrieveService<TRow>`
+
+Implements `IUserRetrieveService.ById` / `ByUsername` (cached) and converts a user row into an `IUserDefinition`. The main override is `ToUserDefinition(TRow user)` — see [User Definition](#userdefinition) above.
+
 Serene / StartSharp applications put their (thin) implementations of these in the `Modules/Common/AppServices` folder, under the `{ProjectName}.AppServices` namespace, and register them in `Startup.cs`:
 
 ```cs
@@ -372,6 +409,21 @@ public class SomeHandler : IRequestHandler
 ```
 
 Please note that granting temporary permission is performed in memory and is not stored anywhere.
+
+## Account Elevation
+
+Some operations are sensitive enough that they should require the user to re-confirm their password, even when they are already signed in — a *step-up* or **elevation** requirement. Examples include linking or unlinking an account, enabling two-factor authentication, or managing users.
+
+The feature is built on a few types in the Extensions packages:
+
+- `RequiresElevationAttribute` (in `Serenity.Web`) — an action filter you place on a page action, a controller, or a service endpoint method. When the request has no valid elevation token it either redirects the user to the elevation page (for GET requests) or throws a `RequiresElevation` `ValidationError` (for non-GET requests).
+- `IElevationHandler` (in `Serenity.Abstractions`) — the abstraction behind the feature: `AppendElevationTokenToCookies()`, `ValidateElevationToken()`, and `DeleteToken()`.
+- `DefaultElevationHandler` (in `Serenity.Extensions`) — the default implementation, which issues a short-lived token stored in an HttpOnly cookie. Register it with `AddElevationHandler()`.
+- `AccountElevationPageBase` (in `Serenity.Pro.Extensions`) — a base controller that renders the page where the user enters their password to confirm access and, on success, appends the elevation token.
+
+> **Note:** The elevation UI — the `AccountElevationPageBase` controller and the page where the user re-enters their password — is provided by **Serenity.Pro.Extensions**, a premium package. This means the elevation feature is available in **StartSharp** but **not in Serene** (the free, open-source template). The `RequiresElevationAttribute` / `IElevationHandler` / `DefaultElevationHandler` base types are available generally, but in a Serene app you'd need to provide your own elevation page to use them end-to-end.
+
+To use elevation in a StartSharp application, see [Account Elevation](../startsharp/features/account-elevation.md).
 
 ## Throttler
 

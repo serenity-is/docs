@@ -99,7 +99,7 @@
   * [Serenity.Net.Core](api/dotnet/Serenity.Net.Core/README.md)
   * [Serenity.Net.Services](api/dotnet/Serenity.Net.Services/README.md)
   * [Serenity.Net.Web](api/dotnet/Serenity.Net.Web/README.md)
-  * [Serenity.Net.Extensions](api/dotnet/Serenity.Net.Extensions/README.md)
+  * [Serenity.Net.Extensions](api/dotnet/Serenity.Extensions/README.md)
 * API Reference (TypeScript)
   * [@serenity-is/corelib](api/js/corelib/README.md)
   * [@serenity-is/domwise](api/js/domwise/README.md)

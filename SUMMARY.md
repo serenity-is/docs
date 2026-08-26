@@ -109,6 +109,7 @@
       * [Attributes](attributes/attributes.md)
       * [Grid Columns](framework/grid-columns.md)
       * [Forms & Editors](framework/forms-editors.md)
+      * [Property Items](framework/property-items.md)
       * [Grids](grids/readme.md)
         * [Formatter Types](grids/formatter_types.md)
         * [Persisting Settings](grids/persisting_settings.md)

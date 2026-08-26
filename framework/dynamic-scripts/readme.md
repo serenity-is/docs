@@ -119,6 +119,59 @@ Script bundles and CSS bundle contents are defined in the `appsettings.bundles.j
 
 Local text scripts are lazily initialized and registered when the site is displayed first time in a specific language.
 
+## Concrete Script Types
+
+The framework ships several ready-made dynamic script classes you can use or derive from.
+
+### `DynamicScript` (base class)
+
+[`DynamicScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/DynamicScript.md) is the abstract base implementation of `IDynamicScript`. Besides `GetScript()`, it provides settable `GroupKey`, `Expiration`, and `Permission` properties, and its `CheckRights` validates `Permission` if set:
+
+```cs
+public abstract class DynamicScript : IDynamicScript
+{
+    public abstract string GetScript();
+    public virtual void CheckRights(IPermissionService permissions, ITextLocalizer localizer)
+    {
+        if (Permission != null)
+            permissions.ValidatePermission(Permission, localizer);
+    }
+    public string GroupKey { get; set; }
+    public TimeSpan Expiration { get; set; }
+    public string Permission { get; set; }
+}
+```
+
+### `DataScript` and `DataScript<TData>`
+
+[`DataScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/DataScript.md) is a dynamic script that wraps a data object. It implements `INamedDynamicScript` and `IGetScriptData`, so it can be registered without an explicit name and its data can be served as JSON via `~/DynamicData`. Its script name is `RemoteData.<key>`, and `GetScript()` emits a `Serenity.setScriptData(...)` call that stores the JSON data in a global `Serenity.scriptData` object on the client.
+
+[`DataScript<TData>`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/DataScript-1.md) is the generic subclass you derive from when writing a data script. It reads its key, cache duration, permission, and cache group key from the [`[DataScript]`](../../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/DataScriptAttribute.md) attribute:
+
+```cs
+[DataScript("MyData", CacheDuration = 3600, Permission = "MyPermission")]
+public class MyDataScript : DataScript<MyData>
+{
+    protected override MyData GetData()
+    {
+        // load and return the data
+    }
+}
+```
+
+### `ConcatenatedScript`
+
+[`ConcatenatedScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/ConcatenatedScript.md) combines several other scripts into one, joining their outputs with a separator. It takes a list of `Func<string>` script parts (and an optional `checkRights` callback). This is how script bundles are assembled.
+
+### `ColumnsScript`, `FormScript`, and `PropertyItemsScript`
+
+[`ColumnsScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/ColumnsScript.md) and [`FormScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/FormScript.md) are the dynamic scripts behind the `[ColumnsScript]` and `[FormScript]` attributes. They derive from [`PropertyItemsScript`](../../api/dotnet/Serenity.Net.Services/Serenity.Web/PropertyItemsScript.md), which builds a `PropertyItemsData` object (the `PropertyItem[]` metadata for a columns or form type) via `IPropertyItemProvider` and emits it as `Serenity.setScriptData(...)`.
+
+- `ColumnsScript` registers under `Columns.<name>`.
+- `FormScript` registers under `Form.<name>`.
+
+`PropertyItemsScript.Compact` generates a compact, minified representation of the property items used by the client to reduce payload size.
+
 ## Dynamic Scripts Versus Services/Actions
 
 Some users might think that as the name `Dynamic` implies, they can use dynamic scripts like `Services/Actions` to generate dynamic content on every request, e.g. return a different set of data based on query string parameters, or context variables like the current user, tenant, etc.

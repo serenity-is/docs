@@ -79,7 +79,7 @@ As listed above, only the SQL Server and the `SQLite` connection factories are r
 
 The default implementations for the `ISqlConnections` and other related services are registered via an [AddSqlConnections](../../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/DataServiceCollectionExtensions.md) call. You may not see it in the `Startup.cs` file as it is indirectly called by the `AddServiceHandlers` method.
 
-## SqlConnectionExtensions.NewFor`<TClass>` extension method
+## ConnectionExtensions.NewFor`<TClass>` extension method
 
 If you don't want to memorize connection string keys, but instead reuse information on a row (in form of a `ConnectionKey` attribute), you may prefer this variant.
 
@@ -124,6 +124,8 @@ But you should prefer the methods of `ISqlConnections` to create connections. Ot
 ## Setting Database Dialect for Connections
 
 Serenity tries to auto-determine the dialect for a connection by using the `"providerName"` in the `appsettings.json` file for the connection definition.
+
+See [SQL Dialects](sql-dialects.md) for the full reference of the dialect types, the built-in dialects, and how they affect query generation.
 
 Sometimes, the dialect determined automatically using the `"providerName"` may not work for you, or you may want to use a dialect like `SqlServer2000` or `SqlServer2005` for some connections.
 
@@ -212,6 +214,118 @@ void CreateATask(IUnitOfWork uow, TaskRow task)
        // optional, do something else if it fails
     };
 }
+
+## TransactionlessUnitOfWork
+
+Some methods are written to accept an `IUnitOfWork` so they can take part in whatever transaction the caller started. If you call such a method but don't actually need a real transaction — for example you're only reading, or you already manage the transaction yourself — you can still satisfy the signature by passing a [`TransactionlessUnitOfWork`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/TransactionlessUnitOfWork.md). It implements `IUnitOfWork` but never begins a database transaction.
+
+```cs
+using (var connection = sqlConnections.NewByKey("Default"))
+{
+    // no real transaction is started
+    using var uow = new TransactionlessUnitOfWork(connection);
+
+    // OnCommit() fires here ...
+    uow.Commit();
+}
+// OnRollback fires if Dispose() is called without a commit
+```
+
+Since there is no underlying transaction, the `OnCommit`/`OnRollback` events are just callbacks: `OnCommit` is raised when `Commit()` is called, and `OnRollback` is raised when the instance is disposed without a `Commit()`. Use it with care — pass it only where a method requires an `IUnitOfWork` but you're sure you don't want a transaction.
+
+## Connection extensions
+
+The static [`ConnectionExtensions`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ConnectionExtensions.md) class adds helpers on top of any `IDbConnection`:
+
+- `NewFor<TClass>()` — covered above; creates a connection using the `[ConnectionKey]` attribute on a row/type.
+- `EnsureOpen()` — opens the connection if it isn't already open. A connection returned by `ISqlConnections` cannot be reopened after it has been closed, so this throws if the connection was already opened once.
+- `GetCurrentActualTransaction()` — returns the underlying `IDbTransaction` of the current transaction, if any. `WrappedConnection` tracks the active transaction so it can be retrieved without knowing it from elsewhere.
+- `SetCommandTimeout(int?)` — sets a default command timeout on the connection (only works with wrapped connections, which implement `IHasCommandTimeout`).
+- `GetLogger()` — returns the connection's logger if it implements `IHasLogger`, otherwise `null`.
+
+```cs
+using (var connection = sqlConnections.NewByKey("Default"))
+{
+    connection.EnsureOpen();
+    connection.SetCommandTimeout(60);
+
+    using var transaction = connection.BeginTransaction();
+    // ...
+}
+```
+
+## Registering SQL connections
+
+The connection services are registered through dependency injection. In a typical template these are registered for you when you call `AddServiceHandlers` (which calls `AddEntities`, which in turn calls `AddSqlConnections`), but you can also register them explicitly:
+
+```cs
+services.AddSqlConnections();
+```
+
+This registers the default implementations:
+
+| Interface | Default implementation |
+| --- | --- |
+| `ISqlConnections` | `DefaultSqlConnections` |
+| `IConnectionStrings` | `DefaultConnectionStrings` |
+| `ISqlDialectMapper` | `DefaultSqlDialectMapper` |
+
+`IConnectionStrings`/`IConnectionString` represent the configured connection strings, each carrying its key, the raw connection string, provider name and `ISqlDialect`. `DefaultConnectionStrings` reads them from the `Data` section of `appsettings.json` through `ConnectionStringOptions`/`ConnectionStringEntry`. See [IConnectionStrings](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IConnectionStrings.md), [IConnectionString](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IConnectionString.md), [ConnectionStringOptions](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ConnectionStringOptions.md) and [ConnectionStringEntry](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ConnectionStringEntry.md).
+
+You can add or override connections from code with the overload that takes a setup action — useful when the details come from environment variables or a secret store rather than `appsettings.json`:
+
+```cs
+services.AddSqlConnections(connectionStrings =>
+{
+    connectionStrings["Reporting"] = new ConnectionStringEntry
+    {
+        ConnectionString = "Server=...;Database=Reporting;...",
+        ProviderName = "Microsoft.Data.SqlClient",
+        Dialect = "SqlServer2012"
+    };
+});
+```
+
+## Transaction settings
+
+When a service endpoint action takes an `IUnitOfWork`, the `ServiceEndpoint` base class creates a `UnitOfWork` with an isolation level. By default this is `IsolationLevel.Unspecified` and the transaction starts immediately. You can change the isolation level and defer starting the transaction with the [`TransactionSettings`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/TransactionSettingsAttribute.md) attribute on the endpoint class or action method:
+
+```cs
+[ServiceAuthorize]
+[ConnectionKey(typeof(OrderRow))]
+public class OrderEndpoint : ServiceEndpoint
+{
+    [HttpPost]
+    [TransactionSettings(IsolationLevel.ReadCommitted)]
+    public SaveResponse Create(IUnitOfWork uow, SaveRequest request)
+    {
+        // runs inside a ReadCommitted transaction
+    }
+}
+```
+
+You can also set a global default through the [`TransactionSettings`](../../api/dotnet/Serenity.Net.Services/Serenity.Data/TransactionSettings.md) options:
+
+```json
+{
+  "TransactionSettings": {
+    "IsolationLevel": "ReadCommitted",
+    "DeferStart": false
+  }
+}
+```
+
+## Using connections in service endpoints
+
+The `ServiceEndpoint` base class uses everything above automatically: it resolves `ISqlConnections`, creates a connection with `NewByKey` using the `[ConnectionKey]` on the endpoint class, and injects it into actions that take an `IDbConnection` or `IUnitOfWork` parameter, committing or rolling back the transaction for you. See [Service Endpoints](../../services/service_endpoints.md) for the details and the manual equivalent.
+
+## See Also
+
+- [Service Endpoints](../../services/service_endpoints.md) — how `ServiceEndpoint` injects connections and transactions
+- [SQL Dialects](sql-dialects.md) — the dialect abstraction, built-in dialects, and `SqlSettings`
+- [Fluent SQL](fluent-sql.md) — building `SELECT` queries with `SqlQuery`
+- [Criteria Objects](criteria.md) — building typed filter conditions
+- [Entity CRUD & Query Helpers](../../services/entity-crud.md) — higher-level row helpers
 ```
 
 

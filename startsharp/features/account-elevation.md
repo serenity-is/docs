@@ -4,7 +4,7 @@ An **elevation requirement** adds an extra security check for critical operation
 
 ## How It Works
 
-- Elevation is enforced with the `[RequiresElevation]` attribute.
+- Elevation is enforced with the [RequiresElevation](../api/dotnet/Serenity.Extensions/Serenity.Web/RequiresElevationAttribute.md) attribute.
 - When a protected action is invoked and there is no valid elevation token, the user is sent to the elevation page to re-enter their password.
 - On success, a short-lived token is stored in a cookie, and the user is returned to the original page.
 - If the user doesn't have a password set yet, they're redirected to the set-password page instead.
@@ -61,4 +61,4 @@ Once confirmed, they can access the protected page:
 
 The elevation token is short-lived, so the user may be asked to confirm again after it expires.
 
-> This feature is implemented in the `Serenity.Pro.Extensions` **AccountElevation** module. The base types (`IElevationHandler`, `RequiresElevationAttribute`, `DefaultElevationHandler`, `AccountElevationPageBase`) are described in [Authorization](../../framework/authorization.md#account-elevation).
+> This feature is implemented in the `Serenity.Pro.Extensions` **AccountElevation** module. The base types ([IElevationHandler](../api/dotnet/Serenity.Extensions/Serenity.Abstractions/IElevationHandler.md), [RequiresElevationAttribute](../api/dotnet/Serenity.Extensions/Serenity.Web/RequiresElevationAttribute.md), [DefaultElevationHandler](../api/dotnet/Serenity.Extensions/Serenity.Extensions/DefaultElevationHandler.md), `AccountElevationPageBase`) are described in [Authorization](../../framework/authorization.md#account-elevation).

@@ -37,16 +37,16 @@ Serenity provides abstractions for permission checking (authorization), user det
 
 The `Serenity.Extensions` package provides base implementations for most of these, which handle the common logic so your application only needs a small subclass:
 
-* `BaseUserRetrieveService<TRow>` — user retrieval from a `Users` table
-* `BasePermissionService<TUserPermissionRow, TUserRoleRow>` — permission checking against user/role permission tables, including `ITransientGrantor` support
-* `BaseRolePermissionService<TRolePermissionRow>` — role permission storage
-* `BasePermissionKeyLister` — permission key listing from `[NestedPermissionKeys]` classes
+* [BaseUserRetrieveService&lt;TRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BaseUserRetrieveService-1.md) — user retrieval from a `Users` table
+* [BasePermissionService&lt;TUserPermissionRow, TUserRoleRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BasePermissionService-2.md) — permission checking against user/role permission tables, including `ITransientGrantor` support
+* [BaseRolePermissionService&lt;TRolePermissionRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BaseRolePermissionService-1.md) — role permission storage
+* [BasePermissionKeyLister](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BasePermissionKeyLister.md) — permission key listing from `[NestedPermissionKeys]` classes
 
 ### Base Implementations in `Serenity.Extensions`
 
-These base classes live in the `Serenity.Extensions` package (namespace `Serenity.Extensions`) and are the recommended starting point for your app's implementations. They implement the common logic; you derive from them and override only what differs for your application. (Note: the `Serenity.Extensions` base classes don't currently have generated API reference pages — check the [Serenity.Net.Core](../api/dotnet/Serenity.Net.Core/README.md) and related references, or the source, for the full member list.)
+These base classes live in the `Serenity.Extensions` package (namespace `Serenity.Extensions`) and are the recommended starting point for your app's implementations. They implement the common logic; you derive from them and override only what differs for your application. See the [Serenity.Extensions API reference](../api/dotnet/Serenity.Extensions/README.md) for the full member list.
 
-#### `BasePermissionService<TUserPermissionRow, TUserRoleRow>`
+#### [BasePermissionService&lt;TUserPermissionRow, TUserRoleRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BasePermissionService-2.md)
 
 Handles the core `IPermissionService.HasPermission` logic: valid-key and special-key checks (`*`, `?`, `DENY`), transient grants, user role lookup, and checking permissions directly on the user and then through their roles. You only need to implement the storage-dependent parts. Common members you might override:
 
@@ -60,7 +60,7 @@ Handles the core `IPermissionService.HasPermission` logic: valid-key and special
 
 Related caches you can tune on the generic base class: `GetUserPermissionsCacheKey`, `GetUserPermissionsCacheGroupKey`, `GetUserPermissionsCacheDuration`, and `LoadUserPermissions`.
 
-#### `BaseRolePermissionService<TRolePermissionRow>`
+#### [BaseRolePermissionService&lt;TRolePermissionRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BaseRolePermissionService-1.md)
 
 Implements `IRolePermissionService.HasPermission(role, permission)` by loading a role's permission keys (cached) and checking membership. Common overrides:
 
@@ -68,14 +68,14 @@ Implements `IRolePermissionService.HasPermission(role, permission)` by loading a
 - `GetCacheKey` / `GetCacheGroupKey` / `GetCacheDuration` — virtual; control caching of role permissions.
 - `IsValidRoleKeyOrName(string role)` — virtual; what counts as a valid role key.
 
-#### `BasePermissionKeyLister`
+#### [BasePermissionKeyLister](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BasePermissionKeyLister.md)
 
 Implements `IPermissionKeyLister.ListPermissionKeys(includeRoles)`, enumerating permission keys from `[NestedPermissionKeys]` classes, assembly-level `PermissionAttributeBase`, and type/method/property permission attributes. Common overrides:
 
 - `GetCacheKey` / `GetCacheDuration` / `GetCacheGroupKey` — virtual; control caching.
 - `GetNestedPermissions` / `GetAssemblyPermissions` / `GetPermissionsFromType` — virtual; customize where permission keys are collected from.
 
-#### `BaseUserRetrieveService<TRow>`
+#### [BaseUserRetrieveService&lt;TRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BaseUserRetrieveService-1.md)
 
 Implements `IUserRetrieveService.ById` / `ByUsername` (cached) and converts a user row into an `IUserDefinition`. The main override is `ToUserDefinition(TRow user)` — see [User Definition](#userdefinition) above.
 
@@ -105,7 +105,7 @@ public interface IUserRetrieveService
 }
 ```
 
-It is implemented in `Serenity.Extensions` by `BaseUserRetrieveService<TRow>`, which loads the user row from the `Users` table. The application's `UserRetrieveService` (in `Modules/Common/AppServices/UserRetrieveService.cs`, namespace `{ProjectName}.AppServices`) only needs to tell the base class how to convert a user row into a user definition:
+It is implemented in `Serenity.Extensions` by [BaseUserRetrieveService&lt;TRow&gt;](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BaseUserRetrieveService-1.md), which loads the user row from the `Users` table. The application's `UserRetrieveService` (in `Modules/Common/AppServices/UserRetrieveService.cs`, namespace `{ProjectName}.AppServices`) only needs to tell the base class how to convert a user row into a user definition:
 
 ```cs
 public class UserRetrieveService(ITwoLevelCache cache, ISqlConnections sqlConnections)
@@ -253,6 +253,74 @@ For example, in Serene, we assigned the `"Administration:Security"` permission f
 
 This is the same for Insert/Update/Delete permissions. Do you need an administrator to only create users, another to only update them, and another admin to only delete them?
 
+### Field-Level Permissions
+
+In addition to row-level permissions, you can set **field-level** permissions that control access to individual fields of a row. These are set on the row class and apply to fields that don't have their own permission:
+
+- [FieldReadPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/FieldReadPermissionAttribute.md) — default read permission for fields.
+- [FieldInsertPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/FieldInsertPermissionAttribute.md) — default insert permission for fields.
+- [FieldUpdatePermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/FieldUpdatePermissionAttribute.md) — default update permission for fields.
+- [FieldModifyPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/FieldModifyPermissionAttribute.md) — default modify (insert/update) permission for fields.
+
+```cs
+[ReadPermission("Administration:Security")]
+[ModifyPermission("Administration:Security")]
+[FieldReadPermission("Administration:Security")]
+[FieldModifyPermission("Administration:Security")]
+public sealed class UserRow : Row<UserRow.RowFields>, IIdRow
+{
+    // ...
+}
+```
+
+`FieldReadPermissionAttribute` has an `ApplyToLookups` option (default `true`) that also applies the permission to fields marked with `[LookupInclude]`, the ID field, and the name field.
+
+### Registering Permission Keys
+
+[RegisterPermissionKeyAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/RegisterPermissionKeyAttribute.md) registers a permission key without defining it in a `[NestedPermissionKeys]` class. It can be placed on an assembly or a class:
+
+```cs
+[assembly: RegisterPermissionKey("Administration:MyFeature")]
+```
+
+### Required Permission
+
+[RequiredPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/RequiredPermissionAttribute.md) specifies the permission required to access an object such as a report:
+
+```cs
+[RequiredPermission("Administration:Reports")]
+public class MyReport : IReport
+{
+    // ...
+}
+```
+
+### Implicit Permissions
+
+[ImplicitPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.ComponentModel/ImplicitPermissionAttribute.md) is placed on a permission key to define permissions that are **implicitly assigned** when a user/role has that permission:
+
+```cs
+public static class PermissionKeys
+{
+    [ImplicitPermission("Administration:Security")]
+    public const string UserManagement = "Administration:UserManagement";
+}
+```
+
+> Implicit permissions are currently implemented in the premium (StartSharp) application. See [Implicitly Granted Permissions](../startsharp/features/implicitly-granted-permissions.md).
+
+### Special Permission Keys
+
+[SpecialPermissionKeys](../api/dotnet/Serenity.Net.Core/Serenity/SpecialPermissionKeys.md) contains the special permission key constants:
+
+| Constant | Value | Meaning |
+| --- | --- | --- |
+| `Public` | `"*"` | Grants access to everyone, including anonymous users |
+| `LoggedIn` | `"?"` | Grants access to any logged-in user |
+| `Deny` | `"DENY"` | Denies access to everyone, even super admins |
+
+These are used in permission attributes and checks, e.g. `[ReadPermission("?")]` for any logged-in user.
+
 ## Permission Key Definitions
 
 Permission keys themselves are usually defined in a static class:
@@ -373,7 +441,7 @@ We don't allow opening in the same browser window, as this would effectively mea
 
 Sometimes it would be better to temporarily (e.g. transiently) grant a user some permissions instead of impersonating an admin. [ITransientGrantor](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ITransientGrantor.md) interface and its default implementation [TransientGrantingPermissionService](../api/dotnet/Serenity.Net.Core/Serenity.Web/TransientGrantingPermissionService.md) can do just that.
 
-The template's `AppServices.PermissionService` (in `Modules/Common/AppServices/PermissionService.cs`) already has built-in transient-grant support: it derives from `BasePermissionService`, which implements `IPermissionService` and `ITransientGrantor`. No wrapping registration is required.
+The template's `AppServices.PermissionService` (in `Modules/Common/AppServices/PermissionService.cs`) already has built-in transient-grant support: it derives from [BasePermissionService](../api/dotnet/Serenity.Extensions/Serenity.Extensions/BasePermissionService.md), which implements `IPermissionService` and `ITransientGrantor`. No wrapping registration is required.
 
 Then you can use it in a similar way to impersonation:
 
@@ -416,9 +484,9 @@ Some operations are sensitive enough that they should require the user to re-con
 
 The feature is built on a few types in the Extensions packages:
 
-- `RequiresElevationAttribute` (in `Serenity.Web`) — an action filter you place on a page action, a controller, or a service endpoint method. When the request has no valid elevation token it either redirects the user to the elevation page (for GET requests) or throws a `RequiresElevation` `ValidationError` (for non-GET requests).
-- `IElevationHandler` (in `Serenity.Abstractions`) — the abstraction behind the feature: `AppendElevationTokenToCookies()`, `ValidateElevationToken()`, and `DeleteToken()`.
-- `DefaultElevationHandler` (in `Serenity.Extensions`) — the default implementation, which issues a short-lived token stored in an HttpOnly cookie. Register it with `AddElevationHandler()`.
+- [RequiresElevationAttribute](../api/dotnet/Serenity.Extensions/Serenity.Web/RequiresElevationAttribute.md) (in `Serenity.Web`) — an action filter you place on a page action, a controller, or a service endpoint method. When the request has no valid elevation token it either redirects the user to the elevation page (for GET requests) or throws a `RequiresElevation` `ValidationError` (for non-GET requests).
+- [IElevationHandler](../api/dotnet/Serenity.Extensions/Serenity.Abstractions/IElevationHandler.md) (in `Serenity.Abstractions`) — the abstraction behind the feature: `AppendElevationTokenToCookies()`, `ValidateElevationToken()`, and `DeleteToken()`.
+- [DefaultElevationHandler](../api/dotnet/Serenity.Extensions/Serenity.Extensions/DefaultElevationHandler.md) (in `Serenity.Extensions`) — the default implementation, which issues a short-lived token stored in an HttpOnly cookie. Register it with [AddElevationHandler()](../api/dotnet/Serenity.Extensions/Serenity.Extensions.DependencyInjection/ElevationServiceCollectionExtensions/AddElevationHandler.md).
 - `AccountElevationPageBase` (in `Serenity.Pro.Extensions`) — a base controller that renders the page where the user enters their password to confirm access and, on success, appends the elevation token.
 
 > **Note:** The elevation UI — the `AccountElevationPageBase` controller and the page where the user re-enters their password — is provided by **Serenity.Pro.Extensions**, a premium package. This means the elevation feature is available in **StartSharp** but **not in Serene** (the free, open-source template). The `RequiresElevationAttribute` / `IElevationHandler` / `DefaultElevationHandler` base types are available generally, but in a Serene app you'd need to provide your own elevation page to use them end-to-end.

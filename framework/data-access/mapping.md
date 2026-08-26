@@ -456,3 +456,186 @@ When specifying a dialect name, it is also possible to negate the match by start
 ```
 
 The above expressions will only apply to dialects that does not match `SqlServer`.
+
+## ConnectionKey Attribute
+
+The [ConnectionKey](../../api/dotnet/Serenity.Net.Services/Serenity.Data/ConnectionKeyAttribute.md) attribute determines which connection a row uses:
+
+```cs
+[ConnectionKey("Northwind"), Module("Northwind"), TableName("Customers")]
+public sealed class CustomerRow : Row<CustomerRow.RowFields>, IIdRow, INameRow
+{
+    // ...
+}
+```
+
+You can also pass a type that has a `[ConnectionKey]` attribute to reuse its connection key:
+
+```cs
+[ConnectionKey(typeof(CustomerRow))]
+public sealed class OrderRow : Row<OrderRow.RowFields>, IIdRow
+{
+    // ...
+}
+```
+
+The connection key is used to create connections for the row's handlers and queries.
+
+## NotMapped Attribute
+
+The [NotMapped](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/NotMappedAttribute.md) attribute marks a property as **not mapped** to a database column. Such fields are not selected by default and are ignored by the save handlers:
+
+```cs
+[DisplayName("Cast List"), NotMapped]
+public List<MovieCastRow> CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
+```
+
+This is used for in-memory fields like master-detail lists, linking sets, and other computed data. The obsolete `[ClientSide]` attribute is an alias for `[NotMapped]`.
+
+## Origin Attribute
+
+The [Origin](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/OriginAttribute.md) attribute specifies that a view field originates from a joined table:
+
+```cs
+[Origin("sup"), DisplayName("Supplier")]
+public string SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
+```
+
+Here `"sup"` is the join alias. The field's expression is derived from the join and the property name. You can also specify the source property explicitly: `[Origin("sup", "CompanyName")]`.
+
+## Identity, PrimaryKey, and Key Attributes
+
+- [Identity](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/IdentityAttribute.md) — marks the field as an identity column (a combination of `PrimaryKey`, `AutoIncrement`, and `NotNull` flags). Used for auto-incrementing integer IDs.
+- [PrimaryKey](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/PrimaryKeyAttribute.md) — marks the property as part of the primary key.
+- [IdProperty](../../api/dotnet/Serenity.Net.Services/Serenity.Data/IdPropertyAttribute.md) — determines the ID field of the table (used with the `IIdRow` contract).
+- [NameProperty](../../api/dotnet/Serenity.Net.Services/Serenity.Data/NamePropertyAttribute.md) — determines the name field of the table (used with the `INameRow` contract).
+- [InstanceName](../../api/dotnet/Serenity.Net.Services/Serenity.Data/InstanceNameAttribute.md) — sets the non-plural name for an entity (used for dialog titles).
+
+```cs
+[DisplayName("Person Id"), Identity, IdProperty]
+public int? PersonId { get => fields.PersonId[this]; set => fields.PersonId[this] = value; }
+
+[DisplayName("Full Name"), NameProperty]
+public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+```
+
+## Size, Scale, and NotNull
+
+- [Size](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SizeAttribute.md) — sets the max length (for strings) or numeric precision.
+- [Scale](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ScaleAttribute.md) — sets the numeric scale (decimal places).
+- [NotNull](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/NotNullAttribute.md) — marks the field as not-null (sets the `NotNull` field flag).
+
+```cs
+[DisplayName("First Name"), Size(50), NotNull]
+public string FirstName { get => fields.FirstName[this]; set => fields.FirstName[this] = value; }
+
+[DisplayName("Unit Price"), Scale(4)]
+public decimal? UnitPrice { get => fields.UnitPrice[this]; set => fields.UnitPrice[this] = value; }
+```
+
+## QuickSearch
+
+The [QuickSearch](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/QuickSearchAttribute.md) attribute marks a property so it's included in quick text searches (the search box in grids):
+
+```cs
+[DisplayName("Product Name"), Size(40), NotNull, QuickSearch]
+public string ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
+```
+
+The [SearchType](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SearchType.md) enum controls how the search matches:
+
+| Value | Behavior |
+| --- | --- |
+| `Auto` | Equals for integer types, Contains for others (default) |
+| `Equals` | Exact match |
+| `Contains` | Contains the search text |
+| `StartsWith` | Starts with the search text |
+| `FullTextContains` | Full-text CONTAINS |
+
+## TextualField
+
+The [TextualField](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/TextualFieldAttribute.md) attribute is placed on a foreign key and specifies which field in the joined table should be used for display/filtering:
+
+```cs
+[DisplayName("Supplier"), ForeignKey(typeof(SupplierRow)), LeftJoin("sup"), TextualField(nameof(SupplierCompanyName))]
+public int? SupplierID { get => fields.SupplierID[this]; set => fields.SupplierID[this] = value; }
+
+[Origin("sup"), DisplayName("Supplier")]
+public string SupplierCompanyName { get => fields.SupplierCompanyName[this]; set => fields.SupplierCompanyName[this] = value; }
+```
+
+## Other Join Types
+
+Besides `[LeftJoin]`, Serenity supports:
+
+- [InnerJoin](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/InnerJoinAttribute.md) — an INNER JOIN (only matching rows).
+- [OuterApply](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/OuterApplyAttribute.md) — an OUTER APPLY with a subquery (class-level).
+
+```cs
+[InnerJoin("c", "Cities", "c.[Id] = T0.[CityId]")]
+public class CustomerRow : Row<CustomerRow.RowFields>, IIdRow
+{
+    // ...
+}
+```
+
+## LookupInclude
+
+The [LookupInclude](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/LookupIncludeAttribute.md) attribute marks a property so it's included in the row's lookup script by default. When a row has `[LookupScript]`, only the ID and name fields are transferred to the client by default; add `[LookupInclude]` to properties you need on the client:
+
+```cs
+[DisplayName("Product Name"), Size(40), NotNull, QuickSearch, LookupInclude]
+public string ProductName { get => fields.ProductName[this]; set => fields.ProductName[this] = value; }
+```
+
+## TwoLevelCached
+
+The [TwoLevelCached](../../api/dotnet/Serenity.Net.Services/Serenity.Data/TwoLevelCachedAttribute.md) attribute marks a row so that when it's inserted/updated/deleted through a handler, its related cache is cleared. It doesn't turn caching on — it invalidates existing cached items (e.g. lookups) on changes:
+
+```cs
+[TwoLevelCached]
+public sealed class CustomerRow : Row<CustomerRow.RowFields>, IIdRow, INameRow
+{
+    // ...
+}
+```
+
+You can specify generation keys or linked row types to control what gets invalidated.
+
+## Computed Field Expressions
+
+Beyond `[Expression]`, Serenity provides convenience attributes for common computed fields:
+
+- [Concat](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/ConcatAttribute.md) — concatenates fields in a database-agnostic way (handles NULLs as empty strings).
+- `CaseAttribute` / `CaseSwitchAttribute` — CASE expressions.
+- `DateDiffAttribute` / `DatePartAttribute` — date difference/part expressions.
+- `SqlNowAttribute` / `SqlUtcNowAttribute` / `SqlDateTimeOffsetAttribute` — current date/time expressions.
+- `DateTimeKindAttribute` — sets the `DateTimeKind` for a date field.
+
+```cs
+[DisplayName("Full Name"), Concat("t0.FirstName", "' '", "t0.LastName"), QuickSearch, NameProperty]
+public string FullName { get => fields.FullName[this]; set => fields.FullName[this] = value; }
+```
+
+## MinSelectLevel and SelectLevel
+
+The [MinSelectLevel](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/MinSelectLevelAttribute.md) attribute and [SelectLevel](../../api/dotnet/Serenity.Net.Services/Serenity.Data/SelectLevel.md) enum control when a field is selected in list/retrieve queries:
+
+| SelectLevel | Behavior |
+| --- | --- |
+| `Auto` | List for table fields, Details for view fields (default) |
+| `Always` | Always select, even if excluded |
+| `Lookup` | Select in lookup/list/details modes |
+| `List` | Select in list/details modes |
+| `Details` | Select only in details mode |
+| `Explicit` | Select only if explicitly included |
+| `Never` | Never select (use for sensitive fields like password hash) |
+
+```cs
+[MinSelectLevel(SelectLevel.Never)]
+public string PasswordHash { get => fields.PasswordHash[this]; set => fields.PasswordHash[this] = value; }
+```
+
+## SetFieldFlags
+
+Many of the attributes above (e.g. `[NotNull]`, `[Identity]`, `[NotMapped]`) derive from [SetFieldFlagsAttribute](../../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/SetFieldFlagsAttribute.md), which turns field flags on or off. See [Field Flags](field-flags.md) for the full list of flags.

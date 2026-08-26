@@ -117,6 +117,55 @@ If anything fails, the partially written temporary file is cleaned up and the ex
 
 When a field value changes, `FileUploadBehavior` registers the old file for deletion through `FilesToDelete` (via `UnitOfWork.RegisterFilesToDelete`), so the file is removed only if the transaction commits. If `CopyToHistory` is set, the old file is archived instead of deleted.
 
+## File Read Access
+
+Uploaded files are served through `/upload/{path}`. By default, access to a file is controlled by the **read permission of the entity** that owns it. You can refine this with file read access attributes on the upload field.
+
+> **Note:** The file read access checks described in this section are enforced by `SecureUploadFileResponder`, which is provided by **Serenity.Pro.Extensions** (a premium package). It is available in **StartSharp** but **not in Serene**. The default `DefaultUploadFileResponder` (in the open-source framework) serves files without checking these attributes. In StartSharp, `SecureUploadFileResponder` is registered as the `IUploadFileResponder` via `AddSecureUploadFileResponder()` in `Startup.cs`:
+>
+> ```cs
+> services.AddSecureUploadFileResponder();
+> ```
+
+### `[FileReadPermission]`
+
+[FileReadPermissionAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/FileReadPermissionAttribute.md) specifies a permission required to read the file for a field:
+
+```cs
+[ImageUploadEditor(FilenameFormat = "UserImage/~")]
+[FileReadPermission("Administration:Security")]
+public string UserImage { get; set; }
+```
+
+### `[FileReadAccess]`
+
+[FileReadAccessAttribute](../api/dotnet/Serenity.Net.Core/Serenity.Data/FileReadAccessAttribute.md) is the base attribute with more options:
+
+- `Permission` — the permission to check. Use `"*"` for public access, `"?"` for any logged-in user, or a specific key. If `LogicOperatorPermissionService` is registered, this can also be a logical expression like `A|B&!C`.
+- `AllowBypass` — whether users with the bypass permission (see settings below) are allowed to read the file. Default `true`.
+- `PermissionOnly` — skip entity-level access control and use only permission-based access.
+
+### `FileReadAccessSettings`
+
+[FileReadAccessSettings](../api/dotnet/Serenity.Net.Core/Serenity.Web/FileReadAccessSettings.md) configures file read access from the `FileReadAccess` section of `appsettings.json`:
+
+```json
+{
+  "FileReadAccess": {
+    "BypassPermission": "Administration:General",
+    "DefaultPermission": "*",
+    "PathPermissions": "^public/:*;^temporary/:*"
+  }
+}
+```
+
+- `BypassPermission` — a permission that bypasses all file read access checks (e.g. give administrators access to all files).
+- `DefaultPermission` — the permission to check when no `[FileReadAccess]` attribute is present (default `"*"`).
+- `MissingMetadataPermission` — permission to check when file metadata is missing.
+- `PathPermissions` — regex patterns for paths and their permissions, evaluated in order (default allows public access to `public/` and `temporary/`).
+- `EnableAccessLogging` — log access control decisions for debugging.
+- `ReturnForbidResult` — return a 403 instead of the default 404 when access is denied.
+
 ## See Also
 
 - [Service Behaviors](behaviors.md)

@@ -2,6 +2,11 @@
 
 Serenity contains a set of query builders for SELECT, INSERT, UPDATE, and DELETE statements.
 
+The [`SqlQuery`](#sql-query) builder produces `SELECT` statements and is the main
+subject of this page. The data-manipulation builders — `SqlInsert`, `SqlUpdate`,
+and `SqlDelete` — are covered on the
+[SQL Data Manipulation](sql-data-manipulation.md) page.
+
 These builders can be used with simple strings or the Serenity entity (row) system.
 
 Their output can be executed directly, through a micro-ORM like Dapper (which is integrated with Serenity), or Serenity extensions.
@@ -647,3 +652,208 @@ SqlSettings.DefaultDialect = SqliteDialect.Instance;
 ```
 
 The dialect for a connection string is derived from the `ProviderName` field, or `Dialect` property of the connection string in `appsettings.json`. SqlSettings.DefaultDialect is just a fallback.
+
+## Where (Filtering)
+
+`SqlQuery.Where` adds a condition to the `WHERE` clause. Successive calls are
+joined with `AND`:
+
+```csharp
+var query = new SqlQuery()
+    .From("Person")
+    .Select("Firstname")
+    .Select("Surname")
+    .Where("Age > 18")
+    .Where("Country = 'US'");
+
+Console.WriteLine(query.ToString());
+```
+
+```sql
+SELECT 
+Firstname,
+Surname 
+FROM Person 
+WHERE Age > 18 AND Country = 'US'
+```
+
+Where a condition depends on a value, prefer building it with
+[Criteria Objects](criteria.md) so the value is parameterized rather than
+concatenated into the SQL string:
+
+```csharp
+var fld = PersonRow.Fields;
+var query = new SqlQuery()
+    .From(fld)
+    .Select(fld.Firstname, "FirstName")
+    .Where(
+        fld.Age > 18 &
+        fld.Country == "US");
+```
+
+This produces `WHERE Age > @p1 AND Country = @p2` instead of embedding the
+values directly.
+
+For a simple equality filter on a row field, `WhereEqual(field, value)` is a
+convenient and safe shortcut:
+
+```csharp
+var query = new SqlQuery()
+    .From(fld)
+    .Select(fld.Firstname)
+    .WhereEqual(fld.PersonId, 5);
+```
+
+## Joins
+
+`SqlQuery` can add `INNER`, `LEFT`, and `RIGHT` joins. The join methods take an
+[`Alias`](../api/dotnet/Serenity.Net.Services/Serenity.Data/Alias.md) and an
+`ICriteria` for the `ON` clause:
+
+```csharp
+var p = new Alias("Person", "p");
+var c = new Alias("City", "c");
+
+var query = new SqlQuery()
+    .From(p)
+    .LeftJoin(c, new Criteria(p["CityId"]) == new Criteria(c["ID"]))
+    .Select(p["Firstname"])
+    .Select(c["Name"], "CityName");
+```
+
+The join methods are symmetric across `LeftJoin`, `RightJoin`, and `InnerJoin`.
+Each has two overloads — one that takes a table name, an alias, and the criteria,
+and one that takes just the alias (whose `Table` is already set) and the criteria.
+
+When you add a join with an `Alias` that itself references further joins, the
+query pulls in the required joins automatically via `EnsureJoinsInExpression`.
+The `Alias` and join classes (`InnerJoin`, `LeftJoin`, `RightJoin`,
+`CrossApply`, `OuterApply`) are described on the
+[Joins & Aliases](joins-aliases.md) page.
+
+## Subqueries
+
+`SqlQuery` supports subqueries in the `FROM` clause (derived tables) and in the
+`SELECT` list. `SubQuery()` creates a child query that shares the parameter
+dictionary with its parent, so both can be built together.
+
+Use `From(subQuery, alias)` to use a subquery as a derived table, or
+`Select(subQuery, columnName)` to select a scalar subquery:
+
+```csharp
+var query = new SqlQuery()
+    .From("Person p")
+    .Select("p.Firstname")
+    .Select(
+        new SqlQuery()
+            .Select("COUNT(*)")
+            .From("Orders")
+            .Where(new Criteria("Orders.PersonId") == new Criteria("p.PersonId")),
+        "OrderCount");
+```
+
+Here the inner subquery references the outer alias `p`, making it a correlated
+subquery.
+
+## UNION
+
+`Union` appends a second `SELECT` to the query. The union type is controlled by
+[`SqlUnionType`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlUnionType.md):
+`Union`, `UnionAll`, `Intersect`, `IntersectAll`, `Except`, or `ExceptAll`.
+
+After you call `Union`, the current query is cloned as the first part and its
+clauses are cleared, so you continue building the second `SELECT` on the same
+instance:
+
+```csharp
+var query = new SqlQuery()
+    .From("Person")
+    .Select("Firstname")
+    .Where("Age > 18")
+    .Union(SqlUnionType.UnionAll)
+    .From("Person")
+    .Select("Firstname")
+    .Where("Age < 5");
+
+Console.WriteLine(query.ToString());
+```
+
+```sql
+SELECT Firstname FROM Person WHERE Age > 18
+
+UNION ALL
+
+SELECT Firstname FROM Person WHERE Age < 5
+```
+
+## Executing a Query
+
+A `SqlQuery` is not executed until you run it. The
+[`SqlHelper`](../api/dotnet/Serenity.Net.Services/Serenity.Data/SqlHelper.md)
+extensions run it against an `IDbConnection`:
+
+```csharp
+using var connection = sqlConnections.NewFor<PersonRow>();
+
+var query = new SqlQuery()
+    .From("Person")
+    .Select("Firstname", "Surname");
+
+// Read a data reader
+using (var reader = query.ExecuteReader(connection))
+{
+    while (reader.Read())
+        Console.WriteLine(reader.GetString(0));
+}
+
+// Get a single scalar value
+var count = SqlHelper.ExecuteScalar(connection, query);
+```
+
+You can also load results straight into a row using `GetFirst`, `GetSingle`,
+`List`, and `ForEach` from
+[`EntitySqlHelper`](../api/dotnet/Serenity.Net.Services/Serenity.Data/EntitySqlHelper.md).
+To load into a row, pass the row to `From` and select its table fields:
+
+```csharp
+var row = new PersonRow();
+if (new SqlQuery().From(row)
+        .SelectTableFields()
+        .WhereEqual(row.IdField, 5)
+        .GetSingle(connection))
+{
+    // row is now populated
+}
+```
+
+For a boolean "does a row exist" check, use `query.Exists(connection)`.
+
+## Chaining with `.With()`
+
+[`ChainableExtensions.With`](../api/dotnet/Serenity.Net.Services/Serenity/ChainableExtensions.md)
+lets you run an action on the query from the middle of a call chain without
+breaking it. This is handy when you want to apply a helper that modifies the
+query but returns `void`:
+
+```csharp
+void ApplyFilter(SqlQuery query)
+{
+    query.WhereEqual(PersonRow.Fields.Country, "US");
+}
+
+var query = new SqlQuery()
+    .From("Person")
+    .Select("Firstname")
+    .With(ApplyFilter) // returns the same query
+    .OrderBy("Age");
+```
+
+## See Also
+
+- [SQL Data Manipulation](sql-data-manipulation.md) — `SqlInsert`, `SqlUpdate`, `SqlDelete`
+- [Joins & Aliases](joins-aliases.md) — `Alias`, join classes, `CROSS`/`OUTER APPLY`
+- [SQL Helpers & Settings](sql-helpers.md) — the `Sql` expression helper, `SqlSyntax`, `SqlSettings`, `SqlConversions`, `SqlHelper`
+- [SQL Query Utilities](sql-query-utilities.md) — helpers for rewriting SQL expressions
+- [Criteria Objects](criteria.md) — building typed filter conditions
+- [Entity CRUD & Query Helpers](../services/entity-crud.md) — higher-level row helpers
+- [SQL Connections](sql-connections.md) — connections and dialects

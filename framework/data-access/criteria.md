@@ -457,3 +457,47 @@ WHERE
      WHERE 
         od.OrderID = o.OrderID) >= @p4
 ```
+
+## Criteria Object Types
+
+The criteria system is built from a small set of classes that derive from `BaseCriteria`:
+
+- [Criteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/Criteria.md) — a field name or SQL expression (the most common).
+- [ValueCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ValueCriteria.md) — wraps a value; used internally when you compare a field to an inline value (e.g. `field == 5`).
+- [ParamCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ParamCriteria.md) — an explicitly named parameter (`@myparam`).
+- [ConstantCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/ConstantCriteria.md) — a constant value that isn't parameterized.
+- `BinaryCriteria` — combines two criteria with an operator (e.g. `a & b`).
+- `UnaryCriteria` — applies a unary operator (e.g. `!a`, `a.IsNull()`).
+- [FunctionCallCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/FunctionCallCriteria.md) — a function call (e.g. `UPPER(...)`).
+- [UpperFunctionCriteria](../api/dotnet/Serenity.Net.Services/Serenity.Data/UpperFunctionCriteria.md) — an `UPPER(...)` function call.
+
+## CriteriaOperator
+
+[CriteriaOperator](../api/dotnet/Serenity.Net.Services/Serenity.Data/CriteriaOperator.md) is the enum of operators used by criteria: `Paren`, `Not`, `IsNull`, `IsNotNull`, `Exists`, `AND`, `OR`, `XOR`, `EQ`, `NE`, `GT`, `GE`, `LT`, `LE`, `In`, `NotIn`, `Like`, `NotLike`, and others. It's used internally by the criteria classes and by the JSON converter.
+
+## JSON Serialization of Criteria
+
+Criteria objects can be serialized to and from JSON. This is used when a client sends a criteria (e.g. a filter) to a service.
+
+- [JsonCriteriaConverter](../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonCriteriaConverter.md) — serializes/deserializes a `BaseCriteria` to/from a JSON array structure (e.g. `["Field", ">", 5]`).
+- [JsonSafeCriteriaConverter](../api/dotnet/Serenity.Net.Services/Serenity.Data/JsonSafeCriteriaConverter.md) — like the above, but validates the criteria on deserialization for safety.
+
+## Validating User-Provided Criteria
+
+When you accept a criteria from a client (e.g. a filter in a `ListRequest`), you should validate it to prevent SQL injection. [SafeCriteriaValidator](../api/dotnet/Serenity.Net.Services/Serenity.Data/SafeCriteriaValidator.md) does this:
+
+```cs
+var validator = new SafeCriteriaValidator();
+validator.Validate(criteria); // throws ValidationError if unsafe
+```
+
+It checks that:
+
+- Every `Criteria` expression is a valid field name (via `SqlSyntax.IsValidIdentifier`).
+- No `ParamCriteria` is used (parameter criteria are not supported in client-provided criteria).
+
+The `JsonSafeCriteriaConverter` applies this validation automatically when deserializing criteria from JSON.
+
+## BaseCriteriaVisitor
+
+[BaseCriteriaVisitor](../api/dotnet/Serenity.Net.Services/Serenity.Data/BaseCriteriaVisitor.md) is a visitor that walks a criteria tree. It's the base for `SafeCriteriaValidator` and can be used to inspect or transform criteria (e.g. to rewrite field references).

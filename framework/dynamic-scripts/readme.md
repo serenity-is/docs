@@ -37,6 +37,40 @@ The source for the dynamic content can be anything, from a database query; to so
 
 `Expiration` is the duration a dynamic script should be kept in the cache.
 
+### Related Interfaces: `INamedDynamicScript`, `IScriptName`, `IGetScriptData`
+
+A few small interfaces complement `IDynamicScript`:
+
+- [IScriptName](../../api/dotnet/Serenity.Net.Core/Serenity.Web/IScriptName.md) — exposes a `ScriptName` property, the registration name for a dynamic script:
+
+  ```cs
+  public interface IScriptName
+  {
+      string ScriptName { get; }
+  }
+  ```
+
+- [INamedDynamicScript](../../api/dotnet/Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md) — a dynamic script that also provides its own default registration name. It combines `IDynamicScript` and `IScriptName`:
+
+  ```cs
+  public interface INamedDynamicScript : IDynamicScript, IScriptName
+  {
+  }
+  ```
+
+  Scripts implementing this interface can be registered without specifying a name (`Register(INamedDynamicScript)`), whereas others must be registered with an explicit name.
+
+- [IGetScriptData](../../api/dotnet/Serenity.Net.Core/Serenity.Web/IGetScriptData.md) — provides access to the underlying data object of a dynamic script, rather than its rendered script text:
+
+  ```cs
+  public interface IGetScriptData
+  {
+      object GetScriptData();
+  }
+  ```
+
+  This is used by scripts that expose a data object (e.g. lookups) so the manager can retrieve the data directly, for example to serve it as JSON via the `~/DynamicData` route.
+
 ## The `IDynamicScriptManager` Interface
 
 The class implementing [IDynamicScriptManager](../../api/dotnet/Serenity.Net.Web/Serenity.Web/IDynamicScriptManager.md) is the central location for dynamic scripts.

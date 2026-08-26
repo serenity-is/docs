@@ -48,6 +48,28 @@ public interface ITextLocalizer
 
 This is a very simple interface that only has a `TryGet` method which provides the ability to retrieve a translation for the current UI language (`CultureInfo.CurrentUICulture`) by its `text key`.
 
+### DefaultTextLocalizer and TextLocalizerExtensions
+
+The default implementation of `ITextLocalizer` is [DefaultTextLocalizer](../api/dotnet/Serenity.Net.Core/Serenity.Localization/DefaultTextLocalizer.md), which resolves translations from an `ILocalTextRegistry` using the current UI culture:
+
+```cs
+public class DefaultTextLocalizer(ILocalTextRegistry registry) : ITextLocalizer
+{
+    public string? TryGet(string key)
+    {
+        return registry.TryGet(CultureInfo.CurrentUICulture.Name, key, false);
+    }
+}
+```
+
+Because `TryGet` returns `null` when no translation is found, you'll often want the [TextLocalizerExtensions](../api/dotnet/Serenity.Net.Core/Serenity/TextLocalizerExtensions.md) `Get` method, which falls back to returning the key itself:
+
+```cs
+var text = localizer.Get("Dialogs.YesButton"); // returns the translation, or "Dialogs.YesButton" if not found
+```
+
+This is the pattern used throughout Serenity (e.g. `localizer.Get(...)` in handlers and endpoints) to avoid null checks.
+
 ## Local Text Keys
 
 Serenity uses `local text keys` instead of ordinary untranslated texts, as the same string might have different translations depending on the context.
@@ -160,6 +182,33 @@ Let's say we set `en-US` as the language fallback of `en-UK`. If we search for a
 3. en
 4. invariant
 
+### ILanguageFallbacks
+
+The [ILanguageFallbacks](../api/dotnet/Serenity.Net.Core/Serenity.Abstractions/ILanguageFallbacks.md) interface lets a local text registry expose and configure language fallbacks:
+
+```cs
+public interface ILanguageFallbacks
+{
+    IEnumerable<string> GetLanguageFallbacks(string languageID);
+    void SetLanguageFallback(string languageID, string fallbackID);
+}
+```
+
+- `GetLanguageFallbacks(languageID)` returns the fallback language IDs for a language. It returns an empty list for the invariant language; for other languages the last element is always the invariant language ID.
+- `SetLanguageFallback(languageID, fallbackID)` explicitly sets a fallback (e.g. `en-US` as the fallback of `en-UK`).
+
+The `LocalTextRegistry` implements this interface, so you can cast the registry to `ILanguageFallbacks` to configure fallbacks at startup.
+
+### LanguageIdKeyPair
+
+[LanguageIdKeyPair](../api/dotnet/Serenity.Net.Core/Serenity.Localization/LanguageIdKeyPair.md) is a small record that pairs a language ID with a text key:
+
+```cs
+public record struct LanguageIdKeyPair(string LanguageId, string Key);
+```
+
+It is used internally by the localization system (for example, to track pending translations) when a language ID and key need to be treated as a single identity.
+
 ## Initialization of the Local Text System
 
 The default services required by the localization system (the `ILocalTextRegistry` and `ITextLocalizer` implementations) are registered via the [AddTextRegistry](../api/dotnet/Serenity.Net.Core/Serenity.Extensions.DependencyInjection/CoreServiceCollectionExtensions/AddTextRegistry.md) extension. You won't find an explicit call for it in `Startup.cs`, as it is called internally by `AddServiceHandlers` (and `AddDynamicScripts`):
@@ -170,7 +219,7 @@ services.AddServiceHandlers(); // this internally calls AddTextRegistry
 
 Loading the actual translations is handled by the `ILocalTextInitializer` abstraction. The default implementation, `DefaultLocalTextInitializer`, registers:
 
-- **Base texts** — nested local texts, row texts (from `DisplayName` attributes), enumeration texts, permission texts, and property item texts, discovered through the type source.
+- **Base texts** — nested local texts, row texts (from `DisplayName` attributes), enumeration texts, permission texts, property item texts, and navigation item texts, discovered through the type source.
 - **Embedded resource texts** — the JSON translation files under each assembly's `texts/resources` folder, which are compiled into the assemblies as embedded resources (via `AddJsonResourceTexts`).
 - **User texts** — the JSON files under `App_Data/texts`, where the translations made through the *Administration / Translations* page are saved.
 
@@ -185,6 +234,15 @@ app.InitializeLocalTexts();           // runs the initializer against the ILocal
 ```
 
 Unlike the old static `InitializeLocalTexts` method, this is a proper service, so local texts can be re-initialized whenever needed (for example, after editing translations on the *Translations* page), and the behavior can be customized by replacing `ILocalTextInitializer` with your own implementation.
+
+### Automatic Registration Helpers
+
+The base text registration is built from a set of static helper classes in the `Serenity.Localization` namespace, each responsible for one source of local texts. They are called by `DefaultLocalTextInitializer` (via `AddBaseTexts`), but you can also call them directly from a custom initializer:
+
+- [NestedLocalTextRegistration](../api/dotnet/Serenity.Net.Core/Serenity.Localization/NestedLocalTextRegistration.md) — registers texts from `[NestedLocalTexts]` classes.
+- [JsonLocalTextRegistration](../api/dotnet/Serenity.Net.Core/Serenity.Localization/JsonLocalTextRegistration.md) — registers texts from JSON files (embedded resources or a folder).
+- [EnumLocalTextRegistration](../api/dotnet/Serenity.Net.Core/Serenity.Localization/EnumLocalTextRegistration.md) — registers enumeration texts from `[Description]` attributes.
+- [NavigationLocalTextRegistration](../api/dotnet/Serenity.Net.Core/Serenity.Localization/NavigationLocalTextRegistration.md) — registers navigation item titles from `[NavigationItem]` attributes (as `Navigation.<category>/<title>` keys).
 
 ## Registering Translations Manually
 

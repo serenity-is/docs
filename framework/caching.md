@@ -261,6 +261,21 @@ public interface ITwoLevelCache
 }
 ```
 
+## TwoLevelCache Class
+
+[TwoLevelCache](../api/dotnet/Serenity.Net.Core/Serenity/TwoLevelCache.md) is the default implementation of `ITwoLevelCache`. It wraps an `IMemoryCache` and an `IDistributedCache`, and is registered as a singleton by `AddCaching()` (called from `AddServiceHandlers` in `Startup.cs`):
+
+```cs
+services.TryAddSingleton<ITwoLevelCache, TwoLevelCache>();
+```
+
+The class exposes the `Memory` and `Distributed` properties, and two constants used by the two-level caching mechanism:
+
+- `GenerationCacheExpiration` (5 seconds) — how long generation/version keys are cached locally.
+- `GenerationSuffix` (`$Generation$`) — the suffix used for a cached item's generation key.
+
+In practice you normally work with the `ITwoLevelCache` interface and the `TwoLevelCacheExtensions` methods below rather than the concrete class.
+
 ## TwoLevelCacheExtensions Class
 
 The static [TwoLevelCacheExtensions](../api/dotnet/Serenity.Net.Core/Serenity/TwoLevelCacheExtensions.md) class contains extension methods that operate on `ITwoLevelCache` instances and implement what we talked about so far, e.g. synchronization between them and cache invalidation.

@@ -242,3 +242,46 @@ partial class SimpleRow : Row<SimpleRow.RowFields>
     }
 }
 ```
+
+## Entity Contracts
+
+Rows implement a set of interfaces that the services and UI use to work with entities generically. The most important ones:
+
+- [IEntity](../api/dotnet/Serenity.Net.Services/Serenity.Data/IEntity.md) — the base contract; exposes the `Table` name.
+- [IEntityWithJoins](../api/dotnet/Serenity.Net.Services/Serenity.Data/IEntityWithJoins.md) — an entity that also exposes its joins (`IEntity` + `IHaveJoins`).
+- [IRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IRow.md) — the row contract (`IEntityWithJoins` + field access, cloning, assignment tracking, dictionary data). Every row implements this.
+- [IEditableRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/IEditableRow.md) — adds editing support (`IEditableObject`, `INotifyPropertyChanged`, validation errors, change tracking) for desktop apps, grids, and similar scenarios.
+
+```cs
+public interface IEntity
+{
+    string Table { get; }
+}
+
+public interface IRow : IEntityWithJoins
+{
+    IRow CreateNew();
+    IRow CloneRow();
+    RowFieldsBase Fields { get; }
+    void OnFieldSet(Field field);
+    void OnFieldGet(Field field);
+    // ...
+}
+```
+
+These contracts are what allow request handlers, behaviors, and the UI to operate on any row type without knowing its concrete type.
+
+## JSON Serialization of Rows
+
+Rows are JSON serializable, so they can be returned from services directly. Serenity provides a custom JSON converter, [RowJsonConverter](../api/dotnet/Serenity.Net.Services/Serenity.JsonConverters/RowJsonConverter.md), that knows how to serialize and deserialize rows — including only the assigned fields, handling field names, and working with the row's field metadata.
+
+The converter is registered automatically in the `JSON.Defaults` options (see [JSON Serialization](../json.md)), so rows serialize correctly through MVC and the `JSON` helper without extra configuration.
+
+There's also a Newtonsoft.Json version, `Newtonsoft.JsonRowConverter`, used by the legacy `JsonSettings` (compat only).
+
+## See Also
+
+- [Row Fields](row-fields.md)
+- [Mapping](mapping.md)
+- [Field Flags](field-flags.md)
+- [JSON Serialization](../json.md)

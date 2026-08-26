@@ -269,6 +269,7 @@ Each returns the number of affected rows (or the generated id for
 ## See Also
 
 - [Fluent SQL](fluent-sql.md) — building `SELECT` queries with `SqlQuery`
+- [Query Extensions](query-extensions.md) — `Set`, `WhereEqual`, `AddParam` helpers
 - [Criteria Objects](criteria.md) — building typed filter conditions
 - [Entity CRUD & Query Helpers](../services/entity-crud.md) — higher-level row CRUD helpers
 - [SQL Connections](sql-connections.md) — how connections are created and managed

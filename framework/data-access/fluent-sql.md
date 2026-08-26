@@ -852,6 +852,7 @@ var query = new SqlQuery()
 
 - [SQL Data Manipulation](sql-data-manipulation.md) — `SqlInsert`, `SqlUpdate`, `SqlDelete`
 - [Joins & Aliases](joins-aliases.md) — `Alias`, join classes, `CROSS`/`OUTER APPLY`
+- [Query Extensions](query-extensions.md) — typed `Where`, `WhereEqual`, `AddParam`, `Set`
 - [SQL Helpers & Settings](sql-helpers.md) — the `Sql` expression helper, `SqlSyntax`, `SqlSettings`, `SqlConversions`, `SqlHelper`
 - [SQL Query Utilities](sql-query-utilities.md) — helpers for rewriting SQL expressions
 - [Criteria Objects](criteria.md) — building typed filter conditions

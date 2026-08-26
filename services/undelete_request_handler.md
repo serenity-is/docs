@@ -23,6 +23,8 @@ public class UserUndeleteHandler(IRequestContext context)
 
 The class derives from the generic [UndeleteRequestHandler&lt;TRow&gt;](../api/dotnet/Serenity.Net.Services/Serenity.Services/UndeleteRequestHandler-1.md) and [IUndeleteRequestHandler](../api/dotnet/Serenity.Net.Services/Serenity.Services/IUndeleteRequestHandler.md).
 
+> `UndeleteRequestHandler<TRow>` itself derives from the fully generic [UndeleteRequestHandler&lt;TRow, TUndeleteRequest, TUndeleteResponse&gt;](../api/dotnet/Serenity.Net.Services/Serenity.Services/UndeleteRequestHandler-3.md) — the extra arguments let you customize the request and response types if you ever need an undelete handler with a custom request/response.
+
 ## The Service Endpoint
 
 The endpoint exposes a single Undelete action:
@@ -86,5 +88,6 @@ The main overridable methods are:
 
 - [Service Endpoints](service_endpoints.md)
 - [Save Request Handler](save_request_handler.md)
+- [Retrieve Request Handler](retrieve_request_handler.md)
 - [Delete Request Handler](delete_request_handler.md)
 - [Generating Handler Interfaces](generate_interface.md)

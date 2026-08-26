@@ -25,8 +25,8 @@ There are also optional **exception** interfaces for handling errors raised duri
 - [ISaveExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/ISaveExceptionBehavior.md)
 - [IDeleteExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IDeleteExceptionBehavior.md)
 - [IRetrieveExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRetrieveExceptionBehavior.md)
-- `IListExceptionBehavior`
-- `IUndeleteExceptionBehavior`
+- [IListExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListExceptionBehavior.md)
+- [IUndeleteExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IUndeleteExceptionBehavior.md)
 
 These let a behavior inspect an exception raised by the database operation and, for example, translate a foreign-key or primary-key error into a friendlier validation message.
 

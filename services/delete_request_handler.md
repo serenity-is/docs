@@ -21,6 +21,8 @@ public class LanguageDeleteHandler(IRequestContext context)
 
 The class derives from the generic [DeleteRequestHandler&lt;TRow&gt;](../api/dotnet/Serenity.Net.Services/Serenity.Services/DeleteRequestHandler-1.md) and [IDeleteRequestHandler](../api/dotnet/Serenity.Net.Services/Serenity.Services/IDeleteRequestHandler.md).
 
+> `DeleteRequestHandler<TRow>` itself derives from the fully generic [DeleteRequestHandler&lt;TRow, TDeleteRequest, TDeleteResponse&gt;](../api/dotnet/Serenity.Net.Services/Serenity.Services/DeleteRequestHandler-3.md) — the extra arguments let you customize the request and response types if you ever need a delete handler with a custom request/response.
+
 ## The Service Endpoint
 
 The endpoint exposes a single Delete action:
@@ -124,5 +126,6 @@ Behaviors implementing [IDeleteBehavior](../api/dotnet/Serenity.Net.Services/Ser
 
 - [Service Endpoints](service_endpoints.md)
 - [Save Request Handler](save_request_handler.md)
+- [Retrieve Request Handler](retrieve_request_handler.md)
 - [Undelete Request Handler](undelete_request_handler.md)
 - [Generating Handler Interfaces](generate_interface.md)

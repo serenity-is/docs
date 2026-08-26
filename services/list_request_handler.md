@@ -400,3 +400,50 @@ By default, table fields have a select level of *SelectLevel.List* while view fi
 
 *SelectLevel.Never* means never load this field! Use it for fields that shouldn't be sent to client side, like a password hash.
 
+## Handler Type Hierarchy
+
+The generated list handler derives from `ListRequestHandler<TRow>`, which derives from the two-argument [ListRequestHandler&lt;TRow, TListRequest&gt;](../api/dotnet/Serenity.Net.Services/Serenity.Services/ListRequestHandler-2.md), which in turn derives from the fully generic [ListRequestHandler&lt;TRow, TListRequest, TListResponse&gt;](../api/dotnet/Serenity.Net.Services/Serenity.Services/ListRequestHandler-3.md):
+
+```cs
+public class ListRequestHandler<TRow>(IRequestContext context)
+    : ListRequestHandler<TRow, ListRequest, ListResponse<TRow>>(context), IListHandler<TRow>
+    where TRow : class, IRow, new()
+{
+}
+```
+
+The extra generic arguments let you customize the request and response types. For example, `ListRequestHandler<TRow, TListRequest>` uses a custom list request with the standard `ListResponse<TRow>`.
+
+### IListRequestHandler
+
+[`IListRequestHandler`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListRequestHandler.md) is the interface used by list behaviors. It exposes:
+
+- `Row`, `Request`, `Response`, `StateBag`, `Connection`, `Context`
+- `AllowSelectField(field)` — whether a field can be selected (permissions + `SelectLevel.Never`)
+- `ShouldSelectField(field)` — whether a field should be selected based on `ColumnSelection`
+- `IgnoreEqualityFilter(field)` — ignore an equality filter for a field
+
+### IListRequestProcessor
+
+[`IListRequestProcessor`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListRequestProcessor.md) is the abstraction with a `Process(connection, request)` method, used when a handler needs to run a list query without going through the endpoint. `ListRequestHandler<TRow>` implements it.
+
+### IListMapFieldExpressionBehavior
+
+[`IListMapFieldExpressionBehavior`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListMapFieldExpressionBehavior.md) is an optional interface a list behavior can implement to map a field to a custom SQL expression during the query lifecycle. The first behavior that returns a non-null expression wins:
+
+```cs
+public interface IListMapFieldExpressionBehavior
+{
+    string MapFieldExpression(IListRequestHandler handler, SqlQuery query, IField field);
+}
+```
+
+## See Also
+
+- [Service Endpoints](service_endpoints.md)
+- [Save Request Handler](save_request_handler.md)
+- [Retrieve Request Handler](retrieve_request_handler.md)
+- [Delete Request Handler](delete_request_handler.md)
+- [Undelete Request Handler](undelete_request_handler.md)
+- [Service Behaviors](behaviors.md)
+

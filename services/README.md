@@ -6,14 +6,18 @@ Serenity services follow a **request handler** based architecture. When a client
 - [Save Request Handler](save_request_handler.md) — inserts or updates a record
 - [Delete Request Handler](delete_request_handler.md) — deletes a record
 - [Undelete Request Handler](undelete_request_handler.md) — undeletes a soft-deleted record
+- [Retrieve Request Handler](retrieve_request_handler.md) — retrieves a single record by ID
+- [Service Models](service-models.md) — the request/response shapes used by endpoints and client typings
 - [Generating Handler Interfaces](generate_interface.md) — auto-generate handler interfaces with `[GenerateInterface]` (StartSharp)
 - [Custom Request Handlers](custom_request_handlers.md) — write handlers for non-CRUD actions
+- [Request Context](request-context.md) — the `IRequestContext` services passed to handlers and the `BaseRequestHandler` base class
 - [Auto-Registration of Request Handlers](handler_auto_registration.md) — how handlers are registered automatically
 - [Service Behaviors](behaviors.md) — cross-cutting hooks that run for every handler of a matching type
 - [Built-in Service Behaviors](built-in-behaviors.md) — framework behaviors (capture log, localization, master-detail, unique constraints, etc.)
 - [Entity CRUD & Query Helpers](entity-crud.md) — low-level entity CRUD/query extensions on connections
 - [Uploads](upload.md) — file and image uploads (storage, processing, validation, configuration)
-- Retrieve Request Handler — retrieves a single record by ID
+- [Validation](validation.md) — server-side validation of request data (required fields, custom validators, error responses)
+- [Reporting](reporting.md) — server-side reports (HTML/PDF/Excel/CSV), report registry/factory, HTML-to-PDF converters
 
 Each handler type has a corresponding base class (`ListRequestHandler`, `SaveRequestHandler`, `DeleteRequestHandler`, `UndeleteRequestHandler`, `RetrieveRequestHandler`) and a marker interface (`IListRequestHandler`, `ISaveRequestHandler`, etc.) that behaviors use.
 
@@ -45,8 +49,13 @@ The MVC layer that exposes handlers to the client is covered in [Service Endpoin
 ## See Also
 
 - [Service Endpoints](service_endpoints.md)
+- [Service Models](service-models.md)
 - [List Request Handler](list_request_handler.md)
 - [Save Request Handler](save_request_handler.md)
 - [Delete Request Handler](delete_request_handler.md)
 - [Undelete Request Handler](undelete_request_handler.md)
+- [Retrieve Request Handler](retrieve_request_handler.md)
 - [Generating Handler Interfaces](generate_interface.md)
+- [Request Context](request-context.md)
+- [Validation](validation.md)
+- [Reporting](reporting.md)

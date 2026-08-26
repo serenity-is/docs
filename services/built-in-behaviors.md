@@ -45,7 +45,7 @@ See the [Save Request Handler](save_request_handler.md) for how these fields are
 
 ## Capture Log (Audit Trail)
 
-The [CaptureLogAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data/CaptureLogAttribute.md) enables an audit trail: every insert/update/delete is recorded in a separate "capture log" table, including the user and the validity dates, so you can reconstruct the history of a record.
+The [CaptureLogAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data/CaptureLogAttribute.md) enables an audit trail: every insert/update/delete is recorded in a separate "capture log" table, including the user and the validity dates, so you can reconstruct the history of a record. The actual work is done by [CaptureLogBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/CaptureLogBehavior.md), which writes the log entries through an `ICaptureLogHandler`.
 
 Apply it to a row that has a corresponding log row implementing [ICaptureLogRow](../api/dotnet/Serenity.Net.Services/Serenity.Data/ICaptureLogRow.md):
 
@@ -100,7 +100,7 @@ Fields that are localizable are detected by `LocalizablePropertyProcessor`, whic
 
 ## Master-Detail
 
-The [MasterDetailRelationAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/MasterDetailRelationAttribute.md) declares a 1-N relation: the master row has a `List<DetailRow>` property, and the detail rows are inserted/updated/deleted when the master is saved.
+The [MasterDetailRelationAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/MasterDetailRelationAttribute.md) declares a 1-N relation: the master row has a `List<DetailRow>` property, and the detail rows are inserted/updated/deleted when the master is saved. The [MasterDetailRelationBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/MasterDetailRelationBehavior.md) implements this.
 
 The pro-features `MeetingRow` uses it for its attendee list:
 
@@ -117,7 +117,7 @@ public List<MeetingAttendeeRow> AttendeeList { get => fields.AttendeeList[this];
 
 ## Linking Set (Many-to-Many)
 
-The [LinkingSetRelationAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/LinkingSetRelationAttribute.md) declares a many-to-many relation backed by a link table. The field holds a list of item IDs (e.g. `List<int>`), and the behavior syncs the link table when the parent is saved.
+The [LinkingSetRelationAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/LinkingSetRelationAttribute.md) declares a many-to-many relation backed by a link table. The field holds a list of item IDs (e.g. `List<int>`), and the [LinkingSetRelationBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/LinkingSetRelationBehavior.md) syncs the link table when the parent is saved.
 
 The Northwind `CustomerRow` uses it for its representatives:
 
@@ -164,7 +164,7 @@ These are enforced by `UniqueFieldSaveBehavior` (field-level) and `UniqueConstra
 
 ## Updatable Extension
 
-The [UpdatableExtensionAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/UpdatableExtensionAttribute.md) lets you persist fields from a joined detail table. This is useful when a row has a one-to-one extension (e.g. `CustomerDetails`) whose fields are exposed on the row via a join.
+The [UpdatableExtensionAttribute](../api/dotnet/Serenity.Net.Services/Serenity.Data.Mapping/UpdatableExtensionAttribute.md) lets you persist fields from a joined detail table. This is useful when a row has a one-to-one extension (e.g. `CustomerDetails`) whose fields are exposed on the row via a join. The [UpdatableExtensionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/UpdatableExtensionBehavior.md) implements this.
 
 The Northwind `CustomerRow` has a full `CustomerDetails` extension:
 

@@ -53,11 +53,13 @@ All upload editor attributes derive from `BaseUploadEditorAttribute`, which expo
 - `CopyToHistory` — archive the previous file instead of deleting it.
 - `JsonEncodeValue` — multiple editors store the file list as a JSON array.
 
+For multiple uploads, each item in the stored JSON array is an [`UploadedFile`](../api/dotnet/Serenity.Net.Services/Serenity.Services/UploadedFile.md) with `Filename` and `OriginalName`. The `FilenameFormat` pattern is expanded by [UploadFormatting](../api/dotnet/Serenity.Net.Services/Serenity.Web/UploadFormatting.md) (`FormatFilename`), which substitutes the entity ID, group key, random code, date, and original file name.
+
 ## Upload Storage
 
 [IUploadStorage](../api/dotnet/Serenity.Net.Services/Serenity.Web/IUploadStorage.md) abstracts where files live. It provides methods to write, read, delete, and copy files, get file URLs and sizes, and manage file metadata.
 
-The default implementation, `DefaultUploadStorage`, is disk-based and writes files under `App_Data/upload/`. Related implementations include `DiskUploadStorage`, `TempUploadStorage`, and `CombinedUploadStorage`.
+The default implementation, `DefaultUploadStorage`, is disk-based and writes files under `App_Data/upload/`. Related implementations include `DiskUploadStorage`, `TempUploadStorage`, and `CombinedUploadStorage`. `DiskUploadStorage` writes through [PhysicalDiskUploadFileSystem](../api/dotnet/Serenity.Net.Services/Serenity.Web/PhysicalDiskUploadFileSystem.md) (an `IDiskUploadFileSystem` implementation over the physical file system).
 
 [UploadPathHelper](../api/dotnet/Serenity.Net.Services/Serenity.Web/UploadPathHelper.md) contains path utilities (thumbnail names, security checks), and `UploadStorageExtensions` provides helpers such as `CopyTemporaryFile` and `GetThumbnailUrl`.
 
@@ -89,9 +91,11 @@ The pipeline is handled by [IUploadProcessor](../api/dotnet/Serenity.Net.Service
 
 If anything fails, the partially written temporary file is cleaned up and the exception is thrown (so the client shows a validation error).
 
+> The old `UploadProcessor` class is obsolete — inject and use `IUploadProcessor` instead.
+
 ### Image processing
 
-`DefaultImageProcessor` uses `ImageChecker` to validate image content and `ThumbnailGenerator` to create thumbnails. The scaling options (`ScaleWidth`, `ScaleHeight`, `ThumbWidth`, etc.) on the editor attribute control what happens.
+`DefaultImageProcessor` uses `ImageChecker` to validate image content and `ThumbnailGenerator` to create thumbnails. `ImageChecker` returns an [`ImageCheckResult`](../api/dotnet/Serenity.Net.Services/Serenity.Web/ImageCheckResult.md) code describing why an image was rejected (e.g. `InvalidImage`, `WidthTooHigh`, `SizeMismatch`), and [`ImageEncoderParams`](../api/dotnet/Serenity.Net.Services/Serenity.Web/ImageEncoderParams.md) carries the JPEG quality used when encoding. The scaling options (`ScaleWidth`, `ScaleHeight`, `ThumbWidth`, etc.) on the editor attribute control what happens.
 
 ## Configuration
 
@@ -116,6 +120,20 @@ If anything fails, the partially written temporary file is cleaned up and the ex
 ## Deleting and Archiving Files
 
 When a field value changes, `FileUploadBehavior` registers the old file for deletion through `FilesToDelete` (via `UnitOfWork.RegisterFilesToDelete`), so the file is removed only if the transaction commits. If `CopyToHistory` is set, the old file is archived instead of deleted.
+
+`FilesToDelete` implements [IFilesToDelete](../api/dotnet/Serenity.Net.Services/Serenity.Web/IFilesToDelete.md), which tracks new and old files. [FilesToDeleteExtensions](../api/dotnet/Serenity.Net.Services/Serenity.Web/FilesToDeleteExtensions.md) provides `RegisterFilesToDelete`, which hooks the container into the unit of work so old files are deleted on commit and new files on rollback. [FileMetadataKeys](../api/dotnet/Serenity.Net.Services/Serenity.Web/FileMetadataKeys.md) defines the metadata keys stored alongside files (e.g. `OriginalName`, `EntityId`, `ImageSize`).
+
+## Temporary → Permanent Copy
+
+When a row is saved, `FileUploadBehavior` moves the temporary file to its permanent location. The copy is driven by `UploadStorageExtensions.CopyTemporaryFile`, which takes a [`CopyTemporaryFileOptions`](../api/dotnet/Serenity.Net.Services/Serenity.Web/CopyTemporaryFileOptions.md) (the temporary file, the target `FilenameFormat`, and an `IFilesToDelete` container) and returns a [`CopyTemporaryFileResult`](../api/dotnet/Serenity.Net.Services/Serenity.Web/CopyTemporaryFileResult.md) with the new path, original name, thumbnail flag, and file size.
+
+The [`OverwriteOption`](../api/dotnet/Serenity.Net.Services/Serenity.Web/OverwriteOption.md) controls what happens when a file already exists at the target path:
+
+| Value | Behavior |
+| --- | --- |
+| `Disallowed` | Raise an error |
+| `Overwrite` | Overwrite the target file |
+| `AutoRename` | Find a suitable new name for the source file |
 
 ## File Read Access
 

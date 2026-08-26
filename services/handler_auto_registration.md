@@ -53,9 +53,47 @@ services.AddServiceHandlers(customHandlerPredicate: (intf, impl) => intf != impl
 
 [AddProxyRequestHandlers](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/ServiceCollectionExtensions/AddProxyRequestHandlers.md) registers transient proxies that let the DI container resolve the generic handler interfaces like `ICreateHandler<TRow>`, `IUpdateHandler<TRow>`, `IDeleteHandler<TRow>`, `IListHandler<TRow>`, `IRetrieveHandler<TRow>`, and `IUndeleteHandler<TRow>` on demand — even when the concrete handler is only registered for its own specific interface (e.g. `ILanguageSaveHandler`).
 
+> Every handler receives an [`IRequestContext`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRequestContext.md) through its constructor, and the built-in handlers derive from [`BaseRequestHandler`](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseRequestHandler.md). See [Request Context](request-context.md) for what the context provides and how the base class exposes it.
+
+## Handler Registry, Factory & Activator
+
+Beyond DI registration, Serenity has a small pipeline that resolves and creates the *default* handler for a given row type and handler interface at runtime. This is what behaviors like `MasterDetailRelationBehavior` use to save detail rows through their own handlers.
+
+The three pieces are registered by `AddServiceHandlerFactory()`:
+
+| Interface | Default implementation | Role |
+| --- | --- | --- |
+| [`IDefaultHandlerRegistry`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IDefaultHandlerRegistry.md) | [`DefaultHandlerRegistry`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerRegistry.md) | Discovers candidate handler classes from the type source (all concrete types implementing `IRequestHandler`) |
+| [`IDefaultHandlerFactory`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IDefaultHandlerFactory.md) | [`DefaultHandlerFactory`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerFactory.md) | Picks the concrete handler type for a `(rowType, handlerInterface)` pair and caches it |
+| [`IHandlerActivator`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IHandlerActivator.md) | [`DefaultHandlerActivator`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerActivator.md) | Creates an instance of the chosen handler type via the DI container |
+
+`DefaultHandlerFactory.CreateHandler(rowType, handlerInterface)` resolves the handler type like this:
+
+1. Asks the registry for all handler classes assignable to the requested handler interface that also implement `IRequestHandler<TRow>` and are not marked `[DefaultHandler(false)]`.
+2. If exactly one matches, uses it.
+3. If none match, falls back to the interface's [`GenericHandlerTypeAttribute`](../api/dotnet/Serenity.Net.Services/Serenity.Services/GenericHandlerTypeAttribute.md) (e.g. `ISaveRequestHandler` is annotated with `[GenericHandlerType(typeof(SaveRequestHandler<>))]`) and closes the generic over the row type.
+4. If several match, picks the one marked [`[DefaultHandler(true)]`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerAttribute.md); otherwise it throws `InvalidProgramException` telling you to add `[DefaultHandler]`.
+
+The typed helper [`DefaultHandlerFactoryExtensions.CreateHandler<THandler>(rowType)`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerFactoryExtensions.md) wraps this for a specific handler interface:
+
+```cs
+var saveHandler = handlerFactory.CreateHandler<ISaveRequestHandler>(rowType);
+```
+
+### Request & response types
+
+Handler interfaces can declare their request and response types through the marker interfaces [`IRequestType<TRequest>`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRequestType-1.md) and [`IResponseType<TResponse>`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IResponseType-1.md). [`RequestHandlerExtensions`](../api/dotnet/Serenity.Net.Services/Serenity.Services/RequestHandlerExtensions.md) reads them from a handler instance:
+
+- `GetRequestType(handler)` / `GetResponseType(handler)` — reflect the generic arguments.
+- `CreateRequest(handler)` — creates a new request object for the handler (e.g. `ListRequest`, `SaveRequest<TRow>`, `DeleteRequest`, ...).
+
+These are mostly used internally (e.g. by service endpoints to build a request), but you may see them when writing generic code that works with any handler.
+
 ## See Also
 
+- [Request Context](request-context.md)
 - [Custom Request Handlers](custom_request_handlers.md)
 - [Generating Handler Interfaces](generate_interface.md)
+- [Service Behaviors](behaviors.md)
 - [Service Endpoints](service_endpoints.md)
 - [Dependency Injection](../framework/dependency-injection.md)

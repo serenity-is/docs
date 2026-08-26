@@ -156,4 +156,4 @@ public static class PermissionKeys
 - [Dynamic Scripts](dynamic-scripts/readme.md)
 - [Lookups](dynamic-scripts/lookups.md)
 - [Generating Handler Interfaces](../services/generate_interface.md)
-- [Annotation Types](annotation-types.md)
+- [Annotation Types](data-access/annotation-types.md)

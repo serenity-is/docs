@@ -21,7 +21,7 @@ public class OrderForm
 }
 ```
 
-The `[FormScript]` attribute marks the class so that a form script is generated (see [Script Generation](script-generation.md)). Like columns, a form script is a `PropertyItemsScript` that produces a `PropertyItemsData` JSON structure, loaded on the client with `getFormDataAsync("Key")`.
+The `[FormScript]` attribute marks the class so that a form script is generated (see [Script Generation](dynamic-scripts/script-generation.md)). Like columns, a form script is a `PropertyItemsScript` that produces a `PropertyItemsData` JSON structure, loaded on the client with `getFormDataAsync("Key")`.
 
 ## `[BasedOnRow]`
 
@@ -143,7 +143,7 @@ The add-on type and its options are transferred to the `PropertyItem`'s `editorA
 
 ## See Also
 
-- [Script Generation](script-generation.md)
+- [Script Generation](dynamic-scripts/script-generation.md)
 - [Grid Columns](grid-columns.md)
 - [Attributes Reference](../attributes/attributes.md)
 - [Dynamic Scripts](dynamic-scripts/readme.md)

@@ -43,7 +43,7 @@ This is how the property item providers combine attributes from a row, its annot
 
 ## See Also
 
-- [Annotation Types](annotation-types.md)
+- [Annotation Types](data-access/annotation-types.md)
 - [Grid Columns](grid-columns.md)
 - [Forms & Editors](forms-editors.md)
-- [Script Generation](script-generation.md)
+- [Script Generation](dynamic-scripts/script-generation.md)

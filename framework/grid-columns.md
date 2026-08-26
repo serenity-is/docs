@@ -126,7 +126,7 @@ These attributes apply to columns-class properties and set the corresponding `Pr
 
 ## See Also
 
-- [Script Generation](script-generation.md)
+- [Script Generation](dynamic-scripts/script-generation.md)
 - [Dynamic Scripts](dynamic-scripts/readme.md)
 - [Forms & Editors](attributes/attributes.md)
 - [Formatter Types](../grids/formatter_types.md)

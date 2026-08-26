@@ -58,8 +58,6 @@
   * [Localization](framework/localization.md)
   * [Caching](framework/caching.md)
   * [JSON Serialization](framework/json.md)
-  * [Annotation Types](framework/annotation-types.md)
-  * [Script Generation](framework/script-generation.md)
   * [Navigation](framework/navigation.md)
   * [File System](framework/file-system.md)
   * [Common Helpers](framework/common-helpers.md)
@@ -72,6 +70,7 @@
       * [Entity Assignment Tracking](framework/data-access/entity-tracking.md)
       * [Mapping](framework/data-access/mapping.md)
       * [Field Flags](framework/data-access/field-flags.md)
+      * [Annotation Types](framework/data-access/annotation-types.md)
     * [Fluent SQL](framework/data-access/fluent-sql.md)
       * [SQL Data Manipulation](framework/data-access/sql-data-manipulation.md)
       * [Criteria Objects](framework/data-access/criteria.md)
@@ -97,6 +96,7 @@
       * [Antivirus Scan](av.md)
   * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
     * [Lookups](framework/dynamic-scripts/lookups.md)
+    * [Script Generation](framework/dynamic-scripts/script-generation.md)
   * UI
     * Core Functions
       * [Fluent](framework/ui/fluent.md)

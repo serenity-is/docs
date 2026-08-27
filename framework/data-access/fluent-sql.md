@@ -856,5 +856,5 @@ var query = new SqlQuery()
 - [SQL Helpers & Settings](sql-helpers.md) — the `Sql` expression helper, `SqlSyntax`, `SqlSettings`, `SqlConversions`, `SqlHelper`
 - [SQL Query Utilities](sql-query-utilities.md) — helpers for rewriting SQL expressions
 - [Criteria Objects](criteria.md) — building typed filter conditions
-- [Entity CRUD & Query Helpers](../services/entity-crud.md) — higher-level row helpers
+- [Entity CRUD & Query Helpers](entity-crud.md) — higher-level row helpers
 - [SQL Connections](sql-connections.md) — connections and dialects

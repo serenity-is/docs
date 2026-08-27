@@ -19,7 +19,7 @@ These builders are **low level**. They perform no validation, no permission
 check, and do not call any service behaviors or request handlers. When you work
 with entities inside a request handler you will normally use the
 [request handlers](../services/README.md) or the CRUD helpers in
-[Entity CRUD & Query Helpers](../services/entity-crud.md). Reach for the builders
+[Entity CRUD & Query Helpers](entity-crud.md). Reach for the builders
 below when you need to run a bare `INSERT` / `UPDATE` / `DELETE` directly on a
 connection — for example in a migration, a background job, or when you are
 authoring a custom store.
@@ -271,5 +271,5 @@ Each returns the number of affected rows (or the generated id for
 - [Fluent SQL](fluent-sql.md) — building `SELECT` queries with `SqlQuery`
 - [Query Extensions](query-extensions.md) — `Set`, `WhereEqual`, `AddParam` helpers
 - [Criteria Objects](criteria.md) — building typed filter conditions
-- [Entity CRUD & Query Helpers](../services/entity-crud.md) — higher-level row CRUD helpers
+- [Entity CRUD & Query Helpers](entity-crud.md) — higher-level row CRUD helpers
 - [SQL Connections](sql-connections.md) — how connections are created and managed

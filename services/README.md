@@ -14,7 +14,6 @@ Serenity services follow a **request handler** based architecture. When a client
 - [Auto-Registration of Request Handlers](handler_auto_registration.md) — how handlers are registered automatically
 - [Service Behaviors](behaviors.md) — cross-cutting hooks that run for every handler of a matching type
 - [Built-in Service Behaviors](built-in-behaviors.md) — framework behaviors (capture log, localization, master-detail, unique constraints, etc.)
-- [Entity CRUD & Query Helpers](entity-crud.md) — low-level entity CRUD/query extensions on connections
 - [Uploads](upload.md) — file and image uploads (storage, processing, validation, configuration)
 - [Validation](validation.md) — server-side validation of request data (required fields, custom validators, error responses)
 - [Reporting](reporting.md) — server-side reports (HTML/PDF/Excel/CSV), report registry/factory, HTML-to-PDF converters

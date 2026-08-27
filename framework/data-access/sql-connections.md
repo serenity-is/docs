@@ -325,7 +325,7 @@ The `ServiceEndpoint` base class uses everything above automatically: it resolve
 - [SQL Dialects](sql-dialects.md) — the dialect abstraction, built-in dialects, and `SqlSettings`
 - [Fluent SQL](fluent-sql.md) — building `SELECT` queries with `SqlQuery`
 - [Criteria Objects](criteria.md) — building typed filter conditions
-- [Entity CRUD & Query Helpers](../../services/entity-crud.md) — higher-level row helpers
+- [Entity CRUD & Query Helpers](entity-crud.md) — higher-level row helpers
 ```
 
 

@@ -124,9 +124,8 @@
       * [Persisting Settings](grids/persisting_settings.md)
     * Script Classes
       * [Widgets](widgets/README.md)
-      * [ScriptContext Class](widgets/scriptcontext_class.md)
       * [Widget Class](widgets/widget_class.md)
-      * [Widget With Options](widgets/widget_with_options.md)
+      * [PrefixedContext Class](widgets/prefixedcontext_class.md)
   * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
     * [Sergen Commands](sergen/sergen_commands.md)
     * [Schema Provider](sergen/sergen-schema.md)

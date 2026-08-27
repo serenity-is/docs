@@ -48,7 +48,7 @@
     * [Using Serenity Service Behaviors](tutorials/multi_tenancy/using_serenity_service_behaviors.md)
     * [Extending Multi-Tenant Behavior To Movie Sample](tutorials/multi_tenancy/extending_multi-tenant_behavior_to_movie_database_sample.md)
     * [Handling Lookup Scripts](tutorials/multi_tenancy/handling_lookup_scripts.md)
-* Framework Features
+* Backend Framework (.NET)
   * Application Startup
     * [Initialization and Startup](framework/initialization.md)
       * [Node Script Runner](framework/node-script-runner.md)
@@ -116,9 +116,16 @@
       * [Script Generation](framework/dynamic-scripts/script-generation.md)
     * [Script & CSS Bundling](framework/script-bundling.md)
     * [Web Security](framework/security.md)    
-  * UI
+  * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
+    * [Sergen Commands](sergen/sergen_commands.md)
+    * [Schema Provider](sergen/sergen-schema.md)
+* Frontend Framework (TypeScript)
+    * [Overview](framework/ui/readme.md)
     * Core Functions
       * [Fluent](framework/ui/fluent.md)
+      * [Signals and Reactivity](framework/ui/signals.md)
+      * [JSX with DomWise](framework/ui/jsx.md)
+      * [Components and Hooks](framework/ui/components.md)
     * [Grids](grids/readme.md)
       * [Formatter Types](grids/formatter_types.md)
       * [Persisting Settings](grids/persisting_settings.md)
@@ -126,9 +133,6 @@
       * [Widgets](widgets/README.md)
       * [Widget Class](widgets/widget_class.md)
       * [PrefixedContext Class](widgets/prefixedcontext_class.md)
-  * [Code Generator \(Sergen\)](sergen/code_generator_sergen.md)
-    * [Sergen Commands](sergen/sergen_commands.md)
-    * [Schema Provider](sergen/sergen-schema.md)
 * API Reference (.NET)
   * [Serenity.Net.Core](api/dotnet/Serenity.Net.Core/README.md)
   * [Serenity.Net.Services](api/dotnet/Serenity.Net.Services/README.md)

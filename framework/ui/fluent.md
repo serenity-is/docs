@@ -24,6 +24,8 @@ Fluent is a core component of the "@serenity-is/corelib" library, designed to st
 
 Fluent provides multiple ways to create a Fluent instance representing a single HTML element or DOM node. Below are the methods available for creating a Fluent instance:
 
+> **Note:** Creating elements with `Fluent("div")` is primarily intended for porting existing jQuery code. For new code, prefer JSX — it is the recommended way to build DOM in Serenity. In non-TSX files you can still use the JSX factory (`jsx` / `jsxs`) from `@serenity-is/domwise` (re-exported by `@serenity-is/corelib`), see [jsx](../../api/js/domwise/functions/jsx.md).
+
 **Fluent(tagOrElement: string | Element): Fluent<HTMLElement>:**  
   Creates a new Fluent instance with the specified HTML tag name or existing DOM element.
 
@@ -70,6 +72,27 @@ class SomeWidget extends Widget<any> {
 ```
 
 This property (`element`) returns a Fluent instance for the root element of the widget, allowing for easy manipulation using the Fluent API.
+
+#### Getting Widgets from Elements
+
+The `getWidget` and `tryGetWidget` methods retrieve the widget associated with an element. `getWidget` throws if no matching widget is found, while `tryGetWidget` returns `null`:
+
+```typescript
+getWidget<TWidget>(type?: { new(...args: any[]): TWidget }): TWidget;
+tryGetWidget<TWidget>(type?: { new(...args: any[]): TWidget }): TWidget;
+```
+
+```typescript
+import { DateEditor } from "@serenity-is/corelib";
+
+// Throws if the element has no DateEditor widget
+const dateEditor = Fluent.byId("SomeDate").getWidget(DateEditor);
+
+// Returns null if the element has no such widget
+const maybe = Fluent.byId("SomeDate").tryGetWidget(DateEditor);
+```
+
+This is equivalent to the standalone `getWidgetFrom` / `tryGetWidget` helpers, but scoped to the element wrapped by the Fluent instance.
 
 ### Class Manipulation
 
@@ -139,6 +162,45 @@ element.addClass(true); // Does nothing
 element.addClass([condition && "hidden"]); // Adds "hidden" class if the condition is true
 // Adds "hidden" if isHidden is true, "has-item" if the array has length > 0
 element.addClass([isHidden && "hidden", array.length && "has-item" }]); 
+```
+
+#### Checking for a Class
+
+The `hasClass` method checks whether the element has the given class:
+
+```typescript
+hasClass(klass: string): boolean;
+```
+
+```typescript
+if (Fluent.byId("SomeDiv").hasClass("active")) {
+    // ...
+}
+```
+
+### Visibility
+
+Fluent provides `hide`, `show`, `toggle`, and `hidden` methods to control element visibility. These work through the element's `hidden` property (and also handle `display: none` and a `.hidden` class):
+
+```typescript
+hide(): Fluent;
+show(): Fluent;
+toggle(flag?: boolean): Fluent;
+hidden(): boolean;
+hidden(value: boolean): Fluent;
+```
+
+```typescript
+const element = Fluent.byId("SomeDiv");
+
+element.hide();       // hides the element
+element.show();       // shows the element
+element.toggle();     // flips the current visibility
+element.hidden(true); // explicitly hide
+
+if (element.hidden()) {
+    // element is hidden
+}
 ```
 
 ### Attribute Manipulation
@@ -412,6 +474,23 @@ Fluent("div").class("container")
     .append(Fluent("button").text("Click me"))
     .appendTo(document.body);
 ```
+
+### Removing Elements and Attributes
+
+The `remove` method removes the element from the DOM, and `removeAttr` removes a single attribute:
+
+```typescript
+remove(): Fluent;
+removeAttr(name: string): Fluent;
+```
+
+```typescript
+Fluent.byId("SomeDiv").remove();
+Fluent.byId("SomeInput").removeAttr("disabled");
+```
+
+> **Important:** `remove` (and `empty`, described above) does more than just detach nodes. It fires the `disposing` event on the element and its descendants, which disposes any attached Serenity widgets and cleans up event listeners registered through Fluent. Prefer `remove` / `empty` over setting `innerHTML` or calling `removeChild` directly, so widgets and signal subscriptions are disposed properly.
+
 ### Selector Methods
 
 #### children(selector?: string): HTMLElement[]
@@ -838,3 +917,53 @@ const isInputLike = Fluent.isInputLike(element);
 ```
 
 This method checks if the given element is one of the input tags, e.g., input/textarea/select/button, which is similar to jQuery's `:input` selector.
+
+### Other Instance Methods
+
+#### focus()
+
+Sets focus on the element:
+
+```typescript
+focus(): Fluent;
+```
+
+```typescript
+Fluent.byId("SomeInput").focus();
+```
+
+#### click()
+
+Triggers a click event, or attaches a click listener when a callback is provided:
+
+```typescript
+click(): Fluent;
+click(listener: (e: MouseEvent) => void): Fluent;
+```
+
+```typescript
+Fluent.byId("SomeButton").click(() => {
+    // handle click
+});
+```
+
+#### each()
+
+Executes a callback for the element wrapped by the Fluent instance (useful when the instance may be empty):
+
+```typescript
+each(callback: (el: TElement) => void): Fluent;
+```
+
+```typescript
+Fluent.byId("SomeDiv").each(el => {
+    // el is the underlying HTMLElement
+});
+```
+
+## See Also
+
+- [Fluent (interface)](../../api/js/corelib/interfaces/Fluent.md) — the full Fluent API reference.
+- [Fluent (namespace)](../../api/js/corelib/@serenity-is/namespaces/Fluent/README.md) — static Fluent helpers.
+- [Widgets](../../widgets/README.md) — the widget system that Fluent integrates with.
+- [Frontend Framework Overview](readme.md) — the three client-side packages and how they fit together.

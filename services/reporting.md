@@ -70,6 +70,10 @@ var report = reportFactory.Create<CustomerGrossSalesReport>(r => {
 });
 ```
 
+### DefaultReportFactory
+
+[`DefaultReportFactory`](../api/dotnet/Serenity.Net.Web/Serenity.Reporting/DefaultReportFactory.md) is the default `IReportFactory`. Its `Create(reportKey, reportOptions, validatePermission)` looks up the report type in the `IReportRegistry` (optionally validating the report's permission), creates an instance through DI (`ActivatorUtilities.CreateInstance`, so the report's constructor dependencies are resolved from the request services), and populates its properties from the `reportOptions` JSON string via `SetParams` (`JSON.PopulateObject`).
+
 ## Report Registry
 
 [`IReportRegistry`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/IReportRegistry.md) (implemented by [`ReportRegistry`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/ReportRegistry.md)) discovers all `[Report]`-marked types from the type source and groups them by `[Category]`. It also enforces the report's `[RequiredPermission]` — `GetAvailableReportsInCategory` only returns reports the current user can access.
@@ -91,6 +95,18 @@ var report = reportFactory.Create<CustomerGrossSalesReport>(r => {
 - [`[ReportDesign]`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/ReportDesignAttribute.md) — points an HTML report at its CSHTML design file.
 - [`ICustomFileName`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/ICustomFileName.md) / [`ICustomTitle`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/ICustomTitle.md) — customize the output file name / report title.
 - [`IReportCallbackInterceptor`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/IReportCallbackInterceptor.md) — intercepts render callbacks (used for impersonation during report rendering).
+
+### DefaultReportRenderer
+
+[`DefaultReportRenderer`](../api/dotnet/Serenity.Net.Web/Serenity.Reporting/DefaultReportRenderer.md) is the default `IReportRenderer`. Its `Render(report, options)` dispatches based on the report type:
+
+| Report type | Rendered as |
+| --- | --- |
+| `IDataOnlyReport` | Excel (`.xlsx`) via `IDataReportExcelRenderer` |
+| `IExternalReport` | A redirect URI returned by the report's `GetData()` |
+| HTML report (`IReport`) | HTML or PDF depending on `options.ExportFormat` |
+
+For HTML reports, **preview mode** returns the view name and model so the page can render the report in the browser; **HTML export** renders the report's Razor view to a string via `TemplateHelper.RenderViewToString`; and **PDF export** delegates to `IHtmlReportPdfRenderer`. The view name comes from the report's `[ReportDesign]` attribute, and the renderer sets `Printing` and `AdditionalData` view data (from `IReportWithAdditionalData`) so the view can adapt.
 
 ## HTML → PDF
 
@@ -114,6 +130,35 @@ public class OrderDetailReport(ISqlConnections sqlConnections) : IReport, ICusto
 ```
 
 The open-source framework ships a WKHTML-to-PDF converter (`WKHtmlToPdfConverter`), registered by `AddHtmlToPdf()` (part of `AddReporting()`). The [`[UseWKHtmlToPdf]`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/UseWKHtmlToPdfAttribute.md) attribute (and the obsolete `[UseChromeHtmlToPdf]`) lets a report opt into a specific converter.
+
+### WKHtmlToPdf
+
+[`WKHtmlToPdf`](../api/dotnet/Serenity.Net.Web/Serenity.Reporting/WKHtmlToPdf.md) is the converter class. It implements `IHtmlToPdfOptions` and its `Execute()` method resolves the `ExecutablePath`, builds the wkhtmltopdf command-line arguments from the options (page size/width/height, margins, orientation, DPI, zoom, print media type, background, header/footer HTML, cookies, footer/header replacements, local file access, custom args), runs the process (up to `TimeoutSeconds`, default 300), and reads the generated PDF from a temporary file.
+
+### WKHtmlToPdfConverter
+
+[`WKHtmlToPdfConverter`](../api/dotnet/Serenity.Net.Web/Serenity.Reporting/WKHtmlToPdfConverter.md) is the [`IWKHtmlToPdfConverter`](../api/dotnet/Serenity.Net.Services/Serenity.Reporting/IWKHtmlToPdfConverter.md) implementation registered by `AddHtmlToPdf()`. Its `Convert(options)` method creates a `WKHtmlToPdf` with the resolved executable path and executes it. `GetExecutablePath()` locates the `wkhtmltopdf` executable by checking, in order: the `WKHtmlToPdf:ExecutablePath` setting, the Serenity assembly directory, the web content root / `App_Data/Reporting` / `bin` folders, and the system `PATH`.
+
+### WKHtmlToPdfSettings
+
+[`WKHtmlToPdfSettings`](../api/dotnet/Serenity.Net.Web/Serenity.Reporting/WKHtmlToPdfSettings.md) holds the configuration, bound from the `WKHtmlToPdf` section:
+
+```json
+{
+  "WKHtmlToPdf": {
+    "ExecutablePath": "C:\\Tools\\wkhtmltopdf.exe"
+  }
+}
+```
+
+### Setting Up wkhtmltopdf
+
+To use WKHTML-to-PDF you need the `wkhtmltopdf` executable on the server:
+
+1. Download a stable build for your platform from [wkhtmltopdf.org](https://wkhtmltopdf.org/downloads.html).
+2. Place it somewhere the converter can find it — e.g. `App_Data/Reporting/`, the `bin` folder, or on the system `PATH` — or set `WKHtmlToPdf:ExecutablePath` explicitly.
+
+> **Note:** StartSharp ships with the **Puppeteer** HTML-to-PDF converter instead, which uses a headless browser and is registered before `AddReporting()` so it wins over the WKHTML converter (see the Puppeteer section below).
 
 ## The Report Callback Mechanism
 

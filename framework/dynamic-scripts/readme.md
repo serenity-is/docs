@@ -97,6 +97,31 @@ While `GetScriptText` directly returns the content as text, `ReadScriptContent` 
 
 The default implementation for `IDynamicScriptManager` is registered in `Startup.cs` via the `services.AddDynamicScripts()` call.
 
+### The DynamicScriptManager Implementation
+
+[`DynamicScriptManager`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/DynamicScriptManager.md) is the default `IDynamicScriptManager`. It keeps a dictionary of registered scripts and caches each script's generated content through the two-level cache (`ITwoLevelCache`), keyed by `DynamicScript:<name>` (or `DynamicData:<name>` for JSON). It also tracks the last change time of each script so that calling `Changed(name)` (or `Reset()`) invalidates the cached content.
+
+Besides `Register`, `GetScriptText`, and `ReadScriptContent`, it provides:
+
+- `GetScriptInclude(name, extension)` — returns the `~/DynJS.axd/<name><extension>?v=<hash>` URL for a script, using a cached hash without executing the script.
+- `PeekScriptHash(name, script)` — returns the cached hash for a script (or a fresh one) without generating its content.
+- `GetRegisteredScripts()` / `GetRegisteredScriptNames()` — the registered script names and their hashes.
+- `IfNotRegistered(name, callback)` — registers a script only if it isn't already (used for lazily registered scripts like local texts).
+- `CheckScriptRights(name)` — runs a script's `CheckRights` against the current user.
+- `Changed(name)` / `Reset()` — mark scripts as changed so their cached content is regenerated.
+
+The manager automatically registers a `RegisteredScripts` script on construction (see below).
+
+### ScriptContent and ICacheSuffix
+
+[`ScriptContent`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/ScriptContent.md) is the default `IScriptContent` returned by `ReadScriptContent`. It holds the generated content as a byte array plus:
+
+- `Time` — the generation time (used for `Last-Modified` / `If-Modified-Since`).
+- `Hash` — an MD5 hash of the content, base64-url-encoded (used for the `?v=` version parameter).
+- `CanCompress` / `CompressedContent` / `BrotliContent` — lazily produced GZip and Brotli compressed versions, served when the client advertises the corresponding `Accept-Encoding`.
+
+[`ICacheSuffix`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/ICacheSuffix.md) lets a script add a suffix to its cache key. This is how a script can produce different cached content per parameter without being re-executed on every request — for example, `LocalTextDataScript` uses `languageId:packageId` as its suffix so each language/package combination is cached separately.
+
 ## Dynamic Script Types
 
 There is a bunch of dynamic script types including but not limited to:
@@ -171,6 +196,55 @@ public class MyDataScript : DataScript<MyData>
 - `FormScript` registers under `Form.<name>`.
 
 `PropertyItemsScript.Compact` generates a compact, minified representation of the property items used by the client to reduce payload size.
+
+### `LookupScript` and `RowLookupScript`
+
+[`LookupScript`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/LookupScript.md) is the abstract base class for lookup scripts. It implements `INamedDynamicScript` and `IGetScriptData`, and its script name is `Lookup.<LookupKey>`. It exposes `IdField`, `TextField`, and `ParentIdField` (for tree lookups) plus a `LookupParams` dictionary, and requires you to implement `GetItems()` returning the item list. Its `GetScript()` emits a `Serenity.setScriptData(...)` call that constructs a client-side `Lookup` object.
+
+[`RowLookupScript<TRow>`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/RowLookupScript-1/RowLookupScript.md) is the generic implementation for rows. It:
+
+- Reads `IdField`, `TextField`, and `ParentIdField` from the row's `IdProperty` / `NameProperty` / `IParentIdRow`.
+- Uses the row's `[ReadPermission]` as the script permission.
+- Uses the row fields' `GenerationKey` as the `GroupKey`, so the lookup is invalidated when the row schema changes.
+- `PrepareQuery` selects the ID, name, and any `[LookupInclude]` fields; `ApplyOrder` orders by the name (or ID) field.
+
+This is the base class used by auto-generated row lookups and by custom lookups like `LanguageLookup`. See [Lookup Scripts](lookups.md) for the full lookup topic.
+
+### `DistinctValuesScript`
+
+[`DistinctValuesScript<TRow>`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/DistinctValuesScript-1/DistinctValuesScript.md) is a `LookupScript` subclass that returns the distinct values of a single row field. It is created automatically for properties marked with `[DistinctValuesEditor]` (see `DistinctValuesRegistration` below) and registers under a key like `Distinct.<LocalTextPrefix>.<PropertyName>`. Its items are `{ v: <value> }` objects, so both `IdField` and `TextField` are `v`.
+
+### `LocalTextScript` and `LocalTextDataScript`
+
+[`LocalTextScript`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/LocalTextScript.md) is the dynamic script behind the `@Html.LocalTextScript(package)` helper. It implements `INamedDynamicScript` and registers under `LocalText.<package>.<languageId>.<Public|Pending>`. It serializes the local texts matching a package's include pattern as a nested JSON object. `GetScriptName` and `GetLocalTextPackageScript` are static helpers for building the name/content.
+
+[`LocalTextDataScript`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/LocalTextDataScript.md) is a `[DataScript("LocalText")]` that serves local texts as JSON via `~/DynamicData` for external clients (e.g. mobile apps). It implements `ICacheSuffix` with `languageId:packageId` so each language/package is cached separately, and reads the `lang` and `pack` query parameters (defaulting to the current UI culture and the `Site` package).
+
+### `RegisteredScripts`
+
+[`RegisteredScripts`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/RegisteredScripts.md) is a dynamic script (registered automatically by `DynamicScriptManager`) whose data is a dictionary of every registered script name to its current hash. The client uses it to detect which dynamic scripts have changed and need to be reloaded. It is rendered into the page by the layout (see the `RegisteredScripts` JSON element in `_LayoutHead.cshtml`).
+
+## Registration Helpers
+
+Dynamic scripts are discovered and registered from the type source. The registration entry point is [`DynamicScriptServiceCollectionExtensions`](../../api/dotnet/Serenity.Net.Web/Serenity.Extensions.DependencyInjection/DynamicScriptServiceCollectionExtensions.md):
+
+- `AddDynamicScripts()` — registers `IDynamicScriptManager` (via `AddDynamicScriptManager`) plus `IPropertyItemProvider`. This is what the templates call in `Startup.cs`.
+- `AddDynamicScriptManager()` — registers `IDynamicScriptManager` (plus caching and the text registry).
+- `AddFileWatcherFactory()` — registers `IFileWatcherFactory` (used by bundling and content-hash caching).
+
+The actual registration of individual script types is done by helper classes that scan the type source:
+
+- [`DataScriptRegistration`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/DataScriptRegistration.md) — `RegisterDataScripts` creates and registers an instance for every type carrying `[DataScript]`.
+- [`LookupScriptRegistration`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/LookupScriptRegistration.md) — `RegisterLookupScripts` creates a `RowLookupScript<>` for row types with `[LookupScript]` (or a custom `LookupScript` subclass), sets the lookup key, permission, and expiration, and throws on duplicate keys.
+- [`DistinctValuesRegistration`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/DistinctValuesRegistration.md) — `RegisterDistinctValueScripts` scans `[DistinctValuesEditor]` on rows/forms/columns and creates the corresponding `DistinctValuesScript<>`.
+- [`ColumnsScriptRegistration`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/ColumnsScriptRegistration.md) — `RegisterColumnsScripts` registers a `ColumnsScript` for every `[ColumnsScript]` type, plus a `ColumnsBundle` concatenated script.
+- [`FormScriptRegistration`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/FormScriptRegistration.md) — `RegisterFormScripts` registers a `FormScript` for every `[FormScript]` type, plus a `FormBundle` concatenated script.
+
+Two related types live in the same source area: [`EmailEditorAttribute`](../../api/dotnet/Serenity.Net.Web/Serenity.ComponentModel/EmailEditorAttribute.md) is an editor attribute that also implements `ICustomValidator` (see [Validation](../../services/validation.md)), and `ICustomizedFormScript` is an obsolete interface — use `ICustomizePropertyItems` instead.
+
+## BaseDynamicDataGenerator
+
+[`BaseDynamicDataGenerator`](../../api/dotnet/Serenity.Net.Web/Serenity.Web/BaseDynamicDataGenerator.md) is a base class for generating `.json` files under a `dynamic-data` folder, containing the JSON data of every registered dynamic script. It is used for script testing purposes (e.g. to inspect lookup/columns/form data without a running site). Its `Run()` method builds a service provider, initializes the scripts, and writes each script's JSON data to `dynamic-data/<name>.json`; `RunAndExitIf(args)` runs it when the command line contains `dynamic-data`. `ShouldSkipScript` excludes the bundle and `RegisteredScripts` scripts by default.
 
 ## Dynamic Scripts Versus Services/Actions
 

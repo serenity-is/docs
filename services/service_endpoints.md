@@ -323,3 +323,211 @@ You may not be able to reuse any code you wrote inside an action from a desktop 
 But if you don't have such a requirement, even though not recommended, you could remove handlers altogether and write all your code inside the endpoint.
 
 Some people might argue that entities, repositories, business rules, endpoints, etc., should all be in their isolated assemblies. In theory, and for some scenarios, this might be valid, but some (or most) users don't need so much isolation and may fall into the YAGNI (You Aren't Gonna Need It) category.
+
+---
+
+## How ServiceEndpoint Works Under the Hood
+
+The `ServiceEndpoint` base class is an ASP.NET Core controller that implements `IActionFilter` / `IAsyncActionFilter`. It uses these filters to automate the connection, transaction, and result-wrapping steps described above. Understanding this lifecycle helps you know exactly what happens on every request.
+
+### OnActionExecuting — creating the connection / unit of work
+
+Before your action runs, `ServiceEndpoint` inspects the action's parameters:
+
+- If the action has an `IUnitOfWork` parameter, it reads the `[ConnectionKey]` attribute from the endpoint class, creates a connection via `ISqlConnections.NewByKey()`, and wraps it in a `UnitOfWork`. The unit of work is placed into the action's arguments.
+- If the action has an `IDbConnection` parameter (and no `IUnitOfWork`), it creates a connection the same way and passes it in.
+
+Both parameters are bound by a special *null model binder* — they are never deserialized from the request body. The `ServiceEndpointBindingMetadataProvider` marks `IDbConnection` and `IUnitOfWork` as not bindable from the request, and `ServiceEndpointNullModelBinder` supplies the value that `OnActionExecuting` set.
+
+### OnActionExecuted — committing / disposing
+
+After your action returns:
+
+- If a `UnitOfWork` was created and the action did **not** throw, it is committed. If the action threw an exception, the unit of work is disposed (rolled back) instead.
+- The connection is disposed.
+- The action's return value is wrapped in a `Result<TResponse>` so it can be serialized as JSON.
+
+This is why a `ServiceEndpoint` action can return a plain `ServiceResponse`-derived object instead of an `IActionResult`.
+
+### Transaction settings
+
+By default the unit of work uses the isolation level and defer-start behavior configured in the `TransactionSettings` section of `appsettings.json`:
+
+```json
+{
+  "TransactionSettings": {
+    "IsolationLevel": "ReadCommitted",
+    "DeferStart": false
+  }
+}
+```
+
+You can override these per action (or per endpoint) with the `[TransactionSettings]` attribute:
+
+```csharp
+[TransactionSettings(IsolationLevel.Serializable)]
+public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request,
+    [FromServices] IUserSaveHandler handler)
+{
+    return handler.Create(uow, request);
+}
+```
+
+`DeferStart` delays starting the transaction until the connection is actually used, which can help in some scenarios but has side effects, so use it with care.
+
+## Model Binding & Action Conventions
+
+Serenity wires up the special handling of `IDbConnection`, `IUnitOfWork`, and `ServiceRequest` parameters through ASP.NET Core's application-model conventions. You don't normally need to touch these, but knowing them explains why endpoints "just work."
+
+- `ServiceEndpointApplicationModelProvider` — an `IApplicationModelProvider` that runs early (before attribute routing) and applies the action conventions to every controller deriving from `ServiceEndpoint`.
+- `ServiceEndpointActionModelConvention` — for each action parameter:
+  - If the parameter type derives from `ServiceRequest`, it adds a `[JsonRequest]` filter (if not already present) and binds the parameter from the request **body**.
+  - If the parameter is an `IDbConnection` or `IUnitOfWork`, it binds it with the null model binder (the value is supplied by `ServiceEndpoint` itself).
+- `ServiceEndpointBindingMetadataProvider` — marks `IDbConnection` / `IUnitOfWork` as not bindable from the request.
+- `ServiceEndpointModelBinderProvider` / `ServiceEndpointNullModelBinder` — the binder that returns `null` for these interface arguments (the real value is injected by the action filter).
+
+### The [JsonRequest] filter
+
+The `JsonRequestAttribute` action filter deserializes the request body into your single `ServiceRequest`-derived parameter. It:
+
+- Reads the body as JSON for `POST` / `PUT` requests with an `application/json` content type.
+- Falls back to reading the request from a form field or query string parameter (useful for GET requests or form posts).
+- Uses `JSON.Defaults.Strict` for deserialization (see [JSON Serialization](../framework/json.md)).
+
+Because the convention adds this filter automatically, you rarely write `[JsonRequest]` yourself — it is applied to any `ServiceEndpoint` action that takes a `ServiceRequest` parameter.
+
+## Registering Service Endpoints
+
+In `Startup.cs`, service endpoints are enabled alongside MVC:
+
+```csharp
+services.AddControllersWithViews(options =>
+{
+    options.Filters.Add<AutoValidateAntiforgeryIgnoreBearerAttribute>();
+    options.Filters.Add<AntiforgeryCookieResultFilterAttribute>();
+});
+
+services.AddServiceEndpointConventions();
+```
+
+`AddServiceEndpointConventions()` (from `ServiceEndpointServiceCollectionExtensions`) registers the `ServiceEndpointApplicationModelProvider` and the `ServiceEndpointBindingMetadataProvider` so the conventions above are applied. It is what makes `ServiceEndpoint`-derived controllers behave as service endpoints.
+
+## Declarative Authorization on Endpoints & Actions
+
+The topic map's authorization attributes all derive from `ServiceAuthorizeAttribute`, which is an `IResourceFilter` that runs before the action. It returns a *service error* (rather than redirecting) when the user is not authorized, which is the right behavior for JSON services.
+
+### ServiceAuthorizeAttribute
+
+- `[ServiceAuthorize()]` — requires the user to be logged in.
+- `[ServiceAuthorize("SomePermission")]` — requires the user to be logged in **and** have the permission.
+- `[ServiceAuthorize(typeof(MyRow))]` — derives the permission key from the row's `[ReadPermission]` attribute.
+- `[ServiceAuthorize("Module", "Permission")]` / `[ServiceAuthorize("Module", "SubModule", "Permission")]` — build a `module:permission` or `module:submodule:permission` key.
+- Special keys: `?` checks for a logged-in user, `*` allows anyone (including anonymous).
+
+When authorization fails, `ServiceAuthorize` returns a `ServiceResponse` with an `Error` whose code is `AccessDenied` (logged in) or `NotLoggedIn` (anonymous), and sets the HTTP status to 400.
+
+Two additional members are worth knowing:
+
+- `OrPermission` — an optional secondary permission checked with OR. If the user lacks the primary permission but has `OrPermission`, access is allowed.
+- `Override` — when `true` (the default), an action-level `ServiceAuthorize` overrides the controller-level one. This lets you tighten or loosen a single action relative to the class.
+
+### Per-operation attributes
+
+The specialized attributes read the appropriate permission attribute from the row type (first one found, in order):
+
+| Attribute | Permission attributes checked (in order) |
+| --- | --- |
+| `AuthorizeCreateAttribute` | `[InsertPermission]`, `[ModifyPermission]`, `[ReadPermission]` |
+| `AuthorizeUpdateAttribute` | `[UpdatePermission]`, `[ModifyPermission]`, `[ReadPermission]` |
+| `AuthorizeDeleteAttribute` | `[DeletePermission]`, `[ModifyPermission]`, `[ReadPermission]` |
+| `AuthorizeRetrieveAttribute` | `[ReadPermission]` |
+| `AuthorizeListAttribute` | `[ReadPermission]`, plus an OR permission from `[ServiceLookupPermission]` if present |
+
+For example:
+
+```csharp
+[HttpPost, AuthorizeCreate(typeof(MyRow))]
+public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request,
+    [FromServices] IUserSaveHandler handler)
+{
+    return handler.Create(uow, request);
+}
+```
+
+`AuthorizeList` is special: it also allows *lookup mode* access. If the row has a `[ServiceLookupPermission]`, a user with that permission can list records even without the read permission (used for lookup editors).
+
+### PageAuthorizeAttribute
+
+`[PageAuthorize]` is the page/controller counterpart. It behaves like `ServiceAuthorize` but, on failure, issues a `ChallengeResult` (redirect to login) for anonymous users or a `ForbidResult` for logged-in users without the permission. It is used on MVC pages (Razor views) rather than service endpoints, where a redirect is appropriate. When given a row type, it reads `[NavigationPermission]` then `[ReadPermission]`.
+
+## Exception Handling
+
+`ServiceEndpoint` is decorated with `[HandleServiceException]`, an exception filter that converts any unhandled exception into a `ServiceResponse` with an `Error` property and the appropriate HTTP status code:
+
+- `ValidationError` → HTTP 400, with the error code and arguments.
+- Any other exception → HTTP 500, with code `Exception`.
+
+The conversion is done by `EndpointExtensions.ConvertToResponse<TResponse>()`. In a **development** environment (or for non-sensitive exceptions), the exception message is included; otherwise a generic localized message is used. `ValidationError` details are included only in development.
+
+`HandleControllerExceptionAttribute` is the equivalent for regular MVC controllers: it converts the exception and renders the `~/Views/Errors/ValidationError.cshtml` view instead of returning JSON.
+
+### EndpointExtensions helpers
+
+`EndpointExtensions` provides helpers for writing endpoint actions that don't rely on the automatic connection/transaction handling:
+
+- `ExecuteMethod<TResponse>()` / `ExecuteMethodAsync<TResponse>()` — run a callback and convert any exception to a service response.
+- `UseConnection<TResponse>(connectionKey, handler)` — open a connection, run the callback, and convert exceptions.
+- `InTransaction<TResponse>(connectionKey, handler)` — open a connection and unit of work, run the callback, commit, and convert exceptions.
+
+These are useful when you need to control the connection/transaction explicitly (e.g. a custom connection key or dynamic connection) while still getting the standard error-to-response conversion.
+
+## Result Helpers
+
+Service endpoints return plain objects, but the framework provides a few result types for special cases:
+
+- `Result<TResponse>` — wraps a `TResponse` and serializes it as JSON using `JSON.Defaults.Strict`. This is what `ServiceEndpoint` produces automatically for your action's return value.
+- `ResultWithStatus<TResponse>` — like `Result<TResponse>` but also sets an explicit HTTP status code (used by the exception filter for 400/500 responses).
+- `ExcelContentResult.Create(byte[] data, string downloadName)` — creates a `FileContentResult` that serves an `.xlsx` file with the correct MIME type and a download name (defaults to `report<timestamp>.xlsx`). Useful for export endpoints.
+
+## Antiforgery (CSRF) Handling
+
+Serenity's service endpoints are protected against cross-site request forgery. In `Startup.cs`, two global filters are registered:
+
+```csharp
+services.AddControllersWithViews(options =>
+{
+    options.Filters.Add<AutoValidateAntiforgeryIgnoreBearerAttribute>();
+    options.Filters.Add<AntiforgeryCookieResultFilterAttribute>();
+});
+```
+
+- `AutoValidateAntiforgeryIgnoreBearerAttribute` — validates the antiforgery token for all unsafe HTTP methods (anything other than GET, HEAD, OPTIONS, TRACE). It **skips** validation when:
+  - The request uses a `Bearer` authorization header and has no cookie (e.g. JWT/API clients), or
+  - The request carries the skip header configured in `AntiforgeryFilterOptions` (default header `X-CSRF-SKIP: true`).
+- `AntiforgeryCookieResultFilterAttribute` — on view results, stores the antiforgery request token in a `CSRF-TOKEN` cookie (HttpOnly = false) so client-side AJAX code can read it and send it back as the `X-CSRF-TOKEN` header (matching `services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN")`).
+
+`AntiforgeryFilterOptions` (section key `AntiforgeryFilter`) lets you customize the skip header name/value.
+
+## Feature Barriers
+
+`FeatureBarrierAttribute` lets you gate an endpoint action (or an entire controller) behind one or more feature toggles. It is an `IActionConstraint` that returns 404 (or excludes the action from routing) when the required feature is disabled:
+
+```csharp
+[FeatureBarrier("MyFeature")]
+public class MyEndpoint : ServiceEndpoint
+{
+    // ...
+}
+```
+
+If no `IFeatureToggles` service is registered, the barrier always passes. See [Feature Toggles](../framework/feature-toggles.md) for how features are defined and enabled.
+
+## See Also
+
+- [Service Models](service-models.md) — the request/response base classes (`ServiceRequest`, `ServiceResponse`)
+- [Request Context](request-context.md) — the `IRequestContext` services exposed by `ServiceEndpoint.Context`
+- [Auto-Registration of Request Handlers](handler_auto_registration.md) — how handlers are registered via `AddServiceHandlers()`
+- [Custom Request Handlers](custom_request_handlers.md) — writing non-CRUD service actions
+- [JSON Serialization](../framework/json.md) — `JSON.Defaults` and request/response serialization
+- [Feature Toggles](../framework/feature-toggles.md) — `FeatureBarrierAttribute` and feature definitions
+- [Initialization and Startup](../framework/initialization.md) — `AddServiceHandlers()`, `AddDynamicScripts()`, and other startup registrations

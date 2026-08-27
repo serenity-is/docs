@@ -61,6 +61,8 @@ For multiple uploads, each item in the stored JSON array is an [`UploadedFile`](
 
 The default implementation, `DefaultUploadStorage`, is disk-based and writes files under `App_Data/upload/`. Related implementations include `DiskUploadStorage`, `TempUploadStorage`, and `CombinedUploadStorage`. `DiskUploadStorage` writes through [PhysicalDiskUploadFileSystem](../api/dotnet/Serenity.Net.Services/Serenity.Web/PhysicalDiskUploadFileSystem.md) (an `IDiskUploadFileSystem` implementation over the physical file system).
 
+`DefaultUploadStorage` itself is a `CombinedUploadStorage` of two `DiskUploadStorage` instances: a **permanent** storage rooted at `UploadSettings.Path` (default `App_Data/upload/`) served at `UploadSettings.Url` (default `/upload/`), and a **temporary** storage under `<path>/temporary` served at `<url>/temporary/`. The temporary prefix is what lets the framework distinguish temporary files (from the upload editor) from permanent ones, and is what `FileUploadBehavior` checks before copying a file into place.
+
 [UploadPathHelper](../api/dotnet/Serenity.Net.Services/Serenity.Web/UploadPathHelper.md) contains path utilities (thumbnail names, security checks), and `UploadStorageExtensions` provides helpers such as `CopyTemporaryFile` and `GetThumbnailUrl`.
 
 Storage is registered by `AddUploadStorage()`:
@@ -119,13 +121,13 @@ If anything fails, the partially written temporary file is cleaned up and the ex
 
 ## Deleting and Archiving Files
 
-When a field value changes, `FileUploadBehavior` registers the old file for deletion through `FilesToDelete` (via `UnitOfWork.RegisterFilesToDelete`), so the file is removed only if the transaction commits. If `CopyToHistory` is set, the old file is archived instead of deleted.
+When a field value changes, `FileUploadBehavior` registers the old file for deletion through `FilesToDelete` (via `UnitOfWork.RegisterFilesToDelete`), so the file is removed only if the transaction commits. If `CopyToHistory` is set, the old file is archived instead of deleted. The same happens on row delete (`OnAfterDelete`), unless the row uses soft delete.
 
 `FilesToDelete` implements [IFilesToDelete](../api/dotnet/Serenity.Net.Services/Serenity.Web/IFilesToDelete.md), which tracks new and old files. [FilesToDeleteExtensions](../api/dotnet/Serenity.Net.Services/Serenity.Web/FilesToDeleteExtensions.md) provides `RegisterFilesToDelete`, which hooks the container into the unit of work so old files are deleted on commit and new files on rollback. [FileMetadataKeys](../api/dotnet/Serenity.Net.Services/Serenity.Web/FileMetadataKeys.md) defines the metadata keys stored alongside files (e.g. `OriginalName`, `EntityId`, `ImageSize`).
 
 ## Temporary → Permanent Copy
 
-When a row is saved, `FileUploadBehavior` moves the temporary file to its permanent location. The copy is driven by `UploadStorageExtensions.CopyTemporaryFile`, which takes a [`CopyTemporaryFileOptions`](../api/dotnet/Serenity.Net.Services/Serenity.Web/CopyTemporaryFileOptions.md) (the temporary file, the target `FilenameFormat`, and an `IFilesToDelete` container) and returns a [`CopyTemporaryFileResult`](../api/dotnet/Serenity.Net.Services/Serenity.Web/CopyTemporaryFileResult.md) with the new path, original name, thumbnail flag, and file size.
+When a row is saved, `FileUploadBehavior` moves the temporary file to its permanent location. The copy is driven by `UploadStorageExtensions.CopyTemporaryFile`, which takes a [`CopyTemporaryFileOptions`](../api/dotnet/Serenity.Net.Services/Serenity.Web/CopyTemporaryFileOptions.md) (the temporary file, the target `FilenameFormat`, and an `IFilesToDelete` container) and returns a [`CopyTemporaryFileResult`](../api/dotnet/Serenity.Net.Services/Serenity.Web/CopyTemporaryFileResult.md) with the new path, original name, thumbnail flag, and file size. `FileUploadBehavior` also writes file metadata (entity table, type, field, property, and ID) via `SetFileMetadata`.
 
 The [`OverwriteOption`](../api/dotnet/Serenity.Net.Services/Serenity.Web/OverwriteOption.md) controls what happens when a file already exists at the target path:
 
@@ -183,6 +185,61 @@ public string UserImage { get; set; }
 - `PathPermissions` — regex patterns for paths and their permissions, evaluated in order (default allows public access to `public/` and `temporary/`).
 - `EnableAccessLogging` — log access control decisions for debugging.
 - `ReturnForbidResult` — return a 403 instead of the default 404 when access is denied.
+
+## Serving Uploaded Files
+
+Uploaded files are served through an `IUploadFileResponder`, which reads a file from the upload storage and writes it to the HTTP response.
+
+### IUploadFileResponder
+
+[IUploadFileResponder](../api/dotnet/Serenity.Net.Web/Serenity.Web/IUploadFileResponder.md) is the abstraction for reading a file via the `/upload/{path}` route:
+
+```cs
+public interface IUploadFileResponder
+{
+    IActionResult Read(string pathInfo, IHeaderDictionary responseHeaders);
+}
+```
+
+It takes the path from the URL and the response headers, and returns an `IActionResult` based on the file's MIME type.
+
+### DefaultUploadFileResponder
+
+[DefaultUploadFileResponder](../api/dotnet/Serenity.Net.Web/Serenity.Web/DefaultUploadFileResponder.md) is the default implementation. Its `Read` method:
+
+1. Checks the path for security (`UploadPathHelper.CheckFileNameSecurity`).
+2. Returns `404` if the file doesn't exist in the upload storage.
+3. Determines the MIME type via `KnownMimeTypes.Get(path)`.
+4. Adds an `X-Content-Type-Options: nosniff` header.
+5. For PDFs, plain text, and images, returns the file **inline** (`FileStreamResult` with the detected MIME type).
+6. For everything else, returns the file as an **attachment** (`application/octet-stream` with a `Content-Disposition` header), so the browser downloads it instead of rendering it.
+
+### The /upload route
+
+The route is defined by the template's `FilePage` controller, which delegates to the responder:
+
+```cs
+public class FilePage(IUploadStorage uploadStorage, IUploadProcessor uploadProcessor) : Controller
+{
+    [Route("upload/{*pathInfo}")]
+    public IActionResult Read(string pathInfo,
+        [FromServices] IUploadFileResponder responder)
+    {
+        return responder.Read(pathInfo, Response.Headers);
+    }
+}
+```
+
+So a stored file with path `product/00001/00000001_abc.jpg` is served at `/upload/product/00001/00000001_abc.jpg`.
+
+### KnownMimeTypes
+
+[KnownMimeTypes](../api/dotnet/Serenity.Net.Web/Serenity.Web/KnownMimeTypes.md) is a static helper for determining the MIME type of a file from its extension:
+
+- `Get(path)` — returns the MIME type, or `application/octet-stream` if unknown.
+- `TryGet(path)` — returns the MIME type, or `null` if unknown.
+
+It uses ASP.NET Core's `FileExtensionContentTypeProvider` for the standard mappings, plus a small set of additional known types (e.g. `.apng`, `.avif`). This is what `DefaultUploadFileResponder` uses to decide whether to serve a file inline or as a download.
 
 ## See Also
 

@@ -53,6 +53,7 @@
     * [Dependency Injection](framework/dependency-injection.md)
     * [Configuration](framework/configuration.md)
     * [Feature Toggles](framework/feature-toggles.md)
+    * [Node Script Runner](framework/node-script-runner.md)
   * [Authentication & Authorization](framework/authorization.md)
     * [Password Strength](framework/password-strength.md)
   * [Localization](framework/localization.md)
@@ -102,6 +103,8 @@
   * [Dynamic Scripts](framework/dynamic-scripts/readme.md)
     * [Lookups](framework/dynamic-scripts/lookups.md)
     * [Script Generation](framework/dynamic-scripts/script-generation.md)
+  * [Script & CSS Bundling](framework/script-bundling.md)
+  * [Web Security](framework/security.md)
   * UI
     * Core Functions
       * [Fluent](framework/ui/fluent.md)

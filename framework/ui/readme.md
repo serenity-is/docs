@@ -66,13 +66,19 @@ The three packages form a layered stack:
 
 ## Navigating This Section
 
-- **Core Functions** — Fluent DOM manipulation, signals & reactivity, JSX, components & hooks, type registration, criteria.
-- **Grids** — DataGrid architecture, creating grids, EntityGrid CRUD, formatters, cell editing, filtering, selection, persisted settings, advanced features.
-- **Script Classes** — the Widget system ([Widgets](../../widgets/README.md)).
-- **Forms and Editors** — editors, lookup editors, PropertyGrid, custom editors.
-- **Dialogs** — EntityDialog and CRUD workflows.
-- **Integration** — service calls, authorization, data binding, localization, theming, performance.
-- **How-To Guides** — frontend patterns cookbook and troubleshooting.
+- **Core Functions**
+  - [Fluent](fluent.md) — imperative DOM manipulation.
+  - [Signals and Reactivity](signals.md) — reactive state and bindings.
+  - [JSX with DomWise](jsx.md) — JSX syntax, elements, attributes, events, refs.
+  - [Components and Hooks](components.md) — function/class components and hooks.
+  - [Type Registration](type-registration.md) — registering widgets, editors, dialogs, formatters.
+  - [Criteria](criteria.md) — building filter criteria.
+- **Grids** — [DataGrid Architecture](../../grids/architecture.md), [RemoteView and Data Management](../../grids/remoteview.md), [Creating and Configuring Grids](../../grids/creating-grids.md), [EntityGrid CRUD](../../grids/entitygrid-crud.md), [Formatter Types](../../grids/formatter_types.md), [Cell Editing](../../grids/cell-editing.md), [Filtering and Quick Search](../../grids/filtering.md), [Toolbar](../../grids/toolbar.md), [Selection and Row Operations](../../grids/selection.md), [Persisting Settings](../../grids/persisting_settings.md).
+- **Script Classes** — the Widget system ([Widgets](../../widgets/README.md), [Widget Class](../../widgets/widget_class.md), [PrefixedContext Class](../../widgets/prefixedcontext_class.md)).
+- **Forms and Editors** — [Editors](../../editors/readme.md), [Lookup Editors](../../editors/lookup-editors.md), [PropertyGrid and Forms](../../editors/propertygrid.md), [Custom Editors](../../editors/custom-editors.md).
+- **Dialogs** — [EntityDialog and CRUD Workflows](../../dialogs/entitydialog.md).
+- **Integration** — [Type-Safe Service Calls](../service-calls.md), [Authorization and Permissions](../authorization-client.md), [Data Binding](../data-binding.md), [Localization and Text](../localization-client.md), [Theming and CSS Customization](../theming.md), [Performance](../performance.md), [Config and Global Settings](../config-client.md).
+- **How-To Guides** — [Frontend Patterns Cookbook](../../howto/frontend-patterns-cookbook.md), [Frontend Troubleshooting](../../howto/frontend-troubleshooting.md).
 
 ## See Also
 

@@ -73,6 +73,25 @@ export class Widget<P = {}> {
 }
 ```
 
+### Widget Lifecycle
+
+Creating a widget runs the following steps in the constructor:
+
+1. **Resolve the DOM node** — from the `element` prop (an element, selector, array-like, or callback), or a new element from `createDefaultElement()` (a `div` by default).
+2. **Set element props** — `id`, `class`, `name`, `placeholder`, etc. are applied to the DOM node.
+3. **Assign a unique name** — `uniqueName` is derived from the type name plus a counter.
+4. **Associate the widget** — `associateWidget` registers the widget in a `WeakMap` keyed by the DOM node, so it can be retrieved later with `getWidgetFrom` / `tryGetWidget`.
+5. **Register disposal** — `addDisposingListener` registers `destroy` so it runs automatically when the DOM node receives a `disposing` event.
+6. **Compute the id prefix** — `idPrefix` defaults to `uniqueName + '_'`.
+7. **Add the CSS class** — `addCssClass` applies the widget's `s-` classes.
+8. **Render contents** — `renderContents()` is called (unless `deferRender()` returns `true`).
+
+Destroying a widget runs the reverse:
+
+1. The DOM node is removed (for example via `Fluent.remove()` or `empty()`), which fires the `disposing` event.
+2. The disposing listener calls `destroy()`.
+3. `destroy()` deassociates the widget, removes its CSS classes, and detaches event handlers namespaced with `uniqueName`.
+
 ### *Widget.domNode* and *Widget.element*
 
 The `domNode` property holds the raw `HTMLElement` the widget is bound to. The `element` getter returns a `Fluent` wrapper around it, which is the idiomatic way to interact with the element:
@@ -172,6 +191,8 @@ Sometimes releasing an attached widget is required without removing the HTML ele
 
 `destroy` is called automatically when the DOM node is removed from the document (via a disposing listener), and can also be called manually. If destroy is not performed correctly, memory leaks may occur.
 
+The `disposing` event is fired by `Fluent.remove()` and `Fluent.empty()` (and by jQuery-based removal when jQuery is loaded). This is the same disposal mechanism used by DomWise signal subscriptions, so widgets and reactive UI clean up together when their DOM node is removed.
+
 ### Rendering and Initialization
 
 - `renderContents()` — override to provide the widget's contents. The default returns the `children` prop, or renders a legacy `getTemplate()` string if one is defined.
@@ -179,6 +200,10 @@ Sometimes releasing an attached widget is required without removing the HTML ele
 - `init()` — renders the widget's contents if rendering was deferred, then returns `this`.
 - `afterRender(callback)` — queues a callback to run after the widget's contents are rendered.
 - `render()` — returns the widget's main element (or the document fragment when the widget is rendered into a fragment).
+
+#### *renderContents* vs *render*
+
+Override `renderContents()` to provide a widget's contents — not `render()`. The `render()` method returns the widget's main element (or the document fragment when the widget is rendered into a fragment) and should not be overridden, because widgets may get their elements from props rather than being regular JSX widgets.
 
 ### Widget.create
 
@@ -231,5 +256,8 @@ The `element` prop accepts an `HTMLElement`, an array-like of elements, a select
 
 ## See Also
 
+- [Widget (API reference)](../api/js/corelib/classes/Widget.md) — the full `Widget` API.
 - [PrefixedContext Class](prefixedcontext_class.md)
+- [Widgets](README.md)
+- [Frontend Framework Overview](../framework/ui/readme.md)
 

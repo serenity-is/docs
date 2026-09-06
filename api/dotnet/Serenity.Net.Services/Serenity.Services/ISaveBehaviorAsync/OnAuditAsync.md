@@ -1,11 +1,9 @@
 # ISaveBehaviorAsync.OnAuditAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called after row is inserted to / updated and auditing should be performed
 
 ```csharp
-public Task OnAuditAsync(ISaveRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+public Task OnAuditAsync(ISaveRequestHandler handler, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

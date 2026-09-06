@@ -1,5 +1,4 @@
 # Invariants.ToInvariant method (1 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Converts value to string using invariant culture.
 
@@ -22,7 +21,6 @@ Converted string.
 ---
 
 # Invariants.ToInvariant method (2 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Converts value to string using invariant culture.
 
@@ -45,7 +43,6 @@ Converted string.
 ---
 
 # Invariants.ToInvariant method (3 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Converts value to string using invariant culture.
 
@@ -68,7 +65,6 @@ The value converted to a string using the invariant culture.
 ---
 
 # Invariants.ToInvariant method (4 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Converts value to string using invariant culture.
 

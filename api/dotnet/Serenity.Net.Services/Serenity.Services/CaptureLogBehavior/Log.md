@@ -1,5 +1,4 @@
 # CaptureLogBehavior.Log method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Logs a capture log operation
 

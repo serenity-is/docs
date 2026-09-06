@@ -1,5 +1,4 @@
 # PropertyItem.Visible property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the visible flag. Only used for columns.
 

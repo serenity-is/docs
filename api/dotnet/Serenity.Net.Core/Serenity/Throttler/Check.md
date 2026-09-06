@@ -1,5 +1,4 @@
 # Throttler.Check method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Records an attempt and checks whether the throttling limit has been exceeded.
 

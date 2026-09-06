@@ -1,5 +1,4 @@
 # ImageChecker.CheckStream method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Checks if the given image if it is a valid or not. If so, controls its compliance to constraints
 

@@ -1,7 +1,7 @@
 # EntitySqlQueryExtensions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extensions for [`SqlQuery`](SqlQuery.md).
+Extensions for [`SqlQuery`](./SqlQuery.md).
 
 ```csharp
 public static class EntitySqlQueryExtensions

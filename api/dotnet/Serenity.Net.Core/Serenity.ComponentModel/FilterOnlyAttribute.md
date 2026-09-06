@@ -17,11 +17,11 @@ public class FilterOnlyAttribute : Attribute
 | name | description |
 | --- | --- |
 | [FilterOnlyAttribute](FilterOnlyAttribute/FilterOnlyAttribute.md)(…) | Indicates that this field should not be shown, and cannot be made visible in the column selection dialog, but is only used for advanced filtering. |
-| [Value](FilterOnlyAttribute/Value.md) { get; } | Gets a value indicating whether this [`FilterOnlyAttribute`](FilterOnlyAttribute.md) is enabled. |
+| [Value](FilterOnlyAttribute/Value.md) { get; } | Gets a value indicating whether this [`FilterOnlyAttribute`](./FilterOnlyAttribute.md) is enabled. |
 
 ## Remarks
 
-Initializes a new instance of the [`FilterOnlyAttribute`](FilterOnlyAttribute.md) class.
+Initializes a new instance of the [`FilterOnlyAttribute`](./FilterOnlyAttribute.md) class.
 
 ## See Also
 

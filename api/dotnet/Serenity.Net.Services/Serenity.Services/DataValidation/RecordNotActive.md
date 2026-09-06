@@ -1,5 +1,4 @@
 # DataValidation.RecordNotActive method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a record not active error
 
@@ -14,7 +13,7 @@ public static ValidationError RecordNotActive(IRow row, ITextLocalizer localizer
 
 ## See Also
 
-* class [ValidationError](../Serenity.Net.Core/../ValidationError.md)
+* class [ValidationError](../../../Serenity.Net.Core/Serenity.Services/ValidationError.md)
 * interface [IRow](../../Serenity.Data/IRow.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

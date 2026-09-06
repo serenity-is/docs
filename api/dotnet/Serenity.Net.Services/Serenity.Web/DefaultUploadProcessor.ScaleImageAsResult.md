@@ -18,4 +18,4 @@ public class ScaleImageAsResult
 
 ## See Also
 
-* class [DefaultUploadProcessor](DefaultUploadProcessor.md)
+* class [DefaultUploadProcessor](./DefaultUploadProcessor.md)

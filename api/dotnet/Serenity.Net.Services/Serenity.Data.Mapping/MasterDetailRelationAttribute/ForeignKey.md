@@ -1,5 +1,4 @@
 # MasterDetailRelationAttribute.ForeignKey property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the foreign key.
 

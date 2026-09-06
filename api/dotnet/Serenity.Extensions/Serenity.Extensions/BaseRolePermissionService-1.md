@@ -35,6 +35,6 @@ public abstract class BaseRolePermissionService<TRolePermissionRow> : IRolePermi
 
 ## See Also
 
-* interface [IRolePermissionService](../Serenity.Net.Core/../Serenity.Abstractions/IRolePermissionService.md)
+* interface [IRolePermissionService](../../Serenity.Net.Core/Serenity.Abstractions/IRolePermissionService.md)
 * interface [IRolePermissionRow](../Serenity.Data/IRolePermissionRow.md)
 * **Source:** *[BaseRolePermissionServiceT.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Authorization/BaseRolePermissionServiceT.cs)*

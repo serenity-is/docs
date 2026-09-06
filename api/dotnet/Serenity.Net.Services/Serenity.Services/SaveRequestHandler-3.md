@@ -31,7 +31,7 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](SaveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](SaveRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [AfterSave](SaveRequestHandler-3/AfterSave.md)() | Called after executing the insert/update statement |
 | virtual [BeforeSave](SaveRequestHandler-3/BeforeSave.md)() | Called before executing the insert/update statement |
 | virtual [ExecuteSave](SaveRequestHandler-3/ExecuteSave.md)() | Executes the actual SQL save operation |
@@ -46,14 +46,11 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 
 ## See Also
 
-* class [SaveRequestHandlerBase&lt;TRow,TSaveRequest,TSaveResponse&gt;](SaveRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/SaveRequestHandler-3.TRow.md)
-* class [TSaveRequest](../Serenity.Net.Services/SaveRequestHandler-3.TSaveRequest.md)
-* class [TSaveResponse](../Serenity.Net.Services/SaveRequestHandler-3.TSaveResponse.md)
-* interface [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](ISaveHandler-3.md)
-* interface [ISaveRequestProcessor](ISaveRequestProcessor.md)
+* class [SaveRequestHandlerBase&lt;TRow,TSaveRequest,TSaveResponse&gt;](./SaveRequestHandlerBase-3.md)
+* interface [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](./ISaveHandler-3.md)
+* interface [ISaveRequestProcessor](./ISaveRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
-* class [SaveResponse](SaveResponse.md)
+* class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
+* class [SaveResponse](./SaveResponse.md)
 * **Source:** *[SaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Save/SaveRequestHandler.cs)*

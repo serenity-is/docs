@@ -1,5 +1,4 @@
 # BaseCriteria GreaterThan operator (1 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -23,7 +22,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (2 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -47,7 +45,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (3 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -71,7 +68,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (4 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -95,7 +91,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (5 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -119,7 +114,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (6 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -143,7 +137,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (7 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -167,7 +160,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (8 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -191,7 +183,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (9 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 
@@ -216,7 +207,6 @@ The result of the operator.
 ---
 
 # BaseCriteria GreaterThan operator (10 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &gt;.
 

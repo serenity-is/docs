@@ -1,5 +1,4 @@
 # CustomClassField&lt;TValue&gt;.ValueFromJson method (1 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Deserializes this field's value from JSON.
 
@@ -18,13 +17,11 @@ The deserialized value.
 
 ## See Also
 
-* class [TValue](../Serenity.Net.Services/../CustomClassField-1.TValue.md)
 * class [CustomClassField&lt;TValue&gt;](../CustomClassField-1.md)
 
 ---
 
 # CustomClassField&lt;TValue&gt;.ValueFromJson method (2 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Deserializes this field's value from JSON.
 
@@ -43,13 +40,11 @@ The deserialized value.
 
 ## See Also
 
-* class [TValue](../Serenity.Net.Services/../CustomClassField-1.TValue.md)
 * class [CustomClassField&lt;TValue&gt;](../CustomClassField-1.md)
 
 ---
 
 # CustomClassField&lt;TValue&gt;.ValueFromJson method (3 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Deserializes this field's value from JSON.
 
@@ -77,7 +72,6 @@ public override void ValueFromJson(JsonReader reader, IRow row, JsonSerializer s
 ---
 
 # CustomClassField&lt;TValue&gt;.ValueFromJson method (4 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public override void ValueFromJson(ref Utf8JsonReader reader, IRow row, 

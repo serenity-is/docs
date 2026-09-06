@@ -1,5 +1,4 @@
 # TabularDataReport constructor (1 of 4)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the class.
 
@@ -14,7 +13,6 @@ protected TabularDataReport()
 ---
 
 # TabularDataReport constructor (2 of 4)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the class with the given data and report columns.
 
@@ -41,7 +39,6 @@ public TabularDataReport(IEnumerable data, IEnumerable<ReportColumn> columns)
 ---
 
 # TabularDataReport constructor (3 of 4)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the class with the given data and columns type.
 
@@ -68,7 +65,6 @@ public TabularDataReport(IEnumerable data, Type columnsType, IServiceProvider se
 ---
 
 # TabularDataReport constructor (4 of 4)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the class with the given data, columns type and export columns.
 

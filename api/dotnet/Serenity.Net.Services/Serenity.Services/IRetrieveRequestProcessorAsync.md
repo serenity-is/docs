@@ -11,9 +11,9 @@ public interface IRetrieveRequestProcessorAsync : IRetrieveRequestHandler
 
 | name | description |
 | --- | --- |
-| [ProcessAsync](IRetrieveRequestProcessorAsync/ProcessAsync.md)(…) | Processes the [`RetrieveRequest`](RetrieveRequest.md) asynchronously and returns a [`IRetrieveResponse`](IRetrieveResponse.md) |
+| [ProcessAsync](IRetrieveRequestProcessorAsync/ProcessAsync.md)(…) | Processes the [`RetrieveRequest`](./RetrieveRequest.md) asynchronously and returns a [`IRetrieveResponse`](./IRetrieveResponse.md) |
 
 ## See Also
 
-* interface [IRetrieveRequestHandler](IRetrieveRequestHandler.md)
+* interface [IRetrieveRequestHandler](./IRetrieveRequestHandler.md)
 * **Source:** *[IRetrieveRequestProcessorAsync.cs](https://github.com/serenity-is/Serenity/blob/aa5433b74475d7a249a3550344ee8ccea8e5a8eb/src/services/RequestHandlers/Retrieve/IRetrieveRequestProcessorAsync.cs)*

@@ -1,5 +1,4 @@
 # IUploadFileResponder.Read method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Reads the file, e.g. writes to the response.
 

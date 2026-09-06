@@ -1,5 +1,4 @@
 # PropertyItemsScript constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Abstract base class for [`ColumnsScript`](../ColumnsScript.md) and [`FormScript`](../FormScript.md).
 

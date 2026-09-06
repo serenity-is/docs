@@ -1,5 +1,4 @@
 # ListRequestHandlerAsync&lt;TRow,TListRequest,TListResponse&gt; constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the class.
 

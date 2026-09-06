@@ -32,7 +32,7 @@ public class DefaultUserClaimCreator : IUserClaimCreator
 
 ## Remarks
 
-Creates a new instance of the [`DefaultUserClaimCreator`](DefaultUserClaimCreator.md) class.
+Creates a new instance of the [`DefaultUserClaimCreator`](./DefaultUserClaimCreator.md) class.
 
 ## See Also
 

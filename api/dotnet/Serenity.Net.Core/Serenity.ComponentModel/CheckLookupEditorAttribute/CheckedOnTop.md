@@ -1,5 +1,4 @@
 # CheckLookupEditorAttribute.CheckedOnTop property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Moves selected items to the top on load.
 

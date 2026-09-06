@@ -1,5 +1,4 @@
 # ResetPasswordEmailModel.ResetLink property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The reset password link to include in the email.
 

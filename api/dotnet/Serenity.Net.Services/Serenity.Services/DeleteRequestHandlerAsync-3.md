@@ -30,7 +30,7 @@ public class DeleteRequestHandlerAsync<TRow, TDeleteRequest, TDeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](DeleteRequestHandlerAsync-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](DeleteRequestHandlerAsync-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAuditAsync](DeleteRequestHandlerAsync-3/DoAuditAsync.md)(…) | Performs auditing |
 | virtual [ExecuteDeleteAsync](DeleteRequestHandlerAsync-3/ExecuteDeleteAsync.md)(…) | Executes the actual SQL delete operation |
 | virtual [InvokeDeleteActionAsync](DeleteRequestHandlerAsync-3/InvokeDeleteActionAsync.md)(…) | Invokes the passed delete action method |
@@ -43,14 +43,11 @@ public class DeleteRequestHandlerAsync<TRow, TDeleteRequest, TDeleteResponse> :
 
 ## See Also
 
-* class [DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](DeleteRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/DeleteRequestHandlerAsync-3.TRow.md)
-* class [TDeleteRequest](../Serenity.Net.Services/DeleteRequestHandlerAsync-3.TDeleteRequest.md)
-* class [TDeleteResponse](../Serenity.Net.Services/DeleteRequestHandlerAsync-3.TDeleteResponse.md)
-* interface [IDeleteHandlerAsync&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](IDeleteHandlerAsync-3.md)
-* interface [IDeleteRequestProcessorAsync](IDeleteRequestProcessorAsync.md)
+* class [DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](./DeleteRequestHandlerBase-3.md)
+* interface [IDeleteHandlerAsync&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](./IDeleteHandlerAsync-3.md)
+* interface [IDeleteRequestProcessorAsync](./IDeleteRequestProcessorAsync.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [DeleteRequest](DeleteRequest.md)
-* class [DeleteResponse](DeleteResponse.md)
+* class [DeleteRequest](./DeleteRequest.md)
+* class [DeleteResponse](./DeleteResponse.md)
 * **Source:** *[DeleteRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Delete/DeleteRequestHandlerAsync.cs)*

@@ -1,5 +1,4 @@
 # DefaultRowTypeRegistry constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Default row type registry
 
@@ -24,5 +23,5 @@ Initializes a new instance of the [`DefaultRowTypeRegistry`](../DefaultRowTypeRe
 ## See Also
 
 * interface [IRowTypeRegistry](../IRowTypeRegistry.md)
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [DefaultRowTypeRegistry](../DefaultRowTypeRegistry.md)

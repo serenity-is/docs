@@ -1,5 +1,4 @@
 # GenericValueField&lt;TValue&gt;.ValueType property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the type of the value.
 

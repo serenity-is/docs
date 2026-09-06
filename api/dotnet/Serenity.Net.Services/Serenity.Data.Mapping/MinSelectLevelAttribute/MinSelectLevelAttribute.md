@@ -1,5 +1,4 @@
 # MinSelectLevelAttribute constructor
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines minimum selection level for this field.
 

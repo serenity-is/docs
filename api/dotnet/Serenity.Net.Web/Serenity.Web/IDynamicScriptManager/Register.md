@@ -1,5 +1,4 @@
 # IDynamicScriptManager.Register method (1 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Registers a dynamic script, potentially overriding a script with the same registration name.
 
@@ -13,13 +12,12 @@ public void Register(INamedDynamicScript script)
 
 ## See Also
 
-* interface [INamedDynamicScript](../Serenity.Net.Core/../INamedDynamicScript.md)
+* interface [INamedDynamicScript](../../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
 
 ---
 
 # IDynamicScriptManager.Register method (2 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Registers a dynamic script, potentially overriding a script with the same registration name.
 
@@ -34,5 +32,5 @@ public void Register(string name, IDynamicScript script)
 
 ## See Also
 
-* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
+* interface [IDynamicScript](../../../Serenity.Net.Core/Serenity.Web/IDynamicScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)

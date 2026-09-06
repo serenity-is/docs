@@ -1,11 +1,10 @@
 # RetrieveRequestHandlerAsync&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.PrepareQueryAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Prepares query by selecting fields.
 
 ```csharp
 protected virtual Task PrepareQueryAsync(SqlQuery query, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # CodeWriter.Insert method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Inserts string to internal string builder
 

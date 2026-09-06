@@ -22,7 +22,7 @@ public class TransientGrantingPermissionService : IPermissionService, ITransient
 | [GrantAll](TransientGrantingPermissionService/GrantAll.md)() | Temporarily grants all permissions. |
 | [HasPermission](TransientGrantingPermissionService/HasPermission.md)(…) | Determines whether the current user has the specified permission, taking transient grants into account. |
 | [IsAllGranted](TransientGrantingPermissionService/IsAllGranted.md)() |  |
-| [UndoGrant](TransientGrantingPermissionService/UndoGrant.md)() | Reverts the most recent [`Grant`](TransientGrantingPermissionService/Grant.md) or [`GrantAll`](TransientGrantingPermissionService/GrantAll.md) operation. |
+| [UndoGrant](TransientGrantingPermissionService/UndoGrant.md)() | Reverts the most recent [`Grant`](./TransientGrantingPermissionService/Grant.md) or [`GrantAll`](./TransientGrantingPermissionService/GrantAll.md) operation. |
 
 ## Remarks
 
@@ -32,7 +32,7 @@ Register this decorator at application startup to enable temporary permission gr
 registrar.RegisterInstance<IPermissionService>(new TransientGrantingPermissionService(new MyPermissionService()))
 ```
 
-Creates a new instance of the [`TransientGrantingPermissionService`](TransientGrantingPermissionService.md) class wrapping the specified service.
+Creates a new instance of the [`TransientGrantingPermissionService`](./TransientGrantingPermissionService.md) class wrapping the specified service.
 
 ## See Also
 

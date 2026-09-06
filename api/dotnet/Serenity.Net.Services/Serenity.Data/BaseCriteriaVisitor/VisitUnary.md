@@ -1,5 +1,4 @@
 # BaseCriteriaVisitor.VisitUnary method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Visits the unary criteria. A unary criteria is one with one operand and one operator.
 

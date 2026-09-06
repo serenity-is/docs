@@ -1,5 +1,4 @@
 # PropertyItem.Required property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the required flag of the property in forms.
 

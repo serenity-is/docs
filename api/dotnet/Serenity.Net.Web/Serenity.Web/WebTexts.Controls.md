@@ -7,4 +7,4 @@ public static class Controls
 
 ## See Also
 
-* class [WebTexts](WebTexts.md)
+* class [WebTexts](./WebTexts.md)

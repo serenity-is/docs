@@ -1,5 +1,4 @@
 # ISqlQuery.Parent property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets access to parent query if any.
 

@@ -1,5 +1,4 @@
 # RowJsonConverter.ShouldSerializeExtension field
-**namespace:** *[Serenity.JsonConverters](../../README.md#serenity.jsonconverters-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Should serialize extension
 

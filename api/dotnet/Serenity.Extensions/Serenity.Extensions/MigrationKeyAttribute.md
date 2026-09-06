@@ -16,5 +16,5 @@ public class MigrationKeyAttribute : MigrationAttributeBase
 
 ## See Also
 
-* class [MigrationAttributeBase](MigrationAttributeBase.md)
+* class [MigrationAttributeBase](./MigrationAttributeBase.md)
 * **Source:** *[MigrationKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/MigrationUtils/MigrationKeyAttribute.cs)*

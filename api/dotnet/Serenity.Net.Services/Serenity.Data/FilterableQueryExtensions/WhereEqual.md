@@ -1,5 +1,4 @@
 # FilterableQueryExtensions.WhereEqual&lt;T&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a where statement with equality filter to a query, and sets the parameter value with a parameter.
 
@@ -20,7 +19,6 @@ The new filter parameter.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../FilterableQueryExtensions.T.md)
 * interface [IField](../IField.md)
 * interface [IFilterableQuery](../IFilterableQuery.md)
 * class [FilterableQueryExtensions](../FilterableQueryExtensions.md)

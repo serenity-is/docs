@@ -1,10 +1,9 @@
 # NavigationEntry.Title property
-**namespace:** *[Serenity.Plugins](../../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the title.
 
 ```csharp
-public string Title { get; set; }
+public string? Title { get; set; }
 ```
 
 ## Property Value

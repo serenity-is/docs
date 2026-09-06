@@ -1,5 +1,4 @@
 # UploadPathHelper.TryParseThumbSuffix method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Tries to parse a thumbnail filename suffix, e.g. it ends with "_t.jpg", or "_tNxN.jpg" where N is a number
 

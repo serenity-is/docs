@@ -1,5 +1,4 @@
 # JsonLocalTextRegistration.AddFromNestedDictionary method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds translations from a hierarchical local text dictionary parsed from a JSON file.
 

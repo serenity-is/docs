@@ -1,11 +1,10 @@
 # IUndeleteBehaviorAsync.OnBeforeUndeleteAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called just before row is undeleted in database
 
 ```csharp
 public Task OnBeforeUndeleteAsync(IUndeleteRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

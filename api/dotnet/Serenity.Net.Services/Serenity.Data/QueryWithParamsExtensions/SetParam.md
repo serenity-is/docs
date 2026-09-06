@@ -1,5 +1,4 @@
 # QueryWithParamsExtensions.SetParam&lt;T&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets the parameter.
 
@@ -21,7 +20,6 @@ The query itself.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../QueryWithParamsExtensions.T.md)
 * struct [Parameter](../Parameter.md)
 * interface [IQueryWithParams](../IQueryWithParams.md)
 * class [QueryWithParamsExtensions](../QueryWithParamsExtensions.md)

@@ -1,5 +1,4 @@
 # IEmailQueue.Enqueue method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Enqueues the specified email message.
 

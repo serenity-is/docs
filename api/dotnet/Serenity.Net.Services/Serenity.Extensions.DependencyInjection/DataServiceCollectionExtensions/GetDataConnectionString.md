@@ -1,5 +1,4 @@
 # DataServiceCollectionExtensions.GetDataConnectionString method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the specified connection string entry from the specified configuration's Data:[name] section. Only for use in Startup where [`IConnectionStrings`](../../Serenity.Data/IConnectionStrings.md) is not yet available. Throws if no such connection is found.
 

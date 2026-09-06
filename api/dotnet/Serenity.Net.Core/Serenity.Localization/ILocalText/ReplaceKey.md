@@ -1,5 +1,4 @@
 # ILocalText.ReplaceKey method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Replaces the local text key with the new key and stores the original key as the initial text.
 

@@ -1,13 +1,11 @@
 # SqlMapper.QueryAsync method (1 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of dynamic objects asynchronously; the reader is closed after the call. Serenity specific overload for [`ISqlQuery`](../ISqlQuery.md), not present in Dapper.
 
 ```csharp
 public static Task<IEnumerable<object>> QueryAsync(this IDbConnection cnn, ISqlQuery sql, 
     IDbTransaction transaction = null, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?), 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -31,15 +29,13 @@ A task that represents the asynchronous operation. The task result contains a li
 ---
 
 # SqlMapper.QueryAsync method (2 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of dynamic objects asynchronously; the reader is closed after the call.
 
 ```csharp
 public static Task<IEnumerable<object>> QueryAsync(this IDbConnection cnn, string sql, 
     object param = null, IDbTransaction transaction = null, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?), 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -63,15 +59,13 @@ A task that represents the asynchronous operation. The task result contains a li
 ---
 
 # SqlMapper.QueryAsync&lt;T&gt; method (3 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of values asynchronously; the reader is closed after the call. Serenity specific overload for [`ISqlQuery`](../ISqlQuery.md), not present in Dapper.
 
 ```csharp
 public static Task<IEnumerable<T>> QueryAsync<T>(this IDbConnection cnn, ISqlQuery sql, 
     IDbTransaction transaction = null, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?), 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -90,22 +84,19 @@ A task that represents the asynchronous operation. The task result contains a li
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../SqlMapper.T.md)
 * interface [ISqlQuery](../ISqlQuery.md)
 * class [SqlMapper](../SqlMapper.md)
 
 ---
 
 # SqlMapper.QueryAsync&lt;T&gt; method (4 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of objects asynchronously; the reader is closed after the call.
 
 ```csharp
 public static Task<IEnumerable<T>> QueryAsync<T>(this IDbConnection cnn, string sql, 
     object param = null, IDbTransaction transaction = null, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?), 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CommandType? commandType = default, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -125,5 +116,4 @@ A task that represents the asynchronous operation. The task result contains a li
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../SqlMapper.T.md)
 * class [SqlMapper](../SqlMapper.md)

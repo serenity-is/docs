@@ -1,5 +1,4 @@
 # EntityConnectionExtensions.InsertAndGetID&lt;TRow&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Inserts the specified entity and returns the ID of record inserted. Only works for identity columns of integer type. Note that this operates at a low level, it does not perform any validation or permission check and does not call service behaviors / handlers.
 
@@ -20,6 +19,5 @@ The ID of the record inserted.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

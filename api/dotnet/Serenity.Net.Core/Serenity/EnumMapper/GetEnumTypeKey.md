@@ -1,5 +1,4 @@
 # EnumMapper.GetEnumTypeKey method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the enum type key.
 

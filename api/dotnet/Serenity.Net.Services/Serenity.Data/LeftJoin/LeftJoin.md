@@ -1,5 +1,4 @@
 # LeftJoin constructor (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`LeftJoin`](../LeftJoin.md) class.
 
@@ -21,7 +20,6 @@ public LeftJoin(string toTable, string alias, ICriteria onCriteria)
 ---
 
 # LeftJoin constructor (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`LeftJoin`](../LeftJoin.md) class.
 

@@ -1,7 +1,7 @@
 # FileSystemExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Provides extension methods for [`IFileSystem`](IFileSystem.md) that delegate to Path helpers, reducing direct dependency on System.IO in case these methods are later added to [`IFileSystem`](IFileSystem.md).
+Provides extension methods for [`IFileSystem`](./IFileSystem.md) that delegate to Path helpers, reducing direct dependency on System.IO in case these methods are later added to [`IFileSystem`](./IFileSystem.md).
 
 ```csharp
 public static class FileSystemExtensions

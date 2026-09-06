@@ -1,12 +1,11 @@
 # ISqlOperationInterceptor.ExecuteReaderAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts the async [`SqlHelper`](../SqlHelper.md)`ExecuteReader` methods. The default implementation forwards to [`ExecuteReader`](ExecuteReader.md).
+Intercepts the async [`SqlHelper`](../SqlHelper.md)`ExecuteReader` methods. The default implementation forwards to [`ExecuteReader`](./ExecuteReader.md).
 
 ```csharp
 public Task<OptionalValue<IDataReader>> ExecuteReaderAsync(string commandText, 
     IDictionary<string, object> parameters, SqlQuery query, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

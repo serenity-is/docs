@@ -1,11 +1,10 @@
 # IUndeleteBehaviorAsync.OnAuditAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called after row is undeleted and auditing should be performed
 
 ```csharp
 public Task OnAuditAsync(IUndeleteRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

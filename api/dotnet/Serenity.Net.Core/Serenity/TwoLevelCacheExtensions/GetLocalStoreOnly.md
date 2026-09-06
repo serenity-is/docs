@@ -1,11 +1,10 @@
 # TwoLevelCacheExtensions.GetLocalStoreOnly&lt;TItem&gt; method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Tries to read a value from local cache. If it is not found there produces value by calling a loader function and adds the value to local cache for a given expiration time. By using a generation (item version) key, all items on local cache that are members of this group can be expired at once.
 
 ```csharp
-public static TItem GetLocalStoreOnly<TItem>(this ITwoLevelCache cache, string cacheKey, 
-    TimeSpan localExpiration, string groupKey, Func<TItem> loader)
+public static TItem? GetLocalStoreOnly<TItem>(this ITwoLevelCache cache, string cacheKey, 
+    TimeSpan localExpiration, string groupKey, Func<TItem?> loader)
     where TItem : class
 ```
 
@@ -24,6 +23,5 @@ The difference between this and Get method is that this one only caches items in
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Core/../TwoLevelCacheExtensions.TItem.md)
 * interface [ITwoLevelCache](../../Serenity.Abstractions/ITwoLevelCache.md)
 * class [TwoLevelCacheExtensions](../TwoLevelCacheExtensions.md)

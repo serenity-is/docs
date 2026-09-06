@@ -1,5 +1,4 @@
 # DeltaLister&lt;TItem&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`DeltaLister`](../DeltaLister-1.md) class.
 
@@ -25,6 +24,5 @@ public DeltaLister(IEnumerable<TItem> oldList, IEnumerable<TItem> newList,
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Services/../DeltaLister-1.TItem.md)
 * enum [DeltaOptions](../DeltaOptions.md)
 * class [DeltaLister&lt;TItem&gt;](../DeltaLister-1.md)

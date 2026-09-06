@@ -12,7 +12,7 @@ public class NullableJsonConverter : JsonConverterFactory
 | name | description |
 | --- | --- |
 | [NullableJsonConverter](NullableJsonConverter/NullableJsonConverter.md)() | The default constructor. |
-| static readonly [Instance](NullableJsonConverter/Instance.md) | The default instance of the [`NullableJsonConverter`](NullableJsonConverter.md). |
+| static readonly [Instance](NullableJsonConverter/Instance.md) | The default instance of the [`NullableJsonConverter`](./NullableJsonConverter.md). |
 | override [CanConvert](NullableJsonConverter/CanConvert.md)(…) |  |
 | override [CreateConverter](NullableJsonConverter/CreateConverter.md)(…) |  |
 

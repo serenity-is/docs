@@ -1,5 +1,4 @@
 # ReportController constructor
-**namespace:** *[Serenity.Extensions.Pages](../../README.md#serenity.extensions.pages-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Controller for rendering and downloading reports.
 
@@ -10,7 +9,7 @@ public ReportController(IReportFactory reportFactory, IReportRenderer reportRend
 
 ## See Also
 
-* interface [IReportFactory](../Serenity.Net.Services/../../Serenity.Reporting/IReportFactory.md)
-* interface [IReportRenderer](../Serenity.Net.Services/../../Serenity.Reporting/IReportRenderer.md)
-* interface [IReportCallbackInterceptor](../Serenity.Net.Services/../../Serenity.Reporting/IReportCallbackInterceptor.md)
+* interface [IReportFactory](../../../Serenity.Net.Services/Serenity.Reporting/IReportFactory.md)
+* interface [IReportRenderer](../../../Serenity.Net.Services/Serenity.Reporting/IReportRenderer.md)
+* interface [IReportCallbackInterceptor](../../../Serenity.Net.Services/Serenity.Reporting/IReportCallbackInterceptor.md)
 * class [ReportController](../ReportController.md)

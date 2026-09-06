@@ -1,5 +1,4 @@
 # ExcelExporter constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Default implementation of IExcelExporter that exports data to Excel.
 
@@ -9,5 +8,5 @@ public ExcelExporter(IDataReportExcelRenderer renderer, IServiceProvider service
 
 ## See Also
 
-* interface [IDataReportExcelRenderer](../Serenity.Net.Services/../IDataReportExcelRenderer.md)
+* interface [IDataReportExcelRenderer](../../../Serenity.Net.Services/Serenity.Reporting/IDataReportExcelRenderer.md)
 * class [ExcelExporter](../ExcelExporter.md)

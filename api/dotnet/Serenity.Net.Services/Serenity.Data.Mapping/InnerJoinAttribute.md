@@ -24,5 +24,5 @@ public class InnerJoinAttribute : Attribute, ISqlJoin
 
 ## See Also
 
-* interface [ISqlJoin](ISqlJoin.md)
+* interface [ISqlJoin](./ISqlJoin.md)
 * **Source:** *[InnerJoinAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/InnerJoinAttribute.cs)*

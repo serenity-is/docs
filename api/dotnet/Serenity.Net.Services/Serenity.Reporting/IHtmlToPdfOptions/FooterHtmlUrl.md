@@ -1,5 +1,4 @@
 # IHtmlToPdfOptions.FooterHtmlUrl property
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Url of footer HTML page
 

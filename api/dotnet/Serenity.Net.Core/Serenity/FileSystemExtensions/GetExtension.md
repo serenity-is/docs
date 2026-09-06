@@ -1,5 +1,4 @@
 # FileSystemExtensions.GetExtension method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the extension for the specified path.
 

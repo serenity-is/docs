@@ -1,5 +1,4 @@
 # ITranslateTextHandler.Translate method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Translates the texts in the given request.
 

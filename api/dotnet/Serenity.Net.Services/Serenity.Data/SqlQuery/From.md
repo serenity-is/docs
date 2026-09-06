@@ -1,5 +1,4 @@
 # SqlQuery.From method (1 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a table to the FROM statement, with given short name.
 
@@ -27,7 +26,6 @@ This overload requires that alias has a table name.
 ---
 
 # SqlQuery.From method (2 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a table to the FROM statement. When it is called more than once, puts a comma between table names (cross join)
 
@@ -56,7 +54,6 @@ The query itself.
 ---
 
 # SqlQuery.From method (3 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a subquery to the FROM statement, with given short name.
 
@@ -86,7 +83,6 @@ This overload requires that alias has a table name.
 ---
 
 # SqlQuery.From method (4 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a table to the FROM statement with an alias. When it is called more than once, puts a comma between table names (cross join)
 

@@ -1,5 +1,4 @@
 # ReportTree.Root property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The root category of the tree.
 

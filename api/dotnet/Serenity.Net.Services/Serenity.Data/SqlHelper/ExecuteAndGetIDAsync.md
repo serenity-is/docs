@@ -1,11 +1,10 @@
 # SqlHelper.ExecuteAndGetIDAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the query asynchronously and returns the generated identity value. Only works for auto incremented fields, not GUIDs.
 
 ```csharp
 public static Task<long?> ExecuteAndGetIDAsync(this SqlInsert query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default(CancellationToken))
+    ILogger logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

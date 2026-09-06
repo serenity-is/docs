@@ -1,5 +1,4 @@
 # SqlInsert.IdentityColumn method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the identity column.
 
@@ -18,7 +17,6 @@ The identity column name, or `null` if none is set.
 ---
 
 # SqlInsert.IdentityColumn method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets the identity column.
 

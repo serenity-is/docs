@@ -1,5 +1,4 @@
 # IRow.SetDictionaryData method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets the dictionary data.
 

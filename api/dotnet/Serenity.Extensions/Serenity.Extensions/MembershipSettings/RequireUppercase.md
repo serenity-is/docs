@@ -1,5 +1,4 @@
 # MembershipSettings.RequireUppercase property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Whether passwords must contain an uppercase letter.
 

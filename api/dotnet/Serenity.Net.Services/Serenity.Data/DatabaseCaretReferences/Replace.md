@@ -1,5 +1,4 @@
 # DatabaseCaretReferences.Replace method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Replaces caret references like [^ConnectionKey] in the specified expression with actual database names.
 

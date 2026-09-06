@@ -1,5 +1,4 @@
 # MembershipPageBase&lt;TUserRow&gt;.GenerateSalt method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Generates a random salt of the configured size.
 

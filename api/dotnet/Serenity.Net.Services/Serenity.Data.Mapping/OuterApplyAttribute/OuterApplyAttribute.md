@@ -1,5 +1,4 @@
 # OuterApplyAttribute constructor (1 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds an OUTER APPLY to the row.
 
@@ -24,7 +23,6 @@ Initializes a new instance of the [`OuterApplyAttribute`](../OuterApplyAttribute
 ---
 
 # OuterApplyAttribute constructor (2 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`OuterApplyAttribute`](../OuterApplyAttribute.md) class.
 

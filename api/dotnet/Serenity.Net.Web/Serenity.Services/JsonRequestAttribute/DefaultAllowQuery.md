@@ -1,7 +1,6 @@
 # JsonRequestAttribute.DefaultAllowQuery property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-The default for [`AllowQuery`](AllowQuery.md), which is `true`.
+The default for [`AllowQuery`](./AllowQuery.md), which is `true`.
 
 ```csharp
 public static bool DefaultAllowQuery { get; set; }

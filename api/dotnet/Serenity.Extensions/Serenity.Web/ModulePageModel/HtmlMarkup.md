@@ -1,5 +1,4 @@
 # ModulePageModel.HtmlMarkup property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The HTML markup to render in the page body.
 

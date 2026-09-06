@@ -1,5 +1,4 @@
 # DefaultUploadFileResponder constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Default implementation of the upload file responder.
 
@@ -23,5 +22,5 @@ Initializes a new instance of the [`DefaultUploadFileResponder`](../DefaultUploa
 
 ## See Also
 
-* interface [IUploadStorage](../Serenity.Net.Services/../IUploadStorage.md)
+* interface [IUploadStorage](../../../Serenity.Net.Services/Serenity.Web/IUploadStorage.md)
 * class [DefaultUploadFileResponder](../DefaultUploadFileResponder.md)

@@ -12,11 +12,11 @@ public class DateFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [DateFormatterAttribute](DateFormatterAttribute/DateFormatterAttribute.md)() | Initializes a new instance of the [`DateFormatterAttribute`](DateFormatterAttribute.md) class. |
+| [DateFormatterAttribute](DateFormatterAttribute/DateFormatterAttribute.md)() | Initializes a new instance of the [`DateFormatterAttribute`](./DateFormatterAttribute.md) class. |
 | [DisplayFormat](DateFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
 | const [Key](DateFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[DateFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/DateFormatterAttribute.cs)*

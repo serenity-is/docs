@@ -12,9 +12,9 @@ public class OneThirdWidthAttribute : FormWidthAttribute
 
 | name | description |
 | --- | --- |
-| [OneThirdWidthAttribute](OneThirdWidthAttribute/OneThirdWidthAttribute.md)() | Initializes a new instance of the [`OneThirdWidthAttribute`](OneThirdWidthAttribute.md) class. |
+| [OneThirdWidthAttribute](OneThirdWidthAttribute/OneThirdWidthAttribute.md)() | Initializes a new instance of the [`OneThirdWidthAttribute`](./OneThirdWidthAttribute.md) class. |
 
 ## See Also
 
-* class [FormWidthAttribute](FormWidthAttribute.md)
+* class [FormWidthAttribute](./FormWidthAttribute.md)
 * **Source:** *[OneThirdWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/OneThirdWidthAttribute.cs)*

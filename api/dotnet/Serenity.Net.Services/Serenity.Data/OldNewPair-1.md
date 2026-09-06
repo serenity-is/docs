@@ -23,7 +23,7 @@ public struct OldNewPair<TItem>
 
 ## Remarks
 
-Initializes a new instance of the [`OldNewPair`](OldNewPair-1.md) struct.
+Initializes a new instance of the [`OldNewPair`](./OldNewPair-1.md) struct.
 
 ## See Also
 

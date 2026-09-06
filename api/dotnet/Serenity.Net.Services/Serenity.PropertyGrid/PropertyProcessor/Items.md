@@ -1,5 +1,4 @@
 # PropertyProcessor.Items property
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public List<PropertyItem> Items { get; set; }
@@ -7,5 +6,5 @@ public List<PropertyItem> Items { get; set; }
 
 ## See Also
 
-* class [PropertyItem](../Serenity.Net.Core/../../Serenity.ComponentModel/PropertyItem.md)
+* class [PropertyItem](../../../Serenity.Net.Core/Serenity.ComponentModel/PropertyItem.md)
 * class [PropertyProcessor](../PropertyProcessor.md)

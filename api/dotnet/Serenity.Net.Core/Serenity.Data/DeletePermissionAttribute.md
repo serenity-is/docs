@@ -12,9 +12,9 @@ public class DeletePermissionAttribute : PermissionAttributeBase
 
 | name | description |
 | --- | --- |
-| [DeletePermissionAttribute](DeletePermissionAttribute/DeletePermissionAttribute.md)(…) | Initializes a new instance of the [`DeletePermissionAttribute`](DeletePermissionAttribute.md) class. (3 constructors) |
+| [DeletePermissionAttribute](DeletePermissionAttribute/DeletePermissionAttribute.md)(…) | Initializes a new instance of the [`DeletePermissionAttribute`](./DeletePermissionAttribute.md) class. (3 constructors) |
 
 ## See Also
 
-* class [PermissionAttributeBase](PermissionAttributeBase.md)
+* class [PermissionAttributeBase](./PermissionAttributeBase.md)
 * **Source:** *[DeletePermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Permission/DeletePermissionAttribute.cs)*

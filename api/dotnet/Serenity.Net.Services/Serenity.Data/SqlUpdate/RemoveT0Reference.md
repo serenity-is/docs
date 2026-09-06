@@ -1,5 +1,4 @@
 # SqlUpdate.RemoveT0Reference method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Removes the t0 reference from an SQL field reference.
 

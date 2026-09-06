@@ -1,5 +1,4 @@
 # IUserPermissionRow.GrantedField property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Granted field, might be null if not available. Used to optionally revoke permissions granted via roles.
 
@@ -9,5 +8,5 @@ public BooleanField GrantedField { get; }
 
 ## See Also
 
-* class [BooleanField](../Serenity.Net.Services/../BooleanField.md)
+* class [BooleanField](../../../Serenity.Net.Services/Serenity.Data/BooleanField.md)
 * interface [IUserPermissionRow](../IUserPermissionRow.md)

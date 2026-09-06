@@ -1,5 +1,4 @@
 # CombinedUploadStorage.UnderSubPath method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a value indicating whether the path is under the sub path.
 

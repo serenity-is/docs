@@ -12,9 +12,9 @@ public class ConnectionKeyFallbackAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [ConnectionKeyFallbackAttribute](ConnectionKeyFallbackAttribute/ConnectionKeyFallbackAttribute.md)(…) | Initializes a new instance of the [`ConnectionKeyFallbackAttribute`](ConnectionKeyFallbackAttribute.md) class. |
+| [ConnectionKeyFallbackAttribute](ConnectionKeyFallbackAttribute/ConnectionKeyFallbackAttribute.md)(…) | Initializes a new instance of the [`ConnectionKeyFallbackAttribute`](./ConnectionKeyFallbackAttribute.md) class. |
 | [ConnectionKey](ConnectionKeyFallbackAttribute/ConnectionKey.md) { get; } | Gets the logical connection key. |
-| [FallbackConnectionKey](ConnectionKeyFallbackAttribute/FallbackConnectionKey.md) { get; } | Gets the fallback connection key used when [`ConnectionKey`](ConnectionKeyFallbackAttribute/ConnectionKey.md) is not configured. |
+| [FallbackConnectionKey](ConnectionKeyFallbackAttribute/FallbackConnectionKey.md) { get; } | Gets the fallback connection key used when [`ConnectionKey`](./ConnectionKeyFallbackAttribute/ConnectionKey.md) is not configured. |
 
 ## Remarks
 

@@ -1,5 +1,4 @@
 # EnvironmentSettings.InjectMarkupToHead property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Optional markup to inject into head, can be used for analytics tags etc.
 

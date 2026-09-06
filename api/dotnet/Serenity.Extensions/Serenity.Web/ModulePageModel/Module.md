@@ -1,5 +1,4 @@
 # ModulePageModel.Module property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The module name or script path.
 

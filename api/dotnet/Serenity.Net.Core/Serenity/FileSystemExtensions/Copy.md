@@ -1,5 +1,4 @@
 # FileSystemExtensions.Copy method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Copies a file to another destination, optionally overwriting the destination if it exists.
 

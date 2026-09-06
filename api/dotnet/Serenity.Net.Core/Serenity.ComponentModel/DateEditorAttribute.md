@@ -12,7 +12,7 @@ public class DateEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [DateEditorAttribute](DateEditorAttribute/DateEditorAttribute.md)() | Initializes a new instance of the [`DateEditorAttribute`](DateEditorAttribute.md) class. |
+| [DateEditorAttribute](DateEditorAttribute/DateEditorAttribute.md)() | Initializes a new instance of the [`DateEditorAttribute`](./DateEditorAttribute.md) class. |
 | [MaxValue](DateEditorAttribute/MaxValue.md) { get; set; } | Gets or sets the maximum value. |
 | [MinValue](DateEditorAttribute/MinValue.md) { get; set; } | Gets or sets the minimum value. |
 | [SqlMinMax](DateEditorAttribute/SqlMinMax.md) { get; set; } | Gets or sets a value indicating whether SQL Server min max dates should be used. |
@@ -20,5 +20,5 @@ public class DateEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[DateEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/DateEditorAttribute.cs)*

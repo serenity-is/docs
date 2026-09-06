@@ -1,5 +1,4 @@
 # TwoLevelCache.GenerationSuffix field
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Suffix for cache generation keys
 

@@ -1,5 +1,4 @@
 # JsonLocalTextRegistration.AddJsonResourceTexts method (1 of 2)
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds JSON texts from embedded resources.
 
@@ -31,7 +30,6 @@ The text registry.
 ---
 
 # JsonLocalTextRegistration.AddJsonResourceTexts method (2 of 2)
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds JSON texts from embedded resources.
 

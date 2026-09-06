@@ -11,10 +11,10 @@ public class RightJoin : Join
 
 | name | description |
 | --- | --- |
-| [RightJoin](RightJoin/RightJoin.md)(…) | Initializes a new instance of the [`RightJoin`](RightJoin.md) class. (2 constructors) |
+| [RightJoin](RightJoin/RightJoin.md)(…) | Initializes a new instance of the [`RightJoin`](./RightJoin.md) class. (2 constructors) |
 | override [GetKeyword](RightJoin/GetKeyword.md)() | Gets the SQL keyword. |
 
 ## See Also
 
-* class [Join](Join.md)
+* class [Join](./Join.md)
 * **Source:** *[RightJoin.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Join/RightJoin.cs)*

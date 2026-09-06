@@ -1,7 +1,7 @@
 # JsonCriteriaConverter class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Serializes and deserializes a [`BaseCriteria`](BaseCriteria.md) object.
+Serializes and deserializes a [`BaseCriteria`](./BaseCriteria.md) object.
 
 ```csharp
 public class JsonCriteriaConverter : JsonConverter

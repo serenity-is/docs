@@ -1,5 +1,4 @@
 # IFileSystem.GetRelativePath method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Returns a relative path from one path to another.
 

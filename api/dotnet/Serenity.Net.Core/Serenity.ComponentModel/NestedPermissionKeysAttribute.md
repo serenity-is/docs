@@ -12,7 +12,7 @@ public sealed class NestedPermissionKeysAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [NestedPermissionKeysAttribute](NestedPermissionKeysAttribute/NestedPermissionKeysAttribute.md)() | Initializes a new instance of the [`NestedPermissionKeysAttribute`](NestedPermissionKeysAttribute.md) class. |
+| [NestedPermissionKeysAttribute](NestedPermissionKeysAttribute/NestedPermissionKeysAttribute.md)() | Initializes a new instance of the [`NestedPermissionKeysAttribute`](./NestedPermissionKeysAttribute.md) class. |
 | [LanguageID](NestedPermissionKeysAttribute/LanguageID.md) { get; set; } | Gets or sets the optional language identifier that specifies the language for texts specified in the [DisplayName] attribute. |
 
 ## See Also

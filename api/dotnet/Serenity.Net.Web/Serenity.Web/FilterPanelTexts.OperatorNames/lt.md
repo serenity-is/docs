@@ -1,5 +1,4 @@
 # FilterPanelTexts.OperatorNames.lt field
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 ```csharp
 public static readonly LocalText lt;
@@ -7,5 +6,5 @@ public static readonly LocalText lt;
 
 ## See Also
 
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * class [OperatorNames](../FilterPanelTexts.OperatorNames.md)

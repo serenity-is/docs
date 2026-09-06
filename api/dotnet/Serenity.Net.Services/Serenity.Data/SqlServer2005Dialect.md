@@ -17,5 +17,5 @@ public class SqlServer2005Dialect : SqlServer2000Dialect
 
 ## See Also
 
-* class [SqlServer2000Dialect](SqlServer2000Dialect.md)
+* class [SqlServer2000Dialect](./SqlServer2000Dialect.md)
 * **Source:** *[SqlServer2005Dialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/SqlServer2005Dialect.cs)*

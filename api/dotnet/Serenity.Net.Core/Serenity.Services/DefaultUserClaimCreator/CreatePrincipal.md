@@ -1,5 +1,4 @@
 # DefaultUserClaimCreator.CreatePrincipal method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates a principal for the specified user.
 

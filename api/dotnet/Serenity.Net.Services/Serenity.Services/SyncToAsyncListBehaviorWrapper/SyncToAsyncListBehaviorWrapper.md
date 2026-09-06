@@ -1,5 +1,4 @@
 # SyncToAsyncListBehaviorWrapper constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Wraps an [`IListBehaviorSync`](../IListBehaviorSync.md) implementation and exposes it as an [`IListBehaviorAsync`](../IListBehaviorAsync.md). This allows asynchronous list request handlers to run synchronous list behaviors.
 

@@ -1,7 +1,7 @@
 # QueryWithParamsExtensions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extension methods for classes implementing [`IQueryWithParams`](IQueryWithParams.md).
+Extension methods for classes implementing [`IQueryWithParams`](./IQueryWithParams.md).
 
 ```csharp
 public static class QueryWithParamsExtensions

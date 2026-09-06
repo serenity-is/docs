@@ -1,5 +1,4 @@
 # SendResetPasswordResponse.DemoLink property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The demo reset link, only returned in public demo mode.
 

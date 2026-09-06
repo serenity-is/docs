@@ -23,7 +23,7 @@ public class FormatterOptionAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`FormatterOptionAttribute`](FormatterOptionAttribute.md) class.
+Initializes a new instance of the [`FormatterOptionAttribute`](./FormatterOptionAttribute.md) class.
 
 ## See Also
 

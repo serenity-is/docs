@@ -21,7 +21,7 @@ public class SizeAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`SizeAttribute`](SizeAttribute.md) class.
+Initializes a new instance of the [`SizeAttribute`](./SizeAttribute.md) class.
 
 ## See Also
 

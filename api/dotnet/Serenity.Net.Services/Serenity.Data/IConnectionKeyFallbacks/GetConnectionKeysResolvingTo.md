@@ -1,5 +1,4 @@
 # IConnectionKeyFallbacks.GetConnectionKeysResolvingTo method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns all connection keys (including themselves) whose fallback chain resolves to the specified connection key. Only keys that actually resolve to a configured connection are included, so this is a configuration-aware operation.
 

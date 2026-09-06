@@ -1,5 +1,4 @@
 # Base32.Decode method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Decodes a Base32 string into a byte array.
 

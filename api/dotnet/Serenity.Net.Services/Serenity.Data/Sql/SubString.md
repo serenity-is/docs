@@ -1,5 +1,4 @@
 # Sql.SubString method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a SUBSTRING() expression.
 

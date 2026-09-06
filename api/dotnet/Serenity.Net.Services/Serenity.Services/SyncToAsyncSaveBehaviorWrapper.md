@@ -1,7 +1,7 @@
 # SyncToAsyncSaveBehaviorWrapper class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Wraps an [`ISaveBehaviorSync`](ISaveBehaviorSync.md) implementation and exposes it as an [`ISaveBehaviorAsync`](ISaveBehaviorAsync.md). This allows asynchronous save request handlers to run synchronous save behaviors.
+Wraps an [`ISaveBehaviorSync`](./ISaveBehaviorSync.md) implementation and exposes it as an [`ISaveBehaviorAsync`](./ISaveBehaviorAsync.md). This allows asynchronous save request handlers to run synchronous save behaviors.
 
 ```csharp
 public class SyncToAsyncSaveBehaviorWrapper : ISaveBehaviorAsync, IWrappedBehavior
@@ -27,6 +27,6 @@ A behavior instance is always cached and reused across requests, so make sure yo
 
 ## See Also
 
-* interface [ISaveBehaviorAsync](ISaveBehaviorAsync.md)
-* interface [IWrappedBehavior](IWrappedBehavior.md)
+* interface [ISaveBehaviorAsync](./ISaveBehaviorAsync.md)
+* interface [IWrappedBehavior](./IWrappedBehavior.md)
 * **Source:** *[SyncToAsyncSaveBehaviorWrapper.cs](https://github.com/serenity-is/Serenity/blob/04ac3ea58a41048bed911555c87969edcf6ea031/src/services/RequestHandlers/Save/SyncToAsyncSaveBehaviorWrapper.cs)*

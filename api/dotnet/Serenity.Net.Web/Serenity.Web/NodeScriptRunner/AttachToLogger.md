@@ -1,5 +1,4 @@
 # NodeScriptRunner.AttachToLogger method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Attaches the runner's output to the given logger.
 

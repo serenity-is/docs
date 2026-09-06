@@ -1,5 +1,4 @@
 # QueryWithParams.CreateSubQuery&lt;TQuery&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new query that shares parameter dictionary with this query.
 
@@ -14,5 +13,4 @@ A new query that shares parameters.
 
 ## See Also
 
-* class [TQuery](../Serenity.Net.Services/../QueryWithParams.TQuery.md)
 * class [QueryWithParams](../QueryWithParams.md)

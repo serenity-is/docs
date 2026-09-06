@@ -1,5 +1,4 @@
 # MasterDetailRelationAttribute.ColumnsType property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the columns type with properties to include in column selection
 

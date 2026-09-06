@@ -1,5 +1,4 @@
 # Field.IsNullNoCheck method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets if the field value is null without checking for assignment.
 

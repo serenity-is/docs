@@ -1,5 +1,4 @@
 # NavigationHelper.ByCategory method
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates a lookup of navigation item attributes by their category.
 
@@ -24,5 +23,5 @@ A lookup of navigation item attributes by category.
 
 ## See Also
 
-* class [NavigationItemAttribute](../Serenity.Net.Core/../NavigationItemAttribute.md)
+* class [NavigationItemAttribute](../../../Serenity.Net.Core/Serenity.Navigation/NavigationItemAttribute.md)
 * class [NavigationHelper](../NavigationHelper.md)

@@ -12,10 +12,10 @@ public class PasswordEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [PasswordEditorAttribute](PasswordEditorAttribute/PasswordEditorAttribute.md)() | Initializes a new instance of the [`PasswordEditorAttribute`](PasswordEditorAttribute.md) class. |
+| [PasswordEditorAttribute](PasswordEditorAttribute/PasswordEditorAttribute.md)() | Initializes a new instance of the [`PasswordEditorAttribute`](./PasswordEditorAttribute.md) class. |
 | const [Key](PasswordEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[PasswordEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/PasswordEditorAttribute.cs)*

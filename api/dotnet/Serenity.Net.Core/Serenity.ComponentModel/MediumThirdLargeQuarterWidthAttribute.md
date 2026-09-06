@@ -12,9 +12,9 @@ public class MediumThirdLargeQuarterWidthAttribute : FormWidthAttribute
 
 | name | description |
 | --- | --- |
-| [MediumThirdLargeQuarterWidthAttribute](MediumThirdLargeQuarterWidthAttribute/MediumThirdLargeQuarterWidthAttribute.md)() | Initializes a new instance of the [`MediumThirdLargeQuarterWidthAttribute`](MediumThirdLargeQuarterWidthAttribute.md) class. |
+| [MediumThirdLargeQuarterWidthAttribute](MediumThirdLargeQuarterWidthAttribute/MediumThirdLargeQuarterWidthAttribute.md)() | Initializes a new instance of the [`MediumThirdLargeQuarterWidthAttribute`](./MediumThirdLargeQuarterWidthAttribute.md) class. |
 
 ## See Also
 
-* class [FormWidthAttribute](FormWidthAttribute.md)
+* class [FormWidthAttribute](./FormWidthAttribute.md)
 * **Source:** *[MediumThirdLargeQuarterWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/MediumThirdLargeQuarterWidthAttribute.cs)*

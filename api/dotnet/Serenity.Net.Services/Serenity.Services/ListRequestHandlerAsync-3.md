@@ -30,7 +30,7 @@ public class ListRequestHandlerAsync<TRow, TListRequest, TListResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](ListRequestHandlerAsync-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](ListRequestHandlerAsync-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [ApplyFiltersAsync](ListRequestHandlerAsync-3/ApplyFiltersAsync.md)(…) | Applies all the filters including Request.EqualityFilter, Request.Criteria and Request.IncludeDeleted to the query. |
 | virtual [ExecuteQueryAsync](ListRequestHandlerAsync-3/ExecuteQueryAsync.md)(…) | Executes the query sets values / entities and total count. |
 | override [MapFieldExpression](ListRequestHandlerAsync-3/MapFieldExpression.md)(…) |  |
@@ -42,13 +42,10 @@ public class ListRequestHandlerAsync<TRow, TListRequest, TListResponse> :
 
 ## See Also
 
-* class [ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;](ListRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/ListRequestHandlerAsync-3.TRow.md)
-* class [TListRequest](../Serenity.Net.Services/ListRequestHandlerAsync-3.TListRequest.md)
-* class [TListResponse](../Serenity.Net.Services/ListRequestHandlerAsync-3.TListResponse.md)
-* interface [IListHandlerAsync&lt;TRow,TListRequest,TListResponse&gt;](IListHandlerAsync-3.md)
-* interface [IListRequestProcessorAsync](IListRequestProcessorAsync.md)
+* class [ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;](./ListRequestHandlerBase-3.md)
+* interface [IListHandlerAsync&lt;TRow,TListRequest,TListResponse&gt;](./IListHandlerAsync-3.md)
+* interface [IListRequestProcessorAsync](./IListRequestProcessorAsync.md)
 * interface [IRow](../Serenity.Data/IRow.md)
-* class [ListRequest](ListRequest.md)
-* class [ListResponse&lt;T&gt;](ListResponse-1.md)
+* class [ListRequest](./ListRequest.md)
+* class [ListResponse&lt;T&gt;](./ListResponse-1.md)
 * **Source:** *[ListRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/62e26a99abba7fd00c7409a1334581e3c5ccd1f4/src/services/RequestHandlers/List/ListRequestHandlerAsync.cs)*

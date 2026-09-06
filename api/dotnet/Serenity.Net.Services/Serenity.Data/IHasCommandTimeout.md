@@ -1,7 +1,7 @@
 # IHasCommandTimeout interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for types that have a [`CommandTimeout`](IHasCommandTimeout/CommandTimeout.md) property that determines the default command timeout for that connection.
+Interface for types that have a [`CommandTimeout`](./IHasCommandTimeout/CommandTimeout.md) property that determines the default command timeout for that connection.
 
 ```csharp
 public interface IHasCommandTimeout

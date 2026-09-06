@@ -1,5 +1,4 @@
 # ServiceQueryHelper.GetNotDeletedCriteria method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets not deleted criteria for a row type, e.g. for rows that support soft delete.
 

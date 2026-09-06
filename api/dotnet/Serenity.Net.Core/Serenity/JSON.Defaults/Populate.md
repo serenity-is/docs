@@ -1,5 +1,4 @@
 # JSON.Defaults.Populate method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates a JsonSerializerOptions object with the common Serenity values and converters.
 

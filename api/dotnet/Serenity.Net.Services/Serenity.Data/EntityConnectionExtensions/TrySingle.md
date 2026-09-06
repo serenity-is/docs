@@ -1,5 +1,4 @@
 # EntityConnectionExtensions.TrySingle&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Tries to find a single entity, allowing caller to edit the criteria and set of fields to load through a editQuery callback.
 
@@ -26,7 +25,6 @@ Single entity matching the criteria set by editQuery, or null if not found.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
@@ -34,7 +32,6 @@ Single entity matching the criteria set by editQuery, or null if not found.
 ---
 
 # EntityConnectionExtensions.TrySingle&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Tries to find a single entity matching the specified criteria. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
@@ -61,7 +58,6 @@ The single entity matching the specified criteria, or null if no matching record
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

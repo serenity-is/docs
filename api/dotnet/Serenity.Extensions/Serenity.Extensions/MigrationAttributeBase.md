@@ -12,7 +12,7 @@ public abstract class MigrationAttributeBase : MigrationAttribute
 
 | name | description |
 | --- | --- |
-| [MigrationAttributeBase](MigrationAttributeBase/MigrationAttributeBase.md)(…) | Initializes a new instance of the [`MigrationAttributeBase`](MigrationAttributeBase.md) class. |
+| [MigrationAttributeBase](MigrationAttributeBase/MigrationAttributeBase.md)(…) | Initializes a new instance of the [`MigrationAttributeBase`](./MigrationAttributeBase.md) class. |
 
 ## See Also
 

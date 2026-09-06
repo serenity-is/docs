@@ -1,5 +1,4 @@
 # MigrationUtils.IsDatabase method (1 of 2)
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Determines whether the migration is running against a database matching the specified predicate.
 
@@ -23,7 +22,6 @@ public static bool IsDatabase(this MigrationBase migration, Predicate<string> pr
 ---
 
 # MigrationUtils.IsDatabase method (2 of 2)
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Determines whether the migration is running against a database whose type starts with the specified name.
 

@@ -1,5 +1,4 @@
 # DynamicScriptServiceCollectionExtensions.AddCssBundling method (1 of 2)
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Registers the default service types related to CSS bundling, including [`ICssBundleManager`](../../Serenity.Web/ICssBundleManager.md).
 
@@ -28,7 +27,6 @@ The same service collection so that calls can be chained.
 ---
 
 # DynamicScriptServiceCollectionExtensions.AddCssBundling method (2 of 2)
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Registers the default service types related to CSS bundling, including [`ICssBundleManager`](../../Serenity.Web/ICssBundleManager.md).
 

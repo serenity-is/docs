@@ -1,5 +1,4 @@
 # CoreServiceCollectionExtensions.AddUserProvider method (1 of 3)
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds the [`DefaultUserProvider`](../../Serenity.Services/DefaultUserProvider.md) as [`IUserProvider`](../../Serenity.Abstractions/IUserProvider.md) implementation to the service collection. Note that it requires IUserRetrieveService, IUserAcessor to be registered in the service collection. It also tries to register the DefaultUserClaimCreator.
 
@@ -18,7 +17,6 @@ public static IServiceCollection AddUserProvider(this IServiceCollection service
 ---
 
 # CoreServiceCollectionExtensions.AddUserProvider&lt;TUserAccessor,TUserRetrieveService&gt; method (2 of 3)
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds the [`DefaultUserProvider`](../../Serenity.Services/DefaultUserProvider.md) as [`IUserProvider`](../../Serenity.Abstractions/IUserProvider.md) implementation to the service collection. Also registers the given IUserAccessor and IUserRetrieveService implementations and tries to register the DefaultUserClaimCreator implementation.
 
@@ -42,7 +40,6 @@ public static IServiceCollection AddUserProvider<TUserAccessor, TUserRetrieveSer
 ---
 
 # CoreServiceCollectionExtensions.AddUserProvider&lt;TUserAccessor,TUserRetrieveService,TUserClaimCreator&gt; method (3 of 3)
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds the [`DefaultUserProvider`](../../Serenity.Services/DefaultUserProvider.md) as [`IUserProvider`](../../Serenity.Abstractions/IUserProvider.md) implementation to the service collection. Also registers the given IUserAccessor, IUserRetrieveService and IUserClaimCreator implementations.
 

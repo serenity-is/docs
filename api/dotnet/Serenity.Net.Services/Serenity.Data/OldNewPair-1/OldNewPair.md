@@ -1,5 +1,4 @@
 # OldNewPair&lt;TItem&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 A pair of old and new values.
 
@@ -19,5 +18,4 @@ Initializes a new instance of the [`OldNewPair`](../OldNewPair-1.md) struct.
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Services/../OldNewPair-1.TItem.md)
 * struct [OldNewPair&lt;TItem&gt;](../OldNewPair-1.md)

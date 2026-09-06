@@ -1,5 +1,4 @@
 # ImageCheckResultTexts.HeightMismatch field
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public static readonly LocalText HeightMismatch;
@@ -7,5 +6,5 @@ public static readonly LocalText HeightMismatch;
 
 ## See Also
 
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * class [ImageCheckResultTexts](../ImageCheckResultTexts.md)

@@ -1,5 +1,4 @@
 # AuthorizationExtensions.Impersonate method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Impersonates the user with the specified username.
 

@@ -1,5 +1,4 @@
 # SqlUpdate.SetTo method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets field value to the expression.
 
@@ -24,7 +23,6 @@ SqlUpdate object itself.
 ---
 
 # SqlUpdate.SetTo method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets field value to the expression.
 

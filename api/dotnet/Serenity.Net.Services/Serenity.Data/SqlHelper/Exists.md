@@ -1,5 +1,4 @@
 # SqlHelper.Exists method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the query returning true if it has at least one result.
 

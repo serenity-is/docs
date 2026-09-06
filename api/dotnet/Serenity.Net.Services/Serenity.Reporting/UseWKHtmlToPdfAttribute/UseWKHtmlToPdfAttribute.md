@@ -1,5 +1,4 @@
 # UseWKHtmlToPdfAttribute constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Marks a report to determine if it should use WKHTML instead of another converter, e.g. Puppeteer etc. (only if configured in service provider).
 

@@ -17,11 +17,11 @@ public class SortableAttribute : Attribute
 | name | description |
 | --- | --- |
 | [SortableAttribute](SortableAttribute/SortableAttribute.md)(…) | Indicates if sorting is enabled for this property |
-| [Value](SortableAttribute/Value.md) { get; } | Gets a value indicating whether this [`SortableAttribute`](SortableAttribute.md) is enabled. |
+| [Value](SortableAttribute/Value.md) { get; } | Gets a value indicating whether this [`SortableAttribute`](./SortableAttribute.md) is enabled. |
 
 ## Remarks
 
-Initializes a new instance of the [`SortableAttribute`](SortableAttribute.md) class.
+Initializes a new instance of the [`SortableAttribute`](./SortableAttribute.md) class.
 
 ## See Also
 

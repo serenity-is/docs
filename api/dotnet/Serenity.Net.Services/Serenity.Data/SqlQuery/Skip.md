@@ -1,5 +1,4 @@
 # SqlQuery.Skip method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets current SKIP value.
 
@@ -18,7 +17,6 @@ SKIP value.
 ---
 
 # SqlQuery.Skip method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets SKIP value. Used for paging.
 

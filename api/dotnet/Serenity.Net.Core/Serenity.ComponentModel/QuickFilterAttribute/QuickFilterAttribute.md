@@ -1,5 +1,4 @@
 # QuickFilterAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Indicates that this property should have a quick filter on the grid.
 

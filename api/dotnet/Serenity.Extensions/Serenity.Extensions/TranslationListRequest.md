@@ -17,5 +17,5 @@ public class TranslationListRequest : ListRequest
 
 ## See Also
 
-* class [ListRequest](../Serenity.Net.Services/../Serenity.Services/ListRequest.md)
+* class [ListRequest](../../Serenity.Net.Services/Serenity.Services/ListRequest.md)
 * **Source:** *[TranslationListRequest.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/Translation/TranslationListRequest.cs)*

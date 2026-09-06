@@ -1,5 +1,4 @@
 # DateTimeField.DateOnly property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets a value indicating whether the field is date only, e.g. no time part.
 

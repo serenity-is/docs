@@ -1,10 +1,9 @@
 # NavigationItemAttribute.Url property
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 URL of this navigation item, should be null for a menu.
 
 ```csharp
-public string Url { get; set; }
+public string? Url { get; set; }
 ```
 
 ## See Also

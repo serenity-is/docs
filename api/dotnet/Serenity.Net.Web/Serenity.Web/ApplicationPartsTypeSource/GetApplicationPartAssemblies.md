@@ -1,5 +1,4 @@
 # ApplicationPartsTypeSource.GetApplicationPartAssemblies method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets all the assemblies from the application part manager.
 

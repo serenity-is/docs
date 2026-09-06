@@ -1,5 +1,4 @@
 # FallbackLocalTextSource constructor
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds key fallback behavior to any [`ILocalTextRegistry`](../../Serenity.Abstractions/ILocalTextRegistry.md) implementation.
 

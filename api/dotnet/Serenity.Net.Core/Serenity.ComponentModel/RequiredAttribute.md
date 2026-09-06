@@ -12,8 +12,8 @@ public sealed class RequiredAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [RequiredAttribute](RequiredAttribute/RequiredAttribute.md)() | Initializes a new instance of the [`RequiredAttribute`](RequiredAttribute.md) class. |
-| [RequiredAttribute](RequiredAttribute/RequiredAttribute.md)(…) | Initializes a new instance of the [`RequiredAttribute`](RequiredAttribute.md) class. |
+| [RequiredAttribute](RequiredAttribute/RequiredAttribute.md)() | Initializes a new instance of the [`RequiredAttribute`](./RequiredAttribute.md) class. |
+| [RequiredAttribute](RequiredAttribute/RequiredAttribute.md)(…) | Initializes a new instance of the [`RequiredAttribute`](./RequiredAttribute.md) class. |
 | [IsRequired](RequiredAttribute/IsRequired.md) { get; } | Gets the target property required value. |
 
 ## See Also

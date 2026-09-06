@@ -1,5 +1,4 @@
 # FeatureBarrierAttribute constructor (1 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates an attribute that can be used to barrier actions or pages. The barrier can be configured to require all or any of the provided feature(s) to pass.
 
@@ -18,7 +17,6 @@ public FeatureBarrierAttribute(params object[] features)
 ---
 
 # FeatureBarrierAttribute constructor (2 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates an attribute that can be used to barrier actions or pages. The barrier can be configured to require all or any of the provided feature(s) to pass.
 

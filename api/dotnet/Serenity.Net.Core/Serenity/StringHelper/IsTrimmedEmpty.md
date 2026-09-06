@@ -1,10 +1,9 @@
 # StringHelper.IsTrimmedEmpty method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 This function is just an extension method version of string.IsNullOrWhitespace and is effectively obsolete.
 
 ```csharp
-public static bool IsTrimmedEmpty(this string str)
+public static bool IsTrimmedEmpty(this string? str)
 ```
 
 | parameter | description |

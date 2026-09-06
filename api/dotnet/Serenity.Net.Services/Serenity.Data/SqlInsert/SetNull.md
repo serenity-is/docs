@@ -1,5 +1,4 @@
 # SqlInsert.SetNull method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Assigns NULL as the field value.
 

@@ -1,5 +1,4 @@
 # CompanionHandlerTypeAttribute constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies the companion (other mode) handler interface for a request processor interface, e.g. [`ISaveRequestProcessorAsync`](../ISaveRequestProcessorAsync.md) as companion of [`ISaveRequestProcessor`](../ISaveRequestProcessor.md), together with a wrapper type that adapts a custom handler of the companion interface to this interface.
 

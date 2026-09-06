@@ -1,10 +1,9 @@
 # StringHelper.TrimToEmpty method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Removes whitespace characters in the left or right of the String string, and if resulting string is empty or null, returns empty.
 
 ```csharp
-public static string TrimToEmpty(this string str)
+public static string TrimToEmpty(this string? str)
 ```
 
 | parameter | description |

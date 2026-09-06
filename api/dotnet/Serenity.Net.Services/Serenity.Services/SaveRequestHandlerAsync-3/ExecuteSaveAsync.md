@@ -1,11 +1,9 @@
 # SaveRequestHandlerAsync&lt;TRow,TSaveRequest,TSaveResponse&gt;.ExecuteSaveAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the actual SQL save operation
 
 ```csharp
-protected virtual Task ExecuteSaveAsync(
-    CancellationToken cancellationToken = default(CancellationToken))
+protected virtual Task ExecuteSaveAsync(CancellationToken cancellationToken = default)
 ```
 
 ## See Also

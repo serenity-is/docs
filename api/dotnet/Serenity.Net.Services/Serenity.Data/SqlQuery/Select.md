@@ -1,5 +1,4 @@
 # SqlQuery.Select method (1 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a subquery to the SELECT statement.
 
@@ -23,7 +22,6 @@ The query itself.
 ---
 
 # SqlQuery.Select method (2 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field name or an SQL expression to the SELECT statement.
 
@@ -56,7 +54,6 @@ No column name is used for the field or expression.
 ---
 
 # SqlQuery.Select method (3 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field of a given table alias to the SELECT statement.
 
@@ -85,7 +82,6 @@ No column name is used for the field or expression.
 ---
 
 # SqlQuery.Select method (4 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a subquery to the SELECT statement.
 
@@ -110,7 +106,6 @@ The query itself.
 ---
 
 # SqlQuery.Select method (5 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field name or expression to the SELECT statement with a column name
 
@@ -140,7 +135,6 @@ The query itself.
 ---
 
 # SqlQuery.Select method (6 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field of a given table alias to the SELECT statement with a column name.
 

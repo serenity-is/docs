@@ -1,5 +1,4 @@
 # IUploadValidator.ValidateImage method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates image constraints
 
@@ -17,5 +16,5 @@ public void ValidateImage(IUploadImageConstraints constraints, Stream stream, st
 
 ## See Also
 
-* interface [IUploadImageConstraints](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadImageConstraints.md)
+* interface [IUploadImageConstraints](../../../Serenity.Net.Core/Serenity.ComponentModel/IUploadImageConstraints.md)
 * interface [IUploadValidator](../IUploadValidator.md)

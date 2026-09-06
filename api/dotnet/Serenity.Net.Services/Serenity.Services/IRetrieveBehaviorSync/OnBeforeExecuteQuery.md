@@ -1,5 +1,4 @@
 # IRetrieveBehaviorSync.OnBeforeExecuteQuery method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called just before query is sent to database
 

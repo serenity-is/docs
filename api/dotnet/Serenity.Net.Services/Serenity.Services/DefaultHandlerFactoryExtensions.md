@@ -1,7 +1,7 @@
 # DefaultHandlerFactoryExtensions class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extension methods for [`IDefaultHandlerFactory`](IDefaultHandlerFactory.md)
+Extension methods for [`IDefaultHandlerFactory`](./IDefaultHandlerFactory.md)
 
 ```csharp
 public static class DefaultHandlerFactoryExtensions

@@ -1,5 +1,4 @@
 # ServiceEndpoint.Context property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the request context.
 
@@ -9,5 +8,5 @@ protected IRequestContext Context { get; set; }
 
 ## See Also
 
-* interface [IRequestContext](../Serenity.Net.Services/../IRequestContext.md)
+* interface [IRequestContext](../../../Serenity.Net.Services/Serenity.Services/IRequestContext.md)
 * class [ServiceEndpoint](../ServiceEndpoint.md)

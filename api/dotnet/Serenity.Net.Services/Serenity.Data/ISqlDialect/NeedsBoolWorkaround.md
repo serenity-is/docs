@@ -1,5 +1,4 @@
 # ISqlDialect.NeedsBoolWorkaround property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether the server needs a workaround to handle Boolean values false/true.
 

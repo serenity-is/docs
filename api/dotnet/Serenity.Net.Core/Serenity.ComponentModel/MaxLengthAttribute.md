@@ -21,7 +21,7 @@ public class MaxLengthAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`MaxLengthAttribute`](MaxLengthAttribute.md) class.
+Initializes a new instance of the [`MaxLengthAttribute`](./MaxLengthAttribute.md) class.
 
 ## See Also
 

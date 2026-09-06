@@ -1,5 +1,4 @@
 # ISaveRequestHandler.IsCreate property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether this is an INSERT operation.
 

@@ -1,7 +1,7 @@
 # AsyncToSyncDeleteBehaviorWrapper class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Wraps an [`IDeleteBehaviorAsync`](IDeleteBehaviorAsync.md) implementation and exposes it as an [`IDeleteBehaviorSync`](IDeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous delete request handlers to run asynchronous delete behaviors.
+Wraps an [`IDeleteBehaviorAsync`](./IDeleteBehaviorAsync.md) implementation and exposes it as an [`IDeleteBehaviorSync`](./IDeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous delete request handlers to run asynchronous delete behaviors.
 
 ```csharp
 public class AsyncToSyncDeleteBehaviorWrapper : IDeleteBehaviorSync, IWrappedBehavior
@@ -11,7 +11,7 @@ public class AsyncToSyncDeleteBehaviorWrapper : IDeleteBehaviorSync, IWrappedBeh
 
 | name | description |
 | --- | --- |
-| [AsyncToSyncDeleteBehaviorWrapper](AsyncToSyncDeleteBehaviorWrapper/AsyncToSyncDeleteBehaviorWrapper.md)(…) | Wraps an [`IDeleteBehaviorAsync`](IDeleteBehaviorAsync.md) implementation and exposes it as an [`IDeleteBehaviorSync`](IDeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous delete request handlers to run asynchronous delete behaviors. |
+| [AsyncToSyncDeleteBehaviorWrapper](AsyncToSyncDeleteBehaviorWrapper/AsyncToSyncDeleteBehaviorWrapper.md)(…) | Wraps an [`IDeleteBehaviorAsync`](./IDeleteBehaviorAsync.md) implementation and exposes it as an [`IDeleteBehaviorSync`](./IDeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous delete request handlers to run asynchronous delete behaviors. |
 | [WrappedBehavior](AsyncToSyncDeleteBehaviorWrapper/WrappedBehavior.md) { get; } |  |
 | [OnAfterDelete](AsyncToSyncDeleteBehaviorWrapper/OnAfterDelete.md)(…) |  |
 | [OnAudit](AsyncToSyncDeleteBehaviorWrapper/OnAudit.md)(…) |  |
@@ -26,6 +26,6 @@ A behavior instance is always cached and reused across requests, so make sure yo
 
 ## See Also
 
-* interface [IDeleteBehaviorSync](IDeleteBehaviorSync.md)
-* interface [IWrappedBehavior](IWrappedBehavior.md)
+* interface [IDeleteBehaviorSync](./IDeleteBehaviorSync.md)
+* interface [IWrappedBehavior](./IWrappedBehavior.md)
 * **Source:** *[AsyncToSyncDeleteBehaviorWrapper.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Delete/AsyncToSyncDeleteBehaviorWrapper.cs)*

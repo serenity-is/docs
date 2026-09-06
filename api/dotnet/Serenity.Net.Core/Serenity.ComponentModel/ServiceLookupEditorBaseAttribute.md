@@ -48,9 +48,9 @@ public abstract class ServiceLookupEditorBaseAttribute : CustomEditorAttribute
 
 ## Remarks
 
-Initializes a new instance of the [`ServiceLookupEditorBaseAttribute`](ServiceLookupEditorBaseAttribute.md) class.
+Initializes a new instance of the [`ServiceLookupEditorBaseAttribute`](./ServiceLookupEditorBaseAttribute.md) class.
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[ServiceLookupEditorBaseAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/ServiceLookupEditorBaseAttribute.cs)*

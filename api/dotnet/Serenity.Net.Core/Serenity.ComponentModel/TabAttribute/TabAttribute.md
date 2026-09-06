@@ -1,10 +1,9 @@
 # TabAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Sets a tab for a form field.
 
 ```csharp
-public TabAttribute(string value)
+public TabAttribute(string? value)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # EmailEditorAttribute.Domain property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets or sets the domain.
 

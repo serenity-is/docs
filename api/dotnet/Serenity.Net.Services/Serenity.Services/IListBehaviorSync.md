@@ -24,5 +24,5 @@ A list behavior instance is always cached and reused across requests, so make su
 
 ## See Also
 
-* interface [IListBehavior](IListBehavior.md)
+* interface [IListBehavior](./IListBehavior.md)
 * **Source:** *[IListBehaviorSync.cs](https://github.com/serenity-is/Serenity/blob/8b22589557b8ad2f922b5a8d4de1b9e6034f2c0a/src/services/RequestHandlers/List/IListBehaviorSync.cs)*

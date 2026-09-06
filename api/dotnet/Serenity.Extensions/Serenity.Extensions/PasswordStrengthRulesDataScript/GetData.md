@@ -1,5 +1,4 @@
 # PasswordStrengthRulesDataScript.GetData method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the password strength rules from the configured membership settings.
 

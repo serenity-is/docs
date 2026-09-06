@@ -1,11 +1,10 @@
 # TemporaryFileHelper.PurgeDirectoryDefault method
-**namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Clears a folder based on the default conditions.
 
 ```csharp
 public static void PurgeDirectoryDefault(string directoryToClean, 
-    ITemporaryFileSystem fileSystem = null)
+    ITemporaryFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

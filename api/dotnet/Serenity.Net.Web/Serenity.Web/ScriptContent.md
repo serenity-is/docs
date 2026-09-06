@@ -33,9 +33,9 @@ public class ScriptContent : IScriptContent
 
 ## Remarks
 
-Initializes a new instance of the [`ScriptContent`](ScriptContent.md) class.
+Initializes a new instance of the [`ScriptContent`](./ScriptContent.md) class.
 
 ## See Also
 
-* interface [IScriptContent](../Serenity.Net.Core/IScriptContent.md)
+* interface [IScriptContent](../../Serenity.Net.Core/Serenity.Web/IScriptContent.md)
 * **Source:** *[ScriptContent.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScript/ScriptContent.cs)*

@@ -1,5 +1,4 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.IsEmptyEqualityFilterValue method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Checks if the equality filter value is empty. It returns true for null, empty string, or empty IEnumerable.
 

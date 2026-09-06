@@ -1,5 +1,4 @@
 # ReportRegistry.Category constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Model for a report category.
 

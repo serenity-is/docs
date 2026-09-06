@@ -1,5 +1,4 @@
 # ModulePageExtensions.PageTitle method (1 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the page title local text key for the specified row fields.
 
@@ -17,13 +16,12 @@ The page title local text key.
 
 ## See Also
 
-* class [RowFieldsBase](../Serenity.Net.Services/../../Serenity.Data/RowFieldsBase.md)
+* class [RowFieldsBase](../../../Serenity.Net.Services/Serenity.Data/RowFieldsBase.md)
 * class [ModulePageExtensions](../ModulePageExtensions.md)
 
 ---
 
 # ModulePageExtensions.PageTitle method (2 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Sets the page title of the result.
 
@@ -43,13 +41,12 @@ The module page result.
 ## See Also
 
 * class [ModulePageResult](../ModulePageResult.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * class [ModulePageExtensions](../ModulePageExtensions.md)
 
 ---
 
 # ModulePageExtensions.PageTitle&lt;TRow&gt; method (3 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Sets the page title of the result from the specified row type.
 
@@ -70,5 +67,5 @@ The module page result.
 ## See Also
 
 * class [ModulePageResult](../ModulePageResult.md)
-* interface [IRow](../Serenity.Net.Services/../../Serenity.Data/IRow.md)
+* interface [IRow](../../../Serenity.Net.Services/Serenity.Data/IRow.md)
 * class [ModulePageExtensions](../ModulePageExtensions.md)

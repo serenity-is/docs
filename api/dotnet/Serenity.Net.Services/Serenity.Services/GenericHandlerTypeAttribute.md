@@ -1,7 +1,7 @@
 # GenericHandlerTypeAttribute class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Assigns the generic handler type (e.g. [`SaveRequestHandler`](SaveRequestHandler-1.md) for a handler interface (like [`ISaveRequestHandler`](ISaveRequestHandler.md)).
+Assigns the generic handler type (e.g. [`SaveRequestHandler`](./SaveRequestHandler-1.md) for a handler interface (like [`ISaveRequestHandler`](./ISaveRequestHandler.md)).
 
 ```csharp
 [AttributeUsage(AttributeTargets.Interface)]
@@ -16,7 +16,7 @@ public class GenericHandlerTypeAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [GenericHandlerTypeAttribute](GenericHandlerTypeAttribute/GenericHandlerTypeAttribute.md)(…) | Assigns the generic handler type (e.g. [`SaveRequestHandler`](SaveRequestHandler-1.md) for a handler interface (like [`ISaveRequestHandler`](ISaveRequestHandler.md)). |
+| [GenericHandlerTypeAttribute](GenericHandlerTypeAttribute/GenericHandlerTypeAttribute.md)(…) | Assigns the generic handler type (e.g. [`SaveRequestHandler`](./SaveRequestHandler-1.md) for a handler interface (like [`ISaveRequestHandler`](./ISaveRequestHandler.md)). |
 | [Value](GenericHandlerTypeAttribute/Value.md) { get; } | Gets the generic handler type. |
 
 ## Remarks

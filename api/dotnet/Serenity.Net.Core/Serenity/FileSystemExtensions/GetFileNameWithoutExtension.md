@@ -1,5 +1,4 @@
 # FileSystemExtensions.GetFileNameWithoutExtension method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the file name without its extension for the specified path.
 

@@ -1,5 +1,4 @@
 # DatabaseAliasAttribute constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines database alias, used for unit test database contexts.
 

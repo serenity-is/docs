@@ -1,7 +1,7 @@
 # EditorAddonItem class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Editor addon item used within the [`PropertyItem`](PropertyItem.md) class.
+Editor addon item used within the [`PropertyItem`](./PropertyItem.md) class.
 
 ```csharp
 public class EditorAddonItem

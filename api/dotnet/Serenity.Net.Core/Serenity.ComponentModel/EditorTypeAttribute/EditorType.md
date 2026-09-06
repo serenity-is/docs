@@ -1,5 +1,4 @@
 # EditorTypeAttribute.EditorType property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the type of the editor.
 

@@ -1,5 +1,4 @@
 # DefaultImageProcessor.Scale method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public object Scale(object imageObj, int scaleWidth, int scaleHeight, ImageScaleMode mode, 
@@ -8,5 +7,5 @@ public object Scale(object imageObj, int scaleWidth, int scaleHeight, ImageScale
 
 ## See Also
 
-* enum [ImageScaleMode](../Serenity.Net.Core/../ImageScaleMode.md)
+* enum [ImageScaleMode](../../../Serenity.Net.Core/Serenity.Web/ImageScaleMode.md)
 * class [DefaultImageProcessor](../DefaultImageProcessor.md)

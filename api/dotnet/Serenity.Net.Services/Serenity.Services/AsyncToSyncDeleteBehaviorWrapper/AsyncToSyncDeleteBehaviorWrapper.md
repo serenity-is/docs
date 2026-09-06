@@ -1,5 +1,4 @@
 # AsyncToSyncDeleteBehaviorWrapper constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Wraps an [`IDeleteBehaviorAsync`](../IDeleteBehaviorAsync.md) implementation and exposes it as an [`IDeleteBehaviorSync`](../IDeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous delete request handlers to run asynchronous delete behaviors.
 

@@ -1,5 +1,4 @@
 # FieldInsertPermissionAttribute constructor (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`FieldInsertPermissionAttribute`](../FieldInsertPermissionAttribute.md) class.
 
@@ -18,7 +17,6 @@ public FieldInsertPermissionAttribute(object permission)
 ---
 
 # FieldInsertPermissionAttribute constructor (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`FieldInsertPermissionAttribute`](../FieldInsertPermissionAttribute.md) class. A colon is inserted between module and permission to generate permission key.
 
@@ -38,7 +36,6 @@ public FieldInsertPermissionAttribute(object module, object permission)
 ---
 
 # FieldInsertPermissionAttribute constructor (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`FieldInsertPermissionAttribute`](../FieldInsertPermissionAttribute.md) class. A colon is inserted between module, submodule and permission to generate permission key.
 

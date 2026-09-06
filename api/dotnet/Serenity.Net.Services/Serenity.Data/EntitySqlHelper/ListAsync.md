@@ -1,12 +1,10 @@
 # EntitySqlHelper.ListAsync&lt;TRow&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously lists the rows returned from executing the query.
 
 ```csharp
 public static Task<List<TRow>> ListAsync<TRow>(this SqlQuery query, IDbConnection connection, 
-    TRow loaderRow = default(TRow), 
-    CancellationToken cancellationToken = default(CancellationToken))
+    TRow loaderRow = default, CancellationToken cancellationToken = default)
     where TRow : class, IRow
 ```
 
@@ -24,7 +22,6 @@ A task representing the asynchronous operation. The task result is the list of r
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntitySqlHelper.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * class [EntitySqlHelper](../EntitySqlHelper.md)

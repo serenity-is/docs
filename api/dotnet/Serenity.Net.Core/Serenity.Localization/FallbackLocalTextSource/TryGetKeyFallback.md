@@ -1,10 +1,9 @@
 # FallbackLocalTextSource.TryGetKeyFallback method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets a fallback of the local text key.
 
 ```csharp
-public static string TryGetKeyFallback(string key)
+public static string? TryGetKeyFallback(string key)
 ```
 
 | parameter | description |

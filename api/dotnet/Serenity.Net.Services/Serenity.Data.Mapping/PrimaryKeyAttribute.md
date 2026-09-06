@@ -12,9 +12,9 @@ public class PrimaryKeyAttribute : SetFieldFlagsAttribute
 
 | name | description |
 | --- | --- |
-| [PrimaryKeyAttribute](PrimaryKeyAttribute/PrimaryKeyAttribute.md)() | Initializes a new instance of the [`PrimaryKeyAttribute`](PrimaryKeyAttribute.md) class. |
+| [PrimaryKeyAttribute](PrimaryKeyAttribute/PrimaryKeyAttribute.md)() | Initializes a new instance of the [`PrimaryKeyAttribute`](./PrimaryKeyAttribute.md) class. |
 
 ## See Also
 
-* class [SetFieldFlagsAttribute](SetFieldFlagsAttribute.md)
+* class [SetFieldFlagsAttribute](./SetFieldFlagsAttribute.md)
 * **Source:** *[PrimaryKeyAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/PrimaryKeyAttribute.cs)*

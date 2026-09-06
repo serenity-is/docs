@@ -1,5 +1,4 @@
 # DefaultReportRenderer.GetViewName method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the view name for the report.
 
@@ -24,6 +23,6 @@ The view name.
 
 ## See Also
 
-* interface [IReport](../Serenity.Net.Services/../IReport.md)
-* class [ReportRenderOptions](../Serenity.Net.Services/../ReportRenderOptions.md)
+* interface [IReport](../../../Serenity.Net.Services/Serenity.Reporting/IReport.md)
+* class [ReportRenderOptions](../../../Serenity.Net.Services/Serenity.Reporting/ReportRenderOptions.md)
 * class [DefaultReportRenderer](../DefaultReportRenderer.md)

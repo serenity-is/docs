@@ -1,5 +1,4 @@
 # IFileWatcherFactory.KeepAlive method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Keeps the file watcher alive, usually by retaining its instance reference in the watcher factory.
 

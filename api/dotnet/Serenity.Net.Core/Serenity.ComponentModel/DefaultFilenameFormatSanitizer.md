@@ -1,7 +1,7 @@
 # DefaultFilenameFormatSanitizer class
 **namespace:** *[Serenity.ComponentModel](../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Default implementation for [`IFilenameFormatSanitizer`](IFilenameFormatSanitizer.md).
+Default implementation for [`IFilenameFormatSanitizer`](./IFilenameFormatSanitizer.md).
 
 ```csharp
 public class DefaultFilenameFormatSanitizer : IFilenameFormatSanitizer
@@ -18,5 +18,5 @@ public class DefaultFilenameFormatSanitizer : IFilenameFormatSanitizer
 
 ## See Also
 
-* interface [IFilenameFormatSanitizer](IFilenameFormatSanitizer.md)
+* interface [IFilenameFormatSanitizer](./IFilenameFormatSanitizer.md)
 * **Source:** *[DefaultFilenameFormatSanitizer.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Upload/DefaultFilenameFormatSanitizer.cs)*

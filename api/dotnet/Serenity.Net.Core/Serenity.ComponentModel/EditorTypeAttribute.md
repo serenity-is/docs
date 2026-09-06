@@ -22,7 +22,7 @@ public class EditorTypeAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`EditorTypeAttribute`](EditorTypeAttribute.md) class.
+Initializes a new instance of the [`EditorTypeAttribute`](./EditorTypeAttribute.md) class.
 
 ## See Also
 

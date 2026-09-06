@@ -1,5 +1,4 @@
 # AuthorizeRetrieveAttribute constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Authorizes retrieve access to a service method by reading ReadPermissionAttribute.
 

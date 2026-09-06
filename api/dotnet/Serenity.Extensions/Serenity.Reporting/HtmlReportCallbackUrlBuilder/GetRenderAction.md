@@ -1,5 +1,4 @@
 # HtmlReportCallbackUrlBuilder.GetRenderAction method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the render action path for the specified report.
 
@@ -13,5 +12,5 @@ protected virtual string GetRenderAction(IReport report)
 
 ## See Also
 
-* interface [IReport](../Serenity.Net.Services/../IReport.md)
+* interface [IReport](../../../Serenity.Net.Services/Serenity.Reporting/IReport.md)
 * class [HtmlReportCallbackUrlBuilder](../HtmlReportCallbackUrlBuilder.md)

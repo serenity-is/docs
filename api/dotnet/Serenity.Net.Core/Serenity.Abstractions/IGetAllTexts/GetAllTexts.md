@@ -1,10 +1,9 @@
 # IGetAllTexts.GetAllTexts method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets all local text entries.
 
 ```csharp
-public IDictionary<LanguageIdKeyPair, string> GetAllTexts(bool pending)
+public IDictionary<LanguageIdKeyPair, string?> GetAllTexts(bool pending)
 ```
 
 | parameter | description |

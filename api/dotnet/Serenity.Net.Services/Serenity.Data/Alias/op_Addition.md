@@ -1,5 +1,4 @@
 # Alias Addition operator (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a criteria containing prefixed field. Only here for backward compatibility.
 
@@ -30,7 +29,6 @@ String containing prefixed field.
 ---
 
 # Alias Addition operator (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a criteria containing prefixed field. Only here for backward compatibility.
 

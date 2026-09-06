@@ -1,5 +1,4 @@
 # DiskUploadStorage.RootUrl property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the root URL for the uploads.
 

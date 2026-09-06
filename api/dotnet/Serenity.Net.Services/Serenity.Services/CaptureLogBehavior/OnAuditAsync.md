@@ -1,9 +1,8 @@
 # CaptureLogBehavior.OnAuditAsync method (1 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public override Task OnAuditAsync(IDeleteRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 ## See Also
@@ -14,11 +13,10 @@ public override Task OnAuditAsync(IDeleteRequestHandler handler,
 ---
 
 # CaptureLogBehavior.OnAuditAsync method (2 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public override Task OnAuditAsync(ISaveRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 ## See Also
@@ -29,11 +27,10 @@ public override Task OnAuditAsync(ISaveRequestHandler handler,
 ---
 
 # CaptureLogBehavior.OnAuditAsync method (3 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public virtual Task OnAuditAsync(IUndeleteRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 ## See Also

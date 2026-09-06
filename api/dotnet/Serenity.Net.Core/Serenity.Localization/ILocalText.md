@@ -1,7 +1,7 @@
 # ILocalText interface
 **namespace:** *[Serenity.Localization](../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-An interface implemented by the [`LocalText`](../Serenity/LocalText.md) class to access the initial translation value. Some classes like [`NestedLocalTextRegistration`](NestedLocalTextRegistration.md) use this type to avoid re-registering an already initialized local text object when their initialization method is called more than once.
+An interface implemented by the [`LocalText`](../Serenity/LocalText.md) class to access the initial translation value. Some classes like [`NestedLocalTextRegistration`](./NestedLocalTextRegistration.md) use this type to avoid re-registering an already initialized local text object when their initialization method is called more than once.
 
 ```csharp
 public interface ILocalText

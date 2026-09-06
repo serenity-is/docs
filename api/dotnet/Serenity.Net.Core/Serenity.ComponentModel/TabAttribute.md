@@ -21,7 +21,7 @@ public class TabAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`TabAttribute`](TabAttribute.md) class.
+Initializes a new instance of the [`TabAttribute`](./TabAttribute.md) class.
 
 ## See Also
 

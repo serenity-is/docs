@@ -1,5 +1,4 @@
 # BasePermissionKeyLister.GetAttributePermissions&lt;TAttr&gt; method (1 of 2)
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets permissions from a member attribute.
 
@@ -17,13 +16,11 @@ protected virtual IEnumerable<string> GetAttributePermissions<TAttr>(MemberInfo 
 
 ## See Also
 
-* class [TAttr](../Serenity.Extensions/../BasePermissionKeyLister.TAttr.md)
 * class [BasePermissionKeyLister](../BasePermissionKeyLister.md)
 
 ---
 
 # BasePermissionKeyLister.GetAttributePermissions&lt;TAttr&gt; method (2 of 2)
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets permissions from a type attribute.
 
@@ -41,5 +38,4 @@ protected virtual IEnumerable<string> GetAttributePermissions<TAttr>(Type type,
 
 ## See Also
 
-* class [TAttr](../Serenity.Extensions/../BasePermissionKeyLister.TAttr.md)
 * class [BasePermissionKeyLister](../BasePermissionKeyLister.md)

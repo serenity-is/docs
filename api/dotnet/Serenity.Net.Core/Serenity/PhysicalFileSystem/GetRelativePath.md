@@ -1,5 +1,4 @@
 # PhysicalFileSystem.GetRelativePath method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 ```csharp
 public string GetRelativePath(string relativeTo, string path)

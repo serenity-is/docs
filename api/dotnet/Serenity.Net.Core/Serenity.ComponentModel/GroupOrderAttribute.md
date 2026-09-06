@@ -21,7 +21,7 @@ public class GroupOrderAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`GroupOrderAttribute`](GroupOrderAttribute.md) class.
+Initializes a new instance of the [`GroupOrderAttribute`](./GroupOrderAttribute.md) class.
 
 ## See Also
 

@@ -1,7 +1,6 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.ApplyFieldContainsText method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Applies a field contains criteria to the query by calling [`AddFieldContainsCriteria`](AddFieldContainsCriteria.md)
+Applies a field contains criteria to the query by calling [`AddFieldContainsCriteria`](./AddFieldContainsCriteria.md)
 
 ```csharp
 protected virtual void ApplyFieldContainsText(Field field, string containsText, long? id, 

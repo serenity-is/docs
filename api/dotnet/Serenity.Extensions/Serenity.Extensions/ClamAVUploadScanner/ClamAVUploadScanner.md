@@ -1,5 +1,4 @@
 # ClamAVUploadScanner constructor
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Implementation of IUploadAVScanner which connects to ClamAV service
 
@@ -27,5 +26,5 @@ Creates a new instance of the class.
 ## See Also
 
 * class [ClamAVSettings](../ClamAVSettings.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [ClamAVUploadScanner](../ClamAVUploadScanner.md)

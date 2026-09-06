@@ -15,5 +15,5 @@ public interface ISetFieldByStatement : IQueryWithParams
 
 ## See Also
 
-* interface [IQueryWithParams](IQueryWithParams.md)
+* interface [IQueryWithParams](./IQueryWithParams.md)
 * **Source:** *[ISetFieldByStatement.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/QueryModel/ISetFieldByStatement.cs)*

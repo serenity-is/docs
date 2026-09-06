@@ -1,5 +1,4 @@
 # SqlQuery.Column.IntoField field
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Used by entity system, to determine which field this column value will be read into
 

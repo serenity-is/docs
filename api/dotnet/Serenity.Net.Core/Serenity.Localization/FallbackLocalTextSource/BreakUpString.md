@@ -1,5 +1,4 @@
 # FallbackLocalTextSource.BreakUpString method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Breaks up a string without spaces (e.g. LastDirectoryUpdate) into a normal string (e.g. 'Last Directory Update').
 

@@ -1,5 +1,4 @@
 # IExcelExporter.Export method (1 of 3)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Exports the specified data to Excel format using the given report columns.
 
@@ -24,7 +23,6 @@ The generated Excel file content.
 ---
 
 # IExcelExporter.Export method (2 of 3)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Exports the specified data to Excel format, deriving the report columns from a columns type.
 
@@ -48,7 +46,6 @@ The generated Excel file content.
 ---
 
 # IExcelExporter.Export method (3 of 3)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Exports the specified data to Excel format, deriving the report columns from a columns type and restricting the output to the given column names.
 

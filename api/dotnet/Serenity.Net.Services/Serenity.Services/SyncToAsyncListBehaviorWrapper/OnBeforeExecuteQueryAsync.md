@@ -1,9 +1,8 @@
 # SyncToAsyncListBehaviorWrapper.OnBeforeExecuteQueryAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public Task OnBeforeExecuteQueryAsync(IListRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 ## See Also

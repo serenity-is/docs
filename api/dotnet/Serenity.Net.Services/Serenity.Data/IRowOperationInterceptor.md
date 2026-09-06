@@ -12,11 +12,11 @@ public interface IRowOperationInterceptor
 | name | description |
 | --- | --- |
 | [FindRow](IRowOperationInterceptor/FindRow.md)(…) | Intercepts EntityConnectionExtensions's ById/TryById/First/TryFirst/Single/TrySingle methods. |
-| [FindRowAsync](IRowOperationInterceptor/FindRowAsync.md)(…) | Intercepts the async EntityConnectionExtensions ById/TryById/First/TryFirst/Single/TrySingle methods. The default implementation forwards to [`FindRow`](IRowOperationInterceptor/FindRow.md). |
+| [FindRowAsync](IRowOperationInterceptor/FindRowAsync.md)(…) | Intercepts the async EntityConnectionExtensions ById/TryById/First/TryFirst/Single/TrySingle methods. The default implementation forwards to [`FindRow`](./IRowOperationInterceptor/FindRow.md). |
 | [ListRows](IRowOperationInterceptor/ListRows.md)(…) | Intercepts EntityConnectionExtensions.List and Count methods. |
-| [ListRowsAsync](IRowOperationInterceptor/ListRowsAsync.md)(…) | Intercepts the async EntityConnectionExtensions List and Count methods. The default implementation forwards to [`ListRows`](IRowOperationInterceptor/ListRows.md). |
+| [ListRowsAsync](IRowOperationInterceptor/ListRowsAsync.md)(…) | Intercepts the async EntityConnectionExtensions List and Count methods. The default implementation forwards to [`ListRows`](./IRowOperationInterceptor/ListRows.md). |
 | [ManipulateRow](IRowOperationInterceptor/ManipulateRow.md)(…) | Intercepts EntityConnectionExtensions.DeleteById method. |
-| [ManipulateRowAsync](IRowOperationInterceptor/ManipulateRowAsync.md)(…) | Intercepts the async EntityConnectionExtensions DeleteById/Insert/Update methods. The default implementation forwards to [`ManipulateRow`](IRowOperationInterceptor/ManipulateRow.md). |
+| [ManipulateRowAsync](IRowOperationInterceptor/ManipulateRowAsync.md)(…) | Intercepts the async EntityConnectionExtensions DeleteById/Insert/Update methods. The default implementation forwards to [`ManipulateRow`](./IRowOperationInterceptor/ManipulateRow.md). |
 
 ## See Also
 

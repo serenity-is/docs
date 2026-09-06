@@ -1,5 +1,4 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.SelectField method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Calls query.Select(field)
 

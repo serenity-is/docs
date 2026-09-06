@@ -1,5 +1,4 @@
 # DefaultUploadStorage constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Initializes a new instance of the [`DefaultUploadStorage`](../DefaultUploadStorage.md) class.
 
@@ -23,6 +22,6 @@ public DefaultUploadStorage(IOptions<UploadSettings> options,
 
 ## See Also
 
-* class [UploadSettings](../Serenity.Net.Services/../UploadSettings.md)
-* interface [IDiskUploadFileSystem](../Serenity.Net.Services/../IDiskUploadFileSystem.md)
+* class [UploadSettings](../../../Serenity.Net.Services/Serenity.Web/UploadSettings.md)
+* interface [IDiskUploadFileSystem](../../../Serenity.Net.Services/Serenity.Web/IDiskUploadFileSystem.md)
 * class [DefaultUploadStorage](../DefaultUploadStorage.md)

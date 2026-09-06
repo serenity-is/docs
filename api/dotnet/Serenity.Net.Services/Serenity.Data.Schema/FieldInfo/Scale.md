@@ -1,5 +1,4 @@
 # FieldInfo.Scale property
-**namespace:** *[Serenity.Data.Schema](../../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the numeric scale.
 

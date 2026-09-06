@@ -1,5 +1,4 @@
 # SaveRequestHandlerAsync&lt;TRow&gt; constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Base generic class for async save request handlers that use [`SaveRequest`](../SaveRequest-1.md) as the request type, and [`SaveResponse`](../SaveResponse.md) as the response type.
 

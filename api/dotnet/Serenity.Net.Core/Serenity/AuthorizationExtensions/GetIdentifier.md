@@ -1,10 +1,9 @@
 # AuthorizationExtensions.GetIdentifier method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the value of the NameIdentifier claim from the specified principal.
 
 ```csharp
-public static string GetIdentifier(this ClaimsPrincipal identity)
+public static string? GetIdentifier(this ClaimsPrincipal? identity)
 ```
 
 | parameter | description |

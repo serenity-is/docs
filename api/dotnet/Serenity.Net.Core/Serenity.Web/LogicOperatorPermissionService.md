@@ -31,7 +31,7 @@ Register this decorator at application startup to enable expressions such as `Pe
 registrar.RegisterInstance<IPermissionService>(new LogicOperatorPermissionService(new MyPermissionService()))
 ```
 
-Creates a new instance of the [`LogicOperatorPermissionService`](LogicOperatorPermissionService.md) class wrapping the specified permission service.
+Creates a new instance of the [`LogicOperatorPermissionService`](./LogicOperatorPermissionService.md) class wrapping the specified permission service.
 
 ## See Also
 

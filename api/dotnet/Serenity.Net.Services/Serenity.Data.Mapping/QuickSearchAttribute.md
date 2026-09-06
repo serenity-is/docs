@@ -25,7 +25,7 @@ public class QuickSearchAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`QuickSearchAttribute`](QuickSearchAttribute.md) class.
+Initializes a new instance of the [`QuickSearchAttribute`](./QuickSearchAttribute.md) class.
 
 ## See Also
 

@@ -1,11 +1,10 @@
 # EntityConnectionExtensions.CountAsync&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously gets count of all records.
 
 ```csharp
 public static Task<int> CountAsync<TRow>(this IDbConnection connection, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
 
@@ -27,13 +26,12 @@ A task representing the asynchronous operation. The task result is the number of
 ---
 
 # EntityConnectionExtensions.CountAsync&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously gets count of records matching a specified criteria.
 
 ```csharp
 public static Task<int> CountAsync<TRow>(this IDbConnection connection, ICriteria where, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
 

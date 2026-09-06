@@ -1,5 +1,4 @@
 # Criteria constructor (1 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new criteria that contains the field name of the metafield.
 
@@ -19,7 +18,6 @@ public Criteria(IField field)
 ---
 
 # Criteria constructor (2 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing a query's string representation.
 
@@ -39,7 +37,6 @@ public Criteria(ISqlQuery query)
 ---
 
 # Criteria constructor (3 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new criteria with the given condition. This condition is usually a field name, but it can also be a pre-generated criteria text.
 
@@ -62,7 +59,6 @@ Usually used like: `new Criteria("fieldname") >= 5`.
 ---
 
 # Criteria constructor (4 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing an expression like "alias.field".
 
@@ -84,7 +80,6 @@ public Criteria(IAlias alias, IField field)
 ---
 
 # Criteria constructor (5 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing an expression like "alias.field".
 
@@ -105,7 +100,6 @@ public Criteria(IAlias alias, string field)
 ---
 
 # Criteria constructor (6 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing a custom expression while keeping reference to the provided field.
 
@@ -126,7 +120,6 @@ public Criteria(IField field, string expression)
 ---
 
 # Criteria constructor (7 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing an expression like "tjoinNumber.field"
 
@@ -147,7 +140,6 @@ public Criteria(int joinNumber, IField field)
 ---
 
 # Criteria constructor (8 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing an expression like "tjoinnumber.field" (t7.field).
 
@@ -174,7 +166,6 @@ public Criteria(int joinNumber, string field)
 ---
 
 # Criteria constructor (9 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing an expression like "join.field".
 
@@ -195,7 +186,6 @@ public Criteria(string join, IField field)
 ---
 
 # Criteria constructor (10 of 10)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Criteria`](../Criteria.md) class containing an expression like "alias.field".
 

@@ -1,5 +1,4 @@
 # ConnectionExtensions.SetCommandTimeout method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets the default command timeout for the given connection. Only works with [`IHasCommandTimeout`](../IHasCommandTimeout.md) ([`WrappedConnection`](../WrappedConnection.md)) instances, which are usually created by SqlConnections.NewXyz methods.
 

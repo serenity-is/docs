@@ -21,7 +21,7 @@ public class EditorCssClassAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`EditorCssClassAttribute`](EditorCssClassAttribute.md) class.
+Initializes a new instance of the [`EditorCssClassAttribute`](./EditorCssClassAttribute.md) class.
 
 ## See Also
 

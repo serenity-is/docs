@@ -1,5 +1,4 @@
 # CustomClassField&lt;TValue&gt;.GetFromReader method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets field value from a data reader.
 
@@ -24,13 +23,11 @@ The field value read from the reader.
 
 ## See Also
 
-* class [TValue](../Serenity.Net.Services/../CustomClassField-1.TValue.md)
 * class [CustomClassField&lt;TValue&gt;](../CustomClassField-1.md)
 
 ---
 
 # CustomClassField&lt;TValue&gt;.GetFromReader method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets field value from a data reader.
 

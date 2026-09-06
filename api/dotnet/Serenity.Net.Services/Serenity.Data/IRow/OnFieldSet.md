@@ -1,5 +1,4 @@
 # IRow.OnFieldSet method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called when a field is assigned a value.
 

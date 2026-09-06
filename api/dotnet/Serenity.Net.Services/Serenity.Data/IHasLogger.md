@@ -1,7 +1,7 @@
 # IHasLogger interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for types that have a [`Logger`](IHasLogger/Logger.md) property.
+Interface for types that have a [`Logger`](./IHasLogger/Logger.md) property.
 
 ```csharp
 public interface IHasLogger

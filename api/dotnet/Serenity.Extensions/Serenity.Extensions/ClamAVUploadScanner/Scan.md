@@ -1,5 +1,4 @@
 # ClamAVUploadScanner.Scan method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Processes a temporary upload stream, usually from the HTTP request files and returns false
 

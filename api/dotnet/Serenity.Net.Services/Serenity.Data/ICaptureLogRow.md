@@ -18,5 +18,5 @@ public interface ICaptureLogRow : IIdRow
 
 ## See Also
 
-* interface [IIdRow](IIdRow.md)
+* interface [IIdRow](./IIdRow.md)
 * **Source:** *[ICaptureLogRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/IntegratedFeatures/CaptureLog/ICaptureLogRow.cs)*

@@ -1,12 +1,11 @@
 # SqlMapper.Execute method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes a parameterized SQL statement.
 
 ```csharp
 public static int Execute(this IDbConnection cnn, string sql, object param = null, 
     IDbTransaction transaction = null, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?))
+    CommandType? commandType = default)
 ```
 
 | parameter | description |

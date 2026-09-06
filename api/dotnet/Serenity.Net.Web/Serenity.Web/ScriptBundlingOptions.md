@@ -11,7 +11,7 @@ public class ScriptBundlingOptions : IOptions<ScriptBundlingOptions>
 
 | name | description |
 | --- | --- |
-| [ScriptBundlingOptions](ScriptBundlingOptions/ScriptBundlingOptions.md)() | Initializes a new instance of the [`ScriptBundlingOptions`](ScriptBundlingOptions.md) class. |
+| [ScriptBundlingOptions](ScriptBundlingOptions/ScriptBundlingOptions.md)() | Initializes a new instance of the [`ScriptBundlingOptions`](./ScriptBundlingOptions.md) class. |
 | [Bundles](ScriptBundlingOptions/Bundles.md) { get; } | Gets the list of bundles and their contents. |
 | [Enabled](ScriptBundlingOptions/Enabled.md) { get; set; } | Gets or sets whether script bundling is enabled. |
 | [Minimize](ScriptBundlingOptions/Minimize.md) { get; set; } | Gets or sets the minimization flag. When `true`, script files are minified and their minified versions are used in bundles. |

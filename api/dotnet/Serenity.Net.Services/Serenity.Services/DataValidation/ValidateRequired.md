@@ -1,5 +1,4 @@
 # DataValidation.ValidateRequired method (1 of 2)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates that the field does not contain a null value or an empty string.
 
@@ -17,13 +16,12 @@ public static void ValidateRequired(this IRow row, Field field, ITextLocalizer l
 
 * interface [IRow](../../Serenity.Data/IRow.md)
 * class [Field](../../Serenity.Data/Field.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)
 
 ---
 
 # DataValidation.ValidateRequired method (2 of 2)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates the fields does not contain null or empty string values. This does not validate unassigned fields that does not have a default value.
 
@@ -42,5 +40,5 @@ public static void ValidateRequired(this IRow row, IEnumerable<Field> fields,
 
 * interface [IRow](../../Serenity.Data/IRow.md)
 * class [Field](../../Serenity.Data/Field.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

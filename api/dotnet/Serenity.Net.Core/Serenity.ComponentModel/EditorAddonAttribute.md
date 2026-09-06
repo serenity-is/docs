@@ -31,7 +31,7 @@ public class EditorAddonAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`EditorAddonAttribute`](EditorAddonAttribute.md) class.
+Initializes a new instance of the [`EditorAddonAttribute`](./EditorAddonAttribute.md) class.
 
 ## See Also
 

@@ -11,7 +11,7 @@ public class GlobFilter
 
 | name | description |
 | --- | --- |
-| [GlobFilter](GlobFilter/GlobFilter.md)(…) | Creates a new [`GlobFilter`](GlobFilter.md) containing both include and exclude patterns. When *include* is `null` or empty, all files are included by default, unless they match a pattern in the *exclude* list. When *exclude* is `null`, it is ignored. (2 constructors) |
+| [GlobFilter](GlobFilter/GlobFilter.md)(…) | Creates a new [`GlobFilter`](./GlobFilter.md) containing both include and exclude patterns. When *include* is `null` or empty, all files are included by default, unless they match a pattern in the *exclude* list. When *exclude* is `null`, it is ignored. (2 constructors) |
 | [IsMatch](GlobFilter/IsMatch.md)(…) | Determines whether the specified path is matching this filter. |
 
 ## See Also

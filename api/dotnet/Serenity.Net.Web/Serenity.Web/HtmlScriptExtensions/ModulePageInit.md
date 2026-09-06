@@ -1,5 +1,4 @@
 # HtmlScriptExtensions.ModulePageInit method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Executes the default export of a module page, usually `pageInit`.
 

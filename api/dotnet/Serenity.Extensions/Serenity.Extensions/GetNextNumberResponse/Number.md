@@ -1,5 +1,4 @@
 # GetNextNumberResponse.Number property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The next number in the sequence.
 

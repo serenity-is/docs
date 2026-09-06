@@ -55,7 +55,7 @@ public abstract class SaveRequestHandlerBase<TRow, TSaveRequest, TSaveResponse> 
 | virtual [SetTrimToEmptyFields](SaveRequestHandlerBase-3/SetTrimToEmptyFields.md)() | Sets values for TrimToEmpty fields. |
 | virtual [ValidateAndClearIdField](SaveRequestHandlerBase-3/ValidateAndClearIdField.md)() | Validates and clears the ID field |
 | virtual [ValidateEditable](SaveRequestHandlerBase-3/ValidateEditable.md)() | Validates editable fields. |
-| virtual [ValidateEditableFields](SaveRequestHandlerBase-3/ValidateEditableFields.md)(…) | Validates editable fields, e.g. checks if the assigned fields are all in the editable set. Calls [`HandleNonEditable`](SaveRequestHandlerBase-3/HandleNonEditable.md) if not. |
+| virtual [ValidateEditableFields](SaveRequestHandlerBase-3/ValidateEditableFields.md)(…) | Validates editable fields, e.g. checks if the assigned fields are all in the editable set. Calls [`HandleNonEditable`](./SaveRequestHandlerBase-3/HandleNonEditable.md) if not. |
 | virtual [ValidateFieldValues](SaveRequestHandlerBase-3/ValidateFieldValues.md)() | Validates field values via [`ICustomValidator`](../Serenity/ICustomValidator.md) interface. |
 | virtual [ValidateIsActive](SaveRequestHandlerBase-3/ValidateIsActive.md)() | Validates that record is not soft deleted |
 | virtual [ValidatePermissions](SaveRequestHandlerBase-3/ValidatePermissions.md)() | Validates user permissions by checking InsertPermissionAttribute and UpdatePermissionAttribute, and ModifyPermissionAttribute or ReadPermissionAttribute if others are not found. |
@@ -73,10 +73,9 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* interface [ISaveRequestHandler](ISaveRequestHandler.md)
+* interface [ISaveRequestHandler](./ISaveRequestHandler.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
-* class [TRow](../Serenity.Net.Services/SaveRequestHandlerBase-3.TRow.md)
-* class [SaveResponse](SaveResponse.md)
+* class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
+* class [SaveResponse](./SaveResponse.md)
 * **Source:** *[SaveRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Save/SaveRequestHandlerBase.cs)*

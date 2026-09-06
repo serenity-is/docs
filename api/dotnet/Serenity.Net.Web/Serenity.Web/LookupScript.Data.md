@@ -1,16 +1,11 @@
-# LookupScript.Data class
+# LookupScript.Data record
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
 Data format for a lookup script.
 
 ```csharp
-public class Data : IEquatable<Data>
+public record Data
 ```
-
-| parameter | description |
-| --- | --- |
-| Items | The item list. |
-| Params | The lookup parameters. |
 
 ## Public Members
 
@@ -22,4 +17,4 @@ public class Data : IEquatable<Data>
 
 ## See Also
 
-* class [LookupScript](LookupScript.md)
+* class [LookupScript](./LookupScript.md)

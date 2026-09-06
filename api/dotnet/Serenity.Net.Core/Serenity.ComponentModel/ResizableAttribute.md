@@ -12,8 +12,8 @@ public sealed class ResizableAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [ResizableAttribute](ResizableAttribute/ResizableAttribute.md)() | Initializes a new instance of the [`ResizableAttribute`](ResizableAttribute.md) class. |
-| [ResizableAttribute](ResizableAttribute/ResizableAttribute.md)(…) | Initializes a new instance of the [`ResizableAttribute`](ResizableAttribute.md) class. |
+| [ResizableAttribute](ResizableAttribute/ResizableAttribute.md)() | Initializes a new instance of the [`ResizableAttribute`](./ResizableAttribute.md) class. |
+| [ResizableAttribute](ResizableAttribute/ResizableAttribute.md)(…) | Initializes a new instance of the [`ResizableAttribute`](./ResizableAttribute.md) class. |
 | [Value](ResizableAttribute/Value.md) { get; } | Gets a value indicating whether the target is resizable. |
 
 ## See Also

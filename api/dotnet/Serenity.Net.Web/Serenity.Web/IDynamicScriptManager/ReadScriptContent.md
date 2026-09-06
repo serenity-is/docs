@@ -1,5 +1,4 @@
 # IDynamicScriptManager.ReadScriptContent method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Reads the content of a dynamic script.
 
@@ -18,5 +17,5 @@ The script content.
 
 ## See Also
 
-* interface [IScriptContent](../Serenity.Net.Core/../IScriptContent.md)
+* interface [IScriptContent](../../../Serenity.Net.Core/Serenity.Web/IScriptContent.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)

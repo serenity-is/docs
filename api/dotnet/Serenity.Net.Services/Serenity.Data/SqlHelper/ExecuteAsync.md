@@ -1,11 +1,10 @@
 # SqlHelper.ExecuteAsync method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified query on the connection asynchronously.
 
 ```csharp
 public static Task ExecuteAsync(this SqlInsert query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default(CancellationToken))
+    ILogger logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -27,14 +26,13 @@ A task that represents the asynchronous operation.
 ---
 
 # SqlHelper.ExecuteAsync method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified delete query on the connection asynchronously and returns the number of affected rows.
 
 ```csharp
 public static Task<int> ExecuteAsync(this SqlDelete query, IDbConnection connection, 
     ExpectedRows expectedRows = ExpectedRows.One, ILogger logger = null, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -58,14 +56,13 @@ A task that represents the asynchronous operation. The task result contains the 
 ---
 
 # SqlHelper.ExecuteAsync method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified update query on the connection asynchronously and returns the number of affected rows.
 
 ```csharp
 public static Task<int> ExecuteAsync(this SqlUpdate query, IDbConnection connection, 
     ExpectedRows expectedRows = ExpectedRows.One, ILogger logger = null, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

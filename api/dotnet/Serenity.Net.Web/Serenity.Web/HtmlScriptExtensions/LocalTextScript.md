@@ -1,5 +1,4 @@
 # HtmlScriptExtensions.LocalTextScript method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets a script element for including a local text script
 

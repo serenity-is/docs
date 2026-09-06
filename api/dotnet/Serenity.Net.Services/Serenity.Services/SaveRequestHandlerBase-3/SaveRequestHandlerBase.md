@@ -1,5 +1,4 @@
 # SaveRequestHandlerBase&lt;TRow,TSaveRequest,TSaveResponse&gt; constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Abstract base class for save request handlers that share state and mode neutral helper methods between synchronous and asynchronous save request handlers.
 

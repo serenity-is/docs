@@ -1,11 +1,10 @@
 # DataReaderExtensions.ReadAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously advances the data reader to the next record, using the native CancellationToken) when available, and falling back to a synchronous Read for readers that do not support async operations.
 
 ```csharp
 public static Task<bool> ReadAsync(this IDataReader reader, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

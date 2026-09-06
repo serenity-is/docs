@@ -21,7 +21,7 @@ public class DateTimeKindAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`DateTimeKindAttribute`](DateTimeKindAttribute.md) class.
+Initializes a new instance of the [`DateTimeKindAttribute`](./DateTimeKindAttribute.md) class.
 
 ## See Also
 

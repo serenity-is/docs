@@ -1,5 +1,4 @@
 # IConnectionProfiler.Profile method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Wraps the specified connection with a profiled one.
 

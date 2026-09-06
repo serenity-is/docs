@@ -1,5 +1,4 @@
 # SqlUpdate.Dec method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Decreases a fields value.
 
@@ -24,7 +23,6 @@ SqlUpdate object itself.
 ---
 
 # SqlUpdate.Dec method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Decreases a fields value.
 

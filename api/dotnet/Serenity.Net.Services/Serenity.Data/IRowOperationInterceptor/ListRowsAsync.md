@@ -1,12 +1,10 @@
 # IRowOperationInterceptor.ListRowsAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts the async EntityConnectionExtensions List and Count methods. The default implementation forwards to [`ListRows`](ListRows.md).
+Intercepts the async EntityConnectionExtensions List and Count methods. The default implementation forwards to [`ListRows`](./ListRows.md).
 
 ```csharp
 public Task<OptionalValue<IList>> ListRowsAsync(Type rowType, ICriteria where, 
-    Action<SqlQuery> editQuery, bool countOnly, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    Action<SqlQuery> editQuery, bool countOnly, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

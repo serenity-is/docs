@@ -1,11 +1,10 @@
 # IUndeleteRequestProcessorAsync.ProcessAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Processes the [`UndeleteRequest`](../UndeleteRequest.md) asynchronously and returns a [`UndeleteResponse`](../UndeleteResponse.md)
 
 ```csharp
 public Task<UndeleteResponse> ProcessAsync(IUnitOfWork uow, UndeleteRequest request, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

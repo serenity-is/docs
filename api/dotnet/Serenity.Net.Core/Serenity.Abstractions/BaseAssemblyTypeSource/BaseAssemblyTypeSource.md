@@ -1,10 +1,9 @@
 # BaseAssemblyTypeSource constructor
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Base type source implementation that accepts a list of assemblies.
 
 ```csharp
-protected BaseAssemblyTypeSource(IFeatureToggles featureToggles = null)
+protected BaseAssemblyTypeSource(IFeatureToggles? featureToggles = null)
 ```
 
 | parameter | description |

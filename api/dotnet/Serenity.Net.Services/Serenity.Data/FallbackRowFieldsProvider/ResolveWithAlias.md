@@ -1,5 +1,4 @@
 # FallbackRowFieldsProvider.ResolveWithAlias method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Resolves the fields instance for the specified fields type with the given alias applied.
 

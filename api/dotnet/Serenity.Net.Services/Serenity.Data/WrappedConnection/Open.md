@@ -1,5 +1,4 @@
 # WrappedConnection.Open method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Opens a database connection with the settings specified by the ConnectionString property of the provider-specific Connection object.
 

@@ -12,9 +12,9 @@ public class HalfWidthAttribute : FormWidthAttribute
 
 | name | description |
 | --- | --- |
-| [HalfWidthAttribute](HalfWidthAttribute/HalfWidthAttribute.md)() | Initializes a new instance of the [`HalfWidthAttribute`](HalfWidthAttribute.md) class. |
+| [HalfWidthAttribute](HalfWidthAttribute/HalfWidthAttribute.md)() | Initializes a new instance of the [`HalfWidthAttribute`](./HalfWidthAttribute.md) class. |
 
 ## See Also
 
-* class [FormWidthAttribute](FormWidthAttribute.md)
+* class [FormWidthAttribute](./FormWidthAttribute.md)
 * **Source:** *[HalfWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/HalfWidthAttribute.cs)*

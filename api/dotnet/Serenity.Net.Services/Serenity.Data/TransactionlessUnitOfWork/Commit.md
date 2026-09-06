@@ -1,5 +1,4 @@
 # TransactionlessUnitOfWork.Commit method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Does nothing other than calling onCommit events as there is no underlying transaction.
 

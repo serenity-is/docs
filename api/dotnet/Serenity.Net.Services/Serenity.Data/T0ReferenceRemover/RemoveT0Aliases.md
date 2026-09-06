@@ -1,5 +1,4 @@
 # T0ReferenceRemover.RemoveT0Aliases method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Removes the "t0." aliases in SQL expression.
 

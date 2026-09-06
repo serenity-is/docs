@@ -27,7 +27,7 @@ public class DialectExpressionSelector
 
 ## Remarks
 
-Initializes a new instance of the [`DialectExpressionSelector`](DialectExpressionSelector.md) class.
+Initializes a new instance of the [`DialectExpressionSelector`](./DialectExpressionSelector.md) class.
 
 ## See Also
 

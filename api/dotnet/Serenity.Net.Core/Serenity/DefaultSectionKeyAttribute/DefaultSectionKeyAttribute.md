@@ -1,5 +1,4 @@
 # DefaultSectionKeyAttribute constructor
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Attribute to access the default section key for an option class.
 

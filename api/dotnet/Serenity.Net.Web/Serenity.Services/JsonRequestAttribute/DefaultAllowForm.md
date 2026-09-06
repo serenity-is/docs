@@ -1,7 +1,6 @@
 # JsonRequestAttribute.DefaultAllowForm property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-The default for [`AllowForm`](AllowForm.md), which is `true`.
+The default for [`AllowForm`](./AllowForm.md), which is `true`.
 
 ```csharp
 public static bool DefaultAllowForm { get; set; }

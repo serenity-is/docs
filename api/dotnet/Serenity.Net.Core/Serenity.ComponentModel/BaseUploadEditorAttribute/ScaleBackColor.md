@@ -1,8 +1,7 @@
 # BaseUploadEditorAttribute.ScaleBackColor property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 ```csharp
-public string ScaleBackColor { get; set; }
+public string? ScaleBackColor { get; set; }
 ```
 
 ## See Also

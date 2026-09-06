@@ -1,5 +1,4 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.ApplyEqualityFilter method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies the Request.Equality filter to the query
 

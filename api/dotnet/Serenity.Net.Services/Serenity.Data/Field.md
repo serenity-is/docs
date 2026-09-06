@@ -80,12 +80,12 @@ public abstract class Field : IFieldWithJoinInfo
 
 | name | description |
 | --- | --- |
-| [Field](Field/Field.md)(…) | Initializes a new instance of the [`Field`](Field.md) class. |
+| [Field](Field/Field.md)(…) | Initializes a new instance of the [`Field`](./Field.md) class. |
 | virtual [OnRowInitialization](Field/OnRowInitialization.md)() | Called when the row is initialized. |
 | static [JsonUnexpectedToken](Field/JsonUnexpectedToken.md)(…) | Throws an exception for an unexpected JSON token when deserializing a row. |
 | static [UnexpectedJsonToken](Field/UnexpectedJsonToken.md)(…) | Throws an exception for an unexpected JSON token when deserializing a row. |
 
 ## See Also
 
-* interface [IFieldWithJoinInfo](IFieldWithJoinInfo.md)
+* interface [IFieldWithJoinInfo](./IFieldWithJoinInfo.md)
 * **Source:** *[Field.CriteriaOperators.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/Field.CriteriaOperators.cs)*

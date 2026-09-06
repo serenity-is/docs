@@ -1,5 +1,4 @@
 # RowFieldsProvider.SetDefaultFrom method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets default row fields provider by resolving it from the service provider.
 

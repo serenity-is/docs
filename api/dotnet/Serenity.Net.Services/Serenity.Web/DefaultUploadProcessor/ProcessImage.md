@@ -1,5 +1,4 @@
 # DefaultUploadProcessor.ProcessImage method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Depending on the image upload options, scales image, creates default and additional thumbs and saves them to the upload storage files.
 
@@ -19,5 +18,5 @@ Scaled image file path. It might be different then the passed file if scaling is
 
 ## See Also
 
-* interface [IUploadImageOptions](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadImageOptions.md)
+* interface [IUploadImageOptions](../../../Serenity.Net.Core/Serenity.ComponentModel/IUploadImageOptions.md)
 * class [DefaultUploadProcessor](../DefaultUploadProcessor.md)

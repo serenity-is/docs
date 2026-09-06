@@ -1,5 +1,4 @@
 # Field.AsInvariant method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets the value of this field in specified row as object using ConvertValue with InvariantCulture.
 

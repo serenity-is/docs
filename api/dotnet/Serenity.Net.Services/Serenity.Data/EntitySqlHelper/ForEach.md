@@ -1,5 +1,4 @@
 # EntitySqlHelper.ForEach method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified callback for all rows returned from executing the query.
 
@@ -25,7 +24,6 @@ Number of returned results.
 ---
 
 # EntitySqlHelper.ForEach method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified data reader callback for all rows returned from executing the query.
 

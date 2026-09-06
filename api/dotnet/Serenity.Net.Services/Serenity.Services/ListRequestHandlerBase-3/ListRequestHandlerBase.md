@@ -1,5 +1,4 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt; constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Abstract base class for list request handlers that share state and mode neutral helper methods between synchronous and asynchronous list request handlers.
 

@@ -17,11 +17,11 @@ public class NotFilterableAttribute : Attribute
 | name | description |
 | --- | --- |
 | [NotFilterableAttribute](NotFilterableAttribute/NotFilterableAttribute.md)(…) | Indicates that the field this attribute is placed on is not filterable. |
-| [Value](NotFilterableAttribute/Value.md) { get; } | Gets a value indicating whether this [`NotFilterableAttribute`](NotFilterableAttribute.md) is enabled. |
+| [Value](NotFilterableAttribute/Value.md) { get; } | Gets a value indicating whether this [`NotFilterableAttribute`](./NotFilterableAttribute.md) is enabled. |
 
 ## Remarks
 
-Initializes a new instance of the [`NotFilterableAttribute`](NotFilterableAttribute.md) class.
+Initializes a new instance of the [`NotFilterableAttribute`](./NotFilterableAttribute.md) class.
 
 ## See Also
 

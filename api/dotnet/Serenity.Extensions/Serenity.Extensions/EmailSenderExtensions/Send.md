@@ -1,5 +1,4 @@
 # EmailSenderExtensions.Send method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Sends a simple HTML email with the specified subject, body, and recipient.
 

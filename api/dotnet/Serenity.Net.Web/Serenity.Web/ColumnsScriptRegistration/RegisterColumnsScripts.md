@@ -1,5 +1,4 @@
 # ColumnsScriptRegistration.RegisterColumnsScripts method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates and registers column scripts.
 
@@ -28,8 +27,8 @@ The list of registered column scripts.
 
 ## See Also
 
-* class [ColumnsScript](../Serenity.Net.Services/../ColumnsScript.md)
+* class [ColumnsScript](../../../Serenity.Net.Services/Serenity.Web/ColumnsScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
-* interface [IPropertyItemProvider](../Serenity.Net.Services/../../Serenity.PropertyGrid/IPropertyItemProvider.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
+* interface [IPropertyItemProvider](../../../Serenity.Net.Services/Serenity.PropertyGrid/IPropertyItemProvider.md)
 * class [ColumnsScriptRegistration](../ColumnsScriptRegistration.md)

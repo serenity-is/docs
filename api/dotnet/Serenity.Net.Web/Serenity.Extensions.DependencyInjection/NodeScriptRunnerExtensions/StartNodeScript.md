@@ -1,5 +1,4 @@
 # NodeScriptRunnerExtensions.StartNodeScript method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Starts a node (NPM) script and attaches its output to the application logger.
 

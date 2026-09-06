@@ -1,5 +1,4 @@
 # UploadedFile.OriginalName property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the original file name.
 

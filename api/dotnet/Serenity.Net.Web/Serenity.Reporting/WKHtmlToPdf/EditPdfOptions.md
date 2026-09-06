@@ -1,5 +1,4 @@
 # WKHtmlToPdf.EditPdfOptions property
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Unused for WKHtmlToPdf
 

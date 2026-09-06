@@ -30,6 +30,6 @@ public class ListRequest : ServiceRequest, IIncludeExcludeColumns
 
 ## See Also
 
-* class [ServiceRequest](ServiceRequest.md)
-* interface [IIncludeExcludeColumns](IIncludeExcludeColumns.md)
+* class [ServiceRequest](./ServiceRequest.md)
+* interface [IIncludeExcludeColumns](./IIncludeExcludeColumns.md)
 * **Source:** *[ListRequest.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Models/ListRequest.cs)*

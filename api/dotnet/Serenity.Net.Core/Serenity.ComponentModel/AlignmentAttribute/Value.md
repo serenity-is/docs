@@ -1,5 +1,4 @@
 # AlignmentAttribute.Value property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the value of the alignment attribute.
 

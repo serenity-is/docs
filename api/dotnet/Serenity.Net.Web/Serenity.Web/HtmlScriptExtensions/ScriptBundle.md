@@ -1,5 +1,4 @@
 # HtmlScriptExtensions.ScriptBundle method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Renders individual script elements for all JS files in a bundle if bundling is disabled, and renders a single script element containing the bundle URL if it is enabled.
 

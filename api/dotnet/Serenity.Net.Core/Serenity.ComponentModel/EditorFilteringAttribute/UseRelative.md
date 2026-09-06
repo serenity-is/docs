@@ -1,5 +1,4 @@
 # EditorFilteringAttribute.UseRelative property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets a value indicating whether to use relative comparisons, like GT/LT.
 

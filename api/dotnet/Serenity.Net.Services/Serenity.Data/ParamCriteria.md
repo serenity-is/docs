@@ -11,11 +11,11 @@ public class ParamCriteria : BaseCriteria
 
 | name | description |
 | --- | --- |
-| [ParamCriteria](ParamCriteria/ParamCriteria.md)(…) | Initializes a new instance of the [`ParamCriteria`](ParamCriteria.md) class. |
+| [ParamCriteria](ParamCriteria/ParamCriteria.md)(…) | Initializes a new instance of the [`ParamCriteria`](./ParamCriteria.md) class. |
 | [Name](ParamCriteria/Name.md) { get; } | Gets the parameter name. |
 | override [ToString](ParamCriteria/ToString.md)(…) | Converts the criteria to string. |
 
 ## See Also
 
-* class [BaseCriteria](BaseCriteria.md)
+* class [BaseCriteria](./BaseCriteria.md)
 * **Source:** *[ParamCriteria.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Criteria/ParamCriteria.cs)*

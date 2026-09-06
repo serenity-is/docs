@@ -12,7 +12,7 @@ public class SafeInt64JsonConverter : JsonConverter<long>
 | name | description |
 | --- | --- |
 | [SafeInt64JsonConverter](SafeInt64JsonConverter/SafeInt64JsonConverter.md)() | The default constructor. |
-| static readonly [Instance](SafeInt64JsonConverter/Instance.md) | The default instance of the [`SafeInt64JsonConverter`](SafeInt64JsonConverter.md). |
+| static readonly [Instance](SafeInt64JsonConverter/Instance.md) | The default instance of the [`SafeInt64JsonConverter`](./SafeInt64JsonConverter.md). |
 | override [Read](SafeInt64JsonConverter/Read.md)(…) |  |
 | override [Write](SafeInt64JsonConverter/Write.md)(…) |  |
 

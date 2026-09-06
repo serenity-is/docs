@@ -12,10 +12,10 @@ public class BooleanEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [BooleanEditorAttribute](BooleanEditorAttribute/BooleanEditorAttribute.md)() | Initializes a new instance of the [`BooleanEditorAttribute`](BooleanEditorAttribute.md) class. |
+| [BooleanEditorAttribute](BooleanEditorAttribute/BooleanEditorAttribute.md)() | Initializes a new instance of the [`BooleanEditorAttribute`](./BooleanEditorAttribute.md) class. |
 | const [Key](BooleanEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[BooleanEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/BooleanEditorAttribute.cs)*

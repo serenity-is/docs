@@ -29,9 +29,9 @@ public class DefaultReportFactory : IReportFactory
 
 ## Remarks
 
-Initializes a new instance of the [`DefaultReportFactory`](DefaultReportFactory.md) class.
+Initializes a new instance of the [`DefaultReportFactory`](./DefaultReportFactory.md) class.
 
 ## See Also
 
-* interface [IReportFactory](../Serenity.Net.Services/IReportFactory.md)
+* interface [IReportFactory](../../Serenity.Net.Services/Serenity.Reporting/IReportFactory.md)
 * **Source:** *[DefaultReportFactory.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Reporting/DefaultReportFactory.cs)*

@@ -1,7 +1,7 @@
 # PropertyItemsScript class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Abstract base class for [`ColumnsScript`](ColumnsScript.md) and [`FormScript`](FormScript.md).
+Abstract base class for [`ColumnsScript`](./ColumnsScript.md) and [`FormScript`](./FormScript.md).
 
 ```csharp
 public abstract class PropertyItemsScript : IGetScriptData, INamedDynamicScript
@@ -32,7 +32,7 @@ public abstract class PropertyItemsScript : IGetScriptData, INamedDynamicScript
 
 | name | description |
 | --- | --- |
-| [PropertyItemsScript](PropertyItemsScript/PropertyItemsScript.md)(…) | Abstract base class for [`ColumnsScript`](ColumnsScript.md) and [`FormScript`](FormScript.md). |
+| [PropertyItemsScript](PropertyItemsScript/PropertyItemsScript.md)(…) | Abstract base class for [`ColumnsScript`](./ColumnsScript.md) and [`FormScript`](./FormScript.md). |
 | static [CheckName](PropertyItemsScript/CheckName.md)(…) | Checks the name if it is empty or null. |
 
 ## Remarks
@@ -41,6 +41,6 @@ Creates a new instance of the class.
 
 ## See Also
 
-* interface [IGetScriptData](../Serenity.Net.Core/IGetScriptData.md)
-* interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
+* interface [IGetScriptData](../../Serenity.Net.Core/Serenity.Web/IGetScriptData.md)
+* interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
 * **Source:** *[PropertyItemsScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/DynamicScript/PropertyItemsScript.cs)*

@@ -1,5 +1,4 @@
 # SqlSyntax.AutoBracketValid method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Automatically brackets the string based on the dialect's `AutoQuotedIdentifier` setting, only if the identifier is valid.
 

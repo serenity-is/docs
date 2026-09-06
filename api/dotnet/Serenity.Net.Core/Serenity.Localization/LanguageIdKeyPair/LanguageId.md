@@ -1,5 +1,4 @@
 # LanguageIdKeyPair.LanguageId property
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 The language ID.
 

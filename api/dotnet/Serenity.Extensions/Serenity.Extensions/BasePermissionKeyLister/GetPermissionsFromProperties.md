@@ -1,5 +1,4 @@
 # BasePermissionKeyLister.GetPermissionsFromProperties method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets permissions from properties of a type.
 

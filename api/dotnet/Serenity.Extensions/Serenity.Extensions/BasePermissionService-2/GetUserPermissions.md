@@ -1,5 +1,4 @@
 # BasePermissionService&lt;TUserPermissionRow,TUserRoleRow&gt;.GetUserPermissions method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets directly assigned permissions for the specified user.
 

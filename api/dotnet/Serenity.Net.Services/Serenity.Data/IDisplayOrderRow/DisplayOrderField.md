@@ -1,5 +1,4 @@
 # IDisplayOrderRow.DisplayOrderField property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the display order field for this row.
 

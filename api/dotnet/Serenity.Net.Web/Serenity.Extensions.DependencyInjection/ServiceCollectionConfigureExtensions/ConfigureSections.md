@@ -1,5 +1,4 @@
 # ServiceCollectionConfigureExtensions.ConfigureSections method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Calls `Configure<TOptionsType>` for all setting classes that have a DefaultSectionKeyAttribute.
 
@@ -27,5 +26,5 @@ The IServiceCollection so that additional calls can be chained.
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [ServiceCollectionConfigureExtensions](../ServiceCollectionConfigureExtensions.md)

@@ -1,10 +1,9 @@
 # TemporaryFileInfo.FullName property
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the full name of the file, including its directory.
 
 ```csharp
-public string FullName { get; set; }
+public string? FullName { get; set; }
 ```
 
 ## See Also

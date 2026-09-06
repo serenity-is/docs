@@ -1,10 +1,9 @@
-# QueryWithParams.Dialect method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+# QueryWithParams.dialect field
 
-Gets the dialect (SQL server type / version) for query.
+The dialect.
 
 ```csharp
-public ISqlDialect Dialect()
+protected ISqlDialect dialect;
 ```
 
 ## See Also

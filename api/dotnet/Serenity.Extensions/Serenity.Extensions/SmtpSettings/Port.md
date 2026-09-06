@@ -1,5 +1,4 @@
 # SmtpSettings.Port property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The SMTP server port.
 

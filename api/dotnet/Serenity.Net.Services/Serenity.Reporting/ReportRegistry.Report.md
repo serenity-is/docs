@@ -20,4 +20,4 @@ public class Report
 
 ## See Also
 
-* class [ReportRegistry](ReportRegistry.md)
+* class [ReportRegistry](./ReportRegistry.md)

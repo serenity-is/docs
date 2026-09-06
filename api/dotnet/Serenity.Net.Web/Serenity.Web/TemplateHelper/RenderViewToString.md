@@ -1,5 +1,4 @@
 # TemplateHelper.RenderViewToString method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Renders a CSHTML view to a string.
 

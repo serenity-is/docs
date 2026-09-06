@@ -1,5 +1,4 @@
 # JsonStringHashSetConverter constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 The default constructor.
 

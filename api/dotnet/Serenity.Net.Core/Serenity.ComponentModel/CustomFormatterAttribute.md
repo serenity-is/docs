@@ -28,9 +28,9 @@ public abstract class CustomFormatterAttribute : FormatterTypeAttribute
 
 ## Remarks
 
-Initializes a new instance of the [`CustomFormatterAttribute`](CustomFormatterAttribute.md) class.
+Initializes a new instance of the [`CustomFormatterAttribute`](./CustomFormatterAttribute.md) class.
 
 ## See Also
 
-* class [FormatterTypeAttribute](FormatterTypeAttribute.md)
+* class [FormatterTypeAttribute](./FormatterTypeAttribute.md)
 * **Source:** *[CustomFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Formatting/CustomFormatterAttribute.cs)*

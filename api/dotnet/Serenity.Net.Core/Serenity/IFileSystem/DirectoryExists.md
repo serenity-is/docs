@@ -1,5 +1,4 @@
 # IFileSystem.DirectoryExists method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Checks whether a directory exists at the specified path.
 

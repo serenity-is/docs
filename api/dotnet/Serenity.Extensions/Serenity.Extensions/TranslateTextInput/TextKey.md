@@ -1,5 +1,4 @@
 # TranslateTextInput.TextKey property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The key of the text to translate.
 

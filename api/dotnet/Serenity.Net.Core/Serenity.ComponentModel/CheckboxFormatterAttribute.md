@@ -12,7 +12,7 @@ public class CheckboxFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [CheckboxFormatterAttribute](CheckboxFormatterAttribute/CheckboxFormatterAttribute.md)() | Initializes a new instance of the [`CheckboxFormatterAttribute`](CheckboxFormatterAttribute.md) class. |
+| [CheckboxFormatterAttribute](CheckboxFormatterAttribute/CheckboxFormatterAttribute.md)() | Initializes a new instance of the [`CheckboxFormatterAttribute`](./CheckboxFormatterAttribute.md) class. |
 | [FalseIcon](CheckboxFormatterAttribute/FalseIcon.md) { get; set; } | Gets or sets the icon corresponding to falsy value. |
 | [FalseText](CheckboxFormatterAttribute/FalseText.md) { get; set; } | Gets or sets the text corresponding to falsy value. |
 | [NullIcon](CheckboxFormatterAttribute/NullIcon.md) { get; set; } | Gets or sets the icon corresponding to nullish value. |
@@ -24,5 +24,5 @@ public class CheckboxFormatterAttribute : CustomFormatterAttribute
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[CheckboxFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/ec5c58655f3cf1433bb5d3bcc63605ac577d118e/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/CheckboxFormatterAttribute.cs)*

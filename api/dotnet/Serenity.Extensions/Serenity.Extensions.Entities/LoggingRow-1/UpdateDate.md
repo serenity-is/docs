@@ -1,5 +1,4 @@
 # LoggingRow&lt;TFields&gt;.UpdateDate property
-**namespace:** *[Serenity.Extensions.Entities](../../README.md#serenity.extensions.entities-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets or sets the date and time the row was last updated.
 

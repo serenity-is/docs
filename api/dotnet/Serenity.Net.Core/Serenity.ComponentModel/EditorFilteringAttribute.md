@@ -12,8 +12,8 @@ public class EditorFilteringAttribute : CustomFilteringAttribute
 
 | name | description |
 | --- | --- |
-| [EditorFilteringAttribute](EditorFilteringAttribute/EditorFilteringAttribute.md)() | Initializes a new instance of the [`EditorFilteringAttribute`](EditorFilteringAttribute.md) class. |
-| [EditorFilteringAttribute](EditorFilteringAttribute/EditorFilteringAttribute.md)(…) | Initializes a new instance of the [`EditorFilteringAttribute`](EditorFilteringAttribute.md) class. (2 constructors) |
+| [EditorFilteringAttribute](EditorFilteringAttribute/EditorFilteringAttribute.md)() | Initializes a new instance of the [`EditorFilteringAttribute`](./EditorFilteringAttribute.md) class. |
+| [EditorFilteringAttribute](EditorFilteringAttribute/EditorFilteringAttribute.md)(…) | Initializes a new instance of the [`EditorFilteringAttribute`](./EditorFilteringAttribute.md) class. (2 constructors) |
 | [EditorType](EditorFilteringAttribute/EditorType.md) { get; set; } | Gets or sets the type of the editor. |
 | [UseLike](EditorFilteringAttribute/UseLike.md) { get; set; } | Gets or sets a value indicating whether to use LIKE-style operators, including starts with, ends with, etc. |
 | [UseRelative](EditorFilteringAttribute/UseRelative.md) { get; set; } | Gets or sets a value indicating whether to use relative comparisons, like GT/LT. |
@@ -21,5 +21,5 @@ public class EditorFilteringAttribute : CustomFilteringAttribute
 
 ## See Also
 
-* class [CustomFilteringAttribute](CustomFilteringAttribute.md)
+* class [CustomFilteringAttribute](./CustomFilteringAttribute.md)
 * **Source:** *[EditorFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/EditorFilteringAttribute.cs)*

@@ -1,5 +1,4 @@
 # AccountPasswordActionsPageBase&lt;TUserRow&gt;.ForgotPassword method (1 of 2)
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Renders the forgot password page.
 
@@ -18,7 +17,6 @@ The forgot password page result.
 ---
 
 # AccountPasswordActionsPageBase&lt;TUserRow&gt;.ForgotPassword method (2 of 2)
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Sends a reset password email to the user with the specified email address.
 
@@ -42,11 +40,11 @@ The service response.
 
 ## See Also
 
-* class [Result&lt;TResponse&gt;](../Serenity.Net.Web/../../Serenity.Services/Result-1.md)
-* class [ServiceResponse](../Serenity.Net.Services/../../Serenity.Services/ServiceResponse.md)
+* class [Result&lt;TResponse&gt;](../../../Serenity.Net.Web/Serenity.Services/Result-1.md)
+* class [ServiceResponse](../../../Serenity.Net.Services/Serenity.Services/ServiceResponse.md)
 * class [ForgotPasswordRequest](../ForgotPasswordRequest.md)
 * interface [IEmailSender](../IEmailSender.md)
-* interface [ISiteAbsoluteUrl](../Serenity.Net.Core/../../Serenity.Abstractions/ISiteAbsoluteUrl.md)
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ISiteAbsoluteUrl](../../../Serenity.Net.Core/Serenity.Abstractions/ISiteAbsoluteUrl.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [AccountPasswordActionsPageBase&lt;TUserRow&gt;](../AccountPasswordActionsPageBase-1.md)

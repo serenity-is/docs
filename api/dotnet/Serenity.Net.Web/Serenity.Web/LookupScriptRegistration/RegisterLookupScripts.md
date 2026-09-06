@@ -1,5 +1,4 @@
 # LookupScriptRegistration.RegisterLookupScripts method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates and registers dynamic [`LookupScript`](../LookupScript.md) objects for classes with LookupScriptAttribute.
 
@@ -24,5 +23,5 @@ public static void RegisterLookupScripts(IDynamicScriptManager scriptManager,
 ## See Also
 
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [LookupScriptRegistration](../LookupScriptRegistration.md)

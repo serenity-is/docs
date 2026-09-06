@@ -1,5 +1,4 @@
 # FeatureTogglesExtensions.ToFeatureKey method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Converts a feature (enum or string) to feature key string
 

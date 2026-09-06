@@ -12,7 +12,7 @@ public class ConnectionKeyAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [ConnectionKeyAttribute](ConnectionKeyAttribute/ConnectionKeyAttribute.md)(…) | Initializes a new instance of the [`ConnectionKeyAttribute`](ConnectionKeyAttribute.md) class. (2 constructors) |
+| [ConnectionKeyAttribute](ConnectionKeyAttribute/ConnectionKeyAttribute.md)(…) | Initializes a new instance of the [`ConnectionKeyAttribute`](./ConnectionKeyAttribute.md) class. (2 constructors) |
 | [SourceType](ConnectionKeyAttribute/SourceType.md) { get; } | Gets the source type with connection key attribute if any. |
 | [Value](ConnectionKeyAttribute/Value.md) { get; } | Gets the connection key. |
 

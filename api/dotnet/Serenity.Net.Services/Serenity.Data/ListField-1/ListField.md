@@ -1,5 +1,4 @@
 # ListField&lt;TItem&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Field with a list value.
 
@@ -27,8 +26,7 @@ Initializes a new instance of the [`ListField`](../ListField-1.md) class.
 ## See Also
 
 * class [Field](../Field.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
-* class [TItem](../Serenity.Net.Services/../ListField-1.TItem.md)
 * class [ListField&lt;TItem&gt;](../ListField-1.md)

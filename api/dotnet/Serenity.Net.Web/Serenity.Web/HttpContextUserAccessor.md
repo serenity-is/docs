@@ -20,9 +20,9 @@ public class HttpContextUserAccessor : IUserAccessor
 
 ## Remarks
 
-Initializes a new instance of the [`HttpContextUserAccessor`](HttpContextUserAccessor.md) class.
+Initializes a new instance of the [`HttpContextUserAccessor`](./HttpContextUserAccessor.md) class.
 
 ## See Also
 
-* interface [IUserAccessor](../Serenity.Net.Core/../Serenity.Abstractions/IUserAccessor.md)
+* interface [IUserAccessor](../../Serenity.Net.Core/Serenity.Abstractions/IUserAccessor.md)
 * **Source:** *[HttpContextUserAccessor.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Common/HttpContextUserAccessor.cs)*

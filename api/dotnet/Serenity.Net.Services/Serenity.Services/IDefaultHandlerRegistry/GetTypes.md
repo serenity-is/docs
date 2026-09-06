@@ -1,5 +1,4 @@
 # IDefaultHandlerRegistry.GetTypes method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a list of registered handler classes for the requested handler interface type.
 

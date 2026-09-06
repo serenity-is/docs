@@ -1,5 +1,4 @@
 # ModulePageModel.Options property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Optional options passed to the module script.
 

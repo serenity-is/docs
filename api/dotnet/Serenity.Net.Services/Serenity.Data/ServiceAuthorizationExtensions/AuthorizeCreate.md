@@ -1,5 +1,4 @@
 # ServiceAuthorizationExtensions.AuthorizeCreate&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Authorizes create request access similar to [AuthorizeCreate] attribute.
 
@@ -20,7 +19,6 @@ public static void AuthorizeCreate<TRow>(this IRequestContext context)
 ---
 
 # ServiceAuthorizationExtensions.AuthorizeCreate&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Authorizes create request access similar to [AuthorizeCreate] attribute.
 
@@ -37,6 +35,6 @@ public static void AuthorizeCreate<TRow>(this IPermissionService permissions,
 
 ## See Also
 
-* interface [IPermissionService](../Serenity.Net.Core/../../Serenity.Abstractions/IPermissionService.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [IPermissionService](../../../Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [ServiceAuthorizationExtensions](../ServiceAuthorizationExtensions.md)

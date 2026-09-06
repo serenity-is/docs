@@ -20,13 +20,10 @@ public interface ISaveHandler<TRow, TSaveRequest, TSaveResponse> :
 
 ## See Also
 
-* interface [ICreateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](ICreateHandler-3.md)
-* class [TRow](../Serenity.Net.Services/ISaveHandler-3.TRow.md)
-* class [TSaveRequest](../Serenity.Net.Services/ISaveHandler-3.TSaveRequest.md)
-* class [TSaveResponse](../Serenity.Net.Services/ISaveHandler-3.TSaveResponse.md)
-* interface [IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](IUpdateHandler-3.md)
+* interface [ICreateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](./ICreateHandler-3.md)
+* interface [IUpdateHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](./IUpdateHandler-3.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
-* class [SaveResponse](SaveResponse.md)
+* class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
+* class [SaveResponse](./SaveResponse.md)
 * **Source:** *[ISaveHandler.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Save/ISaveHandler.cs)*

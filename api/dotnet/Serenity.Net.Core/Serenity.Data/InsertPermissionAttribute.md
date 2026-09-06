@@ -12,9 +12,9 @@ public class InsertPermissionAttribute : PermissionAttributeBase
 
 | name | description |
 | --- | --- |
-| [InsertPermissionAttribute](InsertPermissionAttribute/InsertPermissionAttribute.md)(…) | Initializes a new instance of the [`InsertPermissionAttribute`](InsertPermissionAttribute.md) class. (3 constructors) |
+| [InsertPermissionAttribute](InsertPermissionAttribute/InsertPermissionAttribute.md)(…) | Initializes a new instance of the [`InsertPermissionAttribute`](./InsertPermissionAttribute.md) class. (3 constructors) |
 
 ## See Also
 
-* class [PermissionAttributeBase](PermissionAttributeBase.md)
+* class [PermissionAttributeBase](./PermissionAttributeBase.md)
 * **Source:** *[InsertPermissionAtribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Permission/InsertPermissionAtribute.cs)*

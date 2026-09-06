@@ -12,7 +12,7 @@ public class WrappedConnection : DbConnection, IHasActualConnection, IHasCommand
 
 | name | description |
 | --- | --- |
-| [WrappedConnection](WrappedConnection/WrappedConnection.md)(…) | Initializes a new instance of the [`WrappedConnection`](WrappedConnection.md) class. |
+| [WrappedConnection](WrappedConnection/WrappedConnection.md)(…) | Initializes a new instance of the [`WrappedConnection`](./WrappedConnection.md) class. |
 | [ActualConnection](WrappedConnection/ActualConnection.md) { get; } | Gets the actual connection instance. |
 | [CommandTimeout](WrappedConnection/CommandTimeout.md) { get; set; } | Gets or sets default command timeout. |
 | override [ConnectionString](WrappedConnection/ConnectionString.md) { get; set; } | Gets or sets the string used to open a database. |
@@ -44,11 +44,11 @@ public class WrappedConnection : DbConnection, IHasActualConnection, IHasCommand
 
 ## See Also
 
-* interface [IHasActualConnection](IHasActualConnection.md)
-* interface [IHasCommandTimeout](IHasCommandTimeout.md)
-* interface [IHasConnectionStateChange](IHasConnectionStateChange.md)
-* interface [IHasCurrentTransaction](IHasCurrentTransaction.md)
-* interface [IHasDialect](IHasDialect.md)
-* interface [IHasLogger](IHasLogger.md)
-* interface [IHasOpenedOnce](IHasOpenedOnce.md)
+* interface [IHasActualConnection](./IHasActualConnection.md)
+* interface [IHasCommandTimeout](./IHasCommandTimeout.md)
+* interface [IHasConnectionStateChange](./IHasConnectionStateChange.md)
+* interface [IHasCurrentTransaction](./IHasCurrentTransaction.md)
+* interface [IHasDialect](./IHasDialect.md)
+* interface [IHasLogger](./IHasLogger.md)
+* interface [IHasOpenedOnce](./IHasOpenedOnce.md)
 * **Source:** *[WrappedConnection.cs](https://github.com/serenity-is/Serenity/blob/9a6b298b9db4a9b7c6735a792f30882f8be62d68/src/services/Data/Connections/WrappedConnection.cs)*

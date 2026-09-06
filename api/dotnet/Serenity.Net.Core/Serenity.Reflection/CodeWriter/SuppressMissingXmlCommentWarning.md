@@ -1,5 +1,4 @@
 # CodeWriter.SuppressMissingXmlCommentWarning property
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets a value indicating whether to suppress the CS1591 warning for missing XML comments in the generated code. When set to true, the CS1591 warning will be added to the set of pragma warning suppressions; when set to false, it will be removed from the set of pragma warning suppressions.
 

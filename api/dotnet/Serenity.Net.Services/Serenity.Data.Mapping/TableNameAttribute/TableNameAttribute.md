@@ -1,5 +1,4 @@
 # TableNameAttribute constructor (1 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`TableNameAttribute`](../TableNameAttribute.md) class.
 
@@ -24,7 +23,6 @@ public TableNameAttribute(string name)
 ---
 
 # TableNameAttribute constructor (2 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`TableNameAttribute`](../TableNameAttribute.md) class.
 

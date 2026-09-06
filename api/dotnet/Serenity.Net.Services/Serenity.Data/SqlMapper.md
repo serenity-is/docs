@@ -1,7 +1,7 @@
 # SqlMapper class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Provides IDbConnection extension methods that wrap the corresponding Dapper SqlMapper methods, translating Serenity SQL (dialect specific brackets and parameter prefixes) via [`Translate`](SqlConversions/Translate.md) and ensuring the connection is open before execution. It mirrors the string based `Execute` and `Query` extension methods of Dapper's `SqlMapper`, not every Dapper overload (CommandDefinition based methods, ExecuteScalar, ExecuteReader, QueryFirst, QueryMultiple, etc.), as well as their async variants. The [`ISqlQuery`](ISqlQuery.md) overloads are Serenity specific and have no Dapper equivalent. Note that unlike [`SqlHelper`](SqlHelper.md) methods, these extension methods do not go through [`ISqlOperationInterceptor`](ISqlOperationInterceptor.md).
+Provides IDbConnection extension methods that wrap the corresponding Dapper SqlMapper methods, translating Serenity SQL (dialect specific brackets and parameter prefixes) via [`Translate`](./SqlConversions/Translate.md) and ensuring the connection is open before execution. It mirrors the string based `Execute` and `Query` extension methods of Dapper's `SqlMapper`, not every Dapper overload (CommandDefinition based methods, ExecuteScalar, ExecuteReader, QueryFirst, QueryMultiple, etc.), as well as their async variants. The [`ISqlQuery`](./ISqlQuery.md) overloads are Serenity specific and have no Dapper equivalent. Note that unlike [`SqlHelper`](./SqlHelper.md) methods, these extension methods do not go through [`ISqlOperationInterceptor`](./ISqlOperationInterceptor.md).
 
 ```csharp
 public static class SqlMapper

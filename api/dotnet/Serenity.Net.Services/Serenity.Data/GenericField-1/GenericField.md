@@ -1,5 +1,4 @@
 # GenericField&lt;TValue&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Base generic class for fields with a value.
 
@@ -30,5 +29,4 @@ Initializes a new instance of the [`GenericField`](../GenericField-1.md) class.
 * enum [FieldType](../FieldType.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
-* class [TValue](../Serenity.Net.Services/../GenericField-1.TValue.md)
 * class [GenericField&lt;TValue&gt;](../GenericField-1.md)

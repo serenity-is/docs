@@ -1,5 +1,4 @@
 # BaseCriteria BitwiseOr operator
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Implements the operator &#x7C;.
 

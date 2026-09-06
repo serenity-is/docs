@@ -11,7 +11,7 @@ public class PropertyInfoSource : IPropertySource
 
 | name | description |
 | --- | --- |
-| [PropertyInfoSource](PropertyInfoSource/PropertyInfoSource.md)(…) | Initializes a new instance of the [`PropertyInfoSource`](PropertyInfoSource.md) class. |
+| [PropertyInfoSource](PropertyInfoSource/PropertyInfoSource.md)(…) | Initializes a new instance of the [`PropertyInfoSource`](./PropertyInfoSource.md) class. |
 | [BasedOnField](PropertyInfoSource/BasedOnField.md) { get; } |  |
 | [BasedOnRow](PropertyInfoSource/BasedOnRow.md) { get; } |  |
 | [EnumType](PropertyInfoSource/EnumType.md) { get; } |  |
@@ -25,5 +25,5 @@ public class PropertyInfoSource : IPropertySource
 
 ## See Also
 
-* interface [IPropertySource](IPropertySource.md)
+* interface [IPropertySource](./IPropertySource.md)
 * **Source:** *[PropertyInfoSource.cs](https://github.com/serenity-is/Serenity/blob/4d2aea70b1129eefd7b1c32874a242aeee51b48a/src/services/Entity/PropertyGrid/PropertyInfoSource.cs)*

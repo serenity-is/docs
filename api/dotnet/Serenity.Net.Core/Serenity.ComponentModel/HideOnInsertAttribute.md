@@ -17,7 +17,7 @@ public class HideOnInsertAttribute : Attribute
 | name | description |
 | --- | --- |
 | [HideOnInsertAttribute](HideOnInsertAttribute/HideOnInsertAttribute.md)(…) | Controls whether this field is visible in new record mode. |
-| [Value](HideOnInsertAttribute/Value.md) { get; } | Gets a value indicating whether this [`HideOnInsertAttribute`](HideOnInsertAttribute.md) is on. |
+| [Value](HideOnInsertAttribute/Value.md) { get; } | Gets a value indicating whether this [`HideOnInsertAttribute`](./HideOnInsertAttribute.md) is on. |
 
 ## Remarks
 

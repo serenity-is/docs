@@ -1,5 +1,4 @@
 # CodeWriter.IncreaseIndent method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Increases indenting using tab string
 

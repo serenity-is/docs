@@ -1,5 +1,4 @@
 # ModulePageExtensions.PanelPage method (1 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Creates a panel page from the specified module page model.
 
@@ -25,7 +24,6 @@ The module page result.
 ---
 
 # ModulePageExtensions.PanelPage method (2 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Creates a panel page for the specified module and page title.
 
@@ -49,5 +47,5 @@ The module page result.
 ## See Also
 
 * class [ModulePageResult](../ModulePageResult.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * class [ModulePageExtensions](../ModulePageExtensions.md)

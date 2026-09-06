@@ -1,7 +1,7 @@
 # IIncludeExcludeColumns interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Abstraction for service objects containing include / exclude column sets. See [`ListRequest`](ListRequest.md) and [`RetrieveRequest`](RetrieveRequest.md).
+Abstraction for service objects containing include / exclude column sets. See [`ListRequest`](./ListRequest.md) and [`RetrieveRequest`](./RetrieveRequest.md).
 
 ```csharp
 public interface IIncludeExcludeColumns

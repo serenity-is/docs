@@ -1,5 +1,4 @@
 # IFileSystem.OpenRead method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Opens the file at the specified path for reading.
 

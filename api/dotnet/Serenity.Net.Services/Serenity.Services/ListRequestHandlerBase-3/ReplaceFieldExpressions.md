@@ -1,5 +1,4 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.ReplaceFieldExpressions method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Replaces field references, e.g. property names and field name with their corresponding expression by using the [`CriteriaFieldExpressionReplacer`](../../Serenity.Data/CriteriaFieldExpressionReplacer.md)
 

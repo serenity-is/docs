@@ -1,10 +1,9 @@
 # IFilenameFormatSanitizer.SanitizePlaceholder method
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Sanitizes the placeholder value
 
 ```csharp
-public string SanitizePlaceholder(string key, string value)
+public string SanitizePlaceholder(string key, string? value)
 ```
 
 | parameter | description |

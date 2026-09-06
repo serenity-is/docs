@@ -1,5 +1,4 @@
 # CssBundlingOptions.Bundles property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets or sets the list of bundles and their contents.
 

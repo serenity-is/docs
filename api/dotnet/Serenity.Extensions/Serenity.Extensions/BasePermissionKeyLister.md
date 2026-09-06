@@ -18,8 +18,8 @@ public abstract class BasePermissionKeyLister : IPermissionKeyLister
 | name | description |
 | --- | --- |
 | [BasePermissionKeyLister](BasePermissionKeyLister/BasePermissionKeyLister.md)(…) | Base class for permission key listers that enumerate permission keys from a type source, including nested, assembly, and type-level permissions. |
-| readonly [cache-](BasePermissionKeyLister/cache-.md) | The two level cache used to cache permission keys. |
-| readonly [typeSource-](BasePermissionKeyLister/typeSource-.md) | The type source used to enumerate permission keys. |
+| readonly [cache](BasePermissionKeyLister/cache.md) | The two level cache used to cache permission keys. |
+| readonly [typeSource](BasePermissionKeyLister/typeSource.md) | The type source used to enumerate permission keys. |
 | virtual [GetAssemblyPermissions](BasePermissionKeyLister/GetAssemblyPermissions.md)(…) | Gets permissions from assemblies in a type source. |
 | virtual [GetAttributePermissions&lt;TAttr&gt;](BasePermissionKeyLister/GetAttributePermissions.md)(…) | Gets permissions from a member attribute. (2 methods) |
 | virtual [GetCachedPermissionKeys](BasePermissionKeyLister/GetCachedPermissionKeys.md)(…) | Gets permission keys from cache or source. |
@@ -44,5 +44,5 @@ public abstract class BasePermissionKeyLister : IPermissionKeyLister
 
 ## See Also
 
-* interface [IPermissionKeyLister](../Serenity.Net.Core/../Serenity.Abstractions/IPermissionKeyLister.md)
+* interface [IPermissionKeyLister](../../Serenity.Net.Core/Serenity.Abstractions/IPermissionKeyLister.md)
 * **Source:** *[BasePermissionKeyLister.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Authorization/BasePermissionKeyLister.cs)*

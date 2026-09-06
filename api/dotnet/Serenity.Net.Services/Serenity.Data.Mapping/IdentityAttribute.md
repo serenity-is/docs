@@ -12,9 +12,9 @@ public class IdentityAttribute : SetFieldFlagsAttribute
 
 | name | description |
 | --- | --- |
-| [IdentityAttribute](IdentityAttribute/IdentityAttribute.md)() | Initializes a new instance of the [`IdentityAttribute`](IdentityAttribute.md) class. |
+| [IdentityAttribute](IdentityAttribute/IdentityAttribute.md)() | Initializes a new instance of the [`IdentityAttribute`](./IdentityAttribute.md) class. |
 
 ## See Also
 
-* class [SetFieldFlagsAttribute](SetFieldFlagsAttribute.md)
+* class [SetFieldFlagsAttribute](./SetFieldFlagsAttribute.md)
 * **Source:** *[IdentityAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/IdentityAttribute.cs)*

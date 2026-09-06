@@ -1,5 +1,4 @@
 # ForXmlHelper.ToRows&lt;TRow&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Converts data returned from a `FOR XML` statement to a row type.
 
@@ -20,6 +19,5 @@ The list of rows.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Web/../ForXmlHelper.TRow.md)
-* interface [IRow](../Serenity.Net.Services/../IRow.md)
+* interface [IRow](../../../Serenity.Net.Services/Serenity.Data/IRow.md)
 * class [ForXmlHelper](../ForXmlHelper.md)

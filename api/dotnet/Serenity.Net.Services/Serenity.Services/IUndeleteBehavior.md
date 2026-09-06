@@ -9,7 +9,7 @@ public interface IUndeleteBehavior
 
 ## Remarks
 
-All undelete behaviors should implement either [`IUndeleteBehaviorSync`](IUndeleteBehaviorSync.md) or [`IUndeleteBehaviorAsync`](IUndeleteBehaviorAsync.md), not this interface directly.
+All undelete behaviors should implement either [`IUndeleteBehaviorSync`](./IUndeleteBehaviorSync.md) or [`IUndeleteBehaviorAsync`](./IUndeleteBehaviorAsync.md), not this interface directly.
 
 ## See Also
 

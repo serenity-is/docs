@@ -30,10 +30,10 @@ public class DefaultSqlConnections : IConnectionKeyFallbacks, ISqlConnections
 
 | name | description |
 | --- | --- |
-| readonly [connectionKeyFallbacks-](DefaultSqlConnections/connectionKeyFallbacks-.md) | The connection key fallbacks, if the connection string source supports them. |
-| readonly [connectionStrings-](DefaultSqlConnections/connectionStrings-.md) | The connection strings. |
-| readonly [loggerFactory-](DefaultSqlConnections/loggerFactory-.md) | The logger factory. |
-| readonly [profiler-](DefaultSqlConnections/profiler-.md) | The profiler. |
+| readonly [connectionKeyFallbacks](DefaultSqlConnections/connectionKeyFallbacks.md) | The connection key fallbacks, if the connection string source supports them. |
+| readonly [connectionStrings](DefaultSqlConnections/connectionStrings.md) | The connection strings. |
+| readonly [loggerFactory](DefaultSqlConnections/loggerFactory.md) | The logger factory. |
+| readonly [profiler](DefaultSqlConnections/profiler.md) | The profiler. |
 | virtual [CreateConnection](DefaultSqlConnections/CreateConnection.md)(…) | Creates an actual connection based on the provider name. This should not return a wrapped connection. |
 | virtual [WrapConnection](DefaultSqlConnections/WrapConnection.md)(…) | Wraps and profiles the actual connection. |
 
@@ -43,6 +43,6 @@ Creates a new instance.
 
 ## See Also
 
-* interface [IConnectionKeyFallbacks](IConnectionKeyFallbacks.md)
-* interface [ISqlConnections](ISqlConnections.md)
+* interface [IConnectionKeyFallbacks](./IConnectionKeyFallbacks.md)
+* interface [ISqlConnections](./ISqlConnections.md)
 * **Source:** *[DefaultSqlConnections.cs](https://github.com/serenity-is/Serenity/blob/d7ef4960ed2723e5081d907f7610b7cabba6cf08/src/services/Data/Connections/DefaultSqlConnections.cs)*

@@ -1,5 +1,4 @@
 # AssemblySorter.Sort method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Sorts the specified assemblies based on their dependencies.
 

@@ -1,5 +1,4 @@
 # IRow indexer
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets a field value with specified name
 

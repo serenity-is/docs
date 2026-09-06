@@ -46,9 +46,9 @@ public abstract class UndeleteRequestHandlerBase<TRow, TUndeleteRequest, TUndele
 
 ## See Also
 
-* interface [IUndeleteRequestHandler](IUndeleteRequestHandler.md)
+* interface [IUndeleteRequestHandler](./IUndeleteRequestHandler.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [UndeleteRequest](UndeleteRequest.md)
-* class [UndeleteResponse](UndeleteResponse.md)
+* class [UndeleteRequest](./UndeleteRequest.md)
+* class [UndeleteResponse](./UndeleteResponse.md)
 * **Source:** *[UndeleteRequestHandlerBase.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/UndeleteRequestHandlerBase.cs)*

@@ -1,5 +1,4 @@
 # TranslationItem.SourceText property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The text in the source language.
 

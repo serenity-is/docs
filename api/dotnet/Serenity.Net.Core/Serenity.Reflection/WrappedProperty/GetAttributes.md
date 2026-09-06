@@ -1,5 +1,4 @@
 # WrappedProperty.GetAttributes&lt;TAttr&gt; method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the attributes.
 
@@ -19,6 +18,5 @@ The attributes of the specified type.
 
 ## See Also
 
-* class [TAttr](../Serenity.Net.Core/../WrappedProperty.TAttr.md)
 * enum [AttributeOrigin](../../Serenity/AttributeOrigin.md)
 * class [WrappedProperty](../WrappedProperty.md)

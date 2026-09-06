@@ -1,5 +1,4 @@
 # SqlDebugDumper.Dump method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Dumps the specified SQL, replacing parameters with SQL constants, fixing brackets and database caret references.
 

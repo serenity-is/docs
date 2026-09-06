@@ -1,7 +1,7 @@
 # ScriptBundleManager class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation of [`IScriptBundleManager`](IScriptBundleManager.md).
+Default implementation of [`IScriptBundleManager`](./IScriptBundleManager.md).
 
 ```csharp
 public class ScriptBundleManager : IScriptBundleManager
@@ -11,7 +11,7 @@ public class ScriptBundleManager : IScriptBundleManager
 
 | name | description |
 | --- | --- |
-| [ScriptBundleManager](ScriptBundleManager/ScriptBundleManager.md)(…) | Initializes a new instance of the [`ScriptBundleManager`](ScriptBundleManager.md) class. |
+| [ScriptBundleManager](ScriptBundleManager/ScriptBundleManager.md)(…) | Initializes a new instance of the [`ScriptBundleManager`](./ScriptBundleManager.md) class. |
 | [IsEnabled](ScriptBundleManager/IsEnabled.md) { get; } |  |
 | [GetBundleIncludes](ScriptBundleManager/GetBundleIncludes.md)(…) |  |
 | [GetScriptBundle](ScriptBundleManager/GetScriptBundle.md)(…) |  |
@@ -20,5 +20,5 @@ public class ScriptBundleManager : IScriptBundleManager
 
 ## See Also
 
-* interface [IScriptBundleManager](IScriptBundleManager.md)
+* interface [IScriptBundleManager](./IScriptBundleManager.md)
 * **Source:** *[ScriptBundleManager.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ScriptBundleManager.cs)*

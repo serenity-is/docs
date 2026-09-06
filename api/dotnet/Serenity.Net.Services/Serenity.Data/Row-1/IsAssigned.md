@@ -1,5 +1,4 @@
 # Row&lt;TFields&gt;.IsAssigned method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines whether the specified field is assigned.
 

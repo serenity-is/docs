@@ -1,5 +1,4 @@
 # IFileSystem.GetFileSize method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the size of the file at the specified path.
 

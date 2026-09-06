@@ -1,7 +1,7 @@
 # AsyncToSyncRetrieveBehaviorWrapper class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Wraps an [`IRetrieveBehaviorAsync`](IRetrieveBehaviorAsync.md) implementation and exposes it as an [`IRetrieveBehaviorSync`](IRetrieveBehaviorSync.md) by blocking on its async methods. This allows synchronous retrieve request handlers to run asynchronous retrieve behaviors.
+Wraps an [`IRetrieveBehaviorAsync`](./IRetrieveBehaviorAsync.md) implementation and exposes it as an [`IRetrieveBehaviorSync`](./IRetrieveBehaviorSync.md) by blocking on its async methods. This allows synchronous retrieve request handlers to run asynchronous retrieve behaviors.
 
 ```csharp
 public class AsyncToSyncRetrieveBehaviorWrapper : IRetrieveBehaviorSync, IWrappedBehavior
@@ -11,7 +11,7 @@ public class AsyncToSyncRetrieveBehaviorWrapper : IRetrieveBehaviorSync, IWrappe
 
 | name | description |
 | --- | --- |
-| [AsyncToSyncRetrieveBehaviorWrapper](AsyncToSyncRetrieveBehaviorWrapper/AsyncToSyncRetrieveBehaviorWrapper.md)(…) | Wraps an [`IRetrieveBehaviorAsync`](IRetrieveBehaviorAsync.md) implementation and exposes it as an [`IRetrieveBehaviorSync`](IRetrieveBehaviorSync.md) by blocking on its async methods. This allows synchronous retrieve request handlers to run asynchronous retrieve behaviors. |
+| [AsyncToSyncRetrieveBehaviorWrapper](AsyncToSyncRetrieveBehaviorWrapper/AsyncToSyncRetrieveBehaviorWrapper.md)(…) | Wraps an [`IRetrieveBehaviorAsync`](./IRetrieveBehaviorAsync.md) implementation and exposes it as an [`IRetrieveBehaviorSync`](./IRetrieveBehaviorSync.md) by blocking on its async methods. This allows synchronous retrieve request handlers to run asynchronous retrieve behaviors. |
 | [WrappedBehavior](AsyncToSyncRetrieveBehaviorWrapper/WrappedBehavior.md) { get; } |  |
 | [OnAfterExecuteQuery](AsyncToSyncRetrieveBehaviorWrapper/OnAfterExecuteQuery.md)(…) |  |
 | [OnBeforeExecuteQuery](AsyncToSyncRetrieveBehaviorWrapper/OnBeforeExecuteQuery.md)(…) |  |
@@ -25,6 +25,6 @@ A behavior instance is always cached and reused across requests, so make sure yo
 
 ## See Also
 
-* interface [IRetrieveBehaviorSync](IRetrieveBehaviorSync.md)
-* interface [IWrappedBehavior](IWrappedBehavior.md)
+* interface [IRetrieveBehaviorSync](./IRetrieveBehaviorSync.md)
+* interface [IWrappedBehavior](./IWrappedBehavior.md)
 * **Source:** *[AsyncToSyncRetrieveBehaviorWrapper.cs](https://github.com/serenity-is/Serenity/blob/aa5433b74475d7a249a3550344ee8ccea8e5a8eb/src/services/RequestHandlers/Retrieve/AsyncToSyncRetrieveBehaviorWrapper.cs)*

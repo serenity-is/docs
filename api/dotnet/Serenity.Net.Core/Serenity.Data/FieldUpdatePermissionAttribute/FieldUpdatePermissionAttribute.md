@@ -1,5 +1,4 @@
 # FieldUpdatePermissionAttribute constructor (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`FieldUpdatePermissionAttribute`](../FieldUpdatePermissionAttribute.md) class.
 
@@ -18,7 +17,6 @@ public FieldUpdatePermissionAttribute(object permission)
 ---
 
 # FieldUpdatePermissionAttribute constructor (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`FieldUpdatePermissionAttribute`](../FieldUpdatePermissionAttribute.md) class. A colon is inserted between module and permission to generate permission key.
 
@@ -38,7 +36,6 @@ public FieldUpdatePermissionAttribute(object module, object permission)
 ---
 
 # FieldUpdatePermissionAttribute constructor (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`FieldUpdatePermissionAttribute`](../FieldUpdatePermissionAttribute.md) class. A colon is inserted between module, submodule and permission to generate permission key.
 

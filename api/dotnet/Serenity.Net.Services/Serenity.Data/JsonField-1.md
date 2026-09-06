@@ -34,10 +34,9 @@ public class JsonField<TValue> : GenericClassField<TValue>
 
 ## Remarks
 
-Initializes a new instance of the [`JsonField`](JsonField-1.md) class.
+Initializes a new instance of the [`JsonField`](./JsonField-1.md) class.
 
 ## See Also
 
-* class [GenericClassField&lt;TValue&gt;](GenericClassField-1.md)
-* class [TValue](../Serenity.Net.Services/JsonField-1.TValue.md)
+* class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
 * **Source:** *[JsonField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/JsonField.cs)*

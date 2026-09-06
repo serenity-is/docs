@@ -1,5 +1,4 @@
 # FormatterTypeAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Sets formatter type.
 

@@ -1,11 +1,10 @@
 # IRetrieveRequestProcessorAsync.ProcessAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Processes the [`RetrieveRequest`](../RetrieveRequest.md) asynchronously and returns a [`IRetrieveResponse`](../IRetrieveResponse.md)
 
 ```csharp
 public Task<IRetrieveResponse> ProcessAsync(IDbConnection connection, RetrieveRequest request, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

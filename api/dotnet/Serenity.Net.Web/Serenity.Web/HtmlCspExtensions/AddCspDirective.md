@@ -1,5 +1,4 @@
 # HtmlCspExtensions.AddCspDirective method (1 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds a Content Security Policy directive to the current HTTP context items.
 
@@ -21,7 +20,6 @@ public static void AddCspDirective(this ControllerBase controller, string direct
 ---
 
 # HtmlCspExtensions.AddCspDirective method (2 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds a Content Security Policy directive to the current HTTP context items.
 
@@ -43,7 +41,6 @@ public static void AddCspDirective(this HttpContext context, string directiveNam
 ---
 
 # HtmlCspExtensions.AddCspDirective method (3 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds a Content Security Policy directive to the current HTTP context items.
 

@@ -1,11 +1,10 @@
 # DeleteRequestHandlerAsync&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.PrepareQueryAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Prepares the query used to select the existing record
 
 ```csharp
 protected virtual Task PrepareQueryAsync(SqlQuery query, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

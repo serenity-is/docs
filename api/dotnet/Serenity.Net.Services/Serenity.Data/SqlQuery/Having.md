@@ -1,5 +1,4 @@
 # SqlQuery.Having method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds an SQL expression to the GROUP BY clause.
 

@@ -1,10 +1,9 @@
 # NavigationItem.Title property
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Title
 
 ```csharp
-public string Title { get; set; }
+public string? Title { get; set; }
 ```
 
 ## See Also

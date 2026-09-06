@@ -38,8 +38,8 @@ Creates a new instance.
 
 ## See Also
 
-* interface [IChangeNotifier](IChangeNotifier.md)
-* interface [IChangeTokenProvider](IChangeTokenProvider.md)
-* interface [IGetAssemblies](IGetAssemblies.md)
-* interface [ITypeSource](ITypeSource.md)
+* interface [IChangeNotifier](./IChangeNotifier.md)
+* interface [IChangeTokenProvider](./IChangeTokenProvider.md)
+* interface [IGetAssemblies](./IGetAssemblies.md)
+* interface [ITypeSource](./ITypeSource.md)
 * **Source:** *[BaseAssemblyTypeSource.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/core/ComponentModel/Extensibility/BaseAssemblyTypeSource.cs)*

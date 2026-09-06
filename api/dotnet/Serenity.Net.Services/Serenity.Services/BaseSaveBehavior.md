@@ -1,7 +1,7 @@
 # BaseSaveBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base class for behaviors implementing [`ISaveBehaviorSync`](ISaveBehaviorSync.md)
+Base class for behaviors implementing [`ISaveBehaviorSync`](./ISaveBehaviorSync.md)
 
 ```csharp
 public abstract class BaseSaveBehavior : ISaveBehaviorSync, ISaveExceptionBehavior
@@ -28,6 +28,6 @@ public abstract class BaseSaveBehavior : ISaveBehaviorSync, ISaveExceptionBehavi
 
 ## See Also
 
-* interface [ISaveBehaviorSync](ISaveBehaviorSync.md)
-* interface [ISaveExceptionBehavior](ISaveExceptionBehavior.md)
+* interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
+* interface [ISaveExceptionBehavior](./ISaveExceptionBehavior.md)
 * **Source:** *[BaseSaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/04ac3ea58a41048bed911555c87969edcf6ea031/src/services/RequestHandlers/Save/BaseSaveBehavior.cs)*

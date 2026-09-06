@@ -22,12 +22,12 @@ public class DataScript : DynamicScript, IGetScriptData, INamedDynamicScript
 | name | description |
 | --- | --- |
 | [DataScript](DataScript/DataScript.md)() | Creates a new instance of the class. |
-| [getData-](DataScript/getData-.md) | Callback to get the data. |
-| [key-](DataScript/key-.md) | Key for the data script. |
+| [getData](DataScript/getData.md) | Callback to get the data. |
+| [key](DataScript/key.md) | Key for the data script. |
 
 ## See Also
 
-* class [DynamicScript](DynamicScript.md)
-* interface [IGetScriptData](../Serenity.Net.Core/IGetScriptData.md)
-* interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
+* class [DynamicScript](./DynamicScript.md)
+* interface [IGetScriptData](../../Serenity.Net.Core/Serenity.Web/IGetScriptData.md)
+* interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
 * **Source:** *[DataScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/DynamicScript/DataScript.cs)*

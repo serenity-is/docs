@@ -1,5 +1,4 @@
 # BehaviorProviderExtensions.Resolve&lt;TRow,TBehavior&gt; method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Resolves behaviors for handler, row and behavior type
 
@@ -21,6 +20,5 @@ Behavior
 
 ## See Also
 
-* class [TBehavior](../Serenity.Net.Services/../BehaviorProviderExtensions.TBehavior.md)
 * interface [IBehaviorProvider](../IBehaviorProvider.md)
 * class [BehaviorProviderExtensions](../BehaviorProviderExtensions.md)

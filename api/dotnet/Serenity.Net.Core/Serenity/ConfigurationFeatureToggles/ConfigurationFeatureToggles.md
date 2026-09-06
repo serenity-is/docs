@@ -1,11 +1,10 @@
 # ConfigurationFeatureToggles constructor
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Default implementation for IFeatureToggles that reads from configuration's FeatureToggles section. Unless the value is explicitly set to "false" for a feature, it is considered enabled.
 
 ```csharp
-public ConfigurationFeatureToggles(IConfiguration configuration, object[] disableByDefault = null, 
-    Dictionary<string, List<RequiresFeatureAttribute>> dependencyMap = null)
+public ConfigurationFeatureToggles(IConfiguration configuration, object[]? disableByDefault = null, 
+    Dictionary<string, List<RequiresFeatureAttribute>>? dependencyMap = null)
 ```
 
 | parameter | description |

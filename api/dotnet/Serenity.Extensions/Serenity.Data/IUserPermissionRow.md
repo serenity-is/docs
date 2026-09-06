@@ -17,5 +17,5 @@ public interface IUserPermissionRow : IRow
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Services/IRow.md)
+* interface [IRow](../../Serenity.Net.Services/Serenity.Data/IRow.md)
 * **Source:** *[IUserPermissionRow.cs](https://github.com/serenity-is/Serenity/blob/e8b5b16d9f43821af3cabbbf863eaed415461931/common-features/src/extensions/Modules/Authorization/IUserPermissionRow.cs)*

@@ -1,5 +1,4 @@
 # MigrationUtils.If&lt;TSyntax&gt; method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Invokes the callback only when the predicate is true, otherwise returns the syntax unchanged.
 
@@ -22,5 +21,4 @@ The syntax builder.
 
 ## See Also
 
-* class [TSyntax](../Serenity.Extensions/../MigrationUtils.TSyntax.md)
 * class [MigrationUtils](../MigrationUtils.md)

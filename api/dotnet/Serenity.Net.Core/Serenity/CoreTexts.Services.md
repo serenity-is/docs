@@ -17,4 +17,4 @@ public static class Services
 
 ## See Also
 
-* class [CoreTexts](CoreTexts.md)
+* class [CoreTexts](./CoreTexts.md)

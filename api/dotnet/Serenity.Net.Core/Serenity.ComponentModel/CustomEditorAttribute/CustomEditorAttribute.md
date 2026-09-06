@@ -1,5 +1,4 @@
 # CustomEditorAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Base attribute class that all other custom editor types derive from.
 

@@ -1,5 +1,4 @@
 # ReportColumn.Format property
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the format string to use.
 

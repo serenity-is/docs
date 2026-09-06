@@ -1,5 +1,4 @@
 # RowFieldsBase.SetItem method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Replaces the element at the specified index.
 

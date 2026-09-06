@@ -1,5 +1,4 @@
 # StringHelper.IsEmptyOrNull method (1 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Determines whether the collection is empty or null.
 
@@ -22,12 +21,11 @@ public static bool IsEmptyOrNull(this ICollection collection)
 ---
 
 # StringHelper.IsEmptyOrNull method (2 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 This function is just an extension method version of string.IsNullOrEmpty and is effectively obsolete.
 
 ```csharp
-public static bool IsEmptyOrNull(this string str)
+public static bool IsEmptyOrNull(this string? str)
 ```
 
 | parameter | description |

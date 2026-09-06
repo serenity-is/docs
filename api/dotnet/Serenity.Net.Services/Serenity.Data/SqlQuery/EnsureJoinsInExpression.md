@@ -1,5 +1,4 @@
 # SqlQuery.EnsureJoinsInExpression method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Ensures the joins in expression. For this to work, into row must provide a list of joins and their expressions.
 

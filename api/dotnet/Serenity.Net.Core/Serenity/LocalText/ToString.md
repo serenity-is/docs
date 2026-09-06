@@ -1,10 +1,9 @@
 # LocalText.ToString method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Returns the translation for the current context.
 
 ```csharp
-public string ToString(ITextLocalizer localizer)
+public string ToString(ITextLocalizer? localizer)
 ```
 
 | parameter | description |

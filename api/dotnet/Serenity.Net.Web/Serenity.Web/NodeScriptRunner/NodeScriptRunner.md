@@ -1,13 +1,11 @@
 # NodeScriptRunner constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Initializes a new instance of the [`NodeScriptRunner`](../NodeScriptRunner.md) class.
 
 ```csharp
 public NodeScriptRunner(string scriptName, string arguments = null, string workingDirectory = null, 
     IDictionary<string, string> envVars = null, string pkgManagerCommand = "node", 
-    DiagnosticSource diagnosticSource = null, 
-    CancellationToken applicationStoppingToken = default(CancellationToken))
+    DiagnosticSource diagnosticSource = null, CancellationToken applicationStoppingToken = default)
 ```
 
 | parameter | description |

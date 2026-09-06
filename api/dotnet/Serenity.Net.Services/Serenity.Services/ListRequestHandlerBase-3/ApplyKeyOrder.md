@@ -1,5 +1,4 @@
 # ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;.ApplyKeyOrder method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies the key order which is ID field ([`IIdRow`](../../Serenity.Data/IIdRow.md))
 

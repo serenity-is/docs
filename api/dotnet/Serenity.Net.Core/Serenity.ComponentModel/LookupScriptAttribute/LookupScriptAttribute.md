@@ -1,5 +1,4 @@
 # LookupScriptAttribute constructor (1 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates a LookupScriptAttribute with auto determined lookup key
 
@@ -14,7 +13,6 @@ public LookupScriptAttribute()
 ---
 
 # LookupScriptAttribute constructor (2 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates a LookupScriptAttribute.
 
@@ -33,7 +31,6 @@ public LookupScriptAttribute(string key)
 ---
 
 # LookupScriptAttribute constructor (3 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Defines that this type has an external lookup script type, and the lookup key is available on that type. Use this overload only for row types that have external lookups.
 

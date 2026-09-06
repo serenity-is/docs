@@ -12,10 +12,10 @@ public class RecaptchaAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [RecaptchaAttribute](RecaptchaAttribute/RecaptchaAttribute.md)() | Initializes a new instance of the [`RecaptchaAttribute`](RecaptchaAttribute.md) class. |
+| [RecaptchaAttribute](RecaptchaAttribute/RecaptchaAttribute.md)() | Initializes a new instance of the [`RecaptchaAttribute`](./RecaptchaAttribute.md) class. |
 | const [Key](RecaptchaAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[RecaptchaAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/RecaptchaAttribute.cs)*

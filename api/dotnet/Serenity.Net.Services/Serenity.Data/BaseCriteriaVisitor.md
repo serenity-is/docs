@@ -11,7 +11,7 @@ public abstract class BaseCriteriaVisitor
 
 | name | description |
 | --- | --- |
-| [BaseCriteriaVisitor](BaseCriteriaVisitor/BaseCriteriaVisitor.md)() | Initializes a new instance of the [`BaseCriteriaVisitor`](BaseCriteriaVisitor.md) class. |
+| [BaseCriteriaVisitor](BaseCriteriaVisitor/BaseCriteriaVisitor.md)() | Initializes a new instance of the [`BaseCriteriaVisitor`](./BaseCriteriaVisitor.md) class. |
 | virtual [Visit](BaseCriteriaVisitor/Visit.md)(…) | Visits the specified criteria. |
 | virtual [VisitBinary](BaseCriteriaVisitor/VisitBinary.md)(…) | Visits the binary criteria. A binary criteria is one with two operands and an operator between them. |
 | virtual [VisitCriteria](BaseCriteriaVisitor/VisitCriteria.md)(…) | Visits the criteria, returning a potentially reworked version. |

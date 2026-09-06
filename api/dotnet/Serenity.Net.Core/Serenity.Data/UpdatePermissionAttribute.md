@@ -12,9 +12,9 @@ public class UpdatePermissionAttribute : PermissionAttributeBase
 
 | name | description |
 | --- | --- |
-| [UpdatePermissionAttribute](UpdatePermissionAttribute/UpdatePermissionAttribute.md)(…) | Initializes a new instance of the [`UpdatePermissionAttribute`](UpdatePermissionAttribute.md) class. (3 constructors) |
+| [UpdatePermissionAttribute](UpdatePermissionAttribute/UpdatePermissionAttribute.md)(…) | Initializes a new instance of the [`UpdatePermissionAttribute`](./UpdatePermissionAttribute.md) class. (3 constructors) |
 
 ## See Also
 
-* class [PermissionAttributeBase](PermissionAttributeBase.md)
+* class [PermissionAttributeBase](./PermissionAttributeBase.md)
 * **Source:** *[UpdatePermissionAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Permission/UpdatePermissionAttribute.cs)*

@@ -23,7 +23,7 @@ public class JsonServiceClient
 | name | description |
 | --- | --- |
 | [BaseUrl](JsonServiceClient/BaseUrl.md) { get; set; } | Base url for the client |
-| [cookies-](JsonServiceClient/cookies-.md) | Cookie container |
+| [cookies](JsonServiceClient/cookies.md) | Cookie container |
 | [InternalPost&lt;TResponse&gt;](JsonServiceClient/InternalPost.md)(…) | Posts to a JSON service, internal version |
 
 ## Remarks

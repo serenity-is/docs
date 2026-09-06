@@ -1,5 +1,4 @@
 # IScriptFiles.GetScriptFiles method
-**namespace:** *[Serenity.Plugins](../../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the script files.
 

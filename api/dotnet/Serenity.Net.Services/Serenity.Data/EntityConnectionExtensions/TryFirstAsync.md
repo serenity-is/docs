@@ -1,11 +1,10 @@
 # EntityConnectionExtensions.TryFirstAsync&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously tries to find first entity, allowing the caller to set criteria and fields to select through an editQuery callback.
 
 ```csharp
 public static Task<TRow> TryFirstAsync<TRow>(this IDbConnection connection, 
-    Action<SqlQuery> editQuery, CancellationToken cancellationToken = default(CancellationToken))
+    Action<SqlQuery> editQuery, CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
 
@@ -22,7 +21,6 @@ A task representing the asynchronous operation. The task result is the first ent
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
@@ -30,13 +28,12 @@ A task representing the asynchronous operation. The task result is the first ent
 ---
 
 # EntityConnectionExtensions.TryFirstAsync&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously tries to find first entity matching a where criteria.
 
 ```csharp
 public static Task<TRow> TryFirstAsync<TRow>(this IDbConnection connection, ICriteria where, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
 
@@ -53,7 +50,6 @@ A task representing the asynchronous operation. The task result is the first ent
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

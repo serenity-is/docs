@@ -1,7 +1,7 @@
 # TextLocalizerExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Extensions for [`ITextLocalizer`](ITextLocalizer.md).
+Extensions for [`ITextLocalizer`](./ITextLocalizer.md).
 
 ```csharp
 public static class TextLocalizerExtensions

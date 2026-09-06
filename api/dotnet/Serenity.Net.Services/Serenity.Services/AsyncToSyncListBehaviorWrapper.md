@@ -1,7 +1,7 @@
 # AsyncToSyncListBehaviorWrapper class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Wraps an [`IListBehaviorAsync`](IListBehaviorAsync.md) implementation and exposes it as an [`IListBehaviorSync`](IListBehaviorSync.md) by blocking on its async methods. This allows synchronous list request handlers to run asynchronous list behaviors.
+Wraps an [`IListBehaviorAsync`](./IListBehaviorAsync.md) implementation and exposes it as an [`IListBehaviorSync`](./IListBehaviorSync.md) by blocking on its async methods. This allows synchronous list request handlers to run asynchronous list behaviors.
 
 ```csharp
 public class AsyncToSyncListBehaviorWrapper : IListBehaviorSync, IWrappedBehavior
@@ -11,7 +11,7 @@ public class AsyncToSyncListBehaviorWrapper : IListBehaviorSync, IWrappedBehavio
 
 | name | description |
 | --- | --- |
-| [AsyncToSyncListBehaviorWrapper](AsyncToSyncListBehaviorWrapper/AsyncToSyncListBehaviorWrapper.md)(…) | Wraps an [`IListBehaviorAsync`](IListBehaviorAsync.md) implementation and exposes it as an [`IListBehaviorSync`](IListBehaviorSync.md) by blocking on its async methods. This allows synchronous list request handlers to run asynchronous list behaviors. |
+| [AsyncToSyncListBehaviorWrapper](AsyncToSyncListBehaviorWrapper/AsyncToSyncListBehaviorWrapper.md)(…) | Wraps an [`IListBehaviorAsync`](./IListBehaviorAsync.md) implementation and exposes it as an [`IListBehaviorSync`](./IListBehaviorSync.md) by blocking on its async methods. This allows synchronous list request handlers to run asynchronous list behaviors. |
 | [WrappedBehavior](AsyncToSyncListBehaviorWrapper/WrappedBehavior.md) { get; } |  |
 | [OnAfterExecuteQuery](AsyncToSyncListBehaviorWrapper/OnAfterExecuteQuery.md)(…) |  |
 | [OnApplyFilters](AsyncToSyncListBehaviorWrapper/OnApplyFilters.md)(…) |  |
@@ -26,6 +26,6 @@ A behavior instance is always cached and reused across requests, so make sure yo
 
 ## See Also
 
-* interface [IListBehaviorSync](IListBehaviorSync.md)
-* interface [IWrappedBehavior](IWrappedBehavior.md)
+* interface [IListBehaviorSync](./IListBehaviorSync.md)
+* interface [IWrappedBehavior](./IWrappedBehavior.md)
 * **Source:** *[AsyncToSyncListBehaviorWrapper.cs](https://github.com/serenity-is/Serenity/blob/6b0ee5bf7cf3317b3c89e88bd6a74f4e510d83c6/src/services/RequestHandlers/List/AsyncToSyncListBehaviorWrapper.cs)*

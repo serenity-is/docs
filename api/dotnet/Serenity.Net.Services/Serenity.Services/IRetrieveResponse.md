@@ -1,7 +1,7 @@
 # IRetrieveResponse interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for a [`RetrieveResponse`](RetrieveResponse-1.md). As the RetrieveResponse itself is generic, this allows easier access to its members.
+Interface for a [`RetrieveResponse`](./RetrieveResponse-1.md). As the RetrieveResponse itself is generic, this allows easier access to its members.
 
 ```csharp
 public interface IRetrieveResponse

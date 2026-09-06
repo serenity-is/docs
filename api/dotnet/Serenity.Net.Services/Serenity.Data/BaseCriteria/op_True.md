@@ -1,5 +1,4 @@
 # BaseCriteria True operator
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Must ALSO return FALSE from this for short circuit AND (&amp;&amp;) to return a new binary criteria merging left and right operands in any case https://msdn.microsoft.com/en-us/library/aa691312
 

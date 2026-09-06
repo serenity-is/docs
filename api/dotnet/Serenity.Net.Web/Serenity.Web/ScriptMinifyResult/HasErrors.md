@@ -1,5 +1,4 @@
 # ScriptMinifyResult.HasErrors property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets or sets whether minifying had errors.
 

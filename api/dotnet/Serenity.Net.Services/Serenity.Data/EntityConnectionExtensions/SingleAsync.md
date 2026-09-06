@@ -1,11 +1,10 @@
 # EntityConnectionExtensions.SingleAsync&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously finds a single entity, allowing caller to edit the criteria and set of fields to load through a editQuery callback.
 
 ```csharp
 public static Task<TRow> SingleAsync<TRow>(this IDbConnection connection, 
-    Action<SqlQuery> editQuery, CancellationToken cancellationToken = default(CancellationToken))
+    Action<SqlQuery> editQuery, CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
 
@@ -29,7 +28,6 @@ A task representing the asynchronous operation. The task result is the single en
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
@@ -37,13 +35,12 @@ A task representing the asynchronous operation. The task result is the single en
 ---
 
 # EntityConnectionExtensions.SingleAsync&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously finds a single entity matching the specified criteria. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
 ```csharp
 public static Task<TRow> SingleAsync<TRow>(this IDbConnection connection, ICriteria where, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
 
@@ -67,7 +64,6 @@ A task representing the asynchronous operation. The task result is the single en
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

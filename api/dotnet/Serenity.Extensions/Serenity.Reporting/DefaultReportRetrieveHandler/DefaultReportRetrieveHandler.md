@@ -1,5 +1,4 @@
 # DefaultReportRetrieveHandler constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Default implementation for report retrieve handler
 
@@ -26,6 +25,6 @@ Creates a new instance of the class
 
 ## See Also
 
-* interface [IPropertyItemProvider](../Serenity.Net.Services/../../Serenity.PropertyGrid/IPropertyItemProvider.md)
-* interface [IReportRegistry](../Serenity.Net.Services/../IReportRegistry.md)
+* interface [IPropertyItemProvider](../../../Serenity.Net.Services/Serenity.PropertyGrid/IPropertyItemProvider.md)
+* interface [IReportRegistry](../../../Serenity.Net.Services/Serenity.Reporting/IReportRegistry.md)
 * class [DefaultReportRetrieveHandler](../DefaultReportRetrieveHandler.md)

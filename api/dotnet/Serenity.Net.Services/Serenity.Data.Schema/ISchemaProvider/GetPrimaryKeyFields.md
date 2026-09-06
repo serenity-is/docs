@@ -1,5 +1,4 @@
 # ISchemaProvider.GetPrimaryKeyFields method
-**namespace:** *[Serenity.Data.Schema](../../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the primary key fields.
 

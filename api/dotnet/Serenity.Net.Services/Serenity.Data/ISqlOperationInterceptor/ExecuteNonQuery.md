@@ -1,5 +1,4 @@
 # ISqlOperationInterceptor.ExecuteNonQuery method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Intercepts the [`SqlHelper`](../SqlHelper.md)`Execute` method (SqlDelete/SqlUpdate/SqlInsert).
 

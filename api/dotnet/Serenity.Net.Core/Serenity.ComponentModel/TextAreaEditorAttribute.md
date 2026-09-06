@@ -12,12 +12,12 @@ public class TextAreaEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [TextAreaEditorAttribute](TextAreaEditorAttribute/TextAreaEditorAttribute.md)() | Initializes a new instance of the [`TextAreaEditorAttribute`](TextAreaEditorAttribute.md) class. |
+| [TextAreaEditorAttribute](TextAreaEditorAttribute/TextAreaEditorAttribute.md)() | Initializes a new instance of the [`TextAreaEditorAttribute`](./TextAreaEditorAttribute.md) class. |
 | [Cols](TextAreaEditorAttribute/Cols.md) { get; set; } | Gets or sets the cols for textarea. |
 | [Rows](TextAreaEditorAttribute/Rows.md) { get; set; } | Gets or sets the rows for textarea. |
 | const [Key](TextAreaEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[TextAreaEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/TextAreaEditorAttribute.cs)*

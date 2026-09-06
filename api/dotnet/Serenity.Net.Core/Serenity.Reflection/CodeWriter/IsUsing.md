@@ -1,5 +1,4 @@
 # CodeWriter.IsUsing method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Returns true if the namespace is in list of usings.
 

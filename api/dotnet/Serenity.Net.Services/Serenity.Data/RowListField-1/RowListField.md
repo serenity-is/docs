@@ -1,5 +1,4 @@
 # RowListField&lt;TForeign&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Field with a RowList value.
 
@@ -27,8 +26,7 @@ Initializes a new instance of the [`RowListField`](../RowListField-1.md) class.
 ## See Also
 
 * class [Field](../Field.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
-* class [TForeign](../Serenity.Net.Services/../RowListField-1.TForeign.md)
 * class [RowListField&lt;TForeign&gt;](../RowListField-1.md)

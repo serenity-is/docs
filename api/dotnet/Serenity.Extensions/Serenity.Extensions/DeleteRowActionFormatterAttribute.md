@@ -17,5 +17,5 @@ public class DeleteRowActionFormatterAttribute : CustomFormatterAttribute
 
 ## See Also
 
-* class [CustomFormatterAttribute](../Serenity.Net.Core/../Serenity.ComponentModel/CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](../../Serenity.Net.Core/Serenity.ComponentModel/CustomFormatterAttribute.md)
 * **Source:** *[Extensions.DeleteRowActionFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/7345052967eb6b6cec2b0a8512d5916028ee30e9/common-features/src/extensions/Imports/ClientTypes/Extensions.DeleteRowActionFormatterAttribute.cs)*

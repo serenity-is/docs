@@ -25,11 +25,8 @@ public interface IDeleteHandlerAsync<TRow, TDeleteRequest, TDeleteResponse> :
 
 ## See Also
 
-* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](IRequestHandler-3.md)
-* class [TRow](../Serenity.Net.Services/IDeleteHandlerAsync-3.TRow.md)
-* class [TDeleteRequest](../Serenity.Net.Services/IDeleteHandlerAsync-3.TDeleteRequest.md)
-* class [TDeleteResponse](../Serenity.Net.Services/IDeleteHandlerAsync-3.TDeleteResponse.md)
+* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](./IRequestHandler-3.md)
 * interface [IRow](../Serenity.Data/IRow.md)
-* class [DeleteRequest](DeleteRequest.md)
-* class [DeleteResponse](DeleteResponse.md)
+* class [DeleteRequest](./DeleteRequest.md)
+* class [DeleteResponse](./DeleteResponse.md)
 * **Source:** *[IDeleteHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Delete/IDeleteHandlerAsync.cs)*

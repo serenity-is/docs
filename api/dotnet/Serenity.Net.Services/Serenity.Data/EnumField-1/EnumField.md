@@ -1,5 +1,4 @@
 # EnumField&lt;TEnum&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`EnumField`](../EnumField-1.md) class.
 
@@ -28,7 +27,7 @@ public EnumField(ICollection<Field> collection, string name, LocalText caption =
 ## See Also
 
 * class [Field](../Field.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
 * class [EnumField&lt;TEnum&gt;](../EnumField-1.md)

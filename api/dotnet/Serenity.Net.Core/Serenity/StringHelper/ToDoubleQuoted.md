@@ -1,5 +1,4 @@
 # StringHelper.ToDoubleQuoted method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Converts the string to its double quoted representation.
 

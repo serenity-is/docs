@@ -1,5 +1,4 @@
 # SqlConversions.ToSql method (1 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -22,7 +21,6 @@ The SQL constant, or NULL if the value has no value.
 ---
 
 # SqlConversions.ToSql method (2 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -45,7 +43,6 @@ The SQL constant, or NULL if the value has no value.
 ---
 
 # SqlConversions.ToSql method (3 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -68,7 +65,6 @@ The SQL constant, or NULL if the value has no value.
 ---
 
 # SqlConversions.ToSql method (4 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -91,7 +87,6 @@ The SQL constant, or NULL if the value has no value.
 ---
 
 # SqlConversions.ToSql method (5 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -114,7 +109,6 @@ The SQL constant, or NULL if the value has no value.
 ---
 
 # SqlConversions.ToSql method (6 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -137,7 +131,6 @@ The SQL constant, or NULL if the value has no value.
 ---
 
 # SqlConversions.ToSql method (7 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -162,7 +155,6 @@ The SQL constant.
 ---
 
 # SqlConversions.ToSql method (8 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 
@@ -187,7 +179,6 @@ The SQL constant, or NULL if the value has no value.
 ---
 
 # SqlConversions.ToSql method (9 of 9)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to SQL.
 

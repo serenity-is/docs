@@ -1,12 +1,11 @@
 # IRowOperationInterceptor.FindRowAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts the async EntityConnectionExtensions ById/TryById/First/TryFirst/Single/TrySingle methods. The default implementation forwards to [`FindRow`](FindRow.md).
+Intercepts the async EntityConnectionExtensions ById/TryById/First/TryFirst/Single/TrySingle methods. The default implementation forwards to [`FindRow`](./FindRow.md).
 
 ```csharp
 public Task<OptionalValue<IRow>> FindRowAsync(Type rowType, OptionalValue<object> id, 
     ICriteria where, Action<SqlQuery> editQuery, bool byIdOrSingle, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

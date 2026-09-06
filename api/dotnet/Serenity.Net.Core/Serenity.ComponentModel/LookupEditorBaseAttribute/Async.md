@@ -1,5 +1,4 @@
 # LookupEditorBaseAttribute.Async property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Loads the lookup in async mode, default false.
 

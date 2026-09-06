@@ -25,11 +25,8 @@ public interface IUndeleteHandlerAsync<TRow, TUndeleteRequest, TUndeleteResponse
 
 ## See Also
 
-* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](IRequestHandler-3.md)
-* class [TRow](../Serenity.Net.Services/IUndeleteHandlerAsync-3.TRow.md)
-* class [TUndeleteRequest](../Serenity.Net.Services/IUndeleteHandlerAsync-3.TUndeleteRequest.md)
-* class [TUndeleteResponse](../Serenity.Net.Services/IUndeleteHandlerAsync-3.TUndeleteResponse.md)
+* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](./IRequestHandler-3.md)
 * interface [IRow](../Serenity.Data/IRow.md)
-* class [UndeleteRequest](UndeleteRequest.md)
-* class [UndeleteResponse](UndeleteResponse.md)
+* class [UndeleteRequest](./UndeleteRequest.md)
+* class [UndeleteResponse](./UndeleteResponse.md)
 * **Source:** *[IUndeleteHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/IUndeleteHandlerAsync.cs)*

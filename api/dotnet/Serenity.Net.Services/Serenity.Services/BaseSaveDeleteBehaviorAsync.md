@@ -28,7 +28,7 @@ public abstract class BaseSaveDeleteBehaviorAsync : BaseSaveBehaviorAsync, IDele
 
 ## See Also
 
-* class [BaseSaveBehaviorAsync](BaseSaveBehaviorAsync.md)
-* interface [IDeleteBehaviorAsync](IDeleteBehaviorAsync.md)
-* interface [IDeleteExceptionBehavior](IDeleteExceptionBehavior.md)
+* class [BaseSaveBehaviorAsync](./BaseSaveBehaviorAsync.md)
+* interface [IDeleteBehaviorAsync](./IDeleteBehaviorAsync.md)
+* interface [IDeleteExceptionBehavior](./IDeleteExceptionBehavior.md)
 * **Source:** *[BaseSaveDeleteBehaviorAsync.cs](https://github.com/serenity-is/Serenity/blob/62e26a99abba7fd00c7409a1334581e3c5ccd1f4/src/services/RequestHandlers/Save/BaseSaveDeleteBehaviorAsync.cs)*

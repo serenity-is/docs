@@ -1,5 +1,4 @@
 # RowFieldsBase.AfterInitialize method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Afters the initialize.
 

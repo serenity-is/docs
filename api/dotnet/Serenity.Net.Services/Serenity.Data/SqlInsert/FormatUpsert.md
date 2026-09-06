@@ -1,5 +1,4 @@
 # SqlInsert.FormatUpsert method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Formats an UPSERT query, i.e. a query that updates the row matching the key fields or inserts a new row if no such row exists.
 

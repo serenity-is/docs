@@ -1,5 +1,4 @@
 # RecaptchaPropertyProcessor constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Property processor that passes the recaptcha site key to the client side.
 
@@ -13,5 +12,5 @@ Initializes a new instance of the [`RecaptchaPropertyProcessor`](../RecaptchaPro
 
 ## See Also
 
-* class [RecaptchaSettings](../Serenity.Net.Core/../RecaptchaSettings.md)
+* class [RecaptchaSettings](../../../Serenity.Net.Core/Serenity.Web/RecaptchaSettings.md)
 * class [RecaptchaPropertyProcessor](../RecaptchaPropertyProcessor.md)

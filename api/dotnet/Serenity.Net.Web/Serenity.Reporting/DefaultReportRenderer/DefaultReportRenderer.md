@@ -1,5 +1,4 @@
 # DefaultReportRenderer constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Default implementation of IReportRenderer.
 
@@ -22,6 +21,6 @@ Initializes a new instance of the [`DefaultReportRenderer`](../DefaultReportRend
 
 ## See Also
 
-* interface [IDataReportExcelRenderer](../Serenity.Net.Services/../IDataReportExcelRenderer.md)
-* interface [IHtmlReportPdfRenderer](../Serenity.Net.Services/../IHtmlReportPdfRenderer.md)
+* interface [IDataReportExcelRenderer](../../../Serenity.Net.Services/Serenity.Reporting/IDataReportExcelRenderer.md)
+* interface [IHtmlReportPdfRenderer](../../../Serenity.Net.Services/Serenity.Reporting/IHtmlReportPdfRenderer.md)
 * class [DefaultReportRenderer](../DefaultReportRenderer.md)

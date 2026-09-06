@@ -1,10 +1,9 @@
 # IFileSystem.ReadAllText method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Reads all text from the file at the specified path.
 
 ```csharp
-public string ReadAllText(string path, Encoding encoding = null)
+public string ReadAllText(string path, Encoding? encoding = null)
 ```
 
 | parameter | description |

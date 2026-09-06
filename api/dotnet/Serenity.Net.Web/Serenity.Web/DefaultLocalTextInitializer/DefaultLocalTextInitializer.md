@@ -1,5 +1,4 @@
 # DefaultLocalTextInitializer constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Default ILocalTextInitializer that registers base texts and JSON texts from the `App_Data/texts` folder.
 
@@ -16,6 +15,6 @@ public DefaultLocalTextInitializer(ITypeSource typeSource, IRowTypeRegistry rowT
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
-* interface [IRowTypeRegistry](../Serenity.Net.Services/../../Serenity.Data/IRowTypeRegistry.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
+* interface [IRowTypeRegistry](../../../Serenity.Net.Services/Serenity.Data/IRowTypeRegistry.md)
 * class [DefaultLocalTextInitializer](../DefaultLocalTextInitializer.md)

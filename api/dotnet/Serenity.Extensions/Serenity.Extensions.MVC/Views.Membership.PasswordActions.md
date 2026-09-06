@@ -15,4 +15,4 @@ public static class PasswordActions
 
 ## See Also
 
-* class [Membership](Views.Membership.md)
+* class [Membership](./Views.Membership.md)

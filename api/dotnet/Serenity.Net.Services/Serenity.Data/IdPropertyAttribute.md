@@ -12,7 +12,7 @@ public class IdPropertyAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [IdPropertyAttribute](IdPropertyAttribute/IdPropertyAttribute.md)() | Initializes a new instance of the [`IdPropertyAttribute`](IdPropertyAttribute.md) class. |
+| [IdPropertyAttribute](IdPropertyAttribute/IdPropertyAttribute.md)() | Initializes a new instance of the [`IdPropertyAttribute`](./IdPropertyAttribute.md) class. |
 
 ## See Also
 

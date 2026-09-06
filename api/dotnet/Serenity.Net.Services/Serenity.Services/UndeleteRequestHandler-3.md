@@ -30,7 +30,7 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](UndeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](UndeleteRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAudit](UndeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteUndelete](UndeleteRequestHandler-3/ExecuteUndelete.md)() | Executes the actual SQL undelete/update operation |
 | virtual [InvokeUndeleteAction](UndeleteRequestHandler-3/InvokeUndeleteAction.md)(…) | Invokes the passed undelete action method |
@@ -43,14 +43,11 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 
 ## See Also
 
-* class [UndeleteRequestHandlerBase&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](UndeleteRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/UndeleteRequestHandler-3.TRow.md)
-* class [TUndeleteRequest](../Serenity.Net.Services/UndeleteRequestHandler-3.TUndeleteRequest.md)
-* class [TUndeleteResponse](../Serenity.Net.Services/UndeleteRequestHandler-3.TUndeleteResponse.md)
-* interface [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](IUndeleteHandler-3.md)
-* interface [IUndeleteRequestProcessor](IUndeleteRequestProcessor.md)
+* class [UndeleteRequestHandlerBase&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./UndeleteRequestHandlerBase-3.md)
+* interface [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./IUndeleteHandler-3.md)
+* interface [IUndeleteRequestProcessor](./IUndeleteRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [UndeleteRequest](UndeleteRequest.md)
-* class [UndeleteResponse](UndeleteResponse.md)
+* class [UndeleteRequest](./UndeleteRequest.md)
+* class [UndeleteResponse](./UndeleteResponse.md)
 * **Source:** *[UndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/UndeleteRequestHandler.cs)*

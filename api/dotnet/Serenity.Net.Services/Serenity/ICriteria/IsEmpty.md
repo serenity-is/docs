@@ -1,5 +1,4 @@
 # ICriteria.IsEmpty property
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether this criteria instance is empty.
 

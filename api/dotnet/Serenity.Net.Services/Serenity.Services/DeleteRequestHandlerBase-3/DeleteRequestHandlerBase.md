@@ -1,5 +1,4 @@
 # DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt; constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Abstract base class for delete request handlers that share state and mode neutral helper methods between synchronous and asynchronous delete request handlers.
 

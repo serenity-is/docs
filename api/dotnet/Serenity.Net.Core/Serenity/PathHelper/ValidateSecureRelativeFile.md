@@ -1,10 +1,9 @@
 # PathHelper.ValidateSecureRelativeFile method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Validates if the filename is a secure relative file.
 
 ```csharp
-public static void ValidateSecureRelativeFile(string filename)
+public static void ValidateSecureRelativeFile(string? filename)
 ```
 
 | parameter | description |

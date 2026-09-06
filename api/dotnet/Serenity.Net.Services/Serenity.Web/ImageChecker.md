@@ -23,7 +23,7 @@ public class ImageChecker
 | [Width](ImageChecker/Width.md) { get; } | Gets the width of the validated image. |
 | [CheckSizeConstraints](ImageChecker/CheckSizeConstraints.md)(…) | Checks an image width and height against size constraints |
 | [CheckStream](ImageChecker/CheckStream.md)(…) | Checks if the given image if it is a valid or not. If so, controls its compliance to constraints |
-| [FormatErrorMessage](ImageChecker/FormatErrorMessage.md)(…) | Formats an [`ImageCheckResult`](ImageCheckResult.md) error message |
+| [FormatErrorMessage](ImageChecker/FormatErrorMessage.md)(…) | Formats an [`ImageCheckResult`](./ImageCheckResult.md) error message |
 
 ## See Also
 

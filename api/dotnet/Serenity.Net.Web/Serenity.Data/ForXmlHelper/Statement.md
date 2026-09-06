@@ -1,5 +1,4 @@
 # ForXmlHelper.Statement field
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 The `FOR XML RAW` statement.
 

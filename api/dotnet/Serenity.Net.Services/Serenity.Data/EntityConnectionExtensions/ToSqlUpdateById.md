@@ -1,5 +1,4 @@
 # EntityConnectionExtensions.ToSqlUpdateById method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the entity to an SqlUpdate object by ID setting only the assigned fields.
 

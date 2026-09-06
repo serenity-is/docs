@@ -1,5 +1,4 @@
 # IDynamicScriptManager.IfNotRegistered method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Executes the callback if a script with the name is not already registered.
 
@@ -14,5 +13,5 @@ public void IfNotRegistered(string name, Func<IDynamicScript> callback)
 
 ## See Also
 
-* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
+* interface [IDynamicScript](../../../Serenity.Net.Core/Serenity.Web/IDynamicScript.md)
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)

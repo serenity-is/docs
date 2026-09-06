@@ -1,11 +1,10 @@
 # ListRequestHandlerAsync&lt;TRow,TListRequest,TListResponse&gt;.ApplyFiltersAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies all the filters including Request.EqualityFilter, Request.Criteria and Request.IncludeDeleted to the query.
 
 ```csharp
 protected virtual Task ApplyFiltersAsync(SqlQuery query, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

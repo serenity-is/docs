@@ -1,11 +1,10 @@
 # UndeleteRequestHandlerAsync&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;.InvokeUndeleteActionAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Invokes the passed undelete action method
 
 ```csharp
 protected virtual Task InvokeUndeleteActionAsync(Func<Task> action, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # LookupScript.Data.Items property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 The item list.
 
@@ -9,4 +8,4 @@ public IEnumerable Items { get; set; }
 
 ## See Also
 
-* class [Data](../LookupScript.Data.md)
+* record [Data](../LookupScript.Data.md)

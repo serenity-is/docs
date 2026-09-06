@@ -1,5 +1,4 @@
 # MembershipSettings.SaltSize property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The size of the salt used when hashing passwords.
 

@@ -1,5 +1,4 @@
 # IPropertyProcessor.Initialize method
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes this instance.
 

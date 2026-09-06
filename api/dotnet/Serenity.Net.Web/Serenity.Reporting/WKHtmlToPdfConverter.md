@@ -23,9 +23,9 @@ public class WKHtmlToPdfConverter : IWKHtmlToPdfConverter
 
 ## Remarks
 
-Initializes a new instance of the [`WKHtmlToPdfConverter`](WKHtmlToPdfConverter.md) class.
+Initializes a new instance of the [`WKHtmlToPdfConverter`](./WKHtmlToPdfConverter.md) class.
 
 ## See Also
 
-* interface [IWKHtmlToPdfConverter](../Serenity.Net.Services/IWKHtmlToPdfConverter.md)
+* interface [IWKHtmlToPdfConverter](../../Serenity.Net.Services/Serenity.Reporting/IWKHtmlToPdfConverter.md)
 * **Source:** *[WKHtmlToPdfConverter.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Reporting/WKHtmlToPdfConverter.cs)*

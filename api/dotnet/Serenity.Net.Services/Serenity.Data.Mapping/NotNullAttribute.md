@@ -12,9 +12,9 @@ public class NotNullAttribute : SetFieldFlagsAttribute
 
 | name | description |
 | --- | --- |
-| [NotNullAttribute](NotNullAttribute/NotNullAttribute.md)() | Initializes a new instance of the [`NotNullAttribute`](NotNullAttribute.md) class. |
+| [NotNullAttribute](NotNullAttribute/NotNullAttribute.md)() | Initializes a new instance of the [`NotNullAttribute`](./NotNullAttribute.md) class. |
 
 ## See Also
 
-* class [SetFieldFlagsAttribute](SetFieldFlagsAttribute.md)
+* class [SetFieldFlagsAttribute](./SetFieldFlagsAttribute.md)
 * **Source:** *[NotNullAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Mapping/NotNullAttribute.cs)*

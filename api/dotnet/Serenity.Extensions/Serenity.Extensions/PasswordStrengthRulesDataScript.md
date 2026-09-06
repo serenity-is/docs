@@ -21,6 +21,6 @@ public class PasswordStrengthRulesDataScript : DataScript<PasswordStrengthRules>
 
 ## See Also
 
-* class [DataScript&lt;TData&gt;](../Serenity.Net.Services/../Serenity.Web/DataScript-1.md)
-* class [PasswordStrengthRules](PasswordStrengthRules.md)
+* class [DataScript&lt;TData&gt;](../../Serenity.Net.Services/Serenity.Web/DataScript-1.md)
+* class [PasswordStrengthRules](./PasswordStrengthRules.md)
 * **Source:** *[PasswordStrengthRulesDataScript.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Membership/PasswordStrength/PasswordStrengthRulesDataScript.cs)*

@@ -20,7 +20,7 @@ public struct Parameter
 
 ## Remarks
 
-Initializes a new instance of the [`Parameter`](Parameter.md) struct.
+Initializes a new instance of the [`Parameter`](./Parameter.md) struct.
 
 ## See Also
 

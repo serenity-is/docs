@@ -32,5 +32,5 @@ Creates a new instance of the class.
 
 ## See Also
 
-* interface [IUploadAVScanner](../Serenity.Net.Services/../Serenity.Web/IUploadAVScanner.md)
+* interface [IUploadAVScanner](../../Serenity.Net.Services/Serenity.Web/IUploadAVScanner.md)
 * **Source:** *[ClamAVUploadScanner.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/ClamAV/ClamAVUploadScanner.cs)*

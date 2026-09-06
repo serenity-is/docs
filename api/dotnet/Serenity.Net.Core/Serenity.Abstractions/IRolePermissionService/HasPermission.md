@@ -1,5 +1,4 @@
 # IRolePermissionService.HasPermission method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Determines whether the specified role has the given permission.
 

@@ -1,5 +1,4 @@
 # DynamicScriptServiceCollectionExtensions.AddDynamicScriptManager method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Registers the default [`IDynamicScriptManager`](../../Serenity.Web/IDynamicScriptManager.md) implementation.
 

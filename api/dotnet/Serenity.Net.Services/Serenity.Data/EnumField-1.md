@@ -16,10 +16,10 @@ public class EnumField<TEnum> : Int32Field
 
 | name | description |
 | --- | --- |
-| [EnumField](EnumField-1/EnumField.md)(…) | Initializes a new instance of the [`EnumField`](EnumField-1.md) class. |
+| [EnumField](EnumField-1/EnumField.md)(…) | Initializes a new instance of the [`EnumField`](./EnumField-1.md) class. |
 | [Item](EnumField-1/Item.md) { get; set; } | Gets or sets the value of this field with the specified row. |
 
 ## See Also
 
-* class [Int32Field](Int32Field.md)
+* class [Int32Field](./Int32Field.md)
 * **Source:** *[EnumField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/EnumField.cs)*

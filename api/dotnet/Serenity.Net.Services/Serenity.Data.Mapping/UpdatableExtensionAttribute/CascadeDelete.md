@@ -1,5 +1,4 @@
 # UpdatableExtensionAttribute.CascadeDelete property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Delete extension record if this record is deleted.
 

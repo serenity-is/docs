@@ -1,5 +1,4 @@
 # AllowHideAttribute.Value property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets a value indicating whether this [`AllowHideAttribute`](../AllowHideAttribute.md) is on.
 

@@ -1,5 +1,4 @@
 # NavigationLinkAttribute constructor (1 of 4)
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
@@ -21,7 +20,6 @@ public NavigationLinkAttribute(string path, string url, object permission, strin
 ---
 
 # NavigationLinkAttribute constructor (2 of 4)
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
@@ -44,7 +42,6 @@ public NavigationLinkAttribute(string path, Type controller, string icon = null,
 ---
 
 # NavigationLinkAttribute constructor (3 of 4)
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 
@@ -68,7 +65,6 @@ public NavigationLinkAttribute(int order, string path, string url, object permis
 ---
 
 # NavigationLinkAttribute constructor (4 of 4)
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Initializes a new instance of the [`NavigationLinkAttribute`](../NavigationLinkAttribute.md) class.
 

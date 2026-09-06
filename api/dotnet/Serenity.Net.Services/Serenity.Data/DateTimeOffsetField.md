@@ -30,9 +30,9 @@ public sealed class DateTimeOffsetField : GenericValueField<DateTimeOffset>
 
 ## Remarks
 
-Initializes a new instance of the [`DateTimeOffsetField`](DateTimeOffsetField.md) class.
+Initializes a new instance of the [`DateTimeOffsetField`](./DateTimeOffsetField.md) class.
 
 ## See Also
 
-* class [GenericValueField&lt;TValue&gt;](GenericValueField-1.md)
+* class [GenericValueField&lt;TValue&gt;](./GenericValueField-1.md)
 * **Source:** *[DateTimeOffsetField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/DateTimeOffsetField.cs)*

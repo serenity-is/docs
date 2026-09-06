@@ -1,5 +1,4 @@
 # DefaultBehaviorFactory constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Default [`IBehaviorFactory`](../IBehaviorFactory.md) implementation.
 

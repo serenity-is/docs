@@ -1,5 +1,4 @@
 # DynamicScriptMiddleware constructor
-**namespace:** *[Serenity.Web.Middleware](../../README.md#serenity.web.middleware-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Dynamic script middleware that handles `/DynJS.axd/` and `/DynamicData/` paths.
 

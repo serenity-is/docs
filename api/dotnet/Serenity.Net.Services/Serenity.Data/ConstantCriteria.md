@@ -11,9 +11,9 @@ public class ConstantCriteria : Criteria
 
 | name | description |
 | --- | --- |
-| [ConstantCriteria](ConstantCriteria/ConstantCriteria.md)(…) | Initializes a new instance of the [`ConstantCriteria`](ConstantCriteria.md) class. (6 constructors) |
+| [ConstantCriteria](ConstantCriteria/ConstantCriteria.md)(…) | Initializes a new instance of the [`ConstantCriteria`](./ConstantCriteria.md) class. (6 constructors) |
 
 ## See Also
 
-* class [Criteria](Criteria.md)
+* class [Criteria](./Criteria.md)
 * **Source:** *[ConstantCriteria.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Criteria/ConstantCriteria.cs)*

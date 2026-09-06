@@ -1,11 +1,10 @@
 # EntityConnectionExtensions.ExistsAsync&lt;TRow&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously checks if record matching specified criteria exists.
 
 ```csharp
 public static Task<bool> ExistsAsync<TRow>(this IDbConnection connection, ICriteria where, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
     where TRow : class, IRow, new()
 ```
 

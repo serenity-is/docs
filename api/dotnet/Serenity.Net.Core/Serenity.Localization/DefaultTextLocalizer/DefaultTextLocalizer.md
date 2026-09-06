@@ -1,5 +1,4 @@
 # DefaultTextLocalizer constructor
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 An [`ITextLocalizer`](../../Serenity/ITextLocalizer.md) implementation that resolves translations from an [`ILocalTextRegistry`](../../Serenity.Abstractions/ILocalTextRegistry.md) using the current UI culture.
 

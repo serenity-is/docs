@@ -1,7 +1,7 @@
 # IWrappedBehavior interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for behaviors that wrap another behavior to adapt it between synchronous and asynchronous variants. Exposes the inner behavior so framework code can check whether it implements additional interfaces (e.g. [`ISaveExceptionBehavior`](ISaveExceptionBehavior.md)).
+Interface for behaviors that wrap another behavior to adapt it between synchronous and asynchronous variants. Exposes the inner behavior so framework code can check whether it implements additional interfaces (e.g. [`ISaveExceptionBehavior`](./ISaveExceptionBehavior.md)).
 
 ```csharp
 public interface IWrappedBehavior

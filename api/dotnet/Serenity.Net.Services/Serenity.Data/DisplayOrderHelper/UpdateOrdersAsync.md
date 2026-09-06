@@ -1,13 +1,11 @@
 # DisplayOrderHelper.UpdateOrdersAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously updates display order values in a table
 
 ```csharp
 public static Task<bool> UpdateOrdersAsync(IDbConnection connection, 
     List<OrderRecord> orderRecords, string tableName, Field keyField, Field orderField, 
-    bool hasUniqueConstraint = false, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    bool hasUniqueConstraint = false, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

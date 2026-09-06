@@ -1,5 +1,4 @@
 # UniqueConstraintAttribute.Name property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the constraint name. Not used at the moment.
 

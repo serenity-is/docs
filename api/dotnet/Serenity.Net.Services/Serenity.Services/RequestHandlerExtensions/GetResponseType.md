@@ -1,5 +1,4 @@
 # RequestHandlerExtensions.GetResponseType method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the response type for the handler instance
 
@@ -13,5 +12,5 @@ public static Type GetResponseType(this IRequestHandler handler)
 
 ## See Also
 
-* interface [IRequestHandler](../Serenity.Net.Core/../IRequestHandler.md)
+* interface [IRequestHandler](../../../Serenity.Net.Core/Serenity.Services/IRequestHandler.md)
 * class [RequestHandlerExtensions](../RequestHandlerExtensions.md)

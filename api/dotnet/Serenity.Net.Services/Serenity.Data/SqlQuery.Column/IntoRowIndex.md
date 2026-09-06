@@ -1,5 +1,4 @@
 # SqlQuery.Column.IntoRowIndex field
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Used by entity system when more than one entity is used as a target
 

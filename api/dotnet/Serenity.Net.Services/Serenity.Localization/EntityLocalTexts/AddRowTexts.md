@@ -1,5 +1,4 @@
 # EntityLocalTexts.AddRowTexts method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds the row texts.
 
@@ -22,6 +21,6 @@ public static void AddRowTexts(this ILocalTextRegistry registry, IEnumerable<IRo
 
 ## See Also
 
-* interface [ILocalTextRegistry](../Serenity.Net.Core/../../Serenity.Abstractions/ILocalTextRegistry.md)
+* interface [ILocalTextRegistry](../../../Serenity.Net.Core/Serenity.Abstractions/ILocalTextRegistry.md)
 * interface [IRow](../../Serenity.Data/IRow.md)
 * class [EntityLocalTexts](../EntityLocalTexts.md)

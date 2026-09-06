@@ -1,5 +1,4 @@
 # WrappedConnection.CreateDbCommand method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates and returns a Command object associated with the connection.
 

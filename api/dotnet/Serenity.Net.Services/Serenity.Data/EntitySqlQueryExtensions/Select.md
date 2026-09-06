@@ -1,5 +1,4 @@
 # EntitySqlQueryExtensions.Select method (1 of 5)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field's expression to the SELECT statement with its own column name. If a join alias is referenced in the field expression, and the join is defined in the field's entity class, it is automatically included in the query. The field is marked as a target at the current index for future loading from a data reader.
 
@@ -25,7 +24,6 @@ The query itself.
 ---
 
 # EntitySqlQueryExtensions.Select method (2 of 5)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 For each field in the fields array, adds the expression of the field to the SELECT statement with a column name of its name. If a join alias is referenced in the field expression, and the join is defined in the field's entity class, it is automatically included in the query. The fields are marked as a target at the current index for future loading from a data reader.
 
@@ -57,7 +55,6 @@ The query itself.
 ---
 
 # EntitySqlQueryExtensions.Select method (3 of 5)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field of a given table alias to the SELECT statement.
 
@@ -95,7 +92,6 @@ No column name is set for the selected field. Also the field is not set as a tar
 ---
 
 # EntitySqlQueryExtensions.Select method (4 of 5)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field's expression to the SELECT statement with a given column name. If a join alias is referenced in the field expression, and the join is defined in the field's entity class, it is automatically included in the query. The field is marked as a target at the current index for future loading from a data reader.
 
@@ -128,7 +124,6 @@ The query itself.
 ---
 
 # EntitySqlQueryExtensions.Select method (5 of 5)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field of a given table alias to the SELECT statement.
 

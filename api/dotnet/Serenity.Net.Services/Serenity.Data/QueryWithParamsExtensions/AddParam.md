@@ -1,5 +1,4 @@
 # QueryWithParamsExtensions.AddParam&lt;T&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds the parameter.
 
@@ -21,6 +20,5 @@ The automatically named parameter that was added.
 ## See Also
 
 * struct [Parameter](../Parameter.md)
-* class [T](../Serenity.Net.Services/../QueryWithParamsExtensions.T.md)
 * interface [IQueryWithParams](../IQueryWithParams.md)
 * class [QueryWithParamsExtensions](../QueryWithParamsExtensions.md)

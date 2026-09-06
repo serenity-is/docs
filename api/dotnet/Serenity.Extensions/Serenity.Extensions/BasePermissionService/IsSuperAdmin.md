@@ -1,5 +1,4 @@
 # BasePermissionService.IsSuperAdmin method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets whether the specified user is a super admin.
 

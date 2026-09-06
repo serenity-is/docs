@@ -1,5 +1,4 @@
 # TranslateTextResponse.Translations property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The list of translated texts.
 

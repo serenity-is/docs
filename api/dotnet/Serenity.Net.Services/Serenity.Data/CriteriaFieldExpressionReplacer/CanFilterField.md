@@ -1,5 +1,4 @@
 # CriteriaFieldExpressionReplacer.CanFilterField method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Virtual method to check if a Field can be filtered.
 

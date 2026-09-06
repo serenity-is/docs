@@ -1,5 +1,4 @@
 # CodeWriter.IndentedLine method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Appends current indent, the specified string, and a new line.
 

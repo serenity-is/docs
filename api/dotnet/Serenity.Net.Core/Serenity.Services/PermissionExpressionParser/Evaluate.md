@@ -1,7 +1,6 @@
 # PermissionExpressionParser.Evaluate method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Evaluates tokens in Reverse Polish Notation produced by [`ShuntingYard`](ShuntingYard.md).
+Evaluates tokens in Reverse Polish Notation produced by [`ShuntingYard`](./ShuntingYard.md).
 
 ```csharp
 public static bool Evaluate(IEnumerable<string> rpnTokens, Func<string, bool> hasPermission)

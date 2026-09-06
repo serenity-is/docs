@@ -1,5 +1,4 @@
 # SiteMembershipProvider.ComputeSHA512 method
-**namespace:** *[Serenity.Web.Providers](../../README.md#serenity.web.providers-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Computes the SHA512 hash of the given string.
 

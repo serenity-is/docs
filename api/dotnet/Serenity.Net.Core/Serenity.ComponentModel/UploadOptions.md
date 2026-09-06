@@ -49,8 +49,8 @@ public class UploadOptions : IUploadFileConstraints, IUploadFileOptions, IUpload
 
 ## See Also
 
-* interface [IUploadFileConstraints](IUploadFileConstraints.md)
-* interface [IUploadFileOptions](IUploadFileOptions.md)
-* interface [IUploadImageConstraints](IUploadImageConstraints.md)
-* interface [IUploadImageOptions](IUploadImageOptions.md)
+* interface [IUploadFileConstraints](./IUploadFileConstraints.md)
+* interface [IUploadFileOptions](./IUploadFileOptions.md)
+* interface [IUploadImageConstraints](./IUploadImageConstraints.md)
+* interface [IUploadImageOptions](./IUploadImageOptions.md)
 * **Source:** *[UploadOptions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Upload/UploadOptions.cs)*

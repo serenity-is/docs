@@ -1,5 +1,4 @@
 # DataValidation.AutoTrim method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Automatically trims a string field value based on its TrimToEmpty and Trim flags.
 

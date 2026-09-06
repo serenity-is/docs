@@ -1,5 +1,4 @@
 # MigrationUtils.EnsureDatabase method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Ensures the database for the specified connection key exists, creating it if necessary.
 
@@ -16,5 +15,5 @@ public static void EnsureDatabase(string databaseKey, string contentRoot,
 
 ## See Also
 
-* interface [ISqlConnections](../Serenity.Net.Services/../../Serenity.Data/ISqlConnections.md)
+* interface [ISqlConnections](../../../Serenity.Net.Services/Serenity.Data/ISqlConnections.md)
 * class [MigrationUtils](../MigrationUtils.md)

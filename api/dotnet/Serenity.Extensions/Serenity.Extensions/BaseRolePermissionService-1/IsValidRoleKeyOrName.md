@@ -1,5 +1,4 @@
 # BaseRolePermissionService&lt;TRolePermissionRow&gt;.IsValidRoleKeyOrName method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets whether the specified role is a valid role key or name. By default, a role is valid if it is not null or empty.
 

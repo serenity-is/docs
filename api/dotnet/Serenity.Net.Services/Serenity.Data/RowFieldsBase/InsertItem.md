@@ -1,5 +1,4 @@
 # RowFieldsBase.InsertItem method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Inserts an element into the Collection at the specified index.
 

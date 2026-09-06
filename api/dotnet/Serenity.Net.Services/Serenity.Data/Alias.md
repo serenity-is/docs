@@ -11,7 +11,7 @@ public class Alias : IAlias
 
 | name | description |
 | --- | --- |
-| [Alias](Alias/Alias.md)(…) | Initializes a new instance of the [`Alias`](Alias.md) class. (4 constructors) |
+| [Alias](Alias/Alias.md)(…) | Initializes a new instance of the [`Alias`](./Alias.md) class. (4 constructors) |
 | static readonly [T0](Alias/T0.md) | Static t0 alias. |
 | static readonly [T1](Alias/T1.md) | Static t1 alias. |
 | static readonly [T2](Alias/T2.md) | Static t2 alias. |
@@ -31,5 +31,5 @@ public class Alias : IAlias
 
 ## See Also
 
-* interface [IAlias](IAlias.md)
+* interface [IAlias](./IAlias.md)
 * **Source:** *[Alias.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Join/Alias.cs)*

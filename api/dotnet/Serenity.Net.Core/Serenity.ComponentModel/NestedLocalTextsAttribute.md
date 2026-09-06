@@ -12,7 +12,7 @@ public sealed class NestedLocalTextsAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [NestedLocalTextsAttribute](NestedLocalTextsAttribute/NestedLocalTextsAttribute.md)() | Initializes a new instance of the [`NestedLocalTextsAttribute`](NestedLocalTextsAttribute.md) class. |
+| [NestedLocalTextsAttribute](NestedLocalTextsAttribute/NestedLocalTextsAttribute.md)() | Initializes a new instance of the [`NestedLocalTextsAttribute`](./NestedLocalTextsAttribute.md) class. |
 | [LanguageID](NestedLocalTextsAttribute/LanguageID.md) { get; set; } | Gets or sets the optional language identifier. |
 | [Prefix](NestedLocalTextsAttribute/Prefix.md) { get; set; } | Gets or sets the optional local text prefix. |
 

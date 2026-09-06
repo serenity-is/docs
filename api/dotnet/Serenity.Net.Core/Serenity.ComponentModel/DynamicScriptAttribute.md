@@ -28,7 +28,7 @@ public abstract class DynamicScriptAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`DynamicScriptAttribute`](DynamicScriptAttribute.md) class.
+Initializes a new instance of the [`DynamicScriptAttribute`](./DynamicScriptAttribute.md) class.
 
 ## See Also
 

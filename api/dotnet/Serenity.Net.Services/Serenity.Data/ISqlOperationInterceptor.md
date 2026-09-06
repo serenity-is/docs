@@ -11,12 +11,12 @@ public interface ISqlOperationInterceptor
 
 | name | description |
 | --- | --- |
-| [ExecuteNonQuery](ISqlOperationInterceptor/ExecuteNonQuery.md)(…) | Intercepts the [`SqlHelper`](SqlHelper.md)`Execute` method (SqlDelete/SqlUpdate/SqlInsert). |
-| [ExecuteNonQueryAsync](ISqlOperationInterceptor/ExecuteNonQueryAsync.md)(…) | Intercepts the async [`SqlHelper`](SqlHelper.md)`Execute` methods (SqlDelete/SqlUpdate/SqlInsert). The default implementation forwards to [`ExecuteNonQuery`](ISqlOperationInterceptor/ExecuteNonQuery.md). |
-| [ExecuteReader](ISqlOperationInterceptor/ExecuteReader.md)(…) | Intercepts the [`SqlHelper`](SqlHelper.md)`ExecuteReader` method. |
-| [ExecuteReaderAsync](ISqlOperationInterceptor/ExecuteReaderAsync.md)(…) | Intercepts the async [`SqlHelper`](SqlHelper.md)`ExecuteReader` methods. The default implementation forwards to [`ExecuteReader`](ISqlOperationInterceptor/ExecuteReader.md). |
-| [ExecuteScalar](ISqlOperationInterceptor/ExecuteScalar.md)(…) | Intercepts the [`SqlHelper`](SqlHelper.md)`ExecuteScalar` method. |
-| [ExecuteScalarAsync](ISqlOperationInterceptor/ExecuteScalarAsync.md)(…) | Intercepts the async [`SqlHelper`](SqlHelper.md)`ExecuteScalar` methods. The default implementation forwards to [`ExecuteScalar`](ISqlOperationInterceptor/ExecuteScalar.md). |
+| [ExecuteNonQuery](ISqlOperationInterceptor/ExecuteNonQuery.md)(…) | Intercepts the [`SqlHelper`](./SqlHelper.md)`Execute` method (SqlDelete/SqlUpdate/SqlInsert). |
+| [ExecuteNonQueryAsync](ISqlOperationInterceptor/ExecuteNonQueryAsync.md)(…) | Intercepts the async [`SqlHelper`](./SqlHelper.md)`Execute` methods (SqlDelete/SqlUpdate/SqlInsert). The default implementation forwards to [`ExecuteNonQuery`](./ISqlOperationInterceptor/ExecuteNonQuery.md). |
+| [ExecuteReader](ISqlOperationInterceptor/ExecuteReader.md)(…) | Intercepts the [`SqlHelper`](./SqlHelper.md)`ExecuteReader` method. |
+| [ExecuteReaderAsync](ISqlOperationInterceptor/ExecuteReaderAsync.md)(…) | Intercepts the async [`SqlHelper`](./SqlHelper.md)`ExecuteReader` methods. The default implementation forwards to [`ExecuteReader`](./ISqlOperationInterceptor/ExecuteReader.md). |
+| [ExecuteScalar](ISqlOperationInterceptor/ExecuteScalar.md)(…) | Intercepts the [`SqlHelper`](./SqlHelper.md)`ExecuteScalar` method. |
+| [ExecuteScalarAsync](ISqlOperationInterceptor/ExecuteScalarAsync.md)(…) | Intercepts the async [`SqlHelper`](./SqlHelper.md)`ExecuteScalar` methods. The default implementation forwards to [`ExecuteScalar`](./ISqlOperationInterceptor/ExecuteScalar.md). |
 
 ## See Also
 

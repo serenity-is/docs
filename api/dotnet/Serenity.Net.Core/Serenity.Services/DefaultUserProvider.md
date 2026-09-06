@@ -36,7 +36,7 @@ public class DefaultUserProvider : IUserProvider
 
 ## Remarks
 
-Creates a new instance of the [`DefaultUserProvider`](DefaultUserProvider.md) class.
+Creates a new instance of the [`DefaultUserProvider`](./DefaultUserProvider.md) class.
 
 ## See Also
 

@@ -12,7 +12,7 @@ public class ObjectJsonConverter : JsonConverter<object>
 | name | description |
 | --- | --- |
 | [ObjectJsonConverter](ObjectJsonConverter/ObjectJsonConverter.md)() | The default constructor. |
-| static readonly [Instance](ObjectJsonConverter/Instance.md) | The default instance of the [`ObjectJsonConverter`](ObjectJsonConverter.md). |
+| static readonly [Instance](ObjectJsonConverter/Instance.md) | The default instance of the [`ObjectJsonConverter`](./ObjectJsonConverter.md). |
 | override [Read](ObjectJsonConverter/Read.md)(…) |  |
 | override [Write](ObjectJsonConverter/Write.md)(…) |  |
 

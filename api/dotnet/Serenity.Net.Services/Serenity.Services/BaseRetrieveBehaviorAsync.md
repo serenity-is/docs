@@ -1,7 +1,7 @@
 # BaseRetrieveBehaviorAsync class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base class for behaviors implementing [`IRetrieveBehaviorAsync`](IRetrieveBehaviorAsync.md)
+Base class for behaviors implementing [`IRetrieveBehaviorAsync`](./IRetrieveBehaviorAsync.md)
 
 ```csharp
 public abstract class BaseRetrieveBehaviorAsync : IRetrieveBehaviorAsync
@@ -25,5 +25,5 @@ public abstract class BaseRetrieveBehaviorAsync : IRetrieveBehaviorAsync
 
 ## See Also
 
-* interface [IRetrieveBehaviorAsync](IRetrieveBehaviorAsync.md)
+* interface [IRetrieveBehaviorAsync](./IRetrieveBehaviorAsync.md)
 * **Source:** *[BaseRetrieveBehaviorAsync.cs](https://github.com/serenity-is/Serenity/blob/aa5433b74475d7a249a3550344ee8ccea8e5a8eb/src/services/RequestHandlers/Retrieve/BaseRetrieveBehaviorAsync.cs)*

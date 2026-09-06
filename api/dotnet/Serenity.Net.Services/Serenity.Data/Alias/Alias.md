@@ -1,5 +1,4 @@
 # Alias constructor (1 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Alias`](../Alias.md) class.
 
@@ -18,7 +17,6 @@ public Alias(int alias)
 ---
 
 # Alias constructor (2 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Alias`](../Alias.md) class.
 
@@ -43,7 +41,6 @@ public Alias(string alias)
 ---
 
 # Alias constructor (3 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Alias`](../Alias.md) class.
 
@@ -63,7 +60,6 @@ public Alias(string table, int alias)
 ---
 
 # Alias constructor (4 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Alias`](../Alias.md) class.
 

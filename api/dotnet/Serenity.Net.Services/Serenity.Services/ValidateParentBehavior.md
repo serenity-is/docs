@@ -32,6 +32,6 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [BaseSaveBehaviorAsync](BaseSaveBehaviorAsync.md)
-* interface [ISaveBehaviorSync](ISaveBehaviorSync.md)
+* class [BaseSaveBehaviorAsync](./BaseSaveBehaviorAsync.md)
+* interface [ISaveBehaviorSync](./ISaveBehaviorSync.md)
 * **Source:** *[ValidateParentAttribute.cs](https://github.com/serenity-is/Serenity/blob/147065ea49a71f84f10ea1a8b68fc4a9bb4179f0/src/services/RequestHandlers/IntegratedFeatures/Validation/ValidateParentAttribute.cs)*

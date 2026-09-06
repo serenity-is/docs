@@ -1,5 +1,4 @@
 # SqlQuery.InnerJoin method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds an inner join to the query.
 

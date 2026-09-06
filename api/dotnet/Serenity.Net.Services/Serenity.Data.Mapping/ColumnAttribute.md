@@ -12,7 +12,7 @@ public class ColumnAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [ColumnAttribute](ColumnAttribute/ColumnAttribute.md)(…) | Initializes a new instance of the [`ColumnAttribute`](ColumnAttribute.md) class. |
+| [ColumnAttribute](ColumnAttribute/ColumnAttribute.md)(…) | Initializes a new instance of the [`ColumnAttribute`](./ColumnAttribute.md) class. |
 | [Name](ColumnAttribute/Name.md) { get; } | Gets the name. |
 
 ## See Also

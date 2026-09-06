@@ -1,5 +1,4 @@
 # BaseRequestHandler.Cache property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the cache from the request context.
 
@@ -9,5 +8,5 @@ protected ITwoLevelCache Cache { get; }
 
 ## See Also
 
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
 * class [BaseRequestHandler](../BaseRequestHandler.md)

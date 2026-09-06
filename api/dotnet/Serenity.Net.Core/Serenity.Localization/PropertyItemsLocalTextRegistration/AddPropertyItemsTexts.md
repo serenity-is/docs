@@ -1,5 +1,4 @@
 # PropertyItemsLocalTextRegistration.AddPropertyItemsTexts method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds local text translations defined implicitly by DisplayNameAttribute, [`TabAttribute`](../../Serenity.ComponentModel/TabAttribute.md), [`PlaceholderAttribute`](../../Serenity.ComponentModel/PlaceholderAttribute.md), [`HintAttribute`](../../Serenity.ComponentModel/HintAttribute.md), etc. attributes used in Column/Form definitions.
 

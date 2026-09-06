@@ -1,5 +1,4 @@
 # ExcelContentResult.Create method (1 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates a FileContentResult containing the passed data.
 
@@ -22,7 +21,6 @@ A FileContentResult.
 ---
 
 # ExcelContentResult.Create method (2 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates a FileContentResult containing the passed data and a download name.
 

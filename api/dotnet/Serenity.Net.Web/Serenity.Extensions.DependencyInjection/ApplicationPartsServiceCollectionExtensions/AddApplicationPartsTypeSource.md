@@ -1,5 +1,4 @@
 # ApplicationPartsServiceCollectionExtensions.AddApplicationPartsTypeSource method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds an application part type source to the service collection. Note that this also calls `AddMvcCore()` to get the part manager if it is not provided and not found in the collection.
 
@@ -23,5 +22,5 @@ The created [`ApplicationPartsTypeSource`](../../Serenity.Web/ApplicationPartsTy
 ## See Also
 
 * class [ApplicationPartsTypeSource](../../Serenity.Web/ApplicationPartsTypeSource.md)
-* interface [IFeatureToggles](../Serenity.Net.Core/../../Serenity.Abstractions/IFeatureToggles.md)
+* interface [IFeatureToggles](../../../Serenity.Net.Core/Serenity.Abstractions/IFeatureToggles.md)
 * class [ApplicationPartsServiceCollectionExtensions](../ApplicationPartsServiceCollectionExtensions.md)

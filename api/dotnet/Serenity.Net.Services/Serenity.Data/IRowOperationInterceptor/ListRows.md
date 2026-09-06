@@ -1,5 +1,4 @@
 # IRowOperationInterceptor.ListRows method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Intercepts EntityConnectionExtensions.List and Count methods.
 

@@ -1,5 +1,4 @@
 # HtmlImportMapExtensions.RenderImportMap method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Renders an HTML import map script element based on the current view's import map configuration.
 

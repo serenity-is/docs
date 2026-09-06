@@ -42,7 +42,7 @@ public abstract class BasePermissionService<TUserPermissionRow, TUserRoleRow> :
 
 ## See Also
 
-* class [BasePermissionService](BasePermissionService.md)
+* class [BasePermissionService](./BasePermissionService.md)
 * interface [IUserPermissionRow](../Serenity.Data/IUserPermissionRow.md)
 * interface [IUserRoleRow](../Serenity.Data/IUserRoleRow.md)
 * **Source:** *[BasePermissionServiceT.cs](https://github.com/serenity-is/Serenity/blob/15879eaa3751e0f78d3225a48cee8aaf7c1259a1/common-features/src/extensions/Modules/Authorization/BasePermissionServiceT.cs)*

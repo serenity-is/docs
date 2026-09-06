@@ -1,5 +1,4 @@
 # DataReportExcelRenderer.Render method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Renders the specified data report to Excel bytes.
 
@@ -17,5 +16,5 @@ The generated Excel file bytes.
 
 ## See Also
 
-* interface [IDataOnlyReport](../Serenity.Net.Services/../IDataOnlyReport.md)
+* interface [IDataOnlyReport](../../../Serenity.Net.Services/Serenity.Reporting/IDataOnlyReport.md)
 * class [DataReportExcelRenderer](../DataReportExcelRenderer.md)

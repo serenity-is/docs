@@ -1,5 +1,4 @@
 # BaseUserRetrieveService&lt;TRow&gt;.LoadByCriteria method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Loads a user from the database by the specified criteria.
 
@@ -14,6 +13,6 @@ protected virtual IUserDefinition LoadByCriteria(IDbConnection connection, BaseC
 
 ## See Also
 
-* interface [IUserDefinition](../Serenity.Net.Core/../../Serenity/IUserDefinition.md)
-* class [BaseCriteria](../Serenity.Net.Services/../../Serenity.Data/BaseCriteria.md)
+* interface [IUserDefinition](../../../Serenity.Net.Core/Serenity/IUserDefinition.md)
+* class [BaseCriteria](../../../Serenity.Net.Services/Serenity.Data/BaseCriteria.md)
 * class [BaseUserRetrieveService&lt;TRow&gt;](../BaseUserRetrieveService-1.md)

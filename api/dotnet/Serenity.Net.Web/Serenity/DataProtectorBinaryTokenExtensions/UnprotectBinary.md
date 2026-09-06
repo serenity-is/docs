@@ -1,5 +1,4 @@
 # DataProtectorBinaryTokenExtensions.UnprotectBinary method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Decrypts the given token in base64 URL encoded format and returns a binary reader over the decrypted data.
 

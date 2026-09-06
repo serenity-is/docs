@@ -11,7 +11,7 @@ public class BinaryCriteria : BaseCriteria
 
 | name | description |
 | --- | --- |
-| [BinaryCriteria](BinaryCriteria/BinaryCriteria.md)(…) | Initializes a new instance of the [`BinaryCriteria`](BinaryCriteria.md) class. |
+| [BinaryCriteria](BinaryCriteria/BinaryCriteria.md)(…) | Initializes a new instance of the [`BinaryCriteria`](./BinaryCriteria.md) class. |
 | [LeftOperand](BinaryCriteria/LeftOperand.md) { get; } | Gets the left operand. |
 | [Operator](BinaryCriteria/Operator.md) { get; } | Gets the operator. |
 | [RightOperand](BinaryCriteria/RightOperand.md) { get; } | Gets the right operand. |
@@ -19,5 +19,5 @@ public class BinaryCriteria : BaseCriteria
 
 ## See Also
 
-* class [BaseCriteria](BaseCriteria.md)
+* class [BaseCriteria](./BaseCriteria.md)
 * **Source:** *[BinaryCriteria.cs](https://github.com/serenity-is/Serenity/blob/9dd7db586970bccd1b22a6b4d0ef9892b529b61d/src/services/Data/Criteria/BinaryCriteria.cs)*

@@ -58,14 +58,14 @@ public abstract class BaseUploadEditorAttribute : CustomEditorAttribute, IUpload
 
 ## Remarks
 
-Initializes a new instance of the [`BaseUploadEditorAttribute`](BaseUploadEditorAttribute.md) class.
+Initializes a new instance of the [`BaseUploadEditorAttribute`](./BaseUploadEditorAttribute.md) class.
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
-* interface [IUploadEditor](IUploadEditor.md)
-* interface [IUploadFileConstraints](IUploadFileConstraints.md)
-* interface [IUploadFileOptions](IUploadFileOptions.md)
-* interface [IUploadImageConstraints](IUploadImageConstraints.md)
-* interface [IUploadImageOptions](IUploadImageOptions.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
+* interface [IUploadEditor](./IUploadEditor.md)
+* interface [IUploadFileConstraints](./IUploadFileConstraints.md)
+* interface [IUploadFileOptions](./IUploadFileOptions.md)
+* interface [IUploadImageConstraints](./IUploadImageConstraints.md)
+* interface [IUploadImageOptions](./IUploadImageOptions.md)
 * **Source:** *[BaseUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Upload/BaseUploadEditorAttribute.cs)*

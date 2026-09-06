@@ -1,5 +1,4 @@
 # LinkingSetRelationAttribute constructor
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies a linking set relation (1-N relation of ID values, like a check list.)
 

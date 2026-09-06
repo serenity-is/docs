@@ -16,5 +16,5 @@ public class DeleteResponse : ServiceResponse
 
 ## See Also
 
-* class [ServiceResponse](ServiceResponse.md)
+* class [ServiceResponse](./ServiceResponse.md)
 * **Source:** *[DeleteResponse.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Models/DeleteResponse.cs)*

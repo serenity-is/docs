@@ -1,5 +1,4 @@
 # StreamField.IndexCompare method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Compares the field values for two rows for an ascending index sort.
 

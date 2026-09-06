@@ -1,5 +1,4 @@
 # DefaultUserClaimCreator.AddClaims method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds claims to the specified identity for the given user definition.
 

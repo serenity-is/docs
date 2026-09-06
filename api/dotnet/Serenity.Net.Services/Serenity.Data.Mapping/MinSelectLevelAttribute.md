@@ -21,7 +21,7 @@ public class MinSelectLevelAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`MinSelectLevelAttribute`](MinSelectLevelAttribute.md) class.
+Initializes a new instance of the [`MinSelectLevelAttribute`](./MinSelectLevelAttribute.md) class.
 
 ## See Also
 

@@ -12,15 +12,15 @@ public class JsonRequestAttribute : ActionFilterAttribute
 
 | name | description |
 | --- | --- |
-| [JsonRequestAttribute](JsonRequestAttribute/JsonRequestAttribute.md)() | Initializes a new instance of the [`JsonRequestAttribute`](JsonRequestAttribute.md) class. |
+| [JsonRequestAttribute](JsonRequestAttribute/JsonRequestAttribute.md)() | Initializes a new instance of the [`JsonRequestAttribute`](./JsonRequestAttribute.md) class. |
 | [AllowForm](JsonRequestAttribute/AllowForm.md) { get; set; } | Gets or sets whether to allow getting the JSON body from the posted form. |
 | [AllowGet](JsonRequestAttribute/AllowGet.md) { get; set; } | Gets or sets whether to allow this filter for GET requests. |
 | [AllowQuery](JsonRequestAttribute/AllowQuery.md) { get; set; } | Gets or sets whether to allow getting the JSON body from the query string. |
 | [ParamName](JsonRequestAttribute/ParamName.md) { get; set; } | Gets or sets the parameter name for the `request` argument. |
 | override [OnActionExecutionAsync](JsonRequestAttribute/OnActionExecutionAsync.md)(…) |  |
-| static [DefaultAllowForm](JsonRequestAttribute/DefaultAllowForm.md) { get; set; } | The default for [`AllowForm`](JsonRequestAttribute/AllowForm.md), which is `true`. |
-| static [DefaultAllowGet](JsonRequestAttribute/DefaultAllowGet.md) { get; set; } | The default for [`AllowGet`](JsonRequestAttribute/AllowGet.md), which is `true`. |
-| static [DefaultAllowQuery](JsonRequestAttribute/DefaultAllowQuery.md) { get; set; } | The default for [`AllowQuery`](JsonRequestAttribute/AllowQuery.md), which is `true`. |
+| static [DefaultAllowForm](JsonRequestAttribute/DefaultAllowForm.md) { get; set; } | The default for [`AllowForm`](./JsonRequestAttribute/AllowForm.md), which is `true`. |
+| static [DefaultAllowGet](JsonRequestAttribute/DefaultAllowGet.md) { get; set; } | The default for [`AllowGet`](./JsonRequestAttribute/AllowGet.md), which is `true`. |
+| static [DefaultAllowQuery](JsonRequestAttribute/DefaultAllowQuery.md) { get; set; } | The default for [`AllowQuery`](./JsonRequestAttribute/AllowQuery.md), which is `true`. |
 
 ## See Also
 

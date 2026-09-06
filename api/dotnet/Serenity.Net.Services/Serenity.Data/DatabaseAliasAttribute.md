@@ -21,7 +21,7 @@ public class DatabaseAliasAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`DatabaseAliasAttribute`](DatabaseAliasAttribute.md) class.
+Initializes a new instance of the [`DatabaseAliasAttribute`](./DatabaseAliasAttribute.md) class.
 
 ## See Also
 

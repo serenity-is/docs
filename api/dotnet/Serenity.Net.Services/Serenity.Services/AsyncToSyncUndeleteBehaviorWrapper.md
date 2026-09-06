@@ -1,7 +1,7 @@
 # AsyncToSyncUndeleteBehaviorWrapper class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Wraps an [`IUndeleteBehaviorAsync`](IUndeleteBehaviorAsync.md) implementation and exposes it as an [`IUndeleteBehaviorSync`](IUndeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous undelete request handlers to run asynchronous undelete behaviors.
+Wraps an [`IUndeleteBehaviorAsync`](./IUndeleteBehaviorAsync.md) implementation and exposes it as an [`IUndeleteBehaviorSync`](./IUndeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous undelete request handlers to run asynchronous undelete behaviors.
 
 ```csharp
 public class AsyncToSyncUndeleteBehaviorWrapper : IUndeleteBehaviorSync, IWrappedBehavior
@@ -11,7 +11,7 @@ public class AsyncToSyncUndeleteBehaviorWrapper : IUndeleteBehaviorSync, IWrappe
 
 | name | description |
 | --- | --- |
-| [AsyncToSyncUndeleteBehaviorWrapper](AsyncToSyncUndeleteBehaviorWrapper/AsyncToSyncUndeleteBehaviorWrapper.md)(…) | Wraps an [`IUndeleteBehaviorAsync`](IUndeleteBehaviorAsync.md) implementation and exposes it as an [`IUndeleteBehaviorSync`](IUndeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous undelete request handlers to run asynchronous undelete behaviors. |
+| [AsyncToSyncUndeleteBehaviorWrapper](AsyncToSyncUndeleteBehaviorWrapper/AsyncToSyncUndeleteBehaviorWrapper.md)(…) | Wraps an [`IUndeleteBehaviorAsync`](./IUndeleteBehaviorAsync.md) implementation and exposes it as an [`IUndeleteBehaviorSync`](./IUndeleteBehaviorSync.md) by blocking on its async methods. This allows synchronous undelete request handlers to run asynchronous undelete behaviors. |
 | [WrappedBehavior](AsyncToSyncUndeleteBehaviorWrapper/WrappedBehavior.md) { get; } |  |
 | [OnAfterUndelete](AsyncToSyncUndeleteBehaviorWrapper/OnAfterUndelete.md)(…) |  |
 | [OnAudit](AsyncToSyncUndeleteBehaviorWrapper/OnAudit.md)(…) |  |
@@ -26,6 +26,6 @@ A behavior instance is always cached and reused across requests, so make sure yo
 
 ## See Also
 
-* interface [IUndeleteBehaviorSync](IUndeleteBehaviorSync.md)
-* interface [IWrappedBehavior](IWrappedBehavior.md)
+* interface [IUndeleteBehaviorSync](./IUndeleteBehaviorSync.md)
+* interface [IWrappedBehavior](./IWrappedBehavior.md)
 * **Source:** *[AsyncToSyncUndeleteBehaviorWrapper.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/AsyncToSyncUndeleteBehaviorWrapper.cs)*

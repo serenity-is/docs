@@ -1,5 +1,4 @@
 # BehaviorProviderExtensions.AutoWrapBehaviors&lt;TBase,TSource,TNative&gt; method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Takes a list of behaviors implementing a common marker interface *TBase*, and converts it to a list of behaviors implementing *TNative*. Behaviors already implementing *TNative* are returned as is, while behaviors implementing only the source variant *TSource* are wrapped using the *wrap* factory function.
 
@@ -30,7 +29,4 @@ List of behaviors implementing *TNative*
 
 ## See Also
 
-* class [TNative](../Serenity.Net.Services/../BehaviorProviderExtensions.TNative.md)
-* class [TBase](../Serenity.Net.Services/../BehaviorProviderExtensions.TBase.md)
-* class [TSource](../Serenity.Net.Services/../BehaviorProviderExtensions.TSource.md)
 * class [BehaviorProviderExtensions](../BehaviorProviderExtensions.md)

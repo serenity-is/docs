@@ -23,7 +23,7 @@ public class ImpersonatingUserAccessor : IImpersonator, IUserAccessor
 
 ## Remarks
 
-Initializes a new instance of the [`ImpersonatingUserAccessor`](ImpersonatingUserAccessor.md) class that wraps the specified user accessor and adds impersonation support.
+Initializes a new instance of the [`ImpersonatingUserAccessor`](./ImpersonatingUserAccessor.md) class that wraps the specified user accessor and adds impersonation support.
 
 ## See Also
 

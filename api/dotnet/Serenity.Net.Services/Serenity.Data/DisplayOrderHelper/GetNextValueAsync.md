@@ -1,11 +1,10 @@
 # DisplayOrderHelper.GetNextValueAsync method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously gets the next display order value for a table or a group of records.
 
 ```csharp
 public static Task<int> GetNextValueAsync(IDbConnection connection, IDisplayOrderRow row, 
-    ICriteria filter = null, CancellationToken cancellationToken = default(CancellationToken))
+    ICriteria filter = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -28,14 +27,12 @@ A task whose result is one more of maximum display order values of records in th
 ---
 
 # DisplayOrderHelper.GetNextValueAsync method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously gets the next display order value for a table or a group of records.
 
 ```csharp
 public static Task<int> GetNextValueAsync(IDbConnection connection, string tableName, 
-    Field orderField, ICriteria filter, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    Field orderField, ICriteria filter, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

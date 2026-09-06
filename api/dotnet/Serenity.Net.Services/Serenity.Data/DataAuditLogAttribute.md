@@ -12,7 +12,7 @@ public class DataAuditLogAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [DataAuditLogAttribute](DataAuditLogAttribute/DataAuditLogAttribute.md)() | Initializes a new instance of the [`DataAuditLogAttribute`](DataAuditLogAttribute.md) class. |
+| [DataAuditLogAttribute](DataAuditLogAttribute/DataAuditLogAttribute.md)() | Initializes a new instance of the [`DataAuditLogAttribute`](./DataAuditLogAttribute.md) class. |
 
 ## See Also
 

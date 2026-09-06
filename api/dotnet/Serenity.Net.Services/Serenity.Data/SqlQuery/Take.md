@@ -1,5 +1,4 @@
 # SqlQuery.Take method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets TAKE/TOP value.
 
@@ -18,7 +17,6 @@ TAKE/TOP value.
 ---
 
 # SqlQuery.Take method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets TAKE/TOP value. Used for paging.
 

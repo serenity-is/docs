@@ -17,7 +17,7 @@ public sealed class JsonLocalTextAssetsAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`JsonLocalTextAssetsAttribute`](JsonLocalTextAssetsAttribute.md) class.
+Initializes a new instance of the [`JsonLocalTextAssetsAttribute`](./JsonLocalTextAssetsAttribute.md) class.
 
 ## See Also
 

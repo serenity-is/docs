@@ -1,5 +1,4 @@
 # IDiskUploadFileSystem.TryDeleteOrMark method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Tries to delete or marks a file for future deletion
 

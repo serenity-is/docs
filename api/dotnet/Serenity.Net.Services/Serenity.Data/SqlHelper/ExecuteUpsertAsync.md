@@ -1,12 +1,11 @@
 # SqlHelper.ExecuteUpsertAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes an UPSERT (insert or update) query on the connection asynchronously and returns the number of affected rows. The key fields are used to determine whether an existing record is updated or a new record is inserted.
 
 ```csharp
 public static Task<int> ExecuteUpsertAsync(this SqlInsert query, IDbConnection connection, 
     IEnumerable<string> keyFields, ExpectedRows expectedRows = ExpectedRows.Ignore, 
-    ILogger logger = null, CancellationToken cancellationToken = default(CancellationToken))
+    ILogger logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # WrappedConnection.CloseAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Closes the connection to the database asynchronously.
 

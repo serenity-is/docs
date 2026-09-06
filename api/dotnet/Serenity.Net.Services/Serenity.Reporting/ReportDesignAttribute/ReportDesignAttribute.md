@@ -1,5 +1,4 @@
 # ReportDesignAttribute constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 The attribute used to determine the location of the report design, which is usually a CSHTML file.
 

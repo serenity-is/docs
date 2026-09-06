@@ -13,4 +13,4 @@ public static class Forms
 
 ## See Also
 
-* class [ExtensionsTexts](ExtensionsTexts.md)
+* class [ExtensionsTexts](./ExtensionsTexts.md)

@@ -1,10 +1,9 @@
 # PathHelper.IsSecureRelativeFile method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Checks whether the given path is a secure relative file.
 
 ```csharp
-public static bool IsSecureRelativeFile(string relativeFile)
+public static bool IsSecureRelativeFile(string? relativeFile)
 ```
 
 | parameter | description |

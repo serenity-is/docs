@@ -11,7 +11,7 @@ public class PropertyItem
 
 | name | description |
 | --- | --- |
-| [PropertyItem](PropertyItem/PropertyItem.md)() | Initializes a new instance of the [`PropertyItem`](PropertyItem.md) class. |
+| [PropertyItem](PropertyItem/PropertyItem.md)() | Initializes a new instance of the [`PropertyItem`](./PropertyItem.md) class. |
 | [Alignment](PropertyItem/Alignment.md) { get; set; } | Gets or sets the alignment of the column. Only applies to column, not editors. |
 | [AllowHide](PropertyItem/AllowHide.md) { get; set; } | Gets or sets the allow hide flag for columns. |
 | [Category](PropertyItem/Category.md) { get; set; } | Gets or sets the category of the property in form. Only meaningful for forms. |

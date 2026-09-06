@@ -1,5 +1,4 @@
 # BasePermissionService.UserHasPermission method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets if user has the specified permission directly, not via roles. Returns null if permission is not granted or denied directly.
 

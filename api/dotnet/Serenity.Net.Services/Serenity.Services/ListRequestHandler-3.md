@@ -30,7 +30,7 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](ListRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](ListRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [ApplyFilters](ListRequestHandler-3/ApplyFilters.md)(…) | Applies all the filters including Request.EqualityFilter, Request.Criteria and Request.IncludeDeleted to the query. |
 | virtual [ExecuteQuery](ListRequestHandler-3/ExecuteQuery.md)() | Executes the query sets values / entities and total count. |
 | override [MapFieldExpression](ListRequestHandler-3/MapFieldExpression.md)(…) |  |
@@ -42,13 +42,10 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> :
 
 ## See Also
 
-* class [ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;](ListRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/ListRequestHandler-3.TRow.md)
-* class [TListRequest](../Serenity.Net.Services/ListRequestHandler-3.TListRequest.md)
-* class [TListResponse](../Serenity.Net.Services/ListRequestHandler-3.TListResponse.md)
-* interface [IListHandler&lt;TRow,TListRequest,TListResponse&gt;](IListHandler-3.md)
-* interface [IListRequestProcessor](IListRequestProcessor.md)
+* class [ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;](./ListRequestHandlerBase-3.md)
+* interface [IListHandler&lt;TRow,TListRequest,TListResponse&gt;](./IListHandler-3.md)
+* interface [IListRequestProcessor](./IListRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
-* class [ListRequest](ListRequest.md)
-* class [ListResponse&lt;T&gt;](ListResponse-1.md)
+* class [ListRequest](./ListRequest.md)
+* class [ListResponse&lt;T&gt;](./ListResponse-1.md)
 * **Source:** *[ListRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/62e26a99abba7fd00c7409a1334581e3c5ccd1f4/src/services/RequestHandlers/List/ListRequestHandler.cs)*

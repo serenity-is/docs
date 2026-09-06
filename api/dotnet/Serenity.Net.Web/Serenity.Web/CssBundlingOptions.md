@@ -11,7 +11,7 @@ public class CssBundlingOptions : IOptions<CssBundlingOptions>
 
 | name | description |
 | --- | --- |
-| [CssBundlingOptions](CssBundlingOptions/CssBundlingOptions.md)() | Initializes a new instance of the [`CssBundlingOptions`](CssBundlingOptions.md) class. |
+| [CssBundlingOptions](CssBundlingOptions/CssBundlingOptions.md)() | Initializes a new instance of the [`CssBundlingOptions`](./CssBundlingOptions.md) class. |
 | [Bundles](CssBundlingOptions/Bundles.md) { get; set; } | Gets or sets the list of bundles and their contents. |
 | [Enabled](CssBundlingOptions/Enabled.md) { get; set; } | Gets or sets whether CSS bundling is enabled. |
 | [Minimize](CssBundlingOptions/Minimize.md) { get; set; } | Gets or sets the minimization flag. When `true`, CSS files are minified and their minified versions are used in bundles. |

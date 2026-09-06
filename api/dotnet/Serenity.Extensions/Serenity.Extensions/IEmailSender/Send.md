@@ -1,5 +1,4 @@
 # IEmailSender.Send method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Sends the specified email message.
 

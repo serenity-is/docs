@@ -1,11 +1,10 @@
 # ISaveBehaviorAsync.OnSetInternalFieldsAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called when internal fields in row is being set
 
 ```csharp
 public Task OnSetInternalFieldsAsync(ISaveRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

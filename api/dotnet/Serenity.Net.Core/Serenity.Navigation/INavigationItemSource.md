@@ -11,7 +11,7 @@ public interface INavigationItemSource
 
 | name | description |
 | --- | --- |
-| [GetItems](INavigationItemSource/GetItems.md)() | Gets the list of navigation item attributes ([`NavigationItemAttribute`](NavigationItemAttribute.md)). |
+| [GetItems](INavigationItemSource/GetItems.md)() | Gets the list of navigation item attributes ([`NavigationItemAttribute`](./NavigationItemAttribute.md)). |
 
 ## See Also
 

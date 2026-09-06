@@ -1,5 +1,4 @@
 # DecimalEditorAttribute.AllowNegativesByDefault property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets a value indicating whether to allow negatives by default. This is a global setting that controls if decimal editors should allow negative values unless specified otherwise.
 

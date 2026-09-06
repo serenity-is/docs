@@ -1,5 +1,4 @@
 # AsyncToSyncSaveBehaviorWrapper constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Wraps an [`ISaveBehaviorAsync`](../ISaveBehaviorAsync.md) implementation and exposes it as an [`ISaveBehaviorSync`](../ISaveBehaviorSync.md) by blocking on its async methods. This allows synchronous save request handlers to run asynchronous save behaviors.
 

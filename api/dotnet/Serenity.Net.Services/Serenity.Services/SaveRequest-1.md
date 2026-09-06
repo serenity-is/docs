@@ -22,6 +22,6 @@ public class SaveRequest<TEntity> : ServiceRequest, ISaveRequest
 
 ## See Also
 
-* class [ServiceRequest](ServiceRequest.md)
-* interface [ISaveRequest](ISaveRequest.md)
+* class [ServiceRequest](./ServiceRequest.md)
+* interface [ISaveRequest](./ISaveRequest.md)
 * **Source:** *[SaveRequest.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Models/SaveRequest.cs)*

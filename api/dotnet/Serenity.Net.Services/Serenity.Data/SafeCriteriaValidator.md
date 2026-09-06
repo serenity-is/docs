@@ -23,5 +23,5 @@ public class SafeCriteriaValidator : BaseCriteriaVisitor
 
 ## See Also
 
-* class [BaseCriteriaVisitor](BaseCriteriaVisitor.md)
+* class [BaseCriteriaVisitor](./BaseCriteriaVisitor.md)
 * **Source:** *[SafeCriteriaValidator.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Criteria/SafeCriteriaValidator.cs)*

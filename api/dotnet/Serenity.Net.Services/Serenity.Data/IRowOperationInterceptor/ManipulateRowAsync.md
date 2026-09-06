@@ -1,12 +1,11 @@
 # IRowOperationInterceptor.ManipulateRowAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts the async EntityConnectionExtensions DeleteById/Insert/Update methods. The default implementation forwards to [`ManipulateRow`](ManipulateRow.md).
+Intercepts the async EntityConnectionExtensions DeleteById/Insert/Update methods. The default implementation forwards to [`ManipulateRow`](./ManipulateRow.md).
 
 ```csharp
 public Task<OptionalValue<long?>> ManipulateRowAsync(Type rowType, OptionalValue<object> id, 
     IRow row, ExpectedRows expectedRows, bool getNewId, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

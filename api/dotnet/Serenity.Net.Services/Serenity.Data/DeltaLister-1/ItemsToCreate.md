@@ -1,5 +1,4 @@
 # DeltaLister&lt;TItem&gt;.ItemsToCreate property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the items to create.
 
@@ -13,5 +12,4 @@ The items to create.
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Services/../DeltaLister-1.TItem.md)
 * class [DeltaLister&lt;TItem&gt;](../DeltaLister-1.md)

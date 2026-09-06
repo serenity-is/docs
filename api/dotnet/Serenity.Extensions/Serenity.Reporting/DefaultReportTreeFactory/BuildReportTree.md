@@ -1,5 +1,4 @@
 # DefaultReportTreeFactory.BuildReportTree method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Builds the report tree for the specified category.
 

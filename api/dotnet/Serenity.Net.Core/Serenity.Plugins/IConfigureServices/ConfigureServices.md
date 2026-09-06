@@ -1,5 +1,4 @@
 # IConfigureServices.ConfigureServices method
-**namespace:** *[Serenity.Plugins](../../README.md#serenity.plugins-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Configures the services and options for the plugin.
 

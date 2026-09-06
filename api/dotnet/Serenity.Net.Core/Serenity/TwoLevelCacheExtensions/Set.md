@@ -1,10 +1,9 @@
 # TwoLevelCacheExtensions.Set&lt;TItem&gt; method (1 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates or overrides a specified entry in the local and distributed cache.
 
 ```csharp
-public static TItem Set<TItem>(this ITwoLevelCache cache, string cacheKey, TimeSpan expiration, 
+public static TItem? Set<TItem>(this ITwoLevelCache cache, string cacheKey, TimeSpan expiration, 
     string groupKey, TItem value)
     where TItem : class
 ```
@@ -20,20 +19,18 @@ public static TItem Set<TItem>(this ITwoLevelCache cache, string cacheKey, TimeS
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Core/../TwoLevelCacheExtensions.TItem.md)
 * interface [ITwoLevelCache](../../Serenity.Abstractions/ITwoLevelCache.md)
 * class [TwoLevelCacheExtensions](../TwoLevelCacheExtensions.md)
 
 ---
 
 # TwoLevelCacheExtensions.Set&lt;TItem&gt; method (2 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates or overrides a specified entry in the local and distributed cache.
 
 ```csharp
-public static TItem Set<TItem>(this ITwoLevelCache cache, string cacheKey, 
-    TimeSpan localExpiration, TimeSpan remoteExpiration, string groupKey, TItem value)
+public static TItem? Set<TItem>(this ITwoLevelCache cache, string cacheKey, 
+    TimeSpan localExpiration, TimeSpan remoteExpiration, string groupKey, TItem? value)
     where TItem : class
 ```
 
@@ -49,6 +46,5 @@ public static TItem Set<TItem>(this ITwoLevelCache cache, string cacheKey,
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Core/../TwoLevelCacheExtensions.TItem.md)
 * interface [ITwoLevelCache](../../Serenity.Abstractions/ITwoLevelCache.md)
 * class [TwoLevelCacheExtensions](../TwoLevelCacheExtensions.md)

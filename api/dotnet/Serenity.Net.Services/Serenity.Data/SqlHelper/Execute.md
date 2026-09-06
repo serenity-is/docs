@@ -1,5 +1,4 @@
 # SqlHelper.Execute method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified query on the connection.
 
@@ -21,7 +20,6 @@ public static void Execute(this SqlInsert query, IDbConnection connection, ILogg
 ---
 
 # SqlHelper.Execute method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified delete query on the connection and returns the number of affected rows.
 
@@ -50,7 +48,6 @@ The number of affected rows.
 ---
 
 # SqlHelper.Execute method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the specified update query on the connection and returns the number of affected rows.
 

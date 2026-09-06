@@ -25,7 +25,7 @@ public class RowValidationContext : IValidationContext
 
 ## Remarks
 
-Initializes a new instance of the [`RowValidationContext`](RowValidationContext.md) class.
+Initializes a new instance of the [`RowValidationContext`](./RowValidationContext.md) class.
 
 ## See Also
 

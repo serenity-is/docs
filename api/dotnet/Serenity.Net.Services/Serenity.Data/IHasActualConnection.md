@@ -1,7 +1,7 @@
 # IHasActualConnection interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for types that have an [`ActualConnection`](IHasActualConnection/ActualConnection.md) property of type IDbConnection.
+Interface for types that have an [`ActualConnection`](./IHasActualConnection/ActualConnection.md) property of type IDbConnection.
 
 ```csharp
 public interface IHasActualConnection

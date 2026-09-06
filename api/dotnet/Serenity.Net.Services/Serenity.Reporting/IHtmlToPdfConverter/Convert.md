@@ -1,5 +1,4 @@
 # IHtmlToPdfConverter.Convert method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts HTML to PDF
 

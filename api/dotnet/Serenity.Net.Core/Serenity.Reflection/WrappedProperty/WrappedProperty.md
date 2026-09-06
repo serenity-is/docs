@@ -1,5 +1,4 @@
 # WrappedProperty constructor
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 A class that basically implements IPropertyInfo for PropertyInfo objects
 

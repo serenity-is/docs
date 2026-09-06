@@ -1,5 +1,4 @@
 # Sql.CaseBuilder.WhenThen method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a WHEN THEN part.
 

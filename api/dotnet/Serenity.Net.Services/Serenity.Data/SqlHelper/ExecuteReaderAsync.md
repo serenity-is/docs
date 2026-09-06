@@ -1,11 +1,10 @@
 # SqlHelper.ExecuteReaderAsync method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the query asynchronously.
 
 ```csharp
 public static Task<IDataReader> ExecuteReaderAsync(this SqlQuery query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default(CancellationToken))
+    ILogger logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -27,14 +26,13 @@ A task that represents the asynchronous operation. The task result contains a da
 ---
 
 # SqlHelper.ExecuteReaderAsync method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the command asynchronously returning a data reader.
 
 ```csharp
 public static Task<IDataReader> ExecuteReaderAsync(IDbConnection connection, string commandText, 
     IDictionary<string, object> param, ILogger logger = null, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

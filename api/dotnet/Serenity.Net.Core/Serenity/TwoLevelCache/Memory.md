@@ -1,5 +1,4 @@
 # TwoLevelCache.Memory property
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets memory cache
 

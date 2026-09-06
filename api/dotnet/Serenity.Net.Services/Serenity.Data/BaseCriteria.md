@@ -30,7 +30,7 @@ public abstract class BaseCriteria : ICriteria
 | override [ToString](BaseCriteria/ToString.md)() | Converts the criteria to string. Raises an exception if criteria contains parameters. |
 | [ToString](BaseCriteria/ToString.md)(…) | Converts the criteria to string representation while adding params to the target query. |
 | virtual [ToString](BaseCriteria/ToString.md)(…) | Converts the criteria to string representation into a string builder, while adding its params to the target query. |
-| [ToStringIgnoreParams](BaseCriteria/ToStringIgnoreParams.md)() | Converts the criteria to a string while ignoring its params, if any. [`ToString`](BaseCriteria/ToString.md) raises an exception if a criteria has params, while this does not. |
+| [ToStringIgnoreParams](BaseCriteria/ToStringIgnoreParams.md)() | Converts the criteria to a string while ignoring its params, if any. [`ToString`](./BaseCriteria/ToString.md) raises an exception if a criteria has params, while this does not. |
 | [operator &amp;](BaseCriteria/op_BitwiseAnd.md) | Implements the operator &amp;. |
 | [operator &#x7C;](BaseCriteria/op_BitwiseOr.md) | Implements the operator &#x7C;. |
 | [operator ==](BaseCriteria/op_Equality.md) | Implements the operator ==. (10 operators) |

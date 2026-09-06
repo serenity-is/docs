@@ -1,5 +1,4 @@
 # ConstantCriteria constructor (1 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
@@ -18,7 +17,6 @@ public ConstantCriteria(IEnumerable<int> values)
 ---
 
 # ConstantCriteria constructor (2 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
@@ -37,7 +35,6 @@ public ConstantCriteria(IEnumerable<long> values)
 ---
 
 # ConstantCriteria constructor (3 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
@@ -56,7 +53,6 @@ public ConstantCriteria(int value)
 ---
 
 # ConstantCriteria constructor (4 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
@@ -75,7 +71,6 @@ public ConstantCriteria(long value)
 ---
 
 # ConstantCriteria constructor (5 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 
@@ -96,7 +91,6 @@ public ConstantCriteria(IEnumerable<string> values, ISqlDialect dialect = null)
 ---
 
 # ConstantCriteria constructor (6 of 6)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`ConstantCriteria`](../ConstantCriteria.md) class.
 

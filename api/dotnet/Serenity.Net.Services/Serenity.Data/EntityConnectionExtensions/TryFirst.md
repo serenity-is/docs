@@ -1,5 +1,4 @@
 # EntityConnectionExtensions.TryFirst&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Tries to finds first entity, allowing the caller to set criteria and fields to select through an editQuery callback.
 
@@ -20,7 +19,6 @@ First entity matching the criteria, or null if not found.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
@@ -28,7 +26,6 @@ First entity matching the criteria, or null if not found.
 ---
 
 # EntityConnectionExtensions.TryFirst&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Tries to find first entity matching a where criteria.
 
@@ -49,7 +46,6 @@ First entity matching the where criteria, or null if not found.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

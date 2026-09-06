@@ -28,9 +28,9 @@ public class OuterApplyAttribute : Attribute, ISqlJoin
 
 ## Remarks
 
-Initializes a new instance of the [`OuterApplyAttribute`](OuterApplyAttribute.md) class.
+Initializes a new instance of the [`OuterApplyAttribute`](./OuterApplyAttribute.md) class.
 
 ## See Also
 
-* interface [ISqlJoin](ISqlJoin.md)
+* interface [ISqlJoin](./ISqlJoin.md)
 * **Source:** *[OuterApplyAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/OuterApplyAttribute.cs)*

@@ -1,10 +1,9 @@
 # FormatterOptionAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds a formatter option
 
 ```csharp
-public FormatterOptionAttribute(string key, object value)
+public FormatterOptionAttribute(string key, object? value)
 ```
 
 | parameter | description |

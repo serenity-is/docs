@@ -1,5 +1,4 @@
 # CodeWriter.DecreaseIndent method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Decreases indenting by tab size
 

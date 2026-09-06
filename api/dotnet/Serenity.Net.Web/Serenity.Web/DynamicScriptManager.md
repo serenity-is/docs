@@ -1,7 +1,7 @@
 # DynamicScriptManager class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default implementation of [`IDynamicScriptManager`](IDynamicScriptManager.md).
+Default implementation of [`IDynamicScriptManager`](./IDynamicScriptManager.md).
 
 ```csharp
 public class DynamicScriptManager : IDynamicScriptManager
@@ -11,7 +11,7 @@ public class DynamicScriptManager : IDynamicScriptManager
 
 | name | description |
 | --- | --- |
-| [DynamicScriptManager](DynamicScriptManager/DynamicScriptManager.md)(…) | Initializes a new instance of the [`DynamicScriptManager`](DynamicScriptManager.md) class. |
+| [DynamicScriptManager](DynamicScriptManager/DynamicScriptManager.md)(…) | Initializes a new instance of the [`DynamicScriptManager`](./DynamicScriptManager.md) class. |
 | event [ScriptChanged](DynamicScriptManager/ScriptChanged.md) |  |
 | [Changed](DynamicScriptManager/Changed.md)(…) |  |
 | [CheckScriptRights](DynamicScriptManager/CheckScriptRights.md)(…) |  |
@@ -28,5 +28,5 @@ public class DynamicScriptManager : IDynamicScriptManager
 
 ## See Also
 
-* interface [IDynamicScriptManager](IDynamicScriptManager.md)
+* interface [IDynamicScriptManager](./IDynamicScriptManager.md)
 * **Source:** *[DynamicScriptManager.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScript/DynamicScriptManager.cs)*

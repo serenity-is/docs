@@ -12,9 +12,9 @@ public class MediumHalfLargeThirdWidthAttribute : FormWidthAttribute
 
 | name | description |
 | --- | --- |
-| [MediumHalfLargeThirdWidthAttribute](MediumHalfLargeThirdWidthAttribute/MediumHalfLargeThirdWidthAttribute.md)() | Initializes a new instance of the [`MediumHalfLargeThirdWidthAttribute`](MediumHalfLargeThirdWidthAttribute.md) class. |
+| [MediumHalfLargeThirdWidthAttribute](MediumHalfLargeThirdWidthAttribute/MediumHalfLargeThirdWidthAttribute.md)() | Initializes a new instance of the [`MediumHalfLargeThirdWidthAttribute`](./MediumHalfLargeThirdWidthAttribute.md) class. |
 
 ## See Also
 
-* class [FormWidthAttribute](FormWidthAttribute.md)
+* class [FormWidthAttribute](./FormWidthAttribute.md)
 * **Source:** *[MediumHalfLargeThirdWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/MediumHalfLargeThirdWidthAttribute.cs)*

@@ -11,7 +11,7 @@ public class SmtpSettings
 
 | name | description |
 | --- | --- |
-| [SmtpSettings](SmtpSettings/SmtpSettings.md)() | Initializes a new instance of the [`SmtpSettings`](SmtpSettings.md) class. |
+| [SmtpSettings](SmtpSettings/SmtpSettings.md)() | Initializes a new instance of the [`SmtpSettings`](./SmtpSettings.md) class. |
 | [AutoUseQueue](SmtpSettings/AutoUseQueue.md) { get; set; } | Whether to automatically enqueue emails instead of sending them directly. |
 | [From](SmtpSettings/From.md) { get; set; } | The default sender address used when a message has no From address. |
 | [Host](SmtpSettings/Host.md) { get; set; } | The SMTP server host. |

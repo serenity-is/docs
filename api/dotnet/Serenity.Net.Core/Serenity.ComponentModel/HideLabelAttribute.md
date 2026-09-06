@@ -12,9 +12,9 @@ public class HideLabelAttribute : LabelWidthAttribute
 
 | name | description |
 | --- | --- |
-| [HideLabelAttribute](HideLabelAttribute/HideLabelAttribute.md)() | Initializes a new instance of the [`HideLabelAttribute`](HideLabelAttribute.md) class. |
+| [HideLabelAttribute](HideLabelAttribute/HideLabelAttribute.md)() | Initializes a new instance of the [`HideLabelAttribute`](./HideLabelAttribute.md) class. |
 
 ## See Also
 
-* class [LabelWidthAttribute](LabelWidthAttribute.md)
+* class [LabelWidthAttribute](./LabelWidthAttribute.md)
 * **Source:** *[HideLabelAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/HideLabelAttribute.cs)*

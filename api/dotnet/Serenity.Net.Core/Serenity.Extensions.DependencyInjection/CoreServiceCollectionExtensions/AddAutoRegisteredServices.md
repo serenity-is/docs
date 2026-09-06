@@ -1,12 +1,11 @@
 # CoreServiceCollectionExtensions.AddAutoRegisteredServices method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Registers all the types with an RegisterService attribute (RegisterSingleton, RegisterScoped, RegisterTransient etc.) from the type source in the service collection if available, or using the provided typeSource, optionally filtering implementation types via a provided predicate. Use this at the end of InitializeServices in Startup.cs so that services can be overridden before others.
 
 ```csharp
-public static IServiceCollection AddAutoRegisteredServices(this IServiceCollection collection, 
-    ITypeSource typeSource = null, 
-    Func<Type, Type, RegisterServiceAttribute, bool> predicate = null)
+public static IServiceCollection AddAutoRegisteredServices(this IServiceCollection? collection, 
+    ITypeSource? typeSource = null, 
+    Func<Type, Type, RegisterServiceAttribute, bool>? predicate = null)
 ```
 
 | parameter | description |

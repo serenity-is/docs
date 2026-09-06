@@ -1,5 +1,4 @@
 # DefaultRequestContext constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Default implementation for a [`IRequestContext`](../IRequestContext.md).
 
@@ -29,8 +28,8 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IBehaviorProvider](../IBehaviorProvider.md)
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
-* interface [IPermissionService](../Serenity.Net.Core/../../Serenity.Abstractions/IPermissionService.md)
-* interface [IUserAccessor](../Serenity.Net.Core/../../Serenity.Abstractions/IUserAccessor.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
+* interface [IPermissionService](../../../Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
+* interface [IUserAccessor](../../../Serenity.Net.Core/Serenity.Abstractions/IUserAccessor.md)
 * class [DefaultRequestContext](../DefaultRequestContext.md)

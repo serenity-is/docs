@@ -30,7 +30,7 @@ public class UndeleteRequestHandlerAsync<TRow, TUndeleteRequest, TUndeleteRespon
 
 | name | description |
 | --- | --- |
-| [behaviors-](UndeleteRequestHandlerAsync-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](UndeleteRequestHandlerAsync-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAuditAsync](UndeleteRequestHandlerAsync-3/DoAuditAsync.md)(…) | Performs auditing |
 | virtual [ExecuteUndeleteAsync](UndeleteRequestHandlerAsync-3/ExecuteUndeleteAsync.md)(…) | Executes the actual SQL undelete/update operation |
 | virtual [InvokeUndeleteActionAsync](UndeleteRequestHandlerAsync-3/InvokeUndeleteActionAsync.md)(…) | Invokes the passed undelete action method |
@@ -43,14 +43,11 @@ public class UndeleteRequestHandlerAsync<TRow, TUndeleteRequest, TUndeleteRespon
 
 ## See Also
 
-* class [UndeleteRequestHandlerBase&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](UndeleteRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/UndeleteRequestHandlerAsync-3.TRow.md)
-* class [TUndeleteRequest](../Serenity.Net.Services/UndeleteRequestHandlerAsync-3.TUndeleteRequest.md)
-* class [TUndeleteResponse](../Serenity.Net.Services/UndeleteRequestHandlerAsync-3.TUndeleteResponse.md)
-* interface [IUndeleteHandlerAsync&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](IUndeleteHandlerAsync-3.md)
-* interface [IUndeleteRequestProcessorAsync](IUndeleteRequestProcessorAsync.md)
+* class [UndeleteRequestHandlerBase&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./UndeleteRequestHandlerBase-3.md)
+* interface [IUndeleteHandlerAsync&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./IUndeleteHandlerAsync-3.md)
+* interface [IUndeleteRequestProcessorAsync](./IUndeleteRequestProcessorAsync.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [UndeleteRequest](UndeleteRequest.md)
-* class [UndeleteResponse](UndeleteResponse.md)
+* class [UndeleteRequest](./UndeleteRequest.md)
+* class [UndeleteResponse](./UndeleteResponse.md)
 * **Source:** *[UndeleteRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/574b0f91eebdcc8cdd7f9af77f617c5cf3fc4aec/src/services/RequestHandlers/Undelete/UndeleteRequestHandlerAsync.cs)*

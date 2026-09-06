@@ -1,5 +1,4 @@
 # DisplayOrderHelper.UpdateOrders method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Updates display order values in a table
 

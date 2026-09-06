@@ -1,9 +1,8 @@
 # LinkingSetRelationBehavior.OnReturnAsync method (1 of 2)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public virtual Task OnReturnAsync(IListRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 ## See Also
@@ -14,11 +13,10 @@ public virtual Task OnReturnAsync(IListRequestHandler handler,
 ---
 
 # LinkingSetRelationBehavior.OnReturnAsync method (2 of 2)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public virtual Task OnReturnAsync(IRetrieveRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 ## See Also

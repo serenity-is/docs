@@ -1,5 +1,4 @@
 # NodeScriptRunnerExtensions.UseNodeScriptRunner method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Starts node scripts configured in configuration "StartNodeScripts" key as a semicolon separated strings.
 

@@ -1,12 +1,11 @@
 # SqlHelper.ExecuteNonQueryAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the statement asynchronously.
 
 ```csharp
 public static Task<int> ExecuteNonQueryAsync(IDbConnection connection, string commandText, 
     IDictionary<string, object> param = null, ILogger logger = null, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # EntitySqlHelper.GetFromReader method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets field values from data reader into the query loader row.
 
@@ -20,7 +19,6 @@ public static void GetFromReader(this SqlQuery query, IDataReader reader)
 ---
 
 # EntitySqlHelper.GetFromReader method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets field values from data reader into the set of specified into rows.
 

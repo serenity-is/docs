@@ -1,5 +1,4 @@
 # CommandLineTools.EscapeArguments method
-**namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Quotes all arguments that contain whitespace, or begin with a quote and returns a single argument string for use with Process.Start().
 

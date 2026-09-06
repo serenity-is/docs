@@ -1,5 +1,4 @@
 # MasterDetailRelationAttribute constructor
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Defines a master detail relation (1-N) between this row and another.
 

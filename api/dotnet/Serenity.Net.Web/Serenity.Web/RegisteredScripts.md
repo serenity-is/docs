@@ -11,14 +11,14 @@ public class RegisteredScripts : DynamicScript, IGetScriptData, INamedDynamicScr
 
 | name | description |
 | --- | --- |
-| [RegisteredScripts](RegisteredScripts/RegisteredScripts.md)(…) | Initializes a new instance of the [`RegisteredScripts`](RegisteredScripts.md) class. |
+| [RegisteredScripts](RegisteredScripts/RegisteredScripts.md)(…) | Initializes a new instance of the [`RegisteredScripts`](./RegisteredScripts.md) class. |
 | [ScriptName](RegisteredScripts/ScriptName.md) { get; } |  |
 | override [GetScript](RegisteredScripts/GetScript.md)() |  |
 | [GetScriptData](RegisteredScripts/GetScriptData.md)() |  |
 
 ## See Also
 
-* class [DynamicScript](../Serenity.Net.Services/DynamicScript.md)
-* interface [IGetScriptData](../Serenity.Net.Core/IGetScriptData.md)
-* interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
+* class [DynamicScript](../../Serenity.Net.Services/Serenity.Web/DynamicScript.md)
+* interface [IGetScriptData](../../Serenity.Net.Core/Serenity.Web/IGetScriptData.md)
+* interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
 * **Source:** *[RegisteredScripts.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScriptTypes/RegisteredScripts.cs)*

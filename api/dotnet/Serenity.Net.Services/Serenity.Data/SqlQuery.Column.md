@@ -26,8 +26,8 @@ public class Column
 
 ## Remarks
 
-Initializes a new instance of the [`Column`](SqlQuery.Column.md) class.
+Initializes a new instance of the [`Column`](./SqlQuery.Column.md) class.
 
 ## See Also
 
-* class [SqlQuery](SqlQuery.md)
+* class [SqlQuery](./SqlQuery.md)

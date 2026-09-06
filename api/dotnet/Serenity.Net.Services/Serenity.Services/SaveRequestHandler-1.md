@@ -1,7 +1,7 @@
 # SaveRequestHandler&lt;TRow&gt; class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base generic class for save request handlers that use [`SaveRequest`](SaveRequest-1.md) as the request type, and [`SaveResponse`](SaveResponse.md) as the response type.
+Base generic class for save request handlers that use [`SaveRequest`](./SaveRequest-1.md) as the request type, and [`SaveResponse`](./SaveResponse.md) as the response type.
 
 ```csharp
 public class SaveRequestHandler<TRow> : SaveRequestHandler<TRow, SaveRequest<TRow>, SaveResponse>, 
@@ -18,7 +18,7 @@ public class SaveRequestHandler<TRow> : SaveRequestHandler<TRow, SaveRequest<TRo
 
 | name | description |
 | --- | --- |
-| [SaveRequestHandler](SaveRequestHandler-1/SaveRequestHandler.md)(…) | Base generic class for save request handlers that use [`SaveRequest`](SaveRequest-1.md) as the request type, and [`SaveResponse`](SaveResponse.md) as the response type. |
+| [SaveRequestHandler](SaveRequestHandler-1/SaveRequestHandler.md)(…) | Base generic class for save request handlers that use [`SaveRequest`](./SaveRequest-1.md) as the request type, and [`SaveResponse`](./SaveResponse.md) as the response type. |
 
 ## Remarks
 
@@ -26,11 +26,10 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](SaveRequestHandler-3.md)
-* class [TRow](../Serenity.Net.Services/SaveRequestHandler-1.TRow.md)
-* class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
-* class [SaveResponse](SaveResponse.md)
-* interface [ISaveHandler&lt;TRow&gt;](ISaveHandler-1.md)
+* class [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](./SaveRequestHandler-3.md)
+* class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
+* class [SaveResponse](./SaveResponse.md)
+* interface [ISaveHandler&lt;TRow&gt;](./ISaveHandler-1.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * **Source:** *[SaveRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Save/SaveRequestHandlerT.cs)*

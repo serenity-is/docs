@@ -1,12 +1,11 @@
 # ISqlOperationInterceptor.ExecuteNonQueryAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Intercepts the async [`SqlHelper`](../SqlHelper.md)`Execute` methods (SqlDelete/SqlUpdate/SqlInsert). The default implementation forwards to [`ExecuteNonQuery`](ExecuteNonQuery.md).
+Intercepts the async [`SqlHelper`](../SqlHelper.md)`Execute` methods (SqlDelete/SqlUpdate/SqlInsert). The default implementation forwards to [`ExecuteNonQuery`](./ExecuteNonQuery.md).
 
 ```csharp
 public Task<OptionalValue<long?>> ExecuteNonQueryAsync(string commandText, 
     IDictionary<string, object> parameters, ExpectedRows expectedRows, IQueryWithParams query, 
-    bool getNewId, CancellationToken cancellationToken = default(CancellationToken))
+    bool getNewId, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

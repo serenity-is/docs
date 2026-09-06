@@ -30,7 +30,7 @@ public class RetrieveRequestHandlerAsync<TRow, TRetrieveRequest, TRetrieveRespon
 
 | name | description |
 | --- | --- |
-| [behaviors-](RetrieveRequestHandlerAsync-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](RetrieveRequestHandlerAsync-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [ExecuteQueryAsync](RetrieveRequestHandlerAsync-3/ExecuteQueryAsync.md)(…) | Executes the query and sets the response entity if found. |
 | virtual [OnAfterExecuteQueryAsync](RetrieveRequestHandlerAsync-3/OnAfterExecuteQueryAsync.md)(…) | Called after executing the retrieve query |
 | virtual [OnBeforeExecuteQueryAsync](RetrieveRequestHandlerAsync-3/OnBeforeExecuteQueryAsync.md)(…) | Called before executing the retrieve query |
@@ -40,13 +40,10 @@ public class RetrieveRequestHandlerAsync<TRow, TRetrieveRequest, TRetrieveRespon
 
 ## See Also
 
-* class [RetrieveRequestHandlerBase&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](RetrieveRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/RetrieveRequestHandlerAsync-3.TRow.md)
-* class [TRetrieveRequest](../Serenity.Net.Services/RetrieveRequestHandlerAsync-3.TRetrieveRequest.md)
-* class [TRetrieveResponse](../Serenity.Net.Services/RetrieveRequestHandlerAsync-3.TRetrieveResponse.md)
-* interface [IRetrieveHandlerAsync&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](IRetrieveHandlerAsync-3.md)
-* interface [IRetrieveRequestProcessorAsync](IRetrieveRequestProcessorAsync.md)
+* class [RetrieveRequestHandlerBase&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](./RetrieveRequestHandlerBase-3.md)
+* interface [IRetrieveHandlerAsync&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](./IRetrieveHandlerAsync-3.md)
+* interface [IRetrieveRequestProcessorAsync](./IRetrieveRequestProcessorAsync.md)
 * interface [IRow](../Serenity.Data/IRow.md)
-* class [RetrieveRequest](RetrieveRequest.md)
-* class [RetrieveResponse&lt;T&gt;](RetrieveResponse-1.md)
+* class [RetrieveRequest](./RetrieveRequest.md)
+* class [RetrieveResponse&lt;T&gt;](./RetrieveResponse-1.md)
 * **Source:** *[RetrieveRequestHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/aa5433b74475d7a249a3550344ee8ccea8e5a8eb/src/services/RequestHandlers/Retrieve/RetrieveRequestHandlerAsync.cs)*

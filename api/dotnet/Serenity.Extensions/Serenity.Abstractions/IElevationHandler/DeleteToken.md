@@ -1,5 +1,4 @@
 # IElevationHandler.DeleteToken method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Deletes ElevationToken.
 

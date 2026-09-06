@@ -1,5 +1,4 @@
 # UserPreferenceRepository.Retrieve method
-**namespace:** *[Serenity.Extensions.Repositories](../../README.md#serenity.extensions.repositories-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Retrieves a user preference.
 

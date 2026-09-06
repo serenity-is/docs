@@ -1,5 +1,4 @@
 # IPermissionKeyLister.ListPermissionKeys method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Lists all permission keys.
 

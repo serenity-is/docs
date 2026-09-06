@@ -12,11 +12,11 @@ public class MinuteFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [MinuteFormatterAttribute](MinuteFormatterAttribute/MinuteFormatterAttribute.md)() | Initializes a new instance of the [`MinuteFormatterAttribute`](MinuteFormatterAttribute.md) class. |
+| [MinuteFormatterAttribute](MinuteFormatterAttribute/MinuteFormatterAttribute.md)() | Initializes a new instance of the [`MinuteFormatterAttribute`](./MinuteFormatterAttribute.md) class. |
 | [DisplayFormat](MinuteFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
 | const [Key](MinuteFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[MinuteFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/MinuteFormatterAttribute.cs)*

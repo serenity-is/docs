@@ -1,5 +1,4 @@
 # QuickSearchAttribute constructor
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Marks the property so that it should be included in quick text searches.
 

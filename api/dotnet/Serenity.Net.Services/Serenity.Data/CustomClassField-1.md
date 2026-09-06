@@ -42,10 +42,9 @@ public class CustomClassField<TValue> : GenericClassField<TValue>
 
 ## Remarks
 
-Initializes a new instance of the [`CustomClassField`](CustomClassField-1.md) class.
+Initializes a new instance of the [`CustomClassField`](./CustomClassField-1.md) class.
 
 ## See Also
 
-* class [GenericClassField&lt;TValue&gt;](GenericClassField-1.md)
-* class [TValue](../Serenity.Net.Services/CustomClassField-1.TValue.md)
+* class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
 * **Source:** *[CustomClassField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/CustomClassField.cs)*

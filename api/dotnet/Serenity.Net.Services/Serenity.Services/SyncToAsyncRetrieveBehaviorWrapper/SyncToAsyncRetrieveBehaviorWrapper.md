@@ -1,5 +1,4 @@
 # SyncToAsyncRetrieveBehaviorWrapper constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Wraps an [`IRetrieveBehaviorSync`](../IRetrieveBehaviorSync.md) implementation and exposes it as an [`IRetrieveBehaviorAsync`](../IRetrieveBehaviorAsync.md). This allows asynchronous retrieve request handlers to run synchronous retrieve behaviors.
 

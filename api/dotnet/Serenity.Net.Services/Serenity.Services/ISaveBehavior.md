@@ -9,7 +9,7 @@ public interface ISaveBehavior
 
 ## Remarks
 
-All save behaviors should implement either [`ISaveBehaviorSync`](ISaveBehaviorSync.md) or [`ISaveBehaviorAsync`](ISaveBehaviorAsync.md), not this interface directly.
+All save behaviors should implement either [`ISaveBehaviorSync`](./ISaveBehaviorSync.md) or [`ISaveBehaviorAsync`](./ISaveBehaviorAsync.md), not this interface directly.
 
 ## See Also
 

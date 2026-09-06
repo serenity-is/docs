@@ -1,10 +1,9 @@
 # ValidationError.ErrorCode property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the error code.
 
 ```csharp
-public string ErrorCode { get; set; }
+public string? ErrorCode { get; set; }
 ```
 
 ## Property Value

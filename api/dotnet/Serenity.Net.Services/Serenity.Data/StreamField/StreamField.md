@@ -1,5 +1,4 @@
 # StreamField constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Field with a Stream value.
 
@@ -26,7 +25,7 @@ Initializes a new instance of the [`StreamField`](../StreamField.md) class.
 ## See Also
 
 * class [Field](../Field.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
 * class [StreamField](../StreamField.md)

@@ -1,5 +1,4 @@
 # JsonSortByConverter.WriteJson method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Writes the JSON representation of the object.
 

@@ -1,5 +1,4 @@
 # BasePermissionKeyLister.GetAssemblyPermissions method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets permissions from assemblies in a type source.
 
@@ -13,5 +12,5 @@ protected virtual IEnumerable<string> GetAssemblyPermissions(ITypeSource typeSou
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [BasePermissionKeyLister](../BasePermissionKeyLister.md)

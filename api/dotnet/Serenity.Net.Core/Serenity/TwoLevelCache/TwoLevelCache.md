@@ -1,5 +1,4 @@
 # TwoLevelCache constructor
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 A two level cache that combines an in-memory cache with a distributed cache, keeping them in sync with optional group-based cache invalidation.
 

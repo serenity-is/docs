@@ -1,5 +1,4 @@
 # ISqlDialect.UseRowNum property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether the server supports ROWNUM.
 

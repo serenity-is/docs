@@ -1,5 +1,4 @@
 # WrappedConnection.BeginDbTransaction method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Begins a database transaction with the specified IsolationLevel value.
 

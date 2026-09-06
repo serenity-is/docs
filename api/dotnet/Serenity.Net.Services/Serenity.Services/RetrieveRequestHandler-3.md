@@ -30,7 +30,7 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](RetrieveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](RetrieveRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [ExecuteQuery](RetrieveRequestHandler-3/ExecuteQuery.md)() | Executes the query and sets the response entity if found. |
 | virtual [OnAfterExecuteQuery](RetrieveRequestHandler-3/OnAfterExecuteQuery.md)() | Called after executing the retrieve query |
 | virtual [OnBeforeExecuteQuery](RetrieveRequestHandler-3/OnBeforeExecuteQuery.md)() | Called before executing the retrieve query |
@@ -40,13 +40,10 @@ public class RetrieveRequestHandler<TRow, TRetrieveRequest, TRetrieveResponse> :
 
 ## See Also
 
-* class [RetrieveRequestHandlerBase&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](RetrieveRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/RetrieveRequestHandler-3.TRow.md)
-* class [TRetrieveRequest](../Serenity.Net.Services/RetrieveRequestHandler-3.TRetrieveRequest.md)
-* class [TRetrieveResponse](../Serenity.Net.Services/RetrieveRequestHandler-3.TRetrieveResponse.md)
-* interface [IRetrieveHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](IRetrieveHandler-3.md)
-* interface [IRetrieveRequestProcessor](IRetrieveRequestProcessor.md)
+* class [RetrieveRequestHandlerBase&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](./RetrieveRequestHandlerBase-3.md)
+* interface [IRetrieveHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](./IRetrieveHandler-3.md)
+* interface [IRetrieveRequestProcessor](./IRetrieveRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
-* class [RetrieveRequest](RetrieveRequest.md)
-* class [RetrieveResponse&lt;T&gt;](RetrieveResponse-1.md)
+* class [RetrieveRequest](./RetrieveRequest.md)
+* class [RetrieveResponse&lt;T&gt;](./RetrieveResponse-1.md)
 * **Source:** *[RetrieveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/aa5433b74475d7a249a3550344ee8ccea8e5a8eb/src/services/RequestHandlers/Retrieve/RetrieveRequestHandler.cs)*

@@ -1,5 +1,4 @@
 # RowLookupScript&lt;TRow&gt; constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Initializes a new instance of the [`RowLookupScript`](../RowLookupScript-1.md) class.
 
@@ -19,5 +18,5 @@ public RowLookupScript(ISqlConnections sqlConnections)
 
 ## See Also
 
-* interface [ISqlConnections](../Serenity.Net.Services/../../Serenity.Data/ISqlConnections.md)
+* interface [ISqlConnections](../../../Serenity.Net.Services/Serenity.Data/ISqlConnections.md)
 * class [RowLookupScript&lt;TRow&gt;](../RowLookupScript-1.md)

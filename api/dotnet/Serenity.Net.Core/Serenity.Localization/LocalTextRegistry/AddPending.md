@@ -1,5 +1,4 @@
 # LocalTextRegistry.AddPending method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds a pending approval local text entry to the registry. These texts can only be seen while moderators are browsing the site. You can determine which users are moderators by implementing the `ILocalTextContext` interface and registering it through the service locator.
 

@@ -12,7 +12,7 @@ public class EnumEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [EnumEditorAttribute](EnumEditorAttribute/EnumEditorAttribute.md)() | Initializes a new instance of the [`EnumEditorAttribute`](EnumEditorAttribute.md) class. |
+| [EnumEditorAttribute](EnumEditorAttribute/EnumEditorAttribute.md)() | Initializes a new instance of the [`EnumEditorAttribute`](./EnumEditorAttribute.md) class. |
 | [AllowClear](EnumEditorAttribute/AllowClear.md) { get; set; } | Gets or sets a value indicating whether to allow clearing. |
 | [Delimited](EnumEditorAttribute/Delimited.md) { get; set; } | Use comma separated string instead of an array to serialize values. |
 | [MinimumResultsForSearch](EnumEditorAttribute/MinimumResultsForSearch.md) { get; set; } | The minimum number of results that must be initially (after opening the dropdown for the first time) populated in order to keep the search field. This is useful for cases where local data is used with just a few results, in which case the search box is not very useful and wastes screen space. The option can be set to a negative value to permanently hide the search field. |
@@ -21,5 +21,5 @@ public class EnumEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[EnumEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/EnumEditorAttribute.cs)*

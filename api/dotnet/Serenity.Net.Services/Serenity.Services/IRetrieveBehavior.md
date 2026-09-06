@@ -9,7 +9,7 @@ public interface IRetrieveBehavior
 
 ## Remarks
 
-All retrieve behaviors should implement either [`IRetrieveBehaviorSync`](IRetrieveBehaviorSync.md) or [`IRetrieveBehaviorAsync`](IRetrieveBehaviorAsync.md), not this interface directly.
+All retrieve behaviors should implement either [`IRetrieveBehaviorSync`](./IRetrieveBehaviorSync.md) or [`IRetrieveBehaviorAsync`](./IRetrieveBehaviorAsync.md), not this interface directly.
 
 ## See Also
 

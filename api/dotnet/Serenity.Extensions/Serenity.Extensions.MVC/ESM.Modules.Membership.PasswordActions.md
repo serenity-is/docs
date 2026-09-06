@@ -18,4 +18,4 @@ public static class PasswordActions
 
 ## See Also
 
-* class [Membership](ESM.Modules.Membership.md)
+* class [Membership](./ESM.Modules.Membership.md)

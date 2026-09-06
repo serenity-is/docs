@@ -21,5 +21,5 @@ public class StaticTextBlockAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](../Serenity.Net.Core/../Serenity.ComponentModel/CustomEditorAttribute.md)
+* class [CustomEditorAttribute](../../Serenity.Net.Core/Serenity.ComponentModel/CustomEditorAttribute.md)
 * **Source:** *[Extensions.StaticTextBlockAttribute.cs](https://github.com/serenity-is/Serenity/blob/7345052967eb6b6cec2b0a8512d5916028ee30e9/common-features/src/extensions/Imports/ClientTypes/Extensions.StaticTextBlockAttribute.cs)*

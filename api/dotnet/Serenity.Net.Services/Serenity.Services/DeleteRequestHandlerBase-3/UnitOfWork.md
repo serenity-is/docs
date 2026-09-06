@@ -1,5 +1,4 @@
 # DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.UnitOfWork property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the current unit of work.
 

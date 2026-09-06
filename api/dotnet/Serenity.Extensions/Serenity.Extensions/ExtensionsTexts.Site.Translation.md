@@ -13,4 +13,4 @@ public static class Translation
 
 ## See Also
 
-* class [Site](ExtensionsTexts.Site.md)
+* class [Site](./ExtensionsTexts.Site.md)

@@ -1,5 +1,4 @@
 # AlignmentAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Controls horizontal alignment of text (usually in grid columns).
 

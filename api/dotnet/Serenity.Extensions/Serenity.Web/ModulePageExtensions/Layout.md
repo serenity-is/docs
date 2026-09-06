@@ -1,5 +1,4 @@
 # ModulePageExtensions.Layout method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Sets the layout of the result.
 

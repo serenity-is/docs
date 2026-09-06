@@ -1,7 +1,7 @@
 # IUndeleteHandler&lt;TRow&gt; interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for undelete request handlers that use [`UndeleteRequest`](UndeleteRequest.md) as request, and [`UndeleteResponse`](UndeleteResponse.md) as response types.
+Interface for undelete request handlers that use [`UndeleteRequest`](./UndeleteRequest.md) as request, and [`UndeleteResponse`](./UndeleteResponse.md) as response types.
 
 ```csharp
 public interface IUndeleteHandler<TRow> : IUndeleteHandler<TRow, UndeleteRequest, UndeleteResponse>
@@ -14,9 +14,8 @@ public interface IUndeleteHandler<TRow> : IUndeleteHandler<TRow, UndeleteRequest
 
 ## See Also
 
-* interface [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](IUndeleteHandler-3.md)
-* class [TRow](../Serenity.Net.Services/IUndeleteHandler-1.TRow.md)
-* class [UndeleteRequest](UndeleteRequest.md)
-* class [UndeleteResponse](UndeleteResponse.md)
+* interface [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./IUndeleteHandler-3.md)
+* class [UndeleteRequest](./UndeleteRequest.md)
+* class [UndeleteResponse](./UndeleteResponse.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * **Source:** *[IUndeleteHandler.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Undelete/IUndeleteHandler.cs)*

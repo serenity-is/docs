@@ -1,11 +1,10 @@
 # IRetrieveBehaviorAsync.OnBeforeExecuteQueryAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called just before query is sent to database
 
 ```csharp
 public Task OnBeforeExecuteQueryAsync(IRetrieveRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -1,11 +1,9 @@
 # UndeleteRequestHandlerAsync&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;.DoAuditAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Performs auditing
 
 ```csharp
-protected virtual Task DoAuditAsync(
-    CancellationToken cancellationToken = default(CancellationToken))
+protected virtual Task DoAuditAsync(CancellationToken cancellationToken = default)
 ```
 
 ## See Also

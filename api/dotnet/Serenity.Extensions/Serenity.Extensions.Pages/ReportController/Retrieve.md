@@ -1,5 +1,4 @@
 # ReportController.Retrieve method
-**namespace:** *[Serenity.Extensions.Pages](../../README.md#serenity.extensions.pages-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Retrieves report information for the specified request.
 
@@ -18,6 +17,6 @@ The report retrieve result.
 
 ## See Also
 
-* class [ReportRetrieveRequest](../Serenity.Net.Services/../../Serenity.Reporting/ReportRetrieveRequest.md)
-* interface [IReportRetrieveHandler](../Serenity.Net.Services/../../Serenity.Reporting/IReportRetrieveHandler.md)
+* class [ReportRetrieveRequest](../../../Serenity.Net.Services/Serenity.Reporting/ReportRetrieveRequest.md)
+* interface [IReportRetrieveHandler](../../../Serenity.Net.Services/Serenity.Reporting/IReportRetrieveHandler.md)
 * class [ReportController](../ReportController.md)

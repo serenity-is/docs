@@ -30,7 +30,7 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](DeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](DeleteRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAudit](DeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteDelete](DeleteRequestHandler-3/ExecuteDelete.md)() | Executes the actual SQL delete operation |
 | virtual [InvokeDeleteAction](DeleteRequestHandler-3/InvokeDeleteAction.md)(…) | Invokes the passed delete action method |
@@ -43,14 +43,11 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 
 ## See Also
 
-* class [DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](DeleteRequestHandlerBase-3.md)
-* class [TRow](../Serenity.Net.Services/DeleteRequestHandler-3.TRow.md)
-* class [TDeleteRequest](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteRequest.md)
-* class [TDeleteResponse](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteResponse.md)
-* interface [IDeleteHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](IDeleteHandler-3.md)
-* interface [IDeleteRequestProcessor](IDeleteRequestProcessor.md)
+* class [DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](./DeleteRequestHandlerBase-3.md)
+* interface [IDeleteHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](./IDeleteHandler-3.md)
+* interface [IDeleteRequestProcessor](./IDeleteRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [DeleteRequest](DeleteRequest.md)
-* class [DeleteResponse](DeleteResponse.md)
+* class [DeleteRequest](./DeleteRequest.md)
+* class [DeleteResponse](./DeleteResponse.md)
 * **Source:** *[DeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Delete/DeleteRequestHandler.cs)*

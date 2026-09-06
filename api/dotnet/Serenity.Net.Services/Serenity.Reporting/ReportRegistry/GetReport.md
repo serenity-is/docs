@@ -1,5 +1,4 @@
 # ReportRegistry.GetReport method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns report with the report key, optionally validating its permissions.
 

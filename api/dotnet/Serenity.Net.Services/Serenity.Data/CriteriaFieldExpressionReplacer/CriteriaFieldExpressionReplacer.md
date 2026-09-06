@@ -1,5 +1,4 @@
 # CriteriaFieldExpressionReplacer constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts field names in a criteria to their corresponding SQL field expressions.
 
@@ -30,7 +29,7 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IRow](../IRow.md)
-* interface [IPermissionService](../Serenity.Net.Core/../../Serenity.Abstractions/IPermissionService.md)
+* interface [IPermissionService](../../../Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
 * interface [ISqlDialect](../ISqlDialect.md)
 * interface [IField](../IField.md)
 * class [BaseCriteria](../BaseCriteria.md)

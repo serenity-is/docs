@@ -1,5 +1,4 @@
 # MembershipPageBase&lt;TUserRow&gt;.GetDeterministicHashCode method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Computes a deterministic hash code for the specified string.
 

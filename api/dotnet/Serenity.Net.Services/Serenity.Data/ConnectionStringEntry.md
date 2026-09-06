@@ -16,7 +16,7 @@ public class ConnectionStringEntry
 | [Dialect](ConnectionStringEntry/Dialect.md) { get; set; } | Gets or sets the dialect name. |
 | [DialectInstance](ConnectionStringEntry/DialectInstance.md) { get; set; } | Gets or sets the dialect instance. |
 | [FallbackFor](ConnectionStringEntry/FallbackFor.md) { get; set; } | Gets or sets a semicolon-separated list of connection keys that fall back to this connection when they are not configured. For example, "ProFeatures;ProWorkLog". |
-| [FallbackForKeys](ConnectionStringEntry/FallbackForKeys.md) { get; } | Gets the parsed, trimmed connection keys from [`FallbackFor`](ConnectionStringEntry/FallbackFor.md), split on ';'. Returns an empty set when [`FallbackFor`](ConnectionStringEntry/FallbackFor.md) is null or empty. Parsed lazily and cached. |
+| [FallbackForKeys](ConnectionStringEntry/FallbackForKeys.md) { get; } | Gets the parsed, trimmed connection keys from [`FallbackFor`](./ConnectionStringEntry/FallbackFor.md), split on ';'. Returns an empty set when [`FallbackFor`](./ConnectionStringEntry/FallbackFor.md) is null or empty. Parsed lazily and cached. |
 | [ProviderName](ConnectionStringEntry/ProviderName.md) { get; set; } | Gets or sets the provider name. |
 
 ## See Also

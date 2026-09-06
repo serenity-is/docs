@@ -1,5 +1,4 @@
 # RowField&lt;TForeign&gt;.CompareValues method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Compares the values.
 
@@ -18,5 +17,4 @@ A value indicating the relative order of the two values.
 
 ## See Also
 
-* class [TForeign](../Serenity.Net.Services/../RowField-1.TForeign.md)
 * class [RowField&lt;TForeign&gt;](../RowField-1.md)

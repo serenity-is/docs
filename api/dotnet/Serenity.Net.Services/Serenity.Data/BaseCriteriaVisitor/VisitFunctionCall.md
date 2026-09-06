@@ -1,5 +1,4 @@
 # BaseCriteriaVisitor.VisitFunctionCall method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Visits the function call criteria.
 

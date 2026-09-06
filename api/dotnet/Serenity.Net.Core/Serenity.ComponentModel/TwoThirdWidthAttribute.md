@@ -12,9 +12,9 @@ public class TwoThirdWidthAttribute : FormWidthAttribute
 
 | name | description |
 | --- | --- |
-| [TwoThirdWidthAttribute](TwoThirdWidthAttribute/TwoThirdWidthAttribute.md)() | Initializes a new instance of the [`TwoThirdWidthAttribute`](TwoThirdWidthAttribute.md) class. |
+| [TwoThirdWidthAttribute](TwoThirdWidthAttribute/TwoThirdWidthAttribute.md)() | Initializes a new instance of the [`TwoThirdWidthAttribute`](./TwoThirdWidthAttribute.md) class. |
 
 ## See Also
 
-* class [FormWidthAttribute](FormWidthAttribute.md)
+* class [FormWidthAttribute](./FormWidthAttribute.md)
 * **Source:** *[TwoThirdWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/Layout/TwoThirdWidthAttribute.cs)*

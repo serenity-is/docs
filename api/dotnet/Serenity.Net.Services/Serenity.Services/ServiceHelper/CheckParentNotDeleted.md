@@ -1,5 +1,4 @@
 # ServiceHelper.CheckParentNotDeleted method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Checks that parent record is not soft deleted
 
@@ -18,5 +17,5 @@ public static void CheckParentNotDeleted(IDbConnection connection, string tableN
 ## See Also
 
 * class [SqlQuery](../../Serenity.Data/SqlQuery.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [ServiceHelper](../ServiceHelper.md)

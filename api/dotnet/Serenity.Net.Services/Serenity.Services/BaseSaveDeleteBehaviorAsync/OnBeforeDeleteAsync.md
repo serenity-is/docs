@@ -1,9 +1,8 @@
 # BaseSaveDeleteBehaviorAsync.OnBeforeDeleteAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public virtual Task OnBeforeDeleteAsync(IDeleteRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 ## See Also

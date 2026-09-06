@@ -1,5 +1,4 @@
 # DisplayOrderHelper.ReorderValues method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets a records display order to to requested value, and also renumbers other records in the group as required.
 
@@ -32,7 +31,6 @@ If any of the display order values is changed true.
 ---
 
 # DisplayOrderHelper.ReorderValues method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets a records display order to to requested value, and also renumbers other records in the group as required.
 

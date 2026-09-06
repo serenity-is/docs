@@ -1,5 +1,4 @@
 # JsonServiceClient.InternalPost&lt;TResponse&gt; method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Posts to a JSON service, internal version
 
@@ -26,5 +25,4 @@ The response
 
 ## See Also
 
-* class [TResponse](../Serenity.Net.Services/../JsonServiceClient.TResponse.md)
 * class [JsonServiceClient](../JsonServiceClient.md)

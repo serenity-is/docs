@@ -35,10 +35,10 @@ public class LocalTextDataScript : DataScript<IDictionary<string, string>>, ICac
 
 ## Remarks
 
-Initializes a new instance of the [`LocalTextDataScript`](LocalTextDataScript.md) class.
+Initializes a new instance of the [`LocalTextDataScript`](./LocalTextDataScript.md) class.
 
 ## See Also
 
-* class [DataScript&lt;TData&gt;](../Serenity.Net.Services/DataScript-1.md)
-* interface [ICacheSuffix](ICacheSuffix.md)
+* class [DataScript&lt;TData&gt;](../../Serenity.Net.Services/Serenity.Web/DataScript-1.md)
+* interface [ICacheSuffix](./ICacheSuffix.md)
 * **Source:** *[LocalTextDataScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScriptTypes/LocalTextDataScript.cs)*

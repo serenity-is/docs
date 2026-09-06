@@ -1,11 +1,10 @@
 # IListBehaviorAsync.OnAfterExecuteQueryAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called after query is sent to database
 
 ```csharp
 public Task OnAfterExecuteQueryAsync(IListRequestHandler handler, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

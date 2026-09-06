@@ -17,5 +17,5 @@ public class RegisterTransientAttribute : RegisterServiceAttribute
 
 ## See Also
 
-* class [RegisterServiceAttribute](RegisterServiceAttribute.md)
+* class [RegisterServiceAttribute](./RegisterServiceAttribute.md)
 * **Source:** *[RegisterTransientAttribute.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/core/ComponentModel/AutoRegister/RegisterTransientAttribute.cs)*

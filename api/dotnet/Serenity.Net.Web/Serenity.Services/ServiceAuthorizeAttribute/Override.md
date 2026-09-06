@@ -1,5 +1,4 @@
 # ServiceAuthorizeAttribute.Override property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets or sets whether this attribute should override the controller level attribute if any. The default is `true`.
 

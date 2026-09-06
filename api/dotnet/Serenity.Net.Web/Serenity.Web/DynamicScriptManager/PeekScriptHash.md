@@ -1,5 +1,4 @@
 # DynamicScriptManager.PeekScriptHash method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Peeks the script hash for a script without actually executing it.
 
@@ -24,5 +23,5 @@ The cached hash for the script.
 
 ## See Also
 
-* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
+* interface [IDynamicScript](../../../Serenity.Net.Core/Serenity.Web/IDynamicScript.md)
 * class [DynamicScriptManager](../DynamicScriptManager.md)

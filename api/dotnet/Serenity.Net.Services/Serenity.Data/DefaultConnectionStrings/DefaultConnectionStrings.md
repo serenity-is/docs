@@ -1,5 +1,4 @@
 # DefaultConnectionStrings constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 The default connection string source.
 
@@ -22,5 +21,5 @@ Creates a new instance of [`DefaultConnectionStrings`](../DefaultConnectionStrin
 
 * class [ConnectionStringOptions](../ConnectionStringOptions.md)
 * interface [ISqlDialectMapper](../ISqlDialectMapper.md)
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [DefaultConnectionStrings](../DefaultConnectionStrings.md)

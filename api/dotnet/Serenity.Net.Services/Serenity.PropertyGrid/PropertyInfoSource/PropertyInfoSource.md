@@ -1,5 +1,4 @@
 # PropertyInfoSource constructor
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`PropertyInfoSource`](../PropertyInfoSource.md) class.
 

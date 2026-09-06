@@ -1,5 +1,4 @@
 # DisplayOrderHelper.ReorderValuesAsync method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets a records display order to to requested value, and also renumbers other records in the group as required.
 
@@ -7,7 +6,7 @@ Sets a records display order to to requested value, and also renumbers other rec
 public static Task<bool> ReorderValuesAsync(IDbConnection connection, IDisplayOrderRow row, 
     ICriteria filter = null, object recordID = null, int newDisplayOrder = 1, 
     bool descendingKeyOrder = false, bool hasUniqueConstraint = false, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -34,7 +33,6 @@ A task whose result is true if any of the display order values is changed.
 ---
 
 # DisplayOrderHelper.ReorderValuesAsync method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously sets a records display order to to requested value, and also renumbers other records in the group as required.
 
@@ -42,7 +40,7 @@ Asynchronously sets a records display order to to requested value, and also renu
 public static Task<bool> ReorderValuesAsync(IDbConnection connection, string tableName, 
     Field keyField, Field orderField, ICriteria filter = null, object recordID = null, 
     int newDisplayOrder = 1, bool descendingKeyOrder = false, bool hasUniqueConstraint = false, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -1,11 +1,9 @@
 # SaveRequestHandlerAsync&lt;TRow,TSaveRequest,TSaveResponse&gt;.SetInternalFieldsAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets values for internal fields
 
 ```csharp
-protected virtual Task SetInternalFieldsAsync(
-    CancellationToken cancellationToken = default(CancellationToken))
+protected virtual Task SetInternalFieldsAsync(CancellationToken cancellationToken = default)
 ```
 
 ## See Also

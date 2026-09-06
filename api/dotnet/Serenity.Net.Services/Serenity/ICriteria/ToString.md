@@ -1,5 +1,4 @@
 # ICriteria.ToString method (1 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to string representation while adding params to the target query.
 
@@ -23,7 +22,6 @@ A String that represents this instance.
 ---
 
 # ICriteria.ToString method (2 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to string representation into a string builder, while adding its params to the target query.
 

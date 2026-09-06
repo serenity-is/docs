@@ -1,5 +1,4 @@
 # DataReaderExtensions.ToString method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Reads and converts the value at the field index to String. Returns `null` if the value is DBNull.
 

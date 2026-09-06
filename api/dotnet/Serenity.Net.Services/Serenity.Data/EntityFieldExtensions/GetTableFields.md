@@ -1,5 +1,4 @@
 # EntityFieldExtensions.GetTableFields method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a dictionary of table fields (e.g. not a foreign or calculated field) in a row.
 

@@ -1,5 +1,4 @@
 # BaseRequestHandler constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 An abstract class that can be used as base for request handlers that accept a [`IRequestContext`](../IRequestContext.md) instance.
 

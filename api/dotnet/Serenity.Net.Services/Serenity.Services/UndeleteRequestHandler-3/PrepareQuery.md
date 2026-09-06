@@ -1,5 +1,4 @@
 # UndeleteRequestHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;.PrepareQuery method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Prepares the query used to select the existing record
 

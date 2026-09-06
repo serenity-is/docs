@@ -1,7 +1,7 @@
 # IBehaviorProvider interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface abstraction for behavior provider which resolves list of behavior instances of a specified type, like [`ISaveBehavior`](ISaveBehavior.md) etc.
+Interface abstraction for behavior provider which resolves list of behavior instances of a specified type, like [`ISaveBehavior`](./ISaveBehavior.md) etc.
 
 ```csharp
 public interface IBehaviorProvider

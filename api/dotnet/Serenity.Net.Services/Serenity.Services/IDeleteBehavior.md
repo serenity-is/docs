@@ -9,7 +9,7 @@ public interface IDeleteBehavior
 
 ## Remarks
 
-All delete behaviors should implement either [`IDeleteBehaviorSync`](IDeleteBehaviorSync.md) or [`IDeleteBehaviorAsync`](IDeleteBehaviorAsync.md), not this interface directly.
+All delete behaviors should implement either [`IDeleteBehaviorSync`](./IDeleteBehaviorSync.md) or [`IDeleteBehaviorAsync`](./IDeleteBehaviorAsync.md), not this interface directly.
 
 ## See Also
 

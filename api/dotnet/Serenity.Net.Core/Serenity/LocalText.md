@@ -20,11 +20,11 @@ public class LocalText : ILocalText
 | [Key](LocalText/Key.md) { get; } | Gets the local text key. |
 | [ToString](LocalText/ToString.md)(…) | Returns the translation for the current context. |
 | const [InvariantLanguageID](LocalText/InvariantLanguageID.md) | The invariant language ID, which is an empty string. |
-| [implicit operator](LocalText/op_Implicit.md) | Implicit conversion from String that creates a new instance of [`LocalText`](LocalText.md) with the specified key. |
+| [implicit operator](LocalText/op_Implicit.md) | Implicit conversion from String that creates a new instance of [`LocalText`](./LocalText.md) with the specified key. |
 
 ## Remarks
 
-Creates a new [`LocalText`](LocalText.md) instance that contains the specified local text key.
+Creates a new [`LocalText`](./LocalText.md) instance that contains the specified local text key.
 
 ## See Also
 

@@ -28,5 +28,5 @@ public class WrappedTransaction : DbTransaction, IHasActualTransaction
 
 ## See Also
 
-* interface [IHasActualTransaction](IHasActualTransaction.md)
+* interface [IHasActualTransaction](./IHasActualTransaction.md)
 * **Source:** *[WrappedTransaction.cs](https://github.com/serenity-is/Serenity/blob/9a6b298b9db4a9b7c6735a792f30882f8be62d68/src/services/Data/Connections/WrappedTransaction.cs)*

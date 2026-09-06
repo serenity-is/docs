@@ -1,5 +1,4 @@
 # ImageChecker.Width property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the width of the validated image.
 

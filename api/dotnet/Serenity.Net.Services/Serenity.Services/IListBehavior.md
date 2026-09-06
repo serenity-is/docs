@@ -9,7 +9,7 @@ public interface IListBehavior
 
 ## Remarks
 
-All list behaviors should implement either [`IListBehaviorSync`](IListBehaviorSync.md) or [`IListBehaviorAsync`](IListBehaviorAsync.md), not this interface directly.
+All list behaviors should implement either [`IListBehaviorSync`](./IListBehaviorSync.md) or [`IListBehaviorAsync`](./IListBehaviorAsync.md), not this interface directly.
 
 ## See Also
 

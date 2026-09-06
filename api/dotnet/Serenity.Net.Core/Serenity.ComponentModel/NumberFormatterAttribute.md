@@ -12,11 +12,11 @@ public class NumberFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [NumberFormatterAttribute](NumberFormatterAttribute/NumberFormatterAttribute.md)() | Initializes a new instance of the [`NumberFormatterAttribute`](NumberFormatterAttribute.md) class. |
+| [NumberFormatterAttribute](NumberFormatterAttribute/NumberFormatterAttribute.md)() | Initializes a new instance of the [`NumberFormatterAttribute`](./NumberFormatterAttribute.md) class. |
 | [DisplayFormat](NumberFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
 | const [Key](NumberFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[NumberFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/NumberFormatterAttribute.cs)*

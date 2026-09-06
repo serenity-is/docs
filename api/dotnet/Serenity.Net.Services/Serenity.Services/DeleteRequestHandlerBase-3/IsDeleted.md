@@ -1,5 +1,4 @@
 # DeleteRequestHandlerBase&lt;TRow,TDeleteRequest,TDeleteResponse&gt;.IsDeleted method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Checks if the entity is already deleted
 

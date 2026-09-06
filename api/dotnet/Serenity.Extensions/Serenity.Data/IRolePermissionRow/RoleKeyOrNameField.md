@@ -1,5 +1,4 @@
 # IRolePermissionRow.RoleKeyOrNameField property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Role key or role name field
 
@@ -9,5 +8,5 @@ public StringField RoleKeyOrNameField { get; }
 
 ## See Also
 
-* class [StringField](../Serenity.Net.Services/../StringField.md)
+* class [StringField](../../../Serenity.Net.Services/Serenity.Data/StringField.md)
 * interface [IRolePermissionRow](../IRolePermissionRow.md)

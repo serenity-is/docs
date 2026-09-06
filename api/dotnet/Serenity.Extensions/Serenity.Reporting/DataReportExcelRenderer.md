@@ -16,5 +16,5 @@ public class DataReportExcelRenderer : IDataReportExcelRenderer
 
 ## See Also
 
-* interface [IDataReportExcelRenderer](../Serenity.Net.Services/IDataReportExcelRenderer.md)
+* interface [IDataReportExcelRenderer](../../Serenity.Net.Services/Serenity.Reporting/IDataReportExcelRenderer.md)
 * **Source:** *[DataReportExcelRenderer.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/Reporting/DataReport/DataReportExcelRenderer.cs)*

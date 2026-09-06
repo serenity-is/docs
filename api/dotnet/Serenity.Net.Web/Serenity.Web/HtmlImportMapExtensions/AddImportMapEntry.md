@@ -1,5 +1,4 @@
 # HtmlImportMapExtensions.AddImportMapEntry method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds an entry to the import map for the current HTML view, associating a module specifier with its address and optional integrity value.
 

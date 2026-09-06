@@ -1,5 +1,4 @@
 # ServiceLookupEditorBaseAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Base class for service lookup based editor types.
 

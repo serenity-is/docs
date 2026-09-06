@@ -21,7 +21,7 @@ public class LocalTextPrefixAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`LocalTextPrefixAttribute`](LocalTextPrefixAttribute.md) class.
+Initializes a new instance of the [`LocalTextPrefixAttribute`](./LocalTextPrefixAttribute.md) class.
 
 ## See Also
 

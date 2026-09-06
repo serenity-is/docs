@@ -1,5 +1,4 @@
 # HtmlScriptExtensions.AutoIncludeModuleCss method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Automatically includes the corresponding `.css` file for an ES module if it exists next to the `.js` file.
 

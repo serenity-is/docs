@@ -1,11 +1,10 @@
 # CaptureLogBehavior.LogAsync method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously logs a capture log operation
 
 ```csharp
 public Task LogAsync(IUnitOfWork uow, IRow old, IRow row, object userId, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

@@ -18,6 +18,6 @@ public sealed class SqlDelete : QueryWithParams, IFilterableQuery
 
 ## See Also
 
-* class [QueryWithParams](QueryWithParams.md)
-* interface [IFilterableQuery](IFilterableQuery.md)
+* class [QueryWithParams](./QueryWithParams.md)
+* interface [IFilterableQuery](./IFilterableQuery.md)
 * **Source:** *[SqlDelete.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/FluentSql/SqlDelete.cs)*

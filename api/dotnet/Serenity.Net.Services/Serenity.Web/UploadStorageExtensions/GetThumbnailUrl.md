@@ -1,5 +1,4 @@
 # UploadStorageExtensions.GetThumbnailUrl method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets thumbnail URL for the file path.
 

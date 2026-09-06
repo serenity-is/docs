@@ -1,5 +1,4 @@
 # MasterDetailRelationAttribute.IncludeColumns property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the comma separated list of include columns. Obsolete, please prefer IncludeColumnNames or ColumnsType
 

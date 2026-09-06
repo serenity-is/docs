@@ -1,5 +1,4 @@
 # CustomFilteringAttribute.GetOption&lt;TType&gt; method
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the option.
 
@@ -14,5 +13,4 @@ protected TType GetOption<TType>(string key)
 
 ## See Also
 
-* class [TType](../Serenity.Net.Core/../CustomFilteringAttribute.TType.md)
 * class [CustomFilteringAttribute](../CustomFilteringAttribute.md)

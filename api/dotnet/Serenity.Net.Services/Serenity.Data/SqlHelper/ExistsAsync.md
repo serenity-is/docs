@@ -1,11 +1,10 @@
 # SqlHelper.ExistsAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the query asynchronously returning true if it has at least one result.
 
 ```csharp
 public static Task<bool> ExistsAsync(this SqlQuery query, IDbConnection connection, 
-    ILogger logger = null, CancellationToken cancellationToken = default(CancellationToken))
+    ILogger logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

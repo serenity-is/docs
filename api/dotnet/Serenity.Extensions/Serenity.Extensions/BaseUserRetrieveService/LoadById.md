@@ -1,5 +1,4 @@
 # BaseUserRetrieveService.LoadById method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Loads the user by the specified ID from database.
 
@@ -13,5 +12,5 @@ protected abstract IUserDefinition LoadById(string id)
 
 ## See Also
 
-* interface [IUserDefinition](../Serenity.Net.Core/../../Serenity/IUserDefinition.md)
+* interface [IUserDefinition](../../../Serenity.Net.Core/Serenity/IUserDefinition.md)
 * class [BaseUserRetrieveService](../BaseUserRetrieveService.md)

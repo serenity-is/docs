@@ -1,5 +1,4 @@
 # RowField&lt;TForeign&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Field with a Row value.
 
@@ -28,8 +27,7 @@ Initializes a new instance of the [`RowField`](../RowField-1.md) class.
 
 * class [CustomClassField&lt;TValue&gt;](../CustomClassField-1.md)
 * class [Field](../Field.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
-* class [TForeign](../Serenity.Net.Services/../RowField-1.TForeign.md)
 * class [RowField&lt;TForeign&gt;](../RowField-1.md)

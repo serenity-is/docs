@@ -1,5 +1,4 @@
 # CaptureLogAttribute constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Enables capture logging for a row type.
 

@@ -29,18 +29,17 @@ public abstract class Row<TFields> : IEditableRow, IRow<TFields>
 
 | name | description |
 | --- | --- |
-| [Row](Row-1/Row.md)() | Initializes a new instance of the [`Row`](Row-1.md) class. |
-| [Row](Row-1/Row.md)(…) | Initializes a new instance of the [`Row`](Row-1.md) class. |
-| readonly [fields-](Row-1/fields-.md) | The fields |
+| [Row](Row-1/Row.md)() | Initializes a new instance of the [`Row`](./Row-1.md) class. |
+| [Row](Row-1/Row.md)(…) | Initializes a new instance of the [`Row`](./Row-1.md) class. |
+| readonly [fields](Row-1/fields.md) | The fields |
 | virtual [CloneInto](Row-1/CloneInto.md)(…) |  |
 | virtual [CloneRow](Row-1/CloneRow.md)() | Clones the row. |
 | virtual [CreateNew](Row-1/CreateNew.md)() | Creates the new. |
 
 ## See Also
 
-* interface [IRow](IRow.md)
-* interface [IRow&lt;TFields&gt;](IRow-1.md)
-* interface [IEditableRow](IEditableRow.md)
-* class [TFields](../Serenity.Net.Services/Row-1.TFields.md)
-* class [RowFieldsBase](RowFieldsBase.md)
+* interface [IRow](./IRow.md)
+* interface [IRow&lt;TFields&gt;](./IRow-1.md)
+* interface [IEditableRow](./IEditableRow.md)
+* class [RowFieldsBase](./RowFieldsBase.md)
 * **Source:** *[Row.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/Row.cs)*

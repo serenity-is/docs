@@ -1,5 +1,4 @@
 # UserPreferenceRow.Value property
-**namespace:** *[Serenity.Extensions.Entities](../../README.md#serenity.extensions.entities-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The preference value.
 

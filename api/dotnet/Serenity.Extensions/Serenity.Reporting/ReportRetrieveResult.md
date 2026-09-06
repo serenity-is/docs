@@ -15,5 +15,5 @@ public class ReportRetrieveResult : ReportRetrieveResponse
 
 ## See Also
 
-* class [ReportRetrieveResponse](../Serenity.Net.Services/ReportRetrieveResponse.md)
+* class [ReportRetrieveResponse](../../Serenity.Net.Services/Serenity.Reporting/ReportRetrieveResponse.md)
 * **Source:** *[ReportRetrieveResult.cs](https://github.com/serenity-is/Serenity/blob/bb0064f552b586c1549668ffee8248a7ac86b3c4/common-features/src/extensions/Modules/Reporting/Tree/ReportRetrieveResult.cs)*

@@ -1,10 +1,9 @@
 # INavigationModel.ActiveItem property
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 The active navigation item.
 
 ```csharp
-public NavigationItem ActiveItem { get; }
+public NavigationItem? ActiveItem { get; }
 ```
 
 ## See Also

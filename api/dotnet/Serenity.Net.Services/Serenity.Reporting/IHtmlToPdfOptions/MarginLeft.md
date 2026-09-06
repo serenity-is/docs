@@ -1,5 +1,4 @@
 # IHtmlToPdfOptions.MarginLeft property
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Page left margin, default is unspecified.
 

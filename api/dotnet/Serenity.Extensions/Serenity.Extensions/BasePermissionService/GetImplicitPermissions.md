@@ -1,5 +1,4 @@
 # BasePermissionService.GetImplicitPermissions method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets implicit permissions defined in the application.
 
@@ -15,5 +14,5 @@ public static IDictionary<string, HashSet<string>> GetImplicitPermissions(IMemor
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [BasePermissionService](../BasePermissionService.md)

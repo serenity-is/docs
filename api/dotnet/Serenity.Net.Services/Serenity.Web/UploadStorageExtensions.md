@@ -1,7 +1,7 @@
 # UploadStorageExtensions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extension methods for [`IUploadStorage`](IUploadStorage.md) and related classes
+Extension methods for [`IUploadStorage`](./IUploadStorage.md) and related classes
 
 ```csharp
 public static class UploadStorageExtensions

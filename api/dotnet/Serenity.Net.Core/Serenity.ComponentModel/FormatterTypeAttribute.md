@@ -22,7 +22,7 @@ public class FormatterTypeAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`FormatterTypeAttribute`](FormatterTypeAttribute.md) class.
+Initializes a new instance of the [`FormatterTypeAttribute`](./FormatterTypeAttribute.md) class.
 
 ## See Also
 

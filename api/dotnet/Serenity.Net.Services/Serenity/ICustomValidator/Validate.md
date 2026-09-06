@@ -1,5 +1,4 @@
 # ICustomValidator.Validate method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates the value using the specified context.
 

@@ -1,11 +1,10 @@
 # SqlHelper.ExecuteScalarAsync method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the statement asynchronously returning a scalar value.
 
 ```csharp
 public static Task<object> ExecuteScalarAsync(IDbConnection connection, SqlQuery query, 
-    ILogger logger = null, CancellationToken cancellationToken = default(CancellationToken))
+    ILogger logger = null, CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |
@@ -33,14 +32,13 @@ A task that represents the asynchronous operation. The task result contains the 
 ---
 
 # SqlHelper.ExecuteScalarAsync method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the statement asynchronously returning a scalar value.
 
 ```csharp
 public static Task<object> ExecuteScalarAsync(IDbConnection connection, string commandText, 
     IDictionary<string, object> param = null, ILogger logger = null, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

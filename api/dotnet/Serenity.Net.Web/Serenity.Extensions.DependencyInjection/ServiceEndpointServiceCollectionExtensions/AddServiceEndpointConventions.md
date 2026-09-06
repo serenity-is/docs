@@ -1,5 +1,4 @@
 # ServiceEndpointServiceCollectionExtensions.AddServiceEndpointConventions method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds service endpoint related services and conventions to the service collection.
 

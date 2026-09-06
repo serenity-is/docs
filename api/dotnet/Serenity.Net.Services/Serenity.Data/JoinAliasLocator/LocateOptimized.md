@@ -1,5 +1,4 @@
 # JoinAliasLocator.LocateOptimized method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Locates the aliases in a SQL expression, returning first alias in an out parameter.
 

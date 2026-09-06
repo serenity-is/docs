@@ -1,5 +1,4 @@
 # DefaultReportFactory constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Default implementation of IReportFactory.
 
@@ -26,5 +25,5 @@ Initializes a new instance of the [`DefaultReportFactory`](../DefaultReportFacto
 
 ## See Also
 
-* interface [IReportRegistry](../Serenity.Net.Services/../IReportRegistry.md)
+* interface [IReportRegistry](../../../Serenity.Net.Services/Serenity.Reporting/IReportRegistry.md)
 * class [DefaultReportFactory](../DefaultReportFactory.md)

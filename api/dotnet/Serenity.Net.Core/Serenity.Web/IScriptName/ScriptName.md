@@ -1,5 +1,4 @@
 # IScriptName.ScriptName property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the script name
 

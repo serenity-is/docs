@@ -1,5 +1,4 @@
 # DynamicScriptMiddleware.ReturnScript method
-**namespace:** *[Serenity.Web.Middleware](../../README.md#serenity.web.middleware-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Returns a dynamic script by its key.
 

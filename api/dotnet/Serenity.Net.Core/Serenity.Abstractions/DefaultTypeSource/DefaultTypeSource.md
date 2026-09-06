@@ -1,10 +1,9 @@
 # DefaultTypeSource constructor
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Default implementation for a type source that accepts an assembly list.
 
 ```csharp
-public DefaultTypeSource(IEnumerable<Assembly> assemblies, IFeatureToggles featureToggles = null)
+public DefaultTypeSource(IEnumerable<Assembly> assemblies, IFeatureToggles? featureToggles = null)
 ```
 
 | parameter | description |

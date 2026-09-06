@@ -1,12 +1,10 @@
 # EntityConnectionExtensions.UpdateByIdAsync&lt;TRow&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Asynchronously updates the entity by its identifier. Note that this operates at a low level, it does not perform any validation or permission check and does not call service behaviors / handlers.
 
 ```csharp
 public static Task<int> UpdateByIdAsync<TRow>(this IDbConnection connection, TRow row, 
-    ExpectedRows expectedRows = ExpectedRows.One, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    ExpectedRows expectedRows = ExpectedRows.One, CancellationToken cancellationToken = default)
     where TRow : IIdRow
 ```
 
@@ -31,7 +29,6 @@ A task representing the asynchronous operation. The task result is the number of
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * enum [ExpectedRows](../ExpectedRows.md)
 * interface [IIdRow](../IIdRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

@@ -36,7 +36,6 @@ public abstract class GenericValueField<TValue> : Field, IEnumTypeField
 
 ## See Also
 
-* class [Field](Field.md)
-* interface [IEnumTypeField](IEnumTypeField.md)
-* struct [TValue](../Serenity.Net.Services/GenericValueField-1.TValue.md)
+* class [Field](./Field.md)
+* interface [IEnumTypeField](./IEnumTypeField.md)
 * **Source:** *[GenericValueField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/GenericValueField.cs)*

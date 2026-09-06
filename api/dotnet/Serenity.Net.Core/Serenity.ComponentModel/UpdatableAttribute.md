@@ -17,7 +17,7 @@ public class UpdatableAttribute : Attribute
 | name | description |
 | --- | --- |
 | [UpdatableAttribute](UpdatableAttribute/UpdatableAttribute.md)(…) | Controls if this field is editable in update record mode. When used with fields, turns on or off the updatable flag. |
-| [Value](UpdatableAttribute/Value.md) { get; } | Gets a value indicating whether this [`UpdatableAttribute`](UpdatableAttribute.md) is enabled. |
+| [Value](UpdatableAttribute/Value.md) { get; } | Gets a value indicating whether this [`UpdatableAttribute`](./UpdatableAttribute.md) is enabled. |
 
 ## Remarks
 

@@ -12,7 +12,7 @@ public class EnumJsonConverter : JsonConverterFactory
 | name | description |
 | --- | --- |
 | [EnumJsonConverter](EnumJsonConverter/EnumJsonConverter.md)() | The default constructor. |
-| static readonly [Instance](EnumJsonConverter/Instance.md) | The default instance of the [`EnumJsonConverter`](EnumJsonConverter.md). |
+| static readonly [Instance](EnumJsonConverter/Instance.md) | The default instance of the [`EnumJsonConverter`](./EnumJsonConverter.md). |
 | override [CanConvert](EnumJsonConverter/CanConvert.md)(…) |  |
 | override [CreateConverter](EnumJsonConverter/CreateConverter.md)(…) |  |
 

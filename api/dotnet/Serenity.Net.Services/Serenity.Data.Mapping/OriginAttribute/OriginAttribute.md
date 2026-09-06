@@ -1,5 +1,4 @@
 # OriginAttribute constructor (1 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`OriginAttribute`](../OriginAttribute.md) class.
 
@@ -18,7 +17,6 @@ public OriginAttribute(string join)
 ---
 
 # OriginAttribute constructor (2 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`OriginAttribute`](../OriginAttribute.md) class.
 

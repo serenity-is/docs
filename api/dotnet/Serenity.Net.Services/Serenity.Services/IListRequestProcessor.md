@@ -11,9 +11,9 @@ public interface IListRequestProcessor : IListRequestHandler
 
 | name | description |
 | --- | --- |
-| [Process](IListRequestProcessor/Process.md)(…) | Processes the [`ListRequest`](ListRequest.md) and returns a [`ListResponse`](ListResponse-1.md) |
+| [Process](IListRequestProcessor/Process.md)(…) | Processes the [`ListRequest`](./ListRequest.md) and returns a [`ListResponse`](./ListResponse-1.md) |
 
 ## See Also
 
-* interface [IListRequestHandler](IListRequestHandler.md)
+* interface [IListRequestHandler](./IListRequestHandler.md)
 * **Source:** *[IListRequestProcessor.cs](https://github.com/serenity-is/Serenity/blob/6b0ee5bf7cf3317b3c89e88bd6a74f4e510d83c6/src/services/RequestHandlers/List/IListRequestProcessor.cs)*

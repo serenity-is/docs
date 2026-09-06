@@ -12,7 +12,7 @@ public class UrlFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [UrlFormatterAttribute](UrlFormatterAttribute/UrlFormatterAttribute.md)() | Initializes a new instance of the [`UrlFormatterAttribute`](UrlFormatterAttribute.md) class. |
+| [UrlFormatterAttribute](UrlFormatterAttribute/UrlFormatterAttribute.md)() | Initializes a new instance of the [`UrlFormatterAttribute`](./UrlFormatterAttribute.md) class. |
 | [DisplayFormat](UrlFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
 | [DisplayProperty](UrlFormatterAttribute/DisplayProperty.md) { get; set; } | Gets or sets the display property to show in hyperlink as text. |
 | [Target](UrlFormatterAttribute/Target.md) { get; set; } | Gets or sets the target window, e.g. "_blank". |
@@ -22,5 +22,5 @@ public class UrlFormatterAttribute : CustomFormatterAttribute
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[UrlFormatterAtrribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/UrlFormatterAtrribute.cs)*

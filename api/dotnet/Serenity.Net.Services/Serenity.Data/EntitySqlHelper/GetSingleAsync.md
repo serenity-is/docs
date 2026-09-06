@@ -1,11 +1,10 @@
 # EntitySqlHelper.GetSingleAsync method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the single entity returned by executing the query asynchronously. The values are loaded into the loader row of the query.
 
 ```csharp
 public static Task<bool> GetSingleAsync(this SqlQuery query, IDbConnection connection, 
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 | parameter | description |

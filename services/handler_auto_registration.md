@@ -33,7 +33,7 @@ The relevant call for handler discovery is [AddCustomRequestHandlers](../api/dot
 1. **Scans the type source** for all types implementing [IRequestHandler](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRequestHandler.md) (via `GetTypesWithInterface(typeof(IRequestHandler))`). This is why custom handlers must implement `IRequestHandler` — see [Custom Request Handlers](custom_request_handlers.md).
 2. **Registers each concrete handler type** as transient for itself.
 3. **Registers each handler for its interfaces**, as long as the interface derives from `IRequestHandler`. The base marker interfaces are skipped:
-   - `IRequestHandler`, `ISaveRequestHandler`, `IListRequestHandler`, `IRetrieveRequestHandler`, `IDeleteRequestHandler`, `IUndeleteRequestHandler` and their `*Processor` counterparts;
+   - `IRequestHandler`, `ISaveRequestHandler`, `IListRequestHandler`, `IRetrieveRequestHandler`, `IDeleteRequestHandler`, `IUndeleteRequestHandler` and their `*Processor` / `*ProcessorAsync` counterparts;
    - the generic `IRequestHandler<,,>`, `IRequestHandler<>`, `IRequestType<>`, `IResponseType<>` interfaces (these are covered by [AddProxyRequestHandlers](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/ServiceCollectionExtensions/AddProxyRequestHandlers.md)).
 4. **Handles multiple implementations**: if more than one handler implements the same interface, one must be marked with [DefaultHandler(true)](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerAttribute.md) — otherwise an `InvalidProgramException` is thrown asking you to pick a default.
 
@@ -53,6 +53,10 @@ services.AddServiceHandlers(customHandlerPredicate: (intf, impl) => intf != impl
 
 [AddProxyRequestHandlers](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/ServiceCollectionExtensions/AddProxyRequestHandlers.md) registers transient proxies that let the DI container resolve the generic handler interfaces like `ICreateHandler<TRow>`, `IUpdateHandler<TRow>`, `IDeleteHandler<TRow>`, `IListHandler<TRow>`, `IRetrieveHandler<TRow>`, and `IUndeleteHandler<TRow>` on demand — even when the concrete handler is only registered for its own specific interface (e.g. `ILanguageSaveHandler`).
 
+The same proxies are registered for the async variants: `ICreateHandlerAsync<TRow>`, `IUpdateHandlerAsync<TRow>`, `IDeleteHandlerAsync<TRow>`, `IListHandlerAsync<TRow>`, `IRetrieveHandlerAsync<TRow>`, and `IUndeleteHandlerAsync<TRow>`. These resolve the async handler (e.g. `SaveRequestHandlerAsync<TRow>`) and expose `CreateAsync`/`UpdateAsync`/... methods that accept a `CancellationToken`.
+
+When a custom handler is only implemented for one mode (sync or async), the proxy can still resolve the other mode: [`DefaultHandlerFactory`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerFactory.md) detects the companion interface and wraps the custom handler so the requested mode is served — an async request for a row whose only custom handler is synchronous returns the sync handler wrapped in a `SyncToAsync...` adapter, and vice versa. This means existing synchronous custom handlers keep working unchanged from asynchronous code.
+
 > Every handler receives an [`IRequestContext`](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRequestContext.md) through its constructor, and the built-in handlers derive from [`BaseRequestHandler`](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseRequestHandler.md). See [Request Context](request-context.md) for what the context provides and how the base class exposes it.
 
 ## Handler Registry, Factory & Activator
@@ -69,15 +73,17 @@ The three pieces are registered by `AddServiceHandlerFactory()`:
 
 `DefaultHandlerFactory.CreateHandler(rowType, handlerInterface)` resolves the handler type like this:
 
-1. Asks the registry for all handler classes assignable to the requested handler interface that also implement `IRequestHandler<TRow>` and are not marked `[DefaultHandler(false)]`.
+1. Asks the registry for all handler classes assignable to the requested handler interface (or its sync/async companion) that also implement `IRequestHandler<TRow>` and are not marked `[DefaultHandler(false)]`.
 2. If exactly one matches, uses it.
-3. If none match, falls back to the interface's [`GenericHandlerTypeAttribute`](../api/dotnet/Serenity.Net.Services/Serenity.Services/GenericHandlerTypeAttribute.md) (e.g. `ISaveRequestHandler` is annotated with `[GenericHandlerType(typeof(SaveRequestHandler<>))]`) and closes the generic over the row type.
+3. If none match, falls back to the interface's [`GenericHandlerTypeAttribute`](../api/dotnet/Serenity.Net.Services/Serenity.Services/GenericHandlerTypeAttribute.md) (e.g. `ISaveRequestProcessorAsync` is annotated with `[GenericHandlerType(typeof(SaveRequestHandlerAsync<>))]`) and closes the generic over the row type.
 4. If several match, picks the one marked [`[DefaultHandler(true)]`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerAttribute.md); otherwise it throws `InvalidProgramException` telling you to add `[DefaultHandler]`.
+
+When the only matching custom handler implements the *companion* (other mode) interface rather than the requested one, the factory returns the handler wrapped in the appropriate adapter (see [Proxy Request Handlers](#proxy-request-handlers) above), so custom handler logic is never silently skipped.
 
 The typed helper [`DefaultHandlerFactoryExtensions.CreateHandler<THandler>(rowType)`](../api/dotnet/Serenity.Net.Services/Serenity.Services/DefaultHandlerFactoryExtensions.md) wraps this for a specific handler interface:
 
 ```cs
-var saveHandler = handlerFactory.CreateHandler<ISaveRequestHandler>(rowType);
+var saveHandler = handlerFactory.CreateHandler<ISaveRequestProcessorAsync>(rowType);
 ```
 
 ### Request & response types

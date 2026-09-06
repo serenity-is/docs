@@ -113,16 +113,17 @@ public static class ClaimsPrincipalExtensions
 Now, it is necessary to filter the listed users by `TenantId`. Navigate to the `/Modules/Administration/User/RequestHandlers/` directory, locate the `UserListHandler.cs` file, and modify it as shown below:
 
 ```cs
-public class UserListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IUserListHandler
+public class UserListHandler : ListRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IUserListHandler
 {
     public UserListHandler(IRequestContext context)
          : base(context)
     {
     }
 
-    protected override void ApplyFilters(SqlQuery query)
+    protected override async Task ApplyFiltersAsync(SqlQuery query,
+        CancellationToken cancellationToken = default)
     {
-        base.ApplyFilters(query);
+        await base.ApplyFiltersAsync(query, cancellationToken);
 
         if (Permissions.HasPermission(PermissionKeys.Tenants))
             return;

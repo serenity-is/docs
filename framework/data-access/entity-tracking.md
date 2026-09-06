@@ -200,10 +200,11 @@ As a rule of thumb, never pass an entity returned from `ById`, `List`, and simil
 // NEVER DO THIS!
 var customer = connection.ById<CustomerRow>(5);
 customer.City = "California";
-new CustomerCreateHandler(....).Update(uow, {
+await new CustomerUpdateHandler(....).UpdateAsync(uow, new()
+{
     EntityId: customer.Id,
     Entity: customer
-});
+}, cancellationToken);
 ```
 
 The handler will assume that you've assigned all those fields and will generate an update statement including all those table fields.
@@ -216,10 +217,7 @@ var customer = new CustomerRow();
 customer.Id = existing.Id;
 customer.City = existing.Country == "USA" ? "California" 
     : (existing.Country == "France" ? "Paris" : existing.City);
-connection.UpdateById(uow, {
-    EntityId: customer.Id,
-    Entity: customer
-}); 
+await connection.UpdateByIdAsync(customer, cancellationToken);
 ```
 
 Another reason you should never pass such entities to Request handlers is that they have `track with checks ON`, which we'll cover next.

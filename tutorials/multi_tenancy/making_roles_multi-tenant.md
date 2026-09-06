@@ -31,20 +31,20 @@ Next, we will make several changes to the *RequestsHandlers*:
 
 ```csharp
 //...
-public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
+public class RoleSaveHandler : SaveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
 {
     //...
-    protected override void SetInternalFields()
+    protected override async Task SetInternalFieldsAsync(CancellationToken cancellationToken = default)
     {
-        base.SetInternalFields();
+        await base.SetInternalFieldsAsync(cancellationToken);
 
         if (IsCreate)
             Row.TenantId = User.GetTenantId();
     }
 
-    protected override void ValidateRequest()
+    protected override async Task ValidateRequestAsync(CancellationToken cancellationToken = default)
     {
-        base.ValidateRequest();
+        await base.ValidateRequestAsync(cancellationToken);
 
         if (IsUpdate)
         {
@@ -57,12 +57,12 @@ public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
 
 ```csharp
 //...
-public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
+public class RoleDeleteHandler : DeleteRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
 {
     //...
-    protected override void ValidateRequest()
+    protected override async Task ValidateRequestAsync(CancellationToken cancellationToken = default)
     {
-        base.ValidateRequest();
+        await base.ValidateRequestAsync(cancellationToken);
 
         if (Row.TenantId != User.GetTenantId())
             Permissions.ValidatePermission(PermissionKeys.Tenants, Localizer);
@@ -72,13 +72,14 @@ public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyRespon
 
 ```csharp
 //...
-public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
+public class RoleRetrieveHandler : RetrieveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
 {
     //...
     private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
-    protected override void PrepareQuery(SqlQuery query)
+    protected override async Task PrepareQueryAsync(SqlQuery query,
+        CancellationToken cancellationToken = default)
     {
-        base.PrepareQuery(query);
+        await base.PrepareQueryAsync(query, cancellationToken);
 
         if (!Permissions.HasPermission(PermissionKeys.Tenants))
             query.Where(Fld.TenantId == User.GetTenantId());
@@ -88,13 +89,14 @@ public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyRe
 
 ```csharp
 //...
-public class RoleListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IRoleListHandler
+public class RoleListHandler : ListRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleListHandler
 {
     //...
     private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
-    protected override void ApplyFilters(SqlQuery query)
+    protected override async Task ApplyFiltersAsync(SqlQuery query,
+        CancellationToken cancellationToken = default)
     {
-        base.ApplyFilters(query);
+        await base.ApplyFiltersAsync(query, cancellationToken);
 
         if (!Permissions.HasPermission(PermissionKeys.Tenants))
             query.Where(Fld.TenantId == User.GetTenantId());

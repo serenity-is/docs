@@ -27,8 +27,8 @@ using MovieTutorial;
 namespace MovieTutorial;
 
 public class MultiTenantBehavior : IImplicitBehavior,
-    ISaveBehavior, IDeleteBehavior,
-    IListBehavior, IRetrieveBehavior
+    IRetrieveBehaviorAsync, IListBehaviorAsync,
+    ISaveBehaviorAsync, IDeleteBehaviorAsync
 {
     private Int32Field tenantIdField;
 
@@ -41,60 +41,51 @@ public class MultiTenantBehavior : IImplicitBehavior,
         return true;
     }
 
-    public void OnPrepareQuery(IRetrieveRequestHandler handler,
-        SqlQuery query)
+    public Task OnPrepareQueryAsync(IRetrieveRequestHandler handler,
+        SqlQuery query, CancellationToken cancellationToken = default)
     {
         if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
             query.Where(tenantIdField == handler.Context.User.GetTenantId());
+        return Task.CompletedTask;
     }
 
-    public void OnPrepareQuery(IListRequestHandler handler,
-        SqlQuery query)
+    public Task OnPrepareQueryAsync(IListRequestHandler handler,
+        SqlQuery query, CancellationToken cancellationToken = default)
     {
         if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
             query.Where(tenantIdField == handler.Context.User.GetTenantId());
+        return Task.CompletedTask;
     }
 
-    public void OnSetInternalFields(ISaveRequestHandler handler)
+    public Task OnSetInternalFieldsAsync(ISaveRequestHandler handler,
+        CancellationToken cancellationToken = default)
     {
         if (handler.IsCreate)
             tenantIdField[handler.Row] = handler.Context.User.GetTenantId();
+        return Task.CompletedTask;
     }
 
-    public void OnValidateRequest(ISaveRequestHandler handler)
+    public Task OnValidateRequestAsync(ISaveRequestHandler handler,
+        CancellationToken cancellationToken = default)
     {
         if (handler.IsUpdate)
         {
             if (tenantIdField[handler.Old] != tenantIdField[handler.Row])
                 handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
         }
+        return Task.CompletedTask;
     }
 
-    public void OnValidateRequest(IDeleteRequestHandler handler)
+    public Task OnValidateRequestAsync(IDeleteRequestHandler handler,
+        CancellationToken cancellationToken = default)
     {
         if (tenantIdField[handler.Row] != handler.Context.User.GetTenantId())
             handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
+        return Task.CompletedTask;
     }
 
-    public void OnAfterDelete(IDeleteRequestHandler handler) { }
-    public void OnAfterExecuteQuery(IRetrieveRequestHandler handler) { }
-    public void OnAfterExecuteQuery(IListRequestHandler handler) { }
-    public void OnAfterSave(ISaveRequestHandler handler) { }
-    public void OnApplyFilters(IListRequestHandler handler, SqlQuery query) { }
-    public void OnAudit(IDeleteRequestHandler handler) { }
-    public void OnAudit(ISaveRequestHandler handler) { }
-    public void OnBeforeDelete(IDeleteRequestHandler handler) { }
-    public void OnBeforeExecuteQuery(IRetrieveRequestHandler handler) { }
-    public void OnBeforeExecuteQuery(IListRequestHandler handler) { }
-    public void OnBeforeSave(ISaveRequestHandler handler) { }
-    public void OnPrepareQuery(IDeleteRequestHandler handler, SqlQuery query) { }
-    public void OnPrepareQuery(ISaveRequestHandler handler, SqlQuery query) { }
-    public void OnReturn(IDeleteRequestHandler handler) { }
-    public void OnReturn(IRetrieveRequestHandler handler) { }
-    public void OnReturn(IListRequestHandler handler) { }
-    public void OnReturn(ISaveRequestHandler handler) { }
-    public void OnValidateRequest(IRetrieveRequestHandler handler) { }
-    public void OnValidateRequest(IListRequestHandler handler) { }
+    // the remaining hooks are optional — the async behavior interfaces
+    // provide default no-op implementations for every member
 }
 ```
 
@@ -110,11 +101,11 @@ The `ActivateFor` method is invoked only once per handler type and row. If this 
 
 Therefore, all code implemented in other methods must be thread-safe, as a single instance is shared across all requests. Additionally, consider utilizing `IServiceResolver<MyDependency>` to resolve any additional dependencies.
 
-A behavior may intercept one or more of the `Retrieve`, `List`, `Save`, or `Delete` handlers by implementing the corresponding interfaces: `IRetrieveBehavior`, `IListBehavior`, `ISaveBehavior`, or `IDeleteBehavior`.
+A behavior may intercept one or more of the `Retrieve`, `List`, `Save`, or `Delete` handlers by implementing the corresponding asynchronous behavior interfaces: `IRetrieveBehaviorAsync`, `IListBehaviorAsync`, `ISaveBehaviorAsync`, or `IDeleteBehaviorAsync`.
 
 In this context, we need to intercept all of these service calls, so we implement all relevant interfaces.
 
-We only implement the methods that are necessary for our purposes and leave the others empty.
+Because the async behavior interfaces provide default no-op implementations for every member, we only override the methods that are necessary for our purposes. The methods take a `CancellationToken` and return `Task`; hooks that do no asynchronous work may simply return `Task.CompletedTask`.
 
 The methods implemented here correspond to those overridden in `RoleRepository.cs` in the previous section. The code within these methods is nearly identical; however, in this behavior, we ensure it is more generic to accommodate any row type that implements the `IMultiTenantRow` interface.
 
@@ -124,7 +115,7 @@ Now, revert all changes previously made to `RoleRepository.cs`:
 
 ```cs
 //...
-public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
+public class RoleSaveHandler : SaveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleSaveHandler
 {
     public RoleSaveHandler(IRequestContext context)
          : base(context)
@@ -140,7 +131,7 @@ public class RoleSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
     }
 }
 
-public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
+public class RoleDeleteHandler : DeleteRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleDeleteHandler
 {
     public RoleDeleteHandler(IRequestContext context)
          : base(context)
@@ -148,7 +139,7 @@ public class RoleDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyRespon
     }
 }
 
-public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
+public class RoleRetrieveHandler : RetrieveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleRetrieveHandler
 {
     public RoleRetrieveHandler(IRequestContext context)
          : base(context)
@@ -156,7 +147,7 @@ public class RoleRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyRe
     }
 }
 
-public class RoleListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IRoleListHandler
+public class RoleListHandler : ListRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IRoleListHandler
 {
     public RoleListHandler(IRequestContext context)
          : base(context)

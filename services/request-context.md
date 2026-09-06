@@ -37,7 +37,7 @@ public abstract class BaseRequestHandler(IRequestContext context) : IRequestHand
 }
 ```
 
-All the built-in CRUD handlers (`SaveRequestHandler`, `ListRequestHandler`, `RetrieveRequestHandler`, `DeleteRequestHandler`, `UndeleteRequestHandler`) derive from it, and custom handlers can too — see [Custom Request Handlers](custom_request_handlers.md).
+All the built-in CRUD handlers (`SaveRequestHandlerAsync`, `ListRequestHandlerAsync`, `RetrieveRequestHandlerAsync`, `DeleteRequestHandlerAsync`, `UndeleteRequestHandlerAsync`, and their synchronous counterparts) derive from it, and custom handlers can too — see [Custom Request Handlers](custom_request_handlers.md).
 
 > [`BaseRepository`](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseRepository.md) is an older, now-obsolete base class with the same shape, kept for repositories that predate the handler system. Prefer `BaseRequestHandler` for new code.
 

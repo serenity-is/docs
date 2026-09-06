@@ -74,8 +74,8 @@ You normally don't need to add `[JsonRequest]` to service endpoints. Serenity re
 `AddServiceEndpointConventions` registers `ServiceEndpointApplicationModelProvider`, which applies the convention. So for a normal endpoint:
 
 ```cs
-public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request,
-    [FromServices] ISaveHandler<MyRow> handler)
+public Task<SaveResponse> Create(IUnitOfWork uow, SaveRequest<MyRow> request,
+    [FromServices] ISaveHandlerAsync<MyRow> handler, CancellationToken cancellationToken = default)
 ```
 
 the `request` parameter is deserialized from the JSON body automatically — no attribute needed. You only add `[JsonRequest]` manually when an action isn't on a `ServiceEndpoint`, or when you need to override its defaults. See [Service Endpoints](../services/service_endpoints.md).

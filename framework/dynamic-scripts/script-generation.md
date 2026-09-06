@@ -88,7 +88,7 @@ These attributes control what the code generator (`sergen` / `Serenity.Pro.Coder
 ```cs
 [GenerateInterface]
 public class LanguageSaveHandler(IRequestContext context)
-    : SaveRequestHandler<MyRow>(context)
+    : SaveRequestHandlerAsync<MyRow>(context)
 {
 }
 ```

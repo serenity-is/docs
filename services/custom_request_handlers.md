@@ -4,6 +4,8 @@ Besides the standard CRUD handlers (Save, List, Retrieve, Delete, Undelete), you
 
 A custom handler is just a class with public methods that performs the operation. For Serenity's automatic registration system to find it, the handler must **implement [IRequestHandler](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRequestHandler.md)** (directly, or transitively through an interface).
 
+> Custom handlers are not tied to a sync or async style — like the built-in CRUD handlers, their methods may be synchronous (returning `TResponse`) or asynchronous (returning `Task<TResponse>` and taking a `CancellationToken`). The endpoint action must simply match the method it calls. Since handlers are asynchronous by default now, prefer async methods for new custom handlers.
+
 ## Without Pro.Coder (plain Serenity)
 
 If you don't use `Serenity.Pro.Coder` (e.g. in Serene or another project), you write the interface yourself and make it derive from `IRequestHandler`. The handler class derives from [BaseRequestHandler](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseRequestHandler.md) (which takes `IRequestContext` and provides `Context`, `Cache`, `Connection`, etc.) and implements that interface:
@@ -11,13 +13,15 @@ If you don't use `Serenity.Pro.Coder` (e.g. in Serene or another project), you w
 ```cs
 public interface IMySomethingHandler : IRequestHandler
 {
-    SaveResponse Update(IUnitOfWork uow, MySomethingRequest request);
+    Task<SaveResponse> UpdateAsync(IUnitOfWork uow, MySomethingRequest request,
+        CancellationToken cancellationToken = default);
 }
 
 public class MySomethingHandler(IRequestContext context)
     : BaseRequestHandler(context), IMySomethingHandler
 {
-    public SaveResponse Update(IUnitOfWork uow, MySomethingRequest request)
+    public async Task<SaveResponse> UpdateAsync(IUnitOfWork uow, MySomethingRequest request,
+        CancellationToken cancellationToken = default)
     {
         // ...
     }
@@ -38,7 +42,8 @@ namespace Serenity.Pro.WorkLog.RequestHandlers;
 [GenerateInterface]
 public class WorkLogStartTaskHandler(IWorkLogSaveHandler handler) : IWorkLogStartTaskHandler
 {
-    public SaveResponse StartTask(IUnitOfWork uow, WorkLogStartTaskRequest request)
+    public async Task<SaveResponse> StartTaskAsync(IUnitOfWork uow, WorkLogStartTaskRequest request,
+        CancellationToken cancellationToken = default)
     {
         // ...
     }
@@ -47,7 +52,7 @@ public class WorkLogStartTaskHandler(IWorkLogSaveHandler handler) : IWorkLogStar
 
 A few things to note:
 
-- The class name ends with `Handler`, so the `InterfaceSourceGenerator` generates `IWorkLogStartTaskHandler : IRequestHandler` (in the `Serenity.Pro.WorkLog` namespace — the `.RequestHandlers` suffix is stripped), and includes the public `StartTask` method.
+- The class name ends with `Handler`, so the `InterfaceSourceGenerator` generates `IWorkLogStartTaskHandler : IRequestHandler` (in the `Serenity.Pro.WorkLog` namespace — the `.RequestHandlers` suffix is stripped), and includes the public `StartTaskAsync` method.
 - The handler doesn't derive from `BaseRequestHandler` — it composes another handler (`IWorkLogSaveHandler`) via constructor injection to do the actual save. Custom handlers can be as simple or as complex as needed.
 
 ## Exposing the Handler via an Endpoint
@@ -56,10 +61,10 @@ A custom handler is called from an endpoint action that injects it via `[FromSer
 
 ```cs
 [HttpPost, AuthorizeUpdate(typeof(MyRow))]
-public SaveResponse StartTask(IUnitOfWork uow, WorkLogStartTaskRequest request,
-    [FromServices] IWorkLogStartTaskHandler handler)
+public Task<SaveResponse> StartTask(IUnitOfWork uow, WorkLogStartTaskRequest request,
+    [FromServices] IWorkLogStartTaskHandler handler, CancellationToken cancellationToken = default)
 {
-    return handler.StartTask(uow, request);
+    return handler.StartTaskAsync(uow, request, cancellationToken);
 }
 ```
 

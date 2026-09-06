@@ -18,26 +18,26 @@ Serenity services follow a **request handler** based architecture. When a client
 - [Validation](validation.md) — server-side validation of request data (required fields, custom validators, error responses)
 - [Reporting](reporting.md) — server-side reports (HTML/PDF/Excel/CSV), report registry/factory, HTML-to-PDF converters
 
-Each handler type has a corresponding base class (`ListRequestHandler`, `SaveRequestHandler`, `DeleteRequestHandler`, `UndeleteRequestHandler`, `RetrieveRequestHandler`) and a marker interface (`IListRequestHandler`, `ISaveRequestHandler`, etc.) that behaviors use.
+Each handler type has a corresponding base class and a marker interface that behaviors use. From Serenity 10.5.0 the default (and Sergen-generated) variants are **asynchronous** — `ListRequestHandlerAsync`, `SaveRequestHandlerAsync`, `DeleteRequestHandlerAsync`, `UndeleteRequestHandlerAsync`, `RetrieveRequestHandlerAsync` — with `...Async` methods taking a `CancellationToken`. The synchronous bases are kept for backward compatibility and are marked **obsolete**; they will be deprecated in a future version.
 
 ## Request Handlers
 
-Request handlers are auto-registered through the type source by `AddServiceHandlers()`. For each entity (row), Sergen generates a small handler class that derives from the relevant base class and implements the corresponding interface. For example, for a `Language` entity:
+Request handlers are auto-registered through the type source by `AddServiceHandlers()`. For each entity (row), Sergen generates a small handler class that derives from the relevant async base class and implements the corresponding interface. For example, for a `Language` entity:
 
 ```cs
-public interface ILanguageSaveHandler : ISaveHandler<MyRow> { }
+public interface ILanguageSaveHandler : ISaveHandlerAsync<MyRow> { }
 
 public class LanguageSaveHandler(IRequestContext context)
-    : SaveRequestHandler<MyRow>(context), ILanguageSaveHandler
+    : SaveRequestHandlerAsync<MyRow>(context), ILanguageSaveHandler
 {
 }
 ```
 
-The base classes provide all the default logic (validation, permission checks, audit logging, SQL generation, etc.), so an empty handler like the one above already gives you a working Create/Update/Delete service. You override virtual methods when you need custom behavior.
+The base classes provide all the default logic (validation, permission checks, audit logging, SQL generation, etc.), so an empty handler like the one above already gives you a working Create/Update/Delete service. You override virtual `...Async` methods when you need custom behavior.
 
 ## Behaviors
 
-In addition to overriding methods, you can intercept request handlers through *behaviors* — classes implementing `ISaveBehavior`, `IListBehavior`, `IDeleteBehavior`, `IUndeleteBehavior`, or `IRetrieveBehavior`. Behaviors run for every handler of the matching type (they are discovered through the type source), making them ideal for cross-cutting concerns like audit logging, multi-tenancy, or master–detail handling.
+In addition to overriding methods, you can intercept request handlers through *behaviors* — classes implementing `ISaveBehaviorAsync`/`ISaveBehaviorSync`, `IListBehaviorAsync`/`IListBehaviorSync`, `IDeleteBehaviorAsync`/`IDeleteBehaviorSync`, `IUndeleteBehaviorAsync`/`IUndeleteBehaviorSync`, or `IRetrieveBehaviorAsync`/`IRetrieveBehaviorSync`. Behaviors run for every handler of the matching type (they are discovered through the type source), making them ideal for cross-cutting concerns like audit logging, multi-tenancy, or master–detail handling.
 
 See [Service Behaviors](behaviors.md) for the full guide — the behavior interfaces, how they are discovered and attached, the handler lifecycle, and worked examples.
 

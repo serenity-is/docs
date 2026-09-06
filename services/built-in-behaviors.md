@@ -41,7 +41,7 @@ public sealed class MyRow : LoggingRow<MyRowFields>, IIdRow
 
 The `LoggingRow` base class exposes the four audit fields (`InsertUserId`, `InsertDate`, `UpdateUserId`, `UpdateDate`) and implements `ILoggingRow` for you. You can also implement the interfaces yourself if your field names differ.
 
-See the [Save Request Handler](save_request_handler.md) for how these fields are set in the `OnSetInternalFields` phase.
+See the [Save Request Handler](save_request_handler.md) for how these fields are set in the `SetInternalFieldsAsync` phase.
 
 ## Capture Log (Audit Trail)
 

@@ -49,17 +49,20 @@ Additionally, we need to make a minor adjustment in *MovieEndpoint.cs*, which re
 public class MovieEndpoint : ServiceEndpoint
 {
     //...
-    public ListResponse<MyRow> List(IDbConnection connection, MovieListRequest request,
-        [FromServices] IMovieListHandler handler)
+    public Task<ListResponse<MyRow>> List(IDbConnection connection, MovieListRequest request,
+        [FromServices] IMovieListHandler handler, CancellationToken cancellationToken = default)
     {
-        return handler.List(connection, request);
+        return handler.ListAsync(connection, request, cancellationToken);
     }
 
-    public FileContentResult ListExcel(IDbConnection connection, MovieListRequest request,
+    public async Task<FileContentResult> ListExcel(IDbConnection connection, MovieListRequest request,
         [FromServices] IMovieListHandler handler,
-        [FromServices] IExcelExporter exporter)
+        [FromServices] IExcelExporter exporter, CancellationToken cancellationToken = default)
     {
-    //...
+        var data = (await List(connection, request, handler, cancellationToken)).Entities;
+        // ...
+    }
+//...
 }
 ```
 
@@ -148,18 +151,19 @@ With these changes, we've now handled quick filtering for genres in a custom man
 
 ## Implementing Genre Filtering in the Movie List Handler
 
-In this section, we'll make modifications to the *MovieDB/Movie/RequestHandlers/MovieListHandler.cs* file to override the `ApplyFilters` method. This method is responsible for applying filters specified in the list request's *Criteria* and *EqualityFilter* parameters, making it an ideal place for our custom filter implementation.
+In this section, we'll make modifications to the *MovieDB/Movie/RequestHandlers/MovieListHandler.cs* file to override the `ApplyFiltersAsync` method. This method is responsible for applying filters specified in the list request's *Criteria* and *EqualityFilter* parameters, making it an ideal place for our custom filter implementation.
 
 Let's take a look at the changes in the code:
 
 ```csharp
-public class MovieListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>, IMovieListHandler
+public class MovieListHandler : ListRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IMovieListHandler
 {
     //...
 
-    protected override void ApplyFilters(SqlQuery query)
+    protected override async Task ApplyFiltersAsync(SqlQuery query,
+        CancellationToken cancellationToken = default)
     {
-        base.ApplyFilters(query);
+        await base.ApplyFiltersAsync(query, cancellationToken);
 
         if (!Request.Genres.IsEmptyOrNull())
         {
@@ -178,7 +182,7 @@ public class MovieListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>
 }
 ```
 
-The `ApplyFilters` method is called to apply the filters specified in the list request's *Criteria* and *EqualityFilter* parameters. It's an excellent place for us to implement our custom filter.
+The `ApplyFiltersAsync` method is called to apply the filters specified in the list request's *Criteria* and *EqualityFilter* parameters. It's an excellent place for us to implement our custom filter.
 
 We start by checking whether *Request.Genres* is null or an empty list. If this is the case, there's no need for filtering.
 

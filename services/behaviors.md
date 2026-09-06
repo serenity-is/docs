@@ -8,17 +8,26 @@ Serenity request handlers expose their lifecycle through virtual methods you can
 
 ## Behavior Interfaces
 
-Each handler type has a matching behavior interface. A single behavior class can implement one or more of these interfaces to participate in the corresponding handlers:
+Each handler type has a matching pair of behavior interfaces — a **synchronous** one (`...Sync`) and an **asynchronous** one (`...Async`). A single behavior class can implement one or more of these interfaces to participate in the corresponding handlers:
 
-| Interface | Handler it participates in | API reference |
+| Interface (Async) | Interface (Sync) | Handler it participates in |
 | --- | --- | --- |
-| [ISaveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/ISaveBehavior.md) | Save (Create / Update) | `ISaveBehavior` |
-| [IListBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListBehavior.md) | List | `IListBehavior` |
-| [IDeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IDeleteBehavior.md) | Delete | `IDeleteBehavior` |
-| [IRetrieveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRetrieveBehavior.md) | Retrieve | `IRetrieveBehavior` |
-| [IUndeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IUndeleteBehavior.md) | Undelete | `IUndeleteBehavior` |
-| [IListMapFieldExpressionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListMapFieldExpressionBehavior.md) | List (map a field to a custom SQL expression) | `IListMapFieldExpressionBehavior` |
-| [IFieldBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IFieldBehavior.md) | Any (targets a single field) | `IFieldBehavior` |
+| [ISaveBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/ISaveBehaviorAsync.md) | [ISaveBehaviorSync](../api/dotnet/Serenity.Net.Services/Serenity.Services/ISaveBehaviorSync.md) | Save (Create / Update) |
+| [IListBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListBehaviorAsync.md) | [IListBehaviorSync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListBehaviorSync.md) | List |
+| [IDeleteBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IDeleteBehaviorAsync.md) | [IDeleteBehaviorSync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IDeleteBehaviorSync.md) | Delete |
+| [IRetrieveBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRetrieveBehaviorAsync.md) | [IRetrieveBehaviorSync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IRetrieveBehaviorSync.md) | Retrieve |
+| [IUndeleteBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IUndeleteBehaviorAsync.md) | [IUndeleteBehaviorSync](../api/dotnet/Serenity.Net.Services/Serenity.Services/IUndeleteBehaviorSync.md) | Undelete |
+
+The two interfaces in a pair both derive from a common marker interface ([ISaveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/ISaveBehavior.md), [IListBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListBehavior.md), etc.) which is what the behavior provider resolves against.
+
+> Since handlers are now asynchronous by default, implement the **`...Async`** interface (or derive from a `Base...BehaviorAsync` base class) for new behaviors. The sync variants are still fully supported — async request handlers automatically wrap synchronous behaviors, and sync handlers wrap asynchronous behaviors — so a behavior implementing either variant works with both handler modes.
+
+There are also a few special interfaces:
+
+| Interface | Purpose |
+| --- | --- |
+| [IListMapFieldExpressionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListMapFieldExpressionBehavior.md) | List — map a field to a custom SQL expression |
+| [IFieldBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IFieldBehavior.md) | Any — targets a single field |
 
 There are also optional **exception** interfaces for handling errors raised during the operation:
 
@@ -28,20 +37,24 @@ There are also optional **exception** interfaces for handling errors raised duri
 - [IListExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IListExceptionBehavior.md)
 - [IUndeleteExceptionBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/IUndeleteExceptionBehavior.md)
 
-These let a behavior inspect an exception raised by the database operation and, for example, translate a foreign-key or primary-key error into a friendlier validation message.
+These let a behavior inspect an exception raised by the database operation and, for example, translate a foreign-key or primary-key error into a friendlier validation message. Exception hooks are synchronous (`OnException(...)`) in both variants — they only inspect the exception and optionally throw a translated one, so they don't need to be async.
 
 ## Base Classes
 
-Instead of implementing every method of an interface, derive from the corresponding base class which provides empty virtual methods:
+Instead of implementing every method of an interface, derive from the corresponding base class which provides empty virtual methods. There is a base for each mode:
 
-- [BaseSaveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseSaveBehavior.md) — implements `ISaveBehavior` and `ISaveExceptionBehavior`.
-- [BaseSaveDeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseSaveDeleteBehavior.md) — combines save and delete, for behaviors that need to act on both (e.g. audit logs, master–detail).
-- [BaseListBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseListBehavior.md) — implements `IListBehavior`.
-- [BaseDeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseDeleteBehavior.md) — implements `IDeleteBehavior` and `IDeleteExceptionBehavior`.
-- [BaseRetrieveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseRetrieveBehavior.md) — implements `IRetrieveBehavior`.
-- [BaseUndeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseUndeleteBehavior.md) — implements `IUndeleteBehavior` and `IUndeleteExceptionBehavior`.
+- [BaseSaveBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseSaveBehaviorAsync.md) — async save behavior (implements `ISaveBehaviorAsync` and `ISaveExceptionBehavior`).
+- [BaseSaveDeleteBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseSaveDeleteBehaviorAsync.md) — combines async save and delete, for behaviors that need to act on both (e.g. audit logs, master–detail).
+- [BaseListBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseListBehaviorAsync.md) — async list behavior.
+- [BaseDeleteBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseDeleteBehaviorAsync.md) — async delete behavior (implements `IDeleteBehaviorAsync` and `IDeleteExceptionBehavior`).
+- [BaseRetrieveBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseRetrieveBehaviorAsync.md) — async retrieve behavior.
+- [BaseUndeleteBehaviorAsync](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseUndeleteBehaviorAsync.md) — async undelete behavior (implements `IUndeleteBehaviorAsync` and `IUndeleteExceptionBehavior`).
+
+And the corresponding synchronous bases — [BaseSaveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseSaveBehavior.md), [BaseSaveDeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseSaveDeleteBehavior.md), [BaseListBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseListBehavior.md), [BaseDeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseDeleteBehavior.md), [BaseRetrieveBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseRetrieveBehavior.md), [BaseUndeleteBehavior](../api/dotnet/Serenity.Net.Services/Serenity.Services/BaseUndeleteBehavior.md). These are kept for behaviors that predate the async migration and are marked **obsolete**.
 
 You then override only the methods you need.
+
+> A single behavior class may implement **both** the sync and async variants of an interface (and derive from the async base, overriding the sync methods too). Some framework behaviors such as `MasterDetailRelationBehavior` do this so they run natively in both handler modes without being wrapped. Usually, implementing just one variant is enough — the framework wraps it for the other mode.
 
 ## How Behaviors Are Attached
 
@@ -63,7 +76,7 @@ public interface IImplicitBehavior
 For example, the framework's capture-log behavior only activates for rows that have an id and are decorated with `[CaptureLog]`:
 
 ```cs
-public class CaptureLogBehavior : BaseSaveDeleteBehavior, IImplicitBehavior, IUndeleteBehavior
+public class CaptureLogBehavior : BaseSaveDeleteBehaviorAsync, IImplicitBehavior
 {
     private CaptureLogAttribute captureLogAttr;
 
@@ -128,83 +141,94 @@ Behaviors are instantiated by [DefaultBehaviorFactory](../api/dotnet/Serenity.Ne
 
 `IBehaviorProvider`, `IBehaviorFactory`, and `IImplicitBehaviorRegistry` are registered as singletons by [AddServiceBehaviors](../api/dotnet/Serenity.Net.Services/Serenity.Extensions.DependencyInjection/ServiceCollectionExtensions/AddServiceBehaviors.md), which is called by `AddServiceHandlers()` during startup. See [Auto-Registration of Request Handlers](handler_auto_registration.md).
 
+### How sync and async behaviors interoperate
+
+The handler resolves behaviors through the common marker interface (e.g. `ISaveBehavior`), then adapts them to its own mode. The handlers use [BehaviorProviderExtensions.AutoWrapBehaviors](../api/dotnet/Serenity.Net.Services/Serenity.Services/BehaviorProviderExtensions/AutoWrapBehaviors.md) internally:
+
+- An **async** handler keeps behaviors that implement the `...Async` interface as-is and wraps behaviors that only implement the `...Sync` interface in a `SyncToAsync...` wrapper that calls the sync methods and returns `Task.CompletedTask`.
+- A **sync** handler does the reverse: behaviors that only implement `...Async` are wrapped in an `AsyncToSync...` wrapper that invokes their async methods and blocks on the result.
+
+A behavior that implements both variants is always used as-is. The wrappers expose the original behavior through the `IWrappedBehavior` interface so framework code can still check for optional interfaces (such as `ISaveExceptionBehavior`) on the underlying behavior.
+
 ## Behavior Lifecycle
 
 A behavior's methods are called at specific points in the handler lifecycle. The base classes already wire this up, so implement only the hooks you need.
 
+The hook names below are the **async** variants used by the async handler bases (e.g. `OnBeforeSaveAsync`). The synchronous variants (`OnBeforeSave`, `OnValidateRequest`, ...) follow the same order and are used by the sync handler bases. Every async hook takes a `CancellationToken cancellationToken = default` and returns `Task`, so you can `await` inside it.
+
 ### Save (Create / Update)
 
-For a save request, the handler:
+For a save request, the async handler:
 
-1. Loads the old entity (only for updates) — calls **`OnPrepareQuery`** on each save behavior.
-2. Validates the request — calls **`OnValidateRequest`**.
-3. Sets internal fields — calls **`OnSetInternalFields`**.
-4. Runs before the insert/update — calls **`OnBeforeSave`**.
+1. Loads the old entity (only for updates) — calls **`OnPrepareQueryAsync`** on each save behavior.
+2. Validates the request — calls **`OnValidateRequestAsync`**.
+3. Sets internal fields — calls **`OnSetInternalFieldsAsync`**.
+4. Runs before the insert/update — calls **`OnBeforeSaveAsync`**.
 5. Executes the SQL statement. On failure, calls **`OnException`** on save behaviors that implement `ISaveExceptionBehavior`.
-6. Runs after the insert/update — calls **`OnAfterSave`**.
-7. Performs auditing — calls **`OnAudit`**.
-8. Returns the response — calls **`OnReturn`**.
+6. Runs after the insert/update — calls **`OnAfterSaveAsync`**.
+7. Performs auditing — calls **`OnAuditAsync`**.
+8. Returns the response — calls **`OnReturnAsync`**.
 
 ```mermaid
 sequenceDiagram
-    participant H as SaveRequestHandler
-    participant B as SaveBehavior
-    H->>B: OnPrepareQuery (updates only)
-    H->>B: OnValidateRequest
-    H->>B: OnSetInternalFields
-    H->>B: OnBeforeSave
+    participant H as SaveRequestHandlerAsync
+    participant B as SaveBehaviorAsync
+    H->>B: OnPrepareQueryAsync (updates only)
+    H->>B: OnValidateRequestAsync
+    H->>B: OnSetInternalFieldsAsync
+    H->>B: OnBeforeSaveAsync
     H->>B: (OnException if SQL fails)
-    H->>B: OnAfterSave
-    H->>B: OnAudit
-    H->>B: OnReturn
+    H->>B: OnAfterSaveAsync
+    H->>B: OnAuditAsync
+    H->>B: OnReturnAsync
 ```
 
 ### List
 
-For a list request, the handler:
+For a list request, the async handler:
 
-1. Validates the request — calls **`OnValidateRequest`**.
-2. Builds the query — calls **`OnPrepareQuery`**.
-3. Applies filters — calls **`OnApplyFilters`**.
-4. Runs before the query is executed — calls **`OnBeforeExecuteQuery`**.
+1. Validates the request — calls **`OnValidateRequestAsync`**.
+2. Builds the query — calls **`OnPrepareQueryAsync`**.
+3. Applies filters — calls **`OnApplyFiltersAsync`**.
+4. Runs before the query is executed — calls **`OnBeforeExecuteQueryAsync`**.
 5. Executes the query. On failure, calls **`OnException`** on behaviors implementing `IListExceptionBehavior`.
-6. Runs after the query is executed — calls **`OnAfterExecuteQuery`**.
-7. Returns the response — calls **`OnReturn`**.
+6. Runs after the query is executed — calls **`OnAfterExecuteQueryAsync`**.
+7. Returns the response — calls **`OnReturnAsync`**.
 
 ### Delete
 
-For a delete request, the handler:
+For a delete request, the async handler:
 
-1. Loads the entity to delete — calls **`OnPrepareQuery`** (via `LoadEntity`).
-2. Validates the request — calls **`OnValidateRequest`**.
-3. Runs before the delete — calls **`OnBeforeDelete`**.
+1. Loads the entity to delete — calls **`OnPrepareQueryAsync`** (via `LoadEntityAsync`).
+2. Validates the request — calls **`OnValidateRequestAsync`**.
+3. Runs before the delete — calls **`OnBeforeDeleteAsync`**.
 4. Executes the delete. On failure, calls **`OnException`** on behaviors implementing `IDeleteExceptionBehavior`.
-5. Runs after the delete — calls **`OnAfterDelete`**.
-6. Audits — calls **`OnAudit`**.
-7. Returns the response — calls **`OnReturn`**.
+5. Runs after the delete — calls **`OnAfterDeleteAsync`**.
+6. Audits — calls **`OnAuditAsync`**.
+7. Returns the response — calls **`OnReturnAsync`**.
 
 ### Retrieve
 
-For a retrieve request, the handler:
+For a retrieve request, the async handler:
 
-1. Validates the request — calls **`OnValidateRequest`**.
-2. Builds the query — calls **`OnPrepareQuery`**.
-3. Runs before the query — calls **`OnBeforeExecuteQuery`**.
+1. Validates the request — calls **`OnValidateRequestAsync`**.
+2. Builds the query — calls **`OnPrepareQueryAsync`**.
+3. Runs before the query — calls **`OnBeforeExecuteQueryAsync`**.
 4. Executes the query. On failure, calls **`OnException`**.
-5. Runs after the query — calls **`OnAfterExecuteQuery`**.
-6. Returns the response — calls **`OnReturn`**.
+5. Runs after the query — calls **`OnAfterExecuteQueryAsync`**.
+6. Returns the response — calls **`OnReturnAsync`**.
 
 ### Undelete
 
-For an undelete request, the handler:
+For an undelete request, the async handler:
 
-1. Loads the entity — calls **`OnPrepareQuery`**.
-2. Validates the request — calls **`OnValidateRequest`**.
-3. Runs before the undelete — calls **`OnBeforeUndelete`**.
+1. Loads the entity — calls **`OnPrepareQueryAsync`**.
+2. Validates the request — calls **`OnValidateRequestAsync`**.
+3. Runs before the undelete — calls **`OnBeforeUndeleteAsync`**.
 4. Executes the undelete. On failure, calls **`OnException`**.
-5. Runs after the undelete — calls **`OnAfterUndelete`**.
-6. Audits — calls **`OnAudit`**.
-7. Returns the response — calls **`OnReturn`**.
+5. Runs after the undelete — calls **`OnAfterUndeleteAsync`**.
+6. Audits — calls **`OnAuditAsync`**.
+7. Returns the response — calls **`OnReturnAsync`**.
 
 ## Writing a Behavior
 
@@ -219,7 +243,7 @@ using Microsoft.Data.SqlClient;
 
 namespace StartSharp.Common;
 
-public class HumanizeSqlExceptionBehavior : BaseSaveDeleteBehavior, IImplicitBehavior
+public class HumanizeSqlExceptionBehavior : BaseSaveDeleteBehaviorAsync, IImplicitBehavior
 {
     public bool ActivateFor(IRow row)
     {
@@ -241,7 +265,7 @@ public class HumanizeSqlExceptionBehavior : BaseSaveDeleteBehavior, IImplicitBeh
 }
 ```
 
-Because it derives from `BaseSaveDeleteBehavior`, it can override `OnException` for both save and delete. Since it implements `IImplicitBehavior` and `ActivateFor` always returns `true`, it applies to every row type, which is exactly what you want for a global exception handler.
+Because it derives from `BaseSaveDeleteBehaviorAsync`, it can override the (synchronous) `OnException` method for both save and delete — exception hooks are sync in both the async and sync behavior bases, since they only translate an exception. Since it implements `IImplicitBehavior` and `ActivateFor` always returns `true`, it applies to every row type, which is exactly what you want for a global exception handler.
 
 ### Example: Multi-Tenant Behavior
 
@@ -254,7 +278,8 @@ public interface IMultiTenantRow
 }
 
 public class MultiTenantBehavior : IImplicitBehavior,
-    ISaveBehavior, IDeleteBehavior, IListBehavior, IRetrieveBehavior
+    IRetrieveBehaviorAsync, IListBehaviorAsync,
+    ISaveBehaviorAsync, IDeleteBehaviorAsync
 {
     private Int32Field tenantIdField;
 
@@ -267,39 +292,52 @@ public class MultiTenantBehavior : IImplicitBehavior,
         return true;
     }
 
-    public void OnPrepareQuery(IRetrieveRequestHandler handler, SqlQuery query)
+    public Task OnPrepareQueryAsync(IRetrieveRequestHandler handler,
+        SqlQuery query, CancellationToken cancellationToken = default)
     {
         if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
             query.Where(tenantIdField == handler.Context.User.GetTenantId());
+        return Task.CompletedTask;
     }
 
-    public void OnPrepareQuery(IListRequestHandler handler, SqlQuery query)
+    public Task OnPrepareQueryAsync(IListRequestHandler handler,
+        SqlQuery query, CancellationToken cancellationToken = default)
     {
         if (!handler.Context.Permissions.HasPermission(PermissionKeys.Tenants))
             query.Where(tenantIdField == handler.Context.User.GetTenantId());
+        return Task.CompletedTask;
     }
 
-    public void OnSetInternalFields(ISaveRequestHandler handler)
+    public Task OnSetInternalFieldsAsync(ISaveRequestHandler handler,
+        CancellationToken cancellationToken = default)
     {
         if (handler.IsCreate)
             tenantIdField[handler.Row] = handler.Context.User.GetTenantId();
+        return Task.CompletedTask;
     }
 
-    public void OnValidateRequest(ISaveRequestHandler handler)
+    public Task OnValidateRequestAsync(ISaveRequestHandler handler,
+        CancellationToken cancellationToken = default)
     {
         if (handler.IsUpdate && tenantIdField[handler.Old] != tenantIdField[handler.Row])
             handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
+        return Task.CompletedTask;
     }
 
-    public void OnValidateRequest(IDeleteRequestHandler handler)
+    public Task OnValidateRequestAsync(IDeleteRequestHandler handler,
+        CancellationToken cancellationToken = default)
     {
         if (tenantIdField[handler.Row] != handler.Context.User.GetTenantId())
             handler.Context.Permissions.ValidatePermission(PermissionKeys.Tenants, handler.Context.Localizer);
+        return Task.CompletedTask;
     }
 
-    // other interface methods left empty
+    // the remaining hooks are optional — the async behavior interfaces
+    // provide default no-op implementations for every member
 }
 ```
+
+> The async behavior interfaces provide **default implementations** for their methods, so you only override the hooks you need — no more empty method stubs for every interface member. (The sync `...Sync` interfaces work the same way.) If a hook does no I/O, returning `Task.CompletedTask` is fine; if it does, mark the method `async` and `await` it.
 
 This lets the behavior replace the manual `RoleRepository` plumbing from the earlier part of the tutorial, and apply the same plan automatically to every row type that implements `IMultiTenantRow`.
 
@@ -308,7 +346,8 @@ This lets the behavior replace the manual `RoleRepository` plumbing from the ear
 - **Behaviors are cached and reused across requests.** A single behavior instance is shared for all requests targeting the same row and handler type. Do not store per-request state in private fields — use the handler's `StateBag` (`handler.StateBag`) instead. All methods must be thread-safe.
 - **`ActivateFor` runs once per handler type and row type.** It is a good place to read row/field metadata and cache it in private fields.
 - **Constructor injection works.** Behaviors are created through the DI container, so you can inject services like `ITextLocalizer`, `ISqlConnections`, `IDefaultHandlerFactory`, or `IServiceResolver<T>`.
-- **A behavior can implement multiple interfaces.** For example, `BaseSaveDeleteBehavior` covers both save and delete, and `CaptureLogBehavior` additionally implements `IUndeleteBehavior`.
+- **A behavior can implement multiple interfaces.** For example, `BaseSaveDeleteBehaviorAsync` covers both save and delete, and `CaptureLogBehavior` additionally implements `IUndeleteBehaviorAsync`.
+- **Implement one mode or both.** Implementing just the async interfaces is enough for new behaviors — sync handlers wrap async behaviors automatically, and async handlers wrap sync behaviors. Implementing both variants lets a behavior run natively in both modes without wrapping.
 - **Behaviors run for every handler of the matching type.** They are found through the type source, so you can add cross-cutting logic once instead of overriding methods in each handler.
 
 ## See Also

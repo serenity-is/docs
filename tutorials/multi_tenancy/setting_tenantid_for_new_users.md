@@ -6,12 +6,12 @@ You will not encounter any errors; however, the newly created user will not appe
 
 Since the default value for `TenantId` is set to *1* in the migrations, User2 has a `TenantId` of 1 and is a member of the *Primary Tenant*
 
-To ensure that new users have the same *TenantId* as the currently logged-in user, modify the `SetInternalFields` method of the `UserSaveHandler` as shown below:
+To ensure that new users have the same *TenantId* as the currently logged-in user, modify the `SetInternalFieldsAsync` method of the `UserSaveHandler` as shown below:
 
 ```cs
-protected override void SetInternalFields()
+protected override async Task SetInternalFieldsAsync(CancellationToken cancellationToken = default)
 {
-    base.SetInternalFields();
+    await base.SetInternalFieldsAsync(cancellationToken);
 
     if (IsCreate)
     {

@@ -20,16 +20,17 @@ To load the entity with ID 1, the dialog calls the Retrieve service of `UserRetr
 To secure the retrieve service in `UserRetrieveHandler`, modify the class as follows:
 
 ```cs
-public class UserRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IUserRetrieveHandler
+public class UserRetrieveHandler : RetrieveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IUserRetrieveHandler
 {
     public UserRetrieveHandler(IRequestContext context)
          : base(context)
     {
     }
 
-    protected override void PrepareQuery(SqlQuery query)
+    protected override async Task PrepareQueryAsync(SqlQuery query,
+        CancellationToken cancellationToken = default)
     {
-        base.PrepareQuery(query);
+        await base.PrepareQueryAsync(query, cancellationToken);
 
         if (!Permissions.HasPermission(PermissionKeys.Tenants))
             query.Where(MyRow.Fields.TenantId == User.GetTenantId());
@@ -45,14 +46,14 @@ Record not found. It might be deleted or you don't have required permissions!
 
 ## Securing the Update Service
 
-However, it is still possible to update the record by manually calling the `Update` service. Therefore, it is necessary to secure the `UserSaveHandler` as well. Update its `ValidateRequest` method as shown below:
+However, it is still possible to update the record by manually calling the `Update` service. Therefore, it is necessary to secure the `UserSaveHandler` as well. Update its `ValidateRequestAsync` method as shown below:
 
-Change its `ValidateRequest` method like this:
+Change its `ValidateRequestAsync` method like this:
 
 ```cs
-protected override void ValidateRequest()
+protected override async Task ValidateRequestAsync(CancellationToken cancellationToken = default)
 {
-    base.ValidateRequest();
+    await base.ValidateRequestAsync(cancellationToken);
 
     if (IsUpdate)
     {
@@ -77,16 +78,16 @@ There are delete and undelete handlers, and they suffer from similar security ho
 To secure the delete service in `UserDeleteHandler`, modify the class as follows:
 
 ```cs
-public class UserDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IUserDeleteHandler
+public class UserDeleteHandler : DeleteRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IUserDeleteHandler
 {
     public UserDeleteHandler(IRequestContext context)
          : base(context)
     {
     }
 
-    protected override void ValidateRequest()
+    protected override async Task ValidateRequestAsync(CancellationToken cancellationToken = default)
     {
-        base.ValidateRequest();
+        await base.ValidateRequestAsync(cancellationToken);
 
         if (Row.TenantId != User.GetTenantId())
             Permissions.ValidatePermission(PermissionKeys.Tenants, Context.Localizer);

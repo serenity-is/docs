@@ -64,15 +64,16 @@ For example, the movie tutorial's save handler needs to create/update/delete the
 ```cs
 public class MovieSaveHandler(IRequestContext context,
     IServiceResolver<IMovieCastDeleteHandler> movieCastDelete,
-    IServiceResolver<IMovieCastSaveHandler> movieCastSave) : SaveRequestHandler<...>
+    IServiceResolver<IMovieCastSaveHandler> movieCastSave) : SaveRequestHandlerAsync<...>
 {
     // ...
-    protected override void AfterSave()
+    protected override async Task AfterSaveAsync(CancellationToken cancellationToken = default)
     {
-        base.AfterSave();
+        await base.AfterSaveAsync(cancellationToken);
 
         // ...
-        movieCastDelete.Resolve().Delete(UnitOfWork, new() { EntityId = row.MovieCastId });
+        await movieCastDelete.Resolve().DeleteAsync(UnitOfWork,
+            new() { EntityId = row.MovieCastId }, cancellationToken);
         // ...
     }
 }

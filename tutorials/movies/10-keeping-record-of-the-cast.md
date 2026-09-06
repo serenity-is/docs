@@ -618,7 +618,7 @@ You may recall that in a previous section, our GenreList was also an unmapped fi
 In order to handle the saving of `CastList`, open `Movie/RequestHandlers/MovieSaveHandler.cs` and modify the empty `MovieSaveHandler` class as follows:
 
 ```csharp
-public class MovieSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieSaveHandler
+public class MovieSaveHandler : SaveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IMovieSaveHandler
 {
     private readonly IServiceResolver<IMovieCastDeleteHandler> movieCastDelete;
     private readonly IServiceResolver<IMovieCastSaveHandler> movieCastSave;
@@ -631,23 +631,24 @@ public class MovieSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>
         this.movieCastSave = movieCastSave ?? throw new ArgumentNullException(nameof(movieCastSave));
     }
 
-    protected override void AfterSave()
+    protected override async Task AfterSaveAsync(CancellationToken cancellationToken = default)
     {
-        base.AfterSave();
+        await base.AfterSaveAsync(cancellationToken);
 
         if (Row.CastList == null)
             return;
 
         var mc = MovieCastRow.Fields;
         var oldList = IsCreate ? new List<MovieCastRow>() 
-            : Connection.List<MovieCastRow>(mc.MovieId == Row.MovieId.Value);
+            : await Connection.ListAsync<MovieCastRow>(mc.MovieId == Row.MovieId.Value, cancellationToken);
 
         var oldById = oldList.ToDictionary(x => x.MovieCastId.Value);
         var newById = Row.CastList.ToLookup(x => x.MovieCastId);
 
         foreach (var row in oldList.Where(x => !newById.Contains(x.MovieCastId)))
         {
-            movieCastDelete.Resolve().Delete(UnitOfWork, new() { EntityId = row.MovieCastId });
+            await movieCastDelete.Resolve().DeleteAsync(UnitOfWork,
+                new() { EntityId = row.MovieCastId }, cancellationToken);
         }
 
         foreach (var row in Row.CastList)
@@ -658,18 +659,20 @@ public class MovieSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>
             if (row.MovieCastId == null || !oldById.ContainsKey(row.MovieCastId.Value))
             {
                 entity.MovieCastId = null;
-                movieCastSave.Resolve().Create(UnitOfWork, new() { Entity = entity });
+                await movieCastSave.Resolve().CreateAsync(UnitOfWork,
+                    new() { Entity = entity }, cancellationToken);
             }
             else
             {
-                movieCastSave.Resolve().Update(UnitOfWork, new() { Entity = entity });
+                await movieCastSave.Resolve().UpdateAsync(UnitOfWork,
+                    new() { Entity = entity }, cancellationToken);
             }
         }
     }
 }
 ```
 
-The `MovieSaveHandler` class processes CREATE (insert) and UPDATE service requests for Movie rows. Most of its logic is handled by the base `SaveRequestHandler` class, so its class definition was empty before.
+The `MovieSaveHandler` class processes CREATE (insert) and UPDATE service requests for Movie rows. Most of its logic is handled by the base `SaveRequestHandlerAsync` class, so its class definition was empty before.
 
 If this is a CREATE (insert) operation, as the `MovieId` is an IDENTITY field, its value will be available after inserting the movie record. Therefore, we insert/update movie cast records after the handler finishes saving.
 
@@ -679,7 +682,7 @@ For example, if we had cast records A, B, C, D in the database for movie X, and 
 
 To get a list of old records, we need to query the database if this is an UPDATE movie operation. If it's a CREATE movie operation, there shouldn't be any old cast records.
 
-We are using the `Connection.List<MovieCastRow>` extension method. `Connection` here is a property of the `SaveRequestHandler` that returns the current connection used. `List` selects records that match the specified criteria (`mc.MovieId == Row.MovieId.Value`).
+We are using the `Connection.ListAsync<MovieCastRow>` extension method. `Connection` here is a property of the `SaveRequestHandlerAsync` that returns the current connection used. `ListAsync` selects records that match the specified criteria (`mc.MovieId == Row.MovieId.Value`), and we `await` it because `AfterSaveAsync` is asynchronous.
 
 `Row` refers to the currently inserted/updated record (movie) with its new field values, so it contains the `MovieId` value (new or existing).
 
@@ -694,29 +697,29 @@ When a Movie entity is clicked in the movie grid, the movie dialog loads the mov
 To address this issue, we need to edit the `MovieRetrieveHandler` class in `Movie/RequestHandlers/MovieRetrieveHandler.cs`:
 
 ```csharp
-public class MovieRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieRetrieveHandler
+public class MovieRetrieveHandler : RetrieveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IMovieRetrieveHandler
 {
     public MovieRetrieveHandler(IRequestContext context)
             : base(context)
     {
     }
 
-    protected override void OnReturn()
+    protected override async Task OnReturnAsync(CancellationToken cancellationToken = default)
     {
-        base.OnReturn();
+        await base.OnReturnAsync(cancellationToken);
 
         var mc = MovieCastRow.Fields;
-        Row.CastList = Connection.List<MovieCastRow>(q => q
+        Row.CastList = await Connection.ListAsync<MovieCastRow>(q => q
             .SelectTableFields()
             .Select(mc.PersonFullName)
-            .Where(mc.MovieId == Row.MovieId.Value));
+            .Where(mc.MovieId == Row.MovieId.Value), cancellationToken);
     }
 }
 ```
 
-In this code, we are overriding the `OnReturn` method to inject `CastList` into the movie row just before returning it from the retrieve service.
+In this code, we are overriding the `OnReturnAsync` method to inject `CastList` into the movie row just before returning it from the retrieve service.
 
-We're using a different overload of the `Connection.List` extension, which allows us to modify the select query. By default, `List` selects all table fields (not foreign view fields coming from other tables). However, to show the actor's name, we also need to select the `PersonFullName` field because it's an expression field and not in the table fields.
+We're using a different overload of the `Connection.ListAsync` extension, which allows us to modify the select query. By default, `ListAsync` selects all table fields (not foreign view fields coming from other tables). However, to show the actor's name, we also need to select the `PersonFullName` field because it's an expression field and not in the table fields.
 
 Now, after building the solution, you'll be able to list and edit the cast properly.
 
@@ -725,7 +728,7 @@ Now, after building the solution, you'll be able to list and edit the cast prope
 To handle the deletion of cast records when deleting a Movie entity, you can open `Movie/RequestHandlers/MovieDeleteHandler.cs` and modify the `MovieDeleteHandler` class as follows:
 
 ```csharp
-public class MovieDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IMovieDeleteHandler
+public class MovieDeleteHandler : DeleteRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IMovieDeleteHandler
 {
     public IServiceResolver<IMovieCastDeleteHandler> movieCastDelete;
 
@@ -735,21 +738,23 @@ public class MovieDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyRespo
         this.movieCastDelete = movieCastDelete ?? throw new ArgumentNullException(nameof(movieCastDelete));
     }
 
-    protected override void OnBeforeDelete()
+    protected override async Task OnBeforeDeleteAsync(CancellationToken cancellationToken = default)
     {
-        base.OnBeforeDelete();
+        await base.OnBeforeDeleteAsync(cancellationToken);
 
         var mc = MovieCastRow.Fields;
-        foreach (var detailID in Connection.Query<Int32>(
+        var detailIds = await Connection.QueryAsync<Int32>(
             new SqlQuery()
                 .From(mc)
                 .Select(mc.MovieCastId)
-                .Where(mc.MovieId == Row.MovieId.Value)))
+                .Where(mc.MovieId == Row.MovieId.Value), cancellationToken: cancellationToken);
+
+        foreach (var detailID in detailIds)
         {
-            movieCastDelete.Resolve().Delete(this.UnitOfWork, new()
+            await movieCastDelete.Resolve().DeleteAsync(this.UnitOfWork, new()
             {
                 EntityId = detailID
-            });
+            }, cancellationToken);
         }
     }
 }
@@ -757,9 +762,9 @@ public class MovieDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyRespo
 
 In this code, we address the issue of foreign key errors when deleting a Movie entity. Instead of relying on "CASCADE DELETE" at the database level, we handle this at the request handler level.
 
-The `MovieDeleteHandler` class extends `DeleteRequestHandler` to handle the deletion of Movie entities. It also has a reference to `IMovieCastDeleteHandler` for handling related cast records.
+The `MovieDeleteHandler` class extends `DeleteRequestHandlerAsync` to handle the deletion of Movie entities. It also has a reference to `IMovieCastDeleteHandler` for handling related cast records.
 
-In the `OnBeforeDelete` method, we first call the base class method, and then we retrieve and delete related MovieCast records. We use the `MovieCastDeleteHandler` to perform the deletion. This approach ensures that related cast records are properly deleted when a Movie entity is deleted.
+In the `OnBeforeDeleteAsync` method, we first call the base class method, and then we retrieve and delete related MovieCast records. We use the `MovieCastDeleteHandler` to perform the deletion. This approach ensures that related cast records are properly deleted when a Movie entity is deleted.
 
 This method provides more control and flexibility in handling the deletion process while avoiding foreign key errors.
 
@@ -784,7 +789,7 @@ Now, undo all the changes we made in the `MovieDB/Movie/RequestHandlers` folder:
 **MovieSaveHandler.cs**:
 
 ```csharp
-public class MovieSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieSaveHandler
+public class MovieSaveHandler : SaveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IMovieSaveHandler
 {
     public MovieSaveHandler(IRequestContext context)
             : base(context)
@@ -796,7 +801,7 @@ public class MovieSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>
 **MovieRetrieveHandler.cs**:
 
 ```csharp
-public class MovieRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IMovieRetrieveHandler
+public class MovieRetrieveHandler : RetrieveRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IMovieRetrieveHandler
 {
     public MovieRetrieveHandler(IRequestContext context)
             : base(context)
@@ -808,7 +813,7 @@ public class MovieRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyR
 **MovieDeleteHandler.cs**:
 
 ```csharp
-public class MovieDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IMovieDeleteHandler
+public class MovieDeleteHandler : DeleteRequestHandlerAsync<MyRow, MyRequest, MyResponse>, IMovieDeleteHandler
 {
     public MovieDeleteHandler(IRequestContext context)
             : base(context)

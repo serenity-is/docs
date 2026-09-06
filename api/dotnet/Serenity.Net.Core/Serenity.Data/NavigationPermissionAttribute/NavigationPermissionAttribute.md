@@ -1,5 +1,4 @@
 # NavigationPermissionAttribute constructor (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`NavigationPermissionAttribute`](../NavigationPermissionAttribute.md) class.
 
@@ -18,7 +17,6 @@ public NavigationPermissionAttribute(object permission)
 ---
 
 # NavigationPermissionAttribute constructor (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`NavigationPermissionAttribute`](../NavigationPermissionAttribute.md) class. A colon is inserted between module and permission to generate permission key.
 
@@ -38,7 +36,6 @@ public NavigationPermissionAttribute(object module, object permission)
 ---
 
 # NavigationPermissionAttribute constructor (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`NavigationPermissionAttribute`](../NavigationPermissionAttribute.md) class. A colon is inserted between module, submodule and permission to generate permission key.
 

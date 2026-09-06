@@ -40,7 +40,7 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](DeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](DeleteRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAudit](DeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteDelete](DeleteRequestHandler-3/ExecuteDelete.md)() | Executes the actual SQL delete operation |
 | virtual [GetBehaviors](DeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of delete behaviors. |
@@ -58,13 +58,10 @@ public class DeleteRequestHandler<TRow, TDeleteRequest, TDeleteResponse> :
 
 ## See Also
 
-* interface [IDeleteHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](IDeleteHandler-3.md)
-* class [TRow](../Serenity.Net.Services/DeleteRequestHandler-3.TRow.md)
-* class [TDeleteRequest](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteRequest.md)
-* class [TDeleteResponse](../Serenity.Net.Services/DeleteRequestHandler-3.TDeleteResponse.md)
-* interface [IDeleteRequestProcessor](IDeleteRequestProcessor.md)
+* interface [IDeleteHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](./IDeleteHandler-3.md)
+* interface [IDeleteRequestProcessor](./IDeleteRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [DeleteRequest](DeleteRequest.md)
-* class [DeleteResponse](DeleteResponse.md)
+* class [DeleteRequest](./DeleteRequest.md)
+* class [DeleteResponse](./DeleteResponse.md)
 * **Source:** *[DeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Delete/DeleteRequestHandler.cs)*

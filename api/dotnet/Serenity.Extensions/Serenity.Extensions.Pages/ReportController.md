@@ -20,8 +20,8 @@ public class ReportController : Controller
 
 | name | description |
 | --- | --- |
-| readonly [reportFactory-](ReportController/reportFactory-.md) | The report factory used to create report instances. |
-| readonly [reportRenderer-](ReportController/reportRenderer-.md) | The report renderer used to render reports. |
+| readonly [reportFactory](ReportController/reportFactory.md) | The report factory used to create report instances. |
+| readonly [reportRenderer](ReportController/reportRenderer.md) | The report renderer used to render reports. |
 
 ## See Also
 

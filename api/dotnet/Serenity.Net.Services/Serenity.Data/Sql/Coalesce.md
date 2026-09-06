@@ -1,5 +1,4 @@
 # Sql.Coalesce method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a COALESCE() expression.
 
@@ -28,7 +27,6 @@ The COALESCE() expression.
 ---
 
 # Sql.Coalesce method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a COALESCE() expression while adding values to the specified query as parameters.
 

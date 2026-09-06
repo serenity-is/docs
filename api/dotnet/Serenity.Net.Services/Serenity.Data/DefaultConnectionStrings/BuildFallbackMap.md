@@ -1,5 +1,4 @@
 # DefaultConnectionStrings.BuildFallbackMap method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Builds the connection key fallback map from the given type source.
 
@@ -17,5 +16,5 @@ The connection key fallback map.
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [DefaultConnectionStrings](../DefaultConnectionStrings.md)

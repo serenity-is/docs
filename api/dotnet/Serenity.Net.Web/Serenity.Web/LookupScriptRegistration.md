@@ -12,7 +12,7 @@ public class LookupScriptRegistration
 | name | description |
 | --- | --- |
 | [LookupScriptRegistration](LookupScriptRegistration/LookupScriptRegistration.md)() | The default constructor. |
-| static [RegisterLookupScripts](LookupScriptRegistration/RegisterLookupScripts.md)(…) | Creates and registers dynamic [`LookupScript`](LookupScript.md) objects for classes with LookupScriptAttribute. |
+| static [RegisterLookupScripts](LookupScriptRegistration/RegisterLookupScripts.md)(…) | Creates and registers dynamic [`LookupScript`](./LookupScript.md) objects for classes with LookupScriptAttribute. |
 
 ## See Also
 

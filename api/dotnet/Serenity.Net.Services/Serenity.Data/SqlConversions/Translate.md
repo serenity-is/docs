@@ -1,5 +1,4 @@
 # SqlConversions.Translate method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Translates the command text to the target connection dialect by replacing brackets ([]) and parameter prefixes (@). If the query already has a dialect set, it uses that instead of the connection one.
 
@@ -24,7 +23,6 @@ The translated query.
 ---
 
 # SqlConversions.Translate method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Translates the command text to the target connection dialect by replacing brackets ([]) and parameter prefixes (@).
 
@@ -48,7 +46,6 @@ The translated query.
 ---
 
 # SqlConversions.Translate method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Translates the command text to the target dialect by replacing brackets ([]) and parameter prefixes (@).
 

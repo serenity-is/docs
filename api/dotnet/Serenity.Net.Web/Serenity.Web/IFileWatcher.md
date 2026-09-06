@@ -14,7 +14,7 @@ public interface IFileWatcher
 | [Filter](IFileWatcher/Filter.md) { get; } | Gets the file filter being watched. |
 | [Path](IFileWatcher/Path.md) { get; } | Gets the directory path being watched. |
 | event [Changed](IFileWatcher/Changed.md) | Raised when a watched file changes. |
-| [RaiseChanged](IFileWatcher/RaiseChanged.md)(…) | Raises the [`Changed`](IFileWatcher/Changed.md) event for the specified file. |
+| [RaiseChanged](IFileWatcher/RaiseChanged.md)(…) | Raises the [`Changed`](./IFileWatcher/Changed.md) event for the specified file. |
 
 ## See Also
 

@@ -1,10 +1,9 @@
 # LocalText constructor
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Defines a localizable text resource. Contains a local text key and has implicit conversions to and from String.
 
 ```csharp
-public LocalText(string key)
+public LocalText(string? key)
 ```
 
 | parameter | description |

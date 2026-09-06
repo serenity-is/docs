@@ -1,5 +1,4 @@
 # EntitySqlQueryExtensions.OrderBy method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds field expressions to the order by list.
 
@@ -31,7 +30,6 @@ The query itself.
 ---
 
 # EntitySqlQueryExtensions.OrderBy method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field's expression to the order by list.
 

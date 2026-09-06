@@ -1,5 +1,4 @@
 # SqlHelper.FixParamType method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Fixes the type of the parameter to something suitable as a SQL parameter.
 

@@ -17,11 +17,11 @@ public class AllowHideAttribute : Attribute
 | name | description |
 | --- | --- |
 | [AllowHideAttribute](AllowHideAttribute/AllowHideAttribute.md)(…) | Controls the user's ability to hide a column, e.g. using the column picker. |
-| [Value](AllowHideAttribute/Value.md) { get; } | Gets a value indicating whether this [`AllowHideAttribute`](AllowHideAttribute.md) is on. |
+| [Value](AllowHideAttribute/Value.md) { get; } | Gets a value indicating whether this [`AllowHideAttribute`](./AllowHideAttribute.md) is on. |
 
 ## Remarks
 
-Initializes a new instance of the [`AllowHideAttribute`](AllowHideAttribute.md) class.
+Initializes a new instance of the [`AllowHideAttribute`](./AllowHideAttribute.md) class.
 
 ## See Also
 

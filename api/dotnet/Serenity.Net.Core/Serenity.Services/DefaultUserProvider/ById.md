@@ -1,8 +1,7 @@
 # DefaultUserProvider.ById method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 ```csharp
-public IUserDefinition ById(string id)
+public IUserDefinition? ById(string id)
 ```
 
 ## See Also

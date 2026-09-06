@@ -1,5 +1,4 @@
 # IListExceptionBehavior.OnException method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called when an exception occurs during list
 

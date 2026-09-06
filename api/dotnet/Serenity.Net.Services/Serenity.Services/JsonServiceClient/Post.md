@@ -1,5 +1,4 @@
 # JsonServiceClient.Post&lt;TResponse&gt; method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Posts a request to a JSON service and returns the typed response.
 
@@ -20,5 +19,4 @@ The response returned from the service.
 
 ## See Also
 
-* class [TResponse](../Serenity.Net.Services/../JsonServiceClient.TResponse.md)
 * class [JsonServiceClient](../JsonServiceClient.md)

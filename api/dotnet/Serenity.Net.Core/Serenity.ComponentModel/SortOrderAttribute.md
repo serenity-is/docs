@@ -22,7 +22,7 @@ public class SortOrderAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`SortOrderAttribute`](SortOrderAttribute.md) class.
+Initializes a new instance of the [`SortOrderAttribute`](./SortOrderAttribute.md) class.
 
 ## See Also
 

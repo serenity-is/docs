@@ -1,5 +1,4 @@
 # ExcelExporter.Export method (1 of 3)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Exports the specified data with the given columns to Excel bytes.
 
@@ -18,13 +17,12 @@ The generated Excel file bytes.
 
 ## See Also
 
-* class [ReportColumn](../Serenity.Net.Services/../ReportColumn.md)
+* class [ReportColumn](../../../Serenity.Net.Services/Serenity.Reporting/ReportColumn.md)
 * class [ExcelExporter](../ExcelExporter.md)
 
 ---
 
 # ExcelExporter.Export method (2 of 3)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Exports the specified data using the columns defined by the given type.
 
@@ -48,7 +46,6 @@ The generated Excel file bytes.
 ---
 
 # ExcelExporter.Export method (3 of 3)
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Exports the specified data using the columns defined by the given type, limited to the specified columns.
 

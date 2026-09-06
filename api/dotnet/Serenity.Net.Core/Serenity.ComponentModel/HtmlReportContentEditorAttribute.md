@@ -12,12 +12,12 @@ public class HtmlReportContentEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [HtmlReportContentEditorAttribute](HtmlReportContentEditorAttribute/HtmlReportContentEditorAttribute.md)() | Initializes a new instance of the [`HtmlReportContentEditorAttribute`](HtmlReportContentEditorAttribute.md) class. |
+| [HtmlReportContentEditorAttribute](HtmlReportContentEditorAttribute/HtmlReportContentEditorAttribute.md)() | Initializes a new instance of the [`HtmlReportContentEditorAttribute`](./HtmlReportContentEditorAttribute.md) class. |
 | [Cols](HtmlReportContentEditorAttribute/Cols.md) { get; set; } | Gets or sets the cols for underlying textarea. |
 | [Rows](HtmlReportContentEditorAttribute/Rows.md) { get; set; } | Gets or sets the rows for underlying textarea. |
 | const [Key](HtmlReportContentEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[HtmlReportContentEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/HtmlReportContentEditorAttribute.cs)*

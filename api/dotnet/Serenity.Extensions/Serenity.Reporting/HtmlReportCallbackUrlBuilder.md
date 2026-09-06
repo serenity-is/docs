@@ -18,7 +18,7 @@ public class HtmlReportCallbackUrlBuilder : IHtmlReportCallbackUrlBuilder
 
 | name | description |
 | --- | --- |
-| readonly [siteAbsoluteUrl-](HtmlReportCallbackUrlBuilder/siteAbsoluteUrl-.md) | The site absolute URL service used to resolve the internal URL of the web site. |
+| readonly [siteAbsoluteUrl](HtmlReportCallbackUrlBuilder/siteAbsoluteUrl.md) | The site absolute URL service used to resolve the internal URL of the web site. |
 | virtual [GetAuthCookieName](HtmlReportCallbackUrlBuilder/GetAuthCookieName.md)() | Gets the name of the authentication cookie to forward to the report callback. |
 | virtual [GetCookiesToForward](HtmlReportCallbackUrlBuilder/GetCookiesToForward.md)() | Gets the cookies to forward to the report callback, including the report auth cookie and the current request's authentication and language cookies. |
 | virtual [GetLanguageCookieName](HtmlReportCallbackUrlBuilder/GetLanguageCookieName.md)() | Gets the name of the language preference cookie to forward to the report callback. |
@@ -28,5 +28,5 @@ public class HtmlReportCallbackUrlBuilder : IHtmlReportCallbackUrlBuilder
 
 ## See Also
 
-* interface [IHtmlReportCallbackUrlBuilder](../Serenity.Net.Services/IHtmlReportCallbackUrlBuilder.md)
+* interface [IHtmlReportCallbackUrlBuilder](../../Serenity.Net.Services/Serenity.Reporting/IHtmlReportCallbackUrlBuilder.md)
 * **Source:** *[HtmlReportCallbackUrlBuilder.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Reporting/HtmlToPdf/HtmlReportCallbackUrlBuilder.cs)*

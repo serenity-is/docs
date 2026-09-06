@@ -1,5 +1,4 @@
 # CrossApply constructor (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`CrossApply`](../CrossApply.md) class.
 
@@ -19,7 +18,6 @@ public CrossApply(string subQuery, string alias)
 ---
 
 # CrossApply constructor (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`CrossApply`](../CrossApply.md) class.
 

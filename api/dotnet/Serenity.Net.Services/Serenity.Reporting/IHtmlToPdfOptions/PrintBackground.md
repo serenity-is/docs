@@ -1,5 +1,4 @@
 # IHtmlToPdfOptions.PrintBackground property
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Print background image if any (default true)
 

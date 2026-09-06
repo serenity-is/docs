@@ -1,5 +1,4 @@
 # SetFieldByStatementExtensions.Set&lt;T&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets a field value with a parameter.
 
@@ -20,6 +19,5 @@ Object itself.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../SetFieldByStatementExtensions.T.md)
 * interface [ISetFieldByStatement](../ISetFieldByStatement.md)
 * class [SetFieldByStatementExtensions](../SetFieldByStatementExtensions.md)

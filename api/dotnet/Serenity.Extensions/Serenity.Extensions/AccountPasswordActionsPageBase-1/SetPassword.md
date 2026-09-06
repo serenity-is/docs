@@ -1,5 +1,4 @@
 # AccountPasswordActionsPageBase&lt;TUserRow&gt;.SetPassword method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Renders the set password page.
 

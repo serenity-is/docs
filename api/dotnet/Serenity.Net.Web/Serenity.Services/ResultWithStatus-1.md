@@ -26,7 +26,7 @@ public class ResultWithStatus<TResponse> : StatusCodeResult
 
 ## Remarks
 
-Initializes a new instance of the [`ResultWithStatus`](ResultWithStatus-1.md) class.
+Initializes a new instance of the [`ResultWithStatus`](./ResultWithStatus-1.md) class.
 
 ## See Also
 

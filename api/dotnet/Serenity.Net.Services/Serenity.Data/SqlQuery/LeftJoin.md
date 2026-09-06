@@ -1,5 +1,4 @@
 # SqlQuery.LeftJoin method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a LEFT JOIN to the query
 
@@ -31,7 +30,6 @@ The query itself.
 ---
 
 # SqlQuery.LeftJoin method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a LEFT JOIN to the query.
 

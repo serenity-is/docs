@@ -1,5 +1,4 @@
 # JsonSortByConverter.ReadJson method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Reads the JSON representation of the object.
 

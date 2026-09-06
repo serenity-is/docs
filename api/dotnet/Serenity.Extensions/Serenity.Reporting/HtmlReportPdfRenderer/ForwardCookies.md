@@ -1,5 +1,4 @@
 # HtmlReportPdfRenderer.ForwardCookies method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Forwards the cookies from the render URL to the converter options.
 
@@ -17,8 +16,8 @@ protected virtual void ForwardCookies(IReport report, ReportRenderOptions render
 
 ## See Also
 
-* interface [IReport](../Serenity.Net.Services/../IReport.md)
-* class [ReportRenderOptions](../Serenity.Net.Services/../ReportRenderOptions.md)
-* interface [IHtmlToPdfOptions](../Serenity.Net.Services/../IHtmlToPdfOptions.md)
-* class [HtmlReportRenderUrl](../Serenity.Net.Services/../HtmlReportRenderUrl.md)
+* interface [IReport](../../../Serenity.Net.Services/Serenity.Reporting/IReport.md)
+* class [ReportRenderOptions](../../../Serenity.Net.Services/Serenity.Reporting/ReportRenderOptions.md)
+* interface [IHtmlToPdfOptions](../../../Serenity.Net.Services/Serenity.Reporting/IHtmlToPdfOptions.md)
+* class [HtmlReportRenderUrl](../../../Serenity.Net.Services/Serenity.Reporting/HtmlReportRenderUrl.md)
 * class [HtmlReportPdfRenderer](../HtmlReportPdfRenderer.md)

@@ -1,5 +1,4 @@
 # RowFieldsBase.FindFieldByPropertyName method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Finds the name of the field by property.
 

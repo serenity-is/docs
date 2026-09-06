@@ -12,7 +12,7 @@ public class BooleanFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [BooleanFormatterAttribute](BooleanFormatterAttribute/BooleanFormatterAttribute.md)() | Initializes a new instance of the [`BooleanFormatterAttribute`](BooleanFormatterAttribute.md) class. |
+| [BooleanFormatterAttribute](BooleanFormatterAttribute/BooleanFormatterAttribute.md)() | Initializes a new instance of the [`BooleanFormatterAttribute`](./BooleanFormatterAttribute.md) class. |
 | [FalseIcon](BooleanFormatterAttribute/FalseIcon.md) { get; set; } | Gets or sets the icon corresponding to falsy value. |
 | [FalseText](BooleanFormatterAttribute/FalseText.md) { get; set; } | Gets or sets the text corresponding to falsy value. |
 | [ShowHint](BooleanFormatterAttribute/ShowHint.md) { get; set; } | Gets or sets a value indicating whether to show hint (text) on hover when text is not displayed next to checkbox icon. When displayed in header filter, defaults to false, otherwise defaults to true when showText is false. |
@@ -23,5 +23,5 @@ public class BooleanFormatterAttribute : CustomFormatterAttribute
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[BooleanFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/BooleanFormatterAttribute.cs)*

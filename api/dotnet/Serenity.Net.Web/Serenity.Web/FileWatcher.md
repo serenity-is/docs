@@ -11,7 +11,7 @@ public class FileWatcher : IDisposable, IFileWatcher
 
 | name | description |
 | --- | --- |
-| [FileWatcher](FileWatcher/FileWatcher.md)(…) | Initializes a new instance of the [`FileWatcher`](FileWatcher.md) class. |
+| [FileWatcher](FileWatcher/FileWatcher.md)(…) | Initializes a new instance of the [`FileWatcher`](./FileWatcher.md) class. |
 | [Filter](FileWatcher/Filter.md) { get; } |  |
 | [Path](FileWatcher/Path.md) { get; } |  |
 | event [Changed](FileWatcher/Changed.md) |  |
@@ -25,5 +25,5 @@ public class FileWatcher : IDisposable, IFileWatcher
 
 ## See Also
 
-* interface [IFileWatcher](IFileWatcher.md)
+* interface [IFileWatcher](./IFileWatcher.md)
 * **Source:** *[FileWatcher.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Common/FileWatcher.cs)*

@@ -1,5 +1,4 @@
 # IDeleteRequestProcessor.Process method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Processes the [`DeleteRequest`](../DeleteRequest.md) and returns a [`DeleteResponse`](../DeleteResponse.md)
 

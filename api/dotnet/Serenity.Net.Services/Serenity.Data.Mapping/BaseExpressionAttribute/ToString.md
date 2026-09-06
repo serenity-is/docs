@@ -1,5 +1,4 @@
 # BaseExpressionAttribute.ToString method (1 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the expression to string for specified dialect.
 
@@ -23,7 +22,6 @@ The expression formatted for the specified dialect.
 ---
 
 # BaseExpressionAttribute.ToString method (2 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Convert the expression to string. Used by derived expression attributes to convert their constructor arguments to string while supporting other expression attribute types, or a special array with the first argument as the attribute type and others as its constructor parameters.
 

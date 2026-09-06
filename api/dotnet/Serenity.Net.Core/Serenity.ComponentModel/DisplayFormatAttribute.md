@@ -29,7 +29,7 @@ public class DisplayFormatAttribute : Attribute
 
 public class SomeColumns { [DisplayFormat("d")] public DateTime DateWithCultureDMYOrder { get; set; } [DisplayFormat("dd/MM/yyyy")] public DateTime DateWithConstantDMYOrder { get; set; } [DisplayFormat("g")] public DateTime DateTimeToMinWithCultureDMYOrder { get; set; } [DisplayFormat("dd/MM/yyyy HH:mm")] public DateTime DateTimeToMinConstantDMYOrder { get; set; } [DisplayFormat("G")] public DateTime DateTimeToSecWithCultureDMYOrder { get; set; } [DisplayFormat("dd/MM/yyyy HH:mm:ss")] public DateTime DateTimeToSecWithConstantDMYOrder { get; set; } [DisplayFormat("s")] public DateTime SortableDateTime { get; set; } [DisplayFormat("u")] public DateTime ISO8601UTC { get; set; } [DisplayFormat("#,##0.00")] public Decimal ShowTwoZerosAfterDecimalWithGrouping { get; set; } [DisplayFormat("0.00")] public Decimal ShowTwoZerosAfterDecimalNoGrouping { get; set; } }
 
-Initializes a new instance of the [`DisplayFormatAttribute`](DisplayFormatAttribute.md) class.
+Initializes a new instance of the [`DisplayFormatAttribute`](./DisplayFormatAttribute.md) class.
 
 ## See Also
 

@@ -1,5 +1,4 @@
 # EditorAddonAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds an editor addon to the target property.
 

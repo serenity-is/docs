@@ -12,7 +12,7 @@ public class FileDownloadFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [FileDownloadFormatterAttribute](FileDownloadFormatterAttribute/FileDownloadFormatterAttribute.md)() | Initializes a new instance of the [`FileDownloadFormatterAttribute`](FileDownloadFormatterAttribute.md) class. |
+| [FileDownloadFormatterAttribute](FileDownloadFormatterAttribute/FileDownloadFormatterAttribute.md)() | Initializes a new instance of the [`FileDownloadFormatterAttribute`](./FileDownloadFormatterAttribute.md) class. |
 | [DisplayFormat](FileDownloadFormatterAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
 | [IconClass](FileDownloadFormatterAttribute/IconClass.md) { get; set; } | Gets or sets the icon class. |
 | [OriginalNameProperty](FileDownloadFormatterAttribute/OriginalNameProperty.md) { get; set; } | Gets or sets the original name property which indicates the property to read original file name from (if any). |
@@ -20,5 +20,5 @@ public class FileDownloadFormatterAttribute : CustomFormatterAttribute
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[FileDownloadFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/FileDownloadFormatterAttribute.cs)*

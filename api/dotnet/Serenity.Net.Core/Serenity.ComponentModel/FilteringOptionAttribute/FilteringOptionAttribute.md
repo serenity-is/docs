@@ -1,5 +1,4 @@
 # FilteringOptionAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Declares a new filtering option
 

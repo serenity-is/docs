@@ -1,5 +1,4 @@
 # RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.User property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the current user from the request context.
 

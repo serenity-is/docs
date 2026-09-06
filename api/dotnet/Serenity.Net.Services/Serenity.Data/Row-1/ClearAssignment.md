@@ -1,5 +1,4 @@
 # Row&lt;TFields&gt;.ClearAssignment method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Clears the assignment flag of the field.
 

@@ -12,8 +12,8 @@ public class TwoLevelCachedAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [TwoLevelCachedAttribute](TwoLevelCachedAttribute/TwoLevelCachedAttribute.md)() | Initializes a new instance of the [`TwoLevelCachedAttribute`](TwoLevelCachedAttribute.md) class. |
-| [TwoLevelCachedAttribute](TwoLevelCachedAttribute/TwoLevelCachedAttribute.md)(…) | Initializes a new instance of the [`TwoLevelCachedAttribute`](TwoLevelCachedAttribute.md) class. (2 constructors) |
+| [TwoLevelCachedAttribute](TwoLevelCachedAttribute/TwoLevelCachedAttribute.md)() | Initializes a new instance of the [`TwoLevelCachedAttribute`](./TwoLevelCachedAttribute.md) class. |
+| [TwoLevelCachedAttribute](TwoLevelCachedAttribute/TwoLevelCachedAttribute.md)(…) | Initializes a new instance of the [`TwoLevelCachedAttribute`](./TwoLevelCachedAttribute.md) class. (2 constructors) |
 | [GenerationKeys](TwoLevelCachedAttribute/GenerationKeys.md) { get; set; } | Gets the generation keys. |
 | [LinkedRows](TwoLevelCachedAttribute/LinkedRows.md) { get; set; } | Gets the types of the linked rows. |
 

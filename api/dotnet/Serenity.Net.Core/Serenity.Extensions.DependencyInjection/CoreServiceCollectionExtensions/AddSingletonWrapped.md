@@ -1,5 +1,4 @@
 # CoreServiceCollectionExtensions.AddSingletonWrapped&lt;TService,TWrapper,TImplementation&gt; method (1 of 2)
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds a singleton service of the type *TService* with the implementation type *TWrapper* that wraps the *TImplementation* to the IServiceCollection.
 
@@ -24,13 +23,11 @@ A reference to this instance after the operation has completed.
 
 ## See Also
 
-* class [TService](../Serenity.Net.Core/../CoreServiceCollectionExtensions.TService.md)
 * class [CoreServiceCollectionExtensions](../CoreServiceCollectionExtensions.md)
 
 ---
 
 # CoreServiceCollectionExtensions.AddSingletonWrapped&lt;TService,TWrapper1,TWrapper2,TImplementation&gt; method (2 of 2)
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds a singleton service of the type *TService* with the implementation type *TWrapper1* that wraps the *TWrapper2* which itself wraps the *TImplementation* to the IServiceCollection.
 
@@ -58,5 +55,4 @@ A reference to this instance after the operation has completed.
 
 ## See Also
 
-* class [TService](../Serenity.Net.Core/../CoreServiceCollectionExtensions.TService.md)
 * class [CoreServiceCollectionExtensions](../CoreServiceCollectionExtensions.md)

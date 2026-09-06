@@ -1,5 +1,4 @@
 # MemoryCacheExtensions.RemoveAll method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Removes all items from the cache (avoid except unit tests).
 

@@ -1,5 +1,4 @@
 # InnerJoin constructor (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`InnerJoin`](../InnerJoin.md) class.
 
@@ -21,7 +20,6 @@ public InnerJoin(string toTable, string alias, ICriteria onCriteria)
 ---
 
 # InnerJoin constructor (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`InnerJoin`](../InnerJoin.md) class.
 

@@ -1,7 +1,7 @@
 # FilesToDeleteExtensions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extension methods for [`FilesToDelete`](FilesToDelete.md)
+Extension methods for [`FilesToDelete`](./FilesToDelete.md)
 
 ```csharp
 public static class FilesToDeleteExtensions
@@ -11,7 +11,7 @@ public static class FilesToDeleteExtensions
 
 | name | description |
 | --- | --- |
-| static [RegisterFilesToDelete](FilesToDeleteExtensions/RegisterFilesToDelete.md)(…) | Registers a [`FilesToDelete`](FilesToDelete.md) in the target unit of work. This deletes the old files on commit, and new files on rollback |
+| static [RegisterFilesToDelete](FilesToDeleteExtensions/RegisterFilesToDelete.md)(…) | Registers a [`FilesToDelete`](./FilesToDelete.md) in the target unit of work. This deletes the old files on commit, and new files on rollback |
 
 ## See Also
 

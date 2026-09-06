@@ -1,5 +1,4 @@
 # SqlSyntax.IsValidQuotedIdentifier method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines whether the specified string is a valid quoted SQL identifier.
 

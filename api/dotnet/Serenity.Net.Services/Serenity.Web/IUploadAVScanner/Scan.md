@@ -1,5 +1,4 @@
 # IUploadAVScanner.Scan method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Processes a temporary upload stream, usually from the HTTP request files and raises an exception if any issues found or an error occurred during scan
 

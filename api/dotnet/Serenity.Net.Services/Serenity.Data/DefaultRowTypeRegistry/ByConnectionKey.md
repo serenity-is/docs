@@ -1,5 +1,4 @@
 # DefaultRowTypeRegistry.ByConnectionKey method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns row types by the connection key.
 

@@ -1,5 +1,4 @@
 # NotFilterableAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Indicates that the field this attribute is placed on is not filterable.
 

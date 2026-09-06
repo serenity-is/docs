@@ -1,5 +1,4 @@
 # Field.GetTitle method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the title.
 
@@ -17,5 +16,5 @@ The localized title of the field.
 
 ## See Also
 
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [Field](../Field.md)

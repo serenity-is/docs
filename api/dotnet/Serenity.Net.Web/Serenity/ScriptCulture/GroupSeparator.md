@@ -1,5 +1,4 @@
 # ScriptCulture.GroupSeparator property
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets or sets the group separator.
 

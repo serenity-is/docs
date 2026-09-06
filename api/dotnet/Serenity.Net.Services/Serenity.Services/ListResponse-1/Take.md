@@ -1,5 +1,4 @@
 # ListResponse&lt;T&gt;.Take property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public int Take { get; set; }

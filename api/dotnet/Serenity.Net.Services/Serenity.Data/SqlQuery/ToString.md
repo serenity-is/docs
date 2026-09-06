@@ -1,5 +1,4 @@
 # SqlQuery.ToString method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Formats SQL Query as string. If paging is used and skip requested, multiple queries might be created one after each other.
 
@@ -18,7 +17,6 @@ Formatted SELECT statement.
 ---
 
 # SqlQuery.ToString method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Formats SQL Query as string. If paging is used and skip requested, multiple queries might be created one after each other.
 

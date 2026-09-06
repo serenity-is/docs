@@ -11,7 +11,7 @@ public sealed class NodeScriptRunner : IDisposable
 
 | name | description |
 | --- | --- |
-| [NodeScriptRunner](NodeScriptRunner/NodeScriptRunner.md)(…) | Initializes a new instance of the [`NodeScriptRunner`](NodeScriptRunner.md) class. |
+| [NodeScriptRunner](NodeScriptRunner/NodeScriptRunner.md)(…) | Initializes a new instance of the [`NodeScriptRunner`](./NodeScriptRunner.md) class. |
 | [AttachToLogger](NodeScriptRunner/AttachToLogger.md)(…) | Attaches the runner's output to the given logger. |
 
 ## See Also

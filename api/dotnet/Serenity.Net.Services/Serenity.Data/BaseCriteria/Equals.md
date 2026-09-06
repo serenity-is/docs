@@ -1,5 +1,4 @@
 # BaseCriteria.Equals method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Must override this or will get operator overload warning.
 

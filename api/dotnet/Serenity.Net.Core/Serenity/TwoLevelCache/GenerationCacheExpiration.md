@@ -1,5 +1,4 @@
 # TwoLevelCache.GenerationCacheExpiration field
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Expiration timeout for cache generation keys
 

@@ -1,5 +1,4 @@
 # IFileWatcherFactory.Create method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates a new file system watcher for the given path and filter.
 

@@ -32,5 +32,4 @@ Initializes a new instance.
 ## See Also
 
 * interface [IServiceResolver&lt;TService&gt;](../Serenity/IServiceResolver-1.md)
-* class [TService](../Serenity.Net.Core/ServiceResolver-1.TService.md)
 * **Source:** *[ServiceResolver.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Helpers/ServiceResolver.cs)*

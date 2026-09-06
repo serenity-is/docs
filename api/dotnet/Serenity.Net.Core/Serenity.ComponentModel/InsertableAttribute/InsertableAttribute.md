@@ -1,5 +1,4 @@
 # InsertableAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag.
 

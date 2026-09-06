@@ -1,5 +1,4 @@
 # DistinctValuesEditorAttribute constructor (1 of 2)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`DistinctValuesEditorAttribute`](../DistinctValuesEditorAttribute.md) class.
 
@@ -14,7 +13,6 @@ public DistinctValuesEditorAttribute()
 ---
 
 # DistinctValuesEditorAttribute constructor (2 of 2)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`DistinctValuesEditorAttribute`](../DistinctValuesEditorAttribute.md) class.
 

@@ -1,5 +1,4 @@
 # JSON.Defaults.StrictWriteNulls field
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 The stricter settings, raises error on missing members / reference loops, writes nulls
 

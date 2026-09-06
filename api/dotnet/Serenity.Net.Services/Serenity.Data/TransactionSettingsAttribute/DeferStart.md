@@ -1,5 +1,4 @@
 # TransactionSettingsAttribute.DeferStart property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets whether the transaction start should be deferred if possible (generally until the connection property of the unit of work object is read). This might have undesired side effects, so use with care.
 

@@ -1,5 +1,4 @@
 # CodeWriter.AppendLine method (1 of 2)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Appends a line to internal string builder
 
@@ -18,7 +17,6 @@ String builder
 ---
 
 # CodeWriter.AppendLine method (2 of 2)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Appends a line to internal string builder
 

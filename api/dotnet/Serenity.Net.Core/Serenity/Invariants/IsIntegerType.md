@@ -1,5 +1,4 @@
 # Invariants.IsIntegerType method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Determines whether the type of the value is an integer type (Int16, Int32, Int64). Avoid using this function as it is obsolete.
 

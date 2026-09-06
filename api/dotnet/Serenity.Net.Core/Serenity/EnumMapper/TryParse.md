@@ -1,5 +1,4 @@
 # EnumMapper.TryParse&lt;TEnum&gt; method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Tries to parse the enum string.
 
@@ -19,5 +18,4 @@ If parsed successfully true
 
 ## See Also
 
-* class [TEnum](../Serenity.Net.Core/../EnumMapper.TEnum.md)
 * class [EnumMapper](../EnumMapper.md)

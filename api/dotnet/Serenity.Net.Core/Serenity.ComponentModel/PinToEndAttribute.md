@@ -16,5 +16,5 @@ public class PinToEndAttribute : PinColumnAttribute
 
 ## See Also
 
-* class [PinColumnAttribute](PinColumnAttribute.md)
+* class [PinColumnAttribute](./PinColumnAttribute.md)
 * **Source:** *[PinToEndAttribute.cs](https://github.com/serenity-is/Serenity/blob/075fabc73abbe2a574a5d304b07a74586c12835c/src/core/ComponentModel/Columns/Pinning/PinToEndAttribute.cs)*

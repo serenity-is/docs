@@ -1,5 +1,4 @@
 # GetNextNumberHelper.GetNextNumber method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the next number for the specified field based on the request prefix and length.
 
@@ -22,5 +21,5 @@ The next number and its serial representation.
 
 * class [GetNextNumberResponse](../GetNextNumberResponse.md)
 * class [GetNextNumberRequest](../GetNextNumberRequest.md)
-* class [Field](../Serenity.Net.Services/../../Serenity.Data/Field.md)
+* class [Field](../../../Serenity.Net.Services/Serenity.Data/Field.md)
 * class [GetNextNumberHelper](../GetNextNumberHelper.md)

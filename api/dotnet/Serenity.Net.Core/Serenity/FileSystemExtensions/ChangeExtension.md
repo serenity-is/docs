@@ -1,5 +1,4 @@
 # FileSystemExtensions.ChangeExtension method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Changes the extension of a path string.
 

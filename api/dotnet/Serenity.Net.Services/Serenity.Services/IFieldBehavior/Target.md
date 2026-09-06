@@ -1,5 +1,4 @@
 # IFieldBehavior.Target property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the target field that the current behavior should operate on.
 

@@ -1,5 +1,4 @@
 # BooleanField.ValueToJson method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the field value to JSON.
 
@@ -21,7 +20,6 @@ public override void ValueToJson(JsonWriter writer, IRow row, JsonSerializer ser
 ---
 
 # BooleanField.ValueToJson method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public override void ValueToJson(Utf8JsonWriter writer, IRow row, JsonSerializerOptions options)

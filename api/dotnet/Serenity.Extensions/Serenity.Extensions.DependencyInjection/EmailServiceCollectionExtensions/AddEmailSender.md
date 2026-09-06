@@ -1,5 +1,4 @@
 # EmailServiceCollectionExtensions.AddEmailSender method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Tries to adds EmailSender as IEmailSender
 

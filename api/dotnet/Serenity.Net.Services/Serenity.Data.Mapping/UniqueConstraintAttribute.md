@@ -12,7 +12,7 @@ public class UniqueConstraintAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [UniqueConstraintAttribute](UniqueConstraintAttribute/UniqueConstraintAttribute.md)(…) | Initializes a new instance of the [`UniqueConstraintAttribute`](UniqueConstraintAttribute.md) class. |
+| [UniqueConstraintAttribute](UniqueConstraintAttribute/UniqueConstraintAttribute.md)(…) | Initializes a new instance of the [`UniqueConstraintAttribute`](./UniqueConstraintAttribute.md) class. |
 | [CheckBeforeSave](UniqueConstraintAttribute/CheckBeforeSave.md) { get; set; } | Gets or sets a value indicating whether constraint should be checked before save, default true. |
 | [ErrorMessage](UniqueConstraintAttribute/ErrorMessage.md) { get; set; } | Gets or sets the error message. |
 | [Fields](UniqueConstraintAttribute/Fields.md) { get; } | Gets the fields. |

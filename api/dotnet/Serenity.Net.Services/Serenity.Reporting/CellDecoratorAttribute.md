@@ -1,7 +1,7 @@
 # CellDecoratorAttribute class
 **namespace:** *[Serenity.Reporting](../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Attribute used to set the [`ICellDecorator`](ICellDecorator.md) type for a property.
+Attribute used to set the [`ICellDecorator`](./ICellDecorator.md) type for a property.
 
 ```csharp
 [AttributeUsage(AttributeTargets.All)]
@@ -16,7 +16,7 @@ public class CellDecoratorAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [CellDecoratorAttribute](CellDecoratorAttribute/CellDecoratorAttribute.md)(…) | Attribute used to set the [`ICellDecorator`](ICellDecorator.md) type for a property. |
+| [CellDecoratorAttribute](CellDecoratorAttribute/CellDecoratorAttribute.md)(…) | Attribute used to set the [`ICellDecorator`](./ICellDecorator.md) type for a property. |
 | [DecoratorType](CellDecoratorAttribute/DecoratorType.md) { get; set; } | Gets the decorator type. |
 
 ## Remarks

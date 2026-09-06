@@ -1,5 +1,4 @@
 # IScriptContent.Hash property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Hash of the cached content
 

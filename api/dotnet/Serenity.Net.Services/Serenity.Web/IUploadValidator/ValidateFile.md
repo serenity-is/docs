@@ -1,5 +1,4 @@
 # IUploadValidator.ValidateFile method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates file constraints
 
@@ -17,5 +16,5 @@ public void ValidateFile(IUploadFileConstraints constraints, Stream stream, stri
 
 ## See Also
 
-* interface [IUploadFileConstraints](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadFileConstraints.md)
+* interface [IUploadFileConstraints](../../../Serenity.Net.Core/Serenity.ComponentModel/IUploadFileConstraints.md)
 * interface [IUploadValidator](../IUploadValidator.md)

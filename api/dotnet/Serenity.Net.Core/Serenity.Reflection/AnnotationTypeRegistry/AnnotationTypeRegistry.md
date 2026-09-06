@@ -1,5 +1,4 @@
 # AnnotationTypeRegistry constructor
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 The default annotation type registry.
 

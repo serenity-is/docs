@@ -27,8 +27,8 @@ public abstract class MembershipPageBase<TUserRow> : Controller
 
 ## See Also
 
-* interface [IRow](../Serenity.Net.Services/../Serenity.Data/IRow.md)
-* interface [IIdRow](../Serenity.Net.Services/../Serenity.Data/IIdRow.md)
-* interface [IEmailRow](../Serenity.Net.Services/../Serenity.Data/IEmailRow.md)
-* interface [IPasswordRow](../Serenity.Net.Services/../Serenity.Data/IPasswordRow.md)
+* interface [IRow](../../Serenity.Net.Services/Serenity.Data/IRow.md)
+* interface [IIdRow](../../Serenity.Net.Services/Serenity.Data/IIdRow.md)
+* interface [IEmailRow](../../Serenity.Net.Services/Serenity.Data/IEmailRow.md)
+* interface [IPasswordRow](../../Serenity.Net.Services/Serenity.Data/IPasswordRow.md)
 * **Source:** *[MembershipPageBase.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/Membership/MembershipPageBase.cs)*

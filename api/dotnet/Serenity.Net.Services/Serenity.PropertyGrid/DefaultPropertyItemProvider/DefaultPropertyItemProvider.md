@@ -1,5 +1,4 @@
 # DefaultPropertyItemProvider constructor
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`DefaultPropertyItemProvider`](../DefaultPropertyItemProvider.md) class.
 
@@ -20,5 +19,5 @@ public DefaultPropertyItemProvider(IServiceProvider provider, ITypeSource typeSo
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [DefaultPropertyItemProvider](../DefaultPropertyItemProvider.md)

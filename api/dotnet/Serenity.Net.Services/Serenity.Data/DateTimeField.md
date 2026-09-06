@@ -36,9 +36,9 @@ public sealed class DateTimeField : GenericValueField<DateTime>
 
 ## Remarks
 
-Initializes a new instance of the [`DateTimeField`](DateTimeField.md) class.
+Initializes a new instance of the [`DateTimeField`](./DateTimeField.md) class.
 
 ## See Also
 
-* class [GenericValueField&lt;TValue&gt;](GenericValueField-1.md)
+* class [GenericValueField&lt;TValue&gt;](./GenericValueField-1.md)
 * **Source:** *[DateTimeField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/DateTimeField.cs)*

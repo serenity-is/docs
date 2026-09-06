@@ -1,5 +1,4 @@
 # Sql.Count method (1 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns COUNT(*).
 
@@ -18,7 +17,6 @@ COUNT(*).
 ---
 
 # Sql.Count method (2 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a COUNT() expression.
 
@@ -48,7 +46,6 @@ The COUNT() expression.
 ---
 
 # Sql.Count method (3 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a COUNT() expression.
 
@@ -77,7 +74,6 @@ The COUNT() expression.
 ---
 
 # Sql.Count method (4 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a COUNT() expression.
 

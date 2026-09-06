@@ -1,5 +1,4 @@
 # ConcatenatedScript constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 A dynamic script that is formed from the concatenation of other scripts.
 
@@ -26,6 +25,6 @@ Creates a new instance of the class.
 
 ## See Also
 
-* interface [IPermissionService](../Serenity.Net.Core/../../Serenity.Abstractions/IPermissionService.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [IPermissionService](../../../Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [ConcatenatedScript](../ConcatenatedScript.md)

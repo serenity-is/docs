@@ -30,9 +30,9 @@ public class VariantField : GenericClassField<object>
 
 ## Remarks
 
-Initializes a new instance of the [`VariantField`](VariantField.md) class.
+Initializes a new instance of the [`VariantField`](./VariantField.md) class.
 
 ## See Also
 
-* class [GenericClassField&lt;TValue&gt;](GenericClassField-1.md)
+* class [GenericClassField&lt;TValue&gt;](./GenericClassField-1.md)
 * **Source:** *[VariantField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/VariantField.cs)*

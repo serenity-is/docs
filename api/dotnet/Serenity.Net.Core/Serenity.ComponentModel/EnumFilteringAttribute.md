@@ -12,11 +12,11 @@ public class EnumFilteringAttribute : CustomFilteringAttribute
 
 | name | description |
 | --- | --- |
-| [EnumFilteringAttribute](EnumFilteringAttribute/EnumFilteringAttribute.md)() | Initializes a new instance of the [`EnumFilteringAttribute`](EnumFilteringAttribute.md) class. |
+| [EnumFilteringAttribute](EnumFilteringAttribute/EnumFilteringAttribute.md)() | Initializes a new instance of the [`EnumFilteringAttribute`](./EnumFilteringAttribute.md) class. |
 | [EnumKey](EnumFilteringAttribute/EnumKey.md) { get; set; } | Gets or sets the enum key. |
 | const [Key](EnumFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 
-* class [CustomFilteringAttribute](CustomFilteringAttribute.md)
+* class [CustomFilteringAttribute](./CustomFilteringAttribute.md)
 * **Source:** *[EnumFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/EnumFilteringAttribute.cs)*

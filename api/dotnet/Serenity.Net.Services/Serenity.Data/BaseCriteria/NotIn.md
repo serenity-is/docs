@@ -1,5 +1,4 @@
 # BaseCriteria.NotIn method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new binary NOT IN criteria containing this criteria as the left operand.
 
@@ -28,7 +27,6 @@ A new binary NOT IN criteria.
 ---
 
 # BaseCriteria.NotIn method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new binary NOT IN criteria containing this criteria as the left operand.
 
@@ -58,7 +56,6 @@ A new binary NOT IN criteria.
 ---
 
 # BaseCriteria.NotIn&lt;T&gt; method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new binary NOT IN criteria containing this criteria as the left operand.
 
@@ -83,5 +80,4 @@ A new binary NOT IN criteria.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../BaseCriteria.T.md)
 * class [BaseCriteria](../BaseCriteria.md)

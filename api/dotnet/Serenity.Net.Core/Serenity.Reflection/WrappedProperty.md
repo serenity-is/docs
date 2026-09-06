@@ -23,9 +23,9 @@ public class WrappedProperty : IPropertyInfo
 
 ## Remarks
 
-Initializes a new instance of the [`WrappedProperty`](WrappedProperty.md) class.
+Initializes a new instance of the [`WrappedProperty`](./WrappedProperty.md) class.
 
 ## See Also
 
-* interface [IPropertyInfo](IPropertyInfo.md)
+* interface [IPropertyInfo](./IPropertyInfo.md)
 * **Source:** *[WrappedProperty.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Reflection/WrappedProperty.cs)*

@@ -12,9 +12,9 @@ public class NotMappedAttribute : SetFieldFlagsAttribute
 
 | name | description |
 | --- | --- |
-| [NotMappedAttribute](NotMappedAttribute/NotMappedAttribute.md)() | Initializes a new instance of the [`NotMappedAttribute`](NotMappedAttribute.md) class. |
+| [NotMappedAttribute](NotMappedAttribute/NotMappedAttribute.md)() | Initializes a new instance of the [`NotMappedAttribute`](./NotMappedAttribute.md) class. |
 
 ## See Also
 
-* class [SetFieldFlagsAttribute](SetFieldFlagsAttribute.md)
+* class [SetFieldFlagsAttribute](./SetFieldFlagsAttribute.md)
 * **Source:** *[NotMappedAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/NotMappedAttribute.cs)*

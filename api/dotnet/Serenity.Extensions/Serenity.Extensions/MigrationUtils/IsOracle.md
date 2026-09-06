@@ -1,5 +1,4 @@
 # MigrationUtils.IsOracle method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Determines whether the migration is running against an Oracle database.
 

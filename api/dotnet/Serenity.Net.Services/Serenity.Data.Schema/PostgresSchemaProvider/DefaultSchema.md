@@ -1,5 +1,4 @@
 # PostgresSchemaProvider.DefaultSchema property
-**namespace:** *[Serenity.Data.Schema](../../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the default schema.
 

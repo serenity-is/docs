@@ -11,7 +11,7 @@ public class ReportTree
 
 | name | description |
 | --- | --- |
-| [ReportTree](ReportTree/ReportTree.md)() | Initializes a new instance of the [`ReportTree`](ReportTree.md) class. |
+| [ReportTree](ReportTree/ReportTree.md)() | Initializes a new instance of the [`ReportTree`](./ReportTree.md) class. |
 | static [FromList](ReportTree/FromList.md)(…) | Builds a report tree from the specified reports. |
 | [Root](ReportTree/Root.md) { get; set; } | The root category of the tree. |
 | class [Category](ReportTree.Category.md) | A category in the report tree. |

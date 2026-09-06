@@ -26,4 +26,4 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [ReportRegistry](ReportRegistry.md)
+* class [ReportRegistry](./ReportRegistry.md)

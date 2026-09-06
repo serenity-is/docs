@@ -1,5 +1,4 @@
 # IUploadStorage.FileExists method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns if a file at path exists.
 

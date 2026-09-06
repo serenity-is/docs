@@ -1,5 +1,4 @@
 # ReportFactoryExtensions.Create&lt;TReport&gt; method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a report for the given report type
 
@@ -22,7 +21,6 @@ Report instance
 
 ## See Also
 
-* class [TReport](../Serenity.Net.Services/../ReportFactoryExtensions.TReport.md)
 * interface [IReportFactory](../IReportFactory.md)
 * interface [IReport](../IReport.md)
 * class [ReportFactoryExtensions](../ReportFactoryExtensions.md)

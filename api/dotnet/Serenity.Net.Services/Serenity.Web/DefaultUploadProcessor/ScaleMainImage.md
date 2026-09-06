@@ -1,5 +1,4 @@
 # DefaultUploadProcessor.ScaleMainImage method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Scales the temporary image with provided upload image options if required based on the options and saves the result to the target upload storage file
 
@@ -27,5 +26,5 @@ The resulting image file path
 ## See Also
 
 * class [ScaleImageAsResult](../DefaultUploadProcessor.ScaleImageAsResult.md)
-* interface [IUploadImageOptions](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadImageOptions.md)
+* interface [IUploadImageOptions](../../../Serenity.Net.Core/Serenity.ComponentModel/IUploadImageOptions.md)
 * class [DefaultUploadProcessor](../DefaultUploadProcessor.md)

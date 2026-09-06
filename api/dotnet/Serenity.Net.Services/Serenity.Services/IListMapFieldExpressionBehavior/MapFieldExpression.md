@@ -1,5 +1,4 @@
 # IListMapFieldExpressionBehavior.MapFieldExpression method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Maps field's expression to a custom one. Returns null if not mapped to a custom expression.
 

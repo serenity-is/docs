@@ -1,5 +1,4 @@
 # ExtensionsTypeSource.SerenityExtensionsAssemblyChain field
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 List of assemblies up to Serenity.Extensions
 

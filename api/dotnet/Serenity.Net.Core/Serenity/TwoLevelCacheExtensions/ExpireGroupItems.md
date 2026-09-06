@@ -1,5 +1,4 @@
 # TwoLevelCacheExtensions.ExpireGroupItems method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Changes a group generation value, so that all items that depend on it are expired.
 

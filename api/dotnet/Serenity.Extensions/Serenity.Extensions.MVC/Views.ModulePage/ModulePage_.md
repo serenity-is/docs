@@ -1,5 +1,4 @@
 # Views.ModulePage.ModulePage_ field
-**namespace:** *[Serenity.Extensions.MVC](../../README.md#serenity.extensions.mvc-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The path to the `ModulePage` view.
 

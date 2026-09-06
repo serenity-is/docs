@@ -1,5 +1,4 @@
 # Base32.Encode method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Encodes a buffer using the default options.
 

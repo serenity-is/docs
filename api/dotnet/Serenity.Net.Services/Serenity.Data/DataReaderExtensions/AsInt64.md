@@ -1,5 +1,4 @@
 # DataReaderExtensions.AsInt64 method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Reads the value at the field index. Returns `null` if the value is DBNull.
 

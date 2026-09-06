@@ -1,5 +1,4 @@
 # BaseCriteriaVisitor.VisitBinary method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Visits the binary criteria. A binary criteria is one with two operands and an operator between them.
 

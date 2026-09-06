@@ -1,5 +1,4 @@
 # SqlQuery.GroupBy method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field name or an SQL expression to the GROUP BY clause.
 
@@ -28,7 +27,6 @@ The query itself.
 ---
 
 # SqlQuery.GroupBy method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field of a given table alias to the GROUP BY clause.
 

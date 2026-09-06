@@ -1,5 +1,4 @@
 # IImageProcessor.Scale method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Generates a thumbnail of the source image based on parameters.
 
@@ -27,5 +26,5 @@ Thumbnail width or height must be greater than 0. Otherwise an empty image is ge
 
 ## See Also
 
-* enum [ImageScaleMode](../Serenity.Net.Core/../ImageScaleMode.md)
+* enum [ImageScaleMode](../../../Serenity.Net.Core/Serenity.Web/ImageScaleMode.md)
 * interface [IImageProcessor](../IImageProcessor.md)

@@ -1,5 +1,4 @@
 # DefaultPropertyItemProvider.GetPropertyItemsFor method
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public IEnumerable<PropertyItem> GetPropertyItemsFor(Type type, Func<PropertyInfo, bool> predicate)
@@ -19,5 +18,5 @@ public IEnumerable<PropertyItem> GetPropertyItemsFor(Type type, Func<PropertyInf
 
 ## See Also
 
-* class [PropertyItem](../Serenity.Net.Core/../../Serenity.ComponentModel/PropertyItem.md)
+* class [PropertyItem](../../../Serenity.Net.Core/Serenity.ComponentModel/PropertyItem.md)
 * class [DefaultPropertyItemProvider](../DefaultPropertyItemProvider.md)

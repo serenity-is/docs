@@ -46,5 +46,5 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [SafeCriteriaValidator](SafeCriteriaValidator.md)
+* class [SafeCriteriaValidator](./SafeCriteriaValidator.md)
 * **Source:** *[CriteriaFieldExpressionReplacer.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Helpers/CriteriaFieldExpressionReplacer.cs)*

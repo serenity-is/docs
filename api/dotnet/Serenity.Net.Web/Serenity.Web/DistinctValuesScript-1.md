@@ -16,7 +16,7 @@ public class DistinctValuesScript<TRow> : LookupScript
 
 | name | description |
 | --- | --- |
-| [DistinctValuesScript](DistinctValuesScript-1/DistinctValuesScript.md)(…) | Initializes a new instance of the [`DistinctValuesScript`](DistinctValuesScript-1.md) class. |
+| [DistinctValuesScript](DistinctValuesScript-1/DistinctValuesScript.md)(…) | Initializes a new instance of the [`DistinctValuesScript`](./DistinctValuesScript-1.md) class. |
 | override [GetScript](DistinctValuesScript-1/GetScript.md)() |  |
 
 ## Protected Members
@@ -29,6 +29,6 @@ public class DistinctValuesScript<TRow> : LookupScript
 
 ## See Also
 
-* class [LookupScript](LookupScript.md)
-* interface [IRow](../Serenity.Net.Services/../Serenity.Data/IRow.md)
+* class [LookupScript](./LookupScript.md)
+* interface [IRow](../../Serenity.Net.Services/Serenity.Data/IRow.md)
 * **Source:** *[DistinctValuesScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScriptTypes/DistinctValuesScript.cs)*

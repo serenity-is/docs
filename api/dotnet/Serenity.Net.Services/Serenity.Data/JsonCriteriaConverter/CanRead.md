@@ -1,5 +1,4 @@
 # JsonCriteriaConverter.CanRead property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether this JsonConverter can read JSON.
 

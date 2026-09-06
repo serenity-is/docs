@@ -1,5 +1,4 @@
 # TabularDataReport.FromPropertyItem method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a [`ReportColumn`](../ReportColumn.md) from a PropertyItem
 
@@ -25,7 +24,7 @@ public static ReportColumn FromPropertyItem(PropertyItem item, Field field, Prop
 ## See Also
 
 * class [ReportColumn](../ReportColumn.md)
-* class [PropertyItem](../Serenity.Net.Core/../../Serenity.ComponentModel/PropertyItem.md)
+* class [PropertyItem](../../../Serenity.Net.Core/Serenity.ComponentModel/PropertyItem.md)
 * class [Field](../../Serenity.Data/Field.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [TabularDataReport](../TabularDataReport.md)

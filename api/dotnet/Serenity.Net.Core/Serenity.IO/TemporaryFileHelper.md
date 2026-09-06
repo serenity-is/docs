@@ -20,8 +20,8 @@ public class TemporaryFileHelper
 | static [PurgeDirectoryDefault](TemporaryFileHelper/PurgeDirectoryDefault.md)(…) | Clears a folder based on the default conditions. |
 | static [RandomFileCode](TemporaryFileHelper/RandomFileCode.md)() | Gets a 13 character random code that can be used safely in a file name. |
 | static [TryDelete](TemporaryFileHelper/TryDelete.md)(…) | Tries to delete the file at the given path, ignoring any errors. |
-| static [TryDeleteMarkedFiles](TemporaryFileHelper/TryDeleteMarkedFiles.md)(…) | Tries to delete all files in a folder that were marked for deletion by [`TryDeleteOrMark`](TemporaryFileHelper/TryDeleteOrMark.md). |
-| static [TryDeleteOrMark](TemporaryFileHelper/TryDeleteOrMark.md)(…) | Tries to delete a file, or marks it for deletion by [`TryDeleteMarkedFiles`](TemporaryFileHelper/TryDeleteMarkedFiles.md) by creating a ".delete" file. |
+| static [TryDeleteMarkedFiles](TemporaryFileHelper/TryDeleteMarkedFiles.md)(…) | Tries to delete all files in a folder that were marked for deletion by [`TryDeleteOrMark`](./TemporaryFileHelper/TryDeleteOrMark.md). |
+| static [TryDeleteOrMark](TemporaryFileHelper/TryDeleteOrMark.md)(…) | Tries to delete a file, or marks it for deletion by [`TryDeleteMarkedFiles`](./TemporaryFileHelper/TryDeleteMarkedFiles.md) by creating a ".delete" file. |
 
 ## See Also
 

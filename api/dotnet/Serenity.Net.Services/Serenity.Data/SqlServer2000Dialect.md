@@ -49,5 +49,5 @@ public class SqlServer2000Dialect : ISqlDialect
 
 ## See Also
 
-* interface [ISqlDialect](ISqlDialect.md)
+* interface [ISqlDialect](./ISqlDialect.md)
 * **Source:** *[SqlServer2000Dialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/SqlServer2000Dialect.cs)*

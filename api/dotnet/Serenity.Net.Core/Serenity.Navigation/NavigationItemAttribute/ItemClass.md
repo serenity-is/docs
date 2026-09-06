@@ -1,10 +1,9 @@
 # NavigationItemAttribute.ItemClass property
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Extra CSS class to apply to its navigation element, e.g. LI.
 
 ```csharp
-public string ItemClass { get; set; }
+public string? ItemClass { get; set; }
 ```
 
 ## See Also

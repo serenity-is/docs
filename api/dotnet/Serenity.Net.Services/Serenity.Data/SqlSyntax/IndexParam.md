@@ -1,5 +1,4 @@
 # SqlSyntax.IndexParam method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns an indexed parameter name like @p123.
 

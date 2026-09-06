@@ -1,7 +1,7 @@
 # EntityQueryExtensions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extensions for objects implementing the [`IFilterableQuery`](IFilterableQuery.md) interface.
+Extensions for objects implementing the [`IFilterableQuery`](./IFilterableQuery.md) interface.
 
 ```csharp
 public static class EntityQueryExtensions

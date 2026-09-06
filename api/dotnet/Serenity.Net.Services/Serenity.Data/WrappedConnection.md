@@ -40,15 +40,15 @@ public class WrappedConnection : IDbConnection, IHasActualConnection, IHasComman
 
 ## Remarks
 
-Initializes a new instance of the [`WrappedConnection`](WrappedConnection.md) class.
+Initializes a new instance of the [`WrappedConnection`](./WrappedConnection.md) class.
 
 ## See Also
 
-* interface [IHasActualConnection](IHasActualConnection.md)
-* interface [IHasCommandTimeout](IHasCommandTimeout.md)
-* interface [IHasConnectionStateChange](IHasConnectionStateChange.md)
-* interface [IHasCurrentTransaction](IHasCurrentTransaction.md)
-* interface [IHasDialect](IHasDialect.md)
-* interface [IHasLogger](IHasLogger.md)
-* interface [IHasOpenedOnce](IHasOpenedOnce.md)
+* interface [IHasActualConnection](./IHasActualConnection.md)
+* interface [IHasCommandTimeout](./IHasCommandTimeout.md)
+* interface [IHasConnectionStateChange](./IHasConnectionStateChange.md)
+* interface [IHasCurrentTransaction](./IHasCurrentTransaction.md)
+* interface [IHasDialect](./IHasDialect.md)
+* interface [IHasLogger](./IHasLogger.md)
+* interface [IHasOpenedOnce](./IHasOpenedOnce.md)
 * **Source:** *[WrappedConnection.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/WrappedConnection.cs)*

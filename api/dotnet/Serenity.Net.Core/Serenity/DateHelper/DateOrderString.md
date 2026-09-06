@@ -1,5 +1,4 @@
 # DateHelper.DateOrderString method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets date order string (one of "dmy", "ymd", "mdy") for a specified order.
 

@@ -1,5 +1,4 @@
 # TransientGrantingPermissionService.Grant method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Temporarily grants the specified permissions.
 

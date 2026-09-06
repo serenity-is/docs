@@ -1,5 +1,4 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.ValidateIsActive method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates that record is not soft deleted
 

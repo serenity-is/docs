@@ -1,5 +1,4 @@
 # BaseDynamicDataGenerator.Run method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Generates `.json` files under the `dynamic-data` folder for script testing purposes.
 

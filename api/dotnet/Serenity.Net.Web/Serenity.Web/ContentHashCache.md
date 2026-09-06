@@ -1,7 +1,7 @@
 # ContentHashCache class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../README.md)*
 
-Default [`IContentHashCache`](IContentHashCache.md) implementation.
+Default [`IContentHashCache`](./IContentHashCache.md) implementation.
 
 ```csharp
 public class ContentHashCache : IContentHashCache
@@ -11,7 +11,7 @@ public class ContentHashCache : IContentHashCache
 
 | name | description |
 | --- | --- |
-| [ContentHashCache](ContentHashCache/ContentHashCache.md)(…) | Initializes a new instance of the [`ContentHashCache`](ContentHashCache.md) class. |
+| [ContentHashCache](ContentHashCache/ContentHashCache.md)(…) | Initializes a new instance of the [`ContentHashCache`](./ContentHashCache.md) class. |
 | [ResolvePath](ContentHashCache/ResolvePath.md)(…) |  |
 | [ResolveWithHash](ContentHashCache/ResolveWithHash.md)(…) |  |
 | [ScriptsChanged](ContentHashCache/ScriptsChanged.md)() |  |
@@ -19,5 +19,5 @@ public class ContentHashCache : IContentHashCache
 
 ## See Also
 
-* interface [IContentHashCache](IContentHashCache.md)
+* interface [IContentHashCache](./IContentHashCache.md)
 * **Source:** *[ContentHashCache.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ContentHashCache.cs)*

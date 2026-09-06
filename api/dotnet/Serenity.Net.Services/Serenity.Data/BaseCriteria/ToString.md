@@ -1,5 +1,4 @@
 # BaseCriteria.ToString method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to string. Raises an exception if criteria contains parameters.
 
@@ -18,7 +17,6 @@ A String that represents this instance.
 ---
 
 # BaseCriteria.ToString method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to string representation while adding params to the target query.
 
@@ -42,7 +40,6 @@ A String that represents this instance.
 ---
 
 # BaseCriteria.ToString method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to string representation into a string builder, while adding its params to the target query.
 

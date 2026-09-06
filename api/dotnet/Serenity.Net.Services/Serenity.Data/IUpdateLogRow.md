@@ -9,6 +9,6 @@ public interface IUpdateLogRow : IUpdateDateRow, IUpdateUserIdRow
 
 ## See Also
 
-* interface [IUpdateDateRow](IUpdateDateRow.md)
-* interface [IUpdateUserIdRow](IUpdateUserIdRow.md)
+* interface [IUpdateDateRow](./IUpdateDateRow.md)
+* interface [IUpdateUserIdRow](./IUpdateUserIdRow.md)
 * **Source:** *[IUpdateLogRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Contracts/IUpdateLogRow.cs)*

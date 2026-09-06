@@ -1,5 +1,4 @@
 # RegisterPermissionKeyAttribute constructor (1 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`RegisterPermissionKeyAttribute`](../RegisterPermissionKeyAttribute.md) class.
 
@@ -18,7 +17,6 @@ public RegisterPermissionKeyAttribute(object permission)
 ---
 
 # RegisterPermissionKeyAttribute constructor (2 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`RegisterPermissionKeyAttribute`](../RegisterPermissionKeyAttribute.md) class. A colon is inserted between module and permission to generate permission key.
 
@@ -38,7 +36,6 @@ public RegisterPermissionKeyAttribute(object module, object permission)
 ---
 
 # RegisterPermissionKeyAttribute constructor (3 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`RegisterPermissionKeyAttribute`](../RegisterPermissionKeyAttribute.md) class. A colon is inserted between module, submodule and permission to generate permission key.
 

@@ -1,5 +1,4 @@
 # WKHtmlToPdf constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 HTML to PDF converter class using WKHTMLToPdf.
 
@@ -17,5 +16,5 @@ WKHtmlToPdf converter class.
 
 ## See Also
 
-* interface [IHtmlToPdfOptions](../Serenity.Net.Services/../IHtmlToPdfOptions.md)
+* interface [IHtmlToPdfOptions](../../../Serenity.Net.Services/Serenity.Reporting/IHtmlToPdfOptions.md)
 * class [WKHtmlToPdf](../WKHtmlToPdf.md)

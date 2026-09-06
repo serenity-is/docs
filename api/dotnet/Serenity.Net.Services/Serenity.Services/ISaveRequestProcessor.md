@@ -11,9 +11,9 @@ public interface ISaveRequestProcessor : ISaveRequestHandler
 
 | name | description |
 | --- | --- |
-| [Process](ISaveRequestProcessor/Process.md)(…) | Processes the [`ISaveRequest`](ISaveRequest.md) and returns a [`SaveResponse`](SaveResponse.md). |
+| [Process](ISaveRequestProcessor/Process.md)(…) | Processes the [`ISaveRequest`](./ISaveRequest.md) and returns a [`SaveResponse`](./SaveResponse.md). |
 
 ## See Also
 
-* interface [ISaveRequestHandler](ISaveRequestHandler.md)
+* interface [ISaveRequestHandler](./ISaveRequestHandler.md)
 * **Source:** *[ISaveRequestProcessor.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Save/ISaveRequestProcessor.cs)*

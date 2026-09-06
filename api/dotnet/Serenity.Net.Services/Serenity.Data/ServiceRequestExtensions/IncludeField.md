@@ -1,5 +1,4 @@
 # ServiceRequestExtensions.IncludeField&lt;TRequest&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds the field to the request.IncludeColumns
 
@@ -16,7 +15,6 @@ public static TRequest IncludeField<TRequest>(this TRequest request, Field field
 
 ## See Also
 
-* class [TRequest](../Serenity.Net.Services/../ServiceRequestExtensions.TRequest.md)
 * class [Field](../Field.md)
 * class [ServiceRequest](../../Serenity.Services/ServiceRequest.md)
 * interface [IIncludeExcludeColumns](../../Serenity.Services/IIncludeExcludeColumns.md)

@@ -1,5 +1,4 @@
 # SqlConversions.ToSqlTime method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to a SQL time.
 
@@ -24,7 +23,6 @@ The SQL time constant.
 ---
 
 # SqlConversions.ToSqlTime method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the value to a SQL time.
 

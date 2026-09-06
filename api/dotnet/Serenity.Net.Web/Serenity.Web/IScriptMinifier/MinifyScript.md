@@ -1,5 +1,4 @@
 # IScriptMinifier.MinifyScript method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Minifies the given script.
 

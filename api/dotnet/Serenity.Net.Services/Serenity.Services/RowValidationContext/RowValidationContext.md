@@ -1,5 +1,4 @@
 # RowValidationContext constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 A validation context for rows
 
@@ -21,5 +20,5 @@ Initializes a new instance of the [`RowValidationContext`](../RowValidationConte
 
 * interface [IValidationContext](../../Serenity/IValidationContext.md)
 * interface [IRow](../../Serenity.Data/IRow.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [RowValidationContext](../RowValidationContext.md)

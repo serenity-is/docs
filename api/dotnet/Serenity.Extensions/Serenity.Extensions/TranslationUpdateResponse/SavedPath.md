@@ -1,5 +1,4 @@
 # TranslationUpdateResponse.SavedPath property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The path where the translations were saved.
 

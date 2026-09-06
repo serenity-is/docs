@@ -1,5 +1,4 @@
 # Field.ValueFromJson method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Deserializes this field's value from JSON.
 
@@ -21,7 +20,6 @@ public abstract void ValueFromJson(JsonReader reader, IRow row, JsonSerializer s
 ---
 
 # Field.ValueFromJson method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Deserializes this field's value from JSON.
 

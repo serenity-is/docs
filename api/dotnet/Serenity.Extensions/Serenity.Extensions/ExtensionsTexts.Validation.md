@@ -14,4 +14,4 @@ public static class Validation
 
 ## See Also
 
-* class [ExtensionsTexts](ExtensionsTexts.md)
+* class [ExtensionsTexts](./ExtensionsTexts.md)

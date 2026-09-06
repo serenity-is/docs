@@ -1,7 +1,7 @@
 # TransactionlessUnitOfWork class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-A unit of work implementation without an underlying actual transaction. Use with care, only to pass an [`IUnitOfWork`](IUnitOfWork.md) instance to some methods where you don't want to actually start a transaction.
+A unit of work implementation without an underlying actual transaction. Use with care, only to pass an [`IUnitOfWork`](./IUnitOfWork.md) instance to some methods where you don't want to actually start a transaction.
 
 ```csharp
 public class TransactionlessUnitOfWork : IDisposable, IUnitOfWork
@@ -15,7 +15,7 @@ public class TransactionlessUnitOfWork : IDisposable, IUnitOfWork
 
 | name | description |
 | --- | --- |
-| [TransactionlessUnitOfWork](TransactionlessUnitOfWork/TransactionlessUnitOfWork.md)(…) | A unit of work implementation without an underlying actual transaction. Use with care, only to pass an [`IUnitOfWork`](IUnitOfWork.md) instance to some methods where you don't want to actually start a transaction. |
+| [TransactionlessUnitOfWork](TransactionlessUnitOfWork/TransactionlessUnitOfWork.md)(…) | A unit of work implementation without an underlying actual transaction. Use with care, only to pass an [`IUnitOfWork`](./IUnitOfWork.md) instance to some methods where you don't want to actually start a transaction. |
 | [Connection](TransactionlessUnitOfWork/Connection.md) { get; } | Gets the connection. |
 | event [OnCommit](TransactionlessUnitOfWork/OnCommit.md) | Occurs when Commit is called as there is no underlying transaction. |
 | event [OnRollback](TransactionlessUnitOfWork/OnRollback.md) | Occurs when Dispose is called as there is no underlying transaction. |
@@ -34,5 +34,5 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* interface [IUnitOfWork](IUnitOfWork.md)
+* interface [IUnitOfWork](./IUnitOfWork.md)
 * **Source:** *[TransactionlessUnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/TransactionlessUnitOfWork.cs)*

@@ -1,5 +1,4 @@
 # FileUploadBehavior constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Behavior class that handles FileUploadEditorAttribute and ImageUploadEditorAttribute.
 
@@ -26,7 +25,7 @@ Creates a new instance of the class.
 
 ## See Also
 
-* interface [IUploadStorage](../Serenity.Net.Services/../../Serenity.Web/IUploadStorage.md)
-* interface [IUploadProcessor](../Serenity.Net.Services/../../Serenity.Web/IUploadProcessor.md)
-* interface [IFilenameFormatSanitizer](../Serenity.Net.Core/../../Serenity.ComponentModel/IFilenameFormatSanitizer.md)
+* interface [IUploadStorage](../../../Serenity.Net.Services/Serenity.Web/IUploadStorage.md)
+* interface [IUploadProcessor](../../../Serenity.Net.Services/Serenity.Web/IUploadProcessor.md)
+* interface [IFilenameFormatSanitizer](../../../Serenity.Net.Core/Serenity.ComponentModel/IFilenameFormatSanitizer.md)
 * class [FileUploadBehavior](../FileUploadBehavior.md)

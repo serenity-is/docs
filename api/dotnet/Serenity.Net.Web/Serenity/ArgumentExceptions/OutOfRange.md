@@ -1,5 +1,4 @@
 # ArgumentExceptions.OutOfRange method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates an ArgumentOutOfRangeException for the given argument.
 

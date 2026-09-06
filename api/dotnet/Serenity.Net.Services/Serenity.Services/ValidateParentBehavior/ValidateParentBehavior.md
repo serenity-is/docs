@@ -1,5 +1,4 @@
 # ValidateParentBehavior constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validation behavior for rows that have a parent record via [`IParentIdRow`](../../Serenity.Data/IParentIdRow.md) interface.
 
@@ -25,5 +24,5 @@ Initializes a new instance of the class.
 ## See Also
 
 * interface [IRowTypeRegistry](../../Serenity.Data/IRowTypeRegistry.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [ValidateParentBehavior](../ValidateParentBehavior.md)

@@ -1,5 +1,4 @@
 # LocalTextDataScript.GetPackageData method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets a local text package as a dictionary.
 
@@ -28,5 +27,5 @@ A dictionary of local text keys and values.
 
 ## See Also
 
-* interface [ILocalTextRegistry](../Serenity.Net.Core/../../Serenity.Abstractions/ILocalTextRegistry.md)
+* interface [ILocalTextRegistry](../../../Serenity.Net.Core/Serenity.Abstractions/ILocalTextRegistry.md)
 * class [LocalTextDataScript](../LocalTextDataScript.md)

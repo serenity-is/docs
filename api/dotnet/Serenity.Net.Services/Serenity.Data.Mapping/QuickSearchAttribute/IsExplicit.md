@@ -1,5 +1,4 @@
 # QuickSearchAttribute.IsExplicit property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether this instance is explicit.
 

@@ -1,5 +1,4 @@
 # SmtpSettings.From property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The default sender address used when a message has no From address.
 

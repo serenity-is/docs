@@ -12,7 +12,7 @@ public class OriginAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [OriginAttribute](OriginAttribute/OriginAttribute.md)(…) | Initializes a new instance of the [`OriginAttribute`](OriginAttribute.md) class. (2 constructors) |
+| [OriginAttribute](OriginAttribute/OriginAttribute.md)(…) | Initializes a new instance of the [`OriginAttribute`](./OriginAttribute.md) class. (2 constructors) |
 | [Join](OriginAttribute/Join.md) { get; } | Gets the join alias or the property name of the field to read join alias from via LeftJoin attribute. |
 | [Property](OriginAttribute/Property.md) { get; set; } | Gets or sets the property. |
 

@@ -1,5 +1,4 @@
 # DataValidation.ValidateEnum method (1 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates enum is within allowed values, e.g. one its members
 
@@ -18,13 +17,12 @@ public static void ValidateEnum(IRow row, Field field, Type enumType, ITextLocal
 
 * interface [IRow](../../Serenity.Data/IRow.md)
 * class [Field](../../Serenity.Data/Field.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)
 
 ---
 
 # DataValidation.ValidateEnum&lt;T&gt; method (2 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates enum is one of allowed values, e.g. one of its members
 
@@ -40,14 +38,12 @@ public static void ValidateEnum<T>(T value, ITextLocalizer localizer)
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../DataValidation.T.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)
 
 ---
 
 # DataValidation.ValidateEnum&lt;T&gt; method (3 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates enum is within allowed values, e.g. one of its members
 
@@ -67,6 +63,5 @@ public static void ValidateEnum<T>(IRow row, GenericValueField<T> field, ITextLo
 
 * interface [IRow](../../Serenity.Data/IRow.md)
 * class [GenericValueField&lt;TValue&gt;](../../Serenity.Data/GenericValueField-1.md)
-* struct [T](../Serenity.Net.Services/../DataValidation.T.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

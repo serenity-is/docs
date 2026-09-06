@@ -12,8 +12,8 @@ public class DataScriptAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [DataScriptAttribute](DataScriptAttribute/DataScriptAttribute.md)() | Initializes a new instance of the [`DataScriptAttribute`](DataScriptAttribute.md) class. |
-| [DataScriptAttribute](DataScriptAttribute/DataScriptAttribute.md)(…) | Initializes a new instance of the [`DataScriptAttribute`](DataScriptAttribute.md) class. |
+| [DataScriptAttribute](DataScriptAttribute/DataScriptAttribute.md)() | Initializes a new instance of the [`DataScriptAttribute`](./DataScriptAttribute.md) class. |
+| [DataScriptAttribute](DataScriptAttribute/DataScriptAttribute.md)(…) | Initializes a new instance of the [`DataScriptAttribute`](./DataScriptAttribute.md) class. |
 | [CacheDuration](DataScriptAttribute/CacheDuration.md) { get; set; } | Cache duration in seconds |
 | [CacheGroupKey](DataScriptAttribute/CacheGroupKey.md) { get; set; } | Gets or sets the cache group key. Group keys are used to invalidate a group of items. |
 | [Key](DataScriptAttribute/Key.md) { get; } | Gets the key. |
@@ -22,5 +22,5 @@ public class DataScriptAttribute : Attribute
 
 ## See Also
 
-* class [DynamicScriptAttribute](DynamicScriptAttribute.md)
+* class [DynamicScriptAttribute](./DynamicScriptAttribute.md)
 * **Source:** *[DataScriptAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Extensibility/DataScriptAttribute.cs)*

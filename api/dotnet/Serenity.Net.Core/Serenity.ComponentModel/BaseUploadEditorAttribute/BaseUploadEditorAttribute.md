@@ -1,5 +1,4 @@
 # BaseUploadEditorAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Sets editor type as "ImageUpload", which only allows image files. Make sure you use this attribute in Row.cs, not Form.cs as the image upload behavior only works if it is in the row, otherwise your files will stay in the temporary directory.
 

@@ -1,5 +1,4 @@
 # HtmlReportCallbackUrlBuilder.GetRenderUrl method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the render URL for the specified report and options.
 
@@ -18,7 +17,7 @@ The render URL.
 
 ## See Also
 
-* class [HtmlReportRenderUrl](../Serenity.Net.Services/../HtmlReportRenderUrl.md)
-* interface [IReport](../Serenity.Net.Services/../IReport.md)
-* class [ReportRenderOptions](../Serenity.Net.Services/../ReportRenderOptions.md)
+* class [HtmlReportRenderUrl](../../../Serenity.Net.Services/Serenity.Reporting/HtmlReportRenderUrl.md)
+* interface [IReport](../../../Serenity.Net.Services/Serenity.Reporting/IReport.md)
+* class [ReportRenderOptions](../../../Serenity.Net.Services/Serenity.Reporting/ReportRenderOptions.md)
 * class [HtmlReportCallbackUrlBuilder](../HtmlReportCallbackUrlBuilder.md)

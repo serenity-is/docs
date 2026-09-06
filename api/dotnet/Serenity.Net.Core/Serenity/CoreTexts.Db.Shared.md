@@ -13,4 +13,4 @@ public static class Shared
 
 ## See Also
 
-* class [Db](CoreTexts.Db.md)
+* class [Db](./CoreTexts.Db.md)

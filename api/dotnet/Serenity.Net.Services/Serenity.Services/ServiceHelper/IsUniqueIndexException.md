@@ -1,5 +1,4 @@
 # ServiceHelper.IsUniqueIndexException method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Checks if an exception seems to be an unique index exception
 

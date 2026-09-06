@@ -1,5 +1,4 @@
 # Invariants.NumberFormat field
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Number format information for invariant culture
 

@@ -1,5 +1,4 @@
 # IEditableRow.IsFieldChanged method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines whether [is field changed] [the specified field].
 

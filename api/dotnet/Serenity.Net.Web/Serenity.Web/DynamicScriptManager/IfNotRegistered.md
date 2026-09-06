@@ -1,5 +1,4 @@
 # DynamicScriptManager.IfNotRegistered method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 ```csharp
 public void IfNotRegistered(string name, Func<IDynamicScript> callback)
@@ -7,5 +6,5 @@ public void IfNotRegistered(string name, Func<IDynamicScript> callback)
 
 ## See Also
 
-* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
+* interface [IDynamicScript](../../../Serenity.Net.Core/Serenity.Web/IDynamicScript.md)
 * class [DynamicScriptManager](../DynamicScriptManager.md)

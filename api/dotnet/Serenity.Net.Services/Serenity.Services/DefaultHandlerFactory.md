@@ -1,7 +1,7 @@
 # DefaultHandlerFactory class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Default implementation for the [`IDefaultHandlerFactory`](IDefaultHandlerFactory.md).
+Default implementation for the [`IDefaultHandlerFactory`](./IDefaultHandlerFactory.md).
 
 ```csharp
 public class DefaultHandlerFactory : IDefaultHandlerFactory
@@ -16,7 +16,7 @@ public class DefaultHandlerFactory : IDefaultHandlerFactory
 
 | name | description |
 | --- | --- |
-| [DefaultHandlerFactory](DefaultHandlerFactory/DefaultHandlerFactory.md)(…) | Default implementation for the [`IDefaultHandlerFactory`](IDefaultHandlerFactory.md). |
+| [DefaultHandlerFactory](DefaultHandlerFactory/DefaultHandlerFactory.md)(…) | Default implementation for the [`IDefaultHandlerFactory`](./IDefaultHandlerFactory.md). |
 | [CreateHandler](DefaultHandlerFactory/CreateHandler.md)(…) |  |
 
 ## Exceptions
@@ -31,5 +31,5 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* interface [IDefaultHandlerFactory](IDefaultHandlerFactory.md)
+* interface [IDefaultHandlerFactory](./IDefaultHandlerFactory.md)
 * **Source:** *[DefaultHandlerFactory.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Handler/DefaultHandlerFactory.cs)*

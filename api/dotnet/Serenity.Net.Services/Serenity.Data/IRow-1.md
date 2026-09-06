@@ -21,6 +21,6 @@ public interface IRow<TFields> : IRow
 
 ## See Also
 
-* interface [IEntityWithJoins](IEntityWithJoins.md)
-* interface [IRow](IRow.md)
+* interface [IEntityWithJoins](./IEntityWithJoins.md)
+* interface [IRow](./IRow.md)
 * **Source:** *[IRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/IRow.cs)*

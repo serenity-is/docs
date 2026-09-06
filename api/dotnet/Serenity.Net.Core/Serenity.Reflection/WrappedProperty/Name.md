@@ -1,5 +1,4 @@
 # WrappedProperty.Name property
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the name.
 

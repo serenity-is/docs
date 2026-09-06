@@ -1,5 +1,4 @@
 # IDynamicScript.CheckRights method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Checks whether the current user has the permissions required to access this script, throwing an exception if access is not allowed.
 

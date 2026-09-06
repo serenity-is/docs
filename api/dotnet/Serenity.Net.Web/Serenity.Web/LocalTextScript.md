@@ -33,10 +33,10 @@ public class LocalTextScript : DynamicScript, INamedDynamicScript
 
 ## Remarks
 
-Initializes a new instance of the [`LocalTextScript`](LocalTextScript.md) class.
+Initializes a new instance of the [`LocalTextScript`](./LocalTextScript.md) class.
 
 ## See Also
 
-* class [DynamicScript](../Serenity.Net.Services/DynamicScript.md)
-* interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
+* class [DynamicScript](../../Serenity.Net.Services/Serenity.Web/DynamicScript.md)
+* interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
 * **Source:** *[LocalTextScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScriptTypes/LocalTextScript.cs)*

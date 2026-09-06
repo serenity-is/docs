@@ -1,10 +1,9 @@
 # TemporaryFileHelper.Delete method (1 of 2)
-**namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Deletes the file at the given path.
 
 ```csharp
-public static void Delete(string filePath, IFileSystem fileSystem = null)
+public static void Delete(string filePath, IFileSystem? fileSystem = null)
 ```
 
 | parameter | description |
@@ -20,12 +19,11 @@ public static void Delete(string filePath, IFileSystem fileSystem = null)
 ---
 
 # TemporaryFileHelper.Delete method (2 of 2)
-**namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Deletes, tries to delete, or marks a file for deletion depending on the specified [`DeleteType`](../DeleteType.md).
 
 ```csharp
-public static void Delete(string filePath, DeleteType type, ITemporaryFileSystem fileSystem = null)
+public static void Delete(string filePath, DeleteType type, ITemporaryFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

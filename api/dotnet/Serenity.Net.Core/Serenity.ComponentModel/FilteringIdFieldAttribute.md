@@ -21,7 +21,7 @@ public class FilteringIdFieldAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`FilteringIdFieldAttribute`](FilteringIdFieldAttribute.md) class.
+Initializes a new instance of the [`FilteringIdFieldAttribute`](./FilteringIdFieldAttribute.md) class.
 
 ## See Also
 

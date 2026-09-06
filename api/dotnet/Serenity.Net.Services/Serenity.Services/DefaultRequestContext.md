@@ -1,7 +1,7 @@
 # DefaultRequestContext class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Default implementation for a [`IRequestContext`](IRequestContext.md).
+Default implementation for a [`IRequestContext`](./IRequestContext.md).
 
 ```csharp
 public class DefaultRequestContext : IRequestContext
@@ -19,7 +19,7 @@ public class DefaultRequestContext : IRequestContext
 
 | name | description |
 | --- | --- |
-| [DefaultRequestContext](DefaultRequestContext/DefaultRequestContext.md)(…) | Default implementation for a [`IRequestContext`](IRequestContext.md). |
+| [DefaultRequestContext](DefaultRequestContext/DefaultRequestContext.md)(…) | Default implementation for a [`IRequestContext`](./IRequestContext.md). |
 | [Behaviors](DefaultRequestContext/Behaviors.md) { get; } |  |
 | [Cache](DefaultRequestContext/Cache.md) { get; } |  |
 | [Localizer](DefaultRequestContext/Localizer.md) { get; } |  |
@@ -38,5 +38,5 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* interface [IRequestContext](IRequestContext.md)
+* interface [IRequestContext](./IRequestContext.md)
 * **Source:** *[DefaultRequestContext.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Repository/DefaultRequestContext.cs)*

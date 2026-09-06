@@ -1,5 +1,4 @@
 # RequiredAttribute.IsRequired property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the target property required value.
 

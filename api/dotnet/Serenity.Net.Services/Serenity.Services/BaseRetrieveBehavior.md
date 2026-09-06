@@ -1,7 +1,7 @@
 # BaseRetrieveBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base class for behaviors implementing [`IRetrieveBehavior`](IRetrieveBehavior.md)
+Base class for behaviors implementing [`IRetrieveBehavior`](./IRetrieveBehavior.md)
 
 ```csharp
 public abstract class BaseRetrieveBehavior : IRetrieveBehavior
@@ -26,5 +26,5 @@ public abstract class BaseRetrieveBehavior : IRetrieveBehavior
 
 ## See Also
 
-* interface [IRetrieveBehavior](IRetrieveBehavior.md)
+* interface [IRetrieveBehavior](./IRetrieveBehavior.md)
 * **Source:** *[BaseRetrieveBehavior.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Retrieve/BaseRetrieveBehavior.cs)*

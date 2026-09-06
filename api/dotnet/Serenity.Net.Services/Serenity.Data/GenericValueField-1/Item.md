@@ -1,5 +1,4 @@
 # GenericValueField&lt;TValue&gt; indexer
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the value of this field with the specified row.
 
@@ -13,6 +12,5 @@ public TValue? this[IRow row] { get; set; }
 
 ## See Also
 
-* struct [TValue](../Serenity.Net.Services/../GenericValueField-1.TValue.md)
 * interface [IRow](../IRow.md)
 * class [GenericValueField&lt;TValue&gt;](../GenericValueField-1.md)

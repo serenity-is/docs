@@ -26,4 +26,4 @@ public static class OperatorNames
 
 ## See Also
 
-* class [FilterPanelTexts](FilterPanelTexts.md)
+* class [FilterPanelTexts](./FilterPanelTexts.md)

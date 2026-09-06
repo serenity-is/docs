@@ -1,5 +1,4 @@
 # BaseDynamicDataGenerator.ShouldSkipScript method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Returns `true` if the script should be skipped.
 

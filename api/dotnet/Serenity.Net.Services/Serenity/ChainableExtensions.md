@@ -1,7 +1,7 @@
 # ChainableExtensions class
 **namespace:** *[Serenity](../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Contains method chaining extensions for objects like SQL queries that implement [`IChainable`](IChainable.md).
+Contains method chaining extensions for objects like SQL queries that implement [`IChainable`](./IChainable.md).
 
 ```csharp
 public static class ChainableExtensions

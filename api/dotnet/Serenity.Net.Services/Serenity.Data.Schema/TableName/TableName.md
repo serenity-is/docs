@@ -1,11 +1,14 @@
-# TableName constructor
-**namespace:** *[Serenity.Data.Schema](../../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+# TableName.Tablename property
 
-The default constructor.
+Gets the table name containing schema name dot table.
 
 ```csharp
-public TableName()
+public string Tablename { get; }
 ```
+
+## Property Value
+
+The table name.
 
 ## See Also
 

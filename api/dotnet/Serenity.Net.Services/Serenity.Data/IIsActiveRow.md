@@ -11,7 +11,7 @@ public interface IIsActiveRow
 
 | name | description |
 | --- | --- |
-| [IsActiveField](IIsActiveRow/IsActiveField.md) { get; } | Gets the is active field. 1 means active, 0 means inactive, and if the row also has the [`IIsActiveDeletedRow`](IIsActiveDeletedRow.md) interface, then -1 means deleted. |
+| [IsActiveField](IIsActiveRow/IsActiveField.md) { get; } | Gets the is active field. 1 means active, 0 means inactive, and if the row also has the [`IIsActiveDeletedRow`](./IIsActiveDeletedRow.md) interface, then -1 means deleted. |
 
 ## See Also
 

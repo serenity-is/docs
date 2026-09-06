@@ -1,5 +1,4 @@
 # UploadPathHelper.TemporaryFilePrefix field
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Represents the prefix used to identify temporary upload files.
 

@@ -1,5 +1,4 @@
 # ApplicationPartsTypeSource.IsTypeSourceAssembly method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Returns `true` for assemblies that are marked with TypeSourceAssemblyAttribute.
 

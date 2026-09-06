@@ -14,4 +14,4 @@ public static class Authorization
 
 ## See Also
 
-* class [CoreTexts](CoreTexts.md)
+* class [CoreTexts](./CoreTexts.md)

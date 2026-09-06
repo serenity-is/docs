@@ -17,7 +17,7 @@ public class HideOnUpdateAttribute : Attribute
 | name | description |
 | --- | --- |
 | [HideOnUpdateAttribute](HideOnUpdateAttribute/HideOnUpdateAttribute.md)(…) | Controls whether this field is visible in edit record mode. |
-| [Value](HideOnUpdateAttribute/Value.md) { get; } | Gets a value indicating whether this [`HideOnUpdateAttribute`](HideOnUpdateAttribute.md) is on. |
+| [Value](HideOnUpdateAttribute/Value.md) { get; } | Gets a value indicating whether this [`HideOnUpdateAttribute`](./HideOnUpdateAttribute.md) is on. |
 
 ## Remarks
 

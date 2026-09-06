@@ -1,5 +1,4 @@
 # DataValidation.ArgumentNull method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns an argument null error.
 
@@ -18,6 +17,6 @@ The argument null error.
 
 ## See Also
 
-* class [ValidationError](../Serenity.Net.Core/../ValidationError.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* class [ValidationError](../../../Serenity.Net.Core/Serenity.Services/ValidationError.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

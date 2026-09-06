@@ -1,5 +1,4 @@
 # JSON.PopulateObject&lt;T&gt; method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Tries to populate an existing object similar to JsonConvert's PopulateObject
 
@@ -17,5 +16,4 @@ public static void PopulateObject<T>(T target, string jsonSource, JsonSerializer
 
 ## See Also
 
-* class [T](../Serenity.Net.Core/../JSON.T.md)
 * class [JSON](../JSON.md)

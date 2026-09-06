@@ -11,7 +11,7 @@ public interface IUserDefinition
 
 | name | description |
 | --- | --- |
-| [DisplayName](IUserDefinition/DisplayName.md) { get; } | Gets the display name of the user, which may be the same as [`Username`](IUserDefinition/Username.md). |
+| [DisplayName](IUserDefinition/DisplayName.md) { get; } | Gets the display name of the user, which may be the same as [`Username`](./IUserDefinition/Username.md). |
 | [Email](IUserDefinition/Email.md) { get; } | Gets the email address of the user. |
 | [Id](IUserDefinition/Id.md) { get; } | Gets the unique user identifier. |
 | [IsActive](IUserDefinition/IsActive.md) { get; } | Gets a value indicating whether the user is active (1 = active, 0 = disabled, -1 = deleted). |

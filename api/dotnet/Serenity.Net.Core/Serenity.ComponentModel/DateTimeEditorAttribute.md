@@ -12,7 +12,7 @@ public class DateTimeEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [DateTimeEditorAttribute](DateTimeEditorAttribute/DateTimeEditorAttribute.md)() | Initializes a new instance of the [`DateTimeEditorAttribute`](DateTimeEditorAttribute.md) class. |
+| [DateTimeEditorAttribute](DateTimeEditorAttribute/DateTimeEditorAttribute.md)() | Initializes a new instance of the [`DateTimeEditorAttribute`](./DateTimeEditorAttribute.md) class. |
 | [EndHour](DateTimeEditorAttribute/EndHour.md) { get; set; } | Gets or sets the end hour between 0 and 23. |
 | [IntervalMinutes](DateTimeEditorAttribute/IntervalMinutes.md) { get; set; } | Gets or sets the interval minutes, default is 5 minutes. |
 | [MaxValue](DateTimeEditorAttribute/MaxValue.md) { get; set; } | Gets or sets the maximum value. |
@@ -24,5 +24,5 @@ public class DateTimeEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[DateTimeEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/DateTimeEditorAttribute.cs)*

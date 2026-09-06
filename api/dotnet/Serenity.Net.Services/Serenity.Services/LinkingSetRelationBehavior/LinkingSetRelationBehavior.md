@@ -1,5 +1,4 @@
 # LinkingSetRelationBehavior constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Behavior class that handles [`LinkingSetRelationAttribute`](../../Serenity.Data.Mapping/LinkingSetRelationAttribute.md).
 

@@ -1,5 +1,4 @@
 # WrappedTransaction.Commit method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Commits actual transaction and sets wrapped transaction for related connection to null.
 

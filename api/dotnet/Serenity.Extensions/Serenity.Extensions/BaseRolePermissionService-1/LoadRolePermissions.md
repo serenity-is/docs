@@ -1,5 +1,4 @@
 # BaseRolePermissionService&lt;TRolePermissionRow&gt;.LoadRolePermissions method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Loads role permissions from database.
 

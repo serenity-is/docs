@@ -1,5 +1,4 @@
 # FormWidthAttribute.JustThis property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Applies this form width (e.g. bootstrap grid size) to just the current field and doesn't cancel a prior form width attribute with an UntilNext attribute. Don't set UntilNext = true if you set JustThis = true, as they are exclusive.
 

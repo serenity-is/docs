@@ -1,5 +1,4 @@
 # ISqlDialect.QuoteColumnAlias method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Quotes the column alias. This usually calls QuoteIdentifier except for Oracle.
 

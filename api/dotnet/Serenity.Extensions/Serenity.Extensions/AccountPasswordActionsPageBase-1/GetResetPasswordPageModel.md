@@ -1,5 +1,4 @@
 # AccountPasswordActionsPageBase&lt;TUserRow&gt;.GetResetPasswordPageModel method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the module page model for the reset password page.
 

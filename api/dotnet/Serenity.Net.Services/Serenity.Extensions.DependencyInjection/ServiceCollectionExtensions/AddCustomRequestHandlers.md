@@ -1,5 +1,4 @@
 # ServiceCollectionExtensions.AddCustomRequestHandlers method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Registers all the custom request handlers implementing IRequestHandler interface, from the type source in the service collection if available, or using the provided typeSource, optionally filtering handler types via a provided predicate.
 
@@ -23,5 +22,5 @@ public static IServiceCollection AddCustomRequestHandlers(this IServiceCollectio
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [ServiceCollectionExtensions](../ServiceCollectionExtensions.md)

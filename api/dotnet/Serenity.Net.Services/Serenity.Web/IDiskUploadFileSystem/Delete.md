@@ -1,5 +1,4 @@
 # IDiskUploadFileSystem.Delete method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Deletes the file with a DeleteType option
 
@@ -14,5 +13,5 @@ public void Delete(string path, DeleteType deleteType)
 
 ## See Also
 
-* enum [DeleteType](../Serenity.Net.Core/../../Serenity.IO/DeleteType.md)
+* enum [DeleteType](../../../Serenity.Net.Core/Serenity.IO/DeleteType.md)
 * interface [IDiskUploadFileSystem](../IDiskUploadFileSystem.md)

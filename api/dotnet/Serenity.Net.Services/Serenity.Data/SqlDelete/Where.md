@@ -1,5 +1,4 @@
 # SqlDelete.Where method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a new condition to the WHERE part of the query with an "AND" between.
 
@@ -28,7 +27,6 @@ SqlDelete object itself.
 ---
 
 # SqlDelete.Where method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds new conditions to the WHERE part of the query with an "AND" between.
 

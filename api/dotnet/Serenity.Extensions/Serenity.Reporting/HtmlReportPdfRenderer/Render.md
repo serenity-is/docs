@@ -1,5 +1,4 @@
 # HtmlReportPdfRenderer.Render method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 ```csharp
 public virtual byte[] Render(IReport report, ReportRenderOptions renderOptions)
@@ -7,6 +6,6 @@ public virtual byte[] Render(IReport report, ReportRenderOptions renderOptions)
 
 ## See Also
 
-* interface [IReport](../Serenity.Net.Services/../IReport.md)
-* class [ReportRenderOptions](../Serenity.Net.Services/../ReportRenderOptions.md)
+* interface [IReport](../../../Serenity.Net.Services/Serenity.Reporting/IReport.md)
+* class [ReportRenderOptions](../../../Serenity.Net.Services/Serenity.Reporting/ReportRenderOptions.md)
 * class [HtmlReportPdfRenderer](../HtmlReportPdfRenderer.md)

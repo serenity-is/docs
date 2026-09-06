@@ -1,5 +1,4 @@
 # ServiceResolver&lt;TService&gt; constructor
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 A generic version of IServiceProvider which resolves a service on demand.
 

@@ -1,5 +1,4 @@
 # IHtmlToPdfOptions.EditLaunchOptions property
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Allows editing LaunchOptions, only available for Puppeteer
 

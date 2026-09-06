@@ -12,7 +12,7 @@ public class RegisterPermissionKeyAttribute : PermissionAttributeBase
 
 | name | description |
 | --- | --- |
-| [RegisterPermissionKeyAttribute](RegisterPermissionKeyAttribute/RegisterPermissionKeyAttribute.md)(…) | Initializes a new instance of the [`RegisterPermissionKeyAttribute`](RegisterPermissionKeyAttribute.md) class. (3 constructors) |
+| [RegisterPermissionKeyAttribute](RegisterPermissionKeyAttribute/RegisterPermissionKeyAttribute.md)(…) | Initializes a new instance of the [`RegisterPermissionKeyAttribute`](./RegisterPermissionKeyAttribute.md) class. (3 constructors) |
 
 ## See Also
 

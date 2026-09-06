@@ -1,5 +1,4 @@
 # Alias indexer (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the prefixed expression with the specified field.
 
@@ -33,7 +32,6 @@ The String.
 ---
 
 # Alias indexer (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the prefixed expression with the specified field name.
 

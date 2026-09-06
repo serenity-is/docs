@@ -13,4 +13,4 @@ public static class ChangePassword
 
 ## See Also
 
-* class [Membership](ExtensionsTexts.Forms.Membership.md)
+* class [Membership](./ExtensionsTexts.Forms.Membership.md)

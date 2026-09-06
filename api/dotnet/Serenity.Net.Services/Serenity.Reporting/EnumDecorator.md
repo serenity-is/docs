@@ -25,5 +25,5 @@ Creates an instance of the class.
 
 ## See Also
 
-* class [BaseCellDecorator](BaseCellDecorator.md)
+* class [BaseCellDecorator](./BaseCellDecorator.md)
 * **Source:** *[EnumDecorator.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Reporting/Decorators/EnumDecorator.cs)*

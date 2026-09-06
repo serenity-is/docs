@@ -1,5 +1,4 @@
 # IDynamicScript.GroupKey property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Group key for cached items
 

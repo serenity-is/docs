@@ -1,5 +1,4 @@
 # ExcelReportGenerator.AsObject method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Converts the specified XLCellValue to its corresponding .NET object.
 

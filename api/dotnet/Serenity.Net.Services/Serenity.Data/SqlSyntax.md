@@ -11,7 +11,7 @@ public static class SqlSyntax
 
 | name | description |
 | --- | --- |
-| static [AutoBracket](SqlSyntax/AutoBracket.md)(…) | Automatically brackets the string based on the [`AutoQuotedIdentifiers`](SqlSettings/AutoQuotedIdentifiers.md) setting and keywords for the passed dialect. |
+| static [AutoBracket](SqlSyntax/AutoBracket.md)(…) | Automatically brackets the string based on the [`AutoQuotedIdentifiers`](./SqlSettings/AutoQuotedIdentifiers.md) setting and keywords for the passed dialect. |
 | static [AutoBracketValid](SqlSyntax/AutoBracketValid.md)(…) | Automatically brackets the string based on the dialect's `AutoQuotedIdentifier` setting, only if the identifier is valid. |
 | static [IndexParam](SqlSyntax/IndexParam.md)(…) | Returns an indexed parameter name like @p123. |
 | static [IsQuoted](SqlSyntax/IsQuoted.md)(…) | Determines whether the specified string is quoted. |

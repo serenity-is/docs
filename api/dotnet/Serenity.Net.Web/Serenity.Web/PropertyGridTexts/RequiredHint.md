@@ -1,5 +1,4 @@
 # PropertyGridTexts.RequiredHint field
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 ```csharp
 public static readonly LocalText RequiredHint;
@@ -7,5 +6,5 @@ public static readonly LocalText RequiredHint;
 
 ## See Also
 
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * class [PropertyGridTexts](../PropertyGridTexts.md)

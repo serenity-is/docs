@@ -1,5 +1,4 @@
 # DataScriptRegistration.RegisterDataScripts method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Creates and registers dynamic scripts for types with DataScriptAttribute.
 
@@ -23,5 +22,5 @@ public static void RegisterDataScripts(IDynamicScriptManager scriptManager, ITyp
 ## See Also
 
 * interface [IDynamicScriptManager](../IDynamicScriptManager.md)
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [DataScriptRegistration](../DataScriptRegistration.md)

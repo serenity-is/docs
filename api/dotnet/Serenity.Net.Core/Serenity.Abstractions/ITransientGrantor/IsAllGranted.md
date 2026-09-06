@@ -1,7 +1,6 @@
 # ITransientGrantor.IsAllGranted method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Determines whether all permissions are currently granted via [`GrantAll`](GrantAll.md).
+Determines whether all permissions are currently granted via [`GrantAll`](./GrantAll.md).
 
 ```csharp
 public bool IsAllGranted()

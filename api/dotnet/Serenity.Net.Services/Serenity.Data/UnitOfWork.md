@@ -11,7 +11,7 @@ public class UnitOfWork : IDisposable, IUnitOfWork
 
 | name | description |
 | --- | --- |
-| [UnitOfWork](UnitOfWork/UnitOfWork.md)(…) | Initializes a new instance of the [`UnitOfWork`](UnitOfWork.md) class. (3 constructors) |
+| [UnitOfWork](UnitOfWork/UnitOfWork.md)(…) | Initializes a new instance of the [`UnitOfWork`](./UnitOfWork.md) class. (3 constructors) |
 | [Connection](UnitOfWork/Connection.md) { get; } | Gets the connection. |
 | [Initialized](UnitOfWork/Initialized.md) { get; } | Returns true if the transaction is tried to be started at least once. This always returns true if deferStart is not true. |
 | event [OnCommit](UnitOfWork/OnCommit.md) | Occurs when transaction is committed. |
@@ -21,5 +21,5 @@ public class UnitOfWork : IDisposable, IUnitOfWork
 
 ## See Also
 
-* interface [IUnitOfWork](IUnitOfWork.md)
+* interface [IUnitOfWork](./IUnitOfWork.md)
 * **Source:** *[UnitOfWork.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Data/Connections/UnitOfWork.cs)*

@@ -1,5 +1,4 @@
 # ColumnsScript constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Dynamic script type for columns (ColumnsScriptAttribute).
 

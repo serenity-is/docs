@@ -20,18 +20,18 @@ public abstract class LookupScript : DynamicScript, IGetScriptData, INamedDynami
 | override [GetScript](LookupScript/GetScript.md)() |  |
 | [GetScriptData](LookupScript/GetScriptData.md)() |  |
 | const [NewLookupFormat](LookupScript/NewLookupFormat.md) | Format string for `new Lookup({0}, {1})`. |
-| class [Data](LookupScript.Data.md) | Data format for a lookup script. |
+| record [Data](LookupScript.Data.md) | Data format for a lookup script. |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
-| [LookupScript](LookupScript/LookupScript.md)() | Initializes a new instance of the [`LookupScript`](LookupScript.md) class. |
+| [LookupScript](LookupScript/LookupScript.md)() | Initializes a new instance of the [`LookupScript`](./LookupScript.md) class. |
 | abstract [GetItems](LookupScript/GetItems.md)() |  |
 
 ## See Also
 
-* class [DynamicScript](../Serenity.Net.Services/DynamicScript.md)
-* interface [IGetScriptData](../Serenity.Net.Core/IGetScriptData.md)
-* interface [INamedDynamicScript](../Serenity.Net.Core/INamedDynamicScript.md)
+* class [DynamicScript](../../Serenity.Net.Services/Serenity.Web/DynamicScript.md)
+* interface [IGetScriptData](../../Serenity.Net.Core/Serenity.Web/IGetScriptData.md)
+* interface [INamedDynamicScript](../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
 * **Source:** *[LookupScript.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/DynamicScript/DynamicScriptTypes/LookupScript.cs)*

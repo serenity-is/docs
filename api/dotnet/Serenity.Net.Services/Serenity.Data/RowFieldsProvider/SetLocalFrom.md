@@ -1,5 +1,4 @@
 # RowFieldsProvider.SetLocalFrom method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets local row fields provider by resolving it from the service provider.
 

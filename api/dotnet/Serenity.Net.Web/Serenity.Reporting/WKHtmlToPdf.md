@@ -51,5 +51,5 @@ WKHtmlToPdf converter class.
 
 ## See Also
 
-* interface [IHtmlToPdfOptions](../Serenity.Net.Services/IHtmlToPdfOptions.md)
+* interface [IHtmlToPdfOptions](../../Serenity.Net.Services/Serenity.Reporting/IHtmlToPdfOptions.md)
 * **Source:** *[WKHtmlToPdf.cs](https://github.com/serenity-is/Serenity/blob/87e7d42434a98fa20ee41a2acef52fac171f100f/src/web/Reporting/WKHtmlToPdf.cs)*

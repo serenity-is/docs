@@ -21,7 +21,7 @@ public class TextualFieldAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`TextualFieldAttribute`](TextualFieldAttribute.md) class.
+Initializes a new instance of the [`TextualFieldAttribute`](./TextualFieldAttribute.md) class.
 
 ## See Also
 

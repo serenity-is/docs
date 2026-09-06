@@ -1,5 +1,4 @@
 # Criteria.False field
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 The false criteria instance (0 = 1).
 

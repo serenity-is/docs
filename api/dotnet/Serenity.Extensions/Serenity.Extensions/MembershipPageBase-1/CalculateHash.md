@@ -1,5 +1,4 @@
 # MembershipPageBase&lt;TUserRow&gt;.CalculateHash method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Calculates the SHA-512 hash of the password combined with the salt.
 

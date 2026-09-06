@@ -1,5 +1,4 @@
 # HtmlReportPdfRenderer.GetConverterFor method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the converter to use for the specified report, preferring the WKHtmlToPdf converter when the report is marked with UseWKHtmlToPdfAttribute.
 
@@ -15,7 +14,7 @@ protected virtual IHtmlToPdfConverter GetConverterFor(IReport report,
 
 ## See Also
 
-* interface [IHtmlToPdfConverter](../Serenity.Net.Services/../IHtmlToPdfConverter.md)
-* interface [IReport](../Serenity.Net.Services/../IReport.md)
-* class [ReportRenderOptions](../Serenity.Net.Services/../ReportRenderOptions.md)
+* interface [IHtmlToPdfConverter](../../../Serenity.Net.Services/Serenity.Reporting/IHtmlToPdfConverter.md)
+* interface [IReport](../../../Serenity.Net.Services/Serenity.Reporting/IReport.md)
+* class [ReportRenderOptions](../../../Serenity.Net.Services/Serenity.Reporting/ReportRenderOptions.md)
 * class [HtmlReportPdfRenderer](../HtmlReportPdfRenderer.md)

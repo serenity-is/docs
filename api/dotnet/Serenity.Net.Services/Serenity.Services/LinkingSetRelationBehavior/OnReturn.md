@@ -1,5 +1,4 @@
 # LinkingSetRelationBehavior.OnReturn method (1 of 2)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public void OnReturn(IListRequestHandler handler)
@@ -13,7 +12,6 @@ public void OnReturn(IListRequestHandler handler)
 ---
 
 # LinkingSetRelationBehavior.OnReturn method (2 of 2)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public void OnReturn(IRetrieveRequestHandler handler)

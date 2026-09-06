@@ -1,5 +1,4 @@
 # ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.GetQuickSearchFields method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the list of quick search fields ([`QuickSearchAttribute`](../../Serenity.Data.Mapping/QuickSearchAttribute.md)) based on the containsField argument.
 

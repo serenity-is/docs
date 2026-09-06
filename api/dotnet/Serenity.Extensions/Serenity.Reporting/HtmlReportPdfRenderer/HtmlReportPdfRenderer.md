@@ -1,5 +1,4 @@
 # HtmlReportPdfRenderer constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Default implementation for IHtmlReportPdfRenderer
 
@@ -10,7 +9,7 @@ public HtmlReportPdfRenderer(IHtmlToPdfConverter htmlToPdfConverter,
 
 ## See Also
 
-* interface [IHtmlToPdfConverter](../Serenity.Net.Services/../IHtmlToPdfConverter.md)
-* interface [IHtmlReportRenderUrlBuilder](../Serenity.Net.Services/../IHtmlReportRenderUrlBuilder.md)
-* interface [IWKHtmlToPdfConverter](../Serenity.Net.Services/../IWKHtmlToPdfConverter.md)
+* interface [IHtmlToPdfConverter](../../../Serenity.Net.Services/Serenity.Reporting/IHtmlToPdfConverter.md)
+* interface [IHtmlReportRenderUrlBuilder](../../../Serenity.Net.Services/Serenity.Reporting/IHtmlReportRenderUrlBuilder.md)
+* interface [IWKHtmlToPdfConverter](../../../Serenity.Net.Services/Serenity.Reporting/IWKHtmlToPdfConverter.md)
 * class [HtmlReportPdfRenderer](../HtmlReportPdfRenderer.md)

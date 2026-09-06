@@ -21,7 +21,7 @@ public class ImplicitPermissionAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`ImplicitPermissionAttribute`](ImplicitPermissionAttribute.md) class.
+Initializes a new instance of the [`ImplicitPermissionAttribute`](./ImplicitPermissionAttribute.md) class.
 
 ## See Also
 

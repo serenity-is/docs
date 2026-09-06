@@ -1,5 +1,4 @@
 # UploadStorageExtensions.SetOriginalName method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets original name for a file.
 

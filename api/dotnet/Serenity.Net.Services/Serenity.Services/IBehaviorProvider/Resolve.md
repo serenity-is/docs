@@ -1,5 +1,4 @@
 # IBehaviorProvider.Resolve method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Resolves a list of behavior instances targeted for a handler, row and behavior type.
 

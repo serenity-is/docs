@@ -48,7 +48,7 @@ public class CodeWriter
 | [Insert](CodeWriter/Insert.md)(…) | Inserts string to internal string builder |
 | [IsUsing](CodeWriter/IsUsing.md)(…) | Returns true if the namespace is in list of usings. |
 | [ShortTypeName](CodeWriter/ShortTypeName.md)(…) | Returns the short type name for the given namespace and type name, adding the namespace to the local usings if possible. (2 methods) |
-| [ShortTypeRef](CodeWriter/ShortTypeRef.md)(…) | Converts a data type with a namespace to a data type without the namespace if its namespace is in the allowed usings, otherwise returns the full name. This can handle nullables, C# keywords, and generics to some extent. See [`IsCSharp`](CodeWriter/IsCSharp.md) if you are using this for C#. |
+| [ShortTypeRef](CodeWriter/ShortTypeRef.md)(…) | Converts a data type with a namespace to a data type without the namespace if its namespace is in the allowed usings, otherwise returns the full name. This can handle nullables, C# keywords, and generics to some extent. See [`IsCSharp`](./CodeWriter/IsCSharp.md) if you are using this for C#. |
 | [StartBrace](CodeWriter/StartBrace.md)() | Adds a brace, increases indent. |
 | override [ToString](CodeWriter/ToString.md)() | Returns string representation of internal string builder, including file comment and any local usings if any |
 | [Using](CodeWriter/Using.md)(…) | Returns true if the namespace is in the list of usings. If the AllowUsing callback is null or returns true, or force is true, this may add it to the list of local usings. (2 methods) |
@@ -59,7 +59,7 @@ public class CodeWriter
 
 ## Remarks
 
-Initializes a new instance of the [`CodeWriter`](CodeWriter.md) class.
+Initializes a new instance of the [`CodeWriter`](./CodeWriter.md) class.
 
 ## See Also
 

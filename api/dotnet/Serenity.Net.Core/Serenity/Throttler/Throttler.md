@@ -1,5 +1,4 @@
 # Throttler constructor (1 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new throttler backed by a distributed cache.
 
@@ -21,7 +20,6 @@ public Throttler(IDistributedCache distributedCache, string key, TimeSpan durati
 ---
 
 # Throttler constructor (2 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new throttler backed by an in-memory cache.
 

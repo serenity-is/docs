@@ -32,5 +32,5 @@ Creates a new instance of the class
 
 ## See Also
 
-* interface [IReportRetrieveHandler](../Serenity.Net.Services/IReportRetrieveHandler.md)
+* interface [IReportRetrieveHandler](../../Serenity.Net.Services/Serenity.Reporting/IReportRetrieveHandler.md)
 * **Source:** *[DefaultReportRetrieveHandler.cs](https://github.com/serenity-is/Serenity/blob/bb0064f552b586c1549668ffee8248a7ac86b3c4/common-features/src/extensions/Modules/Reporting/Tree/DefaultReportRetrieveHandler.cs)*

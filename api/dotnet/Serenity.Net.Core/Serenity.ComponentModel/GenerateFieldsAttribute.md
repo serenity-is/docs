@@ -12,7 +12,7 @@ public class GenerateFieldsAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [GenerateFieldsAttribute](GenerateFieldsAttribute/GenerateFieldsAttribute.md)() | Initializes a new instance of the [`GenerateFieldsAttribute`](GenerateFieldsAttribute.md) class. |
+| [GenerateFieldsAttribute](GenerateFieldsAttribute/GenerateFieldsAttribute.md)() | Initializes a new instance of the [`GenerateFieldsAttribute`](./GenerateFieldsAttribute.md) class. |
 
 ## See Also
 

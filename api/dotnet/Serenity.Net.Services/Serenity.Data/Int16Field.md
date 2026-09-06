@@ -29,9 +29,9 @@ public sealed class Int16Field : GenericValueField<short>
 
 ## Remarks
 
-Initializes a new instance of the [`Int16Field`](Int16Field.md) class.
+Initializes a new instance of the [`Int16Field`](./Int16Field.md) class.
 
 ## See Also
 
-* class [GenericValueField&lt;TValue&gt;](GenericValueField-1.md)
+* class [GenericValueField&lt;TValue&gt;](./GenericValueField-1.md)
 * **Source:** *[Int16Field.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/Int16Field.cs)*

@@ -44,7 +44,7 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](SaveRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](SaveRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [AfterSave](SaveRequestHandler-3/AfterSave.md)() | Called after executing the insert/update statement |
 | virtual [BeforeSave](SaveRequestHandler-3/BeforeSave.md)() | Called before executing the insert/update statement |
 | virtual [ClearNonTableAssignments](SaveRequestHandler-3/ClearNonTableAssignments.md)() | Clears assignment for fields that are marked as non table field, e.g. fields that are not mapped, view, expression etc. |
@@ -68,7 +68,7 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 | virtual [SetTrimToEmptyFields](SaveRequestHandler-3/SetTrimToEmptyFields.md)() | Sets values for TrimToEmpty fields. |
 | virtual [ValidateAndClearIdField](SaveRequestHandler-3/ValidateAndClearIdField.md)() | Validates and clears the ID field |
 | virtual [ValidateEditable](SaveRequestHandler-3/ValidateEditable.md)() | Validates editable fields. |
-| virtual [ValidateEditableFields](SaveRequestHandler-3/ValidateEditableFields.md)(…) | Validates editable fields, e.g. checks if the assigned fields are all in the editable set. Calls [`HandleNonEditable`](SaveRequestHandler-3/HandleNonEditable.md) if not. |
+| virtual [ValidateEditableFields](SaveRequestHandler-3/ValidateEditableFields.md)(…) | Validates editable fields, e.g. checks if the assigned fields are all in the editable set. Calls [`HandleNonEditable`](./SaveRequestHandler-3/HandleNonEditable.md) if not. |
 | virtual [ValidateFieldValues](SaveRequestHandler-3/ValidateFieldValues.md)() | Validates field values via [`ICustomValidator`](../Serenity/ICustomValidator.md) interface. |
 | virtual [ValidateIsActive](SaveRequestHandler-3/ValidateIsActive.md)() | Validates that record is not soft deleted |
 | virtual [ValidatePermissions](SaveRequestHandler-3/ValidatePermissions.md)() | Validates user permissions by checking InsertPermissionAttribute and UpdatePermissionAttribute, and ModifyPermissionAttribute or ReadPermissionAttribute if others are not found. |
@@ -77,13 +77,10 @@ public class SaveRequestHandler<TRow, TSaveRequest, TSaveResponse> :
 
 ## See Also
 
-* interface [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](ISaveHandler-3.md)
-* class [TRow](../Serenity.Net.Services/SaveRequestHandler-3.TRow.md)
-* class [TSaveRequest](../Serenity.Net.Services/SaveRequestHandler-3.TSaveRequest.md)
-* class [TSaveResponse](../Serenity.Net.Services/SaveRequestHandler-3.TSaveResponse.md)
-* interface [ISaveRequestProcessor](ISaveRequestProcessor.md)
+* interface [ISaveHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](./ISaveHandler-3.md)
+* interface [ISaveRequestProcessor](./ISaveRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
-* class [SaveResponse](SaveResponse.md)
+* class [SaveRequest&lt;TEntity&gt;](./SaveRequest-1.md)
+* class [SaveResponse](./SaveResponse.md)
 * **Source:** *[SaveRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Save/SaveRequestHandler.cs)*

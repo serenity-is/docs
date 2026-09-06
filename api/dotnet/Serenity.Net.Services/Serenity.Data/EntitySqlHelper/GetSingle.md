@@ -1,5 +1,4 @@
 # EntitySqlHelper.GetSingle method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the single entity returned by executing the query. The values are loaded into the loader row of the query.
 

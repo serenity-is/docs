@@ -1,5 +1,4 @@
 # UnitOfWork.Initialized property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns true if the transaction is tried to be started at least once. This always returns true if deferStart is not true.
 

@@ -1,11 +1,10 @@
 # CoreServiceCollectionExtensions.AddTypeSource method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds a type source to the registry.
 
 ```csharp
 public static void AddTypeSource(this IServiceCollection services, Assembly[] assemblies, 
-    IFeatureToggles featureToggles = null)
+    IFeatureToggles? featureToggles = null)
 ```
 
 | parameter | description |

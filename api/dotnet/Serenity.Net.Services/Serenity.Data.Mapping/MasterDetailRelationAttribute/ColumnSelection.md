@@ -1,5 +1,4 @@
 # MasterDetailRelationAttribute.ColumnSelection property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the column selection.
 
@@ -13,5 +12,5 @@ The column selection.
 
 ## See Also
 
-* enum [ColumnSelection](../Serenity.Net.Core/../../Serenity.Services/ColumnSelection.md)
+* enum [ColumnSelection](../../../Serenity.Net.Core/Serenity.Services/ColumnSelection.md)
 * class [MasterDetailRelationAttribute](../MasterDetailRelationAttribute.md)

@@ -1,5 +1,4 @@
 # IRowOperationInterceptor.FindRow method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Intercepts EntityConnectionExtensions's ById/TryById/First/TryFirst/Single/TrySingle methods.
 

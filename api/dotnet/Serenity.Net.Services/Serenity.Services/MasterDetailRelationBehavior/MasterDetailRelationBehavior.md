@@ -1,5 +1,4 @@
 # MasterDetailRelationBehavior constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Behavior class that handles [`MasterDetailRelationAttribute`](../../Serenity.Data.Mapping/MasterDetailRelationAttribute.md).
 

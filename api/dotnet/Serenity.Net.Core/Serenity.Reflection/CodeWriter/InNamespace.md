@@ -1,5 +1,4 @@
 # CodeWriter.InNamespace method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Executes action by opening namespace if it is not null or empty
 

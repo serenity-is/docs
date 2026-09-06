@@ -1,5 +1,4 @@
 # ReportColumnConverter.FromPropertyInfo method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Extracts a report column from a PropertyInfo
 
@@ -17,6 +16,6 @@ public static ReportColumn FromPropertyInfo(PropertyInfo property, ITextLocalize
 ## See Also
 
 * class [ReportColumn](../ReportColumn.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [Field](../../Serenity.Data/Field.md)
 * class [ReportColumnConverter](../ReportColumnConverter.md)

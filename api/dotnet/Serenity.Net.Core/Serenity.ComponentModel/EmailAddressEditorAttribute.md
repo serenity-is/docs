@@ -12,10 +12,10 @@ public class EmailAddressEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [EmailAddressEditorAttribute](EmailAddressEditorAttribute/EmailAddressEditorAttribute.md)() | Initializes a new instance of the [`EmailAddressEditorAttribute`](EmailAddressEditorAttribute.md) class. |
+| [EmailAddressEditorAttribute](EmailAddressEditorAttribute/EmailAddressEditorAttribute.md)() | Initializes a new instance of the [`EmailAddressEditorAttribute`](./EmailAddressEditorAttribute.md) class. |
 | const [Key](EmailAddressEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[EmailAddressEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/EmailAddressEditorAttribute.cs)*

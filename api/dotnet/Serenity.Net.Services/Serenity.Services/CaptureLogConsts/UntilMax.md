@@ -1,5 +1,4 @@
 # CaptureLogConsts.UntilMax field
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the maximum value for the ValidUntil column.
 

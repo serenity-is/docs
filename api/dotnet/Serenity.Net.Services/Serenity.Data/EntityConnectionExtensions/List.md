@@ -1,5 +1,4 @@
 # EntityConnectionExtensions.List&lt;TRow&gt; method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Lists all records. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
@@ -19,14 +18,12 @@ All records.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
 
 ---
 
 # EntityConnectionExtensions.List&lt;TRow&gt; method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Lists the records, allowing the caller to specify criteria and set of fields to select through an editQuery callback.
 
@@ -47,7 +44,6 @@ List of records matching the edited query.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
@@ -55,7 +51,6 @@ List of records matching the edited query.
 ---
 
 # EntityConnectionExtensions.List&lt;TRow&gt; method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Lists the records matching specified where criteria. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
@@ -76,7 +71,6 @@ Records matching the specified criteria.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IRow](../IRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)

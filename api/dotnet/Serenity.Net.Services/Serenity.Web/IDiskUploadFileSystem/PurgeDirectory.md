@@ -1,10 +1,9 @@
 # IDiskUploadFileSystem.PurgeDirectory method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Purges target directory, cleaning temporary files
 
 ```csharp
-public void PurgeDirectory(string directoryToClean, TimeSpan? autoExpireTime = default(TimeSpan?), 
+public void PurgeDirectory(string directoryToClean, TimeSpan? autoExpireTime = default, 
     int? maxFilesInDirectory = null, string checkFileName = null)
 ```
 

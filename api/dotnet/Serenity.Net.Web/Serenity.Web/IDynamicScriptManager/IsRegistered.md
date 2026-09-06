@@ -1,5 +1,4 @@
 # IDynamicScriptManager.IsRegistered method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Returns whether a script with the name is registered.
 

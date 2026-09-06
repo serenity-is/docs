@@ -21,7 +21,7 @@ public class EnumKeyAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`EnumKeyAttribute`](EnumKeyAttribute.md) class.
+Initializes a new instance of the [`EnumKeyAttribute`](./EnumKeyAttribute.md) class.
 
 ## See Also
 

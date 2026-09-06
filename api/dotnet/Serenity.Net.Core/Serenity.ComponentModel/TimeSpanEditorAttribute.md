@@ -12,7 +12,7 @@ public class TimeSpanEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [TimeSpanEditorAttribute](TimeSpanEditorAttribute/TimeSpanEditorAttribute.md)() | Initializes a new instance of the [`TimeSpanEditorAttribute`](TimeSpanEditorAttribute.md) class. |
+| [TimeSpanEditorAttribute](TimeSpanEditorAttribute/TimeSpanEditorAttribute.md)() | Initializes a new instance of the [`TimeSpanEditorAttribute`](./TimeSpanEditorAttribute.md) class. |
 | [EndHour](TimeSpanEditorAttribute/EndHour.md) { get; set; } | Gets or sets the end hour between 0 and 23. |
 | [IntervalMinutes](TimeSpanEditorAttribute/IntervalMinutes.md) { get; set; } | Gets or sets the interval minutes. |
 | [NoEmptyOption](TimeSpanEditorAttribute/NoEmptyOption.md) { get; set; } | Gets or sets a value indicating whether the empty option should be hidden. |
@@ -21,5 +21,5 @@ public class TimeSpanEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[TimeSpanEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/TimeSpanEditorAttribute.cs)*

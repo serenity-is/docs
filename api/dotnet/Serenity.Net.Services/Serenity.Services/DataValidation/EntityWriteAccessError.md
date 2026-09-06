@@ -1,5 +1,4 @@
 # DataValidation.EntityWriteAccessError method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns an entity write access error
 
@@ -15,7 +14,7 @@ public static ValidationError EntityWriteAccessError(IRow row, long id, ITextLoc
 
 ## See Also
 
-* class [ValidationError](../Serenity.Net.Core/../ValidationError.md)
+* class [ValidationError](../../../Serenity.Net.Core/Serenity.Services/ValidationError.md)
 * interface [IRow](../../Serenity.Data/IRow.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

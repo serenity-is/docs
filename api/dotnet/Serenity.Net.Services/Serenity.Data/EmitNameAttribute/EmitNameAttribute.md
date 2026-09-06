@@ -1,5 +1,4 @@
 # EmitNameAttribute constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Declares that the property generated for this template property should have the specified name, instead of the auto generated one.
 

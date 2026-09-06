@@ -30,7 +30,7 @@ public sealed class MasterDetailRelationAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`MasterDetailRelationAttribute`](MasterDetailRelationAttribute.md) class.
+Initializes a new instance of the [`MasterDetailRelationAttribute`](./MasterDetailRelationAttribute.md) class.
 
 ## See Also
 

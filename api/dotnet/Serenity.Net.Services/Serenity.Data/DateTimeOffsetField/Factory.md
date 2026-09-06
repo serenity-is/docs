@@ -1,5 +1,4 @@
 # DateTimeOffsetField.Factory method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Static factory for field, for backward compatibility, avoid using.
 
@@ -26,7 +25,7 @@ A new DateTimeOffsetField instance.
 ## See Also
 
 * class [Field](../Field.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
 * class [DateTimeOffsetField](../DateTimeOffsetField.md)

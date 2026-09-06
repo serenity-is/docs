@@ -1,5 +1,4 @@
 # EntitySqlQueryExtensions.SelectAs method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a field or an expression to the SELECT statement with a column name of a field's name. The field is marked as a target at the current index for future loading from a data reader.
 

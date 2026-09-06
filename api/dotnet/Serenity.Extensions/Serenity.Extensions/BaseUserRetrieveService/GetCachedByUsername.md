@@ -1,5 +1,4 @@
 # BaseUserRetrieveService.GetCachedByUsername method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the cached user by the specified username.
 
@@ -13,5 +12,5 @@ protected virtual IUserDefinition GetCachedByUsername(string username)
 
 ## See Also
 
-* interface [IUserDefinition](../Serenity.Net.Core/../../Serenity/IUserDefinition.md)
+* interface [IUserDefinition](../../../Serenity.Net.Core/Serenity/IUserDefinition.md)
 * class [BaseUserRetrieveService](../BaseUserRetrieveService.md)

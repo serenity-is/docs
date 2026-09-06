@@ -1,5 +1,4 @@
 # Field.AsObjectNoCheck method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the value of this field in specified row as object, skipping check for assignment even if TrackWithChecks is true. Use at your own risk!
 

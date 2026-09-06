@@ -1,5 +1,4 @@
 # CodeWriter.Block method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Increases indent, runs the insideBlock and decreases indent back.
 

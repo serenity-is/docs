@@ -1,5 +1,4 @@
 # BaseCriteria False operator
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Must return FALSE from this for short circuit OR (&#x7C;&#x7C;) to return a new binary criteria merging left and right operands in any case
 

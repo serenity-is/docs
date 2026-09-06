@@ -1,5 +1,4 @@
 # PropertyItem.MaxLength property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the maximum length of the editor in a form.
 

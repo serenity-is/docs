@@ -23,7 +23,7 @@ public class QuickFilterOptionAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`QuickFilterOptionAttribute`](QuickFilterOptionAttribute.md) class.
+Initializes a new instance of the [`QuickFilterOptionAttribute`](./QuickFilterOptionAttribute.md) class.
 
 ## See Also
 

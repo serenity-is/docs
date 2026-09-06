@@ -12,8 +12,8 @@ public class PageAuthorizeAttribute : TypeFilterAttribute
 
 | name | description |
 | --- | --- |
-| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)() | Initializes a new instance of the [`PageAuthorizeAttribute`](PageAuthorizeAttribute.md) class. |
-| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)(…) | Initializes an instance of the [`PageAuthorizeAttribute`](PageAuthorizeAttribute.md) class, while reading the permission key from the NavigationPermissionAttribute or ReadPermissionAttribute of the source type. (4 constructors) |
+| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)() | Initializes a new instance of the [`PageAuthorizeAttribute`](./PageAuthorizeAttribute.md) class. |
+| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)(…) | Initializes an instance of the [`PageAuthorizeAttribute`](./PageAuthorizeAttribute.md) class, while reading the permission key from the NavigationPermissionAttribute or ReadPermissionAttribute of the source type. (4 constructors) |
 | [Permission](PageAuthorizeAttribute/Permission.md) { get; } | Gets the permission key. |
 | override [Equals](PageAuthorizeAttribute/Equals.md)(…) |  |
 | override [GetHashCode](PageAuthorizeAttribute/GetHashCode.md)() |  |
@@ -22,7 +22,7 @@ public class PageAuthorizeAttribute : TypeFilterAttribute
 
 | name | description |
 | --- | --- |
-| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)(…) | Initializes a new instance of the [`PageAuthorizeAttribute`](PageAuthorizeAttribute.md) class. |
+| [PageAuthorizeAttribute](PageAuthorizeAttribute/PageAuthorizeAttribute.md)(…) | Initializes a new instance of the [`PageAuthorizeAttribute`](./PageAuthorizeAttribute.md) class. |
 
 ## See Also
 

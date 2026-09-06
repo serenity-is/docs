@@ -1,7 +1,7 @@
 # ListRequestHandler&lt;TRow,TListRequest&gt; class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base generic class for list request handlers that use a custom list request as the request type, and [`ListResponse`](ListResponse-1.md) as the response type.
+Base generic class for list request handlers that use a custom list request as the request type, and [`ListResponse`](./ListResponse-1.md) as the response type.
 
 ```csharp
 public class ListRequestHandler<TRow, TListRequest> : 
@@ -20,7 +20,7 @@ public class ListRequestHandler<TRow, TListRequest> :
 
 | name | description |
 | --- | --- |
-| [ListRequestHandler](ListRequestHandler-2/ListRequestHandler.md)(…) | Base generic class for list request handlers that use a custom list request as the request type, and [`ListResponse`](ListResponse-1.md) as the response type. |
+| [ListRequestHandler](ListRequestHandler-2/ListRequestHandler.md)(…) | Base generic class for list request handlers that use a custom list request as the request type, and [`ListResponse`](./ListResponse-1.md) as the response type. |
 
 ## Remarks
 
@@ -28,11 +28,9 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](ListRequestHandler-3.md)
-* class [TRow](../Serenity.Net.Services/ListRequestHandler-2.TRow.md)
-* class [TListRequest](../Serenity.Net.Services/ListRequestHandler-2.TListRequest.md)
-* class [ListResponse&lt;T&gt;](ListResponse-1.md)
-* interface [IListHandler&lt;TRow,TListRequest&gt;](IListHandler-2.md)
+* class [ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;](./ListRequestHandler-3.md)
+* class [ListResponse&lt;T&gt;](./ListResponse-1.md)
+* interface [IListHandler&lt;TRow,TListRequest&gt;](./IListHandler-2.md)
 * interface [IRow](../Serenity.Data/IRow.md)
-* class [ListRequest](ListRequest.md)
+* class [ListRequest](./ListRequest.md)
 * **Source:** *[ListRequestHandlerT2.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/List/ListRequestHandlerT2.cs)*

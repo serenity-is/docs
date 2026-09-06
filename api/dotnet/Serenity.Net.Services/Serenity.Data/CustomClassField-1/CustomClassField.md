@@ -1,5 +1,4 @@
 # CustomClassField&lt;TValue&gt; constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Base class for custom fields with reference type values.
 
@@ -27,8 +26,7 @@ Initializes a new instance of the [`CustomClassField`](../CustomClassField-1.md)
 
 * class [GenericClassField&lt;TValue&gt;](../GenericClassField-1.md)
 * class [Field](../Field.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * interface [IRow](../IRow.md)
-* class [TValue](../Serenity.Net.Services/../CustomClassField-1.TValue.md)
 * class [CustomClassField&lt;TValue&gt;](../CustomClassField-1.md)

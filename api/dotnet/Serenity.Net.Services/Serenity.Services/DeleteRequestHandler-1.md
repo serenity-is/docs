@@ -1,7 +1,7 @@
 # DeleteRequestHandler&lt;TRow&gt; class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base generic class for delete request handlers that use [`DeleteRequest`](DeleteRequest.md) as the request type, and [`DeleteResponse`](DeleteResponse.md) as the response type.
+Base generic class for delete request handlers that use [`DeleteRequest`](./DeleteRequest.md) as the request type, and [`DeleteResponse`](./DeleteResponse.md) as the response type.
 
 ```csharp
 public class DeleteRequestHandler<TRow> : 
@@ -18,7 +18,7 @@ public class DeleteRequestHandler<TRow> :
 
 | name | description |
 | --- | --- |
-| [DeleteRequestHandler](DeleteRequestHandler-1/DeleteRequestHandler.md)(…) | Base generic class for delete request handlers that use [`DeleteRequest`](DeleteRequest.md) as the request type, and [`DeleteResponse`](DeleteResponse.md) as the response type. |
+| [DeleteRequestHandler](DeleteRequestHandler-1/DeleteRequestHandler.md)(…) | Base generic class for delete request handlers that use [`DeleteRequest`](./DeleteRequest.md) as the request type, and [`DeleteResponse`](./DeleteResponse.md) as the response type. |
 
 ## Remarks
 
@@ -26,11 +26,10 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](DeleteRequestHandler-3.md)
-* class [TRow](../Serenity.Net.Services/DeleteRequestHandler-1.TRow.md)
-* class [DeleteRequest](DeleteRequest.md)
-* class [DeleteResponse](DeleteResponse.md)
-* interface [IDeleteHandler&lt;TRow&gt;](IDeleteHandler-1.md)
+* class [DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](./DeleteRequestHandler-3.md)
+* class [DeleteRequest](./DeleteRequest.md)
+* class [DeleteResponse](./DeleteResponse.md)
+* interface [IDeleteHandler&lt;TRow&gt;](./IDeleteHandler-1.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
 * **Source:** *[DeleteRequestHandlerT.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Delete/DeleteRequestHandlerT.cs)*

@@ -1,5 +1,4 @@
 # JsonField&lt;TValue&gt;.ValueFromJson method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Deserializes this field's value from JSON.
 
@@ -27,7 +26,6 @@ public override void ValueFromJson(JsonReader reader, IRow row, JsonSerializer s
 ---
 
 # JsonField&lt;TValue&gt;.ValueFromJson method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
 public override void ValueFromJson(ref Utf8JsonReader reader, IRow row, 

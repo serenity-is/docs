@@ -26,9 +26,9 @@ public class DefaultUploadFileResponder : IUploadFileResponder
 
 ## Remarks
 
-Initializes a new instance of the [`DefaultUploadFileResponder`](DefaultUploadFileResponder.md) class.
+Initializes a new instance of the [`DefaultUploadFileResponder`](./DefaultUploadFileResponder.md) class.
 
 ## See Also
 
-* interface [IUploadFileResponder](IUploadFileResponder.md)
+* interface [IUploadFileResponder](./IUploadFileResponder.md)
 * **Source:** *[DefaultUploadFileResponder.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Upload/DefaultUploadFileResponder.cs)*

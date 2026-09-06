@@ -11,7 +11,7 @@ public interface IConnectionKeyFallbacks
 
 | name | description |
 | --- | --- |
-| [GetConnectionKeyFallbacks](IConnectionKeyFallbacks/GetConnectionKeyFallbacks.md)(…) | Gets the ordered fallback chain for a connection key, starting with the key itself followed by its declared fallbacks. This reflects only the declared [`ConnectionKeyFallbackAttribute`](ConnectionKeyFallbackAttribute.md) values and does not check configuration. |
+| [GetConnectionKeyFallbacks](IConnectionKeyFallbacks/GetConnectionKeyFallbacks.md)(…) | Gets the ordered fallback chain for a connection key, starting with the key itself followed by its declared fallbacks. This reflects only the declared [`ConnectionKeyFallbackAttribute`](./ConnectionKeyFallbackAttribute.md) values and does not check configuration. |
 | [GetConnectionKeysResolvingTo](IConnectionKeyFallbacks/GetConnectionKeysResolvingTo.md)(…) | Returns all connection keys (including themselves) whose fallback chain resolves to the specified connection key. Only keys that actually resolve to a configured connection are included, so this is a configuration-aware operation. |
 | [ResolveConnectionKey](IConnectionKeyFallbacks/ResolveConnectionKey.md)(…) | Resolves a connection key to the first key in its fallback chain that is actually configured. Returns `null` if none of the keys in the chain are configured. |
 

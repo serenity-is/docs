@@ -1,5 +1,4 @@
 # LocalizationBehavior.GetLocalizationMatch method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets localization match for a field
 

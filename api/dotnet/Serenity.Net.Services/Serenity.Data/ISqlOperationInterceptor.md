@@ -11,9 +11,9 @@ public interface ISqlOperationInterceptor
 
 | name | description |
 | --- | --- |
-| [ExecuteNonQuery](ISqlOperationInterceptor/ExecuteNonQuery.md)(…) | Intercepts the [`SqlHelper`](SqlHelper.md)`Execute` method (SqlDelete/SqlUpdate/SqlInsert). |
-| [ExecuteReader](ISqlOperationInterceptor/ExecuteReader.md)(…) | Intercepts the [`SqlHelper`](SqlHelper.md)`ExecuteReader` method. |
-| [ExecuteScalar](ISqlOperationInterceptor/ExecuteScalar.md)(…) | Intercepts the [`SqlHelper`](SqlHelper.md)`ExecuteScalar` method. |
+| [ExecuteNonQuery](ISqlOperationInterceptor/ExecuteNonQuery.md)(…) | Intercepts the [`SqlHelper`](./SqlHelper.md)`Execute` method (SqlDelete/SqlUpdate/SqlInsert). |
+| [ExecuteReader](ISqlOperationInterceptor/ExecuteReader.md)(…) | Intercepts the [`SqlHelper`](./SqlHelper.md)`ExecuteReader` method. |
+| [ExecuteScalar](ISqlOperationInterceptor/ExecuteScalar.md)(…) | Intercepts the [`SqlHelper`](./SqlHelper.md)`ExecuteScalar` method. |
 
 ## See Also
 

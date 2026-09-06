@@ -1,7 +1,7 @@
 # IChangeNotifier interface
 **namespace:** *[Serenity.Abstractions](../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../README.md)*
 
-Abstraction for an object that can be externally notified that its content has changed. The object itself does not need to detect changes; external code calls [`NotifyChanged`](IChangeNotifier/NotifyChanged.md) and consumers subscribe to the change token to invalidate their caches.
+Abstraction for an object that can be externally notified that its content has changed. The object itself does not need to detect changes; external code calls [`NotifyChanged`](./IChangeNotifier/NotifyChanged.md) and consumers subscribe to the change token to invalidate their caches.
 
 ```csharp
 public interface IChangeNotifier

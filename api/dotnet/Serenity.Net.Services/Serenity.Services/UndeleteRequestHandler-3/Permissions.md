@@ -1,5 +1,4 @@
 # UndeleteRequestHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;.Permissions property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the permission service from the request context.
 
@@ -9,5 +8,5 @@ public IPermissionService Permissions { get; }
 
 ## See Also
 
-* interface [IPermissionService](../Serenity.Net.Core/../../Serenity.Abstractions/IPermissionService.md)
+* interface [IPermissionService](../../../Serenity.Net.Core/Serenity.Abstractions/IPermissionService.md)
 * class [UndeleteRequestHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](../UndeleteRequestHandler-3.md)

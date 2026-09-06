@@ -1,5 +1,4 @@
 # Sql.Max method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a MAX() expression.
 
@@ -29,7 +28,6 @@ The MAX() expression.
 ---
 
 # Sql.Max method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a MAX() expression.
 
@@ -58,7 +56,6 @@ The MAX() expression.
 ---
 
 # Sql.Max method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a MAX() expression.
 

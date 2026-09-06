@@ -1,5 +1,4 @@
 # MigrationUtils.IsSqlite method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Determines whether the migration is running against a Sqlite database.
 

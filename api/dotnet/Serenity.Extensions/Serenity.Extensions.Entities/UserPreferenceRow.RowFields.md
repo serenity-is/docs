@@ -1,7 +1,7 @@
 # UserPreferenceRow.RowFields class
 **namespace:** *[Serenity.Extensions.Entities](../README.md#serenity.extensions.entities-namespace)*   **assembly**: *[Serenity.Extensions](../README.md)*
 
-The fields of the [`UserPreferenceRow`](UserPreferenceRow.md).
+The fields of the [`UserPreferenceRow`](./UserPreferenceRow.md).
 
 ```csharp
 public class RowFields : RowFieldsBase
@@ -20,5 +20,5 @@ public class RowFields : RowFieldsBase
 
 ## See Also
 
-* class [RowFieldsBase](../Serenity.Net.Services/../Serenity.Data/RowFieldsBase.md)
-* class [UserPreferenceRow](UserPreferenceRow.md)
+* class [RowFieldsBase](../../Serenity.Net.Services/Serenity.Data/RowFieldsBase.md)
+* class [UserPreferenceRow](./UserPreferenceRow.md)

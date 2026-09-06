@@ -1,5 +1,4 @@
 # IFileSystem.DeleteFile method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Deletes the file at the specified path.
 

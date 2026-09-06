@@ -1,5 +1,4 @@
 # HttpRequestExtensions.GetBaseUri method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the base URI for the current request.
 

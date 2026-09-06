@@ -1,5 +1,4 @@
 # FileSystemExtensions.Combine method (1 of 3)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Combines an array of path strings.
 
@@ -24,7 +23,6 @@ The combined path.
 ---
 
 # FileSystemExtensions.Combine method (2 of 3)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Combines two path strings.
 
@@ -50,7 +48,6 @@ The combined path.
 ---
 
 # FileSystemExtensions.Combine method (3 of 3)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Combines three path strings.
 

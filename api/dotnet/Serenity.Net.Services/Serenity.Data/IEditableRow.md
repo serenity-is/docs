@@ -27,5 +27,5 @@ public interface IEditableRow : IEditableObject, INotifyPropertyChanged, IRow
 
 ## See Also
 
-* interface [IRow](IRow.md)
+* interface [IRow](./IRow.md)
 * **Source:** *[IEditableRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/IEditableRow.cs)*

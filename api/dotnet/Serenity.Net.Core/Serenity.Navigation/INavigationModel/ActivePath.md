@@ -1,5 +1,4 @@
 # INavigationModel.ActivePath property
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 The navigation items in the active path.
 

@@ -1,5 +1,4 @@
 # SummaryTypeAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Determines the type of aggregate function to use for a column.
 

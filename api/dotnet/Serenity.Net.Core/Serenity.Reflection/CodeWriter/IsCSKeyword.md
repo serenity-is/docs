@@ -1,5 +1,4 @@
 # CodeWriter.IsCSKeyword method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Determines whether the given type name is a C# primitive keyword.
 

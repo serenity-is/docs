@@ -1,5 +1,4 @@
 # CodeWriter.BraceOnSameLine property
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Whether to put opening brace on the same line.
 

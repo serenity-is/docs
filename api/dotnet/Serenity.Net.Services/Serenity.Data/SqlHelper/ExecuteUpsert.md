@@ -1,5 +1,4 @@
 # SqlHelper.ExecuteUpsert method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes an UPSERT (insert or update) query on the connection and returns the number of affected rows. The key fields are used to determine whether an existing record is updated or a new record is inserted.
 

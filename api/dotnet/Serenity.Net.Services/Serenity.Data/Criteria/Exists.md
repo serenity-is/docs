@@ -1,5 +1,4 @@
 # Criteria.Exists method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new EXISTS criteria.
 
@@ -24,7 +23,6 @@ A new EXISTS criteria.
 ---
 
 # Criteria.Exists method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a new EXISTS criteria.
 

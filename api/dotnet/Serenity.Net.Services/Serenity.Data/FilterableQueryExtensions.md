@@ -1,7 +1,7 @@
 # FilterableQueryExtensions class
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Extensions for objects implementing [`IFilterableQuery`](IFilterableQuery.md).
+Extensions for objects implementing [`IFilterableQuery`](./IFilterableQuery.md).
 
 ```csharp
 public static class FilterableQueryExtensions

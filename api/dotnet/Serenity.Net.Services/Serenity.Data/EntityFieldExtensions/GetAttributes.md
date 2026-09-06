@@ -1,5 +1,4 @@
 # EntityFieldExtensions.GetAttributes&lt;TAttribute&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the attributes.
 
@@ -19,6 +18,5 @@ Attributes with specified type.
 
 ## See Also
 
-* class [TAttribute](../Serenity.Net.Services/../EntityFieldExtensions.TAttribute.md)
 * class [Field](../Field.md)
 * class [EntityFieldExtensions](../EntityFieldExtensions.md)

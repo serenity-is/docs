@@ -1,5 +1,4 @@
 # DefaultReportRenderer.RenderDataOnlyReport method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Renders a data only report.
 
@@ -19,7 +18,7 @@ The render result.
 
 ## See Also
 
-* class [ReportRenderResult](../Serenity.Net.Services/../ReportRenderResult.md)
-* interface [IDataOnlyReport](../Serenity.Net.Services/../IDataOnlyReport.md)
-* class [ReportRenderOptions](../Serenity.Net.Services/../ReportRenderOptions.md)
+* class [ReportRenderResult](../../../Serenity.Net.Services/Serenity.Reporting/ReportRenderResult.md)
+* interface [IDataOnlyReport](../../../Serenity.Net.Services/Serenity.Reporting/IDataOnlyReport.md)
+* class [ReportRenderOptions](../../../Serenity.Net.Services/Serenity.Reporting/ReportRenderOptions.md)
 * class [DefaultReportRenderer](../DefaultReportRenderer.md)

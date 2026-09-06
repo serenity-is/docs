@@ -12,11 +12,11 @@ public class EnumFormatterAttribute : CustomFormatterAttribute
 
 | name | description |
 | --- | --- |
-| [EnumFormatterAttribute](EnumFormatterAttribute/EnumFormatterAttribute.md)() | Initializes a new instance of the [`EnumFormatterAttribute`](EnumFormatterAttribute.md) class. |
+| [EnumFormatterAttribute](EnumFormatterAttribute/EnumFormatterAttribute.md)() | Initializes a new instance of the [`EnumFormatterAttribute`](./EnumFormatterAttribute.md) class. |
 | [EnumKey](EnumFormatterAttribute/EnumKey.md) { get; set; } | Gets or sets the enum key which is full namespace and class name of the enum or it should match the value set with [EnumKey] attribute on the enum type. |
 | const [Key](EnumFormatterAttribute/Key.md) | Formatter type key |
 
 ## See Also
 
-* class [CustomFormatterAttribute](CustomFormatterAttribute.md)
+* class [CustomFormatterAttribute](./CustomFormatterAttribute.md)
 * **Source:** *[EnumFormatterAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Formatting/BasicFormatterTypes/EnumFormatterAttribute.cs)*

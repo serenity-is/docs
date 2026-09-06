@@ -1,5 +1,4 @@
 # BaseUserRetrieveService&lt;TRow&gt; constructor
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Base user retrieve service that provides common functionality for user retrieve services.
 
@@ -15,6 +14,6 @@ protected BaseUserRetrieveService(ITwoLevelCache cache, ISqlConnections sqlConne
 
 ## See Also
 
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
-* interface [ISqlConnections](../Serenity.Net.Services/../../Serenity.Data/ISqlConnections.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ISqlConnections](../../../Serenity.Net.Services/Serenity.Data/ISqlConnections.md)
 * class [BaseUserRetrieveService&lt;TRow&gt;](../BaseUserRetrieveService-1.md)

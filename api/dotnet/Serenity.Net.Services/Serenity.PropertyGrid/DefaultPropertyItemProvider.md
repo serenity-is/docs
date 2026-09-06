@@ -11,11 +11,11 @@ public class DefaultPropertyItemProvider : IDisposable, IPropertyItemProvider
 
 | name | description |
 | --- | --- |
-| [DefaultPropertyItemProvider](DefaultPropertyItemProvider/DefaultPropertyItemProvider.md)(…) | Initializes a new instance of the [`DefaultPropertyItemProvider`](DefaultPropertyItemProvider.md) class. |
+| [DefaultPropertyItemProvider](DefaultPropertyItemProvider/DefaultPropertyItemProvider.md)(…) | Initializes a new instance of the [`DefaultPropertyItemProvider`](./DefaultPropertyItemProvider.md) class. |
 | [Dispose](DefaultPropertyItemProvider/Dispose.md)() |  |
 | [GetPropertyItemsFor](DefaultPropertyItemProvider/GetPropertyItemsFor.md)(…) |  |
 
 ## See Also
 
-* interface [IPropertyItemProvider](IPropertyItemProvider.md)
+* interface [IPropertyItemProvider](./IPropertyItemProvider.md)
 * **Source:** *[DefaultPropertyItemProvider.cs](https://github.com/serenity-is/Serenity/blob/478a0d557f5fa9d9eccec0603e34cc9daadb1091/src/services/Entity/PropertyGrid/DefaultPropertyItemProvider.cs)*

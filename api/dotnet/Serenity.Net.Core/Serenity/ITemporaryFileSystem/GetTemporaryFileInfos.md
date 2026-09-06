@@ -1,5 +1,4 @@
 # ITemporaryFileSystem.GetTemporaryFileInfos method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the temporary file info objects for the files in the specified directory.
 

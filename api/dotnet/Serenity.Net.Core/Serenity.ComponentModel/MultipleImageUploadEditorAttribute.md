@@ -12,12 +12,12 @@ public class MultipleImageUploadEditorAttribute : BaseUploadEditorAttribute
 
 | name | description |
 | --- | --- |
-| [MultipleImageUploadEditorAttribute](MultipleImageUploadEditorAttribute/MultipleImageUploadEditorAttribute.md)() | Initializes a new instance of the [`MultipleImageUploadEditorAttribute`](MultipleImageUploadEditorAttribute.md) class. |
+| [MultipleImageUploadEditorAttribute](MultipleImageUploadEditorAttribute/MultipleImageUploadEditorAttribute.md)() | Initializes a new instance of the [`MultipleImageUploadEditorAttribute`](./MultipleImageUploadEditorAttribute.md) class. |
 | override [IsMultiple](MultipleImageUploadEditorAttribute/IsMultiple.md) { get; } |  |
 | const [Key](MultipleImageUploadEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [ImageUploadEditorAttribute](ImageUploadEditorAttribute.md)
-* class [BaseUploadEditorAttribute](BaseUploadEditorAttribute.md)
+* class [ImageUploadEditorAttribute](./ImageUploadEditorAttribute.md)
+* class [BaseUploadEditorAttribute](./BaseUploadEditorAttribute.md)
 * **Source:** *[MultipleImageUploadEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Upload/MultipleImageUploadEditorAttribute.cs)*

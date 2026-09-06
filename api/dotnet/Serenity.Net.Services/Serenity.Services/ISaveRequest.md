@@ -1,7 +1,7 @@
 # ISaveRequest interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for a [`SaveRequest`](SaveRequest-1.md). As the SaveRequest itself is generic, this allows easier access to its members.
+Interface for a [`SaveRequest`](./SaveRequest-1.md). As the SaveRequest itself is generic, this allows easier access to its members.
 
 ```csharp
 public interface ISaveRequest

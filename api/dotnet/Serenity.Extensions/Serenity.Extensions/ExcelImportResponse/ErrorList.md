@@ -1,5 +1,4 @@
 # ExcelImportResponse.ErrorList property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The list of errors encountered during import, if any.
 

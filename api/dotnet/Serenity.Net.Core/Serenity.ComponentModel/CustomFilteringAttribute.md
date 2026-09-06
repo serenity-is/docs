@@ -28,9 +28,9 @@ public abstract class CustomFilteringAttribute : FilteringTypeAttribute
 
 ## Remarks
 
-Initializes a new instance of the [`CustomFilteringAttribute`](CustomFilteringAttribute.md) class.
+Initializes a new instance of the [`CustomFilteringAttribute`](./CustomFilteringAttribute.md) class.
 
 ## See Also
 
-* class [FilteringTypeAttribute](FilteringTypeAttribute.md)
+* class [FilteringTypeAttribute](./FilteringTypeAttribute.md)
 * **Source:** *[CustomFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Filtering/CustomFilteringAttribute.cs)*

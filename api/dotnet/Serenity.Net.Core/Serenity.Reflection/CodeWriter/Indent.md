@@ -1,5 +1,4 @@
 # CodeWriter.Indent method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Appends current indent
 

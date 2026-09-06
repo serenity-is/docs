@@ -1,5 +1,4 @@
 # FilesToDelete.RegisterNewFile method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Registers a new file
 

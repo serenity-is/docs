@@ -22,7 +22,7 @@ public class FilteringTypeAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`FilteringTypeAttribute`](FilteringTypeAttribute.md) class.
+Initializes a new instance of the [`FilteringTypeAttribute`](./FilteringTypeAttribute.md) class.
 
 ## See Also
 

@@ -11,9 +11,9 @@ public interface IRetrieveRequestProcessor : IRetrieveRequestHandler
 
 | name | description |
 | --- | --- |
-| [Process](IRetrieveRequestProcessor/Process.md)(…) | Processes the [`RetrieveRequest`](RetrieveRequest.md) and returns a [`RetrieveResponse`](RetrieveResponse-1.md) |
+| [Process](IRetrieveRequestProcessor/Process.md)(…) | Processes the [`RetrieveRequest`](./RetrieveRequest.md) and returns a [`RetrieveResponse`](./RetrieveResponse-1.md) |
 
 ## See Also
 
-* interface [IRetrieveRequestHandler](IRetrieveRequestHandler.md)
+* interface [IRetrieveRequestHandler](./IRetrieveRequestHandler.md)
 * **Source:** *[IRetrieveRequestProcessor.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Retrieve/IRetrieveRequestProcessor.cs)*

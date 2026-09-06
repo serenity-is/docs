@@ -1,5 +1,4 @@
 # MigrationUtils.CreateTableWithId32 method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Please prefer IdentityKey(this) on the fluent column builder
 

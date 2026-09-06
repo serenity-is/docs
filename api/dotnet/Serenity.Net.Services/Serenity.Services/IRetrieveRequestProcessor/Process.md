@@ -1,5 +1,4 @@
 # IRetrieveRequestProcessor.Process method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Processes the [`RetrieveRequest`](../RetrieveRequest.md) and returns a [`RetrieveResponse`](../RetrieveResponse-1.md)
 

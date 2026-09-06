@@ -1,5 +1,4 @@
 # TransactionSettingsAttribute constructor (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the attribute.
 
@@ -14,7 +13,6 @@ public TransactionSettingsAttribute()
 ---
 
 # TransactionSettingsAttribute constructor (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the attribute.
 

@@ -1,7 +1,7 @@
 # IFilesToDelete interface
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for a files to delete container ([`FilesToDelete`](FilesToDelete.md))
+Interface for a files to delete container ([`FilesToDelete`](./FilesToDelete.md))
 
 ```csharp
 public interface IFilesToDelete

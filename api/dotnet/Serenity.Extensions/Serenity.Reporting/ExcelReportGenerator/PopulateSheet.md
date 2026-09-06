@@ -1,5 +1,4 @@
 # ExcelReportGenerator.PopulateSheet method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Populates the specified worksheet with the given columns and rows.
 
@@ -22,5 +21,5 @@ public static void PopulateSheet(IXLWorksheet worksheet, List<ReportColumn> colu
 
 ## See Also
 
-* class [ReportColumn](../Serenity.Net.Services/../ReportColumn.md)
+* class [ReportColumn](../../../Serenity.Net.Services/Serenity.Reporting/ReportColumn.md)
 * class [ExcelReportGenerator](../ExcelReportGenerator.md)

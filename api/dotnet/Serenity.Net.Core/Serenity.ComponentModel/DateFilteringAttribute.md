@@ -12,11 +12,11 @@ public class DateFilteringAttribute : CustomFilteringAttribute
 
 | name | description |
 | --- | --- |
-| [DateFilteringAttribute](DateFilteringAttribute/DateFilteringAttribute.md)() | Initializes a new instance of the [`DateFilteringAttribute`](DateFilteringAttribute.md) class. |
+| [DateFilteringAttribute](DateFilteringAttribute/DateFilteringAttribute.md)() | Initializes a new instance of the [`DateFilteringAttribute`](./DateFilteringAttribute.md) class. |
 | [DisplayFormat](DateFilteringAttribute/DisplayFormat.md) { get; set; } | Gets or sets the display format. |
 | const [Key](DateFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 
-* class [CustomFilteringAttribute](CustomFilteringAttribute.md)
+* class [CustomFilteringAttribute](./CustomFilteringAttribute.md)
 * **Source:** *[DateFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/DateFilteringAttribute.cs)*

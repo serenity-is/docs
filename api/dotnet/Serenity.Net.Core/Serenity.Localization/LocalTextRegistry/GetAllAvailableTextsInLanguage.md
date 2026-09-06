@@ -1,5 +1,4 @@
 # LocalTextRegistry.GetAllAvailableTextsInLanguage method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets all available text keys (that have a translation in the language or any of its language fallbacks) and their local texts.
 

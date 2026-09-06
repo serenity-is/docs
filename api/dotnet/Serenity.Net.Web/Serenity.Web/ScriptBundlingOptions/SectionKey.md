@@ -1,5 +1,4 @@
 # ScriptBundlingOptions.SectionKey field
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 The default section key for this option class.
 

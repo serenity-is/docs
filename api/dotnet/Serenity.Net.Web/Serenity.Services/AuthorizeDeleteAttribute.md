@@ -20,9 +20,9 @@ public class AuthorizeDeleteAttribute : ServiceAuthorizeAttribute
 
 ## Remarks
 
-Initializes a new instance of the [`AuthorizeDeleteAttribute`](AuthorizeDeleteAttribute.md) class.
+Initializes a new instance of the [`AuthorizeDeleteAttribute`](./AuthorizeDeleteAttribute.md) class.
 
 ## See Also
 
-* class [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute.md)
+* class [ServiceAuthorizeAttribute](./ServiceAuthorizeAttribute.md)
 * **Source:** *[AuthorizeDeleteAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/AuthorizeDeleteAttribute.cs)*

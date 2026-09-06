@@ -23,7 +23,7 @@ public class FallbackLocalTextSource : ILocalTextRegistry
 
 ## Remarks
 
-Initializes a new instance of the [`FallbackLocalTextSource`](FallbackLocalTextSource.md) class.
+Initializes a new instance of the [`FallbackLocalTextSource`](./FallbackLocalTextSource.md) class.
 
 ## See Also
 

@@ -1,5 +1,4 @@
 # IReportFactory.Create method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a report for the given report key.
 

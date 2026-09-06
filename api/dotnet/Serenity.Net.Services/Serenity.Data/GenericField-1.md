@@ -36,9 +36,9 @@ public abstract class GenericField<TValue> : Field
 
 ## Remarks
 
-Initializes a new instance of the [`GenericField`](GenericField-1.md) class.
+Initializes a new instance of the [`GenericField`](./GenericField-1.md) class.
 
 ## See Also
 
-* class [Field](Field.md)
+* class [Field](./Field.md)
 * **Source:** *[GenericField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/GenericField.cs)*

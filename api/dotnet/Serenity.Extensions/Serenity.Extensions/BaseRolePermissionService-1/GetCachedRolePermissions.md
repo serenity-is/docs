@@ -1,5 +1,4 @@
 # BaseRolePermissionService&lt;TRolePermissionRow&gt;.GetCachedRolePermissions method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the role permissions for the specified role.
 

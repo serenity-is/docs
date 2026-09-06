@@ -1,5 +1,4 @@
 # AliasedFields.As&lt;TFields&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Aliases the fields with the specified alias.
 
@@ -26,6 +25,5 @@ An instance of RowFieldsBase with T0 replaced with the specified alias.
 
 ## See Also
 
-* class [TFields](../Serenity.Net.Services/../AliasedFields.TFields.md)
 * class [RowFieldsBase](../RowFieldsBase.md)
 * class [AliasedFields](../AliasedFields.md)

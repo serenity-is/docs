@@ -12,9 +12,9 @@ public class AuthorizeListAttribute : ServiceAuthorizeAttribute
 
 | name | description |
 | --- | --- |
-| [AuthorizeListAttribute](AuthorizeListAttribute/AuthorizeListAttribute.md)(…) | Initializes a new instance of the [`AuthorizeListAttribute`](AuthorizeListAttribute.md) class. |
+| [AuthorizeListAttribute](AuthorizeListAttribute/AuthorizeListAttribute.md)(…) | Initializes a new instance of the [`AuthorizeListAttribute`](./AuthorizeListAttribute.md) class. |
 
 ## See Also
 
-* class [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute.md)
+* class [ServiceAuthorizeAttribute](./ServiceAuthorizeAttribute.md)
 * **Source:** *[AuthorizeListAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/AuthorizeListAttribute.cs)*

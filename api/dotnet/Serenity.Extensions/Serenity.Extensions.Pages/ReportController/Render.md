@@ -1,5 +1,4 @@
 # ReportController.Render method
-**namespace:** *[Serenity.Extensions.Pages](../../README.md#serenity.extensions.pages-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Renders a report with the specified key and options.
 

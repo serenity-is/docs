@@ -1,5 +1,4 @@
 # AuditedAttribute constructor
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Indicates if the field is audited. For DataAuditLog, all fields are audited by default, but if the field has [Audited(false)] it will not be logged.
 

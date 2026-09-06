@@ -12,8 +12,8 @@ public class DistinctValuesEditorAttribute : LookupEditorBaseAttribute
 
 | name | description |
 | --- | --- |
-| [DistinctValuesEditorAttribute](DistinctValuesEditorAttribute/DistinctValuesEditorAttribute.md)() | Initializes a new instance of the [`DistinctValuesEditorAttribute`](DistinctValuesEditorAttribute.md) class. |
-| [DistinctValuesEditorAttribute](DistinctValuesEditorAttribute/DistinctValuesEditorAttribute.md)(…) | Initializes a new instance of the [`DistinctValuesEditorAttribute`](DistinctValuesEditorAttribute.md) class. |
+| [DistinctValuesEditorAttribute](DistinctValuesEditorAttribute/DistinctValuesEditorAttribute.md)() | Initializes a new instance of the [`DistinctValuesEditorAttribute`](./DistinctValuesEditorAttribute.md) class. |
+| [DistinctValuesEditorAttribute](DistinctValuesEditorAttribute/DistinctValuesEditorAttribute.md)(…) | Initializes a new instance of the [`DistinctValuesEditorAttribute`](./DistinctValuesEditorAttribute.md) class. |
 | [Expiration](DistinctValuesEditorAttribute/Expiration.md) { get; set; } | Cache duration in seconds. |
 | [Permission](DistinctValuesEditorAttribute/Permission.md) { get; set; } | Permission key required to access this lookup script. Use special value "?" for all logged-in users. Use special value "*" for anyone including not logged-in users. |
 | [PropertyName](DistinctValuesEditorAttribute/PropertyName.md) { get; set; } | The property name that this editor will get values from. |
@@ -22,6 +22,6 @@ public class DistinctValuesEditorAttribute : LookupEditorBaseAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
-* class [LookupEditorBaseAttribute](LookupEditorBaseAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
+* class [LookupEditorBaseAttribute](./LookupEditorBaseAttribute.md)
 * **Source:** *[DistinctValuesEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/DistinctValuesEditorAttribute.cs)*

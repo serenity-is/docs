@@ -1,11 +1,10 @@
 # DefaultUserProvider constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Default implementation of [`IUserProvider`](../../Serenity.Abstractions/IUserProvider.md) that delegates to an [`IUserAccessor`](../../Serenity.Abstractions/IUserAccessor.md), [`IUserClaimCreator`](../../Serenity.Abstractions/IUserClaimCreator.md), and [`IUserRetrieveService`](../../Serenity.Abstractions/IUserRetrieveService.md).
 
 ```csharp
 public DefaultUserProvider(IUserAccessor userAccessor, IUserClaimCreator userClaimCreator, 
-    IUserRetrieveService userRetriever, ITwoLevelCache cache = null)
+    IUserRetrieveService userRetriever, ITwoLevelCache? cache = null)
 ```
 
 | parameter | description |

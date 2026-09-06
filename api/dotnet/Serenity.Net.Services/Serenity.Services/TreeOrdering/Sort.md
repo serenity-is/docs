@@ -1,5 +1,4 @@
 # TreeOrdering.Sort&lt;TItem,TIdentity&gt; method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies tree based ordering to the items.
 
@@ -23,6 +22,4 @@ The tree ordered list of items.
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Services/../TreeOrdering.TItem.md)
-* struct [TIdentity](../Serenity.Net.Services/../TreeOrdering.TIdentity.md)
 * class [TreeOrdering](../TreeOrdering.md)

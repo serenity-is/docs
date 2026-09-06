@@ -16,10 +16,7 @@ public interface IRequestHandler<TRow, TRequest, TResponse> : IRequestHandler<TR
 
 ## See Also
 
-* interface [IRequestHandler&lt;TRow&gt;](IRequestHandler-1.md)
-* class [TRow](../Serenity.Net.Services/IRequestHandler-3.TRow.md)
-* interface [IRequestType&lt;TRequestType&gt;](IRequestType-1.md)
-* class [TRequest](../Serenity.Net.Services/IRequestHandler-3.TRequest.md)
-* interface [IResponseType&lt;TResponseType&gt;](IResponseType-1.md)
-* class [TResponse](../Serenity.Net.Services/IRequestHandler-3.TResponse.md)
+* interface [IRequestHandler&lt;TRow&gt;](./IRequestHandler-1.md)
+* interface [IRequestType&lt;TRequestType&gt;](./IRequestType-1.md)
+* interface [IResponseType&lt;TResponseType&gt;](./IResponseType-1.md)
 * **Source:** *[IRequestHandlerT3.cs](https://github.com/serenity-is/Serenity/blob/93f83578d978ab1bb84f2b9bbd74146bc91bb5d4/src/services/RequestHandlers/Handler/IRequestHandlerT3.cs)*

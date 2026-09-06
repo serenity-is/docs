@@ -1,5 +1,4 @@
 # DefaultSqlConnections.CreateConnection method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates an actual connection based on the provider name. This should not return a wrapped connection.
 

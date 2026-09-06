@@ -1,5 +1,4 @@
 # WrappedConnection constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Wraps a connection to add current transaction and dialect support.
 

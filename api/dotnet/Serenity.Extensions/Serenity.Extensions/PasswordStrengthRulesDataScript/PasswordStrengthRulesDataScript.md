@@ -1,5 +1,4 @@
 # PasswordStrengthRulesDataScript constructor
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 This declares a dynamic script with key 'PasswordStrengthRules' that will be available from client side.
 

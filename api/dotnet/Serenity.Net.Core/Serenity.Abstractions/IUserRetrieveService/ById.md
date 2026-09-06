@@ -1,10 +1,9 @@
 # IUserRetrieveService.ById method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the user definition with the specified identifier.
 
 ```csharp
-public IUserDefinition ById(string id)
+public IUserDefinition? ById(string id)
 ```
 
 | parameter | description |

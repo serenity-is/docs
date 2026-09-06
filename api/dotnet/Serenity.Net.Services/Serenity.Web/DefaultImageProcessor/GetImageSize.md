@@ -1,8 +1,7 @@
 # DefaultImageProcessor.GetImageSize method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public ValueTuple<int, int> GetImageSize(object imageObj)
+public (int width, int height) GetImageSize(object imageObj)
 ```
 
 ## See Also

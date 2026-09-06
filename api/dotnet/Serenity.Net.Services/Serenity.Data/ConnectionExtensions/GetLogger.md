@@ -1,5 +1,4 @@
 # ConnectionExtensions.GetLogger method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the logger for a connection if it implements the [`IHasLogger`](../IHasLogger.md) interface, or `null` if not.
 

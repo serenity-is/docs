@@ -1,5 +1,4 @@
 # NavigationLinkAttribute.GetFeaturesFromController method
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Tries to extract features from a controller action.
 

@@ -1,5 +1,4 @@
 # EmailEditorAttribute.Validate method
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Validates the email address.
 
@@ -17,5 +16,5 @@ The validation error text, or `null` if the value is valid.
 
 ## See Also
 
-* interface [IValidationContext](../Serenity.Net.Services/../../Serenity/IValidationContext.md)
+* interface [IValidationContext](../../../Serenity.Net.Services/Serenity/IValidationContext.md)
 * class [EmailEditorAttribute](../EmailEditorAttribute.md)

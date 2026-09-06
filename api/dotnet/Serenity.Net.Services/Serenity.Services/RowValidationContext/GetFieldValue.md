@@ -1,5 +1,4 @@
 # RowValidationContext.GetFieldValue method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the value of the field with the specified name.
 

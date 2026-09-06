@@ -1,5 +1,4 @@
 # UriHelper.Combine method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Combines a URL with a filename by inserting a "/" character between them. This works like Path.Combine.
 

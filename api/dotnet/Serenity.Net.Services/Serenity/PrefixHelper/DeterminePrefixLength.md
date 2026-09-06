@@ -1,5 +1,4 @@
 # PrefixHelper.DeterminePrefixLength&lt;T&gt; method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines the prefix length.
 
@@ -19,5 +18,4 @@ The length of the common prefix, or `0` if there is none.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../PrefixHelper.T.md)
 * class [PrefixHelper](../PrefixHelper.md)

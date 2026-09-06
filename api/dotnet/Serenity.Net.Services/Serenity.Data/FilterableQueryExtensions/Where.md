@@ -1,5 +1,4 @@
 # FilterableQueryExtensions.Where&lt;T&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a filter to query.
 
@@ -20,7 +19,6 @@ Query itself.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../FilterableQueryExtensions.T.md)
 * interface [ICriteria](../../Serenity/ICriteria.md)
 * interface [IFilterableQuery](../IFilterableQuery.md)
 * class [FilterableQueryExtensions](../FilterableQueryExtensions.md)

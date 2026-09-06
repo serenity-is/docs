@@ -1,5 +1,4 @@
 # IImplicitBehavior.ActivateFor method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns true if this behavior should be used for the target row type.
 

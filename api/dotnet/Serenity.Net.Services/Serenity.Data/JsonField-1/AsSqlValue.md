@@ -1,5 +1,4 @@
 # JsonField&lt;TValue&gt;.AsSqlValue method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the value of this row as an SQL value.
 

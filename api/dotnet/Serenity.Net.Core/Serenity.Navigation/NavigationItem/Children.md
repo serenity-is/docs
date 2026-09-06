@@ -1,5 +1,4 @@
 # NavigationItem.Children property
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 List of children
 

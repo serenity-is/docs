@@ -1,5 +1,4 @@
 # RequiredPermissionAttribute constructor (1 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`RequiredPermissionAttribute`](../RequiredPermissionAttribute.md) class.
 
@@ -18,7 +17,6 @@ public RequiredPermissionAttribute(object permission)
 ---
 
 # RequiredPermissionAttribute constructor (2 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`RequiredPermissionAttribute`](../RequiredPermissionAttribute.md) class. A colon is inserted between module and permission to generate permission key.
 
@@ -38,7 +36,6 @@ public RequiredPermissionAttribute(object module, object permission)
 ---
 
 # RequiredPermissionAttribute constructor (3 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`RequiredPermissionAttribute`](../RequiredPermissionAttribute.md) class. A colon is inserted between module, submodule and permission to generate permission key.
 

@@ -21,9 +21,9 @@ public class ValueCriteria : BaseCriteria
 
 ## Remarks
 
-Initializes a new instance of the [`ValueCriteria`](ValueCriteria.md) class.
+Initializes a new instance of the [`ValueCriteria`](./ValueCriteria.md) class.
 
 ## See Also
 
-* class [BaseCriteria](BaseCriteria.md)
+* class [BaseCriteria](./BaseCriteria.md)
 * **Source:** *[ValueCriteria.cs](https://github.com/serenity-is/Serenity/blob/a208f637c41c1cd64c6a2dff54e77302d53f73a8/src/services/Data/Criteria/ValueCriteria.cs)*

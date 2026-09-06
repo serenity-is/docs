@@ -1,7 +1,7 @@
 # BaseUndeleteBehavior class
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Base class for types implementing [`IUndeleteBehavior`](IUndeleteBehavior.md)
+Base class for types implementing [`IUndeleteBehavior`](./IUndeleteBehavior.md)
 
 ```csharp
 public abstract class BaseUndeleteBehavior : IUndeleteBehavior, IUndeleteExceptionBehavior
@@ -27,6 +27,6 @@ public abstract class BaseUndeleteBehavior : IUndeleteBehavior, IUndeleteExcepti
 
 ## See Also
 
-* interface [IUndeleteBehavior](IUndeleteBehavior.md)
-* interface [IUndeleteExceptionBehavior](IUndeleteExceptionBehavior.md)
+* interface [IUndeleteBehavior](./IUndeleteBehavior.md)
+* interface [IUndeleteExceptionBehavior](./IUndeleteExceptionBehavior.md)
 * **Source:** *[BaseUndeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Undelete/BaseUndeleteBehavior.cs)*

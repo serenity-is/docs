@@ -1,5 +1,4 @@
 # InstanceNameAttribute constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines non-plural name for an entity.
 

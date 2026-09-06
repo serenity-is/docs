@@ -41,7 +41,7 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
 
 | name | description |
 | --- | --- |
-| [RowFieldsBase](RowFieldsBase/RowFieldsBase.md)(…) | Initializes a new instance of the [`RowFieldsBase`](RowFieldsBase.md) class. |
+| [RowFieldsBase](RowFieldsBase/RowFieldsBase.md)(…) | Initializes a new instance of the [`RowFieldsBase`](./RowFieldsBase.md) class. |
 | virtual [AfterInitialize](RowFieldsBase/AfterInitialize.md)() | Afters the initialize. |
 | virtual [CreateGeneratedFields](RowFieldsBase/CreateGeneratedFields.md)() | Should be only used by row source generator to create field objects it generated |
 | override [InsertItem](RowFieldsBase/InsertItem.md)(…) | Inserts an element into the Collection at the specified index. |
@@ -50,7 +50,7 @@ public class RowFieldsBase : Collection<Field>, IAlias, IHaveJoins
 
 ## See Also
 
-* interface [IAlias](IAlias.md)
-* interface [IHaveJoins](IHaveJoins.md)
-* class [Field](Field.md)
+* interface [IAlias](./IAlias.md)
+* interface [IHaveJoins](./IHaveJoins.md)
+* class [Field](./Field.md)
 * **Source:** *[RowFieldsBase.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/RowFieldsBase.cs)*

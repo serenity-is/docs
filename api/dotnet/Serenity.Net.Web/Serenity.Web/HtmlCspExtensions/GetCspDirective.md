@@ -1,7 +1,6 @@
 # HtmlCspExtensions.GetCspDirective method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
-Gets a Content Security Policy directive added via [`AddCspDirective`](AddCspDirective.md) merged with any manual values provided. The string includes the final semicolon. This can be used to render parts of the CSP header or meta tag content.
+Gets a Content Security Policy directive added via [`AddCspDirective`](./AddCspDirective.md) merged with any manual values provided. The string includes the final semicolon. This can be used to render parts of the CSP header or meta tag content.
 
 ```csharp
 public static HtmlString GetCspDirective(this IHtmlHelper html, string directiveName, 

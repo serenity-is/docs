@@ -11,10 +11,10 @@ public class CrossApply : Join
 
 | name | description |
 | --- | --- |
-| [CrossApply](CrossApply/CrossApply.md)(…) | Initializes a new instance of the [`CrossApply`](CrossApply.md) class. (2 constructors) |
+| [CrossApply](CrossApply/CrossApply.md)(…) | Initializes a new instance of the [`CrossApply`](./CrossApply.md) class. (2 constructors) |
 | override [GetKeyword](CrossApply/GetKeyword.md)() | Gets the SQL keyword. |
 
 ## See Also
 
-* class [Join](Join.md)
+* class [Join](./Join.md)
 * **Source:** *[CrossApply.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Join/CrossApply.cs)*

@@ -1,11 +1,10 @@
 # AuthorizationExtensions.RemoveCachedUser method (1 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Removes the specified user from the cache.
 
 ```csharp
-public static void RemoveCachedUser(this IUserRetrieveService userRetriever, IUserDefinition user, 
-    ITwoLevelCache cache)
+public static void RemoveCachedUser(this IUserRetrieveService userRetriever, IUserDefinition? user, 
+    ITwoLevelCache? cache)
 ```
 
 | parameter | description |
@@ -28,13 +27,12 @@ If *userRetriever* implements [`IRemoveCachedUser`](../../Serenity.Abstractions/
 ---
 
 # AuthorizationExtensions.RemoveCachedUser method (2 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Removes a cached user entry by identifier and/or username.
 
 ```csharp
-public static void RemoveCachedUser(this IUserRetrieveService userRetriever, string userId, 
-    string username, ITwoLevelCache cache)
+public static void RemoveCachedUser(this IUserRetrieveService userRetriever, string? userId, 
+    string? username, ITwoLevelCache? cache)
 ```
 
 | parameter | description |

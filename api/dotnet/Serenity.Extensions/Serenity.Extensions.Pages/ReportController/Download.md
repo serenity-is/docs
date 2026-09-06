@@ -1,5 +1,4 @@
 # ReportController.Download method
-**namespace:** *[Serenity.Extensions.Pages](../../README.md#serenity.extensions.pages-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Downloads a report with the specified key and options.
 

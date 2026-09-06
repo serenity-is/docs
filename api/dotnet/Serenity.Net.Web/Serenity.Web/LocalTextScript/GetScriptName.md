@@ -1,5 +1,4 @@
 # LocalTextScript.GetScriptName method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the script registration name for a local text package.
 

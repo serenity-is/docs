@@ -1,11 +1,10 @@
 # EntitySqlHelper.List&lt;TRow&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Lists the rows returned from executing the query.
 
 ```csharp
 public static List<TRow> List<TRow>(this SqlQuery query, IDbConnection connection, 
-    TRow loaderRow = default(TRow))
+    TRow loaderRow = default)
     where TRow : class, IRow
 ```
 
@@ -22,7 +21,6 @@ List of rows.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntitySqlHelper.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * class [EntitySqlHelper](../EntitySqlHelper.md)

@@ -1,5 +1,4 @@
 # ModulePageExtensions.GridPage method (1 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Creates a grid page from the specified module page model.
 
@@ -25,7 +24,6 @@ The module page result.
 ---
 
 # ModulePageExtensions.GridPage method (2 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Creates a grid page for the specified module and page title.
 
@@ -49,13 +47,12 @@ The module page result.
 ## See Also
 
 * class [ModulePageResult](../ModulePageResult.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * class [ModulePageExtensions](../ModulePageExtensions.md)
 
 ---
 
 # ModulePageExtensions.GridPage&lt;TRow&gt; method (3 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Creates a grid page for the specified row type and module.
 
@@ -81,6 +78,6 @@ The module page result.
 ## See Also
 
 * class [ModulePageResult](../ModulePageResult.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
-* interface [IRow](../Serenity.Net.Services/../../Serenity.Data/IRow.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
+* interface [IRow](../../../Serenity.Net.Services/Serenity.Data/IRow.md)
 * class [ModulePageExtensions](../ModulePageExtensions.md)

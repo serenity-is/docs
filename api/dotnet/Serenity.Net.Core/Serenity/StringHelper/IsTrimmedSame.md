@@ -1,10 +1,9 @@
 # StringHelper.IsTrimmedSame method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Compares two strings ignoring whitespace at the left or right.
 
 ```csharp
-public static bool IsTrimmedSame(this string string1, string string2)
+public static bool IsTrimmedSame(this string? string1, string? string2)
 ```
 
 | parameter | description |

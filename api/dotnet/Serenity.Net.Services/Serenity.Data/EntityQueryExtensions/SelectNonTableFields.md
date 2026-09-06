@@ -1,5 +1,4 @@
 # EntityQueryExtensions.SelectNonTableFields method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds foreign / calculated table fields in a row to the select list of a query.
 

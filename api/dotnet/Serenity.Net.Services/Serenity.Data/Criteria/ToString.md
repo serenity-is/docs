@@ -1,5 +1,4 @@
 # Criteria.ToString method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to its string representation while adding its parameters to the target query.
 

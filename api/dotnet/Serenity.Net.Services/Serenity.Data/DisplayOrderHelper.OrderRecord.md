@@ -18,4 +18,4 @@ public class OrderRecord
 
 ## See Also
 
-* class [DisplayOrderHelper](DisplayOrderHelper.md)
+* class [DisplayOrderHelper](./DisplayOrderHelper.md)

@@ -1,12 +1,11 @@
 # CoreServiceCollectionExtensions.AddFeatureToggles method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds the IFeatureToggles service to the registry.
 
 ```csharp
 public static IServiceCollection AddFeatureToggles(this IServiceCollection services, 
-    IConfiguration configuration = null, object[] disableByDefault = null, 
-    Dictionary<string, List<RequiresFeatureAttribute>> dependencyMap = null)
+    IConfiguration? configuration = null, object[]? disableByDefault = null, 
+    Dictionary<string, List<RequiresFeatureAttribute>>? dependencyMap = null)
 ```
 
 | parameter | description |

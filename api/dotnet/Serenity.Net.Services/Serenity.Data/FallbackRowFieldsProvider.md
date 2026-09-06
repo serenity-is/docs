@@ -17,5 +17,5 @@ public class FallbackRowFieldsProvider : IRowFieldsProvider
 
 ## See Also
 
-* interface [IRowFieldsProvider](IRowFieldsProvider.md)
+* interface [IRowFieldsProvider](./IRowFieldsProvider.md)
 * **Source:** *[FallbackRowFieldsProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Row/FallbackRowFieldsProvider.cs)*

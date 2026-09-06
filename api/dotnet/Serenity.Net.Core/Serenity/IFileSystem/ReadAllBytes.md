@@ -1,5 +1,4 @@
 # IFileSystem.ReadAllBytes method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Reads all bytes from the file at the specified path.
 

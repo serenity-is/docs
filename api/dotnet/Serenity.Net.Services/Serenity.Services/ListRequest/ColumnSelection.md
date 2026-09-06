@@ -1,5 +1,4 @@
 # ListRequest.ColumnSelection property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Group of columns to select. This is ColumnSelection.List, e.g. only the table fields, not view fields by default.
 
@@ -9,5 +8,5 @@ public ColumnSelection ColumnSelection { get; set; }
 
 ## See Also
 
-* enum [ColumnSelection](../Serenity.Net.Core/../ColumnSelection.md)
+* enum [ColumnSelection](../../../Serenity.Net.Core/Serenity.Services/ColumnSelection.md)
 * class [ListRequest](../ListRequest.md)

@@ -1,5 +1,4 @@
 # RecaptchaValidation.Validate method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Validates a recaptcha token against the Google site verify endpoint.
 
@@ -25,5 +24,5 @@ Inspired from https://github.com/tanveery/recaptcha-net/blob/master/src/Recaptch
 
 ## See Also
 
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [RecaptchaValidation](../RecaptchaValidation.md)

@@ -1,5 +1,4 @@
 # CssBundlingOptions.Value property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Returns this object.
 

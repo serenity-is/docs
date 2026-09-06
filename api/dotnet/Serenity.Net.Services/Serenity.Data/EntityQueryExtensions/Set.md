@@ -1,5 +1,4 @@
 # EntityQueryExtensions.Set&lt;T&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets a field value with a parameter.
 
@@ -20,7 +19,6 @@ The object itself.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../EntityQueryExtensions.T.md)
 * interface [IField](../IField.md)
 * interface [ISetFieldByStatement](../ISetFieldByStatement.md)
 * class [EntityQueryExtensions](../EntityQueryExtensions.md)
@@ -28,7 +26,6 @@ The object itself.
 ---
 
 # EntityQueryExtensions.Set&lt;T&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets all field values in a row with auto named parameters (field name prefixed with '@').
 
@@ -49,7 +46,6 @@ The object itself.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../EntityQueryExtensions.T.md)
 * interface [IRow](../IRow.md)
 * interface [IField](../IField.md)
 * interface [ISetFieldByStatement](../ISetFieldByStatement.md)

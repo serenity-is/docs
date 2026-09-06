@@ -1,5 +1,4 @@
 # SmtpSettings.Password property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The password used to authenticate with the SMTP server.
 

@@ -1,5 +1,4 @@
 # VirtualPathUtility.ToAbsolute method (1 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Converts a path to absolute.
 
@@ -23,7 +22,6 @@ The absolute path.
 ---
 
 # VirtualPathUtility.ToAbsolute method (2 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Converts a path to absolute.
 
@@ -47,7 +45,6 @@ The absolute path.
 ---
 
 # VirtualPathUtility.ToAbsolute method (3 of 3)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Converts a path to absolute.
 

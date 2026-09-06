@@ -1,5 +1,4 @@
 # SqlHelper.ExecuteScalar method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the statement returning a scalar value.
 
@@ -31,7 +30,6 @@ The scalar value.
 ---
 
 # SqlHelper.ExecuteScalar method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the statement returning a scalar value.
 

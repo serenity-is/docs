@@ -38,7 +38,7 @@ public abstract class BaseUserRetrieveService : IRemoveAll, IRemoveCachedUser, I
 
 ## See Also
 
-* interface [IRemoveAll](../Serenity.Net.Core/../Serenity.Abstractions/IRemoveAll.md)
-* interface [IRemoveCachedUser](../Serenity.Net.Core/../Serenity.Abstractions/IRemoveCachedUser.md)
-* interface [IUserRetrieveService](../Serenity.Net.Core/../Serenity.Abstractions/IUserRetrieveService.md)
+* interface [IRemoveAll](../../Serenity.Net.Core/Serenity.Abstractions/IRemoveAll.md)
+* interface [IRemoveCachedUser](../../Serenity.Net.Core/Serenity.Abstractions/IRemoveCachedUser.md)
+* interface [IUserRetrieveService](../../Serenity.Net.Core/Serenity.Abstractions/IUserRetrieveService.md)
 * **Source:** *[BaseUserRetrieveService.cs](https://github.com/serenity-is/Serenity/blob/e8b5b16d9f43821af3cabbbf863eaed415461931/common-features/src/extensions/Modules/Authorization/BaseUserRetrieveService.cs)*

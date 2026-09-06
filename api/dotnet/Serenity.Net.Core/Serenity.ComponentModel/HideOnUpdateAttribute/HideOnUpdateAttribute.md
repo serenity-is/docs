@@ -1,5 +1,4 @@
 # HideOnUpdateAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Controls whether this field is visible in edit record mode.
 

@@ -1,5 +1,4 @@
 # ListRequestHandler&lt;TRow,TListRequest,TListResponse&gt;.ToCriteria method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the field to criteria, using IListFieldMappingBehavior's if any
 

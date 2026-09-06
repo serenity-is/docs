@@ -1,5 +1,4 @@
 # ExcelReportGenerator.GeneratePackageBytes method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Generates an Excel package as bytes from the specified columns and rows.
 
@@ -26,5 +25,5 @@ The generated Excel package bytes.
 
 ## See Also
 
-* class [ReportColumn](../Serenity.Net.Services/../ReportColumn.md)
+* class [ReportColumn](../../../Serenity.Net.Services/Serenity.Reporting/ReportColumn.md)
 * class [ExcelReportGenerator](../ExcelReportGenerator.md)

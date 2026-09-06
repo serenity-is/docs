@@ -1,5 +1,4 @@
 # ExpressionAttribute constructor (1 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies SQL expression this property corresponds to. You may use brackets ([]) to escape identifiers. Brackets will be converted to database specific quotes.
 
@@ -22,7 +21,6 @@ Specifies SQL expression this property corresponds to.
 ---
 
 # ExpressionAttribute constructor (2 of 2)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies SQL expression and dialects this property corresponds to.
 

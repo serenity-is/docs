@@ -1,5 +1,4 @@
 # DefaultElevationHandler.ElevationTokenDuration field
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The duration in minutes that an elevation token remains valid.
 

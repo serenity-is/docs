@@ -12,7 +12,7 @@ public class DecimalEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [DecimalEditorAttribute](DecimalEditorAttribute/DecimalEditorAttribute.md)() | Initializes a new instance of the [`DecimalEditorAttribute`](DecimalEditorAttribute.md) class. |
+| [DecimalEditorAttribute](DecimalEditorAttribute/DecimalEditorAttribute.md)() | Initializes a new instance of the [`DecimalEditorAttribute`](./DecimalEditorAttribute.md) class. |
 | [AllowNegatives](DecimalEditorAttribute/AllowNegatives.md) { get; set; } | Gets or sets a value indicating whether to allow negatives. |
 | [Decimals](DecimalEditorAttribute/Decimals.md) { get; set; } | Gets or sets the number of decimals allowed. |
 | [MaxValue](DecimalEditorAttribute/MaxValue.md) { get; set; } | Gets or sets the maximum value. |
@@ -23,5 +23,5 @@ public class DecimalEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[DecimalEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/DecimalEditorAttribute.cs)*

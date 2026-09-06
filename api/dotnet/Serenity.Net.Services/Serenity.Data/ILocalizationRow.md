@@ -15,5 +15,5 @@ public interface ILocalizationRow : IIdRow
 
 ## See Also
 
-* interface [IIdRow](IIdRow.md)
+* interface [IIdRow](./IIdRow.md)
 * **Source:** *[ILocalizationRow.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/IntegratedFeatures/Localization/ILocalizationRow.cs)*

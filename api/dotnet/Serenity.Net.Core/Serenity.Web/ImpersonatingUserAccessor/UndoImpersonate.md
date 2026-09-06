@@ -1,5 +1,4 @@
 # ImpersonatingUserAccessor.UndoImpersonate method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Pops the most recent impersonation from the stack.
 

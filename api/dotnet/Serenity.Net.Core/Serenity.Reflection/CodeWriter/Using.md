@@ -1,5 +1,4 @@
 # CodeWriter.Using method (1 of 2)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Returns true if the namespace is in the list of usings. If the AllowUsing callback is null or returns true, this may add it to the list of local usings.
 
@@ -22,7 +21,6 @@ public bool Using(string ns)
 ---
 
 # CodeWriter.Using method (2 of 2)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Returns true if the namespace is in the list of usings. If the AllowUsing callback is null or returns true, or force is true, this may add it to the list of local usings.
 

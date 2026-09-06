@@ -1,5 +1,4 @@
 # SqlServer2000Dialect.RequiresBoolConversion property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether Boolean values require conversion.
 

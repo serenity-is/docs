@@ -1,10 +1,9 @@
 # PropertyItem.Category property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the category of the property in form. Only meaningful for forms.
 
 ```csharp
-public string Category { get; set; }
+public string? Category { get; set; }
 ```
 
 ## Property Value

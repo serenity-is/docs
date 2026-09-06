@@ -21,7 +21,7 @@ public class InstanceNameAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`InstanceNameAttribute`](InstanceNameAttribute.md) class.
+Initializes a new instance of the [`InstanceNameAttribute`](./InstanceNameAttribute.md) class.
 
 ## See Also
 

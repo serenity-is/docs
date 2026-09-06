@@ -1,5 +1,4 @@
 # SizeAttribute constructor
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines size (max length or numeric precision for) for the field.
 

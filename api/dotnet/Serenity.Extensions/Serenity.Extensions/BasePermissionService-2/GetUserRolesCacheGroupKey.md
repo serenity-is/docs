@@ -1,5 +1,4 @@
 # BasePermissionService&lt;TUserPermissionRow,TUserRoleRow&gt;.GetUserRolesCacheGroupKey method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the cache group key for user roles.
 

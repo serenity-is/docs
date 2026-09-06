@@ -1,5 +1,4 @@
 # EditorFilteringAttribute constructor (1 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`EditorFilteringAttribute`](../EditorFilteringAttribute.md) class.
 
@@ -14,7 +13,6 @@ public EditorFilteringAttribute()
 ---
 
 # EditorFilteringAttribute constructor (2 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`EditorFilteringAttribute`](../EditorFilteringAttribute.md) class.
 
@@ -33,7 +31,6 @@ public EditorFilteringAttribute(string editorType)
 ---
 
 # EditorFilteringAttribute constructor (3 of 3)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`EditorFilteringAttribute`](../EditorFilteringAttribute.md) class.
 

@@ -15,7 +15,7 @@ public class Throttler
 | [CacheKey](Throttler/CacheKey.md) { get; } | Gets the full cache key used to store the throttling state. |
 | [Duration](Throttler/Duration.md) { get; } | Gets the sliding window duration. |
 | [Key](Throttler/Key.md) { get; } | Gets the logical key identifying the throttled resource. |
-| [Limit](Throttler/Limit.md) { get; } | Gets the maximum number of attempts allowed within [`Duration`](Throttler/Duration.md). |
+| [Limit](Throttler/Limit.md) { get; } | Gets the maximum number of attempts allowed within [`Duration`](./Throttler/Duration.md). |
 | [Check](Throttler/Check.md)() | Records an attempt and checks whether the throttling limit has been exceeded. |
 | [Reset](Throttler/Reset.md)() | Clears the throttling state for the current key. |
 

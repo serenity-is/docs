@@ -1,5 +1,4 @@
 # TwoLevelCacheInvalidationExtensions.InvalidateOnCommit method (1 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Invalidates cached items on commit for specified row type and any related field types specified using TwoLevelCached attributes on the row type.
 
@@ -21,7 +20,7 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 
 ## See Also
 
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
 * interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * interface [IRow](../../Serenity.Data/IRow.md)
 * class [TwoLevelCacheInvalidationExtensions](../TwoLevelCacheInvalidationExtensions.md)
@@ -29,7 +28,6 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 ---
 
 # TwoLevelCacheInvalidationExtensions.InvalidateOnCommit method (2 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Invalidates cached items related to fields class group key and any related fields types specified using TwoLevelCached attributes on the row type.
 
@@ -52,7 +50,7 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 
 ## See Also
 
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
 * interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * class [RowFieldsBase](../../Serenity.Data/RowFieldsBase.md)
 * class [TwoLevelCacheInvalidationExtensions](../TwoLevelCacheInvalidationExtensions.md)
@@ -60,7 +58,6 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 ---
 
 # TwoLevelCacheInvalidationExtensions.InvalidateOnCommit method (3 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Invalidates cached items related to a group key when the unit of work commits.
 
@@ -82,6 +79,6 @@ public static void InvalidateOnCommit(this ITwoLevelCache cache, IUnitOfWork uow
 
 ## See Also
 
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
 * interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
 * class [TwoLevelCacheInvalidationExtensions](../TwoLevelCacheInvalidationExtensions.md)

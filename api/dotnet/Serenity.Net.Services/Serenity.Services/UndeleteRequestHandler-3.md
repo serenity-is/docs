@@ -40,7 +40,7 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 
 | name | description |
 | --- | --- |
-| [behaviors-](UndeleteRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
+| [behaviors](UndeleteRequestHandler-3/behaviors.md) | Lazy list of behaviors that is activated for this request. |
 | virtual [DoAudit](UndeleteRequestHandler-3/DoAudit.md)() | Performs auditing |
 | virtual [ExecuteUndelete](UndeleteRequestHandler-3/ExecuteUndelete.md)() | Executes the actual SQL undelete/update operation |
 | virtual [GetBehaviors](UndeleteRequestHandler-3/GetBehaviors.md)() | Gets the list of undelete behaviors. |
@@ -58,13 +58,10 @@ public class UndeleteRequestHandler<TRow, TUndeleteRequest, TUndeleteResponse> :
 
 ## See Also
 
-* interface [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](IUndeleteHandler-3.md)
-* class [TRow](../Serenity.Net.Services/UndeleteRequestHandler-3.TRow.md)
-* class [TUndeleteRequest](../Serenity.Net.Services/UndeleteRequestHandler-3.TUndeleteRequest.md)
-* class [TUndeleteResponse](../Serenity.Net.Services/UndeleteRequestHandler-3.TUndeleteResponse.md)
-* interface [IUndeleteRequestProcessor](IUndeleteRequestProcessor.md)
+* interface [IUndeleteHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;](./IUndeleteHandler-3.md)
+* interface [IUndeleteRequestProcessor](./IUndeleteRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * interface [IIdRow](../Serenity.Data/IIdRow.md)
-* class [UndeleteRequest](UndeleteRequest.md)
-* class [UndeleteResponse](UndeleteResponse.md)
+* class [UndeleteRequest](./UndeleteRequest.md)
+* class [UndeleteResponse](./UndeleteResponse.md)
 * **Source:** *[UndeleteRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Undelete/UndeleteRequestHandler.cs)*

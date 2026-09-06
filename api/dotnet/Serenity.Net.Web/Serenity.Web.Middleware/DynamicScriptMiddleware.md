@@ -22,7 +22,7 @@ public class DynamicScriptMiddleware
 
 ## Remarks
 
-Initializes a new instance of the [`DynamicScriptMiddleware`](DynamicScriptMiddleware.md) class.
+Initializes a new instance of the [`DynamicScriptMiddleware`](./DynamicScriptMiddleware.md) class.
 
 ## See Also
 

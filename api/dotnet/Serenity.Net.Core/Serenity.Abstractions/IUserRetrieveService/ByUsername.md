@@ -1,10 +1,9 @@
 # IUserRetrieveService.ByUsername method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the user definition with the specified username.
 
 ```csharp
-public IUserDefinition ByUsername(string username)
+public IUserDefinition? ByUsername(string username)
 ```
 
 | parameter | description |

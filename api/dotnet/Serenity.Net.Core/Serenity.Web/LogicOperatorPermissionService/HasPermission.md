@@ -1,5 +1,4 @@
 # LogicOperatorPermissionService.HasPermission method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Determines whether the current user has the specified permission or satisfies the given logical permission expression.
 

@@ -12,7 +12,7 @@ public class TimeEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [TimeEditorAttribute](TimeEditorAttribute/TimeEditorAttribute.md)() | Initializes a new instance of the [`TimeEditorAttribute`](TimeEditorAttribute.md) class. |
+| [TimeEditorAttribute](TimeEditorAttribute/TimeEditorAttribute.md)() | Initializes a new instance of the [`TimeEditorAttribute`](./TimeEditorAttribute.md) class. |
 | [EndHour](TimeEditorAttribute/EndHour.md) { get; set; } | Gets or sets the end hour between 0 and 23. |
 | [IntervalMinutes](TimeEditorAttribute/IntervalMinutes.md) { get; set; } | Gets or sets the interval minutes. |
 | [Multiplier](TimeEditorAttribute/Multiplier.md) { get; set; } | Gets or sets the multiplier (default is 1 which is minutes, 60 to store seconds, 60000 to store ms) |
@@ -22,5 +22,5 @@ public class TimeEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[TimeEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/TimeEditorAttribute.cs)*

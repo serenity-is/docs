@@ -1,5 +1,4 @@
 # Field.AsObject method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the value of this row as an object.
 
@@ -23,7 +22,6 @@ The value of the field in the row as an object.
 ---
 
 # Field.AsObject method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets the value of this field in specified row as object.
 

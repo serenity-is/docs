@@ -1,5 +1,4 @@
 # JsonSortByConverter.CanConvert method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Determines whether this instance can convert the specified object type.
 

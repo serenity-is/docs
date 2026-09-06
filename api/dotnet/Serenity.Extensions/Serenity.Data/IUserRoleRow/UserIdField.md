@@ -1,5 +1,4 @@
 # IUserRoleRow.UserIdField property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 User ID field
 
@@ -9,5 +8,5 @@ public Field UserIdField { get; }
 
 ## See Also
 
-* class [Field](../Serenity.Net.Services/../Field.md)
+* class [Field](../../../Serenity.Net.Services/Serenity.Data/Field.md)
 * interface [IUserRoleRow](../IUserRoleRow.md)

@@ -1,5 +1,4 @@
 # IPropertyProcessor.Items property
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the items.
 
@@ -13,5 +12,5 @@ The items.
 
 ## See Also
 
-* class [PropertyItem](../Serenity.Net.Core/../../Serenity.ComponentModel/PropertyItem.md)
+* class [PropertyItem](../../../Serenity.Net.Core/Serenity.ComponentModel/PropertyItem.md)
 * interface [IPropertyProcessor](../IPropertyProcessor.md)

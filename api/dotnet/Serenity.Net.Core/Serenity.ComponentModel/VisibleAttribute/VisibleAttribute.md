@@ -1,5 +1,4 @@
 # VisibleAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Controls initial visibility of a column / form field.
 

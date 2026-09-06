@@ -1,5 +1,4 @@
 # IUploadProcessor.Process method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Processes a temporary upload stream, usually from the HTTP request files and returns information about the result
 
@@ -16,5 +15,5 @@ public ProcessedUploadInfo Process(Stream fileContent, string filename, IUploadO
 ## See Also
 
 * class [ProcessedUploadInfo](../ProcessedUploadInfo.md)
-* interface [IUploadOptions](../Serenity.Net.Core/../../Serenity.ComponentModel/IUploadOptions.md)
+* interface [IUploadOptions](../../../Serenity.Net.Core/Serenity.ComponentModel/IUploadOptions.md)
 * interface [IUploadProcessor](../IUploadProcessor.md)

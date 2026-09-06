@@ -1,5 +1,4 @@
 # CodeWriter.Append method (1 of 2)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Appends a char to internal string builder
 
@@ -22,7 +21,6 @@ String builder
 ---
 
 # CodeWriter.Append method (2 of 2)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Appends text to internal string builder
 

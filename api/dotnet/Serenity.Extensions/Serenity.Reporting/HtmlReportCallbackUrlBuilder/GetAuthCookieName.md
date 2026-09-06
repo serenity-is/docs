@@ -1,5 +1,4 @@
 # HtmlReportCallbackUrlBuilder.GetAuthCookieName method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the name of the authentication cookie to forward to the report callback.
 

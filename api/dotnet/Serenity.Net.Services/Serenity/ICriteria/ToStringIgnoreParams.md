@@ -1,5 +1,4 @@
 # ICriteria.ToStringIgnoreParams method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to string while ignoring its params if any. ToString() raises an exception if a criteria has params, while this not.
 

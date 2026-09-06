@@ -1,11 +1,10 @@
 # StringHelper.ToStringDefault&lt;T&gt; method (1 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Formats a nullable object
 
 ```csharp
-public static string ToStringDefault<T>(this T source, string format = null, 
-    IFormatProvider provider = null, string empty = null)
+public static string ToStringDefault<T>(this T source, string? format = null, 
+    IFormatProvider? provider = null, string? empty = null)
     where T : class, IFormattable
 ```
 
@@ -22,19 +21,17 @@ The formatted string or the default value if the source is `null`
 
 ## See Also
 
-* class [T](../Serenity.Net.Core/../StringHelper.T.md)
 * class [StringHelper](../StringHelper.md)
 
 ---
 
 # StringHelper.ToStringDefault&lt;T&gt; method (2 of 2)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Formats a nullable struct
 
 ```csharp
-public static string ToStringDefault<T>(this T? source, string format = null, 
-    IFormatProvider provider = null, string empty = null)
+public static string ToStringDefault<T>(this T? source, string? format = null, 
+    IFormatProvider? provider = null, string? empty = null)
     where T : struct, IFormattable
 ```
 
@@ -51,5 +48,4 @@ The formatted string or the default value if the source is `null`
 
 ## See Also
 
-* struct [T](../Serenity.Net.Core/../StringHelper.T.md)
 * class [StringHelper](../StringHelper.md)

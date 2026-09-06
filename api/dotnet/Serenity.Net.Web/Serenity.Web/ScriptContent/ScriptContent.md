@@ -1,5 +1,4 @@
 # ScriptContent constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Default implementation of IScriptContent.
 

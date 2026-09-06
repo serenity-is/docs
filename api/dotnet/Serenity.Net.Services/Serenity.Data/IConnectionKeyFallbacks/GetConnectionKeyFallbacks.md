@@ -1,5 +1,4 @@
 # IConnectionKeyFallbacks.GetConnectionKeyFallbacks method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the ordered fallback chain for a connection key, starting with the key itself followed by its declared fallbacks. This reflects only the declared [`ConnectionKeyFallbackAttribute`](../ConnectionKeyFallbackAttribute.md) values and does not check configuration.
 

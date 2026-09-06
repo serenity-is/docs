@@ -1,5 +1,4 @@
 # Criteria.Field property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a reference to the [`IField`](../IField.md) object passed to the constructor.
 

@@ -17,11 +17,11 @@ public class FocusableAttribute : Attribute
 | name | description |
 | --- | --- |
 | [FocusableAttribute](FocusableAttribute/FocusableAttribute.md)(…) | Indicates if column cells can receive focus |
-| [Value](FocusableAttribute/Value.md) { get; } | Gets a value indicating whether this [`FocusableAttribute`](FocusableAttribute.md) is enabled. |
+| [Value](FocusableAttribute/Value.md) { get; } | Gets a value indicating whether this [`FocusableAttribute`](./FocusableAttribute.md) is enabled. |
 
 ## Remarks
 
-Initializes a new instance of the [`FocusableAttribute`](FocusableAttribute.md) class.
+Initializes a new instance of the [`FocusableAttribute`](./FocusableAttribute.md) class.
 
 ## See Also
 

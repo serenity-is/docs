@@ -1,5 +1,4 @@
 # ImpersonatingUserAccessor constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Wraps an [`IUserAccessor`](../../Serenity.Abstractions/IUserAccessor.md) and adds support for temporary user impersonation.
 

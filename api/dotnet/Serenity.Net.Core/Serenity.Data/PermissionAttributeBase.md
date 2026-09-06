@@ -16,7 +16,7 @@ public abstract class PermissionAttributeBase : Attribute
 
 | name | description |
 | --- | --- |
-| [PermissionAttributeBase](PermissionAttributeBase/PermissionAttributeBase.md)(…) | Initializes a new instance of the [`PermissionAttributeBase`](PermissionAttributeBase.md) class. A colon is inserted between module and permission to generate permission key. (2 constructors) |
+| [PermissionAttributeBase](PermissionAttributeBase/PermissionAttributeBase.md)(…) | Initializes a new instance of the [`PermissionAttributeBase`](./PermissionAttributeBase.md) class. A colon is inserted between module and permission to generate permission key. (2 constructors) |
 | [Permission](PermissionAttributeBase/Permission.md) { get; } | Gets the permission. |
 
 ## Protected Members
@@ -27,7 +27,7 @@ public abstract class PermissionAttributeBase : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`PermissionAttributeBase`](PermissionAttributeBase.md) class.
+Initializes a new instance of the [`PermissionAttributeBase`](./PermissionAttributeBase.md) class.
 
 ## See Also
 

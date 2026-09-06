@@ -11,7 +11,7 @@ public class Category
 
 | name | description |
 | --- | --- |
-| [Category](ReportTree.Category/Category.md)() | Initializes a new instance of the [`Category`](ReportTree.Category.md) class. |
+| [Category](ReportTree.Category/Category.md)() | Initializes a new instance of the [`Category`](./ReportTree.Category.md) class. |
 | [Key](ReportTree.Category/Key.md) { get; set; } | The category key. |
 | [Reports](ReportTree.Category/Reports.md) { get; } | The reports in this category. |
 | [SubCategories](ReportTree.Category/SubCategories.md) { get; } | The sub categories. |
@@ -19,4 +19,4 @@ public class Category
 
 ## See Also
 
-* class [ReportTree](ReportTree.md)
+* class [ReportTree](./ReportTree.md)

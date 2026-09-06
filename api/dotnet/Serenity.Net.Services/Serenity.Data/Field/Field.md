@@ -1,5 +1,4 @@
 # Field constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`Field`](../Field.md) class.
 
@@ -20,6 +19,6 @@ protected Field(ICollection<Field> fields, FieldType type, string name, LocalTex
 ## See Also
 
 * enum [FieldType](../FieldType.md)
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * enum [FieldFlags](../FieldFlags.md)
 * class [Field](../Field.md)

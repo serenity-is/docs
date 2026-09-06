@@ -1,5 +1,4 @@
 # CollapsibleAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Used to specify a target is collapsible. Commonly used with form categories to make them collapsible.
 

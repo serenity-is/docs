@@ -11,10 +11,10 @@ public class NullTextLocalizer : ITextLocalizer
 
 | name | description |
 | --- | --- |
-| static readonly [Instance](NullTextLocalizer/Instance.md) | The singleton instance of the [`NullTextLocalizer`](NullTextLocalizer.md). |
+| static readonly [Instance](NullTextLocalizer/Instance.md) | The singleton instance of the [`NullTextLocalizer`](./NullTextLocalizer.md). |
 | [TryGet](NullTextLocalizer/TryGet.md)(…) | Returns `null` for all keys. |
 
 ## See Also
 
-* interface [ITextLocalizer](ITextLocalizer.md)
+* interface [ITextLocalizer](./ITextLocalizer.md)
 * **Source:** *[NullTextLocalizer.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/Localization/NullTextLocalizer.cs)*

@@ -26,9 +26,9 @@ public class ConnectionStringInfo : IConnectionString
 
 ## Remarks
 
-Initializes a new instance of the [`ConnectionStringInfo`](ConnectionStringInfo.md) class.
+Initializes a new instance of the [`ConnectionStringInfo`](./ConnectionStringInfo.md) class.
 
 ## See Also
 
-* interface [IConnectionString](IConnectionString.md)
+* interface [IConnectionString](./IConnectionString.md)
 * **Source:** *[ConnectionStringInfo.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/ConnectionStringInfo.cs)*

@@ -1,5 +1,4 @@
 # PropertyItemsScript.CheckName method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Checks the name if it is empty or null.
 

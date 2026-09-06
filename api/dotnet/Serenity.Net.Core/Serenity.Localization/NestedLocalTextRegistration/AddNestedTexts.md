@@ -1,5 +1,4 @@
 # NestedLocalTextRegistration.AddNestedTexts method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds translations from static nested local text classes marked with [`NestedLocalTextsAttribute`](../../Serenity.ComponentModel/NestedLocalTextsAttribute.md).
 

@@ -1,5 +1,4 @@
 # BasePermissionKeyLister.SplitPermissions method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Splits permission string into multiple permissions.
 

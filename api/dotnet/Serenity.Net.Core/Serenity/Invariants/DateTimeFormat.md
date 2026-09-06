@@ -1,5 +1,4 @@
 # Invariants.DateTimeFormat field
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Date time format information for invariant culture
 

@@ -1,7 +1,7 @@
 # IListResponse interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-The interface for list response. This is used to easily access list response members as the [`ListResponse`](ListResponse-1.md) class itself is generic.
+The interface for list response. This is used to easily access list response members as the [`ListResponse`](./ListResponse-1.md) class itself is generic.
 
 ```csharp
 public interface IListResponse

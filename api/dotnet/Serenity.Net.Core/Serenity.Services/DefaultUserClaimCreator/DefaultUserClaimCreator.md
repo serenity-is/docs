@@ -1,5 +1,4 @@
 # DefaultUserClaimCreator constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Default implementation of [`IUserClaimCreator`](../../Serenity.Abstractions/IUserClaimCreator.md) that builds a ClaimsPrincipal from a user definition retrieved via [`IUserRetrieveService`](../../Serenity.Abstractions/IUserRetrieveService.md).
 

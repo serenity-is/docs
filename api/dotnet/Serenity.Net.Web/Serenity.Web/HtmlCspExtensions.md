@@ -14,7 +14,7 @@ public static class HtmlCspExtensions
 | static [AddCspDirective](HtmlCspExtensions/AddCspDirective.md)(…) | Adds a Content Security Policy directive to the current HTTP context items. (3 methods) |
 | static [AddCspScriptUrl](HtmlCspExtensions/AddCspScriptUrl.md)(…) | Adds a Content Security Policy `script-src` directive for the given URL and returns the URL. This can be used in script include helpers for external URLs. |
 | static [CspNonce](HtmlCspExtensions/CspNonce.md)(…) | Gets a nonce value for use in script and style elements. Automatically generates and stores it in the current HTTP context items and adds it to the CSP directives. |
-| static [GetCspDirective](HtmlCspExtensions/GetCspDirective.md)(…) | Gets a Content Security Policy directive added via [`AddCspDirective`](HtmlCspExtensions/AddCspDirective.md) merged with any manual values provided. The string includes the final semicolon. This can be used to render parts of the CSP header or meta tag content. |
+| static [GetCspDirective](HtmlCspExtensions/GetCspDirective.md)(…) | Gets a Content Security Policy directive added via [`AddCspDirective`](./HtmlCspExtensions/AddCspDirective.md) merged with any manual values provided. The string includes the final semicolon. This can be used to render parts of the CSP header or meta tag content. |
 
 ## See Also
 

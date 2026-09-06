@@ -1,5 +1,4 @@
 # ServiceQueryHelper.ApplySort method (1 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies sort order to the query
 
@@ -21,7 +20,6 @@ public static SqlQuery ApplySort(this SqlQuery query, SortBy sortBy)
 ---
 
 # ServiceQueryHelper.ApplySort method (2 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies sort orders to the query
 
@@ -45,7 +43,6 @@ public static SqlQuery ApplySort(this SqlQuery query, IList<SortBy> sortByList,
 ---
 
 # ServiceQueryHelper.ApplySort method (3 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies the sort order to the query
 

@@ -1,5 +1,4 @@
 # EntityConnectionExtensions.Count&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets count of all records.
 
@@ -25,7 +24,6 @@ Number of records in the table.
 ---
 
 # EntityConnectionExtensions.Count&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets count of records matching a specified criteria.
 

@@ -1,5 +1,4 @@
 # UploadPathHelper.SizedThumbFormat field
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Represents the format string used to generate a thumbnail size suffix with width and height placeholders. It does not include the file extension.
 

@@ -12,7 +12,7 @@ public class UniqueAttribute : SetFieldFlagsAttribute
 
 | name | description |
 | --- | --- |
-| [UniqueAttribute](UniqueAttribute/UniqueAttribute.md)() | Initializes a new instance of the [`UniqueAttribute`](UniqueAttribute.md) class. |
+| [UniqueAttribute](UniqueAttribute/UniqueAttribute.md)() | Initializes a new instance of the [`UniqueAttribute`](./UniqueAttribute.md) class. |
 | [CheckBeforeSave](UniqueAttribute/CheckBeforeSave.md) { get; set; } | Gets or sets a value indicating whether to check this constraint before save. |
 | [ErrorMessage](UniqueAttribute/ErrorMessage.md) { get; set; } | Gets or sets the error message. |
 | [IgnoreDeleted](UniqueAttribute/IgnoreDeleted.md) { get; set; } | Gets or sets a value indicating whether to ignore deleted records. |
@@ -21,5 +21,5 @@ public class UniqueAttribute : SetFieldFlagsAttribute
 
 ## See Also
 
-* class [SetFieldFlagsAttribute](SetFieldFlagsAttribute.md)
+* class [SetFieldFlagsAttribute](./SetFieldFlagsAttribute.md)
 * **Source:** *[UniqueAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Mapping/UniqueAttribute.cs)*

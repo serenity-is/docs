@@ -14,7 +14,7 @@ public class RequiresFeatureAttribute : Attribute
 | --- | --- |
 | [RequiresFeatureAttribute](RequiresFeatureAttribute/RequiresFeatureAttribute.md)(…) | Creates an attribute that can be used to toggle targets. The toggle can be configured to require all or any of the provided feature(s) to pass. (2 constructors) |
 | [Features](RequiresFeatureAttribute/Features.md) { get; } | The names of the features that the feature attribute will activate for. |
-| [RequireAny](RequiresFeatureAttribute/RequireAny.md) { get; set; } | Controls whether any (true) or all (false, default) features in [`Features`](RequiresFeatureAttribute/Features.md) should be enabled to pass. |
+| [RequireAny](RequiresFeatureAttribute/RequireAny.md) { get; set; } | Controls whether any (true) or all (false, default) features in [`Features`](./RequiresFeatureAttribute/Features.md) should be enabled to pass. |
 
 ## See Also
 

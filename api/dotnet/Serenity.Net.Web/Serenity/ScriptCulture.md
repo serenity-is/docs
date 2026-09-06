@@ -11,8 +11,8 @@ public class ScriptCulture
 
 | name | description |
 | --- | --- |
-| [ScriptCulture](ScriptCulture/ScriptCulture.md)() | Initializes a new instance of the [`ScriptCulture`](ScriptCulture.md) class using CurrentCulture. |
-| [ScriptCulture](ScriptCulture/ScriptCulture.md)(…) | Initializes a new instance of the [`ScriptCulture`](ScriptCulture.md) class. |
+| [ScriptCulture](ScriptCulture/ScriptCulture.md)() | Initializes a new instance of the [`ScriptCulture`](./ScriptCulture.md) class using CurrentCulture. |
+| [ScriptCulture](ScriptCulture/ScriptCulture.md)(…) | Initializes a new instance of the [`ScriptCulture`](./ScriptCulture.md) class. |
 | [DateFormat](ScriptCulture/DateFormat.md) { get; set; } | Gets or sets the date format. |
 | [DateOrder](ScriptCulture/DateOrder.md) { get; set; } | Gets or sets the date year-month-day ordering, e.g. `d/M/y`. |
 | [DateSeparator](ScriptCulture/DateSeparator.md) { get; set; } | Gets or sets the date separator. |

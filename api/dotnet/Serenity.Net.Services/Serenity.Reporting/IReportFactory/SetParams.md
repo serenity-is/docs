@@ -1,5 +1,4 @@
 # IReportFactory.SetParams method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets options for an externally created report object.
 

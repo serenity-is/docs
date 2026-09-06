@@ -1,5 +1,4 @@
 # FileSystemExtensions.GetDirectoryName method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the directory name for the specified path.
 

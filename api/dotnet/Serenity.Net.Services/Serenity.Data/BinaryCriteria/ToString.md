@@ -1,5 +1,4 @@
 # BinaryCriteria.ToString method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Converts the criteria to string in a string builder, while adding its params to the target query.
 

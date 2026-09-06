@@ -20,5 +20,5 @@ public class SqlServer2012Dialect : SqlServer2008Dialect
 
 ## See Also
 
-* class [SqlServer2008Dialect](SqlServer2008Dialect.md)
+* class [SqlServer2008Dialect](./SqlServer2008Dialect.md)
 * **Source:** *[SqlServer2012Dialect.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Dialects/SqlServer2012Dialect.cs)*

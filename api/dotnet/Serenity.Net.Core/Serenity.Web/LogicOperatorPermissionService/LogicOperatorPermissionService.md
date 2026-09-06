@@ -1,5 +1,4 @@
 # LogicOperatorPermissionService constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Decorates an [`IPermissionService`](../../Serenity.Abstractions/IPermissionService.md) to support logical operators (`!`, `&`, `|`, parentheses) in permission expressions.
 

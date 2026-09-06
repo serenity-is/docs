@@ -1,5 +1,4 @@
 # ConnectionExtensions.EnsureOpen method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Ensures the connection is open. Warning! This method will not reopen a connection that was once opened and will raise an error.
 

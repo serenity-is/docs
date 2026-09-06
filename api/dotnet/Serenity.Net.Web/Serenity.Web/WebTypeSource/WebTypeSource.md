@@ -1,5 +1,4 @@
 # WebTypeSource constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Base type source for apps using the Serenity.Web assembly and its reference chain.
 

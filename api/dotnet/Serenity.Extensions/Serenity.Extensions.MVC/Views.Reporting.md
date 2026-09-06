@@ -15,4 +15,4 @@ public static class Reporting
 
 ## See Also
 
-* class [Views](Views.md)
+* class [Views](./Views.md)

@@ -1,5 +1,4 @@
 # DateHelper.TryParseISO8601DateTime method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Tries to parse an ISO 8601 date-time string.
 

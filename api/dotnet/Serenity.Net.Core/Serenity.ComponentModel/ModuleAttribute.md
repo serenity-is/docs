@@ -21,7 +21,7 @@ public class ModuleAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`ModuleAttribute`](ModuleAttribute.md) class.
+Initializes a new instance of the [`ModuleAttribute`](./ModuleAttribute.md) class.
 
 ## See Also
 

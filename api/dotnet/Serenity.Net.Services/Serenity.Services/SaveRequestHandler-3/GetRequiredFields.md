@@ -1,5 +1,4 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.GetRequiredFields method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the list of required fields based on editable list, and NotNull
 
@@ -10,7 +9,7 @@ protected virtual void GetRequiredFields(HashSet<Field> required, HashSet<Field>
 | parameter | description |
 | --- | --- |
 | required | List of required fields to populate |
-| editable | Editable fields returned from [`GetEditableFields`](GetEditableFields.md) |
+| editable | Editable fields returned from [`GetEditableFields`](./GetEditableFields.md) |
 
 ## See Also
 

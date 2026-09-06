@@ -1,5 +1,4 @@
 # TranslationTexts.TranslateTextConfirmation field
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 AI translate confirmation.
 
@@ -9,5 +8,5 @@ public static readonly LocalText TranslateTextConfirmation;
 
 ## See Also
 
-* class [LocalText](../Serenity.Net.Core/../../Serenity/LocalText.md)
+* class [LocalText](../../../Serenity.Net.Core/Serenity/LocalText.md)
 * class [TranslationTexts](../TranslationTexts.md)

@@ -1,5 +1,4 @@
 # ISetFieldByStatement.SetTo method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Sets a field to given value identifier.
 

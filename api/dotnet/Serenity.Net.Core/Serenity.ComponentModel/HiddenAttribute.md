@@ -12,9 +12,9 @@ public class HiddenAttribute : VisibleAttribute
 
 | name | description |
 | --- | --- |
-| [HiddenAttribute](HiddenAttribute/HiddenAttribute.md)() | Initializes a new instance of the [`HiddenAttribute`](HiddenAttribute.md) class. |
+| [HiddenAttribute](HiddenAttribute/HiddenAttribute.md)() | Initializes a new instance of the [`HiddenAttribute`](./HiddenAttribute.md) class. |
 
 ## See Also
 
-* class [VisibleAttribute](VisibleAttribute.md)
+* class [VisibleAttribute](./VisibleAttribute.md)
 * **Source:** *[HiddenAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Common/HiddenAttribute.cs)*

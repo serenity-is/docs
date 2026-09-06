@@ -1,5 +1,4 @@
 # Sql.Avg method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates an AVG() expression.
 
@@ -29,7 +28,6 @@ The AVG() expression.
 ---
 
 # Sql.Avg method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates an AVG() expression.
 
@@ -58,7 +56,6 @@ The AVG() expression.
 ---
 
 # Sql.Avg method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates an AVG() expression.
 

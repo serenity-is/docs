@@ -1,5 +1,4 @@
 # AllowHideAttribute constructor
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Controls the user's ability to hide a column, e.g. using the column picker.
 

@@ -12,9 +12,9 @@ public class DefaultDBAttribute : TargetDBAttribute
 
 | name | description |
 | --- | --- |
-| [DefaultDBAttribute](DefaultDBAttribute/DefaultDBAttribute.md)() | Initializes a new instance of the [`DefaultDBAttribute`](DefaultDBAttribute.md) class. |
+| [DefaultDBAttribute](DefaultDBAttribute/DefaultDBAttribute.md)() | Initializes a new instance of the [`DefaultDBAttribute`](./DefaultDBAttribute.md) class. |
 
 ## See Also
 
-* class [TargetDBAttribute](TargetDBAttribute.md)
+* class [TargetDBAttribute](./TargetDBAttribute.md)
 * **Source:** *[DefaultDBAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/common-features/src/extensions/Modules/MigrationUtils/DefaultDBAttribute.cs)*

@@ -12,7 +12,7 @@ public class NamePropertyAttribute : Attribute
 
 | name | description |
 | --- | --- |
-| [NamePropertyAttribute](NamePropertyAttribute/NamePropertyAttribute.md)() | Initializes a new instance of the [`NamePropertyAttribute`](NamePropertyAttribute.md) class. |
+| [NamePropertyAttribute](NamePropertyAttribute/NamePropertyAttribute.md)() | Initializes a new instance of the [`NamePropertyAttribute`](./NamePropertyAttribute.md) class. |
 
 ## See Also
 

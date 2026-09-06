@@ -1,5 +1,4 @@
 # BaseExpressionAttribute.Format property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets an optional format string to apply with {0} placeholder for the expression.
 

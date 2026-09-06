@@ -1,5 +1,4 @@
 # FeatureTogglesExtensions.IsEnabled method (1 of 3)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets if a feature is enabled
 
@@ -20,7 +19,6 @@ public static bool IsEnabled(this IFeatureToggles featureToggles, Enum feature)
 ---
 
 # FeatureTogglesExtensions.IsEnabled method (2 of 3)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets if a set of features are enabled, requiring all to be enabled
 
@@ -41,7 +39,6 @@ public static bool IsEnabled(this IFeatureToggles featureToggles, IEnumerable<st
 ---
 
 # FeatureTogglesExtensions.IsEnabled method (3 of 3)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets if a set of features is enabled, requiring just one to be enabled if requireAny is true.
 

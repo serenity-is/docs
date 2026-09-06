@@ -12,7 +12,7 @@ public class NullAsDefaultJsonConverter : JsonConverterFactory
 | name | description |
 | --- | --- |
 | [NullAsDefaultJsonConverter](NullAsDefaultJsonConverter/NullAsDefaultJsonConverter.md)() | The default constructor. |
-| static readonly [Instance](NullAsDefaultJsonConverter/Instance.md) | The default instance of the [`NullAsDefaultJsonConverter`](NullAsDefaultJsonConverter.md). |
+| static readonly [Instance](NullAsDefaultJsonConverter/Instance.md) | The default instance of the [`NullAsDefaultJsonConverter`](./NullAsDefaultJsonConverter.md). |
 | override [CanConvert](NullAsDefaultJsonConverter/CanConvert.md)(…) |  |
 | override [CreateConverter](NullAsDefaultJsonConverter/CreateConverter.md)(…) |  |
 

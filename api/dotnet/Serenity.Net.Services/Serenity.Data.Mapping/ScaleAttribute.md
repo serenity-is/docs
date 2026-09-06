@@ -21,7 +21,7 @@ public class ScaleAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`ScaleAttribute`](ScaleAttribute.md) class.
+Initializes a new instance of the [`ScaleAttribute`](./ScaleAttribute.md) class.
 
 ## See Also
 

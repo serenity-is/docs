@@ -1,5 +1,4 @@
 # RowExtensions.ApplyDefaultValues&lt;TRow&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Applies the default values.
 
@@ -26,6 +25,5 @@ The row with default values applied.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../RowExtensions.TRow.md)
 * interface [IRow](../IRow.md)
 * class [RowExtensions](../RowExtensions.md)

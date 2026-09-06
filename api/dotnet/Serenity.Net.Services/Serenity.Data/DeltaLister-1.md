@@ -15,7 +15,7 @@ public class DeltaLister<TItem>
 
 | name | description |
 | --- | --- |
-| [DeltaLister](DeltaLister-1/DeltaLister.md)(…) | Initializes a new instance of the [`DeltaLister`](DeltaLister-1.md) class. |
+| [DeltaLister](DeltaLister-1/DeltaLister.md)(…) | Initializes a new instance of the [`DeltaLister`](./DeltaLister-1.md) class. |
 | [ItemsToCreate](DeltaLister-1/ItemsToCreate.md) { get; } | Gets the items to create. |
 | [ItemsToDelete](DeltaLister-1/ItemsToDelete.md) { get; } | Gets the items to delete. |
 | [ItemsToUpdate](DeltaLister-1/ItemsToUpdate.md) { get; } | Gets the items to update. |

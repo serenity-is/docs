@@ -1,5 +1,4 @@
 # TransactionlessUnitOfWork constructor
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 A unit of work implementation without an underlying actual transaction. Use with care, only to pass an [`IUnitOfWork`](../IUnitOfWork.md) instance to some methods where you don't want to actually start a transaction.
 

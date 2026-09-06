@@ -12,10 +12,10 @@ public class DecimalFilteringAttribute : CustomFilteringAttribute
 
 | name | description |
 | --- | --- |
-| [DecimalFilteringAttribute](DecimalFilteringAttribute/DecimalFilteringAttribute.md)() | Initializes a new instance of the [`DecimalFilteringAttribute`](DecimalFilteringAttribute.md) class. |
+| [DecimalFilteringAttribute](DecimalFilteringAttribute/DecimalFilteringAttribute.md)() | Initializes a new instance of the [`DecimalFilteringAttribute`](./DecimalFilteringAttribute.md) class. |
 | const [Key](DecimalFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 
-* class [CustomFilteringAttribute](CustomFilteringAttribute.md)
+* class [CustomFilteringAttribute](./CustomFilteringAttribute.md)
 * **Source:** *[DecimalFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/DecimalFilteringAttribute.cs)*

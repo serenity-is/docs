@@ -1,5 +1,4 @@
 # CodeWriter.InBrace method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds a brace, increases indent, runs the inside block, decreases indent back, closes the brace.
 

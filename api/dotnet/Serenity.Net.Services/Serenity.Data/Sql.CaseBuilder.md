@@ -11,7 +11,7 @@ public class CaseBuilder
 
 | name | description |
 | --- | --- |
-| [CaseBuilder](Sql.CaseBuilder/CaseBuilder.md)() | Initializes a new instance of the [`CaseBuilder`](Sql.CaseBuilder.md) class. |
+| [CaseBuilder](Sql.CaseBuilder/CaseBuilder.md)() | Initializes a new instance of the [`CaseBuilder`](./Sql.CaseBuilder.md) class. |
 | [Else](Sql.CaseBuilder/Else.md)(…) | Adds an ELSE part. |
 | [Then](Sql.CaseBuilder/Then.md)(…) | Adds a THEN part. |
 | [ToString](Sql.CaseBuilder/ToString.md)(…) | Converts to string. |
@@ -20,4 +20,4 @@ public class CaseBuilder
 
 ## See Also
 
-* class [Sql](Sql.md)
+* class [Sql](./Sql.md)

@@ -1,5 +1,4 @@
 # DynamicScriptManager.Register method (1 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 ```csharp
 public void Register(INamedDynamicScript script)
@@ -7,13 +6,12 @@ public void Register(INamedDynamicScript script)
 
 ## See Also
 
-* interface [INamedDynamicScript](../Serenity.Net.Core/../INamedDynamicScript.md)
+* interface [INamedDynamicScript](../../../Serenity.Net.Core/Serenity.Web/INamedDynamicScript.md)
 * class [DynamicScriptManager](../DynamicScriptManager.md)
 
 ---
 
 # DynamicScriptManager.Register method (2 of 2)
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 ```csharp
 public void Register(string name, IDynamicScript script)
@@ -21,5 +19,5 @@ public void Register(string name, IDynamicScript script)
 
 ## See Also
 
-* interface [IDynamicScript](../Serenity.Net.Core/../IDynamicScript.md)
+* interface [IDynamicScript](../../../Serenity.Net.Core/Serenity.Web/IDynamicScript.md)
 * class [DynamicScriptManager](../DynamicScriptManager.md)

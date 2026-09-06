@@ -1,5 +1,4 @@
 # IFileSystem.FileExists method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Checks whether a file exists at the specified path.
 

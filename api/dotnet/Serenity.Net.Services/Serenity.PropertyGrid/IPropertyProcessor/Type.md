@@ -1,5 +1,4 @@
 # IPropertyProcessor.Type property
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets the type property processor is working on.
 

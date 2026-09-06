@@ -1,10 +1,9 @@
 # TwoLevelCacheExtensions.SetLocalStoreOnly&lt;TItem&gt; method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates or overrides a specified entry in the local cache.
 
 ```csharp
-public static TItem SetLocalStoreOnly<TItem>(this ITwoLevelCache cache, string cacheKey, 
+public static TItem? SetLocalStoreOnly<TItem>(this ITwoLevelCache cache, string cacheKey, 
     TimeSpan localExpiration, string groupKey, TItem value)
     where TItem : class
 ```
@@ -20,6 +19,5 @@ public static TItem SetLocalStoreOnly<TItem>(this ITwoLevelCache cache, string c
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Core/../TwoLevelCacheExtensions.TItem.md)
 * interface [ITwoLevelCache](../../Serenity.Abstractions/ITwoLevelCache.md)
 * class [TwoLevelCacheExtensions](../TwoLevelCacheExtensions.md)

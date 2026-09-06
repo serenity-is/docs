@@ -1,5 +1,4 @@
 # PropertyItem.ReadOnly property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the read only flag of the property in forms.
 

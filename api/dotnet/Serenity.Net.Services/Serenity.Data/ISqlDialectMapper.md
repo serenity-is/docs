@@ -1,7 +1,7 @@
 # ISqlDialectMapper interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Maps a dialect or provider name to an [`ISqlDialect`](ISqlDialect.md) instance.
+Maps a dialect or provider name to an [`ISqlDialect`](./ISqlDialect.md) instance.
 
 ```csharp
 public interface ISqlDialectMapper

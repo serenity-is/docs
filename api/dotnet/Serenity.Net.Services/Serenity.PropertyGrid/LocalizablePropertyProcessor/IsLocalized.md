@@ -1,5 +1,4 @@
 # LocalizablePropertyProcessor.IsLocalized method
-**namespace:** *[Serenity.PropertyGrid](../../README.md#serenity.propertygrid-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns if the field is localizable
 

@@ -1,10 +1,9 @@
 # IHttpContextItemsAccessor.Items property
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the dictionary that can be used as request-scoped storage.
 
 ```csharp
-public IDictionary<object, object> Items { get; }
+public IDictionary<object, object?> Items { get; }
 ```
 
 ## See Also

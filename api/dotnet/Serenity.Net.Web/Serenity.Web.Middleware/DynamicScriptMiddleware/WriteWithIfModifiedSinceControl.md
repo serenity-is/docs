@@ -1,5 +1,4 @@
 # DynamicScriptMiddleware.WriteWithIfModifiedSinceControl method
-**namespace:** *[Serenity.Web.Middleware](../../README.md#serenity.web.middleware-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Writes file content to the response with If-Modified-Since control.
 

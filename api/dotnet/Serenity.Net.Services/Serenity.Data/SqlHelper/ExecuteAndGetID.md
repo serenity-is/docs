@@ -1,5 +1,4 @@
 # SqlHelper.ExecuteAndGetID method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Executes the query and returns the generated identity value. Only works for auto incremented fields, not GUIDs.
 

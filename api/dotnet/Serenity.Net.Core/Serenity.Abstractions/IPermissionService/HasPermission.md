@@ -1,5 +1,4 @@
 # IPermissionService.HasPermission method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Determines whether the current user has the specified permission.
 

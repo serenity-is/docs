@@ -1,5 +1,4 @@
 # IRetrieveRequestHandler.ShouldSelectField method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns true if field should be selected based on ColumnSelection flags.
 

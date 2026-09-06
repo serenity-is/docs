@@ -12,7 +12,7 @@ public class IntegerEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [IntegerEditorAttribute](IntegerEditorAttribute/IntegerEditorAttribute.md)() | Initializes a new instance of the [`IntegerEditorAttribute`](IntegerEditorAttribute.md) class. |
+| [IntegerEditorAttribute](IntegerEditorAttribute/IntegerEditorAttribute.md)() | Initializes a new instance of the [`IntegerEditorAttribute`](./IntegerEditorAttribute.md) class. |
 | [AllowNegatives](IntegerEditorAttribute/AllowNegatives.md) { get; set; } | Gets or sets a value indicating whether the editor should allow negatives. |
 | [MaxValue](IntegerEditorAttribute/MaxValue.md) { get; set; } | Gets or sets the maximum value. |
 | [MinValue](IntegerEditorAttribute/MinValue.md) { get; set; } | Gets or sets the minimum value. |
@@ -21,5 +21,5 @@ public class IntegerEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[IntegerEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/IntegerEditorAttribute.cs)*

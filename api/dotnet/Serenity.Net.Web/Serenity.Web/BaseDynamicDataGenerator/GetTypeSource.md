@@ -1,5 +1,4 @@
 # BaseDynamicDataGenerator.GetTypeSource method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the type source.
 
@@ -9,5 +8,5 @@ protected virtual ITypeSource GetTypeSource()
 
 ## See Also
 
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [BaseDynamicDataGenerator](../BaseDynamicDataGenerator.md)

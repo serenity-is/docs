@@ -21,7 +21,7 @@ public class HintAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`HintAttribute`](HintAttribute.md) class.
+Initializes a new instance of the [`HintAttribute`](./HintAttribute.md) class.
 
 ## See Also
 

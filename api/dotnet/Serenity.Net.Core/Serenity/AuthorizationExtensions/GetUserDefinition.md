@@ -1,10 +1,9 @@
 # AuthorizationExtensions.GetUserDefinition method (1 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the user definition for the currently authenticated user.
 
 ```csharp
-public static IUserDefinition GetUserDefinition(this IUserProvider userProvider)
+public static IUserDefinition? GetUserDefinition(this IUserProvider userProvider)
 ```
 
 | parameter | description |
@@ -24,12 +23,11 @@ The user definition, or `null` if no user is authenticated or the user is not fo
 ---
 
 # AuthorizationExtensions.GetUserDefinition method (2 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the user definition for the specified principal.
 
 ```csharp
-public static IUserDefinition GetUserDefinition(this ClaimsPrincipal identity, 
+public static IUserDefinition? GetUserDefinition(this ClaimsPrincipal? identity, 
     IUserRetrieveService userRetriever)
 ```
 
@@ -51,12 +49,11 @@ The user definition, or `null` if the principal is not authenticated or the user
 ---
 
 # AuthorizationExtensions.GetUserDefinition method (3 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the user definition for the specified principal.
 
 ```csharp
-public static IUserDefinition GetUserDefinition(this IUserRetrieveService userRetriever, 
+public static IUserDefinition? GetUserDefinition(this IUserRetrieveService userRetriever, 
     ClaimsPrincipal identity)
 ```
 
@@ -78,12 +75,11 @@ The user definition, or `null` if the principal is not authenticated or the user
 ---
 
 # AuthorizationExtensions.GetUserDefinition&lt;TUserDefinition&gt; method (4 of 4)
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the typed user definition for the specified principal.
 
 ```csharp
-public static TUserDefinition GetUserDefinition<TUserDefinition>(this ClaimsPrincipal identity, 
+public static TUserDefinition? GetUserDefinition<TUserDefinition>(this ClaimsPrincipal? identity, 
     IUserRetrieveService userRetriever)
     where TUserDefinition : class, IUserDefinition
 ```
@@ -100,7 +96,6 @@ The typed user definition, or `null` if the principal is not authenticated or th
 
 ## See Also
 
-* class [TUserDefinition](../Serenity.Net.Core/../AuthorizationExtensions.TUserDefinition.md)
 * interface [IUserRetrieveService](../../Serenity.Abstractions/IUserRetrieveService.md)
 * interface [IUserDefinition](../IUserDefinition.md)
 * class [AuthorizationExtensions](../AuthorizationExtensions.md)

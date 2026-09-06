@@ -1,5 +1,4 @@
 # LinkingSetRelationAttribute.ItemKey property
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the item key, e.g. name of the field in linking set table that contains ID's of selected items.
 

@@ -1,5 +1,4 @@
 # DefaultUploadProcessor.ScaleImageAs method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Scales an image and saves it to an upload storage file
 
@@ -29,6 +28,6 @@ protected virtual ScaleImageAsResult ScaleImageAs(object image, int width, int h
 ## See Also
 
 * class [ScaleImageAsResult](../DefaultUploadProcessor.ScaleImageAsResult.md)
-* enum [ImageScaleMode](../Serenity.Net.Core/../ImageScaleMode.md)
+* enum [ImageScaleMode](../../../Serenity.Net.Core/Serenity.Web/ImageScaleMode.md)
 * class [ImageEncoderParams](../ImageEncoderParams.md)
 * class [DefaultUploadProcessor](../DefaultUploadProcessor.md)

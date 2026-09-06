@@ -18,5 +18,5 @@ public interface IDiskUploadFileSystem : IFileSystem
 
 ## See Also
 
-* interface [IFileSystem](../Serenity.Net.Core/../Serenity/IFileSystem.md)
+* interface [IFileSystem](../../Serenity.Net.Core/Serenity/IFileSystem.md)
 * **Source:** *[IDiskUploadFileSystem.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Upload/IDiskUploadFileSystem.cs)*

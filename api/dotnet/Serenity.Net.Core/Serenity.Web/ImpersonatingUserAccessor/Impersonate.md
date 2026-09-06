@@ -1,5 +1,4 @@
 # ImpersonatingUserAccessor.Impersonate method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Pushes the specified principal onto the impersonation stack.
 

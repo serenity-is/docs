@@ -1,5 +1,4 @@
 # EnumDecorator constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 A decorator used to export enum name instead of the enum integer value.
 
@@ -18,5 +17,5 @@ Creates an instance of the class.
 
 ## See Also
 
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [EnumDecorator](../EnumDecorator.md)

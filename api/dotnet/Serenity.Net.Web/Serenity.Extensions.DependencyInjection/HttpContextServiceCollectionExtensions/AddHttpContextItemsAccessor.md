@@ -1,5 +1,4 @@
 # HttpContextServiceCollectionExtensions.AddHttpContextItemsAccessor method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds default implementations for IHttpContextAccessor and IHttpContextItemsAccessor.
 

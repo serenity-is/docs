@@ -1,5 +1,4 @@
 # INotLoggedException.NotLoggedException property
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets a value indicating whether to not log exception.
 

@@ -23,7 +23,7 @@ public class EditorOptionAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`EditorOptionAttribute`](EditorOptionAttribute.md) class.
+Initializes a new instance of the [`EditorOptionAttribute`](./EditorOptionAttribute.md) class.
 
 ## See Also
 

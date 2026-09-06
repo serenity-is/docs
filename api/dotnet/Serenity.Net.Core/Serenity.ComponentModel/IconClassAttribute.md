@@ -21,7 +21,7 @@ public class IconClassAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`IconClassAttribute`](IconClassAttribute.md) class.
+Initializes a new instance of the [`IconClassAttribute`](./IconClassAttribute.md) class.
 
 ## See Also
 

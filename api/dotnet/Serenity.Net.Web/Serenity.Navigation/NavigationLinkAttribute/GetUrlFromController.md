@@ -1,5 +1,4 @@
 # NavigationLinkAttribute.GetUrlFromController method
-**namespace:** *[Serenity.Navigation](../../README.md#serenity.navigation-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Tries to extract the URL from a controller action.
 

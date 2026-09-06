@@ -13,4 +13,4 @@ public static class Db
 
 ## See Also
 
-* class [CoreTexts](CoreTexts.md)
+* class [CoreTexts](./CoreTexts.md)

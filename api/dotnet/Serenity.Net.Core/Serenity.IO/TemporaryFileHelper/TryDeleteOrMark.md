@@ -1,10 +1,9 @@
 # TemporaryFileHelper.TryDeleteOrMark method
-**namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
-Tries to delete a file, or marks it for deletion by [`TryDeleteMarkedFiles`](TryDeleteMarkedFiles.md) by creating a ".delete" file.
+Tries to delete a file, or marks it for deletion by [`TryDeleteMarkedFiles`](./TryDeleteMarkedFiles.md) by creating a ".delete" file.
 
 ```csharp
-public static void TryDeleteOrMark(string filePath, ITemporaryFileSystem fileSystem = null)
+public static void TryDeleteOrMark(string filePath, ITemporaryFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # BaseExpressionAttribute.Translate method
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the expression for specified dialect. Prefer ToString(ISqlDialect) version as it allows the dialect to optionally customize the formatted expression via ISqlExpressionTranslator interface.
 

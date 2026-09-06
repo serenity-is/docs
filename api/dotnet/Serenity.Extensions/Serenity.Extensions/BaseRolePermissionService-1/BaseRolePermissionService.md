@@ -1,5 +1,4 @@
 # BaseRolePermissionService&lt;TRolePermissionRow&gt; constructor
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Base permission service that provides common functionality for permission services.
 
@@ -17,7 +16,7 @@ protected BaseRolePermissionService(ITwoLevelCache cache, ISqlConnections sqlCon
 
 ## See Also
 
-* interface [ITwoLevelCache](../Serenity.Net.Core/../../Serenity.Abstractions/ITwoLevelCache.md)
-* interface [ISqlConnections](../Serenity.Net.Services/../../Serenity.Data/ISqlConnections.md)
-* interface [ITypeSource](../Serenity.Net.Core/../../Serenity.Abstractions/ITypeSource.md)
+* interface [ITwoLevelCache](../../../Serenity.Net.Core/Serenity.Abstractions/ITwoLevelCache.md)
+* interface [ISqlConnections](../../../Serenity.Net.Services/Serenity.Data/ISqlConnections.md)
+* interface [ITypeSource](../../../Serenity.Net.Core/Serenity.Abstractions/ITypeSource.md)
 * class [BaseRolePermissionService&lt;TRolePermissionRow&gt;](../BaseRolePermissionService-1.md)

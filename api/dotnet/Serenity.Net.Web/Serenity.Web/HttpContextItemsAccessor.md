@@ -20,9 +20,9 @@ public class HttpContextItemsAccessor : IHttpContextItemsAccessor
 
 ## Remarks
 
-Initializes a new instance of the [`HttpContextItemsAccessor`](HttpContextItemsAccessor.md) class.
+Initializes a new instance of the [`HttpContextItemsAccessor`](./HttpContextItemsAccessor.md) class.
 
 ## See Also
 
-* interface [IHttpContextItemsAccessor](../Serenity.Net.Core/../Serenity.Abstractions/IHttpContextItemsAccessor.md)
+* interface [IHttpContextItemsAccessor](../../Serenity.Net.Core/Serenity.Abstractions/IHttpContextItemsAccessor.md)
 * **Source:** *[HttpContextItemsAccessor.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Common/HttpContextItemsAccessor.cs)*

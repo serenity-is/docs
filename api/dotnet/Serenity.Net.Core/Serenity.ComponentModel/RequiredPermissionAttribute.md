@@ -12,7 +12,7 @@ public class RequiredPermissionAttribute : PermissionAttributeBase
 
 | name | description |
 | --- | --- |
-| [RequiredPermissionAttribute](RequiredPermissionAttribute/RequiredPermissionAttribute.md)(…) | Initializes a new instance of the [`RequiredPermissionAttribute`](RequiredPermissionAttribute.md) class. (3 constructors) |
+| [RequiredPermissionAttribute](RequiredPermissionAttribute/RequiredPermissionAttribute.md)(…) | Initializes a new instance of the [`RequiredPermissionAttribute`](./RequiredPermissionAttribute.md) class. (3 constructors) |
 
 ## See Also
 

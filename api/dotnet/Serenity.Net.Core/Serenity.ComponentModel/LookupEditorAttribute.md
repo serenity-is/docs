@@ -12,11 +12,11 @@ public class LookupEditorAttribute : LookupEditorBaseAttribute
 
 | name | description |
 | --- | --- |
-| [LookupEditorAttribute](LookupEditorAttribute/LookupEditorAttribute.md)(…) | Initializes a new instance of the [`LookupEditorAttribute`](LookupEditorAttribute.md) class. (2 constructors) |
+| [LookupEditorAttribute](LookupEditorAttribute/LookupEditorAttribute.md)(…) | Initializes a new instance of the [`LookupEditorAttribute`](./LookupEditorAttribute.md) class. (2 constructors) |
 | const [Key](LookupEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
-* class [LookupEditorBaseAttribute](LookupEditorBaseAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
+* class [LookupEditorBaseAttribute](./LookupEditorBaseAttribute.md)
 * **Source:** *[LookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/c35c5f281624d870ca40cc45f0aa53545bf23e58/src/core/ComponentModel/PropertyGrid/EditorTypes/LookupEditorAttribute.cs)*

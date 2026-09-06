@@ -1,5 +1,4 @@
 # EntityFieldExtensions.OfJoin&lt;TField&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a new field with an expression using the specified join alias. Avoid using.
 
@@ -29,7 +28,6 @@ The field with the join alias applied.
 
 ## See Also
 
-* class [TField](../Serenity.Net.Services/../EntityFieldExtensions.TField.md)
 * class [Join](../Join.md)
 * enum [FieldFlags](../FieldFlags.md)
 * class [Field](../Field.md)

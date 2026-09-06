@@ -12,7 +12,7 @@ public class CheckLookupEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [CheckLookupEditorAttribute](CheckLookupEditorAttribute/CheckLookupEditorAttribute.md)(…) | Initializes a new instance of the [`CheckLookupEditorAttribute`](CheckLookupEditorAttribute.md) class. (2 constructors) |
+| [CheckLookupEditorAttribute](CheckLookupEditorAttribute/CheckLookupEditorAttribute.md)(…) | Initializes a new instance of the [`CheckLookupEditorAttribute`](./CheckLookupEditorAttribute.md) class. (2 constructors) |
 | [CascadeField](CheckLookupEditorAttribute/CascadeField.md) { get; set; } | Cascade filtering field (items will be filtered on this key, e.g. CountryID). Make sure you have the [LookupInclude] attribute on this field of the lookup row, otherwise you'll have empty results as this field won't be available on the client side. |
 | [CascadeFrom](CheckLookupEditorAttribute/CascadeFrom.md) { get; set; } | ID (can be relative) of the editor that this editor will cascade from, e.g. Country |
 | [CascadeValue](CheckLookupEditorAttribute/CascadeValue.md) { get; set; } | Cascade filtering value, usually set by the CascadeFrom editor, e.g. the integer value of CountryID. If null or empty, and CascadeField is set, all items are filtered. |
@@ -27,5 +27,5 @@ public class CheckLookupEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[CheckLookupEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/CheckLookupEditorAttribute.cs)*

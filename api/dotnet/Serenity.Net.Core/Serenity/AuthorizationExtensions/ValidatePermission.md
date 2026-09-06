@@ -1,5 +1,4 @@
 # AuthorizationExtensions.ValidatePermission method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Ensures the current user has the specified permission, throwing a validation error with code `AccessDenied` otherwise.
 

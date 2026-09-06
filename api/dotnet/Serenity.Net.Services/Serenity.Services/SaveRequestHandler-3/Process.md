@@ -1,5 +1,4 @@
 # SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;.Process method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Processes the save request. This is the entry point for the handler.
 
@@ -22,8 +21,6 @@ public TSaveResponse Process(IUnitOfWork unitOfWork, TSaveRequest request,
 
 ## See Also
 
-* class [TSaveResponse](../Serenity.Net.Services/../SaveRequestHandler-3.TSaveResponse.md)
 * interface [IUnitOfWork](../../Serenity.Data/IUnitOfWork.md)
-* class [TSaveRequest](../Serenity.Net.Services/../SaveRequestHandler-3.TSaveRequest.md)
 * enum [SaveRequestType](../SaveRequestType.md)
 * class [SaveRequestHandler&lt;TRow,TSaveRequest,TSaveResponse&gt;](../SaveRequestHandler-3.md)

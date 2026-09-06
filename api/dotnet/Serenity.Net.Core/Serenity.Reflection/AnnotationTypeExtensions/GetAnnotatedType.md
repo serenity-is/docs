@@ -1,5 +1,4 @@
 # AnnotationTypeExtensions.GetAnnotatedType method
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the annotated type information for the given type.
 

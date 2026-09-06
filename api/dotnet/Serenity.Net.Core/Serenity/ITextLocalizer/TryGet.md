@@ -1,10 +1,9 @@
 # ITextLocalizer.TryGet method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the translation for a key based on the context language and pending approval state, or `null` if not available.
 
 ```csharp
-public string TryGet(string key)
+public string? TryGet(string key)
 ```
 
 | parameter | description |

@@ -1,10 +1,9 @@
 # DefaultTextLocalizer.TryGet method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the translation for a key based on the current UI culture language.
 
 ```csharp
-public string TryGet(string key)
+public string? TryGet(string key)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # DeleteRequestHandler&lt;TRow&gt; constructor
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Base generic class for delete request handlers that use [`DeleteRequest`](../DeleteRequest.md) as the request type, and [`DeleteResponse`](../DeleteResponse.md) as the response type.
 

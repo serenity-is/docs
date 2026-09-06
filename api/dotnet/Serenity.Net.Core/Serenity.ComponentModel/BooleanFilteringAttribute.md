@@ -12,12 +12,12 @@ public class BooleanFilteringAttribute : CustomFilteringAttribute
 
 | name | description |
 | --- | --- |
-| [BooleanFilteringAttribute](BooleanFilteringAttribute/BooleanFilteringAttribute.md)() | Initializes a new instance of the [`BooleanFilteringAttribute`](BooleanFilteringAttribute.md) class. |
+| [BooleanFilteringAttribute](BooleanFilteringAttribute/BooleanFilteringAttribute.md)() | Initializes a new instance of the [`BooleanFilteringAttribute`](./BooleanFilteringAttribute.md) class. |
 | [FalseText](BooleanFilteringAttribute/FalseText.md) { get; set; } | Gets or sets the text used for the false value. |
 | [TrueText](BooleanFilteringAttribute/TrueText.md) { get; set; } | Gets or sets the text used for true value. |
 | const [Key](BooleanFilteringAttribute/Key.md) | Filtering type key |
 
 ## See Also
 
-* class [CustomFilteringAttribute](CustomFilteringAttribute.md)
+* class [CustomFilteringAttribute](./CustomFilteringAttribute.md)
 * **Source:** *[BooleanFilteringAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/Columns/Filtering/BasicFilteringTypes/BooleanFilteringAttribute.cs)*

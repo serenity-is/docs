@@ -1,5 +1,4 @@
 # ServiceCollectionConfigureExtensions.ConfigureSection&lt;TOptions&gt; method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Calls `Configure<TOptions>` with the section key determined from DefaultSectionKeyAttribute on *TOptions*.
 

@@ -1,5 +1,4 @@
 # EditLinkAttribute constructor (1 of 2)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates a new EditLinkAttribute.
 
@@ -14,7 +13,6 @@ public EditLinkAttribute()
 ---
 
 # EditLinkAttribute constructor (2 of 2)
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Creates a new EditLinkAttribute with enable/disable option.
 

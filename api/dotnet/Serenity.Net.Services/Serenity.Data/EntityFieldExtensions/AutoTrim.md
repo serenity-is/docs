@@ -1,5 +1,4 @@
 # EntityFieldExtensions.AutoTrim method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Automatically performs trim on field value based on the field flags TrimToEmpty and Trim.
 

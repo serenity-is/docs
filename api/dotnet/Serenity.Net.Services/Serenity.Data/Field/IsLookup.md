@@ -1,5 +1,4 @@
 # Field.IsLookup property
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets if this field is one with a LookupInclude attribute or an ID or Name field.
 

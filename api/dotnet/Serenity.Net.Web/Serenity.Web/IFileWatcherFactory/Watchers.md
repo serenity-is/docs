@@ -1,5 +1,4 @@
 # IFileWatcherFactory.Watchers property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the list of stored file watchers.
 

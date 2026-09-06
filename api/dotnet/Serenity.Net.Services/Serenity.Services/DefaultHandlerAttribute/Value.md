@@ -1,5 +1,4 @@
 # DefaultHandlerAttribute.Value property
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets a value indicating whether the handler is marked as default.
 

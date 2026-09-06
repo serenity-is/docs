@@ -1,5 +1,4 @@
 # EndpointExtensions.InTransaction&lt;TResponse&gt; method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Executes a callback by passing a unit of work object and converts any exception raised inside to a service response.
 
@@ -23,7 +22,6 @@ The action result.
 ## See Also
 
 * class [Result&lt;TResponse&gt;](../Result-1.md)
-* class [TResponse](../Serenity.Net.Web/../EndpointExtensions.TResponse.md)
-* interface [IUnitOfWork](../Serenity.Net.Services/../../Serenity.Data/IUnitOfWork.md)
-* class [ServiceResponse](../Serenity.Net.Services/../ServiceResponse.md)
+* interface [IUnitOfWork](../../../Serenity.Net.Services/Serenity.Data/IUnitOfWork.md)
+* class [ServiceResponse](../../../Serenity.Net.Services/Serenity.Services/ServiceResponse.md)
 * class [EndpointExtensions](../EndpointExtensions.md)

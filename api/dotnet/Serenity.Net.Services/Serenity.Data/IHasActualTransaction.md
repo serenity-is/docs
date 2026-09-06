@@ -1,7 +1,7 @@
 # IHasActualTransaction interface
 **namespace:** *[Serenity.Data](../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Interface for types that have an [`ActualTransaction`](IHasActualTransaction/ActualTransaction.md) property of type IDbTransaction.
+Interface for types that have an [`ActualTransaction`](./IHasActualTransaction/ActualTransaction.md) property of type IDbTransaction.
 
 ```csharp
 public interface IHasActualTransaction

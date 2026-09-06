@@ -1,5 +1,4 @@
 # EntityConnectionExtensions.ById&lt;TRow&gt; method (1 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Finds an entity by its ID value. This method selects only the table fields, and no foreign / calculated fields. Use other overloads if you want to select different set of fields.
 
@@ -27,7 +26,6 @@ Entity with the given ID.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * interface [IRow](../IRow.md)
 * interface [IIdRow](../IIdRow.md)
 * class [EntityConnectionExtensions](../EntityConnectionExtensions.md)
@@ -35,7 +33,6 @@ Entity with the given ID.
 ---
 
 # EntityConnectionExtensions.ById&lt;TRow&gt; method (2 of 2)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Finds an entity by its ID value. This method does not select any fields by default and allows you to edit the query to select fields you want.
 
@@ -64,7 +61,6 @@ Entity with the given ID.
 
 ## See Also
 
-* class [TRow](../Serenity.Net.Services/../EntityConnectionExtensions.TRow.md)
 * class [SqlQuery](../SqlQuery.md)
 * interface [IRow](../IRow.md)
 * interface [IIdRow](../IIdRow.md)

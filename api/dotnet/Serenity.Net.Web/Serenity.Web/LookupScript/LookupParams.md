@@ -1,5 +1,4 @@
 # LookupScript.LookupParams property
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the lookup parameters dictionary.
 

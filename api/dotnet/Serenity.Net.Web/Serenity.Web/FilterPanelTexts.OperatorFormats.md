@@ -26,4 +26,4 @@ public static class OperatorFormats
 
 ## See Also
 
-* class [FilterPanelTexts](FilterPanelTexts.md)
+* class [FilterPanelTexts](./FilterPanelTexts.md)

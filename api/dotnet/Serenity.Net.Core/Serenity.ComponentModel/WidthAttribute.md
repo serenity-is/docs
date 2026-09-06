@@ -23,7 +23,7 @@ public class WidthAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`WidthAttribute`](WidthAttribute.md) class.
+Initializes a new instance of the [`WidthAttribute`](./WidthAttribute.md) class.
 
 ## See Also
 

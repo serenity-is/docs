@@ -1,10 +1,9 @@
 # NullTextLocalizer.TryGet method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Returns `null` for all keys.
 
 ```csharp
-public string TryGet(string key)
+public string? TryGet(string key)
 ```
 
 | parameter | description |

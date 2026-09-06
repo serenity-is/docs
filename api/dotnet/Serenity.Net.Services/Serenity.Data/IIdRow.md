@@ -9,5 +9,5 @@ public interface IIdRow : IRow
 
 ## See Also
 
-* interface [IRow](IRow.md)
+* interface [IRow](./IRow.md)
 * **Source:** *[IIdRow.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/Contracts/IIdRow.cs)*

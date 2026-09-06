@@ -1,5 +1,4 @@
 # StaticTextBlockAttribute.Key field
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The editor type key.
 

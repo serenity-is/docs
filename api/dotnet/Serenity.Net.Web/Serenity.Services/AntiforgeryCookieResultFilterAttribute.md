@@ -21,7 +21,7 @@ public class AntiforgeryCookieResultFilterAttribute : ResultFilterAttribute
 
 ## Remarks
 
-Initializes a new instance of the [`AntiforgeryCookieResultFilterAttribute`](AntiforgeryCookieResultFilterAttribute.md) class.
+Initializes a new instance of the [`AntiforgeryCookieResultFilterAttribute`](./AntiforgeryCookieResultFilterAttribute.md) class.
 
 ## See Also
 

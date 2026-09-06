@@ -1,5 +1,4 @@
 # ElevationServiceCollectionExtensions.AddElevationHandler method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Tries to add DefaultElevationHandler as IElevationHandler
 

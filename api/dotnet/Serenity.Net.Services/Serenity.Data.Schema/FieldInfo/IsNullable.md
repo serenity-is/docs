@@ -1,5 +1,4 @@
 # FieldInfo.IsNullable property
-**namespace:** *[Serenity.Data.Schema](../../README.md#serenity.data.schema-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets or sets a value indicating whether the field is nullable.
 

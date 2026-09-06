@@ -1,5 +1,4 @@
 # HtmlScriptExtensions.ResolveWithHash method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Resolves a content URL by adding its hash with a `?v=` prefix.
 

@@ -20,4 +20,4 @@ public class CDNSettings
 
 ## See Also
 
-* class [ContentHashCache](ContentHashCache.md)
+* class [ContentHashCache](./ContentHashCache.md)

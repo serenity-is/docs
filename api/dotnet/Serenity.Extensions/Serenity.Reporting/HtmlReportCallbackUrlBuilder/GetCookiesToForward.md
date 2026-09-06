@@ -1,5 +1,4 @@
 # HtmlReportCallbackUrlBuilder.GetCookiesToForward method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the cookies to forward to the report callback, including the report auth cookie and the current request's authentication and language cookies.
 

@@ -25,7 +25,7 @@ public class Result<TResponse> : ActionResult
 
 ## Remarks
 
-Initializes a new instance of the [`Result`](Result-1.md) class.
+Initializes a new instance of the [`Result`](./Result-1.md) class.
 
 ## See Also
 

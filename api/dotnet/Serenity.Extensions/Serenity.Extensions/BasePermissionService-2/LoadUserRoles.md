@@ -1,5 +1,4 @@
 # BasePermissionService&lt;TUserPermissionRow,TUserRoleRow&gt;.LoadUserRoles method
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Loads user roles from database.
 

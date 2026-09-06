@@ -1,5 +1,4 @@
 # CodeWriter constructor (1 of 3)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`CodeWriter`](../CodeWriter.md) class.
 
@@ -18,7 +17,6 @@ public CodeWriter(int tabSize = 4)
 ---
 
 # CodeWriter constructor (2 of 3)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Used to write formatted code to a string builder.
 
@@ -42,7 +40,6 @@ Initializes a new instance of the [`CodeWriter`](../CodeWriter.md) class.
 ---
 
 # CodeWriter constructor (3 of 3)
-**namespace:** *[Serenity.Reflection](../../README.md#serenity.reflection-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes a new instance of the [`CodeWriter`](../CodeWriter.md) class.
 

@@ -1,5 +1,4 @@
 # LeftJoinAttribute constructor (1 of 4)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a left join on foreign key. Use this version only on properties with ForeignKey attribute.
 
@@ -18,7 +17,6 @@ public LeftJoinAttribute(string alias)
 ---
 
 # LeftJoinAttribute constructor (2 of 4)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a left join on foreign key. Use this version only on properties with ForeignKey attribute.
 
@@ -39,7 +37,6 @@ public LeftJoinAttribute(string alias, params ServerType[] serverTypes)
 ---
 
 # LeftJoinAttribute constructor (3 of 4)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a left join
 
@@ -60,7 +57,6 @@ public LeftJoinAttribute(string alias, string toTable, string onCriteria)
 ---
 
 # LeftJoinAttribute constructor (4 of 4)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds a left join
 

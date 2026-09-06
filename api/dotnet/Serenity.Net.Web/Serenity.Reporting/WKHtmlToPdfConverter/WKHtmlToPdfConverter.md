@@ -1,5 +1,4 @@
 # WKHtmlToPdfConverter constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Implementation of IWKHtmlToPdfConverter.
 
@@ -21,5 +20,5 @@ Initializes a new instance of the [`WKHtmlToPdfConverter`](../WKHtmlToPdfConvert
 ## See Also
 
 * class [WKHtmlToPdfSettings](../WKHtmlToPdfSettings.md)
-* interface [IFileSystem](../Serenity.Net.Core/../../Serenity/IFileSystem.md)
+* interface [IFileSystem](../../../Serenity.Net.Core/Serenity/IFileSystem.md)
 * class [WKHtmlToPdfConverter](../WKHtmlToPdfConverter.md)

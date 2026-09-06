@@ -1,10 +1,9 @@
 # PropertyItemsLocalTextRegistration.GetPropertyItemsTextPrefix method
-**namespace:** *[Serenity.Localization](../../README.md#serenity.localization-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets the form/column local text key prefix for the given type.
 
 ```csharp
-public static string GetPropertyItemsTextPrefix(Type type)
+public static string? GetPropertyItemsTextPrefix(Type type)
 ```
 
 | parameter | description |

@@ -1,5 +1,4 @@
 # UserPreferenceRetrieveResponse.Value property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The preference value.
 

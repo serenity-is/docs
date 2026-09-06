@@ -1,12 +1,11 @@
 # SqlMapper.Query method (1 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of dynamic objects; the reader is closed after the call. Serenity specific overload for [`ISqlQuery`](../ISqlQuery.md), not present in Dapper.
 
 ```csharp
 public static IEnumerable<object> Query(this IDbConnection cnn, ISqlQuery sql, 
     IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?))
+    CommandType? commandType = default)
 ```
 
 | parameter | description |
@@ -30,14 +29,13 @@ List of dynamic objects.
 ---
 
 # SqlMapper.Query method (2 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of dynamic objects; the reader is closed after the call.
 
 ```csharp
 public static IEnumerable<object> Query(this IDbConnection cnn, string sql, object param = null, 
     IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?))
+    CommandType? commandType = default)
 ```
 
 | parameter | description |
@@ -61,14 +59,13 @@ List of dynamic objects.
 ---
 
 # SqlMapper.Query&lt;T&gt; method (3 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of values; the reader is closed after the call. Serenity specific overload for [`ISqlQuery`](../ISqlQuery.md), not present in Dapper.
 
 ```csharp
 public static IEnumerable<T> Query<T>(this IDbConnection cnn, ISqlQuery sql, 
     IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?))
+    CommandType? commandType = default)
 ```
 
 | parameter | description |
@@ -87,21 +84,19 @@ List of values.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../SqlMapper.T.md)
 * interface [ISqlQuery](../ISqlQuery.md)
 * class [SqlMapper](../SqlMapper.md)
 
 ---
 
 # SqlMapper.Query&lt;T&gt; method (4 of 4)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a list of objects; the reader is closed after the call.
 
 ```csharp
 public static IEnumerable<T> Query<T>(this IDbConnection cnn, string sql, object param = null, 
     IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, 
-    CommandType? commandType = default(CommandType?))
+    CommandType? commandType = default)
 ```
 
 | parameter | description |
@@ -121,5 +116,4 @@ List of objects.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../SqlMapper.T.md)
 * class [SqlMapper](../SqlMapper.md)

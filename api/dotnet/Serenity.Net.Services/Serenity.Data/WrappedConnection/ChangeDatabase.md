@@ -1,5 +1,4 @@
 # WrappedConnection.ChangeDatabase method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Changes the current database for an open Connection object.
 

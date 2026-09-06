@@ -1,5 +1,4 @@
 # IDeleteBehavior.OnAfterDelete method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Called after row is inserted to / updated in database
 

@@ -1,5 +1,4 @@
 # CellDecoratorAttribute constructor
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Attribute used to set the [`ICellDecorator`](../ICellDecorator.md) type for a property.
 

@@ -1,5 +1,4 @@
 # DefaultFilenameFormatSanitizer.Instance field
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 An instance of this class.
 

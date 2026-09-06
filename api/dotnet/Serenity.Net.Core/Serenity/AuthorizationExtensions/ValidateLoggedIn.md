@@ -1,10 +1,9 @@
 # AuthorizationExtensions.ValidateLoggedIn method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Ensures a user is currently authenticated, throwing a validation error with code `NotLoggedIn` otherwise.
 
 ```csharp
-public static void ValidateLoggedIn(this IUserAccessor userAccessor, ITextLocalizer localizer)
+public static void ValidateLoggedIn(this IUserAccessor? userAccessor, ITextLocalizer? localizer)
 ```
 
 | parameter | description |

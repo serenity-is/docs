@@ -19,4 +19,4 @@ public static class Defaults
 
 ## See Also
 
-* class [JSON](JSON.md)
+* class [JSON](./JSON.md)

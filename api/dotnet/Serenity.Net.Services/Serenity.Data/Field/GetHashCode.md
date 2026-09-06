@@ -1,5 +1,4 @@
 # Field.GetHashCode method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Returns a hash code for this instance.
 

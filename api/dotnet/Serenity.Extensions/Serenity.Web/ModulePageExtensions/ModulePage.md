@@ -1,5 +1,4 @@
 # ModulePageExtensions.ModulePage method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Creates a module page from the specified module page model.
 

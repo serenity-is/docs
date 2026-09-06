@@ -1,5 +1,4 @@
 # IUploadImageOptions.ThumbWidth property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Thumbnail width for the default thumbnail. Default is 0, e.g. disabled.
 

@@ -21,7 +21,7 @@ public class HeaderCssClassAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`HeaderCssClassAttribute`](HeaderCssClassAttribute.md) class.
+Initializes a new instance of the [`HeaderCssClassAttribute`](./HeaderCssClassAttribute.md) class.
 
 ## See Also
 

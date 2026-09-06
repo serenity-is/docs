@@ -23,7 +23,7 @@ public class FilteringOptionAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`FilteringOptionAttribute`](FilteringOptionAttribute.md) class.
+Initializes a new instance of the [`FilteringOptionAttribute`](./FilteringOptionAttribute.md) class.
 
 ## See Also
 

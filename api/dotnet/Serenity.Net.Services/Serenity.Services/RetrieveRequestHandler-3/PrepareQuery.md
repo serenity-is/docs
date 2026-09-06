@@ -1,7 +1,6 @@
 # RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;.PrepareQuery method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Prepares query by calling [`SelectFields`](SelectFields.md).
+Prepares query by calling [`SelectFields`](./SelectFields.md).
 
 ```csharp
 protected virtual void PrepareQuery(SqlQuery query)

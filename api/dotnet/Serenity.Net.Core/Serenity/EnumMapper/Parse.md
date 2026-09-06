@@ -1,5 +1,4 @@
 # EnumMapper.Parse&lt;TEnum&gt; method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Parses the specified enum key.
 
@@ -24,5 +23,4 @@ Parsed enum value
 
 ## See Also
 
-* class [TEnum](../Serenity.Net.Core/../EnumMapper.TEnum.md)
 * class [EnumMapper](../EnumMapper.md)

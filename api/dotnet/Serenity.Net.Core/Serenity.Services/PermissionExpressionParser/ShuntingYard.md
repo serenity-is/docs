@@ -1,5 +1,4 @@
 # PermissionExpressionParser.ShuntingYard method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Converts tokens to Reverse Polish Notation using the shunting-yard algorithm.
 
@@ -9,7 +8,7 @@ public static IEnumerable<string> ShuntingYard(IEnumerable<string> tokens)
 
 | parameter | description |
 | --- | --- |
-| tokens | The tokens produced by [`Tokenize`](Tokenize.md). |
+| tokens | The tokens produced by [`Tokenize`](./Tokenize.md). |
 
 ## Return Value
 

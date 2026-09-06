@@ -25,10 +25,10 @@ public class DefaultReportRenderer : IReportRenderer
 
 | name | description |
 | --- | --- |
-| readonly [excelRenderer-](DefaultReportRenderer/excelRenderer-.md) | The Excel renderer. |
-| readonly [htmlReportPdfRenderer-](DefaultReportRenderer/htmlReportPdfRenderer-.md) | The HTML report PDF renderer. |
-| readonly [httpContextAccessor-](DefaultReportRenderer/httpContextAccessor-.md) | The HTTP context accessor. |
-| readonly [serviceProvider-](DefaultReportRenderer/serviceProvider-.md) | The service provider. |
+| readonly [excelRenderer](DefaultReportRenderer/excelRenderer.md) | The Excel renderer. |
+| readonly [htmlReportPdfRenderer](DefaultReportRenderer/htmlReportPdfRenderer.md) | The HTML report PDF renderer. |
+| readonly [httpContextAccessor](DefaultReportRenderer/httpContextAccessor.md) | The HTTP context accessor. |
+| readonly [serviceProvider](DefaultReportRenderer/serviceProvider.md) | The service provider. |
 | virtual [GetViewName](DefaultReportRenderer/GetViewName.md)(…) | Gets the view name for the report. |
 | virtual [RenderAsHtml](DefaultReportRenderer/RenderAsHtml.md)(…) | Renders a report as HTML. |
 | virtual [RenderAsPdf](DefaultReportRenderer/RenderAsPdf.md)(…) | Renders an HTML report as PDF. |
@@ -39,9 +39,9 @@ public class DefaultReportRenderer : IReportRenderer
 
 ## Remarks
 
-Initializes a new instance of the [`DefaultReportRenderer`](DefaultReportRenderer.md) class.
+Initializes a new instance of the [`DefaultReportRenderer`](./DefaultReportRenderer.md) class.
 
 ## See Also
 
-* interface [IReportRenderer](../Serenity.Net.Services/IReportRenderer.md)
+* interface [IReportRenderer](../../Serenity.Net.Services/Serenity.Reporting/IReportRenderer.md)
 * **Source:** *[DefaultReportRenderer.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Reporting/DefaultReportRenderer.cs)*

@@ -1,5 +1,4 @@
 # HtmlReportCallbackUrlBuilder.GetSiteInternalUrl method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Gets the internal URL of the web site used to build the report callback URL.
 

@@ -22,7 +22,7 @@ public sealed class BasedOnRowAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`BasedOnRowAttribute`](BasedOnRowAttribute.md) class.
+Initializes a new instance of the [`BasedOnRowAttribute`](./BasedOnRowAttribute.md) class.
 
 ## See Also
 

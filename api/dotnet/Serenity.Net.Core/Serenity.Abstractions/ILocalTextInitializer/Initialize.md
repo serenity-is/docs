@@ -1,5 +1,4 @@
 # ILocalTextInitializer.Initialize method
-**namespace:** *[Serenity.Abstractions](../../README.md#serenity.abstractions-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Initializes the local text registry with translations.
 

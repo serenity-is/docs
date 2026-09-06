@@ -12,10 +12,10 @@ public class URLEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [URLEditorAttribute](URLEditorAttribute/URLEditorAttribute.md)() | Initializes a new instance of the [`URLEditorAttribute`](URLEditorAttribute.md) class. |
+| [URLEditorAttribute](URLEditorAttribute/URLEditorAttribute.md)() | Initializes a new instance of the [`URLEditorAttribute`](./URLEditorAttribute.md) class. |
 | const [Key](URLEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[UrlEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/UrlEditorAttribute.cs)*

@@ -1,5 +1,4 @@
 # FilesToDeleteExtensions.RegisterFilesToDelete method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Registers a [`FilesToDelete`](../FilesToDelete.md) in the target unit of work. This deletes the old files on commit, and new files on rollback
 

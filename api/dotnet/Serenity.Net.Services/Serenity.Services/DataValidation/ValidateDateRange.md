@@ -1,5 +1,4 @@
 # DataValidation.ValidateDateRange method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Validates date range is valid, e.g. start date is before end date etc.
 
@@ -19,5 +18,5 @@ public static void ValidateDateRange(IRow row, DateTimeField start, DateTimeFiel
 
 * interface [IRow](../../Serenity.Data/IRow.md)
 * class [DateTimeField](../../Serenity.Data/DateTimeField.md)
-* interface [ITextLocalizer](../Serenity.Net.Core/../../Serenity/ITextLocalizer.md)
+* interface [ITextLocalizer](../../../Serenity.Net.Core/Serenity/ITextLocalizer.md)
 * class [DataValidation](../DataValidation.md)

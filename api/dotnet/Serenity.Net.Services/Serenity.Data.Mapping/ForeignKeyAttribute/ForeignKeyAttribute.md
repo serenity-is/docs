@@ -1,5 +1,4 @@
 # ForeignKeyAttribute constructor (1 of 5)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
 
@@ -18,7 +17,6 @@ public ForeignKeyAttribute(Type rowType)
 ---
 
 # ForeignKeyAttribute constructor (2 of 5)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
 
@@ -38,7 +36,6 @@ public ForeignKeyAttribute(string table, string field)
 ---
 
 # ForeignKeyAttribute constructor (3 of 5)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
 
@@ -58,7 +55,6 @@ public ForeignKeyAttribute(Type rowType, string field)
 ---
 
 # ForeignKeyAttribute constructor (4 of 5)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
 
@@ -80,7 +76,6 @@ public ForeignKeyAttribute(string table, string field, params ServerType[] serve
 ---
 
 # ForeignKeyAttribute constructor (5 of 5)
-**namespace:** *[Serenity.Data.Mapping](../../README.md#serenity.data.mapping-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Specifies that this property is a foreign key to another field in a primary key table.
 

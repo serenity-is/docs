@@ -31,10 +31,10 @@ public class DiskUploadStorage : IUploadStorage
 
 | name | description |
 | --- | --- |
-| readonly [fileSystem-](DiskUploadStorage/fileSystem-.md) | Gets the file system. |
+| readonly [fileSystem](DiskUploadStorage/fileSystem.md) | Gets the file system. |
 | [FilePath](DiskUploadStorage/FilePath.md)(…) | Gets the full path for the file |
 
 ## See Also
 
-* interface [IUploadStorage](IUploadStorage.md)
+* interface [IUploadStorage](./IUploadStorage.md)
 * **Source:** *[DiskUploadStorage.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Upload/DiskUploadStorage.cs)*

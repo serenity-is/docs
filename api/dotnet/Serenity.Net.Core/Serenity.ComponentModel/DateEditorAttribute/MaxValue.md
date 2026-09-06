@@ -1,10 +1,9 @@
 # DateEditorAttribute.MaxValue property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Gets or sets the maximum value.
 
 ```csharp
-public string MaxValue { get; set; }
+public string? MaxValue { get; set; }
 ```
 
 ## Property Value

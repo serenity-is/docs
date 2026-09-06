@@ -1,5 +1,4 @@
 # UndeleteRequestHandler&lt;TRow,TUndeleteRequest,TUndeleteResponse&gt;.InvokeUndeleteAction method
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Invokes the passed undelete action method
 

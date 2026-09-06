@@ -1,5 +1,4 @@
 # UnitOfWork.OnRollback event
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Occurs when transaction is rolled back.
 

@@ -1,5 +1,4 @@
 # EnvironmentSettings.SectionKey field
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 Default section key for environment settings.
 

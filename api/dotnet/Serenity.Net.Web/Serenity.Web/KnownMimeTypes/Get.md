@@ -1,5 +1,4 @@
 # KnownMimeTypes.Get method
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Gets the MIME type for a given file using information in the Win32 HKEY_CLASSES_ROOT registry key.
 

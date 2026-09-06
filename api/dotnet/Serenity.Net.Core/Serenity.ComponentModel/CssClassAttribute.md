@@ -21,7 +21,7 @@ public class CssClassAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`CssClassAttribute`](CssClassAttribute.md) class.
+Initializes a new instance of the [`CssClassAttribute`](./CssClassAttribute.md) class.
 
 ## See Also
 

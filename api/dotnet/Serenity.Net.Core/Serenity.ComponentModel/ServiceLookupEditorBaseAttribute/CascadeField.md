@@ -1,10 +1,9 @@
 # ServiceLookupEditorBaseAttribute.CascadeField property
-**namespace:** *[Serenity.ComponentModel](../../README.md#serenity.componentmodel-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Cascade filtering field (items will be filtered on this key, e.g. CountryID)
 
 ```csharp
-public string CascadeField { get; set; }
+public string? CascadeField { get; set; }
 ```
 
 ## See Also

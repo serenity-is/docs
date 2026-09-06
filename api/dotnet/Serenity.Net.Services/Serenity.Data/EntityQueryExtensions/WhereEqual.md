@@ -1,5 +1,4 @@
 # EntityQueryExtensions.WhereEqual&lt;T&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Adds all field values in a row to the where clause with equality operator and auto named parameters (field name prefixed with '@').
 
@@ -19,7 +18,6 @@ The object itself.
 
 ## See Also
 
-* class [T](../Serenity.Net.Services/../EntityQueryExtensions.T.md)
 * interface [IRow](../IRow.md)
 * interface [IFilterableQuery](../IFilterableQuery.md)
 * class [EntityQueryExtensions](../EntityQueryExtensions.md)

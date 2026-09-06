@@ -1,11 +1,10 @@
 # TransientGrantingPermissionService constructor
-**namespace:** *[Serenity.Web](../../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Decorates an [`IPermissionService`](../../Serenity.Abstractions/IPermissionService.md) to support temporarily granting permissions.
 
 ```csharp
-public TransientGrantingPermissionService(IPermissionService permissionService = null, 
-    IHttpContextItemsAccessor requestContext = null)
+public TransientGrantingPermissionService(IPermissionService? permissionService = null, 
+    IHttpContextItemsAccessor? requestContext = null)
 ```
 
 | parameter | description |

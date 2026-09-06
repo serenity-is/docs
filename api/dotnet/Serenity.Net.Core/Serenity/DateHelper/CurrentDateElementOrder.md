@@ -1,5 +1,4 @@
 # DateHelper.CurrentDateElementOrder property
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Returns one of "dmy", "ymd", "mdy" date element order depending on current culture.
 

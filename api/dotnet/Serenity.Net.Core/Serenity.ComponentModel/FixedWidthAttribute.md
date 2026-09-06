@@ -16,5 +16,5 @@ public class FixedWidthAttribute : WidthAttribute
 
 ## See Also
 
-* class [WidthAttribute](WidthAttribute.md)
+* class [WidthAttribute](./WidthAttribute.md)
 * **Source:** *[FixedWidthAttribute.cs](https://github.com/serenity-is/Serenity/blob/0a70238847849ab852b89d08fad64a66e4ad153f/src/core/ComponentModel/Columns/FixedWidthAttribute.cs)*

@@ -17,7 +17,7 @@ public class InsertableAttribute : Attribute
 | name | description |
 | --- | --- |
 | [InsertableAttribute](InsertableAttribute/InsertableAttribute.md)(…) | Controls if this field is editable in new record mode. When used with fields, turns on or off the insertable flag. |
-| [Value](InsertableAttribute/Value.md) { get; } | Gets a value indicating whether this [`InsertableAttribute`](InsertableAttribute.md) is enabled. |
+| [Value](InsertableAttribute/Value.md) { get; } | Gets a value indicating whether this [`InsertableAttribute`](./InsertableAttribute.md) is enabled. |
 
 ## Remarks
 

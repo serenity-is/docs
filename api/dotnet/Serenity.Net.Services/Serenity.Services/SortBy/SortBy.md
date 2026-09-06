@@ -1,5 +1,4 @@
 # SortBy constructor (1 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates an empty SortBy object
 
@@ -14,7 +13,6 @@ public SortBy()
 ---
 
 # SortBy constructor (2 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a SortBy object for the specified field name.
 
@@ -33,7 +31,6 @@ public SortBy(string field)
 ---
 
 # SortBy constructor (3 of 3)
-**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates an instance of the SortBy object containing the specified field name and descending flag.
 

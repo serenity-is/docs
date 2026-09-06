@@ -1,5 +1,4 @@
 # ApplicationPartsServiceCollectionExtensions.AddApplicationPartsFeatureToggles method
-**namespace:** *[Serenity.Extensions.DependencyInjection](../../README.md#serenity.extensions.dependencyinjection-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Adds the IFeatureToggles service to the registry, scanning for FeatureKeySetAttribute in application parts and disabling by default features that have a `[DefaultValue(false)]` attribute. Note that this also calls `AddMvcCore()` to get the part manager if it is not provided and not found in the collection.
 
@@ -24,5 +23,5 @@ The same service collection so that calls can be chained.
 
 ## See Also
 
-* class [RequiresFeatureAttribute](../Serenity.Net.Core/../../Serenity.ComponentModel/RequiresFeatureAttribute.md)
+* class [RequiresFeatureAttribute](../../../Serenity.Net.Core/Serenity.ComponentModel/RequiresFeatureAttribute.md)
 * class [ApplicationPartsServiceCollectionExtensions](../ApplicationPartsServiceCollectionExtensions.md)

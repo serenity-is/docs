@@ -20,9 +20,9 @@ public class AuthorizeUpdateAttribute : ServiceAuthorizeAttribute
 
 ## Remarks
 
-Initializes a new instance of the [`AuthorizeUpdateAttribute`](AuthorizeUpdateAttribute.md) class.
+Initializes a new instance of the [`AuthorizeUpdateAttribute`](./AuthorizeUpdateAttribute.md) class.
 
 ## See Also
 
-* class [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute.md)
+* class [ServiceAuthorizeAttribute](./ServiceAuthorizeAttribute.md)
 * **Source:** *[AuthorizeUpdateAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/AuthorizeUpdateAttribute.cs)*

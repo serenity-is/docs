@@ -12,7 +12,7 @@ public class HtmlContentEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [HtmlContentEditorAttribute](HtmlContentEditorAttribute/HtmlContentEditorAttribute.md)() | Initializes a new instance of the [`HtmlContentEditorAttribute`](HtmlContentEditorAttribute.md) class. |
+| [HtmlContentEditorAttribute](HtmlContentEditorAttribute/HtmlContentEditorAttribute.md)() | Initializes a new instance of the [`HtmlContentEditorAttribute`](./HtmlContentEditorAttribute.md) class. |
 | [Cols](HtmlContentEditorAttribute/Cols.md) { get; set; } | Gets or sets the cols for underlying textarea. |
 | [EditorProvider](HtmlContentEditorAttribute/EditorProvider.md) { get; set; } | Gets or sets the editor provider. Allowed values are "ckeditor" and "tiptap". Default is "ckeditor". |
 | [Rows](HtmlContentEditorAttribute/Rows.md) { get; set; } | Gets or sets the rows for underlying textarea. |
@@ -20,5 +20,5 @@ public class HtmlContentEditorAttribute : CustomEditorAttribute
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[HtmlContentEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/core/ComponentModel/PropertyGrid/EditorTypes/HtmlContentEditorAttribute.cs)*

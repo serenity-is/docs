@@ -1,5 +1,4 @@
 # SqlQuery.OrderByFirst method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Inserts a field name or an SQL expression to the start of ORDER BY clause.
 

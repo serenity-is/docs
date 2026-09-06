@@ -1,5 +1,4 @@
 # MemoryCacheExtensions.Add&lt;TItem&gt; method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Adds a value to cache with a given key
 
@@ -21,5 +20,4 @@ The value that was added to the cache.
 
 ## See Also
 
-* class [TItem](../Serenity.Net.Core/../MemoryCacheExtensions.TItem.md)
 * class [MemoryCacheExtensions](../MemoryCacheExtensions.md)

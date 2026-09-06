@@ -21,7 +21,7 @@ public class PlaceholderAttribute : Attribute
 
 ## Remarks
 
-Initializes a new instance of the [`PlaceholderAttribute`](PlaceholderAttribute.md) class.
+Initializes a new instance of the [`PlaceholderAttribute`](./PlaceholderAttribute.md) class.
 
 ## See Also
 

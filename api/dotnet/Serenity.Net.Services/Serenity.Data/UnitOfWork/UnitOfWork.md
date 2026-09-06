@@ -1,5 +1,4 @@
 # UnitOfWork constructor (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`UnitOfWork`](../UnitOfWork.md) class.
 
@@ -24,7 +23,6 @@ public UnitOfWork(IDbConnection connection)
 ---
 
 # UnitOfWork constructor (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`UnitOfWork`](../UnitOfWork.md) class.
 
@@ -51,7 +49,6 @@ public UnitOfWork(IDbConnection connection, bool deferStart)
 ---
 
 # UnitOfWork constructor (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Initializes a new instance of the [`UnitOfWork`](../UnitOfWork.md) class with the specified System.Data.IsolationLevel value.
 

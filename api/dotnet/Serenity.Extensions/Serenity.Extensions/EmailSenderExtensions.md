@@ -1,7 +1,7 @@
 # EmailSenderExtensions class
 **namespace:** *[Serenity.Extensions](../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../README.md)*
 
-Extension methods for [`IEmailSender`](IEmailSender.md).
+Extension methods for [`IEmailSender`](./IEmailSender.md).
 
 ```csharp
 public static class EmailSenderExtensions

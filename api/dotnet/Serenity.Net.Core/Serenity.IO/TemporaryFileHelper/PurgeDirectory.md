@@ -1,11 +1,10 @@
 # TemporaryFileHelper.PurgeDirectory method
-**namespace:** *[Serenity.IO](../../README.md#serenity.io-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Clears a folder based on the specified conditions.
 
 ```csharp
 public static void PurgeDirectory(string directoryToClean, TimeSpan autoExpireTime, 
-    int maxFilesInDirectory, string checkFileName, ITemporaryFileSystem fileSystem = null)
+    int maxFilesInDirectory, string checkFileName, ITemporaryFileSystem? fileSystem = null)
 ```
 
 | parameter | description |

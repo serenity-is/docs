@@ -1,5 +1,4 @@
 # StringHelper.SanitizeFilename method
-**namespace:** *[Serenity](../../README.md#serenity-namespace)*   **assembly**: *[Serenity.Net.Core](../../README.md)*
 
 Sanitizes the filename by removing diacritics, ı with i and replacing any invalid filename characters with underscore.
 

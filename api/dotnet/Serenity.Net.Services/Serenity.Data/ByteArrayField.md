@@ -37,9 +37,9 @@ public class ByteArrayField : CustomClassField<byte[]>
 
 ## Remarks
 
-Initializes a new instance of the [`ByteArrayField`](ByteArrayField.md) class.
+Initializes a new instance of the [`ByteArrayField`](./ByteArrayField.md) class.
 
 ## See Also
 
-* class [CustomClassField&lt;TValue&gt;](CustomClassField-1.md)
+* class [CustomClassField&lt;TValue&gt;](./CustomClassField-1.md)
 * **Source:** *[ByteArrayField.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/FieldTypes/ByteArrayField.cs)*

@@ -1,5 +1,4 @@
 # Sql.Min method (1 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a MIN() expression.
 
@@ -29,7 +28,6 @@ The MIN() expression.
 ---
 
 # Sql.Min method (2 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a MIN() expression.
 
@@ -58,7 +56,6 @@ The MIN() expression.
 ---
 
 # Sql.Min method (3 of 3)
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Creates a MIN() expression.
 

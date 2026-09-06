@@ -1,5 +1,4 @@
 # WKHtmlToPdf.Execute method
-**namespace:** *[Serenity.Reporting](../../README.md#serenity.reporting-namespace)*   **assembly**: *[Serenity.Net.Web](../../README.md)*
 
 Executes the converter process and returns the PDF bytes.
 
@@ -15,7 +14,7 @@ The generated PDF bytes.
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | [`ExecutablePath`](ExecutablePath.md) or [`Url`](Url.md) is `null`. |
+| ArgumentNullException | [`ExecutablePath`](./ExecutablePath.md) or [`Url`](./Url.md) is `null`. |
 | InvalidOperationException | An error occurred during process execution. |
 
 ## See Also

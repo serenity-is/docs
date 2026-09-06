@@ -1,5 +1,4 @@
 # DialectExpressionSelector.GetBestMatch&lt;TAttribute&gt; method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Gets the best matching attribute for the current dialect.
 
@@ -21,5 +20,4 @@ The best matching attribute, or `null` if none match.
 
 ## See Also
 
-* class [TAttribute](../Serenity.Net.Services/../DialectExpressionSelector.TAttribute.md)
 * class [DialectExpressionSelector](../DialectExpressionSelector.md)

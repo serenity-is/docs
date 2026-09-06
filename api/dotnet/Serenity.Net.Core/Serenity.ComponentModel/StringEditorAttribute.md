@@ -12,10 +12,10 @@ public class StringEditorAttribute : CustomEditorAttribute
 
 | name | description |
 | --- | --- |
-| [StringEditorAttribute](StringEditorAttribute/StringEditorAttribute.md)() | Initializes a new instance of the [`StringEditorAttribute`](StringEditorAttribute.md) class. |
+| [StringEditorAttribute](StringEditorAttribute/StringEditorAttribute.md)() | Initializes a new instance of the [`StringEditorAttribute`](./StringEditorAttribute.md) class. |
 | const [Key](StringEditorAttribute/Key.md) | Editor type key |
 
 ## See Also
 
-* class [CustomEditorAttribute](CustomEditorAttribute.md)
+* class [CustomEditorAttribute](./CustomEditorAttribute.md)
 * **Source:** *[StringEditorAttribute.cs](https://github.com/serenity-is/Serenity/blob/9b68f558f65ad5d3b8a8af7351efe4622dff626f/src/core/ComponentModel/PropertyGrid/EditorTypes/StringEditorAttribute.cs)*

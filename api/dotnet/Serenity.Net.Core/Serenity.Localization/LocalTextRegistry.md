@@ -20,7 +20,7 @@ public class LocalTextRegistry : IGetAllTexts, ILanguageFallbacks, ILocalTextReg
 | [GetLanguageFallbacks](LocalTextRegistry/GetLanguageFallbacks.md)(…) |  |
 | [RemoveAll](LocalTextRegistry/RemoveAll.md)() | Removes all cached texts. |
 | [SetLanguageFallback](LocalTextRegistry/SetLanguageFallback.md)(…) |  |
-| [TryGet](LocalTextRegistry/TryGet.md)(…) | Converts the local text key to its representation in the requested language. Looks up the text in the requested language, its fallbacks, and the invariant language in order. If not found in any, `null` is returned. See [`SetLanguageFallback`](LocalTextRegistry/SetLanguageFallback.md) for information about language fallbacks. |
+| [TryGet](LocalTextRegistry/TryGet.md)(…) | Converts the local text key to its representation in the requested language. Looks up the text in the requested language, its fallbacks, and the invariant language in order. If not found in any, `null` is returned. See [`SetLanguageFallback`](./LocalTextRegistry/SetLanguageFallback.md) for information about language fallbacks. |
 
 ## Remarks
 

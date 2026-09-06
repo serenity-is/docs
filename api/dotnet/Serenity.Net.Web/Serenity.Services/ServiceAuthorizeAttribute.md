@@ -12,8 +12,8 @@ public class ServiceAuthorizeAttribute : Attribute, IResourceFilter
 
 | name | description |
 | --- | --- |
-| [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)() | Initializes a new instance of the [`ServiceAuthorizeAttribute`](ServiceAuthorizeAttribute.md) class. |
-| [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)(…) | Initializes an instance of the [`ServiceAuthorizeAttribute`](ServiceAuthorizeAttribute.md) class, while deriving the permission key from the passed type's ReadPermissionAttribute. (4 constructors) |
+| [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)() | Initializes a new instance of the [`ServiceAuthorizeAttribute`](./ServiceAuthorizeAttribute.md) class. |
+| [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)(…) | Initializes an instance of the [`ServiceAuthorizeAttribute`](./ServiceAuthorizeAttribute.md) class, while deriving the permission key from the passed type's ReadPermissionAttribute. (4 constructors) |
 | [Override](ServiceAuthorizeAttribute/Override.md) { get; set; } | Gets or sets whether this attribute should override the controller level attribute if any. The default is `true`. |
 | [Permission](ServiceAuthorizeAttribute/Permission.md) { get; } | Gets the permission key. |
 | [OnResourceExecuted](ServiceAuthorizeAttribute/OnResourceExecuted.md)(…) |  |
@@ -24,7 +24,7 @@ public class ServiceAuthorizeAttribute : Attribute, IResourceFilter
 | name | description |
 | --- | --- |
 | [ServiceAuthorizeAttribute](ServiceAuthorizeAttribute/ServiceAuthorizeAttribute.md)(…) | Initializes an instance of the service authorize attribute while trying to determine the permission key from one of the permission attribute types the source type has. |
-| [OrPermission](ServiceAuthorizeAttribute/OrPermission.md) { get; set; } | Gets or sets an optional secondary permission to check by OR, e.g. if this is specified and the user does not have the [`Permission`](ServiceAuthorizeAttribute/Permission.md), the user will still be allowed access if they have the [`OrPermission`](ServiceAuthorizeAttribute/OrPermission.md). |
+| [OrPermission](ServiceAuthorizeAttribute/OrPermission.md) { get; set; } | Gets or sets an optional secondary permission to check by OR, e.g. if this is specified and the user does not have the [`Permission`](./ServiceAuthorizeAttribute/Permission.md), the user will still be allowed access if they have the [`OrPermission`](./ServiceAuthorizeAttribute/OrPermission.md). |
 
 ## See Also
 

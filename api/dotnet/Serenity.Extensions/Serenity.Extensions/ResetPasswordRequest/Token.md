@@ -1,5 +1,4 @@
 # ResetPasswordRequest.Token property
-**namespace:** *[Serenity.Extensions](../../README.md#serenity.extensions-namespace)*   **assembly**: *[Serenity.Extensions](../../README.md)*
 
 The reset token issued when the reset password email was sent.
 

@@ -1,5 +1,4 @@
 # RowFieldsBase.RemoveItem method
-**namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 Removes the element at the specified index of the Collection.
 

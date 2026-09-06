@@ -1,7 +1,7 @@
 # ImageCheckResult enumeration
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-[`ImageChecker`](ImageChecker.md)'s result codes.
+[`ImageChecker`](./ImageChecker.md)'s result codes.
 
 ```csharp
 public enum ImageCheckResult

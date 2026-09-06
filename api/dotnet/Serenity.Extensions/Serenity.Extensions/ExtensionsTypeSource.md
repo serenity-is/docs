@@ -22,5 +22,5 @@ public class ExtensionsTypeSource : WebTypeSource
 
 ## See Also
 
-* class [WebTypeSource](../Serenity.Net.Web/../Serenity.Web/WebTypeSource.md)
+* class [WebTypeSource](../../Serenity.Net.Web/Serenity.Web/WebTypeSource.md)
 * **Source:** *[ExtensionsTypeSource.cs](https://github.com/serenity-is/Serenity/blob/47a8f36cd87e4c2377c35f4a9f9c1c4ba0155f61/common-features/src/extensions/Modules/Options/ExtensionsTypeSource.cs)*

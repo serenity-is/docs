@@ -1,7 +1,7 @@
 # DiskUploadStorageOptions class
 **namespace:** *[Serenity.Web](../README.md#serenity.web-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-Options for [`DiskUploadStorage`](DiskUploadStorage.md)
+Options for [`DiskUploadStorage`](./DiskUploadStorage.md)
 
 ```csharp
 public class DiskUploadStorageOptions

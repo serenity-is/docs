@@ -4,32 +4,18 @@
 Default property item provider
 
 ```csharp
-public class DefaultPropertyItemProvider : IPropertyItemProvider
+public class DefaultPropertyItemProvider : IDisposable, IPropertyItemProvider
 ```
-
-| parameter | description |
-| --- | --- |
-| provider | The provider. |
-| typeSource | The type source. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [DefaultPropertyItemProvider](DefaultPropertyItemProvider/DefaultPropertyItemProvider.md)(…) | Default property item provider |
+| [DefaultPropertyItemProvider](DefaultPropertyItemProvider/DefaultPropertyItemProvider.md)(…) | Initializes a new instance of the [`DefaultPropertyItemProvider`](DefaultPropertyItemProvider.md) class. |
+| [Dispose](DefaultPropertyItemProvider/Dispose.md)() |  |
 | [GetPropertyItemsFor](DefaultPropertyItemProvider/GetPropertyItemsFor.md)(…) |  |
-
-## Exceptions
-
-| exception | condition |
-| --- | --- |
-| ArgumentNullException | provider or typeSource is null |
-
-## Remarks
-
-Initializes a new instance of the [`DefaultPropertyItemProvider`](DefaultPropertyItemProvider.md) class.
 
 ## See Also
 
 * interface [IPropertyItemProvider](IPropertyItemProvider.md)
-* **Source:** *[DefaultPropertyItemProvider.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Entity/PropertyGrid/DefaultPropertyItemProvider.cs)*
+* **Source:** *[DefaultPropertyItemProvider.cs](https://github.com/serenity-is/Serenity/blob/478a0d557f5fa9d9eccec0603e34cc9daadb1091/src/services/Entity/PropertyGrid/DefaultPropertyItemProvider.cs)*

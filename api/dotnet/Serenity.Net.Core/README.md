@@ -51,6 +51,8 @@
 | --: | --- | --- |
 | abstract class  | [BaseAssemblyTypeSource](Serenity.Abstractions/BaseAssemblyTypeSource.md) | Base type source implementation that accepts a list of assemblies. |
 | class  | [DefaultTypeSource](Serenity.Abstractions/DefaultTypeSource.md) | Default implementation for a type source that accepts an assembly list. |
+| interface  | [IChangeNotifier](Serenity.Abstractions/IChangeNotifier.md) | Abstraction for an object that can be externally notified that its content has changed. The object itself does not need to detect changes; external code calls [`NotifyChanged`](Serenity.Abstractions/IChangeNotifier/NotifyChanged.md) and consumers subscribe to the change token to invalidate their caches. |
+| interface  | [IChangeTokenProvider](Serenity.Abstractions/IChangeTokenProvider.md) | Abstraction for an object that can provide a change token that fires when its content changes. The object itself does not need to detect changes; external code may trigger the token and consumers subscribe to it to invalidate their caches. |
 | interface  | [IFeatureToggles](Serenity.Abstractions/IFeatureToggles.md) | An interface to access feature toggle values. |
 | interface  | [IGetAllTexts](Serenity.Abstractions/IGetAllTexts.md) | Abstraction for a local text registry that can return all registered entries. |
 | interface  | [IGetAssemblies](Serenity.Abstractions/IGetAssemblies.md) | Abstraction for a type source that can return a list of assemblies. |

@@ -22,6 +22,8 @@ public class WKHtmlToPdf : IHtmlToPdfOptions
 | [CustomArgs](WKHtmlToPdf/CustomArgs.md) { get; } |  |
 | [DisableLocalFileAccess](WKHtmlToPdf/DisableLocalFileAccess.md) { get; set; } |  |
 | [Dpi](WKHtmlToPdf/Dpi.md) { get; set; } |  |
+| [EditLaunchOptions](WKHtmlToPdf/EditLaunchOptions.md) { get; set; } | Unused for WKHtmlToPdf |
+| [EditPdfOptions](WKHtmlToPdf/EditPdfOptions.md) { get; set; } | Unused for WKHtmlToPdf |
 | [ExecutablePath](WKHtmlToPdf/ExecutablePath.md) { get; set; } | Gets or sets the path to the wkhtmltopdf executable. |
 | [FooterHeaderReplace](WKHtmlToPdf/FooterHeaderReplace.md) { get; } |  |
 | [FooterHtmlUrl](WKHtmlToPdf/FooterHtmlUrl.md) { get; set; } |  |
@@ -50,4 +52,4 @@ WKHtmlToPdf converter class.
 ## See Also
 
 * interface [IHtmlToPdfOptions](../Serenity.Net.Services/IHtmlToPdfOptions.md)
-* **Source:** *[WKHtmlToPdf.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Reporting/WKHtmlToPdf.cs)*
+* **Source:** *[WKHtmlToPdf.cs](https://github.com/serenity-is/Serenity/blob/87e7d42434a98fa20ee41a2acef52fac171f100f/src/web/Reporting/WKHtmlToPdf.cs)*

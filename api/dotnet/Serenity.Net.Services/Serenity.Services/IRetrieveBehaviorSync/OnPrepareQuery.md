@@ -1,0 +1,19 @@
+# IRetrieveBehaviorSync.OnPrepareQuery method
+**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+
+Called when query is built
+
+```csharp
+public void OnPrepareQuery(IRetrieveRequestHandler handler, SqlQuery query)
+```
+
+| parameter | description |
+| --- | --- |
+| handler | Calling retrieve request handler |
+| query | Query |
+
+## See Also
+
+* interface [IRetrieveRequestHandler](../IRetrieveRequestHandler.md)
+* class [SqlQuery](../../Serenity.Data/SqlQuery.md)
+* interface [IRetrieveBehaviorSync](../IRetrieveBehaviorSync.md)

@@ -35,6 +35,7 @@
 | class  | [CaptureLogAttribute](Serenity.Data/CaptureLogAttribute.md) | Enables capture logging for a row type. |
 | static class  | [ConnectionExtensions](Serenity.Data/ConnectionExtensions.md) | Contains DB connection related extensions. |
 | class  | [ConnectionKeyAttribute](Serenity.Data/ConnectionKeyAttribute.md) | Determines the connection key used for a class. |
+| class  | [ConnectionKeyFallbackAttribute](Serenity.Data/ConnectionKeyFallbackAttribute.md) | Declares a fallback connection key for a logical connection key. When a connection key is not present in configuration, the fallback connection key is used. |
 | class  | [ConnectionStringEntry](Serenity.Data/ConnectionStringEntry.md) | A connection string setting. |
 | class  | [ConnectionStringInfo](Serenity.Data/ConnectionStringInfo.md) | Contains a connection string, its key, and provider name. |
 | class  | [ConnectionStringOptions](Serenity.Data/ConnectionStringOptions.md) | Connection string options. |
@@ -89,6 +90,7 @@
 | interface  | [IAlias](Serenity.Data/IAlias.md) | Interface for table aliases. |
 | interface  | [ICaptureLogHandler](Serenity.Data/ICaptureLogHandler.md) | Capture logging handler abstraction |
 | interface  | [ICaptureLogRow](Serenity.Data/ICaptureLogRow.md) | Interface for capture logging row types |
+| interface  | [IConnectionKeyFallbacks](Serenity.Data/IConnectionKeyFallbacks.md) | Abstraction to access connection key fallbacks. |
 | interface  | [IConnectionProfiler](Serenity.Data/IConnectionProfiler.md) | An interface used to abstract profilers like Mini Profiler. |
 | interface  | [IConnectionString](Serenity.Data/IConnectionString.md) | Contains a connection string, its key and provider name. |
 | interface  | [IConnectionStrings](Serenity.Data/IConnectionStrings.md) | Abstraction to access connection strings along with dialect and provider information. |

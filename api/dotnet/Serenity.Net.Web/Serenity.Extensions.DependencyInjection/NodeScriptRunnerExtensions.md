@@ -12,7 +12,8 @@ public static class NodeScriptRunnerExtensions
 | name | description |
 | --- | --- |
 | static [StartNodeScript](NodeScriptRunnerExtensions/StartNodeScript.md)(…) | Starts a node (NPM) script and attaches its output to the application logger. |
+| static [UseNodeScriptRunner](NodeScriptRunnerExtensions/UseNodeScriptRunner.md)(…) | Starts node scripts configured in configuration "StartNodeScripts" key as a semicolon separated strings. |
 
 ## See Also
 
-* **Source:** *[NodeScriptRunnerExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/NodeScriptRunner/NodeScriptRunnerExtensions.cs)*
+* **Source:** *[NodeScriptRunnerExtensions.cs](https://github.com/serenity-is/Serenity/blob/22d61c0cf1d7a7ad2c6f1b48e61928e711c9b110/src/web/NodeScriptRunner/NodeScriptRunnerExtensions.cs)*

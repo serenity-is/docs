@@ -4,7 +4,7 @@
 The default connection factory.
 
 ```csharp
-public class DefaultSqlConnections : ISqlConnections
+public class DefaultSqlConnections : IConnectionKeyFallbacks, ISqlConnections
 ```
 
 | parameter | description |
@@ -18,15 +18,19 @@ public class DefaultSqlConnections : ISqlConnections
 | name | description |
 | --- | --- |
 | [DefaultSqlConnections](DefaultSqlConnections/DefaultSqlConnections.md)(…) | The default connection factory. |
+| [GetConnectionKeyFallbacks](DefaultSqlConnections/GetConnectionKeyFallbacks.md)(…) |  |
+| [GetConnectionKeysResolvingTo](DefaultSqlConnections/GetConnectionKeysResolvingTo.md)(…) |  |
 | [ListConnectionStrings](DefaultSqlConnections/ListConnectionStrings.md)() | Lists all known connection strings. |
 | virtual [New](DefaultSqlConnections/New.md)(…) | Creates a new IDbConnection for the given connection string, provider name, and dialect. |
 | virtual [NewByKey](DefaultSqlConnections/NewByKey.md)(…) | Creates a new IDbConnection for the given connection key. |
+| [ResolveConnectionKey](DefaultSqlConnections/ResolveConnectionKey.md)(…) |  |
 | virtual [TryGetConnectionString](DefaultSqlConnections/TryGetConnectionString.md)(…) | Gets a connection string by its key. |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
+| readonly [connectionKeyFallbacks-](DefaultSqlConnections/connectionKeyFallbacks-.md) | The connection key fallbacks, if the connection string source supports them. |
 | readonly [connectionStrings-](DefaultSqlConnections/connectionStrings-.md) | The connection strings. |
 | readonly [loggerFactory-](DefaultSqlConnections/loggerFactory-.md) | The logger factory. |
 | readonly [profiler-](DefaultSqlConnections/profiler-.md) | The profiler. |
@@ -39,5 +43,6 @@ Creates a new instance.
 
 ## See Also
 
+* interface [IConnectionKeyFallbacks](IConnectionKeyFallbacks.md)
 * interface [ISqlConnections](ISqlConnections.md)
-* **Source:** *[DefaultSqlConnections.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/DefaultSqlConnections.cs)*
+* **Source:** *[DefaultSqlConnections.cs](https://github.com/serenity-is/Serenity/blob/d7ef4960ed2723e5081d907f7610b7cabba6cf08/src/services/Data/Connections/DefaultSqlConnections.cs)*

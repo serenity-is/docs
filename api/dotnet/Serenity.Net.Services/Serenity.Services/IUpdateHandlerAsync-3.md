@@ -1,0 +1,36 @@
+# IUpdateHandlerAsync&lt;TRow,TSaveRequest,TSaveResponse&gt; interface
+**namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
+
+Abstraction for update request handlers with an async Update method.
+
+```csharp
+public interface IUpdateHandlerAsync<TRow, TSaveRequest, TSaveResponse> : 
+    IRequestHandler<TRow, TSaveRequest, TSaveResponse>
+    where TRow : class, IRow, IIdRow, new()
+    where TSaveRequest : SaveRequest<TRow>, new()
+    where TSaveResponse : SaveResponse, new()
+```
+
+| parameter | description |
+| --- | --- |
+| TRow | Row type |
+| TSaveRequest | Save request type |
+| TSaveResponse | Save response type |
+
+## Members
+
+| name | description |
+| --- | --- |
+| [UpdateAsync](IUpdateHandlerAsync-3/UpdateAsync.md)(…) | Processes an Update request asynchronously |
+
+## See Also
+
+* interface [IRequestHandler&lt;TRow,TRequest,TResponse&gt;](IRequestHandler-3.md)
+* class [TRow](../Serenity.Net.Services/IUpdateHandlerAsync-3.TRow.md)
+* class [TSaveRequest](../Serenity.Net.Services/IUpdateHandlerAsync-3.TSaveRequest.md)
+* class [TSaveResponse](../Serenity.Net.Services/IUpdateHandlerAsync-3.TSaveResponse.md)
+* interface [IRow](../Serenity.Data/IRow.md)
+* interface [IIdRow](../Serenity.Data/IIdRow.md)
+* class [SaveRequest&lt;TEntity&gt;](SaveRequest-1.md)
+* class [SaveResponse](SaveResponse.md)
+* **Source:** *[IUpdateHandlerAsync.cs](https://github.com/serenity-is/Serenity/blob/04ac3ea58a41048bed911555c87969edcf6ea031/src/services/RequestHandlers/Save/IUpdateHandlerAsync.cs)*

@@ -1,0 +1,17 @@
+# ISaveBehaviorSync.OnValidateRequest method
+**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+
+Called when save request is validated
+
+```csharp
+public void OnValidateRequest(ISaveRequestHandler handler)
+```
+
+| parameter | description |
+| --- | --- |
+| handler | Calling save request handler |
+
+## See Also
+
+* interface [ISaveRequestHandler](../ISaveRequestHandler.md)
+* interface [ISaveBehaviorSync](../ISaveBehaviorSync.md)

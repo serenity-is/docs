@@ -1,0 +1,17 @@
+# SaveRequestHandlerBase&lt;TRow,TSaveRequest,TSaveResponse&gt;.SetDefaultValue method
+**namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
+
+Sets the default value (DefaultValueAttribute) for the field
+
+```csharp
+protected virtual void SetDefaultValue(Field field)
+```
+
+| parameter | description |
+| --- | --- |
+| field | Field |
+
+## See Also
+
+* class [Field](../../Serenity.Data/Field.md)
+* class [SaveRequestHandlerBase&lt;TRow,TSaveRequest,TSaveResponse&gt;](../SaveRequestHandlerBase-3.md)

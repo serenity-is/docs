@@ -17,6 +17,8 @@ public interface IHtmlToPdfOptions
 | [CustomArgs](IHtmlToPdfOptions/CustomArgs.md) { get; } | A list of custom arguments to pass to HTML to PDF converter |
 | [DisableLocalFileAccess](IHtmlToPdfOptions/DisableLocalFileAccess.md) { get; set; } | Disables local file access, default is true |
 | [Dpi](IHtmlToPdfOptions/Dpi.md) { get; set; } | Document DPI. Default is unspecified. |
+| [EditLaunchOptions](IHtmlToPdfOptions/EditLaunchOptions.md) { get; set; } | Allows editing LaunchOptions, only available for Puppeteer |
+| [EditPdfOptions](IHtmlToPdfOptions/EditPdfOptions.md) { get; set; } | Allows editing PdfOptions, only available for Puppeteer |
 | [FooterHeaderReplace](IHtmlToPdfOptions/FooterHeaderReplace.md) { get; } | A set of key value pairs that should be search replaced in footer and header |
 | [FooterHtmlUrl](IHtmlToPdfOptions/FooterHtmlUrl.md) { get; set; } | Url of footer HTML page |
 | [HeaderHtmlUrl](IHtmlToPdfOptions/HeaderHtmlUrl.md) { get; set; } | Url of header HTML page |
@@ -38,4 +40,4 @@ public interface IHtmlToPdfOptions
 
 ## See Also
 
-* **Source:** *[IHtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/Reporting/HtmlToPdf/IHtmlToPdfOptions.cs)*
+* **Source:** *[IHtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/87e7d42434a98fa20ee41a2acef52fac171f100f/src/services/Reporting/HtmlToPdf/IHtmlToPdfOptions.cs)*

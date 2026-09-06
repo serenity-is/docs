@@ -18,6 +18,8 @@ public class HtmlToPdfOptions : IHtmlToPdfOptions
 | [CustomArgs](HtmlToPdfOptions/CustomArgs.md) { get; } |  |
 | [DisableLocalFileAccess](HtmlToPdfOptions/DisableLocalFileAccess.md) { get; set; } |  |
 | [Dpi](HtmlToPdfOptions/Dpi.md) { get; set; } |  |
+| [EditLaunchOptions](HtmlToPdfOptions/EditLaunchOptions.md) { get; set; } |  |
+| [EditPdfOptions](HtmlToPdfOptions/EditPdfOptions.md) { get; set; } |  |
 | [FooterHeaderReplace](HtmlToPdfOptions/FooterHeaderReplace.md) { get; } |  |
 | [FooterHtmlUrl](HtmlToPdfOptions/FooterHtmlUrl.md) { get; set; } |  |
 | [HeaderHtmlUrl](HtmlToPdfOptions/HeaderHtmlUrl.md) { get; set; } |  |
@@ -40,4 +42,4 @@ public class HtmlToPdfOptions : IHtmlToPdfOptions
 ## See Also
 
 * interface [IHtmlToPdfOptions](IHtmlToPdfOptions.md)
-* **Source:** *[HtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Reporting/HtmlToPdf/HtmlToPdfOptions.cs)*
+* **Source:** *[HtmlToPdfOptions.cs](https://github.com/serenity-is/Serenity/blob/87e7d42434a98fa20ee41a2acef52fac171f100f/src/services/Reporting/HtmlToPdf/HtmlToPdfOptions.cs)*

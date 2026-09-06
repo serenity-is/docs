@@ -15,8 +15,10 @@ public class ConnectionStringEntry
 | [ConnectionString](ConnectionStringEntry/ConnectionString.md) { get; set; } | Gets or sets the connection string. |
 | [Dialect](ConnectionStringEntry/Dialect.md) { get; set; } | Gets or sets the dialect name. |
 | [DialectInstance](ConnectionStringEntry/DialectInstance.md) { get; set; } | Gets or sets the dialect instance. |
+| [FallbackFor](ConnectionStringEntry/FallbackFor.md) { get; set; } | Gets or sets a semicolon-separated list of connection keys that fall back to this connection when they are not configured. For example, "ProFeatures;ProWorkLog". |
+| [FallbackForKeys](ConnectionStringEntry/FallbackForKeys.md) { get; } | Gets the parsed, trimmed connection keys from [`FallbackFor`](ConnectionStringEntry/FallbackFor.md), split on ';'. Returns an empty set when [`FallbackFor`](ConnectionStringEntry/FallbackFor.md) is null or empty. Parsed lazily and cached. |
 | [ProviderName](ConnectionStringEntry/ProviderName.md) { get; set; } | Gets or sets the provider name. |
 
 ## See Also
 
-* **Source:** *[ConnectionStringEntry.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/ConnectionStringEntry.cs)*
+* **Source:** *[ConnectionStringEntry.cs](https://github.com/serenity-is/Serenity/blob/4831d43112b85004ff5fe2cef054a76a127048ab/src/services/Data/Connections/ConnectionStringEntry.cs)*

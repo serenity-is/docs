@@ -4,7 +4,7 @@
 Disposes the actual connection.
 
 ```csharp
-public void Dispose()
+protected override void Dispose(bool disposing)
 ```
 
 ## See Also

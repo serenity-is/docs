@@ -4,7 +4,7 @@
 Behavior class that handles assignment of relevant fields for rows with [`IInsertLogRow`](../Serenity.Data/IInsertLogRow.md) and [`IUpdateLogRow`](../Serenity.Data/IUpdateLogRow.md) interfaces
 
 ```csharp
-public class UpdateInsertLogBehavior : BaseSaveBehavior, IImplicitBehavior
+public class UpdateInsertLogBehavior : BaseSaveBehaviorAsync, IImplicitBehavior, ISaveBehaviorSync
 ```
 
 ## Public Members
@@ -13,10 +13,12 @@ public class UpdateInsertLogBehavior : BaseSaveBehavior, IImplicitBehavior
 | --- | --- |
 | [UpdateInsertLogBehavior](UpdateInsertLogBehavior/UpdateInsertLogBehavior.md)() | The default constructor. |
 | [ActivateFor](UpdateInsertLogBehavior/ActivateFor.md)(…) |  |
-| override [OnSetInternalFields](UpdateInsertLogBehavior/OnSetInternalFields.md)(…) |  |
+| virtual [OnSetInternalFields](UpdateInsertLogBehavior/OnSetInternalFields.md)(…) |  |
+| override [OnSetInternalFieldsAsync](UpdateInsertLogBehavior/OnSetInternalFieldsAsync.md)(…) |  |
 
 ## See Also
 
-* class [BaseSaveBehavior](BaseSaveBehavior.md)
+* class [BaseSaveBehaviorAsync](BaseSaveBehaviorAsync.md)
 * interface [IImplicitBehavior](IImplicitBehavior.md)
-* **Source:** *[InsertUpdateLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/IntegratedFeatures/InsertUpdateLog/InsertUpdateLogBehavior.cs)*
+* interface [ISaveBehaviorSync](ISaveBehaviorSync.md)
+* **Source:** *[InsertUpdateLogBehavior.cs](https://github.com/serenity-is/Serenity/blob/8b22589557b8ad2f922b5a8d4de1b9e6034f2c0a/src/services/RequestHandlers/IntegratedFeatures/InsertUpdateLog/InsertUpdateLogBehavior.cs)*

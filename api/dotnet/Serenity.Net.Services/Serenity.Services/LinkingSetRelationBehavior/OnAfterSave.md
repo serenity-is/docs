@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public override void OnAfterSave(ISaveRequestHandler handler)
+public virtual void OnAfterSave(ISaveRequestHandler handler)
 ```
 
 ## See Also

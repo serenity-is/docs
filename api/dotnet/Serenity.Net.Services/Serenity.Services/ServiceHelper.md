@@ -12,9 +12,10 @@ public static class ServiceHelper
 | name | description |
 | --- | --- |
 | static [CheckParentNotDeleted](ServiceHelper/CheckParentNotDeleted.md)(…) | Checks that parent record is not soft deleted |
+| static [CheckParentNotDeletedAsync](ServiceHelper/CheckParentNotDeletedAsync.md)(…) | Asynchronously checks that parent record is not soft deleted |
 | static [IsUniqueIndexException](ServiceHelper/IsUniqueIndexException.md)(…) | Checks if an exception seems to be an unique index exception |
 | static [SetSkipTakeTotal&lt;T&gt;](ServiceHelper/SetSkipTakeTotal.md)(…) | Sets the Skip, Take and Total parameters in the response |
 
 ## See Also
 
-* **Source:** *[ServiceHelper.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/Helpers/ServiceHelper.cs)*
+* **Source:** *[ServiceHelper.cs](https://github.com/serenity-is/Serenity/blob/8b22589557b8ad2f922b5a8d4de1b9e6034f2c0a/src/services/RequestHandlers/Helpers/ServiceHelper.cs)*

@@ -4,7 +4,7 @@
 Base class for behaviors implementing save and delete behavior interfaces
 
 ```csharp
-public abstract class BaseSaveDeleteBehavior : BaseSaveBehavior, IDeleteBehavior, 
+public abstract class BaseSaveDeleteBehavior : BaseSaveBehavior, IDeleteBehaviorSync, 
     IDeleteExceptionBehavior
 ```
 
@@ -29,6 +29,6 @@ public abstract class BaseSaveDeleteBehavior : BaseSaveBehavior, IDeleteBehavior
 ## See Also
 
 * class [BaseSaveBehavior](BaseSaveBehavior.md)
-* interface [IDeleteBehavior](IDeleteBehavior.md)
+* interface [IDeleteBehaviorSync](IDeleteBehaviorSync.md)
 * interface [IDeleteExceptionBehavior](IDeleteExceptionBehavior.md)
-* **Source:** *[BaseSaveDeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/Save/BaseSaveDeleteBehavior.cs)*
+* **Source:** *[BaseSaveDeleteBehavior.cs](https://github.com/serenity-is/Serenity/blob/d867db7e483c51f5b1e62c31118c3b729fc6b78f/src/services/RequestHandlers/Save/BaseSaveDeleteBehavior.cs)*

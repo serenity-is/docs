@@ -4,8 +4,9 @@
 Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md).
 
 ```csharp
-public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavior, 
-    IImplicitBehavior, IListBehavior, IRetrieveBehavior
+public class MasterDetailRelationBehavior : BaseSaveDeleteBehaviorAsync, IDeleteBehaviorSync, 
+    IFieldBehavior, IImplicitBehavior, IListBehaviorAsync, IListBehaviorSync, 
+    IRetrieveBehaviorAsync, IRetrieveBehaviorSync, ISaveBehaviorSync
 ```
 
 | parameter | description |
@@ -19,14 +20,12 @@ public class MasterDetailRelationBehavior : BaseSaveDeleteBehavior, IFieldBehavi
 | [MasterDetailRelationBehavior](MasterDetailRelationBehavior/MasterDetailRelationBehavior.md)(…) | Behavior class that handles [`MasterDetailRelationAttribute`](../Serenity.Data.Mapping/MasterDetailRelationAttribute.md). |
 | [Target](MasterDetailRelationBehavior/Target.md) { get; set; } |  |
 | [ActivateFor](MasterDetailRelationBehavior/ActivateFor.md)(…) |  |
-| [OnAfterExecuteQuery](MasterDetailRelationBehavior/OnAfterExecuteQuery.md)(…) |  (2 methods) |
-| override [OnAfterSave](MasterDetailRelationBehavior/OnAfterSave.md)(…) |  |
-| [OnApplyFilters](MasterDetailRelationBehavior/OnApplyFilters.md)(…) |  |
-| override [OnBeforeDelete](MasterDetailRelationBehavior/OnBeforeDelete.md)(…) |  |
-| [OnBeforeExecuteQuery](MasterDetailRelationBehavior/OnBeforeExecuteQuery.md)(…) |  (2 methods) |
-| [OnPrepareQuery](MasterDetailRelationBehavior/OnPrepareQuery.md)(…) |  (2 methods) |
-| [OnReturn](MasterDetailRelationBehavior/OnReturn.md)(…) |  (2 methods) |
-| [OnValidateRequest](MasterDetailRelationBehavior/OnValidateRequest.md)(…) |  (2 methods) |
+| virtual [OnAfterSave](MasterDetailRelationBehavior/OnAfterSave.md)(…) |  |
+| override [OnAfterSaveAsync](MasterDetailRelationBehavior/OnAfterSaveAsync.md)(…) |  |
+| virtual [OnBeforeDelete](MasterDetailRelationBehavior/OnBeforeDelete.md)(…) |  |
+| override [OnBeforeDeleteAsync](MasterDetailRelationBehavior/OnBeforeDeleteAsync.md)(…) |  |
+| virtual [OnReturn](MasterDetailRelationBehavior/OnReturn.md)(…) |  (2 methods) |
+| virtual [OnReturnAsync](MasterDetailRelationBehavior/OnReturnAsync.md)(…) |  (2 methods) |
 
 ## Exceptions
 
@@ -40,9 +39,13 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [BaseSaveDeleteBehavior](BaseSaveDeleteBehavior.md)
+* class [BaseSaveDeleteBehaviorAsync](BaseSaveDeleteBehaviorAsync.md)
+* interface [IDeleteBehaviorSync](IDeleteBehaviorSync.md)
 * interface [IFieldBehavior](IFieldBehavior.md)
 * interface [IImplicitBehavior](IImplicitBehavior.md)
-* interface [IListBehavior](IListBehavior.md)
-* interface [IRetrieveBehavior](IRetrieveBehavior.md)
-* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*
+* interface [IListBehaviorAsync](IListBehaviorAsync.md)
+* interface [IListBehaviorSync](IListBehaviorSync.md)
+* interface [IRetrieveBehaviorAsync](IRetrieveBehaviorAsync.md)
+* interface [IRetrieveBehaviorSync](IRetrieveBehaviorSync.md)
+* interface [ISaveBehaviorSync](ISaveBehaviorSync.md)
+* **Source:** *[MasterDetailRelationBehavior.cs](https://github.com/serenity-is/Serenity/blob/8b22589557b8ad2f922b5a8d4de1b9e6034f2c0a/src/services/RequestHandlers/IntegratedFeatures/MasterDetail/MasterDetailRelationBehavior.cs)*

@@ -4,7 +4,7 @@
 Gets or sets the string used to open a database.
 
 ```csharp
-public string ConnectionString { get; set; }
+public override string ConnectionString { get; set; }
 ```
 
 ## See Also

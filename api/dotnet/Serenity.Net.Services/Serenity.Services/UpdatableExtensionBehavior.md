@@ -4,7 +4,8 @@
 Behavior that handles [`UpdatableExtensionAttribute`](../Serenity.Data.Mapping/UpdatableExtensionAttribute.md).
 
 ```csharp
-public class UpdatableExtensionBehavior : BaseSaveDeleteBehavior, IImplicitBehavior
+public class UpdatableExtensionBehavior : BaseSaveDeleteBehaviorAsync, IDeleteBehaviorSync, 
+    IImplicitBehavior, ISaveBehaviorSync
 ```
 
 | parameter | description |
@@ -17,9 +18,12 @@ public class UpdatableExtensionBehavior : BaseSaveDeleteBehavior, IImplicitBehav
 | --- | --- |
 | [UpdatableExtensionBehavior](UpdatableExtensionBehavior/UpdatableExtensionBehavior.md)(…) | Behavior that handles [`UpdatableExtensionAttribute`](../Serenity.Data.Mapping/UpdatableExtensionAttribute.md). |
 | [ActivateFor](UpdatableExtensionBehavior/ActivateFor.md)(…) |  |
-| override [OnAfterSave](UpdatableExtensionBehavior/OnAfterSave.md)(…) |  |
-| override [OnBeforeDelete](UpdatableExtensionBehavior/OnBeforeDelete.md)(…) |  |
-| override [OnBeforeSave](UpdatableExtensionBehavior/OnBeforeSave.md)(…) |  |
+| virtual [OnAfterSave](UpdatableExtensionBehavior/OnAfterSave.md)(…) |  |
+| override [OnAfterSaveAsync](UpdatableExtensionBehavior/OnAfterSaveAsync.md)(…) |  |
+| virtual [OnBeforeDelete](UpdatableExtensionBehavior/OnBeforeDelete.md)(…) |  |
+| override [OnBeforeDeleteAsync](UpdatableExtensionBehavior/OnBeforeDeleteAsync.md)(…) |  |
+| virtual [OnBeforeSave](UpdatableExtensionBehavior/OnBeforeSave.md)(…) |  |
+| override [OnBeforeSaveAsync](UpdatableExtensionBehavior/OnBeforeSaveAsync.md)(…) |  |
 
 ## Exceptions
 
@@ -33,6 +37,8 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [BaseSaveDeleteBehavior](BaseSaveDeleteBehavior.md)
+* class [BaseSaveDeleteBehaviorAsync](BaseSaveDeleteBehaviorAsync.md)
+* interface [IDeleteBehaviorSync](IDeleteBehaviorSync.md)
 * interface [IImplicitBehavior](IImplicitBehavior.md)
-* **Source:** *[UpdatableExtensionBehavior.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/IntegratedFeatures/UpdatableExtension/UpdatableExtensionBehavior.cs)*
+* interface [ISaveBehaviorSync](ISaveBehaviorSync.md)
+* **Source:** *[UpdatableExtensionBehavior.cs](https://github.com/serenity-is/Serenity/blob/8b22589557b8ad2f922b5a8d4de1b9e6034f2c0a/src/services/RequestHandlers/IntegratedFeatures/UpdatableExtension/UpdatableExtensionBehavior.cs)*

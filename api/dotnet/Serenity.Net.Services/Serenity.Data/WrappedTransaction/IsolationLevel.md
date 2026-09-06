@@ -4,7 +4,7 @@
 Returns the transaction isolation level
 
 ```csharp
-public IsolationLevel IsolationLevel { get; }
+public override IsolationLevel IsolationLevel { get; }
 ```
 
 ## See Also

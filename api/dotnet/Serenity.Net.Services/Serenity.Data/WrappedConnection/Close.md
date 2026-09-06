@@ -4,7 +4,7 @@
 Closes the connection to the database.
 
 ```csharp
-public void Close()
+public override void Close()
 ```
 
 ## See Also

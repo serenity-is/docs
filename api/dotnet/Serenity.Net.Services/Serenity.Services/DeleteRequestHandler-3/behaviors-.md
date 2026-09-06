@@ -4,10 +4,10 @@
 Lazy list of behaviors that is activated for this request.
 
 ```csharp
-protected Lazy<IDeleteBehavior[]> behaviors-;
+protected Lazy<IDeleteBehaviorSync[]> behaviors-;
 ```
 
 ## See Also
 
-* interface [IDeleteBehavior](../IDeleteBehavior.md)
+* interface [IDeleteBehaviorSync](../IDeleteBehaviorSync.md)
 * class [DeleteRequestHandler&lt;TRow,TDeleteRequest,TDeleteResponse&gt;](../DeleteRequestHandler-3.md)

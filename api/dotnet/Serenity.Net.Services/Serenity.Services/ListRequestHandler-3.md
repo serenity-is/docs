@@ -5,6 +5,7 @@ Generic base class for list request handlers
 
 ```csharp
 public class ListRequestHandler<TRow, TListRequest, TListResponse> : 
+    ListRequestHandlerBase<TRow, TListRequest, TListResponse>, 
     IListHandler<TRow, TListRequest, TListResponse>, IListRequestProcessor
     where TRow : class, IRow, new()
     where TListRequest : ListRequest
@@ -22,20 +23,6 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> :
 | name | description |
 | --- | --- |
 | [ListRequestHandler](ListRequestHandler-3/ListRequestHandler.md)(…) | Initializes a new instance of the class. |
-| [Cache](ListRequestHandler-3/Cache.md) { get; } | Gets the two level cache from the request context. |
-| [Connection](ListRequestHandler-3/Connection.md) { get; } | Gets the current connection. |
-| [Context](ListRequestHandler-3/Context.md) { get; } | Gets the request context. |
-| [DistinctFields](ListRequestHandler-3/DistinctFields.md) { get; } | Gets the list of distinct fields. |
-| [Localizer](ListRequestHandler-3/Localizer.md) { get; } | Gets the localizer from the request context. |
-| [Permissions](ListRequestHandler-3/Permissions.md) { get; } | Gets the permission service from the request context. |
-| [Query](ListRequestHandler-3/Query.md) { get; } | Gets the select query. |
-| [Request](ListRequestHandler-3/Request.md) { get; protected set; } | Gets the request object. |
-| [Response](ListRequestHandler-3/Response.md) { get; protected set; } | Gets the response object. |
-| [Row](ListRequestHandler-3/Row.md) { get; protected set; } | Gets the entity used for querying / metadata lookup. |
-| [StateBag](ListRequestHandler-3/StateBag.md) { get; } | A state bag for behaviors to preserve state among their methods. It will be cleared before each request, e.g. Process call. |
-| [User](ListRequestHandler-3/User.md) { get; } | Gets the current user from the request context. |
-| [GetDistinctFields](ListRequestHandler-3/GetDistinctFields.md)() | Gets an array of distinct fields by checking Request.DistinctFields. It might be different than the passed list, if the list contains an invalid field or a field that is not allowed to be selected, like NotMapped and Never etc. |
-| [IgnoreEqualityFilter](ListRequestHandler-3/IgnoreEqualityFilter.md)(…) | Adds the field to the list of ignored equality filters, so that having this field in the Request.EqualityFilter won't raise an exception |
 | [List](ListRequestHandler-3/List.md)(…) |  |
 | [Process](ListRequestHandler-3/Process.md)(…) | Processes the list request. This is the entry point for the handler. |
 
@@ -44,49 +31,24 @@ public class ListRequestHandler<TRow, TListRequest, TListResponse> :
 | name | description |
 | --- | --- |
 | [behaviors-](ListRequestHandler-3/behaviors-.md) | Lazy list of behaviors that is activated for this request. |
-| [ignoredEqualityFilters-](ListRequestHandler-3/ignoredEqualityFilters-.md) | Set of ignored equality filter entries. |
-| [lookupAccessMode-](ListRequestHandler-3/lookupAccessMode-.md) | True if the list handler is in lookup access mode, e.g. it only allows access to lookup fields. |
-| virtual [AddFieldContainsCriteria](ListRequestHandler-3/AddFieldContainsCriteria.md)(…) | Applies a contains criteria based on containsText, id (if the contains text can be parsed to an integer ID), searchType and numericOnly parameters. |
-| virtual [AllowSelectField](ListRequestHandler-3/AllowSelectField.md)(…) | Returns true if the field should be allowed to be selected, based on is read permission, selectlevel.never flag, and lookup access mode |
-| virtual [ApplyContainsText](ListRequestHandler-3/ApplyContainsText.md)(…) | Applies contains text filter to the query |
-| virtual [ApplyCriteria](ListRequestHandler-3/ApplyCriteria.md)(…) | Applies the Request.Criteria to the query if it is not null or empty, and replaced field references with their corresponding expressions by calling [`ReplaceFieldExpressions`](ListRequestHandler-3/ReplaceFieldExpressions.md) |
-| virtual [ApplyEqualityFilter](ListRequestHandler-3/ApplyEqualityFilter.md)(…) | Applies the Request.Equality filter to the query |
-| virtual [ApplyFieldContainsText](ListRequestHandler-3/ApplyFieldContainsText.md)(…) | Applies a field contains criteria to the query by calling [`AddFieldContainsCriteria`](ListRequestHandler-3/AddFieldContainsCriteria.md) |
-| virtual [ApplyFieldEqualityFilter](ListRequestHandler-3/ApplyFieldEqualityFilter.md)(…) | Applies a field equality filter, e.g. one that is passed via Request.EqualityFilter to the query. It validates field flags like DenyFiltering and NotMapped and Never to check if the field is allowed to be filtered. |
 | virtual [ApplyFilters](ListRequestHandler-3/ApplyFilters.md)(…) | Applies all the filters including Request.EqualityFilter, Request.Criteria and Request.IncludeDeleted to the query. |
-| virtual [ApplyIncludeDeletedFilter](ListRequestHandler-3/ApplyIncludeDeletedFilter.md)(…) | Applies include deleted filter to the query if Request.IncludeDeleted is true |
-| virtual [ApplyKeyOrder](ListRequestHandler-3/ApplyKeyOrder.md)(…) | Applies the key order which is ID field ([`IIdRow`](../Serenity.Data/IIdRow.md)) |
-| virtual [ApplySort](ListRequestHandler-3/ApplySort.md)(…) | Applies the Request.Sort order to the query. Sorts by [`GetNativeSort`](ListRequestHandler-3/GetNativeSort.md) if no sort columns are passed, or the list is empty. |
-| virtual [ApplySortBy](ListRequestHandler-3/ApplySortBy.md)(…) | Applies a sort order to the query |
-| virtual [CreateQuery](ListRequestHandler-3/CreateQuery.md)() | Creates a query instance with the dialect for current connection. |
 | virtual [ExecuteQuery](ListRequestHandler-3/ExecuteQuery.md)() | Executes the query sets values / entities and total count. |
-| virtual [GetBehaviors](ListRequestHandler-3/GetBehaviors.md)() | Gets the list of list behaviors. |
-| virtual [GetNativeSort](ListRequestHandler-3/GetNativeSort.md)() | Gets the native sort order, which includes name field by default, unless the row has [SortOrder] attributes. |
-| virtual [GetQuickSearchFields](ListRequestHandler-3/GetQuickSearchFields.md)(…) | Gets the list of quick search fields ([`QuickSearchAttribute`](../Serenity.Data.Mapping/QuickSearchAttribute.md)) based on the containsField argument. |
-| [IsEmptyEqualityFilterValue](ListRequestHandler-3/IsEmptyEqualityFilterValue.md)(…) | Checks if the equality filter value is empty. It returns true for null, empty string, or empty IEnumerable. |
-| [IsIncluded](ListRequestHandler-3/IsIncluded.md)(…) | Returns true if field is included in [`IncludeColumns`](ListRequest/IncludeColumns.md) (2 methods) |
-| virtual [MapFieldExpression](ListRequestHandler-3/MapFieldExpression.md)(…) | Maps a field using IListFieldMappingBehavior's if any |
+| override [MapFieldExpression](ListRequestHandler-3/MapFieldExpression.md)(…) |  |
 | virtual [OnAfterExecuteQuery](ListRequestHandler-3/OnAfterExecuteQuery.md)() | Called after executing the list query |
 | virtual [OnBeforeExecuteQuery](ListRequestHandler-3/OnBeforeExecuteQuery.md)() | Called before executing the list query |
 | virtual [OnReturn](ListRequestHandler-3/OnReturn.md)() | Called just before returning the response |
-| virtual [PrepareQuery](ListRequestHandler-3/PrepareQuery.md)(…) | Prepares query by calling [`SelectFields`](ListRequestHandler-3/SelectFields.md). |
-| virtual [ProcessEntity](ListRequestHandler-3/ProcessEntity.md)(…) | Can be overridden in a derived class to make some changes in a returned entity just before it gets added to the Response.Entities list. |
-| virtual [ReplaceFieldExpressions](ListRequestHandler-3/ReplaceFieldExpressions.md)(…) | Replaces field references, e.g. property names and field name with their corresponding expression by using the [`CriteriaFieldExpressionReplacer`](../Serenity.Data/CriteriaFieldExpressionReplacer.md) |
-| virtual [SelectField](ListRequestHandler-3/SelectField.md)(…) | Calls query.Select(field) |
-| virtual [SelectFields](ListRequestHandler-3/SelectFields.md)(…) | Calls query.Select(field) for all the fields without NotMapped, and if [`AllowSelectField`](ListRequestHandler-3/AllowSelectField.md) and [`ShouldSelectField`](ListRequestHandler-3/ShouldSelectField.md) returns true. |
-| virtual [ShouldSelectField](ListRequestHandler-3/ShouldSelectField.md)(…) | Returns true if the field should be selected, based on current ColumnSelection, field [`MinSelectLevelAttribute`](../Serenity.Data.Mapping/MinSelectLevelAttribute.md), the field being a not mapped ([`NotMappedAttribute`](../Serenity.Data.Mapping/NotMappedAttribute.md)) field, table field, or a view / expression field. |
-| virtual [ToCriteria](ListRequestHandler-3/ToCriteria.md)(…) | Converts the field to criteria, using IListFieldMappingBehavior's if any |
-| virtual [ValidatePermissions](ListRequestHandler-3/ValidatePermissions.md)() | Validates if the user is allowed to query this entity type by checking ReadPermissionAttribute and ServiceLookupPermissionAttribute if the request is in lookup access mode. |
-| virtual [ValidateRequest](ListRequestHandler-3/ValidateRequest.md)() | Validates the request by calling [`ValidatePermissions`](ListRequestHandler-3/ValidatePermissions.md) |
+| virtual [PrepareQuery](ListRequestHandler-3/PrepareQuery.md)(…) | Prepares query by selecting fields. |
+| virtual [ValidateRequest](ListRequestHandler-3/ValidateRequest.md)() | Validates the request by checking permissions. |
 
 ## See Also
 
-* interface [IListHandler&lt;TRow,TListRequest,TListResponse&gt;](IListHandler-3.md)
+* class [ListRequestHandlerBase&lt;TRow,TListRequest,TListResponse&gt;](ListRequestHandlerBase-3.md)
 * class [TRow](../Serenity.Net.Services/ListRequestHandler-3.TRow.md)
 * class [TListRequest](../Serenity.Net.Services/ListRequestHandler-3.TListRequest.md)
 * class [TListResponse](../Serenity.Net.Services/ListRequestHandler-3.TListResponse.md)
+* interface [IListHandler&lt;TRow,TListRequest,TListResponse&gt;](IListHandler-3.md)
 * interface [IListRequestProcessor](IListRequestProcessor.md)
 * interface [IRow](../Serenity.Data/IRow.md)
 * class [ListRequest](ListRequest.md)
 * class [ListResponse&lt;T&gt;](ListResponse-1.md)
-* **Source:** *[ListRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/List/ListRequestHandler.cs)*
+* **Source:** *[ListRequestHandler.cs](https://github.com/serenity-is/Serenity/blob/62e26a99abba7fd00c7409a1334581e3c5ccd1f4/src/services/RequestHandlers/List/ListRequestHandler.cs)*

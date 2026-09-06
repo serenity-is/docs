@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public void OnReturn(IListRequestHandler handler)
+public virtual void OnReturn(IListRequestHandler handler)
 ```
 
 ## See Also
@@ -16,7 +16,7 @@ public void OnReturn(IListRequestHandler handler)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public void OnReturn(IRetrieveRequestHandler handler)
+public virtual void OnReturn(IRetrieveRequestHandler handler)
 ```
 
 ## See Also

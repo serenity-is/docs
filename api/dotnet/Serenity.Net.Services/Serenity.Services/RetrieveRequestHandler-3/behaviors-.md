@@ -4,10 +4,10 @@
 Lazy list of behaviors that is activated for this request.
 
 ```csharp
-protected Lazy<IRetrieveBehavior[]> behaviors-;
+protected Lazy<IRetrieveBehaviorSync[]> behaviors-;
 ```
 
 ## See Also
 
-* interface [IRetrieveBehavior](../IRetrieveBehavior.md)
+* interface [IRetrieveBehaviorSync](../IRetrieveBehaviorSync.md)
 * class [RetrieveRequestHandler&lt;TRow,TRetrieveRequest,TRetrieveResponse&gt;](../RetrieveRequestHandler-3.md)

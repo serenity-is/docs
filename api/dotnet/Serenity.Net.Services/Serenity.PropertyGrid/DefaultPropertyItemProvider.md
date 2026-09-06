@@ -18,4 +18,4 @@ public class DefaultPropertyItemProvider : IDisposable, IPropertyItemProvider
 ## See Also
 
 * interface [IPropertyItemProvider](IPropertyItemProvider.md)
-* **Source:** *[DefaultPropertyItemProvider.cs](https://github.com/serenity-is/Serenity/blob/478a0d557f5fa9d9eccec0603e34cc9daadb1091/src/services/Entity/PropertyGrid/DefaultPropertyItemProvider.cs)*
+* **Source:** *[DefaultPropertyItemProvider.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/services/Entity/PropertyGrid/DefaultPropertyItemProvider.cs)*

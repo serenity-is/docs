@@ -4,7 +4,7 @@
 Changes the current database for an open Connection object.
 
 ```csharp
-public void ChangeDatabase(string databaseName)
+public override void ChangeDatabase(string databaseName)
 ```
 
 | parameter | description |

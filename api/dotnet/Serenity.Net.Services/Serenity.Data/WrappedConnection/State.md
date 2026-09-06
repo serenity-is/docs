@@ -4,7 +4,7 @@
 Gets the current state of the connection.
 
 ```csharp
-public ConnectionState State { get; }
+public override ConnectionState State { get; }
 ```
 
 ## See Also

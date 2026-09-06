@@ -1,27 +1,16 @@
 # IListBehavior interface
 **namespace:** *[Serenity.Services](../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../README.md)*
 
-A list behavior that can be used as a mixin within a ListRequestHandler lifecycle
+Marker interface for list behaviors that can be used as a mixin within a ListRequestHandler lifecycle.
 
 ```csharp
 public interface IListBehavior
 ```
 
-## Members
-
-| name | description |
-| --- | --- |
-| [OnAfterExecuteQuery](IListBehavior/OnAfterExecuteQuery.md)(…) | Called after query is sent to database |
-| [OnApplyFilters](IListBehavior/OnApplyFilters.md)(…) | Called when filters are applied to query |
-| [OnBeforeExecuteQuery](IListBehavior/OnBeforeExecuteQuery.md)(…) | Called just before query is sent to database |
-| [OnPrepareQuery](IListBehavior/OnPrepareQuery.md)(…) | Called when query to is built |
-| [OnReturn](IListBehavior/OnReturn.md)(…) | Called before handler is returning the result |
-| [OnValidateRequest](IListBehavior/OnValidateRequest.md)(…) | Called when list request is validated |
-
 ## Remarks
 
-A list behavior instance is always cached and reused across requests, so make sure you don't store anything in private variables, and its operation is thread-safe. If you need to pass some state between events, use handler's StateBag.
+All list behaviors should implement either [`IListBehaviorSync`](IListBehaviorSync.md) or [`IListBehaviorAsync`](IListBehaviorAsync.md), not this interface directly.
 
 ## See Also
 
-* **Source:** *[IListBehavior.cs](https://github.com/serenity-is/Serenity/blob/fa206546471018db1a28b90b807e2a73904efdfa/src/services/RequestHandlers/List/IListBehavior.cs)*
+* **Source:** *[IListBehavior.cs](https://github.com/serenity-is/Serenity/blob/6b0ee5bf7cf3317b3c89e88bd6a74f4e510d83c6/src/services/RequestHandlers/List/IListBehavior.cs)*

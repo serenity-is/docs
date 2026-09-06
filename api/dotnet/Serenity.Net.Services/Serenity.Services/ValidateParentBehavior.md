@@ -4,7 +4,7 @@
 Validation behavior for rows that have a parent record via [`IParentIdRow`](../Serenity.Data/IParentIdRow.md) interface.
 
 ```csharp
-public class ValidateParentBehavior : BaseSaveBehavior
+public class ValidateParentBehavior : BaseSaveBehaviorAsync, ISaveBehaviorSync
 ```
 
 | parameter | description |
@@ -17,7 +17,8 @@ public class ValidateParentBehavior : BaseSaveBehavior
 | name | description |
 | --- | --- |
 | [ValidateParentBehavior](ValidateParentBehavior/ValidateParentBehavior.md)(…) | Validation behavior for rows that have a parent record via [`IParentIdRow`](../Serenity.Data/IParentIdRow.md) interface. |
-| override [OnValidateRequest](ValidateParentBehavior/OnValidateRequest.md)(…) |  |
+| virtual [OnValidateRequest](ValidateParentBehavior/OnValidateRequest.md)(…) |  |
+| override [OnValidateRequestAsync](ValidateParentBehavior/OnValidateRequestAsync.md)(…) |  |
 
 ## Exceptions
 
@@ -31,5 +32,6 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [BaseSaveBehavior](BaseSaveBehavior.md)
-* **Source:** *[ValidateParentAttribute.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/IntegratedFeatures/Validation/ValidateParentAttribute.cs)*
+* class [BaseSaveBehaviorAsync](BaseSaveBehaviorAsync.md)
+* interface [ISaveBehaviorSync](ISaveBehaviorSync.md)
+* **Source:** *[ValidateParentAttribute.cs](https://github.com/serenity-is/Serenity/blob/147065ea49a71f84f10ea1a8b68fc4a9bb4179f0/src/services/RequestHandlers/IntegratedFeatures/Validation/ValidateParentAttribute.cs)*

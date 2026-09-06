@@ -30,4 +30,4 @@ public abstract class ServiceEndpoint : ControllerBase, IActionFilter, IAsyncAct
 
 ## See Also
 
-* **Source:** *[ServiceEndpoint.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/web/Mvc/ServiceEndpoint.cs)*
+* **Source:** *[ServiceEndpoint.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/web/Mvc/ServiceEndpoint.cs)*

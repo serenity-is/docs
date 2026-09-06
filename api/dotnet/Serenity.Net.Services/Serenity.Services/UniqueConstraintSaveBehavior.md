@@ -4,7 +4,8 @@
 Behavior that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md).
 
 ```csharp
-public class UniqueConstraintSaveBehavior : BaseSaveBehavior, IImplicitBehavior
+public class UniqueConstraintSaveBehavior : BaseSaveBehaviorAsync, IImplicitBehavior, 
+    ISaveBehaviorSync
 ```
 
 | parameter | description |
@@ -17,7 +18,8 @@ public class UniqueConstraintSaveBehavior : BaseSaveBehavior, IImplicitBehavior
 | --- | --- |
 | [UniqueConstraintSaveBehavior](UniqueConstraintSaveBehavior/UniqueConstraintSaveBehavior.md)(…) | Behavior that handles [`UniqueConstraintAttribute`](../Serenity.Data.Mapping/UniqueConstraintAttribute.md). |
 | [ActivateFor](UniqueConstraintSaveBehavior/ActivateFor.md)(…) |  |
-| override [OnBeforeSave](UniqueConstraintSaveBehavior/OnBeforeSave.md)(…) |  |
+| virtual [OnBeforeSave](UniqueConstraintSaveBehavior/OnBeforeSave.md)(…) |  |
+| override [OnBeforeSaveAsync](UniqueConstraintSaveBehavior/OnBeforeSaveAsync.md)(…) |  |
 
 ## Remarks
 
@@ -25,6 +27,7 @@ Initializes a new instance of the class.
 
 ## See Also
 
-* class [BaseSaveBehavior](BaseSaveBehavior.md)
+* class [BaseSaveBehaviorAsync](BaseSaveBehaviorAsync.md)
 * interface [IImplicitBehavior](IImplicitBehavior.md)
-* **Source:** *[UniqueConstraintSaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/RequestHandlers/IntegratedFeatures/UniqueConstraints/UniqueConstraintSaveBehavior.cs)*
+* interface [ISaveBehaviorSync](ISaveBehaviorSync.md)
+* **Source:** *[UniqueConstraintSaveBehavior.cs](https://github.com/serenity-is/Serenity/blob/8b22589557b8ad2f922b5a8d4de1b9e6034f2c0a/src/services/RequestHandlers/IntegratedFeatures/UniqueConstraints/UniqueConstraintSaveBehavior.cs)*

@@ -4,7 +4,7 @@
 Commits actual transaction and sets wrapped transaction for related connection to null.
 
 ```csharp
-public void Commit()
+public override void Commit()
 ```
 
 ## See Also

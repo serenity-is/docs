@@ -1,7 +1,7 @@
 # WrappedConnection constructor
 **namespace:** *[Serenity.Data](../../README.md#serenity.data-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
-Wraps a connection to add current transaction and dialect support.
+Initializes a new instance of the [`WrappedConnection`](../WrappedConnection.md) class.
 
 ```csharp
 public WrappedConnection(IDbConnection connection, ISqlDialect dialect, ILogger logger = null)
@@ -12,10 +12,6 @@ public WrappedConnection(IDbConnection connection, ISqlDialect dialect, ILogger 
 | connection | The actual connection. |
 | dialect | The dialect. |
 | logger | Optional logger for this connection (generally to be used by static SqlHelper methods) |
-
-## Remarks
-
-Initializes a new instance of the [`WrappedConnection`](../WrappedConnection.md) class.
 
 ## See Also
 

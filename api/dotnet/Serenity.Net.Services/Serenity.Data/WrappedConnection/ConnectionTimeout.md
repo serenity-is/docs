@@ -4,7 +4,7 @@
 Gets the time to wait while trying to establish a connection before terminating the attempt and generating an error.
 
 ```csharp
-public int ConnectionTimeout { get; }
+public override int ConnectionTimeout { get; }
 ```
 
 ## See Also

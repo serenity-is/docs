@@ -13,6 +13,7 @@ public static class ConnectionExtensions
 | --- | --- |
 | const [DefaultConnectionKey](ConnectionExtensions/DefaultConnectionKey.md) | The default connection key, which is an optional name. |
 | static [EnsureOpen](ConnectionExtensions/EnsureOpen.md)(…) | Ensures the connection is open. Warning! This method will not reopen a connection that was once opened and will raise an error. |
+| static [EnsureOpenAsync](ConnectionExtensions/EnsureOpenAsync.md)(…) | Ensures the connection is open asynchronously. Warning! This method will not reopen a connection that was once opened and will raise an error. |
 | static [GetCurrentActualTransaction](ConnectionExtensions/GetCurrentActualTransaction.md)(…) | Gets the current actual transaction for a connection, if any. Most of the time, a connection will only have one transaction, but in .NET it is not possible to know what that transaction is. Serenity wraps a connection ([`WrappedConnection`](WrappedConnection.md)) so that the running transaction, if any, is available to get from the connection object. |
 | static [GetDialect](ConnectionExtensions/GetDialect.md)(…) | Gets the dialect for the given connection. |
 | static [GetLogger](ConnectionExtensions/GetLogger.md)(…) | Gets the logger for a connection if it implements the [`IHasLogger`](IHasLogger.md) interface, or `null` if not. |
@@ -21,4 +22,4 @@ public static class ConnectionExtensions
 
 ## See Also
 
-* **Source:** *[ConnectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/a5013fdf777dbbd87589205ddffcb67f18bea673/src/services/Data/Connections/ConnectionExtensions.cs)*
+* **Source:** *[ConnectionExtensions.cs](https://github.com/serenity-is/Serenity/blob/9a6b298b9db4a9b7c6735a792f30882f8be62d68/src/services/Data/Connections/ConnectionExtensions.cs)*

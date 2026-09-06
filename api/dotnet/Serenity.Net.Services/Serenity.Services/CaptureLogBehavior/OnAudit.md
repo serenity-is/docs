@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public override void OnAudit(IDeleteRequestHandler handler)
+public virtual void OnAudit(IDeleteRequestHandler handler)
 ```
 
 ## See Also
@@ -16,7 +16,7 @@ public override void OnAudit(IDeleteRequestHandler handler)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public override void OnAudit(ISaveRequestHandler handler)
+public virtual void OnAudit(ISaveRequestHandler handler)
 ```
 
 ## See Also
@@ -30,7 +30,7 @@ public override void OnAudit(ISaveRequestHandler handler)
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public void OnAudit(IUndeleteRequestHandler handler)
+public virtual void OnAudit(IUndeleteRequestHandler handler)
 ```
 
 ## See Also

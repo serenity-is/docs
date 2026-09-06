@@ -21,4 +21,4 @@ public static class RowFieldsProvider
 
 ## See Also
 
-* **Source:** *[RowFieldsProvider.cs](https://github.com/serenity-is/Serenity/blob/9dd7db586970bccd1b22a6b4d0ef9892b529b61d/src/services/Entity/Row/RowFieldsProvider.cs)*
+* **Source:** *[RowFieldsProvider.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/services/Entity/Row/RowFieldsProvider.cs)*

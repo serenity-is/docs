@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public override void OnSetInternalFields(ISaveRequestHandler handler)
+public virtual void OnSetInternalFields(ISaveRequestHandler handler)
 ```
 
 ## See Also

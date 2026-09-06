@@ -42,4 +42,4 @@ Creates a new instance.
 * interface [IChangeTokenProvider](IChangeTokenProvider.md)
 * interface [IGetAssemblies](IGetAssemblies.md)
 * interface [ITypeSource](ITypeSource.md)
-* **Source:** *[BaseAssemblyTypeSource.cs](https://github.com/serenity-is/Serenity/blob/3d49a4525ab0022015db75294315ec4aa3d0283d/src/core/ComponentModel/Extensibility/BaseAssemblyTypeSource.cs)*
+* **Source:** *[BaseAssemblyTypeSource.cs](https://github.com/serenity-is/Serenity/blob/fa8ddd78cf707d00a1aca68d898e31e73d5971b9/src/core/ComponentModel/Extensibility/BaseAssemblyTypeSource.cs)*

@@ -2,7 +2,7 @@
 **namespace:** *[Serenity.Services](../../README.md#serenity.services-namespace)*   **assembly**: *[Serenity.Net.Services](../../README.md)*
 
 ```csharp
-public void OnReturn(IRetrieveRequestHandler handler)
+public virtual void OnReturn(IRetrieveRequestHandler handler)
 ```
 
 ## See Also
